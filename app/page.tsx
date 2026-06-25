@@ -3,6 +3,7 @@ import ArticleCard from "@/components/ArticleCard";
 import AdSlot from "@/components/AdSlot";
 import SectionHeader from "@/components/SectionHeader";
 import DottedList from "@/components/DottedList";
+import LatestNews from "@/components/LatestNews";
 import TwoColumnFeature from "@/components/TwoColumnFeature";
 import ReviewsSplit from "@/components/ReviewsSplit";
 import FeaturedVideos from "@/components/FeaturedVideos";
@@ -60,7 +61,7 @@ export default function HomePage() {
     return fresh;
   };
 
-  const latest = take(news, 6);
+  const latest = take(news, 7);
   const inTheaters = {
     title: "In Theaters",
     tagline: "The films everyone's talking about",
@@ -115,15 +116,7 @@ export default function HomePage() {
         </div>
 
         <aside className="lg:col-span-1">
-          <div className="mb-4 border-b-2 border-navy pb-2">
-            <h2 className="font-display text-2xl font-bold uppercase tracking-tight text-navy">
-              Latest News
-            </h2>
-          </div>
-          <DottedList items={latest} showKicker showTime />
-          <div className="mt-6">
-            <AdSlot format="rectangle" />
-          </div>
+          <LatestNews items={latest} />
         </aside>
       </section>
 
