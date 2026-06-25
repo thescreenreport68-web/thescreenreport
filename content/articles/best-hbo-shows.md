@@ -1,16 +1,17 @@
 ---
-title: 'The Best HBO Shows of All Time, Ranked'
+title: 'The 20 Best HBO Shows of All Time, Ranked (2026)'
 slug: best-hbo-shows
 category: tv
 author: maya-okafor
-date: '2026-06-20T23:00:00.000Z'
+date: '2026-06-18T07:00:00.000Z'
 dek: >-
-  From The Sopranos to Succession, the prestige dramas and comedies that defined
-  HBO's golden age and rewired what television could be.
-metaTitle: 'The Best HBO Shows of All Time, Ranked'
+  From The Sopranos and The Wire to Succession and The White Lotus, the
+  definitive ranking of the prestige dramas, comedies, and miniseries that made
+  HBO the gold standard.
+metaTitle: 'The 20 Best HBO Shows of All Time, Ranked'
 metaDescription: >-
-  Our ranking of the best HBO shows of all time, from The Sopranos and The Wire
-  to Game of Thrones and Succession. The essential prestige-TV watchlist.
+  The best HBO shows of all time, ranked — from The Sopranos and The Wire to
+  Succession. Our definitive guide to what to watch first and why it's canon.
 tags:
   - HBO
   - best HBO shows
@@ -19,85 +20,96 @@ tags:
   - The Wire
   - Succession
   - Game of Thrones
-  - drama series
-targetKeyword: best hbo shows
+  - HBO Max
+targetKeyword: best HBO shows
 imageAlt: >-
-  Composite illustration representing iconic HBO prestige dramas including a
-  crime boss, a fantasy throne, and a corporate boardroom
+  Composite illustration of iconic HBO shows including a New Jersey mob boss, a
+  Westeros throne, and a corporate media boardroom
 imageCredit: The Screen Report
 faq:
-  - q: What is considered the best HBO show of all time?
+  - q: What is the best HBO show of all time?
     a: >-
       The Sopranos is the most common pick for the best HBO show ever made.
-      Premiering in 1999, it is widely credited with helping launch the modern
-      prestige-TV era and remains a critical benchmark. The Wire is its closest
-      rival in most all-time rankings.
-  - q: Where can I watch these HBO shows?
+      Premiering in 1999, it invented the template for modern prestige TV and
+      won 21 Primetime Emmys. The Wire is its closest rival and tops many
+      critics' all-time lists.
+  - q: Is The Wire or The Sopranos the better HBO show?
     a: >-
-      HBO's library streams on Max, where the network's flagship dramas and
-      comedies sit alongside newer originals. Availability can vary by region
-      and change over time, so check the platform for your country.
-  - q: What was HBO's biggest hit?
+      It is the great prestige-TV debate. The Sopranos usually wins on cultural
+      impact and being first, while The Wire is the critics' pick for the most
+      ambitious, novelistic American drama ever made. We rank The Sopranos #1 by
+      a hair, but both are essential.
+  - q: What is the most-watched HBO show ever?
     a: >-
-      Game of Thrones was HBO's biggest global phenomenon by audience size,
-      drawing record viewership and a huge worldwide fanbase across its eight
-      seasons from 2011 to 2019.
-  - q: Are these shows good for newcomers to prestige TV?
+      Game of Thrones is HBO's biggest audience hit by far. Its final seasons
+      drew record viewership and a worldwide fanbase, making it the most popular
+      HBO show of all time even though its final season divided fans.
+  - q: What is the highest-rated HBO show on IMDb?
     a: >-
-      Yes. The Sopranos, Succession, and Chernobyl are strong entry points. The
-      Wire rewards patience but pays off richly, while Game of Thrones offers
-      the most accessible epic-scale spectacle.
-  - q: Is The Last of Us worth watching?
+      Chernobyl is HBO's highest-rated series on IMDb, briefly ranking as the
+      top-rated TV show in the site's history when it aired in 2019. Band of
+      Brothers and The Wire also sit near the top.
+  - q: What HBO show should I watch first?
     a: >-
-      Yes. The Last of Us, which premiered in 2023, became both a critical hit
-      and a mainstream success, and it is widely regarded as one of the
-      strongest video-game adaptations made for television.
+      Start with The Sopranos to understand why HBO matters, or Succession and
+      Chernobyl if you want a faster, more modern on-ramp. The Wire rewards
+      patience but pays off as some of the greatest TV ever made.
 featured: false
 ---
 
-If you want the short answer, here it is: **The Sopranos** is still the best HBO show of all time, with **The Wire** a razor-close second. Those two New Jersey-and-Baltimore landmarks helped invent modern prestige television, and nearly everything HBO has made since — from *Game of Thrones* to *Succession* — lives in the creative space they opened up. Below is our full ranking of the best HBO shows, the series that turned a premium cable channel into the most important brand in scripted drama.
+If you want the verdict up front, here it is: **The Sopranos** is the best HBO show of all time, with **The Wire** a razor-thin second. Those two — David Chase's New Jersey mob saga and David Simon's Baltimore epic — invented modern prestige television, and almost everything HBO has made since, from *Game of Thrones* to *Succession*, lives in the space they opened. Below is our definitive ranking of the best HBO shows of all time, the series that turned a premium cable channel into the most important brand in scripted drama.
 
-HBO's old tagline, "It's not TV. It's HBO," became a kind of promise. For roughly 25 years the network has bet on auteur showrunners, novelistic storytelling, and the confidence to let a show be slow, strange, or morally bleak. That bet reshaped the industry. Here are the titles that define it.
+The real fight fans have isn't *whether* HBO is the best — it's who deserves the crown. So we'll settle it. The Sopranos takes #1 for cultural impact and being first; The Wire is the critics' pick for the most ambitious drama ever made; and *Game of Thrones* is the most popular HBO show of all time, the biggest audience the network ever drew. Here's the full list, ranked.
 
-## The Sopranos and The Wire: the two that started everything
+## The best HBO shows of all time, ranked
 
-No conversation about the best HBO shows begins anywhere but here. **The Sopranos** (1999–2007), created by David Chase, follows New Jersey mob boss Tony Soprano as he juggles family, crime, and panic attacks in his therapist's office. It made the antihero the central figure of 21st-century TV and proved audiences would follow a deeply flawed protagonist for years.
+This ranking weighs critical standing, cultural footprint, and staying power — not raw viewership alone. Here's the complete top 20, with a one-line verdict on why each belongs.
 
-**The Wire** (2002–2008), David Simon's sprawling portrait of Baltimore, took a different route: a city-as-character study spanning drugs, police, schools, docks, and journalism. It was never a ratings giant, but its reputation has only grown, and many critics now rank it among the finest American dramas ever produced. Watching both back to back is the best crash course in why HBO matters.
+1. **The Sopranos** (1999–2007) — The foundation of prestige TV and our pick for the best HBO show ever.
+2. **The Wire** (2002–2008) — The critics' "greatest ever," and HBO's highest-rated series on Rotten Tomatoes.
+3. **Succession** (2018–2023) — The modern peak, a Shakespearean media-empire tragedy with the sharpest dialogue on TV.
+4. **Game of Thrones** (2011–2019) — The most-watched HBO show of all time; a global phenomenon despite a divisive finale.
+5. **Chernobyl** (2019) — HBO's highest-rated show on IMDb and a benchmark miniseries.
+6. **Band of Brothers** (2001) — The WWII event series from Spielberg and Hanks; near the top of every IMDb list.
+7. **Six Feet Under** (2001–2005) — Alan Ball's funeral-home family drama, home to the most beloved finale ever written.
+8. **Deadwood** (2004–2006) — David Milch's profane Western with near-Shakespearean dialogue.
+9. **Barry** (2018–2023) — Bill Hader's hitman noir that curdled into pitch-black tragedy.
+10. **Curb Your Enthusiasm** (2000–2024) — Larry David's cringe-comedy institution.
+11. **Veep** (2012–2019) — The most quotable political comedy ever made.
+12. **True Detective** (2014–present) — Season one, a Louisiana mystery, became an instant sensation.
+13. **The White Lotus** (2021–present) — The modern water-cooler hit; a savage resort satire climbing into the all-time tier.
+14. **Watchmen** (2019) — Damon Lindelof's bold superhero sequel-as-reckoning.
+15. **The Last of Us** (2023–present) — The new flagship, and the best video-game adaptation on TV.
+16. **Mare of Easttown** (2021) — A small-town murder mystery and a tour-de-force lead performance.
+17. **Oz** (1997–2003) — HBO's first hourlong drama; the rough draft for everything that followed.
+18. **Big Little Lies** (2017–2019) — A starry, addictive murder-mystery drama.
+19. **Boardwalk Empire** (2010–2014) — Prohibition-era gangster grandeur from the *Sopranos* writers' room.
+20. **Euphoria** (2019–present) — The most stylistically daring teen drama of its generation.
 
-## The fantasy and sci-fi epics
+## The Sopranos vs. The Wire: settling the #1 debate
 
-When HBO scaled up, it scaled up enormously. **Game of Thrones** (2011–2019) became a worldwide phenomenon, a sword-and-dragon saga adapted from George R.R. Martin's novels that dominated pop culture for the better part of a decade. Its final season drew heavy criticism, but its peak episodes set a new bar for television spectacle and remain among the most-watched in the medium's history.
+No "best HBO series" argument ends without this one. **The Sopranos** follows New Jersey mob boss Tony Soprano as he juggles family, crime, and panic attacks in his therapist's office. It made the antihero the central figure of 21st-century TV, won 21 Primetime Emmys, and in 2004 became the first cable series named Outstanding Drama. It is *why* prestige TV exists.
 
-Two more belong on any serious list. **Westworld** (2016–2022) launched as a cerebral, gorgeously mounted puzzle box about sentient theme-park hosts, and its first season was a genuine event. More recently, **The Last of Us** (2023–present) proved a video-game adaptation could be both a critical darling and a mainstream hit, anchored by raw performances and a now-famous standalone episode.
+**The Wire** took a different road: a city-as-character study of Baltimore spanning drugs, police, schools, the docks, and journalism. It was never a ratings hit, but its reputation has only grown — it holds HBO's highest overall Rotten Tomatoes standing and tops many critics' lists of the greatest American dramas, full stop. Our verdict: The Sopranos by a hair on impact and influence, The Wire by a hair on sheer ambition. Watch both back to back and you'll understand the entire medium. For more limited-run greatness, see our guide to the [best limited series to stream](/tv/best-limited-series-to-stream).
 
-## The modern masterpieces: Succession and beyond
+## The biggest hits and the highest-rated HBO shows
 
-The 2010s and 2020s proved HBO hadn't lost a step. **Succession** (2018–2023), Jesse Armstrong's savage comedy-drama about the Roy family fighting over a media empire, is arguably the best show of its era — a Shakespearean tragedy delivered as the sharpest dialogue on television. It swept awards and gave us a parade of unforgettable, deeply unlovable characters.
+Two different crowns sit just below the canon. **Game of Thrones** is the most popular HBO show of all time — a sword-and-dragon saga that dominated pop culture for a decade and drew record audiences in its final seasons. Its ending split fans, but its peak episodes reset the bar for TV spectacle.
 
-Alongside it sits a remarkable run of recent work. **Chernobyl** (2019), a five-part dramatization of the 1986 nuclear disaster, is one of the most acclaimed limited series ever made. **Barry** (2018–2023) blended hitman noir with pitch-black comedy. And **Mare of Easttown** (2021) turned a small-town murder mystery into a showcase for one of the decade's great lead performances. Any of these makes a strong next stop once you've worked through the foundational dramas above.
+The ratings crown goes elsewhere. **Chernobyl**, a five-part dramatization of the 1986 nuclear disaster, briefly became the highest-rated TV show in IMDb history when it aired and remains HBO's top-scoring original there. **Band of Brothers**, the Spielberg-and-Hanks WWII miniseries, sits right alongside it near the summit of every all-time IMDb list — proof that two of HBO's best dramas of all time are technically miniseries.
 
-## The comedies and the cult favorites
+## The modern contenders climbing the canon
 
-HBO's drama legacy can overshadow how good its comedies are. **Curb Your Enthusiasm**, which ran from 2000 to 2024 (with long hiatuses along the way), turned Larry David's cringe comedy into an institution, while **Veep** (2012–2019) skewered American politics and delivered some of the most quotable insults on television. **Six Feet Under** (2001–2005), Alan Ball's funeral-home family drama, is famous for one of the most beloved series finales ever written.
+HBO didn't peak in 2007. **Succession** — Jesse Armstrong's savage saga of the Roy family fighting over a media empire — is arguably the best show of its era, a Shakespearean tragedy delivered as the funniest, cruelest dialogue on television. It swept the Emmys and earned a place this high on pure quality.
 
-Then there are the rich, ambitious swings: **Deadwood**, David Milch's profane Western with near-Shakespearean dialogue; **Band of Brothers**, the World War II miniseries event; and **True Detective**, whose first season — a Louisiana mystery carried by two huge film stars in Matthew McConaughey and Woody Harrelson — became an instant sensation. For newcomers, *The Sopranos*, *Succession*, and *Chernobyl* remain the easiest on-ramps to the network's catalog.
+Behind it, a new tier is forming. **The White Lotus** turned a luxury-resort satire into appointment viewing and a genuine cultural event, fueling the kind of weekly debate that recalls peak prestige TV. **Barry** and **Mare of Easttown** rounded out a remarkable late-2010s run. These are the best HBO Max shows to watch right now if you want the network at its current, still-formidable best. If twisty murder mysteries are your thing, our [best true crime documentaries](/tv/best-true-crime-documentaries) list pairs perfectly with *Mare* and *The White Lotus*.
 
-## How we ranked them
+## The comedies and where to watch them all
 
-This list weighs critical standing, cultural impact, and staying power rather than raw viewership alone. A useful working order:
+HBO's drama legacy can overshadow how funny it is. **Curb Your Enthusiasm** turned Larry David's social-cringe comedy into a 24-year institution, while **Veep** delivered the most quotable insults in TV history. For black-comedy depth, **Barry** stands with the best comedies the network ever aired before it broke your heart.
 
-1. **The Sopranos** — the foundation of prestige TV
-2. **The Wire** — among the most ambitious American dramas ever
-3. **Succession** — the modern peak
-4. **Game of Thrones** — the biggest global hit
-5. **Chernobyl** — a benchmark limited series
-6. **The Last of Us** — the new flagship
-7. **Six Feet Under** — the emotional heavyweight
-8. **Veep / Curb Your Enthusiasm** — the comedy crown
-
-Reasonable people will reorder the middle freely — that flexibility is exactly the point. HBO's catalog is deep enough that almost any top-ten will look credible.
+Every show on this list streams on **HBO Max**, where the flagship dramas, comedies, and miniseries sit alongside newer originals — though availability shifts by region and over time, so check the platform for your country. If you're building a broader watchlist, compare notes with our roundups of the [best shows on Apple TV](/streaming/best-shows-on-apple-tv) for more prestige picks beyond the HBO catalog.
 
 ## The bottom line
 
-The best HBO shows aren't just great television; they're the shows that redefined what television could be. Start with *The Sopranos* and *The Wire* to understand the foundation, move to *Succession* and *Chernobyl* for the modern peak, and let *Game of Thrones* or *The Last of Us* supply the spectacle. Few networks can claim even one all-time classic. HBO has a shelf full.
+The best HBO shows aren't just great television — they're the shows that redefined what television could be. Start with **The Sopranos** and **The Wire** to understand the foundation, move to **Succession** and **Chernobyl** for the modern and most-acclaimed peaks, and let **Game of Thrones** supply the spectacle. Most networks would kill for a single all-time classic. HBO has a shelf full — and that's why, twenty-five years on, "It's not TV. It's HBO" still holds up.

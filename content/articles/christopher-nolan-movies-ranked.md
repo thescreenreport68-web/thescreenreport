@@ -1,126 +1,148 @@
 ---
-title: 'Every Christopher Nolan Movie, Ranked From Worst to Best'
+title: 'Christopher Nolan Movies Ranked: All 12 From Worst to Best'
 slug: christopher-nolan-movies-ranked
 category: movies
 author: jordan-hale
 date: '2026-06-24T07:00:00.000Z'
 dek: >-
-  From his micro-budget debut to his Oscar-sweeping atomic epic, we rank all 12
-  of Christopher Nolan's released feature films, the puzzle-box thrillers and
-  IMAX spectacles that made him the rare auteur who fills multiplexes with
-  ideas.
-metaTitle: 'Christopher Nolan Movies Ranked: All 12 Films'
+  From a $6,000 debut to a Best Picture sweep, we rank every Nolan feature worst
+  to best, settle the No. 1 fight, and place the divisive ones.
+metaTitle: 'Christopher Nolan Movies Ranked: All 12, Worst to Best'
 metaDescription: >-
-  Christopher Nolan movies ranked from worst to best, from Following to
-  Oppenheimer. Our full guide to every film by the blockbuster auteur, plus
-  where to watch.
+  Christopher Nolan movies ranked worst to best: all 12 features scored with RT,
+  IMDb and box office, plus our pick for his single greatest film.
 tags:
   - Christopher Nolan
   - movie rankings
+  - The Dark Knight
   - Oppenheimer
   - Inception
-  - The Dark Knight
   - Interstellar
-  - directors
+  - filmmaking
+  - box office
 targetKeyword: christopher nolan movies ranked
 imageAlt: >-
-  Stylized poster collage of Christopher Nolan's films including Oppenheimer,
-  Inception, Interstellar and The Dark Knight arranged in a ranking grid
+  Christopher Nolan directing on set, with The Dark Knight, Oppenheimer and
+  Inception referenced in a ranked filmography
 imageCredit: The Screen Report
 faq:
   - q: What is Christopher Nolan's best movie?
     a: >-
-      It's hotly debated. Our ranking puts The Dark Knight (2008) at the top for
-      its genre-redefining ambition and Heath Ledger's Oscar-winning
-      performance, but Oppenheimer, Inception and Memento all have strong
-      claims, and you'll find critics and fans who champion each of them.
+      We give the crown to The Dark Knight (2008), the rare blockbuster that is
+      also a great film, anchored by Heath Ledger's Joker. Oppenheimer and
+      Memento are the closest challengers, and a strong case exists for either.
   - q: How many movies has Christopher Nolan directed?
     a: >-
-      Nolan has directed 12 released feature films, beginning with Following in
-      1998 and most recently Oppenheimer in 2023. His next film, an adaptation
-      of Homer's The Odyssey starring Matt Damon, is set for release on July 17,
-      2026.
-  - q: What was Christopher Nolan's first movie?
+      Twelve feature films, from Following (1998) to Oppenheimer (2023). His
+      thirteenth, The Odyssey, arrives July 17, 2026, from Universal Pictures.
+  - q: What is Christopher Nolan's highest-grossing movie?
     a: >-
-      His first feature was Following (1998), a black-and-white neo-noir made on
-      a tiny budget, largely shot on weekends with friends. It introduced the
-      fractured, non-linear storytelling that became his signature.
-  - q: Did Christopher Nolan win an Oscar?
+      The Dark Knight Rises (2012), which grossed roughly $1.085 billion
+      worldwide, edging out The Dark Knight's $1.006 billion. Oppenheimer is his
+      biggest non-Batman hit at about $977 million.
+  - q: Which Christopher Nolan movie won Best Picture?
     a: >-
-      Yes. Nolan won the Academy Award for Best Director for Oppenheimer at the
-      2024 ceremony, his first directing win. Oppenheimer also won Best Picture
-      and took seven Oscars in total, making it his most decorated film.
-  - q: In what order should I watch Christopher Nolan's movies?
+      Oppenheimer (2023) won Best Picture at the 2024 Academy Awards, part of a
+      seven-Oscar haul that also earned Nolan his first Best Director win. It is
+      his only Best Picture winner.
+  - q: What is Christopher Nolan's next movie after Oppenheimer?
     a: >-
-      For newcomers, a release-order watch from Following through Oppenheimer
-      shows his evolution. If you want the highlights first, start with The Dark
-      Knight, then Inception, Interstellar, Memento and Oppenheimer.
+      The Odyssey, an epic adaptation of Homer's poem starring Matt Damon as
+      Odysseus, shot for IMAX and due in theaters July 17, 2026.
 featured: false
 ---
 
-If you want the short version: **Christopher Nolan movies ranked** from worst to best puts *The Dark Knight* at the summit, followed closely by *Oppenheimer*, *Inception*, *Memento* and *Interstellar*. That's the payoff. But Nolan is one of the few living directors whose entire filmography is worth arguing about, because even his "lesser" films would be career peaks for almost anyone else. Across 12 released features, he has bent time, folded cities, split atoms and turned blockbuster spectacle into something genuinely cerebral.
+No filmmaker working today turns dense, brain-bending ideas into billion-dollar IMAX events quite like Christopher Nolan. So here are **all 12 Christopher Nolan movies ranked worst to best** — and we are not hedging on the top spot. After a $6,000 debut, four Batman-adjacent landmarks, and a Best Picture sweep, our **best Christopher Nolan movie** is **The Dark Knight (2008)**, with *Oppenheimer* and *Memento* as the only films with a real claim to dethrone it.
 
-Below we rank all 12, counting up from his most modest efforts to his masterpieces. No filler, no padding, just the order and the reasons.
+Every entry below is justified with critical scores (Rotten Tomatoes, IMDb), worldwide box office, and a short verdict. Note one thing the takes online keep proving: Nolan has almost no bad films. Only one of his 12 features sits below 73% on the Tomatometer. This is a ranking of great-to-greater.
 
-## The full ranking, worst to best
+## Christopher Nolan movies ranked worst to best (the full list)
 
-12. **Following (1998)**
-11. **Insomnia (2002)**
-10. **The Dark Knight Rises (2012)**
-9. **Tenet (2020)**
-8. **Batman Begins (2005)**
-7. **The Prestige (2006)**
-6. **Dunkirk (2017)**
-5. **Interstellar (2014)**
-4. **Memento (2000)**
-3. **Inception (2010)**
-2. **Oppenheimer (2023)**
-1. **The Dark Knight (2008)**
+Here is the complete ranking at a glance before we break each one down:
 
-A ranking like this is subjective by design. Slot Nolan's films a few places either way and you'd still have a defensible list. What follows is the case for each placement.
+12. **Tenet (2020)** — RT 70%
+11. **The Dark Knight Rises (2012)** — RT 87%
+10. **Following (1998)** — RT 82%
+9. **Insomnia (2002)** — RT 92%
+8. **Batman Begins (2005)** — RT 85%
+7. **Dunkirk (2017)** — RT 92%
+6. **Interstellar (2014)** — RT 73%
+5. **The Prestige (2006)** — RT 77%
+4. **Inception (2010)** — RT 87%
+3. **Memento (2000)** — RT 94%
+2. **Oppenheimer (2023)** — RT 93%
+1. **The Dark Knight (2008)** — RT 94%
 
-## The early experiments (12-11)
+## 12. Tenet (2020)
 
-**Following** lands last not because it's bad but because it's the seed, not the flower. Shot in grainy black-and-white on borrowed time and money, this lean neo-noir about a writer who shadows strangers already contains Nolan's DNA: a scrambled timeline, an unreliable narrator and a sucker-punch ending. It's essential viewing for understanding where he came from.
+Nolan's time-inversion spy thriller is his most divisive film, and the only one to land below 70% with critics. The set pieces — a backward-running car chase, a "temporal pincer" climax — are staggering, but muffled sound mixing and a plot that demands a whiteboard left even fans cold. A pandemic release sank it to roughly $364 million worldwide, a rare miss after a decade of monster hits. On Reddit and Letterboxd it remains the great Nolan argument: cold puzzle or misunderstood gem.
 
-**Insomnia**, his lone studio remake, ranks just above it. A Los Angeles detective chases a killer (Robin Williams, cast against type) through the endless daylight of an Alaskan summer. It's a sturdy, atmospheric thriller anchored by Al Pacino, and it proved Nolan could handle stars and a real budget. But it's the most conventional film he's made, lacking the structural daring that defines his best work.
+## 11. The Dark Knight Rises (2012)
 
-## The flawed swings (10-9)
+The trilogy closer is, paradoxically, Nolan's **highest-grossing movie ever** at about $1.085 billion. It is grand, emotional, and overstuffed — Bane is a magnetic villain, but plot holes and a baggy midsection keep it below its predecessors. A worthy ending to the most influential superhero saga ever made, just not Nolan operating at his sharpest.
 
-**The Dark Knight Rises** carries the heaviest expectations of any sequel on this list, and that's partly why it sits here. Tom Hardy's Bane is a menacing, theatrical villain and the scale is enormous, but the plotting strains under its own ambition. It's a satisfying, emotional finale to the trilogy that never quite reaches the heights of what came before.
+## 10. Following (1998)
 
-**Tenet** is Nolan at his most defiantly complex: a globe-trotting spy thriller built around "inverted" time that runs backward and forward at once. It's a dazzling technical achievement and a genuine head-scratcher, but a famously dense sound mix and cool, schematic characters keep it from connecting the way his warmer films do. It rewards patient rewatches.
+His sub-$6,000, black-and-white debut about a writer who tails strangers is where the entire Nolan playbook begins: scrambled chronology, a twist that recontextualizes everything, and ruthless economy. At 70-odd minutes it is more promise than masterpiece, but as **Christopher Nolan's first movie** it is essential viewing and astonishingly assured.
 
-## The Batman foundation (8)
+## 9. Insomnia (2002)
 
-**Batman Begins** did something many thought impossible in 2005: it made a comic-book movie feel like serious drama. By grounding Bruce Wayne's origin in fear, training and real psychology, Nolan helped reset the superhero genre and laid track that later blockbusters would ride to dominance. If you're tracing how those films evolved, compare it to the saga charted in our guide to the [MCU movies in order](/movies/mcu-movies-in-order). Batman Begins is a great film slightly overshadowed by its own sequel.
+Nolan's only studio remake and his most underrated film, a fog-grey Alaskan noir with Al Pacino as a guilt-rotted detective and Robin Williams playing chillingly against type. It is "minor" Nolan only because the competition is brutal — by any other measure, a tense, 92%-rated character study.
 
-## The magicians and the war (7-6)
+## 8. Batman Begins (2005)
 
-**The Prestige** may be the most underrated film Nolan has made, a gorgeously twisted period drama about two rival magicians (Hugh Jackman and Christian Bale) whose obsession curdles into tragedy. It's a movie about misdirection that misdirects you, and its final reveal recontextualizes everything. A puzzle box worthy of repeat viewings.
+The film that rebuilt the modern blockbuster from the ground up, grounding a comic-book icon in fear, training, and consequence. It paved the road for every gritty reboot since and for [The Batman](/reviews/the-batman-review). The sequel eclipses it, but Begins is the brave foundation.
 
-**Dunkirk** is Nolan's leanest, most experimental epic: a near-wordless WWII survival thriller told across three interlocking timelines on land, sea and air. The tension is almost unbearable, the IMAX cinematography stunning, and Hans Zimmer's ticking-clock score never lets up. It's pure cinema, even if its abstraction keeps some viewers at arm's length.
+## 7. Dunkirk (2017)
 
-## The cosmic and the cerebral (5-4)
+A nearly dialogue-free WWII survival epic told across three interlocking timelines — land, sea, and air. It is Nolan's most formally daring picture, an experiential gut-punch that proved he could make a tight, 106-minute war film feel as massive as any space opera. It earned him his first Best Director nomination.
 
-**Interstellar** is Nolan's biggest emotional gamble and one of his most divisive films. A space odyssey about a father leaving his children to save humanity, it swings for the fences on both hard science and raw sentiment. The wormhole visuals are landmark work, the Zimmer organ score is overwhelming, and that docking sequence remains one of the great set pieces of the 2010s. If you love this register, our roundup of the [best sci-fi movies streaming](/streaming/best-sci-fi-movies-streaming) is a natural next stop.
+## 6. Interstellar (2014)
 
-**Memento** is the film that announced Nolan to the world. Told largely backward, it traps you inside the broken memory of a man hunting his wife's killer, and the reverse structure isn't a gimmick but the entire point. Decades on, it remains one of the most ingeniously constructed thrillers ever made.
+The most emotional film Nolan has made, and the one fans defend hardest. Its 73% critic score badly undersells a movie audiences adore — an 8.6 IMDb rating puts it among his very best. The black-hole imagery, the docking sequence, that "Stay" scene — pure awe. If you love this one, see our [best sci-fi movies of the 21st century](/movies/best-sci-fi-movies-21st-century).
 
-## The masterpieces (3-1)
+## 5. The Prestige (2006)
 
-**Inception** is the rare original blockbuster that became a cultural event. A heist movie set inside layered dreams, it's a thrilling, melancholy puzzle with an ending that people still debate. The folding-Paris shot and the rotating-hallway fight are instant classics, and Leonardo DiCaprio grounds the spectacle in real grief.
+Two rival magicians, one obsessive duel, and a final twist that rewards a second viewing. It is Nolan's most underrated puzzle-box and arguably his most rewatchable, threading sleight-of-hand structure through a story that is itself a magic trick.
 
-**Oppenheimer** is Nolan's most decorated film, the three-hour biopic of the father of the atomic bomb that swept the 2024 Oscars, winning seven awards including Best Director and Best Picture. Cillian Murphy's haunted performance and the agonizing Trinity sequence make it a towering achievement. For more on its devastating final scene, see our [Oppenheimer ending explained](/movies/oppenheimer-ending-explained). It's history rendered as a thriller.
+## 4. Inception (2010)
 
-And at number one: **The Dark Knight**. Heath Ledger's Joker, which earned him a posthumous Oscar for Best Supporting Actor, anchors a crime epic that transcends its genre entirely. It's a sprawling, morally serious film about chaos and order that just happens to feature a man in a cape. Few superhero movies before or since have felt this essential. As a piece of blockbuster filmmaking, it's Nolan's complete statement.
+The dreams-within-dreams heist that made "we need to go deeper" a permanent part of the culture. A genuine original blockbuster that is thrilling and intellectually dense at once, it grossed over $830 million and snagged an 8.7 IMDb rating. The folding-city shot and that spinning top still define modern spectacle — and it remains the gold standard for [heist movies](/movies/best-heist-movies).
 
-## Where to watch Christopher Nolan's films
+## 3. Memento (2000)
 
-Availability shifts constantly across streaming services and rental platforms, so it's worth checking your region before committing to a marathon. Most of Nolan's catalog rotates between premium subscription tiers and digital purchase, and his Warner Bros. titles in particular tend to move around. The safest bet for a guaranteed watch is renting or buying digitally. If you're assembling a watchlist of modern auteurs, you might also enjoy our picks of the [best A24 movies ranked](/movies/best-a24-movies-ranked) for a very different flavor of ambitious filmmaking.
+The film that announced a major voice. Told in two interlocking timelines — one running backward — it forces you to experience the amnesiac hero's confusion in real time. Twenty-five years on it has aged not a day; on **Letterboxd and Reddit** it is the perennial pick for **Nolan's best movie**, and at 94% it is tied for his best-reviewed film. The purest expression of his obsession with memory and time.
+
+## 2. Oppenheimer (2023)
+
+His masterpiece of restraint, and the film that finally won the Academy over. The three-hour biopic of the atomic bomb's architect swept the 2024 Oscars with seven wins, including **Best Picture** and Nolan's first **Best Director** — making it the only Nolan film to win Best Picture. It grossed a staggering ~$977 million for an R-rated drama with no action, powered by Cillian Murphy's haunted lead. If you want the full breakdown, read our [Oppenheimer review](/reviews/oppenheimer-review) and our [Oppenheimer ending explained](/movies/oppenheimer-ending-explained). For many, *this* is now the answer to **Christopher Nolan's best movie** — and we would not argue hard.
+
+## 1. The Dark Knight (2008)
+
+The peak. The rare superhero film that is simply a great film, full stop. Heath Ledger's posthumous-Oscar-winning Joker is the finest comic-book villain ever committed to screen, and Nolan builds a sprawling crime epic around him with the muscle of *Heat*. It cleared $1 billion, sits at 94% with a near-perfect 9.0 IMDb rating, and forced the Academy to expand the Best Picture field after its snub. Sixteen years on, nothing in the genre has topped it. That is why it is **the best Christopher Nolan movie**.
+
+## Every Christopher Nolan movie in order (full filmography)
+
+For completeness, here is the **Christopher Nolan movies list in order** of release:
+
+1. Following (1998)
+2. Memento (2000)
+3. Insomnia (2002)
+4. Batman Begins (2005)
+5. The Prestige (2006)
+6. The Dark Knight (2008)
+7. Inception (2010)
+8. The Dark Knight Rises (2012)
+9. Interstellar (2014)
+10. Dunkirk (2017)
+11. Tenet (2020)
+12. Oppenheimer (2023)
+13. **The Odyssey (2026)** — coming July 17, 2026
+
+## Where to watch and what's next
+
+Most of these stream across major platforms, and the Batman trilogy regularly rotates through services; our [best sci-fi movies to stream](/streaming/best-sci-fi-movies-streaming) guide is a good companion for the *Inception*/*Interstellar* crowd. The big one on the horizon is **The Odyssey**, Nolan's Universal epic of Homer's poem starring Matt Damon as Odysseus, shot entirely for IMAX and due **July 17, 2026**. Early buzz suggests it could be his most ambitious film yet — meaning this entire list may need rewriting a year from now. If you like a director's full arc, compare ours with the [Denis Villeneuve movies ranked](/movies/denis-villeneuve-movies-ranked).
 
 ## The bottom line
 
-Ranking Nolan is a luxury problem: there's no bad film here, only degrees of greatness. *The Dark Knight* takes the crown, but the gap between number one and number twelve is narrower than for almost any other director working at this scale. He remains one of the few filmmakers who can pack IMAX screens with ideas about time, memory and morality.
-
-What's next? Nolan's adaptation of Homer's *The Odyssey*, starring Matt Damon as Odysseus, is set for release on July 17, 2026, shot on cutting-edge IMAX film cameras with a stacked ensemble cast. If his track record holds, this list will need a re-rank very soon.
+Across 12 films, Nolan has no true misfire — even his "worst," *Tenet*, is a swing most directors could never attempt. The fight for the top is genuinely **The Dark Knight vs. Oppenheimer vs. Memento**, and reasonable fans land in all three camps. Our verdict stands: **The Dark Knight** is his best, *Oppenheimer* his most decorated, and *The Odyssey* the wild card that could reshuffle everything in 2026.

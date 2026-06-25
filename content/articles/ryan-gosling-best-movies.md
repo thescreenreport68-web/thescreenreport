@@ -1,123 +1,119 @@
 ---
-title: 'Ryan Gosling''s Best Movies, Ranked'
+title: 'Ryan Gosling''s Best Movies, Ranked: His Top 15 Films, From Drive to Barbie'
 slug: ryan-gosling-best-movies
 category: celebrity
 author: daniel-reyes
-date: '2026-06-24T23:00:00.000Z'
+date: '2026-06-18T07:00:00.000Z'
 dek: >-
-  From his heartthrob breakout to brooding cult classics and a scene-stealing
-  Ken, we rank the essential Ryan Gosling movies and tell you where each one
-  fits in his career.
-metaTitle: 'Ryan Gosling Movies, Ranked: His 10 Best'
+  La La Land is the consensus pick and Barbie is the box-office king, but our
+  No. 1 goes to the neo-noir that turned Gosling into an icon. Here are his 15
+  best, ranked.
+metaTitle: 'Ryan Gosling Best Movies Ranked: Top 15 Films'
 metaDescription: >-
-  Our ranking of the best Ryan Gosling movies, from Drive and La La Land to
-  Blade Runner 2049 and Barbie, plus where each one fits in his career.
+  Ryan Gosling best movies ranked, from Drive and Blade Runner 2049 to Barbie
+  and La La Land. See our defended No. 1 pick, Oscar facts, and where to stream
+  each.
 tags:
   - Ryan Gosling
-  - celebrity
+  - Best Movies Ranked
   - Drive
   - La La Land
   - Blade Runner 2049
   - Barbie
-  - best movies
-  - Oscars
-targetKeyword: ryan gosling movies
+  - Project Hail Mary
+  - Celebrity
+targetKeyword: ryan gosling best movies ranked
 imageAlt: >-
-  Stylized portrait illustration of Ryan Gosling against a moody neon-lit
-  backdrop representing his best movies
+  Ryan Gosling in character as the getaway Driver, the top pick in our ranking
+  of his best movies
 imageCredit: The Screen Report
 faq:
   - q: What is Ryan Gosling's best movie?
     a: >-
-      It depends on what you want. Critically, Drive and Blade Runner 2049 are
-      towering achievements, while La La Land is his most beloved crowd-pleaser
-      and earned him a Best Actor Oscar nomination. For pure performance, many
-      point to Half Nelson, his first nomination.
-  - q: How many Oscar nominations does Ryan Gosling have?
+      Our pick is Drive (2011), Nicolas Winding Refn's neo-noir that turned
+      Gosling into a modern movie icon. It holds a 93% Rotten Tomatoes score and
+      remains his most quoted, most stylish, most rewatchable performance. La La
+      Land is the close runner-up and the more decorated film, but Drive is the
+      one that defined his screen persona.
+  - q: How many Oscars has Ryan Gosling won?
     a: >-
-      Three. He earned Best Actor nominations for Half Nelson (2006) and La La
-      Land (2016), and a Best Supporting Actor nomination for Barbie (2023). He
-      has not yet won an Academy Award.
-  - q: Is Ryan Gosling in Blade Runner 2049?
+      Zero. Gosling has been nominated three times but never won. His nods came
+      for Half Nelson (Best Actor, 2006), La La Land (Best Actor, 2016) and
+      Barbie (Best Supporting Actor, 2023). He did win a Golden Globe for La La
+      Land, and his 2026 film Project Hail Mary has fueled fresh Best Actor buzz
+      for a potential fourth nomination.
+  - q: What is Ryan Gosling's highest-grossing movie?
     a: >-
-      Yes. He stars as Officer K, a replicant blade runner, in Denis
-      Villeneuve's 2017 sequel to Blade Runner, opposite a returning Harrison
-      Ford. It is one of his most acclaimed roles.
-  - q: What was Ryan Gosling's breakout movie?
+      Barbie (2023). Greta Gerwig's film grossed roughly $1.446 billion
+      worldwide, by far Gosling's biggest box-office hit and one of the
+      highest-grossing films of all time. His viral turn as Ken, including the
+      song 'I'm Just Ken,' earned him a Best Supporting Actor Oscar nomination.
+  - q: What is Ryan Gosling's newest movie?
     a: >-
-      The 2004 romance The Notebook turned him into a heartthrob and household
-      name, though earlier indie work like The Believer first signaled his range
-      as a serious dramatic actor.
-  - q: Where can I watch Ryan Gosling movies?
+      Project Hail Mary, released in March 2026. Directed by Phil Lord and
+      Christopher Miller and based on Andy Weir's novel, it casts Gosling as
+      astronaut Ryland Grace on a solo mission to save Earth. It opened to a 94%
+      Rotten Tomatoes score and immediate Best Actor Oscar conversation.
+  - q: In what order should I watch Ryan Gosling movies?
     a: >-
-      His films are spread across streamers and rental services. Barbie has
-      streamed on HBO Max, The Gray Man is on Netflix, and titles like Drive, La
-      La Land and Blade Runner 2049 rotate between subscription platforms and
-      digital rental, so check current availability in your region.
+      For a chronological run, start with The Notebook (2004) and Half Nelson
+      (2006), move through Blue Valentine (2010) and Drive (2011), hit La La
+      Land (2016) and Blade Runner 2049 (2017), then enjoy the lighter recent
+      run of The Nice Guys (2016), Barbie (2023) and Project Hail Mary (2026).
+      If you want best-first, follow our ranked list above.
 featured: false
 ---
 
-Few stars have built a filmography as eclectic, or as cool, as Ryan Gosling. He went from a teen-romance heartthrob to a brooding indie favorite to a song-and-dance leading man, then capped it off by stealing a billion-dollar blockbuster as a plastic doll. If you are looking for the best **Ryan Gosling movies** to watch, the short answer is this: start with *Drive*, *La La Land*, and *Blade Runner 2049*, then work outward. Below, we rank his essential films and tell you exactly where each one sits.
+Here's the short version, no hedging: **Ryan Gosling's best movie is _Drive_ (2011).** Nicolas Winding Refn's synth-soaked neo-noir is the film that turned a respected indie actor into a permanent movie icon, and it tops this ranking of the **ryan gosling best movies ranked** from worst-to-first. But the honest answer is more interesting than one title, because Gosling's career splits three ways: _La La Land_ is the awards consensus, _Barbie_ is the box-office monster at roughly $1.446 billion, and _Drive_ is the cult classic that fans on Reddit and critics on Rotten Tomatoes keep circling back to. Below, all 15 films are ranked with the case for each, the Rotten Tomatoes and IMDb context, where to stream them, and exactly how his 2026 awards contender _Project Hail Mary_ reshuffles the all-time order.
 
-## The best Ryan Gosling movies, ranked
+First, the quick facts most lists bury. Gosling has **three Oscar nominations and zero wins**: _Half Nelson_ (Best Actor, 2006), _La La Land_ (Best Actor, 2016) and _Barbie_ (Best Supporting Actor, 2023). He has one Golden Globe, for _La La Land_. And _Barbie_, not any of his dramas, is his highest grosser. Keep those three pillars in mind as you read the list.
 
-Here is our ranking, weighing his performance, each film's quality, and its place in his career:
+## The definitive Ryan Gosling best movies ranked list
 
-1. **Drive (2011)** — His coolest, most iconic role, full stop.
-2. **La La Land (2016)** — A romantic musical that made him a leading man for the ages.
-3. **Blade Runner 2049 (2017)** — A haunting, soulful sci-fi epic.
-4. **Half Nelson (2006)** — The raw indie drama that earned his first Oscar nod.
-5. **The Nice Guys (2016)** — Proof he is a gifted, underrated comic actor.
-6. **Barbie (2023)** — A scene-stealing Ken and a third Oscar nomination.
-7. **Blue Valentine (2010)** — A devastating portrait of a marriage falling apart.
-8. **Lars and the Real Girl (2007)** — A tender, strange, deeply humane gem.
-9. **The Notebook (2004)** — The breakout romance that made him a star.
-10. **The Place Beyond the Pines (2012)** — A brooding, ambitious crime saga.
+This is the **ryan gosling best movies list** in full, counting up to No. 1. Ordering favors a blend of performance, rewatchability and cultural footprint over raw box office.
 
-## 1. Drive — the role that defined his cool
+**15. The Place Beyond the Pines (2012)** — A sprawling, three-act crime saga where Gosling's tattooed motorcycle stuntman robs banks to provide for his son. The first third is electric; the film loses him too soon. A strong showcase, slightly undone by ambition.
 
-Nicolas Winding Refn's neon-soaked thriller is where the Gosling mystique crystallized. As an unnamed Hollywood stunt driver moonlighting as a getaway wheelman, he says almost nothing and conveys everything — a coiled stillness that erupts into shocking violence. The satin scorpion jacket, the synth-heavy soundtrack, the elevator scene: *Drive* became an instant cult classic and the template for a certain kind of laconic, dangerous cool. If you watch only one Gosling film, make it this one. It is the purest distillation of his ability to hold the screen with restraint rather than fireworks.
+**14. Lars and the Real Girl (2007)** — Gosling plays a painfully shy man who believes a mail-order doll is his girlfriend. It should be a punchline; instead it's tender and disarming, and one of his most underrated turns.
 
-## 2. La La Land — the leading-man peak
+**13. Crazy, Stupid, Love (2011)** — The rom-com that proved his comedic timing and abs could carry a multiplex hit. His scenes with Emma Stone (their first pairing) crackle. Light, but expertly played.
 
-If *Drive* made him a cult figure, *La La Land* made him a movie star of the old-fashioned variety. As Sebastian, a stubborn jazz pianist falling in and out of love with Emma Stone's aspiring actress, Gosling sings, dances, and plays piano in a swooning throwback musical from director Damien Chazelle. The performance earned him a Best Actor Oscar nomination and proved he could carry a glossy, big-hearted crowd-pleaser. The film's bittersweet ending lingers for days, and Gosling's easy chemistry with Stone — their third onscreen pairing — is its engine.
+## From The Notebook to Blue Valentine: the early dramas
 
-## 3. Blade Runner 2049 — the soulful sci-fi epic
+**12. The Notebook (2004)** — The film that made him a heartthrob. Sappy by design, but the chemistry with Rachel McAdams is undeniable, and it remains his entry point for millions of viewers.
 
-Denis Villeneuve's long-awaited sequel could have been a hollow nostalgia play. Instead, it is one of the most visually stunning science-fiction films of its era, and Gosling anchors it with quiet melancholy as Officer K, a replicant hunting his own kind while questioning what makes a life real. It is a patient, internal performance in a film built on silence and scale. *Blade Runner 2049* is essential modern sci-fi; for more in that vein, see our roundup of the [best sci-fi movies streaming](/streaming/best-sci-fi-movies-streaming).
+**11. The Big Short (2015)** — As a slick, fourth-wall-breaking banker, Gosling is the wry narrator threading Adam McKay's financial-crisis ensemble. Proof he thrives in a stacked cast.
 
-## 4. Half Nelson — the breakout dramatic turn
+**10. Gangster Squad (2013)** — Stylish, pulpy 1940s LA noir. Not top-tier, but Gosling's soft-spoken cop is a magnetic counterweight to a villainous Sean Penn.
 
-Before the blockbusters, there was *Half Nelson*. Gosling plays Dan Dunne, an idealistic inner-city schoolteacher hiding a drug addiction, in a small, unsentimental indie that refuses easy redemption. The performance is jittery, lived-in, and heartbreaking, and it earned him his first Academy Award nomination for Best Actor. It is the film that announced he was far more than a romantic lead — a serious actor willing to live inside discomfort. Seek it out if you want to understand where his dramatic reputation began.
+**9. Blue Valentine (2010)** — A raw, non-linear portrait of a marriage falling apart, opposite Michelle Williams. Devastating and intimate; some of his most exposed dramatic work.
 
-## 5. The Nice Guys — the comic secret weapon
+**8. Half Nelson (2006)** — His first Oscar nomination, as a brilliant middle-school teacher with a crack addiction. The performance that announced him as a serious actor. Quietly essential.
 
-People forget how funny Gosling is until they watch *The Nice Guys*. In Shane Black's 1970s-set buddy comedy, he plays a bumbling, often-soused private eye opposite Russell Crowe's hired muscle, and his physical comedy — pratfalls, panicked yelps, a memorable bathroom-stall gag — is a revelation. It is a reminder that his range stretches well past brooding silence. The film flopped at the box office but has since earned a devoted following, and it is one of the best showcases for his underrated comic timing.
+## The modern classics: sci-fi, noir and a viral Ken
 
-## 6. Barbie — a scene-stealing Ken and a third Oscar nod
+**7. The Nice Guys (2016)** — Shane Black's underrated buddy comedy, with Gosling as a hapless, perpetually flustered PI opposite Russell Crowe. The funniest he's ever been; a Reddit favorite that deserved a sequel.
 
-In 2023, Gosling did something few A-list leading men would dare: he played Ken in Greta Gerwig's **Barbie**, the blockbuster phenomenon that became one of the year's biggest cultural events. His Ken — needy, sweetly clueless, and powered by the show-stopping number "I'm Just Ken" — was a comedic triumph that earned him a Best Supporting Actor nomination, his third overall. It is a fearless, all-in performance, and proof that a star at his level can still surprise audiences. The film's ensemble energy recalls the deep benches that define [the new Hollywood class Zendaya runs with](/celebrity/zendaya-movies-and-tv-shows).
+**6. Barbie (2023)** — His highest-grossing film by a mile (~$1.446 billion worldwide) and his third Oscar nod. As Ken, Gosling commits so fully to the bit, "I'm Just Ken" included, that he nearly steals the movie from its title character. Pure, joyful scene-stealing. Stream it on Max.
 
-## The wrenching dramas: Blue Valentine and Lars
+**5. Project Hail Mary (2026)** — His newest film and the reason this ranking needed updating. Directed by Phil Lord and Christopher Miller from Andy Weir's novel, Gosling plays astronaut Ryland Grace on a lonely mission to save Earth, opposite Sandra Hüller. It opened at 94% on Rotten Tomatoes and immediately landed in the Best Actor Oscar conversation, potentially his fourth nomination. A career-best-buzz performance that ranks this high on arrival.
 
-Two earlier films show the full depth of his dramatic range. In **Blue Valentine**, he and Michelle Williams play a couple cross-cut between giddy first love and bitter dissolution, in a performance so raw it is almost painful to watch. And in **Lars and the Real Girl**, he plays a painfully shy man whose relationship with a life-size doll becomes a town-wide act of collective kindness — a premise that could have been a punchline but instead becomes one of the most quietly moving films of his career. Both prove he can shatter you as readily as he can charm you.
+## The top four: where Gosling becomes essential
 
-## The early heartthrob and the ambitious swing
+**4. The Believer (2001)** — His breakout, as a Jewish neo-Nazi wrestling with self-hatred. Sundance Grand Jury Prize winner and a startling debut lead. The film that proved how fearless he'd be.
 
-Not every essential Gosling film fits the cool-loner mold. **The Notebook** (2004) is the swoony Nicholas Sparks romance that made him a household name, all rain-soaked kisses and earnest longing — and it remains a touchstone of modern romance cinema. **The Place Beyond the Pines** (2012), meanwhile, is a sprawling, generational crime drama in which he plays a motorcycle stuntman turned bank robber, reuniting with his *Blue Valentine* director Derek Cianfrance. It is an ambitious, melancholy swing that rewards patience. Together they bookend his early career: the heartthrob who became a serious, risk-taking artist. Fans of that career-mapping approach will enjoy our ranking of the [best Timothée Chalamet movies](/celebrity/timothee-chalamet-best-movies).
+**3. Blade Runner 2049 (2017)** — Denis Villeneuve's stunning sequel (88% on Rotten Tomatoes) gives Gosling his most soulful role: Officer K, a replicant blade runner chasing a question about his own existence. Hypnotic, melancholy and visually overwhelming. If you love it, our [best sci-fi movies of the 21st century](/movies/best-sci-fi-movies-21st-century) and [Denis Villeneuve movies ranked](/movies/denis-villeneuve-movies-ranked) are natural next stops.
 
-## Where to watch Ryan Gosling's movies
+**2. La La Land (2016)** — Damien Chazelle's modern musical is the consensus pick for **what is Ryan Gosling's best movie** among awards voters, and the closest he's come to a win. As struggling jazz pianist Sebastian, opposite Emma Stone, he sings, dances and plays piano for real. It earned his second Best Actor nomination and his lone Golden Globe. Bittersweet and gorgeous; on most days it's No. 1.
 
-His catalog is scattered across platforms, so a quick guide helps:
+**1. Drive (2011)** — But the crown goes here. Refn's neo-noir (93% on Rotten Tomatoes) distills everything that makes Gosling magnetic into one near-silent stunt-driver-turned-getaway-wheelman: the stillness, the scorpion jacket, the sudden violence, the doomed tenderness. It's his most iconic, most quoted, most rewatchable film, a fixture of every **ryan gosling best movies reddit** thread and the performance that defined his screen persona for a generation. As pure cinema and as a heist-adjacent thriller, nothing else in his filmography is this complete. For more in this lane, see our [best heist movies](/movies/best-heist-movies).
 
-- **Barbie** — has streamed on HBO Max and is available for digital rental.
-- **The Gray Man** — on Netflix.
-- **Drive**, **La La Land**, and **Blade Runner 2049** — rotate between subscription services and digital rental.
-- **The Nice Guys**, **Blue Valentine**, and **The Place Beyond the Pines** — generally available via digital rental and rotating streamers.
-- **The Notebook**, **Half Nelson**, and **Lars and the Real Girl** — move between platforms, so check your services.
+## Ryan Gosling movies in order, and where to watch
 
-Availability shifts by region and over time, so confirm before you settle in.
+For viewers searching **ryan gosling movies in order**, a chronological starter path runs: _The Believer_ (2001), _The Notebook_ (2004), _Half Nelson_ (2006), _Blue Valentine_ (2010), _Drive_ (2011), _La La Land_ (2016), _The Nice Guys_ (2016), _Blade Runner 2049_ (2017), _Barbie_ (2023), and _Project Hail Mary_ (2026). Streaming shifts constantly, so the **best Ryan Gosling movies on Netflix** rotate, while _Barbie_ lives on Max and his 2026 release is in theaters first; always confirm current availability before you press play. If you're building a watchlist, pair this with our [best sci-fi movies to stream](/streaming/best-sci-fi-movies-streaming) and our look at co-star [Margot Robbie's best movies](/celebrity/margot-robbie-best-movies).
+
+For the record, the **best Ryan Gosling movies on IMDb** and the **ryan gosling movies ranked Rotten Tomatoes** order would shuffle a few slots, _Blade Runner 2049_ often edges higher, _Barbie_ lower, but the top tier holds firm.
 
 ## The bottom line
 
-The best **Ryan Gosling movies** map an unusually fearless career: from the rain-soaked romance of *The Notebook* to the silent menace of *Drive*, the soaring melancholy of *La La Land* and *Blade Runner 2049*, and a billion-dollar blockbuster where he sang his heart out as Ken. He is a three-time Oscar nominee who has yet to win — a streak that only sharpens the anticipation around whatever he does next. Few stars move this freely between cult thrillers, big musicals, and broad comedy without ever losing their cool. The Gosling ranking, like the man's appetite for surprising us, is far from finished.
+Ryan Gosling is one of the most versatile leading men of his era: a three-time Oscar nominee who can headline a $1.4-billion comedy, a Sundance-winning drama and a melancholy sci-fi epic with equal conviction. _La La Land_ is his most decorated film and _Barbie_ his biggest, but **_Drive_ is his best**, the rare movie where star, style and story lock into something timeless. And with _Project Hail Mary_ chasing a fourth nomination in 2026, the ranking may need rewriting again very soon. Hungry for more rankings? Browse our [Timothée Chalamet best movies](/celebrity/timothee-chalamet-best-movies) and [Pedro Pascal movies and TV](/celebrity/pedro-pascal-movies-and-tv) breakdowns next.

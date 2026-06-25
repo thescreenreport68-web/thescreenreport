@@ -1,97 +1,119 @@
 ---
-title: The Best Shows on Apple TV+ Right Now
+title: 'The 15 Best Shows on Apple TV+ to Watch Right Now (2026), Ranked'
 slug: best-shows-on-apple-tv
 category: streaming
 author: maya-okafor
-date: '2026-06-18T07:00:00.000Z'
+date: '2026-06-15T15:00:00.000Z'
 dek: >-
-  From Emmy-winning dramas to feel-good comedies, here are the Apple TV+ series
-  worth your subscription right now.
-metaTitle: 'The Best Shows on Apple TV: Severance, Ted Lasso & More'
+  From Severance dethroning Ted Lasso to The Studio's near-perfect reviews and
+  the new Amy Adams-led Cape Fear, here's exactly what's worth your subscription
+  tonight.
+metaTitle: 15 Best Shows on Apple TV+ Right Now (2026 Ranked)
 metaDescription: >-
-  Our guide to the best shows on Apple TV right now, from "Severance" and "Ted
-  Lasso" to "Slow Horses" and "The Morning Show." What to stream first.
+  The best shows on Apple TV+ right now, ranked by critics: Severance, The
+  Studio, Slow Horses and more. See what to stream tonight in 2026.
 tags:
   - Apple TV+
-  - streaming
   - Severance
-  - Ted Lasso
   - Slow Horses
-  - The Morning Show
-  - best shows
-  - what to watch
-targetKeyword: best shows on apple tv
+  - The Studio
+  - streaming guide
+  - best shows 2026
+  - Ted Lasso
+  - Silo
+targetKeyword: best shows on Apple TV+
 imageAlt: >-
-  A television displaying the Apple TV+ streaming interface with a lineup of
-  original series
+  Promotional collage of the best Apple TV+ shows including Severance, The
+  Studio and Slow Horses
 imageCredit: The Screen Report
 faq:
-  - q: What is the single best show on Apple TV+ to start with?
+  - q: What is the best show on Apple TV+ right now?
     a: >-
-      If you want the title that best defines the service, start with
-      "Severance." Its high-concept premise, immaculate production design and
-      slow-burn mystery have made it the platform's signature drama and a major
-      Emmy winner. If you prefer something warmer, "Ted Lasso" is the easiest
-      crowd-pleaser.
-  - q: Is Apple TV+ worth subscribing to for the shows alone?
+      Severance is the best show on Apple TV+ right now. It has overtaken Ted
+      Lasso as the streamer's most-watched series ever, and its surreal,
+      twist-loaded sci-fi mystery is the title most critics and subscribers rank
+      at the top.
+  - q: What is the most popular show on Apple TV+?
     a: >-
-      For prestige TV fans, yes. Apple TV+ runs a smaller catalog than Netflix
-      or Max, but its hit rate is unusually high, with critically acclaimed
-      originals like "Severance," "Slow Horses," "The Morning Show" and "Ted
-      Lasso" anchoring the lineup. Many viewers subscribe for a month, binge a
-      few series, and pause.
-  - q: Has Apple TV+ won major awards for its series?
+      Severance is now Apple TV+'s most-watched series of all time, surpassing
+      Ted Lasso, which held the crown for years. The Morning Show, Silo and Slow
+      Horses round out the platform's most popular titles.
+  - q: Is Apple TV+ worth it for the shows?
     a: >-
-      Yes. Apple TV+ originals have earned numerous Emmy nominations and wins
-      across comedy and drama categories. "Ted Lasso" won back-to-back
-      Outstanding Comedy Series Emmys, and "Severance" picked up multiple Emmys
-      for its second season, including acting wins for Britt Lower and Tramell
-      Tillman. The platform has built a strong reputation among awards voters
-      despite its relatively recent launch.
-  - q: Are these Apple TV+ shows good for families?
+      Yes. Apple TV+ has one of the highest hit-rates in streaming, with
+      Severance, The Studio, Slow Horses, Silo and Ted Lasso all earning major
+      critical acclaim. If you like prestige drama and sharp comedy, the
+      subscription pays for itself quickly.
+  - q: What show is bigger than Ted Lasso on Apple TV+?
     a: >-
-      It varies. Comedies like "Ted Lasso" are broadly appealing but contain
-      some mature language. Dramas such as "Severance" and "Slow Horses" are
-      aimed at adult audiences. Check individual content ratings before watching
-      with younger viewers.
+      Severance is now bigger than Ted Lasso on Apple TV+. Apple confirmed the
+      workplace sci-fi thriller surpassed Ted Lasso to become the platform's
+      most-watched series, with its two seasons topping Ted Lasso's three.
+  - q: Which Apple TV+ shows have the highest Rotten Tomatoes scores?
+    a: >-
+      Slow Horses sits among the highest, with multiple perfect 100% seasons and
+      roughly 97% overall. The Studio also scored in the mid-90s and won the
+      Emmy for Outstanding Comedy Series, while Severance and Pachinko are
+      Certified Fresh.
 featured: false
 ---
 
-If you only have time to add one streaming service this month, the case for Apple TV+ is simple: a smaller catalog, but one of the highest hit rates in the business. The **best shows on Apple TV** right now are anchored by the mind-bending workplace thriller "Severance," the soccer-shaped comfort comedy "Ted Lasso," and the wickedly funny spy drama "Slow Horses" — three series that, on their own, justify a subscription. Below is our ranked guide to what to watch first.
+If you only start one thing tonight, make it **Severance** — the surreal corporate sci-fi thriller has officially overtaken *Ted Lasso* to become Apple TV+'s most-watched series ever, and it sits at the top of nearly every critic's list of the **best shows on Apple TV+** right now. That single fact tells you most of what you need to know: Apple has quietly become the most critically bulletproof streamer in Hollywood, where even its "lesser" titles out-review the headline shows on bigger platforms.
 
-Apple has built its reputation on prestige over volume. Where rival platforms flood the zone, Apple TV+ tends to release fewer titles with bigger budgets, marquee casts and a glossy, cinematic finish. That strategy has paid off with shelves of Emmy nominations and a lineup that punches well above its size.
+Below is the full ranked list of the best Apple TV shows to watch in 2026 — what each one is, who's in it, its current season status, and exactly why it's worth your time. We've weighted critical scores, cultural pull, and pure binge value, so you can stop scrolling the home screen and start watching.
 
-## "Severance" is the show that defines the service
+## The best shows on Apple TV+ right now, ranked
 
-If one title represents what Apple TV+ does best, it is "Severance." Created by Dan Erickson and executive produced and largely directed by Ben Stiller, the series follows office workers at the mysterious Lumon Industries who agree to surgically split their memories between work and home, effectively becoming two selves who never knowingly meet. The result is part corporate satire, part psychological horror, all wrapped in some of the most striking production design on television. Adam Scott leads a deep ensemble, and the show's slow-drip mysteries have turned it into appointment viewing. Its second season was a genuine awards heavyweight, earning multiple Emmys, including acting wins for Britt Lower and Tramell Tillman. Start here.
+Here's the shortlist at a glance before we go deeper on each one:
 
-## "Ted Lasso" remains the platform's warmest hit
+1. **Severance** — Sci-fi mystery thriller (the platform's most-watched ever)
+2. **Slow Horses** — Spy thriller (multiple perfect-100% seasons)
+3. **The Studio** — Hollywood comedy (Emmy winner, mid-90s on the Tomatometer)
+4. **Silo** — Dystopian sci-fi (heading into its final chapter)
+5. **Ted Lasso** — Feel-good sports comedy (the show that built the brand)
+6. **For All Mankind** — Alternate-history space epic
+7. **The Morning Show** — Star-powered newsroom drama
+8. **Bad Sisters** — Dark Irish comedy-thriller
+9. **Pachinko** — Sweeping multigenerational saga
+10. **Shrinking** — Warm, funny therapy comedy
+11. **Monarch: Legacy of Monsters** — MonsterVerse action
+12. **Cape Fear** — New psychological thriller (Amy Adams, Javier Bardem)
+13. **Presumed Innocent** — Legal thriller limited series
+14. **Mythic Quest** — Workplace gaming sitcom
+15. **Lessons in Chemistry** — 1960s drama (Brie Larson)
 
-The series that first put Apple TV+ on the cultural map, "Ted Lasso" stars Jason Sudeikis as a relentlessly optimistic American college football coach who is hired to manage AFC Richmond, a fictional English soccer club, despite knowing almost nothing about the sport. What sounds like a one-joke premise became a multi-Emmy-winning meditation on kindness, mental health and found family, taking back-to-back Outstanding Comedy Series wins. It is the easiest recommendation on this list for anyone who wants to feel better after watching television, and a gateway to the rest of the catalog. A fourth season is on the way, so now is a good time to catch up.
+## 1. Severance — the best Apple TV+ drama, full stop
 
-## "Slow Horses" is one of the smartest spy shows on TV
+**Severance** is the show that rewired Apple's whole identity. Adam Scott plays Mark, an office worker who undergoes a procedure that surgically splits his work memories from his home life — until the two halves start to rebel. With a cast that includes Britt Lower, John Turturro, Patricia Arquette and Christopher Walken, it's a paranoid, dryly funny puzzle box that demands and rewards rewatching. Apple confirmed it as the streamer's [most-watched series of all time](/streaming/best-sci-fi-movies-streaming), and it remains the single best reason to subscribe. **Status:** two seasons streaming, more confirmed.
 
-Adapted from Mick Herron's Slough House novels, "Slow Horses" follows a department of disgraced MI5 agents exiled to a dead-end division under the gloriously repellent Jackson Lamb, played by Gary Oldman in full curmudgeon mode. The show is tense, very funny and ruthlessly efficient — seasons are short, plots are tight, and Oldman is reason enough to watch. It has quietly become one of the most consistently well-reviewed dramas on any service, prestige spycraft with a sharp British wit, and Apple has already renewed it well beyond its current run.
+## 2. Slow Horses — the most consistently perfect spy show on TV
 
-## "The Morning Show" delivers glossy, star-powered drama
+If you want the best Apple TV drama to binge with zero duds, this is it. Adapted from Mick Herron's Slough House novels, **Slow Horses** follows a unit of disgraced MI5 agents exiled to a dead-end department under the gloriously repellent Jackson Lamb (Gary Oldman, never better). It's tense, very funny, and almost freakishly well-reviewed — every season is Certified Fresh, two of them have landed perfect 100% scores on the Tomatometer, and the series sits around 97% overall. A sixth season is already on the way. **Status:** five seasons streaming, Season 6 first look revealed.
 
-For viewers who want movie-star wattage, "The Morning Show" pairs Jennifer Aniston and Reese Witherspoon as anchors and rivals navigating scandal, power and ambition behind the scenes of a network breakfast program. It is a soapy, well-dressed workplace drama that uses its ripped-from-the-headlines premise to dig into media, ego and reinvention. The cast is stacked, the production is luxurious, and it remains one of the platform's flagship dramas.
+## 3. The Studio — the best Apple TV+ comedy series
 
-## A few more Apple TV+ shows worth your queue
+Seth Rogen's **The Studio** is the sharpest Hollywood satire in years. Rogen plays a newly minted studio chief flailing through one industry humiliation after another, shot in long, anxiety-spiking single takes packed with A-list cameos. It debuted to near-flawless reviews, has settled in the mid-90s on Rotten Tomatoes, and went on to win the Emmy for Outstanding Comedy Series. It pairs beautifully with our list of the [best sitcoms of all time](/tv/best-sitcoms-of-all-time) if you want to see the form pushed somewhere new. **Status:** Season 1 streaming, renewed.
 
-Beyond the headliners, the catalog rewards exploration. A quick-hit list of strong options:
+## 4–6. Silo, Ted Lasso and For All Mankind
 
-- **"Silo"** — a gripping dystopian mystery set inside a vast underground bunker where residents don't know why they're there.
-- **"For All Mankind"** — an ambitious alternate-history saga imagining a space race that never ended.
-- **"The Buccaneers"** — a lively period drama following young American heiresses crashing into British high society.
-- **"Shrinking"** — a heartfelt comedy from the "Ted Lasso" team about a grieving therapist who starts breaking the rules with his patients.
+These three anchor the platform's prestige core. **Silo**, starring Rebecca Ferguson, is a gripping dystopian mystery about the last 10,000 humans living in a buried bunker — and it's heading into its final, climactic season, so now's the time to catch up. **Ted Lasso** is the feel-good juggernaut that put Apple TV+ on the map: Jason Sudeikis as a relentlessly kind American coaching English football, equal parts hilarious and genuinely moving. And **For All Mankind** reimagines the space race as if the Soviets reached the Moon first, spinning decades of alternate history into one of the best sci-fi dramas on the service — a natural next watch if you love [the best sci-fi movies of the 21st century](/movies/best-sci-fi-movies-21st-century).
 
-Between them you'll find sci-fi, costume drama and comedy, which speaks to how broad the service has become despite its lean release schedule. Each is an easy add once you've worked through the headliners above.
+## 7–9. The Morning Show, Bad Sisters and Pachinko
 
-## How to get the most from your subscription
+For drama with real star wattage, **The Morning Show** pits Jennifer Aniston and Reese Witherspoon against the chaos of a network news desk, and it only gets juicier each season. **Bad Sisters**, Sharon Horgan's pitch-black Irish comedy-thriller, turns a murder you're rooting for into one of the most addictive watches Apple has — both seasons are streaming. And **Pachinko**, the sweeping adaptation of Min Jin Lee's novel, follows a Korean family across four generations and two continents; it's gorgeous, devastating, and one of the most underrated [limited-series-style sagas to stream](/tv/best-limited-series-to-stream).
 
-Because Apple TV+ runs a tighter catalog than its rivals, a popular strategy is to subscribe for a month, binge two or three of the series above, and pause until a new season drops. The quality-over-quantity model works in your favor here — you can realistically watch the highlights without feeling like you're falling behind. Many of these shows also release weekly when new seasons air, so checking back around major premieres keeps your queue fresh. If you are weighing Apple TV+ against other services, it tends to reward viewers who care more about a high hit rate than a bottomless library.
+## 10–12. Shrinking, Monarch and the new Cape Fear
+
+**Shrinking**, from the *Ted Lasso* team, stars Jason Segel and Harrison Ford in a warm, very funny show about a grieving therapist who starts brutally over-sharing with his patients. **Monarch: Legacy of Monsters** plugs Apple straight into the MonsterVerse, with Kurt and Wyatt Russell anchoring a Godzilla-sized mystery across timelines — a fun bridge to our [highest-grossing-movie](/movies/highest-grossing-movie-of-all-time) blockbuster energy. And the buzziest new arrival is **Cape Fear**, the psychological-thriller series that premiered in June 2026 with Amy Adams and Javier Bardem facing off as a terrorized family and the ex-con stalking them — executive produced by Martin Scorsese and Steven Spielberg.
+
+## 13–15. Presumed Innocent, Mythic Quest and Lessons in Chemistry
+
+Rounding out the best Apple TV series worth watching: **Presumed Innocent**, the Jake Gyllenhaal legal thriller that became one of the platform's most-streamed limited series; **Mythic Quest**, a smart, big-hearted workplace sitcom set inside a video-game studio; and **Lessons in Chemistry**, with Brie Larson as a 1960s scientist turned unlikely TV cooking-show star. None of these are filler — on a weaker streamer, any of them would be a flagship.
+
+## Is Apple TV+ worth it for the shows?
+
+Short answer: yes. The reason Apple keeps showing up on "best of" lists is its hit-rate — a smaller library than Netflix or [Prime Video](/streaming/best-movies-on-prime-video), but a far higher percentage of it is genuinely excellent. Between Severance, Slow Horses, The Studio, Silo and Ted Lasso alone, you have months of top-tier viewing, and the catalog skews toward the prestige drama and sharp comedy that critics reward. If you also love prestige TV elsewhere, our roundups of the [best HBO shows](/tv/best-hbo-shows) and Shōgun (see our [Shōgun review](/reviews/shogun-review)) make a strong companion binge.
 
 ## The bottom line
 
-The best shows on Apple TV prove that a curated lineup can beat a bloated one. Start with "Severance" for ambition, "Ted Lasso" for heart and "Slow Horses" for sheer craft, then branch into "The Morning Show," "Silo" and beyond. It's one of the most reliable subscriptions in streaming — small, but rarely a miss.
+The best shows on Apple TV+ right now start with **Severance** — now the platform's most-watched series ever — followed closely by the perfect-scoring **Slow Horses** and the Emmy-winning **The Studio**. Add **Silo**, **Ted Lasso** and the brand-new **Cape Fear**, and you have a watchlist that justifies the subscription on its own. Start with Severance tonight; work your way down the list from there.

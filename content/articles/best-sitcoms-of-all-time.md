@@ -1,108 +1,139 @@
 ---
-title: 'The Best Sitcoms of All Time, Ranked'
+title: 'The 30 Best Sitcoms of All Time, Definitively Ranked'
 slug: best-sitcoms-of-all-time
 category: tv
 author: maya-okafor
-date: '2026-06-20T07:00:00.000Z'
+date: '2026-06-17T15:00:00.000Z'
 dek: >-
-  From Lucy to Larry David, these are the comedies that rewrote the rules of
-  television and still get the biggest laughs decades later.
-metaTitle: 'The Best Sitcoms of All Time, Ranked by Era'
+  We crown Seinfeld over Friends and The Office, then defend the entire
+  countdown with Emmy hauls, viewership records, and cultural footprint — so you
+  can see exactly why every legend lands where it does.
+metaTitle: 'The 30 Best Sitcoms of All Time, Ranked'
 metaDescription: >-
-  Our ranking of the best sitcoms of all time, from Seinfeld and The Office to I
-  Love Lucy and Cheers, the comedies that defined TV and still hold up today.
+  The best sitcoms of all time, ranked — Seinfeld at #1, plus Friends, The
+  Office, Cheers and more, with Emmy and viewership receipts. Settle the debate
+  here.
 tags:
   - sitcoms
   - best sitcoms
-  - TV comedy
   - Seinfeld
+  - Friends
   - The Office
-  - classic TV
+  - TV comedy
+  - ranked lists
   - streaming
-  - comedy
 targetKeyword: best sitcoms of all time
 imageAlt: >-
-  Vintage television set glowing in a dark living room, evoking decades of
-  classic sitcom comedy
+  Composite of iconic sitcom scenes from Seinfeld, Friends, The Office and
+  Cheers
 imageCredit: The Screen Report
 faq:
-  - q: What is considered the greatest sitcom of all time?
+  - q: What is the best sitcom of all time?
     a: >-
-      There is no single undisputed answer, but Seinfeld is the title most often
-      given the crown by critics and fans alike. Its 'show about nothing'
-      premise, airtight comic plotting and quotable catchphrases reshaped what a
-      sitcom could be. I Love Lucy and Cheers are the other shows that routinely
-      top all-time lists.
-  - q: What was the first popular sitcom on television?
+      Our pick is Seinfeld, the 'show about nothing' that TV Guide once named
+      the greatest program in television history. Its airtight plotting, refusal
+      to sentimentalize, and 'no hugging, no learning' philosophy rewrote the
+      rules of the genre, which is why we rank it ahead of more-watched shows
+      like Friends and The Office.
+  - q: Is Friends or Seinfeld the better sitcom?
     a: >-
-      I Love Lucy, which premiered in 1951, is widely credited as the show that
-      proved the situation comedy could be a mainstream phenomenon. It helped
-      popularize the multi-camera, filmed-before-a-studio-audience format that
-      the genre would lean on for decades.
-  - q: Are older sitcoms still worth watching today?
+      Friends was more popular and remains the more bingeable comfort-watch, but
+      Seinfeld is the more influential and critically acclaimed series. Friends
+      perfected the warm hangout sitcom; Seinfeld perfected the joke. We give
+      the edge to Seinfeld on craft and cultural impact, while acknowledging
+      Friends has aged into the more rewatched of the two.
+  - q: What is the longest-running sitcom of all time?
     a: >-
-      Absolutely. Shows like Cheers, The Mary Tyler Moore Show and Frasier still
-      hold up because their writing and character work are timeless, even if the
-      fashion and references date them. Many are now easy to stream, introducing
-      them to new generations.
-  - q: What's the difference between a multi-camera and single-camera sitcom?
+      The Simpsons is by far the longest-running sitcom — and the
+      longest-running scripted primetime series in American TV history — with
+      more than 35 seasons and 750-plus episodes since its 1989 debut.
+  - q: What is the most-watched sitcom finale of all time?
     a: >-
-      Multi-camera sitcoms (Friends, Cheers, Seinfeld) are typically filmed on a
-      soundstage in front of a live studio audience. Single-camera sitcoms (The
-      Office, Arrested Development, Modern Family) are shot more like films,
-      without a studio audience, allowing for more cinematic and
-      documentary-style storytelling.
+      The M*A*S*H finale, 'Goodbye, Farewell and Amen' (1983), drew roughly 105
+      million viewers and is still the most-watched scripted finale in U.S.
+      history. Cheers and Seinfeld also posted enormous finale audiences in the
+      80s and 90s.
+  - q: Which sitcom has won the most Emmy Awards?
+    a: >-
+      Frasier held the record for most Emmy wins by a comedy series with 37, a
+      mark that stood until Game of Thrones surpassed it in 2016. Frasier and
+      Modern Family are also tied for the most consecutive Outstanding Comedy
+      Series wins, with five each.
 featured: false
 ---
 
-If you want the short answer, here it is: **Seinfeld** is the sitcom most often crowned the best of all time, with *I Love Lucy*, *Cheers*, and *The Office* close behind. But the truly great comedies are too varied to crown just one — the best sitcoms of all time span seven decades, two filming styles, and a hundred different ways to make a living room erupt in laughter. Below is our ranking of the shows that didn't just get laughs, but permanently changed the genre.
+Let's settle the bar argument right now: the best sitcom of all time is **Seinfeld**. The "show about nothing" — TV Guide once called it the greatest television program ever made — is our **#1**, ranked above the more-watched *Friends* and the endlessly rewatched *The Office*. It earns the crown not on nostalgia but on craft: four self-absorbed New Yorkers, four storylines colliding in the final act, and a "no hugging, no learning" rule that made every episode a perfectly engineered joke machine.
 
-These picks balance influence, consistency, and the simplest test of all: do they still hold up? A great sitcom survives its era. The ones here do.
+Below is our definitive critic's countdown of the **30 greatest sitcoms of all time, ranked**, spanning the best American sitcoms of the 90s and 2000s plus a few essential British imports. We back each placement with hard credentials — Emmy hauls, Nielsen viewership records, and cultural footprint — so you can see exactly why each legend lands where it does. If you only want the top of the list, here it is.
 
-## The undisputed top tier of TV comedy
+## The top 10 sitcoms of all time, ranked
 
-The shows at the summit didn't just succeed — they rewrote the rulebook.
+1. **Seinfeld** (1989–1998) — The most influential comedy ever made. Airtight plotting, zero sentimentality, and a finale watched by 76 million people.
+2. **The Office (US)** (2005–2013) — The mockumentary that conquered streaming. Now arguably the most binged sitcom of all time among younger viewers.
+3. **Cheers** (1982–1993) — The platonic ideal of the hangout sitcom. Its 1993 finale drew a colossal audience north of 80 million.
+4. **Friends** (1994–2004) — The most popular sitcom of its era and the comfort-watch that defined "Must See TV."
+5. **Frasier** (1993–2004) — The smartest spin-off ever, and the Emmy champion: 37 wins, a record for a comedy that stood until 2016.
+6. **I Love Lucy** (1951–1957) — The blueprint. Lucille Ball invented the multi-camera, live-audience format every sitcom still uses.
+7. **The Simpsons** (1989–present) — The longest-running scripted primetime series in U.S. history and the most quotable show on Earth.
+8. **Arrested Development** (2003–2019) — The most densely written comedy ever, with callbacks that pay off seasons later.
+9. **30 Rock** (2006–2013) — Tina Fey's joke-per-second satire of the TV business; pound-for-pound the densest gag rate on this list.
+10. **Parks and Recreation** (2009–2015) — The kindest great sitcom, and the gold standard for the workplace ensemble.
 
-1. **Seinfeld (1989–1998)** — The "show about nothing" turned the minutiae of daily life into airtight comic machinery. Its influence on observational comedy is total.
-2. **I Love Lucy (1951–1957)** — The blueprint. Lucille Ball's physical genius and the multi-camera format it helped popularize shaped everything that followed.
-3. **Cheers (1982–1993)** — A bar full of perfectly drawn regulars and some of the warmest ensemble writing television has produced.
-4. **The Office (US, 2005–2013)** — The mockumentary format made mainstream, anchored by cringe comedy that aged into genuine affection.
-5. **Frasier (1993–2004)** — A spin-off that out-classed most originals, proving sophisticated farce could thrive on network TV.
+## Why Seinfeld beats Friends and The Office
 
-These five turn up on nearly every critic's list for good reason. They're the foundation the rest of the genre is built on.
+This is the debate the whole list hinges on, so let's resolve it. **Friends** was bigger in its moment and remains the warmer comfort-watch; **The Office** has become the default streaming binge for a generation. But **Seinfeld** is the one that changed what a sitcom could be. It built episodes like farces — every thread (Jerry's, George's, Elaine's, Kramer's) snapping together in the last two minutes — and it refused to let its characters grow, learn, or be likable. That discipline is why it tops every serious critics' poll and most "greatest of all time" rankings, even when *Friends* wins the popularity contest. Call it the difference between the funniest sitcom ever made and the most beloved one. For our money, the craft wins.
 
-## The character-driven classics
+## The best sitcoms of the 90s
 
-Just below the peak sit the comedies that lived or died on their ensembles — and lived gloriously.
+The 1990s were the genre's commercial peak, anchored by NBC's "Must See TV" Thursday block. **Seinfeld**, **Friends**, and **Frasier** all overlapped on the same network, a concentration of talent television hasn't matched since. Beyond NBC, the decade gave us the surreal brilliance of **The Fresh Prince of Bel-Air** (Will Smith's launchpad), the warmth of **Everybody Loves Raymond**, and the genre-bending animation of **The Simpsons** at its mid-90s creative zenith. If you want a starting point for the best sitcoms of the 90s, that NBC trio is the holy trinity — three shows that between them collected dozens of Emmys and rewrote the rulebook for ensemble comedy.
 
-6. **Friends (1994–2004)** — The defining hangout sitcom, a global phenomenon whose six leads became a cultural shorthand for friendship itself.
-7. **The Mary Tyler Moore Show (1970–1977)** — A landmark for its portrait of an independent working woman and a newsroom full of comic gold.
-8. **The Simpsons (1989–present)** — Animated, yes, but the longest-running scripted primetime series in American TV history and one of the medium's sharpest satires.
-9. **M*A*S*H (1972–1983)** — Proof a half-hour comedy could be funny and devastating in the same breath, ending with a finale that remains one of the most-watched broadcasts in TV history.
-10. **Arrested Development (2003–2006, revived later)** — Dense, layered, and built for rewatches, its rapid-fire callbacks influenced a generation of comedy writers.
+## The best sitcoms of the 2000s and 2010s
 
-If you're building a watchlist, this is where the binge-worthy gems live. For more on the era that produced so many of these, see our look at the [golden age of network television](/tv/golden-age-network-television).
+The 2000s traded studio-audience gloss for the single-camera mockumentary, and the genre got smarter for it. **The Office (US)**, **Arrested Development**, **30 Rock**, and **Parks and Recreation** formed a new canon built on awkwardness and density rather than punchlines and applause. **Curb Your Enthusiasm** (Larry David's improvised *Seinfeld* spiritual sequel), **It's Always Sunny in Philadelphia** (now one of the longest-running live-action sitcoms ever), and **Community** rounded out the era's cult favorites. Network TV had a last hurrah too: **Modern Family** tied *Frasier*'s record of five consecutive Outstanding Comedy Series Emmys, and **The Big Bang Theory** became the most-watched comedy on television for years running. **Brooklyn Nine-Nine** carried the workplace-ensemble torch into the late 2010s.
 
-## The modern reinventions
+## The full ranking: best sitcoms 11–30
 
-The genre never stopped evolving, and these newer shows pushed it somewhere fresh.
+11. **Curb Your Enthusiasm** (2000–2024)
+12. **It's Always Sunny in Philadelphia** (2005–present)
+13. **M*A*S*H** (1972–1983) — its finale remains the most-watched scripted episode in U.S. history at ~105 million viewers.
+14. **The Mary Tyler Moore Show** (1970–1977) — the show that made the single working woman a sitcom lead.
+15. **Community** (2009–2015)
+16. **Brooklyn Nine-Nine** (2013–2021)
+17. **Modern Family** (2009–2020)
+18. **The Fresh Prince of Bel-Air** (1990–1996)
+19. **Everybody Loves Raymond** (1996–2005)
+20. **How I Met Your Mother** (2005–2014)
+21. **The Big Bang Theory** (2007–2019)
+22. **Fawlty Towers** (1975–1979) — only 12 episodes, routinely voted Britain's greatest sitcom.
+23. **Malcolm in the Middle** (2000–2006)
+24. **Scrubs** (2001–2010)
+25. **Seinfeld**'s sibling in spirit, **The Larry Sanders Show** (1992–1998)
+26. **Will & Grace** (1998–2006)
+27. **Roseanne** (1988–1997)
+28. **Schitt's Creek** (2015–2020) — swept all four acting comedy Emmys plus Best Series in 2020.
+29. **Ted Lasso** (2020–2023)
+30. **Abbott Elementary** (2021–present) — proof the network sitcom still has life in it.
 
-11. **Parks and Recreation (2009–2015)** — Optimism as a comic engine, with Leslie Knope leading one of TV's most beloved workplaces.
-12. **30 Rock (2006–2013)** — One of the fastest joke-per-minute rates of its era, a manic satire of television itself.
-13. **It's Always Sunny in Philadelphia (2005–present)** — Gleefully amoral and astonishingly durable, the longest-running live-action sitcom in American TV history.
-14. **Schitt's Creek (2015–2020)** — A slow-burn charmer that swept the comedy categories at the 2020 Emmys and redefined the feel-good comedy for a streaming audience.
-15. **Curb Your Enthusiasm (2000–2024)** — Larry David's improvised social nightmares are the spiritual sequel to *Seinfeld*, and just as quotable.
+## Best sitcoms to binge watch, and where
 
-These shows prove the form is far from exhausted. If anything, the streaming era has given comedy writers more room to experiment than ever — a shift we explore in our guide to [the best comedy series to stream right now](/streaming/best-comedy-series-streaming).
+If you're here for the binge rather than the debate, these are the most rewatchable picks and where to stream them (U.S.; availability shifts, so confirm before you commit a weekend).
 
-## What separates a good sitcom from a great one
+- **The Office (US)** — Peacock
+- **Parks and Recreation** — Peacock
+- **Brooklyn Nine-Nine** — Peacock / Netflix
+- **Friends** — Max
+- **Seinfeld** — Netflix
+- **30 Rock** — Peacock
+- **It's Always Sunny in Philadelphia** — Hulu
+- **Schitt's Creek** — Hulu
+- **Cheers / Frasier** — Paramount+
 
-The pattern across this list is clear. The all-time greats share a few traits: characters specific enough to feel real yet flexible enough to generate endless stories; writing that trusts the audience; and a point of view about the world, whether it's *Seinfeld*'s petty selfishness or *Parks and Rec*'s civic hope.
+For more guided viewing, see our roundup of the [best HBO shows](/tv/best-hbo-shows) and, if you want a heavier follow-up after all the laughs, our [review of The Bear](/reviews/the-bear-review) — a comedy on paper that hits like a drama. Craving prestige TV instead? Our [best limited series to stream](/tv/best-limited-series-to-stream) has your next obsession.
 
-Format matters less than people assume. Multi-camera shows shot before a live audience (*Friends*, *Cheers*) and single-camera comedies shot like films (*The Office*, *Modern Family*) both produced masterpieces. What unites them is craft — the sense that every line was sharpened until it couldn't be improved.
+## The most popular sitcoms by viewership
 
-The other shared quality is rewatchability. You don't return to these shows for the plots; you return for the company. That's the real test of a great sitcom, and it's why these titles keep finding new fans decades after they first aired. For sharper picks, our team's [TV reviews](/reviews/best-tv-shows-streaming) track what's worth your time now.
+Popularity and quality aren't the same thing, which is exactly why this list isn't just a ratings chart. By raw viewership, the **M*A*S*H** finale (~105 million) towers over everything, followed by the finales of **Cheers** and **Seinfeld** (both in the 76–80 million range) and **Friends** (~52 million). For sustained weekly audience in the streaming-adjacent era, **The Big Bang Theory** led network comedy for the better part of a decade. But the most-watched show is rarely the best one — *M*A*S*H* and *Cheers* happen to be both, while a ratings juggernaut like *The Big Bang Theory* lands mid-pack here on craft. That gap is the whole point of a ranked list.
 
 ## The bottom line
 
-There's no single "best" sitcom — only a deep bench of greatness. But if you're starting from scratch, begin at the top: *Seinfeld* for the craft, *I Love Lucy* for the history, *The Office* for the heart. Then work your way down. Every show on this list earned its place by making people laugh long after the credits rolled.
+The greatest sitcoms of all time reward different moods: **Seinfeld** for sheer comic engineering, **Friends** and **The Office** for the cozy infinite rewatch, **Frasier** for wit, **Cheers** and **I Love Lucy** for the foundations everything else is built on. Argue the order all you like — that's the fun — but the #1 isn't really up for debate. The show about nothing is still about everything that makes a sitcom great.

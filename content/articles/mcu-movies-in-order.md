@@ -1,78 +1,83 @@
 ---
-title: 'The MCU Movies in Order: The Complete Marvel Timeline'
+title: 'MCU Movies in Order: Release & Timeline Guide (2026)'
 slug: mcu-movies-in-order
 category: movies
 author: jordan-hale
 date: '2026-06-25T15:00:00.000Z'
 dek: >-
-  There are two right ways to watch the Marvel Cinematic Universe: by release
-  date or by story chronology. Here's the complete, up-to-date list for both —
-  plus how every film fits into the Infinity Saga and Multiverse Saga.
-metaTitle: 'MCU Movies in Order: Complete Marvel Timeline'
+  The MCU has two correct watch orders — release date and in-universe timeline —
+  and they are not the same list. Here is every Marvel film mapped both ways,
+  plus exactly what to watch before Avengers: Doomsday.
+metaTitle: 'MCU Movies in Order: Release & Timeline (2026)'
 metaDescription: >-
-  Watch the MCU movies in order — both release order and chronological timeline
-  order — with every Marvel film mapped to its Saga. The complete guide.
+  Every MCU movie in order — release order and chronological timeline order —
+  plus what to watch before Avengers: Doomsday. The complete 2026 list.
 tags:
   - MCU
   - Marvel
   - Marvel Cinematic Universe
   - Avengers
-  - Iron Man
   - watch order
   - movie timeline
+  - 'Avengers: Doomsday'
+  - Phase Six
 targetKeyword: mcu movies in order
 imageAlt: >-
-  Stylized composite of Marvel Cinematic Universe hero silhouettes arranged
-  along a glowing timeline
+  Composite of Marvel Cinematic Universe hero silhouettes arranged along a
+  glowing release-and-timeline track
 imageCredit: The Screen Report
 faq:
-  - q: What is the correct order to watch the MCU?
+  - q: How many MCU movies are there in 2026?
     a: >-
-      There are two good orders. Release order — starting with 2008's Iron Man —
-      is how audiences experienced the story and how the films build on each
-      other emotionally. Chronological order follows the in-universe timeline,
-      beginning with Captain America: The First Avenger. Most fans recommend
-      release order for a first watch.
-  - q: What was the first MCU movie?
+      By the time Avengers: Doomsday opens on December 18, 2026, there will be
+      39 MCU feature films. Doomsday is the 39th, following Spider-Man: Brand
+      New Day (July 31, 2026) earlier in the year.
+  - q: What is the first MCU movie to watch?
     a: >-
-      Iron Man, released in 2008 and directed by Jon Favreau, launched the
-      Marvel Cinematic Universe and kicked off the Infinity Saga.
-  - q: How many MCU movies are there?
+      For a first watch, start with Iron Man (2008). It launched the franchise
+      and the Infinity Saga in release order. If you are watching by in-universe
+      timeline instead, start with Captain America: The First Avenger, which is
+      set in the 1940s.
+  - q: >-
+      Should you watch the Marvel movies in release order or chronological
+      order?
     a: >-
-      Marvel framed the Infinity Saga as a 23-film run ending with Spider-Man:
-      Far From Home, and the Multiverse Saga has added many more since. Counting
-      the films released so far, there are dozens of MCU movies, with new titles
-      arriving regularly.
-  - q: Do I need to watch the Disney+ shows to follow the movies?
+      Release order is the better choice for a first watch because the MCU was
+      built as serialized storytelling, and its reveals and emotional payoffs
+      land hardest in the sequence audiences saw. Chronological order is best
+      saved for a rewatch once you already know the story.
+  - q: 'What order should I watch Marvel movies before Avengers: Doomsday?'
     a: >-
-      Not strictly, but several streaming series — like WandaVision and Loki —
-      connect directly to later films. You can follow the main movie arc without
-      them, though the shows add helpful context for the Multiverse Saga.
-  - q: Where can I stream the Marvel movies?
+      Watch in release order through Phase Five and into Phase Six: the
+      essentials are the Infinity Saga, then Phase Four and Five highlights, The
+      Fantastic Four: First Steps, and Spider-Man: Brand New Day, which arrives
+      in July 2026 just before Doomsday in December.
+  - q: Do you need to watch the Marvel TV shows to follow the movies?
     a: >-
-      Most MCU films stream on Disney+, the franchise's primary home. A handful
-      of earlier titles have had rights held by other distributors at various
-      points, so availability can vary by region and over time.
+      No, you can follow the main movie arc without them. But a few Disney+
+      series connect directly to films — WandaVision sets up Doctor Strange in
+      the Multiverse of Madness, and Loki expands the multiverse stakes that
+      ripple toward Doomsday.
 featured: true
 ---
 
-If you want the short answer: the two best ways to watch the Marvel Cinematic Universe are **release order** and **chronological (timeline) order**. For most people watching the **MCU movies in order** for the first time, release order wins. That means beginning with *Iron Man* (2008) and following each film as audiences originally saw it — because the MCU was built to reward attention, with payoffs that land harder when you experience them in sequence.
+Here is the fast answer: there are two correct ways to watch the **MCU movies in order**, and they are not the same list. **Release order** starts with *Iron Man* (2008), the film that launched the franchise. **Chronological (timeline) order** starts with *Captain America: The First Avenger*, which is set in the 1940s, decades before Tony Stark builds his first suit. For a first watch, release order wins — the Marvel Cinematic Universe was engineered as serialized storytelling, so its reveals and gut-punches only land if you see them in the sequence audiences did.
 
-Below you'll find both complete lists, plus how every film slots into the franchise's larger "Saga" structure. Whether you're a newcomer planning a marathon or a veteran filling gaps, this is your map.
+Below you'll find both complete lists, mapped to every Phase and Saga, plus the one thing newcomers actually want in 2026: exactly what to watch before *Avengers: Doomsday* arrives in theaters on **December 18, 2026**. By the time Doomsday lands, there will be **39 MCU feature films** — so let's get you oriented.
 
-## The two ways to watch the MCU, explained
+## Release order vs. chronological order: which to pick
 
-**Release order** is the default recommendation. The films were designed as serialized storytelling, so callbacks, cameos, and emotional beats hit best when you watch them the way they arrived. Tonal shifts make more sense, too — you feel the universe expand in real time.
+The difference between the two orders is simple but important. **Release order** is the sequence the films premiered in, from 2008's *Iron Man* onward. **Chronological order** reshuffles those same films by *when the events happen in-universe*, which means a 1940s war movie and a 1990s prequel jump to the front of the line.
 
-**Chronological order** reorganizes the films by when events happen *in-universe*. It's a fun rewatch for people who already know the story, but it can spoil surprises and muddle character introductions. A couple of films — notably *Captain Marvel* — jump back in time, which scrambles the "obvious" sequence.
+Our verdict: **watch the Marvel movies in release order for your first time through.** Callbacks, cameos, and the franchise's signature long-game payoffs are built around the order audiences experienced them. *Avengers: Endgame* in particular only sings if you've taken the journey film by film. Save the **chronological timeline order** for a rewatch, when spoilers no longer matter and you want to see the story assembled like a jigsaw.
 
-Our advice: watch in release order first, then revisit chronologically once you know how the pieces fit.
+## MCU movies in order of release date
 
-## MCU movies in release order
+This is how the saga unfolded for audiences — the definitive **MCU movies in order of release** list, organized by Phase and Saga.
 
-This is how the saga unfolded for audiences. The franchise is organized into big chapters — the **Infinity Saga**, followed by the **Multiverse Saga**.
+### The Infinity Saga (Phases One–Three)
 
-### Phase One: the birth of the MCU
+**Phase One**
 1. *Iron Man* (2008)
 2. *The Incredible Hulk* (2008)
 3. *Iron Man 2* (2010)
@@ -80,41 +85,69 @@ This is how the saga unfolded for audiences. The franchise is organized into big
 5. *Captain America: The First Avenger* (2011)
 6. *The Avengers* (2012)
 
-### Phase Two: the universe expands
-7. *Iron Man 3*
-8. *Thor: The Dark World*
-9. *Captain America: The Winter Soldier*
-10. *Guardians of the Galaxy*
-11. *Avengers: Age of Ultron*
-12. *Ant-Man*
+**Phase Two**
+7. *Iron Man 3* (2013)
+8. *Thor: The Dark World* (2013)
+9. *Captain America: The Winter Soldier* (2014)
+10. *Guardians of the Galaxy* (2014)
+11. *Avengers: Age of Ultron* (2015)
+12. *Ant-Man* (2015)
 
-### Phase Three: building to Endgame
-13. *Captain America: Civil War*
-14. *Doctor Strange*
-15. *Guardians of the Galaxy Vol. 2*
-16. *Spider-Man: Homecoming*
-17. *Thor: Ragnarok*
-18. *Black Panther*
-19. *Avengers: Infinity War*
-20. *Ant-Man and the Wasp*
-21. *Captain Marvel*
-22. *Avengers: Endgame*
-23. *Spider-Man: Far From Home*
+**Phase Three**
+13. *Captain America: Civil War* (2016)
+14. *Doctor Strange* (2016)
+15. *Guardians of the Galaxy Vol. 2* (2017)
+16. *Spider-Man: Homecoming* (2017)
+17. *Thor: Ragnarok* (2017)
+18. *Black Panther* (2018)
+19. *Avengers: Infinity War* (2018)
+20. *Ant-Man and the Wasp* (2018)
+21. *Captain Marvel* (2019)
+22. *Avengers: Endgame* (2019)
+23. *Spider-Man: Far From Home* (2019)
 
-Marvel framed that 23-film run as the complete **Infinity Saga**.
+Marvel Studios framed that 23-film run as the complete **Infinity Saga**. If you only ever watch one stretch of the MCU, make it this one — and for a sense of how its capstone stacks up against history, see our look at the [highest-grossing movie of all time](/movies/highest-grossing-movie-of-all-time).
 
-## The Multiverse Saga and beyond
+### The Multiverse Saga (Phases Four–Six)
 
-After *Far From Home*, the MCU launched its next mega-arc — the **Multiverse Saga** — which leans into alternate realities, variants, and the multiverse. Notable films in this stretch include *Black Widow*, *Shang-Chi and the Legend of the Ten Rings*, *Eternals*, *Spider-Man: No Way Home*, *Doctor Strange in the Multiverse of Madness*, *Thor: Love and Thunder*, *Black Panther: Wakanda Forever*, *Ant-Man and the Wasp: Quantumania*, *Guardians of the Galaxy Vol. 3*, *The Marvels*, and *Deadpool & Wolverine*, with further *Captain America*- and *Thunderbolts*-branded entries continuing the arc toward new *Avengers* team-ups.
+After *Far From Home*, the franchise launched its next mega-arc — the **Multiverse Saga** — built on alternate realities, variants, and colliding timelines.
 
-Because Marvel's release calendar shifts, the safest rule for newcomers is simple: follow each film in the order it premieres, and treat the Disney+ series as connective tissue rather than required homework. If you love the multiverse premise, you may also enjoy our roundup of the [best sci-fi movies streaming](/streaming/best-sci-fi-movies-streaming).
+**Phase Four**
+24. *Black Widow* (2021)
+25. *Shang-Chi and the Legend of the Ten Rings* (2021)
+26. *Eternals* (2021)
+27. *Spider-Man: No Way Home* (2021)
+28. *Doctor Strange in the Multiverse of Madness* (2022)
+29. *Thor: Love and Thunder* (2022)
+30. *Black Panther: Wakanda Forever* (2022)
 
-## MCU movies in chronological (timeline) order
+**Phase Five**
+31. *Ant-Man and the Wasp: Quantumania* (2023)
+32. *Guardians of the Galaxy Vol. 3* (2023)
+33. *The Marvels* (2023)
+34. *Deadpool & Wolverine* (2024)
+35. *Captain America: Brave New World* (2025)
+36. *Thunderbolts\** (2025)
 
-For a rewatch, here's the broad in-universe sequence. The earliest events belong to *Captain America: The First Avenger* (set largely during World War II), followed by *Captain Marvel* (set in the 1990s). From there:
+**Phase Six**
+37. *The Fantastic Four: First Steps* (2025)
+38. *Spider-Man: Brand New Day* (2026)
+39. *Avengers: Doomsday* (2026)
 
-1. *Captain America: The First Avenger*
-2. *Captain Marvel*
+That brings the total to **39 films** through *Doomsday*, with *Avengers: Secret Wars* slated to close the Saga in 2027.
+
+## What to watch before Avengers: Doomsday
+
+*Avengers: Doomsday* opens **December 18, 2026**, with the Russo brothers directing and Robert Downey Jr. returning to the MCU — this time as the villain Doctor Doom. It's the climax the entire Multiverse Saga has been building toward, so a little prep pays off.
+
+You don't need all 38 prior films to follow it, but here's the efficient path. Watch the **Infinity Saga** through *Endgame* for the emotional foundation. Then hit the Multiverse Saga's load-bearing entries: *Spider-Man: No Way Home* and *Doctor Strange in the Multiverse of Madness* (which crack the multiverse open), *Deadpool & Wolverine* (which folds in the wider Marvel film universe), *The Fantastic Four: First Steps*, and *Spider-Man: Brand New Day*, which arrives in July 2026 — just months before Doomsday. If the multiverse premise is your favorite part, our roundup of the [best sci-fi movies streaming](/streaming/best-sci-fi-movies-streaming) and the [best sci-fi movies of the 21st century](/movies/best-sci-fi-movies-21st-century) make great companion viewing.
+
+## MCU movies in chronological order (timeline)
+
+Ready for a rewatch? Here's the broad **chronological order** by in-universe timeline. The earliest events belong to *Captain America: The First Avenger* (set largely in World War II), followed by *Captain Marvel* (set in the 1990s). From there the modern era kicks off with *Iron Man*.
+
+1. *Captain America: The First Avenger* (1940s)
+2. *Captain Marvel* (1990s)
 3. *Iron Man*
 4. *Iron Man 2*
 5. *The Incredible Hulk*
@@ -133,25 +166,19 @@ For a rewatch, here's the broad in-universe sequence. The earliest events belong
 18. *Black Panther*
 19. *Thor: Ragnarok*
 20. *Ant-Man and the Wasp*
-21. *Avengers: Infinity War*
+21. *Captain Marvel* end-credits / *Avengers: Infinity War*
 22. *Avengers: Endgame*
 
-The two *Guardians* films sit close together cosmically, and the time travel in *Endgame* complicates any "perfect" chronology — which is exactly why we recommend release order first.
+The chronologically first MCU project is *The First Avenger* — but note the time travel in *Endgame* makes any "perfect" timeline impossible, which is exactly why we recommend release order first. After *Endgame*, the Multiverse Saga films broadly follow their release order on the timeline.
 
-## How the Disney+ shows fit in
+## MCU movies and shows in order: do you need the Disney+ series?
 
-You can follow the films without the streaming series, but several shows tie directly into the movies. *WandaVision* leads into *Doctor Strange in the Multiverse of Madness*, and *Loki* expands the multiverse stakes that ripple across later entries. If you want the fullest experience, slot the relevant series in around the films they connect to. For binge planning beyond Marvel, our guide to the [best limited series to stream](/tv/best-limited-series-to-stream) is a good companion.
+You can follow the films on their own. But several **Disney+ shows** connect directly to the movies, so the fullest **MCU movies and shows in order** experience slots them in. *WandaVision* leads into *Doctor Strange in the Multiverse of Madness*; *Loki* expands the multiverse stakes that ripple all the way toward *Doomsday*. Treat the series as connective tissue, not required homework. For more bingeable, tightly written television beyond Marvel, our guide to the [best limited series to stream](/tv/best-limited-series-to-stream) is a strong next stop.
 
-## Where to start if you only have a weekend
+## Where to watch and where to start on a deadline
 
-Short on time? Build a "greatest hits" path: *Iron Man*, *The Avengers*, *Captain America: The Winter Soldier*, *Guardians of the Galaxy*, *Captain America: Civil War*, *Black Panther*, *Thor: Ragnarok*, *Avengers: Infinity War*, and *Avengers: Endgame*. That spine hits the franchise's biggest emotional and narrative turning points. Fans of tightly plotted blockbusters might also appreciate our [Christopher Nolan movies ranked](/movies/christopher-nolan-movies-ranked) feature for a different flavor of big-screen ambition.
-
-## Why release order still wins
-
-The MCU's signature trick is the long game — a throwaway line in one film becomes a gut-punch three movies later. Watching in release order preserves those reveals. *Endgame* in particular is engineered as a payoff for everything before it, and its biggest moments only sing if you've taken the journey film by film. Chronological order is a clever remix, but it's a second helping, not the first course.
+Nearly every MCU film streams on **Disney+**, the franchise's primary home, though availability for a few earlier titles can vary by region. Short on time? Build a greatest-hits spine: *Iron Man*, *The Avengers*, *Captain America: The Winter Soldier*, *Guardians of the Galaxy*, *Captain America: Civil War*, *Black Panther*, *Thor: Ragnarok*, *Avengers: Infinity War*, and *Avengers: Endgame*. That run hits the biggest turning points without the full marathon. If you're in the mood for more epic, ambitious filmmaking afterward, see our [best movie trilogies](/movies/best-movie-trilogies) feature and our [Denis Villeneuve movies ranked](/movies/denis-villeneuve-movies-ranked) deep dive.
 
 ## The bottom line
 
-For most viewers, **release order is the definitive way to watch the MCU movies in order** — start with *Iron Man*, ride the Infinity Saga to *Endgame* and *Far From Home*, then continue into the Multiverse Saga as new films arrive. Save the chronological rewatch for when you already know the secrets.
-
-With the Multiverse Saga still building toward its next major *Avengers* showdowns, the timeline is far from finished — so keep this guide bookmarked. The map is going to need updating, and we'll be here when it does.
+For most viewers, **release order is the definitive way to watch the MCU movies in order** — begin with *Iron Man*, ride the Infinity Saga through *Endgame* and *Far From Home*, then move into the Multiverse Saga across Phases Four, Five, and Six. Save the **chronological timeline order** for a rewatch once you know the secrets. And if you're catching up for the big one, the road to *Avengers: Doomsday* (December 18, 2026) runs through *The Fantastic Four: First Steps* and *Spider-Man: Brand New Day* — 39 films deep and counting. Bookmark this guide; with *Secret Wars* on the horizon, the map isn't finished yet.

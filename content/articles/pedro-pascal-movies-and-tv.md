@@ -1,16 +1,19 @@
 ---
-title: 'Pedro Pascal''s Movies and TV Shows: A Complete Guide to His Best Roles'
+title: >-
+  Pedro Pascal Movies and TV Shows: Every Major Role, In Order, and Where to
+  Watch
 slug: pedro-pascal-movies-and-tv
 category: celebrity
 author: daniel-reyes
-date: '2026-06-24T07:00:00.000Z'
+date: '2026-06-21T15:00:00.000Z'
 dek: >-
-  From Oberyn Martell to Joel Miller, Reed Richards and beyond, here's the
-  essential roadmap to the actor's career-defining performances.
-metaTitle: 'Pedro Pascal Movies and TV: Best Roles Guide'
+  Oberyn, Javier Peña, Din Djarin, Joel Miller and Reed Richards — the complete
+  role-by-role map of Pascal's filmography, where to stream each one, and what's
+  coming in 2026.
+metaTitle: 'Pedro Pascal Movies and TV Shows: Full List'
 metaDescription: >-
-  A complete guide to Pedro Pascal movies and TV shows, from Game of Thrones and
-  Narcos to The Mandalorian, The Last of Us and The Fantastic Four: First Steps.
+  Every Pedro Pascal movie and TV show in order, his best roles, where to stream
+  each, plus his 2026 slate — The Mandalorian and Grogu and Avengers: Doomsday.
 tags:
   - Pedro Pascal
   - The Mandalorian
@@ -18,91 +21,110 @@ tags:
   - Game of Thrones
   - Narcos
   - Marvel
+  - Star Wars
   - celebrity
-targetKeyword: pedro pascal movies and tv
+targetKeyword: pedro pascal movies and tv shows
 imageAlt: >-
-  Actor Pedro Pascal at a film premiere, known for The Mandalorian and The Last
-  of Us
+  Actor Pedro Pascal at a film premiere, known for The Mandalorian, The Last of
+  Us and The Fantastic Four: First Steps
 imageCredit: The Screen Report
 faq:
   - q: What is Pedro Pascal best known for?
     a: >-
-      Pedro Pascal is best known for playing Oberyn Martell in Game of Thrones,
-      Javier Pena in Narcos, the title role of Din Djarin in The Mandalorian,
-      and Joel Miller in HBO's The Last of Us. More recently he joined the
-      Marvel Cinematic Universe as Reed Richards in The Fantastic Four: First
-      Steps.
-  - q: What was Pedro Pascal's breakout role?
+      Pedro Pascal is best known for four era-defining roles: Oberyn Martell in
+      Game of Thrones, DEA agent Javier Peña in Narcos, the title bounty hunter
+      Din Djarin in The Mandalorian, and Joel Miller in HBO's The Last of Us.
+      More recently he joined the Marvel Cinematic Universe as Reed Richards in
+      The Fantastic Four: First Steps.
+  - q: What was Pedro Pascal's first big role?
     a: >-
-      His widely recognized breakout came as the Dornish prince Oberyn Martell
-      in the fourth season of Game of Thrones, which aired in 2014. He followed
-      it with the role of DEA agent Javier Pena in Netflix's Narcos, which
-      premiered in 2015.
-  - q: Is Pedro Pascal in the Marvel and Star Wars universes?
+      After more than a decade of one-off guest spots on shows like Buffy the
+      Vampire Slayer, NYPD Blue and The Good Wife, his breakout arrived in 2014
+      as the Dornish prince Oberyn Martell in season four of Game of Thrones. He
+      followed it the next year with Javier Peña in Netflix's Narcos.
+  - q: Does Pedro Pascal actually play the Mandalorian in the suit?
     a: >-
-      Yes. He leads the Star Wars series The Mandalorian as Din Djarin, and he
-      plays Reed Richards (Mr. Fantastic) in the Marvel Cinematic Universe's The
-      Fantastic Four: First Steps.
-  - q: Where can I watch Pedro Pascal's biggest shows?
+      Pascal provides Din Djarin's voice and performs many scenes, but he is
+      often doubled inside the armor by stunt performers Brendan Wayne and
+      Lateef Crowder, especially in action-heavy sequences. The performance fans
+      connect with — the voice and the emotional beats — is his.
+  - q: Is Pedro Pascal in Game of Thrones?
     a: >-
-      His major series have streamed across several platforms: The Mandalorian
-      on Disney+, The Last of Us on HBO's streaming service, Narcos on Netflix,
-      and Game of Thrones on HBO. Availability can vary by region and over time,
-      so check current listings.
-  - q: What is a good Pedro Pascal role to start with?
+      Yes. He played Oberyn Martell, the Red Viper of Dorne, across season four
+      (2014), a role widely credited as his mainstream breakout. It remains one
+      of the show's most quoted and most shocking arcs.
+  - q: What are Pedro Pascal's upcoming movies in 2026?
     a: >-
-      For TV, The Mandalorian and The Last of Us are accessible entry points.
-      For film, Gladiator II and The Fantastic Four: First Steps showcase his
-      blockbuster work, while Game of Thrones remains the role many fans
-      discovered him through.
+      Pascal headlines two of 2026's biggest releases: The Mandalorian and
+      Grogu, his first big-screen Star Wars outing as Din Djarin, arriving over
+      Memorial Day weekend, and Avengers: Doomsday, in which he returns as Reed
+      Richards, set for December. Release dates can shift, so check current
+      listings.
 featured: false
 ---
 
-If you want the short version: Pedro Pascal is one of the most in-demand performers in Hollywood, and the best place to start with his work is the run of TV roles that made him a household name — Oberyn Martell in *Game of Thrones*, Javier Pena in *Narcos*, Din Djarin in *The Mandalorian* and Joel Miller in *The Last of Us* — before branching into his blockbuster films. This guide to Pedro Pascal movies and TV shows maps his essential performances so you know exactly where to begin and what to watch next.
+If you want the short answer: Pedro Pascal is best known for four roles that arrived in just over a decade — **Oberyn Martell** in *Game of Thrones*, DEA agent **Javier Peña** in *Narcos*, masked bounty hunter **Din Djarin** in *The Mandalorian*, and grief-hardened survivor **Joel Miller** in *The Last of Us* — before he stepped into the Marvel Cinematic Universe as **Reed Richards** in *The Fantastic Four: First Steps*. This guide to Pedro Pascal movies and TV shows lays out every major role in order, tells you exactly where to stream each one, ranks the essential watches, and previews what's coming in 2026.
 
-What makes his catalog rewarding is range. Pascal can play the swaggering charmer, the wounded father figure, the masked stoic hero and the slippery villain, often within the same year. Below, we break his career into the roles that matter most, in roughly the order they arrived.
+What makes his run remarkable is how recent it is. For nearly fifteen years Pascal was a "that guy" character actor — a one-scene cop, a doomed boyfriend, a slick lawyer — before four star-making roles in five years turned him into one of Hollywood's most bankable leads. Below, we trace that path role by role.
 
-## The Television Breakouts That Made Him a Star
+## What Pedro Pascal Did Before He Was Famous
 
-Pascal worked steadily for years before wider recognition arrived. His widely cited breakout came in 2014 as **Oberyn Martell**, the proud, vengeful Dornish prince in the fourth season of HBO's *Game of Thrones*. The performance was magnetic, and his character's fate became one of the show's most talked-about moments. Pascal has said the role effectively paved the way for the casting that followed.
+Pascal made his TV debut in 1999 and spent the next decade collecting guest spots: a vampire's victim on *Buffy the Vampire Slayer*, bit parts on *NYPD Blue*, *The Good Wife*, *The Mentalist*, *Nurse Jackie* and *Homeland*. By his own account he was fired from restaurant and acting jobs repeatedly and nearly walked away from the business. None of these roles made him a name, but together they explain the angle of his whole career: he learned to make a single scene memorable, a skill that paid off the moment a bigger part arrived.
 
-He built on that momentum with **Javier Pena**, the DEA agent at the center of Netflix's crime drama *Narcos*, which premiered in 2015 and ran through 2017. Based on real events surrounding the hunt for Pablo Escobar, the role let Pascal anchor a series rather than steal scenes in one, proving he could carry a lead. Together, these two roles form the foundation of his rise and remain a great introduction to his earlier, grittier register.
+## The TV Breakouts That Made Him a Star
+
+That part was **Oberyn Martell**, the proud, vengeful Red Viper of Dorne, in season four of HBO's *Game of Thrones* (2014). The performance was electric, and Oberyn's fate became one of the series' most infamous gut-punches. Pascal has credited the role with opening every door that followed.
+
+He pressed the advantage immediately as **Javier Peña**, the DEA agent at the center of Netflix's *Narcos* (2015–2017), built around the real hunt for Pablo Escobar. Where *Thrones* let him steal scenes, *Narcos* proved he could carry a series as a lead. These two roles remain the grittier foundation of his fame — and the *Narcos* answer to "which Pedro Pascal shows are on Netflix" still holds today. For more on the era's best dramas, see our roundup of the [best HBO shows](/tv/best-hbo-shows) and the [best limited series to stream](/tv/best-limited-series-to-stream).
 
 ## The Mandalorian and Mainstream Stardom
 
-In 2019, Pascal took the title role in Disney+'s *The Mandalorian*, the first live-action *Star Wars* television series. As the bounty hunter **Din Djarin**, he spends much of the show behind a helmet, yet still conveys a quiet, paternal warmth through posture and voice — a genuine acting feat given the constraints.
+In 2019, Pascal took the title role in Disney+'s *The Mandalorian*, the first live-action *Star Wars* TV series. As **Din Djarin**, he spends most of the show behind a helmet, yet conveys real paternal warmth through voice and posture alone. (In action scenes he's frequently doubled in the suit by stunt performers Brendan Wayne and Lateef Crowder — but the voice and the emotional core are all his.)
 
-The series, and its breakout sidekick Grogu, turned Pascal into a global star and a pop-culture fixture. It also cemented a recurring theme in his work: the reluctant protector caring for a vulnerable child. That archetype would soon define his next signature role, and it is worth keeping in mind as you explore his [best streaming TV performances](/celebrity/pedro-pascal-movies-and-tv).
+The series, and its breakout sidekick Grogu, made Pascal a global star and cemented a recurring theme in his work: the reluctant guardian protecting a vulnerable child. That archetype would define his very next signature role.
 
-## The Last of Us and Prestige TV Heights
+## The Last of Us and Prestige-TV Heights
 
-In 2023, Pascal stepped into prestige drama as **Joel Miller** in HBO's adaptation of the acclaimed video game *The Last of Us*, opposite Bella Ramsey. The role — a hardened survivor escorting a teenage girl across a post-pandemic America — fit his strengths perfectly and won the series strong reviews.
+In 2023, Pascal moved into prestige drama as **Joel Miller** in HBO's adaptation of the acclaimed game *The Last of Us*, opposite Bella Ramsey. A hardened smuggler escorting a teenage girl across a post-pandemic America, the role fit him like a glove and earned the series — and Pascal — major awards attention.
 
-He returned for the show's second season in 2025, where Joel's story turns early in the run and his subsequent appearances come largely through flashback. Even with that reduced screen time, his presence shapes the season's emotional core. *The Last of Us* arguably represents the dramatic peak of his television work to date and is a frequent recommendation for newcomers who want to see his most emotionally layered performance.
+He returned for season two in 2025, where Joel's arc turns shockingly early: his character is killed in the second episode, with later appearances coming through flashback. Pascal appears in four of the season's seven episodes, yet his presence still anchors its emotional weight. For many newcomers, *The Last of Us* is the most layered performance in all of Pedro Pascal's TV shows.
 
-## The Blockbuster Movie Era
+## Pedro Pascal Movies List: The Blockbuster and Indie Era
 
-While television built his fame, film expanded his reach. Pascal played the scheming villain **Maxwell Lord** in *Wonder Woman 1984* (2020), then joined Ridley Scott's *Gladiator II* (2024) as the conflicted Roman general **Marcus Acacius**, sharing the screen with a stacked ensemble.
+Film widened his reach in both directions — tentpoles and risky indies, often in the same year. The essential Pedro Pascal movies list includes:
 
-His biggest cinematic step came as **Reed Richards (Mr. Fantastic)** in the Marvel Cinematic Universe's *The Fantastic Four: First Steps*, a retro-futuristic origin story released in 2025 and co-starring Vanessa Kirby, Joseph Quinn and Ebon Moss-Bachrach. The same stretch also showcased his appetite for risk in smaller films, including Ari Aster's dark thriller *Eddington* opposite Joaquin Phoenix and Celine Song's romantic drama *Materialists* alongside Dakota Johnson and Chris Evans. For more on his franchise work, see our coverage of [Hollywood's biggest superhero castings](/celebrity/pedro-pascal-movies-and-tv).
+- ***Kingsman: The Golden Circle*** (2017) — lasso-wielding agent Whiskey
+- ***The Equalizer 2*** (2018) — Denzel Washington's compromised partner
+- ***Triple Frontier*** (2019) — "Catfish" in this Netflix heist thriller; see our [best heist movies](/movies/best-heist-movies)
+- ***Wonder Woman 1984*** (2020) — villain Maxwell Lord
+- ***The Unbearable Weight of Massive Talent*** (2022) — a scene-stealing turn opposite Nicolas Cage
+- ***Strange Way of Life*** (2023) — Pedro Almodóvar's queer Western short with Ethan Hawke
+- ***The Wild Robot*** (2024) — voice work in the acclaimed animated hit
+- ***Gladiator II*** (2024) — conflicted general Marcus Acacius in Ridley Scott's epic
+- ***Materialists*** (2025) — Celine Song's romance with Dakota Johnson and Chris Evans; a fit for our [best A24 movies](/movies/best-a24-movies-ranked)
+- ***Eddington*** (2025) — Ari Aster's divisive satire opposite Joaquin Phoenix
+- ***The Fantastic Four: First Steps*** (2025) — his MCU debut as Reed Richards
 
-## How to Watch: A Quick Ranking for Newcomers
+That MCU entry slots him into the franchise tracked in our [MCU movies in order](/movies/mcu-movies-in-order) guide, alongside contemporaries like [Zendaya](/celebrity/zendaya-movies-and-tv-shows) and [Timothée Chalamet](/celebrity/timothee-chalamet-best-movies).
 
-If you are building a watchlist, here is a sensible order for discovering Pedro Pascal movies and TV shows:
+## Pedro Pascal's Best Movies and TV Shows, Ranked for Newcomers
 
-1. **The Last of Us** (HBO) — his richest dramatic performance.
+Building a watchlist? Here's a sensible order — and where to watch each:
+
+1. **The Last of Us** (HBO / Max) — his richest dramatic performance.
 2. **The Mandalorian** (Disney+) — his most iconic franchise role.
-3. **Game of Thrones**, Season 4 (HBO) — the breakout that started it all.
+3. **Game of Thrones**, Season 4 (HBO / Max) — the breakout that started it all.
 4. **Narcos** (Netflix) — proof he can lead a series.
 5. **The Fantastic Four: First Steps** — his marquee blockbuster turn.
 6. **Gladiator II** — big-canvas spectacle and a meaty supporting role.
+7. **Materialists** (A24) — the indie that shows his lighter, romantic register.
 
-Streaming availability shifts over time and by region, so check current listings before you commit a movie night to any single title.
+Streaming availability shifts by region and over time, so confirm current listings before movie night.
 
-## What Makes His Career Distinctive
+## Pedro Pascal's Upcoming Movies and TV Shows: The 2026 Slate
 
-The throughline across Pascal's best work is emotional generosity. Whether masked, armored or playing a brilliant scientist pulled in every direction, he keeps finding the tender, human core of each character. He moves fluidly between television and film, between blockbusters and intimate indies, and between hero and villain — a flexibility that has kept him at the center of the conversation. That adaptability is also why his name keeps surfacing on casting shortlists across genres. Fans tracking his trajectory will want to keep an eye on our [latest celebrity casting news](/celebrity/pedro-pascal-movies-and-tv) for whatever he signs on for next.
+His Pedro Pascal upcoming movies and TV shows for 2026 are massive. First comes **The Mandalorian and Grogu**, his first big-screen *Star Wars* outing as Din Djarin, arriving over Memorial Day weekend in May. Then, in December, he returns as **Reed Richards** in **Avengers: Doomsday** — the next great *Star Wars* meets Marvel double-header of his career. He's also reportedly attached to further projects with *Andor* creator Tony Gilroy. Two franchise tentpoles in a single year is the clearest sign yet of his pull. (Dates can move, so check current listings.)
 
 ## The Bottom Line
 
-Pedro Pascal's filmography rewards both casual viewers and completists. Start with *The Last of Us* and *The Mandalorian* for his defining performances, dip back into *Game of Thrones* and *Narcos* for the roles that launched him, then enjoy his blockbuster era through *Gladiator II* and *The Fantastic Four: First Steps*. Few actors have built a more versatile — or more bingeable — body of work.
+Pedro Pascal's filmography rewards both casual viewers and completists. Start with *The Last of Us* and *The Mandalorian* for his defining performances, rewind to *Game of Thrones* and *Narcos* for the roles that launched him, sample his range in *Materialists* and *Gladiator II*, then look ahead to *The Mandalorian and Grogu* and *Avengers: Doomsday* in 2026. Few actors have built a more versatile — or more bingeable — body of work this quickly.

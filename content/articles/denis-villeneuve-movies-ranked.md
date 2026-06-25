@@ -1,115 +1,147 @@
 ---
-title: 'Denis Villeneuve Movies, Ranked From Worst to Best'
+title: 'All 11 Denis Villeneuve Movies Ranked, Worst to Best'
 slug: denis-villeneuve-movies-ranked
 category: movies
 author: jordan-hale
-date: '2026-06-23T15:00:00.000Z'
+date: '2026-06-20T23:00:00.000Z'
 dek: >-
-  From a kidnapping thriller to the sands of Arrakis, we rank Denis Villeneuve's
-  English-language films, the brooding, beautiful sci-fi and crime dramas that
-  turned him into Hollywood's premier big-canvas auteur.
-metaTitle: 'Denis Villeneuve Movies Ranked, Worst to Best'
+  From his French-Canadian breakthroughs to Arrabis: every feature from the
+  modern sci-fi king, placed and defended — with the real answer to whether
+  Dune: Part Two, Arrival, or Blade Runner 2049 takes #1.
+metaTitle: 'Denis Villeneuve Movies Ranked: All 11, Worst to Best'
 metaDescription: >-
-  Denis Villeneuve movies ranked from worst to best, from Prisoners to Dune:
-  Part Two. Our full guide to every English-language film by the visionary
-  director.
+  Every Denis Villeneuve movie ranked worst to best — Dune, Arrival, Blade
+  Runner 2049, Sicario and more, with scores, our verdict, and what to watch
+  next.
 tags:
   - Denis Villeneuve
-  - movie rankings
   - Dune
   - Blade Runner 2049
   - Arrival
   - Sicario
-  - directors
+  - movie rankings
   - science fiction
+  - filmmakers
 targetKeyword: denis villeneuve movies ranked
 imageAlt: >-
-  Stylized poster collage of Denis Villeneuve's films including Dune: Part Two,
-  Blade Runner 2049, Arrival and Sicario arranged in a ranking grid
+  Director Denis Villeneuve on set, framed against a desert landscape evoking
+  his Dune adaptations
 imageCredit: The Screen Report
 faq:
   - q: What is Denis Villeneuve's best movie?
     a: >-
-      It's fiercely debated. Our ranking puts Dune: Part Two (2024) at the top
-      for the way it fulfills the saga's epic promise, but Blade Runner 2049,
-      Arrival and Sicario all have devoted champions. Villeneuve is rare in that
-      almost any of his films could top a defensible list.
-  - q: What movies has Denis Villeneuve directed in Hollywood?
+      Critically and on our list, it comes down to three: Arrival, Blade Runner
+      2049, and Dune: Part Two. We give the crown to Blade Runner 2049 as his
+      most complete artistic statement, with Arrival a razor's-edge second. On
+      Rotten Tomatoes, Arrival's 94% is his highest live-action critical score.
+  - q: How many movies has Denis Villeneuve directed?
     a: >-
-      His English-language features are Prisoners and Enemy (both 2013), Sicario
-      (2015), Arrival (2016), Blade Runner 2049 (2017), Dune (2021) and Dune:
-      Part Two (2024). He also directed acclaimed French-language films earlier
-      in his career, including the Oscar-nominated Incendies.
-  - q: Did Denis Villeneuve win an Oscar?
+      He has directed 11 feature films, beginning with August 32nd on Earth
+      (1998) and running through Dune: Part Two (2024). His 12th, Dune: Part
+      Three (adapting Dune: Messiah), is in production for a December 18, 2026
+      release.
+  - q: What are all of Denis Villeneuve's movies in order?
     a: >-
-      He has not won a competitive Academy Award as of mid-2026. He has been
-      nominated, including for Best Director for Arrival, which remains his only
-      Best Director nod to date. Several of his films, such as Blade Runner 2049
-      and Dune, have won Oscars in technical categories.
-  - q: Are the Dune movies connected to Blade Runner 2049?
+      In release order: August 32nd on Earth (1998), Maelstrom (2000),
+      Polytechnique (2009), Incendies (2010), Prisoners (2013), Enemy (2013),
+      Sicario (2015), Arrival (2016), Blade Runner 2049 (2017), Dune (2021), and
+      Dune: Part Two (2024).
+  - q: 'Is Dune: Part Two Denis Villeneuve''s best film?'
     a: >-
-      No, they're separate properties, but they share Villeneuve's signature:
-      vast scale, deliberate pacing and overwhelming sound and visuals. If you
-      love one, the others in his sci-fi run are a natural next watch.
-  - q: In what order should I watch Denis Villeneuve's movies?
+      It's his biggest and arguably most spectacular, and a fair pick for #1. We
+      rank it third behind Blade Runner 2049 and Arrival, which pair his visual
+      scale with tighter, more emotionally resonant storytelling — but it's a
+      defensible top choice.
+  - q: Has Denis Villeneuve won an Oscar?
     a: >-
-      For newcomers, start with his accessible thrillers Prisoners and Sicario,
-      then move into the sci-fi with Arrival, Blade Runner 2049 and the two Dune
-      films. A release-order watch from Prisoners onward shows his steady
-      escalation in ambition.
+      Not yet. He has earned multiple Academy Award nominations, including Best
+      Director consideration for Arrival and Best Picture nods for both Dune
+      films, but has never won. Dune: Part Three is seen as a strong future
+      contender.
 featured: false
 ---
 
-If you want the short version: **Denis Villeneuve movies ranked** from worst to best puts *Dune: Part Two* at the summit, followed closely by *Blade Runner 2049*, *Arrival*, *Sicario* and *Prisoners*. That's the payoff. But Villeneuve is one of the few directors working at blockbuster scale whose entire English-language run rewards close attention, because even his "lesser" films are gorgeously controlled, dread-soaked pieces of craft. Across seven Hollywood features he has built a reputation for vast canvases, deliberate pacing and sound design that you feel in your sternum.
+There's no withholding the answer here: the top of any honest **Denis Villeneuve movies ranked** list comes down to three titans — *Arrival*, *Blade Runner 2049*, and *Dune: Part Two* — and after eleven features, we give the crown to *Blade Runner 2049*, with *Arrival* a hair behind and *Dune: Part Two* completing the podium. That's the debate-settler. Everything below is the full countdown, worst to best, with where each film actually earns its spot.
 
-Below we rank all seven of his English-language films, counting up from his most modest efforts to his masterpieces. No filler, just the order and the reasons.
+It's the perfect moment to rank the run. The French-Canadian director who quietly became the modern sci-fi king is now shooting *Dune: Part Three* — his adaptation of Frank Herbert's *Dune: Messiah*, due December 18, 2026 — and has been tapped to direct the next James Bond film for Amazon MGM. The work below is how he got there.
 
-## The full ranking, worst to best
+## The complete filmography: Denis Villeneuve movies in order
 
-7. **Enemy (2013)**
-6. **Dune (2021)**
-5. **Prisoners (2013)**
-4. **Sicario (2015)**
-3. **Arrival (2016)**
-2. **Blade Runner 2049 (2017)**
-1. **Dune: Part Two (2024)**
+Before the ranking, here's every Villeneuve feature in release order, so you have the **Denis Villeneuve movies in order** at a glance:
 
-A ranking like this is subjective by design. Slide these a place or two in either direction and you'd still have a defensible list. What follows is the case for each placement. Note that we've focused on Villeneuve's English-language Hollywood work here; his earlier French-language films, including the Oscar-nominated *Incendies*, are superb but sit outside this particular run.
+1. *August 32nd on Earth* (1998)
+2. *Maelstrom* (2000)
+3. *Polytechnique* (2009)
+4. *Incendies* (2010)
+5. *Prisoners* (2013)
+6. *Enemy* (2013)
+7. *Sicario* (2015)
+8. *Arrival* (2016)
+9. *Blade Runner 2049* (2017)
+10. *Dune* (2021)
+11. *Dune: Part Two* (2024)
 
-## The cryptic experiment (7)
+Eleven films. No true disaster among them — the gap between his worst and best is the gap between "interesting" and "all-time great," which is its own kind of compliment.
 
-**Enemy** lands last not because it's a failure but because it's the most willfully opaque film Villeneuve has made. A clammy psychological thriller about a history professor who discovers his exact double, it's drenched in unease, anchored by a dual Jake Gyllenhaal performance, and capped by one of the most discussed final images in modern cinema. It's a fascinating mood piece, but its deliberate impenetrability keeps it from the connection his bigger films achieve. Essential for completists, divisive for everyone else.
+## 11. August 32nd on Earth (1998)
 
-## The first trip to Arrakis (6)
+His feature debut, a stylish French-language road movie about a woman who decides she wants a child after surviving a car crash. The compositional eye is already there, but the storytelling is loose and self-consciously arty. Essential only for completists tracing where it all began.
 
-**Dune** ranks here only because its sequel exists to one-up it. As a standalone, it's a stunning feat of world-building, translating Frank Herbert's dense novel into something coherent and overwhelming on the largest possible screen. The problem is structural: it's half a story by design, an extended first act that ends just as the engine roars to life. Magnificent, but incomplete on purpose.
+## 10. Maelstrom (2000)
 
-## The kidnapping thriller (5)
+A darkly comic Montreal drama narrated, improbably, by a fish awaiting slaughter. It won Villeneuve major Canadian acclaim and hints at the moral heaviness to come, but the whimsy hasn't aged as cleanly as his later precision. A fascinating curio at 79% on Rotten Tomatoes.
 
-**Prisoners** was Villeneuve's English-language calling card, and it remains one of his most gripping films. A bleak, rain-soaked drama about a father (Hugh Jackman) who takes the law into his own hands after his daughter vanishes, it's a moral gut-punch elevated by Jake Gyllenhaal as the dogged detective and by Roger Deakins's masterful cinematography. It's the film that proved Villeneuve could marry arthouse intensity with mainstream tension.
+## 9. Enemy (2013)
 
-## The border descent (4)
+The most divisive entry, and the lowest-scored at 73%, which feels harsh. Jake Gyllenhaal plays a man who discovers his exact double in this Toronto-set adaptation of a José Saramago novel. It's a deliberately opaque nightmare about fidelity and control with one of the most discussed final shots in modern cinema. Lower on consensus, high on cult devotion — the kind of film that dominates **Denis Villeneuve best movies Reddit** threads precisely because nobody agrees on it.
 
-**Sicario** is a masterclass in mounting dread. Emily Blunt plays an FBI agent pulled into a murky cross-border operation against a Mexican drug cartel, and the film's genius is keeping her — and us — in the dark about whose side anyone is really on. The traffic-jam ambush and a night-vision raid sequence are pure white-knuckle filmmaking. With a Deakins lens and a churning, Oscar-nominated Jóhann Jóhannsson score, it's Villeneuve's leanest, meanest thriller. If you favor this register of tense, morally grey filmmaking, our roundup of the [best A24 movies ranked](/movies/best-a24-movies-ranked) covers similarly bold, uncompromising work.
+## 8. Polytechnique (2009)
 
-## The thinking person's sci-fi (3)
+A stark black-and-white reconstruction of the 1989 École Polytechnique massacre. Unsparing and formally rigorous, it announced Villeneuve as a serious dramatic force. It sits at 88% critically and remains his most painful, least rewatchable film — by design.
 
-**Arrival** is where Villeneuve announced himself as a genuine science-fiction visionary. A first-contact story that's really about language, time and grief, it asks how we'd communicate with beings whose perception of reality differs from ours. Amy Adams gives a quietly devastating performance, and the film's structural twist reframes everything that came before in a way that lingers for days. It earned Villeneuve his first and, so far, only Best Director nomination, and it remains the most emotionally resonant film he's made. If cerebral sci-fi is your thing, our list of the [best sci-fi movies streaming](/streaming/best-sci-fi-movies-streaming) is a natural next stop.
+## 7. Prisoners (2013)
 
-## The impossible sequel (2)
+His English-language calling card: a grueling abduction thriller with Hugh Jackman and Gyllenhaal, shot by the great Roger Deakins. At two and a half hours of mounting dread, it proved Villeneuve could command a Hollywood ensemble without sanding off the bleakness. Lands at 81% and remains a gateway film for many fans.
 
-**Blade Runner 2049** should not have worked. Following up a beloved, untouchable classic decades later is a fool's errand, yet Villeneuve delivered a sequel that honors the original while expanding its world. Ryan Gosling's replicant blade runner drifts through a future of staggering beauty and melancholy, and Deakins finally won his long-overdue Oscar for the cinematography. It's slow, vast and deeply felt — a film that trusts its audience to sit in silence and ambiguity. Commercially it underperformed, but its reputation has only grown.
+## 6. Dune (2021)
 
-## The masterpiece (1)
+The film that made the unfilmable filmable. *Dune* is monumental world-building — Greig Fraser's photography, Hans Zimmer's score, Timothée Chalamet's Paul Atreides — but it's structurally half a story, ending right as the engine turns over. That incompleteness is the only thing keeping it out of the top five. A foundational chapter rather than a standalone triumph. For the bigger Chalamet picture, see our [Timothée Chalamet best movies](/celebrity/timothee-chalamet-best-movies) rundown.
 
-And at number one: **Dune: Part Two**. This is Villeneuve operating at the absolute peak of his powers, the film where every skill he's honed — scale, sound, tension, restraint — converges. Picking up Paul Atreides's rise among the Fremen, it delivers the spectacle the first film promised, from sandworm-riding to a brutal final reckoning, without sacrificing the saga's wariness about messiahs and power. Timothée Chalamet anchors the epic with real conviction, and the ensemble around him is loaded with talent; you can trace his rapid ascent in our look at [Timothée Chalamet's best movies](/celebrity/timothee-chalamet-best-movies). It's blockbuster filmmaking as high art, and his most complete statement to date.
+## 5. Incendies (2010)
 
-## Where to watch Denis Villeneuve's films
+His breakthrough on the world stage and his first Oscar nomination (Best Foreign Language Film). Twins travel to the Middle East to unravel their late mother's secret past, building to a gut-punch revelation that ranks among the most devastating in his catalog. A staggering 91% — proof his power never depended on spectacle.
 
-Availability shifts constantly across streaming services and rental platforms, so it's worth checking your region before committing to a marathon. Villeneuve's catalog tends to rotate between premium subscription tiers and digital purchase, and his Warner Bros. and Legendary titles in particular move around. For a guaranteed watch, renting or buying digitally is the safest bet. His films also reward the biggest, loudest screen you can find — the sound design alone justifies a premium-format viewing.
+## 4. Sicario (2015)
+
+A vise-tight cartel thriller anchored by Emily Blunt, Benicio del Toro, and Josh Brolin, with Deakins behind the camera and the late Jóhann Jóhannsson's growling score. The border-crossing convoy sequence is a masterclass in sustained tension. At 91%, it's the film where Villeneuve's control over dread became unimpeachable, and a standout for fans of [the best heist and crime thrillers](/movies/best-heist-movies).
+
+## 3. Dune: Part Two (2024)
+
+His most spectacular film and a legitimate pick for the top spot — many readers will put it at #1, and we won't argue too hard. It delivers everything *Dune* set up: the worm-riding, Paul's terrible ascent, Zendaya's Chani as the trilogy's moral conscience. It sits at 92% and stands as one of the [best sci-fi movies of the 21st century](/movies/best-sci-fi-movies-21st-century). We place it third only because the two films above it are tighter, stranger, and more singular. Read our full [Dune: Part Two review](/reviews/dune-part-two-review) for the deep dive.
+
+## 2. Arrival (2016)
+
+The film that crowned him. A linguist (Amy Adams) decodes an alien language and, in doing so, the shape of grief and time itself. *Arrival* is his most emotionally complete work and his highest live-action critical score at **94% on Rotten Tomatoes** — the answer to anyone comparing **Denis Villeneuve movies ranked on Rotten Tomatoes**. *Arrival vs Blade Runner 2049* is the great Villeneuve coin-flip; *Arrival* loses by a feather only because of what edges it out.
+
+## 1. Blade Runner 2049 (2017)
+
+His masterpiece. A sequel nobody believed could work that became a melancholy, staggeringly beautiful meditation on memory and what makes us real. Ryan Gosling and a returning Harrison Ford headline; Deakins finally won his long-overdue Oscar for the cinematography. It under-performed at the box office and earns "only" 88% — but consensus undersells it. As a total fusion of image, sound, idea, and feeling, nothing else in the filmography is this complete. For more from its star, see our [Ryan Gosling best movies](/celebrity/ryan-gosling-best-movies) guide.
+
+## Where to watch the Denis Villeneuve movies
+
+Availability shifts by region and month, but here's the general lay of the land in the US:
+
+- **Dune** and **Dune: Part Two** — typically stream on Max (Warner Bros.), with digital rental everywhere.
+- **Blade Runner 2049** and **Arrival** — rotate across major streamers; reliably available to rent on Prime Video, Apple TV, and similar.
+- **Sicario**, **Prisoners**, **Enemy** — widely available to rent or buy digitally.
+- **Incendies**, **Polytechnique**, **Maelstrom**, **August 32nd on Earth** — best found on arthouse-leaning services and digital storefronts.
+
+If you're chasing the cerebral end of his work next, our roundup of the [best sci-fi movies to stream](/streaming/best-sci-fi-movies-streaming) is the natural follow-up. And if you like your auteurs ranked, our [Christopher Nolan movies ranked](/movies/christopher-nolan-movies-ranked) is the companion piece to this one.
+
+## A quick note on his Oscars and what's next
+
+For all the acclaim, Villeneuve has never won a competitive Academy Award — a genuine snub given the run above. He's collected multiple nominations, including Best Director recognition around *Arrival* and Best Picture nods for both *Dune* films. *Dune: Part Three* (adapting *Dune: Messiah*) and, eventually, his James Bond film are the likeliest places that drought finally ends.
 
 ## The bottom line
 
-Ranking Villeneuve is a luxury problem: there's no weak film here, only degrees of brilliance. *Dune: Part Two* takes the crown, but *Blade Runner 2049*, *Arrival* and *Sicario* are all the kind of film most directors never make once. He has become the rare auteur trusted with enormous budgets who never sands down his sensibility to fit them.
-
-What's next? Villeneuve has wrapped a third Dune film, *Dune: Part Three*, adapting *Dune Messiah* and set for release in late 2026, so this list will almost certainly need a re-rank before long. Given his track record, the smart money says number one is still up for grabs.
+Every Villeneuve feature ranked worst to best lands on a simple truth: even his lesser work would headline most directors' careers. The top tier — *Blade Runner 2049*, *Arrival*, *Dune: Part Two* — is as strong a top three as any living filmmaker can claim. Crown whichever you love most; the only wrong answer is pretending the choice is easy. Now go argue about it.

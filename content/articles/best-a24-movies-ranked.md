@@ -1,125 +1,153 @@
 ---
-title: 'The Best A24 Movies, Ranked'
+title: 'The 25 Best A24 Movies Ranked: From Elevated Horror to Oscar Winners'
 slug: best-a24-movies-ranked
 category: movies
 author: jordan-hale
 date: '2026-06-23T15:00:00.000Z'
 dek: >-
-  From "Everything Everywhere All at Once" to "Hereditary," we rank the films
-  that turned a scrappy distributor into one of the most beloved brands in
-  modern cinema.
-metaTitle: 'The Best A24 Movies, Ranked'
+  From Moonlight's quiet Best Picture upset to Hereditary's slow-burn terror and
+  the studio's $300M Backrooms breakout, here's where every essential A24 film
+  lands, and where to stream it tonight.
+metaTitle: The 25 Best A24 Movies Ranked (2026)
 metaDescription: >-
-  Our ranking of the best A24 movies, from "Everything Everywhere All at Once"
-  to "Hereditary" and "Moonlight" — plus where to stream each one.
+  The best A24 movies ranked: Hereditary, Moonlight, Everything Everywhere and
+  more, with where to watch each. Our definitive countdown of the studio's
+  finest.
 tags:
   - A24
-  - best movies
-  - indie film
-  - horror
-  - Everything Everywhere All at Once
-  - Moonlight
+  - best A24 movies
+  - elevated horror
+  - Oscar winners
   - movie rankings
-targetKeyword: best a24 movies
+  - where to watch
+  - Everything Everywhere All at Once
+  - Hereditary
+targetKeyword: best A24 movies ranked
 imageAlt: >-
-  Stylized collage of iconic A24 film imagery on a clean white background with
-  the studio's logo motif
+  Collage of iconic A24 films including Hereditary, Moonlight and Everything
+  Everywhere All at Once
 imageCredit: The Screen Report
 faq:
-  - q: What is A24's most successful movie?
+  - q: What is the best A24 movie?
     a: >-
-      Commercially and at the awards podium, "Everything Everywhere All at Once"
-      is A24's biggest success. It became the studio's highest-grossing film and
-      won seven Academy Awards, including Best Picture.
-  - q: How many Best Picture Oscars has A24 won?
+      Our pick is Everything Everywhere All at Once, the multiverse epic that
+      swept seven Academy Awards including Best Picture. It is the rare film
+      that is wildly inventive, emotionally devastating and a genuine
+      crowd-pleaser, which is why it tops most critical rankings of the studio's
+      work.
+  - q: What is the scariest A24 movie ever?
     a: >-
-      A24 has distributed multiple Best Picture winners, including "Moonlight"
-      (2017) and "Everything Everywhere All at Once" (2023), cementing its
-      reputation as an awards powerhouse.
-  - q: Is A24 a studio or a distributor?
+      Hereditary is widely considered A24's scariest movie, a grief-soaked
+      horror that builds to one of the most disturbing final acts in modern
+      cinema. Midsommar and Talk to Me are close runners-up if you want daylight
+      dread or sheer shock value.
+  - q: What is the highest-grossing A24 movie of all time?
     a: >-
-      A24 launched as an independent film distributor in 2012 and has since
-      grown into a full production company, financing and producing many of its
-      own titles in addition to distributing acquired films.
-  - q: Where can I stream A24 movies?
+      As of 2026, Backrooms is A24's highest-grossing film, earning roughly $300
+      million worldwide and breaking the studio's box-office records. It
+      overtook Timothee Chalamet's Marty Supreme and the previous champ,
+      Everything Everywhere All at Once.
+  - q: Which A24 movies have won Best Picture at the Oscars?
     a: >-
-      A24 titles are spread across services like Max, Prime Video and others,
-      and many are also available to rent or buy digitally. Availability changes
-      often, so check the specific film on your preferred service.
-  - q: Which A24 movie should I watch first?
+      Two A24 films have won Best Picture: Moonlight in 2017 and Everything
+      Everywhere All at Once in 2023. Everything Everywhere also made A24 the
+      first studio to win all top six Oscar categories in a single year.
+  - q: What is A24 best known for?
     a: >-
-      For newcomers, "Everything Everywhere All at Once" is the most accessible
-      entry point. If you prefer something quieter, start with "Moonlight" or
-      "Past Lives"; for horror, "Hereditary" is the signature pick.
+      A24 is best known for prestige indie dramas and 'elevated horror' such as
+      Hereditary, Midsommar and The Witch. Founded in 2012, it has become the
+      most influential boutique studio of its era, blending arthouse credibility
+      with cult fandom and Oscar wins.
 featured: false
 ---
 
-If you want the short answer: the best A24 movie is **"Everything Everywhere All at Once,"** the multiverse epic that swept the 2023 Oscars and proved an indie distributor could out-imagine the entire blockbuster machine. But the deeper truth behind any list of the best A24 movies is that the company doesn't really have a "type" — it has a sensibility. Bleak family horror, tender coming-of-age dramas, neon crime sagas and surreal comedies all carry the same promise: you're about to see something a major studio would never green-light.
+If you only watch one, make it **Everything Everywhere All at Once** — the multiverse epic that swept seven Oscars and made A24 the first studio ever to win all top six Academy Award categories in a single year. That sits at the summit of our **best A24 movies ranked** countdown, but it is far from the studio's only masterpiece. Below is the full list, worst-to-best is for cowards, so we are counting down from great to greatest.
 
-Below is our ranking of the studio's essential films, with a note on what makes each one matter and where to find it.
+Here is the quick answer before we go deep. The essential A24 films, ranked:
 
-## The best A24 movies, ranked
+1. **Everything Everywhere All at Once** (2022)
+2. **Moonlight** (2016)
+3. **Hereditary** (2018)
+4. **The Zone of Interest** (2023)
+5. **Past Lives** (2023)
+6. **Midsommar** (2019)
+7. **The Witch** (2015)
+8. **Lady Bird** (2017)
+9. **Aftersun** (2022)
+10. **Uncut Gems** (2019)
+11. **Ex Machina** (2014)
+12. **The Brutalist** (2024)
+13. **The Lighthouse** (2019)
+14. **Minari** (2020)
+15. **Talk to Me** (2022)
+16. **Marty Supreme** (2026)
+17. **Civil War** (2024)
+18. **The Iron Claw** (2023)
+19. **Room** (2015)
+20. **The Florida Project** (2017)
+21. **Backrooms** (2026)
+22. **A Ghost Story** (2017)
+23. **Spring Breakers** (2013)
+24. **The Green Knight** (2021)
+25. **Eighth Grade** (2018)
 
-1. **Everything Everywhere All at Once (2022)** — The Daniels' maximalist multiverse comedy is A24's crowning achievement: emotionally enormous, formally daring, and anchored by a career-defining Michelle Yeoh performance.
-2. **Moonlight (2016)** — Barry Jenkins' triptych about a young Black man finding himself in Miami is one of the most quietly devastating films of the century. Its Best Picture win remains a landmark moment.
-3. **Hereditary (2018)** — Ari Aster's feature debut is a grief drama that curdles into pure dread. Toni Collette gives one of horror's all-time great performances.
-4. **The Lighthouse (2019)** — Robert Eggers' black-and-white two-hander, all salt and madness, with Robert Pattinson and Willem Dafoe at full boil.
-5. **Lady Bird (2017)** — Greta Gerwig's solo directorial debut is a warm, witty Sacramento coming-of-age story powered by Saoirse Ronan and Laurie Metcalf.
+## Why A24 keeps making the best movies of all time
 
-## Why these films sit at the top
+Founded in 2012, A24 rewrote the rules of prestige film twice over: once by turning small, director-driven dramas into awards juggernauts, and again by making "elevated horror" a box-office event. The throughline is trust in filmmakers. Ari Aster, Robert Eggers, Greta Gerwig, the Daniels and the Safdie brothers all made career-defining swings here. That is why "why are A24 movies so good" is one of the most-searched questions in film, and why the studio's logo now functions as a tastemaker's seal of approval.
 
-The top of any best A24 movies list rewards directors who were trusted to be uncompromising. "Everything Everywhere" earned its place not just on box office or its haul of Academy Awards but on sheer ambition — it's a film about taxes, laundry, family and the meaning of existence that somehow lands every swing. "Moonlight," by contrast, wins through restraint: three chapters, three actors playing one soul, almost no wasted frame.
+## The top A24 movies, ranked
 
-What unites them is voice. A24 built its reputation by handing the keys to filmmakers — Jenkins, Aster, Eggers, Gerwig, the Daniels — and refusing to sand off the strange parts. That's why the brand inspires the kind of loyalty usually reserved for a beloved director, not a logo.
+**1. Everything Everywhere All at Once.** A laundromat owner battles a nihilistic multiverse threat in the Daniels' maximalist sci-fi miracle. Seven Oscars, infinite heart, and the rare blockbuster that earns its tears. Read our [full Everything Everywhere All at Once review](/reviews/everything-everywhere-all-at-once-review) for the deep dive.
 
-## The horror canon that built the brand
+**2. Moonlight.** Barry Jenkins' triptych on a Black gay man's coming-of-age delivered A24's first Best Picture in 2017, in the most famous envelope mix-up in Oscar history. Quiet, luminous, perfect.
 
-For a stretch, "A24 horror" became its own genre shorthand. The studio leaned into slow-burn, art-house dread, and the results reshaped the modern scary movie.
+**3. Hereditary.** The scariest A24 movie ever made. Toni Collette's grieving mother anchors Ari Aster's debut, which curdles family trauma into pure dread. The dinner-table scene alone earns its spot among the [best sci-fi and horror streaming](/streaming/best-sci-fi-movies-streaming).
 
-- **Hereditary (2018)** and **Midsommar (2019)** — Ari Aster's one-two punch of family trauma and daylight folk horror.
-- **The Witch (2015)** — Robert Eggers' meticulous Puritan nightmare, the film that announced the studio's horror ambitions.
-- **It Comes at Night (2017)** and **Saint Maud (2021)** — leaner, dread-soaked entries that prize atmosphere over jump scares.
+**4. The Zone of Interest.** Jonathan Glazer's clinical Holocaust drama watches a Nazi family picnic beside Auschwitz. Bleakly brilliant, with sound design that does the unspeakable work the camera refuses to.
 
-These films traded gore for unease and made patience itself feel terrifying. If you love this strain of slow-building dread, our roundup of the [best sci-fi movies streaming](/streaming/best-sci-fi-movies-streaming) shares plenty of that same cerebral chill.
+**5. Past Lives.** Celine Song's aching debut about two childhood friends and the lives we do not live. A Best Picture nominee that ruins you gently.
 
-## The awards darlings
+## The best A24 horror movies, ranked
 
-A24's prestige arm is just as strong as its horror side. Beyond "Moonlight" and "Everything Everywhere All at Once," the studio has shepherded a remarkable run of contenders.
+A24 did not invent horror, but it made the genre prestige. If you want the scariest A24 movies in order, start here:
 
-- **Room (2015)** — Brie Larson won Best Actress for this harrowing, hopeful captivity drama.
-- **The Whale (2022)** — Brendan Fraser's comeback turn earned him the Best Actor Oscar.
-- **Past Lives (2023)** — Celine Song's aching debut about roads not taken became an instant critical favorite.
-- **Aftersun (2022)** — Charlotte Wells' memory-piece about a father-daughter holiday is a quiet gut-punch.
+- **Hereditary** (2018) — grief as a slow, demonic unraveling.
+- **Midsommar** (2019) — Ari Aster's daylight breakup nightmare in a Swedish cult.
+- **The Witch** (2015) — Robert Eggers' period-perfect Puritan terror, and the film that minted "elevated horror."
+- **Talk to Me** (2022) — the embalmed-hand seance smash that became one of A24's biggest horror hits.
+- **The Lighthouse** (2019) — Eggers and two lighthouse keepers descending into salt-crusted madness.
 
-This is the side of A24 that competes directly with the legacy studios at the Oscars — and frequently wins. Their performance-first sensibility recalls the kind of director-driven craft we mapped in our [Christopher Nolan movies ranked](/movies/christopher-nolan-movies-ranked) feature.
+Pair these with our wider [best sci-fi movies of the 21st century](/movies/best-sci-fi-movies-21st-century) list when you want dread with ideas.
 
-## The cult favorites and curveballs
+## A24 movies ranked by box office: the highest-grossing hits
 
-Not every essential A24 film chases a trophy. Some are just unforgettable swings.
+The cult finally went commercial. Here are the highest-grossing A24 movies worldwide as of 2026:
 
-- **Uncut Gems (2019)** — The Safdie brothers' panic-attack thriller, with Adam Sandler as a self-sabotaging jeweler.
-- **The Florida Project (2017)** — Sean Baker's tender portrait of childhood lived in the shadow of Disney World.
-- **Spring Breakers (2013)** — Harmony Korine's neon-soaked fever dream, one of A24's earliest statement releases.
-- **Ex Machina (2015)** — Alex Garland's sleek, unsettling AI chamber piece, which A24 released in the U.S.
-- **Talk to Me (2023)** — a viral Australian horror hit that proved the studio's scary-movie instincts were still razor-sharp.
+1. **Backrooms** (2026) — roughly **$300 million**, A24's biggest film ever, directed by 20-year-old YouTube phenom Kane Parsons.
+2. **Marty Supreme** (2026) — the Timothee Chalamet table-tennis dramedy that briefly held the crown north of **$147 million**.
+3. **Everything Everywhere All at Once** (2022) — about **$142 million**, the long-reigning champ.
+4. **Civil War** (2024) — Alex Garland's near-future America at roughly **$127 million**.
 
-These titles show A24's range: the company is as comfortable with a sweaty crime saga as it is with a hushed indie drama or a genre crowd-pleaser.
+Backrooms making Parsons the youngest filmmaker to top the US box office is the clearest sign yet that A24 has scaled without selling out. For more on Chalamet's run, see our [Timothee Chalamet best movies](/celebrity/timothee-chalamet-best-movies) guide.
 
-## Where to start if you're new
+## A24's Best Picture winners and Oscar legacy
 
-If you've never dipped into the catalog, here's a simple on-ramp by mood:
+Two films have won Best Picture: **Moonlight** (2017) and **Everything Everywhere All at Once** (2023). Beyond those, A24 has stacked nominations with **Lady Bird**, **Minari**, **The Zone of Interest** and **Past Lives**. In 2025, **The Brutalist** earned ten nominations and won Adrien Brody a second Best Actor Oscar, alongside cinematography and score, though it missed the top prize. No boutique studio has ever converted indie risk into gold this consistently. If you love an ambitious swing, A24's VistaVision epic belongs next to the [best movie trilogies](/movies/best-movie-trilogies) on your watchlist for sheer scale.
 
-- **Want to be moved?** Start with **Moonlight** or **Past Lives**.
-- **Want to be terrified?** Go straight to **Hereditary**.
-- **Want to be amazed?** **Everything Everywhere All at Once**, no question.
-- **Want something weird and unforgettable?** **The Lighthouse** or **Uncut Gems**.
+## The hidden gems worth ranking high
 
-Several of these feature performers who anchor our other guides, including [Timothée Chalamet's best movies](/celebrity/timothee-chalamet-best-movies) for fans who follow modern indie-leaning stars.
+Some of the best A24 movies of all time never chased a box-office record. **Aftersun** is a devastating father-daughter memory-piece. **Uncut Gems** straps you to Adam Sandler's panic attack of a jeweler in the Safdie brothers' anxiety masterpiece, a must for fans of [the best heist movies](/movies/best-heist-movies). **Ex Machina** gave Alex Garland his sleek AI breakout, and **The Green Knight** turned Arthurian myth into a hypnotic fever dream. These are the films that explain the cult.
 
-## Where to watch A24 movies
+## Where to watch the best A24 movies
 
-A24's library is spread across the major platforms rather than locked to one home. Titles rotate between services like Max, Prime Video and others, and most are available to rent or buy digitally if they're not currently streaming. Because licensing windows shift constantly, the safest move is to search the specific film on your preferred service or a streaming aggregator before settling in. The studio has also expanded into television, so it's worth scanning our [best limited series to stream](/tv/best-limited-series-to-stream) guide for adjacent prestige picks.
+A24's library is scattered across platforms, so availability shifts by region and month. As a rough guide for 2026:
+
+- **Everything Everywhere All at Once**, **Hereditary** and **Midsommar** frequently rotate through premium and free tiers — Midsommar lands on Kanopy free in 2026.
+- **Moonlight**, **Lady Bird** and **Uncut Gems** are streaming-and-rental staples.
+- New releases like **Backrooms** and **Marty Supreme** start as digital rentals before hitting subscription.
+
+Always confirm with a tracker like JustWatch, since the best A24 movies on Max, Prime or Apple TV move often. While you queue them up, our [best movies on Prime Video](/streaming/best-movies-on-prime-video) and [best shows on Apple TV](/streaming/best-shows-on-apple-tv) roundups have your next night sorted.
 
 ## The bottom line
 
-The best A24 movies aren't bound by genre, budget or formula — they're bound by trust in the filmmaker. From the multiverse maximalism of "Everything Everywhere All at Once" to the whispered heartbreak of "Moonlight," the studio has spent more than a decade proving that the most exciting cinema often comes from the smallest, strangest corners. With new films from its marquee directors always on the horizon, A24's next instant classic is likely already in the works — and if its track record holds, it'll be unlike anything you expected.
+A24 went from scrappy 2012 upstart to the defining studio of modern prestige film in barely a decade, winning two Best Pictures, making horror respectable, and now topping $300 million at the box office. If you watch only one, make it **Everything Everywhere All at Once**. If you want the scares, start with **Hereditary**. Either way, that little logo has earned its reputation, one cult classic at a time.

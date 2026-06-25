@@ -4,7 +4,25 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AnchorAd from "@/components/AnchorAd";
+import JsonLd from "@/components/JsonLd";
 import { SITE } from "@/lib/site";
+
+const SITE_SCHEMA = [
+  {
+    "@context": "https://schema.org",
+    "@type": "NewsMediaOrganization",
+    name: SITE.name,
+    url: SITE.url,
+    description: SITE.description,
+    sameAs: ["https://twitter.com/thescreenreport"],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: SITE.name,
+    url: SITE.url,
+  },
+];
 
 // Headlines / display — Fraunces, loaded with its opsz/SOFT/WONK axes so globals.css
 // can pin SOFT=0 / WONK=0. That converts Fraunces from its soft, quirky DEFAULT cut
@@ -64,6 +82,7 @@ export default function RootLayout({
       className={`${fraunces.variable} ${sourceSerif.variable} ${karla.variable}`}
     >
       <body>
+        <JsonLd data={SITE_SCHEMA} />
         <Header />
         <main>{children}</main>
         <Footer />

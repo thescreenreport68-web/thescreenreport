@@ -1,133 +1,139 @@
 ---
-title: 'Zendaya''s Movies and TV Shows: The Complete Guide'
+title: 'Zendaya Movies and TV Shows: The Complete Guide to Every Role (2026)'
 slug: zendaya-movies-and-tv-shows
 category: celebrity
 author: daniel-reyes
-date: '2026-06-20T23:00:00.000Z'
+date: '2026-06-25T15:00:00.000Z'
 dek: >-
-  From Disney Channel kid to two-time Emmy winner and franchise lead, here's
-  every essential Zendaya role, what to stream, and what's coming next.
-metaTitle: 'Zendaya Movies and TV Shows: Full Guide'
+  From Disney's Shake It Up to Rue, Chani, MJ and Tashi — every Zendaya movie
+  and TV show, where to stream each, ranked and in order, plus her
+  record-breaking five-release 2026.
+metaTitle: 'Zendaya Movies and TV Shows: Complete Guide (2026)'
 metaDescription: >-
-  A complete guide to Zendaya movies and TV shows: Euphoria, Dune, Spider-Man,
-  Challengers, where to watch, and every major role ranked.
+  Every Zendaya movie and TV show in order — Disney to Dune 3 — with roles,
+  years, where to stream, a ranked best-of, and her stacked 2026 slate of five
+  releases.
 tags:
   - Zendaya
   - Euphoria
   - Dune
   - Spider-Man
   - Challengers
+  - Disney Channel
+  - HBO
   - celebrity
-  - streaming guide
 targetKeyword: zendaya movies and tv shows
 imageAlt: >-
-  Stylized portrait illustration of Zendaya surrounded by film and television
-  iconography representing her major roles
+  Zendaya at a film premiere, known for Euphoria, Dune, Spider-Man and
+  Challengers
 imageCredit: The Screen Report
 faq:
-  - q: What is Zendaya's most famous role?
+  - q: How many movies and TV shows has Zendaya been in?
     a: >-
-      Zendaya is best known for playing Rue Bennett in HBO's Euphoria, a
-      performance that made her one of the youngest winners of the Emmy for
-      Outstanding Lead Actress in a Drama Series. She is also widely recognized
-      as MJ in the Tom Holland Spider-Man films and Chani in Dune.
-  - q: Where can I watch Zendaya's movies and TV shows?
+      Across her career, Zendaya has appeared in roughly 15 feature films and a
+      dozen-plus television projects, plus guest spots, voice roles and TV
+      movies — well over 50 acting credits in total when you count everything.
+      Her headline live-action films include three Spider-Man movies, three Dune
+      movies, Challengers, The Greatest Showman and Malcolm & Marie, while her
+      defining TV work is Euphoria. Her 2026 slate alone adds five major
+      releases.
+  - q: What was Zendaya's first movie and TV show?
     a: >-
-      Euphoria streams on Max, while the Dune films and Spider-Man movies rotate
-      across streaming and digital rental platforms depending on your region.
-      Her Disney Channel work, including Shake It Up and K.C. Undercover, is
-      generally available on Disney+. Availability can change, so check your
-      local listings.
-  - q: Did Zendaya win an Emmy?
+      Her first major television role was Rocky Blue on Disney Channel's Shake
+      It Up, which premiered in 2010 when she was 14. Her earliest film credit
+      is a voice role as Lollipop in the 2013 direct-to-video Super Buddies; her
+      first live-action movie leads were Spider-Man: Homecoming and The Greatest
+      Showman, both in 2017.
+  - q: What Disney shows was Zendaya in?
     a: >-
-      Yes. Zendaya has won two Primetime Emmy Awards for Outstanding Lead
-      Actress in a Drama Series for her role as Rue in Euphoria, in 2020 and
-      again in 2022.
-  - q: Is Zendaya in the Dune movies?
+      Zendaya's Disney Channel run includes the dance comedy Shake It Up
+      (2010–2013) as Rocky Blue and the action-comedy K.C. Undercover
+      (2015–2018) as teen spy K.C. Cooper, which she also co-produced. She also
+      starred in the Disney Channel movies Frenemies (2012) and Zapped (2014),
+      competed on Dancing with the Stars in 2013, and made guest appearances on
+      shows like Good Luck Charlie.
+  - q: Is Zendaya in Euphoria and Dune?
     a: >-
-      Yes. Zendaya plays Chani, a Fremen warrior, in Denis Villeneuve's Dune
-      films. Her role expanded significantly in Dune: Part Two, and she is set
-      to return for Dune: Part Three.
-  - q: What are Zendaya's upcoming projects?
+      Yes — both, and they are two of her signature roles. She plays Rue Bennett
+      in HBO's Euphoria, winning two Primetime Emmys for it, and she plays the
+      Fremen warrior Chani in Denis Villeneuve's Dune films. In 2026 she returns
+      to both, with Euphoria Season 3 and Dune: Part Three.
+  - q: What are Zendaya's best movies and TV shows?
     a: >-
-      Zendaya is attached to the next Spider-Man film and Dune: Part Three,
-      plays Athena in Christopher Nolan's The Odyssey, and stars opposite Robert
-      Pattinson in A24's The Drama. Release dates can shift, so treat any timing
-      as tentative.
-featured: false
+      Critically, her strongest work is Euphoria (two Emmys), Dune: Part Two,
+      Challengers and her Spider-Man trilogy. For a first watch, start with
+      Euphoria for her dramatic peak, then Challengers and Dune: Part Two for
+      her movie-star range, then Spider-Man: Homecoming for her breakout
+      blockbuster turn as MJ.
+featured: true
 ---
 
-If you're trying to map out **Zendaya's movies and TV shows**, here's the short version: she broke out as a Disney Channel teen star, became a two-time Emmy winner for HBO's *Euphoria*, and now anchors two of Hollywood's biggest franchises as MJ in *Spider-Man* and Chani in *Dune*. Add the tennis drama *Challengers* and a stacked slate of upcoming films, and you have one of the most complete résumés of any actor under 30.
+Here's the short answer: across roughly 15 feature films and more than a dozen TV projects, Zendaya's essential **movies and TV shows** are her two Emmy-winning seasons as Rue Bennett in HBO's *Euphoria*, the Fremen warrior **Chani** in Denis Villeneuve's *Dune* films, **MJ (Michelle Jones)** across three *Spider-Man* movies, and tennis power player **Tashi Duncan** in *Challengers* — a span that took her from Disney Channel kid to Emmy-winning, blockbuster-anchoring lead. This guide names every title, role, year and where to stream, lays out a chronological order to watch, ranks the best, and breaks down the biggest year of her career: a once-in-a-lifetime **2026** with five major releases.
 
-Below is the full guide: the essential roles, where to watch them, how her career evolved, and what's coming next.
+That 2026 run — *The Drama*, *Euphoria* Season 3, Christopher Nolan's *The Odyssey*, *Spider-Man: Brand New Day* and *Dune: Part Three* — is the true hook here. No teasing: we lay out exactly what to watch and in what order below. (Release dates can move, so check current listings.)
 
-## The role that defined her: Rue in *Euphoria*
+## How Many Movies and TV Shows Has Zendaya Been In?
 
-*Euphoria* is the cornerstone of Zendaya's career as a dramatic actress. As Rue Bennett, a teenager navigating addiction and grief, she delivered a raw, unguarded performance that earned her the Primetime Emmy for Outstanding Lead Actress in a Drama Series in 2020, making her one of the youngest winners ever in that category. She won the award a second time in 2022, cementing her as a serious dramatic lead rather than a former child star.
+Born September 1, 1996, in Oakland, California, Zendaya has built a filmography of roughly **15 feature films** and a dozen-plus television projects, plus guest spots, TV movies and voice work — comfortably **50-plus acting credits** in total. What makes the **complete Zendaya filmography** unusual is its shape: a clean two-act career, from squeaky-clean Disney tween to one of Hollywood's most bankable adult leads, with almost no awkward in-between. Below, we trace that arc role by role.
 
-The show is divisive for its frank content, but Zendaya's work is the consensus highlight. If you only watch one thing on this list, *Euphoria* is it. The series ran for three seasons, with its final run premiering in April 2026, so Rue's full arc is now complete and ready to binge end to end.
+## Zendaya's First Movie and TV Show: The Disney Years
 
-**Where to watch:** *Euphoria* streams on Max.
+Her first major role was **Rocky Blue** on Disney Channel's dance comedy ***Shake It Up*** (2010–2013), landed at age 14. She followed it as teen spy **K.C. Cooper** in ***K.C. Undercover*** (2015–2018), which she also co-produced — an early sign of the control she'd later wield as a producer. Her **Disney shows** also include the channel movies ***Frenemies*** (2012) and ***Zapped*** (2014), a 2013 runner-up finish on *Dancing with the Stars*, and guest turns on *Good Luck Charlie*. Her earliest film credit is a voice part as Lollipop in the direct-to-video ***Super Buddies*** (2013). Most of the Disney catalog streams on Disney+.
 
-## Zendaya in the blockbuster franchises
+## The Breakout: Spider-Man and The Greatest Showman
 
-Two giant franchises turned Zendaya into a global box-office name, and both lean on her chemistry with co-stars rather than spectacle alone.
+2017 was the pivot. Zendaya entered the **Marvel Cinematic Universe** as **MJ** in ***Spider-Man: Homecoming***, a deadpan scene-stealer who'd grow into a full co-lead across ***Spider-Man: Far From Home*** (2019) and ***Spider-Man: No Way Home*** (2021), the latter one of the [highest-grossing movies of all time](/movies/highest-grossing-movie-of-all-time). The Spider-Man films sit inside the timeline tracked in our [MCU movies in order](/movies/mcu-movies-in-order) guide. That same year she sang and swung as trapeze artist **Anne Wheeler** in ***The Greatest Showman***, whose soundtrack became a global phenomenon. She also voiced characters in animated features *Smallfoot* (2018) and *Space Jam: A New Legacy* (2021).
 
-### MJ in the *Spider-Man* films
+## Euphoria: The Show That Made Her an Emmy Winner
 
-Starting with *Spider-Man: Homecoming*, Zendaya reinvented MJ as a dry, deadpan, quietly magnetic foil to Tom Holland's Peter Parker. Her role grew across *Far From Home* and *No Way Home*, where the central relationship became the emotional engine of the trilogy. If you're new to the wider universe, our guide to the [MCU movies in order](/movies/mcu-movies-in-order) is the cleanest way to slot her appearances into the timeline.
+If one title defines her, it's HBO's ***Euphoria*** (2019–present), where she plays **Rue Bennett**, a teenager navigating addiction. The role won her the Primetime Emmy for Outstanding Lead Actress in a Drama Series in **2020** — making her the youngest winner in that category — and again in **2022**, plus a Golden Globe. It remains the centerpiece of any *Euphoria and Challengers* conversation and a fixture on lists of the [best HBO shows](/tv/best-hbo-shows). She also produces. For more prestige TV in this lane, see our [best limited series to stream](/tv/best-limited-series-to-stream). Stream *Euphoria* on HBO Max.
 
-### Chani in *Dune*
+## Dune and Challengers: Movie-Star Mode
 
-In Denis Villeneuve's *Dune*, Zendaya plays Chani, a Fremen warrior. Her part is relatively small in the first film and expands dramatically in *Dune: Part Two*, where she becomes a central emotional and moral presence. The *Dune* films are essential viewing for fans of the genre, and they sit comfortably among the [best sci-fi movies streaming](/streaming/best-sci-fi-movies-streaming) right now.
+In 2021 she joined Denis Villeneuve's epic as **Chani**, the Fremen fighter at the heart of ***Dune*** and its acclaimed sequel ***Dune: Part Two*** (2024) — read our [Dune: Part Two review](/reviews/dune-part-two-review) and our ranking of [Denis Villeneuve movies](/movies/denis-villeneuve-movies-ranked). Then came her boldest swing: **Tashi Duncan**, the magnetic, ruthless former tennis prodigy in Luca Guadagnino's ***Challengers*** (2024), which she also produced. Together with the searing two-hander ***Malcolm & Marie*** (2021), these prove her range from blockbuster to art house. Her *Dune* work pairs naturally with co-star [Timothée Chalamet's best movies](/celebrity/timothee-chalamet-best-movies).
 
-## The performance that changed the conversation: *Challengers*
+## Zendaya Movies List In Order (Chronological Watch Path)
 
-If *Euphoria* proved her dramatic range, the 2024 tennis drama *Challengers* proved her star wattage. Playing Tashi, a former tennis prodigy turned coach caught in a love triangle, Zendaya carried a sharp, adult, charged film as both lead and producer. Directed by Luca Guadagnino, it was widely cited as a creative high point and a signal that she's steering her own career, not just appearing in other people's tentpoles. It pairs naturally with the kind of bold, filmmaker-driven work you'll find on our list of the [best A24 movies ranked](/movies/best-a24-movies-ranked).
+Want the **Zendaya movies list in order**? Watch it like this:
 
-## Where it all started: the Disney Channel years
+1. ***Shake It Up*** (2010, Disney+) — where it began
+2. ***Spider-Man: Homecoming*** (2017, Disney+) — MJ debut
+3. ***The Greatest Showman*** (2017, Disney+)
+4. ***Spider-Man: Far From Home*** (2019, Disney+)
+5. ***Euphoria***, Season 1 (2019, HBO Max)
+6. ***Malcolm & Marie*** (2021, Netflix)
+7. ***Dune*** (2021, HBO Max) — a [best sci-fi movie to stream](/streaming/best-sci-fi-movies-streaming)
+8. ***Spider-Man: No Way Home*** (2021)
+9. ***Euphoria***, Season 2 (2022, HBO Max)
+10. ***Dune: Part Two*** (2024, HBO Max)
+11. ***Challengers*** (2024) — then into 2026
 
-Before the awards, Zendaya was a Disney Channel mainstay. Two shows built her early fanbase:
+## Zendaya's Best Movies Ranked
 
-- ***Shake It Up*** (2010–2013): the dance-comedy series that introduced her opposite Bella Thorne.
-- ***K.C. Undercover*** (2015–2018): a spy comedy where she played the title role and earned a producer credit, an unusually savvy move for a teen star.
+For newcomers, here's the **best Zendaya movies ranked** by performance and impact:
 
-She also led the Disney Channel original movie *Zapped* (2014) and appeared in other early projects. These titles are family-friendly and generally stream on Disney+, making them an easy entry point for younger viewers.
+1. **Euphoria** — her dramatic peak; two Emmys
+2. **Dune: Part Two** — her finest blockbuster work as Chani
+3. **Challengers** — a magnetic, producer-driven lead turn
+4. **Spider-Man: Homecoming** — the breakout
+5. **Malcolm & Marie** — raw, intimate two-hander
+6. **The Greatest Showman** — her musical showcase
+7. **Spider-Man: No Way Home** — emotional MCU high point
 
-## *The Greatest Showman* and her musical side
+Streaming availability shifts by region, so confirm listings before movie night.
 
-Zendaya's other major mainstream breakout was *The Greatest Showman* (2017), the Hugh Jackman musical in which she played trapeze artist Anne Wheeler. Her duet "Rewrite the Stars" became one of the soundtrack's signature numbers and showcased the singing and movement skills she'd honed during her Disney days. It remains one of her most accessible films and a reliable crowd-pleaser.
+## Zendaya Upcoming Movies 2026: The Biggest Year of Her Career
 
-## Zendaya's essential roles, ranked
+Here's the headline. Her **Zendaya movies and TV shows 2026** slate is unmatched — five major releases in a single calendar year, after which she has signaled a break from acting:
 
-For newcomers, here's a quick priority order to understand her range:
+- ***The Drama*** (April) — a dark romance opposite **Robert Pattinson**, from Kristoffer Borgli
+- ***Euphoria*** Season 3 (April, HBO Max) — Rue returns for the likely final season
+- ***The Odyssey*** (July) — **Christopher Nolan's** epic, with Zendaya reportedly as Athena; see our [Christopher Nolan movies ranked](/movies/christopher-nolan-movies-ranked)
+- ***Spider-Man: Brand New Day*** (July) — back as MJ alongside **Tom Holland**
+- ***Dune: Part Three*** (December) — Chani in the trilogy's conclusion
 
-1. **Rue, *Euphoria*** — her defining dramatic work.
-2. **Tashi, *Challengers*** — her sharpest adult-lead showcase.
-3. **Chani, *Dune: Part Two*** — proof she can anchor epic-scale cinema.
-4. **MJ, *Spider-Man: No Way Home*** — the emotional core of the trilogy.
-5. **Anne, *The Greatest Showman*** — her most purely joyful, accessible turn.
+Two December tentpoles, a Nolan epic and a final *Euphoria* in one year is, simply, the biggest stretch any of her peers has attempted. (Dates can shift; check current listings.)
 
-If you like single-arc, prestige storytelling, *Euphoria* and *Challengers* both reward the same instincts that draw people to the [best limited series to stream](/tv/best-limited-series-to-stream).
+## The Bottom Line
 
-## Where to watch Zendaya's movies and TV shows
-
-Streaming homes shift by region and over time, but as a general map:
-
-- **Max:** *Euphoria*
-- **Disney+:** *Shake It Up*, *K.C. Undercover*, *Zapped*
-- **Streaming or digital rental (varies):** the *Dune* films, the *Spider-Man* films, *Challengers*, *The Greatest Showman*
-
-If a title isn't on your subscription service, it's usually available to rent or buy digitally. Always check your local listings, since licensing windows rotate frequently.
-
-## What's next for Zendaya
-
-Zendaya's upcoming slate is one of the busiest in Hollywood. She's set to reprise MJ in the next *Spider-Man* film and return as Chani in *Dune: Part Three*, plays Athena in Christopher Nolan's ensemble epic *The Odyssey*, and stars opposite Robert Pattinson in A24's *The Drama*. Working with Nolan puts her in rarefied company; our [Christopher Nolan movies ranked](/movies/christopher-nolan-movies-ranked) guide is a useful primer on the director's track record. Release dates can shift, so treat any specific timing as tentative.
-
-That mix — two franchises, an auteur epic, and an original feature — captures exactly why she's become one of the industry's most bankable and respected names at once.
-
-## The bottom line
-
-Zendaya's filmography is a near-perfect blueprint for a modern career: she banked goodwill on Disney Channel, earned critical respect with *Euphoria*, won mainstream scale through *Spider-Man* and *Dune*, and now uses films like *Challengers* to call her own shots. Start with *Euphoria*, chase it with *Challengers*, then dive into the blockbusters.
-
-With Nolan, more *Dune*, and more *Spider-Man* ahead, the next chapter may be her biggest yet — and the smart move is to catch up now before the wave hits.
+Zendaya's career rewards both casual fans and completists. Start with *Euphoria* for her dramatic peak, add *Challengers* and *Dune: Part Two* for her movie-star range, rewind to *Shake It Up* and *Spider-Man: Homecoming* for the origin, then clear your 2026 calendar — *The Drama*, *Euphoria* S3, *The Odyssey*, *Spider-Man: Brand New Day* and *Dune: Part Three* make it the single biggest year of her career. Few stars have traveled from Disney kid to Emmy-winning, billion-dollar lead this fast — or this completely.

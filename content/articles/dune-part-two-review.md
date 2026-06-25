@@ -1,104 +1,122 @@
 ---
-title: 'Dune: Part Two Review: Villeneuve''s Desert Epic Earns Its Prophecy'
+title: 'Dune: Part Two Review - Why Villeneuve''s Sequel Beats Part One'
 slug: dune-part-two-review
 category: reviews
 author: jordan-hale
-date: '2026-06-24T23:00:00.000Z'
+date: '2026-06-22T07:00:00.000Z'
 dek: >-
-  Denis Villeneuve completes his Arrakis saga with a blockbuster of staggering
-  scale and surprising moral severity. A rare sequel that improves on its
-  predecessor.
-metaTitle: 'Dune Part Two Review: An Epic Worth the Wait'
+  Denis Villeneuve's sequel is a darker, bigger, emotionally heavier chapter
+  that earns its near-three-hour runtime — and our spoiler-free verdict explains
+  exactly why it edges out the 2021 original, what the changed ending means, and
+  whether it sets up Dune Messiah.
+metaTitle: 'Dune: Part Two Review - Why It Beats Part One'
 metaDescription: >-
-  Our Dune Part Two review: Denis Villeneuve's 2024 sci-fi sequel is a towering,
-  morally complex epic. Is it worth watching? Here is our full verdict.
+  Our Dune: Part Two review: a 92% Rotten Tomatoes triumph that beats the first
+  film. Verdict, runtime, ending explained, and whether it sets up Dune Messiah.
 tags:
-  - Dune
+  - Dune Part Two
   - Denis Villeneuve
-  - science fiction
-  - Timothée Chalamet
+  - movie reviews
+  - Timothee Chalamet
   - Zendaya
-  - film review
-  - Warner Bros
-  - epic
-targetKeyword: dune part two review
+  - sci-fi movies
+  - Rotten Tomatoes
+targetKeyword: 'Dune: Part Two review'
 imageAlt: >-
-  A lone figure in a stillsuit stands before vast desert dunes on the planet
+  Timothee Chalamet as Paul Atreides rides a sandworm across the desert of
   Arrakis in Dune: Part Two
 imageCredit: The Screen Report
 faq:
   - q: 'Is Dune: Part Two worth watching?'
     a: >-
-      Yes. It is one of the most accomplished science-fiction films of the
-      decade, combining spectacular large-format visuals with a genuinely
-      thoughtful story. If you can see it on the biggest screen available, do
-      so. It works as a standalone spectacle but rewards viewers who have seen
-      the first film.
-  - q: 'What is Dune: Part Two about?'
+      Yes. It holds a 92% Rotten Tomatoes critics score with an 8.4/10 average
+      across 466-plus reviews, and it improves on the 2021 original in nearly
+      every way. If you can see it in IMAX or on the largest screen available,
+      do — the desert spectacle and Hans Zimmer's score are built for it. It is
+      one of the best sci-fi films of the 21st century and a genuine theatrical
+      event.
+  - q: 'Is Dune: Part Two better than the first movie?'
     a: >-
-      It continues the story of Paul Atreides as he joins the Fremen of the
-      desert planet Arrakis, grows close to the warrior Chani, and is drawn
-      toward a path of vengeance and prophecy that threatens to consume him. It
-      adapts the back half of Frank Herbert's 1965 novel Dune.
-  - q: Do I need to watch the first Dune before Part Two?
+      Most critics say yes, and so do we. Where Dune (2021) was largely setup
+      and table-setting, Part Two is all payoff: it has clearer stakes, a faster
+      pace, more emotional weight, and a true antagonist in Austin Butler's
+      Feyd-Rautha. The Rotten Tomatoes numbers reflect the jump — 92% for Part
+      Two versus 83% for the original, a nine-point climb.
+  - q: 'What is Dune: Part Two''s Rotten Tomatoes score?'
     a: >-
-      It is strongly recommended. Part Two picks up close to where 2021's Dune
-      left off and assumes you know the major characters and the political
-      setup. Newcomers can follow the broad strokes, but the emotional and
-      political stakes land far harder with the first film fresh in mind.
-  - q: 'Who directed Dune: Part Two and when did it release?'
+      Dune: Part Two holds a 92% Tomatometer score with an average rating of
+      8.4/10 from more than 466 critic reviews. The critics' consensus calls it
+      'visually thrilling and narratively epic.' By comparison, Dune (2021) sits
+      at 83% with a 7.7/10 average.
+  - q: 'How long is Dune: Part Two?'
     a: >-
-      Denis Villeneuve directed Dune: Part Two, which was released in theaters
-      in 2024. He also co-wrote the screenplay with Jon Spaihts and directed the
-      first installment, released in 2021.
-  - q: 'Where can I watch Dune: Part Two?'
+      The runtime is 166 minutes — 2 hours and 46 minutes. It is about 11
+      minutes longer than the 2021 original (155 minutes). It earns the length:
+      unlike many bloated blockbusters, Part Two uses its runtime to build
+      genuine stakes and rarely drags.
+  - q: >-
+      Does Dune: Part Two set up Dune Messiah, and how does the ending differ
+      from the book?
     a: >-
-      After its theatrical run, the film became available to rent or buy on
-      major digital platforms such as Apple TV and Prime Video, and later began
-      streaming on Max. Availability changes over time and varies by region, so
-      check your local streaming and rental options for the most current
-      details.
+      Yes. The ending is built to launch a third film based on Frank Herbert's
+      Dune Messiah. Villeneuve also changed Chani's arc from the novel: rather
+      than standing beside Paul, she rejects his ascension and rides off alone
+      on a sandworm, sharpening the film's critique of the white-savior myth and
+      Paul's turn into a darker messianic figure.
 featured: false
 ---
 
-## The Verdict Up Front
+**The verdict up front:** *Dune: Part Two* is the rare sequel that towers over its predecessor. Denis Villeneuve's second chapter is a darker, faster, more emotionally charged film than *Dune* (2021), and it earns its 2-hour-46-minute runtime by trading spectacle-for-spectacle's-sake for real stakes. The numbers back it up — this **Dune: Part Two review** lands on the same side as the critical consensus, which has pushed the film to a **92% Rotten Tomatoes score** (8.4/10 average across 466-plus reviews), a full nine points above the original's 83%. If you only see one blockbuster on the biggest screen you can find this year, make it this one.
 
-A sequel this confident, this expensive, and this uncompromising should not exist. Blockbusters are built to reassure; *Dune: Part Two* is built to unsettle. Denis Villeneuve's 2024 continuation of Frank Herbert's saga is a rare thing: a follow-up that dwarfs its predecessor in scale while sharpening its ideas to a razor's edge. If you came to this **Dune: Part Two review** wondering whether the second half justifies the long, deliberate setup of the first, the answer is an emphatic yes. This is event cinema that actually has something on its mind, and our verdict is simple: see it, and see it big.
+So **is Dune: Part Two good?** It is better than good. It is the "Empire Strikes Back" of this saga — the chapter where the world-building of the first film finally pays off in dread, romance, and moral rot.
 
-What it is, plainly: the conclusion of the story begun in [Dune (2021)](/movies/dune-2021), adapting the back half of Herbert's 1965 novel. What it does that so few of its peers manage is refuse to let you cheer. It hands you a hero's journey and then quietly turns it into a warning. For anyone who loves science fiction with weight, or simply wants to see what a reported $190-million canvas looks like in the hands of a real artist, this is essential.
+## Dune: Part Two Rotten Tomatoes score and critical consensus
 
-## The Story: A Prophecy and Its Price
+Let's settle the question people are searching first. As of this writing, the **Dune: Part Two Rotten Tomatoes score** sits at **92% from critics**, with an average rating of 8.4/10 over more than 466 reviews. The official consensus: "Visually thrilling and narratively epic, *Dune: Part Two* continues Denis Villeneuve's adaptation of the beloved sci-fi series in spectacular form."
 
-Picking up close to where the first film ended, *Part Two* follows Paul Atreides (Timothée Chalamet) as he and his mother, Lady Jessica (Rebecca Ferguson), take refuge among the Fremen, the desert-hardened people of the planet Arrakis. Paul wants vengeance against the Harkonnens who destroyed his house. He also wants to live among the Fremen as an equal, to learn their ways, to ride the colossal sandworms, and to grow close to Chani (Zendaya), a young Fremen warrior who is suspicious of the messianic role being projected onto him.
+For context, *Dune* (2021) holds 83% with a 7.7/10 average. That nine-point jump isn't noise — it reflects a film that solved the original's biggest problem. The first movie was beautiful but front-loaded with setup; this one is almost entirely consequence.
 
-That tension is the engine of the film. A prophecy, seeded generations ago by off-world manipulators, holds that an outsider will lead the Fremen to paradise. Some believe; Chani does not. Paul, gifted and cursed with visions of the future, can see where belief leads, and it terrifies him. To say more would spoil the film's most potent turns, but the broad shape is this: a story about how charisma becomes power, how grief curdles into holy war, and how a good man can choose a terrible thing for understandable reasons.
+## Is Dune: Part Two better than the first?
 
-## Direction and Craft: Scale With a Pulse
+Yes — and the reason is structural. *Dune* (2021) had to introduce Arrakis, the spice, the Fremen, House Atreides and House Harkonnen. It was a magnificent prologue that ended right as the story got interesting. *Dune: Part Two* inherits all that groundwork and spends every minute building on it.
 
-Villeneuve directs like someone who knows exactly how large he can go without losing the human scale, and then goes there anyway. The set pieces here are genuinely staggering. A nighttime raid lit only by explosions, a gladiatorial duel staged in stark black-and-white that drains the world of color, and a worm-riding sequence that finally delivers the awe the first film only promised: each is staged with a clarity that puts most modern action filmmaking to shame. You always know where you are, who wants what, and what it costs.
+Here's where Part Two pulls ahead of Part One:
 
-Greig Fraser's cinematography is the film's secret weapon, treating sunlight as a physical force and shadow as a place where things go wrong; that arena duel, shot using infrared to render the Harkonnen homeworld in eerie monochrome, is among the year's most striking images. Hans Zimmer's score does not so much accompany the images as fuse with them, a low-frequency liturgy of keening voices and percussion that you feel in your sternum. The sound design deserves its own paragraph; this is a film engineered for the largest format you can find. Crucially, Villeneuve never lets spectacle smother the storytelling. Every spectacular thing that happens advances the moral argument. That discipline is what separates this from the genre's louder, emptier competition, and it is what earns the picture a place beside the best of modern [epic science-fiction cinema](/reviews/blade-runner-2049-review).
+- **Stakes you can feel.** Paul Atreides (Timothée Chalamet) isn't a grieving heir anymore; he's a man being pulled toward a holy war he can see coming and fears he can't stop.
+- **A real villain.** Austin Butler's Feyd-Rautha is a genuine menace — pale, balletic, and terrifying — giving the film an antagonist the first lacked.
+- **Forward momentum.** Where the original simmered, this one accelerates.
+- **Emotional center.** Zendaya's Chani moves from the margins of dreams to the beating heart of the story.
 
-## Performances: Belief and Doubt
+If you loved the original's atmosphere, Part Two keeps it and adds a pulse.
 
-Chalamet carries the film through a difficult transformation, beginning as a wary refugee and ending as something harder and stranger. He makes Paul's slide toward zealotry feel like a series of reasonable choices, which is far more disturbing than any villainy. Zendaya, given vastly more to do than in the first film, gives *Part Two* its conscience; Chani's growing alarm functions as the audience's own, and the actor plays skepticism as a form of love.
+## A spoiler-free read on the cast
 
-Around them, the ensemble is uniformly strong. Rebecca Ferguson is quietly frightening as Jessica, whose maternal devotion takes on a fanatical edge. Javier Bardem brings welcome, dangerous humor as the true-believer Fremen leader Stilgar, often funny and never a joke. As the Harkonnen heir Feyd-Rautha, Austin Butler is a genuine discovery, a pale, hairless predator of pure appetite who threatens to walk away with every scene he is in. Florence Pugh, as the watchful Princess Irulan, plus Josh Brolin and a coldly imperial Christopher Walken, round out a cast that treats this pulp material with complete conviction.
+For the **spoiler-free** crowd still deciding whether to buy a ticket: the performances are the upgrade nobody's talking about enough. Chalamet plays Paul's slide from reluctant outsider to messianic leader with real unease — you watch the boy disappear. Zendaya, given far more to do here, anchors the film's conscience (see more of her range in our [Zendaya movies and TV shows](/celebrity/zendaya-movies-and-tv-shows) guide). Rebecca Ferguson's Lady Jessica becomes something genuinely sinister, and Javier Bardem's Stilgar provides the film's surprising streak of dark comedy as a true believer.
 
-## What Works
+Florence Pugh's Princess Irulan and Christopher Walken's Emperor expand the political board without slowing it. For more on the lead, our [Timothée Chalamet best movies](/celebrity/timothee-chalamet-best-movies) rundown shows why this is his most commanding work yet.
 
-Almost everything, and the most surprising triumph is tonal. Big franchise movies flatter their heroes; this one interrogates its own. Villeneuve and co-writer Jon Spaihts have made a blockbuster that is openly suspicious of the very chosen-one fantasy it is selling, and they trust the audience to sit with that discomfort rather than resolving it with a crowd-pleasing flourish. The result is a film that thrills you in the moment and then troubles you for days.
+## Dune: Part Two runtime — is it too long?
 
-It is also, frankly, beautiful in a way that demands the theatrical experience. The world-building is total. Arrakis feels lived-in, the Harkonnen homeworld feels like a nightmare rendered in grayscale, and the technology has the heavy, tactile reality that only meticulous design can buy. This is the rare tentpole that justifies its budget on screen, every dollar of it visible and purposeful.
+The **Dune: Part Two runtime is 166 minutes (2 hours and 46 minutes)**, roughly 11 minutes longer than the 2021 film. Is it too long? Almost never. Unlike the average bloated tentpole, Part Two uses its length to let tension build and relationships breathe. There's a stretch in the middle that lingers, but the payoff — including one of the great sandworm-riding sequences ever filmed — justifies it. This is a film that respects IMAX and rewards patience, the way the best [sci-fi movies of the 21st century](/movies/best-sci-fi-movies-21st-century) always have.
 
-## What Falls Short
+## Spectacle that actually means something
 
-It is not flawless. The film's pacing, while assured, is demanding; the middle stretch luxuriates in ritual and romance in ways that some viewers will find hypnotic and others slow. A few characters from the source material are compressed or sidelined, and one or two political threads feel pruned to keep the runtime in check. Newcomers who skipped the first film may find the opening half-hour a wall of names and factions.
+Visually, this is Villeneuve operating at the peak of his powers. The Harkonnen homeworld of Giedi Prime, shot under a black sun in infrared-style monochrome, is the single most striking sequence in either film. Hans Zimmer's score is overwhelming in the best way. But what separates Part Two from a hundred other handsome blockbusters is that the spectacle carries argument: every grand image is in service of a story questioning the very heroism it depicts. Fans of Villeneuve's precision should also read our [Denis Villeneuve movies ranked](/movies/denis-villeneuve-movies-ranked) list.
 
-And for all its moral seriousness, the film occasionally leans so hard into solemnity that you miss a little of the messy human warmth that might have made the tragedy hit even harder. These are quibbles against a genuine achievement, but they keep it a hair short of perfect. Readers who want a lighter counterweight after this one might enjoy our [more crowd-pleasing genre picks](/reviews/best-sci-fi-movies).
+## Dune: Part Two ending explained — and the Dune Messiah setup
 
-## The Final Word
+**Mild spoilers in this section.** Frank Herbert wrote *Dune* partly as a warning about charismatic leaders, and Villeneuve leans all the way into it. The film's back half watches Paul embrace the prophecy he once resisted, weaponizing the Fremen's faith. The **Dune: Part Two ending** diverges pointedly from the novel: Chani, who in the book remains at Paul's side, instead rejects his ascension here — refusing to bow and riding off alone on a sandworm as Paul ignites a galactic holy war.
 
-*Dune: Part Two* is the rare modern blockbuster that earns its grandeur. Villeneuve has delivered a spectacle of staggering technical command that doubles as a sober meditation on power, faith, and the seductions of vengeance. It is gorgeous, gripping, and quietly devastating, a film that gives you everything you wanted from a sci-fi epic and then asks whether you should have wanted it at all.
+That change isn't a betrayal of Herbert; it's a clarification. By making Chani the audience's skeptical conscience, Villeneuve foregrounds the white-savior critique that the source material buries in subtext. And the closing image is openly a setup: it points straight at **Dune Messiah**, the sequel novel and the basis for a planned third film. If you like dissecting how endings reframe everything, our [Oppenheimer ending explained](/movies/oppenheimer-ending-explained) breakdown is a natural follow-up.
 
-Score: 4.5 out of 5. See it on the biggest screen you can, with the best sound you can find, and let it overwhelm you. This is what the medium is for.
+## Do you need to watch Dune: Part One first?
+
+Yes. Part Two assumes you know who everyone is and what the spice means, and it does not pause to recap. Rewatch *Dune* (2021) before going — it's currently among the [best sci-fi movies streaming](/streaming/best-sci-fi-movies-streaming). For the broader picture of how this saga measures against other multi-film epics, see our [best movie trilogies](/movies/best-movie-trilogies) ranking.
+
+## The Dune Part Two review Reddit consensus
+
+If you've been scanning **Dune Part Two review Reddit** threads, the temperature is overwhelmingly positive — the loudest debates are about whether it tops *Blade Runner 2049* in Villeneuve's filmography and whether the Chani change improves on the book. The fan reaction tracks closely with the critical 92%, which is rare for a film this divisive in its politics.
+
+## The bottom line
+
+*Dune: Part Two* is a triumph — a sequel that deepens its predecessor instead of merely repeating it, fusing jaw-dropping IMAX spectacle with a story brave enough to interrogate its own hero. It is better than the 2021 original, it earns every minute of its 166-minute runtime, and its book-deviating ending sets the table beautifully for *Dune Messiah*. See it on the largest screen you can. **Verdict: 9.5/10 — an essential, era-defining piece of blockbuster filmmaking.**

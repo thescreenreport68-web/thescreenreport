@@ -1,118 +1,132 @@
 ---
-title: What Is the Highest-Grossing Movie of All Time?
+title: 'The Highest-Grossing Movie of All Time: Why Avatar Still Wins (2026)'
 slug: highest-grossing-movie-of-all-time
 category: movies
 author: jordan-hale
-date: '2026-06-19T15:00:00.000Z'
+date: '2026-06-23T15:00:00.000Z'
 dek: >-
-  James Cameron's Avatar still reigns as the highest-grossing movie of all time
-  on an unadjusted basis. Here's the ranking, why it holds, and what could
-  topple it.
-metaTitle: 'Highest Grossing Movie of All Time: Avatar Reigns'
+  Avatar sits at the top with roughly $2.92 billion worldwide — but it lost the
+  crown once, and the movie that has truly earned the most money isn't on the
+  modern list at all.
+metaTitle: 'Highest-Grossing Movie of All Time: Avatar''s $2.92B (2026)'
 metaDescription: >-
-  The highest grossing movie of all time is James Cameron's Avatar. See the top
-  unadjusted box office ranking and what could dethrone it.
+  The highest-grossing movie of all time is Avatar at ~$2.92B worldwide. See the
+  2026 top 10, why it lost to Endgame, and the inflation truth most lists hide.
 tags:
-  - box office
-  - Avatar
-  - James Cameron
-  - Avengers Endgame
-  - Titanic
   - highest grossing movies
-  - movie records
+  - Avatar
+  - box office
+  - Avengers Endgame
+  - Gone with the Wind
+  - James Cameron
+  - film records
 targetKeyword: highest grossing movie of all time
 imageAlt: >-
-  Stylized box-office trophy graphic representing the highest-grossing movie of
-  all time
+  Avatar's bioluminescent world of Pandora, the highest-grossing movie of all
+  time at roughly $2.92 billion worldwide
 imageCredit: The Screen Report
 faq:
-  - q: What is the highest-grossing movie of all time?
+  - q: What is the highest grossing movie of all time?
     a: >-
-      James Cameron's Avatar (2009) is the highest-grossing movie of all time at
-      the worldwide box office on an unadjusted basis, with a global total of
-      roughly $2.9 billion across its original run and re-releases.
-  - q: 'Is Avengers: Endgame the highest-grossing movie ever?'
+      Avatar (2009), directed by James Cameron, is the highest-grossing movie of
+      all time with roughly $2.92 billion (about $2,923,710,708) in worldwide
+      box office, not adjusted for inflation. It has held the top spot for most
+      of the time since its 2009 release.
+  - q: Is Avatar still the highest grossing movie of all time?
     a: >-
-      No. Avengers: Endgame briefly held the record after its 2019 release, but
-      a March 2021 re-release of Avatar in China reclaimed the top spot. Endgame
-      now ranks second worldwide.
-  - q: What is the highest-grossing movie adjusted for inflation?
+      Yes. As of 2026, Avatar remains #1 worldwide at about $2.92 billion. It
+      briefly lost the title to Avengers: Endgame in 2019, then reclaimed it in
+      March 2021 after a theatrical re-release in China pushed its total back
+      ahead.
+  - q: How much money did Avatar make at the box office?
     a: >-
-      Adjusted for ticket-price inflation, 1939's Gone with the Wind is widely
-      regarded as the highest-grossing film ever, well ahead of modern
-      blockbusters.
-  - q: How many movies have made over $2 billion worldwide?
+      Avatar has grossed approximately $2.92 billion worldwide across its
+      original 2009 run and later re-releases — roughly $2,923,710,708. Avatar:
+      The Way of Water added another $2.33 billion, making the franchise itself
+      one of the most lucrative in film history.
+  - q: What is the highest grossing movie of all time adjusted for inflation?
     a: >-
-      Only a handful of films have crossed $2 billion worldwide. The group
-      includes Avatar, Avengers: Endgame, Avatar: The Way of Water, and Titanic,
-      among a small number of other recent blockbusters.
-  - q: Could a movie ever beat Avatar?
+      Gone with the Wind (1939) is the highest-grossing movie of all time
+      adjusted for inflation, with an estimated $4.5 billion or more in today's
+      dollars. Its 1939 ticket prices were a fraction of modern ones, so its
+      enormous attendance translates to a far higher inflation-adjusted total
+      than Avatar.
+  - q: 'Did Avengers: Endgame beat Avatar at the box office?'
     a: >-
-      It's possible. Future Avatar sequels, a major Marvel or Star Wars event
-      film, or a global animation phenomenon could challenge the record, but no
-      release has permanently dethroned Avatar yet.
+      Yes, temporarily. Avengers: Endgame overtook Avatar in July 2019 to become
+      the highest-grossing film worldwide. Avatar reclaimed the crown in March
+      2021 thanks to a China re-release. Endgame finished at about $2.8 billion,
+      just behind Avatar's $2.92 billion.
 featured: false
 ---
 
-The highest-grossing movie of all time is **James Cameron's _Avatar_ (2009)**, which sits atop the worldwide box-office chart on an unadjusted basis with a global total of roughly $2.9 billion. The visual-effects landmark about humans and the blue-skinned Na'vi on the moon Pandora got there through an extraordinarily long original run, multiple re-releases, and Cameron's knack for turning theaters into must-see destinations.
+The highest-grossing movie of all time is **Avatar** (2009), James Cameron's sci-fi epic, with roughly **$2.92 billion** in worldwide box office — about $2,923,710,708 as tracked by Box Office Mojo. That figure is not adjusted for inflation, and as of 2026 it still sits at the very top. So if you came here for the plain answer to *what is the highest grossing movie of all time*, that's it: a blue-skinned, motion-captured adventure on the moon Pandora that nobody expected to dethrone *Titanic* — Cameron's own previous record-holder.
 
-That answer comes with one important asterisk. "Highest-grossing" almost always means raw, unadjusted dollars. Once you account for inflation and decades of ticket-price increases, the picture changes dramatically. But by the metric the industry quotes most, _Avatar_ is the champion, and it has been remarkably hard to dethrone.
+But the honest answer comes with a twist that most lists bury. Avatar is #1, yet it *lost* the title once. And the movie that has truly earned the most money in history isn't anywhere near the modern top 10. Let's settle all three things readers really want: the nominal #1, the Avatar-vs-Endgame rivalry, and the inflation truth.
 
-## Why Avatar Holds the Crown
+## Is Avatar the highest-grossing movie of all time?
 
-_Avatar_ didn't just open big; it refused to leave. The film played in theaters for months across 2009 and 2010, riding 3D premium pricing and word of mouth at a time when the format felt genuinely new. Cameron then re-released it strategically, including a 2021 reissue in China that pushed its total back to No. 1.
+Yes — but with an asterisk worth knowing. Avatar held the crown from 2010 until July 2019, when **Avengers: Endgame** finally overtook it. For a few months, the Marvel Cinematic Universe finale was the biggest movie ever made.
 
-That reissue mattered. After _Avengers: Endgame_ overtook _Avatar_ in 2019, the March 2021 China re-release nudged Cameron's film back ahead by a razor-thin margin. It's a reminder that box-office records aren't frozen; a well-timed reissue can rewrite the leaderboard without a single new viewer discovering the movie for the first time.
+Then Disney re-released Avatar in China in March 2021. The reissue added just enough — a few million dollars over a single weekend — to nudge Avatar's worldwide total back past Endgame. Avatar reclaimed the title at roughly $2.802 billion versus Endgame's $2.797 billion, a margin thinner than a single big opening day. Cameron's film has since extended that lead through additional re-releases, especially around the 2022 launch of the sequel.
 
-## The Top Highest-Grossing Movies of All Time
+This is why the phrase *highest grossing movie of all time without re-releases* matters to some fans. If you count only original theatrical runs, the Avatar-vs-Endgame gap narrows dramatically — which is exactly why the rivalry refuses to die.
 
-Here's the worldwide unadjusted ranking of the biggest English-language releases, with the usual caveat that totals shift as re-releases and reporting are finalized:
+## How much did Avatar gross worldwide?
 
-1. **Avatar** (2009) - James Cameron
-2. **Avengers: Endgame** (2019) - Marvel Studios
-3. **Avatar: The Way of Water** (2022) - James Cameron
-4. **Titanic** (1997) - James Cameron
-5. **Star Wars: The Force Awakens** (2015) - Lucasfilm
-6. **Avengers: Infinity War** (2018) - Marvel Studios
-7. **Spider-Man: No Way Home** (2021) - Sony/Marvel
-8. **Jurassic World** (2015) - Universal
-9. **The Lion King** (2019) - Disney
-10. **The Avengers** (2012) - Marvel Studios
+Avatar has earned approximately **$2.92 billion worldwide**, combining its original 2009 release with multiple re-releases. Domestically it pulled in over $785 million; internationally it dominated, with China a major contributor across reissues.
 
-A note on the full worldwide picture: a small number of international hits, such as China's animated _Ne Zha 2_, now rank among the all-time global leaders too. The list above focuses on Hollywood and English-language releases.
+For context, here's how staggering that is: when Avatar opened, no film in history had crossed $2 billion. Today, seven have — and Cameron directed three of them.
 
-## Two Patterns Worth Noticing
+## Top 10 highest-grossing movies of all time (worldwide)
 
-Two things jump out from that ranking. First, James Cameron occupies three of the top four slots, an astonishing run for one filmmaker. Second, Marvel's [interconnected saga](/movies/mcu-movies-in-order) is the engine of the modern box office, placing multiple _Avengers_ entries near the summit.
+Here are the **top 10 highest grossing movies of all time** by nominal worldwide gross, the figures that update with every new release and re-release:
 
-That combination tells the story of the last 15 years at the multiplex: a handful of franchises and one singular director account for most of the biggest numbers ever recorded. Original, non-franchise films almost never crack the upper reaches of this chart anymore, which is part of why _Avatar_'s reign feels so durable.
+| Rank | Film (Year) | Worldwide Gross |
+|------|-------------|-----------------|
+| 1 | Avatar (2009) | ~$2.92B |
+| 2 | Avengers: Endgame (2019) | ~$2.80B |
+| 3 | Avatar: The Way of Water (2022) | ~$2.33B |
+| 4 | Titanic (1997) | ~$2.26B |
+| 5 | Ne Zha 2 (2025) | ~$2.22B |
+| 6 | Star Wars: The Force Awakens (2015) | ~$2.07B |
+| 7 | Avengers: Infinity War (2018) | ~$2.05B |
+| 8 | Spider-Man: No Way Home (2021) | ~$1.92B |
+| 9 | Zootopia 2 (2025) | ~$1.87B |
+| 10 | Inside Out 2 (2024) | ~$1.70B |
 
-## The Cameron Effect
+A few things jump out. James Cameron directed three of the top four (Avatar, Titanic, The Way of Water). The MCU placed three films in the top seven. And the list now includes **Ne Zha 2**, a Chinese animated blockbuster that proves the global box office is no longer a Hollywood-only race.
 
-No director has bent the box office to his will like James Cameron. _Titanic_ held the all-time worldwide record for more than a decade until his own _Avatar_ broke it, an almost unheard-of feat of self-succession. Both films share a formula: enormous technical ambition, a sweeping emotional core, and a runtime that audiences happily returned to see again.
+## How many movies have grossed over $2 billion?
 
-Cameron's edge isn't just spectacle, it's repeat viewing. _Titanic_ and _Avatar_ both became cultural events that people saw multiple times, often dragging friends along. That theatrical stickiness, increasingly rare in a streaming-first era, is exactly what separates a $1 billion hit from a near-$3 billion phenomenon.
+Exactly **seven films** have crossed the $2 billion mark worldwide: Avatar, Avengers: Endgame, Avatar: The Way of Water, Titanic, Ne Zha 2, Star Wars: The Force Awakens, and Avengers: Infinity War. It's the most exclusive club in cinema — rarer than a Best Picture sweep.
 
-## Adjusted for Inflation, the Story Changes
+The $2 billion club only opened in 2019. Before that, Avatar stood alone above $2 billion for nearly a decade. If you want to trace how the modern blockbuster machine got here, our guide to the [MCU movies in order](/movies/mcu-movies-in-order) maps the franchise that produced four of these record-breakers.
 
-If you adjust for ticket-price inflation, the leaderboard looks nothing like the one above. By that measure, 1939's _Gone with the Wind_ is widely regarded as the highest-grossing film ever, having sold an enormous number of tickets when seats cost a fraction of today's prices. Older epics like _Star Wars_ (1977), _The Sound of Music_, and _E.T. the Extra-Terrestrial_ also leap up the chart.
+## The highest-grossing movie of all time adjusted for inflation
 
-The takeaway: modern blockbusters win on dollars, but classics win on tickets sold. A ticket in 1939 cost cents, not the $12 to $20 of a 2020s multiplex, so _Gone with the Wind_'s real-world reach dwarfs almost everything since. Both rankings are valid; they just measure different things.
+Now the part that flips the whole list on its head. Adjusted for inflation, the highest-grossing movie of all time is **Gone with the Wind** (1939) — and it isn't close.
 
-## Where Recent Blockbusters Fit In
+The Civil War epic earned its money when a movie ticket cost a small fraction of today's prices, so its colossal *attendance* translates to an estimated **$4.5 billion or more** in 2025 dollars. That dwarfs Avatar's $2.92 billion nominal total. By inflation-adjusted reckoning, Gone with the Wind has been the most successful film for over 80 years, with only Cameron's films and a handful of classics like *Star Wars* (1977) anywhere near it.
 
-The 2020s have reshaped the chart quickly. _Spider-Man: No Way Home_ proved audiences would still flood theaters for the right event, while _Avatar: The Way of Water_ vaulted into the top three, confirming Cameron's franchise wasn't a fluke. Animation has surged too, with global hits showing that family films can rival superhero tentpoles dollar for dollar.
+So the real answer depends on the question. *Highest grossing movie of all time not adjusted for inflation*? Avatar. **Adjusted for inflation?** Gone with the Wind. Both are correct — they're just measuring different things. Modern box office charts almost always mean nominal dollars, which is why Avatar gets the headline.
 
-It's worth noting that the worldwide chart is increasingly global in the literal sense. China and other international markets now drive a large share of these totals, which is why a film can underperform in North America yet still rank among the all-time leaders. If you're chasing the biggest spectacles at home, our roundup of the [best sci-fi movies streaming](/streaming/best-sci-fi-movies-streaming) is a good next stop.
+## Avatar vs. Avengers: Endgame — the rivalry that won't end
 
-## What Could Finally Beat Avatar?
+The *Avatar vs Avengers Endgame box office* debate is really a debate about how you keep score. Endgame earned its $2.8 billion in a single, explosive theatrical run in 2019, with no significant re-releases. Avatar's $2.92 billion is built across more than a decade and several reissues.
 
-A few contenders loom. Cameron has more _Avatar_ sequels planned, and if any matches _The Way of Water_, the franchise could extend its own dominance. A blockbuster team-up on the scale of _Endgame_, a generational _Star Wars_ revival, or a breakout from a director with massive theatrical pull, the kind of event-movie ambition you see in [Christopher Nolan's filmography](/movies/christopher-nolan-movies-ranked), could also make a run.
+Ask "which film made more money in one continuous release?" and Endgame has a strong case. Ask "which film has the highest total gross on the books today?" and it's Avatar. The Russo brothers themselves conceded the crown gracefully when Avatar retook it in 2021. For more on how the MCU built toward that 2019 peak, see our take on [the best sci-fi movies streaming](/streaming/best-sci-fi-movies-streaming) and Christopher Nolan's place among modern auteurs in [Christopher Nolan movies ranked](/movies/christopher-nolan-movies-ranked).
 
-But beating _Avatar_ requires more than a strong opening weekend. It demands months of legs, premium-format pricing, and global reach, plus the kind of repeat-viewing fever Cameron reliably manufactures. Nolan's _Oppenheimer_ showed that even a serious, talky drama can become a worldwide event, as our [Oppenheimer ending explained](/movies/oppenheimer-ending-explained) breakdown digs into, but a near-$3 billion total is a different stratosphere entirely.
+## The highest-grossing film franchise of all time
 
-## The Bottom Line
+One movie can only earn so much — a franchise has no ceiling. The **highest-grossing film franchise of all time** is the **Marvel Cinematic Universe**, which has amassed over **$32 billion** across nearly 40 films. No single picture comes close, and the MCU also boasts the most billion-dollar individual movies of any series.
 
-The highest-grossing movie of all time is _Avatar_, with _Avengers: Endgame_ and _Avatar: The Way of Water_ rounding out the top three, and James Cameron's fingerprints all over the leaderboard. Adjust for inflation and _Gone with the Wind_ takes the crown, a reminder that "biggest" depends entirely on how you count.
+Behind it sit Star Wars, the Wizarding World of Harry Potter, and James Bond — the pillars of franchise filmmaking. If you're chasing the next record-setters, our [Denis Villeneuve movies ranked](/movies/denis-villeneuve-movies-ranked) covers the director whose *Dune* saga is reshaping the modern sci-fi blockbuster.
 
-For now, Pandora rules. The real question is whether Cameron's next visit there, or some unforeseen global juggernaut, finally pushes _Avatar_ off the perch it has guarded for more than 15 years. Box-office history says betting against James Cameron is a bad idea.
+## Why these numbers keep changing
+
+Box office records are evergreen questions with volatile answers. Totals shift with re-releases, currency fluctuations, and new tentpoles. Avatar could be passed tomorrow by a sequel or a surprise phenomenon — and a future James Cameron re-release could just as easily widen its lead. The figures here reflect the standings as of 2026; the order of the top 10 is essentially settled at the top, but the lower rungs turn over every blockbuster season.
+
+## The bottom line
+
+The highest-grossing movie of all time is **Avatar** at roughly **$2.92 billion** worldwide — the nominal, not-adjusted-for-inflation #1, a title it briefly surrendered to Avengers: Endgame in 2019 before reclaiming it in 2021. Endgame ($2.8B) remains the closest challenger and arguably the bigger single-run earner. And once you adjust for inflation, the true money king is **Gone with the Wind** at an estimated $4.5 billion-plus. Three different answers, all correct — it just depends on whether you're counting dollars, eras, or one continuous run at the multiplex.

@@ -1,113 +1,116 @@
 ---
-title: >-
-  Everything Everywhere All at Once Review: A Maximalist Marvel With a Beating
-  Heart
+title: 'Everything Everywhere All at Once Review: A Messy Masterpiece Worth the Hype'
 slug: everything-everywhere-all-at-once-review
 category: reviews
 author: jordan-hale
-date: '2026-06-24T07:00:00.000Z'
+date: '2026-06-21T15:00:00.000Z'
 dek: >-
-  The Daniels' multiverse epic is loud, strange, and overstuffed by design — yet
-  beneath the hot dog fingers and googly eyes lives one of the most tender
-  family stories of its decade.
-metaTitle: 'Everything Everywhere All at Once Review: Maximalist Marvel'
+  Daniels' multiverse epic is a sensory assault that hides a plain
+  mother-daughter story underneath the hot-dog fingers. Here's the honest,
+  mostly spoiler-free verdict.
+metaTitle: 'Everything Everywhere All at Once Review: Worth the Hype?'
 metaDescription: >-
-  Our Everything Everywhere All at Once review weighs the Daniels' chaotic
-  multiverse epic, Michelle Yeoh's standout turn, and whether the spectacle
-  holds up.
+  Our Everything Everywhere All at Once review: a 7-Oscar winner some call
+  overrated. Here's the honest verdict, the RT score, and whether it's worth
+  watching.
 tags:
   - Everything Everywhere All at Once
   - Michelle Yeoh
-  - Daniels
   - A24
+  - movie reviews
+  - Daniels
   - multiverse movies
-  - film review
+  - Oscars
   - Ke Huy Quan
-  - science fiction
-targetKeyword: everything everywhere all at once review
+targetKeyword: Everything Everywhere All at Once review
 imageAlt: >-
-  Michelle Yeoh as Evelyn Wang stares across fracturing parallel universes in
+  Michelle Yeoh as Evelyn Wang mid-leap in a multiverse fight sequence from
   Everything Everywhere All at Once
 imageCredit: The Screen Report
 faq:
   - q: Is Everything Everywhere All at Once worth watching?
     a: >-
-      Yes. If you have any appetite for ambitious, emotionally sincere science
-      fiction, it is essential. The film is loud and deliberately overwhelming
-      in its first hour, but it pays that chaos off with a genuinely moving
-      finale. Viewers who prefer restrained, naturalistic drama may find the
-      maximalism exhausting, but even skeptics tend to be won over by Michelle
-      Yeoh's central performance.
-  - q: What is Everything Everywhere All at Once about?
+      For most viewers, yes. It is one of the rare films with a 93% critics and
+      96% audience Rotten Tomatoes score, and it won 7 Oscars including Best
+      Picture. The first 30 minutes are deliberately chaotic and overwhelming,
+      so it asks for patience. But if you stay with it, the back half lands as a
+      genuinely moving mother-daughter story. Skip it only if relentless visual
+      maximalism and absurdist comedy are hard no's for you.
+  - q: What is Everything Everywhere All at Once actually about?
     a: >-
-      It follows Evelyn Wang, a middle-aged Chinese American laundromat owner
-      buried under a tax audit, a strained marriage, and a fracturing
-      relationship with her daughter. When she discovers she can access the
-      skills and memories of her parallel-universe selves, she is pulled into a
-      multiverse-spanning conflict that doubles as a story about regret, family,
-      and finding meaning in an indifferent cosmos.
-  - q: Who directed Everything Everywhere All at Once?
+      On the surface it is about Evelyn Wang, a stressed Chinese-American
+      laundromat owner being audited by the IRS, who learns she can access the
+      skills and memories of her alternate selves across the multiverse.
+      Underneath the googly eyes and hot-dog fingers, it is a plain story about
+      an immigrant mother trying to reconnect with her daughter, and about
+      choosing kindness and love over nihilism.
+  - q: What does the ending of Everything Everywhere All at Once mean?
     a: >-
-      It was written and directed by Daniel Kwan and Daniel Scheinert, the
-      filmmaking duo known collectively as 'the Daniels.' The film was released
-      in 2022 and distributed by A24.
-  - q: How long is Everything Everywhere All at Once?
+      The villain Jobu Tupaki has built an 'Everything Bagel' that represents
+      nihilism: if nothing matters, you might as well let it all collapse into
+      nothing. Evelyn's answer is the opposite. Because nothing matters, she
+      chooses to be kind anyway and to fight for the people she loves. The
+      ending is her choosing connection over despair, and choosing her daughter
+      Joy over the void.
+  - q: How many Oscars did Everything Everywhere All at Once win?
     a: >-
-      The film runs about 139 minutes, or roughly two hours and twenty minutes.
-      The pace is intense and densely cut in the first act and gradually slows
-      as the story deepens, so the back half feels noticeably calmer than the
-      frenetic opening stretch.
-  - q: Is Everything Everywhere All at Once appropriate for kids?
+      It won 7 Academy Awards at the 95th Oscars in 2023 from 11 nominations:
+      Best Picture, Best Director (Daniels), Best Actress (Michelle Yeoh), Best
+      Supporting Actor (Ke Huy Quan), Best Supporting Actress (Jamie Lee
+      Curtis), Best Original Screenplay, and Best Film Editing.
+  - q: Is Everything Everywhere All at Once in English or Chinese?
     a: >-
-      It carries an R rating in the United States for some violence, sexual
-      material, and language. The tone is frequently absurd and cartoonish, but
-      the action and a few crude gags push it firmly into older-teen-and-up
-      territory rather than family viewing.
+      Both. The dialogue moves fluidly between English, Mandarin, and Cantonese,
+      often within the same scene, which mirrors how a real multigenerational
+      immigrant family talks. It is rated R, mainly for language and some
+      violence, with a runtime of about 2 hours 19 minutes.
 featured: false
 ---
 
-If you only have a paragraph, here is the verdict: **Everything Everywhere All at Once** is a maximalist science-fiction comedy that hides a tender, almost old-fashioned family drama inside a costume of hot dog fingers, kung fu, and interdimensional bagels. It is overstuffed, exhausting, and occasionally too pleased with its own anarchy — and it is also one of the most emotionally generous films of its decade. It earns every bit of its chaos. The Screen Report verdict lands at **4.5 / 5**.
+**The verdict up top:** *Everything Everywhere All at Once* is worth watching, and it mostly earns the hype — but only if you go in knowing the first half-hour is *designed* to overwhelm you. This is Daniels' (Daniel Kwan and Daniel Scheinert) genre-blender about an immigrant mom, hot-dog fingers, and a universe-destroying bagel, anchored by a career-best Michelle Yeoh. If you can ride out the chaos, the payoff is one of the most emotionally direct films of the decade. If pure sensory maximalism makes you tired just reading that sentence, this honest *Everything Everywhere All at Once review* will tell you exactly why — and whether you're in the crowd that should skip it.
 
-This Everything Everywhere All at Once review will not pretend the movie is flawless. It is for viewers who can surrender to mayhem and trust that the filmmakers know where they are going. If you need your movies tidy, sit this one out. If you want to be wrung out and rebuilt by the final act, you have found your film.
+So let's be blunt about the divide, because the search data reveals it plainly: this is the rare 11-time Oscar nominee and 7-time winner that a vocal slice of viewers calls exhausting and overrated. Both reactions are correct. It is a masterpiece *and* it is a lot.
 
-## The Scene That Explains Everything
+## Is Everything Everywhere All at Once worth watching?
 
-There is a moment, somewhere in the dizzying middle stretch, when two rocks sit silently on a cliff at the edge of a barren universe, conversing in subtitles. No people, no spoken dialogue, no music. It should not work. To my eyes, it is one of the most quietly devastating sequences in recent American cinema. That tension — between the gleefully ridiculous and the genuinely profound — is the whole engine of the film, and it is why, several years on, the Daniels' 2022 multiverse epic still feels like a singular achievement.
+For roughly 90% of viewers, yes. The reason it works is that the absurdity is not random — it's a delivery system. Under the googly eyes, the everything bagel, and the universe where people have floppy hot-dog fingers, there is a startlingly plain story: a tired immigrant mother trying to reach her adult daughter before it's too late. The thesis the film keeps circling — "nothing matters, so be kind" — is the most sincere idea in any recent blockbuster.
 
-## What Everything Everywhere All at Once Is Actually About
+You should skip it only if relentless visual noise and absurdist humor are genuine deal-breakers for you. There is no shame in that. This movie does not modulate; it floods.
 
-Beneath the cosmic noise, the premise is mundane in the best way. Evelyn Wang, played by Michelle Yeoh, runs a struggling laundromat with her gentle, exasperating husband Waymond (Ke Huy Quan). She is mid-audit with the IRS, mid-argument with her adult daughter Joy (Stephanie Hsu), and mid-disappointment with the life she chose when she immigrated decades ago. She is, in other words, a woman drowning in the smallness of her existence.
+## What is Everything Everywhere All at Once about?
 
-Then the multiverse arrives. Evelyn learns she can tap into the skills, memories, and selves of countless parallel versions of herself — a movie star, a martial artist, a chef — by performing increasingly absurd actions to "verse-jump." A reality-shattering threat looms, embodied by a being who has experienced every universe at once and concluded that nothing matters. The action is wild and the rules are deliberately slippery, but the spine is simple: a mother and daughter trying to reach each other across an unbridgeable distance.
+Here's the no-coy-teasing version. Evelyn Wang (Yeoh) runs a struggling laundromat, is being audited by a brutal IRS agent (Jamie Lee Curtis), is drifting from her sweet husband Waymond (Ke Huy Quan), and is failing to understand her daughter Joy (Stephanie Hsu). Then she learns she can "verse-jump" — borrowing the skills, memories, and bodies of her alternate selves across the multiverse — to stop a chaotic villain, Jobu Tupaki, from destroying everything.
 
-## Direction and Craft: Controlled Anarchy
+That's the spoiler-light premise. The deeper subject is generational trauma: an immigrant woman who gave up a thousand better lives, and the daughter who feels unseen by her. The multiverse is just the metaphor turned up to eleven.
 
-Daniel Kwan and Daniel Scheinert — the writer-directors known as the Daniels — built their reputation on music videos and the gonzo Sundance oddity *Swiss Army Man*, and you can feel that lineage here. What is remarkable is the discipline underneath the lunacy. The editing, by Paul Rogers, is the film's true special effect: it whips between realities at a tempo that should be incoherent but instead becomes its own emotional grammar. By the second hour, the cutting slows and deepens, and you realize the early sensory assault was setting you up for the stillness to land harder.
+## Michelle Yeoh's performance is the whole movie
 
-The craft is resourceful rather than lavish. This is not a movie chasing photorealistic, big-budget spectacle; it conjures its universes through costume, choreography, sound design, and sheer compositional wit. Some seams show, and that visible scrappiness is part of the charm — it feels handmade in an era of frictionless digital gloss. The action sequences, staged with real physical comedy in mind, owe an obvious and affectionate debt to Hong Kong cinema and to silent-era slapstick. If you enjoyed the kinetic invention of our [best multiverse movies ranked](/movies/best-multiverse-movies), this is the apex of the form.
+Strip away the effects and *Everything Everywhere All at Once* lives or dies on Michelle Yeoh's performance, and it lives gloriously. She plays Evelyn as exhausted, prickly, dismissive — and then, across dozens of parallel lives, as a movie star, a chef, a fighter, and finally as a mother who decides to stay. It's a full-spectrum role, and her Best Actress win was the rare case where the Oscar felt *under*-stated.
 
-## Performances: Michelle Yeoh, Finally Centered
+She's not alone. Ke Huy Quan's comeback — three decades after *The Goonies* and *Indiana Jones and the Temple of Doom* — is the film's beating heart; his "be kind" monologue is the emotional thesis statement. Curtis and the great James Hong round out a cast that never lets the spectacle smother the people.
 
-For all its formal daring, the film lives or dies on its cast, and the cast is extraordinary. Michelle Yeoh has been a global star for decades, but she has rarely been handed a role this complete. She plays Evelyn as petty, frightened, brilliant, and brave — sometimes within a single cut — and she sells every register without strain. It is a movie star reminding you, scene by scene, exactly why she became one.
+## The Everything Everywhere All at Once Rotten Tomatoes score
 
-Ke Huy Quan's performance as Waymond is, to my mind, the film's secret weapon and a genuinely stirring return to the screen. He makes kindness feel like a radical philosophy rather than a weakness, and his speech about fighting through softness is the thematic key to the entire picture. Stephanie Hsu, in a breakout turn, has the hardest job — she must be both a glittering nihilist antagonist and a hurting daughter — and she threads it beautifully. Jamie Lee Curtis, gloriously unglamorous as a sad-sack auditor, rounds out an ensemble in which not a single performer is coasting.
+The numbers back up the love. The *Everything Everywhere All at Once* Rotten Tomatoes score sits at **93% from critics and 96% from audiences** — a near-unheard-of consensus between professional reviewers and the general public. At the 95th Academy Awards in 2023 it won **7 Oscars from 11 nominations**, including Best Picture, Best Director, Best Actress, both Supporting acting awards, Original Screenplay, and Editing.
 
-## What Works
+If you want context for how dominant that haul is, browse our [best A24 movies ranked](/movies/best-a24-movies-ranked) — this is the studio's crown jewel — and our [best sci-fi movies of the 21st century](/movies/best-sci-fi-movies-21st-century) for where it lands in the genre.
 
-What works is the audacity of the bet. The Daniels gamble that an audience drowned in absurdity for an hour will be defenseless when sincerity finally arrives, and the gamble pays off. The film's philosophy — that in a meaningless universe, choosing kindness and choosing each other is the only meaning available — could read as a needlepoint pillow. Instead it lands like a gut punch, because the movie earns it through sheer accumulated emotional labor.
+## Everything Everywhere All at Once: ending explained (mild spoilers)
 
-It also works as a specific, lived-in portrait of an immigrant family and the particular ache of intergenerational silence. The multiverse here is not a franchise sandbox; it is a metaphor for regret, for every life Evelyn could have lived and didn't. That specificity is what elevates it above the glut of universe-hopping spectacle. For more in that register, see our take on [A24's defining decade](/reviews/a24-defining-films).
+Skip this section if you want zero plot details. Here's the short version of the *Everything Everywhere All at Once* ending explained: Jobu Tupaki builds an "Everything Bagel," a black hole of pure nihilism — if nothing matters, let it all collapse. Evelyn's counter-argument *is* the movie. Because nothing matters, she chooses to be kind anyway, to fight for her family, and to refuse the void. The bagel is despair; her answer is connection. It's a thesis as simple and as hard to live by as any in film. For a different flavor of "what does the ending mean," compare it to our [Oppenheimer ending explained](/movies/oppenheimer-ending-explained).
 
-## What Falls Short
+## Is Everything Everywhere All at Once overrated? The Reddit debate
 
-It is not perfect, and pretending otherwise does the film a disservice. The first act is genuinely punishing — a wall of exposition and frenetic cutting that risks alienating viewers before the emotional hooks set in. Some of the absurdist gags overstay their welcome, and the runtime starts to feel its length in the back half, when the film occasionally repeats its own emotional beats rather than building new ones.
+If you've scanned the *Everything Everywhere All at Once* review threads on Reddit, you've seen the backlash: too long, too loud, emotionally manipulative, "ADHD: The Movie." Those critiques aren't baseless. The film's maximalism is genuinely fatiguing, and the comedy occasionally undercuts its own sincerity.
 
-There is also a fair critique that the movie's everything-at-once aesthetic can flatten its quieter ideas under the spectacle. The rock scene proves the Daniels know how to be still; one wishes they trusted that stillness a little more often. For viewers allergic to whimsy, the film's relentless quirk will read as exhausting rather than liberating, and that reaction is legitimate. This is a movie with a very particular wavelength, and it does not apologize for it.
+But "overrated or not" usually comes down to whether the third act earns its tears for *you*. For most viewers it does, precisely *because* the chaos exhausts you first — the calm at the center hits harder by contrast. It's not overrated. It's just not for everyone, and the film never pretends otherwise.
 
-## The Verdict
+## Parental guide and where to watch
 
-Everything Everywhere All at Once is a glorious, maddening, deeply humane film that uses the loudest possible canvas to tell one of the smallest possible stories: a mother and daughter learning to forgive each other. Its excesses are real, and they will lose some viewers in the first hour. But its ambition is matched by its heart, and that pairing is rarer than any visual effect. It stands as both a high point for A24 and a statement of what mainstream-adjacent science fiction can still do when filmmakers swing without a safety net.
+A quick parental guide note: *Everything Everywhere All at Once* is **rated R** (language, some violence, and frank adult and sexual humor), running about **2 hours 19 minutes**. It's not for young kids, but it's fine for older teens who can handle the intensity. The dialogue flows naturally between English, Mandarin, and Cantonese.
 
-It is messy, overlong, and occasionally too clever — and it is also, somehow, perfect in the ways that matter. Watch it, then watch it again; the chaos reads completely differently once you know it is all in service of love. If you only see one multiverse movie this decade, make it this one.
+You can stream it on HBO Max, or rent and buy it through Prime Video and Fandango at Home. If multiverse storytelling is your thing, line it up next to the [MCU movies in order](/movies/mcu-movies-in-order) for a study in two very different approaches to infinite realities, or explore more in [best sci-fi movies streaming](/streaming/best-sci-fi-movies-streaming).
 
-**The Screen Report verdict: 4.5 / 5 — essential, ecstatic, and unrepeatable.**
+## The bottom line
+
+*Everything Everywhere All at Once* is a messy masterpiece — a deliberately overwhelming sensory assault that's really a tender story about an immigrant mother choosing love over nihilism. It is not subtle, and it is not for everyone. But if you meet it on its terms, it's one of the most generous, big-hearted films of the decade, and a worthy Best Picture winner. Watch it. Then watch it again, knowing the bagel is despair and the kindness is the point.

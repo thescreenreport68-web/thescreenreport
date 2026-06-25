@@ -1,84 +1,130 @@
 ---
-title: The Best Movies on Prime Video Right Now
+title: 'The Best Movies on Prime Video Right Now, Ranked (June 2026)'
 slug: best-movies-on-prime-video
 category: streaming
 author: maya-okafor
-date: '2026-06-18T23:00:00.000Z'
+date: '2026-06-16T07:00:00.000Z'
 dek: >-
-  From awards-season heavyweights to rewatchable crowd-pleasers, here are the
-  best movies on Prime Video right now — a curated guide to what is genuinely
-  worth your evening.
-metaTitle: 'Best Movies on Prime Video Right Now: Top Picks'
+  A tightly curated, critic-backed ranking of the genuinely great films included
+  with Prime right now — from Paul Thomas Anderson's "One Battle After Another"
+  to bona-fide classics like "GoodFellas" — with Rotten Tomatoes scores and a
+  clear free-with-Prime vs. rent label, refreshed every month.
+metaTitle: Best Movies on Prime Video Right Now (June 2026)
 metaDescription: >-
-  The best movies on Prime Video right now, hand-picked by our editor. From
-  Oscar winners to action favorites, find your next great watch tonight.
+  The best movies on Prime Video right now, ranked with Rotten Tomatoes scores
+  and a free-with-Prime vs. rent label. Updated June 2026 — never a stale pick.
 tags:
   - Prime Video
-  - Amazon Prime Video
-  - streaming
-  - what to watch
-  - best movies
   - streaming guide
-  - movies
-targetKeyword: best movies on prime video
+  - best movies
+  - Amazon Prime Video
+  - what to watch
+  - One Battle After Another
+  - movie rankings
+  - June 2026
+targetKeyword: best movies on prime video right now
 imageAlt: >-
-  Stylized hero illustration of a glowing home-cinema screen surrounded by film
-  reels and a play button, representing the best movies on Prime Video right now
+  Prime Video app home screen on a TV showing the best movies streaming right
+  now in June 2026
 imageCredit: The Screen Report
 faq:
-  - q: What are the best movies on Prime Video right now?
+  - q: What is the best movie on Prime Video right now?
     a: >-
-      Strong picks include the Best Picture nominee Manchester by the Sea, the
-      road-trip charmer Little Miss Sunshine, the awards-laden The Big Sick, and
-      action favorites like the John Wick films. Availability rotates between
-      Amazon's free-with-Prime catalog and paid rental or purchase, so confirm
-      the current status in the app before you settle in.
-  - q: Are all movies on Prime Video free with a Prime membership?
+      Right now the single best film included with Prime is Paul Thomas
+      Anderson's One Battle After Another (2025), which carries a near-perfect
+      95 on Metacritic and led the Oscar conversation. It has been free with a
+      Prime membership since May 23, 2026.
+  - q: What are the top 10 movies on Prime Video this month?
     a: >-
-      No. Prime Video mixes titles that are included free with your Prime or
-      standalone Video subscription, add-on channels like Max or Paramount+, and
-      films available only as a paid rental or purchase. The app labels each
-      one, so check whether a movie says 'Included with Prime' before pressing
-      play.
-  - q: Does Prime Video have ads now?
+      Our June 2026 top 10 included with Prime are One Battle After Another, 12
+      Angry Men, Sound of Metal, The Big Sick, The Handmaiden, The Apartment,
+      GoodFellas, Do the Right Thing, Ford v Ferrari, and Midnight Cowboy. Each
+      is ranked with its Rotten Tomatoes score above.
+  - q: Are there any good free movies on Prime Video?
     a: >-
-      In many regions Amazon introduced limited advertising on the standard
-      Prime Video plan, with an optional ad-free upgrade available for an extra
-      monthly fee. The exact pricing and availability vary by country, so check
-      Amazon's current plan details for your region.
-  - q: How often does the Prime Video movie library change?
+      Yes. Every film in our ranked list except where we have explicitly tagged
+      it 'Rent/Buy' is free with a standard Prime membership at no extra charge.
+      Amazon also runs Freevee-style ad-supported titles, but the picks here are
+      the genuinely great ones included with Prime.
+  - q: What are the best action and thriller movies on Prime Video?
     a: >-
-      Frequently. Licensed titles arrive and expire on a rolling basis every
-      month, while Amazon Original films tend to stay put. Because of this
-      churn, it is always worth confirming a movie is still available in your
-      country before planning a watch.
+      For action, Road House (2024) with Jake Gyllenhaal is the headline Prime
+      original. For thrillers, The Handmaiden (96% on Rotten Tomatoes) is the
+      standout included with Prime, while Steven Soderbergh's spy thriller Black
+      Bag (96%) is currently rent or buy only.
+  - q: Is Road House on Prime Video?
+    a: >-
+      Yes. The 2024 Road House remake starring Jake Gyllenhaal is an Amazon MGM
+      original and streams exclusively on Prime Video, included free with a
+      Prime membership.
 featured: false
 ---
 
-If you only have time for the headline, here it is: the best movies on Prime Video right now span a genuinely strong mix of awards-season prestige, smart comedies and rewatchable action — and a handful of them rank among the best films of the past two decades. Our top recommendations are the Best Picture nominee **Manchester by the Sea**, the indie favorite **Little Miss Sunshine**, the acclaimed romance **The Big Sick**, and the relentlessly entertaining **John Wick** series. Below, we break the list down by mood so you can find the right watch in under a minute.
+Updated June 2026. If you want the short answer, here it is: the best movie on Prime Video right now is **Paul Thomas Anderson's "One Battle After Another"** (2025), a 95-on-Metacritic awards juggernaut that has been included free with Prime since May 23. Below it sits one of the deepest benches of any streamer — from a perfect-scoring courtroom classic to Scorsese's mob masterpiece — and the full ranked list is right here.
 
-One caveat worth repeating: Prime Video's catalog rotates constantly, and a title that is free with your membership this week may move to paid rental or expire next month. Everything here has been a strong presence on the service, but always confirm availability in the app for your country before you commit your evening.
+The catch with Prime Video is that its catalog is notoriously cluttered: for every genuine gem included with your membership, the app surfaces ten rentals padding out the rows. So this guide does the sorting for you. Every pick below is ranked, carries its Rotten Tomatoes or Metacritic score, and is tagged **Free with Prime** or **Rent/Buy** so you never hit a paywall by surprise. We refresh it monthly, so the list is never stale.
 
-## The Best Prestige Drama on Prime Video
+## The best movie on Prime Video right now: One Battle After Another
 
-If you want a film that lingers, start with **Manchester by the Sea**. Kenneth Lonergan's quiet study of grief earned Casey Affleck the Academy Award for Best Actor and won Lonergan the Oscar for Best Original Screenplay, and it remains one of the most emotionally precise American dramas of its era. Pair it with **Sound of Metal**, the story of a drummer losing his hearing that brought Riz Ahmed widespread acclaim and won Academy Awards for its sound and editing. Both reward patience rather than spectacle. For something with more sweep, Amazon's own awards contenders frequently land here too, making the service a reliable home for the kind of grown-up drama that streamers often bury. If you enjoy this category, our guide to the [best A24 movies, ranked](/streaming/best-a24-movies-ranked) is a natural next stop.
+**1. One Battle After Another (2025)** — *Metacritic 95 · Free with Prime · 2h 41m · Action-Drama*
 
-## The Best Crowd-Pleasers and Comedies
+Leonardo DiCaprio plays a burned-out former revolutionary scrambling to find his missing daughter in Paul Thomas Anderson's wild, propulsive, very funny epic. It dominated the 2025–26 awards season and landed on Prime Video on May 23, 2026, in 4K with Dolby Vision. If you watch one thing this month, watch this. It is, by the numbers and the consensus, the best movie on Prime Video right now.
 
-When you want warmth over weight, Prime Video delivers. **Little Miss Sunshine** is still the gold standard of the dysfunctional-family road trip, a sharp, generous comedy that won Alan Arkin an Oscar and launched a thousand imitators. **The Big Sick**, written by Kumail Nanjiani and Emily V. Gordon and based on their real courtship, balances laugh-out-loud humor with genuine tenderness and earned an Academy Award nomination for its screenplay. For broader, feel-good energy, the service regularly carries beloved studio comedies and rom-coms that are perfect for a low-stakes night in. These are the films you put on knowing exactly how they will make you feel — which is precisely the point.
+## The best classics included with Prime
 
-## The Best Action and Thrillers
+These are the timeless, near-flawless titles that justify the subscription on their own — the heart of any list of the best movies on Amazon Prime Video.
 
-Prime Video has quietly become a strong destination for high-octane fare. The **John Wick** franchise, anchored by Keanu Reeves and its instantly iconic, balletic gunplay, frequently lands on the service — via rental, purchase, or the included catalog — and is some of the most influential action filmmaking of the past decade. For tension of a different kind, look out for taut thrillers and modern noir that rotate through the catalog. Amazon has also leaned hard into original action and genre titles, so the lineup tends to refresh with new blockbusters more often than you might expect. If sci-fi spectacle is your thing, you may also want our roundup of the [best sci-fi movies streaming right now](/streaming/best-sci-fi-movies-streaming), which tracks where the genre's biggest titles land across services.
+**2. 12 Angry Men (1957)** — *RT 100% · Free with Prime · 1h 36m · Drama*
+Sidney Lumet's single-room jury thriller still holds a perfect Tomatometer. Twelve men, one verdict, zero wasted seconds — the gold standard for tension built entirely from dialogue.
 
-## How We Picked These Movies
+**3. Sound of Metal (2019)** — *RT 97% · Free with Prime · 2h 0m · Drama*
+Riz Ahmed is a drummer losing his hearing in real time. The sound design alone is reason enough; the performance is the reason it stays with you.
 
-Our shortlist favors films with lasting critical standing — Oscar winners and nominees, festival darlings and genuine modern classics — over whatever happens to be trending. We also weight rewatchability and breadth, so there is something for a quiet Sunday and something for a Friday with friends. Crucially, we prioritize titles that have had a stable, recurring presence on Prime Video rather than one-week curiosities. That said, no streaming list is permanent. Licensing deals shift, regional rights differ, and Amazon Originals stay while licensed films come and go. Treat this as a smart starting point, not a guarantee.
+**4. The Big Sick (2017)** — *RT 98% · Free with Prime · 2h 4m · Romance-Comedy*
+Kumail Nanjiani's true-story romance is the rare comedy that earns its tears. Still one of the best good movies to watch on Prime Video when you want warmth without schmaltz.
 
-## A Quick Note on Plans, Ads and Availability
+**5. The Handmaiden (2016)** — *RT 96% · Free with Prime · 2h 25m · Thriller*
+Park Chan-wook's gorgeous, twisty con-artist thriller is the best thriller movie on Prime Video included with a membership right now — a film that out-maneuvers you three times before the credits.
 
-A few practical things are worth knowing before you browse. Prime Video bundles three different kinds of titles: movies included free with your membership, films behind add-on channels, and titles available only as a paid rental or purchase — the app labels each clearly. Amazon has also introduced limited advertising on the standard plan in many regions, with an ad-free tier available for an additional monthly fee; the exact pricing varies by country and changes over time. And because the library churns every month, a tool like JustWatch or a quick search in the app is the fastest way to confirm a film is still streaming where you are. For a broader binge plan, our [best limited series to stream](/tv/best-limited-series-to-stream) guide pairs nicely with a movie night.
+**6. The Apartment (1960)** — *RT 93% · Free with Prime · 2h 5m · Comedy-Drama*
+Billy Wilder's Best Picture winner is sharp, sad, and decades ahead of its time on office politics. Jack Lemmon and Shirley MacLaine have never been better.
 
-## The Bottom Line
+**7. GoodFellas (1990)** — *RT 93% · Free with Prime · 2h 25m · Crime*
+Scorsese's mob epic moves like a freight train. If you love the genre, pair it with our roundup of the [best heist movies](/movies/best-heist-movies) for a full crime double-feature.
 
-The best movies on Prime Video right now are a stronger, more eclectic group than the service often gets credit for — prestige dramas like *Manchester by the Sea* and *Sound of Metal*, comedies like *Little Miss Sunshine* and *The Big Sick*, and the reliably thrilling *John Wick* films. Start with whichever mood fits your evening, double-check availability in the app, and you will rarely be disappointed.
+**8. Do the Right Thing (1989)** — *RT 92% · Free with Prime · 2h 0m · Drama*
+Spike Lee's Brooklyn block on the hottest day of the year remains one of the most vital American films ever made — and as urgent now as it was on release.
+
+**9. Ford v Ferrari (2019)** — *RT 92% · Free with Prime · 2h 32m · Drama*
+Matt Damon and Christian Bale chase Le Mans glory in the best crowd-pleaser of the bunch. Big, loud, and impossible to turn off once it starts.
+
+**10. Midnight Cowboy (1969)** — *RT 89% · Free with Prime · 1h 53m · Drama*
+The only X-rated film to win Best Picture, and still a gut-punch. Dustin Hoffman and Jon Voight drift through a grimy New York that feels painfully real.
+
+## The best new movies on Prime Video
+
+Want something from the last couple of years? These are the strongest recent additions included with Prime — the best new movies on Prime Video without the rental tax.
+
+- **Air (2023)** — *Metacritic 73 · Free with Prime* — Ben Affleck's slick Nike-courts-Jordan drama; pairs nicely with Ford v Ferrari for a "great true-story underdog" night.
+- **A Quiet Place: Day One (2024)** — *Metacritic 68 · Free with Prime* — The best entry point to the franchise and a tense, surprisingly tender horror.
+- **My Old Ass (2024)** — *Metacritic 74 · Free with Prime* — A funny, big-hearted coming-of-age gem that critics quietly adored.
+- **The Idea of You (2024)** — *Free with Prime* — Anne Hathaway anchors the streamer's most-watched romance of recent years.
+- **Hundreds of Beavers (2022)** — *Metacritic 82 · Free with Prime* — A gonzo black-and-white slapstick cult hit unlike anything else on the service.
+
+## The best action and thriller movies on Prime Video
+
+For the best action movies on Prime Video, start with the streamer's own headliner — then weigh the one thriller worth paying for.
+
+**Road House (2024)** — *RT ~59% · Free with Prime · 2h 1m · Action* — Jake Gyllenhaal's bouncer-with-a-past remake is a glossy, brutal Prime Video original that pulled record viewership. Critics were split, but as a Saturday-night action fix included free with Prime, it delivers exactly what it promises.
+
+**Black Bag (2025)** — *RT 96% · Rent/Buy on Prime · 1h 34m · Thriller* — The catch worth flagging: Steven Soderbergh's razor-sharp spy thriller with Michael Fassbender and Cate Blanchett is climbing Prime's Top 10, but it is currently **rent or buy only**, not included with a membership. If you want the best-reviewed thriller on the platform tonight and don't mind the fee, this is it. (Same goes for the 89%-rated animated hit **Transformers One** — terrific, but rent/buy on Prime as of June 2026.)
+
+If sci-fi is more your speed, we keep a dedicated list of the [best sci-fi movies streaming](/streaming/best-sci-fi-movies-streaming) right now, and for prestige TV to follow your movie night, the [best limited series to stream](/tv/best-limited-series-to-stream) pairs perfectly. Marvel completists can also line up the [MCU movies in order](/movies/mcu-movies-in-order).
+
+## Free with Prime vs. rent: how to read the labels
+
+Here is the distinction rivals blur: "on Prime Video" does not mean "free with Prime." A title can appear in the app and still cost $4–$20 to rent or buy. Everything tagged **Free with Prime** above streams at no extra charge with a standard membership; anything tagged **Rent/Buy** does not. We re-check these labels every month, because Amazon's catalog rotates constantly — a film free today can flip to rental in weeks, and vice versa. For more curated streaming picks across services, browse our [best movies on Prime Video](/streaming/best-movies-on-prime-video) hub and the [best shows on Apple TV](/streaming/best-shows-on-apple-tv).
+
+## The bottom line
+
+If you only have one evening, **One Battle After Another** is the clear best movie on Prime Video right now — modern, acclaimed, and free with your membership. For comfort-watch greatness, **12 Angry Men**, **GoodFellas**, and **The Big Sick** are can't-miss. And remember the one rule that separates a good Prime night from a frustrating one: check the **Free with Prime vs. Rent/Buy** tag before you press play. Bookmark this page — we refresh the ranking every month, so it is current the next time you ask what to watch.
