@@ -105,7 +105,7 @@ export default function HomePage() {
               <Link href={`/${hero.category}/${hero.slug}/`}>{hero.title}</Link>
             </h1>
             {hero.dek ? (
-              <p className="mx-auto mt-4 max-w-2xl font-dek text-xl italic leading-snug text-navy/70">
+              <p className="mx-auto mt-4 max-w-2xl font-body text-[1.2rem] leading-snug text-navy/70">
                 {hero.dek}
               </p>
             ) : null}

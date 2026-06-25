@@ -28,7 +28,7 @@ export default function LatestNews({ items }: { items: Article[] }) {
                     {formatTime(a.date)}
                   </span>
                 </div>
-                <h3 className="font-body text-[1.05rem] font-medium leading-[1.3] text-navy hover:text-navy/70">
+                <h3 className="font-body text-[1.05rem] font-normal leading-[1.35] text-navy hover:text-navy/70">
                   <Link href={`/${a.category}/${a.slug}/`}>{a.title}</Link>
                 </h3>
               </article>
