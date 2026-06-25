@@ -3,15 +3,29 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeSlug from "rehype-slug";
 import Link from "next/link";
-import AdSlot from "./AdSlot";
 
-// Split the article at H2 boundaries so we can drop in-content ads between
-// sections without ever breaking a list or paragraph.
-function splitAtH2(body: string): string[] {
-  return body
-    .split(/\n(?=## )/g)
-    .map((p) => p.trim())
-    .filter(Boolean);
+// THR's in-content cadence: a 300x250 after paragraph 2, after paragraph 4,
+// then one roughly every 4 paragraphs — each framed with hairlines + a label.
+function adAfter(paraCount: number): boolean {
+  if (paraCount === 2 || paraCount === 4) return true;
+  return paraCount > 4 && (paraCount - 4) % 4 === 0;
+}
+
+function isParagraph(b: string): boolean {
+  return !/^(#|>|-|\*|\+|\d+\.|\||```|!\[)/.test(b.trim());
+}
+
+function InContentAd() {
+  return (
+    <div className="not-prose my-8 border-y border-hair py-5 text-center">
+      <div className="mb-1.5 text-[10px] font-bold uppercase tracking-[0.2em] text-slate/60">
+        Advertisement
+      </div>
+      <div className="mx-auto flex h-[250px] w-[300px] items-center justify-center border border-dashed border-navy/20 bg-mist text-[11px] text-navy/30">
+        300×250
+      </div>
+    </div>
+  );
 }
 
 const components = {
@@ -26,26 +40,30 @@ const components = {
 };
 
 export default function ArticleBody({ body }: { body: string }) {
-  const segments = splitAtH2(body);
-  const mid = segments.length > 3 ? Math.floor(segments.length / 2) : -1;
+  const blocks = body
+    .split(/\n\n+/)
+    .map((b) => b.trim())
+    .filter(Boolean);
+  let para = 0;
   return (
-    <div className="article-prose prose prose-screen">
-      {segments.map((seg, i) => (
-        <Fragment key={i}>
-          <ReactMarkdown
-            remarkPlugins={[remarkGfm]}
-            rehypePlugins={[rehypeSlug]}
-            components={components}
-          >
-            {seg}
-          </ReactMarkdown>
-          {i === 0 || i === mid ? (
-            <div className="not-prose my-8">
-              <AdSlot format="rectangle" />
-            </div>
-          ) : null}
-        </Fragment>
-      ))}
+    <div className="prose prose-screen mx-auto">
+      {blocks.map((blk, i) => {
+        const paragraph = isParagraph(blk);
+        if (paragraph) para += 1;
+        const showAd = paragraph && adAfter(para);
+        return (
+          <Fragment key={i}>
+            <ReactMarkdown
+              remarkPlugins={[remarkGfm]}
+              rehypePlugins={[rehypeSlug]}
+              components={components}
+            >
+              {blk}
+            </ReactMarkdown>
+            {showAd ? <InContentAd /> : null}
+          </Fragment>
+        );
+      })}
     </div>
   );
 }

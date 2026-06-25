@@ -58,17 +58,9 @@ export default function ArticlePage({
       datePublished: article.date,
       dateModified: article.updated ?? article.date,
       author: author
-        ? {
-            "@type": "Person",
-            name: author.name,
-            url: `${SITE.url}/author/${author.slug}/`,
-          }
+        ? { "@type": "Person", name: author.name, url: `${SITE.url}/author/${author.slug}/` }
         : undefined,
-      publisher: {
-        "@type": "Organization",
-        name: SITE.name,
-        url: SITE.url,
-      },
+      publisher: { "@type": "Organization", name: SITE.name, url: SITE.url },
       mainEntityOfPage: `${SITE.url}/${article.category}/${article.slug}/`,
       articleSection: cat?.name,
       keywords: article.tags.join(", "),
@@ -78,18 +70,8 @@ export default function ArticlePage({
       "@type": "BreadcrumbList",
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Home", item: `${SITE.url}/` },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: cat?.name,
-          item: `${SITE.url}/${article.category}/`,
-        },
-        {
-          "@type": "ListItem",
-          position: 3,
-          name: article.title,
-          item: `${SITE.url}/${article.category}/${article.slug}/`,
-        },
+        { "@type": "ListItem", position: 2, name: cat?.name, item: `${SITE.url}/${article.category}/` },
+        { "@type": "ListItem", position: 3, name: article.title, item: `${SITE.url}/${article.category}/${article.slug}/` },
       ],
     },
     article.faq?.length
@@ -109,85 +91,98 @@ export default function ArticlePage({
     <div className="container-wide py-6">
       <JsonLd data={jsonLd} />
 
-      <div className="mb-6 hidden md:block">
-        <AdSlot format="leaderboard" />
+      {/* Top billboard */}
+      <div className="mb-6 flex justify-center">
+        <AdSlot format="billboard" />
       </div>
 
-      <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_300px]">
+      <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_300px]">
         <article className="min-w-0">
           <Breadcrumbs
             items={[
               { href: "/", label: "Home" },
               { href: `/${article.category}/`, label: cat?.name ?? "" },
-              { label: article.title },
             ]}
           />
-
-          <p className="mt-4 kicker">{cat?.name}</p>
-          <h1 className="mt-2.5 font-display text-4xl font-semibold leading-[1.05] tracking-tight text-navy sm:text-5xl lg:text-[3.25rem]">
+          <h1 className="mt-1 font-display text-4xl font-bold leading-[0.95] tracking-tight text-navy sm:text-5xl lg:text-[3.4rem] xl:text-[4rem]">
             {article.title}
           </h1>
-          {article.dek ? <p className="mt-5 dek">{article.dek}</p> : null}
+          {article.dek ? (
+            <p className="mt-3 font-body text-2xl leading-snug text-navy">{article.dek}</p>
+          ) : null}
 
-          <div className="mt-5 border-y border-navy/10 py-4">
-            <Byline
-              author={article.author}
-              date={article.date}
-              updated={article.updated}
-              readingTime={article.readingTime}
-            />
+          <div className="mt-4">
+            <Byline author={article.author} date={article.date} updated={article.updated} />
           </div>
 
-          <figure className="mt-6">
+          <figure className="my-6">
             <PlaceholderImage
               slug={article.slug}
               category={article.category}
               title={article.title}
-              className="aspect-[16/9] w-full rounded-lg"
+              className="aspect-video w-full"
             />
-            <figcaption className="mt-2 text-xs text-navy/40">
-              {article.imageAlt} · {article.imageCredit}
+            <figcaption className="mt-2 leading-snug">
+              <span className="font-body text-base text-navy">{article.imageAlt}</span>{" "}
+              <cite className="font-sans text-xs not-italic uppercase tracking-[0.04em] text-slate">
+                {article.imageCredit}
+              </cite>
             </figcaption>
           </figure>
 
-          <div className="mt-8">
-            <ArticleBody body={article.body} />
-          </div>
+          <ArticleBody body={article.body} />
 
           <Faq items={article.faq} />
           <AuthorBox author={article.author} />
+
+          {/* End-of-article recirculation */}
+          <section className="mt-12">
+            <div className="mb-5 border-b border-hair pb-2">
+              <h2 className="font-display text-2xl font-bold uppercase tracking-tight text-navy sm:text-[1.8rem]">
+                Related Stories
+              </h2>
+            </div>
+            <div className="grid gap-x-5 gap-y-8 sm:grid-cols-2 lg:grid-cols-4">
+              {related.map((a) => (
+                <ArticleCard key={a.slug} article={a} variant="standard" />
+              ))}
+            </div>
+          </section>
+
+          <div className="my-10 flex justify-center">
+            <AdSlot format="billboard" />
+          </div>
         </article>
 
+        {/* Right rail: 300x600 + More to Read + sticky 300x600 */}
         <aside className="hidden lg:block">
-          <div className="sticky top-24 space-y-6">
-            <AdSlot format="halfpage" />
+          <div className="space-y-7">
             <div>
-              <div className="section-heading">
-                <h2>More to read</h2>
+              <div className="mb-1.5 text-center text-[10px] font-bold uppercase tracking-[0.2em] text-slate/60">
+                Advertisement
               </div>
-              <div className="space-y-1">
+              <AdSlot format="halfpage" />
+            </div>
+            <div>
+              <div className="mb-2 border-b border-hair pb-2">
+                <h2 className="font-display text-xl font-bold uppercase tracking-tight text-navy">
+                  More to Read
+                </h2>
+              </div>
+              <div>
                 {related.map((a) => (
                   <ArticleCard key={a.slug} article={a} variant="list" />
                 ))}
               </div>
             </div>
+            <div className="sticky top-24">
+              <div className="mb-1.5 text-center text-[10px] font-bold uppercase tracking-[0.2em] text-slate/60">
+                Advertisement
+              </div>
+              <AdSlot format="halfpage" />
+            </div>
           </div>
         </aside>
-      </div>
-
-      <section className="mt-14">
-        <div className="section-heading">
-          <h2>Related Stories</h2>
-        </div>
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {related.map((a) => (
-            <ArticleCard key={a.slug} article={a} variant="standard" />
-          ))}
-        </div>
-      </section>
-
-      <div className="my-10 hidden md:block">
-        <AdSlot format="billboard" />
       </div>
     </div>
   );

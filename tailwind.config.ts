@@ -9,86 +9,78 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // THR ("Larva") tokens — token names kept as navy/gold so existing classes recolor.
-        // navy = ink (#101010 / #000), gold = THR brand red (#D92128).
-        navy: {
-          DEFAULT: "#101010",
-          900: "#000000",
-          800: "#101010",
-          700: "#3A3A3A",
-        },
-        gold: {
-          DEFAULT: "#D92128",
-          600: "#B81C22",
-        },
+        navy: { DEFAULT: "#101010", 900: "#000000", 800: "#101010", 700: "#3A3A3A" },
+        gold: { DEFAULT: "#D92128", 600: "#B81C22" },
         breaking: "#D92128",
         ink: "#000000",
         ink2: "#101010",
-        slate: "#5A5A5A", // grey-dark: bylines, timestamps, dotted dividers
+        slate: "#5A5A5A",
         faint: "#5A5A5A",
-        grey: "#8C8C8C", // mid grey: solid section rules
-        hair: "#DCDCDC", // grey-light: hairlines
-        mist: "#EFEFEF", // grey-lightest: image placeholder bg
+        grey: "#8C8C8C",
+        hair: "#DCDCDC",
+        mist: "#EFEFEF",
       },
       fontFamily: {
-        // Kepler condensed display — hero headline + SECTION TITLES only.
         display: ['"kepler-std-semicondensed-dis"', "var(--font-display)", "Georgia", "serif"],
         serif: ['"kepler-std-semicondensed-dis"', "var(--font-display)", "Georgia", "serif"],
         dek: ["var(--font-display)", "Georgia", "serif"],
-        // Source Serif 4 — stand-in for standard "kepler-std": ALL article/news/card headlines + body.
         body: ["var(--font-body)", "Georgia", "serif"],
-        // Karla — labels, kickers, nav, bylines, timestamps.
         sans: ["var(--font-sans)", "system-ui", "sans-serif"],
       },
       maxWidth: {
         wide: "1160px",
-        prose: "680px",
+        prose: "660px",
       },
       typography: () => ({
+        // THR article body: standard serif 22px/1.4, serif H2, Karla-sans H3,
+        // red no-underline links, red pull-quotes.
         screen: {
           css: {
             "--tw-prose-body": "#101010",
-            "--tw-prose-headings": "#000000",
-            "--tw-prose-links": "#101010",
+            "--tw-prose-headings": "#101010",
+            "--tw-prose-links": "#D92128",
             "--tw-prose-bold": "#000000",
-            "--tw-prose-quotes": "#101010",
             "--tw-prose-bullets": "#D92128",
-            "--tw-prose-counters": "#D92128",
-            maxWidth: "680px",
+            "--tw-prose-counters": "#5A5A5A",
+            maxWidth: "660px",
             fontFamily: "var(--font-body), Georgia, serif",
-            fontSize: "1.1875rem",
-            lineHeight: "1.75",
+            fontSize: "1.375rem",
+            lineHeight: "1.42",
+            p: { marginTop: "1rem", marginBottom: "0" },
             h2: {
-              fontFamily: '"kepler-std-semicondensed-dis", var(--font-display), Georgia, serif',
-              fontWeight: "700",
-              fontSize: "1.95rem",
-              letterSpacing: "-0.01em",
-              lineHeight: "1.18",
-              marginTop: "1.9em",
-              marginBottom: "0.55em",
+              fontFamily: "var(--font-body), Georgia, serif",
+              fontWeight: "400",
+              fontSize: "2.375rem",
+              lineHeight: "1.05",
+              letterSpacing: "-0.005em",
+              marginTop: "1.5em",
+              marginBottom: "0.15em",
             },
             h3: {
-              fontFamily: '"kepler-std-semicondensed-dis", var(--font-display), Georgia, serif',
+              fontFamily: "var(--font-sans), system-ui, sans-serif",
               fontWeight: "700",
-              fontSize: "1.45rem",
+              fontSize: "1.75rem",
+              lineHeight: "1.1",
+              letterSpacing: "-0.02em",
+              marginTop: "1.5em",
+              marginBottom: "0.2em",
             },
-            a: {
-              textDecoration: "underline",
-              textDecorationColor: "#D92128",
-              textDecorationThickness: "1px",
-              textUnderlineOffset: "3px",
-              fontWeight: "600",
-            },
+            a: { textDecoration: "none", color: "#D92128", fontWeight: "inherit" },
+            "a:hover": { textDecoration: "underline" },
             blockquote: {
-              fontFamily: "var(--font-display), Georgia, serif",
-              fontStyle: "italic",
-              fontWeight: "500",
-              fontSize: "1.4rem",
-              color: "#101010",
-              borderLeftWidth: "3px",
-              borderLeftColor: "#D92128",
+              fontFamily: "var(--font-body), Georgia, serif",
+              fontStyle: "normal",
+              fontWeight: "400",
+              fontSize: "2rem",
+              lineHeight: "1.15",
+              color: "#D92128",
+              borderLeftWidth: "0",
+              paddingLeft: "0",
+              marginTop: "1em",
+              marginBottom: "1em",
             },
             "li::marker": { color: "#D92128" },
+            "ul > li, ol > li": { marginTop: "0.25rem" },
           },
         },
       }),
