@@ -5,10 +5,15 @@ import SectionHeader from "@/components/SectionHeader";
 import DottedList from "@/components/DottedList";
 import TwoColumnFeature from "@/components/TwoColumnFeature";
 import ReviewsSplit from "@/components/ReviewsSplit";
+import FeaturedVideos from "@/components/FeaturedVideos";
+import FeaturedVoices from "@/components/FeaturedVoices";
+import PodcastsBlock from "@/components/PodcastsBlock";
+import WhereToWatch from "@/components/WhereToWatch";
 import NewsletterBand from "@/components/NewsletterBand";
 import PlaceholderImage from "@/components/PlaceholderImage";
 import { getCategory, getAuthor } from "@/lib/site";
 import { formatDate } from "@/lib/format";
+import type { Article } from "@/lib/articles";
 import {
   getAllArticles,
   getArticlesByCategory,
@@ -30,61 +35,70 @@ export default function HomePage() {
     );
   }
 
+  const news = all.filter((a) => a.category !== "reviews");
   const movies = getArticlesByCategory("movies");
-  const streaming = getArticlesByCategory("streaming");
   const tv = getArticlesByCategory("tv");
+  const streaming = getArticlesByCategory("streaming");
   const celebrity = getArticlesByCategory("celebrity");
   const reviews = getArticlesByCategory("reviews");
   const tvReviews = reviews.filter((a) => TV_REVIEW_SLUGS.includes(a.slug));
   const movieReviews = reviews.filter((a) => !TV_REVIEW_SLUGS.includes(a.slug));
 
   const hero = getArticleBySlug("mcu-movies-in-order") ?? movies[0] ?? all[0];
-  const latest = all.filter((a) => a.slug !== hero.slug).slice(0, 5);
 
-  const moviesPool = movies.filter((a) => a.slug !== hero.slug);
+  // Distribute articles across sections, preferring fresh ones, reusing only if needed.
+  const used = new Set<string>([hero.slug]);
+  const take = (pool: Article[], n: number): Article[] => {
+    const fresh = pool.filter((a) => !used.has(a.slug)).slice(0, n);
+    fresh.forEach((a) => used.add(a.slug));
+    if (fresh.length < n) {
+      const seen = new Set(fresh.map((a) => a.slug));
+      const extra = pool.filter((a) => !seen.has(a.slug)).slice(0, n - fresh.length);
+      return [...fresh, ...extra];
+    }
+    return fresh;
+  };
+
+  const threeCards = take(news, 3);
   const inTheaters = {
     title: "In Theaters",
     tagline: "The films everyone's talking about",
     href: "/movies/",
-    lead: moviesPool[0] ?? movies[0],
-    rest: moviesPool.slice(1, 4),
+    lead: take(movies, 1)[0] ?? movies[0],
+    rest: take(movies, 3),
   };
   const nowStreaming = {
     title: "Now Streaming",
     tagline: "What to watch this week",
     href: "/streaming/",
-    lead: streaming[0],
-    rest: [...streaming.slice(1), ...tv].slice(0, 3),
+    lead: take([...streaming, ...tv], 1)[0] ?? streaming[0],
+    rest: take([...streaming, ...tv, ...movies], 3),
   };
-
-  const latestRow = [...celebrity, ...tv, ...movies]
-    .filter((a, i, arr) => arr.findIndex((x) => x.slug === a.slug) === i)
-    .slice(0, 4);
+  const whatWatching = take([...tv, ...streaming, ...news], 4);
+  const mustReads = take([...celebrity, ...news], 4);
+  const celebrityRow = take([...celebrity, ...news], 4);
+  const mostPopular = all.slice(0, 6);
   const heroCat = getCategory(hero.category);
 
   return (
     <div className="container-wide py-6">
-      <div className="mb-8 hidden md:block">
-        <AdSlot format="billboard" />
-      </div>
-
-      {/* Top Story + Latest rail */}
-      <section className="grid gap-8 lg:grid-cols-3">
-        <div className="lg:col-span-2">
-          <div className="mb-3 inline-block border border-navy px-3 py-1 font-sans text-[11px] font-bold uppercase tracking-[0.18em] text-navy">
-            Top Story
-          </div>
+      {/* Top Story — full-width hero */}
+      <section>
+        <div className="mb-3 inline-block border border-navy px-3 py-1 font-sans text-[11px] font-bold uppercase tracking-[0.18em] text-navy">
+          Top Story
+        </div>
+        <div className="grid items-start gap-6 lg:grid-cols-2">
           <Link href={`/${hero.category}/${hero.slug}/`}>
             <PlaceholderImage
               slug={hero.slug}
               category={hero.category}
               title={hero.title}
-              className="aspect-[16/9] w-full rounded ring-1 ring-navy/10"
+              className="aspect-[16/10] w-full rounded ring-1 ring-navy/10"
             />
           </Link>
-          <div className="mt-4">
+          <div>
             <span className="kicker">{heroCat?.name}</span>
-            <h2 className="mt-1.5 font-display text-3xl font-semibold leading-[1.06] tracking-tight text-navy sm:text-[2.6rem]">
+            <h2 className="mt-1.5 font-display text-3xl font-semibold leading-[1.05] tracking-tight text-navy sm:text-4xl lg:text-[3rem]">
               <Link href={`/${hero.category}/${hero.slug}/`}>{hero.title}</Link>
             </h2>
             {hero.dek ? (
@@ -95,41 +109,98 @@ export default function HomePage() {
             </p>
           </div>
         </div>
+      </section>
 
-        <aside className="lg:col-span-1">
-          <div className="relative mb-4 border-b border-navy/15 pb-2.5">
-            <h2 className="font-display text-xl font-semibold text-navy">Latest</h2>
-            <span className="absolute -bottom-px left-0 h-0.5 w-12 bg-gold" />
-          </div>
-          <DottedList items={latest} showKicker />
-          <div className="mt-6">
-            <AdSlot format="rectangle" />
-          </div>
-        </aside>
+      {/* 3-card row under hero */}
+      <section className="mt-10 grid gap-8 border-t border-navy/10 pt-8 sm:grid-cols-3">
+        {threeCards.map((a) => (
+          <ArticleCard key={a.slug} article={a} variant="standard" />
+        ))}
       </section>
 
       <div className="my-12 hidden md:block">
         <AdSlot format="leaderboard" />
       </div>
 
-      {/* Two-column branded block (Heat Vision / Live Feed style) */}
+      {/* Branded two-column pair */}
       <TwoColumnFeature left={inTheaters} right={nowStreaming} />
+
+      {/* What We're Watching */}
+      <section className="mt-14">
+        <SectionHeader title="What We're Watching" tagline="Spoilers ahead!" href="/tv/" />
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          {whatWatching.map((a) => (
+            <ArticleCard key={a.slug} article={a} variant="standard" />
+          ))}
+        </div>
+      </section>
+
+      {/* Must Reads */}
+      <section className="mt-14">
+        <SectionHeader
+          title="Must Reads"
+          tagline="Buzzy interviews, features and hot takes"
+          href="/celebrity/"
+        />
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          {mustReads.map((a) => (
+            <ArticleCard key={a.slug} article={a} variant="standard" />
+          ))}
+        </div>
+      </section>
 
       <div className="my-12 hidden md:block">
         <AdSlot format="leaderboard" />
       </div>
 
-      {/* Reviews split */}
-      <ReviewsSplit movies={movieReviews} tv={tvReviews} />
+      {/* Featured Videos + Most Popular rail */}
+      <section className="grid gap-10 lg:grid-cols-3">
+        <div className="lg:col-span-2">
+          <FeaturedVideos />
+        </div>
+        <aside className="lg:col-span-1">
+          <div className="relative mb-4 border-b border-navy/15 pb-2.5">
+            <h2 className="font-display text-2xl font-semibold tracking-tight text-navy">
+              Most Popular
+            </h2>
+            <span className="absolute -bottom-px left-0 h-0.5 w-12 bg-gold" />
+          </div>
+          <DottedList items={mostPopular} numbered showKicker={false} />
+          <div className="mt-6">
+            <AdSlot format="rectangle" />
+          </div>
+        </aside>
+      </section>
 
-      {/* Latest Stories row */}
-      <section className="mt-12">
+      {/* Reviews split */}
+      <section className="mt-14">
+        <ReviewsSplit movies={movieReviews} tv={tvReviews} />
+      </section>
+
+      {/* Featured Voices */}
+      <section className="mt-14">
+        <FeaturedVoices />
+      </section>
+
+      {/* Where to Watch */}
+      <section className="mt-14">
+        <WhereToWatch />
+      </section>
+
+      {/* Podcasts */}
+      <section className="mt-14">
+        <PodcastsBlock />
+      </section>
+
+      {/* Celebrity */}
+      <section className="mt-14">
         <SectionHeader
-          title="Latest Stories"
-          tagline="Across movies, TV and celebrity"
+          title="Celebrity"
+          tagline="The stars and the stories around them"
+          href="/celebrity/"
         />
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {latestRow.map((a) => (
+          {celebrityRow.map((a) => (
             <ArticleCard key={a.slug} article={a} variant="standard" />
           ))}
         </div>
