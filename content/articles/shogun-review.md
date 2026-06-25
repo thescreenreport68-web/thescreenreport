@@ -26,7 +26,7 @@ targetKeyword: Shogun review
 imageAlt: >-
   Hiroyuki Sanada as Lord Yoshii Toranaga in dark samurai armor before a misty
   feudal-Japanese castle in FX's Shogun
-imageCredit: The Screen Report
+imageCredit: Wikimedia Commons
 faq:
   - q: Is Shogun worth watching?
     a: >-
@@ -72,6 +72,7 @@ faq:
       That changes how first-time viewers should approach the Season 1 ending —
       it's a destination now, not the final word.
 featured: false
+image: /images/articles/shogun-review.jpg
 ---
 
 **The verdict:** *Shogun* is the best thing on television, and this *Shogun* review will not make you wait for that conclusion. FX's adaptation of James Clavell's 1975 novel earns its near-mythical 99% Rotten Tomatoes score and its record-breaking **18 Emmy wins** — the most-awarded single season in Emmy history — because it gets the one thing right that prestige epics usually fumble: it makes you care, deeply, about quiet people in a faraway century who barely raise their voices. **Our rating: 9.5/10.**
@@ -127,3 +128,5 @@ The cost of all that restraint is a genuine demand on you. Look away from the su
 *Shogun* deserves every award and every superlative. It is gorgeous, intelligent, and emotionally overwhelming when it chooses to be, anchored by Sanada's quietly devastating Toranaga and Sawai's star-making Mariko. Watch it with the subtitles on, the phone away, and the lights low — and know that, for the first time, there's more coming. As prestige television goes, this is as good as the medium gets.
 
 **Our verdict: an instant classic and the rare epic that justifies all 18 of those Emmys — essential viewing. 9.5/10.**
+
+**Further reading:** [Hiroyuki Sanada on Wikipedia](https://en.wikipedia.org/wiki/Hiroyuki_Sanada) · [Where to watch on JustWatch](https://www.justwatch.com/us/search?q=Shogun).

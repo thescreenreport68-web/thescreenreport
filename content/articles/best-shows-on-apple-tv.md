@@ -25,7 +25,7 @@ targetKeyword: best shows on Apple TV+
 imageAlt: >-
   Promotional collage of the best Apple TV+ shows including Severance, The
   Studio and Slow Horses
-imageCredit: The Screen Report
+imageCredit: Kevin Paul / CC BY 4.0 (Wikimedia Commons)
 faq:
   - q: What is the best show on Apple TV+ right now?
     a: >-
@@ -56,6 +56,7 @@ faq:
       Emmy for Outstanding Comedy Series, while Severance and Pachinko are
       Certified Fresh.
 featured: false
+image: /images/articles/best-shows-on-apple-tv.jpg
 ---
 
 If you only start one thing tonight, make it **Severance** — the surreal corporate sci-fi thriller has officially overtaken *Ted Lasso* to become Apple TV+'s most-watched series ever, and it sits at the top of nearly every critic's list of the **best shows on Apple TV+** right now. That single fact tells you most of what you need to know: Apple has quietly become the most critically bulletproof streamer in Hollywood, where even its "lesser" titles out-review the headline shows on bigger platforms.
@@ -117,3 +118,5 @@ Short answer: yes. The reason Apple keeps showing up on "best of" lists is its h
 ## The bottom line
 
 The best shows on Apple TV+ right now start with **Severance** — now the platform's most-watched series ever — followed closely by the perfect-scoring **Slow Horses** and the Emmy-winning **The Studio**. Add **Silo**, **Ted Lasso** and the brand-new **Cape Fear**, and you have a watchlist that justifies the subscription on its own. Start with Severance tonight; work your way down the list from there.
+
+**Further reading:** [Jason Sudeikis on Wikipedia](https://en.wikipedia.org/wiki/Jason_Sudeikis) · [Where to watch on JustWatch](https://www.justwatch.com/us/search?q=Apple%20TV).

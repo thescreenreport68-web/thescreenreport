@@ -23,7 +23,7 @@ tags:
   - Harley Quinn
 targetKeyword: margot robbie best movies ranked
 imageAlt: 'Margot Robbie on a red carpet, the subject of a ranked list of her best movies'
-imageCredit: The Screen Report
+imageCredit: Wikimedia Commons
 faq:
   - q: What is Margot Robbie's best movie?
     a: >-
@@ -59,6 +59,7 @@ faq:
       Billboards Outside Ebbing, Missouri. Robbie's co-star Allison Janney did
       win Best Supporting Actress for the film.
 featured: false
+image: /images/articles/margot-robbie-best-movies.png
 ---
 
 Here is the answer most lists bury: the best Margot Robbie movie is not the billion-dollar **Barbie**, and it is not **The Wolf of Wall Street**, the breakout that made her famous. By the critical consensus that runs across Rotten Tomatoes and awards-season trackers, the top of any honest **margot robbie best movies ranked** countdown is **I, Tonya** — her transformative, Oscar-nominated turn as Tonya Harding. That is the role that proved she could disappear into a character and carry an entire film on her back.
@@ -127,3 +128,5 @@ If you want more deep-dive star rankings in this vein, our [Ryan Gosling best mo
 ## The bottom line
 
 Rank Margot Robbie by box office and Barbie wins. Rank her by fame and Wolf of Wall Street takes it. But rank her by acting craft — the thing this **margot robbie top rated movies** list cares about — and the answer to "what is Margot Robbie's best movie?" is I, Tonya. Three Oscar nominations in, with no win yet, she is overdue. The performance that will most likely close that gap looks a lot like Tonya Harding.
+
+**Further reading:** [Margot Robbie on Wikipedia](https://en.wikipedia.org/wiki/Margot_Robbie) · [Where to watch on JustWatch](https://www.justwatch.com/us/search?q=Margot%20Robbie).

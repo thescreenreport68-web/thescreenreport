@@ -26,7 +26,7 @@ targetKeyword: best sci-fi movies streaming right now
 imageAlt: >-
   Collage of the best sci-fi movies streaming right now in 2026, including
   Mickey 17, Godzilla Minus One and Interstellar
-imageCredit: The Screen Report
+imageCredit: Raph_PH / CC BY 2.0 (Wikimedia Commons)
 faq:
   - q: What is the best sci-fi movie streaming right now?
     a: >-
@@ -62,6 +62,7 @@ faq:
       Rim rotate through the free tiers. Library card holders can also stream
       Arrival free on Kanopy and Hoopla.
 featured: false
+image: /images/articles/best-sci-fi-movies-streaming.jpg
 ---
 
 The single best sci-fi movie streaming right now is **Bong Joon-ho's Mickey 17**, and it just landed on **HBO Max**. Robert Pattinson plays an "expendable" worker who keeps dying and getting reprinted on a frozen colony world — it's the most ambitious big-studio sci-fi in years, and it's finally a click away.
@@ -122,3 +123,5 @@ If you want more curated watch lists once you've cleared the sci-fi shelf, try o
 ## The bottom line
 
 The best sci-fi movie streaming right now is **Mickey 17 on HBO Max** — but the honest answer is "whatever's great on the app you already have." On Netflix, start with *Godzilla Minus One* or *Frankenstein*. On Max, it's *Dune: Part Two*. On Paramount+, *Interstellar* and *Arrival* are unbeatable, and *Interstellar* is even free on Pluto TV. Pick your platform, pick your movie, and you're watching in under a minute. We re-check this list every month, so bookmark it and come back when the next heavyweight drops.
+
+**Further reading:** [Denis Villeneuve on Wikipedia](https://en.wikipedia.org/wiki/Denis_Villeneuve) · [Where to watch on JustWatch](https://www.justwatch.com/us/search?q=science%20fiction).

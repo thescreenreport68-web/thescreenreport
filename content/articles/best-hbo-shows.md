@@ -25,7 +25,7 @@ targetKeyword: best HBO shows
 imageAlt: >-
   Composite illustration of iconic HBO shows including a New Jersey mob boss, a
   Westeros throne, and a corporate media boardroom
-imageCredit: The Screen Report
+imageCredit: Sachyn / CC BY-SA 3.0 (Wikimedia Commons)
 faq:
   - q: What is the best HBO show of all time?
     a: >-
@@ -55,6 +55,7 @@ faq:
       Chernobyl if you want a faster, more modern on-ramp. The Wire rewards
       patience but pays off as some of the greatest TV ever made.
 featured: false
+image: /images/articles/best-hbo-shows.jpg
 ---
 
 If you want the verdict up front, here it is: **The Sopranos** is the best HBO show of all time, with **The Wire** a razor-thin second. Those two — David Chase's New Jersey mob saga and David Simon's Baltimore epic — invented modern prestige television, and almost everything HBO has made since, from *Game of Thrones* to *Succession*, lives in the space they opened. Below is our definitive ranking of the best HBO shows of all time, the series that turned a premium cable channel into the most important brand in scripted drama.
@@ -113,3 +114,5 @@ Every show on this list streams on **HBO Max**, where the flagship dramas, comed
 ## The bottom line
 
 The best HBO shows aren't just great television — they're the shows that redefined what television could be. Start with **The Sopranos** and **The Wire** to understand the foundation, move to **Succession** and **Chernobyl** for the modern and most-acclaimed peaks, and let **Game of Thrones** supply the spectacle. Most networks would kill for a single all-time classic. HBO has a shelf full — and that's why, twenty-five years on, "It's not TV. It's HBO" still holds up.
+
+**Further reading:** [Kit Harington on Wikipedia](https://en.wikipedia.org/wiki/Kit_Harington) · [Where to watch on JustWatch](https://www.justwatch.com/us/search?q=HBO).

@@ -28,7 +28,7 @@ imageAlt: >-
   A composite of iconic movie trilogy posters including The Lord of the Rings,
   The Godfather, and The Dark Knight, representing the best movie trilogies of
   all time
-imageCredit: The Screen Report
+imageCredit: Gabriel Hutchinson / CC BY-SA 4.0 (Wikimedia Commons)
 faq:
   - q: What is the best movie trilogy of all time?
     a: >-
@@ -60,6 +60,7 @@ faq:
       all 11 of its Academy Award nominations. Toy Story 3 is the other great
       example of a third film that matches or surpasses what came before.
 featured: false
+image: /images/articles/best-movie-trilogies.jpg
 ---
 
 Here is the short answer: **The Lord of the Rings** is the best movie trilogy of all time, and **The Godfather** is the only serious challenger to the crown. Lord of the Rings tops nearly every critic and fan poll because it is the rare saga where no installment drops the ball — all three films are great, and *The Return of the King* swept all 11 of its Oscar nominations, including Best Picture. The Godfather contains arguably the two finest individual films ever made, but *Part III* is a real step down, and that is exactly why it finishes second.
@@ -112,3 +113,5 @@ Streaming rights rotate, so confirm before you commit, but here's the current la
 ## The bottom line
 
 The Lord of the Rings is the best movie trilogy of all time because it is the most complete: three great films, one continuous vision, and a finale that swept the Oscars. The Godfather has the two best individual films ever made but a weaker third act, which is why it settles for a very close second. Beyond the top two, the Dark Knight reigns over superhero films, Toy Story over animation, and the Dollars and Before trilogies prove that "no weak link" is the highest compliment you can pay a saga. Watch any of these in order — you won't want to skip a single chapter.
+
+**Further reading:** [Keanu Reeves on Wikipedia](https://en.wikipedia.org/wiki/Keanu_Reeves) · [Where to watch on JustWatch](https://www.justwatch.com/us/search?q=trilogy).

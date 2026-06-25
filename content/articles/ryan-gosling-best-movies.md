@@ -26,7 +26,7 @@ targetKeyword: ryan gosling best movies ranked
 imageAlt: >-
   Ryan Gosling in character as the getaway Driver, the top pick in our ranking
   of his best movies
-imageCredit: The Screen Report
+imageCredit: Wikimedia Commons
 faq:
   - q: What is Ryan Gosling's best movie?
     a: >-
@@ -62,6 +62,7 @@ faq:
       run of The Nice Guys (2016), Barbie (2023) and Project Hail Mary (2026).
       If you want best-first, follow our ranked list above.
 featured: false
+image: /images/articles/ryan-gosling-best-movies.jpg
 ---
 
 Here's the short version, no hedging: **Ryan Gosling's best movie is _Drive_ (2011).** Nicolas Winding Refn's synth-soaked neo-noir is the film that turned a respected indie actor into a permanent movie icon, and it tops this ranking of the **ryan gosling best movies ranked** from worst-to-first. But the honest answer is more interesting than one title, because Gosling's career splits three ways: _La La Land_ is the awards consensus, _Barbie_ is the box-office monster at roughly $1.446 billion, and _Drive_ is the cult classic that fans on Reddit and critics on Rotten Tomatoes keep circling back to. Below, all 15 films are ranked with the case for each, the Rotten Tomatoes and IMDb context, where to stream them, and exactly how his 2026 awards contender _Project Hail Mary_ reshuffles the all-time order.
@@ -117,3 +118,5 @@ For the record, the **best Ryan Gosling movies on IMDb** and the **ryan gosling 
 ## The bottom line
 
 Ryan Gosling is one of the most versatile leading men of his era: a three-time Oscar nominee who can headline a $1.4-billion comedy, a Sundance-winning drama and a melancholy sci-fi epic with equal conviction. _La La Land_ is his most decorated film and _Barbie_ his biggest, but **_Drive_ is his best**, the rare movie where star, style and story lock into something timeless. And with _Project Hail Mary_ chasing a fourth nomination in 2026, the ranking may need rewriting again very soon. Hungry for more rankings? Browse our [Timothée Chalamet best movies](/celebrity/timothee-chalamet-best-movies) and [Pedro Pascal movies and TV](/celebrity/pedro-pascal-movies-and-tv) breakdowns next.
+
+**Further reading:** [Ryan Gosling on Wikipedia](https://en.wikipedia.org/wiki/Ryan_Gosling) · [Where to watch on JustWatch](https://www.justwatch.com/us/search?q=Ryan%20Gosling).

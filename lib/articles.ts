@@ -18,6 +18,7 @@ export type Article = {
   targetKeyword?: string;
   imageAlt: string;
   imageCredit: string;
+  image?: string;
   faq: Faq[];
   featured?: boolean;
   readingTime: number; // minutes
@@ -61,6 +62,7 @@ export function getAllArticles(): Article[] {
       targetKeyword: data.targetKeyword,
       imageAlt: data.imageAlt ?? data.title,
       imageCredit: data.imageCredit ?? "The Screen Report",
+      image: data.image,
       faq: data.faq ?? [],
       featured: data.featured ?? false,
       readingTime: readingTimeFor(content),

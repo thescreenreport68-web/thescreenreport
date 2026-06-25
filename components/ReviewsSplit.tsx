@@ -14,6 +14,8 @@ function ReviewItem({ a }: { a: Article }) {
           slug={a.slug}
           category={a.category}
           title={a.title}
+          src={a.image}
+          alt={a.imageAlt}
           className="aspect-square w-24 sm:w-28"
         />
       </Link>

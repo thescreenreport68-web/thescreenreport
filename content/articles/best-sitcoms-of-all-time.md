@@ -26,7 +26,7 @@ targetKeyword: best sitcoms of all time
 imageAlt: >-
   Composite of iconic sitcom scenes from Seinfeld, Friends, The Office and
   Cheers
-imageCredit: The Screen Report
+imageCredit: Kevin Paul / CC BY 4.0 (Wikimedia Commons)
 faq:
   - q: What is the best sitcom of all time?
     a: >-
@@ -60,6 +60,7 @@ faq:
       Modern Family are also tied for the most consecutive Outstanding Comedy
       Series wins, with five each.
 featured: false
+image: /images/articles/best-sitcoms-of-all-time.jpg
 ---
 
 Let's settle the bar argument right now: the best sitcom of all time is **Seinfeld**. The "show about nothing" — TV Guide once called it the greatest television program ever made — is our **#1**, ranked above the more-watched *Friends* and the endlessly rewatched *The Office*. It earns the crown not on nostalgia but on craft: four self-absorbed New Yorkers, four storylines colliding in the final act, and a "no hugging, no learning" rule that made every episode a perfectly engineered joke machine.
@@ -137,3 +138,5 @@ Popularity and quality aren't the same thing, which is exactly why this list isn
 ## The bottom line
 
 The greatest sitcoms of all time reward different moods: **Seinfeld** for sheer comic engineering, **Friends** and **The Office** for the cozy infinite rewatch, **Frasier** for wit, **Cheers** and **I Love Lucy** for the foundations everything else is built on. Argue the order all you like — that's the fun — but the #1 isn't really up for debate. The show about nothing is still about everything that makes a sitcom great.
+
+**Further reading:** [Steve Carell on Wikipedia](https://en.wikipedia.org/wiki/Steve_Carell) · [Where to watch on JustWatch](https://www.justwatch.com/us/search?q=sitcom).

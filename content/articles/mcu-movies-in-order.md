@@ -25,7 +25,7 @@ targetKeyword: mcu movies in order
 imageAlt: >-
   Composite of Marvel Cinematic Universe hero silhouettes arranged along a
   glowing release-and-timeline track
-imageCredit: The Screen Report
+imageCredit: Wikimedia Commons
 faq:
   - q: How many MCU movies are there in 2026?
     a: >-
@@ -59,6 +59,7 @@ faq:
       the Multiverse of Madness, and Loki expands the multiverse stakes that
       ripple toward Doomsday.
 featured: true
+image: /images/articles/mcu-movies-in-order.jpg
 ---
 
 Here is the fast answer: there are two correct ways to watch the **MCU movies in order**, and they are not the same list. **Release order** starts with *Iron Man* (2008), the film that launched the franchise. **Chronological (timeline) order** starts with *Captain America: The First Avenger*, which is set in the 1940s, decades before Tony Stark builds his first suit. For a first watch, release order wins — the Marvel Cinematic Universe was engineered as serialized storytelling, so its reveals and gut-punches only land if you see them in the sequence audiences did.
@@ -182,3 +183,5 @@ Nearly every MCU film streams on **Disney+**, the franchise's primary home, thou
 ## The bottom line
 
 For most viewers, **release order is the definitive way to watch the MCU movies in order** — begin with *Iron Man*, ride the Infinity Saga through *Endgame* and *Far From Home*, then move into the Multiverse Saga across Phases Four, Five, and Six. Save the **chronological timeline order** for a rewatch once you know the secrets. And if you're catching up for the big one, the road to *Avengers: Doomsday* (December 18, 2026) runs through *The Fantastic Four: First Steps* and *Spider-Man: Brand New Day* — 39 films deep and counting. Bookmark this guide; with *Secret Wars* on the horizon, the map isn't finished yet.
+
+**Further reading:** [Robert Downey Jr. on Wikipedia](https://en.wikipedia.org/wiki/Robert_Downey_Jr.) · [Where to watch on JustWatch](https://www.justwatch.com/us/search?q=Marvel).

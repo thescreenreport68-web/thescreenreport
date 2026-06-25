@@ -25,7 +25,7 @@ targetKeyword: Oppenheimer review
 imageAlt: >-
   Cillian Murphy as J. Robert Oppenheimer in a porkpie hat, staring with hollow
   eyes in Christopher Nolan's Oppenheimer
-imageCredit: The Screen Report
+imageCredit: Wikimedia Commons
 faq:
   - q: Is Oppenheimer worth watching?
     a: >-
@@ -63,6 +63,7 @@ faq:
       It is a serious adult drama rather than a graphically violent one — the
       rating reflects mature themes and a few explicit scenes, not action gore.
 featured: false
+image: /images/articles/oppenheimer-review.jpg
 ---
 
 A three-hour talking-heads biopic about a physicist — much of it set inside a security-clearance hearing, with almost no on-screen explosion — should not move like a thriller. *Oppenheimer* does. So let's not withhold the thing you came to this **Oppenheimer review** to find out: yes, it is worth watching, yes it is a good movie, and it is the best film Christopher Nolan has ever made. The Screen Report rating is **9.5 out of 10. Essential.** The only real question buried inside "is Oppenheimer worth watching" is whether a dialogue-dense, courtroom-heavy drama earns its runtime. It does, completely.
@@ -107,3 +108,5 @@ It isn't flawless. The relentless density means the second half's web of hearing
 *Oppenheimer* is a major film — rigorous, gripping, beautifully made, and morally unflinching in a way mainstream cinema rarely dares. It asks for three hours and your full attention, and it gives back a thriller-paced meditation on genius, guilt, and consequence. The minor knocks are real, but they're the imperfections of a film swinging at something enormous. This is Nolan's most human work because, for once, the puzzle isn't the point. The man is. See it big, see it loud, and give yourself a quiet moment afterward.
 
 **The Screen Report verdict: 9.5/10. Essential.**
+
+**Further reading:** [Cillian Murphy on Wikipedia](https://en.wikipedia.org/wiki/Cillian_Murphy) · [Where to watch on JustWatch](https://www.justwatch.com/us/search?q=Oppenheimer).

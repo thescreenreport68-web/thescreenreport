@@ -26,7 +26,7 @@ targetKeyword: Everything Everywhere All at Once review
 imageAlt: >-
   Michelle Yeoh as Evelyn Wang mid-leap in a multiverse fight sequence from
   Everything Everywhere All at Once
-imageCredit: The Screen Report
+imageCredit: Wikimedia Commons
 faq:
   - q: Is Everything Everywhere All at Once worth watching?
     a: >-
@@ -65,6 +65,7 @@ faq:
       immigrant family talks. It is rated R, mainly for language and some
       violence, with a runtime of about 2 hours 19 minutes.
 featured: false
+image: /images/articles/everything-everywhere-all-at-once-review.jpg
 ---
 
 **The verdict up top:** *Everything Everywhere All at Once* is worth watching, and it mostly earns the hype — but only if you go in knowing the first half-hour is *designed* to overwhelm you. This is Daniels' (Daniel Kwan and Daniel Scheinert) genre-blender about an immigrant mom, hot-dog fingers, and a universe-destroying bagel, anchored by a career-best Michelle Yeoh. If you can ride out the chaos, the payoff is one of the most emotionally direct films of the decade. If pure sensory maximalism makes you tired just reading that sentence, this honest *Everything Everywhere All at Once review* will tell you exactly why — and whether you're in the crowd that should skip it.
@@ -114,3 +115,5 @@ You can stream it on HBO Max, or rent and buy it through Prime Video and Fandang
 ## The bottom line
 
 *Everything Everywhere All at Once* is a messy masterpiece — a deliberately overwhelming sensory assault that's really a tender story about an immigrant mother choosing love over nihilism. It is not subtle, and it is not for everyone. But if you meet it on its terms, it's one of the most generous, big-hearted films of the decade, and a worthy Best Picture winner. Watch it. Then watch it again, knowing the bagel is despair and the kindness is the point.
+
+**Further reading:** [Michelle Yeoh on Wikipedia](https://en.wikipedia.org/wiki/Michelle_Yeoh) · [Where to watch on JustWatch](https://www.justwatch.com/us/search?q=Everything%20Everywhere%20All%20at%20Once).

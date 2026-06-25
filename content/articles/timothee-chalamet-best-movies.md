@@ -26,7 +26,7 @@ targetKeyword: timothee chalamet best movies ranked
 imageAlt: >-
   Stylized portrait illustration of Timothée Chalamet against a cinematic
   spotlight backdrop representing his best movies ranked
-imageCredit: The Screen Report
+imageCredit: Wikimedia Commons
 faq:
   - q: What is Timothée Chalamet's best movie?
     a: >-
@@ -58,6 +58,7 @@ faq:
       parts in Interstellar and Lady Bird, but Elio launched him into awards
       contention. Dune later made him a global box-office lead as Paul Atreides.
 featured: false
+image: /images/articles/timothee-chalamet-best-movies.jpg
 ---
 
 Here is the verdict up front, no teasing: the best **Timothée Chalamet movie** is still *Call Me by Your Name*. Eight years and two more Oscar nominations later, his 2017 breakout remains his finest, most critically acclaimed performance — the role that made him, at 22, the third-youngest Best Actor nominee in Academy history. That is the headline of this ranking of the best **Timothée Chalamet movies ranked** from his essential work down: the quiet indie romance still beats the blockbusters. Not *Dune: Part Two*, his biggest hit. Not his full-body Bob Dylan transformation. The breakthrough wins.
@@ -131,3 +132,5 @@ Availability shifts by region and over time. For tracking down other big titles 
 ## The bottom line
 
 The best **Timothée Chalamet movies ranked** map a remarkable trajectory: from the aching intimacy of *Call Me by Your Name* to the planetary scale of *Dune: Part Two*, with a Bob Dylan transformation and a *Marty Supreme* swing closing fast behind. He is a three-time Oscar nominee who still has not won — a streak that only sharpens the anticipation. The blockbusters got bigger and the scores climbed higher, but the breakthrough still beats them all. For now, *Call Me by Your Name* holds the top spot — and the ranking is far from finished.
+
+**Further reading:** [Timothée Chalamet on Wikipedia](https://en.wikipedia.org/wiki/Timoth%C3%A9e_Chalamet) · [Where to watch on JustWatch](https://www.justwatch.com/us/search?q=Timothee%20Chalamet).

@@ -26,7 +26,7 @@ targetKeyword: best movies on prime video right now
 imageAlt: >-
   Prime Video app home screen on a TV showing the best movies streaming right
   now in June 2026
-imageCredit: The Screen Report
+imageCredit: U.S. Embassy in the Philippines / Public domain (Wikimedia Commons)
 faq:
   - q: What is the best movie on Prime Video right now?
     a: >-
@@ -58,6 +58,7 @@ faq:
       original and streams exclusively on Prime Video, included free with a
       Prime membership.
 featured: false
+image: /images/articles/best-movies-on-prime-video.jpg
 ---
 
 Updated June 2026. If you want the short answer, here it is: the best movie on Prime Video right now is **Paul Thomas Anderson's "One Battle After Another"** (2025), a 95-on-Metacritic awards juggernaut that has been included free with Prime since May 23. Below it sits one of the deepest benches of any streamer — from a perfect-scoring courtroom classic to Scorsese's mob masterpiece — and the full ranked list is right here.
@@ -128,3 +129,5 @@ Here is the distinction rivals blur: "on Prime Video" does not mean "free with P
 ## The bottom line
 
 If you only have one evening, **One Battle After Another** is the clear best movie on Prime Video right now — modern, acclaimed, and free with your membership. For comfort-watch greatness, **12 Angry Men**, **GoodFellas**, and **The Big Sick** are can't-miss. And remember the one rule that separates a good Prime night from a frustrating one: check the **Free with Prime vs. Rent/Buy** tag before you press play. Bookmark this page — we refresh the ranking every month, so it is current the next time you ask what to watch.
+
+**Further reading:** [Rachel Brosnahan on Wikipedia](https://en.wikipedia.org/wiki/Rachel_Brosnahan) · [Where to watch on JustWatch](https://www.justwatch.com/us/search?q=Prime%20Video).

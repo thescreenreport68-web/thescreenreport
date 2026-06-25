@@ -26,7 +26,7 @@ targetKeyword: denis villeneuve movies ranked
 imageAlt: >-
   Director Denis Villeneuve on set, framed against a desert landscape evoking
   his Dune adaptations
-imageCredit: The Screen Report
+imageCredit: Wikimedia Commons
 faq:
   - q: What is Denis Villeneuve's best movie?
     a: >-
@@ -59,6 +59,7 @@ faq:
       films, but has never won. Dune: Part Three is seen as a strong future
       contender.
 featured: false
+image: /images/articles/denis-villeneuve-movies-ranked.jpg
 ---
 
 There's no withholding the answer here: the top of any honest **Denis Villeneuve movies ranked** list comes down to three titans — *Arrival*, *Blade Runner 2049*, and *Dune: Part Two* — and after eleven features, we give the crown to *Blade Runner 2049*, with *Arrival* a hair behind and *Dune: Part Two* completing the podium. That's the debate-settler. Everything below is the full countdown, worst to best, with where each film actually earns its spot.
@@ -145,3 +146,5 @@ For all the acclaim, Villeneuve has never won a competitive Academy Award — a 
 ## The bottom line
 
 Every Villeneuve feature ranked worst to best lands on a simple truth: even his lesser work would headline most directors' careers. The top tier — *Blade Runner 2049*, *Arrival*, *Dune: Part Two* — is as strong a top three as any living filmmaker can claim. Crown whichever you love most; the only wrong answer is pretending the choice is easy. Now go argue about it.
+
+**Further reading:** [Denis Villeneuve on Wikipedia](https://en.wikipedia.org/wiki/Denis_Villeneuve) · [Where to watch on JustWatch](https://www.justwatch.com/us/search?q=Denis%20Villeneuve).

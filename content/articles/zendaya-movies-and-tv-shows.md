@@ -26,7 +26,7 @@ targetKeyword: zendaya movies and tv shows
 imageAlt: >-
   Zendaya at a film premiere, known for Euphoria, Dune, Spider-Man and
   Challengers
-imageCredit: The Screen Report
+imageCredit: Wikimedia Commons
 faq:
   - q: How many movies and TV shows has Zendaya been in?
     a: >-
@@ -66,6 +66,7 @@ faq:
       her movie-star range, then Spider-Man: Homecoming for her breakout
       blockbuster turn as MJ.
 featured: true
+image: /images/articles/zendaya-movies-and-tv-shows.jpg
 ---
 
 Here's the short answer: across roughly 15 feature films and more than a dozen TV projects, Zendaya's essential **movies and TV shows** are her two Emmy-winning seasons as Rue Bennett in HBO's *Euphoria*, the Fremen warrior **Chani** in Denis Villeneuve's *Dune* films, **MJ (Michelle Jones)** across three *Spider-Man* movies, and tennis power player **Tashi Duncan** in *Challengers* — a span that took her from Disney Channel kid to Emmy-winning, blockbuster-anchoring lead. This guide names every title, role, year and where to stream, lays out a chronological order to watch, ranks the best, and breaks down the biggest year of her career: a once-in-a-lifetime **2026** with five major releases.
@@ -137,3 +138,5 @@ Two December tentpoles, a Nolan epic and a final *Euphoria* in one year is, simp
 ## The Bottom Line
 
 Zendaya's career rewards both casual fans and completists. Start with *Euphoria* for her dramatic peak, add *Challengers* and *Dune: Part Two* for her movie-star range, rewind to *Shake It Up* and *Spider-Man: Homecoming* for the origin, then clear your 2026 calendar — *The Drama*, *Euphoria* S3, *The Odyssey*, *Spider-Man: Brand New Day* and *Dune: Part Three* make it the single biggest year of her career. Few stars have traveled from Disney kid to Emmy-winning, billion-dollar lead this fast — or this completely.
+
+**Further reading:** [Zendaya on Wikipedia](https://en.wikipedia.org/wiki/Zendaya) · [Where to watch on JustWatch](https://www.justwatch.com/us/search?q=Zendaya).

@@ -24,6 +24,8 @@ export default function ArticleCard({
             slug={article.slug}
             category={article.category}
             title={article.title}
+            src={article.image}
+            alt={article.imageAlt}
             className="aspect-square w-24 sm:w-28"
           />
         </Link>
@@ -53,6 +55,8 @@ export default function ArticleCard({
           slug={article.slug}
           category={article.category}
           title={article.title}
+          src={article.image}
+          alt={article.imageAlt}
           className="aspect-video w-full"
         />
       </Link>

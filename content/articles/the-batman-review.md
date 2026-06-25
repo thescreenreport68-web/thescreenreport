@@ -26,7 +26,7 @@ targetKeyword: The Batman review
 imageAlt: >-
   Robert Pattinson as a cowled, rain-soaked Batman emerging from shadow in Matt
   Reeves' The Batman (2022)
-imageCredit: The Screen Report
+imageCredit: Wikimedia Commons
 faq:
   - q: Is The Batman (2022) worth watching?
     a: >-
@@ -64,6 +64,7 @@ faq:
       toward hope. This Batman lives in its own standalone universe, separate
       from the main DC Universe, and continues in The Batman Part II.
 featured: false
+image: /images/articles/the-batman-review.jpg
 ---
 
 Yes, The Batman is worth watching — and it's one of the best films the character has ever had. Matt Reeves' 2022 take is a 2-hour-56-minute rain-soaked detective noir that trades superhero spectacle for a serial-killer mystery, and Robert Pattinson plays a raw, year-two Bruce Wayne who is less billionaire playboy than insomniac obsessive. If you came to this **The Batman review** for a verdict before committing nearly three hours: it works. The single real cost of entry is that runtime.
@@ -115,3 +116,5 @@ As a pure piece of filmmaking, this sits comfortably alongside the genre's heavy
 ## The bottom line
 
 The Batman is a confident, atmospheric, occasionally exhausting triumph — the rare comic-book movie that wants to be a great *film* first and a franchise machine second. Pattinson is the best Batman in years, Dano's Riddler is genuinely frightening, and Reeves' rain-drenched Gotham is unforgettable. It is too long, and the PG-13 darkness won't suit every mood. But if you can give it the three hours, it pays the gamble off in full. Highly recommended — just clear your evening first.
+
+**Further reading:** [Robert Pattinson on Wikipedia](https://en.wikipedia.org/wiki/Robert_Pattinson) · [Where to watch on JustWatch](https://www.justwatch.com/us/search?q=The%20Batman).

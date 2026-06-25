@@ -27,7 +27,7 @@ targetKeyword: where to watch Harry Potter movies
 imageAlt: >-
   Hogwarts castle at night, illustrating where to watch the Harry Potter movies
   in order in 2026
-imageCredit: The Screen Report
+imageCredit: Wikimedia Commons
 faq:
   - q: Where can I watch all 8 Harry Potter movies right now?
     a: >-
@@ -58,6 +58,7 @@ faq:
       sites claiming free full-movie streams, as they are typically pirated or
       unsafe.
 featured: false
+image: /images/articles/where-to-watch-harry-potter-movies.jpg
 ---
 
 If you want to know **where to watch the Harry Potter movies** in order, here is the blunt 2026 answer: through **June 30**, all eight films stream on **both HBO Max and Peacock** in the US. On **July 1, 2026**, Warner Bros. pulls the entire saga from both services at once. After that, the only guaranteed way to watch every film in order, on demand, is to **rent or buy** them on Amazon Prime Video, Apple TV, Google Play/YouTube, or Fandango at Home.
@@ -117,3 +118,5 @@ Avoid any website promising free full-movie streams of Harry Potter. Those are a
 ## The bottom line
 
 For **where to stream Harry Potter 2026**: binge on **HBO Max or Peacock before July 1**, when the entire saga leaves both. After that, **buy the 8-film bundle** on Prime Video, Apple TV, Google Play, or Fandango at Home — it's the cheapest long-term way to watch every film in order, with no risk of another disappearing act before the HBO series lands this December. Netflix and Disney+ never had it, so don't waste time looking there.
+
+**Further reading:** [Daniel Radcliffe on Wikipedia](https://en.wikipedia.org/wiki/Daniel_Radcliffe) · [Where to watch on JustWatch](https://www.justwatch.com/us/search?q=Harry%20Potter).

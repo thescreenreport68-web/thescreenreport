@@ -26,7 +26,7 @@ targetKeyword: best A24 movies ranked
 imageAlt: >-
   Collage of iconic A24 films including Hereditary, Moonlight and Everything
   Everywhere All at Once
-imageCredit: The Screen Report
+imageCredit: Frank Sun / CC BY-SA 4.0 (Wikimedia Commons)
 faq:
   - q: What is the best A24 movie?
     a: >-
@@ -59,6 +59,7 @@ faq:
       most influential boutique studio of its era, blending arthouse credibility
       with cult fandom and Oscar wins.
 featured: false
+image: /images/articles/best-a24-movies-ranked.jpg
 ---
 
 If you only watch one, make it **Everything Everywhere All at Once** — the multiverse epic that swept seven Oscars and made A24 the first studio ever to win all top six Academy Award categories in a single year. That sits at the summit of our **best A24 movies ranked** countdown, but it is far from the studio's only masterpiece. Below is the full list, worst-to-best is for cowards, so we are counting down from great to greatest.
@@ -151,3 +152,5 @@ Always confirm with a tracker like JustWatch, since the best A24 movies on Max, 
 ## The bottom line
 
 A24 went from scrappy 2012 upstart to the defining studio of modern prestige film in barely a decade, winning two Best Pictures, making horror respectable, and now topping $300 million at the box office. If you watch only one, make it **Everything Everywhere All at Once**. If you want the scares, start with **Hereditary**. Either way, that little logo has earned its reputation, one cult classic at a time.
+
+**Further reading:** [Florence Pugh on Wikipedia](https://en.wikipedia.org/wiki/Florence_Pugh) · [Where to watch on JustWatch](https://www.justwatch.com/us/search?q=A24).

@@ -25,7 +25,7 @@ targetKeyword: best heist movies of all time
 imageAlt: >-
   A masked crew of thieves cracking a vault in a dimly lit bank, a classic heist
   movie scene
-imageCredit: The Screen Report
+imageCredit: Bryan Berlin / CC BY-SA 4.0 (Wikimedia Commons)
 faq:
   - q: What is considered the greatest heist movie ever made?
     a: >-
@@ -58,6 +58,7 @@ faq:
       broader umbrella term and includes darker, more violent or tragic entries
       such as Heat and Reservoir Dogs.
 featured: false
+image: /images/articles/best-heist-movies.jpg
 ---
 
 If you want the verdict first, here it is: the best heist movies of all time are led by Michael Mann's **Heat** (1995), the greatest heist movie ever made, followed by Jules Dassin's **Rififi** (1955), Steven Soderbergh's **Ocean's Eleven** (2001), Sidney Lumet's **Dog Day Afternoon** (1975), Quentin Tarantino's **Reservoir Dogs** (1992), Stanley Kubrick's **The Killing** (1956), and Spike Lee's **Inside Man** (2006). Each perfects a different corner of the genre, from grim noir tragedy to glossy con-man fun.
@@ -114,3 +115,5 @@ The genre runs deep, and these classics and modern bank-robbery movies round out
 ## The Bottom Line
 
 The best heist movies of all time all run on the same engine, the plan and the thing that ruins it, but they prove how much range that engine has. Start with **Heat** for the epic and **Rififi** for the blueprint. Then chase the mood you want, whether that's the tragedy of **Dog Day Afternoon**, the paranoia of **Reservoir Dogs**, the puzzle of **Inside Man**, or the sheer cool of **Ocean's Eleven**.
+
+**Further reading:** [George Clooney on Wikipedia](https://en.wikipedia.org/wiki/George_Clooney) · [Where to watch on JustWatch](https://www.justwatch.com/us/search?q=heist).

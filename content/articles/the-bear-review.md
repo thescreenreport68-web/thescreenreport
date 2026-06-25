@@ -27,7 +27,7 @@ targetKeyword: The Bear Season 5 review
 imageAlt: >-
   Sydney, Richie and the team work the pass during the final service in The Bear
   Season 5 on FX on Hulu
-imageCredit: The Screen Report
+imageCredit: Wikimedia Commons
 faq:
   - q: Is The Bear Season 5 the final season?
     a: >-
@@ -61,6 +61,7 @@ faq:
       episodes also airing on FX linear. Internationally it streams on Disney+.
       All eight episodes were released on June 25, 2026.
 featured: false
+image: /images/articles/the-bear-review.jpg
 ---
 
 **The Bear Season 5 is a triumphant final service** — a lean, eight-episode send-off that critics are calling the show's best run since Season 2. After two divisive years (Season 4 was the lowest-rated yet), FX's kitchen drama strips everything back to a single rainy day, one real-time last service, and a pounding Hans Zimmer score in place of the usual '90s needle drops. The early verdict is loud and unanimous: it sticks the landing.
@@ -123,3 +124,5 @@ In the US, all eight episodes stream on **Hulu**, branded as FX on Hulu, with a 
 ## The bottom line
 
 After a rocky stretch that had fans wondering if the magic was gone, **The Bear Season 5 is a worthy, emotionally satisfying ending** — focused, propulsive, and brave enough to bench its leading man for the greater good. The Zimmer score is a swing that pays off, Edebiri owns the kitchen, and the single-service structure gives the finale the weight it needs. As a final season, it doesn't just survive the comparison to the show's best years; it joins them. Last call, and the kitchen goes out roaring. **Verdict: 4.5 out of 5.**
+
+**Further reading:** [Jeremy Allen White on Wikipedia](https://en.wikipedia.org/wiki/Jeremy_Allen_White) · [Where to watch on JustWatch](https://www.justwatch.com/us/search?q=The%20Bear).

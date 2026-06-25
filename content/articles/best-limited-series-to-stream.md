@@ -26,7 +26,7 @@ targetKeyword: best limited series to stream right now
 imageAlt: >-
   Collage of 2026 prestige limited series, illustrating the best limited series
   to stream right now across Netflix, HBO Max and Apple TV+
-imageCredit: The Screen Report
+imageCredit: 'https://www.flickr.com/photos/drlovell/ / CC BY-SA 2.0 (Wikimedia Commons)'
 faq:
   - q: What are the best limited series to stream right now in 2026?
     a: >-
@@ -57,6 +57,7 @@ faq:
       story and cast, as Beef and Fargo did, but each season still stands on its
       own.
 featured: false
+image: /images/articles/best-limited-series-to-stream.jpg
 ---
 
 If you want the short answer, the best limited series to stream right now are **Lord of the Flies** (Netflix), **Half Man** (HBO Max), **Beef Season 2** (Netflix), **DTF St. Louis** (HBO Max) and **Agatha Christie's Seven Dials** (Netflix) among the 2026 newcomers — plus modern all-timers **Chernobyl**, **Baby Reindeer**, **The Night Of** and **Band of Brothers**. Every one delivers a complete, satisfying story with a real ending, and most finish in a single weekend. Below I've ranked them by platform with a one-line hook and where to watch each.
@@ -128,3 +129,5 @@ Because the format runs short, a "wrong" pick costs you a few hours, not a few m
 ## The bottom line
 
 The best limited series to stream right now reward you with something increasingly rare on television: a full, finished story that respects your time. Lead with a 2026 standout like Lord of the Flies or Half Man, fall back on an all-timer like Chernobyl or Baby Reindeer, and branch out by mood from there. None of them will leave you hanging — and that's the whole point. Keep this list bookmarked; we update it as new contenders arrive.
+
+**Further reading:** [Jodie Comer on Wikipedia](https://en.wikipedia.org/wiki/Jodie_Comer) · [Where to watch on JustWatch](https://www.justwatch.com/us/search?q=limited%20series).

@@ -28,7 +28,7 @@ targetKeyword: oppenheimer ending explained
 imageAlt: >-
   Cillian Murphy as J. Robert Oppenheimer standing by a pond in the final scene
   of Christopher Nolan's Oppenheimer
-imageCredit: The Screen Report
+imageCredit: Wikimedia Commons
 faq:
   - q: What did Oppenheimer say to Einstein at the end of the movie?
     a: >-
@@ -60,6 +60,7 @@ faq:
       race the bomb set off, a self-perpetuating spiral toward mutually assured
       destruction.
 featured: false
+image: /images/articles/oppenheimer-ending-explained.jpg
 ---
 
 If you just walked out of Christopher Nolan's *Oppenheimer* feeling gut-punched and a little lost, here's the **oppenheimer ending explained** in one breath: that final lakeside conversation between Oppenheimer (Cillian Murphy) and Albert Einstein (Tom Conti) was never about Lewis Strauss. It was about the end of the world. Oppenheimer tells Einstein that the chain reaction he once feared, the one that might ignite the atmosphere, has already begun, just not in the way anyone expected. And then the sky catches fire.
@@ -109,3 +110,5 @@ Grounding the **oppenheimer ending explained einstein** scene in history: the me
 ## The bottom line
 
 The ending of *Oppenheimer* lands its blow by reframing a single conversation. Strauss thought the lakeside talk ruined his career; it never mentioned him. Oppenheimer and Einstein were instead reckoning with the **oppenheimer chain reaction ending meaning** in its fullest, most chilling form: that the bomb set off a reaction the world can't stop, and that the fire, in some sense, is still spreading. Nolan ends on Oppenheimer's stricken face and a burning sky because the point isn't whether the bomb worked. It's that it's still working, decades later, in every warhead it inspired.
+
+**Further reading:** [Cillian Murphy on Wikipedia](https://en.wikipedia.org/wiki/Cillian_Murphy) · [Where to watch on JustWatch](https://www.justwatch.com/us/search?q=Oppenheimer).

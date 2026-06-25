@@ -120,6 +120,8 @@ export default function ArticlePage({
               slug={article.slug}
               category={article.category}
               title={article.title}
+              src={article.image}
+              alt={article.imageAlt}
               className="aspect-video w-full"
             />
             <figcaption className="mt-2 leading-snug">

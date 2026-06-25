@@ -27,7 +27,7 @@ targetKeyword: pedro pascal movies and tv shows
 imageAlt: >-
   Actor Pedro Pascal at a film premiere, known for The Mandalorian, The Last of
   Us and The Fantastic Four: First Steps
-imageCredit: The Screen Report
+imageCredit: Wikimedia Commons
 faq:
   - q: What is Pedro Pascal best known for?
     a: >-
@@ -61,6 +61,7 @@ faq:
       Richards, set for December. Release dates can shift, so check current
       listings.
 featured: false
+image: /images/articles/pedro-pascal-movies-and-tv.jpg
 ---
 
 If you want the short answer: Pedro Pascal is best known for four roles that arrived in just over a decade — **Oberyn Martell** in *Game of Thrones*, DEA agent **Javier Peña** in *Narcos*, masked bounty hunter **Din Djarin** in *The Mandalorian*, and grief-hardened survivor **Joel Miller** in *The Last of Us* — before he stepped into the Marvel Cinematic Universe as **Reed Richards** in *The Fantastic Four: First Steps*. This guide to Pedro Pascal movies and TV shows lays out every major role in order, tells you exactly where to stream each one, ranks the essential watches, and previews what's coming in 2026.
@@ -128,3 +129,5 @@ His Pedro Pascal upcoming movies and TV shows for 2026 are massive. First comes 
 ## The Bottom Line
 
 Pedro Pascal's filmography rewards both casual viewers and completists. Start with *The Last of Us* and *The Mandalorian* for his defining performances, rewind to *Game of Thrones* and *Narcos* for the roles that launched him, sample his range in *Materialists* and *Gladiator II*, then look ahead to *The Mandalorian and Grogu* and *Avengers: Doomsday* in 2026. Few actors have built a more versatile — or more bingeable — body of work this quickly.
+
+**Further reading:** [Pedro Pascal on Wikipedia](https://en.wikipedia.org/wiki/Pedro_Pascal) · [Where to watch on JustWatch](https://www.justwatch.com/us/search?q=Pedro%20Pascal).

@@ -25,7 +25,7 @@ targetKeyword: 'Dune: Part Two review'
 imageAlt: >-
   Timothee Chalamet as Paul Atreides rides a sandworm across the desert of
   Arrakis in Dune: Part Two
-imageCredit: The Screen Report
+imageCredit: Wikimedia Commons
 faq:
   - q: 'Is Dune: Part Two worth watching?'
     a: >-
@@ -64,6 +64,7 @@ faq:
       on a sandworm, sharpening the film's critique of the white-savior myth and
       Paul's turn into a darker messianic figure.
 featured: false
+image: /images/articles/dune-part-two-review.jpg
 ---
 
 **The verdict up front:** *Dune: Part Two* is the rare sequel that towers over its predecessor. Denis Villeneuve's second chapter is a darker, faster, more emotionally charged film than *Dune* (2021), and it earns its 2-hour-46-minute runtime by trading spectacle-for-spectacle's-sake for real stakes. The numbers back it up — this **Dune: Part Two review** lands on the same side as the critical consensus, which has pushed the film to a **92% Rotten Tomatoes score** (8.4/10 average across 466-plus reviews), a full nine points above the original's 83%. If you only see one blockbuster on the biggest screen you can find this year, make it this one.
@@ -120,3 +121,5 @@ If you've been scanning **Dune Part Two review Reddit** threads, the temperature
 ## The bottom line
 
 *Dune: Part Two* is a triumph — a sequel that deepens its predecessor instead of merely repeating it, fusing jaw-dropping IMAX spectacle with a story brave enough to interrogate its own hero. It is better than the 2021 original, it earns every minute of its 166-minute runtime, and its book-deviating ending sets the table beautifully for *Dune Messiah*. See it on the largest screen you can. **Verdict: 9.5/10 — an essential, era-defining piece of blockbuster filmmaking.**
+
+**Further reading:** [Austin Butler on Wikipedia](https://en.wikipedia.org/wiki/Austin_Butler) · [Where to watch on JustWatch](https://www.justwatch.com/us/search?q=Dune%20Part%20Two).

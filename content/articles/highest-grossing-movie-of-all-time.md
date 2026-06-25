@@ -24,7 +24,7 @@ targetKeyword: highest grossing movie of all time
 imageAlt: >-
   Avatar's bioluminescent world of Pandora, the highest-grossing movie of all
   time at roughly $2.92 billion worldwide
-imageCredit: The Screen Report
+imageCredit: Wikimedia Commons
 faq:
   - q: What is the highest grossing movie of all time?
     a: >-
@@ -58,6 +58,7 @@ faq:
       2021 thanks to a China re-release. Endgame finished at about $2.8 billion,
       just behind Avatar's $2.92 billion.
 featured: false
+image: /images/articles/highest-grossing-movie-of-all-time.jpg
 ---
 
 The highest-grossing movie of all time is **Avatar** (2009), James Cameron's sci-fi epic, with roughly **$2.92 billion** in worldwide box office — about $2,923,710,708 as tracked by Box Office Mojo. That figure is not adjusted for inflation, and as of 2026 it still sits at the very top. So if you came here for the plain answer to *what is the highest grossing movie of all time*, that's it: a blue-skinned, motion-captured adventure on the moon Pandora that nobody expected to dethrone *Titanic* — Cameron's own previous record-holder.
@@ -130,3 +131,5 @@ Box office records are evergreen questions with volatile answers. Totals shift w
 ## The bottom line
 
 The highest-grossing movie of all time is **Avatar** at roughly **$2.92 billion** worldwide — the nominal, not-adjusted-for-inflation #1, a title it briefly surrendered to Avengers: Endgame in 2019 before reclaiming it in 2021. Endgame ($2.8B) remains the closest challenger and arguably the bigger single-run earner. And once you adjust for inflation, the true money king is **Gone with the Wind** at an estimated $4.5 billion-plus. Three different answers, all correct — it just depends on whether you're counting dollars, eras, or one continuous run at the multiplex.
+
+**Further reading:** [James Cameron on Wikipedia](https://en.wikipedia.org/wiki/James_Cameron) · [Where to watch on JustWatch](https://www.justwatch.com/us/search?q=Avatar).

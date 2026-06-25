@@ -26,7 +26,7 @@ imageAlt: >-
   Poster collage of the best sci-fi movies of the 21st century including Eternal
   Sunshine of the Spotless Mind, Arrival, Blade Runner 2049, Children of Men and
   Dune in a ranked grid
-imageCredit: The Screen Report
+imageCredit: Harald Krichel / CC BY-SA 4.0 (Wikimedia Commons)
 faq:
   - q: What is the best sci-fi movie of the 21st century?
     a: >-
@@ -60,6 +60,7 @@ faq:
       something pointed about the present. Children of Men is the one critics
       return to most often.
 featured: false
+image: /images/articles/best-sci-fi-movies-21st-century.jpg
 ---
 
 If you want the headline straight away, here it is: the highest-ranked sci-fi film on the most important critics' poll of the era is not Inception, Interstellar or Avatar. It is **Eternal Sunshine of the Spotless Mind** (2004), the Jim Carrey breakup movie. When *The New York Times* surveyed more than 500 directors, actors and critics for its Best Films of the 21st Century list, Charlie Kaufman and Michel Gondry's memory-erasing romance landed at **No. 7 overall**, ahead of every spectacle giant the genre has produced since.
@@ -123,3 +124,5 @@ That is why **Avatar (2009)**, a real technical landmark, sits below the idea-dr
 ## The bottom line
 
 The best sci-fi movies of the 21st century share one trait: they use the impossible to say something true about being alive right now. The critics' consensus crowned a small, sad love story, Eternal Sunshine, over every blockbuster in the genre, and that should tell you where to start. Begin at the top, then work down, because the deeper this list goes, the stranger and more rewarding it gets.
+
+**Further reading:** [Scarlett Johansson on Wikipedia](https://en.wikipedia.org/wiki/Scarlett_Johansson) · [Where to watch on JustWatch](https://www.justwatch.com/us/search?q=science%20fiction).

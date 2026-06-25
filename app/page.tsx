@@ -99,6 +99,8 @@ export default function HomePage() {
                 slug={hero.slug}
                 category={hero.category}
                 title={hero.title}
+                src={hero.image}
+                alt={hero.imageAlt}
                 className="aspect-video w-full"
               />
             </Link>

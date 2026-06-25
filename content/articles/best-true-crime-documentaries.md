@@ -29,7 +29,7 @@ imageAlt: >-
   Stylized illustration of an evidence board with photos, red string and case
   files glowing on a TV screen, representing the best true crime documentaries
   to stream
-imageCredit: The Screen Report
+imageCredit: Wikimedia Commons
 faq:
   - q: What is the best true crime documentary of all time?
     a: >-
@@ -63,6 +63,7 @@ faq:
       Don't F**k with Cats is built almost entirely from real internet footage
       and the online sleuths who pieced the case together.
 featured: false
+image: /images/articles/best-true-crime-documentaries.jpg
 ---
 
 If you want the short answer, the **best true crime documentaries to stream** right now are **The Jinx** (Max), **Making a Murderer** (Netflix), **The Thin Blue Line** (Max/rental), **Paradise Lost** (Max) and **Wild Wild Country** (Netflix) — a canon that not only defined the genre but, in two cases, literally changed real verdicts. Below is the full ranked guide: the all-time greats, the best new bingeable docuseries for 2026, and exactly where each one streams.
@@ -146,3 +147,5 @@ If a documentary leaves you with questions, that's a feature, not a flaw: read a
 ## The bottom line
 
 The **best true crime documentaries to stream** reward you with the rarest thing in the genre: a real mystery, told with craft and, sometimes, real consequence. Start with The Thin Blue Line, The Jinx or Making a Murderer, then branch out by platform and mood. Bookmark this guide — we keep it current as new 2026 contenders drop, and the well only gets deeper.
+
+**Further reading:** [Joe Berlinger on Wikipedia](https://en.wikipedia.org/wiki/Joe_Berlinger) · [Where to watch on JustWatch](https://www.justwatch.com/us/search?q=true%20crime).

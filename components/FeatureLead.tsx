@@ -19,6 +19,8 @@ export default function FeatureLead({
           slug={article.slug}
           category={article.category}
           title={article.title}
+          src={article.image}
+          alt={article.imageAlt}
           className="aspect-video w-full"
         />
       </Link>
