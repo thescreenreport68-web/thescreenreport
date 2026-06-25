@@ -4,13 +4,14 @@ import { getCategory } from "@/lib/site";
 import { formatTime } from "@/lib/format";
 import type { Article } from "@/lib/articles";
 
-// The Hollywood Reporter "LATEST NEWS" rail: red category label + bold timestamp,
-// a substantial serif headline, dotted dividers, and an ad interleaved after a few items.
+// THR "LATEST NEWS" rail: condensed-display uppercase title; each item = red
+// category label + grey timestamp, standard-serif headline, 1px dotted #5A5A5A
+// dividers, with a 300x250 ad after the 3rd item.
 export default function LatestNews({ items }: { items: Article[] }) {
   return (
     <div>
-      <div className="mb-3 border-b border-navy/15 pb-2">
-        <h2 className="font-display text-2xl font-bold uppercase tracking-tight text-navy">
+      <div className="mb-2 border-b border-hair pb-2">
+        <h2 className="font-display text-2xl font-bold uppercase tracking-tight text-navy sm:text-[1.8rem]">
           Latest News
         </h2>
       </div>
@@ -19,22 +20,22 @@ export default function LatestNews({ items }: { items: Article[] }) {
           const cat = getCategory(a.category);
           return (
             <li key={a.slug}>
-              <article className="border-b border-dotted border-navy/30 py-4 first:pt-1">
-                <div className="mb-1.5 flex items-center gap-2.5">
-                  <span className="font-sans text-[11px] font-bold uppercase tracking-[0.08em] text-breaking">
+              <article className="border-b border-dotted border-slate py-3.5 first:pt-2">
+                <div className="mb-1 flex items-center gap-2.5">
+                  <span className="font-sans text-[11px] font-bold uppercase tracking-[0.04em] text-breaking">
                     {cat?.name} News
                   </span>
-                  <span className="font-sans text-[11px] font-bold uppercase tracking-[0.04em] text-navy">
+                  <span className="font-sans text-[11px] font-bold uppercase tracking-[0.04em] text-slate">
                     {formatTime(a.date)}
                   </span>
                 </div>
-                <h3 className="font-body text-[1.05rem] font-normal leading-[1.35] text-navy hover:text-navy/70">
+                <h3 className="font-body text-[1.05rem] font-normal leading-[1.2] text-navy hover:text-breaking">
                   <Link href={`/${a.category}/${a.slug}/`}>{a.title}</Link>
                 </h3>
               </article>
               {i === 2 ? (
-                <div className="border-b border-dotted border-navy/30 py-5">
-                  <div className="mb-2 text-center text-[10px] font-bold uppercase tracking-[0.2em] text-navy/40">
+                <div className="border-b border-dotted border-slate py-5">
+                  <div className="mb-2 text-center text-[10px] font-bold uppercase tracking-[0.2em] text-slate/60">
                     Advertisement
                   </div>
                   <AdSlot format="rectangle" />

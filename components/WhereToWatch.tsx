@@ -22,7 +22,7 @@ export default function WhereToWatch() {
               title={p.title}
               className="aspect-[2/3] w-full rounded ring-1 ring-navy/10"
             />
-            <h3 className="mt-2 font-display text-base font-semibold leading-snug text-navy">
+            <h3 className="mt-2 font-body text-base font-normal leading-snug text-navy">
               {p.title}
             </h3>
             <p className="mt-1 font-sans text-xs font-semibold text-gold-600">

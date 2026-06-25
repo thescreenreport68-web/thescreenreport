@@ -9,48 +9,51 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // THR palette: near-black ink + a bright red accent on white.
-        // (Token names kept as navy/gold so existing classes recolor in place:
-        //  navy = ink/black, gold = THR red.)
+        // THR ("Larva") tokens — token names kept as navy/gold so existing classes recolor.
+        // navy = ink (#101010 / #000), gold = THR brand red (#D92128).
         navy: {
-          DEFAULT: "#1A1A1A",
-          900: "#0E0E0E",
-          800: "#1A1A1A",
+          DEFAULT: "#101010",
+          900: "#000000",
+          800: "#101010",
           700: "#3A3A3A",
         },
         gold: {
-          DEFAULT: "#E0102B",
-          600: "#C20E24",
+          DEFAULT: "#D92128",
+          600: "#B81C22",
         },
-        breaking: "#E0102B",
-        ink: "#0E0E0E",
-        ink2: "#222222",
-        slate: "#52525B",
-        faint: "#71717A",
-        hair: "#E4E4E7",
-        mist: "#F4F4F5",
+        breaking: "#D92128",
+        ink: "#000000",
+        ink2: "#101010",
+        slate: "#5A5A5A", // grey-dark: bylines, timestamps, dotted dividers
+        faint: "#5A5A5A",
+        grey: "#8C8C8C", // mid grey: solid section rules
+        hair: "#DCDCDC", // grey-light: hairlines
+        mist: "#EFEFEF", // grey-lightest: image placeholder bg
       },
       fontFamily: {
+        // Kepler condensed display — hero headline + SECTION TITLES only.
         display: ['"kepler-std-semicondensed-dis"', "var(--font-display)", "Georgia", "serif"],
         serif: ['"kepler-std-semicondensed-dis"', "var(--font-display)", "Georgia", "serif"],
         dek: ["var(--font-display)", "Georgia", "serif"],
+        // Source Serif 4 — stand-in for standard "kepler-std": ALL article/news/card headlines + body.
         body: ["var(--font-body)", "Georgia", "serif"],
+        // Karla — labels, kickers, nav, bylines, timestamps.
         sans: ["var(--font-sans)", "system-ui", "sans-serif"],
       },
       maxWidth: {
-        wide: "1280px",
+        wide: "1160px",
         prose: "680px",
       },
       typography: () => ({
         screen: {
           css: {
-            "--tw-prose-body": "#222222",
-            "--tw-prose-headings": "#1A1A1A",
-            "--tw-prose-links": "#1A1A1A",
-            "--tw-prose-bold": "#0E0E0E",
-            "--tw-prose-quotes": "#1A1A1A",
-            "--tw-prose-bullets": "#E0102B",
-            "--tw-prose-counters": "#E0102B",
+            "--tw-prose-body": "#101010",
+            "--tw-prose-headings": "#000000",
+            "--tw-prose-links": "#101010",
+            "--tw-prose-bold": "#000000",
+            "--tw-prose-quotes": "#101010",
+            "--tw-prose-bullets": "#D92128",
+            "--tw-prose-counters": "#D92128",
             maxWidth: "680px",
             fontFamily: "var(--font-body), Georgia, serif",
             fontSize: "1.1875rem",
@@ -71,7 +74,7 @@ const config: Config = {
             },
             a: {
               textDecoration: "underline",
-              textDecorationColor: "#E0102B",
+              textDecorationColor: "#D92128",
               textDecorationThickness: "1px",
               textUnderlineOffset: "3px",
               fontWeight: "600",
@@ -81,11 +84,11 @@ const config: Config = {
               fontStyle: "italic",
               fontWeight: "500",
               fontSize: "1.4rem",
-              color: "#1A1A1A",
+              color: "#101010",
               borderLeftWidth: "3px",
-              borderLeftColor: "#E0102B",
+              borderLeftColor: "#D92128",
             },
-            "li::marker": { color: "#E0102B" },
+            "li::marker": { color: "#D92128" },
           },
         },
       }),

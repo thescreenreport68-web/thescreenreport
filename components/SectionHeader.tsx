@@ -1,55 +1,67 @@
 import Link from "next/link";
 
-// The Hollywood Reporter section-header pattern: serif title + small italic tagline
-// + "See all" link, sitting on a thin navy hairline with a short gold accent tick.
+function Chevron() {
+  return (
+    <svg
+      width="9"
+      height="9"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="3"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="ml-1 inline-block align-middle"
+    >
+      <path d="m9 18 6-6-6-6" />
+    </svg>
+  );
+}
+
 export default function SectionHeader({
   title,
   tagline,
   href,
-  cta = "See all",
+  cta = "See All",
   center = false,
-  accent = "text-gold-600",
 }: {
   title: string;
   tagline?: string;
   href?: string;
   cta?: string;
   center?: boolean;
-  accent?: string;
 }) {
   if (center) {
     return (
-      <div className="mb-6 text-center">
-        <h2 className="font-display text-3xl font-semibold uppercase tracking-tight text-navy">
+      <div className="mb-5 text-center">
+        <h2 className="font-display text-2xl font-bold uppercase tracking-tight text-navy sm:text-[1.8rem]">
           {title}
         </h2>
         {tagline ? (
-          <p className="mt-1 font-dek text-sm italic text-faint">{tagline}</p>
+          <p className="mt-1 font-dek text-base italic text-slate">{tagline}</p>
         ) : null}
       </div>
     );
   }
   return (
-    <div className="relative mb-6 border-b border-navy/15 pb-2.5">
-      <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-        <div className="flex flex-wrap items-baseline gap-x-3">
-          <h2 className="font-display text-2xl font-semibold tracking-tight text-navy sm:text-[1.7rem]">
-            {title}
-          </h2>
-          {tagline ? (
-            <span className="font-dek text-sm italic text-faint">{tagline}</span>
-          ) : null}
-        </div>
-        {href ? (
-          <Link
-            href={href}
-            className={`font-sans text-xs font-bold uppercase tracking-[0.14em] hover:text-navy ${accent}`}
-          >
-            {cta} →
-          </Link>
+    <div className="mb-5 flex items-end justify-between gap-3 border-b border-hair pb-2">
+      <div className="flex flex-wrap items-baseline gap-x-3">
+        <h2 className="font-display text-2xl font-bold uppercase tracking-tight text-navy sm:text-[1.8rem]">
+          {title}
+        </h2>
+        {tagline ? (
+          <span className="font-dek text-base italic text-slate">{tagline}</span>
         ) : null}
       </div>
-      <span className="absolute -bottom-px left-0 h-0.5 w-12 bg-gold" />
+      {href ? (
+        <Link
+          href={href}
+          className="shrink-0 whitespace-nowrap font-sans text-xs font-bold uppercase tracking-[0.06em] text-slate hover:text-breaking"
+        >
+          {cta}
+          <Chevron />
+        </Link>
+      ) : null}
     </div>
   );
 }

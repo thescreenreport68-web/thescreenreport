@@ -28,34 +28,30 @@ body {
     @apply mx-auto max-w-wide px-4;
   }
 
-  /* Section heading: thin navy hairline + a short gold accent tick */
+  /* THR section header: condensed-display UPPERCASE title on a thin hairline */
   .section-heading {
-    @apply relative mb-6 flex items-center justify-between gap-3 border-b border-navy/15 pb-2.5;
-  }
-  .section-heading::after {
-    content: "";
-    @apply absolute -bottom-px left-0 h-0.5 w-12 bg-gold;
+    @apply mb-5 flex items-center justify-between gap-3 border-b border-hair pb-2;
   }
   .section-heading h2 {
-    @apply font-display text-2xl font-semibold tracking-tight text-navy sm:text-[1.7rem];
+    @apply font-display text-2xl font-bold uppercase tracking-tight text-navy sm:text-[1.8rem];
   }
 
-  /* Kicker / category label */
+  /* Red Karla category kicker */
   .kicker {
-    @apply font-sans text-[11px] font-semibold uppercase tracking-[0.16em] text-gold-600;
+    @apply font-sans text-[12px] font-bold uppercase tracking-[0.04em] text-breaking;
   }
 
-  /* Dek / standfirst — Newsreader italic */
+  /* Standfirst / card dek — standard serif, roman, grey */
   .dek {
-    @apply font-dek text-xl italic leading-snug text-navy/75 sm:text-[1.6rem];
+    @apply font-body text-base leading-snug text-slate;
   }
 
-  /* Byline / meta — grotesque, uppercase, tracked */
+  /* Byline / meta — Karla uppercase */
   .meta-label {
-    @apply font-sans text-[11px] font-semibold uppercase tracking-[0.12em] text-slate;
+    @apply font-sans text-[11px] font-bold uppercase tracking-[0.06em] text-slate;
   }
 
-  /* Premium drop cap on the article lede (scoped to articles only) */
+  /* Drop cap on the article lede */
   .article-prose > p:first-of-type::first-letter {
     @apply float-left mr-3 mt-1.5 font-display text-[4.3rem] font-bold leading-[0.72] text-navy;
   }

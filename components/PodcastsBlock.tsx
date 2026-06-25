@@ -24,7 +24,7 @@ export default function PodcastsBlock() {
             <p className="mt-3 font-sans text-[10px] font-bold uppercase tracking-[0.12em] text-gold-600">
               {e.show}
             </p>
-            <h3 className="mt-1 font-display text-base font-semibold leading-snug text-navy">
+            <h3 className="mt-1 font-body text-base font-normal leading-snug text-navy">
               {e.title}
             </h3>
           </article>

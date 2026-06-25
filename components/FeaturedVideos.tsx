@@ -38,7 +38,7 @@ export default function FeaturedVideos() {
             <PlaceholderImage slug={lead.slug} category={lead.cat} title={lead.title} className="aspect-video w-full rounded ring-1 ring-navy/10" />
             <Play large />
           </div>
-          <h3 className="mt-3 font-display text-2xl font-semibold leading-tight text-navy">
+          <h3 className="mt-3 font-body text-2xl font-normal leading-tight text-navy">
             {lead.title}
           </h3>
         </div>
@@ -49,7 +49,7 @@ export default function FeaturedVideos() {
                 <PlaceholderImage slug={v.slug} category={v.cat} title={v.title} className="aspect-video w-28 rounded ring-1 ring-navy/10" />
                 <Play />
               </div>
-              <h4 className="font-display text-sm font-semibold leading-snug text-navy">
+              <h4 className="font-body text-sm font-normal leading-snug text-navy">
                 {v.title}
               </h4>
             </div>

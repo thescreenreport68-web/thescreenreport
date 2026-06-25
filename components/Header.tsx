@@ -33,7 +33,7 @@ function Search() {
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur">
+    <header className="sticky top-0 z-50 border-t border-ink bg-white/95 backdrop-blur">
       {/* Utility row with centered masthead */}
       <div className="mx-auto flex max-w-wide items-center gap-3 px-4 py-5">
         <div className="flex flex-1 items-center gap-4">

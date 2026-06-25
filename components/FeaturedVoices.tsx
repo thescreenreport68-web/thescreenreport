@@ -32,7 +32,7 @@ export default function FeaturedVoices() {
               >
                 {author.name}
               </Link>
-              <h4 className="mt-1 font-display text-base font-semibold leading-snug text-navy hover:text-navy/70">
+              <h4 className="mt-1 font-body text-base font-normal leading-snug text-navy hover:text-breaking">
                 <Link href={`/${article.category}/${article.slug}/`}>
                   {article.title}
                 </Link>

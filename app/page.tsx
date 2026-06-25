@@ -12,8 +12,7 @@ import PodcastsBlock from "@/components/PodcastsBlock";
 import WhereToWatch from "@/components/WhereToWatch";
 import NewsletterBand from "@/components/NewsletterBand";
 import PlaceholderImage from "@/components/PlaceholderImage";
-import { getCategory, getAuthor } from "@/lib/site";
-import { formatDate } from "@/lib/format";
+import { getAuthor } from "@/lib/site";
 import type { Article } from "@/lib/articles";
 import {
   getAllArticles,
@@ -53,9 +52,7 @@ export default function HomePage() {
     fresh.forEach((a) => used.add(a.slug));
     if (fresh.length < n) {
       const seen = new Set(fresh.map((a) => a.slug));
-      const extra = pool
-        .filter((a) => !seen.has(a.slug))
-        .slice(0, n - fresh.length);
+      const extra = pool.filter((a) => !seen.has(a.slug)).slice(0, n - fresh.length);
       return [...fresh, ...extra];
     }
     return fresh;
@@ -80,42 +77,41 @@ export default function HomePage() {
   const mustReads = take([...celebrity, ...news], 4);
   const celebrityRow = take([...celebrity, ...news], 4);
   const mostPopular = all.slice(0, 6);
-  const heroCat = getCategory(hero.category);
 
   return (
     <div className="container-wide py-8">
-      {/* 1. Top Story + Latest rail */}
-      <section className="grid gap-10 lg:grid-cols-3">
-        <div className="lg:col-span-2">
+      {/* 1. Top Story + Latest News rail */}
+      <section className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_300px]">
+        <div>
           <div className="relative">
             <Link href={`/${hero.category}/${hero.slug}/`}>
               <PlaceholderImage
                 slug={hero.slug}
                 category={hero.category}
                 title={hero.title}
-                className="aspect-[16/10] w-full ring-1 ring-navy/10"
+                className="aspect-video w-full"
               />
             </Link>
-            <span className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 border border-navy bg-white px-4 py-1.5 font-sans text-[11px] font-bold uppercase tracking-[0.2em] text-navy">
-              Top Story
+            <span className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 border border-grey bg-white p-1">
+              <span className="block border border-grey px-3 py-1.5 font-body text-[13px] uppercase tracking-[0.18em] text-navy">
+                Top Story
+              </span>
             </span>
           </div>
           <div className="mx-auto mt-7 max-w-3xl text-center">
-            <h1 className="font-display text-4xl font-bold leading-[1.03] tracking-tight text-navy sm:text-5xl lg:text-[3.4rem]">
+            <h1 className="font-display text-4xl font-bold leading-[0.95] tracking-tight text-navy sm:text-5xl lg:text-[3.4rem]">
               <Link href={`/${hero.category}/${hero.slug}/`}>{hero.title}</Link>
             </h1>
             {hero.dek ? (
-              <p className="mx-auto mt-4 max-w-2xl font-body text-[1.2rem] leading-snug text-navy/70">
+              <p className="mx-auto mt-4 max-w-2xl font-body text-[1.375rem] leading-[1.15] text-navy">
                 {hero.dek}
               </p>
             ) : null}
-            <p className="mt-4 font-sans text-[11px] font-bold uppercase tracking-[0.14em] text-faint">
-              By {getAuthor(hero.author)?.name}
-            </p>
+            <p className="mt-4 meta-label">By {getAuthor(hero.author)?.name}</p>
           </div>
         </div>
 
-        <aside className="lg:col-span-1">
+        <aside>
           <LatestNews items={latest} />
         </aside>
       </section>
@@ -127,14 +123,10 @@ export default function HomePage() {
       {/* 2. Branded two-column pair */}
       <TwoColumnFeature left={inTheaters} right={nowStreaming} />
 
-      <div className="my-12 hidden md:block">
-        <AdSlot format="leaderboard" />
-      </div>
-
       {/* 3. What We're Watching */}
-      <section>
+      <section className="mt-14">
         <SectionHeader title="What We're Watching" tagline="Spoilers ahead!" href="/tv/" />
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-x-5 gap-y-8 sm:grid-cols-2 lg:grid-cols-4">
           {whatWatching.map((a) => (
             <ArticleCard key={a.slug} article={a} variant="standard" />
           ))}
@@ -148,36 +140,35 @@ export default function HomePage() {
           tagline="Buzzy interviews, features and hot takes"
           href="/celebrity/"
         />
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-x-5 gap-y-8 sm:grid-cols-2 lg:grid-cols-4">
           {mustReads.map((a) => (
             <ArticleCard key={a.slug} article={a} variant="standard" />
           ))}
         </div>
       </section>
 
-      {/* 5. Featured Videos */}
-      <section className="mt-14">
-        <FeaturedVideos />
-      </section>
-
       <div className="my-12 hidden md:block">
         <AdSlot format="leaderboard" />
       </div>
 
-      {/* 6. Reviews + Most Popular rail */}
-      <section className="grid gap-10 lg:grid-cols-3">
-        <div className="lg:col-span-2">
-          <ReviewsSplit movies={movieReviews} tv={tvReviews} />
+      {/* 5. Featured Videos + Most Popular rail */}
+      <section className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_300px]">
+        <div>
+          <FeaturedVideos />
         </div>
-        <aside className="lg:col-span-1">
-          <div className="relative mb-4 border-b border-navy/15 pb-2.5">
-            <h2 className="font-display text-2xl font-semibold tracking-tight text-navy">
+        <aside>
+          <div className="mb-2 border-b border-hair pb-2">
+            <h2 className="font-display text-2xl font-bold uppercase tracking-tight text-navy sm:text-[1.8rem]">
               Most Popular
             </h2>
-            <span className="absolute -bottom-px left-0 h-0.5 w-12 bg-gold" />
           </div>
           <DottedList items={mostPopular} numbered showKicker={false} />
         </aside>
+      </section>
+
+      {/* 6. Reviews */}
+      <section className="mt-14">
+        <ReviewsSplit movies={movieReviews} tv={tvReviews} />
       </section>
 
       {/* 7. Featured Voices */}
@@ -202,7 +193,7 @@ export default function HomePage() {
           tagline="The stars and the stories around them"
           href="/celebrity/"
         />
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-x-5 gap-y-8 sm:grid-cols-2 lg:grid-cols-4">
           {celebrityRow.map((a) => (
             <ArticleCard key={a.slug} article={a} variant="standard" />
           ))}

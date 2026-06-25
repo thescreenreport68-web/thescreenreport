@@ -1,6 +1,5 @@
 import Link from "next/link";
 import PlaceholderImage from "./PlaceholderImage";
-import { formatDate } from "@/lib/format";
 import { getAuthor, getCategory } from "@/lib/site";
 import type { Article } from "@/lib/articles";
 
@@ -19,31 +18,34 @@ export default function ArticleCard({
 
   if (variant === "list") {
     return (
-      <article className="flex gap-4 border-b border-hair py-4 last:border-0">
+      <article className="flex gap-4 border-b border-dotted border-slate py-4 last:border-0">
         <Link href={href} className="shrink-0">
           <PlaceholderImage
             slug={article.slug}
             category={article.category}
             title={article.title}
-            className="aspect-video w-28 rounded sm:w-32"
+            className="aspect-square w-24 sm:w-28"
           />
         </Link>
         <div>
           <Link href={`/${article.category}/`} className="kicker">
             {cat?.name}
           </Link>
-          <h3 className="mt-1 font-display text-base font-semibold leading-snug text-navy hover:text-navy/70 sm:text-lg">
+          <h3 className="mt-1 font-body text-base font-normal leading-snug text-navy hover:text-breaking">
             <Link href={href}>{article.title}</Link>
           </h3>
-          <p className="mt-1 font-sans text-xs text-faint">
-            {author?.name} · {formatDate(article.date)}
-          </p>
+          <p className="mt-1 meta-label">By {author?.name}</p>
         </div>
       </article>
     );
   }
 
-  const heroish = variant === "hero" || variant === "large";
+  const sizeClass =
+    variant === "hero"
+      ? "text-2xl sm:text-[1.7rem]"
+      : variant === "large"
+        ? "text-xl sm:text-2xl"
+        : "text-lg";
   return (
     <article className="group flex flex-col">
       <Link href={href}>
@@ -51,32 +53,22 @@ export default function ArticleCard({
           slug={article.slug}
           category={article.category}
           title={article.title}
-          className={`${heroish ? "aspect-[16/9]" : "aspect-[16/10]"} w-full rounded`}
+          className="aspect-video w-full"
         />
       </Link>
-      <div className="mt-3.5">
+      <div className="mt-2.5">
         <Link href={`/${article.category}/`} className="kicker">
           {cat?.name}
         </Link>
         <h3
-          className={`mt-1.5 font-display font-semibold leading-[1.12] tracking-tight text-navy group-hover:text-navy/70 ${
-            variant === "hero"
-              ? "text-3xl sm:text-[2.5rem]"
-              : variant === "large"
-                ? "text-2xl"
-                : "text-xl"
-          }`}
+          className={`mt-1.5 font-body font-normal leading-[1.15] text-navy group-hover:text-breaking ${sizeClass}`}
         >
           <Link href={href}>{article.title}</Link>
         </h3>
         {variant !== "compact" && article.dek ? (
-          <p className="mt-2 line-clamp-2 font-dek text-[1.02rem] italic leading-snug text-navy/65">
-            {article.dek}
-          </p>
+          <p className="mt-2 line-clamp-2 dek">{article.dek}</p>
         ) : null}
-        <p className="mt-2.5 font-sans text-xs text-faint">
-          {author?.name} · {formatDate(article.date)} · {article.readingTime} min read
-        </p>
+        <p className="mt-2 meta-label">By {author?.name}</p>
       </div>
     </article>
   );
