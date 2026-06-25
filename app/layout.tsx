@@ -1,43 +1,36 @@
 import type { Metadata } from "next";
-import {
-  Bodoni_Moda,
-  Newsreader,
-  Source_Serif_4,
-  Hanken_Grotesk,
-} from "next/font/google";
+import { Fraunces, Source_Serif_4, Karla } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { SITE } from "@/lib/site";
 
-// Display / headlines / masthead — high-contrast Didone with an optical-size axis.
-const bodoni = Bodoni_Moda({
+// Headlines / display — Fraunces, loaded with its opsz/SOFT/WONK axes so globals.css
+// can pin SOFT=0 / WONK=0. That converts Fraunces from its soft, quirky DEFAULT cut
+// (which read as "basic") into a warm, HIGH-CONTRAST editorial serif in the spirit of
+// The Hollywood Reporter's Kepler. Optical size stays automatic via font-optical-sizing.
+const fraunces = Fraunces({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-display",
+  axes: ["opsz", "SOFT", "WONK"],
   style: ["normal", "italic"],
 });
 
-// Deks / standfirsts / pull quotes — elegant editorial italic.
-const newsreader = Newsreader({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-dek",
-  style: ["italic", "normal"],
-});
-
-// Body copy — cohesive serif superfamily, text-optimized.
+// Body copy — readable editorial serif.
 const sourceSerif = Source_Serif_4({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-body",
 });
 
-// Labels / kickers / nav / bylines / UI — refined grotesque.
-const hanken = Hanken_Grotesk({
+// Labels / kickers / nav / bylines — Karla, the exact grotesque The Hollywood Reporter uses.
+const karla = Karla({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-sans",
+  weight: ["400", "500", "700"],
+  style: ["normal", "italic"],
 });
 
 export const metadata: Metadata = {
@@ -47,8 +40,6 @@ export const metadata: Metadata = {
     template: `%s — ${SITE.name}`,
   },
   description: SITE.description,
-  // PRE-LAUNCH: the whole site is noindex so Google can't see seed content.
-  // Flip this to { index: true, follow: true } on launch day.
   robots: { index: false, follow: false },
   openGraph: {
     siteName: SITE.name,
@@ -69,7 +60,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${bodoni.variable} ${newsreader.variable} ${sourceSerif.variable} ${hanken.variable}`}
+      className={`${fraunces.variable} ${sourceSerif.variable} ${karla.variable}`}
     >
       <body>
         <Header />

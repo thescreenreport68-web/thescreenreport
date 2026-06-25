@@ -13,6 +13,12 @@ html {
 body {
   @apply bg-white text-ink2 font-sans antialiased;
   font-feature-settings: "kern", "liga", "onum";
+  /* Pin Fraunces to its warm HIGH-CONTRAST cut (kills the soft/quirky default).
+     font-variation-settings inherits, so every Fraunces headline/dek gets it;
+     Source Serif & Karla simply ignore axes they don't have. Optical size stays
+     automatic by font-size. */
+  font-variation-settings: "SOFT" 0, "WONK" 0;
+  font-optical-sizing: auto;
 }
 
 @layer components {

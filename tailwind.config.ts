@@ -21,22 +21,20 @@ const config: Config = {
         },
         breaking: "#B11226",
         ink: "#14110F",
-        ink2: "#23201D", // body copy — softer than pure black
-        slate: "#4A5267", // bylines
-        faint: "#707A93", // timestamps / fine meta
-        hair: "#E2E5EC", // hairline rules
+        ink2: "#23201D",
+        slate: "#4A5267",
+        faint: "#707A93",
+        hair: "#E2E5EC",
         mist: "#EEF1F7",
       },
       fontFamily: {
-        // Bodoni Moda — display only (headlines, masthead). Also mapped to `serif`
-        // so existing headline classes upgrade automatically.
+        // Fraunces (tuned SOFT 0 / WONK 0 in globals) — headlines, masthead, deks.
         display: ["var(--font-display)", "Georgia", "serif"],
         serif: ["var(--font-display)", "Georgia", "serif"],
+        dek: ["var(--font-display)", "Georgia", "serif"],
         // Source Serif 4 — article body copy.
         body: ["var(--font-body)", "Georgia", "serif"],
-        // Newsreader italic — deks / standfirsts / pull quotes.
-        dek: ["var(--font-dek)", "Georgia", "serif"],
-        // Hanken Grotesk — labels, kickers, nav, bylines, UI.
+        // Karla — labels, kickers, nav, bylines, UI.
         sans: ["var(--font-sans)", "system-ui", "sans-serif"],
       },
       maxWidth: {
@@ -61,8 +59,8 @@ const config: Config = {
               fontFamily: "var(--font-display), Georgia, serif",
               fontWeight: "600",
               fontSize: "1.95rem",
-              letterSpacing: "-0.015em",
-              lineHeight: "1.15",
+              letterSpacing: "-0.01em",
+              lineHeight: "1.18",
               marginTop: "1.9em",
               marginBottom: "0.55em",
             },
@@ -70,7 +68,6 @@ const config: Config = {
               fontFamily: "var(--font-display), Georgia, serif",
               fontWeight: "600",
               fontSize: "1.45rem",
-              letterSpacing: "-0.01em",
             },
             a: {
               textDecoration: "underline",
@@ -80,7 +77,7 @@ const config: Config = {
               fontWeight: "600",
             },
             blockquote: {
-              fontFamily: "var(--font-dek), Georgia, serif",
+              fontFamily: "var(--font-display), Georgia, serif",
               fontStyle: "italic",
               fontWeight: "500",
               fontSize: "1.4rem",
