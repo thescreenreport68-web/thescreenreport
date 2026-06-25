@@ -28,13 +28,15 @@ const config: Config = {
         mist: "#EEF1F7",
       },
       fontFamily: {
-        // Fraunces (tuned SOFT 0 / WONK 0 in globals) — headlines, masthead, deks.
-        display: ["var(--font-display)", "Georgia", "serif"],
-        serif: ["var(--font-display)", "Georgia", "serif"],
+        // Real THR headline font (Adobe Kepler SemiCondensed Display, via Typekit kit),
+        // falling back to tuned Fraunces if the kit hasn't loaded.
+        display: ['"kepler-std-semicondensed-dis"', "var(--font-display)", "Georgia", "serif"],
+        serif: ['"kepler-std-semicondensed-dis"', "var(--font-display)", "Georgia", "serif"],
+        // Deks stay in the lighter Fraunces italic (Kepler kit is bold-only).
         dek: ["var(--font-display)", "Georgia", "serif"],
-        // Source Serif 4 — article body copy.
+        // Source Serif 4 — article body.
         body: ["var(--font-body)", "Georgia", "serif"],
-        // Karla — labels, kickers, nav, bylines, UI.
+        // Karla — labels, kickers, nav, bylines.
         sans: ["var(--font-sans)", "system-ui", "sans-serif"],
       },
       maxWidth: {
@@ -56,8 +58,8 @@ const config: Config = {
             fontSize: "1.1875rem",
             lineHeight: "1.75",
             h2: {
-              fontFamily: "var(--font-display), Georgia, serif",
-              fontWeight: "600",
+              fontFamily: '"kepler-std-semicondensed-dis", var(--font-display), Georgia, serif',
+              fontWeight: "700",
               fontSize: "1.95rem",
               letterSpacing: "-0.01em",
               lineHeight: "1.18",
@@ -65,8 +67,8 @@ const config: Config = {
               marginBottom: "0.55em",
             },
             h3: {
-              fontFamily: "var(--font-display), Georgia, serif",
-              fontWeight: "600",
+              fontFamily: '"kepler-std-semicondensed-dis", var(--font-display), Georgia, serif',
+              fontWeight: "700",
               fontSize: "1.45rem",
             },
             a: {
