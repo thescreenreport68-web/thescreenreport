@@ -123,15 +123,11 @@ export default function ArticlePage({
             ]}
           />
 
-          <p className="mt-4 text-xs font-bold uppercase tracking-widest text-gold-600">
-            {cat?.name}
-          </p>
-          <h1 className="mt-2 font-serif text-3xl font-bold leading-tight text-navy sm:text-4xl lg:text-[2.75rem]">
+          <p className="mt-4 kicker">{cat?.name}</p>
+          <h1 className="mt-2.5 font-display text-4xl font-semibold leading-[1.05] tracking-tight text-navy sm:text-5xl lg:text-[3.25rem]">
             {article.title}
           </h1>
-          {article.dek ? (
-            <p className="mt-4 text-lg text-navy/70">{article.dek}</p>
-          ) : null}
+          {article.dek ? <p className="mt-5 dek">{article.dek}</p> : null}
 
           <div className="mt-5 border-y border-navy/10 py-4">
             <Byline

@@ -1,21 +1,43 @@
 import type { Metadata } from "next";
-import { Fraunces, Inter } from "next/font/google";
+import {
+  Bodoni_Moda,
+  Newsreader,
+  Source_Serif_4,
+  Hanken_Grotesk,
+} from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { SITE } from "@/lib/site";
 
-const fraunces = Fraunces({
+// Display / headlines / masthead — high-contrast Didone with an optical-size axis.
+const bodoni = Bodoni_Moda({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-fraunces",
-  weight: ["400", "500", "600", "700"],
+  variable: "--font-display",
+  style: ["normal", "italic"],
 });
 
-const inter = Inter({
+// Deks / standfirsts / pull quotes — elegant editorial italic.
+const newsreader = Newsreader({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-inter",
+  variable: "--font-dek",
+  style: ["italic", "normal"],
+});
+
+// Body copy — cohesive serif superfamily, text-optimized.
+const sourceSerif = Source_Serif_4({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-body",
+});
+
+// Labels / kickers / nav / bylines / UI — refined grotesque.
+const hanken = Hanken_Grotesk({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-sans",
 });
 
 export const metadata: Metadata = {
@@ -45,7 +67,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${fraunces.variable} ${inter.variable}`}>
+    <html
+      lang="en"
+      className={`${bodoni.variable} ${newsreader.variable} ${sourceSerif.variable} ${hanken.variable}`}
+    >
       <body>
         <Header />
         <main>{children}</main>

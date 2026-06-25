@@ -29,7 +29,7 @@ export default function ArticleBody({ body }: { body: string }) {
   const segments = splitAtH2(body);
   const mid = segments.length > 3 ? Math.floor(segments.length / 2) : -1;
   return (
-    <div className="prose prose-screen max-w-none">
+    <div className="article-prose prose prose-screen">
       {segments.map((seg, i) => (
         <Fragment key={i}>
           <ReactMarkdown

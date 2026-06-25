@@ -36,6 +36,9 @@ export default function HomePage() {
       {/* Hero + Trending rail */}
       <section className="grid gap-8 lg:grid-cols-3">
         <div className="lg:col-span-2">
+          <div className="mb-3 inline-block border border-navy px-3 py-1 font-sans text-[11px] font-bold uppercase tracking-[0.18em] text-navy">
+            Top Story
+          </div>
           {featured ? <ArticleCard article={featured} variant="hero" /> : null}
         </div>
         <aside className="lg:col-span-1">

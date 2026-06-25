@@ -26,9 +26,9 @@ export default function Header() {
       <div className="mx-auto flex max-w-wide items-center justify-between gap-4 px-4 py-3">
         <Link
           href="/"
-          className="font-serif text-2xl font-bold tracking-tight text-navy sm:text-3xl"
+          className="font-display text-[1.7rem] font-semibold italic leading-none tracking-tight text-navy sm:text-[2rem]"
         >
-          The Screen Report
+          The Screen Report<span className="not-italic text-gold">.</span>
         </Link>
 
         <nav className="hidden items-center gap-6 lg:flex" aria-label="Primary">

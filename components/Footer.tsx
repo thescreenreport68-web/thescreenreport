@@ -17,7 +17,9 @@ export default function Footer() {
       <div className="mx-auto max-w-wide px-4 py-12">
         <div className="grid gap-8 md:grid-cols-4">
           <div>
-            <div className="font-serif text-2xl font-bold">The Screen Report</div>
+            <div className="font-display text-2xl font-semibold italic">
+              The Screen Report<span className="not-italic text-gold">.</span>
+            </div>
             <p className="mt-3 text-sm leading-relaxed text-white/70">
               {SITE.description}
             </p>

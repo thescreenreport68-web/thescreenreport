@@ -21,45 +21,74 @@ const config: Config = {
         },
         breaking: "#B11226",
         ink: "#14110F",
+        ink2: "#23201D", // body copy — softer than pure black
+        slate: "#4A5267", // bylines
+        faint: "#707A93", // timestamps / fine meta
+        hair: "#E2E5EC", // hairline rules
         mist: "#EEF1F7",
       },
       fontFamily: {
-        serif: ["var(--font-fraunces)", "Georgia", "serif"],
-        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
+        // Bodoni Moda — display only (headlines, masthead). Also mapped to `serif`
+        // so existing headline classes upgrade automatically.
+        display: ["var(--font-display)", "Georgia", "serif"],
+        serif: ["var(--font-display)", "Georgia", "serif"],
+        // Source Serif 4 — article body copy.
+        body: ["var(--font-body)", "Georgia", "serif"],
+        // Newsreader italic — deks / standfirsts / pull quotes.
+        dek: ["var(--font-dek)", "Georgia", "serif"],
+        // Hanken Grotesk — labels, kickers, nav, bylines, UI.
+        sans: ["var(--font-sans)", "system-ui", "sans-serif"],
       },
       maxWidth: {
         wide: "1280px",
-        prose: "720px",
+        prose: "680px",
       },
       typography: () => ({
         screen: {
           css: {
-            "--tw-prose-body": "#14110F",
+            "--tw-prose-body": "#23201D",
             "--tw-prose-headings": "#16203F",
             "--tw-prose-links": "#16203F",
             "--tw-prose-bold": "#14110F",
             "--tw-prose-quotes": "#16203F",
             "--tw-prose-bullets": "#C8A24A",
             "--tw-prose-counters": "#B68F34",
-            maxWidth: "none",
-            fontSize: "1.125rem",
+            maxWidth: "680px",
+            fontFamily: "var(--font-body), Georgia, serif",
+            fontSize: "1.1875rem",
             lineHeight: "1.75",
             h2: {
-              fontFamily: "var(--font-fraunces), Georgia, serif",
+              fontFamily: "var(--font-display), Georgia, serif",
               fontWeight: "600",
-              letterSpacing: "-0.01em",
-              marginTop: "2em",
+              fontSize: "1.95rem",
+              letterSpacing: "-0.015em",
+              lineHeight: "1.15",
+              marginTop: "1.9em",
+              marginBottom: "0.55em",
             },
             h3: {
-              fontFamily: "var(--font-fraunces), Georgia, serif",
+              fontFamily: "var(--font-display), Georgia, serif",
               fontWeight: "600",
+              fontSize: "1.45rem",
+              letterSpacing: "-0.01em",
             },
             a: {
               textDecoration: "underline",
               textDecorationColor: "#C8A24A",
+              textDecorationThickness: "1px",
               textUnderlineOffset: "3px",
-              fontWeight: "500",
+              fontWeight: "600",
             },
+            blockquote: {
+              fontFamily: "var(--font-dek), Georgia, serif",
+              fontStyle: "italic",
+              fontWeight: "500",
+              fontSize: "1.4rem",
+              color: "#16203F",
+              borderLeftWidth: "3px",
+              borderLeftColor: "#C8A24A",
+            },
+            "li::marker": { color: "#C8A24A" },
           },
         },
       }),

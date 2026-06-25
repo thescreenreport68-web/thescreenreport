@@ -11,7 +11,8 @@ html {
 }
 
 body {
-  @apply bg-white text-ink font-sans antialiased;
+  @apply bg-white text-ink2 font-sans antialiased;
+  font-feature-settings: "kern", "liga", "onum";
 }
 
 @layer components {
@@ -19,11 +20,35 @@ body {
     @apply mx-auto max-w-wide px-4;
   }
 
-  /* Editorial section heading with a gold/navy rule */
+  /* Section heading: thin navy hairline + a short gold accent tick */
   .section-heading {
-    @apply mb-6 flex items-baseline gap-3 border-b-2 border-navy pb-2;
+    @apply relative mb-6 flex items-center justify-between gap-3 border-b border-navy/15 pb-2.5;
+  }
+  .section-heading::after {
+    content: "";
+    @apply absolute -bottom-px left-0 h-0.5 w-12 bg-gold;
   }
   .section-heading h2 {
-    @apply font-serif text-xl font-bold text-navy sm:text-2xl;
+    @apply font-display text-2xl font-semibold tracking-tight text-navy sm:text-[1.7rem];
+  }
+
+  /* Kicker / category label */
+  .kicker {
+    @apply font-sans text-[11px] font-semibold uppercase tracking-[0.16em] text-gold-600;
+  }
+
+  /* Dek / standfirst — Newsreader italic */
+  .dek {
+    @apply font-dek text-xl italic leading-snug text-navy/75 sm:text-[1.6rem];
+  }
+
+  /* Byline / meta — grotesque, uppercase, tracked */
+  .meta-label {
+    @apply font-sans text-[11px] font-semibold uppercase tracking-[0.12em] text-slate;
+  }
+
+  /* Premium drop cap on the article lede (scoped to articles only) */
+  .article-prose > p:first-of-type::first-letter {
+    @apply float-left mr-3 mt-1.5 font-display text-[4.3rem] font-bold leading-[0.72] text-navy;
   }
 }
