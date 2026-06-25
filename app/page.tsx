@@ -84,41 +84,43 @@ export default function HomePage() {
   return (
     <div className="container-wide py-8">
       {/* 1. Top Story + Latest rail */}
-      <section className="grid gap-8 lg:grid-cols-3">
+      <section className="grid gap-10 lg:grid-cols-3">
         <div className="lg:col-span-2">
-          <div className="mb-3 inline-block border border-navy px-3 py-1 font-sans text-[11px] font-bold uppercase tracking-[0.18em] text-navy">
-            Top Story
+          <div className="relative">
+            <Link href={`/${hero.category}/${hero.slug}/`}>
+              <PlaceholderImage
+                slug={hero.slug}
+                category={hero.category}
+                title={hero.title}
+                className="aspect-[16/10] w-full ring-1 ring-navy/10"
+              />
+            </Link>
+            <span className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 border border-navy bg-white px-4 py-1.5 font-sans text-[11px] font-bold uppercase tracking-[0.2em] text-navy">
+              Top Story
+            </span>
           </div>
-          <Link href={`/${hero.category}/${hero.slug}/`}>
-            <PlaceholderImage
-              slug={hero.slug}
-              category={hero.category}
-              title={hero.title}
-              className="aspect-[16/9] w-full rounded ring-1 ring-navy/10"
-            />
-          </Link>
-          <div className="mt-4">
-            <span className="kicker">{heroCat?.name}</span>
-            <h2 className="mt-1.5 font-display text-3xl font-semibold leading-[1.05] tracking-tight text-navy sm:text-[2.6rem]">
+          <div className="mx-auto mt-7 max-w-3xl text-center">
+            <h1 className="font-display text-4xl font-bold leading-[1.03] tracking-tight text-navy sm:text-5xl lg:text-[3.4rem]">
               <Link href={`/${hero.category}/${hero.slug}/`}>{hero.title}</Link>
-            </h2>
+            </h1>
             {hero.dek ? (
-              <p className="mt-3 font-dek text-xl italic text-navy/70">{hero.dek}</p>
+              <p className="mx-auto mt-4 max-w-2xl font-dek text-xl italic leading-snug text-navy/70">
+                {hero.dek}
+              </p>
             ) : null}
-            <p className="mt-3 font-sans text-xs uppercase tracking-wide text-faint">
-              By {getAuthor(hero.author)?.name} · {formatDate(hero.date)}
+            <p className="mt-4 font-sans text-[11px] font-bold uppercase tracking-[0.14em] text-faint">
+              By {getAuthor(hero.author)?.name}
             </p>
           </div>
         </div>
 
         <aside className="lg:col-span-1">
-          <div className="relative mb-4 border-b border-navy/15 pb-2.5">
-            <h2 className="font-display text-2xl font-semibold tracking-tight text-navy">
+          <div className="mb-4 border-b-2 border-navy pb-2">
+            <h2 className="font-display text-2xl font-bold uppercase tracking-tight text-navy">
               Latest News
             </h2>
-            <span className="absolute -bottom-px left-0 h-0.5 w-12 bg-gold" />
           </div>
-          <DottedList items={latest} showKicker />
+          <DottedList items={latest} showKicker showTime />
           <div className="mt-6">
             <AdSlot format="rectangle" />
           </div>
