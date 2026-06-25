@@ -22,6 +22,16 @@ import {
 
 const TV_REVIEW_SLUGS = ["the-bear-review", "shogun-review"];
 
+// A leaderboard ad rendered between content sections (desktop) / rectangle (mobile).
+function AdBreak() {
+  return (
+    <div className="my-10 flex justify-center">
+      <AdSlot format="leaderboard" className="hidden md:flex" />
+      <AdSlot format="rectangle" className="md:hidden" />
+    </div>
+  );
+}
+
 export default function HomePage() {
   const all = getAllArticles();
   if (!all.length) {
@@ -80,7 +90,7 @@ export default function HomePage() {
 
   return (
     <div className="container-wide py-8">
-      {/* 1. Top Story + Latest News rail */}
+      {/* 1. Top Story + Latest News rail (rail has an in-feed 300x250 after item 3) */}
       <section className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_300px]">
         <div>
           <div className="relative">
@@ -116,15 +126,15 @@ export default function HomePage() {
         </aside>
       </section>
 
-      <div className="my-12 hidden md:block">
-        <AdSlot format="leaderboard" />
-      </div>
+      <AdBreak />
 
       {/* 2. Branded two-column pair */}
       <TwoColumnFeature left={inTheaters} right={nowStreaming} />
 
+      <AdBreak />
+
       {/* 3. What We're Watching */}
-      <section className="mt-14">
+      <section>
         <SectionHeader title="What We're Watching" tagline="Spoilers ahead!" href="/tv/" />
         <div className="grid gap-x-5 gap-y-8 sm:grid-cols-2 lg:grid-cols-4">
           {whatWatching.map((a) => (
@@ -133,8 +143,10 @@ export default function HomePage() {
         </div>
       </section>
 
+      <AdBreak />
+
       {/* 4. Must Reads */}
-      <section className="mt-14">
+      <section>
         <SectionHeader
           title="Must Reads"
           tagline="Buzzy interviews, features and hot takes"
@@ -147,11 +159,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      <div className="my-12 hidden md:block">
-        <AdSlot format="leaderboard" />
-      </div>
+      <AdBreak />
 
-      {/* 5. Featured Videos + Most Popular rail */}
+      {/* 5. Featured Videos + Most Popular rail (rail has a 300x250) */}
       <section className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_300px]">
         <div>
           <FeaturedVideos />
@@ -163,31 +173,47 @@ export default function HomePage() {
             </h2>
           </div>
           <DottedList items={mostPopular} numbered showKicker={false} />
+          <div className="mt-6">
+            <div className="mb-1.5 text-center text-[10px] font-bold uppercase tracking-[0.2em] text-slate/60">
+              Advertisement
+            </div>
+            <AdSlot format="rectangle" />
+          </div>
         </aside>
       </section>
 
+      <AdBreak />
+
       {/* 6. Reviews */}
-      <section className="mt-14">
+      <section>
         <ReviewsSplit movies={movieReviews} tv={tvReviews} />
       </section>
 
+      <AdBreak />
+
       {/* 7. Featured Voices */}
-      <section className="mt-14">
+      <section>
         <FeaturedVoices />
       </section>
 
+      <AdBreak />
+
       {/* 8. Where to Watch */}
-      <section className="mt-14">
+      <section>
         <WhereToWatch />
       </section>
 
+      <AdBreak />
+
       {/* 9. Podcasts */}
-      <section className="mt-14">
+      <section>
         <PodcastsBlock />
       </section>
 
+      <AdBreak />
+
       {/* 10. Celebrity */}
-      <section className="mt-14">
+      <section>
         <SectionHeader
           title="Celebrity"
           tagline="The stars and the stories around them"
@@ -200,7 +226,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <div className="my-12 hidden md:block">
+      <div className="my-10 flex justify-center">
         <AdSlot format="billboard" />
       </div>
 

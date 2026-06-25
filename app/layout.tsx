@@ -3,6 +3,7 @@ import { Fraunces, Source_Serif_4, Karla } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import AnchorAd from "@/components/AnchorAd";
 import { SITE } from "@/lib/site";
 
 // Headlines / display — Fraunces, loaded with its opsz/SOFT/WONK axes so globals.css
@@ -66,6 +67,8 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
+        <div aria-hidden className="h-[72px] md:h-[104px]" />
+        <AnchorAd />
       </body>
     </html>
   );
