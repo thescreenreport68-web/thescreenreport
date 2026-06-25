@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  @apply bg-white text-ink font-sans antialiased;
+}
+
+@layer components {
+  .container-wide {
+    @apply mx-auto max-w-wide px-4;
+  }
+
+  /* Editorial section heading with a gold/navy rule */
+  .section-heading {
+    @apply mb-6 flex items-baseline gap-3 border-b-2 border-navy pb-2;
+  }
+  .section-heading h2 {
+    @apply font-serif text-xl font-bold text-navy sm:text-2xl;
+  }
+}
