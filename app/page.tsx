@@ -46,20 +46,21 @@ export default function HomePage() {
 
   const hero = getArticleBySlug("mcu-movies-in-order") ?? movies[0] ?? all[0];
 
-  // Distribute articles across sections, preferring fresh ones, reusing only if needed.
   const used = new Set<string>([hero.slug]);
   const take = (pool: Article[], n: number): Article[] => {
     const fresh = pool.filter((a) => !used.has(a.slug)).slice(0, n);
     fresh.forEach((a) => used.add(a.slug));
     if (fresh.length < n) {
       const seen = new Set(fresh.map((a) => a.slug));
-      const extra = pool.filter((a) => !seen.has(a.slug)).slice(0, n - fresh.length);
+      const extra = pool
+        .filter((a) => !seen.has(a.slug))
+        .slice(0, n - fresh.length);
       return [...fresh, ...extra];
     }
     return fresh;
   };
 
-  const threeCards = take(news, 3);
+  const latest = take(news, 6);
   const inTheaters = {
     title: "In Theaters",
     tagline: "The films everyone's talking about",
@@ -81,24 +82,24 @@ export default function HomePage() {
   const heroCat = getCategory(hero.category);
 
   return (
-    <div className="container-wide py-6">
-      {/* Top Story — full-width hero */}
-      <section>
-        <div className="mb-3 inline-block border border-navy px-3 py-1 font-sans text-[11px] font-bold uppercase tracking-[0.18em] text-navy">
-          Top Story
-        </div>
-        <div className="grid items-start gap-6 lg:grid-cols-2">
+    <div className="container-wide py-8">
+      {/* 1. Top Story + Latest rail */}
+      <section className="grid gap-8 lg:grid-cols-3">
+        <div className="lg:col-span-2">
+          <div className="mb-3 inline-block border border-navy px-3 py-1 font-sans text-[11px] font-bold uppercase tracking-[0.18em] text-navy">
+            Top Story
+          </div>
           <Link href={`/${hero.category}/${hero.slug}/`}>
             <PlaceholderImage
               slug={hero.slug}
               category={hero.category}
               title={hero.title}
-              className="aspect-[16/10] w-full rounded ring-1 ring-navy/10"
+              className="aspect-[16/9] w-full rounded ring-1 ring-navy/10"
             />
           </Link>
-          <div>
+          <div className="mt-4">
             <span className="kicker">{heroCat?.name}</span>
-            <h2 className="mt-1.5 font-display text-3xl font-semibold leading-[1.05] tracking-tight text-navy sm:text-4xl lg:text-[3rem]">
+            <h2 className="mt-1.5 font-display text-3xl font-semibold leading-[1.05] tracking-tight text-navy sm:text-[2.6rem]">
               <Link href={`/${hero.category}/${hero.slug}/`}>{hero.title}</Link>
             </h2>
             {hero.dek ? (
@@ -109,24 +110,32 @@ export default function HomePage() {
             </p>
           </div>
         </div>
+
+        <aside className="lg:col-span-1">
+          <div className="relative mb-4 border-b border-navy/15 pb-2.5">
+            <h2 className="font-display text-2xl font-semibold tracking-tight text-navy">
+              Latest News
+            </h2>
+            <span className="absolute -bottom-px left-0 h-0.5 w-12 bg-gold" />
+          </div>
+          <DottedList items={latest} showKicker />
+          <div className="mt-6">
+            <AdSlot format="rectangle" />
+          </div>
+        </aside>
       </section>
 
-      {/* 3-card row under hero */}
-      <section className="mt-10 grid gap-8 border-t border-navy/10 pt-8 sm:grid-cols-3">
-        {threeCards.map((a) => (
-          <ArticleCard key={a.slug} article={a} variant="standard" />
-        ))}
-      </section>
+      {/* 2. Branded two-column pair */}
+      <div className="mt-14">
+        <TwoColumnFeature left={inTheaters} right={nowStreaming} />
+      </div>
 
       <div className="my-12 hidden md:block">
         <AdSlot format="leaderboard" />
       </div>
 
-      {/* Branded two-column pair */}
-      <TwoColumnFeature left={inTheaters} right={nowStreaming} />
-
-      {/* What We're Watching */}
-      <section className="mt-14">
+      {/* 3. What We're Watching */}
+      <section>
         <SectionHeader title="What We're Watching" tagline="Spoilers ahead!" href="/tv/" />
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {whatWatching.map((a) => (
@@ -135,7 +144,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Must Reads */}
+      {/* 4. Must Reads */}
       <section className="mt-14">
         <SectionHeader
           title="Must Reads"
@@ -149,14 +158,19 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* 5. Featured Videos */}
+      <section className="mt-14">
+        <FeaturedVideos />
+      </section>
+
       <div className="my-12 hidden md:block">
         <AdSlot format="leaderboard" />
       </div>
 
-      {/* Featured Videos + Most Popular rail */}
+      {/* 6. Reviews + Most Popular rail */}
       <section className="grid gap-10 lg:grid-cols-3">
         <div className="lg:col-span-2">
-          <FeaturedVideos />
+          <ReviewsSplit movies={movieReviews} tv={tvReviews} />
         </div>
         <aside className="lg:col-span-1">
           <div className="relative mb-4 border-b border-navy/15 pb-2.5">
@@ -166,33 +180,25 @@ export default function HomePage() {
             <span className="absolute -bottom-px left-0 h-0.5 w-12 bg-gold" />
           </div>
           <DottedList items={mostPopular} numbered showKicker={false} />
-          <div className="mt-6">
-            <AdSlot format="rectangle" />
-          </div>
         </aside>
       </section>
 
-      {/* Reviews split */}
-      <section className="mt-14">
-        <ReviewsSplit movies={movieReviews} tv={tvReviews} />
-      </section>
-
-      {/* Featured Voices */}
+      {/* 7. Featured Voices */}
       <section className="mt-14">
         <FeaturedVoices />
       </section>
 
-      {/* Where to Watch */}
+      {/* 8. Where to Watch */}
       <section className="mt-14">
         <WhereToWatch />
       </section>
 
-      {/* Podcasts */}
+      {/* 9. Podcasts */}
       <section className="mt-14">
         <PodcastsBlock />
       </section>
 
-      {/* Celebrity */}
+      {/* 10. Celebrity */}
       <section className="mt-14">
         <SectionHeader
           title="Celebrity"
