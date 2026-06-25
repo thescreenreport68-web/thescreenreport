@@ -9,34 +9,32 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        // THR palette: near-black ink + a bright red accent on white.
+        // (Token names kept as navy/gold so existing classes recolor in place:
+        //  navy = ink/black, gold = THR red.)
         navy: {
-          DEFAULT: "#16203F",
-          900: "#0F1730",
-          800: "#16203F",
-          700: "#22305A",
+          DEFAULT: "#1A1A1A",
+          900: "#0E0E0E",
+          800: "#1A1A1A",
+          700: "#3A3A3A",
         },
         gold: {
-          DEFAULT: "#C8A24A",
-          600: "#B68F34",
+          DEFAULT: "#E0102B",
+          600: "#C20E24",
         },
-        breaking: "#B11226",
-        ink: "#14110F",
-        ink2: "#23201D",
-        slate: "#4A5267",
-        faint: "#707A93",
-        hair: "#E2E5EC",
-        mist: "#EEF1F7",
+        breaking: "#E0102B",
+        ink: "#0E0E0E",
+        ink2: "#222222",
+        slate: "#52525B",
+        faint: "#71717A",
+        hair: "#E4E4E7",
+        mist: "#F4F4F5",
       },
       fontFamily: {
-        // Real THR headline font (Adobe Kepler SemiCondensed Display, via Typekit kit),
-        // falling back to tuned Fraunces if the kit hasn't loaded.
         display: ['"kepler-std-semicondensed-dis"', "var(--font-display)", "Georgia", "serif"],
         serif: ['"kepler-std-semicondensed-dis"', "var(--font-display)", "Georgia", "serif"],
-        // Deks stay in the lighter Fraunces italic (Kepler kit is bold-only).
         dek: ["var(--font-display)", "Georgia", "serif"],
-        // Source Serif 4 — article body.
         body: ["var(--font-body)", "Georgia", "serif"],
-        // Karla — labels, kickers, nav, bylines.
         sans: ["var(--font-sans)", "system-ui", "sans-serif"],
       },
       maxWidth: {
@@ -46,13 +44,13 @@ const config: Config = {
       typography: () => ({
         screen: {
           css: {
-            "--tw-prose-body": "#23201D",
-            "--tw-prose-headings": "#16203F",
-            "--tw-prose-links": "#16203F",
-            "--tw-prose-bold": "#14110F",
-            "--tw-prose-quotes": "#16203F",
-            "--tw-prose-bullets": "#C8A24A",
-            "--tw-prose-counters": "#B68F34",
+            "--tw-prose-body": "#222222",
+            "--tw-prose-headings": "#1A1A1A",
+            "--tw-prose-links": "#1A1A1A",
+            "--tw-prose-bold": "#0E0E0E",
+            "--tw-prose-quotes": "#1A1A1A",
+            "--tw-prose-bullets": "#E0102B",
+            "--tw-prose-counters": "#E0102B",
             maxWidth: "680px",
             fontFamily: "var(--font-body), Georgia, serif",
             fontSize: "1.1875rem",
@@ -73,7 +71,7 @@ const config: Config = {
             },
             a: {
               textDecoration: "underline",
-              textDecorationColor: "#C8A24A",
+              textDecorationColor: "#E0102B",
               textDecorationThickness: "1px",
               textUnderlineOffset: "3px",
               fontWeight: "600",
@@ -83,11 +81,11 @@ const config: Config = {
               fontStyle: "italic",
               fontWeight: "500",
               fontSize: "1.4rem",
-              color: "#16203F",
+              color: "#1A1A1A",
               borderLeftWidth: "3px",
-              borderLeftColor: "#C8A24A",
+              borderLeftColor: "#E0102B",
             },
-            "li::marker": { color: "#C8A24A" },
+            "li::marker": { color: "#E0102B" },
           },
         },
       }),

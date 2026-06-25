@@ -125,10 +125,12 @@ export default function HomePage() {
         </aside>
       </section>
 
-      {/* 2. Branded two-column pair */}
-      <div className="mt-14">
-        <TwoColumnFeature left={inTheaters} right={nowStreaming} />
+      <div className="my-12 hidden md:block">
+        <AdSlot format="leaderboard" />
       </div>
+
+      {/* 2. Branded two-column pair */}
+      <TwoColumnFeature left={inTheaters} right={nowStreaming} />
 
       <div className="my-12 hidden md:block">
         <AdSlot format="leaderboard" />
@@ -211,6 +213,10 @@ export default function HomePage() {
           ))}
         </div>
       </section>
+
+      <div className="my-12 hidden md:block">
+        <AdSlot format="billboard" />
+      </div>
 
       <NewsletterBand />
     </div>
