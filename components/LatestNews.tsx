@@ -21,14 +21,14 @@ export default function LatestNews({ items }: { items: Article[] }) {
             <li key={a.slug}>
               <article className="border-b border-dotted border-navy/30 py-4 first:pt-1">
                 <div className="mb-1.5 flex items-center gap-2.5">
-                  <span className="font-sans text-[11px] font-bold uppercase tracking-[0.1em] text-breaking">
+                  <span className="font-sans text-[11px] font-bold uppercase tracking-[0.08em] text-breaking">
                     {cat?.name} News
                   </span>
-                  <span className="font-sans text-[11px] font-bold uppercase tracking-[0.04em] text-navy/80">
+                  <span className="font-sans text-[11px] font-bold uppercase tracking-[0.04em] text-navy">
                     {formatTime(a.date)}
                   </span>
                 </div>
-                <h3 className="font-display text-lg font-semibold leading-[1.25] text-navy hover:text-navy/70">
+                <h3 className="font-body text-[1.05rem] font-medium leading-[1.3] text-navy hover:text-navy/70">
                   <Link href={`/${a.category}/${a.slug}/`}>{a.title}</Link>
                 </h3>
               </article>
