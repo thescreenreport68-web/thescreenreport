@@ -7,6 +7,7 @@ import ArticleBody from "@/components/ArticleBody";
 import KeyTakeaways from "@/components/KeyTakeaways";
 import Faq from "@/components/Faq";
 import AuthorBox from "@/components/AuthorBox";
+import NewsletterBand from "@/components/NewsletterBand";
 import AdSlot from "@/components/AdSlot";
 import ArticleCard from "@/components/ArticleCard";
 import JsonLd from "@/components/JsonLd";
@@ -174,10 +175,11 @@ export default function ArticlePage({
 
           <KeyTakeaways items={article.keyTakeaways} />
 
-          <ArticleBody body={article.body} />
+          <ArticleBody body={article.body} related={related} />
 
           <Faq items={article.faq} />
           <AuthorBox author={article.author} />
+          <NewsletterBand />
 
           {/* End-of-article recirculation */}
           <section className="mt-12">

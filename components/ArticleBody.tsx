@@ -3,6 +3,8 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeSlug from "rehype-slug";
 import Link from "next/link";
+import ReadNext from "./ReadNext";
+import type { Article } from "@/lib/articles";
 
 // THR's in-content cadence: a 300x250 after paragraph 2, after paragraph 4,
 // then one roughly every 4 paragraphs — each framed with hairlines + a label.
@@ -39,18 +41,28 @@ const components = {
     ),
 };
 
-export default function ArticleBody({ body }: { body: string }) {
+export default function ArticleBody({
+  body,
+  related,
+}: {
+  body: string;
+  related?: Article[];
+}) {
   const blocks = body
     .split(/\n\n+/)
     .map((b) => b.trim())
     .filter(Boolean);
   let para = 0;
+  let readNextShown = false;
   return (
     <div className="prose prose-screen mx-auto">
       {blocks.map((blk, i) => {
         const paragraph = isParagraph(blk);
         if (paragraph) para += 1;
         const showAd = paragraph && adAfter(para);
+        const showReadNext =
+          paragraph && !readNextShown && para === 5 && !!related?.length;
+        if (showReadNext) readNextShown = true;
         return (
           <Fragment key={i}>
             <ReactMarkdown
@@ -60,6 +72,7 @@ export default function ArticleBody({ body }: { body: string }) {
             >
               {blk}
             </ReactMarkdown>
+            {showReadNext ? <ReadNext articles={related!.slice(0, 1)} /> : null}
             {showAd ? <InContentAd /> : null}
           </Fragment>
         );
