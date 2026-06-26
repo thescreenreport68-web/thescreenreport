@@ -52,10 +52,17 @@ const RUBRIC = `Score against The Screen Report rank-#1 + engagement standard:
 - VOICE/ENGAGEMENT: confident, specific, no AI filler; makes you want to read more and stay.`;
 
 export async function judge({ article, topic, model }) {
+  const facts = (topic.facts || [])
+    .map((f) => `- ${f.title}: ${(f.extract || "").slice(0, 1200)}`)
+    .join("\n")
+    .slice(0, 14000);
   const user = `${RUBRIC}
 
 PRIMARY KEYWORD: ${topic.primaryKeyword}
 TOPIC: ${topic.title} (${topic.contentType})
+
+REFERENCE FACTS the article was grounded on (these are VERIFIED, including live streaming availability from TMDB). Treat any claim consistent with these as accurate. Only record a hardBlock for a claim that CONTRADICTS these facts, or a clearly invented quote/stat/event with no basis here. Do NOT hardBlock for incompleteness, for current-availability claims that match these facts, or for facts you personally can't verify but that appear here:
+${facts}
 
 ARTICLE:
 ${JSON.stringify({

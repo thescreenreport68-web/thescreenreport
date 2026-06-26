@@ -10,6 +10,7 @@ import { classify } from "./stages/classify.mjs";
 import { sourceImage, downloadImage } from "./stages/image.mjs";
 import { gate } from "./stages/gate.mjs";
 import { assemble } from "./stages/assemble.mjs";
+import { getWhereToWatch, factBlock, toWhereToWatch, discoverTop, discoverFactBlock } from "./lib/tmdb.mjs";
 import { TOPICS } from "./topics.mjs";
 
 const ART = "/Users/sivajithcu/Movie News site/site/content/articles";
@@ -32,9 +33,32 @@ for (let i = 0; i < topics.length; i++) {
     topic.facts = await gatherFacts([topic.primaryEntity, ...(topic.entities || [])].filter(Boolean));
     console.log(`  facts: ${topic.facts.length} blocks`);
 
+    // Streaming guides: ground on LIVE TMDB data so they never guess platforms.
+    let wtw = null;
+    if (topic.provider) {
+      // "Best on <platform>": discover the real top-rated films on that provider → a substantial, accurate pool to rank.
+      const disc = await discoverTop(topic.provider, "US", 12);
+      if (disc.titles?.length) {
+        topic.facts.push({ title: `BEST ON ${topic.provider}`, extract: discoverFactBlock(disc) });
+        wtw = disc.titles.map((t) => ({ title: t.title, year: t.year, type: "movie", providers: { stream: [topic.provider], rent: [], buy: [] } }));
+        topic.facts.push({ title: "WHERE TO WATCH — CURRENT US AVAILABILITY (TMDB, verified)", extract: factBlock(wtw) });
+        console.log(`  TMDB discover: ${disc.titles.length} films on ${topic.provider}`);
+      }
+    } else if (topic.category === "streaming" || /guide|where/i.test(topic.contentType || "")) {
+      wtw = await getWhereToWatch(topic.entities || []);
+      if (wtw?.length) {
+        topic.facts.push({
+          title: "WHERE TO WATCH — CURRENT US AVAILABILITY (TMDB, verified — use ONLY this for any platform/availability claim)",
+          extract: factBlock(wtw),
+        });
+        console.log(`  TMDB where-to-watch: ${wtw.length} titles`);
+      }
+    }
+
     let article, classification, image, scored, src, pass = false;
     for (let attempt = 1; attempt <= 2 && !pass; attempt++) {
       ({ article } = await generate({ topic, model: MODELS.generator }));
+      if (wtw?.length) article.whereToWatch = toWhereToWatch(wtw); // accurate table straight from TMDB
       classification = await classify({ article, model: MODELS.classifier });
       const q = article.imageQuery || topic.primaryEntity || topic.title;
       src = await sourceImage(q);

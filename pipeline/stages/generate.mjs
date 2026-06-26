@@ -47,8 +47,9 @@ const NICHE = {
   },
   guide: {
     guide:
-      "STREAMING GUIDE form: give the where-to-watch answer up top, then per-title. ONLY state a streaming platform if it appears in the REFERENCE FACTS — never guess current availability.",
-    fields: '"whereToWatch":[{"title":"","platform":"","type":"Stream|Rent|Buy","year":""}]',
+      "STREAMING GUIDE = a CURATED, OPINIONATED RANKING (the form Google rewards), NOT a flat availability list. Rank the best picks and give EACH a confident critic's verdict on WHY it's worth watching — original recommendation value, a strong POV, a decisive #1. Add watch-order / which-edition / is-it-worth-your-subscription insight. Availability is a useful add-on, not the point: state a platform ONLY if that exact title is in the TMDB facts block, phrased 'as of [this month]; check before watching'. No unconfirmed sequels; keep all awards/numbers consistent.",
+    fields:
+      '"entries":[{"rank":1,"title":"","year":"","blurb":"a confident one-line verdict on why it\'s worth watching"}], "whereToWatch":[{"title":"","platform":"","type":"Stream|Rent|Buy","year":""}]',
   },
 };
 function resolveNiche(topic) {
