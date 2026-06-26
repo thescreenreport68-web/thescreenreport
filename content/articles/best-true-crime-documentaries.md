@@ -145,6 +145,7 @@ about:
     sameAs: 'https://en.wikipedia.org/wiki/Wild_Wild_Country'
 imageWidth: 1280
 imageHeight: 1461
+subcategory: rankings-lists
 ---
 
 If you want the short answer, the **best true crime documentaries to stream** right now are **The Jinx** (Max), **Making a Murderer** (Netflix), **The Thin Blue Line** (Max/rental), **Paradise Lost** (Max) and **Wild Wild Country** (Netflix) — a canon that not only defined the genre but, in two cases, literally changed real verdicts. Below is the full ranked guide: the all-time greats, the best new bingeable docuseries for 2026, and exactly where each one streams.

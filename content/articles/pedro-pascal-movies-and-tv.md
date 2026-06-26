@@ -129,6 +129,7 @@ about:
     sameAs: 'https://en.wikipedia.org/wiki/The_Fantastic_Four:_First_Steps'
 imageWidth: 1280
 imageHeight: 1831
+subcategory: profiles-careers
 ---
 
 If you want the short answer: Pedro Pascal is best known for four roles that arrived in just over a decade — **Oberyn Martell** in *Game of Thrones*, DEA agent **Javier Peña** in *Narcos*, masked bounty hunter **Din Djarin** in *The Mandalorian*, and grief-hardened survivor **Joel Miller** in *The Last of Us* — before he stepped into the Marvel Cinematic Universe as **Reed Richards** in *The Fantastic Four: First Steps*. This guide to Pedro Pascal movies and TV shows lays out every major role in order, tells you exactly where to stream each one, ranks the essential watches, and previews what's coming in 2026.

@@ -76,6 +76,64 @@ export function getAuthor(slug: string): Author | undefined {
   return AUTHORS.find((a) => a.slug === slug);
 }
 
-export const NAV = CATEGORIES.filter((c) =>
-  ["movies", "tv", "streaming", "celebrity"].includes(c.slug)
-);
+export type Subcategory = { slug: string; name: string };
+
+// Subcategories per category — each is populated by real articles (frontmatter `subcategory`).
+export const SUBCATEGORIES: Record<string, Subcategory[]> = {
+  movies: [
+    { slug: "rankings-lists", name: "Rankings & Lists" },
+    { slug: "explainers", name: "Explainers" },
+  ],
+  tv: [{ slug: "rankings-lists", name: "Rankings & Lists" }],
+  streaming: [
+    { slug: "best-of-streaming", name: "Best of Streaming" },
+    { slug: "where-to-watch", name: "Where to Watch" },
+  ],
+  celebrity: [{ slug: "profiles-careers", name: "Profiles & Careers" }],
+  reviews: [
+    { slug: "movie-reviews", name: "Movie Reviews" },
+    { slug: "tv-reviews", name: "TV Reviews" },
+  ],
+};
+
+export function getSubcategoriesForCategory(category: string): Subcategory[] {
+  return SUBCATEGORIES[category] ?? [];
+}
+
+export function getSubcategory(
+  category: string,
+  slug: string
+): Subcategory | undefined {
+  return (SUBCATEGORIES[category] ?? []).find((s) => s.slug === slug);
+}
+
+// Primary nav — every link resolves to a real page (category or subcategory archive).
+export type NavItem = {
+  label: string;
+  href: string;
+  subs: { name: string; href: string }[];
+};
+
+const subNav = (cat: string) =>
+  getSubcategoriesForCategory(cat).map((s) => ({
+    name: s.name,
+    href: `/${cat}/${s.slug}/`,
+  }));
+
+export const NAV: NavItem[] = [
+  {
+    label: "News",
+    href: "/news/",
+    subs: [
+      { name: "Film", href: "/movies/" },
+      { name: "TV", href: "/tv/" },
+      { name: "Streaming", href: "/streaming/" },
+      { name: "Celebrity", href: "/celebrity/" },
+    ],
+  },
+  { label: "Film", href: "/movies/", subs: subNav("movies") },
+  { label: "TV", href: "/tv/", subs: subNav("tv") },
+  { label: "Streaming", href: "/streaming/", subs: subNav("streaming") },
+  { label: "Celebrity", href: "/celebrity/", subs: subNav("celebrity") },
+  { label: "Reviews", href: "/reviews/", subs: subNav("reviews") },
+];

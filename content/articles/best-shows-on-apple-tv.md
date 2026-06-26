@@ -123,6 +123,7 @@ about:
     sameAs: 'https://en.wikipedia.org/wiki/Ted_Lasso'
 imageWidth: 1280
 imageHeight: 1600
+subcategory: best-of-streaming
 ---
 
 If you only start one thing tonight, make it **Severance** — the surreal corporate sci-fi thriller has officially overtaken *Ted Lasso* to become Apple TV+'s most-watched series ever, and it sits at the top of nearly every critic's list of the **best shows on Apple TV+** right now. That single fact tells you most of what you need to know: Apple has quietly become the most critically bulletproof streamer in Hollywood, where even its "lesser" titles out-review the headline shows on bigger platforms.

@@ -126,6 +126,7 @@ about:
     sameAs: 'https://en.wikipedia.org/wiki/Baby_Reindeer'
 imageWidth: 1280
 imageHeight: 1911
+subcategory: rankings-lists
 ---
 
 If you want the short answer, the best limited series to stream right now are **Lord of the Flies** (Netflix), **Half Man** (HBO Max), **Beef Season 2** (Netflix), **DTF St. Louis** (HBO Max) and **Agatha Christie's Seven Dials** (Netflix) among the 2026 newcomers — plus modern all-timers **Chernobyl**, **Baby Reindeer**, **The Night Of** and **Band of Brothers**. Every one delivers a complete, satisfying story with a real ending, and most finish in a single weekend. Below I've ranked them by platform with a one-line hook and where to watch each.

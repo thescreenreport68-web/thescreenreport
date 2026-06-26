@@ -143,6 +143,7 @@ about:
     sameAs: 'https://en.wikipedia.org/wiki/The_Greatest_Showman'
 imageWidth: 1280
 imageHeight: 1920
+subcategory: profiles-careers
 ---
 
 Here's the short answer: across roughly 15 feature films and more than a dozen TV projects, Zendaya's essential **movies and TV shows** are her two Emmy-winning seasons as Rue Bennett in HBO's *Euphoria*, the Fremen warrior **Chani** in Denis Villeneuve's *Dune* films, **MJ (Michelle Jones)** across three *Spider-Man* movies, and tennis power player **Tashi Duncan** in *Challengers* — a span that took her from Disney Channel kid to Emmy-winning, blockbuster-anchoring lead. This guide names every title, role, year and where to stream, lays out a chronological order to watch, ranks the best, and breaks down the biggest year of her career: a once-in-a-lifetime **2026** with five major releases.

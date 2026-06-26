@@ -123,6 +123,7 @@ about:
     sameAs: 'https://en.wikipedia.org/wiki/Oppenheimer_(film)'
 imageWidth: 1920
 imageHeight: 2316
+subcategory: movie-reviews
 ---
 
 A three-hour talking-heads biopic about a physicist — much of it set inside a security-clearance hearing, with almost no on-screen explosion — should not move like a thriller. *Oppenheimer* does. So let's not withhold the thing you came to this **Oppenheimer review** to find out: yes, it is worth watching, yes it is a good movie, and it is the best film Christopher Nolan has ever made. The Screen Report rating is **9.5 out of 10. Essential.** The only real question buried inside "is Oppenheimer worth watching" is whether a dialogue-dense, courtroom-heavy drama earns its runtime. It does, completely.

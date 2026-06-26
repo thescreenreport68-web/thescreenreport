@@ -126,6 +126,7 @@ about:
     sameAs: 'https://en.wikipedia.org/wiki/Lady_Bird_(film)'
 imageWidth: 1280
 imageHeight: 1730
+subcategory: profiles-careers
 ---
 
 Here is the verdict up front, no teasing: the best **Timothée Chalamet movie** is still *Call Me by Your Name*. Eight years and two more Oscar nominations later, his 2017 breakout remains his finest, most critically acclaimed performance — the role that made him, at 22, the third-youngest Best Actor nominee in Academy history. That is the headline of this ranking of the best **Timothée Chalamet movies ranked** from his essential work down: the quiet indie romance still beats the blockbusters. Not *Dune: Part Two*, his biggest hit. Not his full-body Bob Dylan transformation. The breakthrough wins.

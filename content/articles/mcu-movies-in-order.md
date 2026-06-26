@@ -141,6 +141,7 @@ about:
     sameAs: 'https://en.wikipedia.org/wiki/Spider-Man:_Brand_New_Day_(film)'
 imageWidth: 1280
 imageHeight: 1920
+subcategory: rankings-lists
 ---
 
 Here is the fast answer: there are two correct ways to watch the **MCU movies in order**, and they are not the same list. **Release order** starts with *Iron Man* (2008), the film that launched the franchise. **Chronological (timeline) order** starts with *Captain America: The First Avenger*, which is set in the 1940s, decades before Tony Stark builds his first suit. For a first watch, release order wins — the Marvel Cinematic Universe was engineered as serialized storytelling, so its reveals and gut-punches only land if you see them in the sequence audiences did.

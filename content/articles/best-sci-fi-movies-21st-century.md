@@ -144,6 +144,7 @@ about:
     sameAs: 'https://en.wikipedia.org/wiki/Mad_Max:_Fury_Road'
 imageWidth: 1280
 imageHeight: 1707
+subcategory: rankings-lists
 ---
 
 If you want the headline straight away, here it is: the highest-ranked sci-fi film on the most important critics' poll of the era is not Inception, Interstellar or Avatar. It is **Eternal Sunshine of the Spotless Mind** (2004), the Jim Carrey breakup movie. When *The New York Times* surveyed more than 500 directors, actors and critics for its Best Films of the 21st Century list, Charlie Kaufman and Michel Gondry's memory-erasing romance landed at **No. 7 overall**, ahead of every spectacle giant the genre has produced since.

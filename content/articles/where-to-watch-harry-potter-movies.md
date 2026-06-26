@@ -132,6 +132,7 @@ about:
     sameAs: 'https://en.wikipedia.org/wiki/Harry_Potter_(TV_series)'
 imageWidth: 1280
 imageHeight: 1924
+subcategory: where-to-watch
 ---
 
 If you want to know **where to watch the Harry Potter movies** in order, here is the blunt 2026 answer: through **June 30**, all eight films stream on **both HBO Max and Peacock** in the US. On **July 1, 2026**, Warner Bros. pulls the entire saga from both services at once. After that, the only guaranteed way to watch every film in order, on demand, is to **rent or buy** them on Amazon Prime Video, Apple TV, Google Play/YouTube, or Fandango at Home.

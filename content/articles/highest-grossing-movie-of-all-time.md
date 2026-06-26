@@ -125,6 +125,7 @@ about:
     sameAs: 'https://en.wikipedia.org/wiki/Gone_with_the_Wind_(film)'
 imageWidth: 1200
 imageHeight: 1474
+subcategory: rankings-lists
 ---
 
 The highest-grossing movie of all time is **Avatar** (2009), James Cameron's sci-fi epic, with roughly **$2.92 billion** in worldwide box office — about $2,923,710,708 as tracked by Box Office Mojo. That figure is not adjusted for inflation, and as of 2026 it still sits at the very top. So if you came here for the plain answer to *what is the highest grossing movie of all time*, that's it: a blue-skinned, motion-captured adventure on the moon Pandora that nobody expected to dethrone *Titanic* — Cameron's own previous record-holder.

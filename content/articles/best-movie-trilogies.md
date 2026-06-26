@@ -134,6 +134,7 @@ about:
     sameAs: 'https://en.wikipedia.org/wiki/Toy_Story_(franchise)'
 imageWidth: 1280
 imageHeight: 1706
+subcategory: rankings-lists
 ---
 
 Here is the short answer: **The Lord of the Rings** is the best movie trilogy of all time, and **The Godfather** is the only serious challenger to the crown. Lord of the Rings tops nearly every critic and fan poll because it is the rare saga where no installment drops the ball — all three films are great, and *The Return of the King* swept all 11 of its Oscar nominations, including Best Picture. The Godfather contains arguably the two finest individual films ever made, but *Part III* is a real step down, and that is exactly why it finishes second.

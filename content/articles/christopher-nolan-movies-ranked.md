@@ -133,6 +133,7 @@ about:
     sameAs: 'https://en.wikipedia.org/wiki/Interstellar_(film)'
 imageWidth: 1920
 imageHeight: 1440
+subcategory: rankings-lists
 ---
 
 No filmmaker working today turns dense, brain-bending ideas into billion-dollar IMAX events quite like Christopher Nolan. So here are **all 12 Christopher Nolan movies ranked worst to best** — and we are not hedging on the top spot. After a $6,000 debut, four Batman-adjacent landmarks, and a Best Picture sweep, our **best Christopher Nolan movie** is **The Dark Knight (2008)**, with *Oppenheimer* and *Memento* as the only films with a real claim to dethrone it.

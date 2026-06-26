@@ -130,6 +130,7 @@ about:
     sameAs: 'https://en.wikipedia.org/wiki/Everything_Everywhere_All_at_Once'
 imageWidth: 1280
 imageHeight: 1707
+subcategory: movie-reviews
 ---
 
 **The verdict up top:** *Everything Everywhere All at Once* is worth watching, and it mostly earns the hype — but only if you go in knowing the first half-hour is *designed* to overwhelm you. This is Daniels' (Daniel Kwan and Daniel Scheinert) genre-blender about an immigrant mom, hot-dog fingers, and a universe-destroying bagel, anchored by a career-best Michelle Yeoh. If you can ride out the chaos, the payoff is one of the most emotionally direct films of the decade. If pure sensory maximalism makes you tired just reading that sentence, this honest *Everything Everywhere All at Once review* will tell you exactly why — and whether you're in the crowd that should skip it.

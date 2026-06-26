@@ -142,6 +142,7 @@ about:
     sameAs: 'https://en.wikipedia.org/wiki/The_Penguin_(TV_series)'
 imageWidth: 1280
 imageHeight: 1697
+subcategory: movie-reviews
 ---
 
 Yes, The Batman is worth watching — and it's one of the best films the character has ever had. Matt Reeves' 2022 take is a 2-hour-56-minute rain-soaked detective noir that trades superhero spectacle for a serial-killer mystery, and Robert Pattinson plays a raw, year-two Bruce Wayne who is less billionaire playboy than insomniac obsessive. If you came to this **The Batman review** for a verdict before committing nearly three hours: it works. The single real cost of entry is that runtime.

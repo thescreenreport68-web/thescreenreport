@@ -118,6 +118,7 @@ about:
     sameAs: 'https://en.wikipedia.org/wiki/Dune_(2021_film)'
 imageWidth: 1280
 imageHeight: 1792
+subcategory: movie-reviews
 ---
 
 **The verdict up front:** *Dune: Part Two* is the rare sequel that towers over its predecessor. Denis Villeneuve's second chapter is a darker, faster, more emotionally charged film than *Dune* (2021), and it earns its 2-hour-46-minute runtime by trading spectacle-for-spectacle's-sake for real stakes. The numbers back it up — this **Dune: Part Two review** lands on the same side as the critical consensus, which has pushed the film to a **92% Rotten Tomatoes score** (8.4/10 average across 466-plus reviews), a full nine points above the original's 83%. If you only see one blockbuster on the biggest screen you can find this year, make it this one.

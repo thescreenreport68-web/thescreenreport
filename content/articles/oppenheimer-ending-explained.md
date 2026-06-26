@@ -136,6 +136,7 @@ about:
     sameAs: 'https://en.wikipedia.org/wiki/Oppenheimer_(film)'
 imageWidth: 1920
 imageHeight: 2316
+subcategory: explainers
 ---
 
 If you just walked out of Christopher Nolan's *Oppenheimer* feeling gut-punched and a little lost, here's the **oppenheimer ending explained** in one breath: that final lakeside conversation between Oppenheimer (Cillian Murphy) and Albert Einstein (Tom Conti) was never about Lewis Strauss. It was about the end of the world. Oppenheimer tells Einstein that the chain reaction he once feared, the one that might ignite the atmosphere, has already begun, just not in the way anyone expected. And then the sky catches fire.

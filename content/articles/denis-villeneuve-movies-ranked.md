@@ -134,6 +134,7 @@ about:
     sameAs: 'https://en.wikipedia.org/wiki/Incendies'
 imageWidth: 1920
 imageHeight: 2579
+subcategory: rankings-lists
 ---
 
 There's no withholding the answer here: the top of any honest **Denis Villeneuve movies ranked** list comes down to three titans — *Arrival*, *Blade Runner 2049*, and *Dune: Part Two* — and after eleven features, we give the crown to *Blade Runner 2049*, with *Arrival* a hair behind and *Dune: Part Two* completing the podium. That's the debate-settler. Everything below is the full countdown, worst to best, with where each film actually earns its spot.

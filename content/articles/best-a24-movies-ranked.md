@@ -132,6 +132,7 @@ about:
     sameAs: 'https://en.wikipedia.org/wiki/Past_Lives_(film)'
 imageWidth: 1920
 imageHeight: 1279
+subcategory: rankings-lists
 ---
 
 If you only watch one, make it **Everything Everywhere All at Once** — the multiverse epic that swept seven Oscars and made A24 the first studio ever to win all top six Academy Award categories in a single year. That sits at the summit of our **best A24 movies ranked** countdown, but it is far from the studio's only masterpiece. Below is the full list, worst-to-best is for cowards, so we are counting down from great to greatest.

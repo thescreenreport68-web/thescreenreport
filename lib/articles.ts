@@ -8,6 +8,7 @@ export type Article = {
   title: string;
   slug: string;
   category: string;
+  subcategory?: string;
   author: string;
   date: string; // ISO
   updated?: string;
@@ -56,6 +57,7 @@ export function getAllArticles(): Article[] {
       title: data.title,
       slug,
       category: data.category,
+      subcategory: data.subcategory,
       author: data.author,
       date: data.date,
       updated: data.updated,
@@ -95,6 +97,15 @@ export function getArticleBySlug(slug: string): Article | undefined {
 
 export function getArticlesByCategory(category: string): Article[] {
   return getAllArticles().filter((a) => a.category === category);
+}
+
+export function getArticlesBySubcategory(
+  category: string,
+  subcategory: string
+): Article[] {
+  return getAllArticles().filter(
+    (a) => a.category === category && a.subcategory === subcategory
+  );
 }
 
 export function getArticlesByAuthor(author: string): Article[] {

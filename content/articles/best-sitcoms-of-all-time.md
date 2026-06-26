@@ -135,6 +135,7 @@ about:
     sameAs: 'https://en.wikipedia.org/wiki/Frasier'
 imageWidth: 1280
 imageHeight: 1600
+subcategory: rankings-lists
 ---
 
 Let's settle the bar argument right now: the best sitcom of all time is **Seinfeld**. The "show about nothing" — TV Guide once called it the greatest television program ever made — is our **#1**, ranked above the more-watched *Friends* and the endlessly rewatched *The Office*. It earns the crown not on nostalgia but on craft: four self-absorbed New Yorkers, four storylines colliding in the final act, and a "no hugging, no learning" rule that made every episode a perfectly engineered joke machine.

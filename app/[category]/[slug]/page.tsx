@@ -11,13 +11,31 @@ import NewsletterBand from "@/components/NewsletterBand";
 import AdSlot from "@/components/AdSlot";
 import ArticleCard from "@/components/ArticleCard";
 import JsonLd from "@/components/JsonLd";
+import SubcategoryArchive from "@/components/SubcategoryArchive";
 import { getAllArticles, getArticle, getRelated } from "@/lib/articles";
-import { getAuthor, getCategory, SITE } from "@/lib/site";
+import {
+  getAuthor,
+  getCategory,
+  getSubcategory,
+  getSubcategoriesForCategory,
+  CATEGORIES,
+  SITE,
+} from "@/lib/site";
 
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return getAllArticles().map((a) => ({ category: a.category, slug: a.slug }));
+  const articleParams = getAllArticles().map((a) => ({
+    category: a.category,
+    slug: a.slug,
+  }));
+  const subParams = CATEGORIES.flatMap((c) =>
+    getSubcategoriesForCategory(c.slug).map((s) => ({
+      category: c.slug,
+      slug: s.slug,
+    }))
+  );
+  return [...articleParams, ...subParams];
 }
 
 export function generateMetadata({
@@ -25,6 +43,15 @@ export function generateMetadata({
 }: {
   params: { category: string; slug: string };
 }): Metadata {
+  const sub = getSubcategory(params.category, params.slug);
+  if (sub) {
+    const cat = getCategory(params.category);
+    return {
+      title: `${sub.name} — ${cat?.name}`,
+      description: `${sub.name} from The Screen Report's ${cat?.name} coverage — ${cat?.blurb ?? ""}`,
+      alternates: { canonical: `/${params.category}/${sub.slug}/` },
+    };
+  }
   const article = getArticle(params.category, params.slug);
   if (!article) return {};
   const ogImages = article.image
@@ -62,6 +89,10 @@ export default function ArticlePage({
 }: {
   params: { category: string; slug: string };
 }) {
+  const sub = getSubcategory(params.category, params.slug);
+  if (sub) {
+    return <SubcategoryArchive category={params.category} sub={sub} />;
+  }
   const article = getArticle(params.category, params.slug);
   if (!article) notFound();
   const cat = getCategory(article.category);

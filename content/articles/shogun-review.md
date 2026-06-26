@@ -137,6 +137,7 @@ about:
     sameAs: 'https://en.wikipedia.org/wiki/Sh%C5%8Dgun_(2024_TV_series)'
 imageWidth: 1788
 imageHeight: 2133
+subcategory: tv-reviews
 ---
 
 **The verdict:** *Shogun* is the best thing on television, and this *Shogun* review will not make you wait for that conclusion. FX's adaptation of James Clavell's 1975 novel earns its near-mythical 99% Rotten Tomatoes score and its record-breaking **18 Emmy wins** — the most-awarded single season in Emmy history — because it gets the one thing right that prestige epics usually fumble: it makes you care, deeply, about quiet people in a faraway century who barely raise their voices. **Our rating: 9.5/10.**

@@ -123,6 +123,7 @@ about:
     sameAs: 'https://en.wikipedia.org/wiki/Chernobyl_(miniseries)'
 imageWidth: 1920
 imageHeight: 2334
+subcategory: rankings-lists
 ---
 
 If you want the verdict up front, here it is: **The Sopranos** is the best HBO show of all time, with **The Wire** a razor-thin second. Those two — David Chase's New Jersey mob saga and David Simon's Baltimore epic — invented modern prestige television, and almost everything HBO has made since, from *Game of Thrones* to *Succession*, lives in the space they opened. Below is our definitive ranking of the best HBO shows of all time, the series that turned a premium cable channel into the most important brand in scripted drama.

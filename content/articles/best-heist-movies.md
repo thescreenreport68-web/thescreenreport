@@ -136,6 +136,7 @@ about:
     sameAs: 'https://en.wikipedia.org/wiki/Reservoir_Dogs'
 imageWidth: 1280
 imageHeight: 1706
+subcategory: rankings-lists
 ---
 
 If you want the verdict first, here it is: the best heist movies of all time are led by Michael Mann's **Heat** (1995), the greatest heist movie ever made, followed by Jules Dassin's **Rififi** (1955), Steven Soderbergh's **Ocean's Eleven** (2001), Sidney Lumet's **Dog Day Afternoon** (1975), Quentin Tarantino's **Reservoir Dogs** (1992), Stanley Kubrick's **The Killing** (1956), and Spike Lee's **Inside Man** (2006). Each perfects a different corner of the genre, from grim noir tragedy to glossy con-man fun.

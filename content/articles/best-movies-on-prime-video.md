@@ -139,6 +139,7 @@ about:
     sameAs: 'https://en.wikipedia.org/wiki/Goodfellas'
 imageWidth: 1920
 imageHeight: 2679
+subcategory: best-of-streaming
 ---
 
 Updated June 2026. If you want the short answer, here it is: the best movie on Prime Video right now is **Paul Thomas Anderson's "One Battle After Another"** (2025), a 95-on-Metacritic awards juggernaut that has been included free with Prime since May 23. Below it sits one of the deepest benches of any streamer — from a perfect-scoring courtroom classic to Scorsese's mob masterpiece — and the full ranked list is right here.

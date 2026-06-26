@@ -119,6 +119,7 @@ about:
     sameAs: 'https://en.wikipedia.org/wiki/The_Bear_(TV_series)'
 imageWidth: 1280
 imageHeight: 1706
+subcategory: tv-reviews
 ---
 
 **The Bear Season 5 is a triumphant final service** — a lean, eight-episode send-off that critics are calling the show's best run since Season 2. After two divisive years (Season 4 was the lowest-rated yet), FX's kitchen drama strips everything back to a single rainy day, one real-time last service, and a pounding Hans Zimmer score in place of the usual '90s needle drops. The early verdict is loud and unanimous: it sticks the landing.

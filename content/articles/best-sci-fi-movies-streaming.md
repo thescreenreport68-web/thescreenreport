@@ -136,6 +136,7 @@ about:
     sameAs: 'https://en.wikipedia.org/wiki/Arrival_(film)'
 imageWidth: 1920
 imageHeight: 2579
+subcategory: best-of-streaming
 ---
 
 The single best sci-fi movie streaming right now is **Bong Joon-ho's Mickey 17**, and it just landed on **HBO Max**. Robert Pattinson plays an "expendable" worker who keeps dying and getting reprinted on a frozen colony world — it's the most ambitious big-studio sci-fi in years, and it's finally a click away.

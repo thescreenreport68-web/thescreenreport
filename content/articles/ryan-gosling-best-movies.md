@@ -134,6 +134,7 @@ about:
     sameAs: 'https://en.wikipedia.org/wiki/Project_Hail_Mary_(film)'
 imageWidth: 1920
 imageHeight: 1280
+subcategory: profiles-careers
 ---
 
 Here's the short version, no hedging: **Ryan Gosling's best movie is _Drive_ (2011).** Nicolas Winding Refn's synth-soaked neo-noir is the film that turned a respected indie actor into a permanent movie icon, and it tops this ranking of the **ryan gosling best movies ranked** from worst-to-first. But the honest answer is more interesting than one title, because Gosling's career splits three ways: _La La Land_ is the awards consensus, _Barbie_ is the box-office monster at roughly $1.446 billion, and _Drive_ is the cult classic that fans on Reddit and critics on Rotten Tomatoes keep circling back to. Below, all 15 films are ranked with the case for each, the Rotten Tomatoes and IMDb context, where to stream them, and exactly how his 2026 awards contender _Project Hail Mary_ reshuffles the all-time order.
