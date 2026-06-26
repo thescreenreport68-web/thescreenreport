@@ -1,0 +1,76 @@
+{
+  "id": "lotr-where-watch",
+  "slug": "where-to-watch-lord-of-the-rings",
+  "status": "needs_review",
+  "stages": {
+    "attempt1": {
+      "score": 76,
+      "cat": "streaming/where-to-watch",
+      "img": "/images/articles/where-to-watch-lord-of-the-rings.jpg",
+      "hardBlocks": [
+        "'Best Sell' appears to be a fabricated/garbled retailer name (likely meant 'Best Buy') — sloppy error that damages credibility",
+        "Claim that extended editions are 'always available for digital purchase' and rotate onto Max is stated with more certainty than is verifiable; availability of extended cuts on Max is inconsistent and should be hedged or sourced"
+      ]
+    },
+    "attempt2": {
+      "score": 73,
+      "cat": "streaming/where-to-watch",
+      "img": "/images/articles/where-to-watch-lord-of-the-rings.jpg",
+      "hardBlocks": [
+        "Streaming availability claim ('primary streaming home is Max') is volatile and was inaccurate at various points — LOTR has historically rotated on/off Max and elsewhere; presenting it as definitive for 2025 risks being wrong and should be hedged/dated more carefully.",
+        "Runtime figures need verification: Fellowship extended is commonly cited as 228 min (not 208), and theatrical Fellowship ~178 min is correct; the 208 figure appears fabricated/incorrect.",
+        "Combined extended runtime of 'approximately 11 hours 26 minutes (686 min)' conflicts with the individual runtimes listed (208+223+263=694), an internal inconsistency suggesting unverified numbers."
+      ]
+    }
+  },
+  "scorecard": {
+    "score": 73,
+    "subscores": {
+      "accuracy": 7,
+      "curiosity": 8,
+      "readability": 9,
+      "structure": 9,
+      "infoGain": 7,
+      "seo": 7,
+      "faqQuality": 8,
+      "voice": 7,
+      "engagement": 8,
+      "completeness": 7
+    },
+    "strengths": [
+      "Strong BLUF lead that answers the query immediately",
+      "Clean scannable structure with question-based H2s and Key Takeaways",
+      "Six solid PAA-style FAQs including Netflix, free, Hobbit, and runtime queries",
+      "Useful theatrical-vs-extended differentiation adds genuine reader value",
+      "Primary keyword placed in title, dek, and naturally throughout"
+    ],
+    "weaknesses": [
+      "Accuracy risk on streaming home and runtime numbers undermines trust — these are the exact facts readers come for",
+      "Sources are thin and generic (Wikipedia, Box Office Mojo, Oscars); no authoritative streaming-availability source like JustWatch",
+      "No internal links present despite rubric requirement",
+      "No comparison table for where-to-watch options (subscription vs rent vs buy) — a missed opportunity for scannability",
+      "Information gain is decent but leans summary; little original verdict or pricing-value analysis",
+      "Date-stamping ('As of 2025') without a specific update date weakens credibility for a time-sensitive guide"
+    ],
+    "deterministic": {
+      "words": 606,
+      "h2s": 5,
+      "h2Questions": 4,
+      "internalLinks": 0,
+      "externalLinks": 3,
+      "hasSources": true,
+      "faqCount": 6,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": false,
+      "kwInH2": false,
+      "hardBlocks": []
+    },
+    "hardBlocks": [
+      "Streaming availability claim ('primary streaming home is Max') is volatile and was inaccurate at various points — LOTR has historically rotated on/off Max and elsewhere; presenting it as definitive for 2025 risks being wrong and should be hedged/dated more carefully.",
+      "Runtime figures need verification: Fellowship extended is commonly cited as 228 min (not 208), and theatrical Fellowship ~178 min is correct; the 208 figure appears fabricated/incorrect.",
+      "Combined extended runtime of 'approximately 11 hours 26 minutes (686 min)' conflicts with the individual runtimes listed (208+223+263=694), an internal inconsistency suggesting unverified numbers."
+    ]
+  },
+  "ms": 209935
+}

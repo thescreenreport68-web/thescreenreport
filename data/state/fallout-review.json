@@ -1,0 +1,84 @@
+{
+  "id": "fallout-review",
+  "slug": "fallout-tv-review",
+  "status": "needs_review",
+  "stages": {
+    "attempt1": {
+      "score": 58,
+      "cat": "reviews/tv-reviews",
+      "img": "/images/articles/fallout-tv-review.jpg",
+      "hardBlocks": [
+        "Justin Theroux as 'Robert House' is fabricated — Theroux is not in Fallout; Mr. House did not appear as a live cast role in Season 1.",
+        "Season 2 'premiered in December 2025' with a '96% Rotten Tomatoes' score and a 'third season confirmed in May 2025' are unverifiable/likely-fabricated future-dated claims.",
+        "'$153 million budget' is a specific figure presented as fact without sourcing — likely fabricated precision.",
+        "'over 100 million viewers by late 2024' and 'two Creative Arts Emmy wins from 14 nominations' are specific stats presented as fact; the viewer figure and win count are dubious/unsourced.",
+        "'94% Rotten Tomatoes' stated as current fact but unverified against cited source."
+      ]
+    },
+    "attempt2": {
+      "score": 51,
+      "cat": "reviews/tv-reviews",
+      "img": "/images/articles/fallout-tv-review.jpg",
+      "hardBlocks": [
+        "Internal inconsistency: dek/Takeaways claim '94% Rotten Tomatoes' while body says '93%' — at least one is wrong and both are unverified.",
+        "Fabricated Season 2 details: 96% Rotten Tomatoes score, December 2025 premiere, trip to New Vegas, Justin Theroux as Robert House — Season 2 had not aired at any plausible writing date; these are invented.",
+        "Fabricated awards specifics: 'won two Creative Arts Emmy Awards out of 14 total nominations' and 'Outstanding Drama Series' nomination presented as fact without sourcing.",
+        "Fabricated/uncertain production figure: '$153 million budget' stated as definitive.",
+        "Self-dating fabrication: FAQ asserts 'As of mid-2026' and a December 2025 Season 2 debut — speculative future events presented as completed fact.",
+        "Season 2 filming locations (LA/Toronto) and Skeleton Coast Namibia claims unverifiable and likely invented."
+      ]
+    }
+  },
+  "scorecard": {
+    "score": 51,
+    "subscores": {
+      "accuracy": 3,
+      "curiosity": 7,
+      "readability": 8,
+      "structure": 9,
+      "infoGain": 6,
+      "seo": 7,
+      "faqQuality": 6,
+      "voice": 7,
+      "engagement": 7,
+      "completeness": 7
+    },
+    "strengths": [
+      "Strong scannable structure: BLUF lead, multiple question H2s, key takeaways, FAQ block.",
+      "Confident editorial voice with clear verdict and POV framing.",
+      "Good keyword placement and meta-style dek; internal and external links present.",
+      "Accessible explanation of why the adaptation works for newcomers and fans."
+    ],
+    "weaknesses": [
+      "Heavy reliance on fabricated/future-tense facts about Season 2 destroys accuracy credibility.",
+      "Contradictory RT scores (93% vs 94%) signal sloppy fact control.",
+      "External sources are generic (RT, IMDb, Wikipedia) rather than authoritative reporting (Variety, THR) to back specific claims.",
+      "Awards and budget numbers stated as fact without attribution.",
+      "Information gain undermined because much 'analysis' rests on invented Season 2 content.",
+      "No table where one (cast/season comparison) would aid scannability."
+    ],
+    "deterministic": {
+      "words": 788,
+      "h2s": 5,
+      "h2Questions": 4,
+      "internalLinks": 2,
+      "externalLinks": 4,
+      "hasSources": true,
+      "faqCount": 6,
+      "ktCount": 5,
+      "kwInTitle": true,
+      "kwInFirst100": false,
+      "kwInH2": false,
+      "hardBlocks": []
+    },
+    "hardBlocks": [
+      "Internal inconsistency: dek/Takeaways claim '94% Rotten Tomatoes' while body says '93%' — at least one is wrong and both are unverified.",
+      "Fabricated Season 2 details: 96% Rotten Tomatoes score, December 2025 premiere, trip to New Vegas, Justin Theroux as Robert House — Season 2 had not aired at any plausible writing date; these are invented.",
+      "Fabricated awards specifics: 'won two Creative Arts Emmy Awards out of 14 total nominations' and 'Outstanding Drama Series' nomination presented as fact without sourcing.",
+      "Fabricated/uncertain production figure: '$153 million budget' stated as definitive.",
+      "Self-dating fabrication: FAQ asserts 'As of mid-2026' and a December 2025 Season 2 debut — speculative future events presented as completed fact.",
+      "Season 2 filming locations (LA/Toronto) and Skeleton Coast Namibia claims unverifiable and likely invented."
+    ]
+  },
+  "ms": 157477
+}

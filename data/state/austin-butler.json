@@ -1,0 +1,61 @@
+{
+  "id": "austin-butler",
+  "slug": "austin-butler-movies-and-tv-shows",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": 82,
+      "cat": "celebrity/profiles-careers",
+      "img": "/images/articles/austin-butler-movies-and-tv-shows.jpg",
+      "hardBlocks": []
+    }
+  },
+  "scorecard": {
+    "score": 82,
+    "subscores": {
+      "accuracy": 8,
+      "curiosity": 8,
+      "readability": 9,
+      "structure": 9,
+      "infoGain": 7,
+      "seo": 8,
+      "faqQuality": 8,
+      "voice": 8,
+      "engagement": 8,
+      "completeness": 8
+    },
+    "strengths": [
+      "Headline carries a specific true claim (Disney to Oscar nominee) and primary keyword sits in title, dek, and lead.",
+      "Clean BLUF lead, multiple question H2s, key takeaways, and scannable short paragraphs with bolded phrases.",
+      "FAQ block is robust (6 questions) and mostly accurate: Elvis Golden Globe + BAFTA wins and Oscar nomination, Feyd-Rautha role, Iceman Cometh Broadway debut with Denzel Washington all check out.",
+      "Includes internal links and a sources list with authoritative external references (Wikipedia, Box Office Mojo, Rotten Tomatoes)."
+    ],
+    "weaknesses": [
+      "Several claims need verification and risk inaccuracy: Butler's Zoey 101 character is commonly cited as James Garrett but the FAQ frames him as 'main role' while body and FAQ slightly conflict; double-check season/role details.",
+      "The 'barely slept for two years' Elvis prep claim is paraphrased/embellished and could read as a fabricated quote without direct sourcing.",
+      "Vague unsupported claim 'He has also worked with acclaimed directors like Darren Aronofsky' lacks a named project (Caught Stealing) — feels like filler and weakens accuracy.",
+      "Information gain is thin: it's largely a competent chronological summary with light 'strategic growth' framing but no real verdict, ranking, or original analysis to beat Wikipedia.",
+      "Dune: Part Two 'Official Site' is a weak source; no box office or career-figure data tables that would add gain; no meta description provided.",
+      "Could use a movies/TV table (year, title, role, platform) for scannability and SEO — a missed opportunity given the keyword is a filmography query."
+    ],
+    "deterministic": {
+      "words": 539,
+      "h2s": 6,
+      "h2Questions": 5,
+      "internalLinks": 2,
+      "externalLinks": 4,
+      "hasSources": true,
+      "faqCount": 6,
+      "ktCount": 5,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": true,
+      "hardBlocks": []
+    },
+    "hardBlocks": []
+  },
+  "score": 82,
+  "category": "celebrity",
+  "subcategory": "profiles-careers",
+  "ms": 60313
+}

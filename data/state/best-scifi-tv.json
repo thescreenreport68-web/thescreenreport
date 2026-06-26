@@ -1,0 +1,68 @@
+{
+  "id": "best-scifi-tv",
+  "slug": "best-sci-fi-tv-shows-ranked",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": 76,
+      "cat": "tv/rankings-lists",
+      "img": "/images/articles/best-sci-fi-tv-shows-ranked.jpg",
+      "hardBlocks": [
+        "Specific Emmy claim ('19 Emmy nominations, winning three for visual effects and sound editing') is precise enough to be a likely fabrication risk — BSG's Emmy tally was largely in technical categories but the exact figures need verification; presented as fact without sourcing."
+      ]
+    },
+    "attempt2": {
+      "score": 81,
+      "cat": "tv/rankings-lists",
+      "img": "/images/articles/best-sci-fi-tv-shows-ranked.jpg",
+      "hardBlocks": []
+    }
+  },
+  "scorecard": {
+    "score": 81,
+    "subscores": {
+      "accuracy": 8,
+      "curiosity": 9,
+      "readability": 9,
+      "structure": 9,
+      "infoGain": 8,
+      "seo": 7,
+      "faqQuality": 9,
+      "voice": 9,
+      "engagement": 8,
+      "completeness": 8
+    },
+    "strengths": [
+      "Strong BLUF lead that names the #1 pick and justifies it immediately, opening a loop on 'why'.",
+      "Clean structure: multiple question H2s, key takeaways, numbered ranking, robust 6-FAQ block with accurate, specific answers.",
+      "Confident, specific voice with no AI filler; rewatchability and 'where to start' angles add genuine reader benefit.",
+      "Verifiable claims hold up: BSG Peabody Award, Time 100 list, Moore's episode podcast, The Expanse 2015–2022, Severance premise, Westworld four seasons (2016–2022)."
+    ],
+    "weaknesses": [
+      "External sources are mostly streaming/Wikipedia landing pages, not authoritative critical/journalistic sources (e.g., no Rolling Stone, IGN, NYT, Peabody.org) — weakens E-E-A-T claim of '3 authoritative external sources'.",
+      "No internal links present at all, a required element for rank-#1 standard.",
+      "Primary keyword 'best sci-fi tv shows' appears in title/H2 but could be seeded more naturally in the lead and meta; no explicit meta description provided.",
+      "Ranking is thin at only 5 entries for an 'of all time' list — omits acknowledged influences (Star Trek, The Twilight Zone, Doctor Who, X-Files) that readers will expect, hurting completeness.",
+      "No table or comparison element (platform/seasons/run-years) where it would aid scannability."
+    ],
+    "deterministic": {
+      "words": 794,
+      "h2s": 5,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 5,
+      "hasSources": true,
+      "faqCount": 6,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": true,
+      "hardBlocks": []
+    },
+    "hardBlocks": []
+  },
+  "score": 81,
+  "category": "tv",
+  "subcategory": "rankings-lists",
+  "ms": 210960
+}

@@ -1,0 +1,82 @@
+{
+  "id": "sydney-sweeney",
+  "slug": "sydney-sweeney-movies-and-tv-shows",
+  "status": "needs_review",
+  "stages": {
+    "attempt1": {
+      "score": 58,
+      "cat": "celebrity/profiles-careers",
+      "img": "/images/articles/sydney-sweeney-movies-and-tv-shows.jpg",
+      "hardBlocks": [
+        "Likely-fabricated relationship claim: 'Sydney Sweeney is dating businessman and music executive Scooter Braun' — presented as fact without sourcing; high risk of fabrication.",
+        "Christy quote 'the most impactful project of my life' is unsourced and likely fabricated/paraphrased as a direct quote.",
+        "Madame Web quote 'just hired as an actress' presented as direct quote without source — likely fabricated wording.",
+        "'The Custom of the Country' / 'Gundam' / 'Scandalous!' (Kim Novak) / 'Honey Trap' production company / 'Custom of the Country' adaptation — several upcoming-project claims are unverified and several appear fabricated or speculative.",
+        "Timeline error: claims Euphoria role and Emmy nominations were 'in the same year' as White Lotus, but White Lotus aired 2021 and her Emmy noms came in different cycles; also 'breakout 2018' then FAQ says '2019-2021' — internally inconsistent.",
+        "She was Emmy-nominated for The White Lotus (2022) and Euphoria (2022) in the same year — this is roughly true, but the article conflates timelines elsewhere."
+      ]
+    },
+    "attempt2": {
+      "score": 78,
+      "cat": "celebrity/profiles-careers",
+      "img": "/images/articles/sydney-sweeney-movies-and-tv-shows.jpg",
+      "hardBlocks": [
+        "Emmy nomination claim is muddled: Sweeney's 2022 Euphoria nom was for Outstanding Supporting Actress in a Drama Series, but she was NOT Emmy-nominated for The White Lotus in the same year for 'Supporting Actress in a Limited Series' as a separate win-narrative — verify; the article and FAQ assert two noms in 2022 which is plausible but the framing risks inaccuracy.",
+        "'2026 launch of Honey Trap' and 'Sony first-look deal' — Sweeney's known company is Fifty-Fifty Films; 'Honey Trap' as a 2026 company appears speculative/fabricated and is a future-dated unverifiable claim.",
+        "'The Housemaid' (2025) co-starring Amanda Seyfried with a confirmed sequel 'The Housemaid's Secret' — sequel title and reprise claim are likely fabricated/unconfirmed.",
+        "'Christy underperformed but performance hailed as a knockout' — the quote/verdict and box office claim are unsourced and future-dated (2025)."
+      ]
+    }
+  },
+  "scorecard": {
+    "score": 78,
+    "subscores": {
+      "accuracy": 7,
+      "curiosity": 8,
+      "readability": 9,
+      "structure": 9,
+      "infoGain": 8,
+      "seo": 8,
+      "faqQuality": 8,
+      "voice": 8,
+      "engagement": 8,
+      "completeness": 8
+    },
+    "strengths": [
+      "Strong BLUF lead that delivers the thesis immediately.",
+      "Excellent scannable structure: 6 question H2s, key takeaways, 6 FAQ entries, bolded titles.",
+      "Original framing (TV-to-producer arc, 'fund passion projects' POV) beyond a dry filmography.",
+      "Primary keyword placed in title, dek, and naturally in body; internal links and external sources present.",
+      "Confident, specific voice with little AI filler."
+    ],
+    "weaknesses": [
+      "Multiple future-dated 2025-2026 claims (Christy, The Housemaid sequel, Honey Trap, Sony deal) read as speculative and are not backed by the listed sources — accuracy risk.",
+      "Sources are thin/generic (Wikipedia, HBO landing pages); needs harder citations (Variety, Deadline, THR) for box office and deal claims.",
+      "American Eagle 'eugenics' controversy framing is editorializing without a cited source for 'academics' or her quote.",
+      "Box Office Mojo link uses a placeholder-looking title ID; verify it resolves to Anyone but You.",
+      "Reality Winner role described but 'nearly solo performance' overstates; minor framing issue.",
+      "No table (e.g., filmography/year/role) which would boost scannability and info gain."
+    ],
+    "deterministic": {
+      "words": 777,
+      "h2s": 7,
+      "h2Questions": 6,
+      "internalLinks": 2,
+      "externalLinks": 5,
+      "hasSources": true,
+      "faqCount": 6,
+      "ktCount": 5,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "hardBlocks": []
+    },
+    "hardBlocks": [
+      "Emmy nomination claim is muddled: Sweeney's 2022 Euphoria nom was for Outstanding Supporting Actress in a Drama Series, but she was NOT Emmy-nominated for The White Lotus in the same year for 'Supporting Actress in a Limited Series' as a separate win-narrative — verify; the article and FAQ assert two noms in 2022 which is plausible but the framing risks inaccuracy.",
+      "'2026 launch of Honey Trap' and 'Sony first-look deal' — Sweeney's known company is Fifty-Fifty Films; 'Honey Trap' as a 2026 company appears speculative/fabricated and is a future-dated unverifiable claim.",
+      "'The Housemaid' (2025) co-starring Amanda Seyfried with a confirmed sequel 'The Housemaid's Secret' — sequel title and reprise claim are likely fabricated/unconfirmed.",
+      "'Christy underperformed but performance hailed as a knockout' — the quote/verdict and box office claim are unsourced and future-dated (2025)."
+    ]
+  },
+  "ms": 170841
+}

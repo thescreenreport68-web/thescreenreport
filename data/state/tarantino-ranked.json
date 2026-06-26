@@ -1,0 +1,69 @@
+{
+  "id": "tarantino-ranked",
+  "slug": "best-quentin-tarantino-movies-ranked",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": 71,
+      "cat": "movies/rankings-lists",
+      "img": "/images/articles/best-quentin-tarantino-movies-ranked.jpg",
+      "hardBlocks": []
+    },
+    "attempt2": {
+      "score": 88,
+      "cat": "movies/rankings-lists",
+      "img": "/images/articles/best-quentin-tarantino-movies-ranked.jpg",
+      "hardBlocks": []
+    }
+  },
+  "scorecard": {
+    "score": 88,
+    "subscores": {
+      "accuracy": 9,
+      "curiosity": 9,
+      "readability": 9,
+      "structure": 10,
+      "infoGain": 8,
+      "seo": 9,
+      "faqQuality": 9,
+      "voice": 9,
+      "engagement": 9,
+      "completeness": 9
+    },
+    "strengths": [
+      "BLUF lead delivers the #1 answer immediately and is factually defensible (Pulp Fiction, Palme d'Or, NFR induction, two screenplay Oscars all accurate).",
+      "Strong scannable structure: multiple question H2s, key takeaways, a clean ranked list, and a complete-filmography section.",
+      "Accurate handling of nuanced facts — Django as highest-grosser, Kill Bill counted as one film, Avary screenplay co-credit, The Movie Critic shelved, Fincher attached to Cliff Booth adaptation.",
+      "6 real PAA-style FAQs that match search intent, plus authoritative external sources (Box Office Mojo, Oscars.org, Rotten Tomatoes, Wikipedia).",
+      "Information gain via explicit ranking criteria and a 'why his style resonates' POV section rather than a dry list.",
+      "Confident editorial voice with specific claims, internal links, and schema-friendly about/sameAs data."
+    ],
+    "weaknesses": [
+      "The '$1.9 billion worldwide' career gross figure is unsourced and approximate — should be cited or qualified to avoid a soft accuracy risk.",
+      "Once Upon a Time in Hollywood is sometimes cited as nearly matching or exceeding Django's global gross; the 'highest-grossing' claim is defensible but could use a year-stamped source to be airtight.",
+      "Ranking justifications are thin (one sentence each) — could add a line of original analysis per entry for more reader value.",
+      "Internal links point to generic category pages rather than specific related articles, weakening internal-link relevance.",
+      "Meta/SEO description not explicitly provided as a discrete field; dek works but a tailored meta would strengthen the package.",
+      "No table comparing box office/Rotten Tomatoes scores, which the rubric rewards and the topic invites."
+    ],
+    "deterministic": {
+      "words": 939,
+      "h2s": 8,
+      "h2Questions": 6,
+      "internalLinks": 2,
+      "externalLinks": 4,
+      "hasSources": true,
+      "faqCount": 6,
+      "ktCount": 5,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "hardBlocks": []
+    },
+    "hardBlocks": []
+  },
+  "score": 88,
+  "category": "movies",
+  "subcategory": "rankings-lists",
+  "ms": 659909
+}

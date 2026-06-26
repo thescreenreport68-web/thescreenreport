@@ -1,0 +1,74 @@
+{
+  "id": "barbenheimer",
+  "slug": "barbenheimer-explained",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": 78,
+      "cat": "movies/explainers",
+      "img": "/images/articles/barbenheimer-explained.jpg",
+      "hardBlocks": [
+        "Likely-fabricated quote: Francis Ford Coppola calling it 'a victory for cinema' and Martin Scorsese calling it a 'perfect storm' are not well-sourced and appear invented/misattributed.",
+        "Specific stat '40,000 AMC loyalty members pre-booked both films' and 'nearly 20% of Oppenheimer ticket buyers also bought Barbie tickets' are unverified/likely fabricated precision.",
+        "Claim that Warner Bros. moving Barbie was retaliatory is presented as 'industry insiders speculated' but framed too confidently; the feud-causation framing in dek/headline overstates a speculative link as established fact.",
+        "'Oppenheimer led with 13 nods' is incorrect — Oppenheimer received 13 nominations is accurate, but 'won seven Oscars' is correct; however Barbie received 8 nominations and won only Best Original Song is correct. The '21 combined nominations' (13+8) checks out — but verify Barbie count was 8, accurate. Minor: 'overlaced' is not the issue, the awards numbers are largely fine."
+      ]
+    },
+    "attempt2": {
+      "score": 84,
+      "cat": "movies/explainers",
+      "img": "/images/articles/barbenheimer-explained.jpg",
+      "hardBlocks": []
+    }
+  },
+  "scorecard": {
+    "score": 84,
+    "subscores": {
+      "accuracy": 8,
+      "curiosity": 9,
+      "readability": 9,
+      "structure": 9,
+      "infoGain": 8,
+      "seo": 8,
+      "faqQuality": 9,
+      "voice": 8,
+      "engagement": 9,
+      "completeness": 8
+    },
+    "strengths": [
+      "BLUF lead delivers the core answer immediately and bolds the definition.",
+      "Strong question-based H2 structure with Key Takeaways, lists, and 6 PAA-style FAQs.",
+      "Most numbers check out: Barbie $162M and Oppenheimer $82.4M openings, Oppenheimer 13 noms/7 wins, Barbie 8 noms/1 win, 21 combined noms are accurate.",
+      "Good information gain via the legacy section (Saw Patrol, Garfuriosa) and counter-programming framing.",
+      "Real external sources and curiosity-pulling subheads keep momentum."
+    ],
+    "weaknesses": [
+      "Several claims need scrutiny: the Tom Cruise/Martin Scorsese 'victory for cinema' endorsements are vaguely attributed and the exact quote risks being fabricated/misattributed—penalized.",
+      "The '40,000 AMC loyalty members booked both films' and '79% of all tickets sold that weekend' figures are presented as hard data without precise sourcing and may be inflated/imprecise.",
+      "'Fourth-largest weekend in box office history' is a contested/time-sensitive claim that should be qualified with date and inflation caveat.",
+      "Sources lean heavily on Wikipedia; rubric wants 3+ authoritative non-wiki external sources (trade outlets like Variety, Deadline, THR).",
+      "No internal links present despite rubric requirement.",
+      "Margot Robbie 'Barbie, Oppenheimer, Barbie again' and Issa Rae sociopathy quips are plausible but should be sourced to avoid paraphrase-as-quote risk.",
+      "Meta description (dek) is decent but could place primary keyword 'Barbenheimer explained' more explicitly."
+    ],
+    "deterministic": {
+      "words": 753,
+      "h2s": 7,
+      "h2Questions": 6,
+      "internalLinks": 0,
+      "externalLinks": 5,
+      "hasSources": true,
+      "faqCount": 6,
+      "ktCount": 5,
+      "kwInTitle": true,
+      "kwInFirst100": false,
+      "kwInH2": false,
+      "hardBlocks": []
+    },
+    "hardBlocks": []
+  },
+  "score": 84,
+  "category": "movies",
+  "subcategory": "explainers",
+  "ms": 263652
+}

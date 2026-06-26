@@ -28,6 +28,31 @@ export type Article = {
   featured?: boolean;
   readingTime: number; // minutes
   body: string; // markdown
+  // ---- per-niche structured fields (drive the niche UI modules) ----
+  formatTag?: string; // review | list | explainer | profile | guide | news | interview | trailer | reaction | box-office | awards
+  verdict?: string; // reviews: one-line bottom-line
+  rating?: { score: number; max: number; label?: string }; // reviews
+  prosCons?: { pros: string[]; cons: string[] }; // reviews
+  infoCard?: {
+    director?: string;
+    cast?: string[];
+    runtime?: string;
+    releaseYear?: string;
+    rated?: string;
+    genre?: string;
+    whereToWatch?: string;
+  }; // reviews / film pieces
+  entries?: { rank: number; title: string; year?: string; blurb: string }[]; // rankings
+  tldr?: string; // explainers: the short answer
+  spoiler?: boolean; // explainers: show spoiler banner
+  factPanel?: {
+    born?: string;
+    knownFor?: string[];
+    activeYears?: string;
+    nationality?: string;
+  }; // profiles
+  filmography?: { year?: string; title: string; role?: string; type?: string }[]; // profiles
+  whereToWatch?: { title: string; platform: string; type?: string; year?: string }[]; // guides
 };
 
 const CONTENT_DIR = path.join(process.cwd(), "content", "articles");
@@ -77,6 +102,17 @@ export function getAllArticles(): Article[] {
       featured: data.featured ?? false,
       readingTime: readingTimeFor(content),
       body: content,
+      formatTag: data.formatTag,
+      verdict: data.verdict,
+      rating: data.rating,
+      prosCons: data.prosCons,
+      infoCard: data.infoCard,
+      entries: data.entries ?? [],
+      tldr: data.tldr,
+      spoiler: data.spoiler ?? false,
+      factPanel: data.factPanel,
+      filmography: data.filmography ?? [],
+      whereToWatch: data.whereToWatch ?? [],
     };
   });
 

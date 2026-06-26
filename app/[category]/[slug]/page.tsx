@@ -5,6 +5,7 @@ import Byline from "@/components/Byline";
 import PlaceholderImage from "@/components/PlaceholderImage";
 import ArticleBody from "@/components/ArticleBody";
 import KeyTakeaways from "@/components/KeyTakeaways";
+import { NicheTop, NicheBottom } from "@/components/NicheModules";
 import Faq from "@/components/Faq";
 import AuthorBox from "@/components/AuthorBox";
 import NewsletterBand from "@/components/NewsletterBand";
@@ -204,9 +205,13 @@ export default function ArticlePage({
             </figcaption>
           </figure>
 
+          <NicheTop article={article} />
+
           <KeyTakeaways items={article.keyTakeaways} />
 
           <ArticleBody body={article.body} related={related} />
+
+          <NicheBottom article={article} />
 
           <Faq items={article.faq} />
           <AuthorBox author={article.author} />
