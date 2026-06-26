@@ -4,7 +4,7 @@ title: >-
   Each One)
 slug: best-true-crime-documentaries
 category: tv
-author: maya-okafor
+author: editorial-team
 date: '2026-06-16T23:00:00.000Z'
 dek: >-
   A ranked, genre-spanning guide to the best true crime documentaries to stream

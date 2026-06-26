@@ -33,13 +33,17 @@ export default function AuthorPage({ params }: { params: { slug: string } }) {
 
   const personLd = {
     "@context": "https://schema.org",
-    "@type": "Person",
+    "@type": a.type ?? "Person",
     name: a.name,
-    jobTitle: a.role,
     description: a.bio,
     url: `${SITE.url}/author/${a.slug}/`,
-    worksFor: { "@type": "Organization", name: SITE.name, url: SITE.url },
     knowsAbout: ["Film", "Television", "Streaming", "Hollywood", "Celebrity"],
+    ...(a.type === "Organization"
+      ? { parentOrganization: { "@type": "Organization", name: SITE.name, url: SITE.url } }
+      : {
+          jobTitle: a.role,
+          worksFor: { "@type": "Organization", name: SITE.name, url: SITE.url },
+        }),
     ...(a.sameAs?.length ? { sameAs: a.sameAs } : {}),
   };
 

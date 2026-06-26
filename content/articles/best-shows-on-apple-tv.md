@@ -2,7 +2,7 @@
 title: 'The 15 Best Shows on Apple TV+ to Watch Right Now (2026), Ranked'
 slug: best-shows-on-apple-tv
 category: streaming
-author: maya-okafor
+author: editorial-team
 date: '2026-06-15T15:00:00.000Z'
 dek: >-
   From Severance dethroning Ted Lasso to The Studio's near-perfect reviews and

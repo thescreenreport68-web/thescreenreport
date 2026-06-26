@@ -2,7 +2,7 @@
 title: 'The Batman Review: Pattinson''s Noir Gamble Pays Off'
 slug: the-batman-review
 category: reviews
-author: jordan-hale
+author: editorial-team
 date: '2026-06-20T23:00:00.000Z'
 dek: >-
   Robert Pattinson's raw, year-two Batman stalks Paul Dano's Zodiac-inspired

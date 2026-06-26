@@ -4,7 +4,7 @@ title: >-
   Watch
 slug: pedro-pascal-movies-and-tv
 category: celebrity
-author: daniel-reyes
+author: editorial-team
 date: '2026-06-21T15:00:00.000Z'
 dek: >-
   Oberyn, Javier Peña, Din Djarin, Joel Miller and Reed Richards — the complete

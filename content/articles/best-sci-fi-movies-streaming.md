@@ -2,7 +2,7 @@
 title: 'The Best Sci-Fi Movies Streaming Right Now (2026): Where to Watch Every Pick'
 slug: best-sci-fi-movies-streaming
 category: streaming
-author: maya-okafor
+author: editorial-team
 date: '2026-06-24T23:00:00.000Z'
 dek: >-
   Bong Joon-ho's Mickey 17 just hit HBO Max and Godzilla Minus One landed on
@@ -26,7 +26,7 @@ targetKeyword: best sci-fi movies streaming right now
 imageAlt: >-
   Collage of the best sci-fi movies streaming right now in 2026, including
   Mickey 17, Godzilla Minus One and Interstellar
-imageCredit: Raph_PH / CC BY 2.0 (Wikimedia Commons)
+imageCredit: Gage Skidmore / Wikimedia Commons / CC BY-SA 3.0
 faq:
   - q: What is the best sci-fi movie streaming right now?
     a: >-
@@ -134,8 +134,8 @@ about:
   - name: Arrival
     type: Movie
     sameAs: 'https://en.wikipedia.org/wiki/Arrival_(film)'
-imageWidth: 1008
-imageHeight: 1326
+imageWidth: 1920
+imageHeight: 2579
 ---
 
 The single best sci-fi movie streaming right now is **Bong Joon-ho's Mickey 17**, and it just landed on **HBO Max**. Robert Pattinson plays an "expendable" worker who keeps dying and getting reprinted on a frozen colony world — it's the most ambitious big-studio sci-fi in years, and it's finally a click away.

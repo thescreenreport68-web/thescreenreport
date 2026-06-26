@@ -2,7 +2,7 @@
 title: 'Margot Robbie''s Best Movies Ranked: Why I, Tonya Beats Barbie at #1'
 slug: margot-robbie-best-movies
 category: celebrity
-author: daniel-reyes
+author: editorial-team
 date: '2026-06-18T23:00:00.000Z'
 dek: >-
   The billion-dollar Barbie and that scene-stealing Wolf of Wall Street debut
@@ -23,7 +23,7 @@ tags:
   - Harley Quinn
 targetKeyword: margot robbie best movies ranked
 imageAlt: 'Margot Robbie on a red carpet, the subject of a ranked list of her best movies'
-imageCredit: Wikimedia Commons
+imageCredit: Ondine Goat / Wikimedia Commons / CC0
 faq:
   - q: What is Margot Robbie's best movie?
     a: >-
@@ -84,7 +84,7 @@ faq:
       Sharon Tate. Both films are among the highest-ranked entries in her
       filmography.
 featured: false
-image: /images/articles/margot-robbie-best-movies.png
+image: /images/articles/margot-robbie-best-movies.jpg
 keyTakeaways:
   - >-
     By critical consensus, I, Tonya (2017) is Margot Robbie's best movie -- her
@@ -122,8 +122,8 @@ about:
   - name: The Big Short
     type: Movie
     sameAs: 'https://en.wikipedia.org/wiki/The_Big_Short_(film)'
-imageWidth: 438
-imageHeight: 578
+imageWidth: 1920
+imageHeight: 2400
 ---
 
 Here is the answer most lists bury: the best Margot Robbie movie is not the billion-dollar **Barbie**, and it is not **The Wolf of Wall Street**, the breakout that made her famous. By the critical consensus that runs across Rotten Tomatoes and awards-season trackers, the top of any honest **margot robbie best movies ranked** countdown is **I, Tonya** — her transformative, Oscar-nominated turn as Tonya Harding. That is the role that proved she could disappear into a character and carry an entire film on her back.

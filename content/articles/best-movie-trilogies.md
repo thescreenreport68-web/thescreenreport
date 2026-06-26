@@ -4,7 +4,7 @@ title: >-
   The Godfather
 slug: best-movie-trilogies
 category: movies
-author: jordan-hale
+author: editorial-team
 date: '2026-06-20T07:00:00.000Z'
 dek: >-
   We rank the greatest film trilogies of all time with a defensible #1, call out

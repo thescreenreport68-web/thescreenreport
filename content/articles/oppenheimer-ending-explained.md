@@ -4,7 +4,7 @@ title: >-
   Final Scene
 slug: oppenheimer-ending-explained
 category: movies
-author: jordan-hale
+author: editorial-team
 date: '2026-06-24T23:00:00.000Z'
 dek: >-
   The lakeside talk Strauss obsessed over was never about him. Here's exactly
@@ -28,7 +28,7 @@ targetKeyword: oppenheimer ending explained
 imageAlt: >-
   Cillian Murphy as J. Robert Oppenheimer standing by a pond in the final scene
   of Christopher Nolan's Oppenheimer
-imageCredit: Wikimedia Commons
+imageCredit: JoshPopov / WikiPortraits / Wikimedia Commons / CC BY 4.0
 faq:
   - q: What did Oppenheimer say to Einstein at the end of the movie?
     a: >-
@@ -108,7 +108,7 @@ faq:
       frames him not as celebrating his achievement but as a man living with the
       moral weight of an unstoppable consequence he set in motion.
 featured: false
-image: /images/articles/oppenheimer-ending-explained.jpg
+image: /images/articles/oppenheimer-ending-explained.png
 keyTakeaways:
   - >-
     The final lakeside scene is not about Lewis Strauss at all. Oppenheimer and
@@ -134,8 +134,8 @@ about:
   - name: Oppenheimer
     type: Movie
     sameAs: 'https://en.wikipedia.org/wiki/Oppenheimer_(film)'
-imageWidth: 808
-imageHeight: 1213
+imageWidth: 1920
+imageHeight: 2316
 ---
 
 If you just walked out of Christopher Nolan's *Oppenheimer* feeling gut-punched and a little lost, here's the **oppenheimer ending explained** in one breath: that final lakeside conversation between Oppenheimer (Cillian Murphy) and Albert Einstein (Tom Conti) was never about Lewis Strauss. It was about the end of the world. Oppenheimer tells Einstein that the chain reaction he once feared, the one that might ignite the atmosphere, has already begun, just not in the way anyone expected. And then the sky catches fire.

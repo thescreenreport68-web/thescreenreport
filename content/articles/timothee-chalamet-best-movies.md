@@ -2,7 +2,7 @@
 title: 'Timothée Chalamet''s Best Movies, Ranked: His #1 Still Beats Dune'
 slug: timothee-chalamet-best-movies
 category: celebrity
-author: daniel-reyes
+author: editorial-team
 date: '2026-06-24T07:00:00.000Z'
 dek: >-
   The Bob Dylan transformation and Marty Supreme are closing in, and Dune is his

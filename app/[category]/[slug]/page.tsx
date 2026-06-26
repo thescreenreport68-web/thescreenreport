@@ -84,7 +84,12 @@ export default function ArticlePage({
       datePublished: article.date,
       dateModified: article.updated ?? article.date,
       author: author
-        ? { "@type": "Person", name: author.name, url: `${SITE.url}/author/${author.slug}/` }
+        ? {
+            "@type": author.type ?? "Person",
+            name: author.name,
+            url: `${SITE.url}/author/${author.slug}/`,
+            ...(author.sameAs?.length ? { sameAs: author.sameAs } : {}),
+          }
         : undefined,
       publisher: { "@type": "Organization", name: SITE.name, url: SITE.url },
       mainEntityOfPage: `${SITE.url}/${article.category}/${article.slug}/`,

@@ -55,29 +55,20 @@ export type Author = {
   name: string;
   role: string;
   bio: string;
-  // Real external profiles (X, LinkedIn, Muck Rack, etc.) for Person-schema E-E-A-T.
-  // Left empty until real profiles exist — never fabricate (the Sports Illustrated trap).
+  // "Person" for a named human; "Organization" for the editorial team byline.
+  type?: "Person" | "Organization";
+  // Real external profiles for E-E-A-T sameAs. Never fabricate (the Sports Illustrated trap).
   sameAs?: string[];
 };
 
 export const AUTHORS: Author[] = [
   {
-    slug: "jordan-hale",
-    name: "Jordan Hale",
-    role: "Senior Film Writer",
-    bio: "Jordan Hale covers movies, directors and the awards race for The Screen Report, with a focus on how big films get made and why they connect.",
-  },
-  {
-    slug: "maya-okafor",
-    name: "Maya Okafor",
-    role: "TV & Streaming Editor",
-    bio: "Maya Okafor leads The Screen Report's television and streaming coverage, tracking what's worth your time across every major platform.",
-  },
-  {
-    slug: "daniel-reyes",
-    name: "Daniel Reyes",
-    role: "Celebrity & Culture Writer",
-    bio: "Daniel Reyes writes about Hollywood's biggest stars and the culture around them for The Screen Report.",
+    slug: "editorial-team",
+    name: "The Screen Report Editorial Team",
+    role: "Newsroom",
+    bio: "The Screen Report's editorial team covers Hollywood and English-language film, TV and celebrity news. Our editors write, fact-check and review every story; articles are produced with AI-assisted research and edited by a human before publishing.",
+    type: "Organization",
+    sameAs: ["https://twitter.com/thescreenreport"],
   },
 ];
 

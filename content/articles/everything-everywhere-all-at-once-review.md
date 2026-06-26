@@ -2,7 +2,7 @@
 title: 'Everything Everywhere All at Once Review: A Messy Masterpiece Worth the Hype'
 slug: everything-everywhere-all-at-once-review
 category: reviews
-author: jordan-hale
+author: editorial-team
 date: '2026-06-21T15:00:00.000Z'
 dek: >-
   Daniels' multiverse epic is a sensory assault that hides a plain

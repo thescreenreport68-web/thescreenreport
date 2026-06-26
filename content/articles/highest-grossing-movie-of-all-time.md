@@ -2,7 +2,7 @@
 title: 'The Highest-Grossing Movie of All Time: Why Avatar Still Wins (2026)'
 slug: highest-grossing-movie-of-all-time
 category: movies
-author: jordan-hale
+author: editorial-team
 date: '2026-06-23T15:00:00.000Z'
 dek: >-
   Avatar sits at the top with roughly $2.92 billion worldwide — but it lost the

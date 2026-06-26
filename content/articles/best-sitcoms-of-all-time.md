@@ -2,7 +2,7 @@
 title: 'The 30 Best Sitcoms of All Time, Definitively Ranked'
 slug: best-sitcoms-of-all-time
 category: tv
-author: maya-okafor
+author: editorial-team
 date: '2026-06-17T15:00:00.000Z'
 dek: >-
   We crown Seinfeld over Friends and The Office, then defend the entire

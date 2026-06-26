@@ -2,7 +2,7 @@
 title: 'The Best Movies on Prime Video Right Now, Ranked (June 2026)'
 slug: best-movies-on-prime-video
 category: streaming
-author: maya-okafor
+author: editorial-team
 date: '2026-06-16T07:00:00.000Z'
 dek: >-
   A tightly curated, critic-backed ranking of the genuinely great films included
@@ -26,7 +26,7 @@ targetKeyword: best movies on prime video right now
 imageAlt: >-
   Prime Video app home screen on a TV showing the best movies streaming right
   now in June 2026
-imageCredit: U.S. Embassy in the Philippines / Public domain (Wikimedia Commons)
+imageCredit: Gage Skidmore / Wikimedia Commons / CC BY-SA 3.0
 faq:
   - q: What is the best movie on Prime Video right now?
     a: >-
@@ -137,8 +137,8 @@ about:
   - name: Goodfellas
     type: Movie
     sameAs: 'https://en.wikipedia.org/wiki/Goodfellas'
-imageWidth: 710
-imageHeight: 916
+imageWidth: 1920
+imageHeight: 2679
 ---
 
 Updated June 2026. If you want the short answer, here it is: the best movie on Prime Video right now is **Paul Thomas Anderson's "One Battle After Another"** (2025), a 95-on-Metacritic awards juggernaut that has been included free with Prime since May 23. Below it sits one of the deepest benches of any streamer — from a perfect-scoring courtroom classic to Scorsese's mob masterpiece — and the full ranked list is right here.

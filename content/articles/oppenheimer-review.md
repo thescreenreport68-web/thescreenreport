@@ -2,7 +2,7 @@
 title: 'Oppenheimer Review: Nolan''s Best, and Worth Every Minute'
 slug: oppenheimer-review
 category: reviews
-author: jordan-hale
+author: editorial-team
 date: '2026-06-22T23:00:00.000Z'
 dek: >-
   A three-hour, courtroom-heavy biopic with almost no on-screen explosion — and
@@ -25,7 +25,7 @@ targetKeyword: Oppenheimer review
 imageAlt: >-
   Cillian Murphy as J. Robert Oppenheimer in a porkpie hat, staring with hollow
   eyes in Christopher Nolan's Oppenheimer
-imageCredit: Wikimedia Commons
+imageCredit: JoshPopov / Wikimedia Commons / CC BY 4.0
 faq:
   - q: Is Oppenheimer worth watching?
     a: >-
@@ -97,7 +97,7 @@ faq:
       commercial result for a three-hour, dialogue-driven drama and benefited
       from the cultural 'Barbenheimer' moment of its July 2023 release.
 featured: false
-image: /images/articles/oppenheimer-review.jpg
+image: /images/articles/oppenheimer-review.png
 keyTakeaways:
   - >-
     The Screen Report verdict is 9.5/10, Essential -- the best film Christopher
@@ -121,8 +121,8 @@ about:
   - name: Oppenheimer
     type: Movie
     sameAs: 'https://en.wikipedia.org/wiki/Oppenheimer_(film)'
-imageWidth: 808
-imageHeight: 1213
+imageWidth: 1920
+imageHeight: 2316
 ---
 
 A three-hour talking-heads biopic about a physicist — much of it set inside a security-clearance hearing, with almost no on-screen explosion — should not move like a thriller. *Oppenheimer* does. So let's not withhold the thing you came to this **Oppenheimer review** to find out: yes, it is worth watching, yes it is a good movie, and it is the best film Christopher Nolan has ever made. The Screen Report rating is **9.5 out of 10. Essential.** The only real question buried inside "is Oppenheimer worth watching" is whether a dialogue-dense, courtroom-heavy drama earns its runtime. It does, completely.

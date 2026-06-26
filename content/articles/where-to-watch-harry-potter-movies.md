@@ -4,7 +4,7 @@ title: >-
   Them July 1
 slug: where-to-watch-harry-potter-movies
 category: streaming
-author: maya-okafor
+author: editorial-team
 date: '2026-06-22T07:00:00.000Z'
 dek: >-
   All eight films leave HBO Max and Peacock on July 1, 2026. Here's exactly

@@ -2,7 +2,7 @@
 title: 'The Best Limited Series to Stream Right Now (June 2026), Ranked'
 slug: best-limited-series-to-stream
 category: tv
-author: maya-okafor
+author: editorial-team
 date: '2026-06-22T23:00:00.000Z'
 dek: >-
   A tightly curated, up-to-the-minute guide to the best limited series to stream

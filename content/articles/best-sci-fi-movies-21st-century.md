@@ -2,7 +2,7 @@
 title: 'The Best Sci-Fi Movies of the 21st Century, Ranked'
 slug: best-sci-fi-movies-21st-century
 category: movies
-author: jordan-hale
+author: editorial-team
 date: '2026-06-18T23:00:00.000Z'
 dek: >-
   The most influential critics' poll of the era crowned a 2004 Jim Carrey

@@ -2,7 +2,7 @@
 title: 'Zendaya Movies and TV Shows: The Complete Guide to Every Role (2026)'
 slug: zendaya-movies-and-tv-shows
 category: celebrity
-author: daniel-reyes
+author: editorial-team
 date: '2026-06-25T15:00:00.000Z'
 dek: >-
   From Disney's Shake It Up to Rue, Chani, MJ and Tashi — every Zendaya movie

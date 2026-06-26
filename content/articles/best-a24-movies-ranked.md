@@ -2,7 +2,7 @@
 title: 'The 25 Best A24 Movies Ranked: From Elevated Horror to Oscar Winners'
 slug: best-a24-movies-ranked
 category: movies
-author: jordan-hale
+author: editorial-team
 date: '2026-06-23T15:00:00.000Z'
 dek: >-
   From Moonlight's quiet Best Picture upset to Hereditary's slow-burn terror and
@@ -26,7 +26,7 @@ targetKeyword: best A24 movies ranked
 imageAlt: >-
   Collage of iconic A24 films including Hereditary, Moonlight and Everything
   Everywhere All at Once
-imageCredit: Frank Sun / CC BY-SA 4.0 (Wikimedia Commons)
+imageCredit: Gage Skidmore / Wikimedia Commons / CC BY-SA 2.0
 faq:
   - q: What is the best A24 movie?
     a: >-
@@ -130,8 +130,8 @@ about:
   - name: Past Lives
     type: Movie
     sameAs: 'https://en.wikipedia.org/wiki/Past_Lives_(film)'
-imageWidth: 830
-imageHeight: 1169
+imageWidth: 1920
+imageHeight: 1279
 ---
 
 If you only watch one, make it **Everything Everywhere All at Once** — the multiverse epic that swept seven Oscars and made A24 the first studio ever to win all top six Academy Award categories in a single year. That sits at the summit of our **best A24 movies ranked** countdown, but it is far from the studio's only masterpiece. Below is the full list, worst-to-best is for cowards, so we are counting down from great to greatest.

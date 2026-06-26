@@ -2,7 +2,7 @@
 title: 'Dune: Part Two Review - Why Villeneuve''s Sequel Beats Part One'
 slug: dune-part-two-review
 category: reviews
-author: jordan-hale
+author: editorial-team
 date: '2026-06-22T07:00:00.000Z'
 dek: >-
   Denis Villeneuve's sequel is a darker, bigger, emotionally heavier chapter

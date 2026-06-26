@@ -2,7 +2,7 @@
 title: 'All 11 Denis Villeneuve Movies Ranked, Worst to Best'
 slug: denis-villeneuve-movies-ranked
 category: movies
-author: jordan-hale
+author: editorial-team
 date: '2026-06-20T23:00:00.000Z'
 dek: >-
   From his French-Canadian breakthroughs to Arrabis: every feature from the
@@ -26,7 +26,7 @@ targetKeyword: denis villeneuve movies ranked
 imageAlt: >-
   Director Denis Villeneuve on set, framed against a desert landscape evoking
   his Dune adaptations
-imageCredit: Wikimedia Commons
+imageCredit: Gage Skidmore / Wikimedia Commons / CC BY-SA 3.0
 faq:
   - q: What is Denis Villeneuve's best movie?
     a: >-
@@ -132,8 +132,8 @@ about:
   - name: Incendies
     type: Movie
     sameAs: 'https://en.wikipedia.org/wiki/Incendies'
-imageWidth: 1008
-imageHeight: 1326
+imageWidth: 1920
+imageHeight: 2579
 ---
 
 There's no withholding the answer here: the top of any honest **Denis Villeneuve movies ranked** list comes down to three titans — *Arrival*, *Blade Runner 2049*, and *Dune: Part Two* — and after eleven features, we give the crown to *Blade Runner 2049*, with *Arrival* a hair behind and *Dune: Part Two* completing the podium. That's the debate-settler. Everything below is the full countdown, worst to best, with where each film actually earns its spot.

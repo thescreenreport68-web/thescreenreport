@@ -2,7 +2,7 @@
 title: 'MCU Movies in Order: Release & Timeline Guide (2026)'
 slug: mcu-movies-in-order
 category: movies
-author: jordan-hale
+author: editorial-team
 date: '2026-06-25T15:00:00.000Z'
 dek: >-
   The MCU has two correct watch orders — release date and in-universe timeline —

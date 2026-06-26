@@ -2,7 +2,7 @@
 title: 'Shogun Review: The 18-Emmy Samurai Epic Is Worth Every Hour'
 slug: shogun-review
 category: reviews
-author: maya-okafor
+author: editorial-team
 date: '2026-06-19T15:00:00.000Z'
 dek: >-
   FX's feudal-Japan epic earns its 99% Rotten Tomatoes score and record 18
@@ -26,7 +26,7 @@ targetKeyword: Shogun review
 imageAlt: >-
   Hiroyuki Sanada as Lord Yoshii Toranaga in dark samurai armor before a misty
   feudal-Japanese castle in FX's Shogun
-imageCredit: Wikimedia Commons
+imageCredit: Keith McDuffee / Wikimedia Commons / CC BY 2.0
 faq:
   - q: Is Shogun worth watching?
     a: >-
@@ -135,8 +135,8 @@ about:
   - name: Shogun
     type: TVSeries
     sameAs: 'https://en.wikipedia.org/wiki/Sh%C5%8Dgun_(2024_TV_series)'
-imageWidth: 310
-imageHeight: 414
+imageWidth: 1788
+imageHeight: 2133
 ---
 
 **The verdict:** *Shogun* is the best thing on television, and this *Shogun* review will not make you wait for that conclusion. FX's adaptation of James Clavell's 1975 novel earns its near-mythical 99% Rotten Tomatoes score and its record-breaking **18 Emmy wins** — the most-awarded single season in Emmy history — because it gets the one thing right that prestige epics usually fumble: it makes you care, deeply, about quiet people in a faraway century who barely raise their voices. **Our rating: 9.5/10.**

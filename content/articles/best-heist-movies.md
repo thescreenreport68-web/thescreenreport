@@ -2,7 +2,7 @@
 title: 'The Best Heist Movies of All Time, Ranked: Why Heat Tops Them All'
 slug: best-heist-movies
 category: movies
-author: jordan-hale
+author: editorial-team
 date: '2026-06-19T15:00:00.000Z'
 dek: >-
   We rank the greatest heist movies ever made and take a stand: Michael Mann's

@@ -2,7 +2,7 @@
 title: 'The 20 Best HBO Shows of All Time, Ranked (2026)'
 slug: best-hbo-shows
 category: tv
-author: maya-okafor
+author: editorial-team
 date: '2026-06-18T07:00:00.000Z'
 dek: >-
   From The Sopranos and The Wire to Succession and The White Lotus, the
@@ -25,7 +25,7 @@ targetKeyword: best HBO shows
 imageAlt: >-
   Composite illustration of iconic HBO shows including a New Jersey mob boss, a
   Westeros throne, and a corporate media boardroom
-imageCredit: Sachyn / CC BY-SA 3.0 (Wikimedia Commons)
+imageCredit: Gage Skidmore / Wikimedia Commons / CC BY-SA 3.0
 faq:
   - q: What is the best HBO show of all time?
     a: >-
@@ -121,8 +121,8 @@ about:
   - name: Chernobyl
     type: TVSeries
     sameAs: 'https://en.wikipedia.org/wiki/Chernobyl_(miniseries)'
-imageWidth: 317
-imageHeight: 476
+imageWidth: 1920
+imageHeight: 2334
 ---
 
 If you want the verdict up front, here it is: **The Sopranos** is the best HBO show of all time, with **The Wire** a razor-thin second. Those two — David Chase's New Jersey mob saga and David Simon's Baltimore epic — invented modern prestige television, and almost everything HBO has made since, from *Game of Thrones* to *Succession*, lives in the space they opened. Below is our definitive ranking of the best HBO shows of all time, the series that turned a premium cable channel into the most important brand in scripted drama.

@@ -2,7 +2,7 @@
 title: 'The Bear Season 5 Review: A Triumphant Final Service Earns Its Star'
 slug: the-bear-review
 category: reviews
-author: maya-okafor
+author: editorial-team
 date: '2026-06-20T07:00:00.000Z'
 dek: >-
   After two divisive seasons, FX's kitchen drama strips back to one real-time
