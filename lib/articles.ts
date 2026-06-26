@@ -19,7 +19,11 @@ export type Article = {
   imageAlt: string;
   imageCredit: string;
   image?: string;
+  imageWidth?: number;
+  imageHeight?: number;
   faq: Faq[];
+  keyTakeaways?: string[];
+  about?: { name: string; type?: string; sameAs?: string }[];
   featured?: boolean;
   readingTime: number; // minutes
   body: string; // markdown
@@ -63,7 +67,11 @@ export function getAllArticles(): Article[] {
       imageAlt: data.imageAlt ?? data.title,
       imageCredit: data.imageCredit ?? "The Screen Report",
       image: data.image,
+      imageWidth: data.imageWidth,
+      imageHeight: data.imageHeight,
       faq: data.faq ?? [],
+      keyTakeaways: data.keyTakeaways ?? [],
+      about: data.about ?? [],
       featured: data.featured ?? false,
       readingTime: readingTimeFor(content),
       body: content,

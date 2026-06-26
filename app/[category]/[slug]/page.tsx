@@ -4,6 +4,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import Byline from "@/components/Byline";
 import PlaceholderImage from "@/components/PlaceholderImage";
 import ArticleBody from "@/components/ArticleBody";
+import KeyTakeaways from "@/components/KeyTakeaways";
 import Faq from "@/components/Faq";
 import AuthorBox from "@/components/AuthorBox";
 import AdSlot from "@/components/AdSlot";
@@ -25,6 +26,16 @@ export function generateMetadata({
 }): Metadata {
   const article = getArticle(params.category, params.slug);
   if (!article) return {};
+  const ogImages = article.image
+    ? [
+        {
+          url: article.image,
+          width: article.imageWidth,
+          height: article.imageHeight,
+          alt: article.imageAlt,
+        },
+      ]
+    : undefined;
   return {
     title: article.metaTitle,
     description: article.metaDescription,
@@ -34,6 +45,13 @@ export function generateMetadata({
       description: article.metaDescription,
       type: "article",
       url: `/${article.category}/${article.slug}/`,
+      images: ogImages,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: article.metaTitle,
+      description: article.metaDescription,
+      images: article.image ? [article.image] : undefined,
     },
   };
 }
@@ -55,6 +73,14 @@ export default function ArticlePage({
       "@type": "NewsArticle",
       headline: article.title,
       description: article.metaDescription,
+      image: article.image
+        ? {
+            "@type": "ImageObject",
+            url: `${SITE.url}${article.image}`,
+            width: article.imageWidth,
+            height: article.imageHeight,
+          }
+        : undefined,
       datePublished: article.date,
       dateModified: article.updated ?? article.date,
       author: author
@@ -85,6 +111,12 @@ export default function ArticlePage({
           })),
         }
       : null,
+    ...(article.about ?? []).map((e) => ({
+      "@context": "https://schema.org",
+      "@type": e.type === "TVSeries" ? "TVSeries" : "Movie",
+      name: e.name,
+      ...(e.sameAs ? { sameAs: e.sameAs } : {}),
+    })),
   ].filter(Boolean) as object[];
 
   return (
@@ -122,6 +154,9 @@ export default function ArticlePage({
               title={article.title}
               src={article.image}
               alt={article.imageAlt}
+              eager
+              width={article.imageWidth}
+              height={article.imageHeight}
               className="aspect-video w-full"
             />
             <figcaption className="mt-2 leading-snug">
@@ -131,6 +166,8 @@ export default function ArticlePage({
               </cite>
             </figcaption>
           </figure>
+
+          <KeyTakeaways items={article.keyTakeaways} />
 
           <ArticleBody body={article.body} />
 

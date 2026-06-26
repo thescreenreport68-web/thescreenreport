@@ -10,6 +10,9 @@ export default function PlaceholderImage({
   showTitle = false,
   src,
   alt,
+  eager = false,
+  width,
+  height,
 }: {
   slug: string;
   category?: string;
@@ -18,6 +21,9 @@ export default function PlaceholderImage({
   showTitle?: boolean;
   src?: string;
   alt?: string;
+  eager?: boolean;
+  width?: number;
+  height?: number;
 }) {
   const imgSrc =
     src || `https://picsum.photos/seed/sr-${encodeURIComponent(slug)}/1200/675`;
@@ -32,7 +38,11 @@ export default function PlaceholderImage({
       <img
         src={imgSrc}
         alt={altText}
-        loading="lazy"
+        width={width}
+        height={height}
+        loading={eager ? "eager" : "lazy"}
+        fetchPriority={eager ? "high" : undefined}
+        decoding={eager ? "auto" : "async"}
         className="absolute inset-0 h-full w-full object-cover object-[center_30%]"
       />
       {showTitle && title ? (

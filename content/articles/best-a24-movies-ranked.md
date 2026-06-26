@@ -46,20 +46,92 @@ faq:
       As of 2026, Backrooms is A24's highest-grossing film, earning roughly $300
       million worldwide and breaking the studio's box-office records. It
       overtook Timothee Chalamet's Marty Supreme and the previous champ,
-      Everything Everywhere All at Once.
+      Everything Everywhere All at Once, which earned around $148 million.
   - q: Which A24 movies have won Best Picture at the Oscars?
     a: >-
       Two A24 films have won Best Picture: Moonlight in 2017 and Everything
       Everywhere All at Once in 2023. Everything Everywhere also made A24 the
-      first studio to win all top six Oscar categories in a single year.
+      first studio to win Best Picture, Best Director and all four acting
+      categories in a single year.
   - q: What is A24 best known for?
     a: >-
       A24 is best known for prestige indie dramas and 'elevated horror' such as
       Hereditary, Midsommar and The Witch. Founded in 2012, it has become the
       most influential boutique studio of its era, blending arthouse credibility
       with cult fandom and Oscar wins.
+  - q: Why are A24 movies so good?
+    a: >-
+      A24's edge is trust in filmmakers. Rather than imposing a house style, it
+      backs distinctive directors and lets them swing big, which is how Ari
+      Aster, Robert Eggers, Greta Gerwig, the Daniels and the Safdie brothers
+      all made career-defining films there. That filmmaker-first model, combined
+      with sharp marketing and a knack for spotting talent early, is why the A24
+      logo now works as a tastemaker's seal of approval and why so many of its
+      films land on best-of-the-decade lists.
+  - q: What was A24's first movie?
+    a: >-
+      A24's first theatrical release was Spring Breakers, Harmony Korine's neon
+      crime drama, in March 2013. Its first in-house production was Moonlight in
+      2016, which went on to win Best Picture. The company was founded in August
+      2012 by Daniel Katz, David Fenkel and John Hodges, taking its name from
+      the A24 motorway in Italy where Katz conceived the idea.
+  - q: What is the highest-rated A24 movie on Rotten Tomatoes?
+    a: >-
+      On Becoming a Guinea Fowl (2024) holds A24's top Tomatometer score at 100%
+      among the studio's films. Among the better-known titles, Lady Bird and
+      Eighth Grade sit at 99%, and Moonlight at 98%. Critic scores shift
+      slightly as new reviews post, but A24 consistently lands several films
+      near the top of the chart, which is part of why its name carries so much
+      prestige weight.
+  - q: How many Oscars has A24 won?
+    a: >-
+      A24 has won dozens of Academy Awards across its catalog. Everything
+      Everywhere All at Once alone took seven at the 2023 ceremony, Moonlight
+      won three in 2017, and The Brutalist won three in 2025, including Adrien
+      Brody's second Best Actor Oscar. Other winners include Room (Best Actress,
+      Brie Larson), Ex Machina (Visual Effects) and The Whale (Best Actor,
+      Brendan Fraser). No boutique studio has converted indie risk into Oscars
+      this consistently.
 featured: false
 image: /images/articles/best-a24-movies-ranked.jpg
+keyTakeaways:
+  - >-
+    Everything Everywhere All at Once tops the list: the Daniels' multiverse
+    epic won seven Oscars at the 2023 ceremony and made A24 the first studio to
+    sweep Best Picture, Director and all four acting categories in one year.
+  - >-
+    A24 has two Best Picture winners: Moonlight (2017) and Everything Everywhere
+    All at Once (2023). It built its name on 'elevated horror' from Hereditary,
+    Midsommar and The Witch.
+  - >-
+    Backrooms (2026) is now A24's highest-grossing film at roughly $300M
+    worldwide, overtaking Marty Supreme and the long-reigning Everything
+    Everywhere All at Once.
+  - >-
+    For the scariest pick, start with Hereditary; for awards-grade drama beyond
+    the top spot, see The Zone of Interest, Past Lives and The Brutalist (which
+    won Adrien Brody a second Best Actor Oscar in 2025).
+  - >-
+    Streaming availability shifts monthly and by region, so confirm each title
+    before you queue it up.
+about:
+  - name: Everything Everywhere All at Once
+    type: Movie
+    sameAs: 'https://en.wikipedia.org/wiki/Everything_Everywhere_All_at_Once'
+  - name: Moonlight
+    type: Movie
+    sameAs: 'https://en.wikipedia.org/wiki/Moonlight_(2016_film)'
+  - name: Hereditary
+    type: Movie
+    sameAs: 'https://en.wikipedia.org/wiki/Hereditary_(film)'
+  - name: The Zone of Interest
+    type: Movie
+    sameAs: 'https://en.wikipedia.org/wiki/The_Zone_of_Interest_(film)'
+  - name: Past Lives
+    type: Movie
+    sameAs: 'https://en.wikipedia.org/wiki/Past_Lives_(film)'
+imageWidth: 830
+imageHeight: 1169
 ---
 
 If you only watch one, make it **Everything Everywhere All at Once** — the multiverse epic that swept seven Oscars and made A24 the first studio ever to win all top six Academy Award categories in a single year. That sits at the summit of our **best A24 movies ranked** countdown, but it is far from the studio's only masterpiece. Below is the full list, worst-to-best is for cowards, so we are counting down from great to greatest.
@@ -120,7 +192,7 @@ A24 did not invent horror, but it made the genre prestige. If you want the scari
 
 Pair these with our wider [best sci-fi movies of the 21st century](/movies/best-sci-fi-movies-21st-century) list when you want dread with ideas.
 
-## A24 movies ranked by box office: the highest-grossing hits
+## What are the highest-grossing A24 movies?
 
 The cult finally went commercial. Here are the highest-grossing A24 movies worldwide as of 2026:
 
@@ -131,7 +203,7 @@ The cult finally went commercial. Here are the highest-grossing A24 movies world
 
 Backrooms making Parsons the youngest filmmaker to top the US box office is the clearest sign yet that A24 has scaled without selling out. For more on Chalamet's run, see our [Timothee Chalamet best movies](/celebrity/timothee-chalamet-best-movies) guide.
 
-## A24's Best Picture winners and Oscar legacy
+## Which A24 movies have won Best Picture?
 
 Two films have won Best Picture: **Moonlight** (2017) and **Everything Everywhere All at Once** (2023). Beyond those, A24 has stacked nominations with **Lady Bird**, **Minari**, **The Zone of Interest** and **Past Lives**. In 2025, **The Brutalist** earned ten nominations and won Adrien Brody a second Best Actor Oscar, alongside cinematography and score, though it missed the top prize. No boutique studio has ever converted indie risk into gold this consistently. If you love an ambitious swing, A24's VistaVision epic belongs next to the [best movie trilogies](/movies/best-movie-trilogies) on your watchlist for sheer scale.
 
@@ -139,7 +211,7 @@ Two films have won Best Picture: **Moonlight** (2017) and **Everything Everywher
 
 Some of the best A24 movies of all time never chased a box-office record. **Aftersun** is a devastating father-daughter memory-piece. **Uncut Gems** straps you to Adam Sandler's panic attack of a jeweler in the Safdie brothers' anxiety masterpiece, a must for fans of [the best heist movies](/movies/best-heist-movies). **Ex Machina** gave Alex Garland his sleek AI breakout, and **The Green Knight** turned Arthurian myth into a hypnotic fever dream. These are the films that explain the cult.
 
-## Where to watch the best A24 movies
+## Where can you watch the best A24 movies?
 
 A24's library is scattered across platforms, so availability shifts by region and month. As a rough guide for 2026:
 
@@ -153,4 +225,12 @@ Always confirm with a tracker like JustWatch, since the best A24 movies on Max, 
 
 A24 went from scrappy 2012 upstart to the defining studio of modern prestige film in barely a decade, winning two Best Pictures, making horror respectable, and now topping $300 million at the box office. If you watch only one, make it **Everything Everywhere All at Once**. If you want the scares, start with **Hereditary**. Either way, that little logo has earned its reputation, one cult classic at a time.
 
-**Further reading:** [Florence Pugh on Wikipedia](https://en.wikipedia.org/wiki/Florence_Pugh) · [Where to watch on JustWatch](https://www.justwatch.com/us/search?q=A24).
+**Further reading:** [Florence Pugh on Wikipedia](https://en.wikipedia.org/wiki/Florence_Pugh) · Where to watch on JustWatch.
+
+## Sources
+
+- [Box Office Mojo - Brands (US & Canada) box office](https://www.boxofficemojo.com/brand/)
+- [Oscars.org - The 95th Academy Awards (2023) winners](https://www.oscars.org/oscars/ceremonies/2023)
+- [Rotten Tomatoes - All A24 Movies Ranked by Tomatometer](https://editorial.rottentomatoes.com/guide/all-a24-movies-ranked/)
+- [Wikipedia - A24 (company)](https://en.wikipedia.org/wiki/A24)
+- [Wikipedia - List of A24 films](https://en.wikipedia.org/wiki/List_of_A24_films)

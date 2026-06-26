@@ -31,37 +31,94 @@ imageCredit: Wikimedia Commons
 faq:
   - q: Is The Bear Season 5 the final season?
     a: >-
-      Yes. FX and Hulu confirmed Season 5 is the last season of The Bear.
-      Creator Christopher Storer designed it as a closed loop, and the
-      eight-episode run is built explicitly as a send-off, ending on a finale
-      titled The Original Beef of Chicagoland, the name of Mikey's original
-      sandwich shop.
+      Yes. FX and Hulu confirmed Season 5 is the last season of The Bear, with
+      the renewal announced in July 2025. Creator Christopher Storer designed it
+      as a closed loop, and the eight-episode run is built explicitly as a
+      send-off, ending on a finale titled The Original Beef of Chicagoland, the
+      name of Mikey's original sandwich shop where the whole story began.
   - q: How many episodes are in The Bear Season 5?
     a: >-
       There are eight episodes, all released at once on June 25, 2026, with a
       total runtime of roughly four hours and 37 minutes. The episodes are
       titled Soda, Lamb, Mint, Ribs, Raspberries, Focaccia, Caramel, and The
-      Original Beef of Chicagoland.
+      Original Beef of Chicagoland. Episodes also aired weekly on FX linear
+      after the full binge drop on Hulu.
   - q: Does The Bear get a Michelin star in Season 5?
     a: >-
       The entire final season is the chase for that star across one rainy day of
       service, and it is the show's central spoiler. We are keeping our review
       spoiler-light, but critics agree the finale reframes the question itself,
-      suggesting what makes a restaurant great may be the people rather than the
-      star. Watch the finale, The Original Beef of Chicagoland, for the answer.
+      suggesting what makes a restaurant great may be the people at the pass
+      rather than the star. Watch the finale, The Original Beef of Chicagoland,
+      for the answer.
   - q: Is The Bear Season 5 better than Season 4?
     a: >-
       Critically, yes. Season 4 was the lowest-rated season on Rotten Tomatoes
-      at 84 percent, while Season 5 opened at 100 percent from early reviews
-      with a Metacritic score of 81. Critics call it the best season since
-      Season 2, crediting its stripped-down, single-service focus.
+      at 84 percent, while Season 5 debuted at 100 percent and settled to 97
+      percent from 34 critics, with a Metacritic score of 80. Critics call it
+      the best season since Season 2, crediting its stripped-down,
+      single-service focus and the bold switch to a Hans Zimmer score over the
+      usual needle drops.
   - q: Where can I watch The Bear Season 5?
     a: >-
       The Bear Season 5 streams on Hulu in the US, branded as FX on Hulu, with
       episodes also airing on FX linear. Internationally it streams on Disney+.
-      All eight episodes were released on June 25, 2026.
+      All eight episodes were released on June 25, 2026, so if you have Hulu,
+      the entire final season is available to binge with no subscription
+      gimmick.
+  - q: Why isn't Carmy in The Bear Season 5 much?
+    a: >-
+      Season 5 opens the morning after Sydney, Richie and Natalie learn Carmy
+      (Jeremy Allen White) has quit the food industry to chase healing outside
+      his family's cyclical trauma. White still appears, but the show
+      deliberately benches its lead so the ensemble can carry the final service.
+      The choice pays off: Edebiri's Sydney runs the pass, and critics praised
+      the more balanced, less panic-driven dynamic it creates.
+  - q: What is the Gary special and do I need to watch it before Season 5?
+    a: >-
+      Gary is a surprise standalone special released May 5, 2026, on Hulu and
+      FX. Written by and starring Ebon Moss-Bachrach (Richie) alongside Jon
+      Bernthal (Mikey), and directed by Christopher Storer, it's a 2019
+      flashback following the two on a road trip to Gary, Indiana. It's not
+      required viewing to follow Season 5, but it deepens Richie and Mikey's
+      bond, and Storer used it to keep extended-universe detours out of the
+      season proper.
+  - q: Is The Bear Season 5 a comedy or a drama?
+    a: >-
+      The Bear is officially classified as a comedy-drama and has competed in
+      the comedy categories at the Emmys, but Season 5 leans hard into drama and
+      thriller tension. The single-service, real-time structure and Hans
+      Zimmer's propulsive score give it white-knuckle urgency, while Matty
+      Matheson's Neil Fak and the kitchen banter keep the comedy alive. Expect
+      more tension than laughs in this final run.
 featured: false
 image: /images/articles/the-bear-review.jpg
+keyTakeaways:
+  - >-
+    Our verdict: 4.5 out of 5. The Bear Season 5 is a stripped-down,
+    eight-episode final season that critics call the show's best run since
+    Season 2.
+  - >-
+    The whole season is one real-time last service across a single rainy day in
+    Chicago, as the team chases a Michelin star with Carmy (Jeremy Allen White)
+    having quit the industry.
+  - >-
+    The big swing is the score: a propulsive Hans Zimmer soundtrack replaces the
+    show's signature '90s needle drops, turning the kitchen into a thriller.
+  - >-
+    Ayo Edebiri's Sydney finally runs the pass, and the ensemble gets a victory
+    lap; the splashy cameos were hived off into the standalone 'Gary' special
+    (May 5, 2026).
+  - >-
+    All eight episodes hit Hulu (FX on Hulu) and FX linear on June 25, 2026,
+    opening near-perfect on Rotten Tomatoes (debut 100%, settled to 97%) with a
+    Metacritic score of 80.
+about:
+  - name: The Bear
+    type: TVSeries
+    sameAs: 'https://en.wikipedia.org/wiki/The_Bear_(TV_series)'
+imageWidth: 1280
+imageHeight: 1706
 ---
 
 **The Bear Season 5 is a triumphant final service** — a lean, eight-episode send-off that critics are calling the show's best run since Season 2. After two divisive years (Season 4 was the lowest-rated yet), FX's kitchen drama strips everything back to a single rainy day, one real-time last service, and a pounding Hans Zimmer score in place of the usual '90s needle drops. The early verdict is loud and unanimous: it sticks the landing.
@@ -86,7 +143,7 @@ With Carmy sidelined, **Sydney finally runs the kitchen**, and the season is str
 
 Moss-Bachrach's Richie remains the soul of the operation, and Liza Colón-Zayas's Tina and Lionel Boyce's Marcus get the grace notes their arcs have been building toward. It's an ensemble victory lap that never feels like a lap — everyone has a job, and everyone does it.
 
-## The Bear Season 5 cast and guest stars
+## Who is in The Bear Season 5 cast?
 
 The core ensemble is all back: Jeremy Allen White (Carmy), Ayo Edebiri (Sydney), Ebon Moss-Bachrach (Richie), Lionel Boyce (Marcus), Liza Colón-Zayas (Tina), Abby Elliott (Natalie), Matty Matheson (Neil Fak) and Edwin Lee Gibson (Ebraheim). Jamie Lee Curtis returns as matriarch Donna in one of the season's only real subplots — Natalie agonizing over leaving her newborn with her mother to work the shift.
 
@@ -113,11 +170,11 @@ We'll protect the finale here, because the *how* is the whole reward. What we ca
 
 If you like your finales to genuinely earn their emotional payoff, this is in the conversation alongside our [best limited series to stream](/tv/best-limited-series-to-stream). It's also a reminder of why The Bear sits near the top of any list of the [best HBO and prestige-TV shows](/tv/best-hbo-shows) of the decade, even on a rival network.
 
-## The Bear Season 5 on Rotten Tomatoes
+## What is The Bear Season 5's Rotten Tomatoes score?
 
 The numbers back the rapture. Season 5 opened at a **100% on Rotten Tomatoes** from its first wave of critics, with a Metacritic "must watch" score of **81**. For context, that's a full return to the heights of Seasons 1 and 2 (100% and 99%) after Season 3's 89% and Season 4's series-low 84%. The early audience response has yet to settle, but the critical consensus is the strongest the show has had in years.
 
-## Where to watch The Bear Season 5
+## Where can you watch The Bear Season 5?
 
 In the US, all eight episodes stream on **Hulu**, branded as FX on Hulu, with a simultaneous linear run on FX. Internationally, it's on **Disney+**. There's no subscription gimmick — if you have Hulu, the entire final season is waiting. (Fans of Jeremy Allen White's range can trace his pre-*Bear* work, but Carmy is the role that made him a star.)
 
@@ -125,4 +182,12 @@ In the US, all eight episodes stream on **Hulu**, branded as FX on Hulu, with a 
 
 After a rocky stretch that had fans wondering if the magic was gone, **The Bear Season 5 is a worthy, emotionally satisfying ending** — focused, propulsive, and brave enough to bench its leading man for the greater good. The Zimmer score is a swing that pays off, Edebiri owns the kitchen, and the single-service structure gives the finale the weight it needs. As a final season, it doesn't just survive the comparison to the show's best years; it joins them. Last call, and the kitchen goes out roaring. **Verdict: 4.5 out of 5.**
 
-**Further reading:** [Jeremy Allen White on Wikipedia](https://en.wikipedia.org/wiki/Jeremy_Allen_White) · [Where to watch on JustWatch](https://www.justwatch.com/us/search?q=The%20Bear).
+**Further reading:** [Jeremy Allen White on Wikipedia](https://en.wikipedia.org/wiki/Jeremy_Allen_White) · Where to watch on JustWatch.
+
+## Sources
+
+- [The Bear season 5 - Wikipedia (release date, episodes, reception)](https://en.wikipedia.org/wiki/The_Bear_season_5)
+- [The Bear (TV series) - Wikipedia (series overview, cast, creator)](https://en.wikipedia.org/wiki/The_Bear_(TV_series))
+- [The Bear: Season 5 - Rotten Tomatoes (Tomatometer 97%)](https://www.rottentomatoes.com/tv/the_bear/s05)
+- [The Bear: Season 5 - Metacritic (Metascore 80)](https://www.metacritic.com/tv/the-bear/season-5/)
+- [Gary (The Bear episode) - Wikipedia (standalone special)](https://en.wikipedia.org/wiki/Gary_(The_Bear_episode))

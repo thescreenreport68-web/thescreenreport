@@ -30,7 +30,7 @@ imageCredit: Wikimedia Commons
 faq:
   - q: Is Shogun worth watching?
     a: >-
-      Yes — emphatically. If you have any appetite for political intrigue,
+      Yes -- emphatically. If you have any appetite for political intrigue,
       gorgeous filmmaking, or world-class acting, Shogun is among the best
       television of the decade. It is patient and roughly 70% subtitled
       Japanese, so it rewards full attention rather than half-watching, but the
@@ -47,7 +47,7 @@ faq:
       and dialogue are invented.
   - q: How historically accurate is Shogun?
     a: >-
-      Unusually accurate for prestige TV in its textures — armor, etiquette,
+      Unusually accurate for prestige TV in its textures -- armor, etiquette,
       architecture, and the Sengoku-era power struggle are meticulously
       researched, with Japanese-language consultants and a Japanese-led creative
       team. But it remains a dramatization: names are fictionalized (Toranaga
@@ -55,7 +55,7 @@ faq:
       invented. Treat it as faithful in spirit and detail, not as a documentary.
   - q: How does the Shogun ending differ from the book?
     a: >-
-      Mildly, but meaningfully — and we'll keep this spoiler-light. Clavell's
+      Mildly, but meaningfully -- and we'll keep this spoiler-light. Clavell's
       novel ends with an epilogue that takes you inside Toranaga's head and
       explicitly confirms the war's outcome at the Battle of Sekigahara. The FX
       finale, 'A Dream of a Dream,' stays more ambiguous, delivering that
@@ -66,13 +66,77 @@ faq:
   - q: 'Is Shogun Season 2 coming, and when?'
     a: >-
       Yes. Once billed as a limited series, Shogun was renewed and Season 2
-      began filming in Vancouver in early 2026. Hiroyuki Sanada returns as
+      began filming in Vancouver in January 2026. Hiroyuki Sanada returns as
       Toranaga and Cosmo Jarvis returns as Blackthorne, with the story
       reportedly jumping roughly a decade ahead. A release is expected in 2027.
-      That changes how first-time viewers should approach the Season 1 ending —
+      That changes how first-time viewers should approach the Season 1 ending --
       it's a destination now, not the final word.
+  - q: How many episodes is Shogun and how long does it take to watch?
+    a: >-
+      Season 1 is a complete 10-episode arc, with each hour running roughly 50
+      to 70 minutes -- about ten hours total. FX released the first two episodes
+      on February 27, 2024, then rolled out the rest weekly through April 23.
+      It's built to reward steady, attentive viewing rather than background
+      binging, since roughly 70% of the dialogue is subtitled Japanese and the
+      plot turns on small shifts in loyalty. Budget a few focused sittings
+      rather than one marathon.
+  - q: Where can I watch Shogun?
+    a: >-
+      In the US, Shogun streams on Hulu and on FX, with all ten episodes of
+      Season 1 available on demand. Internationally it's carried on Disney-owned
+      platforms, including Disney+ in many regions. It's an FX original produced
+      for FX on Hulu, so a Hulu or Disney+ subscription (depending on your
+      country) is the most direct way to watch. Turn the subtitles on and keep
+      them on -- the Japanese dialogue is central to the experience, not
+      optional.
+  - q: How many Emmys did Shogun win?
+    a: >-
+      Shogun won 18 Emmys for its first season -- 14 at the Creative Arts
+      ceremony and four at the main 76th Primetime Emmy Awards -- making it the
+      most-awarded single season in Emmy history. Those four marquee wins were
+      Outstanding Drama Series, Outstanding Lead Actor for Hiroyuki Sanada,
+      Outstanding Lead Actress for Anna Sawai, and Outstanding Directing for
+      Frederick E.O. Toye. Sanada and Sawai were the first Japanese performers
+      ever to win those lead categories, and Shogun is the first
+      non-English-language series to win Outstanding Drama Series.
+  - q: Do I need to watch the 1980 Shogun miniseries first?
+    a: >-
+      No. The 2024 series is a fresh adaptation of the same James Clavell novel,
+      not a sequel or continuation, so you can start with it knowing nothing
+      about the 1980 version. The key difference is perspective: the 1980
+      miniseries filtered feudal Japan through the English sailor Blackthorne,
+      while the 2024 series treats its Japanese characters as the protagonists,
+      with most dialogue in subtitled Japanese. If anything, watch the new one
+      first -- it's the more complete and acclaimed telling.
 featured: false
 image: /images/articles/shogun-review.jpg
+keyTakeaways:
+  - >-
+    Verdict 9.5/10: FX's Shogun is the rare epic that earns every superlative,
+    with a 99% Rotten Tomatoes critics score and a record 18 Emmy wins -- the
+    most-awarded single season in Emmy history.
+  - >-
+    Hiroyuki Sanada (Toranaga) and Anna Sawai (Mariko) are the foundation; their
+    lead-acting Emmys were the first ever for Japanese performers, and the show
+    is the first non-English-language series to win Outstanding Drama.
+  - >-
+    It's a slow-burn political chess game, roughly 70% subtitled Japanese, that
+    rewards full attention -- the back half pays off the patience the opening
+    episodes demand.
+  - >-
+    Treat it as faithful historical fiction, not documentary: Toranaga is based
+    on Tokugawa Ieyasu and Blackthorne on William Adams, with names
+    fictionalized, timelines compressed, and the central romance invented.
+  - >-
+    The 'limited series' is no longer limited -- Season 2 began filming in
+    Vancouver in January 2026 with Sanada and Cosmo Jarvis returning for a story
+    set roughly a decade later, expected in 2027.
+about:
+  - name: Shogun
+    type: TVSeries
+    sameAs: 'https://en.wikipedia.org/wiki/Sh%C5%8Dgun_(2024_TV_series)'
+imageWidth: 310
+imageHeight: 414
 ---
 
 **The verdict:** *Shogun* is the best thing on television, and this *Shogun* review will not make you wait for that conclusion. FX's adaptation of James Clavell's 1975 novel earns its near-mythical 99% Rotten Tomatoes score and its record-breaking **18 Emmy wins** — the most-awarded single season in Emmy history — because it gets the one thing right that prestige epics usually fumble: it makes you care, deeply, about quiet people in a faraway century who barely raise their voices. **Our rating: 9.5/10.**
@@ -85,7 +149,7 @@ Yes. If you can sit still and read subtitles, *Shogun* will reward you more than
 
 A fair warning, because it's the most common worry: roughly 70% of the dialogue is subtitled Japanese. That is the feature, not the bug. The 1980 miniseries filtered feudal Japan through a baffled English sailor; this version treats its Japanese characters as the protagonists they always were — fully interior, fully human. The subtitles aren't a barrier to the story. They *are* the story.
 
-## What Shogun Is About (No Spoilers)
+## What Is Shogun About? (No Spoilers)
 
 The year is 1600. Japan's unifying *taiko* is dead, leaving a five-member Council of Regents to govern until his heir comes of age. Lord Toranaga (Sanada) is the most capable man on that council — which is exactly why his rivals want him gone. Into this powder keg drifts John Blackthorne (Cosmo Jarvis), an English pilot shipwrecked on the coast, a Protestant pawn in a land dominated by Portuguese Catholic interests.
 
@@ -119,7 +183,7 @@ For a true *Shogun ending explained* in brief: the finale, "A Dream of a Dream,"
 
 The cost of all that restraint is a genuine demand on you. Look away from the subtitles and you lose the thread of who's betraying whom. The opening episodes ask for patience as the board is set, and some viewers will find the early going more admirable than gripping. Blackthorne's arc, by design, is the least surprising thread — once decentralized, he occasionally feels like a passenger in his own story. These are quibbles, not failures.
 
-## Where to Watch, and the Season 2 Twist
+## Where Can You Watch Shogun, and Is Season 2 Coming?
 
 *Shogun* streams on Hulu (and FX) in the US, with availability on Disney-owned platforms internationally. And here's the 2026 wrinkle that recolors everything: this "limited series" is no longer limited. **Shogun Season 2** began filming in Vancouver in early 2026, with Sanada and Jarvis returning and the story reportedly leaping roughly a decade ahead. A release is expected in **2027**. So watch Season 1's ending as a powerful chapter rather than a full stop — the war isn't over. If you're building a watchlist while you wait, our [best HBO shows](/tv/best-hbo-shows) and [best shows on Apple TV](/streaming/best-shows-on-apple-tv) roundups are worth a look.
 
@@ -129,4 +193,12 @@ The cost of all that restraint is a genuine demand on you. Look away from the su
 
 **Our verdict: an instant classic and the rare epic that justifies all 18 of those Emmys — essential viewing. 9.5/10.**
 
-**Further reading:** [Hiroyuki Sanada on Wikipedia](https://en.wikipedia.org/wiki/Hiroyuki_Sanada) · [Where to watch on JustWatch](https://www.justwatch.com/us/search?q=Shogun).
+**Further reading:** [Hiroyuki Sanada on Wikipedia](https://en.wikipedia.org/wiki/Hiroyuki_Sanada) · Where to watch on JustWatch.
+
+## Sources
+
+- [Shogun (2024 TV series) -- Wikipedia](https://en.wikipedia.org/wiki/Sh%C5%8Dgun_(2024_TV_series))
+- [Shogun (2024) -- Rotten Tomatoes (99% Tomatometer)](https://www.rottentomatoes.com/tv/shogun_2024)
+- [Shogun -- Emmy Awards and Nominations (Television Academy)](https://www.televisionacademy.com/shows/shc58dgun-0)
+- [Shogun and The Bear Set Records at 76th Emmy Awards -- Television Academy](https://www.televisionacademy.com/features/news/awards-news/76th-emmy-winners)
+- [Shogun (novel) by James Clavell -- Wikipedia](https://en.wikipedia.org/wiki/Sh%C5%8Dgun_(novel))

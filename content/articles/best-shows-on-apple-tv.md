@@ -32,31 +32,97 @@ faq:
       Severance is the best show on Apple TV+ right now. It has overtaken Ted
       Lasso as the streamer's most-watched series ever, and its surreal,
       twist-loaded sci-fi mystery is the title most critics and subscribers rank
-      at the top.
+      at the top. It holds a 95% overall Rotten Tomatoes score across two
+      seasons, with a third confirmed.
   - q: What is the most popular show on Apple TV+?
     a: >-
       Severance is now Apple TV+'s most-watched series of all time, surpassing
       Ted Lasso, which held the crown for years. The Morning Show, Silo and Slow
-      Horses round out the platform's most popular titles.
+      Horses round out the platform's most popular titles, while Ted Lasso
+      remains a perennial draw ahead of its fourth season, set for August 2026.
   - q: Is Apple TV+ worth it for the shows?
     a: >-
       Yes. Apple TV+ has one of the highest hit-rates in streaming, with
       Severance, The Studio, Slow Horses, Silo and Ted Lasso all earning major
-      critical acclaim. If you like prestige drama and sharp comedy, the
-      subscription pays for itself quickly.
+      critical acclaim. The library is smaller than Netflix or Prime Video, but
+      a far higher percentage of it is genuinely excellent. If you like prestige
+      drama and sharp comedy, the subscription pays for itself quickly.
   - q: What show is bigger than Ted Lasso on Apple TV+?
     a: >-
       Severance is now bigger than Ted Lasso on Apple TV+. Apple confirmed the
-      workplace sci-fi thriller surpassed Ted Lasso to become the platform's
-      most-watched series, with its two seasons topping Ted Lasso's three.
+      workplace sci-fi thriller surpassed Ted Lasso in 2025 to become the
+      platform's most-watched series ever, with its two seasons topping Ted
+      Lasso's three. Ted Lasso still ranks among the streamer's all-time biggest
+      hits and built the brand's reputation.
   - q: Which Apple TV+ shows have the highest Rotten Tomatoes scores?
     a: >-
-      Slow Horses sits among the highest, with multiple perfect 100% seasons and
-      roughly 97% overall. The Studio also scored in the mid-90s and won the
-      Emmy for Outstanding Comedy Series, while Severance and Pachinko are
+      Slow Horses sits among the highest, with two perfect 100% seasons (Seasons
+      2 and 4) and roughly 97% overall. The Studio scored in the mid-90s and won
+      the 2025 Emmy for Outstanding Comedy Series, while Severance holds 95%
+      overall and Silo's seasons land in the high 80s to low 90s. All are
       Certified Fresh.
+  - q: What new shows are coming to Apple TV+ in 2026?
+    a: >-
+      The headline 2026 arrival is Cape Fear, a psychological-thriller series
+      with Amy Adams and Javier Bardem (executive produced by Martin Scorsese
+      and Steven Spielberg) that premiered in June. Beyond that, Silo's third
+      and final season arrives July 3, 2026, Ted Lasso returns for Season 4 on
+      August 5, 2026, and Slow Horses launches its sixth season on September 16,
+      2026.
+  - q: Where can I start with Apple TV+? Which show should I watch first?
+    a: >-
+      Start with Severance. It is the platform's most-watched and most acclaimed
+      series, and its self-contained workplace sci-fi mystery hooks fast. If
+      sci-fi is not your thing, Slow Horses is the safest bet for pure binge
+      value, every season is Certified Fresh, while Ted Lasso is the gentle,
+      feel-good entry point and The Studio is the standout comedy.
+  - q: Is Severance finished or is there a Season 3?
+    a: >-
+      Severance is not finished. Apple TV+ renewed the series for a third season
+      after its second season aired in early 2025. Two seasons are currently
+      streaming, and the show ended Season 2 on a major cliffhanger, so the
+      story continues. No firm Season 3 premiere date has been confirmed yet,
+      but more is officially on the way.
 featured: false
 image: /images/articles/best-shows-on-apple-tv.jpg
+keyTakeaways:
+  - >-
+    Severance is the top pick and Apple TV+'s most-watched series ever,
+    overtaking Ted Lasso, with a 95% overall Rotten Tomatoes score across two
+    seasons (a third is confirmed).
+  - >-
+    Slow Horses is the platform's most consistently reviewed show: every season
+    is Certified Fresh, two earned a perfect 100%, and it sits at roughly 97%
+    overall, with Season 6 due September 16, 2026.
+  - >-
+    The Studio made Emmy history, winning Outstanding Comedy Series and a record
+    13 total Emmys in its debut season at the 2025 ceremony.
+  - >-
+    Apple TV+'s real edge is hit-rate, not size: a smaller library than Netflix,
+    but titles like Silo, Ted Lasso, The Morning Show, Pachinko and Shrinking
+    keep its critical batting average unusually high.
+  - >-
+    Newest arrival Cape Fear (Amy Adams, Javier Bardem; executive produced by
+    Scorsese and Spielberg) premiered in June 2026 as the buzziest fresh reason
+    to subscribe.
+about:
+  - name: Severance
+    type: TVSeries
+    sameAs: 'https://en.wikipedia.org/wiki/Severance_(TV_series)'
+  - name: Slow Horses
+    type: TVSeries
+    sameAs: 'https://en.wikipedia.org/wiki/Slow_Horses'
+  - name: The Studio
+    type: TVSeries
+    sameAs: 'https://en.wikipedia.org/wiki/The_Studio_(TV_series)'
+  - name: Silo
+    type: TVSeries
+    sameAs: 'https://en.wikipedia.org/wiki/Silo_(TV_series)'
+  - name: Ted Lasso
+    type: TVSeries
+    sameAs: 'https://en.wikipedia.org/wiki/Ted_Lasso'
+imageWidth: 1280
+imageHeight: 1600
 ---
 
 If you only start one thing tonight, make it **Severance** — the surreal corporate sci-fi thriller has officially overtaken *Ted Lasso* to become Apple TV+'s most-watched series ever, and it sits at the top of nearly every critic's list of the **best shows on Apple TV+** right now. That single fact tells you most of what you need to know: Apple has quietly become the most critically bulletproof streamer in Hollywood, where even its "lesser" titles out-review the headline shows on bigger platforms.
@@ -119,4 +185,12 @@ Short answer: yes. The reason Apple keeps showing up on "best of" lists is its h
 
 The best shows on Apple TV+ right now start with **Severance** — now the platform's most-watched series ever — followed closely by the perfect-scoring **Slow Horses** and the Emmy-winning **The Studio**. Add **Silo**, **Ted Lasso** and the brand-new **Cape Fear**, and you have a watchlist that justifies the subscription on its own. Start with Severance tonight; work your way down the list from there.
 
-**Further reading:** [Jason Sudeikis on Wikipedia](https://en.wikipedia.org/wiki/Jason_Sudeikis) · [Where to watch on JustWatch](https://www.justwatch.com/us/search?q=Apple%20TV).
+**Further reading:** [Jason Sudeikis on Wikipedia](https://en.wikipedia.org/wiki/Jason_Sudeikis) · Where to watch on JustWatch.
+
+## Sources
+
+- [Severance (TV series) - Wikipedia](https://en.wikipedia.org/wiki/Severance_(TV_series))
+- [Slow Horses on Rotten Tomatoes](https://www.rottentomatoes.com/tv/slow_horses)
+- [Outstanding Comedy Series 2025 winners - Television Academy (Emmys)](https://www.televisionacademy.com/awards/nominees-winners/2025/outstanding-comedy-series)
+- [The Studio (TV series) - Wikipedia](https://en.wikipedia.org/wiki/The_Studio_(TV_series))
+- [Silo (TV series) - Wikipedia](https://en.wikipedia.org/wiki/Silo_(TV_series))

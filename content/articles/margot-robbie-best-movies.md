@@ -29,10 +29,10 @@ faq:
     a: >-
       By critical consensus, her best movie is I, Tonya (2017). Her
       transformative, Oscar-nominated turn as figure skater Tonya Harding earned
-      a 90% on Rotten Tomatoes — her highest-rated leading role — and proved she
-      could carry a film, not just steal scenes in one. Barbie and The Wolf of
-      Wall Street are more famous, but I, Tonya is the performance critics rank
-      first.
+      a 90% on Rotten Tomatoes -- her highest-rated leading role -- and proved
+      she could carry a film, not just steal scenes in one. Barbie and The Wolf
+      of Wall Street are more famous, but I, Tonya is the performance critics
+      rank first.
   - q: How many Oscar nominations does Margot Robbie have?
     a: >-
       Three, with no wins so far. She was nominated for Best Actress for I,
@@ -45,28 +45,92 @@ faq:
       The Wolf of Wall Street (2013). Cast opposite Leonardo DiCaprio in Martin
       Scorsese's black comedy, the then-unknown Australian actress turned her
       role as Naomi into a breakout. She had earlier built a following on the
-      soap Neighbours (2008–2011), but Wolf made her an international name.
+      soap Neighbours (2008-2011), but Wolf made her an international name.
   - q: Is Barbie Margot Robbie's highest-grossing movie?
     a: >-
       Yes, by a wide margin. Greta Gerwig's Barbie (2023) grossed roughly $1.44
-      billion worldwide, making it Robbie's biggest hit and one of the
-      top-grossing films of the decade. For comparison, The Wolf of Wall Street
-      earned about $407 million worldwide over its lifetime.
+      billion worldwide ($1,447,138,421 per Box Office Mojo), making it Robbie's
+      biggest hit and one of the top-grossing films of the decade. For
+      comparison, The Wolf of Wall Street earned about $407 million worldwide
+      over its lifetime.
   - q: 'Did Margot Robbie win an Oscar for I, Tonya?'
     a: >-
       No. She was nominated for the Academy Award for Best Actress for I, Tonya
       but did not win; the award that year went to Frances McDormand for Three
       Billboards Outside Ebbing, Missouri. Robbie's co-star Allison Janney did
       win Best Supporting Actress for the film.
+  - q: What role did Margot Robbie play in Barbie?
+    a: >-
+      She played the title character, Stereotypical Barbie, in Greta Gerwig's
+      2023 film, opposite Ryan Gosling's Ken. Robbie also produced the movie
+      through her company LuckyChap Entertainment, and it was her idea to pitch
+      the project to Mattel. The film grossed about $1.44 billion worldwide and
+      earned a Best Picture Oscar nomination, which Robbie shares as a producer,
+      though she was not nominated for acting.
+  - q: Has Margot Robbie played Harley Quinn more than once?
+    a: >-
+      Yes, three times. She first appeared as Harley Quinn in Suicide Squad
+      (2016), then headlined Birds of Prey (2020), the best-reviewed of her DC
+      outings at 79% on Rotten Tomatoes, and returned in The Suicide Squad
+      (2021). The role made her a comic-book icon and remains one of her most
+      recognizable characters, even though Suicide Squad itself is her
+      lowest-rated film on this list at 26%.
+  - q: How many times has Margot Robbie worked with Leonardo DiCaprio?
+    a: >-
+      Twice, both in films directed by Oscar-winning auteurs. She first starred
+      opposite DiCaprio in Martin Scorsese's The Wolf of Wall Street (2013), the
+      role that made her famous, then shared the screen with him again in
+      Quentin Tarantino's Once Upon a Time in Hollywood (2019), where she played
+      Sharon Tate. Both films are among the highest-ranked entries in her
+      filmography.
 featured: false
 image: /images/articles/margot-robbie-best-movies.png
+keyTakeaways:
+  - >-
+    By critical consensus, I, Tonya (2017) is Margot Robbie's best movie -- her
+    90% Rotten Tomatoes leading role and Best Actress Oscar nomination, ranked
+    above Barbie and The Wolf of Wall Street.
+  - >-
+    This ranking is by acting craft and critical merit, not box office: Barbie
+    ($1.447 billion worldwide) lands at #2, and The Wolf of Wall Street, her
+    breakout, sits at #4.
+  - >-
+    Robbie has three Oscar nominations and no wins -- Best Actress for I, Tonya,
+    Best Supporting Actress for Bombshell, and a Best Picture nod as a producer
+    of Barbie -- but no acting nomination for Barbie.
+  - >-
+    The full top 10 runs: 1) I, Tonya, 2) Barbie, 3) Once Upon a Time in
+    Hollywood, 4) The Wolf of Wall Street, 5) The Big Short, 6) Birds of Prey,
+    7) Mary Queen of Scots, 8) Babylon, 9) Bombshell, 10) Suicide Squad.
+  - >-
+    Robbie's range is the throughline: she will disappear under prosthetics
+    (Mary Queen of Scots), steal a single scene (The Big Short, Bombshell), or
+    carry a whole film (I, Tonya).
+about:
+  - name: 'I, Tonya'
+    type: Movie
+    sameAs: 'https://en.wikipedia.org/wiki/I,_Tonya'
+  - name: Barbie
+    type: Movie
+    sameAs: 'https://en.wikipedia.org/wiki/Barbie_(film)'
+  - name: Once Upon a Time in Hollywood
+    type: Movie
+    sameAs: 'https://en.wikipedia.org/wiki/Once_Upon_a_Time_in_Hollywood'
+  - name: The Wolf of Wall Street
+    type: Movie
+    sameAs: 'https://en.wikipedia.org/wiki/The_Wolf_of_Wall_Street_(2013_film)'
+  - name: The Big Short
+    type: Movie
+    sameAs: 'https://en.wikipedia.org/wiki/The_Big_Short_(film)'
+imageWidth: 438
+imageHeight: 578
 ---
 
 Here is the answer most lists bury: the best Margot Robbie movie is not the billion-dollar **Barbie**, and it is not **The Wolf of Wall Street**, the breakout that made her famous. By the critical consensus that runs across Rotten Tomatoes and awards-season trackers, the top of any honest **margot robbie best movies ranked** countdown is **I, Tonya** — her transformative, Oscar-nominated turn as Tonya Harding. That is the role that proved she could disappear into a character and carry an entire film on her back.
 
 This list ranks by acting craft and critical merit, not box-office muscle or sheer fame. So yes, Barbie is here, and yes, that infamous Wolf of Wall Street scene is here — but you will see exactly why they land where they do. Nothing withheld.
 
-## Margot Robbie's best movies ranked (the quick list)
+## What are Margot Robbie's best movies, ranked?
 
 For anyone who just wants the order before the deep dive, here is the **margot robbie best movies list**, from #10 up to her single greatest performance:
 
@@ -129,4 +193,13 @@ If you want more deep-dive star rankings in this vein, our [Ryan Gosling best mo
 
 Rank Margot Robbie by box office and Barbie wins. Rank her by fame and Wolf of Wall Street takes it. But rank her by acting craft — the thing this **margot robbie top rated movies** list cares about — and the answer to "what is Margot Robbie's best movie?" is I, Tonya. Three Oscar nominations in, with no win yet, she is overdue. The performance that will most likely close that gap looks a lot like Tonya Harding.
 
-**Further reading:** [Margot Robbie on Wikipedia](https://en.wikipedia.org/wiki/Margot_Robbie) · [Where to watch on JustWatch](https://www.justwatch.com/us/search?q=Margot%20Robbie).
+**Further reading:** [Margot Robbie on Wikipedia](https://en.wikipedia.org/wiki/Margot_Robbie) · Where to watch on JustWatch.
+
+## Sources
+
+- [Margot Robbie filmography - Wikipedia](https://en.wikipedia.org/wiki/Margot_Robbie_filmography)
+- [List of awards and nominations received by Margot Robbie - Wikipedia](https://en.wikipedia.org/wiki/List_of_awards_and_nominations_received_by_Margot_Robbie)
+- [I, Tonya - Rotten Tomatoes (90%)](https://www.rottentomatoes.com/m/i_tonya)
+- [Barbie (2023) - Box Office Mojo (worldwide gross)](https://www.boxofficemojo.com/title/tt1517268/)
+- [I, Tonya (2017) - Box Office Mojo](https://www.boxofficemojo.com/title/tt5580036/)
+- [I, Tonya - Wikipedia](https://en.wikipedia.org/wiki/I,_Tonya)

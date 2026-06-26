@@ -34,7 +34,7 @@ faq:
       performance. The honest caveat: it is a three-hour, dialogue-dense,
       courtroom-heavy drama with almost no on-screen explosion, so if you want a
       war movie with action set pieces, manage that expectation. If you like
-      tense, morally serious storytelling, it is essential — and best seen as
+      tense, morally serious storytelling, it is essential -- and best seen as
       big and loud as possible.
   - q: How long is the movie Oppenheimer?
     a: >-
@@ -54,16 +54,75 @@ faq:
     a: >-
       Oppenheimer won seven Academy Awards at the 96th Oscars, including Best
       Picture, Best Director for Christopher Nolan, Best Actor for Cillian
-      Murphy, and Best Supporting Actor for Robert Downey Jr. It was the night's
-      biggest winner and is widely regarded as one of the most acclaimed films
-      of its year.
+      Murphy, and Best Supporting Actor for Robert Downey Jr. It also took Best
+      Cinematography, Best Film Editing, and Best Original Score. It led all
+      films with 13 nominations and was the night's biggest winner.
   - q: Why is Oppenheimer rated R?
     a: >-
       Oppenheimer is rated R primarily for some sexuality, nudity, and language.
-      It is a serious adult drama rather than a graphically violent one — the
+      It is a serious adult drama rather than a graphically violent one -- the
       rating reflects mature themes and a few explicit scenes, not action gore.
+  - q: What is Oppenheimer's Rotten Tomatoes score?
+    a: >-
+      Oppenheimer holds a 93% critics score (the Tomatometer) on Rotten Tomatoes
+      from more than 500 reviews, alongside a 91% audience score. That reflects
+      near-universal critical acclaim and ranks among the best-reviewed films of
+      Christopher Nolan's career. The consensus praises Cillian Murphy's
+      tour-de-force performance and the film's stunning visuals. The strong
+      reviews carried into awards season, where it dominated.
+  - q: Does Oppenheimer show the atomic bomb explosion?
+    a: >-
+      Yes, but not the way an action film would. The Trinity test is the film's
+      centerpiece, and Nolan recreated the blast using practical effects rather
+      than CGI. The sequence's power comes from its sound design: you see the
+      fireball first, then sit in silence, then the shockwave arrives like a
+      punch. The film deliberately avoids depicting the bombings of Hiroshima
+      and Nagasaki, keeping the horror at a psychological distance to focus on
+      Oppenheimer's guilt.
+  - q: Is Oppenheimer based on a true story?
+    a: >-
+      Yes. Oppenheimer is based on the 2005 Pulitzer Prize-winning biography
+      American Prometheus by Kai Bird and Martin J. Sherwin. It dramatizes real
+      events -- Oppenheimer's leadership of the Manhattan Project at Los Alamos,
+      the 1945 Trinity test, and his 1954 security-clearance hearing -- though
+      Nolan compresses timelines and dramatizes private conversations, such as
+      the final lakeside exchange with Albert Einstein, for narrative effect.
+  - q: How much money did Oppenheimer make at the box office?
+    a: >-
+      Oppenheimer grossed over $975 million worldwide -- roughly $330 million
+      domestically and $645 million internationally. That made it the
+      third-highest-grossing film of 2023, the highest-grossing World War
+      II-related film, the highest-grossing biographical film, and at the time
+      the second-highest-grossing R-rated film ever. It was a striking
+      commercial result for a three-hour, dialogue-driven drama and benefited
+      from the cultural 'Barbenheimer' moment of its July 2023 release.
 featured: false
 image: /images/articles/oppenheimer-review.jpg
+keyTakeaways:
+  - >-
+    The Screen Report verdict is 9.5/10, Essential -- the best film Christopher
+    Nolan has made, anchored by Cillian Murphy's Oscar-winning lead.
+  - >-
+    Set expectations: it's a three-hour, dialogue-dense, courtroom-heavy drama
+    with almost no on-screen explosion, not an action war movie -- and that's
+    the point.
+  - >-
+    The two-timeline structure (Oppenheimer's color POV vs. Strauss's
+    black-and-white account) keeps the runtime moving like a thriller and pays
+    off in the Einstein finale.
+  - >-
+    It won seven Oscars at the 96th Academy Awards, including Best Picture,
+    Director, Actor (Murphy), and Supporting Actor (Robert Downey Jr.), and
+    grossed over $975 million worldwide.
+  - >-
+    Rated R for some sexuality, nudity, and language -- a serious adult drama,
+    not action gore. There is no post-credits scene.
+about:
+  - name: Oppenheimer
+    type: Movie
+    sameAs: 'https://en.wikipedia.org/wiki/Oppenheimer_(film)'
+imageWidth: 808
+imageHeight: 1213
 ---
 
 A three-hour talking-heads biopic about a physicist — much of it set inside a security-clearance hearing, with almost no on-screen explosion — should not move like a thriller. *Oppenheimer* does. So let's not withhold the thing you came to this **Oppenheimer review** to find out: yes, it is worth watching, yes it is a good movie, and it is the best film Christopher Nolan has ever made. The Screen Report rating is **9.5 out of 10. Essential.** The only real question buried inside "is Oppenheimer worth watching" is whether a dialogue-dense, courtroom-heavy drama earns its runtime. It does, completely.
@@ -91,11 +150,11 @@ This is Nolan operating with total command. Working with cinematographer Hoyte v
 
 The black-and-white/color POV structure isn't a gimmick — it pays off in the Einstein finale, when the film reveals that we, like Strauss, have spent three hours misreading what the whole story was about. For where this sits in the filmmaker's run, see our [Christopher Nolan movies ranked](/movies/christopher-nolan-movies-ranked); for the formal ambition it shares with its peers, our [best sci-fi movies of the 21st century](/movies/best-sci-fi-movies-21st-century).
 
-## The Rotten Tomatoes and Oscars Reputation — Does It Hold Up?
+## What is Oppenheimer's Rotten Tomatoes score and how many Oscars did it win?
 
 If you arrived via the **Oppenheimer review Rotten Tomatoes** route, the reputation is real: the film drew near-universal critical acclaim and went on to dominate awards season. It won **seven Academy Awards at the 96th Oscars**, including Best Picture, Best Director, Best Actor (Murphy), and Best Supporting Actor (Downey Jr.). It is also, plainly, **a good movie** by any standard you want to apply — craft, performance, ambition, or sheer staying power. Among recent prestige titles we've covered, only a handful, like our [Dune: Part Two review](/reviews/dune-part-two-review) and [Everything Everywhere All at Once review](/reviews/everything-everywhere-all-at-once-review), operate at this level of confidence.
 
-## What Falls Short
+## What are the weaknesses of Oppenheimer?
 
 It isn't flawless. The relentless density means the second half's web of hearings and grudges can be hard to track on a first watch without some grounding in the era's politics. And the script underwrites its women — both Blunt and Pugh are superb but given less room than their talent warrants. There's also a deliberate coldness: the dual-timeline machinery keeps you at arm's length from raw emotion. A more conventional film might have made you weep. This one makes you think, then unsettles you. That's a braver aim, not a warmer one.
 
@@ -109,4 +168,12 @@ It isn't flawless. The relentless density means the second half's web of hearing
 
 **The Screen Report verdict: 9.5/10. Essential.**
 
-**Further reading:** [Cillian Murphy on Wikipedia](https://en.wikipedia.org/wiki/Cillian_Murphy) · [Where to watch on JustWatch](https://www.justwatch.com/us/search?q=Oppenheimer).
+**Further reading:** [Cillian Murphy on Wikipedia](https://en.wikipedia.org/wiki/Cillian_Murphy) · Where to watch on JustWatch.
+
+## Sources
+
+- [Oppenheimer (film) -- Wikipedia](https://en.wikipedia.org/wiki/Oppenheimer_(film))
+- [Oppenheimer -- Box Office Mojo](https://www.boxofficemojo.com/title/tt15398776/)
+- [Oppenheimer (2023) -- Rotten Tomatoes](https://www.rottentomatoes.com/m/oppenheimer_2023)
+- [The 96th Academy Awards (2024) -- Oscars.org](https://www.oscars.org/oscars/ceremonies/2024)
+- [96th Academy Awards -- Wikipedia](https://en.wikipedia.org/wiki/96th_Academy_Awards)

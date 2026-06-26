@@ -31,42 +31,123 @@ faq:
     a: >-
       By the time Avengers: Doomsday opens on December 18, 2026, there will be
       39 MCU feature films. Doomsday is the 39th, following Spider-Man: Brand
-      New Day (July 31, 2026) earlier in the year.
+      New Day (July 31, 2026) earlier in the year. The total began with Iron Man
+      in 2008 and runs through the entire Infinity Saga and Multiverse Saga.
+      Avengers: Secret Wars, slated for 2027, will then become the 40th film and
+      close out the Multiverse Saga.
   - q: What is the first MCU movie to watch?
     a: >-
       For a first watch, start with Iron Man (2008). It launched the franchise
-      and the Infinity Saga in release order. If you are watching by in-universe
+      and the Infinity Saga in release order, and its post-credits scene
+      introduces the larger shared universe. If you are watching by in-universe
       timeline instead, start with Captain America: The First Avenger, which is
-      set in the 1940s.
+      set in the 1940s, followed by Captain Marvel, set in the 1990s. Most
+      viewers should stick with release order on a first run-through.
   - q: >-
       Should you watch the Marvel movies in release order or chronological
       order?
     a: >-
-      Release order is the better choice for a first watch because the MCU was
-      built as serialized storytelling, and its reveals and emotional payoffs
-      land hardest in the sequence audiences saw. Chronological order is best
-      saved for a rewatch once you already know the story.
+      Release order is the better choice for a first watch. The MCU was built as
+      serialized storytelling, and its reveals, cameos, and emotional payoffs
+      land hardest in the sequence audiences originally saw. Avengers: Endgame
+      in particular only sings if you have taken the journey film by film.
+      Chronological (timeline) order is best saved for a rewatch, once spoilers
+      no longer matter and you want to see the story reassembled. Endgame's time
+      travel also makes any perfect chronological order impossible.
   - q: 'What order should I watch Marvel movies before Avengers: Doomsday?'
     a: >-
-      Watch in release order through Phase Five and into Phase Six: the
-      essentials are the Infinity Saga, then Phase Four and Five highlights, The
-      Fantastic Four: First Steps, and Spider-Man: Brand New Day, which arrives
-      in July 2026 just before Doomsday in December.
+      You do not need all 38 prior films. Watch the Infinity Saga through
+      Avengers: Endgame for the emotional foundation, then hit the load-bearing
+      Multiverse Saga entries: Spider-Man: No Way Home and Doctor Strange in the
+      Multiverse of Madness (which crack the multiverse open), Deadpool &
+      Wolverine (which folds in the wider Marvel film universe), The Fantastic
+      Four: First Steps, and Spider-Man: Brand New Day, which arrives July 31,
+      2026 just months before Doomsday lands December 18, 2026.
   - q: Do you need to watch the Marvel TV shows to follow the movies?
     a: >-
       No, you can follow the main movie arc without them. But a few Disney+
-      series connect directly to films — WandaVision sets up Doctor Strange in
-      the Multiverse of Madness, and Loki expands the multiverse stakes that
-      ripple toward Doomsday.
+      series connect directly to films, so they enrich the experience.
+      WandaVision sets up Doctor Strange in the Multiverse of Madness, and Loki
+      expands the multiverse stakes that ripple toward Avengers: Doomsday. Treat
+      the shows as connective tissue rather than required homework. If you want
+      the fullest version of the story, slot WandaVision and Loki in before
+      their related films.
+  - q: 'Is Avengers: Doomsday the last MCU movie?'
+    a: >-
+      No. Avengers: Doomsday, opening December 18, 2026, is the climax the
+      Multiverse Saga has been building toward, with the Russo brothers
+      directing and Robert Downey Jr. returning as the villain Doctor Doom. But
+      it is not the finale. Avengers: Secret Wars is slated to close the
+      Multiverse Saga in 2027, making it the saga's true capstone. So Doomsday
+      is the penultimate chapter of the current mega-arc rather than the end of
+      the MCU.
+  - q: What are the MCU Phases and Sagas in order?
+    a: >-
+      The MCU is grouped into Sagas, each split into Phases. The Infinity Saga
+      covers Phases One through Three (Iron Man in 2008 through Spider-Man: Far
+      From Home in 2019), 23 films. The Multiverse Saga covers Phases Four
+      through Six: Phase Four runs Black Widow through Black Panther: Wakanda
+      Forever, Phase Five runs Ant-Man and the Wasp: Quantumania through
+      Thunderbolts*, and Phase Six runs The Fantastic Four: First Steps,
+      Spider-Man: Brand New Day, and Avengers: Doomsday.
+  - q: Where can I stream the MCU movies?
+    a: >-
+      Disney+ is the franchise's primary streaming home, and nearly every MCU
+      film is available there, though availability for a few earlier titles can
+      vary by region. If you are short on time, build a greatest-hits spine:
+      Iron Man, The Avengers, Captain America: The Winter Soldier, Guardians of
+      the Galaxy, Captain America: Civil War, Black Panther, Thor: Ragnarok,
+      Avengers: Infinity War, and Avengers: Endgame. That run hits the biggest
+      turning points without committing to the full 39-film marathon.
 featured: true
 image: /images/articles/mcu-movies-in-order.jpg
+keyTakeaways:
+  - >-
+    There are two correct watch orders: release order starts with Iron Man
+    (2008); chronological timeline order starts with Captain America: The First
+    Avenger, set in the 1940s.
+  - >-
+    For a first watch, choose release order. The MCU was built as serialized
+    storytelling, so its reveals and payoffs (especially Avengers: Endgame) only
+    land in the sequence audiences saw.
+  - >-
+    By the time Avengers: Doomsday opens on December 18, 2026, there will be 39
+    MCU feature films; Avengers: Secret Wars is set to close the Multiverse Saga
+    in 2027.
+  - >-
+    Before Doomsday, the efficient prep path is the Infinity Saga through
+    Endgame, then the multiverse-opening films: No Way Home, Multiverse of
+    Madness, Deadpool & Wolverine, The Fantastic Four: First Steps, and
+    Spider-Man: Brand New Day (July 2026).
+  - >-
+    You can follow the movies without the Disney+ shows, but WandaVision and
+    Loki are the most relevant series, feeding directly into Multiverse of
+    Madness and the wider Doomsday stakes.
+about:
+  - name: Iron Man
+    type: Movie
+    sameAs: 'https://en.wikipedia.org/wiki/Iron_Man_(2008_film)'
+  - name: 'Avengers: Endgame'
+    type: Movie
+    sameAs: 'https://en.wikipedia.org/wiki/Avengers:_Endgame'
+  - name: 'Avengers: Doomsday'
+    type: Movie
+    sameAs: 'https://en.wikipedia.org/wiki/Avengers:_Doomsday'
+  - name: 'Captain America: The First Avenger'
+    type: Movie
+    sameAs: 'https://en.wikipedia.org/wiki/Captain_America:_The_First_Avenger'
+  - name: 'Spider-Man: Brand New Day'
+    type: Movie
+    sameAs: 'https://en.wikipedia.org/wiki/Spider-Man:_Brand_New_Day_(film)'
+imageWidth: 1280
+imageHeight: 1920
 ---
 
 Here is the fast answer: there are two correct ways to watch the **MCU movies in order**, and they are not the same list. **Release order** starts with *Iron Man* (2008), the film that launched the franchise. **Chronological (timeline) order** starts with *Captain America: The First Avenger*, which is set in the 1940s, decades before Tony Stark builds his first suit. For a first watch, release order wins — the Marvel Cinematic Universe was engineered as serialized storytelling, so its reveals and gut-punches only land if you see them in the sequence audiences did.
 
 Below you'll find both complete lists, mapped to every Phase and Saga, plus the one thing newcomers actually want in 2026: exactly what to watch before *Avengers: Doomsday* arrives in theaters on **December 18, 2026**. By the time Doomsday lands, there will be **39 MCU feature films** — so let's get you oriented.
 
-## Release order vs. chronological order: which to pick
+## Should you watch the MCU in release order or chronological order?
 
 The difference between the two orders is simple but important. **Release order** is the sequence the films premiered in, from 2008's *Iron Man* onward. **Chronological order** reshuffles those same films by *when the events happen in-universe*, which means a 1940s war movie and a 1990s prequel jump to the front of the line.
 
@@ -137,7 +218,7 @@ After *Far From Home*, the franchise launched its next mega-arc — the **Multiv
 
 That brings the total to **39 films** through *Doomsday*, with *Avengers: Secret Wars* slated to close the Saga in 2027.
 
-## What to watch before Avengers: Doomsday
+## What should you watch before Avengers: Doomsday?
 
 *Avengers: Doomsday* opens **December 18, 2026**, with the Russo brothers directing and Robert Downey Jr. returning to the MCU — this time as the villain Doctor Doom. It's the climax the entire Multiverse Saga has been building toward, so a little prep pays off.
 
@@ -172,7 +253,7 @@ Ready for a rewatch? Here's the broad **chronological order** by in-universe tim
 
 The chronologically first MCU project is *The First Avenger* — but note the time travel in *Endgame* makes any "perfect" timeline impossible, which is exactly why we recommend release order first. After *Endgame*, the Multiverse Saga films broadly follow their release order on the timeline.
 
-## MCU movies and shows in order: do you need the Disney+ series?
+## Do you need to watch the Disney+ shows to follow the MCU movies?
 
 You can follow the films on their own. But several **Disney+ shows** connect directly to the movies, so the fullest **MCU movies and shows in order** experience slots them in. *WandaVision* leads into *Doctor Strange in the Multiverse of Madness*; *Loki* expands the multiverse stakes that ripple all the way toward *Doomsday*. Treat the series as connective tissue, not required homework. For more bingeable, tightly written television beyond Marvel, our guide to the [best limited series to stream](/tv/best-limited-series-to-stream) is a strong next stop.
 
@@ -184,4 +265,11 @@ Nearly every MCU film streams on **Disney+**, the franchise's primary home, thou
 
 For most viewers, **release order is the definitive way to watch the MCU movies in order** — begin with *Iron Man*, ride the Infinity Saga through *Endgame* and *Far From Home*, then move into the Multiverse Saga across Phases Four, Five, and Six. Save the **chronological timeline order** for a rewatch once you know the secrets. And if you're catching up for the big one, the road to *Avengers: Doomsday* (December 18, 2026) runs through *The Fantastic Four: First Steps* and *Spider-Man: Brand New Day* — 39 films deep and counting. Bookmark this guide; with *Secret Wars* on the horizon, the map isn't finished yet.
 
-**Further reading:** [Robert Downey Jr. on Wikipedia](https://en.wikipedia.org/wiki/Robert_Downey_Jr.) · [Where to watch on JustWatch](https://www.justwatch.com/us/search?q=Marvel).
+**Further reading:** [Robert Downey Jr. on Wikipedia](https://en.wikipedia.org/wiki/Robert_Downey_Jr.) · Where to watch on JustWatch.
+
+## Sources
+
+- [Marvel Cinematic Universe - Wikipedia](https://en.wikipedia.org/wiki/Marvel_Cinematic_Universe)
+- [Franchise: Marvel Cinematic Universe - Box Office Mojo](https://www.boxofficemojo.com/franchise/fr541495045/)
+- [Avengers: Doomsday - Wikipedia](https://en.wikipedia.org/wiki/Avengers:_Doomsday)
+- [Iron Man (2008 film) - Wikipedia](https://en.wikipedia.org/wiki/Iron_Man_(2008_film))

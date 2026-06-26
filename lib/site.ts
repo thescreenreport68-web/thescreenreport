@@ -55,6 +55,9 @@ export type Author = {
   name: string;
   role: string;
   bio: string;
+  // Real external profiles (X, LinkedIn, Muck Rack, etc.) for Person-schema E-E-A-T.
+  // Left empty until real profiles exist — never fabricate (the Sports Illustrated trap).
+  sameAs?: string[];
 };
 
 export const AUTHORS: Author[] = [

@@ -38,9 +38,10 @@ faq:
   - q: Which Timothée Chalamet movie won an Oscar?
     a: >-
       None of his performances have won. Chalamet has three Best Actor
-      nominations — Call Me by Your Name, A Complete Unknown, and Marty Supreme
-      — but he has yet to win. He lost the 2025 Best Actor Oscar to Adrien
-      Brody, despite taking the SAG Award that year for his Bob Dylan turn.
+      nominations -- Call Me by Your Name, A Complete Unknown, and Marty Supreme
+      -- but he has yet to win. He lost the 2025 Best Actor Oscar to Adrien
+      Brody (for The Brutalist), despite taking the SAG Award that year for his
+      Bob Dylan turn in A Complete Unknown.
   - q: What is Timothée Chalamet's highest-rated movie on Rotten Tomatoes?
     a: >-
       Among his lead vehicles, Lady Bird holds the highest Tomatometer at 99%,
@@ -51,14 +52,80 @@ faq:
     a: >-
       Three, all for Best Actor: Call Me by Your Name (2018 ceremony), A
       Complete Unknown (2025), and Marty Supreme (2026). His first nod at 22
-      made him the third-youngest Best Actor nominee in Academy history.
+      made him the third-youngest Best Actor nominee in Academy history, and his
+      third made him the youngest male actor ever to reach three Best Actor
+      nominations.
   - q: What movie made Timothée Chalamet famous?
     a: >-
       Call Me by Your Name (2017) was his breakout. He had earlier supporting
-      parts in Interstellar and Lady Bird, but Elio launched him into awards
-      contention. Dune later made him a global box-office lead as Paul Atreides.
+      parts in Interstellar and Lady Bird, but his role as Elio launched him
+      into awards contention and his first Oscar nomination. Dune (2021) and
+      Dune: Part Two (2024) later made him a global box-office lead as Paul
+      Atreides.
+  - q: How many Dune movies is Timothée Chalamet in?
+    a: >-
+      Two so far, both directed by Denis Villeneuve. Chalamet plays Paul
+      Atreides in Dune (2021) and Dune: Part Two (2024). The second film is his
+      biggest hit, grossing about $715 million worldwide. A third film, Dune:
+      Part Three (also titled Dune Messiah), is in development with Chalamet
+      expected to return as Paul, which would make it his third outing in the
+      franchise.
+  - q: 'Is Call Me by Your Name better than Dune: Part Two?'
+    a: >-
+      In our ranking, yes. Dune: Part Two is the bigger movie -- a $715 million
+      blockbuster with a commanding, physical Chalamet performance and a
+      slightly higher pre-release buzz. But Call Me by Your Name (95% on Rotten
+      Tomatoes) is the more acclaimed, more personal film and the role that
+      defined him. The blockbuster proved his range; the indie proved his
+      greatness, so the breakout still beats it.
+  - q: What is the best order to watch Timothée Chalamet's movies?
+    a: >-
+      Start with the essentials: Call Me by Your Name for his finest
+      performance, then Dune followed by Dune: Part Two as a pair (the first
+      sets up the second). Add A Complete Unknown and Marty Supreme for his
+      recent Oscar-nominated run. Then fill in Lady Bird, Little Women,
+      Beautiful Boy, Bones and All, Wonka, and The King to see his full range
+      across drama, romance, musical, and historical epic.
 featured: false
 image: /images/articles/timothee-chalamet-best-movies.jpg
+keyTakeaways:
+  - >-
+    Our #1 is Call Me by Your Name (2017, 95% on Rotten Tomatoes) -- the
+    breakout that earned Chalamet his first Best Actor nod at 22 and still beats
+    every blockbuster he has made.
+  - >-
+    Dune: Part Two is his biggest hit ($714.8M worldwide), but it ranks second;
+    the critically adored indie still tops the list.
+  - >-
+    Chalamet is a three-time Best Actor nominee -- Call Me by Your Name, A
+    Complete Unknown, and Marty Supreme -- and has never won, losing the 2025
+    Oscar to Adrien Brody.
+  - >-
+    Marty Supreme (93%) is his highest-rated lead vehicle and made him the
+    youngest male actor ever with three Best Actor nominations, narrowly missing
+    the top spot.
+  - >-
+    By Tomatometer his highest-scoring film is the supporting turn in Lady Bird
+    (99%); among starring roles, Little Women and Call Me by Your Name lead at
+    95%.
+about:
+  - name: Call Me by Your Name
+    type: Movie
+    sameAs: 'https://en.wikipedia.org/wiki/Call_Me_by_Your_Name_(film)'
+  - name: 'Dune: Part Two'
+    type: Movie
+    sameAs: 'https://en.wikipedia.org/wiki/Dune:_Part_Two'
+  - name: A Complete Unknown
+    type: Movie
+    sameAs: 'https://en.wikipedia.org/wiki/A_Complete_Unknown'
+  - name: Marty Supreme
+    type: Movie
+    sameAs: 'https://en.wikipedia.org/wiki/Marty_Supreme'
+  - name: Lady Bird
+    type: Movie
+    sameAs: 'https://en.wikipedia.org/wiki/Lady_Bird_(film)'
+imageWidth: 1280
+imageHeight: 1730
 ---
 
 Here is the verdict up front, no teasing: the best **Timothée Chalamet movie** is still *Call Me by Your Name*. Eight years and two more Oscar nominations later, his 2017 breakout remains his finest, most critically acclaimed performance — the role that made him, at 22, the third-youngest Best Actor nominee in Academy history. That is the headline of this ranking of the best **Timothée Chalamet movies ranked** from his essential work down: the quiet indie romance still beats the blockbusters. Not *Dune: Part Two*, his biggest hit. Not his full-body Bob Dylan transformation. The breakthrough wins.
@@ -117,7 +184,7 @@ Two dramas show his range at full stretch. In **Beautiful Boy**, he plays a youn
 
 Then the lighter swings: **Wonka** is a sweet, song-filled origin story that proved he could anchor a family hit, and **The King** is an underrated Netflix medieval drama in which he plays a brooding young Henry V. Together they prove the breadth of his appeal — whimsy, warmth, and grim historical weight, often within the same calendar year.
 
-## Where to watch the best Timothée Chalamet movies
+## Where can you watch the best Timothée Chalamet movies?
 
 His catalog is scattered, so the **best order to watch** starts with the top picks:
 
@@ -133,4 +200,12 @@ Availability shifts by region and over time. For tracking down other big titles 
 
 The best **Timothée Chalamet movies ranked** map a remarkable trajectory: from the aching intimacy of *Call Me by Your Name* to the planetary scale of *Dune: Part Two*, with a Bob Dylan transformation and a *Marty Supreme* swing closing fast behind. He is a three-time Oscar nominee who still has not won — a streak that only sharpens the anticipation. The blockbusters got bigger and the scores climbed higher, but the breakthrough still beats them all. For now, *Call Me by Your Name* holds the top spot — and the ranking is far from finished.
 
-**Further reading:** [Timothée Chalamet on Wikipedia](https://en.wikipedia.org/wiki/Timoth%C3%A9e_Chalamet) · [Where to watch on JustWatch](https://www.justwatch.com/us/search?q=Timothee%20Chalamet).
+**Further reading:** [Timothée Chalamet on Wikipedia](https://en.wikipedia.org/wiki/Timoth%C3%A9e_Chalamet) · Where to watch on JustWatch.
+
+## Sources
+
+- [List of awards and nominations received by Timothée Chalamet -- Wikipedia](https://en.wikipedia.org/wiki/List_of_awards_and_nominations_received_by_Timoth%C3%A9e_Chalamet)
+- [Dune: Part Two -- Box Office Mojo](https://www.boxofficemojo.com/title/tt15239678/)
+- [The 97th Academy Awards (2025) -- Oscars.org](https://www.oscars.org/oscars/ceremonies/2025)
+- [Call Me by Your Name (film) -- Wikipedia](https://en.wikipedia.org/wiki/Call_Me_by_Your_Name_(film))
+- [Marty Supreme -- Rotten Tomatoes](https://www.rottentomatoes.com/m/marty_supreme)

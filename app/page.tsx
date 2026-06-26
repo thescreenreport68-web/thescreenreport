@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import ArticleCard from "@/components/ArticleCard";
 import AdSlot from "@/components/AdSlot";
@@ -30,6 +31,16 @@ function AdBreak() {
       <AdSlot format="rectangle" className="md:hidden" />
     </div>
   );
+}
+
+export function generateMetadata(): Metadata {
+  const heroImg =
+    (getArticleBySlug("mcu-movies-in-order") ?? getAllArticles()[0])?.image;
+  if (!heroImg) return {};
+  return {
+    openGraph: { images: [{ url: heroImg }] },
+    twitter: { images: [heroImg] },
+  };
 }
 
 export default function HomePage() {

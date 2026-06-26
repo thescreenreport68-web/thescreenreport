@@ -1,7 +1,8 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import ArticleCard from "@/components/ArticleCard";
-import { AUTHORS, getAuthor } from "@/lib/site";
+import JsonLd from "@/components/JsonLd";
+import { AUTHORS, getAuthor, SITE } from "@/lib/site";
 import { getArticlesByAuthor } from "@/lib/articles";
 
 export const dynamicParams = false;
@@ -30,8 +31,21 @@ export default function AuthorPage({ params }: { params: { slug: string } }) {
     .join("")
     .slice(0, 2);
 
+  const personLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: a.name,
+    jobTitle: a.role,
+    description: a.bio,
+    url: `${SITE.url}/author/${a.slug}/`,
+    worksFor: { "@type": "Organization", name: SITE.name, url: SITE.url },
+    knowsAbout: ["Film", "Television", "Streaming", "Hollywood", "Celebrity"],
+    ...(a.sameAs?.length ? { sameAs: a.sameAs } : {}),
+  };
+
   return (
     <div className="container-wide py-10">
+      <JsonLd data={personLd} />
       <header className="flex items-center gap-5 border-b border-navy/10 pb-8">
         <span className="flex h-20 w-20 items-center justify-center rounded-full bg-navy font-serif text-2xl font-bold text-white">
           {initials}
