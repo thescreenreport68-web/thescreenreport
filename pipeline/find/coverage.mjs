@@ -22,6 +22,8 @@ async function notableScreenWork(title) {
 
 const slugify = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 70);
 const key = (c, s) => `${c}/${s}`;
+// normalized entity key for cross-slot dedup: "The Bear (TV series)" and "The Bear" → "thebear"
+const normEnt = (s) => (s || "").toLowerCase().replace(/\([^)]*\)/g, "").replace(/[^a-z0-9]/g, "").trim();
 
 // Live-TMDB fills (real, current entities) — used when organic discovery left a slot empty.
 const TMDB = "https://api.themoviedb.org/3";
@@ -30,21 +32,30 @@ const today = () => new Date().toISOString().slice(0, 10);
 async function tget(p) { try { const r = await fetch(TMDB + p, { headers: H() }); return r.ok ? await r.json() : null; } catch { return null; } }
 const enOnly = (it) => !it.original_language || it.original_language === "en";
 
-async function trendingPerson() {
+// These return CANDIDATE LISTS (best-first) so fillSlot can skip already-used entities.
+async function trendingPeople() {
   const j = await tget("/trending/person/week");
-  return (j?.results || []).find((p) => p.known_for_department === "Acting" && p.name) || null;
+  return (j?.results || []).filter((p) => p.known_for_department === "Acting" && p.name).map((p) => p.name);
 }
 async function nowPlayingReleased() {
   const j = await tget("/movie/now_playing?region=US");
-  return (j?.results || []).filter(enOnly).filter((m) => m.release_date && m.release_date <= today() && m.vote_count > 50)[0] || null;
+  return (j?.results || []).filter(enOnly).filter((m) => m.release_date && m.release_date <= today() && m.vote_count > 50).map((m) => m.title);
 }
-async function upcomingWithDate() {
+async function upcomingFilms() {
   const j = await tget("/movie/upcoming?region=US");
-  return (j?.results || []).filter(enOnly).filter((m) => m.release_date && m.release_date > today())[0] || null;
+  return (j?.results || []).filter(enOnly).filter((m) => m.release_date && m.release_date > today()).map((m) => m.title);
 }
 async function trendingReleasedTV() {
   const j = await tget("/trending/tv/week");
-  return (j?.results || []).filter(enOnly).filter((t) => t.first_air_date && t.first_air_date <= today() && t.vote_count > 50)[0] || null;
+  return (j?.results || []).filter(enOnly).filter((t) => t.first_air_date && t.first_air_date <= today() && t.vote_count > 50).map((t) => t.name);
+}
+// first notable, not-yet-used title from a candidate list
+async function firstNotableUnused(list, used) {
+  for (const name of list) {
+    if (used.has(normEnt(name))) continue;
+    if (await notableScreenWork(name)) return name;
+  }
+  return null;
 }
 
 // Grounded evergreen seeds (famous, rich-Wikipedia entities → reliable grounding) for slots TMDB can't fill.
@@ -93,19 +104,19 @@ function mk(cat, sub, o) {
   };
 }
 
-async function fillSlot(cat, sub, monitor) {
-  const ft = FORMAT_BY_SUB[sub];
-  // live-TMDB fills (each film/show must be Wikipedia-notable, or we skip it)
-  if (sub === "profiles-careers") { const p = await trendingPerson(); if (p && (await notableScreenWork(p.name))) return mk(cat, sub, { title: `${p.name}'s Movies and Career, Explained`, primaryEntity: p.name, primaryKeyword: `${p.name} movies` }); }
-  if (sub === "box-office") { const m = await nowPlayingReleased(); if (m && (await notableScreenWork(m.title))) return mk(cat, sub, { title: `${m.title} Box Office: How It's Performing`, primaryEntity: m.title, primaryKeyword: `${m.title} box office` }); }
-  if (sub === "trailers") { const m = await upcomingWithDate(); if (m && (await notableScreenWork(m.title))) return mk(cat, sub, { title: `${m.title} Trailer: Everything to Know`, primaryEntity: m.title, primaryKeyword: `${m.title} trailer`, tmdbType: "movie" }); }
-  if (sub === "movie-reviews") { const m = await nowPlayingReleased(); if (m && (await notableScreenWork(m.title))) return mk(cat, sub, { title: `${m.title} Review`, primaryEntity: m.title, primaryKeyword: `${m.title} review` }); }
-  if (sub === "tv-reviews") { const t = await trendingReleasedTV(); if (t && (await notableScreenWork(t.name))) return mk(cat, sub, { title: `${t.name} Review`, primaryEntity: t.name, primaryKeyword: `${t.name} review`, tmdbType: "tv" }); }
+async function fillSlot(cat, sub, monitor, used) {
+  // live-TMDB fills (each film/show must be Wikipedia-notable + not already used in another slot)
+  if (sub === "profiles-careers") { const n = await firstNotableUnused(await trendingPeople(), used); if (n) return mk(cat, sub, { title: `${n}'s Movies and Career, Explained`, primaryEntity: n, primaryKeyword: `${n} movies` }); }
+  if (sub === "box-office") { const n = await firstNotableUnused(await nowPlayingReleased(), used); if (n) return mk(cat, sub, { title: `${n} Box Office: How It's Performing`, primaryEntity: n, primaryKeyword: `${n} box office` }); }
+  if (sub === "trailers") { const n = await firstNotableUnused(await upcomingFilms(), used); if (n) return mk(cat, sub, { title: `${n} Trailer: Everything to Know`, primaryEntity: n, primaryKeyword: `${n} trailer`, tmdbType: "movie" }); }
+  if (sub === "movie-reviews") { const n = await firstNotableUnused(await nowPlayingReleased(), used); if (n) return mk(cat, sub, { title: `${n} Review`, primaryEntity: n, primaryKeyword: `${n} review` }); }
+  if (sub === "tv-reviews") { const n = await firstNotableUnused(await trendingReleasedTV(), used); if (n) return mk(cat, sub, { title: `${n} Review`, primaryEntity: n, primaryKeyword: `${n} review`, tmdbType: "tv" }); }
   // seed fills
   const seed = SEEDS[key(cat, sub)] && SEEDS[key(cat, sub)]();
   if (seed?._hard) { monitor.stage("coverage", `⚠ ${key(cat, sub)} needs live social discovery (reactions) — left for the 'more sources' phase`); return null; }
   if (seed) {
     if (seed.provider) return mk(cat, sub, { ...seed, title: `The Best Movies on ${seed.provider} Right Now`, primaryKeyword: `best movies on ${seed.provider}`, primaryEntity: seed.provider });
+    if (used.has(normEnt(seed.primaryEntity))) return null; // seed entity already used elsewhere
     return mk(cat, sub, seed);
   }
   return null;
@@ -121,24 +132,30 @@ export async function buildCoverageQueue(monitor) {
   const verified = verify(topics, monitor);
   scoreTopics(verified, monitor);
 
-  // 2) best ORGANIC topic per subcategory
+  // 2) organic publishable topics per subcategory, best-first (a LIST, so we can skip used entities)
   const byBucket = new Map();
   for (const t of verified) {
     if (!t.verification?.publishable) continue;
     const k = key(t.category, t.subcategory);
-    if (!byBucket.has(k) || t.priority > byBucket.get(k).priority) byBucket.set(k, t);
+    if (!byBucket.has(k)) byBucket.set(k, []);
+    byBucket.get(k).push(t);
   }
+  for (const list of byBucket.values()) list.sort((a, b) => b.priority - a.priority);
 
-  // 3) for EVERY subcategory: use organic, else evergreen-fill
+  // 3) for EVERY subcategory: best UNUSED organic topic, else a notability+dedup-checked evergreen-fill.
+  //    used = entities already placed → no entity (Toy Story, The Bear, Minions) appears in two slots.
   const queue = [];
   const filled = [], organic = [], missing = [];
+  const used = new Set();
+  const entKey = (t) => normEnt(t.primaryEntity || t.title);
   for (const [cat, subs] of Object.entries(TAXONOMY)) {
     for (const sub of subs) {
       const k = key(cat, sub);
-      if (byBucket.has(k)) { queue.push(byBucket.get(k)); organic.push(k); }
+      const organicPick = (byBucket.get(k) || []).find((t) => !used.has(entKey(t)));
+      if (organicPick) { used.add(entKey(organicPick)); queue.push(organicPick); organic.push(k); }
       else {
-        const f = await fillSlot(cat, sub, monitor);
-        if (f) { queue.push(f); filled.push(k); }
+        const f = await fillSlot(cat, sub, monitor, used);
+        if (f) { used.add(entKey(f)); queue.push(f); filled.push(k); }
         else missing.push(k);
       }
     }

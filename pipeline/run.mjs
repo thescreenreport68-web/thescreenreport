@@ -174,6 +174,13 @@ for (let i = 0; i < topics.length; i++) {
       if (interview) { article.youtubeId = interview.youtubeId; article.sourceOutlet = interview.sourceOutlet; article.sourceUrl = interview.sourceUrl; }
       if (boxoffice?.worldwide) { article.boxOffice = { ...(article.boxOffice || {}), worldwide: boxoffice.worldwide, budget: boxoffice.budget }; }
       classification = await classify({ article, topic, model: MODELS.classifier });
+      // FIND/coverage topics already have an AUTHORITATIVE category/subcategory/formatTag (from categorize
+      // or coverage targeting) — respect it so classify can't scramble the per-subcategory coverage.
+      if (FROM_FIND && topic.category && topic.subcategory) {
+        classification.category = topic.category;
+        classification.subcategory = topic.subcategory;
+        classification.formatTag = topic.formatTag || classification.formatTag;
+      }
       // Source a legal >=1200px hero: try the model's pick, the entity, then (for embed niches) the real cast/director.
       const imgCandidates = [...new Set([
         article.imageQuery, topic.primaryEntity, ...(topic.entities || []), ...(trailer ? [trailer.director, ...(trailer.cast || [])] : []),
