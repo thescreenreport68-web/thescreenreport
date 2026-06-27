@@ -4,6 +4,7 @@ import { createRequire } from "node:module";
 const require = createRequire(import.meta.url);
 const matter = require("gray-matter");
 import { TAXONOMY, AUTHOR_SLUG } from "../config.mjs";
+import { addInternalLinks } from "../lib/internalLinks.mjs";
 
 const ART = "/Users/sivajithcu/Movie News site/site/content/articles";
 
@@ -37,6 +38,11 @@ export function assemble({ article, classification, image, topic, dateISO }) {
   let body = fixLinks(article.body || "");
 
   const slug = topic.slug || slugify(article.title);
+  // Support-system #1: insert 2-3 REAL, tone-safe internal links to related published articles +
+  // strip any dangling "see our feature" phantom phrases. Runs AFTER fixLinks (these links are valid).
+  const tagsForLinks = classification.tags?.length ? classification.tags : article.tags || [];
+  const linkResult = addInternalLinks({ body, title: article.title, tags: tagsForLinks, category: classification.category, slug }, { max: 3 });
+  body = linkResult.body;
   const imageAlt = (
     (article.imageQuery ? article.imageQuery + " — " : "") + (article.title || "")
   ).slice(0, 125);
@@ -63,6 +69,21 @@ export function assemble({ article, classification, image, topic, dateISO }) {
     imageHeight: image?.imageHeight,
     formatTag: classification.formatTag || article.formatTag || "",
   };
+  // Provenance for the post-publish recheck / auto-retraction system (only on breaking-news articles).
+  // Lets recheck.mjs re-verify the event later and take down / correct / upgrade it.
+  if (topic.verification && topic.sources?.length) {
+    fm.provenance = {
+      eventSlug: topic.eventSlug || "",
+      primaryEntity: topic.primaryEntity || "",
+      eventType: topic.eventType || "other",
+      sensitivity: topic.verification.sensitivity || topic.sensitivity || "normal",
+      status: topic.verification.status || "",
+      attribution: topic.verification.attribution || null,
+      outlets: topic.verification.outlets || [],
+      publishedAt: dateISO,
+    };
+    fm.dateModified = dateISO;
+  }
   // strip stray markdown emphasis from plain-text structured-field strings
   const stripMd = (v) =>
     typeof v === "string"
@@ -84,5 +105,5 @@ export function assemble({ article, classification, image, topic, dateISO }) {
     fm[k] = v;
   }
   const md = matter.stringify("\n" + body.trim() + "\n", fm);
-  return { slug, frontmatter: fm, md };
+  return { slug, frontmatter: fm, md, body, internalLinks: linkResult.linked };
 }

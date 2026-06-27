@@ -8,10 +8,12 @@ import { discover } from "./discover.mjs";
 import { categorize } from "./categorize.mjs";
 import { verify } from "./verify.mjs";
 import { scoreTopics, selectDiverse } from "./score.mjs";
+import { expandInsideStories, TIER_S } from "./expand.mjs";
 
 const arg = (k, d) => Number((process.argv.find((a) => a.startsWith(`--${k}=`)) || "").split("=")[1]) || d;
 const SHORTLIST = arg("candidates", 28); // how many candidates the categorize LLM judges (cost control)
 const QUEUE_N = arg("queue", 12); // how many topics land in the ranked queue
+const EXPAND = process.argv.includes("--expand"); // opt-in: blanket Tier-S events with inside-angle articles
 
 const runId = "run-" + new Date().toISOString().replace(/[:.]/g, "-").slice(0, 19);
 const monitor = newMonitor(runId);
@@ -36,6 +38,16 @@ const verified = verify(topics, monitor);
 // Stages 4+6 — score + rank, then diverse-select the queue
 scoreTopics(verified, monitor);
 const queue = selectDiverse(verified, { n: QUEUE_N, perSubcatMax: 2, publishableOnly: true });
+
+// Inside-stories expansion (opt-in): a Tier-S event → many tone-safe angle articles, appended to the queue.
+if (EXPAND) {
+  const tierS = verified.filter((t) => TIER_S.has(t.eventType) && t.verification?.publishable).slice(0, 2);
+  for (const ev of tierS) {
+    const angles = await expandInsideStories(ev, monitor);
+    scoreTopics(angles);
+    for (const a of angles) if (!queue.some((q) => q.id === a.id)) queue.push(a);
+  }
+}
 
 // Write the FIND→MAKE seam: the ranked, publishable, diverse queue.
 writeJSON("queue.json", { runId, builtAt: new Date().toISOString(), count: queue.length, topics: queue });

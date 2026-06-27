@@ -14,6 +14,7 @@ import { getWhereToWatch, factBlock, toWhereToWatch, discoverTop, discoverFactBl
 import { cacheTweets, reactionFactBlock } from "./lib/tweets.mjs";
 import { searchInterview, fetchTranscript, oEmbed, interviewFactBlock } from "./lib/youtube.mjs";
 import { costReport } from "./lib/openrouter.mjs";
+import { auditArticle, printAudit } from "./lib/articleAudit.mjs";
 import { TOPICS } from "./topics.mjs";
 
 const ART = "/Users/sivajithcu/Movie News site/site/content/articles";
@@ -191,15 +192,21 @@ for (let i = 0; i < topics.length; i++) {
       console.log(`  attempt ${attempt}: score ${scored.score} [${classification.category}/${classification.subcategory}] img:${image ? "yes" : "NO"} ${pass ? "PASS ✅" : "blocks:" + JSON.stringify(scored.hardBlocks)}`);
     }
     rec.scorecard = { score: scored.score, subscores: scored.subscores, strengths: scored.strengths, weaknesses: scored.weaknesses, deterministic: scored.deterministic, hardBlocks: scored.hardBlocks };
+    let auditBody = article.body, internalLinks = [];
     if (pass) {
-      const { slug, md } = assemble({ article, classification, image, topic, dateISO });
-      if (!DRY) fs.writeFileSync(path.join(ART, slug + ".md"), md);
+      const out = assemble({ article, classification, image, topic, dateISO });
+      auditBody = out.body; internalLinks = out.internalLinks || [];
+      if (!DRY) fs.writeFileSync(path.join(ART, out.slug + ".md"), out.md);
       rec.status = "published"; rec.score = scored.score; rec.category = classification.category; rec.subcategory = classification.subcategory; pub++;
-      console.log(`  ✓ ${DRY ? "DRY (md not written)" : "WROTE " + slug + ".md"} [${classification.category}/${classification.subcategory}] score ${scored.score}`);
+      console.log(`  ✓ ${DRY ? "DRY (md not written)" : "WROTE " + out.slug + ".md"} [${classification.category}/${classification.subcategory}] score ${scored.score}`);
     } else {
       rec.status = "needs_review"; review++;
       console.log(`  → REVIEW QUEUE (score ${scored.score})`);
     }
+    // FULL-PIPELINE MONITOR — verify every stage was covered + audit the article for everything.
+    const report = auditArticle({ topic, article, classification, image, scored, body: auditBody });
+    printAudit(report, `${topic.id} · ${pass ? "PUBLISHED" : "REVIEW"}`);
+    rec.audit = { ok: report.ok, internalLinks: internalLinks.length, failed: report.failed.map((f) => f.name) };
     rec.ms = Date.now() - t0;
   } catch (e) {
     rec.status = "error"; rec.error = String(e?.stack || e).slice(0, 300); err++;
