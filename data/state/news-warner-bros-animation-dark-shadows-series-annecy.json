@@ -1,0 +1,83 @@
+{
+  "id": "news-warner-bros-animation-dark-shadows-series-annecy",
+  "slug": "warner-bros-animation-announces-new-dark-shadows-series-at-annecy",
+  "status": "needs_review",
+  "stages": {
+    "attempt1": {
+      "score": 68,
+      "cat": "tv/news",
+      "img": "/images/articles/warner-bros-animation-announces-new-dark-shadows-series-at-annecy.jpg",
+      "hardBlocks": [
+        "infoGain 5 < 7",
+        "humanVoice 5 < 7"
+      ]
+    },
+    "attempt2": {
+      "score": 64,
+      "cat": "tv/news",
+      "img": "/images/articles/warner-bros-animation-announces-new-dark-shadows-series-at-annecy.jpg",
+      "hardBlocks": [
+        "infoGain 4 < 7",
+        "humanVoice 4 < 7",
+        "phrasing 6 < 7"
+      ]
+    }
+  },
+  "scorecard": {
+    "score": 64,
+    "subscores": {
+      "accuracy": 8,
+      "readability": 7,
+      "humanVoice": 4,
+      "phrasing": 6,
+      "curiosity": 6,
+      "structure": 8,
+      "infoGain": 4,
+      "seo": 8,
+      "faqQuality": 6,
+      "completeness": 7
+    },
+    "strengths": [
+      "Lead is fast and inverted-pyramid: who, what, where, when in the first sentence, properly attributed to Variety.",
+      "Core breaking claim is attributed in words ('according to Variety') and not overstated as independently confirmed.",
+      "Accurate handling of the source facts — 1,225 episodes, 1966-1971, Barnabas/Frid, Curtis, Burton 2012, Big Finish all check out.",
+      "Clean, scannable structure with useful question subheads and tight Key Takeaways.",
+      "Honest about the limits of the news ('details were not disclosed') rather than padding with invention.",
+      "FAQ adds genuinely new info (DVD/MPI release, Depp as star) not already in the body."
+    ],
+    "weaknesses": [
+      "Reads like competent wire-desk filler, not a writer with a pulse — no POV, no wit, no surprise, no single vivid detail brought forward (e.g. the famous 'one big contemporary yawn' Variety pan or the Billboard chart success would have given it life).",
+      "Generic AI-tell phrasing: 'signals a deliberate expansion,' 'fertile ground for a new animated interpretation,' 'The show's legacy is significant,' 'Warner Bros. Animation's commitment suggests it views...' — speculative throat-clearing that says nothing.",
+      "Flesch 41 confirms denser-than-ideal prose; several sentences stack clauses where a fan wants snap.",
+      "Copula-avoidance and nominalizations creep in ('positions the project as being in the earliest stages').",
+      "Info gain is thin — the back half is a Wikipedia-grade recap with no original framing or reporter's read on why an adult-animation Dark Shadows is interesting now.",
+      "Full name 'Warner Bros. Animation' repeated where the rhythm wanted a pronoun or 'the studio,' adding stiffness.",
+      "The 'Where can I watch' FAQ is solid but the closing paragraph guesses at motive rather than reporting it."
+    ],
+    "deterministic": {
+      "words": 368,
+      "h2s": 4,
+      "h2Questions": 3,
+      "internalLinks": 0,
+      "externalLinks": 3,
+      "hasSources": true,
+      "faqCount": 4,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 28,
+      "avgSentence": 15,
+      "flesch": 41,
+      "bannedTells": 1,
+      "kwExact": 0,
+      "hardBlocks": []
+    },
+    "hardBlocks": [
+      "infoGain 4 < 7",
+      "humanVoice 4 < 7",
+      "phrasing 6 < 7"
+    ]
+  },
+  "ms": 196690
+}

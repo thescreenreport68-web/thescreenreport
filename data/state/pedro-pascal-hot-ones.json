@@ -1,0 +1,69 @@
+{
+  "id": "pedro-pascal-hot-ones",
+  "slug": "pedro-pascal-hot-ones-interview",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": 79,
+      "cat": "celebrity/interviews",
+      "img": "/images/articles/pedro-pascal-hot-ones-interview.jpg",
+      "hardBlocks": []
+    },
+    "attempt2": {
+      "score": 84,
+      "cat": "celebrity/interviews",
+      "img": "/images/articles/pedro-pascal-hot-ones-interview.jpg",
+      "hardBlocks": []
+    }
+  },
+  "scorecard": {
+    "score": 84,
+    "subscores": {
+      "accuracy": 9,
+      "curiosity": 8,
+      "readability": 9,
+      "structure": 9,
+      "infoGain": 8,
+      "seo": 8,
+      "faqQuality": 9,
+      "voice": 8,
+      "engagement": 8,
+      "completeness": 9
+    },
+    "strengths": [
+      "Strong BLUF lead that delivers three concrete reveals in one sentence; no clickbait.",
+      "Quotes are faithful to the transcript and accurately paraphrased; the Cage Mount Rushmore, GoT death, Grogu, and NYC Mexican food claims all check out.",
+      "Excellent scannable structure: 7 H2s, most phrased as reader-benefit questions, plus Key Takeaways and bolded lead.",
+      "6 PAA-style FAQs that are specific and answer-rich, not filler.",
+      "Internal links to The Last of Us and The Mandalorian pages, plus 4 external authoritative sources.",
+      "Information gain via framing ('story structure' of the interview, fanboy ruined-viewing angle) rather than dry recap."
+    ],
+    "weaknesses": [
+      "Headline keyword 'pedro pascal hot ones' is split awkwardly ('Pedro Pascal on Hot Ones'); primary keyword could be tighter and the favorite-Cage-movies angle is narrower than the multi-reveal lead promises.",
+      "The Mountain actor is named Hafþór Júlíus Björnsson — not in the transcript or grounding facts; this is an inferred addition that risks an accuracy ding (plausible but unsourced in provided material).",
+      "Meta/dek is solid but does not front-load the exact primary keyword string.",
+      "Some subheads cluster two near-identical 'what bothers him watching movies' themes; slight redundancy.",
+      "Could use one list or table (e.g., the Cage Mount Rushmore as a bulleted list) to boost scannability beyond prose.",
+      "Voice is competent but occasionally leans on summary phrasing ('demonstrating his unwavering loyalty') that softens punch."
+    ],
+    "deterministic": {
+      "words": 833,
+      "h2s": 7,
+      "h2Questions": 6,
+      "internalLinks": 2,
+      "externalLinks": 4,
+      "hasSources": true,
+      "faqCount": 6,
+      "ktCount": 5,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "hardBlocks": []
+    },
+    "hardBlocks": []
+  },
+  "score": 84,
+  "category": "celebrity",
+  "subcategory": "interviews",
+  "ms": 120166
+}

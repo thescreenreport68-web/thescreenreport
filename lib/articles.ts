@@ -53,6 +53,43 @@ export type Article = {
   }; // profiles
   filmography?: { year?: string; title: string; role?: string; type?: string }[]; // profiles
   whereToWatch?: { title: string; platform: string; type?: string; year?: string }[]; // guides
+  // ---- batch-2 embed niches (trailer / interview / reaction) ----
+  youtubeId?: string; // trailers + interviews: the official YouTube video id (embedded, never re-hosted)
+  releaseInfo?: string; // trailers: e.g. "In theaters November 21, 2025"
+  keyMoments?: string[]; // trailers: our described beats from the footage
+  sourceOutlet?: string; // interviews: the outlet that published the original interview
+  sourceUrl?: string; // interviews: deep link to that original interview
+  pullQuotes?: string[]; // interviews: short verbatim quotes (<=40 words each)
+  tweetIds?: string[]; // reactions: curated public X post ids (embedded via react-tweet)
+  instagramUrls?: string[]; // reactions: curated public IG permalinks (facade embed)
+  consensus?: string; // reactions: our one-box synthesis of the overall reaction
+  // ---- celebrity / short news ----
+  newsType?: string; // birthday | relationship | red-carpet | controversy | general
+  pullQuote?: { text: string; attribution?: string }; // the quote that triggered the story
+  // ---- box office ----
+  boxOffice?: {
+    domestic?: string;
+    international?: string;
+    worldwide?: string;
+    budget?: string;
+    openingWeekend?: string;
+    theaters?: string;
+  };
+  records?: { claim: string; detail?: string }[]; // box-office records/firsts
+  // ---- awards ----
+  awardsType?: string; // winners-list | snubs | predictions | recap
+  awardShow?: {
+    show?: string; // e.g. "96th Academy Awards"
+    edition?: string;
+    dateISO?: string;
+    venue?: string;
+    host?: string;
+  };
+  awardCategories?: {
+    categoryName: string;
+    nominees: { name: string; title?: string; isWinner?: boolean }[];
+  }[];
+  awardRecords?: { claim: string; detail?: string }[];
 };
 
 const CONTENT_DIR = path.join(process.cwd(), "content", "articles");
@@ -113,6 +150,23 @@ export function getAllArticles(): Article[] {
       factPanel: data.factPanel,
       filmography: data.filmography ?? [],
       whereToWatch: data.whereToWatch ?? [],
+      youtubeId: data.youtubeId,
+      releaseInfo: data.releaseInfo,
+      keyMoments: data.keyMoments ?? [],
+      sourceOutlet: data.sourceOutlet,
+      sourceUrl: data.sourceUrl,
+      pullQuotes: data.pullQuotes ?? [],
+      tweetIds: data.tweetIds ?? [],
+      instagramUrls: data.instagramUrls ?? [],
+      consensus: data.consensus,
+      newsType: data.newsType,
+      pullQuote: data.pullQuote,
+      boxOffice: data.boxOffice,
+      records: data.records ?? [],
+      awardsType: data.awardsType,
+      awardShow: data.awardShow,
+      awardCategories: data.awardCategories ?? [],
+      awardRecords: data.awardRecords ?? [],
     };
   });
 

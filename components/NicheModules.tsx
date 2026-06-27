@@ -1,4 +1,6 @@
 import type { Article } from "@/lib/articles";
+import YouTubeEmbed from "@/components/embed/YouTubeEmbed";
+import SocialReactionGrid from "@/components/embed/SocialReactionGrid";
 
 /* Per-niche UI modules, rendered on top of the shared article base.
    Each article only carries the fields for its own niche, so the dispatchers
@@ -220,11 +222,261 @@ function WhereToWatchTable({ whereToWatch }: { whereToWatch: NonNullable<Article
   );
 }
 
+/* ---------- Trailers (batch 2) ---------- */
+function TrailerModule({ article }: { article: Article }) {
+  if (!article.youtubeId) return null;
+  return (
+    <div className="my-6 not-prose">
+      <SectionLabel>Watch the Official Trailer</SectionLabel>
+      <YouTubeEmbed id={article.youtubeId} title={article.title} />
+      {article.releaseInfo ? (
+        <div className="mt-3 flex items-baseline gap-2 border-b border-hair pb-3">
+          <span className="font-sans text-xs font-bold uppercase tracking-[0.1em] text-slate">
+            Release
+          </span>
+          <span className="font-body text-[1.05rem] font-semibold text-navy">
+            {article.releaseInfo}
+          </span>
+        </div>
+      ) : null}
+      {article.keyMoments?.length ? (
+        <div className="mt-4">
+          <SectionLabel>What to Expect</SectionLabel>
+          <ul className="space-y-1.5">
+            {article.keyMoments.map((m, i) => (
+              <li
+                key={i}
+                className="flex gap-2 font-body text-[1.05rem] leading-snug text-navy"
+              >
+                <span className="flex-none font-bold text-breaking">▸</span>
+                <span>{m}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ) : null}
+    </div>
+  );
+}
+
+/* ---------- Interviews (batch 2) ---------- */
+function InterviewModule({ article }: { article: Article }) {
+  if (!article.youtubeId) return null;
+  return (
+    <div className="my-6 not-prose">
+      <SectionLabel>Watch the Full Interview</SectionLabel>
+      <YouTubeEmbed id={article.youtubeId} title={article.title} />
+      {article.sourceOutlet ? (
+        <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 border-b border-hair pb-3">
+          <span className="font-sans text-xs font-bold uppercase tracking-[0.1em] text-slate">
+            Source
+          </span>
+          <span className="font-body text-[1.02rem] text-navy">{article.sourceOutlet}</span>
+          {article.sourceUrl ? (
+            <a
+              href={article.sourceUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-sans text-xs font-bold uppercase tracking-[0.06em] text-breaking hover:underline"
+            >
+              Watch on YouTube →
+            </a>
+          ) : null}
+        </div>
+      ) : null}
+      {article.pullQuotes?.length ? (
+        <div className="mt-5 space-y-4">
+          {article.pullQuotes.map((q, i) => (
+            <blockquote
+              key={i}
+              className="border-l-4 border-breaking pl-4 font-display text-xl italic leading-snug text-navy sm:text-2xl"
+            >
+              &ldquo;{q.trim().replace(/^["“”]+|["“”]+$/g, "").trim()}&rdquo;
+            </blockquote>
+          ))}
+        </div>
+      ) : null}
+    </div>
+  );
+}
+
+/* ---------- Celebrity / short news ---------- */
+function NewsPullQuote({ article }: { article: Article }) {
+  const q = article.pullQuote;
+  if (!q?.text) return null;
+  return (
+    <figure className="my-6 border-l-4 border-breaking pl-5 not-prose">
+      <blockquote className="font-display text-2xl italic leading-snug text-navy sm:text-[1.7rem]">
+        &ldquo;{q.text.trim().replace(/^["“”]+|["“”]+$/g, "")}&rdquo;
+      </blockquote>
+      {q.attribution ? (
+        <figcaption className="mt-2 font-sans text-xs uppercase tracking-[0.08em] text-slate">
+          — {q.attribution}
+        </figcaption>
+      ) : null}
+    </figure>
+  );
+}
+
+/* ---------- Box office ---------- */
+function BoxOfficeModule({ article }: { article: Article }) {
+  const bo = article.boxOffice;
+  const cells = bo
+    ? ([
+        ["Domestic", bo.domestic],
+        ["International", bo.international],
+        ["Worldwide", bo.worldwide],
+        ["Budget", bo.budget],
+      ].filter(([, v]) => v) as [string, string][])
+    : [];
+  if (!cells.length && !article.records?.length) return null;
+  return (
+    <div className="my-6 not-prose">
+      {cells.length ? (
+        <div className="grid grid-cols-2 gap-px overflow-hidden border border-hair bg-hair sm:grid-cols-4">
+          {cells.map(([k, v]) => (
+            <div key={k} className="bg-white px-4 py-3 text-center">
+              <div className="font-sans text-[10px] font-bold uppercase tracking-[0.12em] text-slate">{k}</div>
+              <div className="mt-1 font-display text-xl font-bold leading-tight text-navy">{v}</div>
+            </div>
+          ))}
+        </div>
+      ) : null}
+      {article.records?.length ? (
+        <aside className="mt-5 border-l-4 border-breaking bg-mist/30 p-5">
+          <SectionLabel>Records &amp; Milestones</SectionLabel>
+          <ul className="space-y-2">
+            {article.records.map((r, i) => (
+              <li key={i} className="font-body text-[1.05rem] leading-snug text-navy">
+                <span className="font-semibold">{r.claim}</span>
+                {r.detail ? <span className="text-slate"> — {r.detail}</span> : null}
+              </li>
+            ))}
+          </ul>
+        </aside>
+      ) : null}
+    </div>
+  );
+}
+
+/* ---------- Reactions (batch 2) ---------- */
+function ConsensusBox({ article }: { article: Article }) {
+  if (!article.consensus) return null;
+  return (
+    <aside className="my-6 border-y-2 border-breaking py-4">
+      <SectionLabel>The Consensus</SectionLabel>
+      <p className="font-body text-xl leading-snug text-navy sm:text-2xl">
+        {article.consensus}
+      </p>
+    </aside>
+  );
+}
+
+function ReactionSection({ article }: { article: Article }) {
+  if (!article.tweetIds?.length && !article.instagramUrls?.length) return null;
+  return (
+    <section className="mt-10 not-prose">
+      <div className="mb-1 border-b-2 border-navy pb-1">
+        <h2 className="font-display text-2xl font-bold uppercase tracking-tight text-navy">
+          What People Are Saying
+        </h2>
+      </div>
+      <p className="mb-2 mt-2 font-sans text-xs uppercase tracking-[0.08em] text-slate">
+        Public posts from X, embedded from their original sources
+      </p>
+      <SocialReactionGrid
+        tweetIds={article.tweetIds}
+        instagramUrls={article.instagramUrls}
+      />
+    </section>
+  );
+}
+
+/* ---------- Awards ---------- */
+function AwardsHeader({ article }: { article: Article }) {
+  const s = article.awardShow;
+  if (!s?.show && !article.awardRecords?.length) return null;
+  const meta = [
+    s?.dateISO
+      ? new Date(s.dateISO + "T00:00:00Z").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" })
+      : null,
+    s?.venue,
+    s?.host ? `Hosted by ${s.host}` : null,
+  ].filter(Boolean);
+  return (
+    <div className="my-6 not-prose">
+      {s?.show ? (
+        <div className="border-y-2 border-navy py-4">
+          <SectionLabel>The Ceremony</SectionLabel>
+          <div className="font-display text-2xl font-bold leading-tight text-navy">{s.show}</div>
+          {meta.length ? <div className="mt-1 font-sans text-sm text-slate">{meta.join(" · ")}</div> : null}
+        </div>
+      ) : null}
+      {article.awardRecords?.length ? (
+        <aside className="mt-5 border-l-4 border-breaking bg-mist/30 p-5">
+          <SectionLabel>Records &amp; Firsts</SectionLabel>
+          <ul className="space-y-2">
+            {article.awardRecords.map((r, i) => (
+              <li key={i} className="font-body text-[1.05rem] leading-snug text-navy">
+                <span className="font-semibold">{r.claim}</span>
+                {r.detail ? <span className="text-slate"> — {r.detail}</span> : null}
+              </li>
+            ))}
+          </ul>
+        </aside>
+      ) : null}
+    </div>
+  );
+}
+
+function AwardsWinnersList({ article }: { article: Article }) {
+  const cats = article.awardCategories;
+  if (!cats?.length) return null;
+  return (
+    <section className="mt-10 not-prose">
+      <div className="mb-4 border-b-2 border-navy pb-1">
+        <h2 className="font-display text-2xl font-bold uppercase tracking-tight text-navy">Full Winners List</h2>
+      </div>
+      <div className="grid gap-5 sm:grid-cols-2">
+        {cats.map((c, i) => (
+          <div key={i} className="border border-hair p-4">
+            <div className="mb-2 font-sans text-xs font-bold uppercase tracking-[0.1em] text-breaking">{c.categoryName}</div>
+            <ul className="space-y-1">
+              {c.nominees.map((n, j) => (
+                <li
+                  key={j}
+                  className={
+                    "flex gap-2 font-body text-[1.02rem] leading-snug " +
+                    (n.isWinner ? "font-semibold text-navy" : "text-slate")
+                  }
+                >
+                  <span className="flex-none">{n.isWinner ? "🏆" : "·"}</span>
+                  <span>
+                    {n.name ? n.name : null}
+                    {n.name && n.title ? " — " : null}
+                    {n.title ? <span className="italic">{n.title}</span> : null}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 /* ---------- Dispatchers ---------- */
 // Rendered above the article body (after the hero, before the prose).
 export function NicheTop({ article }: { article: Article }) {
   return (
     <>
+      {article.formatTag === "trailer" ? <TrailerModule article={article} /> : null}
+      {article.formatTag === "interview" ? <InterviewModule article={article} /> : null}
+      {article.formatTag === "reaction" ? <ConsensusBox article={article} /> : null}
+      {article.formatTag === "news" ? <NewsPullQuote article={article} /> : null}
+      {article.formatTag === "box-office" ? <BoxOfficeModule article={article} /> : null}
+      {article.formatTag === "awards" ? <AwardsHeader article={article} /> : null}
       <SpoilerBanner article={article} />
       <VerdictBox article={article} />
       <TLDR article={article} />
@@ -237,7 +489,13 @@ export function NicheTop({ article }: { article: Article }) {
   );
 }
 
-// Rendered after the article body (long tables that belong at the end).
+// Rendered after the article body (long tables / embed walls that belong at the end).
 export function NicheBottom({ article }: { article: Article }) {
-  return <>{article.filmography?.length ? <Filmography filmography={article.filmography} /> : null}</>;
+  return (
+    <>
+      {article.filmography?.length ? <Filmography filmography={article.filmography} /> : null}
+      {article.formatTag === "reaction" ? <ReactionSection article={article} /> : null}
+      {article.formatTag === "awards" ? <AwardsWinnersList article={article} /> : null}
+    </>
+  );
 }

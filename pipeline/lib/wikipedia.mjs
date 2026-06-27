@@ -50,6 +50,39 @@ export async function wikiFullExtract(title) {
   }
 }
 
+// Fetch specific named SECTIONS (e.g. "Box office", "Reception") as clean text — used to deeply
+// ground data-heavy niches whose figures/records live in a section past the 4000-word extract cap.
+export async function wikiSection(title, wanted = ["Box office", "Reception"]) {
+  try {
+    const base = "https://en.wikipedia.org/w/api.php";
+    const h = { headers: { "User-Agent": UA, accept: "application/json" } };
+    const sj = await fetch(`${base}?action=parse&page=${encodeURIComponent(title)}&prop=sections&redirects=1&format=json`, h).then((r) => r.json()).catch(() => null);
+    const secs = sj?.parse?.sections || [];
+    const out = [];
+    for (const name of wanted) {
+      const sec =
+        secs.find((x) => (x.line || "").toLowerCase() === name.toLowerCase()) ||
+        secs.find((x) => (x.line || "").toLowerCase().includes(name.toLowerCase()));
+      if (!sec) continue;
+      const tj = await fetch(`${base}?action=parse&page=${encodeURIComponent(title)}&section=${sec.index}&prop=text&redirects=1&format=json`, h).then((r) => r.json()).catch(() => null);
+      const html = tj?.parse?.text?.["*"] || "";
+      const text = html
+        .replace(/<style[\s\S]*?<\/style>/gi, " ")
+        .replace(/<sup[\s\S]*?<\/sup>/gi, " ")
+        .replace(/<[^>]+>/g, " ")
+        .replace(/&#?\w+;/g, " ")
+        .replace(/\[\d+\]/g, "")
+        .replace(/\s+/g, " ")
+        .trim();
+      if (text && text.length > 80) out.push(`${sec.line}: ${text.slice(0, 3500)}`);
+      await sleep(120);
+    }
+    return out.join("\n\n");
+  } catch (e) {
+    return "";
+  }
+}
+
 // Gather grounded facts: FULL article for the primary subject (entities[0]), summaries for the rest.
 export async function gatherFacts(entities) {
   const out = [];

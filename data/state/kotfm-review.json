@@ -4,58 +4,71 @@
   "status": "published",
   "stages": {
     "attempt1": {
-      "score": 88,
+      "score": 79,
+      "cat": "reviews/movie-reviews",
+      "img": "/images/articles/killers-of-the-flower-moon-review.jpg",
+      "hardBlocks": []
+    },
+    "attempt2": {
+      "score": 84,
       "cat": "reviews/movie-reviews",
       "img": "/images/articles/killers-of-the-flower-moon-review.jpg",
       "hardBlocks": []
     }
   },
   "scorecard": {
-    "score": 88,
+    "score": 84,
     "subscores": {
       "accuracy": 9,
-      "curiosity": 9,
-      "readability": 9,
+      "readability": 8,
+      "humanVoice": 8,
+      "phrasing": 8,
+      "curiosity": 8,
       "structure": 9,
-      "infoGain": 9,
+      "infoGain": 8,
       "seo": 8,
-      "faqQuality": 9,
-      "voice": 9,
-      "engagement": 9,
+      "faqQuality": 8,
       "completeness": 9
     },
     "strengths": [
-      "Accurate core claims: runtime (206 min), $200-215M budget, ~$158M gross, 93% RT, 10 Oscar nominations with zero wins, Gladstone as first Native American Best Actress nominee/Golden Globe winner — all check out.",
-      "Headline + dek deliver a clear specific verdict (BLUF) without clickbait; lead answers the question in the first sentence.",
-      "Strong structure: bolded BLUF, multiple H2s (3 phrased as reader-benefit questions), Key Takeaways, real sources, internal links.",
-      "Genuine information gain via the procedural-to-love-story pivot framing, the meta-coda analysis, and the Scorsese-filmography comparison.",
-      "Six PAA-style FAQs that are real, distinct, and accurately answered; confident, specific voice throughout."
+      "Genuine critical POV throughout — the writer commits to a reading (procedural-to-tragedy shift, the marriage as the film's 'tragic mechanism') rather than summarizing plot.",
+      "Specific, earned imagery: 'oil derricks standing like metallic grave markers on the prairie' and the radio-play coda framed as meta-textual reckoning. These are real observations, not filler praise.",
+      "Names that matter are deployed well — Prieto, Schoonmaker, Robertson, Cardinal, Myers — giving the piece authority and texture.",
+      "Strong comparative framing in the closing section (Silence, The Irishman, Goodfellas) that reads like a critic who has seen the filmography, not a synopsizer.",
+      "FAQs add real, non-redundant info (runtime defense, Osage involvement scale, Gladstone's heritage) and are accurate to the source facts.",
+      "Subheads are posed as questions that a fan would actually ask; answer-first lead delivers the verdict immediately."
     ],
     "weaknesses": [
-      "Minor inconsistency/risk: 'first Native American actress to win the Golden Globe for Best Actress' — phrasing as 'first Native American nominee in Best Actress category' for the Oscar is correct, but the Globe 'first' claim should be more carefully sourced (true for Drama, but verify).",
-      "Detail like the Zoom call about 'shared Catholic backgrounds' with Gladstone is plausible but borderline-specific and lightly sourced — risks unverifiable color.",
-      "External sources are adequate but lean on Wikipedia/aggregators; a primary-reporting source (NYT, Grann interview, Osage Nation statement) would strengthen authority.",
-      "Meta description / dedicated meta field not explicitly provided beyond the dek.",
-      "No table where a cast/awards comparison could have boosted scannability and SEO."
+      "A few stock-critic crutches survive: 'working at the peak of his powers,' 'late-career masterpiece,' 'towering achievement,' 'Shakespearean proportions' — these soften the otherwise sharp voice with generic-praise vocabulary.",
+      "Flesch 45 / dense register: several long, clause-heavy sentences ('a villain who cloaks his genocidal avarice in the language of friendship and Christian charity') slow a busy reader despite short paragraphs.",
+      "Bolded phrases ('most brilliant and controversial choice') feel like SEO emphasis pasted into prose rather than natural styling.",
+      "Mild copula/throat-clearing residue: 'This choice transforms the film from a mystery into a tragedy' and 'It stands as a late-career masterpiece' lean on stock construction.",
+      "Rotten Tomatoes 93% figure is plausible but unverified against the reference facts; not fabricated-looking, but it's the one stat a stricter desk would want sourced inline.",
+      "The 206-minute runtime is repeated three times (body, takeaways, FAQ) where one mention would do."
     ],
     "deterministic": {
-      "words": 1035,
-      "h2s": 5,
-      "h2Questions": 4,
-      "internalLinks": 2,
-      "externalLinks": 4,
+      "words": 792,
+      "h2s": 4,
+      "h2Questions": 2,
+      "internalLinks": 1,
+      "externalLinks": 3,
       "hasSources": true,
-      "faqCount": 6,
-      "ktCount": 5,
+      "faqCount": 4,
+      "ktCount": 4,
       "kwInTitle": true,
       "kwInFirst100": true,
       "kwInH2": false,
+      "maxSentence": 43,
+      "avgSentence": 17,
+      "flesch": 45,
+      "bannedTells": 1,
+      "kwExact": 0,
       "hardBlocks": []
     },
     "hardBlocks": []
   },
-  "score": 88,
+  "score": 84,
   "category": "reviews",
   "subcategory": "movie-reviews",
-  "ms": 80425
+  "ms": 178696
 }

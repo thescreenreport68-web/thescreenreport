@@ -1,0 +1,67 @@
+{
+  "id": "barbie-box-office",
+  "slug": "barbie-box-office-2023",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": 84,
+      "cat": "movies/box-office",
+      "img": "/images/articles/barbie-box-office-2023.jpg",
+      "hardBlocks": []
+    }
+  },
+  "scorecard": {
+    "score": 84,
+    "subscores": {
+      "accuracy": 10,
+      "readability": 9,
+      "humanVoice": 8,
+      "phrasing": 8,
+      "curiosity": 9,
+      "structure": 9,
+      "infoGain": 8,
+      "seo": 8,
+      "faqQuality": 8,
+      "completeness": 9
+    },
+    "strengths": [
+      "Every figure checks out against the reference facts: $1.45B worldwide, $162M opening, $22.3M previews, $636.8M domestic, $810.9M international, $421M net profit, $145M budget, the live-action comedy records, the solo-female-director milestones, the WB fastest-to-$1B record. No invented numbers.",
+      "Answer-first lead delivers the headline claim fast, and the dek frames a real POV without empty hype.",
+      "Question-style subheads ('What Records Did Barbie Break?', 'How Profitable Was the Barbie Movie?') are reader-friendly and map cleanly to search intent without keyword stuffing.",
+      "Strong specifics give it texture: Captain Marvel and Transformers comparisons, Home Alone/Hangover Part II eras, Jia Ling's Hi, Mom, the Robbie green-light anecdote.",
+      "FAQ adds genuine new info (Robbie's ~$50M Variety figure, budget excluding marketing) rather than restating the body.",
+      "Closing analytical angle on studio boardrooms gives information gain beyond a dry recap."
+    ],
+    "weaknesses": [
+      "Some AI-tells slip through: the lead's 'didn't just open big—it became...' and the dek's 'didn't just sell tickets; it... rewrote' are exactly the negative-parallelism construction to avoid; 'demolition derby of longstanding benchmarks' and 'permanent, pink-hued landmark' lean purple.",
+      "Phrasing occasionally overheats ('astronomically surpassed,' 'cultural stampede disguised as a toy commercial,' 'thunderclap')—energetic but edging past trade-news restraint.",
+      "Flesch ~45 reads denser than ideal for a busy fan; a few sentences pile clauses where a break would help rhythm.",
+      "Minor framing risk: 'beating every superhero and sequel in its path' is loose—Barbie wasn't the all-time top film, only 2023's; the claim is technically about that year but phrased broadly.",
+      "Lady Bird and combined-earnings comparison in the final FAQ ('surpassed Little Women and Lady Bird combined') isn't supported by the reference facts and is presented as fact—soft overreach rather than a hard block, but unverified."
+    ],
+    "deterministic": {
+      "words": 527,
+      "h2s": 4,
+      "h2Questions": 3,
+      "internalLinks": 1,
+      "externalLinks": 4,
+      "hasSources": true,
+      "faqCount": 4,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": false,
+      "kwInH2": false,
+      "maxSentence": 37,
+      "avgSentence": 18,
+      "flesch": 45,
+      "bannedTells": 0,
+      "kwExact": 0,
+      "hardBlocks": []
+    },
+    "hardBlocks": []
+  },
+  "score": 84,
+  "category": "movies",
+  "subcategory": "box-office",
+  "ms": 57531
+}

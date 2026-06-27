@@ -30,3 +30,6 @@ next-env.d.ts
 
 # cloudflare / wrangler
 .wrangler/
+
+# FIND-engine volatile run logs (regenerated every run; per FIND_HALF_PLAN §5 state belongs in D1, not git)
+data/find/runs/

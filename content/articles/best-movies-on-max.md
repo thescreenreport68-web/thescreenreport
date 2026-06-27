@@ -126,7 +126,7 @@ entries:
     blurb: >-
       The masterful world-building first chapter that faithfully and thrillingly
       launches the epic quest to destroy the One Ring.
-  - rank: 72
+  - rank: 7
     title: 'The Lord of the Rings: The Two Towers'
     year: '2002'
     blurb: >-

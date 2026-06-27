@@ -3,11 +3,19 @@
 export const MODELS = {
   // Cheap, reliable classifier (App. P categorization engine).
   classifier: "google/gemini-2.5-flash-lite",
-  // Strong, NEUTRAL judge for the bake-off comparison (not a production candidate → no self-bias).
-  // One-time use during the bake-off; my own manual review is the real decider.
-  judgeBakeoff: "anthropic/claude-opus-4.8",
-  // Cheap judge for the per-article production gate (runs on every article → must be cheap).
+  // ── THE PRODUCTION JUDGE — runs on EVERY article, so it MUST be cheap (FIND_HALF_PLAN §7.2). ──
+  // HARD RULE (owner, 2026-06-27): NEVER Opus / GPT-5-class / any premium model as the judge at runtime —
+  // it would blow the $40-60/mo budget in a day. The cheap model is PROMPTED (in gate.mjs) to do the
+  // fabrication-catching + reader-quality scoring an expensive model would.
+  judge: "google/gemini-2.5-flash-lite",
+  // Cheap-ONLY escalation ladder if flash-lite ever under-delivers on the §7.5 validation (NO Opus):
+  //   flash-lite (cheapest) → llama-4-maverick (~$0.0017/call) → gemini-2.5-flash (~$0.0039/call, ceiling).
+  judgeFallbacks: ["meta-llama/llama-4-maverick", "google/gemini-2.5-flash"],
+  // Back-compat aliases for older dev scripts (bakeoff.mjs, verify.mjs) → both point at the cheap judge now.
+  // The one-time generator bake-off historically used Opus as a neutral referee; that is RETIRED — Opus is
+  // never wired at runtime again.
   judgeProd: "google/gemini-2.5-flash-lite",
+  judgeBakeoff: "google/gemini-2.5-flash-lite",
   // Generation bake-off roster. The PRODUCTION generator must be a "cheap" tier winner;
   // the "benchmark" model is only the quality ceiling for comparison — never used in production.
   candidates: [
@@ -24,11 +32,12 @@ export const MODELS = {
 
 // Taxonomy (kept in sync with site/lib/site.ts SUBCATEGORIES).
 export const TAXONOMY = {
-  movies: ["rankings-lists", "explainers"],
-  tv: ["rankings-lists"],
+  movies: ["rankings-lists", "explainers", "trailers", "reactions", "news", "box-office"],
+  tv: ["rankings-lists", "trailers", "reactions", "news"],
   streaming: ["best-of-streaming", "where-to-watch"],
-  celebrity: ["profiles-careers"],
+  celebrity: ["profiles-careers", "interviews", "news"],
   reviews: ["movie-reviews", "tv-reviews"],
+  awards: ["winners", "predictions"],
 };
 
 export const GATE = { publishMin: 80, infoGainMin: 7 };

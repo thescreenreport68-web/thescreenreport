@@ -112,6 +112,111 @@ export function discoverFactBlock(d) {
   );
 }
 
+// The official YouTube trailer + verified film context for the TRAILER niche.
+// We embed the trailer (never re-host) and ground the preview ONLY on the synopsis/cast/release here.
+export async function getTrailer(name, type = "movie") {
+  let res = await searchTitle(name, type);
+  let kind = type;
+  if (!res) { const alt = type === "movie" ? "tv" : "movie"; res = await searchTitle(name, alt); kind = alt; }
+  if (!res) return null;
+  const [vid, det, cred, rel] = await Promise.all([
+    tmdb(`/${kind}/${res.id}/videos`),
+    tmdb(`/${kind}/${res.id}`),
+    tmdb(`/${kind}/${res.id}/credits`),
+    kind === "movie" ? tmdb(`/movie/${res.id}/release_dates`) : Promise.resolve(null),
+  ]);
+  // Exclude accessibility/localized/promo variants — we want the main trailer a reader expects.
+  const EXCLUDE = /sign language|\basl\b|audio describ|described|foreign|subtitle|dubbed|in concert|featurette|clip|behind the scenes|bloopers|interview|spot/i;
+  const vids = (vid?.results || [])
+    .filter((v) => v.site === "YouTube" && v.key && !EXCLUDE.test(v.name || ""))
+    .sort((a, b) => (b.official === a.official ? 0 : b.official ? 1 : -1));
+  const trailer =
+    vids.find((v) => v.official && /official trailer/i.test(v.name || "")) ||
+    vids.find((v) => /official trailer/i.test(v.name || "")) ||
+    vids.find((v) => v.official && /trailer/i.test(v.type)) ||
+    vids.find((v) => /trailer/i.test(v.type)) ||
+    vids.find((v) => v.official && /teaser/i.test(v.type)) ||
+    vids.find((v) => /teaser/i.test(v.type)) ||
+    vids.find((v) => v.official) ||
+    vids[0];
+  if (!trailer) return null;
+  const director =
+    (cred?.crew || []).find((c) => c.job === "Director")?.name ||
+    (cred?.crew || []).find((c) => c.department === "Directing")?.name || "";
+  const cast = (cred?.cast || []).slice(0, 6).map((c) => c.name);
+  // Prefer the canonical US THEATRICAL date (type 3) — TMDB's top-level release_date is often a premiere/intl date.
+  let releaseDate = det?.release_date || det?.first_air_date || res.release_date || res.first_air_date || "";
+  const us = (rel?.results || []).find((r) => r.iso_3166_1 === "US");
+  if (us?.release_dates?.length) {
+    const byType = (t) => us.release_dates.find((d) => d.type === t)?.release_date;
+    const usDate = byType(3) || byType(2) || byType(1) || us.release_dates[0]?.release_date;
+    if (usDate) releaseDate = usDate.slice(0, 10);
+  }
+  return {
+    youtubeId: trailer.key,
+    videoName: trailer.name || "Official Trailer",
+    title: det?.title || det?.name || res.title || res.name,
+    year: (releaseDate || "").slice(0, 4),
+    releaseDate,
+    overview: det?.overview || res.overview || "",
+    genres: (det?.genres || []).map((g) => g.name),
+    runtime: det?.runtime || (det?.episode_run_time || [])[0] || null,
+    director,
+    cast,
+    type: kind,
+  };
+}
+
+// Plain-text grounding block for the trailer writer (synopsis/cast/release — NOT shot descriptions).
+export function trailerFactBlock(t) {
+  const lines = [`Title: ${t.title}${t.year ? ` (${t.year})` : ""}`];
+  if (t.director) lines.push(`Director: ${t.director}`);
+  if (t.cast?.length) lines.push(`Main cast: ${t.cast.join(", ")}`);
+  if (t.genres?.length) lines.push(`Genre: ${t.genres.join(", ")}`);
+  if (t.releaseDate) lines.push(`Release date: ${t.releaseDate}`);
+  if (t.overview) lines.push(`Official synopsis: ${t.overview}`);
+  lines.push(`Trailer title: "${t.videoName}". IMPORTANT: you have NOT watched the trailer — never describe specific shots, edits, dialogue or a runtime; write the preview only from the synopsis, cast and release above.`);
+  return lines.join("\n");
+}
+
+// Box-office niche: verified worldwide gross + budget from TMDB (the model must never invent figures).
+function fmtUSD(n) {
+  if (!n || n <= 0) return null;
+  if (n >= 1e9) return "$" + (n / 1e9).toFixed(n >= 1e10 ? 1 : 2) + " billion";
+  if (n >= 1e6) return "$" + Math.round(n / 1e6) + " million";
+  return "$" + n.toLocaleString("en-US");
+}
+export async function getBoxOffice(name, type = "movie") {
+  const res = await searchTitle(name, "movie");
+  if (!res) return null;
+  const [det, rel] = await Promise.all([tmdb(`/movie/${res.id}`), tmdb(`/movie/${res.id}/release_dates`)]);
+  if (!det) return null;
+  let releaseDate = det.release_date || "";
+  const us = (rel?.results || []).find((r) => r.iso_3166_1 === "US");
+  if (us?.release_dates?.length) {
+    const byType = (t) => us.release_dates.find((d) => d.type === t)?.release_date;
+    const usDate = byType(3) || byType(2) || byType(1) || us.release_dates[0]?.release_date;
+    if (usDate) releaseDate = usDate.slice(0, 10);
+  }
+  return {
+    title: det.title,
+    year: (releaseDate || det.release_date || "").slice(0, 4),
+    worldwideRaw: det.revenue || 0,
+    budgetRaw: det.budget || 0,
+    worldwide: fmtUSD(det.revenue),
+    budget: fmtUSD(det.budget),
+    releaseDate,
+  };
+}
+export function boxOfficeFactBlock(b) {
+  const lines = [`Title: ${b.title} (${b.year})`];
+  if (b.budget) lines.push(`Production budget: ${b.budget} (before marketing)`);
+  if (b.worldwide) lines.push(`Worldwide gross: ${b.worldwide} (TMDB, verified — use this EXACT figure as the worldwide total)`);
+  if (b.releaseDate) lines.push(`US release date: ${b.releaseDate}`);
+  lines.push("RULE: use ONLY box-office figures that appear in these facts or the Wikipedia box-office section. NEVER invent a number, an opening-weekend figure, a domestic/international split, or a record. When comparing across different eras, note figures are 'not adjusted for inflation'.");
+  return lines.join("\n");
+}
+
 // The structured whereToWatch[] for the table — built directly from TMDB (deterministic, accurate).
 export function toWhereToWatch(list) {
   return list.map((w) => {

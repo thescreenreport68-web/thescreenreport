@@ -7,7 +7,7 @@ import path from "node:path";
 const UA = "The Screen Report/1.0 (https://thescreenreport.com; editor@thescreenreport.com)";
 const FREE = /CC0|CC BY|CC-BY|public domain/i;
 // Reject photos from clearly off-topic contexts (the "DiCaprio at a NASA climate event" problem).
-const OFFCTX = /(nasa|climate|summit|congress|senate|parliament|united nations|\bu\.?n\.?\b|military|army|navy|air ?force|olympic|fifa|world cup|nato|davos|forum|protest|rally|campaign rally|memorial|funeral|wikimania|hackathon)/i;
+const OFFCTX = /(nasa|climate|summit|congress|senate|parliament|united nations|\bu\.?n\.?\b|military|army|navy|air ?force|olympic|fifa|world cup|nato|davos|economic forum|protest|rally|campaign rally|memorial|funeral|wikimania|hackathon)/i;
 // Prefer photos from film/entertainment contexts.
 const FILMCTX = /(premiere|festival|cannes|venice|berlinale|sundance|tiff|comic.?con|red.?carpet|photo.?call|screening|portrait|gala|oscars|emmys|golden globes|sxsw|gage skidmore|paley|hollywood|deauville)/i;
 const OUTDIR = "/Users/sivajithcu/Movie News site/site/public/images/articles";

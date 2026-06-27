@@ -44,6 +44,11 @@ export const CATEGORIES: Category[] = [
     name: "Reviews",
     blurb: "Verdicts you can trust on the latest releases.",
   },
+  {
+    slug: "awards",
+    name: "Awards",
+    blurb: "Oscars, Emmys, Globes and more — winners, predictions and the race.",
+  },
 ];
 
 export function getCategory(slug: string): Category | undefined {
@@ -81,18 +86,35 @@ export type Subcategory = { slug: string; name: string };
 // Subcategories per category — each is populated by real articles (frontmatter `subcategory`).
 export const SUBCATEGORIES: Record<string, Subcategory[]> = {
   movies: [
+    { slug: "news", name: "Movie News" },
     { slug: "rankings-lists", name: "Rankings & Lists" },
     { slug: "explainers", name: "Explainers" },
+    { slug: "trailers", name: "Trailers" },
+    { slug: "reactions", name: "Reactions" },
+    { slug: "box-office", name: "Box Office" },
   ],
-  tv: [{ slug: "rankings-lists", name: "Rankings & Lists" }],
+  tv: [
+    { slug: "news", name: "TV News" },
+    { slug: "rankings-lists", name: "Rankings & Lists" },
+    { slug: "trailers", name: "Trailers" },
+    { slug: "reactions", name: "Reactions" },
+  ],
   streaming: [
     { slug: "best-of-streaming", name: "Best of Streaming" },
     { slug: "where-to-watch", name: "Where to Watch" },
   ],
-  celebrity: [{ slug: "profiles-careers", name: "Profiles & Careers" }],
+  celebrity: [
+    { slug: "news", name: "Celebrity News" },
+    { slug: "profiles-careers", name: "Profiles & Careers" },
+    { slug: "interviews", name: "Interviews" },
+  ],
   reviews: [
     { slug: "movie-reviews", name: "Movie Reviews" },
     { slug: "tv-reviews", name: "TV Reviews" },
+  ],
+  awards: [
+    { slug: "winners", name: "Winners" },
+    { slug: "predictions", name: "Predictions" },
   ],
 };
 
@@ -136,4 +158,5 @@ export const NAV: NavItem[] = [
   { label: "Streaming", href: "/streaming/", subs: subNav("streaming") },
   { label: "Celebrity", href: "/celebrity/", subs: subNav("celebrity") },
   { label: "Reviews", href: "/reviews/", subs: subNav("reviews") },
+  { label: "Awards", href: "/awards/", subs: subNav("awards") },
 ];

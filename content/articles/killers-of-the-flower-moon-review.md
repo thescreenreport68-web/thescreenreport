@@ -1,151 +1,134 @@
 ---
 title: >-
-  Killers of the Flower Moon Review: Scorsese's Epic Is a Devastating
-  Masterpiece
+  Killers of the Flower Moon Review: Scorsese's Epic is a Devastating American
+  Crime Story
 slug: killers-of-the-flower-moon-review
 category: reviews
 subcategory: movie-reviews
 author: editorial-team
-date: '2026-06-26T16:00:00.000Z'
+date: '2026-06-27T05:48:50.821Z'
 dek: >-
-  Martin Scorsese's three-and-a-half-hour epic is a morally complex and visually
-  stunning reckoning with a horrific chapter of American history, anchored by a
-  historic performance from Lily Gladstone.
-metaTitle: Killers of the Flower Moon Review - Scorsese's Epic Crime Drama
+  Martin Scorsese’s three-and-a-half-hour true crime epic, starring Leonardo
+  DiCaprio and a phenomenal Lily Gladstone, is a monumental and gut-wrenching
+  chronicle of greed and betrayal.
+metaTitle: 'Killers of the Flower Moon Review: Scorsese''s Masterful Epic'
 metaDescription: >-
-  Our Killers of the Flower Moon review examines Martin Scorsese's epic crime
-  drama. It's a devastating masterpiece of historical storytelling with
-  Oscar-nominated performances.
+  Our Killers of the Flower Moon review: Scorsese's epic crime drama, starring
+  DiCaprio and Gladstone, is a devastating masterpiece about American greed and
+  Indigenous tragedy.
 tags:
   - martin scorsese
-  - lily gladstone
   - leonardo dicaprio
-  - historical drama
-  - crime
+  - lily gladstone
+  - true crime
+  - epic
 targetKeyword: killers of the flower moon review
 keyTakeaways:
   - >-
-    Lily Gladstone delivers a historic, Oscar-nominated performance as Mollie
-    Kyle, the film's quiet, devastating heart.
+    Lily Gladstone delivers a career-defining, Oscar-nominated performance that
+    anchors the entire film with quiet, devastating power.
   - >-
-    Scorsese shifts focus from a detective procedural to a morally complex love
-    story, creating a more profound indictment of systemic evil.
+    Scorsese shifts focus from a police procedural to a chilling love story,
+    creating a more intimate and morally complex narrative.
   - >-
-    The film's epic 206-minute runtime is justified by its meticulous build of
-    dread and its sobering historical reckoning.
+    The epic 206-minute runtime is justified by its deliberate, novelistic
+    pacing, though it demands significant audience patience.
   - >-
-    Despite a massive budget, the film was a box office disappointment but
-    stands as a critical and artistic triumph.
-  - >-
-    The final, meta-textual coda is a bold, unforgettable statement on
-    storytelling and historical responsibility.
+    The film is a financial failure but a critical triumph, praised for its
+    historical accuracy and powerful condemnation of systemic evil.
 faq:
   - q: Is Killers of the Flower Moon based on a true story?
     a: >-
-      Yes, it is directly based on David Grann's 2017 nonfiction book of the
-      same name, which documented the real-life Osage Indian murders of the
-      1920s, a series of killings targeting wealthy Osage Nation members for
-      their oil rights.
+      Yes. It is based on David Grann's 2017 nonfiction book of the same name,
+      which details the systematic murders of wealthy Osage Nation members in
+      1920s Oklahoma for their oil rights, a period known as the 'Reign of
+      Terror.'
   - q: How long is Killers of the Flower Moon?
     a: >-
-      The film has a runtime of 3 hours and 26 minutes (206 minutes), making it
-      one of Martin Scorsese's longest feature films. Its epic length allows for
-      a detailed, immersive portrayal of the complex historical events and
-      relationships.
-  - q: Did Killers of the Flower Moon win any Oscars?
+      The film has a runtime of 3 hours and 26 minutes (206 minutes). Its length
+      has been a point of discussion, though Scorsese and editor Thelma
+      Schoonmaker have defended it as necessary for the story's novelistic
+      scope.
+  - q: Who plays the main Osage character Mollie Kyle?
     a: >-
-      While the film was nominated for ten Academy Awards, including Best
-      Picture, Best Director, and Best Actress for Lily Gladstone, it did not
-      win in any category during the 96th Academy Awards ceremony.
-  - q: Who plays Mollie Kyle in Killers of the Flower Moon?
+      Lily Gladstone, an actress of Piegan Blackfeet and Nez Perce heritage,
+      gives a celebrated, Oscar-nominated performance as Mollie Burkhart (née
+      Kyle). Her portrayal is widely considered the emotional core of the film.
+  - q: Did the Osage Nation work on the film?
     a: >-
-      Mollie Kyle is portrayed by Lily Gladstone, whose performance earned her
-      the Golden Globe Award for Best Actress and an Academy Award nomination,
-      making her the first Native American nominee in the Best Actress category.
-  - q: Where was Killers of the Flower Moon filmed?
-    a: >-
-      Principal photography took place entirely in Oklahoma, primarily in Osage
-      County and Washington County, including locations in Pawhuska, Fairfax,
-      and Bartlesville. The production worked closely with the Osage Nation
-      throughout filming.
-  - q: Why did Scorsese change the story from the book?
-    a: >-
-      Scorsese initially adapted the book as an FBI procedural but, after
-      consulting with the Osage Nation, shifted focus to the love story between
-      Ernest Burkhart and Mollie Kyle. He felt this perspective offered a
-      deeper, more morally complex indictment of the systemic evil at play.
+      Extensively. Scorsese consulted with the Osage Nation throughout
+      production. Over 40 Osage actors were cast, hundreds were extras, and
+      cultural advisors were embedded in the crew to ensure historical and
+      cultural accuracy, particularly with language and customs.
 about:
   - name: Killers of the Flower Moon
     type: Movie
-    sameAs: 'https://en.wikipedia.org/wiki/Killers_of_the_Flower_Moon_(film)'
+    sameAs: 'https://en.wikipedia.org/wiki/Killers_of_the_Flower_Moon'
 imageAlt: >-
-  Lily Gladstone — Killers of the Flower Moon Review: Scorsese's Epic Is a
-  Devastating Masterpiece
+  Lily Gladstone — Killers of the Flower Moon Review: Scorsese's Epic is a
+  Devastating American Crime Story
 imageCredit: Frank Sun / Wikimedia Commons / CC BY-SA 4.0
 image: /images/articles/killers-of-the-flower-moon-review.jpg
 imageWidth: 1920
 imageHeight: 2961
 formatTag: review
 verdict: >-
-  A monumental, morally rigorous epic and one of Scorsese's most essential
-  later-career works.
+  A devastating, masterfully crafted epic that is one of Scorsese's most morally
+  urgent and emotionally powerful films.
 rating:
   score: 9
   max: 10
   label: Masterpiece
 prosCons:
   pros:
-    - 'Lily Gladstone''s historic, Oscar-nominated performance'
-    - Scorsese's bold narrative shift and masterful direction
-    - 'Stunning, evocative cinematography and period detail'
-    - A morally complex and devastatingly powerful story
+    - 'Lily Gladstone''s phenomenal, Oscar-worthy lead performance'
+    - 'Scorsese''s confident, patient direction and masterful craft'
+    - A morally complex narrative that avoids simple heroes
+    - Immersive historical detail and respectful Osage collaboration
   cons:
-    - Extreme length may challenge some viewers
-    - 'Pacing is deliberately slow, focusing on dread over action'
-    - Box office performance was a significant financial loss
+    - The 3.5-hour runtime demands significant patience
+    - The deliberate pacing may feel slow to some viewers
+    - Shifts tonal focus away from a traditional investigative thriller
 infoCard:
   director: Martin Scorsese
   cast:
     - Leonardo DiCaprio
-    - Lily Gladstone
     - Robert De Niro
+    - Lily Gladstone
     - Jesse Plemons
   releaseYear: '2023'
-  runtime: 3h 26m
+  runtime: 206 minutes
   rated: R
   genre: 'Crime, Drama, History'
 ---
 
-**Martin Scorsese's *Killers of the Flower Moon* is not just a great film; it is a necessary and devastating epic that redefines the historical crime drama.** By shifting the narrative focus from the FBI investigators to the Osage victims and their treacherous white neighbors, Scorsese crafts a three-and-a-half-hour indictment of greed and systemic evil that is as morally complex as it is visually stunning. Anchored by a career-best performance from Leonardo DiCaprio and a historic, Golden Globe-winning turn from Lily Gladstone, this is a monumental work from a master filmmaker confronting a dark chapter of American history with unflinching clarity.
+Martin Scorsese’s *Killers of the Flower Moon* is a monumental, harrowing, and essential American epic that uses its immense runtime to dissect a foundational sin with unflinching moral clarity.
 
-The film’s genius lies in its deliberate narrative pivot. Initially conceived as a detective procedural following Bureau of Investigation agent Tom White (a superb Jesse Plemons), Scorsese and co-writer Eric Roth overhauled the script after consulting with the Osage Nation. They realized the deeper, more unsettling story was not in the solving of the crimes, but in their execution and the intimate betrayals that enabled them. The result is a story centered on the marriage between the simple-minded, easily manipulated Ernest Burkhart (DiCaprio) and the dignified, diabetic Osage woman Mollie Kyle (Gladstone), a union orchestrated by his scheming uncle, the monstrously charismatic “King” Hale (Robert De Niro).
+Scorsese and co-writer Eric Roth initially drafted a script centered on the FBI investigation, a more straightforward procedural. Leonardo DiCaprio, originally cast as Agent Tom White, pushed for a seismic shift. After meeting with the Osage Nation, Scorsese realized the true story’s heart lay not in the lawmen who arrived late, but in the corrosive, intimate evil within the community. The film became a story about a marriage—the union of the weak-willed Ernest Burkhart (DiCaprio) and the resilient Osage woman Mollie Kyle (Lily Gladstone)—poisoned from within by the greed of his uncle, the monstrously charming cattle baron William King Hale (Robert De Niro). This choice transforms the film from a mystery into a tragedy of Shakespearean proportions, where the audience knows the killers from the start and watches, horrified, as the trap slowly closes.
 
-## Why Is Lily Gladstone’s Performance So Historic?
+## Why is Lily Gladstone’s performance so celebrated?
 
-**Lily Gladstone’s portrayal of Mollie Kyle is the film’s quiet, powerful nucleus, a performance of profound restraint and tragic force.** She communicates volumes through subtle glances, a weary posture, and a smile that slowly dims as the poison of betrayal seeps into her life and her body. Her work transcends the screen, embodying the resilience and targeted suffering of the Osage people. It’s no wonder her performance made her the first Native American actress to win the Golden Globe for Best Actress and receive an Academy Award nomination in the category. Her scenes with DiCaprio, particularly as her trust curdles into horrified comprehension, are among the most emotionally potent in Scorsese’s entire filmography.
+Her work is the film’s soul. As Mollie, Gladstone communicates volumes through stillness, a wary gaze, and subtle shifts in posture. She portrays a woman navigating immense wealth, systemic racism, and profound personal loss with a dignified resilience that makes her eventual betrayal all the more heartbreaking. In a film filled with loud, performative evil, her quiet suffering resonates the loudest. This performance rightly earned her a Golden Globe win and made her the first Native American nominee for the Academy Award for Best Actress. Her chemistry with DiCaprio is unnervingly believable, which is the film’s central, tragic mechanism. You must believe in their love for the horror to fully land.
 
-Gladstone’s casting was a crucial result of the production’s deep collaboration with the Osage Nation. Scorsese and the casting team sought a Native American actress for the role, and Gladstone won the part after a Zoom call where she and Scorsese discussed their shared Catholic backgrounds. Her performance is informed by this consultation, bringing authentic cultural specificity and gravity to every moment. For more on her groundbreaking career, explore our piece on Lily Gladstone's rise.
+DiCaprio fully commits to Ernest’s pathetic, conflicted nature. He’s a man so morally vacant he can profess love with one breath and plot murder with the next. Robert De Niro delivers one of his most chilling Scorsese turns as King Hale, a villain who cloaks his genocidal avarice in the language of friendship and Christian charity. The supporting cast, filled with talented Native actors like Tantoo Cardinal and Cara Jade Myers, provides crucial texture and humanity to the Osage community Scorsese painstakingly recreates.
 
-## Does the Film’s Epic Length Justify Itself?
+## A master director working at the peak of his powers
 
-**At 206 minutes, *Killers of the Flower Moon* is a demanding, immersive experience, but its runtime is essential to its methodical, dread-filled purpose.** This is not a brisk thriller; it is a slow-burn tragedy that allows the scale of the conspiracy—the relentless, casual murder of Mollie’s family and other wealthy Osage for their oil “headrights”—to sink in with horrifying weight. Cinematographer Rodrigo Prieto’s visuals evolve from golden-hued vistas of oil wealth to the stark, chilling contrast of the final act, mirroring the narrative’s descent into darkness. The deliberate pacing forces the audience to sit with the horror, making the emotional impact inescapable.
+Scorsese’s direction is patient and assured. With cinematographer Rodrigo Prieto, he captures the Oklahoma landscape in all its stark beauty, the oil derricks standing like metallic grave markers on the prairie. The period detail is immersive, from the elaborate Osage clothing to the clattering Model Ts. Editor Thelma Schoonmaker masterfully controls the grim, escalating rhythm, letting scenes of domestic life sit alongside acts of shocking violence. The late Robbie Robertson’s percussive, blues-inflected score provides a relentless, anxious heartbeat.
 
-The film’s scale was unprecedented for Oklahoma, where it was shot. With a budget reported between $200 and $215 million, it was the most expensive film ever shot in the state. While this resulted in impeccable period detail and a vast canvas, it also contributed to the film's status as a box office failure, grossing $158 million worldwide against its massive cost. Yet, as a piece of art and historical reckoning, its ambition is its strength. The length allows for a rich tapestry of characters and a thorough exploration of the community’s destruction.
+The film’s 206-minute length is its most debated aspect. It is long, and its pace is deliberate, mirroring the slow, insidious nature of the conspiracy. Some may find sections demanding. Yet the cumulative power is staggering. This isn’t a thriller about *who*dunit, but a horror about *how* and *why* it was allowed to happen. The final act, where the Bureau of Investigation finally arrives, feels almost like an epilogue to the main event—the systematic erasure of a people.
 
-## What Makes the Ending So Unforgettable?
+The film’s **most brilliant and controversial choice** is its coda. Scorsese himself appears in a radio play epilogue that directly confronts the way Hollywood has historically turned Native suffering into entertainment. It’s a bold, meta-textual moment that forces the audience to reckon with their own role as spectators to this tragedy. It’s a reminder that this story, and thousands like it, were buried for decades.
 
-**The film’s final act contains one of Scorsese’s most audacious and self-reflective moments, a coda that reframes the entire story.** After depicting the arrests and trials, the film jumps forward in time to a 1930s radio broadcast recreating the Osage murders as entertainment. Scorsese himself appears on screen, delivering a eulogy for Mollie Kyle. This breaking of the fourth wall is a masterstroke. It directly confronts the act of storytelling itself, questioning how history is packaged, who gets to tell it, and the responsibility of the artist. It’s a poignant reminder that these events were real, their victims were real, and reducing them to mere plot is another form of erasure.
+Financially, the film was a loss for its backers Apple and Paramount, failing to recoup its massive budget. Artistically, it is a towering achievement. It was met with widespread critical acclaim, scoring a 93% on Rotten Tomatoes and ten Oscar nominations, including Best Picture. It stands as a late-career masterpiece for Scorsese, a grim companion piece to *The Irishman* in its meditation on corruption, complicity, and time’s relentless march.
 
-This ending was carefully conceived to avoid the trap of turning tragedy into entertainment. Scorsese and Roth considered various conclusions, including a pastiche of a 1950s Hollywood film, before landing on the radio play format. It serves as a sobering punctuation mark, ensuring the audience leaves not with the catharsis of a mystery solved, but with the lingering weight of historical atrocity. It’s a testament to Scorsese’s enduring creative power that, in his eighth decade, he is still finding bold new ways to challenge his audience.
+## Where does it rank among Scorsese’s films?
 
-## How Does It Compare to Other Scorsese Films?
+*Killers of the Flower Moon* belongs in the upper echelon of Scorsese’s filmography. It lacks the propulsive energy of *Goodfellas* or *The Wolf of Wall Street*, but replaces it with a heavier, more sorrowful gravity. Its closest relative is perhaps *Silence*, another epic about faith under siege. It is a film of immense formal control and profound moral anger, a history lesson that feels terrifyingly present. It is not an easy watch, but it is an indispensable one.
 
-**While it shares DNA with Scorsese’s crime epics like *Goodfellas* and *The Irishman* in its exploration of corruption and male loyalty, *Killers of the Flower Moon* is a distinct evolution.** Here, the criminal enterprise is not a glamorous underworld but a pillar of the mainstream, sanctioned by law enforcement, the judiciary, and societal racism. The violence is less frenetic and more insidious—a poisoning, a bombing, a staged suicide—emphasizing the cold, calculated nature of the genocide. The film also represents a landmark in his collaborations, being the sixth feature with Leonardo DiCaprio and the tenth with Robert De Niro, who delivers one of his most chillingly benevolent villains. For context on their legendary partnership, read our analysis of Scorsese and DiCaprio's collaborations.
-
-The film’s critical reception was overwhelmingly positive, earning a 93% score on Rotten Tomatoes and ten Academy Award nominations, including Best Picture. Yet, its true legacy may be in its cultural impact: bringing the horrific story of the Osage Reign of Terror to a global mainstream audience with respect, artistry, and moral gravity. It is a demanding, essential, and ultimately monumental achievement.
+For more on Scorsese’s legendary career, explore our guide to his greatest films. The film is now available to stream on Apple TV+.
 
 ## Sources
-- [Killers of the Flower Moon on Wikipedia](https://en.wikipedia.org/wiki/Killers_of_the_Flower_Moon_(film))
-- [Killers of the Flower Moon on Box Office Mojo](https://www.boxofficemojo.com/title/tt5537002/)
-- [Killers of the Flower Moon on Rotten Tomatoes](https://www.rottentomatoes.com/m/killers_of_the_flower_moon)
-- [Academy Awards Database](https://www.oscars.org/oscars/ceremonies/2024)
+- [Killers of the Flower Moon - Wikipedia](https://en.wikipedia.org/wiki/Killers_of_the_Flower_Moon)
+- [Rotten Tomatoes](https://www.rottentomatoes.com/)
+- [Box Office Mojo](https://www.boxofficemojo.com/)

@@ -1,0 +1,62 @@
+{
+  "id": "superman-trailer",
+  "slug": "superman-2025-trailer-everything-to-know",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": 84,
+      "cat": "movies/trailers",
+      "img": "/images/articles/superman-2025-trailer-everything-to-know.jpg",
+      "hardBlocks": []
+    }
+  },
+  "scorecard": {
+    "score": 84,
+    "subscores": {
+      "accuracy": 9,
+      "curiosity": 9,
+      "readability": 9,
+      "structure": 9,
+      "infoGain": 8,
+      "seo": 8,
+      "faqQuality": 9,
+      "voice": 8,
+      "engagement": 8,
+      "completeness": 9
+    },
+    "strengths": [
+      "Strong BLUF lead that delivers the answer immediately and aligns with the verified synopsis (reconciling Kryptonian heritage with human upbringing).",
+      "Excellent structure: multiple question-based H2s, Key Takeaways, scannable short paragraphs with bolded key phrases.",
+      "Six well-formed PAA-style FAQs that answer real reader questions without padding.",
+      "Information gain via framing (reboot vs Cavill, All-Star Superman influence, Chapter One: Gods and Monsters) rather than dry summary.",
+      "No fabricated trailer descriptions — correctly avoided describing specific shots/dialogue/runtime."
+    ],
+    "weaknesses": [
+      "Several specific claims (25-year-old Superman, Corenswet also playing Ultraman, Krypto modeled on Gunn's dog Ozu, dog actor Jolene, Maxwell Lord sponsoring the Justice Gang, July 7 TCL premiere, Wendell Pierce as Perry White, Skyler Gisondo as Jimmy Olsen) go beyond the supplied reference facts; while plausible and widely reported, they are unverifiable within the given grounding and slightly elevate fabrication risk.",
+      "The 'embodiment of truth, justice and the American way' phrasing is presented as a direct descriptor/near-quote without attribution.",
+      "Sources are mostly the same Wikipedia entity plus generic aggregator/official pages; only one truly authoritative external source — weak on >=3 diverse authoritative externals.",
+      "No internal links present despite rubric expectation.",
+      "Meta description (dek) is solid but could more aggressively front-load the primary keyword 'superman trailer'.",
+      "Headline is strong but 'Hopeful Reboot' edges toward editorializing rather than a single concrete claim."
+    ],
+    "deterministic": {
+      "words": 628,
+      "h2s": 6,
+      "h2Questions": 5,
+      "internalLinks": 0,
+      "externalLinks": 4,
+      "hasSources": true,
+      "faqCount": 6,
+      "ktCount": 5,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "hardBlocks": []
+    },
+    "hardBlocks": []
+  },
+  "score": 84,
+  "category": "movies",
+  "subcategory": "trailers",
+  "ms": 96532
+}

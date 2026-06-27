@@ -26,12 +26,15 @@ function validPaths() {
 
 export function assemble({ article, classification, image, topic, dateISO }) {
   const valid = validPaths();
-  let body = article.body || "";
   // Keep internal links that resolve to a real page; otherwise drop the link, keep the text.
-  body = body.replace(/\[([^\]]+)\]\((\/[^)]*)\)/g, (m, txt, href) => {
-    const norm = href.endsWith("/") ? href : href + "/";
-    return valid.has(norm) ? `[${txt}](${norm})` : txt;
-  });
+  const fixLinks = (s) =>
+    typeof s === "string"
+      ? s.replace(/\[([^\]]+)\]\((\/[^)]*)\)/g, (m, txt, href) => {
+          const norm = href.endsWith("/") ? href : href + "/";
+          return valid.has(norm) ? `[${txt}](${norm})` : txt;
+        })
+      : s;
+  let body = fixLinks(article.body || "");
 
   const slug = topic.slug || slugify(article.title);
   const imageAlt = (
@@ -51,7 +54,7 @@ export function assemble({ article, classification, image, topic, dateISO }) {
     tags: classification.tags?.length ? classification.tags : article.tags || [],
     targetKeyword: topic.primaryKeyword,
     keyTakeaways: article.keyTakeaways || [],
-    faq: (article.faq || []).filter((f) => f && f.q && f.a),
+    faq: (article.faq || []).filter((f) => f && f.q && f.a).map((f) => ({ ...f, a: fixLinks(f.a) })),
     about: Array.isArray(article.about) ? article.about.filter((e) => e && e.name && e.type) : [],
     imageAlt,
     imageCredit: image?.credit || "Wikimedia Commons",
@@ -70,7 +73,10 @@ export function assemble({ article, classification, image, topic, dateISO }) {
           ? Object.fromEntries(Object.entries(v).map(([kk, x]) => [kk, stripMd(x)]))
           : v;
   // merge the per-niche structured fields the generator produced (only when present)
-  for (const k of ["verdict", "rating", "prosCons", "infoCard", "entries", "tldr", "spoiler", "factPanel", "filmography", "whereToWatch"]) {
+  for (const k of ["verdict", "rating", "prosCons", "infoCard", "entries", "tldr", "spoiler", "factPanel", "filmography", "whereToWatch",
+    "youtubeId", "releaseInfo", "keyMoments", "sourceOutlet", "sourceUrl", "pullQuotes", "tweetIds", "instagramUrls", "consensus",
+    "newsType", "pullQuote", "boxOffice", "records",
+    "awardsType", "awardShow", "awardCategories", "awardRecords"]) {
     let v = article[k];
     if (v == null) continue;
     if (Array.isArray(v) && v.length === 0) continue;

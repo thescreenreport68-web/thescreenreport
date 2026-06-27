@@ -155,6 +155,20 @@ export default function ArticlePage({
       name: e.name,
       ...(e.sameAs ? { sameAs: e.sameAs } : {}),
     })),
+    // Awards ceremony: supplementary Event schema (NewsArticle stays primary; no offers/ticketing).
+    article.awardShow?.show
+      ? {
+          "@context": "https://schema.org",
+          "@type": "Event",
+          name: article.awardShow.show,
+          eventStatus: "https://schema.org/EventScheduled",
+          eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+          ...(article.awardShow.dateISO ? { startDate: article.awardShow.dateISO } : {}),
+          ...(article.awardShow.venue
+            ? { location: { "@type": "Place", name: article.awardShow.venue } }
+            : {}),
+        }
+      : null,
   ].filter(Boolean) as object[];
 
   return (
@@ -174,6 +188,13 @@ export default function ArticlePage({
               { href: `/${article.category}/`, label: cat?.name ?? "" },
             ]}
           />
+          {article.formatTag === "news" ? (
+            <div className="mt-2 inline-block bg-breaking px-2.5 py-1 font-sans text-[11px] font-bold uppercase tracking-[0.14em] text-white">
+              {article.newsType && article.newsType !== "general"
+                ? article.newsType.replace(/-/g, " ")
+                : `${cat?.name ?? ""} News`}
+            </div>
+          ) : null}
           <h1 className="mt-1 font-display text-4xl font-bold leading-[0.95] tracking-tight text-navy sm:text-5xl lg:text-[3.4rem] xl:text-[4rem]">
             {article.title}
           </h1>
