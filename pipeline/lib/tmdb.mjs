@@ -226,3 +226,37 @@ export function toWhereToWatch(list) {
     return { title: w.title, platform: "Not on major US streaming", type: "", year: w.year };
   });
 }
+
+// ── PEOPLE (profiles) — the authoritative, dated, role-by-role filmography so the writer NEVER invents
+// a credit/year/role. TMDB person endpoints are free + structured (the gap that caused profile fabrication).
+export async function searchPerson(name) {
+  const j = await tmdb(`/search/person?query=${encodeURIComponent(name)}&include_adult=false`);
+  const p = (j?.results || []).filter((x) => x.known_for_department === "Acting" || x.known_for_department === "Directing")[0] || j?.results?.[0];
+  return p ? { id: p.id, name: p.name } : null;
+}
+
+// Returns a clean, deduped, release-ordered list of MAJOR credits {year, title, character, type}.
+export async function getPersonCredits(id, max = 18) {
+  const [j, ext] = await Promise.all([tmdb(`/person/${id}/combined_credits`), tmdb(`/person/${id}/external_ids`)]);
+  const cast = (j?.cast || [])
+    .filter((c) => (c.title || c.name) && (c.release_date || c.first_air_date))
+    .filter((c) => (c.vote_count || 0) >= 20 || (c.popularity || 0) >= 5) // drop obscure/uncredited noise
+    .map((c) => ({
+      title: c.title || c.name,
+      year: (c.release_date || c.first_air_date || "").slice(0, 4),
+      character: (c.character || "").replace(/\s*\(.*?\)\s*/g, "").trim(),
+      type: c.media_type === "tv" ? "TV" : "Film",
+      pop: c.popularity || 0,
+    }));
+  // dedup by title+year, keep the most popular, then sort newest-first
+  const seen = new Map();
+  for (const c of cast) { const k = `${c.title}|${c.year}`; if (!seen.has(k) || seen.get(k).pop < c.pop) seen.set(k, c); }
+  const credits = [...seen.values()].sort((a, b) => (b.year || "").localeCompare(a.year || "")).slice(0, max);
+  return { credits, wikidata: ext?.wikidata_id || null, imdb: ext?.imdb_id || null };
+}
+
+export function personFactBlock(name, credits) {
+  if (!credits?.length) return "";
+  const rows = credits.map((c) => `${c.year || "—"} — ${c.title} (${c.type})${c.character ? ` as ${c.character}` : ""}`);
+  return `${name} — VERIFIED FILMOGRAPHY (TMDB, structured; use ONLY these credits/years/roles — do NOT add any film/role/year not in this list):\n${rows.join("\n")}`;
+}

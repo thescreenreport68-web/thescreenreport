@@ -4,13 +4,14 @@
 import fs from "node:fs";
 import path from "node:path";
 import { MODELS } from "./config.mjs";
-import { gatherFacts, wikiSection } from "./lib/wikipedia.mjs";
+import { gatherFacts, wikiSection, wikiSummary } from "./lib/wikipedia.mjs";
+import { wikidataFacts, wikidataFactBlock } from "./lib/wikidata.mjs";
 import { generate } from "./stages/generate.mjs";
 import { classify } from "./stages/classify.mjs";
 import { sourceImage, downloadImage } from "./stages/image.mjs";
 import { gate } from "./stages/gate.mjs";
 import { assemble } from "./stages/assemble.mjs";
-import { getWhereToWatch, factBlock, toWhereToWatch, discoverTop, discoverFactBlock, getTrailer, trailerFactBlock, getBoxOffice, boxOfficeFactBlock } from "./lib/tmdb.mjs";
+import { getWhereToWatch, factBlock, toWhereToWatch, discoverTop, discoverFactBlock, getTrailer, trailerFactBlock, getBoxOffice, boxOfficeFactBlock, searchPerson, getPersonCredits, personFactBlock } from "./lib/tmdb.mjs";
 import { cacheTweets, reactionFactBlock } from "./lib/tweets.mjs";
 import { searchInterview, fetchTranscript, oEmbed, interviewFactBlock } from "./lib/youtube.mjs";
 import { costReport } from "./lib/openrouter.mjs";
@@ -58,6 +59,9 @@ for (let i = 0; i < topics.length; i++) {
     console.log(`\n=== [${i + 1}/${topics.length}] ${topic.title} ===`);
     topic.facts = await gatherFacts([topic.primaryEntity, ...(topic.entities || [])].filter(Boolean));
     console.log(`  facts: ${topic.facts.length} blocks`);
+    // Give the writer the REAL current month so streaming "as of …" is dated, not a placeholder/guess.
+    const NOW_LABEL = new Date(BASE).toLocaleDateString("en-US", { month: "long", year: "numeric", timeZone: "UTC" });
+    topic.facts.push({ title: "CURRENT DATE", extract: `Today is ${NOW_LABEL}. Any "as of" availability phrasing must read exactly "as of ${NOW_LABEL}". Never invent a different month/year.` });
 
     // FIND v2 breaking news: the EVENT isn't on Wikipedia yet (Wikipedia gave us the ENTITY identity only).
     // Ground the writer on the corroborated SOURCE facts + the verification label, so it re-reports the
@@ -124,6 +128,28 @@ for (let i = 0; i < topics.length; i++) {
       if (awSec) { topic.facts.push({ title: "WIKIPEDIA WINNERS & NOMINEES (verified — use ONLY these winners; never invent a winner/nominee/record)", extract: awSec }); console.log(`  wiki winners section: ${awSec.length} chars`); }
     }
 
+    // PROFILE niche: hand the writer a REAL dated filmography (TMDB) + verified award wins/noms (Wikidata)
+    // so it narrates a real career instead of inventing credits/years/roles. (FIX-1 root-cause fix.)
+    let personCredits = null;
+    if (topic.formatTag === "profile") {
+      const person = await searchPerson(topic.primaryEntity);
+      if (person) {
+        const pc = await getPersonCredits(person.id, 18);
+        personCredits = pc.credits;
+        if (pc.credits?.length) { topic.facts.push({ title: "VERIFIED FILMOGRAPHY (TMDB)", extract: personFactBlock(topic.primaryEntity, pc.credits) }); console.log(`  TMDB filmography: ${pc.credits.length} credits`); }
+        const f = await wikidataFacts(pc.wikidata || (await wikiSummary(topic.primaryEntity))?.wikidata);
+        const fb = wikidataFactBlock(f);
+        if (fb) { topic.facts.push({ title: "AUTHORITATIVE AWARDS & FACTS (Wikidata — WON vs NOMINATED is exact; never call a nomination a win)", extract: fb }); console.log(`  Wikidata: ${f.wins.length} wins, ${f.nominations.length} noms`); }
+      }
+    }
+
+    // Reviews / lists / guides that may cite RT/Metacritic: ground the real Reception scores so the writer
+    // never invents a "%". (FIX-1 A3 — closes the RT-score fabrication hole.)
+    if (["review", "list", "guide"].includes(topic.formatTag)) {
+      const rec = await wikiSection(topic.primaryEntity, ["Reception", "Critical response", "Critical reception"]);
+      if (rec) { topic.facts.push({ title: "CRITICAL RECEPTION (Wikipedia — use ONLY these RT/Metacritic scores; if none here, speak qualitatively, never invent a %)", extract: rec.slice(0, 4000) }); console.log(`  wiki reception: ${rec.length} chars`); }
+    }
+
     // Interview niche: pull the official video's TRANSCRIPT (yt-dlp, subs only) to ground an ORIGINAL summary.
     let interview = null;
     if (topic.formatTag === "interview") {
@@ -165,14 +191,16 @@ for (let i = 0; i < topics.length; i++) {
       }
     }
 
-    let article, classification, image, scored, src, pass = false;
-    for (let attempt = 1; attempt <= 2 && !pass; attempt++) {
-      ({ article } = await generate({ topic, model: MODELS.generator }));
+    let article, classification, image, scored, src, pass = false, corrections = null;
+    for (let attempt = 1; attempt <= 3 && !pass; attempt++) {
+      ({ article } = await generate({ topic, model: MODELS.generator, corrections }));
       if (wtw?.length) article.whereToWatch = toWhereToWatch(wtw); // accurate table straight from TMDB
       if (trailer?.youtubeId) { article.youtubeId = trailer.youtubeId; article.releaseInfo = fmtRelease(trailer.releaseDate); }
       if (reactionTweets?.ids?.length) { article.tweetIds = reactionTweets.ids; if (topic.instagramUrls?.length) article.instagramUrls = topic.instagramUrls; }
       if (interview) { article.youtubeId = interview.youtubeId; article.sourceOutlet = interview.sourceOutlet; article.sourceUrl = interview.sourceUrl; }
       if (boxoffice?.worldwide) { article.boxOffice = { ...(article.boxOffice || {}), worldwide: boxoffice.worldwide, budget: boxoffice.budget }; }
+      // PROFILE: overwrite the model's filmography with the VERIFIED TMDB one (never trust an invented credit list).
+      if (personCredits?.length) article.filmography = personCredits.map((c) => ({ year: c.year, title: c.title, role: c.character, type: c.type }));
       classification = await classify({ article, topic, model: MODELS.classifier });
       // FIND/coverage topics already have an AUTHORITATIVE category/subcategory/formatTag (from categorize
       // or coverage targeting) — respect it so classify can't scramble the per-subcategory coverage.
@@ -194,9 +222,19 @@ for (let i = 0; i < topics.length; i++) {
       // Embed niches must carry their defining embed, or the page is an empty promise — route to review.
       if ((topic.formatTag === "trailer" || topic.formatTag === "interview") && !article.youtubeId) scored.hardBlocks.push(`${topic.formatTag}: no embedded video`);
       if (topic.formatTag === "reaction" && !(article.tweetIds?.length || article.instagramUrls?.length)) scored.hardBlocks.push("reaction: no embedded posts");
-      pass = scored.score >= 80 && scored.hardBlocks.length === 0;
-      rec.stages[`attempt${attempt}`] = { score: scored.score, cat: `${classification.category}/${classification.subcategory}`, img: image?.image || null, hardBlocks: scored.hardBlocks };
-      console.log(`  attempt ${attempt}: score ${scored.score} [${classification.category}/${classification.subcategory}] img:${image ? "yes" : "NO"} ${pass ? "PASS ✅" : "blocks:" + JSON.stringify(scored.hardBlocks)}`);
+      pass = (scored.score || 0) >= 80 && scored.hardBlocks.length === 0;
+      // SELF-CORRECTION LOOP: feed the writer ALL feedback (structural blocks + per-claim corrections) so
+      // each retry fixes everything known while keeping the engaging voice (owner mandate). Cumulative =
+      // converges in fewer paid generations.
+      const cc = scored.claimCheck;
+      corrections = !pass
+        ? [
+            scored.hardBlocks?.length ? "Issues to fix from your last draft (keep the voice + engagement intact): " + scored.hardBlocks.join("; ") : "",
+            cc?.corrections || "",
+          ].filter(Boolean).join("\n").trim() || null
+        : null;
+      rec.stages[`attempt${attempt}`] = { score: scored.score, cat: `${classification.category}/${classification.subcategory}`, img: image?.image || null, hardBlocks: scored.hardBlocks, badClaims: cc?.bad?.length || 0 };
+      console.log(`  attempt ${attempt}: score ${scored.score} [${classification.category}/${classification.subcategory}] img:${image ? "yes" : "NO"} claims:${cc ? `${(cc.verdicts || []).length - (cc.bad?.length || 0)}/${(cc.verdicts || []).length} ok` : "n/a"} ${pass ? "PASS ✅" : "blocks:" + JSON.stringify(scored.hardBlocks)}`);
     }
     rec.scorecard = { score: scored.score, subscores: scored.subscores, strengths: scored.strengths, weaknesses: scored.weaknesses, deterministic: scored.deterministic, hardBlocks: scored.hardBlocks };
     let auditBody = article.body, internalLinks = [];

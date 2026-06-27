@@ -7,7 +7,7 @@ NON-NEGOTIABLE RULES for every article:
 - HONEST CURIOSITY: the headline makes ONE specific, true, intriguing claim; the first 1-2 sentences DELIVER the core answer (no clickbait, no withholding). Then extend with depth and analysis.
 - STRUCTURE: an answer-first opening line; paragraphs of 2-3 sentences (~40-80 words, vary them). VARY sentence length deliberately — mix short 5-10 word punches with longer 20-30 word runs; NO sentence over 35 words (split a longer thought in two). Add subheads where the piece naturally turns (>=2 H2s; at least one a real reader question, the rest declarative, voice-y headings — never a verbatim search query). Bold at most one genuinely scannable phrase per section, and NEVER bold the keyword just to repeat it. Use lists or a table only where they genuinely help.
 - AUDIENCE-FIRST SUBHEADS: the H2 questions must be what a REAL FAN actually wonders or googles about THIS piece — not an inside-baseball critic's-essay outline. For a review: "Is it worth watching?", "What is it about?" (no spoilers), "Is it better than [the previous one]?", "Where can I watch it?", "Who's in it?". For a profile: "What else has she been in?", "What's her best movie?". For box office: "Did it make a profit?", "How does it compare to [rival]?". For an explainer: "What actually happened at the end?". Choose the subheads a fan is genuinely curious about, phrased in their words — not "How does the craft impress?".
-- LINK A CITED STAT TO ITS SOURCE: when you state a specific sourced statistic inline (a Rotten Tomatoes/Metacritic score, a box-office figure), you SHOULD hyperlink that figure to the source's HOMEPAGE for credibility — e.g. "earned a [98% on Rotten Tomatoes](https://www.rottentomatoes.com/)" or "[$367 million worldwide](https://www.boxofficemojo.com/)". (Still NEVER fabricate a deep-link tt-ID; homepage only unless an exact URL is in the facts.)
+- STATS COME ONLY FROM THE FACTS: state a precise number (a Rotten Tomatoes/Metacritic %, a box-office figure, an exact count, an award outcome, a date) ONLY if that exact value appears in the REFERENCE FACTS. If the facts don't contain a number, do NOT state one — speak qualitatively ("among the best-reviewed of the year"). When you DO cite a grounded stat, you may hyperlink it to the source's HOMEPAGE for credibility (homepage only, never a fabricated deep-link/tt-ID). An award the facts list under NOMINATIONS was NOT won — never call it "winning".
 - INFORMATION GAIN: include original framing — a ranking rationale, a verdict, a "why it matters", a clear POV — not a dry encyclopedia summary.
 - LINKS: cite >=2 authoritative, RELEVANT EXTERNAL primary sources inline and/or in a final "## Sources" list (quality + relevance over count). Internal links: only when a genuinely related, same-topic article plausibly exists — if you cannot name a real sibling article, add NO internal link rather than a forced or off-topic one (the system also auto-inserts verified internal links). NEVER link competitors (THR, Variety, Deadline, ScreenRant, Collider, IGN).
 - SAFE URLS ONLY (anti-broken-link): NEVER fabricate a deep-link ID you cannot know — do NOT construct boxofficemojo.com/title/tt..., imdb.com/title/tt..., or any URL with a specific numeric/hash ID. For Wikipedia, link the exact article URL given in the REFERENCE FACTS. For other sources (Box Office Mojo, Rotten Tomatoes, Oscars.org, a studio), link only the site's homepage (e.g. https://www.boxofficemojo.com/ or https://www.rottentomatoes.com/) unless an EXACT deep URL appears in the facts. A wrong deep link that resolves to a different film is a credibility failure.
@@ -115,7 +115,7 @@ function resolveNiche(topic) {
   return null;
 }
 
-export async function generate({ topic, model, maxTokens = 6000 }) {
+export async function generate({ topic, model, maxTokens = 6000, corrections = null }) {
   const niche = NICHE[resolveNiche(topic)] || null;
   const facts =
     (topic.facts || []).map((f) => `- ${f.title}: ${f.extract}`).join("\n") ||
@@ -143,10 +143,14 @@ Return JSON with EXACTLY these fields:
  "faq": [{"q":"a real follow-up question a reader would still have (NOT restating a fact already in the body)","a":"answer-first, 40-120 words"}],
  "about": [{"name":"Exact Film or Show Title","type":"Movie","sameAs":"https://en.wikipedia.org/wiki/..."}],
  "tags": ["5-8 lowercase relevant tags"],
- "imageQuery": "the single best real person to depict in the hero photo — a specific actor or director full name (for a real, legal photo)"${niche ? ",\n " + niche.fields : ""}
+ "imageQuery": "the single best real person to depict in the hero photo — a specific actor or director full name (for a real, legal photo)",
+ "claims": [{"text":"each CHECKABLE specific you assert anywhere in the article (body, takeaways, FAQ, or a structured field): a stat/%, a dollar/box-office figure, a date, an award WIN or NOMINATION, a streaming platform, a filmography credit (title+year+role), an exact quote, a precise count","sourceQuote":"the VERBATIM substring copied EXACTLY from the REFERENCE FACTS that proves it. If you cannot find a supporting substring in the facts, DO NOT make that claim — remove it or write it qualitatively. This is mandatory: every checkable specific MUST have a real receipt."}]${niche ? ",\n " + niche.fields : ""}
 }
 
-Requirements: faq has 3-4 entries that raise NEW follow-up questions (never restating a stat or fact already in the body); body has >=2 H2s (at least one a question) and a Sources section with >=3 external links; about lists the specific title(s) the piece is about (empty array only if truly none).`;
+Requirements: faq has 3-4 entries that raise NEW follow-up questions (never restating a stat or fact already in the body); body has >=2 H2s (at least one a question) and a Sources section with >=3 external links; about lists the specific title(s) the piece is about (empty array only if truly none).${corrections ? `
+
+⚠⚠ MANDATORY CORRECTION — your previous draft contained these FALSE or UNVERIFIED claims. Rewrite the WHOLE article, fixing ONLY these facts using the corrections below, and removing/qualifying anything you cannot ground. KEEP the voice, engagement, structure, headline energy and everything else exactly as strong — do NOT make it duller while fixing facts:
+${corrections}` : ""}`;
 
   // Generate with a one-shot retry if the output is incomplete (missing FAQ / too short / no takeaways).
   let last;

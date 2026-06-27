@@ -1,5 +1,6 @@
 import { chat } from "../lib/openrouter.mjs";
 import { GATE } from "../config.mjs";
+import { verifyClaims } from "../lib/claimcheck.mjs";
 
 // ---- Readability / human-voice helpers (free, deterministic) ----
 function plainProse(md) {
@@ -170,24 +171,37 @@ Return STRICT JSON:
 
 export async function gate({ article, topic, judgeModel }) {
   const det = deterministic(article, topic);
-  const j = await judge({ article, topic, model: judgeModel, metrics: det });
-  const hardBlocks = [...det.hardBlocks, ...(j.hardBlocks || [])];
-  const ss = j.subscores || {};
-  // Mandatory information-gain floor (spec rule): thin/derivative pieces must not publish.
-  if (typeof ss.infoGain === "number" && ss.infoGain < GATE.infoGainMin) {
-    hardBlocks.push(`infoGain ${ss.infoGain} < ${GATE.infoGainMin}`);
+  // Cost short-circuit: a structurally-broken draft routes to review/retry without paying the judge.
+  if (det.hardBlocks.length) {
+    return { score: 0, pass: false, subscores: {}, deterministic: det, hardBlocks: det.hardBlocks, claimCheck: { ok: true, corrections: "" }, strengths: [], weaknesses: ["deterministic block"] };
   }
-  // Reader-quality floors (anti over-SEO): a stiff, generic, or hard-to-read piece must not publish,
-  // however well "optimized" it is. These weight reader experience above mechanical SEO.
-  if (typeof ss.readability === "number" && ss.readability < 6) hardBlocks.push(`readability ${ss.readability} < 6`);
-  if (typeof ss.humanVoice === "number" && ss.humanVoice < 7) hardBlocks.push(`humanVoice ${ss.humanVoice} < 7`);
-  if (typeof ss.phrasing === "number" && ss.phrasing < 7) hardBlocks.push(`phrasing ${ss.phrasing} < 7`);
+
+  // FIX-2 — VERIFY EVERY CHECKABLE CLAIM against the grounding receipts (free). Unverified/contradicted
+  // claims block publish AND produce targeted corrections for the self-correction loop in run.mjs.
+  const cc = verifyClaims(article, topic);
+
+  const j = await judge({ article, topic, model: judgeModel, metrics: det });
+  const ss = j.subscores || {};
+  const hardBlocks = [...det.hardBlocks, ...(j.hardBlocks || [])];
+  if (cc.contradicted.length) hardBlocks.push(...cc.contradicted.map((v) => `fabricated: ${v.claim} — ${v.why}`));
+  if (cc.bad.length) hardBlocks.push(`${cc.bad.length} unverified claim(s) (need correction)`);
+
+  // FAIL-CLOSED accuracy floor (priority #1): a missing/low accuracy score blocks — never silently skip.
+  if (typeof ss.accuracy !== "number") hardBlocks.push("judge accuracy score missing — cannot verify accuracy");
+  else if (ss.accuracy < 8) hardBlocks.push(`accuracy ${ss.accuracy} < 8`);
+
+  if (typeof ss.infoGain !== "number" || ss.infoGain < GATE.infoGainMin) hardBlocks.push(`infoGain ${ss.infoGain ?? "missing"} < ${GATE.infoGainMin}`);
+  if (typeof ss.readability !== "number" || ss.readability < 6) hardBlocks.push(`readability ${ss.readability ?? "missing"} < 6`);
+  if (typeof ss.humanVoice !== "number" || ss.humanVoice < 7) hardBlocks.push(`humanVoice ${ss.humanVoice ?? "missing"} < 7`);
+  if (typeof ss.phrasing !== "number" || ss.phrasing < 7) hardBlocks.push(`phrasing ${ss.phrasing ?? "missing"} < 7`);
+
   return {
     score: j.score,
-    pass: j.score >= 80 && hardBlocks.length === 0,
+    pass: (j.score || 0) >= GATE.publishMin && hardBlocks.length === 0,
     subscores: j.subscores,
     deterministic: det,
     hardBlocks,
+    claimCheck: cc, // {bad, contradicted, corrections, verdicts} → drives the correction loop
     strengths: j.strengths,
     weaknesses: j.weaknesses,
   };
