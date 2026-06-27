@@ -1,0 +1,79 @@
+{
+  "id": "trailer-minions-monsters-movie-trailer",
+  "slug": "minions-monsters-trailer-drops-promises-wild-hollywood-origin-story",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": 88,
+      "cat": "movies/trailers",
+      "img": "/images/articles/minions-monsters-trailer-drops-promises-wild-hollywood-origin-story.jpg",
+      "hardBlocks": [
+        "a 54-word sentence (>45 — split it; unreadable)"
+      ]
+    },
+    "attempt2": {
+      "score": 88,
+      "cat": "movies/trailers",
+      "img": "/images/articles/minions-monsters-trailer-drops-promises-wild-hollywood-origin-story.jpg",
+      "hardBlocks": []
+    }
+  },
+  "scorecard": {
+    "score": 88,
+    "subscores": {
+      "accuracy": 10,
+      "readability": 9,
+      "humanVoice": 9,
+      "phrasing": 9,
+      "curiosity": 9,
+      "structure": 9,
+      "infoGain": 9,
+      "seo": 8,
+      "faqQuality": 9,
+      "completeness": 9
+    },
+    "strengths": [
+      "Excellent adherence to the reader-first standard, prioritizing engagement and clarity.",
+      "Strong human voice with specific details and engaging phrasing.",
+      "Clear structure with a strong lead, useful subheads, and Key Takeaways.",
+      "FAQ section provides genuinely new information and context.",
+      "Accurate and well-sourced information.",
+      "Good integration of SEO elements without over-optimization."
+    ],
+    "weaknesses": [
+      "The dek could be slightly more specific about the 'cinematic chaos' to pique immediate interest.",
+      "While good, the SEO score could be slightly higher with more internal links or a more robust meta description (though the current one is fine)."
+    ],
+    "deterministic": {
+      "words": 651,
+      "h2s": 5,
+      "h2Questions": 4,
+      "internalLinks": 2,
+      "externalLinks": 4,
+      "hasSources": true,
+      "faqCount": 4,
+      "ktCount": 5,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 42,
+      "avgSentence": 17,
+      "flesch": 51,
+      "bannedTells": 0,
+      "kwExact": 0,
+      "hardBlocks": []
+    },
+    "hardBlocks": []
+  },
+  "score": 88,
+  "category": "movies",
+  "subcategory": "trailers",
+  "audit": {
+    "ok": false,
+    "internalLinks": 1,
+    "failed": [
+      "keyword in title"
+    ]
+  },
+  "ms": 119088
+}

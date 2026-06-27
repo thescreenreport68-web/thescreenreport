@@ -59,10 +59,10 @@ export function deterministic(article, topic) {
   const PROFILE = {
     news: { words: 350, faq: 3, h2: 2, kt: 0, ext: 2, sources: false },
     // awards winners-list: the structured winners list is the bulk; the body is a lede + records narrative.
-    awards: { words: 300, faq: 3, h2: 1, kt: 3, ext: 3, sources: true },
+    awards: { words: 300, faq: 3, h2: 1, kt: 3, ext: 2, sources: true },
   };
   // Defaults RELAXED (anti over-SEO): FAQ 6->4 (Google removed FAQ rich results), H2 3->2, body 500->400.
-  const p = PROFILE[topic.formatTag] || { words: 400, faq: 4, h2: 2, kt: 3, ext: 3, sources: true };
+  const p = PROFILE[topic.formatTag] || { words: 400, faq: 4, h2: 2, kt: 3, ext: 2, sources: true };
 
   const hardBlocks = [];
   if (!article.title) hardBlocks.push("no title");
@@ -142,8 +142,14 @@ ${JSON.stringify({
     about: article.about,
   }).slice(0, 24000)}
 
-FABRICATION CHECK (do this FIRST, before scoring — be mechanical and strict):
-Go through the article and list every (a) direct quote in quotation marks, (b) dollar figure / box-office number, (c) specific date, (d) award/nomination/winner/record, (e) deep-link ID like "tt1234567", and (f) named statistic. For EACH one, check it against REFERENCE FACTS above. If it is NOT supported by the facts (or CONTRADICTS them) AND it is the kind of claim that must be sourced, add it to hardBlocks as "fabricated: <the exact claim>". Pay special attention to: invented box-office/dollar figures, invented IMDb/BoxOfficeMojo tt-IDs, invented quotes, invented Oscar/award winners or records, invented plot specifics. When in doubt about a must-be-sourced fact that isn't in the references, FLAG it — never pass a likely fabrication. (Do NOT flag general context/background that is obviously common knowledge, or current-availability claims that match the facts.)
+FABRICATION CHECK (do this FIRST, before scoring — be mechanical and strict; this is the most important job):
+Go through the article and check EACH of these against the REFERENCE FACTS. Add any unsupported one to hardBlocks as "fabricated: <the exact claim>":
+ (a) direct quotes in quotation marks; (b) dollar figures / box-office numbers; (c) specific dates; (d) awards/nominations/winners/records; (e) deep-link IDs like "tt1234567"; (f) named statistics (RT/Metacritic %).
+ (g) EPISODES & SEASONS (critical): every specific episode or season the article names or ranks MUST appear in the REFERENCE FACTS. If the facts describe a show only through Season 2 and the article ranks or describes a "Season 3" episode (or any episode/title not in the facts), that episode is FABRICATED — flag it. Do not assume a later season exists.
+ (h) RELEASE / AIR STATUS (critical): a review, ranking, or box-office report is only valid for a work that the facts show is RELEASED/AIRED. If the article reviews, reports box office for, or ranks episodes of something the facts indicate is unreleased / not-yet-aired / has no such data, flag it as "fabricated: reports on unreleased/unaired content".
+ (i) TITLE IDENTITY (critical — name collisions): the article must be about the SAME specific title as the REFERENCE FACTS (matching year/director/cast). Many works share similar names. If the article's plot, cast, or details clearly describe a DIFFERENT work than the one in the facts (a same-named or similar-named other film/show), flag it as "fabricated: wrong-title / identity mismatch".
+ (j) RANKED ITEMS: in a list/ranking, every ranked entry should be grounded; flag any invented entry.
+Rule of thumb: for (b)(d)(f)(g)(h)(i), if a must-be-sourced specific is NOT in the facts, FLAG it — never pass a likely fabrication. (Do NOT flag obvious common-knowledge background, well-known released films, or current-availability claims that match the facts.)
 
 Return STRICT JSON:
 { "score": 0-100 (reader-first: a high-SEO but stiff/generic/keyword-stuffed piece must score LOW),

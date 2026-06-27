@@ -13,6 +13,7 @@ import { expandInsideStories, TIER_S } from "./expand.mjs";
 const arg = (k, d) => Number((process.argv.find((a) => a.startsWith(`--${k}=`)) || "").split("=")[1]) || d;
 const SHORTLIST = arg("candidates", 28); // how many candidates the categorize LLM judges (cost control)
 const QUEUE_N = arg("queue", 12); // how many topics land in the ranked queue
+const PER_SUBCAT = arg("per-subcat", 2); // max topics per subcategory (set 1 for one-per-subcategory spread)
 const EXPAND = process.argv.includes("--expand"); // opt-in: blanket Tier-S events with inside-angle articles
 
 const runId = "run-" + new Date().toISOString().replace(/[:.]/g, "-").slice(0, 19);
@@ -37,7 +38,7 @@ const verified = verify(topics, monitor);
 
 // Stages 4+6 — score + rank, then diverse-select the queue
 scoreTopics(verified, monitor);
-const queue = selectDiverse(verified, { n: QUEUE_N, perSubcatMax: 2, publishableOnly: true });
+const queue = selectDiverse(verified, { n: QUEUE_N, perSubcatMax: PER_SUBCAT, publishableOnly: true });
 
 // Inside-stories expansion (opt-in): a Tier-S event → many tone-safe angle articles, appended to the queue.
 if (EXPAND) {

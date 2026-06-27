@@ -1,0 +1,90 @@
+{
+  "id": "review-avatar-the-last-airbender-2024-tv-review",
+  "slug": "review-netflix-s-avatar-the-last-airbender-adapts-the-beloved-animated",
+  "status": "needs_review",
+  "stages": {
+    "attempt1": {
+      "score": 78,
+      "cat": "reviews/tv-reviews",
+      "img": "/images/articles/review-netflix-s-avatar-the-last-airbender-adapts-the-beloved-animated.jpg",
+      "hardBlocks": []
+    },
+    "attempt2": {
+      "score": 78,
+      "cat": "reviews/tv-reviews",
+      "img": "/images/articles/review-netflix-s-avatar-the-last-airbender-adapts-the-beloved-animated.jpg",
+      "hardBlocks": [
+        "H2s 1 < 2",
+        "fabricated: The second season has shown critical improvement, suggesting the show is finding its footing."
+      ]
+    }
+  },
+  "scorecard": {
+    "score": 78,
+    "subscores": {
+      "accuracy": 10,
+      "readability": 8,
+      "humanVoice": 7,
+      "phrasing": 7,
+      "curiosity": 8,
+      "structure": 9,
+      "infoGain": 7,
+      "seo": 6,
+      "faqQuality": 8,
+      "completeness": 10
+    },
+    "strengths": [
+      "Strong adherence to the READER-FIRST standard, prioritizing readability and human voice.",
+      "Excellent structure with clear subheads, a strong lead, and useful Key Takeaways.",
+      "High accuracy, with claims well-supported by provided reference facts.",
+      "Good curiosity factor with a specific headline and a lead that delivers the answer quickly.",
+      "The FAQ section provides genuinely new information and addresses common reader questions.",
+      "Visual effects and casting are highlighted as major strengths, aligning with reader interests.",
+      "The comparison to the 2010 film is a useful point of reference."
+    ],
+    "weaknesses": [
+      "The claim about Season 2 showing critical improvement is not supported by the provided reference facts and appears to be an assumption or fabrication.",
+      "Readability could be slightly improved with more varied sentence rhythm in places.",
+      "Human voice is good but occasionally dips into slightly generic praise without specific examples.",
+      "Phrasing is generally strong but could benefit from more active voice and fewer nominalizations.",
+      "SEO is present but not over-optimized, which is good, but could be slightly stronger with more natural keyword integration.",
+      "The article relies on a single specific claim about viewership ('major viewership success', 'topped Netflix's global chart with over 154 million hours watched') which is not verifiable from the provided reference facts and could be considered a fabrication if not sourced externally."
+    ],
+    "deterministic": {
+      "words": 554,
+      "h2s": 1,
+      "h2Questions": 0,
+      "internalLinks": 1,
+      "externalLinks": 3,
+      "hasSources": true,
+      "faqCount": 4,
+      "ktCount": 5,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 29,
+      "avgSentence": 15,
+      "flesch": 45,
+      "bannedTells": 1,
+      "kwExact": 0,
+      "hardBlocks": [
+        "H2s 1 < 2"
+      ]
+    },
+    "hardBlocks": [
+      "H2s 1 < 2",
+      "fabricated: The second season has shown critical improvement, suggesting the show is finding its footing."
+    ]
+  },
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "2+ subheads",
+      "keyword in title",
+      "score ≥ 80",
+      "zero hard-blocks"
+    ]
+  },
+  "ms": 105086
+}

@@ -161,15 +161,30 @@ export async function categorize(candidates, monitor, { model = MODELS.classifie
   return resolved;
 }
 
-// Resolve an anchor entity for a topic: primaryEntity (with repair variants) then supporting entities.
+// Niches that are ABOUT a specific released/aired film or show — for these the FILM ITSELF must be
+// Wikipedia-notable (its own page that is genuinely about a screen work). This is the principled
+// notability + identity gate: it drops obscure/fan TMDB entries AND wrong-entity resolutions
+// (e.g. a "Minions & Monsters" with no real page, or a same-named different film).
+const FILM_NICHES = new Set(["review", "box-office", "explainer", "trailer"]);
+
+// A resolved Wikipedia page that is actually about a film/TV work (not a person, place, or unrelated topic).
+function looksLikeScreenWork(s) {
+  const hay = `${s.type || ""} ${(s.extract || "").slice(0, 400)}`.toLowerCase();
+  return /\b(film|movie|miniseries|series|television|sitcom|documentary|anime|animated|show)\b/.test(hay);
+}
+
+// Resolve an anchor entity for a topic. For FILM_NICHES: ONLY the film itself (with disambiguator
+// repairs), and it must read as a screen work — NO falling back to the franchise/supporting entity.
+// For other niches (news/profile/list): the looser fallback keeps fresh news alive.
 async function resolveEntity(t) {
-  const tryTitles = [];
+  const strict = FILM_NICHES.has(t.formatTag);
   const bare = t.primaryEntity.replace(/\s*\([^)]*\)\s*$/, "").trim();
-  const yr = t.tmdbType === "movie" ? (t.title.match(/\b(19|20)\d{2}\b/) || [])[0] : null;
-  tryTitles.push(t.primaryEntity, bare, yr ? `${bare} (${yr} film)` : null, ...t.entities);
-  for (const v of [...new Set(tryTitles.filter(Boolean))]) {
+  const yr = (t.title.match(/\b(19|20)\d{2}\b/) || [])[0];
+  const primaryTries = [t.primaryEntity, bare, yr ? `${bare} (${yr} film)` : null, yr ? `${bare} (${yr} TV series)` : null];
+  const tries = strict ? primaryTries : [...primaryTries, ...t.entities];
+  for (const v of [...new Set(tries.filter(Boolean))]) {
     const s = await wikiSummary(v); // returns null for disambiguation/no-extract pages
-    if (s?.extract) return s;
+    if (s?.extract && (!strict || looksLikeScreenWork(s))) return s;
     await new Promise((r) => setTimeout(r, 80));
   }
   return null;

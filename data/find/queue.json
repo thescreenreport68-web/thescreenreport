@@ -1,39 +1,40 @@
 {
-  "runId": "run-2026-06-27T09-03-28",
-  "builtAt": "2026-06-27T09:03:50.441Z",
-  "count": 7,
+  "runId": "run-2026-06-27T10-58-50",
+  "builtAt": "2026-06-27T10:59:50.206Z",
+  "count": 10,
   "topics": [
     {
-      "id": "news-warner-bros-animation-dark-shadows-series",
-      "slug": "warner-bros-animation-unveils-new-dark-shadows-animated-series-at-anne",
-      "title": "Warner Bros. Animation Unveils New Dark Shadows Animated Series at Annecy",
+      "id": "news-pinocchio-unstrung-poohniverse-monsters-assemble",
+      "slug": "pinocchio-unstrung-sees-wooden-doll-covered-in-flesh-and-blood-as-dire",
+      "title": "‘Pinocchio Unstrung’ Sees Wooden Doll Covered in Flesh and Blood as Director Rhys Frake-Waterfield Teases Kooky, Crazy and Fun ‘Avengers’-Style ‘Poohniverse: Monsters Assemble’",
       "contentType": "news",
       "formatTag": "news",
-      "category": "tv",
+      "category": "movies",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "warner-bros-animation-dark-shadows-series",
-      "primaryKeyword": "dark shadows animated series",
-      "primaryEntity": "Dark Shadows",
+      "eventSlug": "pinocchio-unstrung-poohniverse-monsters-assemble",
+      "primaryKeyword": "pinocchio unstrung",
+      "primaryEntity": "Pinocchio Unstrung",
       "entities": [
-        "Warner Bros. Animation"
+        "Rhys Frake-Waterfield",
+        "Winnie-the-Pooh"
       ],
-      "angle": "Warner Bros. Animation announced a new animated series based on Dark Shadows.",
+      "angle": "Director Rhys Frake-Waterfield is expanding his 'Poohniverse' with a new 'Pinocchio Unstrung' film, promising a wild take on the classic character.",
       "tmdbType": "movie",
       "source": "rss:Variety",
       "sources": [
         {
           "outlet": "Variety",
           "tier": 7,
-          "ageMin": 31,
-          "headline": "Warner Bros. Animation Sneak Peeks Get Jiro, Teases Gerry Anderson s Hit Squad, Announces Dark Shadows Animated Series at Annecy Adult Animation Showcase",
-          "summary": "Warner Bros. Animation, hugely active this year at Annecy, unveiled Friday at Annecy a new Dark Shadows animated series, confirming the studio s push in adult animation into other genres beyond adult comedy. Reimagining the 1960s cult TV series, the show is in very early developm"
+          "ageMin": 30,
+          "headline": "‘Pinocchio Unstrung’ Sees Wooden Doll Covered in Flesh and Blood as Director Rhys Frake-Waterfield Teases Kooky, Crazy and Fun ‘Avengers’-Style ‘Poohniverse: Monsters Assemble’",
+          "summary": "Barging through the doors of the Poohniverse nose-first, Pinocchio has officially come to the company of Winnie the Pooh, Bambi and Peter Pan with Rhys Frake-Waterfield’s “Pinocchio Unstrung.” The latest addition to the ever-growing roster of twisted takes on childhood icons, whi"
         }
       ],
-      "ageMin": 31,
+      "ageMin": 30,
       "_cand": {
-        "key": "rss:warner-bros-animation-sneak-peeks-get-jiro-teases-gerry-ande",
+        "key": "rss:-pinocchio-unstrung-sees-wooden-doll-covered-in-flesh-and-bl",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -61,34 +62,317 @@
       }
     },
     {
-      "id": "interview-common-espn-stuart-scott-doc",
+      "id": "news-warner-bros-animation-announces-dark-shadows-animated-series",
+      "slug": "warner-bros-animation-announces-new-dark-shadows-animated-series",
+      "title": "Warner Bros. Animation Announces New Dark Shadows Animated Series",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "warner-bros-animation-announces-dark-shadows-animated-series",
+      "primaryKeyword": "dark shadows animated series",
+      "primaryEntity": "Dark Shadows",
+      "entities": [
+        "Warner Bros. Animation"
+      ],
+      "angle": "Warner Bros. Animation unveils a new animated series based on the classic 'Dark Shadows'.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "ageMin": 146,
+          "headline": "Warner Bros. Animation Sneak Peeks Get Jiro, Teases Gerry Anderson s Hit Squad, Announces Dark Shadows Animated Series at Annecy Adult Animation Showcase",
+          "summary": "Warner Bros. Animation, hugely active this year at Annecy, unveiled Friday at Annecy a new Dark Shadows animated series, confirming the studio s push in adult animation into other genres beyond adult comedy. Reimagining the 1960s cult TV series, the show is in very early developm"
+        }
+      ],
+      "ageMin": 146,
+      "_cand": {
+        "key": "rss:warner-bros-animation-sneak-peeks-get-jiro-teases-gerry-ande",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 54,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 8,
+        "pop": 0
+      }
+    },
+    {
+      "id": "list-best-thriller-movies-ranked",
+      "slug": "10-intense-thriller-movies-that-are-perfect-from-start-to-finish",
+      "title": "10 Intense Thriller Movies That Are Perfect From Start To Finish",
+      "contentType": "list",
+      "formatTag": "list",
+      "category": "movies",
+      "subcategory": "rankings-lists",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "best-thriller-movies-ranked",
+      "primaryKeyword": "best thriller movies",
+      "primaryEntity": "Parasite (2019 film)",
+      "entities": [
+        "The Handmaiden",
+        "The Menu (film)"
+      ],
+      "angle": "A ranked list of 10 intense thriller movies that are considered perfect from beginning to end.",
+      "tmdbType": "movie",
+      "source": "rss:Collider",
+      "sources": [
+        {
+          "outlet": "Collider",
+          "tier": 5,
+          "ageMin": 53,
+          "headline": "10 Intense Thriller Movies That Are Perfect From Start To Finish",
+          "summary": "One Battle After Another, Parasite, The Handmaiden, The Menu, and more make up our list of intense thrillers that are perfect from start to finish."
+        }
+      ],
+      "ageMin": 53,
+      "_cand": {
+        "key": "rss:10-intense-thriller-movies-that-are-perfect-from-start-to-fi",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "outletCount": 1,
+        "outlets": [
+          "Collider"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": null,
+        "framing": "plain",
+        "status": "EVERGREEN",
+        "publishable": true
+      },
+      "priority": 52,
+      "signals": {
+        "recency": 24,
+        "corroboration": 8,
+        "status": 14,
+        "type": 6,
+        "pop": 0
+      }
+    },
+    {
+      "id": "list-best-house-of-the-dragon-episodes-ranked",
+      "slug": "the-10-best-house-of-the-dragon-episodes-so-far-ranked",
+      "title": "The 10 Best 'House of the Dragon' Episodes (So Far), Ranked",
+      "contentType": "list",
+      "formatTag": "list",
+      "category": "tv",
+      "subcategory": "rankings-lists",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "best-house-of-the-dragon-episodes-ranked",
+      "primaryKeyword": "best house of the dragon episodes",
+      "primaryEntity": "House of the Dragon",
+      "entities": [],
+      "angle": "The top 10 episodes of HBO's 'House of the Dragon' are ranked based on plot, character development, and action.",
+      "tmdbType": "movie",
+      "source": "rss:Collider",
+      "sources": [
+        {
+          "outlet": "Collider",
+          "tier": 5,
+          "ageMin": 57,
+          "headline": "The 10 Best 'House of the Dragon' Episodes (So Far), Ranked",
+          "summary": "Discover the best episodes of House of the Dragon, ranked based on character development, plot twists, and epic battles."
+        }
+      ],
+      "ageMin": 57,
+      "_cand": {
+        "key": "rss:the-10-best-house-of-the-dragon-episodes-so-far-ranked",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "outletCount": 1,
+        "outlets": [
+          "Collider"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": null,
+        "framing": "plain",
+        "status": "EVERGREEN",
+        "publishable": true
+      },
+      "priority": 52,
+      "signals": {
+        "recency": 24,
+        "corroboration": 8,
+        "status": 14,
+        "type": 6,
+        "pop": 0
+      }
+    },
+    {
+      "id": "box-office-toy-story-5-supergirl-box-office-update",
+      "slug": "box-office-update-toy-story-5-holds-strong-supergirl-opens-lower-than-",
+      "title": "Box Office Update: 'Toy Story 5' Holds Strong, 'Supergirl' Opens Lower Than Expected",
+      "contentType": "box-office",
+      "formatTag": "box-office",
+      "category": "movies",
+      "subcategory": "box-office",
+      "eventType": "boxoffice",
+      "sensitivity": "normal",
+      "eventSlug": "toy-story-5-supergirl-box-office-update",
+      "primaryKeyword": "toy story 5 box office",
+      "primaryEntity": "Toy Story 5",
+      "entities": [
+        "Pixar",
+        "Supergirl: Woman of Tomorrow (film)"
+      ],
+      "angle": "Update on the box office performance of 'Toy Story 5' and the opening weekend for 'Supergirl'.",
+      "tmdbType": "movie",
+      "source": "rss:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "ageMin": 674,
+          "headline": "Toy Story 5 Looks To Cross $300M, Supergirl Flying Low With $40M Opening U.S. Box Office Update",
+          "summary": "FRIDAY PM: Disney/Pixar Studios Toy Story 5 is holding onto No. 1, as we knew it would, but pre-weekend estimates were a bit high. The second weekend now is looking more like $74M at 4,425 sites, which would get the Andrew Stanton-directed animated mover over the $300M domestic i"
+        }
+      ],
+      "ageMin": 674,
+      "_cand": {
+        "key": "rss:toy-story-5-looks-to-cross-300m-supergirl-flying-low-with-40",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 45,
+      "signals": {
+        "recency": 4,
+        "corroboration": 12,
+        "status": 18,
+        "type": 11,
+        "pop": 0
+      }
+    },
+    {
+      "id": "news-academy-of-country-music-awards-2027-date",
+      "slug": "academy-of-country-music-awards-sets-2027-date",
+      "title": "Academy of Country Music Awards Sets 2027 Date",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "academy-of-country-music-awards-2027-date",
+      "primaryKeyword": "Academy of Country Music Awards date",
+      "primaryEntity": "Academy of Country Music Awards",
+      "entities": [],
+      "angle": "The Academy of Country Music Awards has set the date for its 2027 ceremony.",
+      "tmdbType": "movie",
+      "source": "rss:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "ageMin": 637,
+          "headline": "Academy Of Country Music Awards Sets 2027 Date",
+          "summary": "The Academy of Country Music Awards has set its 2027 date. The ACMs and Dick Clark Productions announced that the 62nd ACM Awards will return to the MGM Grand Garden Arena in Las Vegas on Sunday, May 16, 2027. Last month s 61st AMC Awards show was back in Las Vegas for the first "
+        }
+      ],
+      "ageMin": 637,
+      "_cand": {
+        "key": "rss:academy-of-country-music-awards-sets-2027-date",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 42,
+      "signals": {
+        "recency": 4,
+        "corroboration": 12,
+        "status": 18,
+        "type": 8,
+        "pop": 0
+      }
+    },
+    {
+      "id": "interview-common-on-espn-stuart-scott-doc-music",
       "slug": "common-on-crafting-music-for-espn-s-stuart-scott-doc",
-      "title": "Common on Crafting Music for ESPN's Stuart Scott Doc",
+      "title": "Common on Crafting Music for ESPN’s Stuart Scott Doc",
       "contentType": "interview",
       "formatTag": "interview",
       "category": "celebrity",
       "subcategory": "interviews",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "common-espn-stuart-scott-doc",
+      "eventSlug": "common-on-espn-stuart-scott-doc-music",
       "primaryKeyword": "common stuart scott doc",
       "primaryEntity": "Common (rapper)",
       "entities": [
         "Stuart Scott"
       ],
-      "angle": "Rapper and actor Common discusses crafting the music for ESPN's documentary about Stuart Scott.",
+      "angle": "Rapper and actor Common discusses his involvement and the music behind the ESPN documentary on Stuart Scott.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
         {
           "outlet": "THR",
           "tier": 7,
-          "ageMin": 303,
+          "ageMin": 418,
           "headline": "The Playlist: Common on Uplifting Music and Crafting “Vision” for ESPN’s Stuart Scott Doc",
           "summary": "The actor and rapper shares what songs he listens to brighten his day in this episode of The Playlist."
         }
       ],
-      "ageMin": 303,
+      "ageMin": 418,
       "_cand": {
         "key": "rss:the-playlist-common-on-uplifting-music-and-crafting-vision-f",
         "popularity": 0,
@@ -108,9 +392,9 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 45,
+      "priority": 40,
       "signals": {
-        "recency": 9,
+        "recency": 4,
         "corroboration": 12,
         "status": 18,
         "type": 6,
@@ -118,88 +402,80 @@
       }
     },
     {
-      "id": "news-romy-michele-sequel-filming-starts",
-      "slug": "mira-sorvino-marks-first-day-of-romy-michele-sequel-filming-one-day-ha",
-      "title": "Mira Sorvino Marks First Day Of Romy Michele Sequel Filming: One Day Has Become Day One",
-      "contentType": "news",
-      "formatTag": "news",
+      "id": "trailer-minions-monsters-movie-trailer",
+      "slug": "minions-monsters-trailer-drops-promises-wild-hollywood-origin-story",
+      "title": "'Minions & Monsters' Trailer Drops, Promises Wild Hollywood Origin Story",
+      "contentType": "trailer",
+      "formatTag": "trailer",
       "category": "movies",
-      "subcategory": "news",
-      "eventType": "casting",
+      "subcategory": "trailers",
+      "eventType": "trailer",
       "sensitivity": "normal",
-      "eventSlug": "romy-michele-sequel-filming-starts",
-      "primaryKeyword": "Romy and Michele",
-      "primaryEntity": "Romy and Michele's High School Reunion",
+      "eventSlug": "minions-monsters-movie-trailer",
+      "primaryKeyword": "minions and monsters trailer",
+      "primaryEntity": "Minions & Monsters",
       "entities": [
-        "Mira Sorvino"
+        "Minions & Monsters (upcoming film)",
+        "Minions (franchise)"
       ],
-      "angle": "Mira Sorvino announces the start of filming for the Romy and Michele sequel, marking 'Day One'.",
+      "angle": "Upcoming animated film 'Minions & Monsters' teases its wild Hollywood origin story.",
       "tmdbType": "movie",
-      "source": "rss:Deadline",
-      "sources": [
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "ageMin": 472,
-          "headline": "Mira Sorvino Marks First Day Of Romy Michele Sequel Filming: One Day Has Become Day One",
-          "summary": "Mira Sorvino is giving fans a long-awaited reunion with the Romy and Michele sequel, which kicked off production this month. On Friday, the Oscar winner expressed her gratitude and shared thoughts from our first day of filming the Tim Federle-helmed sequel to Romy and Michele s H"
-        }
-      ],
-      "ageMin": 472,
+      "source": "tmdb:upcoming",
+      "sources": [],
+      "ageMin": null,
       "_cand": {
-        "key": "rss:mira-sorvino-marks-first-day-of-romy-michele-sequel-filming-",
-        "popularity": 0,
-        "kind": "rss-news"
+        "key": "movie:1315772",
+        "popularity": 73.0032,
+        "voteCount": 13,
+        "kind": "upcoming"
       },
-      "corroborationCount": 1,
+      "corroborationCount": 0,
       "verification": {
-        "tier1Count": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Deadline"
-        ],
-        "maxTier": 7,
+        "tier1Count": 0,
+        "outletCount": 0,
+        "outlets": [],
+        "maxTier": 0,
         "sensitivity": "normal",
-        "attribution": "Deadline",
-        "framing": "attributed",
-        "status": "DEVELOPING",
+        "attribution": null,
+        "framing": "plain",
+        "status": "EVERGREEN",
         "publishable": true
       },
-      "priority": 44,
+      "priority": 34,
       "signals": {
-        "recency": 4,
-        "corroboration": 12,
-        "status": 18,
+        "recency": 7,
+        "corroboration": 0,
+        "status": 14,
         "type": 10,
-        "pop": 0
+        "pop": 4
       }
     },
     {
-      "id": "list-the-bear-season-3-ranking",
-      "slug": "the-bear-every-episode-ranked",
-      "title": "The Bear: Every Episode Ranked",
-      "contentType": "list",
-      "formatTag": "list",
-      "category": "tv",
-      "subcategory": "rankings-lists",
-      "eventType": "other",
+      "id": "review-avatar-the-last-airbender-2024-tv-review",
+      "slug": "review-netflix-s-avatar-the-last-airbender-adapts-the-beloved-animated",
+      "title": "Review: Netflix's 'Avatar: The Last Airbender' Adapts the Beloved Animated Series",
+      "contentType": "review",
+      "formatTag": "review",
+      "category": "reviews",
+      "subcategory": "tv-reviews",
+      "eventType": "review",
       "sensitivity": "normal",
-      "eventSlug": "the-bear-season-3-ranking",
-      "primaryKeyword": "the bear season 3",
-      "primaryEntity": "The Bear (TV series)",
+      "eventSlug": "avatar-the-last-airbender-2024-tv-review",
+      "primaryKeyword": "avatar the last airbender review",
+      "primaryEntity": "Avatar: The Last Airbender (2024 TV series)",
       "entities": [
-        "Jeremy Allen White",
-        "Christopher Storer"
+        "Netflix",
+        "Live-action adaptation"
       ],
-      "angle": "A ranking of episodes from the acclaimed series The Bear.",
+      "angle": "The live-action adaptation of Avatar: The Last Airbender has been released and is receiving critical attention.",
       "tmdbType": "tv",
       "source": "tmdb:trending-tv",
       "sources": [],
       "ageMin": null,
       "_cand": {
-        "key": "tv:136315",
-        "popularity": 102.4567,
-        "voteCount": 1754,
+        "key": "tv:82452",
+        "popularity": 198.6136,
+        "voteCount": 1140,
         "kind": "trending-tv"
       },
       "corroborationCount": 0,
@@ -214,183 +490,66 @@
         "status": "EVERGREEN",
         "publishable": true
       },
-      "priority": 31,
+      "priority": 33,
       "signals": {
         "recency": 7,
         "corroboration": 0,
         "status": 14,
-        "type": 6,
-        "pop": 4
-      }
-    },
-    {
-      "id": "news-the-bear-series-finale-discussion",
-      "slug": "was-the-bear-series-finale-a-delicious-dessert-or-an-unnecessary-add-o",
-      "title": "Was The Bear Series Finale a Delicious Dessert or an Unnecessary Add-On?",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "the-bear-series-finale-discussion",
-      "primaryKeyword": "The Bear season finale",
-      "primaryEntity": "The Bear (TV series)",
-      "entities": [
-        "FX (TV network)",
-        "Hulu"
-      ],
-      "angle": "Critics debate the merits of The Bear's series finale.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "ageMin": 492,
-          "headline": "Was The Bear Series Finale a Delicious Dessert or an Unnecessary Add-On?",
-          "summary": "As FX/Hulu's buzzy restaurant dramedy serves its last course, THR's TV critics debate the show's lessons, its flaws and strengths, and how much they'll miss spending time in that chaotic kitchen."
-        }
-      ],
-      "ageMin": 492,
-      "_cand": {
-        "key": "rss:was-the-bear-series-finale-a-delicious-dessert-or-an-unneces",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 40,
-      "signals": {
-        "recency": 4,
-        "corroboration": 12,
-        "status": 18,
-        "type": 6,
-        "pop": 0
-      }
-    },
-    {
-      "id": "interview-curb-your-enthusiasm-director-larry-david-never-retire",
-      "slug": "curb-your-enthusiasm-director-jeff-schaffer-on-obama-s-notes-and-why-l",
-      "title": "‘Curb Your Enthusiasm’ Director Jeff Schaffer on Obama’s Notes and Why Larry David Will Never Retire: He's Like a Prostitute Who Has Sex When He's Not Working",
-      "contentType": "interview",
-      "formatTag": "interview",
-      "category": "celebrity",
-      "subcategory": "interviews",
-      "eventType": "interview",
-      "sensitivity": "normal",
-      "eventSlug": "curb-your-enthusiasm-director-larry-david-never-retire",
-      "primaryKeyword": "Larry David",
-      "primaryEntity": "Larry David",
-      "entities": [
-        "Curb Your Enthusiasm"
-      ],
-      "angle": "Director Jeff Schaffer discusses Larry David's refusal to retire, comparing him to a prostitute who has sex when not working.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "ageMin": 452,
-          "headline": "‘Life, Larry’ Director Jeff Schaffer on Obama’s Notes and Why Larry David Will Never Retire: He s Like a Prostitute Who Has Sex When He s Not Working",
-          "summary": "When “Curb Your Enthusiasm” wrapped up its 24-year-run in 2024, fans were concerned it would be the last time they’d see Larry David on screen. He had been saying the HBO sitcom was ending for the better part of the series’ run, and with Season 12 he finally called it quits. (“I "
-        }
-      ],
-      "ageMin": 452,
-      "_cand": {
-        "key": "rss:-life-larry-director-jeff-schaffer-on-obama-s-notes-and-why-",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 42,
-      "signals": {
-        "recency": 4,
-        "corroboration": 12,
-        "status": 18,
         "type": 8,
-        "pop": 0
+        "pop": 5
       }
     },
     {
-      "id": "news-luca-guadagnino-artificial-release-ai-worries",
-      "slug": "luca-guadagnino-gives-hope-for-artificial-release-worries-ai-is-comple",
-      "title": "Luca Guadagnino Gives Hope For Artificial Release, Worries AI Is Completely Changing The World: More Than Just Disturbing",
-      "contentType": "news",
-      "formatTag": "news",
+      "id": "explainer-the-bear-season-5-secret-ingredient",
+      "slug": "the-secret-ingredient-that-makes-the-bear-s-ending-work",
+      "title": "The Secret Ingredient That Makes 'The Bear's' Ending Work",
+      "contentType": "explainer",
+      "formatTag": "explainer",
       "category": "movies",
-      "subcategory": "news",
+      "subcategory": "explainers",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "luca-guadagnino-artificial-release-ai-worries",
-      "primaryKeyword": "Luca Guadagnino",
-      "primaryEntity": "Luca Guadagnino",
-      "entities": [
-        "Artificial (film)"
-      ],
-      "angle": "Director Luca Guadagnino expresses hope for his film 'Artificial's' release while voicing concerns about AI.",
+      "eventSlug": "the-bear-season-5-secret-ingredient",
+      "primaryKeyword": "the bear season 5 ending explained",
+      "primaryEntity": "The Bear (TV series)",
+      "entities": [],
+      "angle": "An analysis of why the Season 5 finale of 'The Bear' is effective, focusing on a 'secret ingredient' that makes the ending work.",
       "tmdbType": "movie",
-      "source": "rss:Deadline",
+      "source": "rss:SlashFilm",
       "sources": [
         {
-          "outlet": "Deadline",
-          "tier": 7,
-          "ageMin": 518,
-          "headline": "Luca Guadagnino Gives Hope For Artificial Release, Worries AI Is Completely Changing The World: More Than Just Disturbing",
-          "summary": "As Artificial remains in distribution limbo, Luca Guadagnino appears hopeful for the film s release, but not so much for the state of the world living with AI. Prefacing that he can t say much because we are right in the middle of this situation, the Oscar nominee teased another "
+          "outlet": "SlashFilm",
+          "tier": 5,
+          "ageMin": 719,
+          "headline": "The Bear's Ending Works Because Of One Secret Ingredient",
+          "summary": "The Bear has finally come to an end after five seasons, and the finale works because the show understands its secret ingredient."
         }
       ],
-      "ageMin": 518,
+      "ageMin": 719,
       "_cand": {
-        "key": "rss:luca-guadagnino-gives-hope-for-artificial-release-worries-ai",
+        "key": "rss:the-bear-s-ending-works-because-of-one-secret-ingredient",
         "popularity": 0,
         "kind": "rss-news"
       },
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 1,
+        "tier1Count": 0,
         "outletCount": 1,
         "outlets": [
-          "Deadline"
+          "SlashFilm"
         ],
-        "maxTier": 7,
+        "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "Deadline",
-        "framing": "attributed",
-        "status": "DEVELOPING",
+        "attribution": null,
+        "framing": "plain",
+        "status": "EVERGREEN",
         "publishable": true
       },
-      "priority": 40,
+      "priority": 32,
       "signals": {
         "recency": 4,
-        "corroboration": 12,
-        "status": 18,
+        "corroboration": 8,
+        "status": 14,
         "type": 6,
         "pop": 0
       }

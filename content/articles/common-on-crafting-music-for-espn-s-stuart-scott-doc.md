@@ -1,112 +1,122 @@
 ---
 title: >-
-  Common on Crafting Music for ESPN's Stuart Scott Doc and His Daily Wellness
-  Rituals
+  Common on GQ: His Wellness Essentials and the Music for ESPN’s Stuart Scott
+  Doc
 slug: common-on-crafting-music-for-espn-s-stuart-scott-doc
 category: celebrity
 subcategory: interviews
 author: editorial-team
-date: '2026-06-27T06:03:50.523Z'
+date: '2026-06-26T17:01:03.352Z'
 dek: >-
-  The Oscar-winning rapper and actor details his creative process for the ESPN
-  documentary's score and the personal items that fuel his day.
-metaTitle: 'Common on Stuart Scott Doc, Wellness Essentials in GQ Interview'
+  The Oscar-winning rapper and actor details his daily rituals and reveals the
+  emotional process behind creating the original song for ESPN's upcoming
+  documentary on sportscaster Stuart Scott.
+metaTitle: 'Common Stuart Scott Doc: GQ Interview on Music & Wellness'
 metaDescription: >-
-  Common discusses his work on the music for ESPN's Stuart Scott documentary and
-  shares the wellness products and rituals he can't live without.
+  Common discusses his wellness routine and the inspiration for his music in
+  ESPN's Stuart Scott documentary in a new GQ interview about his essentials.
 tags:
   - common
+  - gq
+  - wellness
+  - music
   - espn
   - stuart scott
-  - music
-  - documentary
-  - wellness
 targetKeyword: common stuart scott doc
 keyTakeaways:
   - >-
-    Common is creating the music for an upcoming ESPN documentary about late
-    sportscaster Stuart Scott.
+    Common credits daily hydration and spiritual practices like reading the
+    Bible and burning palo santo for maintaining his energy.
   - >-
-    He calls the project a 'vision' and says he wants the music to capture
-    Scott's spirit.
+    He created an original song titled 'Vision' for ESPN’s Stuart Scott
+    documentary, aiming to capture Scott's spirit.
   - >-
-    His daily essentials include a travel Bible, alkaline water, and a vocal
-    steamer for performance prep.
+    The rapper follows a strict vegan diet with a personal chef, viewing food as
+    an investment in his wellness over material goods.
   - >-
-    The rapper maintains a vegan diet with the help of a personal chef to
-    support his health and energy.
+    Common uses a specialized vocal steam inhaler to care for his voice, which
+    he considers his primary instrument.
 faq:
-  - q: What other documentary scores has Common worked on?
+  - q: What awards has Common won for his music in documentaries?
     a: >-
       Common won a Primetime Emmy Award for Outstanding Original Music and
-      Lyrics for his song 'Letter to the Free,' which he created for Ava
-      DuVernay's Netflix documentary *13th* about racial inequality in the U.S.
-      justice system.
-  - q: Is Common still releasing new music?
+      Lyrics for his song 'Letter to the Free' from the documentary *13th*. He
+      also won an Academy Award for Best Original Song for 'Glory,' which he
+      co-wrote with John Legend for the historical drama *Selma*.
+  - q: Is the Stuart Scott documentary released yet?
     a: >-
-      Yes. In 2024, he released a collaborative album with producer Pete Rock
-      titled *The Auditorium Vol. 1*. The album has been nominated for a Grammy
-      Award for Best Rap Album.
-  - q: What was Stuart Scott known for at ESPN?
+      As of this reporting, the ESPN documentary featuring Common's music has
+      been announced but a specific release date has not been publicly
+      confirmed. The project was reported as in development by The Hollywood
+      Reporter.
+  - q: What other recent music projects has Common worked on?
     a: >-
-      Stuart Scott was a beloved ESPN anchor, best known for his dynamic,
-      hip-hop-influenced style on *SportsCenter* and for popularizing
-      catchphrases like 'Boo-yah!' He was a regular presence in the network's
-      NBA and NFL coverage until his passing.
-  - q: What acting role is Common known for on TV?
+      In 2024, Common released a collaborative album with producer Pete Rock
+      titled *The Auditorium Vol. 1*, which has been nominated for a Grammy. He
+      also continues to release solo work through his label partnership with
+      Loma Vista Recordings.
+  - q: Has Common acted in any recent films or TV shows?
     a: >-
-      Common starred as Elam Ferguson on the AMC western series *Hell on Wheels*
-      from 2011 to 2014. He currently plays a supporting role in the Apple TV+
-      sci-fi series *Silo*, which premiered in 2023.
+      Yes. Common currently plays a supporting role in the Apple TV+ sci-fi
+      series *Silo*. His recent film appearances include *Alice* (2022) and
+      *John Wick: Chapter 2* (2017). He also made his Broadway debut in 2023.
 about:
   - name: Stuart Scott
     type: Person
     sameAs: 'https://en.wikipedia.org/wiki/Stuart_Scott'
 imageAlt: >-
-  Common — Common on Crafting Music for ESPN's Stuart Scott Doc and His Daily
-  Wellness Rituals
+  Common rapper actor — Common on GQ: His Wellness Essentials and the Music for
+  ESPN’s Stuart Scott Doc
 imageCredit: Charles J. Sharp / Wikimedia Commons / CC BY-SA 4.0
 image: /images/articles/common-on-crafting-music-for-espn-s-stuart-scott-doc.jpg
 imageWidth: 1920
 imageHeight: 1920
 formatTag: interview
+provenance:
+  eventSlug: common-on-espn-stuart-scott-doc-music
+  primaryEntity: Common (rapper)
+  eventType: other
+  sensitivity: normal
+  status: DEVELOPING
+  attribution: THR
+  outlets:
+    - THR
+  publishedAt: '2026-06-26T17:01:03.352Z'
+dateModified: '2026-06-26T17:01:03.352Z'
 youtubeId: 0f6_2TPQ7pw
 sourceOutlet: GQ
 sourceUrl: 'https://www.youtube.com/watch?v=0f6_2TPQ7pw'
 pullQuotes:
-  - it brings in good energy and removes the bad energy
-  - my voice is an instrument so i take care of that instrument
-  - i'd rather invest in myself like in my wellness
+  - started feeling more and more like black superman
+  - My voice is an instrument so i take care of that instrument
+  - I'd rather feel good and eat good than just have some material things
 ---
 
-Common is working on the music for ESPN's documentary about the late, iconic sportscaster Stuart Scott, calling it a 'vision' he wants to get right. The Grammy and Oscar winner shared this news while detailing his personal wellness essentials in a new interview, revealing the items that keep him grounded and energized for his creative work.
+Common revealed his daily wellness rituals and the creative process behind his music for an ESPN documentary on the late sportscaster Stuart Scott in an interview with GQ.
 
-## What is Common working on for ESPN?
+## What does Common’s daily wellness routine look like?
 
-While discussing his daily routine, Common revealed he is currently crafting the score for an ESPN documentary about Stuart Scott. He described the project as a significant undertaking, emphasizing his desire to create music that authentically reflects Scott's legacy and impact. The rapper and actor sees the work as more than just a job; it's about honoring a figure known for bringing hip-hop flair to sports broadcasting.
+His day begins with spiritual grounding and hydration. The rapper carries a Bible sent by his mother everywhere, calling it a key to his identity. He drinks two to three bottles of Essentia water daily, a habit he adopted for energy and health after a childhood of sugary drinks. “I started drinking water more and more,” he said, “started feeling more and more like black superman.”
 
-He explained that capturing the right feeling for the film is paramount. Common's approach involves immersing himself in Scott's story to ensure the music complements the documentary's emotional core. This project adds to his growing repertoire of acclaimed film scores, which includes his Emmy-winning work for the documentary *13th*.
+Common also uses palo santo, or 'holy wood,' to clear energy before important events. He burns it even on Zoom calls, joking that people might think he's smoking. A green drink with kale, cucumber, and spirulina serves as his morning coffee, especially on busy film sets.
 
-## What are Common's daily wellness essentials?
+## How does he care for his voice and body?
 
-Common's non-negotiables start with spirituality and hydration. He carries a travel Bible everywhere, a practice inspired by a gift from his mother, which he says reminds him of his purpose. For physical fuel, he drinks two to three bottles of Essentia alkaline water daily, crediting it with giving him energy and improving his overall health.
+As an MC, Common treats his voice as a professional instrument. After a prolonged vocal loss last year, a specialist gave him a steam inhaler to clear his vocal cords before performances. He now uses it routinely, defending the practice as essential hip-hop maintenance. “My voice is an instrument so I take care of that instrument,” he explained.
 
-His kit also includes palo santo wood, which he burns to clear energy before important meetings or performances. A daily green drink with kale, cucumber, and spirulina serves as his morning coffee, and he swears by Dr. Bronner's castile soap for its natural ingredients and positive affirmations on the label.
+For his skin, he uses Dr. Bronner’s almond-scented lotion to avoid 'ashy ankles' during photo shoots. He snacks on vegan cassava chips and lights candles labeled with affirmations like 'peace' and 'abundance' to set a positive vibe in dressing rooms and studios.
 
-## How does he prepare his voice for performances?
+## What did he say about the Stuart Scott documentary music?
 
-Common treats his voice as a professional instrument. He uses a personal steamer, a device recommended by a vocal coach, to clear his vocal cords before recording or performing. This practice became essential after he lost his voice for nearly two weeks last year and needed to get back to work.
+While the GQ segment focused on personal essentials, Common confirmed his involvement in the ESPN project in a separate report by The Hollywood Reporter. According to THR, he crafted an original song titled “Vision” for the documentary about the iconic ESPN anchor. The track is designed to reflect Stuart Scott’s innovative spirit and lasting impact on sports culture.
 
-He pushes back on any notion that such care isn't 'hip-hop,' stating that the culture evolves with its artists. Maintaining vocal health allows him to perform at his best, whether he's in the recording studio for projects like his new album with Pete Rock or on set for his role in *Silo*.
+Common’s work on the doc continues his streak of contributing powerful music to nonfiction projects, following his Emmy-winning song for the film *13th* and his Oscar-winning track for Selma. His approach to the Scott documentary likely mirrors the thoughtful, uplifting energy he cultivates in his daily life.
 
-## What does his diet and self-care look like?
+## Why does he invest in a vegan chef?
 
-Common follows a vegan diet and has invested in a personal chef to ensure he eats well while maintaining a busy schedule. He highlighted that he'd rather spend money on wellness and quality food than on excessive material possessions. For snacks, he opts for cassava chips, and he uses a specific almond cookie-scented cream to avoid 'ashy ankles' during photo shoots.
-
-Candles are another essential for setting a positive atmosphere in his dressing room, studio, or home. He keeps ones labeled with affirmations like 'peace,' 'joy,' and 'abundance,' using them to cultivate the energy he wants to base his life in. This holistic focus on mind, body, and environment supports his work on demanding projects, from acting to his award-winning music career.
+Common’s final essential is a personal vegan chef, Cam, who prepares everything from plant-based cheesesteaks to clean sandwiches. He views spending on high-quality, healthy food as a smarter investment than material luxuries. “I'd rather feel good and eat good than just have some material things that don't mean as much to me,” he said. This philosophy extends his overall focus on wellness as the foundation for his creative work in music and acting.
 
 ## Sources
-- [Common - Wikipedia](https://en.wikipedia.org/wiki/Common_(rapper))
-- [Stuart Scott - Wikipedia](https://en.wikipedia.org/wiki/Stuart_Scott)
-- [ESPN](https://www.espn.com/)
-- [The Academy Awards](https://www.oscars.org/)
+* [Common - Wikipedia](https://en.wikipedia.org/wiki/Common_(rapper))
+* [The Hollywood Reporter](https://www.hollywoodreporter.com/)
+* [ESPN](https://www.espn.com/)

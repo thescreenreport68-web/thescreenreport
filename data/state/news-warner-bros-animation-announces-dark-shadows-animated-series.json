@@ -1,0 +1,84 @@
+{
+  "id": "news-warner-bros-animation-announces-dark-shadows-animated-series",
+  "slug": "warner-bros-animation-announces-new-dark-shadows-animated-series",
+  "status": "needs_review",
+  "stages": {
+    "attempt1": {
+      "score": 85,
+      "cat": "tv/news",
+      "img": "/images/articles/warner-bros-animation-announces-new-dark-shadows-animated-series.jpg",
+      "hardBlocks": [
+        "Flesch 36 < 40 (too dense to read comfortably)"
+      ]
+    },
+    "attempt2": {
+      "score": 85,
+      "cat": "tv/news",
+      "img": "/images/articles/warner-bros-animation-announces-new-dark-shadows-animated-series.jpg",
+      "hardBlocks": [
+        "Flesch 36 < 40 (too dense to read comfortably)"
+      ]
+    }
+  },
+  "scorecard": {
+    "score": 85,
+    "subscores": {
+      "accuracy": 10,
+      "readability": 9,
+      "humanVoice": 8,
+      "phrasing": 8,
+      "curiosity": 9,
+      "structure": 9,
+      "infoGain": 8,
+      "seo": 7,
+      "faqQuality": 9,
+      "completeness": 9
+    },
+    "strengths": [
+      "Clear and concise lead that answers the main question immediately.",
+      "Well-structured with informative subheads and a Key Takeaways section.",
+      "Accurate reporting of the core announcement, attributed to Variety.",
+      "Good explanation of the original series' significance and its impact.",
+      "FAQ section provides useful, relevant information.",
+      "The dek effectively summarizes the article's purpose."
+    ],
+    "weaknesses": [
+      "The 'Why is this announcement significant?' section could be more specific about the potential visual advantages of animation for the gothic elements.",
+      "The 'What happens next?' section is a bit generic; while acknowledging early development, it could offer slightly more speculative insight into potential creative directions.",
+      "SEO subscore is lower due to the limited number of external links (only one direct link to WB Animation, Wikipedia and Box Office Mojo are general references rather than specific sources for the news itself).",
+      "The human voice is present but could be slightly more distinctive; some phrasing is a touch formal."
+    ],
+    "deterministic": {
+      "words": 524,
+      "h2s": 4,
+      "h2Questions": 3,
+      "internalLinks": 0,
+      "externalLinks": 3,
+      "hasSources": true,
+      "faqCount": 4,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 40,
+      "avgSentence": 18,
+      "flesch": 36,
+      "bannedTells": 1,
+      "kwExact": 0,
+      "hardBlocks": [
+        "Flesch 36 < 40 (too dense to read comfortably)"
+      ]
+    },
+    "hardBlocks": [
+      "Flesch 36 < 40 (too dense to read comfortably)"
+    ]
+  },
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "zero hard-blocks"
+    ]
+  },
+  "ms": 103015
+}

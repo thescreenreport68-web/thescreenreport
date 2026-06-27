@@ -22,20 +22,38 @@ const GENERIC = new Set([
   "news", "movies", "movie", "tv", "television", "streaming", "celebrity", "reviews", "review", "awards",
   "box office", "trailer", "trailers", "interview", "interviews", "reaction", "reactions", "ranking",
   "rankings", "ranked", "list", "best", "explainer", "explained", "guide", "where to watch", "profile",
-  "animated series", "biopic", "sequel", "film", "series", "show", "actor", "actress", "director",
+  "animated series", "biopic", "sequel", "prequel", "film", "series", "show", "actor", "actress", "director",
   "hollywood", "netflix", "hbo", "max", "disney", "prime video", "apple tv", "studio", "gothic soap opera",
+  // generic production/story nouns that must NEVER be link anchors (the "production"->wrong-article bug)
+  "production", "budget", "release", "premiere", "cast", "writer", "producer", "episode", "season",
+  "teaser", "footage", "scene", "character", "role", "franchise", "universe", "reboot", "remake",
+  "adaptation", "cinema", "story", "plot", "ending", "weekend", "opening", "debut", "career", "music",
+  "performance", "drama", "comedy", "thriller", "horror", "documentary", "cameo", "spinoff", "spin-off",
 ]);
 
+// An anchor must be a PROPER-NOUN entity: a multi-word phrase, OR a single word that is title-like and
+// not generic. The real safeguard is that we only LINK an occurrence that is Capitalized in the body
+// (a proper noun) — so "production"/"cinema" used as common nouns can never become a link.
 function anchorTerms(title, tags) {
   const out = new Set();
   for (const t of tags) {
     const term = String(t).trim();
     const low = term.toLowerCase();
     if (term.length < 4 || GENERIC.has(low)) continue;
-    // entity-like: multi-word OR contains a capital in the original tag OR looks like a proper noun
-    if (term.includes(" ") || /[A-Z]/.test(term) || term.length >= 6) out.add(term);
+    if (term.includes(" ") || term.length >= 5) out.add(term); // multi-word, or a real single-word name
   }
   return [...out];
+}
+
+// True only if `term` appears in `body` as a PROPER NOUN (capitalized first letter) — proper nouns
+// (Zendaya, Christopher Nolan, Oppenheimer) qualify; a common-noun mention ("production budget") does not.
+function properNounAt(body, term) {
+  const re = new RegExp(`\\b${escapeRe(term)}\\b`, "gi"); // match case-insensitively…
+  let m;
+  while ((m = re.exec(body))) {
+    if (/[A-Z]/.test(body[m.index])) return m.index; // …but only accept a Capitalized (proper-noun) occurrence
+  }
+  return -1;
 }
 
 // Build an index of EXISTING published articles (excluding the one being written).
@@ -76,8 +94,8 @@ export function pickInternalLinks({ title, tags = [], category, body }, index, {
     const shared = a.tags.filter((t) => myTags.has(String(t).toLowerCase()) && !GENERIC.has(String(t).toLowerCase()));
     let score = shared.length * 3 + (a.category === category ? 1 : 0);
     if (score === 0) continue; // require a real shared entity/tag
-    const anchor = a.anchors.find((term) => bodyHas(body, term));
-    if (!anchor) continue; // require a real phrase in THIS body to attach the link to
+    const anchor = a.anchors.find((term) => properNounAt(body, term) >= 0);
+    if (!anchor) continue; // require the entity to appear as a PROPER NOUN in THIS body
     scored.push({ slug: a.slug, title: a.title, category: a.category, anchor, score });
   }
   scored.sort((x, y) => y.score - x.score);
@@ -104,14 +122,14 @@ export function injectInternalLinks(body, picks) {
   let out = stripPhantomLinkPhrases(body);
   for (const p of picks) {
     const href = `/${p.category}/${p.slug}/`;
-    const re = new RegExp(`\\b(${escapeRe(p.anchor)})\\b`, "i");
     const lines = out.split("\n");
     let done = false;
     for (let i = 0; i < lines.length && !done; i++) {
-      if (/^#{1,6}\s/.test(lines[i]) || /^\s*##? Sources/i.test(lines[i])) continue;
-      const m = re.exec(lines[i]);
-      if (m && !isInsideLink(lines[i], m.index)) {
-        lines[i] = lines[i].slice(0, m.index) + `[${m[1]}](${href})` + lines[i].slice(m.index + m[1].length);
+      if (/^#{1,6}\s/.test(lines[i]) || /^\s*##? Sources/i.test(lines[i]) || lines[i].includes("](")) continue;
+      const idx = properNounAt(lines[i], p.anchor); // only a Capitalized proper-noun occurrence
+      if (idx >= 0 && !isInsideLink(lines[i], idx)) {
+        const matched = lines[i].slice(idx, idx + p.anchor.length);
+        lines[i] = lines[i].slice(0, idx) + `[${matched}](${href})` + lines[i].slice(idx + p.anchor.length);
         done = true;
       }
     }
