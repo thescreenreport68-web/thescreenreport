@@ -63,7 +63,7 @@ export function deterministic(article, topic) {
     awards: { words: 300, faq: 3, h2: 1, kt: 3, ext: 2, sources: true },
   };
   // Defaults RELAXED (anti over-SEO): FAQ 6->4 (Google removed FAQ rich results), H2 3->2, body 500->400.
-  const p = PROFILE[topic.formatTag] || { words: 400, faq: 4, h2: 2, kt: 3, ext: 2, sources: true };
+  const p = PROFILE[topic.formatTag] || { words: 400, faq: 3, h2: 2, kt: 3, ext: 2, sources: true };
 
   const hardBlocks = [];
   if (!article.title) hardBlocks.push("no title");
@@ -88,7 +88,9 @@ export function deterministic(article, topic) {
   const flesch = Math.round(fleschReadingEase(prose));
   const bannedTells = (prose.match(BANNED_TELLS) || []).length;
   const kwExact = kw ? prose.toLowerCase().split(kw).length - 1 : 0;
-  if (maxSentence > 45) hardBlocks.push(`a ${maxSentence}-word sentence (>45 — split it; unreadable)`);
+  // A single long sentence is tolerable (burstiness); a genuine run-on is not. Overall density is caught
+  // by Flesch (<40 blocks) + the avg-sentence/readability scores — so hard-block only true run-ons (>55).
+  if (maxSentence > 55) hardBlocks.push(`a ${maxSentence}-word run-on sentence (>55 — split it)`);
   if (flesch < 40) hardBlocks.push(`Flesch ${flesch} < 40 (too dense to read comfortably)`);
   if (kwExact > 8) hardBlocks.push(`keyword stuffed (exact phrase ${kwExact}x)`);
 
