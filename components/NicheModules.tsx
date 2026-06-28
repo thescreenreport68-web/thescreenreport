@@ -1,12 +1,13 @@
 import type { Article } from "@/lib/articles";
 import YouTubeEmbed from "@/components/embed/YouTubeEmbed";
 import SocialReactionGrid from "@/components/embed/SocialReactionGrid";
+import { MusicTop, MusicBottom } from "@/components/MusicModules";
 
 /* Per-niche UI modules, rendered on top of the shared article base.
    Each article only carries the fields for its own niche, so the dispatchers
    (NicheTop / NicheBottom) simply render whatever structured data is present. */
 
-function SectionLabel({ children }: { children: React.ReactNode }) {
+export function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
     <div className="mb-2 font-sans text-xs font-bold uppercase tracking-[0.14em] text-breaking">
       {children}
@@ -476,7 +477,8 @@ export function NicheTop({ article }: { article: Article }) {
       {article.formatTag === "reaction" ? <ConsensusBox article={article} /> : null}
       {article.formatTag === "news" ? <NewsPullQuote article={article} /> : null}
       {article.formatTag === "box-office" ? <BoxOfficeModule article={article} /> : null}
-      {article.formatTag === "awards" ? <AwardsHeader article={article} /> : null}
+      {article.formatTag === "awards" || article.formatTag === "music-awards" ? <AwardsHeader article={article} /> : null}
+      <MusicTop article={article} />
       <SpoilerBanner article={article} />
       <VerdictBox article={article} />
       <TLDR article={article} />
@@ -495,7 +497,8 @@ export function NicheBottom({ article }: { article: Article }) {
     <>
       {article.filmography?.length ? <Filmography filmography={article.filmography} /> : null}
       {article.formatTag === "reaction" ? <ReactionSection article={article} /> : null}
-      {article.formatTag === "awards" ? <AwardsWinnersList article={article} /> : null}
+      {article.formatTag === "awards" || article.formatTag === "music-awards" ? <AwardsWinnersList article={article} /> : null}
+      <MusicBottom article={article} />
     </>
   );
 }
