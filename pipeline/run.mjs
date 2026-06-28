@@ -122,10 +122,20 @@ for (let i = 0; i < topics.length; i++) {
       if (boSec) { topic.facts.push({ title: "WIKIPEDIA BOX OFFICE & RECEPTION (verified, sourced — use these splits/records; do not invent)", extract: boSec }); console.log(`  wiki box-office section: ${boSec.length} chars`); }
     }
 
-    // Awards niche: pull the ceremony's full winners/nominees from Wikipedia (accuracy-critical — never invent).
-    if (topic.formatTag === "awards") {
-      const awSec = await wikiSection(topic.primaryEntity, ["Winners and nominees", "Winners", "Awards", "Ceremony"]);
-      if (awSec) { topic.facts.push({ title: "WIKIPEDIA WINNERS & NOMINEES (verified — use ONLY these winners; never invent a winner/nominee/record)", extract: awSec }); console.log(`  wiki winners section: ${awSec.length} chars`); }
+    // Awards-family niches (film/TV awards, music awards, predictions): pull the ceremony's full winners/
+    // nominees from Wikipedia (accuracy-critical — never invent). Predictions ground on the nominations.
+    if (["awards", "music-awards", "predictions"].includes(topic.formatTag)) {
+      const awSec = await wikiSection(topic.primaryEntity, ["Winners and nominees", "Winners", "Nominees", "Nominations", "Awards", "Ceremony"]);
+      if (awSec) { topic.facts.push({ title: "WIKIPEDIA WINNERS & NOMINEES (verified — use ONLY these winners/nominees; never invent one)", extract: awSec }); console.log(`  wiki winners section: ${awSec.length} chars`); }
+    }
+    // Music-profile + screen-music: ground the relevant Wikipedia section (discography/awards or soundtrack)
+    // so the structured fields (careerArc/stats, soundtrack rows) draw from sourced facts, not invention.
+    if (topic.formatTag === "music-profile" || topic.formatTag === "screen-music") {
+      const secs = topic.formatTag === "music-profile"
+        ? ["Discography", "Awards and nominations", "Awards", "Artistry", "Career"]
+        : ["Soundtrack", "Music", "Production", "Reception"];
+      const mSec = await wikiSection(topic.primaryEntity, secs);
+      if (mSec) { topic.facts.push({ title: "WIKIPEDIA MUSIC FACTS (verified — use ONLY these; never invent a chart figure, award, or song)", extract: mSec.slice(0, 4000) }); console.log(`  wiki music section: ${mSec.length} chars`); }
     }
 
     // PROFILE niche: hand the writer a REAL dated filmography (TMDB) + verified award wins/noms (Wikidata)

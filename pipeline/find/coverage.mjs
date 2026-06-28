@@ -81,8 +81,34 @@ const SEEDS = {
   "movies/reactions": () => ({ _hard: true }), // needs live social discovery — flagged, not faked
   "tv/reactions": () => ({ _hard: true }),
   "awards/winners": () => ({ title: "Every Winner at the 97th Academy Awards", primaryEntity: "97th Academy Awards", primaryKeyword: "2025 oscars winners", formatTag: "awards" }),
-  "awards/predictions": () => ({ title: "2026 Emmy Predictions: The Frontrunners So Far", primaryEntity: "77th Primetime Emmy Awards", primaryKeyword: "2026 emmy predictions", formatTag: "news" }),
+  "awards/predictions": () => ({ title: "2026 Emmy Predictions: The Frontrunners So Far", primaryEntity: "77th Primetime Emmy Awards", primaryKeyword: "2026 emmy predictions", formatTag: "predictions" }),
+  // MUSIC fills (grounded on rich Wikipedia pages; mk() assigns the music-* formatTag by category).
+  "music/news": () => ROTATE([
+    { title: "Cowboy Carter: Inside Beyoncé's Genre-Bending Album", primaryEntity: "Cowboy Carter", primaryKeyword: "beyonce cowboy carter", entities: ["Beyoncé"] },
+    { title: "The Tortured Poets Department: Inside Taylor Swift's Album", primaryEntity: "The Tortured Poets Department", primaryKeyword: "tortured poets department", entities: ["Taylor Swift"] },
+  ]),
+  "music/awards": () => ROTATE([
+    { title: "Every Winner at the 2025 Grammy Awards", primaryEntity: "67th Annual Grammy Awards", primaryKeyword: "2025 grammy winners" },
+    { title: "Every Winner at the 2024 Grammy Awards", primaryEntity: "66th Annual Grammy Awards", primaryKeyword: "2024 grammy winners" },
+  ]),
+  "music/profiles-artists": () => ROTATE([
+    { title: "Bad Bunny: The Career That Rewired Pop", primaryEntity: "Bad Bunny", primaryKeyword: "bad bunny career", entities: ["Bad Bunny"] },
+    { title: "Olivia Rodrigo's Career So Far, Explained", primaryEntity: "Olivia Rodrigo", primaryKeyword: "olivia rodrigo career" },
+  ]),
+  "music/screen-music": () => ROTATE([
+    { title: "How 'Running Up That Hill' Took Over Stranger Things", primaryEntity: "Running Up That Hill", primaryKeyword: "running up that hill stranger things", entities: ["Stranger Things", "Kate Bush"] },
+    { title: "Inside the Barbie Soundtrack", primaryEntity: "Barbie the Album", primaryKeyword: "barbie soundtrack", entities: ["Barbie (film)"] },
+  ]),
 };
+
+// Category-aware formatTag overrides for the new forms (PR1) — these slots are unambiguous by cat+sub.
+const MUSIC_FT = { news: "music-news", awards: "music-awards", "profiles-artists": "music-profile", "screen-music": "screen-music" };
+function formatFor(cat, sub, o) {
+  if (cat === "music") return MUSIC_FT[sub] || "music-news";
+  if (cat === "streaming" && sub === "where-to-watch") return "watchguide";
+  if (cat === "awards" && sub === "predictions") return "predictions";
+  return o.formatTag || FORMAT_BY_SUB[sub] || "news";
+}
 
 const FORMAT_BY_SUB = {
   "rankings-lists": "list", explainers: "explainer", trailers: "trailer", reactions: "reaction", news: "news",
@@ -91,7 +117,7 @@ const FORMAT_BY_SUB = {
 };
 
 function mk(cat, sub, o) {
-  const ft = o.formatTag || FORMAT_BY_SUB[sub] || "news";
+  const ft = formatFor(cat, sub, o);
   return {
     id: `${ft}-${slugify(o.primaryKeyword || o.title || cat + "-" + sub)}`.slice(0, 80),
     slug: slugify(o.title || o.primaryKeyword),
