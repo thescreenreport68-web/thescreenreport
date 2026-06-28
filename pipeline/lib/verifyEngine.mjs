@@ -168,14 +168,17 @@ export function verifyGroundTruth(article, topic) {
     }
   }
 
-  // ── Layer 1d — DIRECTOR (conservative: only an explicit "directed by NAME" that clearly mismatches) ──
+  // ── Layer 1d — DIRECTOR, CROSS-SOURCED (TMDB + OMDb, PR8 independent credits cross-check) ──
+  // Only flag an explicit "directed by NAME" that mismatches BOTH independent sources, so a single-source
+  // error never false-blocks; when TMDB and OMDb AGREE, a mismatch is a high-confidence CONTRADICTED.
   if (tf && tf.director) {
-    const dirNames = tf.director.split(/,|&|and/).map((s) => norm(s)).filter((s) => s.length > 3);
+    const dirNames = [tf.director, o?.director].filter(Boolean).join(", ").split(/,|&|\band\b/).map((s) => norm(s)).filter((s) => s.length > 3);
+    const agree = o?.director && norm(o.director).includes(norm(tf.director.split(/,|&|and/)[0]));
     const m = [...text.matchAll(/directed by ([A-Z][a-zA-Z.'-]+(?:\s+[A-Z][a-zA-Z.'-]+){1,2})/g)];
     for (const x of m) {
       const claimed = norm(x[1]);
       if (claimed.length > 4 && !dirNames.some((d) => d.includes(claimed) || claimed.includes(d))) {
-        findings.push({ layer: "director", severity: "CONTRADICTED", claim: `article says ${title} is "directed by ${x[1]}"`, correct: tf.director, why: `TMDB credits the director of ${title} as ${tf.director}, not ${x[1]}. Correct it.` });
+        findings.push({ layer: "director", severity: "CONTRADICTED", claim: `article says ${title} is "directed by ${x[1]}"`, correct: tf.director, why: `The director of ${title} is ${tf.director}${agree ? " (TMDB + OMDb agree)" : o?.director ? ` (TMDB) / ${o.director} (OMDb)` : " (TMDB)"}, not ${x[1]}. Correct it.` });
       }
     }
   }
@@ -207,6 +210,25 @@ export function verifyGroundTruth(article, topic) {
         // (b) Fallback: no authoritative category match → require the winner to at least appear in the facts.
         const grounded = (who && factsText.includes(who)) || (what && factsText.includes(what));
         if (!grounded) findings.push({ layer: "awards", severity: "NO_RECEIPT", claim: `winner "${nom.name || nom.title}" in ${cat.categoryName || "a category"}`, correct: "not found in grounded facts", why: `The structured winner "${nom.name || nom.title}" (${cat.categoryName}) does not appear anywhere in the reference facts — verify it against the official winners list or remove it (never publish an unverified winner).` });
+      }
+    }
+  }
+
+  // ── Layer 3 — MUSIC CHART (Billboard Hot 100 diff, PR6/music chart-diff) ── compares a stated Hot 100
+  // position against the grounded Billboard entry (topic._music.billboard); flags a fabricated one, and flags
+  // ANY Hot 100 number when the artist has no current entry (historical peaks aren't in the free grounding).
+  const mus = topic._music || null;
+  if (mus && ["music-profile", "music-news", "music-awards", "screen-music"].includes(topic.formatTag)) {
+    const stated =
+      (text.match(/(?:number\s*|#|no\.?\s*)(\d{1,3})[^.\n]{0,30}?(?:billboard\s*)?(?:hot\s*100|hot100|the chart)/i) ||
+       text.match(/(?:billboard\s*hot\s*100|hot\s*100|billboard chart)[^.\n]{0,30}?(?:number\s*|#|no\.?\s*)(\d{1,3})/i) ||
+       text.match(/(?:peaked|debuted|reached)[^.\n]{0,25}?(?:number\s*|#|no\.?\s*)(\d{1,3})[^.\n]{0,20}?(?:billboard\s*)?(?:hot\s*100|chart)/i) || [])[1];
+    if (stated != null) {
+      const n = Number(stated), bb = mus.billboard;
+      if (!bb) {
+        findings.push({ layer: "music-chart", severity: "CONTRADICTED", claim: `article states a Hot 100 position (#${n})`, correct: "no current Hot 100 entry", why: `No current Billboard Hot 100 entry exists for ${mus.name}, and historical chart peaks are not in the grounded facts. Do NOT state a Hot 100 position — speak qualitatively about chart success.` });
+      } else if (n !== bb.thisWeek && n !== bb.peak) {
+        findings.push({ layer: "music-chart", severity: "CONTRADICTED", claim: `article states Hot 100 #${n}`, correct: `#${bb.thisWeek} (peak #${bb.peak})`, why: `Billboard shows "${bb.song}" at #${bb.thisWeek} (peak #${bb.peak}, ${bb.date}) on the Hot 100, not #${n}. Use the correct figure or speak qualitatively.` });
       }
     }
   }
