@@ -3,6 +3,7 @@ import YouTubeEmbed from "@/components/embed/YouTubeEmbed";
 import SocialReactionGrid from "@/components/embed/SocialReactionGrid";
 import { MusicTop, MusicBottom } from "@/components/MusicModules";
 import { PlaybookTop, PlaybookBottom } from "@/components/PlaybookModules";
+import { RankingEntries, BestOfEntries, WeekendChart, RevealSpine, ReadingModeBox } from "@/components/CategoryUI";
 
 /* Per-niche UI modules, rendered on top of the shared article base.
    Each article only carries the fields for its own niche, so the dispatchers
@@ -478,6 +479,9 @@ export function NicheTop({ article }: { article: Article }) {
     <>
       <PlaybookTop article={article} />
       {article.formatTag === "trailer" ? <TrailerModule article={article} /> : null}
+      {article.formatTag === "trailer" ? <RevealSpine article={article} /> : null}
+      {article.formatTag === "explainer" ? <ReadingModeBox article={article} /> : null}
+      {article.formatTag === "box-office" ? <WeekendChart weekendChart={article.weekendChart || []} /> : null}
       {article.formatTag === "interview" ? <InterviewModule article={article} /> : null}
       {article.formatTag === "reaction" ? <ConsensusBox article={article} /> : null}
       {article.formatTag === "news" ? <NewsPullQuote article={article} /> : null}
@@ -501,6 +505,8 @@ export function NicheBottom({ article }: { article: Article }) {
   return (
     <>
       {article.filmography?.length ? <Filmography filmography={article.filmography} /> : null}
+      {article.formatTag === "list" ? <RankingEntries entries={article.entries || []} /> : null}
+      {article.formatTag === "guide" ? <BestOfEntries entries={article.entries || []} /> : null}
       {article.formatTag === "reaction" ? <ReactionSection article={article} /> : null}
       {article.formatTag === "awards" || article.formatTag === "music-awards" ? <AwardsWinnersList article={article} /> : null}
       <MusicBottom article={article} />

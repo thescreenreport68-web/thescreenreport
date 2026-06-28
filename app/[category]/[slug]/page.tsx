@@ -6,6 +6,7 @@ import PlaceholderImage from "@/components/PlaceholderImage";
 import ArticleBody from "@/components/ArticleBody";
 import KeyTakeaways from "@/components/KeyTakeaways";
 import { NicheTop, NicheBottom } from "@/components/NicheModules";
+import { CategoryKicker } from "@/components/CategoryUI";
 import Faq from "@/components/Faq";
 import AuthorBox from "@/components/AuthorBox";
 import NewsletterBand from "@/components/NewsletterBand";
@@ -229,7 +230,13 @@ export default function ArticlePage({
                 ? article.newsType.replace(/-/g, " ")
                 : `${cat?.name ?? ""} News`}
             </div>
-          ) : null}
+          ) : (
+            <CategoryKicker
+              href={`/${article.category}/`}
+              categoryName={cat?.name ?? ""}
+              subName={article.subcategory ? article.subcategory.replace(/-/g, " ") : undefined}
+            />
+          )}
           <h1 className="mt-1 font-display text-4xl font-bold leading-[0.95] tracking-tight text-navy sm:text-5xl lg:text-[3.4rem] xl:text-[4rem]">
             {article.title}
           </h1>
