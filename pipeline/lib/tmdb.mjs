@@ -239,7 +239,7 @@ export function boxOfficeFactBlock(b) {
   if (b.budget) lines.push(`Production budget: ${b.budget} (before marketing)`);
   if (b.worldwide) lines.push(`Worldwide gross: ${b.worldwide} (TMDB, verified — use this EXACT figure as the worldwide total)`);
   if (b.releaseDate) lines.push(`US release date: ${b.releaseDate}`);
-  lines.push("RULE: use ONLY box-office figures that appear in these facts or the Wikipedia box-office section. NEVER invent a number, an opening-weekend figure, a domestic/international split, or a record. When comparing across different eras, note figures are 'not adjusted for inflation'.");
+  lines.push("RULE: use ONLY box-office figures that appear in these facts (the verified TMDB worldwide/budget + OMDb US domestic). NEVER invent a number, an opening-weekend figure, a domestic/international split, or a record. When comparing across different eras, note figures are 'not adjusted for inflation'.");
   return lines.join("\n");
 }
 

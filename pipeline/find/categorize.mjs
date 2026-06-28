@@ -95,12 +95,12 @@ const SCHEMA = `Return JSON: {"items":[{
  "sensitivity": "high|normal",   // high ONLY for death/health-crisis/legal/arrest — these need extra source confirmation
  "eventSlug": "outlet-agnostic kebab slug of the underlying EVENT so two outlets reporting the same story collide, e.g. 'pedro-pascal-fantastic-four-reshoots'",
  "primaryKeyword": "the real search query a fan would type, e.g. 'superman trailer' or 'zendaya movies'",
- "primaryEntity": "the EXACT English Wikipedia article title of the most-established PERSON / FILM / SHOW central to the story (the one CERTAIN to have a Wikipedia page) incl. disambiguator, e.g. 'Pedro Pascal' or 'Superman (2025 film)'. This is the ENTITY, never the event.",
- "entities": ["2-4 supporting exact Wikipedia titles (director, lead cast, related film/show)"],
+ "primaryEntity": "the EXACT canonical name of the most-established PERSON / FILM / SHOW central to the story (a real, notable entity), with a year disambiguator only if needed, e.g. 'Pedro Pascal' or 'Superman (2025 film)'. This is the ENTITY, never the event.",
+ "entities": ["2-4 supporting exact entity names (director, lead cast, related film/show)"],
  "angle": "one-line TRUE angle",
  "title": "a working headline"
 }]}
-Only include RELEVANT items. primaryEntity MUST be a real, unambiguous Wikipedia page (pick the most famous anchor entity, not the brand-new thing that may have no page yet).`;
+Only include RELEVANT items. primaryEntity MUST be a real, unambiguous, notable PERSON/FILM/SHOW (pick the most famous anchor entity; a brand-new or unreleased title is fine as long as it is a real one).`;
 
 export async function categorize(candidates, monitor, { model = MODELS.classifier, batch = 8 } = {}) {
   const topics = [];
