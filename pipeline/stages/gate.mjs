@@ -32,6 +32,16 @@ function fleschReadingEase(text) {
 // Generic-AI / over-SEO "tells" — counted as a quality signal, NOT an AI detector.
 const BANNED_TELLS = /\b(delve|tapestry|testament|pivotal|underscore|crucial|realm|boasts|elevate|intricate|seamless|nuanced|robust|multifaceted|foster|in the world of|when it comes to|it'?s worth noting|buckle up|in conclusion|at the end of the day|needless to say|stands? the test of time|cements? (his|her|its|their) (place|status|legacy)|not just .{1,45}? it'?s|moreover|furthermore|additionally)\b/gi;
 
+// FIX-3 (engagement) — breathless filler-praise intensifiers. One, backed by a concrete detail, is fine;
+// a PILE-UP is the AI-review tell that kills reader trust. Counted as a metric for the judge, and hard-
+// blocked only on an egregious pile-up (so genuinely vivid writing still passes).
+const FILLER_PRAISE = /\b(stunning|masterful|breathless|breathtaking|immersive|gripping|riveting|mesmeriz\w+|electrifying|spellbinding|tour de force|visceral|enthralling|dazzling|jaw-dropping|awe-inspiring|powerhouse|unforgettable|captivating|spectacular|phenomenal)\b/gi;
+
+// FIX-3 — PROMPT-LEAK / META-REFUSAL phrases that must NEVER reach a reader. These leaked into FAQ copy
+// AND the JSON-LD in prior drafts. They reference the prompt's own machinery ("the provided/reference
+// facts", "as an AI") — unambiguous artifacts, so a hard-block here is safe (no legitimate-prose collision).
+const PROMPT_LEAK = /\b(not (?:detailed|specified|mentioned|provided|stated|available|listed|included|clear) in the (?:provided |reference |given |available )?(?:facts|information|sources|text|article|context|material)|the (?:provided |reference |given )?(?:facts|information|sources|context)\b[^.]{0,40}?\b(?:do(?:es)?n'?t|do not|does not) (?:detail|specify|mention|provide|include|state|cover)|based on the provided (?:facts|information|context|sources)|as an ai(?: language model)?|i (?:cannot|can'?t|do not|don'?t) (?:have|provide|access)|the reference facts)\b/i;
+
 // Deterministic, free checks computed from the article object (no LLM).
 export function deterministic(article, topic) {
   const body = article.body || "";
@@ -87,6 +97,7 @@ export function deterministic(article, topic) {
   const avgSentence = sentLens.length ? Math.round(sentLens.reduce((a, b) => a + b, 0) / sentLens.length) : 0;
   const flesch = Math.round(fleschReadingEase(prose));
   const bannedTells = (prose.match(BANNED_TELLS) || []).length;
+  const fillerPraise = (prose.match(FILLER_PRAISE) || []).length;
   const kwExact = kw ? prose.toLowerCase().split(kw).length - 1 : 0;
   // A single long sentence is tolerable (burstiness); a genuine run-on is not. Overall density is caught
   // by Flesch (<40 blocks) + the avg-sentence/readability scores — so hard-block only true run-ons (>55).
@@ -94,10 +105,18 @@ export function deterministic(article, topic) {
   if (flesch < 40) hardBlocks.push(`Flesch ${flesch} < 40 (too dense to read comfortably)`);
   if (kwExact > 8) hardBlocks.push(`keyword stuffed (exact phrase ${kwExact}x)`);
 
+  // FIX-3: a meta-refusal / prompt-leak phrase anywhere a reader can see it (body, FAQ, takeaways, dek) is
+  // a hard fail — it both breaks the reading experience and poisons the FAQ JSON-LD. Force a rewrite.
+  const readerCopy = [body, article.dek || "", ...(article.faq || []).flatMap((f) => [f?.q, f?.a]), ...(article.keyTakeaways || [])].filter(Boolean).join("\n");
+  if (PROMPT_LEAK.test(readerCopy)) hardBlocks.push("prompt-leak / meta-refusal phrase reached reader copy (e.g. 'not detailed in the provided facts' / 'the reference facts') — rewrite or omit");
+  // FIX-3: breathless filler pile-up. Threshold is deliberately high (5) so vivid-but-earned writing passes;
+  // the judge weighs the 1-4 range via humanVoice using the fillerPraise metric below.
+  if (fillerPraise >= 5) hardBlocks.push(`breathless filler pile-up (${fillerPraise} empty intensifiers — back them with specifics or cut)`);
+
   return {
     words, h2s: h2s.length, h2Questions, internalLinks, externalLinks,
     hasSources, faqCount, ktCount, kwInTitle, kwInFirst100, kwInH2,
-    maxSentence, avgSentence, flesch, bannedTells, kwExact, hardBlocks,
+    maxSentence, avgSentence, flesch, bannedTells, fillerPraise, kwExact, hardBlocks,
   };
 }
 
@@ -130,7 +149,7 @@ TOPIC: ${topic.title} (${topic.contentType})
 ${topic.formatTag === "news" ? "NOTE: this is a SHORT-NEWS article — judge it by news standards (fast inverted-pyramid lead, freshness, every claim sourced/attributed, one unique sourced fact beyond the headline). Do NOT penalize it for being shorter than a feature, for fewer FAQ/H2s, or for not having a long analysis section; reward tight, accurate, well-attributed reporting." : ""}
 ${topic.formatTag === "box-office" ? "NOTE: this is a BOX-OFFICE report — judge it by TRADE-NEWS standards (Variety/Deadline), not feature-review standards. A crisp, authoritative, well-organized piece with accurate figures, the records in context, and a real analytical angle on what the result MEANS is excellent here — score humanVoice and infoGain on that basis (8-9 for a clear, insightful data story); do NOT require essayistic wit. Every dollar figure/record MUST match the facts." : ""}
 ${topic.formatTag === "awards" ? "NOTE: this is an AWARDS WINNERS-LIST — judge it by reference-news standards. The structured winners list renders separately, so the BODY is a lede + 'biggest winners/moments' + records; reward a strong decisive lede, accurate marquee winners, and records in context (score humanVoice/infoGain on that basis, not on essayistic length). CRITICAL: every winner/nominee/record MUST match the facts — hard-block ANY invented winner, nominee, host, venue, edition, or record." : ""}
-${metrics ? `EDITOR METRICS (deterministic — factor into readability/phrasing/humanVoice): Flesch ${metrics.flesch} (target 60-72; <50 reads dense), avg sentence ${metrics.avgSentence}w, longest sentence ${metrics.maxSentence}w, generic-tell/AI-cliche hits ${metrics.bannedTells}, exact-keyword repeats ${metrics.kwExact}.` : ""}
+${metrics ? `EDITOR METRICS (deterministic — factor into readability/phrasing/humanVoice): Flesch ${metrics.flesch} (target 60-72; <50 reads dense), avg sentence ${metrics.avgSentence}w, longest sentence ${metrics.maxSentence}w, generic-tell/AI-cliche hits ${metrics.bannedTells}, breathless filler-praise hits ${metrics.fillerPraise ?? 0} (each unbacked "stunning/masterful/riveting" is an AI-review tell — dock humanVoice), exact-keyword repeats ${metrics.kwExact}.` : ""}
 
 REFERENCE FACTS the article was grounded on (these are VERIFIED, including live streaming availability from TMDB). Treat any claim consistent with these as accurate. Only record a hardBlock for a claim that CONTRADICTS these facts, or a clearly invented quote/stat/event with no basis here. Do NOT hardBlock for incompleteness, for current-availability claims that match these facts, or for facts you personally can't verify but that appear here:
 ${facts}

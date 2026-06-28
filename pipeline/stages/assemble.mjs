@@ -8,6 +8,10 @@ import { addInternalLinks } from "../lib/internalLinks.mjs";
 
 const ART = "/Users/sivajithcu/Movie News site/site/content/articles";
 
+// Meta-refusal / prompt-leak phrases a reader (or the FAQ JSON-LD) must never see — assemble-level
+// insurance behind the gate's PROMPT_LEAK hard-block.
+const FAQ_LEAK = /\b(not (?:detailed|specified|mentioned|provided|stated|available|listed|included) in the (?:provided |reference |given |available )?(?:facts|information|sources|text|article|context|material)|the (?:provided |reference |given )?(?:facts|information|sources) (?:do(?:es)?n'?t|do not|does not)|based on the provided (?:facts|information)|as an ai|the reference facts)\b/i;
+
 const slugify = (s) =>
   s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 75);
 
@@ -27,15 +31,33 @@ function validPaths() {
 
 export function assemble({ article, classification, image, topic, dateISO }) {
   const valid = validPaths();
-  // Keep internal links that resolve to a real page; otherwise drop the link, keep the text.
+  // Keep internal links that resolve to a real page; otherwise drop the link, keep the text. A BARE
+  // homepage link ("[x](/)") is low-value filler the owner banned — drop it (keep the text) too.
   const fixLinks = (s) =>
     typeof s === "string"
       ? s.replace(/\[([^\]]+)\]\((\/[^)]*)\)/g, (m, txt, href) => {
           const norm = href.endsWith("/") ? href : href + "/";
+          if (norm === "/") return txt; // bare homepage link → strip, keep text
           return valid.has(norm) ? `[${txt}](${norm})` : txt;
         })
       : s;
-  let body = fixLinks(article.body || "");
+  // FIX-3: never publish a link to a COMPETITOR outlet (THR/Variety/Deadline/etc.) — strip it, keep the
+  // text. Attribution stays as a plain name ("according to Variety"), never a hyperlink (owner decision).
+  // Editorial RIVALS only — NOT data sources like Rotten Tomatoes / Metacritic / Box Office Mojo /
+  // Wikipedia / Oscars.org, which the writer is allowed to cite (homepage) for credibility.
+  const COMPETITOR = /(?:hollywoodreporter|variety|deadline|screenrant|collider|indiewire|slashfilm|ign|thewrap|empireonline|gamespot|cbr)\.[a-z.]+/i;
+  const stripCompetitorLinks = (s) =>
+    typeof s === "string"
+      ? s.replace(/\[([^\]]+)\]\((https?:\/\/[^)]+)\)/gi, (m, txt, href) => (COMPETITOR.test(href) ? txt : m))
+      : s;
+  const clean = (s) => stripCompetitorLinks(fixLinks(s));
+  // FAQ answers render as PLAIN TEXT in the app — strip ALL markdown (links → their text, emphasis markers)
+  // so nothing renders as a literal "[x](/y)" or "**bold**".
+  const faqPlain = (s) =>
+    typeof s === "string"
+      ? s.replace(/\[([^\]]+)\]\([^)]*\)/g, "$1").replace(/[*_`]/g, "").replace(/\s{2,}/g, " ").trim()
+      : s;
+  let body = clean(article.body || "");
 
   const slug = topic.slug || slugify(article.title);
   // Support-system #1: insert 2-3 REAL, tone-safe internal links to related published articles +
@@ -60,7 +82,12 @@ export function assemble({ article, classification, image, topic, dateISO }) {
     tags: classification.tags?.length ? classification.tags : article.tags || [],
     targetKeyword: topic.primaryKeyword,
     keyTakeaways: article.keyTakeaways || [],
-    faq: (article.faq || []).filter((f) => f && f.q && f.a).map((f) => ({ ...f, a: fixLinks(f.a) })),
+    // Drop any FAQ that leaked a meta-refusal (insurance behind the gate's hard-block — a reader/JSON-LD
+    // must never see "not detailed in the provided facts"). The Faq component renders the answer as PLAIN
+    // TEXT, so flatten any markdown (links/emphasis) to text — otherwise "[x](/y)" shows literally (FIX-3).
+    faq: (article.faq || [])
+      .filter((f) => f && f.q && f.a && !FAQ_LEAK.test(`${f.q} ${f.a}`))
+      .map((f) => ({ q: faqPlain(f.q), a: faqPlain(f.a) })),
     about: Array.isArray(article.about) ? article.about.filter((e) => e && e.name && e.type) : [],
     imageAlt,
     imageCredit: image?.credit || "Wikimedia Commons",

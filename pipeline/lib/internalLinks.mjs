@@ -47,13 +47,21 @@ function anchorTerms(title, tags) {
 
 // True only if `term` appears in `body` as a PROPER NOUN (capitalized first letter) — proper nouns
 // (Zendaya, Christopher Nolan, Oppenheimer) qualify; a common-noun mention ("production budget") does not.
+// FIX-3: a capital at the START of a sentence is NOT proof of a proper noun ("Best films..." opens a
+// sentence but "Best" is not an entity). So we PREFER a mid-sentence capitalized occurrence; we accept a
+// sentence-initial one only for a MULTI-WORD term (e.g. "Christopher Nolan"), never a single common word.
 function properNounAt(body, term) {
   const re = new RegExp(`\\b${escapeRe(term)}\\b`, "gi"); // match case-insensitively…
-  let m;
+  const multiWord = /\s/.test(term);
+  let m, fallback = -1;
   while ((m = re.exec(body))) {
-    if (/[A-Z]/.test(body[m.index])) return m.index; // …but only accept a Capitalized (proper-noun) occurrence
+    if (!/[A-Z]/.test(body[m.index])) continue; // …only a Capitalized (proper-noun) occurrence
+    const pre = body.slice(0, m.index).replace(/["'’)\]\s]+$/, ""); // ignore trailing quotes/brackets/space
+    const sentenceInitial = pre === "" || /[.!?:\n]$/.test(pre);
+    if (!sentenceInitial) return m.index; // mid-sentence capital = a solid proper noun
+    if (multiWord && fallback < 0) fallback = m.index; // multi-word name is OK even sentence-initial
   }
-  return -1;
+  return fallback; // only sentence-initial occurrences existed → accept iff multi-word, else -1
 }
 
 // Build an index of EXISTING published articles (excluding the one being written).
@@ -125,7 +133,9 @@ export function injectInternalLinks(body, picks) {
     const lines = out.split("\n");
     let done = false;
     for (let i = 0; i < lines.length && !done; i++) {
-      if (/^#{1,6}\s/.test(lines[i]) || /^\s*##? Sources/i.test(lines[i]) || lines[i].includes("](")) continue;
+      // Skip headings, the Sources list, a line that already has a link, and TABLE ROWS — injecting a
+      // link inside a "| cell | cell |" row breaks the markdown table (FIX-3).
+      if (/^#{1,6}\s/.test(lines[i]) || /^\s*##? Sources/i.test(lines[i]) || lines[i].includes("](") || /^\s*\|/.test(lines[i])) continue;
       const idx = properNounAt(lines[i], p.anchor); // only a Capitalized proper-noun occurrence
       if (idx >= 0 && !isInsideLink(lines[i], idx)) {
         const matched = lines[i].slice(idx, idx + p.anchor.length);
