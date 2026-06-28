@@ -38,6 +38,9 @@ export const TAXONOMY = {
   celebrity: ["profiles-careers", "interviews", "news"],
   reviews: ["movie-reviews", "tv-reviews"],
   awards: ["winners", "predictions"],
+  // MUSIC (decided 2026-06-28, MUSIC_CATEGORY_PLAN.md) — ONE silo, narrow on-brand scope. The
+  // popular(6%)-vs-indie(4%) split is an ORTHOGONAL FIND axis (topic.tier), not a subcategory.
+  music: ["news", "awards", "profiles-artists", "screen-music"],
 };
 
 export const GATE = { publishMin: 80, infoGainMin: 7 };

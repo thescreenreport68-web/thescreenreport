@@ -4,7 +4,11 @@ import { TAXONOMY } from "../config.mjs";
 const CATS = Object.keys(TAXONOMY);
 
 // Embed niches are known from the seed topic (not guessed) → snap them to their real home.
-const NICHE_SUB = { trailer: "trailers", interview: "interviews", reaction: "reactions", news: "news", "box-office": "box-office", awards: "winners" };
+const NICHE_SUB = {
+  trailer: "trailers", interview: "interviews", reaction: "reactions", news: "news", "box-office": "box-office", awards: "winners",
+  // MUSIC formatTags → their music subcategory (FIND sets the formatTag; MAKE trusts it for routing).
+  "music-news": "news", "music-awards": "awards", "music-profile": "profiles-artists", "screen-music": "screen-music",
+};
 
 // Assigns the URL-silo category + subcategory + tags + a format tag, validated against the fixed taxonomy.
 export async function classify({ article, topic, model }) {

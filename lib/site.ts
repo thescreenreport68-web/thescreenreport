@@ -49,6 +49,12 @@ export const CATEGORIES: Category[] = [
     name: "Awards",
     blurb: "Oscars, Emmys, Globes and more — winners, predictions and the race.",
   },
+  {
+    slug: "music",
+    name: "Music",
+    blurb:
+      "Pop stars, the Grammys, soundtracks and the artists Hollywood can't stop talking about.",
+  },
 ];
 
 export function getCategory(slug: string): Category | undefined {
@@ -116,6 +122,12 @@ export const SUBCATEGORIES: Record<string, Subcategory[]> = {
     { slug: "winners", name: "Winners" },
     { slug: "predictions", name: "Predictions" },
   ],
+  music: [
+    { slug: "news", name: "Music News" },
+    { slug: "awards", name: "Music Awards" },
+    { slug: "profiles-artists", name: "Artist Profiles" },
+    { slug: "screen-music", name: "Music & Screen" },
+  ],
 };
 
 export function getSubcategoriesForCategory(category: string): Subcategory[] {
@@ -159,4 +171,5 @@ export const NAV: NavItem[] = [
   { label: "Celebrity", href: "/celebrity/", subs: subNav("celebrity") },
   { label: "Reviews", href: "/reviews/", subs: subNav("reviews") },
   { label: "Awards", href: "/awards/", subs: subNav("awards") },
+  { label: "Music", href: "/music/", subs: subNav("music") },
 ];

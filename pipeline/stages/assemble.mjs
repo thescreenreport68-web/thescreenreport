@@ -95,6 +95,8 @@ export function assemble({ article, classification, image, topic, dateISO }) {
     imageWidth: image?.imageWidth,
     imageHeight: image?.imageHeight,
     formatTag: classification.formatTag || article.formatTag || "",
+    // music pop/indie lane (the 6%/4% axis) — preserved for the future indie badge / analytics
+    ...(topic.tier ? { tier: topic.tier } : {}),
   };
   // Provenance for the post-publish recheck / auto-retraction system (only on breaking-news articles).
   // Lets recheck.mjs re-verify the event later and take down / correct / upgrade it.
@@ -124,7 +126,10 @@ export function assemble({ article, classification, image, topic, dateISO }) {
   for (const k of ["verdict", "rating", "prosCons", "infoCard", "entries", "tldr", "spoiler", "factPanel", "filmography", "whereToWatch",
     "youtubeId", "releaseInfo", "keyMoments", "sourceOutlet", "sourceUrl", "pullQuotes", "tweetIds", "instagramUrls", "consensus",
     "newsType", "pullQuote", "boxOffice", "records",
-    "awardsType", "awardShow", "awardCategories", "awardRecords"]) {
+    "awardsType", "awardShow", "awardCategories", "awardRecords",
+    // MUSIC structured fields (rendered by MusicModules — Commit 3 UI; carried now so data persists)
+    "release", "tracklist", "tourDates", "ticketInfo", "officialPost", "predictions",
+    "careerArc", "keyTracks", "peerLine", "stats", "screenWork", "soundtrack", "songSpotlight", "discoveryArtist"]) {
     let v = article[k];
     if (v == null) continue;
     if (Array.isArray(v) && v.length === 0) continue;

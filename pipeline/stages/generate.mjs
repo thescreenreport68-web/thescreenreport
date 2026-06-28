@@ -99,9 +99,54 @@ const NICHE = {
     fields:
       '"consensus":"one or two sentences capturing the overall audience verdict in our own words, faithful to the provided reactions"',
   },
+  // ── MUSIC niches (decided 2026-06-28). FACTS-ONLY: NEVER characterize how the MUSIC SOUNDS or its
+  // aesthetic quality (no "hushed lo-fi chorus", no taste verdict) — we report who/what/numbers/why-it-
+  // trended/the screen-or-A-list hook + grounded quotes. This is news/discovery, NOT music criticism. ──
+  "music-news": {
+    guide:
+      "MUSIC NEWS form (Billboard/Rolling Stone announcement house style). LEAD (1 sentence): WHO + WHAT + WHEN with an EXACT parenthetical date if grounded — 'Olivia Rodrigo announced a 65-date world tour on Thursday (April 30).' Carry energy in ONE verb ('rolled out', 'returns with', 'drops'), never an adjective pile. SECOND sentence: the era/context line (release date, label, or one GROUNDED chart stat). Then short paragraphs: logistics (legs, venues, opening acts), release/ticket mechanics as plain facts, a discography/career backfill line. The official artist post (Instagram/X/YouTube) is the EMBEDDED source-of-record — refer to it ('per the artist's Instagram') rather than paraphrasing a quote you don't have. Direct quote ONLY if VERBATIM in the facts. Chart/career stats are your authority signal INSTEAD of adjectives — state a precise number ONLY if it's in the facts; otherwise qualitative. The full tracklist + tour dates render as their OWN UI modules (structured fields) — do NOT cram them into prose. End on the latest status / what's next. ~450-650 words. Headline: artist first + active verb (Announces/Returns/Drops/Reacts), exact, non-clickbait. NEVER describe how the music sounds.",
+    fields:
+      '"newsType":"one of: tour|album-release|single|label-deal|reaction|general", "release":{"title":"album/single/tour name","date":"exact date ONLY if in facts","label":"only if in facts","type":"Album|Single|Tour"}, "tracklist":["full numbered track titles IN ORDER — only if present in facts, else []"], "tourDates":[{"date":"","city":"","venue":"","support":"opening act if given"}], "ticketInfo":{"onSale":"","presale":"","streamOn":"Spotify|Apple Music|YouTube — only if grounded"}, "officialPost":{"platform":"instagram|x|youtube","url":"the artist\'s OWN official post URL if grounded, else omit"}',
+  },
+  "music-awards": {
+    guide:
+      "MUSIC AWARDS form (Grammys/AMAs/VMAs/CMAs). The ceremony header + full winners list render as their OWN UI (structured awardCategories), so the BODY is the NARRATIVE: a 2-3 sentence top-line lede naming the night's biggest STORY against expectation (the sweep/record/upset) + the marquee winners, then a short 'biggest winners & moments' narrative, then a records/firsts note. Headline = the NEWS, not a label: paradox + result + a second storyline. Front-load MARQUEE categories in importance order, NOT telecast order (Grammys: Record/Album/Song/New Artist first; VMAs: Video of the Year first; CMAs: Entertainer of the Year first). Records pieces ('first [X] to win [award] since [year]') are the SAFEST high-value angle — every such claim MUST be grounded. Acceptance-speech quotes ONLY if verbatim in facts, attributed by speaker+award. ACCURACY IS ABSOLUTE: never invent a winner, nominee, edition, host, or venue. Lively Variety/THR register; SHORT body sentences (the list lives in the structured field). PREDICTIONS variant: per marquee category 'Will Win' (MUST cite grounded signal — nomination counts/precedent/chart data in the facts) / 'Should Win' (LABELED opinion) / 'Dark Horse'; never present a guess as fact.",
+    fields:
+      '"awardsType":"winners-list|predictions", "awardShow":{"show":"e.g. 67th Annual Grammy Awards","dateISO":"YYYY-MM-DD only if in facts","venue":"only if in facts","host":"only if in facts"}, "awardCategories":[{"categoryName":"e.g. Album of the Year","nominees":[{"name":"the ARTIST","title":"the album/song/work","isWinner":true}]}], "awardRecords":[{"claim":"a record/first stated in facts","detail":"prior holder + year"}], "predictions":[{"categoryName":"","willWin":"grounded forecast","shouldWin":"LABELED opinion","darkHorse":""}]',
+  },
+  "music-profile": {
+    guide:
+      "MUSIC PROFILE form (career-feature, NOT a Wikipedia timeline). BAN the birth-date/origin opener. OPEN on either (a) a defining CONTRADICTION the piece resolves, or (b) one concrete, GROUNDED fact/event. Bury the bio. Shape: hook -> the defining question -> the career INFLECTION POINT (name the exact pivot — viral set, breakout single, festival) -> discography as a FACTUAL chapter list (each album/era a one-line beat = the release + its commercial/critical MILESTONE or chart fact, NOT a sonic or emotional verdict) -> a PEER line locating them among 2-3 named contemporaries (factual association: same label, scene, collaborators — NOT 'sounds like') -> forward-looking close tied to a GROUNDED upcoming release. Every song named in prose gets an inline official embed (structured keyTracks). Quotes ONLY from cited interviews in the facts. Chart peaks/certifications/awards are stat call-outs (grounded only). Use ONLY confirmed, released credits. NEVER characterize how the music sounds or pass a taste verdict.",
+    fields:
+      '"factPanel":{"realName":"","origin":"city/country","activeYears":"","knownFor":["2-4 works/eras"]}, "careerArc":[{"era":"album/year","beat":"one-line FACTUAL chapter note (the milestone/chart fact, not a taste verdict)"}], "keyTracks":[{"title":"","platform":"spotify|youtube|apple","embedUrl":"official player URL if grounded"}], "peerLine":"one sentence naming 2-3 contemporaries (factual association only)", "stats":[{"label":"e.g. Hot 100 peak","value":"grounded number only"}]',
+  },
+  "screen-music": {
+    guide:
+      "SCREEN-MUSIC form — where music meets screen (our defensible niche). Pick the sub-shape by intent: (1) ENDING-SONG / NEEDLE-DROP EXPLAINER: a spoiler line, then NAME the song + artist in the first two sentences (the reader arrived from search — answer fast). H2s mirror the real question ('What song plays at the end of [Show] Episode X?') phrased naturally. Then: scene context (factual, what happens on screen) -> the track's origin (release year + GROUNDED chart peak) -> the creator/music-supervisor's stated reasoning if grounded. (2) EVERY-SONG SOUNDTRACK GUIDE: per-episode/scene rows — song + artist + where-it-plays + a FACTUAL one-line note — rendered as the structured soundtrack module; update as a season airs. (3) SCORE/COMPOSER FEATURE: lead with the DIRECTOR'S stated creative intent, then the composer's process hung on ONE concrete tactile detail; quotes only from cited interviews. ALWAYS embed the official song/score (YouTube/Spotify) at each mention — incumbents are text-only here, so the embed is our edge. Add a grounded chart-context chip (release year + peak + any post-sync streaming spike) on needle-drops. On an indie/unknown sync, add a FACTUAL 'who is this artist' discovery box (real name, origin, the screen tie). Lyrics ONLY ≤15 words, fair-use, then contextualize. NEVER review how the song sounds — report the facts and the on-screen role.",
+    fields:
+      '"screenWork":{"title":"the film/show","type":"Film|TV","episode":"if applicable"}, "soundtrack":[{"song":"","artist":"","scene":"where it plays","significance":"one FACTUAL line","embedUrl":"official YouTube/Spotify if grounded","chartContext":"release year + peak, grounded only"}], "songSpotlight":{"song":"","artist":"","platform":"youtube|spotify","embedUrl":""}, "discoveryArtist":{"name":"","blurb":"indie sync only — factual","embedUrl":""}',
+  },
+};
+
+// POP vs INDIE preset — the single switch (topic.tier set by FIND) that makes the 6% and 4% lanes read
+// differently. FACTS-ONLY in both (owner: no sonic/aesthetic characterization anywhere in music).
+const TIER_PRESET = {
+  popular:
+    "POPULAR mode: assume the reader already knows the star — spend energy on SCALE, commerce, and verifiable numbers (tour size, chart debut, first-week stats, ticket mechanics). Near-zero adjectives; let grounded stats carry authority. Logistics- and event-forward. No discovery/origin scaffolding — skip 'who is this'.",
+  indie:
+    "INDIE/BREAKOUT mode: the reader does NOT know this artist — your job is factual DISCOVERY. IDENTIFY them first (real name, origin, 'forthcoming nth release' if grounded). Lead with the breakout MOMENT and the platform mechanic ('posted an unfinished chorus on TikTok; X million views in days' — every 'blew up' claim carries a GROUNDED number: streams/uses/chart). Locate them by FACTUAL association (label, scene, named collaborators) — NEVER a 'sounds-like' or sonic description. Note the artist's own on-record comment if grounded, and the screen/A-list hook if any. Shorter than pop (700-1,100 words). Report the facts of why it spread — do NOT judge the music.",
 };
 function resolveNiche(topic) {
   const t = (topic.contentType || "").toLowerCase();
+  // MUSIC branches FIRST and on CATEGORY — a music news item and a movie news item share contentType
+  // "news" but need different voices/fields. Sub-route by subcategory/contentType within music.
+  if ((topic.category || "").toLowerCase() === "music") {
+    const sub = (topic.subcategory || "").toLowerCase();
+    if (sub === "screen-music" || t.includes("screen-music")) return "screen-music";
+    if (sub === "awards" || t.includes("award") || t.includes("grammy") || t.includes("vma")) return "music-awards";
+    if (sub === "profiles-artists" || t.includes("profile") || t.includes("artist")) return "music-profile";
+    return "music-news";
+  }
   if (t.includes("review")) return "review";
   if (t.includes("rank") || t.includes("list")) return "list";
   if (t.includes("explain")) return "explainer";
@@ -118,6 +163,8 @@ function resolveNiche(topic) {
 
 export async function generate({ topic, model, maxTokens = 6000, corrections = null }) {
   const niche = NICHE[resolveNiche(topic)] || null;
+  // Music's pop(6%)/indie(4%) lane preset — only applies when FIND set topic.tier on a music topic.
+  const tierPreset = (topic.category || "").toLowerCase() === "music" ? TIER_PRESET[topic.tier] || "" : "";
   const facts =
     (topic.facts || []).map((f) => `- ${f.title}: ${f.extract}`).join("\n") ||
     "(none provided — rely only on uncontroversial, well-known facts; do not invent specifics)";
@@ -128,7 +175,7 @@ TOPIC: ${topic.title}
 CONTENT TYPE: ${topic.contentType}
 CATEGORY / SUBCATEGORY: ${topic.category} / ${topic.subcategory}
 PRIMARY KEYWORD: ${topic.primaryKeyword} — work its main words into the TITLE, naturally (REQUIRED — the title must contain them, e.g. a review title ends with "...Review"), and use it once early in the body. Do NOT force the exact phrase into a subheading or repeat it through the article.
-ANGLE: ${topic.angle || "the most interesting TRUE angle"}${niche ? "\nNICHE STYLE: " + niche.guide : ""}
+ANGLE: ${topic.angle || "the most interesting TRUE angle"}${niche ? "\nNICHE STYLE: " + niche.guide : ""}${tierPreset ? "\nMUSIC LANE: " + tierPreset : ""}
 
 REFERENCE FACTS (ground every factual claim in these or in uncontroversial well-known facts):
 ${facts}

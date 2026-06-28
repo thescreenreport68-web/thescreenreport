@@ -32,21 +32,28 @@ function canonicalize(t) {
   else if (ft === "reaction") { if (!["movies", "tv"].includes(cat)) cat = "movies"; sub = "reactions"; }
   else if (ft === "list") { if (!["movies", "tv"].includes(cat)) cat = "movies"; sub = "rankings-lists"; }
   else if (ft === "news") { if (!["movies", "tv", "celebrity"].includes(cat)) cat = "celebrity"; sub = "news"; }
+  else if (ft === "music-news") { cat = "music"; sub = "news"; }
+  else if (ft === "music-awards") { cat = "music"; sub = "awards"; }
+  else if (ft === "music-profile") { cat = "music"; sub = "profiles-artists"; }
+  else if (ft === "screen-music") { cat = "music"; sub = "screen-music"; }
   if (!TAXONOMY[cat]) cat = "celebrity";
   if (!TAXONOMY[cat].includes(sub)) sub = TAXONOMY[cat][0];
   t.category = cat;
   t.subcategory = sub;
+  // Music carries a pop/indie LANE tier (the 6%/4% allocation axis). Default popular; the breakout
+  // detector (Commit 2) promotes genuine indie breakouts to "indie".
+  if (cat === "music" && !t.tier) t.tier = "popular";
   return t;
 }
 
 const SYS = `You are the news editor of The Screen Report, an English-language Hollywood (and Western English-language) film, TV, streaming, and celebrity NEWS site. For each candidate decide:
-(1) RELEVANT? — keep ONLY a story whose SUBJECT is an English-language film, TV show, streaming title, or a film/TV/music ENTERTAINER's career or personal life.
+(1) RELEVANT? — keep ONLY a story whose SUBJECT is: an English-language film, TV show, or streaming title; a film/TV/music ENTERTAINER's career or personal life; OR on-brand MUSIC — a popular/trending music event (tour/album/single/label deal), a music awards show (Grammys/AMAs/VMAs/CMAs), an indie/underground track or artist that UNEXPECTEDLY broke out (a real virality/chart spike), or music-meets-screen (a soundtrack/score/music biopic/needle-drop). K-pop/Latin/non-English music ONLY when there is a SCREEN tie or A-list-Hollywood hook.
     HARD-DROP (relevant=false), no matter which feed it came from, anything primarily about:
     • POLITICS — elections, voting, parties, candidates, partisan opinion, a late-night/talk-show host's political take (e.g. "who someone will vote for", "JD Vance", "Real Time" political segments). A person being on TV does NOT make their politics entertainment news.
     • NEWS JOURNALISTS / anchors / their legal or industry disputes (e.g. a Fox/CBS reporter's court case) — they are not film/TV/music entertainers.
     • video games / gaming hardware (Xbox, PlayStation, Game Pass, Elden Ring, gameplay, "officially releases").
     • anime or manga (One Piece chapter, episode-number releases, shonen), comics-only releases.
-    • K-drama or non-English/regional cinema (unless a major Hollywood/Netflix-English production), music-only chart/tour news, sports, crypto/tech, deals/coupons/merch.
+    • K-drama or non-English/regional cinema (unless a major Hollywood/Netflix-English production); MUSIC-INDUSTRY TRADE MINUTIAE (chart-methodology, label finance, royalty/business-legal filings, setlist/gig-listing trivia, pure local-scene reporting with NO breakout and NO screen/A-list hook); non-English regional music with no Hollywood/screen hook; sports, crypto/tech, deals/coupons/merch.
 (2) The single best ANGLE/niche to cover it RIGHT NOW, exactly as a real editor would.
 You output STRICT JSON only. Be CONSERVATIVE: when a candidate is off-topic OR primarily political, set relevant=false with a one-word reason.`;
 
@@ -62,6 +69,10 @@ const NICHE_GUIDE = `Pick ONE formatTag + its category/subcategory:
 - "interview" → celebrity / interviews: a notable recent interview.
 - "reaction" → movies|tv / reactions: fan/critic reaction to a release.
 - "awards" → awards / winners|predictions.
+- "music-news" → music / news: a popular/trending music event (tour, album/single drop, label/streaming deal, a pop star's music move).
+- "music-awards" → music / awards: a music ceremony (Grammys/AMAs/VMAs/CMAs) — winners or predictions.
+- "music-profile" → music / profiles-artists: a trending OR newly-broken-out musician → their career. (Set this for an indie/underground breakout artist too.)
+- "screen-music" → music / screen-music: a soundtrack, film/TV score, music biopic/doc, or "song from [show]" needle-drop (music-meets-screen — our lane).
 Prefer "news" when unsure. PERSON candidate → "profile" or "news". Now-playing/high-revenue movie → "box-office" or "review". Upcoming movie with new footage → "trailer".
 HARD RULE: NEVER pick "review" or "box-office" for an UNRELEASED film (release date in the future / "unreleased" in the hint) — you cannot review or report box office for a film that has not opened. Use "trailer" or a "news" preview instead. Honor any [SUGGESTED NICHE] hint unless the summary clearly points elsewhere.`;
 
@@ -70,9 +81,10 @@ const SCHEMA = `Return JSON: {"items":[{
  "i": <index>,
  "relevant": true|false,
  "reason": "short why-keep-or-drop",
- "formatTag": "news|review|box-office|trailer|profile|explainer|guide|list|interview|reaction|awards",
- "category": "movies|tv|streaming|celebrity|reviews|awards",
+ "formatTag": "news|review|box-office|trailer|profile|explainer|guide|list|interview|reaction|awards|music-news|music-awards|music-profile|screen-music",
+ "category": "movies|tv|streaming|celebrity|reviews|awards|music",
  "subcategory": "the matching subcategory",
+ "musicTier": "popular|indie — set ONLY for a music item: 'indie' if it's an under-the-radar/underground artist or track that UNEXPECTEDLY broke out; 'popular' for an established/trending mainstream act. Omit for non-music.",
  "eventType": "death|health|legal|arrest|lawsuit|marriage|divorce|breakup|pregnancy|birth|casting|trailer|boxoffice|review|award|renewal|cancellation|announcement|other",
  "sensitivity": "high|normal",   // high ONLY for death/health-crisis/legal/arrest — these need extra source confirmation
  "eventSlug": "outlet-agnostic kebab slug of the underlying EVENT so two outlets reporting the same story collide, e.g. 'pedro-pascal-fantastic-four-reshoots'",
@@ -122,6 +134,7 @@ export async function categorize(candidates, monitor, { model = MODELS.classifie
         subcategory: it.subcategory,
         eventType: it.eventType || "other",
         sensitivity: it.sensitivity === "high" ? "high" : "normal",
+        tier: it.musicTier === "indie" ? "indie" : it.musicTier === "popular" ? "popular" : undefined,
         eventSlug: slugify(it.eventSlug || it.primaryEntity),
         primaryKeyword: it.primaryKeyword,
         primaryEntity: it.primaryEntity,
