@@ -7,7 +7,7 @@
 //                                              facts from topic.sources already ground it. No Wikipedia extract.
 // Returns the SAME [{title, extract}] shape the old gatherFacts did, so generate.mjs/gate.mjs are untouched.
 import { getPersonFacts, personFactsBlock } from "./tmdb.mjs";
-import { deezerArtist, deezerBlock } from "./music.mjs";
+import { musicArtistFacts, musicFactsBlock } from "./music.mjs";
 
 function isPersonTopic(topic) {
   const ft = (topic.formatTag || "").toLowerCase();
@@ -25,10 +25,11 @@ export async function gatherFacts(topic) {
   const cat = (topic.category || "").toLowerCase();
   const ft = (topic.formatTag || "").toLowerCase();
 
-  // MUSIC ARTIST → Deezer catalog (TMDB/OMDb have no music data).
+  // MUSIC ARTIST → full music grounding (MusicBrainz discography + Last.fm popularity + Discogs catalog +
+  // Billboard Hot 100 chart). TMDB/OMDb have no music data; this is the PR6 stack (non-Wikimedia).
   if (cat === "music" && (ft === "music-profile" || ft === "music-news")) {
-    const d = await deezerArtist(entity);
-    if (d) { topic._deezer = d; out.push({ title: "MUSIC CATALOG FACTS", extract: deezerBlock(d) }); }
+    const m = await musicArtistFacts(entity);
+    if (m) { topic._music = m; out.push({ title: "AUTHORITATIVE MUSIC FACTS", extract: musicFactsBlock(m) }); }
     return out;
   }
 
