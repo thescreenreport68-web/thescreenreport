@@ -142,6 +142,32 @@ export function verifyGroundTruth(article, topic) {
     }
   }
 
+  // ── Layer 1e — STREAMING VIEWERSHIP (PR4): there is NO free, reliable public source for OTT viewership
+  // magnitudes (Netflix Tudum is the only first-party one and it is not reliably machine-fetchable; non-Netflix
+  // OTT publishes none). So any SPECIFIC viewership figure ("X million views / hours viewed / households /
+  // viewers") that is not in the grounded facts is invented — flag it. Platform + rank ("on Netflix", "#1 on
+  // Netflix this week") are fine (TMDB-grounded); only the magnitude NUMBER is prohibited when ungrounded.
+  {
+    const streamingCtx = topic.category === "streaming" || topic.formatTag === "watchguide" || (tf && tf.isOTT) ||
+      /\b(netflix|prime video|hulu|hbo max|\bmax\b|disney\s?\+|apple tv\s?\+|peacock|paramount\s?\+)\b/i.test(text);
+    if (streamingCtx) {
+      const factsLoose = norm((topic.facts || []).map((f) => f.extract).join(" "));
+      const VIEW = /(\d[\d,.]*)\s*(million|billion)\s*(hours?(?:\s*(?:viewed|of viewing))?|views|households|viewers|people)/gi;
+      const WATCHED = /watched by\s*(?:over\s*)?(\d[\d,.]*)\s*(million|billion)/gi;
+      for (const re of [VIEW, WATCHED]) {
+        re.lastIndex = 0; let m;
+        while ((m = re.exec(text))) {
+          const numTok = norm(m[1]);
+          if (numTok && !factsLoose.includes(numTok)) {
+            findings.push({ layer: "viewership", severity: "CONTRADICTED", claim: `article states "${m[0].trim()}"`, correct: "no verified viewership figure", why: `No verified streaming-viewership figure exists for this title (Netflix Tudum is the only first-party source and non-Netflix OTT publishes none). Do NOT state a specific viewership number ("${m[0].trim()}") — report platform/rank only, or attribute it explicitly to a named outlet.` });
+            break;
+          }
+        }
+        if (findings.some((f) => f.layer === "viewership")) break;
+      }
+    }
+  }
+
   // ── Layer 1d — DIRECTOR (conservative: only an explicit "directed by NAME" that clearly mismatches) ──
   if (tf && tf.director) {
     const dirNames = tf.director.split(/,|&|and/).map((s) => norm(s)).filter((s) => s.length > 3);
