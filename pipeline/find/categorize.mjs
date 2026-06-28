@@ -12,7 +12,7 @@
 //     apply the death/high-stakes CONFIRMING-hold policy.
 import { chat } from "../lib/openrouter.mjs";
 import { MODELS, TAXONOMY } from "../config.mjs";
-import { wikiSummary } from "../lib/wikipedia.mjs";
+import { resolveEntity } from "../lib/resolveEntity.mjs";
 
 const slugify = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 70);
 
@@ -190,36 +190,5 @@ export async function categorize(candidates, monitor, { model = MODELS.classifie
 // Wikipedia-notable (its own page that is genuinely about a screen work). This is the principled
 // notability + identity gate: it drops obscure/fan TMDB entries AND wrong-entity resolutions
 // (e.g. a "Minions & Monsters" with no real page, or a same-named different film).
-const FILM_NICHES = new Set(["review", "box-office", "explainer", "trailer"]);
-
-// A resolved Wikipedia page that is actually about a film/TV work (not a person, place, or unrelated topic).
-function looksLikeScreenWork(s) {
-  const hay = `${s.type || ""} ${(s.extract || "").slice(0, 400)}`.toLowerCase();
-  return /\b(film|movie|miniseries|series|television|sitcom|documentary|anime|animated|show)\b/.test(hay);
-}
-
-// Resolve an anchor entity for a topic. For FILM_NICHES: ONLY the film itself (with disambiguator
-// repairs), and it must read as a screen work — NO falling back to the franchise/supporting entity.
-// For other niches (news/profile/list): the looser fallback keeps fresh news alive.
-async function resolveEntity(t) {
-  const strict = FILM_NICHES.has(t.formatTag);
-  const bare = t.primaryEntity.replace(/\s*\([^)]*\)\s*$/, "").trim();
-  const yr = (t.title.match(/\b(19|20)\d{2}\b/) || [])[0];
-  const primaryTries = [t.primaryEntity, bare, yr ? `${bare} (${yr} film)` : null, yr ? `${bare} (${yr} TV series)` : null].filter(Boolean);
-  // 1) try the PRIMARY entity (the actual subject) first → resolving here is a true canonicalize.
-  for (const v of [...new Set(primaryTries)]) {
-    const s = await wikiSummary(v);
-    if (s?.extract && (!strict || looksLikeScreenWork(s))) return { summary: s, viaPrimary: true };
-    await new Promise((r) => setTimeout(r, 80));
-  }
-  // 2) for non-film niches, a SUPPORTING entity resolving keeps the topic alive for grounding — but we
-  //    must NOT retarget the article onto it (it may be a famous co-star, not the real subject).
-  if (!strict) {
-    for (const v of [...new Set((t.entities || []).filter(Boolean))]) {
-      const s = await wikiSummary(v);
-      if (s?.extract) return { summary: s, viaPrimary: false };
-      await new Promise((r) => setTimeout(r, 80));
-    }
-  }
-  return null;
-}
+// Entity resolution + notability now live in lib/resolveEntity.mjs (TMDB/Deezer, NON-Wikipedia — confirms
+// identity AND a notability magnitude, and tracks unreleased/fresh films Wikipedia hadn't covered yet).

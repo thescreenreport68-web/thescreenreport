@@ -2,7 +2,7 @@
 // Run: cd "/Users/sivajithcu/Movie News site" && set -a; . ./.env; set +a; node site/pipeline/bakeoff.mjs
 import fs from "node:fs";
 import { MODELS } from "./config.mjs";
-import { gatherFacts } from "./lib/wikipedia.mjs";
+import { gatherFacts } from "./lib/groundFacts.mjs";
 import { generate } from "./stages/generate.mjs";
 import { gate } from "./stages/gate.mjs";
 
@@ -37,7 +37,7 @@ const rows = [];
 for (const topic of TOPICS) {
   console.log(`\n=== TOPIC: ${topic.title} ===`);
   console.log("gathering facts...");
-  topic.facts = await gatherFacts(topic.entities);
+  topic.facts = await gatherFacts(topic);
   console.log(`  ${topic.facts.length} fact blocks`);
 
   // generate across all candidates in parallel

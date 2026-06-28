@@ -9,15 +9,14 @@ import { discover } from "./discover.mjs";
 import { categorize } from "./categorize.mjs";
 import { verify } from "./verify.mjs";
 import { scoreTopics } from "./score.mjs";
-import { wikiSummary } from "../lib/wikipedia.mjs";
+import { searchTitle } from "../lib/tmdb.mjs";
 import { TAXONOMY } from "../config.mjs";
 
-// A fill film/show is only allowed if it is Wikipedia-notable (its own page that reads as a screen work)
-// — the same gate organic topics pass, so a TMDB-only entry like a fan upload can't slip into a fill.
+// A fill film/show is only allowed if it clears the TMDB notability floor (NON-Wikipedia, 2026-06-28) — the
+// same magnitude gate organic topics pass via lib/resolveEntity, so a fan upload / micro-title can't slip in.
 async function notableScreenWork(title) {
-  const s = await wikiSummary(title);
-  if (!s?.extract) return false;
-  return /\b(film|movie|miniseries|series|television|sitcom|documentary|animated|show)\b/i.test(`${s.type || ""} ${s.extract.slice(0, 400)}`);
+  const r = (await searchTitle(title, "movie")) || (await searchTitle(title, "tv"));
+  return !!r && ((r.vote_count || 0) >= 50 || (r.popularity || 0) >= 8);
 }
 
 const slugify = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 70);

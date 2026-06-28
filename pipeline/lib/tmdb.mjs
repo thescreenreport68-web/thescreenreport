@@ -261,6 +261,13 @@ export async function searchPerson(name) {
   return p ? { id: p.id, name: p.name } : null;
 }
 
+// Notability-bearing person search (for the FIND resolveEntity gate) — returns popularity + known-for count.
+export async function searchPersonNotable(name) {
+  const j = await tmdb(`/search/person?query=${encodeURIComponent(name)}&include_adult=false`);
+  const p = (j?.results || [])[0];
+  return p ? { id: p.id, name: p.name, popularity: p.popularity || 0, knownFor: (p.known_for || []).length } : null;
+}
+
 // Returns a clean, deduped, release-ordered list of MAJOR credits {year, title, character, type}.
 export async function getPersonCredits(id, max = 18) {
   const [j, ext] = await Promise.all([tmdb(`/person/${id}/combined_credits`), tmdb(`/person/${id}/external_ids`)]);

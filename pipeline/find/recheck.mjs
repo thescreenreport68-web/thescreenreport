@@ -10,7 +10,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { createRequire } from "node:module";
 import { discoverRSS } from "./sources/rss.mjs";
-import { wikiSummary } from "../lib/wikipedia.mjs";
+import { personDeathday } from "../lib/tmdb.mjs";
 import { newMonitor, printRunReport } from "./store.mjs";
 const require = createRequire(import.meta.url);
 const matter = require("gray-matter");
@@ -86,16 +86,17 @@ async function recheckOne(a, freshHeadlines, rec) {
   const newsOutlets = new Set(news.filter((n) => n.source && matchesEvent(n.title)).map((n) => n.source));
   const feedOutlets = new Set(freshHeadlines.filter((h) => matchesEvent(h.title)).map((h) => h.outlet));
   const majorNow = newsOutlets.size + feedOutlets.size;
-  // 3) for deaths: Wikipedia confirmation (the page gains a death date / past-tense when real)
-  let wikiConfirmsDeath = false;
+  // 3) for deaths: TMDB authoritative confirmation — a person's `deathday` is populated only when a real
+  //    death is confirmed (non-Wikipedia, time-unbounded). The Google-News contradiction scan above already
+  //    catches hoax/denial coverage (also non-Wikimedia).
+  let deathConfirmed = false;
   if (a.prov.eventType === "death") {
-    const s = await wikiSummary(ent);
-    wikiConfirmsDeath = !!s && /\b(died|death|was an? |\(\d{4}\s*[–-]\s*\d{4}\))/i.test(s.extract || "");
+    deathConfirmed = !!(await personDeathday(ent));
   }
-  rec.step("recheck", `${ent}: ${majorNow} outlet(s) now · contradiction=${contradiction ? "YES" : "no"} · wikiDeath=${wikiConfirmsDeath}`);
+  rec.step("recheck", `${ent}: ${majorNow} outlet(s) now · contradiction=${contradiction ? "YES" : "no"} · tmdbDeath=${deathConfirmed}`);
 
   if (contradiction) return { action: "RETRACT", reason: `contradiction found: "${contradiction.title}"` };
-  if (a.prov.eventType === "death" && wikiConfirmsDeath) return { action: "PROMOTE", reason: "Wikipedia now confirms" };
+  if (a.prov.eventType === "death" && deathConfirmed) return { action: "PROMOTE", reason: "TMDB now confirms the death" };
   if (majorNow >= 2 && a.prov.status === "DEVELOPING") return { action: "PROMOTE", reason: `${majorNow} outlets now corroborate` };
   if (a.prov.sensitivity === "high" && a.ageH > 24 && majorNow < 2) return { action: "REVIEW", reason: "high-sensitivity, still under-corroborated after 24h" };
   return { action: "HOLD", reason: "still developing, keep watching" };

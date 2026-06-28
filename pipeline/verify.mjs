@@ -1,7 +1,7 @@
 // Quick re-score of one model on the two bake-off topics after gate/prompt fixes.
 // Run: cd "/Users/sivajithcu/Movie News site" && set -a; . ./.env; set +a; node site/pipeline/verify.mjs [model]
 import { MODELS } from "./config.mjs";
-import { gatherFacts } from "./lib/wikipedia.mjs";
+import { gatherFacts } from "./lib/groundFacts.mjs";
 import { generate } from "./stages/generate.mjs";
 import { gate } from "./stages/gate.mjs";
 
@@ -12,7 +12,7 @@ const TOPICS = [
 ];
 
 // gather facts once per topic (shared across models)
-for (const topic of TOPICS) topic.facts = await gatherFacts(topic.entities);
+for (const topic of TOPICS) topic.facts = await gatherFacts(topic);
 
 for (const MODEL of MODELS_LIST) {
   console.log(`\n\n######## MODEL: ${MODEL} ########`);
