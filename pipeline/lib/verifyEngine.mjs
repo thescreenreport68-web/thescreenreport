@@ -9,6 +9,8 @@
 // Pure JS: no LLM call, no extra API call (the data was already fetched during grounding). This is what
 // kills the proven fabrications: Atlas="Prime Video" (it's Netflix), RT 90% (it's 92%), OTT box office.
 
+import { canonCategory } from "./awardsCache.mjs";
+
 const norm = (s) => (s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/\s+/g, " ").trim();
 
 // Streaming platforms we can name-match. Each: canonical label + a matcher for the article prose.
@@ -152,20 +154,33 @@ export function verifyGroundTruth(article, topic) {
     }
   }
 
-  // ── Layer 2 — AWARDS: every structured winner must be grounded in the facts (Oscars-fabrication guard) ──
-  // NOTE: the full authoritative ceremony→winners map (Wikidata P166 / DLu cache) is PR5; here we verify the
-  // article's structured winners against whatever awards grounding exists, so an UNGROUNDED winner is caught.
+  // ── Layer 2 — AWARDS (PR5): hard CATEGORY-LEVEL winner diff vs the authoritative map (topic._awards from
+  // the official Academy Awards DB / first-party Golden Globes/Emmys), falling back to a grounding-presence
+  // check for categories the authoritative source doesn't cover. This is what catches the 97th-Oscars
+  // Wicked/Brutalist swap: the article's structured winner is diffed against the OFFICIAL winner per category.
   if (["awards", "music-awards"].includes(topic.formatTag) && Array.isArray(article.awardCategories)) {
     const factsText = norm((topic.facts || []).map((f) => `${f.title} ${f.extract}`).join(" "));
+    // Index the authoritative winners by canonical category key for like-for-like comparison.
+    const authByKey = new Map();
+    for (const c of topic._awards?.categories || []) { const k = canonCategory(c.categoryName); if (k && c.winner) authByKey.set(k, { cat: c.categoryName, name: c.winner.name, title: c.winner.title }); }
+    const overlap = (a, b) => a && b && (a.includes(b) || b.includes(a));
     for (const cat of article.awardCategories) {
+      const artKey = canonCategory(cat.categoryName);
       for (const nom of (cat.nominees || []).filter((n) => n && n.isWinner)) {
         const who = norm(nom.name || ""), what = norm(nom.title || "");
-        const key = who || what;
-        if (!key) continue;
-        const grounded = (who && factsText.includes(who)) || (what && factsText.includes(what));
-        if (!grounded) {
-          findings.push({ layer: "awards", severity: "NO_RECEIPT", claim: `winner "${nom.name || nom.title}" in ${cat.categoryName || "a category"}`, correct: "not found in grounded facts", why: `The structured winner "${nom.name || nom.title}" (${cat.categoryName}) does not appear anywhere in the reference facts — verify it against the official winners list or remove it (never publish an unverified winner).` });
+        if (!who && !what) continue;
+        // (a) DETERMINISTIC DIFF against the official winner for this exact category — the hard guard.
+        if (artKey && authByKey.has(artKey)) {
+          const aw = authByKey.get(artKey), awWho = norm(aw.name), awWhat = norm(aw.title);
+          const matches = overlap(who, awWho) || overlap(what, awWhat) || overlap(who, awWhat) || overlap(what, awWho);
+          if (!matches) {
+            findings.push({ layer: "awards", severity: "CONTRADICTED", claim: `article names "${nom.name || nom.title}" winner of ${cat.categoryName}`, correct: `${aw.name || aw.title}`, why: `Per ${topic._awards.source}, the winner of ${aw.cat} is ${aw.name || aw.title}${aw.name && aw.title ? ` (${aw.title})` : ""}, NOT ${nom.name || nom.title}. Correct it.` });
+          }
+          continue; // category was authoritatively checked — done
         }
+        // (b) Fallback: no authoritative category match → require the winner to at least appear in the facts.
+        const grounded = (who && factsText.includes(who)) || (what && factsText.includes(what));
+        if (!grounded) findings.push({ layer: "awards", severity: "NO_RECEIPT", claim: `winner "${nom.name || nom.title}" in ${cat.categoryName || "a category"}`, correct: "not found in grounded facts", why: `The structured winner "${nom.name || nom.title}" (${cat.categoryName}) does not appear anywhere in the reference facts — verify it against the official winners list or remove it (never publish an unverified winner).` });
       }
     }
   }

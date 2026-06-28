@@ -13,6 +13,7 @@ import { gate } from "./stages/gate.mjs";
 import { assemble } from "./stages/assemble.mjs";
 import { getWhereToWatch, factBlock, toWhereToWatch, discoverTop, discoverFactBlock, getTrailer, trailerFactBlock, getBoxOffice, boxOfficeFactBlock, searchPerson, getPersonCredits, personFactBlock, getTitleFacts, titleFactBlock } from "./lib/tmdb.mjs";
 import { omdb, omdbFactBlock } from "./lib/omdb.mjs";
+import { getAuthoritativeAwards, awardsFactBlock } from "./lib/awardsCache.mjs";
 import { cacheTweets, reactionFactBlock } from "./lib/tweets.mjs";
 import { searchInterview, fetchTranscript, oEmbed, interviewFactBlock } from "./lib/youtube.mjs";
 import { costReport } from "./lib/openrouter.mjs";
@@ -144,11 +145,21 @@ for (let i = 0; i < topics.length; i++) {
       // block above — exact figures keyed by IMDb id — replacing the scraped Wikipedia box-office prose.)
     }
 
-    // Awards-family niches (film/TV awards, music awards, predictions): pull the ceremony's full winners/
-    // nominees from Wikipedia (accuracy-critical — never invent). Predictions ground on the nominations.
+    // Awards-family niches: ground on AUTHORITATIVE, NON-Wikipedia winners (PR5, owner rule 2026-06-28) —
+    // the OFFICIAL Academy Awards Database (committed cache) for the Oscars, the first-party Golden Globes /
+    // Emmys endpoints otherwise. Stashed on topic._awards for the deterministic winner-diff in verifyEngine.
+    // Ceremonies with no first-party structured source (Grammys/BAFTA/Critics Choice) ground on the attributed
+    // trade-RSS already in topic.facts — NEVER on Wikipedia. This replaces the stripped-table Wikipedia scrape
+    // that was the root of the 97th-Oscars fabrication.
     if (["awards", "music-awards", "predictions"].includes(topic.formatTag)) {
-      const awSec = await wikiSection(topic.primaryEntity, ["Winners and nominees", "Winners", "Nominees", "Nominations", "Awards", "Ceremony"]);
-      if (awSec) { topic.facts.push({ title: "WIKIPEDIA WINNERS & NOMINEES (verified — use ONLY these winners/nominees; never invent one)", extract: awSec }); console.log(`  wiki winners section: ${awSec.length} chars`); }
+      const aw = await getAuthoritativeAwards(topic);
+      if (aw && aw.categories?.length) {
+        topic._awards = aw;
+        topic.facts.unshift({ title: "AUTHORITATIVE AWARDS WINNERS", extract: awardsFactBlock(aw) });
+        console.log(`  authoritative awards: ${aw.show} (${aw.source}) · ${aw.categories.length} categories`);
+      } else {
+        console.log("  ⚠ no first-party awards source for this ceremony — grounding on attributed trade sources only (no Wikipedia)");
+      }
     }
     // Music-profile + screen-music: ground the relevant Wikipedia section (discography/awards or soundtrack)
     // so the structured fields (careerArc/stats, soundtrack rows) draw from sourced facts, not invention.
