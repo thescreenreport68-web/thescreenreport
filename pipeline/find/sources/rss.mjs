@@ -22,6 +22,16 @@ const FEEDS = [
   { url: "https://collider.com/feed/", outlet: "Collider", tier: 5, cats: ["movies", "tv"] },
   { url: "https://www.slashfilm.com/feed/", outlet: "SlashFilm", tier: 5, cats: ["movies"] },
   { url: "https://screenrant.com/feed/", outlet: "ScreenRant", tier: 5, cats: ["movies", "tv"] },
+  // ── MUSIC discovery feeds (decided 2026-06-28) — DISCOVERY SIGNAL ONLY, same legal posture: read the
+  // headline to know an event happened, then re-report grounded. Tier-5 indie feeds feed the breakout
+  // detector's candidate NAMES; the breakout SIGNAL comes from breakout.mjs (Reddit + Wikipedia), not here.
+  { url: "https://www.billboard.com/feed/", outlet: "Billboard", tier: 7, cats: ["music"] },
+  { url: "https://www.rollingstone.com/music/feed/", outlet: "Rolling Stone", tier: 7, cats: ["music"] },
+  { url: "https://variety.com/v/music/feed/", outlet: "Variety Music", tier: 7, cats: ["music"] },
+  { url: "https://pitchfork.com/feed/feed-news/rss", outlet: "Pitchfork", tier: 6, cats: ["music"] },
+  { url: "https://www.stereogum.com/feed/", outlet: "Stereogum", tier: 5, cats: ["music"] },
+  { url: "https://www.thefader.com/rss", outlet: "The Fader", tier: 5, cats: ["music"] },
+  { url: "https://consequence.net/category/music/feed/", outlet: "Consequence", tier: 5, cats: ["music"] },
 ];
 
 const strip = (s) => {

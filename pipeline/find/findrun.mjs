@@ -7,7 +7,8 @@ import { newMonitor, printRunReport, writeJSON } from "./store.mjs";
 import { discover } from "./discover.mjs";
 import { categorize } from "./categorize.mjs";
 import { verify } from "./verify.mjs";
-import { scoreTopics, selectDiverse } from "./score.mjs";
+import { scoreTopics, selectDiverse, selectMusicLanes, musicQuota } from "./score.mjs";
+import { detectBreakouts } from "./sources/breakout.mjs";
 import { expandInsideStories, TIER_S } from "./expand.mjs";
 
 const arg = (k, d) => Number((process.argv.find((a) => a.startsWith(`--${k}=`)) || "").split("=")[1]) || d;
@@ -33,12 +34,23 @@ monitor.stage("shortlist", `kept ${shortlist.length} candidates for categorize (
 // Stages 2–5 — relevance + categorize + angle + entity-resolve → MAKE topic objects
 const topics = await categorize(shortlist, monitor);
 
+// Music pop/indie LANE detection — confirm genuine indie breakouts from free signals (Reddit + Wikipedia
+// pageviews) so the 60/40 split is real, not just the LLM's guess. Fails safe (leaves the heuristic).
+await detectBreakouts(topics, monitor);
+
 // Stage 8 — cross-source verify (trust label + publishable flag)
 const verified = verify(topics, monitor);
 
-// Stages 4+6 — score + rank, then diverse-select the queue
+// Stages 4+6 — score + rank, then diverse-select the queue. MUSIC gets a 60/40 pop/indie quota inside its
+// 10% share (filled separately so pop news can't starve the indie lane; no pop-backfill if indie underfills).
 scoreTopics(verified, monitor);
-const queue = selectDiverse(verified, { n: QUEUE_N, perSubcatMax: PER_SUBCAT, publishableOnly: true });
+const { musicN, popN, indieN } = musicQuota(QUEUE_N);
+const musicTopics = verified.filter((t) => (t.category || "").toLowerCase() === "music");
+const nonMusic = verified.filter((t) => (t.category || "").toLowerCase() !== "music");
+const { picks: musicPicks, popPicked, indiePicked } = selectMusicLanes(musicTopics, { popN, indieN, perSubcatMax: PER_SUBCAT });
+const others = selectDiverse(nonMusic, { n: Math.max(0, QUEUE_N - musicPicks.length), perSubcatMax: PER_SUBCAT, publishableOnly: true });
+const queue = [...others, ...musicPicks].sort((a, b) => b.priority - a.priority);
+if (musicN > 0) monitor.stage("music-quota", `music ${musicPicks.length}/${musicN} (pop ${popPicked}/${popN}, indie ${indiePicked}/${indieN}); no pop-backfill of indie`);
 
 // Inside-stories expansion (opt-in): a Tier-S event → many tone-safe angle articles, appended to the queue.
 if (EXPAND) {

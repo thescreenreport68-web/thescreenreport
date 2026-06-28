@@ -8,7 +8,7 @@
 const TYPE_WEIGHT = {
   death: 1.0, health: 0.95, arrest: 0.95, legal: 0.9, lawsuit: 0.9, scandal: 0.9,
   divorce: 0.8, breakup: 0.8, marriage: 0.8, pregnancy: 0.8, birth: 0.75,
-  boxoffice: 0.7, award: 0.7, casting: 0.65, trailer: 0.65, renewal: 0.55, cancellation: 0.6,
+  boxoffice: 0.7, award: 0.7, breakout: 0.7, casting: 0.65, trailer: 0.65, renewal: 0.55, cancellation: 0.6,
   reaction: 0.55, interview: 0.55, review: 0.5, announcement: 0.5, other: 0.4,
 };
 const STATUS_WEIGHT = { CONFIRMED: 25, DEVELOPING: 18, EVERGREEN: 14, RUMOR: 8, QUEUE: 4, CONFIRMING: 3, "EDITORIAL-HOLD": 1 };
@@ -38,9 +38,10 @@ export function scoreTopics(topics, monitor) {
     const statusW = STATUS_WEIGHT[t.verification?.status] ?? 5;
     const typeW = (TYPE_WEIGHT[t.eventType] ?? 0.4) * 15;
     const popNudge = Math.min(6, Math.log10(1 + (t._cand?.popularity || 0)) * 2); // mild TMDB-backbone tilt
-    const priority = Math.round(rec + corr + statusW + typeW + popNudge);
+    const breakoutPts = Math.min(10, (t.breakoutVelocity || 0) / 4); // an accelerating indie breakout ranks up
+    const priority = Math.round(rec + corr + statusW + typeW + popNudge + breakoutPts);
     t.priority = priority;
-    t.signals = { recency: rec, corroboration: corr, status: statusW, type: Math.round(typeW), pop: Math.round(popNudge) };
+    t.signals = { recency: rec, corroboration: corr, status: statusW, type: Math.round(typeW), pop: Math.round(popNudge), breakout: Math.round(breakoutPts) };
   }
   topics.sort((a, b) => b.priority - a.priority);
   if (monitor) monitor.stage("score", `ranked ${topics.length} topics by freshness+corroboration+type (top=${topics[0]?.priority ?? "-"})`);
@@ -78,4 +79,25 @@ export function selectDiverse(rankedTopics, { n = 10, perSubcatMax = 2, publisha
     round++;
   }
   return picked;
+}
+
+// MUSIC 60/40 LANE ALLOCATION (owner 2026-06-28): inside music's 10% share, 60% POPULAR-trending + 40%
+// INDIE-breakout. The two pools are filled SEPARATELY (each still round-robined across the music subcats),
+// so high-volume pop news can't starve the indie lane. If the indie pool underfills (no genuine breakout
+// cleared the detector that day), we DO NOT backfill it with pop — we ship fewer music items rather than
+// dilute the lane or fake a breakout. Returns the merged music picks; the caller fills the rest non-music.
+export function selectMusicLanes(musicTopics, { popN = 0, indieN = 0, perSubcatMax = 2 } = {}) {
+  const pub = (musicTopics || []).filter((t) => t.verification?.publishable);
+  const pop = pub.filter((t) => (t.tier || "popular") !== "indie");
+  const indie = pub.filter((t) => t.tier === "indie");
+  const popPicks = popN > 0 ? selectDiverse(pop, { n: popN, perSubcatMax, publishableOnly: false }) : [];
+  const indiePicks = indieN > 0 ? selectDiverse(indie, { n: indieN, perSubcatMax, publishableOnly: false }) : [];
+  return { picks: [...popPicks, ...indiePicks], popPicked: popPicks.length, indiePicked: indiePicks.length };
+}
+
+// Compute the music lane quotas for a target queue size n: music = 10% of n, split 60/40 pop/indie.
+export function musicQuota(n) {
+  const musicN = Math.max(0, Math.round(n * 0.1));
+  const popN = Math.round(musicN * 0.6);
+  return { musicN, popN, indieN: musicN - popN };
 }
