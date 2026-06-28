@@ -7,6 +7,7 @@ import { newMonitor, printRunReport, writeJSON } from "./store.mjs";
 import { discover } from "./discover.mjs";
 import { categorize } from "./categorize.mjs";
 import { verify } from "./verify.mjs";
+import { externalCorroboration } from "../lib/news.mjs";
 import { scoreTopics, selectDiverse, selectMusicLanes, musicQuota } from "./score.mjs";
 import { detectBreakouts } from "./sources/breakout.mjs";
 import { expandInsideStories, TIER_S } from "./expand.mjs";
@@ -40,6 +41,12 @@ await detectBreakouts(topics, monitor);
 
 // Stage 8 — cross-source verify (trust label + publishable flag)
 const verified = verify(topics, monitor);
+
+// Stage 8b (PR7) — EXTERNAL corroboration via GDELT (free, keyless, non-Wikipedia): the in-run verify above
+// only sees this pull's RSS, so a one-major event can't confirm. GDELT checks the whole open web and UPGRADES
+// an under-sourced DEVELOPING/CONFIRMING event to CONFIRMED when ≥2 INDEPENDENT major owners report it. Only
+// upgrades — never suppresses fresh news on a miss. (Throttled to GDELT's 1-req/5s limit.)
+await externalCorroboration(verified, monitor);
 
 // Stages 4+6 — score + rank, then diverse-select the queue. MUSIC gets a 60/40 pop/indie quota inside its
 // 10% share (filled separately so pop news can't starve the indie lane; no pop-backfill if indie underfills).
