@@ -45,7 +45,7 @@ const NICHE = {
     guide:
       "RANKING form: a short criteria intro, then each entry with a clear, opinionated rationale. Be DECISIVE about #1 (no two winners).",
     fields:
-      '"entries":[{"rank":1,"title":"","year":"","blurb":"one-line why it ranks here"}]  // EVERY ranked item, in order from #1',
+      '"entries":[{"rank":1,"title":"","year":"","whyHere":"the fresh one-line case for THIS rank (a hook, NOT a plot summary or \'Starring X\')","director":"","cast":["2-3 names"],"runtime":"","whereToWatch":"platform if grounded","blurb":"one-line"}]  // EVERY ranked item, in order from #1',
   },
   explainer: {
     guide:
@@ -62,7 +62,7 @@ const NICHE = {
     guide:
       "STREAMING GUIDE = a CURATED, OPINIONATED RANKING (the form Google rewards), NOT a flat availability list. Rank the best picks and give EACH a confident critic's verdict on WHY it's worth watching — original recommendation value, a strong POV, a decisive #1. Add watch-order / which-edition / is-it-worth-your-subscription insight. Availability is a useful add-on, not the point: state a platform ONLY if that exact title is in the TMDB facts block, phrased 'as of [this month]; check before watching'. No unconfirmed sequels; keep all awards/numbers consistent.",
     fields:
-      '"entries":[{"rank":1,"title":"","year":"","blurb":"a confident one-line verdict on why it\'s worth watching"}], "whereToWatch":[{"title":"","platform":"","type":"Stream|Rent|Buy","year":""}]',
+      '"entries":[{"rank":1,"title":"","year":"","verdictTier":"WATCH IT|WORTH A LOOK|SKIP IT","bestFor":"who this pick is best for (one phrase)","runtime":"","whereToWatch":"the platform","blurb":"a confident verdict-first case (~90-160 words)"}], "whereToWatch":[{"title":"","platform":"","type":"Stream|Rent|Buy","year":""}]',
   },
   trailer: {
     guide:
@@ -193,6 +193,45 @@ const SUBSHAPE = {
   "reviews/tv-reviews":
     "TV REVIEW craft: open on a cultural-frame / comparative / personal hook — BAN the 'in our streaming-glut era' opener. Organize THEMATICALLY, never episode-by-episode. SPOILER-FREE (no mid-season or finale twist). 900-1400 words. TV-flavored infoCard (Network, Premiere, Created by, Starring, Where to watch).",
 };
+// PER-(category/subcategory) FIELD-CONTRACT OVERRIDES (2026-06-28 UI/UX overhaul). The shared niche.fields
+// (keyed by formatTag) under-requested the distinctive structured fields each category's UI renders — so the
+// writer never emitted them and the modules shipped empty (the root cause of ~80% of the per-category UI gaps).
+// These ADD the distinctive top-level fields per category/subcategory (disjoint from the base niche.fields),
+// so each category's distinctive components fill. EVERY checkable structured value still needs a claims[]
+// receipt (the judge never sees structured fields) — the SYSTEM rules already mandate that.
+const FIELDS_OVERRIDE = {
+  "movies/news":
+    '"keyPoints":["3 answer-first bullets summarizing the story; bullet #1 = WHAT CHANGED TODAY"], "infoCard":{"director":"","cast":["2-3 lead names"],"releaseYear":"","genre":"","whereToWatch":"platform/theaters if grounded"}',
+  "movies/rankings-lists":
+    '"criterion":"the one-line stated ranking criterion", "honorableMentions":[{"title":"","year":"","note":"one line"}], "topFive":["the top 5 titles in #1..#5 order — for the at-a-glance strip"]',
+  "movies/explainers":
+    '"readingModes":{"justFacts":["3 answer-first bullets — the spoiler-y short answer"],"quickVersion":"a 2-3 sentence quick version of the explanation"}, "infoCard":{"director":"","cast":["3"],"releaseYear":"","runtime":"","genre":""}',
+  "movies/trailers":
+    '"reveals":[{"term":"a NAMED reveal/fact the trailer/synopsis confirms (a cast member, a confirmed plot point — NEVER an invented shot/edit)","note":"one grounded line"}], "officialSynopsis":"the VERBATIM official synopsis if it appears in the facts, else OMIT this field", "infoCard":{"director":"","cast":["3"],"releaseYear":"","genre":""}',
+  "movies/box-office":
+    '"weekendChart":[{"rank":1,"title":"","gross":"weekend gross ONLY if in facts","change":"% change vs last weekend ONLY if in facts"}]  // the weekend top-chart, ONLY rows whose figures are in the facts',
+  "tv/news":
+    '"keyPoints":["3 answer-first bullets; #1 = what changed today"], "seriesStatus":{"show":"","network":"","status":"renewed|canceled|ordered|in talks","season":"which season (e.g. Season 3)","window":"premiere window ONLY if grounded","castAdded":[{"name":"","role":""}]}, "seriesContext":{"network":"","premiere":"original premiere year","status":"","seasons":"# of seasons","creator":"","cast":["2-3"],"whereToWatch":""}',
+  "tv/rankings-lists":
+    '"criterion":"the one-line ranking criterion", "topFive":["top 5 shows in #1..#5 order"]',
+  "tv/trailers":
+    '"reveals":[{"term":"","note":""}], "officialSynopsis":"verbatim official synopsis if grounded, else OMIT", "seriesContext":{"network":"","premiere":"","seasons":"","creator":"","cast":["3"]}',
+  "tv/reactions":
+    '"spoiler":true, "seriesContext":{"network":"","seasons":"","creator":""}',
+  "streaming/best-of-streaming":
+    '"criterion":"the one-line basis for the picks", "bestFor":"the editor\'s one-line best-for pick", "topFive":["the top 5 picks in order"]',
+  "celebrity/news":
+    '"keyPoints":["3 answer-first bullets; #1 = what is new"], "sightings":[{"event":"a VERIFIABLE public appearance (event + context) — NEVER paparazzi/anonymous","date":"if grounded"}]',
+  "celebrity/profiles-careers":
+    '"careerStats":[{"label":"e.g. Oscar nominations / box-office total","value":"a GROUNDED number only"}], "methodology":"a one-line \'how we reported this\' note (no-access: we did not interview them)"',
+  "celebrity/interviews":
+    '"footnotes":[{"term":"a person/project/term named in the interview","fact":"one grounded clarifying line"}]',
+  "awards/predictions":
+    '"atAGlance":{"leaderboard":"the current frontrunner in one phrase","biggestUpset":"the live dark-horse","firsts":"a record/first in play if grounded"}',
+  "reviews/movie-reviews":
+    '"credits":{"distributor":"","director":"","screenplay":"","cast":["3-5"],"runtime":"","rated":""}',
+};
+
 export function resolveNiche(topic) {
   const t = (topic.contentType || "").toLowerCase();
   // MUSIC branches FIRST and on CATEGORY — a music news item and a movie news item share contentType
@@ -230,6 +269,9 @@ export async function generate({ topic, model, maxTokens = 6000, corrections = n
   const tierPreset = (topic.category || "").toLowerCase() === "music" ? TIER_PRESET[topic.tier] || "" : "";
   // Per-category craft layer (playbook) — the same form reads differently per category.
   const subShape = SUBSHAPE[`${(topic.category || "").toLowerCase()}/${(topic.subcategory || "").toLowerCase()}`] || "";
+  // Per-(category/subcategory) FIELD-CONTRACT override — adds the distinctive structured fields the category's
+  // UI renders, so the writer actually emits them (the root-cause fix for the empty per-category modules).
+  const fieldsOverride = FIELDS_OVERRIDE[`${(topic.category || "").toLowerCase()}/${(topic.subcategory || "").toLowerCase()}`] || "";
   const facts =
     (topic.facts || []).map((f) => `- ${f.title}: ${f.extract}`).join("\n") ||
     "(none provided — rely only on uncontroversial, well-known facts; do not invent specifics)";
@@ -257,7 +299,7 @@ Return JSON with EXACTLY these fields:
  "about": [{"name":"Exact Film or Show Title","type":"Movie"}],  // identify the work(s); OMIT any sameAs URL (never link Wikipedia or a fabricated deep link)
  "tags": ["5-8 lowercase relevant tags"],
  "imageQuery": "the single best real person to depict in the hero photo — a specific actor or director full name (for a real, legal photo)",
- "claims": [{"text":"each CHECKABLE specific you assert anywhere in the article (body, takeaways, FAQ, OR A STRUCTURED FIELD): a stat/%, a dollar/box-office figure, a date, an award WIN or NOMINATION, a streaming platform, a filmography credit (title+year+role), an exact quote, a precise count, a tour date, a winner, a runtime, a release window, a precursor result, a chart peak, a credit","sourceQuote":"the VERBATIM substring copied EXACTLY from the REFERENCE FACTS that proves it. If you cannot find a supporting substring in the facts, DO NOT make that claim — remove it or write it qualitatively. This is mandatory: every checkable specific MUST have a real receipt. ⚠ STRUCTURED FIELDS ESPECIALLY: the quality judge does NOT see your structured fields (release/tracklist/tourDates/whereToWatch/releaseWindows/awardCategories/verdictBuckets/precursorTimeline/credits/etc), so a structured value with no claims[] receipt is UNVERIFIABLE — give every checkable structured value its own receipt here, or OMIT it from the field."}]${niche ? ",\n " + niche.fields : ""}
+ "claims": [{"text":"each CHECKABLE specific you assert anywhere in the article (body, takeaways, FAQ, OR A STRUCTURED FIELD): a stat/%, a dollar/box-office figure, a date, an award WIN or NOMINATION, a streaming platform, a filmography credit (title+year+role), an exact quote, a precise count, a tour date, a winner, a runtime, a release window, a precursor result, a chart peak, a credit","sourceQuote":"the VERBATIM substring copied EXACTLY from the REFERENCE FACTS that proves it. If you cannot find a supporting substring in the facts, DO NOT make that claim — remove it or write it qualitatively. This is mandatory: every checkable specific MUST have a real receipt. ⚠ STRUCTURED FIELDS ESPECIALLY: the quality judge does NOT see your structured fields (release/tracklist/tourDates/whereToWatch/releaseWindows/awardCategories/verdictBuckets/precursorTimeline/credits/movieFacts/seriesContext/seriesStatus/weekendChart/reveals/keyPoints/etc), so a structured value with no claims[] receipt is UNVERIFIABLE — give every checkable structured value its own receipt here, or OMIT it from the field."}]${niche ? ",\n " + niche.fields : ""}${fieldsOverride ? ",\n " + fieldsOverride : ""}
 }
 
 Requirements: faq has 3-4 entries that raise NEW follow-up questions (never restating a stat or fact already in the body); body has >=2 H2s (at least one a question) and a Sources section with >=3 external links; about lists the specific title(s) the piece is about (empty array only if truly none).${corrections ? `
