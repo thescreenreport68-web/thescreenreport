@@ -1,6 +1,7 @@
 import { chat } from "../lib/openrouter.mjs";
 import { GATE } from "../config.mjs";
 import { verifyClaims } from "../lib/claimcheck.mjs";
+import { verifyGroundTruth } from "../lib/verifyEngine.mjs";
 
 // ---- Readability / human-voice helpers (free, deterministic) ----
 function plainProse(md) {
@@ -190,7 +191,7 @@ const PLAYBOOK_NOTES = {
     "NOTE: this is an AWARDS PREDICTIONS piece — reward a state-of-the-race lede, every frontrunner citing a REAL named precursor, and a named spoiler; HARD-BLOCK anonymous sourcing ('insiders say'), fabricated %/odds, a logistics/ceremony-date lede, and listing contenders without ranking them.",
 };
 
-export async function judge({ article, topic, model, metrics }) {
+export async function judge({ article, topic, model, metrics, groundTruth }) {
   // The judge must see enough grounding to VERIFY claims (truncating long Wikipedia extracts causes
   // false "fabrication" flags on facts that live deeper in the article). Keep short must-verify blocks
   // (reactions, TMDB, release info) whole; cap long extracts generously.
@@ -212,10 +213,13 @@ ${topic.formatTag === "awards" ? "NOTE: this is an AWARDS WINNERS-LIST — judge
 ${PLAYBOOK_NOTES[topic.formatTag] || ""}
 ${metrics ? `EDITOR METRICS (deterministic — factor into readability/phrasing/humanVoice): Flesch ${metrics.flesch} (target 60-72; <50 reads dense), avg sentence ${metrics.avgSentence}w, longest sentence ${metrics.maxSentence}w, generic-tell/AI-cliche hits ${metrics.bannedTells}, breathless filler-praise hits ${metrics.fillerPraise ?? 0} (each unbacked "stunning/masterful/riveting" is an AI-review tell — dock humanVoice), exact-keyword repeats ${metrics.kwExact}.` : ""}
 
-REFERENCE FACTS the article was grounded on (these are VERIFIED, including live streaming availability from TMDB). Treat any claim consistent with these as accurate. Only record a hardBlock for a claim that CONTRADICTS these facts, or a clearly invented quote/stat/event with no basis here. Do NOT hardBlock for incompleteness, for current-availability claims that match these facts, or for facts you personally can't verify but that appear here:
+${groundTruth && groundTruth.findings.length ? `⚠ MECHANICALLY VERIFIED CONTRADICTIONS — each was checked IN CODE against authoritative structured data (TMDB credits/dates/platform + OMDb ratings/box office) BEFORE you ran. Treat EVERY item below as a confirmed hardBlock regardless of how confident or polished the prose reads, and copy it into your hardBlocks:
+${groundTruth.findings.map((f) => `• [${f.layer}] ${f.why}`).join("\n")}
+
+` : ""}REFERENCE FACTS the article was grounded on (these are the authoritative, VERIFIED facts — TMDB/OMDb/Wikidata structured data + live streaming availability). A claim CONSISTENT with these is accurate. But you must also be STRICT about gaps: any checkable specific the article asserts — a Rotten Tomatoes/Metacritic/IMDb score or any %, a box-office/dollar figure, a date or year, a streaming platform, an award winner or nomination, a chart position, a runtime — that is NOT present in these facts is UNGROUNDED: flag it as "fabricated: <the claim>". Do NOT give the writer the benefit of the doubt on a specific that does not appear here, no matter how plausible it sounds (every past fabrication was a plausible gap-fill, not a contradiction). Do NOT flag obvious common-knowledge background or analysis/opinion that asserts no specific.
 ${facts}
 
-ARTICLE:
+ARTICLE (prose + the STRUCTURED FIELDS readers see — verify these too; invented winners/platforms/dates live here):
 ${JSON.stringify({
     title: article.title,
     dek: article.dek,
@@ -223,7 +227,21 @@ ${JSON.stringify({
     body: article.body,
     faq: article.faq,
     about: article.about,
-  }).slice(0, 24000)}
+    verdict: article.verdict,
+    rating: article.rating,
+    entries: article.entries,
+    whereToWatch: article.whereToWatch,
+    releaseWindows: article.releaseWindows,
+    awardCategories: article.awardCategories,
+    awardRecords: article.awardRecords,
+    boxOffice: article.boxOffice,
+    records: article.records,
+    tracklist: article.tracklist,
+    tourDates: article.tourDates,
+    soundtrack: article.soundtrack,
+    careerArc: article.careerArc,
+    verdictBuckets: article.verdictBuckets,
+  }).slice(0, 28000)}
 
 FABRICATION CHECK (do this FIRST, before scoring — be mechanical and strict; this is the most important job):
 Go through the article and check EACH of these against the REFERENCE FACTS. Add any unsupported one to hardBlocks as "fabricated: <the exact claim>":
@@ -232,7 +250,8 @@ Go through the article and check EACH of these against the REFERENCE FACTS. Add 
  (h) RELEASE / AIR STATUS (critical): a review, ranking, or box-office report is only valid for a work that the facts show is RELEASED/AIRED. If the article reviews, reports box office for, or ranks episodes of something the facts indicate is unreleased / not-yet-aired / has no such data, flag it as "fabricated: reports on unreleased/unaired content".
  (i) TITLE IDENTITY (critical — name collisions): the article must be about the SAME specific title as the REFERENCE FACTS (matching year/director/cast). Many works share similar names. If the article's plot, cast, or details clearly describe a DIFFERENT work than the one in the facts (a same-named or similar-named other film/show), flag it as "fabricated: wrong-title / identity mismatch".
  (j) RANKED ITEMS: in a list/ranking, every ranked entry should be grounded; flag any invented entry.
-Rule of thumb: for (b)(d)(f)(g)(h)(i), if a must-be-sourced specific is NOT in the facts, FLAG it — never pass a likely fabrication. (Do NOT flag obvious common-knowledge background, well-known released films, or current-availability claims that match the facts.)
+ (k) STREAMING PLATFORM (critical): any claim that a title streams on / is available on / is a "[Platform] original" MUST match the platform named in the facts. A different platform is a fabrication ("fabricated: says X streams on Netflix, facts show Prime Video"). If the facts mark a film STREAMING-ORIGINAL, any box-office/theatrical claim for it is fabricated.
+Rule of thumb: for (b)(d)(f)(g)(h)(i)(k), if a must-be-sourced specific is NOT in the facts, FLAG it — never pass a likely fabrication. (Do NOT flag obvious common-knowledge background, well-known released films, or current-availability claims that match the facts.)
 
 Return STRICT JSON:
 { "score": 0-100 (reader-first: a high-SEO but stiff/generic/keyword-stuffed piece must score LOW),
@@ -253,20 +272,34 @@ Return STRICT JSON:
 
 export async function gate({ article, topic, judgeModel }) {
   const det = deterministic(article, topic);
-  // Cost short-circuit: a structurally-broken draft routes to review/retry without paying the judge.
+
+  // FREE verification — ALWAYS run, even on a structural short-circuit (the old code returned
+  // claimCheck.ok=true WITHOUT checking — Problem #8). Two independent lines:
+  //  (1) verifyClaims — claims[]-scoped receipt validation (PR2);
+  //  (2) verifyGroundTruth — deterministic diff of the PROSE + STRUCTURED FIELDS vs the authoritative
+  //      TMDB/OMDb facts (PR3) — independent of the writer's opt-out claims[]; catches platform/RT/OTT
+  //      box-office/director contradictions the writer never listed.
+  const cc = verifyClaims(article, topic);
+  const gt = verifyGroundTruth(article, topic);
+  const factCorrections = [cc.corrections, gt.corrections].filter(Boolean).join("\n");
+  const factBlocks = [
+    ...cc.contradicted.map((v) => `fabricated: ${v.claim} — ${v.why}`),
+    ...gt.contradicted.map((f) => `CONTRADICTED [${f.layer}]: ${f.claim} — ${f.why}`),
+  ];
+  // The merged claim-check payload the run.mjs self-correct loop reads (corrections drive the rewrite).
+  const claimCheck = { ok: cc.ok && gt.ok, corrections: factCorrections, bad: cc.bad, verdicts: cc.verdicts, contradicted: [...cc.contradicted, ...gt.contradicted], groundTruth: gt.findings };
+
+  // Cost short-circuit: a structurally-broken draft routes to retry WITHOUT paying the LLM judge — but we
+  // still surface the free fact corrections so the rewrite fixes structure AND facts in one pass.
   if (det.hardBlocks.length) {
-    return { score: 0, pass: false, subscores: {}, deterministic: det, hardBlocks: det.hardBlocks, claimCheck: { ok: true, corrections: "" }, strengths: [], weaknesses: ["deterministic block"] };
+    return { score: 0, pass: false, subscores: {}, deterministic: det, hardBlocks: [...det.hardBlocks, ...factBlocks], claimCheck, strengths: [], weaknesses: ["deterministic block"] };
   }
 
-  // FIX-2 — VERIFY EVERY CHECKABLE CLAIM against the grounding receipts (free). Unverified/contradicted
-  // claims block publish AND produce targeted corrections for the self-correction loop in run.mjs.
-  const cc = verifyClaims(article, topic);
-
-  const j = await judge({ article, topic, model: judgeModel, metrics: det });
+  const j = await judge({ article, topic, model: judgeModel, metrics: det, groundTruth: gt });
   const ss = j.subscores || {};
-  const hardBlocks = [...det.hardBlocks, ...(j.hardBlocks || [])];
-  if (cc.contradicted.length) hardBlocks.push(...cc.contradicted.map((v) => `fabricated: ${v.claim} — ${v.why}`));
+  const hardBlocks = [...det.hardBlocks, ...(j.hardBlocks || []), ...factBlocks];
   if (cc.bad.length) hardBlocks.push(`${cc.bad.length} unverified claim(s) (need correction)`);
+  if (gt.findings.length > gt.contradicted.length) hardBlocks.push(`${gt.findings.length - gt.contradicted.length} ungrounded fact(s) (verify against the authoritative facts)`);
 
   // FAIL-CLOSED accuracy floor (priority #1): a missing/low accuracy score blocks — never silently skip.
   if (typeof ss.accuracy !== "number") hardBlocks.push("judge accuracy score missing — cannot verify accuracy");
@@ -283,7 +316,7 @@ export async function gate({ article, topic, judgeModel }) {
     subscores: j.subscores,
     deterministic: det,
     hardBlocks,
-    claimCheck: cc, // {bad, contradicted, corrections, verdicts} → drives the correction loop
+    claimCheck, // {ok, bad, contradicted, corrections, verdicts, groundTruth} → drives the correction loop
     strengths: j.strengths,
     weaknesses: j.weaknesses,
   };
