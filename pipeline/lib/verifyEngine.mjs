@@ -29,7 +29,7 @@ const PLATFORMS = [
 // Phrases that ASSERT a title's streaming home (so we don't flag an incidental mention of a rival service).
 // We capture the platform token that follows one of these assertion verbs/forms.
 const STREAM_ASSERT = [
-  /\b(?:streaming|available|now streaming|watch(?:ing)?|stream it|premiered?|debuted?|landed?|dropped?|arriv\w+|releas\w+|exclusively)\s+(?:on|to|via|on the)\s+([A-Za-z+ ]{2,18})/gi,
+  /\b(?:streaming|streams?|stream it|available|now streaming|watch(?:ing)?|premiere[sd]?|debut(?:s|ed|ing)?|land(?:s|ed|ing)?|drop(?:s|ped|ping)?|arriv\w+|releas\w+|air(?:s|ed|ing)?|exclusively)\s+(?:on|to|via|on the)\s+([A-Za-z+ ]{2,18})/gi,
   /\ba[n]?\s+([A-Za-z+ ]{2,18})\s+(?:original|exclusive|film|movie|series|show|release)\b/gi,
 ];
 
@@ -45,6 +45,22 @@ function assertedPlatforms(text) {
     }
   }
   return [...found];
+}
+
+// Negation / skip cues that make a box-office or theatrical mention CORRECT for a streaming-original
+// ("skipped a theatrical release", "no box office", "went straight to Netflix", "bypassed cinemas").
+const NEG = /\b(no|not|n['’]?t|never|without|skip\w*|bypass\w*|forgo\w*|foregoing|instead of|rather than|straight to|direct(?:ly)? to|didn['’]?t|wasn['’]?t|isn['’]?t|won['’]?t|avoid\w*|eschew\w*|sidestep\w*|in lieu of|no theatrical|no box)\b/i;
+
+// True only if `re` matches the text in a context with NO nearby negation/skip cue — i.e. the article
+// POSITIVELY asserts the thing (a real gross / an actual theatrical run), not its absence.
+function positiveAssertion(text, re, win = 40) {
+  const rx = new RegExp(re.source, "gi");
+  let m;
+  while ((m = rx.exec(text))) {
+    const ctx = text.slice(Math.max(0, m.index - win), m.index + m[0].length + win);
+    if (!NEG.test(ctx)) return true;
+  }
+  return false;
 }
 
 // All reader-visible text of the article (prose + the structured fields that render to readers).
@@ -93,10 +109,12 @@ export function verifyGroundTruth(article, topic) {
   }
 
   // ── Layer 1b — OTT box office + release type (kills invented grosses on streaming-originals) ──
+  // A NEGATED/skip mention is CORRECT framing for a streaming-original ("skipped a theatrical release",
+  // "no box office", "went straight to Netflix") — only flag a POSITIVE assertion of a gross / theatrical run.
   if (tf && tf.isOTT) {
-    const boSays = /(\$\s?\d[\d,.]*\s?(?:million|billion|m|b)?\b[^.\n]{0,40}?(?:box office|gross(?:ed)?|opening weekend|domestic|worldwide|debut))|((?:box office|gross(?:ed)?|opening weekend)[^.\n]{0,40}?\$\s?\d)/i.test(text);
-    const theatricalSays = /\b(in theaters|theatrical release|hit theaters|in cinemas|box-?office (?:debut|opening|run|number)|opening weekend)\b/i.test(text);
-    if (boSays || theatricalSays) {
+    const boRe = /(\$\s?\d[\d,.]*\s?(?:million|billion|m|b)?\b[^.\n]{0,40}?(?:box office|gross(?:ed)?|opening weekend))|((?:box office|gross(?:ed)?|opening weekend)[^.\n]{0,40}?\$\s?\d)/i;
+    const theatRe = /\b(in theaters|theatrical release|hit theaters|in cinemas|box-?office (?:debut|opening|run|number|gross|haul))\b/i;
+    if (positiveAssertion(text, boRe) || positiveAssertion(text, theatRe)) {
       findings.push({
         layer: "ott-boxoffice", severity: "CONTRADICTED",
         claim: `article reports box office / a theatrical run for ${title}`,
