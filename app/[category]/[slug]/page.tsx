@@ -12,6 +12,7 @@ import NewsletterBand from "@/components/NewsletterBand";
 import AdSlot from "@/components/AdSlot";
 import ArticleCard from "@/components/ArticleCard";
 import JsonLd from "@/components/JsonLd";
+import ReadingProgress from "@/components/ReadingProgress";
 import SubcategoryArchive from "@/components/SubcategoryArchive";
 import { getAllArticles, getArticle, getRelated } from "@/lib/articles";
 import {
@@ -169,10 +170,44 @@ export default function ArticlePage({
             : {}),
         }
       : null,
+    // Reviews: a Review object with the rating (rich-result eligible; NewsArticle stays primary).
+    (article.formatTag === "review" || article.formatTag === "recap") && article.rating?.score
+      ? {
+          "@context": "https://schema.org",
+          "@type": "Review",
+          itemReviewed: {
+            "@type": article.about?.[0]?.type === "TVSeries" ? "TVSeries" : "Movie",
+            name: article.about?.[0]?.name || article.title,
+          },
+          reviewRating: {
+            "@type": "Rating",
+            ratingValue: article.rating.score,
+            bestRating: article.rating.max ?? 10,
+            worstRating: 1,
+          },
+          author: { "@type": "Organization", name: SITE.name },
+          ...(article.verdict ? { reviewBody: article.verdict } : {}),
+        }
+      : null,
+    // Music tour dates → MusicEvent per stop (embed-only, no ticketing/offers).
+    ...(article.formatTag === "music-news" && article.tourDates?.length
+      ? article.tourDates
+          .filter((d) => d.city || d.venue)
+          .map((d) => ({
+            "@context": "https://schema.org",
+            "@type": "MusicEvent",
+            name: `${article.release?.title || article.title}${d.city ? ` — ${d.city}` : ""}`,
+            ...(d.date ? { startDate: d.date } : {}),
+            ...(d.venue
+              ? { location: { "@type": "Place", name: d.venue, ...(d.city ? { address: d.city } : {}) } }
+              : {}),
+          }))
+      : []),
   ].filter(Boolean) as object[];
 
   return (
     <div className="container-wide py-6">
+      <ReadingProgress />
       <JsonLd data={jsonLd} />
 
       {/* Top billboard */}

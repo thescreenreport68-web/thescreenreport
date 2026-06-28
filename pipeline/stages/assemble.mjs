@@ -112,6 +112,12 @@ export function assemble({ article, classification, image, topic, dateISO }) {
       publishedAt: dateISO,
     };
     fm.dateModified = dateISO;
+    // PR2: surface the FIND trust label as the reader-facing storyStatus badge (deterministic — never
+    // depends on the LLM). EVERGREEN reference pieces get no badge; held statuses collapse to HOLD.
+    const STATUS_BADGE = { CONFIRMED: "CONFIRMED", DEVELOPING: "DEVELOPING", RUMOR: "RUMOR", CONFIRMING: "HOLD", QUEUE: "HOLD", "EDITORIAL-HOLD": "HOLD" };
+    const badge = STATUS_BADGE[topic.verification.status];
+    if (badge) fm.storyStatus = badge;
+    if (topic.verification.sensitivity && topic.verification.sensitivity !== "normal") fm.sensitivity = topic.verification.sensitivity;
   }
   // strip stray markdown emphasis from plain-text structured-field strings
   const stripMd = (v) =>
