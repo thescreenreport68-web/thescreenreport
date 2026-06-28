@@ -68,9 +68,18 @@ export function deterministic(article, topic) {
   // so the long-feature minimums (500w/6-FAQ/3-H2/Sources) would wrongly block it. Every other niche
   // keeps the strict rank-#1 defaults. The unique-value floor is still enforced via the LLM judge.
   const PROFILE = {
-    news: { words: 350, faq: 3, h2: 2, kt: 0, ext: 2, sources: false },
+    // short inverted-pyramid news (movie/tv/celeb brief): 1 H2 is fine, no key-takeaways floor (playbook).
+    news: { words: 300, faq: 3, h2: 1, kt: 0, ext: 2, sources: false },
     // awards winners-list: the structured winners list is the bulk; the body is a lede + records narrative.
     awards: { words: 300, faq: 3, h2: 1, kt: 3, ext: 2, sources: true },
+    // PLAYBOOK new/changed forms:
+    watchguide: { words: 600, faq: 3, h2: 2, kt: 3, ext: 2, sources: true },
+    recap: { words: 500, faq: 2, h2: 2, kt: 0, ext: 1, sources: false }, // recaps are short + spoiler-forward
+    predictions: { words: 550, faq: 3, h2: 1, kt: 3, ext: 2, sources: true },
+    // rankings need length for entries, but keep the floor MODEST (playbook Part-6 anti-padding rail) so a
+    // tight, fully-grounded ranking isn't pushed to fabricate entries to clear it. 700 clears a real ranking.
+    list: { words: 700, faq: 3, h2: 2, kt: 3, ext: 2, sources: true },
+    review: { words: 650, faq: 3, h2: 2, kt: 3, ext: 2, sources: true },
   };
   // Defaults RELAXED (anti over-SEO): FAQ 6->4 (Google removed FAQ rich results), H2 3->2, body 500->400.
   const p = PROFILE[topic.formatTag] || { words: 400, faq: 3, h2: 2, kt: 3, ext: 2, sources: true };
@@ -113,6 +122,29 @@ export function deterministic(article, topic) {
   // the judge weighs the 1-4 range via humanVoice using the fillerPraise metric below.
   if (fillerPraise >= 5) hardBlocks.push(`breathless filler pile-up (${fillerPraise} empty intensifiers — back them with specifics or cut)`);
 
+  // PLAYBOOK per-form deterministic guards — fire ONLY on clear, unambiguous violations (the judge handles
+  // nuance). Each enforces the form's load-bearing promise so a structurally-wrong piece routes to review.
+  const ft = topic.formatTag;
+  // a review/recap MUST deliver a verdict or a rating
+  if ((ft === "review" || ft === "recap") && !article.verdict && !(article.rating && typeof article.rating.score === "number"))
+    hardBlocks.push(`${ft} has no verdict/rating (a review must deliver a verdict)`);
+  // a RANKED list must be decisive — if entries are ranked, one must be #1
+  if ((ft === "list" || ft === "guide") && Array.isArray(article.entries) && article.entries.length >= 3 &&
+      article.entries.some((e) => typeof e?.rank === "number") && !article.entries.some((e) => Number(e?.rank) === 1))
+    hardBlocks.push("ranked entries but no #1 (be decisive)");
+  // a trailer whose TITLE promises "N Reveals/Things" must match the reveals contract
+  const countM = (article.title || "").match(/\b(\d{1,2})\s+(reveals?|things|takeaways|moments)\b/i);
+  if (ft === "trailer" && countM && Array.isArray(article.reveals) && article.reveals.length !== Number(countM[1]))
+    hardBlocks.push(`title promises ${countM[1]} ${countM[2]} but reveals[] has ${article.reveals.length}`);
+  // awards: never claim MORE wins than the grounded structured winners list supports
+  if (ft === "awards" && Array.isArray(article.awardCategories)) {
+    const winners = article.awardCategories.reduce((n, c) => n + (c.nominees || []).filter((x) => x.isWinner).length, 0);
+    const wonM = body.match(/won\s+(\d{1,2})\s+(oscars|grammys|emmys|globes|awards)/i);
+    if (winners > 0 && wonM && Number(wonM[1]) > winners) hardBlocks.push(`body claims "won ${wonM[1]} ${wonM[2]}" but only ${winners} winner(s) in the structured list`);
+  }
+  // watch-guide stays a fast answer, not a bloated feature
+  if (ft === "watchguide" && words > 1100) hardBlocks.push(`watch-guide ${words}w > 1100 (keep it a fast answer)`);
+
   return {
     words, h2s: h2s.length, h2Questions, internalLinks, externalLinks,
     hasSources, faqCount, ktCount, kwInTitle, kwInFirst100, kwInH2,
@@ -129,6 +161,34 @@ const RUBRIC = `Score The Screen Report's READER-FIRST standard. Reader experien
 - INFORMATION GAIN: original framing/analysis/verdict/POV, not a dry summary.
 - STRUCTURE: answer-first lead, useful subheads, Key Takeaways, lists/tables where they help.
 - SEO (secondary): keyword present NATURALLY (not stuffed/forced into headings); strong meta; a few genuine FAQ that add NEW info; >=3 authoritative external sources; internal links. Over-optimization is a NEGATIVE, not a plus.`;
+
+// PLAYBOOK per-form judge NOTEs (CATEGORY_UIUX_EDITORIAL_PLAYBOOK.md §2.3) — keyed by formatTag, injected
+// into the judge prompt so the >=80 gate enforces EACH form's standard. (news/box-office/awards stay inline
+// above.) Each = "judge by [X]; reward [payoff]; hard-block [failure mode]."
+const PLAYBOOK_NOTES = {
+  list:
+    "NOTE: this is a RANKED LIST — reward a stated criterion, a decisive DEFENDED #1, and a fresh hook on every entry; penalize interchangeable boilerplate praise, plot-summary-as-blurb, a padded count, and unjustified ranks. Don't require essayistic length; reward decisiveness.",
+  guide:
+    "NOTE: this is a curated best-of list — reward a clear angle + a decisive editor's pick + rotated, verdict-first blurbs; penalize 'Netflix has tons' openers, 'This movie follows…' summary blurbs, and an undefended pick. Availability claims must match the facts.",
+  explainer:
+    "NOTE: this is an EXPLAINER — reward a fast frame-then-answer lede, a COMMITTED reading, and question-phrased H2s; hard-block an 'open to interpretation' non-answer, meaning-before-plot inversion, and any invented fate/post-credits/'the director said'.",
+  trailer:
+    "NOTE: this is a TRAILER preview (we did NOT watch it) — reward >=3 grounded context layers; HARD-BLOCK any shot/edit/dialogue/music/runtime narration ('the camera', 'we see', 'opens on', music cues) and any non-verbatim character quote. Date discipline: one exact release date everywhere.",
+  reaction:
+    "NOTE: this is a REACTION roundup — reward aggregate synthesis of the discourse + a forward 'what it signals'; hard-block named-user attribution, fabricated engagement numbers, and reviewing the film instead of the reaction.",
+  watchguide:
+    "NOTE: this is a single-title WHERE-TO-WATCH guide — reward the answer in the first 1-2 sentences, a clear Stream/Rent/Buy distinction, and shown reasoning on any window; hard-block a platform/date with NO receipt-or-estimate-label, device-list/boilerplate filler, and bloat past ~1100 words.",
+  profile:
+    "NOTE: this is a no-access celebrity PROFILE — reward a thesis + named eras + a triangulation graf; HARD-BLOCK a faked in-room/hotel scene (we did not interview them) and PR-bio transcribed as if observed.",
+  interview:
+    "NOTE: this is an INTERVIEW summary — reward a BLUF revelation + paraphrase-then-quote rhythm + thematic organization; hard-block invented scene-setting, quote-dumping, and wrong-speaker attribution. Quotes must be verbatim from the transcript/facts.",
+  review:
+    "NOTE: this is a REVIEW — reward a verdict-first stance, praise CHAINED to a named grounded reason, and one earned reservation; hard-block >50% plot-summary, non-verbatim dialogue quotes, a spoiler (it is not a recap), and prose POV that contradicts the score.",
+  recap:
+    "NOTE: this is an EPISODE RECAP (spoilers ON) — reward a spoiler banner, beat-by-beat analysis tied to the season arcs, and a 'Loose Threads' close; hard-block inventing a scene/line/death or any unaired episode, and grading the whole season.",
+  predictions:
+    "NOTE: this is an AWARDS PREDICTIONS piece — reward a state-of-the-race lede, every frontrunner citing a REAL named precursor, and a named spoiler; HARD-BLOCK anonymous sourcing ('insiders say'), fabricated %/odds, a logistics/ceremony-date lede, and listing contenders without ranking them.",
+};
 
 export async function judge({ article, topic, model, metrics }) {
   // The judge must see enough grounding to VERIFY claims (truncating long Wikipedia extracts causes
@@ -149,6 +209,7 @@ TOPIC: ${topic.title} (${topic.contentType})
 ${topic.formatTag === "news" ? "NOTE: this is a SHORT-NEWS article — judge it by news standards (fast inverted-pyramid lead, freshness, every claim sourced/attributed, one unique sourced fact beyond the headline). Do NOT penalize it for being shorter than a feature, for fewer FAQ/H2s, or for not having a long analysis section; reward tight, accurate, well-attributed reporting." : ""}
 ${topic.formatTag === "box-office" ? "NOTE: this is a BOX-OFFICE report — judge it by TRADE-NEWS standards (Variety/Deadline), not feature-review standards. A crisp, authoritative, well-organized piece with accurate figures, the records in context, and a real analytical angle on what the result MEANS is excellent here — score humanVoice and infoGain on that basis (8-9 for a clear, insightful data story); do NOT require essayistic wit. Every dollar figure/record MUST match the facts." : ""}
 ${topic.formatTag === "awards" ? "NOTE: this is an AWARDS WINNERS-LIST — judge it by reference-news standards. The structured winners list renders separately, so the BODY is a lede + 'biggest winners/moments' + records; reward a strong decisive lede, accurate marquee winners, and records in context (score humanVoice/infoGain on that basis, not on essayistic length). CRITICAL: every winner/nominee/record MUST match the facts — hard-block ANY invented winner, nominee, host, venue, edition, or record." : ""}
+${PLAYBOOK_NOTES[topic.formatTag] || ""}
 ${metrics ? `EDITOR METRICS (deterministic — factor into readability/phrasing/humanVoice): Flesch ${metrics.flesch} (target 60-72; <50 reads dense), avg sentence ${metrics.avgSentence}w, longest sentence ${metrics.maxSentence}w, generic-tell/AI-cliche hits ${metrics.bannedTells}, breathless filler-praise hits ${metrics.fillerPraise ?? 0} (each unbacked "stunning/masterful/riveting" is an AI-review tell — dock humanVoice), exact-keyword repeats ${metrics.kwExact}.` : ""}
 
 REFERENCE FACTS the article was grounded on (these are VERIFIED, including live streaming availability from TMDB). Treat any claim consistent with these as accurate. Only record a hardBlock for a claim that CONTRADICTS these facts, or a clearly invented quote/stat/event with no basis here. Do NOT hardBlock for incompleteness, for current-availability claims that match these facts, or for facts you personally can't verify but that appear here:
