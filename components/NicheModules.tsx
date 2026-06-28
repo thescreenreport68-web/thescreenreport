@@ -2,6 +2,7 @@ import type { Article } from "@/lib/articles";
 import YouTubeEmbed from "@/components/embed/YouTubeEmbed";
 import SocialReactionGrid from "@/components/embed/SocialReactionGrid";
 import { MusicTop, MusicBottom } from "@/components/MusicModules";
+import { PlaybookTop, PlaybookBottom } from "@/components/PlaybookModules";
 
 /* Per-niche UI modules, rendered on top of the shared article base.
    Each article only carries the fields for its own niche, so the dispatchers
@@ -136,6 +137,9 @@ function RankingList({ entries }: { entries: NonNullable<Article["entries"]> }) 
             <span className="font-body text-[1.05rem] leading-snug text-navy">
               <span className="font-semibold">{e.title}</span>
               {e.year ? <span className="text-slate"> ({e.year})</span> : null}
+              {e.verdictTier ? (
+                <span className="ml-2 inline-block bg-mist px-1.5 py-0.5 align-middle font-sans text-[10px] font-bold uppercase tracking-[0.08em] text-breaking">{e.verdictTier}</span>
+              ) : null}
               {e.blurb ? <span className="text-slate"> — {e.blurb}</span> : null}
             </span>
           </li>
@@ -472,6 +476,7 @@ function AwardsWinnersList({ article }: { article: Article }) {
 export function NicheTop({ article }: { article: Article }) {
   return (
     <>
+      <PlaybookTop article={article} />
       {article.formatTag === "trailer" ? <TrailerModule article={article} /> : null}
       {article.formatTag === "interview" ? <InterviewModule article={article} /> : null}
       {article.formatTag === "reaction" ? <ConsensusBox article={article} /> : null}
@@ -499,6 +504,7 @@ export function NicheBottom({ article }: { article: Article }) {
       {article.formatTag === "reaction" ? <ReactionSection article={article} /> : null}
       {article.formatTag === "awards" || article.formatTag === "music-awards" ? <AwardsWinnersList article={article} /> : null}
       <MusicBottom article={article} />
+      <PlaybookBottom article={article} />
     </>
   );
 }
