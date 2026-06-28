@@ -130,7 +130,7 @@ export async function categorize(candidates, monitor, { model = MODELS.classifie
         tmdbType: c.mediaType === "tv" ? "tv" : "movie",
         // v2: carry the discovery provenance so verify.mjs can corroborate + score can rank by freshness.
         source: c.source,
-        sources: c.outlet ? [{ outlet: c.outlet, tier: c.sourceTier || 5, ageMin: c.ageMin ?? null, headline: c.title, summary: (c.summary || "").slice(0, 280) }] : [],
+        sources: c.outlet ? [{ outlet: c.outlet, tier: c.sourceTier || 5, ageMin: c.ageMin ?? null, headline: c.title, summary: (c.summary || "").slice(0, 600) }] : [],
         ageMin: c.ageMin ?? null,
         _cand: { key: c.key, popularity: c.popularity || 0, voteCount: c.voteCount, kind: c.kind },
       }));
@@ -146,10 +146,16 @@ export async function categorize(candidates, monitor, { model = MODELS.classifie
   for (const t of topics) {
     const anchor = await resolveEntity(t);
     if (anchor) {
-      // canonicalize the grounding title to the real page; keep the original label in entities if swapped
-      if (anchor.title !== t.primaryEntity && !t.entities.includes(t.primaryEntity)) t.entities.unshift(t.primaryEntity);
-      t.primaryEntity = anchor.title;
-      t.entities = [...new Set(t.entities.filter((e) => e !== anchor.title))].slice(0, 4);
+      if (anchor.viaPrimary) {
+        // the actual subject resolved → canonicalize the grounding title to the real page
+        if (anchor.summary.title !== t.primaryEntity && !t.entities.includes(t.primaryEntity)) t.entities.unshift(t.primaryEntity);
+        t.primaryEntity = anchor.summary.title;
+      } else {
+        // resolved ONLY via a supporting entity — KEEP the real subject as primaryEntity (don't retarget
+        // onto a co-star); the supporting entity just provides extra grounding.
+        if (!t.entities.includes(anchor.summary.title)) t.entities.unshift(anchor.summary.title);
+      }
+      t.entities = [...new Set(t.entities.filter((e) => e !== t.primaryEntity))].slice(0, 4);
       resolved.push(t);
     } else {
       monitor.stage("resolve", `dropped "${t.primaryEntity}" — no Wikipedia identity for primary OR supporting entities`);
@@ -180,12 +186,21 @@ async function resolveEntity(t) {
   const strict = FILM_NICHES.has(t.formatTag);
   const bare = t.primaryEntity.replace(/\s*\([^)]*\)\s*$/, "").trim();
   const yr = (t.title.match(/\b(19|20)\d{2}\b/) || [])[0];
-  const primaryTries = [t.primaryEntity, bare, yr ? `${bare} (${yr} film)` : null, yr ? `${bare} (${yr} TV series)` : null];
-  const tries = strict ? primaryTries : [...primaryTries, ...t.entities];
-  for (const v of [...new Set(tries.filter(Boolean))]) {
-    const s = await wikiSummary(v); // returns null for disambiguation/no-extract pages
-    if (s?.extract && (!strict || looksLikeScreenWork(s))) return s;
+  const primaryTries = [t.primaryEntity, bare, yr ? `${bare} (${yr} film)` : null, yr ? `${bare} (${yr} TV series)` : null].filter(Boolean);
+  // 1) try the PRIMARY entity (the actual subject) first → resolving here is a true canonicalize.
+  for (const v of [...new Set(primaryTries)]) {
+    const s = await wikiSummary(v);
+    if (s?.extract && (!strict || looksLikeScreenWork(s))) return { summary: s, viaPrimary: true };
     await new Promise((r) => setTimeout(r, 80));
+  }
+  // 2) for non-film niches, a SUPPORTING entity resolving keeps the topic alive for grounding — but we
+  //    must NOT retarget the article onto it (it may be a famous co-star, not the real subject).
+  if (!strict) {
+    for (const v of [...new Set((t.entities || []).filter(Boolean))]) {
+      const s = await wikiSummary(v);
+      if (s?.extract) return { summary: s, viaPrimary: false };
+      await new Promise((r) => setTimeout(r, 80));
+    }
   }
   return null;
 }

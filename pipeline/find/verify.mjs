@@ -25,6 +25,12 @@ const TIER1 = 7; // major trade / wire / official record
 const SECONDARY = 5; // reputable secondary / major-celebrity outlet (5–6)
 const EVERGREEN_FORMATS = new Set(["list", "explainer", "guide", "profile"]);
 
+// PARENT-COMPANY groups — same-owner outlets are NOT independent corroboration. Penske Media (PMC) owns
+// Deadline + Variety + THR + IndieWire, so when PMC syndicates one scoop all three carry it in minutes:
+// that is ONE editorial source, not three. CONFIRMED therefore requires 2 INDEPENDENT OWNERS, not 2 strings.
+const OWNER = { Variety: "PMC", Deadline: "PMC", THR: "PMC", IndieWire: "PMC", Collider: "Valnet", ScreenRant: "Valnet", SlashFilm: "Static", People: "DotdashMeredith" };
+const ownerOf = (o) => OWNER[o] || o;
+
 // DETERMINISTIC sensitivity floor — the LLM's sensitivity flag is non-deterministic, so a death/legal/
 // arrest/health story could slip to "normal" and bypass the CONFIRMING-hold. This regex force-promotes
 // any such story to high-sensitivity so the 2–3-major-source hold is GUARANTEED, never LLM-dependent.
@@ -33,6 +39,21 @@ const EVERGREEN_FORMATS = new Set(["list", "explainer", "guide", "profile"]);
 const SENSITIVE = /\b(dead|dies|died|death|killed|obituar|passed away|passes away|arrest|charged|indict|lawsuit|sued|felony|assault|abus|alleg|hospitaliz|critical condition|overdose|suicide|in a coma|shooting|custody battle|restraining order)/i;
 
 const slug = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+
+// Title-token overlap for the secondary cluster-merge. Two outlets rarely emit byte-identical eventSlugs
+// for the same scoop ("brad-pitt-joins-f1-sequel" vs "brad-pitt-cast-f1-2"), so an eventSlug-only grouping
+// splits one real 2-major event into two false single-source events. We rescue those by merging clusters
+// that share the SAME entity + SAME eventType AND have high title-word overlap — which keeps "Brad Pitt
+// cast in X" and "Brad Pitt cast in Y" APART (the distinguishing film token drops the overlap below the
+// threshold). Robust semantic clustering (embeddings, cross-run) is the cloud-port; this is the local floor.
+const STOP = new Set("a an the of to in on for at by and or with as is are was were be been will would could star stars cast joins set new film movie show series report reports says according".split(" "));
+const titleTokens = (s) => new Set((s || "").toLowerCase().replace(/[^a-z0-9 ]+/g, " ").split(/\s+/).filter((w) => w.length > 2 && !STOP.has(w)));
+function jaccard(a, b) {
+  if (!a.size || !b.size) return 0;
+  let inter = 0;
+  for (const w of a) if (b.has(w)) inter++;
+  return inter / (a.size + b.size - inter);
+}
 
 function sensitivityFloor(rep) {
   if (rep.sensitivity === "high") return "high";
@@ -49,8 +70,12 @@ export function verify(topics, monitor) {
     groups.get(key).push(t);
   }
 
+  // Secondary merge: collapse distinct-eventSlug clusters that are really ONE event (same entity + type +
+  // overlapping titles) so genuine cross-outlet corroboration isn't lost to slug wording differences.
+  const merged = mergeClusters([...groups.values()]);
+
   const out = [];
-  for (const [, group] of groups) {
+  for (const group of merged) {
     // Merge distinct outlets across the cluster onto one representative topic.
     const sources = [];
     const seen = new Set();
@@ -80,6 +105,31 @@ export function verify(topics, monitor) {
   return out;
 }
 
+// Union-find merge of eventSlug clusters into true events. Two clusters merge when their representatives
+// share the same normalized primaryEntity AND eventType AND title-token Jaccard ≥ 0.5. Threshold is
+// deliberately high: it rescues wording variants of ONE scoop without fusing two different same-person,
+// same-type stories (the distinguishing film/title token keeps their overlap below 0.5).
+function mergeClusters(clusters) {
+  const reps = clusters.map((g) => {
+    const r = pickRep(g);
+    return { ent: slug(r.primaryEntity), type: r.eventType || "", tok: titleTokens(r.title) };
+  });
+  const parent = clusters.map((_, i) => i);
+  const find = (i) => (parent[i] === i ? i : (parent[i] = find(parent[i])));
+  for (let i = 0; i < clusters.length; i++)
+    for (let j = i + 1; j < clusters.length; j++) {
+      if (!reps[i].ent || reps[i].ent !== reps[j].ent || reps[i].type !== reps[j].type) continue;
+      if (jaccard(reps[i].tok, reps[j].tok) >= 0.5) parent[find(j)] = find(i);
+    }
+  const byRoot = new Map();
+  clusters.forEach((g, i) => {
+    const r = find(i);
+    if (!byRoot.has(r)) byRoot.set(r, []);
+    byRoot.get(r).push(...g);
+  });
+  return [...byRoot.values()];
+}
+
 // Choose the cluster representative: highest source tier first, then freshest (lowest ageMin).
 function pickRep(group) {
   return [...group].sort((a, b) => {
@@ -98,25 +148,35 @@ function decide(rep, sources) {
   const maxTier = sources.reduce((m, s) => Math.max(m, s.tier || 0), 0);
   const sensitivity = sensitivityFloor(rep); // deterministic floor (never trust the LLM flag downward)
   rep.sensitivity = sensitivity;
-  const base = { tier1Count: tier1.length, outletCount: outlets.length, outlets, maxTier, sensitivity, attribution: null, framing: "plain" };
+  // INDEPENDENT owners among the major (tier-1) sources — 3 PMC outlets count as ONE.
+  const tier1Owners = new Set(tier1.map((s) => ownerOf(s.outlet)));
+  // NORMAL-sensitivity CONFIRMED bar: 2 independent major owners, OR a major + an independently-owned secondary.
+  const twoIndependentMajors = tier1Owners.size >= 2 || (tier1.length >= 1 && secondary.some((s) => !tier1Owners.has(ownerOf(s.outlet))));
+  // HIGH-sensitivity (death/arrest/legal) bar is STRICTER — owner rule "hold for 2–3 INDEPENDENT MAJORS": a
+  // secondary outlet does NOT count toward confirming a death/arrest. Two distinct major OWNERS are required
+  // (so 3 PMC trades, or 1 major + a celebrity-secondary, still HOLD as CONFIRMING — never auto-CONFIRMED).
+  const twoIndependentMajorOwners = tier1Owners.size >= 2;
+  const base = { tier1Count: tier1.length, tier1Owners: tier1Owners.size, outletCount: outlets.length, outlets, maxTier, sensitivity, attribution: null, framing: "plain" };
 
-  // No breaking outlet sources (TMDB backbone) OR a reference/opinion niche → evergreen, grounded, publishable.
-  if (sources.length === 0 || EVERGREEN_FORMATS.has(rep.formatTag)) {
+  // Reference/opinion niches (or TMDB backbone) are normally evergreen+publishable — BUT a fresh
+  // HIGH-SENSITIVITY event (death/legal/arrest) framed as a profile/list must STILL pass the hold below.
+  if (sources.length === 0 || (EVERGREEN_FORMATS.has(rep.formatTag) && sensitivity !== "high")) {
     return { ...base, status: "EVERGREEN", publishable: true };
   }
 
   const major = tier1[0]?.outlet;
 
-  // High-sensitivity (death / health crisis / legal / arrest): hold unless ≥2 majors confirm.
+  // High-sensitivity (death / health crisis / legal / arrest): hold unless 2 INDEPENDENT majors confirm
+  // (3 PMC outlets ≠ corroboration — one company's error must not become a "CONFIRMED" death/arrest).
   if (sensitivity === "high") {
-    if (tier1.length >= 2) return { ...base, status: "CONFIRMED", framing: "plain", publishable: true };
-    return { ...base, status: "CONFIRMING", framing: "hold", publishable: false, hold: "high-sensitivity event needs ≥2 major outlets" };
+    if (twoIndependentMajorOwners) return { ...base, status: "CONFIRMED", framing: "plain", publishable: true };
+    return { ...base, status: "CONFIRMING", framing: "hold", publishable: false, hold: "high-sensitivity event needs 2 INDEPENDENT MAJOR outlets (same-owner trades and secondary outlets don't count)" };
   }
 
-  // Normal sensitivity.
-  if (tier1.length >= 2 || (tier1.length >= 1 && secondary.length >= 1))
+  // Normal sensitivity — CONFIRMED needs 2 INDEPENDENT owners (else it's still one source → DEVELOPING).
+  if (twoIndependentMajors)
     return { ...base, status: "CONFIRMED", framing: "plain", publishable: true };
-  if (tier1.length === 1)
+  if (tier1.length >= 1) // one or more majors but all the SAME owner = one editorial source → developing
     return { ...base, status: "DEVELOPING", framing: "attributed", attribution: major, publishable: true };
   if (secondary.length >= 2)
     return { ...base, status: "DEVELOPING", framing: "attributed", attribution: "multiple outlets", publishable: true };
