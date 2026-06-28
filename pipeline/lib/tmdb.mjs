@@ -18,14 +18,40 @@ async function tmdb(path) {
   return null;
 }
 
-export async function searchTitle(name, type) {
-  // Use the year (from "(2021 film)" or anywhere) to disambiguate; strip suffixes from the query text.
+// Normalize a title for exact-match comparison: lowercase, strip punctuation/accents, collapse spaces.
+const normTitle = (s) => (s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "")
+  .replace(/[^a-z0-9 ]+/g, " ").replace(/\s+/g, " ").trim();
+
+// Rank TMDB search results so an EXACT-title, popular, year-matching hit wins — never a substring match.
+// (Closes the "Atlas" → "Cloud Atlas" collision: TMDB's results[0] was a substring match for a different,
+// older film. We prefer exact title, then year-hint match, then popularity, with recency as a tiebreak.)
+function pickBest(results, q, year) {
+  const nq = normTitle(q);
+  let best = null, bestScore = -Infinity;
+  for (const r of results || []) {
+    const titles = [r.title, r.original_title, r.name, r.original_name].filter(Boolean).map(normTitle);
+    const ry = (r.release_date || r.first_air_date || "").slice(0, 4);
+    let s = 0;
+    if (titles.includes(nq)) s += 1000;                                   // exact title — decisive
+    else if (titles.some((t) => t.startsWith(nq) || nq.startsWith(t))) s += 60; // partial, weak
+    else s -= 200;                                                        // unrelated substring match (e.g. "Cloud Atlas")
+    if (year && ry === year) s += 500;                                    // year hint nails the right edition
+    s += Math.min(Number(r.popularity) || 0, 200);                       // current relevance/trending
+    if (ry) s += Number(ry) / 100000;                                    // tiny recency tiebreak among equals
+    if (s > bestScore) { bestScore = s; best = r; }
+  }
+  return best;
+}
+
+export async function searchTitle(name, type, yearHint = null) {
+  // Use the year (from "(2021 film)", anywhere in the name, or an explicit hint) to disambiguate; strip
+  // suffixes from the query text, then rank results so an exact-title popular match wins (not results[0]).
   const ym = name.match(/\b(19|20)\d{2}\b/);
-  const year = ym ? ym[0] : null;
+  const year = yearHint || (ym ? ym[0] : null);
   const q = name.replace(/\s*\([^)]*\)\s*/g, " ").replace(/\b(19|20)\d{2}\b/g, "").replace(/\s+/g, " ").trim();
-  const yp = year ? (type === "movie" ? `&year=${year}` : `&first_air_date_year=${year}`) : "";
-  const j = await tmdb(`/search/${type}?query=${encodeURIComponent(q)}${yp}&include_adult=false`);
-  return j?.results?.[0] || null;
+  // Search WITHOUT the year filter so we always see all editions, then rank (year is a strong signal, not a hard filter).
+  const j = await tmdb(`/search/${type}?query=${encodeURIComponent(q)}&include_adult=false`);
+  return pickBest(j?.results, q, year) || null;
 }
 
 // Clean provider names (drop "Amazon Channel"/"Apple TV Channel"/"with Ads" variants, dedup).
@@ -259,4 +285,61 @@ export function personFactBlock(name, credits) {
   if (!credits?.length) return "";
   const rows = credits.map((c) => `${c.year || "—"} — ${c.title} (${c.type})${c.character ? ` as ${c.character}` : ""}`);
   return `${name} — VERIFIED FILMOGRAPHY (TMDB, structured; use ONLY these credits/years/roles — do NOT add any film/role/year not in this list):\n${rows.join("\n")}`;
+}
+
+// ── AUTHORITATIVE TITLE FACTS (the Wikipedia-free structured spine, 2026-06-28). One combined call gives
+// the imdb_id (to chain to OMDb), credits, typed US release dates (theatrical type-3 vs digital type-4),
+// current watch-providers, and revenue/budget — so the writer grounds on structured truth and the judge
+// can DIFF the article's platform/cast/dates/box-office against it. Also detects straight-to-streaming (OTT).
+export async function getTitleFacts(name, type = "movie", yearHint = null) {
+  let res = await searchTitle(name, type, yearHint);
+  let kind = type;
+  if (!res) { const alt = type === "movie" ? "tv" : "movie"; res = await searchTitle(name, alt, yearHint); kind = alt; }
+  if (!res) return null;
+  const append = kind === "movie" ? "credits,release_dates,external_ids,watch/providers" : "credits,external_ids,watch/providers,content_ratings";
+  const det = await tmdb(`/${kind}/${res.id}?append_to_response=${encodeURIComponent(append)}`);
+  if (!det) return null;
+  const cred = det.credits || {};
+  const director =
+    (cred.crew || []).find((c) => c.job === "Director")?.name ||
+    (kind === "tv" ? (det.created_by || []).map((c) => c.name).filter(Boolean).join(", ") : "") ||
+    (cred.crew || []).find((c) => c.department === "Directing")?.name || "";
+  const cast = (cred.cast || []).slice(0, 10).map((c) => ({ name: c.name, character: (c.character || "").replace(/\s*\(.*?\)\s*/g, "").trim() }));
+  let theatrical = null, digital = null, premiere = null;
+  if (kind === "movie") {
+    const us = (det.release_dates?.results || []).find((r) => r.iso_3166_1 === "US");
+    if (us) { const byType = (t) => us.release_dates.find((d) => d.type === t)?.release_date?.slice(0, 10); theatrical = byType(3); digital = byType(4); premiere = byType(1); }
+  }
+  const wp = det["watch/providers"]?.results?.US;
+  const providers = wp ? { stream: clean(wp.flatrate), rent: clean(wp.rent), buy: clean(wp.buy) } : { stream: [], rent: [], buy: [] };
+  // Straight-to-streaming (movie): no theatrical date but available on a flatrate provider (or has a digital date).
+  const isOTT = kind === "movie" && !theatrical && (providers.stream.length > 0 || !!digital);
+  return {
+    id: res.id, type: kind, imdbId: det.external_ids?.imdb_id || null,
+    title: det.title || det.name, year: (det.release_date || det.first_air_date || "").slice(0, 4),
+    director, cast, genres: (det.genres || []).map((g) => g.name), runtime: det.runtime || (det.episode_run_time || [])[0] || null,
+    theatrical, digital, premiere, firstAir: det.first_air_date || null,
+    providers, revenueRaw: det.revenue || 0, budgetRaw: det.budget || 0, isOTT, status: det.status || "", overview: det.overview || "",
+  };
+}
+
+// The AUTHORITATIVE structured grounding block (the writer cites these verbatim; the judge diffs against them).
+export function titleFactBlock(t) {
+  if (!t) return "";
+  const L = [`${t.title}${t.year ? ` (${t.year})` : ""} — AUTHORITATIVE FACTS (TMDB, structured & verified — cite ONLY these; do NOT add a fact not listed here):`];
+  if (t.director) L.push(`Director/creator: ${t.director}`);
+  if (t.cast.length) L.push(`Cast: ${t.cast.map((c) => c.character ? `${c.name} as ${c.character}` : c.name).join(", ")}`);
+  if (t.genres.length) L.push(`Genre: ${t.genres.join(", ")}`);
+  if (t.runtime) L.push(`Runtime: ${t.runtime} min`);
+  if (t.theatrical) L.push(`US theatrical release: ${t.theatrical}`);
+  if (t.digital) L.push(`US digital/streaming release: ${t.digital}`);
+  if (t.firstAir) L.push(`First aired: ${t.firstAir}`);
+  const onStream = t.providers.stream.length ? t.providers.stream.join(", ") : null;
+  if (onStream) L.push(`CURRENTLY STREAMING (US, TMDB/JustWatch — this is the ONLY correct platform; do NOT name a different one): ${onStream}`);
+  else if (t.providers.rent.length) L.push(`Available to rent/buy (US): ${t.providers.rent.slice(0, 4).join(", ")}`);
+  if (t.isOTT) L.push(`RELEASE TYPE: STREAMING-ORIGINAL (no theatrical run) — this film has NO box office; do NOT write a box-office number, opening weekend, or theatrical gross.`);
+  else if (t.theatrical) L.push(`RELEASE TYPE: theatrical.`);
+  if (t.revenueRaw > 0 && !t.isOTT) L.push(`Worldwide box office (TMDB): ${fmtUSD(t.revenueRaw)}`);
+  if (t.budgetRaw > 0) L.push(`Budget: ${fmtUSD(t.budgetRaw)}`);
+  return L.join("\n");
 }

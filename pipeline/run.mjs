@@ -11,7 +11,8 @@ import { classify } from "./stages/classify.mjs";
 import { sourceImage, downloadImage } from "./stages/image.mjs";
 import { gate } from "./stages/gate.mjs";
 import { assemble } from "./stages/assemble.mjs";
-import { getWhereToWatch, factBlock, toWhereToWatch, discoverTop, discoverFactBlock, getTrailer, trailerFactBlock, getBoxOffice, boxOfficeFactBlock, searchPerson, getPersonCredits, personFactBlock } from "./lib/tmdb.mjs";
+import { getWhereToWatch, factBlock, toWhereToWatch, discoverTop, discoverFactBlock, getTrailer, trailerFactBlock, getBoxOffice, boxOfficeFactBlock, searchPerson, getPersonCredits, personFactBlock, getTitleFacts, titleFactBlock } from "./lib/tmdb.mjs";
+import { omdb, omdbFactBlock } from "./lib/omdb.mjs";
 import { cacheTweets, reactionFactBlock } from "./lib/tweets.mjs";
 import { searchInterview, fetchTranscript, oEmbed, interviewFactBlock } from "./lib/youtube.mjs";
 import { costReport } from "./lib/openrouter.mjs";
@@ -82,6 +83,28 @@ for (let i = 0; i < topics.length; i++) {
       console.log(`  breaking: ${v.status}${v.attribution ? ` (via ${v.attribution})` : ""} · ${topic.sources.length} source(s) injected`);
     }
 
+    // AUTHORITATIVE STRUCTURED FACTS (the Wikipedia-free spine, 2026-06-28). For any topic centered on a
+    // FILM/TV TITLE, ground on TMDB structured facts (credits/typed dates/providers/OTT) + OMDb EXACT ratings
+    // & box office, placed FIRST so they are the writer's source of truth and the judge's deterministic diff
+    // target (stashed on topic._titleFacts / topic._omdb for PR3). This replaces Wikipedia reception/box-office.
+    const TITLE_FORMS = new Set(["review", "box-office", "trailer", "explainer", "list", "guide", "watchguide", "reaction", "recap", "screen-music"]);
+    const titleCentric = TITLE_FORMS.has(topic.formatTag) ||
+      (["movies", "tv", "reviews", "streaming"].includes(topic.category) && topic.formatTag === "news");
+    if (titleCentric) {
+      const tf = await getTitleFacts(topic.primaryEntity, topic.tmdbType || (topic.category === "tv" ? "tv" : "movie"));
+      if (tf) {
+        topic._titleFacts = tf;
+        topic.facts.unshift({ title: "AUTHORITATIVE TITLE FACTS", extract: titleFactBlock(tf) });
+        if (tf.imdbId) {
+          const o = await omdb(tf.imdbId);
+          if (o) { topic._omdb = o; const b = omdbFactBlock(o); if (b) topic.facts.unshift({ title: "AUTHORITATIVE RATINGS & BOX OFFICE", extract: b }); }
+        }
+        console.log(`  authoritative: TMDB "${tf.title}" (imdb ${tf.imdbId || "—"})${topic._omdb ? ` · OMDb RT ${topic._omdb.ratings.rt?.value || "—"} MC ${topic._omdb.ratings.metacritic?.value || "—"}` : ""}${tf.isOTT ? " · STREAMING-ORIGINAL (no box office)" : ""}`);
+      } else {
+        console.log("  ⚠ no TMDB title match for authoritative facts");
+      }
+    }
+
     // Trailer niche: pull the official YouTube trailer + verified film context from TMDB.
     let trailer = null;
     if (topic.formatTag === "trailer") {
@@ -117,9 +140,8 @@ for (let i = 0; i < topics.length; i++) {
       } else {
         console.log("  ⚠ no TMDB box-office figures found");
       }
-      // Deep grounding: the detailed splits + records live in Wikipedia's Box office / Reception sections.
-      const boSec = await wikiSection(topic.primaryEntity, ["Box office", "Reception"]);
-      if (boSec) { topic.facts.push({ title: "WIKIPEDIA BOX OFFICE & RECEPTION (verified, sourced — use these splits/records; do not invent)", extract: boSec }); console.log(`  wiki box-office section: ${boSec.length} chars`); }
+      // (Detailed box-office splits/records now come from OMDb domestic + TMDB worldwide in the AUTHORITATIVE
+      // block above — exact figures keyed by IMDb id — replacing the scraped Wikipedia box-office prose.)
     }
 
     // Awards-family niches (film/TV awards, music awards, predictions): pull the ceremony's full winners/
@@ -153,12 +175,9 @@ for (let i = 0; i < topics.length; i++) {
       }
     }
 
-    // Reviews / lists / guides that may cite RT/Metacritic: ground the real Reception scores so the writer
-    // never invents a "%". (FIX-1 A3 — closes the RT-score fabrication hole.)
-    if (["review", "list", "guide"].includes(topic.formatTag)) {
-      const rec = await wikiSection(topic.primaryEntity, ["Reception", "Critical response", "Critical reception"]);
-      if (rec) { topic.facts.push({ title: "CRITICAL RECEPTION (Wikipedia — use ONLY these RT/Metacritic scores; if none here, speak qualitatively, never invent a %)", extract: rec.slice(0, 4000) }); console.log(`  wiki reception: ${rec.length} chars`); }
-    }
+    // (RT/Metacritic reception now comes from OMDb in the AUTHORITATIVE RATINGS block above — exact current
+    // scores keyed by IMDb id — replacing the stale/approx Wikipedia "Reception" prose that caused the
+    // RT 90%-vs-86% fabrication. Wikipedia is no longer scraped for scores.)
 
     // Interview niche: pull the official video's TRANSCRIPT (yt-dlp, subs only) to ground an ORIGINAL summary.
     let interview = null;
