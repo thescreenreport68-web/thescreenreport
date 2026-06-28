@@ -18,7 +18,7 @@ const slugify = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").repla
 
 // Force category+subcategory onto the REAL taxonomy (the LLM sometimes invents one, e.g. "tv/animation").
 // Mirrors classify.mjs's niche-snapping so FIND and MAKE agree on the URL silo.
-function canonicalize(t) {
+export function canonicalize(t) {
   let cat = t.category, sub = t.subcategory;
   const ft = t.formatTag;
   if (ft === "review") { cat = "reviews"; sub = t.tmdbType === "tv" ? "tv-reviews" : "movie-reviews"; }
@@ -32,6 +32,9 @@ function canonicalize(t) {
   else if (ft === "reaction") { if (!["movies", "tv"].includes(cat)) cat = "movies"; sub = "reactions"; }
   else if (ft === "list") { if (!["movies", "tv"].includes(cat)) cat = "movies"; sub = "rankings-lists"; }
   else if (ft === "news") { if (!["movies", "tv", "celebrity"].includes(cat)) cat = "celebrity"; sub = "news"; }
+  else if (ft === "watchguide") { cat = "streaming"; sub = "where-to-watch"; }
+  else if (ft === "recap") { cat = "reviews"; sub = "tv-reviews"; }
+  else if (ft === "predictions") { cat = "awards"; sub = "predictions"; }
   else if (ft === "music-news") { cat = "music"; sub = "news"; }
   else if (ft === "music-awards") { cat = "music"; sub = "awards"; }
   else if (ft === "music-profile") { cat = "music"; sub = "profiles-artists"; }
@@ -68,7 +71,10 @@ const NICHE_GUIDE = `Pick ONE formatTag + its category/subcategory:
 - "list" → movies|tv / rankings-lists: a "best ... ranked" angle.
 - "interview" → celebrity / interviews: a notable recent interview.
 - "reaction" → movies|tv / reactions: fan/critic reaction to a release.
-- "awards" → awards / winners|predictions.
+- "awards" → awards / winners: a music/film/TV ceremony's WINNERS or recap.
+- "watchguide" → streaming / where-to-watch: a SINGLE title — where/when to stream/rent/buy it (not a best-of list).
+- "recap" → reviews / tv-reviews: a per-EPISODE recap of a show that just aired (spoilers-on), distinct from a season review.
+- "predictions" → awards / predictions: a who-will-win race-analysis ahead of a ceremony (Oscars/Emmys/Grammys).
 - "music-news" → music / news: a popular/trending music event (tour, album/single drop, label/streaming deal, a pop star's music move).
 - "music-awards" → music / awards: a music ceremony (Grammys/AMAs/VMAs/CMAs) — winners or predictions.
 - "music-profile" → music / profiles-artists: a trending OR newly-broken-out musician → their career. (Set this for an indie/underground breakout artist too.)
@@ -81,7 +87,7 @@ const SCHEMA = `Return JSON: {"items":[{
  "i": <index>,
  "relevant": true|false,
  "reason": "short why-keep-or-drop",
- "formatTag": "news|review|box-office|trailer|profile|explainer|guide|list|interview|reaction|awards|music-news|music-awards|music-profile|screen-music",
+ "formatTag": "news|review|box-office|trailer|profile|explainer|guide|list|interview|reaction|awards|watchguide|recap|predictions|music-news|music-awards|music-profile|screen-music",
  "category": "movies|tv|streaming|celebrity|reviews|awards|music",
  "subcategory": "the matching subcategory",
  "musicTier": "popular|indie — set ONLY for a music item: 'indie' if it's an under-the-radar/underground artist or track that UNEXPECTEDLY broke out; 'popular' for an established/trending mainstream act. Omit for non-music.",

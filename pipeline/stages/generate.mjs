@@ -126,6 +126,27 @@ const NICHE = {
     fields:
       '"screenWork":{"title":"the film/show","type":"Film|TV","episode":"if applicable"}, "soundtrack":[{"song":"","artist":"","scene":"where it plays","significance":"one FACTUAL line","embedUrl":"official YouTube/Spotify if grounded","chartContext":"release year + peak, grounded only"}], "songSpotlight":{"song":"","artist":"","platform":"youtube|spotify","embedUrl":""}, "discoveryArtist":{"name":"","blurb":"indie sync only — factual","embedUrl":""}',
   },
+  // ── PLAYBOOK new forms (CATEGORY_UIUX_EDITORIAL_PLAYBOOK.md): single-title where-to-watch, episode
+  //    recap, and awards predictions each need their OWN structure + fields (distinct from the listicle
+  //    guide / the review / the winners-list). ──
+  watchguide: {
+    guide:
+      "WHERE-TO-WATCH GUIDE form (single title — Decider/JustWatch house style). ANSWER-FIRST + TITLE-SPECIFIC lede: the first 1-2 sentences say exactly where to watch THIS title right now (the platform), OR that it isn't streaming yet + the expected window. Then descending-intent H2s phrased as the real questions ('Is [Title] on Netflix?', 'Is [Title] streaming or still in theaters?', 'When will [Title] hit streaming?'). CONFIRMED vs ESTIMATED is the whole game: state a platform or date as FACT only if it's in the TMDB/reference facts (add 'as of [this month]; check before watching'); a streaming-date ESTIMATE is allowed ONLY when BOTH the theatrical date AND the studio/distributor are in the facts, and it MUST be labeled 'expected/likely/estimated'. Distinguish Stream vs Rent vs Buy. 650-1000 words. Do NOT pad with device how-to lists ('watch on Roku') or boilerplate closers. NEVER invent a platform or a date.",
+    fields:
+      '"verdictBox":{"answer":"the one-line where-to-watch answer","where":"platform(s) or \'In theaters\'","when":"date/window if grounded"}, "releaseWindows":{"theatrical":"only if in facts","streaming":"CONFIRMED platform only","streamingEstimated":"labeled estimate ONLY if theatrical+studio are both in facts","digital":"","digitalEstimated":""}, "whereToWatch":[{"title":"","platform":"","type":"Stream|Rent|Buy","note":"as of [month]; check before watching"}]',
+  },
+  recap: {
+    guide:
+      "EPISODE RECAP form (Vulture/A.V. Club house style — spoilers ON). OPEN with a one-line SPOILER WARNING, then a 1-2 sentence take on what THIS episode actually did. Walk the episode's key beats IN ORDER — what happened AND why it matters to the season's arcs (analysis, not a blow-by-blow transcript). Close with a 'Loose Threads' bulleted list of stray observations / open questions. Use ONLY what AIRED and appears in the facts — NEVER invent a scene, a line of dialogue, a death, or a future episode. Put episode titles in quotes and show titles in italics. 500-900 words. A per-episode rating is fine; do NOT grade the whole season.",
+    fields:
+      '"spoiler": true, "rating":{"score":<number 1-10>,"max":10,"label":"one-word tier"}, "looseThreads":["3-6 stray observations / open questions, each grounded in what aired"]',
+  },
+  predictions: {
+    guide:
+      "AWARDS PREDICTIONS form (Gold Derby / Variety Awards Circuit house style). STATE-OF-THE-RACE lede: who is the frontrunner and WHY, right now — NEVER a ceremony-date/logistics lede. Sort the marquee categories into FACTS-ONLY buckets: FRONTRUNNER / IN THE HUNT / DARK HORSE / SNUB ('should've been here'). Every 'frontrunner' claim MUST cite at least one NAMED real precursor in the facts (a guild win, a festival prize, a precursor award) — NEVER an anonymous 'insiders say' and NEVER a fabricated %/odds. Use confidence TIERS (Lock / Frontrunner / Live / Long shot), not invented percentages. Name a real spoiler/dark horse. 600-900 words. NEVER present a prediction as a fact or invent a precursor result.",
+    fields:
+      '"verdictBuckets":[{"bucket":"FRONTRUNNER|IN THE HUNT|DARK HORSE|SNUB","name":"the contender (person)","film":"the work","case":"the grounded one-line case"}], "confidenceTier":"Lock|Frontrunner|Live|Long shot", "precursorTimeline":[{"body":"the precursor body e.g. SAG/Golden Globes","winner":"who won it (grounded)"}], "bottomLine":"the one-line closing call"',
+  },
 };
 
 // POP vs INDIE preset — the single switch (topic.tier set by FIND) that makes the 6% and 4% lanes read
@@ -136,7 +157,42 @@ const TIER_PRESET = {
   indie:
     "INDIE/BREAKOUT mode: the reader does NOT know this artist — your job is factual DISCOVERY. IDENTIFY them first (real name, origin, 'forthcoming nth release' if grounded). Lead with the breakout MOMENT and the platform mechanic ('posted an unfinished chorus on TikTok; X million views in days' — every 'blew up' claim carries a GROUNDED number: streams/uses/chart). Locate them by FACTUAL association (label, scene, named collaborators) — NEVER a 'sounds-like' or sonic description. Note the artist's own on-record comment if grounded, and the screen/A-list hook if any. Shorter than pop (700-1,100 words). Report the facts of why it spread — do NOT judge the music.",
 };
-function resolveNiche(topic) {
+// PER-CATEGORY CRAFT (CATEGORY_UIUX_EDITORIAL_PLAYBOOK.md §1) — keyed by `category/subcategory`, layered
+// ON TOP of the shared niche guide so the same form (e.g. "news") reads correctly for movies vs tv vs
+// celebrity. Injected into the prompt like the music tier preset. Each is the form's load-bearing rules.
+const SUBSHAPE = {
+  "movies/news":
+    "MOVIE NEWS craft: ONE-sentence lede = [talent] + a deal-stage VERB that matches the source's certainty exactly (LOCKED: joined/set to star/closed a deal/opened to; NOT-LOCKED: in talks/circling/eyeing/in negotiations; SOFT: in early talks/shortlisted/rumored) — NEVER upgrade the verb. Credential each name in ONE clause (single best-known credit, no filmography dump). Include exactly ONE grounded context beat (the predecessor who fell off, the franchise slot, the box-office stakes) or write shorter. Name-not-link attribution ('according to Variety'). If FIND gave a story status, surface it as storyStatus.",
+  "movies/rankings-lists":
+    "RANKING craft: first 1-2 sentences STATE THE CRITERION and tease #1; ban 'YEAR was a great year for…' openers. Every entry blurb opens with a FRESH hook, never a plot-summary or 'Starring X'. DEFEND #1 explicitly ('why it's first'). Honest count = the grounded count (no padding to a round number). Emit `criterion`, enriched `entries[]` (whyHere + the entry's facts), and `honorableMentions[]`.",
+  "movies/explainers":
+    "EXPLAINER craft: frame-then-answer lede that NAMES the exact title+director+year, then answers the core question in sentence 1-2. Order is PLOT-recap THEN MEANING (never meaning-first). H2s = the literal viewer questions, including a 'Is there a post-credits scene?' section when grounded. COMMIT to one reading — ban 'it's open to interpretation' non-answers. NEVER invent a character's fate, a post-credits scene, or a 'the director said'.",
+  "movies/trailers":
+    "TRAILER craft: you did NOT watch it — BANNED tokens: 'the camera', 'we see', 'the trailer opens/cuts to', any shot/edit/music-cue/runtime description, any non-verbatim character quote. Fence any speculation under a 'Theory' label. Convert beats into a COUNTED reveals contract (`reveals[]`: count FACTS, not shots). Lead with ≥3 grounded context layers (premise, cast+roles, franchise/career stakes, release window).",
+  "movies/reactions":
+    "REACTION craft: event-peg + consensus lede (name the trigger only if grounded). Lead positive, then ONE honest dissent. Close with a two-part analytical tail (a synthesis H2 + a 'what it signals' beat). Attribute only in aggregate — NEVER a named user, NEVER a fabricated engagement number, NEVER review the film instead of the discourse.",
+  "movies/box-office":
+    "BOX-OFFICE craft: GLOSS the jargon on first use (frame, cume, domestic) and ban raw trade shorthand (WW/PLF/PSA). Use SETTLED past tense (static page). For a holdover, the %-CHANGE (hold/drop) IS the story. Every figure wrapped in a human sentence; follow a data sentence with a short plain one. Numbers ONLY from the facts.",
+  "tv/news":
+    "TV NEWS craft: pick the RENEWAL or CASTING sub-shape. Lede pins exactly ONE grounded number (which season / after how many episodes). STATS ONLY FROM FACTS. NEVER assert a bubble/likely renewal as fact. Omit agency/representation lines. Emit `seriesStatus`.",
+  "tv/rankings-lists":
+    "TV RANKING craft: same as movie rankings PLUS a per-entry `seriesContext` (network, premiere year, seasons, creator, cast) and a 'the moment that earns it' micro-note. Episodes in quotes, shows italic.",
+  "tv/trailers":
+    "TV TRAILER craft: NEVER describe a shot/edit/dialogue/music/runtime. Use a short first-look skeleton; the premiere DATE is required or explicitly 'not announced'. Quote ONE verbatim official synopsis only (`officialSynopsis`). Flag Confirmed vs Speculation per beat. ≥3 context layers (premise, cast-roles, franchise stakes).",
+  "tv/reactions":
+    "TV REACTION craft: SPOILER banner first. Use the finale sub-shape when relevant. Cluster reactions into 2-4 sentiment camps by theme. The headline = a verified fan quote or question — NEVER name the twist. `consensus` must state the dominant sentiment confidently.",
+  "celebrity/news":
+    "CELEBRITY NEWS craft: WHO+WHAT+WHEN settled-fact lede + a sourcing tag + a role appositive. Build credibility from VERIFIABLE public sightings (event + date, in `sightings[]`) — NEVER paparazzi or 'a source close to'. A high-sensitivity story (death/legal/allegation/health) forces neutral verbs (reportedly/confirmed/announced) and the `sensitivity` flag. Emit `keyPoints[]` (3 bullets).",
+  "celebrity/profiles-careers":
+    "CELEBRITY PROFILE craft (NO-ACCESS model — we did NOT interview them): open on a VERIFIABLE specific or a thesis — BAN any faked in-room/hotel-lobby scene and 'rising star' clichés. Named-era sections; a triangulation graf (what others on record have said). 1100-1800 words. NEVER transcribe a PR bio as if observed. Emit `careerStats[]` + a `methodology` line.",
+  "celebrity/interviews":
+    "INTERVIEW craft: BLUF on the single most revealing thing they said. BAN invented scene-setting ('sipping coffee, she leans in'). Paraphrase-then-quote rhythm; organize by THEME not chronology; attribute every quote to the right speaker. Quotes ONLY verbatim from the transcript/facts.",
+  "reviews/movie-reviews":
+    "FILM REVIEW craft: open with a stack-and-classify line OR a hook — BAN a synopsis opener. The `verdict` is a 3-12 word standalone pull-quote. Every praise word chains to a NAMED grounded reason (a scene, a performance choice). Include one EARNED reservation. No spoilers. 700-1100 words. NEVER quote dialogue you don't have verbatim. Emit the `credits` block.",
+  "reviews/tv-reviews":
+    "TV REVIEW craft: open on a cultural-frame / comparative / personal hook — BAN the 'in our streaming-glut era' opener. Organize THEMATICALLY, never episode-by-episode. SPOILER-FREE (no mid-season or finale twist). 900-1400 words. TV-flavored infoCard (Network, Premiere, Created by, Starring, Where to watch).",
+};
+export function resolveNiche(topic) {
   const t = (topic.contentType || "").toLowerCase();
   // MUSIC branches FIRST and on CATEGORY — a music news item and a movie news item share contentType
   // "news" but need different voices/fields. Sub-route by subcategory/contentType within music.
@@ -147,6 +203,12 @@ function resolveNiche(topic) {
     if (sub === "profiles-artists" || t.includes("profile") || t.includes("artist")) return "music-profile";
     return "music-news";
   }
+  const cat = (topic.category || "").toLowerCase();
+  const sub = (topic.subcategory || "").toLowerCase();
+  // PLAYBOOK new forms — route on category/subcategory FIRST (they split off from guide/review/awards):
+  if (cat === "streaming" && (sub === "where-to-watch" || t.includes("where to watch") || t.includes("where-to-watch"))) return "watchguide";
+  if ((cat === "reviews" || cat === "tv") && t.includes("recap")) return "recap";
+  if (cat === "awards" && (sub === "predictions" || t.includes("prediction"))) return "predictions";
   if (t.includes("review")) return "review";
   if (t.includes("rank") || t.includes("list")) return "list";
   if (t.includes("explain")) return "explainer";
@@ -165,6 +227,8 @@ export async function generate({ topic, model, maxTokens = 6000, corrections = n
   const niche = NICHE[resolveNiche(topic)] || null;
   // Music's pop(6%)/indie(4%) lane preset — only applies when FIND set topic.tier on a music topic.
   const tierPreset = (topic.category || "").toLowerCase() === "music" ? TIER_PRESET[topic.tier] || "" : "";
+  // Per-category craft layer (playbook) — the same form reads differently per category.
+  const subShape = SUBSHAPE[`${(topic.category || "").toLowerCase()}/${(topic.subcategory || "").toLowerCase()}`] || "";
   const facts =
     (topic.facts || []).map((f) => `- ${f.title}: ${f.extract}`).join("\n") ||
     "(none provided — rely only on uncontroversial, well-known facts; do not invent specifics)";
@@ -175,7 +239,7 @@ TOPIC: ${topic.title}
 CONTENT TYPE: ${topic.contentType}
 CATEGORY / SUBCATEGORY: ${topic.category} / ${topic.subcategory}
 PRIMARY KEYWORD: ${topic.primaryKeyword} — work its main words into the TITLE, naturally (REQUIRED — the title must contain them, e.g. a review title ends with "...Review"), and use it once early in the body. Do NOT force the exact phrase into a subheading or repeat it through the article.
-ANGLE: ${topic.angle || "the most interesting TRUE angle"}${niche ? "\nNICHE STYLE: " + niche.guide : ""}${tierPreset ? "\nMUSIC LANE: " + tierPreset : ""}
+ANGLE: ${topic.angle || "the most interesting TRUE angle"}${niche ? "\nNICHE STYLE: " + niche.guide : ""}${subShape ? "\nCATEGORY CRAFT: " + subShape : ""}${tierPreset ? "\nMUSIC LANE: " + tierPreset : ""}
 
 REFERENCE FACTS (ground every factual claim in these or in uncontroversial well-known facts):
 ${facts}
@@ -192,7 +256,7 @@ Return JSON with EXACTLY these fields:
  "about": [{"name":"Exact Film or Show Title","type":"Movie","sameAs":"https://en.wikipedia.org/wiki/..."}],
  "tags": ["5-8 lowercase relevant tags"],
  "imageQuery": "the single best real person to depict in the hero photo — a specific actor or director full name (for a real, legal photo)",
- "claims": [{"text":"each CHECKABLE specific you assert anywhere in the article (body, takeaways, FAQ, or a structured field): a stat/%, a dollar/box-office figure, a date, an award WIN or NOMINATION, a streaming platform, a filmography credit (title+year+role), an exact quote, a precise count","sourceQuote":"the VERBATIM substring copied EXACTLY from the REFERENCE FACTS that proves it. If you cannot find a supporting substring in the facts, DO NOT make that claim — remove it or write it qualitatively. This is mandatory: every checkable specific MUST have a real receipt."}]${niche ? ",\n " + niche.fields : ""}
+ "claims": [{"text":"each CHECKABLE specific you assert anywhere in the article (body, takeaways, FAQ, OR A STRUCTURED FIELD): a stat/%, a dollar/box-office figure, a date, an award WIN or NOMINATION, a streaming platform, a filmography credit (title+year+role), an exact quote, a precise count, a tour date, a winner, a runtime, a release window, a precursor result, a chart peak, a credit","sourceQuote":"the VERBATIM substring copied EXACTLY from the REFERENCE FACTS that proves it. If you cannot find a supporting substring in the facts, DO NOT make that claim — remove it or write it qualitatively. This is mandatory: every checkable specific MUST have a real receipt. ⚠ STRUCTURED FIELDS ESPECIALLY: the quality judge does NOT see your structured fields (release/tracklist/tourDates/whereToWatch/releaseWindows/awardCategories/verdictBuckets/precursorTimeline/credits/etc), so a structured value with no claims[] receipt is UNVERIFIABLE — give every checkable structured value its own receipt here, or OMIT it from the field."}]${niche ? ",\n " + niche.fields : ""}
 }
 
 Requirements: faq has 3-4 entries that raise NEW follow-up questions (never restating a stat or fact already in the body); body has >=2 H2s (at least one a question) and a Sources section with >=3 external links; about lists the specific title(s) the piece is about (empty array only if truly none).${corrections ? `

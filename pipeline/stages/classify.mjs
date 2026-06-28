@@ -8,6 +8,8 @@ const NICHE_SUB = {
   trailer: "trailers", interview: "interviews", reaction: "reactions", news: "news", "box-office": "box-office", awards: "winners",
   // MUSIC formatTags → their music subcategory (FIND sets the formatTag; MAKE trusts it for routing).
   "music-news": "news", "music-awards": "awards", "music-profile": "profiles-artists", "screen-music": "screen-music",
+  // PLAYBOOK new forms → their subcategory.
+  watchguide: "where-to-watch", recap: "tv-reviews", predictions: "predictions",
 };
 
 // Assigns the URL-silo category + subcategory + tags + a format tag, validated against the fixed taxonomy.
@@ -28,7 +30,7 @@ Return strict JSON:
 { "category": "one of: ${CATS.join(", ")}",
   "subcategory": "a subcategory that belongs to the chosen category",
   "tags": ["3-6 lowercase tags"],
-  "formatTag": "one of: news, list, explainer, review, reaction, interview, trailer, guide, recap, profile, box-office, awards" }`;
+  "formatTag": "one of: news, list, explainer, review, reaction, interview, trailer, guide, recap, profile, box-office, awards, watchguide, predictions" }`;
 
   let data;
   try {
