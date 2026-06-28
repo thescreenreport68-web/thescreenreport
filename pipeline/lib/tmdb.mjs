@@ -296,7 +296,7 @@ export async function getTitleFacts(name, type = "movie", yearHint = null) {
   let kind = type;
   if (!res) { const alt = type === "movie" ? "tv" : "movie"; res = await searchTitle(name, alt, yearHint); kind = alt; }
   if (!res) return null;
-  const append = kind === "movie" ? "credits,release_dates,external_ids,watch/providers" : "credits,external_ids,watch/providers,content_ratings";
+  const append = kind === "movie" ? "credits,release_dates,external_ids,watch/providers,keywords" : "credits,external_ids,watch/providers,content_ratings,keywords";
   const det = await tmdb(`/${kind}/${res.id}?append_to_response=${encodeURIComponent(append)}`);
   if (!det) return null;
   const cred = det.credits || {};
@@ -314,7 +314,10 @@ export async function getTitleFacts(name, type = "movie", yearHint = null) {
   const providers = wp ? { stream: clean(wp.flatrate), rent: clean(wp.rent), buy: clean(wp.buy) } : { stream: [], rent: [], buy: [] };
   // Straight-to-streaming (movie): no theatrical date but available on a flatrate provider (or has a digital date).
   const isOTT = kind === "movie" && !theatrical && (providers.stream.length > 0 || !!digital);
+  // Thematic keywords (TMDB) — the non-Wikipedia depth layer for explainers/trailers/reviews.
+  const keywords = ((det.keywords?.keywords || det.keywords?.results || []).map((k) => k.name)).slice(0, 16);
   return {
+    keywords,
     id: res.id, type: kind, imdbId: det.external_ids?.imdb_id || null,
     title: det.title || det.name, year: (det.release_date || det.first_air_date || "").slice(0, 4),
     director, cast, genres: (det.genres || []).map((g) => g.name), runtime: det.runtime || (det.episode_run_time || [])[0] || null,
@@ -341,5 +344,47 @@ export function titleFactBlock(t) {
   else if (t.theatrical) L.push(`RELEASE TYPE: theatrical.`);
   if (t.revenueRaw > 0 && !t.isOTT) L.push(`Worldwide box office (TMDB): ${fmtUSD(t.revenueRaw)}`);
   if (t.budgetRaw > 0) L.push(`Budget: ${fmtUSD(t.budgetRaw)}`);
+  if (t.overview) L.push(`Premise (TMDB logline — the verified plot summary; expand on it but never contradict it): ${t.overview}`);
+  if (t.keywords?.length) L.push(`Themes/keywords (TMDB — factual thematic tags, use for analysis only, not as plot events): ${t.keywords.join(", ")}`);
+  return L.join("\n");
+}
+
+// ── PERSON FACTS (the Wikipedia-bio replacement, 2026-06-28) — TMDB /person gives a real paragraph bio +
+// birth/death + known-for + a dated filmography, so a profile/interview/celebrity-news piece grounds on
+// structured truth instead of Wikipedia prose. No Wikimedia.
+export async function getPersonFacts(name) {
+  const p = await searchPerson(name);
+  if (!p) return null;
+  const [det, cr] = await Promise.all([
+    tmdb(`/person/${p.id}?append_to_response=external_ids`),
+    getPersonCredits(p.id),
+  ]);
+  if (!det) return null;
+  const strip = (s) => (s || "").replace(/\s+/g, " ").trim();
+  return {
+    id: p.id, name: det.name || p.name, imdbId: det.external_ids?.imdb_id || cr?.imdb || null,
+    bio: strip(det.biography || ""), born: det.birthday || null, died: det.deathday || null,
+    birthplace: strip(det.place_of_birth || ""), knownFor: det.known_for_department || "",
+    alsoKnownAs: (det.also_known_as || []).slice(0, 3),
+    credits: cr?.credits || [],
+  };
+}
+
+// Deathday-only lookup for the hoax/death recheck (an authoritative, time-unbounded death confirm).
+export async function personDeathday(name) {
+  const p = await searchPerson(name);
+  if (!p) return null;
+  const det = await tmdb(`/person/${p.id}`);
+  return det?.deathday || null;
+}
+
+export function personFactsBlock(p) {
+  if (!p) return "";
+  const L = [`${p.name} — AUTHORITATIVE PERSON FACTS (TMDB, verified — cite ONLY these; never invent a birth date, role, or credit):`];
+  if (p.born) L.push(`Born: ${p.born}${p.birthplace ? `, ${p.birthplace}` : ""}`);
+  if (p.died) L.push(`Died: ${p.died}`);
+  if (p.knownFor) L.push(`Known for: ${p.knownFor}`);
+  if (p.bio) L.push(`Biography (TMDB): ${p.bio.slice(0, 1200)}`);
+  if (p.credits?.length) L.push(personFactBlock(p.name, p.credits));
   return L.join("\n");
 }

@@ -91,6 +91,35 @@ export function oscarAwards(ceremonyOrYear) {
   return { show: `the ${ord(ceremony)} Academy Awards`, source: "the official Academy Awards Database", categories: [...byCat.values()].filter((c) => c.winner) };
 }
 
+// A person's OSCAR history from the official Academy DB cache (the non-Wikidata replacement for the profile
+// P166 awards block). WON vs NOMINATED stays exact. Globes/Emmys per-person history isn't cheaply queryable
+// by person, so those stay qualitative (honest loss vs Wikidata — never fabricated).
+export function personAwards(personName) {
+  const rows = oscarRows();
+  if (!rows.length || !personName) return null;
+  const pn = norm(personName);
+  if (pn.length < 4) return null;
+  const isMine = (rowName) => {
+    const rn = norm(rowName);
+    if (!rn) return false;
+    if (rn === pn) return true;
+    // producers/teams: "Alex Coco, Samantha Quan and Sean Baker" → match the person as a full token-run.
+    return rn.split(/,| and /).map((s) => s.trim()).includes(pn);
+  };
+  const mine = rows.filter((r) => isMine(r.name));
+  if (!mine.length) return null;
+  const fmt = (r) => `${r.category}${r.year ? ` (${r.year})` : ""}${r.film ? ` — for ${r.film}` : ""}`;
+  return { wins: mine.filter((r) => r.winner).map(fmt), noms: mine.filter((r) => !r.winner).map(fmt) };
+}
+
+export function personAwardsBlock(name, pa) {
+  if (!pa || (!pa.wins.length && !pa.noms.length)) return "";
+  const L = [`${name} — AUTHORITATIVE OSCAR HISTORY (the official Academy Awards Database — WON vs NOMINATED is exact; never call a nomination a win; for non-Oscar awards not listed here, speak qualitatively, never invent a win):`];
+  if (pa.wins.length) L.push(`Academy Awards WON: ${pa.wins.join("; ")}`);
+  if (pa.noms.length) L.push(`Academy Award NOMINATIONS (not won): ${pa.noms.slice(0, 12).join("; ")}`);
+  return L.join("\n");
+}
+
 // ── GOLDEN GLOBES: first-party wp-json awdb JSON API ──
 export async function goldenGlobesAwards(year) {
   try {

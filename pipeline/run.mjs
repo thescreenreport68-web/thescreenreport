@@ -4,8 +4,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { MODELS } from "./config.mjs";
-import { gatherFacts, wikiSection, wikiSummary } from "./lib/wikipedia.mjs";
-import { wikidataFacts, wikidataFactBlock } from "./lib/wikidata.mjs";
+import { gatherFacts } from "./lib/groundFacts.mjs";
 import { generate } from "./stages/generate.mjs";
 import { classify } from "./stages/classify.mjs";
 import { sourceImage, downloadImage } from "./stages/image.mjs";
@@ -13,7 +12,7 @@ import { gate } from "./stages/gate.mjs";
 import { assemble } from "./stages/assemble.mjs";
 import { getWhereToWatch, factBlock, toWhereToWatch, discoverTop, discoverFactBlock, getTrailer, trailerFactBlock, getBoxOffice, boxOfficeFactBlock, searchPerson, getPersonCredits, personFactBlock, getTitleFacts, titleFactBlock } from "./lib/tmdb.mjs";
 import { omdb, omdbFactBlock } from "./lib/omdb.mjs";
-import { getAuthoritativeAwards, awardsFactBlock } from "./lib/awardsCache.mjs";
+import { getAuthoritativeAwards, awardsFactBlock, personAwards, personAwardsBlock } from "./lib/awardsCache.mjs";
 import { cacheTweets, reactionFactBlock } from "./lib/tweets.mjs";
 import { searchInterview, fetchTranscript, oEmbed, interviewFactBlock } from "./lib/youtube.mjs";
 import { costReport } from "./lib/openrouter.mjs";
@@ -59,8 +58,8 @@ for (let i = 0; i < topics.length; i++) {
   const t0 = Date.now();
   try {
     console.log(`\n=== [${i + 1}/${topics.length}] ${topic.title} ===`);
-    topic.facts = await gatherFacts([topic.primaryEntity, ...(topic.entities || [])].filter(Boolean));
-    console.log(`  facts: ${topic.facts.length} blocks`);
+    topic.facts = await gatherFacts(topic); // NON-Wikipedia typed grounding (person→TMDB bio, music→Deezer)
+    console.log(`  facts: ${topic.facts.length} block(s)`);
     // Give the writer the REAL current month so streaming "as of …" is dated, not a placeholder/guess.
     const NOW_LABEL = new Date(BASE).toLocaleDateString("en-US", { month: "long", year: "numeric", timeZone: "UTC" });
     topic.facts.push({ title: "CURRENT DATE", extract: `Today is ${NOW_LABEL}. Any "as of" availability phrasing must read exactly "as of ${NOW_LABEL}". Never invent a different month/year.` });
@@ -161,29 +160,18 @@ for (let i = 0; i < topics.length; i++) {
         console.log("  ⚠ no first-party awards source for this ceremony — grounding on attributed trade sources only (no Wikipedia)");
       }
     }
-    // Music-profile + screen-music: ground the relevant Wikipedia section (discography/awards or soundtrack)
-    // so the structured fields (careerArc/stats, soundtrack rows) draw from sourced facts, not invention.
-    if (topic.formatTag === "music-profile" || topic.formatTag === "screen-music") {
-      const secs = topic.formatTag === "music-profile"
-        ? ["Discography", "Awards and nominations", "Awards", "Artistry", "Career"]
-        : ["Soundtrack", "Music", "Production", "Reception"];
-      const mSec = await wikiSection(topic.primaryEntity, secs);
-      if (mSec) { topic.facts.push({ title: "WIKIPEDIA MUSIC FACTS (verified — use ONLY these; never invent a chart figure, award, or song)", extract: mSec.slice(0, 4000) }); console.log(`  wiki music section: ${mSec.length} chars`); }
-    }
+    // (Music grounding is now handled by groundFacts: music-profile/music-news ground on Deezer catalog;
+    // screen-music grounds on the screen work's AUTHORITATIVE TITLE FACTS block. No Wikipedia music section.
+    // Chart positions / certifications / music awards stay qualitative until PR6 wires MusicBrainz/Discogs/Last.fm.)
 
-    // PROFILE niche: hand the writer a REAL dated filmography (TMDB) + verified award wins/noms (Wikidata)
-    // so it narrates a real career instead of inventing credits/years/roles. (FIX-1 root-cause fix.)
-    let personCredits = null;
+    // PROFILE niche: the dated filmography (TMDB) + biography were already grounded by groundFacts
+    // (topic._person). Reuse the credits for the structured-field overwrite, and add the person's Oscar
+    // history from the OFFICIAL Academy DB (the non-Wikidata replacement — WON vs NOMINATED stays exact).
+    let personCredits = topic.formatTag === "profile" ? (topic._person?.credits || null) : null;
     if (topic.formatTag === "profile") {
-      const person = await searchPerson(topic.primaryEntity);
-      if (person) {
-        const pc = await getPersonCredits(person.id, 18);
-        personCredits = pc.credits;
-        if (pc.credits?.length) { topic.facts.push({ title: "VERIFIED FILMOGRAPHY (TMDB)", extract: personFactBlock(topic.primaryEntity, pc.credits) }); console.log(`  TMDB filmography: ${pc.credits.length} credits`); }
-        const f = await wikidataFacts(pc.wikidata || (await wikiSummary(topic.primaryEntity))?.wikidata);
-        const fb = wikidataFactBlock(f);
-        if (fb) { topic.facts.push({ title: "AUTHORITATIVE AWARDS & FACTS (Wikidata — WON vs NOMINATED is exact; never call a nomination a win)", extract: fb }); console.log(`  Wikidata: ${f.wins.length} wins, ${f.nominations.length} noms`); }
-      }
+      const pa = personAwards(topic.primaryEntity);
+      const pab = personAwardsBlock(topic.primaryEntity, pa);
+      if (pab) { topic.facts.push({ title: "AUTHORITATIVE OSCAR HISTORY", extract: pab }); console.log(`  Oscar history: ${pa.wins.length} wins, ${pa.noms.length} noms`); }
     }
 
     // (RT/Metacritic reception now comes from OMDb in the AUTHORITATIVE RATINGS block above — exact current
