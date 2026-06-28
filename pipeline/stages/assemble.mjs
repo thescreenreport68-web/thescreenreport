@@ -129,7 +129,12 @@ export function assemble({ article, classification, image, topic, dateISO }) {
     "awardsType", "awardShow", "awardCategories", "awardRecords",
     // MUSIC structured fields (rendered by MusicModules — Commit 3 UI; carried now so data persists)
     "release", "tracklist", "tourDates", "ticketInfo", "officialPost", "predictions",
-    "careerArc", "keyTracks", "peerLine", "stats", "screenWork", "soundtrack", "songSpotlight", "discoveryArtist"]) {
+    "careerArc", "keyTracks", "peerLine", "stats", "screenWork", "soundtrack", "songSpotlight", "discoveryArtist",
+    // PLAYBOOK PR1 structured fields (rendered in PR2 UI; carried now so writer output persists)
+    "storyStatus", "sensitivity", "keyPoints", "sightings", "criterion", "honorableMentions", "topFive", "bestFor",
+    "readingModes", "reveals", "officialSynopsis", "seriesContext", "seriesStatus", "weekendChart", "verdictBox",
+    "releaseWindows", "credits", "careerStats", "methodology", "footnotes", "speakers", "looseThreads", "atAGlance",
+    "verdictBuckets", "confidenceTier", "precursorTimeline", "bottomLine"]) {
     let v = article[k];
     if (v == null) continue;
     if (Array.isArray(v) && v.length === 0) continue;

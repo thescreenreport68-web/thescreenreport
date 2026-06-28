@@ -42,7 +42,21 @@ export type Article = {
     genre?: string;
     whereToWatch?: string;
   }; // reviews / film pieces
-  entries?: { rank: number; title: string; year?: string; blurb: string }[]; // rankings
+  entries?: {
+    rank: number;
+    title: string;
+    year?: string;
+    blurb: string;
+    // playbook: richer ranking entries (movies/tv rankings + best-of-streaming)
+    whyHere?: string;
+    director?: string;
+    cast?: string[];
+    runtime?: string;
+    whereToWatch?: string;
+    verdictTier?: string; // best-of: WATCH IT | WORTH A LOOK | SKIP IT
+    bestFor?: string;
+    seriesContext?: string;
+  }[]; // rankings
   tldr?: string; // explainers: the short answer
   spoiler?: boolean; // explainers: show spoiler banner
   factPanel?: {
@@ -52,7 +66,7 @@ export type Article = {
     nationality?: string;
   }; // profiles
   filmography?: { year?: string; title: string; role?: string; type?: string }[]; // profiles
-  whereToWatch?: { title: string; platform: string; type?: string; year?: string }[]; // guides
+  whereToWatch?: { title: string; platform: string; type?: string; year?: string; note?: string; price?: string; quality?: string }[]; // guides
   // ---- batch-2 embed niches (trailer / interview / reaction) ----
   youtubeId?: string; // trailers + interviews: the official YouTube video id (embedded, never re-hosted)
   releaseInfo?: string; // trailers: e.g. "In theaters November 21, 2025"
@@ -74,6 +88,8 @@ export type Article = {
     budget?: string;
     openingWeekend?: string;
     theaters?: string;
+    perTheater?: string;
+    changePct?: string;
   };
   records?: { claim: string; detail?: string }[]; // box-office records/firsts
   // ---- awards ----
@@ -90,6 +106,62 @@ export type Article = {
     nominees: { name: string; title?: string; isWinner?: boolean }[];
   }[];
   awardRecords?: { claim: string; detail?: string }[];
+  // ---- PLAYBOOK PR1 fields (per-form; all optional, render in PR2 UI) ----
+  storyStatus?: string; // news: CONFIRMED | DEVELOPING | RUMOR | HOLD (from FIND verify)
+  sensitivity?: string; // celeb/news: none | split | legal | death | allegation | health
+  keyPoints?: string[]; // celeb/tv news: 3-bullet TL;DR
+  sightings?: { event: string; date?: string }[]; // celeb: verifiable public sightings (no paparazzi)
+  criterion?: string; // rankings/best-of: the stated ranking criterion
+  honorableMentions?: { title: string; year?: string; note?: string }[];
+  topFive?: string[]; // best-of: the quick top-5 list
+  bestFor?: string; // best-of: the editor's "best for X" pick
+  readingModes?: { justFacts?: string[]; quickVersion?: string }; // explainer: static reading-mode toggle
+  reveals?: { term: string; note?: string }[]; // trailers: the counted reveals contract
+  officialSynopsis?: string; // trailers: the verbatim official synopsis
+  seriesContext?: {
+    poster?: string; network?: string; premiere?: string; status?: string;
+    seasons?: string; creator?: string; cast?: string[]; whereToWatch?: string;
+  }; // TV connective-tissue card
+  seriesStatus?: {
+    show?: string; network?: string; status?: string; season?: string; window?: string;
+    castAdded?: { name: string; role?: string }[];
+  }; // tv/news renewal spine
+  weekendChart?: { rank?: number; title: string; gross?: string; change?: string }[]; // box office
+  verdictBox?: { answer?: string; where?: string; when?: string; verdict?: string }; // watch-guide TL;DR
+  releaseWindows?: {
+    theatrical?: string; streaming?: string; streamingEstimated?: string;
+    digital?: string; digitalEstimated?: string;
+  }; // watch-guide
+  credits?: {
+    distributor?: string; director?: string; screenplay?: string; dp?: string;
+    editor?: string; composer?: string; cast?: string[]; runtime?: string; rated?: string;
+  }; // reviews: full TMDB credits block
+  careerStats?: { label: string; value: string }[]; // profile: chart/career stat call-outs
+  methodology?: string; // profile: the "how we reported this" line
+  footnotes?: { term: string; fact: string }[]; // interview: glossary footnotes
+  speakers?: string[]; // interview: AoA-style two-speaker
+  looseThreads?: string[]; // recap: stray-observation asides
+  atAGlance?: { leaderboard?: string; biggestUpset?: string; firsts?: string }; // awards leaderboard
+  verdictBuckets?: { bucket: string; name?: string; film?: string; case?: string }[]; // predictions
+  confidenceTier?: string; // predictions: Lock | Frontrunner | Live | Long shot
+  precursorTimeline?: { body: string; winner?: string }[]; // predictions: precursor results
+  bottomLine?: string; // predictions: the closing call
+  predictions?: { categoryName?: string; willWin?: string; shouldWin?: string; darkHorse?: string }[];
+  // ---- MUSIC silo fields (Commit 1 emitted these to frontmatter; type them now for PR2 UI) ----
+  tier?: string; // music: popular | indie (the 6%/4% lane)
+  release?: { title?: string; date?: string; label?: string; type?: string }; // music-news
+  tracklist?: string[];
+  tourDates?: { date?: string; city?: string; venue?: string; support?: string }[];
+  ticketInfo?: { onSale?: string; presale?: string; streamOn?: string };
+  officialPost?: { platform?: string; url?: string };
+  careerArc?: { era: string; beat: string }[]; // music-profile
+  keyTracks?: { title: string; platform?: string; embedUrl?: string }[];
+  peerLine?: string;
+  stats?: { label: string; value: string }[];
+  screenWork?: { title?: string; type?: string; episode?: string }; // screen-music
+  soundtrack?: { song: string; artist?: string; scene?: string; significance?: string; embedUrl?: string; chartContext?: string }[];
+  songSpotlight?: { song?: string; artist?: string; platform?: string; embedUrl?: string };
+  discoveryArtist?: { name?: string; blurb?: string; embedUrl?: string };
 };
 
 const CONTENT_DIR = path.join(process.cwd(), "content", "articles");
@@ -167,6 +239,50 @@ export function getAllArticles(): Article[] {
       awardShow: data.awardShow,
       awardCategories: data.awardCategories ?? [],
       awardRecords: data.awardRecords ?? [],
+      // playbook PR1 fields
+      storyStatus: data.storyStatus,
+      sensitivity: data.sensitivity,
+      keyPoints: data.keyPoints ?? [],
+      sightings: data.sightings ?? [],
+      criterion: data.criterion,
+      honorableMentions: data.honorableMentions ?? [],
+      topFive: data.topFive ?? [],
+      bestFor: data.bestFor,
+      readingModes: data.readingModes,
+      reveals: data.reveals ?? [],
+      officialSynopsis: data.officialSynopsis,
+      seriesContext: data.seriesContext,
+      seriesStatus: data.seriesStatus,
+      weekendChart: data.weekendChart ?? [],
+      verdictBox: data.verdictBox,
+      releaseWindows: data.releaseWindows,
+      credits: data.credits,
+      careerStats: data.careerStats ?? [],
+      methodology: data.methodology,
+      footnotes: data.footnotes ?? [],
+      speakers: data.speakers ?? [],
+      looseThreads: data.looseThreads ?? [],
+      atAGlance: data.atAGlance,
+      verdictBuckets: data.verdictBuckets ?? [],
+      confidenceTier: data.confidenceTier,
+      precursorTimeline: data.precursorTimeline ?? [],
+      bottomLine: data.bottomLine,
+      predictions: data.predictions ?? [],
+      // music silo fields
+      tier: data.tier,
+      release: data.release,
+      tracklist: data.tracklist ?? [],
+      tourDates: data.tourDates ?? [],
+      ticketInfo: data.ticketInfo,
+      officialPost: data.officialPost,
+      careerArc: data.careerArc ?? [],
+      keyTracks: data.keyTracks ?? [],
+      peerLine: data.peerLine,
+      stats: data.stats ?? [],
+      screenWork: data.screenWork,
+      soundtrack: data.soundtrack ?? [],
+      songSpotlight: data.songSpotlight,
+      discoveryArtist: data.discoveryArtist,
     };
   });
 
