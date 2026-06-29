@@ -5,6 +5,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { MODELS } from "./config.mjs";
 import { gatherFacts } from "./lib/groundFacts.mjs";
+import { findContent } from "./lib/contentFinder.mjs";
 import { generate } from "./stages/generate.mjs";
 import { classify } from "./stages/classify.mjs";
 import { sourceImage, downloadImage } from "./stages/image.mjs";
@@ -81,6 +82,29 @@ for (let i = 0; i < topics.length; i++) {
         extract: srcFacts,
       });
       console.log(`  breaking: ${v.status}${v.attribution ? ` (via ${v.attribution})` : ""} · ${topic.sources.length} source(s) injected`);
+    }
+
+    // CONTENT FINDER (rebuild Step 2→4): gather the FULL source-article TEXT + on-the-record QUOTES for this
+    // trending topic (free: seed URLs + GDELT real-URL artlist → article-extractor/Jina) so the writer works from
+    // the REAL reporting, not thin RSS summaries — and stash the tiered bundle on topic._bundle for the verify gate.
+    try {
+      const cf = await findContent({
+        primaryEntity: topic.primaryEntity, title: topic.title, query: topic.primaryKeyword || topic.title,
+        seedUrls: (topic.sources || []).map((s) => s.url).filter(Boolean),
+      });
+      if (!cf.blocked && cf.sources?.length) {
+        topic._bundle = cf;
+        const srcText = cf.sources.map((s) => `[${s.domain} · ${s.tier}]\n${s.text}${s.quotes?.length ? "\nON-THE-RECORD QUOTES: " + s.quotes.map((q) => `"${q}"`).join(" | ") : ""}`).join("\n\n");
+        topic.facts.unshift({
+          title: `GATHERED SOURCE REPORTING (${cf.sources.length} outlets · ${cf.independentOwners?.length || 0} independent · ${cf.majorCount || 0} major) — your PRIMARY material; write ONLY what these sources say, and quote ONLY the ON-THE-RECORD QUOTES shown, verbatim`,
+          extract: srcText.slice(0, 14000),
+        });
+        console.log(`  content finder: ${cf.sources.length} sources · ${cf.independentOwners?.length || 0} owners · ${cf.totalQuotes || 0} quotes`);
+      } else {
+        console.log(`  ⚠ content finder: ${cf.blocked ? "BLOCKED (" + cf.reason + ")" : "no sources"} — grounding on structured facts only`);
+      }
+    } catch (e) {
+      console.log("  ⚠ content finder error:", e.message);
     }
 
     // AUTHORITATIVE STRUCTURED FACTS (the Wikipedia-free spine, 2026-06-28). For any topic centered on a

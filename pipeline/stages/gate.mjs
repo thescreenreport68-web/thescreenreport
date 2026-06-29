@@ -2,6 +2,7 @@ import { chat } from "../lib/openrouter.mjs";
 import { GATE } from "../config.mjs";
 import { verifyClaims } from "../lib/claimcheck.mjs";
 import { verifyGroundTruth } from "../lib/verifyEngine.mjs";
+import { verifyGate } from "../lib/verifyGate.mjs";
 
 // ---- Readability / human-voice helpers (free, deterministic) ----
 function plainProse(md) {
@@ -295,9 +296,22 @@ export async function gate({ article, topic, judgeModel }) {
     return { score: 0, pass: false, subscores: {}, deterministic: det, hardBlocks: [...det.hardBlocks, ...factBlocks], claimCheck, strengths: [], weaknesses: ["deterministic block"] };
   }
 
+  // UNIVERSAL VERIFY GATE (rebuild Step 3/4): independently extract + verify EVERY claim against the gathered
+  // source bundle + the structured authoritative facts — fail-closed, cheap model. This is the universal coverage
+  // that replaces the old ~7-type allowlist; verifyGroundTruth above stays as the structured high-confidence layer.
+  // Its corrections feed the SAME rewrite loop (run.mjs reads scored.claimCheck.corrections).
+  const vbundle = { blocked: false, sources: [
+    ...((topic._bundle && topic._bundle.sources) || []),
+    ...(topic.facts || []).map((f) => ({ domain: String(f.title || "fact").slice(0, 40), owner: "authoritative", tier: "major", text: f.extract || "", quotes: [] })),
+  ] };
+  const vg = vbundle.sources.length ? await verifyGate({ article, bundle: vbundle, model: judgeModel }) : null;
+  if (vg && vg.corrections) claimCheck.corrections = [claimCheck.corrections, vg.corrections].filter(Boolean).join("\n");
+
   const j = await judge({ article, topic, model: judgeModel, metrics: det, groundTruth: gt });
   const ss = j.subscores || {};
   const hardBlocks = [...det.hardBlocks, ...(j.hardBlocks || []), ...factBlocks];
+  if (vg && (vg.verdict === "BLOCK" || vg.verdict === "CUT") && vg.unsupported.length)
+    hardBlocks.push(`verify-gate ${vg.verdict}: ${vg.unsupported.length} claim(s) not in the gathered sources — ${vg.unsupported.slice(0, 3).map((u) => u.claim.slice(0, 55)).join("; ")}`);
   if (cc.bad.length) hardBlocks.push(`${cc.bad.length} unverified claim(s) (need correction)`);
   if (gt.findings.length > gt.contradicted.length) hardBlocks.push(`${gt.findings.length - gt.contradicted.length} ungrounded fact(s) (verify against the authoritative facts)`);
 
