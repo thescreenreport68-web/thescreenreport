@@ -192,6 +192,10 @@ const SUBSHAPE = {
     "FILM REVIEW craft: open with a stack-and-classify line OR a hook — BAN a synopsis opener. The `verdict` is a 3-12 word standalone pull-quote. Every praise word chains to a NAMED grounded reason (a scene, a performance choice). Include one EARNED reservation. No spoilers. 700-1100 words. NEVER quote dialogue you don't have verbatim. Emit the `credits` block.",
   "reviews/tv-reviews":
     "TV REVIEW craft: open on a cultural-frame / comparative / personal hook — BAN the 'in our streaming-glut era' opener. Organize THEMATICALLY, never episode-by-episode. SPOILER-FREE (no mid-season or finale twist). 900-1400 words. TV-flavored infoCard (Network, Premiere, Created by, Starring, Where to watch).",
+  "awards/winners":
+    "AWARDS RESULTS craft (the night's RESULT, not a preview): the characterizing-appositive lede — sentence ONE makes the TOP WINNER the grammatical subject, characterizes it in a TIGHT 6-10-word appositive, anchors the time, and states its win count + Best Picture; NEVER lead on the edition number/venue/host. Sentence 2 = the night's defining record WITH its prior-holder + year. Order categories MAJOR-first (Picture, the four acting, Director, the two screenplay). Never call a NOMINATION a win. The structured winners list renders separately, so the body is a lede + 'biggest winners/moments' + records.",
+  "streaming/where-to-watch":
+    "WHERE-TO-WATCH craft: headline = 'Where To Watch [Title]: [platform / In Theaters / window]' — answer-first. The DEK states the platform (or 'in theaters now') outright. First 1-2 sentences say exactly where to watch it RIGHT NOW; a date/platform is FACT only if grounded ('as of [month]; check before watching'), an estimate must be labeled. Distinguish Stream / Rent / Buy.",
 };
 // PER-(category/subcategory) FIELD-CONTRACT OVERRIDES (2026-06-28 UI/UX overhaul). The shared niche.fields
 // (keyed by formatTag) under-requested the distinctive structured fields each category's UI renders — so the
@@ -201,7 +205,7 @@ const SUBSHAPE = {
 // receipt (the judge never sees structured fields) — the SYSTEM rules already mandate that.
 const FIELDS_OVERRIDE = {
   "movies/news":
-    '"keyPoints":["3 answer-first bullets summarizing the story; bullet #1 = WHAT CHANGED TODAY"], "infoCard":{"director":"","cast":["2-3 lead names"],"releaseYear":"","genre":"","whereToWatch":"platform/theaters if grounded"}',
+    '"keyPoints":["3 answer-first bullets summarizing the story; bullet #1 = WHAT CHANGED TODAY"], "storyStatus":"CONFIRMED|DEVELOPING|RUMOR — the verified status of this story (badge)", "infoCard":{"director":"","cast":["2-3 lead names"],"releaseYear":"","genre":"","whereToWatch":"platform/theaters if grounded"}',
   "movies/rankings-lists":
     '"criterion":"the one-line stated ranking criterion", "honorableMentions":[{"title":"","year":"","note":"one line"}], "topFive":["the top 5 titles in #1..#5 order — for the at-a-glance strip"]',
   "movies/explainers":
@@ -221,7 +225,7 @@ const FIELDS_OVERRIDE = {
   "streaming/best-of-streaming":
     '"criterion":"the one-line basis for the picks", "bestFor":"the editor\'s one-line best-for pick", "topFive":["the top 5 picks in order"]',
   "celebrity/news":
-    '"keyPoints":["3 answer-first bullets; #1 = what is new"], "sightings":[{"event":"a VERIFIABLE public appearance (event + context) — NEVER paparazzi/anonymous","date":"if grounded"}]',
+    '"keyPoints":["3 answer-first bullets; #1 = what is new"], "sensitivity":"normal|high (high = death/legal/health/allegation — neutral verbs only)", "sightings":[{"event":"a VERIFIABLE public appearance (event + context) — NEVER paparazzi/anonymous","date":"if grounded"}]',
   "celebrity/profiles-careers":
     '"careerStats":[{"label":"e.g. Oscar nominations / box-office total","value":"a GROUNDED number only"}], "methodology":"a one-line \'how we reported this\' note (no-access: we did not interview them)"',
   "celebrity/interviews":
@@ -230,6 +234,8 @@ const FIELDS_OVERRIDE = {
     '"atAGlance":{"leaderboard":"the current frontrunner in one phrase","biggestUpset":"the live dark-horse","firsts":"a record/first in play if grounded"}',
   "reviews/movie-reviews":
     '"credits":{"distributor":"","director":"","screenplay":"","cast":["3-5"],"runtime":"","rated":""}',
+  "awards/winners":
+    '"atAGlance":{"leaderboard":"the top winner + its win count in one phrase","biggestUpset":"the upset, if grounded","firsts":"a record/first in play, if grounded"}',
 };
 
 export function resolveNiche(topic) {
@@ -260,7 +266,9 @@ export function resolveNiche(topic) {
   if (t.includes("box office") || t.includes("box-office")) return "boxoffice";
   if (t.includes("award") || t.includes("oscar") || t.includes("emmy")) return "awards";
   if (t.includes("news")) return "news";
-  return null;
+  // FALLBACK: any uncategorized trending story still gets the AP inverted-pyramid NEWS craft (the rebuild covers
+  // ANY trending verifiable story, not a fixed taxonomy) — never ship a piece with only the bare SYSTEM prompt.
+  return "news";
 }
 
 export async function generate({ topic, model, maxTokens = 6000, corrections = null }) {
@@ -283,18 +291,20 @@ CONTENT TYPE: ${topic.contentType}
 CATEGORY / SUBCATEGORY: ${topic.category} / ${topic.subcategory}
 PRIMARY KEYWORD: ${topic.primaryKeyword} — work its main words into the TITLE, naturally (REQUIRED — the title must contain them, e.g. a review title ends with "...Review"), and use it once early in the body. Do NOT force the exact phrase into a subheading or repeat it through the article.
 ANGLE: ${topic.angle || "the most interesting TRUE angle"}${niche ? "\nNICHE STYLE: " + niche.guide : ""}${subShape ? "\nCATEGORY CRAFT: " + subShape : ""}${tierPreset ? "\nMUSIC LANE: " + tierPreset : ""}
+STORY STATUS: ${topic.verification?.status || topic.storyStatus || "n/a"} — CONFIRMED = state it plainly; DEVELOPING = attribute the core claim by NAME ("according to [outlet]"), do not present it as independently confirmed; RUMOR/HOLD = hedge heavily, never assert it as fact.
+SENSITIVITY: ${topic.sensitivity || "normal"} — if "high" (death / legal / health / allegation) use STRICTLY neutral verbs (reportedly, confirmed, announced) and BAN any playful, speculative, or sensational phrasing.
 
-REFERENCE FACTS (ground every factual claim in these or in uncontroversial well-known facts):
+REFERENCE FACTS — ground EVERY factual claim ONLY in these; add NOTHING from your own memory, no matter how well-known it seems (an independent verifier re-checks every claim against these exact facts and CUTS or BLOCKS anything not found here):
 ${facts}
 
 Return JSON with EXACTLY these fields:
 {
- "title": "the H1/headline, 55-80 chars, ONE specific true claim, naturally including the primary keyword's main words (required); reads like a human wrote it, not a pasted search query",
+ "title": "the H1/headline, 55-80 chars (movies/news 60-70), ONE specific TRUE claim, ENTITY-FRONT with a strong active verb in PRESENT TENSE and a deal-stage-accurate verb (NEVER upgrade certainty — 'in talks' stays 'in talks', not 'joins'); naturally include the primary keyword's main words (required). NO '(EXCLUSIVE)' tag, NO question-mark clickbait, NO fabricated superlative. For a reactions/explainer/spoiler piece NEVER name the twist or death in the headline. Reads like a human wrote it, not a pasted search query",
  "metaTitle": "SEO <title>, 50-60 chars, keyword near the front but natural",
- "dek": "1-2 sentence standfirst that ADDS new info (does not restate the headline), <=170 chars",
+ "dek": "1-2 sentence standfirst, <=170 chars, that ADDS new info (never restates the headline). If the CATEGORY CRAFT above gives a DEK formula, FOLLOW IT — box-office: the #1 film + its grounded number + the biggest mover/faller; tv-news: a grounded production/timing detail the headline didn't fit; awards: the marquee acting winners; music-news: the second-most-important grounded fact + (if a list exists) a 'here are all the dates/tracks' scannability promise; reactions: a 'Fans are split on …' contested-verdict frame — all grounded only.",
  "metaDescription": "140-155 chars, keyword early",
  "keyTakeaways": ["3-5 answer-first bullets, <=22 words each"],
- "body": "the FULL article in MARKDOWN. Answer-first opening line. ## H2 subheads (>=2; at least one a real reader question, the rest declarative voice-y headings — never verbatim search queries). 2-3 sentence paragraphs with VARIED sentence length (no sentence over 35 words). Lists/tables only where useful. End with a '## Sources' section containing >=2 authoritative, RELEVANT EXTERNAL markdown links (no irrelevant boilerplate). Add an internal link ONLY if a real sibling article plausibly exists. Do NOT include the H1/title or the key-takeaways in the body (they are rendered separately).",
+ "body": "the FULL article in MARKDOWN. Answer-first opening line. ## H2 subheads (>=2; at least one a real reader question, the rest declarative voice-y headings — never verbatim search queries). 2-3 sentence paragraphs with VARIED sentence length (no sentence over 35 words). Lists/tables only where useful. Attribute sources by NAME in-text ('according to Variety'). Add a '## Sources' section with authoritative, RELEVANT external links ONLY where they genuinely exist (a box-office/awards/where-to-watch piece cites its primary source — Box Office Mojo, Oscars.org, a studio — NEVER a competitor like THR/Variety/Deadline/ScreenRant; a short casting/celebrity-news brief may have NO valid external link, so OMIT the Sources section rather than pad it with boilerplate or competitor links). Add an internal link ONLY if a real sibling article plausibly exists. Do NOT include the H1/title or the key-takeaways in the body (they are rendered separately).",
  "faq": [{"q":"a real follow-up question a reader would still have (NOT restating a fact already in the body)","a":"answer-first, 40-120 words — a real, useful answer. If you cannot answer it from the grounded facts, DROP this FAQ entirely and ask a different question you CAN answer; NEVER write a non-answer or reference the source material (forbidden: 'not detailed in the provided facts', 'the reference facts don't say', 'based on the provided information'). The reader must never see that you were working from a fact sheet."}],
  "about": [{"name":"Exact Film or Show Title","type":"Movie"}],  // identify the work(s); OMIT any sameAs URL (never link Wikipedia or a fabricated deep link)
  "tags": ["5-8 lowercase relevant tags"],
@@ -302,7 +312,7 @@ Return JSON with EXACTLY these fields:
  "claims": [{"text":"each CHECKABLE specific you assert anywhere in the article (body, takeaways, FAQ, OR A STRUCTURED FIELD): a stat/%, a dollar/box-office figure, a date, an award WIN or NOMINATION, a streaming platform, a filmography credit (title+year+role), an exact quote, a precise count, a tour date, a winner, a runtime, a release window, a precursor result, a chart peak, a credit","sourceQuote":"the VERBATIM substring copied EXACTLY from the REFERENCE FACTS that proves it. If you cannot find a supporting substring in the facts, DO NOT make that claim — remove it or write it qualitatively. This is mandatory: every checkable specific MUST have a real receipt. ⚠ STRUCTURED FIELDS ESPECIALLY: the quality judge does NOT see your structured fields (release/tracklist/tourDates/whereToWatch/releaseWindows/awardCategories/verdictBuckets/precursorTimeline/credits/movieFacts/seriesContext/seriesStatus/weekendChart/reveals/keyPoints/etc), so a structured value with no claims[] receipt is UNVERIFIABLE — give every checkable structured value its own receipt here, or OMIT it from the field."}]${niche ? ",\n " + niche.fields : ""}${fieldsOverride ? ",\n " + fieldsOverride : ""}
 }
 
-Requirements: faq has 3-4 entries that raise NEW follow-up questions (never restating a stat or fact already in the body); body has >=2 H2s (at least one a question) and a Sources section with >=3 external links; about lists the specific title(s) the piece is about (empty array only if truly none).${corrections ? `
+Requirements: faq has 3-4 entries that raise NEW follow-up questions (never restating a stat or fact already in the body); body has the H2s the form needs (a short news brief may have just 1, at least one a reader question where it fits) and cites genuinely-relevant sources where they exist (do NOT pad with boilerplate or competitor links); about lists the specific title(s) the piece is about (empty array only if truly none).${corrections ? `
 
 ⚠⚠ MANDATORY CORRECTION — your previous draft contained these FALSE or UNVERIFIED claims. Rewrite the WHOLE article, fixing ONLY these facts using the corrections below, and removing/qualifying anything you cannot ground. KEEP the voice, engagement, structure, headline energy and everything else exactly as strong — do NOT make it duller while fixing facts:
 ${corrections}` : ""}`;
@@ -313,7 +323,7 @@ ${corrections}` : ""}`;
     const extra =
       attempt === 0
         ? ""
-        : "\n\nYOUR PREVIOUS ATTEMPT WAS INCOMPLETE. Return COMPLETE valid JSON with: faq >=3 items (new follow-ups, not body restatements); body >=350 words containing >=2 '## ' H2 headings (at least one a question) AND a '## Sources' section with >=3 external links; keyTakeaways with 3-5 items.";
+        : "\n\nYOUR PREVIOUS ATTEMPT WAS INCOMPLETE. Return COMPLETE valid JSON with: faq >=3 items (new follow-ups, not body restatements); body >=350 words containing the form's H2 headings (a reader-question H2 where it fits) AND a '## Sources' section ONLY if genuinely-relevant external links exist; keyTakeaways with 3-5 items.";
     const { data, usage, raw } = await chat({
       model,
       system: SYSTEM,
