@@ -48,56 +48,28 @@ export function scoreTopics(topics, monitor) {
   return topics;
 }
 
-// Diverse selection: fill the queue round-robin across (category/subcategory) buckets so no single
-// subcategory starves the rest — the owner wants coverage across every category + subcategory, not 10
-// near-identical news items. publishableOnly drops held topics (CONFIRMING/QUEUE/EDITORIAL-HOLD).
-export function selectDiverse(rankedTopics, { n = 10, perSubcatMax = 2, publishableOnly = true } = {}) {
-  const pool = publishableOnly ? rankedTopics.filter((t) => t.verification?.publishable) : rankedTopics;
-  const buckets = new Map();
-  for (const t of pool) {
-    const k = `${t.category}/${t.subcategory}`;
-    if (!buckets.has(k)) buckets.set(k, []);
-    buckets.get(k).push(t);
-  }
-  // bucket order = best topic in each bucket, descending (so the strongest subcategory leads each round)
-  const order = [...buckets.entries()].sort((a, b) => (b[1][0]?.priority || 0) - (a[1][0]?.priority || 0)).map(([k]) => k);
+// TREND-PRIORITY SELECTION (rebuild 2026-06-29). The old version hard-capped each subcategory at perSubcatMax=2,
+// which DROPPED the 3rd+ top-trending story in a hot subcategory (a scandal day, a music chart event) to make room
+// for lower-priority items elsewhere — exactly the "drop a trending story for its shape" the owner forbids. Now we
+// pick strictly by PRIORITY, with diversity only a SOFT tiebreak: each already-taken item from a subcategory adds a
+// small penalty so near-ties spread out, but a genuinely higher-priority trending story is NEVER displaced. Music,
+// box-office, celebrity, every shape compete in this ONE pool (the old music 10% quota / 60-40 lanes are gone —
+// topic.tier pop/indie survives only as a downstream WRITING preset). publishableOnly drops held topics.
+export function selectDiverse(rankedTopics, { n = 10, spreadPenalty = 6, publishableOnly = true } = {}) {
+  const pool = (publishableOnly ? rankedTopics.filter((t) => t.verification?.publishable) : rankedTopics).slice();
   const picked = [];
   const taken = {};
-  let round = 0;
-  while (picked.length < n && round < perSubcatMax) {
-    let advanced = false;
-    for (const k of order) {
-      if (picked.length >= n) break;
-      const idx = taken[k] || 0;
-      if (idx < Math.min(perSubcatMax, buckets.get(k).length)) {
-        picked.push(buckets.get(k)[idx]);
-        taken[k] = idx + 1;
-        advanced = true;
-      }
+  while (picked.length < n && pool.length) {
+    let bestIdx = 0, bestEff = -Infinity;
+    for (let i = 0; i < pool.length; i++) {
+      const k = `${pool[i].category}/${pool[i].subcategory}`;
+      const eff = (pool[i].priority || 0) - (taken[k] || 0) * spreadPenalty; // soft diversity nudge, NOT a hard cap
+      if (eff > bestEff) { bestEff = eff; bestIdx = i; }
     }
-    if (!advanced) break;
-    round++;
+    const t = pool.splice(bestIdx, 1)[0];
+    const k = `${t.category}/${t.subcategory}`;
+    taken[k] = (taken[k] || 0) + 1;
+    picked.push(t);
   }
   return picked;
-}
-
-// MUSIC 60/40 LANE ALLOCATION (owner 2026-06-28): inside music's 10% share, 60% POPULAR-trending + 40%
-// INDIE-breakout. The two pools are filled SEPARATELY (each still round-robined across the music subcats),
-// so high-volume pop news can't starve the indie lane. If the indie pool underfills (no genuine breakout
-// cleared the detector that day), we DO NOT backfill it with pop — we ship fewer music items rather than
-// dilute the lane or fake a breakout. Returns the merged music picks; the caller fills the rest non-music.
-export function selectMusicLanes(musicTopics, { popN = 0, indieN = 0, perSubcatMax = 2 } = {}) {
-  const pub = (musicTopics || []).filter((t) => t.verification?.publishable);
-  const pop = pub.filter((t) => (t.tier || "popular") !== "indie");
-  const indie = pub.filter((t) => t.tier === "indie");
-  const popPicks = popN > 0 ? selectDiverse(pop, { n: popN, perSubcatMax, publishableOnly: false }) : [];
-  const indiePicks = indieN > 0 ? selectDiverse(indie, { n: indieN, perSubcatMax, publishableOnly: false }) : [];
-  return { picks: [...popPicks, ...indiePicks], popPicked: popPicks.length, indiePicked: indiePicks.length };
-}
-
-// Compute the music lane quotas for a target queue size n: music = 10% of n, split 60/40 pop/indie.
-export function musicQuota(n) {
-  const musicN = Math.max(0, Math.round(n * 0.1));
-  const popN = Math.round(musicN * 0.6);
-  return { musicN, popN, indieN: musicN - popN };
 }

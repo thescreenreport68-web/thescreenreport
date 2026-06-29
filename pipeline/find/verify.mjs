@@ -158,10 +158,15 @@ function decide(rep, sources) {
   const twoIndependentMajorOwners = tier1Owners.size >= 2;
   const base = { tier1Count: tier1.length, tier1Owners: tier1Owners.size, outletCount: outlets.length, outlets, maxTier, sensitivity, attribution: null, framing: "plain" };
 
-  // Reference/opinion niches (or TMDB backbone) are normally evergreen+publishable — BUT a fresh
-  // HIGH-SENSITIVITY event (death/legal/arrest) framed as a profile/list must STILL pass the hold below.
-  if (sources.length === 0 || (EVERGREEN_FORMATS.has(rep.formatTag) && sensitivity !== "high")) {
-    return { ...base, status: "EVERGREEN", publishable: true };
+  // TRENDING-NEWS ONLY (rebuild 2026-06-29): a zero-source TMDB-trending backbone item is a popular TITLE, not a
+  // trending-news STORY — it has no news event and no source coverage, so it is NOT publishable; it stays a
+  // GROUNDING/entity candidate (its TMDB facts are used downstream in MAKE). This is what keeps the pipeline to
+  // VERIFIABLE TRENDING NEWS and out of authored evergreen (reviews/recaps of merely-popular titles). A topic WITH
+  // sources goes through the normal corroboration ladder below REGARDLESS of its FORM (publishability follows the
+  // trend + verification, NEVER the category/shape). A fresh HIGH-SENSITIVITY zero-source item falls through to the
+  // CONFIRMING hold.
+  if (sources.length === 0 && sensitivity !== "high") {
+    return { ...base, status: "EVERGREEN", publishable: false, hold: "TMDB-trending title with no news source — grounding only, not a trending-news story" };
   }
 
   const major = tier1[0]?.outlet;

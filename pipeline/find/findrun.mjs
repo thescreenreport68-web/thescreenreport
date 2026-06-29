@@ -8,27 +8,28 @@ import { discover } from "./discover.mjs";
 import { categorize } from "./categorize.mjs";
 import { verify } from "./verify.mjs";
 import { externalCorroboration } from "../lib/news.mjs";
-import { scoreTopics, selectDiverse, selectMusicLanes, musicQuota } from "./score.mjs";
+import { scoreTopics, selectDiverse } from "./score.mjs";
 import { detectBreakouts } from "./sources/breakout.mjs";
 import { expandInsideStories, TIER_S } from "./expand.mjs";
 
 const arg = (k, d) => Number((process.argv.find((a) => a.startsWith(`--${k}=`)) || "").split("=")[1]) || d;
 const SHORTLIST = arg("candidates", 28); // how many candidates the categorize LLM judges (cost control)
 const QUEUE_N = arg("queue", 12); // how many topics land in the ranked queue
-const PER_SUBCAT = arg("per-subcat", 2); // max topics per subcategory (set 1 for one-per-subcategory spread)
 const EXPAND = process.argv.includes("--expand"); // opt-in: blanket Tier-S events with inside-angle articles
 
 const runId = "run-" + new Date().toISOString().replace(/[:.]/g, "-").slice(0, 19);
 const monitor = newMonitor(runId);
 console.log(`\n=== FIND ENGINE v2 · ${runId} ===`);
 
-// Stage 1 — discover. Shortlist a MIX so both lanes feed categorize: fresh breaking RSS (news/interview/
-// review/reaction) AND TMDB backbone (the evergreen niches — profile/box-office/trailer/where-to-watch/
-// ranking) — otherwise an RSS-only shortlist starves every evergreen subcategory.
+// Stage 1 — discover. The shortlist is NEWS-DRIVEN (trending-news rebuild): fresh breaking RSS items ARE the
+// trending-news stories. The TMDB backbone (trending titles/people) no longer generates content — it is GROUNDING
+// only (a zero-source title is held, not published) — so reserve just a small slice for the occasional trending
+// PERSON genuinely in the news; the rest of the categorize budget goes to fresh RSS. (Real volume comes from the
+// trend-finder hardening: GDELT velocity + Google-News-RSS + YouTube + Reddit, which feed more corroborated news.)
 const candidates = await discover(monitor);
 const fresh = candidates.filter((c) => c.ageMin != null).sort((a, b) => a.ageMin - b.ageMin);
 const backbone = candidates.filter((c) => c.ageMin == null).sort((a, b) => (b.popularity || 0) - (a.popularity || 0));
-const nBackbone = Math.min(backbone.length, Math.round(SHORTLIST * 0.35));
+const nBackbone = Math.min(backbone.length, Math.round(SHORTLIST * 0.15));
 const shortlist = [...fresh.slice(0, SHORTLIST - nBackbone), ...backbone.slice(0, nBackbone)];
 monitor.stage("shortlist", `kept ${shortlist.length} candidates for categorize (${SHORTLIST - nBackbone} fresh RSS + ${nBackbone} TMDB backbone)`);
 
@@ -48,16 +49,12 @@ const verified = verify(topics, monitor);
 // upgrades — never suppresses fresh news on a miss. (Throttled to GDELT's 1-req/5s limit.)
 await externalCorroboration(verified, monitor);
 
-// Stages 4+6 — score + rank, then diverse-select the queue. MUSIC gets a 60/40 pop/indie quota inside its
-// 10% share (filled separately so pop news can't starve the indie lane; no pop-backfill if indie underfills).
+// Stages 4+6 — score + rank, then TREND-PRIORITY select the queue. ALL verified-publishable topics compete in ONE
+// priority-ranked pool — music, box-office, celebrity, every shape — with diversity only a soft tiebreak. No music
+// quota, no hard per-subcategory cap: a genuinely trending story is never dropped for its category/shape.
 scoreTopics(verified, monitor);
-const { musicN, popN, indieN } = musicQuota(QUEUE_N);
-const musicTopics = verified.filter((t) => (t.category || "").toLowerCase() === "music");
-const nonMusic = verified.filter((t) => (t.category || "").toLowerCase() !== "music");
-const { picks: musicPicks, popPicked, indiePicked } = selectMusicLanes(musicTopics, { popN, indieN, perSubcatMax: PER_SUBCAT });
-const others = selectDiverse(nonMusic, { n: Math.max(0, QUEUE_N - musicPicks.length), perSubcatMax: PER_SUBCAT, publishableOnly: true });
-const queue = [...others, ...musicPicks].sort((a, b) => b.priority - a.priority);
-if (musicN > 0) monitor.stage("music-quota", `music ${musicPicks.length}/${musicN} (pop ${popPicked}/${popN}, indie ${indiePicked}/${indieN}); no pop-backfill of indie`);
+const queue = selectDiverse(verified, { n: QUEUE_N, publishableOnly: true });
+monitor.stage("select", `selected ${queue.length}/${QUEUE_N} by trend-priority (music competes in the single pool; soft category spread)`);
 
 // Inside-stories expansion (opt-in): a Tier-S event → many tone-safe angle articles, appended to the queue.
 if (EXPAND) {
