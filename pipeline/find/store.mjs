@@ -18,14 +18,6 @@ export const readJSON = (f, d) => {
 };
 export const writeJSON = (f, v) => fs.writeFileSync(fp(f), JSON.stringify(v, null, 2));
 
-// Permanent dedup guard: key -> { eventId, slug, discoveredAt }. Never pruned (so we never re-post).
-export function loadSeen() {
-  return readJSON("seen.json", {});
-}
-export function saveSeen(o) {
-  writeJSON("seen.json", o);
-}
-
 // A run monitor — the single source of truth for "what the automation did this run".
 export function newMonitor(runId) {
   const m = {

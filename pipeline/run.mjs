@@ -10,7 +10,7 @@ import { classify } from "./stages/classify.mjs";
 import { sourceImage, downloadImage } from "./stages/image.mjs";
 import { gate } from "./stages/gate.mjs";
 import { assemble } from "./stages/assemble.mjs";
-import { getWhereToWatch, factBlock, toWhereToWatch, discoverTop, discoverFactBlock, getTrailer, trailerFactBlock, getBoxOffice, boxOfficeFactBlock, searchPerson, getPersonCredits, personFactBlock, getTitleFacts, titleFactBlock } from "./lib/tmdb.mjs";
+import { getWhereToWatch, factBlock, toWhereToWatch, discoverTop, discoverFactBlock, getTrailer, trailerFactBlock, getBoxOffice, boxOfficeFactBlock, getTitleFacts, titleFactBlock } from "./lib/tmdb.mjs";
 import { omdb, omdbFactBlock } from "./lib/omdb.mjs";
 import { getAuthoritativeAwards, awardsFactBlock, personAwards, personAwardsBlock } from "./lib/awardsCache.mjs";
 import { cacheTweets, reactionFactBlock } from "./lib/tweets.mjs";
@@ -224,14 +224,14 @@ for (let i = 0; i < topics.length; i++) {
       ({ article } = await generate({ topic, model: MODELS.generator, corrections }));
       if (wtw?.length) article.whereToWatch = toWhereToWatch(wtw); // accurate table straight from TMDB
       if (trailer?.youtubeId) { article.youtubeId = trailer.youtubeId; article.releaseInfo = fmtRelease(trailer.releaseDate); }
-      if (reactionTweets?.ids?.length) { article.tweetIds = reactionTweets.ids; if (topic.instagramUrls?.length) article.instagramUrls = topic.instagramUrls; }
+      if (reactionTweets?.ids?.length) { article.tweetIds = reactionTweets.ids; }
       if (interview) { article.youtubeId = interview.youtubeId; article.sourceOutlet = interview.sourceOutlet; article.sourceUrl = interview.sourceUrl; }
       if (boxoffice?.worldwide) { article.boxOffice = { ...(article.boxOffice || {}), worldwide: boxoffice.worldwide, budget: boxoffice.budget }; }
       // PROFILE: overwrite the model's filmography with the VERIFIED TMDB one (never trust an invented credit list).
       if (personCredits?.length) article.filmography = personCredits.map((c) => ({ year: c.year, title: c.title, role: c.character, type: c.type }));
       classification = await classify({ article, topic, model: MODELS.classifier });
-      // FIND/coverage topics already have an AUTHORITATIVE category/subcategory/formatTag (from categorize
-      // or coverage targeting) — respect it so classify can't scramble the per-subcategory coverage.
+      // FIND topics already have an AUTHORITATIVE category/subcategory/formatTag (from categorize) —
+      // respect it so classify can't scramble the category the trending story was filed under.
       if (FROM_FIND && topic.category && topic.subcategory) {
         classification.category = topic.category;
         classification.subcategory = topic.subcategory;
@@ -249,7 +249,7 @@ for (let i = 0; i < topics.length; i++) {
       if (!image) scored.hardBlocks.push("no >=1200px image sourced");
       // Embed niches must carry their defining embed, or the page is an empty promise — route to review.
       if ((topic.formatTag === "trailer" || topic.formatTag === "interview") && !article.youtubeId) scored.hardBlocks.push(`${topic.formatTag}: no embedded video`);
-      if (topic.formatTag === "reaction" && !(article.tweetIds?.length || article.instagramUrls?.length)) scored.hardBlocks.push("reaction: no embedded posts");
+      if (topic.formatTag === "reaction" && !article.tweetIds?.length) scored.hardBlocks.push("reaction: no embedded posts");
       pass = (scored.score || 0) >= 80 && scored.hardBlocks.length === 0;
       // SELF-CORRECTION LOOP: feed the writer ALL feedback (structural blocks + per-claim corrections) so
       // each retry fixes everything known while keeping the engaging voice (owner mandate). Cumulative =

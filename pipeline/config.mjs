@@ -11,10 +11,9 @@ export const MODELS = {
   // Cheap-ONLY escalation ladder if flash-lite ever under-delivers on the §7.5 validation (NO Opus):
   //   flash-lite (cheapest) → llama-4-maverick (~$0.0017/call) → gemini-2.5-flash (~$0.0039/call, ceiling).
   judgeFallbacks: ["meta-llama/llama-4-maverick", "google/gemini-2.5-flash"],
-  // Back-compat aliases for older dev scripts (bakeoff.mjs, verify.mjs) → both point at the cheap judge now.
+  // Back-compat alias for the dev-only generation bake-off (bakeoff.mjs) → points at the cheap judge now.
   // The one-time generator bake-off historically used Opus as a neutral referee; that is RETIRED — Opus is
   // never wired at runtime again.
-  judgeProd: "google/gemini-2.5-flash-lite",
   judgeBakeoff: "google/gemini-2.5-flash-lite",
   // Generation bake-off roster. The PRODUCTION generator must be a "cheap" tier winner;
   // the "benchmark" model is only the quality ceiling for comparison — never used in production.
