@@ -105,3 +105,7 @@ export function verifyClaims(article, topic) {
     .join("\n");
   return { verdicts, bad, contradicted, corrections, ok: bad.length === 0 };
 }
+
+// Shared helpers (single source of truth — reused by the Step-3 universal verify gate, lib/verifyGate.mjs, so the
+// two layers can't drift apart on normalization/receipt logic — exactly the "5 divergent norm()" smell to avoid).
+export { norm, stripPunct, numberTokens, sigTokens, receiptIsReal, isCheckable, mentionsAward, claimsAWin };
