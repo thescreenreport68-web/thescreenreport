@@ -12,6 +12,7 @@ import { frameTopic } from "./frame.mjs";
 import { writeGossip } from "./writer.mjs";
 import { legalGate } from "./legalGate.mjs";
 import { qualityCheck } from "./qualityGate.mjs";
+import { verifyQuotes } from "./quoteGuard.mjs";
 import { GOSSIP_AUTHOR_SLUG, AI_DISCLOSURE, routeBySubject, MONITOR_WINDOW_HOURS } from "./config.gossip.mjs";
 
 export async function runGossip(topic, { writeImpl = writeGossip, fetchImpl, model } = {}) {
@@ -30,11 +31,17 @@ export async function runGossip(topic, { writeImpl = writeGossip, fetchImpl, mod
   for (let attempt = 1; attempt <= 2; attempt++) {
     article = await writeImpl({ bundle, frame, topic, model, corrections });
     gate = legalGate(article, frame, topic);
+    // deterministic verbatim-quote guard (model-independent): any quoted phrase not in the source is a
+    // fabricated/altered quote — the single most common fabrication. Treat as a fixable block → retry.
+    if (gate.pass) {
+      const qc = verifyQuotes(article, bundle);
+      if (!qc.ok) gate = { pass: false, blocks: [`FABRICATED_QUOTE: the quoted phrase(s) ${qc.badQuotes.map((q) => `"${q}"`).join(", ")} are NOT verbatim in the source — use ONLY exact quotes copied from the source, or remove the quotation marks and paraphrase`] };
+    }
     quality = gate.pass ? qualityCheck(article) : { pass: false, issues: [] };
     if (gate.pass && quality.pass) break;
     const blocks = [...(gate.blocks || []), ...(!quality.pass ? quality.issues || [] : [])];
-    const hardStop = blocks.some((b) => /MINOR_ALLEGATION|INTIMATE_MEDIA|^HOLD|FABRICATION/i.test(b));
-    const fixable = blocks.length > 0 && !hardStop && blocks.every((b) => /MISSING_DISCLAIMER|UNATTRIBUTED_DAMAGING|< 140|too thin|paragraph|undivided|missing dek|AI-tell/i.test(b));
+    const hardStop = blocks.some((b) => /MINOR_ALLEGATION|INTIMATE_MEDIA|^HOLD|FABRICATION:/i.test(b));
+    const fixable = blocks.length > 0 && !hardStop && blocks.every((b) => /MISSING_DISCLAIMER|UNATTRIBUTED_DAMAGING|FABRICATED_QUOTE|< 140|too thin|paragraph|undivided|missing dek|AI-tell/i.test(b));
     if (!fixable || attempt === 2) break;
     corrections = blocks.join("; ");
   }

@@ -14,6 +14,7 @@ import { buildGossipMarkdown, writeGossipArticle } from "../assemble.mjs";
 import { decide, monitorGossip } from "../monitor.mjs";
 import { frameTopic } from "../frame.mjs";
 import { gossipRun } from "../gossiprun.mjs";
+import { verifyQuotes } from "../quoteGuard.mjs";
 
 let pass = 0, fail = 0; const fails = [];
 const check = (name, cond, detail = "") => { if (cond) { pass++; console.log(`  ✅ ${name}`); } else { fail++; fails.push(name); console.log(`  ❌ ${name}  ${detail}`); } };
@@ -109,6 +110,14 @@ console.log(`\n=== GOSSIP BACKEND HARNESS (offline) ===\n`);
   check("orchestrator holds the EXTREME topic", report.held.length === 1 && report.held[0].id === "t2");
   check("orchestrator blocks the unsafe topic", report.blocked.length === 1 && report.blocked[0].id === "t3");
   check("orchestrator only writes published", wrote === 1);
+}
+
+// 8) QUOTE GUARD — deterministic verbatim-quote verification (the fabrication fix).
+{
+  const bundle = { sources: [{ text: "Allman, who has struggled with substance abuse, was arrested. His wife said she was emotionally exhausted." }] };
+  check("quote guard FLAGS a misquote", verifyQuotes({ body: 'She says he "has a drug problem".' }, bundle).ok === false);
+  check("quote guard FLAGS an invented quote", verifyQuotes({ body: 'She said "I never loved him anyway".' }, bundle).ok === false);
+  check("quote guard PASSES a real verbatim quote", verifyQuotes({ body: 'He has "struggled with substance abuse".' }, bundle).ok === true);
 }
 
 console.log(`\n── RESULT: ${pass} passed${fail ? `, ${fail} FAILED` : ""} ──`);
