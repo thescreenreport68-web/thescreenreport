@@ -130,7 +130,7 @@ export function assemble({ article, classification, image, topic, dateISO }) {
           : v;
   // merge the per-niche structured fields the generator produced (only when present)
   for (const k of ["verdict", "rating", "prosCons", "infoCard", "entries", "tldr", "spoiler", "factPanel", "filmography", "whereToWatch",
-    "youtubeId", "releaseInfo", "keyMoments", "sourceOutlet", "sourceUrl", "pullQuotes", "tweetIds", "instagramUrls", "consensus",
+    "youtubeId", "releaseInfo", "keyMoments", "sourceOutlet", "sourceUrl", "pullQuotes", "tweetIds", "consensus",
     "newsType", "pullQuote", "boxOffice", "records",
     "awardsType", "awardShow", "awardCategories", "awardRecords",
     // MUSIC structured fields (rendered by MusicModules — Commit 3 UI; carried now so data persists)

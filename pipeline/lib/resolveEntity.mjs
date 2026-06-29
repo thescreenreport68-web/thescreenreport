@@ -1,5 +1,5 @@
 // NON-Wikipedia entity resolution + notability gate (replaces the wikiSummary page-exists check in FIND
-// categorize/coverage). STRICTLY BETTER than "has a Wikipedia page": it confirms identity AND adds a
+// categorize). STRICTLY BETTER than "has a Wikipedia page": it confirms identity AND adds a
 // notability MAGNITUDE (TMDB vote_count/popularity, Deezer fan count) the binary page-exists never had — and
 // it tracks unreleased/fresh films Wikipedia hadn't yet covered. Returns the same {summary:{title}, viaPrimary}
 // shape categorize expects, so the caller (which canonicalizes the entity name) is unchanged. NON-Wikimedia.
