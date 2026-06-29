@@ -30,7 +30,7 @@ const INTIMATE = /(sex tape|nude (photo|pic|image|leak)|leaked (nudes?|photos?|v
 const HOSTING = /(watch|download|view|see (it|them|the)|click|tap|link|here|full (video|tape)|uncensored|leaked below|see more)/i;
 
 // Minor + a sexual/criminal context → never publish.
-const MINOR = /\b(underage|under-?age|a minor\b|the minor\b|\d{1,2}-year-old|teenage(r)?|\bchild\b|\bchildren\b|\bkids?\b|\bminors?\b)\b/i;
+const MINOR = /\b(underage|under-?age|a minor\b|the minor\b|(1[0-7]|[1-9])-year-old|teenage(r)?|\bchild\b|\bchildren\b|\bkids?\b|\bminors?\b)\b/i;
 const MINOR_BAD = /\b(sexual\w*|assault\w*|abuse\w*|\brape[ds]?\b|molest\w*|nude|sex\b|explicit|groom\w*|predator)\b/i;
 
 function splitSentences(text) {

@@ -39,7 +39,7 @@ export const hasEstablished = (sources = []) => sources.some((s) => (s.tier ?? t
 //           in-text disclaimer + post-publish monitor. NORMAL = dating/feuds/fashion/deals → publish freely.
 export const SEV = {
   extreme: /\b(sexual(ly)?\s+(assault|abuse|misconduct|harass\w*)|\brape[ds]?\b|raping|molest\w*|grooming|sexual predator|underage\s+(sex|relationship)|child\s+(abuse|porn|sexual))\b/i,
-  minor: /\b(underage|under-?age|a\s+minor\b|the\s+minor\b|\d{1,2}-year-old|teenage(r)?|\bchild\b|\bchildren\b|\bkids?\b)\b/i,
+  minor: /\b(underage|under-?age|a\s+minor\b|the\s+minor\b|(1[0-7]|[1-9])-year-old|teenage(r)?|\bchild\b|\bchildren\b|\bkids?\b)\b/i,
   high: /\b(dead|dies|died|death|passed away|obituar\w*|killed|murder\w*|arrest\w*|charged|indict\w*|felony|lawsuit|sued|\bdui\b|assault\w*|abus\w+|hospitaliz\w*|overdos\w*|rehab|addict\w*|cancer|terminal|in a coma|suicid\w*|self-?harm|restraining order|custody battle|divorce|cheat\w*|affair|unfaithful|pregnan\w*|miscarriage|came out|comes out|\bgay\b|sexuality)\b/i,
 };
 export function severity(text = "") {

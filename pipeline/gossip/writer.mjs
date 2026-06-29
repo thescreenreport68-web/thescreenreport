@@ -49,7 +49,7 @@ export function detectGossipType(topic) {
   return "general";
 }
 
-export function buildGossipPrompt(bundle, frame, topic) {
+export function buildGossipPrompt(bundle, frame, topic, corrections = null) {
   const gtype = detectGossipType(topic);
   const sourceBlock = (bundle.sources || [])
     .map((s, i) => `[S${i + 1}] ${s.outlet}${s.url ? ` (${s.url})` : ""} — tier ${s.tier}\n${(s.text || "").slice(0, 2500)}`)
@@ -70,6 +70,7 @@ ${TYPES[gtype] || TYPES.general}
 FRAMING DIRECTIVE (follow exactly):
 ${frame.writerDirective}
 ${frame.needsDisclaimer ? `\nMANDATORY — include this exact sentence, as its own sentence in the body:\n"${frame.disclaimerText}"` : ""}
+${corrections ? `\n⚠ FIX THESE FROM YOUR LAST DRAFT (keep the voice + the same facts; attribute any flagged claim, e.g. "according to ${frame.attribution || "the outlet"}", or add the required note): ${corrections}` : ""}
 
 LENGTH: write 300–450 words — IMPORTANT, do not stop short at 150. Keep individual SENTENCES tight, but develop the story fully: the trigger, the context, the fan reaction, the what-we-know-vs-what's-unconfirmed, and why it matters. A real article, not a caption.
 STRUCTURE: headline = a curiosity hook in present tense (NEVER state an unconfirmed damaging claim as fact in the headline). Hook → what sparked it (attributed) → what we know vs. what's unconfirmed → quick context / why it matters → the denial / other side if any. Pull one punchy line out as the pull-quote.
@@ -88,8 +89,8 @@ Return STRICT JSON:
   return { system: SYSTEM, user, gossipType: gtype };
 }
 
-export async function writeGossip({ bundle, frame, topic, model = "deepseek/deepseek-v3.2" }) {
-  const { system, user } = buildGossipPrompt(bundle, frame, topic);
+export async function writeGossip({ bundle, frame, topic, model = "deepseek/deepseek-v3.2", corrections = null }) {
+  const { system, user } = buildGossipPrompt(bundle, frame, topic, corrections);
   const { data } = await chat({ model, system, user, json: true, maxTokens: 1800, temperature: 0.65 });
   return data;
 }

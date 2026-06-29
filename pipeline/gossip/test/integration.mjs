@@ -70,15 +70,14 @@ console.log(`\n=== GOSSIP INTEGRATION HARNESS (offline) ===\n`);
   check("missing disclaimer → BLOCKED_LEGAL", r.status === "BLOCKED_LEGAL" && r.blocks.some((b) => b.includes("MISSING_DISCLAIMER")), (r.blocks || []).join("|").slice(0, 120));
 }
 
-// F) content finder via a MOCK fetch — extracts text + a verbatim quote
+// F) content finder via a MOCK extractor — extracts CLEAN text + a verbatim quote
 {
-  const html = `<html><body><article><p>${PEOPLE_TEXT}</p></article></body></html>`;
   const bundle = await gatherBundle(
     { primaryEntity: "Star A", sources: [{ outlet: "Variety", url: "https://variety.com/x" }] },
-    { fetchImpl: async () => html }
+    { extractImpl: async () => ({ content: `<p>${PEOPLE_TEXT}</p>`, title: "Star A spotted" }) }
   );
-  check("fetch path extracts a source", bundle.ok && bundle.outletCount === 1);
-  check("fetch path extracts a verbatim quote", bundle.quotes.some((q) => q.includes("looked very comfortable")), bundle.quotes.join("|").slice(0, 120));
+  check("extraction path yields a source", bundle.ok && bundle.outletCount === 1);
+  check("extraction yields a verbatim quote", bundle.quotes.some((q) => q.includes("looked very comfortable")), bundle.quotes.join("|").slice(0, 120));
 }
 
 // G) the writer is INSTRUCTED correctly (pure prompt build — no LLM spend)

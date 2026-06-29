@@ -23,15 +23,22 @@ export async function runGossip(topic, { writeImpl = writeGossip, fetchImpl, mod
   const frame = frameTopic(topic);
   if (frame.decision === "HOLD") return { status: "HELD", frame, stage: "frame", reason: frame.reason };
 
-  // Stage 5 — write from the verified bundle.
-  const article = await writeImpl({ bundle, frame, topic, model });
-
-  // Stage 6 — legal-safety gate (fail-closed). (The quality/readability gate is wired separately at integration.)
-  const gate = legalGate(article, frame, topic);
+  // Stage 5+6 — write, then gate. ONE targeted retry on a FIXABLE block (a forgotten attribution / missing
+  // disclaimer / too-thin) — feed the writer the exact block so it fixes only that, keeping the facts + voice.
+  // NEVER retry a hard-stop (minor/intimate-media/HOLD/fabrication) — those stay blocked.
+  let article, gate, quality = { pass: true, issues: [] }, corrections = null;
+  for (let attempt = 1; attempt <= 2; attempt++) {
+    article = await writeImpl({ bundle, frame, topic, model, corrections });
+    gate = legalGate(article, frame, topic);
+    quality = gate.pass ? qualityCheck(article) : { pass: false, issues: [] };
+    if (gate.pass && quality.pass) break;
+    const blocks = [...(gate.blocks || []), ...(!quality.pass ? quality.issues || [] : [])];
+    const hardStop = blocks.some((b) => /MINOR_ALLEGATION|INTIMATE_MEDIA|^HOLD|FABRICATION/i.test(b));
+    const fixable = blocks.length > 0 && !hardStop && blocks.every((b) => /MISSING_DISCLAIMER|UNATTRIBUTED_DAMAGING|< 140|too thin|paragraph|undivided|missing dek|AI-tell/i.test(b));
+    if (!fixable || attempt === 2) break;
+    corrections = blocks.join("; ");
+  }
   if (!gate.pass) return { status: "BLOCKED_LEGAL", blocks: gate.blocks, frame, article, stage: "legal-gate" };
-
-  // Stage 6b — quality gate (lean; keeps the piece a real, tight article — runs only after it's legally safe).
-  const quality = qualityCheck(article);
   if (!quality.pass) return { status: "BLOCKED_QUALITY", issues: quality.issues, frame, article, stage: "quality-gate" };
 
   // Stage 7 — assemble: attach the byline, the rumor-UI fields, and the PROVENANCE the monitor needs.
