@@ -3,6 +3,7 @@ import YouTubeEmbed from "@/components/embed/YouTubeEmbed";
 import SocialReactionGrid from "@/components/embed/SocialReactionGrid";
 import { MusicTop, MusicBottom } from "@/components/MusicModules";
 import { PlaybookTop, PlaybookBottom } from "@/components/PlaybookModules";
+import { GossipTop, GossipBottom } from "@/components/GossipModules";
 import { RankingEntries, BestOfEntries, WeekendChart, RevealSpine, ReadingModeBox } from "@/components/CategoryUI";
 
 /* Per-niche UI modules, rendered on top of the shared article base.
@@ -478,6 +479,7 @@ export function NicheTop({ article }: { article: Article }) {
   return (
     <>
       <PlaybookTop article={article} />
+      <GossipTop article={article} />
       {article.formatTag === "trailer" ? <TrailerModule article={article} /> : null}
       {article.formatTag === "trailer" ? <RevealSpine article={article} /> : null}
       {article.formatTag === "explainer" ? <ReadingModeBox article={article} /> : null}
@@ -510,6 +512,7 @@ export function NicheBottom({ article }: { article: Article }) {
       {article.formatTag === "reaction" ? <ReactionSection article={article} /> : null}
       {article.formatTag === "awards" || article.formatTag === "music-awards" ? <AwardsWinnersList article={article} /> : null}
       <MusicBottom article={article} />
+      <GossipBottom article={article} />
       <PlaybookBottom article={article} />
     </>
   );

@@ -11,6 +11,7 @@ import { gatherBundle } from "./contentFinder.mjs";
 import { frameTopic } from "./frame.mjs";
 import { writeGossip } from "./writer.mjs";
 import { legalGate } from "./legalGate.mjs";
+import { qualityCheck } from "./qualityGate.mjs";
 import { GOSSIP_AUTHOR_SLUG, AI_DISCLOSURE, routeBySubject, MONITOR_WINDOW_HOURS } from "./config.gossip.mjs";
 
 export async function runGossip(topic, { writeImpl = writeGossip, fetchImpl, model } = {}) {
@@ -28,6 +29,10 @@ export async function runGossip(topic, { writeImpl = writeGossip, fetchImpl, mod
   // Stage 6 — legal-safety gate (fail-closed). (The quality/readability gate is wired separately at integration.)
   const gate = legalGate(article, frame, topic);
   if (!gate.pass) return { status: "BLOCKED_LEGAL", blocks: gate.blocks, frame, article, stage: "legal-gate" };
+
+  // Stage 6b — quality gate (lean; keeps the piece a real, tight article — runs only after it's legally safe).
+  const quality = qualityCheck(article);
+  if (!quality.pass) return { status: "BLOCKED_QUALITY", issues: quality.issues, frame, article, stage: "quality-gate" };
 
   // Stage 7 — assemble: attach the byline, the rumor-UI fields, and the PROVENANCE the monitor needs.
   article.author = GOSSIP_AUTHOR_SLUG;

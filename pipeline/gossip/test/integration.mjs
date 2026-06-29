@@ -37,8 +37,8 @@ console.log(`\n=== GOSSIP INTEGRATION HARNESS (offline) ===\n`);
 {
   const mockWriter = async () => ({
     title: "Star A and Star B spark dating buzz, per People",
-    dek: "The two were spotted together.",
-    body: "According to People, Star A and Star B were spotted together at a restaurant this weekend. A source told People they 'looked very comfortable.' Reps did not immediately comment.",
+    dek: "The two were spotted together this weekend.",
+    body: "According to People, Star A and Star B were spotted together at a restaurant this weekend, and the internet is already running with it.\n\nA source told People the pair 'looked very comfortable' over what was described as a long, laughter-filled dinner. Reps for both did not immediately comment, so nothing about the nature of their relationship has been confirmed. " + "For now, the sighting is the only concrete thread fans have to pull on, and the rest remains pure speculation. ".repeat(6),
     claims: [], faq: [], keyTakeaways: [], whatWeKnow: ["Spotted together, per People"], whatWeDont: ["Whether they're officially together"], denial: null,
   });
   const r = await runGossip(

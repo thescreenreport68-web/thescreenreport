@@ -109,6 +109,13 @@ export type Article = {
   // ---- PLAYBOOK PR1 fields (per-form; all optional, render in PR2 UI) ----
   storyStatus?: string; // news: CONFIRMED | DEVELOPING | RUMOR | HOLD (from FIND verify)
   sensitivity?: string; // celeb/news: none | split | legal | death | allegation | health
+  // ---- GOSSIP fields (formatTag === "gossip") ----
+  rumorStatus?: string; // the tier label shown in UI, e.g. "Reported by People" | "Unconfirmed rumor"
+  whatWeKnow?: string[]; // the confirmed/attributed points
+  whatWeDont?: string[]; // the open questions
+  denial?: string | null; // the subject/rep denial, if any
+  developing?: boolean; // we're actively monitoring this story
+  aiDisclosure?: string; // the AI-assistance + rumor-labeling disclosure note
   keyPoints?: string[]; // celeb/tv news: 3-bullet TL;DR
   sightings?: { event: string; date?: string }[]; // celeb: verifiable public sightings (no paparazzi)
   criterion?: string; // rankings/best-of: the stated ranking criterion
@@ -242,6 +249,13 @@ export function getAllArticles(): Article[] {
       // playbook PR1 fields
       storyStatus: data.storyStatus,
       sensitivity: data.sensitivity,
+      // gossip fields
+      rumorStatus: data.rumorStatus,
+      whatWeKnow: data.whatWeKnow ?? [],
+      whatWeDont: data.whatWeDont ?? [],
+      denial: data.denial ?? null,
+      developing: data.developing ?? false,
+      aiDisclosure: data.aiDisclosure,
       keyPoints: data.keyPoints ?? [],
       sightings: data.sightings ?? [],
       criterion: data.criterion,
