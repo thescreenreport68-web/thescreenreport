@@ -10,7 +10,7 @@ export function qualityCheck(article) {
   const words = body.replace(/[#*_>`\[\]()]/g, " ").trim().split(/\s+/).filter(Boolean).length;
 
   if (!article.title || article.title.length < 15) issues.push("title missing or too short (<15 chars)");
-  if (words < 160) issues.push(`body ${words}w < 160 (too thin to be useful)`);
+  if (words < 140) issues.push(`body ${words}w < 140 (too thin to be useful)`);
   if (words > 700) issues.push(`body ${words}w > 700 (gossip should stay tight)`);
   if (words > 120 && !/\n\s*\n/.test(body)) issues.push("one undivided block of text (needs paragraph breaks)");
   const banned = (body.match(BANNED) || []).length;

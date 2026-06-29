@@ -111,6 +111,7 @@ export type Article = {
   sensitivity?: string; // celeb/news: none | split | legal | death | allegation | health
   // ---- GOSSIP fields (formatTag === "gossip") ----
   rumorStatus?: string; // the tier label shown in UI, e.g. "Reported by People" | "Unconfirmed rumor"
+  gossipPull?: string; // gossip: one punchy line pulled out for display
   whatWeKnow?: string[]; // the confirmed/attributed points
   whatWeDont?: string[]; // the open questions
   denial?: string | null; // the subject/rep denial, if any
@@ -251,6 +252,7 @@ export function getAllArticles(): Article[] {
       sensitivity: data.sensitivity,
       // gossip fields
       rumorStatus: data.rumorStatus,
+      gossipPull: data.gossipPull,
       whatWeKnow: data.whatWeKnow ?? [],
       whatWeDont: data.whatWeDont ?? [],
       denial: data.denial ?? null,

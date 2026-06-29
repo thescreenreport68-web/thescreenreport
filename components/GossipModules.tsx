@@ -42,6 +42,17 @@ function WhatWeKnowBox({ article }: { article: Article }) {
   );
 }
 
+function PullQuote({ article }: { article: Article }) {
+  if (!article.gossipPull) return null;
+  return (
+    <blockquote className="my-6 not-prose border-l-4 border-breaking pl-5">
+      <p className="font-display text-2xl font-bold leading-tight text-navy sm:text-[1.7rem]">
+        &ldquo;{article.gossipPull.replace(/^["“]|["”]$/g, "")}&rdquo;
+      </p>
+    </blockquote>
+  );
+}
+
 function DenialCallout({ article }: { article: Article }) {
   if (!article.denial) return null;
   return (
@@ -69,6 +80,7 @@ export function GossipTop({ article }: { article: Article }) {
   return (
     <>
       <WhatWeKnowBox article={article} />
+      <PullQuote article={article} />
       <DenialCallout article={article} />
     </>
   );

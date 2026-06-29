@@ -38,6 +38,7 @@ export function buildGossipMarkdown({ article, frame, provenance, route, topic, 
     faq: (article.faq || []).filter((f) => f && f.q && f.a).map((f) => ({ q: f.q, a: f.a })),
     // ── rumor-UI fields (rendered by the gossip modules) ──
     rumorStatus: frame.uiLabel,
+    gossipPull: article.pullQuote || article.gossipPull || null,
     storyStatus: STATUS_BADGE[frame.tier] || "RUMOR",
     whatWeKnow: article.whatWeKnow || [],
     whatWeDont: article.whatWeDont || [],
