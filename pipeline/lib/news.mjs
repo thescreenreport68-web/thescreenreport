@@ -8,7 +8,7 @@
 
 // Domain → parent owner (mirrors verify.mjs OWNER — same-owner outlets are ONE independent source, e.g. PMC
 // owns Variety/Deadline/THR/IndieWire/Rolling Stone/Billboard, so all of them together = ONE corroboration).
-const DOMAIN_OWNER = {
+export const DOMAIN_OWNER = {
   // PMC trade desks (all ONE owner)
   "variety.com": "PMC", "deadline.com": "PMC", "hollywoodreporter.com": "PMC", "indiewire.com": "PMC", "rollingstone.com": "PMC", "billboard.com": "PMC",
   // Valnet network (all ONE owner)
@@ -23,14 +23,14 @@ const DOMAIN_OWNER = {
   "tmz.com": "TMZ", "vulture.com": "NYMag", "avclub.com": "GO", "npr.org": "NPR", "forbes.com": "Forbes",
   "abcnews.go.com": "Disney", "huffpost.com": "BuzzFeed", "slashfilm.com": "Static", "gamespot.com": "Fandom",
 };
-const MAJORS = new Set(Object.keys(DOMAIN_OWNER));
-const dom = (d) => (d || "").toLowerCase().replace(/^www\./, "").trim();
+export const MAJORS = new Set(Object.keys(DOMAIN_OWNER));
+export const dom = (d) => (d || "").toLowerCase().replace(/^www\./, "").trim();
 
 // GDELT enforces ≤1 request / 5 seconds (429 otherwise). Throttle every call to be a polite citizen, and
 // retry once on a 429. Sequential by design (externalCorroboration awaits each call), so a simple gate works.
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 let _lastGdelt = 0;
-async function throttle() { const wait = 5500 - (Date.now() - _lastGdelt); if (wait > 0) await sleep(wait); _lastGdelt = Date.now(); }
+async function throttle() { const wait = 6500 - (Date.now() - _lastGdelt); if (wait > 0) await sleep(wait); _lastGdelt = Date.now(); }
 
 // Query GDELT for an event phrase; count INDEPENDENT major owners reporting it in the window.
 export async function gdeltCorroborate(query, { sinceHours = 72, maxRecords = 50 } = {}) {
@@ -50,6 +50,24 @@ export async function gdeltCorroborate(query, { sinceHours = 72, maxRecords = 50
     } catch { return { ok: false, total: 0, majorOwners: 0, majors: [] }; }
   }
   return { ok: false, total: 0, majorOwners: 0, majors: [] };
+}
+
+// Like gdeltCorroborate, but returns the ARTICLE LIST (real publisher url/title/domain/date) — the source
+// ENUMERATOR for the CONTENT FINDER (Step 2). Same free, keyless GDELT DOC 2.0 endpoint + the 5s throttle.
+export async function gdeltArticles(query, { sinceHours = 120, maxRecords = 40 } = {}) {
+  const url = `https://api.gdeltproject.org/api/v2/doc/doc?query=${encodeURIComponent(query)}&mode=artlist&format=json&maxrecords=${maxRecords}&timespan=${sinceHours}h&sort=hybridrel`;
+  for (let attempt = 0; attempt < 3; attempt++) {
+    try {
+      await throttle();
+      const r = await fetch(url, { headers: { "User-Agent": "TheScreenReport/1.0 (editor@thescreenreport.com)" } });
+      const text = await r.text();
+      // GDELT signals overload with HTTP 429 OR a plain-text "Please limit requests" body — both are retryable.
+      if (r.status === 429 || (!text.trim().startsWith("{") && /limit requests/i.test(text))) { await sleep(8000 * (attempt + 1)); continue; }
+      if (!r.ok || !text.trim().startsWith("{")) return [];
+      return ((JSON.parse(text).articles) || []).map((a) => ({ url: a.url, title: a.title, domain: dom(a.domain), date: a.seendate || null }));
+    } catch { await sleep(2000); }
+  }
+  return [];
 }
 
 // A focused GDELT query for a topic: the entity (quoted, phrase-exact) + up to 2 salient event keywords from
