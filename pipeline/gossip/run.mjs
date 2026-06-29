@@ -54,5 +54,5 @@ export async function runGossip(topic, { writeImpl = writeGossip, fetchImpl, mod
     monitorWindowH: MONITOR_WINDOW_HOURS,
     sources: bundle.sources.map((s) => ({ outlet: s.outlet, url: s.url, tier: s.tier })),
   };
-  return { status: "PUBLISH", article, frame, provenance, route };
+  return { status: "PUBLISH", article, frame, provenance, route, bundle };
 }

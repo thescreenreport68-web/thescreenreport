@@ -60,8 +60,9 @@ export function legalGate(article, frame = {}, topic = null) {
   if (INTIMATE.test(text) && HOSTING.test(text))
     blocks.push("INTIMATE_MEDIA: the article appears to host or link intimate/leaked media. Report that the story exists; never serve or link the media itself.");
 
-  // 4) a sexual/criminal allegation involving a minor.
-  if (MINOR.test(text) && MINOR_BAD.test(text))
+  // 4) a sexual/criminal allegation involving a minor — require both signals in the SAME sentence so a
+  // family-context "children" plus an unrelated "sexuality" elsewhere in the piece doesn't false-positive.
+  if (splitSentences(text).some((s) => MINOR.test(s) && MINOR_BAD.test(s)))
     blocks.push("MINOR_ALLEGATION: a sexual/criminal allegation involving a minor — never publish.");
 
   // 6) fabrication (only if the writer emitted claims[] + we have grounding facts to check against).
