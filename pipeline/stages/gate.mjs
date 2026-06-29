@@ -15,8 +15,21 @@ function plainProse(md) {
     .trim();
 }
 function splitSentences(text) {
-  return text.split(/(?<=[.!?])\s+/).map((s) => s.trim()).filter((s) => s.split(/\s+/).filter(Boolean).length >= 3);
+  // Don't shred on abbreviations / initials / decimals — protect their periods, split, then restore (the old
+  // splitter corrupted Flesch worst on number-dense box-office prose: "$1.5M", "U.S.", "Mr.").
+  const prot = String(text || "")
+    .replace(/\b(Mr|Mrs|Ms|Dr|Jr|Sr|St|Mt|vs|etc|Inc|Co|Ltd|Corp|Sgt|Lt|Gen|Rev|Gov|Sen|Rep|No|Vol|U\.S|U\.K)\./g, "$1")
+    .replace(/(\d)\.(\d)/g, "$1$2")
+    .replace(/\b([A-Z])\.(?=\s*[A-Z])/g, "$1");
+  return prot.split(/(?<=[.!?])\s+/).map((s) => s.replace(//g, ".").trim()).filter((s) => s.split(/\s+/).filter(Boolean).length >= 3);
 }
+// Keyword-matching helpers (step-3 gate-bug fixes): diacritic-fold so 'beyonce' matches 'Beyoncé'; word-boundary
+// match so 'bear' ≠ 'beard'; and keep short PROPER tokens like 'F1' (the old length>3 filter erased them, letting any
+// title containing 'movie' pass).
+const deburr = (s) => String(s || "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+const reEsc = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+const hasWord = (hay, w) => new RegExp("\\b" + reEsc(w) + "\\b").test(hay);
+const KW_STOP = new Set(["the", "a", "an", "of", "to", "in", "on", "for", "and", "or", "is", "are", "at", "by", "with", "from", "new"]);
 function countSyllables(w) {
   w = w.toLowerCase().replace(/[^a-z]/g, "");
   if (w.length <= 3) return 1;
@@ -53,16 +66,18 @@ export function deterministic(article, topic) {
   const internalLinks = (body.match(/\]\(\/[^)]+\)/g) || []).length;
   const externalLinks = (body.match(/\]\(https?:\/\/[^)]+\)/g) || []).length;
   const hasSources = /^##\s*Sources/im.test(body);
-  const kw = (topic.primaryKeyword || "").toLowerCase();
-  const kwTokens = kw.split(/\s+/).filter((w) => w.length > 3);
-  const first100 = body.toLowerCase().split(/\s+/).slice(0, 100).join(" ");
-  const titleLc = (article.title || "").toLowerCase();
-  // keyword present if exact phrase OR all significant tokens appear (natural prose rarely repeats the exact phrase)
-  const kwInTitle = titleLc.includes(kw) || (kwTokens.length > 0 && kwTokens.every((t) => titleLc.includes(t)));
+  const kw = deburr(topic.primaryKeyword || "");
+  // significant tokens: drop only stopwords (not by length), so short PROPER tokens like 'F1'/'UK' survive — the old
+  // length>3 filter erased 'F1', letting any title containing 'movie' pass. Diacritic-folded + word-boundary matched.
+  const kwTokens = kw.split(/\s+/).filter((w) => w.length >= 2 && !KW_STOP.has(w));
+  const first100 = deburr(body.split(/\s+/).slice(0, 100).join(" "));
+  const titleN = deburr(article.title || "");
+  // keyword present if the exact phrase OR all significant tokens appear (word-boundary, so 'bear' != 'beard')
+  const kwInTitle = (!!kw && hasWord(titleN, kw)) || (kwTokens.length > 0 && kwTokens.every((t) => hasWord(titleN, t)));
   const kwInFirst100 =
-    first100.includes(kw) ||
-    (kwTokens.length > 0 && kwTokens.filter((t) => first100.includes(t)).length >= Math.ceil(kwTokens.length * 0.6));
-  const kwInH2 = h2s.some((h) => kwTokens.every((t) => h.toLowerCase().includes(t)));
+    (!!kw && hasWord(first100, kw)) ||
+    (kwTokens.length > 0 && kwTokens.filter((t) => hasWord(first100, t)).length >= Math.ceil(kwTokens.length * 0.6));
+  const kwInH2 = h2s.some((h) => kwTokens.length > 0 && kwTokens.every((t) => hasWord(deburr(h), t)));
   const faqCount = (article.faq || []).length;
   const ktCount = (article.keyTakeaways || []).length;
 
@@ -109,7 +124,7 @@ export function deterministic(article, topic) {
   const flesch = Math.round(fleschReadingEase(prose));
   const bannedTells = (prose.match(BANNED_TELLS) || []).length;
   const fillerPraise = (prose.match(FILLER_PRAISE) || []).length;
-  const kwExact = kw ? prose.toLowerCase().split(kw).length - 1 : 0;
+  const kwExact = kw ? deburr(prose).split(kw).length - 1 : 0;
   // A single long sentence is tolerable (burstiness); a genuine run-on is not. Overall density is caught
   // by Flesch (<40 blocks) + the avg-sentence/readability scores — so hard-block only true run-ons (>55).
   if (maxSentence > 55) hardBlocks.push(`a ${maxSentence}-word run-on sentence (>55 — split it)`);
@@ -302,7 +317,7 @@ export async function gate({ article, topic, judgeModel }) {
   // Its corrections feed the SAME rewrite loop (run.mjs reads scored.claimCheck.corrections).
   const vbundle = { blocked: false, sources: [
     ...((topic._bundle && topic._bundle.sources) || []),
-    ...(topic.facts || []).map((f) => ({ domain: String(f.title || "fact").slice(0, 40), owner: "authoritative", tier: "major", text: f.extract || "", quotes: [] })),
+    ...(topic.facts || []).map((f) => ({ domain: String(f.title || "fact").slice(0, 40), owner: "structured", tier: "fact", text: f.extract || "", quotes: [] })),
   ] };
   const vg = vbundle.sources.length ? await verifyGate({ article, bundle: vbundle, model: MODELS.verify || "google/gemini-2.5-flash-lite" }) : null;
   if (vg && vg.corrections) claimCheck.corrections = [claimCheck.corrections, vg.corrections].filter(Boolean).join("\n");
@@ -310,8 +325,12 @@ export async function gate({ article, topic, judgeModel }) {
   const j = await judge({ article, topic, model: judgeModel, metrics: det, groundTruth: gt });
   const ss = j.subscores || {};
   const hardBlocks = [...det.hardBlocks, ...(j.hardBlocks || []), ...factBlocks];
-  if (vg && (vg.verdict === "BLOCK" || vg.verdict === "CUT") && vg.unsupported.length)
-    hardBlocks.push(`verify-gate ${vg.verdict}: ${vg.unsupported.length} claim(s) not in the gathered sources — ${vg.unsupported.slice(0, 3).map((u) => u.claim.slice(0, 55)).join("; ")}`);
+  // A verify-gate BLOCK ALWAYS hard-blocks — even with an empty unsupported[] (the cheap extractor returned no
+  // claims, or the bundle was empty): a draft the gate could NOT analyze must NOT pass (fail-closed, never open).
+  if (vg && vg.verdict === "BLOCK")
+    hardBlocks.push(`verify-gate BLOCK: ${vg.unsupported.length ? vg.unsupported.slice(0, 3).map((u) => u.claim.slice(0, 55)).join("; ") : (vg.reason || "could not verify the article against the gathered sources")}`);
+  else if (vg && vg.verdict === "CUT" && vg.unsupported.length)
+    hardBlocks.push(`verify-gate CUT: ${vg.unsupported.length} claim(s) not in the gathered sources — ${vg.unsupported.slice(0, 3).map((u) => u.claim.slice(0, 55)).join("; ")}`);
   if (cc.bad.length) hardBlocks.push(`${cc.bad.length} unverified claim(s) (need correction)`);
   if (gt.findings.length > gt.contradicted.length) hardBlocks.push(`${gt.findings.length - gt.contradicted.length} ungrounded fact(s) (verify against the authoritative facts)`);
 

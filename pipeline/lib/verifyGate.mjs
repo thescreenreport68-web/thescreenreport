@@ -23,10 +23,17 @@ const SENSITIVE = /\b(died|death|passed away|dead|killed|suicide|arrest|arrested
 async function extractClaims(article, model) {
   const sys = `You are a fact-checker's assistant. Extract EVERY checkable factual specific stated in this article, each as ONE atomic, self-contained claim. A checkable specific = a number / % / dollar figure, a date or year, a streaming platform, an award win or nomination, a chart position, a runtime, a film/TV credit (who did what), a job title or role, a DIRECT QUOTATION, a named deal/event, or a release status. SKIP pure opinion, analysis, and transitions. Decontextualize each claim so it stands on its own (resolve pronouns to names). Return JSON: {"claims":["...", "..."]}. Be thorough — capture every specific a reader could fact-check.`;
   const body = `TITLE: ${article.title}\nDEK: ${article.dek || ""}\n\nBODY:\n${article.body || ""}\n\nKEY TAKEAWAYS: ${(article.keyTakeaways || []).join(" | ")}\nFAQ: ${(article.faq || []).map((f) => `${f.q} ${f.a}`).join(" | ")}`;
-  try {
-    const { data } = await chat({ model, system: sys, user: body, json: true, maxTokens: 1600, temperature: 0 });
-    return (Array.isArray(data?.claims) ? data.claims : []).filter((c) => typeof c === "string" && c.trim().length > 6).slice(0, 40);
-  } catch { return []; }
+  // Retry once on an empty/failed extraction — a flaky cheap-model response, or a truncated JSON list on a long
+  // article, must NOT silently yield zero claims (the gate now treats zero-claims as a fail-closed BLOCK, so a
+  // transient failure would needlessly block a good article). maxTokens 3000 so a long article's list isn't cut off.
+  for (let attempt = 0; attempt < 2; attempt++) {
+    try {
+      const { data } = await chat({ model, system: sys, user: body, json: true, maxTokens: 3000, temperature: 0 });
+      const claims = (Array.isArray(data?.claims) ? data.claims : []).filter((c) => typeof c === "string" && c.trim().length > 6).slice(0, 40);
+      if (claims.length) return claims;
+    } catch { /* retry */ }
+  }
+  return [];
 }
 
 // 2) Deterministic support: are the claim's NUMBERS all in the bundle, and is most of its content present?
@@ -36,7 +43,7 @@ function deterministicSupport(claim, haystackLoose) {
   const toks = sigTokens(claim);
   if (toks.length < 2) return false;
   const hit = toks.filter((t) => haystackLoose.includes(t)).length;
-  return hit / toks.length >= 0.7;
+  return hit / toks.length >= 0.85; // strict — a borderline (0.7-0.85) match falls through to the LLM entailment, not auto-SUPPORTED
 }
 
 // 3) LLM entailment for the residual claims the deterministic pass couldn't confirm (one batched cheap call).
@@ -46,7 +53,7 @@ async function entailmentCheck(claims, sources, model) {
   const claimList = claims.map((c, i) => `${i + 1}. ${c}`).join("\n");
   const sys = `You are a STRICT fact-checker. For EACH numbered claim, decide ONLY from the SOURCE TEXTS (use NO outside knowledge): SUPPORTED = the claim's specific (number/date/platform/award/quote/credit/event) is stated in or directly follows from a source; CONTRADICTED = a source states otherwise; UNSUPPORTED = it is not in any source. If SUPPORTED or CONTRADICTED, return the source id (e.g. "S2") and the VERBATIM sentence from that source. Return JSON: {"results":[{"i":<claim#>,"verdict":"SUPPORTED|UNSUPPORTED|CONTRADICTED","source":"S#","quote":"verbatim source sentence"}]}.`;
   try {
-    const { data } = await chat({ model, system: sys, user: `SOURCE TEXTS:\n${srcBlock}\n\nCLAIMS:\n${claimList}\n\nReturn the JSON.`, json: true, maxTokens: 2400, temperature: 0 });
+    const { data } = await chat({ model, system: sys, user: `SOURCE TEXTS:\n${srcBlock}\n\nCLAIMS:\n${claimList}\n\nReturn the JSON.`, json: true, maxTokens: 3000, temperature: 0 });
     const out = {};
     for (const r of (data?.results || [])) if (r && Number.isInteger(r.i)) out[r.i] = r;
     return out;
@@ -60,7 +67,10 @@ export async function verifyGate({ article, bundle, model = "google/gemini-2.5-f
   }
   const sources = bundle.sources;
   const haystackLoose = stripPunct(sources.map((s) => `${s.text || ""} ${(s.quotes || []).join(" ")}`).join("\n"));
-  const majorOrTwo = sources.some((s) => s.tier === "major") || new Set(sources.map((s) => s.owner)).size >= 2;
+  // Trust bar for sensitive claims counts ONLY real-reporting sources — structured facts (tier 'fact') don't count,
+  // so a death/legal claim grounded only in TMDB/OMDb metadata is NOT treated as corroborated by a major outlet.
+  const realSources = sources.filter((s) => s.tier !== "fact");
+  const majorOrTwo = realSources.some((s) => s.tier === "major") || new Set(realSources.map((s) => s.owner)).size >= 2;
 
   const claims = await extractClaims(article, model);
   if (!claims.length) return { verdict: "BLOCK", reason: "could not extract any checkable claim to verify", supportRate: 0, claims: [], unsupported: [], corrections: "" };

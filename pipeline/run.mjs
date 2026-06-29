@@ -39,9 +39,11 @@ let topics = ONLY ? SOURCE_TOPICS.filter((t) => t.id === ONLY) : SOURCE_TOPICS;
 if (LIMIT) topics = topics.slice(0, LIMIT);
 const BASE_ARG = (process.argv.find((a) => a.startsWith("--base=")) || "").split("=")[1];
 const BASE = BASE_ARG ? new Date(BASE_ARG).getTime() : Date.now(); // real publish time in production; override with --base=<ISO>
-// CHEAP production judge by default (gemini-2.5-flash-lite) — NEVER Opus/premium (owner hard rule; would
-// blow the budget). GATE_JUDGE can override to a cheap fallback (llama-4-maverick / gemini-2.5-flash) only.
-const judge = process.env.GATE_JUDGE || MODELS.judge;
+// Production judge (config.MODELS.judge = gemini-2.5-flash, a CHEAP-tier model) — NEVER Opus/premium (owner hard
+// rule; would blow the budget). GATE_JUDGE may override ONLY to a model on the cheap allowlist below; a premium id
+// is rejected, so the no-Opus rule is mechanically un-bypassable.
+const JUDGE_ALLOW = new Set([MODELS.judge, MODELS.verify, ...(MODELS.judgeFallbacks || []), "google/gemini-2.5-flash-lite", "openai/gpt-4.1-mini"]);
+const judge = (process.env.GATE_JUDGE && JUDGE_ALLOW.has(process.env.GATE_JUDGE)) ? process.env.GATE_JUDGE : MODELS.judge;
 
 // Deterministic, accurate release-date string for the trailer module (never model-generated).
 function fmtRelease(iso) {

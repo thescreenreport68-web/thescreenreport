@@ -13,8 +13,8 @@
 //   • CONFIRMING     — high-sensitivity (death/health-crisis/legal/arrest) without ≥2 majors → HOLD.
 //                      (owner: "celebrities fake deaths; even majors err — hold for 2–3 majors.")
 //   • EDITORIAL-HOLD — anonymous/social-only/private-person → do not publish; escalation queue.
-//   • EVERGREEN      — reference/opinion niches (list/explainer/guide/profile) or TMDB-backbone items:
-//                      no breaking event-claim to corroborate; grounded on Wikipedia/TMDB → publishable.
+//   • EVERGREEN      — a zero-source TMDB-trending backbone TITLE (no news event to corroborate): held as
+//                      GROUNDING-only, NOT publishable (the trending-news rebuild publishes only sourced news).
 //
 // NOTE (local v1-of-v2): corroboration here is within a SINGLE run's candidate set. In the cloud the
 // persistent D1 candidate/cluster store accumulates sources ACROSS runs, so a DEVELOPING story upgrades
@@ -23,7 +23,6 @@
 
 const TIER1 = 7; // major trade / wire / official record
 const SECONDARY = 5; // reputable secondary / major-celebrity outlet (5–6)
-const EVERGREEN_FORMATS = new Set(["list", "explainer", "guide", "profile"]);
 
 // PARENT-COMPANY groups — same-owner outlets are NOT independent corroboration. Penske Media (PMC) owns
 // Deadline + Variety + THR + IndieWire, so when PMC syndicates one scoop all three carry it in minutes:
