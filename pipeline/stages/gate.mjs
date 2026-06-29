@@ -1,5 +1,5 @@
 import { chat } from "../lib/openrouter.mjs";
-import { GATE } from "../config.mjs";
+import { GATE, MODELS } from "../config.mjs";
 import { verifyClaims } from "../lib/claimcheck.mjs";
 import { verifyGroundTruth } from "../lib/verifyEngine.mjs";
 import { verifyGate } from "../lib/verifyGate.mjs";
@@ -304,7 +304,7 @@ export async function gate({ article, topic, judgeModel }) {
     ...((topic._bundle && topic._bundle.sources) || []),
     ...(topic.facts || []).map((f) => ({ domain: String(f.title || "fact").slice(0, 40), owner: "authoritative", tier: "major", text: f.extract || "", quotes: [] })),
   ] };
-  const vg = vbundle.sources.length ? await verifyGate({ article, bundle: vbundle, model: judgeModel }) : null;
+  const vg = vbundle.sources.length ? await verifyGate({ article, bundle: vbundle, model: MODELS.verify || "google/gemini-2.5-flash-lite" }) : null;
   if (vg && vg.corrections) claimCheck.corrections = [claimCheck.corrections, vg.corrections].filter(Boolean).join("\n");
 
   const j = await judge({ article, topic, model: judgeModel, metrics: det, groundTruth: gt });
