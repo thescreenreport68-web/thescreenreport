@@ -3,6 +3,7 @@
 // stage impls are injectable so the harness drives it offline; the CLI runs it live.
 //   Live run (one article per category): cd site-gossip && set -a; . "/Users/sivajithcu/Movie News site/.env"; set +a; node pipeline/gossip/gossiprun.mjs --one-per-category [--dry-run]
 import { discoverGossip } from "./discover.mjs";
+import { discoverSocial } from "./discoverSocial.mjs";
 import { categorizeGossip } from "./categorize.mjs";
 import { runGossip } from "./run.mjs";
 import { writeGossipArticle } from "./assemble.mjs";
@@ -22,10 +23,17 @@ function onePerCategoryPick(topics) {
   return [...byCat.values()];
 }
 
-export async function gossipRun({ discoverImpl, categorizeImpl, runImpl = runGossip, writeImpl = writeGossipArticle, judgeImpl = judgeGossip, onePerCategory = false, judge = true, dedup = true, storeImpl = null, embedImpl, adjudicateImpl, limit = 0, dryRun = false, nowMs } = {}) {
-  const candidates = discoverImpl ? await discoverImpl() : await discoverGossip();
-  // Shortlist the freshest for the categorize LLM (cost + token control; candidates arrive freshest-first).
-  const shortlist = candidates.slice(0, 24);
+export async function gossipRun({ discoverImpl, categorizeImpl, runImpl = runGossip, writeImpl = writeGossipArticle, judgeImpl = judgeGossip, onePerCategory = false, judge = true, dedup = true, social = true, storeImpl = null, embedImpl, adjudicateImpl, limit = 0, dryRun = false, nowMs } = {}) {
+  // Discovery = trade RSS (confirmed news) + SOCIAL (the speculation lane). Social signals are discovery tips
+  // only; categorize scope-filters them and the dedup/content-finder/verify stages establish every fact.
+  const rss = discoverImpl ? await discoverImpl() : await discoverGossip();
+  const soc = discoverImpl ? [] : (social ? await discoverSocial() : []);
+  const candidates = [...rss, ...soc];
+  // Shortlist for the categorize LLM (cost control). RESERVE ~40% for SOCIAL so the speculation lane (which RSS
+  // can't see) actually reaches categorize instead of being crowded out by the much larger RSS set. The social
+  // feed is noisy (Pop Crave posts sports/anniversaries too); categorize's scope filter drops the off-niche ones.
+  const SHORT = 26, socN = Math.min(soc.length, Math.round(SHORT * 0.4));
+  const shortlist = [...rss.slice(0, SHORT - socN), ...soc.slice(0, socN)];
   const all = categorizeImpl ? await categorizeImpl(candidates) : await categorizeGossip(shortlist);
   let topics = onePerCategory ? onePerCategoryPick(all) : all;
   if (limit) topics = topics.slice(0, limit);
