@@ -174,6 +174,28 @@ const cleanArticle = () => ({
   check("craft-only weakness (safety 6, no fabrication) PUBLISHES — guard lowered for craft", r.status === "PUBLISH" && r.auto?.score === 72, JSON.stringify(r.status) + " " + (r.reason || ""));
 }
 
+// ── the judge's FACTUAL-ERROR notes ACT even at a generous safety score (the KATSEYE gap: it noted a wrong
+//    year/outlet but scored safety 9). A "factual inaccuracy"/"misattributed" note now triggers the surgical fix ──
+{
+  let jc = 0;
+  const verifyImpl = async () => ({ ok: true, unsupported: [], severity: "minor", brokenRatio: 0, degraded: false });
+  const judgeImpl = async () => { jc++; return jc === 1
+    ? { score: 75, subscores: { safety: 9 }, issues: ["This is a minor factual discrepancy regarding the date.", "Sophia's comment is misattributed to the wrong outlet."] }
+    : { score: 82, subscores: { safety: 9 }, issues: [] }; };
+  const writeCalls = [];
+  const writeImpl = async (a) => { writeCalls.push(a); return cleanArticle(); };
+  const r = await runGossip(TOPIC, { writeImpl, verifyImpl, judgeImpl, verify: true, judge: true, corroborate: false });
+  check("a judge 'factual discrepancy/misattributed' note (at safety 9) triggers a surgical backstop fix", writeCalls.length === 2, `writes=${writeCalls.length}`);
+  check("after the writer corrects the factual error → PUBLISH", r.status === "PUBLISH");
+}
+{
+  // and if the factual error can't be fixed, it BLOCKS (judge keeps flagging it)
+  const verifyImpl = async () => ({ ok: true, unsupported: [], severity: "minor", brokenRatio: 0, degraded: false });
+  const judgeImpl = async () => ({ score: 70, subscores: { safety: 9 }, issues: ["This is a factual inaccuracy regarding the source."] });
+  const r = await runGossip(TOPIC, { writeImpl: async () => cleanArticle(), verifyImpl, judgeImpl, verify: true, judge: true, corroborate: false });
+  check("an unfixable factual-inaccuracy note → BLOCKED_JUDGE (false claim never publishes)", r.status === "BLOCKED_JUDGE");
+}
+
 // ── but a FALSE-CLAIM / fabrication flag STILL blocks even at a decent safety score (accuracy guard kept) ──
 {
   const verifyImpl = async () => ({ ok: true, unsupported: [], severity: "minor", brokenRatio: 0, degraded: false });
