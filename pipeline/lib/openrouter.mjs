@@ -43,6 +43,7 @@ export async function chat({
   model,
   system,
   user,
+  images = [],
   json = false,
   maxTokens = 4000,
   temperature = 0.7,
@@ -52,7 +53,11 @@ export async function chat({
   if (!KEY) throw new Error("OPENROUTER_API_KEY not in env (source ../.env)");
   const messages = [];
   if (system) messages.push({ role: "system", content: system });
-  messages.push({ role: "user", content: user });
+  // Multimodal: when image URLs are supplied, the user turn becomes a content array (text + image_url parts) so a
+  // vision-capable model (e.g. gemini-2.5-flash-lite) can SEE the candidate images. No images ⇒ plain text (unchanged).
+  messages.push(images.length
+    ? { role: "user", content: [{ type: "text", text: user }, ...images.map((url) => ({ type: "image_url", image_url: { url } }))] }
+    : { role: "user", content: user });
   const body = { model, messages, max_tokens: maxTokens, temperature };
   if (json) body.response_format = { type: "json_object" };
 

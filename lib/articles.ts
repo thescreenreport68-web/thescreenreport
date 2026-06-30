@@ -117,6 +117,15 @@ export type Article = {
   denial?: string | null; // the subject/rep denial, if any
   developing?: boolean; // we're actively monitoring this story
   aiDisclosure?: string; // the AI-assistance + rumor-labeling disclosure note
+  imageCaption?: string; // gossip hero: a neutral "Pictured: X" caption (never restates the unconfirmed claim)
+  heroEmbed?: {
+    platform: "youtube" | "x" | "bluesky";
+    sourceUrl: string;
+    embedUrl?: string | null;
+    handle?: string | null;
+    tweetId?: string | null;
+    rkey?: string | null;
+  } | null; // gossip: the originating post the rumor is ABOUT (the "receipt"), embedded as the lead media
   keyPoints?: string[]; // celeb/tv news: 3-bullet TL;DR
   sightings?: { event: string; date?: string }[]; // celeb: verifiable public sightings (no paparazzi)
   criterion?: string; // rankings/best-of: the stated ranking criterion
@@ -258,6 +267,8 @@ export function getAllArticles(): Article[] {
       denial: data.denial ?? null,
       developing: data.developing ?? false,
       aiDisclosure: data.aiDisclosure,
+      imageCaption: data.imageCaption,
+      heroEmbed: data.heroEmbed ?? null,
       keyPoints: data.keyPoints ?? [],
       sightings: data.sightings ?? [],
       criterion: data.criterion,

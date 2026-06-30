@@ -395,3 +395,39 @@ export function personFactsBlock(p) {
   if (p.credits?.length) L.push(personFactBlock(p.name, p.credits));
   return L.join("\n");
 }
+
+// ── IMAGES (Step 6 gossip hero picker) — TMDB images are OFFICIAL/promotional (legal to use editorially; the
+// opposite of paparazzi). Build a full CDN URL from a file_path. Sizes: profiles h632; backdrops w1280 (cinematic).
+export const tmdbImg = (path, size = "original") => (path ? `https://image.tmdb.org/t/p/${size}${path}` : null);
+
+// A person's image set: their best PORTRAITS plus a CINEMATIC BACKDROP from their most popular title (a still
+// from their work reads far more "powerful" than a flat headshot — the owner's bar). Returns null if unresolved.
+export async function getPersonImages(name) {
+  const p = await searchPerson(name);
+  if (!p) return null;
+  const [imgs, cr] = await Promise.all([tmdb(`/person/${p.id}/images`), tmdb(`/person/${p.id}/combined_credits`)]);
+  const profiles = (imgs?.profiles || [])
+    .sort((a, b) => (b.vote_average || 0) - (a.vote_average || 0))
+    .map((x) => ({ url: tmdbImg(x.file_path, "h632"), w: x.width, h: x.height, vote: x.vote_average || 0 }))
+    .filter((x) => x.url)
+    .slice(0, 4);
+  const top = (cr?.cast || []).filter((c) => c.backdrop_path).sort((a, b) => (b.popularity || 0) - (a.popularity || 0))[0];
+  const backdrop = top ? { url: tmdbImg(top.backdrop_path, "w1280"), title: top.title || top.name } : null;
+  return { id: p.id, name: p.name, profiles, backdrop };
+}
+
+// A title's image set: CLEAN backdrops first (iso_639_1 === null = no baked-in title text), then by vote; plus a poster.
+export async function getTitleImages(name, type = "movie", yearHint = null) {
+  let res = await searchTitle(name, type, yearHint);
+  let kind = type;
+  if (!res) { const alt = type === "movie" ? "tv" : "movie"; res = await searchTitle(name, alt, yearHint); kind = alt; }
+  if (!res) return null;
+  const imgs = await tmdb(`/${kind}/${res.id}/images?include_image_language=en,null`);
+  const backdrops = (imgs?.backdrops || [])
+    .sort((a, b) => (a.iso_639_1 === null ? -1 : 0) - (b.iso_639_1 === null ? -1 : 0) || (b.vote_average || 0) - (a.vote_average || 0))
+    .map((x) => tmdbImg(x.file_path, "w1280"))
+    .filter(Boolean)
+    .slice(0, 4);
+  const poster = tmdbImg(res.poster_path, "w780") || (imgs?.posters?.[0] ? tmdbImg(imgs.posters[0].file_path, "w780") : null);
+  return { id: res.id, type: kind, title: res.title || res.name, backdrops, poster };
+}

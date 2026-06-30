@@ -11,6 +11,7 @@ import { detectGossipType } from "./writer.mjs";
 import { routeBySubject } from "./config.gossip.mjs";
 import { openStore } from "./vecStore.mjs";
 import { dedupCheck, recordPublished } from "./dedup.mjs";
+import { pickHero } from "./heroImage.mjs";
 
 // One topic per category (celebrity/music/awards) — topics arrive freshest-first from discover, so first wins.
 function onePerCategoryPick(topics) {
@@ -22,7 +23,7 @@ function onePerCategoryPick(topics) {
   return [...byCat.values()];
 }
 
-export async function gossipRun({ discoverImpl, categorizeImpl, runImpl = runGossip, writeImpl = writeGossipArticle, onePerCategory = false, verify = true, judge = true, dedup = true, social = true, storeImpl = null, embedImpl, adjudicateImpl, limit = 0, dryRun = false, nowMs } = {}) {
+export async function gossipRun({ discoverImpl, categorizeImpl, runImpl = runGossip, writeImpl = writeGossipArticle, heroImpl = pickHero, onePerCategory = false, verify = true, judge = true, hero = false, dedup = true, social = true, storeImpl = null, embedImpl, adjudicateImpl, limit = 0, dryRun = false, nowMs } = {}) {
   // Discovery = trade RSS (confirmed news) + SOCIAL (the speculation lane). Social signals are discovery tips
   // only; categorize scope-filters them and the dedup/content-finder/verify stages establish every fact.
   const rss = discoverImpl ? await discoverImpl() : await discoverGossip();
@@ -64,6 +65,9 @@ export async function gossipRun({ discoverImpl, categorizeImpl, runImpl = runGos
     }
     if (r.status === "PUBLISH") {
       const auto = r.auto || null; // judge already ran inside runGossip as the backstop gate
+      // STEP 6 — pick a powerful, story-specific, LEGAL hero (TMDB still / receipt embed; never paparazzi).
+      // Off by default so offline tests never hit the network; the live CLI sets hero:true. Fail-safe → no hero.
+      if (hero) { try { r.article.hero = await heroImpl({ topic: { ...t, gossipType: detectGossipType(t) }, article: r.article, bundle: r.bundle, frame: r.frame }); } catch { r.article.hero = null; } }
       const out = writeImpl({ article: r.article, frame: r.frame, provenance: r.provenance, route: r.route, topic: t, dateISO, dryRun });
       // record it in the dedup store so future runs (incl. the wider social net) won't re-publish it.
       if (dedup && store && dd) recordPublished(t, store, { urlHash: dd.urlHash, eventKey: dd.eventKey, embedding: dd.embedding, slug: out.slug, parentKey: dd.parentKey, now: new Date(now) });
@@ -72,6 +76,8 @@ export async function gossipRun({ discoverImpl, categorizeImpl, runImpl = runGos
         gossipType: detectGossipType(t), tier: r.frame.tier, severity: r.frame.severity, label: r.frame.uiLabel,
         update: dd?.decision === "UPDATE" || false,
         autoScore: auto?.score ?? null, subscores: auto?.subscores ?? null, autoIssues: auto?.issues ?? [],
+        hero: r.article.hero ? { source: r.article.hero.source, kind: r.article.hero.kind, score: r.article.hero.score, embed: r.article.hero.embed?.platform || null } : null,
+        corroboration: r.provenance?.corroborationCount ?? null,
         sources: (r.bundle?.sources || []).map((s) => `${s.outlet}/${s.tier}`), written: out.written, path: out.path,
       });
     } else if (r.status === "HELD") {
@@ -88,8 +94,9 @@ export async function gossipRun({ discoverImpl, categorizeImpl, runImpl = runGos
 if (process.argv[1] && import.meta.url === new URL(`file://${process.argv[1]}`).href) {
   const dryRun = process.argv.includes("--dry-run");
   const onePerCategory = process.argv.includes("--one-per-category");
+  const noHero = process.argv.includes("--no-hero"); // hero picker hits TMDB + a cheap vision call; on by default live
   const limit = Number((process.argv.find((a) => a.startsWith("--limit=")) || "").split("=")[1]) || 0;
-  const report = await gossipRun({ dryRun, onePerCategory, limit });
+  const report = await gossipRun({ dryRun, onePerCategory, limit, hero: !noHero });
   console.log(`\n${"━".repeat(60)}\n GOSSIP AUTOMATION — RUN REPORT\n${"━".repeat(60)}`);
   console.log(`DISCOVER: ${report.candidates} candidates  →  CATEGORIZE: ${report.inScope} in-scope  →  SELECTED: ${report.topics}`);
   console.log(`\nPUBLISHED (${report.published.length}):`);
@@ -97,6 +104,7 @@ if (process.argv[1] && import.meta.url === new URL(`file://${process.argv[1]}`).
     console.log(`\n  ● [${p.category}] ${p.title}`);
     console.log(`     type=${p.gossipType} · tier=${p.tier} · sev=${p.severity} · label="${p.label}" · sources=[${p.sources.join(", ")}]`);
     console.log(`     AUTOMATION SCORE: ${p.autoScore}  ${p.subscores ? JSON.stringify(p.subscores) : ""}`);
+    console.log(`     hero=${p.hero ? `${p.hero.kind}/${p.hero.source}${p.hero.score != null ? ` (vision ${p.hero.score})` : ""}${p.hero.embed ? ` +${p.hero.embed}-embed` : ""}` : "none"} · corroboration=${p.corroboration ?? "?"} outlets`);
     if (p.autoIssues?.length) console.log(`     auto-flagged issues: ${p.autoIssues.join(" | ")}`);
     console.log(`     ${p.written ? "WROTE" : "(dry)"} ${p.slug}.md`);
   }

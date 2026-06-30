@@ -42,6 +42,20 @@ export function buildGossipMarkdown({ article, frame, provenance, route, topic, 
     rumorStatus: frame.uiLabel,
     gossipPull: article.pullQuote || article.gossipPull || null,
     storyStatus: STATUS_BADGE[frame.tier] || "RUMOR",
+    // ── HERO (Step 6): a powerful, story-specific, LEGAL lead image (TMDB official still / YouTube thumb) flows
+    // through the site's existing image/imageAlt/imageCredit convention (header + OG card auto-render it). The
+    // originating post (YouTube/X/Bluesky) rides along as `heroEmbed` — the receipt the gossip is about.
+    ...(article.hero?.kind === "image" ? {
+      image: article.hero.src,
+      imageAlt: article.hero.alt || article.title,
+      imageCredit: article.hero.credit || "The Screen Report",
+      imageCaption: article.hero.caption || "",
+      imageWidth: article.hero.width || undefined,
+      imageHeight: article.hero.height || undefined,
+    } : {}),
+    heroEmbed: article.hero?.embed
+      ? { platform: article.hero.embed.platform, sourceUrl: article.hero.embed.sourceUrl, embedUrl: article.hero.embed.embedUrl || null, handle: article.hero.embed.handle || null, tweetId: article.hero.embed.tweetId || null, rkey: article.hero.embed.rkey || null }
+      : null,
     whatWeKnow: article.whatWeKnow || [],
     whatWeDont: article.whatWeDont || [],
     denial: article.denial || null,

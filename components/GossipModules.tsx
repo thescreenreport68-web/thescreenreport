@@ -1,5 +1,33 @@
 import type { Article } from "@/lib/articles";
 import { SectionLabel } from "@/components/NicheModules";
+import SocialEmbed from "@/components/SocialEmbed";
+
+/* The "receipt": the originating post the rumor is ABOUT, embedded as lead media. YouTube = a clean responsive
+   iframe (powerful + free); X/Bluesky go through the client SocialEmbed. Renders nothing if there's no embed. */
+function ReceiptEmbed({ article }: { article: Article }) {
+  const e = article.heroEmbed;
+  if (!e) return null;
+  if (e.platform === "youtube" && e.embedUrl) {
+    return (
+      <div className="not-prose my-6 overflow-hidden border border-hair">
+        <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
+          <iframe
+            src={e.embedUrl}
+            title={article.title}
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className="absolute left-0 top-0 h-full w-full"
+          />
+        </div>
+      </div>
+    );
+  }
+  if (e.platform === "x" || e.platform === "bluesky") {
+    return <SocialEmbed embed={{ platform: e.platform, sourceUrl: e.sourceUrl, handle: e.handle, tweetId: e.tweetId }} />;
+  }
+  return null;
+}
 
 /* Gossip per-article UI (formatTag === "gossip"). The rumor STATUS badge is already rendered by
    PlaybookModules' StoryStatusBadge (off `storyStatus`); these add the transparency modules that double as the
@@ -79,6 +107,7 @@ export function GossipTop({ article }: { article: Article }) {
   if (article.formatTag !== "gossip") return null;
   return (
     <>
+      <ReceiptEmbed article={article} />
       <WhatWeKnowBox article={article} />
       <PullQuote article={article} />
       <DenialCallout article={article} />
