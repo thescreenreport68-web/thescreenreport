@@ -119,13 +119,15 @@ export type Article = {
   aiDisclosure?: string; // the AI-assistance + rumor-labeling disclosure note
   imageCaption?: string; // gossip hero: a neutral "Pictured: X" caption (never restates the unconfirmed claim)
   heroEmbed?: {
-    platform: "youtube" | "x" | "bluesky";
+    platform: "youtube" | "x" | "bluesky" | "instagram" | "facebook";
     sourceUrl: string;
     embedUrl?: string | null;
     handle?: string | null;
     tweetId?: string | null;
     rkey?: string | null;
+    shortcode?: string | null;
   } | null; // gossip: the originating post the rumor is ABOUT (the "receipt"), embedded as the lead media
+  // All platforms render client-side from just the public post URL — NO Meta developer account / app / token.
   keyPoints?: string[]; // celeb/tv news: 3-bullet TL;DR
   sightings?: { event: string; date?: string }[]; // celeb: verifiable public sightings (no paparazzi)
   criterion?: string; // rankings/best-of: the stated ranking criterion

@@ -18,6 +18,9 @@ const RX = {
   x: /(?:twitter\.com|x\.com)\/([^/]+)\/status\/(\d+)/i,
   bluesky: /bsky\.app\/profile\/([^/]+)\/post\/([A-Za-z0-9]+)/i,
   instagram: /instagram\.com\/(?:p|reel|tv)\/([A-Za-z0-9_-]+)/i,
+  // Facebook: /{page}/posts/{id}, /permalink.php?story_fbid=..., /photos/..., /videos/..., or share/p/... — any
+  // public-post URL works as the iframe `href`; we only need to recognise it as Facebook + keep the URL.
+  facebook: /(?:^|\/\/)(?:www\.|m\.)?facebook\.com\/(?!plugins\/|sharer\/)[^?#]+/i,
 };
 
 // Every URL we might embed: the topic's own link + every source URL (incl. corroborating). Deduped, order kept.
@@ -26,17 +29,20 @@ export function collectUrls(topic, bundle) {
   return [...new Set(urls.filter(Boolean))];
 }
 
-// The strongest embeddable receipt among the URLs (YouTube > X > Bluesky > Instagram-deferred).
+// The strongest embeddable receipt among the URLs. ALL of these embed CLIENT-SIDE from just the public post URL —
+// no Meta developer account / app / token (verified 2026). Priority: YouTube (also yields a hero thumbnail) >
+// Instagram > X > Facebook > Bluesky.
 export function detectEmbed(urls) {
-  let yt, x, bsky, ig;
+  let yt, ig, x, fb, bsky;
   for (const u of urls) {
     let m;
     if (!yt && (m = u.match(RX.youtube))) yt = { platform: "youtube", videoId: m[1], sourceUrl: u, embedUrl: `https://www.youtube.com/embed/${m[1]}`, thumb: `https://i.ytimg.com/vi/${m[1]}/maxresdefault.jpg` };
+    else if (!ig && (m = u.match(RX.instagram))) ig = { platform: "instagram", shortcode: m[1], sourceUrl: u };
     else if (!x && (m = u.match(RX.x))) x = { platform: "x", handle: m[1], tweetId: m[2], sourceUrl: u };
+    else if (!fb && RX.facebook.test(u)) fb = { platform: "facebook", sourceUrl: u, embedUrl: `https://www.facebook.com/plugins/post.php?href=${encodeURIComponent(u)}&show_text=true&width=500` };
     else if (!bsky && (m = u.match(RX.bluesky))) bsky = { platform: "bluesky", handle: m[1], rkey: m[2], sourceUrl: u };
-    else if (!ig && (m = u.match(RX.instagram))) ig = { platform: "instagram", shortcode: m[1], sourceUrl: u, deferred: true };
   }
-  return yt || x || bsky || ig || null;
+  return yt || ig || x || fb || bsky || null;
 }
 
 // VISION GATE — pick the best still among candidates by identity match + impact + story fit. Fail-safe.
@@ -120,11 +126,11 @@ export async function pickHero(
     return {
       kind: "image", src: chosen.url, width, height,
       alt, caption, credit, source: chosen.kind === "video-thumb" ? "youtube" : "tmdb",
-      embed: embed && !embed.deferred ? embed : null, embedDeferred: embed?.deferred ? embed : null,
+      embed: embed || null, // the originating post rides along as the in-body "receipt" (all embeds are account-free)
       score, why, candidateCount: candidates.length,
     };
   }
-  // No still resolved — if there's a non-deferred embed, lead with it; else no hero.
-  if (embed && !embed.deferred) return { kind: "embed", embed, alt: headline, caption: entity ? `Pictured: ${entity}.` : "", credit: `Via ${embed.platform}`, source: embed.platform, score: null, why: "no still resolved — leading with the source post", candidateCount: 0 };
+  // No still resolved — lead with the receipt embed if we have one; else no hero.
+  if (embed) return { kind: "embed", embed, alt: headline, caption: entity ? `Pictured: ${entity}.` : "", credit: `Via ${embed.platform}`, source: embed.platform, score: null, why: "no still resolved — leading with the source post", candidateCount: 0 };
   return null;
 }

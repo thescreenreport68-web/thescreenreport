@@ -21,8 +21,13 @@ const getTitleImagesImpl = async () => titleSet;
   check("detectEmbed → YouTube id", detectEmbed(["https://youtu.be/abcdefghijk"]).videoId === "abcdefghijk");
   check("detectEmbed → X status", detectEmbed(["https://x.com/PopBase/status/1789"]).tweetId === "1789");
   check("detectEmbed → Bluesky post", detectEmbed(["https://bsky.app/profile/popcrave.com/post/abc123"]).platform === "bluesky");
-  check("detectEmbed → Instagram is DEFERRED (needs Meta setup)", detectEmbed(["https://instagram.com/p/Cxyz_123/"]).deferred === true);
+  const ig = detectEmbed(["https://instagram.com/p/Cxyz_123/"]);
+  check("detectEmbed → Instagram embeddable (NO Meta account, not deferred)", ig.platform === "instagram" && ig.shortcode === "Cxyz_123" && !ig.deferred);
+  const fb = detectEmbed(["https://www.facebook.com/PopCrave/posts/pfbid0abc123"]);
+  check("detectEmbed → Facebook post → plugins/post.php iframe URL", fb.platform === "facebook" && fb.embedUrl.includes("plugins/post.php?href=") && fb.embedUrl.includes(encodeURIComponent("https://www.facebook.com/PopCrave/posts/pfbid0abc123")));
+  check("detectEmbed does NOT treat a facebook sharer/plugins URL as a post", detectEmbed(["https://www.facebook.com/sharer/sharer.php?u=x"]) === null);
   check("detectEmbed priority: YouTube beats X when both present", detectEmbed(["https://x.com/a/status/1", "https://youtu.be/abcdefghijk"]).platform === "youtube");
+  check("detectEmbed priority: Instagram beats X+Facebook", detectEmbed(["https://x.com/a/status/1", "https://www.facebook.com/p/posts/1", "https://instagram.com/p/Cabc/"]).platform === "instagram");
   check("detectEmbed → none", detectEmbed(["https://variety.com/article"]) === null);
 }
 
@@ -71,11 +76,19 @@ const TOPIC = { primaryEntity: "Selena Gomez", title: 'Selena Gomez spotted on t
   check("the originating embed is attached to the hero", h.embed?.platform === "youtube" && h.embed?.embedUrl.includes("/embed/abcdefghijk"));
 }
 
-// ── Instagram receipt is DEFERRED (slot only, not embedded until Meta setup) ──
+// ── Instagram receipt now embeds (NO Meta account needed) — attaches alongside the TMDB hero still ──
 {
   const topic = { primaryEntity: "Selena Gomez", title: "Selena Gomez post sparks buzz", gossipType: "cryptic", sources: [{ url: "https://instagram.com/p/Cxyz_123/" }] };
   const h = await pickHero({ topic, article: { title: topic.title } }, { getPersonImagesImpl, getTitleImagesImpl: async () => null, visionImpl: async () => ({ ranked: [{ index: 0, identityMatch: true, impact: 7, fit: 7 }] }) });
-  check("Instagram embed is held in embedDeferred (not rendered yet)", h.embedDeferred?.platform === "instagram" && h.embed === null);
+  check("Instagram receipt is attached as an embed (account-free)", h.embed?.platform === "instagram" && h.embed?.shortcode === "Cxyz_123");
+  check("Instagram hero still comes from TMDB (the IG image is inside the iframe)", h.kind === "image" && h.source === "tmdb");
+}
+
+// ── Facebook receipt embeds via the plugins/post.php iframe (account-free) ──
+{
+  const topic = { primaryEntity: "Selena Gomez", title: "A Facebook post stirs things up", gossipType: "general", sources: [{ url: "https://www.facebook.com/PopCrave/posts/pfbid0xyz" }] };
+  const h = await pickHero({ topic, article: { title: topic.title } }, { getPersonImagesImpl, getTitleImagesImpl: async () => null, visionImpl: async () => ({ ranked: [{ index: 0, identityMatch: true, impact: 7, fit: 7 }] }) });
+  check("Facebook receipt attached with a plugins/post.php embed URL", h.embed?.platform === "facebook" && h.embed?.embedUrl.includes("plugins/post.php"));
 }
 
 // ── no stills resolve, but a YouTube receipt exists → lead with the embed ──

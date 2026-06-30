@@ -2,8 +2,10 @@ import type { Article } from "@/lib/articles";
 import { SectionLabel } from "@/components/NicheModules";
 import SocialEmbed from "@/components/SocialEmbed";
 
-/* The "receipt": the originating post the rumor is ABOUT, embedded as lead media. YouTube = a clean responsive
-   iframe (powerful + free); X/Bluesky go through the client SocialEmbed. Renders nothing if there's no embed. */
+/* The "receipt": the originating post the rumor is ABOUT, embedded as lead media. ALL platforms render
+   client-side from just the public post URL — NO Meta developer account / app / token (verified 2026).
+   YouTube + Facebook are plain iframes (no script, server-safe); Instagram/X/Bluesky go through the client
+   SocialEmbed (they need a hydration script or a link card). Renders nothing if there's no embed. */
 function ReceiptEmbed({ article }: { article: Article }) {
   const e = article.heroEmbed;
   if (!e) return null;
@@ -23,7 +25,23 @@ function ReceiptEmbed({ article }: { article: Article }) {
       </div>
     );
   }
-  if (e.platform === "x" || e.platform === "bluesky") {
+  if (e.platform === "facebook" && e.embedUrl) {
+    // Facebook Embedded Post via the public plugins/post.php iframe — no SDK, no appId, no token.
+    return (
+      <div className="not-prose my-6 flex justify-center">
+        <iframe
+          src={e.embedUrl}
+          title={article.title}
+          loading="lazy"
+          style={{ border: "none", overflow: "hidden", width: "100%", maxWidth: 500, height: 640 }}
+          scrolling="no"
+          allowFullScreen
+          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+        />
+      </div>
+    );
+  }
+  if (e.platform === "instagram" || e.platform === "x" || e.platform === "bluesky") {
     return <SocialEmbed embed={{ platform: e.platform, sourceUrl: e.sourceUrl, handle: e.handle, tweetId: e.tweetId }} />;
   }
   return null;

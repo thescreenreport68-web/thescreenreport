@@ -54,7 +54,7 @@ export function buildGossipMarkdown({ article, frame, provenance, route, topic, 
       imageHeight: article.hero.height || undefined,
     } : {}),
     heroEmbed: article.hero?.embed
-      ? { platform: article.hero.embed.platform, sourceUrl: article.hero.embed.sourceUrl, embedUrl: article.hero.embed.embedUrl || null, handle: article.hero.embed.handle || null, tweetId: article.hero.embed.tweetId || null, rkey: article.hero.embed.rkey || null }
+      ? { platform: article.hero.embed.platform, sourceUrl: article.hero.embed.sourceUrl, embedUrl: article.hero.embed.embedUrl || null, handle: article.hero.embed.handle || null, tweetId: article.hero.embed.tweetId || null, rkey: article.hero.embed.rkey || null, shortcode: article.hero.embed.shortcode || null }
       : null,
     whatWeKnow: article.whatWeKnow || [],
     whatWeDont: article.whatWeDont || [],
