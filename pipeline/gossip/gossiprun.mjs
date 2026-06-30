@@ -12,6 +12,8 @@ import { routeBySubject } from "./config.gossip.mjs";
 import { openStore } from "./vecStore.mjs";
 import { dedupCheck, recordPublished } from "./dedup.mjs";
 import { pickHero } from "./heroImage.mjs";
+import { buildLinkIndex } from "./linkIndex.mjs";
+import { findRelatedLinks } from "./internalLinks.mjs";
 
 // One topic per category (celebrity/music/awards) — topics arrive freshest-first from discover, so first wins.
 function onePerCategoryPick(topics) {
@@ -23,7 +25,7 @@ function onePerCategoryPick(topics) {
   return [...byCat.values()];
 }
 
-export async function gossipRun({ discoverImpl, categorizeImpl, runImpl = runGossip, writeImpl = writeGossipArticle, heroImpl = pickHero, onePerCategory = false, verify = true, judge = true, hero = false, dedup = true, social = true, storeImpl = null, embedImpl, adjudicateImpl, limit = 0, dryRun = false, nowMs } = {}) {
+export async function gossipRun({ discoverImpl, categorizeImpl, runImpl = runGossip, writeImpl = writeGossipArticle, heroImpl = pickHero, linkIndexImpl = buildLinkIndex, findRelatedImpl = findRelatedLinks, onePerCategory = false, verify = true, judge = true, hero = false, links = false, dedup = true, social = true, storeImpl = null, embedImpl, adjudicateImpl, limit = 0, dryRun = false, nowMs } = {}) {
   // Discovery = trade RSS (confirmed news) + SOCIAL (the speculation lane). Social signals are discovery tips
   // only; categorize scope-filters them and the dedup/content-finder/verify stages establish every fact.
   const rss = discoverImpl ? await discoverImpl() : await discoverGossip();
@@ -39,6 +41,9 @@ export async function gossipRun({ discoverImpl, categorizeImpl, runImpl = runGos
   if (limit) topics = topics.slice(0, limit);
   const now = nowMs ?? Date.now();
   const store = dedup ? (storeImpl || openStore()) : null;
+  // STEP 7 — build the internal-link index ONCE over the real published corpus (off by default offline; CLI on).
+  let linkIndex = null;
+  if (links) { try { linkIndex = await linkIndexImpl(); } catch { linkIndex = null; } }
   const report = { candidates: candidates.length, inScope: all.length, topics: topics.length, published: [], held: [], blocked: [], skipped: [] };
 
   for (let i = 0; i < topics.length; i++) {
@@ -68,6 +73,8 @@ export async function gossipRun({ discoverImpl, categorizeImpl, runImpl = runGos
       // STEP 6 — pick a powerful, story-specific, LEGAL hero (TMDB still / receipt embed; never paparazzi).
       // Off by default so offline tests never hit the network; the live CLI sets hero:true. Fail-safe → no hero.
       if (hero) { try { r.article.hero = await heroImpl({ topic: { ...t, gossipType: detectGossipType(t) }, article: r.article, bundle: r.bundle, frame: r.frame }); } catch { r.article.hero = null; } }
+      // STEP 7 — internal links to REAL related published articles (shared-entity gate + contradiction firewall).
+      if (links && linkIndex) { try { r.article.relatedLinks = await findRelatedImpl({ article: r.article, topic: t, index: linkIndex, selfSlug: t.slug }); } catch { r.article.relatedLinks = []; } }
       const out = writeImpl({ article: r.article, frame: r.frame, provenance: r.provenance, route: r.route, topic: t, dateISO, dryRun });
       // record it in the dedup store so future runs (incl. the wider social net) won't re-publish it.
       if (dedup && store && dd) recordPublished(t, store, { urlHash: dd.urlHash, eventKey: dd.eventKey, embedding: dd.embedding, slug: out.slug, parentKey: dd.parentKey, now: new Date(now) });
@@ -79,6 +86,7 @@ export async function gossipRun({ discoverImpl, categorizeImpl, runImpl = runGos
         hero: r.article.hero ? { source: r.article.hero.source, kind: r.article.hero.kind, score: r.article.hero.score, embed: r.article.hero.embed?.platform || null } : null,
         corroboration: r.provenance?.corroborationCount ?? null,
         verifyDegraded: !!r.provenance?.verifyDegraded,
+        relatedLinks: (r.article.relatedLinks || []).map((l) => l.slug),
         sources: (r.bundle?.sources || []).map((s) => `${s.outlet}/${s.tier}`), written: out.written, path: out.path,
       });
     } else if (r.status === "HELD") {
@@ -96,8 +104,9 @@ if (process.argv[1] && import.meta.url === new URL(`file://${process.argv[1]}`).
   const dryRun = process.argv.includes("--dry-run");
   const onePerCategory = process.argv.includes("--one-per-category");
   const noHero = process.argv.includes("--no-hero"); // hero picker hits TMDB + a cheap vision call; on by default live
+  const noLinks = process.argv.includes("--no-links"); // internal links embed the corpus + a cheap firewall call/link
   const limit = Number((process.argv.find((a) => a.startsWith("--limit=")) || "").split("=")[1]) || 0;
-  const report = await gossipRun({ dryRun, onePerCategory, limit, hero: !noHero });
+  const report = await gossipRun({ dryRun, onePerCategory, limit, hero: !noHero, links: !noLinks });
   console.log(`\n${"━".repeat(60)}\n GOSSIP AUTOMATION — RUN REPORT\n${"━".repeat(60)}`);
   console.log(`DISCOVER: ${report.candidates} candidates  →  CATEGORIZE: ${report.inScope} in-scope  →  SELECTED: ${report.topics}`);
   console.log(`\nPUBLISHED (${report.published.length}):`);
@@ -105,7 +114,8 @@ if (process.argv[1] && import.meta.url === new URL(`file://${process.argv[1]}`).
     console.log(`\n  ● [${p.category}] ${p.title}`);
     console.log(`     type=${p.gossipType} · tier=${p.tier} · sev=${p.severity} · label="${p.label}" · sources=[${p.sources.join(", ")}]`);
     console.log(`     AUTOMATION SCORE: ${p.autoScore}  ${p.subscores ? JSON.stringify(p.subscores) : ""}`);
-    console.log(`     hero=${p.hero ? `${p.hero.kind}/${p.hero.source}${p.hero.score != null ? ` (vision ${p.hero.score})` : ""}${p.hero.embed ? ` +${p.hero.embed}-embed` : ""}` : "none"} · corroboration=${p.corroboration ?? "?"} outlets${p.verifyDegraded ? "  ⚠ VERIFY DEGRADED (L1-only — judge backstopped)" : ""}`);
+    console.log(`     hero=${p.hero ? `${p.hero.kind}/${p.hero.source}${p.hero.score != null ? ` (vision ${p.hero.score})` : ""}${p.hero.embed ? ` +${p.hero.embed}-embed` : ""}` : "none"} · corroboration=${p.corroboration ?? "?"} outlets · related=${(p.relatedLinks || []).length}${p.verifyDegraded ? "  ⚠ VERIFY DEGRADED (L1-only — judge backstopped)" : ""}`);
+    if (p.relatedLinks?.length) console.log(`     related links: ${p.relatedLinks.join(", ")}`);
     if (p.autoIssues?.length) console.log(`     auto-flagged issues: ${p.autoIssues.join(" | ")}`);
     console.log(`     ${p.written ? "WROTE" : "(dry)"} ${p.slug}.md`);
   }

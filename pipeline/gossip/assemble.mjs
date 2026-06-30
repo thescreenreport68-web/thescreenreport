@@ -58,6 +58,8 @@ export function buildGossipMarkdown({ article, frame, provenance, route, topic, 
     heroEmbed: article.hero?.embed
       ? { platform: article.hero.embed.platform, sourceUrl: article.hero.embed.sourceUrl, embedUrl: article.hero.embed.embedUrl || null, handle: article.hero.embed.handle || null, tweetId: article.hero.embed.tweetId || null, rkey: article.hero.embed.rkey || null, shortcode: article.hero.embed.shortcode || null }
       : null,
+    // Step 7 — internal links to REAL related published articles (shared-entity + contradiction-firewalled).
+    relatedLinks: (article.relatedLinks || []).filter((l) => l && l.slug && l.url).map((l) => ({ slug: l.slug, title: l.title, url: l.url })),
     whatWeKnow: article.whatWeKnow || [],
     whatWeDont: article.whatWeDont || [],
     denial: article.denial || null,

@@ -133,7 +133,32 @@ export function GossipTop({ article }: { article: Article }) {
   );
 }
 
+function RelatedLinks({ article }: { article: Article }) {
+  const links = (article.relatedLinks ?? []).filter((l) => l && l.slug && l.url);
+  if (!links.length) return null;
+  return (
+    <aside className="my-6 not-prose border-t border-hair pt-5">
+      <SectionLabel>Related on The Screen Report</SectionLabel>
+      <ul className="space-y-1.5">
+        {links.map((l) => (
+          <li key={l.slug} className="flex gap-2 font-body text-[1.02rem] leading-snug">
+            <span className="flex-none font-bold text-breaking">›</span>
+            <a href={l.url} className="text-navy underline-offset-2 hover:underline hover:text-breaking">
+              {l.title}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </aside>
+  );
+}
+
 export function GossipBottom({ article }: { article: Article }) {
   if (article.formatTag !== "gossip") return null;
-  return <AiDisclosureNote article={article} />;
+  return (
+    <>
+      <RelatedLinks article={article} />
+      <AiDisclosureNote article={article} />
+    </>
+  );
 }

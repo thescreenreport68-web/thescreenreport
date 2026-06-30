@@ -128,6 +128,7 @@ export type Article = {
     shortcode?: string | null;
   } | null; // gossip: the originating post the rumor is ABOUT (the "receipt"), embedded as the lead media
   // All platforms render client-side from just the public post URL — NO Meta developer account / app / token.
+  relatedLinks?: { slug: string; title: string; url: string }[]; // gossip: links to REAL related published articles
   keyPoints?: string[]; // celeb/tv news: 3-bullet TL;DR
   sightings?: { event: string; date?: string }[]; // celeb: verifiable public sightings (no paparazzi)
   criterion?: string; // rankings/best-of: the stated ranking criterion
@@ -271,6 +272,7 @@ export function getAllArticles(): Article[] {
       aiDisclosure: data.aiDisclosure,
       imageCaption: data.imageCaption,
       heroEmbed: data.heroEmbed ?? null,
+      relatedLinks: data.relatedLinks ?? [],
       keyPoints: data.keyPoints ?? [],
       sightings: data.sightings ?? [],
       criterion: data.criterion,
