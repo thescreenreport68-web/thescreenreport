@@ -5,7 +5,7 @@
 import { topicQuery } from "../lib/news.mjs";
 
 const UA = "The Screen Report/1.0 (+https://thescreenreport.com)";
-export const registrableDomain = (d) => (d || "").replace(/^https?:\/\//, "").replace(/^www\./, "").split("/")[0].toLowerCase();
+export const registrableDomain = (d) => (d || "").toLowerCase().replace(/^https?:\/\//, "").replace(/^www\./, "").split("/")[0].split(":")[0];
 
 const defaultFetch = (url, opts) => fetch(url, opts);
 

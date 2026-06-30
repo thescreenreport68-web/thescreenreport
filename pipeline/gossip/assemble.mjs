@@ -50,8 +50,10 @@ export function buildGossipMarkdown({ article, frame, provenance, route, topic, 
       imageAlt: article.hero.alt || article.title,
       imageCredit: article.hero.credit || "The Screen Report",
       imageCaption: article.hero.caption || "",
-      imageWidth: article.hero.width || undefined,
-      imageHeight: article.hero.height || undefined,
+      // omit width/height entirely when absent — a literal `undefined` makes gray-matter throw a YAMLException
+      // that would abort the whole run loop.
+      ...(article.hero.width ? { imageWidth: article.hero.width } : {}),
+      ...(article.hero.height ? { imageHeight: article.hero.height } : {}),
     } : {}),
     heroEmbed: article.hero?.embed
       ? { platform: article.hero.embed.platform, sourceUrl: article.hero.embed.sourceUrl, embedUrl: article.hero.embed.embedUrl || null, handle: article.hero.embed.handle || null, tweetId: article.hero.embed.tweetId || null, rkey: article.hero.embed.rkey || null, shortcode: article.hero.embed.shortcode || null }
@@ -74,6 +76,8 @@ export function buildGossipMarkdown({ article, frame, provenance, route, topic, 
       status: STATUS_BADGE[frame.tier] || "RUMOR",
       attribution: provenance.attribution,
       outlets: (provenance.sources || []).map((s) => s.outlet),
+      corroborationCount: provenance.corroborationCount ?? null,
+      verifyDegraded: !!provenance.verifyDegraded,
       publishedAt: dateISO,
     },
   };

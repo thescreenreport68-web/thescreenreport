@@ -137,6 +137,35 @@ const cleanArticle = () => ({
   check("judge:false leaves auto null", r.auto === null);
 }
 
+// ── L1 is PER-SOURCE now: a fabricated quote whose tokens are SPLIT across two sources must NOT pass ──
+{
+  const split = { sources: [
+    { text: "Selena Gomez was spotted at a restaurant in Los Angeles over the weekend with a group of friends." },
+    { text: "In a totally separate report, the couple confirmed their engagement in Paris last spring, sources said." },
+  ] };
+  const fabricated = checkCitedEvidence({ claims: [{ text: "She confirmed the engagement", sourceQuote: "Selena Gomez confirmed their engagement in Paris" }] }, split);
+  check("L1: a fabricated quote split across two sources is FLAGGED (per-source, no token bleed)", fabricated.unsupported.length === 1, JSON.stringify(fabricated));
+  const real = checkCitedEvidence({ claims: [{ text: "spotted", sourceQuote: "spotted at a restaurant in Los Angeles" }] }, split);
+  check("L1: a verbatim quote present in ONE source still passes", real.unsupported.length === 0);
+}
+
+// ── DEGRADED verify (L2 errored) FORCES the judge backstop even when judge:false, and is flagged in provenance ──
+{
+  let jCalls = 0;
+  const verifyImpl = async () => ({ ok: true, unsupported: [], severity: "minor", brokenRatio: 0, degraded: true });
+  const judgeImpl = async () => { jCalls++; return { score: 85, subscores: { safety: 9 }, issues: [] }; };
+  const r = await runGossip(TOPIC, { writeImpl: async () => cleanArticle(), verifyImpl, judgeImpl, verify: true, judge: false, corroborate: false });
+  check("degraded verify FORCES the judge even with judge:false", jCalls === 1);
+  check("PUBLISH provenance flags verifyDegraded", r.status === "PUBLISH" && r.provenance?.verifyDegraded === true);
+}
+{
+  let jCalls = 0;
+  const verifyImpl = async () => ({ ok: true, unsupported: [], severity: "minor", brokenRatio: 0, degraded: false });
+  const judgeImpl = async () => { jCalls++; return { score: 85, subscores: { safety: 9 }, issues: [] }; };
+  const r = await runGossip(TOPIC, { writeImpl: async () => cleanArticle(), verifyImpl, judgeImpl, verify: true, judge: false, corroborate: false });
+  check("non-degraded verify with judge:false does NOT force the judge", jCalls === 0 && r.status === "PUBLISH" && r.provenance?.verifyDegraded === false);
+}
+
 console.log(`\n── RESULT: ${pass} passed${fail ? `, ${fail} FAILED` : ""} ──`);
 if (fail) { console.log("FAILED:", fails.join("; ")); process.exit(1); }
 console.log("Step 5 verify + self-correct + judge-backstop green. ✅\n");

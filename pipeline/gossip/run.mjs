@@ -97,8 +97,11 @@ export async function runGossip(topic, {
   // catches the SMALL mistakes the writer missed. If it flags a real safety/fabrication problem, hand those exact
   // issues back for ONE more surgical pass, re-run the cheap gates (so the fix didn't reintroduce a problem), and
   // re-judge once. Still flagged ⇒ block. (Disabled in offline tests unless a judgeImpl is wired.)
+  // SAFETY INVARIANT: if verify ran but DEGRADED to L1-only (its L2 LLM check errored), the design relies on the
+  // judge as the backstop — so force the judge ON for this piece even if it was disabled.
+  const verifyDegraded = verify && !!verifyResult?.degraded;
   let auto = null;
-  if (judge) {
+  if (judge || verifyDegraded) {
     try { auto = await judgeImpl({ article, bundle, frame }); } catch (e) { auto = { error: String(e?.message || e).slice(0, 80) }; }
     let flag = judgeFlags(auto);
     if (flag.unsafe && flag.issues.length) {
@@ -132,6 +135,7 @@ export async function runGossip(topic, {
     monitor: frame.monitor,
     monitorWindowH: MONITOR_WINDOW_HOURS,
     corroborationCount: bundle.corroborationCount ?? new Set(bundle.sources.map((s) => s.outlet)).size,
+    verifyDegraded, // true ⇒ the claim-verify ran at L1-only this run (L2 errored); surfaced for the monitor/owner
     sources: bundle.sources.map((s) => ({ outlet: s.outlet, url: s.url, tier: s.tier })),
   };
   return { status: "PUBLISH", article, frame, provenance, route, bundle, auto };

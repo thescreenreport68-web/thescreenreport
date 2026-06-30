@@ -58,7 +58,9 @@ const TOPIC = { primaryEntity: "Selena Gomez", title: "spotted on a cozy dinner 
 check("registrableDomain strips proto/www/path", registrableDomain("https://www.eonline.com/news/123") === "eonline.com");
 
 // ── gatherBundle with corroboration ──
-const LONG = "According to multiple outlets, the pair were seen leaving a Los Angeles restaurant together over the weekend, and a source described the evening as relaxed and full of laughter. ".repeat(6);
+// A corroborating article about this rumor NAMES the entity — the entity-mention gate (contentFinder) drops any
+// "corroborating" source that doesn't, so the fixtures must read like real articles about Selena Gomez.
+const LONG = "Selena Gomez and her companion were seen leaving a Los Angeles restaurant together over the weekend, and a source described the evening as relaxed and full of laughter. ".repeat(6);
 const extractByDomain = async (url) => ({ content: `<p>${LONG} [${registrableDomain(url)}]</p>`, title: "x" });
 
 // corroborate:true → original (variety, inline) + corroborating outlets from DISTINCT domains, flagged + counted
@@ -78,6 +80,31 @@ const extractByDomain = async (url) => ({ content: `<p>${LONG} [${registrableDom
   check("corroborating sources are flagged", b.sources.some((s) => s.corroborating === true));
   check("bundle now spans 3 distinct outlets (variety+people+pagesix)", b.corroborationCount === 3, `got ${b.corroborationCount}`);
   check("outletCount reflects the richer bundle", b.outletCount === 3, `got ${b.outletCount}`);
+}
+
+// SECURITY: a corroborating source that does NOT name the entity is DROPPED (no off-topic GDELT bleed)
+{
+  const findUrlsImpl = async () => [{ url: "https://people.com/a", domain: "people.com", title: "x" }];
+  const offTopic = async () => ({ content: "<p>An unrelated story about a completely different celebrity at a film premiere, repeated to clear the length floor. ".repeat(6) + "</p>", title: "x" });
+  const b = await gatherBundle(
+    { primaryEntity: "Selena Gomez", title: "dinner date", sources: [{ outlet: "Variety", url: "https://variety.com/2026/seed", text: LONG }] },
+    { corroborate: true, findUrlsImpl, extractImpl: offTopic }
+  );
+  check("a corroborating source NOT naming the entity is dropped", b.corroborationCount === 1, `got ${b.corroborationCount}`);
+}
+
+// SECURITY: corroborating sources contribute NO quotes to the writer's quotable corpus (no misattribution)
+{
+  const findUrlsImpl = async () => [{ url: "https://people.com/a", domain: "people.com", title: "x" }];
+  const withQuote = async (url) => url.includes("people.com")
+    ? { content: `<p>Selena Gomez was photographed in Paris last spring. A source said, "they secretly married months ago" in a totally different story. ${"Filler about Selena Gomez to clear the floor. ".repeat(8)}</p>`, title: "x" }
+    : { content: `<p>${LONG}</p>`, title: "x" };
+  const b = await gatherBundle(
+    { primaryEntity: "Selena Gomez", title: "dinner date", sources: [{ outlet: "Variety", url: "https://variety.com/2026/seed", text: LONG }] },
+    { corroborate: true, findUrlsImpl, extractImpl: withQuote }
+  );
+  check("corroborating source admitted (names the entity)", b.sources.some((s) => s.corroborating));
+  check("its verbatim quote is NOT offered to the writer (kept out of bundle.quotes)", !b.quotes.some((q) => /secretly married/.test(q)), JSON.stringify(b.quotes).slice(0, 120));
 }
 
 // corroborate:false → finder is NOT called, bundle stays single-source

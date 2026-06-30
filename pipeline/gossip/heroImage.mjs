@@ -18,9 +18,10 @@ const RX = {
   x: /(?:twitter\.com|x\.com)\/([^/]+)\/status\/(\d+)/i,
   bluesky: /bsky\.app\/profile\/([^/]+)\/post\/([A-Za-z0-9]+)/i,
   instagram: /instagram\.com\/(?:p|reel|tv)\/([A-Za-z0-9_-]+)/i,
-  // Facebook: /{page}/posts/{id}, /permalink.php?story_fbid=..., /photos/..., /videos/..., or share/p/... — any
-  // public-post URL works as the iframe `href`; we only need to recognise it as Facebook + keep the URL.
-  facebook: /(?:^|\/\/)(?:www\.|m\.)?facebook\.com\/(?!plugins\/|sharer\/)[^?#]+/i,
+  // Facebook: ONLY post-bearing paths embed as a receipt — /{page}/posts/, permalink.php?, story.php?, /videos/,
+  // watch?, photo.php?, /photos/, share/{p|v|r}/, reel/. A bare profile / group / login / sharer / plugins URL is
+  // NOT a post and would render a broken/empty iframe, so it must NOT match.
+  facebook: /(?:^|\/\/)(?:www\.|m\.|web\.)?facebook\.com\/(?:[^/?#]+\/posts\/|permalink\.php\?|story\.php\?|[^/?#]+\/videos\/|watch\/?\?|photo\.php\?|[^/?#]+\/photos\/|share\/(?:p|v|r)\/|reel\/)/i,
 };
 
 // Every URL we might embed: the topic's own link + every source URL (incl. corroborating). Deduped, order kept.

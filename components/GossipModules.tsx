@@ -33,8 +33,8 @@ function ReceiptEmbed({ article }: { article: Article }) {
           src={e.embedUrl}
           title={article.title}
           loading="lazy"
-          style={{ border: "none", overflow: "hidden", width: "100%", maxWidth: 500, height: 640 }}
-          scrolling="no"
+          style={{ border: "none", width: "100%", maxWidth: 500, height: 740 }}
+          scrolling="auto"
           allowFullScreen
           allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
         />

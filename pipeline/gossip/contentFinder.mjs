@@ -54,11 +54,19 @@ export async function extractClean(url, { fetchImpl = fetch, extractImpl = extra
 export async function gatherBundle(topic, { fetchImpl = fetch, extractImpl, corroborate = false, findUrlsImpl = findCorroboratingUrls, maxCorroborating = 3 } = {}) {
   const sources = [];
   const seedDomains = new Set();
+  // Entity-mention gate for corroborating sources (below): a real corroborating article about THIS rumor names the
+  // person. Require the full name OR the surname so we don't admit a loosely-related GDELT hit about someone else.
+  const ent = (topic.primaryEntity || "").trim();
+  const entLc = ent.toLowerCase();
+  const surnameLc = ent.split(/\s+/).pop()?.toLowerCase() || "";
+  const mentionsEntity = (txt) => { const t = (txt || "").toLowerCase(); return !ent || t.includes(entLc) || (surnameLc.length > 2 && t.includes(surnameLc)); };
   for (const s of topic.sources || []) {
     const tier = s.tier ?? tierOf(s.outlet);
     if (s.text) {
       const text = stripHtml(s.text);
-      if (text.length >= 1) sources.push({ outlet: s.outlet, url: s.url || null, tier, text: text.slice(0, 8000), quotes: extractQuotes(s.text) });
+      // Floor the inline path too (was >= 1) so a near-empty "source" can't satisfy the fail-closed Stage-3 gate.
+      if (text.length >= 80) sources.push({ outlet: s.outlet, url: s.url || null, tier, text: text.slice(0, 8000), quotes: extractQuotes(s.text) });
+      else if (s.url) { const ex = await extractClean(s.url, { fetchImpl, extractImpl }); if (ex) { sources.push({ outlet: s.outlet, url: s.url, tier, text: ex.text, quotes: extractQuotes(ex.text) }); seedDomains.add(registrableDomain(s.url)); } }
       continue;
     }
     if (!s.url) continue;
@@ -68,13 +76,16 @@ export async function gatherBundle(topic, { fetchImpl = fetch, extractImpl, corr
   // STEP 4 — corroboration: find + extract MORE articles about the same rumor, from DISTINCT outlets, so the
   // writer has corroborated real material (not one thin blurb). Best-effort: any issue ⇒ just the original
   // source(s). Wrapped so a finder/extractor fault NEVER breaks an otherwise-publishable run.
+  // GUARD: only admit a corroborating article that actually NAMES the entity (drops loosely-related GDELT noise),
+  // and NEVER surface its quotes to the writer (a verbatim quote from a DIFFERENT story about the same person must
+  // not be attributable to THIS rumor) — corroborating sources add corroboration COUNT + grounding text, not quotes.
   if (corroborate && topic.primaryEntity) {
     try {
       const extra = await findUrlsImpl(topic, { fetchImpl, seedDomain: [...seedDomains][0] || "" });
       for (const e of (extra || []).slice(0, maxCorroborating)) {
         if (seedDomains.has(e.domain)) continue;
         const ex = await extractClean(e.url, { fetchImpl, extractImpl });
-        if (ex && ex.text.length >= 400) { sources.push({ outlet: e.domain, url: e.url, tier: tierOf(e.domain), text: ex.text, quotes: extractQuotes(ex.text), corroborating: true }); seedDomains.add(e.domain); }
+        if (ex && ex.text.length >= 400 && mentionsEntity(ex.text)) { sources.push({ outlet: e.domain, url: e.url, tier: tierOf(e.domain), text: ex.text, quotes: [], corroborating: true }); seedDomains.add(e.domain); }
       }
     } catch { /* corroboration is enrichment only — never fatal */ }
   }
@@ -82,7 +93,9 @@ export async function gatherBundle(topic, { fetchImpl = fetch, extractImpl, corr
   return {
     entity: topic.primaryEntity || null,
     sources,
-    quotes: [...new Set(sources.flatMap((s) => s.quotes))].slice(0, 20),
+    // Quotable corpus = SEED sources only. Corroborating sources carry text for grounding but contribute NO quotes,
+    // so a real quote from a different story can never be handed to the writer as this rumor's evidence.
+    quotes: [...new Set(sources.filter((s) => !s.corroborating).flatMap((s) => s.quotes))].slice(0, 20),
     outletCount: new Set(sources.map((s) => s.outlet)).size,
     corroborationCount: new Set(sources.map((s) => (s.url ? registrableDomain(s.url) : s.outlet))).size,
     ok,

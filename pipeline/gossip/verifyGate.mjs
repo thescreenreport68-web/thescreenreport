@@ -11,29 +11,34 @@
 // back to L1 and flag `degraded`, because the JUDGE (also an independent LLM read) is the explicit backstop.
 import { chat } from "../lib/openrouter.mjs";
 
+// String-coerce defensively — an LLM can return a non-string claim/why, and a raw .toLowerCase() on it would throw
+// and (uncaught) drop a clean publishable article. Coercion makes coverage()/the merge key robust.
 const norm = (s) =>
-  (s || "").toLowerCase().replace(/[‘’]/g, "'").replace(/[“”]/g, '"').replace(/[^a-z0-9 ]/g, " ").replace(/\s+/g, " ").trim();
+  String(s ?? "").toLowerCase().replace(/[‘’]/g, "'").replace(/[“”]/g, '"').replace(/[^a-z0-9 ]/g, " ").replace(/\s+/g, " ").trim();
 
-// token-coverage of `needle` inside `hay` (same idea as quoteGuard's near-verbatim test): is the cited evidence
-// actually present? 1.0 = every content word of the cited quote appears in the bundle.
+// token-coverage of `needle` inside one source's `hay` (near-verbatim fallback). 1.0 = every content word present.
 function coverage(needle, hay) {
   const toks = norm(needle).split(" ").filter((w) => w.length > 2);
-  if (!toks.length) return 1; // nothing checkable (e.g. "yes"/"no") — don't penalize
+  if (!toks.length) return 0; // no checkable content words ⇒ can't claim support (don't silently auto-pass)
   let hit = 0;
   for (const t of toks) if (hay.includes(t)) hit++;
   return hit / toks.length;
 }
 
-// L1 — deterministic: a claim whose cited sourceQuote is NOT really in the bundle is fabricated evidence.
+// L1 — deterministic: a claim whose cited sourceQuote is NOT really in any SINGLE source is fabricated evidence.
+// Phrase-aware + PER-SOURCE (substring first, token-coverage fallback within one source's text) — never across the
+// concatenation, so token bleed from several sources can't manufacture a false match for a fabricated quote.
 export function checkCitedEvidence(article, bundle) {
-  const hay = norm((bundle?.sources || []).map((s) => s.text).join("  "));
+  const haystacks = (bundle?.sources || []).map((s) => norm(s.text)).filter(Boolean);
   const claims = Array.isArray(article?.claims) ? article.claims : [];
-  if (!hay || !claims.length) return { unsupported: [], totalChecked: 0 };
+  if (!haystacks.length || !claims.length) return { unsupported: [], totalChecked: 0 };
   const unsupported = [];
   for (const c of claims) {
     const ev = (c?.sourceQuote || "").trim();
     if (!ev || ev.length < 8) continue; // claim cited no evidence — L2/judge will weigh it; L1 only catches FAKE evidence
-    if (coverage(ev, hay) < 0.85) unsupported.push({ claim: (c.text || "").slice(0, 200), why: `cited evidence not found in any source: "${ev.slice(0, 120)}"` });
+    const evn = norm(ev);
+    const ok = haystacks.some((h) => h.includes(evn) || coverage(ev, h) >= 0.85);
+    if (!ok) unsupported.push({ claim: (c.text || "").slice(0, 200), why: `cited evidence not found in any source: "${ev.slice(0, 120)}"` });
   }
   return { unsupported, totalChecked: claims.filter((c) => (c?.sourceQuote || "").length >= 8).length };
 }
@@ -70,7 +75,8 @@ export async function verifyGate({ article, bundle, model = "google/gemini-2.5-f
   const seen = new Set();
   const unsupported = [];
   for (const u of [...l1.unsupported, ...(l2.list || [])]) {
-    const k = norm(u.claim).slice(0, 60);
+    // Fall back to the raw claim text so a symbol/emoji-only claim (which normalizes to "") is NOT silently dropped.
+    const k = norm(u.claim).slice(0, 60) || String(u.claim ?? "").trim().slice(0, 60);
     if (!k || seen.has(k)) continue;
     seen.add(k);
     unsupported.push({ claim: u.claim, why: u.why || "not supported by the bundle", contradicted: !!u.contradicted });

@@ -261,7 +261,7 @@ export default function ArticlePage({
               className="aspect-video w-full"
             />
             <figcaption className="mt-2 leading-snug">
-              <span className="font-body text-base text-navy">{article.imageAlt}</span>{" "}
+              <span className="font-body text-base text-navy">{article.imageCaption || article.imageAlt}</span>{" "}
               <cite className="font-sans text-xs not-italic uppercase tracking-[0.04em] text-slate">
                 {article.imageCredit}
               </cite>
