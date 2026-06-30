@@ -15,9 +15,10 @@ import { qualityCheck } from "./qualityGate.mjs";
 import { verifyQuotes } from "./quoteGuard.mjs";
 import { GOSSIP_AUTHOR_SLUG, AI_DISCLOSURE, routeBySubject, MONITOR_WINDOW_HOURS } from "./config.gossip.mjs";
 
-export async function runGossip(topic, { writeImpl = writeGossip, fetchImpl, model } = {}) {
-  // Stage 3 — receipts (fail-closed).
-  const bundle = await gatherBundle(topic, fetchImpl ? { fetchImpl } : {});
+export async function runGossip(topic, { writeImpl = writeGossip, fetchImpl, model, corroborate = true } = {}) {
+  // Stage 3 — receipts (fail-closed). STEP 4: corroborate=true pulls in MORE outlets' articles about the same
+  // rumor so the writer rewrites from a corroborated multi-source bundle, not one thin blurb (fail-safe).
+  const bundle = await gatherBundle(topic, { ...(fetchImpl ? { fetchImpl } : {}), corroborate });
   if (!bundle.ok) return { status: "BLOCKED", reason: bundle.reason, stage: "content-finder" };
 
   // Stage 4 — classify & frame.

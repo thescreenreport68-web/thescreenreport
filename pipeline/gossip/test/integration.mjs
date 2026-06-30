@@ -19,8 +19,9 @@ const PEOPLE_TEXT = `People has learned that the two stars were spotted together
 console.log(`\n=== GOSSIP INTEGRATION HARNESS (offline) ===\n`);
 
 // A) no extractable sources → BLOCKED at the content finder
+// (corroborate:false keeps every offline case off the live GDELT/extract network — they assert on inline text)
 {
-  const r = await runGossip({ primaryEntity: "Star Z", title: "Mystery", claim: "something", sources: [{ outlet: "Reddit" }] });
+  const r = await runGossip({ primaryEntity: "Star Z", title: "Mystery", claim: "something", sources: [{ outlet: "Reddit" }] }, { corroborate: false });
   check("no sources → BLOCKED (content finder)", r.status === "BLOCKED" && r.stage === "content-finder", JSON.stringify(r).slice(0, 120));
 }
 
@@ -29,7 +30,7 @@ console.log(`\n=== GOSSIP INTEGRATION HARNESS (offline) ===\n`);
   const r = await runGossip({
     primaryEntity: "An Actor", title: "Assault rumor", claim: "accused of sexual assault",
     sources: [{ outlet: "DeuxMoi", text: "Anonymous tip alleges misconduct. " .repeat(20) }],
-  });
+  }, { corroborate: false });
   check("EXTREME, no major → HELD", r.status === "HELD", JSON.stringify(r).slice(0, 120));
 }
 
@@ -43,7 +44,7 @@ console.log(`\n=== GOSSIP INTEGRATION HARNESS (offline) ===\n`);
   });
   const r = await runGossip(
     { primaryEntity: "Star A", subjectType: "celebrity", title: "Star A dating", claim: "Star A and Star B are dating", sources: [{ outlet: "People", text: PEOPLE_TEXT }] },
-    { writeImpl: mockWriter }
+    { writeImpl: mockWriter, corroborate: false }
   );
   check("normal+major+clean → PUBLISH", r.status === "PUBLISH", JSON.stringify(r.status));
   check("PUBLISH attaches Alicia byline", r.article?.author === "alicia-bernard");
@@ -55,7 +56,7 @@ console.log(`\n=== GOSSIP INTEGRATION HARNESS (offline) ===\n`);
   const badWriter = async () => ({ title: "Star C news", dek: "x", body: "Star C has herpes and used cocaine before fame." });
   const r = await runGossip(
     { primaryEntity: "Star C", title: "Star C", claim: "health rumor", sources: [{ outlet: "Pop Crave", text: "buzz buzz ".repeat(30) }] },
-    { writeImpl: badWriter }
+    { writeImpl: badWriter, corroborate: false }
   );
   check("unattributed damaging → BLOCKED_LEGAL", r.status === "BLOCKED_LEGAL" && r.blocks.some((b) => b.includes("UNATTRIBUTED")), (r.blocks || []).join("|").slice(0, 120));
 }
@@ -65,7 +66,7 @@ console.log(`\n=== GOSSIP INTEGRATION HARNESS (offline) ===\n`);
   const noDisclaimer = async () => ({ title: "A Star health scare?", dek: "x", body: "Social media is buzzing that A Star has died after a cryptic post from a friend went viral overnight." });
   const r = await runGossip(
     { primaryEntity: "A Star", title: "Death rumor", claim: "A Star has died", sources: [{ outlet: "Reddit", text: "rip posts everywhere ".repeat(30) }] },
-    { writeImpl: noDisclaimer }
+    { writeImpl: noDisclaimer, corroborate: false }
   );
   check("missing disclaimer → BLOCKED_LEGAL", r.status === "BLOCKED_LEGAL" && r.blocks.some((b) => b.includes("MISSING_DISCLAIMER")), (r.blocks || []).join("|").slice(0, 120));
 }

@@ -5,6 +5,7 @@
 //   fallback) → crude fetch+strip (last resort). Fail-closed: 0 extractable sources ⇒ BLOCK.
 import { tierOf } from "./policy.mjs";
 import { extract as extractArticle } from "@extractus/article-extractor";
+import { findCorroboratingUrls, registrableDomain } from "./corroborate.mjs";
 
 const UA = "The Screen Report/1.0 (+https://thescreenreport.com)";
 
@@ -50,8 +51,9 @@ export async function extractClean(url, { fetchImpl = fetch, extractImpl = extra
 
 // topic.sources: [{ outlet, url?, tier?, text? }]. A source with inline text is used directly; a URL is
 // extracted cleanly; a bare outlet is a discovery signal only.
-export async function gatherBundle(topic, { fetchImpl = fetch, extractImpl } = {}) {
+export async function gatherBundle(topic, { fetchImpl = fetch, extractImpl, corroborate = false, findUrlsImpl = findCorroboratingUrls, maxCorroborating = 3 } = {}) {
   const sources = [];
+  const seedDomains = new Set();
   for (const s of topic.sources || []) {
     const tier = s.tier ?? tierOf(s.outlet);
     if (s.text) {
@@ -61,14 +63,28 @@ export async function gatherBundle(topic, { fetchImpl = fetch, extractImpl } = {
     }
     if (!s.url) continue;
     const ex = await extractClean(s.url, { fetchImpl, extractImpl });
-    if (ex) sources.push({ outlet: s.outlet, url: s.url, tier, text: ex.text, quotes: extractQuotes(ex.text) });
+    if (ex) { sources.push({ outlet: s.outlet, url: s.url, tier, text: ex.text, quotes: extractQuotes(ex.text) }); seedDomains.add(registrableDomain(s.url)); }
+  }
+  // STEP 4 — corroboration: find + extract MORE articles about the same rumor, from DISTINCT outlets, so the
+  // writer has corroborated real material (not one thin blurb). Best-effort: any issue ⇒ just the original
+  // source(s). Wrapped so a finder/extractor fault NEVER breaks an otherwise-publishable run.
+  if (corroborate && topic.primaryEntity) {
+    try {
+      const extra = await findUrlsImpl(topic, { fetchImpl, seedDomain: [...seedDomains][0] || "" });
+      for (const e of (extra || []).slice(0, maxCorroborating)) {
+        if (seedDomains.has(e.domain)) continue;
+        const ex = await extractClean(e.url, { fetchImpl, extractImpl });
+        if (ex && ex.text.length >= 400) { sources.push({ outlet: e.domain, url: e.url, tier: tierOf(e.domain), text: ex.text, quotes: extractQuotes(ex.text), corroborating: true }); seedDomains.add(e.domain); }
+      }
+    } catch { /* corroboration is enrichment only — never fatal */ }
   }
   const ok = sources.length > 0;
   return {
     entity: topic.primaryEntity || null,
     sources,
-    quotes: [...new Set(sources.flatMap((s) => s.quotes))].slice(0, 16),
+    quotes: [...new Set(sources.flatMap((s) => s.quotes))].slice(0, 20),
     outletCount: new Set(sources.map((s) => s.outlet)).size,
+    corroborationCount: new Set(sources.map((s) => (s.url ? registrableDomain(s.url) : s.outlet))).size,
     ok,
     reason: ok ? "" : "no extractable source text — BLOCK (never write a gossip story from nothing)",
   };
