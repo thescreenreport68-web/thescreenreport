@@ -7,7 +7,6 @@ import { discoverSocial } from "./discoverSocial.mjs";
 import { categorizeGossip } from "./categorize.mjs";
 import { runGossip } from "./run.mjs";
 import { writeGossipArticle } from "./assemble.mjs";
-import { judgeGossip } from "./judge.mjs";
 import { detectGossipType } from "./writer.mjs";
 import { routeBySubject } from "./config.gossip.mjs";
 import { openStore } from "./vecStore.mjs";
@@ -23,7 +22,7 @@ function onePerCategoryPick(topics) {
   return [...byCat.values()];
 }
 
-export async function gossipRun({ discoverImpl, categorizeImpl, runImpl = runGossip, writeImpl = writeGossipArticle, judgeImpl = judgeGossip, onePerCategory = false, judge = true, dedup = true, social = true, storeImpl = null, embedImpl, adjudicateImpl, limit = 0, dryRun = false, nowMs } = {}) {
+export async function gossipRun({ discoverImpl, categorizeImpl, runImpl = runGossip, writeImpl = writeGossipArticle, onePerCategory = false, verify = true, judge = true, dedup = true, social = true, storeImpl = null, embedImpl, adjudicateImpl, limit = 0, dryRun = false, nowMs } = {}) {
   // Discovery = trade RSS (confirmed news) + SOCIAL (the speculation lane). Social signals are discovery tips
   // only; categorize scope-filters them and the dedup/content-finder/verify stages establish every fact.
   const rss = discoverImpl ? await discoverImpl() : await discoverGossip();
@@ -56,25 +55,15 @@ export async function gossipRun({ discoverImpl, categorizeImpl, runImpl = runGos
     }
     let r;
     try {
-      r = await runImpl(t);
+      // The whole single-topic quality loop (write → gates → surgical self-correct → JUDGE backstop → re-judge)
+      // lives in runGossip now, so it can hand the judge's findings back to the writer. We just consume its verdict.
+      r = await runImpl(t, { verify, judge });
     } catch (e) {
       report.blocked.push({ id: t.id, category: cat, status: "ERROR", reason: String(e?.message || e).slice(0, 140) });
       continue;
     }
     if (r.status === "PUBLISH") {
-      let auto = null;
-      if (judge) { try { auto = await judgeImpl({ article: r.article, bundle: r.bundle, frame: r.frame }); } catch (e) { auto = { error: String(e?.message || e).slice(0, 80) }; } }
-      // FAIL-CLOSED JUDGE GATE: judge runs BEFORE we write. A fabrication/safety problem (safety subscore < 7,
-      // or no readable safety score) BLOCKS publication — the judge is now a gate, not just a score.
-      const safety = auto?.subscores?.safety;
-      // Block if safety is low OR the judge explicitly flagged a fabrication/unsupported-claim, regardless of
-      // the number (a fabricated quote scored "safety 7" still published before — catch the FLAG, not just the score).
-      const issuesText = (auto?.issues || []).join(" ");
-      const fabFlag = /not (in|supported|present|found|directly|backed).{0,30}(bundle|source|snippet|provided|text|report)|fabricat|invented|\bmade up\b|not supported by|unsubstantiated|not directly supported|quote is not/i.test(issuesText);
-      if (judge && (!Number.isFinite(safety) || safety < 8 || fabFlag)) {
-        report.blocked.push({ id: t.id, category: cat, status: "BLOCKED_JUDGE", autoScore: auto?.score ?? null, reason: `safety ${safety ?? "?"}${fabFlag ? " + fabrication flagged" : ""} — ${(auto?.issues || []).slice(0, 2).join("; ") || auto?.error || "unsafe"}` });
-        continue;
-      }
+      const auto = r.auto || null; // judge already ran inside runGossip as the backstop gate
       const out = writeImpl({ article: r.article, frame: r.frame, provenance: r.provenance, route: r.route, topic: t, dateISO, dryRun });
       // record it in the dedup store so future runs (incl. the wider social net) won't re-publish it.
       if (dedup && store && dd) recordPublished(t, store, { urlHash: dd.urlHash, eventKey: dd.eventKey, embedding: dd.embedding, slug: out.slug, parentKey: dd.parentKey, now: new Date(now) });
@@ -89,7 +78,7 @@ export async function gossipRun({ discoverImpl, categorizeImpl, runImpl = runGos
       report.held.push({ id: t.id, category: cat, reason: r.reason });
     } else {
       const reason = (r.blocks || r.issues || [r.reason]).join ? (r.blocks || r.issues || [r.reason]).join(" | ") : r.reason;
-      report.blocked.push({ id: t.id, category: cat, status: r.status, reason });
+      report.blocked.push({ id: t.id, category: cat, status: r.status, reason, autoScore: r.auto?.score ?? null });
     }
   }
   return report;

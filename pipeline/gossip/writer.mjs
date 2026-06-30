@@ -90,8 +90,51 @@ Return STRICT JSON:
   return { system: SYSTEM, user, gossipType: gtype };
 }
 
-export async function writeGossip({ bundle, frame, topic, model = "deepseek/deepseek-v3.2", corrections = null }) {
-  const { system, user } = buildGossipPrompt(bundle, frame, topic, corrections);
-  const { data } = await chat({ model, system, user, json: true, maxTokens: 1800, temperature: 0.4 });
+// SURGICAL-CORRECTION prompt (Step 5). The writer FIXES its own draft instead of rewriting it: it gets the prior
+// draft + the EXACT list of problems + the same verified bundle, and edits ONLY the flawed spots (find the real
+// supporting fact in the bundle, attribute it, soften it to speculation, or cut it) — every correct sentence is
+// preserved verbatim. This keeps a good piece good while killing the specific fabrications. A full rewrite is the
+// fallback (run.mjs sets rewrite=true) only when the draft is broken top-to-bottom.
+const CORRECTION_SYS = `You are editing a celebrity-gossip draft for The Screen Report. You are NOT rewriting it — you are SURGICALLY FIXING specific flagged problems while keeping everything that is already correct.
+RULES:
+- Preserve every sentence that is NOT flagged EXACTLY as written — same voice, same facts, same order. Do not re-style, re-order, or "improve" untouched text.
+- For each flagged problem, do the SMALLEST fix that makes it true and safe, using ONLY the VERIFIED BUNDLE:
+  • if the bundle supports the claim → attribute it ("according to [Outlet]", "a source tells [Outlet]") and quote ONLY verbatim words;
+  • if the bundle does NOT support it → soften to attributed speculation ("fans speculate", "appears to") OR cut the claim entirely;
+  • if a quote isn't verbatim in the bundle → replace with the exact words or drop the quotation marks and paraphrase.
+- NEVER invent a new fact, quote, source, number, or date to "patch" a hole. Cutting a false claim is always better than inventing a true-sounding one.
+- Keep the mandatory non-confirmation sentence verbatim if the framing requires it.
+Output the FULL corrected article as STRICT JSON (same shape as the draft).`;
+
+export function buildCorrectionPrompt(bundle, frame, topic, priorArticle, issues) {
+  const sourceBlock = (bundle.sources || [])
+    .map((s, i) => `[S${i + 1}] ${s.outlet}${s.url ? ` (${s.url})` : ""} — tier ${s.tier}\n${(s.text || "").slice(0, 2500)}`)
+    .join("\n\n");
+  const issueList = Array.isArray(issues) ? issues : String(issues || "").split(";").map((x) => x.trim()).filter(Boolean);
+  const user = `ABOUT: ${topic.primaryEntity || bundle.entity || ""}
+
+THE VERIFIED BUNDLE — the ONLY facts and quotes you may use to fix things:
+${sourceBlock || "(no source text)"}
+
+YOUR DRAFT (fix ONLY the flagged problems below; keep the rest verbatim):
+${JSON.stringify({ title: priorArticle.title, dek: priorArticle.dek, body: priorArticle.body, pullQuote: priorArticle.pullQuote, whatWeKnow: priorArticle.whatWeKnow, whatWeDont: priorArticle.whatWeDont, denial: priorArticle.denial }).slice(0, 7000)}
+
+PROBLEMS TO FIX (each one, surgically):
+${issueList.map((p, i) => `${i + 1}. ${p}`).join("\n") || "(none specified)"}
+${frame.needsDisclaimer ? `\nKEEP this exact sentence in the body: "${frame.disclaimerText}"` : ""}
+
+Return the FULL corrected article as STRICT JSON, same shape:
+{ "title":"...","dek":"...","body":"...","pullQuote":"...","keyTakeaways":["..."],"faq":[{"q":"...","a":"..."}],
+  "claims":[{"text":"...","sourceQuote":"verbatim bundle text"}],"whatWeKnow":["..."],"whatWeDont":["..."],"denial":null,"statusLabel":"${frame.uiLabel}" }`;
+  return { system: CORRECTION_SYS, user };
+}
+
+export async function writeGossip({ bundle, frame, topic, model = "deepseek/deepseek-v3.2", corrections = null, priorArticle = null, issues = null, rewrite = false }) {
+  // SURGICAL self-correction when we have a prior draft and aren't forcing a rewrite; otherwise a fresh write.
+  const useSurgical = priorArticle && !rewrite && (issues || corrections);
+  const { system, user } = useSurgical
+    ? buildCorrectionPrompt(bundle, frame, topic, priorArticle, issues || corrections)
+    : buildGossipPrompt(bundle, frame, topic, rewrite ? null : corrections);
+  const { data } = await chat({ model, system, user, json: true, maxTokens: 1800, temperature: useSurgical ? 0.2 : 0.4 });
   return data;
 }
