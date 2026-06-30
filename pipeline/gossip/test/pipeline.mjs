@@ -107,7 +107,7 @@ console.log(`\n=== GOSSIP BACKEND HARNESS (offline) ===\n`);
   };
   let wrote = 0;
   const writeImpl = ({ topic }) => { wrote++; return { slug: topic.slug, written: false }; };
-  const report = await gossipRun({ discoverImpl: async () => candidates, categorizeImpl: async () => topics, runImpl, writeImpl, dryRun: true, judge: false });
+  const report = await gossipRun({ discoverImpl: async () => candidates, categorizeImpl: async () => topics, runImpl, writeImpl, dryRun: true, judge: false, dedup: false });
   check("orchestrator publishes the clean topic", report.published.length === 1 && report.published[0].id === "t1");
   check("orchestrator holds the EXTREME topic", report.held.length === 1 && report.held[0].id === "t2");
   check("orchestrator blocks the unsafe topic", report.blocked.length === 1 && report.blocked[0].id === "t3");

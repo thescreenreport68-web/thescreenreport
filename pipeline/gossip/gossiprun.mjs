@@ -9,6 +9,8 @@ import { writeGossipArticle } from "./assemble.mjs";
 import { judgeGossip } from "./judge.mjs";
 import { detectGossipType } from "./writer.mjs";
 import { routeBySubject } from "./config.gossip.mjs";
+import { openStore } from "./vecStore.mjs";
+import { dedupCheck, recordPublished } from "./dedup.mjs";
 
 // One topic per category (celebrity/music/awards) — topics arrive freshest-first from discover, so first wins.
 function onePerCategoryPick(topics) {
@@ -20,7 +22,7 @@ function onePerCategoryPick(topics) {
   return [...byCat.values()];
 }
 
-export async function gossipRun({ discoverImpl, categorizeImpl, runImpl = runGossip, writeImpl = writeGossipArticle, judgeImpl = judgeGossip, onePerCategory = false, judge = true, limit = 0, dryRun = false, nowMs } = {}) {
+export async function gossipRun({ discoverImpl, categorizeImpl, runImpl = runGossip, writeImpl = writeGossipArticle, judgeImpl = judgeGossip, onePerCategory = false, judge = true, dedup = true, storeImpl = null, embedImpl, adjudicateImpl, limit = 0, dryRun = false, nowMs } = {}) {
   const candidates = discoverImpl ? await discoverImpl() : await discoverGossip();
   // Shortlist the freshest for the categorize LLM (cost + token control; candidates arrive freshest-first).
   const shortlist = candidates.slice(0, 24);
@@ -28,12 +30,22 @@ export async function gossipRun({ discoverImpl, categorizeImpl, runImpl = runGos
   let topics = onePerCategory ? onePerCategoryPick(all) : all;
   if (limit) topics = topics.slice(0, limit);
   const now = nowMs ?? Date.now();
-  const report = { candidates: candidates.length, inScope: all.length, topics: topics.length, published: [], held: [], blocked: [] };
+  const store = dedup ? (storeImpl || openStore()) : null;
+  const report = { candidates: candidates.length, inScope: all.length, topics: topics.length, published: [], held: [], blocked: [], skipped: [] };
 
   for (let i = 0; i < topics.length; i++) {
     const t = topics[i];
     const dateISO = new Date(now - i * 60000).toISOString();
     const cat = routeBySubject(t.subjectType).category;
+    // STEP 2 — DEDUP at the FRONT, before any content-find/write spend. Never republish a story (even reworded).
+    let dd = null;
+    if (dedup && store) {
+      dd = await dedupCheck(t, store, { embedImpl, adjudicateImpl, now: new Date(now) });
+      if (dd.decision === "DUPLICATE" || dd.decision === "HOLD") {
+        report.skipped.push({ id: t.id, category: cat, decision: dd.decision, reason: dd.reason, parentKey: dd.parentKey || null });
+        continue;
+      }
+    }
     let r;
     try {
       r = await runImpl(t);
@@ -56,9 +68,12 @@ export async function gossipRun({ discoverImpl, categorizeImpl, runImpl = runGos
         continue;
       }
       const out = writeImpl({ article: r.article, frame: r.frame, provenance: r.provenance, route: r.route, topic: t, dateISO, dryRun });
+      // record it in the dedup store so future runs (incl. the wider social net) won't re-publish it.
+      if (dedup && store && dd) recordPublished(t, store, { urlHash: dd.urlHash, eventKey: dd.eventKey, embedding: dd.embedding, slug: out.slug, parentKey: dd.parentKey, now: new Date(now) });
       report.published.push({
         id: t.id, category: cat, slug: out.slug, entity: t.primaryEntity, title: r.article.title,
         gossipType: detectGossipType(t), tier: r.frame.tier, severity: r.frame.severity, label: r.frame.uiLabel,
+        update: dd?.decision === "UPDATE" || false,
         autoScore: auto?.score ?? null, subscores: auto?.subscores ?? null, autoIssues: auto?.issues ?? [],
         sources: (r.bundle?.sources || []).map((s) => `${s.outlet}/${s.tier}`), written: out.written, path: out.path,
       });
@@ -89,6 +104,7 @@ if (process.argv[1] && import.meta.url === new URL(`file://${process.argv[1]}`).
     console.log(`     ${p.written ? "WROTE" : "(dry)"} ${p.slug}.md`);
   }
   if (report.held.length) { console.log(`\nHELD (${report.held.length}):`); for (const h of report.held) console.log(`  ⏸ [${h.category}] ${h.id} — ${h.reason}`); }
+  if (report.skipped.length) { console.log(`\nSKIPPED — already published / dedup (${report.skipped.length}):`); for (const s of report.skipped) console.log(`  ⊘ [${s.category}] [${s.decision}] ${s.id} — ${s.reason}`); }
   if (report.blocked.length) { console.log(`\nBLOCKED (${report.blocked.length}):`); for (const b of report.blocked) console.log(`  ✗ [${b.category}] [${b.status}] ${b.id} — ${b.reason}`); }
   console.log("");
 }
