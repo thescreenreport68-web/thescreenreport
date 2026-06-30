@@ -8,6 +8,7 @@ import { createRequire } from "node:module";
 const require = createRequire(import.meta.url);
 const matter = require("gray-matter");
 import { GOSSIP_AUTHOR_SLUG, AI_DISCLOSURE } from "./config.gossip.mjs";
+import { detectGossipType } from "./writer.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url)); // …/pipeline/gossip
 const CONTENT_DIR = path.resolve(__dirname, "../../content/articles");
@@ -34,6 +35,7 @@ export function buildGossipMarkdown({ article, frame, provenance, route, topic, 
     metaTitle: article.title,
     metaDescription: article.dek || "",
     formatTag: "gossip",
+    gossipType: detectGossipType(topic),
     keyTakeaways: article.keyTakeaways || [],
     faq: (article.faq || []).filter((f) => f && f.q && f.a).map((f) => ({ q: f.q, a: f.a })),
     // ── rumor-UI fields (rendered by the gossip modules) ──

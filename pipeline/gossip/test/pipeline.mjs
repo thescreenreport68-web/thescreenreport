@@ -15,6 +15,8 @@ import { decide, monitorGossip } from "../monitor.mjs";
 import { frameTopic } from "../frame.mjs";
 import { gossipRun } from "../gossiprun.mjs";
 import { verifyQuotes } from "../quoteGuard.mjs";
+import { legalGate } from "../legalGate.mjs";
+import { severity } from "../policy.mjs";
 
 let pass = 0, fail = 0; const fails = [];
 const check = (name, cond, detail = "") => { if (cond) { pass++; console.log(`  ✅ ${name}`); } else { fail++; fails.push(name); console.log(`  ❌ ${name}  ${detail}`); } };
@@ -118,6 +120,19 @@ console.log(`\n=== GOSSIP BACKEND HARNESS (offline) ===\n`);
   check("quote guard FLAGS a misquote", verifyQuotes({ body: 'She says he "has a drug problem".' }, bundle).ok === false);
   check("quote guard FLAGS an invented quote", verifyQuotes({ body: 'She said "I never loved him anyway".' }, bundle).ok === false);
   check("quote guard PASSES a real verbatim quote", verifyQuotes({ body: 'He has "struggled with substance abuse".' }, bundle).ok === true);
+}
+
+// 9) AUDIT FIXES — the safety gaps the independent audit found, now closed.
+{
+  const fr = { needsDisclaimer: false, decision: "PUBLISH" };
+  check("harass: unattributed → BLOCKED", legalGate({ title: "x", body: "She harassed her costar on set." }, fr).blocks.some((b) => b.includes("UNATTRIBUTED_DAMAGING")));
+  check("harass: attributed → not blocked for that", legalGate({ title: "x", body: "According to Variety, she harassed her costar." }, fr).blocks.every((b) => !b.includes("UNATTRIBUTED_DAMAGING")));
+  check("'sexually abused' → EXTREME severity", severity("He was sexually abused as a teen actor") === "EXTREME");
+  check("'sexually assaulted' → EXTREME severity", severity("accused of having sexually assaulted a co-star") === "EXTREME");
+  check("plural 'teenagers' + sexual → MINOR_ALLEGATION block", legalGate({ title: "x", body: "Police say he sexually assaulted the teenagers." }, fr).blocks.some((b) => b.includes("MINOR_ALLEGATION")));
+  const denialBundle = { sources: [{ text: "A rep for the star denies he uses drugs regularly and calls the report completely false." }] };
+  check("quote lifted from a denial → flagged", verifyQuotes({ body: 'Insiders claim he "uses drugs regularly".' }, denialBundle).ok === false);
+  check("genuine verbatim quote still passes", verifyQuotes({ body: 'The rep said he "calls the report completely false".' }, denialBundle).ok === true);
 }
 
 console.log(`\n── RESULT: ${pass} passed${fail ? `, ${fail} FAILED` : ""} ──`);

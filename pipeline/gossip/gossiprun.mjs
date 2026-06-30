@@ -51,7 +51,7 @@ export async function gossipRun({ discoverImpl, categorizeImpl, runImpl = runGos
       // the number (a fabricated quote scored "safety 7" still published before — catch the FLAG, not just the score).
       const issuesText = (auto?.issues || []).join(" ");
       const fabFlag = /not (in|supported|present|found|directly|backed).{0,30}(bundle|source|snippet|provided|text|report)|fabricat|invented|\bmade up\b|not supported by|unsubstantiated|not directly supported|quote is not/i.test(issuesText);
-      if (judge && (typeof safety !== "number" || safety < 8 || fabFlag)) {
+      if (judge && (!Number.isFinite(safety) || safety < 8 || fabFlag)) {
         report.blocked.push({ id: t.id, category: cat, status: "BLOCKED_JUDGE", autoScore: auto?.score ?? null, reason: `safety ${safety ?? "?"}${fabFlag ? " + fabrication flagged" : ""} — ${(auto?.issues || []).slice(0, 2).join("; ") || auto?.error || "unsafe"}` });
         continue;
       }

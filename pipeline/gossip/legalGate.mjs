@@ -20,7 +20,7 @@ const DISCLAIMER_RE = /(not (been )?(independently )?(confirmed|verified)|has(?:
 
 // A sentence that imputes something genuinely damaging (defamation-per-se territory: disease, crime, drugs,
 // sexual misconduct, infidelity, "secretly X"). These MAY only appear attributed or clearly framed as rumor.
-const DAMAGING = /\b(herpes|hiv|std|tested positive|is a (prostitute|sex worker|escort|hooker)|(used|using|on|doing) (cocaine|heroin|meth|crack|drugs)|overdos\w*|is an? (addict|alcoholic)|cheat(ed|ing)?|having an affair|unfaithful|abus(ed|ing|er)|assault(ed|ing)?|\brape[ds]?\b|molest\w*|is (secretly )?(gay|pregnant|broke|bankrupt)|secretly (gay|pregnant|married|dating)|arrested|convicted|guilty of|fired for|fraud|scam\w*)\b/i;
+const DAMAGING = /\b(herpes|hiv|std|tested positive|is a (prostitute|sex worker|escort|hooker)|(used|using|on|doing) (cocaine|heroin|meth|crack|drugs)|overdos\w*|is an? (addict|alcoholic)|cheat(ed|ing)?|having an affair|unfaithful|abus(ed|ing|er)|assault(ed|ing)?|harass(ed|ing|ment|es)?|\brape[ds]?\b|molest\w*|is (secretly )?(gay|pregnant|broke|bankrupt)|secretly (gay|pregnant|married|dating)|arrested|convicted|guilty of|fired for|fraud|scam\w*)\b/i;
 
 // Attribution / hedge / framing that makes a damaging mention defensible within the same sentence.
 const ATTRIB = /(according to|reportedly|alleged\w*|claim\w*|sources? (say|tell|claim)|per [A-Z]|told [A-Z][a-z]|rumou?r\w*|unconfirmed|unverified|denies|denied|speculat\w*|appears? to|seem\w* to|fans? (think|believe|speculate)|is said to|purported\w*|insider\w*)/i;
@@ -30,7 +30,7 @@ const INTIMATE = /(sex tape|nude (photo|pic|image|leak)|leaked (nudes?|photos?|v
 const HOSTING = /(watch|download|view|see (it|them|the)|click|tap|link|here|full (video|tape)|uncensored|leaked below|see more)/i;
 
 // Minor + a sexual/criminal context → never publish.
-const MINOR = /\b(underage|under-?age|a minor\b|the minor\b|(1[0-7]|[1-9])-year-old|teenage(r)?|\bchild\b|\bchildren\b|\bkids?\b|\bminors?\b)\b/i;
+const MINOR = /\b(underage|under-?age|a minor\b|the minor\b|(1[0-7]|[1-9])-year-old|teenage(rs?)?|\bchild\b|\bchildren\b|\bkids?\b|\bminors?\b)\b/i;
 const MINOR_BAD = /\b(sexual\w*|assault\w*|abuse\w*|\brape[ds]?\b|molest\w*|nude|sex\b|explicit|groom\w*|predator)\b/i;
 
 function splitSentences(text) {
@@ -65,7 +65,11 @@ export function legalGate(article, frame = {}, topic = null) {
   if (splitSentences(text).some((s) => MINOR.test(s) && MINOR_BAD.test(s)))
     blocks.push("MINOR_ALLEGATION: a sexual/criminal allegation involving a minor — never publish.");
 
-  // 6) fabrication (only if the writer emitted claims[] + we have grounding facts to check against).
+  // 6) fabrication via the writer's claims[] receipts vs topic.facts. NOTE (deferred): the gossip topic does
+  // NOT carry topic.facts today, so this branch is intentionally inert here — claim-level grounding is the job
+  // of the future verify-and-correct gate (Step 5). The ACTIVE fabrication defense right now is the
+  // deterministic verbatim-quote guard (verifyQuotes, run in run.mjs). This stays so it auto-activates the day
+  // a fact bundle is attached to the topic, without implying coverage that isn't live yet.
   if (Array.isArray(article.claims) && article.claims.length && topic && (topic.facts || []).length) {
     const cc = verifyClaims(article, topic);
     for (const v of cc.contradicted) blocks.push(`FABRICATION: "${v.claim}" — ${v.why}`);
