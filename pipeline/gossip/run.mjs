@@ -48,12 +48,21 @@ function inspect(article, frame, topic, bundle, verifyResult) {
   };
 }
 
-// The judge subscore/flag that constitutes an UNSAFE piece (same rule the orchestrator used as a fail-closed gate).
-function judgeFlags(auto) {
+// GUARD CALIBRATION (owner directive, starting-point phase). The judge must STILL catch false claims / fabrications
+// — that's non-negotiable — but it must NOT block a publishable gossip piece for CRAFT (a bit formal / dry voice /
+// structure). So the judge blocks ONLY on:
+//   (a) fabFlag — it flagged a fabricated/unsupported claim (the accuracy guard; ALWAYS blocks), or
+//   (b) a GENUINELY low safety score (< JUDGE_SAFETY_FLOOR) — a real accuracy/safety problem, not a borderline
+//       craft dock (the old floor of 8 was blocking accurate-but-plain articles at safety 6-7).
+//   (c) a degraded verify (L2 errored) AND no judge safety read — no accuracy backstop at all ⇒ block.
+// The deterministic legal + verbatim-quote + claim-verify gates still run UPSTREAM; this is only the judge's
+// numeric backstop. We raise this floor again once we have an audience (owner: "upgrade the guard later").
+const JUDGE_SAFETY_FLOOR = 5;
+function judgeFlags(auto, { verifyDegraded = false } = {}) {
   const safety = auto?.subscores?.safety;
   const issuesText = (auto?.issues || []).join(" ");
-  const fabFlag = /not (in|supported|present|found|directly|backed).{0,30}(bundle|source|snippet|provided|text|report)|fabricat|invented|\bmade up\b|not supported by|unsubstantiated|not directly supported|quote is not/i.test(issuesText);
-  const unsafe = !Number.isFinite(safety) || safety < 8 || fabFlag;
+  const fabFlag = /not (in|supported|present|found|directly|backed).{0,30}(bundle|source|snippet|provided|text|report)|fabricat|invented|\bmade up\b|not supported by|unsubstantiated|not directly supported|quote is not|false claim|made-up/i.test(issuesText);
+  const unsafe = fabFlag || (Number.isFinite(safety) && safety < JUDGE_SAFETY_FLOOR) || (verifyDegraded && !Number.isFinite(safety));
   return { unsafe, safety, fabFlag, issues: auto?.issues || [] };
 }
 
@@ -103,14 +112,14 @@ export async function runGossip(topic, {
   let auto = null;
   if (judge || verifyDegraded) {
     try { auto = await judgeImpl({ article, bundle, frame }); } catch (e) { auto = { error: String(e?.message || e).slice(0, 80) }; }
-    let flag = judgeFlags(auto);
+    let flag = judgeFlags(auto, { verifyDegraded });
     if (flag.unsafe && flag.issues.length) {
       const fixed = await writeImpl({ bundle, frame, topic, model, priorArticle: article, issues: flag.issues, rewrite: false });
       const recheck = inspect(fixed, frame, topic, bundle, verify ? await verifyImpl({ article: fixed, bundle, model }) : null);
       if (recheck.allPass) {
         article = fixed;
         try { auto = await judgeImpl({ article, bundle, frame }); } catch (e) { auto = { error: String(e?.message || e).slice(0, 80) }; }
-        flag = judgeFlags(auto);
+        flag = judgeFlags(auto, { verifyDegraded });
       }
     }
     if (flag.unsafe) return { status: "BLOCKED_JUDGE", auto, frame, article, stage: "judge", reason: `safety ${flag.safety ?? "?"}${flag.fabFlag ? " + fabrication flagged" : ""} — ${(flag.issues || []).slice(0, 2).join("; ") || auto?.error || "unsafe"}` };

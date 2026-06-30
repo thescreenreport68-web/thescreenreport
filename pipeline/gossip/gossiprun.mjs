@@ -77,7 +77,8 @@ export async function gossipRun({ discoverImpl, categorizeImpl, runImpl = runGos
       if (links && linkIndex) { try { r.article.relatedLinks = await findRelatedImpl({ article: r.article, topic: t, index: linkIndex, selfSlug: t.slug }); } catch { r.article.relatedLinks = []; } }
       const out = writeImpl({ article: r.article, frame: r.frame, provenance: r.provenance, route: r.route, topic: t, dateISO, dryRun });
       // record it in the dedup store so future runs (incl. the wider social net) won't re-publish it.
-      if (dedup && store && dd) recordPublished(t, store, { urlHash: dd.urlHash, eventKey: dd.eventKey, embedding: dd.embedding, slug: out.slug, parentKey: dd.parentKey, now: new Date(now) });
+      // A DRY RUN never mutates the store (it checks dedup but doesn't mark these as published).
+      if (dedup && store && dd && !dryRun) recordPublished(t, store, { urlHash: dd.urlHash, eventKey: dd.eventKey, embedding: dd.embedding, slug: out.slug, parentKey: dd.parentKey, now: new Date(now) });
       report.published.push({
         id: t.id, category: cat, slug: out.slug, entity: t.primaryEntity, title: r.article.title,
         gossipType: detectGossipType(t), tier: r.frame.tier, severity: r.frame.severity, label: r.frame.uiLabel,

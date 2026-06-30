@@ -166,6 +166,22 @@ const cleanArticle = () => ({
   check("non-degraded verify with judge:false does NOT force the judge", jCalls === 0 && r.status === "PUBLISH" && r.provenance?.verifyDegraded === false);
 }
 
+// ── GUARD CALIBRATION: a craft-weak but ACCURATE piece (safety 6, only voice/structure issues) now PUBLISHES ──
+{
+  const verifyImpl = async () => ({ ok: true, unsupported: [], severity: "minor", brokenRatio: 0, degraded: false });
+  const judgeImpl = async () => ({ score: 72, subscores: { safety: 6, voice: 6, structure: 6 }, issues: ["Voice is a bit too formal for peak gossip", "the what-we-know section feels a little dry"] });
+  const r = await runGossip(TOPIC, { writeImpl: async () => cleanArticle(), verifyImpl, judgeImpl, verify: true, judge: true, corroborate: false });
+  check("craft-only weakness (safety 6, no fabrication) PUBLISHES — guard lowered for craft", r.status === "PUBLISH" && r.auto?.score === 72, JSON.stringify(r.status) + " " + (r.reason || ""));
+}
+
+// ── but a FALSE-CLAIM / fabrication flag STILL blocks even at a decent safety score (accuracy guard kept) ──
+{
+  const verifyImpl = async () => ({ ok: true, unsupported: [], severity: "minor", brokenRatio: 0, degraded: false });
+  const judgeImpl = async () => ({ score: 70, subscores: { safety: 7 }, issues: ["the claim that they are engaged is not supported by the bundle"] });
+  const r = await runGossip(TOPIC, { writeImpl: async () => cleanArticle(), verifyImpl, judgeImpl, verify: true, judge: true, corroborate: false });
+  check("a fabrication/false-claim flag STILL blocks even at safety 7 (accuracy guard kept)", r.status === "BLOCKED_JUDGE", JSON.stringify(r.status));
+}
+
 console.log(`\n── RESULT: ${pass} passed${fail ? `, ${fail} FAILED` : ""} ──`);
 if (fail) { console.log("FAILED:", fails.join("; ")); process.exit(1); }
 console.log("Step 5 verify + self-correct + judge-backstop green. ✅\n");
