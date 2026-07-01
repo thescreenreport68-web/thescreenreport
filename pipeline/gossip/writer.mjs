@@ -75,7 +75,7 @@ ${frame.writerDirective}
 ${frame.needsDisclaimer ? `\nMANDATORY — include this exact sentence, as its own sentence in the body:\n"${frame.disclaimerText}"` : ""}
 ${corrections ? `\n⚠ FIX THESE FROM YOUR LAST DRAFT (keep the voice + the same facts; attribute any flagged claim, e.g. "according to ${frame.attribution || "the outlet"}", or add the required note): ${corrections}` : ""}
 
-LENGTH: write 300–450 words — IMPORTANT, do not stop short at 150. Keep individual SENTENCES tight, but develop the story fully: the trigger, the context, the fan reaction, the what-we-know-vs-what's-unconfirmed, and why it matters. A real article, not a caption.
+LENGTH: write 450–600 words — IMPORTANT, do not stop short. Keep individual SENTENCES tight, but develop the story FULLY and make it interesting: the trigger, the who/what/when/where, the fan reaction, the what-we-know-vs-what's-unconfirmed, the relevant BACKGROUND and context (prior related events, the people involved, the timeline) — using ONLY facts supported by the bundle (add real, verifiable context, never invented filler). More RELEVANT specifics = a stronger, more engaging story. A rich article, never a caption.
 STRUCTURE: headline = a curiosity hook in present tense (NEVER state an unconfirmed damaging claim as fact in the headline). Hook → what sparked it (attributed) → what we know vs. what's unconfirmed → quick context / why it matters → the denial / other side if any. Pull one punchy line out as the pull-quote.
 
 Return STRICT JSON:

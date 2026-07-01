@@ -24,6 +24,42 @@ const RX = {
   facebook: /(?:^|\/\/)(?:www\.|m\.|web\.)?facebook\.com\/(?:[^/?#]+\/posts\/|permalink\.php\?|story\.php\?|[^/?#]+\/videos\/|watch\/?\?|photo\.php\?|[^/?#]+\/photos\/|share\/(?:p|v|r)\/|reel\/)/i,
 };
 
+const UA = "The Screen Report/1.0 (+https://thescreenreport.com)";
+const defaultFetch = (url, opts) => fetch(url, opts);
+
+// THE STORY PHOTO (owner directive): use the actual event photo the story is ABOUT — the source outlet's
+// og:image, which is usually the wide, on-topic (often paparazzi/agency) shot that HOOKS, instead of a tight TMDB
+// headshot. HOTLINKED (not re-hosted). Fail-safe: any issue ⇒ skip and fall back to TMDB. (Policy note: these are
+// unlicensed agency photos — owner accepts the copyright exposure pre-audience; revisit before launch.)
+export async function fetchOgImage(url, fetchImpl = defaultFetch) {
+  try {
+    const r = await fetchImpl(url, { headers: { "User-Agent": UA } });
+    if (!r.ok) return null;
+    const html = (await r.text()).slice(0, 80000);
+    const m =
+      html.match(/<meta[^>]+(?:property|name)=["'](?:og:image(?::secure_url)?|twitter:image(?::src)?)["'][^>]+content=["']([^"']+)["']/i) ||
+      html.match(/<meta[^>]+content=["']([^"']+)["'][^>]+(?:property|name)=["'](?:og:image|twitter:image)["']/i);
+    let src = (m?.[1] || "").trim().replace(/&amp;/g, "&");
+    if (!src) return null;
+    if (src.startsWith("//")) src = "https:" + src;
+    else if (src.startsWith("/")) { try { src = new URL(src, url).href; } catch { return null; } }
+    if (!/^https?:\/\//i.test(src)) return null;
+    // Validate it's a real, directly-loadable image (filters 404s / non-image og:images so we never hotlink a
+    // broken hero). Can't fully predict browser hotlink-protection, but this catches the obvious failures.
+    try {
+      const ir = await fetchImpl(src, { headers: { "User-Agent": UA } });
+      const ct = ir?.headers?.get?.("content-type") || "";
+      if (!ir?.ok || !/^image\//i.test(ct)) return null;
+    } catch { return null; }
+    return src;
+  } catch {
+    return null;
+  }
+}
+
+// registrable-domain-ish outlet label for the photo credit.
+const outletLabel = (s) => s?.outlet || (s?.url ? (s.url.replace(/^https?:\/\/(www\.)?/, "").split("/")[0]) : "the source");
+
 // Every URL we might embed: the topic's own link + every source URL (incl. corroborating). Deduped, order kept.
 export function collectUrls(topic, bundle) {
   const urls = [topic?.url, topic?.link, ...((topic?.sources || []).map((s) => s.url)), ...((bundle?.sources || []).map((s) => s.url))];
@@ -90,7 +126,7 @@ function stillCandidates(personSet, titleSet) {
 
 export async function pickHero(
   { topic, article, bundle, frame } = {},
-  { getPersonImagesImpl = getPersonImages, getTitleImagesImpl = getTitleImages, visionImpl, model, vision = true } = {}
+  { getPersonImagesImpl = getPersonImages, getTitleImagesImpl = getTitleImages, visionImpl, model, vision = true, fetchImpl = defaultFetch, ogImpl = fetchOgImage, sourcePhoto = true, maxSourcePhotos = 2 } = {}
 ) {
   const entity = topic?.primaryEntity || article?.entity || "";
   const headline = article?.title || topic?.title || "";
@@ -108,6 +144,24 @@ export async function pickHero(
   // the YouTube receipt's thumbnail is also a still candidate (often the most on-topic visual).
   if (embed?.platform === "youtube" && embed.thumb) candidates.unshift({ url: embed.thumb, kind: "video-thumb", titleContext: "" });
 
+  // 2b) THE STORY PHOTO — the source outlet's og:image (the actual event/paparazzi shot; wide + hooking). Prepend
+  // it so it competes as (usually) the strongest candidate. Only the primary NON-corroborating sources with a URL.
+  if (sourcePhoto) {
+    const seenDom = new Set();
+    const srcs = (bundle?.sources || []).filter((s) => s?.url && !s.corroborating);
+    let added = 0;
+    for (const s of srcs) {
+      if (added >= maxSourcePhotos) break;
+      const dom = (s.url.replace(/^https?:\/\/(www\.)?/, "").split("/")[0] || "").toLowerCase();
+      if (seenDom.has(dom)) continue;
+      seenDom.add(dom);
+      try {
+        const og = await ogImpl(s.url, fetchImpl);
+        if (og) { candidates.unshift({ url: og, kind: "source-photo", outlet: outletLabel(s), titleContext: "" }); added++; }
+      } catch { /* skip */ }
+    }
+  }
+
   // 3) Pick the still — vision-ranked when there are ≥2 candidates; otherwise the deterministic top.
   let chosen = candidates[0] || null, score = null, why = "deterministic top candidate";
   if (candidates.length >= 2 && vision) {
@@ -115,20 +169,23 @@ export async function pickHero(
     if (r?.pick) { chosen = r.pick; score = r.score; why = r.why || why; }
   }
 
-  const credit = chosen ? (chosen.kind === "video-thumb" ? "Still via YouTube" : "Image: The Movie Database (TMDB)") : null;
+  const credit = !chosen ? null
+    : chosen.kind === "source-photo" ? `Photo via ${chosen.outlet || "the source"}`
+    : chosen.kind === "video-thumb" ? "Still via YouTube"
+    : "Image: The Movie Database (TMDB)";
   // Caption is deliberately NEUTRAL — it must NOT restate an unconfirmed claim as fact (legal). "Pictured: X".
   const caption = entity ? `Pictured: ${entity}${chosen?.titleContext ? ` in ${chosen.titleContext}` : ""}.` : (chosen?.titleContext || "");
   const alt = entity ? `${entity}${chosen?.titleContext ? ` in ${chosen.titleContext}` : ""}` : (headline || "hero image");
 
   if (chosen) {
-    // Serving dimensions by kind (for next/image layout + the OG card). TMDB backdrops/yt thumbs = 16:9 landscape;
-    // profiles/posters = 2:3 portrait (served at full res now, so the layout treats them as high-quality portraits).
-    const DIMS = { backdrop: [1280, 720], "video-thumb": [1280, 720], poster: [800, 1200], profile: [800, 1200] };
+    // Serving dimensions by kind (for next/image layout + the OG card). Story photos / TMDB backdrops / yt thumbs
+    // = 16:9 landscape (fill the wide hero with NO tight crop); profiles/posters = 2:3 portrait.
+    const DIMS = { "source-photo": [1200, 675], backdrop: [1280, 720], "video-thumb": [1280, 720], poster: [800, 1200], profile: [800, 1200] };
     const [width, height] = DIMS[chosen.kind] || [1280, 720];
     const orientation = width >= height ? "landscape" : "portrait";
     return {
       kind: "image", src: chosen.url, width, height, orientation,
-      alt, caption, credit, source: chosen.kind === "video-thumb" ? "youtube" : "tmdb",
+      alt, caption, credit, source: chosen.kind === "source-photo" ? "source" : chosen.kind === "video-thumb" ? "youtube" : "tmdb",
       embed: embed || null, // the originating post rides along as the in-body "receipt" (all embeds are account-free)
       score, why, candidateCount: candidates.length,
     };

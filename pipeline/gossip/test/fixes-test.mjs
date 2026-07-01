@@ -71,6 +71,17 @@ console.log("\n=== OWNER-REVIEW FIXES ===\n");
   check("a non-Music route is never touched (no lookup)", notMusicRoute === null);
 }
 
+// ── dual-category: a musician's gossip cross-lists into Celebrity (music + celebrity); an actor stays celebrity-only ──
+{
+  const article = { title: "X news", dek: "d", body: "b", keyTakeaways: [], faq: [], whatWeKnow: [], whatWeDont: [] };
+  const frame = { tier: "SINGLE_SOURCE_RUMOR", severity: "NORMAL", uiLabel: "Unconfirmed rumor", monitor: false, attribution: "Just Jared" };
+  const prov = { sensitivity: "normal", monitor: false, attribution: "Just Jared", sources: [] };
+  const music = buildGossipMarkdown({ article, frame, provenance: prov, route: { category: "music", subcategory: "news" }, topic: { primaryEntity: "Dua Lipa", slug: "dua", subjectType: "musician" }, dateISO: "2026-07-01T00:00:00Z" });
+  check("a Music-primary gossip piece cross-lists into Celebrity", music.frontmatter.category === "music" && music.frontmatter.secondaryCategory === "celebrity");
+  const celeb = buildGossipMarkdown({ article, frame, provenance: prov, route: { category: "celebrity", subcategory: "news" }, topic: { primaryEntity: "Some Actor", slug: "act", subjectType: "actor" }, dateISO: "2026-07-01T00:00:00Z" });
+  check("a Celebrity-primary piece has no secondary category", celeb.frontmatter.category === "celebrity" && !celeb.frontmatter.secondaryCategory);
+}
+
 console.log(`\n── RESULT: ${pass} passed${fail ? `, ${fail} FAILED` : ""} ──`);
 if (fail) { console.log("FAILED:", fails.join("; ")); process.exit(1); }
 console.log("Owner-review fixes green. ✅\n");

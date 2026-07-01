@@ -10,8 +10,8 @@ export function qualityCheck(article) {
   const words = body.replace(/[#*_>`\[\]()]/g, " ").trim().split(/\s+/).filter(Boolean).length;
 
   if (!article.title || article.title.length < 15) issues.push("title missing or too short (<15 chars)");
-  if (words < 140) issues.push(`body ${words}w < 140 (too thin to be useful)`);
-  if (words > 700) issues.push(`body ${words}w > 700 (gossip should stay tight)`);
+  if (words < 280) issues.push(`body ${words}w too thin — expand to 450+ words with more verified specifics + context`);
+  if (words > 750) issues.push(`body ${words}w > 750 (gossip should stay tight)`);
   if (words > 120 && !/\n\s*\n/.test(body)) issues.push("one undivided block of text (needs paragraph breaks)");
   const banned = (body.match(BANNED) || []).length;
   if (banned >= 3) issues.push(`${banned} generic AI-tell phrases (delve/tapestry/…) — rewrite naturally`);

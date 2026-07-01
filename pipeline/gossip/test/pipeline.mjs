@@ -51,7 +51,7 @@ console.log(`\n=== GOSSIP BACKEND HARNESS (offline) ===\n`);
 // 3) QUALITY — thin fails, real passes.
 {
   check("quality blocks thin body", qualityCheck({ title: "A reasonably long gossip title here", dek: "x standfirst", body: "Too short." }).pass === false);
-  const good = { title: "Ava Stone and Liam Carter spark dating rumors", dek: "The two were spotted together this weekend.", body: ("According to People, Ava Stone and Liam Carter were seen together at a Los Angeles restaurant this past weekend, sparking a fresh round of dating speculation among fans.\n\nA source told the outlet the pair looked happy and relaxed. Reps for both stars did not immediately respond to requests for comment. " + "Nothing about the nature of their relationship has been confirmed, and the rumors remain unverified for now. ".repeat(8)) };
+  const good = { title: "Ava Stone and Liam Carter spark dating rumors", dek: "The two were spotted together this weekend.", body: ("According to People, Ava Stone and Liam Carter were seen together at a Los Angeles restaurant this past weekend, sparking a fresh round of dating speculation among fans.\n\nA source told the outlet the pair looked happy and relaxed. Reps for both stars did not immediately respond to requests for comment. " + "Nothing about the nature of their relationship has been confirmed, and the rumors remain unverified for now. ".repeat(18)) };
   check("quality passes a real article", qualityCheck(good).pass === true, JSON.stringify(qualityCheck(good).issues));
 }
 

@@ -8,6 +8,7 @@ export type Article = {
   title: string;
   slug: string;
   category: string;
+  secondaryCategory?: string; // cross-list into a 2nd section (e.g. a musician's gossip → Music + Celebrity)
   subcategory?: string;
   author: string;
   date: string; // ISO
@@ -212,6 +213,7 @@ export function getAllArticles(): Article[] {
       title: data.title,
       slug,
       category: data.category,
+      secondaryCategory: data.secondaryCategory,
       subcategory: data.subcategory,
       author: data.author,
       date: data.date,
@@ -335,7 +337,10 @@ export function getArticleBySlug(slug: string): Article | undefined {
 }
 
 export function getArticlesByCategory(category: string): Article[] {
-  return getAllArticles().filter((a) => a.category === category);
+  // An article's PRIMARY category is its URL silo; a secondaryCategory cross-lists it into a second section
+  // (e.g. a musician's gossip files under Music but also appears on the Celebrity page). One canonical URL, so
+  // it's SEO-safe (no duplicate content — just listed in two section pages).
+  return getAllArticles().filter((a) => a.category === category || a.secondaryCategory === category);
 }
 
 export function getArticlesBySubcategory(

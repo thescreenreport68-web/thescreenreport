@@ -39,6 +39,8 @@ export function buildGossipMarkdown({ article, frame, provenance, route, topic, 
     title: article.title,
     slug,
     category: route.category,
+    // A musician / awards-race subject is ALSO a celebrity → cross-list into Celebrity (one canonical URL).
+    ...(route.category === "music" || route.category === "awards" ? { secondaryCategory: "celebrity" } : {}),
     subcategory: route.subcategory,
     author: GOSSIP_AUTHOR_SLUG,
     date: dateISO,

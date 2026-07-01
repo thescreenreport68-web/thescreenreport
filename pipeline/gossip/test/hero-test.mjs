@@ -1,7 +1,7 @@
 // STEP 6 — HERO IMAGE PICKER. Offline: TMDB image-getters + the vision gate are injected. Proves the priority
 // (receipt embed / cinematic still / vision-ranked), the fail-safes, the credit-line, and the NEUTRAL caption
 // (an image caption must never restate an unconfirmed claim as fact). Run: node pipeline/gossip/test/hero-test.mjs
-import { pickHero, detectEmbed, collectUrls } from "../heroImage.mjs";
+import { pickHero, detectEmbed, collectUrls, fetchOgImage } from "../heroImage.mjs";
 
 let pass = 0, fail = 0;
 const fails = [];
@@ -114,6 +114,30 @@ const TOPIC = { primaryEntity: "Selena Gomez", title: 'Selena Gomez spotted on t
   const visionImpl = async () => { visionCalls++; return { ranked: [{ index: 2, identityMatch: true, impact: 9, fit: 9 }] }; };
   const h = await pickHero({ topic: TOPIC, article: { title: TOPIC.title } }, { getPersonImagesImpl, getTitleImagesImpl, visionImpl, vision: false });
   check("vision:false → no vision call, deterministic top", visionCalls === 0 && h.src === "https://image.tmdb.org/t/p/w1280/tb1.jpg");
+}
+
+// ── fetchOgImage: extract + validate the source outlet's og:image ──
+{
+  const html = '<html><head><meta property="og:image" content="https://cdn.jj.com/dua-studio.jpg"></head></html>';
+  const fetchImpl = async (url) => url.endsWith(".jpg") ? { ok: true, headers: { get: () => "image/jpeg" } } : { ok: true, text: async () => html };
+  check("fetchOgImage extracts + validates the og:image", (await fetchOgImage("https://justjared.com/a", fetchImpl)) === "https://cdn.jj.com/dua-studio.jpg");
+  check("fetchOgImage → null when no og:image", (await fetchOgImage("https://x.com/a", async () => ({ ok: true, text: async () => "<html></html>" }))) === null);
+  check("fetchOgImage → null when og:image isn't a loadable image", (await fetchOgImage("https://x.com/a", async (u) => u.endsWith("a") ? { ok: true, text: async () => '<meta property="og:image" content="https://x.com/notimg">' } : { ok: true, headers: { get: () => "text/html" } })) === null);
+}
+
+// ── the STORY PHOTO (owner directive): the source outlet's og:image is the preferred hero ──
+{
+  const ogImpl = async (url) => url.includes("justjared") ? "https://cdn.jj.com/dua-studio.jpg" : null;
+  const bundle = { sources: [{ outlet: "Just Jared", url: "https://www.justjared.com/2026/07/01/dua-lipa-studio/", tier: 3 }] };
+  const h = await pickHero({ topic: { primaryEntity: "Dua Lipa", title: "Dua Lipa spotted at the studio", gossipType: "spotted" }, article: { title: "Dua Lipa spotted at the studio" }, bundle },
+    { getPersonImagesImpl, getTitleImagesImpl: async () => null, visionImpl: async () => ({ ranked: [{ index: 0, identityMatch: true, impact: 9, fit: 9, why: "the actual event photo" }] }), ogImpl });
+  check("the source outlet's story photo becomes the hero", h.src === "https://cdn.jj.com/dua-studio.jpg" && h.source === "source");
+  check("story photo credited to the outlet + landscape (no tight crop)", /Photo via Just Jared/.test(h.credit) && h.orientation === "landscape");
+}
+{
+  const h = await pickHero({ topic: { primaryEntity: "Selena Gomez", title: "x", gossipType: "general" }, article: { title: "x" }, bundle: { sources: [{ outlet: "Variety", url: "https://variety.com/x" }] } },
+    { getPersonImagesImpl, getTitleImagesImpl: async () => null, visionImpl: async () => ({ ranked: [{ index: 0, identityMatch: true, impact: 7, fit: 7 }] }), ogImpl: async () => null });
+  check("no source photo available → falls back to TMDB", h.source === "tmdb");
 }
 
 console.log(`\n── RESULT: ${pass} passed${fail ? `, ${fail} FAILED` : ""} ──`);
