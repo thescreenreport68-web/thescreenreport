@@ -18,6 +18,7 @@ subjectType RULE (drives which category it files under — get this right):
 - "awards" = an awards-RACE rumor/speculation (who might win/be snubbed).
 - When unsure between actor and reality, use "reality" (it still files under Celebrity). Only "musician" routes to Music, so use it precisely.
 THE TEST: is it about a STAR'S PERSONAL LIFE / a rumor / interpersonal drama (IN), or a CONFIRMED PRODUCT or RESULT (OUT)? When unsure → OUT.
+CONFIRMED flag (drives the reader badge — get it right): set confirmed=true when the CENTRAL fact of the story is CONFIRMED — the person officially announced it, it's on a court/police record, or an outlet reports it as established fact — EVEN IF this particular item is about a reaction, an outfit, or a related detail (e.g. a star who has PUBLICLY ANNOUNCED a pregnancy → confirmed=true, not a "rumor"). Set confirmed=false ONLY for a genuinely unconfirmed rumor / speculation / single-source tip. A confirmed fact must never be labeled an unconfirmed rumor.
 Output strict JSON only.`;
 
 function buildPrompt(items) {

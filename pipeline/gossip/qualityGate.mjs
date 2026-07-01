@@ -12,6 +12,11 @@ export function qualityCheck(article) {
   if (!article.title || article.title.length < 15) issues.push("title missing or too short (<15 chars)");
   if (words < 280) issues.push(`body ${words}w too thin — expand to 450+ words with more verified specifics + context`);
   if (words > 750) issues.push(`body ${words}w > 750 (gossip should stay tight)`);
+  // TRUNCATED write: an unclosed markdown bold (odd ** count, e.g. a cut-off "**What We Know vs.") OR a body that
+  // ends without terminal punctuation — a cut-off generation. "truncated" triggers a full regenerate in run.mjs.
+  const openBold = (body.match(/\*\*/g) || []).length % 2 !== 0;
+  const tail = body.replace(/[#*_>`~\s]+$/g, "");
+  if (openBold || (tail.length > 60 && !/[.!?"'”’)\]]$/.test(tail))) issues.push("body appears TRUNCATED — it ends mid-sentence; regenerate the complete article");
   if (words > 120 && !/\n\s*\n/.test(body)) issues.push("one undivided block of text (needs paragraph breaks)");
   const banned = (body.match(BANNED) || []).length;
   if (banned >= 3) issues.push(`${banned} generic AI-tell phrases (delve/tapestry/…) — rewrite naturally`);

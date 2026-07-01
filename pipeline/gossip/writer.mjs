@@ -18,7 +18,10 @@ NON-NEGOTIABLE (legal + trust — these override style):
 - QUOTATION MARKS = VERBATIM ONLY. Put text in quotation marks ONLY if you copied it word-for-word from the source. If the source paraphrased something (e.g. it says someone "struggles with substance abuse"), NEVER reword it inside quotes (never turn that into "has a drug problem"). Either quote the EXACT words, or paraphrase WITHOUT quotation marks.
 - If the bundle is THIN, write a SHORTER article — never pad with invented color. A short true piece beats a longer one with one invented quote or detail.
 - Every factual claim about a person is ATTRIBUTED ("according to [Outlet]", "a source tells [Outlet]", "fans noticed") or framed as opinion/speculation — NEVER asserted as your own fact.
-- CONFIRMED vs UNCONFIRMED (critical): state something as fact ONLY if it is on official/court/police record or officially confirmed. Mark EVERYTHING else — a source's claim, an allegation, an insider tip, a "reportedly", a relationship/health/pregnancy detail — as reportedly / allegedly / a source claims / unconfirmed. NEVER present an unconfirmed claim, allegation, or single-source tip as an established fact.
+- MATCH THE SOURCE'S CONFIDENCE — exactly, in both directions:
+  • CONFIRMED → state as FACT. If the source confirms it — an official announcement, a court/police record, the person's own statement, or an outlet reporting it as established fact — write it plainly as fact. DO NOT hedge a confirmed fact into a "rumor". (If a star has publicly ANNOUNCED a pregnancy/engagement/split, that is CONFIRMED — say so; only the extra speculation around it is unconfirmed.)
+  • UNCONFIRMED → frame it as such, naturally: "it's reported that", "according to [Outlet]", "a source claims", "sources say", "reportedly" — an insider tip / allegation / single-source rumor is NEVER your own established fact.
+  • NEVER state that a detail is "unknown", "not disclosed", "not public", "unclear", or "not confirmed" UNLESS the source explicitly says so. If the source simply doesn't cover a detail, OMIT it — do not pad the story with what isn't known.
 - Avoid spammy clickbait words that hurt search/trust ("SHOCKING", "you won't believe", "BOMBSHELL", all-caps "SLAMS/SLAMMED", "jaw-dropping") — write it straight; the story carries itself.
 - For shade/feuds, DECODE with hedges ("appears to", "seemingly", "thinly veiled") — never assert a direct attack as fact.
 - Follow the FRAMING DIRECTIVE exactly, and include the mandatory non-confirmation sentence VERBATIM where required.
@@ -137,6 +140,8 @@ export async function writeGossip({ bundle, frame, topic, model = "deepseek/deep
   const { system, user } = useSurgical
     ? buildCorrectionPrompt(bundle, frame, topic, priorArticle, issues || corrections)
     : buildGossipPrompt(bundle, frame, topic, rewrite ? null : corrections);
-  const { data } = await chat({ model, system, user, json: true, maxTokens: 1800, temperature: useSurgical ? 0.2 : 0.4 });
+  // 2800 tokens: a 450-600-word body + dek + pull-quote + 3 takeaways + FAQ + claims + whatWeKnow/Dont must all fit
+  // in the JSON, or the output truncates mid-sentence (the cause of an incomplete published article).
+  const { data } = await chat({ model, system, user, json: true, maxTokens: 2800, temperature: useSurgical ? 0.2 : 0.4 });
   return data;
 }

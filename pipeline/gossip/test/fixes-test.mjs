@@ -2,7 +2,8 @@
 // (keyTakeaways/faq/tags), the confidence badge (mixed/developing ≠ CONFIRMED), and the category guard
 // (a non-musician mislabeled "musician" → Celebrity, not Music). All deterministic/offline.
 // Run: node pipeline/gossip/test/fixes-test.mjs
-import { dedupeSentences, ensureTakeaways, ensureFaq, deriveTags } from "../polish.mjs";
+import { dedupeSentences, ensureTakeaways, ensureFaq, deriveTags, trimIncomplete } from "../polish.mjs";
+import { qualityCheck } from "../qualityGate.mjs";
 import { musicianVerified, correctSubjectType } from "../categoryGuard.mjs";
 import { buildGossipMarkdown } from "../assemble.mjs";
 import { frameTopic } from "../frame.mjs";
@@ -80,6 +81,16 @@ console.log("\n=== OWNER-REVIEW FIXES ===\n");
   check("a Music-primary gossip piece cross-lists into Celebrity", music.frontmatter.category === "music" && music.frontmatter.secondaryCategory === "celebrity");
   const celeb = buildGossipMarkdown({ article, frame, provenance: prov, route: { category: "celebrity", subcategory: "news" }, topic: { primaryEntity: "Some Actor", slug: "act", subjectType: "actor" }, dateISO: "2026-07-01T00:00:00Z" });
   check("a Celebrity-primary piece has no secondary category", celeb.frontmatter.category === "celebrity" && !celeb.frontmatter.secondaryCategory);
+}
+
+// ── truncation: detect a mid-sentence cutoff + trim the dangling fragment ──
+{
+  const truncated = "Anne Hathaway stepped out in a bold red look today. The internet immediately began speculating. **What We Know vs.";
+  check("qualityCheck flags a TRUNCATED (mid-sentence) body", qualityCheck({ title: "A long enough gossip title here", dek: "a standfirst", body: truncated }).issues.some((i) => /TRUNCATED/i.test(i)));
+  check("trimIncomplete drops the dangling fragment", trimIncomplete(truncated) === "Anne Hathaway stepped out in a bold red look today. The internet immediately began speculating.");
+  const complete = "She wore red. Fans loved it.";
+  check("trimIncomplete leaves a complete body untouched", trimIncomplete(complete) === complete);
+  check("qualityCheck does NOT flag a complete body as truncated", !qualityCheck({ title: "A long enough gossip title here", dek: "a standfirst", body: "According to People, the pair were spotted together. ".repeat(20) }).issues.some((i) => /TRUNCATED/i.test(i)));
 }
 
 console.log(`\n── RESULT: ${pass} passed${fail ? `, ${fail} FAILED` : ""} ──`);

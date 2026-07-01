@@ -23,7 +23,7 @@ import { qualityCheck } from "./qualityGate.mjs";
 import { verifyQuotes } from "./quoteGuard.mjs";
 import { verifyGate } from "./verifyGate.mjs";
 import { judgeGossip } from "./judge.mjs";
-import { dedupeSentences, ensureTakeaways, ensureFaq, cutFlagged } from "./polish.mjs";
+import { dedupeSentences, ensureTakeaways, ensureFaq, cutFlagged, trimIncomplete } from "./polish.mjs";
 import { GOSSIP_AUTHOR_SLUG, AI_DISCLOSURE, routeBySubject, MONITOR_WINDOW_HOURS } from "./config.gossip.mjs";
 
 // The ABSOLUTE red lines — the ONLY things that block a story (they're illegal + can't be corrected into a
@@ -107,7 +107,7 @@ export async function runGossip(topic, {
 
   for (let fix = 1; fix <= maxFix && !report.allPass && !report.redLine; fix++) {
     // The writer fixes ONLY the flagged spots (surgical); full rewrite only when a draft is broadly broken.
-    const broadlyBroken = (verifyResult && verifyResult.brokenRatio > 0.6) || report.qualityIssues.some((q) => /no body|empty/i.test(q));
+    const broadlyBroken = (verifyResult && verifyResult.brokenRatio > 0.6) || report.qualityIssues.some((q) => /no body|empty|truncat/i.test(q));
     article = await writeImpl({ bundle, frame, topic, model, priorArticle: article, issues: report.issues, rewrite: broadlyBroken });
     verifyResult = verify ? await verifyImpl({ article, bundle, model }) : null; // re-verify the CORRECTED draft
     report = inspect(article, frame, topic, bundle, verifyResult);
@@ -150,7 +150,7 @@ export async function runGossip(topic, {
 
   // Stage 6c — POLISH (deterministic, post-gate): strip any repeated sentence (the doubled no-comment/boilerplate
   // problem) and backfill empty SEO fields from the article's OWN confirmed points (never invents a fact).
-  article.body = dedupeSentences(article.body);
+  article.body = trimIncomplete(dedupeSentences(article.body));
   article.keyTakeaways = ensureTakeaways(article);
   article.faq = ensureFaq(article);
 

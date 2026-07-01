@@ -64,6 +64,23 @@ export function cutFlagged(body, texts) {
   return paras.filter((p) => p.trim()).join("\n\n");
 }
 
+// TRIM a dangling incomplete sentence from the end (truncation backstop): if the last generation got cut off
+// mid-sentence, drop that trailing fragment so the published article never ends mid-thought.
+export function trimIncomplete(body) {
+  if (!body) return body;
+  const paras = String(body).split(/\n{2,}/).map((p) => p.trim()).filter(Boolean);
+  for (let i = paras.length - 1; i >= 0; i--) {
+    const sents = paras[i].split(/(?<=[.!?"'”’])\s+/);
+    // drop a trailing fragment with no terminal punctuation OR an unclosed markdown bold (a cut-off heading/label).
+    const bad = (s) => !/[.!?"'”’)\]]\s*$/.test(s) || ((s.match(/\*\*/g) || []).length % 2 !== 0);
+    while (sents.length && bad(sents[sents.length - 1])) sents.pop();
+    paras[i] = sents.join(" ");
+    if (paras[i]) break;          // kept a complete paragraph — done
+    paras.splice(i, 1);           // that paragraph was entirely a fragment — drop it and check the previous one
+  }
+  return paras.filter(Boolean).join("\n\n");
+}
+
 // keyTakeaways fallback: reuse the article's OWN confirmed/attributed points (whatWeKnow) — never invents.
 export function ensureTakeaways(article) {
   const cur = (article.keyTakeaways || []).filter((x) => x && x.trim());
