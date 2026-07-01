@@ -51,24 +51,25 @@ console.log(`\n=== GOSSIP INTEGRATION HARNESS (offline) ===\n`);
   check("PUBLISH attaches rumor UI + provenance", !!r.article?.rumor?.statusLabel && r.provenance?.tier === "REPORTED_BY_MAJOR" && r.route?.category === "celebrity");
 }
 
-// D) writer emits an UNATTRIBUTED damaging claim → BLOCKED_LEGAL
+// D) writer emits an UNATTRIBUTED damaging claim → the gate CUTS it (never blocks). Here it's the whole article,
+// so cutting the defamatory sentence leaves nothing publishable → HELD (the claim never reaches publish).
 {
   const badWriter = async () => ({ title: "Star C news", dek: "x", body: "Star C has herpes and used cocaine before fame." });
   const r = await runGossip(
     { primaryEntity: "Star C", title: "Star C", claim: "health rumor", sources: [{ outlet: "Pop Crave", text: "buzz buzz ".repeat(30) }] },
     { writeImpl: badWriter, corroborate: false }
   );
-  check("unattributed damaging → BLOCKED_LEGAL", r.status === "BLOCKED_LEGAL" && r.blocks.some((b) => b.includes("UNATTRIBUTED")), (r.blocks || []).join("|").slice(0, 120));
+  check("unattributed damaging is CUT → nothing publishable → HELD (never published)", r.status === "HELD" && !/herpes|cocaine/i.test(r.article?.body || ""), JSON.stringify(r.status) + " " + (r.article?.body || "").slice(0, 60));
 }
 
-// E) sensitive (death) rumor, writer omits the mandatory disclaimer → BLOCKED_LEGAL
+// E) sensitive (death) rumor, writer omits the mandatory disclaimer → the gate ADDS it and PUBLISHES (never blocks).
 {
-  const noDisclaimer = async () => ({ title: "A Star health scare?", dek: "x", body: "Social media is buzzing that A Star has died after a cryptic post from a friend went viral overnight." });
+  const noDisclaimer = async () => ({ title: "A Star health scare?", dek: "x", body: "Social media is buzzing that A Star has died after a cryptic post from a friend went viral overnight. " + Array.from({ length: 12 }, (_, i) => `Fans shared reaction number ${i + 1}, flooding the comments with tributes while others urged everyone to wait for something official before believing it.`).join(" ") });
   const r = await runGossip(
     { primaryEntity: "A Star", title: "Death rumor", claim: "A Star has died", sources: [{ outlet: "Reddit", text: "rip posts everywhere ".repeat(30) }] },
     { writeImpl: noDisclaimer, corroborate: false }
   );
-  check("missing disclaimer → BLOCKED_LEGAL", r.status === "BLOCKED_LEGAL" && r.blocks.some((b) => b.includes("MISSING_DISCLAIMER")), (r.blocks || []).join("|").slice(0, 120));
+  check("missing disclaimer is AUTO-ADDED → PUBLISH (not blocked)", r.status === "PUBLISH", JSON.stringify(r.status));
 }
 
 // F) content finder via a MOCK extractor — extracts CLEAN text + a verbatim quote

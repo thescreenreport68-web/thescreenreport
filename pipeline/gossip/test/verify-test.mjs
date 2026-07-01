@@ -115,15 +115,22 @@ const cleanArticle = () => ({
   check("the backstop pass carried the JUDGE's issue back to the writer", (writeCalls[1]?.issues || []).some((i) => /not supported/.test(i)));
 }
 
-// ── run.mjs loop: judge STILL unsafe after the backstop → BLOCKED_JUDGE ──
+// ── the judge NEVER blocks (owner rule): a clean article publishes even if a (mock) judge keeps flagging ──
 {
-  let writes = 0;
-  const writeImpl = async () => { writes++; return cleanArticle(); };
+  const writeImpl = async () => cleanArticle();
   const verifyImpl = async () => ({ ok: true, unsupported: [], severity: "minor", brokenRatio: 0, degraded: false });
   const judgeImpl = async () => ({ score: 40, subscores: { safety: 4 }, issues: ["fabricated quote not in the source"] });
   const r = await runGossip(TOPIC, { writeImpl, verifyImpl, judgeImpl, verify: true, judge: true, corroborate: false });
-  check("judge stays unsafe after backstop → BLOCKED_JUDGE", r.status === "BLOCKED_JUDGE", JSON.stringify(r.status));
-  check("BLOCKED_JUDGE still carries the judge score", r.auto?.score === 40);
+  check("judge never BLOCKS — the (verified-clean) article still publishes", r.status === "PUBLISH", JSON.stringify(r.status));
+  check("the judge score is still attached", r.auto?.score === 40);
+}
+
+// ── the REAL accuracy mechanism: a verify-flagged unsupported claim is CUT from the PUBLISHED body (clean rest stays) ──
+{
+  const dirty = () => ({ ...cleanArticle(), body: "According to People, the pair were spotted together at a Los Angeles restaurant this weekend, and the internet is already running with it. A source told the outlet they looked comfortable and happy throughout the long dinner. They secretly eloped in Vegas last night, a completely invented sentence that is not in any source. " + Array.from({ length: 10 }, (_, i) => `Fans online shared reaction number ${i + 1}, dissecting the timing and the body language for any hint of what might really be going on.`).join(" ") });
+  const verifyImpl = async () => ({ ok: false, unsupported: [{ claim: "They secretly eloped in Vegas last night, a completely invented sentence that is not in any source", why: "not in the bundle", contradicted: false }], severity: "minor", brokenRatio: 0.1, degraded: false });
+  const r = await runGossip(TOPIC, { writeImpl: async () => dirty(), verifyImpl, judgeImpl: async () => ({ score: 80, subscores: { safety: 9 }, issues: [] }), verify: true, judge: true, corroborate: false });
+  check("a verify-flagged fabrication is CUT from the published body (clean rest still publishes)", r.status === "PUBLISH" && !/secretly eloped/i.test(r.article.body), JSON.stringify(r.status) + " " + (r.article?.body || "").slice(0, 60));
 }
 
 // ── run.mjs loop: verify DISABLED → no verifyImpl calls (back-compat with the old gate-only path) ──
@@ -189,19 +196,12 @@ const cleanArticle = () => ({
   check("after the writer corrects the factual error → PUBLISH", r.status === "PUBLISH");
 }
 {
-  // and if the factual error can't be fixed, it BLOCKS (judge keeps flagging it)
+  // a judge flag on an already-verified-clean article no longer BLOCKS — it publishes (the real fabrication catch
+  // is the verify gate cutting the claim, tested above). The judge is an approver/scorer now, not a gate.
   const verifyImpl = async () => ({ ok: true, unsupported: [], severity: "minor", brokenRatio: 0, degraded: false });
   const judgeImpl = async () => ({ score: 70, subscores: { safety: 9 }, issues: ["This is a factual inaccuracy regarding the source."] });
   const r = await runGossip(TOPIC, { writeImpl: async () => cleanArticle(), verifyImpl, judgeImpl, verify: true, judge: true, corroborate: false });
-  check("an unfixable factual-inaccuracy note → BLOCKED_JUDGE (false claim never publishes)", r.status === "BLOCKED_JUDGE");
-}
-
-// ── but a FALSE-CLAIM / fabrication flag STILL blocks even at a decent safety score (accuracy guard kept) ──
-{
-  const verifyImpl = async () => ({ ok: true, unsupported: [], severity: "minor", brokenRatio: 0, degraded: false });
-  const judgeImpl = async () => ({ score: 70, subscores: { safety: 7 }, issues: ["the claim that they are engaged is not supported by the bundle"] });
-  const r = await runGossip(TOPIC, { writeImpl: async () => cleanArticle(), verifyImpl, judgeImpl, verify: true, judge: true, corroborate: false });
-  check("a fabrication/false-claim flag STILL blocks even at safety 7 (accuracy guard kept)", r.status === "BLOCKED_JUDGE", JSON.stringify(r.status));
+  check("a residual judge note does NOT block a verified-clean article → PUBLISH", r.status === "PUBLISH");
 }
 
 console.log(`\n── RESULT: ${pass} passed${fail ? `, ${fail} FAILED` : ""} ──`);

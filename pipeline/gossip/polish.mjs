@@ -46,6 +46,24 @@ export function dedupeSentences(body, threshold = 0.72) {
   return out.filter((p) => p.trim()).join("\n\n");
 }
 
+// CUT-AND-PUBLISH (owner rule: the gate never blocks — it corrects, and as a last resort CUTS the offending
+// phrase so the clean article still publishes). Given the flagged texts (a fabricated quote, an unsupported claim,
+// an unattributed damaging phrase), remove the SENTENCES that contain them, keeping everything else. Deterministic,
+// so an article is never blocked over a few bad phrases — the bad phrases are simply removed.
+export function cutFlagged(body, texts) {
+  if (!body || !Array.isArray(texts) || !texts.length) return body;
+  const targets = texts.map(norm).filter((t) => t.length >= 12);
+  if (!targets.length) return body;
+  const hit = (sentence) => {
+    const ns = norm(sentence);
+    return targets.some((t) => ns.includes(t.slice(0, 55)) || (ns.length >= 25 && t.includes(ns.slice(0, 45))));
+  };
+  const paras = String(body).split(/\n{2,}/).map((para) =>
+    para.split(/(?<=[.!?])\s+/).filter((s) => s.trim() && !hit(s)).join(" ")
+  );
+  return paras.filter((p) => p.trim()).join("\n\n");
+}
+
 // keyTakeaways fallback: reuse the article's OWN confirmed/attributed points (whatWeKnow) — never invents.
 export function ensureTakeaways(article) {
   const cur = (article.keyTakeaways || []).filter((x) => x && x.trim());

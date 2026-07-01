@@ -43,7 +43,14 @@ export function checkCitedEvidence(article, bundle) {
   return { unsupported, totalChecked: claims.filter((c) => (c?.sourceQuote || "").length >= 8).length };
 }
 
-const VERIFY_SYS = "You are a fact-checker for a gossip desk. You receive an ARTICLE and the SOURCE BUNDLE it was supposed to be written from. List ONLY the article's factual statements that are NOT supported by the bundle (a name, date, number, place, action, or a 'reps/source said/confirmed' that the bundle never states), and any statement the bundle CONTRADICTS. Attributed speculation ('fans think', 'appears to') is fine if the bundle shows that conversation. Do NOT list style issues. Output strict JSON only.";
+const VERIFY_SYS = `You are a fact-checker for a gossip desk. You get an ARTICLE and the SOURCE BUNDLE it was written from. Flag ONLY a statement that asserts a NEW, checkable FACT the bundle does NOT contain — a specific NAME, DATE, NUMBER, PLACE, EVENT, direct QUOTE, or a "reps/source said/confirmed" attribution that appears NOWHERE in the bundle — OR a statement the bundle directly CONTRADICTS.
+DO NOT FLAG (these are fine, never list them):
+- Paraphrase or rewording of a fact that IS in the bundle (if the underlying fact is supported, different wording is SUPPORTED — do not flag it).
+- Characterization, color, framing or gossip idiom ("whirlwind romance", "set tongues wagging", "sparked speculation", "dramatic new chapter", "fans are buzzing").
+- General background/context that is consistent with the bundle, or reasonable inference from it.
+- Attributed speculation ("fans think", "appears to", "a source claims").
+- Style, voice, tone, or structure issues.
+Only flag a genuinely INVENTED fact or a CONTRADICTION. When in doubt, DO NOT flag. Output strict JSON only.`;
 
 // L2 — cheap LLM entailment over the body. Returns [] on any error (caller marks degraded + leans on L1 + judge).
 async function llmUnsupported(article, bundle, model) {

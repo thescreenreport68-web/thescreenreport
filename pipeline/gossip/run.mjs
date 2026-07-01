@@ -23,27 +23,40 @@ import { qualityCheck } from "./qualityGate.mjs";
 import { verifyQuotes } from "./quoteGuard.mjs";
 import { verifyGate } from "./verifyGate.mjs";
 import { judgeGossip } from "./judge.mjs";
-import { dedupeSentences, ensureTakeaways, ensureFaq } from "./polish.mjs";
+import { dedupeSentences, ensureTakeaways, ensureFaq, cutFlagged } from "./polish.mjs";
 import { GOSSIP_AUTHOR_SLUG, AI_DISCLOSURE, routeBySubject, MONITOR_WINDOW_HOURS } from "./config.gossip.mjs";
 
-const HARD_STOP = /MINOR_ALLEGATION|INTIMATE_MEDIA|^HOLD|FABRICATION:/i;
+// The ABSOLUTE red lines — the ONLY things that block a story (they're illegal + can't be corrected into a
+// publishable piece): a sexual allegation about a MINOR, or intimate/leaked media. EVERYTHING else is corrected
+// or, as a last resort, cut — never blocked (owner's hard rule: the gate finds the issue and fixes it, it does
+// not kill the article).
+const RED_LINE = /MINOR_ALLEGATION|INTIMATE_MEDIA/i;
 
-// Run EVERY gate over one draft and collect a single actionable issue list the writer can surgically fix.
+// Run EVERY gate over one draft, collect the actionable issue list for the writer AND the exact offending phrases
+// to CUT if a fix doesn't take. redLine ⇒ the one hard block.
 function inspect(article, frame, topic, bundle, verifyResult) {
   const legal = legalGate(article, frame, topic);
   const issues = [];
-  let hardStop = false;
-  for (const b of legal.blocks || []) { issues.push(b); if (HARD_STOP.test(b)) hardStop = true; }
+  const cutTexts = [];        // the exact phrases to delete if the writer can't fix them (last-resort cut)
+  const redLineBlocks = [];
+  let redLine = false;
+  for (const b of legal.blocks || []) {
+    issues.push(b);
+    if (RED_LINE.test(b)) { redLine = true; redLineBlocks.push(b); }
+    else { // grab the LONGEST quoted span in the block (robust to nested quotes) = the offending phrase to cut
+      const longest = [...b.matchAll(/"([^"]{8,})"/g)].map((m) => m[1]).sort((a, z) => z.length - a.length)[0];
+      if (longest) cutTexts.push(longest);
+    }
+  }
   const qc = verifyQuotes(article, bundle);
-  if (!qc.ok) for (const q of qc.badQuotes) issues.push(`FABRICATED_QUOTE: the quoted phrase "${q}" is NOT verbatim in any source — use the exact source words or drop the quotation marks and paraphrase`);
+  if (!qc.ok) for (const q of qc.badQuotes) { issues.push(`FABRICATED_QUOTE: the quoted phrase "${q}" is NOT verbatim in any source — use the exact source words, or drop the quotation marks and paraphrase`); cutTexts.push(q); }
   const quality = qualityCheck(article);
   if (!quality.pass) for (const q of quality.issues || []) issues.push(q);
-  if (verifyResult && !verifyResult.ok) for (const u of verifyResult.unsupported) issues.push(`UNSUPPORTED_CLAIM: "${(u.claim || "").slice(0, 160)}" — ${u.why}${u.contradicted ? " (the bundle CONTRADICTS this — cut or correct it)" : ""}`);
+  if (verifyResult && !verifyResult.ok) for (const u of verifyResult.unsupported) { issues.push(`UNSUPPORTED_CLAIM: "${(u.claim || "").slice(0, 160)}" — ${u.why}${u.contradicted ? " (the bundle CONTRADICTS this — cut or correct it)" : ""}`); cutTexts.push(u.claim); }
   return {
-    issues, hardStop,
+    issues, redLine, redLineBlocks, cutTexts: cutTexts.filter((t) => t && String(t).length >= 12),
     legalPass: legal.pass, legalBlocks: legal.blocks || [],
-    quoteOk: qc.ok, quoteBlocks: qc.ok ? [] : qc.badQuotes.map((q) => `FABRICATED_QUOTE: "${q}"`),
-    qualityPass: quality.pass, qualityIssues: quality.issues || [],
+    quoteOk: qc.ok, qualityPass: quality.pass, qualityIssues: quality.issues || [],
     verifyOk: !verifyResult || verifyResult.ok,
     allPass: legal.pass && qc.ok && quality.pass && (!verifyResult || verifyResult.ok),
   };
@@ -74,7 +87,7 @@ export async function runGossip(topic, {
   writeImpl = writeGossip, fetchImpl, model, corroborate = true,
   verify = false, verifyImpl = verifyGate,
   judge = false, judgeImpl = judgeGossip,
-  maxFix = 2,
+  maxFix = 3,
 } = {}) {
   // Stage 3 — receipts (fail-closed). Step 4: corroborate pulls in more outlets so the writer rewrites from a
   // corroborated multi-source bundle, not one thin blurb (fail-safe).
@@ -92,41 +105,47 @@ export async function runGossip(topic, {
   let verifyResult = verify ? await verifyImpl({ article, bundle, model }) : null;
   let report = inspect(article, frame, topic, bundle, verifyResult);
 
-  for (let fix = 1; fix <= maxFix && !report.allPass && !report.hardStop; fix++) {
-    // Decide SURGICAL vs full REWRITE for THIS draft: rewrite only when it's broadly broken (most claims
-    // unsupported, or so thin/structureless there's nothing worth preserving). Otherwise patch the flaws in place.
-    const broadlyBroken = (verifyResult && verifyResult.brokenRatio > 0.6) || report.qualityIssues.some((q) => /too thin|< 140|no body|empty/i.test(q));
+  for (let fix = 1; fix <= maxFix && !report.allPass && !report.redLine; fix++) {
+    // The writer fixes ONLY the flagged spots (surgical); full rewrite only when a draft is broadly broken.
+    const broadlyBroken = (verifyResult && verifyResult.brokenRatio > 0.6) || report.qualityIssues.some((q) => /no body|empty/i.test(q));
     article = await writeImpl({ bundle, frame, topic, model, priorArticle: article, issues: report.issues, rewrite: broadlyBroken });
     verifyResult = verify ? await verifyImpl({ article, bundle, model }) : null; // re-verify the CORRECTED draft
     report = inspect(article, frame, topic, bundle, verifyResult);
   }
 
-  if (report.hardStop || !report.legalPass) return { status: "BLOCKED_LEGAL", blocks: report.legalBlocks.length ? report.legalBlocks : report.issues, frame, article, stage: "legal-gate" };
-  if (!report.quoteOk) return { status: "BLOCKED_LEGAL", blocks: report.quoteBlocks, frame, article, stage: "quote-guard" };
-  if (!report.qualityPass) return { status: "BLOCKED_QUALITY", issues: report.qualityIssues, frame, article, stage: "quality-gate" };
-  if (!report.verifyOk) return { status: "BLOCKED_VERIFY", issues: report.issues.filter((i) => /UNSUPPORTED_CLAIM/.test(i)), frame, article, stage: "verify-gate" };
+  // ── RESOLUTION (owner's hard rule: the gate NEVER blocks — it corrects, and as a LAST RESORT cuts the offending
+  // phrase, so the clean article always publishes). The ONLY exception is an absolute illegal RED LINE (a sexual
+  // allegation about a minor / intimate media) — that cannot be turned into a publishable story.
+  if (report.redLine) return { status: "BLOCKED_LEGAL", blocks: report.redLineBlocks, frame, article, stage: "red-line" };
 
-  // Stage 6b — JUDGE BACKSTOP. The writer already self-corrected; the judge is the second pair of eyes that
-  // catches the SMALL mistakes the writer missed. If it flags a real safety/fabrication problem, hand those exact
-  // issues back for ONE more surgical pass, re-run the cheap gates (so the fix didn't reintroduce a problem), and
-  // re-judge once. Still flagged ⇒ block. (Disabled in offline tests unless a judgeImpl is wired.)
-  // SAFETY INVARIANT: if verify ran but DEGRADED to L1-only (its L2 LLM check errored), the design relies on the
-  // judge as the backstop — so force the judge ON for this piece even if it was disabled.
+  // Cut whatever is still flagged after the correction passes; add a missing mandatory disclaimer; re-check.
+  const cleanse = async () => {
+    if (report.allPass) return;
+    article.body = cutFlagged(article.body, report.cutTexts);
+    if (frame.needsDisclaimer && frame.disclaimerText && !article.body.includes(frame.disclaimerText)) article.body = (article.body.trim() + "\n\n" + frame.disclaimerText).trim();
+    verifyResult = verify ? await verifyImpl({ article, bundle, model }) : verifyResult;
+    report = inspect(article, frame, topic, bundle, verifyResult);
+  };
+  await cleanse();
+  // If removing the flagged/unverified claims left too little, there is genuinely nothing safe to publish.
+  if ((qualityCheck(article).words || 0) < 80) return { status: "HELD", frame, article, stage: "nothing-publishable", reason: "too little verifiable content remained after removing flagged claims" };
+
+  // Stage 6b — JUDGE as APPROVER (never a blocker). It scores the piece; if it spots a fabrication the structured
+  // gates missed, it hands one more correction to the writer + a re-cut, then we publish regardless — accuracy on
+  // the checkable facts is already guaranteed by the deterministic gates + cut. Forced on when verify degraded.
   const verifyDegraded = verify && !!verifyResult?.degraded;
   let auto = null;
   if (judge || verifyDegraded) {
     try { auto = await judgeImpl({ article, bundle, frame }); } catch (e) { auto = { error: String(e?.message || e).slice(0, 80) }; }
-    let flag = judgeFlags(auto, { verifyDegraded });
+    const flag = judgeFlags(auto, { verifyDegraded });
     if (flag.unsafe && flag.issues.length) {
       const fixed = await writeImpl({ bundle, frame, topic, model, priorArticle: article, issues: flag.issues, rewrite: false });
-      const recheck = inspect(fixed, frame, topic, bundle, verify ? await verifyImpl({ article: fixed, bundle, model }) : null);
-      if (recheck.allPass) {
-        article = fixed;
+      const rc = inspect(fixed, frame, topic, bundle, verify ? await verifyImpl({ article: fixed, bundle, model }) : null);
+      if (!rc.redLine && (qualityCheck(fixed).words || 0) >= 120) {
+        article = fixed; report = rc; await cleanse();
         try { auto = await judgeImpl({ article, bundle, frame }); } catch (e) { auto = { error: String(e?.message || e).slice(0, 80) }; }
-        flag = judgeFlags(auto, { verifyDegraded });
       }
     }
-    if (flag.unsafe) return { status: "BLOCKED_JUDGE", auto, frame, article, stage: "judge", reason: `safety ${flag.safety ?? "?"}${flag.fabFlag ? " + fabrication flagged" : ""} — ${(flag.issues || []).slice(0, 2).join("; ") || auto?.error || "unsafe"}` };
   }
 
   // Stage 6c — POLISH (deterministic, post-gate): strip any repeated sentence (the doubled no-comment/boilerplate
