@@ -45,7 +45,20 @@ export async function dedupCheck(topic, store, { embedImpl = defaultEmbed, adjud
     const uh = urlHash(topic), ek = eventKey(topic, now);
     // L1 — exact
     if (store.byUrlHash(uh)) return { decision: "DUPLICATE", reason: "exact url+headline match", urlHash: uh, eventKey: ek, embedding: null };
-    // L3 — semantic vs same-entity recent records (also subsumes L2)
+    // L2 — SAME eventKey (entity|gossipType|month): the strongest "same story" signal short of an identical URL —
+    // it catches near-duplicates whose short summaries embed BELOW the semantic threshold (two outlets covering the
+    // same event with different wording, e.g. two "Kathy Griffin banned from the Tonight Show" pieces). Adjudicate
+    // (the cheap LLM decides duplicate / genuine update / distinct). Only fires on an actual collision, so no cost
+    // in the common case.
+    const ekHits = (store.byEventKey ? store.byEventKey(ek) : []) || [];
+    if (ekHits.length) {
+      const prior = ekHits[0];
+      const adj = await adjudicateImpl(prior.summary, summaryText(topic));
+      if (adj.verdict === "DUPLICATE") return { decision: "DUPLICATE", reason: "same-event dup (eventKey)", parentKey: prior.key, urlHash: uh, eventKey: ek, embedding: null };
+      if (adj.verdict === "UPDATE") return { decision: "UPDATE", reason: (`update: ${adj.newFact || "new development"}`).slice(0, 120), parentKey: prior.key, urlHash: uh, eventKey: ek, embedding: null };
+      // DISTINCT → fall through (rare: same person+type+month but a genuinely different event).
+    }
+    // L3 — semantic vs same-entity recent records
     const vec = await embedImpl(summaryText(topic));
     const top = store.search(vec, { k: 3, sinceDays: WINDOW_DAYS, entity: topic.primaryEntity })[0];
     if (top) {

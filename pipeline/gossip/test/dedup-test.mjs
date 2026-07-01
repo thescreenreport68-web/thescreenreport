@@ -21,6 +21,9 @@ for (const t of [A, Areworded, Bdifferent]) t.id = t.slug;
 
 const dupAdj = async () => ({ verdict: "DUPLICATE", newFact: "" });
 const updateAdj = async () => ({ verdict: "UPDATE", newFact: "the engagement is now confirmed" });
+// A genuinely different story (engagement vs a new album) shares the coarse eventKey (both classify "general"), so
+// the new eventKey guard delegates to the adjudicator — which, like the real LLM, must say DISTINCT for a different event.
+const distinctAdj = async () => ({ verdict: "DISTINCT", newFact: "" });
 const NOW = new Date("2026-06-30T12:00:00Z");
 
 // seed: publish A
@@ -39,7 +42,7 @@ const NOW = new Date("2026-06-30T12:00:00Z");
   check("reworded same story → DUPLICATE (semantic)", d2.decision === "DUPLICATE", JSON.stringify({ d: d2.decision, r: d2.reason }));
 
   // genuinely different story about the same entity → NEW
-  const d3 = await dedupCheck(Bdifferent, store, { adjudicateImpl: dupAdj, now: NOW });
+  const d3 = await dedupCheck(Bdifferent, store, { adjudicateImpl: distinctAdj, now: NOW });
   check("different story, same entity → NEW", d3.decision === "NEW", JSON.stringify({ d: d3.decision, r: d3.reason }));
 
   // a genuine new development → UPDATE (publishes, linked)
