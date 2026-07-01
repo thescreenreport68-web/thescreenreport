@@ -9,6 +9,7 @@ const require = createRequire(import.meta.url);
 const matter = require("gray-matter");
 import { GOSSIP_AUTHOR_SLUG, AI_DISCLOSURE } from "./config.gossip.mjs";
 import { detectGossipType } from "./writer.mjs";
+import { deriveTags } from "./polish.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url)); // …/pipeline/gossip
 const CONTENT_DIR = path.resolve(__dirname, "../../content/articles");
@@ -22,8 +23,18 @@ const STATUS_BADGE = {
   SINGLE_SOURCE_RUMOR: "RUMOR", SOCIAL_SPECULATION: "RUMOR", DENIED: "RUMOR",
 };
 
+// The reader-facing badge (owner hard rule): only a story whose central fact is confirmed AND that isn't still
+// unfolding may show "CONFIRMED". A DEVELOPING/monitored story (a confirmed court FILING but with unconfirmed
+// source claims + an evolving situation) is downgraded to DEVELOPING — we never over-state confidence.
+function badgeFor(frame) {
+  const base = STATUS_BADGE[frame.tier] || "RUMOR";
+  return base === "CONFIRMED" && frame.monitor ? "DEVELOPING" : base;
+}
+
 export function buildGossipMarkdown({ article, frame, provenance, route, topic, dateISO }) {
   const slug = topic.slug || slugify(article.title);
+  const gossipType = detectGossipType(topic);
+  const badge = badgeFor(frame);
   const fm = {
     title: article.title,
     slug,
@@ -35,13 +46,14 @@ export function buildGossipMarkdown({ article, frame, provenance, route, topic, 
     metaTitle: article.title,
     metaDescription: article.dek || "",
     formatTag: "gossip",
-    gossipType: detectGossipType(topic),
+    gossipType,
+    tags: deriveTags(topic, article, route.category, gossipType),
     keyTakeaways: article.keyTakeaways || [],
     faq: (article.faq || []).filter((f) => f && f.q && f.a).map((f) => ({ q: f.q, a: f.a })),
     // ── rumor-UI fields (rendered by the gossip modules) ──
     rumorStatus: frame.uiLabel,
     gossipPull: article.pullQuote || article.gossipPull || null,
-    storyStatus: STATUS_BADGE[frame.tier] || "RUMOR",
+    storyStatus: badge,
     // ── HERO (Step 6): a powerful, story-specific, LEGAL lead image (TMDB official still / YouTube thumb) flows
     // through the site's existing image/imageAlt/imageCredit convention (header + OG card auto-render it). The
     // originating post (YouTube/X/Bluesky) rides along as `heroEmbed` — the receipt the gossip is about.
@@ -50,6 +62,7 @@ export function buildGossipMarkdown({ article, frame, provenance, route, topic, 
       imageAlt: article.hero.alt || article.title,
       imageCredit: article.hero.credit || "The Screen Report",
       imageCaption: article.hero.caption || "",
+      imageOrientation: article.hero.orientation || "landscape", // drives the render crop (portrait → don't cut the head)
       // omit width/height entirely when absent — a literal `undefined` makes gray-matter throw a YAMLException
       // that would abort the whole run loop.
       ...(article.hero.width ? { imageWidth: article.hero.width } : {}),
@@ -75,7 +88,7 @@ export function buildGossipMarkdown({ article, frame, provenance, route, topic, 
       severity: frame.severity,
       sensitivity: provenance.sensitivity,
       monitor: provenance.monitor,
-      status: STATUS_BADGE[frame.tier] || "RUMOR",
+      status: badge,
       attribution: provenance.attribution,
       outlets: (provenance.sources || []).map((s) => s.outlet),
       corroborationCount: provenance.corroborationCount ?? null,

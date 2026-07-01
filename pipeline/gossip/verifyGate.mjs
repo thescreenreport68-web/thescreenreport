@@ -57,13 +57,21 @@ ${JSON.stringify({ title: article.title, dek: article.dek, body: article.body })
 
 Return STRICT JSON:
 { "unsupported": [ { "claim": "the exact phrase/sentence from the article", "why": "not in the bundle | bundle says otherwise (quote it)", "contradicted": true|false } ] }`;
-  try {
-    const { data } = await chat({ model, system: VERIFY_SYS, user, json: true, maxTokens: 700, temperature: 0 });
-    const list = Array.isArray(data?.unsupported) ? data.unsupported.filter((u) => u && u.claim) : [];
-    return { list, ran: true };
-  } catch {
-    return { list: [], ran: false };
+  // The verify check is the accuracy spine — the owner requires the SPECIFICS to be machine-verified, so don't
+  // give up on the first transient error (rate-limit bursts during a run were degrading it). Retry a couple of
+  // times before falling back to L1 + the judge.
+  let lastErr;
+  for (let attempt = 0; attempt < 3; attempt++) {
+    try {
+      const { data } = await chat({ model, system: VERIFY_SYS, user, json: true, maxTokens: 700, temperature: 0 });
+      const list = Array.isArray(data?.unsupported) ? data.unsupported.filter((u) => u && u.claim) : [];
+      return { list, ran: true };
+    } catch (e) {
+      lastErr = e;
+      await new Promise((r) => setTimeout(r, 1200 * (attempt + 1)));
+    }
   }
+  return { list: [], ran: false, error: String(lastErr?.message || lastErr || "").slice(0, 80) };
 }
 
 // verifyGate — the article's self-check. Returns { ok, unsupported:[{claim,why,contradicted?}], contradicted:bool,

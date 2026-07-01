@@ -14,6 +14,7 @@ import { dedupCheck, recordPublished } from "./dedup.mjs";
 import { pickHero } from "./heroImage.mjs";
 import { buildLinkIndex } from "./linkIndex.mjs";
 import { findRelatedLinks } from "./internalLinks.mjs";
+import { correctSubjectType } from "./categoryGuard.mjs";
 
 // One topic per category (celebrity/music/awards) — topics arrive freshest-first from discover, so first wins.
 function onePerCategoryPick(topics) {
@@ -25,7 +26,7 @@ function onePerCategoryPick(topics) {
   return [...byCat.values()];
 }
 
-export async function gossipRun({ discoverImpl, categorizeImpl, runImpl = runGossip, writeImpl = writeGossipArticle, heroImpl = pickHero, linkIndexImpl = buildLinkIndex, findRelatedImpl = findRelatedLinks, onePerCategory = false, verify = true, judge = true, hero = false, links = false, dedup = true, social = true, storeImpl = null, embedImpl, adjudicateImpl, limit = 0, dryRun = false, nowMs } = {}) {
+export async function gossipRun({ discoverImpl, categorizeImpl, runImpl = runGossip, writeImpl = writeGossipArticle, heroImpl = pickHero, linkIndexImpl = buildLinkIndex, findRelatedImpl = findRelatedLinks, categoryGuardImpl = correctSubjectType, onePerCategory = false, verify = true, judge = true, hero = false, links = false, categoryGuard = false, dedup = true, social = true, storeImpl = null, embedImpl, adjudicateImpl, limit = 0, dryRun = false, nowMs } = {}) {
   // Discovery = trade RSS (confirmed news) + SOCIAL (the speculation lane). Social signals are discovery tips
   // only; categorize scope-filters them and the dedup/content-finder/verify stages establish every fact.
   const rss = discoverImpl ? await discoverImpl() : await discoverGossip();
@@ -37,6 +38,10 @@ export async function gossipRun({ discoverImpl, categorizeImpl, runImpl = runGos
   const SHORT = 26, socN = Math.min(soc.length, Math.round(SHORT * 0.4));
   const shortlist = [...rss.slice(0, SHORT - socN), ...soc.slice(0, socN)];
   const all = categorizeImpl ? await categorizeImpl(candidates) : await categorizeGossip(shortlist);
+  // CATEGORY GUARD (deterministic): correct any non-musician the LLM mislabeled "musician" BEFORE we pick per
+  // category, so a reality star/actor never files under Music. Only touches Music-routed topics (others skip, no
+  // network). Off by default offline; the CLI turns it on.
+  if (categoryGuard) { for (const t of all) { try { const s = await categoryGuardImpl(t); if (s) t.subjectType = s; } catch { /* fail-safe: keep the LLM label */ } } }
   let topics = onePerCategory ? onePerCategoryPick(all) : all;
   if (limit) topics = topics.slice(0, limit);
   const now = nowMs ?? Date.now();
@@ -107,7 +112,7 @@ if (process.argv[1] && import.meta.url === new URL(`file://${process.argv[1]}`).
   const noHero = process.argv.includes("--no-hero"); // hero picker hits TMDB + a cheap vision call; on by default live
   const noLinks = process.argv.includes("--no-links"); // internal links embed the corpus + a cheap firewall call/link
   const limit = Number((process.argv.find((a) => a.startsWith("--limit=")) || "").split("=")[1]) || 0;
-  const report = await gossipRun({ dryRun, onePerCategory, limit, hero: !noHero, links: !noLinks });
+  const report = await gossipRun({ dryRun, onePerCategory, limit, hero: !noHero, links: !noLinks, categoryGuard: true });
   console.log(`\n${"━".repeat(60)}\n GOSSIP AUTOMATION — RUN REPORT\n${"━".repeat(60)}`);
   console.log(`DISCOVER: ${report.candidates} candidates  →  CATEGORIZE: ${report.inScope} in-scope  →  SELECTED: ${report.topics}`);
   console.log(`\nPUBLISHED (${report.published.length}):`);

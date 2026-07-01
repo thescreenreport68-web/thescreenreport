@@ -408,7 +408,8 @@ export async function getPersonImages(name) {
   const [imgs, cr] = await Promise.all([tmdb(`/person/${p.id}/images`), tmdb(`/person/${p.id}/combined_credits`)]);
   const profiles = (imgs?.profiles || [])
     .sort((a, b) => (b.vote_average || 0) - (a.vote_average || 0))
-    .map((x) => ({ url: tmdbImg(x.file_path, "h632"), w: x.width, h: x.height, vote: x.vote_average || 0 }))
+    // "original" = full-resolution (h632 was too low for a lead image — owner: "we cannot accept low quality").
+    .map((x) => ({ url: tmdbImg(x.file_path, "original"), w: x.width, h: x.height, vote: x.vote_average || 0 }))
     .filter((x) => x.url)
     .slice(0, 4);
   const top = (cr?.cast || []).filter((c) => c.backdrop_path).sort((a, b) => (b.popularity || 0) - (a.popularity || 0))[0];

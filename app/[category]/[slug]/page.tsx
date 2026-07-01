@@ -258,6 +258,7 @@ export default function ArticlePage({
               eager
               width={article.imageWidth}
               height={article.imageHeight}
+              objectPosition={article.imageOrientation === "portrait" ? "center 22%" : "center 30%"}
               className="aspect-video w-full"
             />
             <figcaption className="mt-2 leading-snug">

@@ -18,6 +18,8 @@ NON-NEGOTIABLE (legal + trust — these override style):
 - QUOTATION MARKS = VERBATIM ONLY. Put text in quotation marks ONLY if you copied it word-for-word from the source. If the source paraphrased something (e.g. it says someone "struggles with substance abuse"), NEVER reword it inside quotes (never turn that into "has a drug problem"). Either quote the EXACT words, or paraphrase WITHOUT quotation marks.
 - If the bundle is THIN, write a SHORTER article — never pad with invented color. A short true piece beats a longer one with one invented quote or detail.
 - Every factual claim about a person is ATTRIBUTED ("according to [Outlet]", "a source tells [Outlet]", "fans noticed") or framed as opinion/speculation — NEVER asserted as your own fact.
+- CONFIRMED vs UNCONFIRMED (critical): state something as fact ONLY if it is on official/court/police record or officially confirmed. Mark EVERYTHING else — a source's claim, an allegation, an insider tip, a "reportedly", a relationship/health/pregnancy detail — as reportedly / allegedly / a source claims / unconfirmed. NEVER present an unconfirmed claim, allegation, or single-source tip as an established fact.
+- Avoid spammy clickbait words that hurt search/trust ("SHOCKING", "you won't believe", "BOMBSHELL", all-caps "SLAMS/SLAMMED", "jaw-dropping") — write it straight; the story carries itself.
 - For shade/feuds, DECODE with hedges ("appears to", "seemingly", "thinly veiled") — never assert a direct attack as fact.
 - Follow the FRAMING DIRECTIVE exactly, and include the mandatory non-confirmation sentence VERBATIM where required.
 - Never describe or link intimate/leaked media; never a damaging claim about a private person or a minor.
@@ -80,8 +82,8 @@ Return STRICT JSON:
 { "title": "...", "dek": "one-line standfirst with a little wit",
   "body": "markdown article (250–450 words) INCLUDING the mandatory non-confirmation sentence verbatim if required",
   "pullQuote": "one short punchy line from the story (a quote or a vivid sentence) for display",
-  "keyTakeaways": ["3 short bullets"],
-  "faq": [{"q":"...","a":"..."}],
+  "keyTakeaways": ["EXACTLY 3 short factual takeaway bullets — REQUIRED, never empty"],
+  "faq": [{"q":"a real question a reader would search","a":"a short factual answer from the bundle"}, "... 2-3 FAQ — REQUIRED, never empty"],
   "claims": [{"text":"each checkable claim","sourceQuote":"the verbatim bundle text that supports it"}],
   "whatWeKnow": ["confirmed/attributed points"],
   "whatWeDont": ["the open questions"],

@@ -13,6 +13,7 @@ export default function PlaceholderImage({
   eager = false,
   width,
   height,
+  objectPosition = "center 30%",
 }: {
   slug: string;
   category?: string;
@@ -24,6 +25,7 @@ export default function PlaceholderImage({
   eager?: boolean;
   width?: number;
   height?: number;
+  objectPosition?: string;
 }) {
   const imgSrc =
     src || `https://picsum.photos/seed/sr-${encodeURIComponent(slug)}/1200/675`;
@@ -43,7 +45,8 @@ export default function PlaceholderImage({
         loading={eager ? "eager" : "lazy"}
         fetchPriority={eager ? "high" : undefined}
         decoding={eager ? "auto" : "async"}
-        className="absolute inset-0 h-full w-full object-cover object-[center_30%]"
+        className="absolute inset-0 h-full w-full object-cover"
+        style={{ objectPosition }}
       />
       {showTitle && title ? (
         <>

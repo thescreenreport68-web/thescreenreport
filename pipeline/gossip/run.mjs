@@ -23,6 +23,7 @@ import { qualityCheck } from "./qualityGate.mjs";
 import { verifyQuotes } from "./quoteGuard.mjs";
 import { verifyGate } from "./verifyGate.mjs";
 import { judgeGossip } from "./judge.mjs";
+import { dedupeSentences, ensureTakeaways, ensureFaq } from "./polish.mjs";
 import { GOSSIP_AUTHOR_SLUG, AI_DISCLOSURE, routeBySubject, MONITOR_WINDOW_HOURS } from "./config.gossip.mjs";
 
 const HARD_STOP = /MINOR_ALLEGATION|INTIMATE_MEDIA|^HOLD|FABRICATION:/i;
@@ -127,6 +128,12 @@ export async function runGossip(topic, {
     }
     if (flag.unsafe) return { status: "BLOCKED_JUDGE", auto, frame, article, stage: "judge", reason: `safety ${flag.safety ?? "?"}${flag.fabFlag ? " + fabrication flagged" : ""} — ${(flag.issues || []).slice(0, 2).join("; ") || auto?.error || "unsafe"}` };
   }
+
+  // Stage 6c — POLISH (deterministic, post-gate): strip any repeated sentence (the doubled no-comment/boilerplate
+  // problem) and backfill empty SEO fields from the article's OWN confirmed points (never invents a fact).
+  article.body = dedupeSentences(article.body);
+  article.keyTakeaways = ensureTakeaways(article);
+  article.faq = ensureFaq(article);
 
   // Stage 7 — assemble: attach the byline, the rumor-UI fields, and the PROVENANCE the monitor needs.
   article.author = GOSSIP_AUTHOR_SLUG;

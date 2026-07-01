@@ -118,6 +118,7 @@ export type Article = {
   developing?: boolean; // we're actively monitoring this story
   aiDisclosure?: string; // the AI-assistance + rumor-labeling disclosure note
   imageCaption?: string; // gossip hero: a neutral "Pictured: X" caption (never restates the unconfirmed claim)
+  imageOrientation?: "landscape" | "portrait"; // drives the hero crop (portrait heroes anchor near the top so the head isn't cut)
   heroEmbed?: {
     platform: "youtube" | "x" | "bluesky" | "instagram" | "facebook";
     sourceUrl: string;
@@ -271,6 +272,7 @@ export function getAllArticles(): Article[] {
       developing: data.developing ?? false,
       aiDisclosure: data.aiDisclosure,
       imageCaption: data.imageCaption,
+      imageOrientation: data.imageOrientation,
       heroEmbed: data.heroEmbed ?? null,
       relatedLinks: data.relatedLinks ?? [],
       keyPoints: data.keyPoints ?? [],

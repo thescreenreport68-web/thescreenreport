@@ -121,11 +121,13 @@ export async function pickHero(
   const alt = entity ? `${entity}${chosen?.titleContext ? ` in ${chosen.titleContext}` : ""}` : (headline || "hero image");
 
   if (chosen) {
-    // Serving dimensions by kind (for next/image layout + the OG card). TMDB backdrops/yt thumbs = 16:9; the rest 2:3.
-    const DIMS = { backdrop: [1280, 720], "video-thumb": [1280, 720], poster: [780, 1170], profile: [421, 632] };
+    // Serving dimensions by kind (for next/image layout + the OG card). TMDB backdrops/yt thumbs = 16:9 landscape;
+    // profiles/posters = 2:3 portrait (served at full res now, so the layout treats them as high-quality portraits).
+    const DIMS = { backdrop: [1280, 720], "video-thumb": [1280, 720], poster: [800, 1200], profile: [800, 1200] };
     const [width, height] = DIMS[chosen.kind] || [1280, 720];
+    const orientation = width >= height ? "landscape" : "portrait";
     return {
-      kind: "image", src: chosen.url, width, height,
+      kind: "image", src: chosen.url, width, height, orientation,
       alt, caption, credit, source: chosen.kind === "video-thumb" ? "youtube" : "tmdb",
       embed: embed || null, // the originating post rides along as the in-body "receipt" (all embeds are account-free)
       score, why, candidateCount: candidates.length,
