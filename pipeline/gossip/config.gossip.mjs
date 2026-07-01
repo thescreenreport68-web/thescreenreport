@@ -21,7 +21,11 @@ export function routeBySubject(subjectType) {
     case "actress":
     case "celebrity":
     case "hollywood":
-    default:
+    case "reality":       // reality-TV / streaming-show star (Secret Lives of Mormon Wives, Bravo, Love Island…)
+    case "personality":
+    case "influencer":
+    case "host":
+    default:              // anything not clearly a musician or an awards-race story files under Celebrity
       return { category: "celebrity", subcategory: "news" };
   }
 }

@@ -5,12 +5,18 @@
 import { chat } from "../lib/openrouter.mjs";
 import { tierOf } from "./policy.mjs";
 
-const SYSTEM = `You triage candidates for The Screen Report's GOSSIP desk. Keep ONLY genuine celebrity GOSSIP about Hollywood actors/actresses and Western/English-language musicians — their PERSONAL lives, RELATIONSHIPS, DRAMA, and the RUMORS/SPECULATION about them.
+const SYSTEM = `You triage candidates for The Screen Report's GOSSIP desk. Keep ONLY genuine celebrity GOSSIP about Western/English-language ENTERTAINMENT figures — Hollywood actors/actresses, Western/English-language musicians, AND reality-TV / streaming-show / social-media personalities (e.g. the "Secret Lives of Mormon Wives"/MomTok, Bravo, "Love Island", major influencers) — their PERSONAL lives, RELATIONSHIPS, DRAMA, and the RUMORS/SPECULATION about them.
 IN SCOPE: dating/romance rumors, breakups/splits, feuds/shade, "fans are speculating", cryptic-post sleuthing, pregnancy/relationship speculation, "a source says", personal controversy/backlash, unconfirmed reports about a star's private life.
 OUT OF SCOPE (set inScope=false — this is PRODUCT/RESULTS NEWS, handled by another desk, NOT gossip):
 - film/TV/music announcements, RELEASE DATES, first-look images, TRAILERS, casting confirmations, box office, chart positions;
 - AWARD WINNERS / RESULTS / nominations lists / ceremony recaps;
-- non-Hollywood / non-Western-music figures, politics, sports, corporate news.
+- non-Western / non-English-language figures, politics, sports, corporate news.
+subjectType RULE (drives which category it files under — get this right):
+- "musician" = ONLY a genuine recording artist / singer / rapper / band. NEVER label a reality star, influencer, actor, or host "musician".
+- "reality" = a reality-TV / streaming-show / social-media personality, influencer, or TV host (files under Celebrity).
+- "actor" = a film/TV actor or actress (files under Celebrity).
+- "awards" = an awards-RACE rumor/speculation (who might win/be snubbed).
+- When unsure between actor and reality, use "reality" (it still files under Celebrity). Only "musician" routes to Music, so use it precisely.
 THE TEST: is it about a STAR'S PERSONAL LIFE / a rumor / interpersonal drama (IN), or a CONFIRMED PRODUCT or RESULT (OUT)? When unsure → OUT.
 Output strict JSON only.`;
 
@@ -18,7 +24,7 @@ function buildPrompt(items) {
   return `Candidates:\n${items.map((it, i) => `[${i}] (${it.outlet}) ${it.title}${it.summary ? " — " + it.summary.slice(0, 200) : ""}`).join("\n")}
 
 Return JSON:
-{"results":[{"i":<index>,"inScope":<bool>,"primaryEntity":"<the main person>","subjectType":"actor|musician|awards","claim":"<the central rumor/claim in one sentence>","confirmed":<bool: officially confirmed / on the record>,"official":<bool: from a court/police record>,"denied":<bool: the subject/rep has denied it>,"angle":"<the hook>","reason":"<why in/out of scope>"}]}
+{"results":[{"i":<index>,"inScope":<bool>,"primaryEntity":"<the main person>","subjectType":"actor|musician|reality|awards","claim":"<the central rumor/claim in one sentence>","confirmed":<bool: officially confirmed / on the record>,"official":<bool: from a court/police record>,"denied":<bool: the subject/rep has denied it>,"angle":"<the hook>","reason":"<why in/out of scope>"}]}
 Set inScope=false for anything out of scope. REMEMBER: a confirmed announcement, release date, trailer, first-look, or an awards winners/results list is NOT gossip → inScope=false. Only a star's personal-life rumor / speculation / interpersonal drama is inScope=true.`;
 }
 
