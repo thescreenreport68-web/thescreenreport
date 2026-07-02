@@ -82,30 +82,35 @@ export function detectEmbed(urls) {
   return yt || ig || x || fb || bsky || null;
 }
 
-// VISION GATE — pick the best still among candidates by identity match + impact + story fit. Fail-safe.
-async function rankByVision(candidates, ctx, { model, visionImpl }) {
+// VISION GATE — two modes:
+//   mode "source" (for the outlet's own STORY photos): we TRUST the photo depicts the story (the outlet ran it
+//     WITH the article — it may show the person among others, at the event, or from afar). Vision only REJECTS a
+//     logo / ad / graphic / unrelated image (usable=false). This stops a wide, relevant story photo from losing
+//     to a generic headshot just because the face isn't a tight close-up.
+//   mode "identity" (for the TMDB fallback): the image MUST depict the right person (guards wrong-person matches).
+// Fail-safe: any error ⇒ null (caller falls back).
+async function rankByVision(candidates, ctx, { model, visionImpl, mode = "identity" } = {}) {
   const impl = visionImpl || (async (imgs, prompt) => {
     const { data } = await chat({ model: model || "google/gemini-2.5-flash-lite", images: imgs, json: true, maxTokens: 400, temperature: 0,
-      system: "You are an entertainment photo editor choosing a lead image for a celebrity gossip story. Be strict about identity and pick the most striking, on-topic, tasteful shot. Output strict JSON only.",
+      system: "You are an entertainment photo editor choosing the lead image for a celebrity news/gossip story. Output strict JSON only.",
       user: prompt });
     return data;
   });
   const imgs = candidates.map((c) => c.url).slice(0, 4);
-  const prompt = `STORY: ${ctx.headline}
-ABOUT: ${ctx.entity}${ctx.title ? ` (context: ${ctx.title})` : ""}
-TYPE: ${ctx.gossipType}
-
-You are shown ${imgs.length} candidate images, indexed 0..${imgs.length - 1} in order.
-For EACH, judge whether it actually depicts ${ctx.entity}, plus its visual impact and fit for this story.
-Return STRICT JSON: { "ranked": [ { "index": 0, "identityMatch": true, "impact": 0-10, "fit": 0-10, "why": "short" } ] }`;
+  const head = `STORY: ${ctx.headline}\nABOUT: ${ctx.entity}${ctx.title ? ` (context: ${ctx.title})` : ""}\nTYPE: ${ctx.gossipType}\n\nYou are shown ${imgs.length} candidate images, indexed 0..${imgs.length - 1} in order.`;
+  const prompt = mode === "source"
+    ? `${head}\nThese are images the news outlets published WITH this story. For EACH: is it a REAL editorial news/paparazzi PHOTO that fits this story? It MAY show the person among OTHER people, at an event, or from a distance — that is GOOD, not a problem. Set usable=false ONLY for a logo, an ad, a blank/graphic-only image, a screenshot of text, or something clearly unrelated. Rate visual impact + how well it illustrates the story (a photo showing the actual people/event in the headline scores highest).\nReturn STRICT JSON: { "ranked": [ { "index": 0, "usable": true, "impact": 0-10, "fit": 0-10, "why": "short" } ] }`
+    : `${head}\nFor EACH, judge whether it actually DEPICTS ${ctx.entity} (the correct person), plus its visual impact and story fit.\nReturn STRICT JSON: { "ranked": [ { "index": 0, "identityMatch": true, "impact": 0-10, "fit": 0-10, "why": "short" } ] }`;
   try {
     const data = await impl(imgs, prompt);
     const ranked = Array.isArray(data?.ranked) ? data.ranked : [];
     if (!ranked.length) return null;
-    const score = (r) => (r.identityMatch ? 100 : 0) + (Number(r.impact) || 0) + (Number(r.fit) || 0);
+    const ok = (r) => (mode === "source" ? r.usable !== false : !!r.identityMatch);
+    const score = (r) => (ok(r) ? 100 : 0) + (Number(r.impact) || 0) + (Number(r.fit) || 0);
     ranked.sort((a, b) => score(b) - score(a));
-    const top = ranked.find((r) => candidates[r.index]);
-    return top ? { pick: candidates[top.index], score: score(top), why: top.why || "" } : null;
+    const top = ranked.find((r) => candidates[r.index] && ok(r)); // must be usable (source) / the right person (identity)
+    // { pick } = a good image; { allRejected } = it RAN but nothing was usable/matched (fall back); null = an error.
+    return top ? { pick: candidates[top.index], score: score(top), why: top.why || "" } : { pick: null, allRejected: true };
   } catch {
     return null;
   }
@@ -124,73 +129,81 @@ function stillCandidates(personSet, titleSet) {
   return out.filter((c) => c.url && !seen.has(c.url) && seen.add(c.url));
 }
 
+// Build the final image-hero result object (credit / neutral caption / alt / serving dims / orientation).
+function buildImageHero(chosen, { entity, headline, embed, score, why, candidateCount }) {
+  const credit = chosen.kind === "source-photo" ? `Photo via ${chosen.outlet || "the source"}`
+    : chosen.kind === "video-thumb" ? "Still via YouTube"
+    : "Image: The Movie Database (TMDB)";
+  const caption = entity ? `Pictured: ${entity}${chosen.titleContext ? ` in ${chosen.titleContext}` : ""}.` : (chosen.titleContext || "");
+  const alt = entity ? `${entity}${chosen.titleContext ? ` in ${chosen.titleContext}` : ""}` : (headline || "hero image");
+  // Story photos / backdrops / yt thumbs = 16:9 landscape (fill the wide hero, no tight crop); profiles/posters = 2:3.
+  const DIMS = { "source-photo": [1200, 675], backdrop: [1280, 720], "video-thumb": [1280, 720], poster: [800, 1200], profile: [800, 1200] };
+  const [width, height] = DIMS[chosen.kind] || [1200, 675];
+  return {
+    kind: "image", src: chosen.url, width, height, orientation: width >= height ? "landscape" : "portrait",
+    alt, caption, credit, source: chosen.kind === "source-photo" ? "source" : chosen.kind === "video-thumb" ? "youtube" : "tmdb",
+    embed: embed || null, score, why, candidateCount,
+  };
+}
+
 export async function pickHero(
   { topic, article, bundle, frame } = {},
-  { getPersonImagesImpl = getPersonImages, getTitleImagesImpl = getTitleImages, visionImpl, model, vision = true, fetchImpl = defaultFetch, ogImpl = fetchOgImage, sourcePhoto = true, maxSourcePhotos = 2 } = {}
+  { getPersonImagesImpl = getPersonImages, getTitleImagesImpl = getTitleImages, visionImpl, model, vision = true, fetchImpl = defaultFetch, ogImpl = fetchOgImage, sourcePhoto = true, maxSourcePhotos = 3 } = {}
 ) {
   const entity = topic?.primaryEntity || article?.entity || "";
   const headline = article?.title || topic?.title || "";
   const gossipType = topic?.gossipType || article?.gossipType || "general";
   const titleHint = topic?.titleHint || topic?.title?.match(/["“]([^"”]{2,60})["”]/)?.[1] || null;
-
-  // 1) THE RECEIPT embed (kept alongside the hero image as in-body media; becomes the hero only if no still resolves).
+  const ctx = { entity, headline, gossipType, title: titleHint };
   const embed = detectEmbed(collectUrls(topic, bundle));
 
-  // 2) TMDB stills (fail-safe: a lookup miss is fine, we just have fewer candidates).
-  let personSet = null, titleSet = null;
-  try { if (entity) personSet = await getPersonImagesImpl(entity); } catch { /* skip */ }
-  try { if (titleHint) titleSet = await getTitleImagesImpl(titleHint); } catch { /* skip */ }
-  const candidates = stillCandidates(personSet, titleSet);
-  // the YouTube receipt's thumbnail is also a still candidate (often the most on-topic visual).
-  if (embed?.platform === "youtube" && embed.thumb) candidates.unshift({ url: embed.thumb, kind: "video-thumb", titleContext: "" });
-
-  // 2b) THE STORY PHOTO — the source outlet's og:image (the actual event/paparazzi shot; wide + hooking). Prepend
-  // it so it competes as (usually) the strongest candidate. Only the primary NON-corroborating sources with a URL.
+  // ── 1) THE STORY PHOTO (STRONGLY PREFERRED) — the image the outlets ran WITH this story (og:image). It matches
+  // the article: it shows the right people/event (a "spotted with X" story gets a photo of BOTH), not a lone
+  // headshot. We TRUST it depicts the story; vision only rejects a logo/ad/graphic. This is the image quality the
+  // owner wants on EVERY article.
   if (sourcePhoto) {
+    const photos = [];
     const seenDom = new Set();
-    const srcs = (bundle?.sources || []).filter((s) => s?.url && !s.corroborating);
-    let added = 0;
-    for (const s of srcs) {
-      if (added >= maxSourcePhotos) break;
+    if (embed?.platform === "youtube" && embed.thumb) photos.push({ url: embed.thumb, kind: "video-thumb", outlet: "YouTube" });
+    // primary (non-corroborating) sources first — the primary source's photo is THE story photo — then corroborating.
+    const ordered = [...(bundle?.sources || []).filter((s) => s?.url && !s.corroborating), ...(bundle?.sources || []).filter((s) => s?.url && s.corroborating)];
+    for (const s of ordered) {
+      if (photos.length >= maxSourcePhotos) break;
       const dom = (s.url.replace(/^https?:\/\/(www\.)?/, "").split("/")[0] || "").toLowerCase();
       if (seenDom.has(dom)) continue;
       seenDom.add(dom);
-      try {
-        const og = await ogImpl(s.url, fetchImpl);
-        if (og) { candidates.unshift({ url: og, kind: "source-photo", outlet: outletLabel(s), titleContext: "" }); added++; }
-      } catch { /* skip */ }
+      try { const og = await ogImpl(s.url, fetchImpl); if (og && !photos.some((p) => p.url === og)) photos.push({ url: og, kind: "source-photo", outlet: outletLabel(s) }); } catch { /* skip */ }
+    }
+    if (photos.length) {
+      let picked = photos[0], score = null, why = "the outlet's own story photo";
+      if (vision) {
+        const r = await rankByVision(photos, ctx, { model, visionImpl, mode: "source" });
+        if (r?.pick) { picked = r.pick; score = r.score; why = r.why || why; }
+        else if (r?.allRejected) picked = null; // vision ran and every source photo was a logo/ad/graphic → fall to TMDB
+        // r === null ⇒ vision unavailable (error) → keep photos[0]: trust the outlet's own story image.
+      }
+      if (picked) return buildImageHero(picked, { entity, headline, embed, score, why, candidateCount: photos.length });
     }
   }
 
-  // 3) Pick the still — vision-ranked when there are ≥2 candidates; otherwise the deterministic top.
-  let chosen = candidates[0] || null, score = null, why = "deterministic top candidate";
-  if (candidates.length >= 2 && vision) {
-    const r = await rankByVision(candidates, { entity, headline, gossipType, title: titleHint }, { model, visionImpl });
-    if (r?.pick) { chosen = r.pick; score = r.score; why = r.why || why; }
+  // ── 2) TMDB FALLBACK (only when there's NO usable story photo) — REQUIRE an identity match so we never show a
+  // wrong-person image (the "random backdrop" problem). Prefer a backdrop, then the person's profile.
+  let personSet = null, titleSet = null;
+  try { if (entity) personSet = await getPersonImagesImpl(entity); } catch { /* skip */ }
+  try { if (titleHint) titleSet = await getTitleImagesImpl(titleHint); } catch { /* skip */ }
+  const tmdb = stillCandidates(personSet, titleSet);
+  if (tmdb.length) {
+    let picked = null, score = null, why = "TMDB match";
+    if (vision) {
+      const r = await rankByVision(tmdb, ctx, { model, visionImpl, mode: "identity" });
+      if (r?.pick) { picked = r.pick; score = r.score; why = r.why || why; }
+      else if (r?.allRejected) picked = null; // vision says NONE of the TMDB images is the right person → show no wrong image
+      else picked = tmdb.find((c) => c.kind === "profile") || tmdb[0]; // r===null: vision unavailable → the person's own profile is safest
+    } else picked = tmdb[0];
+    if (picked) return buildImageHero(picked, { entity, headline, embed, score, why, candidateCount: tmdb.length });
   }
 
-  const credit = !chosen ? null
-    : chosen.kind === "source-photo" ? `Photo via ${chosen.outlet || "the source"}`
-    : chosen.kind === "video-thumb" ? "Still via YouTube"
-    : "Image: The Movie Database (TMDB)";
-  // Caption is deliberately NEUTRAL — it must NOT restate an unconfirmed claim as fact (legal). "Pictured: X".
-  const caption = entity ? `Pictured: ${entity}${chosen?.titleContext ? ` in ${chosen.titleContext}` : ""}.` : (chosen?.titleContext || "");
-  const alt = entity ? `${entity}${chosen?.titleContext ? ` in ${chosen.titleContext}` : ""}` : (headline || "hero image");
-
-  if (chosen) {
-    // Serving dimensions by kind (for next/image layout + the OG card). Story photos / TMDB backdrops / yt thumbs
-    // = 16:9 landscape (fill the wide hero with NO tight crop); profiles/posters = 2:3 portrait.
-    const DIMS = { "source-photo": [1200, 675], backdrop: [1280, 720], "video-thumb": [1280, 720], poster: [800, 1200], profile: [800, 1200] };
-    const [width, height] = DIMS[chosen.kind] || [1280, 720];
-    const orientation = width >= height ? "landscape" : "portrait";
-    return {
-      kind: "image", src: chosen.url, width, height, orientation,
-      alt, caption, credit, source: chosen.kind === "source-photo" ? "source" : chosen.kind === "video-thumb" ? "youtube" : "tmdb",
-      embed: embed || null, // the originating post rides along as the in-body "receipt" (all embeds are account-free)
-      score, why, candidateCount: candidates.length,
-    };
-  }
-  // No still resolved — lead with the receipt embed if we have one; else no hero.
+  // ── 3) No still resolved — lead with the receipt embed if we have one; else no hero.
   if (embed) return { kind: "embed", embed, alt: headline, caption: entity ? `Pictured: ${entity}.` : "", credit: `Via ${embed.platform}`, source: embed.platform, score: null, why: "no still resolved — leading with the source post", candidateCount: 0 };
   return null;
 }

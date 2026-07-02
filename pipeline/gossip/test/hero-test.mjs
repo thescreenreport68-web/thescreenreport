@@ -56,16 +56,16 @@ const TOPIC = { primaryEntity: "Selena Gomez", title: 'Selena Gomez spotted on t
 {
   const visionImpl = async () => { throw new Error("vision down"); };
   const h = await pickHero({ topic: TOPIC, article: { title: TOPIC.title } }, { getPersonImagesImpl, getTitleImagesImpl, visionImpl });
-  check("vision error → deterministic top still (title backdrop tb1)", h.kind === "image" && h.src === "https://image.tmdb.org/t/p/w1280/tb1.jpg", h.src);
+  check("vision error → safe TMDB fallback = the person's own profile (right person)", h.kind === "image" && h.src === "https://image.tmdb.org/t/p/h632/prof1.jpg", h.src);
 }
 
-// ── single candidate → vision NOT called ──
+// ── single TMDB candidate → vision identity-checks it (never shows a wrong person); on no-match falls to the profile ──
 {
   let visionCalls = 0;
   const visionImpl = async () => { visionCalls++; return { ranked: [] }; };
   const onlyOne = async () => ({ id: 1, name: "X", profiles: [{ url: "https://image.tmdb.org/t/p/h632/only.jpg", w: 632, h: 948, vote: 7 }], backdrop: null });
   const h = await pickHero({ topic: { primaryEntity: "X", title: "X news", gossipType: "general" }, article: { title: "X news" } }, { getPersonImagesImpl: onlyOne, getTitleImagesImpl: async () => null, visionImpl });
-  check("single candidate → vision skipped (credit saved)", visionCalls === 0);
+  check("single TMDB candidate is identity-checked (vision runs once)", visionCalls === 1);
   check("single candidate → that image is the hero", h.src === "https://image.tmdb.org/t/p/h632/only.jpg");
 }
 
@@ -114,6 +114,34 @@ const TOPIC = { primaryEntity: "Selena Gomez", title: 'Selena Gomez spotted on t
   const visionImpl = async () => { visionCalls++; return { ranked: [{ index: 2, identityMatch: true, impact: 9, fit: 9 }] }; };
   const h = await pickHero({ topic: TOPIC, article: { title: TOPIC.title } }, { getPersonImagesImpl, getTitleImagesImpl, visionImpl, vision: false });
   check("vision:false → no vision call, deterministic top", visionCalls === 0 && h.src === "https://image.tmdb.org/t/p/w1280/tb1.jpg");
+}
+
+// ── the STORY PHOTO is PREFERRED over TMDB even when it's not a tight headshot (the owner's fix) ──
+{
+  const ogImpl = async (url) => url.includes("pagesix") ? "https://cdn.pagesix.com/collin-event.jpg" : null;
+  // "source" mode: the wide event photo is usable=true → chosen, beating any TMDB headshot.
+  const visionImpl = async () => ({ ranked: [{ index: 0, usable: true, impact: 9, fit: 9, why: "the actual event photo" }] });
+  const bundle = { sources: [{ outlet: "Page Six", url: "https://pagesix.com/2026/collin/", tier: 6 }] };
+  const h = await pickHero({ topic: { primaryEntity: "Collin Gosselin", title: "Collin's memoir bombshell", gossipType: "general" }, article: { title: "Collin's memoir bombshell" }, bundle },
+    { getPersonImagesImpl, getTitleImagesImpl: async () => null, visionImpl, ogImpl });
+  check("the outlet's STORY photo wins over TMDB (not a lone headshot)", h.src === "https://cdn.pagesix.com/collin-event.jpg" && h.source === "source");
+}
+// a source photo that's a LOGO (vision usable=false) → falls back to TMDB
+{
+  const ogImpl = async () => "https://cdn.blog.com/logo.png";
+  let c = 0;
+  const visionImpl = async () => { c++; return c === 1 ? { ranked: [{ index: 0, usable: false, impact: 1, fit: 1, why: "just a logo" }] } : { ranked: [{ index: 0, identityMatch: true, impact: 7, fit: 7 }] }; };
+  const bundle = { sources: [{ outlet: "SomeBlog", url: "https://someblog.com/x", tier: 3 }] };
+  const h = await pickHero({ topic: { primaryEntity: "Selena Gomez", title: "x", gossipType: "general" }, article: { title: "x" }, bundle },
+    { getPersonImagesImpl, getTitleImagesImpl: async () => null, visionImpl, ogImpl });
+  check("a logo source photo is rejected → falls back to TMDB", h.source === "tmdb");
+}
+// a wrong-person TMDB image (vision says none match) → NO wrong image (rather than a bad hero)
+{
+  const noMatchVision = async () => ({ ranked: [{ index: 0, identityMatch: false, impact: 5, fit: 2, why: "not this person" }] });
+  const h = await pickHero({ topic: { primaryEntity: "Obscure Person", title: "x", gossipType: "general" }, article: { title: "x" }, bundle: { sources: [] } },
+    { getPersonImagesImpl, getTitleImagesImpl: async () => null, visionImpl: noMatchVision, ogImpl: async () => null });
+  check("TMDB image that fails identity → no wrong-person hero", h === null || h.source !== "tmdb");
 }
 
 // ── fetchOgImage: extract + validate the source outlet's og:image ──
