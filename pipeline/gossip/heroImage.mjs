@@ -35,11 +35,20 @@ export async function fetchOgImage(url, fetchImpl = defaultFetch) {
   try {
     const r = await fetchImpl(url, { headers: { "User-Agent": UA } });
     if (!r.ok) return null;
-    const html = (await r.text()).slice(0, 80000);
-    const m =
-      html.match(/<meta[^>]+(?:property|name)=["'](?:og:image(?::secure_url)?|twitter:image(?::src)?)["'][^>]+content=["']([^"']+)["']/i) ||
-      html.match(/<meta[^>]+content=["']([^"']+)["'][^>]+(?:property|name)=["'](?:og:image|twitter:image)["']/i);
-    let src = (m?.[1] || "").trim().replace(/&amp;/g, "&");
+    const html = (await r.text()).slice(0, 250000);
+    // Parse each <meta> tag and match the property/name EXACTLY — otherwise "og:image:width" (content "1200") gets
+    // grabbed instead of the real "og:image" URL (Page Six emits the width tag first). Order-independent within a tag.
+    const metas = html.match(/<meta\b[^>]*>/gi) || [];
+    let src = "";
+    for (const target of ["og:image", "og:image:secure_url", "twitter:image", "twitter:image:src"]) {
+      for (const tag of metas) {
+        const prop = (tag.match(/(?:property|name)\s*=\s*["']([^"']+)["']/i)?.[1] || "").toLowerCase();
+        if (prop !== target) continue;
+        const c = (tag.match(/content\s*=\s*["']([^"']+)["']/i)?.[1] || "").trim().replace(/&amp;/g, "&");
+        if (c && !/^\d+$/.test(c)) { src = c; break; } // skip a bare number (a stray width/height value)
+      }
+      if (src) break;
+    }
     if (!src) return null;
     if (src.startsWith("//")) src = "https:" + src;
     else if (src.startsWith("/")) { try { src = new URL(src, url).href; } catch { return null; } }

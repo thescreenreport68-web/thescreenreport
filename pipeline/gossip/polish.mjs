@@ -68,7 +68,15 @@ export function cutFlagged(body, texts) {
 // mid-sentence, drop that trailing fragment so the published article never ends mid-thought.
 export function trimIncomplete(body) {
   if (!body) return body;
-  const paras = String(body).split(/\n{2,}/).map((p) => p.trim()).filter(Boolean);
+  let paras = String(body).split(/\n{2,}/).map((p) => p.trim()).filter(Boolean);
+  // 1) Drop a MID-BODY orphan incomplete-quote fragment (its own paragraph with an UNCLOSED quote AND a dangling
+  //    ellipsis or very short) — e.g. a lone `"It's more like...` the writer opened and never finished.
+  paras = paras.filter((p) => {
+    const unclosedQuote = ((p.match(/"/g) || []).length % 2) !== 0;
+    const dangling = /(\.\.\.|…)\s*$/.test(p) || p.split(/\s+/).filter(Boolean).length < 6;
+    return !(unclosedQuote && dangling);
+  });
+  // 2) Trim a trailing incomplete sentence from the end (the cut-off-generation case).
   for (let i = paras.length - 1; i >= 0; i--) {
     const sents = paras[i].split(/(?<=[.!?"'”’])\s+/);
     // drop a trailing fragment with no terminal punctuation OR an unclosed markdown bold (a cut-off heading/label).

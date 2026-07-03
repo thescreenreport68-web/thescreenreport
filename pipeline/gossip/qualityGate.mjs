@@ -15,8 +15,9 @@ export function qualityCheck(article) {
   // TRUNCATED write: an unclosed markdown bold (odd ** count, e.g. a cut-off "**What We Know vs.") OR a body that
   // ends without terminal punctuation — a cut-off generation. "truncated" triggers a full regenerate in run.mjs.
   const openBold = (body.match(/\*\*/g) || []).length % 2 !== 0;
+  const openQuote = (body.match(/"/g) || []).length % 2 !== 0; // an UNCLOSED straight quote = an orphan quote fragment
   const tail = body.replace(/[#*_>`~\s]+$/g, "");
-  if (openBold || (tail.length > 60 && !/[.!?"'”’)\]]$/.test(tail))) issues.push("body appears TRUNCATED — it ends mid-sentence; regenerate the complete article");
+  if (openBold || openQuote || (tail.length > 60 && !/[.!?"'”’)\]]$/.test(tail))) issues.push("body appears TRUNCATED — it ends mid-sentence or has an unclosed quote; regenerate the complete article");
   if (words > 120 && !/\n\s*\n/.test(body)) issues.push("one undivided block of text (needs paragraph breaks)");
   const banned = (body.match(BANNED) || []).length;
   if (banned >= 3) issues.push(`${banned} generic AI-tell phrases (delve/tapestry/…) — rewrite naturally`);
