@@ -262,9 +262,13 @@ export default function HomePage() {
           <div className="border-t-2 border-ink">
             <div className="flex items-baseline gap-2.5 border-b border-hair pb-2 pt-2.5">
               <h2 className="sect-head text-2xl lg:text-2xl">
-                {rail.isTrending ? "Trending Now" : "More Top Stories"}
+                {rail.mode === "trending"
+                  ? "Trending Now"
+                  : rail.mode === "popular"
+                    ? "Most Popular"
+                    : "More Top Stories"}
               </h2>
-              {rail.isTrending ? <span className="dot-live" aria-hidden /> : null}
+              {rail.mode === "trending" ? <span className="dot-live" aria-hidden /> : null}
             </div>
             <div className="pt-3">
               <DottedList items={rail.items} numbered showKicker={false} showTime />

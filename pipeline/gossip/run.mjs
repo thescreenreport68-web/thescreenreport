@@ -24,7 +24,7 @@ import { qualityCheck } from "./qualityGate.mjs";
 import { verifyQuotes } from "./quoteGuard.mjs";
 import { verifyGate } from "./verifyGate.mjs";
 import { judgeGossip } from "./judge.mjs";
-import { dedupeSentences, ensureTakeaways, ensureFaq, cutFlagged, trimIncomplete } from "./polish.mjs";
+import { dedupeSentences, ensureTakeaways, ensureFaq, cutFlagged, cutSentencesWith, trimIncomplete } from "./polish.mjs";
 import { GOSSIP_AUTHOR_SLUG, AI_DISCLOSURE, routeBySubject, MONITOR_WINDOW_HOURS } from "./config.gossip.mjs";
 
 // The ABSOLUTE red lines — the ONLY things that block a story (they're illegal + can't be corrected into a
@@ -39,6 +39,7 @@ function inspect(article, frame, topic, bundle, verifyResult) {
   const legal = legalGate(article, frame, topic);
   const issues = [];
   const cutTexts = [];        // the exact phrases to delete if the writer can't fix them (last-resort cut)
+  const dropSpecifics = [];   // still-unverified SPECIFICS (bare tokens too, e.g. "2022") to drop as a last resort
   const redLineBlocks = [];
   let redLine = false;
   for (const b of legal.blocks || []) {
@@ -53,25 +54,26 @@ function inspect(article, frame, topic, bundle, verifyResult) {
   if (!qc.ok) for (const q of qc.badQuotes) { issues.push(`FABRICATED_QUOTE: the quoted phrase "${q}" is NOT verbatim in any source — use the exact source words, or drop the quotation marks and paraphrase`); cutTexts.push(q); }
   const quality = qualityCheck(article);
   if (!quality.pass) for (const q of quality.issues || []) issues.push(q);
-  // NAMES & NUMBERS NOT MISPLACED (owner's hard rule for this desk): flag any number or known-outlet attribution
-  // in the body that isn't grounded in the bundle → the writer corrects it (or cuts the claim). Never invented.
-  const spec = checkSpecifics(article, bundle);
-  for (const n of spec.badNumbers) issues.push(`MISPLACED_NUMBER: "${n}" is in the article but NOT in any source — replace it with the correct figure from the bundle, or cut that claim. Never invent or misplace a number, date, or amount.`);
-  for (const o of spec.badOutlets) issues.push(`WRONG_OUTLET: the article credits "${o}", which is NOT among the sources — attribute the claim to the outlet that actually reported it, or drop the outlet name.`);
-  // Speculation desk: an unsupported claim is NOT cut — the writer HEDGES it (frames it as speculation). We only
-  // hard-cut a claim the bundle actively CONTRADICTS (a wrong fact / misplaced specific), never mere speculation.
+  // THE ACCURACY SPINE (owner's hard rule): every checkable SPECIFIC — a date, number, place, person or work title —
+  // that the source does NOT support (invented, misattached, or contradicted) MUST be corrected from the source or
+  // DROPPED; it is never published unverified. A non-specific speculative claim is NOT dropped — it is just hedged.
   if (verifyResult && !verifyResult.ok) for (const u of verifyResult.unsupported) {
-    issues.push(`UNSUPPORTED_CLAIM: "${(u.claim || "").slice(0, 160)}" — ${u.why}${u.contradicted ? " (the bundle CONTRADICTS this — this is a WRONG fact, fix or cut it)" : " — frame it as speculation ('reportedly', 'it seems'), do NOT state it as confirmed fact"}`);
-    if (u.contradicted) cutTexts.push(u.claim); // only a contradicted (wrong) claim is a cut candidate; speculation stays
+    const fixNote = u.correction ? ` → CORRECT it to: "${u.correction}"` : " → the source does not support this; REMOVE it entirely";
+    if (u.isSpecific || u.contradicted) {
+      issues.push(`UNVERIFIED_${String(u.kind || "specific").toUpperCase()}: "${(u.claim || "").slice(0, 140)}" (${u.problem})${fixNote}`);
+      cutTexts.push(u.claim);        // last resort for long phrases (cutFlagged, ≥12 chars)
+      dropSpecifics.push(u.claim);   // last resort for short specifics too (cutSentencesWith, word-boundary)
+    } else {
+      issues.push(`UNCONFIRMED_CLAIM: "${(u.claim || "").slice(0, 140)}" — frame it as speculation ("reportedly", "it seems"), do NOT state it as confirmed fact.`);
+    }
   }
   return {
     issues, redLine, redLineBlocks, cutTexts: cutTexts.filter((t) => t && String(t).length >= 12),
+    dropSpecifics: [...new Set(dropSpecifics.filter(Boolean))],
     legalPass: legal.pass, legalBlocks: legal.blocks || [],
     quoteOk: qc.ok, qualityPass: quality.pass, qualityIssues: quality.issues || [],
-    verifyOk: !verifyResult || verifyResult.ok, specificsOk: spec.ok,
-    // specifics (misplaced numbers/outlets) count toward "needs another surgical fix", but are NEVER cut/blocked —
-    // the writer corrects them in the loop; if they persist, we still publish (this is a speculation desk).
-    allPass: legal.pass && qc.ok && quality.pass && spec.ok && (!verifyResult || verifyResult.ok),
+    verifyOk: !verifyResult || verifyResult.ok,
+    allPass: legal.pass && qc.ok && quality.pass && (!verifyResult || verifyResult.ok),
   };
 }
 
@@ -158,6 +160,9 @@ export async function runGossip(topic, {
   const cleanse = async () => {
     if (report.allPass) return;
     article.body = cutFlagged(article.body, report.cutTexts);
+    // Drop any sentence still carrying an unverified SPECIFIC (date/number/name/title) the writer couldn't fix —
+    // never publish an unverified specific (owner's hard rule); a short bare "2022"/"$40K" is caught here too.
+    article.body = cutSentencesWith(article.body, report.dropSpecifics);
     if (frame.needsDisclaimer && frame.disclaimerText && !article.body.includes(frame.disclaimerText)) article.body = (article.body.trim() + "\n\n" + frame.disclaimerText).trim();
     verifyResult = verify ? await verifyImpl({ article, bundle, model }) : verifyResult;
     report = inspect(article, frame, topic, bundle, verifyResult);

@@ -1,0 +1,105 @@
+{
+  "id": "news-next-thor-casting",
+  "slug": "marvel-officially-casts-the-next-thor",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": 0,
+      "cat": "tv/news",
+      "hardBlocks": [
+        "primary keyword not in title",
+        "CONTRADICTED [platform]: article says Iron Man and His Awesome Friends streams on Disney+ — TMDB/JustWatch shows Iron Man and His Awesome Friends streams on Disney Plus, fuboTV, YouTube TV, DisneyNOW, NOT Disney+. State only Disney Plus, fuboTV, YouTube TV, DisneyNOW.",
+        "CONTRADICTED [rt]: article states a Rotten Tomatoes score of NaN% — No verified Rotten Tomatoes score exists for Iron Man and His Awesome Friends (OMDb returns none — common for TV/new titles). Do NOT state an RT percentage; speak qualitatively."
+      ],
+      "block": [
+        "CONTRADICTED [platform]: article says Iron Man and His Awesome Friends streams on Disney+ — TMDB/JustWatch shows Iron Man and His Awesome Friends streams on Disney Plus, fuboTV, YouTube TV, DisneyNOW, NOT Disney+. State only Disney Plus, fuboTV, YouTube TV, DisneyNOW.",
+        "CONTRADICTED [rt]: article states a Rotten Tomatoes score of NaN% — No verified Rotten Tomatoes score exists for Iron Man and His Awesome Friends (OMDb returns none — common for TV/new titles). Do NOT state an RT percentage; speak qualitatively."
+      ],
+      "fixable": [
+        "primary keyword not in title"
+      ],
+      "badClaims": 0
+    },
+    "attempt2": {
+      "score": 0,
+      "cat": "tv/news",
+      "hardBlocks": [
+        "primary keyword not in title",
+        "CONTRADICTED [platform]: article says Iron Man and His Awesome Friends streams on Disney+ — TMDB/JustWatch shows Iron Man and His Awesome Friends streams on Disney Plus, fuboTV, YouTube TV, DisneyNOW, NOT Disney+. State only Disney Plus, fuboTV, YouTube TV, DisneyNOW."
+      ],
+      "block": [
+        "CONTRADICTED [platform]: article says Iron Man and His Awesome Friends streams on Disney+ — TMDB/JustWatch shows Iron Man and His Awesome Friends streams on Disney Plus, fuboTV, YouTube TV, DisneyNOW, NOT Disney+. State only Disney Plus, fuboTV, YouTube TV, DisneyNOW."
+      ],
+      "fixable": [
+        "primary keyword not in title"
+      ],
+      "badClaims": 0
+    }
+  },
+  "editorial": {
+    "status": "official",
+    "entity": "Liam Karlsson",
+    "work": {
+      "title": "Iron Man and His Awesome Friends",
+      "year": null,
+      "medium": "tv"
+    },
+    "outlet": "screenrant.com"
+  },
+  "acceptReason": "cut-and-publish (removed 0 sentence(s) + 1 field item(s); 310w remain)",
+  "webCheck": {
+    "contradictions": 6,
+    "cut": 8
+  },
+  "scorecard": {
+    "score": 0,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [
+      "deterministic block"
+    ],
+    "deterministic": {
+      "words": 306,
+      "h2s": 3,
+      "h2Questions": 3,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 3,
+      "ktCount": 5,
+      "kwInTitle": false,
+      "kwInFirst100": false,
+      "kwInH2": false,
+      "maxSentence": 46,
+      "avgSentence": 23,
+      "flesch": 51,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": [
+        "primary keyword not in title"
+      ]
+    },
+    "hardBlocks": [
+      "primary keyword not in title",
+      "CONTRADICTED [platform]: article says Iron Man and His Awesome Friends streams on Disney+ — TMDB/JustWatch shows Iron Man and His Awesome Friends streams on Disney Plus, fuboTV, YouTube TV, DisneyNOW, NOT Disney+. State only Disney Plus, fuboTV, YouTube TV, DisneyNOW."
+    ]
+  },
+  "score": 0,
+  "category": "tv",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 1,
+    "failed": [
+      "body ≥ 220w",
+      "score ≥ 70",
+      "zero hard-blocks",
+      "infoGain ≥ 5",
+      "readability ≥ 5",
+      "humanVoice ≥ 5",
+      "phrasing ≥ 5"
+    ]
+  },
+  "ms": 194053
+}

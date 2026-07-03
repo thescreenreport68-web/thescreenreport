@@ -216,14 +216,14 @@ export default function ArticlePage({
       <JsonLd data={jsonLd} />
 
       {/* Top billboard */}
-      <div className="mb-6 flex justify-center">
+      <div data-pagefind-ignore className="mb-6 flex justify-center">
         <AdSlot format="billboard" />
       </div>
 
       <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_300px]">
-        <article className="min-w-0">
+        <article className="min-w-0" data-pagefind-body>
           {/* Folio line (spec §D1): breadcrumb left, date + reading time right */}
-          <div className="flex flex-wrap items-baseline justify-between gap-x-4 border-b border-hair pb-2">
+          <div data-pagefind-ignore className="flex flex-wrap items-baseline justify-between gap-x-4 border-b border-hair pb-2">
             <Breadcrumbs
               items={[
                 { href: "/", label: "Home" },
@@ -262,7 +262,7 @@ export default function ArticlePage({
             <p className="dek mt-4 text-xl leading-[1.4]">{article.dek}</p>
           ) : null}
 
-          <div className="mt-5">
+          <div data-pagefind-ignore className="mt-5">
             <Byline
               author={article.author}
               date={article.date}
@@ -316,7 +316,7 @@ export default function ArticlePage({
           <NewsletterBand />
 
           {/* End-of-article recirculation */}
-          <section className="mt-12">
+          <section data-pagefind-ignore className="mt-12">
             <div className="mb-6 border-b-2 border-ink pb-2">
               <h2 className="sect-head">More from The Screen Report</h2>
             </div>

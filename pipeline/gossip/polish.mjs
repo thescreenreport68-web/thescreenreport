@@ -64,6 +64,23 @@ export function cutFlagged(body, texts) {
   return paras.filter((p) => p.trim()).join("\n\n");
 }
 
+// DROP a SENTENCE that still carries an unverified SPECIFIC (a bare date/number/name/title cutFlagged's 12-char
+// floor won't match, e.g. "2022", "$40K"). Word-boundary exact match so we don't nuke an unrelated sentence.
+// This is the last resort AFTER the writer had its correction passes — a specific we could not verify is removed,
+// never published (owner's hard rule), while the rest of the story stays.
+export function cutSentencesWith(body, needles) {
+  if (!body || !Array.isArray(needles) || !needles.length) return body;
+  const terms = [...new Set(needles.map((n) => String(n || "").trim()).filter((n) => n.length >= 2))];
+  if (!terms.length) return body;
+  const esc = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const rx = terms.map((t) => new RegExp(`(^|[^\\w])${esc(t)}([^\\w]|$)`, "i"));
+  const hit = (sentence) => rx.some((r) => r.test(sentence));
+  const paras = String(body).split(/\n{2,}/).map((para) =>
+    para.split(/(?<=[.!?])\s+/).filter((s) => s.trim() && !hit(s)).join(" ")
+  );
+  return paras.filter((p) => p.trim()).join("\n\n");
+}
+
 // TRIM a dangling incomplete sentence from the end (truncation backstop): if the last generation got cut off
 // mid-sentence, drop that trailing fragment so the published article never ends mid-thought.
 export function trimIncomplete(body) {

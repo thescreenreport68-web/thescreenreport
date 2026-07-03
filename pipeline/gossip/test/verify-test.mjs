@@ -35,23 +35,42 @@ const cleanArticle = () => ({
 
 // ── verifyGate: L2 (mock LLM) + merge/dedup + severity + degraded ──
 {
-  const llmFlag = async () => ({ list: [{ claim: "They are engaged", why: "not in the bundle", contradicted: false }], ran: true });
+  const llmFlag = async () => ({ list: [{ text: "They are engaged", kind: "claim", problem: "invented", correction: null }], ran: true });
   const v = await verifyGate({ article: cleanArticle(), bundle: BUNDLE, llmImpl: llmFlag });
   check("L2: LLM-found unsupported claim surfaces", !v.ok && v.unsupported.some((u) => /engaged/i.test(u.claim)));
 
   // L1 + L2 catch the SAME claim → it appears once
   const sameClaimArticle = { ...cleanArticle(), claims: [{ text: "They are engaged", sourceQuote: "the couple confirmed their engagement in Paris" }] };
-  const v2 = await verifyGate({ article: sameClaimArticle, bundle: BUNDLE, llmImpl: async () => ({ list: [{ claim: "They are engaged", why: "not in the bundle" }], ran: true }) });
+  const v2 = await verifyGate({ article: sameClaimArticle, bundle: BUNDLE, llmImpl: async () => ({ list: [{ text: "They are engaged", kind: "claim", problem: "invented" }], ran: true }) });
   check("merge de-dupes a claim caught by BOTH layers", v2.unsupported.filter((u) => /engaged/i.test(u.claim)).length === 1, JSON.stringify(v2.unsupported));
 
-  const vContra = await verifyGate({ article: cleanArticle(), bundle: BUNDLE, llmImpl: async () => ({ list: [{ claim: "They split", why: "bundle says they were spotted together", contradicted: true }], ran: true }) });
+  const vContra = await verifyGate({ article: cleanArticle(), bundle: BUNDLE, llmImpl: async () => ({ list: [{ text: "They split", kind: "claim", problem: "contradicted", correction: "they were spotted together" }], ran: true }) });
   check("a CONTRADICTED claim makes severity major", vContra.severity === "major" && vContra.contradicted === true);
+
+  // NEW: a MISATTACHED SPECIFIC (the Blake-Shelton-2022 class) is flagged as a specific, WITH the source's correction
+  const vMis = await verifyGate({ article: cleanArticle(), bundle: BUNDLE, llmImpl: async () => ({ list: [{ text: "married in 2022", kind: "date", problem: "misattached", correction: "2021" }], ran: true }) });
+  const misItem = vMis.unsupported.find((u) => /2022/.test(u.claim));
+  check("a misattached DATE is flagged as a SPECIFIC with a correction", misItem && misItem.isSpecific === true && misItem.correction === "2021", JSON.stringify(misItem));
 
   const vDegraded = await verifyGate({ article: cleanArticle(), bundle: BUNDLE, llmImpl: async () => ({ list: [], ran: false }) });
   check("verify L2 error → degraded flag (falls back to L1, doesn't hard-block)", vDegraded.degraded === true && vDegraded.ok === true);
 
   const vClean = await verifyGate({ article: cleanArticle(), bundle: BUNDLE, llmImpl: async () => ({ list: [], ran: true }) });
   check("a fully-supported article passes verify (ok:true)", vClean.ok === true && vClean.unsupported.length === 0);
+
+  // NEW: the DETERMINISTIC floor catches an INVENTED number/year EVEN IF the LLM is down (degraded) — the always-on net.
+  const invented = { ...cleanArticle(), body: cleanArticle().body + " The pair reportedly signed a $75 million deal back in 1998." };
+  const vInv = await verifyGate({ article: invented, bundle: BUNDLE, llmImpl: async () => ({ list: [], ran: false }) });
+  check("deterministic floor flags an invented number ($75 million) with the LLM down", !vInv.ok && vInv.unsupported.some((u) => u.isSpecific && /75/.test(u.claim)), JSON.stringify(vInv.unsupported.map((u) => u.claim)));
+  check("deterministic floor flags an invented year (1998) with the LLM down", vInv.unsupported.some((u) => /1998/.test(u.claim)));
+}
+
+// ── run.mjs DROP: a still-unverified SPECIFIC is REMOVED from the published body (never published) ──
+{
+  const withBadYear = () => ({ ...cleanArticle(), body: "According to People, Star A and Star B were spotted together this weekend. They secretly married in 1998, a detail no source supports. " + Array.from({ length: 12 }, (_, i) => `Fans dissected clue number ${i + 1} for hints about the two stars and what it might mean.`).join(" ") });
+  // writer ignores the fix (returns the same bad draft) so the LAST-RESORT drop must remove the invented "1998".
+  const r = await runGossip(TOPIC, { writeImpl: async () => withBadYear(), verifyImpl: async () => ({ ok: false, unsupported: [{ claim: "1998", why: "invented", kind: "date", problem: "invented", correction: null, isSpecific: true, contradicted: false }], contradicted: false, severity: "minor", brokenRatio: 0.1, degraded: false }), judgeImpl: async () => ({ score: 80, subscores: { safety: 9 }, issues: [] }), verify: true, judge: true, corroborate: false });
+  check("an unverified SPECIFIC (year 1998) is DROPPED from the published body", r.status === "PUBLISH" && !/1998/.test(r.article.body), r.status + " :: " + (r.article?.body || "").slice(0, 70));
 }
 
 // ── run.mjs loop: clean draft + judge passes → PUBLISH (auto attached, writer called ONCE) ──
@@ -81,7 +100,7 @@ const cleanArticle = () => ({
   check("self-correct happened (writer called twice)", writeCalls.length === 2, `calls=${writeCalls.length}`);
   const corr = writeCalls[1];
   check("the correction pass gets the PRIOR draft (surgical, not blank rewrite)", !!corr?.priorArticle && corr.rewrite === false);
-  check("the correction pass is handed the specific UNSUPPORTED_CLAIM issue", (corr?.issues || []).some((i) => /UNSUPPORTED_CLAIM/.test(i)), JSON.stringify(corr?.issues));
+  check("the correction pass is handed the flagged claim (hedge it, don't state as fact)", (corr?.issues || []).some((i) => /UNCONFIRMED_CLAIM/.test(i)), JSON.stringify(corr?.issues));
 }
 
 // ── run.mjs loop: broadly-broken draft (brokenRatio>0.6) → FULL REWRITE, not surgical ──

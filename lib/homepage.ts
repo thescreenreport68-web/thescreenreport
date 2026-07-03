@@ -78,6 +78,47 @@ function hoursSince(iso: string | undefined, now: number): number {
   return Math.max(0, (now - t) / 3_600_000);
 }
 
+// ---- Phase 2 demand signals: real pageviews from the beacon (Workers
+// Analytics Engine), pulled at build by scripts/fetch-metrics.mjs. Absent or
+// stale metrics degrade to supply-side-only behavior. ----
+type PathMetrics = { v24: number; v1: number; vPrev: number };
+let metrics: Map<string, PathMetrics> | null = null;
+function metricsFor(a: Article): PathMetrics | undefined {
+  if (!metrics) {
+    metrics = new Map();
+    try {
+      const p = path.join(process.cwd(), "data", "homepage-metrics.json");
+      const raw = JSON.parse(fs.readFileSync(p, "utf8"));
+      // Ignore metrics older than 6h — stale demand data must not steer the page.
+      const age = Date.now() - new Date(raw.generatedAt ?? 0).getTime();
+      if (age < 6 * 3_600_000 && raw.views) {
+        for (const [k, v] of Object.entries(raw.views)) {
+          metrics.set(k, v as PathMetrics);
+        }
+      }
+    } catch {
+      /* no metrics file — beacon not live yet */
+    }
+  }
+  return metrics.get(`/${a.category}/${a.slug}/`);
+}
+
+// Reader velocity: impressions last hour vs the hour before, capped at 3 (the
+// approved formula's V term — "the breaking detector").
+function readerVelocity(m: PathMetrics | undefined): number {
+  if (!m || m.vPrev < 3) return 0; // too little data to call it a trend
+  return Math.min(3, Math.max(0, m.v1 / m.vPrev - 1));
+}
+
+export function views24(a: Article): number {
+  return metricsFor(a)?.v24 ?? 0;
+}
+
+export function hasDemandData(): boolean {
+  metricsFor({ category: "", slug: "" } as Article); // force-load
+  return (metrics?.size ?? 0) >= 5;
+}
+
 function trendScoreOf(a: Article): number {
   return a.trendScore ?? ledgerFor(a.slug)?.priority ?? HOMEPAGE.BASE_SCORE;
 }
@@ -100,6 +141,12 @@ export function heat(a: Article, now: number, gravity: number): number {
   if (a.storyStatus === "CONFIRMED") score += 8;
   else if (a.storyStatus === "DEVELOPING") score += 4;
   else if (a.storyStatus === "RUMOR") score -= 15;
+  // Phase 2 demand terms (approved formula: w_e·log10(1+E) + w_v·V):
+  const m = metricsFor(a);
+  if (m) {
+    score += 8 * Math.log10(1 + m.v24); // engagement: 100 views ≈ +16, 1000 ≈ +24
+    score += 10 * readerVelocity(m); // readers spiking right now ≈ up to +30
+  }
   if (isPinned(a, now)) score += 1000;
   return score / Math.pow(hoursSince(a.date, now) + 2, gravity);
 }
@@ -109,14 +156,19 @@ export function trendingScore(a: Article, now: number): number {
   const h = hoursSince(a.date, now);
   if (h > HOMEPAGE.TRENDING_MAX_AGE_H) return 0;
   const s = signalsOf(a);
-  if (!s || Object.keys(s).length === 0) return 0; // no signals → never trends
+  const m = metricsFor(a);
+  // Reader velocity is the honest trending signal once the beacon flows;
+  // supply-side wave velocity carries it until then.
+  const demand = m ? 12 * readerVelocity(m) + 4 * Math.log10(1 + m.v1) : 0;
+  if ((!s || Object.keys(s).length === 0) && !demand) return 0;
   // A real post-publish update (recheck promotion / correction) re-heats the story.
   const promoteBonus = a.updated && a.updated !== a.date ? 10 : 0;
   const base =
-    (s.breakout ?? 0) * 3 +
-    (s.corroboration ?? 0) * 1.5 +
-    (s.type ?? 0) +
-    promoteBonus;
+    (s?.breakout ?? 0) * 3 +
+    (s?.corroboration ?? 0) * 1.5 +
+    (s?.type ?? 0) +
+    promoteBonus +
+    demand;
   return base * Math.pow(0.5, h / HOMEPAGE.TRENDING_HALF_LIFE_H);
 }
 
@@ -218,12 +270,20 @@ export function pickDiverse(
   return out;
 }
 
-// The Trending Now rail: top by trending score, capped per category, deduped.
+// The rail: Trending Now (velocity) → Most Popular (real 24h reads, Phase 2)
+// → More Top Stories (heat). Each label is only ever earned, never faked.
+export type RailMode = "trending" | "popular" | "top";
 export function trendingRail(
   all: Article[],
   now: number,
   used: { slugs: Set<string>; events: Set<string> }
-): { items: Article[]; isTrending: boolean } {
+): { items: Article[]; mode: RailMode } {
+  const release = (picks: Article[]) =>
+    picks.forEach((a) => {
+      used.slugs.delete(a.slug);
+      if (a.eventSlug) used.events.delete(a.eventSlug);
+    });
+
   const scored = all
     .map((a) => ({ a, s: trendingScore(a, now) }))
     .filter((x) => x.s >= HOMEPAGE.TRENDING_MIN_SCORE)
@@ -235,18 +295,26 @@ export function trendingRail(
     used,
     HOMEPAGE.TRENDING_RAIL_PER_CATEGORY
   );
-  if (picks.length >= 3) return { items: picks, isTrending: true };
-  // Not enough genuine trending stories → heat-ranked top stories, honestly unbadged.
-  // (Return picks' slots to the pool first.)
-  picks.forEach((a) => {
-    used.slugs.delete(a.slug);
-    if (a.eventSlug) used.events.delete(a.eventSlug);
-  });
+  if (picks.length >= 3) return { items: picks, mode: "trending" };
+  release(picks);
+
+  // Real readership (beacon live + fresh metrics): Most Popular, by 24h views.
+  if (hasDemandData()) {
+    const popular = pickDiverse(
+      [...all].filter((a) => views24(a) > 0).sort((x, y) => views24(y) - views24(x)),
+      HOMEPAGE.TRENDING_RAIL_SLOTS,
+      used,
+      HOMEPAGE.TRENDING_RAIL_PER_CATEGORY
+    );
+    if (popular.length >= 3) return { items: popular, mode: "popular" };
+    release(popular);
+  }
+
   const fallback = pickDiverse(
     byHeat(all, now, HOMEPAGE.GRAVITY_HOT),
     HOMEPAGE.TRENDING_RAIL_SLOTS,
     used,
     HOMEPAGE.TRENDING_RAIL_PER_CATEGORY
   );
-  return { items: fallback, isTrending: false };
+  return { items: fallback, mode: "top" };
 }

@@ -1,107 +1,40 @@
 {
-  "runId": "run-2026-07-03T12-10-58",
-  "builtAt": "2026-07-03T12:19:29.127Z",
-  "count": 6,
+  "runId": "run-2026-07-03T12-49-00",
+  "builtAt": "2026-07-03T12:53:25.749Z",
+  "count": 4,
   "topics": [
     {
-      "id": "music-news-mr-eazi-dre-skull-mixtape",
-      "slug": "mr-eazi-dre-skull-preview-new-dancehall-inspired-mixtape-with-sizzling",
-      "title": "Mr Eazi & Dre Skull Preview New Dancehall-Inspired Mixtape With Sizzling Vybz Kartel Collab",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "mr-eazi-dre-skull-mixtape",
-      "primaryKeyword": "mr eazi dre skull",
-      "primaryEntity": "Mr Eazi",
-      "entities": [
-        "Dre Skull",
-        "Vybz Kartel"
-      ],
-      "angle": "Mr Eazi and Dre Skull preview their new dancehall-inspired mixtape with a Vybz Kartel collaboration.",
-      "tmdbType": "movie",
-      "source": "rss:Billboard",
-      "sources": [
-        {
-          "outlet": "Billboard",
-          "tier": 7,
-          "url": "https://www.billboard.com/music/music-news/mr-eazi-dre-skull-ybz-kartel-lambo-yard-yanga-exclusive-1236286883/",
-          "ageMin": 11,
-          "headline": "Mr Eazi Dre Skull Preview New Dancehall-Inspired Mixtape With Sizzling Vybz Kartel Collab: ‘I Think It Captures My Other Side",
-          "summary": "Afrobeats and dancehall collide on the upcoming new project."
-        }
-      ],
-      "ageMin": 11,
-      "_cand": {
-        "key": "rss:mr-eazi-dre-skull-preview-new-dancehall-inspired-mixtape-wit",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Billboard"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Billboard",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true,
-        "gdelt": {
-          "majorOwners": 0,
-          "majors": []
-        }
-      },
-      "priority": 68,
-      "signals": {
-        "recency": 30,
-        "corroboration": 12,
-        "status": 18,
-        "type": 8,
-        "pop": 0,
-        "breakout": 0
-      }
-    },
-    {
-      "id": "news-supergirl-film-cast",
-      "slug": "supergirl-cast-meet-the-stars-of-dcu-s-upcoming-film",
-      "title": "Supergirl Cast: Meet the Stars of DCU's Upcoming Film",
+      "id": "news-next-thor-casting",
+      "slug": "marvel-officially-casts-the-next-thor",
+      "title": "Marvel Officially Casts the Next Thor",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "supergirl-film-cast",
-      "primaryKeyword": "supergirl movie cast",
-      "primaryEntity": "Supergirl",
+      "eventSlug": "next-thor-casting",
+      "primaryKeyword": "next thor casting",
+      "primaryEntity": "Thor",
       "entities": [
-        "Supergirl (film)",
-        "DCU"
+        "Liam Karlsson"
       ],
-      "angle": "The ensemble cast for the upcoming DCU film 'Supergirl' has been revealed.",
+      "angle": "Marvel officially casts the next actor to portray Thor.",
       "tmdbType": "movie",
       "source": "rss:ScreenRant",
       "sources": [
         {
           "outlet": "ScreenRant",
           "tier": 5,
-          "url": "https://screenrant.com/supergirl-movie-cast-characters-confirmed/",
-          "ageMin": 11,
-          "headline": "Supergirl Cast: Meet the Stars of DCU's Upcoming Film",
-          "summary": "A stunning ensemble cast assembles for the hotly anticipated Supergirl film, but how will it connect to the larger DCU story after Superman?"
+          "url": "https://screenrant.com/new-thor-actor-liam-karlsson-iron-man/",
+          "ageMin": 19,
+          "headline": "Marvel Officially Casts the Next Thor",
+          "summary": "Liam Karlsson is appearing in the role."
         }
       ],
-      "ageMin": 11,
+      "ageMin": 19,
       "_cand": {
-        "key": "rss:supergirl-cast-meet-the-stars-of-dcu-s-upcoming-film",
+        "key": "rss:marvel-officially-casts-the-next-thor",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -124,136 +57,6 @@
           "majors": []
         }
       },
-      "priority": 66,
-      "signals": {
-        "recency": 30,
-        "corroboration": 8,
-        "status": 18,
-        "type": 10,
-        "pop": 0,
-        "breakout": 0
-      }
-    },
-    {
-      "id": "news-fortunate-son-4th-of-july-anthem",
-      "slug": "move-over-born-in-the-usa-this-is-the-4th-of-july-s-real-misunderstood",
-      "title": "Move Over 'Born in the USA', This is the 4th of July’s Real Misunderstood Anthem",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "fortunate-son-4th-of-july-anthem",
-      "primaryKeyword": "fortunate son",
-      "primaryEntity": "Fortunate Son",
-      "entities": [
-        "Creedence Clearwater Revival",
-        "Forrest Gump"
-      ],
-      "angle": "Discussion of Creedence Clearwater Revival's 'Fortunate Son' as a misunderstood anthem for the 4th of July, often associated with war films like 'Forrest Gump'.",
-      "tmdbType": "movie",
-      "source": "rss:Collider",
-      "sources": [
-        {
-          "outlet": "Collider",
-          "tier": 5,
-          "url": "https://collider.com/4th-of-july-misunderstood-creedence-clearwater-revival-fortunate-son/",
-          "ageMin": 11,
-          "headline": "Move Over 'Born in the USA', This is the 4th of July’s Real Misunderstood Anthem",
-          "summary": "Creedence Clearwater Revival's Fortunate Son was made the poster song of war via movies like Forrest Gump, even when it's advocating for the opposite"
-        }
-      ],
-      "ageMin": 11,
-      "_cand": {
-        "key": "rss:move-over-born-in-the-usa-this-is-the-4th-of-july-s-real-mis",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "Collider"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "Collider",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true,
-        "gdelt": {
-          "majorOwners": 0,
-          "majors": []
-        }
-      },
-      "priority": 62,
-      "signals": {
-        "recency": 30,
-        "corroboration": 8,
-        "status": 18,
-        "type": 6,
-        "pop": 0,
-        "breakout": 0
-      }
-    },
-    {
-      "id": "trailer-star-wars-visions-ninth-jedi-trailer",
-      "slug": "first-trailer-for-star-wars-visions-presents-the-ninth-jedi-series-rel",
-      "title": "First Trailer for 'Star Wars: Visions Presents - The Ninth Jedi' Series Released",
-      "contentType": "trailer",
-      "formatTag": "trailer",
-      "category": "tv",
-      "subcategory": "trailers",
-      "eventType": "trailer",
-      "sensitivity": "normal",
-      "eventSlug": "star-wars-visions-ninth-jedi-trailer",
-      "primaryKeyword": "star wars visions the ninth jedi trailer",
-      "primaryEntity": "Star Wars: Visions",
-      "entities": [
-        "The Ninth Jedi"
-      ],
-      "angle": "The first trailer for the upcoming Star Wars: Visions Presents - The Ninth Jedi series has been released.",
-      "tmdbType": "movie",
-      "source": "gnews:FirstShowing.net",
-      "sources": [
-        {
-          "outlet": "FirstShowing.net",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPS0ptQTViZFRIbUhseFlMYTBzWjBqbzNLQ0FlOHhpYjdrSnlHY3lHVGxrZjZtS2J5LUw2TVRrc1plZGlMSWJncHZXSEZMQnliMkVpMHN2VWNkMXdodnRJbnBJX3VHV0YtRTRXV1JnMDVWcjhWcDFQc09fU0FoUHF6RHJicFNvQmx2MGN6aGx3ZTNOeGlGMmtYNUo4M05fdmdhUmc?oc=5",
-          "ageMin": 17,
-          "headline": "First Trailer for 'Star Wars: Visions Presents - The Ninth Jedi' Series - FirstShowing.net",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxPS0ptQTViZFRIbUhseFlMYTBzWjBqbzNLQ0FlOHhpYjdrSnlHY3lHVGxrZjZtS2J5LUw2TVRrc1plZGlMSWJncHZXSEZMQnliMkVpMHN2VWNkMXdodnRJbnBJX3VHV0YtRTRXV1JnMDVWcjhWcDFQc09fU0FoUHF6RHJicFNvQmx2MGN6aGx3ZTNOeGlGMmtYNUo4M05fdmdhUmc?oc=5\" target=\"_blank\" First Tra"
-        }
-      ],
-      "ageMin": 17,
-      "_cand": {
-        "key": "rss:first-trailer-for-star-wars-visions-presents-the-ninth-jedi-",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "FirstShowing.net"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "FirstShowing.net",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true,
-        "gdelt": {
-          "majorOwners": 0,
-          "majors": []
-        }
-      },
       "priority": 60,
       "signals": {
         "recency": 24,
@@ -265,38 +68,37 @@
       }
     },
     {
-      "id": "news-star-wars-new-era-august",
-      "slug": "star-wars-kicks-off-new-era-this-august",
-      "title": "Star Wars Kicks Off New Era This August",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
+      "id": "watchguide-project-hail-mary-prime-video",
+      "slug": "project-hail-mary-is-officially-available-on-prime-video",
+      "title": "Project Hail Mary Is Officially Available On Prime Video",
+      "contentType": "watchguide",
+      "formatTag": "watchguide",
+      "category": "streaming",
+      "subcategory": "where-to-watch",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "star-wars-new-era-august",
-      "primaryKeyword": "star wars",
-      "primaryEntity": "Star Wars",
+      "eventSlug": "project-hail-mary-prime-video",
+      "primaryKeyword": "Project Hail Mary Prime Video",
+      "primaryEntity": "Project Hail Mary",
       "entities": [
-        "Jedi",
-        "Sith"
+        "Prime Video"
       ],
-      "angle": "Star Wars is kicking off a new era in August with a focus on the ongoing conflict between the Jedi and the Sith.",
+      "angle": "A major sci-fi blockbuster is now available on streaming.",
       "tmdbType": "movie",
       "source": "rss:ScreenRant",
       "sources": [
         {
           "outlet": "ScreenRant",
           "tier": 5,
-          "url": "https://screenrant.com/star-wars-the-ninth-jedi-disney-new-era/",
-          "ageMin": 16,
-          "headline": "\"The Jedi And The Sith Have Disappeared\": Star Wars Kicks Off A New Era This August",
-          "summary": "A new Star Wars era starts next month, as the ancient conflict between the Jedi and the dark side rages on in a far-flung corner of the galaxy."
+          "url": "https://screenrant.com/project-hail-mary-movie-streaming-prime-video/",
+          "ageMin": 19,
+          "headline": "Project Hail Mary Is Officially Available On Prime Video",
+          "summary": "Amazon MGM Studios’ sci-fi blockbuster finally enters Amazon Prime Video on July 3, 105 days after its record-breaking theatrical premiere."
         }
       ],
-      "ageMin": 16,
+      "ageMin": 19,
       "_cand": {
-        "key": "rss:-the-jedi-and-the-sith-have-disappeared-star-wars-kicks-off-",
+        "key": "rss:project-hail-mary-is-officially-available-on-prime-video",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -330,42 +132,40 @@
       }
     },
     {
-      "id": "music-news-beatles-saddest-song-never-hit-no-1",
-      "slug": "the-beatles-had-20-no-1-hits-but-their-saddest-song-never-reached-no-1",
-      "title": "The Beatles Had 20 No. 1 Hits but Their Saddest Song Never Reached No. 1",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
+      "id": "news-spider-man-brand-new-day-daredevil-crossover",
+      "slug": "spider-man-brand-new-day-teased-a-major-daredevil-crossover-in-plain-s",
+      "title": "'Spider-Man: Brand New Day' Teased a Major Daredevil Crossover in Plain Sight",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
       "subcategory": "news",
-      "eventType": "other",
+      "eventType": "announcement",
       "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "beatles-saddest-song-never-hit-no-1",
-      "primaryKeyword": "The Beatles",
-      "primaryEntity": "The Beatles",
+      "eventSlug": "spider-man-brand-new-day-daredevil-crossover",
+      "primaryKeyword": "Spider-Man Brand New Day Daredevil crossover",
+      "primaryEntity": "Spider-Man: Brand New Day",
       "entities": [
-        "Sgt. Pepper's Lonely Hearts Club Band"
+        "Daredevil: Born Again"
       ],
-      "angle": "The Beatles' most heartbreaking song never reached No. 1, despite their 20 chart-toppers.",
+      "angle": "A new Spider-Man comic teases a significant crossover with Daredevil.",
       "tmdbType": "movie",
       "source": "rss:Collider",
       "sources": [
         {
           "outlet": "Collider",
           "tier": 5,
-          "url": "https://collider.com/the-beatles-saddest-song-shes-leaving-home/",
-          "ageMin": 40,
-          "headline": "The Beatles Had 20 No. 1 Hits but Their Saddest Song Never Reached No. 1",
-          "summary": "The Beatles wrote 20 No. 1 hits, but their most heartbreaking song never became a chart-topping single from the landmark 1967 Sgt. Pepper album."
+          "url": "https://collider.com/spider-man-brand-new-day-daredevil-kingpin-punisher-spider-man-5/",
+          "ageMin": 25,
+          "headline": "'Spider-Man: Brand New Day' Teased a Major Daredevil Crossover in Plain Sight",
+          "summary": "A secret Marvel villain in Spider-Man: Brand New Day could tie into Daredevil: Born Again."
         }
       ],
-      "ageMin": 40,
+      "ageMin": 25,
       "_cand": {
-        "key": "rss:the-beatles-had-20-no-1-hits-but-their-saddest-song-never-re",
+        "key": "rss:-spider-man-brand-new-day-teased-a-major-daredevil-crossover",
         "popularity": 0,
         "kind": "rss-news"
       },
-      "breakoutVelocity": 0,
       "corroborationCount": 1,
       "verification": {
         "tier1Count": 0,
@@ -377,6 +177,70 @@
         "maxTier": 5,
         "sensitivity": "normal",
         "attribution": "Collider",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true,
+        "gdelt": {
+          "majorOwners": 0,
+          "majors": []
+        }
+      },
+      "priority": 58,
+      "signals": {
+        "recency": 24,
+        "corroboration": 8,
+        "status": 18,
+        "type": 8,
+        "pop": 0,
+        "breakout": 0
+      }
+    },
+    {
+      "id": "news-mortal-kombat-ii-rotten-tomatoes-score",
+      "slug": "mortal-kombat-ii-director-addresses-record-breaking-rotten-tomatoes-sc",
+      "title": "Mortal Kombat II Director Addresses Record-Breaking Rotten Tomatoes Score",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "mortal-kombat-ii-rotten-tomatoes-score",
+      "primaryKeyword": "Mortal Kombat II",
+      "primaryEntity": "Mortal Kombat II",
+      "entities": [
+        "Simon McQuoid"
+      ],
+      "angle": "Director addresses record-breaking Rotten Tomatoes score for upcoming film.",
+      "tmdbType": "movie",
+      "source": "rss:ScreenRant",
+      "sources": [
+        {
+          "outlet": "ScreenRant",
+          "tier": 5,
+          "url": "https://screenrant.com/mortal-kombat-2-rotten-tomatoes-franchise-record-simon-mcqouid-response/",
+          "ageMin": 26,
+          "headline": "Mortal Kombat II's Record-Breaking Rotten Tomatoes Score Addressed By Franchise Director",
+          "summary": "EXCLUSIVE: Mortal Kombat II director Simon McQuoid addresses the newest movie's record-breaking Rotten Tomatoes score as it prepares a new release."
+        }
+      ],
+      "ageMin": 26,
+      "_cand": {
+        "key": "rss:mortal-kombat-ii-s-record-breaking-rotten-tomatoes-score-add",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "ScreenRant"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "ScreenRant",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true,

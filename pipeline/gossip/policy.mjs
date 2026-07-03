@@ -60,9 +60,6 @@ export const maxTier = (sources = []) => sources.reduce((m, s) => Math.max(m, so
 export const topOutlet = (sources = []) =>
   [...sources].sort((a, b) => sourceTier(b) - sourceTier(a))[0]?.outlet || null;
 export const hasEstablished = (sources = []) => sources.some((s) => sourceTier(s) >= ESTABLISHED_TIER);
-// Count DISTINCT outlets at/above a tier (for the "multiple independent majors corroborate ⇒ confirmed" rule).
-export const distinctOutletsAtTier = (sources = [], minTier = 7) =>
-  new Set(sources.filter((s) => sourceTier(s) >= minTier).map((s) => (s.outlet || s.url || "").toLowerCase())).size;
 
 // ── SEVERITY ──────────────────────────────────────────────────────────────────────────────────────
 // EXTREME = sexual-assault class, OR any serious allegation involving a minor → gated behind an

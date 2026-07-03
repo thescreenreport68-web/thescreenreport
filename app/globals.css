@@ -170,3 +170,84 @@ body {
     }
   }
 }
+
+/* ============ Pagefind search — restyled to the design system ============ */
+.search-shell {
+  --pagefind-ui-scale: 1;
+  --pagefind-ui-primary: #101010;
+  --pagefind-ui-text: #101010;
+  --pagefind-ui-background: #ffffff;
+  --pagefind-ui-border: #dcdcdc;
+  --pagefind-ui-tag: #efefef;
+  --pagefind-ui-border-width: 1px;
+  --pagefind-ui-border-radius: 0;
+  --pagefind-ui-image-border-radius: 0;
+  --pagefind-ui-font: var(--font-sans), Helvetica, sans-serif;
+}
+.search-shell .pagefind-ui__search-input {
+  border: 1px solid #101010;
+  border-radius: 0;
+  font-weight: 400;
+  font-size: 1rem;
+}
+.search-shell .pagefind-ui__search-input:focus {
+  outline: 2px solid #d92128;
+  outline-offset: 2px;
+}
+.search-shell .pagefind-ui__search-clear {
+  font-family: var(--font-sans), sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #5a5a5a;
+}
+.search-shell .pagefind-ui__result {
+  border-top: 1px dotted #8c8c8c;
+  padding: 1.25rem 0;
+}
+.search-shell .pagefind-ui__result-title,
+.search-shell .pagefind-ui__result-link {
+  font-family: var(--font-body), Georgia, serif;
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 1.3;
+  color: #101010;
+}
+.search-shell .pagefind-ui__result-link:hover {
+  color: #d92128;
+  text-decoration: none;
+}
+.search-shell .pagefind-ui__result-excerpt {
+  font-family: var(--font-body), Georgia, serif;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #5a5a5a;
+}
+.search-shell .pagefind-ui__result-excerpt mark {
+  background: transparent;
+  color: #d92128;
+  font-weight: 600;
+}
+.search-shell .pagefind-ui__message {
+  font-family: var(--font-mono), monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #5a5a5a;
+}
+.search-shell .pagefind-ui__button {
+  border: 1px solid #d92128;
+  border-radius: 0;
+  background: transparent;
+  color: #d92128;
+  font-family: var(--font-sans), sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.search-shell .pagefind-ui__button:hover {
+  background: #d92128;
+  color: #ffffff;
+}

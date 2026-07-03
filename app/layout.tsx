@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AnchorAd from "@/components/AnchorAd";
+import Beacon from "@/components/Beacon";
 import JsonLd from "@/components/JsonLd";
 import { SITE } from "@/lib/site";
 
@@ -69,6 +70,7 @@ export const metadata: Metadata = {
   },
   description: SITE.description,
   robots: { index: false, follow: false },
+  alternates: { types: { "application/rss+xml": "/feed.xml" } },
   verification: { other: { "p:domain_verify": "732df0e14a6881379e2a7185fdde95a4" } },
   openGraph: {
     siteName: SITE.name,
@@ -99,6 +101,7 @@ export default function RootLayout({
           Skip to content
         </a>
         <JsonLd data={SITE_SCHEMA} />
+        <Beacon />
         <Header />
         <main id="content">{children}</main>
         <Footer />

@@ -12,7 +12,7 @@
 //     monitor=true (post-publish recheck). We never WAIT to publish; the disclaimer carries the safety.
 //   • CONFIRMED / OFFICIAL_RECORD → publish plainly (cite the record), no disclaimer needed.
 
-import { severity, confidenceTier, TIER_META, hasEstablished, topOutlet, distinctOutletsAtTier } from "./policy.mjs";
+import { severity, confidenceTier, TIER_META, hasEstablished, topOutlet } from "./policy.mjs";
 
 // The exact in-text non-confirmation sentence the writer MUST include (owner: "mention in the article itself
 // that the story is unconfirmed — not confirmed by the authorities / the person / the studio").
@@ -52,13 +52,7 @@ export function frameTopic(topic, bundle = null, editorial = null) {
     ...((bundle?.sources || []).filter((s) => s.corroborating)),
     ...(bundle?.corroboratingOutlets || []),
   ];
-  let tier = confidenceTier(topic, sources);
-  // When there is NO editorial verdict (gate off/errored), fall back to a metadata heuristic: ≥2 DISTINCT major/wire
-  // outlets (tier ≥7) on a NORMAL story ⇒ CONFIRMED. When the editorial gate IS present, its content-grounded
-  // confirmed call (already on topic.confirmed) is authoritative and we do NOT let this heuristic override it.
-  if (!editorial && !topic.confirmed && !topic.official && !topic.denied && tier === "REPORTED_BY_MAJOR" && sev === "NORMAL" && distinctOutletsAtTier(sources, 7) >= 2) {
-    tier = "CONFIRMED";
-  }
+  const tier = confidenceTier(topic, sources);
   const meta = TIER_META[tier];
   // Attribution: the outlet the editorial gate found ACTUALLY reports the claim (content-grounded) wins over
   // "the highest-tier outlet whose headline names the entity" (which credited aggregators like Yahoo / a

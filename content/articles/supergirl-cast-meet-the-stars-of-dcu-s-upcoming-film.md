@@ -79,12 +79,12 @@ provenance:
   primaryEntity: Supergirl
   eventType: casting
   sensitivity: normal
-  status: DEVELOPING
+  status: CONFIRMED
   attribution: The Hollywood Reporter
   outlets:
     - ScreenRant
   publishedAt: '2026-07-03T12:19:14.188Z'
-dateModified: '2026-07-03T12:19:14.188Z'
+dateModified: '2026-07-03T12:53:36.153Z'
 storyStatus: DEVELOPING
 infoCard:
   director: Craig Gillespie
@@ -108,10 +108,9 @@ keyPoints:
     Lobo and David Corenswet's Superman.
   - Original Supergirl Helen Slater has praised the new film and its star.
 ---
-
 Milly Alcock stars as [Supergirl](/movies/box-office-supergirl-stumbles-with-38-million-debut-toy-story-5-remain/) in the upcoming DC Universe film set for release in 2026. The movie, directed by Craig Gillespie, assembles a major ensemble cast for an interstellar story of vengeance.
 
-According to ScreenRant, the film is one of the DCU’s most hotly anticipated features. It adapts Tom King's acclaimed 2021–22 comic run, *Supergirl: Woman of Tomorrow*, promising a different take on the character. James Gunn and Peter Safran confirmed this approach to Variety in 2023.
+reenRant, the film is one of the DCU’s most hotly anticipated features. It adapts Tom King's acclaimed 2021–22 comic run, *Supergirl: Woman of Tomorrow*, promising a different take on the character. James Gunn and Peter Safran confirmed this approach to Variety in 2023.
 
 ## Who is playing Supergirl?
 

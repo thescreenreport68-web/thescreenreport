@@ -84,12 +84,12 @@ provenance:
   primaryEntity: 'Star Wars: Visions Presents - The Ninth Jedi'
   eventType: announcement
   sensitivity: normal
-  status: DEVELOPING
+  status: CONFIRMED
   attribution: starwars.com
   outlets:
     - ScreenRant
   publishedAt: '2026-07-03T12:16:14.188Z'
-dateModified: '2026-07-03T12:16:14.188Z'
+dateModified: '2026-07-03T12:53:35.363Z'
 storyStatus: DEVELOPING
 youtubeId: r70AWJ-zJS4
 releaseInfo: 'August 5, 2026'
@@ -121,10 +121,9 @@ seriesContext:
     - Lah Zhima
     - Nawaam
 ---
-
 A new chapter for the galaxy far, far away begins streaming this summer. The official trailer for *Star Wars: Visions Presents - The Ninth Jedi* has arrived, confirming the limited anime series will premiere on Disney+ and Hulu on August 5, 2026.
 
-According to ScreenRant, this project kicks off a new era for the franchise, set in a future where the Jedi and Sith have vanished but their ancient conflict endures. The story unfolds in a far-flung corner of the galaxy, where a new generation attempts to rebuild the Jedi Order. Their weapons are forged by a master lightsabersmith, Lah Zhima, whose creations uniquely reflect the heart of their user.
+reenRant, this project kicks off a new era for the franchise, set in a future where the Jedi and Sith have vanished but their ancient conflict endures. The story unfolds in a far-flung corner of the galaxy, where a new generation attempts to rebuild the Jedi Order. Their weapons are forged by a master lightsabersmith, Lah Zhima, whose creations uniquely reflect the heart of their user.
 
 ## What Is The Ninth Jedi About?
 

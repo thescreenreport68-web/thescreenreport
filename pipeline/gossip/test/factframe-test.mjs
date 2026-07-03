@@ -1,11 +1,12 @@
-// "STATE FACTS AS FACTS" + IMAGE ROOT-CAUSE regression. Proves the run-6 fixes:
-//   1) A story DISCOVERED via a tier-2 social aggregator (Pop Crave) but CORROBORATED by multiple tier-7 wires is
-//      framed CONFIRMED — NOT "social speculation" — and carries NO "this has not been confirmed" disclaimer.
-//   2) The frame reads the CORROBORATED bundle, not just the thin discovery source.
-//   3) fetchOgImage picks the real og:image URL even when a Page Six-style page emits <meta og:image:width> first.
+// "STATE FACTS AS FACTS" + IMAGE ROOT-CAUSE regression. Proves:
+//   1) A story DISCOVERED via a tier-2 social aggregator (Pop Crave) but CORROBORATED by tier-7 wires is framed
+//      REPORTED_BY_MAJOR (a FACT, attributed) — NOT "social speculation" — and carries NO "not confirmed" disclaimer.
+//   2) When the content-grounded editorial gate marks it confirmed, it is framed CONFIRMED and stated plainly.
+//   3) The frame reads the CORROBORATED bundle, not just the thin discovery source.
+//   4) fetchOgImage picks the real og:image URL even when a Page Six-style page emits <meta og:image:width> first.
 // Run: node pipeline/gossip/test/factframe-test.mjs
 import { frameTopic } from "../frame.mjs";
-import { confidenceTier, tierOfDomain, distinctOutletsAtTier } from "../policy.mjs";
+import { confidenceTier, tierOfDomain } from "../policy.mjs";
 import { fetchOgImage } from "../heroImage.mjs";
 
 let pass = 0, fail = 0; const fails = [];
@@ -34,23 +35,20 @@ const bundle = {
   ],
 };
 check("cbsnews.com/nytimes.com/apnews.com all tier 7", [ "cbsnews.com", "nytimes.com", "apnews.com" ].every((d) => tierOfDomain(d) === 7));
-check("≥2 distinct tier-7 outlets counted", distinctOutletsAtTier(bundle.corroboratingOutlets, 7) === 3, String(distinctOutletsAtTier(bundle.corroboratingOutlets, 7)));
 
+// The frame reads the corroborated bundle → the wire-reported story is framed as a FACT (attributed), not speculation.
 const frame = frameTopic(donation, bundle);
-check("corroborated NORMAL fact is framed CONFIRMED (not speculation)", frame.tier === "CONFIRMED", frame.tier);
-check("NO 'not confirmed / speculation' disclaimer on a confirmed fact", frame.needsDisclaimer === false, `needsDisclaimer=${frame.needsDisclaimer}`);
-check("writer is told to STATE IT PLAINLY (cite the source)", /state it plainly/i.test(frame.writerDirective));
+check("corroborated story tiers REPORTED_BY_MAJOR (a fact), NOT social speculation", frame.tier === "REPORTED_BY_MAJOR", frame.tier);
+check("NO 'not confirmed / speculation' disclaimer on a wire-reported NORMAL story", frame.needsDisclaimer === false, `needsDisclaimer=${frame.needsDisclaimer}`);
+check("writer is told to ATTRIBUTE it (not frame as speculation)", /attribute/i.test(frame.writerDirective) && !/circulating as speculation/i.test(frame.writerDirective));
 check("attribution is a MAJOR outlet, not Pop Crave", frame.attribution && frame.attribution !== "Pop Crave", String(frame.attribution));
 
-// Backward-compat: no bundle → old behavior unchanged.
-check("frameTopic(topic) with no bundle still works", frameTopic(donation).tier === "SOCIAL_SPECULATION");
+// When the content-grounded editorial gate CONFIRMS it (topic.confirmed), the frame states it plainly (CONFIRMED).
+const confirmedFrame = frameTopic({ ...donation, confirmed: true }, bundle, { confirmed: true });
+check("editorial-confirmed story is framed CONFIRMED + stated plainly", confirmedFrame.tier === "CONFIRMED" && /state it plainly/i.test(confirmedFrame.writerDirective), confirmedFrame.tier);
 
-// A SENSITIVE (HIGH) claim must NOT be auto-confirmed by press coverage — it stays attributed.
-const health = {
-  primaryEntity: "Some Star", title: "Some Star hospitalized after collapse", claim: "Some Star was hospitalized.",
-  sources: [{ outlet: "Pop Crave", url: "https://x.com/x/status/1", tier: 2 }],
-};
-check("a HIGH-severity claim is NOT auto-CONFIRMED by wires (stays attributed)", frameTopic(health, bundle).tier === "REPORTED_BY_MAJOR", frameTopic(health, bundle).tier);
+// Backward-compat: no bundle → tiers off the thin discovery source only.
+check("frameTopic(topic) with no bundle → SOCIAL_SPECULATION", frameTopic(donation).tier === "SOCIAL_SPECULATION");
 
 // ── fetchOgImage: Page Six emits <meta property="og:image:width" content="1200"> BEFORE the real og:image. ──
 {
