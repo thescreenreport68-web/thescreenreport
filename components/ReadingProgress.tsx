@@ -21,8 +21,8 @@ export default function ReadingProgress() {
     };
   }, []);
   return (
-    <div className="pointer-events-none fixed inset-x-0 top-0 z-[60] h-[3px]" aria-hidden="true">
-      <div className="h-full bg-breaking" style={{ width: `${pct}%` }} />
+    <div className="pointer-events-none fixed inset-x-0 top-0 z-[60] h-[2px]" aria-hidden="true">
+      <div className="h-full bg-ink" style={{ width: `${pct}%` }} />
     </div>
   );
 }

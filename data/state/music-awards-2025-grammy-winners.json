@@ -1,0 +1,152 @@
+{
+  "id": "music-awards-2025-grammy-winners",
+  "slug": "every-winner-at-the-2025-grammy-awards",
+  "status": "needs_review",
+  "stages": {
+    "attempt1": {
+      "score": 0,
+      "cat": "music/awards",
+      "img": "/images/articles/every-winner-at-the-2025-grammy-awards.jpg",
+      "hardBlocks": [
+        "primary keyword not in title",
+        "body 368w < 400"
+      ],
+      "badClaims": 14
+    },
+    "attempt2": {
+      "score": 75,
+      "cat": "music/awards",
+      "img": "/images/articles/every-winner-at-the-2025-grammy-awards.jpg",
+      "hardBlocks": [
+        "The structured winner \"Taylor Swift\" (Album of the Year) does not appear anywhere in the reference facts — verify it against the official winners list or remove it (never publish an unverified winner).",
+        "The structured winner \"Miley Cyrus\" (Record of the Year) does not appear anywhere in the reference facts — verify it against the official winners list or remove it (never publish an unverified winner).",
+        "The structured winner \"Billie Eilish\" (Song of the Year) does not appear anywhere in the reference facts — verify it against the official winners list or remove it (never publish an unverified winner).",
+        "The structured winner \"Victoria Monét\" (Best New Artist) does not appear anywhere in the reference facts — verify it against the official winners list or remove it (never publish an unverified winner).",
+        "The structured winner \"Killer Mike\" (Best Rap Album) does not appear anywhere in the reference facts — verify it against the official winners list or remove it (never publish an unverified winner).",
+        "The structured winner \"Killer Mike ft. André 3000, Future and Eryn Allen Kane\" (Best Rap Song) does not appear anywhere in the reference facts — verify it against the official winners list or remove it (never publish an unverified winner).",
+        "The structured winner \"Killer Mike ft. André 3000, Future and Eryn Allen Kane\" (Best Rap Performance) does not appear anywhere in the reference facts — verify it against the official winners list or remove it (never publish an unverified winner).",
+        "The structured winner \"Victoria Monét\" (Best R&B Album) does not appear anywhere in the reference facts — verify it against the official winners list or remove it (never publish an unverified winner).",
+        "The structured winner \"Victoria Monét\" (Best R&B Song) does not appear anywhere in the reference facts — verify it against the official winners list or remove it (never publish an unverified winner).",
+        "The structured winner \"boygenius\" (Best Rock Performance) does not appear anywhere in the reference facts — verify it against the official winners list or remove it (never publish an unverified winner).",
+        "The structured winner \"boygenius\" (Best Rock Song) does not appear anywhere in the reference facts — verify it against the official winners list or remove it (never publish an unverified winner).",
+        "fabricated: Taylor Swift won one Grammy award in 2025. Her sole victory came in the prestigious Album of the Year category, which was enough to make history and break the all-time record for most wins in that field.",
+        "5 unverified claim(s) (need correction)",
+        "11 ungrounded fact(s) (verify against the authoritative facts)"
+      ],
+      "badClaims": 5
+    },
+    "attempt3": {
+      "score": 25,
+      "cat": "music/awards",
+      "img": "/images/articles/every-winner-at-the-2025-grammy-awards.png",
+      "hardBlocks": [
+        "fabricated: Taylor Swift (Album of the Year)",
+        "fabricated: Miley Cyrus (Record of the Year)",
+        "fabricated: Billie Eilish (Song of the Year)",
+        "fabricated: Victoria Monét (Best New Artist)",
+        "fabricated: Killer Mike (Best Rap Album)",
+        "fabricated: Killer Mike ft. André 3000, Future and Eryn Allen Kane (Best Rap Song)",
+        "fabricated: Killer Mike ft. André 3000, Future and Eryn Allen Kane (Best Rap Performance)",
+        "fabricated: Victoria Monét (Best R&B Album)",
+        "fabricated: Victoria Monét (Best R&B Song)",
+        "fabricated: boygenius (Best Rock Performance)",
+        "fabricated: boygenius (Best Rock Song)",
+        "fabricated: boygenius (Best Rock Album)",
+        "6 unverified claim(s) (need correction)",
+        "12 ungrounded fact(s) (verify against the authoritative facts)",
+        "accuracy 0 < 8",
+        "infoGain 3 < 7",
+        "readability 5 < 6",
+        "humanVoice 2 < 7",
+        "phrasing 3 < 7"
+      ],
+      "badClaims": 6
+    }
+  },
+  "scorecard": {
+    "score": 25,
+    "subscores": {
+      "accuracy": 0,
+      "readability": 5,
+      "humanVoice": 2,
+      "phrasing": 3,
+      "curiosity": 4,
+      "structure": 6,
+      "infoGain": 3,
+      "seo": 5,
+      "faqQuality": 3,
+      "completeness": 0
+    },
+    "strengths": [
+      "Clear structure with subheads and key takeaways.",
+      "Attempts to frame the narrative around industry veterans and rock's comeback.",
+      "Sources are listed."
+    ],
+    "weaknesses": [
+      "Complete failure on accuracy due to fabricating all listed winners.",
+      "The article is entirely ungrounded and therefore cannot be considered accurate.",
+      "Human voice is weak, relying on generic statements rather than specific, engaging details.",
+      "Phrasing is stiff and repetitive in places, particularly when discussing the 'sweeps'.",
+      "SEO is hampered by the lack of actual winners, making the primary keyword irrelevant.",
+      "FAQ quality is low, with one answer stating information is 'not specified' and another directly contradicting the hardBlocks.",
+      "Completeness is zero due to the lack of any verifiable winners.",
+      "The dek promises 'surprises and historic firsts' but the article fails to deliver any verifiable information.",
+      "The article uses placeholder names for winners, which is a critical failure in accuracy and reader trust."
+    ],
+    "deterministic": {
+      "words": 471,
+      "h2s": 4,
+      "h2Questions": 3,
+      "internalLinks": 0,
+      "externalLinks": 3,
+      "hasSources": true,
+      "faqCount": 4,
+      "ktCount": 3,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 37,
+      "avgSentence": 19,
+      "flesch": 41,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 2,
+      "hardBlocks": []
+    },
+    "hardBlocks": [
+      "fabricated: Taylor Swift (Album of the Year)",
+      "fabricated: Miley Cyrus (Record of the Year)",
+      "fabricated: Billie Eilish (Song of the Year)",
+      "fabricated: Victoria Monét (Best New Artist)",
+      "fabricated: Killer Mike (Best Rap Album)",
+      "fabricated: Killer Mike ft. André 3000, Future and Eryn Allen Kane (Best Rap Song)",
+      "fabricated: Killer Mike ft. André 3000, Future and Eryn Allen Kane (Best Rap Performance)",
+      "fabricated: Victoria Monét (Best R&B Album)",
+      "fabricated: Victoria Monét (Best R&B Song)",
+      "fabricated: boygenius (Best Rock Performance)",
+      "fabricated: boygenius (Best Rock Song)",
+      "fabricated: boygenius (Best Rock Album)",
+      "6 unverified claim(s) (need correction)",
+      "12 ungrounded fact(s) (verify against the authoritative facts)",
+      "accuracy 0 < 8",
+      "infoGain 3 < 7",
+      "readability 5 < 6",
+      "humanVoice 2 < 7",
+      "phrasing 3 < 7"
+    ]
+  },
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "score ≥ 80",
+      "zero hard-blocks",
+      "accuracy (no fabrication)",
+      "infoGain ≥ 7",
+      "readability ≥ 6",
+      "humanVoice ≥ 7",
+      "phrasing ≥ 7"
+    ]
+  },
+  "ms": 361119
+}

@@ -3,16 +3,18 @@ import { chat } from "../lib/openrouter.mjs";
 const SYSTEM = `You are a senior staff writer for The Screen Report, a premium Hollywood / English-language film, TV & celebrity NEWS site. You write for real fans first — accurate, genuinely useful, and so readable that people finish them and stay. (Good rankings follow a good reader experience; never write for the search engine.)
 
 NON-NEGOTIABLE RULES for every article:
-- ACCURACY (ABSOLUTE — the #1 rule): use ONLY facts in the provided REFERENCE FACTS. There is NO "well-known facts" allowance — do NOT add ANYTHING from your own memory, no matter how obvious it seems: not a date, a nationality, an age, an earlier role, an actor's other films, a studio, a relationship, a background detail — NOTHING. If a fact is not in the REFERENCE FACTS, LEAVE IT OUT (write around it or qualitatively). NEVER invent quotes, dates, box-office numbers, awards, or events. This applies hardest to any CHECKABLE SPECIFIC: a Rotten Tomatoes/Metacritic/IMDb score or any %, a box-office/dollar figure, a date or year, a streaming platform, an award win or nomination, a winner, a chart position, a runtime, or a film/TV credit — every one MUST come from the REFERENCE FACTS verbatim, NEVER from memory. ⚠ AN INDEPENDENT VERIFIER re-checks EVERY claim in your article against these exact facts and CUTS or BLOCKS anything it can't find — so a detail you added "because everyone knows it" will be removed and your draft rejected. Write only what the facts support.
-- AUTHORITATIVE BLOCKS ARE BINDING: when a fact block is labeled "AUTHORITATIVE" (TMDB/OMDb structured data), it is the SINGLE source of truth for that title's director, cast, release type, streaming platform, ratings (RT/Metacritic/IMDb) and box office. Cite those values EXACTLY and never state a different platform, score, or number. If the AUTHORITATIVE block names the CURRENT streaming platform, that is the ONLY correct platform — do not name another. If it marks the title STREAMING-ORIGINAL, the film has NO box office: never write a gross, opening weekend, or theatrical figure for it. If a score (e.g. Rotten Tomatoes) is NOT present in the AUTHORITATIVE block, do NOT state a percentage — speak qualitatively. STREAMING VIEWERSHIP: there is NO public source for OTT viewership numbers (Netflix reports only some; other services none) — NEVER state a specific viewership figure (X million views / hours viewed / households / viewers) unless it appears in the facts attributed to a named outlet; otherwise report only the platform and (if grounded) the Top-10 rank.
+- FACTS vs WORDS (the core discipline — read this first): the FACTS are LOCKED to the REFERENCE FACTS (the real source reporting + the authoritative structured facts). Every who / what / when / where / number / platform / quote must come from there, and you must NEVER introduce a fact that goes BEYOND or DIVERGES FROM what those sources actually reported — no extra "background" about a related film, person, sequel, or earlier event the sources didn't mention (e.g. do NOT bring in a different movie's release date or box office just because it shares a character). But the WORDS are YOURS: NEVER copy or lightly reword the source's sentences — re-report each fact in FRESH, ORIGINAL, CURIOUS, genuinely readable prose with a real point of view and an interesting angle. **Same facts, better words.** A piece that is accurate but dull has FAILED; a piece that is lively but adds one ungrounded fact has failed WORSE. When the grounding is thin, write a SHORTER, tighter, fully-grounded piece — never reach for an off-source fact to fill space.
+- ONE STORY ONLY (critical — this is how a wrong fact sneaks in): write ONLY about the SPECIFIC event in the REFERENCE FACTS. Do NOT drag in a SEPARATE event, case, controversy, or project involving the same person — no "in other news", no "he also faces...", no "Other legal issues" FAQ, no side-tangent about a different lawsuit/scandal/movie. If the facts are about a dog-attack verdict, write ONLY the dog-attack verdict — never add the person's UNRELATED London trial (you WILL get its date/details wrong, and a wrong fact about a side-topic is still fake news). Stay 100% inside this one story.
+- ACCURACY (ABSOLUTE — the #1 rule): use ONLY facts in the provided REFERENCE FACTS. There is NO "well-known facts" allowance — do NOT add ANYTHING from your own memory, no matter how obvious it seems: not a date, a nationality, an age, an earlier role, an actor's other films, a studio, a relationship, a background detail — NOTHING. If a fact is not in the REFERENCE FACTS, LEAVE IT OUT (write around it or qualitatively). NEVER invent quotes, dates, box-office numbers, awards, or events. This applies hardest to any CHECKABLE SPECIFIC: a Rotten Tomatoes/Metacritic/IMDb score or any %, a box-office/dollar figure, a date or year, a streaming platform, an award win or nomination, a winner, a chart position, a runtime, or a film/TV credit — every one MUST come from the REFERENCE FACTS verbatim, NEVER from memory. NAME FIDELITY: spell every person, title, and place EXACTLY as written in the facts — never alter, "correct", or re-spell a name ("Ariana" is never "Eriana"; copy it character-for-character). ⚠ AN INDEPENDENT VERIFIER re-checks EVERY claim in your article against these exact facts and CUTS or BLOCKS anything it can't find — so a detail you added "because everyone knows it" will be removed and your draft rejected. Write only what the facts support.
+- AUTHORITATIVE BLOCKS ARE BINDING: when a fact block is labeled "AUTHORITATIVE" (TMDB/OMDb structured data), it is the SINGLE source of truth for that title's director, cast, release type, streaming platform, ratings (RT/Metacritic/IMDb) and box office. Cite those values EXACTLY and never state a different platform, score, or number. If the AUTHORITATIVE block names the CURRENT streaming platform, that is the ONLY correct platform — do not name another. If it marks the title STREAMING-ORIGINAL, the film has NO box office: never write a gross, opening weekend, or theatrical figure for it. If a score (e.g. Rotten Tomatoes) is NOT present in the AUTHORITATIVE block, do NOT state a percentage — speak qualitatively. STREAMING VIEWERSHIP: there is NO public source for OTT viewership numbers (Netflix reports only some; other services none) — NEVER state a specific viewership figure (X million views / hours viewed / households / viewers) unless it appears in the facts attributed to a named outlet; otherwise report only the platform and (if grounded) the Top-10 rank. ⚠ SUBJECT-MATCH OVERRIDE (critical — a whole-article failure mode): the AUTHORITATIVE block is matched only by NAME and can be about the WRONG same-named work (e.g. it gives the 1960 Kirk Douglas FILM's cast/year when the SOURCE REPORTING is about the 2010 Spartacus TV SERIES). If the AUTHORITATIVE block's director/cast/year/medium do NOT match what the GATHERED SOURCE REPORTING actually describes, the SOURCE REPORTING WINS — that block is about a different work; IGNORE it completely, cite NONE of its facts, and write only from the source reporting. Never blend the two.
 - HONEST CURIOSITY: the headline makes ONE specific, true, intriguing claim; the first 1-2 sentences DELIVER the core answer (no clickbait, no withholding). Then extend with depth and analysis.
 - STRUCTURE: an answer-first opening line; paragraphs of 2-3 sentences (~40-80 words, vary them). VARY sentence length deliberately — mix short 5-10 word punches with longer 20-30 word runs; NO sentence over 35 words (split a longer thought in two). Add subheads where the piece naturally turns (>=2 H2s; at least one a real reader question, the rest declarative, voice-y headings — never a verbatim search query). Bold at most one genuinely scannable phrase per section, and NEVER bold the keyword just to repeat it. Use lists or a table only where they genuinely help.
-- AUDIENCE-FIRST SUBHEADS: the H2 questions must be what a REAL FAN actually wonders or googles about THIS piece — not an inside-baseball critic's-essay outline. For a review: "Is it worth watching?", "What is it about?" (no spoilers), "Is it better than [the previous one]?", "Where can I watch it?", "Who's in it?". For a profile: "What else has she been in?", "What's her best movie?". For box office: "Did it make a profit?", "How does it compare to [rival]?". For an explainer: "What actually happened at the end?". Choose the subheads a fan is genuinely curious about, phrased in their words — not "How does the craft impress?".
+- AUDIENCE-FIRST SUBHEADS: the H2 questions must be what a REAL FAN actually wonders or googles about THIS news story — not an inside-baseball critic's-essay outline. For a casting/deal story: "Who is [name] playing?", "When does it come out?", "Who else is in it?". For box office: "Did it make a profit?", "How does it compare to [rival]?". For a trailer drop: "What does the trailer reveal?", "When does it release?". For an awards result: "Who won the big award?", "Were there any upsets?". For a where-to-watch item: "Where can I stream it?", "Is it still in theaters?". Choose the subheads a fan is genuinely curious about, phrased in their words — not "How does the craft impress?".
 - STATS COME ONLY FROM THE FACTS: state a precise number (a Rotten Tomatoes/Metacritic %, a box-office figure, an exact count, an award outcome, a date) ONLY if that exact value appears in the REFERENCE FACTS. If the facts don't contain a number, do NOT state one — speak qualitatively ("among the best-reviewed of the year"). When you DO cite a grounded stat, you may hyperlink it to the source's HOMEPAGE for credibility (homepage only, never a fabricated deep-link/tt-ID). An award the facts list under NOMINATIONS was NOT won — never call it "winning".
 - INFORMATION GAIN: include original framing — a ranking rationale, a verdict, a "why it matters", a clear POV — not a dry encyclopedia summary.
 - LINKS: cite >=2 authoritative, RELEVANT EXTERNAL primary sources inline and/or in a final "## Sources" list (quality + relevance over count). Internal links: only when a genuinely related, same-topic article plausibly exists — if you cannot name a real sibling article, add NO internal link rather than a forced or off-topic one (the system also auto-inserts verified internal links). NEVER link competitors (THR, Variety, Deadline, ScreenRant, Collider, IGN).
 - SAFE URLS ONLY (anti-broken-link): NEVER fabricate a deep-link ID you cannot know — do NOT construct boxofficemojo.com/title/tt..., imdb.com/title/tt..., or any URL with a specific numeric/hash ID. Do NOT link Wikipedia (we don't source from it). For other sources (Box Office Mojo, Rotten Tomatoes, Oscars.org, a studio), link only the site's homepage (e.g. https://www.boxofficemojo.com/ or https://www.rottentomatoes.com/) unless an EXACT deep URL appears in the facts. A wrong deep link that resolves to a different film is a credibility failure.
-- VOICE & RHYTHM: write with a real human voice fitted to the piece — a sharp critic's wit for reviews/features/rankings, a crisp neutral newsroom voice for hard news. Always state a real POV and lead with SPECIFICS (a named scene, a real number, an actor) — specifics are what make writing feel human. Vary rhythm: follow a long sentence with a short, punchy one. Don't end every section on a "why it matters" wrap — vary endings (a hard fact, a quip, a plain stop). Use pronouns ("his film", "she") instead of repeating a full proper name.
+- VOICE & RHYTHM: write with a real human voice fitted to the piece — a crisp, neutral newsroom voice for hard news, a livelier columnist's edge for a box-office or reaction story. Always state a real POV and lead with SPECIFICS (a named scene, a real number, an actor) — specifics are what make writing feel human. Vary rhythm: follow a long sentence with a short, punchy one. Don't end every section on a "why it matters" wrap — vary endings (a hard fact, a quip, a plain stop). Use pronouns ("his film", "she") instead of repeating a full proper name.
 - BANNED CONSTRUCTIONS (they read machine-made): negative parallelism ("not just X, it's Y", "not only... but also"); copula-avoidance ("serves as", "stands as", "acts as a testament to") — say "is/are"; sentence-initial Moreover/Furthermore/Additionally/Notably/Importantly/Ultimately; throat-clearing ("In the world of", "When it comes to", "It's worth noting", "Buckle up", "In conclusion", "At the end of the day").
 - BANNED WORDS: delve, tapestry, testament, vibrant, pivotal, underscore, crucial, realm, boasts, elevate, intricate, seamless, nuanced, robust, multifaceted, foster.
 - BANNED FILLER PRAISE (only allowed if a concrete detail backs it): stunning, masterful, unforgettable, captivating, compelling, breathless, breathtaking, immersive, gripping, riveting, mesmerizing, electrifying, spellbinding, "tour de force", visceral, enthralling, dazzling, spectacular, phenomenal, "powerful performance", star-studded, high-profile, monumental, remarkable, "cements/solidifies her status", "stands the test of time". A pile-up of these reads machine-made; if you can't follow the adjective with a concrete reason (a named scene, a specific choice), cut it. At most ~1 em-dash per 150 words; avoid rule-of-three adjective stacks.
@@ -23,11 +25,10 @@ NON-NEGOTIABLE RULES for every article:
 - STATS DISCIPLINE (anti-hallucination): do NOT state precise statistics — exact Rotten Tomatoes/Metacritic %, exact box-office dollar figures, exact dates — UNLESS they appear in the REFERENCE FACTS. If not provided, speak qualitatively ("one of his highest-rated", "grossed over a billion worldwide") and never invent a precise number.
 - QUOTES (critical, both directions): NEVER present any sentence in quotation marks as a direct quote — from a person, film dialogue, or document — UNLESS that EXACT wording appears in the REFERENCE FACTS. If you don't have the verbatim words, PARAPHRASE with no quotation marks. Inventing, approximating, or misattributing a quote is a critical failure that can get us sued. CONVERSELY, when the facts/transcript DO contain a vivid, distinctive, on-the-record line, KEEP it as a real direct quote in quotation marks with attribution — do NOT launder a strong grounded quote into bland reported speech (a real quote is what makes the reader feel they're hearing the person; flattening every quote into paraphrase drains the life out of the piece). Quote the exact words; paraphrase the connective tissue.
 - LANGUAGE: write in clean English only. Never emit non-English/CJK characters, placeholder tokens, or garbled text.
-- STRUCTURED FIELDS = PLAIN TEXT: verdict, rating.label, prosCons, infoCard, entries, tldr, factPanel, filmography, whereToWatch must contain NO markdown (no *, _, or links) and clean values — e.g. a birth date is exactly "August 17, 1991" (never garbled like "August 17,174 1991"). Double-check every date and number in these fields against the reference facts.
+- STRUCTURED FIELDS = PLAIN TEXT: keyPoints, infoCard, boxOffice, records, awardShow, awardCategories, awardRecords, consensus, verdictBox, releaseWindows, whereToWatch, reveals, seriesStatus, sightings, release, tracklist, tourDates must contain NO markdown (no *, _, or links) and clean values — e.g. a date is exactly "August 17, 2025" (never garbled like "August 17,174 2025"). Double-check every date and number in these fields against the reference facts.
 - NO SPECULATION: never state unannounced, upcoming, future-dated, or rumored projects/events, recent personal news, or uncertain trivia UNLESS it appears verbatim in the REFERENCE FACTS. Stick to confirmed, released, sourced facts. If you're not certain it's true and grounded, leave it out.
-- ONLY RELEASED / AIRED + GROUNDED (critical anti-fabrication): you may ONLY rank, review, describe, or cite specific EPISODES, SEASONS, films, dollar figures, dates, or records that are actually RELEASED/AIRED and PRESENT in the REFERENCE FACTS. NEVER invent an episode or season that has not aired (if the facts list episodes only through Season 2, there is NO Season 3 to rank — do not fabricate one), NEVER review or report box office for a film that has not released, and NEVER invent a number/date not in the facts. If you don't have enough grounded, released material to fill the piece, write a SHORTER piece on what IS grounded — never pad with invented specifics.
+- ONLY RELEASED / AIRED + GROUNDED (critical anti-fabrication): you may ONLY describe or cite specific EPISODES, SEASONS, films, dollar figures, dates, or records that are actually RELEASED/AIRED and PRESENT in the REFERENCE FACTS. NEVER invent an episode or season that has not aired, NEVER report box office for a film that has not released, and NEVER invent a number/date not in the facts. If you don't have enough grounded, released material to fill the piece, write a SHORTER piece on what IS grounded — never pad with invented specifics.
 - EXACT TITLE (anti name-collision): this article is about the ONE specific title described in the REFERENCE FACTS (matching its year, director, and cast). Many works share similar names — "Good Boys" and "Bad Boys" are entirely different films; "The Boy Next Door" and "The Girl Next Door" are entirely different films. NEVER blend in plot, cast, or facts from a different same-named or similar-named work. If the facts don't clearly describe this exact title, do NOT fill the gap with another film's details — leave it out.
-- RANKING / LIST pieces: include an explicit NUMBERED list (or a markdown table) of the ranked items in order, and be DECISIVE about #1 — no hedging two "best" picks. Rank ONLY items grounded in the facts.
 - SOURCES: cite only sources GENUINELY RELEVANT to THIS exact article — the single most authoritative primary source(s) for the actual topic (e.g. Box Office Mojo ONLY for a box-office story, Oscars.org ONLY for an Academy Awards story). Never cite or link Wikipedia. Do NOT pad with boilerplate (Box Office Mojo / Rotten Tomatoes / a generic site) on a story they don't apply to — a casting item, a music story, or an interview should NOT cite Box Office Mojo. Two genuinely relevant sources beat four with irrelevant filler.
 - MARKDOWN HYGIENE: valid markdown only — every ** and * must be matched; never leave a dangling italic/bold marker.
 
@@ -35,46 +36,11 @@ Output STRICT JSON only — no prose around it.`;
 
 // Per-niche extra structured fields + writing form (drives the niche UI modules + voice).
 const NICHE = {
-  review: {
-    guide:
-      "REVIEW form: open with the verdict, then argue it (performances, direction, craft, what works / what falls short). Spoiler-free unless the topic is explicitly a spoiler piece. Confident, specific critic voice.",
-    fields:
-      '"verdict":"one-line bottom-line judgment", "rating":{"score":<number 1-10>,"max":10,"label":"one-word tier e.g. Great"}, "prosCons":{"pros":["3-4 short phrases"],"cons":["2-3 short phrases"]}, "infoCard":{"director":"","cast":["3-5 names"],"releaseYear":"","runtime":"","rated":"","genre":""}',
-  },
-  list: {
-    guide:
-      "RANKING form: a short criteria intro, then each entry with a clear, opinionated rationale. Be DECISIVE about #1 (no two winners).",
-    fields:
-      '"entries":[{"rank":1,"title":"","year":"","whyHere":"the fresh one-line case for THIS rank (a hook, NOT a plot summary or \'Starring X\')","director":"","cast":["2-3 names"],"runtime":"","whereToWatch":"platform if grounded","blurb":"one-line"}]  // EVERY ranked item, in order from #1',
-  },
-  explainer: {
-    guide:
-      "EXPLAINER form: answer the core question in the first 1-2 sentences (BLUF), then unpack with Q&A subheads. Assume spoilers.",
-    fields: '"tldr":"the short answer in 1-2 sentences", "spoiler": true',
-  },
-  profile: {
-    guide:
-      "PROFILE form: a bio lede, the career arc, signature roles. Use ONLY confirmed, released credits and facts present in the reference facts. Do NOT mention unannounced/upcoming/rumored projects or uncertain early-career trivia. Fill the fact panel and a filmography of the MAJOR released credits only.",
-    fields:
-      '"factPanel":{"born":"","nationality":"","activeYears":"","knownFor":["3-4 roles"]}, "filmography":[{"year":"","title":"","role":"","type":"Film|TV"}]',
-  },
-  guide: {
-    guide:
-      "STREAMING GUIDE = a CURATED, OPINIONATED RANKING (the form Google rewards), NOT a flat availability list. Rank the best picks and give EACH a confident critic's verdict on WHY it's worth watching — original recommendation value, a strong POV, a decisive #1. Add watch-order / which-edition / is-it-worth-your-subscription insight. Availability is a useful add-on, not the point: state a platform ONLY if that exact title is in the TMDB facts block, phrased 'as of [this month]; check before watching'. No unconfirmed sequels; keep all awards/numbers consistent.",
-    fields:
-      '"entries":[{"rank":1,"title":"","year":"","verdictTier":"WATCH IT|WORTH A LOOK|SKIP IT","bestFor":"who this pick is best for (one phrase)","runtime":"","whereToWatch":"the platform","blurb":"a confident verdict-first case (~90-160 words)"}], "whereToWatch":[{"title":"","platform":"","type":"Stream|Rent|Buy","year":""}]',
-  },
   trailer: {
     guide:
       "TRAILER PREVIEW form: the official trailer is embedded above your article — readers watch it themselves, so your job is CONTEXT and depth, not narration. Write a rich, authoritative preview using ALL of the REFERENCE FACTS (official synopsis, confirmed cast and characters, director, genre, release date, AND the premise, themes/keywords and production context in the TMDB facts) — every one of those facts is verified, so USE them for depth. Good sections: the headline news (what this confirms), the premise/story so far, the cast and who they play, where it sits in the franchise or the director's career, and why fans are anticipating it. The ONE thing you must NOT do is invent: since you did NOT watch the trailer, never describe specific shots, edits, dialogue, music cues or a runtime; and never add ANY fact not in the references (no premiere date, venue, opening-weekend gross, prep anecdote, or made-up character quote). DATE DISCIPLINE: use ONLY the exact release date in the facts, written identically everywhere. Do NOT emit youtubeId or releaseInfo (the system supplies those).",
     fields:
       '"keyMoments":["3-5 short, grounded bullets a reader should know going in — the premise, a key cast member and character, the franchise/career stakes, the release window — each a plain factual phrase drawn from the reference facts, NOT an invented shot description"]',
-  },
-  interview: {
-    guide:
-      "INTERVIEW SUMMARY form (THR/Variety house style): the official video is embedded above your article — write our ORIGINAL news summary of what the person actually said, built ONLY on the provided TRANSCRIPT + reference facts. Lead (BLUF) with the single most newsworthy or revealing thing they said. Organize the most interesting points by theme under question H2s. Be PARAPHRASE-FORWARD — report what they said in our own words. You MAY use 2-4 SHORT direct quotes, but ONLY exact, clear, distinctive lines that appear VERBATIM in the transcript (never invent one, never quote a garbled/auto-caption-mangled line, and keep all quotes together under ~15% of the article). Attribute naturally ('Pascal told the show', 'he said', 'asked about X, he explained') — since the transcript is a single-speaker interview, attribute to that person. Neutral reportorial voice: report, don't review or fawn. The HEADLINE MUST contain BOTH the person's full name AND the show/outlet name so it includes the primary keyword (e.g. 'Pedro Pascal on Hot Ones: ...'). Ground all biographical/career facts ONLY in the reference facts. Do NOT emit youtubeId, sourceOutlet or sourceUrl (the system supplies those).",
-    fields:
-      '"pullQuotes":["2-4 SHORT verbatim quotes (<=25 words each) lifted EXACTLY from the transcript — the most quotable, clear, distinctive lines; do NOT wrap them in quotation marks (the UI adds them); use [] if none are clean enough to quote"]',
   },
   news: {
     guide:
@@ -115,38 +81,12 @@ const NICHE = {
     fields:
       '"awardsType":"winners-list|predictions", "awardShow":{"show":"e.g. 67th Annual Grammy Awards","dateISO":"YYYY-MM-DD only if in facts","venue":"only if in facts","host":"only if in facts"}, "awardCategories":[{"categoryName":"e.g. Album of the Year","nominees":[{"name":"the ARTIST","title":"the album/song/work","isWinner":true}]}], "awardRecords":[{"claim":"a record/first stated in facts","detail":"prior holder + year"}], "predictions":[{"categoryName":"","willWin":"grounded forecast","shouldWin":"LABELED opinion","darkHorse":""}]',
   },
-  "music-profile": {
-    guide:
-      "MUSIC PROFILE form (career-feature, NOT a Wikipedia timeline). BAN the birth-date/origin opener. OPEN on either (a) a defining CONTRADICTION the piece resolves, or (b) one concrete, GROUNDED fact/event. Bury the bio. Shape: hook -> the defining question -> the career INFLECTION POINT (name the exact pivot — viral set, breakout single, festival) -> discography as a FACTUAL chapter list (each album/era a one-line beat = the release + its commercial/critical MILESTONE or chart fact, NOT a sonic or emotional verdict) -> a PEER line locating them among 2-3 named contemporaries (factual association: same label, scene, collaborators — NOT 'sounds like') -> forward-looking close tied to a GROUNDED upcoming release. Every song named in prose gets an inline official embed (structured keyTracks). Quotes ONLY from cited interviews in the facts. Chart peaks/certifications/awards are stat call-outs (grounded only). Use ONLY confirmed, released credits. NEVER characterize how the music sounds or pass a taste verdict.",
-    fields:
-      '"factPanel":{"realName":"","origin":"city/country","activeYears":"","knownFor":["2-4 works/eras"]}, "careerArc":[{"era":"album/year","beat":"one-line FACTUAL chapter note (the milestone/chart fact, not a taste verdict)"}], "keyTracks":[{"title":"","platform":"spotify|youtube|apple","embedUrl":"official player URL if grounded"}], "peerLine":"one sentence naming 2-3 contemporaries (factual association only)", "stats":[{"label":"e.g. Hot 100 peak","value":"grounded number only"}]',
-  },
-  "screen-music": {
-    guide:
-      "SCREEN-MUSIC form — where music meets screen (our defensible niche). Pick the sub-shape by intent: (1) ENDING-SONG / NEEDLE-DROP EXPLAINER: a spoiler line, then NAME the song + artist in the first two sentences (the reader arrived from search — answer fast). H2s mirror the real question ('What song plays at the end of [Show] Episode X?') phrased naturally. Then: scene context (factual, what happens on screen) -> the track's origin (release year + GROUNDED chart peak) -> the creator/music-supervisor's stated reasoning if grounded. (2) EVERY-SONG SOUNDTRACK GUIDE: per-episode/scene rows — song + artist + where-it-plays + a FACTUAL one-line note — rendered as the structured soundtrack module; update as a season airs. (3) SCORE/COMPOSER FEATURE: lead with the DIRECTOR'S stated creative intent, then the composer's process hung on ONE concrete tactile detail; quotes only from cited interviews. ALWAYS embed the official song/score (YouTube/Spotify) at each mention — incumbents are text-only here, so the embed is our edge. Add a grounded chart-context chip (release year + peak + any post-sync streaming spike) on needle-drops. On an indie/unknown sync, add a FACTUAL 'who is this artist' discovery box (real name, origin, the screen tie). Lyrics ONLY ≤15 words, fair-use, then contextualize. NEVER review how the song sounds — report the facts and the on-screen role.",
-    fields:
-      '"screenWork":{"title":"the film/show","type":"Film|TV","episode":"if applicable"}, "soundtrack":[{"song":"","artist":"","scene":"where it plays","significance":"one FACTUAL line","embedUrl":"official YouTube/Spotify if grounded","chartContext":"release year + peak, grounded only"}], "songSpotlight":{"song":"","artist":"","platform":"youtube|spotify","embedUrl":""}, "discoveryArtist":{"name":"","blurb":"indie sync only — factual","embedUrl":""}',
-  },
-  // ── PLAYBOOK new forms (CATEGORY_UIUX_EDITORIAL_PLAYBOOK.md): single-title where-to-watch, episode
-  //    recap, and awards predictions each need their OWN structure + fields (distinct from the listicle
-  //    guide / the review / the winners-list). ──
+  // ── WHERE-TO-WATCH news form (a single title that JUST hit streaming / got a streaming date). ──
   watchguide: {
     guide:
       "WHERE-TO-WATCH GUIDE form (single title — Decider/JustWatch house style). ANSWER-FIRST + TITLE-SPECIFIC lede: the first 1-2 sentences say exactly where to watch THIS title right now (the platform), OR that it isn't streaming yet + the expected window. Then descending-intent H2s phrased as the real questions ('Is [Title] on Netflix?', 'Is [Title] streaming or still in theaters?', 'When will [Title] hit streaming?'). CONFIRMED vs ESTIMATED is the whole game: state a platform or date as FACT only if it's in the TMDB/reference facts (add 'as of [this month]; check before watching'); a streaming-date ESTIMATE is allowed ONLY when BOTH the theatrical date AND the studio/distributor are in the facts, and it MUST be labeled 'expected/likely/estimated'. Distinguish Stream vs Rent vs Buy. 650-1000 words. Do NOT pad with device how-to lists ('watch on Roku') or boilerplate closers. NEVER invent a platform or a date.",
     fields:
       '"verdictBox":{"answer":"the one-line where-to-watch answer","where":"platform(s) or \'In theaters\'","when":"date/window if grounded"}, "releaseWindows":{"theatrical":"only if in facts","streaming":"CONFIRMED platform only","streamingEstimated":"labeled estimate ONLY if theatrical+studio are both in facts","digital":"","digitalEstimated":""}, "whereToWatch":[{"title":"","platform":"","type":"Stream|Rent|Buy","note":"as of [month]; check before watching"}]',
-  },
-  recap: {
-    guide:
-      "EPISODE RECAP form (Vulture/A.V. Club house style — spoilers ON). OPEN with a one-line SPOILER WARNING, then a 1-2 sentence take on what THIS episode actually did. Walk the episode's key beats IN ORDER — what happened AND why it matters to the season's arcs (analysis, not a blow-by-blow transcript). Close with a 'Loose Threads' bulleted list of stray observations / open questions. Use ONLY what AIRED and appears in the facts — NEVER invent a scene, a line of dialogue, a death, or a future episode. Put episode titles in quotes and show titles in italics. 500-900 words. A per-episode rating is fine; do NOT grade the whole season.",
-    fields:
-      '"spoiler": true, "rating":{"score":<number 1-10>,"max":10,"label":"one-word tier"}, "looseThreads":["3-6 stray observations / open questions, each grounded in what aired"]',
-  },
-  predictions: {
-    guide:
-      "AWARDS PREDICTIONS form (Gold Derby / Variety Awards Circuit house style). STATE-OF-THE-RACE lede: who is the frontrunner and WHY, right now — NEVER a ceremony-date/logistics lede. Sort the marquee categories into FACTS-ONLY buckets: FRONTRUNNER / IN THE HUNT / DARK HORSE / SNUB ('should've been here'). Every 'frontrunner' claim MUST cite at least one NAMED real precursor in the facts (a guild win, a festival prize, a precursor award) — NEVER an anonymous 'insiders say' and NEVER a fabricated %/odds. Use confidence TIERS (Lock / Frontrunner / Live / Long shot), not invented percentages. Name a real spoiler/dark horse. 600-900 words. NEVER present a prediction as a fact or invent a precursor result.",
-    fields:
-      '"verdictBuckets":[{"bucket":"FRONTRUNNER|IN THE HUNT|DARK HORSE|SNUB","name":"the contender (person)","film":"the work","case":"the grounded one-line case"}], "confidenceTier":"Lock|Frontrunner|Live|Long shot", "precursorTimeline":[{"body":"the precursor body e.g. SAG/Golden Globes","winner":"who won it (grounded)"}], "bottomLine":"the one-line closing call"',
   },
 };
 
@@ -164,10 +104,6 @@ const TIER_PRESET = {
 const SUBSHAPE = {
   "movies/news":
     "MOVIE NEWS craft: ONE-sentence lede = [talent] + a deal-stage VERB that matches the source's certainty exactly (LOCKED: joined/set to star/closed a deal/opened to; NOT-LOCKED: in talks/circling/eyeing/in negotiations; SOFT: in early talks/shortlisted/rumored) — NEVER upgrade the verb. Credential each name in ONE clause (single best-known credit, no filmography dump). Include exactly ONE grounded context beat (the predecessor who fell off, the franchise slot, the box-office stakes) or write shorter. Name-not-link attribution ('according to Variety'). If FIND gave a story status, surface it as storyStatus.",
-  "movies/rankings-lists":
-    "RANKING craft: first 1-2 sentences STATE THE CRITERION and tease #1; ban 'YEAR was a great year for…' openers. Every entry blurb opens with a FRESH hook, never a plot-summary or 'Starring X'. DEFEND #1 explicitly ('why it's first'). Honest count = the grounded count (no padding to a round number). Emit `criterion`, enriched `entries[]` (whyHere + the entry's facts), and `honorableMentions[]`.",
-  "movies/explainers":
-    "EXPLAINER craft: frame-then-answer lede that NAMES the exact title+director+year, then answers the core question in sentence 1-2. Order is PLOT-recap THEN MEANING (never meaning-first). H2s = the literal viewer questions, including a 'Is there a post-credits scene?' section when grounded. COMMIT to one reading — ban 'it's open to interpretation' non-answers. NEVER invent a character's fate, a post-credits scene, or a 'the director said'.",
   "movies/trailers":
     "TRAILER craft: you did NOT watch it — BANNED tokens: 'the camera', 'we see', 'the trailer opens/cuts to', any shot/edit/music-cue/runtime description, any non-verbatim character quote. Fence any speculation under a 'Theory' label. Convert beats into a COUNTED reveals contract (`reveals[]`: count FACTS, not shots). Lead with ≥3 grounded context layers (premise, cast+roles, franchise/career stakes, release window).",
   "movies/reactions":
@@ -176,22 +112,12 @@ const SUBSHAPE = {
     "BOX-OFFICE craft: GLOSS the jargon on first use (frame, cume, domestic) and ban raw trade shorthand (WW/PLF/PSA). Use SETTLED past tense (static page). For a holdover, the %-CHANGE (hold/drop) IS the story. Every figure wrapped in a human sentence; follow a data sentence with a short plain one. Numbers ONLY from the facts.",
   "tv/news":
     "TV NEWS craft: pick the RENEWAL or CASTING sub-shape. Lede pins exactly ONE grounded number (which season / after how many episodes). STATS ONLY FROM FACTS. NEVER assert a bubble/likely renewal as fact. Omit agency/representation lines. Emit `seriesStatus`.",
-  "tv/rankings-lists":
-    "TV RANKING craft: same as movie rankings PLUS a per-entry `seriesContext` (network, premiere year, seasons, creator, cast) and a 'the moment that earns it' micro-note. Episodes in quotes, shows italic.",
   "tv/trailers":
     "TV TRAILER craft: NEVER describe a shot/edit/dialogue/music/runtime. Use a short first-look skeleton; the premiere DATE is required or explicitly 'not announced'. Quote ONE verbatim official synopsis only (`officialSynopsis`). Flag Confirmed vs Speculation per beat. ≥3 context layers (premise, cast-roles, franchise stakes).",
   "tv/reactions":
     "TV REACTION craft: SPOILER banner first. Use the finale sub-shape when relevant. Cluster reactions into 2-4 sentiment camps by theme. The headline = a verified fan quote or question — NEVER name the twist. `consensus` must state the dominant sentiment confidently.",
   "celebrity/news":
     "CELEBRITY NEWS craft: WHO+WHAT+WHEN settled-fact lede + a sourcing tag + a role appositive. Build credibility from VERIFIABLE public sightings (event + date, in `sightings[]`) — NEVER paparazzi or 'a source close to'. A high-sensitivity story (death/legal/allegation/health) forces neutral verbs (reportedly/confirmed/announced) and the `sensitivity` flag. Emit `keyPoints[]` (3 bullets).",
-  "celebrity/profiles-careers":
-    "CELEBRITY PROFILE craft (NO-ACCESS model — we did NOT interview them): open on a VERIFIABLE specific or a thesis — BAN any faked in-room/hotel-lobby scene and 'rising star' clichés. Named-era sections; a triangulation graf (what others on record have said). 1100-1800 words. NEVER transcribe a PR bio as if observed. Emit `careerStats[]` + a `methodology` line.",
-  "celebrity/interviews":
-    "INTERVIEW craft: BLUF on the single most revealing thing they said. BAN invented scene-setting ('sipping coffee, she leans in'). Paraphrase-then-quote rhythm; organize by THEME not chronology; attribute every quote to the right speaker. Quotes ONLY verbatim from the transcript/facts.",
-  "reviews/movie-reviews":
-    "FILM REVIEW craft: open with a stack-and-classify line OR a hook — BAN a synopsis opener. The `verdict` is a 3-12 word standalone pull-quote. Every praise word chains to a NAMED grounded reason (a scene, a performance choice). Include one EARNED reservation. No spoilers. 700-1100 words. NEVER quote dialogue you don't have verbatim. Emit the `credits` block.",
-  "reviews/tv-reviews":
-    "TV REVIEW craft: open on a cultural-frame / comparative / personal hook — BAN the 'in our streaming-glut era' opener. Organize THEMATICALLY, never episode-by-episode. SPOILER-FREE (no mid-season or finale twist). 900-1400 words. TV-flavored infoCard (Network, Premiere, Created by, Starring, Where to watch).",
   "awards/winners":
     "AWARDS RESULTS craft (the night's RESULT, not a preview): the characterizing-appositive lede — sentence ONE makes the TOP WINNER the grammatical subject, characterizes it in a TIGHT 6-10-word appositive, anchors the time, and states its win count + Best Picture; NEVER lead on the edition number/venue/host. Sentence 2 = the night's defining record WITH its prior-holder + year. Order categories MAJOR-first (Picture, the four acting, Director, the two screenplay). Never call a NOMINATION a win. The structured winners list renders separately, so the body is a lede + 'biggest winners/moments' + records.",
   "streaming/where-to-watch":
@@ -206,72 +132,46 @@ const SUBSHAPE = {
 const FIELDS_OVERRIDE = {
   "movies/news":
     '"keyPoints":["3 answer-first bullets summarizing the story; bullet #1 = WHAT CHANGED TODAY"], "storyStatus":"CONFIRMED|DEVELOPING|RUMOR — the verified status of this story (badge)", "infoCard":{"director":"","cast":["2-3 lead names"],"releaseYear":"","genre":"","whereToWatch":"platform/theaters if grounded"}',
-  "movies/rankings-lists":
-    '"criterion":"the one-line stated ranking criterion", "honorableMentions":[{"title":"","year":"","note":"one line"}], "topFive":["the top 5 titles in #1..#5 order — for the at-a-glance strip"]',
-  "movies/explainers":
-    '"readingModes":{"justFacts":["3 answer-first bullets — the spoiler-y short answer"],"quickVersion":"a 2-3 sentence quick version of the explanation"}, "infoCard":{"director":"","cast":["3"],"releaseYear":"","runtime":"","genre":""}',
   "movies/trailers":
     '"reveals":[{"term":"a NAMED reveal/fact the trailer/synopsis confirms (a cast member, a confirmed plot point — NEVER an invented shot/edit)","note":"one grounded line"}], "officialSynopsis":"the VERBATIM official synopsis if it appears in the facts, else OMIT this field", "infoCard":{"director":"","cast":["3"],"releaseYear":"","genre":""}',
   "movies/box-office":
     '"weekendChart":[{"rank":1,"title":"","gross":"weekend gross ONLY if in facts","change":"% change vs last weekend ONLY if in facts"}]  // the weekend top-chart, ONLY rows whose figures are in the facts',
   "tv/news":
     '"keyPoints":["3 answer-first bullets; #1 = what changed today"], "seriesStatus":{"show":"","network":"","status":"renewed|canceled|ordered|in talks","season":"which season (e.g. Season 3)","window":"premiere window ONLY if grounded","castAdded":[{"name":"","role":""}]}, "seriesContext":{"network":"","premiere":"original premiere year","status":"","seasons":"# of seasons","creator":"","cast":["2-3"],"whereToWatch":""}',
-  "tv/rankings-lists":
-    '"criterion":"the one-line ranking criterion", "topFive":["top 5 shows in #1..#5 order"]',
   "tv/trailers":
     '"reveals":[{"term":"","note":""}], "officialSynopsis":"verbatim official synopsis if grounded, else OMIT", "seriesContext":{"network":"","premiere":"","seasons":"","creator":"","cast":["3"]}',
   "tv/reactions":
     '"spoiler":true, "seriesContext":{"network":"","seasons":"","creator":""}',
-  "streaming/best-of-streaming":
-    '"criterion":"the one-line basis for the picks", "bestFor":"the editor\'s one-line best-for pick", "topFive":["the top 5 picks in order"]',
   "celebrity/news":
     '"keyPoints":["3 answer-first bullets; #1 = what is new"], "sensitivity":"normal|high (high = death/legal/health/allegation — neutral verbs only)", "sightings":[{"event":"a VERIFIABLE public appearance (event + context) — NEVER paparazzi/anonymous","date":"if grounded"}]',
-  "celebrity/profiles-careers":
-    '"careerStats":[{"label":"e.g. Oscar nominations / box-office total","value":"a GROUNDED number only"}], "methodology":"a one-line \'how we reported this\' note (no-access: we did not interview them)"',
-  "celebrity/interviews":
-    '"footnotes":[{"term":"a person/project/term named in the interview","fact":"one grounded clarifying line"}]',
-  "awards/predictions":
-    '"atAGlance":{"leaderboard":"the current frontrunner in one phrase","biggestUpset":"the live dark-horse","firsts":"a record/first in play if grounded"}',
-  "reviews/movie-reviews":
-    '"credits":{"distributor":"","director":"","screenplay":"","cast":["3-5"],"runtime":"","rated":""}',
   "awards/winners":
     '"atAGlance":{"leaderboard":"the top winner + its win count in one phrase","biggestUpset":"the upset, if grounded","firsts":"a record/first in play, if grounded"}',
 };
 
 export function resolveNiche(topic) {
+  // NEWS-ONLY: this automation has exactly 8 trending-news forms. resolveNiche can ONLY return one of
+  // {news, boxoffice, trailer, reaction, watchguide, awards, music-news, music-awards}. There is no
+  // review/list/explainer/profile/guide/interview/recap/predictions/music-profile/screen-music form
+  // anymore — those are separate future automations and the categorizer never emits them.
   const t = (topic.contentType || "").toLowerCase();
-  // MUSIC branches FIRST and on CATEGORY — a music news item and a movie news item share contentType
-  // "news" but need different voices/fields. Sub-route by subcategory/contentType within music.
   if ((topic.category || "").toLowerCase() === "music") {
     const sub = (topic.subcategory || "").toLowerCase();
-    if (sub === "screen-music" || t.includes("screen-music")) return "screen-music";
     if (sub === "awards" || t.includes("award") || t.includes("grammy") || t.includes("vma")) return "music-awards";
-    if (sub === "profiles-artists" || t.includes("profile") || t.includes("artist")) return "music-profile";
     return "music-news";
   }
   const cat = (topic.category || "").toLowerCase();
   const sub = (topic.subcategory || "").toLowerCase();
-  // PLAYBOOK new forms — route on category/subcategory FIRST (they split off from guide/review/awards):
   if (cat === "streaming" && (sub === "where-to-watch" || t.includes("where to watch") || t.includes("where-to-watch"))) return "watchguide";
-  if ((cat === "reviews" || cat === "tv") && t.includes("recap")) return "recap";
-  if (cat === "awards" && (sub === "predictions" || t.includes("prediction"))) return "predictions";
-  if (t.includes("review")) return "review";
-  if (t.includes("rank") || t.includes("list")) return "list";
-  if (t.includes("explain")) return "explainer";
-  if (t.includes("profile")) return "profile";
-  if (t.includes("guide") || t.includes("where")) return "guide";
-  if (t.includes("trailer")) return "trailer";
-  if (t.includes("interview")) return "interview";
-  if (t.includes("reaction")) return "reaction";
-  if (t.includes("box office") || t.includes("box-office")) return "boxoffice";
-  if (t.includes("award") || t.includes("oscar") || t.includes("emmy")) return "awards";
-  if (t.includes("news")) return "news";
-  // FALLBACK: any uncategorized trending story still gets the AP inverted-pyramid NEWS craft (the rebuild covers
-  // ANY trending verifiable story, not a fixed taxonomy) — never ship a piece with only the bare SYSTEM prompt.
+  if (cat === "movies" && (sub === "box-office" || t.includes("box office") || t.includes("box-office"))) return "boxoffice";
+  if (sub === "trailers" || t.includes("trailer")) return "trailer";
+  if (sub === "reactions" || t.includes("reaction")) return "reaction";
+  if (cat === "awards" || t.includes("award") || t.includes("oscar") || t.includes("emmy")) return "awards";
+  // FALLBACK: any other trending story gets the AP inverted-pyramid NEWS craft (the rebuild covers ANY
+  // trending verifiable story, not a fixed taxonomy) — never ship a piece with only the bare SYSTEM prompt.
   return "news";
 }
 
-export async function generate({ topic, model, maxTokens = 6000, corrections = null }) {
+export async function generate({ topic, model, maxTokens = 6000, corrections = null, previousArticle = null }) {
   const niche = NICHE[resolveNiche(topic)] || null;
   // Music's pop(6%)/indie(4%) lane preset — only applies when FIND set topic.tier on a music topic.
   const tierPreset = (topic.category || "").toLowerCase() === "music" ? TIER_PRESET[topic.tier] || "" : "";
@@ -284,22 +184,66 @@ export async function generate({ topic, model, maxTokens = 6000, corrections = n
     (topic.facts || []).map((f) => `- ${f.title}: ${f.extract}`).join("\n") ||
     "(NONE provided — you do not have enough to write this article accurately; write only the few things you can, never invent specifics)";
 
+  // GROUNDING-MATCHED WORD BUDGET (2026-07-03 restructure — kills the fabrication FORCING FUNCTION, audit D1):
+  // the old internal retry demanded >=350 body words unconditionally, while the gate legalizes 220 on thin
+  // grounding — mechanically pushing the writer to pad ~50 words of source into 350+ (the padding IS the
+  // fabrication). The floor now MATCHES the grounding depth, same rule as the gate's thin-grounding profile.
+  const bsrc = (topic._bundle && topic._bundle.sources) || [];
+  const groundChars = bsrc.reduce((n, s) => n + (s.text || "").length, 0);
+  const thinGrounding = bsrc.length < 2 || groundChars < 1500;
+  const wordFloor = thinGrounding ? 220 : 350;
+
+  // ── SURGICAL SELF-CORRECTION (gossip-automation port, 2026-07-03 — audit D5): when a prior draft exists,
+  // FIX ONLY the flagged spots instead of rewriting the whole article at temp 0.6 (full rewrites routinely
+  // introduced NEW fabrications each attempt — Madonna attempt-2 invented a DIFFERENT altered quote). The
+  // smallest fix that makes each flagged claim true; everything unflagged is preserved verbatim.
+  if (previousArticle && corrections) {
+    const draft = { ...previousArticle };
+    for (const k of ["youtubeId", "releaseInfo", "tweetIds", "whereToWatch", "filmography", "boxOffice"]) delete draft[k]; // system-supplied — re-attached by run.mjs
+    const sys = `You are editing a news draft for The Screen Report. You are NOT rewriting it — you are SURGICALLY FIXING the specific flagged problems while keeping everything that is already correct.
+RULES:
+- Preserve every sentence that is NOT flagged EXACTLY as written — same voice, same facts, same order. Do not re-style, re-order, or "improve" untouched text.
+- For each flagged problem, make the SMALLEST fix that makes it true, using ONLY the REFERENCE FACTS provided:
+  • if the facts support the claim → keep it, attributed by name ("according to [Outlet]");
+  • if the facts do NOT support it → CUT the claim entirely (a shorter, fully-grounded article is the CORRECT outcome; never pad);
+  • if a quote is not verbatim in the facts → use the exact source words, or drop the quotation marks and paraphrase.
+- NEVER invent a new fact, quote, number, or date to "patch" a hole. Cutting a false claim is always better than inventing a plausible one.
+Output the FULL corrected article as STRICT JSON with EXACTLY the same keys and shape as the draft.`;
+    const su = `REFERENCE FACTS — the ONLY grounding you may use for any fix:
+${facts}
+
+YOUR DRAFT (fix ONLY the flagged problems below; keep everything else verbatim):
+${JSON.stringify(draft).slice(0, 9500)}
+
+PROBLEMS TO FIX (each one, surgically):
+${corrections}
+
+Return the FULL corrected article as STRICT JSON, same keys as the draft.`;
+    const { data, usage, raw } = await chat({ model, system: sys, user: su, json: true, maxTokens, temperature: 0.2 });
+    // Merge over the prior draft so any key the fixer dropped survives (and run.mjs re-attaches system fields).
+    return { article: { ...previousArticle, ...(data || {}) }, usage, raw };
+  }
+
   const user = `Write the article.
 
 TOPIC: ${topic.title}
 CONTENT TYPE: ${topic.contentType}
 CATEGORY / SUBCATEGORY: ${topic.category} / ${topic.subcategory}
-PRIMARY KEYWORD: ${topic.primaryKeyword} — work its main words into the TITLE, naturally (REQUIRED — the title must contain them, e.g. a review title ends with "...Review"), and use it once early in the body. Do NOT force the exact phrase into a subheading or repeat it through the article.
+PRIMARY KEYWORD: ${topic.primaryKeyword} — work its main words into the TITLE, naturally (REQUIRED — the title must contain them, e.g. a casting story leads with the star + project), and use it once early in the body. Do NOT force the exact phrase into a subheading or repeat it through the article.
 ANGLE: ${topic.angle || "the most interesting TRUE angle"}${niche ? "\nNICHE STYLE: " + niche.guide : ""}${subShape ? "\nCATEGORY CRAFT: " + subShape : ""}${tierPreset ? "\nMUSIC LANE: " + tierPreset : ""}
 STORY STATUS: ${topic.verification?.status || topic.storyStatus || "n/a"} — CONFIRMED = state it plainly; DEVELOPING = attribute the core claim by NAME ("according to [outlet]"), do not present it as independently confirmed; RUMOR/HOLD = hedge heavily, never assert it as fact.
 SENSITIVITY: ${topic.sensitivity || "normal"} — if "high" (death / legal / health / allegation) use STRICTLY neutral verbs (reportedly, confirmed, announced) and BAN any playful, speculative, or sensational phrasing.
+
+WORD BUDGET: ${thinGrounding
+    ? "the gathered grounding is THIN — write a TIGHT, fully-grounded ~230-320-word brief. Do NOT stretch toward a \"full\" article length by adding background, career history, or franchise context the sources below don't contain — padding beyond the sources is exactly how fabrications happen. Short and 100% grounded is the CORRECT outcome here."
+    : "solid grounding — write the form's natural length (~450-650 words), every fact from the sources below."}
 
 REFERENCE FACTS — ground EVERY factual claim ONLY in these; add NOTHING from your own memory, no matter how well-known it seems (an independent verifier re-checks every claim against these exact facts and CUTS or BLOCKS anything not found here):
 ${facts}
 
 Return JSON with EXACTLY these fields:
 {
- "title": "the H1/headline, 55-80 chars (movies/news 60-70), ONE specific TRUE claim, ENTITY-FRONT with a strong active verb in PRESENT TENSE and a deal-stage-accurate verb (NEVER upgrade certainty — 'in talks' stays 'in talks', not 'joins'); naturally include the primary keyword's main words (required). NO '(EXCLUSIVE)' tag, NO question-mark clickbait, NO fabricated superlative. For a reactions/explainer/spoiler piece NEVER name the twist or death in the headline. Reads like a human wrote it, not a pasted search query",
+ "title": "the H1/headline, 55-80 chars (movies/news 60-70), ONE specific TRUE claim, ENTITY-FRONT with a strong active verb in PRESENT TENSE and a deal-stage-accurate verb (NEVER upgrade certainty — 'in talks' stays 'in talks', not 'joins'); naturally include the primary keyword's main words (required). NO '(EXCLUSIVE)' tag, NO question-mark clickbait, NO fabricated superlative. For a reactions or spoiler-sensitive piece NEVER name the twist or death in the headline. Reads like a human wrote it, not a pasted search query",
  "metaTitle": "SEO <title>, 50-60 chars, keyword near the front but natural",
  "dek": "1-2 sentence standfirst, <=170 chars, that ADDS new info (never restates the headline). If the CATEGORY CRAFT above gives a DEK formula, FOLLOW IT — box-office: the #1 film + its grounded number + the biggest mover/faller; tv-news: a grounded production/timing detail the headline didn't fit; awards: the marquee acting winners; music-news: the second-most-important grounded fact + (if a list exists) a 'here are all the dates/tracks' scannability promise; reactions: a 'Fans are split on …' contested-verdict frame — all grounded only.",
  "metaDescription": "140-155 chars, keyword early",
@@ -323,7 +267,7 @@ ${corrections}` : ""}`;
     const extra =
       attempt === 0
         ? ""
-        : "\n\nYOUR PREVIOUS ATTEMPT WAS INCOMPLETE. Return COMPLETE valid JSON with: faq >=3 items (new follow-ups, not body restatements); body >=350 words containing the form's H2 headings (a reader-question H2 where it fits) AND a '## Sources' section ONLY if genuinely-relevant external links exist; keyTakeaways with 3-5 items.";
+        : `\n\nYOUR PREVIOUS ATTEMPT WAS INCOMPLETE. Return COMPLETE valid JSON with: faq >=${thinGrounding ? 2 : 3} items (new follow-ups, not body restatements); body >=${wordFloor} words containing the form's H2 headings (a reader-question H2 where it fits) AND a '## Sources' section ONLY if genuinely-relevant external links exist; keyTakeaways with 3-5 items. Stay WITHIN the sources — never pad with ungrounded background to reach the length.`;
     const { data, usage, raw } = await chat({
       model,
       system: SYSTEM,
@@ -334,8 +278,8 @@ ${corrections}` : ""}`;
     });
     last = { article: data, usage, raw };
     const a = data || {};
-    const okFaq = (a.faq || []).length >= 3;
-    const okBody = (a.body || "").split(/\s+/).filter(Boolean).length >= 350;
+    const okFaq = (a.faq || []).length >= (thinGrounding ? 2 : 3);
+    const okBody = (a.body || "").split(/\s+/).filter(Boolean).length >= wordFloor;
     const okKt = (a.keyTakeaways || []).length >= 3;
     if (okFaq && okBody && okKt) return last;
   }

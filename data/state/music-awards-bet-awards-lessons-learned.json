@@ -1,0 +1,118 @@
+{
+  "id": "music-awards-bet-awards-lessons-learned",
+  "slug": "lauryn-hill-s-joyful-joyful-celebration-more-lessons-from-the-2026-bet",
+  "status": "needs_review",
+  "stages": {
+    "attempt1": {
+      "score": 75,
+      "cat": "music/awards",
+      "img": "/images/articles/lauryn-hill-s-joyful-joyful-celebration-more-lessons-from-the-2026-bet.jpg",
+      "hardBlocks": [],
+      "block": [],
+      "fixable": [],
+      "badClaims": 0
+    },
+    "attempt2": {
+      "score": 0,
+      "cat": "music/awards",
+      "img": "/images/articles/lauryn-hill-s-joyful-joyful-celebration-more-lessons-from-the-2026-bet.jpg",
+      "hardBlocks": [
+        "prompt-leak / meta-refusal phrase reached reader copy (e.g. 'not detailed in the provided facts' / 'the reference facts') — rewrite or omit"
+      ],
+      "block": [
+        "prompt-leak / meta-refusal phrase reached reader copy (e.g. 'not detailed in the provided facts' / 'the reference facts') — rewrite or omit"
+      ],
+      "fixable": [],
+      "badClaims": 0
+    },
+    "attempt3": {
+      "score": 70,
+      "cat": "music/awards",
+      "img": "/images/articles/lauryn-hill-s-joyful-joyful-celebration-more-lessons-from-the-2026-bet.jpg",
+      "hardBlocks": [
+        "Flesch 37 < 40 (too dense to read comfortably)",
+        "verify-gate CUT: 3 claim(s) not in the gathered sources — The 2026 BET Awards offered a masterclass in celebrator; The BET Awards' formula centers authentic celebration o; The 2026 BET Awards integrated performances, awards, an",
+        "infoGain 6 < 7"
+      ],
+      "block": [
+        "verify-gate CUT: 3 claim(s) not in the gathered sources — The 2026 BET Awards offered a masterclass in celebrator; The BET Awards' formula centers authentic celebration o; The 2026 BET Awards integrated performances, awards, an"
+      ],
+      "fixable": [
+        "Flesch 37 < 40 (too dense to read comfortably)",
+        "infoGain 6 < 7"
+      ],
+      "badClaims": 0
+    }
+  },
+  "scorecard": {
+    "score": 70,
+    "subscores": {
+      "accuracy": 10,
+      "readability": 7,
+      "humanVoice": 7,
+      "phrasing": 7,
+      "curiosity": 7,
+      "structure": 8,
+      "infoGain": 6,
+      "seo": 8,
+      "faqQuality": 9,
+      "completeness": 9
+    },
+    "strengths": [
+      "All claims are accurately sourced from the provided Billboard reporting, with no fabricated details.",
+      "The article maintains a clear and logical structure with an answer-first lead and useful subheadings.",
+      "The Key Takeaways provide a concise summary of the article's main points.",
+      "The FAQ section genuinely adds new information by answering specific questions about the event.",
+      "The primary keyword 'BET Awards' is present naturally and not forced.",
+      "The article avoids generic AI tells and filler praise, focusing on specific details from the source material.",
+      "The use of short paragraphs and varied sentence structure contributes to readability."
+    ],
+    "weaknesses": [
+      "While accurate, the article's analysis largely reiterates points from the Billboard podcast without significant original framing or deeper insight, limiting information gain.",
+      "The phrasing, while fluent, sometimes leans towards a slightly formal tone, which could be more engaging and conversational.",
+      "The Flesch score of 37 indicates the prose is denser than the target range, suggesting room for simpler language and shorter sentences to improve readability for a busy fan.",
+      "The headline and dek are functional but could be more enticing to spark curiosity, as they primarily summarize the content rather than offering a surprising claim or unique angle.",
+      "The article could benefit from more vivid descriptions or direct quotes (if available in the source) to enhance the human voice and engagement, rather than summarizing the podcast's points."
+    ],
+    "deterministic": {
+      "words": 332,
+      "h2s": 3,
+      "h2Questions": 3,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 4,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 24,
+      "avgSentence": 15,
+      "flesch": 37,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 4,
+      "hardBlocks": [
+        "Flesch 37 < 40 (too dense to read comfortably)"
+      ]
+    },
+    "hardBlocks": [
+      "Flesch 37 < 40 (too dense to read comfortably)",
+      "verify-gate CUT: 3 claim(s) not in the gathered sources — The 2026 BET Awards offered a masterclass in celebrator; The BET Awards' formula centers authentic celebration o; The 2026 BET Awards integrated performances, awards, an",
+      "infoGain 6 < 7"
+    ]
+  },
+  "holdReason": "accuracy/grounding block: verify-gate CUT: 3 claim(s) not in the gathered sources — The 2026 BET Awards offered a masterclass in celebrator; The BET Awards' formula centers authentic celebration o; The 2026 BET Awards integrated performances, awards, an",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "body ≥ 400w",
+      "external sources ≥2",
+      "score ≥ 80",
+      "zero hard-blocks",
+      "infoGain ≥ 7"
+    ]
+  },
+  "ms": 582511
+}

@@ -1,0 +1,120 @@
+{
+  "id": "news-the-comebacker-release-date",
+  "slug": "tom-hanks-sony-baseball-movie-the-comebacker-sets-late-summer-2027-rel",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": 85,
+      "cat": "movies/news",
+      "img": "https://deadline.com/wp-content/uploads/2025/02/Tom-Hanks.jpg?w=1600",
+      "hardBlocks": [
+        "primary keyword not in title"
+      ],
+      "block": [],
+      "fixable": [
+        "primary keyword not in title"
+      ],
+      "badClaims": 0
+    },
+    "attempt2": {
+      "score": 85,
+      "cat": "movies/news",
+      "img": "https://deadline.com/wp-content/uploads/2025/02/Tom-Hanks.jpg?w=1600",
+      "hardBlocks": [
+        "verify-gate CUT: 1 claim(s) not in the gathered sources — Marielle Heller adapted 'The Comebacker'"
+      ],
+      "block": [
+        "verify-gate CUT: 1 claim(s) not in the gathered sources — Marielle Heller adapted 'The Comebacker'"
+      ],
+      "fixable": [],
+      "badClaims": 0
+    },
+    "attempt3": {
+      "score": 85,
+      "cat": "movies/news",
+      "img": "https://deadline.com/wp-content/uploads/2025/02/Tom-Hanks.jpg?w=1600",
+      "hardBlocks": [
+        "primary keyword not in title",
+        "verify-gate BLOCK: 'The Comebacker' is a sports drama; 'A Quiet Place III' is the third installment of its hor; Tom Hanks starred in 'A League of Their Own'"
+      ],
+      "block": [
+        "verify-gate BLOCK: 'The Comebacker' is a sports drama; 'A Quiet Place III' is the third installment of its hor; Tom Hanks starred in 'A League of Their Own'"
+      ],
+      "fixable": [
+        "primary keyword not in title"
+      ],
+      "badClaims": 0
+    }
+  },
+  "acceptReason": "cut-and-publish (removed 3 ungrounded/fabricated sentence(s); 232w remain)",
+  "scorecard": {
+    "score": 85,
+    "subscores": {
+      "accuracy": 10,
+      "readability": 9,
+      "humanVoice": 8,
+      "phrasing": 9,
+      "curiosity": 9,
+      "structure": 9,
+      "infoGain": 8,
+      "seo": 8,
+      "faqQuality": 9,
+      "completeness": 8
+    },
+    "strengths": [
+      "All claims are accurately sourced and attributed, particularly the core release date and reunion details.",
+      "The lead paragraph delivers the essential news quickly and efficiently, adhering to inverted pyramid style.",
+      "The article maintains a clear, concise, and professional tone suitable for news reporting.",
+      "Paragraphs are short and digestible, enhancing readability for a busy fan.",
+      "The use of subheadings effectively breaks up the text and guides the reader.",
+      "The FAQ section provides genuinely new and relevant information, not just rehashed content.",
+      "The article avoids generic AI tells and filler praise, focusing on specific details.",
+      "The keyword 'the comeback movie' is naturally integrated without feeling forced.",
+      "The article correctly identifies the competitive release date, adding a layer of interest."
+    ],
+    "weaknesses": [
+      "While generally good, the phrasing 'setting the stage for a notable weekend clash' in the 'What else opens' section is a touch generic.",
+      "The 'Who else is starring' section could benefit from a very brief, specific detail about the 'up-and-coming leading man' if available, even if character details are undisclosed, to add more human voice.",
+      "The article is quite short, which is appropriate for news, but leaves less room for deeper engagement or unique analysis, though this is not a major flaw for a news piece."
+    ],
+    "deterministic": {
+      "words": 299,
+      "h2s": 3,
+      "h2Questions": 3,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 3,
+      "ktCount": 4,
+      "kwInTitle": false,
+      "kwInFirst100": false,
+      "kwInH2": false,
+      "maxSentence": 37,
+      "avgSentence": 20,
+      "flesch": 49,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": [
+        "primary keyword not in title"
+      ]
+    },
+    "hardBlocks": [
+      "primary keyword not in title",
+      "verify-gate BLOCK: 'The Comebacker' is a sports drama; 'A Quiet Place III' is the third installment of its hor; Tom Hanks starred in 'A League of Their Own'"
+    ]
+  },
+  "score": 85,
+  "category": "movies",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "body ≥ 350w",
+      "external sources ≥2",
+      "zero hard-blocks"
+    ]
+  },
+  "ms": 423098
+}

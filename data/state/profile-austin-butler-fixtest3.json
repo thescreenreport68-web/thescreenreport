@@ -1,0 +1,93 @@
+{
+  "id": "profile-austin-butler-fixtest3",
+  "slug": "austin-butler-career-fixtest3",
+  "status": "needs_review",
+  "stages": {
+    "attempt1": {
+      "score": 88,
+      "cat": "celebrity/profiles-careers",
+      "img": "/images/articles/austin-butler-career-fixtest3.jpg",
+      "hardBlocks": [
+        "6 unverified claim(s) (need correction)"
+      ],
+      "badClaims": 6
+    },
+    "attempt2": {
+      "score": 88,
+      "cat": "celebrity/profiles-careers",
+      "img": "/images/articles/austin-butler-career-fixtest3.jpg",
+      "hardBlocks": [
+        "3 unverified claim(s) (need correction)"
+      ],
+      "badClaims": 3
+    },
+    "attempt3": {
+      "score": 88,
+      "cat": "celebrity/profiles-careers",
+      "img": "/images/articles/austin-butler-career-fixtest3.jpg",
+      "hardBlocks": [
+        "6 unverified claim(s) (need correction)"
+      ],
+      "badClaims": 6
+    }
+  },
+  "scorecard": {
+    "score": 88,
+    "subscores": {
+      "accuracy": 10,
+      "readability": 9,
+      "humanVoice": 9,
+      "phrasing": 9,
+      "curiosity": 8,
+      "structure": 9,
+      "infoGain": 9,
+      "seo": 7,
+      "faqQuality": 9,
+      "completeness": 9
+    },
+    "strengths": [
+      "Strong narrative flow that traces Butler's career progression effectively.",
+      "Excellent integration of key roles and career milestones.",
+      "Clear and concise explanations of his major film and TV projects.",
+      "Well-structured with informative subheads and a useful Key Takeaways section.",
+      "FAQ section provides relevant, additional information.",
+      "Human voice is present, particularly in descriptions of his dedication to roles.",
+      "Accurate sourcing and adherence to provided facts."
+    ],
+    "weaknesses": [
+      "The SEO subscore is lower due to the primary keyword 'Austin Butler Movies' not appearing naturally within the body text or headings, relying more on the title and dek.",
+      "While generally good, some phrasing could be slightly more dynamic.",
+      "The curiosity score could be improved with a more specific, punchy headline or lead that immediately hooks the reader with a unique angle."
+    ],
+    "deterministic": {
+      "words": 566,
+      "h2s": 5,
+      "h2Questions": 4,
+      "internalLinks": 0,
+      "externalLinks": 4,
+      "hasSources": true,
+      "faqCount": 4,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 42,
+      "avgSentence": 17,
+      "flesch": 52,
+      "bannedTells": 1,
+      "kwExact": 0,
+      "hardBlocks": []
+    },
+    "hardBlocks": [
+      "6 unverified claim(s) (need correction)"
+    ]
+  },
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "zero hard-blocks"
+    ]
+  },
+  "ms": 401450
+}

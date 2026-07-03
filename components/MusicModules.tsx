@@ -74,7 +74,7 @@ function ReleaseInfoBox({ article }: { article: Article }) {
             {rows.map(([k, v]) => (
               <div key={k} className="flex gap-3 py-1.5">
                 <dt className="w-28 flex-none font-sans text-xs font-bold uppercase tracking-[0.04em] text-slate">{k}</dt>
-                <dd className="font-body text-[1.02rem] text-navy">{v}</dd>
+                <dd className="font-body text-[1.02rem] text-ink">{v}</dd>
               </div>
             ))}
           </dl>
@@ -96,8 +96,8 @@ function Tracklist({ tracklist }: { tracklist: NonNullable<Article["tracklist"]>
       <SectionLabel>Tracklist</SectionLabel>
       <ol className="space-y-1">
         {tracklist.map((t, i) => (
-          <li key={i} className="flex gap-3 font-body text-[1.02rem] leading-snug text-navy">
-            <span className="w-6 flex-none font-sans text-sm font-bold text-breaking">{i + 1}</span>
+          <li key={i} className="flex gap-3 font-body text-[1.02rem] leading-snug text-ink">
+            <span className="w-6 flex-none font-sans text-sm font-bold text-red">{i + 1}</span>
             <span>{t}</span>
           </li>
         ))}
@@ -110,8 +110,8 @@ function TourDateTable({ tourDates }: { tourDates: NonNullable<Article["tourDate
   if (!tourDates?.length) return null;
   return (
     <section className="mt-10 not-prose">
-      <div className="mb-3 border-b-2 border-navy pb-1">
-        <h2 className="font-display text-2xl font-bold uppercase tracking-tight text-navy">Tour Dates</h2>
+      <div className="mb-3 border-b-2 border-ink pb-1">
+        <h2 className="font-display text-2xl font-bold uppercase tracking-tight text-ink">Tour Dates</h2>
       </div>
       <table className="w-full border-collapse text-left">
         <thead>
@@ -124,10 +124,10 @@ function TourDateTable({ tourDates }: { tourDates: NonNullable<Article["tourDate
         </thead>
         <tbody>
           {tourDates.map((d, i) => (
-            <tr key={i} className="border-b border-dotted border-slate/40 align-top">
+            <tr key={i} className="border-b border-dotted border-gray/40 align-top">
               <td className="py-2 pr-3 font-sans text-sm text-slate">{d.date || "—"}</td>
-              <td className="py-2 pr-3 font-body text-[1.02rem] font-semibold text-navy">{d.city || "—"}</td>
-              <td className="py-2 pr-3 font-body text-[1.02rem] text-navy">{d.venue || "—"}</td>
+              <td className="py-2 pr-3 font-body text-[1.02rem] font-semibold text-ink">{d.city || "—"}</td>
+              <td className="py-2 pr-3 font-body text-[1.02rem] text-ink">{d.venue || "—"}</td>
               <td className="py-2 font-body text-[1.02rem] text-slate">{d.support || ""}</td>
             </tr>
           ))}
@@ -155,7 +155,7 @@ function MusicFactPanel({ article }: { article: Article }) {
         {rows.map(([k, v]) => (
           <div key={k} className="flex gap-3 py-1.5">
             <dt className="w-28 flex-none font-sans text-xs font-bold uppercase tracking-[0.04em] text-slate">{k}</dt>
-            <dd className="font-body text-[1.02rem] text-navy">{v}</dd>
+            <dd className="font-body text-[1.02rem] text-ink">{v}</dd>
           </div>
         ))}
       </dl>
@@ -171,14 +171,14 @@ function CareerArc({ article }: { article: Article }) {
     <section className="mt-10 not-prose">
       {arc?.length ? (
         <>
-          <div className="mb-3 border-b-2 border-navy pb-1">
-            <h2 className="font-display text-2xl font-bold uppercase tracking-tight text-navy">The Career, Era by Era</h2>
+          <div className="mb-3 border-b-2 border-ink pb-1">
+            <h2 className="font-display text-2xl font-bold uppercase tracking-tight text-ink">The Career, Era by Era</h2>
           </div>
           <ol className="space-y-3">
             {arc.map((e, i) => (
-              <li key={i} className="border-l-4 border-breaking pl-4">
-                <div className="font-sans text-xs font-bold uppercase tracking-[0.08em] text-breaking">{e.era}</div>
-                <div className="font-body text-[1.05rem] leading-snug text-navy">{e.beat}</div>
+              <li key={i} className="border-l-4 border-red pl-4">
+                <div className="font-sans text-xs font-bold uppercase tracking-[0.08em] text-red">{e.era}</div>
+                <div className="font-body text-[1.05rem] leading-snug text-ink">{e.beat}</div>
               </li>
             ))}
           </ol>
@@ -190,7 +190,7 @@ function CareerArc({ article }: { article: Article }) {
           <div className="grid gap-4 sm:grid-cols-2">
             {tracks.map((t, i) => (
               <div key={i}>
-                <div className="mb-1 font-body text-[1.02rem] font-semibold text-navy">{t.title}</div>
+                <div className="mb-1 font-body text-[1.02rem] font-semibold text-ink">{t.title}</div>
                 <EmbedPlayer platform={t.platform} url={t.embedUrl} title={t.title} />
               </div>
             ))}
@@ -220,9 +220,9 @@ function DiscoveryArtistBox({ article }: { article: Article }) {
   const d = article.discoveryArtist;
   if (!d?.name) return null;
   return (
-    <aside className="my-6 not-prose border-l-4 border-breaking bg-mist/30 p-5">
+    <aside className="my-6 not-prose border-y-2 border-ink py-4">
       <SectionLabel>Who Is {d.name}?</SectionLabel>
-      {d.blurb ? <p className="font-body text-[1.05rem] leading-snug text-navy">{d.blurb}</p> : null}
+      {d.blurb ? <p className="font-body text-[1.05rem] leading-snug text-ink">{d.blurb}</p> : null}
       {d.embedUrl ? <div className="mt-3"><EmbedPlayer url={d.embedUrl} title={d.name} /></div> : null}
     </aside>
   );
@@ -233,18 +233,18 @@ function SoundtrackModule({ article }: { article: Article }) {
   if (!songs?.length) return null;
   return (
     <section className="mt-10 not-prose">
-      <div className="mb-3 border-b-2 border-navy pb-1">
-        <h2 className="font-display text-2xl font-bold uppercase tracking-tight text-navy">
+      <div className="mb-3 border-b-2 border-ink pb-1">
+        <h2 className="font-display text-2xl font-bold uppercase tracking-tight text-ink">
           Every Song{article.screenWork?.title ? ` in ${article.screenWork.title}` : ""}
         </h2>
       </div>
       <div className="space-y-5">
         {songs.map((s, i) => (
-          <div key={i} className="border-b border-dotted border-slate/40 pb-5 last:border-0">
-            <div className="font-body text-[1.1rem] font-semibold text-navy">
+          <div key={i} className="border-b border-dotted border-gray/40 pb-5 last:border-0">
+            <div className="font-body text-[1.1rem] font-semibold text-ink">
               &ldquo;{s.song}&rdquo;{s.artist ? <span className="font-normal text-slate"> — {s.artist}</span> : null}
             </div>
-            {s.scene ? <div className="mt-0.5 font-body text-[1.02rem] leading-snug text-navy">{s.scene}</div> : null}
+            {s.scene ? <div className="mt-0.5 font-body text-[1.02rem] leading-snug text-ink">{s.scene}</div> : null}
             {s.significance ? <div className="mt-0.5 font-body text-[1.02rem] leading-snug text-slate">{s.significance}</div> : null}
             {s.chartContext ? (
               <div className="mt-1 inline-block bg-mist px-2 py-0.5 font-sans text-[11px] uppercase tracking-[0.06em] text-slate">{s.chartContext}</div>

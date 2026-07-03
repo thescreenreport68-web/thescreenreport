@@ -1,0 +1,111 @@
+{
+  "id": "box-office-they-will-kill-you-box-office-flop",
+  "slug": "hbo-max-s-newest-thriller-hit-didn-t-deserve-to-be-a-10m-box-office-fl",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": 85,
+      "cat": "movies/box-office",
+      "img": "/images/articles/hbo-max-s-newest-thriller-hit-didn-t-deserve-to-be-a-10m-box-office-fl.jpg",
+      "hardBlocks": [
+        "fabricated: Box Office Mojo is cited as a source but is not an authoritative source in the provided facts.",
+        "verify-gate CUT: 2 claim(s) not in the gathered sources — The film is set in The Virgil, a massive New York City ; Zazie Beetz told Collider she focused on a 'street, scr"
+      ],
+      "block": [
+        "fabricated: Box Office Mojo is cited as a source but is not an authoritative source in the provided facts.",
+        "verify-gate CUT: 2 claim(s) not in the gathered sources — The film is set in The Virgil, a massive New York City ; Zazie Beetz told Collider she focused on a 'street, scr"
+      ],
+      "fixable": [],
+      "badClaims": 0
+    },
+    "attempt2": {
+      "score": 0,
+      "cat": "movies/box-office",
+      "img": "/images/articles/hbo-max-s-newest-thriller-hit-didn-t-deserve-to-be-a-10m-box-office-fl.jpg",
+      "hardBlocks": [
+        "prompt-leak / meta-refusal phrase reached reader copy (e.g. 'not detailed in the provided facts' / 'the reference facts') — rewrite or omit",
+        "CONTRADICTED [rt]: article states a Rotten Tomatoes score of NaN% — No verified Rotten Tomatoes score exists for They Will Kill You (OMDb returns none — common for TV/new titles). Do NOT state an RT percentage; speak qualitatively."
+      ],
+      "block": [
+        "prompt-leak / meta-refusal phrase reached reader copy (e.g. 'not detailed in the provided facts' / 'the reference facts') — rewrite or omit",
+        "CONTRADICTED [rt]: article states a Rotten Tomatoes score of NaN% — No verified Rotten Tomatoes score exists for They Will Kill You (OMDb returns none — common for TV/new titles). Do NOT state an RT percentage; speak qualitatively."
+      ],
+      "fixable": [],
+      "badClaims": 0
+    },
+    "attempt3": {
+      "score": 75,
+      "cat": "movies/box-office",
+      "img": "/images/articles/hbo-max-s-newest-thriller-hit-didn-t-deserve-to-be-a-10m-box-office-fl.jpg",
+      "hardBlocks": [],
+      "block": [],
+      "fixable": [],
+      "badClaims": 0
+    }
+  },
+  "acceptReason": "terminal-accept (verified accurate, score 75, 0 quality nit(s))",
+  "scorecard": {
+    "score": 75,
+    "subscores": {
+      "accuracy": 9,
+      "readability": 8,
+      "humanVoice": 7,
+      "phrasing": 8,
+      "curiosity": 7,
+      "structure": 8,
+      "infoGain": 7,
+      "seo": 7,
+      "faqQuality": 8,
+      "completeness": 9
+    },
+    "strengths": [
+      "All factual claims, including box office figures, dates, and streaming platforms, are accurate and align with the provided reference facts.",
+      "The article is well-structured with clear subheadings and an answer-first lead, making it easy to navigate.",
+      "The lead quickly addresses the core paradox of the film's box office flop vs. streaming success.",
+      "The analysis of why the film flopped (misleading marketing, 'Ready or Not' comparisons) provides good information gain.",
+      "The article effectively uses the provided quote from Zazie Beetz to enhance the human voice and provide specific insight into her character's fighting style.",
+      "The FAQ section adds new, relevant information, particularly regarding critical reception and cast details, without repeating main body content.",
+      "The language is generally clear and avoids excessive jargon, contributing to good readability.",
+      "The article successfully integrates the primary keyword 'They Will Kill You' naturally without stuffing."
+    ],
+    "weaknesses": [
+      "While the human voice is present, it could be more distinctive; some sections lean slightly towards a more reportorial, rather than analytical, tone.",
+      "The 'Sources' section lists 'Box Office Mojo' and 'HBO Max' which are not among the provided authoritative sources for box office or streaming data. While the data itself is accurate, the attribution is inconsistent with the 'cite ONLY these' instruction for authoritative facts.",
+      "The 'dek' mentions Myha'la but the 'about' section only lists 'Asia Reaves' as a cast member, which is inconsistent. Myha'la is listed in the FAQ, but the 'about' section should be comprehensive.",
+      "The 'about' section lists 'Asia Reaves' as a cast member, which is the character name, not the actor. It should be Zazie Beetz.",
+      "The article mentions 'Carlos Rafael Rivera' for the score, which is not in the provided facts. While plausible, it's an ungrounded specific."
+    ],
+    "deterministic": {
+      "words": 454,
+      "h2s": 3,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": true,
+      "faqCount": 4,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": true,
+      "maxSentence": 37,
+      "avgSentence": 19,
+      "flesch": 58,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 3,
+      "hardBlocks": []
+    },
+    "hardBlocks": []
+  },
+  "score": 75,
+  "category": "movies",
+  "subcategory": "box-office",
+  "audit": {
+    "ok": false,
+    "internalLinks": 2,
+    "failed": [
+      "external sources ≥2"
+    ]
+  },
+  "ms": 252567
+}

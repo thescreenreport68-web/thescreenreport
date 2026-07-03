@@ -1,0 +1,114 @@
+{
+  "id": "news-netflix-cassandra-sci-fi-horror",
+  "slug": "netflix-s-new-sci-fi-series-hailed-as-smartest-horror-since-haunting-o",
+  "status": "needs_review",
+  "stages": {
+    "attempt1": {
+      "score": 65,
+      "cat": "celebrity/news",
+      "img": "https://static0.colliderimages.com/wordpress/wp-content/uploads/2025/02/cassandra-netflix-samira-mina-tander-archives.jpg?w=1600&h=900&fit=crop",
+      "hardBlocks": [
+        "fabricated: The series, starring Cassandra Ciangherotti, reimagines haunted house tropes with themes of AI and technological danger.",
+        "fabricated: The series is described as a sci-fi survival story that flips classic horror concepts on their head.",
+        "verify-gate CUT: 1 claim(s) not in the gathered sources — As of July 2026, Netflix has not officially announced a"
+      ],
+      "block": [
+        "fabricated: The series, starring Cassandra Ciangherotti, reimagines haunted house tropes with themes of AI and technological danger.",
+        "fabricated: The series is described as a sci-fi survival story that flips classic horror concepts on their head.",
+        "verify-gate CUT: 1 claim(s) not in the gathered sources — As of July 2026, Netflix has not officially announced a"
+      ],
+      "fixable": [],
+      "badClaims": 0
+    },
+    "attempt2": {
+      "score": 75,
+      "cat": "celebrity/news",
+      "img": "https://static0.colliderimages.com/wordpress/wp-content/uploads/2025/02/cassandra-netflix-samira-mina-tander-archives.jpg?w=1600&h=900&fit=crop",
+      "hardBlocks": [
+        "Flesch 38 < 40 (too dense to read comfortably)",
+        "verify-gate BLOCK: The series *Cassandra* aims for a thoughtful and psycho; Netflix has not made an official announcement regarding; Netflix has not made an official announcement regarding"
+      ],
+      "block": [
+        "verify-gate BLOCK: The series *Cassandra* aims for a thoughtful and psycho; Netflix has not made an official announcement regarding; Netflix has not made an official announcement regarding"
+      ],
+      "fixable": [
+        "Flesch 38 < 40 (too dense to read comfortably)"
+      ],
+      "badClaims": 0
+    },
+    "attempt3": {
+      "score": 65,
+      "cat": "celebrity/news",
+      "img": "https://static0.colliderimages.com/wordpress/wp-content/uploads/2025/02/cassandra-netflix-samira-mina-tander-archives.jpg?w=1600&h=900&fit=crop",
+      "hardBlocks": [
+        "fabricated: 'Cassandra' is a Netflix series. The source only states 'Netflix's six-part series Cassandra' in the context of a Collider report, not that Netflix has officially announced or greenlit it as their own production. This is an inference not directly supported by the provided source material.",
+        "fabricated: 'Cassandra Ciangherotti is attached to the project.' The provided source material (Collider) only mentions 'Netflix's six-part series Cassandra' and does not link the actress Cassandra Ciangherotti to this specific series. This is an assumption based on the shared name, not a sourced fact.",
+        "fabricated: 'Her recent credits include the 2025 film The Follies as Renata and the 2023 television series Thursday's Widows.' While these are accurate credits for the actress Cassandra Ciangherotti, the article presents them as 'her recent credits' in the context of her being 'attached to the project' (the Netflix series 'Cassandra'), which is itself an unsourced claim. The connection between the actress and the series is fabricated, making any details about her filmography in this context misleading.",
+        "fabricated: 'She is also known for her role as Ursula in the HBO series Los Espookys and her performance in the 2015 film The Similars.' Same issue as above; these are accurate credits for the actress, but their inclusion here implies a connection to the Netflix series 'Cassandra' that is not sourced.",
+        "verify-gate CUT: 4 claim(s) not in the gathered sources — Cassandra Ciangherotti is attached to the project 'Cass; As of July 2026, Netflix has not announced an official ; As of July 2026, Netflix has not announced a production"
+      ],
+      "block": [
+        "fabricated: 'Cassandra' is a Netflix series. The source only states 'Netflix's six-part series Cassandra' in the context of a Collider report, not that Netflix has officially announced or greenlit it as their own production. This is an inference not directly supported by the provided source material.",
+        "fabricated: 'Cassandra Ciangherotti is attached to the project.' The provided source material (Collider) only mentions 'Netflix's six-part series Cassandra' and does not link the actress Cassandra Ciangherotti to this specific series. This is an assumption based on the shared name, not a sourced fact.",
+        "fabricated: 'Her recent credits include the 2025 film The Follies as Renata and the 2023 television series Thursday's Widows.' While these are accurate credits for the actress Cassandra Ciangherotti, the article presents them as 'her recent credits' in the context of her being 'attached to the project' (the Netflix series 'Cassandra'), which is itself an unsourced claim. The connection between the actress and the series is fabricated, making any details about her filmography in this context misleading.",
+        "fabricated: 'She is also known for her role as Ursula in the HBO series Los Espookys and her performance in the 2015 film The Similars.' Same issue as above; these are accurate credits for the actress, but their inclusion here implies a connection to the Netflix series 'Cassandra' that is not sourced.",
+        "verify-gate CUT: 4 claim(s) not in the gathered sources — Cassandra Ciangherotti is attached to the project 'Cass; As of July 2026, Netflix has not announced an official ; As of July 2026, Netflix has not announced a production"
+      ],
+      "fixable": [],
+      "badClaims": 0
+    }
+  },
+  "webCheck": {
+    "contradictions": 1,
+    "corrected": true
+  },
+  "scorecard": {
+    "score": 0,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [
+      "deterministic block"
+    ],
+    "deterministic": {
+      "words": 426,
+      "h2s": 4,
+      "h2Questions": 3,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": true,
+      "faqCount": 4,
+      "ktCount": 3,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 33,
+      "avgSentence": 19,
+      "flesch": 40,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": [
+        "prompt-leak / meta-refusal phrase reached reader copy (e.g. 'not detailed in the provided facts' / 'the reference facts') — rewrite or omit"
+      ]
+    },
+    "hardBlocks": [
+      "prompt-leak / meta-refusal phrase reached reader copy (e.g. 'not detailed in the provided facts' / 'the reference facts') — rewrite or omit"
+    ]
+  },
+  "holdReason": "accuracy/grounding block: prompt-leak / meta-refusal phrase reached reader copy (e.g. 'not detailed in the provided facts' / 'the reference facts') — rewrite or omit",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "keyword in title",
+      "external sources ≥2",
+      "score ≥ 70",
+      "zero hard-blocks",
+      "infoGain ≥ 5",
+      "readability ≥ 6",
+      "humanVoice ≥ 7",
+      "phrasing ≥ 7"
+    ]
+  },
+  "ms": 419959
+}

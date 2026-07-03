@@ -1,0 +1,144 @@
+// GOSSIP — WRITER (Stage 5). Builds the article from the VERIFIED bundle + the frame's directive, in a
+// researched gossip voice, with a PER-TYPE template (a dating rumor reads nothing like a feud or a cryptic-post
+// story), and ALWAYS the mandatory in-text non-confirmation disclaimer. buildGossipPrompt() is pure (testable
+// without an LLM); writeGossip() does the live generation.
+// Voice/craft sourced from how Page Six / TMZ / Pop Crave / People actually write (RUMOR_GOSSIP_AUTOMATION_PLAN
+// PART 22): punchy + tight + active, curiosity hook, skimmable, a pull-quote, light gossip idiom (never stuffed),
+// attribution on every claim, hedges for shade ("appears to"/"seemingly").
+import { chat } from "../lib/openrouter.mjs";
+
+const SYSTEM = `You are a sharp, fast celebrity-gossip writer for The Screen Report — the wit and energy of Page Six and TMZ, written like a smart friend who has the tea. CRAFT (do all of this):
+- Punchy and irreverent with a knowing wink — but tasteful and credible, never mean, sleazy, or moralizing.
+- Short, active sentences; plain vivid verbs; cut every wasted word (if five words work, don't use nine).
+- Open with a CURIOSITY HOOK — a question or an intriguing image — then deliver fast. Skimmable: short paragraphs, varied rhythm.
+- Light, natural gossip idiom is welcome ("sparked rumors", "set tongues wagging", "stepped out", "fans were quick to notice") — sprinkle a little, NEVER stuff; never read like a cliché generator or an AI.
+NON-NEGOTIABLE (trust — these override style). This is a SPECULATION/gossip desk: lively interpretation is the point, but two things are sacred — checkable specifics, and never presenting the unconfirmed as confirmed.
+- CHECKABLE SPECIFICS ARE SACRED (the #1 rule). Every NAME, NUMBER, AGE, DATE, money amount, place, work TITLE, and OUTLET/source ATTRIBUTION must come from the bundle EXACTLY and stay attached to the RIGHT person or thing. Never invent one, never guess one, and NEVER MISPLACE one — do not attribute a quote, number, role, or action to the wrong person, and do not credit the wrong outlet (if the fan reactions came from WABI, say WABI, not WMUR). A misplaced name or number is one of the worst errors you can make.
+- QUOTATION MARKS = VERBATIM ONLY. Put text in quotation marks ONLY if you copied it word-for-word from a source. If the source paraphrased ("struggles with substance abuse"), NEVER reword it inside quotes ("has a drug problem"). Quote the EXACT words, or paraphrase WITHOUT quotation marks. Never invent a quote, a "source says", or a rep statement.
+- SPECULATION IS WELCOME — but FRAME IT AS SPECULATION. You may add engaging interpretation, atmosphere, and "what this could mean" color to make it a fun read; just phrase it as speculation ("it seems", "reportedly", "sources suggest", "fans wonder", "appears to") — NEVER as your own confirmed fact.
+- MATCH THE SOURCE'S CONFIDENCE — this is the one line you must not cross:
+  • CONFIRMED → state as FACT. If a source confirms it — an official announcement, a court/police record, the person's own statement, or an outlet reporting it as established fact — write it plainly. Do NOT hedge a confirmed fact into a "rumor". (A publicly ANNOUNCED pregnancy/engagement/deal is CONFIRMED — say so.)
+  • NOT CONFIRMED → say so: "it's reported that", "according to [Outlet]", "a source claims", "reportedly", "expected to". An insider tip / rumor / "expected"/"in talks" is NEVER your own established fact — do not upgrade "expected to star" into "set to star", or "an EP" into "a co-star".
+- Avoid spammy clickbait words ("SHOCKING", "you won't believe", "BOMBSHELL", all-caps "SLAMS", "jaw-dropping") — write it straight; the story carries itself.
+- For shade/feuds, DECODE with hedges ("appears to", "seemingly", "thinly veiled") — never assert a direct attack as fact.
+- Follow the FRAMING DIRECTIVE exactly, and include the mandatory non-confirmation sentence VERBATIM where required.
+- Never describe or link intimate/leaked media; never a damaging claim about a private person or a minor.
+Output STRICT JSON only.`;
+
+// Per-type writing templates (the owner's "each gossip is different" requirement).
+const TYPES = {
+  romance: "TYPE = DATING/ROMANCE RUMOR. Open on the will-they spark. Lead with the trigger (the sighting/photo/event), attributed. Add behavioral color from the bundle (how they looked/acted) — only details that are IN the bundle. Tie to any past link or timeline if present. Close on what is still unconfirmed.",
+  breakup: "TYPE = BREAKUP/SPLIT. Lead with the news, attributed. Give the relationship timeline from the bundle (how long together, when first linked). Note the stated reason/source and current status. Be matter-of-fact, not gleeful.",
+  feud: "TYPE = FEUD/SHADE. Lead with the trigger (the post/comment/subtweet). DECODE it with hedges ('appears to', 'seemingly', 'thinly veiled', 'took a swipe at') — never assert a direct attack as fact. Add the back-history if in the bundle. Note that neither side has confirmed anything.",
+  spotted: "TYPE = SPOTTED/SIGHTING. Lead with where + when + who. Keep it short and fun. Say briefly why it matters. Attribute the sighting.",
+  pregnancy: "TYPE = PREGNANCY/BABY/HEALTH SPECULATION (sensitive — tread carefully). Lead with the cryptic clue. Say what fans are reading into it — as SPECULATION, never as fact. Lay out the clues from the bundle. Respectful tone; the non-confirmation note is mandatory and prominent.",
+  cryptic: "TYPE = CRYPTIC POST / SOCIAL SLEUTHING. Lead with the post. Lay out the fan theories and the clues being decoded (emojis, timing, imagery) — only those in the bundle. Frame the WHOLE thing as the online conversation, not a conclusion.",
+  career: "TYPE = CAREER/DEAL/CASTING RUMOR. Lead with the reported move, attributed. Say what it would mean for the person/project. Note it is unconfirmed and reps haven't commented (if in the bundle).",
+  controversy: "TYPE = CONTROVERSY/BACKLASH. Lead with what happened (attributed or per the record). Give the reaction and the context. Include any response or denial. Stay neutral; report the discourse, don't pile on.",
+  general: "TYPE = GENERAL GOSSIP. Lead with the hook, attributed. Give the trigger, a little context, and what's still unconfirmed.",
+};
+
+// Detect the gossip TYPE from the claim/title (most specific first). Drives the template above.
+export function detectGossipType(topic) {
+  const t = `${topic.angle || ""} ${topic.title || ""} ${topic.claim || ""}`.toLowerCase();
+  if (/\b(pregnan|expecting|baby bump|having a baby|hospitaliz|health scare|rehab|cancer|illness)\b/.test(t)) return "pregnancy";
+  if (/\b(split|break ?up|broke up|divorc|separat|called it off|calls it quits|ex-|former (couple|flame)|no longer together)\b/.test(t)) return "breakup";
+  if (/\b(feud|shade|subtweet|diss|took a (shot|swipe|dig)|clap ?back|beef|throwing shade|unfollow|slam|fired back)\b/.test(t)) return "feud";
+  if (/\b(backlash|controvers|under fire|called out|apolog|accus|criticism|dragged|canceled)\b/.test(t)) return "controversy";
+  if (/\b(cast|casting|in talks|joins|signs on|lands? (the )?role|reboot|sequel|exit|quits|leaving|replac)\b/.test(t)) return "career";
+  if (/\b(dating|romance|new (man|woman|flame|couple)|fling|smitten|cozy|linked|relationship|getting close|more than friends)\b/.test(t)) return "romance";
+  if (/\b(spotted|seen (together|out)|stepped out|sighting|out and about|grabbed (dinner|lunch|coffee))\b/.test(t)) return "spotted";
+  if (/\b(cryptic|hint|teas\w+|sparked speculation|fans (think|believe|speculate)|wonder\w*|fueled rumors)\b/.test(t)) return "cryptic";
+  return "general";
+}
+
+export function buildGossipPrompt(bundle, frame, topic, corrections = null) {
+  const gtype = detectGossipType(topic);
+  const sourceBlock = (bundle.sources || [])
+    .map((s, i) => `[S${i + 1}] ${s.outlet}${s.url ? ` (${s.url})` : ""} — tier ${s.tier}\n${(s.text || "").slice(0, 2500)}`)
+    .join("\n\n");
+  const quoteBlock = (bundle.quotes || []).map((q) => `• "${q}"`).join("\n") || "(no verbatim quotes available — paraphrase only, invent nothing)";
+
+  const user = `${topic.angle ? `THE STORY (the content-verified angle — write THIS): ${topic.angle}\n` : ""}DISCOVERY HEADLINE (UNVERIFIED — may be clickbait or overstated; do NOT treat it as fact, verify every specific against the bundle): ${topic.title || ""}
+ABOUT: ${topic.primaryEntity || bundle.entity || ""}
+
+THE VERIFIED BUNDLE — the ONLY facts and quotes you may use:
+${sourceBlock || "(no source text)"}
+
+VERBATIM QUOTES you may use (copy exactly; attribute them):
+${quoteBlock}
+
+${TYPES[gtype] || TYPES.general}
+
+FRAMING DIRECTIVE (follow exactly):
+${frame.writerDirective}
+${frame.needsDisclaimer ? `\nMANDATORY — include this exact sentence, as its own sentence in the body:\n"${frame.disclaimerText}"` : ""}
+${corrections ? `\n⚠ FIX THESE FROM YOUR LAST DRAFT (keep the voice + the same facts; attribute any flagged claim, e.g. "according to ${frame.attribution || "the outlet"}", or add the required note): ${corrections}` : ""}
+
+LENGTH: write 450–600 words — IMPORTANT, do not stop short. Keep individual SENTENCES tight, but develop the story FULLY and make it interesting: the trigger, the who/what/when/where, the fan reaction, the what-we-know-vs-what's-unconfirmed, the relevant BACKGROUND and context (prior related events, the people involved, the timeline) — using ONLY facts supported by the bundle (add real, verifiable context, never invented filler). More RELEVANT specifics = a stronger, more engaging story. A rich article, never a caption.
+STRUCTURE: headline = a curiosity hook in present tense (NEVER state an unconfirmed damaging claim as fact in the headline). Hook → what sparked it (attributed) → what we know vs. what's unconfirmed → quick context / why it matters → the denial / other side if any. Pull one punchy line out as the pull-quote.
+
+Return STRICT JSON:
+{ "title": "...", "dek": "one-line standfirst with a little wit",
+  "body": "markdown article (250–450 words) INCLUDING the mandatory non-confirmation sentence verbatim if required",
+  "pullQuote": "one short punchy line from the story (a quote or a vivid sentence) for display",
+  "keyTakeaways": ["EXACTLY 3 short factual takeaway bullets — REQUIRED, never empty"],
+  "faq": [{"q":"a real question a reader would search","a":"a short factual answer from the bundle"}, "... 2-3 FAQ — REQUIRED, never empty"],
+  "claims": [{"text":"each checkable claim","sourceQuote":"the verbatim bundle text that supports it"}],
+  "whatWeKnow": ["confirmed/attributed points"],
+  "whatWeDont": ["the open questions"],
+  "denial": "the subject/rep denial if any, else null",
+  "statusLabel": "${frame.uiLabel}" }`;
+  return { system: SYSTEM, user, gossipType: gtype };
+}
+
+// SURGICAL-CORRECTION prompt (Step 5). The writer FIXES its own draft instead of rewriting it: it gets the prior
+// draft + the EXACT list of problems + the same verified bundle, and edits ONLY the flawed spots (find the real
+// supporting fact in the bundle, attribute it, soften it to speculation, or cut it) — every correct sentence is
+// preserved verbatim. This keeps a good piece good while killing the specific fabrications. A full rewrite is the
+// fallback (run.mjs sets rewrite=true) only when the draft is broken top-to-bottom.
+const CORRECTION_SYS = `You are editing a celebrity-gossip draft for The Screen Report. You are NOT rewriting it — you are SURGICALLY FIXING specific flagged problems while keeping everything that is already correct.
+RULES:
+- Preserve every sentence that is NOT flagged EXACTLY as written — same voice, same facts, same order. Do not re-style, re-order, or "improve" untouched text.
+- For each flagged problem, do the SMALLEST fix that makes it true and safe, using ONLY the VERIFIED BUNDLE:
+  • if the bundle supports the claim → attribute it ("according to [Outlet]", "a source tells [Outlet]") and quote ONLY verbatim words;
+  • if the bundle does NOT support it → soften to attributed speculation ("fans speculate", "appears to") OR cut the claim entirely;
+  • if a quote isn't verbatim in the bundle → replace with the exact words or drop the quotation marks and paraphrase.
+- NEVER invent a new fact, quote, source, number, or date to "patch" a hole. Cutting a false claim is always better than inventing a true-sounding one.
+- Keep the mandatory non-confirmation sentence verbatim if the framing requires it.
+Output the FULL corrected article as STRICT JSON (same shape as the draft).`;
+
+export function buildCorrectionPrompt(bundle, frame, topic, priorArticle, issues) {
+  const sourceBlock = (bundle.sources || [])
+    .map((s, i) => `[S${i + 1}] ${s.outlet}${s.url ? ` (${s.url})` : ""} — tier ${s.tier}\n${(s.text || "").slice(0, 2500)}`)
+    .join("\n\n");
+  const issueList = Array.isArray(issues) ? issues : String(issues || "").split(";").map((x) => x.trim()).filter(Boolean);
+  const user = `ABOUT: ${topic.primaryEntity || bundle.entity || ""}
+
+THE VERIFIED BUNDLE — the ONLY facts and quotes you may use to fix things:
+${sourceBlock || "(no source text)"}
+
+YOUR DRAFT (fix ONLY the flagged problems below; keep the rest verbatim):
+${JSON.stringify({ title: priorArticle.title, dek: priorArticle.dek, body: priorArticle.body, pullQuote: priorArticle.pullQuote, whatWeKnow: priorArticle.whatWeKnow, whatWeDont: priorArticle.whatWeDont, denial: priorArticle.denial }).slice(0, 7000)}
+
+PROBLEMS TO FIX (each one, surgically):
+${issueList.map((p, i) => `${i + 1}. ${p}`).join("\n") || "(none specified)"}
+${frame.needsDisclaimer ? `\nKEEP this exact sentence in the body: "${frame.disclaimerText}"` : ""}
+
+Return the FULL corrected article as STRICT JSON, same shape:
+{ "title":"...","dek":"...","body":"...","pullQuote":"...","keyTakeaways":["..."],"faq":[{"q":"...","a":"..."}],
+  "claims":[{"text":"...","sourceQuote":"verbatim bundle text"}],"whatWeKnow":["..."],"whatWeDont":["..."],"denial":null,"statusLabel":"${frame.uiLabel}" }`;
+  return { system: CORRECTION_SYS, user };
+}
+
+export async function writeGossip({ bundle, frame, topic, model = "deepseek/deepseek-v3.2", corrections = null, priorArticle = null, issues = null, rewrite = false }) {
+  // SURGICAL self-correction when we have a prior draft and aren't forcing a rewrite; otherwise a fresh write.
+  const useSurgical = priorArticle && !rewrite && (issues || corrections);
+  const { system, user } = useSurgical
+    ? buildCorrectionPrompt(bundle, frame, topic, priorArticle, issues || corrections)
+    : buildGossipPrompt(bundle, frame, topic, rewrite ? null : corrections);
+  // 2800 tokens: a 450-600-word body + dek + pull-quote + 3 takeaways + FAQ + claims + whatWeKnow/Dont must all fit
+  // in the JSON, or the output truncates mid-sentence (the cause of an incomplete published article).
+  const { data } = await chat({ model, system, user, json: true, maxTokens: 2800, temperature: useSurgical ? 0.2 : 0.4 });
+  return data;
+}

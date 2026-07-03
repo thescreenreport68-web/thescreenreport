@@ -1,0 +1,59 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Cap,Anton,92,&H00FFFFFF,&H00B9B9B9,&H00101010,&HA0000000,0,0,0,0,100,100,1,0,1,4,2,2,70,70,330,1
+Style: Hook,Anton,120,&H00FFFFFF,&H00CFCFCF,&H00101010,&HA0000000,0,0,0,0,100,100,1,0,1,5,3,5,70,70,0,1
+Style: KickText,Anton,40,&H00FFFFFF,&H00FFFFFF,&H00101010,&H00000000,0,0,0,0,100,100,4,0,1,0,0,5,0,0,0,1
+Style: KickDraw,Anton,40,&H002821D9,&H002821D9,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,7,0,0,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.12,0:00:06.50,KickDraw,,0,0,0,,{\fad(140,120)\pos(104,126)\1c&H000000&\1a&H78&\blur6\p1}m 18 0 l 866 0 b 884 0 884 0 884 18 l 884 70 b 884 88 884 88 866 88 l 18 88 b 0 88 0 88 0 70 l 0 18 b 0 0 0 0 18 0{\p0}
+Dialogue: 1,0:00:00.12,0:00:06.50,KickDraw,,0,0,0,,{\fad(140,120)\pos(98,118)\p1}m 18 0 l 866 0 b 884 0 884 0 884 18 l 884 70 b 884 88 884 88 866 88 l 18 88 b 0 88 0 88 0 70 l 0 18 b 0 0 0 0 18 0{\p0}
+Dialogue: 2,0:00:00.12,0:00:06.50,KickText,,0,0,0,,{\fad(140,120)\pos(540,163)}X-MEN '97 NEW OPENING CREDITS
+Dialogue: 0,0:00:00.05,0:00:00.99,Hook,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k28}THE {\k28}NEW {\k39}X-MEN
+Dialogue: 0,0:00:00.99,0:00:02.04,Hook,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k28}'97 {\k44}SEASON {\k33}WILL
+Dialogue: 0,0:00:02.04,0:00:03.03,Hook,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k33}HAVE {\k17}A {\k50}TOTALLY
+Dialogue: 0,0:00:03.03,0:00:04.68,Hook,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k61}DIFFERENT {\k50}OPENING {\k55}SEQUENCE
+Dialogue: 0,0:00:04.68,0:00:06.12,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k33}EACH {\k61}EPISODE'S {\k50}CREDITS
+Dialogue: 0,0:00:06.12,0:00:07.11,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k33}WILL {\k33}ONLY {\k33}SHOW
+Dialogue: 0,0:00:07.11,0:00:08.43,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k28}THE {\k50}MUTANTS {\k55}ACTUALLY
+Dialogue: 0,0:00:08.43,0:00:09.54,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k55}FEATURED {\k22}IN {\k33}THAT
+Dialogue: 0,0:00:09.54,0:00:09.92,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k39}STORY
+Dialogue: 0,0:00:09.92,0:00:10.86,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k50}MEANING {\k22}IF {\k22}AN
+Dialogue: 0,0:00:10.86,0:00:12.07,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k50}EPISODE {\k50}FOCUSES {\k22}ON
+Dialogue: 0,0:00:12.07,0:00:13.34,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k50}CABLE'S {\k50}X-FORCE {\k28}THE
+Dialogue: 0,0:00:13.34,0:00:14.22,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k28}JET {\k28}AND {\k33}TEAM
+Dialogue: 0,0:00:14.22,0:00:15.05,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k44}LINEUP {\k39}{\1c&H2821D9&}SHIFT{\1c&HFFFFFF&}
+Dialogue: 0,0:00:15.05,0:00:16.38,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k33}THIS {\k44}CHANGE {\k55}DIRECTLY
+Dialogue: 0,0:00:16.38,0:00:17.64,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k55}REFLECTS {\k28}THE {\k44}SEASON
+Dialogue: 0,0:00:17.64,0:00:18.53,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k17}1 {\k72}{\1c&H2821D9&}CLIFFHANGER{\1c&HFFFFFF&}
+Dialogue: 0,0:00:18.53,0:00:19.46,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k28}THE {\k39}X-MEN {\k28}ARE
+Dialogue: 0,0:00:19.46,0:00:20.90,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k61}{\1c&H2821D9&}SCATTERED{\1c&HFFFFFF&} {\k44}ACROSS {\k39}THREE
+Dialogue: 0,0:00:20.90,0:00:22.39,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k61}DIFFERENT {\k61}TIMELINES {\k28}PER
+Dialogue: 0,0:00:22.39,0:00:22.94,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k55}COLLIDER
+Dialogue: 0,0:00:22.94,0:00:23.99,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k28}THE {\k28}NEW {\k50}CREDITS
+Dialogue: 0,0:00:23.99,0:00:25.42,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k55}VISUALLY {\k61}REINFORCE {\k28}WHO
+Dialogue: 0,0:00:25.42,0:00:26.47,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k22}IS {\k50}DRIVING {\k33}EACH
+Dialogue: 0,0:00:26.47,0:00:27.52,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k66}TIMELINE'S {\k39}STORY
+Dialogue: 0,0:00:27.52,0:00:28.51,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k33}EVEN {\k28}THE {\k39}FINAL
+Dialogue: 0,0:00:28.51,0:00:29.67,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k33}SHOT {\k22}OF {\k61}PROFESSOR
+Dialogue: 0,0:00:29.67,0:00:30.60,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k17}X {\k28}AND {\k50}MAGNETO
+Dialogue: 0,0:00:30.60,0:00:31.71,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k33}WILL {\k22}BE {\k55}{\1c&H2821D9&}REPLACED{\1c&HFFFFFF&}
+Dialogue: 0,0:00:31.71,0:00:32.81,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k44}EXPECT {\k39}{\1c&H2821D9&}CABLE{\1c&HFFFFFF&} {\k28}AND
+Dialogue: 0,0:00:32.81,0:00:34.02,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k66}{\1c&H2821D9&}APOCALYPSE{\1c&HFFFFFF&} {\k22}TO {\k33}TAKE
+Dialogue: 0,0:00:34.02,0:00:35.02,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k39}THEIR {\k39}PLACE {\k22}IN
+Dialogue: 0,0:00:35.02,0:00:36.01,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k28}THE {\k28}NEW {\k44}SEASON
+Dialogue: 0,0:00:36.01,0:00:37.11,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k39}X-MEN {\k28}'97 {\k44}SEASON
+Dialogue: 0,0:00:37.11,0:00:38.05,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k17}2 {\k33}HITS {\k44}DISNEY
+Dialogue: 0,0:00:38.05,0:00:38.93,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k33}PLUS {\k22}IN {\k33}JULY
+Dialogue: 0,0:00:38.93,0:00:39.26,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k33}2026
+Dialogue: 0,0:00:39.26,0:00:40.48,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k33}WILL {\k33}THIS {\k55}CREATIVE
+Dialogue: 0,0:00:40.48,0:00:41.52,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k44}CHOICE {\k33}MAKE {\k28}THE
+Dialogue: 0,0:00:41.52,0:00:42.41,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k33}WAIT {\k28}FOR {\k28}THE
+Dialogue: 0,0:00:42.41,0:00:43.45,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k28}NEW {\k44}SEASON {\k33}EVEN
+Dialogue: 0,0:00:43.45,0:00:43.90,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k44}HARDER

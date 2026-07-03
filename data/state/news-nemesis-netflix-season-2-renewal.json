@@ -1,0 +1,95 @@
+{
+  "id": "news-nemesis-netflix-season-2-renewal",
+  "slug": "netflix-renews-nemesis-for-season-2",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": 75,
+      "cat": "tv/news",
+      "img": "/images/articles/netflix-renews-nemesis-for-season-2.jpg",
+      "hardBlocks": [
+        "H2s 0 < 1",
+        "verify-gate BLOCK: Kemp revealed to The Hollywood Reporter that Netflix in; The season finale sees master thief Coltrane Wilder on ; Kemp indicated Season 2 will explore the consequences f"
+      ],
+      "block": [
+        "verify-gate BLOCK: Kemp revealed to The Hollywood Reporter that Netflix in; The season finale sees master thief Coltrane Wilder on ; Kemp indicated Season 2 will explore the consequences f"
+      ],
+      "fixable": [
+        "H2s 0 < 1"
+      ],
+      "badClaims": 0
+    },
+    "attempt2": {
+      "score": 85,
+      "cat": "tv/news",
+      "img": "/images/articles/netflix-renews-nemesis-for-season-2.jpg",
+      "hardBlocks": [],
+      "block": [],
+      "fixable": [],
+      "badClaims": 0
+    }
+  },
+  "scorecard": {
+    "score": 85,
+    "subscores": {
+      "accuracy": 10,
+      "readability": 9,
+      "humanVoice": 9,
+      "phrasing": 9,
+      "curiosity": 9,
+      "structure": 9,
+      "infoGain": 8,
+      "seo": 8,
+      "faqQuality": 9,
+      "completeness": 9
+    },
+    "strengths": [
+      "The article is highly accurate, with all claims verifiable against the provided reference facts.",
+      "The readability is excellent, with short paragraphs and clear language, making it easy for a busy fan to consume quickly.",
+      "The human voice is strong, incorporating direct quotes from the creators and Netflix executive, adding authenticity and engagement.",
+      "Phrasing is fluent and professional, avoiding keyword stuffing or awkward constructions.",
+      "The headline and dek are clear and answer-first, satisfying curiosity immediately.",
+      "The structure is well-organized with an inverted pyramid lead, clear subheads, and useful Key Takeaways.",
+      "The FAQ section adds genuine new information and addresses common reader questions.",
+      "The article effectively uses the provided source material to deliver a concise and informative news piece."
+    ],
+    "weaknesses": [
+      "While the article is a short news piece, it could have included a slightly more specific detail about the show's plot beyond 'master thief' and 'LAPD detective' to further engage readers who might not be familiar with it, without making it a full analysis.",
+      "The 'Sources' section only links to The Hollywood Reporter, while Collider was also a source. For a news piece, citing all sources is crucial."
+    ],
+    "deterministic": {
+      "words": 311,
+      "h2s": 4,
+      "h2Questions": 3,
+      "internalLinks": 0,
+      "externalLinks": 1,
+      "hasSources": true,
+      "faqCount": 4,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 33,
+      "avgSentence": 14,
+      "flesch": 61,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": []
+    },
+    "hardBlocks": []
+  },
+  "score": 85,
+  "category": "tv",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "body ≥ 350w",
+      "keyword in title",
+      "external sources ≥2"
+    ]
+  },
+  "ms": 199890
+}

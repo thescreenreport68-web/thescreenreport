@@ -13,6 +13,14 @@ const matter = require("gray-matter");
 
 const ART = "/Users/sivajithcu/Movie News site/site/content/articles";
 
+// NEWS-ONLY (owner 2026-07-01): this automation is a hardcore-news strip. NEVER link a news article to a
+// REMOVED-form page (ranking/list/review/profile/interview/explainer/guide/where-to-watch) — those are legacy
+// demo content being phased out, so a link to one is off-brand today and a dead link the day it's deleted.
+// We exclude them from BOTH the link index (here) and assemble's valid-path set.
+const REMOVED_SUBCATS = new Set(["movie-reviews", "tv-reviews", "profiles-careers", "interviews", "rankings-lists", "explainers", "predictions", "best-of-streaming", "where-to-watch", "profiles-artists", "screen-music"]);
+const REMOVED_FORMS = new Set(["review", "recap", "ranking", "list", "explainer", "profile", "predictions", "guide", "interview", "music-profile", "music-review", "screen-music"]);
+export const isRemovedForm = (data) => REMOVED_SUBCATS.has(data.subcategory) || REMOVED_FORMS.has(data.formatTag);
+
 // Tone gate — sensitive = death/legal/tragedy/health; everything else = normal.
 const SENSITIVE = /\b(dead|dies|died|death|funeral|killed|obituar|passed away|passes away|arrest|charged|indict|lawsuit|sued|felony|assault|abus|alleg|hospitaliz|critical condition|overdose|suicide|cancer|terminal|illness|tragedy|tragic|murder|custody battle|restraining order)/i;
 export const toneOf = (text) => (SENSITIVE.test(text || "") ? "sensitive" : "normal");
@@ -76,6 +84,7 @@ export function buildLinkIndex(excludeSlug) {
     }
     const slug = data.slug || f.replace(/\.md$/, "");
     if (!data.category || slug === excludeSlug) continue;
+    if (isRemovedForm(data)) continue; // news-only: never link to a legacy ranking/review/profile page
     const tags = (data.tags || []).map((t) => String(t));
     idx.push({
       slug,

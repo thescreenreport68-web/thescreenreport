@@ -1,0 +1,48 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Cap,Anton,92,&H00FFFFFF,&H00B9B9B9,&H00101010,&HA0000000,0,0,0,0,100,100,1,0,1,4,2,2,70,70,330,1
+Style: Hook,Anton,120,&H00FFFFFF,&H00CFCFCF,&H00101010,&HA0000000,0,0,0,0,100,100,1,0,1,5,3,5,70,70,0,1
+Style: KickText,Anton,40,&H00FFFFFF,&H00FFFFFF,&H00101010,&H00000000,0,0,0,0,100,100,4,0,1,0,0,5,0,0,0,1
+Style: KickDraw,Anton,40,&H002821D9,&H002821D9,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,7,0,0,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.12,0:00:06.50,KickDraw,,0,0,0,,{\fad(140,120)\pos(90,126)\1c&H000000&\1a&H78&\blur6\p1}m 18 0 l 894 0 b 912 0 912 0 912 18 l 912 70 b 912 88 912 88 894 88 l 18 88 b 0 88 0 88 0 70 l 0 18 b 0 0 0 0 18 0{\p0}
+Dialogue: 1,0:00:00.12,0:00:06.50,KickDraw,,0,0,0,,{\fad(140,120)\pos(84,118)\p1}m 18 0 l 894 0 b 912 0 912 0 912 18 l 912 70 b 912 88 912 88 894 88 l 18 88 b 0 88 0 88 0 70 l 0 18 b 0 0 0 0 18 0{\p0}
+Dialogue: 2,0:00:00.12,0:00:06.50,KickText,,0,0,0,,{\fad(140,120)\pos(540,163)}JOSH GAD JOINS OCEAN'S PREQUEL
+Dialogue: 0,0:00:00.05,0:00:01.00,Hook,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k34}JOSH {\k28}GAD {\k34}JUST
+Dialogue: 0,0:00:01.00,0:00:02.23,Hook,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k45}JOINED {\k28}THE {\k50}OCEAN'S
+Dialogue: 0,0:00:02.23,0:00:03.13,Hook,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k50}PREQUEL {\k22}IN {\k17}A
+Dialogue: 0,0:00:03.13,0:00:03.91,Hook,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k39}MAJOR {\k39}ROLE.
+Dialogue: 0,0:00:03.91,0:00:04.97,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k28}THE {\k39}ACTOR {\k39}JOINS
+Dialogue: 0,0:00:04.97,0:00:06.15,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k45}MARGOT {\k45}ROBBIE {\k28}AND
+Dialogue: 0,0:00:06.15,0:00:07.32,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k50}BRADLEY {\k45}COOPER {\k22}IN
+Dialogue: 0,0:00:07.32,0:00:08.27,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k28}THE {\k28}NEW {\k39}FILM.
+Dialogue: 0,0:00:08.27,0:00:09.56,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k50}VARIETY {\k50}REPORTS {\k28}GAD
+Dialogue: 0,0:00:09.56,0:00:10.73,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k28}HAS {\k17}A {\k73}SIGNIFICANT
+Dialogue: 0,0:00:10.73,0:00:11.57,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k34}PART {\k22}IN {\k28}THE
+Dialogue: 0,0:00:11.57,0:00:12.86,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k45}PERIOD {\k39}HEIST {\k45}MOVIE.
+Dialogue: 0,0:00:12.86,0:00:14.20,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k34}THIS {\k50}PREQUEL {\k50}FOCUSES
+Dialogue: 0,0:00:14.20,0:00:15.32,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k22}ON {\k39}DANNY {\k50}OCEAN'S
+Dialogue: 0,0:00:15.32,0:00:16.38,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k56}PARENTS, {\k28}SET {\k22}IN
+Dialogue: 0,0:00:16.38,0:00:16.77,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k39}{\1c&H2821D9&}1962.{\1c&HFFFFFF&}
+Dialogue: 0,0:00:16.77,0:00:18.17,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k45}ROBBIE {\k62}CONFIRMED {\k34}THEY
+Dialogue: 0,0:00:18.17,0:00:19.01,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k34}PULL {\k28}OFF {\k22}AN
+Dialogue: 0,0:00:19.01,0:00:19.96,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k34}EPIC {\k39}HEIST {\k22}AT
+Dialogue: 0,0:00:19.96,0:00:21.08,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k28}THE {\k45}MONACO {\k39}GRAND
+Dialogue: 0,0:00:21.08,0:00:21.47,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k39}PRIX.
+Dialogue: 0,0:00:21.47,0:00:23.04,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k50}BRADLEY {\k45}COOPER {\k62}CO-STARS,
+Dialogue: 0,0:00:23.04,0:00:24.27,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k56}{\1c&H2821D9&}DIRECTS,{\1c&HFFFFFF&} {\k28}AND {\k39}WROTE
+Dialogue: 0,0:00:24.27,0:00:25.28,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k28}THE {\k73}{\1c&H2821D9&}SCREENPLAY.{\1c&HFFFFFF&}
+Dialogue: 0,0:00:25.28,0:00:26.23,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k28}THE {\k34}FILM {\k34}HITS
+Dialogue: 0,0:00:26.23,0:00:27.35,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k56}THEATERS {\k22}IN {\k34}JUNE
+Dialogue: 0,0:00:27.35,0:00:27.74,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k39}2027.
+Dialogue: 0,0:00:27.74,0:00:28.69,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k34}FULL {\k39}STORY {\k22}AT
+Dialogue: 0,0:00:28.69,0:00:29.86,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k28}THE {\k45}SCREEN {\k45}REPORT
+Dialogue: 0,0:00:29.86,0:00:30.59,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k17}— {\k34}LINK {\k22}IN
+Dialogue: 0,0:00:30.59,0:00:30.92,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k34}BIO.

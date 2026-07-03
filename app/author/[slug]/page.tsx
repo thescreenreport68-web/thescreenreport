@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import Link from "next/link";
 import ArticleCard from "@/components/ArticleCard";
 import JsonLd from "@/components/JsonLd";
 import { AUTHORS, getAuthor, SITE } from "@/lib/site";
@@ -25,11 +26,6 @@ export default function AuthorPage({ params }: { params: { slug: string } }) {
   const a = getAuthor(params.slug);
   if (!a) notFound();
   const articles = getArticlesByAuthor(a.slug);
-  const initials = a.name
-    .split(" ")
-    .map((n) => n[0])
-    .join("")
-    .slice(0, 2);
 
   const personLd = {
     "@context": "https://schema.org",
@@ -50,20 +46,32 @@ export default function AuthorPage({ params }: { params: { slug: string } }) {
   return (
     <div className="container-wide py-10">
       <JsonLd data={personLd} />
-      <header className="flex items-center gap-5 border-b border-navy/10 pb-8">
-        <span className="flex h-20 w-20 items-center justify-center rounded-full bg-navy font-serif text-2xl font-bold text-white">
-          {initials}
-        </span>
-        <div>
-          <h1 className="font-serif text-3xl font-bold text-navy">{a.name}</h1>
-          <div className="text-sm font-semibold uppercase tracking-wide text-gold-600">
-            {a.role}
-          </div>
-          <p className="mt-2 max-w-2xl text-navy/70">{a.bio}</p>
-        </div>
+      <header className="border-b border-gray pb-6">
+        <span className="kicker">{a.role}</span>
+        <h1 className="mt-2 font-display text-[30px] font-bold uppercase leading-none tracking-tight text-ink sm:text-[44px]">
+          {a.name}
+        </h1>
+        <p className="dek mt-3 max-w-2xl text-base">{a.bio}</p>
+        <p className="byline mt-4">
+          <Link
+            href="/editorial-standards/"
+            className="transition-colors duration-150 hover:text-red"
+          >
+            Editorial Standards
+          </Link>
+          <span className="mx-2 text-gray" aria-hidden>
+            /
+          </span>
+          <Link
+            href="/corrections/"
+            className="transition-colors duration-150 hover:text-red"
+          >
+            Corrections
+          </Link>
+        </p>
       </header>
 
-      <div className="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-8 grid gap-x-5 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
         {articles.map((art) => (
           <ArticleCard key={art.slug} article={art} variant="standard" />
         ))}

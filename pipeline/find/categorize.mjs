@@ -16,29 +16,28 @@ import { resolveEntity } from "../lib/resolveEntity.mjs";
 
 const slugify = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 70);
 
+// NEWS-ONLY: the automation publishes ONLY these 8 trending-news forms; everything else is a separate
+// future automation. This is the SINGLE SOURCE OF TRUTH — imported by the MAKE path (run.mjs/classify.mjs)
+// and the inside-stories expander so the news-only invariant is enforced in CODE (fail-closed), not just
+// by the categorizer prompt.
+export const NEWS_FORMS = ["news", "box-office", "trailer", "reaction", "watchguide", "awards", "music-news", "music-awards"];
+
 // Force category+subcategory onto the REAL taxonomy (the LLM sometimes invents one, e.g. "tv/animation").
 // Mirrors classify.mjs's niche-snapping so FIND and MAKE agree on the URL silo.
 export function canonicalize(t) {
   let cat = t.category, sub = t.subcategory;
-  const ft = t.formatTag;
-  if (ft === "review") { cat = "reviews"; sub = t.tmdbType === "tv" ? "tv-reviews" : "movie-reviews"; }
-  else if (ft === "awards") { cat = "awards"; if (!TAXONOMY.awards.includes(sub)) sub = "winners"; }
+  // Defensive category/subcategory repair only — the drop gate below already rejects a non-news formatTag
+  // BEFORE canonicalize, so a stray tag here is coerced to "news" purely as a belt-and-suspenders net.
+  let ft = t.formatTag;
+  if (!NEWS_FORMS.includes(ft)) ft = t.formatTag = "news";
+  if (ft === "awards") { cat = "awards"; if (!TAXONOMY.awards.includes(sub)) sub = "winners"; }
   else if (ft === "box-office") { cat = "movies"; sub = "box-office"; }
-  else if (ft === "interview") { cat = "celebrity"; sub = "interviews"; }
-  else if (ft === "profile") { cat = "celebrity"; sub = "profiles-careers"; }
-  else if (ft === "explainer") { cat = "movies"; sub = "explainers"; }
-  else if (ft === "guide") { cat = "streaming"; if (!TAXONOMY.streaming.includes(sub)) sub = "best-of-streaming"; }
   else if (ft === "trailer") { if (!["movies", "tv"].includes(cat)) cat = "movies"; sub = "trailers"; }
   else if (ft === "reaction") { if (!["movies", "tv"].includes(cat)) cat = "movies"; sub = "reactions"; }
-  else if (ft === "list") { if (!["movies", "tv"].includes(cat)) cat = "movies"; sub = "rankings-lists"; }
-  else if (ft === "news") { if (!["movies", "tv", "celebrity"].includes(cat)) cat = "celebrity"; sub = "news"; }
   else if (ft === "watchguide") { cat = "streaming"; sub = "where-to-watch"; }
-  else if (ft === "recap") { cat = "reviews"; sub = "tv-reviews"; }
-  else if (ft === "predictions") { cat = "awards"; sub = "predictions"; }
   else if (ft === "music-news") { cat = "music"; sub = "news"; }
   else if (ft === "music-awards") { cat = "music"; sub = "awards"; }
-  else if (ft === "music-profile") { cat = "music"; sub = "profiles-artists"; }
-  else if (ft === "screen-music") { cat = "music"; sub = "screen-music"; }
+  else { ft = t.formatTag = "news"; if (!["movies", "tv", "celebrity"].includes(cat)) cat = "celebrity"; sub = "news"; }
   if (!TAXONOMY[cat]) cat = "celebrity";
   if (!TAXONOMY[cat].includes(sub)) sub = TAXONOMY[cat][0];
   t.category = cat;
@@ -57,38 +56,28 @@ const SYS = `You are the news editor of The Screen Report, an English-language H
     • video games / gaming hardware (Xbox, PlayStation, Game Pass, Elden Ring, gameplay, "officially releases").
     • anime or manga (One Piece chapter, episode-number releases, shonen), comics-only releases.
     • K-drama or non-English/regional cinema (unless a major Hollywood/Netflix-English production); MUSIC-INDUSTRY TRADE MINUTIAE (chart-methodology, label finance, royalty/business-legal filings, setlist/gig-listing trivia, pure local-scene reporting with NO breakout and NO screen/A-list hook); non-English regional music with no Hollywood/screen hook; sports, crypto/tech, deals/coupons/merch.
+    ⚠ FORM RULE — this automation posts TRENDING NEWS EVENTS ONLY. Also set relevant=false for anything that is a REVIEW (a critical verdict, ours or a critic's), an INTERVIEW write-up, a RANKING / "best … of all time" / listicle, a celebrity PROFILE or career retrospective, an ending/lore EXPLAINER, an episode RECAP, an awards PREDICTION (a who-will-win forecast — award RESULTS are fine), a "how to watch all the X movies" binge GUIDE, or any opinion / theory / speculation piece. Those are NOT news events and belong to SEPARATE automations. Keep ONLY a real news EVENT (casting, deal, death, box-office RESULT, trailer drop, award RESULT, music announcement, scandal, legal/health news).
 (2) The single best ANGLE/niche to cover it RIGHT NOW, exactly as a real editor would.
 You output STRICT JSON only. Be CONSERVATIVE: when a candidate is off-topic OR primarily political, set relevant=false with a one-word reason.`;
 
-const NICHE_GUIDE = `Pick ONE formatTag + its category/subcategory:
-- "news" → movies|tv|celebrity / "news": a development/announcement/casting/scandal/health/legal story (the safe default for a breaking item).
-- "review" → reviews / movie-reviews|tv-reviews: a RELEASED film/show worth a critical verdict.
-- "box-office" → movies / box-office: a film whose box-office result/record is the story.
-- "trailer" → movies|tv / trailers: an UPCOMING title whose new trailer just dropped.
-- "profile" → celebrity / profiles-careers: a trending PERSON → their movies & career.
-- "explainer" → movies / explainers: a film with a confusing ending/twist people search to understand.
-- "guide" → streaming / best-of-streaming|where-to-watch.
-- "list" → movies|tv / rankings-lists: a "best ... ranked" angle.
-- "interview" → celebrity / interviews: a notable recent interview.
-- "reaction" → movies|tv / reactions: fan/critic reaction to a release.
-- "awards" → awards / winners: a music/film/TV ceremony's WINNERS or recap.
-- "watchguide" → streaming / where-to-watch: a SINGLE title — where/when to stream/rent/buy it (not a best-of list).
-- "recap" → reviews / tv-reviews: a per-EPISODE recap of a show that just aired (spoilers-on), distinct from a season review.
-- "predictions" → awards / predictions: a who-will-win race-analysis ahead of a ceremony (Oscars/Emmys/Grammys).
-- "music-news" → music / news: a popular/trending music event (tour, album/single drop, label/streaming deal, a pop star's music move).
-- "music-awards" → music / awards: a music ceremony (Grammys/AMAs/VMAs/CMAs) — winners or predictions.
-- "music-profile" → music / profiles-artists: a trending OR newly-broken-out musician → their career. (Set this for an indie/underground breakout artist too.)
-- "screen-music" → music / screen-music: a soundtrack, film/TV score, music biopic/doc, or "song from [show]" needle-drop (music-meets-screen — our lane).
-Prefer "news" when unsure. PERSON candidate → "profile" or "news". Now-playing/high-revenue movie → "box-office" or "review". Upcoming movie with new footage → "trailer".
-HARD RULE: NEVER pick "review" or "box-office" for an UNRELEASED film (release date in the future / "unreleased" in the hint) — you cannot review or report box office for a film that has not opened. Use "trailer" or a "news" preview instead. Honor any [SUGGESTED NICHE] hint unless the summary clearly points elsewhere.`;
+const NICHE_GUIDE = `This automation posts ONLY hardcore trending NEWS — a real EVENT. Pick ONE formatTag from THESE NEWS FORMS ONLY (there are no others; if the story is not one of these, it is NOT for us — set relevant=false):
+- "news" → movies|tv|celebrity / "news": a development/announcement/casting/deal/scandal/health/legal/DEATH story (the default for any breaking item).
+- "box-office" → movies / box-office: a film whose box-office RESULT/record is the story.
+- "trailer" → movies|tv / trailers: a title whose NEW TRAILER just dropped (the trailer RELEASE is the news event).
+- "reaction" → movies|tv / reactions: a roundup of the public/critic REACTION to a just-released trailer/film/show (the reaction is the news).
+- "watchguide" → streaming / where-to-watch: a SINGLE title that JUST hit streaming or got a streaming DATE (the "now streaming" news).
+- "awards" → awards / winners: a film/TV ceremony's WINNERS / RESULTS (a real result — NEVER a prediction).
+- "music-news" → music / news: a trending music NEWS event (tour announced, album/single dropped, label/streaming deal, a pop star's move).
+- "music-awards" → music / awards: a music ceremony's WINNERS / RESULTS (Grammys/AMAs/VMAs/CMAs).
+Prefer "news" when unsure. HARD RULE: NEVER pick "box-office" for an UNRELEASED film — use "trailer" or "news". Honor any [SUGGESTED NICHE] hint unless the summary clearly points elsewhere.`;
 
 // Output contract for each candidate the model judges relevant.
 const SCHEMA = `Return JSON: {"items":[{
  "i": <index>,
  "relevant": true|false,
  "reason": "short why-keep-or-drop",
- "formatTag": "news|review|box-office|trailer|profile|explainer|guide|list|interview|reaction|awards|watchguide|recap|predictions|music-news|music-awards|music-profile|screen-music",
- "category": "movies|tv|streaming|celebrity|reviews|awards|music",
+ "formatTag": "news|box-office|trailer|reaction|watchguide|awards|music-news|music-awards",
+ "category": "movies|tv|streaming|celebrity|awards|music",
  "subcategory": "the matching subcategory",
  "musicTier": "popular|indie — set ONLY for a music item: 'indie' if it's an under-the-radar/underground artist or track that UNEXPECTEDLY broke out; 'popular' for an established/trending mainstream act. Omit for non-music.",
  "eventType": "death|health|legal|arrest|lawsuit|marriage|divorce|breakup|pregnancy|birth|casting|trailer|boxoffice|review|award|renewal|cancellation|announcement|other",
@@ -126,7 +115,10 @@ export async function categorize(candidates, monitor, { model = MODELS.classifie
     for (const it of data?.items || []) {
       const c = group[it.i];
       if (!c) continue;
-      if (!it.relevant || !it.primaryEntity || !it.formatTag) {
+      // FAIL-CLOSED on FORM: if the LLM marks a non-news form (review/interview/ranking/profile/etc.),
+      // DROP the story — do NOT silently relabel it as news. An explicit non-news formatTag is the LLM
+      // telling us this is a review/interview/ranking piece, which belongs to a separate automation.
+      if (!it.relevant || !it.primaryEntity || !it.formatTag || !NEWS_FORMS.includes(it.formatTag)) {
         dropped++;
         continue;
       }
@@ -148,8 +140,11 @@ export async function categorize(candidates, monitor, { model = MODELS.classifie
         angle: it.angle,
         tmdbType: c.mediaType === "tv" ? "tv" : "movie",
         // v2: carry the discovery provenance so verify.mjs can corroborate + score can rank by freshness.
+        // Phase A: the URL is carried so MAKE's content finder extracts the real article body (it was being
+        // dropped here, the root cause of the writer fabricating on thin facts); the summary is the inline
+        // fallback text the writer grounds on when extraction misses.
         source: c.source,
-        sources: c.outlet ? [{ outlet: c.outlet, tier: c.sourceTier || 5, ageMin: c.ageMin ?? null, headline: c.title, summary: (c.summary || "").slice(0, 600) }] : [],
+        sources: c.outlet ? [{ outlet: c.outlet, tier: c.sourceTier || 5, url: c.url || null, ageMin: c.ageMin ?? null, headline: c.title, summary: (c.summary || "").slice(0, 600) }] : [],
         ageMin: c.ageMin ?? null,
         _cand: { key: c.key, popularity: c.popularity || 0, voteCount: c.voteCount, kind: c.kind },
       }));

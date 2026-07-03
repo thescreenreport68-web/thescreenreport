@@ -1,0 +1,88 @@
+{
+  "id": "news-katie-holmes-joshua-jackson-happy-hours-reunion",
+  "slug": "katie-holmes-joshua-jackson-on-creating-a-sense-of-hope-with-happy-hou",
+  "status": "needs_review",
+  "stages": {
+    "attempt1": {
+      "score": 0,
+      "cat": "movies/news",
+      "img": "/images/articles/katie-holmes-joshua-jackson-on-creating-a-sense-of-hope-with-happy-hou.jpg",
+      "hardBlocks": [
+        "external links 0 < 2",
+        "a 62-word run-on sentence (>55 — split it)",
+        "CONTRADICTED [director]: article says Happy Hours is \"directed by Holmes.\nWhat\" — The director of Happy Hours is Steve Sullivan (TMDB + OMDb agree), not Holmes.\nWhat. Correct it."
+      ],
+      "badClaims": 1
+    },
+    "attempt2": {
+      "score": 0,
+      "cat": "movies/news",
+      "img": "/images/articles/katie-holmes-joshua-jackson-on-creating-a-sense-of-hope-with-happy-hou.jpg",
+      "hardBlocks": [
+        "external links 0 < 2"
+      ],
+      "badClaims": 0
+    },
+    "attempt3": {
+      "score": 0,
+      "cat": "movies/news",
+      "img": "/images/articles/katie-holmes-joshua-jackson-on-creating-a-sense-of-hope-with-happy-hou.jpg",
+      "hardBlocks": [
+        "external links 0 < 2",
+        "primary keyword not in title",
+        "CONTRADICTED [director]: article says Happy Hours is \"directed by Katie Holmes\" — The director of Happy Hours is Steve Sullivan (TMDB + OMDb agree), not Katie Holmes. Correct it."
+      ],
+      "badClaims": 0
+    }
+  },
+  "scorecard": {
+    "score": 0,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [
+      "deterministic block"
+    ],
+    "deterministic": {
+      "words": 390,
+      "h2s": 4,
+      "h2Questions": 3,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": true,
+      "faqCount": 4,
+      "ktCount": 4,
+      "kwInTitle": false,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 41,
+      "avgSentence": 19,
+      "flesch": 52,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": [
+        "external links 0 < 2",
+        "primary keyword not in title"
+      ]
+    },
+    "hardBlocks": [
+      "external links 0 < 2",
+      "primary keyword not in title",
+      "CONTRADICTED [director]: article says Happy Hours is \"directed by Katie Holmes\" — The director of Happy Hours is Steve Sullivan (TMDB + OMDb agree), not Katie Holmes. Correct it."
+    ]
+  },
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "external sources ≥2",
+      "score ≥ 80",
+      "zero hard-blocks",
+      "infoGain ≥ 7",
+      "readability ≥ 6",
+      "humanVoice ≥ 7",
+      "phrasing ≥ 7"
+    ]
+  },
+  "ms": 267800
+}

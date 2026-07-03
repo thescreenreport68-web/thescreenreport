@@ -1,0 +1,36 @@
+{
+  "runId": "vrun-2026-07-03T05-06-49",
+  "at": "2026-07-03T05:07:48.739Z",
+  "windowHours": 24,
+  "target": 1,
+  "candidates": 2,
+  "made": [
+    {
+      "slug": "jodie-foster-thinks-ai-is-already-present-in-hollywood",
+      "title": "Jodie Foster Thinks AI Is Already Present in Hollywood",
+      "category": "celebrity",
+      "seconds": 36.921,
+      "usd": 0.00491,
+      "file": "/Users/sivajithcu/Movie News site/site/data/video/out/jodie-foster-thinks-ai-is-already-present-in-hollywood.mp4"
+    }
+  ],
+  "failed": [],
+  "cost": {
+    "total": 0.0049127,
+    "byModel": {
+      "google/gemini-2.5-flash": {
+        "calls": 1,
+        "in": 1537,
+        "out": 1426,
+        "usd": 0.0040261
+      },
+      "google/gemini-2.5-flash-lite": {
+        "calls": 3,
+        "in": 8806,
+        "out": 15,
+        "usd": 0.0008866000000000001
+      }
+    },
+    "calls": 4
+  }
+}

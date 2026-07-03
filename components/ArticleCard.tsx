@@ -1,10 +1,14 @@
 import Link from "next/link";
 import PlaceholderImage from "./PlaceholderImage";
+import TrendingBadge from "./TrendingBadge";
 import { getAuthor, getCategory } from "@/lib/site";
+import { formatRelative } from "@/lib/format";
 import type { Article } from "@/lib/articles";
 
 type Variant = "hero" | "large" | "standard" | "compact" | "list";
 
+// One card grammar (spec §C3/F1): image → kicker + mono timestamp → headline →
+// dek → byline. Whole-card hover: headline warms to red, image scales 1.02.
 export default function ArticleCard({
   article,
   variant = "standard",
@@ -18,61 +22,74 @@ export default function ArticleCard({
 
   if (variant === "list") {
     return (
-      <article className="flex gap-4 border-b border-dotted border-slate py-4 last:border-0">
-        <Link href={href} className="shrink-0">
+      <article className="group flex gap-4 border-b border-dotted border-gray py-4 last:border-0">
+        <Link href={href} className="shrink-0 overflow-hidden">
           <PlaceholderImage
             slug={article.slug}
             category={article.category}
             title={article.title}
             src={article.image}
             alt={article.imageAlt}
-            className="aspect-square w-24 sm:w-28"
+            className="aspect-square w-24 transition-transform duration-200 group-hover:scale-[1.02] motion-reduce:transform-none sm:w-28"
           />
         </Link>
         <div>
-          <Link href={`/${article.category}/`} className="kicker">
-            {cat?.name}
-          </Link>
-          <h3 className="mt-1 font-body text-base font-normal leading-snug text-navy hover:text-breaking">
+          <div className="flex items-baseline gap-2.5">
+            <TrendingBadge article={article} />
+            <Link href={`/${article.category}/`} className="kicker">
+              {cat?.name}
+            </Link>
+            <time dateTime={article.date} className="meta-mono">
+              {formatRelative(article.date)}
+            </time>
+          </div>
+          <h3 className="hed-s mt-1.5 transition-colors duration-150 group-hover:text-red">
             <Link href={href}>{article.title}</Link>
           </h3>
-          <p className="mt-1 meta-label">By {author?.name}</p>
         </div>
       </article>
     );
   }
 
-  const sizeClass =
+  const hedClass =
     variant === "hero"
-      ? "text-2xl sm:text-[1.7rem]"
+      ? "hed-l sm:text-[28px]"
       : variant === "large"
-        ? "text-xl sm:text-2xl"
-        : "text-lg";
+        ? "hed-l"
+        : "hed-m";
   return (
     <article className="group flex flex-col">
-      <Link href={href}>
+      <Link href={href} className="block overflow-hidden">
         <PlaceholderImage
           slug={article.slug}
           category={article.category}
           title={article.title}
           src={article.image}
           alt={article.imageAlt}
-          className="aspect-video w-full"
+          className="aspect-video w-full transition-transform duration-200 group-hover:scale-[1.02] motion-reduce:transform-none"
         />
       </Link>
-      <div className="mt-2.5">
-        <Link href={`/${article.category}/`} className="kicker">
-          {cat?.name}
-        </Link>
+      <div className="mt-3">
+        <div className="flex items-baseline gap-2.5">
+          <TrendingBadge article={article} />
+          <Link href={`/${article.category}/`} className="kicker">
+            {cat?.name}
+          </Link>
+          <time dateTime={article.date} className="meta-mono">
+            {formatRelative(article.date)}
+          </time>
+        </div>
         <h3
-          className={`mt-1.5 font-body font-normal leading-[1.15] text-navy group-hover:text-breaking ${sizeClass}`}
+          className={`${hedClass} mt-2 transition-colors duration-150 group-hover:text-red`}
         >
           <Link href={href}>{article.title}</Link>
         </h3>
         {variant !== "compact" && article.dek ? (
-          <p className="mt-2 line-clamp-2 dek">{article.dek}</p>
+          <p className="dek mt-2 line-clamp-2 text-base leading-snug">{article.dek}</p>
         ) : null}
-        <p className="mt-2 meta-label">By {author?.name}</p>
+        <p className="byline mt-2">
+          By <span className="text-ink">{author?.name}</span>
+        </p>
       </div>
     </article>
   );

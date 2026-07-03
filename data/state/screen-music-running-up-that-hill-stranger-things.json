@@ -1,0 +1,95 @@
+{
+  "id": "screen-music-running-up-that-hill-stranger-things",
+  "slug": "how-running-up-that-hill-took-over-stranger-things",
+  "status": "needs_review",
+  "stages": {
+    "attempt1": {
+      "score": 0,
+      "cat": "music/screen-music",
+      "img": "/images/articles/how-running-up-that-hill-took-over-stranger-things.jpg",
+      "hardBlocks": [
+        "a 67-word run-on sentence (>55 — split it)",
+        "CONTRADICTED [director]: article says Running Up That Hill is \"directed by Kate Bush\" — The director of Running Up That Hill is Jo Roy (TMDB + OMDb agree), not Kate Bush. Correct it."
+      ],
+      "badClaims": 6
+    },
+    "attempt2": {
+      "score": 0,
+      "cat": "music/screen-music",
+      "img": "/images/articles/how-running-up-that-hill-took-over-stranger-things.jpg",
+      "hardBlocks": [
+        "body 372w < 400"
+      ],
+      "badClaims": 0
+    },
+    "attempt3": {
+      "score": 88,
+      "cat": "music/screen-music",
+      "img": "/images/articles/how-running-up-that-hill-took-over-stranger-things.jpg",
+      "hardBlocks": [
+        "8 unverified claim(s) (need correction)"
+      ],
+      "badClaims": 8
+    }
+  },
+  "scorecard": {
+    "score": 88,
+    "subscores": {
+      "accuracy": 10,
+      "readability": 9,
+      "humanVoice": 9,
+      "phrasing": 9,
+      "curiosity": 9,
+      "structure": 9,
+      "infoGain": 9,
+      "seo": 7,
+      "faqQuality": 9,
+      "completeness": 9
+    },
+    "strengths": [
+      "Excellent reader-first approach, prioritizing engagement and human voice.",
+      "Strong narrative framing around the song's impact on Max's character arc.",
+      "Clear and concise explanation of the Duffer Brothers' creative process.",
+      "Well-structured with useful subheads and a clear lead.",
+      "FAQ section provides valuable, supplementary information.",
+      "Accurate sourcing and adherence to provided reference facts.",
+      "Engaging human voice and specific details about the scene.",
+      "Good balance between analysis and factual reporting."
+    ],
+    "weaknesses": [
+      "SEO subscore could be higher with more natural keyword integration in headings or body text, though current integration is not forced.",
+      "While the article is highly readable, a few sentences could be slightly more varied in rhythm for peak flow."
+    ],
+    "deterministic": {
+      "words": 447,
+      "h2s": 5,
+      "h2Questions": 4,
+      "internalLinks": 0,
+      "externalLinks": 4,
+      "hasSources": true,
+      "faqCount": 4,
+      "ktCount": 5,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 39,
+      "avgSentence": 18,
+      "flesch": 58,
+      "bannedTells": 1,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": []
+    },
+    "hardBlocks": [
+      "8 unverified claim(s) (need correction)"
+    ]
+  },
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "zero hard-blocks"
+    ]
+  },
+  "ms": 214873
+}

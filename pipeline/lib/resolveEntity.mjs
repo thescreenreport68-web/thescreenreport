@@ -6,8 +6,10 @@
 import { searchTitle, searchPersonNotable } from "./tmdb.mjs";
 import { deezerArtist } from "./music.mjs";
 
-const FILM_NICHES = new Set(["review", "box-office", "explainer", "trailer"]);
-const PERSON_NICHES = new Set(["profile", "interview"]);
+// (2026-07-03: pruned to the LIVE news forms — review/explainer/profile/interview were removed by the
+// news-only strip and could never appear; their presence here misdescribed the 8-form reality.)
+const FILM_NICHES = new Set(["box-office", "trailer"]); // title-strict forms: a TMDB movie/tv hit IS the confirmation
+const PERSON_NICHES = new Set([]); // no person-centric FORM remains; celebrity news routes via cat/tmdbType below
 // Notability floors (tested): a released film clears vote_count; an unreleased/fresh one clears popularity.
 const TITLE_OK = (r) => r && ((r.vote_count || 0) >= 50 || (r.popularity || 0) >= 8);
 const titleNote = (r) => Math.max(r.vote_count || 0, r.popularity || 0);

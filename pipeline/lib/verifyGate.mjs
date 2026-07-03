@@ -61,7 +61,7 @@ async function entailmentCheck(claims, sources, model) {
 }
 
 // MAIN. article = the generate() draft; bundle = findContent() output. Returns a fail-closed verdict + corrections.
-export async function verifyGate({ article, bundle, model = "google/gemini-2.5-flash-lite", minSupportRate = 0.85 }) {
+export async function verifyGate({ article, bundle, model = "google/gemini-2.5-flash-lite", minSupportRate = 0.5 }) {
   if (!bundle || bundle.blocked || !bundle.sources?.length) {
     return { verdict: "BLOCK", reason: "no verified content bundle to check against", supportRate: 0, claims: [], unsupported: [], corrections: "" };
   }
@@ -109,10 +109,15 @@ export async function verifyGate({ article, bundle, model = "google/gemini-2.5-f
   const unsupported = results.filter((r) => r.status === "UNSUPPORTED" || r.status === "CONTRADICTED");
   const supportRate = results.length ? (results.length - unsupported.length) / results.length : 0;
   const fatalQuote = results.some((r) => r.via === "fabricated-quote");
+  // CUT-vs-BLOCK (2026-07-03 restructure, audit defect D7): the old 0.85 support bar flipped CUT→BLOCK when
+  // 3-4 TRUE-but-unsourced background lines sat among ~20 claims ("The film was released in 2004" — blocked!),
+  // holding salvageable articles. New policy: UNSUPPORTED-but-UNCONTRADICTED = always CUT (fix-or-cut converges
+  // to publish); BLOCK is reserved for the fatal states — a CONTRADICTION, a fabricated QUOTE, or an article so
+  // unmoored that most of its claims (< minSupportRate 0.5) can't be verified at all.
   let verdict = "PASS";
   if (results.some((r) => r.status === "CONTRADICTED") || fatalQuote) verdict = "BLOCK"; // a contradiction or an invented quote is fatal
-  else if (supportRate < minSupportRate) verdict = "BLOCK";                              // too much unverifiable => block
-  else if (unsupported.length) verdict = "CUT";                                          // a few strays => cut + regen once
+  else if (supportRate < minSupportRate) verdict = "BLOCK";                              // catastrophically unmoored => block
+  else if (unsupported.length) verdict = "CUT";                                          // strays => surgically fix or cut
   const corrections = unsupported
     .map((r) => `- "${r.claim.slice(0, 150)}" — ${r.status} (not found in the gathered source text). Remove it or rewrite it qualitatively; never state a specific the sources don't.`)
     .join("\n");

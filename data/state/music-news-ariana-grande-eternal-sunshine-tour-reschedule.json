@@ -1,0 +1,109 @@
+{
+  "id": "music-news-ariana-grande-eternal-sunshine-tour-reschedule",
+  "slug": "ariana-grande-reschedules-three-eternal-sunshine-tour-dates",
+  "status": "needs_review",
+  "stages": {
+    "attempt1": {
+      "score": 0,
+      "cat": "music/news",
+      "img": "/images/articles/ariana-grande-reschedules-three-eternal-sunshine-tour-dates.jpg",
+      "hardBlocks": [
+        "body 321w < 350"
+      ],
+      "badClaims": 0
+    },
+    "attempt2": {
+      "score": 0,
+      "cat": "music/news",
+      "img": "/images/articles/ariana-grande-reschedules-three-eternal-sunshine-tour-dates.jpg",
+      "hardBlocks": [
+        "body 323w < 350"
+      ],
+      "badClaims": 0
+    },
+    "attempt3": {
+      "score": 60,
+      "cat": "music/news",
+      "img": "/images/articles/ariana-grande-reschedules-three-eternal-sunshine-tour-dates.jpg",
+      "hardBlocks": [
+        "fabricated: 'Eriana Grande Tour' in title",
+        "verify-gate BLOCK: Ariana Grande announced the postponement via an officia; Ariana Grande is currently in the midst of her first ma; The tour follows soundtrack work for Wicked",
+        "infoGain 6 < 7",
+        "humanVoice 6 < 7",
+        "phrasing 6 < 7"
+      ],
+      "badClaims": 0
+    }
+  },
+  "scorecard": {
+    "score": 60,
+    "subscores": {
+      "accuracy": 8,
+      "readability": 7,
+      "humanVoice": 6,
+      "phrasing": 6,
+      "curiosity": 7,
+      "structure": 7,
+      "infoGain": 6,
+      "seo": 7,
+      "faqQuality": 8,
+      "completeness": 8
+    },
+    "strengths": [
+      "The article accurately reports the confirmed facts about the tour rescheduling, citing Billboard and Rolling Stone.",
+      "The FAQ section provides genuinely useful and new information, directly addressing common fan concerns.",
+      "The lead quickly delivers the core information about the rescheduling.",
+      "The article uses clear, plain language and avoids overly complex sentence structures.",
+      "The inclusion of 'Key Takeaways' and clear subheadings improves scannability and structure."
+    ],
+    "weaknesses": [
+      "The title contains a typo ('Eriana Grande Tour' instead of 'Eternal Sunshine Tour'), which is a significant accuracy and phrasing error.",
+      "The article states 'Grande is currently in the midst of her first major concert tour since 2019' which is a slight overstatement given the reference facts only list studio albums up to 2024 and recent releases up to 2026, implying a more continuous presence.",
+      "The phrase 'one of pop's defining voices of the last decade' in the conclusion is a generic filler praise that lacks specific backing within the article.",
+      "The article mentions 'recent soundtrack work for Wicked' without specifying the exact titles or years, which could be more precise given the reference facts.",
+      "The article states 'The setlist is expected to blend new material with her extensive catalog of pop hits from albums like thank u, next and Sweetener' which is a generic expectation rather than specific information.",
+      "The article mentions 'extensive catalog of pop hits' which is a generic, unbacked claim."
+    ],
+    "deterministic": {
+      "words": 397,
+      "h2s": 4,
+      "h2Questions": 3,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": true,
+      "faqCount": 4,
+      "ktCount": 5,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 45,
+      "avgSentence": 18,
+      "flesch": 57,
+      "bannedTells": 0,
+      "fillerPraise": 1,
+      "kwExact": 0,
+      "hardBlocks": []
+    },
+    "hardBlocks": [
+      "fabricated: 'Eriana Grande Tour' in title",
+      "verify-gate BLOCK: Ariana Grande announced the postponement via an officia; Ariana Grande is currently in the midst of her first ma; The tour follows soundtrack work for Wicked",
+      "infoGain 6 < 7",
+      "humanVoice 6 < 7",
+      "phrasing 6 < 7"
+    ]
+  },
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "body ≥ 400w",
+      "external sources ≥2",
+      "score ≥ 80",
+      "zero hard-blocks",
+      "infoGain ≥ 7",
+      "humanVoice ≥ 7",
+      "phrasing ≥ 7"
+    ]
+  },
+  "ms": 334358
+}

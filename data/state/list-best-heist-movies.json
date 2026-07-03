@@ -1,0 +1,81 @@
+{
+  "id": "list-best-heist-movies",
+  "slug": "the-best-heist-movies-of-all-time-ranked",
+  "status": "needs_review",
+  "stages": {
+    "attempt1": {
+      "score": 0,
+      "cat": "movies/rankings-lists",
+      "img": "/images/articles/the-best-heist-movies-of-all-time-ranked.jpg",
+      "hardBlocks": [
+        "body 644w < 700"
+      ],
+      "badClaims": 0
+    },
+    "attempt2": {
+      "score": 0,
+      "cat": "movies/rankings-lists",
+      "img": "/images/articles/the-best-heist-movies-of-all-time-ranked.png",
+      "hardBlocks": [
+        "body 535w < 700"
+      ],
+      "badClaims": 0
+    },
+    "attempt3": {
+      "score": 0,
+      "cat": "movies/rankings-lists",
+      "img": "/images/articles/the-best-heist-movies-of-all-time-ranked.png",
+      "hardBlocks": [
+        "body 626w < 700"
+      ],
+      "badClaims": 0
+    }
+  },
+  "scorecard": {
+    "score": 0,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [
+      "deterministic block"
+    ],
+    "deterministic": {
+      "words": 626,
+      "h2s": 6,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 3,
+      "hasSources": true,
+      "faqCount": 3,
+      "ktCount": 3,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 35,
+      "avgSentence": 19,
+      "flesch": 51,
+      "bannedTells": 1,
+      "fillerPraise": 0,
+      "kwExact": 1,
+      "hardBlocks": [
+        "body 626w < 700"
+      ]
+    },
+    "hardBlocks": [
+      "body 626w < 700"
+    ]
+  },
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "4+ FAQ",
+      "score ≥ 80",
+      "zero hard-blocks",
+      "infoGain ≥ 7",
+      "readability ≥ 6",
+      "humanVoice ≥ 7",
+      "phrasing ≥ 7"
+    ]
+  },
+  "ms": 202902
+}

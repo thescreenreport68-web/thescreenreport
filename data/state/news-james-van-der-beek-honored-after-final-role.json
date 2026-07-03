@@ -1,0 +1,123 @@
+{
+  "id": "news-james-van-der-beek-honored-after-final-role",
+  "slug": "elle-honors-james-van-der-beek-after-final-onscreen-role",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": 65,
+      "cat": "celebrity/news",
+      "img": "https://akns-images.eonline.com/eol_images/Entire_Site/20260211/75f9a0c4-bc85-4d20-9976-b8e95b6a34f2_1770843547.jpg?fit=around%7C1200:1200&output-quality=90&crop=1200:1200;center,top",
+      "hardBlocks": [
+        "fabricated: 'Sidelined 2: Intercepted' in November 2025",
+        "fabricated: 'The Gates', which released in March 2026",
+        "accuracy 7 < 8"
+      ],
+      "block": [
+        "fabricated: 'Sidelined 2: Intercepted' in November 2025",
+        "fabricated: 'The Gates', which released in March 2026",
+        "accuracy 7 < 8"
+      ],
+      "fixable": [],
+      "badClaims": 0
+    },
+    "attempt2": {
+      "score": 65,
+      "cat": "celebrity/news",
+      "img": "https://akns-images.eonline.com/eol_images/Entire_Site/20260211/75f9a0c4-bc85-4d20-9976-b8e95b6a34f2_1770843547.jpg?fit=around%7C1200:1200&output-quality=90&crop=1200:1200;center,top",
+      "hardBlocks": [
+        "fabricated: 'Sidelined 2: Intercepted' which came out in Nov. 2025",
+        "fabricated: 'Sidelined: The QB and Me' (2024)",
+        "fabricated: 'Sidelined: The QB and Me' in FAQ",
+        "verify-gate CUT: 1 claim(s) not in the gathered sources — The series Elle premiered on July 1, 2026",
+        "accuracy 7 < 8"
+      ],
+      "block": [
+        "fabricated: 'Sidelined 2: Intercepted' which came out in Nov. 2025",
+        "fabricated: 'Sidelined: The QB and Me' (2024)",
+        "fabricated: 'Sidelined: The QB and Me' in FAQ",
+        "verify-gate CUT: 1 claim(s) not in the gathered sources — The series Elle premiered on July 1, 2026",
+        "accuracy 7 < 8"
+      ],
+      "fixable": [],
+      "badClaims": 0
+    },
+    "attempt3": {
+      "score": 75,
+      "cat": "celebrity/news",
+      "img": "https://www.hollywoodreporter.com/wp-content/uploads/2026/07/Elle-season-1-publicity-H-2026.png?w=1600&h=901&crop=1",
+      "hardBlocks": [],
+      "block": [],
+      "fixable": [],
+      "badClaims": 0
+    }
+  },
+  "acceptReason": "terminal-accept (verified accurate, score 75, 0 quality nit(s))",
+  "webCheck": {
+    "ran": false,
+    "contradictions": 0
+  },
+  "scorecard": {
+    "score": 75,
+    "subscores": {
+      "accuracy": 9,
+      "readability": 8,
+      "humanVoice": 7,
+      "phrasing": 8,
+      "curiosity": 7,
+      "structure": 8,
+      "infoGain": 7,
+      "seo": 7,
+      "faqQuality": 7,
+      "completeness": 7
+    },
+    "strengths": [
+      "The article is highly accurate, with all specific claims verifiable against the provided reference facts.",
+      "The lead quickly delivers the core information, adhering to news standards.",
+      "Quotes from costars and the actor's wife add a human touch and emotional depth.",
+      "The structure is clear with an answer-first lead and relevant subheadings.",
+      "Key Takeaways provide a concise summary for busy readers.",
+      "The article avoids generic AI tells and breathless filler praise, maintaining a professional tone.",
+      "The Flesch score and average sentence length indicate good readability.",
+      "The FAQ section provides genuinely new information not explicitly stated in the main body."
+    ],
+    "weaknesses": [
+      "The headline is a bit generic; it could be more specific about the nature of the honor.",
+      "The phrase \"serves as a public capstone\" in the last paragraph is a minor instance of copula-avoidance, which can sound stiff.",
+      "While the article is short news, the 'Information Gain' is moderate; it primarily reports facts from sources without much original framing or analysis.",
+      "The meta description (dek) is slightly repetitive of the headline's core information.",
+      "The internal links and external sources are present, but the external sources are not explicitly linked within the body of the text, only listed at the end."
+    ],
+    "deterministic": {
+      "words": 412,
+      "h2s": 3,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 2,
+      "hasSources": true,
+      "faqCount": 3,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 45,
+      "avgSentence": 23,
+      "flesch": 61,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 3,
+      "hardBlocks": []
+    },
+    "hardBlocks": []
+  },
+  "score": 75,
+  "category": "celebrity",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "external sources ≥2"
+    ]
+  },
+  "ms": 590727
+}

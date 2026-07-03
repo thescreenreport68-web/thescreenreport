@@ -15,24 +15,17 @@ export const MODELS = {
   // The CHEAP model for the universal verify gate's claim-extraction + entailment (lib/verifyGate.mjs) — it does
   // deterministic-heavy work a cheap model handles fine, so the higher judge spend stays one call per article.
   verify: "google/gemini-2.5-flash-lite",
+  // The INDEPENDENT WEB reality-check (lib/webVerify.mjs) — a CHEAP model + OpenRouter's web-search plugin verifies
+  // the article's load-bearing specifics (roles/numbers/dates) against the LIVE web, the one thing a bundle-only
+  // check can't do. gemini-2.5-flash for the role/plot reasoning; STILL a cheap-tier model (owner hard rule: NEVER
+  // premium). ~1 web-grounded call/article (~$0.012-0.02 incl. web results). Set WEB_VERIFY=0 to disable.
+  webVerify: "google/gemini-2.5-flash",
   // Cheap-ONLY escalation ladder if flash-lite ever under-delivers on the §7.5 validation (NO Opus):
   //   flash-lite (cheapest) → llama-4-maverick (~$0.0017/call) → gemini-2.5-flash (~$0.0039/call, ceiling).
   judgeFallbacks: ["meta-llama/llama-4-maverick", "google/gemini-2.5-flash"],
-  // Back-compat alias for the dev-only generation bake-off (bakeoff.mjs) → points at the cheap judge now.
-  // The one-time generator bake-off historically used Opus as a neutral referee; that is RETIRED — Opus is
-  // never wired at runtime again.
-  judgeBakeoff: "google/gemini-2.5-flash-lite",
-  // Generation bake-off roster. The PRODUCTION generator must be a "cheap" tier winner;
-  // the "benchmark" model is only the quality ceiling for comparison — never used in production.
-  candidates: [
-    { id: "qwen/qwen3-235b-a22b-2507", tier: "cheap", cost: [0.09, 0.1] },
-    { id: "deepseek/deepseek-v3.2", tier: "cheap", cost: [0.23, 0.34] },
-    { id: "google/gemini-2.5-flash-lite", tier: "cheap", cost: [0.1, 0.4] },
-    { id: "openai/gpt-4.1-mini", tier: "cheap", cost: [0.4, 1.6] },
-    { id: "meta-llama/llama-4-maverick", tier: "cheap", cost: [0.15, 0.6] },
-    { id: "anthropic/claude-sonnet-4.6", tier: "benchmark", cost: [3, 15] },
-  ],
   // Winning CHEAP generator (bake-off: best quality + accuracy at ~$0.001/article, beat the premium benchmark).
+  // (The bake-off harness + candidate roster were retired 2026-07-03 — models are LOCKED; the owner hard rule
+  // stands: NEVER a premium model at runtime.)
   generator: "deepseek/deepseek-v3.2",
 };
 
@@ -49,6 +42,9 @@ export const TAXONOMY = {
   music: ["news", "awards", "profiles-artists", "screen-music"],
 };
 
-export const GATE = { publishMin: 80, infoGainMin: 7 };
+// Brand-new-site strategy (2026-07-01, owner): ZERO audience → prioritize VOLUME of accurate trending news over a
+// premium quality bar. ACCURACY stays strict (verify-gate + accuracy floor UNCHANGED — no fake news), but the SOFT
+// quality bar is lowered so a real, accurate, engaging-enough story publishes instead of being held for a B-grade
+// sub-score. publishMin 80→70, infoGainMin 7→5.
+export const GATE = { publishMin: 70, infoGainMin: 5 };
 export const AUTHOR_SLUG = "editorial-team";
-export const SITE_URL = "https://thescreenreport.com";

@@ -1,0 +1,75 @@
+{
+  "id": "news-alannah-keyser-love-island-usa-racist-posts-apology",
+  "slug": "love-island-usa-s-alannah-keyser-apologizes-for-racist-posts-i-do-not-",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": 88,
+      "cat": "tv/news",
+      "img": "/images/articles/love-island-usa-s-alannah-keyser-apologizes-for-racist-posts-i-do-not-.jpg",
+      "hardBlocks": [],
+      "badClaims": 0
+    }
+  },
+  "scorecard": {
+    "score": 88,
+    "subscores": {
+      "accuracy": 10,
+      "readability": 9,
+      "humanVoice": 9,
+      "phrasing": 9,
+      "curiosity": 8,
+      "structure": 9,
+      "infoGain": 8,
+      "seo": 7,
+      "faqQuality": 9,
+      "completeness": 10
+    },
+    "strengths": [
+      "Excellent adherence to the reader-first standard, prioritizing clarity and human voice.",
+      "Lead delivers the core news immediately, fulfilling curiosity requirements.",
+      "All factual claims are well-sourced and attributed to Deadline, aligning with news standards.",
+      "Structure is logical, with clear subheads guiding the reader through the information.",
+      "Key Takeaways effectively summarize the essential points.",
+      "FAQ section provides relevant, additional information without redundancy.",
+      "Human voice is present, particularly in the 'How Do Reality Shows Handle Contestant Controversies?' section, offering analysis beyond a simple summary.",
+      "Phrasing is generally smooth and professional, avoiding common AI tells."
+    ],
+    "weaknesses": [
+      "The SEO subscore is moderate because while keywords are present naturally, the article doesn't leverage internal links or a strong meta description (though meta description is not provided for scoring).",
+      "The 'curiosity' score is slightly lower as the headline, while accurate, is standard for news and doesn't offer a unique hook beyond the core event.",
+      "The 'human voice' could be slightly enhanced with more specific details about the impact of the controversy on Keyser's standing, beyond general statements.",
+      "The 'infoGain' is good for a short news piece, but could be slightly deeper if the article had managed to extract one more unique sourced fact beyond the headline's core claim, as per the prompt's ideal for short news."
+    ],
+    "deterministic": {
+      "words": 394,
+      "h2s": 4,
+      "h2Questions": 3,
+      "internalLinks": 0,
+      "externalLinks": 3,
+      "hasSources": true,
+      "faqCount": 3,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 27,
+      "avgSentence": 16,
+      "flesch": 44,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": []
+    },
+    "hardBlocks": []
+  },
+  "score": 88,
+  "category": "tv",
+  "subcategory": "news",
+  "audit": {
+    "ok": true,
+    "internalLinks": 0,
+    "failed": []
+  },
+  "ms": 114345
+}

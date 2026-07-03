@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Fraunces, Source_Serif_4, Karla } from "next/font/google";
+import { Fraunces, Source_Serif_4, Karla, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -52,6 +52,15 @@ const karla = Karla({
   style: ["normal", "italic"],
 });
 
+// Timestamps / credits / folio lines / data — the mono metadata layer THR doesn't have
+// (DESIGN_UPGRADE_SPEC.md §A2): the cheapest "more premium than THR" move.
+const plexMono = IBM_Plex_Mono({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-mono",
+  weight: ["400", "500"],
+});
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
@@ -60,6 +69,7 @@ export const metadata: Metadata = {
   },
   description: SITE.description,
   robots: { index: false, follow: false },
+  verification: { other: { "p:domain_verify": "732df0e14a6881379e2a7185fdde95a4" } },
   openGraph: {
     siteName: SITE.name,
     type: "website",
@@ -79,12 +89,18 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${fraunces.variable} ${sourceSerif.variable} ${karla.variable}`}
+      className={`${fraunces.variable} ${sourceSerif.variable} ${karla.variable} ${plexMono.variable}`}
     >
       <body>
+        <a
+          href="#content"
+          className="btn-label sr-only text-ink focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:bg-paper focus:px-4 focus:py-2"
+        >
+          Skip to content
+        </a>
         <JsonLd data={SITE_SCHEMA} />
         <Header />
-        <main>{children}</main>
+        <main id="content">{children}</main>
         <Footer />
         <div aria-hidden className="h-[72px] md:h-[104px]" />
         <AnchorAd />

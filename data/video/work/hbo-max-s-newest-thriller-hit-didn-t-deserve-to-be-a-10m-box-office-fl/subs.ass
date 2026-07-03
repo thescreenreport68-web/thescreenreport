@@ -1,0 +1,50 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Cap,Anton,92,&H00FFFFFF,&H00B9B9B9,&H00101010,&HA0000000,0,0,0,0,100,100,1,0,1,4,2,2,70,70,330,1
+Style: Hook,Anton,120,&H00FFFFFF,&H00CFCFCF,&H00101010,&HA0000000,0,0,0,0,100,100,1,0,1,5,3,5,70,70,0,1
+Style: KickText,Anton,40,&H00FFFFFF,&H00FFFFFF,&H00101010,&H00000000,0,0,0,0,100,100,4,0,1,0,0,5,0,0,0,1
+Style: KickDraw,Anton,40,&H002821D9,&H002821D9,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,7,0,0,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.12,0:00:06.50,KickDraw,,0,0,0,,{\fad(140,120)\pos(46,126)\1c&H000000&\1a&H78&\blur6\p1}m 18 0 l 982 0 b 1000 0 1000 0 1000 18 l 1000 70 b 1000 88 1000 88 982 88 l 18 88 b 0 88 0 88 0 70 l 0 18 b 0 0 0 0 18 0{\p0}
+Dialogue: 1,0:00:00.12,0:00:06.50,KickDraw,,0,0,0,,{\fad(140,120)\pos(40,118)\p1}m 18 0 l 982 0 b 1000 0 1000 0 1000 18 l 1000 70 b 1000 88 1000 88 982 88 l 18 88 b 0 88 0 88 0 70 l 0 18 b 0 0 0 0 18 0{\p0}
+Dialogue: 2,0:00:00.12,0:00:06.50,KickText,,0,0,0,,{\fad(140,120)\pos(540,163)}FLOP TO HIT: ZAZIE BEETZ'S NEW FILM
+Dialogue: 0,0:00:00.05,0:00:01.19,Hook,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k38}ZAZIE {\k49}BEETZ'S {\k27}NEW
+Dialogue: 0,0:00:01.19,0:00:02.43,Hook,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k38}MOVIE {\k54}{\1c&H2821D9&}FLOPPED,{\1c&HFFFFFF&} {\k33}THEN
+Dialogue: 0,0:00:02.43,0:00:03.36,Hook,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k43}BECAME {\k16}A {\k33}{\1c&H2821D9&}HIT.{\1c&HFFFFFF&}
+Dialogue: 0,0:00:03.36,0:00:04.76,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k27}HER {\k33}{\1c&H2821D9&}2026{\1c&HFFFFFF&} {\k81}ACTION-HORROR
+Dialogue: 0,0:00:04.76,0:00:05.74,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k33}FILM {\k33}THEY {\k33}WILL
+Dialogue: 0,0:00:05.74,0:00:06.66,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k33}KILL {\k27}YOU {\k33}LOST
+Dialogue: 0,0:00:06.66,0:00:07.53,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k38}MONEY {\k22}AT {\k27}THE
+Dialogue: 0,0:00:07.53,0:00:08.29,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k27}BOX {\k49}OFFICE.
+Dialogue: 0,0:00:08.29,0:00:09.32,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k22}IT {\k49}GROSSED {\k33}JUST
+Dialogue: 0,0:00:09.32,0:00:10.94,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k38}$10.9 {\k49}MILLION {\k76}DOMESTICALLY
+Dialogue: 0,0:00:10.94,0:00:11.59,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k22}ON {\k16}A {\k27}$20
+Dialogue: 0,0:00:11.59,0:00:13.00,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k49}MILLION {\k43}DOLLAR {\k49}BUDGET.
+Dialogue: 0,0:00:13.00,0:00:13.87,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k27}BUT {\k33}NOW, {\k27}PER
+Dialogue: 0,0:00:13.87,0:00:14.95,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k60}COLLIDER, {\k33}IT'S {\k16}A
+Dialogue: 0,0:00:14.95,0:00:15.93,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k27}TOP {\k38}THREE {\k33}FILM
+Dialogue: 0,0:00:15.93,0:00:16.74,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k22}ON {\k27}HBO {\k33}MAX.
+Dialogue: 0,0:00:16.74,0:00:17.72,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k27}THE {\k33}FILM {\k38}STARS
+Dialogue: 0,0:00:17.72,0:00:18.69,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k38}BEETZ {\k22}AS {\k38}{\1c&H2821D9&}ASIA,{\1c&HFFFFFF&}
+Dialogue: 0,0:00:18.69,0:00:19.94,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k22}AN {\k43}{\1c&H2821D9&}EX-CON{\1c&HFFFFFF&} {\k60}SEARCHING
+Dialogue: 0,0:00:19.94,0:00:20.97,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k27}FOR {\k27}HER {\k49}SISTER.
+Dialogue: 0,0:00:20.97,0:00:22.21,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k27}SHE {\k70}INFILTRATES {\k27}THE
+Dialogue: 0,0:00:22.21,0:00:23.13,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k49}VIRGIL, {\k16}A {\k27}NYC
+Dialogue: 0,0:00:23.13,0:00:24.60,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k60}HIGH-RISE {\k65}CONTROLLED {\k22}BY
+Dialogue: 0,0:00:24.60,0:00:25.57,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k16}A {\k43}DEADLY {\k38}CULT.
+Dialogue: 0,0:00:25.57,0:00:26.44,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k33}FANS {\k27}ARE {\k27}NOW
+Dialogue: 0,0:00:26.44,0:00:27.85,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k70}DISCOVERING {\k27}ITS {\k43}UNIQUE
+Dialogue: 0,0:00:27.85,0:00:28.93,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k38}BLEND {\k22}OF {\k49}ACTION,
+Dialogue: 0,0:00:28.93,0:00:30.02,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k49}HORROR, {\k27}AND {\k33}DARK
+Dialogue: 0,0:00:30.02,0:00:30.50,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k49}COMEDY.
+Dialogue: 0,0:00:30.50,0:00:31.42,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k33}FULL {\k38}STORY {\k22}AT
+Dialogue: 0,0:00:31.42,0:00:32.56,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k27}THE {\k43}SCREEN {\k43}REPORT
+Dialogue: 0,0:00:32.56,0:00:33.27,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k16}— {\k33}LINK {\k22}IN
+Dialogue: 0,0:00:33.27,0:00:33.59,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k33}BIO.

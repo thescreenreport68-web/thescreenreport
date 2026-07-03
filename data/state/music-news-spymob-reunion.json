@@ -1,0 +1,129 @@
+{
+  "id": "music-news-spymob-reunion",
+  "slug": "spymob-reunites-20-years-after-debut-backing-n-e-r-d",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": 75,
+      "cat": "music/news",
+      "img": "/images/articles/spymob-reunites-20-years-after-debut-backing-n-e-r-d.jpg",
+      "hardBlocks": [
+        "primary keyword not in title",
+        "fabricated: 'Another Night' will be available for purchase on Bandcamp in early June",
+        "verify-gate CUT: 1 claim(s) not in the gathered sources — Christian Twigg is no longer part of the active lineup."
+      ],
+      "block": [
+        "fabricated: 'Another Night' will be available for purchase on Bandcamp in early June",
+        "verify-gate CUT: 1 claim(s) not in the gathered sources — Christian Twigg is no longer part of the active lineup."
+      ],
+      "fixable": [
+        "primary keyword not in title"
+      ],
+      "badClaims": 0
+    },
+    "attempt2": {
+      "score": 78,
+      "cat": "music/news",
+      "img": "/images/articles/spymob-reunites-20-years-after-debut-backing-n-e-r-d.jpg",
+      "hardBlocks": [
+        "primary keyword not in title",
+        "verify-gate CUT: 2 claim(s) not in the gathered sources — Spymob's song \"Half-Steering\" was placed on the Neptune; Pharrell's song \"Frontin'\" featuring Jay-Z appeared on "
+      ],
+      "block": [
+        "verify-gate CUT: 2 claim(s) not in the gathered sources — Spymob's song \"Half-Steering\" was placed on the Neptune; Pharrell's song \"Frontin'\" featuring Jay-Z appeared on "
+      ],
+      "fixable": [
+        "primary keyword not in title"
+      ],
+      "badClaims": 0
+    },
+    "attempt3": {
+      "score": 75,
+      "cat": "music/news",
+      "img": "/images/articles/spymob-reunites-20-years-after-debut-backing-n-e-r-d.jpg",
+      "hardBlocks": [
+        "primary keyword not in title",
+        "verify-gate CUT: 3 claim(s) not in the gathered sources — Spymob members cite financial and logistical pressures ; Spymob members cite starting families as reasons for th; Christian Twigg is not part of the active reunion trio "
+      ],
+      "block": [
+        "verify-gate CUT: 3 claim(s) not in the gathered sources — Spymob members cite financial and logistical pressures ; Spymob members cite starting families as reasons for th; Christian Twigg is not part of the active reunion trio "
+      ],
+      "fixable": [
+        "primary keyword not in title"
+      ],
+      "badClaims": 0
+    }
+  },
+  "acceptReason": "terminal-accept (verified accurate, score 75, 3 qualitative stray(s) accepted)",
+  "scorecard": {
+    "score": 75,
+    "subscores": {
+      "accuracy": 9,
+      "readability": 8,
+      "humanVoice": 8,
+      "phrasing": 7,
+      "curiosity": 8,
+      "structure": 8,
+      "infoGain": 7,
+      "seo": 7,
+      "faqQuality": 8,
+      "completeness": 8
+    },
+    "strengths": [
+      "The article accurately reflects the provided source material and quotes.",
+      "The lead quickly delivers the core information about the reunion and new album.",
+      "The use of subheadings effectively breaks up the text and guides the reader.",
+      "The human voice comes through in the direct quotes from the band members, adding authenticity.",
+      "The FAQ section provides genuinely new and useful information, not just rephrasing the article.",
+      "The article avoids generic AI tells and filler praise, focusing on specific details.",
+      "The Flesch score and average sentence length indicate good readability."
+    ],
+    "weaknesses": [
+      "The phrasing in some sections, particularly the 'How did Spymob get its start?' subhead, feels a bit stiff and could benefit from more varied sentence structure.",
+      "While the keyword 'spymob reunion' is present, it's not always integrated as naturally as possible, sometimes feeling a bit forced into the subheadings.",
+      "The article could benefit from slightly more original analysis or framing beyond summarizing the reunion details, though it does a good job of presenting the 'why' behind the reunion.",
+      "The 'dek' is a bit long and could be more concise while still conveying the key information."
+    ],
+    "deterministic": {
+      "words": 468,
+      "h2s": 4,
+      "h2Questions": 4,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 3,
+      "ktCount": 4,
+      "kwInTitle": false,
+      "kwInFirst100": false,
+      "kwInH2": false,
+      "maxSentence": 45,
+      "avgSentence": 21,
+      "flesch": 55,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": [
+        "primary keyword not in title"
+      ]
+    },
+    "hardBlocks": [
+      "primary keyword not in title",
+      "verify-gate CUT: 3 claim(s) not in the gathered sources — Spymob members cite financial and logistical pressures ; Spymob members cite starting families as reasons for th; Christian Twigg is not part of the active reunion trio "
+    ]
+  },
+  "score": 75,
+  "category": "music",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "4+ FAQ",
+      "keyword in title",
+      "external sources ≥2",
+      "score ≥ 80",
+      "zero hard-blocks"
+    ]
+  },
+  "ms": 328110
+}

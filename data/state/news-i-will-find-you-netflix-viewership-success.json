@@ -1,0 +1,123 @@
+{
+  "id": "news-i-will-find-you-netflix-viewership-success",
+  "slug": "netflix-s-new-harlan-coben-mystery-continues-its-unstoppable-reign-on-",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": 65,
+      "cat": "celebrity/news",
+      "img": "https://static0.colliderimages.com/wordpress/wp-content/uploads/2026/06/i-will-find-you-chi-mcbride-logan-browning-interview.jpg?w=1600&h=900&fit=crop",
+      "hardBlocks": [
+        "Flesch 38 < 40 (too dense to read comfortably)",
+        "fabricated: 'The Stranger' and 'Stay Close' performing well on the platform",
+        "fabricated: 'The Stranger', 'Stay Close', 'Safe', and 'The Innocent' are available on Netflix",
+        "verify-gate BLOCK: The series 'I Will Find You' is an adaptation of a nove; Netflix has a multi-year deal with Harlan Coben to adap; Other Harlan Coben shows available on Netflix include '"
+      ],
+      "block": [
+        "fabricated: 'The Stranger' and 'Stay Close' performing well on the platform",
+        "fabricated: 'The Stranger', 'Stay Close', 'Safe', and 'The Innocent' are available on Netflix",
+        "verify-gate BLOCK: The series 'I Will Find You' is an adaptation of a nove; Netflix has a multi-year deal with Harlan Coben to adap; Other Harlan Coben shows available on Netflix include '"
+      ],
+      "fixable": [
+        "Flesch 38 < 40 (too dense to read comfortably)"
+      ],
+      "badClaims": 0
+    },
+    "attempt2": {
+      "score": 65,
+      "cat": "celebrity/news",
+      "img": "https://static0.colliderimages.com/wordpress/wp-content/uploads/2026/06/i-will-find-you-chi-mcbride-logan-browning-interview.jpg?w=1600&h=900&fit=crop",
+      "hardBlocks": [
+        "fabricated: 'unstoppable reign' is presented as a direct quote from Collider, but the source material shows it as part of the headline, not a quote within the article itself.",
+        "verify-gate BLOCK: The development was reported in July 2026; Netflix hosts a significant collection of limited serie; Netflix has released several popular thriller adaptatio",
+        "accuracy 7 < 8"
+      ],
+      "block": [
+        "fabricated: 'unstoppable reign' is presented as a direct quote from Collider, but the source material shows it as part of the headline, not a quote within the article itself.",
+        "verify-gate BLOCK: The development was reported in July 2026; Netflix hosts a significant collection of limited serie; Netflix has released several popular thriller adaptatio",
+        "accuracy 7 < 8"
+      ],
+      "fixable": [],
+      "badClaims": 0
+    }
+  },
+  "acceptReason": "cut-and-publish (removed 3 ungrounded/fabricated sentence(s); 236w remain)",
+  "webCheck": {
+    "contradictions": 1,
+    "cut": 1
+  },
+  "scorecard": {
+    "score": 65,
+    "subscores": {
+      "accuracy": 7,
+      "readability": 7,
+      "humanVoice": 6,
+      "phrasing": 7,
+      "curiosity": 7,
+      "structure": 7,
+      "infoGain": 5,
+      "seo": 6,
+      "faqQuality": 6,
+      "completeness": 7
+    },
+    "strengths": [
+      "The headline is clear and makes a specific, true claim.",
+      "The lead delivers the core information quickly, adhering to news standards.",
+      "The article uses plain language and avoids overly complex sentence structures.",
+      "Subheadings are present and help break up the text, improving readability.",
+      "The article correctly attributes the core claim to Collider.",
+      "The FAQ section attempts to add new, relevant information, even if limited by source material.",
+      "The article maintains a consistent focus on the primary keyword without overt stuffing."
+    ],
+    "weaknesses": [
+      "The article presents 'unstoppable reign' as a direct quote from Collider's article body, but it's actually from the headline of the source material, which is a subtle but important distinction for accuracy.",
+      "The 'Why does this success matter?' section feels a bit generic and could benefit from more specific insights or a stronger, more unique POV, rather than general statements about 'reinforces Netflix's ongoing investment' or 'secures the future pipeline'.",
+      "The 'What is the show about?' section is very vague due to source limitations, but the phrasing 'The show's title suggests it follows the author's signature style...' is a bit of a placeholder and could be more direct about the lack of plot details.",
+      "The Flesch score is low (46), indicating denser prose than ideal for a news article, even if individual sentences aren't excessively long. This suggests a need for more varied sentence structure and simpler vocabulary.",
+      "The phrase 'newest testament to that appeal' in the conclusion is a generic AI-tell ('testament').",
+      "The 'unstoppable reign' phrasing, while from the source headline, contributes to a slightly breathless tone when used in the body, bordering on filler praise without specific metrics to back it up.",
+      "The FAQ answers, while attempting to add new info, are largely speculative or state what isn't known, which is a limitation of the source but impacts the 'information gain' of the FAQ itself."
+    ],
+    "deterministic": {
+      "words": 321,
+      "h2s": 4,
+      "h2Questions": 3,
+      "internalLinks": 0,
+      "externalLinks": 1,
+      "hasSources": true,
+      "faqCount": 3,
+      "ktCount": 3,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 26,
+      "avgSentence": 16,
+      "flesch": 46,
+      "bannedTells": 2,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": []
+    },
+    "hardBlocks": [
+      "fabricated: 'unstoppable reign' is presented as a direct quote from Collider, but the source material shows it as part of the headline, not a quote within the article itself.",
+      "verify-gate BLOCK: The development was reported in July 2026; Netflix hosts a significant collection of limited serie; Netflix has released several popular thriller adaptatio",
+      "accuracy 7 < 8"
+    ]
+  },
+  "score": 65,
+  "category": "celebrity",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "body ≥ 350w",
+      "external sources ≥2",
+      "score ≥ 70",
+      "zero hard-blocks",
+      "accuracy (no fabrication)",
+      "humanVoice ≥ 7"
+    ]
+  },
+  "ms": 427637
+}

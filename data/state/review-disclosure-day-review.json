@@ -1,0 +1,72 @@
+{
+  "id": "review-disclosure-day-review",
+  "slug": "disclosure-day-review",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": 88,
+      "cat": "reviews/movie-reviews",
+      "img": "/images/articles/disclosure-day-review.jpg",
+      "hardBlocks": []
+    }
+  },
+  "scorecard": {
+    "score": 88,
+    "subscores": {
+      "accuracy": 10,
+      "readability": 9,
+      "humanVoice": 9,
+      "phrasing": 9,
+      "curiosity": 9,
+      "structure": 9,
+      "infoGain": 8,
+      "seo": 7,
+      "faqQuality": 9,
+      "completeness": 9
+    },
+    "strengths": [
+      "Emily Blunt's performance is highlighted as a major strength.",
+      "The review effectively captures Spielberg's optimistic themes and directorial style.",
+      "Clear and engaging subheads guide the reader through the review.",
+      "The FAQ section provides valuable, specific information beyond the main review.",
+      "The dek and title are specific and intriguing.",
+      "The comparison to other Spielberg films is insightful.",
+      "The review balances praise with minor constructive criticism.",
+      "Strong emphasis on reader experience over mechanical SEO."
+    ],
+    "weaknesses": [
+      "The SEO subscore is lower due to the secondary nature of SEO in the scoring rubric, and the article's focus on craft over keyword optimization.",
+      "Some supporting characters' development is noted as potentially underdeveloped due to the film's pace.",
+      "A few CGI creatures are mentioned as less impactful than practical effects."
+    ],
+    "deterministic": {
+      "words": 513,
+      "h2s": 5,
+      "h2Questions": 4,
+      "internalLinks": 0,
+      "externalLinks": 3,
+      "hasSources": true,
+      "faqCount": 4,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": false,
+      "kwInH2": false,
+      "maxSentence": 27,
+      "avgSentence": 17,
+      "flesch": 45,
+      "bannedTells": 1,
+      "kwExact": 0,
+      "hardBlocks": []
+    },
+    "hardBlocks": []
+  },
+  "score": 88,
+  "category": "reviews",
+  "subcategory": "movie-reviews",
+  "audit": {
+    "ok": true,
+    "internalLinks": 0,
+    "failed": []
+  },
+  "ms": 70430
+}

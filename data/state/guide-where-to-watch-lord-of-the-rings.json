@@ -1,0 +1,84 @@
+{
+  "id": "guide-where-to-watch-lord-of-the-rings",
+  "slug": "where-to-watch-the-lord-of-the-rings-movies",
+  "status": "needs_review",
+  "stages": {
+    "attempt1": {
+      "score": 88,
+      "cat": "streaming/where-to-watch",
+      "img": "/images/articles/where-to-watch-the-lord-of-the-rings-movies.jpg",
+      "hardBlocks": [
+        "body 385w < 400"
+      ]
+    },
+    "attempt2": {
+      "score": 85,
+      "cat": "streaming/where-to-watch",
+      "img": "/images/articles/where-to-watch-the-lord-of-the-rings-movies.jpg",
+      "hardBlocks": [
+        "FAQ 3 < 4"
+      ]
+    }
+  },
+  "scorecard": {
+    "score": 85,
+    "subscores": {
+      "accuracy": 10,
+      "readability": 9,
+      "humanVoice": 9,
+      "phrasing": 8,
+      "curiosity": 9,
+      "structure": 9,
+      "infoGain": 8,
+      "seo": 7,
+      "faqQuality": 8,
+      "completeness": 9
+    },
+    "strengths": [
+      "Clear and direct answer in the dek and lead.",
+      "Excellent explanation of the theatrical vs. extended editions, providing a clear recommendation based on user preference.",
+      "Strong emphasis on the value of physical media for quality and bonus features.",
+      "Well-structured with useful subheads and key takeaways.",
+      "FAQ addresses common user questions effectively.",
+      "Good use of internal links (though not explicitly requested for scoring, it's good practice)."
+    ],
+    "weaknesses": [
+      "The SEO subscore is lower because the primary keyword is only used once in the title and not naturally within the body text.",
+      "The dek mentions 'best subscription deal' but the article doesn't explicitly detail subscription costs or compare deals, focusing more on Max availability.",
+      "The FAQ about free viewing is good, but could be more specific about *how* to check library availability (e.g., library app, website)."
+    ],
+    "deterministic": {
+      "words": 412,
+      "h2s": 4,
+      "h2Questions": 3,
+      "internalLinks": 0,
+      "externalLinks": 3,
+      "hasSources": true,
+      "faqCount": 3,
+      "ktCount": 3,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 30,
+      "avgSentence": 14,
+      "flesch": 60,
+      "bannedTells": 1,
+      "kwExact": 0,
+      "hardBlocks": [
+        "FAQ 3 < 4"
+      ]
+    },
+    "hardBlocks": [
+      "FAQ 3 < 4"
+    ]
+  },
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "4+ FAQ",
+      "zero hard-blocks"
+    ]
+  },
+  "ms": 83114
+}

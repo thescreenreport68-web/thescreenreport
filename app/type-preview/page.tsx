@@ -57,10 +57,10 @@ export default function TypePreview() {
     <div className="container-wide py-10">
       <header className="mb-10 max-w-2xl">
         <p className="kicker">The Screen Report · Type Test v2</p>
-        <h1 className="mt-2 font-display text-3xl font-semibold text-navy">
+        <h1 className="mt-2 font-display text-3xl font-semibold text-ink">
           The premium serif options
         </h1>
-        <p className="mt-3 font-sans text-navy/70">
+        <p className="mt-3 font-sans text-ink/70">
           All four are warm, high-contrast editorial serifs (no more plain ones).
           Same layout each time — judge only the headline. <strong>Option A
           (Fraunces, tuned) is now live across the site</strong> and is my pick; the
@@ -70,24 +70,24 @@ export default function TypePreview() {
 
       <div className="space-y-16">
         {OPTIONS.map((o) => (
-          <section key={o.id} className="border-t-2 border-navy pt-6">
+          <section key={o.id} className="border-t-2 border-ink pt-6">
             <div className="mb-6 flex flex-wrap items-baseline justify-between gap-3">
               <h2
                 style={{ fontFamily: o.ff, fontVariationSettings: o.vs }}
-                className="text-2xl font-semibold text-navy"
+                className="text-2xl font-semibold text-ink"
               >
                 Option {o.id} — {o.name}
               </h2>
-              <p className="max-w-md font-sans text-xs text-faint sm:text-right">
+              <p className="max-w-md font-sans text-xs text-slate sm:text-right">
                 {o.note}
               </p>
             </div>
 
             <div
               style={{ fontFamily: o.ff, fontVariationSettings: o.vs }}
-              className="mb-7 text-2xl font-semibold italic text-navy"
+              className="mb-7 text-2xl font-semibold italic text-ink"
             >
-              The Screen Report<span className="not-italic text-gold">.</span>
+              The Screen Report<span className="not-italic text-red">.</span>
             </div>
 
             <div className="grid gap-8 lg:grid-cols-3">
@@ -95,19 +95,19 @@ export default function TypePreview() {
                 <p className="kicker">Movies</p>
                 <h3
                   style={{ fontFamily: o.ff, fontVariationSettings: o.vs }}
-                  className="mt-1.5 text-4xl font-semibold leading-[1.08] tracking-tight text-navy sm:text-5xl"
+                  className="mt-1.5 text-4xl font-semibold leading-[1.08] tracking-tight text-ink sm:text-5xl"
                 >
                   Oppenheimer Ending Explained: The Quote That Haunts the Final
                   Scene
                 </h3>
                 <p
                   style={{ fontFamily: o.ff, fontVariationSettings: o.vs }}
-                  className="mt-3 text-xl italic text-navy/70"
+                  className="mt-3 text-xl italic text-ink/70"
                 >
                   Christopher Nolan&apos;s closing exchange reframes the entire film
                   — here&apos;s what it really means.
                 </p>
-                <p className="mt-3 font-sans text-xs uppercase tracking-wide text-faint">
+                <p className="mt-3 font-sans text-xs uppercase tracking-wide text-slate">
                   By Jordan Hale · 6 min read
                 </p>
               </div>
@@ -117,7 +117,7 @@ export default function TypePreview() {
                   <p className="kicker">Celebrity</p>
                   <h4
                     style={{ fontFamily: o.ff, fontVariationSettings: o.vs }}
-                    className="mt-1 text-xl font-semibold leading-tight text-navy"
+                    className="mt-1 text-xl font-semibold leading-tight text-ink"
                   >
                     Zendaya&apos;s Movies and TV Shows: The Complete Guide
                   </h4>
@@ -126,7 +126,7 @@ export default function TypePreview() {
                   <p className="kicker">TV</p>
                   <h4
                     style={{ fontFamily: o.ff, fontVariationSettings: o.vs }}
-                    className="mt-1 text-xl font-semibold leading-tight text-navy"
+                    className="mt-1 text-xl font-semibold leading-tight text-ink"
                   >
                     The Best Limited Series to Stream Right Now
                   </h4>
@@ -135,7 +135,7 @@ export default function TypePreview() {
                   <p className="kicker">Reviews</p>
                   <h4
                     style={{ fontFamily: o.ff, fontVariationSettings: o.vs }}
-                    className="mt-1 text-xl font-semibold leading-tight text-navy"
+                    className="mt-1 text-xl font-semibold leading-tight text-ink"
                   >
                     Dune: Part Two Review — A Blockbuster With a Soul
                   </h4>
@@ -146,7 +146,7 @@ export default function TypePreview() {
             <div className="mt-9 max-w-2xl">
               <h3
                 style={{ fontFamily: o.ff, fontVariationSettings: o.vs }}
-                className="border-b border-navy/15 pb-2 text-2xl font-semibold text-navy"
+                className="border-b border-hair pb-2 text-2xl font-semibold text-ink"
               >
                 Reviews
               </h3>

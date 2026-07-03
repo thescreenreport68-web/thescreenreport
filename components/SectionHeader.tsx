@@ -11,13 +11,15 @@ function Chevron() {
       strokeWidth="3"
       strokeLinecap="round"
       strokeLinejoin="round"
-      className="ml-1 inline-block align-middle"
+      className="ml-1 inline-block align-[-1px]"
     >
       <path d="m9 18 6-6-6-6" />
     </svg>
   );
 }
 
+// Section head: condensed-display caps sitting ON a 2px ink rule, italic serif
+// tagline beside it, CTA right-aligned on the same baseline (spec §C3).
 export default function SectionHeader({
   title,
   tagline,
@@ -33,30 +35,26 @@ export default function SectionHeader({
 }) {
   if (center) {
     return (
-      <div className="mb-5 text-center">
-        <h2 className="font-display text-2xl font-bold uppercase tracking-tight text-navy sm:text-[1.8rem]">
-          {title}
+      <div className="mb-6 border-b-2 border-ink pb-2 text-center">
+        <h2 className="sect-head">
+          {href ? <Link href={href}>{title}</Link> : title}
         </h2>
-        {tagline ? (
-          <p className="mt-1 font-dek text-base italic text-slate">{tagline}</p>
-        ) : null}
+        {tagline ? <p className="sect-tag mt-1.5">{tagline}</p> : null}
       </div>
     );
   }
   return (
-    <div className="mb-5 flex items-end justify-between gap-3 border-b border-hair pb-2">
+    <div className="mb-6 flex items-end justify-between gap-3 border-b-2 border-ink pb-2">
       <div className="flex flex-wrap items-baseline gap-x-3">
-        <h2 className="font-display text-2xl font-bold uppercase tracking-tight text-navy sm:text-[1.8rem]">
-          {title}
+        <h2 className="sect-head">
+          {href ? <Link href={href}>{title}</Link> : title}
         </h2>
-        {tagline ? (
-          <span className="font-dek text-base italic text-slate">{tagline}</span>
-        ) : null}
+        {tagline ? <span className="sect-tag hidden sm:inline">{tagline}</span> : null}
       </div>
       {href ? (
         <Link
           href={href}
-          className="shrink-0 whitespace-nowrap font-sans text-xs font-bold uppercase tracking-[0.06em] text-slate hover:text-breaking"
+          className="meta-mono shrink-0 whitespace-nowrap transition-colors duration-150 hover:text-red"
         >
           {cta}
           <Chevron />

@@ -1,0 +1,111 @@
+{
+  "id": "news-billie-piper-returns-to-doctor-who",
+  "slug": "billie-piper-officially-returns-to-doctor-who-this-summer",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": 75,
+      "cat": "tv/news",
+      "img": "https://static0.srcdn.com/wordpress/wp-content/uploads/2026/07/billie-piper-in-doctor-who-season-1.jpg?w=1600&h=900&fit=crop",
+      "hardBlocks": [],
+      "block": [],
+      "fixable": [],
+      "badClaims": 0
+    },
+    "attempt2": {
+      "score": 85,
+      "cat": "tv/news",
+      "img": "https://static0.srcdn.com/wordpress/wp-content/uploads/2026/07/billie-piper-in-doctor-who-season-1.jpg?w=1600&h=900&fit=crop",
+      "hardBlocks": [
+        "a 64-word run-on sentence (>55 — split it)"
+      ],
+      "block": [],
+      "fixable": [
+        "a 64-word run-on sentence (>55 — split it)"
+      ],
+      "badClaims": 0
+    },
+    "attempt3": {
+      "score": 75,
+      "cat": "tv/news",
+      "img": "https://static0.srcdn.com/wordpress/wp-content/uploads/2026/07/billie-piper-in-doctor-who-season-1.jpg?w=1600&h=900&fit=crop",
+      "hardBlocks": [
+        "verify-gate CUT: 1 claim(s) not in the gathered sources — Billie Piper had a 2023 appearance in the Doctor Who se"
+      ],
+      "block": [
+        "verify-gate CUT: 1 claim(s) not in the gathered sources — Billie Piper had a 2023 appearance in the Doctor Who se"
+      ],
+      "fixable": [],
+      "badClaims": 0
+    }
+  },
+  "acceptReason": "terminal-accept (verified accurate, score 75, 1 qualitative stray(s) accepted)",
+  "scorecard": {
+    "score": 75,
+    "subscores": {
+      "accuracy": 9,
+      "readability": 8,
+      "humanVoice": 7,
+      "phrasing": 8,
+      "curiosity": 8,
+      "structure": 8,
+      "infoGain": 7,
+      "seo": 7,
+      "faqQuality": 8,
+      "completeness": 8
+    },
+    "strengths": [
+      "The article accurately reports on the breaking news, attributing the core claim to ScreenRant as instructed.",
+      "The lead quickly delivers the main news, adhering to news standards for an inverted pyramid structure.",
+      "Paragraphs are generally short and digestible, aiding readability.",
+      "The article uses plain language and avoids excessive jargon.",
+      "The subheadings are clear and help organize the information effectively.",
+      "The FAQ section provides genuinely new and useful information, not just rephrasing content from the body.",
+      "The article clearly distinguishes between the audio drama and the TV series, managing reader expectations.",
+      "The meta description (dek) is concise and informative."
+    ],
+    "weaknesses": [
+      "The phrase 'according to ScreenRant' in the first sentence, while accurate for attribution, slightly breaks the flow and could be integrated more smoothly.",
+      "The article states 'This marks Piper's first return to the franchise in an audio format since Rose Tyler: The Dimension Cannon and her 2023 appearance in the Doctor Who season 15 finale.' The reference facts state 'Piper previously reprised Rose in the audio format for The Tenth Doctor Adventures season 2 and the entirety of Rose Tyler: The Dimension Cannon.' The article's phrasing implies 'Rose Tyler: The Dimension Cannon' was her *only* previous audio return, which is not entirely accurate given the mention of 'The Tenth Doctor Adventures season 2'.",
+      "The article mentions 'The Ninth Doctor Adventures season 4 launched in August 2025 with “Snare,”' and later 'The Ninth Doctor Adventures launched in 2021, with its fourth season beginning in August 2025.' This repetition, while accurate, could be condensed for better flow.",
+      "The 'Sources' section only lists 'Big Finish Productions' and lacks the required '>=3 authoritative external sources' for a full SEO score, even for a short news piece. The prompt specifies 'genuine FAQ that add NEW info; >=3 authoritative external sources; internal links.' While the FAQ is good, the external sources are lacking.",
+      "No internal links are present, which is a minor SEO weakness."
+    ],
+    "deterministic": {
+      "words": 337,
+      "h2s": 3,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 1,
+      "hasSources": true,
+      "faqCount": 4,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": true,
+      "maxSentence": 29,
+      "avgSentence": 18,
+      "flesch": 53,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 5,
+      "hardBlocks": []
+    },
+    "hardBlocks": [
+      "verify-gate CUT: 1 claim(s) not in the gathered sources — Billie Piper had a 2023 appearance in the Doctor Who se"
+    ]
+  },
+  "score": 75,
+  "category": "tv",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "body ≥ 350w",
+      "external sources ≥2",
+      "zero hard-blocks"
+    ]
+  },
+  "ms": 384729
+}

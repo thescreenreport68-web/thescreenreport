@@ -1,0 +1,108 @@
+{
+  "id": "music-news-madonna-confessions-ii-release",
+  "slug": "madonna-is-back-with-confessions-ii-stream-it-now",
+  "status": "needs_review",
+  "stages": {
+    "attempt1": {
+      "score": 65,
+      "cat": "music/news",
+      "img": "https://www.billboard.com/wp-content/uploads/2026/07/02-madonna-2026-Credit-Rafael-Pavarotti-billboard-1800.jpg?w=1600",
+      "hardBlocks": [
+        "verify-gate CUT: 1 claim(s) not in the gathered sources — Confessions on a Dance Floor was a critical and commerc",
+        "fabricated/altered quote: \"Colombian reggaeton star Feid appears on\"; \"A particularly personal moment comes with the song\" — use the exact source words or drop the quotation marks"
+      ],
+      "block": [
+        "verify-gate CUT: 1 claim(s) not in the gathered sources — Confessions on a Dance Floor was a critical and commerc",
+        "fabricated/altered quote: \"Colombian reggaeton star Feid appears on\"; \"A particularly personal moment comes with the song\" — use the exact source words or drop the quotation marks"
+      ],
+      "fixable": [],
+      "badClaims": 0
+    },
+    "attempt2": {
+      "score": 65,
+      "cat": "music/news",
+      "img": "https://www.billboard.com/wp-content/uploads/2026/07/02-madonna-2026-Credit-Rafael-Pavarotti-billboard-1800.jpg?w=1600",
+      "hardBlocks": [
+        "fabricated/altered quote: \"The lyrics explore their mother-daughter relations\" — use the exact source words or drop the quotation marks"
+      ],
+      "block": [
+        "fabricated/altered quote: \"The lyrics explore their mother-daughter relations\" — use the exact source words or drop the quotation marks"
+      ],
+      "fixable": [],
+      "badClaims": 0
+    }
+  },
+  "webCheck": {
+    "contradictions": 3,
+    "cut": 3
+  },
+  "scorecard": {
+    "score": 65,
+    "subscores": {
+      "accuracy": 10,
+      "readability": 7,
+      "humanVoice": 6,
+      "phrasing": 7,
+      "curiosity": 6,
+      "structure": 8,
+      "infoGain": 6,
+      "seo": 6,
+      "faqQuality": 6,
+      "completeness": 7
+    },
+    "strengths": [
+      "All claims are accurately sourced from the provided reference facts.",
+      "The article is well-structured with clear subheadings and key takeaways.",
+      "The lead delivers the core information quickly.",
+      "The FAQ section adds new, relevant information without repeating the body.",
+      "The use of bullet points in Key Takeaways aids readability."
+    ],
+    "weaknesses": [
+      "The Flesch score of 52 is below the target range, indicating denser prose.",
+      "The phrase \"serves as a direct sequel\" in the second paragraph is a generic AI-tell.",
+      "The headline is functional but lacks a strong hook or unique angle.",
+      "The article uses \"Billboard's report states\" and \"The report notes\" which, while accurate, can feel a bit repetitive and less fluid than integrating the information more seamlessly.",
+      "The phrase \"The release continues Madonna's long-standing pattern of artistic reinvention, this time by extending the sonic and thematic world of one of her most celebrated eras\" in the conclusion feels a bit like filler praise and lacks specific examples to back it up within the article's scope.",
+      "The meta description (dek) is a bit dry and could be more engaging.",
+      "The article states \"The album is available to stream on all major digital music platforms as of July 2026\" without explicitly naming any platforms, which could be more helpful to a reader."
+    ],
+    "deterministic": {
+      "words": 350,
+      "h2s": 3,
+      "h2Questions": 3,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 3,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 53,
+      "avgSentence": 17,
+      "flesch": 52,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": []
+    },
+    "hardBlocks": [
+      "fabricated/altered quote: \"The lyrics explore their mother-daughter relations\" — use the exact source words or drop the quotation marks"
+    ]
+  },
+  "holdReason": "accuracy/grounding block: fabricated/altered quote: \"The lyrics explore their mother-daughter relations\" — use the exact source words or drop the quotation marks",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "body ≥ 400w",
+      "4+ FAQ",
+      "keyword in title",
+      "external sources ≥2",
+      "score ≥ 70",
+      "zero hard-blocks",
+      "humanVoice ≥ 7"
+    ]
+  },
+  "ms": 334679
+}

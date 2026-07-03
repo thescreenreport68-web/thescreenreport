@@ -1,0 +1,92 @@
+{
+  "id": "news-reacher-spinoff-neagley-amazon-release-date-images",
+  "slug": "reacher-spinoff-neagley-sets-amazon-release-date-drops-first-look-imag",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": 85,
+      "cat": "tv/news",
+      "img": "/images/articles/reacher-spinoff-neagley-sets-amazon-release-date-drops-first-look-imag.jpg",
+      "hardBlocks": [
+        "verify-gate CUT: 1 claim(s) not in the gathered sources — As of June 2026, the series is completed and ready for "
+      ],
+      "block": [
+        "verify-gate CUT: 1 claim(s) not in the gathered sources — As of June 2026, the series is completed and ready for "
+      ],
+      "fixable": [],
+      "badClaims": 0
+    },
+    "attempt2": {
+      "score": 82,
+      "cat": "tv/news",
+      "img": "/images/articles/reacher-spinoff-neagley-sets-amazon-release-date-drops-first-look-imag.jpg",
+      "hardBlocks": [],
+      "block": [],
+      "fixable": [],
+      "badClaims": 0
+    }
+  },
+  "scorecard": {
+    "score": 82,
+    "subscores": {
+      "accuracy": 9,
+      "readability": 8,
+      "humanVoice": 7,
+      "phrasing": 8,
+      "curiosity": 9,
+      "structure": 9,
+      "infoGain": 8,
+      "seo": 8,
+      "faqQuality": 8,
+      "completeness": 8
+    },
+    "strengths": [
+      "The article accurately reports the release date and cast details, directly sourced from Variety.",
+      "The lead quickly delivers the core news, adhering to an inverted-pyramid structure for news reporting.",
+      "Subheads are clear and relevant, guiding the reader through the information.",
+      "The inclusion of the 'Bosch' franchise comparison adds a layer of interesting analysis beyond a simple news announcement.",
+      "The FAQs provide genuinely new and useful information, addressing common reader questions.",
+      "The language is generally plain and accessible, avoiding overly complex jargon.",
+      "The article avoids generic AI tells and filler praise, focusing on specific details.",
+      "The keyword 'reacher spinoff' is present naturally without feeling forced."
+    ],
+    "weaknesses": [
+      "The Flesch score of 44 indicates the prose is denser than ideal for a busy fan, suggesting some sentences could be shorter or simpler.",
+      "While avoiding overt AI tells, the 'analysis suggests' phrasing in the 'Bosch' connection section is a bit passive and could be more direct.",
+      "The article could benefit from slightly more varied sentence rhythm to improve flow and engagement.",
+      "The 'dek' is a bit long and could be more concise while still conveying the key information."
+    ],
+    "deterministic": {
+      "words": 362,
+      "h2s": 3,
+      "h2Questions": 3,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 3,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 35,
+      "avgSentence": 18,
+      "flesch": 44,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 1,
+      "hardBlocks": []
+    },
+    "hardBlocks": []
+  },
+  "score": 82,
+  "category": "tv",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 1,
+    "failed": [
+      "external sources ≥2"
+    ]
+  },
+  "ms": 251359
+}

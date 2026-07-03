@@ -1,0 +1,92 @@
+{
+  "id": "news-palpatine-star-wars-series-discussion",
+  "slug": "yes-a-palpatine-star-wars-series-should-happen-just-not-where-you-thin",
+  "status": "needs_review",
+  "stages": {
+    "attempt1": {
+      "score": 0,
+      "cat": "tv/news",
+      "img": "/images/articles/yes-a-palpatine-star-wars-series-should-happen-just-not-where-you-thin.jpg",
+      "hardBlocks": [
+        "CONTRADICTED [platform]: article says Star Wars streams on Disney+ — TMDB/JustWatch shows Star Wars streams on Disney Plus, AMC Plus Apple TV Channel, AMC+, AMC+ Roku Premium Channel, YouTube TV, AMC, Philo, NOT Disney+. State only Disney Plus, AMC Plus Apple TV Channel, AMC+, AMC+ Roku Premium Channel, YouTube TV, AMC, Philo."
+      ],
+      "block": [
+        "CONTRADICTED [platform]: article says Star Wars streams on Disney+ — TMDB/JustWatch shows Star Wars streams on Disney Plus, AMC Plus Apple TV Channel, AMC+, AMC+ Roku Premium Channel, YouTube TV, AMC, Philo, NOT Disney+. State only Disney Plus, AMC Plus Apple TV Channel, AMC+, AMC+ Roku Premium Channel, YouTube TV, AMC, Philo."
+      ],
+      "fixable": [],
+      "badClaims": 0
+    },
+    "attempt2": {
+      "score": 0,
+      "cat": "tv/news",
+      "img": "/images/articles/yes-a-palpatine-star-wars-series-should-happen-just-not-where-you-thin.jpg",
+      "hardBlocks": [
+        "CONTRADICTED [platform]: article says Star Wars streams on Disney+ — TMDB/JustWatch shows Star Wars streams on Disney Plus, AMC Plus Apple TV Channel, AMC+, AMC+ Roku Premium Channel, YouTube TV, AMC, Philo, NOT Disney+. State only Disney Plus, AMC Plus Apple TV Channel, AMC+, AMC+ Roku Premium Channel, YouTube TV, AMC, Philo."
+      ],
+      "block": [
+        "CONTRADICTED [platform]: article says Star Wars streams on Disney+ — TMDB/JustWatch shows Star Wars streams on Disney Plus, AMC Plus Apple TV Channel, AMC+, AMC+ Roku Premium Channel, YouTube TV, AMC, Philo, NOT Disney+. State only Disney Plus, AMC Plus Apple TV Channel, AMC+, AMC+ Roku Premium Channel, YouTube TV, AMC, Philo."
+      ],
+      "fixable": [],
+      "badClaims": 0
+    },
+    "attempt3": {
+      "score": 0,
+      "cat": "tv/news",
+      "img": "/images/articles/yes-a-palpatine-star-wars-series-should-happen-just-not-where-you-thin.jpg",
+      "hardBlocks": [
+        "CONTRADICTED [platform]: article says Star Wars streams on Disney+ — TMDB/JustWatch shows Star Wars streams on Disney Plus, AMC Plus Apple TV Channel, AMC+, AMC+ Roku Premium Channel, YouTube TV, AMC, Philo, NOT Disney+. State only Disney Plus, AMC Plus Apple TV Channel, AMC+, AMC+ Roku Premium Channel, YouTube TV, AMC, Philo."
+      ],
+      "block": [
+        "CONTRADICTED [platform]: article says Star Wars streams on Disney+ — TMDB/JustWatch shows Star Wars streams on Disney Plus, AMC Plus Apple TV Channel, AMC+, AMC+ Roku Premium Channel, YouTube TV, AMC, Philo, NOT Disney+. State only Disney Plus, AMC Plus Apple TV Channel, AMC+, AMC+ Roku Premium Channel, YouTube TV, AMC, Philo."
+      ],
+      "fixable": [],
+      "badClaims": 0
+    }
+  },
+  "scorecard": {
+    "score": 0,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [
+      "deterministic block"
+    ],
+    "deterministic": {
+      "words": 361,
+      "h2s": 4,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": true,
+      "faqCount": 4,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 41,
+      "avgSentence": 20,
+      "flesch": 50,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": []
+    },
+    "hardBlocks": [
+      "CONTRADICTED [platform]: article says Star Wars streams on Disney+ — TMDB/JustWatch shows Star Wars streams on Disney Plus, AMC Plus Apple TV Channel, AMC+, AMC+ Roku Premium Channel, YouTube TV, AMC, Philo, NOT Disney+. State only Disney Plus, AMC Plus Apple TV Channel, AMC+, AMC+ Roku Premium Channel, YouTube TV, AMC, Philo."
+    ]
+  },
+  "holdReason": "accuracy/grounding block: CONTRADICTED [platform]: article says Star Wars streams on Disney+ — TMDB/JustWatch shows Star Wars streams on Disney Plus, AMC Plus Apple TV Channel, AMC+, AMC+ Roku Premium Channel, YouTube TV, AMC, Philo, NOT Disney+. State only Disney Plus, AMC Plus Apple TV Channel, AMC+, AMC+ Roku Premium Channel, YouTube TV, AMC, Philo.",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "external sources ≥2",
+      "score ≥ 70",
+      "zero hard-blocks",
+      "infoGain ≥ 5",
+      "readability ≥ 6",
+      "humanVoice ≥ 7",
+      "phrasing ≥ 7"
+    ]
+  },
+  "ms": 219004
+}

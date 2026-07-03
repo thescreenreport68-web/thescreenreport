@@ -1,32 +1,31 @@
+// One newsletter spec (spec §F6): white ground, 2px ink rules top and bottom,
+// display-caps title + italic serif cadence line, hairline input, red button.
 export default function NewsletterBand() {
   return (
-    <section
-      id="newsletter"
-      className="my-12 rounded-lg bg-navy px-6 py-10 text-center text-white"
-    >
-      <h2 className="font-serif text-2xl font-bold sm:text-3xl">
-        Never miss the story
-      </h2>
-      <p className="mx-auto mt-2 max-w-xl text-white/70">
-        The biggest Hollywood headlines, the best of streaming, and the celebrity
-        news that matters — straight to your inbox.
-      </p>
-      <form
-        action="#"
-        className="mx-auto mt-5 flex max-w-md gap-2"
-        aria-label="Newsletter signup"
-      >
-        <input
-          type="email"
-          required
-          placeholder="Your email address"
-          className="w-full rounded-sm px-4 py-2.5 text-ink"
-        />
-        <button className="whitespace-nowrap rounded-sm bg-gold px-5 py-2.5 font-bold text-navy hover:bg-gold-600">
-          Subscribe
-        </button>
-      </form>
-      <p className="mt-3 text-xs text-white/50">No spam. Unsubscribe anytime.</p>
+    <section id="newsletter" className="my-12 border-y-2 border-ink py-8">
+      <div className="grid items-center gap-6 lg:grid-cols-2">
+        <div>
+          <h2 className="sect-head">The Screen Report Daily</h2>
+          <p className="sect-tag mt-2">
+            Every story that matters in film and TV, each morning.
+          </p>
+        </div>
+        <form
+          action="#"
+          className="flex w-full max-w-md lg:justify-self-end"
+          aria-label="Newsletter signup"
+        >
+          <input
+            type="email"
+            required
+            placeholder="Your email address"
+            className="w-full border border-ink px-3 py-2.5 font-sans text-sm text-ink placeholder:text-gray focus:outline-none"
+          />
+          <button className="btn-label whitespace-nowrap bg-red px-5 py-2.5 text-paper transition-colors duration-150 hover:bg-red-dark">
+            Sign Up
+          </button>
+        </form>
+      </div>
     </section>
   );
 }

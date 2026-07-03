@@ -1,0 +1,87 @@
+{
+  "id": "news-warner-bros-animation-dark-shadows-animated-series",
+  "slug": "warner-bros-animation-announces-dark-shadows-animated-series",
+  "status": "needs_review",
+  "stages": {
+    "attempt1": {
+      "score": 85,
+      "cat": "tv/news",
+      "img": "/images/articles/warner-bros-animation-announces-dark-shadows-animated-series.jpg",
+      "hardBlocks": [
+        "Flesch 38 < 40 (too dense to read comfortably)"
+      ]
+    },
+    "attempt2": {
+      "score": 85,
+      "cat": "tv/news",
+      "img": "/images/articles/warner-bros-animation-announces-dark-shadows-animated-series.jpg",
+      "hardBlocks": [
+        "body 313w < 350",
+        "Flesch 36 < 40 (too dense to read comfortably)"
+      ]
+    }
+  },
+  "scorecard": {
+    "score": 85,
+    "subscores": {
+      "accuracy": 10,
+      "readability": 9,
+      "humanVoice": 8,
+      "phrasing": 8,
+      "curiosity": 9,
+      "structure": 9,
+      "infoGain": 8,
+      "seo": 7,
+      "faqQuality": 8,
+      "completeness": 9
+    },
+    "strengths": [
+      "Clear and concise lead that answers the core question immediately.",
+      "Good use of subheads to break up the text and guide the reader.",
+      "Key Takeaways section effectively summarizes the main points.",
+      "Accurate reporting of the core announcement, attributed to Variety.",
+      "FAQ section provides relevant additional information.",
+      "The article successfully avoids AI-like phrasing and maintains a human voice."
+    ],
+    "weaknesses": [
+      "The 'Why does this announcement matter?' section could be slightly more engaging.",
+      "SEO score is moderate; while keywords are present naturally, there's room for more strategic integration if it doesn't compromise readability.",
+      "The dek could be slightly more specific about the 'strategic expansion'."
+    ],
+    "deterministic": {
+      "words": 313,
+      "h2s": 3,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 3,
+      "hasSources": true,
+      "faqCount": 4,
+      "ktCount": 5,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 29,
+      "avgSentence": 12,
+      "flesch": 36,
+      "bannedTells": 1,
+      "kwExact": 1,
+      "hardBlocks": [
+        "body 313w < 350",
+        "Flesch 36 < 40 (too dense to read comfortably)"
+      ]
+    },
+    "hardBlocks": [
+      "body 313w < 350",
+      "Flesch 36 < 40 (too dense to read comfortably)"
+    ]
+  },
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "body ≥ 350w",
+      "zero hard-blocks"
+    ]
+  },
+  "ms": 109980
+}

@@ -1,63 +1,156 @@
 {
   "id": "zendaya-odyssey-news",
   "slug": "zendaya-the-odyssey-christopher-nolan",
-  "status": "published",
+  "status": "needs_review",
   "stages": {
     "attempt1": {
-      "score": 84,
+      "score": 82,
       "cat": "celebrity/news",
-      "img": "/images/articles/zendaya-the-odyssey-christopher-nolan.jpg",
-      "hardBlocks": []
+      "hardBlocks": [
+        "verify-gate CUT: 7 claim(s) not in the gathered sources — Jon Bernthal is listed among the cast of The Odyssey; Benny Safdie is listed among the cast of The Odyssey; Himesh Patel is listed among the cast of The Odyssey"
+      ],
+      "block": [
+        "verify-gate CUT: 7 claim(s) not in the gathered sources — Jon Bernthal is listed among the cast of The Odyssey; Benny Safdie is listed among the cast of The Odyssey; Himesh Patel is listed among the cast of The Odyssey"
+      ],
+      "fixable": [],
+      "badClaims": 0
+    },
+    "attempt2": {
+      "score": 0,
+      "cat": "celebrity/news",
+      "hardBlocks": [
+        "prompt-leak / meta-refusal phrase reached reader copy (e.g. 'not detailed in the provided facts' / 'the reference facts') — rewrite or omit"
+      ],
+      "block": [
+        "prompt-leak / meta-refusal phrase reached reader copy (e.g. 'not detailed in the provided facts' / 'the reference facts') — rewrite or omit"
+      ],
+      "fixable": [],
+      "badClaims": 0
     }
   },
-  "scorecard": {
-    "score": 84,
-    "subscores": {
-      "accuracy": 10,
-      "curiosity": 8,
-      "readability": 9,
-      "structure": 9,
-      "infoGain": 7,
-      "seo": 8,
-      "faqQuality": 9,
-      "voice": 8,
-      "engagement": 8,
-      "completeness": 8
+  "editorial": {
+    "status": "confirmed",
+    "entity": "Zendaya",
+    "work": {
+      "title": "The Odyssey",
+      "year": null,
+      "medium": "movie"
     },
-    "strengths": [
-      "Every claim is consistent with the reference facts — cast list, Damon as Odysseus, Hathaway as Penelope, Syncopy, Zendaya's accolades and 2026 slate all check out; no fabricated quotes or numbers.",
-      "Strong BLUF lead: headline states one specific true claim and the lead delivers the answer in the first sentence with proper inverted-pyramid structure.",
-      "Clean, scannable formatting with short paragraphs, bolded key phrases, and question-based H2 subheads.",
-      "Six well-formed PAA-style FAQs that genuinely match likely search queries.",
-      "Honest about what isn't known (character role undisclosed) rather than inventing details — good news discipline.",
-      "Includes external authoritative sources and internal links (Dune, Euphoria)."
-    ],
+    "outlet": "Mashable"
+  },
+  "scorecard": {
+    "score": 0,
+    "subscores": {},
+    "strengths": [],
     "weaknesses": [
-      "Information gain is thin — it's largely a well-organized restatement of known facts with little original framing, verdict, or POV beyond 'major career move.'",
-      "The single 'unique sourced fact beyond the headline' is weak: the casting is attributed only to 'her career biography,' with no trade source (Variety/THR/Deadline) cited for the news itself — soft on attribution for a news piece.",
-      "Headline/dek lean slightly generic ('Epic'); curiosity gap could open a tighter loop.",
-      "Several H2 sections (career history, why it matters) pad the piece and dilute the freshness expected of short news.",
-      "No release date specificity beyond '2026' — acceptable given facts, but limits completeness.",
-      "Box Office Mojo listed as a source but not actually used to support any specific figure in the body."
+      "deterministic block"
     ],
     "deterministic": {
-      "words": 579,
-      "h2s": 6,
-      "h2Questions": 5,
-      "internalLinks": 2,
-      "externalLinks": 4,
+      "words": 364,
+      "h2s": 4,
+      "h2Questions": 3,
+      "internalLinks": 0,
+      "externalLinks": 0,
       "hasSources": true,
-      "faqCount": 6,
-      "ktCount": 4,
+      "faqCount": 4,
+      "ktCount": 3,
       "kwInTitle": true,
       "kwInFirst100": true,
-      "kwInH2": true,
-      "hardBlocks": []
+      "kwInH2": false,
+      "maxSentence": 34,
+      "avgSentence": 18,
+      "flesch": 56,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": [
+        "prompt-leak / meta-refusal phrase reached reader copy (e.g. 'not detailed in the provided facts' / 'the reference facts') — rewrite or omit"
+      ]
     },
-    "hardBlocks": []
+    "hardBlocks": [
+      "prompt-leak / meta-refusal phrase reached reader copy (e.g. 'not detailed in the provided facts' / 'the reference facts') — rewrite or omit"
+    ]
   },
-  "score": 84,
-  "category": "celebrity",
-  "subcategory": "news",
-  "ms": 81962
+  "holdReason": "accuracy/grounding block: prompt-leak / meta-refusal phrase reached reader copy (e.g. 'not detailed in the provided facts' / 'the reference facts') — rewrite or omit",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "keyword in title",
+      "≥1200px legal image",
+      "credit",
+      "score ≥ 70",
+      "zero hard-blocks",
+      "infoGain ≥ 5",
+      "readability ≥ 5",
+      "humanVoice ≥ 5",
+      "phrasing ≥ 5"
+    ]
+  },
+  "ms": 390996,
+  "previousRuns": [
+    {
+      "id": "zendaya-odyssey-news",
+      "slug": "zendaya-the-odyssey-christopher-nolan",
+      "status": "published",
+      "stages": {
+        "attempt1": {
+          "score": 84,
+          "cat": "celebrity/news",
+          "img": "/images/articles/zendaya-the-odyssey-christopher-nolan.jpg",
+          "hardBlocks": []
+        }
+      },
+      "scorecard": {
+        "score": 84,
+        "subscores": {
+          "accuracy": 10,
+          "curiosity": 8,
+          "readability": 9,
+          "structure": 9,
+          "infoGain": 7,
+          "seo": 8,
+          "faqQuality": 9,
+          "voice": 8,
+          "engagement": 8,
+          "completeness": 8
+        },
+        "strengths": [
+          "Every claim is consistent with the reference facts — cast list, Damon as Odysseus, Hathaway as Penelope, Syncopy, Zendaya's accolades and 2026 slate all check out; no fabricated quotes or numbers.",
+          "Strong BLUF lead: headline states one specific true claim and the lead delivers the answer in the first sentence with proper inverted-pyramid structure.",
+          "Clean, scannable formatting with short paragraphs, bolded key phrases, and question-based H2 subheads.",
+          "Six well-formed PAA-style FAQs that genuinely match likely search queries.",
+          "Honest about what isn't known (character role undisclosed) rather than inventing details — good news discipline.",
+          "Includes external authoritative sources and internal links (Dune, Euphoria)."
+        ],
+        "weaknesses": [
+          "Information gain is thin — it's largely a well-organized restatement of known facts with little original framing, verdict, or POV beyond 'major career move.'",
+          "The single 'unique sourced fact beyond the headline' is weak: the casting is attributed only to 'her career biography,' with no trade source (Variety/THR/Deadline) cited for the news itself — soft on attribution for a news piece.",
+          "Headline/dek lean slightly generic ('Epic'); curiosity gap could open a tighter loop.",
+          "Several H2 sections (career history, why it matters) pad the piece and dilute the freshness expected of short news.",
+          "No release date specificity beyond '2026' — acceptable given facts, but limits completeness.",
+          "Box Office Mojo listed as a source but not actually used to support any specific figure in the body."
+        ],
+        "deterministic": {
+          "words": 579,
+          "h2s": 6,
+          "h2Questions": 5,
+          "internalLinks": 2,
+          "externalLinks": 4,
+          "hasSources": true,
+          "faqCount": 6,
+          "ktCount": 4,
+          "kwInTitle": true,
+          "kwInFirst100": true,
+          "kwInH2": true,
+          "hardBlocks": []
+        },
+        "hardBlocks": []
+      },
+      "score": 84,
+      "category": "celebrity",
+      "subcategory": "news",
+      "ms": 81962
+    }
+  ]
 }

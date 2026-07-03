@@ -1,0 +1,97 @@
+{
+  "id": "trailer-colin-from-accounts-season-3-trailer",
+  "slug": "trailer-drops-for-colin-from-accounts-season-3",
+  "status": "needs_review",
+  "stages": {
+    "attempt1": {
+      "score": 65,
+      "cat": "tv/trailers",
+      "img": "/images/articles/trailer-drops-for-colin-from-accounts-season-3.jpg",
+      "hardBlocks": [
+        "fabricated: 'The episode count for the new season has not been officially announced. However, the production details confirm that directors Trent O’Donnell and Harriet Dyer are each directing four episodes for the season.' - The source states O'Donnell directs four and Dyer directs the other four, implying a total of eight episodes, not an unannounced count."
+      ],
+      "block": [
+        "fabricated: 'The episode count for the new season has not been officially announced. However, the production details confirm that directors Trent O’Donnell and Harriet Dyer are each directing four episodes for the season.' - The source states O'Donnell directs four and Dyer directs the other four, implying a total of eight episodes, not an unannounced count."
+      ],
+      "fixable": [],
+      "badClaims": 0
+    },
+    "attempt2": {
+      "score": 65,
+      "cat": "tv/trailers",
+      "img": "/images/articles/trailer-drops-for-colin-from-accounts-season-3.jpg",
+      "hardBlocks": [
+        "a 60-word run-on sentence (>55 — split it)",
+        "verify-gate CUT: 3 claim(s) not in the gathered sources — Trent O’Donnell split directing duties for the eight-ep; Harriet Dyer split directing duties for the eight-episo; Season 3 consists of eight episodes"
+      ],
+      "block": [
+        "verify-gate CUT: 3 claim(s) not in the gathered sources — Trent O’Donnell split directing duties for the eight-ep; Harriet Dyer split directing duties for the eight-episo; Season 3 consists of eight episodes"
+      ],
+      "fixable": [
+        "a 60-word run-on sentence (>55 — split it)"
+      ],
+      "badClaims": 0
+    },
+    "attempt3": {
+      "score": 0,
+      "cat": "tv/trailers",
+      "img": "/images/articles/trailer-drops-for-colin-from-accounts-season-3.jpg",
+      "hardBlocks": [
+        "prompt-leak / meta-refusal phrase reached reader copy (e.g. 'not detailed in the provided facts' / 'the reference facts') — rewrite or omit"
+      ],
+      "block": [
+        "prompt-leak / meta-refusal phrase reached reader copy (e.g. 'not detailed in the provided facts' / 'the reference facts') — rewrite or omit"
+      ],
+      "fixable": [],
+      "badClaims": 0
+    }
+  },
+  "scorecard": {
+    "score": 0,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [
+      "deterministic block"
+    ],
+    "deterministic": {
+      "words": 299,
+      "h2s": 3,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 2,
+      "hasSources": true,
+      "faqCount": 4,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 50,
+      "avgSentence": 20,
+      "flesch": 58,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": [
+        "prompt-leak / meta-refusal phrase reached reader copy (e.g. 'not detailed in the provided facts' / 'the reference facts') — rewrite or omit"
+      ]
+    },
+    "hardBlocks": [
+      "prompt-leak / meta-refusal phrase reached reader copy (e.g. 'not detailed in the provided facts' / 'the reference facts') — rewrite or omit"
+    ]
+  },
+  "holdReason": "accuracy/grounding block: prompt-leak / meta-refusal phrase reached reader copy (e.g. 'not detailed in the provided facts' / 'the reference facts') — rewrite or omit",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "body ≥ 400w",
+      "score ≥ 70",
+      "zero hard-blocks",
+      "infoGain ≥ 5",
+      "readability ≥ 6",
+      "humanVoice ≥ 7",
+      "phrasing ≥ 7"
+    ]
+  },
+  "ms": 402494
+}

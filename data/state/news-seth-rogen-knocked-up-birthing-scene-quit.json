@@ -1,0 +1,103 @@
+{
+  "id": "news-seth-rogen-knocked-up-birthing-scene-quit",
+  "slug": "seth-rogen-claims-huge-hollywood-megastar-quit-knocked-up-movie-over-b",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": 65,
+      "cat": "celebrity/news",
+      "img": "https://image.tmdb.org/t/p/original/nYl9bvQzaPQLzlf0wf75clLN6Hi.jpg",
+      "hardBlocks": [
+        "verify-gate BLOCK: Katherine Heigl played the female lead, Alison Scott, o; As of July 2026, neither the unnamed star nor represent"
+      ],
+      "block": [
+        "verify-gate BLOCK: Katherine Heigl played the female lead, Alison Scott, o; As of July 2026, neither the unnamed star nor represent"
+      ],
+      "fixable": [],
+      "badClaims": 0
+    },
+    "attempt2": {
+      "score": 75,
+      "cat": "celebrity/news",
+      "img": "https://image.tmdb.org/t/p/original/nYl9bvQzaPQLzlf0wf75clLN6Hi.jpg",
+      "hardBlocks": [
+        "verify-gate CUT: 3 claim(s) not in the gathered sources — 'Knocked Up' was a major box office success; 'Knocked Up' is a defining film of the era's studio com; Seth Rogen co-wrote 'This Is the End' (2013)"
+      ],
+      "block": [
+        "verify-gate CUT: 3 claim(s) not in the gathered sources — 'Knocked Up' was a major box office success; 'Knocked Up' is a defining film of the era's studio com; Seth Rogen co-wrote 'This Is the End' (2013)"
+      ],
+      "fixable": [],
+      "badClaims": 0
+    }
+  },
+  "acceptReason": "terminal-accept (verified accurate, score 75, 3 qualitative stray(s) accepted)",
+  "webCheck": {
+    "contradictions": 4,
+    "cut": 2
+  },
+  "scorecard": {
+    "score": 75,
+    "subscores": {
+      "accuracy": 9,
+      "readability": 8,
+      "humanVoice": 7,
+      "phrasing": 8,
+      "curiosity": 8,
+      "structure": 8,
+      "infoGain": 6,
+      "seo": 7,
+      "faqQuality": 8,
+      "completeness": 6
+    },
+    "strengths": [
+      "The article accurately attributes the core claim to Female First, adhering to the 'developing story' standard.",
+      "The lead quickly delivers the main point, satisfying the inverted-pyramid news structure.",
+      "Sentence rhythm is varied, and paragraphs are short, contributing to good readability.",
+      "The 'Who Is Seth Rogen?' section provides relevant and accurate biographical details.",
+      "The FAQ section adds new, relevant information about Seth Rogen's career and the film's director.",
+      "The article avoids generic AI tells and filler praise, maintaining a relatively human voice.",
+      "The title and dek are clear and avoid clickbait, setting appropriate expectations."
+    ],
+    "weaknesses": [
+      "The 'Information Gain' is somewhat limited; while it reports a new claim, it doesn't offer much original analysis beyond reiterating the claim's unconfirmed status.",
+      "The article repeats the full name 'Female First' multiple times where a pronoun or shorter reference might suffice, slightly impacting fluency.",
+      "The 'What Is the Status of the Claim?' section feels a bit redundant after the previous section, slightly impacting information gain and conciseness.",
+      "While the article avoids keyword stuffing, the exact keyword 'Knocked Up' appears 3 times, which is within limits but could be slightly more varied in phrasing if the article were longer."
+    ],
+    "deterministic": {
+      "words": 444,
+      "h2s": 4,
+      "h2Questions": 4,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 3,
+      "ktCount": 3,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 31,
+      "avgSentence": 16,
+      "flesch": 53,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 3,
+      "hardBlocks": []
+    },
+    "hardBlocks": [
+      "verify-gate CUT: 3 claim(s) not in the gathered sources — 'Knocked Up' was a major box office success; 'Knocked Up' is a defining film of the era's studio com; Seth Rogen co-wrote 'This Is the End' (2013)"
+    ]
+  },
+  "score": 75,
+  "category": "celebrity",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "external sources ≥2",
+      "zero hard-blocks"
+    ]
+  },
+  "ms": 235970
+}

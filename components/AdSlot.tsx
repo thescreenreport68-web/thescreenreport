@@ -1,6 +1,7 @@
 // Ad slots reserve their height so monetization never causes layout shift (CLS).
 // Real ad tags (AdSense / Ad Manager / Ezoic) drop into these containers later,
-// and below-the-fold slots are lazy-loaded. For now they render a labeled placeholder.
+// and below-the-fold slots are lazy-loaded. Until then: a quiet hairline-framed
+// well with the mono ADVERTISEMENT label — no dashed borders, no size chatter.
 
 export type AdFormat =
   | "billboard"
@@ -10,13 +11,13 @@ export type AdFormat =
   | "in-feed"
   | "anchor";
 
-const SIZES: Record<AdFormat, { label: string; box: string }> = {
-  billboard: { label: "970×250 / 728×90", box: "min-h-[250px]" },
-  leaderboard: { label: "728×90", box: "min-h-[90px]" },
-  rectangle: { label: "300×250", box: "min-h-[250px] max-w-[336px] mx-auto" },
-  halfpage: { label: "300×600", box: "min-h-[600px] w-[300px] mx-auto" },
-  "in-feed": { label: "Native / In-feed", box: "min-h-[120px]" },
-  anchor: { label: "320×50", box: "min-h-[50px]" },
+const SIZES: Record<AdFormat, string> = {
+  billboard: "min-h-[250px]",
+  leaderboard: "min-h-[90px]",
+  rectangle: "min-h-[250px] max-w-[336px] mx-auto",
+  halfpage: "min-h-[600px] w-[300px] mx-auto",
+  "in-feed": "min-h-[120px]",
+  anchor: "min-h-[50px]",
 };
 
 export default function AdSlot({
@@ -28,18 +29,12 @@ export default function AdSlot({
   className?: string;
   label?: string;
 }) {
-  const s = SIZES[format];
   return (
     <div
       data-ad-slot={format}
-      className={`flex w-full items-center justify-center rounded border border-dashed border-navy/20 bg-mist/70 ${s.box} ${className}`}
+      className={`flex w-full items-center justify-center border border-hair ${SIZES[format]} ${className}`}
     >
-      <div className="text-center">
-        <div className="text-[10px] font-semibold uppercase tracking-[0.25em] text-navy/40">
-          {label}
-        </div>
-        <div className="mt-1 text-[11px] text-navy/30">{s.label}</div>
-      </div>
+      <span className="meta-mono text-gray">{label}</span>
     </div>
   );
 }

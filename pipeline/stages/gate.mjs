@@ -3,6 +3,22 @@ import { GATE, MODELS } from "../config.mjs";
 import { verifyClaims } from "../lib/claimcheck.mjs";
 import { verifyGroundTruth } from "../lib/verifyEngine.mjs";
 import { verifyGate } from "../lib/verifyGate.mjs";
+import { verifyQuotes } from "../lib/quoteGuard.mjs";
+import { specificsGuard } from "../lib/specificsGuard.mjs";
+
+// PHASE C — classify a gate hardBlock string. BLOCK = an accuracy/grounding/must-have failure that must NEVER be
+// auto-published (a fabrication, a contradicted fact, an ungrounded stray the writer left in, a missing
+// image/embed/title). FIXABLE = a quality/structure nit (too short, missing FAQ/H2/links/Sources, a soft sub-score,
+// dense readability) — retried to improve, and ACCEPTABLE on the terminal attempt once the piece is verified accurate.
+// (2026-07-03 restructure: the judge no longer emits fabrication hardBlocks or an accuracy floor — accuracy
+// enforcement lives in the DETERMINISTIC layers (claimcheck + verifyEngine + verifyGate + quoteGuard) plus the
+// independent web reality-check, so "accuracy N < 8" double-jeopardy holds are gone from this regex.)
+const BLOCK_RX = /^fabricated:|^CONTRADICTED \[|verify-gate BLOCK:|verify-gate CUT:|fabricated\/altered quote:|unverified claim|ungrounded fact|ungrounded specific|garbled non-Latin|prompt-leak|wrong-title|identity mismatch|^no title|no embedded video|no embedded posts|no >=?1200px image/i;
+export function classifyBlocks(blocks) {
+  const block = [], fixable = [];
+  for (const b of blocks || []) (BLOCK_RX.test(b) ? block : fixable).push(b);
+  return { block, fixable };
+}
 
 // ---- Readability / human-voice helpers (free, deterministic) ----
 function plainProse(md) {
@@ -84,22 +100,40 @@ export function deterministic(article, topic) {
   // Per-niche structural thresholds: short-news is intentionally tighter (inverted pyramid, fast),
   // so the long-feature minimums (500w/6-FAQ/3-H2/Sources) would wrongly block it. Every other niche
   // keeps the strict rank-#1 defaults. The unique-value floor is still enforced via the LLM judge.
+  // Per-form structural floors — each matches that form's OWN writing contract in generate.mjs, so the gate
+  // never hard-blocks the very omission the writer prompt mandates (the audit caught the default forcing
+  // ext:2 + Sources onto link-light/embed forms whose primary source is a STRUCTURED field or a banned
+  // competitor, false-blocking correct drafts into wasted paid rewrites). All 8 news forms are explicit.
   const PROFILE = {
-    // short inverted-pyramid news (movie/tv/celeb brief): 1 H2 is fine, no key-takeaways floor (playbook).
-    news: { words: 300, faq: 3, h2: 1, kt: 0, ext: 2, sources: false },
-    // awards winners-list: the structured winners list is the bulk; the body is a lede + records narrative.
-    awards: { words: 300, faq: 3, h2: 1, kt: 3, ext: 2, sources: true },
-    // PLAYBOOK new/changed forms:
+    // short inverted-pyramid news (movie/tv/celeb brief): a casting brief may legitimately have NO external
+    // link (the contract says to OMIT Sources rather than pad with competitor links) — so ext:0, sources:false.
+    news: { words: 300, faq: 3, h2: 1, kt: 0, ext: 0, sources: false },
+    // box-office: usually cites Box Office Mojo (one primary source) — require at most that, never 2.
+    "box-office": { words: 400, faq: 3, h2: 2, kt: 3, ext: 1, sources: false },
+    // trailer preview: the embed + official synopsis are STRUCTURED fields, not body links.
+    trailer: { words: 400, faq: 3, h2: 2, kt: 0, ext: 0, sources: false },
+    // reaction roundup: sources are the EMBEDDED posts (structured tweetIds), aggregate attribution only.
+    reaction: { words: 400, faq: 3, h2: 2, kt: 0, ext: 0, sources: false },
+    // single-title where-to-watch news (just hit streaming / got a date):
     watchguide: { words: 600, faq: 3, h2: 2, kt: 3, ext: 2, sources: true },
-    recap: { words: 500, faq: 2, h2: 2, kt: 0, ext: 1, sources: false }, // recaps are short + spoiler-forward
-    predictions: { words: 550, faq: 3, h2: 1, kt: 3, ext: 2, sources: true },
-    // rankings need length for entries, but keep the floor MODEST (playbook Part-6 anti-padding rail) so a
-    // tight, fully-grounded ranking isn't pushed to fabricate entries to clear it. 700 clears a real ranking.
-    list: { words: 700, faq: 3, h2: 2, kt: 3, ext: 2, sources: true },
-    review: { words: 650, faq: 3, h2: 2, kt: 3, ext: 2, sources: true },
+    // awards winners-list: the structured winners list is the bulk; cites the ceremony's official source.
+    awards: { words: 300, faq: 3, h2: 1, kt: 3, ext: 2, sources: true },
+    // music news: the official artist post is a STRUCTURED embed; competitor outlets are banned as links.
+    "music-news": { words: 350, faq: 3, h2: 1, kt: 0, ext: 0, sources: false },
+    // music awards: like awards, has the ceremony's official source.
+    "music-awards": { words: 300, faq: 3, h2: 1, kt: 3, ext: 2, sources: true },
   };
-  // Defaults RELAXED (anti over-SEO): FAQ 6->4 (Google removed FAQ rich results), H2 3->2, body 500->400.
-  const p = PROFILE[topic.formatTag] || { words: 400, faq: 3, h2: 2, kt: 3, ext: 2, sources: true };
+  // Fallback (should be unreachable now that all 8 news forms are explicit) keeps the strict rank-#1 default.
+  const base = PROFILE[topic.formatTag] || { words: 400, faq: 3, h2: 2, kt: 3, ext: 2, sources: true };
+  // C3 — GROUNDING-AWARE FLOORS: when the verified grounding is THIN (few sources / little real text), a SHORTER,
+  // fully-grounded brief is the CORRECT output (Phase B tells the writer to write short, never pad/fabricate). Relax
+  // the length/section/link floors so "accurate but short" is a legal, non-blocked outcome instead of a pad-or-block.
+  const bsrc = (topic._bundle && topic._bundle.sources) || [];
+  const groundChars = bsrc.reduce((n, s) => n + (s.text || "").length, 0);
+  const thinGrounding = bsrc.length < 2 || groundChars < 1500;
+  const p = thinGrounding
+    ? { ...base, words: Math.min(base.words, 220), h2: Math.min(base.h2, 1), faq: Math.min(base.faq, 2), kt: 0, ext: 0, sources: false }
+    : base;
 
   const hardBlocks = [];
   if (!article.title) hardBlocks.push("no title");
@@ -142,13 +176,6 @@ export function deterministic(article, topic) {
   // PLAYBOOK per-form deterministic guards — fire ONLY on clear, unambiguous violations (the judge handles
   // nuance). Each enforces the form's load-bearing promise so a structurally-wrong piece routes to review.
   const ft = topic.formatTag;
-  // a review/recap MUST deliver a verdict or a rating
-  if ((ft === "review" || ft === "recap") && !article.verdict && !(article.rating && typeof article.rating.score === "number"))
-    hardBlocks.push(`${ft} has no verdict/rating (a review must deliver a verdict)`);
-  // a RANKED list must be decisive — if entries are ranked, one must be #1
-  if ((ft === "list" || ft === "guide") && Array.isArray(article.entries) && article.entries.length >= 3 &&
-      article.entries.some((e) => typeof e?.rank === "number") && !article.entries.some((e) => Number(e?.rank) === 1))
-    hardBlocks.push("ranked entries but no #1 (be decisive)");
   // a trailer whose TITLE promises "N Reveals/Things" must match the reveals contract
   const countM = (article.title || "").match(/\b(\d{1,2})\s+(reveals?|things|takeaways|moments)\b/i);
   if (ft === "trailer" && countM && Array.isArray(article.reveals) && article.reveals.length !== Number(countM[1]))
@@ -183,42 +210,24 @@ const RUBRIC = `Score The Screen Report's READER-FIRST standard. Reader experien
 // into the judge prompt so the >=80 gate enforces EACH form's standard. (news/box-office/awards stay inline
 // above.) Each = "judge by [X]; reward [payoff]; hard-block [failure mode]."
 const PLAYBOOK_NOTES = {
-  list:
-    "NOTE: this is a RANKED LIST — reward a stated criterion, a decisive DEFENDED #1, and a fresh hook on every entry; penalize interchangeable boilerplate praise, plot-summary-as-blurb, a padded count, and unjustified ranks. Don't require essayistic length; reward decisiveness.",
-  guide:
-    "NOTE: this is a curated best-of list — reward a clear angle + a decisive editor's pick + rotated, verdict-first blurbs; penalize 'Netflix has tons' openers, 'This movie follows…' summary blurbs, and an undefended pick. Availability claims must match the facts.",
-  explainer:
-    "NOTE: this is an EXPLAINER — reward a fast frame-then-answer lede, a COMMITTED reading, and question-phrased H2s; hard-block an 'open to interpretation' non-answer, meaning-before-plot inversion, and any invented fate/post-credits/'the director said'.",
   trailer:
     "NOTE: this is a TRAILER preview (we did NOT watch it) — reward >=3 grounded context layers; HARD-BLOCK any shot/edit/dialogue/music/runtime narration ('the camera', 'we see', 'opens on', music cues) and any non-verbatim character quote. Date discipline: one exact release date everywhere.",
   reaction:
     "NOTE: this is a REACTION roundup — reward aggregate synthesis of the discourse + a forward 'what it signals'; hard-block named-user attribution, fabricated engagement numbers, and reviewing the film instead of the reaction.",
   watchguide:
     "NOTE: this is a single-title WHERE-TO-WATCH guide — reward the answer in the first 1-2 sentences, a clear Stream/Rent/Buy distinction, and shown reasoning on any window; hard-block a platform/date with NO receipt-or-estimate-label, device-list/boilerplate filler, and bloat past ~1100 words.",
-  profile:
-    "NOTE: this is a no-access celebrity PROFILE — reward a thesis + named eras + a triangulation graf; HARD-BLOCK a faked in-room/hotel scene (we did not interview them) and PR-bio transcribed as if observed.",
-  interview:
-    "NOTE: this is an INTERVIEW summary — reward a BLUF revelation + paraphrase-then-quote rhythm + thematic organization; hard-block invented scene-setting, quote-dumping, and wrong-speaker attribution. Quotes must be verbatim from the transcript/facts.",
-  review:
-    "NOTE: this is a REVIEW — reward a verdict-first stance, praise CHAINED to a named grounded reason, and one earned reservation; hard-block >50% plot-summary, non-verbatim dialogue quotes, a spoiler (it is not a recap), and prose POV that contradicts the score.",
-  recap:
-    "NOTE: this is an EPISODE RECAP (spoilers ON) — reward a spoiler banner, beat-by-beat analysis tied to the season arcs, and a 'Loose Threads' close; hard-block inventing a scene/line/death or any unaired episode, and grading the whole season.",
-  predictions:
-    "NOTE: this is an AWARDS PREDICTIONS piece — reward a state-of-the-race lede, every frontrunner citing a REAL named precursor, and a named spoiler; HARD-BLOCK anonymous sourcing ('insiders say'), fabricated %/odds, a logistics/ceremony-date lede, and listing contenders without ranking them.",
 };
 
-export async function judge({ article, topic, model, metrics, groundTruth }) {
-  // The judge must see enough grounding to VERIFY claims (truncating long Wikipedia extracts causes
-  // false "fabrication" flags on facts that live deeper in the article). Keep short must-verify blocks
-  // (reactions, TMDB, release info) whole; cap long extracts generously.
+export async function judge({ article, topic, model, metrics }) {
+  // SCORE-ONLY judge (2026-07-03 restructure): quality scoring is its whole job — fabrication catching is owned
+  // by the deterministic layers (claimcheck/verifyEngine/verifyGate/quoteGuard) + the web reality-check, which
+  // was the 4th redundant pass over the same facts on the priciest model. Facts are provided as CONTEXT so the
+  // accuracy/infoGain subscores are informed, capped tight (the old 60k-char injection paid for verification
+  // this call no longer performs).
   const facts = (topic.facts || [])
-    .map((f) => {
-      const ex = f.extract || "";
-      const cap = ex.length <= 3000 ? ex.length : 18000;
-      return `- ${f.title}: ${ex.slice(0, cap)}`;
-    })
+    .map((f) => `- ${f.title}: ${(f.extract || "").slice(0, 2500)}`)
     .join("\n")
-    .slice(0, 60000);
+    .slice(0, 16000);
   const user = `${RUBRIC}
 
 PRIMARY KEYWORD: ${topic.primaryKeyword}
@@ -229,13 +238,12 @@ ${topic.formatTag === "awards" ? "NOTE: this is an AWARDS WINNERS-LIST — judge
 ${PLAYBOOK_NOTES[topic.formatTag] || ""}
 ${metrics ? `EDITOR METRICS (deterministic — factor into readability/phrasing/humanVoice): Flesch ${metrics.flesch} (target 60-72; <50 reads dense), avg sentence ${metrics.avgSentence}w, longest sentence ${metrics.maxSentence}w, generic-tell/AI-cliche hits ${metrics.bannedTells}, breathless filler-praise hits ${metrics.fillerPraise ?? 0} (each unbacked "stunning/masterful/riveting" is an AI-review tell — dock humanVoice), exact-keyword repeats ${metrics.kwExact}.` : ""}
 
-${groundTruth && groundTruth.findings.length ? `⚠ MECHANICALLY VERIFIED CONTRADICTIONS — each was checked IN CODE against authoritative structured data (TMDB credits/dates/platform + OMDb ratings/box office) BEFORE you ran. Treat EVERY item below as a confirmed hardBlock regardless of how confident or polished the prose reads, and copy it into your hardBlocks:
-${groundTruth.findings.map((f) => `• [${f.layer}] ${f.why}`).join("\n")}
-
-` : ""}REFERENCE FACTS the article was grounded on (these are the authoritative, VERIFIED facts — TMDB + OMDb (credits/dates/providers/ratings/box-office), the official Academy Awards Database + first-party Golden Globes/Emmys (award winners), MusicBrainz + Last.fm + Billboard (music/charts), GDELT (breaking corroboration) — NO Wikipedia). A claim CONSISTENT with these is accurate. But you must also be STRICT about gaps: any checkable specific the article asserts — a Rotten Tomatoes/Metacritic/IMDb score or any %, a box-office/dollar figure, a date or year, a streaming platform, an award winner or nomination, a Billboard/chart position, a streaming-viewership number, a runtime — that is NOT present in these facts is UNGROUNDED: flag it as "fabricated: <the claim>". Do NOT give the writer the benefit of the doubt on a specific that does not appear here, no matter how plausible it sounds (every past fabrication was a plausible gap-fill, not a contradiction). Do NOT flag obvious common-knowledge background or analysis/opinion that asserts no specific.
+REFERENCE FACTS the article was grounded on (context for your accuracy/infoGain subscores — a separate
+deterministic verification layer has ALREADY diffed every claim against the full grounding, so do NOT
+re-verify claim-by-claim; score how faithfully and how informatively the article works its material):
 ${facts}
 
-ARTICLE (prose + the STRUCTURED FIELDS readers see — verify these too; invented winners/platforms/dates live here):
+ARTICLE (prose + the STRUCTURED FIELDS readers see):
 ${JSON.stringify({
     title: article.title,
     dek: article.dek,
@@ -259,20 +267,9 @@ ${JSON.stringify({
     verdictBuckets: article.verdictBuckets,
   }).slice(0, 28000)}
 
-FABRICATION CHECK (do this FIRST, before scoring — be mechanical and strict; this is the most important job):
-Go through the article and check EACH of these against the REFERENCE FACTS. Add any unsupported one to hardBlocks as "fabricated: <the exact claim>":
- (a) direct quotes in quotation marks; (b) dollar figures / box-office numbers; (c) specific dates; (d) awards/nominations/winners/records; (e) deep-link IDs like "tt1234567"; (f) named statistics (RT/Metacritic %); (l) a Billboard/chart position or a music certification; (m) a streaming-viewership number (X million views/hours) — there is NO public source for OTT viewership, so any specific figure not attributed to a named outlet in the facts is fabricated.
- (g) EPISODES & SEASONS (critical): every specific episode or season the article names or ranks MUST appear in the REFERENCE FACTS. If the facts describe a show only through Season 2 and the article ranks or describes a "Season 3" episode (or any episode/title not in the facts), that episode is FABRICATED — flag it. Do not assume a later season exists.
- (h) RELEASE / AIR STATUS (critical): a review, ranking, or box-office report is only valid for a work that the facts show is RELEASED/AIRED. If the article reviews, reports box office for, or ranks episodes of something the facts indicate is unreleased / not-yet-aired / has no such data, flag it as "fabricated: reports on unreleased/unaired content".
- (i) TITLE IDENTITY (critical — name collisions): the article must be about the SAME specific title as the REFERENCE FACTS (matching year/director/cast). Many works share similar names. If the article's plot, cast, or details clearly describe a DIFFERENT work than the one in the facts (a same-named or similar-named other film/show), flag it as "fabricated: wrong-title / identity mismatch".
- (j) RANKED ITEMS: in a list/ranking, every ranked entry should be grounded; flag any invented entry.
- (k) STREAMING PLATFORM (critical): any claim that a title streams on / is available on / is a "[Platform] original" MUST match the platform named in the facts. A different platform is a fabrication ("fabricated: says X streams on Netflix, facts show Prime Video"). If the facts mark a film STREAMING-ORIGINAL, any box-office/theatrical claim for it is fabricated.
-Rule of thumb: for (b)(d)(f)(g)(h)(i)(k), if a must-be-sourced specific is NOT in the facts, FLAG it — never pass a likely fabrication. (Do NOT flag obvious common-knowledge background, well-known released films, or current-availability claims that match the facts.)
-
 Return STRICT JSON:
 { "score": 0-100 (reader-first: a high-SEO but stiff/generic/keyword-stuffed piece must score LOW),
   "subscores": {"accuracy":0-10,"readability":0-10,"humanVoice":0-10,"phrasing":0-10,"curiosity":0-10,"structure":0-10,"infoGain":0-10,"seo":0-10,"faqQuality":0-10,"completeness":0-10},
-  "hardBlocks": ["any likely-fabricated fact or rule violation"],
   "strengths": ["..."],
   "weaknesses": ["..."] }`;
   const { data } = await chat({
@@ -280,7 +277,7 @@ Return STRICT JSON:
     system: "You are a demanding features editor who prizes readability and a genuine human voice ABOVE mechanical SEO. You are NOT an AI detector — never guess at origin; score craft and reader experience. Be strict and specific. Output strict JSON only.",
     user,
     json: true,
-    maxTokens: 1500,
+    maxTokens: 900,
     temperature: 0.2,
   });
   return data;
@@ -305,10 +302,13 @@ export async function gate({ article, topic, judgeModel }) {
   // The merged claim-check payload the run.mjs self-correct loop reads (corrections drive the rewrite).
   const claimCheck = { ok: cc.ok && gt.ok, corrections: factCorrections, bad: cc.bad, verdicts: cc.verdicts, contradicted: [...cc.contradicted, ...gt.contradicted], groundTruth: gt.findings };
 
-  // Cost short-circuit: a structurally-broken draft routes to retry WITHOUT paying the LLM judge — but we
-  // still surface the free fact corrections so the rewrite fixes structure AND facts in one pass.
-  if (det.hardBlocks.length) {
-    return { score: 0, pass: false, subscores: {}, deterministic: det, hardBlocks: [...det.hardBlocks, ...factBlocks], claimCheck, strengths: [], weaknesses: ["deterministic block"] };
+  // Cost short-circuit: skip the paid LLM judge ONLY when the draft has a REAL block — a fabrication (factBlocks)
+  // or a det BLOCK-category issue (garbled/prompt-leak/missing-title). A draft with only FIXABLE det nits (e.g.
+  // keyword-not-in-title, too-short) STILL runs the judge so an accurate article gets a real score the Phase C
+  // terminal-accept path can use (else an SEO nit would silently zero the score and hold an accurate piece).
+  const detBlock = classifyBlocks(det.hardBlocks).block;
+  if (detBlock.length || factBlocks.length) {
+    return { score: 0, pass: false, subscores: {}, deterministic: det, hardBlocks: [...det.hardBlocks, ...factBlocks], claimCheck, cutClaims: claimCheck.contradicted.map((c) => c.claim).filter(Boolean), strengths: [], weaknesses: ["deterministic block"] };
   }
 
   // UNIVERSAL VERIFY GATE (rebuild Step 3/4): independently extract + verify EVERY claim against the gathered
@@ -322,26 +322,41 @@ export async function gate({ article, topic, judgeModel }) {
   const vg = vbundle.sources.length ? await verifyGate({ article, bundle: vbundle, model: MODELS.verify || "google/gemini-2.5-flash-lite" }) : null;
   if (vg && vg.corrections) claimCheck.corrections = [claimCheck.corrections, vg.corrections].filter(Boolean).join("\n");
 
-  const j = await judge({ article, topic, model: judgeModel, metrics: det, groundTruth: gt });
+  // DETERMINISTIC verbatim-quote guard (Phase B, model-independent): every quoted phrase must be a real
+  // substring of the gathered source bundle AND not lifted out of a denial — catches misquotes the LLM pass
+  // can miss, every time, at $0. A bad quote is a fixable block with a precise instruction.
+  const qg = verifyQuotes(article, vbundle);
+  if (!qg.ok) claimCheck.corrections = [claimCheck.corrections, `FABRICATED/ALTERED QUOTE — the quoted phrase(s) ${qg.badQuotes.map((q) => `"${q}"`).join(", ")} are NOT verbatim in the gathered sources. Use ONLY the exact words from the ON-THE-RECORD QUOTES, or remove the quotation marks and paraphrase.`].filter(Boolean).join("\n");
+
+  // DETERMINISTIC specifics guard (gossip port, 2026-07-03): every significant NUMBER in reader copy and every
+  // "according to X" attribution must exist in the grounding — model-independent, $0, fires every time. Its
+  // findings are CUTTABLE (they join cutClaims below), so a stray figure is removed, never a dead-end hold.
+  const sg = specificsGuard(article, vbundle.sources, topic);
+  if (!sg.ok) claimCheck.corrections = [claimCheck.corrections, sg.corrections].filter(Boolean).join("\n");
+
+  const j = await judge({ article, topic, model: judgeModel, metrics: det });
   const ss = j.subscores || {};
-  const hardBlocks = [...det.hardBlocks, ...(j.hardBlocks || []), ...factBlocks];
+  // Judge = SCORE-ONLY (2026-07-03): its hardBlocks/fabrication pass was the 4th redundant layer over the same
+  // facts and produced un-cuttable double-jeopardy holds. Fabrication blocks come exclusively from the
+  // deterministic layers above (factBlocks) + the verify gate below + the web reality-check in run.mjs.
+  const hardBlocks = [...det.hardBlocks, ...factBlocks];
   // A verify-gate BLOCK ALWAYS hard-blocks — even with an empty unsupported[] (the cheap extractor returned no
   // claims, or the bundle was empty): a draft the gate could NOT analyze must NOT pass (fail-closed, never open).
   if (vg && vg.verdict === "BLOCK")
     hardBlocks.push(`verify-gate BLOCK: ${vg.unsupported.length ? vg.unsupported.slice(0, 3).map((u) => u.claim.slice(0, 55)).join("; ") : (vg.reason || "could not verify the article against the gathered sources")}`);
   else if (vg && vg.verdict === "CUT" && vg.unsupported.length)
     hardBlocks.push(`verify-gate CUT: ${vg.unsupported.length} claim(s) not in the gathered sources — ${vg.unsupported.slice(0, 3).map((u) => u.claim.slice(0, 55)).join("; ")}`);
+  if (!qg.ok) hardBlocks.push(`fabricated/altered quote: ${qg.badQuotes.slice(0, 2).map((q) => '"' + q.slice(0, 50) + '"').join("; ")} — use the exact source words or drop the quotation marks`);
+  if (!sg.ok) hardBlocks.push(`ungrounded specific(s): ${sg.bad.slice(0, 3).map((b) => b.text).join("; ")} — every figure/outlet must exist in the gathered sources or authoritative facts`);
   if (cc.bad.length) hardBlocks.push(`${cc.bad.length} unverified claim(s) (need correction)`);
   if (gt.findings.length > gt.contradicted.length) hardBlocks.push(`${gt.findings.length - gt.contradicted.length} ungrounded fact(s) (verify against the authoritative facts)`);
 
-  // FAIL-CLOSED accuracy floor (priority #1): a missing/low accuracy score blocks — never silently skip.
-  if (typeof ss.accuracy !== "number") hardBlocks.push("judge accuracy score missing — cannot verify accuracy");
-  else if (ss.accuracy < 8) hardBlocks.push(`accuracy ${ss.accuracy} < 8`);
-
+  // SOFT quality floors LOWERED for the brand-new-volume strategy (owner 2026-07-01): a real, accurate story that is
+  // merely B-grade on voice/phrasing/infoGain/readability still PUBLISHES (7→5). ACCURACY (above) stays strict.
   if (typeof ss.infoGain !== "number" || ss.infoGain < GATE.infoGainMin) hardBlocks.push(`infoGain ${ss.infoGain ?? "missing"} < ${GATE.infoGainMin}`);
-  if (typeof ss.readability !== "number" || ss.readability < 6) hardBlocks.push(`readability ${ss.readability ?? "missing"} < 6`);
-  if (typeof ss.humanVoice !== "number" || ss.humanVoice < 7) hardBlocks.push(`humanVoice ${ss.humanVoice ?? "missing"} < 7`);
-  if (typeof ss.phrasing !== "number" || ss.phrasing < 7) hardBlocks.push(`phrasing ${ss.phrasing ?? "missing"} < 7`);
+  if (typeof ss.readability !== "number" || ss.readability < 5) hardBlocks.push(`readability ${ss.readability ?? "missing"} < 5`);
+  if (typeof ss.humanVoice !== "number" || ss.humanVoice < 5) hardBlocks.push(`humanVoice ${ss.humanVoice ?? "missing"} < 5`);
+  if (typeof ss.phrasing !== "number" || ss.phrasing < 5) hardBlocks.push(`phrasing ${ss.phrasing ?? "missing"} < 5`);
 
   return {
     score: j.score,
@@ -350,6 +365,20 @@ export async function gate({ article, topic, judgeModel }) {
     deterministic: det,
     hardBlocks,
     claimCheck, // {ok, bad, contradicted, corrections, verdicts, groundTruth} → drives the correction loop
+    // Phase C cut-and-accept: the strays a verify-gate CUT verdict would remove (support was still >=85%, so they
+    // are PERIPHERAL, not a contradiction). run.mjs may accept a CUT-only terminal article if every stray is
+    // QUALITATIVE (no number/date/platform — those are caught separately as CONTRADICTED/fabricated and stay blocked).
+    vgVerdict: vg ? vg.verdict : null,
+    vgStrays: vg && vg.verdict === "CUT" ? (vg.unsupported || []).map((u) => u.claim) : [],
+    // EVERY flagged claim text (ungrounded + contradicted + judge-flagged fabrication), so run.mjs can DETERMINISTICALLY
+    // CUT those exact sentences from the body and still publish (owner 2026-07-02: publish everything the automation
+    // builds — but a fabrication is REMOVED, never shipped).
+    cutClaims: [
+      ...(vg && vg.unsupported ? vg.unsupported.map((u) => u.claim) : []),
+      ...claimCheck.contradicted.map((c) => c.claim),
+      ...(cc.bad || []).map((b) => (typeof b === "string" ? b : b && b.claim) || null),
+      ...sg.bad.map((b) => b.text),
+    ].filter((c) => typeof c === "string" && c.length > 8),
     strengths: j.strengths,
     weaknesses: j.weaknesses,
   };

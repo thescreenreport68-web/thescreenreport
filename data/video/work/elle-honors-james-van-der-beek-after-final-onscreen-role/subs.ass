@@ -1,0 +1,51 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Cap,Anton,92,&H00FFFFFF,&H00B9B9B9,&H00101010,&HA0000000,0,0,0,0,100,100,1,0,1,4,2,2,70,70,330,1
+Style: Hook,Anton,120,&H00FFFFFF,&H00CFCFCF,&H00101010,&HA0000000,0,0,0,0,100,100,1,0,1,5,3,5,70,70,0,1
+Style: KickText,Anton,40,&H00FFFFFF,&H00FFFFFF,&H00101010,&H00000000,0,0,0,0,100,100,4,0,1,0,0,5,0,0,0,1
+Style: KickDraw,Anton,40,&H002821D9,&H002821D9,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,7,0,0,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.12,0:00:06.50,KickDraw,,0,0,0,,{\fad(140,120)\pos(146,126)\1c&H000000&\1a&H78&\blur6\p1}m 18 0 l 782 0 b 800 0 800 0 800 18 l 800 70 b 800 88 800 88 782 88 l 18 88 b 0 88 0 88 0 70 l 0 18 b 0 0 0 0 18 0{\p0}
+Dialogue: 1,0:00:00.12,0:00:06.50,KickDraw,,0,0,0,,{\fad(140,120)\pos(140,118)\p1}m 18 0 l 782 0 b 800 0 800 0 800 18 l 800 70 b 800 88 800 88 782 88 l 18 88 b 0 88 0 88 0 70 l 0 18 b 0 0 0 0 18 0{\p0}
+Dialogue: 2,0:00:00.12,0:00:06.50,KickText,,0,0,0,,{\fad(140,120)\pos(540,163)}JAMES VAN DER BEEK TRIBUTE
+Dialogue: 0,0:00:00.05,0:00:00.94,Hook,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k37}JAMES {\k26}VAN {\k26}DER
+Dialogue: 0,0:00:00.94,0:00:02.04,Hook,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k42}BEEK'S {\k37}FINAL {\k31}ROLE
+Dialogue: 0,0:00:02.04,0:00:03.03,Hook,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k31}GETS {\k16}A {\k52}POIGNANT
+Dialogue: 0,0:00:03.03,0:00:03.55,Hook,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k52}TRIBUTE.
+Dialogue: 0,0:00:03.55,0:00:04.65,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k37}PRIME {\k47}VIDEO'S {\k26}NEW
+Dialogue: 0,0:00:04.65,0:00:05.90,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k42}*ELLE* {\k42}SERIES {\k42}HONORS
+Dialogue: 0,0:00:05.90,0:00:06.90,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k26}THE {\k31}LATE {\k42}ACTOR.
+Dialogue: 0,0:00:06.90,0:00:07.73,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k26}VAN {\k26}DER {\k31}BEEK
+Dialogue: 0,0:00:07.73,0:00:08.88,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k42}PASSED {\k21}IN {\k52}FEBRUARY
+Dialogue: 0,0:00:08.88,0:00:10.03,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k37}2026, {\k57}APPEARING {\k21}AS
+Dialogue: 0,0:00:10.03,0:00:10.82,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k31}DEAN {\k47}WILSON.
+Dialogue: 0,0:00:10.82,0:00:11.65,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k16}A {\k37}TITLE {\k31}CARD
+Dialogue: 0,0:00:11.65,0:00:12.75,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k26}“IN {\k42}LOVING {\k42}MEMORY
+Dialogue: 0,0:00:12.75,0:00:13.59,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k21}OF {\k37}JAMES {\k26}VAN
+Dialogue: 0,0:00:13.59,0:00:14.63,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k26}DER {\k37}BEEK” {\k42}CLOSES
+Dialogue: 0,0:00:14.63,0:00:15.78,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k26}HIS {\k37}FIRST {\k52}EPISODE.
+Dialogue: 0,0:00:15.78,0:00:16.51,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k21}HE {\k37}PLAYS {\k16}A
+Dialogue: 0,0:00:16.51,0:00:17.98,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k47}MAYORAL {\k63}CANDIDATE, {\k37}LATER
+Dialogue: 0,0:00:17.98,0:00:19.39,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k52}{\1c&H2821D9&}ARRESTED{\1c&HFFFFFF&} {\k26}FOR {\k63}{\1c&H2821D9&}EXTORTION,{\1c&HFFFFFF&}
+Dialogue: 0,0:00:19.39,0:00:20.48,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k26}PER {\k26}THE {\k57}HOLLYWOOD
+Dialogue: 0,0:00:20.48,0:00:21.06,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k57}REPORTER.
+Dialogue: 0,0:00:21.06,0:00:22.16,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k42}COSTAR {\k31}JUNE {\k37}DIANE
+Dialogue: 0,0:00:22.16,0:00:23.36,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k47}RAPHAEL {\k47}PRAISED {\k26}HIS
+Dialogue: 0,0:00:23.36,0:00:24.56,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k42}FAMILY {\k52}DEVOTION {\k26}AND
+Dialogue: 0,0:00:24.56,0:00:25.66,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k68}{\1c&H2821D9&}PERFORMANCE{\1c&HFFFFFF&} {\k21}TO {\k21}E!
+Dialogue: 0,0:00:25.66,0:00:26.02,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k37}NEWS.
+Dialogue: 0,0:00:26.02,0:00:27.33,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k31}THIS {\k63}DEDICATION {\k37}MARKS
+Dialogue: 0,0:00:27.33,0:00:28.43,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k16}A {\k42}PUBLIC {\k52}CAPSTONE
+Dialogue: 0,0:00:28.43,0:00:29.63,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k21}TO {\k26}HIS {\k73}DECADES-LONG
+Dialogue: 0,0:00:29.63,0:00:30.10,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k47}CAREER.
+Dialogue: 0,0:00:30.10,0:00:30.99,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k31}FULL {\k37}STORY {\k21}AT
+Dialogue: 0,0:00:30.99,0:00:32.09,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k26}THE {\k42}SCREEN {\k42}REPORT
+Dialogue: 0,0:00:32.09,0:00:32.77,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k16}— {\k31}LINK {\k21}IN
+Dialogue: 0,0:00:32.77,0:00:33.08,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k31}BIO.

@@ -99,7 +99,6 @@ faq:
       the Galaxy, Captain America: Civil War, Black Panther, Thor: Ragnarok,
       Avengers: Infinity War, and Avengers: Endgame. That run hits the biggest
       turning points without committing to the full 39-film marathon.
-featured: true
 image: /images/articles/mcu-movies-in-order.jpg
 keyTakeaways:
   - >-

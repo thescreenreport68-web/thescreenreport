@@ -1,0 +1,92 @@
+{
+  "id": "news-victor-willis-dies",
+  "slug": "victor-willis-village-people-frontman-dies-at-74",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": 85,
+      "cat": "celebrity/news",
+      "img": "/images/articles/victor-willis-village-people-frontman-dies-at-74.jpg",
+      "hardBlocks": [
+        "verify-gate CUT: 1 claim(s) not in the gathered sources — Victor Willis's death was announced this week by the ba"
+      ],
+      "block": [
+        "verify-gate CUT: 1 claim(s) not in the gathered sources — Victor Willis's death was announced this week by the ba"
+      ],
+      "fixable": [],
+      "badClaims": 0
+    },
+    "attempt2": {
+      "score": 85,
+      "cat": "celebrity/news",
+      "img": "/images/articles/victor-willis-village-people-frontman-dies-at-74.jpg",
+      "hardBlocks": [],
+      "block": [],
+      "fixable": [],
+      "badClaims": 0
+    }
+  },
+  "scorecard": {
+    "score": 85,
+    "subscores": {
+      "accuracy": 9,
+      "readability": 9,
+      "humanVoice": 8,
+      "phrasing": 9,
+      "curiosity": 9,
+      "structure": 9,
+      "infoGain": 8,
+      "seo": 8,
+      "faqQuality": 9,
+      "completeness": 9
+    },
+    "strengths": [
+      "The article is highly accurate, with all specific claims verifiable against the provided reference facts.",
+      "The lead quickly delivers the core information, adhering to news standards.",
+      "The language is clear, concise, and avoids jargon, making it easy for a busy fan to read.",
+      "The use of subheadings ('Who was Victor Willis?', 'What were the Village People's biggest hits?', 'What was Willis's history with the band?') effectively breaks up the text and guides the reader.",
+      "The article provides good information gain by detailing Willis's background, his role in the band's hits, and his complex relationship with the group and political figures.",
+      "The FAQ section adds genuinely new and relevant information, expanding on common reader questions without repeating the main body.",
+      "The phrasing is fluent and professional, reading like a top news desk report.",
+      "The article avoids generic AI tells and filler praise, maintaining a human and specific voice.",
+      "The meta description (dek) is strong and informative, accurately summarizing the article's content."
+    ],
+    "weaknesses": [
+      "The article states 'Donald Trump, who has famously danced to \"YMCA\" at rallies' and 'The band performed at the Turning Point USA inaugural ball celebrating Trump's second inauguration last year.' While plausible, the reference facts only state 'The band is one of Trump’s favorites' and 'the band performed at the Turning Point USA inaugural ball in celebration of his second inauguration last year.' The 'famously danced' and 'celebrating Trump's second inauguration' are slight embellishments beyond the strict wording of the provided source material, though not outright fabrications.",
+      "The article mentions 'Trump's second inauguration last year' which implies the current date is 2025, but the provided current date is July 2026. This creates a slight temporal inconsistency with the 'last year' phrasing."
+    ],
+    "deterministic": {
+      "words": 326,
+      "h2s": 3,
+      "h2Questions": 3,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 3,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": true,
+      "maxSentence": 40,
+      "avgSentence": 17,
+      "flesch": 55,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 3,
+      "hardBlocks": []
+    },
+    "hardBlocks": []
+  },
+  "score": 85,
+  "category": "celebrity",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "body ≥ 350w",
+      "external sources ≥2"
+    ]
+  },
+  "ms": 264306
+}

@@ -1,0 +1,79 @@
+{
+  "id": "news-josh-gad-joins-ocean-s-prequel",
+  "slug": "josh-gad-to-join-margot-robbie-and-bradley-cooper-s-ocean-s-prequel-ex",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": 85,
+      "cat": "movies/news",
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Josh%20Gad%2C%20Alex%20Kinter%20and%20Joshua%20Michael%20Stern%20premiere%20Jobs%20movie%20in%202013%20%40%20Look%20Theater%2C%20Plano%2C%20Tx.jpg?width=1600",
+      "hardBlocks": [],
+      "block": [],
+      "fixable": [],
+      "badClaims": 0
+    }
+  },
+  "scorecard": {
+    "score": 85,
+    "subscores": {
+      "accuracy": 10,
+      "readability": 9,
+      "humanVoice": 8,
+      "phrasing": 9,
+      "curiosity": 9,
+      "structure": 9,
+      "infoGain": 8,
+      "seo": 8,
+      "faqQuality": 8,
+      "completeness": 7
+    },
+    "strengths": [
+      "All claims are accurately sourced and attributed to Variety, adhering to news standards.",
+      "The article is highly readable with short paragraphs and clear subheadings, making it easy for a busy fan to consume.",
+      "The human voice is present through specific details like named actors and the direct quote from Margot Robbie, avoiding generic filler.",
+      "Phrasing is fluent and professional, without forced keywords or awkward repetitions.",
+      "The headline and dek are clear and deliver the core information quickly, satisfying curiosity without clickbait.",
+      "The structure is well-organized with an answer-first lead and useful subheads, including Key Takeaways and FAQs.",
+      "The article provides good information gain by consolidating details about the prequel and Gad's other projects.",
+      "SEO elements are naturally integrated, with the keyword present without stuffing, and relevant FAQs adding value.",
+      "The FAQs provide new, useful information beyond what's in the main body, enhancing completeness."
+    ],
+    "weaknesses": [
+      "While good, the article could benefit from one additional unique sourced fact beyond the headline to fully meet the 'one unique sourced fact' news standard.",
+      "The 'Sources' section is a bit sparse, listing only 'Variety' without a direct link to the specific article, which would improve transparency and trust.",
+      "The 'completeness' score is slightly lower due to the lack of a second unique sourced fact and the generic source attribution."
+    ],
+    "deterministic": {
+      "words": 356,
+      "h2s": 4,
+      "h2Questions": 3,
+      "internalLinks": 0,
+      "externalLinks": 1,
+      "hasSources": true,
+      "faqCount": 4,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 41,
+      "avgSentence": 19,
+      "flesch": 52,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": []
+    },
+    "hardBlocks": []
+  },
+  "score": 85,
+  "category": "movies",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 1,
+    "failed": [
+      "external sources ≥2"
+    ]
+  },
+  "ms": 153286
+}

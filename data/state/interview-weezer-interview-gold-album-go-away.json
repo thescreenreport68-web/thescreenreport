@@ -1,0 +1,88 @@
+{
+  "id": "interview-weezer-interview-gold-album-go-away",
+  "slug": "weezer-discusses-the-gold-album-and-viral-hit-go-away",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": 0,
+      "cat": "celebrity/interviews",
+      "img": "/images/articles/weezer-discusses-the-gold-album-and-viral-hit-go-away.jpg",
+      "hardBlocks": [
+        "a 57-word run-on sentence (>55 — split it)"
+      ],
+      "badClaims": 0
+    },
+    "attempt2": {
+      "score": 88,
+      "cat": "celebrity/interviews",
+      "img": "/images/articles/weezer-discusses-the-gold-album-and-viral-hit-go-away.jpg",
+      "hardBlocks": [],
+      "badClaims": 0
+    }
+  },
+  "scorecard": {
+    "score": 88,
+    "subscores": {
+      "accuracy": 10,
+      "readability": 9,
+      "humanVoice": 9,
+      "phrasing": 9,
+      "curiosity": 9,
+      "structure": 9,
+      "infoGain": 9,
+      "seo": 7,
+      "faqQuality": 8,
+      "completeness": 8
+    },
+    "strengths": [
+      "Strong adherence to the reader-first principle, prioritizing clarity and engagement.",
+      "Excellent use of subheads to break up content and guide the reader.",
+      "Key Takeaways section is concise and effectively summarizes the main points.",
+      "The interview content is well-paraphrased and integrated smoothly.",
+      "The explanation of 'Go Away' and its meme status is clear and engaging.",
+      "The details about the upcoming album title and tour are presented effectively.",
+      "FAQ section provides genuinely useful additional information.",
+      "The article avoids AI-like filler and maintains a natural human voice.",
+      "Good balance between direct quotes and paraphrased information."
+    ],
+    "weaknesses": [
+      "The SEO subscore is slightly lower due to the primary keyword 'Weezer interview' not being explicitly present in the title or headings, though it is naturally integrated into the text.",
+      "The 'dek' could be slightly more specific to pique immediate curiosity.",
+      "While the sources are listed, the external links within the 'Sources' section are not directly clickable in the output format, which is a limitation of the output rather than the article itself.",
+      "The article could benefit from a slightly more dynamic opening sentence to immediately hook the reader."
+    ],
+    "deterministic": {
+      "words": 447,
+      "h2s": 3,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 3,
+      "hasSources": true,
+      "faqCount": 3,
+      "ktCount": 5,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 43,
+      "avgSentence": 16,
+      "flesch": 63,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": []
+    },
+    "hardBlocks": []
+  },
+  "score": 88,
+  "category": "celebrity",
+  "subcategory": "interviews",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "4+ FAQ",
+      "keyword in title"
+    ]
+  },
+  "ms": 300375
+}

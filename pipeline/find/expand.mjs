@@ -31,8 +31,8 @@ CENTRAL PERSON / ENTITY: ${topic.primaryEntity}
 HEADLINE: ${topic.title}
 KNOWN FACTS: ${(topic.sources || []).map((s) => s.headline + (s.summary ? " — " + s.summary : "")).join(" | ") || topic.angle || ""}
 
-Propose up to ${max} DISTINCT article angles. Return JSON:
-{"angles":[{"angle":"short angle name","formatTag":"news|profile|list","title":"a working headline","focusEntity":"the exact Wikipedia entity this angle centers on (usually the person, or a clearly-related person/film)","note":"one line on what it covers + its source basis"}]}
+Propose up to ${max} DISTINCT article angles, each a NEWS report on the event (retrospective, tributes, what we know, the timeline — all written as news, never as a review/ranking/profile feature). Return JSON:
+{"angles":[{"angle":"short angle name","title":"a working headline","focusEntity":"the exact entity this angle centers on (usually the person, or a clearly-related person/film)","note":"one line on what it covers + its source basis"}]}
 Order by audience demand. Respect the TONE rule above.`;
 
   let data;
@@ -49,10 +49,12 @@ Order by audience demand. Respect the TONE rule above.`;
     const key = slugify(a.angle);
     if (seen.has(key)) continue;
     seen.add(key);
-    const ft = ["news", "profile", "list"].includes(a.formatTag) ? a.formatTag : "news";
-    // map formatTag → category/subcategory (person-centric → celebrity)
-    const category = ft === "profile" ? "celebrity" : ft === "list" ? "movies" : topic.category || "celebrity";
-    const subcategory = ft === "profile" ? "profiles-careers" : ft === "list" ? "rankings-lists" : "news";
+    // NEWS-ONLY: every inside-story angle is filed as a news report. The removed profile/list/ranking
+    // forms belong to separate automations, so we never emit them here (this path bypasses categorize's
+    // canonicalize, so the clamp must live inline). Inherit the parent's news-valid category silo.
+    const ft = "news";
+    const category = ["movies", "tv", "celebrity"].includes(topic.category) ? topic.category : "celebrity";
+    const subcategory = "news";
     out.push({
       id: `${ft}-${slugify(topic.eventSlug || topic.primaryEntity)}-${key}`.slice(0, 80),
       slug: slugify(a.title),

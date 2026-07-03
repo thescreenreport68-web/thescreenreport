@@ -1,0 +1,36 @@
+{
+  "runId": "vrun-2026-07-03T08-10-14",
+  "at": "2026-07-03T08:12:05.324Z",
+  "windowHours": 48,
+  "target": 1,
+  "candidates": 3,
+  "made": [
+    {
+      "slug": "x-men-97-season-2-to-feature-innovative-format-change",
+      "title": "X-Men '97 Season 2 to Feature Innovative Format Change",
+      "category": "tv",
+      "seconds": 47.395999999999994,
+      "usd": 0.01133,
+      "file": "/Users/sivajithcu/Movie News site/site/data/video/out/x-men-97-season-2-to-feature-innovative-format-change.mp4"
+    }
+  ],
+  "failed": [],
+  "cost": {
+    "total": 0.011333300000000001,
+    "byModel": {
+      "google/gemini-2.5-flash": {
+        "calls": 3,
+        "in": 4152,
+        "out": 3593,
+        "usd": 0.0102281
+      },
+      "google/gemini-2.5-flash-lite": {
+        "calls": 5,
+        "in": 10952,
+        "out": 25,
+        "usd": 0.0011052
+      }
+    },
+    "calls": 8
+  }
+}

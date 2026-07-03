@@ -27,8 +27,8 @@ const SECONDARY = 5; // reputable secondary / major-celebrity outlet (5–6)
 // PARENT-COMPANY groups — same-owner outlets are NOT independent corroboration. Penske Media (PMC) owns
 // Deadline + Variety + THR + IndieWire, so when PMC syndicates one scoop all three carry it in minutes:
 // that is ONE editorial source, not three. CONFIRMED therefore requires 2 INDEPENDENT OWNERS, not 2 strings.
-const OWNER = { Variety: "PMC", Deadline: "PMC", THR: "PMC", IndieWire: "PMC", Collider: "Valnet", ScreenRant: "Valnet", SlashFilm: "Static", People: "DotdashMeredith" };
-const ownerOf = (o) => OWNER[o] || o;
+// (2026-07-03: the local 8-entry map moved to THE ONE trust module — ownerOfName covers the full family table.)
+import { ownerOfName as ownerOf } from "../lib/outlets.mjs";
 
 // DETERMINISTIC sensitivity floor — the LLM's sensitivity flag is non-deterministic, so a death/legal/
 // arrest/health story could slip to "normal" and bypass the CONFIRMING-hold. This regex force-promotes
@@ -170,22 +170,27 @@ function decide(rep, sources) {
 
   const major = tier1[0]?.outlet;
 
-  // High-sensitivity (death / health crisis / legal / arrest): hold unless 2 INDEPENDENT majors confirm
-  // (3 PMC outlets ≠ corroboration — one company's error must not become a "CONFIRMED" death/arrest).
+  // BRAND-NEW-VOLUME strategy (owner 2026-07-01): post the trending story CONFIRMED-OR-NOT — a single reputable
+  // source is enough, framed ATTRIBUTED ("according to X"). Corroboration is RELAXED; ACCURACY is NOT (the MAKE
+  // verify-gate still checks the article's specifics against the source, so we report the claim, never a wrong fact).
+  //
+  // The ONE floor kept: a HIGH-SENSITIVITY death/arrest on a SOLO non-major source still HOLDS — a false death is
+  // the single "fake news" that could sink a brand-new site (the classic hoax vector). A major, or a 2nd outlet,
+  // clears it.
   if (sensitivity === "high") {
     if (twoIndependentMajorOwners) return { ...base, status: "CONFIRMED", framing: "plain", publishable: true };
-    return { ...base, status: "CONFIRMING", framing: "hold", publishable: false, hold: "high-sensitivity event needs 2 INDEPENDENT MAJOR outlets (same-owner trades and secondary outlets don't count)" };
+    if (tier1.length >= 1) return { ...base, status: "DEVELOPING", framing: "attributed", attribution: major, publishable: true };
+    if (secondary.length >= 2) return { ...base, status: "DEVELOPING", framing: "attributed", attribution: "multiple outlets", publishable: true };
+    return { ...base, status: "CONFIRMING", framing: "hold", publishable: false, hold: "high-sensitivity (death/arrest) on a single non-major source — hold for a major or a 2nd outlet (hoax guard)" };
   }
 
-  // Normal sensitivity — CONFIRMED needs 2 INDEPENDENT owners (else it's still one source → DEVELOPING).
+  // Normal sensitivity — ANY real source publishes: 2 independent owners → CONFIRMED; otherwise attributed DEVELOPING.
   if (twoIndependentMajors)
     return { ...base, status: "CONFIRMED", framing: "plain", publishable: true };
-  if (tier1.length >= 1) // one or more majors but all the SAME owner = one editorial source → developing
+  if (tier1.length >= 1)
     return { ...base, status: "DEVELOPING", framing: "attributed", attribution: major, publishable: true };
-  if (secondary.length >= 2)
-    return { ...base, status: "DEVELOPING", framing: "attributed", attribution: "multiple outlets", publishable: true };
-  if (secondary.length === 1)
-    return { ...base, status: "QUEUE", framing: "hold", publishable: false, hold: "single reputable secondary — await a major outlet to corroborate" };
+  if (secondary.length >= 1)
+    return { ...base, status: "DEVELOPING", framing: "attributed", attribution: secondary.length >= 2 ? "multiple outlets" : secondary[0].outlet, publishable: true };
   if (tabloid.length >= 1)
     return { ...base, status: "RUMOR", framing: "rumor-safe", attribution: tabloid[0].outlet, publishable: true };
   return { ...base, status: "EDITORIAL-HOLD", framing: "hold", publishable: false, hold: "no named reputable source" };

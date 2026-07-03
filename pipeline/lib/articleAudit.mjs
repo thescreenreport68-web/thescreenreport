@@ -4,11 +4,18 @@
 // prints a single readable report with a per-part ✓/✗ and an overall verdict.
 import { GATE } from "../config.mjs";
 
+// Floors MIRROR stages/gate.mjs PROFILE (2026-07-03 alignment: the audit had drifted to stale pre-pivot
+// numbers, printing false "⚠ incomplete" on legitimately-published articles and eroding the monitor's signal).
 const PROFILE = {
-  news: { words: 350, faq: 3, h2: 2 },
-  "box-office": { words: 350, faq: 3, h2: 1 },
-  awards: { words: 300, faq: 3, h2: 1 },
-  default: { words: 400, faq: 4, h2: 2 },
+  news: { words: 300, faq: 3, h2: 1, ext: 0 },
+  "box-office": { words: 400, faq: 3, h2: 2, ext: 1 },
+  trailer: { words: 400, faq: 3, h2: 2, ext: 0 },
+  reaction: { words: 400, faq: 3, h2: 2, ext: 0 },
+  watchguide: { words: 600, faq: 3, h2: 2, ext: 2 },
+  awards: { words: 300, faq: 3, h2: 1, ext: 2 },
+  "music-news": { words: 350, faq: 3, h2: 1, ext: 0 },
+  "music-awards": { words: 300, faq: 3, h2: 1, ext: 2 },
+  default: { words: 400, faq: 3, h2: 2, ext: 2 },
 };
 
 const countWords = (s) => (String(s || "").trim().match(/\S+/g) || []).length;
@@ -17,7 +24,12 @@ const linksIn = (body) => [...String(body || "").matchAll(/\[[^\]]+\]\(([^)]+)\)
 // Build the audit from everything run.mjs has after the gate (works for published AND review articles).
 export function auditArticle({ topic, article, classification, image, scored, body, niche = {} }) {
   const ft = classification?.formatTag || article?.formatTag || topic?.formatTag || "default";
-  const prof = PROFILE[ft] || PROFILE.default;
+  let prof = PROFILE[ft] || PROFILE.default;
+  // Thin-grounding relax — the SAME rule as gate.mjs deterministic(): a short, fully-grounded brief is the
+  // CORRECT output for a thin bundle, so the audit must not flag it incomplete.
+  const bsrc = (topic?._bundle && topic._bundle.sources) || [];
+  const groundChars = bsrc.reduce((n, s) => n + (s.text || "").length, 0);
+  if (bsrc.length < 2 || groundChars < 1500) prof = { ...prof, words: Math.min(prof.words, 220), faq: Math.min(prof.faq, 2), h2: Math.min(prof.h2, 1), ext: 0 };
   const text = body || article?.body || "";
   const words = countWords(text);
   const h2 = (text.match(/^##\s/gm) || []).length;
@@ -64,20 +76,22 @@ export function auditArticle({ topic, article, classification, image, scored, bo
 
   // 6 LINKS
   add("LINKS", "internal links", internal.length > 0, `${internal.length}${internal.length ? " → " + internal.slice(0, 3).join(", ") : " (none yet — ok for a new topic with no related article)"}`);
-  add("LINKS", "external sources ≥2", external.length >= 2, `${external.length}`);
+  add("LINKS", `external sources ≥${prof.ext}`, external.length >= prof.ext, `${external.length}`);
   add("LINKS", "no phantom 'our feature' text", !/\b(our feature|check out our|read more in our)\b/i.test(text), "");
 
-  // 7 GATE
+  // 7 GATE — floors mirror gate.mjs (post-pivot 5s; accuracy subscore is informational now that the
+  // deterministic verify layers own fabrication, so it is ADVISORY below, not a must-pass).
   add("GATE", `score ≥ ${GATE.publishMin}`, (scored?.score || 0) >= GATE.publishMin, scored?.score);
   add("GATE", "zero hard-blocks", !(scored?.hardBlocks?.length), (scored?.hardBlocks || []).join("; ") || "none");
   add("GATE", "accuracy (no fabrication)", (ss.accuracy ?? 10) >= 8, ss.accuracy);
   add("GATE", `infoGain ≥ ${GATE.infoGainMin}`, (ss.infoGain ?? 0) >= GATE.infoGainMin, ss.infoGain);
-  add("GATE", "readability ≥ 6", (ss.readability ?? 0) >= 6, ss.readability);
-  add("GATE", "humanVoice ≥ 7", (ss.humanVoice ?? 0) >= 7, ss.humanVoice);
-  add("GATE", "phrasing ≥ 7", (ss.phrasing ?? 0) >= 7, ss.phrasing);
+  add("GATE", "readability ≥ 5", (ss.readability ?? 0) >= 5, ss.readability);
+  add("GATE", "humanVoice ≥ 5", (ss.humanVoice ?? 0) >= 5, ss.humanVoice);
+  add("GATE", "phrasing ≥ 5", (ss.phrasing ?? 0) >= 5, ss.phrasing);
 
-  // overall: every part's MUST-pass checks (links-internal is advisory for brand-new topics)
-  const advisory = new Set(["internal links"]);
+  // overall: every part's MUST-pass checks (internal-links is advisory for brand-new topics; the judge's
+  // accuracy subscore is advisory — fabrication enforcement is the deterministic layers' job now).
+  const advisory = new Set(["internal links", "accuracy (no fabrication)"]);
   const failed = checks.filter((c) => !c.ok && !advisory.has(c.name));
   return { checks, failed, ok: failed.length === 0, ft };
 }

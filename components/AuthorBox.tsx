@@ -1,31 +1,40 @@
 import Link from "next/link";
 import { getAuthor } from "@/lib/site";
 
+// Deframed author unit (spec §D11): a 2px ink rule, no card, no initials bubble —
+// the org byline plus the standards links that carry the E-E-A-T weight.
 export default function AuthorBox({ author }: { author: string }) {
   const a = getAuthor(author);
   if (!a) return null;
-  const initials = a.name
-    .split(" ")
-    .map((n) => n[0])
-    .join("")
-    .slice(0, 2);
   return (
-    <aside className="mt-10 flex gap-4 rounded-lg border border-navy/10 bg-mist/50 p-5">
-      <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-navy font-serif text-lg font-bold text-white">
-        {initials}
-      </span>
-      <div>
+    <aside className="mt-10 border-t-2 border-ink pt-4">
+      <div className="kicker text-ink">{a.role}</div>
+      <Link
+        href={`/author/${a.slug}/`}
+        className="hed-l mt-2 inline-block text-xl transition-colors duration-150 hover:text-red"
+      >
+        {a.name}
+      </Link>
+      <p className="mt-2 max-w-prose font-body text-[0.95rem] leading-relaxed text-slate">
+        {a.bio}
+      </p>
+      <p className="byline mt-3">
         <Link
-          href={`/author/${a.slug}/`}
-          className="font-serif text-lg font-bold text-navy hover:text-gold-600"
+          href="/editorial-standards/"
+          className="transition-colors duration-150 hover:text-red"
         >
-          {a.name}
+          Editorial Standards
         </Link>
-        <div className="text-xs font-semibold uppercase tracking-wide text-gold-600">
-          {a.role}
-        </div>
-        <p className="mt-2 text-sm text-navy/70">{a.bio}</p>
-      </div>
+        <span className="mx-2 text-gray" aria-hidden>
+          /
+        </span>
+        <Link
+          href="/corrections/"
+          className="transition-colors duration-150 hover:text-red"
+        >
+          Corrections
+        </Link>
+      </p>
     </aside>
   );
 }

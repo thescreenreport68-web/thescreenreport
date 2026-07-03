@@ -4,8 +4,23 @@
     {
       "name": "screenreport",
       "runtimeExecutable": "npm",
-      "runtimeArgs": ["run", "dev"],
+      "runtimeArgs": [
+        "run",
+        "dev"
+      ],
       "port": 3000
+    },
+    {
+      "name": "screenreport-static",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": [
+        "-y",
+        "serve",
+        "-l",
+        "4173",
+        "out"
+      ],
+      "port": 4173
     }
   ]
 }

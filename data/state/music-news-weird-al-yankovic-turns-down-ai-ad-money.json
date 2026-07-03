@@ -1,0 +1,115 @@
+{
+  "id": "music-news-weird-al-yankovic-turns-down-ai-ad-money",
+  "slug": "weird-al-yankovic-turned-down-nice-pile-of-money-for-ai-ad-i-can-t-be-",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": 70,
+      "cat": "music/news",
+      "img": "https://image.tmdb.org/t/p/original/bMaDs3wXlMWzb0kHfca6RpMT0lB.jpg",
+      "hardBlocks": [
+        "fabricated/altered quote: \"Yankovic is a defining figure in comedy and parody\" — use the exact source words or drop the quotation marks"
+      ],
+      "block": [
+        "fabricated/altered quote: \"Yankovic is a defining figure in comedy and parody\" — use the exact source words or drop the quotation marks"
+      ],
+      "fixable": [],
+      "badClaims": 0
+    },
+    "attempt2": {
+      "score": 75,
+      "cat": "music/news",
+      "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Weird%20Al%20Yankovic%20(54563894780).jpg?width=1600",
+      "hardBlocks": [
+        "verify-gate CUT: 1 claim(s) not in the gathered sources — Weird Al Yankovic's career is four decades long",
+        "fabricated/altered quote: \"(2006). More recently, he released the soundtrack \" — use the exact source words or drop the quotation marks"
+      ],
+      "block": [
+        "verify-gate CUT: 1 claim(s) not in the gathered sources — Weird Al Yankovic's career is four decades long",
+        "fabricated/altered quote: \"(2006). More recently, he released the soundtrack \" — use the exact source words or drop the quotation marks"
+      ],
+      "fixable": [],
+      "badClaims": 0
+    },
+    "attempt3": {
+      "score": 75,
+      "cat": "music/news",
+      "img": "https://image.tmdb.org/t/p/original/bMaDs3wXlMWzb0kHfca6RpMT0lB.jpg",
+      "hardBlocks": [
+        "verify-gate CUT: 1 claim(s) not in the gathered sources — As of July 2026, Weird Al Yankovic maintains nearly a m"
+      ],
+      "block": [
+        "verify-gate CUT: 1 claim(s) not in the gathered sources — As of July 2026, Weird Al Yankovic maintains nearly a m"
+      ],
+      "fixable": [],
+      "badClaims": 0
+    }
+  },
+  "acceptReason": "terminal-accept (verified accurate, score 75, 1 qualitative stray(s) accepted)",
+  "scorecard": {
+    "score": 75,
+    "subscores": {
+      "accuracy": 10,
+      "readability": 8,
+      "humanVoice": 8,
+      "phrasing": 8,
+      "curiosity": 7,
+      "structure": 8,
+      "infoGain": 7,
+      "seo": 7,
+      "faqQuality": 8,
+      "completeness": 7
+    },
+    "strengths": [
+      "All claims are accurately sourced and consistent with the provided reference facts.",
+      "The article maintains a clear and concise writing style, making it easy to read.",
+      "The human voice is present, with direct quotes from Weird Al Yankovic adding authenticity and engagement.",
+      "The phrasing is generally fluent and professional, avoiding forced keywords.",
+      "The headline and dek are clear and deliver the core information quickly.",
+      "The structure is logical, with an answer-first lead and useful subheadings.",
+      "The FAQ section adds new, relevant information and addresses common reader questions.",
+      "The article naturally incorporates the primary keyword without stuffing."
+    ],
+    "weaknesses": [
+      "While the article is readable, some paragraphs could be slightly shorter to improve flow for a busy fan.",
+      "The 'What's Next for Weird Al?' section feels a bit like a templated closing, lacking a truly original framing or analysis beyond summarizing his current activity.",
+      "The article could benefit from slightly more specific details or anecdotes to enhance engagement, beyond just the direct quotes.",
+      "The 'completeness' score is slightly lower because while it covers the core story well, it doesn't delve deeply into the broader implications of AI for music artists beyond general statements about Hollywood, which could have been a rich area for 'information gain'."
+    ],
+    "deterministic": {
+      "words": 429,
+      "h2s": 3,
+      "h2Questions": 3,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 4,
+      "ktCount": 3,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": true,
+      "maxSentence": 33,
+      "avgSentence": 18,
+      "flesch": 42,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": []
+    },
+    "hardBlocks": [
+      "verify-gate CUT: 1 claim(s) not in the gathered sources — As of July 2026, Weird Al Yankovic maintains nearly a m"
+    ]
+  },
+  "score": 75,
+  "category": "music",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "external sources ≥2",
+      "zero hard-blocks"
+    ]
+  },
+  "ms": 459938
+}

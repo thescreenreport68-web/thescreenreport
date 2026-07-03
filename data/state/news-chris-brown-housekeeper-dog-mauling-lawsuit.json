@@ -1,0 +1,79 @@
+{
+  "id": "news-chris-brown-housekeeper-dog-mauling-lawsuit",
+  "slug": "jury-says-chris-brown-owes-housekeeper-13-million-for-disfigurement-in",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": 85,
+      "cat": "celebrity/news",
+      "img": "/images/articles/jury-says-chris-brown-owes-housekeeper-13-million-for-disfigurement-in.png",
+      "hardBlocks": [],
+      "block": [],
+      "fixable": [],
+      "badClaims": 0
+    }
+  },
+  "scorecard": {
+    "score": 85,
+    "subscores": {
+      "accuracy": 10,
+      "readability": 9,
+      "humanVoice": 9,
+      "phrasing": 9,
+      "curiosity": 9,
+      "structure": 9,
+      "infoGain": 8,
+      "seo": 8,
+      "faqQuality": 9,
+      "completeness": 9
+    },
+    "strengths": [
+      "Excellent accuracy, all claims are well-supported by the provided source material.",
+      "The lead paragraph is concise and delivers the core information immediately, adhering to news standards.",
+      "Good readability with clear, straightforward language and appropriate paragraph breaks.",
+      "The human voice is present through the use of direct quotes and specific details from the testimony.",
+      "Phrasing is fluent and professional, avoiding stiffness or forced keyword usage.",
+      "The headline and dek are informative and avoid clickbait, accurately reflecting the article's content.",
+      "The structure is logical, with a clear inverted pyramid approach for news reporting.",
+      "Key Takeaways effectively summarize the main points for quick reader comprehension.",
+      "FAQ section adds new, relevant information and is well-sourced.",
+      "The article is tight and focused, appropriate for a short news piece."
+    ],
+    "weaknesses": [
+      "The article attributes the quote 'The blood kind of freaked me out' to Rolling Stone, but the provided source material only attributes it to Brown directly, with Rolling Stone providing the context of his testimony. This is a minor attribution nuance.",
+      "While the article mentions 'Rolling Stone' as a source for some testimony details, it is not listed in the 'Sources' section at the end, which only lists 'Billboard' and 'Variety' implicitly. This is a minor inconsistency in source listing."
+    ],
+    "deterministic": {
+      "words": 485,
+      "h2s": 3,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": true,
+      "faqCount": 3,
+      "ktCount": 5,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 50,
+      "avgSentence": 22,
+      "flesch": 56,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 2,
+      "hardBlocks": []
+    },
+    "hardBlocks": []
+  },
+  "score": 85,
+  "category": "celebrity",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "external sources ≥2"
+    ]
+  },
+  "ms": 117348
+}

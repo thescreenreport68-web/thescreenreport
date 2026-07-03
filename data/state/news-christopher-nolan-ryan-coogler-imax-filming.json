@@ -1,0 +1,86 @@
+{
+  "id": "news-christopher-nolan-ryan-coogler-imax-filming",
+  "slug": "christopher-nolan-advised-ryan-coogler-on-using-imax-for-filming",
+  "status": "needs_review",
+  "stages": {
+    "attempt1": {
+      "score": 0,
+      "cat": "movies/news",
+      "img": "/images/articles/christopher-nolan-advised-ryan-coogler-on-using-imax-for-filming.jpg",
+      "hardBlocks": [
+        "Flesch 35 < 40 (too dense to read comfortably)",
+        "prompt-leak / meta-refusal phrase reached reader copy (e.g. 'not detailed in the provided facts' / 'the reference facts') — rewrite or omit"
+      ],
+      "badClaims": 0
+    },
+    "attempt2": {
+      "score": 0,
+      "cat": "movies/news",
+      "img": "/images/articles/christopher-nolan-advised-ryan-coogler-on-using-imax-for-filming.jpg",
+      "hardBlocks": [
+        "external links 0 < 2",
+        "Flesch 30 < 40 (too dense to read comfortably)"
+      ],
+      "badClaims": 0
+    },
+    "attempt3": {
+      "score": 0,
+      "cat": "movies/news",
+      "img": "/images/articles/christopher-nolan-advised-ryan-coogler-on-using-imax-for-filming.jpg",
+      "hardBlocks": [
+        "external links 0 < 2",
+        "Flesch 33 < 40 (too dense to read comfortably)"
+      ],
+      "badClaims": 0
+    }
+  },
+  "scorecard": {
+    "score": 0,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [
+      "deterministic block"
+    ],
+    "deterministic": {
+      "words": 371,
+      "h2s": 4,
+      "h2Questions": 3,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": true,
+      "faqCount": 3,
+      "ktCount": 5,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 25,
+      "avgSentence": 15,
+      "flesch": 33,
+      "bannedTells": 0,
+      "fillerPraise": 1,
+      "kwExact": 0,
+      "hardBlocks": [
+        "external links 0 < 2",
+        "Flesch 33 < 40 (too dense to read comfortably)"
+      ]
+    },
+    "hardBlocks": [
+      "external links 0 < 2",
+      "Flesch 33 < 40 (too dense to read comfortably)"
+    ]
+  },
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "external sources ≥2",
+      "score ≥ 80",
+      "zero hard-blocks",
+      "infoGain ≥ 7",
+      "readability ≥ 6",
+      "humanVoice ≥ 7",
+      "phrasing ≥ 7"
+    ]
+  },
+  "ms": 141740
+}

@@ -4,7 +4,7 @@ import { createRequire } from "node:module";
 const require = createRequire(import.meta.url);
 const matter = require("gray-matter");
 import { TAXONOMY, AUTHOR_SLUG } from "../config.mjs";
-import { addInternalLinks } from "../lib/internalLinks.mjs";
+import { addInternalLinks, isRemovedForm } from "../lib/internalLinks.mjs";
 
 const ART = "/Users/sivajithcu/Movie News site/site/content/articles";
 
@@ -24,6 +24,7 @@ function validPaths() {
   }
   for (const f of fs.readdirSync(ART).filter((x) => x.endsWith(".md"))) {
     const d = matter(fs.readFileSync(path.join(ART, f), "utf8")).data;
+    if (isRemovedForm(d)) continue; // news-only: a link to a legacy ranking/review page is invalid → gets stripped
     set.add(`/${d.category}/${d.slug || f.replace(/\.md$/, "")}/`);
   }
   return set;
@@ -98,6 +99,17 @@ export function assemble({ article, classification, image, topic, dateISO }) {
     // music pop/indie lane (the 6%/4% axis) — preserved for the future indie badge / analytics
     ...(topic.tier ? { tier: topic.tier } : {}),
   };
+  // Homepage placement signals (HOMEPAGE_PROGRAMMING_PLAN.md §1.2): the FIND trend
+  // score + its breakdown persist to frontmatter so the static homepage can rank
+  // slots, rotate the hero, and badge trending stories at every rebuild.
+  if (Number.isFinite(topic.priority)) fm.trendScore = topic.priority;
+  if (topic.signals && typeof topic.signals === "object") fm.signals = topic.signals;
+  if (topic.eventSlug) fm.eventSlug = topic.eventSlug;
+  if (topic.eventType) fm.eventType = topic.eventType;
+  {
+    const outletCount = topic.verification?.outletCount ?? topic.corroborationCount;
+    if (Number.isFinite(outletCount)) fm.outletCount = outletCount;
+  }
   // Provenance for the post-publish recheck / auto-retraction system (only on breaking-news articles).
   // Lets recheck.mjs re-verify the event later and take down / correct / upgrade it.
   if (topic.verification && topic.sources?.length) {

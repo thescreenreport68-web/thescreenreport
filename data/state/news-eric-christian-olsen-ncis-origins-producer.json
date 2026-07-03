@@ -1,0 +1,122 @@
+{
+  "id": "news-eric-christian-olsen-ncis-origins-producer",
+  "slug": "eric-christian-olsen-returns-to-ncis-franchise-joins-origins-as-execut",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": 75,
+      "cat": "tv/news",
+      "img": "/images/articles/eric-christian-olsen-returns-to-ncis-franchise-joins-origins-as-execut.jpg",
+      "hardBlocks": [
+        "fabricated: The article states 'Season 3 of NCIS: Origins, which consists of 10 episodes, will air Tuesdays at 10 PM this fall on CBS and streaming on Paramount+.' and 'The upcoming third season of NCIS: Origins will consist of 10 episodes.' The reference facts only mention 'upcoming third season' and 'Season 3 of NCIS: Origins, which consists of 10 episodes, will air Tuesdays at 10 PM this fall on CBS and streaming on Paramount+.' from the source reporting, but the authoritative title facts for NCIS: Origins (2024) do not specify a 'Season 3' or its episode count. The reference facts only provide information for the initial series run, not subsequent seasons or their details.",
+        "fabricated: The article states 'According to its IMDb page, the series holds a user rating of 7.5/10.' The reference facts state 'IMDb: 7.5/10' but do not specify 'according to its IMDb page'. While the score is correct, the attribution is slightly off from the provided authoritative facts.",
+        "fabricated: The article states 'The series first aired on October 14, 2024.' The reference facts state 'First aired: 2024-10-14' but do not specify 'The series first aired on October 14, 2024.'",
+        "fabricated: The article states 'The upcoming third season will follow the same release pattern, airing on CBS and streaming on Paramount+ the next day.' The reference facts do not provide information about the release pattern of future seasons.",
+        "fabricated: The article lists 'Paramount+' as a source. The reference facts do not include 'Paramount+' as a source.",
+        "accuracy 7 < 8"
+      ],
+      "block": [
+        "fabricated: The article states 'Season 3 of NCIS: Origins, which consists of 10 episodes, will air Tuesdays at 10 PM this fall on CBS and streaming on Paramount+.' and 'The upcoming third season of NCIS: Origins will consist of 10 episodes.' The reference facts only mention 'upcoming third season' and 'Season 3 of NCIS: Origins, which consists of 10 episodes, will air Tuesdays at 10 PM this fall on CBS and streaming on Paramount+.' from the source reporting, but the authoritative title facts for NCIS: Origins (2024) do not specify a 'Season 3' or its episode count. The reference facts only provide information for the initial series run, not subsequent seasons or their details.",
+        "fabricated: The article states 'According to its IMDb page, the series holds a user rating of 7.5/10.' The reference facts state 'IMDb: 7.5/10' but do not specify 'according to its IMDb page'. While the score is correct, the attribution is slightly off from the provided authoritative facts.",
+        "fabricated: The article states 'The series first aired on October 14, 2024.' The reference facts state 'First aired: 2024-10-14' but do not specify 'The series first aired on October 14, 2024.'",
+        "fabricated: The article states 'The upcoming third season will follow the same release pattern, airing on CBS and streaming on Paramount+ the next day.' The reference facts do not provide information about the release pattern of future seasons.",
+        "fabricated: The article lists 'Paramount+' as a source. The reference facts do not include 'Paramount+' as a source.",
+        "accuracy 7 < 8"
+      ],
+      "fixable": [],
+      "badClaims": 0
+    },
+    "attempt2": {
+      "score": 75,
+      "cat": "tv/news",
+      "img": "/images/articles/eric-christian-olsen-returns-to-ncis-franchise-joins-origins-as-execut.jpg",
+      "hardBlocks": [
+        "fabricated: Season 3 of NCIS: Origins"
+      ],
+      "block": [
+        "fabricated: Season 3 of NCIS: Origins"
+      ],
+      "fixable": [],
+      "badClaims": 0
+    },
+    "attempt3": {
+      "score": 85,
+      "cat": "tv/news",
+      "img": "/images/articles/eric-christian-olsen-returns-to-ncis-franchise-joins-origins-as-execut.jpg",
+      "hardBlocks": [
+        "verify-gate CUT: 1 claim(s) not in the gathered sources — Mark Harmon originated the role of Gibbs in the origina"
+      ],
+      "block": [
+        "verify-gate CUT: 1 claim(s) not in the gathered sources — Mark Harmon originated the role of Gibbs in the origina"
+      ],
+      "fixable": [],
+      "badClaims": 0
+    }
+  },
+  "acceptReason": "terminal-accept (verified accurate, score 85, 1 qualitative stray(s) accepted)",
+  "scorecard": {
+    "score": 85,
+    "subscores": {
+      "accuracy": 9,
+      "readability": 9,
+      "humanVoice": 9,
+      "phrasing": 9,
+      "curiosity": 9,
+      "structure": 9,
+      "infoGain": 8,
+      "seo": 7,
+      "faqQuality": 8,
+      "completeness": 8
+    },
+    "strengths": [
+      "The article is highly accurate, with all specific claims verifiable against the provided reference facts.",
+      "The readability is excellent, with short paragraphs and clear, concise language.",
+      "The human voice is present and engaging, avoiding generic AI tells and providing specific details.",
+      "Phrasing is fluent and professional, reading like a top news desk report.",
+      "The headline and lead are direct and answer-first, fulfilling the curiosity metric for a news piece.",
+      "The structure is well-organized with clear subheadings and a logical flow.",
+      "The article provides good information gain by consolidating details about Olsen's new role and the series.",
+      "The FAQ section adds relevant, new information without being redundant.",
+      "The article is complete for a short news piece, covering all essential details."
+    ],
+    "weaknesses": [
+      "The 'Sources' section lists Paramount+ and JustWatch, but the primary source for the news (Deadline) is only mentioned in the body, not explicitly listed as a source.",
+      "While the SEO is natural, it could benefit from slightly more internal linking if this were a longer feature, though for a short news piece it's acceptable."
+    ],
+    "deterministic": {
+      "words": 367,
+      "h2s": 4,
+      "h2Questions": 3,
+      "internalLinks": 0,
+      "externalLinks": 2,
+      "hasSources": true,
+      "faqCount": 3,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": true,
+      "maxSentence": 35,
+      "avgSentence": 17,
+      "flesch": 51,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": []
+    },
+    "hardBlocks": [
+      "verify-gate CUT: 1 claim(s) not in the gathered sources — Mark Harmon originated the role of Gibbs in the origina"
+    ]
+  },
+  "score": 85,
+  "category": "tv",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "keyword in title",
+      "zero hard-blocks"
+    ]
+  },
+  "ms": 371429
+}

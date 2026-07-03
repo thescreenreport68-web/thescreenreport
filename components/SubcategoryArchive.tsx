@@ -1,9 +1,14 @@
-import ArticleCard from "./ArticleCard";
 import AdSlot from "./AdSlot";
 import JsonLd from "./JsonLd";
 import Breadcrumbs from "./Breadcrumbs";
+import { ArchiveMasthead, RiverItem } from "./ArchiveRiver";
 import { getArticlesBySubcategory } from "@/lib/articles";
-import { getCategory, SITE, type Subcategory } from "@/lib/site";
+import {
+  getCategory,
+  getSubcategoriesForCategory,
+  SITE,
+  type Subcategory,
+} from "@/lib/site";
 
 export default function SubcategoryArchive({
   category,
@@ -14,6 +19,7 @@ export default function SubcategoryArchive({
 }) {
   const cat = getCategory(category);
   const articles = getArticlesBySubcategory(category, sub.slug);
+  const subs = getSubcategoriesForCategory(category);
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -41,12 +47,15 @@ export default function SubcategoryArchive({
           { href: `/${category}/`, label: cat?.name ?? "" },
         ]}
       />
-      <header className="mt-1 border-b-2 border-navy pb-4">
-        <span className="kicker">{cat?.name}</span>
-        <h1 className="mt-1 font-display text-4xl font-bold uppercase tracking-tight text-navy sm:text-5xl">
-          {sub.name}
-        </h1>
-      </header>
+      <ArchiveMasthead
+        kicker={cat?.name}
+        title={sub.name}
+        subnav={subs.map((s) => ({
+          name: s.name,
+          href: `/${category}/${s.slug}/`,
+        }))}
+        active={`/${category}/${sub.slug}/`}
+      />
 
       <div className="my-6 flex justify-center">
         <AdSlot format="leaderboard" className="hidden md:flex" />
@@ -54,13 +63,13 @@ export default function SubcategoryArchive({
       </div>
 
       {articles.length ? (
-        <div className="grid gap-x-5 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mx-auto max-w-4xl">
           {articles.map((a) => (
-            <ArticleCard key={a.slug} article={a} variant="standard" />
+            <RiverItem key={a.slug} article={a} />
           ))}
         </div>
       ) : (
-        <p className="py-16 text-center text-slate">
+        <p className="dek py-16 text-center">
           More {sub.name} coverage is on the way.
         </p>
       )}

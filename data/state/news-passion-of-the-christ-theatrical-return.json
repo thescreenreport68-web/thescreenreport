@@ -1,0 +1,114 @@
+{
+  "id": "news-passion-of-the-christ-theatrical-return",
+  "slug": "passion-of-the-christ-set-for-theatrical-return",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": 65,
+      "cat": "movies/news",
+      "img": "https://image.tmdb.org/t/p/original/4840rkbpsiuow5ew155oVKcqJwj.jpg",
+      "hardBlocks": [
+        "primary keyword not in title",
+        "fabricated: grossing over $600 million worldwide against a production budget of just $30 million",
+        "verify-gate BLOCK: Mel Gibson's 'The Passion of the Christ' is returning t; The film was released in 2004; The Washington Post reported that 'The Passion of the C"
+      ],
+      "block": [
+        "fabricated: grossing over $600 million worldwide against a production budget of just $30 million",
+        "verify-gate BLOCK: Mel Gibson's 'The Passion of the Christ' is returning t; The film was released in 2004; The Washington Post reported that 'The Passion of the C"
+      ],
+      "fixable": [
+        "primary keyword not in title"
+      ],
+      "badClaims": 0
+    },
+    "attempt2": {
+      "score": 65,
+      "cat": "movies/news",
+      "img": "https://image.tmdb.org/t/p/original/4840rkbpsiuow5ew155oVKcqJwj.jpg",
+      "hardBlocks": [
+        "verify-gate BLOCK: Mel Gibson's biblical drama 'The Passion of the Christ'; The Washington Post reported on the potential theatrica; The Washington Post outlines the plan but does not prov",
+        "1 unverified claim(s) (need correction)"
+      ],
+      "block": [
+        "verify-gate BLOCK: Mel Gibson's biblical drama 'The Passion of the Christ'; The Washington Post reported on the potential theatrica; The Washington Post outlines the plan but does not prov",
+        "1 unverified claim(s) (need correction)"
+      ],
+      "fixable": [],
+      "badClaims": 1
+    }
+  },
+  "acceptReason": "cut-and-publish (removed 1 ungrounded/fabricated sentence(s); 408w remain)",
+  "webCheck": {
+    "contradictions": 2,
+    "cut": 2
+  },
+  "scorecard": {
+    "score": 65,
+    "subscores": {
+      "accuracy": 9,
+      "readability": 7,
+      "humanVoice": 6,
+      "phrasing": 7,
+      "curiosity": 7,
+      "structure": 7,
+      "infoGain": 6,
+      "seo": 6,
+      "faqQuality": 7,
+      "completeness": 7
+    },
+    "strengths": [
+      "The article accurately attributes the core claim to The Washington Post, adhering to news standards for developing stories.",
+      "The lead quickly delivers the main information, satisfying the 'answer-first' requirement for news.",
+      "The use of 'as of July 2026' for current availability is correct and avoids inventing dates.",
+      "The FAQ section provides genuinely new and relevant information, addressing common reader questions without repeating the body.",
+      "The structure uses clear subheadings that guide the reader through the information.",
+      "The article avoids keyword stuffing, integrating the primary keyword naturally."
+    ],
+    "weaknesses": [
+      "The Flesch score of 40 indicates dense prose, falling short of the target readability range (60-72).",
+      "The average sentence length of 21 words is on the higher side, contributing to the density.",
+      "The article uses some generic phrasing like 'broader cultural moment' and 'complex legacy' without specific examples to ground them, slightly diminishing human voice.",
+      "While not explicitly 'throat-clearing', phrases like 'This news arrives as part of...' and 'The reported re-release plan comes at a time when...' could be more direct.",
+      "The 'Why does this matter now?' section feels a bit generic and could offer more specific insights or a stronger POV.",
+      "The 'Information Gain' is moderate; while it reports the news, the analysis of its significance is somewhat broad rather than offering a unique framing."
+    ],
+    "deterministic": {
+      "words": 478,
+      "h2s": 4,
+      "h2Questions": 3,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": true,
+      "faqCount": 3,
+      "ktCount": 3,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 31,
+      "avgSentence": 21,
+      "flesch": 40,
+      "bannedTells": 0,
+      "fillerPraise": 2,
+      "kwExact": 0,
+      "hardBlocks": []
+    },
+    "hardBlocks": [
+      "verify-gate BLOCK: Mel Gibson's biblical drama 'The Passion of the Christ'; The Washington Post reported on the potential theatrica; The Washington Post outlines the plan but does not prov",
+      "1 unverified claim(s) (need correction)"
+    ]
+  },
+  "score": 65,
+  "category": "movies",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "external sources ≥2",
+      "score ≥ 70",
+      "zero hard-blocks",
+      "humanVoice ≥ 7"
+    ]
+  },
+  "ms": 276171
+}

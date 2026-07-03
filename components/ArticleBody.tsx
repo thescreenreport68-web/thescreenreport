@@ -19,12 +19,9 @@ function isParagraph(b: string): boolean {
 
 function InContentAd() {
   return (
-    <div className="not-prose my-8 border-y border-hair py-5 text-center">
-      <div className="mb-1.5 text-[10px] font-bold uppercase tracking-[0.2em] text-slate/60">
-        Advertisement
-      </div>
-      <div className="mx-auto flex h-[250px] w-[300px] items-center justify-center border border-dashed border-navy/20 bg-mist text-[11px] text-navy/30">
-        300×250
+    <div className="not-prose my-8 border-y border-hair py-4 text-center">
+      <div className="mx-auto flex min-h-[250px] w-full max-w-[336px] items-center justify-center">
+        <span className="meta-mono text-gray">Advertisement</span>
       </div>
     </div>
   );
@@ -44,9 +41,11 @@ const components = {
 export default function ArticleBody({
   body,
   related,
+  dropCap = false,
 }: {
   body: string;
   related?: Article[];
+  dropCap?: boolean;
 }) {
   const blocks = body
     .split(/\n\n+/)
@@ -55,7 +54,11 @@ export default function ArticleBody({
   let para = 0;
   let readNextShown = false;
   return (
-    <div className="prose prose-screen mx-auto">
+    <div
+      className={`prose prose-screen article-endmark mx-auto ${
+        dropCap ? "article-dropcap" : ""
+      }`}
+    >
       {blocks.map((blk, i) => {
         const paragraph = isParagraph(blk);
         if (paragraph) para += 1;

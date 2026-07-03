@@ -1,0 +1,92 @@
+{
+  "id": "profile-austin-butler-fixtest",
+  "slug": "austin-butler-career-fixtest",
+  "status": "needs_review",
+  "stages": {
+    "attempt1": {
+      "score": 0,
+      "cat": "celebrity/profiles-careers",
+      "img": "/images/articles/austin-butler-career-fixtest.jpg",
+      "hardBlocks": [
+        "a 78-word sentence (>45 — split it; unreadable)"
+      ],
+      "badClaims": 0
+    },
+    "attempt2": {
+      "score": 0,
+      "cat": "celebrity/profiles-careers",
+      "img": "/images/articles/austin-butler-career-fixtest.jpg",
+      "hardBlocks": [
+        "FAQ 3 < 4"
+      ],
+      "badClaims": 0
+    },
+    "attempt3": {
+      "score": 88,
+      "cat": "celebrity/profiles-careers",
+      "img": "/images/articles/austin-butler-career-fixtest.jpg",
+      "hardBlocks": [
+        "3 unverified claim(s) (need correction)"
+      ],
+      "badClaims": 3
+    }
+  },
+  "scorecard": {
+    "score": 88,
+    "subscores": {
+      "accuracy": 10,
+      "readability": 9,
+      "humanVoice": 9,
+      "phrasing": 9,
+      "curiosity": 8,
+      "structure": 9,
+      "infoGain": 9,
+      "seo": 7,
+      "faqQuality": 9,
+      "completeness": 9
+    },
+    "strengths": [
+      "Strong reader-first approach prioritizing narrative flow and engagement.",
+      "Excellent integration of key career milestones with clear explanations.",
+      "Well-structured with informative subheads and a clear lead.",
+      "Human voice is present, especially when discussing the intensity of the Elvis role.",
+      "FAQ section provides genuinely useful, specific information.",
+      "Accurate and well-sourced information, adhering strictly to provided facts."
+    ],
+    "weaknesses": [
+      "SEO score is lower due to a focus on readability over keyword stuffing, which is a positive but impacts the score metric.",
+      "While good, the 'curiosity' score could be slightly higher with a more punchy headline or lead.",
+      "Some phrasing, while generally strong, could benefit from minor tweaks for even greater impact (e.g., 'pivot point that shifted his career' is slightly wordy)."
+    ],
+    "deterministic": {
+      "words": 517,
+      "h2s": 4,
+      "h2Questions": 3,
+      "internalLinks": 0,
+      "externalLinks": 3,
+      "hasSources": true,
+      "faqCount": 4,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 34,
+      "avgSentence": 18,
+      "flesch": 50,
+      "bannedTells": 1,
+      "kwExact": 0,
+      "hardBlocks": []
+    },
+    "hardBlocks": [
+      "3 unverified claim(s) (need correction)"
+    ]
+  },
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "zero hard-blocks"
+    ]
+  },
+  "ms": 266117
+}

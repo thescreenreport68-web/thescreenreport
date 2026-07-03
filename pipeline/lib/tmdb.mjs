@@ -7,7 +7,7 @@ const H = () => ({ Authorization: "Bearer " + process.env.TMDB_READ_TOKEN, accep
 async function tmdb(path) {
   for (let a = 0; a < 3; a++) {
     try {
-      const r = await fetch(BASE + path, { headers: H() });
+      const r = await fetch(BASE + path, { headers: H(), signal: AbortSignal.timeout(10000) }); // cap a hung TMDB socket (box-office-grounding stall fix)
       if (r.status === 429 || r.status >= 500) { await sleep(800 * (a + 1)); continue; }
       if (!r.ok) return null;
       return await r.json();
@@ -395,3 +395,34 @@ export function personFactsBlock(p) {
   if (p.credits?.length) L.push(personFactBlock(p.name, p.credits));
   return L.join("\n");
 }
+
+// ── HERO IMAGE FALLBACK (Phase C4) — legal TMDB official/promotional stills (posters/backdrops/profiles) for when
+// no free Wikimedia Commons photo exists, so a verified article is never DROPPED just for lack of an image. Ported
+// from the gossip automation's heroImage; deterministic order (no vision gate — the runtime LLM has no image input).
+// "original" size keeps it well above the 1200px hero requirement. TMDB images are official/promotional = legal.
+export const tmdbImg = (path, size = "original") => (path ? `https://image.tmdb.org/t/p/${size}${path}` : null);
+
+export async function getTitleImages(name, type = "movie", yearHint = null) {
+  let res = await searchTitle(name, type, yearHint);
+  let kind = type;
+  if (!res) { const alt = type === "movie" ? "tv" : "movie"; res = await searchTitle(name, alt, yearHint); kind = alt; }
+  if (!res) return null;
+  const imgs = await tmdb(`/${kind}/${res.id}/images?include_image_language=en,null`);
+  // CLEAN backdrops first (iso_639_1 === null = no baked-in title text), then by community vote.
+  const backdrops = (imgs?.backdrops || [])
+    .sort((a, b) => (a.iso_639_1 === null ? -1 : 0) - (b.iso_639_1 === null ? -1 : 0) || (b.vote_average || 0) - (a.vote_average || 0))
+    .map((x) => tmdbImg(x.file_path)).filter(Boolean).slice(0, 4);
+  return { id: res.id, type: kind, title: res.title || res.name, backdrops, poster: tmdbImg(res.poster_path) };
+}
+
+export async function getPersonImages(name) {
+  const p = await searchPerson(name);
+  if (!p) return null;
+  const imgs = await tmdb(`/person/${p.id}/images`);
+  const profiles = (imgs?.profiles || [])
+    .sort((a, b) => (b.vote_average || 0) - (a.vote_average || 0))
+    .map((x) => tmdbImg(x.file_path)).filter(Boolean).slice(0, 3);
+  return { id: p.id, name: p.name, profiles };
+}
+
+// (tmdbHeroImage was removed 2026-07-03: superseded by lib/heroImage.mjs pickHeroImage — zero callers.)

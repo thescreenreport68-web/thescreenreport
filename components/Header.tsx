@@ -2,27 +2,31 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { NAV } from "@/lib/site";
+import { WordmarkLink, TsrMark } from "./Wordmark";
 
-function Hamburger() {
-  return (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+function Hamburger({ open }: { open: boolean }) {
+  return open ? (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+      <path d="M6 6l12 12M18 6 6 18" />
+    </svg>
+  ) : (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
       <path d="M3 6h18M3 12h18M3 18h18" />
     </svg>
   );
 }
 
-function SearchIcon() {
-  return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-      <circle cx="11" cy="11" r="7" />
-      <path d="m21 21-4.3-4.3" />
-    </svg>
-  );
-}
-
+// Global chrome (spec §B2): full masthead + hairline nav row that condenses to a
+// 52px bar on scroll; a full-screen white overlay menu on mobile (no rounded
+// dropdown cards); desktop nav is flat — subsections live in the menu overlay
+// and each category page's subnav.
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
+
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 100);
     onScroll();
@@ -30,119 +34,123 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Close the overlay on route change.
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [pathname]);
+
+  useEffect(() => {
+    document.documentElement.style.overflow = menuOpen ? "hidden" : "";
+    return () => {
+      document.documentElement.style.overflow = "";
+    };
+  }, [menuOpen]);
+
   return (
-    <header className="sticky top-0 z-50 border-t border-ink bg-white/95 backdrop-blur">
+    <header className="sticky top-0 z-50 bg-paper/95 backdrop-blur">
       {/* Masthead — collapses on desktop scroll (THR-style), always shown on mobile */}
       <div
         className={`overflow-hidden transition-all duration-300 ${
           scrolled ? "lg:max-h-0 lg:opacity-0" : "lg:max-h-40 lg:opacity-100"
         }`}
       >
-        <div className="mx-auto flex max-w-wide items-center gap-3 px-4 py-5">
+        <div className="mx-auto flex max-w-wide items-center gap-3 px-4 py-5 lg:py-6">
           <div className="flex flex-1 items-center gap-4">
-            <details className="relative lg:hidden">
-              <summary className="flex cursor-pointer list-none items-center text-navy">
-                <Hamburger />
-              </summary>
-              <div className="absolute left-0 z-50 mt-3 max-h-[70vh] w-60 overflow-auto rounded border border-hair bg-white p-2 shadow-xl">
-                {NAV.map((n) => (
-                  <div key={n.label} className="py-1">
-                    <Link
-                      href={n.href}
-                      className="block rounded px-3 py-1.5 text-sm font-bold uppercase tracking-wide text-navy hover:bg-mist"
-                    >
-                      {n.label}
-                    </Link>
-                    {n.subs.map((s) => (
-                      <Link
-                        key={s.href}
-                        href={s.href}
-                        className="block rounded px-3 py-1 pl-6 text-xs font-semibold uppercase tracking-wide text-slate hover:bg-mist hover:text-gold"
-                      >
-                        {s.name}
-                      </Link>
-                    ))}
-                  </div>
-                ))}
-              </div>
-            </details>
-            <button aria-label="Search" className="text-navy hover:text-gold">
-              <SearchIcon />
+            <button
+              type="button"
+              aria-label={menuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={menuOpen}
+              onClick={() => setMenuOpen((v) => !v)}
+              className="text-ink transition-colors duration-150 hover:text-red lg:hidden"
+            >
+              <Hamburger open={menuOpen} />
             </button>
             <Link
               href="/contact/"
-              className="hidden text-[11px] font-bold uppercase tracking-[0.12em] text-navy hover:text-gold sm:inline"
+              className="nav-link hidden text-[11px] sm:inline"
             >
               Got a Tip?
             </Link>
           </div>
 
-          <Link
-            href="/"
-            className="flex-none whitespace-nowrap font-display text-2xl font-bold italic leading-none text-gold sm:text-[2.7rem]"
-          >
-            The Screen Report
-          </Link>
+          <WordmarkLink markClassName="text-[26px] sm:text-4xl lg:text-[52px]" />
 
-          <div className="flex flex-1 items-center justify-end gap-4">
+          <div className="flex flex-1 items-center justify-end gap-5">
             <Link
-              href="#newsletter"
-              className="hidden text-[11px] font-bold uppercase tracking-[0.12em] text-navy hover:text-gold sm:inline"
+              href="/about/"
+              className="nav-link hidden text-[11px] sm:inline"
             >
-              Newsletters
+              About
             </Link>
-            <Link
-              href="#newsletter"
-              className="text-[11px] font-bold uppercase tracking-[0.12em] text-gold hover:text-gold-600"
-            >
-              Subscribe
+            <Link href="#newsletter" className="nav-link text-[11px] text-red hover:text-red-dark">
+              Newsletter
             </Link>
           </div>
         </div>
       </div>
 
-      {/* Category nav bar (desktop) — always visible; shows a compact masthead inline when scrolled */}
-      <nav className="hidden border-y border-hair lg:block" aria-label="Primary">
+      {/* Nav row — hairline-framed; shows the compact logotype inline when scrolled */}
+      <nav
+        className="hidden border-y border-ink lg:block"
+        aria-label="Primary"
+      >
         <div
-          className={`mx-auto flex max-w-wide items-center gap-7 px-4 ${
+          className={`mx-auto flex h-[52px] max-w-wide items-center gap-7 px-4 ${
             scrolled ? "justify-start" : "justify-center"
           }`}
         >
-          {scrolled ? (
-            <Link
-              href="/"
-              className="flex-none whitespace-nowrap font-display text-lg font-bold italic leading-none text-gold"
-            >
-              The Screen Report
-            </Link>
-          ) : null}
+          {scrolled ? <TsrMark /> : null}
           {NAV.map((n) => (
-            <div key={n.label} className="group relative">
-              <Link
-                href={n.href}
-                className="block py-3 text-[13px] font-bold uppercase tracking-[0.08em] text-navy hover:text-gold"
-              >
-                {n.label}
-              </Link>
-              {n.subs.length ? (
-                <div className="invisible absolute left-1/2 top-full z-50 -translate-x-1/2 opacity-0 transition duration-150 group-hover:visible group-hover:opacity-100">
-                  <div className="w-52 rounded-b border border-hair bg-white p-2 shadow-xl">
+            <Link key={n.label} href={n.href} className="nav-link py-2">
+              {n.label}
+            </Link>
+          ))}
+        </div>
+      </nav>
+      {/* Mobile: single hairline under the masthead */}
+      <div className="border-b border-ink lg:hidden" />
+
+      {/* Full-screen menu overlay (mobile + tablet) */}
+      {menuOpen ? (
+        <div className="fixed inset-x-0 bottom-0 top-0 z-40 overflow-y-auto bg-paper pt-20 lg:hidden">
+          <div className="container-wide pb-16">
+            {NAV.map((n) => (
+              <div key={n.label} className="border-b border-hair py-4">
+                <Link
+                  href={n.href}
+                  className="font-display text-[22px] font-bold uppercase leading-none tracking-[0.005em] text-ink transition-colors duration-150 hover:text-red"
+                >
+                  {n.label}
+                </Link>
+                {n.subs.length ? (
+                  <div className="mt-3 flex flex-wrap gap-x-5 gap-y-2">
                     {n.subs.map((s) => (
                       <Link
                         key={s.href}
                         href={s.href}
-                        className="block rounded px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.08em] text-navy hover:bg-mist hover:text-gold"
+                        className="byline transition-colors duration-150 hover:text-red"
                       >
                         {s.name}
                       </Link>
                     ))}
                   </div>
-                </div>
-              ) : null}
+                ) : null}
+              </div>
+            ))}
+            <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3">
+              <Link href="/about/" className="nav-link text-[11px]">
+                About
+              </Link>
+              <Link href="/editorial-standards/" className="nav-link text-[11px]">
+                Editorial Standards
+              </Link>
+              <Link href="/contact/" className="nav-link text-[11px]">
+                Contact
+              </Link>
             </div>
-          ))}
+          </div>
         </div>
-      </nav>
+      ) : null}
     </header>
   );
 }

@@ -11,7 +11,7 @@ import { RankingEntries, BestOfEntries, WeekendChart, RevealSpine, ReadingModeBo
 
 export function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
-    <div className="mb-2 font-sans text-xs font-bold uppercase tracking-[0.14em] text-breaking">
+    <div className="mb-2 font-sans text-xs font-bold uppercase tracking-[0.14em] text-red">
       {children}
     </div>
   );
@@ -20,13 +20,13 @@ export function SectionLabel({ children }: { children: React.ReactNode }) {
 /* ---------- Reviews ---------- */
 function RatingBadge({ rating }: { rating: NonNullable<Article["rating"]> }) {
   return (
-    <div className="flex flex-none flex-col items-center justify-center border-2 border-breaking px-4 py-2 text-center">
-      <span className="font-display text-3xl font-bold leading-none text-breaking">
+    <div className="flex flex-none flex-col items-center justify-center border-2 border-red px-4 py-2 text-center">
+      <span className="font-display text-3xl font-bold leading-none text-red">
         {rating.score}
         <span className="text-lg text-slate">/{rating.max}</span>
       </span>
       {rating.label ? (
-        <span className="mt-1 font-sans text-[10px] font-bold uppercase tracking-[0.1em] text-navy">
+        <span className="mt-1 font-sans text-[10px] font-bold uppercase tracking-[0.1em] text-ink">
           {rating.label}
         </span>
       ) : null}
@@ -37,11 +37,11 @@ function RatingBadge({ rating }: { rating: NonNullable<Article["rating"]> }) {
 function VerdictBox({ article }: { article: Article }) {
   if (!article.verdict && !article.rating) return null;
   return (
-    <aside className="my-6 flex items-center gap-5 border-y-2 border-navy py-4">
+    <aside className="my-6 flex items-center gap-5 border-y-2 border-ink py-4">
       {article.rating ? <RatingBadge rating={article.rating} /> : null}
       <div>
         <SectionLabel>The Verdict</SectionLabel>
-        <p className="font-body text-xl leading-snug text-navy sm:text-2xl">
+        <p className="font-body text-xl leading-snug text-ink sm:text-2xl">
           {article.verdict}
         </p>
       </div>
@@ -53,20 +53,20 @@ function ProsCons({ prosCons }: { prosCons: NonNullable<Article["prosCons"]> }) 
   const { pros = [], cons = [] } = prosCons;
   if (!pros.length && !cons.length) return null;
   return (
-    <div className="my-6 grid gap-4 border border-hair bg-mist/30 p-5 sm:grid-cols-2">
+    <div className="my-6 grid gap-4 border border-hair p-5 sm:grid-cols-2">
       <div>
-        <div className="mb-2 font-sans text-xs font-bold uppercase tracking-[0.1em] text-navy">
-          ✓ What Works
+        <div className="mb-2 font-sans text-xs font-bold uppercase tracking-[0.1em] text-ink">
+          <span aria-hidden className="mr-1.5 font-display text-sm font-bold text-red">+</span>What Works
         </div>
         <ul className="space-y-1.5">
           {pros.map((p, i) => (
-            <li key={i} className="font-body text-[1.02rem] leading-snug text-navy">{p}</li>
+            <li key={i} className="font-body text-[1.02rem] leading-snug text-ink">{p}</li>
           ))}
         </ul>
       </div>
       <div className="sm:border-l sm:border-hair sm:pl-4">
         <div className="mb-2 font-sans text-xs font-bold uppercase tracking-[0.1em] text-slate">
-          ✕ What Doesn&apos;t
+          <span aria-hidden className="mr-1.5 font-display text-sm font-bold text-slate">–</span>What Doesn&apos;t
         </div>
         <ul className="space-y-1.5">
           {cons.map((c, i) => (
@@ -96,7 +96,7 @@ function InfoCard({ infoCard }: { infoCard: NonNullable<Article["infoCard"]> }) 
         {rows.map(([k, v]) => (
           <div key={k} className="flex gap-3 py-1.5">
             <dt className="w-32 flex-none font-sans text-xs font-bold uppercase tracking-[0.04em] text-slate">{k}</dt>
-            <dd className="font-body text-[1.02rem] text-navy">{v}</dd>
+            <dd className="font-body text-[1.02rem] text-ink">{v}</dd>
           </div>
         ))}
       </dl>
@@ -108,8 +108,9 @@ function InfoCard({ infoCard }: { infoCard: NonNullable<Article["infoCard"]> }) 
 function SpoilerBanner({ article }: { article: Article }) {
   if (!article.spoiler) return null;
   return (
-    <div className="my-5 border-l-4 border-breaking bg-breaking/5 px-4 py-3 font-sans text-sm font-bold uppercase tracking-[0.06em] text-breaking">
-      ⚠ Spoiler warning — major plot details ahead
+    <div className="my-5 border-y-2 border-ink py-3">
+      <span className="kicker">Spoilers Ahead</span>
+      <span className="ml-3 font-body text-sm italic text-slate">Major plot details follow.</span>
     </div>
   );
 }
@@ -117,9 +118,9 @@ function SpoilerBanner({ article }: { article: Article }) {
 function TLDR({ article }: { article: Article }) {
   if (!article.tldr) return null;
   return (
-    <aside className="my-6 border border-hair bg-mist/40 p-5">
+    <aside className="my-6 border border-hair p-5">
       <SectionLabel>The Short Version</SectionLabel>
-      <p className="font-body text-lg leading-snug text-navy">{article.tldr}</p>
+      <p className="font-body text-lg leading-snug text-ink">{article.tldr}</p>
     </aside>
   );
 }
@@ -134,12 +135,12 @@ function RankingList({ entries }: { entries: NonNullable<Article["entries"]> }) 
       <ol className="space-y-2">
         {ordered.map((e) => (
           <li key={e.rank} className="flex gap-3">
-            <span className="w-7 flex-none font-display text-xl font-bold leading-tight text-breaking">{e.rank}</span>
-            <span className="font-body text-[1.05rem] leading-snug text-navy">
+            <span className="w-7 flex-none font-display text-xl font-bold leading-tight text-red">{e.rank}</span>
+            <span className="font-body text-[1.05rem] leading-snug text-ink">
               <span className="font-semibold">{e.title}</span>
               {e.year ? <span className="text-slate"> ({e.year})</span> : null}
               {e.verdictTier ? (
-                <span className="ml-2 inline-block bg-mist px-1.5 py-0.5 align-middle font-sans text-[10px] font-bold uppercase tracking-[0.08em] text-breaking">{e.verdictTier}</span>
+                <span className="ml-2 inline-block bg-mist px-1.5 py-0.5 align-middle font-sans text-[10px] font-bold uppercase tracking-[0.08em] text-red">{e.verdictTier}</span>
               ) : null}
               {e.blurb ? <span className="text-slate"> — {e.blurb}</span> : null}
             </span>
@@ -166,7 +167,7 @@ function FactPanel({ factPanel }: { factPanel: NonNullable<Article["factPanel"]>
         {rows.map(([k, v]) => (
           <div key={k} className="flex gap-3 py-1.5">
             <dt className="w-28 flex-none font-sans text-xs font-bold uppercase tracking-[0.04em] text-slate">{k}</dt>
-            <dd className="font-body text-[1.02rem] text-navy">{v}</dd>
+            <dd className="font-body text-[1.02rem] text-ink">{v}</dd>
           </div>
         ))}
       </dl>
@@ -178,8 +179,8 @@ function Filmography({ filmography }: { filmography: NonNullable<Article["filmog
   if (!filmography?.length) return null;
   return (
     <section className="mt-10 not-prose">
-      <div className="mb-3 border-b-2 border-navy pb-1">
-        <h2 className="font-display text-2xl font-bold uppercase tracking-tight text-navy">Full Filmography</h2>
+      <div className="mb-3 border-b-2 border-ink pb-1">
+        <h2 className="font-display text-2xl font-bold uppercase tracking-tight text-ink">Full Filmography</h2>
       </div>
       <table className="w-full border-collapse text-left">
         <thead>
@@ -192,10 +193,10 @@ function Filmography({ filmography }: { filmography: NonNullable<Article["filmog
         </thead>
         <tbody>
           {filmography.map((f, i) => (
-            <tr key={i} className="border-b border-dotted border-slate/40 align-top">
+            <tr key={i} className="border-b border-dotted border-gray/40 align-top">
               <td className="py-2 pr-3 font-sans text-sm text-slate">{f.year || "—"}</td>
-              <td className="py-2 pr-3 font-body text-[1.02rem] font-semibold text-navy">{f.title}</td>
-              <td className="py-2 pr-3 font-body text-[1.02rem] text-navy">{f.role || "—"}</td>
+              <td className="py-2 pr-3 font-body text-[1.02rem] font-semibold text-ink">{f.title}</td>
+              <td className="py-2 pr-3 font-body text-[1.02rem] text-ink">{f.role || "—"}</td>
               <td className="py-2 font-sans text-xs uppercase tracking-[0.04em] text-slate">{f.type || ""}</td>
             </tr>
           ))}
@@ -214,11 +215,11 @@ function WhereToWatchTable({ whereToWatch }: { whereToWatch: NonNullable<Article
       <table className="w-full border-collapse text-left">
         <tbody>
           {whereToWatch.map((w, i) => (
-            <tr key={i} className="border-b border-dotted border-slate/40 last:border-0">
-              <td className="py-2 pr-3 font-body text-[1.02rem] font-semibold text-navy">
+            <tr key={i} className="border-b border-dotted border-gray/40 last:border-0">
+              <td className="py-2 pr-3 font-body text-[1.02rem] font-semibold text-ink">
                 {w.title}{w.year ? <span className="font-normal text-slate"> ({w.year})</span> : null}
               </td>
-              <td className="py-2 pr-3 font-body text-[1.02rem] text-navy">{w.platform}</td>
+              <td className="py-2 pr-3 font-body text-[1.02rem] text-ink">{w.platform}</td>
               <td className="py-2 font-sans text-xs uppercase tracking-[0.04em] text-slate">{w.type || ""}</td>
             </tr>
           ))}
@@ -240,7 +241,7 @@ function TrailerModule({ article }: { article: Article }) {
           <span className="font-sans text-xs font-bold uppercase tracking-[0.1em] text-slate">
             Release
           </span>
-          <span className="font-body text-[1.05rem] font-semibold text-navy">
+          <span className="font-body text-[1.05rem] font-semibold text-ink">
             {article.releaseInfo}
           </span>
         </div>
@@ -252,9 +253,9 @@ function TrailerModule({ article }: { article: Article }) {
             {article.keyMoments.map((m, i) => (
               <li
                 key={i}
-                className="flex gap-2 font-body text-[1.05rem] leading-snug text-navy"
+                className="flex gap-2 font-body text-[1.05rem] leading-snug text-ink"
               >
-                <span className="flex-none font-bold text-breaking">▸</span>
+                <span className="flex-none font-bold text-red">▸</span>
                 <span>{m}</span>
               </li>
             ))}
@@ -277,13 +278,13 @@ function InterviewModule({ article }: { article: Article }) {
           <span className="font-sans text-xs font-bold uppercase tracking-[0.1em] text-slate">
             Source
           </span>
-          <span className="font-body text-[1.02rem] text-navy">{article.sourceOutlet}</span>
+          <span className="font-body text-[1.02rem] text-ink">{article.sourceOutlet}</span>
           {article.sourceUrl ? (
             <a
               href={article.sourceUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="font-sans text-xs font-bold uppercase tracking-[0.06em] text-breaking hover:underline"
+              className="font-sans text-xs font-bold uppercase tracking-[0.06em] text-red hover:underline"
             >
               Watch on YouTube →
             </a>
@@ -295,7 +296,7 @@ function InterviewModule({ article }: { article: Article }) {
           {article.pullQuotes.map((q, i) => (
             <blockquote
               key={i}
-              className="border-l-4 border-breaking pl-4 font-display text-xl italic leading-snug text-navy sm:text-2xl"
+              className="border-l-4 border-red pl-4 font-display text-xl italic leading-snug text-ink sm:text-2xl"
             >
               &ldquo;{q.trim().replace(/^["“”]+|["“”]+$/g, "").trim()}&rdquo;
             </blockquote>
@@ -311,8 +312,8 @@ function NewsPullQuote({ article }: { article: Article }) {
   const q = article.pullQuote;
   if (!q?.text) return null;
   return (
-    <figure className="my-6 border-l-4 border-breaking pl-5 not-prose">
-      <blockquote className="font-display text-2xl italic leading-snug text-navy sm:text-[1.7rem]">
+    <figure className="my-6 border-l-4 border-red pl-5 not-prose">
+      <blockquote className="font-display text-2xl italic leading-snug text-ink sm:text-[1.7rem]">
         &ldquo;{q.text.trim().replace(/^["“”]+|["“”]+$/g, "")}&rdquo;
       </blockquote>
       {q.attribution ? (
@@ -339,21 +340,25 @@ function BoxOfficeModule({ article }: { article: Article }) {
   return (
     <div className="my-6 not-prose">
       {cells.length ? (
-        <div className="grid grid-cols-2 gap-px overflow-hidden border border-hair bg-hair sm:grid-cols-4">
+        <div
+          className={`grid grid-cols-2 gap-px overflow-hidden border border-hair bg-hair ${
+            cells.length === 3 ? "sm:grid-cols-3" : cells.length >= 4 ? "sm:grid-cols-4" : ""
+          }`}
+        >
           {cells.map(([k, v]) => (
             <div key={k} className="bg-white px-4 py-3 text-center">
               <div className="font-sans text-[10px] font-bold uppercase tracking-[0.12em] text-slate">{k}</div>
-              <div className="mt-1 font-display text-xl font-bold leading-tight text-navy">{v}</div>
+              <div className="mt-1 font-display text-xl font-bold leading-tight text-ink">{v}</div>
             </div>
           ))}
         </div>
       ) : null}
       {article.records?.length ? (
-        <aside className="mt-5 border-l-4 border-breaking bg-mist/30 p-5">
+        <aside className="mt-5 border-y-2 border-ink py-4">
           <SectionLabel>Records &amp; Milestones</SectionLabel>
           <ul className="space-y-2">
             {article.records.map((r, i) => (
-              <li key={i} className="font-body text-[1.05rem] leading-snug text-navy">
+              <li key={i} className="font-body text-[1.05rem] leading-snug text-ink">
                 <span className="font-semibold">{r.claim}</span>
                 {r.detail ? <span className="text-slate"> — {r.detail}</span> : null}
               </li>
@@ -369,9 +374,9 @@ function BoxOfficeModule({ article }: { article: Article }) {
 function ConsensusBox({ article }: { article: Article }) {
   if (!article.consensus) return null;
   return (
-    <aside className="my-6 border-y-2 border-breaking py-4">
+    <aside className="my-6 border-y-2 border-red py-4">
       <SectionLabel>The Consensus</SectionLabel>
-      <p className="font-body text-xl leading-snug text-navy sm:text-2xl">
+      <p className="font-body text-xl leading-snug text-ink sm:text-2xl">
         {article.consensus}
       </p>
     </aside>
@@ -382,8 +387,8 @@ function ReactionSection({ article }: { article: Article }) {
   if (!article.tweetIds?.length && !article.instagramUrls?.length) return null;
   return (
     <section className="mt-10 not-prose">
-      <div className="mb-1 border-b-2 border-navy pb-1">
-        <h2 className="font-display text-2xl font-bold uppercase tracking-tight text-navy">
+      <div className="mb-1 border-b-2 border-ink pb-1">
+        <h2 className="font-display text-2xl font-bold uppercase tracking-tight text-ink">
           What People Are Saying
         </h2>
       </div>
@@ -412,18 +417,18 @@ function AwardsHeader({ article }: { article: Article }) {
   return (
     <div className="my-6 not-prose">
       {s?.show ? (
-        <div className="border-y-2 border-navy py-4">
+        <div className="border-y-2 border-ink py-4">
           <SectionLabel>The Ceremony</SectionLabel>
-          <div className="font-display text-2xl font-bold leading-tight text-navy">{s.show}</div>
+          <div className="font-display text-2xl font-bold leading-tight text-ink">{s.show}</div>
           {meta.length ? <div className="mt-1 font-sans text-sm text-slate">{meta.join(" · ")}</div> : null}
         </div>
       ) : null}
       {article.awardRecords?.length ? (
-        <aside className="mt-5 border-l-4 border-breaking bg-mist/30 p-5">
+        <aside className="mt-5 border-y-2 border-ink py-4">
           <SectionLabel>Records &amp; Firsts</SectionLabel>
           <ul className="space-y-2">
             {article.awardRecords.map((r, i) => (
-              <li key={i} className="font-body text-[1.05rem] leading-snug text-navy">
+              <li key={i} className="font-body text-[1.05rem] leading-snug text-ink">
                 <span className="font-semibold">{r.claim}</span>
                 {r.detail ? <span className="text-slate"> — {r.detail}</span> : null}
               </li>
@@ -440,23 +445,27 @@ function AwardsWinnersList({ article }: { article: Article }) {
   if (!cats?.length) return null;
   return (
     <section className="mt-10 not-prose">
-      <div className="mb-4 border-b-2 border-navy pb-1">
-        <h2 className="font-display text-2xl font-bold uppercase tracking-tight text-navy">Full Winners List</h2>
+      <div className="mb-4 border-b-2 border-ink pb-1">
+        <h2 className="font-display text-2xl font-bold uppercase tracking-tight text-ink">Full Winners List</h2>
       </div>
       <div className="grid gap-5 sm:grid-cols-2">
         {cats.map((c, i) => (
           <div key={i} className="border border-hair p-4">
-            <div className="mb-2 font-sans text-xs font-bold uppercase tracking-[0.1em] text-breaking">{c.categoryName}</div>
+            <div className="mb-2 font-sans text-xs font-bold uppercase tracking-[0.1em] text-red">{c.categoryName}</div>
             <ul className="space-y-1">
               {c.nominees.map((n, j) => (
                 <li
                   key={j}
                   className={
                     "flex gap-2 font-body text-[1.02rem] leading-snug " +
-                    (n.isWinner ? "font-semibold text-navy" : "text-slate")
+                    (n.isWinner ? "font-semibold text-ink" : "text-slate")
                   }
                 >
-                  <span className="flex-none">{n.isWinner ? "🏆" : "·"}</span>
+                  {n.isWinner ? (
+                    <span className="kicker flex-none self-center bg-red px-1.5 py-0.5 text-[9px] text-white">Winner</span>
+                  ) : (
+                    <span aria-hidden className="flex-none text-gray">·</span>
+                  )}
                   <span>
                     {n.name ? n.name : null}
                     {n.name && n.title ? " — " : null}

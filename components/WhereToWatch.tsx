@@ -1,33 +1,44 @@
+import Link from "next/link";
 import SectionHeader from "./SectionHeader";
 import PlaceholderImage from "./PlaceholderImage";
+import type { Article } from "@/lib/articles";
 
-// THR's "Shopping with THR" slot, reworked as our affiliate-ready "Where to Watch".
-const PICKS = [
-  { slug: "wtw-dune-two", title: "Dune: Part Two", where: "Stream on Max", cat: "streaming" },
-  { slug: "wtw-oppenheimer", title: "Oppenheimer", where: "Rent on Prime Video", cat: "streaming" },
-  { slug: "wtw-the-bear", title: "The Bear", where: "Stream on Hulu", cat: "tv" },
-  { slug: "wtw-poor-things", title: "Poor Things", where: "Stream on Hulu", cat: "movies" },
-];
-
-export default function WhereToWatch() {
+// "Where to Watch" — fed by real watch-guide articles (formatTag guide/watchguide).
+// A ceremonial band framed by 2px ink rules; self-hides when no guides exist.
+export default function WhereToWatch({ items }: { items: Article[] }) {
+  if (!items.length) return null;
   return (
-    <section className="rounded-lg border border-navy/15 p-5 sm:p-6">
-      <SectionHeader title="Where to Watch" tagline="Stream it tonight" />
+    <section className="border-y-2 border-ink py-8">
+      <SectionHeader
+        title="Where to Watch"
+        tagline="Stream it tonight"
+        href="/streaming/where-to-watch/"
+      />
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-        {PICKS.map((p) => (
-          <article key={p.slug}>
-            <PlaceholderImage
-              slug={p.slug}
-              category={p.cat}
-              title={p.title}
-              className="aspect-[2/3] w-full rounded ring-1 ring-navy/10"
-            />
-            <h3 className="mt-2 font-body text-base font-normal leading-snug text-navy">
-              {p.title}
+        {items.slice(0, 4).map((a) => (
+          <article key={a.slug} className="group">
+            <Link
+              href={`/${a.category}/${a.slug}/`}
+              className="block overflow-hidden"
+            >
+              <PlaceholderImage
+                slug={a.slug}
+                category={a.category}
+                title={a.title}
+                src={a.image}
+                alt={a.imageAlt}
+                className="aspect-video w-full transition-transform duration-200 group-hover:scale-[1.02] motion-reduce:transform-none"
+              />
+            </Link>
+            <h3 className="hed-m mt-2.5 transition-colors duration-150 group-hover:text-red">
+              <Link href={`/${a.category}/${a.slug}/`}>{a.title}</Link>
             </h3>
-            <p className="mt-1 font-sans text-xs font-semibold text-gold-600">
-              {p.where}
-            </p>
+            {a.whereToWatch?.[0]?.platform ? (
+              <p className="kicker mt-2">
+                {a.whereToWatch[0].type === "rent" ? "Rent on" : "Stream on"}{" "}
+                {a.whereToWatch[0].platform}
+              </p>
+            ) : null}
           </article>
         ))}
       </div>

@@ -1,0 +1,51 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Cap,Anton,92,&H00FFFFFF,&H00B9B9B9,&H00101010,&HA0000000,0,0,0,0,100,100,1,0,1,4,2,2,70,70,330,1
+Style: Hook,Anton,120,&H00FFFFFF,&H00CFCFCF,&H00101010,&HA0000000,0,0,0,0,100,100,1,0,1,5,3,5,70,70,0,1
+Style: KickText,Anton,40,&H00FFFFFF,&H00FFFFFF,&H00101010,&H00000000,0,0,0,0,100,100,4,0,1,0,0,5,0,0,0,1
+Style: KickDraw,Anton,40,&H002821D9,&H002821D9,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,7,0,0,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.12,0:00:06.50,KickDraw,,0,0,0,,{\fad(140,120)\pos(132,126)\1c&H000000&\1a&H78&\blur6\p1}m 18 0 l 810 0 b 828 0 828 0 828 18 l 828 70 b 828 88 828 88 810 88 l 18 88 b 0 88 0 88 0 70 l 0 18 b 0 0 0 0 18 0{\p0}
+Dialogue: 1,0:00:00.12,0:00:06.50,KickDraw,,0,0,0,,{\fad(140,120)\pos(126,118)\p1}m 18 0 l 810 0 b 828 0 828 0 828 18 l 828 70 b 828 88 828 88 810 88 l 18 88 b 0 88 0 88 0 70 l 0 18 b 0 0 0 0 18 0{\p0}
+Dialogue: 2,0:00:00.12,0:00:06.50,KickText,,0,0,0,,{\fad(140,120)\pos(540,163)}JODIE FOSTER ON AI IN FILMS
+Dialogue: 0,0:00:00.05,0:00:01.13,Hook,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k36}JODIE {\k41}FOSTER {\k31}SAYS
+Dialogue: 0,0:00:01.13,0:00:02.01,Hook,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k21}AI {\k21}IS {\k46}{\1c&H2821D9&}ALREADY{\1c&HFFFFFF&}
+Dialogue: 0,0:00:02.01,0:00:03.35,Hook,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k41}MAKING {\k36}MAJOR {\k57}HOLLYWOOD
+Dialogue: 0,0:00:03.35,0:00:03.71,Hook,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k36}FILMS
+Dialogue: 0,0:00:03.71,0:00:04.74,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k26}THE {\k36}OSCAR {\k41}WINNER
+Dialogue: 0,0:00:04.74,0:00:05.61,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k41}POINTS {\k21}TO {\k26}THE
+Dialogue: 0,0:00:05.61,0:00:06.64,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k31}BRAD {\k31}PITT {\k41}RACING
+Dialogue: 0,0:00:06.64,0:00:07.52,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k36}DRAMA {\k31}{\1c&H2821D9&}'F1'{\1c&HFFFFFF&} {\k21}AS
+Dialogue: 0,0:00:07.52,0:00:08.19,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k21}AN {\k46}EXAMPLE
+Dialogue: 0,0:00:08.19,0:00:09.27,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k26}SHE {\k57}DESCRIBES {\k26}ITS
+Dialogue: 0,0:00:09.27,0:00:10.50,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k57}{\1c&H2821D9&}STRUCTURE{\1c&HFFFFFF&} {\k21}AS {\k46}EXACTLY
+Dialogue: 0,0:00:10.50,0:00:11.53,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k31}WHAT {\k36}YOU'D {\k36}LEARN
+Dialogue: 0,0:00:11.53,0:00:12.15,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k21}IN {\k41}SCHOOL
+Dialogue: 0,0:00:12.15,0:00:13.39,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k41}{\1c&H2821D9&}ACTORS{\1c&HFFFFFF&} {\k46}DELIVER {\k36}LINES
+Dialogue: 0,0:00:13.39,0:00:14.37,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k46}EXACTLY {\k26}THE {\k26}WAY
+Dialogue: 0,0:00:14.37,0:00:15.14,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k21}IT {\k36}WOULD {\k21}BE
+Dialogue: 0,0:00:15.14,0:00:15.96,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k46}WRITTEN {\k21}IF {\k15}A
+Dialogue: 0,0:00:15.96,0:00:17.20,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k51}COMPUTER {\k26}WAS {\k46}WRITING
+Dialogue: 0,0:00:17.20,0:00:18.54,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k41}FOSTER {\k31}SAYS {\k62}FILMMAKERS
+Dialogue: 0,0:00:18.54,0:00:19.57,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k26}CAN {\k51}{\1c&H2821D9&}DOMINATE{\1c&HFFFFFF&} {\k26}THE
+Dialogue: 0,0:00:19.57,0:00:20.70,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k62}TECHNOLOGY {\k21}TO {\k31}MAKE
+Dialogue: 0,0:00:20.70,0:00:21.78,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k57}SOMETHING {\k26}BIG {\k26}AND
+Dialogue: 0,0:00:21.78,0:00:22.35,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k57}BEAUTIFUL
+Dialogue: 0,0:00:22.35,0:00:23.12,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k26}SHE {\k31}USES {\k21}{\1c&H2821D9&}AI{\1c&HFFFFFF&}
+Dialogue: 0,0:00:23.12,0:00:24.20,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k26}FOR {\k36}SMALL {\k46}HELPFUL
+Dialogue: 0,0:00:24.20,0:00:25.90,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k41}THINGS {\k31}LIKE {\k98}{\1c&H2821D9&}PRE-VISUALIZATION{\1c&HFFFFFF&}
+Dialogue: 0,0:00:25.90,0:00:26.93,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k26}AND {\k77}{\1c&H2821D9&}STORYBOARDING{\1c&HFFFFFF&}
+Dialogue: 0,0:00:26.93,0:00:28.07,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k31}THIS {\k41}{\1c&H2821D9&}DEBATE{\1c&HFFFFFF&} {\k41}SHAPES
+Dialogue: 0,0:00:28.07,0:00:28.94,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k26}THE {\k41}{\1c&H2821D9&}FUTURE{\1c&HFFFFFF&} {\k21}OF
+Dialogue: 0,0:00:28.94,0:00:30.13,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k51}CREATIVE {\k46}CONTROL {\k21}IN
+Dialogue: 0,0:00:30.13,0:00:30.69,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k57}HOLLYWOOD
+Dialogue: 0,0:00:30.69,0:00:31.57,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k31}FULL {\k36}STORY {\k21}AT
+Dialogue: 0,0:00:31.57,0:00:32.65,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k26}THE {\k41}SCREEN {\k41}REPORT
+Dialogue: 0,0:00:32.65,0:00:33.42,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k31}LINK {\k21}IN {\k26}BIO

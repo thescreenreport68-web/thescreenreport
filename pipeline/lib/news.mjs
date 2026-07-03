@@ -6,25 +6,10 @@
 // we UPGRADE an under-sourced DEVELOPING/CONFIRMING event to CONFIRMED. We only ever UPGRADE — never suppress a
 // fresh story on a GDELT miss (GDELT can lag minutes behind a <15-min scoop). NON-Wikipedia by construction.
 
-// Domain → parent owner (mirrors verify.mjs OWNER — same-owner outlets are ONE independent source, e.g. PMC
-// owns Variety/Deadline/THR/IndieWire/Rolling Stone/Billboard, so all of them together = ONE corroboration).
-export const DOMAIN_OWNER = {
-  // PMC trade desks (all ONE owner)
-  "variety.com": "PMC", "deadline.com": "PMC", "hollywoodreporter.com": "PMC", "indiewire.com": "PMC", "rollingstone.com": "PMC", "billboard.com": "PMC",
-  // Valnet network (all ONE owner)
-  "collider.com": "Valnet", "screenrant.com": "Valnet", "cbr.com": "Valnet", "gamerant.com": "Valnet", "thegamer.com": "Valnet", "movieweb.com": "Valnet",
-  // Dotdash Meredith
-  "ew.com": "Dotdash", "people.com": "Dotdash", "entertainmentweekly.com": "Dotdash",
-  // independent reputable desks (each its own owner)
-  "thewrap.com": "TheWrap", "apnews.com": "AP", "reuters.com": "Reuters", "vanityfair.com": "CondeNast",
-  "nytimes.com": "NYT", "latimes.com": "LATimes", "washingtonpost.com": "WaPo", "thedailybeast.com": "DailyBeast",
-  "bbc.com": "BBC", "bbc.co.uk": "BBC", "theguardian.com": "Guardian", "cnn.com": "WBD", "ign.com": "Ziff",
-  "usatoday.com": "Gannett", "etonline.com": "ETParamount", "eonline.com": "NBCU", "today.com": "NBCU", "nbcnews.com": "NBCU",
-  "tmz.com": "TMZ", "vulture.com": "NYMag", "avclub.com": "GO", "npr.org": "NPR", "forbes.com": "Forbes",
-  "abcnews.go.com": "Disney", "huffpost.com": "BuzzFeed", "slashfilm.com": "Static", "gamespot.com": "Fandom",
-};
-export const MAJORS = new Set(Object.keys(DOMAIN_OWNER));
-export const dom = (d) => (d || "").toLowerCase().replace(/^www\./, "").trim();
+// Domain → parent owner: now sourced from THE ONE outlet trust module (lib/outlets.mjs, 2026-07-03) — the
+// three drifted per-layer maps are gone. Re-exported here so existing importers keep working.
+import { DOMAIN_OWNER, MAJORS, dom } from "./outlets.mjs";
+export { DOMAIN_OWNER, MAJORS, dom };
 
 // GDELT enforces ≤1 request / 5 seconds (429 otherwise). Throttle every call to be a polite citizen, and
 // retry once on a 429. Sequential by design (externalCorroboration awaits each call), so a simple gate works.
@@ -32,34 +17,15 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 let _lastGdelt = 0;
 async function throttle() { const wait = 6500 - (Date.now() - _lastGdelt); if (wait > 0) await sleep(wait); _lastGdelt = Date.now(); }
 
-// Query GDELT for an event phrase; count INDEPENDENT major owners reporting it in the window.
-export async function gdeltCorroborate(query, { sinceHours = 72, maxRecords = 50 } = {}) {
-  const url = `https://api.gdeltproject.org/api/v2/doc/doc?query=${encodeURIComponent(query)}&mode=artlist&format=json&maxrecords=${maxRecords}&timespan=${sinceHours}h&sort=hybridrel`;
-  for (let attempt = 0; attempt < 2; attempt++) {
-    try {
-      await throttle();
-      const r = await fetch(url, { headers: { "User-Agent": "TheScreenReport/1.0 (editor@thescreenreport.com)" } });
-      if (r.status === 429) { await sleep(6000); continue; }       // rate-limited — wait out the window, retry once
-      if (!r.ok) return { ok: false, total: 0, majorOwners: 0, majors: [] };
-      const text = await r.text();
-      if (!text.trim().startsWith("{")) return { ok: false, total: 0, majorOwners: 0, majors: [] }; // GDELT returns plain text on a bad query
-      const arts = (JSON.parse(text).articles) || [];
-      const owners = new Map(); // owner → first domain seen (so 3 PMC trades = 1 owner)
-      for (const a of arts) { const d = dom(a.domain); if (MAJORS.has(d) && !owners.has(DOMAIN_OWNER[d])) owners.set(DOMAIN_OWNER[d], d); }
-      return { ok: true, total: arts.length, majorOwners: owners.size, majors: [...owners.values()] };
-    } catch { return { ok: false, total: 0, majorOwners: 0, majors: [] }; }
-  }
-  return { ok: false, total: 0, majorOwners: 0, majors: [] };
-}
-
-// Like gdeltCorroborate, but returns the ARTICLE LIST (real publisher url/title/domain/date) — the source
-// ENUMERATOR for the CONTENT FINDER (Step 2). Same free, keyless GDELT DOC 2.0 endpoint + the 5s throttle.
+// GDELT article-list query (real publisher url/title/domain/date) — the source ENUMERATOR for the CONTENT
+// FINDER (Step 2) and externalCorroboration below. Free, keyless GDELT DOC 2.0 endpoint + the 5s throttle.
+// (gdeltCorroborate — the count-only variant — was removed 2026-07-03: zero callers, superseded by this.)
 export async function gdeltArticles(query, { sinceHours = 120, maxRecords = 40 } = {}) {
   const url = `https://api.gdeltproject.org/api/v2/doc/doc?query=${encodeURIComponent(query)}&mode=artlist&format=json&maxrecords=${maxRecords}&timespan=${sinceHours}h&sort=hybridrel`;
   for (let attempt = 0; attempt < 3; attempt++) {
     try {
       await throttle();
-      const r = await fetch(url, { headers: { "User-Agent": "TheScreenReport/1.0 (editor@thescreenreport.com)" } });
+      const r = await fetch(url, { headers: { "User-Agent": "TheScreenReport/1.0 (editor@thescreenreport.com)" }, signal: AbortSignal.timeout(15000) });
       const text = await r.text();
       // GDELT signals overload with HTTP 429 OR a plain-text "Please limit requests" body — both are retryable.
       if (r.status === 429 || (!text.trim().startsWith("{") && /limit requests/i.test(text))) { await sleep(8000 * (attempt + 1)); continue; }
@@ -82,22 +48,42 @@ export function topicQuery(t) {
   return kw.length ? `"${ent}" (${kw.join(" OR ")})` : `"${ent}"`;
 }
 
-// Wire-in pass for findrun: upgrade under-sourced events that the open web independently corroborates.
+// Wire-in pass for findrun: upgrade under-sourced events that the open web independently corroborates AND enrich
+// the topic's sources with the real GDELT publisher URLs (Phase A) — one GDELT call now does both, instead of
+// corroborating here and re-querying the same thing in the content finder. The added URLs give MAKE real article
+// bodies to extract from (a major outlet the in-run RSS pull missed), directly feeding the writer's grounding.
 export async function externalCorroboration(topics, monitor) {
   const need = (topics || []).filter((t) => ["DEVELOPING", "CONFIRMING"].includes(t.verification?.status));
-  let upgraded = 0;
+  let upgraded = 0, enriched = 0;
   for (const t of need) {
     const q = topicQuery(t);
     if (!q) continue;
-    const g = await gdeltCorroborate(q, { sinceHours: 72 });
-    t.verification.gdelt = { majorOwners: g.majorOwners, majors: g.majors };
-    if (g.majorOwners >= 2) {
+    // EVENT-TARGETED only for source enrichment: topicQuery is "ent" (kw OR kw) when it has event keywords, bare
+    // "ent" otherwise. A bare-entity query returns the celebrity's GENERAL coverage, so its article URLs must NOT
+    // enter the writer's primary bundle (off-event fabrication risk) — we still corroborate, but don't enrich.
+    const eventTargeted = q.includes("(");
+    const arts = await gdeltArticles(q, { sinceHours: 72, maxRecords: 50 });
+    // Count INDEPENDENT major OWNERS (3 PMC trades = 1) and keep the first real article URL per owner.
+    const owners = new Map(); // owner → the first major article seen for it
+    for (const a of arts) { const d = dom(a.domain); if (MAJORS.has(d) && !owners.has(DOMAIN_OWNER[d])) owners.set(DOMAIN_OWNER[d], a); }
+    const majors = [...owners.values()].map((a) => dom(a.domain));
+    t.verification.gdelt = { majorOwners: owners.size, majors };
+    // ENRICH sources with the corroborating MAJOR publisher URLs (deduped by the content finder later). url-only
+    // (no inline summary), so they add extraction candidates without polluting the inline-text bundle. Skipped on
+    // a bare-entity query so we never feed the writer an off-event same-celebrity article.
+    const added = [];
+    if (eventTargeted) for (const a of owners.values()) {
+      if (added.length >= 4 || !a.url) break;
+      added.push({ outlet: dom(a.domain), tier: 7, url: a.url, headline: a.title || t.title, summary: "" });
+    }
+    if (added.length) { t.sources = [...(t.sources || []), ...added]; enriched++; }
+    if (owners.size >= 2) {
       const prev = t.verification.status;
-      Object.assign(t.verification, { status: "CONFIRMED", framing: "plain", publishable: true, attribution: null, corroboratedBy: `GDELT: ${g.majors.join(", ")}` });
+      Object.assign(t.verification, { status: "CONFIRMED", framing: "plain", publishable: true, attribution: null, corroboratedBy: `GDELT: ${majors.join(", ")}` });
       upgraded++;
-      monitor?.stage?.("corroborate", `↑ ${prev}→CONFIRMED via GDELT (${g.majorOwners} independent majors: ${g.majors.join(", ")}) · ${t.title}`);
+      monitor?.stage?.("corroborate", `↑ ${prev}→CONFIRMED via GDELT (${owners.size} independent majors: ${majors.join(", ")}) · ${t.title}`);
     }
   }
-  monitor?.stage?.("corroborate", `GDELT external corroboration: ${upgraded}/${need.length} under-sourced event(s) upgraded to CONFIRMED`);
+  monitor?.stage?.("corroborate", `GDELT external corroboration: ${upgraded}/${need.length} upgraded to CONFIRMED, ${enriched} enriched with source URLs`);
   return topics;
 }

@@ -4,7 +4,7 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 // ── Cost meter ─────────────────────────────────────────────────────────────────────────────────
 // Every chat() call pushes its real token usage here so a run can report MEASURED dollars, not a guess.
-// Rates = OpenRouter $/million tokens [input, output] (2026). Keep in sync with config.MODELS.candidates.
+// Rates = OpenRouter $/million tokens [input, output] (2026). Keep in sync with the models wired in config.MODELS.
 export const USAGE = [];
 const RATES = {
   "deepseek/deepseek-v3.2": [0.23, 0.34],
@@ -43,6 +43,9 @@ export async function chat({
   model,
   system,
   user,
+  images = null, // optional array of image URLs → sends a multimodal user turn (for the hero-image vision gate)
+  web = false, // optional: enable OpenRouter's web-search plugin (live open-web grounding for the news reality-check)
+  webMaxResults = 3, // keep small — each web result costs; 3 covers the load-bearing specifics of one article
   json = false,
   maxTokens = 4000,
   temperature = 0.7,
@@ -52,15 +55,26 @@ export async function chat({
   if (!KEY) throw new Error("OPENROUTER_API_KEY not in env (source ../.env)");
   const messages = [];
   if (system) messages.push({ role: "system", content: system });
-  messages.push({ role: "user", content: user });
+  // Multimodal user turn when images are supplied (OpenAI/OpenRouter vision format); plain string otherwise.
+  const userContent = images?.length
+    ? [{ type: "text", text: user }, ...images.map((url) => ({ type: "image_url", image_url: { url } }))]
+    : user;
+  messages.push({ role: "user", content: userContent });
   const body = { model, messages, max_tokens: maxTokens, temperature };
   if (json) body.response_format = { type: "json_object" };
+  // Web-search plugin: lets a CHEAP model check the article's specifics against the live open web (the news
+  // reality-check — the only thing that catches a misread of an ambiguous source / a stale number / a wrong date).
+  if (web) body.plugins = [{ id: "web", max_results: webMaxResults }];
 
   let lastErr;
   for (let a = 0; a < retries; a++) {
     try {
       const r = await fetch(BASE + "/chat/completions", {
         method: "POST",
+        // Cap each LLM call so a single hung socket can't stall the whole run — but generous enough NOT to abort a
+        // legitimately-slow big generation (a 4k-token deepseek write can take ~90s) and needlessly retry. Web-search
+        // calls run longest.
+        signal: AbortSignal.timeout(web ? 120000 : 150000),
         headers: {
           Authorization: "Bearer " + KEY,
           "Content-Type": "application/json",

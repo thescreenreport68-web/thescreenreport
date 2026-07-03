@@ -1,0 +1,82 @@
+{
+  "id": "profile-larry-david-curb-your-enthusiasm-retirement",
+  "slug": "larry-david-will-never-retire-says-curb-your-enthusiasm-director",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": 85,
+      "cat": "celebrity/profiles-careers",
+      "img": "/images/articles/larry-david-will-never-retire-says-curb-your-enthusiasm-director.jpg",
+      "hardBlocks": [
+        "a 46-word sentence (>45 — split it; unreadable)",
+        "keyword stuffed (exact phrase 9x)"
+      ]
+    },
+    "attempt2": {
+      "score": 85,
+      "cat": "celebrity/profiles-careers",
+      "img": "/images/articles/larry-david-will-never-retire-says-curb-your-enthusiasm-director.jpg",
+      "hardBlocks": []
+    }
+  },
+  "scorecard": {
+    "score": 85,
+    "subscores": {
+      "accuracy": 10,
+      "readability": 9,
+      "humanVoice": 9,
+      "phrasing": 8,
+      "curiosity": 8,
+      "structure": 9,
+      "infoGain": 8,
+      "seo": 7,
+      "faqQuality": 9,
+      "completeness": 9
+    },
+    "strengths": [
+      "Headline is specific and intriguing.",
+      "Lead delivers the core news (new series, no retirement) immediately.",
+      "Key Takeaways are concise and accurate summaries.",
+      "Article is well-structured with clear subheads that guide the reader.",
+      "Human voice is present, particularly in the descriptions of David's career trajectory and the nature of 'Curb Your Enthusiasm'.",
+      "Flesch score is decent, and sentence length variation is good, contributing to readability.",
+      "FAQ section provides genuinely useful, distinct information.",
+      "Sources are relevant and credible."
+    ],
+    "weaknesses": [
+      "Some phrasing is slightly generic, e.g., 'masterclass in turning personal neuroses into landmark comedy'.",
+      "The SEO subscore is lower due to the keyword 'Larry David' appearing 8 times, which is a bit high for a profile piece, though not overtly stuffed.",
+      "The 'best movie' subhead is a bit of a misnomer as the content focuses on film roles rather than declaring one 'best'.",
+      "The article could benefit from a stronger, more specific hook in the dek beyond stating Schaffer's confirmation."
+    ],
+    "deterministic": {
+      "words": 574,
+      "h2s": 5,
+      "h2Questions": 4,
+      "internalLinks": 0,
+      "externalLinks": 5,
+      "hasSources": true,
+      "faqCount": 4,
+      "ktCount": 5,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": true,
+      "maxSentence": 44,
+      "avgSentence": 17,
+      "flesch": 49,
+      "bannedTells": 0,
+      "kwExact": 8,
+      "hardBlocks": []
+    },
+    "hardBlocks": []
+  },
+  "score": 85,
+  "category": "celebrity",
+  "subcategory": "profiles-careers",
+  "audit": {
+    "ok": true,
+    "internalLinks": 0,
+    "failed": []
+  },
+  "ms": 152699
+}

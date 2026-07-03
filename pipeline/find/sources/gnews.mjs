@@ -19,15 +19,9 @@ const QUERIES = [
   "Grammys OR Oscars OR Emmys OR award winners when:5d",
 ];
 
-// Outlet name → corroboration tier (mirrors rss.mjs: wire/AP 8, major trade 7, major celeb 6, secondary 5, tabloid 4).
-const OUTLET_TIER = {
-  "Variety": 7, "Deadline": 7, "The Hollywood Reporter": 7, "Hollywood Reporter": 7, "Associated Press": 8, "AP News": 8, "Reuters": 8,
-  "Billboard": 7, "Rolling Stone": 7, "The New York Times": 7, "Los Angeles Times": 7, "The Guardian": 7, "BBC": 7, "NPR": 7,
-  "People": 6, "Entertainment Weekly": 6, "IndieWire": 6, "Vanity Fair": 6, "TheWrap": 6, "The Wrap": 6, "Pitchfork": 6, "Vulture": 6, "Entertainment Tonight": 6, "E! Online": 6, "USA Today": 6,
-  "Collider": 5, "ScreenRant": 5, "Screen Rant": 5, "/Film": 5, "SlashFilm": 5, "CBR": 5, "Consequence": 5, "Stereogum": 5, "GameSpot": 5, "IGN": 5,
-  "TMZ": 4, "Page Six": 4, "Daily Mail": 4, "The Sun": 4, "Mirror": 4, "HollywoodLife": 4,
-};
-const tierFor = (o) => OUTLET_TIER[o] ?? 5;
+// Outlet name → corroboration tier: THE ONE trust module (lib/outlets.mjs, 2026-07-03) — the local copy here
+// was missing The Washington Post (tiered a WaPo scoop as "secondary 5"), the exact drift the merge kills.
+import { nameTier as tierFor } from "../../lib/outlets.mjs";
 const strip = (s) => String(s || "").replace(/<!\[CDATA\[|\]\]>/g, "").replace(/<[^>]+>/g, " ").replace(/&#?\w+;/g, " ").replace(/\s+/g, " ").trim();
 const slug = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 70);
 
@@ -39,10 +33,16 @@ async function searchOne(q) {
     const xml = await r.text();
     return [...xml.matchAll(/<item>([\s\S]*?)<\/item>/g)].slice(0, 18).map((m) => {
       const b = m[1];
+      const rawLink = strip((b.match(/<link>([\s\S]*?)<\/link>/) || [])[1]);
       return {
         title: strip((b.match(/<title>([\s\S]*?)<\/title>/) || [])[1]),
         outlet: strip((b.match(/<source[^>]*>([\s\S]*?)<\/source>/) || [])[1]),
         date: (b.match(/<pubDate>([\s\S]*?)<\/pubDate>/) || [])[1] || null,
+        // The Google-News redirect link (news.google.com/rss/articles/...). It is NOT a clean publisher URL,
+        // but Jina Reader follows the redirect and returns the real article, so the content finder can still
+        // extract from it. The <description> snippet gives the writer a little more than a bare headline.
+        url: /^https?:\/\//.test(rawLink) ? rawLink : null,
+        summary: strip((b.match(/<description>([\s\S]*?)<\/description>/) || [])[1]).slice(0, 300),
       };
     }).filter((x) => x.title && x.outlet);
   } catch { return []; }
@@ -64,7 +64,8 @@ export async function discoverGoogleNews({ maxPerQuery = 12, freshHours = 96 } =
       seen.add(k);
       out.push({
         source: "gnews:" + it.outlet, outlet: it.outlet, sourceTier: tierFor(it.outlet),
-        kind: "gnews", mediaType: "news", title: it.title, summary: "",
+        kind: "gnews", mediaType: "news", title: it.title, summary: it.summary || "",
+        url: it.url || null, // Google-News redirect; the content finder resolves it via Jina
         pubDate: it.date || null, ageMin: isNaN(t) ? null : Math.round((Date.now() - t) / 60000),
         cats: ["movies", "tv", "celebrity", "music"], popularity: 0,
       });

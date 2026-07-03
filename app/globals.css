@@ -13,14 +13,19 @@ html {
 }
 
 body {
-  @apply bg-white text-ink2 font-sans antialiased;
-  font-feature-settings: "kern", "liga", "onum";
-  /* Pin Fraunces to its warm HIGH-CONTRAST cut (kills the soft/quirky default).
-     font-variation-settings inherits, so every Fraunces headline/dek gets it;
-     Source Serif & Karla simply ignore axes they don't have. Optical size stays
-     automatic by font-size. */
+  /* The 1px ink line across the very top of every page — print DNA (spec §B1). */
+  @apply border-t border-ink bg-paper text-ink font-sans antialiased;
+  font-feature-settings: "kern", "liga";
+  /* Pin Fraunces (the Kepler fallback) to its warm HIGH-CONTRAST cut. Kepler and
+     the other families ignore axes they don't have. */
   font-variation-settings: "SOFT" 0, "WONK" 0;
   font-optical-sizing: auto;
+}
+
+/* One focus treatment sitewide (spec §F10). */
+:focus-visible {
+  outline: 2px solid #d92128;
+  outline-offset: 2px;
 }
 
 @layer components {
@@ -28,31 +33,140 @@ body {
     @apply mx-auto max-w-wide px-4;
   }
 
-  /* THR section header: condensed-display UPPERCASE title on a thin hairline */
-  .section-heading {
-    @apply mb-5 flex items-center justify-between gap-3 border-b border-hair pb-2;
-  }
-  .section-heading h2 {
-    @apply font-display text-2xl font-bold uppercase tracking-tight text-navy sm:text-[1.8rem];
+  /* ============ TYPE ROLES — the only allowed text treatments (spec §A3) ============ */
+
+  /* Masthead logotype */
+  .masthead {
+    @apply font-display font-bold leading-none tracking-[-0.01em] text-ink;
   }
 
-  /* Red Karla category kicker */
-  .kicker {
-    @apply font-sans text-[12px] font-bold uppercase tracking-[0.04em] text-breaking;
+  /* Nav item */
+  .nav-link {
+    @apply font-sans text-[13px] font-bold uppercase leading-none tracking-[0.05em] text-ink transition-colors duration-150 hover:text-red;
   }
 
-  /* Standfirst / card dek — standard serif, roman, grey */
+  /* Section heading — condensed display caps, sits on a 2px ink rule */
+  .sect-head {
+    @apply font-display text-[26px] font-bold uppercase leading-none tracking-[0.005em] text-ink lg:text-[32px];
+  }
+
+  /* Section tagline — italic body serif beside the heading */
+  .sect-tag {
+    @apply font-body text-base italic leading-snug text-slate;
+  }
+
+  /* Lead headline (hero + article H1) */
+  .hed-xl {
+    @apply font-display text-[34px] font-bold leading-[0.98] tracking-[-0.02em] text-ink sm:text-[48px] xl:text-[60px] xl:leading-[0.95];
+  }
+
+  /* Card headline L — condensed display */
+  .hed-l {
+    @apply font-display text-2xl font-bold leading-[1.05] tracking-[-0.01em] text-ink;
+  }
+
+  /* Card headline M — body serif semibold */
+  .hed-m {
+    @apply font-body text-lg font-semibold leading-[1.25] tracking-[-0.005em] text-ink;
+  }
+
+  /* Card headline S — rail / list items */
+  .hed-s {
+    @apply font-body text-base font-semibold leading-[1.3] text-ink;
+  }
+
+  /* Standfirst / dek */
   .dek {
-    @apply font-body text-base leading-snug text-slate;
+    @apply font-body text-lg leading-[1.45] text-charcoal;
   }
 
-  /* Byline / meta — Karla uppercase */
+  /* THE one eyebrow / kicker */
+  .kicker {
+    @apply font-sans text-[11px] font-bold uppercase leading-none tracking-[0.14em] text-red;
+  }
+
+  /* Byline */
+  .byline {
+    @apply font-sans text-xs font-bold uppercase leading-tight tracking-[0.05em] text-slate;
+  }
+
+  /* Timestamp / credit / folio / data — the mono metadata layer (spec §A2) */
+  .meta-mono {
+    @apply font-mono text-[10.5px] font-medium uppercase leading-[1.4] tracking-[0.08em] text-slate;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Caption under images */
+  .caption {
+    @apply font-body text-sm leading-[1.35] text-ink;
+  }
+
+  /* Button label */
+  .btn-label {
+    @apply font-sans text-[13px] font-bold uppercase leading-none tracking-[0.05em];
+  }
+
+  /* Pull quote */
+  .pullquote {
+    @apply font-display text-[28px] font-bold leading-[1.1] tracking-[-0.01em] text-red lg:text-[34px];
+  }
+
+  /* deprecated alias — old meta label, folds into .byline */
   .meta-label {
     @apply font-sans text-[11px] font-bold uppercase tracking-[0.06em] text-slate;
   }
 
-  /* Drop cap on the article lede */
-  .article-prose > p:first-of-type::first-letter {
-    @apply float-left mr-3 mt-1.5 font-display text-[4.3rem] font-bold leading-[0.72] text-navy;
+  /* ============ ARTICLE PROSE EXTRAS ============ */
+
+  /* Feature drop cap — opt-in via .article-dropcap on the prose wrapper (spec §D7). */
+  .article-dropcap > p:first-of-type::first-letter {
+    @apply float-left mr-2 mt-[0.08em] font-display text-[3.2em] font-bold leading-[0.85] text-red;
+  }
+
+  /* The red square end mark that closes every story (spec §D9). */
+  .article-endmark > p:last-of-type::after {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: #d92128;
+    margin-left: 7px;
+  }
+
+  /* The trending live dot (HOMEPAGE_PROGRAMMING_PLAN.md §4.2): a solid red dot
+     with an expanding pulse ring. Compositor-only animation (transform/opacity —
+     no jank, no CLS); freezes to a static dot for reduced-motion users. */
+  .dot-live {
+    position: relative;
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 9999px;
+    background: #d92128;
+    flex: none;
+  }
+  .dot-live::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 9999px;
+    background: #d92128;
+    animation: dot-pulse 1.6s ease-out infinite;
+  }
+  @keyframes dot-pulse {
+    0% {
+      transform: scale(1);
+      opacity: 0.55;
+    }
+    100% {
+      transform: scale(2.6);
+      opacity: 0;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .dot-live::after {
+      animation: none;
+      opacity: 0;
+    }
   }
 }

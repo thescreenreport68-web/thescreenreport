@@ -1,557 +1,382 @@
 {
-  "runId": "run-2026-06-27T10-58-50",
-  "builtAt": "2026-06-27T10:59:50.206Z",
-  "count": 10,
+  "runId": "run-2026-07-03T08-05-41",
+  "builtAt": "2026-07-03T08:06:29.790Z",
+  "count": 6,
   "topics": [
     {
-      "id": "news-pinocchio-unstrung-poohniverse-monsters-assemble",
-      "slug": "pinocchio-unstrung-sees-wooden-doll-covered-in-flesh-and-blood-as-dire",
-      "title": "‘Pinocchio Unstrung’ Sees Wooden Doll Covered in Flesh and Blood as Director Rhys Frake-Waterfield Teases Kooky, Crazy and Fun ‘Avengers’-Style ‘Poohniverse: Monsters Assemble’",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
+      "id": "trailer-star-wars-visions-the-ninth-jedi-trailer-release",
+      "slug": "star-wars-visions-presents-the-ninth-jedi-trailer-released",
+      "title": "\"Star Wars: Visions Presents – The Ninth Jedi\" Trailer Released",
+      "contentType": "trailer",
+      "formatTag": "trailer",
+      "category": "tv",
+      "subcategory": "trailers",
+      "eventType": "trailer",
       "sensitivity": "normal",
-      "eventSlug": "pinocchio-unstrung-poohniverse-monsters-assemble",
-      "primaryKeyword": "pinocchio unstrung",
-      "primaryEntity": "Pinocchio Unstrung",
+      "eventSlug": "star-wars-visions-the-ninth-jedi-trailer-release",
+      "primaryKeyword": "Star Wars: Visions",
+      "primaryEntity": "Star Wars: Visions",
       "entities": [
-        "Rhys Frake-Waterfield",
-        "Winnie-the-Pooh"
+        "The Ninth Jedi"
       ],
-      "angle": "Director Rhys Frake-Waterfield is expanding his 'Poohniverse' with a new 'Pinocchio Unstrung' film, promising a wild take on the classic character.",
+      "angle": "The latest installment of the animated anthology series 'Star Wars: Visions' has unveiled its trailer for the upcoming episode 'The Ninth Jedi'.",
       "tmdbType": "movie",
-      "source": "rss:Variety",
+      "source": "gnews:whatsondisneyplus.com",
       "sources": [
         {
-          "outlet": "Variety",
-          "tier": 7,
-          "ageMin": 30,
-          "headline": "‘Pinocchio Unstrung’ Sees Wooden Doll Covered in Flesh and Blood as Director Rhys Frake-Waterfield Teases Kooky, Crazy and Fun ‘Avengers’-Style ‘Poohniverse: Monsters Assemble’",
-          "summary": "Barging through the doors of the Poohniverse nose-first, Pinocchio has officially come to the company of Winnie the Pooh, Bambi and Peter Pan with Rhys Frake-Waterfield’s “Pinocchio Unstrung.” The latest addition to the ever-growing roster of twisted takes on childhood icons, whi"
+          "outlet": "whatsondisneyplus.com",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQNFZlakJuZFBtaGlhdkIwdWdBOWtjVVJkSy12WF9OdnVtOHl4eGNiSGpSZW1NOERjUHVOY3FTdmJJb21LNnI3QkQ0Z3Q2MkZvem5scGhMUzdLa29TMnpnaHlWRlFFS3FQUHh1ckMtMlFqUk4wYVgwLXhveThOcFM2bkszYVUyR1Nsc01TRXJ4YTJYcjA?oc=5",
+          "ageMin": 15,
+          "headline": "\"Star Wars: Visions Presents – The Ninth Jedi\" Trailer Released - whatsondisneyplus.com",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMikwFBVV95cUxQNFZlakJuZFBtaGlhdkIwdWdBOWtjVVJkSy12WF9OdnVtOHl4eGNiSGpSZW1NOERjUHVOY3FTdmJJb21LNnI3QkQ0Z3Q2MkZvem5scGhMUzdLa29TMnpnaHlWRlFFS3FQUHh1ckMtMlFqUk4wYVgwLXhveThOcFM2bkszYVUyR1Nsc01TRXJ4YTJYcjA?oc=5\" target=\"_blank\" \"Star Wars: Visions Presents "
+        },
+        {
+          "outlet": "The DisInsider",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPemVseGJtWUVuVkNYVFVUVGNGM1poQzlFaFM3bXpFZnloRWxHWE5JUzJFZDRkVW9KUmU2bWdNdTM3VEowX1NWYmdfOXdGRG1pdks3ejJ0WUg0ZzlWMjRSNS00Vk1Yc0czNFU5TWxILXlOeFU2aDdoWmlTY2VaeC1KNmVtZ2lhRW12WkZ2ZHFZR3FhN0RCQmFSYjA3RnJ4QzFGTEt5X2tmRllmNVFqNmhnaHFrdlJ0VmhlOVlBM3oxMkd4Z1U2NHFEZlNybnY5ZGJG0gHQAUFVX3lxTE96ZWx4Ym1ZRW5WQ1hUVVRUY0YzWmhDOUVoUzdtekVmeWhFbEdYTklTMkVkNGRVb0pSZTZtZ011MzdUSjBfU1ZiZ185d0ZEbWl2Szd6MnRZSDRnOVYyNFI1LTRWTVhzRzM0VTlNbEgteU54VTZoN2haaVNjZVp4LUo2ZW1naWFFbXZaRnZkcVlHcWE3REJCYVJiMDdGcnhDMUZMS3lfa2ZGWWY1UWo2aGdocWt2UnRWaGU5WUEzejEyR3hnVTY0cURmU3JudjlkYkY?oc=5",
+          "ageMin": 122,
+          "headline": "Lucasfilm Reveals New Trailer and Premiere Date for Star Wars: Visions Presents – The Ninth Jedi - The DisInsider",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMi0AFBVV95cUxPemVseGJtWUVuVkNYVFVUVGNGM1poQzlFaFM3bXpFZnloRWxHWE5JUzJFZDRkVW9KUmU2bWdNdTM3VEowX1NWYmdfOXdGRG1pdks3ejJ0WUg0ZzlWMjRSNS00Vk1Yc0czNFU5TWxILXlOeFU2aDdoWmlTY2VaeC1KNmVtZ2lhRW12WkZ2ZHFZR3FhN0RCQmFSYjA3RnJ4QzFGTEt5X2tmRllmNVFqNmhnaHFrdlJ0VmhlOVl"
         }
       ],
-      "ageMin": 30,
+      "ageMin": 15,
       "_cand": {
-        "key": "rss:-pinocchio-unstrung-sees-wooden-doll-covered-in-flesh-and-bl",
+        "key": "rss:-star-wars-visions-presents-the-ninth-jedi-trailer-released-",
         "popularity": 0,
-        "kind": "rss-news"
+        "kind": "gnews"
       },
-      "corroborationCount": 1,
+      "corroborationCount": 2,
       "verification": {
-        "tier1Count": 1,
-        "outletCount": 1,
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 2,
         "outlets": [
-          "Variety"
+          "whatsondisneyplus.com",
+          "The DisInsider"
         ],
-        "maxTier": 7,
+        "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "Variety",
+        "attribution": "multiple outlets",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 62,
+      "priority": 72,
       "signals": {
-        "recency": 24,
-        "corroboration": 12,
+        "recency": 30,
+        "corroboration": 14,
         "status": 18,
-        "type": 8,
-        "pop": 0
+        "type": 10,
+        "pop": 0,
+        "breakout": 0
       }
     },
     {
-      "id": "news-warner-bros-animation-announces-dark-shadows-animated-series",
-      "slug": "warner-bros-animation-announces-new-dark-shadows-animated-series",
-      "title": "Warner Bros. Animation Announces New Dark Shadows Animated Series",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
+      "id": "music-news-miss-world-chile-kamelot-single",
+      "slug": "miss-world-chile-guests-on-new-kamelot-single",
+      "title": "'Miss World Chile' Guests On New Kamelot Single",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "warner-bros-animation-announces-dark-shadows-animated-series",
-      "primaryKeyword": "dark shadows animated series",
-      "primaryEntity": "Dark Shadows",
+      "tier": "popular",
+      "eventSlug": "miss-world-chile-kamelot-single",
+      "primaryKeyword": "Kamelot",
+      "primaryEntity": "Kamelot",
       "entities": [
-        "Warner Bros. Animation"
+        "Miss World Chile"
       ],
-      "angle": "Warner Bros. Animation unveils a new animated series based on the classic 'Dark Shadows'.",
+      "angle": "Kamelot has released a new single featuring 'Miss World Chile', marking an interesting cross-genre collaboration.",
       "tmdbType": "movie",
-      "source": "rss:Variety",
+      "source": "gnews:Metal Underground.com",
       "sources": [
         {
-          "outlet": "Variety",
-          "tier": 7,
-          "ageMin": 146,
-          "headline": "Warner Bros. Animation Sneak Peeks Get Jiro, Teases Gerry Anderson s Hit Squad, Announces Dark Shadows Animated Series at Annecy Adult Animation Showcase",
-          "summary": "Warner Bros. Animation, hugely active this year at Annecy, unveiled Friday at Annecy a new Dark Shadows animated series, confirming the studio s push in adult animation into other genres beyond adult comedy. Reimagining the 1960s cult TV series, the show is in very early developm"
+          "outlet": "Metal Underground.com",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5USUhiZXdwdDlYRjRDNU5qMnhUTUR4M1hUUzhBekFyaHNXcnAxZFdZalJZbzUzTHlRMGRMT3FRMEVVdXNVN3d4QVFaeF9UeFNtRk1Hek91QXpEN1ltMndhbU1yQ09JTzFwTDUwYWo2OA?oc=5",
+          "ageMin": 71,
+          "headline": "'Miss World Chile' Guests On New Kamelot Single - Metal Underground.com",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMib0FVX3lxTE5USUhiZXdwdDlYRjRDNU5qMnhUTUR4M1hUUzhBekFyaHNXcnAxZFdZalJZbzUzTHlRMGRMT3FRMEVVdXNVN3d4QVFaeF9UeFNtRk1Hek91QXpEN1ltMndhbU1yQ09JTzFwTDUwYWo2OA?oc=5\" target=\"_blank\" 'Miss World Chile' Guests On New Kamelot Single /a nbsp; nbsp; font color=\"#6f"
         }
       ],
-      "ageMin": 146,
+      "ageMin": 71,
       "_cand": {
-        "key": "rss:warner-bros-animation-sneak-peeks-get-jiro-teases-gerry-ande",
+        "key": "rss:-miss-world-chile-guests-on-new-kamelot-single-metal-undergr",
         "popularity": 0,
-        "kind": "rss-news"
+        "kind": "gnews"
       },
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 1,
+        "tier1Count": 0,
+        "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "Variety"
+          "Metal Underground.com"
         ],
-        "maxTier": 7,
+        "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "Variety",
+        "attribution": "Metal Underground.com",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 54,
+      "priority": 50,
       "signals": {
         "recency": 16,
-        "corroboration": 12,
+        "corroboration": 8,
         "status": 18,
         "type": 8,
-        "pop": 0
+        "pop": 0,
+        "breakout": 0
       }
     },
     {
-      "id": "list-best-thriller-movies-ranked",
-      "slug": "10-intense-thriller-movies-that-are-perfect-from-start-to-finish",
-      "title": "10 Intense Thriller Movies That Are Perfect From Start To Finish",
-      "contentType": "list",
-      "formatTag": "list",
-      "category": "movies",
-      "subcategory": "rankings-lists",
+      "id": "news-seth-rogen-knocked-up-birthing-scene-quit",
+      "slug": "seth-rogen-claims-huge-hollywood-megastar-quit-knocked-up-movie-over-b",
+      "title": "Seth Rogen claims huge Hollywood megastar quit Knocked Up movie over birthing scene, but who is it?",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "best-thriller-movies-ranked",
-      "primaryKeyword": "best thriller movies",
-      "primaryEntity": "Parasite (2019 film)",
+      "eventSlug": "seth-rogen-knocked-up-birthing-scene-quit",
+      "primaryKeyword": "Knocked Up",
+      "primaryEntity": "Seth Rogen",
       "entities": [
-        "The Handmaiden",
-        "The Menu (film)"
+        "Knocked Up"
       ],
-      "angle": "A ranked list of 10 intense thriller movies that are considered perfect from beginning to end.",
+      "angle": "Seth Rogen shares a story about a major Hollywood star who allegedly quit the movie 'Knocked Up' due to a birthing scene.",
       "tmdbType": "movie",
-      "source": "rss:Collider",
+      "source": "gnews:Female First",
       "sources": [
         {
-          "outlet": "Collider",
+          "outlet": "Female First",
           "tier": 5,
-          "ageMin": 53,
-          "headline": "10 Intense Thriller Movies That Are Perfect From Start To Finish",
-          "summary": "One Battle After Another, Parasite, The Handmaiden, The Menu, and more make up our list of intense thrillers that are perfect from start to finish."
+          "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNTGhPM0h2dnlsdThtc01CaGluVUt0WjIyVTV2TUJmMFdKYUNPNnJCMWl6MDZfY1dKWlFFMWxBVEdxeFV0UmFXY19TV2RUQ1BlNFpRQ0dqVW1GbUZqUHZsaVh2OUV0NnRRXzN1TklncWN0TWk1RHM2V0QtV0kzUnQ0SkZqMHlGamptckk1bUg5QWxtV3pUcjZyMTh5VHRZWDJqQXk5dlZVVG5SSFU4R04tUjExdUlzSWZqQWZ2MW5iT3ZCaWV6YVBQTEx5TlJLTUhfdkpSdlIydw?oc=5",
+          "ageMin": 66,
+          "headline": "Seth Rogen claims huge Hollywood megastar quit Knocked Up movie over birthing scene, but who is it? - Female First",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMi1wFBVV95cUxNTGhPM0h2dnlsdThtc01CaGluVUt0WjIyVTV2TUJmMFdKYUNPNnJCMWl6MDZfY1dKWlFFMWxBVEdxeFV0UmFXY19TV2RUQ1BlNFpRQ0dqVW1GbUZqUHZsaVh2OUV0NnRRXzN1TklncWN0TWk1RHM2V0QtV0kzUnQ0SkZqMHlGamptckk1bUg5QWxtV3pUcjZyMTh5VHRZWDJqQXk5dlZVVG5SSFU4R04tUjExdUlzSWZqQWZ"
         }
       ],
-      "ageMin": 53,
+      "ageMin": 66,
       "_cand": {
-        "key": "rss:10-intense-thriller-movies-that-are-perfect-from-start-to-fi",
+        "key": "rss:seth-rogen-claims-huge-hollywood-megastar-quit-knocked-up-mo",
         "popularity": 0,
-        "kind": "rss-news"
+        "kind": "gnews"
       },
       "corroborationCount": 1,
       "verification": {
         "tier1Count": 0,
+        "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "Collider"
+          "Female First"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": null,
-        "framing": "plain",
-        "status": "EVERGREEN",
+        "attribution": "Female First",
+        "framing": "attributed",
+        "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 52,
+      "priority": 48,
       "signals": {
-        "recency": 24,
+        "recency": 16,
         "corroboration": 8,
-        "status": 14,
+        "status": 18,
         "type": 6,
-        "pop": 0
+        "pop": 0,
+        "breakout": 0
       }
     },
     {
-      "id": "list-best-house-of-the-dragon-episodes-ranked",
-      "slug": "the-10-best-house-of-the-dragon-episodes-so-far-ranked",
-      "title": "The 10 Best 'House of the Dragon' Episodes (So Far), Ranked",
-      "contentType": "list",
-      "formatTag": "list",
-      "category": "tv",
-      "subcategory": "rankings-lists",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "best-house-of-the-dragon-episodes-ranked",
-      "primaryKeyword": "best house of the dragon episodes",
-      "primaryEntity": "House of the Dragon",
-      "entities": [],
-      "angle": "The top 10 episodes of HBO's 'House of the Dragon' are ranked based on plot, character development, and action.",
-      "tmdbType": "movie",
-      "source": "rss:Collider",
-      "sources": [
-        {
-          "outlet": "Collider",
-          "tier": 5,
-          "ageMin": 57,
-          "headline": "The 10 Best 'House of the Dragon' Episodes (So Far), Ranked",
-          "summary": "Discover the best episodes of House of the Dragon, ranked based on character development, plot twists, and epic battles."
-        }
-      ],
-      "ageMin": 57,
-      "_cand": {
-        "key": "rss:the-10-best-house-of-the-dragon-episodes-so-far-ranked",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "outletCount": 1,
-        "outlets": [
-          "Collider"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": null,
-        "framing": "plain",
-        "status": "EVERGREEN",
-        "publishable": true
-      },
-      "priority": 52,
-      "signals": {
-        "recency": 24,
-        "corroboration": 8,
-        "status": 14,
-        "type": 6,
-        "pop": 0
-      }
-    },
-    {
-      "id": "box-office-toy-story-5-supergirl-box-office-update",
-      "slug": "box-office-update-toy-story-5-holds-strong-supergirl-opens-lower-than-",
-      "title": "Box Office Update: 'Toy Story 5' Holds Strong, 'Supergirl' Opens Lower Than Expected",
+      "id": "box-office-minions-monsters-july-4th-weekend-box-office",
+      "slug": "universal-s-minions-monsters-set-to-top-july-4th-weekend-box-office",
+      "title": "Universal’s ‘Minions Monsters’ Set to Top July 4th Weekend Box Office",
       "contentType": "box-office",
       "formatTag": "box-office",
       "category": "movies",
       "subcategory": "box-office",
       "eventType": "boxoffice",
       "sensitivity": "normal",
-      "eventSlug": "toy-story-5-supergirl-box-office-update",
-      "primaryKeyword": "toy story 5 box office",
-      "primaryEntity": "Toy Story 5",
-      "entities": [
-        "Pixar",
-        "Supergirl: Woman of Tomorrow (film)"
-      ],
-      "angle": "Update on the box office performance of 'Toy Story 5' and the opening weekend for 'Supergirl'.",
-      "tmdbType": "movie",
-      "source": "rss:Deadline",
-      "sources": [
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "ageMin": 674,
-          "headline": "Toy Story 5 Looks To Cross $300M, Supergirl Flying Low With $40M Opening U.S. Box Office Update",
-          "summary": "FRIDAY PM: Disney/Pixar Studios Toy Story 5 is holding onto No. 1, as we knew it would, but pre-weekend estimates were a bit high. The second weekend now is looking more like $74M at 4,425 sites, which would get the Andrew Stanton-directed animated mover over the $300M domestic i"
-        }
-      ],
-      "ageMin": 674,
-      "_cand": {
-        "key": "rss:toy-story-5-looks-to-cross-300m-supergirl-flying-low-with-40",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Deadline"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Deadline",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 45,
-      "signals": {
-        "recency": 4,
-        "corroboration": 12,
-        "status": 18,
-        "type": 11,
-        "pop": 0
-      }
-    },
-    {
-      "id": "news-academy-of-country-music-awards-2027-date",
-      "slug": "academy-of-country-music-awards-sets-2027-date",
-      "title": "Academy of Country Music Awards Sets 2027 Date",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "academy-of-country-music-awards-2027-date",
-      "primaryKeyword": "Academy of Country Music Awards date",
-      "primaryEntity": "Academy of Country Music Awards",
-      "entities": [],
-      "angle": "The Academy of Country Music Awards has set the date for its 2027 ceremony.",
-      "tmdbType": "movie",
-      "source": "rss:Deadline",
-      "sources": [
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "ageMin": 637,
-          "headline": "Academy Of Country Music Awards Sets 2027 Date",
-          "summary": "The Academy of Country Music Awards has set its 2027 date. The ACMs and Dick Clark Productions announced that the 62nd ACM Awards will return to the MGM Grand Garden Arena in Las Vegas on Sunday, May 16, 2027. Last month s 61st AMC Awards show was back in Las Vegas for the first "
-        }
-      ],
-      "ageMin": 637,
-      "_cand": {
-        "key": "rss:academy-of-country-music-awards-sets-2027-date",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Deadline"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Deadline",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 42,
-      "signals": {
-        "recency": 4,
-        "corroboration": 12,
-        "status": 18,
-        "type": 8,
-        "pop": 0
-      }
-    },
-    {
-      "id": "interview-common-on-espn-stuart-scott-doc-music",
-      "slug": "common-on-crafting-music-for-espn-s-stuart-scott-doc",
-      "title": "Common on Crafting Music for ESPN’s Stuart Scott Doc",
-      "contentType": "interview",
-      "formatTag": "interview",
-      "category": "celebrity",
-      "subcategory": "interviews",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "common-on-espn-stuart-scott-doc-music",
-      "primaryKeyword": "common stuart scott doc",
-      "primaryEntity": "Common (rapper)",
-      "entities": [
-        "Stuart Scott"
-      ],
-      "angle": "Rapper and actor Common discusses his involvement and the music behind the ESPN documentary on Stuart Scott.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "ageMin": 418,
-          "headline": "The Playlist: Common on Uplifting Music and Crafting “Vision” for ESPN’s Stuart Scott Doc",
-          "summary": "The actor and rapper shares what songs he listens to brighten his day in this episode of The Playlist."
-        }
-      ],
-      "ageMin": 418,
-      "_cand": {
-        "key": "rss:the-playlist-common-on-uplifting-music-and-crafting-vision-f",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 40,
-      "signals": {
-        "recency": 4,
-        "corroboration": 12,
-        "status": 18,
-        "type": 6,
-        "pop": 0
-      }
-    },
-    {
-      "id": "trailer-minions-monsters-movie-trailer",
-      "slug": "minions-monsters-trailer-drops-promises-wild-hollywood-origin-story",
-      "title": "'Minions & Monsters' Trailer Drops, Promises Wild Hollywood Origin Story",
-      "contentType": "trailer",
-      "formatTag": "trailer",
-      "category": "movies",
-      "subcategory": "trailers",
-      "eventType": "trailer",
-      "sensitivity": "normal",
-      "eventSlug": "minions-monsters-movie-trailer",
-      "primaryKeyword": "minions and monsters trailer",
+      "eventSlug": "minions-monsters-july-4th-weekend-box-office",
+      "primaryKeyword": "minions monsters box office",
       "primaryEntity": "Minions & Monsters",
       "entities": [
-        "Minions & Monsters (upcoming film)",
-        "Minions (franchise)"
+        "Minions Monsters",
+        "Universal Pictures"
       ],
-      "angle": "Upcoming animated film 'Minions & Monsters' teases its wild Hollywood origin story.",
+      "angle": "Universal's animated feature is projected to lead the holiday weekend box office.",
       "tmdbType": "movie",
-      "source": "tmdb:upcoming",
-      "sources": [],
-      "ageMin": null,
-      "_cand": {
-        "key": "movie:1315772",
-        "popularity": 73.0032,
-        "voteCount": 13,
-        "kind": "upcoming"
-      },
-      "corroborationCount": 0,
-      "verification": {
-        "tier1Count": 0,
-        "outletCount": 0,
-        "outlets": [],
-        "maxTier": 0,
-        "sensitivity": "normal",
-        "attribution": null,
-        "framing": "plain",
-        "status": "EVERGREEN",
-        "publishable": true
-      },
-      "priority": 34,
-      "signals": {
-        "recency": 7,
-        "corroboration": 0,
-        "status": 14,
-        "type": 10,
-        "pop": 4
-      }
-    },
-    {
-      "id": "review-avatar-the-last-airbender-2024-tv-review",
-      "slug": "review-netflix-s-avatar-the-last-airbender-adapts-the-beloved-animated",
-      "title": "Review: Netflix's 'Avatar: The Last Airbender' Adapts the Beloved Animated Series",
-      "contentType": "review",
-      "formatTag": "review",
-      "category": "reviews",
-      "subcategory": "tv-reviews",
-      "eventType": "review",
-      "sensitivity": "normal",
-      "eventSlug": "avatar-the-last-airbender-2024-tv-review",
-      "primaryKeyword": "avatar the last airbender review",
-      "primaryEntity": "Avatar: The Last Airbender (2024 TV series)",
-      "entities": [
-        "Netflix",
-        "Live-action adaptation"
-      ],
-      "angle": "The live-action adaptation of Avatar: The Last Airbender has been released and is receiving critical attention.",
-      "tmdbType": "tv",
-      "source": "tmdb:trending-tv",
-      "sources": [],
-      "ageMin": null,
-      "_cand": {
-        "key": "tv:82452",
-        "popularity": 198.6136,
-        "voteCount": 1140,
-        "kind": "trending-tv"
-      },
-      "corroborationCount": 0,
-      "verification": {
-        "tier1Count": 0,
-        "outletCount": 0,
-        "outlets": [],
-        "maxTier": 0,
-        "sensitivity": "normal",
-        "attribution": null,
-        "framing": "plain",
-        "status": "EVERGREEN",
-        "publishable": true
-      },
-      "priority": 33,
-      "signals": {
-        "recency": 7,
-        "corroboration": 0,
-        "status": 14,
-        "type": 8,
-        "pop": 5
-      }
-    },
-    {
-      "id": "explainer-the-bear-season-5-secret-ingredient",
-      "slug": "the-secret-ingredient-that-makes-the-bear-s-ending-work",
-      "title": "The Secret Ingredient That Makes 'The Bear's' Ending Work",
-      "contentType": "explainer",
-      "formatTag": "explainer",
-      "category": "movies",
-      "subcategory": "explainers",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "the-bear-season-5-secret-ingredient",
-      "primaryKeyword": "the bear season 5 ending explained",
-      "primaryEntity": "The Bear (TV series)",
-      "entities": [],
-      "angle": "An analysis of why the Season 5 finale of 'The Bear' is effective, focusing on a 'secret ingredient' that makes the ending work.",
-      "tmdbType": "movie",
-      "source": "rss:SlashFilm",
+      "source": "gnews:Media Play News",
       "sources": [
         {
-          "outlet": "SlashFilm",
+          "outlet": "Media Play News",
           "tier": 5,
-          "ageMin": 719,
-          "headline": "The Bear's Ending Works Because Of One Secret Ingredient",
-          "summary": "The Bear has finally come to an end after five seasons, and the finale works because the show understands its secret ingredient."
+          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOaXBoMF9XVjc2ajRWRURrdThTeWJhNGNQNGtYbEJCSTB6elByaXJLYUc2ZzYzcHZOeGpMbXIzcjFMZDZEenQwMUM4M2FjMk95dV9xNV9RbTMwVEVkTklBZXlkRDEzMlJVZ25YQ3RoTURvSmtkbEVSTlVoaERSWUtjT0xmSXlOSkFjTjV2b280Z1JUTk44TkRyYy1Bdk1Hdw?oc=5",
+          "ageMin": 204,
+          "headline": "Universal’s ‘Minions Monsters’ Set to Top July 4th Weekend Box Office - Media Play News",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxOaXBoMF9XVjc2ajRWRURrdThTeWJhNGNQNGtYbEJCSTB6elByaXJLYUc2ZzYzcHZOeGpMbXIzcjFMZDZEenQwMUM4M2FjMk95dV9xNV9RbTMwVEVkTklBZXlkRDEzMlJVZ25YQ3RoTURvSmtkbEVSTlVoaERSWUtjT0xmSXlOSkFjTjV2b280Z1JUTk44TkRyYy1Bdk1Hdw?oc=5\" target=\"_blank\" Universal’s ‘M"
         }
       ],
-      "ageMin": 719,
+      "ageMin": 204,
       "_cand": {
-        "key": "rss:the-bear-s-ending-works-because-of-one-secret-ingredient",
+        "key": "rss:universal-s-minions-monsters-set-to-top-july-4th-weekend-box",
         "popularity": 0,
-        "kind": "rss-news"
+        "kind": "gnews"
       },
       "corroborationCount": 1,
       "verification": {
         "tier1Count": 0,
+        "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "SlashFilm"
+          "Media Play News"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": null,
-        "framing": "plain",
-        "status": "EVERGREEN",
+        "attribution": "Media Play News",
+        "framing": "attributed",
+        "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 32,
+      "priority": 46,
       "signals": {
-        "recency": 4,
+        "recency": 9,
         "corroboration": 8,
-        "status": 14,
-        "type": 6,
-        "pop": 0
+        "status": 18,
+        "type": 11,
+        "pop": 0,
+        "breakout": 0
+      }
+    },
+    {
+      "id": "news-passion-of-the-christ-theatrical-return",
+      "slug": "passion-of-the-christ-set-for-theatrical-return",
+      "title": "'Passion of the Christ' Set For Theatrical Return",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "passion-of-the-christ-theatrical-return",
+      "primaryKeyword": "Passion of the Christ theatrical return",
+      "primaryEntity": "The Passion of the Christ",
+      "entities": [
+        "The Passion of the Christ (2004 film)",
+        "Mel Gibson"
+      ],
+      "angle": "Mel Gibson's controversial biblical drama 'The Passion of the Christ' is returning to theaters.",
+      "tmdbType": "movie",
+      "source": "gnews:The Washington Post",
+      "sources": [
+        {
+          "outlet": "The Washington Post",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNOFJrWWlzWjZ2aUxPem1LTjhhdGlkbFNGMElzd0pYcjV5R3FKQzRnNHUzUS1BUWg1ZHNiNEVwNmFaMmt6M1RVenI5WjZTWlVMblZMYzBhdmdLeEtNNVp1WnpBMHQybGtOY0ItUDBoenpIQkdnTWZPN1cxY3hiRjM0MnhnNlctbjRjX0lTdXJJVkNlT3JnWkpBR0xrQmUwTkZIU0ZLMmRsQkZVZw?oc=5",
+          "ageMin": 274,
+          "headline": "D.C. official tells Trump to build his arch somewhere else - The Washington Post",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxNOFJrWWlzWjZ2aUxPem1LTjhhdGlkbFNGMElzd0pYcjV5R3FKQzRnNHUzUS1BUWg1ZHNiNEVwNmFaMmt6M1RVenI5WjZTWlVMblZMYzBhdmdLeEtNNVp1WnpBMHQybGtOY0ItUDBoenpIQkdnTWZPN1cxY3hiRjM0MnhnNlctbjRjX0lTdXJJVkNlT3JnWkpBR0xrQmUwTkZIU0ZLMmRsQkZVZw?oc=5\" target=\"_blank"
+        }
+      ],
+      "ageMin": 274,
+      "_cand": {
+        "key": "rss:d-c-official-tells-trump-to-build-his-arch-somewhere-else-th",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "The Washington Post"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "The Washington Post",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 43,
+      "signals": {
+        "recency": 9,
+        "corroboration": 8,
+        "status": 18,
+        "type": 8,
+        "pop": 0,
+        "breakout": 0
+      }
+    },
+    {
+      "id": "music-news-madonna-confessions-ii-release",
+      "slug": "madonna-is-back-with-confessions-ii-stream-it-now",
+      "title": "Madonna Is Back With Confessions II : Stream It Now",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "madonna-confessions-ii-release",
+      "primaryKeyword": "madonna confessions ii",
+      "primaryEntity": "Madonna",
+      "entities": [
+        "Sabrina Carpenter",
+        "Feid",
+        "Lola Leon"
+      ],
+      "angle": "Madonna releases new album 'Confessions II' with notable collaborations.",
+      "tmdbType": "movie",
+      "source": "rss:Billboard",
+      "sources": [
+        {
+          "outlet": "Billboard",
+          "tier": 7,
+          "url": "https://www.billboard.com/music/pop/madonna-confessions-ii-stream-1236286775/",
+          "ageMin": 245,
+          "headline": "Madonna Is Back With Confessions II : Stream It Now",
+          "summary": "The follow-up to 2005's Confessions on a Dance Floor features collabs with Sabrina Carpenter, Feid, daughter Lola Leon and more."
+        }
+      ],
+      "ageMin": 245,
+      "_cand": {
+        "key": "rss:madonna-is-back-with-confessions-ii-stream-it-now",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "breakoutVelocity": 0,
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Billboard"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Billboard",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 47,
+      "signals": {
+        "recency": 9,
+        "corroboration": 12,
+        "status": 18,
+        "type": 8,
+        "pop": 0,
+        "breakout": 0
       }
     }
   ]

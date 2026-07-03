@@ -1,0 +1,103 @@
+{
+  "id": "news-nemesis-season-2-renewal-netflix",
+  "slug": "netflix-renews-crime-drama-nemesis-for-season-2",
+  "status": "needs_review",
+  "stages": {
+    "attempt1": {
+      "score": 65,
+      "cat": "tv/news",
+      "img": "/images/articles/netflix-renews-crime-drama-nemesis-for-season-2.jpg",
+      "hardBlocks": [
+        "fabricated: wrong-title / identity mismatch (article discusses a Netflix crime drama, reference facts are for a 1992 sci-fi film 'Nemesis')",
+        "CONTRADICTED [platform]: article says Nemesis streams on Netflix — TMDB/JustWatch shows Nemesis streams on Amazon Prime Video, fuboTV, Night Flight Plus, ARROW, NOT Netflix. State only Amazon Prime Video, fuboTV, Night Flight Plus, ARROW.",
+        "accuracy 5 < 8",
+        "infoGain 6 < 7"
+      ],
+      "badClaims": 0
+    },
+    "attempt2": {
+      "score": 75,
+      "cat": "tv/news",
+      "img": "/images/articles/netflix-renews-crime-drama-nemesis-for-season-2.jpg",
+      "hardBlocks": [
+        "fabricated: says Nemesis streams on Netflix, facts show Amazon Prime Video, fuboTV, Night Flight Plus, ARROW",
+        "CONTRADICTED [platform]: article says Nemesis streams on Netflix — TMDB/JustWatch shows Nemesis streams on Amazon Prime Video, fuboTV, Night Flight Plus, ARROW, NOT Netflix. State only Amazon Prime Video, fuboTV, Night Flight Plus, ARROW."
+      ],
+      "badClaims": 0
+    },
+    "attempt3": {
+      "score": 75,
+      "cat": "tv/news",
+      "img": "/images/articles/netflix-renews-crime-drama-nemesis-for-season-2.jpg",
+      "hardBlocks": [
+        "fabricated: says Nemesis streams on Netflix, facts show Amazon Prime Video, fuboTV, Night Flight Plus, ARROW",
+        "CONTRADICTED [platform]: article says Nemesis streams on Netflix — TMDB/JustWatch shows Nemesis streams on Amazon Prime Video, fuboTV, Night Flight Plus, ARROW, NOT Netflix. State only Amazon Prime Video, fuboTV, Night Flight Plus, ARROW.",
+        "verify-gate BLOCK: QUOTE: \"The first season ended with Stiles letting Wild"
+      ],
+      "badClaims": 0
+    }
+  },
+  "scorecard": {
+    "score": 75,
+    "subscores": {
+      "accuracy": 9,
+      "readability": 8,
+      "humanVoice": 8,
+      "phrasing": 8,
+      "curiosity": 8,
+      "structure": 8,
+      "infoGain": 7,
+      "seo": 7,
+      "faqQuality": 7,
+      "completeness": 8
+    },
+    "strengths": [
+      "Clear and concise reporting of the news.",
+      "Effective use of direct quotes from creators and Netflix executive.",
+      "Good structure with an answer-first lead and relevant subheadings.",
+      "The FAQ section provides genuinely new and useful information, especially the disambiguation of the 1992 film.",
+      "The article maintains a professional and engaging tone without resorting to generic filler."
+    ],
+    "weaknesses": [
+      "The article incorrectly states that the 1992 film 'Nemesis' is streaming on Netflix in the FAQ section, which contradicts the provided authoritative facts.",
+      "While the article is well-structured for a news piece, it could benefit from slightly more varied sentence structure to enhance readability further (Flesch score is a bit low).",
+      "The 'dek' could be slightly more specific about the 'quick pickup' timeframe, though it's implied by the six-week mention in the body."
+    ],
+    "deterministic": {
+      "words": 467,
+      "h2s": 3,
+      "h2Questions": 3,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 4,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 50,
+      "avgSentence": 19,
+      "flesch": 54,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": []
+    },
+    "hardBlocks": [
+      "fabricated: says Nemesis streams on Netflix, facts show Amazon Prime Video, fuboTV, Night Flight Plus, ARROW",
+      "CONTRADICTED [platform]: article says Nemesis streams on Netflix — TMDB/JustWatch shows Nemesis streams on Amazon Prime Video, fuboTV, Night Flight Plus, ARROW, NOT Netflix. State only Amazon Prime Video, fuboTV, Night Flight Plus, ARROW.",
+      "verify-gate BLOCK: QUOTE: \"The first season ended with Stiles letting Wild"
+    ]
+  },
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "keyword in title",
+      "external sources ≥2",
+      "score ≥ 80",
+      "zero hard-blocks"
+    ]
+  },
+  "ms": 390518
+}

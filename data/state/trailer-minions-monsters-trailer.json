@@ -1,0 +1,87 @@
+{
+  "id": "trailer-minions-monsters-trailer",
+  "slug": "minions-monsters-trailer-everything-to-know",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": 0,
+      "cat": "tv/trailers",
+      "img": "/images/articles/minions-monsters-trailer-everything-to-know.jpg",
+      "hardBlocks": [
+        "body 376w < 400",
+        "garbled non-Latin characters"
+      ],
+      "badClaims": 0
+    },
+    "attempt2": {
+      "score": 88,
+      "cat": "tv/trailers",
+      "img": "/images/articles/minions-monsters-trailer-everything-to-know.jpg",
+      "hardBlocks": [],
+      "badClaims": 0
+    }
+  },
+  "scorecard": {
+    "score": 88,
+    "subscores": {
+      "accuracy": 10,
+      "readability": 9,
+      "humanVoice": 9,
+      "phrasing": 9,
+      "curiosity": 9,
+      "structure": 9,
+      "infoGain": 8,
+      "seo": 7,
+      "faqQuality": 8,
+      "completeness": 10
+    },
+    "strengths": [
+      "Excellent adherence to the reader-first standard, prioritizing engagement and clarity.",
+      "Strong accuracy, with all claims grounded in provided facts.",
+      "Readability is high, with varied sentence structure and effective subheads.",
+      "Human voice is present, with specific details about cast and premise.",
+      "Phrasing is fluent and professional, avoiding common AI tells.",
+      "Headline and dek are specific and intriguing.",
+      "Structure is logical, with a clear lead and useful Key Takeaways.",
+      "Information gain is good, offering analysis beyond a simple summary.",
+      "SEO is handled naturally, without over-optimization.",
+      "FAQ section provides relevant, new information.",
+      "Completeness is excellent, covering all key aspects of the trailer preview."
+    ],
+    "weaknesses": [
+      "InfoGain could be slightly improved with a more distinct verdict or unique analytical angle.",
+      "SEO score is good but could be higher with more internal links or a stronger meta description (though this is secondary).",
+      "FAQ quality is good, but one answer about Steve Carell could be more direct in stating he is not involved, rather than focusing on George Lucas."
+    ],
+    "deterministic": {
+      "words": 405,
+      "h2s": 5,
+      "h2Questions": 4,
+      "internalLinks": 0,
+      "externalLinks": 3,
+      "hasSources": true,
+      "faqCount": 4,
+      "ktCount": 5,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 30,
+      "avgSentence": 15,
+      "flesch": 54,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 1,
+      "hardBlocks": []
+    },
+    "hardBlocks": []
+  },
+  "score": 88,
+  "category": "tv",
+  "subcategory": "trailers",
+  "audit": {
+    "ok": true,
+    "internalLinks": 1,
+    "failed": []
+  },
+  "ms": 183006
+}

@@ -1,0 +1,100 @@
+{
+  "id": "news-backrooms-a24-extended-cut-theatrical-release",
+  "slug": "backrooms-a24-sets-extended-cut-with-16-minutes-of-new-footage-hits-th",
+  "status": "needs_review",
+  "stages": {
+    "attempt1": {
+      "score": 70,
+      "cat": "movies/news",
+      "img": "/images/articles/backrooms-a24-sets-extended-cut-with-16-minutes-of-new-footage-hits-th.jpg",
+      "hardBlocks": [
+        "fabricated: 'Backrooms: Everything Must Go' adds new lore and Easter eggs for its surprise theatrical encore.",
+        "verify-gate CUT: 2 claim(s) not in the gathered sources — A24 has not announced any streaming plans for this new ; Backrooms' global box office return of $331 million rep",
+        "infoGain 6 < 7"
+      ],
+      "badClaims": 0
+    },
+    "attempt2": {
+      "score": 0,
+      "cat": "movies/news",
+      "img": "/images/articles/backrooms-a24-sets-extended-cut-with-16-minutes-of-new-footage-hits-th.jpg",
+      "hardBlocks": [
+        "prompt-leak / meta-refusal phrase reached reader copy (e.g. 'not detailed in the provided facts' / 'the reference facts') — rewrite or omit",
+        "CONTRADICTED [rt]: article states a Rotten Tomatoes score of NaN% — No verified Rotten Tomatoes score exists for Backrooms (OMDb returns none — common for TV/new titles). Do NOT state an RT percentage; speak qualitatively."
+      ],
+      "badClaims": 0
+    },
+    "attempt3": {
+      "score": 85,
+      "cat": "movies/news",
+      "img": "/images/articles/backrooms-a24-sets-extended-cut-with-16-minutes-of-new-footage-hits-th.jpg",
+      "hardBlocks": [
+        "verify-gate CUT: 1 claim(s) not in the gathered sources — A streaming release has not been detailed"
+      ],
+      "badClaims": 0
+    }
+  },
+  "scorecard": {
+    "score": 85,
+    "subscores": {
+      "accuracy": 10,
+      "readability": 9,
+      "humanVoice": 9,
+      "phrasing": 9,
+      "curiosity": 9,
+      "structure": 9,
+      "infoGain": 8,
+      "seo": 8,
+      "faqQuality": 9,
+      "completeness": 9
+    },
+    "strengths": [
+      "All factual claims are accurately sourced and attributed, with no fabricated details.",
+      "The lead quickly delivers the core news, adhering to news standards for inverted pyramid structure.",
+      "The language is clear, concise, and avoids jargon, making it easy for a busy fan to read.",
+      "The article maintains a human voice, providing specific details about the film's cast and plot without resorting to generic filler.",
+      "Sentence rhythm is varied, and paragraphs are short, enhancing readability.",
+      "The use of subheads effectively breaks up the text and guides the reader.",
+      "The FAQ section provides genuinely new and useful information, not just rephrasing existing content.",
+      "The keyword 'backrooms extended cut a24' is present naturally within the text without feeling forced.",
+      "The article provides a good overview of the film's box office performance and future prospects, offering information gain beyond a simple summary."
+    ],
+    "weaknesses": [
+      "The 'Sources' section is minimal, listing only one general link rather than specific source links for each attributed claim (e.g., Deadline). While the text attributes to Deadline, a direct link would be stronger for SEO and reader verification.",
+      "The 'About' section is very brief; while acceptable for a short news piece, it could offer slightly more context if space allowed without sacrificing conciseness."
+    ],
+    "deterministic": {
+      "words": 308,
+      "h2s": 3,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": true,
+      "faqCount": 4,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 48,
+      "avgSentence": 18,
+      "flesch": 51,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": []
+    },
+    "hardBlocks": [
+      "verify-gate CUT: 1 claim(s) not in the gathered sources — A streaming release has not been detailed"
+    ]
+  },
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "body ≥ 350w",
+      "external sources ≥2",
+      "zero hard-blocks"
+    ]
+  },
+  "ms": 499029
+}

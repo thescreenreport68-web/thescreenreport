@@ -1,0 +1,83 @@
+{
+  "id": "box-office-supergirl-box-office-debut",
+  "slug": "box-office-supergirl-stumbles-with-38-million-debut-toy-story-5-remain",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": 78,
+      "cat": "movies/box-office",
+      "img": "/images/articles/box-office-supergirl-stumbles-with-38-million-debut-toy-story-5-remain.png",
+      "hardBlocks": [
+        "CONTRADICTED [rt]: article states a Rotten Tomatoes score of NaN% — No verified Rotten Tomatoes score exists for Supergirl (OMDb returns none — common for TV/new titles). Do NOT state an RT percentage; speak qualitatively.",
+        "1 unverified claim(s) (need correction)"
+      ],
+      "badClaims": 1
+    },
+    "attempt2": {
+      "score": 88,
+      "cat": "movies/box-office",
+      "img": "/images/articles/box-office-supergirl-stumbles-with-38-million-debut-toy-story-5-remain.jpg",
+      "hardBlocks": [],
+      "badClaims": 0
+    }
+  },
+  "scorecard": {
+    "score": 88,
+    "subscores": {
+      "accuracy": 10,
+      "readability": 9,
+      "humanVoice": 8,
+      "phrasing": 9,
+      "curiosity": 8,
+      "structure": 9,
+      "infoGain": 9,
+      "seo": 7,
+      "faqQuality": 8,
+      "completeness": 10
+    },
+    "strengths": [
+      "Accurate reporting of box office figures and comparisons.",
+      "Clear and concise structure with a strong lead and useful subheads.",
+      "Excellent information gain, providing context and analysis of the box office results.",
+      "Strong adherence to trade news standards for a box office report.",
+      "Well-written and engaging prose that maintains a professional tone.",
+      "FAQ section provides relevant additional information.",
+      "Correctly identifies the primary keyword naturally within the text."
+    ],
+    "weaknesses": [
+      "The 'humanVoice' could be slightly more distinctive, though it is professional and authoritative.",
+      "While SEO is secondary, the meta description could be slightly more keyword-rich for search visibility, though it is effective for reader engagement.",
+      "The article relies on two specific reporting outlets (Variety, Collider) for its core figures; while attributed, a broader range of sources could further bolster authority, though the provided sources are reputable."
+    ],
+    "deterministic": {
+      "words": 558,
+      "h2s": 3,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 3,
+      "hasSources": true,
+      "faqCount": 4,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 55,
+      "avgSentence": 20,
+      "flesch": 42,
+      "bannedTells": 1,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": []
+    },
+    "hardBlocks": []
+  },
+  "score": 88,
+  "category": "movies",
+  "subcategory": "box-office",
+  "audit": {
+    "ok": true,
+    "internalLinks": 3,
+    "failed": []
+  },
+  "ms": 185300
+}

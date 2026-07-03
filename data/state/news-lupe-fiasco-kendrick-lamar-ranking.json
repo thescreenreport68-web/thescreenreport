@@ -1,0 +1,109 @@
+{
+  "id": "news-lupe-fiasco-kendrick-lamar-ranking",
+  "slug": "lupe-fiasco-claims-there-are-hundreds-of-rappers-better-than-kendrick-",
+  "status": "needs_review",
+  "stages": {
+    "attempt1": {
+      "score": 75,
+      "cat": "celebrity/news",
+      "img": "/images/articles/lupe-fiasco-claims-there-are-hundreds-of-rappers-better-than-kendrick-.jpg",
+      "hardBlocks": [
+        "fabricated/altered quote: \"of rappers superior to Lamar. Fiasco doubled down \"; \"verse, calling it\" — use the exact source words or drop the quotation marks"
+      ],
+      "block": [
+        "fabricated/altered quote: \"of rappers superior to Lamar. Fiasco doubled down \"; \"verse, calling it\" — use the exact source words or drop the quotation marks"
+      ],
+      "fixable": [],
+      "badClaims": 0
+    },
+    "attempt2": {
+      "score": 70,
+      "cat": "celebrity/news",
+      "img": "/images/articles/lupe-fiasco-claims-there-are-hundreds-of-rappers-better-than-kendrick-.jpg",
+      "hardBlocks": [
+        "infoGain 6 < 7"
+      ],
+      "block": [],
+      "fixable": [
+        "infoGain 6 < 7"
+      ],
+      "badClaims": 0
+    },
+    "attempt3": {
+      "score": 85,
+      "cat": "celebrity/news",
+      "img": "/images/articles/lupe-fiasco-claims-there-are-hundreds-of-rappers-better-than-kendrick-.jpg",
+      "hardBlocks": [
+        "verify-gate CUT: 1 claim(s) not in the gathered sources — As of July 2026, there has been no public response from"
+      ],
+      "block": [
+        "verify-gate CUT: 1 claim(s) not in the gathered sources — As of July 2026, there has been no public response from"
+      ],
+      "fixable": [],
+      "badClaims": 0
+    }
+  },
+  "scorecard": {
+    "score": 85,
+    "subscores": {
+      "accuracy": 9,
+      "readability": 9,
+      "humanVoice": 8,
+      "phrasing": 9,
+      "curiosity": 8,
+      "structure": 9,
+      "infoGain": 8,
+      "seo": 7,
+      "faqQuality": 9,
+      "completeness": 9
+    },
+    "strengths": [
+      "The article accurately reports the core claim and supporting quotes from Lupe Fiasco, attributing them correctly to Billboard.",
+      "The readability is excellent, with short paragraphs, clear language, and good sentence rhythm.",
+      "The human voice is present, with direct quotes and a clear narrative flow.",
+      "Phrasing is natural and avoids keyword stuffing or awkward constructions.",
+      "The headline and dek are clear and directly address the news, satisfying curiosity quickly.",
+      "The structure is effective for a short news piece, with an answer-first lead and relevant subheadings.",
+      "The FAQ section provides genuinely new and relevant information, particularly regarding Kendrick Lamar's recent BET Awards wins and background.",
+      "The article effectively contextualizes Fiasco's current comments by referencing his past statements and apologies, providing good information gain.",
+      "All claims are well-sourced and attributed, demonstrating strong journalistic practice for a news piece."
+    ],
+    "weaknesses": [
+      "While the article is strong, the 'about' section is empty, which could be used to provide a brief, sourced bio of Lupe Fiasco for readers unfamiliar with him.",
+      "The internal linking could be slightly improved if there were other relevant articles to link to within the body, though for a short news piece, this is less critical."
+    ],
+    "deterministic": {
+      "words": 368,
+      "h2s": 3,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": true,
+      "faqCount": 3,
+      "ktCount": 3,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 34,
+      "avgSentence": 18,
+      "flesch": 63,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 2,
+      "hardBlocks": []
+    },
+    "hardBlocks": [
+      "verify-gate CUT: 1 claim(s) not in the gathered sources — As of July 2026, there has been no public response from"
+    ]
+  },
+  "holdReason": "accuracy/grounding block: verify-gate CUT: 1 claim(s) not in the gathered sources — As of July 2026, there has been no public response from",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "external sources ≥2",
+      "zero hard-blocks"
+    ]
+  },
+  "ms": 512304
+}

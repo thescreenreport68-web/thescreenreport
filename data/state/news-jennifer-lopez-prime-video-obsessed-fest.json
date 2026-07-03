@@ -1,0 +1,94 @@
+{
+  "id": "news-jennifer-lopez-prime-video-obsessed-fest",
+  "slug": "jennifer-lopez-makes-surprise-appearance-at-prime-video-s-obsessed-fes",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": 0,
+      "cat": "celebrity/news",
+      "img": "/images/articles/jennifer-lopez-makes-surprise-appearance-at-prime-video-s-obsessed-fes.jpg",
+      "hardBlocks": [
+        "prompt-leak / meta-refusal phrase reached reader copy (e.g. 'not detailed in the provided facts' / 'the reference facts') — rewrite or omit"
+      ],
+      "badClaims": 0
+    },
+    "attempt2": {
+      "score": 0,
+      "cat": "celebrity/news",
+      "img": "/images/articles/jennifer-lopez-makes-surprise-appearance-at-prime-video-s-obsessed-fes.jpg",
+      "hardBlocks": [
+        "FAQ 0 < 3"
+      ],
+      "badClaims": 0
+    },
+    "attempt3": {
+      "score": 82,
+      "cat": "celebrity/news",
+      "img": "/images/articles/jennifer-lopez-makes-surprise-appearance-at-prime-video-s-obsessed-fes.jpg",
+      "hardBlocks": [],
+      "badClaims": 0
+    }
+  },
+  "scorecard": {
+    "score": 82,
+    "subscores": {
+      "accuracy": 10,
+      "readability": 9,
+      "humanVoice": 8,
+      "phrasing": 8,
+      "curiosity": 9,
+      "structure": 9,
+      "infoGain": 7,
+      "seo": 7,
+      "faqQuality": 9,
+      "completeness": 6
+    },
+    "strengths": [
+      "Headline is specific and accurate.",
+      "Lead delivers the core news immediately.",
+      "Key Takeaways are concise and informative.",
+      "Article accurately attributes the core event to The Hollywood Reporter.",
+      "Structure follows the inverted pyramid, suitable for news.",
+      "FAQ section provides relevant, distinct information.",
+      "Sources are clearly listed and appropriate.",
+      "The article avoids AI clichés and filler praise.",
+      "Sentence rhythm is generally good, with short paragraphs."
+    ],
+    "weaknesses": [
+      "The 'What is Jennifer Lopez working on now?' section includes information about 'The Mother' (2023) and 'This Is Me... Now: A Love Story' which are not directly related to the event, making it slightly less focused for a short news piece.",
+      "The 'completeness' score is impacted by the brevity inherent in short news, and the lack of deeper analysis which is not expected but would elevate the piece.",
+      "While the human voice is present, it could be slightly more engaging with more specific descriptive language about the surprise itself.",
+      "The SEO score is moderate as the primary keyword is present naturally but not heavily utilized, which is acceptable given the reader-first mandate but could be slightly stronger if more relevant internal/external links were present."
+    ],
+    "deterministic": {
+      "words": 370,
+      "h2s": 4,
+      "h2Questions": 3,
+      "internalLinks": 0,
+      "externalLinks": 3,
+      "hasSources": true,
+      "faqCount": 3,
+      "ktCount": 3,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": true,
+      "maxSentence": 41,
+      "avgSentence": 15,
+      "flesch": 46,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 4,
+      "hardBlocks": []
+    },
+    "hardBlocks": []
+  },
+  "score": 82,
+  "category": "celebrity",
+  "subcategory": "news",
+  "audit": {
+    "ok": true,
+    "internalLinks": 0,
+    "failed": []
+  },
+  "ms": 225807
+}

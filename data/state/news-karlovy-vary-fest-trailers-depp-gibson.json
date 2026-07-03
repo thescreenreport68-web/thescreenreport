@@ -1,0 +1,88 @@
+{
+  "id": "news-karlovy-vary-fest-trailers-depp-gibson",
+  "slug": "johnny-depp-mel-gibson-and-helen-mirren-watch-stars-in-irreverent-karl",
+  "status": "needs_review",
+  "stages": {
+    "attempt1": {
+      "score": 75,
+      "cat": "movies/news",
+      "img": "/images/articles/johnny-depp-mel-gibson-and-helen-mirren-watch-stars-in-irreverent-karl.jpg",
+      "hardBlocks": [
+        "infoGain 6 < 7"
+      ]
+    },
+    "attempt2": {
+      "score": 78,
+      "cat": "movies/news",
+      "img": "/images/articles/johnny-depp-mel-gibson-and-helen-mirren-watch-stars-in-irreverent-karl.jpg",
+      "hardBlocks": [
+        "Flesch 34 < 40 (too dense to read comfortably)"
+      ]
+    }
+  },
+  "scorecard": {
+    "score": 78,
+    "subscores": {
+      "accuracy": 10,
+      "readability": 8,
+      "humanVoice": 7,
+      "phrasing": 7,
+      "curiosity": 8,
+      "structure": 9,
+      "infoGain": 7,
+      "seo": 7,
+      "faqQuality": 7,
+      "completeness": 7
+    },
+    "strengths": [
+      "Clear and concise lead that answers the main question immediately.",
+      "Good use of subheads to break up the text.",
+      "Key Takeaways section is helpful for quick comprehension.",
+      "Accurate reporting of the core news event.",
+      "Sources are clearly listed and relevant.",
+      "FAQ section provides useful, related information.",
+      "The dek effectively summarizes the article's content."
+    ],
+    "weaknesses": [
+      "The 'human voice' is somewhat generic, lacking a strong POV or engaging personality.",
+      "Phrasing is functional but could be more dynamic and less reliant on standard news-speak.",
+      "Information gain is moderate; it reports the news well but doesn't offer deep analysis or original framing beyond the immediate event.",
+      "SEO is present but not particularly strong; keyword usage is natural but not optimized for discovery.",
+      "The article leans a bit too heavily on explaining what the festival is, which might be common knowledge for its target audience, rather than focusing more on the 'why it matters' aspect of the trailers.",
+      "Some sentences are a bit long, impacting overall readability slightly."
+    ],
+    "deterministic": {
+      "words": 427,
+      "h2s": 4,
+      "h2Questions": 3,
+      "internalLinks": 0,
+      "externalLinks": 3,
+      "hasSources": true,
+      "faqCount": 3,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 39,
+      "avgSentence": 20,
+      "flesch": 34,
+      "bannedTells": 1,
+      "kwExact": 3,
+      "hardBlocks": [
+        "Flesch 34 < 40 (too dense to read comfortably)"
+      ]
+    },
+    "hardBlocks": [
+      "Flesch 34 < 40 (too dense to read comfortably)"
+    ]
+  },
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "score ≥ 80",
+      "zero hard-blocks"
+    ]
+  },
+  "ms": 95070
+}

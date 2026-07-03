@@ -18,6 +18,54 @@ export const readJSON = (f, d) => {
 };
 export const writeJSON = (f, v) => fs.writeFileSync(fp(f), JSON.stringify(v, null, 2));
 
+// ── PUBLISHED-HISTORY DEDUP LEDGER (owner 2026-07-01: NEVER re-publish a story we already posted — it wastes
+// credits, looks like doorway spam to Google, and bores the audience). A durable local-file ledger of every
+// published story keyed by BOTH its outlet-agnostic eventSlug AND its title slug; FIND consults it and drops any
+// candidate/topic already published within the window. (This is the D1 cloud-port's local precursor.)
+const PUBLISHED_FILE = "published.json";
+export const slugKey = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 80);
+
+// The ROBUST dedup key (owner 2026-07-01): a story re-reported under a slightly different headline gets a
+// different title slug AND a different eventSlug across runs (that's how KVIFF regenerated). The one thing that
+// stays stable is WHAT it's about + WHAT KIND of event: primaryEntity + eventType. Dedup on that too so the same
+// entity's same-type event is never written twice in the window. (Deliberately coarse: we would rather occasionally
+// skip a genuinely-new same-entity/same-type story than burn credits re-posting — the owner's stated priority.)
+export const entityKey = (primaryEntity, eventType) => (primaryEntity && eventType ? `${slugKey(primaryEntity)}:${slugKey(eventType)}` : null);
+
+// Returns { events:Set, titles:Set, entities:Set } of everything published in the last `windowDays` (default 45).
+export function loadPublished(windowDays = 45) {
+  const list = readJSON(PUBLISHED_FILE, []);
+  const cutoff = Date.now() - windowDays * 24 * 3600 * 1000;
+  const events = new Set(), titles = new Set(), entities = new Set();
+  for (const r of Array.isArray(list) ? list : []) {
+    if (r.at && Date.parse(r.at) < cutoff) continue;
+    if (r.eventSlug) events.add(r.eventSlug);
+    if (r.titleKey) titles.add(r.titleKey);
+    if (r.entityKey) entities.add(r.entityKey);
+  }
+  return { events, titles, entities };
+}
+
+// Append a published story to the ledger (deduped by slug; capped so the file can't grow unbounded).
+// VIDEO-FEED FIELDS (owner 2026-07-02, Reels automation — see REELS_AUTOMATION_PLAN.md): sourceUrls/priority/
+// signals/image/category are persisted here because queue.json is OVERWRITTEN every findrun — without capturing
+// them at publish time, the video picker loses the popularity signals and the image-gatherer loses the source
+// article URLs. All optional + ignored by loadPublished(), so the dedup ledger behavior is unchanged.
+export function recordPublished({ eventSlug, titleKey, slug, title, primaryEntity, eventType, at, sourceUrls, priority, signals, image, category } = {}) {
+  const list = readJSON(PUBLISHED_FILE, []);
+  const arr = Array.isArray(list) ? list : [];
+  if (slug && arr.some((r) => r.slug === slug)) return; // already recorded
+  arr.push({
+    eventSlug: eventSlug || null, titleKey: titleKey || slugKey(title), entityKey: entityKey(primaryEntity, eventType), slug: slug || null, title: title || null, at: at || new Date().toISOString(),
+    ...(Array.isArray(sourceUrls) && sourceUrls.length ? { sourceUrls: sourceUrls.slice(0, 8) } : {}),
+    ...(Number.isFinite(priority) ? { priority } : {}),
+    ...(signals && typeof signals === "object" ? { signals } : {}),
+    ...(image ? { image } : {}),
+    ...(category ? { category } : {}),
+  });
+  writeJSON(PUBLISHED_FILE, arr.slice(-8000)); // keep the most recent ~8k
+}
+
 // A run monitor — the single source of truth for "what the automation did this run".
 export function newMonitor(runId) {
   const m = {

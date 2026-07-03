@@ -1,0 +1,92 @@
+{
+  "id": "news-kathy-griffin-banned-tonight-show-conor-mcgregor-hosting",
+  "slug": "kathy-griffin-claims-she-was-banned-from-the-tonight-show-for-being-to",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": 75,
+      "cat": "celebrity/news",
+      "img": "/images/articles/kathy-griffin-claims-she-was-banned-from-the-tonight-show-for-being-to.jpg",
+      "hardBlocks": [
+        "a 60-word run-on sentence (>55 — split it)"
+      ],
+      "block": [],
+      "fixable": [
+        "a 60-word run-on sentence (>55 — split it)"
+      ],
+      "badClaims": 0
+    },
+    "attempt2": {
+      "score": 85,
+      "cat": "celebrity/news",
+      "img": "/images/articles/kathy-griffin-claims-she-was-banned-from-the-tonight-show-for-being-to.jpg",
+      "hardBlocks": [],
+      "block": [],
+      "fixable": [],
+      "badClaims": 0
+    }
+  },
+  "scorecard": {
+    "score": 85,
+    "subscores": {
+      "accuracy": 10,
+      "readability": 9,
+      "humanVoice": 9,
+      "phrasing": 9,
+      "curiosity": 9,
+      "structure": 8,
+      "infoGain": 8,
+      "seo": 8,
+      "faqQuality": 9,
+      "completeness": 8
+    },
+    "strengths": [
+      "All claims are accurately sourced and attributed, with no fabricated information.",
+      "The article is highly readable, using clear, concise language and varied sentence structure.",
+      "The human voice is strong, directly quoting Kathy Griffin and presenting her perspective clearly.",
+      "Phrasing is natural and avoids keyword stuffing or awkward constructions.",
+      "The headline and dek are clear and immediately convey the core news.",
+      "The article follows an inverted pyramid structure, delivering key information upfront.",
+      "The FAQ section provides genuinely new and helpful information, not just rephrasing the article.",
+      "The article is tight and focused, appropriate for a short news piece."
+    ],
+    "weaknesses": [
+      "While subheads are present, they are somewhat generic ('What Did Kathy Griffin Say?', 'How Did The Show Respond?', 'What Happens Next?'). More descriptive subheads could enhance scannability.",
+      "The 'Sources' section at the end is just a heading and doesn't list the specific source (Variety) again, which could be slightly clearer for a reader looking for direct attribution at the very end.",
+      "The 'completeness' score is slightly lower because while it's a short news piece, it could briefly mention the context of Griffin's past controversies without delving deep, to provide a fuller picture for readers unfamiliar with her history, though this is a minor point given the news format."
+    ],
+    "deterministic": {
+      "words": 348,
+      "h2s": 4,
+      "h2Questions": 3,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": true,
+      "faqCount": 3,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 41,
+      "avgSentence": 18,
+      "flesch": 61,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": []
+    },
+    "hardBlocks": []
+  },
+  "score": 85,
+  "category": "celebrity",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "body ≥ 350w",
+      "external sources ≥2"
+    ]
+  },
+  "ms": 228716
+}

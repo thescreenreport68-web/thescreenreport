@@ -1,0 +1,106 @@
+// GOSSIP AUTOMATION — POLICY CONFIG (Phase 0). Self-contained; edits NONE of the shared news-pipeline files
+// (the other chat is mid-rebuild of those). Reuses only lib/* helpers. This is the single source of truth for:
+//   • source tiers + the "well-known established outlet" bar,
+//   • the severity classes (NORMAL / HIGH / EXTREME),
+//   • the confidence tiers, and the framing / UI-label / disclaimer each (tier × severity) demands.
+//
+// OWNER RULES (2026-06-29):
+//   1. Publish unconfirmed stories IMMEDIATELY with an in-text "this is unconfirmed" disclaimer — never wait.
+//   2. EXTREME class (sexual assault / minors) is NOT run on raw speculation — only once a well-known
+//      ESTABLISHED outlet has reported it, then re-reported in our own attributed, reporter-friendly words.
+//   3. Hard "never-do" methods: never assert a damaging claim as our own unattributed fact; never fabricate
+//      a source/quote; never host/link intimate or leaked media; never allege crime/sex about a minor.
+
+// Outlet → trust tier. (Mirrors the news pipeline's App-L tiering idea, kept LOCAL so we don't touch it.)
+export const OUTLET_TIER = {
+  // tier 7 — major trade / wire / record
+  Variety: 7, Deadline: 7, "The Hollywood Reporter": 7, THR: 7, AP: 7, "Associated Press": 7, Reuters: 7,
+  "The New York Times": 7, "Washington Post": 7, BBC: 7, CNN: 7, "NBC News": 7, "ABC News": 7, "CBS News": 7,
+  // tier 6 — established celebrity desks (well-known; these break crime/legal/death the right way)
+  TMZ: 6, "Page Six": 6, People: 6, "Us Weekly": 6, "Entertainment Weekly": 6, EW: 6, "E! News": 6,
+  Billboard: 6, "Rolling Stone": 6, "Vanity Fair": 6,
+  // tier 5 — secondary entertainment
+  "Just Jared": 5, Collider: 5, IndieWire: 5, Complex: 5, Vulture: 5, "Entertainment Tonight": 5,
+  // tier 4 — tabloid / gossip blog
+  "Daily Mail": 4, "The Sun": 4, "The Shade Room": 4, "Radar Online": 4, "The Blast": 4,
+  // tier 2 — social / anonymous (a DISCOVERY signal only, never proof of a claim)
+  "Pop Crave": 2, PopBase: 2, DeuxMoi: 2, Deuxmoi: 2, X: 2, Twitter: 2, Reddit: 2, Instagram: 2, TikTok: 2,
+};
+export const ESTABLISHED_TIER = 6; // the "well-known established outlet" bar (gates the EXTREME class)
+
+// Domain → tier. Corroboration returns a registrable DOMAIN (e.g. "variety.com"), not the OUTLET_TIER name
+// ("Variety"), so tiering by name alone silently dropped every corroborating outlet to the default 3 — a
+// confirmed, wire-reported story looked like "social speculation". This maps the domains we actually see.
+export const DOMAIN_TIER = {
+  // tier 7 — major trade / wire / network / paper of record
+  "variety.com": 7, "deadline.com": 7, "hollywoodreporter.com": 7, "apnews.com": 7, "reuters.com": 7,
+  "nytimes.com": 7, "washingtonpost.com": 7, "bbc.com": 7, "bbc.co.uk": 7, "cnn.com": 7, "nbcnews.com": 7,
+  "abcnews.go.com": 7, "cbsnews.com": 7, "theguardian.com": 7, "npr.org": 7, "usatoday.com": 7, "latimes.com": 7,
+  "wsj.com": 7, "time.com": 7, "forbes.com": 7,
+  // tier 6 — established celebrity desks + major papers' entertainment
+  "tmz.com": 6, "pagesix.com": 6, "nypost.com": 6, "people.com": 6, "usmagazine.com": 6, "ew.com": 6,
+  "eonline.com": 6, "billboard.com": 6, "rollingstone.com": 6, "vanityfair.com": 6, "hollywoodlife.com": 6,
+  "etonline.com": 6, "today.com": 6, "cbssports.com": 6, "espn.com": 6, "yahoo.com": 6, "aol.com": 6,
+  // tier 5 — secondary entertainment
+  "justjared.com": 5, "collider.com": 5, "indiewire.com": 5, "complex.com": 5, "vulture.com": 5,
+  "sheknows.com": 5, "buzzfeed.com": 5, "popsugar.com": 5, "thewrap.com": 5, "inquirer.com": 5,
+  // tier 4 — tabloid / gossip blog
+  "dailymail.co.uk": 4, "the-sun.com": 4, "thesun.co.uk": 4, "theshaderoom.com": 4, "radaronline.com": 4,
+  "theblast.com": 4, "okmagazine.com": 4, "intouchweekly.com": 4,
+  // tier 2 — social / anonymous
+  "twitter.com": 2, "x.com": 2, "reddit.com": 2, "instagram.com": 2, "tiktok.com": 2, "bsky.app": 2,
+};
+export const tierOf = (outlet) => OUTLET_TIER[outlet] ?? 3; // unknown outlet NAME = a cautious mid-low default
+const registrable = (d) => (d || "").toLowerCase().replace(/^https?:\/\//, "").replace(/^www\./, "").split("/")[0].split(":")[0];
+export const tierOfDomain = (host) => DOMAIN_TIER[registrable(host)] ?? 3; // unknown DOMAIN = the same cautious default
+// A source's tier: an explicit .tier wins; else a domain-shaped outlet (has a dot) resolves by DOMAIN_TIER, a
+// plain outlet name by OUTLET_TIER. This makes corroborating sources (outlet = a bare domain) tier correctly.
+export const sourceTier = (s) => s?.tier ?? (/\./.test(s?.outlet || "") ? tierOfDomain(s.outlet) : tierOf(s?.outlet));
+export const maxTier = (sources = []) => sources.reduce((m, s) => Math.max(m, sourceTier(s)), 0);
+export const topOutlet = (sources = []) =>
+  [...sources].sort((a, b) => sourceTier(b) - sourceTier(a))[0]?.outlet || null;
+export const hasEstablished = (sources = []) => sources.some((s) => sourceTier(s) >= ESTABLISHED_TIER);
+// Count DISTINCT outlets at/above a tier (for the "multiple independent majors corroborate ⇒ confirmed" rule).
+export const distinctOutletsAtTier = (sources = [], minTier = 7) =>
+  new Set(sources.filter((s) => sourceTier(s) >= minTier).map((s) => (s.outlet || s.url || "").toLowerCase())).size;
+
+// ── SEVERITY ──────────────────────────────────────────────────────────────────────────────────────
+// EXTREME = sexual-assault class, OR any serious allegation involving a minor → gated behind an
+//           established outlet (owner rule 2). HIGH = death/crime/health/affair/outing → publish WITH the
+//           in-text disclaimer + post-publish monitor. NORMAL = dating/feuds/fashion/deals → publish freely.
+export const SEV = {
+  extreme: /\b(sexual(ly)?\s+(assault\w*|abus\w+|misconduct|harass\w*)|\brape[ds]?\b|raping|molest\w*|grooming|sexual predator|underage\s+(sex|relationship)|child\s+(abuse|porn|sexual))\b/i,
+  minor: /\b(underage|under-?age|a\s+minor\b|the\s+minor\b|(1[0-7]|[1-9])-year-old|teenage(rs?)?|\bchild\b|\bchildren\b|\bkids?\b)\b/i,
+  high: /\b(dead|dies|died|death|passed away|obituar\w*|killed|murder\w*|arrest\w*|charged|indict\w*|felony|lawsuit|sued|\bdui\b|assault\w*|abus\w+|hospitaliz\w*|overdos\w*|rehab|addict\w*|cancer|terminal|in a coma|suicid\w*|self-?harm|restraining order|custody battle|divorce|cheat\w*|affair|unfaithful|pregnan\w*|miscarriage|came out|comes out|\bgay\b|sexuality)\b/i,
+};
+export function severity(text = "") {
+  const t = text || "";
+  if (SEV.extreme.test(t)) return "EXTREME";
+  if (SEV.minor.test(t) && SEV.high.test(t)) return "EXTREME"; // a serious allegation involving a minor
+  if (SEV.high.test(t)) return "HIGH";
+  return "NORMAL";
+}
+
+// ── CONFIDENCE TIER (from the sources, unless explicit topic flags say otherwise) ───────────────────
+// `sources` is the FULL corroborated set (discovery source + every outlet corroboration found), NOT just the one
+// thin discovery blurb — otherwise a Pop-Crave-discovered story that Variety/CBS/AP all reported still tiers as
+// "social speculation". Pass the merged list so facts the majors carry are recognized as facts.
+export function confidenceTier(topic, sources = topic.sources || []) {
+  if (topic.confirmed) return "CONFIRMED"; // on the record / the person's own words / the studio confirmed
+  if (topic.official) return "OFFICIAL_RECORD"; // a court filing / police statement (fair-report lane)
+  if (topic.denied) return "DENIED"; // the subject / their rep has denied it
+  const t = maxTier(sources);
+  if (t >= ESTABLISHED_TIER) return "REPORTED_BY_MAJOR"; // an established outlet is carrying it
+  if (t >= 4) return "SINGLE_SOURCE_RUMOR"; // a secondary/tabloid blog
+  return "SOCIAL_SPECULATION"; // X / Reddit / anon only
+}
+
+// UI label + whether confirmation is hard (no disclaimer needed) for a given tier.
+export const TIER_META = {
+  CONFIRMED: { label: "Confirmed", hardConfirmed: true, framing: "plain" },
+  OFFICIAL_RECORD: { label: "Per official records", hardConfirmed: true, framing: "official" },
+  REPORTED_BY_MAJOR: { label: "Reported by", hardConfirmed: false, framing: "attributed" }, // label gets the outlet appended
+  SINGLE_SOURCE_RUMOR: { label: "Unconfirmed rumor", hardConfirmed: false, framing: "rumor-safe" },
+  SOCIAL_SPECULATION: { label: "Social speculation", hardConfirmed: false, framing: "rumor-safe" },
+  DENIED: { label: "Denied by subject", hardConfirmed: false, framing: "denial-forward" },
+};

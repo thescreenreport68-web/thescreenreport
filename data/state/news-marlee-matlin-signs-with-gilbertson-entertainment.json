@@ -1,0 +1,91 @@
+{
+  "id": "news-marlee-matlin-signs-with-gilbertson-entertainment",
+  "slug": "marlee-matlin-signs-with-gilbertson-entertainment",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": 85,
+      "cat": "celebrity/news",
+      "img": "/images/articles/marlee-matlin-signs-with-gilbertson-entertainment.jpg",
+      "hardBlocks": [
+        "verify-gate BLOCK: Marlee Matlin won the Academy Award for Best Actress in; Marlee Matlin is the only deaf performer to receive the"
+      ],
+      "block": [
+        "verify-gate BLOCK: Marlee Matlin won the Academy Award for Best Actress in; Marlee Matlin is the only deaf performer to receive the"
+      ],
+      "fixable": [],
+      "badClaims": 0
+    },
+    "attempt2": {
+      "score": 85,
+      "cat": "celebrity/news",
+      "img": "/images/articles/marlee-matlin-signs-with-gilbertson-entertainment.jpg",
+      "hardBlocks": [],
+      "block": [],
+      "fixable": [],
+      "badClaims": 0
+    }
+  },
+  "scorecard": {
+    "score": 85,
+    "subscores": {
+      "accuracy": 10,
+      "readability": 9,
+      "humanVoice": 9,
+      "phrasing": 9,
+      "curiosity": 9,
+      "structure": 9,
+      "infoGain": 8,
+      "seo": 8,
+      "faqQuality": 9,
+      "completeness": 9
+    },
+    "strengths": [
+      "All claims are accurately sourced and attributed, particularly the breaking news element to Deadline.",
+      "The article is highly readable, with short paragraphs and clear, concise language.",
+      "The human voice is present, avoiding generic AI tells and providing specific details about Matlin's career and the new agency.",
+      "Phrasing is fluent and professional, reading like a top news desk report.",
+      "The headline and lead deliver the core information quickly, satisfying curiosity.",
+      "The structure is effective for a short news piece, with an answer-first lead and relevant subheads.",
+      "The article provides good information gain by combining the representation news with details about Matlin's upcoming public appearance.",
+      "SEO elements are naturally integrated without keyword stuffing, and the FAQs add new, relevant information.",
+      "The article is complete for a short news piece, covering the essential facts and context."
+    ],
+    "weaknesses": [
+      "While the article is tight, the 'Who is Gordon Gilbertson?' section could have slightly more detail if available from the source, though it's adequate for a news brief.",
+      "The 'What's next for Marlee Matlin?' section is good, but a very minor point is that it could explicitly state that the 'Inclusion in the Arts' event is a new piece of information beyond the Deadline exclusive, reinforcing the 'one unique sourced fact' requirement."
+    ],
+    "deterministic": {
+      "words": 351,
+      "h2s": 3,
+      "h2Questions": 3,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 3,
+      "ktCount": 3,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": true,
+      "maxSentence": 32,
+      "avgSentence": 17,
+      "flesch": 47,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 4,
+      "hardBlocks": []
+    },
+    "hardBlocks": []
+  },
+  "score": 85,
+  "category": "celebrity",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "external sources ≥2"
+    ]
+  },
+  "ms": 320285
+}

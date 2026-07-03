@@ -1,0 +1,46 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Cap,Anton,92,&H00FFFFFF,&H00B9B9B9,&H00101010,&HA0000000,0,0,0,0,100,100,1,0,1,4,2,2,70,70,330,1
+Style: Hook,Anton,120,&H00FFFFFF,&H00CFCFCF,&H00101010,&HA0000000,0,0,0,0,100,100,1,0,1,5,3,5,70,70,0,1
+Style: KickText,Anton,40,&H00FFFFFF,&H00FFFFFF,&H00101010,&H00000000,0,0,0,0,100,100,4,0,1,0,0,5,0,0,0,1
+Style: KickDraw,Anton,40,&H002821D9,&H002821D9,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,7,0,0,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.12,0:00:06.50,KickDraw,,0,0,0,,{\fad(140,120)\pos(174,126)\1c&H000000&\1a&H78&\blur6\p1}m 18 0 l 726 0 b 744 0 744 0 744 18 l 744 70 b 744 88 744 88 726 88 l 18 88 b 0 88 0 88 0 70 l 0 18 b 0 0 0 0 18 0{\p0}
+Dialogue: 1,0:00:00.12,0:00:06.50,KickDraw,,0,0,0,,{\fad(140,120)\pos(168,118)\p1}m 18 0 l 726 0 b 744 0 744 0 744 18 l 744 70 b 744 88 744 88 726 88 l 18 88 b 0 88 0 88 0 70 l 0 18 b 0 0 0 0 18 0{\p0}
+Dialogue: 2,0:00:00.12,0:00:06.50,KickText,,0,0,0,,{\fad(140,120)\pos(540,163)}WEIRD AL REJECTS AI DEAL
+Dialogue: 0,0:00:00.05,0:00:00.88,Hook,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k34}WEIRD {\k20}AL {\k29}JUST
+Dialogue: 0,0:00:00.88,0:00:01.82,Hook,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k44}{\1c&H2821D9&}REFUSED{\1c&HFFFFFF&} {\k15}A {\k34}"NICE
+Dialogue: 0,0:00:01.82,0:00:02.70,Hook,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k29}PILE {\k20}OF {\k39}MONEY"
+Dialogue: 0,0:00:02.70,0:00:03.19,Hook,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k25}FOR {\k25}{\1c&H2821D9&}AI.{\1c&HFFFFFF&}
+Dialogue: 0,0:00:03.19,0:00:04.22,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k25}THE {\k39}PARODY {\k39}LEGEND
+Dialogue: 0,0:00:04.22,0:00:05.06,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k39}BACKED {\k25}OUT {\k20}OF
+Dialogue: 0,0:00:05.06,0:00:05.94,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k15}A {\k54}LUCRATIVE {\k20}AD
+Dialogue: 0,0:00:05.94,0:00:06.68,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k29}DEAL {\k20}AT {\k25}THE
+Dialogue: 0,0:00:06.68,0:00:07.42,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k29}LAST {\k44}MINUTE.
+Dialogue: 0,0:00:07.42,0:00:08.54,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k20}HE {\k54}INITIALLY {\k39}{\1c&H2821D9&}AGREED{\1c&HFFFFFF&}
+Dialogue: 0,0:00:08.54,0:00:09.48,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k20}TO {\k15}A {\k59}COMMERCIAL
+Dialogue: 0,0:00:09.48,0:00:10.75,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k25}FOR {\k49}BUSINESS {\k54}SOFTWARE,
+Dialogue: 0,0:00:10.75,0:00:11.54,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k25}PER {\k54}{\1c&H2821D9&}DEADLINE.{\1c&HFFFFFF&}
+Dialogue: 0,0:00:11.54,0:00:12.37,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k15}A {\k29}WEEK {\k39}BEFORE
+Dialogue: 0,0:00:12.37,0:00:13.55,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k54}SHOOTING, {\k20}HE {\k44}LEARNED
+Dialogue: 0,0:00:13.55,0:00:14.49,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k25}THE {\k44}PRODUCT {\k25}WAS
+Dialogue: 0,0:00:14.49,0:00:15.12,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k64}{\1c&H2821D9&}AI-POWERED.{\1c&HFFFFFF&}
+Dialogue: 0,0:00:15.12,0:00:16.65,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k49}YANKOVIC {\k64}IMMEDIATELY {\k39}PULLED
+Dialogue: 0,0:00:16.65,0:00:17.73,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k29}OUT, {\k49}STATING: {\k29}"I'M
+Dialogue: 0,0:00:17.73,0:00:18.37,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k25}NOT {\k15}A {\k25}FAN
+Dialogue: 0,0:00:18.37,0:00:18.86,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k20}OF {\k29}AI."
+Dialogue: 0,0:00:18.86,0:00:19.59,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k29}THIS {\k29}SETS {\k15}A
+Dialogue: 0,0:00:19.59,0:00:20.72,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k34}CLEAR {\k54}PRECEDENT {\k25}FOR
+Dialogue: 0,0:00:20.72,0:00:21.95,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k44}{\1c&H2821D9&}ARTISTS{\1c&HFFFFFF&} {\k59}NAVIGATING {\k20}AI
+Dialogue: 0,0:00:21.95,0:00:22.69,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k74}ENDORSEMENTS.
+Dialogue: 0,0:00:22.69,0:00:23.52,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k29}FULL {\k34}STORY {\k20}AT
+Dialogue: 0,0:00:23.52,0:00:24.55,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k25}THE {\k39}SCREEN {\k39}REPORT
+Dialogue: 0,0:00:24.55,0:00:25.19,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k15}— {\k29}LINK {\k20}IN
+Dialogue: 0,0:00:25.19,0:00:25.48,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k29}BIO.

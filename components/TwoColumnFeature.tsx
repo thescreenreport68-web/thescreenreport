@@ -12,25 +12,30 @@ export type FeatureColumn = {
   rest: Article[];
 };
 
-// The Hollywood Reporter "Heat Vision | Live Feed" pattern: two branded columns,
-// each with a centered title + italic tagline, a lead story, a dotted secondary
-// list, and a "View all" link — divided by a vertical rule.
+// The Hollywood Reporter "Heat Vision | Live Feed" pattern: two branded columns
+// split by a hairline rule — centered display title + italic tagline, a lead
+// story, a dotted secondary list, one CTA spec (spec §C2).
 function Column({ c }: { c: FeatureColumn }) {
   return (
-    <div>
+    <div className="flex h-full flex-col">
       <SectionHeader title={c.title} tagline={c.tagline} center />
       <FeatureLead article={c.lead} />
       {c.rest.length ? (
-        <div className="mt-4 border-t border-navy/10 pt-4">
+        <div className="mt-5 border-t border-hair pt-4">
           <DottedList items={c.rest} showKicker={false} />
         </div>
       ) : null}
-      <Link
-        href={c.href}
-        className="mt-4 inline-block font-sans text-xs font-bold uppercase tracking-[0.14em] text-gold-600 hover:text-navy"
-      >
-        View all →
-      </Link>
+      <div className="mt-auto pt-5">
+        <Link
+          href={c.href}
+          className="btn-label inline-block text-slate transition-colors duration-150 hover:text-red"
+        >
+          View All{" "}
+          <span aria-hidden className="align-[-1px]">
+            ›
+          </span>
+        </Link>
+      </div>
     </div>
   );
 }
@@ -43,7 +48,7 @@ export default function TwoColumnFeature({
   right: FeatureColumn;
 }) {
   return (
-    <section className="grid gap-8 md:grid-cols-2 md:divide-x md:divide-navy/10">
+    <section className="grid gap-10 md:grid-cols-2 md:gap-0 md:divide-x md:divide-hair">
       <div className="md:pr-8">
         <Column c={left} />
       </div>

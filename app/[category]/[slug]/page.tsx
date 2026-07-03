@@ -14,8 +14,10 @@ import AdSlot from "@/components/AdSlot";
 import ArticleCard from "@/components/ArticleCard";
 import JsonLd from "@/components/JsonLd";
 import ReadingProgress from "@/components/ReadingProgress";
+import TrendingBadge from "@/components/TrendingBadge";
 import SubcategoryArchive from "@/components/SubcategoryArchive";
 import { getAllArticles, getArticle, getRelated } from "@/lib/articles";
+import { formatDate } from "@/lib/format";
 import {
   getAuthor,
   getCategory,
@@ -111,7 +113,7 @@ export default function ArticlePage({
       image: article.image
         ? {
             "@type": "ImageObject",
-            url: `${SITE.url}${article.image}`,
+            url: article.image.startsWith("http") ? article.image : `${SITE.url}${article.image}`,
             width: article.imageWidth,
             height: article.imageHeight,
           }
@@ -206,6 +208,8 @@ export default function ArticlePage({
       : []),
   ].filter(Boolean) as object[];
 
+  const isNewsForm = article.formatTag === "news";
+
   return (
     <div className="container-wide py-6">
       <ReadingProgress />
@@ -218,34 +222,55 @@ export default function ArticlePage({
 
       <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_300px]">
         <article className="min-w-0">
-          <Breadcrumbs
-            items={[
-              { href: "/", label: "Home" },
-              { href: `/${article.category}/`, label: cat?.name ?? "" },
-            ]}
-          />
-          {article.formatTag === "news" ? (
-            <div className="mt-2 inline-block bg-breaking px-2.5 py-1 font-sans text-[11px] font-bold uppercase tracking-[0.14em] text-white">
-              {article.newsType && article.newsType !== "general"
-                ? article.newsType.replace(/-/g, " ")
-                : `${cat?.name ?? ""} News`}
+          {/* Folio line (spec §D1): breadcrumb left, date + reading time right */}
+          <div className="flex flex-wrap items-baseline justify-between gap-x-4 border-b border-hair pb-2">
+            <Breadcrumbs
+              items={[
+                { href: "/", label: "Home" },
+                { href: `/${article.category}/`, label: cat?.name ?? "" },
+              ]}
+            />
+            <div className="meta-mono hidden items-baseline gap-2 sm:flex">
+              <time dateTime={article.date}>{formatDate(article.date)}</time>
+              {article.readingTime ? (
+                <>
+                  <span aria-hidden>·</span>
+                  <span>{article.readingTime} min read</span>
+                </>
+              ) : null}
             </div>
-          ) : (
+          </div>
+
+          <div className="mt-5 flex items-baseline gap-2.5">
+            <TrendingBadge article={article} />
             <CategoryKicker
               href={`/${article.category}/`}
-              categoryName={cat?.name ?? ""}
-              subName={article.subcategory ? article.subcategory.replace(/-/g, " ") : undefined}
+              categoryName={
+                isNewsForm && article.newsType && article.newsType !== "general"
+                  ? article.newsType.replace(/-/g, " ")
+                  : (cat?.name ?? "")
+              }
+              subName={
+                !isNewsForm && article.subcategory
+                  ? article.subcategory.replace(/-/g, " ")
+                  : undefined
+              }
             />
-          )}
-          <h1 className="mt-1 font-display text-4xl font-bold leading-[0.95] tracking-tight text-navy sm:text-5xl lg:text-[3.4rem] xl:text-[4rem]">
-            {article.title}
-          </h1>
+          </div>
+          <h1 className="hed-xl mt-3">{article.title}</h1>
           {article.dek ? (
-            <p className="mt-3 font-body text-2xl leading-snug text-navy">{article.dek}</p>
+            <p className="dek mt-4 text-xl leading-[1.4]">{article.dek}</p>
           ) : null}
 
-          <div className="mt-4">
-            <Byline author={article.author} date={article.date} updated={article.updated} />
+          <div className="mt-5">
+            <Byline
+              author={article.author}
+              date={article.date}
+              updated={article.updated}
+              url={`/${article.category}/${article.slug}/`}
+              title={article.title}
+              readingTime={article.readingTime}
+            />
           </div>
 
           <figure className="my-6">
@@ -260,32 +285,40 @@ export default function ArticlePage({
               height={article.imageHeight}
               className="aspect-video w-full"
             />
-            <figcaption className="mt-2 leading-snug">
-              <span className="font-body text-base text-navy">{article.imageAlt}</span>{" "}
-              <cite className="font-sans text-xs not-italic uppercase tracking-[0.04em] text-slate">
-                {article.imageCredit}
-              </cite>
-            </figcaption>
+            {article.imageCredit ? (
+              <figcaption className="mt-1.5 text-right">
+                <cite className="meta-mono not-italic text-gray">
+                  {article.imageCredit}
+                </cite>
+              </figcaption>
+            ) : null}
           </figure>
 
-          <NicheTop article={article} />
+          <div className="mx-auto max-w-prose">
+            <NicheTop article={article} />
 
-          <KeyTakeaways items={article.keyTakeaways} />
+            <KeyTakeaways items={article.keyTakeaways} />
+          </div>
 
-          <ArticleBody body={article.body} related={related} />
+          <ArticleBody
+            body={article.body}
+            related={related}
+            dropCap={!isNewsForm}
+          />
 
-          <NicheBottom article={article} />
+          <div className="mx-auto max-w-prose">
+            <NicheBottom article={article} />
 
-          <Faq items={article.faq} />
-          <AuthorBox author={article.author} />
+            <Faq items={article.faq} />
+            <AuthorBox author={article.author} />
+          </div>
+
           <NewsletterBand />
 
           {/* End-of-article recirculation */}
           <section className="mt-12">
-            <div className="mb-5 border-b border-hair pb-2">
-              <h2 className="font-display text-2xl font-bold uppercase tracking-tight text-navy sm:text-[1.8rem]">
-                Related Stories
-              </h2>
+            <div className="mb-6 border-b-2 border-ink pb-2">
+              <h2 className="sect-head">More from The Screen Report</h2>
             </div>
             <div className="grid gap-x-5 gap-y-8 sm:grid-cols-2 lg:grid-cols-4">
               {related.map((a) => (
@@ -299,20 +332,13 @@ export default function ArticlePage({
           </div>
         </article>
 
-        {/* Right rail: 300x600 + More to Read + sticky 300x600 */}
+        {/* Right rail: 300x600 + Must Reads + sticky 300x600 */}
         <aside className="hidden lg:block">
           <div className="space-y-7">
-            <div>
-              <div className="mb-1.5 text-center text-[10px] font-bold uppercase tracking-[0.2em] text-slate/60">
-                Advertisement
-              </div>
-              <AdSlot format="halfpage" />
-            </div>
-            <div>
-              <div className="mb-2 border-b border-hair pb-2">
-                <h2 className="font-display text-xl font-bold uppercase tracking-tight text-navy">
-                  More to Read
-                </h2>
+            <AdSlot format="halfpage" />
+            <div className="border-t-2 border-ink">
+              <div className="border-b border-hair pb-2 pt-2.5">
+                <h2 className="sect-head text-2xl lg:text-2xl">Must Reads</h2>
               </div>
               <div>
                 {related.map((a) => (
@@ -320,10 +346,7 @@ export default function ArticlePage({
                 ))}
               </div>
             </div>
-            <div className="sticky top-24">
-              <div className="mb-1.5 text-center text-[10px] font-bold uppercase tracking-[0.2em] text-slate/60">
-                Advertisement
-              </div>
+            <div className="sticky top-[76px]">
               <AdSlot format="halfpage" />
             </div>
           </div>

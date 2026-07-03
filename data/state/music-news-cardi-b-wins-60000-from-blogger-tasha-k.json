@@ -1,0 +1,122 @@
+{
+  "id": "music-news-cardi-b-wins-60000-from-blogger-tasha-k",
+  "slug": "cardi-b-wins-60-000-from-blogger-tasha-k-over-offset-and-stefon-diggs-",
+  "status": "needs_review",
+  "stages": {
+    "attempt1": {
+      "score": 75,
+      "cat": "music/news",
+      "img": "https://www.rollingstone.com/wp-content/uploads/2026/07/cardi-b-blogger-tasha-k.jpg?w=1600&h=900&crop=1",
+      "hardBlocks": [
+        "primary keyword not in title",
+        "verify-gate CUT: 1 claim(s) not in the gathered sources — The jury found that Tasha K spread false and damaging c"
+      ],
+      "block": [
+        "verify-gate CUT: 1 claim(s) not in the gathered sources — The jury found that Tasha K spread false and damaging c"
+      ],
+      "fixable": [
+        "primary keyword not in title"
+      ],
+      "badClaims": 0
+    },
+    "attempt2": {
+      "score": 75,
+      "cat": "music/news",
+      "img": "https://www.rollingstone.com/wp-content/uploads/2026/07/cardi-b-blogger-tasha-k.jpg?w=1600&h=900&crop=1",
+      "hardBlocks": [
+        "verify-gate CUT: 3 claim(s) not in the gathered sources — The case centered on the blogger spreading false and da; This legal matter is separate from Cardi B's profession; This is a personal defamation case concerning online po"
+      ],
+      "block": [
+        "verify-gate CUT: 3 claim(s) not in the gathered sources — The case centered on the blogger spreading false and da; This legal matter is separate from Cardi B's profession; This is a personal defamation case concerning online po"
+      ],
+      "fixable": [],
+      "badClaims": 0
+    },
+    "attempt3": {
+      "score": 65,
+      "cat": "music/news",
+      "img": "https://www.rollingstone.com/wp-content/uploads/2026/07/cardi-b-blogger-tasha-k.jpg?w=1600&h=900&crop=1",
+      "hardBlocks": [
+        "primary keyword not in title",
+        "fabricated: Stefon Diggs is the father of Cardi B's youngest child"
+      ],
+      "block": [
+        "fabricated: Stefon Diggs is the father of Cardi B's youngest child"
+      ],
+      "fixable": [
+        "primary keyword not in title"
+      ],
+      "badClaims": 0
+    }
+  },
+  "scorecard": {
+    "score": 65,
+    "subscores": {
+      "accuracy": 8,
+      "readability": 7,
+      "humanVoice": 6,
+      "phrasing": 7,
+      "curiosity": 7,
+      "structure": 7,
+      "infoGain": 6,
+      "seo": 7,
+      "faqQuality": 7,
+      "completeness": 7
+    },
+    "strengths": [
+      "The article clearly states the core claim in the headline and lead, answering the 'what happened' quickly.",
+      "The use of subheadings like 'What Did Tasha K Post?' and 'What Are the Terms of the New Deal?' helps break up the text and guide the reader.",
+      "The article effectively integrates direct quotes from the court filing, adding authenticity and specific detail.",
+      "The Key Takeaways provide a concise summary of the main points for quick comprehension.",
+      "The FAQ section adds genuinely new information and clarifies potential reader questions without repeating the main body.",
+      "The Flesch score and average sentence length indicate reasonable readability, avoiding overly dense prose."
+    ],
+    "weaknesses": [
+      "The article states Stefon Diggs is the father of Cardi B's youngest child, which is a fabrication not supported by the provided reference facts.",
+      "While the article uses subheads, the overall structure could benefit from more varied paragraph lengths and sentence rhythms to enhance engagement.",
+      "The 'human voice' is somewhat neutral; while not generic, it lacks a distinct point of view or wit that would elevate it beyond standard reporting.",
+      "The mention of Cardi B's music career at the end feels a bit tacked on and doesn't flow naturally from the legal topic.",
+      "The article uses 'according to Rolling Stone' multiple times, which is necessary for attribution but could be varied slightly to improve phrasing fluency.",
+      "The 'dek' is a bit long and could be more concise while still conveying the necessary information."
+    ],
+    "deterministic": {
+      "words": 366,
+      "h2s": 2,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 4,
+      "ktCount": 4,
+      "kwInTitle": false,
+      "kwInFirst100": false,
+      "kwInH2": false,
+      "maxSentence": 46,
+      "avgSentence": 23,
+      "flesch": 53,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": [
+        "primary keyword not in title"
+      ]
+    },
+    "hardBlocks": [
+      "primary keyword not in title",
+      "fabricated: Stefon Diggs is the father of Cardi B's youngest child"
+    ]
+  },
+  "holdReason": "accuracy/grounding block: fabricated: Stefon Diggs is the father of Cardi B's youngest child",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "body ≥ 400w",
+      "external sources ≥2",
+      "score ≥ 70",
+      "zero hard-blocks",
+      "humanVoice ≥ 7"
+    ]
+  },
+  "ms": 289486
+}

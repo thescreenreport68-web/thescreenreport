@@ -1,0 +1,94 @@
+{
+  "id": "profile-austin-butler-fixtest4",
+  "slug": "austin-butler-career-fixtest4",
+  "status": "needs_review",
+  "stages": {
+    "attempt1": {
+      "score": 0,
+      "cat": "celebrity/profiles-careers",
+      "img": "/images/articles/austin-butler-career-fixtest4.jpg",
+      "hardBlocks": [
+        "a 74-word sentence (>45 — split it; unreadable)"
+      ],
+      "badClaims": 0
+    },
+    "attempt2": {
+      "score": 88,
+      "cat": "celebrity/profiles-careers",
+      "img": "/images/articles/austin-butler-career-fixtest4.jpg",
+      "hardBlocks": [
+        "5 unverified claim(s) (need correction)"
+      ],
+      "badClaims": 5
+    },
+    "attempt3": {
+      "score": 88,
+      "cat": "celebrity/profiles-careers",
+      "img": "/images/articles/austin-butler-career-fixtest4.jpg",
+      "hardBlocks": [
+        "2 unverified claim(s) (need correction)"
+      ],
+      "badClaims": 2
+    }
+  },
+  "scorecard": {
+    "score": 88,
+    "subscores": {
+      "accuracy": 10,
+      "readability": 9,
+      "humanVoice": 9,
+      "phrasing": 9,
+      "curiosity": 8,
+      "structure": 9,
+      "infoGain": 9,
+      "seo": 7,
+      "faqQuality": 9,
+      "completeness": 8
+    },
+    "strengths": [
+      "Strong reader-first approach prioritizing engagement over keyword stuffing.",
+      "Clear and concise writing style with good sentence rhythm.",
+      "Effective use of subheads to break up content.",
+      "FAQ section provides valuable, specific information.",
+      "Accurate representation of awards and nominations.",
+      "Good balance between career overview and specific film highlights.",
+      "Human voice is present, especially in descriptions of Butler's dedication."
+    ],
+    "weaknesses": [
+      "The 'SEO' subscore is lower because while keywords are present naturally, there's limited opportunity for deeper SEO elements like extensive internal/external links or a robust FAQ beyond the current scope.",
+      "The 'completeness' subscore is slightly lower as the filmography section is not fully detailed within the article body, relying on external links for a full picture.",
+      "The dek could be slightly more specific to pique immediate curiosity.",
+      "While the human voice is good, a few more specific anecdotes or quotes beyond the 'didn't sleep for two years' could enhance it further."
+    ],
+    "deterministic": {
+      "words": 436,
+      "h2s": 4,
+      "h2Questions": 3,
+      "internalLinks": 0,
+      "externalLinks": 3,
+      "hasSources": true,
+      "faqCount": 4,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 37,
+      "avgSentence": 17,
+      "flesch": 53,
+      "bannedTells": 2,
+      "kwExact": 0,
+      "hardBlocks": []
+    },
+    "hardBlocks": [
+      "2 unverified claim(s) (need correction)"
+    ]
+  },
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "zero hard-blocks"
+    ]
+  },
+  "ms": 419205
+}

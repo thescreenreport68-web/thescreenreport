@@ -1,18 +1,12 @@
-// Legal image sourcing: find a >=1200px, free-licensed Wikimedia Commons photo of the subject,
-// download it to public/images/articles, return path + dims + credit. The quality gate is the
+// Legal image sourcing: find a >=1200px, free-licensed Wikimedia Commons photo of the subject (hotlinked —
+// the owner's 2026-07-01 policy forbids re-hosting), return url + dims + credit. The quality gate is the
 // >=1200px + free-license requirement; tiny/low-res candidates are rejected.
-import fs from "node:fs";
-import path from "node:path";
-
 const UA = "The Screen Report/1.0 (https://thescreenreport.com; editor@thescreenreport.com)";
 const FREE = /CC0|CC BY|CC-BY|public domain/i;
 // Reject photos from clearly off-topic contexts (the "DiCaprio at a NASA climate event" problem).
 const OFFCTX = /(nasa|climate|summit|congress|senate|parliament|united nations|\bu\.?n\.?\b|military|army|navy|air ?force|olympic|fifa|world cup|nato|davos|economic forum|protest|rally|campaign rally|memorial|funeral|wikimania|hackathon)/i;
 // Prefer photos from film/entertainment contexts.
 const FILMCTX = /(premiere|festival|cannes|venice|berlinale|sundance|tiff|comic.?con|red.?carpet|photo.?call|screening|portrait|gala|oscars|emmys|golden globes|sxsw|gage skidmore|paley|hollywood|deauville)/i;
-const OUTDIR = "/Users/sivajithcu/Movie News site/site/public/images/articles";
-const extMap = { "image/jpeg": ".jpg", "image/png": ".png", "image/webp": ".webp", "image/gif": ".gif" };
-const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 function jpegSize(b) {
   let o = 2;
@@ -27,8 +21,21 @@ function jpegSize(b) {
   }
   return null;
 }
+// WebP dimensions (RIFF….WEBP → VP8 lossy / VP8L lossless / VP8X extended). Many 2024+ CDNs serve WebP; without this
+// a valid WebP hero would decode to null and be rejected regardless of its true size.
+function webpSize(b) {
+  if (b.length < 30 || b.toString("ascii", 8, 12) !== "WEBP") return null;
+  const fmt = b.toString("ascii", 12, 16);
+  if (fmt === "VP8 ") return { w: ((b[27] << 8) | b[26]) & 0x3fff, h: ((b[29] << 8) | b[28]) & 0x3fff };
+  if (fmt === "VP8L") { const bits = b[21] | (b[22] << 8) | (b[23] << 16) | (b[24] << 24); return { w: (bits & 0x3fff) + 1, h: ((bits >> 14) & 0x3fff) + 1 }; }
+  if (fmt === "VP8X") return { w: ((b[24] | (b[25] << 8) | (b[26] << 16)) & 0xffffff) + 1, h: ((b[27] | (b[28] << 8) | (b[29] << 16)) & 0xffffff) + 1 };
+  return null;
+}
 const sizeOf = (b) =>
-  b[0] === 0x89 && b[1] === 0x50 ? { w: b.readUInt32BE(16), h: b.readUInt32BE(20) } : b[0] === 0xff && b[1] === 0xd8 ? jpegSize(b) : null;
+  b[0] === 0x89 && b[1] === 0x50 ? { w: b.readUInt32BE(16), h: b.readUInt32BE(20) }
+  : b[0] === 0xff && b[1] === 0xd8 ? jpegSize(b)
+  : b[0] === 0x52 && b[1] === 0x49 && b[2] === 0x46 && b[3] === 0x46 ? webpSize(b)
+  : null;
 
 // Find the best >=1200px free-licensed Commons image matching the query (a person/subject name).
 export async function sourceImage(query) {
@@ -36,7 +43,7 @@ export async function sourceImage(query) {
     const api =
       "https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrnamespace=6&gsrlimit=30&prop=imageinfo&iiprop=url|size|extmetadata&format=json&gsrsearch=" +
       encodeURIComponent(query);
-    const r = await fetch(api, { headers: { "user-agent": UA, accept: "application/json" } });
+    const r = await fetch(api, { headers: { "user-agent": UA, accept: "application/json" }, signal: AbortSignal.timeout(10000) });
     if (!r.ok) return null;
     const j = await r.json();
     const q = query.toLowerCase().split(/\s+/).filter((w) => w.length > 2);
@@ -82,28 +89,22 @@ export async function sourceImage(query) {
   }
 }
 
-export async function downloadImage({ url, slug }) {
-  fs.mkdirSync(OUTDIR, { recursive: true });
-  for (let a = 0; a < 4; a++) {
-    try {
-      const r = await fetch(url, { headers: { "user-agent": UA, accept: "image/*" } });
-      if (r.status === 429) { await sleep(2000 * (a + 1)); continue; }
-      if (!r.ok) return null;
-      const ct = (r.headers.get("content-type") || "").split(";")[0].trim();
-      const buf = Buffer.from(await r.arrayBuffer());
-      if (buf.length < 5000) return null;
-      const dim = sizeOf(buf);
-      if (!dim || dim.w < 1200) return null;
-      const ext = extMap[ct] || ".jpg";
-      for (const e of [".jpg", ".png", ".webp", ".gif"]) {
-        const old = path.join(OUTDIR, slug + e);
-        if (e !== ext && fs.existsSync(old)) fs.rmSync(old);
-      }
-      fs.writeFileSync(path.join(OUTDIR, slug + ext), buf);
-      return { image: `/images/articles/${slug}${ext}`, imageWidth: dim.w, imageHeight: dim.h };
-    } catch (e) {
-      await sleep(1000);
-    }
+// MEASURE a remote image WITHOUT re-hosting it — fetch the bytes, read the dimensions, discard. Used by the hotlink
+// hero path (owner 2026-07-01: source/paparazzi photos allowed site-wide pre-audience, but HOTLINKED like the gossip
+// automation — bytes stay on the origin, the weaker copyright posture — so we measure here but never fs.write the file).
+// Timeout-bounded so one slow/stalled outlet can't hang the article (the run loop is sequential).
+export async function measureRemote(url) {
+  try {
+    const r = await fetch(url, { headers: { "user-agent": UA, accept: "image/*" }, signal: AbortSignal.timeout(8000) });
+    if (!r.ok) return null;
+    const buf = Buffer.from(await r.arrayBuffer());
+    if (buf.length < 3000) return null;
+    const dim = sizeOf(buf);
+    if (!dim || !dim.w || !dim.h) return null;
+    return { imageWidth: dim.w, imageHeight: dim.h };
+  } catch {
+    return null;
   }
-  return null;
 }
+// (downloadImage was removed 2026-07-03: the hotlink-only image policy left it with zero callers —
+// heroes are measured remotely via measureRemote and referenced by their origin URL, never re-hosted.)

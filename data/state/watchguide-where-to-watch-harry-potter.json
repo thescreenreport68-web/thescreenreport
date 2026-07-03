@@ -1,0 +1,85 @@
+{
+  "id": "watchguide-where-to-watch-harry-potter",
+  "slug": "where-to-watch-the-harry-potter-movies",
+  "status": "needs_review",
+  "stages": {
+    "attempt1": {
+      "score": 0,
+      "cat": "streaming/where-to-watch",
+      "img": "/images/articles/where-to-watch-the-harry-potter-movies.jpg",
+      "hardBlocks": [
+        "body 596w < 600",
+        "CONTRADICTED [platform]: article says Harry Potter and the Philosopher's Stone streams on Netflix — TMDB/JustWatch shows Harry Potter and the Philosopher's Stone streams on HBO Max, Peacock Premium, Peacock Premium Plus, NOT Netflix. State only HBO Max, Peacock Premium, Peacock Premium Plus.",
+        "CONTRADICTED [platform]: article says Harry Potter and the Philosopher's Stone streams on Disney+ — TMDB/JustWatch shows Harry Potter and the Philosopher's Stone streams on HBO Max, Peacock Premium, Peacock Premium Plus, NOT Disney+. State only HBO Max, Peacock Premium, Peacock Premium Plus."
+      ],
+      "badClaims": 0
+    },
+    "attempt2": {
+      "score": 0,
+      "cat": "streaming/where-to-watch",
+      "img": "/images/articles/where-to-watch-the-harry-potter-movies.jpg",
+      "hardBlocks": [
+        "body 355w < 600",
+        "CONTRADICTED [platform]: article says Harry Potter and the Philosopher's Stone streams on Netflix — TMDB/JustWatch shows Harry Potter and the Philosopher's Stone streams on HBO Max, Peacock Premium, Peacock Premium Plus, NOT Netflix. State only HBO Max, Peacock Premium, Peacock Premium Plus."
+      ],
+      "badClaims": 0
+    },
+    "attempt3": {
+      "score": 0,
+      "cat": "streaming/where-to-watch",
+      "img": "/images/articles/where-to-watch-the-harry-potter-movies.jpg",
+      "hardBlocks": [
+        "body 430w < 600",
+        "CONTRADICTED [platform]: article says Harry Potter and the Philosopher's Stone streams on Netflix — TMDB/JustWatch shows Harry Potter and the Philosopher's Stone streams on HBO Max, Peacock Premium, Peacock Premium Plus, NOT Netflix. State only HBO Max, Peacock Premium, Peacock Premium Plus."
+      ],
+      "badClaims": 0
+    }
+  },
+  "scorecard": {
+    "score": 0,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [
+      "deterministic block"
+    ],
+    "deterministic": {
+      "words": 430,
+      "h2s": 5,
+      "h2Questions": 4,
+      "internalLinks": 0,
+      "externalLinks": 4,
+      "hasSources": true,
+      "faqCount": 4,
+      "ktCount": 5,
+      "kwInTitle": true,
+      "kwInFirst100": false,
+      "kwInH2": false,
+      "maxSentence": 28,
+      "avgSentence": 18,
+      "flesch": 56,
+      "bannedTells": 0,
+      "fillerPraise": 1,
+      "kwExact": 0,
+      "hardBlocks": [
+        "body 430w < 600"
+      ]
+    },
+    "hardBlocks": [
+      "body 430w < 600",
+      "CONTRADICTED [platform]: article says Harry Potter and the Philosopher's Stone streams on Netflix — TMDB/JustWatch shows Harry Potter and the Philosopher's Stone streams on HBO Max, Peacock Premium, Peacock Premium Plus, NOT Netflix. State only HBO Max, Peacock Premium, Peacock Premium Plus."
+    ]
+  },
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "score ≥ 80",
+      "zero hard-blocks",
+      "infoGain ≥ 7",
+      "readability ≥ 6",
+      "humanVoice ≥ 7",
+      "phrasing ≥ 7"
+    ]
+  },
+  "ms": 170314
+}

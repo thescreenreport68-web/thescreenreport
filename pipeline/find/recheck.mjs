@@ -135,7 +135,7 @@ function promote(a, reason, rec) {
   rec.done("promoted", { reason });
 }
 
-async function main() {
+export async function runRecheck() {
   const runId = "recheck-" + new Date().toISOString().replace(/[:.]/g, "-").slice(0, 19);
   const monitor = newMonitor(runId);
   console.log(`\n=== RECHECK / AUTO-RETRACTION · ${runId}${DRY ? " (DRY)" : ""} ===`);
@@ -143,7 +143,7 @@ async function main() {
   monitor.stage("recheck", `${watched.length} published stories inside the ${RECHECK_WINDOW_H}h watch window`);
   if (!watched.length) {
     printRunReport(monitor.finish(0));
-    return;
+    return { watched: 0 };
   }
   const fresh = await discoverRSS({ maxPerFeed: 12, freshHours: 72 });
   for (const a of watched) {
@@ -154,5 +154,8 @@ async function main() {
     else rec.done(action.toLowerCase(), { reason });
   }
   printRunReport(monitor.finish(watched.length));
+  return { watched: watched.length };
 }
-main();
+// Direct CLI invocation (`node site/pipeline/find/recheck.mjs [--dry-run]`) still runs the pass; importing the
+// module (findrun.mjs wires it into every FIND cycle, 2026-07-03) does NOT auto-execute.
+if (process.argv[1] && import.meta.url.endsWith(process.argv[1].split("/").pop())) runRecheck();

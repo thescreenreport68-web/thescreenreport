@@ -1,0 +1,80 @@
+{
+  "id": "review-avatar-the-last-airbender-tv-review",
+  "slug": "review-avatar-the-last-airbender-live-action-series-delivers-elemental",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": 78,
+      "cat": "reviews/tv-reviews",
+      "img": "/images/articles/review-avatar-the-last-airbender-live-action-series-delivers-elemental.jpg",
+      "hardBlocks": [
+        "Flesch 38 < 40 (too dense to read comfortably)"
+      ]
+    },
+    "attempt2": {
+      "score": 85,
+      "cat": "reviews/tv-reviews",
+      "img": "/images/articles/review-avatar-the-last-airbender-live-action-series-delivers-elemental.jpg",
+      "hardBlocks": []
+    }
+  },
+  "scorecard": {
+    "score": 85,
+    "subscores": {
+      "accuracy": 10,
+      "readability": 9,
+      "humanVoice": 8,
+      "phrasing": 9,
+      "curiosity": 8,
+      "structure": 9,
+      "infoGain": 8,
+      "seo": 7,
+      "faqQuality": 9,
+      "completeness": 9
+    },
+    "strengths": [
+      "Visually stunning descriptions of bending and production design.",
+      "Effective expansion of Fire Nation lore and antagonist depth.",
+      "Strong cast performances, particularly Gordon Cormier and Dallas Liu.",
+      "Well-structured article with clear subheads and a compelling dek.",
+      "FAQ section provides genuinely useful, distinct information.",
+      "Good balance between faithfulness to the source and adaptation for live-action."
+    ],
+    "weaknesses": [
+      "The article notes a loss of the original's humor and character nuance, which slightly impacts the human voice score.",
+      "Pacing issues and character compression are mentioned, suggesting a slight dip in readability and information gain for certain plot points.",
+      "SEO score is moderate, indicating keywords are present but not heavily emphasized, which aligns with the reader-first approach but limits the technical SEO score."
+    ],
+    "deterministic": {
+      "words": 856,
+      "h2s": 5,
+      "h2Questions": 4,
+      "internalLinks": 0,
+      "externalLinks": 3,
+      "hasSources": true,
+      "faqCount": 4,
+      "ktCount": 5,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 36,
+      "avgSentence": 18,
+      "flesch": 41,
+      "bannedTells": 0,
+      "kwExact": 0,
+      "hardBlocks": []
+    },
+    "hardBlocks": []
+  },
+  "score": 85,
+  "category": "reviews",
+  "subcategory": "tv-reviews",
+  "audit": {
+    "ok": false,
+    "internalLinks": 1,
+    "failed": [
+      "keyword in title"
+    ]
+  },
+  "ms": 205670
+}

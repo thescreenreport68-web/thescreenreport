@@ -1,0 +1,48 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Cap,Anton,92,&H00FFFFFF,&H00B9B9B9,&H00101010,&HA0000000,0,0,0,0,100,100,1,0,1,4,2,2,70,70,330,1
+Style: Hook,Anton,120,&H00FFFFFF,&H00CFCFCF,&H00101010,&HA0000000,0,0,0,0,100,100,1,0,1,5,3,5,70,70,0,1
+Style: KickText,Anton,40,&H00FFFFFF,&H00FFFFFF,&H00101010,&H00000000,0,0,0,0,100,100,4,0,1,0,0,5,0,0,0,1
+Style: KickDraw,Anton,40,&H002821D9,&H002821D9,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,7,0,0,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.12,0:00:06.50,KickDraw,,0,0,0,,{\fad(140,120)\pos(132,126)\1c&H000000&\1a&H78&\blur6\p1}m 18 0 l 810 0 b 828 0 828 0 828 18 l 828 70 b 828 88 828 88 810 88 l 18 88 b 0 88 0 88 0 70 l 0 18 b 0 0 0 0 18 0{\p0}
+Dialogue: 1,0:00:00.12,0:00:06.50,KickDraw,,0,0,0,,{\fad(140,120)\pos(126,118)\p1}m 18 0 l 810 0 b 828 0 828 0 828 18 l 828 70 b 828 88 828 88 810 88 l 18 88 b 0 88 0 88 0 70 l 0 18 b 0 0 0 0 18 0{\p0}
+Dialogue: 2,0:00:00.12,0:00:06.50,KickText,,0,0,0,,{\fad(140,120)\pos(540,163)}TOM HANKS RETURNS TO SUMMER
+Dialogue: 0,0:00:00.05,0:00:01.01,Hook,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k27}TOM {\k43}HANKS' {\k27}NEW
+Dialogue: 0,0:00:01.01,0:00:02.13,Hook,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k37}MOVIE {\k32}JUST {\k43}LANDED
+Dialogue: 0,0:00:02.13,0:00:03.25,Hook,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k16}A {\k53}SURPRISE {\k43}SUMMER
+Dialogue: 0,0:00:03.25,0:00:03.79,Hook,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k53}RELEASE.
+Dialogue: 0,0:00:03.79,0:00:04.96,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k32}{\1c&H2821D9&}SONY{\1c&HFFFFFF&} {\k53}GREENLIT {\k32}"THE
+Dialogue: 0,0:00:04.96,0:00:06.24,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k69}COMEBACKER" {\k27}FOR {\k32}JULY
+Dialogue: 0,0:00:06.24,0:00:06.88,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k27}30, {\k37}2027.
+Dialogue: 0,0:00:06.88,0:00:08.11,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k37}HANKS {\k53}REUNITES {\k32}WITH
+Dialogue: 0,0:00:08.11,0:00:09.66,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k53}DIRECTOR {\k53}MARIELLE {\k48}HELLER,
+Dialogue: 0,0:00:09.66,0:00:10.62,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k27}WHO {\k43}GUIDED {\k27}HIS
+Dialogue: 0,0:00:10.62,0:00:11.90,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k37}OSCAR {\k64}NOMINATION {\k27}FOR
+Dialogue: 0,0:00:11.90,0:00:12.96,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k21}"A {\k59}BEAUTIFUL {\k27}DAY
+Dialogue: 0,0:00:12.96,0:00:14.30,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k21}IN {\k27}THE {\k85}NEIGHBORHOOD."
+Dialogue: 0,0:00:14.30,0:00:15.10,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k21}HE {\k37}STARS {\k21}AS
+Dialogue: 0,0:00:15.10,0:00:16.54,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k16}A {\k75}{\1c&H2821D9&}SPORTSWRITER{\1c&HFFFFFF&} {\k53}COVERING
+Dialogue: 0,0:00:16.54,0:00:17.50,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k16}A {\k37}MAJOR {\k43}LEAGUE
+Dialogue: 0,0:00:17.50,0:00:17.87,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k37}TEAM.
+Dialogue: 0,0:00:17.87,0:00:18.99,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k27}THE {\k32}CAST {\k53}INCLUDES
+Dialogue: 0,0:00:18.99,0:00:20.17,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k43}CALLUM {\k48}TURNER, {\k27}BAD
+Dialogue: 0,0:00:20.17,0:00:21.29,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k43}BUNNY, {\k27}AND {\k43}COLMAN
+Dialogue: 0,0:00:21.29,0:00:21.82,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k53}DOMINGO.
+Dialogue: 0,0:00:21.82,0:00:22.84,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k21}IT {\k37}FACES {\k43}DIRECT
+Dialogue: 0,0:00:22.84,0:00:24.06,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k69}COMPETITION {\k32}FROM {\k21}"A
+Dialogue: 0,0:00:24.06,0:00:25.18,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k37}QUIET {\k37}PLACE {\k37}III."
+Dialogue: 0,0:00:25.18,0:00:26.25,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k32}THIS {\k43}SUMMER {\k32}SLOT
+Dialogue: 0,0:00:26.25,0:00:27.32,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k59}POSITIONS {\k21}IT {\k27}FOR
+Dialogue: 0,0:00:27.32,0:00:28.55,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k69}BLOCKBUSTER {\k53}SUCCESS.
+Dialogue: 0,0:00:28.55,0:00:29.45,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k32}FULL {\k37}STORY {\k21}AT
+Dialogue: 0,0:00:29.45,0:00:30.57,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k27}THE {\k43}SCREEN {\k43}REPORT
+Dialogue: 0,0:00:30.57,0:00:31.27,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k16}— {\k32}LINK {\k21}IN
+Dialogue: 0,0:00:31.27,0:00:31.59,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k32}BIO.

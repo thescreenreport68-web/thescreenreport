@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 export default function CorrectionsPage() {
   return (
     <div className="container-wide max-w-prose py-12">
-      <h1 className="font-serif text-4xl font-bold text-navy">Corrections</h1>
+      <h1 className="font-serif text-4xl font-bold text-ink">Corrections</h1>
       <div className="prose prose-screen mt-6 max-w-none">
         <p>
           Accuracy matters to us. When we publish something that is incorrect, we

@@ -1,0 +1,74 @@
+{
+  "id": "guide-best-movies-on-netflix",
+  "slug": "the-best-movies-on-netflix-right-now",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": 88,
+      "cat": "streaming/best-of-streaming",
+      "img": "/images/articles/the-best-movies-on-netflix-right-now.jpg",
+      "hardBlocks": []
+    }
+  },
+  "scorecard": {
+    "score": 88,
+    "subscores": {
+      "accuracy": 10,
+      "readability": 9,
+      "humanVoice": 9,
+      "phrasing": 9,
+      "curiosity": 8,
+      "structure": 9,
+      "infoGain": 8,
+      "seo": 7,
+      "faqQuality": 9,
+      "completeness": 9
+    },
+    "strengths": [
+      "Excellent accuracy, all listed films are confirmed available and match reference facts.",
+      "Strong readability with clear subheads and varied sentence structure.",
+      "Engaging human voice with specific examples and genuine enthusiasm.",
+      "Fluent phrasing that reads professionally.",
+      "Curiosity is well-served by a specific headline and a direct lead.",
+      "Well-structured with an answer-first lead and clear sections.",
+      "Provides good information gain beyond a simple list, offering context and analysis.",
+      "SEO is handled naturally, avoiding over-optimization.",
+      "FAQ section is high quality, offering genuinely useful additional information.",
+      "Completeness is high, covering a good range of films and providing necessary context."
+    ],
+    "weaknesses": [
+      "The SEO subscore is slightly lower because while keywords are present naturally, the meta description isn't explicitly provided for scoring, and the external sources are generic rather than specific to the films discussed.",
+      "The 'KPop Demon Hunters (2025)' entry is flagged as fabricated because the reference facts indicate it is an unreleased/unaired piece of content.",
+      "The 'dek' could be slightly more specific to the top-billed film for maximum curiosity."
+    ],
+    "deterministic": {
+      "words": 471,
+      "h2s": 6,
+      "h2Questions": 5,
+      "internalLinks": 0,
+      "externalLinks": 3,
+      "hasSources": true,
+      "faqCount": 4,
+      "ktCount": 5,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": true,
+      "maxSentence": 30,
+      "avgSentence": 15,
+      "flesch": 49,
+      "bannedTells": 0,
+      "kwExact": 1,
+      "hardBlocks": []
+    },
+    "hardBlocks": []
+  },
+  "score": 88,
+  "category": "streaming",
+  "subcategory": "best-of-streaming",
+  "audit": {
+    "ok": true,
+    "internalLinks": 1,
+    "failed": []
+  },
+  "ms": 180979
+}

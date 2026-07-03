@@ -1,0 +1,83 @@
+{
+  "id": "profile-austin-butler-fixtest5",
+  "slug": "austin-butler-movies-and-career-verified",
+  "status": "needs_review",
+  "stages": {
+    "attempt1": {
+      "score": 0,
+      "cat": "celebrity/profiles-careers",
+      "img": "/images/articles/austin-butler-movies-and-career-verified.jpg",
+      "hardBlocks": [
+        "FAQ 3 < 4"
+      ],
+      "badClaims": 0
+    },
+    "attempt2": {
+      "score": 0,
+      "cat": "celebrity/profiles-careers",
+      "img": "/images/articles/austin-butler-movies-and-career-verified.jpg",
+      "hardBlocks": [
+        "a 52-word sentence (>45 — split it; unreadable)"
+      ],
+      "badClaims": 0
+    },
+    "attempt3": {
+      "score": 0,
+      "cat": "celebrity/profiles-careers",
+      "img": "/images/articles/austin-butler-movies-and-career-verified.jpg",
+      "hardBlocks": [
+        "FAQ 3 < 4",
+        "a 48-word sentence (>45 — split it; unreadable)"
+      ],
+      "badClaims": 0
+    }
+  },
+  "scorecard": {
+    "score": 0,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [
+      "deterministic block"
+    ],
+    "deterministic": {
+      "words": 681,
+      "h2s": 4,
+      "h2Questions": 3,
+      "internalLinks": 0,
+      "externalLinks": 3,
+      "hasSources": true,
+      "faqCount": 3,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 48,
+      "avgSentence": 17,
+      "flesch": 49,
+      "bannedTells": 1,
+      "kwExact": 0,
+      "hardBlocks": [
+        "FAQ 3 < 4",
+        "a 48-word sentence (>45 — split it; unreadable)"
+      ]
+    },
+    "hardBlocks": [
+      "FAQ 3 < 4",
+      "a 48-word sentence (>45 — split it; unreadable)"
+    ]
+  },
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "4+ FAQ",
+      "score ≥ 80",
+      "zero hard-blocks",
+      "infoGain ≥ 7",
+      "readability ≥ 6",
+      "humanVoice ≥ 7",
+      "phrasing ≥ 7"
+    ]
+  },
+  "ms": 582337
+}

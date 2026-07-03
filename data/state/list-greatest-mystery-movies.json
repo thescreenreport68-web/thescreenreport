@@ -1,0 +1,87 @@
+{
+  "id": "list-greatest-mystery-movies",
+  "slug": "10-greatest-mystery-movies-worth-watching-over-and-over",
+  "status": "needs_review",
+  "stages": {
+    "attempt1": {
+      "score": 88,
+      "cat": "movies/rankings-lists",
+      "img": "/images/articles/10-greatest-mystery-movies-worth-watching-over-and-over.jpg",
+      "hardBlocks": [
+        "FAQ 3 < 4"
+      ]
+    },
+    "attempt2": {
+      "score": 88,
+      "cat": "movies/rankings-lists",
+      "img": "/images/articles/10-greatest-mystery-movies-worth-watching-over-and-over.jpg",
+      "hardBlocks": [
+        "FAQ 3 < 4"
+      ]
+    }
+  },
+  "scorecard": {
+    "score": 88,
+    "subscores": {
+      "accuracy": 10,
+      "readability": 9,
+      "humanVoice": 9,
+      "phrasing": 9,
+      "curiosity": 8,
+      "structure": 9,
+      "infoGain": 9,
+      "seo": 7,
+      "faqQuality": 9,
+      "completeness": 8
+    },
+    "strengths": [
+      "Excellent reader-first framing, prioritizing engagement and analysis over pure SEO.",
+      "Strong human voice and genuine enthusiasm for the topic.",
+      "Clear, concise writing with effective subheads and paragraph structure.",
+      "Key Takeaways provide a useful summary.",
+      "FAQ section offers valuable, distinct information.",
+      "Good integration of the primary keyword 'mystery movies' naturally.",
+      "The lead effectively answers the core question.",
+      "The ranking and descriptions offer original analysis and POV."
+    ],
+    "weaknesses": [
+      "The SEO subscore is lower due to a lack of internal links and fewer than the ideal number of external sources (only 2 explicit sources listed, though Rotten Tomatoes is a meta-source).",
+      "The 'dek' is functional but could be more evocative.",
+      "While generally strong, some phrasing could be tightened slightly for maximum impact.",
+      "The curiosity score is slightly lower as the headline, while specific, is a common listicle format."
+    ],
+    "deterministic": {
+      "words": 849,
+      "h2s": 12,
+      "h2Questions": 1,
+      "internalLinks": 0,
+      "externalLinks": 3,
+      "hasSources": true,
+      "faqCount": 3,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 32,
+      "avgSentence": 17,
+      "flesch": 42,
+      "bannedTells": 1,
+      "kwExact": 1,
+      "hardBlocks": [
+        "FAQ 3 < 4"
+      ]
+    },
+    "hardBlocks": [
+      "FAQ 3 < 4"
+    ]
+  },
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "4+ FAQ",
+      "zero hard-blocks"
+    ]
+  },
+  "ms": 168425
+}

@@ -1,0 +1,109 @@
+{
+  "id": "trailer-star-wars-visions-the-ninth-jedi-trailer-release",
+  "slug": "star-wars-visions-presents-the-ninth-jedi-trailer-released",
+  "status": "needs_review",
+  "stages": {
+    "attempt1": {
+      "score": 0,
+      "cat": "tv/trailers",
+      "img": "https://image.tmdb.org/t/p/original/m2QTmJhe36uKrkQjC1MsNV7Dcqp.jpg",
+      "hardBlocks": [
+        "a 63-word run-on sentence (>55 — split it)",
+        "prompt-leak / meta-refusal phrase reached reader copy (e.g. 'not detailed in the provided facts' / 'the reference facts') — rewrite or omit"
+      ],
+      "block": [
+        "prompt-leak / meta-refusal phrase reached reader copy (e.g. 'not detailed in the provided facts' / 'the reference facts') — rewrite or omit"
+      ],
+      "fixable": [
+        "a 63-word run-on sentence (>55 — split it)"
+      ],
+      "badClaims": 0
+    },
+    "attempt2": {
+      "score": 65,
+      "cat": "tv/trailers",
+      "img": "https://image.tmdb.org/t/p/original/m2QTmJhe36uKrkQjC1MsNV7Dcqp.jpg",
+      "hardBlocks": [
+        "fabricated: reports on unreleased/unaired content - 'The Ninth Jedi' is expected to be a short-form animated episode. The series typically presents a collection of these standalone shorts, each running for a concise, story-driven duration.",
+        "verify-gate BLOCK: The episode is scheduled to premiere on Disney+ in July; The Ninth Jedi is expected to be a short-form animated "
+      ],
+      "block": [
+        "fabricated: reports on unreleased/unaired content - 'The Ninth Jedi' is expected to be a short-form animated episode. The series typically presents a collection of these standalone shorts, each running for a concise, story-driven duration.",
+        "verify-gate BLOCK: The episode is scheduled to premiere on Disney+ in July; The Ninth Jedi is expected to be a short-form animated "
+      ],
+      "fixable": [],
+      "badClaims": 0
+    }
+  },
+  "webCheck": {
+    "contradictions": 3,
+    "cut": 3
+  },
+  "scorecard": {
+    "score": 65,
+    "subscores": {
+      "accuracy": 8,
+      "readability": 7,
+      "humanVoice": 6,
+      "phrasing": 7,
+      "curiosity": 6,
+      "structure": 7,
+      "infoGain": 6,
+      "seo": 7,
+      "faqQuality": 7,
+      "completeness": 4
+    },
+    "strengths": [
+      "The article accurately reports the release of the trailer and the July 2026 premiere date, attributing it to multiple outlets.",
+      "The structure is clear with good use of subheadings and a 'Key Takeaways' section.",
+      "The FAQ section provides genuinely new and relevant information, not just rephrasing the article.",
+      "The article avoids direct trailer narration, adhering to the constraint of not having watched it.",
+      "The language is generally plain and accessible, contributing to readability."
+    ],
+    "weaknesses": [
+      "The 'dek' is generic and could be more engaging, lacking a specific hook.",
+      "The 'Why Does This Episode Matter?' section feels a bit like filler praise, using phrases like 'praised for expanding' and 'authentically Star Wars' without specific examples from 'The Ninth Jedi' or the trailer.",
+      "The article states 'The new episode is confirmed for a July 2026 release' which is accurate, but then speculates on its format ('expected to be a short-form animated episode') without a source, which is a fabrication given the constraints.",
+      "The 'completeness' is low because the article struggles to provide substantial new information beyond the trailer release and date, which is understandable given the constraints but still impacts the reader's information gain.",
+      "The Flesch score of 49 is below the target, indicating some density in the prose, despite the average sentence length being within reason.",
+      "The article uses 'upcoming installment' and 'next chapter' which are generic and could be more specific to the unique nature of 'The Ninth Jedi'."
+    ],
+    "deterministic": {
+      "words": 311,
+      "h2s": 4,
+      "h2Questions": 3,
+      "internalLinks": 0,
+      "externalLinks": 2,
+      "hasSources": true,
+      "faqCount": 3,
+      "ktCount": 3,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 53,
+      "avgSentence": 16,
+      "flesch": 49,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 6,
+      "hardBlocks": []
+    },
+    "hardBlocks": [
+      "fabricated: reports on unreleased/unaired content - 'The Ninth Jedi' is expected to be a short-form animated episode. The series typically presents a collection of these standalone shorts, each running for a concise, story-driven duration.",
+      "verify-gate BLOCK: The episode is scheduled to premiere on Disney+ in July; The Ninth Jedi is expected to be a short-form animated "
+    ]
+  },
+  "holdReason": "accuracy/grounding block: fabricated: reports on unreleased/unaired content - 'The Ninth Jedi' is expected to be a short-form animated episode. The series typically presents a collection of these standalone shorts, each running for a concise, story-driven duration.; verify-gate BLOCK: The episode is scheduled to premiere on Disney+ in July; The Ninth Jedi is expected to be a short-form animated ",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "body ≥ 400w",
+      "4+ FAQ",
+      "score ≥ 70",
+      "zero hard-blocks",
+      "humanVoice ≥ 7"
+    ]
+  },
+  "ms": 466069
+}

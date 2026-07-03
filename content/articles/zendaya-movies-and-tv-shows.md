@@ -104,7 +104,6 @@ faq:
       Streaming availability shifts by region and over time, so confirm current
       listings before movie night, as titles can rotate between services or move
       to digital rental.
-featured: true
 image: /images/articles/zendaya-movies-and-tv-shows.jpg
 keyTakeaways:
   - >-

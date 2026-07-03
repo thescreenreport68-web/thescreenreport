@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function EthicsPage() {
   return (
     <div className="container-wide max-w-prose py-12">
-      <h1 className="font-serif text-4xl font-bold text-navy">
+      <h1 className="font-serif text-4xl font-bold text-ink">
         Ethics &amp; Ownership
       </h1>
       <div className="prose prose-screen mt-6 max-w-none">

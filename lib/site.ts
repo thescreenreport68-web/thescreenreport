@@ -74,6 +74,16 @@ export type Author = {
 
 export const AUTHORS: Author[] = [
   {
+    // Real human editor for the celebrity + music desks (E-E-A-T). Bio is honest: AI-assisted
+    // research with human editorial review; rumor/gossip stories are clearly labeled and
+    // monitored. No fabricated profiles.
+    slug: "alicia-bernard",
+    name: "Alicia Bernard",
+    role: "Editor, Celebrity & Music",
+    bio: "Alicia Bernard is a freelance entertainment editor for The Screen Report's celebrity and music coverage. Stories are produced with AI-assisted research and reviewed editorially; rumor and speculation are clearly labeled as unconfirmed and updated or removed as facts develop.",
+    type: "Person",
+  },
+  {
     slug: "editorial-team",
     name: "The Screen Report Editorial Team",
     role: "Newsroom",

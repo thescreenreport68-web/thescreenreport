@@ -1,0 +1,80 @@
+{
+  "id": "news-chloe-cherry-memoir-release",
+  "slug": "euphoria-star-chloe-cherry-to-release-memoir",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": 85,
+      "cat": "celebrity/news",
+      "img": "/images/articles/euphoria-star-chloe-cherry-to-release-memoir.jpg",
+      "hardBlocks": [
+        "body 315w < 350"
+      ]
+    },
+    "attempt2": {
+      "score": 85,
+      "cat": "celebrity/news",
+      "img": "/images/articles/euphoria-star-chloe-cherry-to-release-memoir.jpg",
+      "hardBlocks": []
+    }
+  },
+  "scorecard": {
+    "score": 85,
+    "subscores": {
+      "accuracy": 10,
+      "readability": 9,
+      "humanVoice": 8,
+      "phrasing": 9,
+      "curiosity": 8,
+      "structure": 9,
+      "infoGain": 8,
+      "seo": 7,
+      "faqQuality": 8,
+      "completeness": 9
+    },
+    "strengths": [
+      "Clear and concise lead that answers the main question immediately.",
+      "Good use of subheadings to break up the text and guide the reader.",
+      "Key Takeaways section effectively summarizes the main points.",
+      "Information is well-attributed, primarily to The Hollywood Reporter.",
+      "The article avoids jargon and uses accessible language.",
+      "FAQ section provides relevant additional information.",
+      "The tone is informative and engaging without being overly casual."
+    ],
+    "weaknesses": [
+      "The 'Sources' section includes Wikipedia and HBO, which are not primary news sources for this specific announcement; The Hollywood Reporter should be the sole primary source cited for the news itself.",
+      "The SEO subscore is moderate due to the limited number of external links and the fact that the primary keyword is not naturally integrated into headings.",
+      "While the human voice is present, it could be slightly more distinctive with more specific anecdotes or direct quotes if available.",
+      "The dek is functional but could be more evocative."
+    ],
+    "deterministic": {
+      "words": 361,
+      "h2s": 4,
+      "h2Questions": 3,
+      "internalLinks": 0,
+      "externalLinks": 3,
+      "hasSources": true,
+      "faqCount": 3,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 41,
+      "avgSentence": 18,
+      "flesch": 50,
+      "bannedTells": 1,
+      "kwExact": 0,
+      "hardBlocks": []
+    },
+    "hardBlocks": []
+  },
+  "score": 85,
+  "category": "celebrity",
+  "subcategory": "news",
+  "audit": {
+    "ok": true,
+    "internalLinks": 2,
+    "failed": []
+  },
+  "ms": 144458
+}

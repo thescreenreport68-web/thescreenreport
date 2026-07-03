@@ -1,0 +1,119 @@
+{
+  "id": "news-spartacus-historical-drama-anniversary",
+  "slug": "15-years-later-this-brutal-3-part-epic-is-still-one-of-tv-s-best-histo",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": 65,
+      "cat": "tv/news",
+      "img": "https://image.tmdb.org/t/p/original/9caD0fGCrp96JTFFeGyI0CGNj7.jpg",
+      "hardBlocks": [
+        "Flesch 36 < 40 (too dense to read comfortably)",
+        "fabricated: The article discusses the 'Spartacus TV show' and its seasons, but the reference facts only provide information for the 1960 film 'Spartacus'. There is no information in the provided facts about a TV series, its seasons, or its cast changes.",
+        "verify-gate BLOCK: The Spartacus TV series is available for digital rental; The Spartacus TV show is based on the 1960 film.; The Spartacus TV series is a distinct adaptation.",
+        "accuracy 7 < 8"
+      ],
+      "block": [
+        "fabricated: The article discusses the 'Spartacus TV show' and its seasons, but the reference facts only provide information for the 1960 film 'Spartacus'. There is no information in the provided facts about a TV series, its seasons, or its cast changes.",
+        "verify-gate BLOCK: The Spartacus TV series is available for digital rental; The Spartacus TV show is based on the 1960 film.; The Spartacus TV series is a distinct adaptation.",
+        "accuracy 7 < 8"
+      ],
+      "fixable": [
+        "Flesch 36 < 40 (too dense to read comfortably)"
+      ],
+      "badClaims": 0
+    },
+    "attempt2": {
+      "score": 55,
+      "cat": "tv/news",
+      "img": "https://image.tmdb.org/t/p/original/9caD0fGCrp96JTFFeGyI0CGNj7.jpg",
+      "hardBlocks": [
+        "fabricated: 'Fifteen years after its debut, the story of Spartacus remains a must-watch series' - the article is about the 1960 film, not a TV series, and the Collider source refers to a '3-Part Epic' which is also not the 1960 film. The Collider source is about a TV series, not the film. This is a fundamental identity mismatch.",
+        "fabricated: 'The brutal three-part epic is still considered one of television's best historical dramas' - refers to a TV series, not the 1960 film.",
+        "fabricated: 'Collider's coverage highlights the enduring appeal of the Spartacus narrative, which centers on themes of insurgence and freedom. While the outlet's specific focus was on a new action-hero personality quiz, its framing underscores the lasting cultural footprint of the gladiator's tale.' - The Collider source is an action hero quiz, not an article about Spartacus. The article misrepresents the source's content and intent.",
+        "accuracy 6 < 8"
+      ],
+      "block": [
+        "fabricated: 'Fifteen years after its debut, the story of Spartacus remains a must-watch series' - the article is about the 1960 film, not a TV series, and the Collider source refers to a '3-Part Epic' which is also not the 1960 film. The Collider source is about a TV series, not the film. This is a fundamental identity mismatch.",
+        "fabricated: 'The brutal three-part epic is still considered one of television's best historical dramas' - refers to a TV series, not the 1960 film.",
+        "fabricated: 'Collider's coverage highlights the enduring appeal of the Spartacus narrative, which centers on themes of insurgence and freedom. While the outlet's specific focus was on a new action-hero personality quiz, its framing underscores the lasting cultural footprint of the gladiator's tale.' - The Collider source is an action hero quiz, not an article about Spartacus. The article misrepresents the source's content and intent.",
+        "accuracy 6 < 8"
+      ],
+      "fixable": [],
+      "badClaims": 0
+    }
+  },
+  "acceptReason": "cut-and-publish (removed 3 ungrounded/fabricated sentence(s); 288w remain)",
+  "scorecard": {
+    "score": 55,
+    "subscores": {
+      "accuracy": 6,
+      "readability": 6,
+      "humanVoice": 5,
+      "phrasing": 5,
+      "curiosity": 6,
+      "structure": 6,
+      "infoGain": 5,
+      "seo": 6,
+      "faqQuality": 6,
+      "completeness": 4
+    },
+    "strengths": [
+      "The article attempts to provide a clear, inverted-pyramid lead, though it is undermined by factual inaccuracies.",
+      "The structure includes relevant subheadings and key takeaways, which are helpful for readability.",
+      "The article correctly identifies the director, main cast, and some accurate box office/award figures for the 1960 film.",
+      "The FAQ section provides additional, accurate information about the 1960 film."
+    ],
+    "weaknesses": [
+      "The core premise of the article is built on a misinterpretation of the provided source material, confusing a TV series with the 1960 film and misrepresenting the Collider article's content.",
+      "The headline and lead are misleading due to the identity mismatch between the TV show mentioned and the film discussed.",
+      "The human voice is generic and lacks a distinct point of view, relying on filler praise like 'enduring appeal' and 'lasting cultural footprint' without specific examples.",
+      "Phrasing is often stiff and formal, lacking the natural flow of a top news desk. For example, 'The film's premise—a fight for dignity against an oppressive system—resonates as strongly now as it did over six decades ago' is a generic statement.",
+      "The article fails to deliver original framing or analysis, largely summarizing factual points about the 1960 film rather than offering a fresh perspective on its 'legacy' as implied by the headline.",
+      "The 'Completeness' score is low because the article completely misses the mark on the 'Spartacus TV show' aspect, which is the primary keyword and topic, instead focusing on the film."
+    ],
+    "deterministic": {
+      "words": 343,
+      "h2s": 4,
+      "h2Questions": 3,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": true,
+      "faqCount": 4,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": false,
+      "kwInH2": false,
+      "maxSentence": 32,
+      "avgSentence": 15,
+      "flesch": 41,
+      "bannedTells": 1,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": []
+    },
+    "hardBlocks": [
+      "fabricated: 'Fifteen years after its debut, the story of Spartacus remains a must-watch series' - the article is about the 1960 film, not a TV series, and the Collider source refers to a '3-Part Epic' which is also not the 1960 film. The Collider source is about a TV series, not the film. This is a fundamental identity mismatch.",
+      "fabricated: 'The brutal three-part epic is still considered one of television's best historical dramas' - refers to a TV series, not the 1960 film.",
+      "fabricated: 'Collider's coverage highlights the enduring appeal of the Spartacus narrative, which centers on themes of insurgence and freedom. While the outlet's specific focus was on a new action-hero personality quiz, its framing underscores the lasting cultural footprint of the gladiator's tale.' - The Collider source is an action hero quiz, not an article about Spartacus. The article misrepresents the source's content and intent.",
+      "accuracy 6 < 8"
+    ]
+  },
+  "score": 55,
+  "category": "tv",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "body ≥ 350w",
+      "external sources ≥2",
+      "score ≥ 70",
+      "zero hard-blocks",
+      "accuracy (no fabrication)",
+      "humanVoice ≥ 7",
+      "phrasing ≥ 7"
+    ]
+  },
+  "ms": 258490
+}

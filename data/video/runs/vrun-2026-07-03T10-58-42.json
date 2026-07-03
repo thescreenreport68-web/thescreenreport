@@ -1,0 +1,36 @@
+{
+  "runId": "vrun-2026-07-03T10-58-42",
+  "at": "2026-07-03T11:00:08.169Z",
+  "windowHours": 72,
+  "target": 1,
+  "candidates": 4,
+  "made": [
+    {
+      "slug": "seth-rogen-claims-huge-hollywood-megastar-quit-knocked-up-movie-over-b",
+      "title": "Seth Rogen claims huge Hollywood megastar quit Knocked Up movie over birthing scene, but who is it?",
+      "category": "celebrity",
+      "seconds": 33.721,
+      "usd": 0.01051,
+      "file": "/Users/sivajithcu/Movie News site/site/data/video/out/seth-rogen-claims-huge-hollywood-megastar-quit-knocked-up-movie-over-b.mp4"
+    }
+  ],
+  "failed": [],
+  "cost": {
+    "total": 0.0105137,
+    "byModel": {
+      "google/gemini-2.5-flash": {
+        "calls": 2,
+        "in": 4383,
+        "out": 3054,
+        "usd": 0.0089499
+      },
+      "google/gemini-2.5-flash-lite": {
+        "calls": 8,
+        "in": 15478,
+        "out": 40,
+        "usd": 0.0015638000000000002
+      }
+    },
+    "calls": 10
+  }
+}

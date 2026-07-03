@@ -1,0 +1,77 @@
+{
+  "id": "awards-2025-oscars-winners",
+  "slug": "every-winner-at-the-97th-academy-awards",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": 88,
+      "cat": "awards/winners",
+      "img": "/images/articles/every-winner-at-the-97th-academy-awards.jpg",
+      "hardBlocks": [],
+      "badClaims": 0
+    }
+  },
+  "scorecard": {
+    "score": 88,
+    "subscores": {
+      "accuracy": 10,
+      "readability": 9,
+      "humanVoice": 9,
+      "phrasing": 9,
+      "curiosity": 8,
+      "structure": 9,
+      "infoGain": 9,
+      "seo": 7,
+      "faqQuality": 8,
+      "completeness": 9
+    },
+    "strengths": [
+      "Strong, decisive lead that immediately identifies the biggest winner and key historical moments.",
+      "Excellent use of subheads to break up content and guide the reader.",
+      "Key Takeaways are concise and effectively summarize the most important information.",
+      "Human voice is present, particularly in the descriptions of Sean Baker's achievement and the historic firsts.",
+      "Accurate reporting of winners, records, and key moments based on provided facts.",
+      "Good integration of SEO elements (keyword in title, meta description implied by dek) without over-optimization.",
+      "FAQ section provides genuinely useful additional information.",
+      "Clear and accessible language, generally avoiding jargon.",
+      "The 'about' section is a nice touch for structured data."
+    ],
+    "weaknesses": [
+      "The 'What films won the most awards?' section feels slightly repetitive after the initial summary.",
+      "While generally good, some phrasing could be tightened for even greater impact (e.g., 'making its director-producer-writer-editor only the second person ever to win four awards in a single night' could be more direct).",
+      "The SEO subscore is lower because while the keyword is present, the article doesn't explicitly detail meta descriptions or internal/external links beyond the source list.",
+      "The FAQ answer about the biggest surprise win is a bit speculative ('could be considered a surprise') rather than definitive.",
+      "The mention of 'blockbuster musical *Wicked*' winning two Oscars for 'Best Visual Effects and Best Makeup and Hairstyling' is not supported by the provided reference facts, which only list 'Wicked' with two awards but do not specify which ones. This is a minor factual discrepancy based on the provided data."
+    ],
+    "deterministic": {
+      "words": 646,
+      "h2s": 4,
+      "h2Questions": 3,
+      "internalLinks": 0,
+      "externalLinks": 3,
+      "hasSources": true,
+      "faqCount": 4,
+      "ktCount": 5,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 32,
+      "avgSentence": 18,
+      "flesch": 50,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": []
+    },
+    "hardBlocks": []
+  },
+  "score": 88,
+  "category": "awards",
+  "subcategory": "winners",
+  "audit": {
+    "ok": true,
+    "internalLinks": 1,
+    "failed": []
+  },
+  "ms": 278426
+}

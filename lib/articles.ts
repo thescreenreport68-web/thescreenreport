@@ -106,6 +106,20 @@ export type Article = {
     nominees: { name: string; title?: string; isWinner?: boolean }[];
   }[];
   awardRecords?: { claim: string; detail?: string }[];
+  // ---- homepage placement signals (HOMEPAGE_PROGRAMMING_PLAN.md §1) ----
+  trendScore?: number; // FIND priority at publish (0-100ish)
+  signals?: {
+    recency?: number;
+    corroboration?: number;
+    status?: number;
+    type?: number;
+    pop?: number;
+    breakout?: number;
+  };
+  eventSlug?: string; // event identity — homepage dedup key
+  eventType?: string; // death | casting | trailer | ... (TIER_S detection)
+  outletCount?: number; // distinct outlets at publish
+  pinnedUntil?: string; // ISO — manual hero pin expiry (with featured: true)
   // ---- PLAYBOOK PR1 fields (per-form; all optional, render in PR2 UI) ----
   storyStatus?: string; // news: CONFIRMED | DEVELOPING | RUMOR | HOLD (from FIND verify)
   sensitivity?: string; // celeb/news: none | split | legal | death | allegation | health
@@ -194,7 +208,8 @@ export function getAllArticles(): Article[] {
       subcategory: data.subcategory,
       author: data.author,
       date: data.date,
-      updated: data.updated,
+      // dateModified is what the pipeline/recheck actually writes; `updated` kept for manual edits
+      updated: data.updated ?? data.dateModified,
       dek: data.dek ?? "",
       metaTitle: data.metaTitle ?? data.title,
       metaDescription: data.metaDescription ?? data.dek ?? "",
@@ -239,6 +254,13 @@ export function getAllArticles(): Article[] {
       awardShow: data.awardShow,
       awardCategories: data.awardCategories ?? [],
       awardRecords: data.awardRecords ?? [],
+      // homepage placement signals
+      trendScore: data.trendScore,
+      signals: data.signals,
+      eventSlug: data.eventSlug ?? data.provenance?.eventSlug,
+      eventType: data.eventType ?? data.provenance?.eventType,
+      outletCount: data.outletCount,
+      pinnedUntil: data.pinnedUntil,
       // playbook PR1 fields
       storyStatus: data.storyStatus,
       sensitivity: data.sensitivity,

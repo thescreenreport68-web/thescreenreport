@@ -1,22 +1,14 @@
-// Answer-first "Key Takeaways" box — App. P gate item 5. Rendered near the top of
-// the article so the reader (and AI Overviews) get the payoff in scannable bullets.
+// Answer-first "Key Takeaways" — the payoff in scannable bullets near the top.
+// Hairline-framed on white with red square markers (stroke grammar, spec §F3).
 export default function KeyTakeaways({ items }: { items?: string[] }) {
   if (!items?.length) return null;
   return (
-    <aside className="my-7 border-l-4 border-breaking bg-mist/40 px-5 py-4">
-      <h2 className="font-sans text-xs font-bold uppercase tracking-[0.12em] text-breaking">
-        Key Takeaways
-      </h2>
-      <ul className="mt-3 space-y-2">
+    <aside className="my-7 border-y-2 border-ink py-4">
+      <h2 className="kicker">Key Takeaways</h2>
+      <ul className="mt-3 space-y-2.5">
         {items.map((t, i) => (
-          <li
-            key={i}
-            className="flex gap-2.5 font-body text-[1.05rem] leading-snug text-navy"
-          >
-            <span
-              aria-hidden
-              className="mt-[0.5em] h-1.5 w-1.5 shrink-0 rounded-full bg-breaking"
-            />
+          <li key={i} className="flex gap-3 font-body text-[1.05rem] leading-snug text-ink">
+            <span aria-hidden className="mt-[0.45em] h-1.5 w-1.5 shrink-0 bg-red" />
             <span>{t}</span>
           </li>
         ))}

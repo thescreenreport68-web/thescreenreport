@@ -1,0 +1,117 @@
+{
+  "id": "news-chris-brown-housekeeper-dog-mauling-payout",
+  "slug": "chris-brown-must-pay-housekeeper-13-million-over-dog-mauling-attack",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": 0,
+      "cat": "celebrity/news",
+      "img": "/images/articles/chris-brown-must-pay-housekeeper-13-million-over-dog-mauling-attack.png",
+      "hardBlocks": [
+        "prompt-leak / meta-refusal phrase reached reader copy (e.g. 'not detailed in the provided facts' / 'the reference facts') — rewrite or omit"
+      ],
+      "block": [
+        "prompt-leak / meta-refusal phrase reached reader copy (e.g. 'not detailed in the provided facts' / 'the reference facts') — rewrite or omit"
+      ],
+      "fixable": [],
+      "badClaims": 0
+    },
+    "attempt2": {
+      "score": 82,
+      "cat": "celebrity/news",
+      "img": "/images/articles/chris-brown-must-pay-housekeeper-13-million-over-dog-mauling-attack.png",
+      "hardBlocks": [
+        "primary keyword not in title"
+      ],
+      "block": [],
+      "fixable": [
+        "primary keyword not in title"
+      ],
+      "badClaims": 0
+    },
+    "attempt3": {
+      "score": 85,
+      "cat": "celebrity/news",
+      "img": "/images/articles/chris-brown-must-pay-housekeeper-13-million-over-dog-mauling-attack.png",
+      "hardBlocks": [
+        "primary keyword not in title",
+        "verify-gate CUT: 1 claim(s) not in the gathered sources — Brown disputed the extent of Avila’s injuries"
+      ],
+      "block": [
+        "verify-gate CUT: 1 claim(s) not in the gathered sources — Brown disputed the extent of Avila’s injuries"
+      ],
+      "fixable": [
+        "primary keyword not in title"
+      ],
+      "badClaims": 0
+    }
+  },
+  "acceptReason": "terminal-accept (verified accurate, score 85, 1 qualitative stray(s) accepted)",
+  "scorecard": {
+    "score": 85,
+    "subscores": {
+      "accuracy": 10,
+      "readability": 9,
+      "humanVoice": 9,
+      "phrasing": 9,
+      "curiosity": 9,
+      "structure": 9,
+      "infoGain": 8,
+      "seo": 7,
+      "faqQuality": 9,
+      "completeness": 8
+    },
+    "strengths": [
+      "All claims are accurately sourced and attributed to the provided reference facts.",
+      "The article is highly readable with short paragraphs and clear language, making it easy for a busy fan to consume.",
+      "The human voice is strong, incorporating specific quotes and details from the testimony that add engagement and a sense of the unfolding drama.",
+      "Phrasing is fluent and professional, avoiding forced keywords or awkward constructions.",
+      "The headline and lead deliver the core information quickly and effectively, satisfying curiosity upfront.",
+      "The structure is clear, using an inverted pyramid for the lead and helpful subheadings to guide the reader.",
+      "The FAQ section adds genuinely new and relevant information, enhancing the overall value.",
+      "The article maintains a tight, news-standard focus, reporting accurately without unnecessary fluff."
+    ],
+    "weaknesses": [
+      "While the SEO is adequate, the internal linking and external sourcing (beyond the primary news sources) could be slightly more robust for a longer-form piece, though acceptable for a short news article.",
+      "The 'Information Gain' is good for a news piece, but it primarily summarizes the provided sources without offering a unique analytical angle, which is expected for a short news report but could be a weakness if judged against a feature article."
+    ],
+    "deterministic": {
+      "words": 518,
+      "h2s": 3,
+      "h2Questions": 3,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 3,
+      "ktCount": 3,
+      "kwInTitle": false,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 36,
+      "avgSentence": 15,
+      "flesch": 62,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": [
+        "primary keyword not in title"
+      ]
+    },
+    "hardBlocks": [
+      "primary keyword not in title",
+      "verify-gate CUT: 1 claim(s) not in the gathered sources — Brown disputed the extent of Avila’s injuries"
+    ]
+  },
+  "score": 85,
+  "category": "celebrity",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "external sources ≥2",
+      "zero hard-blocks"
+    ]
+  },
+  "ms": 274407
+}

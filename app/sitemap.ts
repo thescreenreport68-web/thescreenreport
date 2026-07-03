@@ -1,6 +1,11 @@
 import type { MetadataRoute } from "next";
 import { getAllArticles } from "@/lib/articles";
-import { CATEGORIES, AUTHORS, SITE } from "@/lib/site";
+import {
+  CATEGORIES,
+  AUTHORS,
+  SITE,
+  getSubcategoriesForCategory,
+} from "@/lib/site";
 
 export const dynamic = "force-static";
 
@@ -10,6 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const staticPages = [
     "",
+    "news",
     "about",
     "editorial-standards",
     "corrections",
@@ -24,6 +30,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: now,
   }));
 
+  const subcats = CATEGORIES.flatMap((c) =>
+    getSubcategoriesForCategory(c.slug).map((s) => ({
+      url: `${base}/${c.slug}/${s.slug}/`,
+      lastModified: now,
+    }))
+  );
+
   const authors = AUTHORS.map((a) => ({
     url: `${base}/author/${a.slug}/`,
     lastModified: now,
@@ -34,5 +47,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(a.updated ?? a.date),
   }));
 
-  return [...staticPages, ...cats, ...authors, ...articles];
+  return [...staticPages, ...cats, ...subcats, ...authors, ...articles];
 }

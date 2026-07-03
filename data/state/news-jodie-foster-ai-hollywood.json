@@ -1,0 +1,121 @@
+{
+  "id": "news-jodie-foster-ai-hollywood",
+  "slug": "jodie-foster-thinks-ai-is-already-present-in-hollywood",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": 75,
+      "cat": "celebrity/news",
+      "img": "https://www.slashfilm.com/img/gallery/the-silence-of-the-lambs-ending-explained-a-game-of-cat-and-mouse/l-intro-1782486910.jpg",
+      "hardBlocks": [
+        "a 61-word run-on sentence (>55 — split it)",
+        "fabricated: The movie won the Oscar for Best Sound and was nominated for Best Picture, among other categories. It earned over $634 million globally."
+      ],
+      "block": [
+        "fabricated: The movie won the Oscar for Best Sound and was nominated for Best Picture, among other categories. It earned over $634 million globally."
+      ],
+      "fixable": [
+        "a 61-word run-on sentence (>55 — split it)"
+      ],
+      "badClaims": 0
+    },
+    "attempt2": {
+      "score": 75,
+      "cat": "celebrity/news",
+      "img": "https://www.slashfilm.com/img/gallery/the-silence-of-the-lambs-ending-explained-a-game-of-cat-and-mouse/l-intro-1782486910.jpg",
+      "hardBlocks": [
+        "a 59-word run-on sentence (>55 — split it)",
+        "fabricated: The 2025 film F1 is referred to as having won an Oscar for Best Sound, and nominations for Best Picture, Best Film Editing and Best Visual Effects, and earning more than $634M globally. The reference facts do not contain any information about a film titled F1, its awards, or box office performance. This appears to be a misattribution or fabrication based on the provided source material.",
+        "verify-gate CUT: 1 claim(s) not in the gathered sources — Jodie Foster is cautiously optimistic about AI in Holly"
+      ],
+      "block": [
+        "fabricated: The 2025 film F1 is referred to as having won an Oscar for Best Sound, and nominations for Best Picture, Best Film Editing and Best Visual Effects, and earning more than $634M globally. The reference facts do not contain any information about a film titled F1, its awards, or box office performance. This appears to be a misattribution or fabrication based on the provided source material.",
+        "verify-gate CUT: 1 claim(s) not in the gathered sources — Jodie Foster is cautiously optimistic about AI in Holly"
+      ],
+      "fixable": [
+        "a 59-word run-on sentence (>55 — split it)"
+      ],
+      "badClaims": 0
+    },
+    "attempt3": {
+      "score": 75,
+      "cat": "celebrity/news",
+      "img": "https://www.slashfilm.com/img/gallery/the-silence-of-the-lambs-ending-explained-a-game-of-cat-and-mouse/l-intro-1782486910.jpg",
+      "hardBlocks": [],
+      "block": [],
+      "fixable": [],
+      "badClaims": 0
+    }
+  },
+  "acceptReason": "terminal-accept (verified accurate, score 75, 0 quality nit(s))",
+  "webCheck": {
+    "contradictions": 3,
+    "corrected": true
+  },
+  "scorecard": {
+    "score": 78,
+    "subscores": {
+      "accuracy": 8,
+      "readability": 8,
+      "humanVoice": 8,
+      "phrasing": 8,
+      "curiosity": 7,
+      "structure": 8,
+      "infoGain": 7,
+      "seo": 7,
+      "faqQuality": 8,
+      "completeness": 7
+    },
+    "strengths": [
+      "The article effectively uses direct quotes to convey Jodie Foster's perspective, enhancing human voice and engagement.",
+      "The structure is clear with an answer-first lead and relevant subheadings that guide the reader.",
+      "Key Takeaways provide a concise summary of the article's main points.",
+      "The article maintains a professional and news-like tone, avoiding overly casual or stiff language.",
+      "The FAQ section genuinely adds new information by rephrasing and summarizing key points from the body."
+    ],
+    "weaknesses": [
+      "The article states 'F1' earned over $634 million globally and won an Oscar for Best Sound, but these specific claims about 'F1' are not verifiable in the provided reference facts, making them ungrounded.",
+      "The headline is a bit generic and could be more specific to Foster's unique take on AI's current presence.",
+      "While the article is short news, the 'Information Gain' is somewhat limited as it primarily reports Foster's statements without much additional context or analysis beyond the immediate news.",
+      "The article attributes the core claim about 'F1' to Deadline, but then presents the box office and award information for 'F1' as fact without further attribution or verification, which is problematic given the lack of supporting reference facts."
+    ],
+    "deterministic": {
+      "words": 485,
+      "h2s": 4,
+      "h2Questions": 3,
+      "internalLinks": 0,
+      "externalLinks": 1,
+      "hasSources": true,
+      "faqCount": 3,
+      "ktCount": 3,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": true,
+      "maxSentence": 75,
+      "avgSentence": 21,
+      "flesch": 49,
+      "bannedTells": 9,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": [
+        "a 75-word run-on sentence (>55 — split it)"
+      ]
+    },
+    "hardBlocks": [
+      "a 75-word run-on sentence (>55 — split it)",
+      "fabricated: 'F1' was released in 2025, but the source reporting states 'last year's Joseph Kosinski-helmed, Ehren Kruger-penned Brad Pitt starrer F1' which implies a 2025 release if the current date is 2026. However, the reference facts do not contain a film titled 'F1' with a 2025 release date, nor any box office or award information for such a film. The source reporting itself is the only place this film is mentioned, and it's presented as a quote from Foster, not a verified fact. The article presents it as a factual 2025 release with box office and awards, which is ungrounded by the reference facts."
+    ]
+  },
+  "score": 78,
+  "category": "celebrity",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "external sources ≥2",
+      "zero hard-blocks"
+    ]
+  },
+  "ms": 753127
+}

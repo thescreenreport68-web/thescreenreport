@@ -16,7 +16,7 @@ export async function omdb(imdbId) {
   const key = process.env.OMDB_API_KEY;
   if (!key) return null;
   try {
-    const r = await fetch(`https://www.omdbapi.com/?i=${imdbId}&apikey=${key}&tomatoes=true`);
+    const r = await fetch(`https://www.omdbapi.com/?i=${imdbId}&apikey=${key}&tomatoes=true`, { signal: AbortSignal.timeout(10000) });
     if (!r.ok) { CACHE.set(imdbId, null); return null; }
     const j = await r.json();
     if (j.Response === "False") { CACHE.set(imdbId, null); return null; }

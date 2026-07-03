@@ -5,11 +5,17 @@
 // velocity + Wikipedia-pageview spike signals slot in here later (they only raise accuracy, not shape).
 
 // App-S Signal D — article-type weight (static for v1; the learning loop auto-tunes it later).
+// Ordered by AUDIENCE ENGAGEMENT: what a general Hollywood-news reader actually clicks. High = human-interest
+// (deaths, scandals, breakups); mid = title/production news (box office, casting, trailers); LOW = industry
+// inside-baseball (festival panels, dealmaking, financing) — accurate but dull, so it ranks below real news and
+// only surfaces when nothing better trends (owner 2026-07-01: prioritize engaging trending news).
 const TYPE_WEIGHT = {
   death: 1.0, health: 0.95, arrest: 0.95, legal: 0.9, lawsuit: 0.9, scandal: 0.9,
   divorce: 0.8, breakup: 0.8, marriage: 0.8, pregnancy: 0.8, birth: 0.75,
   boxoffice: 0.7, award: 0.7, breakout: 0.7, casting: 0.65, trailer: 0.65, renewal: 0.55, cancellation: 0.6,
   reaction: 0.55, interview: 0.55, review: 0.5, announcement: 0.5, other: 0.4,
+  // industry inside-baseball — low engagement for a general audience; keep well under the 0.4 default
+  festival: 0.3, industry: 0.3, panel: 0.28, dealmaking: 0.28, financing: 0.28, promo: 0.35, market: 0.3,
 };
 const STATUS_WEIGHT = { CONFIRMED: 25, DEVELOPING: 18, EVERGREEN: 14, RUMOR: 8, QUEUE: 4, CONFIRMING: 3, "EDITORIAL-HOLD": 1 };
 

@@ -46,15 +46,7 @@ export async function deezerExists(name) {
   return d ? d.nbFan : 0;
 }
 
-// Grounding block the writer uses for a music-profile (catalog/popularity facts ONLY — never a chart/cert claim).
-export function deezerBlock(d) {
-  if (!d) return "";
-  const L = [`${d.name} — MUSIC CATALOG FACTS (Deezer, verified — use ONLY these; Deezer gives catalog + popularity, NOT chart positions/certifications/awards, so never state a chart peak or certification from here — stay qualitative on those until a charted source is provided):`];
-  if (d.nbFan) L.push(`Deezer followers: ${d.nbFan.toLocaleString("en-US")} (a popularity signal, not a chart stat)`);
-  if (d.discography.length) L.push(`Discography (album — year): ${d.discography.map((a) => `${a.title}${a.year ? ` (${a.year})` : ""}`).join("; ")}`);
-  if (d.topTracks.length) L.push(`Most-played tracks (Deezer): ${d.topTracks.join(", ")}`);
-  return L.join("\n");
-}
+// (deezerBlock was removed 2026-07-03: zero callers — musicFactsBlock below is the live formatter.)
 
 // ════════════════════════════════════════════════════════════════════════════════════════════════════════
 // PR6 — FULL music grounding (NON-Wikimedia): MusicBrainz discography + Last.fm popularity/tags + Discogs
