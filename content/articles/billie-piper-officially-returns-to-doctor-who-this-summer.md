@@ -70,12 +70,12 @@ provenance:
   primaryEntity: Billie Piper
   eventType: announcement
   sensitivity: normal
-  status: DEVELOPING
+  status: CONFIRMED
   attribution: ScreenRant
   outlets:
     - ScreenRant
   publishedAt: '2026-07-02T14:16:19.687Z'
-dateModified: '2026-07-02T14:16:19.687Z'
+dateModified: '2026-07-03T12:19:33.798Z'
 storyStatus: DEVELOPING
 newsType: general
 pullQuote:
@@ -103,7 +103,6 @@ seriesStatus:
   window: ''
   castAdded: []
 ---
-
 Billie Piper is set to reprise her iconic role as Rose Tyler in a new Doctor Who audio project releasing this summer, according to ScreenRant. While the long-running TV series is on an indefinite hiatus, Piper will return alongside Christopher Eccleston's Ninth Doctor in *The Ninth Doctor Adventures: Dark Tides*.
 
 Big Finish Productions has announced the audio drama is available for preorder ahead of its scheduled August release. This marks Piper's first return to the franchise in an audio format since *Rose Tyler: The Dimension Cannon* and her 2025 appearance in the Doctor Who season 15 finale.

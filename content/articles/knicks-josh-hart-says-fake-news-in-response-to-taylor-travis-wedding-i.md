@@ -70,7 +70,7 @@ aiDisclosure: >-
   Rumors and speculation are labeled as unconfirmed and updated or removed as
   facts develop.
 sensitivity: normal
-dateModified: '2026-07-03T05:34:09.922Z'
+dateModified: '2026-07-03T12:19:39.706Z'
 provenance:
   primaryEntity: Josh Hart
   claim: Josh Hart denies a report that he was invited to Taylor Travis's wedding.
@@ -87,7 +87,13 @@ provenance:
   corroborationCount: 2
   verifyDegraded: false
   publishedAt: '2026-07-03T05:34:09.922Z'
+retracted: false
+correction: >-
+  contradiction found: "Josh Hart Claims 'Fake News' on Knicks' Starting Lineup
+  Being Invited to Taylor Swift and Travis Kelce's Wedding - People.com"
+robots: noindex
 ---
+> **Correction (2026-07-03):** contradiction found: "Josh Hart Claims 'Fake News' on Knicks' Starting Lineup Being Invited to Taylor Swift and Travis Kelce's Wedding - People.com"
 
 So much for that plus-one. New York Knicks star Josh Hart is publicly shooting down a report that he and his teammates are on the guest list for Taylor Swift and Travis Kelce's wedding.
 

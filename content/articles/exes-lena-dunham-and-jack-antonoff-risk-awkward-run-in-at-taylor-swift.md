@@ -77,7 +77,7 @@ aiDisclosure: >-
   Rumors and speculation are labeled as unconfirmed and updated or removed as
   facts develop.
 sensitivity: normal
-dateModified: '2026-07-03T03:58:38.755Z'
+dateModified: '2026-07-03T12:19:38.120Z'
 provenance:
   primaryEntity: Lena Dunham
   claim: >-
@@ -87,7 +87,7 @@ provenance:
   severity: NORMAL
   sensitivity: normal
   monitor: false
-  status: DEVELOPING
+  status: CONFIRMED
   attribution: Page Six
   outlets:
     - Page Six
@@ -95,7 +95,6 @@ provenance:
   verifyDegraded: false
   publishedAt: '2026-07-03T03:58:38.755Z'
 ---
-
 Could a pair of famous exes cross paths at the wedding of the year?
 
 The trigger came Thursday evening.

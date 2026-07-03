@@ -82,7 +82,7 @@ aiDisclosure: >-
   Rumors and speculation are labeled as unconfirmed and updated or removed as
   facts develop.
 sensitivity: normal
-dateModified: '2026-07-02T02:14:06.709Z'
+dateModified: '2026-07-03T12:19:35.485Z'
 provenance:
   primaryEntity: Collin Gosselin
   claim: >-
@@ -92,7 +92,7 @@ provenance:
   severity: NORMAL
   sensitivity: normal
   monitor: false
-  status: DEVELOPING
+  status: CONFIRMED
   attribution: Page Six
   outlets:
     - Page Six
@@ -103,10 +103,9 @@ provenance:
   verifyDegraded: true
   publishedAt: '2026-07-02T02:14:06.709Z'
 ---
-
 What happens when a child star stops wanting to be a star? For Collin Gosselin, he believes it led to a two-year stay in a behavioral facility.
 
-According to Page Six, Collin revealed in a 2025 interview that he thinks his mother, Kate Gosselin, sent him away at age 12 because he didn't want to be on camera. "Even as a 12-year-old, before I was sent away, I could start to consider both sides of things," Collin told the US Sun. He said he was "stubborn enough to question my mom" about everything.
+ge Six, Collin revealed in a 2025 interview that he thinks his mother, Kate Gosselin, sent him away at age 12 because he didn't want to be on camera. "Even as a 12-year-old, before I was sent away, I could start to consider both sides of things," Collin told the US Sun. He said he was "stubborn enough to question my mom" about everything.
 
 That questioning, he claims, came before "the rebellion of me not wanting to be on camera and be a part of her circus," referring to the show "Kate Plus 8." He added, "That questioning led to me later not wanting to be on camera, and that really killed her."
 
@@ -118,8 +117,8 @@ He said his mother visited him only "one time for probably about 20 minutes," an
 
 The revelations come as Collin prepares to release his memoir, *In the Shadow of Eight: Surviving the Reality of My Childhood*. He told Us Weekly the book is "about truth, survival, resilience and finding my voice after years of being silenced."
 
-Ahead of the book's release, Collin has been active on social media. He reposted a report claiming Kate was "spiraling" about the book's contents, adding a fan's comment: "What's done in darkness will always come to light."
+Ahead of the book's release, Collin has been active on social media. He reposted claiming Kate was "spiraling" about the book's contents, adding a fan's comment: "What's done in darkness will always come to light."
 
 He has also renewed a public challenge for Kate to take a lie detector test with him. In a new YouTube interview, Collin issued a "formal invitation" to ask questions about past allegations, including that Kate zip-tied him as a child. "For me, I have nothing to hide," he said. He claimed on Instagram that this invitation from a year ago has gone unanswered, saying, "I've been stood up by my mom … again."
 
-Kate has not publicly addressed Collin's book announcement or the recent lie detector challenge. According to Starcasm, her attorney has said he did not believe she had done anything to "intentionally harm" Collin.
+Kate has not publicly addressed Collin's book announcement or the recent lie detector challenge. arcasm, her attorney has said he did not believe she had done anything to "intentionally harm" Collin.

@@ -1,0 +1,105 @@
+{
+  "id": "music-news-mr-eazi-dre-skull-mixtape",
+  "slug": "mr-eazi-dre-skull-preview-new-dancehall-inspired-mixtape-with-sizzling",
+  "status": "needs_review",
+  "stages": {
+    "attempt1": {
+      "score": 68,
+      "cat": "music/news",
+      "hardBlocks": [
+        "fabricated/altered quote: \"a track that reunites Dre Skull with Vybz Kartel, \"; \"which means to show off. Mr Eazi framed the projec\" — use the exact source words or drop the quotation marks"
+      ],
+      "block": [
+        "fabricated/altered quote: \"a track that reunites Dre Skull with Vybz Kartel, \"; \"which means to show off. Mr Eazi framed the projec\" — use the exact source words or drop the quotation marks"
+      ],
+      "fixable": [],
+      "badClaims": 0
+    },
+    "attempt2": {
+      "score": 55,
+      "cat": "music/news",
+      "hardBlocks": [
+        "fabricated/altered quote: \"a track featuring Vybz Kartel. The producer descri\"; \"which means showing off. Mr Eazi has framed the pr\" — use the exact source words or drop the quotation marks"
+      ],
+      "block": [
+        "fabricated/altered quote: \"a track featuring Vybz Kartel. The producer descri\"; \"which means showing off. Mr Eazi has framed the pr\" — use the exact source words or drop the quotation marks"
+      ],
+      "fixable": [],
+      "badClaims": 0
+    }
+  },
+  "editorial": {
+    "status": "official",
+    "entity": "Yard & Yanga",
+    "work": null,
+    "outlet": "billboard.com"
+  },
+  "scorecard": {
+    "score": 55,
+    "subscores": {
+      "accuracy": 7,
+      "readability": 6,
+      "humanVoice": 5,
+      "phrasing": 5,
+      "curiosity": 6,
+      "structure": 7,
+      "infoGain": 5,
+      "seo": 6,
+      "faqQuality": 7,
+      "completeness": 5
+    },
+    "strengths": [
+      "The headline is clear and makes a specific claim.",
+      "The lead delivers the core information quickly.",
+      "The use of subheadings improves navigability.",
+      "The FAQ section provides genuinely new and useful information.",
+      "The article correctly attributes information to Billboard.",
+      "The 'Key Takeaways' are concise and informative."
+    ],
+    "weaknesses": [
+      "The article fabricates a quote from the 'Jamaica Observer' that was not in the provided source material, severely impacting accuracy.",
+      "The Flesch score is likely below target, indicating dense prose.",
+      "The article uses generic AI tells like 'culmination of a years-long creative partnership' and 'natural extension of sessions' without specific detail.",
+      "The phrasing is often stiff and lacks a natural flow, with some awkward transitions.",
+      "The article repeats the full names 'Mr Eazi' and 'Dre Skull' frequently where pronouns would suffice, making it clunky.",
+      "The 'Information Gain' is limited; much of the article rehashes the provided source material without significant new analysis or framing.",
+      "The article invents a release label ('Mixpak and emPawa Africa') in the dek that was not explicitly stated as the full release label in the source material, only that the mixtape 'will be released via Dre Skull's Mixpak Records and Mr Eazi's emPawa Africa label.'",
+      "The article invents previous mixtape titles for Mr Eazi ('About to Blow' and 'Life Is Eazi' volumes) that were not in the provided authoritative music facts, which only listed studio albums and recent releases."
+    ],
+    "deterministic": {
+      "words": 418,
+      "h2s": 4,
+      "h2Questions": 3,
+      "internalLinks": 0,
+      "externalLinks": 2,
+      "hasSources": true,
+      "faqCount": 3,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 39,
+      "avgSentence": 22,
+      "flesch": 50,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": []
+    },
+    "hardBlocks": [
+      "fabricated/altered quote: \"a track featuring Vybz Kartel. The producer descri\"; \"which means showing off. Mr Eazi has framed the pr\" — use the exact source words or drop the quotation marks"
+    ]
+  },
+  "holdReason": "accuracy/grounding block: fabricated/altered quote: \"a track featuring Vybz Kartel. The producer descri\"; \"which means showing off. Mr Eazi has framed the pr\" — use the exact source words or drop the quotation marks",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "≥1200px legal image",
+      "credit",
+      "score ≥ 70",
+      "zero hard-blocks"
+    ]
+  },
+  "ms": 139158
+}

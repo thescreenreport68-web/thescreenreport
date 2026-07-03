@@ -61,12 +61,12 @@ provenance:
   primaryEntity: James Van Der Beek
   eventType: death
   sensitivity: high
-  status: DEVELOPING
+  status: CONFIRMED
   attribution: THR
   outlets:
     - THR
   publishedAt: '2026-07-03T03:28:20.804Z'
-dateModified: '2026-07-03T03:28:20.804Z'
+dateModified: '2026-07-03T12:19:37.458Z'
 storyStatus: DEVELOPING
 sensitivity: high
 newsType: general
@@ -87,10 +87,9 @@ keyPoints:
     His costars remembered him for his deep love for his family and his powerful
     onscreen presence.
 ---
-
 The Prime Video series *Elle* paid tribute to the late James Van Der Beek following his final onscreen performance. The actor, who died in February 2026, appears in the *Legally Blonde* prequel as school superintendent Dean Wilson. A title card reading “In loving memory of James Van Der Beek” appears at the end of the episode in which his character first appears.
 
-According to The Hollywood Reporter, the dedication appears after the third episode, titled “You’re Not the Girl I Thought You Were.” In the series, Van Der Beek’s character is running for mayor and befriends Elle’s mother, Eva Woods, played by June Diane Raphael. His storyline concludes with his arrest after Elle exposes an extortion scheme.
+e Hollywood Reporter, the dedication appears after the third episode, titled “You’re Not the Girl I Thought You Were.” In the series, Van Der Beek’s character is running for mayor and befriends Elle’s mother, Eva Woods, played by June Diane Raphael. His storyline concludes with his arrest after Elle exposes an extortion scheme.
 
 ## What did his costars say about him?
 

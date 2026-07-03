@@ -60,12 +60,12 @@ provenance:
   primaryEntity: The Passion of the Christ
   eventType: announcement
   sensitivity: normal
-  status: DEVELOPING
+  status: CONFIRMED
   attribution: The Washington Post
   outlets:
     - The Washington Post
   publishedAt: '2026-07-02T20:06:57.676Z'
-dateModified: '2026-07-02T20:06:57.676Z'
+dateModified: '2026-07-03T12:19:42.153Z'
 storyStatus: DEVELOPING
 infoCard:
   director: ''
@@ -85,7 +85,6 @@ keyPoints:
     No official confirmation, dates, or specific details about the re-release
     have been announced yet.
 ---
-
 The film, which sparked intense debate upon its initial release, could be headed back to the big screen for audiences to experience anew.
 
 This news arrives as part of a broader cultural moment where classic and impactful films are finding new life in cinemas. The potential re-release would reintroduce Gibson's visceral depiction of the final hours of Jesus Christ to a new generation of moviegoers, as well as those who saw it the first time.

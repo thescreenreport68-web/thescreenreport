@@ -62,12 +62,12 @@ provenance:
   primaryEntity: Spartacus
   eventType: other
   sensitivity: normal
-  status: DEVELOPING
+  status: CONFIRMED
   attribution: Collider
   outlets:
     - Collider
   publishedAt: '2026-07-03T02:05:27.838Z'
-dateModified: '2026-07-03T02:05:27.838Z'
+dateModified: '2026-07-03T12:19:32.335Z'
 storyStatus: DEVELOPING
 newsType: general
 pullQuote:
@@ -101,7 +101,6 @@ seriesStatus:
   window: ''
   castAdded: []
 ---
-
 While the outlet's specific focus was on a new action-hero personality quiz, its framing underscores the lasting cultural footprint of the gladiator's tale.
 
 ## What is the original Spartacus film about?
@@ -110,7 +109,7 @@ The 1960 film 'Spartacus,' directed by Stanley Kubrick, follows the rebellious T
 
 ## How was the original Spartacus film received?
 
-The film was a major critical and commercial success. According to Rotten Tomatoes, it holds a 93% approval rating from critics. It also won four Academy Awards out of 12 total wins and 11 nominations. With a reported budget of $12 million, it earned approximately $60 million at the worldwide box office.
+The film was a major critical and commercial success. tten Tomatoes, it holds a 93% approval rating from critics. It also won four Academy Awards out of 12 total wins and 11 nominations. With a reported budget of $12 million, it earned approximately $60 million at the worldwide box office.
 
 The cast is a legendary ensemble, featuring Kirk Douglas in the title role. Laurence Olivier portrays the Roman general Marcus Licinius Crassus, with Jean Simmons as Varinia. The supporting cast includes Charles Laughton, Peter Ustinov, and Tony Curtis.
 

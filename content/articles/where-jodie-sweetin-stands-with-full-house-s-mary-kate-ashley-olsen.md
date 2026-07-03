@@ -72,7 +72,7 @@ aiDisclosure: >-
   Rumors and speculation are labeled as unconfirmed and updated or removed as
   facts develop.
 sensitivity: normal
-dateModified: '2026-07-02T02:16:06.709Z'
+dateModified: '2026-07-03T12:19:45.054Z'
 provenance:
   primaryEntity: Jodie Sweetin
   claim: >-
@@ -82,7 +82,7 @@ provenance:
   severity: NORMAL
   sensitivity: normal
   monitor: false
-  status: DEVELOPING
+  status: CONFIRMED
   attribution: E! News
   outlets:
     - E! News
@@ -90,7 +90,6 @@ provenance:
   verifyDegraded: false
   publishedAt: '2026-07-02T02:16:06.709Z'
 ---
-
 So, what's the real tea on the Tanner family reunion? According to E! News, Jodie Sweetin has set the record straight on where she and the 'Full House' cast stand with former co-stars Mary-Kate and Ashley Olsen.
 
 Sweetin explained on the 'Taboo’s Comics and Kicks' podcast that the bond remains strong, despite the twins famously opting out of the Netflix revival. "Everyone's on good terms with them," she said. She offered insight into why the sisters, who played Michelle Tanner, chose a different path.

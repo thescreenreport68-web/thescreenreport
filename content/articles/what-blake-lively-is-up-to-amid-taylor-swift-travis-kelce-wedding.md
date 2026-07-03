@@ -83,7 +83,7 @@ aiDisclosure: >-
   Rumors and speculation are labeled as unconfirmed and updated or removed as
   facts develop.
 sensitivity: normal
-dateModified: '2026-07-03T02:22:39.035Z'
+dateModified: '2026-07-03T12:19:44.429Z'
 provenance:
   primaryEntity: Blake Lively
   claim: >-
@@ -93,7 +93,7 @@ provenance:
   severity: NORMAL
   sensitivity: normal
   monitor: false
-  status: DEVELOPING
+  status: CONFIRMED
   attribution: E! News
   outlets:
     - E! News
@@ -101,7 +101,6 @@ provenance:
   verifyDegraded: true
   publishedAt: '2026-07-03T02:22:39.035Z'
 ---
-
 While Taylor Swift and Travis Kelce's inner circle gathered in New York City for an apparent rehearsal dinner, Blake Lively was more than 200 miles away. According to E! News, the *Gossip Girl* alum and her husband Ryan Reynolds stepped out at a horse show in Lake Placid, N.Y., on July 2.
 
 Photos published by TMZ show Lively in a blue tank top and denim shorts, with Reynolds in a white T-shirt and straw hat. The outlet reported the couple was there for their 6-year-old daughter, Betty, who placed second in a riding competition.

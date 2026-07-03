@@ -63,12 +63,12 @@ provenance:
   primaryEntity: The Comebacker
   eventType: announcement
   sensitivity: high
-  status: DEVELOPING
+  status: CONFIRMED
   attribution: Deadline
   outlets:
     - Deadline
   publishedAt: '2026-07-02T14:34:33.940Z'
-dateModified: '2026-07-02T14:34:33.940Z'
+dateModified: '2026-07-03T12:19:43.739Z'
 storyStatus: DEVELOPING
 sensitivity: high
 infoCard:
@@ -95,7 +95,6 @@ keyPoints:
     The film will open on the same day as Paramount's A Quiet Place III,
     creating a major box office matchup.
 ---
-
 The film marks a reunion between the two-time Oscar winner and director Marielle Heller, who previously guided Hanks to an Academy Award nomination for his role as Fred Rogers in *A Beautiful Day in the Neighborhood*.
 
 The studio secured the project after a competitive bidding process, beating out two other interested parties. Hanks' production company, Playtone, is producing the film with Leah Holzer and in cooperation with Major League Baseball.

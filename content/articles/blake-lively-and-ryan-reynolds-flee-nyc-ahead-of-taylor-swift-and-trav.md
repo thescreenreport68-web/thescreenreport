@@ -99,7 +99,7 @@ aiDisclosure: >-
   Rumors and speculation are labeled as unconfirmed and updated or removed as
   facts develop.
 sensitivity: normal
-dateModified: '2026-07-03T03:59:38.755Z'
+dateModified: '2026-07-03T12:19:34.663Z'
 provenance:
   primaryEntity: Blake Lively
   claim: >-
@@ -109,7 +109,7 @@ provenance:
   severity: NORMAL
   sensitivity: normal
   monitor: false
-  status: DEVELOPING
+  status: CONFIRMED
   attribution: Page Six
   outlets:
     - Page Six
@@ -117,8 +117,7 @@ provenance:
   verifyDegraded: false
   publishedAt: '2026-07-03T03:59:38.755Z'
 ---
-
-According to Page Six, Lively, 38, and Reynolds, 49, were photographed supporting their six-year-old daughter, Betty, at a horse competition in Lake Placid, New York, on Thursday. TMZ, which obtained the pictures, reported that Betty placed second. The couple dressed down for the farm setting—Lively in a halter top and jean shorts with a messy bun, Reynolds in a white tee, khakis, and a tan hat.
+ge Six, Lively, 38, and Reynolds, 49, were photographed supporting their six-year-old daughter, Betty, at a horse competition in Lake Placid, New York, on Thursday. TMZ, which obtained the pictures, reported that Betty placed second. The couple dressed down for the farm setting—Lively in a halter top and jean shorts with a messy bun, Reynolds in a white tee, khakis, and a tan hat.
 
 That same Thursday, Swift and Travis Kelce hosted a star-studded rehearsal dinner at Madison Square Garden, attended by pals like Selena Gomez and Gigi Hadid. A source told Page Six last month that Lively, once one of Swift's closest friends, was not invited to the wedding. "There hasn’t been an olive branch when it comes to their friendship," the insider said. "And Taylor hasn’t extended a wedding invitation to Blake."
 

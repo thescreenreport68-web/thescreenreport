@@ -1,0 +1,99 @@
+{
+  "id": "news-supergirl-film-cast",
+  "slug": "supergirl-cast-meet-the-stars-of-dcu-s-upcoming-film",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": 78,
+      "cat": "movies/news",
+      "hardBlocks": [],
+      "block": [],
+      "fixable": [],
+      "badClaims": 0
+    },
+    "attempt2": {
+      "score": 78,
+      "cat": "movies/news",
+      "hardBlocks": [],
+      "block": [],
+      "fixable": [],
+      "badClaims": 0
+    }
+  },
+  "editorial": {
+    "status": "official",
+    "entity": "Supergirl",
+    "work": {
+      "title": "Supergirl",
+      "year": null,
+      "medium": "movie"
+    },
+    "outlet": "The Hollywood Reporter"
+  },
+  "acceptReason": "terminal-accept (verified accurate, score 78, 0 quality nit(s))",
+  "webCheck": {
+    "contradictions": 4,
+    "cut": 4
+  },
+  "scorecard": {
+    "score": 78,
+    "subscores": {
+      "accuracy": 9,
+      "readability": 8,
+      "humanVoice": 7,
+      "phrasing": 8,
+      "curiosity": 8,
+      "structure": 8,
+      "infoGain": 7,
+      "seo": 7,
+      "faqQuality": 8,
+      "completeness": 8
+    },
+    "strengths": [
+      "The article provides a clear and concise overview of the Supergirl movie cast and its context within the DCU.",
+      "The lead quickly establishes the main point: Milly Alcock as Supergirl and the ensemble cast.",
+      "Subheads are relevant and guide the reader through the information effectively.",
+      "The inclusion of Helen Slater's positive reaction adds a nice human touch and a unique, sourced detail.",
+      "The FAQ section genuinely adds new, relevant information not directly covered in the main body.",
+      "The article avoids generic AI tells and filler praise, maintaining a straightforward news tone.",
+      "Sentence rhythm is varied, and paragraphs are kept relatively short, aiding readability."
+    ],
+    "weaknesses": [
+      "The 'dek' mentions Jason Momoa as Lobo, but the main body only states he will 'cameo' and 'actively lobbied for' the role, which is a slight discrepancy in emphasis.",
+      "The 'dek' also mentions 'interstellar story of vengeance' which is a bit more descriptive than the article's actual content, which only mentions 'interstellar journey of vengeance and justice' in the FAQ.",
+      "The article states 'Original Supergirl Helen Slater has praised Alcock's performance in the new film' in the Key Takeaways, but the body attributes her quote to 'The Hollywood Reporter' and 'Instagram' without specifying if the 'new film' she saw was a full screening or just a clip/trailer, which could be clearer.",
+      "While the article is short news, some deeper analysis on the 'different kind of Supergirl' promised could have been integrated more directly into the body rather than just stating it.",
+      "The article mentions 'Eve Ridley plays Ruthye Marye Knoll' and 'Matthias Schoenaerts portrays the villain, Krem of the Yellow Hills' but doesn't explicitly state their roles in the plot within the main body, only in the FAQ, which could be a missed opportunity for immediate context."
+    ],
+    "deterministic": {
+      "words": 394,
+      "h2s": 4,
+      "h2Questions": 4,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 4,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 42,
+      "avgSentence": 15,
+      "flesch": 56,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": []
+    },
+    "hardBlocks": []
+  },
+  "score": 78,
+  "category": "movies",
+  "subcategory": "news",
+  "audit": {
+    "ok": true,
+    "internalLinks": 2,
+    "failed": []
+  },
+  "ms": 152845
+}

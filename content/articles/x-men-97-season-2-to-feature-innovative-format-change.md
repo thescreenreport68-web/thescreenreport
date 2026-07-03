@@ -68,12 +68,12 @@ provenance:
   primaryEntity: X-Men '97
   eventType: renewal
   sensitivity: normal
-  status: DEVELOPING
+  status: CONFIRMED
   attribution: Collider
   outlets:
     - Collider
   publishedAt: '2026-07-02T15:28:20.804Z'
-dateModified: '2026-07-02T15:28:20.804Z'
+dateModified: '2026-07-03T12:19:45.486Z'
 storyStatus: DEVELOPING
 newsType: general
 pullQuote:
@@ -105,7 +105,6 @@ seriesStatus:
   window: July 2026
   castAdded: []
 ---
-
 **X-Men '97** will feature a completely new format for its opening credits in Season 2, adapting to each episode's storyline.
 
 The change, reported by Collider, means the iconic title sequence will be streamlined to showcase only the characters featured in that particular episode. This innovative approach highlights the season's wider recurring cast and underscores a major narrative shift from the first season.

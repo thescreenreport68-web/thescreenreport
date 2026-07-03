@@ -78,7 +78,7 @@ aiDisclosure: >-
   Rumors and speculation are labeled as unconfirmed and updated or removed as
   facts develop.
 sensitivity: normal
-dateModified: '2026-07-03T03:54:38.755Z'
+dateModified: '2026-07-03T12:19:41.684Z'
 provenance:
   primaryEntity: Normani
   claim: Normani stuns by a waterfall.
@@ -86,7 +86,7 @@ provenance:
   severity: NORMAL
   sensitivity: normal
   monitor: false
-  status: DEVELOPING
+  status: CONFIRMED
   attribution: Yahoo
   outlets:
     - Bluesky @popcrave
@@ -94,5 +94,4 @@ provenance:
   verifyDegraded: true
   publishedAt: '2026-07-03T03:54:38.755Z'
 ---
-
 What's better than a new Normani photo? One taken by a waterfall.

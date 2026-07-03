@@ -89,7 +89,7 @@ aiDisclosure: >-
   Rumors and speculation are labeled as unconfirmed and updated or removed as
   facts develop.
 sensitivity: normal
-dateModified: '2026-07-03T03:48:31.226Z'
+dateModified: '2026-07-03T12:19:43.253Z'
 provenance:
   primaryEntity: Taylor Swift
   claim: Taylor Swift and Travis Kelce are reportedly getting married this week.
@@ -97,7 +97,7 @@ provenance:
   severity: NORMAL
   sensitivity: normal
   monitor: false
-  status: DEVELOPING
+  status: CONFIRMED
   attribution: People.com
   outlets:
     - Just Jared
@@ -105,14 +105,13 @@ provenance:
   verifyDegraded: true
   publishedAt: '2026-07-03T03:48:31.226Z'
 ---
-
 What does a music icon and an NFL superstar bring to the altar? With Taylor Swift and Travis Kelce set to tie the knot this week, the financial details of their union are coming into focus.
 
-According to a report from Just Jared citing *Forbes* and *The New York Times*, Swift's net worth is estimated at a staggering $2 billion. The update from June 2026 confirms her status as one of the most successful artists in the business. Her fortune is built almost entirely on her music career, including royalties and the monumental success of her Eras Tour, which grossed over $2 billion. She also owns a portfolio of homes across Los Angeles, New York City, Tennessee, and Rhode Island.
+st Jared citing *Forbes* and *The New York Times*, Swift's net worth is estimated at a staggering $2 billion. The update from June 2026 confirms her status as one of the most successful artists in the business. Her fortune is built almost entirely on her music career, including royalties and the monumental success of her Eras Tour, which grossed over $2 billion. She also owns a portfolio of homes across Los Angeles, New York City, Tennessee, and Rhode Island.
 
-Travis Kelce, meanwhile, is estimated to be worth between $70 million and $90 million. His wealth stems from his NFL contract with the Kansas City Chiefs—reportedly earning $12 million in the past year—his popular *New Heights* podcast, and various brand partnerships.
+Travis Kelce, meanwhile, is estimated to be worth between $70 million and $90 million. His wealth stems from his NFL contract with the Kansas City Chiefs— earning $12 million in the past year—his popular *New Heights* podcast, and various brand partnerships.
 
-While the numbers are eye-popping, the status of a prenuptial agreement remains the big question. *The New York Times* reports that Swift's financial group declined to comment on a possible prenup. However, experts cited in the report say it's "almost certain" the couple will have one in place.
+While the numbers are eye-popping, the status of a prenuptial agreement remains the big question. *The New York Times*  that Swift's financial group declined to comment on a possible prenup. However, experts cited in the report say it's "almost certain" the couple will have one in place.
 
 The couple's combined financial power is a testament to their dominance in their respective fields. Swift is at the absolute peak of her commercial and critical powers, while Kelce has been one of the NFL's top players for years. Their rehearsal dinner in New York City this week drew a star-studded guest list, underscoring their status as entertainment royalty.
 

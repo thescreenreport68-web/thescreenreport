@@ -60,12 +60,12 @@ provenance:
   primaryEntity: Jodie Foster
   eventType: other
   sensitivity: normal
-  status: DEVELOPING
+  status: CONFIRMED
   attribution: Deadline
   outlets:
     - Deadline
   publishedAt: '2026-07-02T18:28:20.804Z'
-dateModified: '2026-07-02T18:28:20.804Z'
+dateModified: '2026-07-03T12:19:38.730Z'
 storyStatus: DEVELOPING
 newsType: general
 pullQuote:
@@ -86,7 +86,6 @@ sightings:
       Ideas Festival
     date: June 2026
 ---
-
 Jodie Foster believes artificial intelligence is already shaping the film industry, according to Deadline. The two-time Academy Award winner pointed to a recent blockbuster as a prime example of what she sees as AI's creative influence.
 
 ## What Did Jodie Foster Say About AI?

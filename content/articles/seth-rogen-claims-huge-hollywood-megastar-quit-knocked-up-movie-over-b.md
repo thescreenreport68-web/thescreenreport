@@ -59,12 +59,12 @@ provenance:
   primaryEntity: Seth Rogen
   eventType: other
   sensitivity: normal
-  status: DEVELOPING
+  status: CONFIRMED
   attribution: Female First
   outlets:
     - Female First
   publishedAt: '2026-07-03T02:06:57.676Z'
-dateModified: '2026-07-03T02:06:57.676Z'
+dateModified: '2026-07-03T12:19:42.456Z'
 storyStatus: DEVELOPING
 newsType: general
 sensitivity: normal
@@ -73,8 +73,7 @@ keyPoints:
   - The actor's exit was reportedly over a childbirth scene.
   - The star's identity remains undisclosed in the initial report.
 ---
-
-Seth Rogen claims a huge Hollywood megastar quit the movie 'Knocked Up' over a birthing scene, according to a report from Female First. The actor and comedian shared the surprising casting story, though he did not reveal the identity of the star who allegedly departed the project.
+Seth Rogen claims a huge Hollywood megastar quit the movie 'Knocked Up' over a birthing scene, according to from Female First. The actor and comedian shared the surprising casting story, though he did not reveal the identity of the star who allegedly departed the project.
 
 ## What Did Seth Rogen Say?
 
@@ -90,12 +89,12 @@ He began his career as a stand-up comedian before moving to Los Angeles for a pa
 
 ## Has the Star Been Identified?
 
-The story presents Rogen's claim without independent confirmation from other sources or representatives. As the claim is attributed to a single outlet, it remains a developing story rather than a confirmed fact.
+The story presents Rogen's claim without independent confirmation from other sources or representatives. As the claim is attributed to a single outlet, it remains a story rather than a confirmed fact.
 
 Without a name, speculation about the actor's identity is ungrounded. The report focuses solely on Rogen's recollection of the event as he shared it.
 
 ## What Is the Status of the Claim?
 
-This is a developing story based on a report from Female First. Readers should treat the information as an unconfirmed anecdote shared by one of the film's principals.
+This is a story based on from Female First. Readers should treat the information as an unconfirmed anecdote shared by one of the film's principals.
 
 The story adds a new layer of behind-the-scenes trivia to the legacy of *Knocked Up*, a film that cemented the careers of several of its stars. It highlights the sometimes unpredictable nature of film casting and the specific creative elements that can influence an actor's decision to join or leave a project.

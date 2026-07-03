@@ -64,12 +64,12 @@ provenance:
   primaryEntity: I Will Find You
   eventType: other
   sensitivity: normal
-  status: DEVELOPING
+  status: CONFIRMED
   attribution: Collider
   outlets:
     - Collider
   publishedAt: '2026-07-02T20:05:27.838Z'
-dateModified: '2026-07-02T20:05:27.838Z'
+dateModified: '2026-07-03T12:19:41.025Z'
 storyStatus: DEVELOPING
 newsType: general
 sensitivity: normal
@@ -80,7 +80,6 @@ keyPoints:
     The success underscores the strong audience demand for Coben's
     mystery-thriller stories.
 ---
-
 The series continues what the outlet describes as Coben's "unstoppable reign" on the service.
 
 ## What is the show about?

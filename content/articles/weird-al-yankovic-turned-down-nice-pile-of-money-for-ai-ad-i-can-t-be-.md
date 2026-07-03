@@ -68,12 +68,12 @@ provenance:
   primaryEntity: '"Weird Al" Yankovic'
   eventType: announcement
   sensitivity: normal
-  status: DEVELOPING
+  status: CONFIRMED
   attribution: Deadline
   outlets:
     - Deadline
   publishedAt: '2026-07-02T14:08:08.072Z'
-dateModified: '2026-07-02T14:08:08.072Z'
+dateModified: '2026-07-03T12:19:44.383Z'
 storyStatus: DEVELOPING
 newsType: general
 release:
@@ -89,8 +89,7 @@ officialPost:
   platform: ''
   url: ''
 ---
-
-Weird Al Yankovic has refused a substantial financial offer to endorse an artificial intelligence company, according to a report from Deadline. The five-time Grammy winner revealed the decision in a recent interview, drawing a clear line on the controversial technology.
+Weird Al Yankovic has refused a substantial financial offer to endorse an artificial intelligence company, according to from Deadline. The five-time Grammy winner revealed the decision in a recent interview, drawing a clear line on the controversial technology.
 
 Speaking to Syracuse.com, Yankovic explained the sequence of events. He was initially offered a commercial for what he believed was generic business software. "They offered me a nice pile of money," he said. "I said, 'Oh well, yeah, sure, I could do that.'" A week before the scheduled shoot, however, he learned the product was powered by AI. "I thought, 'Oh no, I can't be the poster boy for AI, forget it,'" Yankovic stated. He ultimately pulled out of the deal, concluding, "I'm not a fan of AI."
 
