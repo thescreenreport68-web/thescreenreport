@@ -1,0 +1,123 @@
+{
+  "id": "trailer-star-wars-visions-ninth-jedi-trailer",
+  "slug": "first-trailer-for-star-wars-visions-presents-the-ninth-jedi-series-rel",
+  "status": "needs_review",
+  "stages": {
+    "attempt1": {
+      "score": 78,
+      "cat": "tv/trailers",
+      "hardBlocks": [],
+      "block": [],
+      "fixable": [],
+      "badClaims": 0
+    },
+    "attempt2": {
+      "score": 55,
+      "cat": "tv/trailers",
+      "hardBlocks": [
+        "body 387w < 400",
+        "a 68-word run-on sentence (>55 — split it)",
+        "verify-gate CUT: 4 claim(s) not in the gathered sources — Feodor Chin voices Gennoh; Young Mazino voices Nawaam; Chase Sui Wonders voices Tafflah",
+        "humanVoice 4 < 5"
+      ],
+      "block": [
+        "verify-gate CUT: 4 claim(s) not in the gathered sources — Feodor Chin voices Gennoh; Young Mazino voices Nawaam; Chase Sui Wonders voices Tafflah"
+      ],
+      "fixable": [
+        "body 387w < 400",
+        "a 68-word run-on sentence (>55 — split it)",
+        "humanVoice 4 < 5"
+      ],
+      "badClaims": 0
+    }
+  },
+  "editorial": {
+    "status": "official",
+    "entity": "Star Wars: Visions Presents - The Ninth Jedi",
+    "work": {
+      "title": "Star Wars: Visions Presents - The Ninth Jedi",
+      "year": null,
+      "medium": "tv"
+    },
+    "outlet": "firstshowing.net"
+  },
+  "acceptReason": "cut-and-publish (removed 1 sentence(s) + 0 field item(s); 370w remain)",
+  "holdReason": "accuracy/grounding block: verify-gate CUT: 4 claim(s) not in the gathered sources — Feodor Chin voices Gennoh; Young Mazino voices Nawaam; Chase Sui Wonders voices Tafflah",
+  "webCheck": {
+    "contradictions": 4,
+    "cut": 6
+  },
+  "scorecard": {
+    "score": 55,
+    "subscores": {
+      "accuracy": 8,
+      "readability": 6,
+      "humanVoice": 4,
+      "phrasing": 5,
+      "curiosity": 6,
+      "structure": 7,
+      "infoGain": 5,
+      "seo": 6,
+      "faqQuality": 6,
+      "completeness": 6
+    },
+    "strengths": [
+      "The article correctly identifies the authoritative title and release date.",
+      "The Key Takeaways are concise and informative.",
+      "The structure uses subheads effectively to break up information.",
+      "The article avoids describing specific trailer shots or dialogue, adhering to the 'no trailer watch' rule.",
+      "The FAQ section adds new, relevant information beyond the main body."
+    ],
+    "weaknesses": [
+      "The human voice is largely generic, relying on AI-tell phrases like 'underscores its popularity' and 'promises to delve deeper'.",
+      "The phrasing is often stiff and lacks the natural flow of a top news desk, e.g., 'confirming the fan-favorite anime short is expanding into a full series this summer'.",
+      "The lead paragraph is a bit dense and could be broken down for better readability.",
+      "The article uses 'delve deeper' and 'underscores' which are identified as AI-tells.",
+      "The information gain is moderate; while it provides context, the analysis or unique framing is limited.",
+      "The 'Sources' section lists Disney+ and StarWars.com, which are not 'authoritative external sources' in the context of reporting on a trailer release; they are primary sources for the content itself. The article relies heavily on FirstShowing.net but doesn't list it as a source.",
+      "The article mentions 'Anime Expo 2026' as the trailer debut location, which was not in the provided reference facts and seems like an invention."
+    ],
+    "deterministic": {
+      "words": 387,
+      "h2s": 3,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 2,
+      "hasSources": true,
+      "faqCount": 4,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 68,
+      "avgSentence": 23,
+      "flesch": 48,
+      "bannedTells": 1,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": [
+        "body 387w < 400",
+        "a 68-word run-on sentence (>55 — split it)"
+      ]
+    },
+    "hardBlocks": [
+      "body 387w < 400",
+      "a 68-word run-on sentence (>55 — split it)",
+      "verify-gate CUT: 4 claim(s) not in the gathered sources — Feodor Chin voices Gennoh; Young Mazino voices Nawaam; Chase Sui Wonders voices Tafflah",
+      "humanVoice 4 < 5"
+    ]
+  },
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "body ≥ 400w",
+      "≥1200px legal image",
+      "credit",
+      "score ≥ 70",
+      "zero hard-blocks",
+      "humanVoice ≥ 5"
+    ]
+  },
+  "ms": 160859
+}

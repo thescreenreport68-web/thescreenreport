@@ -22,7 +22,6 @@ import { writeGossip } from "./writer.mjs";
 import { legalGate } from "./legalGate.mjs";
 import { qualityCheck } from "./qualityGate.mjs";
 import { verifyQuotes } from "./quoteGuard.mjs";
-import { checkSpecifics } from "./specificsGuard.mjs";
 import { verifyGate } from "./verifyGate.mjs";
 import { judgeGossip } from "./judge.mjs";
 import { dedupeSentences, ensureTakeaways, ensureFaq, cutFlagged, trimIncomplete } from "./polish.mjs";

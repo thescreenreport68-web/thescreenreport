@@ -163,6 +163,19 @@ async function generate({ title, dek, body, category, model, feedback = "" }) {
   const user = `Write the video script JSON for this article:\n\n${article}\n${feedback ? `\nEDITOR NOTES FROM THE LAST DRAFT (obey them):\n${feedback}\n` : ""}\nJSON shape:\n${SHAPE}`;
   const { data } = await chat({ model, system: SYS, user, json: true, maxTokens: 2800, temperature: 0.6 });
   if (!data?.hook?.say || !Array.isArray(data.lines) || data.lines.length < 5) throw new Error("script: bad shape");
+  // Phase 3: per-line hardening — no line may ever speak "undefined" or caption "UNDEFINED"
+  const fixLine = (l) => {
+    if (!l || typeof l.say !== "string" || !l.say.trim()) return null;
+    l.say = l.say.trim();
+    l.show = typeof l.show === "string" && l.show.trim() ? l.show.trim() : l.say;
+    l.emphasis = Array.isArray(l.emphasis) ? l.emphasis.filter((e) => typeof e === "string") : typeof l.emphasis === "string" ? [l.emphasis] : [];
+    return l;
+  };
+  if (!fixLine(data.hook)) throw new Error("script: hook malformed");
+  data.lines = data.lines.map(fixLine).filter(Boolean);
+  if (data.lines.length < 5) throw new Error("script: too few valid lines");
+  if (typeof data.onScreenTitle === "string" && data.onScreenTitle.length > 38)
+    data.onScreenTitle = data.onScreenTitle.slice(0, 38).replace(/\s+\S*$/, ""); // word-boundary truncate
   for (const l of [data.hook, ...data.lines]) {
     const v = l.visual;
     const ents = Array.isArray(v?.entities)

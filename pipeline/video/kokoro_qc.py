@@ -32,7 +32,7 @@ def n2w(n):
     return str(n)
 def norm(t):
     t = re.sub(r"\b(\d{1,3})\b", lambda m: n2w(m.group(1)), t.lower())
-    return [w for w in re.sub(r"[^a-z0-9'\- ]", " ", t).replace("-", " ").split() if w]
+    return [w.replace("'", "").rstrip("s") if w.endswith("'s") or w.endswith("s'") else w.replace("'", "") for w in re.sub(r"[^a-z0-9'\- ]", " ", t).replace("-", " ").split() if w]
 exp_raw = open(a.expected, encoding="utf-8").read()
 E, H = norm(exp_raw), norm(hyp)
 cap_words = set(w.lower().strip(".,!?'\"") for w in exp_raw.split() if w[:1].isupper())

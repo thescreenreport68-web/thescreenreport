@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { Wordmark } from "./Wordmark";
 import { SITE, CATEGORIES } from "@/lib/site";
 
 const COMPANY = [
@@ -67,10 +66,7 @@ export default function Footer() {
               T<span className="italic">S</span>R<span className="text-red">.</span>
             </span>
           </Link>
-          <div className="mt-6">
-            <Wordmark className="text-[24px] text-paper" />
-          </div>
-          <p className="mt-3 max-w-sm font-body text-sm leading-relaxed text-paper/60">
+          <p className="mt-5 max-w-sm font-body text-sm leading-relaxed text-paper/60">
             {SITE.description}
           </p>
         </div>

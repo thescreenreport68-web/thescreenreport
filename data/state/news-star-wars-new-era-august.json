@@ -1,0 +1,101 @@
+{
+  "id": "news-star-wars-new-era-august",
+  "slug": "star-wars-kicks-off-new-era-this-august",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": 68,
+      "cat": "tv/trailers",
+      "hardBlocks": [],
+      "block": [],
+      "fixable": [],
+      "badClaims": 0
+    },
+    "attempt2": {
+      "score": 72,
+      "cat": "tv/trailers",
+      "hardBlocks": [],
+      "block": [],
+      "fixable": [],
+      "badClaims": 0
+    }
+  },
+  "editorial": {
+    "status": "official",
+    "entity": "Star Wars: Visions Presents - The Ninth Jedi",
+    "work": {
+      "title": "Star Wars: Visions Presents - The Ninth Jedi",
+      "year": null,
+      "medium": "tv"
+    },
+    "outlet": "starwars.com"
+  },
+  "acceptReason": "terminal-accept (verified accurate, score 72, 0 quality nit(s))",
+  "webCheck": {
+    "contradictions": 4,
+    "cut": 5
+  },
+  "scorecard": {
+    "score": 72,
+    "subscores": {
+      "accuracy": 9,
+      "readability": 8,
+      "humanVoice": 7,
+      "phrasing": 7,
+      "curiosity": 7,
+      "structure": 8,
+      "infoGain": 7,
+      "seo": 7,
+      "faqQuality": 8,
+      "completeness": 7
+    },
+    "strengths": [
+      "The article accurately presents the core facts and release details.",
+      "The lead delivers the answer quickly, fulfilling the curiosity metric.",
+      "The use of subheadings improves readability and guides the reader.",
+      "The FAQ section adds genuine new information and context, enhancing information gain.",
+      "The explanation of the unique lightsaber mechanic is well-articulated and engaging.",
+      "The article avoids direct trailer narration, adhering to the strict instruction."
+    ],
+    "weaknesses": [
+      "The opening paragraph uses a slightly generic 'new chapter for the galaxy far, far away' which could be more specific.",
+      "The phrase 'kicks off a new era' is repeated from the headline and the ScreenRant attribution, which feels a bit redundant.",
+      "The sentence 'This idea actively questions the stark divide between the light and dark sides' is a touch academic and could be rephrased for a more direct human voice.",
+      "The 'delve into' in the paragraph about the lightsabers is a minor AI-tell.",
+      "The article could benefit from slightly more varied sentence structure in places to further improve flow.",
+      "The 'Sources' section is minimal; while the article is based on provided material, listing the original ScreenRant article would be good practice for external sources."
+    ],
+    "deterministic": {
+      "words": 494,
+      "h2s": 4,
+      "h2Questions": 3,
+      "internalLinks": 0,
+      "externalLinks": 2,
+      "hasSources": true,
+      "faqCount": 4,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 39,
+      "avgSentence": 19,
+      "flesch": 56,
+      "bannedTells": 2,
+      "fillerPraise": 0,
+      "kwExact": 5,
+      "hardBlocks": []
+    },
+    "hardBlocks": []
+  },
+  "score": 72,
+  "category": "tv",
+  "subcategory": "trailers",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "body ≥ 400w"
+    ]
+  },
+  "ms": 150353
+}

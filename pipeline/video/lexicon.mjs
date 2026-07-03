@@ -14,6 +14,7 @@
 // are SILENTLY dropped by the engine). Add entries by running: k.tokenizer.phonemize(word,'en-us') → fix.
 export const PHONEME_LEX = {
   "Saoirse": "sˈɜːʃə",
+  "Rogen": "ɹˈoʊɡən",
   "KVIFF": "kˌeɪvˌiːˌaɪˌɛfˈɛf",
   "MCU": "ˌɛmsˌiːjˈuː",
 };
@@ -63,7 +64,7 @@ const BRANDS = {
 // ── acronym policy (research: caps ≠ spell-out — the engine GUESSES; we force explicitly).
 // SPELL list → hyphenated letters (clean spell, zero pauses). WORD list → leave as-is (engine reads
 // them correctly as words). Anything not listed: 2-3 letter all-caps default to SPELL; 4+ left alone.
-const ACRONYM_SPELL = ["HBO", "CBS", "NBC", "ABC", "CNN", "TMZ", "CW", "AMC", "FX", "BBC", "ITV", "MTV", "SNL", "DC", "EGOT", "CGI", "VFX", "MCU", "DCU", "NFL", "NBA", "UFC", "WWE", "CEO", "PGA", "DGA", "WGA"];
+const ACRONYM_SPELL = ["HBO", "CBS", "NBC", "ABC", "CNN", "TMZ", "CW", "AMC", "FX", "BBC", "ITV", "MTV", "SNL", "DC", "EGOT", "CGI", "VFX", "MCU", "DCU", "NFL", "NBA", "UFC", "WWE", "CEO", "PGA", "DGA", "WGA", "AI", "TV", "UK", "LA", "NY", "PG", "FBI", "CIA", "DOJ", "PR"];
 const ACRONYM_WORD = ["NASA", "IMAX", "BAFTA", "SAG", "TIFF", "AFI", "PIXAR", "A24", "OSCARS"];
 
 const escRe = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -96,7 +97,10 @@ export function normalizeForSpeech(text) {
       t = t.replace(new RegExp(`(?<![\\w])${escRe(key)}(?![\\w])`, "g"), map[key]);
   // PASS 2 · acronym policy (before number/dot rules)
   for (const a of ACRONYM_SPELL) t = t.replace(new RegExp(`\\b${a}\\b`, "g"), a.split("").join("-"));
-  t = t.replace(/\b([A-Z]{2,3})\b(?![-\w])/g, (m) => (ACRONYM_WORD.includes(m) ? m : m.split("").join("-"))); // default: short caps spell
+  // Phase 3 INVERSION: no default spell-out — ONLY the explicit list spells (audit: "PART II"→"I-I" class).
+  // Roman numerals after a title word → number words ("Rocky II"→"Rocky Two"); bare V/X excluded (Malcolm X).
+  const ROMAN = { II: "Two", III: "Three", IV: "Four", VI: "Six", VII: "Seven", VIII: "Eight", IX: "Nine", XI: "Eleven", XII: "Twelve", XIII: "Thirteen" };
+  t = t.replace(/\b([A-Z][\w']+)\s+(II|III|IV|VI|VII|VIII|IX|XI|XII|XIII)\b/g, (m, w, r) => `${w} ${ROMAN[r]}`);
   // PASS 3 · currency/percent/ordinals/counts (kills the digit-period pause bug)
   t = t.replace(/\$(\d[\d,]*(?:\.\d+)?)\s*(million|billion|trillion|[MBK])\b/gi, (m, n, u) => {
     const unit = { m: "million", b: "billion", k: "thousand", t: "trillion" }[u[0].toLowerCase()] || u.toLowerCase();
