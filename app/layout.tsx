@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AnchorAd from "@/components/AnchorAd";
 import Beacon from "@/components/Beacon";
+import CloudflareAnalytics from "@/components/CloudflareAnalytics";
 import GoogleOneTap from "@/components/GoogleOneTap";
 import JsonLd from "@/components/JsonLd";
 import { SITE } from "@/lib/site";
@@ -113,6 +114,7 @@ export default function RootLayout({
           strategy="afterInteractive"
         />
         <Beacon />
+        <CloudflareAnalytics />
         <GoogleOneTap />
         <Header />
         <main id="content">{children}</main>
