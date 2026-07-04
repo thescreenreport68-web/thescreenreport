@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Fraunces, Source_Serif_4, Karla, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
@@ -105,6 +106,12 @@ export default function RootLayout({
           Skip to content
         </a>
         <JsonLd data={SITE_SCHEMA} />
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9157799451949681"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
         <Beacon />
         <GoogleOneTap />
         <Header />
