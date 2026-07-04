@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     template: `%s — ${SITE.name}`,
   },
   description: SITE.description,
-  robots: { index: false, follow: false },
+  robots: { index: true, follow: true },
   alternates: { types: { "application/rss+xml": "/feed.xml" } },
   verification: { other: { "p:domain_verify": "732df0e14a6881379e2a7185fdde95a4" } },
   openGraph: {

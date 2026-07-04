@@ -1,11 +1,5 @@
-# PRE-LAUNCH: The Screen Report is not yet open to search engines.
-# Seed/sample content is intentionally hidden while we build.
-#
-# AT LAUNCH:
-#   1) Replace "Disallow: /" below with "Allow: /"
-#   2) Remove the noindex in app/layout.tsx (robots: { index: true, follow: true })
-#   3) Submit https://thescreenreport.com/sitemap.xml in Search Console
+# The Screen Report — open to search engines.
 User-agent: *
-Disallow: /
+Allow: /
 
 Sitemap: https://thescreenreport.com/sitemap.xml
