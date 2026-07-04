@@ -10,7 +10,7 @@ crons = ["*/5 * * * *"]
 [vars]
 GH_OWNER = "thescreenreport68-web"
 GH_REPO = "thescreenreport"
-GH_REF = "main"
+GH_REF = "rebuild-trending-news"
 
 # Secret (NOT here — set once with:  wrangler secret put GH_TOKEN):
 #   GH_TOKEN = a fine-grained GitHub PAT scoped to this repo with "Actions: Read and write".
