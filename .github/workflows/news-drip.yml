@@ -70,8 +70,16 @@ jobs:
           git config user.name  "screenreport-bot"
           git config user.email "bot@thescreenreport.com"
           git add content/articles data/find data/state
-          git commit -m "news: publish ${{ steps.tick.outputs.slugs }} [skip ci]" || echo "nothing to commit"
-          git push
+          git commit -m "news: publish ${{ steps.tick.outputs.slugs }} [skip ci]" || { echo "nothing to commit"; exit 0; }
+          # The GOSSIP lane pushes to this SAME branch — rebase onto the latest remote and retry so a concurrent
+          # gossip push never fails ours (a failed state-commit would break dedup and risk a double-post). Build runs
+          # AFTER this, so it always builds from the rebased-latest state = every lane's articles are in the deploy.
+          for i in 1 2 3 4 5; do
+            git pull --rebase --autostash origin "${{ github.ref_name }}" \
+              && git push origin "HEAD:${{ github.ref_name }}" && { echo "pushed on attempt $i"; exit 0; }
+            echo "push attempt $i lost the race; retrying in 5s…"; sleep 5
+          done
+          echo "::error::could not push state after 5 attempts"; exit 1
 
       - name: Build
         if: steps.tick.outputs.published != '0' && steps.tick.outputs.published != ''
