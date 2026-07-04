@@ -37,9 +37,21 @@ const profanity = new RegExpMatcher({
   ...englishDataset.build(),
   ...englishRecommendedTransformers,
 });
-// URLs / bare domains / obfuscated links / @handles → no links allowed in v1.
-const LINK_RE =
-  /(https?:\/\/|www\.|\b[a-z0-9-]+\.(com|net|org|io|co|xyz|top|ru|tk|ml|ly|me|gg|link|shop|store|info|biz)\b|\bt\.me\b|\[?\.\]?|\(dot\)| dot )/i;
+// No links in v1 — but ONLY real links, never a plain sentence period. Matches
+// full URLs, www., bare domains with a known TLD, and obfuscated forms
+// (word[.]com, word(dot)com, "word dot com", t.me/). Verified: normal sentences
+// ending in "." pass; "example.com" / "spam[.]shop" / "scam dot com" are blocked.
+const LINK_TLD =
+  "com|net|org|io|co|xyz|top|ru|tk|ml|ly|me|gg|link|shop|store|info|biz|dev|app|site|online|click|vip|buzz|cc|to|ws|pw|icu|live|fun";
+const LINK_RE = new RegExp(
+  "https?:\\/\\/\\S+" +
+    "|\\bwww\\.[a-z0-9-]+\\.[a-z]{2,}" +
+    "|\\b[a-z0-9-]{2,}\\.(?:" + LINK_TLD + ")\\b(?:\\/\\S*)?" +
+    "|\\b[a-z0-9-]{2,}\\s*(?:\\[\\s*\\.\\s*\\]|\\(\\s*(?:dot|\\.)\\s*\\))\\s*[a-z0-9-]{2,}" +
+    "|\\b[a-z0-9-]{2,}\\s+dot\\s+(?:" + LINK_TLD + ")\\b" +
+    "|\\bt\\.me\\/",
+  "i",
+);
 
 async function verifyTurnstile(token: string, ip: string): Promise<boolean> {
   const secret = Deno.env.get("TURNSTILE_SECRET_KEY") ?? "";

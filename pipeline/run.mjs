@@ -15,7 +15,7 @@ import { sourceImage, measureRemote } from "./stages/image.mjs";
 import { pickHeroImage } from "./lib/heroImage.mjs";
 import { cutArticle } from "./lib/cutter.mjs";
 import { dedupeSentences, trimIncomplete } from "./lib/polish.mjs";
-import { gate, classifyBlocks } from "./stages/gate.mjs";
+import { gate } from "./stages/gate.mjs";
 import { assemble } from "./stages/assemble.mjs";
 import { getWhereToWatch, factBlock, toWhereToWatch, discoverTop, discoverFactBlock, getTrailer, trailerFactBlock, getBoxOffice, boxOfficeFactBlock, getTitleFacts, titleFactBlock } from "./lib/tmdb.mjs";
 import { omdb, omdbFactBlock } from "./lib/omdb.mjs";
@@ -343,114 +343,12 @@ async function processTopic(topic, i) {
       }
     }
 
-    let article, classification, image, scored, src, pass = false, corrections = null;
-    for (let attempt = 1; attempt <= MAX_ATTEMPTS && !pass; attempt++) {
-      // Attempt 2+ = SURGICAL self-correction (gossip port): fix ONLY the flagged spots of the prior draft at
-      // temp 0.2 — a full rewrite at 0.6 routinely invented NEW fabrications each retry (the Madonna class).
-      ({ article } = await generate({ topic, model: MODELS.generator, corrections, previousArticle: attempt > 1 ? article : null }));
-      if (wtw?.length) article.whereToWatch = toWhereToWatch(wtw); // accurate table straight from TMDB
-      if (trailer?.youtubeId) { article.youtubeId = trailer.youtubeId; article.releaseInfo = fmtRelease(trailer.releaseDate); }
-      if (reactionTweets?.ids?.length) { article.tweetIds = reactionTweets.ids; }
-      if (interview) { article.youtubeId = interview.youtubeId; article.sourceOutlet = interview.sourceOutlet; article.sourceUrl = interview.sourceUrl; }
-      if (boxoffice?.worldwide) { article.boxOffice = { ...(article.boxOffice || {}), worldwide: boxoffice.worldwide, budget: boxoffice.budget }; }
-      // PROFILE: overwrite the model's filmography with the VERIFIED TMDB one (never trust an invented credit list).
-      if (personCredits?.length) article.filmography = personCredits.map((c) => ({ year: c.year, title: c.title, role: c.character, type: c.type }));
-      // CLASSIFICATION is TOPIC-derived, not draft-derived (2026-07-03 strip): a FIND/seed topic already carries
-      // the authoritative category/subcategory/formatTag, and the old per-attempt classify() LLM call was
-      // overwritten right here anyway (only its tags survived) — 1-2 wasted flash-lite calls per article. Tags
-      // derive deterministically; the LLM classifier runs ONLY for a legacy topic with no categorization, once.
-      if (!classification) {
-        if (topic.category && topic.subcategory) {
-          classification = { category: topic.category, subcategory: topic.subcategory, formatTag: topic.formatTag || "news", tags: deriveTags(topic) };
-        } else {
-          classification = await classify({ article, topic, model: MODELS.classifier });
-          if (!classification.tags?.length) classification.tags = deriveTags(topic);
-        }
-        // NEWS-ONLY fail-closed CHOKEPOINT (covers BOTH the FIND path AND the legacy `node run.mjs` path):
-        // clamp the final formatTag to the 8 news forms and re-derive category/subcategory to a news silo,
-        // so no driver/queue producer can ever stamp a removed form/silo onto the published frontmatter.
-        // Idempotent on already-canonical FIND topics; repairs a legacy/manual topic that bypassed categorize.
-        canonicalize(classification);
-      }
-      // (HERO IMAGE moved to the LAST MILE, after every gate — 2026-07-03, audit D9: og:image fetches + vision
-      // + measure calls were fully wasted on every held article. See the LAST-MILE block below the web check.)
-      scored = await gate({ article, topic, judgeModel: judge });
-      // Embed niches must carry their defining embed, or the page is an empty promise — route to review.
-      if (topic.formatTag === "trailer" && !article.youtubeId) scored.hardBlocks.push("trailer: no embedded video");
-      if (topic.formatTag === "reaction" && !article.tweetIds?.length) scored.hardBlocks.push("reaction: no embedded posts");
-      // PHASE C — FIX-AND-PUBLISH. Split blocks: a BLOCK (fabrication / contradicted fact / ungrounded stray /
-      // missing image-embed-title) must NEVER auto-publish; a FIXABLE (length/section/link/soft-quality nit) is
-      // retried, and is ACCEPTABLE on the final attempt once the piece is verified accurate. So a clean article OR a
-      // verified-accurate-but-B-grade one PUBLISHES; only a genuine fabrication/grounding failure is held.
-      const { block, fixable } = classifyBlocks(scored.hardBlocks);
-      const cleanPass = (scored.score || 0) >= 80 && scored.hardBlocks.length === 0;
-      // C2 CUT-and-ACCEPT: a final-attempt article whose ONLY blocks are verify-gate CUT strays that are all
-      // QUALITATIVE (no number/date/platform/season/renewal — a checkable specific is caught separately as
-      // CONTRADICTED/fabricated and STAYS blocked) is accepted: the strays are accurate peripheral context, not a
-      // "fact distinct from the source". This publishes the Matlin/NCIS-type score-85 pieces instead of holding them.
-      const cutOnly = block.length > 0 && block.every((b) => /^verify-gate CUT:/.test(b));
-      // A stray is only safe to publish if it is a pure SOFT CHARACTERIZATION — no checkable factual marker. Any
-      // number/date/$/%, a quoted title, a platform, an award, a season/episode, a music term (album/song/single/
-      // chart/billboard), a credit verb (played/starred/featured/placed/appeared/directed/produced/wrote), a work
-      // type (film/movie/series), or "role" means it is a CHECKABLE fact that must stay BLOCKED unless grounded
-      // (those are exactly the fabrications — a wrong song credit / award / platform — the owner forbids).
-      const SPECIFIC = /\d|%|\$|["“”']|\b(netflix|prime|hulu|disney|max|peacock|paramount|apple|amazon|hbo|theaters?|million|billion|grammy|oscar|emmy|academy award|bafta|golden globe|award|nominee|nominat|winner|won|renew|cancel|season|episode|album|single|song|track|ep|record|chart|billboard|hot 100|no\.?\s*1|number one|film|movie|series|show|played|plays|stars?|starring|featured|feat|placed|appeared|directed|produced|wrote|co-?wrote|composed|role|character|signed|deal|joins?|cast)\b/i;
-      const straysQualitative = (scored.vgStrays || []).length > 0 && scored.vgStrays.every((c) => !SPECIFIC.test(c));
-      // PUBLISH-EVERYTHING (owner 2026-07-02): a verify-gate CUT verdict means the flagged lines were still >=85%
-      // supported — PERIPHERAL background not in the single source, NOT a contradiction. Publish those (accept cutOnly).
-      // A genuine wrong specific is caught separately as "fabricated:"/"CONTRADICTED [" (NOT a CUT) → not cutOnly → the
-      // cut-and-publish pass below DELETES that exact sentence, or it holds. So accuracy on specifics stays strict.
-      // 2026-07-03 audit #4: a CUT is only auto-acceptable when EVERY stray is a pure soft characterization
-      // (straysQualitative). If any stray carries a checkable specific (number/$/%/date/platform/award/credit/
-      // title), acceptableBlocks stays false → the cut-and-publish pass DELETES those exact stray sentences (or
-      // holds) instead of relying on the probabilistic web-check to notice an invented specific.
-      const acceptableBlocks = block.length === 0 || (cutOnly && straysQualitative);
-      const accept = !cleanPass && attempt === MAX_ATTEMPTS && acceptableBlocks && (scored.score || 0) >= ACCEPT_FLOOR;
-      pass = cleanPass || accept;
-      rec.acceptReason = accept ? `terminal-accept (verified accurate, score ${scored.score}${cutOnly ? `, ${scored.vgStrays.length} qualitative stray(s) accepted` : `, ${fixable.length} quality nit(s)`})` : undefined;
-      // SELF-CORRECTION LOOP: feed the writer ALL feedback so each retry fixes everything known while keeping the
-      // engaging voice + writing SHORTER rather than adding any ungrounded fact (Phase B). Cumulative → converges fast.
-      const cc = scored.claimCheck;
-      corrections = !pass
-        ? [
-            scored.hardBlocks?.length ? "Fix these from your last draft (keep the voice + engagement intact; write SHORTER rather than add ANY fact not in the sources): " + scored.hardBlocks.join("; ") : "",
-            cc?.corrections || "",
-          ].filter(Boolean).join("\n").trim() || null
-        : null;
-      rec.stages[`attempt${attempt}`] = { score: scored.score, cat: `${classification.category}/${classification.subcategory}`, hardBlocks: scored.hardBlocks, block, fixable, badClaims: cc?.bad?.length || 0 };
-      console.log(`  attempt ${attempt}: score ${scored.score} [${classification.category}/${classification.subcategory}] claims:${cc ? `${(cc.verdicts || []).length - (cc.bad?.length || 0)}/${(cc.verdicts || []).length} ok` : "n/a"} ${cleanPass ? "PASS ✅" : accept ? `ACCEPT ✅ (verified-accurate, ${fixable.length} nit(s))` : `block:${JSON.stringify(block)} fixable:${JSON.stringify(fixable)}`}`);
-    }
-    // PUBLISH-EVERYTHING (owner 2026-07-02): if all attempts still left a block, DELETE the flagged (fabricated/
-    // ungrounded) claims — from the body AND takeaways/FAQ/structured fields (the ONE cutter, 2026-07-03) — and
-    // publish the clean remainder; never leave a built article unpublished. A gutted result still holds rather
-    // than shipping a stub. Grounding-BLOCKs not tied to a cuttable claim (no image, garbled) legitimately hold.
-    const bsrcN = (topic._bundle && topic._bundle.sources) || [];
-    const thinG = bsrcN.length < 2 || bsrcN.reduce((n, s) => n + (s.text || "").length, 0) < 1500;
-    const wordsOf = (b) => (String(b || "").match(/\b[\w']+\b/g) || []).length;
-    const cutFloor = thinG ? 200 : 300; // a thin-grounding brief is LEGAL at ~220w — don't hold it for missing 300
-    let cutPublished = false; // set when the gate SHORT-CIRCUITED (score 0) and cut-and-publish salvaged it → must RE-GATE
-    if (!pass && scored?.cutClaims?.length && !DRY) {
-      const idBlock = (scored.hardBlocks || []).some((b) => /wrong-title|identity mismatch|wrong[- ]entity/i.test(String(b)));
-      const bodyBefore = article.body;
-      const { cut, fieldCuts } = cutArticle(article, scored.cutClaims);
-      const words = wordsOf(article.body);
-      const ent = (topic.primaryEntity || "").toLowerCase();
-      const nucleusSurvives = !ent || article.body.toLowerCase().includes(ent) || ent.split(/\s+/).some((w) => w.length > 3 && article.body.toLowerCase().includes(w));
-      if (!idBlock && cut + fieldCuts > 0 && words >= cutFloor && nucleusSurvives) {
-        pass = true;
-        cutPublished = true; // gate score is STALE (0 from the short-circuit) — re-gate the cleaned article below
-        rec.acceptReason = `cut-and-publish (removed ${cut} sentence(s) + ${fieldCuts} field item(s); ${words}w remain)`;
-        console.log(`  ✂ cut-and-publish: removed ${cut} flagged sentence(s) + ${fieldCuts} field item(s), ${words}w remain → web-check next`);
-      } else if (cut + fieldCuts > 0) {
-        article.body = bodyBefore; // restore — this article is HELD, keep the audit trail intact
-        console.log(`  ⛔ HELD (not cut-and-published): ${idBlock ? "wrong-entity/identity block" : !nucleusSurvives ? "the cut removed the story's subject" : `gutted to ${words}w (<${cutFloor})`} — a broken article is held, never shipped`);
-      }
-    }
+    let article, classification, image, scored, pass = false, corrections = null;
+    const RUN_JUDGE = process.env.RUN_JUDGE === "1"; // paid quality judge OFF by default (cost) — QA opt-in only
 
-    // Re-apply the DETERMINISTIC structured fields the writer must NEVER own (verified TMDB/OMDb figures, the
-    // official trailer/embed ids, the reaction tweet ids). Used after a surgical web-correction re-writes the
-    // article, so a corrected draft can't drop or re-hallucinate a system-supplied value.
-    const reapplyStructured = () => {
+    // Attach the DETERMINISTIC, system-owned structured fields the writer must NEVER author (verified TMDB/OMDb
+    // figures, the official embed ids, the reaction tweet ids). Re-run after every generate so a retry can't drop them.
+    const attachStructured = () => {
       if (wtw?.length) article.whereToWatch = toWhereToWatch(wtw);
       if (trailer?.youtubeId) { article.youtubeId = trailer.youtubeId; article.releaseInfo = fmtRelease(trailer.releaseDate); }
       if (reactionTweets?.ids?.length) article.tweetIds = reactionTweets.ids;
@@ -459,95 +357,48 @@ async function processTopic(topic, i) {
       if (personCredits?.length) article.filmography = personCredits.map((c) => ({ year: c.year, title: c.title, role: c.character, type: c.type }));
     };
 
-    // ── INDEPENDENT WEB REALITY-CHECK — the LAST gate before EVERY publish, and the ONLY NON-CIRCULAR one: every
-    // other gate checks the article against the SAME bundle the writer used, so a single source's OWN error (a
-    // wrong credit, "set to reprise"→"confirmed") passes them all. This step checks the load-bearing specifics
-    // against the LIVE OPEN WEB. Two root-cause fixes (2026-07-03, PART HH.2):
-    //  (1) FAIL-CLOSED — if the check cannot run after retries, the article is UNVERIFIED-against-the-world → HOLD.
-    //      Never silently publish an unverified article (the Thor `webCheck:{ran:false}`-then-published failure).
-    //  (2) CORRECT-IN-PLACE — a contradiction that carries a known-correct value is fixed by a SURGICAL writer pass
-    //      using the web's value, then RE-VERIFIED; only what is STILL wrong is cut. This stops cut-only from
-    //      deleting the TRUE sentence while keeping the FALSE one (the Kamiyama-directs vs Tada-directs failure).
-    if (pass && WEB_VERIFY && !DRY && article?.body) {
-      let web = await webVerifyArticle({ topic, article }).catch((e) => ({ ran: false, contradictions: [], error: String(e?.message || e).slice(0, 120) }));
-      // (1) COULD-NOT-RUN. LIGHT mode: publish on trust-the-source (the story is from a top outlet). STRICT mode
-      // (WEB_VERIFY_STRICT=1): fail-closed HOLD. The owner's model is trust-the-source + a light corrective check.
-      if (!web.ran) {
-        rec.webCheck = { ran: false, error: web.error || "no result" };
-        if (WEB_VERIFY_LIGHT) { console.log(`  ⚠ web check could not run (${web.error || "no result"}) — publishing on trust-the-source (light mode)`); }
-        else { pass = false; rec.holdReason = `web reality-check could not run (${web.error || "no result"}) — held (strict)`; console.log(`  ⛔ HELD: web check could not run — fail-closed (strict)`); }
-      } else if (web.contradictions.length) {
-        console.log(`  🌐 web reality-check: ${web.contradictions.length} contradicted — ${web.contradictions.map((c) => c.claim.slice(0, 40)).join(" | ")}`);
-        // (2a) CORRECT-IN-PLACE: hand the web's CORRECT values to a surgical writer pass (fix only these specifics —
-        // e.g. the Tyga chart-peak numbers), then RE-VERIFY. Repairs the wrong specific instead of deleting the line.
-        const correctable = web.contradictions.filter((c) => c.correct && c.correct.trim().length > 1);
-        if (correctable.length) {
-          const webCorr = correctable.map((c) => `- The article states "${c.claim}" — FACTUALLY WRONG per the live web. ${c.problem}. The CORRECT fact is: ${c.correct}. Replace the wrong specific with the correct one IN PLACE; keep all surrounding TRUE information (never delete a true neighbouring sentence).`).join("\n");
-          const fixed = await generate({ topic, model: MODELS.generator, corrections: webCorr, previousArticle: article }).catch(() => null);
-          if (fixed?.article?.body) {
-            article = fixed.article;
-            cutPublished = true; // body rewritten → re-gate below re-scores it (no stale quality score ships)
-            reapplyStructured();
-            web = await webVerifyArticle({ topic, article }).catch(() => ({ ran: false, contradictions: [] }));
-            console.log(`  ↻ web-correct: surgically fixed ${correctable.length} specific(s) → re-verify: ${web.ran ? web.contradictions.length + " still wrong" : "n/a (light: publish)"}`);
-          }
-        }
-        // (2b) whatever is STILL contradicted after correction → box-office structured fix + CUT that exact prose.
-        const remaining = web.ran ? web.contradictions : [];
-        if (remaining.length) {
-          if (article.boxOffice) {
-            for (const c of remaining) {
-              if (/\$|\bmillion\b|\bbillion\b|gross|box.?office|domestic/i.test(`${c.claim} ${c.problem}`)) {
-                const m = String(c.correct || "").match(/\$\s?[\d][\d,.]*\s?(?:million|billion|m|b)?/i);
-                if (m) article.boxOffice.domestic = m[0].replace(/\s+/g, " ").trim(); else delete article.boxOffice.domestic;
-              }
-            }
-          }
-          const { cut, fieldCuts } = cutArticle(article, remaining.map((c) => c.claim));
-          if (cut + fieldCuts > 0) console.log(`  ✂ web-cut: removed ${cut} still-wrong sentence(s) + ${fieldCuts} field item(s)`);
-          // LIGHT mode never HOLDS on a gutted result — it publishes the corrected/trimmed remainder (a top-outlet
-          // brief minus one wrong line is still good). STRICT mode holds a gutted piece.
-          const words = wordsOf(article.body);
-          if (!WEB_VERIFY_LIGHT && words < cutFloor) {
-            pass = false;
-            rec.holdReason = `web reality-check gutted the article (${words}w) — held (strict)`;
-            console.log(`  ⛔ HELD after web-cut: ${words}w remain (strict)`);
-          }
-        }
-        rec.webCheck = { ran: true, corrected: correctable.length, remaining: (web.ran ? web.contradictions.length : 0) };
-      } else { rec.webCheck = { ran: true, contradictions: 0, checked: web.checkedCount || 0 }; }
-    }
-
-    // PUBLISH INVARIANT (STRICT only): a published article MUST have been checked against the live world.
-    // STRICT-only invariant: never publish an unverified article. In LIGHT mode (the default) trust-the-source
-    // covers a check that couldn't run, so this does not apply.
-    if (!WEB_VERIFY_LIGHT && pass && WEB_VERIFY && !DRY && !(rec.webCheck && rec.webCheck.ran === true)) {
-      pass = false;
-      rec.holdReason = rec.holdReason || "publish invariant: web reality-check did not run — held (strict)";
-      console.log(`  ⛔ HELD (publish invariant, strict): the web reality-check did not run`);
-    }
-
-    // ── RE-GATE AFTER CUTTING (2026-07-03 fix — the score-0 publish bug). When the gate SHORT-CIRCUITED on a fact
-    // block it returned score 0 without ever running the quality judge; cut-and-publish then removed the flagged
-    // claims but the article shipped UNSCORED at 0 (and a cut could leave the body incoherent — a dangling "That
-    // series…" with its antecedent removed). Re-run the gate ONCE on the fully-cleaned article: the fabrications
-    // are gone so it no longer short-circuits → a REAL score + a fresh block scan. If it now clears the floor,
-    // publish with the true score; if it still blocks or scores below ACCEPT_FLOOR, HOLD (never ship a broken cut).
-    if (cutPublished && pass && !DRY) {
-      const rescore = await gate({ article, topic, judgeModel: judge }).catch(() => null);
-      if (rescore) {
-        const reBlocks = classifyBlocks(rescore.hardBlocks).block;
-        if (reBlocks.length || (rescore.score || 0) < ACCEPT_FLOOR) {
-          pass = false;
-          rec.holdReason = `re-gate after cut: ${reBlocks.length ? "residual block — " + reBlocks.slice(0, 2).join("; ") : `score ${rescore.score} < ${ACCEPT_FLOOR} after cutting`}`;
-          console.log(`  ⛔ HELD (re-gate after cut): ${reBlocks.length ? reBlocks.slice(0, 2).join("; ") : `score ${rescore.score} < ${ACCEPT_FLOOR}`}`);
-        } else {
-          scored = rescore; // adopt the REAL score + scorecard (no more score-0 publishes)
-          rec.acceptReason = `${rec.acceptReason || "cut-and-publish"} → re-gated clean at ${rescore.score}`;
-          console.log(`  ↻ re-gate after cut: clean at score ${rescore.score} — publishing with the real score`);
-        }
+    // ── WRITE (faithful rewrite) → FIDELITY GUARD (2026-07-04, NEWS_AUTOMATION_SPEC §3). The writer works ONLY from
+    // the injected REFERENCE FACTS (the top outlet's own reporting + the AUTHORITATIVE TMDB/OMDb figures); the guard
+    // trims any checkable specific it introduced beyond the source. NO Sonar, NO padding, NO accuracy holds — a
+    // faithful brief (short if the source is thin) is a valid article. Attempt 2 (only if needed) tightens format or
+    // re-grounds a stray; whatever remains publishes (strays are trimmed after the loop).
+    for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
+      ({ article } = await generate({ topic, model: MODELS.generator, corrections, previousArticle: attempt > 1 ? article : null }));
+      attachStructured();
+      // CLASSIFICATION is TOPIC-derived (a FIND/seed topic carries the authoritative category/subcategory/formatTag);
+      // tags derive deterministically. The LLM classifier runs ONLY for a legacy topic with no categorization, once.
+      if (!classification) {
+        if (topic.category && topic.subcategory) classification = { category: topic.category, subcategory: topic.subcategory, formatTag: topic.formatTag || "news", tags: deriveTags(topic) };
+        else { classification = await classify({ article, topic, model: MODELS.classifier }); if (!classification.tags?.length) classification.tags = deriveTags(topic); }
+        canonicalize(classification); // NEWS-ONLY chokepoint: clamp to the 8 news forms + a news silo
       }
+      scored = await gate({ article, topic, judgeModel: judge, runJudge: RUN_JUDGE });
+      const embedMissing = (topic.formatTag === "trailer" && !article.youtubeId) || (topic.formatTag === "reaction" && !article.tweetIds?.length);
+      // Retry ONCE only to IMPROVE — a format nit (missing FAQ / keyword-not-in-title / dense), a stray to re-ground,
+      // or a missing required embed. Never a hard failure: whatever remains after the final attempt publishes.
+      const needsRetry = attempt < MAX_ATTEMPTS && (scored.formatBlocks.length > 0 || scored.cutClaims.length > 0 || embedMissing);
+      corrections = needsRetry
+        ? ([scored.corrections, scored.formatBlocks.length ? "Also tighten these (keep the voice + engagement; add NOTHING not in the sources): " + scored.formatBlocks.join("; ") : ""].filter(Boolean).join("\n").trim() || null)
+        : null;
+      rec.stages[`attempt${attempt}`] = { score: scored.score, cat: `${classification.category}/${classification.subcategory}`, format: scored.formatBlocks, cuts: scored.cutClaims.length, broken: scored.brokenHold };
+      console.log(`  attempt ${attempt}: ${scored.score != null ? `score ${scored.score} ` : ""}[${classification.category}/${classification.subcategory}] fidelity-cuts:${scored.cutClaims.length} format-nits:${scored.formatBlocks.length}${scored.brokenHold.length ? ` ⛔BROKEN:${scored.brokenHold.join(";")}` : ""}`);
+      if (!needsRetry) break;
     }
+    // FIDELITY TRIM (never a hold): delete any checkable specific the writer added beyond the source — from the body
+    // AND takeaways/FAQ/structured fields (the ONE cutter) — and publish the faithful remainder. With the faithful
+    // writer this is usually a no-op; when it fires it removes exactly the kind of invented figure that used to ship.
+    if (!DRY && scored.cutClaims.length) {
+      const { cut, fieldCuts } = cutArticle(article, scored.cutClaims);
+      if (cut + fieldCuts > 0) { article.body = trimIncomplete(dedupeSentences(article.body)); console.log(`  ✂ fidelity trim: removed ${cut} sentence(s) + ${fieldCuts} field item(s) not found in the source`); }
+    }
+
+    // PUBLISHABILITY — accuracy NEVER holds (the piece is faithful-by-construction + trimmed). The only holds are a
+    // genuinely broken article (no title / garbled / prompt-leak), a niche whose required embed is missing, or a body
+    // trimmed below a real-article floor. (No hero image → held at the last-mile image step below.)
+    const embedMissing = (topic.formatTag === "trailer" && !article.youtubeId) || (topic.formatTag === "reaction" && !article.tweetIds?.length);
+    const bodyWords = (article.body || "").split(/\s+/).filter(Boolean).length;
+    pass = scored.brokenHold.length === 0 && !embedMissing && bodyWords >= 80;
+    if (!pass) rec.holdReason = scored.brokenHold.length ? `broken article: ${scored.brokenHold.join("; ")}` : embedMissing ? `${topic.formatTag}: required embed missing` : `body too short after trim (${bodyWords}w)`;
 
     // FINAL POLISH (deterministic, before assemble): collapse duplicated sentences and trim any truncated/
     // cut-orphaned fragment — can never add a fact.
@@ -617,13 +468,11 @@ async function processTopic(topic, i) {
       rec.status = "published"; rec.score = scored.score; rec.category = classification.category; rec.subcategory = classification.subcategory;
       console.log(`  ✓ ${DRY ? "DRY (md not written)" : "WROTE " + out.slug + ".md"}${rec.acceptReason ? " [" + rec.acceptReason + "]" : ""} [${classification.category}/${classification.subcategory}] score ${scored.score}`);
     } else {
-      // C6 terminal disposition: distinguish a HELD-FOR-FABRICATION/grounding failure (a block remained) from a
-      // HELD-FOR-WEAK-WRITING article (verified accurate, but score < the accept floor). Both go to review; the
-      // reason makes the queue triageable (and tells us whether the writer or the grounding is the bottleneck).
-      const finalBlocks = classifyBlocks(scored.hardBlocks);
-      rec.holdReason = finalBlocks.block.length ? `accuracy/grounding block: ${finalBlocks.block.slice(0, 3).join("; ")}` : `verified accurate but score ${scored.score} < ${ACCEPT_FLOOR} (weak writing)`;
+      // Terminal hold — rare in the lean model: a genuinely broken article (no title/garbled), a missing required
+      // embed, a body trimmed too short, or no hero image. rec.holdReason was set where the hold was decided.
       rec.status = "needs_review";
-      console.log(`  → REVIEW QUEUE (score ${scored.score}) — ${finalBlocks.block.length ? "ACCURACY/GROUNDING block" : "weak writing, accurate"}`);
+      rec.holdReason = rec.holdReason || "held (no hero image)";
+      console.log(`  → REVIEW QUEUE — ${rec.holdReason}`);
     }
     // FULL-PIPELINE MONITOR — verify every stage was covered + audit the article for everything.
     const report = auditArticle({ topic, article, classification, image, scored, body: auditBody });

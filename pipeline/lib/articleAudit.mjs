@@ -79,15 +79,18 @@ export function auditArticle({ topic, article, classification, image, scored, bo
   add("LINKS", `external sources ≥${prof.ext}`, external.length >= prof.ext, `${external.length}`);
   add("LINKS", "no phantom 'our feature' text", !/\b(our feature|check out our|read more in our)\b/i.test(text), "");
 
-  // 7 GATE — floors mirror gate.mjs (post-pivot 5s; accuracy subscore is informational now that the
-  // deterministic verify layers own fabrication, so it is ADVISORY below, not a must-pass).
-  add("GATE", `score ≥ ${GATE.publishMin}`, (scored?.score || 0) >= GATE.publishMin, scored?.score);
+  // 7 GATE — the paid quality judge is OPT-IN now (NEWS_AUTOMATION_SPEC §3): when it did not run, scored.score is
+  // null and these subscores are absent, so every judge-dependent line is ADVISORY (passes) — we never fail an
+  // article for a score the lean pipeline deliberately didn't compute. Fidelity (the real accuracy guard) is checked
+  // by the "zero hard-blocks" line, which carries only genuine holds now.
+  const judged = scored?.score != null; // did the opt-in judge run?
+  add("GATE", judged ? `score ≥ ${GATE.publishMin}` : "quality score (judge off — advisory)", !judged || scored.score >= GATE.publishMin, judged ? scored.score : "judge off");
   add("GATE", "zero hard-blocks", !(scored?.hardBlocks?.length), (scored?.hardBlocks || []).join("; ") || "none");
-  add("GATE", "accuracy (no fabrication)", (ss.accuracy ?? 10) >= 8, ss.accuracy);
-  add("GATE", `infoGain ≥ ${GATE.infoGainMin}`, (ss.infoGain ?? 0) >= GATE.infoGainMin, ss.infoGain);
-  add("GATE", "readability ≥ 5", (ss.readability ?? 0) >= 5, ss.readability);
-  add("GATE", "humanVoice ≥ 5", (ss.humanVoice ?? 0) >= 5, ss.humanVoice);
-  add("GATE", "phrasing ≥ 5", (ss.phrasing ?? 0) >= 5, ss.phrasing);
+  add("GATE", "accuracy (no fabrication)", (ss.accuracy ?? 10) >= 8, ss.accuracy ?? "n/a");
+  add("GATE", `infoGain ≥ ${GATE.infoGainMin}`, (ss.infoGain ?? GATE.infoGainMin) >= GATE.infoGainMin, ss.infoGain ?? "n/a");
+  add("GATE", "readability ≥ 5", (ss.readability ?? 5) >= 5, ss.readability ?? "n/a");
+  add("GATE", "humanVoice ≥ 5", (ss.humanVoice ?? 5) >= 5, ss.humanVoice ?? "n/a");
+  add("GATE", "phrasing ≥ 5", (ss.phrasing ?? 5) >= 5, ss.phrasing ?? "n/a");
 
   // overall: every part's MUST-pass checks (internal-links is advisory for brand-new topics; the judge's
   // accuracy subscore is advisory — fabrication enforcement is the deterministic layers' job now).

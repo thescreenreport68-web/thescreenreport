@@ -1,8 +1,13 @@
-// Stage 1 — DISCOVER (2026-07-03 simplification, owner directive): TOP-OUTLET RSS is the ONLY driver. The broad
-// Google-News web search and the TMDB "trending backbone" were REMOVED — they dragged in the whole open web
-// (Bollywood, anime/game blogs, quiz pages, listicles = the junk). We now surface only the latest stories from the
-// major trades' own feeds, and write them faithfully. (gnews.mjs/tmdb.mjs remain in the tree, just not wired here.)
+// Stage 1 — DISCOVER (2026-07-04, NEWS_AUTOMATION_SPEC §6b). TWO free discovery lanes so the finder is never blind to
+// a big trending story that scrolled off a 10-item feed:
+//   (1) TOP-OUTLET RSS — the major trades' MAIN + SECTION feeds (film / tv / box-office) for topic-concentrated reach.
+//   (2) GOOGLE-NEWS SEARCH — trending Hollywood terms (weekend box office, new trailer, big titles), ranked by what's
+//       actually trending right now, so a story a day old (the Odyssey trailer, Supergirl's box-office bomb) is found.
+// gnews is kept to CREDIBLE outlets (tier>=5 drops tabloid/junk); the scope/editorial gate downstream drops anything
+// out-of-scope (games/anime/regional) and the ROUNDUP/RETRO guards drop listicles — so trending discovery is restored
+// WITHOUT the open-web junk that made us remove it before.
 import { discoverRSS } from "./sources/rss.mjs";
+import { discoverGoogleNews } from "./sources/gnews.mjs";
 
 export function candidateKey(c) {
   if (c.tmdbId) return (c.mediaType || "x") + ":" + c.tmdbId;
@@ -15,14 +20,20 @@ function countBy(arr, k) {
 }
 
 export async function discover(monitor, opts = {}) {
-  // The ONLY source: the top trades' real-time RSS feeds.
-  const rss = await discoverRSS(opts.rss || {});
-  monitor.stage("discover", `top-outlet RSS → ${rss.length} fresh items`, countBy(rss, "outlet"));
+  // Two free lanes in parallel: top-outlet RSS (main + section feeds) + Google-News trending search.
+  const [rss, gnewsRaw] = await Promise.all([
+    discoverRSS(opts.rss || {}),
+    discoverGoogleNews(opts.gnews || {}).catch(() => []),
+  ]);
+  // gnews: keep only CREDIBLE outlets (tier>=5 drops known tabloids/junk; unknowns default to 5 and are kept, then
+  // filtered downstream by the scope/editorial gate). This restores trending discovery without the open-web junk.
+  const gnews = gnewsRaw.filter((c) => (c.sourceTier || 0) >= 5);
+  monitor.stage("discover", `RSS (main+section) → ${rss.length} · Google-News trending → ${gnews.length}`, countBy([...rss, ...gnews], "outlet"));
 
-  // intra-run de-dup by candidate key
+  // intra-run de-dup by candidate key (RSS first so a story carried by both keeps the top-trade RSS record).
   const seen = new Set();
   const uniq = [];
-  for (const c of rss) {
+  for (const c of [...rss, ...gnews]) {
     const k = candidateKey(c);
     if (seen.has(k)) continue;
     seen.add(k);
@@ -31,6 +42,7 @@ export async function discover(monitor, opts = {}) {
   }
   monitor.count("discovered", uniq.length);
   monitor.count("rssFresh", rss.length);
-  monitor.stage("discover", `${uniq.length} unique candidates (top-outlet RSS only)`);
+  monitor.count("gnewsTrending", gnews.length);
+  monitor.stage("discover", `${uniq.length} unique candidates (top-outlet RSS + Google-News trending)`);
   return uniq;
 }

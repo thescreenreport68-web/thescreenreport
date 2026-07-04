@@ -41,7 +41,17 @@ const ROUNDUP_REVIEW = /\b(tracks?|songs?|albums?|movies?|films?|episodes?|shows
 // (the Spartacus 1960-film-vs-2010-series failure entered as such a retrospective). A real news event has an event
 // verb (cast/died/renewed/dropped/won), not a temporal-retrospective/opinion framing. Deterministic title backstop.
 const RETRO_OPINION = /\b\d+\s+years?\s+(later|after|on)\b|\bstill (one of|holds? up|the best|relevant|worth)\b|\brevisit(ing)?\b|\brewatch\b|\blooking back\b|\banniversary\b|\b(most )?(underrated|overlooked|forgotten)\b|\bwhy .{0,40}\b(is|are|remains?|still|should)\b|\bhidden gem\b|\bdeserves? (more|a)\b/i;
-const freshCandidates = candidates.filter((c) => !published.titles.has(slugKey(c.title)) && !ROUNDUP_REVIEW.test(c.title || "") && !RETRO_OPINION.test(c.title || ""));
+// OUT-OF-SCOPE junk (owner 2026-07-04: NO anime/games/Bollywood — the exact junk the Google-News trending lane can
+// drag in). Deterministic pre-categorize drop so it never costs a categorize call; the editorial inScope gate is the
+// LLM backstop for whatever slips past. Title patterns + a small blocklist of pure Bollywood/anime outlets.
+const SCOPE_JUNK = /\banime\b|\bmanga\b|\bwebtoon\b|\b(video ?games?|gameplay|playstation|xbox|nintendo|steam deck|speedrun)\b|\bbollywood\b|\bcrore\b|box office collections|\b(hindi|tamil|telugu|kannada|malayalam|punjabi)\s+(film|movie|cinema|box office|actor|actress)\b/i;
+const JUNK_OUTLETS = new Set(["crunchyroll", "pinkvilla", "bollywood hungama", "koimoi", "the times of india", "times of india"]);
+const freshCandidates = candidates.filter((c) =>
+  !published.titles.has(slugKey(c.title)) &&
+  !ROUNDUP_REVIEW.test(c.title || "") &&
+  !RETRO_OPINION.test(c.title || "") &&
+  !SCOPE_JUNK.test(c.title || "") &&
+  !JUNK_OUTLETS.has((c.outlet || "").toLowerCase().trim()));
 if (candBefore - freshCandidates.length > 0) monitor.stage("dedup", `dropped ${candBefore - freshCandidates.length} already-published candidate(s) by title; ${freshCandidates.length} remain`);
 const fresh = freshCandidates.filter((c) => c.ageMin != null).sort((a, b) => a.ageMin - b.ageMin);
 const backbone = freshCandidates.filter((c) => c.ageMin == null).sort((a, b) => (b.popularity || 0) - (a.popularity || 0));

@@ -28,6 +28,19 @@ const FEEDS = [
   { url: "https://www.billboard.com/feed/", outlet: "Billboard", tier: 7, cats: ["music"] },
   { url: "https://www.rollingstone.com/music/feed/", outlet: "Rolling Stone", tier: 7, cats: ["music"] },
   { url: "https://variety.com/v/music/feed/", outlet: "Variety Music", tier: 7, cats: ["music"] },
+  // ── SECTION FEEDS (2026-07-04, NEWS_AUTOMATION_SPEC §6b): topic-concentrated feeds from the SAME top trades so
+  // the big FILM / TV / BOX-OFFICE stories that scroll off each outlet's ~10-item MAIN feed within hours are still
+  // discovered (the Odyssey-trailer / Supergirl-box-office-bomb blind spot). These bias reach toward exactly the
+  // tentpole-movie news we prioritize (movies-first ~80/20). Cross-feed dupes collapse in discover's title de-dup.
+  // (URLs live-checked 2026-07-04; Deadline uses /tag/ feeds, THR uses /c/ + /t/ feeds.)
+  { url: "https://variety.com/v/film/feed/", outlet: "Variety", tier: 7, cats: ["movies"] },
+  { url: "https://variety.com/v/tv/feed/", outlet: "Variety", tier: 7, cats: ["tv"] },
+  { url: "https://variety.com/t/box-office/feed/", outlet: "Variety", tier: 7, cats: ["movies"] },
+  { url: "https://deadline.com/tag/movies/feed/", outlet: "Deadline", tier: 7, cats: ["movies"] },
+  { url: "https://deadline.com/tag/box-office/feed/", outlet: "Deadline", tier: 7, cats: ["movies"] },
+  { url: "https://www.hollywoodreporter.com/c/movies/feed/", outlet: "THR", tier: 7, cats: ["movies"] },
+  { url: "https://www.hollywoodreporter.com/c/tv/feed/", outlet: "THR", tier: 7, cats: ["tv"] },
+  { url: "https://www.hollywoodreporter.com/t/box-office/feed/", outlet: "THR", tier: 7, cats: ["movies"] },
 ];
 
 const strip = (s) => {
