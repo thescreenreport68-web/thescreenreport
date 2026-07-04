@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { getSupabase } from "@/lib/supabase";
 import { renderGoogleButton } from "@/lib/googleAuth";
-import { getCurrentUser, type CurrentUser } from "@/lib/comments";
+import { getCurrentUser, signOut, type CurrentUser } from "@/lib/comments";
 import ProfileSettings from "./ProfileSettings";
 
 /* The always-visible account control in the header (every device). The dropdown
@@ -23,7 +23,6 @@ function PersonIcon() {
 
 export default function HeaderAuth() {
   const [me, setMe] = useState<CurrentUser>(null);
-  const [ready, setReady] = useState(false);
   const [open, setOpen] = useState(false);
   const [editing, setEditing] = useState(false);
   const [pos, setPos] = useState<{ top: number; right: number } | null>(null);
@@ -35,7 +34,6 @@ export default function HeaderAuth() {
   const refresh = async () => {
     if (!getSupabase()) return;
     setMe(await getCurrentUser());
-    setReady(true);
   };
 
   useEffect(() => {
@@ -77,13 +75,12 @@ export default function HeaderAuth() {
     }
   }, [open, me]);
 
-  const signOut = async () => {
-    await getSupabase()?.auth.signOut();
-    window.dispatchEvent(new Event("tsr-auth-changed"));
+  const doSignOut = async () => {
     setOpen(false);
+    await signOut(); // hardened: only flips UI when the session actually cleared
   };
 
-  if (!getSupabase() || !ready) return null;
+  if (!getSupabase()) return null;
 
   return (
     <>
@@ -137,7 +134,7 @@ export default function HeaderAuth() {
                       Edit Profile
                     </button>
                     <button
-                      onClick={signOut}
+                      onClick={doSignOut}
                       className="btn-label mt-2 w-full border border-hair py-2 text-slate transition-colors duration-150 hover:border-red hover:text-red"
                     >
                       Sign Out

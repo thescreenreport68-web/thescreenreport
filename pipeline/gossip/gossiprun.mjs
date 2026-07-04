@@ -1,10 +1,12 @@
-// GOSSIP — TOP ORCHESTRATOR (the whole pipeline for one run). discover -> categorize -> [per topic]
-// gather -> frame -> write -> legal+quality gate -> publish -> JUDGE (score). Prints a monitoring report. All
-// stage impls are injectable so the harness drives it offline; the CLI runs it live.
-//   Live run (one article per category): cd site-gossip && set -a; . "/Users/sivajithcu/Movie News site/.env"; set +a; node pipeline/gossip/gossiprun.mjs --one-per-category [--dry-run]
-import { discoverGossip } from "./discover.mjs";
-import { discoverSocial } from "./discoverSocial.mjs";
-import { categorizeGossip } from "./categorize.mjs";
+// GOSSIP — MAKE orchestrator (the consumer half of the FIND→MAKE seam). FIND (`find.mjs`) fills the backlog queue;
+// this drains it — or, in the one-shot local/offline path, discovers inline via `gossipFind` — and runs each topic
+// through the full single-topic pipeline (gather → editorial gate → frame → write → gates → JUDGE → publish), then
+// picks a hero + internal links. Prints a monitoring report. All stage impls are injectable so the harness drives
+// it offline; the CLI runs live.
+//   FIND→MAKE (cloud drip):  node pipeline/gossip/find.mjs                          # fill the backlog
+//                            node pipeline/gossip/gossiprun.mjs --from-find --limit=1   # publish one from it
+//   One-shot local:          node pipeline/gossip/gossiprun.mjs --limit=20             # discover + publish inline
+import { gossipFind, dequeue } from "./find.mjs";
 import { runGossip } from "./run.mjs";
 import { writeGossipArticle } from "./assemble.mjs";
 import { detectGossipType } from "./writer.mjs";
@@ -14,7 +16,6 @@ import { dedupCheck, recordPublished } from "./dedup.mjs";
 import { pickHero } from "./heroImage.mjs";
 import { buildLinkIndex } from "./linkIndex.mjs";
 import { findRelatedLinks } from "./internalLinks.mjs";
-import { correctSubjectType } from "./categoryGuard.mjs";
 
 // One topic per category (celebrity/music/awards) — topics arrive freshest-first from discover, so first wins.
 function onePerCategoryPick(topics) {
@@ -26,41 +27,47 @@ function onePerCategoryPick(topics) {
   return [...byCat.values()];
 }
 
-export async function gossipRun({ discoverImpl, categorizeImpl, runImpl = runGossip, writeImpl = writeGossipArticle, heroImpl = pickHero, linkIndexImpl = buildLinkIndex, findRelatedImpl = findRelatedLinks, categoryGuardImpl = correctSubjectType, onePerCategory = false, verify = true, judge = true, hero = false, links = false, categoryGuard = false, dedup = true, social = true, storeImpl = null, embedImpl, adjudicateImpl, limit = 0, dryRun = false, nowMs } = {}) {
-  // Discovery = trade RSS (confirmed news) + SOCIAL (the speculation lane). Social signals are discovery tips
-  // only; categorize scope-filters them and the dedup/content-finder/verify stages establish every fact.
-  const rss = discoverImpl ? await discoverImpl() : await discoverGossip();
-  const soc = discoverImpl ? [] : (social ? await discoverSocial() : []);
-  const candidates = [...rss, ...soc];
-  // Shortlist for the categorize LLM (cost control). RESERVE ~40% for SOCIAL so the speculation lane (which RSS
-  // can't see) actually reaches categorize instead of being crowded out by the much larger RSS set. The social
-  // feed is noisy (Pop Crave posts sports/anniversaries too); categorize's scope filter drops the off-niche ones.
-  const SHORT = 100, socN = Math.min(soc.length, Math.round(SHORT * 0.4));
-  const shortlist = [...rss.slice(0, SHORT - socN), ...soc.slice(0, socN)];
-  const all = categorizeImpl ? await categorizeImpl(candidates) : await categorizeGossip(shortlist);
-  // CATEGORY GUARD (deterministic): correct any non-musician the LLM mislabeled "musician" BEFORE we pick per
-  // category, so a reality star/actor never files under Music. Only touches Music-routed topics (others skip, no
-  // network). Off by default offline; the CLI turns it on.
-  if (categoryGuard) { for (const t of all) { try { const s = await categoryGuardImpl(t); if (s) t.subjectType = s; } catch { /* fail-safe: keep the LLM label */ } } }
-  let topics = onePerCategory ? onePerCategoryPick(all) : all;
-  if (limit) topics = topics.slice(0, limit);
+export async function gossipRun({
+  discoverImpl, categorizeImpl, runImpl = runGossip, writeImpl = writeGossipArticle,
+  heroImpl = pickHero, linkIndexImpl = buildLinkIndex, findRelatedImpl = findRelatedLinks, categoryGuardImpl,
+  onePerCategory = false, verify = true, judge = true, hero = false, links = false, categoryGuard = false,
+  dedup = true, social = true, storeImpl = null, embedImpl, adjudicateImpl,
+  limit = 0, fromFind = false, dryRun = false, nowMs,
+} = {}) {
   const now = nowMs ?? Date.now();
   const store = dedup ? (storeImpl || openStore()) : null;
-  // STEP 7 — build the internal-link index ONCE over the real published corpus (off by default offline; CLI on).
+  // STEP 7 — build the internal-link index ONCE over the published corpus (off by default offline; the CLI turns it on).
   let linkIndex = null;
   if (links) { try { linkIndex = await linkIndexImpl(); } catch { linkIndex = null; } }
-  const report = { candidates: candidates.length, inScope: all.length, topics: topics.length, published: [], held: [], blocked: [], skipped: [], rejected: [] };
 
-  for (let i = 0; i < topics.length; i++) {
-    const t = topics[i];
+  // TOPIC SOURCE: --from-find drains the FINDER's backlog queue (a pop IS the claim); otherwise discover inline
+  // (the one-shot local run + offline tests). Same categorized-topic shape either way.
+  let inlineTopics = null, inlineIdx = 0;
+  if (!fromFind) {
+    const all = await gossipFind({ discoverImpl, categorizeImpl, categoryGuardImpl, categoryGuard, social });
+    inlineTopics = onePerCategory ? onePerCategoryPick(all) : all;
+    if (limit) inlineTopics = inlineTopics.slice(0, limit);
+  }
+  const nextTopic = () => fromFind ? (dequeue(1)[0] || null) : (inlineIdx < inlineTopics.length ? inlineTopics[inlineIdx++] : null);
+  // --from-find keeps draining until `limit` articles actually PUBLISH (skipping past any held/dup) or the queue
+  // empties — so a drip tick reliably yields one live article. Inline mode processes its fixed (already-limited) list.
+  const publishTarget = fromFind ? (limit || 1) : Infinity;
+
+  const report = { mode: fromFind ? "from-find" : "inline", inScope: fromFind ? null : inlineTopics.length, topics: 0, published: [], held: [], blocked: [], skipped: [], rejected: [] };
+
+  let i = 0;
+  while (report.published.length < publishTarget) {
+    const t = nextTopic();
+    if (!t) break;
+    report.topics++;
     const dateISO = new Date(now - i * 60000).toISOString();
+    i++;
     const cat = routeBySubject(t.subjectType).category;
-    // STEP 2 — DEDUP at the FRONT, before any content-find/write spend. Never republish a story (even reworded).
+    // STEP 2 — DEDUP claim-guard, before any content-find/write spend. Never republish a story — a duplicate, a
+    // fail-closed HOLD, and an "UPDATE" on the same event are all skipped; only a truly NEW event runs.
     let dd = null;
     if (dedup && store) {
       dd = await dedupCheck(t, store, { embedImpl, adjudicateImpl, now: new Date(now) });
-      // NEVER RE-POST (owner rule): skip a duplicate, a fail-closed HOLD, AND an "UPDATE" on the same event — a new
-      // detail/angle on a story we already published is a re-post that bores the audience. Only a truly NEW event runs.
       if (dd.decision === "DUPLICATE" || dd.decision === "HOLD" || dd.decision === "UPDATE") {
         report.skipped.push({ id: t.id, category: cat, decision: dd.decision, reason: dd.reason, parentKey: dd.parentKey || null });
         continue;
@@ -68,8 +75,6 @@ export async function gossipRun({ discoverImpl, categorizeImpl, runImpl = runGos
     }
     let r;
     try {
-      // The whole single-topic quality loop (write → gates → surgical self-correct → JUDGE backstop → re-judge)
-      // lives in runGossip now, so it can hand the judge's findings back to the writer. We just consume its verdict.
       r = await runImpl(t, { verify, judge });
     } catch (e) {
       report.blocked.push({ id: t.id, category: cat, status: "ERROR", reason: String(e?.message || e).slice(0, 140) });
@@ -77,14 +82,12 @@ export async function gossipRun({ discoverImpl, categorizeImpl, runImpl = runGos
     }
     if (r.status === "PUBLISH") {
       const auto = r.auto || null; // judge already ran inside runGossip as the backstop gate
-      // STEP 6 — pick a powerful, story-specific, LEGAL hero (TMDB still / receipt embed; never paparazzi).
-      // Off by default so offline tests never hit the network; the live CLI sets hero:true. Fail-safe → no hero.
+      // STEP 6 — pick a powerful, story-specific hero. Off by default offline; the live CLI sets hero:true. Fail-safe → none.
       if (hero) { try { r.article.hero = await heroImpl({ topic: { ...t, gossipType: detectGossipType(t) }, article: r.article, bundle: r.bundle, frame: r.frame }); } catch { r.article.hero = null; } }
       // STEP 7 — internal links to REAL related published articles (shared-entity gate + contradiction firewall).
       if (links && linkIndex) { try { r.article.relatedLinks = await findRelatedImpl({ article: r.article, topic: t, index: linkIndex, selfSlug: t.slug }); } catch { r.article.relatedLinks = []; } }
       const out = writeImpl({ article: r.article, frame: r.frame, provenance: r.provenance, route: r.route, topic: t, dateISO, dryRun });
-      // record it in the dedup store so future runs (incl. the wider social net) won't re-publish it.
-      // A DRY RUN never mutates the store (it checks dedup but doesn't mark these as published).
+      // record it in the dedup store so future runs won't re-publish it. A DRY RUN never mutates the store.
       if (dedup && store && dd && !dryRun) recordPublished(t, store, { urlHash: dd.urlHash, eventKey: dd.eventKey, embedding: dd.embedding, slug: out.slug, parentKey: dd.parentKey, now: new Date(now) });
       report.published.push({
         id: t.id, category: r.route?.category || cat, slug: out.slug, entity: t.primaryEntity, title: r.article.title,
@@ -113,12 +116,15 @@ export async function gossipRun({ discoverImpl, categorizeImpl, runImpl = runGos
 if (process.argv[1] && import.meta.url === new URL(`file://${process.argv[1]}`).href) {
   const dryRun = process.argv.includes("--dry-run");
   const onePerCategory = process.argv.includes("--one-per-category");
+  const fromFind = process.argv.includes("--from-find"); // drain the FINDER's backlog queue instead of discovering inline
   const noHero = process.argv.includes("--no-hero"); // hero picker hits TMDB + a cheap vision call; on by default live
   const noLinks = process.argv.includes("--no-links"); // internal links embed the corpus + a cheap firewall call/link
   const limit = Number((process.argv.find((a) => a.startsWith("--limit=")) || "").split("=")[1]) || 0;
-  const report = await gossipRun({ dryRun, onePerCategory, limit, hero: !noHero, links: !noLinks, categoryGuard: true });
-  console.log(`\n${"━".repeat(60)}\n GOSSIP AUTOMATION — RUN REPORT\n${"━".repeat(60)}`);
-  console.log(`DISCOVER: ${report.candidates} candidates  →  CATEGORIZE: ${report.inScope} in-scope  →  SELECTED: ${report.topics}`);
+  const report = await gossipRun({ dryRun, onePerCategory, fromFind, limit, hero: !noHero, links: !noLinks, categoryGuard: true });
+  console.log(`\n${"━".repeat(60)}\n GOSSIP AUTOMATION — RUN REPORT (${report.mode})\n${"━".repeat(60)}`);
+  console.log(fromFind
+    ? `DRAINED from backlog: processed ${report.topics}  →  PUBLISHED ${report.published.length}`
+    : `IN-SCOPE: ${report.inScope}  →  PROCESSED: ${report.topics}`);
   console.log(`\nPUBLISHED (${report.published.length}):`);
   for (const p of report.published) {
     console.log(`\n  ● [${p.category}] ${p.title}`);

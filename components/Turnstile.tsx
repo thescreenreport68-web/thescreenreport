@@ -32,9 +32,20 @@ export default function Turnstile({
   useEffect(() => {
     if (!SITE_KEY) return;
     let disposed = false;
+    let poll: ReturnType<typeof setInterval> | undefined;
 
     const render = () => {
       if (disposed || !ref.current || !window.turnstile) return;
+      // Remove any prior widget instance before drawing a fresh one (avoids
+      // leaking widgets on each nonce bump / re-render).
+      if (widgetId.current) {
+        try {
+          window.turnstile.remove(widgetId.current);
+        } catch {
+          /* already gone */
+        }
+        widgetId.current = null;
+      }
       ref.current.innerHTML = "";
       widgetId.current = window.turnstile.render(ref.current, {
         sitekey: SITE_KEY,
@@ -42,8 +53,6 @@ export default function Turnstile({
         "error-callback": () => onVerify(""),
         "expired-callback": () => onVerify(""),
         theme: "auto",
-        // Invisible: verify silently in the background, only surface UI if a real
-        // challenge is required — no "Success!" box shown to the reader.
         appearance: "interaction-only",
         action: "comment_submit",
       });
@@ -60,9 +69,9 @@ export default function Turnstile({
       s.onload = render;
       document.head.appendChild(s);
     } else {
-      const t = setInterval(() => {
+      poll = setInterval(() => {
         if (window.turnstile) {
-          clearInterval(t);
+          if (poll) clearInterval(poll);
           render();
         }
       }, 200);
@@ -70,6 +79,15 @@ export default function Turnstile({
 
     return () => {
       disposed = true;
+      if (poll) clearInterval(poll);
+      if (widgetId.current && window.turnstile) {
+        try {
+          window.turnstile.remove(widgetId.current);
+        } catch {
+          /* already gone */
+        }
+        widgetId.current = null;
+      }
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [nonce]);

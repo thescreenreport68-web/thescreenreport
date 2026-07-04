@@ -70,12 +70,19 @@ to correct it):
    statement/announcement) | "denied" (the claim is denied in the text) | "unconfirmed" (single-source report).
 8. form: the best of ${NEWS_FORMS.join("|")} for this event. category: the best of ${CATS.join("|")}.
 9. eventSummary: 1-2 plain sentences stating exactly what happened per the text (names, work, what changed).
+10. currency: "current" if the CORE happening this story reports is NEW — it broke in roughly the last few days (a
+   fresh casting/deal/release/premiere/trailer, a box-office result for a film currently in theaters, an award just
+   handed out, a death/arrest, an on-the-record statement just made). Say "stale" ONLY if the story's CENTRAL subject
+   is an OLD event, record, milestone, or anniversary being RE-SURFACED and is not itself new news — e.g. "X remains
+   the highest-grossing film of all time", a box-office record the film set MONTHS ago written up now, a "N years
+   later" retrospective, or a re-report of an award/citizenship/honor the person received long ago. A genuinely
+   current event that merely MENTIONS past context is "current". When unsure, say "current".
 
 GATHERED SOURCE REPORTING:
 ${srcText}
 
 Return STRICT JSON:
-{"isStory":true|false,"inScope":true|false,"reason":"...","primaryEntity":"...","coSubjects":["..."],"work":{"title":"...","year":2010,"medium":"tv"}|null,"reportingOutlet":"..."|null,"status":"confirmed|official|denied|unconfirmed","form":"...","category":"...","eventSummary":"..."}`;
+{"isStory":true|false,"inScope":true|false,"currency":"current|stale","reason":"...","primaryEntity":"...","coSubjects":["..."],"work":{"title":"...","year":2010,"medium":"tv"}|null,"reportingOutlet":"..."|null,"status":"confirmed|official|denied|unconfirmed","form":"...","category":"...","eventSummary":"..."}`;
 
   try {
     const { data } = await chat({
@@ -91,13 +98,22 @@ Return STRICT JSON:
     // inScope defaults to TRUE when the model omits it, so we never over-reject on a parse gap — the scope drop is
     // deliberate and explicit only.
     const inScope = data.inScope !== false;
-    const reject = data.isStory === false || !inScope;
+    // CURRENCY (2026-07-04): reject a STALE story — an old record/milestone/anniversary/honor re-surfaced as if it
+    // were new news (the Zootopia-Dec-2025-record + Eisenberg-2025-citizenship class). Defaults to "current" on any
+    // parse gap so we NEVER over-reject fresh news; the stale drop is deliberate and explicit only.
+    const currency = data.currency === "stale" ? "stale" : "current";
+    const reject = data.isStory === false || !inScope || currency === "stale";
     return {
       ran: true,
       isStory: data.isStory,
       inScope,
+      currency,
       reject,
-      reason: reject ? (!inScope ? `out of scope: ${data.reason || "not English-language Hollywood/Western entertainment"}` : (data.reason || "not a story")) : (data.reason || ""),
+      reason: reject
+        ? (currency === "stale" ? `stale: not current news — ${data.reason || "an old event/record/honor re-surfaced, not new"}`
+          : !inScope ? `out of scope: ${data.reason || "not English-language Hollywood/Western entertainment"}`
+          : (data.reason || "not a story"))
+        : (data.reason || ""),
       primaryEntity: typeof data.primaryEntity === "string" && data.primaryEntity.trim().length >= 2 ? data.primaryEntity.trim() : null,
       coSubjects: Array.isArray(data.coSubjects) ? data.coSubjects.filter((x) => typeof x === "string").slice(0, 3) : [],
       work: data.work && typeof data.work.title === "string" && data.work.title.trim()

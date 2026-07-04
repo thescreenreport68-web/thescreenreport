@@ -34,11 +34,14 @@ export async function getCurrentUser(): Promise<CurrentUser> {
   const m = u.user_metadata ?? {};
   // The editable profile row is the source of truth for name/avatar (so
   // profile-settings changes show everywhere); fall back to the Google metadata.
+  // maybeSingle → a missing/lagging profile row resolves to null with NO error
+  // (single() would emit a PGRST116 "no rows" console/network error on first
+  // sign-up before the profile trigger has landed).
   const { data: prof } = await supabase
     .from("profiles")
     .select("display_name, avatar_url")
     .eq("id", u.id)
-    .single();
+    .maybeSingle();
   return {
     id: u.id,
     name: prof?.display_name ?? m.full_name ?? m.name ?? "Reader",
@@ -81,9 +84,13 @@ export async function uploadAvatar(file: File): Promise<{ url?: string; error?: 
   return { url: pub.publicUrl };
 }
 
-export async function signOut(): Promise<void> {
-  await getSupabase()?.auth.signOut();
+export async function signOut(): Promise<{ ok: boolean }> {
+  const supabase = getSupabase();
+  if (!supabase) return { ok: true };
+  const { error } = await supabase.auth.signOut();
+  if (error) return { ok: false }; // don't flip the UI to signed-out if it failed
   window.dispatchEvent(new Event("tsr-auth-changed"));
+  return { ok: true };
 }
 
 // Fetch all visible comments for an article and assemble threads.
@@ -163,7 +170,29 @@ export async function fetchThreads(
 
 export type PostResult =
   | { ok: true; held: boolean; comment: CommentRow; author: CommentAuthor }
-  | { ok: false; error: string };
+  | { ok: false; error: string; code?: "TURNSTILE" | "AUTH" };
+
+async function callPostFn(token: string, input: {
+  slug: string;
+  body: string;
+  parentId?: string | null;
+  turnstileToken: string;
+}): Promise<Response> {
+  return fetch(`${SUPABASE_URL}/functions/v1/post-comment`, {
+    method: "POST",
+    headers: {
+      apikey: SUPABASE_ANON_KEY,
+      Authorization: `Bearer ${token}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      article_slug: input.slug,
+      body: input.body,
+      parent_id: input.parentId ?? null,
+      turnstile_token: input.turnstileToken,
+    }),
+  });
+}
 
 // Post a comment (or reply) through the moderation Edge Function.
 export async function postComment(input: {
@@ -175,51 +204,77 @@ export async function postComment(input: {
   const supabase = getSupabase();
   if (!supabase) return { ok: false, error: "Comments are unavailable." };
   const { data } = await supabase.auth.getSession();
-  const token = data.session?.access_token;
-  if (!token) return { ok: false, error: "Please sign in to comment." };
+  let token = data.session?.access_token;
+  if (!token) return { ok: false, error: "Please sign in to comment.", code: "AUTH" };
   try {
-    const res = await fetch(`${SUPABASE_URL}/functions/v1/post-comment`, {
-      method: "POST",
-      headers: {
-        apikey: SUPABASE_ANON_KEY,
-        Authorization: `Bearer ${token}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        article_slug: input.slug,
-        body: input.body,
-        parent_id: input.parentId ?? null,
-        turnstile_token: input.turnstileToken,
-      }),
-    });
-    const json = await res.json();
-    if (!res.ok) return { ok: false, error: json.error ?? "Could not post your comment." };
-    return { ok: true, held: !!json.held, comment: json.comment, author: json.author };
+    let res = await callPostFn(token, input);
+    // Stale token (e.g. a long-idle / backgrounded tab) → refresh once and retry
+    // transparently before telling the reader to sign in.
+    if (res.status === 401) {
+      const { data: refreshed } = await supabase.auth.refreshSession();
+      const fresh = refreshed.session?.access_token;
+      if (fresh && fresh !== token) {
+        token = fresh;
+        res = await callPostFn(token, input);
+      }
+    }
+    let json: { error?: string; message?: string; code?: string; held?: boolean; comment?: CommentRow; author?: CommentAuthor } = {};
+    try {
+      json = await res.json();
+    } catch {
+      return { ok: false, error: "Could not post your comment. Please try again." };
+    }
+    if (!res.ok) {
+      const code: "TURNSTILE" | "AUTH" | undefined =
+        json.code === "TURNSTILE" ? "TURNSTILE" : res.status === 401 ? "AUTH" : undefined;
+      return { ok: false, error: json.message ?? json.error ?? "Could not post your comment.", code };
+    }
+    // Validate the shape so a malformed 200 can't crash the optimistic render.
+    if (!json.held && (!json.comment || !json.author)) {
+      return { ok: false, error: "Could not post your comment. Please try again." };
+    }
+    return {
+      ok: true,
+      held: !!json.held,
+      comment: json.comment as CommentRow,
+      author: (json.author ?? { display_name: null, avatar_url: null }) as CommentAuthor,
+    };
   } catch {
     return { ok: false, error: "Network error — please try again." };
   }
 }
 
-export async function toggleLike(commentId: string, meId: string, on: boolean): Promise<void> {
+// These return { ok } so callers can roll back the optimistic UI on failure
+// (a failed like/delete previously desynced the UI from the DB until reload —
+// the "intermittent glitch"). A like that hits the unique constraint (double
+// click) is treated as success (the like already exists).
+export async function toggleLike(commentId: string, meId: string, on: boolean): Promise<{ ok: boolean }> {
   const supabase = getSupabase();
-  if (!supabase) return;
+  if (!supabase) return { ok: false };
   if (on) {
-    await supabase.from("comment_likes").insert({ comment_id: commentId, user_id: meId });
-  } else {
-    await supabase
-      .from("comment_likes")
-      .delete()
-      .eq("comment_id", commentId)
-      .eq("user_id", meId);
+    const { error } = await supabase.from("comment_likes").insert({ comment_id: commentId, user_id: meId });
+    return { ok: !error || error.code === "23505" }; // 23505 = already liked
   }
+  const { error } = await supabase
+    .from("comment_likes")
+    .delete()
+    .eq("comment_id", commentId)
+    .eq("user_id", meId);
+  return { ok: !error };
 }
 
-export async function reportComment(commentId: string, meId: string): Promise<void> {
-  await getSupabase()
-    ?.from("comment_reports")
+export async function reportComment(commentId: string, meId: string): Promise<{ ok: boolean }> {
+  const supabase = getSupabase();
+  if (!supabase) return { ok: false };
+  const { error } = await supabase
+    .from("comment_reports")
     .insert({ comment_id: commentId, reporter_id: meId, reason: "user_report" });
+  return { ok: !error || error.code === "23505" }; // already reported
 }
 
-export async function deleteComment(commentId: string): Promise<void> {
-  await getSupabase()?.from("comments").delete().eq("id", commentId);
+export async function deleteComment(commentId: string): Promise<{ ok: boolean }> {
+  const supabase = getSupabase();
+  if (!supabase) return { ok: false };
+  const { error } = await supabase.from("comments").delete().eq("id", commentId);
+  return { ok: !error };
 }

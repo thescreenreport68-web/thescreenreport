@@ -110,14 +110,22 @@ function Composer({
     }
     setBusy(true);
     setError(null);
+    setNotice(null);
     const res = await postComment({ slug, body: text, parentId, turnstileToken: token });
     setBusy(false);
-    setTsNonce((n) => n + 1); // fresh Turnstile token for next time
-    setToken("");
     if (!res.ok) {
+      // Only rotate the Turnstile token if it was actually consumed (success) or
+      // the server explicitly rejected it — keep it for a retry on a transient
+      // network/500 so the reader isn't stuck "waiting for verification".
+      if (res.code === "TURNSTILE") {
+        setToken("");
+        setTsNonce((n) => n + 1);
+      }
       setError(res.error);
       return;
     }
+    setToken("");
+    setTsNonce((n) => n + 1);
     setBody("");
     if (res.held) {
       setNotice("Thanks — your comment is held for review and will appear once approved.");
@@ -172,6 +180,7 @@ function CommentView({
   isReply,
   onReply,
   onDeleted,
+  reload,
 }: {
   c: CommentRow & { likedByMe?: boolean };
   me: Me;
@@ -179,9 +188,11 @@ function CommentView({
   isReply?: boolean;
   onReply: (reply: CommentRow) => void;
   onDeleted: () => void;
+  reload: () => void;
 }) {
   const [likes, setLikes] = useState(c.like_count);
   const [liked, setLiked] = useState(!!c.likedByMe);
+  const [liking, setLiking] = useState(false);
   const [replying, setReplying] = useState(false);
   const [deleting, setDeleting] = useState(false);
   const [reported, setReported] = useState(false);
@@ -190,11 +201,18 @@ function CommentView({
   const mine = me?.id === c.user_id;
 
   const like = async () => {
-    if (!me) return;
+    if (!me || liking) return;
     const next = !liked;
+    setLiking(true);
     setLiked(next);
     setLikes((n) => n + (next ? 1 : -1));
-    await toggleLike(c.id, me.id, next);
+    const { ok } = await toggleLike(c.id, me.id, next);
+    if (!ok) {
+      // roll the optimistic change back so the count never desyncs from the DB
+      setLiked(!next);
+      setLikes((n) => n + (next ? -1 : 1));
+    }
+    setLiking(false);
   };
 
   return (
@@ -216,7 +234,7 @@ function CommentView({
         <div className="mt-2 flex items-center gap-4">
           <button
             onClick={like}
-            disabled={!me}
+            disabled={!me || liking}
             aria-pressed={liked}
             className={`flex items-center gap-1.5 transition-colors duration-150 ${liked ? "text-red" : "text-slate hover:text-red"} disabled:opacity-50`}
           >
@@ -234,7 +252,8 @@ function CommentView({
               onClick={async () => {
                 setDeleting(true);
                 onDeleted(); // remove from UI instantly (parent cascades replies)
-                await deleteComment(c.id);
+                const { ok } = await deleteComment(c.id);
+                if (!ok) reload(); // self-heal: a failed delete shouldn't vanish it
               }}
               className="btn-label text-slate hover:text-red disabled:opacity-50"
             >
@@ -243,8 +262,8 @@ function CommentView({
           ) : me && !reported ? (
             <button
               onClick={async () => {
-                await reportComment(c.id, me.id);
-                setReported(true);
+                const { ok } = await reportComment(c.id, me.id);
+                if (ok) setReported(true);
               }}
               className="btn-label text-slate hover:text-red"
             >
@@ -286,6 +305,7 @@ function ThreadView({
   onAddReply,
   onRemoveThread,
   onRemoveReply,
+  reload,
 }: {
   t: Thread;
   me: Me;
@@ -293,6 +313,7 @@ function ThreadView({
   onAddReply: (threadId: string, reply: CommentRow) => void;
   onRemoveThread: (threadId: string) => void;
   onRemoveReply: (threadId: string, replyId: string) => void;
+  reload: () => void;
 }) {
   const [open, setOpen] = useState(false);
   const replies = t.replies;
@@ -302,6 +323,7 @@ function ThreadView({
         c={t}
         me={me}
         slug={slug}
+        reload={reload}
         onReply={(reply) => {
           onAddReply(t.id, reply);
           setOpen(true);
@@ -325,6 +347,7 @@ function ThreadView({
                   me={me}
                   slug={slug}
                   isReply
+                  reload={reload}
                   onReply={() => {}}
                   onDeleted={() => onRemoveReply(t.id, r.id)}
                 />
@@ -347,20 +370,34 @@ export default function Comments({ slug }: { slug: string }) {
   // updates it instantly with no bookkeeping.
   const count = threads.reduce((n, t) => n + 1 + t.replies.length, 0);
 
+  // Latest-wins: only the most recent load() may commit, so overlapping loads
+  // (sort toggle mid-flight, or an auth event) can never let a slow stale
+  // response clobber fresh threads or wipe an optimistically-posted comment.
+  const reqRef = useRef(0);
   const load = useCallback(async () => {
+    const reqId = ++reqRef.current;
     const user = await getCurrentUser();
-    setMe(user);
     const t = await fetchThreads(slug, sort, user?.id ?? null);
+    if (reqId !== reqRef.current) return; // superseded — drop this stale result
+    setMe(user);
     setThreads(t);
     setLoading(false);
   }, [slug, sort]);
 
+  // Initial + sort-driven load.
   useEffect(() => {
     load();
-    const onAuth = () => load();
+  }, [load]);
+
+  // Auth listener — decoupled from `sort` (via a ref) so toggling the sort
+  // doesn't tear down and re-subscribe the listener on every click.
+  const loadRef = useRef(load);
+  loadRef.current = load;
+  useEffect(() => {
+    const onAuth = () => loadRef.current();
     window.addEventListener("tsr-auth-changed", onAuth);
     return () => window.removeEventListener("tsr-auth-changed", onAuth);
-  }, [load]);
+  }, []);
 
   const onPosted = (row: CommentRow, _held: boolean, name: string, avatar: string | null) => {
     const newThread: Thread = {
@@ -446,6 +483,7 @@ export default function Comments({ slug }: { slug: string }) {
               t={t}
               me={me}
               slug={slug}
+              reload={load}
               onAddReply={addReply}
               onRemoveThread={removeThread}
               onRemoveReply={removeReply}

@@ -158,13 +158,23 @@ export async function pickHeroImage(
   const titleContext = isTitleStory ? (titleQuery || null) : (topic?.titleHint || null);
 
   // 1) TMDB stills (fail-safe: a miss just means fewer candidates).
-  let personSet = null, titleSet = null;
+  let personSet = null, titleSet = null, workSet = null;
   const tmdbType = topic?.tmdbType === "tv" ? "tv" : "movie";
   try {
     if (isTitleStory && titleQuery) titleSet = await getTitleImagesImpl(titleQuery, tmdbType);
     else if (entity) personSet = await getPersonImagesImpl(entity);
   } catch { /* skip */ }
-  const candidates = stillCandidates(personSet, titleSet);
+  // For a PERSON story (e.g. an actor's death), ALSO pull the associated FILM/SHOW's TMDB backdrops from the
+  // article's `about` — a still from the work they're known for (Mad Max 2 for Kjell Nilsson) is a strong, relevant
+  // lead when TMDB has no person profile and the only free photo is a fan cosplay (2026-07-04 Kjell fix).
+  if (!isTitleStory && !(personSet?.profiles?.length)) {
+    const work = (article?.about || []).find((a) => a && a.name && /movie|film|tv|show|series/i.test(a.type || ""));
+    if (work) {
+      try { workSet = await getTitleImagesImpl(work.name, /tv|show|series/i.test(work.type || "") ? "tv" : "movie"); } catch { /* skip */ }
+      if (workSet?.title) workSet.title = work.name;
+    }
+  }
+  const candidates = stillCandidates(personSet, titleSet || workSet);
 
   // 2) THE STORY PHOTO — the source outlets' og:image, prepended so it competes as (usually) the strongest, most
   // on-topic candidate. One per distinct domain, primary sources first.

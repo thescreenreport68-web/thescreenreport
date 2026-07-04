@@ -52,33 +52,40 @@ let initPromise: Promise<boolean> | null = null;
 function ensureInit(): Promise<boolean> {
   if (initPromise) return initPromise;
   initPromise = (async () => {
-    const supabase = getSupabase();
-    if (!supabase || !GOOGLE_CLIENT_ID) return false;
-    await loadScript();
-    if (!window.google) return false;
-    const rawNonce = crypto.randomUUID();
-    const hashedNonce = await sha256Hex(rawNonce);
-    window.google.accounts.id.initialize({
-      client_id: GOOGLE_CLIENT_ID,
-      callback: async (resp: { credential: string }) => {
-        const { error } = await supabase.auth.signInWithIdToken({
-          provider: "google",
-          token: resp.credential,
-          nonce: rawNonce,
-        });
-        if (error) {
-          console.warn("[google-auth] sign-in failed:", error.message);
-        } else {
-          window.dispatchEvent(new Event("tsr-auth-changed"));
-        }
-      },
-      nonce: hashedNonce,
-      auto_select: false,
-      itp_support: true,
-      cancel_on_tap_outside: false,
-      context: "signin",
-    });
-    return true;
+    try {
+      const supabase = getSupabase();
+      if (!supabase || !GOOGLE_CLIENT_ID) return false;
+      await loadScript();
+      if (!window.google) return false;
+      const rawNonce = crypto.randomUUID();
+      const hashedNonce = await sha256Hex(rawNonce);
+      window.google.accounts.id.initialize({
+        client_id: GOOGLE_CLIENT_ID,
+        callback: async (resp: { credential: string }) => {
+          const { error } = await supabase.auth.signInWithIdToken({
+            provider: "google",
+            token: resp.credential,
+            nonce: rawNonce,
+          });
+          if (error) {
+            console.warn("[google-auth] sign-in failed:", error.message);
+          } else {
+            window.dispatchEvent(new Event("tsr-auth-changed"));
+          }
+        },
+        nonce: hashedNonce,
+        auto_select: false,
+        itp_support: true,
+        cancel_on_tap_outside: false,
+        context: "signin",
+      });
+      return true;
+    } catch {
+      // A load blip must not permanently disable sign-in — clear the memo so the
+      // next click/mount retries.
+      initPromise = null;
+      return false;
+    }
   })();
   return initPromise;
 }

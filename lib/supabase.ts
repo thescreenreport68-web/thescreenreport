@@ -26,6 +26,16 @@ export function getSupabase(): SupabaseClient | null {
         detectSessionInUrl: false,
       },
     });
+    // Keep every mounted component's auth UI in sync with the real session —
+    // token refresh, expiry, sign-in/out, or a change in another tab all
+    // re-fire our one 'tsr-auth-changed' event.
+    if (typeof window !== "undefined") {
+      client.auth.onAuthStateChange((event) => {
+        if (["SIGNED_IN", "SIGNED_OUT", "TOKEN_REFRESHED", "USER_UPDATED"].includes(event)) {
+          window.dispatchEvent(new Event("tsr-auth-changed"));
+        }
+      });
+    }
   }
   return client;
 }

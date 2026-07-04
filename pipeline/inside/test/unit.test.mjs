@@ -137,8 +137,8 @@ await check("loadTriggers maps story→trigger fields (injected discoverImpl)", 
 
 // ── reactionFinder: norm / quoteIsVerbatim / meetsFloor / fallbackQueries ─────────────────────────
 console.log("— reactionFinder norm / quoteIsVerbatim —");
-await check("norm unifies curly quotes, dashes, whitespace, case", () => {
-  assert.equal(norm("“The  Sable — Coast’s\tending”"), '"the sable - coast\'s ending"');
+await check("norm strips quote-marks/apostrophes, unifies dashes, whitespace, case", () => {
+  assert.equal(norm("“The  Sable — Coast’s\tending”"), "the sable - coasts ending");
 });
 await check("verbatim quote passes the wall", () => assert.equal(quoteIsVerbatim(Q.director, [{ text: SRC_A }]), true));
 await check("curly + whitespace variant of a real quote passes", () => {

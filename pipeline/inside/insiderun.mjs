@@ -120,7 +120,7 @@ export async function insideRun({
           ({ article } = await withTimeout(generateImpl({ trigger, angle, factBlock: h.factBlock, factText, corrections, previousArticle: attempt > 1 ? article : null }), T.generate, `generate ${tag}`));
           if (!article?.body) { corrections = "- Return the COMPLETE JSON article."; continue; }
           scored = await withTimeout(gateImpl({ article, trigger, angle, factBlock: h.factBlock }), T.gate, `gate ${tag}`);
-          console.log(`    gate: score ${scored.score}, blocks ${scored.hardBlocks.length}, cuts ${scored.cutClaims.length}`);
+          console.log(`    gate: score ${scored.score}, blocks ${scored.hardBlocks.length}, cuts ${scored.cutClaims.length}${scored.hardBlocks.length ? " :: " + scored.hardBlocks.slice(0, 5).join(" | ") : ""}`);
           if (scored.pass) { pass = true; break; }
           if (scored.cutClaims.length && !dryRun) {
             cutArticle(article, scored.cutClaims);

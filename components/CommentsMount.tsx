@@ -36,7 +36,10 @@ export default function CommentsMount({ slug }: { slug: string }) {
             { rootMargin: "800px" },
           )
         : null;
-    const idle = window.setTimeout(reveal, 2000); // last-resort fallback
+    // Last-resort unstick for deep-links (#comments) / IO-blocking extensions —
+    // but still position-gated, so we don't mount the island (and its auth +
+    // network + third-party-script fan-out) when the reader is nowhere near it.
+    const idle = window.setTimeout(check, 2000);
     function cleanup() {
       io?.disconnect();
       window.removeEventListener("scroll", check);

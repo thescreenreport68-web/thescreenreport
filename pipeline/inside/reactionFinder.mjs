@@ -14,8 +14,12 @@ import { MODELS, FORMS, MAX_EMBEDS } from "./config.inside.mjs";
 // paraphrase can never pass as a quote.
 export const norm = (s) =>
   (s || "")
-    .replace(/[‘’‛′]/g, "'")
-    .replace(/[“”‟″]/g, '"')
+    // Drop apostrophes AND quote-marks entirely (both curly and straight): the writer may add
+    // emphasis quotes ('choose the bear') or re-punctuate — orthography, not a changed statement.
+    // The owner's rule is the WORDS can't change, so we compare word content; a real word swap still
+    // fails the substring check.
+    .replace(/[‘’‛′`']/g, "")
+    .replace(/[“”‟″"]/g, "")
     .replace(/[–—]/g, "-")
     .replace(/\s+/g, " ")
     .trim()

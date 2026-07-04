@@ -3,10 +3,14 @@
 // >=1200px + free-license requirement; tiny/low-res candidates are rejected.
 const UA = "The Screen Report/1.0 (https://thescreenreport.com; editor@thescreenreport.com)";
 const FREE = /CC0|CC BY|CC-BY|public domain/i;
-// Reject photos from clearly off-topic contexts (the "DiCaprio at a NASA climate event" problem).
-const OFFCTX = /(nasa|climate|summit|congress|senate|parliament|united nations|\bu\.?n\.?\b|military|army|navy|air ?force|olympic|fifa|world cup|nato|davos|economic forum|protest|rally|campaign rally|memorial|funeral|wikimania|hackathon)/i;
-// Prefer photos from film/entertainment contexts.
-const FILMCTX = /(premiere|festival|cannes|venice|berlinale|sundance|tiff|comic.?con|red.?carpet|photo.?call|screening|portrait|gala|oscars|emmys|golden globes|sxsw|gage skidmore|paley|hollywood|deauville)/i;
+// Reject photos from clearly off-topic contexts (the "DiCaprio at a NASA climate event" problem) AND photos that
+// are NOT the real person — a fan COSPLAYER in the character's costume (the Kjell-Nilsson-as-Lord-Humungus Comic-Con
+// cosplay bug, 2026-07-04), a waxwork, a statue/mural, an action figure, an impersonator/look-alike. Those are never
+// an acceptable lead for a real news story about the actual person.
+const OFFCTX = /(nasa|climate|summit|congress|senate|parliament|united nations|\bu\.?n\.?\b|military|army|navy|air ?force|olympic|fifa|world cup|nato|davos|economic forum|protest|rally|campaign rally|memorial|funeral|wikimania|hackathon|cosplay|costume|\bfan ?art\b|fanart|impersonat|look.?alike|waxwork|madame tussaud|wax museum|action figure|\bfigurine\b|\bstatue\b|\bmural\b|street art|graffiti|\bmascot\b|\bpop! ?vinyl|funko)/i;
+// Prefer photos from film/entertainment contexts. (Bare "comic-con" was REMOVED 2026-07-04 — it boosted fan COSPLAY
+// titled by the character; real celebrity con photos still match via red-carpet/panel/portrait/"gage skidmore".)
+const FILMCTX = /(premiere|festival|cannes|venice|berlinale|sundance|tiff|red.?carpet|photo.?call|screening|\bpanel\b|portrait|gala|oscars|emmys|golden globes|sxsw|gage skidmore|paley|hollywood|deauville)/i;
 
 function jpegSize(b) {
   let o = 2;

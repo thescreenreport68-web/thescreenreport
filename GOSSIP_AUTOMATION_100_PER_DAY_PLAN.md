@@ -1,6 +1,6 @@
 # Gossip Automation — MASTER PLAN (100+/day, scheduled, fully cloud)
 
-**Owner:** Shivajith · **Status:** FINAL PLAN for review — nothing built yet · **Updated:** 2026-07-04
+**Owner:** Shivajith · **Status:** ✅ Phases 1–3 BUILT + tested (20-suite green); cloud wiring pending owner (see §13) · **Updated:** 2026-07-04
 
 > The single source of truth for the **gossip automation** as a standalone,
 > GitHub-run, scheduled publisher. It borrows the news automation's **plumbing and
@@ -16,8 +16,10 @@ Split gossip into **FIND** (fills a story backlog) and **MAKE** (drains it, one
 post every ~5 min), exactly like news. Run it on **GitHub Actions (free, public
 repo)**, clocked by a **Cloudflare Worker Cron Trigger** — the same reliable
 timing mechanism news uses. Post **LA 10am–10pm, ~10/hour, ~120/day**. Cost
-**~$33/month**. The content stays **gossip** (verified core facts, but speculation
-and playful exaggeration allowed) — that part does NOT copy news.
+**~$33/month**. The content stays **gossip** — every story written **as
+speculation** from a source (never asserted as confirmed), with every checkable
+**specific** (name/date/place/title/quote) **verified and perfect**. That content
+model does NOT copy news.
 
 ---
 
@@ -39,21 +41,35 @@ and playful exaggeration allowed) — that part does NOT copy news.
 
 ---
 
-## 2. ⭐ THE KEY DIFFERENCE — content: GOSSIP is not NEWS
+## 2. ⭐ THE KEY DIFFERENCE — this is a SPECULATION desk, not a news desk
 
-This is what the owner stressed and what must NOT be copied from news:
+The owner's exact model of this automation (do NOT copy news's content rules):
+
+- **It is a SPECULATION / gossip automation.** If the finder discovers a SOURCE
+  that says a situation happened, we turn it into a STORY and post it — **written
+  as speculation.** We are NEVER claiming to confirm anything in the article.
+- **Confirmation status does NOT gate publishing.** It doesn't matter whether the
+  item is confirmed by a big outlet or is an unconfirmed report — we still make the
+  story and post it, framed as speculation ("reportedly", "a source says", "fans
+  wonder", "appears to"). We are not asserting the story as our own confirmed fact,
+  so there is no "hold until verified" step like news has. (This corrects the
+  earlier draft — it's not a confirmed-vs-unconfirmed decision at all.)
+- **THE ONE HARD LINE — the checkable SPECIFICS must be perfect / verified.**
+  Even though the STORY is speculation, every **name, date, place, work title, and
+  quote (and who said it)** must be TRUE and verified — no matter whether the
+  source is a top outlet or an unconfirmed tip. A speculative story is fine; a
+  wrong name / date / place / title / misattributed quote is NOT.
 
 | | **NEWS automation** | **GOSSIP automation (this one)** |
 |---|---|---|
-| Content bar | **Strictly verified news only.** No exaggeration, no speculation. | **Verified core facts, BUT** we can **speculate, play it up, exaggerate a bit, and make the story big/bold.** |
-| Voice | Straight, factual, restrained. | Punchy, teasing, "set tongues wagging" energy — a real gossip desk. |
-| Unconfirmed items | Held or dropped until verified. | **Allowed** — posted **as speculation, clearly framed** ("reportedly", "fans wonder", "appears to"). |
-| The one hard line (SAME for both) | **Checkable specifics** (dates, numbers, names, quotes, who-said-what) must be **TRUE.** | **Identical** — a wrong specific is a defect on both desks. Speculation is fine; a false *fact* is not. |
+| What it posts | strictly verified NEWS, stated as fact | a SPECULATION story built from a source, never asserted as confirmed |
+| Confirmation | must be confirmed to publish | doesn't matter — post it as speculation either way |
+| Voice | straight, restrained | punchy, bold, "set tongues wagging" — play it up |
+| The hard line (SAME) | specifics must be TRUE | **identical — names/dates/places/titles/quotes must be verified & perfect** |
 
-**So we copy news's PLUMBING and TIMING, and we KEEP gossip's own writer, tone,
-and speculation rules.** The gossip pipeline (writer, per-type templates,
-speculation framing, the accuracy spine that already lets stories be bold while
-keeping specifics true) stays exactly as it is today.
+**So we copy news's PLUMBING and TIMING only, and keep gossip's own speculation
+writer + the verified-specifics spine that already backs it** (the pipeline today
+already writes bold speculation while the accuracy gates keep every specific true).
 
 ---
 
@@ -147,8 +163,11 @@ drip cadence:
    gemini-flash) — ever.
 5. **NOT build a second site/checkout** — one repo, one Cloudflare project, one
    design.
-6. **NOT turn on the full schedule before the owner approves the dry-run output.**
-7. **NOT put secrets in code/argv** — GitHub Secrets + the parent `.env` only.
+6. **NOT design or change homepage placement/display** — which stories surface,
+   the top story staying put, slot rotation — the owner owns that in a separate
+   chat. This automation only publishes; display is decided elsewhere.
+7. **NOT turn on the full schedule before the owner approves the dry-run output.**
+8. **NOT put secrets in code/argv** — GitHub Secrets + the parent `.env` only.
 
 ---
 
@@ -164,14 +183,18 @@ drip cadence:
 
 ---
 
-## 8. Homepage freshness / cache (Decision C — not blocking, Phase 5)
+## 8. Homepage display — DEFERRED (owner handles it separately)
 
-To stay fast, Cloudflare keeps a **saved copy** of each page near visitors. A new
-article's **own page** appears instantly (new address). But the **homepage** and
-**category lists** are already-saved pages, so the newest post may not appear in
-those lists until the saved copy expires. Fix: **(A, recommended)** short "keep
-time" (~1–2 min) on the list pages so they refresh themselves — no new key; or
-**(B)** a Cloudflare key with *purge* permission to clear them on each deploy.
+This automation's only job here is to **publish every article to the live site** —
+each article's own page goes live and is reachable. **How articles are DISPLAYED
+on the homepage** — which stories surface, the big **top story staying put** while
+the **other slots keep rotating** in new stories — is a **separate concern the
+owner will design in another chat, across ALL automations at once**, so everything
+has its proper place. **NOT part of this build.** For now: this automation just
+publishes; homepage placement/rotation is decided elsewhere.
+
+(The earlier "cache/keep-time" question was really this display question — it's
+now owner-owned and out of scope for this automation.)
 
 ---
 
@@ -192,9 +215,11 @@ the finder wide.)
 3. **GitHub workflow + Cloudflare Worker Cron clock** (same as news); secrets;
    concurrency guard.
 4. **Broaden the finder** for sustained volume.
-5. **Cache/freshness** (Decision C).
-6. **1-hour cloud dry run (~10 posts)** → owner review → enable full 12h day.
-7. **Monitoring + recheck retraction net.**
+5. **1-hour cloud dry run (~10 posts)** → owner review → enable full 12h day.
+6. **Monitoring + recheck retraction net.**
+
+*(Homepage display is intentionally NOT a phase here — the owner handles it in a
+separate chat.)*
 
 **Prerequisite:** commit/push the gossip code to the repo (currently local-only)
 so GitHub can run it.
@@ -218,8 +243,49 @@ committing the code to the repo.
 
 ## 12. Open decisions for the owner
 
-- **C. Homepage freshness:** short cache "keep time" (A, recommended) vs purge key (B).
-- **D. Gossip state layer:** simple JSON-in-repo (recommended) vs match news's
-  Cloudflare D1 for strict parity.
-- **Go/no-go:** approve Phase 1 (the FIND→MAKE split + tests, local only, nothing
-  live) to begin.
+- **Homepage display:** OUT OF SCOPE here — owner handles it in a separate chat.
+- **D. Gossip state layer:** simple JSON-in-repo (BUILT — recommended) vs match
+  news's Cloudflare D1. Shipped with JSON-in-repo; D1 remains a later option.
+
+---
+
+## 13. ✅ BUILD STATUS + owner go-live checklist
+
+**What is BUILT + tested (local, nothing live yet):**
+- `pipeline/gossip/find.mjs` — the FIND producer + the backlog queue
+  (`data/gossip/queue.json`: `enqueue`/`dequeue`/`loadQueue`). Live-smoke-proven
+  (found 54 topics → enqueued 42).
+- `pipeline/gossip/gossiprun.mjs` — refactored into the MAKE consumer; reuses
+  `gossipFind` (no duplicated discovery), adds `--from-find --limit=N` to drain
+  the backlog with a claim-guard. Existing behavior unchanged (dedup/pipeline
+  tests still pass).
+- `pipeline/gossip/scheduler.mjs` — one drip tick: LA-posting-hours gate
+  (DST-proof), top-up-when-low, publish one, emit `published`/`slugs` for the
+  workflow.
+- `.github/workflows/gossip-drip.yml` — the GitHub Actions job (checkout → npm ci
+  → scheduler tick → commit state → build → wrangler deploy). `workflow_dispatch`
+  only; the `schedule:` cron is COMMENTED OUT so merging it does NOT start posting.
+- `cloudflare/gossip-cron/` — the Cloudflare Worker Cron Trigger (every 5 min,
+  LA-gated) that calls `workflow_dispatch` — the same external-clock mechanism news
+  uses.
+- Offline suite **20/20 green** (adds `find-queue-test`, `scheduler-test`).
+
+**OWNER go-live checklist (the parts only you can do — I can't):**
+1. **Commit + push** the gossip code + these new files to the repo (currently
+   local-only).
+2. **Make the repo public** (so GitHub Actions is free) and ensure the
+   `gossip-drip.yml` workflow is on the **default branch** (`workflow_dispatch`
+   only sees workflows on default) — set `GH_REF` in `wrangler.toml` to that branch.
+3. **Add GitHub Secrets:** `OPENROUTER_API_KEY`, `CLOUDFLARE_API_TOKEN`,
+   `CLOUDFLARE_ACCOUNT_ID`, `TMDB_READ_TOKEN`, `TMDB_API_KEY`, `OMDB_API_KEY`,
+   `LASTFM_API_KEY` (values from the parent `.env`).
+4. **Deploy the Worker:** `cd site/cloudflare/gossip-cron && npx wrangler deploy`,
+   then `wrangler secret put GH_TOKEN` (a fine-grained PAT with Actions:read/write
+   on the repo).
+5. **DRY RUN:** trigger `gossip-drip` manually once (Actions tab → Run workflow) →
+   review the one published article live.
+6. **Enable the schedule:** once the dry run looks right, either leave the Worker
+   cron on (it's already dispatching) and/or uncomment the `schedule:` fallback in
+   the workflow. From here it runs LA 10am–10pm at ~1 post/5 min on its own.
+7. Confirm Cloudflare Pages **Git auto-build is OFF** (we deploy via wrangler; we
+   don't want a second competing build on each state push).
