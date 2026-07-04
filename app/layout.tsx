@@ -80,9 +80,12 @@ export const metadata: Metadata = {
     url: SITE.url,
     title: SITE.name,
     description: SITE.description,
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: SITE.name }],
   },
-  twitter: { card: "summary_large_image", site: SITE.twitter },
+  twitter: { card: "summary_large_image", site: SITE.twitter, images: ["/og.png"] },
 };
+
+export const viewport = { themeColor: "#101010" };
 
 export default function RootLayout({
   children,

@@ -42,15 +42,10 @@ function SectionRule() {
 }
 
 export function generateMetadata(): Metadata {
-  const all = getAllArticles();
-  if (!all.length) return {};
-  const pool = newsPool(all);
-  const heroImg = pickHero(pool.length ? pool : all, Date.now())?.image;
-  if (!heroImg) return {};
-  return {
-    openGraph: { images: [{ url: heroImg }] },
-    twitter: { images: [heroImg] },
-  };
+  // Self-referencing canonical for the homepage. OG/Twitter images intentionally
+  // inherit the stable branded /og.png from the root layout — a hotlinked hero
+  // image can hotlink-block or 404, breaking every social share of the homepage.
+  return { alternates: { canonical: "/" } };
 }
 
 export default function HomePage() {
