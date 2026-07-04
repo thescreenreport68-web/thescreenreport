@@ -1,8 +1,8 @@
 ---
 title: Academy of Country Music Awards Sets Its 2027 Date for Las Vegas
 slug: academy-of-country-music-awards-sets-2027-date
-category: celebrity
-subcategory: news
+category: music
+subcategory: awards
 author: editorial-team
 date: '2026-06-26T20:01:03.352Z'
 dek: >-

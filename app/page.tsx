@@ -6,9 +6,7 @@ import SectionHeader from "@/components/SectionHeader";
 import DottedList from "@/components/DottedList";
 import LatestNews from "@/components/LatestNews";
 import TwoColumnFeature from "@/components/TwoColumnFeature";
-import ReviewsSplit from "@/components/ReviewsSplit";
 import FeaturedVideos from "@/components/FeaturedVideos";
-import WhereToWatch from "@/components/WhereToWatch";
 import NewsletterBand from "@/components/NewsletterBand";
 import PlaceholderImage from "@/components/PlaceholderImage";
 import TrendingBadge from "@/components/TrendingBadge";
@@ -17,6 +15,16 @@ import { formatRelative } from "@/lib/format";
 import type { Article } from "@/lib/articles";
 import { getAllArticles, getArticlesByCategory } from "@/lib/articles";
 import { HOMEPAGE, pickHero, byHeat, pickDiverse, trendingRail } from "@/lib/homepage";
+
+// The homepage is two lanes by design (owner 2026-07-04): ~60% latest & trending
+// NEWS (movies-led) and ~40% celebrity GOSSIP. News sections draw ONLY from the
+// news categories below (so celebrity can never leak into a news slot), and the
+// gossip zone draws ONLY from celebrity. Streaming / Reviews / Awards are held OUT
+// of the homepage until an automation feeds them (they stay in the top nav).
+const HOMEPAGE_NEWS_CATEGORIES = ["movies", "tv", "music"];
+function newsPool(all: Article[]): Article[] {
+  return all.filter((a) => HOMEPAGE_NEWS_CATEGORIES.includes(a.category));
+}
 
 // A leaderboard ad between content sections (desktop) / rectangle (mobile).
 function AdBreak() {
@@ -36,7 +44,8 @@ function SectionRule() {
 export function generateMetadata(): Metadata {
   const all = getAllArticles();
   if (!all.length) return {};
-  const heroImg = pickHero(all, Date.now())?.image;
+  const pool = newsPool(all);
+  const heroImg = pickHero(pool.length ? pool : all, Date.now())?.image;
   if (!heroImg) return {};
   return {
     openGraph: { images: [{ url: heroImg }] },
@@ -56,50 +65,82 @@ export default function HomePage() {
   }
 
   const now = Date.now();
-  const news = all.filter((a) => a.category !== "reviews");
+  // ---- the two lanes ----
+  const news = newsPool(all); // movies + tv + music (60% zone)
+  const gossip = getArticlesByCategory("celebrity"); // celebrity (40% zone)
   const movies = getArticlesByCategory("movies");
   const tv = getArticlesByCategory("tv");
-  const streaming = getArticlesByCategory("streaming");
-  const celebrity = getArticlesByCategory("celebrity");
-  const reviews = getArticlesByCategory("reviews");
-  const tvReviews = reviews.filter((a) => a.subcategory === "tv-reviews").slice(0, 3);
-  const movieReviews = reviews
-    .filter((a) => a.subcategory !== "tv-reviews")
-    .slice(0, 3);
-  const trailers = all.filter((a) => a.formatTag === "trailer");
-  const watchGuides = all.filter(
-    (a) => a.formatTag === "guide" || a.formatTag === "watchguide"
+  const music = getArticlesByCategory("music");
+  const theatrical = movies.filter(
+    (a) => a.subcategory !== "box-office" && a.formatTag !== "box-office"
   );
+  const boxOfficePool = movies.filter(
+    (a) => a.subcategory === "box-office" || a.formatTag === "box-office"
+  );
+  const trailers = news.filter((a) => a.formatTag === "trailer");
 
-  // ---- slot assembly (HOMEPAGE_PROGRAMMING_PLAN.md §5): heat-ranked pulls,
-  // deduped by slug AND event across the whole page ----
-  const hero = pickHero(all, now);
+  // ---- slot assembly: heat-ranked pulls, deduped by slug AND event across the
+  // whole page via `used`. Every pool is category-pure, so backfill can never
+  // mislabel a card (a news slot only ever borrows another news story). ----
+  const hero = pickHero(news.length ? news : all, now);
   const heroCat = getCategory(hero.category);
   const heroAuthor = getAuthor(hero.author);
-  const heroBadged = hero;
 
   const used = { slugs: new Set<string>([hero.slug]), events: new Set<string>() };
   if (hero.eventSlug) used.events.add(hero.eventSlug);
-  // Backfill guard: pickDiverse never repeats, so thin pools may under-fill.
-  const fill = (picked: Article[], pool: Article[], n: number): Article[] => {
+  // Backfill guard: pickDiverse never repeats, so thin pools may under-fill. The
+  // backfill pool matches the section's own category so labels stay honest.
+  const fill = (
+    picked: Article[],
+    pool: Article[],
+    n: number,
+    u: { slugs: Set<string>; events: Set<string> } = used
+  ): Article[] => {
     if (picked.length >= n) return picked;
     const have = new Set(picked.map((a) => a.slug));
-    const extra = pool.filter((a) => !have.has(a.slug) && !used.slugs.has(a.slug)).slice(0, n - picked.length);
-    extra.forEach((a) => used.slugs.add(a.slug));
+    const extra = pool
+      .filter((a) => !have.has(a.slug) && !u.slugs.has(a.slug))
+      .slice(0, n - picked.length);
+    extra.forEach((a) => u.slugs.add(a.slug));
     return [...picked, ...extra];
   };
 
-  // Sub-leads: next-hottest with art, max 2 per category (>=2 distinct categories).
+  // Sub-leads: next-hottest news with art, max 2 per category.
   const subLeads = fill(
     pickDiverse(byHeat(news.filter((a) => a.image), now, HOMEPAGE.GRAVITY_HOT), 3, used, 2),
     news.filter((a) => a.image),
     3
   );
-  // Latest rail: pure chronology — the freshness signal.
-  const latest = fill(pickDiverse(news, 12, used), news, 12);
-  // Trending rail: ranked, deduped only against the hero package — it MAY repeat
-  // a Latest-rail item (time-order vs rank-order are different claims), but its
-  // picks are excluded from the card grids below.
+  // Latest rail: chronology within news, capped so no single category monopolizes.
+  const latest = fill(pickDiverse(news, 12, used, 6), news, 12);
+
+  // In Theaters (movies, non-box-office) + Box Office (movies box-office) — the
+  // movies-first two-column block that replaces the stale "Now Streaming".
+  const inTheaters = {
+    title: "In Theaters",
+    tagline: "The films everyone's talking about",
+    href: "/movies/",
+    lead: fill(pickDiverse(byHeat(theatrical, now, HOMEPAGE.GRAVITY_BALANCED), 1, used), theatrical, 1)[0],
+    rest: fill(pickDiverse(byHeat(theatrical, now, HOMEPAGE.GRAVITY_BALANCED), 3, used), theatrical, 3),
+  };
+  const boxOffice = {
+    title: "Box Office",
+    tagline: "Who's winning the weekend",
+    href: "/movies/box-office/",
+    lead: fill(pickDiverse(byHeat(boxOfficePool, now, HOMEPAGE.GRAVITY_BALANCED), 1, used), boxOfficePool, 1)[0],
+    rest: fill(pickDiverse(byHeat(boxOfficePool, now, HOMEPAGE.GRAVITY_BALANCED), 3, used), boxOfficePool, 3),
+  };
+  const hasBoxOffice = !!boxOffice.lead;
+
+  // What We're Watching — TV only (no streaming/celebrity bleed).
+  const whatWatching = fill(
+    pickDiverse(byHeat(tv, now, HOMEPAGE.GRAVITY_BALANCED), 4, used),
+    tv,
+    4
+  );
+
+  // Trending rail: ranked news, deduped vs the hero package (may repeat a Latest
+  // item — rank-order vs time-order are different claims), excluded from grids below.
   const railUsed = {
     slugs: new Set<string>([hero.slug, ...subLeads.map((a) => a.slug)]),
     events: new Set<string>(
@@ -111,44 +152,38 @@ export default function HomePage() {
     used.slugs.add(a.slug);
     if (a.eventSlug) used.events.add(a.eventSlug);
   });
-  const inTheaters = {
-    title: "In Theaters",
-    tagline: "The films everyone's talking about",
-    href: "/movies/",
-    lead: fill(pickDiverse(byHeat(movies, now, HOMEPAGE.GRAVITY_BALANCED), 1, used), movies, 1)[0],
-    rest: fill(pickDiverse(byHeat(movies, now, HOMEPAGE.GRAVITY_BALANCED), 3, used), movies, 3),
-  };
-  const streamPool = [...streaming, ...tv];
-  const nowStreaming = {
-    title: "Now Streaming",
-    tagline: "What to watch this week",
-    href: "/streaming/",
-    lead: fill(pickDiverse(byHeat(streamPool, now, HOMEPAGE.GRAVITY_BALANCED), 1, used), streamPool, 1)[0],
-    rest: fill(
-      pickDiverse(byHeat([...streamPool, ...movies], now, HOMEPAGE.GRAVITY_BALANCED), 3, used),
-      [...streamPool, ...movies],
-      3
-    ),
-  };
-  const whatWatching = fill(
-    pickDiverse(byHeat([...tv, ...streaming], now, HOMEPAGE.GRAVITY_SLOW), 4, used, 2),
-    [...tv, ...streaming, ...news],
-    4
-  );
-  const mustReads = fill(
-    pickDiverse(byHeat(news, now, HOMEPAGE.GRAVITY_BALANCED), 4, used, 2),
-    [...celebrity, ...news],
-    4
-  );
-  const celebrityRow = fill(
-    pickDiverse(byHeat(celebrity, now, HOMEPAGE.GRAVITY_BALANCED), 4, used),
-    [...celebrity, ...news],
+
+  // Music strip (high-interest swap-in).
+  const musicRow = fill(
+    pickDiverse(byHeat(music, now, HOMEPAGE.GRAVITY_BALANCED), 4, used),
+    music,
     4
   );
 
+  // ---- GOSSIP ZONE (~40%): its own dedup space (disjoint from news). eventSlug
+  // dedup collapses single-event floods (e.g. one wedding card, not twenty). ----
+  const gUsed = { slugs: new Set<string>(), events: new Set<string>() };
+  const gossipLead = pickDiverse(
+    byHeat(gossip.filter((a) => a.image), now, HOMEPAGE.GRAVITY_HOT),
+    1,
+    gUsed
+  )[0];
+  const gossipSide = fill(
+    pickDiverse(byHeat(gossip, now, HOMEPAGE.GRAVITY_BALANCED), 4, gUsed),
+    gossip,
+    4,
+    gUsed
+  );
+  const gossipGrid = fill(
+    pickDiverse(byHeat(gossip, now, HOMEPAGE.GRAVITY_BALANCED), 4, gUsed),
+    gossip,
+    4,
+    gUsed
+  );
 
   return (
     <div className="container-wide py-8">
+      {/* ===================== NEWS ZONE (~60%) ===================== */}
       {/* 1. Lead package + Latest News rail */}
       <section className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_332px] lg:gap-8">
         <div>
@@ -175,7 +210,7 @@ export default function HomePage() {
             </Link>
             <div className="mx-auto mt-6 max-w-3xl text-center sm:px-8">
               <div className="flex items-baseline justify-center gap-2.5">
-                <TrendingBadge article={heroBadged} />
+                <TrendingBadge article={hero} />
                 <Link href={`/${hero.category}/`} className="kicker">
                   {heroCat?.name}
                 </Link>
@@ -220,40 +255,41 @@ export default function HomePage() {
 
       <AdBreak />
 
-      {/* 2. Branded two-column pair */}
-      <TwoColumnFeature left={inTheaters} right={nowStreaming} />
+      {/* 2. Movies-first two-column: In Theaters + Box Office */}
+      {hasBoxOffice ? (
+        <TwoColumnFeature left={inTheaters} right={boxOffice} />
+      ) : (
+        <section>
+          <SectionHeader
+            title="In Theaters"
+            tagline="The films everyone's talking about"
+            href="/movies/"
+          />
+          <div className="grid gap-x-5 gap-y-8 sm:grid-cols-2 lg:grid-cols-4">
+            {[inTheaters.lead, ...inTheaters.rest].filter(Boolean).map((a) => (
+              <ArticleCard key={a!.slug} article={a!} variant="standard" />
+            ))}
+          </div>
+        </section>
+      )}
 
       <SectionRule />
 
-      {/* 3. What We're Watching */}
-      <section>
-        <SectionHeader title="What We're Watching" tagline="Spoilers ahead!" href="/tv/" />
-        <div className="grid gap-x-5 gap-y-8 sm:grid-cols-2 lg:grid-cols-4">
-          {whatWatching.map((a) => (
-            <ArticleCard key={a.slug} article={a} variant="standard" />
-          ))}
-        </div>
-      </section>
-
-      <SectionRule />
-
-      {/* 4. Must Reads */}
-      <section>
-        <SectionHeader
-          title="Must Reads"
-          tagline="Buzzy features and the stories behind the stories"
-          href="/celebrity/"
-        />
-        <div className="grid gap-x-5 gap-y-8 sm:grid-cols-2 lg:grid-cols-4">
-          {mustReads.map((a) => (
-            <ArticleCard key={a.slug} article={a} variant="standard" />
-          ))}
-        </div>
-      </section>
+      {/* 3. What We're Watching (TV) */}
+      {whatWatching.length ? (
+        <section>
+          <SectionHeader title="What We're Watching" tagline="Spoilers ahead!" href="/tv/" />
+          <div className="grid gap-x-5 gap-y-8 sm:grid-cols-2 lg:grid-cols-4">
+            {whatWatching.map((a) => (
+              <ArticleCard key={a.slug} article={a} variant="standard" />
+            ))}
+          </div>
+        </section>
+      ) : null}
 
       <AdBreak />
 
-      {/* 5. Latest Trailers + More Top Stories rail */}
+      {/* 4. Latest Trailers + Trending News rail */}
       <section className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_300px] lg:gap-8">
         <div>
           <FeaturedVideos items={trailers} />
@@ -280,31 +316,58 @@ export default function HomePage() {
         </aside>
       </section>
 
-      <SectionRule />
+      {/* 5. Music */}
+      {musicRow.length ? (
+        <>
+          <SectionRule />
+          <section>
+            <SectionHeader
+              title="Music"
+              tagline="Pop stars, soundtracks and the Grammys"
+              href="/music/"
+            />
+            <div className="grid gap-x-5 gap-y-8 sm:grid-cols-2 lg:grid-cols-4">
+              {musicRow.map((a) => (
+                <ArticleCard key={a.slug} article={a} variant="standard" />
+              ))}
+            </div>
+          </section>
+        </>
+      ) : null}
 
-      {/* 6. Reviews */}
-      <ReviewsSplit movies={movieReviews} tv={tvReviews} />
+      <AdBreak />
 
-      <SectionRule />
-
-      {/* 7. Where to Watch */}
-      <WhereToWatch items={watchGuides} />
-
-      <SectionRule />
-
-      {/* 8. Celebrity */}
-      <section>
-        <SectionHeader
-          title="Celebrity"
-          tagline="The stars and the stories around them"
-          href="/celebrity/"
-        />
-        <div className="grid gap-x-5 gap-y-8 sm:grid-cols-2 lg:grid-cols-4">
-          {celebrityRow.map((a) => (
-            <ArticleCard key={a.slug} article={a} variant="standard" />
-          ))}
-        </div>
-      </section>
+      {/* ===================== GOSSIP ZONE (~40%) ===================== */}
+      {gossipLead ? (
+        <section>
+          <SectionHeader
+            title="Celebrity & Gossip"
+            tagline="The stars, the drama, the buzz"
+            href="/celebrity/"
+          />
+          <div className="grid gap-8 lg:grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)] lg:gap-10">
+            <ArticleCard article={gossipLead} variant="large" />
+            {gossipSide.length ? (
+              <div className="border-t-2 border-ink pt-4 lg:border-l lg:border-t-0 lg:border-hair lg:pl-8 lg:pt-0">
+                <DottedList items={gossipSide} showKicker={false} showTime />
+              </div>
+            ) : null}
+          </div>
+          {gossipGrid.length ? (
+            <div className="mt-10 grid gap-x-5 gap-y-8 border-t border-dotted border-gray pt-8 sm:grid-cols-2 lg:grid-cols-4">
+              {gossipGrid.map((a) => (
+                <ArticleCard key={a.slug} article={a} variant="standard" />
+              ))}
+            </div>
+          ) : null}
+          <Link
+            href="/celebrity/"
+            className="btn-label mt-8 block w-full border border-red py-3 text-center text-red transition-colors duration-150 hover:bg-red hover:text-paper md:mx-auto md:w-[300px]"
+          >
+            More Celebrity +
+          </Link>
+        </section>
+      ) : null}
 
       <div className="my-12 flex justify-center lg:my-14">
         <AdSlot format="billboard" />

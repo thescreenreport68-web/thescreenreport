@@ -3,7 +3,7 @@ title: >-
   Usher and Chris Brown's 'Raymond Brown' Tour Setlist Revealed: 58 Songs at
   Denver Kickoff
 slug: usher-chris-brown-s-raymond-brown-tour-2026-setlist-every-song-played-
-category: celebrity
+category: music
 subcategory: news
 author: editorial-team
 date: '2026-06-27T04:25:08.454Z'

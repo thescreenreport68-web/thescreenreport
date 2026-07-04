@@ -3,8 +3,8 @@ title: >-
   Common on GQ: His Wellness Essentials and the Music for ESPN’s Stuart Scott
   Doc
 slug: common-on-crafting-music-for-espn-s-stuart-scott-doc
-category: celebrity
-subcategory: interviews
+category: music
+subcategory: screen-music
 author: editorial-team
 date: '2026-06-26T17:01:03.352Z'
 dek: >-

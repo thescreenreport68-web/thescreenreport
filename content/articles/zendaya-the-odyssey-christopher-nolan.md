@@ -1,7 +1,7 @@
 ---
 title: Zendaya Joins Christopher Nolan's Epic 'The Odyssey' (2026)
 slug: zendaya-the-odyssey-christopher-nolan
-category: celebrity
+category: movies
 subcategory: news
 author: editorial-team
 date: '2026-06-27T05:10:52.931Z'

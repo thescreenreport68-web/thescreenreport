@@ -17,6 +17,26 @@ export const HOMEPAGE = {
   GRAVITY_SLOW: 0.4, // evergreen-ish modules
   BASE_SCORE: 30, // trendScore prior for articles without pipeline signals
 
+  // Movies-first weighting (owner mandate): a category's heat prior. Movies leads,
+  // then TV/streaming, then music/awards. Celebrity is 0 — it competes on its own
+  // recency/signals and lives in the dedicated 40% gossip zone, not the news slots.
+  CATEGORY_BOOST: {
+    movies: 12,
+    tv: 6,
+    streaming: 6,
+    music: 4,
+    awards: 4,
+    reviews: 3,
+    celebrity: 0,
+  } as Record<string, number>,
+  BOX_OFFICE_BOOST: 4, // extra nudge for box-office pieces (high audience interest)
+
+  // Quantize article age into coarse buckets before the decay term so a 5-minute
+  // rebuild (clock drift alone) can't reorder near-tied cards. The hero/sections
+  // only change when a genuinely higher-scored story lands or an age bucket flips —
+  // "updates, but not too fast" (owner). Smaller = livelier; larger = stickier.
+  AGE_BUCKET_H: 3,
+
   HERO_AGE_LADDER_H: [24, 48, 72], // widen the window on slow days
   HERO_MIN_IMAGE_WIDTH: 1200,
   HERO_FORMS: new Set(["news", "box-office", "awards", "music-news", "music-awards", "trailer", "inside"]),
@@ -33,6 +53,29 @@ export const HOMEPAGE = {
   TRENDING_RAIL_SLOTS: 6,
   TRENDING_RAIL_PER_CATEGORY: 2,
 };
+
+// Non-personal event types that can also earn a BREAKING badge (so a box-office
+// record or a major casting/renewal isn't locked out of the badge that used to be
+// reserved for celebrity personal events). Gated by corroboration + freshness below.
+const BREAKING_NEWS_EVENTS = new Set([
+  "boxoffice",
+  "casting",
+  "renewal",
+  "cancellation",
+  "award",
+]);
+
+// The movies-first category prior applied inside heat().
+function categoryBoost(a: Article): number {
+  let b = HOMEPAGE.CATEGORY_BOOST[a.category] ?? 0;
+  if (
+    a.category === "movies" &&
+    (a.subcategory === "box-office" || a.formatTag === "box-office")
+  ) {
+    b += HOMEPAGE.BOX_OFFICE_BOOST;
+  }
+  return b;
+}
 
 // High-engagement personal-event types (find/expand.mjs TIER_S).
 const TIER_S = new Set([
@@ -137,6 +180,7 @@ function isPinned(a: Article, now: number): boolean {
 // ============ HEAT — the placement score (§2) ============
 export function heat(a: Article, now: number, gravity: number): number {
   let score = trendScoreOf(a);
+  score += categoryBoost(a); // movies-first weighting (owner mandate)
   if (a.eventType && TIER_S.has(a.eventType)) score += 10;
   if (a.storyStatus === "CONFIRMED") score += 8;
   else if (a.storyStatus === "DEVELOPING") score += 4;
@@ -148,7 +192,11 @@ export function heat(a: Article, now: number, gravity: number): number {
     score += 10 * readerVelocity(m); // readers spiking right now ≈ up to +30
   }
   if (isPinned(a, now)) score += 1000;
-  return score / Math.pow(hoursSince(a.date, now) + 2, gravity);
+  // Age is bucketed (AGE_BUCKET_H) so pure clock drift between rebuilds can't
+  // reorder near-tied cards — the placement only moves on real new/bigger stories.
+  const ageH =
+    Math.floor(hoursSince(a.date, now) / HOMEPAGE.AGE_BUCKET_H) * HOMEPAGE.AGE_BUCKET_H;
+  return score / Math.pow(ageH + 2, gravity);
 }
 
 // ============ TRENDING (§4.1) — supply-side velocity, 8h half-life ============
@@ -173,13 +221,15 @@ export function trendingScore(a: Article, now: number): number {
 }
 
 function isBreaking(a: Article, now: number): boolean {
-  return (
-    !!a.eventType &&
-    TIER_S.has(a.eventType) &&
-    (a.storyStatus === "CONFIRMED" || a.storyStatus === "DEVELOPING") &&
-    hoursSince(a.date, now) <= HOMEPAGE.BREAKING_MAX_AGE_H &&
-    (a.outletCount ?? 0) >= HOMEPAGE.BREAKING_MIN_OUTLETS
-  );
+  if (!a.eventType) return false;
+  const confirmed =
+    a.storyStatus === "CONFIRMED" || a.storyStatus === "DEVELOPING";
+  if (!confirmed) return false;
+  if (hoursSince(a.date, now) > HOMEPAGE.BREAKING_MAX_AGE_H) return false;
+  if ((a.outletCount ?? 0) < HOMEPAGE.BREAKING_MIN_OUTLETS) return false;
+  // Personal-event breaking (death/marriage/…) OR a hard news event (box-office
+  // record, major casting, renewal/cancellation, award) — no longer celebrity-only.
+  return TIER_S.has(a.eventType) || BREAKING_NEWS_EVENTS.has(a.eventType);
 }
 
 // ---- the badge sets, computed once per build ----
@@ -228,13 +278,24 @@ function heroEligible(a: Article, now: number, maxAgeH: number): boolean {
 export function pickHero(all: Article[], now: number): Article {
   const pinned = all.filter((a) => isPinned(a, now));
   if (pinned.length) return pinned[0]; // newest pinned (list is date-sorted)
+  // Fully deterministic ordering so the Top Story never flips between two
+  // equal-heat rebuilds: heat → trendScore → category weight → newer → slug.
+  const better = (a: Article, b: Article): boolean => {
+    const ha = heat(a, now, HOMEPAGE.GRAVITY_HOT);
+    const hb = heat(b, now, HOMEPAGE.GRAVITY_HOT);
+    if (ha !== hb) return ha > hb;
+    const ta = trendScoreOf(a);
+    const tb = trendScoreOf(b);
+    if (ta !== tb) return ta > tb;
+    const ca = categoryBoost(a);
+    const cb = categoryBoost(b);
+    if (ca !== cb) return ca > cb;
+    if (a.date !== b.date) return a.date > b.date;
+    return a.slug < b.slug;
+  };
   for (const window of HOMEPAGE.HERO_AGE_LADDER_H) {
     const pool = all.filter((a) => heroEligible(a, now, window));
-    if (pool.length) {
-      return pool.reduce((best, a) =>
-        heat(a, now, HOMEPAGE.GRAVITY_HOT) > heat(best, now, HOMEPAGE.GRAVITY_HOT) ? a : best
-      );
-    }
+    if (pool.length) return pool.reduce((best, a) => (better(a, best) ? a : best));
   }
   // Slow-week fallback: newest story with art; never an empty hero.
   return all.find((a) => a.image) ?? all[0];

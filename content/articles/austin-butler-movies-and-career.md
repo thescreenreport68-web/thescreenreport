@@ -1,8 +1,8 @@
 ---
 title: 'Austin Butler Movies and Career: From Disney Star to Oscar-Nominated Actor'
 slug: austin-butler-movies-and-career
-category: celebrity
-subcategory: profiles-careers
+category: movies
+subcategory: rankings-lists
 author: editorial-team
 date: '2026-06-27T17:01:03.873Z'
 dek: >-

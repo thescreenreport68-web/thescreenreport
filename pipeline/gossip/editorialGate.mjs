@@ -13,7 +13,12 @@
 // categorizer confirmed rule) with a single decision made from ground truth. reviewImpl injectable for offline tests.
 import { chat } from "../lib/openrouter.mjs";
 
-const CATS = ["celebrity", "music", "awards"];
+// Re-route enabled (owner 2026-07-04): the gossip desk may file a genuine film/TV
+// PROJECT story under its true category instead of forcing everything to celebrity —
+// personal-life stories still go to celebrity (see the category rule). Streaming-service
+// series (Netflix/Max/Prime) file under "tv" — the streaming category is guide-only
+// (where-to-watch/best-of), which has no "news" subcategory.
+const CATS = ["celebrity", "music", "awards", "movies", "tv"];
 
 const SYSTEM = `You are the EDITOR-IN-CHIEF of a celebrity news desk. You are handed the RAW COLLECTED TEXT of one candidate story (what our crawler actually pulled from the source). Decide, using ONLY that text, whether and how to run it. Be strict — a news brand's credibility depends on NOT publishing filler, and on filing/attributing every story correctly. Output strict JSON only.
 
@@ -28,11 +33,13 @@ isStory (the REJECT power — this is the most important call):
 - TRUE only if there is a SPECIFIC, substantive development a reader learns something from (an event that happened, an announcement, a legal/health/relationship development, real quotes, concrete facts).
 - When the text is thin or is just a caption around a photo, isStory MUST be false. Do not be generous.
 
-category — file by what the STORY IS ABOUT, NOT by who the subject is:
+category — file by what the STORY IS ABOUT, NOT by who the subject is (MOVIES-FIRST: when a real screen PROJECT is the core, file it there — do NOT dump project news into celebrity):
+- "movies" if the core of the story is a FILM PROJECT — a movie's casting, greenlight, deal, production, release, or box office (e.g. "Actor to star in a new feature film" is MOVIES).
+- "tv" if the core is a TV or STREAMING SERIES (broadcast, cable, Netflix/Max/Prime/etc.) — a show's greenlight, casting, renewal, cancellation, premiere, or episodes (e.g. "Ashley Tisdale to star in a new Netflix comedy series" is TV, not celebrity).
 - "music" ONLY if the story itself is about MUSIC: a song/album release, chart result, tour, performance, music award, or lyric analysis.
-- "celebrity" for any PERSONAL-LIFE story — relationship, wedding, family, appearance, feud, legal, health, net worth, paparazzi sighting — EVEN IF the subject is a musician (Taylor Swift's wedding is CELEBRITY, not music).
+- "celebrity" for a PERSONAL-LIFE story — relationship, wedding, family, appearance, feud, legal, health, net worth, paparazzi sighting — EVEN IF the subject is a musician or an actor (Taylor Swift's wedding is CELEBRITY, not music; an actor spotted at a party is CELEBRITY, not movies).
 - "awards" only for an awards-race story.
-secondaryCategory: if the subject is a musician but the story is personal-life, set "music" as secondary; else null.
+secondaryCategory: if the primary is a screen/music PROJECT but a celebrity is the hook, you may set "celebrity" as secondary; if the subject is a musician but the story is personal-life, set "music" as secondary; else null.
 
 attribution — the outlet that ORIGINALLY reports the core claim, as evidenced by the text (who broke it / whom it cites):
 - NEVER a social aggregator (Pop Crave, PopBase, DeuxMoi) and NEVER a pure republisher/aggregator (Yahoo, MSN, AOL, Google News, MSN). Name the real reporting outlet the text points to.

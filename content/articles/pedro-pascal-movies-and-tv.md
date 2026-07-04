@@ -3,7 +3,7 @@ title: >-
   Pedro Pascal Movies and TV Shows: Every Major Role, In Order, and Where to
   Watch
 slug: pedro-pascal-movies-and-tv
-category: celebrity
+category: movies
 author: editorial-team
 date: '2026-06-21T15:00:00.000Z'
 dek: >-
@@ -129,7 +129,7 @@ about:
     sameAs: 'https://en.wikipedia.org/wiki/The_Fantastic_Four:_First_Steps'
 imageWidth: 1280
 imageHeight: 1831
-subcategory: profiles-careers
+subcategory: rankings-lists
 ---
 
 If you want the short answer: Pedro Pascal is best known for four roles that arrived in just over a decade — **Oberyn Martell** in *Game of Thrones*, DEA agent **Javier Peña** in *Narcos*, masked bounty hunter **Din Djarin** in *The Mandalorian*, and grief-hardened survivor **Joel Miller** in *The Last of Us* — before he stepped into the Marvel Cinematic Universe as **Reed Richards** in *The Fantastic Four: First Steps*. This guide to Pedro Pascal movies and TV shows lays out every major role in order, tells you exactly where to stream each one, ranks the essential watches, and previews what's coming in 2026.

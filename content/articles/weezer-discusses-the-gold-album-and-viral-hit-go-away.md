@@ -1,8 +1,8 @@
 ---
 title: Rivers Cuomo Breaks Down Weezer's 'Go Away' and Gold Album in New Interview
 slug: weezer-discusses-the-gold-album-and-viral-hit-go-away
-category: celebrity
-subcategory: interviews
+category: music
+subcategory: news
 author: editorial-team
 date: '2026-06-27T02:43:44.952Z'
 dek: >-
