@@ -1,6 +1,8 @@
 name = "news-cron"
 main = "worker.js"
 compatibility_date = "2025-01-01"
+# Cron-only Worker (no HTTP endpoint) — don't publish to workers.dev; the Cron Trigger fires the scheduled() handler.
+workers_dev = false
 
 # Fires every 5 minutes. The Worker gates to LA 10am-10pm PT and calls the GitHub workflow_dispatch API.
 [triggers]
