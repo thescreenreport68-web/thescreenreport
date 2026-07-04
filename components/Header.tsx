@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { NAV } from "@/lib/site";
 import { WordmarkLink, TsrMark } from "./Wordmark";
+import HeaderAuth from "./HeaderAuth";
 
 function Hamburger({ open }: { open: boolean }) {
   return open ? (
@@ -85,16 +86,20 @@ export default function Header() {
 
           <WordmarkLink markClassName="text-[26px] sm:text-4xl lg:text-[52px]" />
 
-          <div className="flex flex-1 items-center justify-end gap-5">
+          <div className="flex flex-1 items-center justify-end gap-4 sm:gap-5">
             <Link
               href="/about/"
               className="nav-link hidden text-[11px] sm:inline"
             >
               About
             </Link>
-            <Link href="#newsletter" className="nav-link text-[11px] text-red hover:text-red-dark">
+            <Link
+              href="#newsletter"
+              className="nav-link hidden text-[11px] text-red hover:text-red-dark sm:inline"
+            >
               Newsletter
             </Link>
+            <HeaderAuth />
           </div>
         </div>
       </div>

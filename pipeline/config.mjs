@@ -15,13 +15,11 @@ export const MODELS = {
   // The CHEAP model for the universal verify gate's claim-extraction + entailment (lib/verifyGate.mjs) — it does
   // deterministic-heavy work a cheap model handles fine, so the higher judge spend stays one call per article.
   verify: "google/gemini-2.5-flash-lite",
-  // THE INDEPENDENT WEB REALITY-CHECK (lib/webVerify.mjs) — the ONLY non-circular accuracy layer, so its model must
-  // verify FACTS against the live web WITH CITATIONS. Owner decision (2026-07-03): PERPLEXITY SONAR — a purpose-built
-  // cited-web-search model (native search, returns url_citation receipts, ~$0.005-0.015/call incl. its search fee).
-  // Cheap-tier (NOT premium — owner hard rule holds). Live-probed: it correctly flagged "directed by Kamiyama" as
-  // wrong (he is supervising director) with a real source URL. Override for the A/B bake-off with WEB_VERIFY_MODEL=
-  // google/gemini-2.5-flash (the previous plugin-based check). The JUDGE stays gemini-2.5-flash (quality, not facts).
-  webVerify: "perplexity/sonar",
+  // (INDEPENDENT WEB FACT-CHECK REMOVED 2026-07-04 — owner trust model, NEWS_AUTOMATION_SPEC §3: the top outlet IS
+  // ground truth; we reproduce it faithfully and NEVER independently re-verify it against the web. If a top outlet
+  // erred, we print it as they printed it. lib/webVerify.mjs (Sonar) is no longer wired — it was the expensive layer
+  // and it contradicted the trust model. The ONLY accuracy guard now is FIDELITY-TO-SOURCE, done by the cheap
+  // deterministic guards + the verify-gate. No premium/Sonar spend at runtime.)
   // Cheap-ONLY escalation ladder if flash-lite ever under-delivers on the §7.5 validation (NO Opus):
   //   flash-lite (cheapest) → llama-4-maverick (~$0.0017/call) → gemini-2.5-flash (~$0.0039/call, ceiling).
   judgeFallbacks: ["meta-llama/llama-4-maverick", "google/gemini-2.5-flash"],

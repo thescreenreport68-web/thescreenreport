@@ -13,7 +13,6 @@ import { canonicalize } from "./find/categorize.mjs";
 import { recordPublished, slugKey } from "./find/store.mjs";
 import { sourceImage, measureRemote } from "./stages/image.mjs";
 import { pickHeroImage } from "./lib/heroImage.mjs";
-import { webVerifyArticle } from "./lib/webVerify.mjs";
 import { cutArticle } from "./lib/cutter.mjs";
 import { dedupeSentences, trimIncomplete } from "./lib/polish.mjs";
 import { gate, classifyBlocks } from "./stages/gate.mjs";
@@ -35,10 +34,6 @@ const ONLY = (process.argv.find((a) => a.startsWith("--only=")) || "").split("="
 // FIND→MAKE seam: --from-find loads the autonomously-discovered ranked queue (data/find/queue.json)
 // instead of the hand-typed topics.mjs. This is the single integration point (FIND_HALF_PLAN §3).
 const FROM_FIND = process.argv.includes("--from-find");
-// PHASE C terminal-accept floor: on the FINAL attempt, an article that is VERIFIED ACCURATE (no fabrication /
-// grounding / must-have block) but merely a B-grade on soft quality still PUBLISHES if it scores >= this — better a
-// correct, slightly-imperfect news brief than holding it forever (the 0-published trap). Below it → needs_review.
-const ACCEPT_FLOOR = 65;
 const LIMIT = Number((process.argv.find((a) => a.startsWith("--limit=")) || "").split("=")[1]) || 0;
 let SOURCE_TOPICS = TOPICS;
 if (FROM_FIND) {
@@ -50,14 +45,11 @@ let topics = ONLY ? SOURCE_TOPICS.filter((t) => t.id === ONLY) : SOURCE_TOPICS;
 if (LIMIT) topics = topics.slice(0, LIMIT);
 const BASE_ARG = (process.argv.find((a) => a.startsWith("--base=")) || "").split("=")[1];
 const BASE = BASE_ARG ? new Date(BASE_ARG).getTime() : Date.now(); // real publish time in production; override with --base=<ISO>
-// LIGHT TARGETED FACT-CHECK (owner 2026-07-03): sourcing from top trades means the story is already verified — but
-// even a top outlet occasionally errs (Billboard's promo gave Tyga's "Rack City" the wrong chart peak, which we
-// faithfully inherited). So we run the Sonar web-check to catch the LOAD-BEARING specifics (chart numbers, dates,
-// who-did-what) and CORRECT them in place — but LIGHT: it never fail-closed-HOLDS and never guts an article into a
-// hold (WEB_VERIFY_LIGHT). If the check can't run, we publish on trust-the-source. Accuracy up, volume unaffected.
-const WEB_VERIFY = process.env.WEB_VERIFY !== "0"; // on by default (light mode below); WEB_VERIFY=0 fully disables
-const WEB_VERIFY_LIGHT = process.env.WEB_VERIFY_STRICT !== "1"; // light (never block/gut) unless STRICT is requested
-const MAX_ATTEMPTS = Number(process.env.MAX_ATTEMPTS) || 2; // generate→gate rewrite passes; 2 for speed (the web-cut + cut-and-publish catch the tail)
+// TRUST MODEL (owner 2026-07-04, NEWS_AUTOMATION_SPEC §3): sourcing from a top trade means the story is ALREADY
+// verified — the outlet IS ground truth. We faithfully reproduce it and NEVER independently re-check it against the
+// web (the Sonar web-check is removed). Accuracy enforcement = FIDELITY to the source (the gate trims any checkable
+// specific the writer added beyond the source), never a hold.
+const MAX_ATTEMPTS = Number(process.env.MAX_ATTEMPTS) || 2; // generate→gate passes; attempt 2 only tightens format / trims strays
 
 // (cutStrays moved to lib/cutter.mjs as cutArticle — 2026-07-03: ONE cutter now edits body AND
 // keyTakeaways/FAQ/structured fields, closing the flagged-claim-survives-in-frontmatter hole.)

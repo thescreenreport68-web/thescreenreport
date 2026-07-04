@@ -191,7 +191,11 @@ export async function generate({ topic, model, maxTokens = 6000, corrections = n
   const bsrc = (topic._bundle && topic._bundle.sources) || [];
   const groundChars = bsrc.reduce((n, s) => n + (s.text || "").length, 0);
   const thinGrounding = bsrc.length < 2 || groundChars < 1500;
-  const wordFloor = thinGrounding ? 220 : 350;
+  // SANITY floor only (2026-07-04, NEWS_AUTOMATION_SPEC §3): NOT a padding target. The old 220/350 floor forced the
+  // writer to pad a thin source up to a length — and padding IS how invention gets in. A faithful rewrite of a top
+  // outlet's story is naturally long enough; a genuinely thin source becomes a SHORT, tight, fully-grounded brief and
+  // that is the CORRECT outcome. This floor only rejects a broken stub, it never asks the writer to add material.
+  const wordFloor = thinGrounding ? 120 : 180;
 
   // ── SURGICAL SELF-CORRECTION (gossip-automation port, 2026-07-03 — audit D5): when a prior draft exists,
   // FIX ONLY the flagged spots instead of rewriting the whole article at temp 0.6 (full rewrites routinely
@@ -276,7 +280,7 @@ ${corrections}` : ""}`;
     const extra =
       attempt === 0
         ? ""
-        : `\n\nYOUR PREVIOUS ATTEMPT WAS INCOMPLETE. Return COMPLETE valid JSON with: faq >=${thinGrounding ? 2 : 3} items (new follow-ups, not body restatements); body >=${wordFloor} words containing the form's H2 headings (a reader-question H2 where it fits) AND a '## Sources' section ONLY if genuinely-relevant external links exist; keyTakeaways with 3-5 items. Stay WITHIN the sources — never pad with ungrounded background to reach the length.`;
+        : `\n\nYOUR PREVIOUS ATTEMPT WAS INCOMPLETE. Return COMPLETE valid JSON with: faq >=${thinGrounding ? 2 : 3} items (new follow-ups, not body restatements); a complete body with the form's H2 headings (a reader-question H2 where it fits) AND a '## Sources' section ONLY if genuinely-relevant external links exist; keyTakeaways with 3-5 items. Do NOT pad to reach any length — a short, fully-grounded brief is the correct outcome when the source is thin; only add material that is actually in the REFERENCE FACTS.`;
     const { data, usage, raw } = await chat({
       model,
       system: SYSTEM,

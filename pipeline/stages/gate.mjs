@@ -289,111 +289,83 @@ Return STRICT JSON:
   return data;
 }
 
-export async function gate({ article, topic, judgeModel }) {
+// LEAN FIDELITY GATE (2026-07-04 rebuild, NEWS_AUTOMATION_SPEC §3). The trust model changed the gate's whole job:
+// the top outlet IS ground truth, so we NO LONGER independently re-verify facts against the world (the Sonar
+// web-check is gone) and we NO LONGER hold an accurate article on a soft quality sub-score. The ONLY accuracy guard
+// is FIDELITY TO THE SOURCE — did the writer introduce a checkable specific that isn't in the injected REFERENCE
+// FACTS? Any such stray is collected into `cutClaims` and TRIMMED by run.mjs (never a hold). The paid LLM judge is
+// OPT-IN only (runJudge / RUN_JUDGE=1) so a normal run pays ~$0 for scoring. Returns:
+//   • cutClaims   — checkable specifics to trim (fidelity violations); trimmed, never held
+//   • formatBlocks— structure/readability nits worth ONE retry, then published anyway (publish-everything)
+//   • brokenHold  — a genuinely unpublishable article (no title / garbled / prompt-leak) — the only accuracy-side hold
+//   • corrections — the surgical fix instructions for the one optional retry
+//   • score       — null unless the opt-in judge ran (logging/QA only; NEVER holds)
+export async function gate({ article, topic, judgeModel, runJudge = false }) {
   const det = deterministic(article, topic);
 
-  // FREE verification — ALWAYS run, even on a structural short-circuit (the old code returned
-  // claimCheck.ok=true WITHOUT checking — Problem #8). Two independent lines:
-  //  (1) verifyClaims — claims[]-scoped receipt validation (PR2);
-  //  (2) verifyGroundTruth — deterministic diff of the PROSE + STRUCTURED FIELDS vs the authoritative
-  //      TMDB/OMDb facts (PR3) — independent of the writer's opt-out claims[]; catches platform/RT/OTT
-  //      box-office/director contradictions the writer never listed.
+  // ── FIDELITY LAYER — all cheap/free. Does the article stay inside the injected source facts?
+  //  (1) verifyClaims     — claims[] receipt validation;
+  //  (2) verifyGroundTruth— deterministic diff of prose + structured fields vs the AUTHORITATIVE TMDB/OMDb facts;
+  //  (3) verifyGate       — cheap LLM: extract every claim, check each against the gathered source bundle;
+  //  (4) verifyQuotes     — every quoted phrase must be verbatim in the sources (free);
+  //  (5) specificsGuard   — every number + "according to X" attribution must exist in the grounding (free).
   const cc = verifyClaims(article, topic);
   const gt = verifyGroundTruth(article, topic);
-  const factCorrections = [cc.corrections, gt.corrections].filter(Boolean).join("\n");
-  const factBlocks = [
-    ...cc.contradicted.map((v) => `fabricated: ${v.claim} — ${v.why}`),
-    ...gt.contradicted.map((f) => `CONTRADICTED [${f.layer}]: ${f.claim} — ${f.why}`),
-  ];
-  // The merged claim-check payload the run.mjs self-correct loop reads (corrections drive the rewrite).
-  const claimCheck = { ok: cc.ok && gt.ok, corrections: factCorrections, bad: cc.bad, verdicts: cc.verdicts, contradicted: [...cc.contradicted, ...gt.contradicted], groundTruth: gt.findings };
-
-  // Cost short-circuit: skip the paid LLM judge ONLY when the draft has a REAL block — a fabrication (factBlocks)
-  // or a det BLOCK-category issue (garbled/prompt-leak/missing-title). A draft with only FIXABLE det nits (e.g.
-  // keyword-not-in-title, too-short) STILL runs the judge so an accurate article gets a real score the Phase C
-  // terminal-accept path can use (else an SEO nit would silently zero the score and hold an accurate piece).
-  const detBlock = classifyBlocks(det.hardBlocks).block;
-  if (detBlock.length || factBlocks.length) {
-    return { score: 0, pass: false, subscores: {}, deterministic: det, hardBlocks: [...det.hardBlocks, ...factBlocks], claimCheck, cutClaims: claimCheck.contradicted.map((c) => c.claim).filter(Boolean), strengths: [], weaknesses: ["deterministic block"] };
-  }
-
-  // UNIVERSAL VERIFY GATE (rebuild Step 3/4): independently extract + verify EVERY claim against the gathered
-  // source bundle + the structured authoritative facts — fail-closed, cheap model. This is the universal coverage
-  // that replaces the old ~7-type allowlist; verifyGroundTruth above stays as the structured high-confidence layer.
-  // Its corrections feed the SAME rewrite loop (run.mjs reads scored.claimCheck.corrections).
   const vbundle = { blocked: false, sources: [
     ...((topic._bundle && topic._bundle.sources) || []),
     ...(topic.facts || []).map((f) => ({ domain: String(f.title || "fact").slice(0, 40), owner: "structured", tier: "fact", text: f.extract || "", quotes: [] })),
   ] };
   const vg = vbundle.sources.length ? await verifyGate({ article, bundle: vbundle, model: MODELS.verify || "google/gemini-2.5-flash-lite" }) : null;
-  if (vg && vg.corrections) claimCheck.corrections = [claimCheck.corrections, vg.corrections].filter(Boolean).join("\n");
-
-  // DETERMINISTIC verbatim-quote guard (Phase B, model-independent): every quoted phrase must be a real
-  // substring of the gathered source bundle AND not lifted out of a denial — catches misquotes the LLM pass
-  // can miss, every time, at $0. A bad quote is a fixable block with a precise instruction.
   const qg = verifyQuotes(article, vbundle);
-  if (!qg.ok) claimCheck.corrections = [claimCheck.corrections, `FABRICATED/ALTERED QUOTE — the quoted phrase(s) ${qg.badQuotes.map((q) => `"${q}"`).join(", ")} are NOT verbatim in the gathered sources. Use ONLY the exact words from the ON-THE-RECORD QUOTES, or remove the quotation marks and paraphrase.`].filter(Boolean).join("\n");
-
-  // DETERMINISTIC specifics guard (gossip port, 2026-07-03): every significant NUMBER in reader copy and every
-  // "according to X" attribution must exist in the grounding — model-independent, $0, fires every time. Its
-  // findings are CUTTABLE (they join cutClaims below), so a stray figure is removed, never a dead-end hold.
   const sg = specificsGuard(article, vbundle.sources, topic);
-  if (!sg.ok) claimCheck.corrections = [claimCheck.corrections, sg.corrections].filter(Boolean).join("\n");
 
-  const j = await judge({ article, topic, model: judgeModel, metrics: det });
-  const ss = j.subscores || {};
-  // Judge = SCORE-ONLY (2026-07-03): its hardBlocks/fabrication pass was the 4th redundant layer over the same
-  // facts and produced un-cuttable double-jeopardy holds. Fabrication blocks come exclusively from the
-  // deterministic layers above (factBlocks) + the verify gate below + the web reality-check in run.mjs.
-  const hardBlocks = [...det.hardBlocks, ...factBlocks];
-  // A verify-gate BLOCK ALWAYS hard-blocks — even with an empty unsupported[] (the cheap extractor returned no
-  // claims, or the bundle was empty): a draft the gate could NOT analyze must NOT pass (fail-closed, never open).
-  if (vg && vg.verdict === "BLOCK")
-    hardBlocks.push(`verify-gate BLOCK: ${vg.unsupported.length ? vg.unsupported.slice(0, 3).map((u) => u.claim.slice(0, 55)).join("; ") : (vg.reason || "could not verify the article against the gathered sources")}`);
-  else if (vg && vg.verdict === "CUT" && vg.unsupported.length)
-    hardBlocks.push(`verify-gate CUT: ${vg.unsupported.length} claim(s) not in the gathered sources — ${vg.unsupported.slice(0, 3).map((u) => u.claim.slice(0, 55)).join("; ")}`);
-  if (!qg.ok) hardBlocks.push(`fabricated/altered quote: ${qg.badQuotes.slice(0, 2).map((q) => '"' + q.slice(0, 50) + '"').join("; ")} — use the exact source words or drop the quotation marks`);
-  if (!sg.ok) hardBlocks.push(`ungrounded specific(s): ${sg.bad.slice(0, 3).map((b) => b.text).join("; ")} — every figure/outlet must exist in the gathered sources or authoritative facts`);
-  // Only the CHECKABLE unverified claims block the piece — a benign qualitative background line doesn't (2026-07-03).
-  const ccBadCheckable = (cc.bad || []).filter((b) => CHECKABLE_CLAIM.test(typeof b === "string" ? b : (b && b.claim) || ""));
-  if (ccBadCheckable.length) hardBlocks.push(`${ccBadCheckable.length} unverified claim(s) (need correction)`);
-  if (gt.findings.length > gt.contradicted.length) hardBlocks.push(`${gt.findings.length - gt.contradicted.length} ungrounded fact(s) (verify against the authoritative facts)`);
+  // cutClaims — every CHECKABLE specific the writer introduced beyond the source: an unsupported/contradicted fact,
+  // a bad number, or a fabricated quote. run.mjs TRIMS these from body + fields and publishes the faithful remainder.
+  // A benign qualitative background line the thin source happened to omit is common knowledge and is KEPT (cutting it
+  // just needlessly shortens a faithful brief); only DANGEROUS specifics are trimmed.
+  const cutClaims = [
+    ...(vg && vg.unsupported ? vg.unsupported.map((u) => u.claim).filter((c) => CHECKABLE_CLAIM.test(c)) : []),
+    ...cc.contradicted.map((c) => c.claim),
+    ...gt.contradicted.map((f) => f.claim),
+    ...(cc.bad || []).map((b) => (typeof b === "string" ? b : b && b.claim) || null).filter((c) => typeof c === "string" && CHECKABLE_CLAIM.test(c)),
+    ...sg.bad.map((b) => b.text),
+    ...(qg.badQuotes || []),
+  ].filter((c) => typeof c === "string" && c.length > 8);
 
-  // SOFT quality floors LOWERED for the brand-new-volume strategy (owner 2026-07-01): a real, accurate story that is
-  // merely B-grade on voice/phrasing/infoGain/readability still PUBLISHES (7→5). ACCURACY (above) stays strict.
-  if (typeof ss.infoGain !== "number" || ss.infoGain < GATE.infoGainMin) hardBlocks.push(`infoGain ${ss.infoGain ?? "missing"} < ${GATE.infoGainMin}`);
-  if (typeof ss.readability !== "number" || ss.readability < 5) hardBlocks.push(`readability ${ss.readability ?? "missing"} < 5`);
-  if (typeof ss.humanVoice !== "number" || ss.humanVoice < 5) hardBlocks.push(`humanVoice ${ss.humanVoice ?? "missing"} < 5`);
-  if (typeof ss.phrasing !== "number" || ss.phrasing < 5) hardBlocks.push(`phrasing ${ss.phrasing ?? "missing"} < 5`);
+  // Surgical fix instructions for the ONE optional retry (cheaper than trimming when the writer can just re-ground it).
+  const corrections = [
+    cc.corrections, gt.corrections, vg && vg.corrections,
+    sg.ok ? "" : sg.corrections,
+    qg.ok ? "" : `FABRICATED/ALTERED QUOTE — the phrase(s) ${qg.badQuotes.map((q) => `"${q}"`).join(", ")} are NOT verbatim in the sources. Use the exact source words or drop the quotation marks.`,
+  ].filter(Boolean).join("\n");
+
+  // det.hardBlocks split: a genuinely BROKEN article (no title / garbled / prompt-leak) is the only accuracy-side
+  // hold; everything else (missing FAQ, keyword-not-in-title, a dense sentence, too few H2s) is a FORMAT nit worth one
+  // retry, then published anyway (publish-everything — we never hold a faithful story over an SEO/structure nit).
+  const BROKEN_RX = /^no title$|garbled non-Latin|prompt-leak/i;
+  const brokenHold = (det.hardBlocks || []).filter((b) => BROKEN_RX.test(b));
+  const formatBlocks = (det.hardBlocks || []).filter((b) => !BROKEN_RX.test(b));
+
+  // OPTIONAL paid quality judge — OFF by default (cost). Score is logging/QA only and NEVER holds an article.
+  let score = null, subscores = {}, strengths = [], weaknesses = [];
+  if (runJudge) {
+    const j = await judge({ article, topic, model: judgeModel, metrics: det });
+    score = j.score; subscores = j.subscores || {}; strengths = j.strengths || []; weaknesses = j.weaknesses || [];
+  }
 
   return {
-    score: j.score,
-    pass: (j.score || 0) >= GATE.publishMin && hardBlocks.length === 0,
-    subscores: j.subscores,
+    score,
+    pass: brokenHold.length === 0,
+    subscores,
     deterministic: det,
-    hardBlocks,
-    claimCheck, // {ok, bad, contradicted, corrections, verdicts, groundTruth} → drives the correction loop
-    // Phase C cut-and-accept: the strays a verify-gate CUT verdict would remove (support was still >=85%, so they
-    // are PERIPHERAL, not a contradiction). run.mjs may accept a CUT-only terminal article if every stray is
-    // QUALITATIVE (no number/date/platform — those are caught separately as CONTRADICTED/fabricated and stay blocked).
-    vgVerdict: vg ? vg.verdict : null,
-    vgStrays: vg && vg.verdict === "CUT" ? (vg.unsupported || []).map((u) => u.claim) : [],
-    // EVERY flagged claim text (ungrounded + contradicted + judge-flagged fabrication), so run.mjs can DETERMINISTICALLY
-    // CUT those exact sentences from the body and still publish (owner 2026-07-02: publish everything the automation
-    // builds — but a fabrication is REMOVED, never shipped).
-    cutClaims: [
-      // Only CUT an unsupported/unverified claim that carries a CHECKABLE SPECIFIC — a number/$/%/date, a platform,
-      // an award, a season/episode, a credit verb, a chart position, or a direct quote. A benign QUALITATIVE
-      // background line the thin source happened to omit (e.g. "the Imagination Library is a literacy program") is
-      // TRUE common knowledge and LOW risk; cutting it just guts a faithful article into a hold (owner 2026-07-03:
-      // publish engaging faithful briefs — hold only over DANGEROUS specifics). Contradictions + specifics-guard
-      // number findings are ALWAYS cut (they're wrong or a bad figure, not merely un-sourced).
-      ...(vg && vg.unsupported ? vg.unsupported.map((u) => u.claim).filter((c) => CHECKABLE_CLAIM.test(c)) : []),
-      ...claimCheck.contradicted.map((c) => c.claim),
-      ...(cc.bad || []).map((b) => (typeof b === "string" ? b : b && b.claim) || null).filter((c) => typeof c === "string" && CHECKABLE_CLAIM.test(c)),
-      ...sg.bad.map((b) => b.text),
-    ].filter((c) => typeof c === "string" && c.length > 8),
-    strengths: j.strengths,
-    weaknesses: j.weaknesses,
+    hardBlocks: brokenHold, // back-compat: hardBlocks now carries ONLY genuine holds
+    formatBlocks,
+    brokenHold,
+    cutClaims,
+    badQuotes: qg.badQuotes || [],
+    corrections,
+    claimCheck: { ok: cc.ok && gt.ok, corrections, bad: cc.bad, verdicts: cc.verdicts, contradicted: [...cc.contradicted, ...gt.contradicted], groundTruth: gt.findings },
+    strengths,
+    weaknesses,
   };
 }
