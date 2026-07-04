@@ -1,64 +1,63 @@
 {
-  "runId": "run-2026-07-04T09-54-02",
-  "builtAt": "2026-07-04T09:54:33.695Z",
-  "count": 5,
+  "runId": "run-2026-07-04T11-38-18",
+  "builtAt": "2026-07-04T11:38:46.008Z",
+  "count": 7,
   "topics": [
     {
-      "id": "box-office-minions-monsters-box-office-update",
-      "slug": "minions-monsters-coming-up-short-with-63m-5-day-u-s-friday-box-office-",
-      "title": "Minions Monsters Coming Up Short With $63M 5-Day U.S. — Friday Box Office Update",
+      "id": "box-office-supergirl-box-office-collapse",
+      "slug": "supergirl-box-office-collapses-73-and-loses-to-a-george-washington-mov",
+      "title": "Supergirl Box Office Collapses 73% and Loses to a George Washington Movie",
       "contentType": "box-office",
       "formatTag": "box-office",
       "category": "movies",
       "subcategory": "box-office",
       "eventType": "boxoffice",
       "sensitivity": "normal",
-      "eventSlug": "minions-monsters-box-office-update",
-      "primaryKeyword": "minions monsters box office",
-      "primaryEntity": "Minions & Monsters",
+      "eventSlug": "supergirl-box-office-collapse",
+      "primaryKeyword": "supergirl box office",
+      "primaryEntity": "Supergirl",
       "entities": [
-        "Minions Monsters (film)",
-        "Illumination",
-        "Universal"
+        "Supergirl (film)",
+        "George Washington movie"
       ],
-      "angle": "Minions Monsters is underperforming at the box office.",
+      "angle": "Supergirl's box office performance is notably poor, even falling behind a historical film.",
       "tmdbType": "movie",
-      "source": "rss:Deadline",
+      "source": "gnews:Cosmic Book News",
       "sources": [
         {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/box-office-minions-monsters-1236972754/",
-          "ageMin": 630,
-          "headline": "Minions Monsters Coming Up Short With $63M 5-Day U.S. — Friday Box Office Update",
-          "summary": "FRIDAY PM UPDATE: Illumination/Universal s Minions Monsters is creating less frenzy then expected with a 5-day start of $63.5M in North America versus the $80M that was hoped. Current 3-day is $38.5M at 4,243 theaters, making Minions Monsters easily No. 1. Note some exhibitors noticed in their forecasts that the little guys could be [ ]"
+          "outlet": "Cosmic Book News",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOZzI3R0tHWkZ3eXhOV1QyWVZFZ1BlSjJSeld6TnE3aHVzVmxSN0pZekVhXzlzSG5hQkVkdGFjYVpRLVlHdTlWLWY1VUlLSEVfa2s1ZnlneHlrVzNLZXdtT1o0SV9jLTR4bkZxU1FadlEyekZVdFJfX1Z6akg0UVdQUHc4Q0xDaEhQYTNIX3VxMmU4MHNBOWlyWG5XQXE?oc=5",
+          "ageMin": 73,
+          "headline": "Supergirl Box Office Collapses 73% And Loses To A George Washington Movie - Cosmic Book News",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMinAFBVV95cUxOZzI3R0tHWkZ3eXhOV1QyWVZFZ1BlSjJSeld6TnE3aHVzVmxSN0pZekVhXzlzSG5hQkVkdGFjYVpRLVlHdTlWLWY1VUlLSEVfa2s1ZnlneHlrVzNLZXdtT1o0SV9jLTR4bkZxU1FadlEyekZVdFJfX1Z6akg0UVdQUHc4Q0xDaEhQYTNIX3VxMmU4MHNBOWlyWG5XQXE?oc=5\" target=\"_blank\" Supergirl Box Off"
         }
       ],
-      "ageMin": 630,
+      "ageMin": 73,
       "_cand": {
-        "key": "rss:minions-monsters-coming-up-short-with-63m-5-day-u-s-friday-b",
+        "key": "rss:supergirl-box-office-collapses-73-and-loses-to-a-george-wash",
         "popularity": 0,
-        "kind": "rss-news"
+        "kind": "gnews"
       },
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
+        "tier1Count": 0,
+        "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "Deadline"
+          "Cosmic Book News"
         ],
-        "maxTier": 7,
+        "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "Deadline",
+        "attribution": "Cosmic Book News",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 63,
+      "priority": 71,
       "signals": {
-        "recency": 4,
-        "corroboration": 12,
+        "recency": 16,
+        "corroboration": 8,
         "status": 18,
         "type": 11,
         "pop": 0,
@@ -68,64 +67,63 @@
       }
     },
     {
-      "id": "news-mary-oliver-saved-by-the-beauty-of-the-world-documentary",
-      "slug": "mary-oliver-documentary-saved-by-the-beauty-of-the-world-explores-poet",
-      "title": "Mary Oliver Documentary 'Saved By The Beauty Of The World' Explores Poet's Appeal to Stars",
+      "id": "news-enola-holmes-3-casting-news",
+      "slug": "enola-holmes-3-cast-and-characters-get-reacquainted-with-your-favorite",
+      "title": "Enola Holmes 3 Cast and Characters: Get Reacquainted with Your Favorite Sleuths",
       "contentType": "news",
       "formatTag": "news",
-      "category": "movies",
+      "category": "tv",
       "subcategory": "news",
-      "eventType": "announcement",
+      "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "mary-oliver-saved-by-the-beauty-of-the-world-documentary",
-      "primaryKeyword": "Mary Oliver documentary",
-      "primaryEntity": "Mary Oliver: Saved By The Beauty Of The World",
+      "eventSlug": "enola-holmes-3-casting-news",
+      "primaryKeyword": "enola holmes 3 cast",
+      "primaryEntity": "Enola Holmes 3",
       "entities": [
-        "Oprah Winfrey Presents: When They See Us Now",
-        "Mary Oliver",
-        "Oprah Winfrey",
-        "Stephen Colbert"
+        "Enola Holmes 3 (film)",
+        "Millie Bobby Brown",
+        "Netflix"
       ],
-      "angle": "New documentary highlights the life and work of poet Mary Oliver, a favorite of Oprah Winfrey and Stephen Colbert.",
+      "angle": "Netflix announces cast and characters for the upcoming sequel.",
       "tmdbType": "movie",
-      "source": "rss:Deadline",
+      "source": "gnews:Chaoszine",
       "sources": [
         {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/mary-oliver-saved-by-the-beauty-of-the-world-interview-director-sasha-waters-1236974037/",
-          "ageMin": 685,
-          "headline": "Now Playing: ‘Mary Oliver: Saved By The Beauty Of The World,’ Sasha Waters Documentary On Poet Beloved By Oprah, Stephen Colbert More",
-          "summary": "The words “poet” and “bestselling” do not often go together. But they apply in the case of Mary Oliver, the Pulitzer Prize winner who gained a legion of fans – including the famous, from the likes of Oprah and Stephen Colbert to Helena Bonham Carter, Steve Buscemi, and Maria Shriver. Oliver’s life and career are [ ]"
+          "outlet": "Chaoszine",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOVHp5R0xmVGJhREtVLWU4MHpFV1MwUmVBcm9SU3FKNDZZMDZjY2hxcHlBeHpnOGtGSGxTczF4eloxTGxpbDdVa0JQaGhxZDFHTzJjV1F3Z0pTLWtTWExpeVl6cHFRWlZsbkdPbThVcFRtZTdNeHZKTG1WWURWdzlTR21iTnE1VjA0RjQ1c1RhNk5iRkhjS2NqYkdNR0FPNWk4S2VmSmRVRjJXRGJnRUE?oc=5",
+          "ageMin": 176,
+          "headline": "Does the FIFA 2026 World Cup theme sound familiar to you? Mutoid Man certainly think so… - Chaoszine",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxOVHp5R0xmVGJhREtVLWU4MHpFV1MwUmVBcm9SU3FKNDZZMDZjY2hxcHlBeHpnOGtGSGxTczF4eloxTGxpbDdVa0JQaGhxZDFHTzJjV1F3Z0pTLWtTWExpeVl6cHFRWlZsbkdPbThVcFRtZTdNeHZKTG1WWURWdzlTR21iTnE1VjA0RjQ1c1RhNk5iRkhjS2NqYkdNR0FPNWk4S2VmSmRVRjJXRGJnRUE?oc=5\" target=\"_"
         }
       ],
-      "ageMin": 685,
+      "ageMin": 176,
       "_cand": {
-        "key": "rss:now-playing-mary-oliver-saved-by-the-beauty-of-the-world-sas",
+        "key": "rss:does-the-fifa-2026-world-cup-theme-sound-familiar-to-you-mut",
         "popularity": 0,
-        "kind": "rss-news"
+        "kind": "gnews"
       },
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
+        "tier1Count": 0,
+        "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "Deadline"
+          "Chaoszine"
         ],
-        "maxTier": 7,
+        "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "Deadline",
+        "attribution": "Chaoszine",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 60,
+      "priority": 70,
       "signals": {
-        "recency": 4,
-        "corroboration": 12,
+        "recency": 16,
+        "corroboration": 8,
         "status": 18,
-        "type": 8,
+        "type": 10,
         "pop": 0,
         "breakout": 0,
         "big": 18,
@@ -133,7 +131,133 @@
       }
     },
     {
-      "id": "news-kevin-costner-the-postman-reappraisal",
+      "id": "trailer-christopher-nolan-the-odyssey-teaser",
+      "slug": "new-teaser-just-dropped-for-christopher-nolan-s-the-odyssey",
+      "title": "New Teaser Just Dropped for Christopher Nolan’s ‘The Odyssey’",
+      "contentType": "trailer",
+      "formatTag": "trailer",
+      "category": "movies",
+      "subcategory": "trailers",
+      "eventType": "trailer",
+      "sensitivity": "normal",
+      "eventSlug": "christopher-nolan-the-odyssey-teaser",
+      "primaryKeyword": "The Odyssey trailer",
+      "primaryEntity": "The Odyssey",
+      "entities": [
+        "The Odyssey (film)",
+        "Christopher Nolan"
+      ],
+      "angle": "Christopher Nolan's new film 'The Odyssey' releases a new teaser trailer.",
+      "tmdbType": "movie",
+      "source": "gnews:IMDb",
+      "sources": [
+        {
+          "outlet": "IMDb",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFBqOWxSWTFDSGhZVTE2S2FsREZBSE5jMFhkMVg1NTN4WFlhWkFHQzhDNHpFMkRwRVAtYlAyTzJsdG16SXltNFpueGQ2MFBaQQ?oc=5",
+          "ageMin": 227,
+          "headline": "New Teaser Just Dropped for Christopher Nolan’s ‘The Odyssey’ - IMDb",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiTkFVX3lxTFBqOWxSWTFDSGhZVTE2S2FsREZBSE5jMFhkMVg1NTN4WFlhWkFHQzhDNHpFMkRwRVAtYlAyTzJsdG16SXltNFpueGQ2MFBaQQ?oc=5\" target=\"_blank\" New Teaser Just Dropped for Christopher Nolan’s ‘The Odyssey’ /a nbsp; nbsp; font color=\"#6f6f6f\" IMDb /font"
+        }
+      ],
+      "ageMin": 227,
+      "_cand": {
+        "key": "rss:new-teaser-just-dropped-for-christopher-nolan-s-the-odyssey-",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "IMDb"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "IMDb",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 63,
+      "signals": {
+        "recency": 9,
+        "corroboration": 8,
+        "status": 18,
+        "type": 10,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0
+      }
+    },
+    {
+      "id": "box-office-minions-monsters-box-office-25m-2-days",
+      "slug": "minions-monsters-north-america-box-office-hits-25m-in-2-days-but-can-i",
+      "title": "Minions Monsters North America Box Office: Hits $25M In 2 Days, But Can It Defeat Toy Story 5 For The #1 Spot This Weekend?",
+      "contentType": "box-office",
+      "formatTag": "box-office",
+      "category": "movies",
+      "subcategory": "box-office",
+      "eventType": "boxoffice",
+      "sensitivity": "normal",
+      "eventSlug": "minions-monsters-box-office-25m-2-days",
+      "primaryKeyword": "Minions Monsters box office",
+      "primaryEntity": "Minions & Monsters",
+      "entities": [
+        "Minions Monsters",
+        "Toy Story 5"
+      ],
+      "angle": "The film 'Minions Monsters' has achieved a significant box office opening weekend.",
+      "tmdbType": "movie",
+      "source": "gnews:IMDb",
+      "sources": [
+        {
+          "outlet": "IMDb",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1QakJvR05RR05WRmloMVc0YlQwdFpkMl8tOG5KY2dSM28tRm1GY0g3MlpaelhVZXNyWHFiZm1HVVVyRE94ZFduUXd2d0VVY2ZFc2xILVhweUhHRm1CYTVYckM3VENIdw?oc=5",
+          "ageMin": 327,
+          "headline": "Minions Monsters North America Box Office: Hits $25M In 2 Days, But Can It Defeat Toy Story 5 For The #1 Spot This Weekend? - IMDb",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiZkFVX3lxTE1QakJvR05RR05WRmloMVc0YlQwdFpkMl8tOG5KY2dSM28tRm1GY0g3MlpaelhVZXNyWHFiZm1HVVVyRE94ZFduUXd2d0VVY2ZFc2xILVhweUhHRm1CYTVYckM3VENIdw?oc=5\" target=\"_blank\" Minions Monsters North America Box Office: Hits $25M In 2 Days, But Can It Defeat Toy Stor"
+        }
+      ],
+      "ageMin": 327,
+      "_cand": {
+        "key": "rss:minions-monsters-north-america-box-office-hits-25m-in-2-days",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "IMDb"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "IMDb",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 64,
+      "signals": {
+        "recency": 9,
+        "corroboration": 8,
+        "status": 18,
+        "type": 11,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0
+      }
+    },
+    {
+      "id": "news-kevin-costner-the-postman-restoration-faith-in-people",
       "slug": "kevin-costner-s-the-postman-will-restore-your-faith-in-other-people-on",
       "title": "Kevin Costner s The Postman Will Restore Your Faith in Other People on America s 250th Birthday",
       "contentType": "news",
@@ -142,13 +266,14 @@
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "kevin-costner-the-postman-reappraisal",
-      "primaryKeyword": "The Postman",
+      "eventSlug": "kevin-costner-the-postman-restoration-faith-in-people",
+      "primaryKeyword": "Kevin Costner The Postman",
       "primaryEntity": "The Postman",
       "entities": [
+        "The Postman (1997 film)",
         "Kevin Costner"
       ],
-      "angle": "Reappraisal of Kevin Costner's 1997 film 'The Postman' on America's 250th birthday.",
+      "angle": "Article revisits Kevin Costner's 'The Postman' and its enduring message of hope.",
       "tmdbType": "movie",
       "source": "rss:IndieWire",
       "sources": [
@@ -156,12 +281,12 @@
           "outlet": "IndieWire",
           "tier": 7,
           "url": "https://www.indiewire.com/features/best-of/the-postman-kevin-costner-fourth-of-july-movie-1235203690/",
-          "ageMin": 355,
+          "ageMin": 459,
           "headline": "Kevin Costner s The Postman Will Restore Your Faith in Other People on America s 250th Birthday",
           "summary": "The director's notorious 1997 flop about the U.S. Postal Service remains a strangely moving reminder that ordinary people can still choose to show up for each other."
         }
       ],
-      "ageMin": 355,
+      "ageMin": 459,
       "_cand": {
         "key": "rss:kevin-costner-s-the-postman-will-restore-your-faith-in-other",
         "popularity": 0,
@@ -182,9 +307,9 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 53,
+      "priority": 48,
       "signals": {
-        "recency": 9,
+        "recency": 4,
         "corroboration": 12,
         "status": 18,
         "type": 6,
@@ -195,122 +320,124 @@
       }
     },
     {
-      "id": "news-adam-sandler-officiates-taylor-swift-travis-kelce-wedding",
-      "slug": "adam-sandler-officiated-taylor-swift-and-travis-kelce-s-surprise-weddi",
-      "title": "Adam Sandler Officiated Taylor Swift and Travis Kelce's Surprise Wedding",
+      "id": "news-supergirl-creative-differences-dc-studios-craig-gillespie",
+      "slug": "supergirl-reportedly-faced-creative-differences-between-dc-studios-and",
+      "title": "Supergirl Reportedly Faced Creative Differences Between DC Studios and Craig Gillespie",
       "contentType": "news",
       "formatTag": "news",
-      "category": "celebrity",
+      "category": "movies",
       "subcategory": "news",
-      "eventType": "marriage",
+      "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "adam-sandler-officiates-taylor-swift-travis-kelce-wedding",
-      "primaryKeyword": "adam sandler taylor swift travis kelce wedding",
-      "primaryEntity": "Adam Sandler",
+      "eventSlug": "supergirl-creative-differences-dc-studios-craig-gillespie",
+      "primaryKeyword": "supergirl movie",
+      "primaryEntity": "Supergirl",
       "entities": [
-        "Taylor Swift",
-        "Travis Kelce"
+        "Supergirl (film)",
+        "DC Studios",
+        "Craig Gillespie"
       ],
-      "angle": "Adam Sandler officiated the surprise wedding of Taylor Swift and Travis Kelce.",
+      "angle": "Report details creative differences between DC Studios and director Craig Gillespie over the 'Supergirl' movie.",
       "tmdbType": "movie",
-      "source": "rss:Variety",
+      "source": "gnews:IGN",
       "sources": [
         {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/film/news/adam-sandler-officiated-taylor-swift-travis-kelces-wedding-1236801628/",
-          "ageMin": 595,
-          "headline": "Adam Sandler Officiated Taylor Swift and Travis Kelce s Wedding",
-          "summary": "Adam Sandler officiated Taylor Swift and Travis Kelce s star-studded Madison Square Garden wedding. The reveal came via a press release obtained by Variety in the minutes following Swift and Kelce s official marriage announcement. It also included several other miscellaneous details about the ceremony and wedding day looks. The bride and groom’s wedding ceremony looks have [ ]"
+          "outlet": "IGN",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPWmh4ZjBQSFZTMnl4X1lHRGlTbnIxd092bzFGOGJaTldXSVBOMFJUX1VHN25OWklvLUJZM0JiSlJ6NEJ4amNLY29KN0xENm9ic2l3YVJtOTVKcG4tYURZbDNIV0k2aDB2aXpUUUlyMkwwZnFaT0pWX09zZjhDTnpxN1pNTmhhX2ZNR0RqS3JoWGZUSnpNczJhcVUzWFI2LWF3WDBGZDJzZWYxTTk5XzV6VXRFd3BPUQ?oc=5",
+          "ageMin": 398,
+          "headline": "Supergirl Reportedly Faced Creative Differences Between DC Studios and Craig Gillespie - IGN",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxPWmh4ZjBQSFZTMnl4X1lHRGlTbnIxd092bzFGOGJaTldXSVBOMFJUX1VHN25OWklvLUJZM0JiSlJ6NEJ4amNLY29KN0xENm9ic2l3YVJtOTVKcG4tYURZbDNIV0k2aDB2aXpUUUlyMkwwZnFaT0pWX09zZjhDTnpxN1pNTmhhX2ZNR0RqS3JoWGZUSnpNczJhcVUzWFI2LWF3WDBGZDJzZWYxTTk5XzV6VXRFd3BPUQ?oc=5"
         }
       ],
-      "ageMin": 595,
+      "ageMin": 398,
       "_cand": {
-        "key": "rss:adam-sandler-officiated-taylor-swift-and-travis-kelce-s-wedd",
+        "key": "rss:supergirl-reportedly-faced-creative-differences-between-dc-s",
         "popularity": 0,
-        "kind": "rss-news"
+        "kind": "gnews"
       },
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
+        "tier1Count": 0,
+        "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "Variety"
+          "IGN"
         ],
-        "maxTier": 7,
+        "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "Variety",
+        "attribution": "IGN",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 46,
+      "priority": 44,
       "signals": {
         "recency": 4,
-        "corroboration": 12,
+        "corroboration": 8,
         "status": 18,
-        "type": 12,
+        "type": 6,
         "pop": 0,
         "breakout": 0,
-        "big": 0,
+        "big": 8,
         "trending": 0
       }
     },
     {
-      "id": "news-bam-margera-jackass-reunion-not-happening",
-      "slug": "bam-margera-plans-to-watch-jackass-best-last-but-reunion-is-not-going-",
-      "title": "Bam Margera Plans To Watch Jackass: Best Last But Reunion Is Not Going To Happen",
+      "id": "news-hugh-grant-taylor-swift-travis-kelce-wedding",
+      "slug": "hugh-grant-leads-the-most-surprising-celebrity-guests-at-taylor-swift-",
+      "title": "Hugh Grant Leads the Most Surprising Celebrity Guests at Taylor Swift and Travis Kelce's MSG Wedding",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "bam-margera-jackass-reunion-not-happening",
-      "primaryKeyword": "bam margera jackass reunion",
-      "primaryEntity": "Bam Margera",
+      "eventSlug": "hugh-grant-taylor-swift-travis-kelce-wedding",
+      "primaryKeyword": "Hugh Grant Taylor Swift wedding",
+      "primaryEntity": "Hugh Grant",
       "entities": [
-        "Jackass"
+        "Taylor Swift",
+        "Travis Kelce"
       ],
-      "angle": "Bam Margera will watch the final Jackass outing but does not expect a reunion.",
+      "angle": "Hugh Grant was among the notable celebrity guests at Taylor Swift and Travis Kelce's wedding.",
       "tmdbType": "movie",
-      "source": "rss:Deadline",
+      "source": "gnews:HELLO! Magazine",
       "sources": [
         {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/bam-margera-plans-watch-jackass-best-last-1236974064/",
-          "ageMin": 657,
-          "headline": "Bam Margera Plans To Watch Jackass: Best Last But Reunion Is Not Going To Happen",
-          "summary": "Following his 2021 falling out with the Jackass guys, Bam Margera has no ill will toward the crew and their final onscreen outing. Although the pro skater said that a reunion is not going to happen, he recently emphasized that he doesn t have any bad blood against his former co-stars from the stunt franchise, and [ ]"
+          "outlet": "HELLO! Magazine",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPa2JCQzZZNjhVVHhxQVhLSXo2cVlYcjRacXctSlVSMlJUQ3ZabERFZXdpbGR3NzhjVFhDTWZDYVBoWjZiRFJHcXZjLXlWMVB6NE5CbnZWUC1NcGlmaXZOZXBBX1E4QzJzc1ZKWnAxNzUtZER5WXoyd2lxQWVmQW4tb01Ib1Y1b1BncF9oMHJQdkx1amVQeG1QdWNER1VqenBiS01nLUdYNmx6Sk92aGZ4VmJWUVMxZ3k2Z0E4?oc=5",
+          "ageMin": 66,
+          "headline": "Hugh Grant leads the most surprising celebrity guests at Taylor Swift and Travis Kelce's MSG wedding - HELLO! Magazine",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiuwFBVV95cUxPa2JCQzZZNjhVVHhxQVhLSXo2cVlYcjRacXctSlVSMlJUQ3ZabERFZXdpbGR3NzhjVFhDTWZDYVBoWjZiRFJHcXZjLXlWMVB6NE5CbnZWUC1NcGlmaXZOZXBBX1E4QzJzc1ZKWnAxNzUtZER5WXoyd2lxQWVmQW4tb01Ib1Y1b1BncF9oMHJQdkx1amVQeG1QdWNER1VqenBiS01nLUdYNmx6Sk92aGZ4VmJWUVMxZ3k2Z0E"
         }
       ],
-      "ageMin": 657,
+      "ageMin": 66,
       "_cand": {
-        "key": "rss:bam-margera-plans-to-watch-jackass-best-last-but-reunion-is-",
+        "key": "rss:hugh-grant-leads-the-most-surprising-celebrity-guests-at-tay",
         "popularity": 0,
-        "kind": "rss-news"
+        "kind": "gnews"
       },
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
+        "tier1Count": 0,
+        "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "Deadline"
+          "HELLO! Magazine"
         ],
-        "maxTier": 7,
+        "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "Deadline",
+        "attribution": "HELLO! Magazine",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 40,
+      "priority": 48,
       "signals": {
-        "recency": 4,
-        "corroboration": 12,
+        "recency": 16,
+        "corroboration": 8,
         "status": 18,
         "type": 6,
         "pop": 0,
