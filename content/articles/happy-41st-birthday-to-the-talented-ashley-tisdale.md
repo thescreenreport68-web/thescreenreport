@@ -18,7 +18,6 @@ tags:
   - Ashley Tisdale
   - celebrity
   - general
-  - celebrity gossip
 keyTakeaways:
   - 'Ashley Tisdale turned 41 on July 2, 2026.'
   - The milestone was officially noted by Pop Crave.

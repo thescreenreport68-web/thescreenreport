@@ -341,7 +341,7 @@ export default function HomePage() {
       {gossipLead ? (
         <section>
           <SectionHeader
-            title="Celebrity & Gossip"
+            title="Celebrity"
             tagline="The stars, the drama, the buzz"
             href="/celebrity/"
           />

@@ -18,7 +18,6 @@ tags:
   - Ashley Tisdale
   - celebrity
   - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Ashley Tisdale is developing and set to star in a Netflix comedy series

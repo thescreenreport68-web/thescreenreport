@@ -19,7 +19,6 @@ tags:
   - Tobey Maguire
   - celebrity
   - romance
-  - celebrity gossip
 keyTakeaways:
   - >-
     Tobey Maguire, 51, and Ice Spice, 26, were reportedly seen together at

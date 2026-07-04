@@ -22,7 +22,6 @@ tags:
   - Christina Milian
   - celebrity
   - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     The party united celebrities from music, sports, and social media at a

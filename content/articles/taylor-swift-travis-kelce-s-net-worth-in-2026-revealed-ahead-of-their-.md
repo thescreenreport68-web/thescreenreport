@@ -23,7 +23,6 @@ tags:
   - Taylor Swift
   - music
   - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Taylor Swift's net worth is estimated at $2 billion as of June 2026, per

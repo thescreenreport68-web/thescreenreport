@@ -19,7 +19,6 @@ tags:
   - Madonna
   - music
   - general
-  - celebrity gossip
 keyTakeaways:
   - 'Madonna''s new album ''Confessions II'' is set for release on July 3, 2026.'
   - >-

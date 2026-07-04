@@ -18,7 +18,6 @@ tags:
   - Collin Gosselin
   - celebrity
   - general
-  - celebrity gossip
 keyTakeaways:
   - Collin Gosselin was sent to a behavioral facility in 2016 at age 12.
   - >-
@@ -97,9 +96,8 @@ provenance:
   outlets:
     - Page Six
     - usmagazine.com
-    - thehollywoodgossip.com
     - starcasm.net
-  corroborationCount: 4
+  corroborationCount: 3
   verifyDegraded: true
   publishedAt: '2026-07-02T02:14:06.709Z'
 ---

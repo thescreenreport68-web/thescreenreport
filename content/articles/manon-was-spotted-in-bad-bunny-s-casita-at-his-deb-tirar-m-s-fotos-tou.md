@@ -23,7 +23,6 @@ tags:
   - Bad Bunny
   - music
   - spotted
-  - celebrity gossip
 keyTakeaways:
   - >-
     Pop Crave reported a sighting of a woman named Manon in Bad Bunny's Casita

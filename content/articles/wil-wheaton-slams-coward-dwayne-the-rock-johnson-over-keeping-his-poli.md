@@ -18,7 +18,6 @@ tags:
   - Dwayne Johnson
   - celebrity
   - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Wil Wheaton posted the "coward" comment on Threads on Monday, in response to

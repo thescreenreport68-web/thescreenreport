@@ -18,7 +18,6 @@ tags:
   - Jodie Foster
   - celebrity
   - feud
-  - celebrity gossip
 keyTakeaways:
   - >-
     Jodie Foster suggested the Brad Pitt film 'F1' seemed like it was made by

@@ -18,7 +18,6 @@ tags:
   - Jodie Sweetin
   - celebrity
   - romance
-  - celebrity gossip
 keyTakeaways:
   - >-
     Jodie Sweetin stated the 'Full House' cast remains friends with the Olsen

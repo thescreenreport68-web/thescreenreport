@@ -22,7 +22,6 @@ tags:
   - Dylan Jagger Lee
   - celebrity
   - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Dylan Jagger Lee and Paula Bruss are married, as confirmed by a report from

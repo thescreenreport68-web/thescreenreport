@@ -19,7 +19,6 @@ tags:
   - Lil Wayne
   - music
   - general
-  - celebrity gossip
 keyTakeaways:
   - 'Lil Wayne skipped his scheduled concert in Bangor, Maine on June 30, 2026.'
   - Fans were informed of the cancellation at 11 p.m. after waiting for hours.

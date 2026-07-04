@@ -18,7 +18,6 @@ tags:
   - Jordana Brewster
   - celebrity
   - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Jordana Brewster underwent awake brain surgery in 2020 for a cavernous

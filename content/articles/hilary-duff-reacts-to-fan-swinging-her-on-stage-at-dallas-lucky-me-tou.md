@@ -23,7 +23,6 @@ tags:
   - Hilary Duff
   - music
   - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     The incident occurred on June 30 during Hilary Duff's 'The Lucky Me Tour'

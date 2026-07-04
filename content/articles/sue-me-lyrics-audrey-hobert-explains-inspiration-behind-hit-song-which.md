@@ -23,7 +23,6 @@ tags:
   - Audrey Hobert
   - music
   - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Audrey Hobert's song "Sue Me" entered the U.S. Spotify chart at #112 on July

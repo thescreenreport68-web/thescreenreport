@@ -19,7 +19,6 @@ tags:
   - Taylor Swift
   - music
   - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Taylor Swift is expected to have around 1,000 guests at her wedding to

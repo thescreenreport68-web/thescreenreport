@@ -23,7 +23,6 @@ tags:
   - Blake Shelton
   - celebrity
   - career
-  - celebrity gossip
 keyTakeaways:
   - Blake Shelton confirmed his exit from 'The Voice' in 2023.
   - He has publicly cited a desire for more family time as a primary reason.

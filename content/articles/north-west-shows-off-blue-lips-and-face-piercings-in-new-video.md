@@ -20,7 +20,6 @@ tags:
   - North West
   - celebrity
   - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     North West shared TikTok videos on July 2 featuring blue hair, blue lips,

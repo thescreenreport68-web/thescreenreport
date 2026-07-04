@@ -18,7 +18,6 @@ tags:
   - Anne Hathaway
   - celebrity
   - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Seth Rogen stated on 'The A24 Podcast' that Anne Hathaway withdrew from

@@ -23,7 +23,6 @@ tags:
   - Selena Gomez
   - celebrity
   - general
-  - celebrity gossip
 keyTakeaways:
   - Selena Gomez attended the rehearsal dinner and shared videos of her outfit.
   - >-

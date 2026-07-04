@@ -22,7 +22,6 @@ tags:
   - Tamaya Denae
   - celebrity
   - career
-  - celebrity gossip
 keyTakeaways:
   - >-
     Tamaya Denae, Jack McCann, Leah Barrs, and Sydney Siegel from "Million

@@ -18,7 +18,6 @@ tags:
   - Renee Graziano
   - celebrity
   - pregnancy
-  - celebrity gossip
 keyTakeaways:
   - >-
     Renee Graziano stated in an E! News interview that Drita D'Avanzo blocked

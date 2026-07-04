@@ -18,7 +18,6 @@ tags:
   - Karamo Brown
   - celebrity
   - romance
-  - celebrity gossip
 keyTakeaways:
   - >-
     TMZ has reported that 'Queer Eye' star Karamo Brown and actor Jussie
@@ -66,7 +65,7 @@ whatWeKnow:
   - >-
     TMZ has published a report claiming Karamo Brown and Jussie Smollett are
     dating.
-  - 'The gossip account Pop Crave shared this report on June 30, 2026.'
+  - 'Pop Crave shared this report on June 30, 2026.'
   - Karamo Brown is a star of Netflix's 'Queer Eye.'
   - Jussie Smollett is a former star of 'Empire.'
 whatWeDont:

@@ -18,7 +18,6 @@ tags:
   - Lewis Hamilton
   - celebrity
   - romance
-  - celebrity gossip
 keyTakeaways:
   - >-
     Lewis Hamilton publicly credited Kim Kardashian for his happiness at a

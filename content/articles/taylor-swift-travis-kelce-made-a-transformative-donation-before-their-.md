@@ -23,7 +23,6 @@ tags:
   - Taylor Swift
   - celebrity
   - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Brad Paisley and Kimberly Williams-Paisley publicly thanked Taylor Swift and

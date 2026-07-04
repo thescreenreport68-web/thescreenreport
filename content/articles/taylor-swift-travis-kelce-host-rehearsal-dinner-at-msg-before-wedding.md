@@ -19,7 +19,6 @@ tags:
   - Taylor Swift
   - music
   - general
-  - celebrity gossip
 keyTakeaways:
   - A rehearsal dinner was hosted at Madison Square Garden on July 2.
   - >-

@@ -14,7 +14,6 @@ tags:
   - Dua Lipa
   - music
   - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Dua Lipa was photographed heading to Electric Lady Studios in NYC on June

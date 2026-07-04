@@ -19,7 +19,6 @@ tags:
   - Taylor Swift
   - music
   - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Pop Crave reports Taylor Swift and Travis Kelce donated $26 million to

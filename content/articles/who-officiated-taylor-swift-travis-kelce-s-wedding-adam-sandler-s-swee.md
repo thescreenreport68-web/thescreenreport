@@ -19,7 +19,6 @@ tags:
   - Taylor Swift
   - celebrity
   - general
-  - celebrity gossip
 keyTakeaways:
   - Taylor Swift and Travis Kelce were married on July 3.
   - >-

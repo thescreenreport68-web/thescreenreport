@@ -18,7 +18,6 @@ tags:
   - Alex Rodriguez
   - celebrity
   - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Alex Rodriguez was photographed kissing an unidentified brunette woman at

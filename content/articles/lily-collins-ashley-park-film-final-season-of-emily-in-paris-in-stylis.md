@@ -18,7 +18,6 @@ tags:
   - Lily Collins
   - celebrity
   - spotted
-  - celebrity gossip
 keyTakeaways:
   - >-
     Lily Collins and Ashley Park were filmed for 'Emily in Paris' Season 6 in

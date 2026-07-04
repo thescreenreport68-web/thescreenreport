@@ -19,7 +19,6 @@ tags:
   - Joe Jonas
   - celebrity
   - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Joe Jonas shared a story about mistakenly asking a stranger for a photo,

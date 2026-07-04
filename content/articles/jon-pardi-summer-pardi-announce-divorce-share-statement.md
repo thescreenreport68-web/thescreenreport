@@ -19,7 +19,6 @@ tags:
   - Jon Pardi
   - celebrity
   - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Jon and Summer Pardi announced their divorce via a joint Instagram statement

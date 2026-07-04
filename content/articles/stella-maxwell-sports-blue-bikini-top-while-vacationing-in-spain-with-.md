@@ -18,7 +18,6 @@ tags:
   - Stella Maxwell
   - celebrity
   - romance
-  - celebrity gossip
 keyTakeaways:
   - >-
     Stella Maxwell and DJ Anyma were photographed together on vacation in

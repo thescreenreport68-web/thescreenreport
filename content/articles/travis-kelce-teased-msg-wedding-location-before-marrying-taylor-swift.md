@@ -19,7 +19,6 @@ tags:
   - Taylor Swift
   - celebrity
   - cryptic
-  - celebrity gossip
 keyTakeaways:
   - >-
     The arena offers significant privacy features, including hidden tunnels and

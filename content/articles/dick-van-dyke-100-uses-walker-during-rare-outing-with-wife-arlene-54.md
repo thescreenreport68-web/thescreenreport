@@ -18,7 +18,6 @@ tags:
   - Dick Van Dyke
   - celebrity
   - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Dick Van Dyke used a walker during a public outing in Los Angeles on

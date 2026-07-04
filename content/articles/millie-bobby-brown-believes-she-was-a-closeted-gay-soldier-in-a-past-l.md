@@ -18,7 +18,6 @@ tags:
   - Millie Bobby Brown
   - celebrity
   - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Millie Bobby Brown believes a birthmark on her lower back indicates she died

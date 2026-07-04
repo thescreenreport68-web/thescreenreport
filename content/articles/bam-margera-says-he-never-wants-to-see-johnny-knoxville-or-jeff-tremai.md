@@ -18,7 +18,6 @@ tags:
   - Bam Margera
   - celebrity
   - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Bam Margera told Rolling Stone he will not reunite with the *Jackass* team

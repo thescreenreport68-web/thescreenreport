@@ -21,7 +21,6 @@ tags:
   - Taylor Swift
   - celebrity
   - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Taylor Swift and Travis Kelce married on July 3 at Madison Square Garden in

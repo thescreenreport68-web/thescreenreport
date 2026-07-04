@@ -19,7 +19,6 @@ tags:
   - Normani
   - music
   - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Normani shared a new photo featuring a waterfall setting, according to Pop
