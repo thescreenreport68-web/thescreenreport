@@ -1,156 +1,171 @@
-// INSIDE lane — SAFETY CONSTITUTION (offline, end-to-end-ish: REAL reactionFinder / gate /
-// trigger / store logic; only the chat + network impls are injected). These are the invariants
-// that make the lane publishable at all — a failure here is a fabrication or hoax vector.
-// Run: node site/pipeline/inside/test/safety.test.mjs
+// INSIDE lane — SAFETY CONSTITUTION (REV 2; offline, end-to-end-ish: REAL reactionFinder / gate /
+// store logic; only the chat + network impls are injected). These are the invariants that make the
+// lane publishable at all — a failure here is a fabrication or hoax vector.
+// Run: env -i node site/pipeline/inside/test/safety.test.mjs
+import assert from "node:assert/strict";
 import path from "node:path";
 import { harvestReactions } from "../reactionFinder.mjs";
-import { loadTriggers } from "../trigger.mjs";
-import { deterministicInside, classifyInsideBlocks } from "../gate.mjs";
-import { insideRun } from "../insiderun.mjs";
-import { loadStore, recordInsidePublished } from "../store.mjs";
+import { deterministicInside, gateInside } from "../gate.mjs";
+import { loadStore, alreadyPublished, recordInsidePublished } from "../store.mjs";
 import {
-  NOW, tmp, Q, SRC_A, SRC_B, TWEET_ID_A,
-  fakeTrigger, fakeAngle, fakeFactBlock, fakeArticle, queueTopic, fakeFindFiles,
+  NOW, tmp, Q, SRC_A, SRC_B, SOURCES,
+  fakeTrigger, fakeAngle, fakeFactBlock, fakeArticle,
 } from "./fixtures.mjs";
 
 let pass = 0, fail = 0; const fails = [];
-const check = (name, cond, detail = "") => { if (cond) { pass++; console.log(`  ✅ ${name}`); } else { fail++; fails.push(name); console.log(`  ❌ ${name}  ${detail}`); } };
+const check = async (name, fn) => {
+  try { await fn(); pass++; console.log(`  ✅ ${name}`); }
+  catch (e) { fail++; fails.push(name); console.log(`  ❌ ${name}  ${String(e?.message || e).slice(0, 240)}`); }
+};
 
-console.log("\n=== INSIDE SAFETY CONSTITUTION (offline, real lane logic) ===\n");
+console.log("\n=== INSIDE SAFETY CONSTITUTION (REV 2, offline) ===\n");
 
-const srcA = { url: "https://variety.example/rex-harmon-tributes", domain: "variety.com", text: SRC_A };
-const srcB = { url: "https://ew.example/rex-harmon-fans-react", domain: "ew.com", text: SRC_B };
-const noTweets = async () => ({ ids: [] });
+// A chatImpl dispatcher: routes by the system prompt so we can script extraction vs classification.
+// `extract(source_i)` decides what "reactions" the LLM claims to find in each source.
+function makeChat({ extract, classifyReddit = () => [], classifyTweets = () => [] }) {
+  return async ({ system, user }) => {
+    if (/extract REACTIONS & QUOTES about a specific/i.test(system)) {
+      // Identify which source index is in the user prompt.
+      const m = user.match(/SOURCE (\d+)/);
+      const i = m ? Number(m[1]) : 0;
+      return { data: { reactions: extract(i) }, usage: {} };
+    }
+    if (/classify Reddit comments/i.test(system)) return { data: { comments: classifyReddit() }, usage: {} };
+    if (/classify public X posts/i.test(system)) return { data: { posts: classifyTweets() }, usage: {} };
+    return { data: {}, usage: {} };
+  };
+}
 
-// (i) THE VERBATIM WALL — an extractor "quote" that is not literally in the source never reaches
-//     the writer; with nothing else harvested the angle dies under the floor.
-{
-  console.log("— (i) fabricated extraction quote → dropped by the wall → under floor —");
+// A findContentImpl that returns our two canned sources on the first query, nothing after.
+function makeFinder(sources = SOURCES) {
+  let served = false;
+  return async () => {
+    if (served) return { blocked: true, reason: "no more" };
+    served = true;
+    return { blocked: false, sources: sources.map((s) => ({ ...s })) };
+  };
+}
+
+const harvestOpts = (over = {}) => ({
+  findContentImpl: makeFinder(),
+  cacheTweetsImpl: async () => ({ tweets: [], ids: [] }),
+  scanImpl: async () => [],
+  redditSearchImpl: async () => [],
+  redditCommentsImpl: async () => [],
+  reddit: false,
+  embeds: false,
+  ...over,
+});
+
+// ── 1) A FABRICATED extraction quote dies at the verbatim wall → under floor ──────────────────────
+await check("fabricated extraction quote dropped at verbatim wall → under floor", async () => {
   const trigger = fakeTrigger();
-  const angle = fakeAngle("single-voice");
-  const fabricated = async () => ({ data: { reactions: [
-    { speaker: "Mira Vale", speakerType: "castmate", connection: "his co-star of two decades", platform: "Instagram", date: "", quote: "He was my best friend and I am devastated beyond words tonight", stance: "positive" },
-  ] } });
-  const h = await harvestReactions(trigger, angle, { findContentImpl: async () => ({ blocked: false, sources: [srcA] }), chatImpl: fabricated, cacheTweetsImpl: noTweets });
-  check("fabricated quote → harvest fails closed (under floor)", h.ok === false && /under floor/.test(h.reason), JSON.stringify(h));
-
-  const verbatim = async () => ({ data: { reactions: [
-    { speaker: "Mira Vale", speakerType: "castmate", connection: "his co-star of two decades", platform: "Instagram", date: "", quote: Q.mira, stance: "positive" },
-  ] } });
-  let cachedWith = null;
-  const h2 = await harvestReactions(trigger, angle, {
-    findContentImpl: async () => ({ blocked: false, sources: [srcA] }),
-    chatImpl: verbatim,
-    cacheTweetsImpl: async (ids) => { cachedWith = ids; return { ids: [] }; },
-  });
-  check("the SAME speaker with the REAL verbatim quote passes the wall", h2.ok === true && h2.factBlock.reactions.length === 1 && h2.factBlock.reactions[0].quote === Q.mira);
-  check("embeds only via the syndication cache (found id offered, uncached → none kept)",
-    JSON.stringify(cachedWith) === JSON.stringify([TWEET_ID_A]) && h2.factBlock.tweetIds.length === 0);
-  check("no-material bundle fails closed",
-    (await harvestReactions(trigger, angle, { findContentImpl: async () => ({ blocked: true, reason: "no sources" }), chatImpl: verbatim, cacheTweetsImpl: noTweets })).ok === false);
-}
-
-// (ii) THE SPEAKER WALL — a writer voice that isn't in the harvest is a fatal hard stop.
-{
-  console.log("\n— (ii) invented writer voice → deterministic hard stop —");
-  const fb = fakeFactBlock("peer-tributes");
-  const angle = fakeAngle("peer-tributes");
-  const art = fakeArticle({ form: "peer-tributes", factBlock: fb });
-  art.reactionsRender = [...art.reactionsRender, { speaker: "Denzel Whitaker Jr.", connection: "close friend", platform: "X", date: "", quote: Q.mira, tweetId: "" }];
-  const det = deterministicInside(art, fb, angle);
-  const blocks = det.hardBlocks.filter((b) => b.startsWith("invented-speaker"));
-  check("invented speaker detected", blocks.length === 1, JSON.stringify(det.hardBlocks));
-  check("invented speaker is a HARD stop, never fixable-by-cutting", classifyInsideBlocks(det.hardBlocks).block.some((b) => b.startsWith("invented-speaker")));
-
-  const art2 = fakeArticle({ form: "peer-tributes", factBlock: fb });
-  art2.reactionsRender[0] = { ...art2.reactionsRender[0], quote: Q.mira.replace("grace", "class").replace("kindness", "warmth") };
-  check("a 'tidied' quote from a REAL speaker is equally fatal",
-    classifyInsideBlocks(deterministicInside(art2, fb, angle).hardBlocks).block.some((b) => b.startsWith("misattributed-or-unverbatim-quote")));
-
-  // per-speaker haystacks: two REAL quotes stitched into one, and a real quote on the wrong
-  // person's card, are both fatal — no single-haystack loophole.
-  const art3 = fakeArticle({ form: "peer-tributes", factBlock: fb });
-  art3.reactionsRender[0] = { ...art3.reactionsRender[0], quote: `${Q.mira} ${Q.onder}` };
-  check("two adjacent harvest quotes MERGED into one card → fatal",
-    classifyInsideBlocks(deterministicInside(art3, fb, angle).hardBlocks).block.some((b) => b.startsWith("misattributed-or-unverbatim-quote")));
-  const art4 = fakeArticle({ form: "peer-tributes", factBlock: fb });
-  art4.reactionsRender[1] = { ...art4.reactionsRender[1], speaker: "Paul Onder", quote: Q.mira };
-  check("a real quote MISATTRIBUTED to another harvested speaker → fatal",
-    classifyInsideBlocks(deterministicInside(art4, fb, angle).hardBlocks).block.some((b) => b.startsWith("misattributed-or-unverbatim-quote")));
-}
-
-// (iii) THE HOAX WALL — an unconfirmed death NEVER becomes a trigger, no matter how loud.
-{
-  console.log("\n— (iii) unconfirmed death never triggers —");
-  const { queuePath, ledgerPath } = fakeFindFiles({
-    topics: [
-      queueTopic({ eventSlug: "gale-brody-dies", primaryEntity: "Gale Brody", priority: 95, verification: { status: "DEVELOPING", outletCount: 9, publishable: true, sensitivity: "high" } }),
-      queueTopic(), // the CONFIRMED control
+  const angle = fakeAngle("audience-reaction"); // minAnchors 3
+  // The LLM 'extracts' ONLY fabricated fan quotes (none exist in SRC_A/SRC_B) → all fail the wall.
+  const chatImpl = makeChat({
+    extract: () => [
+      { speaker: "", speakerType: "fan", platform: "X", quote: "This is a completely invented quote nobody ever wrote anywhere", stance: "positive" },
+      { speaker: "", speakerType: "fan", platform: "X", quote: "Another fabricated reaction that is not in the source text at all", stance: "negative" },
+      { speaker: "", speakerType: "fan", platform: "X", quote: "A third made-up line the model hallucinated on its own", stance: "mixed" },
     ],
-    entries: [],
   });
-  const trs = await loadTriggers({ queuePath, ledgerPath, searchPersonImpl: async () => ({ id: 1 }), nowMs: NOW });
-  check("DEVELOPING death dropped even at priority 95 / 9 outlets", !trs.some((t) => t.parentEventSlug === "gale-brody-dies"));
-  check("CONFIRMED death control still triggers", trs.some((t) => t.parentEventSlug === "rex-harmon-dies"));
-}
+  const h = await harvestReactions(trigger, angle, harvestOpts({ chatImpl }));
+  assert.equal(h.ok, false, "harvest fails the floor");
+  assert.ok(/under floor/.test(h.reason), "reason is under-floor: " + h.reason);
+});
 
-// (iv) THE FAMOUS WALL — all three famousness signals miss → no ripple story exists.
-{
-  console.log("\n— (iv) non-famous subject dropped —");
-  const nobody = queueTopic({ eventSlug: "kip-nobody-cast", title: "Kip Nobody cast in indie short", primaryEntity: "Kip Nobody", eventType: "casting", priority: 12, verification: { status: "CONFIRMED", outletCount: 1, publishable: true } });
-  const { queuePath, ledgerPath } = fakeFindFiles({ topics: [nobody], entries: [] });
-  const none = await loadTriggers({ queuePath, ledgerPath, searchPersonImpl: async () => null, nowMs: NOW });
-  check("outlets<3 + priority<55 + TMDB-unknown → dropped, no LLM spent", none.length === 0);
-  const fuzzyHit = await loadTriggers({ queuePath, ledgerPath, searchPersonImpl: async () => ({ id: 7, name: "Kip Nobody", popularity: 0.3, knownFor: 0 }), nowMs: NOW });
-  check("a popularity-0 fuzzy TMDB HIT is still not fame → dropped", fuzzyHit.length === 0);
-  const tmdbKnown = await loadTriggers({ queuePath, ledgerPath, searchPersonImpl: async () => ({ id: 7, name: "Kip Nobody", popularity: 11, knownFor: 3 }), nowMs: NOW });
-  check("the SAME event triggers once TMDB knows the person as GENUINELY notable", tmdbKnown.length === 1 && tmdbKnown[0].parentEventSlug === "kip-nobody-cast");
-}
-
-// (v) THE PRIVACY WALL — fan reactions never carry a private person's name into the fact block.
-{
-  console.log("\n— (v) fan names never survive the harvest —");
+// ── 1b) REAL extracted quotes pass the wall and clear the floor (control) ──────────────────────────
+await check("real extracted quotes pass the wall and clear the floor (control)", async () => {
   const trigger = fakeTrigger();
-  const angle = fakeAngle("fan-pulse");
-  const namedFans = async () => ({ data: { reactions: [
-    { speaker: "Jane Crowley", speakerType: "fan", platform: "X", date: "", quote: Q.fan1, stance: "positive" },
-    { speaker: "@rexstan4ever", speakerType: "fan", platform: "X", date: "", quote: Q.fan2, stance: "positive" },
-    { speaker: "Bob from Ohio", speakerType: "fan", platform: "X", date: "", quote: Q.fan3, stance: "negative" },
-    { speaker: "moviemom88", speakerType: "fan", platform: "X", date: "", quote: Q.fan4, stance: "positive" },
-  ] } });
-  const h = await harvestReactions(trigger, angle, { findContentImpl: async () => ({ blocked: false, sources: [srcB] }), chatImpl: namedFans, cacheTweetsImpl: noTweets });
-  check("fan-pulse harvest passes its floor on 4 verbatim fan posts", h.ok === true, JSON.stringify(h));
-  check("EVERY fan speaker forced to empty string", h.factBlock.aggregateFans.length === 4 && h.factBlock.aggregateFans.every((r) => r.speaker === ""));
-  check("no named-voice entry was minted from a fan", h.factBlock.reactions.length === 0);
-  check("divided sentiment computed honestly from the harvest", h.factBlock.stats.divided === true);
-}
-
-// (vi) THE NEVER-TWICE WALL — one event×form publishes once, forever; a different form stays free.
-{
-  console.log("\n— (vi) same event×form never published twice —");
-  const store = loadStore(path.join(tmp("inside-safety-store"), "store.json"));
-  recordInsidePublished(store, { parentEventSlug: "rex-harmon-dies", form: "peer-tributes", slug: "already-live", title: "t" }, { now: new Date(NOW) });
-  const trigger = fakeTrigger();
-  let wrote = 0;
-  const impls = (form) => ({
-    loadTriggersImpl: async () => [trigger],
-    proposeAnglesImpl: async () => [fakeAngle(form)],
-    harvestImpl: async (t, a) => ({ ok: true, factBlock: fakeFactBlock(a.form), bundle: { sources: [] } }),
-    editorialImpl: async () => ({ ran: true, reject: false }),
-    generateImpl: async ({ angle, factBlock }) => ({ article: fakeArticle({ form: angle.form, factBlock }) }),
-    gateImpl: async () => ({ score: 90, pass: true, subscores: {}, deterministic: {}, hardBlocks: [], cutClaims: [], vgVerdict: null, strengths: [], weaknesses: [] }),
-    writeImpl: (a) => { wrote++; return { slug: "x-" + a.angle.form, written: false }; },
-    storeImpl: store, hero: false, webVerify: false, nowMs: NOW,
+  const angle = fakeAngle("audience-reaction");
+  const chatImpl = makeChat({
+    extract: (i) => i === 1 ? [
+      { speaker: "", speakerType: "fan", platform: "X", quote: Q.fanLove, stance: "positive" },
+      { speaker: "", speakerType: "fan", platform: "X", quote: Q.fanHate, stance: "negative" },
+      { speaker: "", speakerType: "fan", platform: "X", quote: Q.fanSplit, stance: "mixed" },
+    ] : [],
   });
-  const again = await insideRun(impls("peer-tributes"));
-  check("re-running the published event×form → skipped, zero writes",
-    again.skipped.length === 1 && /already published/.test(again.skipped[0].reason) && wrote === 0 && !again.published.length);
-  const otherForm = await insideRun(impls("cast-crew-voices"));
-  check("a DIFFERENT form of the same event still publishes (dedup is per form, not per event)",
-    otherForm.published.length === 1 && wrote === 1);
-  check("...and is then itself locked forever", (await insideRun(impls("cast-crew-voices"))).skipped.length === 1 && wrote === 1);
-}
+  const h = await harvestReactions(trigger, angle, harvestOpts({ chatImpl }));
+  assert.equal(h.ok, true, "control passes: " + (h.reason || ""));
+  assert.equal(h.factBlock.aggregateFans.length, 3);
+});
 
-console.log(`\n── RESULT: ${pass} passed${fail ? `, ${fail} FAILED` : ""} ──`);
-if (fail) { console.log("FAILED:", fails.join("; ")); process.exit(1); }
-console.log("Inside safety constitution green. ✅\n");
+// ── 2) AUDIENCE NAMES NEVER LEAK — a 'fan' with a name gets speaker forced to "" ──────────────────
+await check("aggregateFans speaker is forced empty even if the LLM names a fan", async () => {
+  const trigger = fakeTrigger();
+  const angle = fakeAngle("audience-reaction");
+  const chatImpl = makeChat({
+    extract: (i) => i === 1 ? [
+      // LLM wrongly attaches a real-looking name to an ordinary fan → the split() must scrub it.
+      { speaker: "Jane Q. Public", speakerType: "fan", platform: "X", quote: Q.fanLove, stance: "positive" },
+      { speaker: "Some Rando", speakerType: "fan", platform: "X", quote: Q.fanHate, stance: "negative" },
+      { speaker: "Another Person", speakerType: "fan", platform: "X", quote: Q.fanSplit, stance: "mixed" },
+    ] : [],
+  });
+  const h = await harvestReactions(trigger, angle, harvestOpts({ chatImpl }));
+  assert.equal(h.ok, true, h.reason || "");
+  assert.ok(h.factBlock.aggregateFans.length >= 3);
+  assert.ok(h.factBlock.aggregateFans.every((r) => r.speaker === ""), "every fan speaker scrubbed to ''");
+  assert.equal(h.factBlock.stats.namedVoices, 0, "no named voices from fans");
+});
+
+// ── 3) WRITER quoting a NON-ANCHOR speaker → deterministicInside hard-block ───────────────────────
+await check("writer quoting a non-anchor speaker → hard-block", async () => {
+  const fb = fakeFactBlock("creator-answers-critics");
+  const art = fakeArticle({ form: "creator-answers-critics", factBlock: fb });
+  art.reactionsRender.push({ speaker: "Imaginary Producer", connection: "", platform: "X", date: "", quote: Q.director, tweetId: "" });
+  const r = deterministicInside(art, fb, fakeAngle("creator-answers-critics"));
+  assert.ok(r.hardBlocks.some((b) => /invented-speaker/.test(b)), r.hardBlocks.join(" | "));
+});
+
+// ── 4) AUDIENCE quote reattributed to a NAMED creator → hard-block ────────────────────────────────
+await check("audience quote reattributed to a named creator → hard-block", async () => {
+  const fb = fakeFactBlock("creator-answers-critics"); // has named director + fan posts
+  const art = fakeArticle({ form: "creator-answers-critics", factBlock: fb });
+  // Put a fan's quote in the director's mouth (a real speaker, but not HER verbatim line).
+  art.reactionsRender = [{ speaker: "Priya Anand", connection: "director of The Sable Coast", platform: "interview", date: "", quote: Q.fanHate, tweetId: "" }];
+  const r = deterministicInside(art, fb, fakeAngle("creator-answers-critics"));
+  assert.ok(r.hardBlocks.some((b) => /misattributed-or-unverbatim/.test(b)), r.hardBlocks.join(" | "));
+});
+
+// ── 5) SAME story×form NEVER published twice ──────────────────────────────────────────────────────
+await check("same story×form never published twice (dedup ledger)", async () => {
+  const store = loadStore(path.join(tmp("inside-safety"), "store.json"));
+  assert.equal(alreadyPublished(store, "the-sable-coast-2026", "audience-reaction"), false);
+  recordInsidePublished(store, { parentEventSlug: "the-sable-coast-2026", form: "audience-reaction", slug: "s1", title: "t" });
+  assert.equal(alreadyPublished(store, "the-sable-coast-2026", "audience-reaction"), true, "recorded");
+  // a different form of the SAME story is still open (per-form dedup), but the same one is closed forever.
+  assert.equal(alreadyPublished(store, "the-sable-coast-2026", "the-debate"), false);
+  // re-recording the same key does not create a duplicate.
+  recordInsidePublished(store, { parentEventSlug: "the-sable-coast-2026", form: "audience-reaction", slug: "s1", title: "t" });
+  assert.equal(store.published.filter((r) => r.key === "the-sable-coast-2026|audience-reaction").length, 1, "single ledger entry");
+});
+
+// ── 6) A STATED NUMBER not in the anchors → specificsGuard cut ─────────────────────────────────────
+await check("a stated number not in the anchors is flagged for cut (specificsGuard via gateInside)", async () => {
+  const trigger = fakeTrigger();
+  const angle = fakeAngle("audience-reaction");
+  const fb = fakeFactBlock("audience-reaction"); // no numbers in any anchor quote
+  const art = fakeArticle({ form: "audience-reaction", factBlock: fb });
+  // Inject an invented box-office figure that appears nowhere in the anchors/sources.
+  art.body += `\n\nThe film has already grossed $412 million worldwide, an unusually strong run.`;
+  // The judge (chatImpl) is only called when there are no fatal blocks; return a clean high score.
+  const chatImpl = async () => ({ data: { score: 88, subscores: { readability: 8, engagement: 8, humanVoice: 8 }, strengths: [], weaknesses: [] }, usage: {} });
+  const scored = await gateInside({ article: art, trigger, angle, factBlock: fb, chatImpl });
+  assert.ok(scored.cutClaims.some((c) => /412/.test(c)), "invented $412 million figure flagged: " + JSON.stringify(scored.cutClaims));
+});
+
+// ── 6b) control: an article with only anchored content produces NO cutClaims ───────────────────────
+await check("clean anchored article produces no specificsGuard cuts", async () => {
+  const trigger = fakeTrigger();
+  const angle = fakeAngle("audience-reaction");
+  const fb = fakeFactBlock("audience-reaction");
+  const art = fakeArticle({ form: "audience-reaction", factBlock: fb });
+  const chatImpl = async () => ({ data: { score: 88, subscores: { readability: 8, engagement: 8, humanVoice: 8 }, strengths: [], weaknesses: [] }, usage: {} });
+  const scored = await gateInside({ article: art, trigger, angle, factBlock: fb, chatImpl });
+  assert.deepEqual(scored.hardBlocks, [], "no hard blocks: " + scored.hardBlocks.join(" | "));
+  assert.deepEqual(scored.cutClaims, [], "no cut claims: " + JSON.stringify(scored.cutClaims));
+});
+
+console.log(`\n=== SAFETY: ${pass} passed, ${fail} failed ===`);
+if (fail) { console.log("FAILED: " + fails.join(", ")); process.exit(1); }

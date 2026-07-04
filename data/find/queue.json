@@ -1,41 +1,41 @@
 {
-  "runId": "run-2026-07-04T11-48-57",
-  "builtAt": "2026-07-04T11:49:35.612Z",
+  "runId": "run-2026-07-04T12-06-37",
+  "builtAt": "2026-07-04T12:07:16.678Z",
   "count": 5,
   "topics": [
     {
-      "id": "news-malta-film-commissioner-blockbuster-plan",
-      "slug": "malta-film-commissioner-johann-grech-has-an-ambitious-plan-to-lure-mor",
-      "title": "Malta Film Commissioner Johann Grech Has an Ambitious Plan to Lure More Blockbusters: A Land Sea Super Stage",
-      "contentType": "news",
-      "formatTag": "news",
+      "id": "box-office-zootopia-2-global-box-office-record",
+      "slug": "the-25-highest-grossing-animated-films-of-all-time-at-the-global-box-o",
+      "title": "The 25 Highest-Grossing Animated Films Of All Time At The Global Box Office",
+      "contentType": "box-office",
+      "formatTag": "box-office",
       "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
+      "subcategory": "box-office",
+      "eventType": "boxoffice",
       "sensitivity": "normal",
-      "eventSlug": "malta-film-commissioner-blockbuster-plan",
-      "primaryKeyword": "malta film commission",
-      "primaryEntity": "Malta Film Commission",
+      "eventSlug": "zootopia-2-global-box-office-record",
+      "primaryKeyword": "Zootopia 2 box office",
+      "primaryEntity": "Zootopia 2",
       "entities": [
-        "Johann Grech",
-        "Ridley Scott"
+        "Zootopia 2 (film)",
+        "Walt Disney Animation Studios"
       ],
-      "angle": "Malta's Film Commissioner outlines ambitious plans to attract blockbusters with new soundstage.",
+      "angle": "Zootopia 2 achieves a major global box office milestone, becoming one of the fastest animated films to surpass $1 billion.",
       "tmdbType": "movie",
-      "source": "rss:THR",
+      "source": "rss:Deadline",
       "sources": [
         {
-          "outlet": "THR",
+          "outlet": "Deadline",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/malta-film-johann-grech-blockbusters-water-tank-stage-film-1236636965/",
-          "ageMin": 986,
-          "headline": "Malta Film Commissioner Johann Grech Has an Ambitious Plan to Lure More Blockbusters: A Land Sea Super Stage",
-          "summary": "The chief of Malta’s film operations sits for an interview with THR to discuss the latest developments with a soundstage construction project and why he named his dog after Ridley Scott."
+          "url": "https://deadline.com/gallery/highest-grossing-animated-movies-all-time/",
+          "ageMin": 1461,
+          "headline": "The 25 Highest-Grossing Animated Films Of All Time At The Global Box Office",
+          "summary": "Walt Disney Animation Studios Zootopia 2 has roared past the $1 billion threshold at the global box office, achieving the massive milestone in just 17 days. This phenomenal pace makes it the fastest-ever billion-dollar earner among all animated MPA releases and all PG-rated films. It follows Disney s Lilo Stitch as the second film of [ ]"
         }
       ],
-      "ageMin": 986,
+      "ageMin": 1461,
       "_cand": {
-        "key": "rss:malta-film-commissioner-johann-grech-has-an-ambitious-plan-t",
+        "key": "rss:the-25-highest-grossing-animated-films-of-all-time-at-the-gl",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -45,11 +45,76 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "THR"
+          "Deadline"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "THR",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 60,
+      "signals": {
+        "recency": 1,
+        "corroboration": 12,
+        "status": 18,
+        "type": 11,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0
+      }
+    },
+    {
+      "id": "news-mary-oliver-saved-by-the-beauty-of-the-world-documentary-release",
+      "slug": "now-playing-mary-oliver-saved-by-the-beauty-of-the-world-sasha-waters-",
+      "title": "Now Playing: ‘Mary Oliver: Saved By The Beauty Of The World,’ Sasha Waters Documentary On Poet Beloved By Oprah, Stephen Colbert More",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "mary-oliver-saved-by-the-beauty-of-the-world-documentary-release",
+      "primaryKeyword": "Mary Oliver documentary",
+      "primaryEntity": "Mary Oliver: Saved By The Beauty Of The World",
+      "entities": [
+        "Oprah Winfrey Presents: When They See Us Now",
+        "Mary Oliver",
+        "Oprah Winfrey",
+        "Stephen Colbert"
+      ],
+      "angle": "A new documentary about the beloved poet Mary Oliver, praised by Oprah and Stephen Colbert, is now playing.",
+      "tmdbType": "movie",
+      "source": "rss:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/mary-oliver-saved-by-the-beauty-of-the-world-interview-director-sasha-waters-1236974037/",
+          "ageMin": 818,
+          "headline": "Now Playing: ‘Mary Oliver: Saved By The Beauty Of The World,’ Sasha Waters Documentary On Poet Beloved By Oprah, Stephen Colbert More",
+          "summary": "The words “poet” and “bestselling” do not often go together. But they apply in the case of Mary Oliver, the Pulitzer Prize winner who gained a legion of fans – including the famous, from the likes of Oprah and Stephen Colbert to Helena Bonham Carter, Steve Buscemi, and Maria Shriver. Oliver’s life and career are [ ]"
+        }
+      ],
+      "ageMin": 818,
+      "_cand": {
+        "key": "rss:now-playing-mary-oliver-saved-by-the-beauty-of-the-world-sas",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Deadline",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -67,163 +132,39 @@
       }
     },
     {
-      "id": "news-moritz-borman-death",
-      "slug": "oliver-stone-pays-tribute-to-his-alexander-snowden-producer-moritz-bor",
-      "title": "Oliver Stone Pays Tribute To His Alexander Snowden Producer Moritz Borman",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "death",
-      "sensitivity": "high",
-      "eventSlug": "moritz-borman-death",
-      "primaryKeyword": "moritz borman",
-      "primaryEntity": "Moritz Borman",
-      "entities": [
-        "Oliver Stone"
-      ],
-      "angle": "Oliver Stone pays tribute to his late producer Moritz Borman.",
-      "tmdbType": "movie",
-      "source": "rss:Deadline",
-      "sources": [
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/oliver-stone-tribute-producer-moritz-borman-1236974013/",
-          "ageMin": 879,
-          "headline": "Oliver Stone Pays Tribute To His Alexander Snowden Producer Moritz Borman: I Very Much Loved And Admired Him",
-          "summary": "Oliver Stone has spoken out after news of the death of Moritz Borman, the veteran Hollywood producer and longtime Stone collaborator who died July 1 at age 71. Borman was a producer on the Stone pics Alexander, Savages, W. and World Trade Center and most recently 2016 s Snowden. In addition, he had producer credits on Under the [ ]"
-        }
-      ],
-      "ageMin": 879,
-      "_cand": {
-        "key": "rss:oliver-stone-pays-tribute-to-his-alexander-snowden-producer-",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Deadline"
-        ],
-        "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "Deadline",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 54,
-      "signals": {
-        "recency": 1,
-        "corroboration": 12,
-        "status": 18,
-        "type": 15,
-        "pop": 0,
-        "breakout": 0,
-        "big": 8,
-        "trending": 0
-      }
-    },
-    {
-      "id": "news-kjell-nilsson-dies-at-76",
-      "slug": "kjell-nilsson-lord-humungus-in-mad-max-2-the-road-warrior-dies-at-76",
-      "title": "Kjell Nilsson, Lord Humungus in 'Mad Max 2: The Road Warrior,' Dies at 76",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "death",
-      "sensitivity": "high",
-      "eventSlug": "kjell-nilsson-dies-at-76",
-      "primaryKeyword": "kjell nilsson",
-      "primaryEntity": "Kjell Nilsson",
-      "entities": [
-        "Mad Max 2",
-        "Mad Max 2: The Road Warrior"
-      ],
-      "angle": "Remembering the actor who played Lord Humungus in the iconic 'Mad Max 2'.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/film/obituaries-people-news/kjell-nilsson-dead-lord-humungus-mad-max-2-road-warrior-1236801512/",
-          "ageMin": 989,
-          "headline": "Kjell Nilsson, Who Played Lord Humungus in Mad Max 2: The Road Warrior , Dies at 76",
-          "summary": "Kjell Nilsson, the Swedish bodybuilder and actor who played the masked bruiser Lord Humungus in George Miller’s 1982 classic “Mad Max 2: The Road Warrior,” died on July 2 after four years of kidney complications. He was 76. Nilsson’s passing was announced via a Facebook post from his family. They wrote that Nilsson “passed away [ ]"
-        }
-      ],
-      "ageMin": 989,
-      "_cand": {
-        "key": "rss:kjell-nilsson-who-played-lord-humungus-in-mad-max-2-the-road",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 54,
-      "signals": {
-        "recency": 1,
-        "corroboration": 12,
-        "status": 18,
-        "type": 15,
-        "pop": 0,
-        "breakout": 0,
-        "big": 8,
-        "trending": 0
-      }
-    },
-    {
-      "id": "news-supergirl-bomb-competing-cuts-creative-differences",
-      "slug": "behind-the-supergirl-bomb-competing-cuts-and-creative-differences-reve",
-      "title": "Behind the Supergirl Bomb: Competing Cuts and Creative Differences Revealed",
+      "id": "news-dustin-hoffman-maggie-gyllenhaal-karlovy-vary",
+      "slug": "dustin-hoffman-maggie-gyllenhaal-charm-karlovy-vary-festival",
+      "title": "Dustin Hoffman, Maggie Gyllenhaal Charm Karlovy Vary Festival",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "supergirl-bomb-competing-cuts-creative-differences",
-      "primaryKeyword": "Supergirl movie cuts",
-      "primaryEntity": "Supergirl",
+      "eventSlug": "dustin-hoffman-maggie-gyllenhaal-karlovy-vary",
+      "primaryKeyword": "Dustin Hoffman Maggie Gyllenhaal Karlovy Vary",
+      "primaryEntity": "Dustin Hoffman",
       "entities": [
-        "DC Studios",
-        "Craig Gillespie"
+        "The Bride!",
+        "Maggie Gyllenhaal",
+        "Karlovy Vary International Film Festival"
       ],
-      "angle": "DC Studios faced internal conflict over competing cuts and creative differences for the 'Supergirl' film.",
+      "angle": "Veteran actors attend international film festival",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
         {
           "outlet": "THR",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-features/supergirl-making-box-office-bomb-1236636425/",
-          "ageMin": 866,
-          "headline": "Behind the Supergirl Bomb: Competing Cuts, Creative Differences (Exclusive)",
-          "summary": "For months, DC Studios knew the film wasn't working. Things came to a head in March when the studio tested its own cut against one from filmmaker Craig Gillespie."
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/karlovy-vary-dustin-hoffman-maggie-gyllenhaal-open-festival-1236636037/",
+          "ageMin": 1034,
+          "headline": "Dustin Hoffman, Maggie Gyllenhaal Charm Karlovy Vary With Robert Redford, Study Abroad Anecdotes",
+          "summary": "Jesse Eisenberg and Harvey Keitel were also among the stars walking the expanded red carpet of the Czech festival as it kicked off its double anniversary edition, including with a soccer film and a drone show."
         }
       ],
-      "ageMin": 866,
+      "ageMin": 1034,
       "_cand": {
-        "key": "rss:behind-the-supergirl-bomb-competing-cuts-creative-difference",
+        "key": "rss:dustin-hoffman-maggie-gyllenhaal-charm-karlovy-vary-with-rob",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -255,37 +196,38 @@
       }
     },
     {
-      "id": "news-bam-margera-jackass-reunion-not-happening",
-      "slug": "bam-margera-won-t-reunite-with-jackass-crew-for-final-film",
-      "title": "Bam Margera Won't Reunite with Jackass Crew for Final Film",
+      "id": "news-jesse-eisenberg-european-citizenship",
+      "slug": "jesse-eisenberg-is-getting-polish-citizenship-and-wants-to-work-more-i",
+      "title": "Jesse Eisenberg Is Getting Polish Citizenship and Wants to Work More in Europe: In the U.S., the Kind of Films I Love Are Increasingly Difficult to Make",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "bam-margera-jackass-reunion-not-happening",
-      "primaryKeyword": "bam margera jackass reunion",
-      "primaryEntity": "Bam Margera",
+      "eventSlug": "jesse-eisenberg-european-citizenship",
+      "primaryKeyword": "Jesse Eisenberg Europe",
+      "primaryEntity": "Jesse Eisenberg",
       "entities": [
-        "Jackass"
+        "Karlovy Vary International Film Festival",
+        "Richard Ayoade"
       ],
-      "angle": "Bam Margera confirms he will watch the final 'Jackass' outing but states a reunion with the crew is not going to happen.",
+      "angle": "Jesse Eisenberg receives Polish citizenship and expresses a desire to work more in Europe, citing difficulties in the U.S. film industry.",
       "tmdbType": "movie",
-      "source": "rss:Deadline",
+      "source": "rss:THR",
       "sources": [
         {
-          "outlet": "Deadline",
+          "outlet": "THR",
           "tier": 7,
-          "url": "https://deadline.com/2026/07/bam-margera-plans-watch-jackass-best-last-1236974064/",
-          "ageMin": 772,
-          "headline": "Bam Margera Plans To Watch Jackass: Best Last But Reunion Is Not Going To Happen",
-          "summary": "Following his 2021 falling out with the Jackass guys, Bam Margera has no ill will toward the crew and their final onscreen outing. Although the pro skater said that a reunion is not going to happen, he recently emphasized that he doesn t have any bad blood against his former co-stars from the stunt franchise, and [ ]"
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/jesse-eisenberg-polish-citizenship-europe-us-karlovy-vary-1236636634/",
+          "ageMin": 6,
+          "headline": "Jesse Eisenberg Is Getting Polish Citizenship and Wants to Work More in Europe: In the U.S., the Kind of Films I Love Are Increasingly Difficult to Make",
+          "summary": "The actor, writer and director was welcomed with a huge ovation and honored with the Karlovy Vary International Film Festival President’s Award before a screening of Richard Ayoade's 'The Double' in the Czech spa town."
         }
       ],
-      "ageMin": 772,
+      "ageMin": 6,
       "_cand": {
-        "key": "rss:bam-margera-plans-to-watch-jackass-best-last-but-reunion-is-",
+        "key": "rss:jesse-eisenberg-is-getting-polish-citizenship-and-wants-to-w",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -295,11 +237,71 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Deadline"
+          "THR"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Deadline",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 66,
+      "signals": {
+        "recency": 30,
+        "corroboration": 12,
+        "status": 18,
+        "type": 6,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0
+      }
+    },
+    {
+      "id": "news-matthew-mcconaughey-america-speech",
+      "slug": "matthew-mcconaughey-honors-america-in-speech-for-250th-independence-da",
+      "title": "Matthew McConaughey Honors America in Speech for 250th Independence Day Celebration: We Do Not Need Cynics",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "matthew-mcconaughey-america-speech",
+      "primaryKeyword": "Matthew McConaughey speech",
+      "primaryEntity": "Matthew McConaughey",
+      "entities": [],
+      "angle": "Matthew McConaughey delivers a patriotic speech for America's 250th Independence Day celebration.",
+      "tmdbType": "movie",
+      "source": "rss:TheWrap",
+      "sources": [
+        {
+          "outlet": "TheWrap",
+          "tier": 7,
+          "url": "https://www.thewrap.com/culture-lifestyle/culture/matthew-mcconaughey-drops-america-250-celebration-speech/",
+          "ageMin": 886,
+          "headline": "Matthew McConaughey Honors America in Speech for 250th Independence Day Celebration: We Do Not Need Cynics",
+          "summary": "\"Here's to more dancing in the home of the brave. Happy 250th, America. Just keep living,\" the actor adds The post Matthew McConaughey Honors America in Speech for 250th Independence Day Celebration: We Do Not Need Cynics appeared first on TheWrap ."
+        }
+      ],
+      "ageMin": 886,
+      "_cand": {
+        "key": "rss:matthew-mcconaughey-honors-america-in-speech-for-250th-indep",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "TheWrap"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "TheWrap",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true

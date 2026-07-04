@@ -35,7 +35,7 @@ const candBefore = candidates.length;
 // roundup ("New Music Friday", "…: All 16 Tracks Ranked", "X songs ranked", a "best album" review) makes the writer
 // confabulate details across many entities (endless fabrication catches, never converges) and is off-brand for the
 // news-only strip. Deterministic title guard, before the categorize LLM even sees them.
-const ROUNDUP_REVIEW = /\b(tracks?|songs?|albums?|movies?|films?|episodes?|shows?|moments?|scenes?|characters?)\s+ranked\b|\branked\b[^.]*\b(tracks?|songs?|movies?|films?)\b|new music friday|\bbest album\b|\bworst album\b|\bre-?ranked\b|\b\d+\s+(best|worst|greatest|essential)\b|album review|\bis (?:her|his|their) best\b/i;
+const ROUNDUP_REVIEW = /\b(tracks?|songs?|albums?|movies?|films?|episodes?|shows?|moments?|scenes?|characters?)\s+ranked\b|\branked\b[^.]*\b(tracks?|songs?|movies?|films?)\b|new music friday|\bbest album\b|\bworst album\b|\bre-?ranked\b|\b\d+\s+(best|worst|greatest|essential|highest|biggest|top)\b|highest[- ]grossing\b[^.]{0,45}\bof all time\b|album review|\bis (?:her|his|their) best\b/i;
 // RETROSPECTIVE / OPINION guard (owner 2026-07-03): an anniversary retrospective or opinion piece ("15 Years Later…
 // Still One of TV's Best", "why X still holds up", "underrated") is NOT a news EVENT — it made the writer confabulate
 // (the Spartacus 1960-film-vs-2010-series failure entered as such a retrospective). A real news event has an event
@@ -46,11 +46,17 @@ const RETRO_OPINION = /\b\d+\s+years?\s+(later|after|on)\b|\bstill (one of|holds
 // LLM backstop for whatever slips past. Title patterns + a small blocklist of pure Bollywood/anime outlets.
 const SCOPE_JUNK = /\banime\b|\bmanga\b|\bwebtoon\b|\b(video ?games?|gameplay|playstation|xbox|nintendo|steam deck|speedrun)\b|\bbollywood\b|\bcrore\b|box office collections|\b(hindi|tamil|telugu|kannada|malayalam|punjabi)\s+(film|movie|cinema|box office|actor|actress)\b/i;
 const JUNK_OUTLETS = new Set(["crunchyroll", "pinkvilla", "bollywood hungama", "koimoi", "the times of india", "times of india"]);
+// DULL INDUSTRY / FESTIVAL inside-baseball (owner 2026-07-04: harden the drop — the Malta-film-commissioner /
+// soundstage-infrastructure class is accurate but LOW-ENGAGEMENT, off the big-tentpole brand). Deterministic
+// pre-categorize drop. Kept NARROW so real news (a studio greenlight, a festival AWARD/premiere) still passes — we
+// drop only policy/infrastructure/lineup items a general fan never searches.
+const DULL_INDUSTRY = /\bfilm commission(er)?\b|\bsound\s?stage\b|\bstudio (space|lot|complex|infrastructure)\b|\btax (incentive|rebate|credit)s?\b|\bfilming incentive|\bco-?production (treaty|fund)\b|\bfestival (lineup|line-up|jury|panel|slate|market|dates)\b|\bindustry (days|panel|conference|summit)\b|\bfilm fund\b|\brebate program|\bcrystal globe\b|\bguest of honou?r\b|\blifetime achievement\b|\bcareer achievement\b|honou?red at (the )?[^.]{0,25}festival/i;
 const freshCandidates = candidates.filter((c) =>
   !published.titles.has(slugKey(c.title)) &&
   !ROUNDUP_REVIEW.test(c.title || "") &&
   !RETRO_OPINION.test(c.title || "") &&
   !SCOPE_JUNK.test(c.title || "") &&
+  !DULL_INDUSTRY.test(c.title || "") &&
   !JUNK_OUTLETS.has((c.outlet || "").toLowerCase().trim()));
 if (candBefore - freshCandidates.length > 0) monitor.stage("dedup", `dropped ${candBefore - freshCandidates.length} already-published candidate(s) by title; ${freshCandidates.length} remain`);
 // EXTRACTABILITY-FIRST shortlist (2026-07-04): a clean publisher URL (an RSS main/section feed) extracts to full
@@ -61,10 +67,18 @@ if (candBefore - freshCandidates.length > 0) monitor.stage("dedup", `dropped ${c
 // each group): the RSS version of a hot story wins over its unextractable gnews duplicate, and MAKE always has text.
 const isGnewsRedirect = (c) => { try { return /(^|\.)news\.google\.com$/i.test(new URL(c.url || "").hostname); } catch { return false; } };
 const extractable = (c) => !!c.url && !isGnewsRedirect(c);
+// BIG-TRENDING title heuristic (owner 2026-07-04: rank the big tentpole stories to the top). Pre-categorize we only
+// have the headline, so match the marquee-Hollywood signals a fan actually clicks — box office, a trailer/teaser
+// drop, a marquee casting, a reaction, a sequel/franchise/premiere/release beat. Used as a SORT boost (not a
+// filter): among extractable candidates, the big trending stories get categorized + queued before the small stuff.
+const BIG_TITLE = /\bbox office\b|\bweekend\b|opening (weekend|day|night)|\$\s?\d|\b\d+(\.\d+)?\s?(million|billion)\b|\btrailer\b|\bteaser\b|first look|\bcast(ing|s|ed)?\b|\bto (star|play|direct|lead|helm|join)\b|\bstars? (in|as)\b|\bjoins\b|\bsequel\b|\bprequel\b|\breboot\b|\bfranchise\b|\brenew(ed|al)\b|\bcancel(ed|led|lation)\b|\bpremiere\b|\brelease date\b|\breactions?\b|\bfirst reactions\b|\bopening\b/i;
+const bigTitle = (c) => BIG_TITLE.test(c.title || "");
 const fresh = freshCandidates.filter((c) => c.ageMin != null).sort((a, b) => {
   const ea = extractable(a) ? 0 : 1, eb = extractable(b) ? 0 : 1;
-  if (ea !== eb) return ea - eb; // extractable clean-URL candidates first, then freshest-first within each group
-  return a.ageMin - b.ageMin;
+  if (ea !== eb) return ea - eb;                 // 1) extractable clean-URL candidates first (MAKE needs real text)
+  const ba = bigTitle(a) ? 0 : 1, bb = bigTitle(b) ? 0 : 1;
+  if (ba !== bb) return ba - bb;                 // 2) then the BIG trending stories (box office / trailer / casting)
+  return a.ageMin - b.ageMin;                    // 3) then freshest-first
 });
 const backbone = freshCandidates.filter((c) => c.ageMin == null).sort((a, b) => (b.popularity || 0) - (a.popularity || 0));
 const nBackbone = Math.min(backbone.length, Math.round(SHORTLIST * 0.15));

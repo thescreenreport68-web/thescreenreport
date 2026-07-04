@@ -1,388 +1,304 @@
-// INSIDE lane — UNIT TESTS (offline: zero network, zero keys; every impl injected).
-// Run: node site/pipeline/inside/test/unit.test.mjs
-import path from "node:path";
-import { createRequire } from "node:module";
-const require = createRequire(import.meta.url);
-const matter = require("gray-matter");
+// INSIDE lane — UNIT TESTS (REV 2; offline: zero network, zero keys; every impl injected).
+// Run: env -i node site/pipeline/inside/test/unit.test.mjs
+import assert from "node:assert/strict";
 
-import { norm, quoteIsVerbatim, meetsFloor, findTweetIds } from "../reactionFinder.mjs";
-import { isFamous, loadTriggers } from "../trigger.mjs";
+import { discoverReddit, redditSearchPosts, redditTopComments } from "../../find/sources/reddit.mjs";
+import { discoverStories } from "../discover.mjs";
+import { loadTriggers } from "../trigger.mjs";
+import { norm, quoteIsVerbatim, meetsFloor, fallbackQueries } from "../reactionFinder.mjs";
+import { routeForStory } from "../config.inside.mjs";
 import { loadStore, alreadyPublished, recordInsidePublished, parkAngle, parkedTries, clearParked, insideKey } from "../store.mjs";
-import { distinctQuoteRatio, insideEditorialGate } from "../editorialGate.mjs";
 import { deterministicInside, classifyInsideBlocks } from "../gate.mjs";
 import { buildInsideMarkdown } from "../assemble.mjs";
-import { routeForTrigger, TRIGGERS } from "../config.inside.mjs";
 import {
-  NOW, tmp, writeJson, Q, SRC_A, SRC_B, TWEET_ID_A, TWEET_ID_B,
-  fakeTrigger, fakeAngle, fakeFactBlock, fakeArticle, fakeImage, statsFor, NAMED, FAN_POSTS,
-  queueTopic, ledgerEntry, fakeFindFiles,
+  NOW, tmp, Q, SRC_A,
+  fakeTrigger, fakeAngle, fakeFactBlock, fakeArticle, fakeImage,
+  fakeTMDBItems, fakeRedditDiscover, redditListing, redditCommentsListing, fakeRedditPost,
 } from "./fixtures.mjs";
 
 let pass = 0, fail = 0; const fails = [];
-const check = (name, cond, detail = "") => { if (cond) { pass++; console.log(`  ✅ ${name}`); } else { fail++; fails.push(name); console.log(`  ❌ ${name}  ${detail}`); } };
-const throwsIfCalled = (tag) => async () => { throw new Error(`${tag} must not be called`); };
+const check = async (name, fn) => {
+  try { await fn(); pass++; console.log(`  ✅ ${name}`); }
+  catch (e) { fail++; fails.push(name); console.log(`  ❌ ${name}  ${String(e?.message || e).slice(0, 200)}`); }
+};
 
-console.log("\n=== INSIDE UNIT TESTS (offline) ===\n");
+console.log("\n=== INSIDE UNIT TESTS (REV 2, offline) ===\n");
 
-// ── 1) reactionFinder: norm + the verbatim wall ───────────────────────────────────────────────
+// ── reddit.mjs (field mapping via discoverReddit + dedup/freshness/minComments) ───────────────────
+console.log("— reddit.mjs —");
+const rawPost = (id, nc, ageH, extra = {}) => ({ id, subreddit: "movies", title: ` t-${id}  x `, selftext: "body", permalink: `/r/movies/comments/${id}/`, url: "https://ew.com/a", score: 12, num_comments: nc, created_utc: Math.round((NOW - ageH * 3600000) / 1000), ...extra });
+
+await check("mapPost fields (via discoverReddit): id/title/permalink/url/numComments/ageMin", async () => {
+  const fetchImpl = async (u) => /hot\.json/.test(u)
+    ? { ok: true, json: async () => redditListing([rawPost("x1", 30, 1)]) }
+    : { ok: true, json: async () => redditListing([]) };
+  const [p] = await discoverReddit({ subs: ["movies"], minComments: 25, fetchImpl, nowMs: NOW });
+  assert.equal(p.id, "x1");
+  assert.equal(p.title, "t-x1 x", "title stripped/collapsed");
+  assert.equal(p.permalink, "https://www.reddit.com/r/movies/comments/x1/");
+  assert.equal(p.url, "https://ew.com/a");
+  assert.equal(p.numComments, 30);
+  assert.equal(p.ageMin, 60);
+});
+await check("mapPost drops stickied and over_18 posts", async () => {
+  const fetchImpl = async (u) => /hot\.json/.test(u)
+    ? { ok: true, json: async () => redditListing([rawPost("ok", 50, 1), rawPost("sticky", 99, 1, { stickied: true }), rawPost("nsfw", 99, 1, { over_18: true })]) }
+    : { ok: true, json: async () => redditListing([]) };
+  const out = await discoverReddit({ subs: ["movies"], minComments: 25, fetchImpl, nowMs: NOW });
+  const ids = out.map((p) => p.id);
+  assert.ok(ids.includes("ok"));
+  assert.ok(!ids.includes("sticky") && !ids.includes("nsfw"));
+});
+await check("discoverReddit dedups across subs, drops stale + low-comment, sorts by comments", async () => {
+  const fetchImpl = async (u) => /hot\.json/.test(u)
+    ? { ok: true, json: async () => redditListing([rawPost("fresh", 100, 1), rawPost("stale", 500, 200), rawPost("thin", 5, 1), rawPost("big", 900, 2)]) }
+    : { ok: true, json: async () => redditListing([rawPost("fresh", 100, 1)]) }; // dup of fresh across subs
+  const out = await discoverReddit({ subs: ["movies", "television"], minComments: 25, freshHours: 72, fetchImpl, nowMs: NOW });
+  const ids = out.map((p) => p.id);
+  assert.ok(ids.includes("fresh") && ids.includes("big"));
+  assert.ok(!ids.includes("stale"), "stale dropped");
+  assert.ok(!ids.includes("thin"), "low-comment dropped");
+  assert.equal(new Set(ids).size, ids.length, "deduped");
+  assert.equal(out[0].id, "big", "sorted by comments desc");
+});
+await check("discoverReddit returns [] on non-200 (fail-closed)", async () => {
+  assert.deepEqual(await discoverReddit({ subs: ["movies"], fetchImpl: async () => ({ ok: false }), nowMs: NOW }), []);
+});
+await check("redditSearchPosts returns matching posts sorted, freshness-filtered", async () => {
+  const fetchImpl = async () => ({ ok: true, json: async () => redditListing([rawPost("a", 40, 1), rawPost("b", 90, 2), rawPost("old", 200, 24 * 40)]) });
+  const out = await redditSearchPosts("The Sable Coast", { sinceDays: 14, fetchImpl, nowMs: NOW });
+  assert.deepEqual(out.map((p) => p.id), ["b", "a"], "sorted by comments, stale dropped");
+});
+await check("redditTopComments filters deleted/removed/too-long/link, sorts by score", async () => {
+  const c = (body, score) => ({ body, score, author: "u" });
+  const listing = redditCommentsListing([
+    c("This ending was incredible", 10),
+    c("[deleted]", 99), c("[removed]", 99),
+    c("short", 50),                              // < 12 chars
+    c("https://only-a-link.example/path", 80),   // link-only
+    c("x".repeat(400), 70),                       // too long
+    c("A genuinely good and quotable comment here", 25),
+  ]);
+  const out = await redditTopComments("https://www.reddit.com/r/movies/comments/p/", { fetchImpl: async () => ({ ok: true, json: async () => listing }) });
+  assert.equal(out.length, 2, "only 2 valid comments");
+  assert.equal(out[0].score, 25, "sorted by score desc");
+});
+await check("redditTopComments returns [] for no permalink", async () => {
+  assert.deepEqual(await redditTopComments(null, {}), []);
+});
+
+// ── discover.mjs (postMatchesWork phrase/token match + shaping + heat sort) ───────────────────────
+console.log("— discover.mjs —");
 {
-  console.log("— reactionFinder: norm / quoteIsVerbatim —");
-  check("norm unifies curly quotes, dashes, whitespace, case",
-    norm("“Rex — my  FRIEND’s\thero”") === '"rex - my friend\'s hero"');
-  const sources = [{ text: SRC_A }];
-  check("verbatim quote passes the wall", quoteIsVerbatim(Q.mira, sources) === true);
-  check("curly-quote variant of a real quote passes",
-    quoteIsVerbatim(Q.mira.replace(/'/g, "’").replace("kindness", "kindness"), sources) === true
-    && quoteIsVerbatim("He was the steadiest hand I ever pointed a camera at, and the funniest man in every room".replace("camera", "camera"), sources) === true);
-  check("whitespace/newline variant passes", quoteIsVerbatim("Rex taught me   everything about grace\n on a film set, and I will carry his kindness with me always", sources) === true);
-  check("paraphrase FAILS the wall", quoteIsVerbatim("Rex showed me what grace means on a set and I will always keep his kindness", sources) === false);
-  check("merged/extended quote FAILS", quoteIsVerbatim(Q.mira + " and he was the funniest man in every room", sources) === false);
-  check("sub-8-char quote FAILS (too short to verify)", quoteIsVerbatim("Rex t", sources) === false);
+  const discoverTMDBImpl = async () => fakeTMDBItems();
+  const discoverRedditImpl = async () => fakeRedditDiscover();
+  await check("discoverStories shapes work + person + orphan, sorts by heat", async () => {
+    const stories = await discoverStories({ discoverTMDBImpl, discoverRedditImpl, nowMs: NOW });
+    assert.ok(stories.length >= 3, "multiple stories");
+    const work = stories.find((s) => s.primaryEntity === "The Sable Coast");
+    assert.ok(work && work.kind === "work" && work.category === "movies", "sable coast work story");
+    assert.ok(work.redditPosts.length >= 1, "matched reddit posts attached");
+    assert.equal(work.work.title, "The Sable Coast");
+    assert.ok(stories.some((s) => s.kind === "person" && s.primaryEntity === "Nora Idris"), "person story");
+    assert.ok(stories.some((s) => s.kind === "discourse"), "orphan discourse story");
+    for (let i = 1; i < stories.length; i++) assert.ok(stories[i - 1].discourseHeat >= stories[i].discourseHeat, "heat desc");
+  });
+  await check("postMatchesWork drops a low-pop work with no matching discourse", async () => {
+    const stories = await discoverStories({ discoverTMDBImpl, discoverRedditImpl, nowMs: NOW });
+    assert.ok(!stories.some((s) => s.primaryEntity === "Quiet Nobody Cares"));
+  });
+  await check("discoverStories respects max", async () => {
+    assert.equal((await discoverStories({ discoverTMDBImpl, discoverRedditImpl, max: 1, nowMs: NOW })).length, 1);
+  });
 }
 
-// ── 2) reactionFinder: per-form floors ────────────────────────────────────────────────────────
-{
-  console.log("\n— reactionFinder: meetsFloor —");
-  const s = (o) => ({ namedVoices: 0, companyVoices: 0, fanPosts: 0, longestQuoteWords: 20, ...o });
-  check("peer-tributes: 3 named voices under floor", meetsFloor("peer-tributes", s({ namedVoices: 3 })).ok === false);
-  check("peer-tributes: 4 named voices passes", meetsFloor("peer-tributes", s({ namedVoices: 4 })).ok === true);
-  check("fan-pulse: 3 fan posts under floor", meetsFloor("fan-pulse", s({ fanPosts: 3 })).ok === false);
-  check("fan-pulse: 4 fan posts passes", meetsFloor("fan-pulse", s({ fanPosts: 4 })).ok === true);
-  check("cast-crew-voices: 1 voice under floor", meetsFloor("cast-crew-voices", s({ namedVoices: 1 })).ok === false);
-  check("cast-crew-voices: 2 voices passes", meetsFloor("cast-crew-voices", s({ namedVoices: 2 })).ok === true);
-  check("breakout-spotlight: 2 under floor / 3 passes",
-    meetsFloor("breakout-spotlight", s({ namedVoices: 2 })).ok === false && meetsFloor("breakout-spotlight", s({ namedVoices: 3 })).ok === true);
-  check("single-voice: 11-word primary quote under floor", meetsFloor("single-voice", s({ namedVoices: 1, longestQuoteWords: 11 })).ok === false);
-  check("single-voice: 12-word primary quote passes", meetsFloor("single-voice", s({ namedVoices: 1, longestQuoteWords: 12 })).ok === true);
-  check("single-voice: zero voices under floor", meetsFloor("single-voice", s({ namedVoices: 0 })).ok === false);
-  check("ripple-effects: zero voices under floor", meetsFloor("ripple-effects", s({ namedVoices: 0, companyVoices: 0 })).ok === false);
-  check("ripple-effects: ONE company voice no longer double-counts past the 2-floor",
-    meetsFloor("ripple-effects", s({ namedVoices: 1, companyVoices: 1 })).ok === false);
-  check("ripple-effects: 2 distinct named voices (companies count once each) passes",
-    meetsFloor("ripple-effects", s({ namedVoices: 2, companyVoices: 2 })).ok === true);
-  check("floor failure carries a reason", /named voices 3 < 4/.test(meetsFloor("peer-tributes", s({ namedVoices: 3 })).reason));
-}
+// ── trigger.mjs ────────────────────────────────────────────────────────────────────────────────────
+console.log("— trigger.mjs —");
+await check("loadTriggers maps story→trigger fields (injected discoverImpl)", async () => {
+  const discoverImpl = async () => [{
+    storySlug: "the-sable-coast-2026", kind: "work", primaryEntity: "The Sable Coast",
+    work: { title: "The Sable Coast", type: "movie", year: "2026" }, category: "movies",
+    redditPosts: [fakeRedditPost()], sources: [{ url: "https://a.example/1", outlet: null }],
+    discourseHeat: 1740, signals: { comments: 1940 }, via: "tmdb+reddit", overview: "ov",
+  }];
+  const [t] = await loadTriggers({ discoverImpl, nowMs: NOW });
+  assert.equal(t.parentEventSlug, "the-sable-coast-2026");
+  assert.equal(t.parentSlug, null);
+  assert.equal(t.eventType, "discourse");
+  assert.equal(t.status, "CONFIRMED");
+  assert.equal(t.category, "movies");
+  assert.equal(t.priority, 1740);
+  assert.equal(t.subjectKind, "title");
+  assert.equal(t.outletCount, 1);
+  assert.equal(t.tmdbType, "movie");
+  assert.deepEqual(t.work, { title: "The Sable Coast", type: "movie", year: "2026" });
+  assert.ok(Array.isArray(t.redditPosts) && t.redditPosts.length === 1);
+});
 
-// ── 3) reactionFinder: findTweetIds ───────────────────────────────────────────────────────────
-{
-  console.log("\n— reactionFinder: findTweetIds —");
-  const ids = findTweetIds([{ text: SRC_A }, { text: SRC_B }]);
-  check("finds x.com and twitter.com status ids", ids.includes(TWEET_ID_A) && ids.includes(TWEET_ID_B) && ids.length === 2);
-  const dup = findTweetIds([{ text: SRC_A }, { text: SRC_A, url: `https://x.com/a/status/${TWEET_ID_A}` }]);
-  check("dedups ids across text and url fields", dup.length === 1 && dup[0] === TWEET_ID_A);
-  check("no ids in plain text", findTweetIds([{ text: "no links here at all" }]).length === 0);
-}
+// ── reactionFinder: norm / quoteIsVerbatim / meetsFloor / fallbackQueries ─────────────────────────
+console.log("— reactionFinder norm / quoteIsVerbatim —");
+await check("norm unifies curly quotes, dashes, whitespace, case", () => {
+  assert.equal(norm("“The  Sable — Coast’s\tending”"), '"the sable - coast\'s ending"');
+});
+await check("verbatim quote passes the wall", () => assert.equal(quoteIsVerbatim(Q.director, [{ text: SRC_A }]), true));
+await check("curly + whitespace variant of a real quote passes", () => {
+  const variant = "The people arguing about the final scene are exactly the audience I hoped\nto reach".replace(/o/, "o");
+  assert.equal(quoteIsVerbatim(variant, [{ text: SRC_A }]), true);
+});
+await check("paraphrase FAILS the wall", () => assert.equal(quoteIsVerbatim("I wanted the finale open-ended and I have no regrets", [{ text: SRC_A }]), false));
+await check("merged two quotes FAILS", () => assert.equal(quoteIsVerbatim(Q.director + " " + Q.lead, [{ text: SRC_A }]), false));
+await check("sub-8-char quote FAILS", () => assert.equal(quoteIsVerbatim("I al", [{ text: SRC_A }]), false));
 
-// ── 4) trigger: the famous gate ───────────────────────────────────────────────────────────────
-{
-  console.log("\n— trigger: famous gate —");
-  const base = { subjectKind: "person", primaryEntity: "Rex Harmon" };
-  check("outletCount >= 3 alone passes (TMDB never consulted)",
-    await isFamous({ ...base, outletCount: 3, priority: 0 }, { searchPersonImpl: throwsIfCalled("tmdb") }) === true);
-  check("priority >= 55 alone passes",
-    await isFamous({ ...base, outletCount: 0, priority: 55 }, { searchPersonImpl: throwsIfCalled("tmdb") }) === true);
-  check("TMDB GENUINELY notable person passes when cheap signals miss",
-    await isFamous({ ...base, outletCount: 1, priority: 10 }, { searchPersonImpl: async () => ({ id: 1, name: "Rex Harmon", popularity: 10, knownFor: 2 }) }) === true);
-  check("a low-popularity TMDB HIT is not fame (fuzzy-search crew hit fails the floor)",
-    await isFamous({ ...base, outletCount: 1, priority: 10 }, { searchPersonImpl: async () => ({ id: 2, name: "Rex Harmon", popularity: 0.6, knownFor: 0 }) }) === false);
-  check("popular but zero knownFor credits still fails the TMDB leg",
-    await isFamous({ ...base, outletCount: 1, priority: 10 }, { searchPersonImpl: async () => ({ id: 3, name: "Rex Harmon", popularity: 9, knownFor: 0 }) }) === false);
-  check("all three signals miss → NOT famous",
-    await isFamous({ ...base, outletCount: 1, priority: 10 }, { searchPersonImpl: async () => null }) === false);
-  check("TMDB error counts as a miss, not a pass",
-    await isFamous({ ...base, outletCount: 0, priority: 0 }, { searchPersonImpl: async () => { throw new Error("down"); } }) === false);
-  check("title-subject never consults TMDB",
-    await isFamous({ subjectKind: "title", primaryEntity: "Some Film", outletCount: 0, priority: 0 }, { searchPersonImpl: throwsIfCalled("tmdb") }) === false);
-}
+console.log("— reactionFinder meetsFloor —");
+await check("audience-reaction PASSES with 3 anchors, FAILS with 2", () => {
+  assert.equal(meetsFloor("audience-reaction", { namedVoices: 0, fanPosts: 3 }).ok, true);
+  assert.equal(meetsFloor("audience-reaction", { namedVoices: 1, fanPosts: 1 }).ok, false);
+});
+await check("the-debate PASSES with 3 anchors (named+fan mix)", () => {
+  assert.equal(meetsFloor("the-debate", { namedVoices: 1, fanPosts: 2 }).ok, true);
+});
+await check("breakout-buzz FAILS under 3 anchors", () => {
+  assert.equal(meetsFloor("breakout-buzz", { namedVoices: 1, fanPosts: 1 }).ok, false);
+});
+await check("creator-answers-critics needs >=1 named creator quote AND minAnchors", () => {
+  assert.equal(meetsFloor("creator-answers-critics", { namedVoices: 0, fanPosts: 3 }).ok, false, "no named creator");
+  assert.equal(meetsFloor("creator-answers-critics", { namedVoices: 1, fanPosts: 1 }).ok, true, "1 named + 2 anchors");
+  assert.equal(meetsFloor("creator-answers-critics", { namedVoices: 1, fanPosts: 0 }).ok, false, "only 1 anchor");
+});
+await check("fallbackQueries returns per-form plain queries", () => {
+  const qs = fallbackQueries(fakeTrigger(), fakeAngle("creator-answers-critics"));
+  assert.ok(qs.some((q) => /responds criticism|addresses backlash/.test(q)));
+});
 
-// ── 5) trigger: loadTriggers (queue + ledger, confirmation wall, dedup, class filter) ─────────
-{
-  console.log("\n— trigger: loadTriggers —");
-  const famous = async () => ({ id: 1, popularity: 10, knownFor: 2 });
-  {
-    const { queuePath, ledgerPath } = fakeFindFiles({
-      topics: [
-        queueTopic(), // confirmed famous death
-        queueTopic({ eventSlug: "gale-brody-dies", title: "Gale Brody death rumor", primaryEntity: "Gale Brody", verification: { status: "DEVELOPING", outletCount: 6, publishable: true, sensitivity: "high" } }),
-        queueTopic({ eventSlug: "moss-review", title: "Moss reviewed", eventType: "review", verification: { status: "CONFIRMED", outletCount: 6, publishable: true } }),
-        queueTopic({ eventSlug: "kip-cast", title: "Kip cast in film", eventType: "casting", priority: 40, verification: { status: "CONFIRMED", outletCount: 2, publishable: false } }),
-      ],
-      entries: [
-        ledgerEntry(), // death WITH verifyStatus: CONFIRMED
-        ledgerEntry({ eventSlug: "hal-mercer-dies", slug: "hal-mercer-dead", title: "Hal Mercer Dies at 88", entityKey: "hal-mercer:death", verifyStatus: undefined }), // death, status unknown
-        ledgerEntry({ eventSlug: "gene-hackman-dies", slug: "gene-hackman-dead", title: "Gene Hackman Dies", entityKey: "gene-hackman:death", eventType: undefined, verifyStatus: "CONFIRMED" }), // eventType only in entityKey
-        ledgerEntry({ eventSlug: "wraith-run-renewed", slug: "wraith-run-renewed-s3", title: "Wraith Run Renewed", entityKey: "wraith-run:renewal", eventType: undefined, verifyStatus: undefined }), // derived, non-confirmedOnly
-      ],
-    });
-    const trs = await loadTriggers({ queuePath, ledgerPath, searchPersonImpl: famous, nowMs: NOW });
-    const slugs = trs.map((t) => t.parentEventSlug);
-    check("confirmed famous death from the queue becomes a trigger", slugs.includes("rex-harmon-dies"));
-    check("death with status DEVELOPING is DROPPED (confirmation wall)", !slugs.includes("gale-brody-dies"));
-    check("eventType outside TRIGGERS (review) is dropped", !slugs.includes("moss-review"));
-    check("non-publishable queue topic is dropped", !slugs.includes("kip-cast"));
-    check("ledger death WITH verifyStatus CONFIRMED triggers", trs.find((t) => t.parentEventSlug === "vera-lin-dies")?.status === "CONFIRMED");
-    check("ledger death WITHOUT verifyStatus is DROPPED (unknown status fails closed as DEVELOPING)", !slugs.includes("hal-mercer-dies"));
-    check("ledger trigger carries via=ledger + parentSlug", trs.find((t) => t.parentEventSlug === "vera-lin-dies")?.via === "ledger" && trs.find((t) => t.parentEventSlug === "vera-lin-dies")?.parentSlug === "vera-lin-dead-at-64");
-    const gh = trs.find((t) => t.parentEventSlug === "gene-hackman-dies");
-    check("eventType derived from entityKey suffix (gene-hackman:death → death)", gh?.eventType === "death");
-    check("derived death gets high sensitivity + person subject + tribute forms",
-      gh?.sensitivity === "high" && gh?.subjectKind === "person" && JSON.stringify(gh?.allowedForms) === JSON.stringify(TRIGGERS.death.forms));
-    const wr = trs.find((t) => t.parentEventSlug === "wraith-run-renewed");
-    check("derived non-confirmedOnly class (renewal) triggers without verifyStatus, as a title subject",
-      wr?.eventType === "renewal" && wr?.subjectKind === "title" && wr?.status === "DEVELOPING");
-    check("trigger gets its class's allowedForms", JSON.stringify(trs.find((t) => t.parentEventSlug === "rex-harmon-dies")?.allowedForms) === JSON.stringify(TRIGGERS.death.forms));
-    check("death trigger forced to high sensitivity", trs.every((t) => t.eventType !== "death" || t.sensitivity === "high"));
-  }
-  {
-    const { queuePath, ledgerPath } = fakeFindFiles({
-      topics: [queueTopic()],
-      entries: [ledgerEntry({ eventSlug: "rex-harmon-dies", slug: "rex-harmon-dead-at-70" }), ledgerEntry()],
-    });
-    const trs = await loadTriggers({ queuePath, ledgerPath, searchPersonImpl: famous, nowMs: NOW });
-    check("dedup by parentEventSlug across queue+ledger (one trigger per event)",
-      trs.filter((t) => t.parentEventSlug === "rex-harmon-dies").length === 1);
-    const old = await loadTriggers({
-      queuePath: writeJson(path.join(tmp("q"), "queue.json"), { topics: [] }),
-      ledgerPath: writeJson(path.join(tmp("l"), "published.json"), [ledgerEntry({ at: new Date(NOW - 5 * 864e5).toISOString() })]),
-      searchPersonImpl: famous, nowMs: NOW,
-    });
-    check("ledger entry older than the window is not a trigger", old.length === 0);
-    const capped = await loadTriggers({ queuePath, ledgerPath, searchPersonImpl: famous, nowMs: NOW, max: 1 });
-    check("max caps the trigger list", capped.length === 1);
-  }
-  {
-    // Sort: ledger beats queue at EQUAL priority; same-via equal-priority pairs keep insertion
-    // order (the comparator returns 0 → stable, no more inconsistent-comparator shuffles).
-    const { queuePath, ledgerPath } = fakeFindFiles({
-      topics: [
-        queueTopic({ eventSlug: "q-one", title: "Queue One dies", priority: 70 }),
-        queueTopic({ eventSlug: "q-two", title: "Queue Two dies", priority: 70 }),
-      ],
-      entries: [ledgerEntry({ eventSlug: "l-one", slug: "l-one-md", priority: 70 })],
-    });
-    const trs = await loadTriggers({ queuePath, ledgerPath, searchPersonImpl: famous, nowMs: NOW });
-    check("equal priority: ledger (live parent to link) sorts before queue",
-      trs[0]?.parentEventSlug === "l-one" && trs.length === 3);
-    check("same-via equal-priority order is stable (comparator returns 0)",
-      trs[1]?.parentEventSlug === "q-one" && trs[2]?.parentEventSlug === "q-two");
-  }
-}
+// ── config routeForStory ──────────────────────────────────────────────────────────────────────────
+console.log("— config routeForStory —");
+await check("routeForStory maps categories correctly", () => {
+  assert.deepEqual(routeForStory({ category: "awards" }), { category: "awards", subcategory: "winners" });
+  assert.deepEqual(routeForStory({ category: "streaming" }), { category: "streaming", subcategory: "where-to-watch" });
+  assert.deepEqual(routeForStory({ category: "movies" }), { category: "movies", subcategory: "news" });
+  assert.deepEqual(routeForStory({ category: "tv" }), { category: "tv", subcategory: "news" });
+  assert.deepEqual(routeForStory({ category: "celebrity" }), { category: "celebrity", subcategory: "news" });
+  assert.deepEqual(routeForStory({ category: "music" }), { category: "music", subcategory: "news" });
+  assert.deepEqual(routeForStory({ category: "unknown-x" }), { category: "celebrity", subcategory: "news" });
+});
 
-// ── 6) store: dedup + park lifecycle ──────────────────────────────────────────────────────────
-{
-  console.log("\n— store —");
-  check("insideKey is event|form", insideKey("rex-harmon-dies", "peer-tributes") === "rex-harmon-dies|peer-tributes");
-  check("insideKey tolerates a missing event", insideKey(null, "fan-pulse") === "no-event|fan-pulse");
-  const file = path.join(tmp("inside-store"), "store.json");
-  const store = loadStore(file);
-  check("fresh store: not already published", alreadyPublished(store, "rex-harmon-dies", "peer-tributes") === false);
-  recordInsidePublished(store, { parentEventSlug: "rex-harmon-dies", form: "peer-tributes", slug: "s1", title: "t" }, { now: new Date(NOW) });
-  check("recordInsidePublished → alreadyPublished true", alreadyPublished(store, "rex-harmon-dies", "peer-tributes") === true);
-  check("same event, DIFFERENT form is still free", alreadyPublished(store, "rex-harmon-dies", "fan-pulse") === false);
-  recordInsidePublished(store, { parentEventSlug: "rex-harmon-dies", form: "peer-tributes", slug: "s1b", title: "t2" }, { now: new Date(NOW) });
-  check("re-record same key replaces, never duplicates", store.published.filter((r) => r.key === "rex-harmon-dies|peer-tributes").length === 1);
-  const reloaded = loadStore(file);
-  check("store persists across reload", alreadyPublished(reloaded, "rex-harmon-dies", "peer-tributes") === true);
+// ── store lifecycle (park 3→dead, dedup) ──────────────────────────────────────────────────────────
+console.log("— store lifecycle —");
+await check("insideKey composes event|form", () => assert.equal(insideKey("ev", "audience-reaction"), "ev|audience-reaction"));
+await check("park 3 times → dead (Infinity)", () => {
+  const store = loadStore(tmp("inside-store") + "/store.json");
+  parkAngle(store, "ev", "the-debate", "under floor");
+  parkAngle(store, "ev", "the-debate", "under floor");
+  assert.notEqual(parkedTries(store, "ev", "the-debate"), Infinity);
+  parkAngle(store, "ev", "the-debate", "under floor");
+  assert.equal(parkedTries(store, "ev", "the-debate"), Infinity, "3rd park → dead");
+});
+await check("record + alreadyPublished dedup; clearParked", () => {
+  const store = loadStore(tmp("inside-store2") + "/store.json");
+  assert.equal(alreadyPublished(store, "ev", "audience-reaction"), false);
+  recordInsidePublished(store, { parentEventSlug: "ev", form: "audience-reaction", slug: "s", title: "t" });
+  assert.equal(alreadyPublished(store, "ev", "audience-reaction"), true);
+  parkAngle(store, "ev", "breakout-buzz", "under floor");
+  clearParked(store, "ev", "breakout-buzz");
+  assert.equal(parkedTries(store, "ev", "breakout-buzz"), 0);
+});
 
-  check("unparked angle has 0 tries", parkedTries(store, "rex-harmon-dies", "fan-pulse") === 0);
-  parkAngle(store, "rex-harmon-dies", "fan-pulse", "under floor", { now: new Date(NOW) });
-  check("park #1 → tries 1", parkedTries(store, "rex-harmon-dies", "fan-pulse") === 1);
-  parkAngle(store, "rex-harmon-dies", "fan-pulse", "under floor", { now: new Date(NOW) });
-  check("park #2 → tries 2", parkedTries(store, "rex-harmon-dies", "fan-pulse") === 2);
-  parkAngle(store, "rex-harmon-dies", "fan-pulse", "under floor", { now: new Date(NOW) });
-  check("park #3 → DEAD (tries = Infinity, never retried)", parkedTries(store, "rex-harmon-dies", "fan-pulse") === Infinity);
-  clearParked(store, "rex-harmon-dies", "fan-pulse");
-  check("clearParked resets the angle", parkedTries(store, "rex-harmon-dies", "fan-pulse") === 0);
-}
+// ── gate deterministicInside ──────────────────────────────────────────────────────────────────────
+console.log("— gate deterministicInside —");
+const det = (article, form, fb) => deterministicInside(article, fb, fakeAngle(form));
 
-// ── 7) editorialGate: echo detection ──────────────────────────────────────────────────────────
-{
-  console.log("\n— editorialGate —");
-  const echoQuote = (i) => `He was the kindest and most generous man I have ever worked with in this business${i % 2 ? "." : ", truly."}`;
-  const echoFB = { reactions: Array.from({ length: 6 }, (_, i) => ({ speaker: `Person ${i}`, quote: echoQuote(i), stance: "positive" })), aggregateFans: [] };
-  check("distinctQuoteRatio ~0 for 6 near-identical quotes", distinctQuoteRatio(echoFB) < 0.35);
-  check("distinctQuoteRatio high for genuinely distinct quotes", distinctQuoteRatio(fakeFactBlock("peer-tributes")) > 0.9);
-  check("single quote is trivially distinct", distinctQuoteRatio({ reactions: [NAMED.mira], aggregateFans: [] }) === 1);
+await check("clean fixture article has NO hard blocks", () => {
+  const fb = fakeFactBlock("audience-reaction");
+  const r = det(fakeArticle({ form: "audience-reaction", factBlock: fb }), "audience-reaction", fb);
+  assert.deepEqual(r.hardBlocks, [], "clean: " + r.hardBlocks.join(" | "));
+});
+await check("invented speaker in reactionsRender blocked", () => {
+  const fb = fakeFactBlock("creator-answers-critics");
+  const art = fakeArticle({ form: "creator-answers-critics", factBlock: fb });
+  art.reactionsRender.push({ speaker: "Ghost Nobody", connection: "", platform: "X", date: "", quote: Q.director, tweetId: "" });
+  assert.ok(det(art, "creator-answers-critics", fb).hardBlocks.some((b) => /invented-speaker/.test(b)));
+});
+await check("misattributed named quote blocked", () => {
+  const fb = fakeFactBlock("creator-answers-critics");
+  const art = fakeArticle({ form: "creator-answers-critics", factBlock: fb });
+  art.reactionsRender = [{ speaker: "Priya Anand", connection: "director", platform: "interview", date: "", quote: Q.fanHate, tweetId: "" }];
+  assert.ok(det(art, "creator-answers-critics", fb).hardBlocks.some((b) => /misattributed-or-unverbatim/.test(b)));
+});
+await check("unverbatim prose quote in body blocked", () => {
+  const fb = fakeFactBlock("audience-reaction");
+  const art = fakeArticle({ form: "audience-reaction", factBlock: fb });
+  art.body += `\n\nAnother viewer declared, "this film changed my entire life forever and always."`;
+  assert.ok(det(art, "audience-reaction", fb).hardBlocks.some((b) => /unverbatim-prose-quote/.test(b)));
+});
+await check("unknown-attribution ('<Name> said') blocked", () => {
+  const fb = fakeFactBlock("audience-reaction");
+  const art = fakeArticle({ form: "audience-reaction", factBlock: fb });
+  art.body += `\n\nMarcus Webb said the reaction proved his point about the ending.`;
+  assert.ok(det(art, "audience-reaction", fb).hardBlocks.some((b) => /unknown-attribution/.test(b)));
+});
+await check("audience handle in prose blocked", () => {
+  const fb = fakeFactBlock("audience-reaction");
+  const art = fakeArticle({ form: "audience-reaction", factBlock: fb });
+  art.body += `\n\nAs @sablefan99 put it, the ending was perfect.`;
+  assert.ok(det(art, "audience-reaction", fb).hardBlocks.some((b) => /audience-handle-in-prose/.test(b)));
+});
+await check("divided-claim-without-both-sides blocked", () => {
+  const fb = fakeFactBlock("audience-reaction");
+  fb.aggregateFans = fb.aggregateFans.filter((r) => r.stance !== "negative");
+  fb.stats.hasNegative = false; fb.stats.divided = false;
+  const art = fakeArticle({ form: "audience-reaction", factBlock: fb });
+  art.title = "The Sable Coast Fans Are Divided";
+  assert.ok(det(art, "audience-reaction", fb).hardBlocks.some((b) => /divided-claim-without-both-sides/.test(b)));
+});
+await check("quote-ratio > 35% blocked", () => {
+  const fb = fakeFactBlock("audience-reaction");
+  const art = fakeArticle({ form: "audience-reaction", factBlock: fb });
+  art.body = `Intro. "${Q.fanLove}" "${Q.fanHate}" "${Q.fanSplit}"`;
+  assert.ok(det(art, "audience-reaction", fb).hardBlocks.some((b) => /quote-ratio/.test(b)));
+});
+await check("word floor enforced", () => {
+  const fb = fakeFactBlock("audience-reaction");
+  const art = fakeArticle({ form: "audience-reaction", factBlock: fb });
+  art.body = "Too short.";
+  assert.ok(det(art, "audience-reaction", fb).hardBlocks.some((b) => /words \d+ </.test(b)));
+});
+await check("classifyInsideBlocks splits soft-floor (fixable) from hard", () => {
+  const { block, fixable } = classifyInsideBlocks(["soft-floor engagement 4 < 5", "invented-speaker: x"]);
+  assert.deepEqual(fixable, ["soft-floor engagement 4 < 5"]);
+  assert.deepEqual(block, ["invented-speaker: x"]);
+});
 
-  const ed = await insideEditorialGate({ trigger: fakeTrigger(), angle: fakeAngle(), factBlock: echoFB, factText: "x", chatImpl: throwsIfCalled("editor-LLM") });
-  check("6-echo harvest → deterministic REJECT before any LLM", ed.ran === true && ed.reject === true && /not distinct/.test(ed.reason));
+// ── assemble contract ─────────────────────────────────────────────────────────────────────────────
+console.log("— assemble contract —");
+const mkFM = (form, image = fakeImage(), trigger = fakeTrigger()) =>
+  buildInsideMarkdown({ article: fakeArticle({ form, trigger }), trigger, angle: fakeAngle(form), factBlock: fakeFactBlock(form), image, dateISO: new Date(NOW).toISOString() }).frontmatter;
 
-  const okChat = async () => ({ data: { isStory: true, reject: false, eventMatch: true, formFits: true, distinctVoices: true, eventSummary: "Rex Harmon died; peers posted tributes." } });
-  const ed2 = await insideEditorialGate({ trigger: fakeTrigger(), angle: fakeAngle(), factBlock: fakeFactBlock(), factText: "x", chatImpl: okChat });
-  check("distinct harvest + editor approval → no reject, summary passed through", ed2.reject === false && /tributes/.test(ed2.eventSummary));
-  const ed3 = await insideEditorialGate({ trigger: fakeTrigger(), angle: fakeAngle(), factBlock: fakeFactBlock(), factText: "x", chatImpl: async () => ({ data: { isStory: true, reject: true, reason: "one wire quote", eventMatch: true } }) });
-  check("editor reject verdict honored", ed3.reject === true && ed3.reason === "one wire quote");
-  const ed4 = await insideEditorialGate({ trigger: fakeTrigger(), angle: fakeAngle(), factBlock: fakeFactBlock(), factText: "x", chatImpl: async () => ({ data: { isStory: true, reject: false, eventMatch: false } }) });
-  check("event mismatch → reject", ed4.reject === true);
-  const ed5 = await insideEditorialGate({ trigger: fakeTrigger(), angle: fakeAngle(), factBlock: fakeFactBlock(), factText: "x", chatImpl: async () => { throw new Error("529"); } });
-  check("editor LLM outage → fail-SAFE (no reject, ran=false)", ed5.ran === false && ed5.reject === false);
-}
+await check("formatTag inside, insideForm, unique eventSlug --in-<form>", () => {
+  const fm = mkFM("audience-reaction");
+  assert.equal(fm.formatTag, "inside");
+  assert.equal(fm.insideForm, "audience-reaction");
+  assert.equal(fm.eventSlug, "the-sable-coast-2026--in-audience-reaction");
+  assert.equal(fm.category, "movies");
+  assert.equal(fm.subcategory, "news");
+  assert.equal(fm.eventType, "discourse");
+});
+await check("sibling forms get DISTINCT eventSlugs", () => {
+  assert.notEqual(mkFM("audience-reaction").eventSlug, mkFM("the-debate").eventSlug);
+});
+await check("no undefined/null/empty keys in frontmatter (gray-matter safe)", () => {
+  for (const [k, v] of Object.entries(mkFM("audience-reaction"))) assert.ok(v !== undefined && v !== null && v !== "", `key ${k} is empty`);
+});
+await check("image block ONLY when image given", () => {
+  assert.ok(mkFM("audience-reaction", fakeImage()).image, "image present when given");
+  assert.equal(mkFM("audience-reaction", null).image, undefined, "no image key when null");
+});
+await check("reactions default speaker 'A viewer' for fan cards", () => {
+  const fm = mkFM("audience-reaction");
+  assert.ok(fm.reactions.length > 0);
+  assert.ok(fm.reactions.every((r) => r.speaker && r.speaker.length), "no empty speaker");
+  assert.ok(fm.reactions.some((r) => r.speaker === "A viewer"), "fan cards → 'A viewer'");
+});
+await check("fanConsensus present", () => assert.ok(mkFM("audience-reaction").fanConsensus.length > 5));
 
-// ── 8) gate: deterministicInside ──────────────────────────────────────────────────────────────
-{
-  console.log("\n— gate: deterministicInside —");
-  const fb = fakeFactBlock("peer-tributes");
-  const angle = fakeAngle("peer-tributes");
-  const clean = deterministicInside(fakeArticle({ form: "peer-tributes", factBlock: fb }), fb, angle);
-  check("clean fixture article → ZERO hard blocks", clean.hardBlocks.length === 0, JSON.stringify(clean.hardBlocks));
-
-  const invented = fakeArticle({ form: "peer-tributes", factBlock: fb });
-  invented.reactionsRender = [...invented.reactionsRender, { speaker: "Rico Fake", connection: "", platform: "X", date: "", quote: Q.mira, tweetId: "" }];
-  check("invented speaker in reactionsRender → hard block",
-    deterministicInside(invented, fb, angle).hardBlocks.some((b) => b.startsWith("invented-speaker")));
-
-  const altered = fakeArticle({ form: "peer-tributes", factBlock: fb });
-  altered.reactionsRender[0] = { ...altered.reactionsRender[0], quote: Q.mira.replace("kindness", "generosity") };
-  check("altered (unverbatim) render quote → hard block",
-    deterministicInside(altered, fb, angle).hardBlocks.some((b) => b.startsWith("misattributed-or-unverbatim-quote")));
-
-  // per-speaker haystack: the quote must live under THAT speaker, and merging can never pass
-  const misattr = fakeArticle({ form: "peer-tributes", factBlock: fb });
-  misattr.reactionsRender[1] = { ...misattr.reactionsRender[1], speaker: "Paul Onder", quote: Q.mira }; // Mira's real quote on Onder's card
-  check("REAL quote attributed to the WRONG harvested speaker → hard block",
-    deterministicInside(misattr, fb, angle).hardBlocks.some((b) => b.startsWith("misattributed-or-unverbatim-quote")));
-  const merged = fakeArticle({ form: "peer-tributes", factBlock: fb });
-  merged.reactionsRender[0] = { ...merged.reactionsRender[0], quote: `${Q.mira} ${Q.onder}` }; // two adjacent harvest quotes stitched
-  check("two harvest quotes MERGED into one card → hard block (single-quote haystack)",
-    deterministicInside(merged, fb, angle).hardBlocks.some((b) => b.startsWith("misattributed-or-unverbatim-quote")));
-  const fpFB2 = fakeFactBlock("fan-pulse");
-  const fanCard = fakeArticle({ form: "fan-pulse", factBlock: fpFB2 });
-  fanCard.reactionsRender[0] = { ...fanCard.reactionsRender[0], quote: Q.mira }; // a CELEBRITY quote on an aggregate fan card
-  check("named-voice quote smuggled onto an aggregate fan card → hard block (fan pool only)",
-    deterministicInside(fanCard, fpFB2, fakeAngle("fan-pulse")).hardBlocks.some((b) => b.startsWith("unverbatim-fan-quote")));
-  check("real fan quote on an aggregate card passes the fan pool",
-    !deterministicInside(fakeArticle({ form: "fan-pulse", factBlock: fpFB2 }), fpFB2, fakeAngle("fan-pulse")).hardBlocks.some((b) => b.startsWith("unverbatim-fan-quote")));
-
-  // body-prose quote wall (title/dek/body)
-  const proseBad = fakeArticle({ form: "peer-tributes", factBlock: fb });
-  proseBad.body += `\n\nOne message stood out: "he built this town and we are all just living in it," a line repeated all night.`;
-  check("quoted span in BODY not from any harvest quote → hard block",
-    deterministicInside(proseBad, fb, angle).hardBlocks.some((b) => b.startsWith("unverbatim-prose-quote")));
-  const dekBad = fakeArticle({ form: "peer-tributes", factBlock: fb, dek: 'Colleagues called him "the last of the true gentleman stars" within hours.' });
-  check("quoted span in DEK not from any harvest quote → hard block",
-    deterministicInside(dekBad, fb, angle).hardBlocks.some((b) => b.startsWith("unverbatim-prose-quote")));
-  const proseOk = fakeArticle({ form: "peer-tributes", factBlock: fb });
-  proseOk.body += `\n\nThe phrase that echoed furthest was "the funniest man in every room." It fit him.`;
-  check("verbatim harvest fragment quoted in prose (house-style period inside) passes",
-    !deterministicInside(proseOk, fb, angle).hardBlocks.some((b) => b.startsWith("unverbatim-prose-quote")));
-
-  // attribution scan: "<Name> said/wrote/…" must be a harvested voice (or an outlet)
-  const attrBad = fakeArticle({ form: "peer-tributes", factBlock: fb });
-  attrBad.body += `\n\nDenzel Ray added that the family would hold a private service later this month.`;
-  check("unharvested name with a speech verb in prose → hard block",
-    deterministicInside(attrBad, fb, angle).hardBlocks.some((b) => b.startsWith("unknown-attribution")));
-  const attrPartial = fakeArticle({ form: "peer-tributes", factBlock: fb });
-  attrPartial.body += `\n\nMs. Lena Okafor added a note about mentorship programs in his name.`;
-  check("titled/partial mention of a KNOWN speaker passes the attribution scan",
-    !deterministicInside(attrPartial, fb, angle).hardBlocks.some((b) => b.startsWith("unknown-attribution")));
-  const outletFB = fakeFactBlock("peer-tributes", { sources: [{ url: "https://ew.example/x", domain: "ew.com", owner: "Entertainment Weekly", text: "x" }] });
-  const attrOutlet = fakeArticle({ form: "peer-tributes", factBlock: outletFB });
-  attrOutlet.body += `\n\nEntertainment Weekly posted the full text of the statement on its site.`;
-  check("source OUTLET with a speech verb passes the attribution scan",
-    !deterministicInside(attrOutlet, outletFB, angle).hardBlocks.some((b) => b.startsWith("unknown-attribution")));
-
-  const anchorBad = fakeArticle({ form: "peer-tributes", factBlock: fb, anchorStatement: { speaker: "Rex's Family", connection: "", quote: Q.mira, platform: "statement" } });
-  check("anchor speaker not in harvest → hard block",
-    deterministicInside(anchorBad, fb, angle).hardBlocks.some((b) => b.includes('anchor "Rex\'s Family"')));
-  const anchorAltered = fakeArticle({ form: "peer-tributes", factBlock: fb, anchorStatement: { speaker: "Mira Vale", connection: "", quote: "an entirely invented anchor statement here", platform: "statement" } });
-  check("unverbatim anchor quote → hard block",
-    deterministicInside(anchorAltered, fb, angle).hardBlocks.some((b) => b === "unverbatim-anchor-quote"));
-
-  const dump = fakeArticle({ form: "peer-tributes", factBlock: fb });
-  dump.body = Array.from({ length: 12 }, (_, i) => `Frame ${i}. "${Q.mira} and then some more of the very same long tribute text again number ${i}." Tail.`).join("\n\n");
-  check("quote-ratio above 25% → hard block",
-    deterministicInside(dump, fb, angle).hardBlocks.some((b) => b.startsWith("quote-ratio")));
-
-  const b2b = fakeArticle({ form: "peer-tributes", factBlock: fb });
-  b2b.body = b2b.body.replace('." Followers shared', '." "Another quote right behind it." Followers shared');
-  check("back-to-back quotes → hard block",
-    deterministicInside(b2b, fb, angle).hardBlocks.includes("back-to-back-quotes"));
-
-  const handle = fakeArticle({ form: "peer-tributes", factBlock: fb });
-  handle.body += `\n\nFans like @rexfan99 kept the tribute thread going all night.`;
-  check("fan handle in prose → hard block",
-    deterministicInside(handle, fb, angle).hardBlocks.includes("fan-handle-in-prose"));
-
-  const short = fakeArticle({ form: "peer-tributes", factBlock: fb });
-  short.body = "Far too short to publish.";
-  check("body under the word floor → hard block",
-    deterministicInside(short, fb, angle).hardBlocks.some((b) => /^words \d+ < 300$/.test(b)));
-
-  // fan-pulse honesty
-  const fpFB = fakeFactBlock("fan-pulse");
-  const fpAngle = fakeAngle("fan-pulse");
-  const undivided = fakeFactBlock("fan-pulse", { aggregateFans: FAN_POSTS.map((f) => ({ ...f, stance: "positive" })), stats: statsFor([], FAN_POSTS.map((f) => ({ ...f, stance: "positive" }))) });
-  const divArt = fakeArticle({ form: "fan-pulse", factBlock: fpFB, title: "Rex Harmon Fans Divided Over the Coverage of His Death" });
-  check("'divided' claim WITHOUT both stances in harvest → hard block",
-    deterministicInside(divArt, undivided, fpAngle).hardBlocks.includes("divided-claim-without-both-sides"));
-  check("'divided' claim WITH both stances in harvest → allowed",
-    !deterministicInside(divArt, fpFB, fpAngle).hardBlocks.includes("divided-claim-without-both-sides"));
-
-  // block taxonomy
-  const cls = classifyInsideBlocks(["verify-gate CUT: 2 unsupported", "soft-floor humanVoice 4 < 5", 'invented-speaker: "X" not in harvest', "back-to-back-quotes"]);
-  check("classify: cut/soft-floor blocks are fixable", cls.fixable.length === 2 && cls.fixable.every((b) => /^verify-gate CUT:|^soft-floor/.test(b)));
-  check("classify: invented speaker & structure blocks are hard stops", cls.block.length === 2 && cls.block.some((b) => b.startsWith("invented-speaker")));
-}
-
-// ── 9) assemble: the frontmatter contract ─────────────────────────────────────────────────────
-{
-  console.log("\n— assemble —");
-  const noUndef = (v, p = "fm") => {
-    if (v === undefined) return p;
-    if (Array.isArray(v)) { for (let i = 0; i < v.length; i++) { const r = noUndef(v[i], `${p}[${i}]`); if (r) return r; } return null; }
-    if (v && typeof v === "object") { for (const [k, x] of Object.entries(v)) { const r = noUndef(x, `${p}.${k}`); if (r) return r; } return null; }
-    return null;
-  };
-  const trigger = fakeTrigger();
-  const fb = fakeFactBlock("peer-tributes");
-  const art = fakeArticle({ form: "peer-tributes", factBlock: fb });
-  art.reactionsRender[0].tweetId = TWEET_ID_A;      // cached — must survive
-  art.reactionsRender[1].tweetId = "999999999999";  // NOT cached — must be stripped
-  const dateISO = new Date(NOW).toISOString();
-  const out = buildInsideMarkdown({ article: art, trigger, angle: fakeAngle("peer-tributes"), factBlock: fb, image: fakeImage(), dateISO });
-  const fm = out.frontmatter;
-
-  check("formatTag is inside", fm.formatTag === "inside");
-  check("insideForm carries the form", fm.insideForm === "peer-tributes");
-  check("derived eventSlug is unique per form (--in-<form>)", fm.eventSlug === "rex-harmon-dies--in-peer-tributes");
-  check("parentEventSlug preserves the cluster", fm.parentEventSlug === "rex-harmon-dies");
-  check("storyStatus mirrors the CONFIRMED parent", fm.storyStatus === "CONFIRMED" && fm.provenance.status === "CONFIRMED");
-  check("author is the news byline (editorial-team)", fm.author === "editorial-team");
-  check("category routed from the trigger", fm.category === "celebrity" && fm.subcategory === "news");
-  check("homepage contract fields present (trendScore/signals/eventType/outletCount)",
-    fm.trendScore != null && fm.signals && fm.eventType === "death" && fm.outletCount === 2);
-  check("flagship form inherits FULL parent trendScore", fm.trendScore === trigger.priority);
-  check("high sensitivity + developing carried", fm.sensitivity === "high" && fm.developing === true);
-  check("NO undefined value anywhere in frontmatter", noUndef(fm) === null, String(noUndef(fm)));
-  check("image block present when image given", fm.image === fakeImage().image && fm.imageWidth === 1600 && fm.imageHeight === 900 && !!fm.imageCredit);
-  check("cached tweetId kept on its reaction", fm.reactions[0].tweetId === TWEET_ID_A);
-  check("uncached tweetId stripped from its reaction", !("tweetId" in fm.reactions[1]));
-  check("fanConsensus omitted outside fan-pulse", !("fanConsensus" in fm));
-  const back = matter(out.md);
-  check("md round-trips through gray-matter", back.data.slug === out.slug && back.data.formatTag === "inside" && back.content.trim().length > 100);
-
-  const nf = buildInsideMarkdown({ article: fakeArticle({ form: "cast-crew-voices" }), trigger, angle: fakeAngle("cast-crew-voices"), factBlock: fakeFactBlock("cast-crew-voices"), image: null, dateISO });
-  check("non-flagship sibling runs trendScore-5", nf.frontmatter.trendScore === trigger.priority - 5);
-  check("no image → NO image block at all", !("image" in nf.frontmatter) && !("imageWidth" in nf.frontmatter) && !("imageCredit" in nf.frontmatter));
-  check("no undefined values in imageless frontmatter either", noUndef(nf.frontmatter) === null);
-
-  const fp = buildInsideMarkdown({ article: fakeArticle({ form: "fan-pulse" }), trigger, angle: fakeAngle("fan-pulse"), factBlock: fakeFactBlock("fan-pulse"), image: null, dateISO });
-  check("fan-pulse keeps fanConsensus + labels fans 'A fan'", /divided/i.test(fp.frontmatter.fanConsensus) && fp.frontmatter.reactions.every((r) => r.speaker === "A fan"));
-
-  // storyStatus mirrors the PARENT honestly — a DEVELOPING parent never gets a CONFIRMED badge.
-  const devTrigger = fakeTrigger({ eventType: "boxoffice", sensitivity: "normal", status: "DEVELOPING", subjectKind: "title" });
-  const dev = buildInsideMarkdown({ article: fakeArticle({ form: "fan-pulse", trigger: devTrigger }), trigger: devTrigger, angle: fakeAngle("fan-pulse"), factBlock: fakeFactBlock("fan-pulse"), image: null, dateISO });
-  check("DEVELOPING parent → storyStatus + provenance.status DEVELOPING",
-    dev.frontmatter.storyStatus === "DEVELOPING" && dev.frontmatter.provenance.status === "DEVELOPING");
-  check("no undefined values in the DEVELOPING frontmatter either", noUndef(dev.frontmatter) === null);
-
-  // routing: subcategory must be legal per category (awards/streaming have no "news" silo)
-  check("routeForTrigger falls back to celebrity/news", routeForTrigger({ category: "politics" }).category === "celebrity" && routeForTrigger({ category: "tv" }).subcategory === "news");
-  check("awards routes to awards/winners", JSON.stringify(routeForTrigger({ category: "awards" })) === JSON.stringify({ category: "awards", subcategory: "winners" }));
-  check("streaming routes to streaming/where-to-watch", JSON.stringify(routeForTrigger({ category: "streaming" })) === JSON.stringify({ category: "streaming", subcategory: "where-to-watch" }));
-  check("movies/music keep the news subcategory", routeForTrigger({ category: "movies" }).subcategory === "news" && routeForTrigger({ category: "music" }).subcategory === "news");
-}
-
-console.log(`\n── RESULT: ${pass} passed${fail ? `, ${fail} FAILED` : ""} ──`);
-if (fail) { console.log("FAILED:", fails.join("; ")); process.exit(1); }
-console.log("Inside unit suite green. ✅\n");
+console.log(`\n=== UNIT: ${pass} passed, ${fail} failed ===`);
+if (fail) { console.log("FAILED: " + fails.join(", ")); process.exit(1); }

@@ -1,114 +1,142 @@
-// INSIDE lane — shared OFFLINE test fixtures. Zero network, zero keys: every quote below is a
-// REAL substring of the fake source texts (the verbatim wall must be able to pass them), every
-// trigger/angle/factBlock mirrors the exact shapes the lane stages produce and consume.
+// INSIDE lane — shared OFFLINE test fixtures (REV 2 = audience-reaction & discourse). Zero network,
+// zero keys: every quote below is a REAL substring of the fake source texts (the verbatim wall must
+// pass them), every trigger/angle/factBlock mirrors the exact shapes the REV 2 stages produce/consume.
 import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
-import { TRIGGERS } from "../config.inside.mjs";
+import { FORMS } from "../config.inside.mjs";
 
-export const NOW = Date.parse("2026-07-03T12:00:00Z");
+export const NOW = Date.parse("2026-07-04T12:00:00Z");
 
 export const tmp = (name) => fs.mkdtempSync(path.join(os.tmpdir(), name + "-"));
 export const writeJson = (file, data) => (fs.writeFileSync(file, JSON.stringify(data, null, 1)), file);
 
-// ── The quotes (each a verbatim substring of SRC_A / SRC_B below) ────────────────────────────
+// ── The quotes (each a verbatim substring of SRC_A / SRC_B below) ────────────────────────────────
 export const Q = {
-  mira: "Rex taught me everything about grace on a film set, and I will carry his kindness with me always",
-  onder: "He was the steadiest hand I ever pointed a camera at, and the funniest man in every room",
-  tomas: "Working beside him on three films was the great education of my career",
-  guild: "Our union has lost one of its most generous mentors, and our thoughts are with his family",
-  studio: "Production on Midnight Circuit: Legacy is paused this week so the cast and crew can grieve together",
-  fan1: "Midnight Circuit got me through the hardest year of my life and Rex was the reason",
-  fan2: "I cannot believe Rex Harmon is gone, his films raised me",
-  fan3: "Stop turning grief into content, let his family breathe",
-  fan4: "His marathon rewatch nights were a tradition in our house, rest easy legend",
+  // named creator quotes
+  director: "I always intended the ending to be ambiguous, and I stand by that choice completely",
+  lead: "The people arguing about the final scene are exactly the audience I hoped to reach",
+  critic: "This is the boldest studio ending in years and the backlash proves it landed",
+  // audience posts (fans, never named)
+  fanLove: "The Sable Coast is the best thing I have seen all year and I am still thinking about it",
+  fanHate: "That ending completely ruined the movie for me and I want my two hours back",
+  fanSplit: "Half my group loved the ending and the other half walked out furious, wild movie",
+  fanBuzz: "Nora Idris just became my favorite actor working, she carried the entire third act",
+  fanNeg: "Honestly the pacing dragged and the ending felt like a cop out to me",
 };
 
-export const TWEET_ID_A = "1808881234567890123";
-export const TWEET_ID_B = "1808899876543210987";
+export const TWEET_ID_A = "1809881234567890123";
+export const TWEET_ID_B = "1809899876543210987";
 
+// SRC_A = the trade coverage carrying the creators' on-record replies to the discourse.
 export const SRC_A =
-  `Hollywood spent Tuesday mourning Rex Harmon, who died at 70 after a brief illness, his family confirmed. ` +
-  `Tributes began within the hour. His co-star of two decades, Mira Vale, wrote on Instagram, "${Q.mira}." ` +
-  `Director Paul Onder told Variety, "${Q.onder}." Stunt double Tomas Reyes posted on X ` +
-  `(https://x.com/tomasreyes/status/${TWEET_ID_A}), "${Q.tomas}." More tributes are expected as the week goes on.`;
+  `The debate over the final scene of The Sable Coast has consumed film social media all week. ` +
+  `Director Priya Anand addressed the reaction directly in an interview, saying, "${Q.director}." ` +
+  `Lead actor Nora Idris was similarly unbothered, telling reporters, "${Q.lead}." ` +
+  `Critic Dominic Ray, writing for a major outlet, argued that "${Q.critic}." ` +
+  `More responses are expected as the film widens its release this weekend. ` +
+  `See the reaction thread at https://x.com/screenchatter/status/${TWEET_ID_A} for the full back-and-forth.`;
 
+// SRC_B = the reaction-roundup page carrying the audience posts (fans, unnamed).
 export const SRC_B =
-  `Fans flooded social media within minutes of the announcement. One fan wrote, "${Q.fan1}." ` +
-  `Another posted, "${Q.fan2}." Not everyone approved of the coverage: "${Q.fan3}," one user said. ` +
-  `A fourth added, "${Q.fan4}." Meridian Pictures said in a statement, "${Q.studio}." ` +
-  `Guild president Lena Okafor added, "${Q.guild}." ` +
-  `See the thread at https://twitter.com/filmupdates/status/${TWEET_ID_B} for more coverage of the reactions.`;
+  `Audiences could not stop arguing about The Sable Coast this week. One viewer wrote, "${Q.fanLove}." ` +
+  `Not everyone agreed. "${Q.fanHate}," one moviegoer posted. Another summed up the split: "${Q.fanSplit}." ` +
+  `The film's breakout has a name attached: "${Q.fanBuzz}," a fan on Reddit said. ` +
+  `A more measured take pushed back on the hype: "${Q.fanNeg}," another user added. ` +
+  `Coverage of the reactions is collected at https://twitter.com/filmpulse/status/${TWEET_ID_B} and elsewhere.`;
 
 export const SOURCES = [
-  { url: "https://variety.example/rex-harmon-tributes", domain: "variety.com", owner: "Variety", tier: 1, title: "Rex Harmon tributes", text: SRC_A },
-  { url: "https://ew.example/rex-harmon-fans-react", domain: "ew.com", owner: "EW", tier: 2, title: "Fans react to Rex Harmon", text: SRC_B },
+  { url: "https://variety.example/sable-coast-ending-debate", domain: "variety.com", owner: "Variety", tier: 1, title: "The Sable Coast ending debate", text: SRC_A, quotes: [Q.director, Q.lead, Q.critic] },
+  { url: "https://ew.example/sable-coast-fans-react", domain: "ew.com", owner: "EW", tier: 2, title: "Fans react to The Sable Coast", text: SRC_B, quotes: [Q.fanLove, Q.fanHate, Q.fanSplit, Q.fanBuzz, Q.fanNeg] },
 ];
 
-// ── Trigger: a CONFIRMED death of a famous actor (the lane's canonical Tier-S event) ─────────
+// ── Fake reddit posts (the discourse anchors carried on the trigger) ──────────────────────────────
+export function fakeRedditPost(o = {}) {
+  return {
+    id: "post1",
+    subreddit: "movies",
+    title: "The Sable Coast ending has people completely divided",
+    selftext: "Just got back and the theater was split down the middle. What did everyone think?",
+    permalink: "https://www.reddit.com/r/movies/comments/post1/the_sable_coast_ending/",
+    url: null,
+    score: 4200,
+    numComments: 1300,
+    createdUtc: Math.round((NOW - 6 * 36e5) / 1000),
+    ageMin: 360,
+    ...o,
+  };
+}
+
+export const REDDIT_POSTS = [
+  fakeRedditPost(),
+  fakeRedditPost({ id: "post2", title: "The Sable Coast is a masterpiece, fight me", permalink: "https://www.reddit.com/r/movies/comments/post2/masterpiece/", numComments: 640, score: 2100 }),
+];
+
+// ── Trigger: a trending WORK with real reddit discourse (the REV 2 canonical shape) ───────────────
 export function fakeTrigger(overrides = {}) {
   return {
-    parentEventSlug: "rex-harmon-dies",
-    parentSlug: "rex-harmon-dead-at-70",
-    parentTitle: "Rex Harmon, Beloved Star of Midnight Circuit, Dies at 70",
-    primaryEntity: "Rex Harmon",
-    entities: ["Rex Harmon", "Midnight Circuit"],
-    eventType: "death",
-    sensitivity: "high",
-    category: "celebrity",
-    priority: 82,
-    signals: { rss: 6, gdelt: 12 },
-    outletCount: 6,
+    parentEventSlug: "the-sable-coast-2026",
+    parentSlug: null,
+    parentTitle: "The Sable Coast",
+    primaryEntity: "The Sable Coast",
+    entities: [],
+    eventType: "discourse",
+    sensitivity: "normal",
+    category: "movies",
+    priority: 1740,
+    signals: { comments: 1940, redditPosts: 2, popularity: 88 },
+    outletCount: 2,
     status: "CONFIRMED",
-    publishable: true,
     sources: SOURCES.map(({ url, owner, tier }) => ({ url, outlet: owner, tier })),
     tmdbType: "movie",
-    subjectKind: "person",
-    via: "ledger",
-    allowedForms: TRIGGERS.death.forms,
+    subjectKind: "title",
+    via: "tmdb+reddit",
+    redditPosts: REDDIT_POSTS,
+    work: { title: "The Sable Coast", type: "movie", year: "2026" },
+    overview: "A drifter returns to a coastal town and upends its uneasy calm in a story that ends on a deliberately open note.",
     ...overrides,
   };
 }
 
-// ── Angles per form ───────────────────────────────────────────────────────────────────────────
+// ── Angles per REV 2 form ─────────────────────────────────────────────────────────────────────────
 const ANGLE_DEFS = {
-  "peer-tributes": { angle: "Stars pay tribute to Rex Harmon", workingTitle: "Stars React to Rex Harmon's Death" },
-  "fan-pulse": { angle: "Fans mourn Rex Harmon online", workingTitle: "Fans React to Rex Harmon's Death" },
-  "cast-crew-voices": { angle: "Midnight Circuit cast and crew speak out", workingTitle: "Midnight Circuit Cast Speaks Out" },
-  "breakout-spotlight": { angle: "Who is Tomas Reyes, the stuntman everyone is quoting", workingTitle: "Who Is Tomas Reyes?" },
-  "single-voice": { angle: "Mira Vale's tribute to Rex Harmon", workingTitle: "Mira Vale Responds to Rex Harmon's Death" },
-  "ripple-effects": { angle: "What happens to Midnight Circuit: Legacy now", workingTitle: "After Rex Harmon: What Happens to Midnight Circuit Now" },
+  "audience-reaction": { angle: "How audiences are reacting to The Sable Coast", workingTitle: "The Sable Coast Has Audiences Sharply Divided" },
+  "the-debate": { angle: "The Sable Coast ending debate", workingTitle: "The Sable Coast Ending, and Why Nobody Can Agree on It" },
+  "creator-answers-critics": { angle: "Priya Anand answers the ending backlash", workingTitle: "The Sable Coast Director Responds to the Ending Backlash" },
+  "breakout-buzz": { angle: "Nora Idris is suddenly everywhere", workingTitle: "Who Is Nora Idris? The Sable Coast Breakout Everyone's Talking About" },
 };
 
-export function fakeAngle(form = "peer-tributes", overrides = {}) {
+export function fakeAngle(form = "audience-reaction", overrides = {}) {
   const d = ANGLE_DEFS[form];
   return {
     form,
     angle: d.angle,
     workingTitle: d.workingTitle,
-    focusEntity: form === "breakout-spotlight" ? "Tomas Reyes" : "Rex Harmon",
-    searchQueries: [`"Rex Harmon" tributes reaction`],
-    voiceHints: ["Mira Vale", "Paul Onder"],
+    focusEntity: form === "breakout-buzz" ? "Nora Idris" : "The Sable Coast",
+    searchQueries: ["The Sable Coast reactions", "Sable Coast ending debate"],
     note: d.angle,
-    key: `${form}|rex-harmon`,
+    key: form,
     ...overrides,
   };
 }
 
-// ── Fact blocks per form (quotes verbatim from SRC_A/SRC_B) ───────────────────────────────────
+export function fakeAngles() {
+  return Object.keys(FORMS).map((f) => fakeAngle(f));
+}
+
+// ── Named reactions + fan posts (quotes verbatim from SRC_A/SRC_B) ────────────────────────────────
 export const NAMED = {
-  mira: { speaker: "Mira Vale", speakerType: "castmate", connection: "his co-star of two decades", platform: "Instagram", date: "2026-07-01", quote: Q.mira, stance: "positive", sourceIdx: 0 },
-  onder: { speaker: "Paul Onder", speakerType: "filmmaker", connection: "director of Midnight Circuit", platform: "interview", date: "2026-07-01", quote: Q.onder, stance: "positive", sourceIdx: 0 },
-  tomas: { speaker: "Tomas Reyes", speakerType: "crew", connection: "his longtime stunt double", platform: "X", date: "2026-07-01", quote: Q.tomas, stance: "positive", sourceIdx: 0 },
-  okafor: { speaker: "Lena Okafor", speakerType: "official", connection: "president of the actors guild", platform: "statement", date: "2026-07-02", quote: Q.guild, stance: "neutral", sourceIdx: 1 },
-  studio: { speaker: "Meridian Pictures", speakerType: "company", connection: "the studio behind Midnight Circuit", platform: "statement", date: "2026-07-02", quote: Q.studio, stance: "neutral", sourceIdx: 1 },
+  director: { speaker: "Priya Anand", speakerType: "filmmaker", connection: "director of The Sable Coast", platform: "interview", date: "2026-07-02", quote: Q.director, stance: "positive", sourceIdx: 0 },
+  lead: { speaker: "Nora Idris", speakerType: "celebrity", connection: "lead actor in The Sable Coast", platform: "press", date: "2026-07-02", quote: Q.lead, stance: "positive", sourceIdx: 0 },
+  critic: { speaker: "Dominic Ray", speakerType: "other", connection: "film critic", platform: "other", date: "2026-07-02", quote: Q.critic, stance: "positive", sourceIdx: 0 },
 };
 
 export const FAN_POSTS = [
-  { speaker: "", speakerType: "fan", platform: "X", date: "", quote: Q.fan1, stance: "positive", sourceIdx: 1 },
-  { speaker: "", speakerType: "fan", platform: "X", date: "", quote: Q.fan2, stance: "positive", sourceIdx: 1 },
-  { speaker: "", speakerType: "fan", platform: "X", date: "", quote: Q.fan3, stance: "negative", sourceIdx: 1 },
-  { speaker: "", speakerType: "fan", platform: "X", date: "", quote: Q.fan4, stance: "positive", sourceIdx: 1 },
+  { speaker: "", speakerType: "fan", connection: "", platform: "Reddit", date: "", quote: Q.fanLove, stance: "positive", sourceIdx: 1 },
+  { speaker: "", speakerType: "fan", connection: "", platform: "X", date: "", quote: Q.fanHate, stance: "negative", sourceIdx: 1 },
+  { speaker: "", speakerType: "fan", connection: "", platform: "Reddit", date: "", quote: Q.fanSplit, stance: "mixed", sourceIdx: 1 },
+  { speaker: "", speakerType: "fan", connection: "", platform: "Reddit", date: "", quote: Q.fanBuzz, stance: "positive", sourceIdx: 1 },
+  { speaker: "", speakerType: "fan", connection: "", platform: "X", date: "", quote: Q.fanNeg, stance: "negative", sourceIdx: 1 },
 ];
 
 const normQ = (s) => (s || "").replace(/\s+/g, " ").trim().toLowerCase();
@@ -127,16 +155,19 @@ export function statsFor(named, fans) {
   return s;
 }
 
+// Per-form voice mix: enough anchors to clear each form's floor.
 const FB_VOICES = {
-  "peer-tributes": { named: [NAMED.mira, NAMED.onder, NAMED.tomas, NAMED.okafor], fans: [] },
-  "fan-pulse": { named: [], fans: FAN_POSTS },
-  "cast-crew-voices": { named: [NAMED.mira, NAMED.onder], fans: [] },
-  "breakout-spotlight": { named: [NAMED.mira, NAMED.onder, NAMED.tomas], fans: [] },
-  "single-voice": { named: [NAMED.mira], fans: [] },
-  "ripple-effects": { named: [NAMED.studio, NAMED.okafor], fans: [] },
+  // audience-reaction: minAnchors 3 → 4 fan posts (both sides present so "divided" is honest)
+  "audience-reaction": { named: [], fans: [FAN_POSTS[0], FAN_POSTS[1], FAN_POSTS[2], FAN_POSTS[4]] },
+  // the-debate: minAnchors 3, needsBothSides → 4 fans, divided
+  "the-debate": { named: [], fans: [FAN_POSTS[0], FAN_POSTS[1], FAN_POSTS[2], FAN_POSTS[4]] },
+  // creator-answers-critics: minCreatorQuotes 1 named + minAnchors 2 → 1 named + 2 fans
+  "creator-answers-critics": { named: [NAMED.director], fans: [FAN_POSTS[1], FAN_POSTS[4]] },
+  // breakout-buzz: minAnchors 3 → 1 named + 3 fans
+  "breakout-buzz": { named: [NAMED.lead], fans: [FAN_POSTS[0], FAN_POSTS[3], FAN_POSTS[2]] },
 };
 
-export function fakeFactBlock(form = "peer-tributes", overrides = {}) {
+export function fakeFactBlock(form = "audience-reaction", overrides = {}) {
   const { named, fans } = FB_VOICES[form];
   return {
     reactions: named.map((r) => ({ ...r })),
@@ -148,59 +179,58 @@ export function fakeFactBlock(form = "peer-tributes", overrides = {}) {
   };
 }
 
-// ── Writer-shaped article (body ≥300 words, quote-ratio well under 25%, no handles,
-//    every rendered quote verbatim from the fact block, framing between all quotes) ───────────
+// ── Writer-shaped article (body >= floor words, quote-ratio under 35%, no handles, every rendered
+//    quote verbatim from the fact block, framing between all quotes) ──────────────────────────────
 const TITLES = {
-  "peer-tributes": "Rex Harmon Dead at 70: Mira Vale and Paul Onder Lead Tributes",
-  "fan-pulse": "Rex Harmon Fans Flood X With Tributes — and One Pointed Complaint",
-  "cast-crew-voices": "Midnight Circuit Cast and Crew Speak Out on Rex Harmon's Death",
-  "breakout-spotlight": "Who Is Tomas Reyes? The Voice Everyone Is Quoting After Rex Harmon's Death",
-  "single-voice": 'Mira Vale Responds to Rex Harmon\'s Death: "Grace on a Film Set"',
-  "ripple-effects": "After Rex Harmon: What Happens to Midnight Circuit Now",
+  "audience-reaction": "The Sable Coast Has Audiences Sharply Divided Over Its Ending",
+  "the-debate": "The Sable Coast Ending Debate: Why Fans Can't Agree",
+  "creator-answers-critics": "The Sable Coast Director Responds to the Ending Backlash",
+  "breakout-buzz": "Who Is Nora Idris? The Sable Coast Breakout Everyone's Talking About",
 };
 
-const OPENERS = [
-  (r) => `${r.speaker}, ${r.connection}, was among the first voices to surface, posting a message that read, "${r.quote}." Followers shared the tribute thousands of times within the hour.`,
-  (r) => `A different register came from ${r.speaker}, ${r.connection}, who reached instead for the work itself: "${r.quote}." Collaborators echoed that memory throughout the afternoon.`,
-  (r) => `${r.speaker} kept things plainer. In a short post, ${r.connection} wrote, "${r.quote}." It became the line mourners repeated to one another all evening.`,
-  (r) => `Institutional voices arrived by nightfall. ${r.speaker}, ${r.connection}, said in a statement, "${r.quote}." A fuller tribute is planned for the next ceremony, the organization noted.`,
-];
 const FAN_FRAMES = [
-  (r) => `One fan wrote, "${r.quote}." The post traveled far beyond the usual film circles.`,
-  (r) => `Another fan posted simply, "${r.quote}." Replies underneath turned into a thread of favorite scenes.`,
-  (r) => `A more skeptical corner of the fandom pushed back on the coverage itself: "${r.quote}," one fan argued.`,
-  (r) => `A fourth fan remembered the ritual of it all, writing, "${r.quote}." Dozens answered with photographs of worn DVD boxes.`,
+  (r) => `One viewer put the enthusiasm plainly, writing, "${r.quote}." The post drew hundreds of agreeing replies within the hour.`,
+  (r) => `On the other side of the argument, one moviegoer was blunt: "${r.quote}." Dozens piled in to agree.`,
+  (r) => `The split itself became the story. As one fan on Reddit summed it up, "${r.quote}." That single post captured the mood better than any review.`,
+  (r) => `A more measured note cut through the noise. "${r.quote}," another user wrote, and the thread beneath it turned into a real conversation.`,
+  (r) => `Enthusiasm centered on one name. "${r.quote}," a fan on Reddit said, and the sentiment kept repeating across every thread.`,
+];
+const NAMED_FRAMES = [
+  (r) => `${r.speaker}, ${r.connection}, met the reaction head-on. In an interview, ${r.speaker.split(" ")[0]} said, "${r.quote}." The comment only poured fuel on the debate.`,
+  (r) => `${r.speaker}, ${r.connection}, seemed to relish the argument. "${r.quote}," ${r.speaker.split(" ")[0]} told reporters, framing the divide as the point.`,
 ];
 
 const FILLER = [
-  `The confirmation came from the family early on Tuesday, and by lunchtime the industry's response had organized itself into something between a wake and a retrospective.`,
-  `Studios paused announcements, trade reporters cleared their schedules, and the usual churn of casting news gave way for a day to memory.`,
-  `Harmon's four decades of work touched an unusual number of departments, which is why the grief arrived from every corner of the crew list rather than only from the marquee names.`,
-  `Colleagues describe a performer who learned every crew member's name by the second day of a shoot and kept handwritten notes about their families.`,
-  `The pattern across the messages was consistent: less about the awards, more about the daily decency, a theme that repeated from soundstage veterans and newcomers alike.`,
-  `What follows is the record of who said what, in their own words, gathered from public posts and official statements as the day unfolded.`,
-  `Their history together stretched back to a low-budget thriller in the early nineties, a shoot both later described as the hardest and happiest job either had taken.`,
-  `Industry observers noted how quickly the message spread beyond entertainment media, landing in sports broadcasts and morning shows before the afternoon was out.`,
+  `The film opened to a curious kind of success: not a consensus, but a fight. Within a day, the conversation had organized itself into two camps that barely acknowledged the other existed.`,
+  `What makes the reaction unusual is how evenly it splits. For every thread declaring the movie a triumph, another calls it a betrayal, and the two rarely meet in the middle.`,
+  `The argument is not really about whether the movie is good. It is about what the ending means, and whether the filmmakers earned the right to leave it open.`,
+  `That tension is exactly what has kept the film at the top of every feed this week, long after the opening-weekend numbers stopped being the headline.`,
+  `Whatever side you land on, the movie has done the one thing a divisive film sets out to do: it refuses to be ignored, and the conversation shows no sign of cooling.`,
+  `Threads dissecting the final ten minutes have racked up thousands of comments, with viewers trading frame-by-frame readings and rival theories that grow more elaborate by the hour.`,
+  `The pattern repeats across platforms — the loudest voices are the ones who felt something, in either direction, and the indifferent middle has almost nothing to say about any of it.`,
+  `Part of what fuels the argument is how confidently each side reads the same handful of images, arriving at opposite conclusions and refusing to grant the other any ground at all.`,
+  `Trade reporters who have covered a decade of opening weekends note that few recent releases have generated this volume of genuine, sustained back-and-forth rather than the usual burst that fades by Monday morning.`,
+  `Even viewers who disliked the film concede that it is impossible to shrug off, which may be the surest sign that the filmmakers accomplished exactly what they set out to do with that closing sequence.`,
 ];
 
-export function fakeArticle({ form = "peer-tributes", factBlock = null, trigger = null, title = null, ...overrides } = {}) {
+export function fakeArticle({ form = "audience-reaction", factBlock = null, trigger = null, title = null, ...overrides } = {}) {
   factBlock = factBlock || fakeFactBlock(form);
   trigger = trigger || fakeTrigger();
   const named = factBlock.reactions;
   const fans = factBlock.aggregateFans;
 
   const paras = [
-    `${trigger.parentTitle}. The news was confirmed by his family on Tuesday morning, and within hours the people who worked beside him began to speak, publicly and on the record.`,
-    FILLER[0], FILLER[1],
-    `## How did Hollywood react?`,
-    FILLER[5],
-    ...named.map((r, i) => OPENERS[i % OPENERS.length](r)),
+    `${trigger.parentTitle} did not just open this week — it detonated an argument. ${FILLER[0]}`,
+    FILLER[1], FILLER[7],
+    `## How are audiences reacting?`,
+    FILLER[2], FILLER[8],
     ...fans.map((r, i) => FAN_FRAMES[i % FAN_FRAMES.length](r)),
-    FILLER[2], FILLER[3],
-    ...(named.length + fans.length < 3 ? [FILLER[6], FILLER[7]] : []),
-    `## What happens next?`,
-    FILLER[4],
-    `Reactions are still arriving, and this coverage will be updated as more of the people who knew him best find their words.`,
+    FILLER[5],
+    ...named.map((r, i) => NAMED_FRAMES[i % NAMED_FRAMES.length](r)),
+    FILLER[3], FILLER[6], FILLER[9],
+    `## Where does the debate go from here?`,
+    FILLER[4], FILLER[10],
+    `The conversation is still building, and this piece will be updated as more voices weigh in on where it all lands.`,
   ];
   const body = paras.join("\n\n");
 
@@ -209,77 +239,66 @@ export function fakeArticle({ form = "peer-tributes", factBlock = null, trigger 
     ...fans.map((r) => ({ speaker: "", connection: "", platform: r.platform || "", date: r.date || "", quote: r.quote, tweetId: "" })),
   ];
 
+  const anchorStatement = form === "creator-answers-critics" && named[0]
+    ? { speaker: named[0].speaker, connection: named[0].connection, quote: named[0].quote, platform: named[0].platform }
+    : null;
+
   return {
     title: title || TITLES[form],
     metaTitle: (title || TITLES[form]).slice(0, 60),
-    dek: "The people who knew Rex Harmon best responded in their own words within hours of the news.",
-    metaDescription: "How co-stars, collaborators and fans reacted to the death of Rex Harmon, in their own on-the-record words.",
+    dek: "Audiences can't stop arguing about The Sable Coast, and the split is the whole story.",
+    metaDescription: "How viewers, fans and the filmmakers are reacting to the divisive ending of The Sable Coast, in their own words.",
     keyTakeaways: [
-      "Rex Harmon's death at 70 was confirmed by his family on Tuesday.",
-      "Co-stars and collaborators shared on-the-record tributes within hours.",
-      "The studio paused production on Midnight Circuit: Legacy for the week.",
+      "The Sable Coast has split audiences over its deliberately open ending.",
+      "Fans on Reddit and X are trading rival readings of the final scene.",
+      "The reaction has kept the film at the top of the conversation all week.",
     ],
     body,
     faq: [
-      { q: "How did Mira Vale react to Rex Harmon's death?", a: "Mira Vale, his co-star of two decades, posted a tribute on Instagram crediting Harmon with teaching her grace on a film set and promising to carry his kindness with her always." },
-      { q: "Is Midnight Circuit: Legacy still filming?", a: "Meridian Pictures said in a statement that production on Midnight Circuit: Legacy is paused this week so the cast and crew can grieve together." },
+      { q: "Why is The Sable Coast so divisive?", a: "The film ends on a deliberately ambiguous note, and audiences are split between those who read it as a bold, earned choice and those who feel the movie refused to resolve its own story." },
+      { q: "What are audiences saying about the ending?", a: "Reactions range from calling it the best film of the year to feeling cheated by the final scene, with many viewers describing screenings where the room itself was divided." },
     ],
-    about: [{ name: "Rex Harmon", type: "Person" }, { name: "Midnight Circuit", type: "Movie" }],
-    tags: ["Rex Harmon", "Midnight Circuit", "tributes", "celebrity deaths"],
-    imageQuery: "Rex Harmon actor",
+    about: [{ name: "The Sable Coast", type: "Movie" }, { name: "Nora Idris", type: "Person" }],
+    tags: ["The Sable Coast", "audience reaction", "movie discourse", "Nora Idris"],
+    imageQuery: "The Sable Coast movie",
     reactionsRender: render,
-    anchorStatement: null,
-    fanConsensus: form === "fan-pulse"
-      ? "Fans are divided: gratitude for the films dominates, but a vocal minority is pushing back on the tone of the coverage itself."
-      : "",
+    anchorStatement,
+    fanConsensus: "Audiences are genuinely divided: the ending has as many passionate defenders as it has furious detractors.",
     claims: [],
     ...overrides,
   };
 }
 
-export const fakeImage = () => ({ image: "https://cdn.example/rex-harmon-hero.jpg", imageWidth: 1600, imageHeight: 900, credit: "Photo: Meridian Pictures" });
+export const fakeImage = () => ({ image: "https://cdn.example/sable-coast-hero.jpg", imageWidth: 1600, imageHeight: 900, credit: "Photo via source" });
 
-// ── FIND-side fixtures: queue.json topics + published.json ledger entries ────────────────────
-export function queueTopic(o = {}) {
-  return {
-    title: "Rex Harmon, Beloved Star of Midnight Circuit, Dies at 70",
-    eventSlug: "rex-harmon-dies",
-    primaryEntity: "Rex Harmon",
-    entities: ["Rex Harmon"],
-    eventType: "death",
-    category: "celebrity",
-    priority: 82,
-    signals: { rss: 6 },
-    sources: [{ url: "https://variety.example/rex", outlet: "Variety", tier: 1 }],
-    tmdbType: "movie",
-    verification: { status: "CONFIRMED", outletCount: 6, publishable: true, sensitivity: "high" },
-    ...o,
-  };
+// ── Fake TMDB / Reddit discovery responses (for discover.mjs injected impls) ──────────────────────
+export function fakeTMDBItems() {
+  return [
+    { source: "tmdb:trending-movie", kind: "trending-movie", mediaType: "movie", tmdbId: 101, title: "The Sable Coast", year: "2026", releaseDate: "2026-06-20", released: true, popularity: 88, voteAverage: 7.4, overview: "A drifter returns to a coastal town.", nicheHint: "" },
+    { source: "tmdb:trending-tv", kind: "trending-tv", mediaType: "tv", tmdbId: 202, title: "Harbor Lights", year: "2026", releaseDate: "2026-05-01", released: true, popularity: 55, overview: "An anthology set on the docks." },
+    { source: "tmdb:trending-person", kind: "trending-person", mediaType: "person", tmdbId: 303, title: "Nora Idris", year: "", releaseDate: "", released: false, popularity: 42, overview: "" },
+    { source: "tmdb:upcoming", kind: "upcoming", mediaType: "movie", tmdbId: 404, title: "Quiet Nobody Cares", year: "2027", releaseDate: "2027-01-01", released: false, popularity: 5, overview: "" }, // low pop + no discourse → dropped
+  ];
 }
 
-export function ledgerEntry(o = {}) {
-  return {
-    eventSlug: "vera-lin-dies",
-    slug: "vera-lin-dead-at-64",
-    title: "Vera Lin, Oscar-Winning Composer, Dies at 64",
-    entityKey: "vera-lin:death",
-    eventType: "death",
-    verifyStatus: "CONFIRMED", // the persisted verify status is honored, never assumed — absent = DEVELOPING (fail-closed)
-    category: "music",
-    priority: 77,
-    signals: { rss: 4 },
-    sourceUrls: ["https://a.example/1", "https://b.example/2", "https://c.example/3"],
-    at: new Date(NOW - 12 * 36e5).toISOString(),
-    ...o,
-  };
+export function fakeRedditDiscover() {
+  return [
+    // matches The Sable Coast (work story)
+    fakeRedditPost({ id: "d1", title: "The Sable Coast ending has people completely divided", numComments: 1300, score: 4200, url: null }),
+    fakeRedditPost({ id: "d2", subreddit: "movies", title: "The Sable Coast is a masterpiece", permalink: "https://www.reddit.com/r/movies/comments/d2/masterpiece/", numComments: 640, score: 2100, url: null }),
+    // mentions Nora Idris (person story)
+    fakeRedditPost({ id: "d3", subreddit: "movies", title: "Nora Idris carried The Sable Coast, incredible performance", permalink: "https://www.reddit.com/r/movies/comments/d3/nora/", numComments: 210, score: 900, url: null }),
+    // a big orphan argument about an unrelated title
+    fakeRedditPost({ id: "d4", subreddit: "television", title: "Why does everyone hate the Harbor Watch finale so much", permalink: "https://www.reddit.com/r/television/comments/d4/harbor/", numComments: 340, score: 1500, url: null }),
+    // low-comment noise (dropped by discovery, but injected impl already filters; kept small for match tests)
+  ];
 }
 
-// Write fake queue.json / published.json into a temp dir; returns { dir, queuePath, ledgerPath }.
-export function fakeFindFiles({ topics = [queueTopic()], entries = [ledgerEntry()] } = {}) {
-  const dir = tmp("inside-find");
-  return {
-    dir,
-    queuePath: writeJson(path.join(dir, "queue.json"), { topics }),
-    ledgerPath: writeJson(path.join(dir, "published.json"), entries),
-  };
+// Canned Reddit JSON listings (for reddit.mjs getJson via injected fetchImpl).
+export function redditListing(posts) {
+  return { data: { children: posts.map((d) => ({ data: d })) } };
+}
+export function redditCommentsListing(comments) {
+  // reddit comments endpoint returns [postListing, commentListing]
+  return [{ data: { children: [] } }, { data: { children: comments.map((d) => ({ data: d })) } }];
 }

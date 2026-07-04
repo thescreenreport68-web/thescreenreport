@@ -170,24 +170,24 @@ function CommentView({
   me,
   slug,
   isReply,
-  onReplyPosted,
+  onReply,
+  onDeleted,
 }: {
   c: CommentRow & { likedByMe?: boolean };
   me: Me;
   slug: string;
   isReply?: boolean;
-  onReplyPosted: (row: CommentRow, parentId: string) => void;
+  onReply: (reply: CommentRow) => void;
+  onDeleted: () => void;
 }) {
   const [likes, setLikes] = useState(c.like_count);
   const [liked, setLiked] = useState(!!c.likedByMe);
   const [replying, setReplying] = useState(false);
-  const [removed, setRemoved] = useState(false);
+  const [deleting, setDeleting] = useState(false);
   const [reported, setReported] = useState(false);
   const name = c.profiles?.display_name ?? "Reader";
   const avatar = c.profiles?.avatar_url ?? null;
   const mine = me?.id === c.user_id;
-
-  if (removed) return null;
 
   const like = async () => {
     if (!me) return;
@@ -230,11 +230,13 @@ function CommentView({
           ) : null}
           {mine ? (
             <button
+              disabled={deleting}
               onClick={async () => {
+                setDeleting(true);
+                onDeleted(); // remove from UI instantly (parent cascades replies)
                 await deleteComment(c.id);
-                setRemoved(true);
               }}
-              className="btn-label text-slate hover:text-red"
+              className="btn-label text-slate hover:text-red disabled:opacity-50"
             >
               Delete
             </button>
@@ -263,14 +265,11 @@ function CommentView({
               onCancel={() => setReplying(false)}
               onPosted={(row, _held, authorName, authorAvatar) => {
                 setReplying(false);
-                onReplyPosted(
-                  {
-                    ...row,
-                    user_id: row.user_id ?? me?.id ?? "",
-                    profiles: { display_name: authorName, avatar_url: authorAvatar },
-                  },
-                  c.id,
-                );
+                onReply({
+                  ...row,
+                  user_id: row.user_id ?? me?.id ?? "",
+                  profiles: { display_name: authorName, avatar_url: authorAvatar },
+                });
               }}
             />
           </div>
@@ -284,20 +283,31 @@ function ThreadView({
   t,
   me,
   slug,
+  onAddReply,
+  onRemoveThread,
+  onRemoveReply,
 }: {
   t: Thread;
   me: Me;
   slug: string;
+  onAddReply: (threadId: string, reply: CommentRow) => void;
+  onRemoveThread: (threadId: string) => void;
+  onRemoveReply: (threadId: string, replyId: string) => void;
 }) {
-  const [replies, setReplies] = useState<CommentRow[]>(t.replies);
   const [open, setOpen] = useState(false);
-  const addReply = (row: CommentRow) => {
-    setReplies((r) => [...r, row]);
-    setOpen(true);
-  };
+  const replies = t.replies;
   return (
     <div className="border-b border-dotted border-gray">
-      <CommentView c={t} me={me} slug={slug} onReplyPosted={addReply} />
+      <CommentView
+        c={t}
+        me={me}
+        slug={slug}
+        onReply={(reply) => {
+          onAddReply(t.id, reply);
+          setOpen(true);
+        }}
+        onDeleted={() => onRemoveThread(t.id)}
+      />
       {replies.length ? (
         <div className="ml-12">
           <button
@@ -315,7 +325,8 @@ function ThreadView({
                   me={me}
                   slug={slug}
                   isReply
-                  onReplyPosted={() => {}}
+                  onReply={() => {}}
+                  onDeleted={() => onRemoveReply(t.id, r.id)}
                 />
               ))}
             </div>
@@ -331,14 +342,16 @@ export default function Comments({ slug }: { slug: string }) {
   const [threads, setThreads] = useState<Thread[]>([]);
   const [sort, setSort] = useState<"top" | "newest">("top");
   const [loading, setLoading] = useState(true);
-  const [count, setCount] = useState(0);
+
+  // Count is DERIVED from the thread tree, so add/delete of a comment or reply
+  // updates it instantly with no bookkeeping.
+  const count = threads.reduce((n, t) => n + 1 + t.replies.length, 0);
 
   const load = useCallback(async () => {
     const user = await getCurrentUser();
     setMe(user);
     const t = await fetchThreads(slug, sort, user?.id ?? null);
     setThreads(t);
-    setCount(t.reduce((n, x) => n + 1 + x.replies.length, 0));
     setLoading(false);
   }, [slug, sort]);
 
@@ -358,8 +371,28 @@ export default function Comments({ slug }: { slug: string }) {
       replies: [],
     };
     setThreads((t) => [newThread, ...t]);
-    setCount((n) => n + 1);
   };
+
+  // Instant, no-refresh mutations on the single source of truth (the DB has
+  // ON DELETE CASCADE, so removing a thread also deletes its replies server-side).
+  const addReply = (threadId: string, reply: CommentRow) =>
+    setThreads((ts) =>
+      ts.map((t) =>
+        t.id === threadId
+          ? { ...t, replies: [...t.replies, reply], reply_count: t.reply_count + 1 }
+          : t,
+      ),
+    );
+  const removeThread = (threadId: string) =>
+    setThreads((ts) => ts.filter((t) => t.id !== threadId));
+  const removeReply = (threadId: string, replyId: string) =>
+    setThreads((ts) =>
+      ts.map((t) =>
+        t.id === threadId
+          ? { ...t, replies: t.replies.filter((r) => r.id !== replyId) }
+          : t,
+      ),
+    );
 
   return (
     <section className="mt-12" id="comments">
@@ -408,7 +441,15 @@ export default function Comments({ slug }: { slug: string }) {
       ) : (
         <div>
           {threads.map((t) => (
-            <ThreadView key={t.id} t={t} me={me} slug={slug} />
+            <ThreadView
+              key={t.id}
+              t={t}
+              me={me}
+              slug={slug}
+              onAddReply={addReply}
+              onRemoveThread={removeThread}
+              onRemoveReply={removeReply}
+            />
           ))}
         </div>
       )}

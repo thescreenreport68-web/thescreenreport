@@ -27,31 +27,31 @@ export function quoteIsVerbatim(quote, sources) {
   return sources.some((s) => norm(s.text || "").includes(q));
 }
 
-const EXTRACT_SYS = `You extract ON-THE-RECORD REACTIONS from news source text for a reaction-roundup desk.
-A reaction = a specific person/organization responding to THE EVENT: a quoted social post, an official
-statement, a published interview/podcast remark. Extract ONLY what is literally in the text.
+const EXTRACT_SYS = `You extract REACTIONS & QUOTES about a specific movie/TV/music SUBJECT from source text, for an
+audience-reaction desk. Extract ONLY what is literally in the text.
 ABSOLUTE RULES:
-- "quote" must be COPIED CHARACTER-FOR-CHARACTER from the source text (it will be machine-checked; any
-  edited, merged, trimmed-mid-sentence or paraphrased quote is discarded). Pick the most distinctive
-  1-2 sentence span, ≤45 words.
-- speaker = who said it (exact name as written). Anonymous/unnamed sources are NOT reactions — skip them.
-- ordinary private fans: set speakerType "fan" and speaker "" (we never name private individuals).
-- connection = their stated relationship to the subject ("co-star in X", "director of Y", "longtime friend"),
-  ONLY if the text states it. Never guess.
-- stance: positive | negative | mixed | neutral (as evidenced by the quote itself).
-Output STRICT JSON only.`;
+- SUBJECT-MATCH FIRST: only extract material genuinely about the SUBJECT named below. If the text is about
+  something else — a different work with a similar/short title, an unrelated news story (local politics,
+  a different person) — return {"reactions":[]}. A short/common title (e.g. "From", "It", "Us") is NOT a
+  license to grab unrelated text.
+- "quote" must be COPIED CHARACTER-FOR-CHARACTER from the text (machine-checked; edited/merged/paraphrased
+  quotes are discarded). Pick the most distinctive 1-2 sentence span, ≤45 words.
+- speaker = who said it (exact name). A KNOWN figure (director/actor/musician/critic/official) → their name +
+  speakerType. An ordinary viewer/fan → speakerType "fan" and speaker "" (never name private individuals).
+- connection = their stated relationship to the subject, ONLY if the text states it. Never guess.
+- stance: positive | negative | mixed | neutral. Output STRICT JSON only.`;
 
-async function extractFromSource(src, i, trigger, angle, { model, chatImpl }) {
-  const user = `EVENT: ${trigger.parentTitle} (${trigger.eventType}; subject: ${trigger.primaryEntity})
-ANGLE BEING RESEARCHED: ${angle.angle} (form: ${angle.form})
+async function extractFromSource(src, i, trigger, angle, { model, chatImpl, subject }) {
+  const user = `SUBJECT: ${subject}
+ANGLE: ${angle.angle} (form: ${angle.form})
 
 SOURCE ${i} (${src.domain || src.owner || "unknown"}):
 ${(src.text || "").slice(0, 5800)}
 
-Extract every distinct on-record reaction TO THIS EVENT. JSON:
+Extract every distinct reaction/quote ABOUT THE SUBJECT (see the subject-match rule). JSON:
 {"reactions":[{"speaker":"","speakerType":"celebrity|filmmaker|castmate|crew|musician|company|official|fan|other",
 "connection":"","platform":"X|Instagram|statement|interview|podcast|press|other","date":"","quote":"","stance":"positive|negative|mixed|neutral"}]}
-No reactions in this text → {"reactions":[]}.`;
+Not about the subject, or no quotes → {"reactions":[]}.`;
   try {
     const { data } = await chatImpl({ model, system: EXTRACT_SYS, user, json: true, maxTokens: 2200, temperature: 0 });
     return (data?.reactions || []).map((r) => ({ ...r, sourceIdx: i }));
@@ -92,20 +92,20 @@ export async function scanPagesForTweets(sources, { fetchImpl = fetch, maxPages 
 // Tweets ARE reactions, not just embeds: a public post is the primary artifact itself (the
 // playbook's "official oEmbed is the receipt"). The text comes from X's own syndication API, so
 // it is verbatim by construction; one cheap LLM pass classifies relevance + who the author is.
-const CLASSIFY_TWEETS_SYS = `You classify public X posts for a reaction-roundup desk. For each post decide:
-- aboutEvent: is it a genuine reaction TO THIS EVENT (not spam/ads/unrelated)?
+const CLASSIFY_TWEETS_SYS = `You classify public X posts for an audience-reaction desk. For each post decide:
+- aboutEvent: is it a genuine reaction ABOUT THE SUBJECT (not spam/ads/unrelated, not a different work with
+  a similar name)? Be strict for short/common titles.
 - speakerType: celebrity|filmmaker|castmate|crew|musician|company|official if the AUTHOR is a publicly known
   figure/organization (judge by the account name; verified helps) — otherwise "fan" for ordinary users.
-- connection: the author's publicly-known relationship to the subject ("co-star in X", "the show's official
-  account") ONLY if you are certain — else "".
+- connection: the author's publicly-known relationship to the subject ONLY if certain — else "".
 - stance: positive|negative|mixed|neutral. Output STRICT JSON only.`;
 
-async function classifyTweets(tweets, trigger, angle, { model, chatImpl }) {
+async function classifyTweets(tweets, trigger, angle, { model, chatImpl, subject }) {
   const items = tweets.map((t, i) => ({
     i, author: t.user?.name || "", handle: t.user?.screen_name || "",
     verified: !!(t.user?.verified || t.user?.is_blue_verified), text: (t.text || "").slice(0, 500),
   }));
-  const user = `EVENT: ${trigger.parentTitle} (${trigger.eventType}; subject: ${trigger.primaryEntity})
+  const user = `SUBJECT: ${subject}
 ANGLE: ${angle.angle} (form: ${angle.form})
 
 POSTS:
@@ -136,13 +136,16 @@ export function meetsFloor(form, stats) {
 // Deterministic per-form fallback queries — plain words, the way a person actually searches.
 export function fallbackQueries(trigger, angle) {
   const who = angle.focusEntity || trigger.primaryEntity;
+  // Disambiguate a short/common title with its medium so the finder doesn't match unrelated text.
+  const medium = trigger.work ? (trigger.work.type === "tv" ? "TV series" : "movie") : "";
+  const w = trigger.work && who === trigger.work.title ? `${who} ${medium}` : who;
   const F = {
-    "audience-reaction": [`${who} fans react`, `${who} reactions`],
-    "the-debate": [`${who} controversy`, `${who} fans divided`],
-    "creator-answers-critics": [`${who} responds criticism`, `${who} addresses backlash`],
+    "audience-reaction": [`${w} fans react`, `${w} reactions`],
+    "the-debate": [`${w} controversy`, `${w} fans divided`],
+    "creator-answers-critics": [`${w} responds criticism`, `${w} addresses backlash`],
     "breakout-buzz": [`who is ${who}`, `${who} everyone talking`],
   };
-  return F[angle.form] || [`${who} reactions`];
+  return F[angle.form] || [`${w} reactions`];
 }
 
 // Cheap relevance+stance pass over Reddit comments (the audience anchors). Comment text is verbatim
@@ -150,9 +153,9 @@ export function fallbackQueries(trigger, angle) {
 const CLASSIFY_REDDIT_SYS = `You classify Reddit comments for an audience-reaction desk. For each comment:
 - aboutSubject: is it genuinely reacting to / discussing THIS subject (not off-topic, spam, or meta)?
 - stance: positive|negative|mixed|neutral toward the subject. Output STRICT JSON only.`;
-async function classifyRedditComments(comments, trigger, angle, { model, chatImpl }) {
+async function classifyRedditComments(comments, trigger, angle, { model, chatImpl, subject }) {
   const items = comments.map((c, i) => ({ i, text: (c.text || "").slice(0, 300) }));
-  const user = `SUBJECT: ${trigger.primaryEntity}${trigger.work ? ` — "${trigger.work.title}"` : ""}
+  const user = `SUBJECT: ${subject}
 ANGLE: ${angle.angle} (form: ${angle.form})
 
 COMMENTS:
@@ -184,6 +187,12 @@ export async function harvestReactions(trigger, angle, {
   softDeadlineMs = 120000,
 } = {}) {
   const t0 = Date.now();
+  // Disambiguated subject label — threaded into EVERY extraction/classification pass so off-topic
+  // material (a different work with a short/common title, an unrelated news story) is rejected at the
+  // source. This replaces REV 1's heavy editorial event-match gate with a cheap in-pass filter.
+  const subject = trigger.work
+    ? `the ${trigger.work.type === "tv" ? "TV series" : "movie"} "${trigger.work.title}"${trigger.work.year ? ` (${trigger.work.year})` : ""}${trigger.overview ? ` — ${trigger.overview.slice(0, 160)}` : ""}`
+    : `${trigger.primaryEntity} (a ${trigger.category} figure)`;
   // 1. Enumerate + extract ripple coverage (free: gnews/GDELT/extraction inside contentFinder).
   //    The PARENT event's own source articles seed the first pass — initial coverage routinely
   //    carries the first statements/reactions, so the harvest always has a foothold. Then LLM
@@ -211,7 +220,7 @@ export async function harvestReactions(trigger, angle, {
     for (const s of fresh) if (s.url) seenUrl.add(s.url);
     if (fresh.length) {
       const base = withText.length;
-      const lists = await Promise.all(fresh.map((s, i) => extractFromSource(s, base + i, trigger, angle, { model, chatImpl })));
+      const lists = await Promise.all(fresh.map((s, i) => extractFromSource(s, base + i, trigger, angle, { model, chatImpl, subject })));
       withText = [...withText, ...fresh];
       raw = [...raw, ...lists.flat()];
     }
@@ -279,7 +288,7 @@ export async function harvestReactions(trigger, angle, {
     } catch { tweets = []; tweetIds = []; }
   }
   if (tweets.length) {
-    const classified = await classifyTweets(tweets, trigger, angle, { model, chatImpl });
+    const classified = await classifyTweets(tweets, trigger, angle, { model, chatImpl, subject });
     for (const c of classified) {
       const t = tweets[c.i];
       const text = (t.text || "").trim();
@@ -315,7 +324,7 @@ export async function harvestReactions(trigger, angle, {
       const commentLists = await Promise.all(topPosts.map((p) => redditCommentsImpl(p.permalink).catch(() => [])));
       const comments = commentLists.flat().slice(0, 14);
       if (comments.length) {
-        const classified = await classifyRedditComments(comments, trigger, angle, { model, chatImpl });
+        const classified = await classifyRedditComments(comments, trigger, angle, { model, chatImpl, subject });
         for (const c of classified) {
           const cm = comments[c.i];
           if (!cm?.text) continue;

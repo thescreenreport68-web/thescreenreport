@@ -28,14 +28,18 @@ export function deterministicInside(article, factBlock, angle) {
   }
   const fanPool = factBlock.aggregateFans.map((r) => ({ text: r.quote }));
   const anyPool = [...factBlock.reactions, ...factBlock.aggregateFans].map((r) => ({ text: r.quote }));
-  const AGGREGATE = /^(a fan|one fan|one viewer|a viewer|fans?( on [a-z]+)?|one [a-z]+ user|)$/i;
+  // A speaker is AGGREGATE (an anonymous audience label, not a real name) when nothing remains after
+  // stripping generic audience words — "Viewer", "A Viewer", "One fan on X", "Reddit user" all → "".
+  // A real name ("Robert Downey Jr") survives the strip, so it's checked against the named anchors.
+  const GENERIC_AUD = /\b(a|an|one|another|some|several|many|most|the|fan|fans|viewer|viewers|user|users|redditor|redditors|commenter|commenters|audience|member|moviegoer|moviegoers|watcher|watchers|online|reddit|twitter|x|internet|poster)\b/gi;
+  const isAggregate = (sp) => norm(sp).replace(GENERIC_AUD, " ").replace(/[^a-z]/g, "").trim().length === 0;
   for (const r of article?.reactionsRender || []) {
     if (!r?.quote) continue;
-    const isAggregate = AGGREGATE.test(r.speaker || "");
-    if (!isAggregate && !knownSpeakers.has(norm(r.speaker)))
+    const agg = isAggregate(r.speaker || "");
+    if (!agg && !knownSpeakers.has(norm(r.speaker)))
       hardBlocks.push(`invented-speaker: "${r.speaker}" not in anchors`);
-    else if (!quoteIsVerbatim(r.quote, isAggregate ? fanPool : bySpeaker.get(norm(r.speaker)) || []))
-      hardBlocks.push(`${isAggregate ? "unverbatim-audience-quote" : "misattributed-or-unverbatim-quote"}: "${String(r.quote).slice(0, 60)}…" (${r.speaker || "audience"})`);
+    else if (!quoteIsVerbatim(r.quote, agg ? fanPool : bySpeaker.get(norm(r.speaker)) || []))
+      hardBlocks.push(`${agg ? "unverbatim-audience-quote" : "misattributed-or-unverbatim-quote"}: "${String(r.quote).slice(0, 60)}…" (${r.speaker || "audience"})`);
   }
   const anchor = article?.anchorStatement;
   if (anchor?.speaker && !knownSpeakers.has(norm(anchor.speaker)))
