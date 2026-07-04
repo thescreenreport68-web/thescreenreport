@@ -1,12 +1,12 @@
 {
-  "runId": "run-2026-07-04T13-31-09",
-  "builtAt": "2026-07-04T13:31:43.506Z",
-  "count": 3,
+  "runId": "run-2026-07-04T13-46-49",
+  "builtAt": "2026-07-04T13:47:11.877Z",
+  "count": 5,
   "topics": [
     {
-      "id": "music-news-stevie-nicks-performs-at-taylor-swift-travis-kelce-wedding",
-      "slug": "stevie-nicks-performs-at-taylor-swift-and-travis-kelce-s-wedding",
-      "title": "Stevie Nicks Performs at Taylor Swift and Travis Kelce’s Wedding",
+      "id": "music-news-beyonce-new-song-morning-dew-donk-release",
+      "slug": "beyonc-drops-surprise-new-song-morning-dew-donk-for-fourth-of-july",
+      "title": "Beyoncé Drops Surprise New Song 'Morning Dew (Donk)' for Fourth of July",
       "contentType": "music-news",
       "formatTag": "music-news",
       "category": "music",
@@ -14,50 +14,50 @@
       "eventType": "announcement",
       "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "stevie-nicks-performs-at-taylor-swift-travis-kelce-wedding",
-      "primaryKeyword": "Stevie Nicks",
-      "primaryEntity": "Stevie Nicks",
+      "eventSlug": "beyonce-new-song-morning-dew-donk-release",
+      "primaryKeyword": "beyonce new song",
+      "primaryEntity": "Beyoncé",
       "entities": [
-        "Taylor Swift",
-        "Travis Kelce"
+        "Morning Dew (Donk)"
       ],
-      "angle": "Stevie Nicks made a surprise appearance at Taylor Swift and Travis Kelce's wedding reception.",
+      "angle": "Beyoncé surprise-releases a new song titled 'Morning Dew (Donk)' as a Fourth of July gift to fans.",
       "tmdbType": "movie",
-      "source": "rss:Rolling Stone",
+      "source": "rss:Deadline",
       "sources": [
         {
-          "outlet": "Rolling Stone",
+          "outlet": "Deadline",
           "tier": 7,
-          "url": "https://www.rollingstone.com/music/music-news/stevie-nicks-performance-taylor-swift-travis-kelce-wedding-1235586080/",
-          "ageMin": 57,
-          "headline": "Stevie Nicks Performs at Taylor Swift and Travis Kelce’s Wedding",
-          "summary": "The Fleetwood Mac singer took the stage at Madison Square Garden following the couple's ceremony on Friday night"
+          "url": "https://deadline.com/2026/07/beyonce-morning-dew-donk-1236974147/",
+          "ageMin": 8,
+          "headline": "Beyoncé Releases New Song Morning Dew (Donk) As Fourth Of July Surprise",
+          "summary": "Beyoncé is setting off some Independence Day fireworks of her own, releasing a new song called Morning Dew (Donk) as a surprise 4th of July gift to fans. Listen to the slow-groove tune below. The song, according to an announcement put out by the singer s Parkwood Entertainment, starts a 60-day countdown to her next birthday [ ]"
         }
       ],
-      "ageMin": 57,
+      "ageMin": 8,
       "_cand": {
-        "key": "rss:stevie-nicks-performs-at-taylor-swift-and-travis-kelce-s-wed",
+        "key": "rss:beyonc-releases-new-song-morning-dew-donk-as-fourth-of-july-",
         "popularity": 0,
         "kind": "rss-news"
       },
+      "breakoutVelocity": 0,
       "corroborationCount": 1,
       "verification": {
         "tier1Count": 1,
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Rolling Stone"
+          "Deadline"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Rolling Stone",
+        "attribution": "Deadline",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 62,
+      "priority": 68,
       "signals": {
-        "recency": 24,
+        "recency": 30,
         "corroboration": 12,
         "status": 18,
         "type": 8,
@@ -68,39 +68,40 @@
       }
     },
     {
-      "id": "music-news-dolly-parton-imagination-library-donation-taylor-swift-travis-kelce",
-      "slug": "dolly-parton-thanks-taylor-swift-and-travis-kelce-for-2-million-donati",
-      "title": "Dolly Parton Thanks Taylor Swift and Travis Kelce for $2 Million Donation to Her Imagination Library",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
+      "id": "news-dustin-hoffman-maggie-gyllenhaal-karlovy-vary-festival",
+      "slug": "dustin-hoffman-maggie-gyllenhaal-charm-karlovy-vary-with-robert-redfor",
+      "title": "Dustin Hoffman, Maggie Gyllenhaal Charm Karlovy Vary With Robert Redford, Study Abroad Anecdotes",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
       "subcategory": "news",
-      "eventType": "announcement",
+      "eventType": "other",
       "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "dolly-parton-imagination-library-donation-taylor-swift-travis-kelce",
-      "primaryKeyword": "Dolly Parton Taylor Swift Travis Kelce donation",
-      "primaryEntity": "Dolly Parton",
+      "eventSlug": "dustin-hoffman-maggie-gyllenhaal-karlovy-vary-festival",
+      "primaryKeyword": "karlovy vary film festival",
+      "primaryEntity": "Karlovy Vary International Film Festival",
       "entities": [
-        "Taylor Swift",
-        "Travis Kelce"
+        "Dustin Hoffman",
+        "Maggie Gyllenhaal",
+        "Jesse Eisenberg",
+        "Harvey Keitel"
       ],
-      "angle": "Dolly Parton expresses gratitude for a significant donation from Taylor Swift and Travis Kelce to her Imagination Library.",
+      "angle": "Dustin Hoffman and Maggie Gyllenhaal were among stars at the Karlovy Vary festival's opening.",
       "tmdbType": "movie",
-      "source": "rss:Rolling Stone",
+      "source": "rss:THR",
       "sources": [
         {
-          "outlet": "Rolling Stone",
+          "outlet": "THR",
           "tier": 7,
-          "url": "https://www.rollingstone.com/music/music-country/dolly-parton-thanks-taylor-swift-travis-kelce-donation-1235588909/",
-          "ageMin": 1155,
-          "headline": "Dolly Parton Thanks Taylor Swift and Travis Kelce for $2 Million Donation to Her Imagination Library",
-          "summary": "\"I’m blown away and overjoyed with that gratitude,\" country legend says of being one of the beneficiaries of couple's $26 million pre-wedding donation"
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/karlovy-vary-dustin-hoffman-maggie-gyllenhaal-open-festival-1236636037/",
+          "ageMin": 1134,
+          "headline": "Dustin Hoffman, Maggie Gyllenhaal Charm Karlovy Vary With Robert Redford, Study Abroad Anecdotes",
+          "summary": "Jesse Eisenberg and Harvey Keitel were also among the stars walking the expanded red carpet of the Czech festival as it kicked off its double anniversary edition, including with a soccer film and a drone show."
         }
       ],
-      "ageMin": 1155,
+      "ageMin": 1134,
       "_cand": {
-        "key": "rss:dolly-parton-thanks-taylor-swift-and-travis-kelce-for-2-mill",
+        "key": "rss:dustin-hoffman-maggie-gyllenhaal-charm-karlovy-vary-with-rob",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -110,31 +111,31 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Rolling Stone"
+          "THR"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Rolling Stone",
+        "attribution": "THR",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 39,
+      "priority": 45,
       "signals": {
         "recency": 1,
         "corroboration": 12,
         "status": 18,
-        "type": 8,
+        "type": 6,
         "pop": 0,
         "breakout": 0,
-        "big": 0,
+        "big": 8,
         "trending": 0
       }
     },
     {
       "id": "news-joby-baker-death",
-      "slug": "joby-baker-dies-actor-in-gidget-elvis-films-disney-stalwart-good-morni",
-      "title": "Joby Baker Dies: Actor In Gidget Elvis Films, Disney Stalwart Good Morning World Co-Star With Ronnie Schell Was 92",
+      "slug": "joby-baker-actor-in-gidget-and-disney-films-dies-at-92",
+      "title": "Joby Baker, Actor in 'Gidget' and Disney Films, Dies at 92",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
@@ -142,14 +143,14 @@
       "eventType": "death",
       "sensitivity": "high",
       "eventSlug": "joby-baker-death",
-      "primaryKeyword": "Joby Baker death",
+      "primaryKeyword": "joby baker dies",
       "primaryEntity": "Joby Baker",
       "entities": [
         "Gidget",
         "Elvis Films",
-        "Good Morning World"
+        "Disney"
       ],
-      "angle": "Veteran actor Joby Baker, known for his roles in 'Gidget' and 'Elvis Films,' has passed away at 92.",
+      "angle": "Actor Joby Baker, known for his roles in 'Gidget,' 'Elvis Films,' and as a Disney stalwart, has died at 92.",
       "tmdbType": "movie",
       "source": "rss:Deadline",
       "sources": [
@@ -157,12 +158,12 @@
           "outlet": "Deadline",
           "tier": 7,
           "url": "https://deadline.com/2026/07/joby-baker-dead-1236974124/",
-          "ageMin": 24,
+          "ageMin": 39,
           "headline": "Joby Baker Dies: Actor In Gidget Elvis Films, Disney Stalwart Good Morning World Co-Star With Ronnie Schell Was 92",
           "summary": "Joby Baker, whose presence on television and in film throughout the 1960s and 70s made him one of the era s more familiar faces in both drama and light comic fare, died June 22 of natural causes in Mount Kisco, New York. He was 92. His death, announced to Deadline by his family, came just 10 [ ]"
         }
       ],
-      "ageMin": 24,
+      "ageMin": 39,
       "_cand": {
         "key": "rss:joby-baker-dies-actor-in-gidget-elvis-films-disney-stalwart-",
         "popularity": 0,
@@ -189,6 +190,131 @@
         "corroboration": 12,
         "status": 18,
         "type": 15,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0
+      }
+    },
+    {
+      "id": "news-adam-sandler-officiates-wedding-taylor-swift-travis-kelce",
+      "slug": "adam-sandler-officiates-wedding-attended-by-taylor-swift-and-travis-ke",
+      "title": "Adam Sandler Officiates Wedding Attended by Taylor Swift and Travis Kelce",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "adam-sandler-officiates-wedding-taylor-swift-travis-kelce",
+      "primaryKeyword": "adam sandler wedding officiant",
+      "primaryEntity": "Adam Sandler",
+      "entities": [
+        "Taylor Swift",
+        "Travis Kelce"
+      ],
+      "angle": "Adam Sandler officiated a wedding attended by Taylor Swift and Travis Kelce.",
+      "tmdbType": "movie",
+      "source": "rss:Rolling Stone",
+      "sources": [
+        {
+          "outlet": "Rolling Stone",
+          "tier": 7,
+          "url": "https://www.rollingstone.com/music/music-news/adam-sandler-taylor-swift-travis-kelce-wedding-officiant-1235589179/",
+          "ageMin": 10,
+          "headline": "Adam Sandler as Wedding Officiant? Taylor Swift and Travis Kelce s History With the Actor",
+          "summary": "The Happy Gilmore actor led the ceremony at the couple's wedding at Madison Square Garden on July 3"
+        }
+      ],
+      "ageMin": 10,
+      "_cand": {
+        "key": "rss:adam-sandler-as-wedding-officiant-taylor-swift-and-travis-ke",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Rolling Stone"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Rolling Stone",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 66,
+      "signals": {
+        "recency": 30,
+        "corroboration": 12,
+        "status": 18,
+        "type": 6,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0
+      }
+    },
+    {
+      "id": "news-dustin-hoffman-honored-karlovy-vary-film-festival",
+      "slug": "dustin-hoffman-honored-at-karlovy-vary-reflects-on-accidental-graduate",
+      "title": "Dustin Hoffman Honored at Karlovy Vary, Reflects on Accidental 'Graduate' Role",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "dustin-hoffman-honored-karlovy-vary-film-festival",
+      "primaryKeyword": "Dustin Hoffman",
+      "primaryEntity": "Dustin Hoffman",
+      "entities": [
+        "The Graduate"
+      ],
+      "angle": "Dustin Hoffman honored at Karlovy Vary and reflects on his breakout role in 'The Graduate'.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/dustin-hoffman-the-graduate-divided-america-karlovy-vary-1236636734/",
+          "ageMin": 42,
+          "headline": "Dustin Hoffman Talks Divided America and How He Got The Graduate Role: It Was an Accident",
+          "summary": "The Hollywood legend introduced a special screening of the iconic film at the Karlovy Vary film fest a day after being honored with the Czech event's Crystal Globe for Outstanding Artistic Contributions to World Cinema."
+        }
+      ],
+      "ageMin": 42,
+      "_cand": {
+        "key": "rss:dustin-hoffman-talks-divided-america-and-how-he-got-the-grad",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 62,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 8,
         "pop": 0,
         "breakout": 0,
         "big": 0,
