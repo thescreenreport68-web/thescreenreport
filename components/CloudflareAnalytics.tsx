@@ -5,7 +5,7 @@ import Script from "next/script";
 // inflates the raw "Requests" metric). Get the token from the Cloudflare
 // dashboard → Analytics & Logs → Web Analytics → Add a site → thescreenreport.com,
 // and paste it below. Renders nothing until a token is set, so it's safe to ship.
-const CF_BEACON_TOKEN = ""; // ← paste the Cloudflare Web Analytics token here
+const CF_BEACON_TOKEN = "3966570a65954cd98ce5e2e14a57dc06";
 
 export default function CloudflareAnalytics() {
   if (!CF_BEACON_TOKEN) return null;
