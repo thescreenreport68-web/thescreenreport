@@ -32,11 +32,53 @@ export async function getCurrentUser(): Promise<CurrentUser> {
   const u = data.user;
   if (!u) return null;
   const m = u.user_metadata ?? {};
+  // The editable profile row is the source of truth for name/avatar (so
+  // profile-settings changes show everywhere); fall back to the Google metadata.
+  const { data: prof } = await supabase
+    .from("profiles")
+    .select("display_name, avatar_url")
+    .eq("id", u.id)
+    .single();
   return {
     id: u.id,
-    name: m.full_name ?? m.name ?? "Reader",
-    avatar: m.avatar_url ?? m.picture ?? null,
+    name: prof?.display_name ?? m.full_name ?? m.name ?? "Reader",
+    avatar: prof?.avatar_url ?? m.avatar_url ?? m.picture ?? null,
   };
+}
+
+export async function updateProfile(input: {
+  displayName: string;
+  avatarUrl?: string | null;
+}): Promise<{ ok: boolean; error?: string }> {
+  const supabase = getSupabase();
+  if (!supabase) return { ok: false, error: "Unavailable." };
+  const { data } = await supabase.auth.getUser();
+  const uid = data.user?.id;
+  if (!uid) return { ok: false, error: "Please sign in." };
+  const patch: Record<string, unknown> = { display_name: input.displayName.trim().slice(0, 60) };
+  if (input.avatarUrl !== undefined) patch.avatar_url = input.avatarUrl;
+  const { error } = await supabase.from("profiles").update(patch).eq("id", uid);
+  if (error) return { ok: false, error: "Could not save. Try again." };
+  window.dispatchEvent(new Event("tsr-auth-changed"));
+  return { ok: true };
+}
+
+// Upload a profile picture to the avatars bucket → returns its public URL.
+export async function uploadAvatar(file: File): Promise<{ url?: string; error?: string }> {
+  const supabase = getSupabase();
+  if (!supabase) return { error: "Unavailable." };
+  const { data } = await supabase.auth.getUser();
+  const uid = data.user?.id;
+  if (!uid) return { error: "Please sign in." };
+  if (file.size > 3 * 1024 * 1024) return { error: "Image must be under 3 MB." };
+  const ext = (file.name.split(".").pop() || "jpg").toLowerCase().replace(/[^a-z0-9]/g, "");
+  const path = `${uid}/avatar_${Date.now()}.${ext}`;
+  const { error } = await supabase.storage
+    .from("avatars")
+    .upload(path, file, { upsert: true, cacheControl: "3600" });
+  if (error) return { error: "Upload failed. Try a smaller image." };
+  const { data: pub } = supabase.storage.from("avatars").getPublicUrl(path);
+  return { url: pub.publicUrl };
 }
 
 export async function signOut(): Promise<void> {
@@ -54,14 +96,30 @@ export async function fetchThreads(
   if (!supabase) return [];
   const { data, error } = await supabase
     .from("comments")
-    .select(
-      "id, body, status, like_count, reply_count, created_at, parent_id, user_id, profiles(display_name, avatar_url)",
-    )
+    .select("id, body, status, like_count, reply_count, created_at, parent_id, user_id")
     .eq("article_slug", slug)
     .neq("status", "rejected")
     .order("created_at", { ascending: true });
   if (error || !data) return [];
   const rows = data as unknown as CommentRow[];
+
+  // Attach author profiles with a separate query and merge (comments.user_id and
+  // profiles.id both reference auth.users, so PostgREST can't embed the join
+  // directly). This is what makes comments show on a fresh page load.
+  const uids = [...new Set(rows.map((r) => r.user_id).filter(Boolean))];
+  const profMap = new Map<string, CommentAuthor>();
+  if (uids.length) {
+    const { data: profs } = await supabase
+      .from("profiles")
+      .select("id, display_name, avatar_url")
+      .in("id", uids);
+    for (const p of (profs ?? []) as { id: string; display_name: string | null; avatar_url: string | null }[]) {
+      profMap.set(p.id, { display_name: p.display_name, avatar_url: p.avatar_url });
+    }
+  }
+  rows.forEach((r) => {
+    r.profiles = profMap.get(r.user_id) ?? null;
+  });
 
   // Which of these did I like?
   let liked = new Set<string>();

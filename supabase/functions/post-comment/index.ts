@@ -183,7 +183,7 @@ Deno.serve(async (req) => {
   const { data: inserted, error } = await admin
     .from("comments")
     .insert({ article_slug: slug, user_id: user.id, parent_id: parentId, body: text, status, mod_reason: modReason })
-    .select("id, body, status, like_count, reply_count, created_at, parent_id")
+    .select("id, body, status, like_count, reply_count, created_at, parent_id, user_id")
     .single();
   if (error) return json({ error: "Could not post your comment. Try again." }, 500, origin);
 

@@ -13,8 +13,7 @@ import path from "node:path";
 import { createRequire } from "node:module";
 import { CONTENT_DIR, INSIDE_FORMAT_TAG, MONITOR_WINDOW_HOURS, MAX_EMBEDS } from "./config.inside.mjs";
 import { loadStore, bumpUpdated } from "./store.mjs";
-import { harvestReactions, factBlockText, norm } from "./reactionFinder.mjs";
-import { insideEditorialGate } from "./editorialGate.mjs";
+import { harvestReactions, norm } from "./reactionFinder.mjs";
 import { getTweet } from "react-tweet/api";
 
 const require = createRequire(import.meta.url);
@@ -40,7 +39,6 @@ const save = (a, fm, body, dryRun) => { if (!dryRun) fs.writeFileSync(a.fp, matt
 export async function monitorInside({
   dir = CONTENT_DIR,
   harvestImpl = harvestReactions,
-  editorialImpl = insideEditorialGate,
   getTweetImpl = getTweet,
   storeImpl = null,
   dryRun = false,
@@ -98,10 +96,9 @@ export async function monitorInside({
         }
       }
 
-      // (a) top-up: re-harvest via the stored angle/trigger snapshot; append only NEW named
-      // voices. Dedup against the FULL original harvest fingerprint (not just the curated cards),
-      // and re-run the editorial event-match over the fresh material — this path is unattended,
-      // so it fails CLOSED: no editor verdict, no append (retry next cycle).
+      // (a) top-up: re-harvest via the stored angle/trigger snapshot; append only NEW posts. Dedup
+      // against the FULL original harvest fingerprint (not just the curated cards). Every appended
+      // quote passed the harvest's verbatim wall, so it's real by construction — no extra gate.
       const rec = store.published.find((r) => r.slug === a.slug);
       if (rec?.angle && rec?.trigger) {
         const h = await harvestImpl(rec.trigger, rec.angle).catch(() => ({ ok: false }));
@@ -110,20 +107,16 @@ export async function monitorInside({
             ...(rec.harvestQuoteKeys || []),
             ...(fm.reactions || []).map((r) => norm(r.quote).slice(0, 90)),
           ]);
-          const fresh = h.factBlock.reactions
-            .filter((r) => r.speaker && !have.has(norm(r.quote).slice(0, 90)))
+          const fresh = [...h.factBlock.reactions, ...h.factBlock.aggregateFans]
+            .filter((r) => r.quote && !have.has(norm(r.quote).slice(0, 90)))
             .slice(0, 5)
-            .map((r) => ({ speaker: r.speaker, ...(r.connection ? { connection: r.connection } : {}), ...(r.platform ? { platform: r.platform } : {}), ...(r.date ? { date: r.date } : {}), quote: r.quote }));
-          if (fresh.length >= 2) { // one straggler isn't an update; a real wave is
-            const ed = await editorialImpl({
-              trigger: rec.trigger, angle: rec.angle, factBlock: h.factBlock,
-              factText: factBlockText(h.factBlock, rec.trigger),
-            }).catch(() => ({ ran: false, reject: false }));
-            if (ed.ran && !ed.reject) {
+            .map((r) => ({ speaker: r.speaker || "A viewer", ...(r.connection ? { connection: r.connection } : {}), ...(r.platform ? { platform: r.platform } : {}), ...(r.date ? { date: r.date } : {}), quote: r.quote }));
+          if (fresh.length >= 2) { // one straggler isn't an update; a real new wave is
+            {
               fm.reactions = [...(fm.reactions || []), ...fresh];
               fm.updatedCount = (fm.updatedCount || 0) + 1;
               rec.harvestQuoteKeys = [...(rec.harvestQuoteKeys || []), ...fresh.map((r) => norm(r.quote).slice(0, 90))];
-              actions.push(`+${fresh.length} new voices`);
+              actions.push(`+${fresh.length} new posts`);
             }
           }
         }

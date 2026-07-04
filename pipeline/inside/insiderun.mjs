@@ -1,25 +1,24 @@
-// INSIDE-STORIES orchestrator. One run: triggers (news queue/ledger, famous-only) → angles
-// (maximal, candidates) → per angle: dedup → HARVEST (fail-closed floors) → editorial gate →
-// write → gate (deterministic wall + verify chain + judge) → cut loop → webVerify LAST →
-// polish → hero image (the news lane's exact ladder: pickHeroImage → measureRemote ≥1200px,
-// landscape preferred → Commons fallback → no image = HOLD) → assemble → record.
-// Run: cd "/Users/sivajithcu/Movie News site" && set -a; . ./.env; set +a; node site/pipeline/inside/insiderun.mjs [--dry-run] [--limit=N] [--event=<parentEventSlug>] [--no-hero]
+// INSIDE-STORIES orchestrator (REV 2 — audience reaction & discourse). One run: discover top stories
+// (TMDB trending + Reddit discourse) → angles (which of the 4 forms) → per angle: dedup → HARVEST
+// (real anchor posts; verbatim wall) → write (imagination on, facts locked) → gate (fact-locks +
+// engagement judge) → cut hard-fact strays → webVerify LAST → polish → BEST-RELEVANCE image
+// (mandatory featured image, else HOLD) → assemble → record.
+// Run: cd "/Users/sivajithcu/Movie News site" && set -a; . ./.env; set +a; node site/pipeline/inside/insiderun.mjs [--dry-run] [--limit=N] [--event=<storySlug>] [--no-hero]
 import fs from "node:fs";
 import path from "node:path";
 import { MODELS, ACCEPT_FLOOR, MAX_ATTEMPTS, GATE, DATA_DIR } from "./config.inside.mjs";
 import { loadTriggers } from "./trigger.mjs";
 import { proposeAngles } from "./angles.mjs";
 import { harvestReactions, factBlockText, norm } from "./reactionFinder.mjs";
-import { insideEditorialGate } from "./editorialGate.mjs";
 import { generateInside } from "./writer.mjs";
 import { gateInside, classifyInsideBlocks } from "./gate.mjs";
 import { writeInsideArticle } from "./assemble.mjs";
 import { loadStore, alreadyPublished, recordInsidePublished, parkAngle, parkedTries, clearParked } from "./store.mjs";
+import { pickInsideImage } from "./imagePicker.mjs";
 import { cutArticle } from "../lib/cutter.mjs";
 import { webVerifyArticle } from "../lib/webVerify.mjs";
 import { dedupeSentences, trimIncomplete } from "../lib/polish.mjs";
-import { pickHeroImage } from "../lib/heroImage.mjs";
-import { sourceImage, measureRemote } from "../stages/image.mjs";
+import { measureRemote } from "../stages/image.mjs";
 import { costReport } from "../lib/openrouter.mjs";
 
 const WEB_VERIFY = process.env.WEB_VERIFY !== "0";
@@ -35,58 +34,17 @@ const withTimeout = (p, ms, label) => {
     new Promise((_, rej) => { timer = setTimeout(() => rej(new Error(`watchdog: ${label} exceeded ${Math.round(ms / 1000)}s`)), ms); timer.unref?.(); }),
   ]).finally(() => clearTimeout(timer));
 };
-const T = { triggers: 90e3, angles: 60e3, harvest: 180e3, editorial: 60e3, generate: 240e3, gate: 180e3, webVerify: 120e3, hero: 120e3 };
-
-// The news lane's image formula, verbatim behavior (run.mjs:521-548): candidates best-first →
-// measure → first ≥1200px landscape wins; passing portrait only if no landscape; Wikimedia
-// Commons subject-photo last resort; nothing ≥1200px anywhere → the article HOLDS. Images are
-// the quintessential part (owner) — an inside article never ships without a proper one.
-async function resolveHero({ trigger, angle, article, bundle, heroImpl = pickHeroImage, measureImpl = measureRemote, commonsImpl = sourceImage }) {
-  let image = null;
-  const heroTopic = {
-    primaryEntity: angle.focusEntity || trigger.primaryEntity,
-    title: article.title,
-    eventType: trigger.eventType,
-    formatTag: "inside",
-    tmdbType: trigger.tmdbType || "movie",
-    sources: (bundle?.sources || []).filter((s) => s.url),
-  };
-  const isTitleStory = trigger.subjectKind === "title";
-  const hero = await heroImpl({ topic: heroTopic, article, bundle, isTitleStory }).catch(() => null);
-  const take = (cand, dims) => { image = { image: cand.url, imageWidth: dims.imageWidth, imageHeight: dims.imageHeight, credit: cand.credit }; };
-  if (hero?.candidates?.length) {
-    let portrait = null;
-    for (const cand of hero.candidates) {
-      const dims = await measureImpl(cand.url).catch(() => null);
-      if (!dims || dims.imageWidth < 1200) continue; // Discover floor
-      if (dims.imageWidth >= dims.imageHeight) { take(cand, dims); break; }
-      if (!portrait) portrait = { cand, dims };
-    }
-    if (!image && portrait) take(portrait.cand, portrait.dims);
-  }
-  if (!image) {
-    const queries = [...new Set([article.imageQuery, angle.focusEntity, trigger.primaryEntity, ...(trigger.entities || [])].filter(Boolean))];
-    for (const q of queries) {
-      const wsrc = await commonsImpl(q).catch(() => null);
-      if (!wsrc) continue;
-      const dims = await measureImpl(wsrc.downloadUrl).catch(() => null);
-      if (dims && dims.imageWidth >= 1200) { image = { image: wsrc.downloadUrl, imageWidth: dims.imageWidth, imageHeight: dims.imageHeight, credit: wsrc.credit }; break; }
-    }
-  }
-  return image;
-}
+const T = { triggers: 90e3, angles: 60e3, harvest: 180e3, generate: 240e3, gate: 180e3, webVerify: 120e3, hero: 120e3 };
 
 export async function insideRun({
   loadTriggersImpl = loadTriggers,
   proposeAnglesImpl = proposeAngles,
   harvestImpl = harvestReactions,
-  editorialImpl = insideEditorialGate,
   generateImpl = generateInside,
   gateImpl = gateInside,
   writeImpl = writeInsideArticle,
-  heroImpl = pickHeroImage,
+  imagePickImpl = pickInsideImage,
   measureImpl = measureRemote,
-  commonsImpl = sourceImage,
   webVerifyImpl = webVerifyArticle,
   storeImpl = null,
   hero = true,
@@ -150,23 +108,8 @@ export async function insideRun({
           console.log(`    ✗ ${h.reason}`);
           continue;
         }
-        console.log(`    ✓ ${h.factBlock.stats.namedVoices} named voices, ${h.factBlock.stats.fanPosts} fan posts, ${h.factBlock.tweetIds.length} embeds`);
+        console.log(`    ✓ ${h.factBlock.stats.namedVoices} named quotes, ${h.factBlock.stats.fanPosts} audience posts, ${h.factBlock.tweetIds.length} embeds`);
         const factText = factBlockText(h.factBlock, trigger);
-
-        // EDITORIAL. The event-match check lives here, so an editor that DIDN'T run must fail
-        // closed for this angle: hold and retry next cycle (inside stories aren't minute-
-        // sensitive; only published/parked-dead angles are skipped, so an outage defers, it
-        // never publishes unchecked).
-        const ed = await withTimeout(editorialImpl({ trigger, angle, factBlock: h.factBlock, factText }), T.editorial, `editorial ${tag}`)
-          .catch((e) => ({ ran: false, reject: false, reason: String(e?.message || e).slice(0, 100) }));
-        if (ed.reject) { console.log(`    ✗ editorial: ${String(ed.reason).slice(0, 110)}`); report.rejected.push({ tag, stage: "editorial", reason: ed.reason }); continue; }
-        if (ed.ran === false) { console.log(`    ⏸ editorial did not run: ${String(ed.reason).slice(0, 90)}`); report.held.push({ tag, reason: `editorial gate did not run: ${ed.reason}` }); continue; }
-        if (ed.eventSummary) trigger.eventSummary = ed.eventSummary;
-        if (ed.retarget?.focusEntity) {
-          console.log(`    ↪ retarget: ${angle.focusEntity} → ${ed.retarget.focusEntity}`);
-          angle.focusEntity = ed.retarget.focusEntity;
-          if (ed.retarget.angle) angle.angle = ed.retarget.angle;
-        }
 
         // WRITE → GATE loop (news semantics: clean pass ≥80-equivalent = publishMin+no blocks;
         // final-attempt terminal accept at ACCEPT_FLOOR when only cut-type blocks remain).
@@ -230,12 +173,12 @@ export async function insideRun({
 
         article.body = trimIncomplete(dedupeSentences(article.body));
 
-        // HERO — no ≥1200px image on any ladder = HOLD, never a weak image.
+        // FEATURED IMAGE — mandatory (owner). Best-relevance picker; no ≥1200px match = HOLD.
         let image = null;
         if (hero && !dryRun) {
-          console.log(`    hero image…`);
-          image = await withTimeout(resolveHero({ trigger, angle, article, bundle: h.bundle, heroImpl, measureImpl, commonsImpl }), T.hero, `hero ${tag}`).catch(() => null);
-          if (!image) { report.held.push({ tag, reason: "no >=1200px hero image on any ladder" }); continue; }
+          console.log(`    featured image…`);
+          image = await withTimeout(imagePickImpl({ trigger, angle, article, bundle: h.bundle, measureImpl }), T.hero, `image ${tag}`).catch(() => null);
+          if (!image) { report.held.push({ tag, reason: "no >=1200px relevant featured image found" }); continue; }
         }
 
         const dateISO = new Date(now - written * 60000).toISOString(); // 1-min stagger (news pattern)
@@ -250,7 +193,7 @@ export async function insideRun({
             // against this so already-seen voices never re-append as fake "new" updates.
             harvestQuoteKeys: [...h.factBlock.reactions, ...h.factBlock.aggregateFans].map((r) => norm(r.quote).slice(0, 90)),
             angle: { form: angle.form, angle: angle.angle, workingTitle: angle.workingTitle, focusEntity: angle.focusEntity, searchQueries: angle.searchQueries },
-            trigger: { parentEventSlug: trigger.parentEventSlug, parentSlug: trigger.parentSlug, parentTitle: trigger.parentTitle, primaryEntity: trigger.primaryEntity, eventType: trigger.eventType, sensitivity: trigger.sensitivity, tmdbType: trigger.tmdbType, subjectKind: trigger.subjectKind, priority: trigger.priority },
+            trigger: { parentEventSlug: trigger.parentEventSlug, parentSlug: trigger.parentSlug, parentTitle: trigger.parentTitle, primaryEntity: trigger.primaryEntity, eventType: trigger.eventType, tmdbType: trigger.tmdbType, subjectKind: trigger.subjectKind, priority: trigger.priority, work: trigger.work || null, sources: trigger.sources || [], redditPosts: trigger.redditPosts || [] },
           });
         }
         report.published.push({ tag, slug: out.slug, score: scored.score, ...(acceptReason ? { acceptReason } : {}), voices: h.factBlock.stats.namedVoices, fans: h.factBlock.stats.fanPosts });

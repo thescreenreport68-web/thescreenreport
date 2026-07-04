@@ -53,7 +53,19 @@ const freshCandidates = candidates.filter((c) =>
   !SCOPE_JUNK.test(c.title || "") &&
   !JUNK_OUTLETS.has((c.outlet || "").toLowerCase().trim()));
 if (candBefore - freshCandidates.length > 0) monitor.stage("dedup", `dropped ${candBefore - freshCandidates.length} already-published candidate(s) by title; ${freshCandidates.length} remain`);
-const fresh = freshCandidates.filter((c) => c.ageMin != null).sort((a, b) => a.ageMin - b.ageMin);
+// EXTRACTABILITY-FIRST shortlist (2026-07-04): a clean publisher URL (an RSS main/section feed) extracts to full
+// article text; a Google-News CBMi redirect URL does NOT resolve to article text (Jina returns only Google's
+// interstitial), so a gnews-only topic starves the faithful writer and editorial-rejects on empty text. gnews is a
+// great TRENDING SIGNAL but a poor TEXT source — and the big trending stories are ALSO in our section feeds with
+// clean URLs. So we prefer extractable clean-URL candidates into the categorize shortlist (freshest-first within
+// each group): the RSS version of a hot story wins over its unextractable gnews duplicate, and MAKE always has text.
+const isGnewsRedirect = (c) => { try { return /(^|\.)news\.google\.com$/i.test(new URL(c.url || "").hostname); } catch { return false; } };
+const extractable = (c) => !!c.url && !isGnewsRedirect(c);
+const fresh = freshCandidates.filter((c) => c.ageMin != null).sort((a, b) => {
+  const ea = extractable(a) ? 0 : 1, eb = extractable(b) ? 0 : 1;
+  if (ea !== eb) return ea - eb; // extractable clean-URL candidates first, then freshest-first within each group
+  return a.ageMin - b.ageMin;
+});
 const backbone = freshCandidates.filter((c) => c.ageMin == null).sort((a, b) => (b.popularity || 0) - (a.popularity || 0));
 const nBackbone = Math.min(backbone.length, Math.round(SHORTLIST * 0.15));
 const shortlist = [...fresh.slice(0, SHORTLIST - nBackbone), ...backbone.slice(0, nBackbone)];

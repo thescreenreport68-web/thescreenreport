@@ -4,31 +4,29 @@ import { SectionLabel } from "@/components/NicheModules";
 import TweetEmbed from "@/components/embed/TweetEmbed";
 import { formatDateShort } from "@/lib/format";
 
-/* Inside (ripple/reaction) per-form UI — formatTag "inside". Each component guards on its
+/* Inside (audience-reaction & discourse) per-form UI — formatTag "inside". Each component guards on its
    own field, so an article only renders the modules for its data. On the shared design tokens. */
 
 const stripQuotes = (s: string) => s.trim().replace(/^["“”]+|["“”]+$/g, "").trim();
 
 const INSIDE_LABEL: Record<string, string> = {
-  "peer-tributes": "Stars React",
-  "fan-pulse": "Fans React",
-  "cast-crew-voices": "Cast & Crew",
-  "breakout-spotlight": "Breakout",
-  "single-voice": "On the Record",
-  "ripple-effects": "The Ripple",
+  "audience-reaction": "Fans React",
+  "the-debate": "The Debate",
+  "creator-answers-critics": "The Response",
+  "breakout-buzz": "Everyone's Talking",
 };
 
 /* ---------- ripple header: form label + parent-story backlink + live line ---------- */
 function RippleHeader({ article }: { article: Article }) {
-  const label = article.insideForm ? INSIDE_LABEL[article.insideForm] || "The Ripple" : "";
+  const label = article.insideForm ? INSIDE_LABEL[article.insideForm] || "The Discourse" : "";
   if (!label && !article.parentSlug && !article.parentTitle) return null;
   // Resolve the parent by slug alone — the pipeline can route the child into a DIFFERENT
   // category than the parent story, and a retracted/deleted parent must not leave a dead
   // link (unresolved → plain text, no 404).
   const parent = article.parentSlug ? getArticleBySlug(article.parentSlug) : undefined;
   const parentText = article.parentTitle || article.parentSlug?.replace(/-/g, " ");
-  // Tributes and fan-pulse keep collecting reactions after publish (monitor top-ups).
-  const stillLive = article.insideForm === "peer-tributes" || article.insideForm === "fan-pulse";
+  // Audience-reaction and the-debate keep collecting posts after publish (monitor top-ups).
+  const stillLive = article.insideForm === "audience-reaction" || article.insideForm === "the-debate";
   return (
     <div className="my-5 not-prose border-y-2 border-ink py-3">
       {label ? <span className="kicker">{label}</span> : null}
@@ -58,14 +56,14 @@ function RippleHeader({ article }: { article: Article }) {
   );
 }
 
-/* ---------- the anchor statement (family / rep / creator) ---------- */
+/* ---------- the anchor statement (creator's reply to critics) ---------- */
 function AnchorStatement({ article }: { article: Article }) {
   const a = article.anchorStatement;
   if (!a?.quote) return null;
   const meta = [a.connection, a.platform].filter(Boolean).join(" · ");
   return (
     <aside className="my-6 not-prose border border-hair p-5">
-      <SectionLabel>The Statement</SectionLabel>
+      <SectionLabel>The Response</SectionLabel>
       <div className="font-display text-xl font-bold leading-tight text-ink">{a.speaker}</div>
       {meta ? <div className="meta-mono mt-0.5">{meta}</div> : null}
       <blockquote className="mt-3 border-l-2 border-red pl-4 font-body text-xl italic leading-snug text-ink">
@@ -75,7 +73,7 @@ function AnchorStatement({ article }: { article: Article }) {
   );
 }
 
-/* ---------- fan-pulse verdict ---------- */
+/* ---------- fan-consensus verdict (sentiment read; present on all forms) ---------- */
 function FanConsensusBox({ article }: { article: Article }) {
   if (!article.fanConsensus) return null;
   return (
@@ -117,7 +115,7 @@ function ReactionCard({
 
 function ReactionList({ article }: { article: Article }) {
   if (!article.reactions?.length) return null;
-  const heading = article.insideForm === "peer-tributes" ? "The Tributes" : "The Reactions";
+  const heading = "The Reactions";
   return (
     <section className="mt-10 not-prose">
       <div className="mb-1 border-b-2 border-ink pb-1">

@@ -1,15 +1,16 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import { getSupabase } from "@/lib/supabase";
 import { renderGoogleButton } from "@/lib/googleAuth";
+import { getCurrentUser, type CurrentUser } from "@/lib/comments";
+import ProfileSettings from "./ProfileSettings";
 
-/* The always-visible account control in the header (every device). Signed out:
-   a "Sign In" button that opens a dropdown with the official Google button —
-   the universal path that works on phones too, unlike the auto-popup (which
-   iOS Safari can't show). Signed in: avatar + a sign-out menu. */
-
-type Me = { name: string; avatar: string | null } | null;
+/* The always-visible account control in the header (every device). The dropdown
+   renders in a PORTAL with fixed positioning so it's never clipped by the
+   collapsing masthead (which is overflow-hidden) or stacked behind the page.
+   Signed out → Google button; signed in → Edit profile + Sign out. */
 
 function PersonIcon() {
   return (
@@ -21,25 +22,19 @@ function PersonIcon() {
 }
 
 export default function HeaderAuth() {
-  const [me, setMe] = useState<Me>(null);
+  const [me, setMe] = useState<CurrentUser>(null);
   const [ready, setReady] = useState(false);
   const [open, setOpen] = useState(false);
+  const [editing, setEditing] = useState(false);
+  const [pos, setPos] = useState<{ top: number; right: number } | null>(null);
+  const btnRef = useRef<HTMLButtonElement>(null);
   const gbtn = useRef<HTMLDivElement>(null);
-  const wrap = useRef<HTMLDivElement>(null);
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
 
   const refresh = async () => {
-    const supabase = getSupabase();
-    if (!supabase) return;
-    const { data } = await supabase.auth.getUser();
-    const u = data.user;
-    setMe(
-      u
-        ? {
-            name: u.user_metadata?.full_name ?? u.user_metadata?.name ?? "Account",
-            avatar: u.user_metadata?.avatar_url ?? u.user_metadata?.picture ?? null,
-          }
-        : null,
-    );
+    if (!getSupabase()) return;
+    setMe(await getCurrentUser());
     setReady(true);
   };
 
@@ -53,20 +48,34 @@ export default function HeaderAuth() {
     return () => window.removeEventListener("tsr-auth-changed", onAuth);
   }, []);
 
-  // Render the Google button into the dropdown when it opens (signed out).
-  useEffect(() => {
-    if (open && !me && gbtn.current) renderGoogleButton(gbtn.current);
-  }, [open, me]);
+  const openMenu = () => {
+    const r = btnRef.current?.getBoundingClientRect();
+    if (r) setPos({ top: r.bottom + 8, right: Math.max(8, window.innerWidth - r.right) });
+    setOpen((v) => !v);
+  };
 
-  // Close on outside click.
+  // Close on scroll (fixed dropdown would drift from the button) + Escape.
   useEffect(() => {
     if (!open) return;
-    const onDoc = (e: MouseEvent) => {
-      if (wrap.current && !wrap.current.contains(e.target as Node)) setOpen(false);
+    const close = () => setOpen(false);
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpen(false);
+    window.addEventListener("scroll", close, { passive: true });
+    window.addEventListener("resize", close);
+    window.addEventListener("keydown", onKey);
+    return () => {
+      window.removeEventListener("scroll", close);
+      window.removeEventListener("resize", close);
+      window.removeEventListener("keydown", onKey);
     };
-    document.addEventListener("mousedown", onDoc);
-    return () => document.removeEventListener("mousedown", onDoc);
   }, [open]);
+
+  // Render the Google button into the (portal) dropdown once it's open + signed out.
+  useEffect(() => {
+    if (open && !me && gbtn.current) {
+      const t = setTimeout(() => gbtn.current && renderGoogleButton(gbtn.current), 30);
+      return () => clearTimeout(t);
+    }
+  }, [open, me]);
 
   const signOut = async () => {
     await getSupabase()?.auth.signOut();
@@ -77,24 +86,18 @@ export default function HeaderAuth() {
   if (!getSupabase() || !ready) return null;
 
   return (
-    <div ref={wrap} className="relative">
+    <>
       <button
+        ref={btnRef}
         type="button"
-        onClick={() => setOpen((v) => !v)}
+        onClick={openMenu}
         aria-haspopup="true"
         aria-expanded={open}
         className="flex items-center gap-1.5 text-ink transition-colors duration-150 hover:text-red"
       >
         {me?.avatar ? (
           // eslint-disable-next-line @next/next/no-img-element
-          <img
-            src={me.avatar}
-            alt=""
-            width={24}
-            height={24}
-            referrerPolicy="no-referrer"
-            className="h-6 w-6 rounded-full object-cover"
-          />
+          <img src={me.avatar} alt="" width={24} height={24} referrerPolicy="no-referrer" className="h-6 w-6 rounded-full object-cover" />
         ) : (
           <PersonIcon />
         )}
@@ -103,28 +106,56 @@ export default function HeaderAuth() {
         </span>
       </button>
 
-      {open ? (
-        <div className="absolute right-0 top-full z-50 mt-2 w-64 border border-ink bg-paper p-4 shadow-lg">
-          {me ? (
-            <div>
-              <p className="byline text-ink">{me.name}</p>
-              <button
-                onClick={signOut}
-                className="btn-label mt-3 w-full border border-hair py-2 text-slate transition-colors duration-150 hover:border-red hover:text-red"
+      {mounted && open && pos
+        ? createPortal(
+            <>
+              <div className="fixed inset-0 z-[99]" onMouseDown={() => setOpen(false)} />
+              <div
+                className="fixed z-[100] w-64 border border-ink bg-paper p-4 shadow-lg"
+                style={{ top: pos.top, right: pos.right }}
               >
-                Sign Out
-              </button>
-            </div>
-          ) : (
-            <div>
-              <p className="dek text-sm leading-snug">
-                Sign in to comment and join the conversation.
-              </p>
-              <div ref={gbtn} className="mt-3 flex justify-center" />
-            </div>
-          )}
-        </div>
-      ) : null}
-    </div>
+                {me ? (
+                  <div>
+                    <div className="flex items-center gap-2.5">
+                      {me.avatar ? (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img src={me.avatar} alt="" width={32} height={32} referrerPolicy="no-referrer" className="h-8 w-8 rounded-full object-cover" />
+                      ) : (
+                        <span className="flex h-8 w-8 items-center justify-center rounded-full bg-ink font-sans text-sm font-bold text-paper">
+                          {me.name.charAt(0).toUpperCase()}
+                        </span>
+                      )}
+                      <span className="byline text-ink">{me.name}</span>
+                    </div>
+                    <button
+                      onClick={() => {
+                        setEditing(true);
+                        setOpen(false);
+                      }}
+                      className="btn-label mt-4 w-full border border-hair py-2 text-slate transition-colors duration-150 hover:border-red hover:text-red"
+                    >
+                      Edit Profile
+                    </button>
+                    <button
+                      onClick={signOut}
+                      className="btn-label mt-2 w-full border border-hair py-2 text-slate transition-colors duration-150 hover:border-red hover:text-red"
+                    >
+                      Sign Out
+                    </button>
+                  </div>
+                ) : (
+                  <div>
+                    <p className="dek text-sm leading-snug">Sign in to comment and join the conversation.</p>
+                    <div ref={gbtn} className="mt-3 flex justify-center" />
+                  </div>
+                )}
+              </div>
+            </>,
+            document.body,
+          )
+        : null}
+
+      {editing && me ? <ProfileSettings me={me} onClose={() => setEditing(false)} /> : null}
+    </>
   );
 }

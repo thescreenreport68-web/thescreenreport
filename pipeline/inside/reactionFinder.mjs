@@ -6,6 +6,7 @@
 import { chat } from "../lib/openrouter.mjs";
 import { findContent } from "../lib/contentFinder.mjs";
 import { cacheTweets } from "../lib/tweets.mjs";
+import { redditSearchPosts, redditTopComments } from "../find/sources/reddit.mjs";
 import { MODELS, FORMS, MAX_EMBEDS } from "./config.inside.mjs";
 
 // Normalization for the verbatim wall: curly→straight quotes, dashes unified, whitespace
@@ -119,34 +120,51 @@ JSON: {"posts":[{"i":0,"aboutEvent":true,"speakerType":"","connection":"","stanc
   }
 }
 
-// Per-form floors — the fail-closed angle gate ("maximal breadth, grounding-gated").
+// The ONLY fail-closed floor left (REV 2): require a few REAL anchor posts so the embeds are real and
+// the sentiment we characterize is honest. An "anchor" = any real named quote OR audience post
+// (X/Reddit). creator-answers-critics additionally needs ≥1 real NAMED creator quote.
 export function meetsFloor(form, stats) {
   const f = FORMS[form] || {};
-  if (f.minNamedVoices && stats.namedVoices < f.minNamedVoices)
-    return { ok: false, reason: `named voices ${stats.namedVoices} < ${f.minNamedVoices}` };
-  if (f.minFanPosts && stats.fanPosts < f.minFanPosts)
-    return { ok: false, reason: `fan posts ${stats.fanPosts} < ${f.minFanPosts}` };
-  if (f.minPrimaryQuoteWords && stats.longestQuoteWords < f.minPrimaryQuoteWords)
-    return { ok: false, reason: `primary quote ${stats.longestQuoteWords}w < ${f.minPrimaryQuoteWords}w` };
-  // namedVoices already counts company/official speakers — no double-counting, 2 means 2.
-  if (f.minConfirmedEffects && stats.namedVoices < f.minConfirmedEffects)
-    return { ok: false, reason: `confirmed effect voices ${stats.namedVoices} < ${f.minConfirmedEffects}` };
+  const anchors = (stats.namedVoices || 0) + (stats.fanPosts || 0);
+  if (f.minCreatorQuotes && stats.namedVoices < f.minCreatorQuotes)
+    return { ok: false, reason: `creator quotes ${stats.namedVoices} < ${f.minCreatorQuotes}` };
+  if (f.minAnchors && anchors < f.minAnchors)
+    return { ok: false, reason: `real anchor posts ${anchors} < ${f.minAnchors}` };
   return { ok: true };
 }
 
 // Deterministic per-form fallback queries — plain words, the way a person actually searches.
-// Used after the LLM's angle queries so an over-specific proposal can't starve the harvest.
 export function fallbackQueries(trigger, angle) {
   const who = angle.focusEntity || trigger.primaryEntity;
   const F = {
-    "peer-tributes": [`${who} tributes`, `${who} stars react`],
-    "fan-pulse": [`${who} fans react`, `${who} reactions`],
-    "cast-crew-voices": [`${who} cast reacts`, `${who} speaks out`],
-    "breakout-spotlight": [`who is ${who}`, `${who} breakout`],
-    "single-voice": [`${who} responds`, `${who} statement`],
-    "ripple-effects": [`${who} what happens next`, `${who} aftermath`],
+    "audience-reaction": [`${who} fans react`, `${who} reactions`],
+    "the-debate": [`${who} controversy`, `${who} fans divided`],
+    "creator-answers-critics": [`${who} responds criticism`, `${who} addresses backlash`],
+    "breakout-buzz": [`who is ${who}`, `${who} everyone talking`],
   };
   return F[angle.form] || [`${who} reactions`];
+}
+
+// Cheap relevance+stance pass over Reddit comments (the audience anchors). Comment text is verbatim
+// from the API; this only decides which are on-subject and their stance.
+const CLASSIFY_REDDIT_SYS = `You classify Reddit comments for an audience-reaction desk. For each comment:
+- aboutSubject: is it genuinely reacting to / discussing THIS subject (not off-topic, spam, or meta)?
+- stance: positive|negative|mixed|neutral toward the subject. Output STRICT JSON only.`;
+async function classifyRedditComments(comments, trigger, angle, { model, chatImpl }) {
+  const items = comments.map((c, i) => ({ i, text: (c.text || "").slice(0, 300) }));
+  const user = `SUBJECT: ${trigger.primaryEntity}${trigger.work ? ` — "${trigger.work.title}"` : ""}
+ANGLE: ${angle.angle} (form: ${angle.form})
+
+COMMENTS:
+${JSON.stringify(items, null, 1)}
+
+JSON: {"comments":[{"i":0,"aboutSubject":true,"stance":"positive|negative|mixed|neutral"}]}`;
+  try {
+    const { data } = await chatImpl({ model, system: CLASSIFY_REDDIT_SYS, user, json: true, maxTokens: 1000, temperature: 0 });
+    return (data?.comments || []).filter((p) => p && p.aboutSubject && Number.isInteger(p.i) && comments[p.i]);
+  } catch {
+    return [];
+  }
 }
 
 export async function harvestReactions(trigger, angle, {
@@ -156,6 +174,9 @@ export async function harvestReactions(trigger, angle, {
   model = MODELS.verify, // flash-lite: extraction is cheap classification, not writing
   embeds = true,
   scanImpl = scanPagesForTweets,
+  reddit = true,
+  redditSearchImpl = redditSearchPosts,
+  redditCommentsImpl = redditTopComments,
   maxQueries = 3,
   // Soft self-deadline: stop STARTING new queries past this, return gracefully with whatever was
   // harvested (→ under-floor park + retry next cycle) instead of being watchdog-killed (→ blocked,
@@ -239,7 +260,8 @@ export async function harvestReactions(trigger, angle, {
     if (await runQuery(queries[qi], [])) recompute();
   }
 
-  if (!withText.length) return { ok: false, reason: "no material: no extractable sources on any query", stats: null };
+  // (No early bail on empty contentFinder — Reddit below is an independent anchor source that works
+  // even when the keyless article-extraction tier is throttled.)
 
   // 3b. TWEETS AS REACTIONS. The outlet coverage carries the reaction posts' URLs; resolve them
   //     through the keyless syndication cache (deleted/protected drop silently), classify author
@@ -280,33 +302,58 @@ export async function harvestReactions(trigger, angle, {
     recompute();
   }
 
+  // 3c. REDDIT AS ANCHORS — the keyless, reliable discourse source (audience posts, verbatim from the
+  //     API). Discovered posts + a targeted search; pull top comments; classify relevance+stance once.
+  //     Reddit users are pseudonymous → aggregate "fan" anchors (never named).
+  if (reddit) {
+    try {
+      const who = angle.focusEntity || trigger.primaryEntity;
+      const found = await redditSearchImpl(who, { nowMs: t0 }).catch(() => []);
+      const posts = [...(trigger.redditPosts || []), ...found];
+      const seenPerma = new Set();
+      const topPosts = posts.filter((p) => p?.permalink && !seenPerma.has(p.permalink) && (seenPerma.add(p.permalink), true)).slice(0, 4);
+      const commentLists = await Promise.all(topPosts.map((p) => redditCommentsImpl(p.permalink).catch(() => [])));
+      const comments = commentLists.flat().slice(0, 14);
+      if (comments.length) {
+        const classified = await classifyRedditComments(comments, trigger, angle, { model, chatImpl });
+        for (const c of classified) {
+          const cm = comments[c.i];
+          if (!cm?.text) continue;
+          withText.push({ url: null, domain: "reddit.com", owner: "reddit", tier: "social", title: "reddit comment", text: cm.text, quotes: [cm.text] });
+          raw.push({ speaker: "", speakerType: "fan", connection: "", platform: "Reddit", date: "", quote: cm.text.split(/\s+/).slice(0, 45).join(" "), stance: c.stance || "neutral", sourceIdx: withText.length - 1 });
+        }
+        recompute();
+      }
+    } catch { /* reddit outage — skip; other anchors may suffice */ }
+  }
+
   const stats = statsOf();
   const floor = meetsFloor(angle.form, stats);
   if (!floor.ok) return { ok: false, reason: `under floor: ${floor.reason}`, stats };
 
-  // fan-pulse honesty precondition: "divided" framing needs BOTH stances in the harvest.
+  // "divided/split" framing needs BOTH stances in the anchors (the-debate honesty precondition).
   stats.divided = stats.hasPositive && stats.hasNegative;
-  tweetIds = tweetIds.slice(0, MAX_EMBEDS); // embed cap is separate from the reaction pool
+  tweetIds = tweetIds.slice(0, MAX_EMBEDS); // embed cap is separate from the anchor pool
 
   return {
     ok: true,
-    factBlock: { reactions: named, aggregateFans: fans, tweetIds, sources: bundle.sources || [], stats },
-    bundle,
+    factBlock: { reactions: named, aggregateFans: fans, tweetIds, sources: bundle?.sources || trigger.sources || [], stats },
+    bundle: bundle || { sources: trigger.sources || [] },
   };
 }
 
 // The writer's ONLY quote source + the verify-gate grounding. Numbered so the writer can cite.
 export function factBlockText(factBlock, trigger) {
-  const L = [`CONFIRMED EVENT: ${trigger.parentTitle} (${trigger.eventType}; subject: ${trigger.primaryEntity})`];
-  L.push("ON-RECORD REACTIONS (the ONLY quotes and voices that exist — never invent, merge, or extend):");
+  const L = [`STORY: ${trigger.parentTitle} (subject: ${trigger.primaryEntity})`];
+  L.push("NAMED ON-RECORD QUOTES (creators/known figures — reproduce EXACTLY, attribute to this name; never invent, merge, or extend):");
   factBlock.reactions.forEach((r, i) =>
     L.push(`R${i + 1}. ${r.speaker}${r.connection ? ` (${r.connection})` : ""} — ${r.platform || "on the record"}${r.date ? `, ${r.date}` : ""} [${r.stance}]${r.tweetId ? ` [tweet:${r.tweetId}]` : ""}: "${r.quote}"`));
   if (factBlock.aggregateFans.length) {
-    L.push("FAN POSTS (public, quote WITHOUT any name — attribute in aggregate: \"fans on X\", \"one fan wrote\"):");
-    factBlock.aggregateFans.forEach((r, i) => L.push(`F${i + 1}. [${r.stance}] ${r.platform || ""}: "${r.quote}"`));
+    L.push("AUDIENCE POSTS (real public reactions — quote WITHOUT any name; attribute in aggregate: \"one viewer wrote,\" \"fans on Reddit,\" \"one X user said\"):");
+    factBlock.aggregateFans.forEach((r, i) => L.push(`A${i + 1}. [${r.stance}] ${r.platform || ""}: "${r.quote}"`));
   }
   const s = factBlock.stats;
-  L.push(`HARVEST STATS: ${s.namedVoices} named voices, ${s.fanPosts} fan posts, sentiment ${s.divided ? "DIVIDED" : s.hasNegative && !s.hasPositive ? "negative" : s.hasPositive && !s.hasNegative ? "positive" : "mixed/neutral"}.`);
+  L.push(`SENTIMENT PICTURE (characterize honestly, anchored by the posts above): ${s.divided ? "DIVIDED (both sides present)" : s.hasNegative && !s.hasPositive ? "mostly negative" : s.hasPositive && !s.hasNegative ? "mostly positive" : "mixed / neutral"} — ${s.namedVoices} named quotes, ${s.fanPosts} audience posts.`);
   return L.join("\n");
 }
 

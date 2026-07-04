@@ -261,9 +261,16 @@ function CommentView({
               placeholder={`Reply to ${name}…`}
               compact
               onCancel={() => setReplying(false)}
-              onPosted={(row) => {
+              onPosted={(row, _held, authorName, authorAvatar) => {
                 setReplying(false);
-                onReplyPosted(row, c.id);
+                onReplyPosted(
+                  {
+                    ...row,
+                    user_id: row.user_id ?? me?.id ?? "",
+                    profiles: { display_name: authorName, avatar_url: authorAvatar },
+                  },
+                  c.id,
+                );
               }}
             />
           </div>
@@ -345,6 +352,7 @@ export default function Comments({ slug }: { slug: string }) {
   const onPosted = (row: CommentRow, _held: boolean, name: string, avatar: string | null) => {
     const newThread: Thread = {
       ...row,
+      user_id: row.user_id ?? me?.id ?? "",
       profiles: { display_name: name, avatar_url: avatar },
       likedByMe: false,
       replies: [],
