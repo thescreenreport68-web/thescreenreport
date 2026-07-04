@@ -3,6 +3,7 @@
 // Run:  cd "/Users/sivajithcu/Movie News site" && set -a; . ./.env; set +a; node site/pipeline/run.mjs [--dry-run] [--only=<id>]
 import fs from "node:fs";
 import path from "node:path";
+import { fileURLToPath } from "node:url";
 import { MODELS } from "./config.mjs";
 import { gatherFacts } from "./lib/groundFacts.mjs";
 import { findContent } from "./lib/contentFinder.mjs";
@@ -10,7 +11,7 @@ import { generate } from "./stages/generate.mjs";
 import { classify } from "./stages/classify.mjs";
 import { editorialGate } from "./stages/editorialGate.mjs";
 import { canonicalize } from "./find/categorize.mjs";
-import { recordPublished, slugKey } from "./find/store.mjs";
+import { recordPublished, slugKey, loadPublished, entityKey } from "./find/store.mjs";
 import { sourceImage, measureRemote } from "./stages/image.mjs";
 import { pickHeroImage } from "./lib/heroImage.mjs";
 import { cutArticle } from "./lib/cutter.mjs";
@@ -26,8 +27,10 @@ import { costReport } from "./lib/openrouter.mjs";
 import { auditArticle, printAudit } from "./lib/articleAudit.mjs";
 import { TOPICS } from "./topics.mjs";
 
-const ART = "/Users/sivajithcu/Movie News site/site/content/articles";
-const STATE = "/Users/sivajithcu/Movie News site/site/data/state";
+// Repo-root-relative paths (portable — works locally AND in GitHub Actions/cloud; no hardcoded machine path).
+const __dirname = path.dirname(fileURLToPath(import.meta.url)); // …/site/pipeline
+const ART = path.resolve(__dirname, "../content/articles");
+const STATE = path.resolve(__dirname, "../data/state");
 fs.mkdirSync(STATE, { recursive: true });
 const DRY = process.argv.includes("--dry-run");
 const ONLY = (process.argv.find((a) => a.startsWith("--only=")) || "").split("=")[1];
@@ -37,9 +40,18 @@ const FROM_FIND = process.argv.includes("--from-find");
 const LIMIT = Number((process.argv.find((a) => a.startsWith("--limit=")) || "").split("=")[1]) || 0;
 let SOURCE_TOPICS = TOPICS;
 if (FROM_FIND) {
-  const q = JSON.parse(fs.readFileSync("/Users/sivajithcu/Movie News site/site/data/find/queue.json", "utf8"));
+  const q = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../data/find/queue.json"), "utf8"));
   SOURCE_TOPICS = q.topics || [];
-  console.log(`FROM-FIND: loaded ${SOURCE_TOPICS.length} autonomously-discovered topics (queue run ${q.runId}, built ${q.builtAt})`);
+  // DRIP-SAFE ledger-skip (2026-07-04): drop any queued topic already in the published ledger, so a drip that
+  // re-enters the SAME queue across ticks NEVER re-publishes a story (the queue is static between FIND top-ups; the
+  // ledger is the source of truth for what's done). Same keys FIND dedups on: title slug, eventSlug, entity+type.
+  const _pub = loadPublished();
+  const _n0 = SOURCE_TOPICS.length;
+  SOURCE_TOPICS = SOURCE_TOPICS.filter((t) =>
+    !(t.title && _pub.titles.has(slugKey(t.title))) &&
+    !(t.eventSlug && _pub.events.has(t.eventSlug)) &&
+    !(entityKey(t.primaryEntity, t.eventType) && _pub.entities.has(entityKey(t.primaryEntity, t.eventType))));
+  console.log(`FROM-FIND: loaded ${_n0} topics (queue run ${q.runId}); ${_n0 - SOURCE_TOPICS.length} already-published skipped → ${SOURCE_TOPICS.length} fresh`);
 }
 let topics = ONLY ? SOURCE_TOPICS.filter((t) => t.id === ONLY) : SOURCE_TOPICS;
 if (LIMIT) topics = topics.slice(0, LIMIT);

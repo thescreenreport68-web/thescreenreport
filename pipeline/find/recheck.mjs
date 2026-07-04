@@ -15,8 +15,10 @@ import { newMonitor, printRunReport } from "./store.mjs";
 const require = createRequire(import.meta.url);
 const matter = require("gray-matter");
 
-const ART = "/Users/sivajithcu/Movie News site/site/content/articles";
-const RETRACTED_DIR = "/Users/sivajithcu/Movie News site/site/data/find/retracted";
+import { fileURLToPath } from "node:url";
+const __dirname = path.dirname(fileURLToPath(import.meta.url)); // …/site/pipeline/find
+const ART = path.resolve(__dirname, "../../content/articles");
+const RETRACTED_DIR = path.resolve(__dirname, "../../data/find/retracted");
 const DRY = process.argv.includes("--dry-run");
 const RECHECK_WINDOW_H = 48; // follow a story for 48h after publish
 const UA = "The Screen Report/1.0 (+https://thescreenreport.com)";

@@ -5,7 +5,9 @@ import fs from "node:fs";
 import path from "node:path";
 import { getTweet } from "react-tweet/api";
 
-const CACHE = "/Users/sivajithcu/Movie News site/site/data/tweets";
+import { fileURLToPath } from "node:url";
+const __dirname = path.dirname(fileURLToPath(import.meta.url)); // …/site/pipeline/lib
+const CACHE = path.resolve(__dirname, "../../data/tweets");
 
 // Fetch each id, cache <id>.json, return { tweets, ids } for the ones that resolved
 // (silently drops deleted/protected ids so we never try to embed an unrenderable post).

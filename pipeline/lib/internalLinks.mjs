@@ -11,7 +11,9 @@ import { createRequire } from "node:module";
 const require = createRequire(import.meta.url);
 const matter = require("gray-matter");
 
-const ART = "/Users/sivajithcu/Movie News site/site/content/articles";
+import { fileURLToPath } from "node:url";
+const __dirname = path.dirname(fileURLToPath(import.meta.url)); // …/site/pipeline/lib
+const ART = path.resolve(__dirname, "../../content/articles");
 
 // NEWS-ONLY (owner 2026-07-01): this automation is a hardcore-news strip. NEVER link a news article to a
 // REMOVED-form page (ranking/list/review/profile/interview/explainer/guide/where-to-watch) — those are legacy

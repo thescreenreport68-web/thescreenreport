@@ -1,0 +1,16 @@
+name = "news-cron"
+main = "worker.js"
+compatibility_date = "2025-01-01"
+
+# Fires every 5 minutes. The Worker gates to LA 10am-10pm PT and calls the GitHub workflow_dispatch API.
+[triggers]
+crons = ["*/5 * * * *"]
+
+# Non-secret config. GH_REF MUST be the repo's DEFAULT branch (workflow_dispatch only sees workflows on default).
+[vars]
+GH_OWNER = "thescreenreport68-web"
+GH_REPO = "thescreenreport"
+GH_REF = "main"
+
+# Secret (NOT here — set once with:  wrangler secret put GH_TOKEN):
+#   GH_TOKEN = a fine-grained GitHub PAT scoped to this repo with "Actions: Read and write".

@@ -6,7 +6,9 @@ const matter = require("gray-matter");
 import { TAXONOMY, AUTHOR_SLUG } from "../config.mjs";
 import { addInternalLinks, isRemovedForm } from "../lib/internalLinks.mjs";
 
-const ART = "/Users/sivajithcu/Movie News site/site/content/articles";
+import { fileURLToPath } from "node:url";
+const __dirname = path.dirname(fileURLToPath(import.meta.url)); // …/site/pipeline/stages
+const ART = path.resolve(__dirname, "../../content/articles");
 
 // Meta-refusal / prompt-leak phrases a reader (or the FAQ JSON-LD) must never see — assemble-level
 // insurance behind the gate's PROMPT_LEAK hard-block.

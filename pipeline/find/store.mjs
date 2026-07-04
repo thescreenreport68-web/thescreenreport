@@ -5,7 +5,9 @@
 import fs from "node:fs";
 import path from "node:path";
 
-const DIR = "/Users/sivajithcu/Movie News site/site/data/find";
+import { fileURLToPath } from "node:url";
+const __dirname = path.dirname(fileURLToPath(import.meta.url)); // …/site/pipeline/find
+const DIR = path.resolve(__dirname, "../../data/find"); // portable: works locally AND in the cloud
 fs.mkdirSync(path.join(DIR, "runs"), { recursive: true });
 const fp = (f) => path.join(DIR, f);
 

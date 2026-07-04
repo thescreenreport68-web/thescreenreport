@@ -1,0 +1,80 @@
+name: news-drip
+
+# One drip "tick": the scheduler gates on LA posting hours (10am-10pm PT), tops up the queue if the fresh backlog is
+# low, publishes ONE news article, then (only if something published) commits state + builds + deploys live.
+#
+# CLOCK: a Cloudflare Worker Cron Trigger (cloudflare/news-cron) fires every ~5 min and calls this via
+# workflow_dispatch — GitHub's own cron is drifty. The `schedule:` block below is a COMMENTED-OUT fallback; leave it
+# commented until the owner approves the dry run, so merging this file to the default branch never starts auto-posting.
+#
+# REQUIRES (already used by gossip-drip): repo Secrets OPENROUTER_API_KEY, TMDB_READ_TOKEN, TMDB_API_KEY,
+# OMDB_API_KEY, LASTFM_API_KEY, CLOUDFLARE_API_TOKEN, CLOUDFLARE_ACCOUNT_ID. Must live on the DEFAULT branch (main).
+
+on:
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "articles to publish this tick"
+        required: false
+        default: "1"
+  # ── OWNER: uncomment to enable the GitHub-cron fallback AFTER the dry-run is approved ──
+  # schedule:
+  #   - cron: "2,7,12,17,22,27,32,37,42,47,52,57 * * * *"   # ~every 5 min (belt-and-suspenders vs the Worker clock)
+
+# Never let two ticks run at once (no double-post); a running tick finishes before the next starts.
+concurrency:
+  group: news-drip
+  cancel-in-progress: false
+
+permissions:
+  contents: write        # to commit the article + dedup/state back to the repo
+
+jobs:
+  drip:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+          cache-dependency-path: package-lock.json
+
+      - name: Install deps
+        run: npm ci --prefer-offline --no-audit --no-fund
+
+      - name: Publish one article (scheduler tick)
+        id: tick
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          TMDB_READ_TOKEN: ${{ secrets.TMDB_READ_TOKEN }}
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+          OMDB_API_KEY: ${{ secrets.OMDB_API_KEY }}
+          LASTFM_API_KEY: ${{ secrets.LASTFM_API_KEY }}
+          JINA_API_KEY: ${{ secrets.JINA_API_KEY }}
+          LA_START: "10"
+          LA_END: "22"
+        run: node pipeline/scheduler.mjs --limit=${{ github.event.inputs.limit || '1' }}
+
+      - name: Commit new article + state
+        if: steps.tick.outputs.published != '0' && steps.tick.outputs.published != ''
+        run: |
+          git config user.name  "screenreport-bot"
+          git config user.email "bot@thescreenreport.com"
+          git add content/articles data/find data/state
+          git commit -m "news: publish ${{ steps.tick.outputs.slugs }} [skip ci]" || echo "nothing to commit"
+          git push
+
+      - name: Build
+        if: steps.tick.outputs.published != '0' && steps.tick.outputs.published != ''
+        run: npm run build
+
+      - name: Deploy to Cloudflare Pages
+        if: steps.tick.outputs.published != '0' && steps.tick.outputs.published != ''
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: npx -y wrangler@3 pages deploy out --project-name=thescreenreport --branch=main --commit-dirty=true
