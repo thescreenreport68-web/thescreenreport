@@ -17,6 +17,10 @@ on:
         description: "articles to publish this tick"
         required: false
         default: "1"
+      force:
+        description: "bypass the LA-hours gate (publish now, for testing)"
+        required: false
+        default: "false"
   # ── OWNER: uncomment to enable the GitHub-cron fallback AFTER the dry-run is approved ──
   # schedule:
   #   - cron: "2,7,12,17,22,27,32,37,42,47,52,57 * * * *"   # ~every 5 min (belt-and-suspenders vs the Worker clock)
@@ -55,8 +59,9 @@ jobs:
           OMDB_API_KEY: ${{ secrets.OMDB_API_KEY }}
           LASTFM_API_KEY: ${{ secrets.LASTFM_API_KEY }}
           JINA_API_KEY: ${{ secrets.JINA_API_KEY }}
-          LA_START: "10"
-          LA_END: "22"
+          # force=true (manual test) bypasses the LA-hours gate so a dispatch publishes immediately.
+          LA_START: ${{ github.event.inputs.force == 'true' && '0' || '10' }}
+          LA_END: ${{ github.event.inputs.force == 'true' && '24' || '22' }}
         run: node pipeline/scheduler.mjs --limit=${{ github.event.inputs.limit || '1' }}
 
       - name: Commit new article + state
