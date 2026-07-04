@@ -23,7 +23,9 @@ const cors = (origin: string) => ({
     ? origin
     : "https://thescreenreport.com",
   "Access-Control-Allow-Methods": "POST, OPTIONS",
-  "Access-Control-Allow-Headers": "authorization, content-type",
+  // supabase-js / our fetch send apikey + x-client-info alongside authorization —
+  // all must be allowed or the browser blocks the request (the "network error").
+  "Access-Control-Allow-Headers": "authorization, content-type, apikey, x-client-info",
 });
 const json = (body: unknown, status: number, origin: string) =>
   new Response(JSON.stringify(body), {

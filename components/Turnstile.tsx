@@ -42,7 +42,9 @@ export default function Turnstile({
         "error-callback": () => onVerify(""),
         "expired-callback": () => onVerify(""),
         theme: "auto",
-        size: "flexible",
+        // Invisible: verify silently in the background, only surface UI if a real
+        // challenge is required — no "Success!" box shown to the reader.
+        appearance: "interaction-only",
         action: "comment_submit",
       });
     };
