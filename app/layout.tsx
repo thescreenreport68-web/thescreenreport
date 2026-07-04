@@ -107,7 +107,14 @@ export default function RootLayout({
         <Header />
         <main id="content">{children}</main>
         <Footer />
-        <div aria-hidden className="h-[72px] md:h-[104px]" />
+        {/* Reserved space for the bottom anchor ad — constant height (even when
+            the reader collapses the bar) so content is never hidden behind it
+            and collapsing causes zero layout shift. */}
+        <div
+          aria-hidden
+          className="h-[58px] md:h-[98px]"
+          style={{ paddingBottom: "env(safe-area-inset-bottom, 0px)" }}
+        />
         <AnchorAd />
       </body>
     </html>

@@ -5,6 +5,8 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import {
   ArchiveMasthead,
   RiverItem,
+  RiverAd,
+  RIVER_AD_AFTER,
   RiverPagination,
   RIVER_PAGE_SIZE,
 } from "@/components/ArchiveRiver";
@@ -69,8 +71,11 @@ export default function NewsArchivePage({ params }: { params: { n: string } }) {
           <span className="meta-mono">Page {page}</span>
         </div>
         <div className="pt-6">
-          {river.map((a) => (
-            <RiverItem key={a.slug} article={a} />
+          {river.map((a, i) => (
+            <div key={a.slug}>
+              <RiverItem article={a} />
+              {i === RIVER_AD_AFTER - 1 ? <RiverAd /> : null}
+            </div>
           ))}
         </div>
         <RiverPagination basePath="/news" page={page} totalPages={totalPages} />

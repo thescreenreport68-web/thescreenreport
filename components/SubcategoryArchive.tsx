@@ -1,7 +1,7 @@
 import AdSlot from "./AdSlot";
 import JsonLd from "./JsonLd";
 import Breadcrumbs from "./Breadcrumbs";
-import { ArchiveMasthead, RiverItem } from "./ArchiveRiver";
+import { ArchiveMasthead, RiverItem, RiverAd, RIVER_AD_AFTER } from "./ArchiveRiver";
 import { getArticlesBySubcategory } from "@/lib/articles";
 import {
   getCategory,
@@ -64,8 +64,11 @@ export default function SubcategoryArchive({
 
       {articles.length ? (
         <div className="mx-auto max-w-4xl">
-          {articles.map((a) => (
-            <RiverItem key={a.slug} article={a} />
+          {articles.map((a, i) => (
+            <div key={a.slug}>
+              <RiverItem article={a} />
+              {i === RIVER_AD_AFTER - 1 ? <RiverAd /> : null}
+            </div>
           ))}
         </div>
       ) : (

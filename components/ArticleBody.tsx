@@ -6,11 +6,12 @@ import Link from "next/link";
 import ReadNext from "./ReadNext";
 import type { Article } from "@/lib/articles";
 
-// THR's in-content cadence: a 300x250 after paragraph 2, after paragraph 4,
-// then one roughly every 4 paragraphs — each framed with hairlines + a label.
+// THR's measured in-content cadence (live-audited 2026-07): first unit after
+// ~2 paragraphs, second after ~6, then one every ~5 to the end — keeps ≥1
+// viewport of content between ads (Better Ads / AdSense density-safe).
 function adAfter(paraCount: number): boolean {
-  if (paraCount === 2 || paraCount === 4) return true;
-  return paraCount > 4 && (paraCount - 4) % 4 === 0;
+  if (paraCount === 2 || paraCount === 6) return true;
+  return paraCount > 6 && (paraCount - 6) % 5 === 0;
 }
 
 function isParagraph(b: string): boolean {

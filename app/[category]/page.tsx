@@ -7,6 +7,8 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import {
   ArchiveMasthead,
   RiverItem,
+  RiverAd,
+  RIVER_AD_AFTER,
   RiverPagination,
   ARCHIVE_LEAD_COUNT,
   RIVER_PAGE_SIZE,
@@ -124,8 +126,11 @@ export default function CategoryPage({
                 </h2>
               </div>
               <div className="pt-6">
-                {river.map((a) => (
-                  <RiverItem key={a.slug} article={a} />
+                {river.map((a, i) => (
+                  <div key={a.slug}>
+                    <RiverItem article={a} />
+                    {i === RIVER_AD_AFTER - 1 ? <RiverAd /> : null}
+                  </div>
                 ))}
               </div>
               <RiverPagination
@@ -135,7 +140,7 @@ export default function CategoryPage({
               />
             </section>
             <aside className="hidden lg:block">
-              <div className="space-y-7">
+              <div className="flex h-full flex-col gap-7">
                 <AdSlot format="halfpage" />
                 <div className="border-t-2 border-ink">
                   <div className="border-b border-hair pb-2 pt-2.5">
@@ -147,7 +152,7 @@ export default function CategoryPage({
                     ))}
                   </div>
                 </div>
-                <div className="sticky top-[76px]">
+                <div className="sticky top-[68px]">
                   <AdSlot format="halfpage" />
                 </div>
               </div>
