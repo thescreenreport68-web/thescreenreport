@@ -13,6 +13,7 @@ const PUBLIC_KEYS = [
   "NEXT_PUBLIC_SUPABASE_ANON_KEY",
   "NEXT_PUBLIC_GOOGLE_CLIENT_ID",
   "NEXT_PUBLIC_TURNSTILE_SITE_KEY",
+  "NEXT_PUBLIC_COMMENTS_ENABLED",
 ];
 const publicEnv = {};
 try {
@@ -24,10 +25,10 @@ try {
 } catch {
   /* no parent .env (e.g. CI) — comment features stay off, site builds fine */
 }
-// Feature flag: flip to "1" once the Supabase backend (schema + edge function)
-// is provisioned so the comments UI goes live. One Tap sign-in runs regardless.
+// Feature flag (read from parent .env above): "1" once the Supabase backend is
+// provisioned so the comments UI goes live. One Tap sign-in runs regardless.
 publicEnv.NEXT_PUBLIC_COMMENTS_ENABLED =
-  process.env.NEXT_PUBLIC_COMMENTS_ENABLED ?? "0";
+  process.env.NEXT_PUBLIC_COMMENTS_ENABLED ?? publicEnv.NEXT_PUBLIC_COMMENTS_ENABLED ?? "0";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {

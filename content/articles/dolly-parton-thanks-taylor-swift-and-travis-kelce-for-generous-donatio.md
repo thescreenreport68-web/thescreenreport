@@ -51,13 +51,13 @@ provenance:
   primaryEntity: Dolly Parton
   eventType: other
   sensitivity: normal
-  status: DEVELOPING
+  status: CONFIRMED
   attribution: billboard.com
   outlets:
     - Billboard
   publishedAt: '2026-07-04T08:05:36.443Z'
-dateModified: '2026-07-04T08:05:36.443Z'
-storyStatus: DEVELOPING
+dateModified: '2026-07-04T09:54:37.907Z'
+storyStatus: CONFIRMED
 newsType: general
 pullQuote:
   text: >-
@@ -71,7 +71,6 @@ keyPoints:
     Parton shared a video message that included her signature humor and a nod to
     her classic song.
 ---
-
 The country music icon shared a video message expressing her gratitude for the gift.
 
 ## What Did Dolly Parton Say?

@@ -15,6 +15,7 @@ import ArticleCard from "@/components/ArticleCard";
 import JsonLd from "@/components/JsonLd";
 import ReadingProgress from "@/components/ReadingProgress";
 import TrendingBadge from "@/components/TrendingBadge";
+import CommentsMount from "@/components/CommentsMount";
 import SubcategoryArchive from "@/components/SubcategoryArchive";
 import { getAllArticles, getArticle, getRelated } from "@/lib/articles";
 import { formatDate } from "@/lib/format";
@@ -317,6 +318,10 @@ export default function ArticlePage({
           </div>
 
           <NewsletterBand />
+
+          <div className="mx-auto max-w-prose" data-pagefind-ignore>
+            <CommentsMount slug={article.slug} />
+          </div>
 
           {/* End-of-article recirculation */}
           <section data-pagefind-ignore className="mt-12">

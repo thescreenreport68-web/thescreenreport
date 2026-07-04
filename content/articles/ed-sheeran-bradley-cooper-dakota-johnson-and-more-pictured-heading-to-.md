@@ -72,13 +72,13 @@ provenance:
   primaryEntity: Taylor Swift
   eventType: other
   sensitivity: normal
-  status: DEVELOPING
+  status: CONFIRMED
   attribution: Associated Press
   outlets:
     - Variety
   publishedAt: '2026-07-04T08:04:36.443Z'
-dateModified: '2026-07-04T08:04:36.443Z'
-storyStatus: DEVELOPING
+dateModified: '2026-07-04T09:54:38.447Z'
+storyStatus: CONFIRMED
 newsType: general
 pullQuote:
   text: >-
@@ -101,7 +101,6 @@ sightings:
       wedding
     date: July 3
 ---
-
 A host of major celebrities, including Ed Sheeran, Bradley Cooper, and Dakota Johnson, were photographed heading to Madison Square Garden for the wedding of [Taylor Swift](/celebrity/ed-sheeran-bradley-cooper-dakota-johnson-among-stars-arriving-for-tayl/) and Travis Kelce on July 3. The Associated Press confirmed the nuptials were taking place at the famed New York venue.
 
 According to a report from Variety, the guest list for the high-profile event featured numerous A-listers. Photographs showed musicians Ed Sheeran and Jack Antonoff, actors [Bradley Cooper](/movies/josh-gad-to-join-margot-robbie-and-bradley-cooper-s-ocean-s-prequel-ex/), Dakota Johnson, Zoë Kravitz, Ethan Hawke, Jason Sudeikis, and Hugh Grant, and models Gigi Hadid and Camila Cabello making their way to the ceremony.

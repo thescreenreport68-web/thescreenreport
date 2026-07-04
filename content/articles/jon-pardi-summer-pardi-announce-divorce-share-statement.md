@@ -35,7 +35,7 @@ faq:
     a: He is on tour to promote his fifth studio album.
 rumorStatus: Confirmed
 gossipPull: '"Our daughters will always remain our highest priority."'
-storyStatus: DEVELOPING
+storyStatus: CONFIRMED
 image: >-
   https://www.justjared.com/wp-content/uploads/2026/07/jon-pardi-divorce-summer.jpg
 imageAlt: Jon Pardi and Summer Pardi
@@ -67,7 +67,7 @@ aiDisclosure: >-
   Rumors and speculation are labeled as unconfirmed and updated or removed as
   facts develop.
 sensitivity: high
-dateModified: '2026-07-04T08:12:57.821Z'
+dateModified: '2026-07-04T09:54:41.173Z'
 provenance:
   primaryEntity: Jon Pardi
   claim: Jon Pardi and his wife Summer Pardi are announcing their divorce.
@@ -75,7 +75,7 @@ provenance:
   severity: HIGH
   sensitivity: high
   monitor: true
-  status: DEVELOPING
+  status: CONFIRMED
   attribution: Just Jared
   outlets:
     - Just Jared
@@ -83,7 +83,6 @@ provenance:
   verifyDegraded: false
   publishedAt: '2026-07-04T08:12:57.821Z'
 ---
-
 Another country music couple is calling it quits. Jon Pardi and his wife, Summer Pardi, have announced they are ending their marriage.
 
 The news came via a joint statement the pair posted to Instagram on Friday, July 3, as reported by Just Jared. In the statement, the couple said, "After much thought, we have made the difficult decision to end our marriage. Our daughters will always remain our highest priority and we are committed to moving forward with love and respect as co-parents."

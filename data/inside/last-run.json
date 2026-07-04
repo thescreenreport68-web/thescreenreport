@@ -1,100 +1,109 @@
 {
  "triggers": 8,
- "angles": 19,
+ "angles": 20,
  "published": [],
  "held": [],
  "rejected": [
   {
-   "tag": "james-van-der-beek-honored-after-final-role×peer-tributes",
-   "stage": "harvest",
-   "reason": "under floor: named voices 0 < 4 (try 3)"
-  },
-  {
-   "tag": "james-van-der-beek-honored-after-final-role×single-voice",
-   "stage": "harvest",
-   "reason": "under floor: named voices 0 < 1 (try 3)"
-  },
-  {
-   "tag": "supergirl-film-cast×fan-pulse",
-   "stage": "harvest",
-   "reason": "under floor: fan posts 0 < 4 (try 3)"
-  },
-  {
-   "tag": "minions-monsters-box-office-update×fan-pulse",
+   "tag": "power-book-iii-raising-kanan-young-spoiler-character×fan-pulse",
    "stage": "harvest",
    "reason": "under floor: fan posts 0 < 4 (try 1)"
   },
   {
-   "tag": "minions-monsters-box-office-update×cast-crew-voices",
-   "stage": "harvest",
-   "reason": "under floor: named voices 0 < 2 (try 1)"
-  },
-  {
-   "tag": "minions-monsters-box-office-update×breakout-spotlight",
+   "tag": "power-book-iii-raising-kanan-young-spoiler-character×breakout-spotlight",
    "stage": "harvest",
    "reason": "under floor: named voices 0 < 3 (try 1)"
   },
   {
-   "tag": "marvel-casts-next-thor×fan-pulse",
+   "tag": "james-van-der-beek-honored-after-final-role×peer-tributes",
    "stage": "harvest",
-   "reason": "under floor: fan posts 0 < 4 (try 3)"
+   "reason": "under floor: named voices 0 < 4 (try 1)"
+  },
+  {
+   "tag": "james-van-der-beek-honored-after-final-role×single-voice",
+   "stage": "harvest",
+   "reason": "under floor: named voices 0 < 1 (try 1)"
+  },
+  {
+   "tag": "james-van-der-beek-honored-after-final-role×ripple-effects",
+   "stage": "harvest",
+   "reason": "under floor: confirmed effect voices 1 < 2 (try 1)"
+  },
+  {
+   "tag": "supergirl-film-cast×fan-pulse",
+   "stage": "harvest",
+   "reason": "under floor: fan posts 0 < 4 (try 1)"
+  },
+  {
+   "tag": "supergirl-film-cast×breakout-spotlight",
+   "stage": "harvest",
+   "reason": "under floor: named voices 0 < 3 (try 1)"
+  },
+  {
+   "tag": "dolly-parton-taylor-swift-travis-kelce-donation×single-voice",
+   "stage": "editorial",
+   "reason": "the reactions are substantially one statement echoed across outlets"
+  },
+  {
+   "tag": "taylor-swift-travis-kelce-marriage×peer-tributes",
+   "stage": "harvest",
+   "reason": "under floor: named voices 1 < 4 (try 1)"
+  },
+  {
+   "tag": "taylor-swift-travis-kelce-marriage×fan-pulse",
+   "stage": "harvest",
+   "reason": "under floor: fan posts 0 < 4 (try 1)"
+  },
+  {
+   "tag": "taylor-swift-travis-kelce-marriage×single-voice",
+   "stage": "editorial",
+   "reason": "The material does not confirm the event. The only voice explicitly states that the wedding has not happened and is a subject of speculation, directly contradicting the proposed event."
+  },
+  {
+   "tag": "taylor-swift-travis-kelce-marriage×ripple-effects",
+   "stage": "harvest",
+   "reason": "under floor: confirmed effect voices 1 < 2 (try 1)"
+  },
+  {
+   "tag": "minions-monsters-box-office-underperforms×fan-pulse",
+   "stage": "harvest",
+   "reason": "under floor: fan posts 0 < 4 (try 1)"
+  },
+  {
+   "tag": "minions-monsters-box-office-underperforms×cast-crew-voices",
+   "stage": "harvest",
+   "reason": "under floor: named voices 0 < 2 (try 1)"
   },
   {
    "tag": "marvel-casts-next-thor×breakout-spotlight",
    "stage": "harvest",
-   "reason": "under floor: named voices 0 < 3 (try 2)"
+   "reason": "under floor: named voices 0 < 3 (try 1)"
+  },
+  {
+   "tag": "laura-bailey-dungeon-crawler-carl-tv-series×fan-pulse",
+   "stage": "harvest",
+   "reason": "under floor: fan posts 0 < 4 (try 1)"
   },
   {
    "tag": "laura-bailey-dungeon-crawler-carl-tv-series×breakout-spotlight",
    "stage": "harvest",
-   "reason": "under floor: named voices 0 < 3 (try 3)"
-  },
-  {
-   "tag": "star-wars-new-era-august×fan-pulse",
-   "stage": "harvest",
-   "reason": "under floor: fan posts 0 < 4 (try 1)"
-  },
-  {
-   "tag": "spider-man-brand-new-day-daredevil-crossover×fan-pulse",
-   "stage": "harvest",
-   "reason": "under floor: fan posts 0 < 4 (try 1)"
-  },
-  {
-   "tag": "spider-man-brand-new-day-daredevil-crossover×single-voice",
-   "stage": "harvest",
-   "reason": "under floor: named voices 0 < 1 (try 1)"
+   "reason": "under floor: named voices 0 < 3 (try 1)"
   }
  ],
  "skipped": [
   {
-   "tag": "power-book-iii-raising-kanan-young-spoiler-character×breakout-spotlight",
-   "reason": "parked dead (ripple never materialized)"
-  },
-  {
    "tag": "james-van-der-beek-honored-after-final-role×cast-crew-voices",
    "reason": "already published"
-  },
-  {
-   "tag": "supergirl-film-cast×breakout-spotlight",
-   "reason": "parked dead (ripple never materialized)"
   }
  ],
  "blocked": [
   {
-   "tag": "power-book-iii-raising-kanan-young-spoiler-character×fan-pulse",
-   "reason": "watchdog: harvest power-book-iii-raising-kanan-young-spoiler-character×fan-pulse exceeded 180s"
+   "tag": "dolly-parton-taylor-swift-travis-kelce-donation×fan-pulse",
+   "reason": "watchdog: harvest dolly-parton-taylor-swift-travis-kelce-donation×fan-pulse exceeded 180s"
   },
   {
-   "tag": "minions-monsters-box-office-update×ripple-effects",
-   "reason": "watchdog: harvest minions-monsters-box-office-update×ripple-effects exceeded 180s"
-  },
-  {
-   "tag": "laura-bailey-dungeon-crawler-carl-tv-series×fan-pulse",
-   "reason": "watchdog: harvest laura-bailey-dungeon-crawler-carl-tv-series×fan-pulse exceeded 180s"
-  },
-  {
-   "tag": "star-wars-new-era-august×single-voice",
-   "reason": "watchdog: harvest star-wars-new-era-august×single-voice exceeded 180s"
+   "tag": "marvel-casts-next-thor×fan-pulse",
+   "reason": "watchdog: harvest marvel-casts-next-thor×fan-pulse exceeded 180s"
   }
  ]
 }

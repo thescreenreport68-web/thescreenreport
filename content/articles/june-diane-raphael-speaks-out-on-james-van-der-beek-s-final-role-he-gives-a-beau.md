@@ -83,7 +83,7 @@ aiDisclosure: >-
   This article was produced with AI-assisted research and reviewed editorially.
   Every reaction is quoted from a public, on-the-record source; coverage is
   updated as more reactions land.
-dateModified: '2026-07-04T08:10:30.595Z'
+dateModified: '2026-07-04T09:54:42.136Z'
 provenance:
   parentEventSlug: james-van-der-beek-honored-after-final-role
   primaryEntity: james van der beek

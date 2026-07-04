@@ -73,7 +73,7 @@ provenance:
   outlets:
     - THR
   publishedAt: '2026-07-04T07:48:48.002Z'
-dateModified: '2026-07-04T08:10:32.719Z'
+dateModified: '2026-07-04T09:54:44.735Z'
 storyStatus: DEVELOPING
 newsType: controversy
 pullQuote:
@@ -94,6 +94,8 @@ correction: >-
   Furious, but I Am Sailing" - Exclaim!"
 robots: noindex
 ---
+> **Correction (2026-07-04):** contradiction found: "Patti LuPone's Gay Cruise Denied Entry to Turkey: "I Am Furious, but I Am Sailing" - Exclaim!"
+
 > **Correction (2026-07-04):** contradiction found: "Patti LuPone's Gay Cruise Denied Entry to Turkey: "I Am Furious, but I Am Sailing" - Exclaim!"
 
 Patti LuPone revealed that an LGBTQ+ cruise ship she is performing on has been banned from entering Turkey, according to The Hollywood Reporter. The Tony Award-winning actress shared the news on Instagram.

@@ -74,7 +74,7 @@ provenance:
   outlets:
     - Collider
   publishedAt: '2026-07-03T12:52:15.269Z'
-dateModified: '2026-07-04T08:10:34.623Z'
+dateModified: '2026-07-04T09:54:46.265Z'
 storyStatus: DEVELOPING
 newsType: general
 pullQuote:
@@ -114,6 +114,8 @@ correction: >-
   Doomsday" Roles; Fans Suspect "Garfield-esque Misdirection" - 玩具人 TOY PEOPLE"
 robots: noindex
 ---
+> **Correction (2026-07-04):** contradiction found: "Daredevil Denies "Spider-Man: Brand New Day," "Avengers: Doomsday" Roles; Fans Suspect "Garfield-esque Misdirection" - 玩具人 TOY PEOPLE"
+
 > **Correction (2026-07-04):** contradiction found: "Daredevil Denies "Spider-Man: Brand New Day," "Avengers: Doomsday" Roles; Fans Suspect "Garfield-esque Misdirection" - 玩具人 TOY PEOPLE"
 
 > **Correction (2026-07-04):** contradiction found: "Daredevil Denies "Spider-Man: Brand New Day," "Avengers: Doomsday" Roles; Fans Suspect "Garfield-esque Misdirection" - 玩具人 TOY PEOPLE"

@@ -76,13 +76,13 @@ provenance:
   primaryEntity: Margo Price
   eventType: announcement
   sensitivity: normal
-  status: DEVELOPING
+  status: CONFIRMED
   attribution: rollingstone.com
   outlets:
     - Rolling Stone
   publishedAt: '2026-07-04T08:06:36.443Z'
-dateModified: '2026-07-04T08:06:36.443Z'
-storyStatus: DEVELOPING
+dateModified: '2026-07-04T09:54:43.336Z'
+storyStatus: CONFIRMED
 newsType: album-release
 release:
   title: Days of Unrest
@@ -107,7 +107,6 @@ officialPost:
   platform: ''
   url: ''
 ---
-
 Margo Price has surprise-released a new mixtape titled *Days of Unrest*, according to a report from Rolling Stone. The collection features the singer's renditions of protest songs and one original track, arriving just before Independence Day.
 
 The mixtape includes a cover of Woody Guthrie's "Deportee (Plane Crash at Los Gatos)," which features Joan Baez and Memphis Mariachi. Price has performed the song live for years, including at the 2025 Newport Folk Festival. "I’ve been singing ‘Deportee (Plane Wreck at Los Gatos)’ for a couple decades now, so it’s only fitting that I would cover it on *Days Of Unrest*," Price said in a statement. She noted Baez's performance of the song with Bob Dylan on the Rolling Thunder Revue tour was a key inspiration.

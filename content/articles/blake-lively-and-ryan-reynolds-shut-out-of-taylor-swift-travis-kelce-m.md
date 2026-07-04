@@ -36,7 +36,7 @@ faq:
     a: Blake Lively is 38 and Ryan Reynolds is 49.
 rumorStatus: Reported by Page Six
 gossipPull: '"As far as [Taylor’s] concerned, their friendship is done."'
-storyStatus: DEVELOPING
+storyStatus: CONFIRMED
 image: >-
   https://pagesix.com/wp-content/uploads/sites/3/2026/07/taylor-blake-comp.jpg?quality=75&#038;strip=all&#038;w=1200
 imageAlt: 'Taylor Swift, Travis Kelce, Blake Lively, Ryan Reynolds'
@@ -68,7 +68,7 @@ aiDisclosure: >-
   Rumors and speculation are labeled as unconfirmed and updated or removed as
   facts develop.
 sensitivity: normal
-dateModified: '2026-07-04T08:03:57.821Z'
+dateModified: '2026-07-04T09:54:36.672Z'
 provenance:
   primaryEntity: Taylor Swift
   claim: >-
@@ -78,7 +78,7 @@ provenance:
   severity: NORMAL
   sensitivity: normal
   monitor: false
-  status: DEVELOPING
+  status: CONFIRMED
   attribution: Page Six
   outlets:
     - Page Six
@@ -86,7 +86,6 @@ provenance:
   verifyDegraded: false
   publishedAt: '2026-07-04T08:03:57.821Z'
 ---
-
 Where was Blake Lively during Taylor Swift's wedding weekend? A source told the outlet the snub signals a definitive end to the once-close friendship between the pop star and the "Gossip Girl" actress.
 
 The source claimed, "Taylor’s in a different place now and she just wants to be around people she trusts and who bring her peace." They added, "It’s a shame because she and Blake really were close, but she doesn’t think it’s something that’s going to be fixed. As far as [Taylor’s] concerned, their friendship is done."
