@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AnchorAd from "@/components/AnchorAd";
 import Beacon from "@/components/Beacon";
+import GoogleOneTap from "@/components/GoogleOneTap";
 import JsonLd from "@/components/JsonLd";
 import { SITE } from "@/lib/site";
 
@@ -102,6 +103,7 @@ export default function RootLayout({
         </a>
         <JsonLd data={SITE_SCHEMA} />
         <Beacon />
+        <GoogleOneTap />
         <Header />
         <main id="content">{children}</main>
         <Footer />
