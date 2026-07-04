@@ -32,7 +32,7 @@ export async function gossipRun({
   heroImpl = pickHero, linkIndexImpl = buildLinkIndex, findRelatedImpl = findRelatedLinks, categoryGuardImpl,
   onePerCategory = false, verify = true, judge = true, hero = false, links = false, categoryGuard = false,
   dedup = true, social = true, storeImpl = null, embedImpl, adjudicateImpl,
-  limit = 0, fromFind = false, dryRun = false, nowMs,
+  limit = 0, fromFind = false, dequeueImpl = dequeue, maxDrain = 10, dryRun = false, nowMs,
 } = {}) {
   const now = nowMs ?? Date.now();
   const store = dedup ? (storeImpl || openStore()) : null;
@@ -48,15 +48,17 @@ export async function gossipRun({
     inlineTopics = onePerCategory ? onePerCategoryPick(all) : all;
     if (limit) inlineTopics = inlineTopics.slice(0, limit);
   }
-  const nextTopic = () => fromFind ? (dequeue(1)[0] || null) : (inlineIdx < inlineTopics.length ? inlineTopics[inlineIdx++] : null);
+  const nextTopic = () => fromFind ? (dequeueImpl(1)[0] || null) : (inlineIdx < inlineTopics.length ? inlineTopics[inlineIdx++] : null);
   // --from-find keeps draining until `limit` articles actually PUBLISH (skipping past any held/dup) or the queue
   // empties — so a drip tick reliably yields one live article. Inline mode processes its fixed (already-limited) list.
   const publishTarget = fromFind ? (limit || 1) : Infinity;
 
   const report = { mode: fromFind ? "from-find" : "inline", inScope: fromFind ? null : inlineTopics.length, topics: 0, published: [], held: [], blocked: [], skipped: [], rejected: [] };
 
+  // In --from-find mode, cap topics PROCESSED per invocation so one tick can't runaway-drain the whole backlog
+  // chasing a publish (bounds the cloud tick's wall-clock). Inline mode is already bounded by its fixed list.
   let i = 0;
-  while (report.published.length < publishTarget) {
+  while (report.published.length < publishTarget && (!fromFind || report.topics < maxDrain)) {
     const t = nextTopic();
     if (!t) break;
     report.topics++;
