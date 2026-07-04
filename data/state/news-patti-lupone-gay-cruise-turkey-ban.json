@@ -1,0 +1,207 @@
+{
+  "id": "news-patti-lupone-gay-cruise-turkey-ban",
+  "slug": "patti-lupone-s-gay-cruise-ship-turned-away-by-turkey-i-am-furious-but-",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": 85,
+      "cat": "celebrity/news",
+      "hardBlocks": [],
+      "block": [],
+      "fixable": [],
+      "badClaims": 0
+    }
+  },
+  "editorial": {
+    "status": "confirmed",
+    "entity": "Patti LuPone",
+    "work": null,
+    "outlet": "hollywoodreporter.com"
+  },
+  "acceptReason": "cut-and-publish → re-gated clean at 85",
+  "webCheck": {
+    "ran": true,
+    "corrected": 3,
+    "remaining": 1
+  },
+  "scorecard": {
+    "score": 85,
+    "subscores": {
+      "accuracy": 9,
+      "readability": 9,
+      "humanVoice": 8,
+      "phrasing": 9,
+      "curiosity": 9,
+      "structure": 8,
+      "infoGain": 8,
+      "seo": 7,
+      "faqQuality": 8,
+      "completeness": 8
+    },
+    "strengths": [
+      "The headline is clear, specific, and delivers a true claim.",
+      "The lead quickly answers the core question, following an inverted pyramid structure.",
+      "Direct quotes from Patti LuPone and Rich Campbell are used effectively to convey emotion and factual information.",
+      "The language is plain and accessible, making it easy for a busy fan to read.",
+      "Paragraphs are short, aiding readability.",
+      "The article maintains a human voice, particularly through the use of direct quotes.",
+      "The phrasing is fluent and avoids mechanical or forced language.",
+      "The FAQ section adds new, relevant information, enhancing the overall content.",
+      "The article is well-structured for a news piece, with clear subheadings."
+    ],
+    "weaknesses": [
+      "The article mentions CNN as a source for Rich Campbell's quote but doesn't explicitly state it's a 'single source' or 'developing' information, which could be clearer for a news piece, though it does attribute.",
+      "The 'dek' uses 'LGBTQ+ passengers' which is a slight interpretation of 'gay men' from the source material, though not inaccurate.",
+      "The SEO score is slightly lower due to the absence of external links (beyond the initial THR attribution) and meta description, which are standard for news articles but not explicitly provided in the prompt's article text."
+    ],
+    "deterministic": {
+      "words": 228,
+      "h2s": 2,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 3,
+      "ktCount": 2,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": true,
+      "maxSentence": 27,
+      "avgSentence": 15,
+      "flesch": 68,
+      "bannedTells": 0,
+      "fillerPraise": 1,
+      "kwExact": 2,
+      "hardBlocks": []
+    },
+    "hardBlocks": []
+  },
+  "score": 85,
+  "category": "celebrity",
+  "subcategory": "news",
+  "audit": {
+    "ok": true,
+    "internalLinks": 0,
+    "failed": []
+  },
+  "ms": 518449,
+  "previousRuns": [
+    {
+      "id": "news-patti-lupone-gay-cruise-turkey-ban",
+      "slug": "patti-lupone-s-gay-cruise-ship-turned-away-by-turkey-i-am-furious-but-",
+      "status": "needs_review",
+      "stages": {
+        "attempt1": {
+          "score": 88,
+          "cat": "celebrity/news",
+          "hardBlocks": [
+            "a 75-word run-on sentence (>55 — split it)",
+            "verify-gate CUT: 1 claim(s) not in the gathered sources — Istanbul has been removed from the itinerary",
+            "ungrounded specific(s): 2,500 — every figure/outlet must exist in the gathered sources or authoritative facts",
+            "1 unverified claim(s) (need correction)"
+          ],
+          "block": [
+            "verify-gate CUT: 1 claim(s) not in the gathered sources — Istanbul has been removed from the itinerary",
+            "ungrounded specific(s): 2,500 — every figure/outlet must exist in the gathered sources or authoritative facts",
+            "1 unverified claim(s) (need correction)"
+          ],
+          "fixable": [
+            "a 75-word run-on sentence (>55 — split it)"
+          ],
+          "badClaims": 1
+        },
+        "attempt2": {
+          "score": 78,
+          "cat": "celebrity/news",
+          "hardBlocks": [
+            "a 70-word run-on sentence (>55 — split it)",
+            "ungrounded specific(s): 2,500 — every figure/outlet must exist in the gathered sources or authoritative facts",
+            "1 unverified claim(s) (need correction)"
+          ],
+          "block": [
+            "ungrounded specific(s): 2,500 — every figure/outlet must exist in the gathered sources or authoritative facts",
+            "1 unverified claim(s) (need correction)"
+          ],
+          "fixable": [
+            "a 70-word run-on sentence (>55 — split it)"
+          ],
+          "badClaims": 1
+        }
+      },
+      "editorial": {
+        "status": "confirmed",
+        "entity": "Patti LuPone",
+        "work": null,
+        "outlet": "hollywoodreporter.com"
+      },
+      "scorecard": {
+        "score": 78,
+        "subscores": {
+          "accuracy": 10,
+          "readability": 8,
+          "humanVoice": 7,
+          "phrasing": 8,
+          "curiosity": 8,
+          "structure": 8,
+          "infoGain": 7,
+          "seo": 7,
+          "faqQuality": 8,
+          "completeness": 7
+        },
+        "strengths": [
+          "Accurate reporting, faithfully reflecting the provided source material.",
+          "Clear, concise lead that answers the core question immediately.",
+          "Effective use of direct quotes from both Patti LuPone and Rich Campbell, adding authenticity and human voice.",
+          "Good readability with short paragraphs and clear subheadings.",
+          "The 'Key Takeaways' section provides an excellent summary for busy readers.",
+          "FAQ section adds genuinely new and relevant information, enhancing reader understanding.",
+          "Natural integration of the primary keyword 'Patti LuPone' without forcing."
+        ],
+        "weaknesses": [
+          "The article's human voice, while present in quotes, could be slightly more distinct in its own narrative, leaning a bit towards standard news reporting.",
+          "The 'What is the cruise itinerary?' section is a bit thin and could have integrated the 'other ports of call' detail more smoothly into the main body rather than a separate, short subhead.",
+          "While the article is short news, the 'about' section is empty, which could be a missed opportunity for a brief, relevant context on Patti LuPone or Atlantis Events if appropriate for the format.",
+          "The phrase 'according to a report from The Hollywood Reporter' in the lead is a bit clunky; 'The Hollywood Reporter states' or 'THR reports' would be more concise and fluent."
+        ],
+        "deterministic": {
+          "words": 295,
+          "h2s": 3,
+          "h2Questions": 3,
+          "internalLinks": 0,
+          "externalLinks": 0,
+          "hasSources": false,
+          "faqCount": 3,
+          "ktCount": 3,
+          "kwInTitle": true,
+          "kwInFirst100": true,
+          "kwInH2": true,
+          "maxSentence": 70,
+          "avgSentence": 18,
+          "flesch": 65,
+          "bannedTells": 0,
+          "fillerPraise": 1,
+          "kwExact": 2,
+          "hardBlocks": [
+            "a 70-word run-on sentence (>55 — split it)"
+          ]
+        },
+        "hardBlocks": [
+          "a 70-word run-on sentence (>55 — split it)",
+          "ungrounded specific(s): 2,500 — every figure/outlet must exist in the gathered sources or authoritative facts",
+          "1 unverified claim(s) (need correction)"
+        ]
+      },
+      "holdReason": "accuracy/grounding block: ungrounded specific(s): 2,500 — every figure/outlet must exist in the gathered sources or authoritative facts; 1 unverified claim(s) (need correction)",
+      "audit": {
+        "ok": false,
+        "internalLinks": 0,
+        "failed": [
+          "≥1200px legal image",
+          "credit",
+          "zero hard-blocks"
+        ]
+      },
+      "ms": 111548
+    }
+  ]
+}

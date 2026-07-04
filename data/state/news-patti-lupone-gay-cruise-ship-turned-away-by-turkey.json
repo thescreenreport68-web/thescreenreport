@@ -1,0 +1,109 @@
+{
+  "id": "news-patti-lupone-gay-cruise-ship-turned-away-by-turkey",
+  "slug": "patti-lupone-s-gay-cruise-ship-turned-away-by-turkey-i-am-furious-but-",
+  "status": "needs_review",
+  "stages": {
+    "attempt1": {
+      "score": 85,
+      "cat": "celebrity/news",
+      "hardBlocks": [
+        "verify-gate CUT: 1 claim(s) not in the gathered sources — The cruise concludes on July 15, 2026.",
+        "ungrounded specific(s): 2,500 — every figure/outlet must exist in the gathered sources or authoritative facts",
+        "1 unverified claim(s) (need correction)"
+      ],
+      "block": [
+        "verify-gate CUT: 1 claim(s) not in the gathered sources — The cruise concludes on July 15, 2026.",
+        "ungrounded specific(s): 2,500 — every figure/outlet must exist in the gathered sources or authoritative facts",
+        "1 unverified claim(s) (need correction)"
+      ],
+      "fixable": [],
+      "badClaims": 1
+    },
+    "attempt2": {
+      "score": 85,
+      "cat": "celebrity/news",
+      "hardBlocks": [
+        "ungrounded specific(s): 2,500 — every figure/outlet must exist in the gathered sources or authoritative facts",
+        "1 unverified claim(s) (need correction)"
+      ],
+      "block": [
+        "ungrounded specific(s): 2,500 — every figure/outlet must exist in the gathered sources or authoritative facts",
+        "1 unverified claim(s) (need correction)"
+      ],
+      "fixable": [],
+      "badClaims": 1
+    }
+  },
+  "editorial": {
+    "status": "confirmed",
+    "entity": "Patti LuPone",
+    "work": null,
+    "outlet": "hollywoodreporter.com"
+  },
+  "scorecard": {
+    "score": 85,
+    "subscores": {
+      "accuracy": 10,
+      "readability": 9,
+      "humanVoice": 9,
+      "phrasing": 9,
+      "curiosity": 9,
+      "structure": 8,
+      "infoGain": 8,
+      "seo": 7,
+      "faqQuality": 8,
+      "completeness": 8
+    },
+    "strengths": [
+      "Excellent accuracy, every claim is plausible and sourced.",
+      "The human voice is strong, especially in quoting LuPone and Campbell directly.",
+      "Reads effortlessly, with short paragraphs and clear, concise language.",
+      "The headline is specific and delivers a true claim.",
+      "The lead quickly answers the core question.",
+      "Good use of subheads to break up the information.",
+      "Key Takeaways are well-summarized and helpful.",
+      "The article avoids generic AI tells and filler praise.",
+      "The phrasing is fluent and professional, avoiding forced keywords or awkward constructions."
+    ],
+    "weaknesses": [
+      "The 'Sources' section is a bit sparse; while accurate for this short news piece, more explicit sourcing within the body could be beneficial for longer articles.",
+      "The FAQ section, while good, could offer slightly more 'new' information beyond what's already in the body, particularly for the 'Where else is the cruise sailing?' question.",
+      "While the SEO is natural, it could benefit from one more internal link if relevant content existed, without over-optimizing."
+    ],
+    "deterministic": {
+      "words": 311,
+      "h2s": 4,
+      "h2Questions": 3,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": true,
+      "faqCount": 3,
+      "ktCount": 3,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": true,
+      "maxSentence": 55,
+      "avgSentence": 19,
+      "flesch": 66,
+      "bannedTells": 0,
+      "fillerPraise": 1,
+      "kwExact": 2,
+      "hardBlocks": []
+    },
+    "hardBlocks": [
+      "ungrounded specific(s): 2,500 — every figure/outlet must exist in the gathered sources or authoritative facts",
+      "1 unverified claim(s) (need correction)"
+    ]
+  },
+  "holdReason": "accuracy/grounding block: ungrounded specific(s): 2,500 — every figure/outlet must exist in the gathered sources or authoritative facts; 1 unverified claim(s) (need correction)",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "≥1200px legal image",
+      "credit",
+      "zero hard-blocks"
+    ]
+  },
+  "ms": 95074
+}

@@ -1,0 +1,41 @@
+{
+  "runId": "vrun-2026-07-04T05-32-58",
+  "at": "2026-07-04T05:35:07.042Z",
+  "windowHours": 48,
+  "target": 1,
+  "candidates": 5,
+  "made": [
+    {
+      "slug": "silo-season-3-channels-classic-thrillers-for-political-plot",
+      "title": "'Silo' Season 3 Channels Classic Thrillers for Political Plot",
+      "category": "tv",
+      "seconds": 39.204,
+      "usd": 0.00705,
+      "file": "/Users/sivajithcu/Movie News site/site/data/video/out/silo-season-3-channels-classic-thrillers-for-political-plot.mp4"
+    }
+  ],
+  "failed": [
+    {
+      "slug": "power-book-iii-raising-kanan-introduces-young-spoiler-character-to-app",
+      "error": "skip: sensitive story (legal/minor)"
+    }
+  ],
+  "cost": {
+    "total": 0.007079920000000001,
+    "byModel": {
+      "google/gemini-2.5-flash-lite": {
+        "calls": 13,
+        "in": 27723,
+        "out": 90,
+        "usd": 0.00245712
+      },
+      "google/gemini-2.5-flash": {
+        "calls": 1,
+        "in": 1876,
+        "out": 1624,
+        "usd": 0.0046228
+      }
+    },
+    "calls": 14
+  }
+}

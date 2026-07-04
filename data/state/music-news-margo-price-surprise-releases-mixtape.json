@@ -1,0 +1,114 @@
+{
+  "id": "music-news-margo-price-surprise-releases-mixtape",
+  "slug": "margo-price-surprise-releases-protest-song-mixtape-days-of-unrest",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": 72,
+      "cat": "music/news",
+      "hardBlocks": [
+        "fabricated/altered quote: \"She called Foley, who wrote\" — use the exact source words or drop the quotation marks"
+      ],
+      "block": [
+        "fabricated/altered quote: \"She called Foley, who wrote\" — use the exact source words or drop the quotation marks"
+      ],
+      "fixable": [],
+      "badClaims": 0
+    },
+    "attempt2": {
+      "score": 68,
+      "cat": "music/news",
+      "hardBlocks": [
+        "a 56-word run-on sentence (>55 — split it)"
+      ],
+      "block": [],
+      "fixable": [
+        "a 56-word run-on sentence (>55 — split it)"
+      ],
+      "badClaims": 0
+    }
+  },
+  "editorial": {
+    "status": "official",
+    "entity": "Margo Price",
+    "work": {
+      "title": "Days of Unrest",
+      "year": null,
+      "medium": null
+    },
+    "outlet": "rollingstone.com"
+  },
+  "acceptReason": "terminal-accept (verified accurate, score 68, 1 quality nit(s))",
+  "webCheck": {
+    "ran": false,
+    "error": "Expected ',' or ']' after array element in JSON at position 5185"
+  },
+  "scorecard": {
+    "score": 68,
+    "subscores": {
+      "accuracy": 8,
+      "readability": 7,
+      "humanVoice": 6,
+      "phrasing": 7,
+      "curiosity": 7,
+      "structure": 7,
+      "infoGain": 6,
+      "seo": 7,
+      "faqQuality": 6,
+      "completeness": 7
+    },
+    "strengths": [
+      "The headline is clear and delivers a specific, true claim.",
+      "The lead quickly answers the core question about the mixtape's release.",
+      "The article uses short paragraphs, aiding readability.",
+      "Direct quotes from Margo Price add a human touch and specific insight.",
+      "The structure includes a relevant subhead and clearly states key takeaways.",
+      "The keyword 'Margo Price mixtape' is present naturally without stuffing."
+    ],
+    "weaknesses": [
+      "The Flesch score (53) is below the target range, indicating some density.",
+      "The average sentence length (21 words) is a bit high, contributing to density.",
+      "The FAQ section introduces an ungrounded detail about Billy Swan on 'Long Haired Country Girl,' which was not in the provided source material.",
+      "The 'dek' mentions 'vinyl proceeds benefiting a refugee rights project' but the body only states 'some proceeds,' creating a slight inconsistency in specificity.",
+      "The article could benefit from more varied sentence rhythm to improve flow.",
+      "While not explicitly 'throat-clearing,' the opening sentence 'Margo Price has surprise-released a new mixtape titled Days of Unrest, according to a report from Rolling Stone' is a bit formal and could be more engaging."
+    ],
+    "deterministic": {
+      "words": 256,
+      "h2s": 1,
+      "h2Questions": 1,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 3,
+      "ktCount": 3,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 56,
+      "avgSentence": 21,
+      "flesch": 53,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": [
+        "a 56-word run-on sentence (>55 — split it)"
+      ]
+    },
+    "hardBlocks": [
+      "a 56-word run-on sentence (>55 — split it)"
+    ]
+  },
+  "score": 68,
+  "category": "music",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "score ≥ 70",
+      "zero hard-blocks"
+    ]
+  },
+  "ms": 332928
+}

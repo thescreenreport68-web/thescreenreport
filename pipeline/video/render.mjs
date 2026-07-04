@@ -79,7 +79,7 @@ export async function renderVideo({ images, audio, assFile, out, duration, water
     g += `[br][ec]xfade=transition=fadeblack:duration=${EC_X}:offset=${(T - EC_X).toFixed(2)}[vout];`;
   } else g += `[br]null[vout];`;
   // AUDIO: voice clean-up -> (optional music bed, ducked under the voice) -> broadcast loudness -> tail fade
-  g += `[${N}:a]highpass=f=75,acompressor=threshold=-20dB:ratio=2.8:attack=8:release=140[vc];`;
+  g += `[${N}:a]highpass=f=75,equalizer=f=180:t=q:w=1.2:g=2.5,equalizer=f=3200:t=q:w=1.4:g=3,equalizer=f=7000:t=q:w=1:g=-3,highshelf=f=9000:g=2,acompressor=threshold=-20dB:ratio=2.8:attack=8:release=140[vc];`; // fix K DSP: warmth+presence+de-ess+air
   if (music) {
     g += `[vc]asplit=2[vmix][vduck];`; // a labeled pad is consumed once — split for ducker + mixer
     // owner 2026-07-03: bed was drowning the voice — pre-cut to 0.8, duck harder, mix at 0.12 (subtle presence)
@@ -87,7 +87,7 @@ export async function renderVideo({ images, audio, assFile, out, duration, water
     g += `[mus][vduck]sidechaincompress=threshold=0.02:ratio=10:attack=15:release=380[md];`;
     g += `[vmix][md]amix=inputs=2:duration=first:normalize=0:weights='1 0.17',apad[mix];`;
   } else g += `[vc]apad[mix];`;
-  g += `[mix]loudnorm=I=-14:TP=-1.5:LRA=11,afade=t=out:st=${(total - 0.8).toFixed(2)}:d=0.8[aout]`;
+  g += `[mix]loudnorm=I=-14:TP=-2.0:LRA=11,afade=t=out:st=${(total - 0.8).toFixed(2)}:d=0.8[aout]`;
 
   args.push(
     "-filter_complex", g, "-map", "[vout]", "-map", "[aout]", "-t", total.toFixed(2),

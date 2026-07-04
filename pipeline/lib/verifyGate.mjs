@@ -39,7 +39,11 @@ async function extractClaims(article, model) {
 // 2) Deterministic support: are the claim's NUMBERS all in the bundle, and is most of its content present?
 function deterministicSupport(claim, haystackLoose) {
   const nums = numberTokens(claim);
-  if (nums.some((n) => !haystackLoose.includes(n))) return false; // any figure not in ANY source = not confirmed here
+  // BOUNDARY match, not substring (2026-07-03 audit #2): a fabricated "2003" must NOT ground itself inside a
+  // source's "12003"/"2024-2003". stripPunct space-separates tokens on both sides (claim nums via numberTokens'
+  // own stripPunct, the haystack via stripPunct), so exact token-set membership is the correct grounding test.
+  const haySet = new Set(haystackLoose.split(/\s+/).filter(Boolean));
+  if (nums.some((n) => !haySet.has(n))) return false; // any figure not present as a whole token = not confirmed here
   const toks = sigTokens(claim);
   if (toks.length < 2) return false;
   const hit = toks.filter((t) => haystackLoose.includes(t)).length;

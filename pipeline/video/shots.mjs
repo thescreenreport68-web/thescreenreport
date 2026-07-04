@@ -10,12 +10,13 @@ import path from "node:path";
 import { execFile } from "node:child_process";
 import { fileURLToPath } from "node:url";
 import { getPersonImages, getTitleImages } from "../lib/tmdb.mjs";
+import { wikiImage } from "./names.mjs";
 import { chat } from "../lib/openrouter.mjs";
 import { VIDEO } from "./config.mjs";
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36";
-const MAX_SHOT = 3.75, MAX_SHOTS = 12; // owner 2026-07-03: each image holds 3.5-4s
+const MAX_SHOT = 3.75, MAX_SHOTS = 12, HOLD_MAX = 4.75; // owner 2026-07-03: 3.5-4s per image, ONE USE EVER
 
 const probe = (f) =>
   new Promise((res) =>
@@ -26,6 +27,18 @@ const probe = (f) =>
   );
 const runPy = (args) =>
   new Promise((res, rej) => execFile(VIDEO.python, args, { timeout: 120000 }, (e, so, se) => (e ? rej(new Error(String(se).slice(-400))) : res(so))));
+
+// PHASE 4 FACE-FIT: full-bleed frames are pre-cropped 9:16 AROUND THE FACES; images whose faces
+// cannot fit one frame are rejected (caller falls to other candidates / stacked portraits / title art).
+async function faceFit(file, mode = "person") {
+  try {
+    const out = file.replace(/\.jpg$/, "-fit.jpg");
+    const so = await runPy([path.join(HERE, "face_crop.py"), "--in", file, "--out", out, "--mode", mode]);
+    const r = JSON.parse(String(so).trim().split("\n").pop());
+    if (r.action === "reject") return null;
+    return out; // "cropped" or "leveled" both write a brightness-corrected file to `out`
+  } catch { return file; } // the fitter is an enhancer — a tool error never blocks production
+}
 
 async function download(url, dest, minW = VIDEO.minImageWidth) {
   try {
@@ -58,15 +71,36 @@ async function isRelevant(url, storyTitle, people, titles) {
       model: VIDEO.visionModel,
       system: "You verify that an image belongs with a news story for an entertainment newsroom. Answer STRICT JSON only.",
       user: `Story headline: "${storyTitle}". People named: ${people.join(", ") || "none"}. Productions/events named: ${titles.join(", ") || "none"}.
-An image is acceptable ONLY if: (a) you can POSITIVELY identify the person shown as one of the named people; or (b) it is clearly a scene, poster, or venue from one of the named productions/events; or (c) it shows no prominent identifiable person. If it prominently shows a person you CANNOT positively identify as one of the named people, answer false. {"relevant": true|false}`,
+An image is acceptable ONLY if: (a) you can POSITIVELY identify the person shown as one of the named people; or (b) it is clearly a scene, poster, or venue from one of the named productions/events; or (c) it shows no prominent identifiable person. If it prominently shows a person you CANNOT positively identify as one of the named people, OR it carries a visible watermark/agency logo/text overlay, answer false. {"relevant": true|false}`,
       images: [url], json: true, maxTokens: 60, temperature: 0,
     });
     return data?.relevant === true;
   } catch (e) { console.log("  (vision relevance gate error → REJECT: " + String(e.message).slice(0, 60) + ")"); return false; } // Phase 2: fail CLOSED
 }
 
+async function ogImages(pageUrl) {
+  try {
+    const so = await runPy([path.join(HERE, "og_fetch.py"), "--url", pageUrl]);
+    const urls = JSON.parse(String(so).trim().split("\n").pop());
+    return (Array.isArray(urls) ? urls : []).map((u) => u.replace(/&amp;/g, "&")).slice(0, 3);
+  } catch { return []; }
+}
+// provenance plausibility gate: the outlet published this image ON this story — identity is implied by
+// provenance, so we only reject junk (watermarks/logos/collages/clearly unrelated), not unknown faces.
+async function isProvenance(url, storyTitle) {
+  try {
+    const { data } = await chat({
+      model: VIDEO.visionModel, json: true, maxTokens: 60, temperature: 0,
+      system: "You screen editorial images for a newsroom. STRICT JSON only.",
+      user: `Story: "${storyTitle}". This image came from a news outlet's article about this story. Reject ONLY if it has a visible watermark/agency logo, is a text-heavy graphic/collage/screenshot, or is clearly unrelated to entertainment coverage. {"ok": true|false}`,
+      images: [url], json: true,
+    });
+    return data?.ok === true;
+  } catch { return false; }
+}
+
 // lines: [{say, visual}] · lineDurs: seconds per line · returns [{file, weight, visual, credit}]
-export async function planShots({ dir, lines, lineDurs, storyTitle, fallbackTitle, tmdbType = "movie", heroUrl }) {
+export async function planShots({ dir, lines, lineDurs, storyTitle, fallbackTitle, tmdbType = "movie", heroUrl, sourceUrls = [] }) {
   fs.mkdirSync(dir, { recursive: true });
   const tCache = {}, pCache = {}, used = {}, files = {}; // files[url] = downloaded path (download once)
   let seq = 0, lastFile = null;
@@ -74,19 +108,38 @@ export async function planShots({ dir, lines, lineDurs, storyTitle, fallbackTitl
   const namedPeople = [...new Set(lines.flatMap((l) => (l.visual?.entities || []).filter((e) => e.kind !== "title").map((e) => e.name)))];
   const namedTitles = [...new Set([...lines.flatMap((l) => (l.visual?.entities || []).filter((e) => e.kind === "title").map((e) => e.name)), ...lines.flatMap((l) => (l.visual?.entities || []).map((e) => e.ofTitle)).filter(Boolean), ...(fallbackTitle ? [fallbackTitle] : [])])];
 
+  const normT = (x) => String(x || "").toLowerCase().replace(/[^a-z0-9]/g, "");
   const title = async (name) => {
     if (/screen\s*report/i.test(name) && fallbackTitle) name = fallbackTitle;
     const k = name.toLowerCase();
-    if (!(k in tCache)) tCache[k] = await getTitleImages(name, tmdbType).catch(() => null);
+    if (!(k in tCache)) {
+      // try the guessed type, but a fuzzy wrong-title match must NOT block the exact match on the
+      // other type (live bug: movie-search matched "Seek and You Will Find" and hid the real TV show)
+      let t = await getTitleImages(name, tmdbType).catch(() => null);
+      if (!t || normT(t.title) !== normT(name)) {
+        const alt = await getTitleImages(name, tmdbType === "tv" ? "movie" : "tv").catch(() => null);
+        if (alt && (normT(alt.title) === normT(name) || !t)) t = alt;
+      }
+      tCache[k] = t;
+    }
     return tCache[k];
   };
+  const idMap = {}; // Phase 4: "Rogen" and "Seth Rogen" resolve to ONE canonical subject (same TMDB id)
   const person = async (name) => {
     const k = name.toLowerCase();
     if (k in pCache) return pCache[k];
     const p = await getPersonImages(name).catch(() => null);
     let ok = null;
-    if (p?.profiles?.length) {
-      for (const u of p.profiles.slice(0, 3)) if (await isPerson(u, p.name || name, storyTitle)) { ok = { name: p.name || name, urls: [u, ...p.profiles.filter((x) => x !== u)] }; break; }
+    if (p?.id && idMap[p.id]) ok = idMap[p.id];
+    else if (p?.profiles?.length) {
+      for (const u of p.profiles.slice(0, 3)) if (await isPerson(u, p.name || name, storyTitle)) { ok = { id: p.id, name: p.name || name, urls: [u, ...p.profiles.filter((x) => x !== u)] }; break; }
+      if (ok?.id) idMap[ok.id] = ok;
+    }
+    // Fix C (owner 2026-07-03): directors/showrunners/execs are on Wikipedia, not TMDB — add that lane,
+    // identity-gated so a wrong face still never ships. Ensures the person NAMED is the person SHOWN.
+    if (!ok?.urls?.length) {
+      const wi = await wikiImage(name).catch(() => null);
+      if (wi && (await isPerson(wi, name, storyTitle))) ok = { name, urls: [wi, ...(ok?.urls || [])] };
     }
     return (pCache[k] = ok);
   };
@@ -160,7 +213,12 @@ export async function planShots({ dir, lines, lineDurs, storyTitle, fallbackTitl
   const candidates = async (e) => {
     if (!e) return [];
     if (e.kind === "person") { const p = await person(e.name); return (p?.urls || []).map((u) => ({ u, credit: `TMDB · ${p?.name}`, gate: "person" })); }
-    if (e.kind === "title") { const t = await title(e.name); return [...(t?.backdrops || []), ...(t?.poster ? [t.poster] : [])].map((u) => ({ u, credit: `TMDB · ${t?.title}`, gate: "relevance" })); }
+    if (e.kind === "title") {
+      const t = await title(e.name);
+      // exact-name TMDB match = provenance by construction (vision can't recognize brand-new shows)
+      const exact = t && String(t.title || "").toLowerCase().replace(/[^a-z0-9]/g, "") === String(e.name).toLowerCase().replace(/[^a-z0-9]/g, "");
+      return [...(t?.backdrops || []), ...(t?.poster ? [t.poster] : [])].map((u) => ({ u, credit: `TMDB · ${t?.title}`, gate: exact ? null : "relevance", scene: true }));
+    }
     // CHARACTER: vision-indexed stills of THAT character -> credits-bridge actor (live-action) ->
     // web search -> (last resort, logged) the production's generic art
     const t = (e.ofTitle ? await title(e.ofTitle) : null) || (fallbackTitle ? await title(fallbackTitle) : null);
@@ -189,9 +247,11 @@ export async function planShots({ dir, lines, lineDurs, storyTitle, fallbackTitl
         const got = await download(c.u, dest);
         if (!got) { files[c.u] = false; continue; }
         if (c.gate === "relevance" && !(await isRelevant(c.u, storyTitle, namedPeople, namedTitles))) { files[c.u] = false; continue; }
-        files[c.u] = dest;
+        const fitted = await faceFit(dest, c.scene ? "scene" : "person"); // scenes never reject
+        if (!fitted) { files[c.u] = false; continue; }
+        files[c.u] = fitted;
       }
-      if (files[c.u] === lastFile && cands.length > 1) continue; // no back-to-back repeats
+      if (usedFiles.has(files[c.u])) continue; // ONE-USE LAW: an image shown once is spent forever
       return { file: files[c.u], credit: c.credit };
     }
     return null;
@@ -220,15 +280,78 @@ export async function planShots({ dir, lines, lineDurs, storyTitle, fallbackTitl
     try { await runPy(args); return (await probe(out)) ? out : null; } catch { return null; }
   };
 
+  // provenance pool: the story's own outlet images (og/twitter) — face-fitted, trusted by provenance
+  const provenance = [];
+  for (const su of sourceUrls.slice(0, 4)) {
+    for (const u of await ogImages(su)) {
+      const dest = path.join(dir, `src-og-${++seq}.jpg`);
+      if ((await download(u, dest)) && (await isProvenance(u, storyTitle))) {
+        const fitted = await faceFit(dest, "scene");
+        if (fitted) provenance.push({ file: fitted, credit: `source outlet` });
+      }
+    }
+  }
+  let provUsed = 0;
+  let lastVisual = null; // C: lines the writer left blank inherit the previous subject (continuity)
+
+  // ═══ PRIMARY-SUBJECT DOMINANCE (owner 2026-07-03) — the story's own subject must OWN the screen;
+  // entities the script merely name-drops (comparison films, influences, other shows) are ACCENTS. ═══
+  const baseKey = (kind, name) => `${kind === "title" ? "title" : "person"}:${String(name).toLowerCase()}`;
+  const nameCount = {};
+  for (const l of lines) for (const e of l.visual?.entities || []) { const kk = baseKey(e.kind, e.name); nameCount[kk] = (nameCount[kk] || 0) + 1; }
+  const topPerson = Object.entries(nameCount).filter(([k]) => k.startsWith("person:")).sort((a, b) => b[1] - a[1])[0]?.[0];
+  const primaryKeys = new Set([fallbackTitle ? `title:${String(fallbackTitle).toLowerCase()}` : null, topPerson].filter(Boolean));
+  const isPrimary = (kind, name) => primaryKeys.has(baseKey(kind, name));
+  const SECONDARY_CAP = 1; // a tangential entity may appear in at most this many shots
+  const entityShots = {}; // baseKey -> count of shots given to it
+
+  // VARIETY LAW: primary subject's art interleaves so no entity dominates a run (title OR person).
+  const seenT = new Set(); const titleEnts = [];
+  if (fallbackTitle) { titleEnts.push({ kind: "title", name: String(fallbackTitle) }); seenT.add(String(fallbackTitle).toLowerCase()); } // primary title FIRST
+  for (const l of lines) for (const e of l.visual?.entities || [])
+    if (e?.kind === "title" && e.name && !seenT.has(e.name.toLowerCase())) { seenT.add(e.name.toLowerCase()); titleEnts.push(e); }
+  // an interleave shot: prefer the PRIMARY title's fresh art; never repeat `avoidKey`
+  const diversityShot = async (avoidKey = null) => {
+    for (const te of titleEnts) {
+      const tk = baseKey("title", te.name);
+      if (tk === avoidKey) continue;
+      const r = await nextImage(`title:${te.name}`, await candidates(te));
+      if (r) return { ...r, tag: `title:${te.name}`, bk: tk };
+    }
+    if (provUsed < provenance.length) { const p = provenance[provUsed++]; return { file: p.file, credit: p.credit, tag: "source-photo", bk: "provenance" }; }
+    return null;
+  };
+  const usedFiles = new Set();
   const shots = [];
-  const push = (file, weight, visual, credit) => {
+  const push = (file, weight, visual, credit, bk = null) => {
     if (!file) { if (shots.length) shots[shots.length - 1].weight += weight; return; }
-    shots.push({ file, weight, visual, credit });
+    usedFiles.add(file);
+    if (bk) entityShots[bk] = (entityShots[bk] || 0) + 1;
+    shots.push({ file, weight, visual, credit, bk });
     lastFile = file;
+  };
+  // absolute last resort before stretching a hold: ANY unused image from any pool
+  const anyUnused = async () => {
+    const d = await diversityShot();
+    if (d && !usedFiles.has(d.file)) return d;
+    for (const l of lines) for (const e of l.visual?.entities || []) {
+      if (e.kind === "title") continue;
+      const r = await nextImage(`pid-any:${e.name}`, await candidates(e));
+      if (r) return { ...r, tag: `${e.kind}:${e.name}`, bk: baseKey(e.kind, e.name) };
+    }
+    if (heroUrl && !files.__hero) {
+      const dest = path.join(dir, `shot-src-${++seq}.jpg`);
+      if ((await download(heroUrl, dest)) && (await isRelevant(heroUrl, storyTitle, namedPeople, namedTitles))) {
+        const fitted = await faceFit(dest, "scene");
+        if (fitted) { files.__hero = fitted; return { file: fitted, credit: "article hero", tag: "hero", bk: "hero" }; }
+      }
+    }
+    return null;
   };
 
   for (let li = 0; li < lines.length; li++) {
-    const v = lines[li].visual;
+    const v = lines[li].visual || lastVisual;
+    if (lines[li].visual) lastVisual = lines[li].visual;
     const dur = lineDurs[li];
     let n = Math.max(1, Math.round(dur / MAX_SHOT)); // target ~3.75s/shot (owner: 3.5-4s)
     while (dur / n > 4.75 && n < 4) n++; // ceiling: prefer one ~4.5s hold over two 2.2s flashes
@@ -238,42 +361,78 @@ export async function planShots({ dir, lines, lineDurs, storyTitle, fallbackTitl
     if (!ents.length) ents = fallbackTitle ? [{ kind: "title", name: fallbackTitle }] : [];
     const persons = ents.filter((e) => e.kind !== "title");
     for (let s = 0; s < n; s++) {
-      let file = null, credit = null, tag = "fallback";
+      let file = null, credit = null, tag = "fallback", bk = null;
+      const want = ents[0] || null;
+      const wantKey = want ? baseKey(want.kind, want.name) : null;
+      // A · secondary (name-dropped) entities are ACCENTS — over their cap → the primary subject instead
+      const secondaryOverCap = want && !isPrimary(want.kind, want.name) && (entityShots[wantKey] || 0) >= SECONDARY_CAP;
+      // B · no entity in more than 2 of any 3 consecutive shots (title OR person)
+      const last2 = shots.slice(-2).map((x) => x.bk);
+      const runOfWant = wantKey && last2.length === 2 && last2[0] === wantKey && last2[1] === wantKey;
+      if (secondaryOverCap || runOfWant) {
+        const d = await diversityShot(runOfWant ? wantKey : null);
+        if (d && !usedFiles.has(d.file)) { console.log(`    [plan] line ${li} ${secondaryOverCap ? "secondary-cap" : "variety-law"} (${wantKey}) → ${d.tag}`); push(d.file, per, d.tag, d.credit, d.bk); continue; }
+      }
       // shot 1 of a multi-entity line = the N-adaptive composite (the owner's core ask)
       if (s === 0 && v?.about === "group" && persons.length >= 2) {
         file = await composite("grid", persons);
-        if (file) { credit = `composite ×${Math.min(persons.length, 6)}`; tag = `grid:${persons.length}`; }
+        if (file) { credit = `composite ×${Math.min(persons.length, 6)}`; tag = `grid:${persons.length}`; bk = "composite"; }
       } else if (s === 0 && v?.about === "primary" && ents.length >= 2 && persons.filter((e) => e.name !== ents[0].name).length >= 1) {
         file = await composite("hero", persons.filter((e) => e.name !== ents[0].name), ents[0]);
-        if (file) { credit = "hero+strip"; tag = `hero:${ents[0].name}`; }
+        if (file) { credit = "hero+strip"; tag = `hero:${ents[0].name}`; bk = baseKey(ents[0].kind, ents[0].name); }
       }
       // otherwise (and on composite failure): rotate through the line's entities' verified variants
       if (!file) {
         for (let k = 0; k < Math.max(ents.length, 1) && !file; k++) {
           const e = ents[(s + k) % Math.max(ents.length, 1)];
           if (!e) break;
-          const r = await nextImage(`${e.kind}:${e.name}`, await candidates(e));
-          if (r) { file = r.file; credit = r.credit; tag = `${e.kind}:${e.name}`; }
+          let rkey = `${e.kind}:${e.name}`;
+          if (e.kind === "person") { const p = await person(e.name); if (p?.id) rkey = `pid:${p.id}`; }
+          const r = await nextImage(rkey, await candidates(e));
+          if (r) { file = r.file; credit = r.credit; tag = `${e.kind}:${e.name}`; bk = baseKey(e.kind, e.name); }
         }
       }
       if (!file && fallbackTitle) {
         const r = await nextImage(`t:${fallbackTitle}`, await candidates({ kind: "title", name: fallbackTitle }));
-        if (r) { file = r.file; credit = r.credit; tag = "story-title"; }
+        if (r) { file = r.file; credit = r.credit; tag = "story-title"; bk = baseKey("title", fallbackTitle); }
+      }
+      if (!file && provUsed < provenance.length) {
+        const p = provenance[provUsed++];
+        file = p.file; credit = p.credit; tag = "source-photo"; bk = "provenance";
       }
       if (!file && heroUrl && !files.__hero) {
         const dest = path.join(dir, `shot-src-${++seq}.jpg`);
-        if ((await download(heroUrl, dest)) && (await isRelevant(heroUrl, storyTitle, namedPeople, namedTitles))) { files.__hero = dest; file = dest; credit = "article hero"; tag = "hero"; }
+        if ((await download(heroUrl, dest)) && (await isRelevant(heroUrl, storyTitle, namedPeople, namedTitles))) {
+          const fitted = await faceFit(dest, "scene");
+          if (fitted) { files.__hero = fitted; file = fitted; credit = "article hero"; tag = "hero"; bk = "hero"; }
+        }
       }
-      push(file, per, tag, credit);
+      if (!file) {
+        const prevHold = shots.length ? shots[shots.length - 1].weight : 0;
+        if (prevHold + per > HOLD_MAX) {
+          const alt = await anyUnused();
+          if (alt) { console.log(`    [plan] line ${li} miss → hold-cap rescue: ${alt.tag}`); push(alt.file, per, alt.tag, alt.credit, alt.bk || "rescue"); continue; }
+        }
+        console.log(`    [plan] line ${li} shot MISS (wanted ${v?.entities?.map((e) => e.kind + ":" + e.name).join(",") || "none"}) → merged (hold ${(prevHold + per).toFixed(1)}s)`);
+      }
+      push(file, per, tag, credit, bk);
     }
   }
-  while (shots.length > MAX_SHOTS) { // bound the ffmpeg graph: merge the lightest into its neighbor
-    let mi = 1;
-    for (let i = 1; i < shots.length; i++) if (shots[i].weight < shots[mi].weight) mi = i;
+  console.log(`    [plan] provenance pool: ${provenance.length} · titleEnts: ${titleEnts.map((t) => t.name).join(", ") || "none"}`);
+  while (shots.length > MAX_SHOTS + 2) { // bound the ffmpeg graph — but a merge may never breach the hold cap
+    let mi = -1;
+    for (let i = 1; i < shots.length; i++)
+      if (shots[i - 1].weight + shots[i].weight <= HOLD_MAX && (mi < 0 || shots[i].weight < shots[mi].weight)) mi = i;
+    if (mi < 0) break; // no legal merge — a slightly bigger graph beats a 15-second hold
     shots[mi - 1].weight += shots[mi].weight;
     shots.splice(mi, 1);
   }
-  if (shots.length === 1) shots.push({ ...shots[0], weight: 0.0001 });
   if (!shots.length) throw new Error("shots: no usable frames");
+  // ═══ VISUAL FLOORS (owner 2026-07-03) — a video that can't look right doesn't ship ═══
+  const distinct = new Set(shots.map((x) => x.file)).size;
+  if (distinct < 3) throw new Error(`shots: only ${distinct} distinct image(s) — story skipped (visual floor)`);
+  const overHeld = shots.filter((x) => x.weight > HOLD_MAX + 0.3);
+  if (overHeld.length) throw new Error(`shots: ${overHeld.length} hold(s) exceed ${HOLD_MAX}s — not enough distinct imagery, story skipped (one-use law)`);
+  if (shots.length === 1) shots.push({ ...shots[0], weight: 0.0001 }); // xfade chain needs >=2 segments
   return shots;
 }

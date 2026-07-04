@@ -1,0 +1,114 @@
+{
+  "id": "news-cape-fear-acid-freakout-cinematography-celiana-cardenas",
+  "slug": "cinematographer-details-new-visual-tools-for-cape-fear-acid-freakout-s",
+  "status": "needs_review",
+  "stages": {
+    "attempt1": {
+      "score": 78,
+      "cat": "tv/news",
+      "hardBlocks": [
+        "verify-gate CUT: 1 claim(s) not in the gathered sources — Celiana Cárdenas introduced lens flares that evolve in ",
+        "2 unverified claim(s) (need correction)"
+      ],
+      "block": [
+        "verify-gate CUT: 1 claim(s) not in the gathered sources — Celiana Cárdenas introduced lens flares that evolve in ",
+        "2 unverified claim(s) (need correction)"
+      ],
+      "fixable": [],
+      "badClaims": 2
+    },
+    "attempt2": {
+      "score": 78,
+      "cat": "tv/news",
+      "hardBlocks": [
+        "verify-gate CUT: 2 claim(s) not in the gathered sources — Celiana Cárdenas introduced lens flares for the acid tr; The lens flares finished with orange."
+      ],
+      "block": [
+        "verify-gate CUT: 2 claim(s) not in the gathered sources — Celiana Cárdenas introduced lens flares for the acid tr; The lens flares finished with orange."
+      ],
+      "fixable": [],
+      "badClaims": 0
+    }
+  },
+  "editorial": {
+    "status": "unconfirmed",
+    "entity": "Celiana Cárdenas",
+    "work": {
+      "title": "Cape Fear",
+      "year": null,
+      "medium": "tv"
+    },
+    "outlet": "indiewire.com"
+  },
+  "acceptReason": "terminal-accept (verified accurate, score 78, 2 qualitative stray(s) accepted)",
+  "webCheck": {
+    "ran": true,
+    "corrected": 5,
+    "remaining": 4
+  },
+  "holdReason": "accuracy/grounding block: verify-gate CUT: 2 claim(s) not in the gathered sources — Celiana Cárdenas introduced lens flares for the acid tr; The lens flares finished with orange.",
+  "scorecard": {
+    "score": 78,
+    "subscores": {
+      "accuracy": 10,
+      "readability": 8,
+      "humanVoice": 8,
+      "phrasing": 8,
+      "curiosity": 8,
+      "structure": 8,
+      "infoGain": 8,
+      "seo": 7,
+      "faqQuality": 8,
+      "completeness": 8
+    },
+    "strengths": [
+      "The article is highly accurate, with all claims plausible and sourced, avoiding any fabrication.",
+      "The lead delivers the answer quickly, satisfying curiosity immediately.",
+      "The structure is clear with a good lead, relevant subheads, and helpful Key Takeaways.",
+      "The human voice is present, with specific details and direct quotes from the cinematographer.",
+      "The article avoids generic AI tells and filler praise, focusing on concrete information.",
+      "The phrasing is generally fluent and avoids forced keywords or awkward transitions.",
+      "The FAQ section adds new, relevant information without being redundant.",
+      "The article effectively conveys the unique visual approach for the acid trip scene, providing good information gain."
+    ],
+    "weaknesses": [
+      "While generally good, the Flesch score of 52 indicates it could be slightly more readable for a broader audience (target 60-72).",
+      "The 'feverish' feeling explanation could be slightly more detailed or visually descriptive to fully engage the reader.",
+      "The internal links and external sources are present, but the article could benefit from one more authoritative external source to strengthen its SEO score further, even though it's a short news piece."
+    ],
+    "deterministic": {
+      "words": 322,
+      "h2s": 2,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 3,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 34,
+      "avgSentence": 18,
+      "flesch": 52,
+      "bannedTells": 1,
+      "fillerPraise": 0,
+      "kwExact": 2,
+      "hardBlocks": []
+    },
+    "hardBlocks": [
+      "verify-gate CUT: 2 claim(s) not in the gathered sources — Celiana Cárdenas introduced lens flares for the acid tr; The lens flares finished with orange."
+    ]
+  },
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "key takeaways",
+      "≥1200px legal image",
+      "credit",
+      "zero hard-blocks"
+    ]
+  },
+  "ms": 531616
+}

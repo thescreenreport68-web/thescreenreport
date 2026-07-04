@@ -1,0 +1,143 @@
+{
+  "id": "news-chicago-pd-season-14-cast-departure",
+  "slug": "original-cast-member-to-depart-chicago-p-d-in-season-14",
+  "status": "needs_review",
+  "stages": {
+    "attempt1": {
+      "score": 45,
+      "cat": "music/news",
+      "hardBlocks": [
+        "primary keyword not in title",
+        "body 144w < 220",
+        "verify-gate BLOCK: The song \"Cupcake\" is currently available for streaming; As of July 2026, \"Cupcake\" serves as the first preview ; The song \"Cupcake\" is available on major streaming plat",
+        "fabricated/altered quote: \"and she has revealed a song from it called\"; \"marks a new era for the artist, though specific de\" — use the exact source words or drop the quotation marks",
+        "infoGain 3 < 5",
+        "humanVoice 3 < 5",
+        "phrasing 4 < 5"
+      ],
+      "block": [
+        "verify-gate BLOCK: The song \"Cupcake\" is currently available for streaming; As of July 2026, \"Cupcake\" serves as the first preview ; The song \"Cupcake\" is available on major streaming plat",
+        "fabricated/altered quote: \"and she has revealed a song from it called\"; \"marks a new era for the artist, though specific de\" — use the exact source words or drop the quotation marks"
+      ],
+      "fixable": [
+        "primary keyword not in title",
+        "body 144w < 220",
+        "infoGain 3 < 5",
+        "humanVoice 3 < 5",
+        "phrasing 4 < 5"
+      ],
+      "badClaims": 0
+    },
+    "attempt2": {
+      "score": 35,
+      "cat": "music/news",
+      "hardBlocks": [
+        "primary keyword not in title",
+        "body 81w < 220",
+        "fabricated/altered quote: \"and she has revealed a song called\"; \"is her next project. The song\" — use the exact source words or drop the quotation marks",
+        "infoGain 2 < 5",
+        "humanVoice 2 < 5",
+        "phrasing 3 < 5"
+      ],
+      "block": [
+        "fabricated/altered quote: \"and she has revealed a song called\"; \"is her next project. The song\" — use the exact source words or drop the quotation marks"
+      ],
+      "fixable": [
+        "primary keyword not in title",
+        "body 81w < 220",
+        "infoGain 2 < 5",
+        "humanVoice 2 < 5",
+        "phrasing 3 < 5"
+      ],
+      "badClaims": 0
+    }
+  },
+  "editorial": {
+    "status": "unconfirmed",
+    "entity": "Rico Nasty",
+    "work": {
+      "title": "RX",
+      "year": null,
+      "medium": null
+    },
+    "outlet": "consequence of sound"
+  },
+  "scorecard": {
+    "score": 35,
+    "subscores": {
+      "accuracy": 10,
+      "readability": 5,
+      "humanVoice": 2,
+      "phrasing": 3,
+      "curiosity": 4,
+      "structure": 5,
+      "infoGain": 2,
+      "seo": 3,
+      "faqQuality": 2,
+      "completeness": 2
+    },
+    "strengths": [
+      "Accurately reports the core facts from the provided source.",
+      "The headline is direct and factual.",
+      "The 'Key Takeaways' provide a quick summary."
+    ],
+    "weaknesses": [
+      "The article lacks a human voice and reads as extremely generic and templated.",
+      "The phrasing is repetitive and stiff, particularly in the body and FAQ sections.",
+      "The subheadings are generic and do not add value or specific information.",
+      "Information gain is minimal; the article mostly restates the headline and dek.",
+      "The FAQ section is unhelpful and merely reiterates that Consequence of Sound reported the news, offering no new information or answers.",
+      "The body text is very short and offers no elaboration or context beyond the bare facts.",
+      "The article feels incomplete, lacking any details about the music itself or what makes this announcement significant.",
+      "The 'What's Next for Rico Nasty?' section is a placeholder that offers no actual information."
+    ],
+    "deterministic": {
+      "words": 81,
+      "h2s": 3,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": true,
+      "faqCount": 2,
+      "ktCount": 3,
+      "kwInTitle": false,
+      "kwInFirst100": false,
+      "kwInH2": false,
+      "maxSentence": 24,
+      "avgSentence": 10,
+      "flesch": 74,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": [
+        "primary keyword not in title",
+        "body 81w < 220"
+      ]
+    },
+    "hardBlocks": [
+      "primary keyword not in title",
+      "body 81w < 220",
+      "fabricated/altered quote: \"and she has revealed a song called\"; \"is her next project. The song\" — use the exact source words or drop the quotation marks",
+      "infoGain 2 < 5",
+      "humanVoice 2 < 5",
+      "phrasing 3 < 5"
+    ]
+  },
+  "holdReason": "accuracy/grounding block: fabricated/altered quote: \"and she has revealed a song called\"; \"is her next project. The song\" — use the exact source words or drop the quotation marks",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "body ≥ 220w",
+      "keyword in title",
+      "≥1200px legal image",
+      "credit",
+      "score ≥ 70",
+      "zero hard-blocks",
+      "infoGain ≥ 5",
+      "humanVoice ≥ 5",
+      "phrasing ≥ 5"
+    ]
+  },
+  "ms": 98768
+}

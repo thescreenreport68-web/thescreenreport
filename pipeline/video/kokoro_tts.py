@@ -51,6 +51,29 @@ if not vocab:
 dropped = {w: [c for c in ipa if vocab and c not in vocab] for w, ipa in LEX.items()}
 LEX = {w: ipa for w, ipa in LEX.items() if not dropped.get(w) or not any(dropped[w])}
 
+# VOICE (fix K, owner 2026-07-03): support a BLEND spec "af_heart:55,af_bella:45" — af_heart is one of
+# the flatter voices; blending in af_bella (highest measured pitch/energy variance) adds dynamics while
+# keeping af_heart's warmth. kokoro-onnx get_voice_style() returns the (510,1,256) style vector.
+def resolve_voice(spec):
+    import numpy as np
+    if "," not in spec and ":" not in spec:
+        return spec  # a plain voice name
+    parts = []
+    for chunk in spec.split(","):
+        name, _, w = chunk.strip().partition(":")
+        parts.append((name.strip(), float(w) if w else 1.0))
+    total = sum(w for _, w in parts) or 1.0
+    try:
+        vec = None
+        for name, w in parts:
+            sv = np.array(kokoro.get_voice_style(name))
+            vec = sv * (w / total) if vec is None else vec + sv * (w / total)
+        return vec
+    except Exception:
+        return parts[0][0]  # blend unsupported → fall back to the first named voice
+
+VOICE = resolve_voice(a.voice)
+
 def phonemize_sentence(s):
     """Splice: lexicon words become exact IPA; everything else goes through the engine's own G2P."""
     if not LEX:
@@ -62,10 +85,22 @@ def phonemize_sentence(s):
         out.append(LEX[q] if q in LEX else kokoro.tokenizer.phonemize(q, "en-us").strip())
     return " ".join(out)
 
-# sentence-wise (keeps punctuation pauses; stays under the 510-phoneme batch limit)
+# PER-SENTENCE synthesis (fix K): each sentence gets its own prosody contour + a slight speed contour
+# (hook push-in, body neutral, payoff punch) + inserted inter-sentence silence — measured +25.6% dynamics
+# vs a single flat call. Concatenate with 160ms pauses so the delivery breathes.
+import numpy as np
 sentences = [s.strip() for s in re.split(r"(?<=[.!?])\s+", text) if s.strip()]
-ph = " ".join(phonemize_sentence(s) for s in sentences)
-samples, sr = kokoro.create(ph, voice=a.voice, speed=a.speed, is_phonemes=True, trim=True)
+nS = len(sentences)
+segs, sr = [], 24000
+for i, s in enumerate(sentences):
+    if nS >= 3 and i == 0:      spd = a.speed + 0.05   # HOOK — push in
+    elif nS >= 3 and i >= nS-2: spd = a.speed + 0.04   # PAYOFF/TURN — punch
+    else:                       spd = a.speed          # body — neutral
+    smp, sr = kokoro.create(phonemize_sentence(s), voice=VOICE, speed=spd, is_phonemes=True, trim=True)
+    if len(smp):
+        segs.append(np.asarray(smp, dtype="float32"))
+        if i < nS - 1: segs.append(np.zeros(int(sr * 0.16), dtype="float32"))  # 160ms breath
+samples = np.concatenate(segs) if segs else np.zeros(0, dtype="float32")
 if len(samples) == 0:
     print(json.dumps({"error": "empty audio"})); sys.exit(1)
 sf.write(a.out, samples, sr)

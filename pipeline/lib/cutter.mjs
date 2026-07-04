@@ -78,11 +78,23 @@ export function cutArticle(article, claims) {
       if (article.boxOffice[k] && isFlaggedField(String(article.boxOffice[k]), matchers)) { delete article.boxOffice[k]; fieldCuts++; }
     }
   }
-  for (const k of ["records", "awardRecords"]) {
+  for (const k of ["records", "awardRecords", "keyPoints", "keyMoments"]) {
     if (Array.isArray(article[k])) {
       const kept = article[k].filter((r) => !isFlaggedField(typeof r === "string" ? r : JSON.stringify(r || ""), matchers));
       fieldCuts += article[k].length - kept.length;
       article[k] = kept;
+    }
+  }
+  // A flagged pull-quote must not survive as a "highlight" (2026-07-03: a web-contradicted line leaked here).
+  if (article.pullQuote && isFlagged(`${article.pullQuote.text || ""}`, matchers)) { article.pullQuote = null; fieldCuts++; }
+  // Structured niche cards carry free-text specifics too (seriesContext/seriesStatus castAdded, status, window).
+  for (const card of ["seriesContext", "seriesStatus", "infoCard"]) {
+    const c = article[card];
+    if (c && typeof c === "object") {
+      if (Array.isArray(c.castAdded)) { const k = c.castAdded.filter((x) => !isFlaggedField(JSON.stringify(x || ""), matchers)); fieldCuts += c.castAdded.length - k.length; c.castAdded = k; }
+      for (const f of ["status", "window", "premiere", "whereToWatch"]) {
+        if (c[f] && isFlaggedField(String(c[f]), matchers)) { c[f] = ""; fieldCuts++; }
+      }
     }
   }
   return { cut, fieldCuts };

@@ -12,6 +12,7 @@ export type Article = {
   author: string;
   date: string; // ISO
   updated?: string;
+  robots?: string; // "noindex" — written by recheck corrections / the inside parent-retraction cascade
   dek: string;
   metaTitle: string;
   metaDescription: string;
@@ -161,6 +162,22 @@ export type Article = {
   precursorTimeline?: { body: string; winner?: string }[]; // predictions: precursor results
   bottomLine?: string; // predictions: the closing call
   predictions?: { categoryName?: string; willWin?: string; shouldWin?: string; darkHorse?: string }[];
+  // ---- INSIDE (ripple/reaction) format fields — formatTag "inside" ----
+  insideForm?: string; // peer-tributes | fan-pulse | cast-crew-voices | breakout-spotlight | single-voice | ripple-effects
+  parentEventSlug?: string; // the parent news event this ripple radiates from
+  parentSlug?: string; // parent article slug (same category) — powers the "The story:" backlink
+  parentTitle?: string;
+  reactions?: {
+    speaker: string;
+    connection?: string;
+    platform?: string;
+    date?: string;
+    quote: string;
+    tweetId?: string;
+  }[]; // the structured reaction list (the core content)
+  anchorStatement?: { speaker: string; connection?: string; quote: string; platform?: string }; // family/rep/creator statement
+  fanConsensus?: string; // 1-2 sentence fan-pulse verdict (claim-verified upstream)
+  updatedCount?: number; // monitor top-ups landed since publish
   // ---- MUSIC silo fields (Commit 1 emitted these to frontmatter; type them now for PR2 UI) ----
   tier?: string; // music: popular | indie (the 6%/4% lane)
   release?: { title?: string; date?: string; label?: string; type?: string }; // music-news
@@ -210,6 +227,7 @@ export function getAllArticles(): Article[] {
       date: data.date,
       // dateModified is what the pipeline/recheck actually writes; `updated` kept for manual edits
       updated: data.updated ?? data.dateModified,
+      robots: data.robots,
       dek: data.dek ?? "",
       metaTitle: data.metaTitle ?? data.title,
       metaDescription: data.metaDescription ?? data.dek ?? "",
@@ -290,6 +308,15 @@ export function getAllArticles(): Article[] {
       precursorTimeline: data.precursorTimeline ?? [],
       bottomLine: data.bottomLine,
       predictions: data.predictions ?? [],
+      // inside (ripple/reaction) fields
+      insideForm: data.insideForm,
+      parentEventSlug: data.parentEventSlug,
+      parentSlug: data.parentSlug,
+      parentTitle: data.parentTitle,
+      reactions: data.reactions ?? [],
+      anchorStatement: data.anchorStatement,
+      fanConsensus: data.fanConsensus,
+      updatedCount: data.updatedCount,
       // music silo fields
       tier: data.tier,
       release: data.release,

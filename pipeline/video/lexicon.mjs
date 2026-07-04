@@ -124,8 +124,8 @@ export function normalizeForSpeech(text) {
   t = t.replace(/:\s+(?=[A-Z"])/g, ", "); // title colons: "Dune: Part Two" → "Dune, Part Two"
   t = t.replace(/[&+]/g, " and ");
   t = t.replace(/["“”]/g, ""); // quote marks = odd pauses; the words carry the quote
-  // PASS 6 · seam tidy
-  t = t.replace(/\s+([.,!?;])/g, "$1").replace(/,\s*([.!?])/g, "$1").replace(/,{2,}/g, ",").replace(/\s{2,}/g, " ");
+  // PASS 6 · seam tidy (incl. H: collapse double-period artifacts from quote-stripping → one pause)
+  t = t.replace(/\s+([.,!?;])/g, "$1").replace(/,\s*([.!?])/g, "$1").replace(/,{2,}/g, ",").replace(/\.{2,}/g, ".").replace(/\s{2,}/g, " ");
   return t.trim();
 }
 

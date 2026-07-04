@@ -42,10 +42,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: now,
   }));
 
-  const articles = getAllArticles().map((a) => ({
-    url: `${base}/${a.category}/${a.slug}/`,
-    lastModified: new Date(a.updated ?? a.date),
-  }));
+  const articles = getAllArticles()
+    // Noindexed articles (retraction cascade / corrections) stay out of the sitemap.
+    .filter((a) => a.robots !== "noindex")
+    .map((a) => ({
+      url: `${base}/${a.category}/${a.slug}/`,
+      lastModified: new Date(a.updated ?? a.date),
+    }));
 
   return [...staticPages, ...cats, ...subcats, ...authors, ...articles];
 }

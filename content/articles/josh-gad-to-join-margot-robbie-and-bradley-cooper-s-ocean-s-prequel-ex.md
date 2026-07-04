@@ -65,13 +65,13 @@ provenance:
   primaryEntity: Ocean's Eleven prequel
   eventType: casting
   sensitivity: normal
-  status: DEVELOPING
+  status: CONFIRMED
   attribution: Variety
   outlets:
     - Variety
   publishedAt: '2026-07-02T02:48:24.645Z'
-dateModified: '2026-07-02T02:48:24.645Z'
-storyStatus: DEVELOPING
+dateModified: '2026-07-03T15:06:55.674Z'
+storyStatus: CONFIRMED
 infoCard:
   director: Bradley Cooper
   cast:
@@ -96,7 +96,6 @@ keyPoints:
     wrote the screenplay.
   - 'It is scheduled for a June 25, 2027 release from Warner Bros.'
 ---
-
 Josh Gad has joined the cast of the upcoming ‘Ocean’s 11’ prequel starring Margot Robbie and Bradley Cooper, according to a report from Variety. The actor has booked a significant role in the period heist film, which is currently in pre-production at [Warner Bros](/movies/box-office-supergirl-stumbles-with-38-million-debut-toy-story-5-remain/).
 
 Gad joins a starry ensemble led by Robbie and her director-costar Cooper. Casting for the project has been progressing steadily as the film heads toward its production start.

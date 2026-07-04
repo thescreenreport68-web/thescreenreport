@@ -9,12 +9,12 @@ import { VIDEO } from "./config.mjs";
 const SYS = `You write 30-40 second spoken scripts for The Screen Report's vertical news videos (energetic female narrator, karaoke captions). You write TOLD STORIES for the ear — never compressed articles.
 
 ═══ THE SKELETON (hard structure, ~2.7 words/sec) ═══
-BEAT 1 · HOOK [0-3s] 1 line, 8-13 words: the story's single most extreme concrete detail. No greeting, date, source, or setup. Withhold exactly ONE key noun (the who, the how-much, or the why) so the viewer needs beat 2.
+BEAT 1 · HOOK [0-3s] 1 line, 8-13 words: the story's single most SURPRISING or HIGH-STAKES concrete detail. No greeting, date, source, or setup. Withhold exactly ONE key noun (the who, the how-much, or the why) so the viewer needs beat 2. NEVER a meta/process framing — banned hook openers: "X revealed/teased/announced/discussed/talked about/opened up about/shared a [detail]". If the genuinely surprising fact is buried in the article, LEAD with THAT instead (e.g. not "the director revealed an influence" but "He signed on for six months — and stayed three years.").
 BEAT 2 · GROUND [3-9s] 1-2 lines: answer ONLY what the hook planted. Reuse a noun/pronoun from the hook.
 BEAT 3 · RE-HOOK [~10s] 1 line, 8-12 words: a second escalation — bigger number, contradiction, or open loop. (Banned in death/tribute.)
 BEAT 4 · DEVELOP [12-26s] 3-4 lines: the substance — quote, numbers, timeline — ordered by ASCENDING surprise, each line a BUT/SO consequence of the previous ("and then" chains are banned). The one direct quote goes here.
 BEAT 5 · TURN [25-33s] 1-2 lines: the complication or why-it-matters.
-BEAT 6 · CLOSE [33-40s] 1-2 lines: pay off the hook's loop, THEN one forward-looking gap tied to a real date/decision OR an opinion-bait question. Final sentence ≤8 words. NEVER "follow for more" / any generic outro — the last 2 seconds must still be information. End the CTA-ish line with "Full story at The Screen Report, link in bio." folded in naturally BEFORE the final kicker question when possible.
+BEAT 6 · CLOSE [33-40s] 1-2 lines: pay off the hook's loop, THEN one forward-looking gap tied to a real date/decision OR an opinion-bait question. Final sentence ≤8 words. NEVER any outro, CTA, or self-reference — do NOT say "follow for more", "link in bio", "full story at…", or mention The Screen Report in the spoken script (the branded end-card handles attribution). The last spoken seconds are pure story: loop payoff + the forward gap or question.
 
 ═══ GENRE PLAYBOOKS (classify first, then obey) ═══
 casting: lead with the MORE famous noun (role vs actor), withhold the other until beat 2; credibility beat; fan-debate kicker.
@@ -127,6 +127,18 @@ export function salvage(data, vault, article) {
   d.lines.forEach(fix);
   const refBad = new Set(claimCheck(d, article).map((b) => b.slice(b.indexOf('"'))));
   d.lines = d.lines.filter((l) => ![...refBad].some((b) => b.includes(String(l.show).slice(0, 50))));
+  // WORD-OVERAGE TRIM (owner 2026-07-03: big stories must not die over a sentence) — drop the
+  // least-surprising middle line (fewest emphasis words, then longest) until the budget fits.
+  const count = () => ([d.hook, ...d.lines].map((l) => l.say).join(" ").match(/\b[\w']+\b/g) || []).length;
+  while (count() > 112 && d.lines.length > 5) {
+    let mi = -1, best = Infinity;
+    for (let i = 1; i < d.lines.length - 1; i++) {
+      const score = (d.lines[i].emphasis || []).length * 100 - String(d.lines[i].say).length;
+      if (score < best) { best = score; mi = i; }
+    }
+    if (mi < 0) break;
+    d.lines.splice(mi, 1);
+  }
   return d;
 }
 
@@ -138,16 +150,19 @@ export function preGate(data) {
   const words = (spoken.match(/\b[\w']+\b/g) || []).length;
   if (words < 75 || words > 112) bad.push(`word count ${words} outside 75-112 (over = video runs past 40s)`);
   const hookWords = (String(data.hook?.say || "").match(/\b[\w']+\b/g) || []).length;
-  if (hookWords > 14) bad.push(`hook is ${hookWords} words (max 14)`);
+  if (hookWords > 16) bad.push(`hook is ${hookWords} words (max 16)`);
   const BANNED = /\b(welcome|hey guys|hey everyone|today we(?:'re| are) talking|in recent news|it should be noted|fans are excited|as previously reported|in a surprising turn|and then|iconic|beloved)\b/i;
   for (const l of all) if (BANNED.test(String(l?.say || "").replace(/[“"][^”"]*[”"]/g, ""))) bad.push(`banned phrase in: "${String(l.say).slice(0, 60)}"`); // quoted spans exempt — a quote is NEVER rewritten
   if (/^according to/i.test(String(data.hook?.say || ""))) bad.push("hook opens with attribution");
+  // D (owner 2026-07-03): weak "meta" hooks — a process verb with no surprising payoff noun → regenerate
+  if (/\b(revealed|teased|announced|discussed|talks? about|talked about|opens? up|opened up|shared|addresses|addressed|confirms?|confirmed)\b/i.test(String(data.hook?.say || "")) &&
+      !/\d|\$|%|record|first|only|never|shock|quit|fired|banned|dead|dies|split|sued/i.test(String(data.hook?.say || "")))
+    bad.push("weak meta-hook (process verb, no surprising payoff) — lead with the most shocking fact");
   const last = String(all[all.length - 1]?.say || "");
   if ((last.match(/\b[\w']+\b/g) || []).length > 14) bad.push("final line too long (>14 words)");
   if (/follow (us|for more)/i.test(spoken)) bad.push('generic "follow for more" outro');
+  if (/link in bio|full story at|the screen report/i.test(spoken)) bad.push("spoken self-promo/CTA (end-card handles attribution)");
   if (/\bit follows\b|\bthe film follows\b|\bthe series follows\b/i.test(spoken)) bad.push("encyclopedia phrasing ('it follows X')");
-  const lens = all.map((l) => (String(l?.say || "").match(/\b[\w']+\b/g) || []).length);
-  if (!lens.some((n) => n <= 6)) bad.push("no short punch sentence (need one ≤6 words)");
   const tail = all.slice(-2).map((l) => l?.say || "").join(" ");
   if (data.genre === "death") {
     // register exception (Phase 2): an obituary must NEVER end on opinion-bait or hype

@@ -51,7 +51,7 @@ export function loadPublished(windowDays = 45) {
 // signals/image/category are persisted here because queue.json is OVERWRITTEN every findrun — without capturing
 // them at publish time, the video picker loses the popularity signals and the image-gatherer loses the source
 // article URLs. All optional + ignored by loadPublished(), so the dedup ledger behavior is unchanged.
-export function recordPublished({ eventSlug, titleKey, slug, title, primaryEntity, eventType, at, sourceUrls, priority, signals, image, category } = {}) {
+export function recordPublished({ eventSlug, titleKey, slug, title, primaryEntity, eventType, at, sourceUrls, priority, signals, image, category, verifyStatus } = {}) {
   const list = readJSON(PUBLISHED_FILE, []);
   const arr = Array.isArray(list) ? list : [];
   if (slug && arr.some((r) => r.slug === slug)) return; // already recorded
@@ -62,6 +62,11 @@ export function recordPublished({ eventSlug, titleKey, slug, title, primaryEntit
     ...(signals && typeof signals === "object" ? { signals } : {}),
     ...(image ? { image } : {}),
     ...(category ? { category } : {}),
+    // INSIDE-lane trigger fields (2026-07-03): the ripple lane triggers off published events and
+    // needs the explicit eventType (entityKey folding loses it for consumers) + the verify status
+    // (deaths must fail closed without a CONFIRMED). Optional + ignored by loadPublished().
+    ...(eventType ? { eventType } : {}),
+    ...(verifyStatus ? { verifyStatus } : {}),
   });
   writeJSON(PUBLISHED_FILE, arr.slice(-8000)); // keep the most recent ~8k
 }

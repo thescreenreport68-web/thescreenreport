@@ -124,12 +124,13 @@ function correction(a, note, rec) {
 }
 function promote(a, reason, rec) {
   if (!DRY) {
-    // drop the DEVELOPING hedge: state plainly + update provenance/status + dateModified
-    let body = a.content
-      .replace(/\bAccording to (a report by |a report from )?[A-Z][\w. ]+?,?\s*/g, "")
-      .replace(/\b,?\s*(a report|reports|reportedly|developing)\b/gi, "");
-    const fm = { ...a.fm, provenance: { ...a.prov, status: "CONFIRMED" }, dateModified: new Date().toISOString() };
-    fs.writeFileSync(a.fp, matter.stringify(body.trim() + "\n", fm));
+    // 2026-07-03 FIX: only update the trust STATUS metadata (→ CONFIRMED) + dateModified. The old code rewrote
+    // the BODY to strip the "According to <Outlet>" hedge, but its non-greedy regex `[\w. ]+?` ate "According to
+    // Sc" and left "reenRant, ..." — it corrupted live articles (Supergirl, Star Wars) the moment the monitor was
+    // wired into every FIND cycle. And stripping attribution is unnecessary: a news outlet KEEPS its sourcing even
+    // once a story is corroborated ("according to Variety" is still true). So never touch the prose on promote.
+    const fm = { ...a.fm, provenance: { ...a.prov, status: "CONFIRMED" }, storyStatus: "CONFIRMED", dateModified: new Date().toISOString() };
+    fs.writeFileSync(a.fp, matter.stringify(a.content.trim() + "\n", fm));
   }
   rec.step("promote", `PROMOTED ${a.fm.slug} → CONFIRMED — ${reason}`);
   rec.done("promoted", { reason });

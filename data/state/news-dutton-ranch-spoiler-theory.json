@@ -1,0 +1,114 @@
+{
+  "id": "news-dutton-ranch-spoiler-theory",
+  "slug": "dutton-ranch-star-juan-pablo-raba-has-wild-theory-about-character-s-mu",
+  "status": "needs_review",
+  "stages": {
+    "attempt1": {
+      "score": 65,
+      "cat": "tv/reactions",
+      "hardBlocks": [
+        "primary keyword not in title",
+        "reaction: no embedded posts"
+      ],
+      "block": [
+        "reaction: no embedded posts"
+      ],
+      "fixable": [
+        "primary keyword not in title"
+      ],
+      "badClaims": 0
+    },
+    "attempt2": {
+      "score": 88,
+      "cat": "tv/reactions",
+      "hardBlocks": [
+        "primary keyword not in title",
+        "reaction: no embedded posts"
+      ],
+      "block": [
+        "reaction: no embedded posts"
+      ],
+      "fixable": [
+        "primary keyword not in title"
+      ],
+      "badClaims": 0
+    }
+  },
+  "editorial": {
+    "status": "unconfirmed",
+    "entity": "Juan Pablo Raba",
+    "work": {
+      "title": "Dutton Ranch",
+      "year": null,
+      "medium": "tv"
+    },
+    "outlet": "variety.com"
+  },
+  "scorecard": {
+    "score": 88,
+    "subscores": {
+      "accuracy": 10,
+      "readability": 9,
+      "humanVoice": 9,
+      "phrasing": 9,
+      "curiosity": 9,
+      "structure": 9,
+      "infoGain": 8,
+      "seo": 8,
+      "faqQuality": 8,
+      "completeness": 9
+    },
+    "strengths": [
+      "The headline and dek are highly curious and deliver on the promise immediately.",
+      "The article maintains a strong human voice, using direct quotes effectively to convey Raba's perspective.",
+      "Readability is excellent, with short paragraphs, clear subheadings, and varied sentence structure.",
+      "The phrasing is natural and avoids keyword stuffing or awkward constructions.",
+      "The article provides good information gain by synthesizing Raba's theory and its implications for the character.",
+      "The structure is logical, starting with the core claim and then delving into the 'why' and 'what it means'.",
+      "The FAQ section adds genuinely new and useful information, enhancing completeness.",
+      "Accuracy is perfect, adhering strictly to the provided source material and facts."
+    ],
+    "weaknesses": [
+      "The 'Sources' section is a bit sparse, listing only 'Variety' without a direct link or more specific citation, which could be improved for full transparency and SEO best practices (though it adheres to the prompt's instruction not to hyperlink competitors).",
+      "While the article is complete based on the provided source, a slightly deeper exploration of the 'what it signals' for the show's future beyond just Raba's character could enhance 'Information Gain' further, if the source material allowed."
+    ],
+    "deterministic": {
+      "words": 259,
+      "h2s": 3,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": true,
+      "faqCount": 4,
+      "ktCount": 4,
+      "kwInTitle": false,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 36,
+      "avgSentence": 16,
+      "flesch": 54,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": [
+        "primary keyword not in title"
+      ]
+    },
+    "hardBlocks": [
+      "primary keyword not in title",
+      "reaction: no embedded posts"
+    ]
+  },
+  "holdReason": "accuracy/grounding block: reaction: no embedded posts",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "tweet grounding",
+      "≥1200px legal image",
+      "credit",
+      "zero hard-blocks"
+    ]
+  },
+  "ms": 134238
+}

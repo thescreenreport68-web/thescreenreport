@@ -1,0 +1,102 @@
+{
+  "id": "news-rob-reiner-life-larry-and-the-pursuit-of-unhappiness-george-washington",
+  "slug": "rob-reiner-gets-the-last-laugh-against-trump-in-secret-final-role-as-g",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": 75,
+      "cat": "tv/news",
+      "hardBlocks": [
+        "verify-gate CUT: 5 claim(s) not in the gathered sources — The sketch was intended to air on July 3 for the 250th ; The sketch was filmed on November 13, 2025; Rob Reiner died in December 2025",
+        "ungrounded specific(s): 2025 — every figure/outlet must exist in the gathered sources or authoritative facts"
+      ],
+      "block": [
+        "verify-gate CUT: 5 claim(s) not in the gathered sources — The sketch was intended to air on July 3 for the 250th ; The sketch was filmed on November 13, 2025; Rob Reiner died in December 2025",
+        "ungrounded specific(s): 2025 — every figure/outlet must exist in the gathered sources or authoritative facts"
+      ],
+      "fixable": [],
+      "badClaims": 0
+    },
+    "attempt2": {
+      "score": 78,
+      "cat": "tv/news",
+      "hardBlocks": [],
+      "block": [],
+      "fixable": [],
+      "badClaims": 0
+    }
+  },
+  "editorial": {
+    "status": "official",
+    "entity": "Rob Reiner",
+    "work": {
+      "title": "Life, Larry, and the Pursuit of Unhappiness: An Almost History of America",
+      "year": null,
+      "medium": "tv"
+    },
+    "outlet": "variety.com"
+  },
+  "acceptReason": "terminal-accept (verified accurate, score 78, 0 quality nit(s))",
+  "scorecard": {
+    "score": 78,
+    "subscores": {
+      "accuracy": 9,
+      "readability": 8,
+      "humanVoice": 8,
+      "phrasing": 7,
+      "curiosity": 8,
+      "structure": 8,
+      "infoGain": 7,
+      "seo": 7,
+      "faqQuality": 8,
+      "completeness": 8
+    },
+    "strengths": [
+      "The lead quickly delivers the core information, adhering to news standards.",
+      "The article maintains a clear and engaging human voice, particularly in its description of the sketch's content.",
+      "Specifics from the sketch (quotes, character interactions) are well-integrated, enhancing engagement.",
+      "The structure is clear with an answer-first lead and relevant subheadings.",
+      "Key Takeaways are concise and informative.",
+      "The FAQ section provides genuinely new and useful information, not just rephrasing the article.",
+      "The article effectively attributes claims to Variety, maintaining journalistic integrity for a developing story.",
+      "The meta description (dek) is strong and accurately reflects the article's content."
+    ],
+    "weaknesses": [
+      "The Flesch score of 46 indicates the prose is denser than ideal for a general audience, potentially impacting readability for a 'busy fan'.",
+      "The average sentence length of 21 words is slightly high, contributing to the lower Flesch score.",
+      "The phrasing in some sections, while accurate, could be more varied to improve flow and rhythm (e.g., repeated use of 'according to a report from Variety' or 'Variety describes').",
+      "While the article avoids generic AI tells, some transitions could be smoother to enhance fluency.",
+      "The article could benefit from slightly more varied sentence structures to improve overall readability and rhythm."
+    ],
+    "deterministic": {
+      "words": 402,
+      "h2s": 2,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 3,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 43,
+      "avgSentence": 21,
+      "flesch": 46,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": []
+    },
+    "hardBlocks": []
+  },
+  "score": 78,
+  "category": "tv",
+  "subcategory": "news",
+  "audit": {
+    "ok": true,
+    "internalLinks": 0,
+    "failed": []
+  },
+  "ms": 128602
+}

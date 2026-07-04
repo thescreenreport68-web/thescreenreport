@@ -7,7 +7,6 @@ import { newMonitor, printRunReport, writeJSON, loadPublished, slugKey, entityKe
 import { discover } from "./discover.mjs";
 import { categorize } from "./categorize.mjs";
 import { verify } from "./verify.mjs";
-import { externalCorroboration } from "../lib/news.mjs";
 import { scoreTopics, selectDiverse } from "./score.mjs";
 import { detectBreakouts } from "./sources/breakout.mjs";
 import { expandInsideStories, TIER_S } from "./expand.mjs";
@@ -73,15 +72,9 @@ await detectBreakouts(topics, monitor);
 // Stage 8 — cross-source verify (trust label + publishable flag)
 const verified = verify(topics, monitor);
 
-// Stage 8b (PR7) — EXTERNAL corroboration via GDELT (free, keyless, non-Wikipedia): the in-run verify above
-// only sees this pull's RSS, so a one-major event can't confirm. GDELT checks the whole open web and UPGRADES
-// an under-sourced DEVELOPING/CONFIRMING event to CONFIRMED when ≥2 INDEPENDENT major owners report it. Only
-// upgrades — never suppresses fresh news on a miss. (Throttled to GDELT's 1-req/5s limit.)
-// FIND_SKIP_CORR=1 skips this stage — it's OPTIONAL (only upgrades corroboration; the pivot posts single-source
-// attributed anyway) and its 1-req/5s throttle is the slowest step, which times out constrained local runs. Cloud
-// (no wall-clock cap) leaves it on.
-if (!process.env.FIND_SKIP_CORR) await externalCorroboration(verified, monitor);
-else monitor.stage("corroboration", "SKIPPED (FIND_SKIP_CORR) — GDELT upgrade pass off for this run");
+// (GDELT external corroboration REMOVED 2026-07-03 — trust-the-source: every candidate now comes from a top
+// fact-checked trade, so there is nothing to cross-confirm. verify.mjs below already treats a single top-outlet
+// story as publishable + attributed.)
 
 // Stages 4+6 — score + rank, then TREND-PRIORITY select the queue. ALL verified-publishable topics compete in ONE
 // priority-ranked pool — music, box-office, celebrity, every shape — with diversity only a soft tiebreak. No music

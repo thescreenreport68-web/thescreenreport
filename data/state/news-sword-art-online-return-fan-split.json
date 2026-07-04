@@ -1,0 +1,109 @@
+{
+  "id": "news-sword-art-online-return-fan-split",
+  "slug": "sword-art-online-s-long-awaited-return-has-left-fans-split",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": 75,
+      "cat": "tv/reactions",
+      "hardBlocks": [
+        "verify-gate CUT: 1 claim(s) not in the gathered sources — *Echoes of Aincrad* represents a more fundamental shift",
+        "reaction: no embedded posts"
+      ],
+      "block": [
+        "verify-gate CUT: 1 claim(s) not in the gathered sources — *Echoes of Aincrad* represents a more fundamental shift",
+        "reaction: no embedded posts"
+      ],
+      "fixable": [],
+      "badClaims": 0
+    },
+    "attempt2": {
+      "score": 65,
+      "cat": "tv/reactions",
+      "hardBlocks": [
+        "verify-gate CUT: 1 claim(s) not in the gathered sources — The game's full release date has not been officially an",
+        "reaction: no embedded posts"
+      ],
+      "block": [
+        "verify-gate CUT: 1 claim(s) not in the gathered sources — The game's full release date has not been officially an",
+        "reaction: no embedded posts"
+      ],
+      "fixable": [],
+      "badClaims": 0
+    }
+  },
+  "editorial": {
+    "status": "unconfirmed",
+    "entity": "Echoes of Aincrad",
+    "work": null,
+    "outlet": "Screenrant"
+  },
+  "acceptReason": "cut-and-publish (removed 0 sentence(s) + 1 field item(s); 270w remain) → re-gated clean at 78",
+  "webCheck": {
+    "ran": true,
+    "corrected": 4,
+    "remaining": 2
+  },
+  "scorecard": {
+    "score": 78,
+    "subscores": {
+      "accuracy": 9,
+      "readability": 8,
+      "humanVoice": 7,
+      "phrasing": 8,
+      "curiosity": 8,
+      "structure": 8,
+      "infoGain": 7,
+      "seo": 7,
+      "faqQuality": 8,
+      "completeness": 8
+    },
+    "strengths": [
+      "The headline and dek clearly state the core conflict and outcome, immediately informing the reader.",
+      "The article effectively synthesizes fan reactions into two distinct camps, providing a clear overview of the discourse.",
+      "The use of direct quotes from fans (even if attributed generically) adds authenticity to the 'reaction roundup' nature of the piece.",
+      "The 'What Does This Mean for Sword Art Online?' section offers a good forward-looking analysis, moving beyond just summarizing reactions.",
+      "The structure is clean with clear subheadings and a concise lead.",
+      "The FAQs provide genuinely new and useful information, directly addressing common reader questions about the game's nature and demo availability."
+    ],
+    "weaknesses": [
+      "The 'Spoiler Alert' at the beginning feels a bit out of place for a news/reaction piece and could be integrated more smoothly or removed.",
+      "While the article avoids generic AI tells, the 'consensus suggests it's a competent RPG' in the 'What Does This Mean' section is a bit vague and could benefit from more specific examples of what makes it 'competent'.",
+      "The article mentions 'enhanced visuals and combat' as praise points but doesn't elaborate or provide specific examples, which could strengthen the human voice and engagement.",
+      "The phrasing 'the world \"definitely feels superficial\"' is a bit clunky; it's a direct quote but could be introduced or framed more fluently.",
+      "The 'Sources' section is minimal, listing only 'ScreenRant'. While the prompt specified a single source, for a 'reaction roundup' it might benefit from a more robust (even if fictionalized for this exercise) sourcing structure to appear more authoritative, or at least a clearer statement that all information is derived from that single report."
+    ],
+    "deterministic": {
+      "words": 271,
+      "h2s": 3,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": true,
+      "faqCount": 2,
+      "ktCount": 3,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": true,
+      "maxSentence": 39,
+      "avgSentence": 18,
+      "flesch": 54,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 5,
+      "hardBlocks": []
+    },
+    "hardBlocks": []
+  },
+  "score": 78,
+  "category": "tv",
+  "subcategory": "reactions",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "tweet grounding"
+    ]
+  },
+  "ms": 231995
+}

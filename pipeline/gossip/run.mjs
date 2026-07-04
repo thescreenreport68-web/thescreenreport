@@ -24,7 +24,7 @@ import { qualityCheck } from "./qualityGate.mjs";
 import { verifyQuotes } from "./quoteGuard.mjs";
 import { verifyGate } from "./verifyGate.mjs";
 import { judgeGossip } from "./judge.mjs";
-import { dedupeSentences, ensureTakeaways, ensureFaq, cutFlagged, cutSentencesWith, trimIncomplete } from "./polish.mjs";
+import { dedupeSentences, ensureTakeaways, ensureFaq, cutFlagged, cutSentencesWith, trimIncomplete, applyCorrections, scrubStructuredFields } from "./polish.mjs";
 import { GOSSIP_AUTHOR_SLUG, AI_DISCLOSURE, routeBySubject, MONITOR_WINDOW_HOURS } from "./config.gossip.mjs";
 
 // The ABSOLUTE red lines — the ONLY things that block a story (they're illegal + can't be corrected into a
@@ -159,10 +159,21 @@ export async function runGossip(topic, {
   // Cut whatever is still flagged after the correction passes; add a missing mandatory disclaimer; re-check.
   const cleanse = async () => {
     if (report.allPass) return;
+    // Split the flagged specifics: those the source lets us CORRECT (right value known) vs. those we must DROP
+    // (uncorrectable). The accuracy spine now covers EVERY reader-facing field — body, keyTakeaways, whatWeKnow,
+    // dek, pull-quote, FAQ answers — so a wrong year in a takeaway is fixed/removed just like one in the body.
+    const specifics = (verifyResult?.unsupported || []).filter((u) => u.isSpecific || u.contradicted);
+    const corrections = specifics.filter((u) => u.correction).map((u) => ({ bad: u.claim, correction: u.correction }));
+    const drops = specifics.filter((u) => !u.correction).map((u) => u.claim);
+    // 1) CORRECT known-wrong specifics everywhere (a wrong "2024" → "2026"), then cut what's left unresolved.
+    article.body = applyCorrections(article.body, corrections);
     article.body = cutFlagged(article.body, report.cutTexts);
-    // Drop any sentence still carrying an unverified SPECIFIC (date/number/name/title) the writer couldn't fix —
-    // never publish an unverified specific (owner's hard rule); a short bare "2022"/"$40K" is caught here too.
-    article.body = cutSentencesWith(article.body, report.dropSpecifics);
+    // Drop any sentence still carrying an UNCORRECTABLE unverified SPECIFIC the writer couldn't fix — never publish
+    // an unverified specific (owner's hard rule); a short bare "2022"/"$40K" is caught here too.
+    article.body = cutSentencesWith(article.body, drops);
+    // 2) Same treatment for the STRUCTURED fields (the old bypass): correct or drop the offending specific in
+    // keyTakeaways / whatWeKnow / whatWeDont / dek / pull-quote / FAQ.
+    scrubStructuredFields(article, { corrections, drops });
     if (frame.needsDisclaimer && frame.disclaimerText && !article.body.includes(frame.disclaimerText)) article.body = (article.body.trim() + "\n\n" + frame.disclaimerText).trim();
     verifyResult = verify ? await verifyImpl({ article, bundle, model }) : verifyResult;
     report = inspect(article, frame, topic, bundle, verifyResult);

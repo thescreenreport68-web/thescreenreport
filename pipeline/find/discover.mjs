@@ -1,7 +1,8 @@
-// Stage 1 — DISCOVER (v2: real-time feeds are the DRIVER; TMDB is the entity/calendar backbone).
+// Stage 1 — DISCOVER (2026-07-03 simplification, owner directive): TOP-OUTLET RSS is the ONLY driver. The broad
+// Google-News web search and the TMDB "trending backbone" were REMOVED — they dragged in the whole open web
+// (Bollywood, anime/game blogs, quiz pages, listicles = the junk). We now surface only the latest stories from the
+// major trades' own feeds, and write them faithfully. (gnews.mjs/tmdb.mjs remain in the tree, just not wired here.)
 import { discoverRSS } from "./sources/rss.mjs";
-import { discoverGoogleNews } from "./sources/gnews.mjs";
-import { discoverTMDB } from "./sources/tmdb.mjs";
 
 export function candidateKey(c) {
   if (c.tmdbId) return (c.mediaType || "x") + ":" + c.tmdbId;
@@ -14,25 +15,14 @@ function countBy(arr, k) {
 }
 
 export async function discover(monitor, opts = {}) {
-  const all = [];
-
-  // PRIMARY: real-time news feeds (the breaking driver) + Google News search (cross-outlet corroboration breadth —
-  // the same trending story from MANY outlets, so a single-outlet item crosses the 2-independent-owner bar).
-  const [rss, gnews] = await Promise.all([discoverRSS(opts.rss || {}), discoverGoogleNews(opts.gnews || {})]);
-  monitor.stage("discover", `RSS (real-time) → ${rss.length} fresh items`, countBy(rss, "outlet"));
-  all.push(...rss);
-  monitor.stage("discover", `Google News search → ${gnews.length} items (cross-outlet corroboration)`);
-  all.push(...gnews);
-
-  // BACKBONE: TMDB structured entity/calendar feed (evergreen + release data, NOT the breaking driver)
-  const tmdb = await discoverTMDB(opts.tmdb || {});
-  monitor.stage("discover", `TMDB (backbone) → ${tmdb.length} candidates`, countBy(tmdb, "kind"));
-  all.push(...tmdb);
+  // The ONLY source: the top trades' real-time RSS feeds.
+  const rss = await discoverRSS(opts.rss || {});
+  monitor.stage("discover", `top-outlet RSS → ${rss.length} fresh items`, countBy(rss, "outlet"));
 
   // intra-run de-dup by candidate key
   const seen = new Set();
   const uniq = [];
-  for (const c of all) {
+  for (const c of rss) {
     const k = candidateKey(c);
     if (seen.has(k)) continue;
     seen.add(k);
@@ -41,6 +31,6 @@ export async function discover(monitor, opts = {}) {
   }
   monitor.count("discovered", uniq.length);
   monitor.count("rssFresh", rss.length);
-  monitor.stage("discover", `${uniq.length} unique candidates (${rss.length} RSS + ${gnews.length} Google News + ${tmdb.length} backbone)`);
+  monitor.stage("discover", `${uniq.length} unique candidates (top-outlet RSS only)`);
   return uniq;
 }

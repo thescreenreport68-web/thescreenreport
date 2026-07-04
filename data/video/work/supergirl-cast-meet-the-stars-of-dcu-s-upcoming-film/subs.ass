@@ -1,0 +1,49 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Cap,Anton,92,&H00FFFFFF,&H00B9B9B9,&H00101010,&HA0000000,0,0,0,0,100,100,1,0,1,4,2,2,70,70,330,1
+Style: Hook,Anton,120,&H00FFFFFF,&H00CFCFCF,&H00101010,&HA0000000,0,0,0,0,100,100,1,0,1,5,3,5,70,70,0,1
+Style: KickText,Anton,40,&H00FFFFFF,&H00FFFFFF,&H00101010,&H00000000,0,0,0,0,100,100,4,0,1,0,0,5,0,0,0,1
+Style: KickDraw,Anton,40,&H002821D9,&H002821D9,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,7,0,0,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.12,0:00:06.50,KickDraw,,0,0,0,,{\fad(140,120)\pos(46,126)\1c&H000000&\1a&H78&\blur6\p1}m 18 0 l 982 0 b 1000 0 1000 0 1000 18 l 1000 70 b 1000 88 1000 88 982 88 l 18 88 b 0 88 0 88 0 70 l 0 18 b 0 0 0 0 18 0{\p0}
+Dialogue: 1,0:00:00.12,0:00:06.50,KickDraw,,0,0,0,,{\fad(140,120)\pos(40,118)\p1}m 18 0 l 982 0 b 1000 0 1000 0 1000 18 l 1000 70 b 1000 88 1000 88 982 88 l 18 88 b 0 88 0 88 0 70 l 0 18 b 0 0 0 0 18 0{\p0}
+Dialogue: 2,0:00:00.12,0:00:06.50,KickText,,0,0,0,,{\fad(140,120)\pos(540,163)}SUPERGIRL GETS ORIGINAL'S BLESSING
+Dialogue: 0,0:00:00.05,0:00:01.19,Hook,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k38}HELEN {\k44}SLATER {\k33}SAYS
+Dialogue: 0,0:00:01.19,0:00:02.23,Hook,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k38}MILLY {\k44}ALCOCK {\k22}IS
+Dialogue: 0,0:00:02.23,0:00:03.43,Hook,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k71}{\1c&H2821D9&}ASTONISHING{\1c&HFFFFFF&} {\k22}AS {\k27}THE
+Dialogue: 0,0:00:03.43,0:00:04.30,Hook,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k27}NEW {\k60}SUPERGIRL
+Dialogue: 0,0:00:04.30,0:00:05.72,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k27}THE {\k55}ORIGINAL {\k60}SUPERGIRL
+Dialogue: 0,0:00:05.72,0:00:06.86,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k33}GAVE {\k27}HER {\k55}{\1c&H2821D9&}BLESSING{\1c&HFFFFFF&}
+Dialogue: 0,0:00:06.86,0:00:07.74,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k22}TO {\k27}THE {\k38}DCU'S
+Dialogue: 0,0:00:07.74,0:00:08.77,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k27}NEW {\k33}KARA {\k44}ZOR-EL
+Dialogue: 0,0:00:08.77,0:00:09.81,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k44}ALCOCK {\k38}LEADS {\k22}AN
+Dialogue: 0,0:00:09.81,0:00:10.90,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k55}ENSEMBLE {\k33}CAST {\k22}IN
+Dialogue: 0,0:00:10.90,0:00:12.04,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k27}THE {\k55}UPCOMING {\k33}{\1c&H2821D9&}2026{\1c&HFFFFFF&}
+Dialogue: 0,0:00:12.04,0:00:13.35,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k33}FILM {\k60}SUPERGIRL {\k38}WOMAN
+Dialogue: 0,0:00:13.35,0:00:14.11,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k22}OF {\k55}TOMORROW
+Dialogue: 0,0:00:14.11,0:00:15.31,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k27}SHE {\k38}FIRST {\k55}APPEARED
+Dialogue: 0,0:00:15.31,0:00:16.35,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k22}AS {\k60}SUPERGIRL {\k22}IN
+Dialogue: 0,0:00:16.35,0:00:17.33,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k44}2025'S {\k55}SUPERMAN
+Dialogue: 0,0:00:17.33,0:00:18.37,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k44}SLATER {\k33}TOLD {\k27}THE
+Dialogue: 0,0:00:18.37,0:00:19.78,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k60}HOLLYWOOD {\k55}REPORTER {\k27}SHE
+Dialogue: 0,0:00:19.78,0:00:20.71,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k38}{\1c&H2821D9&}LOVED{\1c&HFFFFFF&} {\k27}THE {\k27}NEW
+Dialogue: 0,0:00:20.71,0:00:21.64,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k60}SUPERGIRL {\k33}FILM
+Dialogue: 0,0:00:21.64,0:00:22.62,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k27}SHE {\k38}ADDED {\k33}THAT
+Dialogue: 0,0:00:22.62,0:00:23.76,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k44}ALCOCK {\k27}WAS {\k44}{\1c&H2821D9&}FIERCE{\1c&HFFFFFF&}
+Dialogue: 0,0:00:23.76,0:00:24.85,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k44}{\1c&H2821D9&}STRONG{\1c&HFFFFFF&} {\k27}AND {\k38}GREAT
+Dialogue: 0,0:00:24.85,0:00:25.67,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k38}COMIC {\k44}TIMING
+Dialogue: 0,0:00:25.67,0:00:26.76,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k27}THE {\k38}MOVIE {\k44}ADAPTS
+Dialogue: 0,0:00:26.76,0:00:28.07,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k27}TOM {\k44}KING'S {\k60}ACCLAIMED
+Dialogue: 0,0:00:28.07,0:00:28.72,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k38}COMIC {\k27}RUN
+Dialogue: 0,0:00:28.72,0:00:29.70,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k38}JASON {\k38}MOMOA {\k22}IS
+Dialogue: 0,0:00:29.70,0:00:30.85,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k49}RUMORED {\k22}TO {\k44}APPEAR
+Dialogue: 0,0:00:30.85,0:00:31.39,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k22}AS {\k33}{\1c&H2821D9&}LOBO{\1c&HFFFFFF&}
+Dialogue: 0,0:00:31.39,0:00:32.65,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k33}WILL {\k33}THIS {\k60}{\1c&H2821D9&}SUPERGIRL{\1c&HFFFFFF&}
+Dialogue: 0,0:00:32.65,0:00:33.46,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k49}FINALLY {\k33}{\1c&H2821D9&}SOAR{\1c&HFFFFFF&}

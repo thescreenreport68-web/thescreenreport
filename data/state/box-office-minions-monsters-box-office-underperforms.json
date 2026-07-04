@@ -1,0 +1,239 @@
+{
+  "id": "box-office-minions-monsters-box-office-underperforms",
+  "slug": "minions-monsters-coming-up-short-with-63m-5-day-u-s-box-office",
+  "status": "needs_review",
+  "stages": {
+    "attempt1": {
+      "score": 68,
+      "cat": "movies/box-office",
+      "hardBlocks": [
+        "verify-gate CUT: 5 claim(s) not in the gathered sources — Despicable Me 2 earned $143 million over its 5-day open; Despicable Me 4 earned $122.6 million over its 5-day op; Minions & Monsters earned $13.75 million on its opening",
+        "ungrounded specific(s): $63.5M; 4,243 — every figure/outlet must exist in the gathered sources or authoritative facts",
+        "7 unverified claim(s) (need correction)"
+      ],
+      "block": [
+        "verify-gate CUT: 5 claim(s) not in the gathered sources — Despicable Me 2 earned $143 million over its 5-day open; Despicable Me 4 earned $122.6 million over its 5-day op; Minions & Monsters earned $13.75 million on its opening",
+        "ungrounded specific(s): $63.5M; 4,243 — every figure/outlet must exist in the gathered sources or authoritative facts",
+        "7 unverified claim(s) (need correction)"
+      ],
+      "fixable": [],
+      "badClaims": 7
+    },
+    "attempt2": {
+      "score": 78,
+      "cat": "movies/box-office",
+      "hardBlocks": [
+        "verify-gate CUT: 4 claim(s) not in the gathered sources — The new film’s opening Wednesday ranks as the fourth-be; The worldwide total will clear at least $101 million; Minions & Monsters is the best-reviewed entry in the se",
+        "ungrounded specific(s): $63.5M; 4,243 — every figure/outlet must exist in the gathered sources or authoritative facts",
+        "7 unverified claim(s) (need correction)"
+      ],
+      "block": [
+        "verify-gate CUT: 4 claim(s) not in the gathered sources — The new film’s opening Wednesday ranks as the fourth-be; The worldwide total will clear at least $101 million; Minions & Monsters is the best-reviewed entry in the se",
+        "ungrounded specific(s): $63.5M; 4,243 — every figure/outlet must exist in the gathered sources or authoritative facts",
+        "7 unverified claim(s) (need correction)"
+      ],
+      "fixable": [],
+      "badClaims": 7
+    }
+  },
+  "editorial": {
+    "status": "unconfirmed",
+    "entity": "Minions & Monsters",
+    "work": {
+      "title": "Minions & Monsters",
+      "year": null,
+      "medium": "movie"
+    },
+    "outlet": "deadline.com"
+  },
+  "scorecard": {
+    "score": 78,
+    "subscores": {
+      "accuracy": 9,
+      "readability": 8,
+      "humanVoice": 7,
+      "phrasing": 8,
+      "curiosity": 8,
+      "structure": 8,
+      "infoGain": 7,
+      "seo": 7,
+      "faqQuality": 8,
+      "completeness": 8
+    },
+    "strengths": [
+      "The headline is clear and delivers a specific, true claim.",
+      "The lead paragraph quickly provides the core answer regarding the box office performance.",
+      "The article uses clear, concise language and avoids jargon, making it accessible for a trade news audience.",
+      "Subheadings are relevant and help organize the information effectively.",
+      "Key Takeaways provide a good summary of the main points.",
+      "The article contextualizes the box office numbers by comparing them to previous franchise entries and other films.",
+      "The FAQ section adds new, relevant information not directly covered in the main body.",
+      "The article provides a clear analytical angle on the film's financial prospects despite a soft domestic opening, considering international performance and budget."
+    ],
+    "weaknesses": [
+      "The 'Sources' section only lists 'Box Office Mojo' which is not the primary source for the breaking news, and the Deadline attribution is only in the body, not the structured sources.",
+      "The 'worldwide' box office figure in the 'boxOffice' structured field ($63 million) contradicts the 'worldwide total will clear at least $101 million' mentioned in the body, which is based on the provided facts. The $63M was the worldwide figure *before* the US opening, not the final worldwide total after the US opening.",
+      "The 'records' section states 'No prior holder specified in facts' for the 5-day low, which is technically true but could be phrased more definitively if the source implied it was the lowest without explicitly stating a previous record holder.",
+      "The 'Premise' in the FAQ is slightly different from the provided TMDB logline, introducing '1920s heyday of Hollywood' and 'alien invasion' which were not explicitly in the logline (though '1930s' and 'monsters' were themes). While a reasonable expansion, it deviates from the strict instruction to only use provided facts.",
+      "The article states 'The new film’s opening Wednesday ranks as the fourth-best for an animated movie in July' without a clear source or context for this specific claim within the provided material."
+    ],
+    "deterministic": {
+      "words": 342,
+      "h2s": 4,
+      "h2Questions": 3,
+      "internalLinks": 0,
+      "externalLinks": 1,
+      "hasSources": true,
+      "faqCount": 3,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": false,
+      "kwInH2": false,
+      "maxSentence": 36,
+      "avgSentence": 19,
+      "flesch": 52,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": []
+    },
+    "hardBlocks": [
+      "verify-gate CUT: 4 claim(s) not in the gathered sources — The new film’s opening Wednesday ranks as the fourth-be; The worldwide total will clear at least $101 million; Minions & Monsters is the best-reviewed entry in the se",
+      "ungrounded specific(s): $63.5M; 4,243 — every figure/outlet must exist in the gathered sources or authoritative facts",
+      "7 unverified claim(s) (need correction)"
+    ]
+  },
+  "holdReason": "accuracy/grounding block: verify-gate CUT: 4 claim(s) not in the gathered sources — The new film’s opening Wednesday ranks as the fourth-be; The worldwide total will clear at least $101 million; Minions & Monsters is the best-reviewed entry in the se; ungrounded specific(s): $63.5M; 4,243 — every figure/outlet must exist in the gathered sources or authoritative facts; 7 unverified claim(s) (need correction)",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "keyword in title",
+      "≥1200px legal image",
+      "credit",
+      "zero hard-blocks"
+    ]
+  },
+  "ms": 132923,
+  "previousRuns": [
+    {
+      "id": "box-office-minions-monsters-box-office-underperforms",
+      "slug": "minions-monsters-underwhelms-at-box-office-earning-63m-in-5-days",
+      "status": "needs_review",
+      "stages": {
+        "attempt1": {
+          "score": 65,
+          "cat": "movies/box-office",
+          "hardBlocks": [
+            "verify-gate CUT: 4 claim(s) not in the gathered sources — Despicable Me 3 received an A- CinemaScore; Minions & Monsters is set in the 1920s Hollywood era; Despicable Me 2 holds the record for a five-day animate",
+            "ungrounded specific(s): $63M; 4,243 — every figure/outlet must exist in the gathered sources or authoritative facts",
+            "6 unverified claim(s) (need correction)"
+          ],
+          "block": [
+            "verify-gate CUT: 4 claim(s) not in the gathered sources — Despicable Me 3 received an A- CinemaScore; Minions & Monsters is set in the 1920s Hollywood era; Despicable Me 2 holds the record for a five-day animate",
+            "ungrounded specific(s): $63M; 4,243 — every figure/outlet must exist in the gathered sources or authoritative facts",
+            "6 unverified claim(s) (need correction)"
+          ],
+          "fixable": [],
+          "badClaims": 6
+        },
+        "attempt2": {
+          "score": 65,
+          "cat": "movies/box-office",
+          "hardBlocks": [
+            "verify-gate CUT: 3 claim(s) not in the gathered sources — Despicable Me 2 holds the record for a five-day animate; Despicable Me 4 had a $122.6 million five-day animated ; Minions & Monsters is the best-reviewed entry in the De",
+            "ungrounded specific(s): $63M; 4,243 — every figure/outlet must exist in the gathered sources or authoritative facts",
+            "6 unverified claim(s) (need correction)"
+          ],
+          "block": [
+            "verify-gate CUT: 3 claim(s) not in the gathered sources — Despicable Me 2 holds the record for a five-day animate; Despicable Me 4 had a $122.6 million five-day animated ; Minions & Monsters is the best-reviewed entry in the De",
+            "ungrounded specific(s): $63M; 4,243 — every figure/outlet must exist in the gathered sources or authoritative facts",
+            "6 unverified claim(s) (need correction)"
+          ],
+          "fixable": [],
+          "badClaims": 6
+        }
+      },
+      "editorial": {
+        "status": "unconfirmed",
+        "entity": "Minions & Monsters",
+        "work": {
+          "title": "Minions & Monsters",
+          "year": null,
+          "medium": "movie"
+        },
+        "outlet": "deadline.com"
+      },
+      "acceptReason": "cut-and-publish (removed 4 sentence(s) + 8 field item(s); 201w remain)",
+      "holdReason": "accuracy/grounding block: verify-gate CUT: 3 claim(s) not in the gathered sources — Despicable Me 2 holds the record for a five-day animate; Despicable Me 4 had a $122.6 million five-day animated ; Minions & Monsters is the best-reviewed entry in the De; ungrounded specific(s): $63M; 4,243 — every figure/outlet must exist in the gathered sources or authoritative facts; 6 unverified claim(s) (need correction)",
+      "scorecard": {
+        "score": 65,
+        "subscores": {
+          "accuracy": 9,
+          "readability": 7,
+          "humanVoice": 6,
+          "phrasing": 6,
+          "curiosity": 7,
+          "structure": 8,
+          "infoGain": 7,
+          "seo": 6,
+          "faqQuality": 4,
+          "completeness": 7
+        },
+        "strengths": [
+          "The article accurately reports the box office figures and comparisons, adhering to the provided facts.",
+          "The structure is clear with an answer-first lead and relevant subheadings.",
+          "Key Takeaways provide a concise summary of the main points.",
+          "The article effectively contextualizes the 'franchise low' by comparing it to previous entries and their opening dates.",
+          "The box office data is presented clearly in the structured 'boxOffice' field."
+        ],
+        "weaknesses": [
+          "The human voice is somewhat generic and lacks distinct personality or wit, leaning towards a dry reportage style.",
+          "Phrasing occasionally feels a bit stiff, with some repetition of the full movie title where a pronoun might suffice.",
+          "The FAQ section contains fabricated information not present in the provided source material, specifically regarding the plot premise, cast details, and critical reception (e.g., 'alien invasion', 'best-reviewed entry', '90% certified fresh'). This is a significant accuracy and infoGain issue for the FAQ.",
+          "The 'worldwide' box office figure in the 'boxOffice' field ($63 million) contradicts the article's body and the 'international' figure, which states a projected worldwide total of $101 million. This is an accuracy error.",
+          "The article states 'Minions & Monsters is projected to clear at least $101 million worldwide' but then lists the worldwide box office as $63 million in the structured data, which is confusing and inaccurate based on the article's own text.",
+          "The 'about' section for 'Minions & Monsters' is very minimal and could include more factual details from the provided TMDB data (e.g., director, genre, runtime)."
+        ],
+        "deterministic": {
+          "words": 264,
+          "h2s": 3,
+          "h2Questions": 2,
+          "internalLinks": 0,
+          "externalLinks": 0,
+          "hasSources": true,
+          "faqCount": 4,
+          "ktCount": 4,
+          "kwInTitle": true,
+          "kwInFirst100": true,
+          "kwInH2": false,
+          "maxSentence": 36,
+          "avgSentence": 19,
+          "flesch": 50,
+          "bannedTells": 0,
+          "fillerPraise": 0,
+          "kwExact": 0,
+          "hardBlocks": []
+        },
+        "hardBlocks": [
+          "verify-gate CUT: 3 claim(s) not in the gathered sources — Despicable Me 2 holds the record for a five-day animate; Despicable Me 4 had a $122.6 million five-day animated ; Minions & Monsters is the best-reviewed entry in the De",
+          "ungrounded specific(s): $63M; 4,243 — every figure/outlet must exist in the gathered sources or authoritative facts",
+          "6 unverified claim(s) (need correction)"
+        ]
+      },
+      "audit": {
+        "ok": false,
+        "internalLinks": 0,
+        "failed": [
+          "body ≥ 220w",
+          "keyword in title",
+          "≥1200px legal image",
+          "credit",
+          "score ≥ 70",
+          "zero hard-blocks"
+        ]
+      },
+      "ms": 154733
+    }
+  ]
+}

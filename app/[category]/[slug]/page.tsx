@@ -73,6 +73,8 @@ export function generateMetadata({
     title: article.metaTitle,
     description: article.metaDescription,
     alternates: { canonical: `/${article.category}/${article.slug}/` },
+    // Recheck corrections / the inside parent-retraction cascade write robots: "noindex".
+    ...(article.robots === "noindex" ? { robots: { index: false, follow: false } } : {}),
     openGraph: {
       title: article.metaTitle,
       description: article.metaDescription,
@@ -155,7 +157,8 @@ export default function ArticlePage({
       : null,
     ...(article.about ?? []).map((e) => ({
       "@context": "https://schema.org",
-      "@type": e.type === "TVSeries" ? "TVSeries" : "Movie",
+      // Allowlist — inside articles carry Person/Organization about entries; anything else stays Movie.
+      "@type": ["Person", "Organization", "TVSeries", "Movie"].includes(e.type ?? "") ? e.type : "Movie",
       name: e.name,
       ...(e.sameAs ? { sameAs: e.sameAs } : {}),
     })),

@@ -1,0 +1,103 @@
+{
+  "id": "news-blake-lively-ryan-reynolds-taylor-swift-wedding",
+  "slug": "as-taylor-swift-gets-married-former-best-friend-blake-lively-is-out-of",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": 65,
+      "cat": "celebrity/news",
+      "hardBlocks": [
+        "verify-gate CUT: 1 claim(s) not in the gathered sources — Travis Kelce's Kansas City Chiefs beat the San Francisc"
+      ],
+      "block": [
+        "verify-gate CUT: 1 claim(s) not in the gathered sources — Travis Kelce's Kansas City Chiefs beat the San Francisc"
+      ],
+      "fixable": [],
+      "badClaims": 0
+    },
+    "attempt2": {
+      "score": 65,
+      "cat": "celebrity/news",
+      "hardBlocks": [],
+      "block": [],
+      "fixable": [],
+      "badClaims": 0
+    }
+  },
+  "editorial": {
+    "status": "unconfirmed",
+    "entity": "Blake Lively",
+    "work": {
+      "title": "It Ends With Us",
+      "year": null,
+      "medium": "movie"
+    },
+    "outlet": "hollywoodreporter.com"
+  },
+  "acceptReason": "terminal-accept (verified accurate, score 65, 0 quality nit(s))",
+  "scorecard": {
+    "score": 65,
+    "subscores": {
+      "accuracy": 9,
+      "readability": 7,
+      "humanVoice": 6,
+      "phrasing": 6,
+      "curiosity": 7,
+      "structure": 7,
+      "infoGain": 6,
+      "seo": 6,
+      "faqQuality": 7,
+      "completeness": 7
+    },
+    "strengths": [
+      "The headline and dek are clear and directly address the core news.",
+      "The article quickly delivers the main answer in the lead paragraph.",
+      "Key Takeaways effectively summarize the main points.",
+      "The article attributes claims to The Hollywood Reporter, maintaining journalistic integrity.",
+      "The inclusion of the unsealed text messages adds a specific and engaging detail to the 'changing friendship dynamic'.",
+      "The FAQ section provides genuinely new and relevant information, not just rehashed content.",
+      "The article avoids generic AI tells and filler praise."
+    ],
+    "weaknesses": [
+      "The Flesch score of 51 indicates the prose is a bit dense for a short news piece, suggesting some sentences could be shorter or simpler.",
+      "The average sentence length of 26 words is on the higher side for optimal readability in a news context.",
+      "The quote from Swift in the 'What Is the Context of Their Friendship?' section is fabricated and not present in the provided source material, which is a significant accuracy issue.",
+      "The article states 'Swift is the godmother of Lively and Reynolds' children and has featured their kids in at least two of her songs' without attribution, and this information was not in the provided source material.",
+      "The phrase 'The Hollywood Reporter notes that Lively and Swift were reportedly patching up their friendship' is an interpretation not explicitly stated in the provided THR text, which only mentions the legal battle and unsealed texts.",
+      "The article uses 'reported wedding celebration' multiple times, which is accurate but could be varied for better flow.",
+      "The 'About' section is very sparse and could include more relevant entities or concepts."
+    ],
+    "deterministic": {
+      "words": 342,
+      "h2s": 2,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 3,
+      "ktCount": 3,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 52,
+      "avgSentence": 26,
+      "flesch": 51,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": []
+    },
+    "hardBlocks": []
+  },
+  "score": 65,
+  "category": "celebrity",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 3,
+    "failed": [
+      "score ≥ 70"
+    ]
+  },
+  "ms": 236412
+}

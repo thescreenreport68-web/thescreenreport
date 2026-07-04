@@ -50,7 +50,13 @@ let topics = ONLY ? SOURCE_TOPICS.filter((t) => t.id === ONLY) : SOURCE_TOPICS;
 if (LIMIT) topics = topics.slice(0, LIMIT);
 const BASE_ARG = (process.argv.find((a) => a.startsWith("--base=")) || "").split("=")[1];
 const BASE = BASE_ARG ? new Date(BASE_ARG).getTime() : Date.now(); // real publish time in production; override with --base=<ISO>
-const WEB_VERIFY = process.env.WEB_VERIFY !== "0"; // INDEPENDENT web reality-check (news = verify the truth); WEB_VERIFY=0 disables
+// LIGHT TARGETED FACT-CHECK (owner 2026-07-03): sourcing from top trades means the story is already verified — but
+// even a top outlet occasionally errs (Billboard's promo gave Tyga's "Rack City" the wrong chart peak, which we
+// faithfully inherited). So we run the Sonar web-check to catch the LOAD-BEARING specifics (chart numbers, dates,
+// who-did-what) and CORRECT them in place — but LIGHT: it never fail-closed-HOLDS and never guts an article into a
+// hold (WEB_VERIFY_LIGHT). If the check can't run, we publish on trust-the-source. Accuracy up, volume unaffected.
+const WEB_VERIFY = process.env.WEB_VERIFY !== "0"; // on by default (light mode below); WEB_VERIFY=0 fully disables
+const WEB_VERIFY_LIGHT = process.env.WEB_VERIFY_STRICT !== "1"; // light (never block/gut) unless STRICT is requested
 const MAX_ATTEMPTS = Number(process.env.MAX_ATTEMPTS) || 2; // generate→gate rewrite passes; 2 for speed (the web-cut + cut-and-publish catch the tail)
 
 // (cutStrays moved to lib/cutter.mjs as cutArticle — 2026-07-03: ONE cutter now edits body AND
@@ -79,9 +85,11 @@ function fmtRelease(iso) {
   return d.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" });
 }
 
-let pub = 0, review = 0, err = 0, rej = 0;
-for (let i = 0; i < topics.length; i++) {
-  const topic = topics[i];
+// PROCESS ONE TOPIC — extracted from the old sequential for-loop (2026-07-03) so a CONCURRENCY POOL can run
+// several topics at once: the biggest speed win, with ZERO change to how any single article is written/verified/
+// scored (quality is untouched — only the schedule changes). Safe because recordPublished + the state/.md writes
+// are all SYNCHRONOUS = atomic under Node's single thread, so parallel topics never corrupt the shared ledger.
+async function processTopic(topic, i) {
   // 1-MINUTE stagger keeps a stable feed order within a batch WITHOUT backdating (the old 3h-per-index stagger
   // dated article #6 fifteen hours before the run — misrepresenting freshness on a breaking-news site).
   const dateISO = new Date(BASE - i * 60 * 1000).toISOString();
@@ -123,13 +131,8 @@ for (let i = 0; i < topics.length; i++) {
         // Pass FIND's full sources[] (outlet+tier+url+summary): the finder uses the inline summary text directly
         // AND extracts the real article body from the url, so the writer always has real reporting (Phase A).
         sources: topic.sources || [],
-      }, {
-        // Kill the DOUBLE GDELT query (2026-07-03 strip): FIND's externalCorroboration already ran this exact
-        // query family and enriched topic.sources with the major publisher URLs — re-querying in MAKE paid a
-        // second 6.5s throttle slot for the same answer. Skip when FIND already corroborated (verification.gdelt)
-        // or the topic already carries >=2 real extraction URLs; a URL-less topic still gets its own query.
-        skipGdelt: !!(topic.verification?.gdelt || (topic.sources || []).filter((s) => s?.url).length >= 2),
       });
+      // (corroborate defaults FALSE — trust-the-source: extract ONLY the top outlet's own article, no gnews/GDELT.)
       if (!cf.blocked && cf.sources?.length) {
         topic._bundle = cf;
         const srcText = cf.sources.map((s) => `[${s.domain || s.owner} · ${s.tier}]\n${s.text}${s.quotes?.length ? "\nON-THE-RECORD QUOTES: " + s.quotes.map((q) => `"${q}"`).join(" | ") : ""}`).join("\n\n");
@@ -156,13 +159,13 @@ for (let i = 0; i < topics.length; i++) {
     if (topic._bundle) {
       editorial = await editorialGate({ topic, bundle: topic._bundle });
       if (editorial.reject) {
-        rec.status = "rejected_editorial"; rec.holdReason = `editorial gate: ${editorial.reason}`; rej++;
+        rec.status = "rejected_editorial"; rec.holdReason = `editorial gate: ${editorial.reason}`;
         console.log(`  ⛔ EDITORIAL REJECT: ${editorial.reason}`);
         rec.ms = Date.now() - t0;
         const sf = path.join(STATE, topic.id + ".json");
         try { const prev = JSON.parse(fs.readFileSync(sf, "utf8")); const { previousRuns, ...prevRec } = prev; rec.previousRuns = [...(previousRuns || []).slice(-4), prevRec]; } catch { /* first run */ }
         fs.writeFileSync(sf, JSON.stringify(rec, null, 2));
-        continue;
+        return rec;
       }
       if (editorial.ran) {
         if (editorial.primaryEntity && editorial.primaryEntity.toLowerCase() !== (topic.primaryEntity || "").toLowerCase()) {
@@ -405,7 +408,11 @@ for (let i = 0; i < topics.length; i++) {
       // supported — PERIPHERAL background not in the single source, NOT a contradiction. Publish those (accept cutOnly).
       // A genuine wrong specific is caught separately as "fabricated:"/"CONTRADICTED [" (NOT a CUT) → not cutOnly → the
       // cut-and-publish pass below DELETES that exact sentence, or it holds. So accuracy on specifics stays strict.
-      const acceptableBlocks = block.length === 0 || cutOnly;
+      // 2026-07-03 audit #4: a CUT is only auto-acceptable when EVERY stray is a pure soft characterization
+      // (straysQualitative). If any stray carries a checkable specific (number/$/%/date/platform/award/credit/
+      // title), acceptableBlocks stays false → the cut-and-publish pass DELETES those exact stray sentences (or
+      // holds) instead of relying on the probabilistic web-check to notice an invented specific.
+      const acceptableBlocks = block.length === 0 || (cutOnly && straysQualitative);
       const accept = !cleanPass && attempt === MAX_ATTEMPTS && acceptableBlocks && (scored.score || 0) >= ACCEPT_FLOOR;
       pass = cleanPass || accept;
       rec.acceptReason = accept ? `terminal-accept (verified accurate, score ${scored.score}${cutOnly ? `, ${scored.vgStrays.length} qualitative stray(s) accepted` : `, ${fixable.length} quality nit(s)`})` : undefined;
@@ -429,6 +436,7 @@ for (let i = 0; i < topics.length; i++) {
     const thinG = bsrcN.length < 2 || bsrcN.reduce((n, s) => n + (s.text || "").length, 0) < 1500;
     const wordsOf = (b) => (String(b || "").match(/\b[\w']+\b/g) || []).length;
     const cutFloor = thinG ? 200 : 300; // a thin-grounding brief is LEGAL at ~220w — don't hold it for missing 300
+    let cutPublished = false; // set when the gate SHORT-CIRCUITED (score 0) and cut-and-publish salvaged it → must RE-GATE
     if (!pass && scored?.cutClaims?.length && !DRY) {
       const idBlock = (scored.hardBlocks || []).some((b) => /wrong-title|identity mismatch|wrong[- ]entity/i.test(String(b)));
       const bodyBefore = article.body;
@@ -438,6 +446,7 @@ for (let i = 0; i < topics.length; i++) {
       const nucleusSurvives = !ent || article.body.toLowerCase().includes(ent) || ent.split(/\s+/).some((w) => w.length > 3 && article.body.toLowerCase().includes(w));
       if (!idBlock && cut + fieldCuts > 0 && words >= cutFloor && nucleusSurvives) {
         pass = true;
+        cutPublished = true; // gate score is STALE (0 from the short-circuit) — re-gate the cleaned article below
         rec.acceptReason = `cut-and-publish (removed ${cut} sentence(s) + ${fieldCuts} field item(s); ${words}w remain)`;
         console.log(`  ✂ cut-and-publish: removed ${cut} flagged sentence(s) + ${fieldCuts} field item(s), ${words}w remain → web-check next`);
       } else if (cut + fieldCuts > 0) {
@@ -446,40 +455,106 @@ for (let i = 0; i < topics.length; i++) {
       }
     }
 
-    // ── INDEPENDENT WEB REALITY-CHECK → CUT — the LAST gate before EVERY publish (2026-07-03 restructure,
-    // audit D2: the old placement let a cut-and-published article skip this entirely). News must be factually
-    // TRUE: the bundle-based gate cannot catch a misread of an ambiguous source (Tom Hanks "coach" vs the real
-    // "sportswriter"), a stale number ($10.5M vs $10.9M), or an inferred date — the bundle check is circular.
-    // Verify the load-bearing specifics against the LIVE web; DELETE any contradicted claim (body + fields);
-    // if the deletions gut the article, it HOLDS. No publish path bypasses this while WEB_VERIFY is on.
+    // Re-apply the DETERMINISTIC structured fields the writer must NEVER own (verified TMDB/OMDb figures, the
+    // official trailer/embed ids, the reaction tweet ids). Used after a surgical web-correction re-writes the
+    // article, so a corrected draft can't drop or re-hallucinate a system-supplied value.
+    const reapplyStructured = () => {
+      if (wtw?.length) article.whereToWatch = toWhereToWatch(wtw);
+      if (trailer?.youtubeId) { article.youtubeId = trailer.youtubeId; article.releaseInfo = fmtRelease(trailer.releaseDate); }
+      if (reactionTweets?.ids?.length) article.tweetIds = reactionTweets.ids;
+      if (interview) { article.youtubeId = interview.youtubeId; article.sourceOutlet = interview.sourceOutlet; article.sourceUrl = interview.sourceUrl; }
+      if (boxoffice?.worldwide) article.boxOffice = { ...(article.boxOffice || {}), worldwide: boxoffice.worldwide, budget: boxoffice.budget };
+      if (personCredits?.length) article.filmography = personCredits.map((c) => ({ year: c.year, title: c.title, role: c.character, type: c.type }));
+    };
+
+    // ── INDEPENDENT WEB REALITY-CHECK — the LAST gate before EVERY publish, and the ONLY NON-CIRCULAR one: every
+    // other gate checks the article against the SAME bundle the writer used, so a single source's OWN error (a
+    // wrong credit, "set to reprise"→"confirmed") passes them all. This step checks the load-bearing specifics
+    // against the LIVE OPEN WEB. Two root-cause fixes (2026-07-03, PART HH.2):
+    //  (1) FAIL-CLOSED — if the check cannot run after retries, the article is UNVERIFIED-against-the-world → HOLD.
+    //      Never silently publish an unverified article (the Thor `webCheck:{ran:false}`-then-published failure).
+    //  (2) CORRECT-IN-PLACE — a contradiction that carries a known-correct value is fixed by a SURGICAL writer pass
+    //      using the web's value, then RE-VERIFIED; only what is STILL wrong is cut. This stops cut-only from
+    //      deleting the TRUE sentence while keeping the FALSE one (the Kamiyama-directs vs Tada-directs failure).
     if (pass && WEB_VERIFY && !DRY && article?.body) {
-      const web = await webVerifyArticle({ topic, article }).catch(() => ({ ran: false, contradictions: [] }));
-      if (web.ran && web.contradictions.length) {
+      let web = await webVerifyArticle({ topic, article }).catch((e) => ({ ran: false, contradictions: [], error: String(e?.message || e).slice(0, 120) }));
+      // (1) COULD-NOT-RUN. LIGHT mode: publish on trust-the-source (the story is from a top outlet). STRICT mode
+      // (WEB_VERIFY_STRICT=1): fail-closed HOLD. The owner's model is trust-the-source + a light corrective check.
+      if (!web.ran) {
+        rec.webCheck = { ran: false, error: web.error || "no result" };
+        if (WEB_VERIFY_LIGHT) { console.log(`  ⚠ web check could not run (${web.error || "no result"}) — publishing on trust-the-source (light mode)`); }
+        else { pass = false; rec.holdReason = `web reality-check could not run (${web.error || "no result"}) — held (strict)`; console.log(`  ⛔ HELD: web check could not run — fail-closed (strict)`); }
+      } else if (web.contradictions.length) {
         console.log(`  🌐 web reality-check: ${web.contradictions.length} contradicted — ${web.contradictions.map((c) => c.claim.slice(0, 40)).join(" | ")}`);
-        // A web-contradicted box-office figure gets CORRECTED to the web value in the structured field (the
-        // writer re-emits the stale grounded figure — the $10.5M-vs-$10.9M root cause), then the cutter removes
-        // the prose instances + any other flagged field items.
-        if (article.boxOffice) {
-          for (const c of web.contradictions) {
-            if (/\$|\bmillion\b|\bbillion\b|gross|box.?office|domestic/i.test(`${c.claim} ${c.problem}`)) {
-              const m = String(c.correct || "").match(/\$\s?[\d][\d,.]*\s?(?:million|billion|m|b)?/i);
-              if (m) article.boxOffice.domestic = m[0].replace(/\s+/g, " ").trim(); else delete article.boxOffice.domestic;
-            }
+        // (2a) CORRECT-IN-PLACE: hand the web's CORRECT values to a surgical writer pass (fix only these specifics —
+        // e.g. the Tyga chart-peak numbers), then RE-VERIFY. Repairs the wrong specific instead of deleting the line.
+        const correctable = web.contradictions.filter((c) => c.correct && c.correct.trim().length > 1);
+        if (correctable.length) {
+          const webCorr = correctable.map((c) => `- The article states "${c.claim}" — FACTUALLY WRONG per the live web. ${c.problem}. The CORRECT fact is: ${c.correct}. Replace the wrong specific with the correct one IN PLACE; keep all surrounding TRUE information (never delete a true neighbouring sentence).`).join("\n");
+          const fixed = await generate({ topic, model: MODELS.generator, corrections: webCorr, previousArticle: article }).catch(() => null);
+          if (fixed?.article?.body) {
+            article = fixed.article;
+            cutPublished = true; // body rewritten → re-gate below re-scores it (no stale quality score ships)
+            reapplyStructured();
+            web = await webVerifyArticle({ topic, article }).catch(() => ({ ran: false, contradictions: [] }));
+            console.log(`  ↻ web-correct: surgically fixed ${correctable.length} specific(s) → re-verify: ${web.ran ? web.contradictions.length + " still wrong" : "n/a (light: publish)"}`);
           }
         }
-        const { cut, fieldCuts } = cutArticle(article, web.contradictions.map((c) => c.claim));
-        if (cut + fieldCuts > 0) console.log(`  ✂ web-cut: deleted ${cut} contradicted sentence(s) + ${fieldCuts} field item(s) — never ship a known-false fact`);
-        // Post-cut integrity: if the web cuts gutted the piece or removed its subject, it HOLDS.
-        const words = wordsOf(article.body);
-        const ent = (topic.primaryEntity || "").toLowerCase();
-        const nucleus = !ent || article.body.toLowerCase().includes(ent) || ent.split(/\s+/).some((w) => w.length > 3 && article.body.toLowerCase().includes(w));
-        if (words < cutFloor || !nucleus) {
-          pass = false;
-          rec.holdReason = `web reality-check gutted the article (${words}w${nucleus ? "" : ", subject removed"}) — held, never shipped broken`;
-          console.log(`  ⛔ HELD after web-cut: ${words}w remain${nucleus ? "" : " and the subject was removed"}`);
+        // (2b) whatever is STILL contradicted after correction → box-office structured fix + CUT that exact prose.
+        const remaining = web.ran ? web.contradictions : [];
+        if (remaining.length) {
+          if (article.boxOffice) {
+            for (const c of remaining) {
+              if (/\$|\bmillion\b|\bbillion\b|gross|box.?office|domestic/i.test(`${c.claim} ${c.problem}`)) {
+                const m = String(c.correct || "").match(/\$\s?[\d][\d,.]*\s?(?:million|billion|m|b)?/i);
+                if (m) article.boxOffice.domestic = m[0].replace(/\s+/g, " ").trim(); else delete article.boxOffice.domestic;
+              }
+            }
+          }
+          const { cut, fieldCuts } = cutArticle(article, remaining.map((c) => c.claim));
+          if (cut + fieldCuts > 0) console.log(`  ✂ web-cut: removed ${cut} still-wrong sentence(s) + ${fieldCuts} field item(s)`);
+          // LIGHT mode never HOLDS on a gutted result — it publishes the corrected/trimmed remainder (a top-outlet
+          // brief minus one wrong line is still good). STRICT mode holds a gutted piece.
+          const words = wordsOf(article.body);
+          if (!WEB_VERIFY_LIGHT && words < cutFloor) {
+            pass = false;
+            rec.holdReason = `web reality-check gutted the article (${words}w) — held (strict)`;
+            console.log(`  ⛔ HELD after web-cut: ${words}w remain (strict)`);
+          }
         }
-        rec.webCheck = { contradictions: web.contradictions.length, cut: cut + fieldCuts };
-      } else { rec.webCheck = { ran: web.ran, contradictions: 0 }; }
+        rec.webCheck = { ran: true, corrected: correctable.length, remaining: (web.ran ? web.contradictions.length : 0) };
+      } else { rec.webCheck = { ran: true, contradictions: 0, checked: web.checkedCount || 0 }; }
+    }
+
+    // PUBLISH INVARIANT (STRICT only): a published article MUST have been checked against the live world.
+    // STRICT-only invariant: never publish an unverified article. In LIGHT mode (the default) trust-the-source
+    // covers a check that couldn't run, so this does not apply.
+    if (!WEB_VERIFY_LIGHT && pass && WEB_VERIFY && !DRY && !(rec.webCheck && rec.webCheck.ran === true)) {
+      pass = false;
+      rec.holdReason = rec.holdReason || "publish invariant: web reality-check did not run — held (strict)";
+      console.log(`  ⛔ HELD (publish invariant, strict): the web reality-check did not run`);
+    }
+
+    // ── RE-GATE AFTER CUTTING (2026-07-03 fix — the score-0 publish bug). When the gate SHORT-CIRCUITED on a fact
+    // block it returned score 0 without ever running the quality judge; cut-and-publish then removed the flagged
+    // claims but the article shipped UNSCORED at 0 (and a cut could leave the body incoherent — a dangling "That
+    // series…" with its antecedent removed). Re-run the gate ONCE on the fully-cleaned article: the fabrications
+    // are gone so it no longer short-circuits → a REAL score + a fresh block scan. If it now clears the floor,
+    // publish with the true score; if it still blocks or scores below ACCEPT_FLOOR, HOLD (never ship a broken cut).
+    if (cutPublished && pass && !DRY) {
+      const rescore = await gate({ article, topic, judgeModel: judge }).catch(() => null);
+      if (rescore) {
+        const reBlocks = classifyBlocks(rescore.hardBlocks).block;
+        if (reBlocks.length || (rescore.score || 0) < ACCEPT_FLOOR) {
+          pass = false;
+          rec.holdReason = `re-gate after cut: ${reBlocks.length ? "residual block — " + reBlocks.slice(0, 2).join("; ") : `score ${rescore.score} < ${ACCEPT_FLOOR} after cutting`}`;
+          console.log(`  ⛔ HELD (re-gate after cut): ${reBlocks.length ? reBlocks.slice(0, 2).join("; ") : `score ${rescore.score} < ${ACCEPT_FLOOR}`}`);
+        } else {
+          scored = rescore; // adopt the REAL score + scorecard (no more score-0 publishes)
+          rec.acceptReason = `${rec.acceptReason || "cut-and-publish"} → re-gated clean at ${rescore.score}`;
+          console.log(`  ↻ re-gate after cut: clean at score ${rescore.score} — publishing with the real score`);
+        }
+      }
     }
 
     // FINAL POLISH (deterministic, before assemble): collapse duplicated sentences and trim any truncated/
@@ -494,7 +569,10 @@ for (let i = 0; i < topics.length; i++) {
     // >=1200px Discover floor; landscape preferred. A passed article with NO image on any ladder still HOLDS.
     if (pass) {
       const isTitleStory = ["movies", "tv", "streaming"].includes(topic.category) || ["box-office", "trailer", "watchguide", "reaction"].includes(topic.formatTag);
-      const hero = await pickHeroImage({ topic, article, bundle: topic._bundle, isTitleStory }).catch(() => null);
+      // For a TITLE story, search the image by the REAL WORK (the resolved TMDB title / editorial work), never the
+      // editorial-corrected PERSON entity — that grabbed a wrong same-name cooking show's chef for the Silo story.
+      const titleForImage = topic._titleFacts?.title || editorial?.work?.title || topic._entityBefore || null;
+      const hero = await pickHeroImage({ topic, article, bundle: topic._bundle, isTitleStory, titleOverride: titleForImage }).catch(() => null);
       const take = (cand, dims) => { image = { image: cand.url, imageWidth: dims.imageWidth, imageHeight: dims.imageHeight, credit: cand.credit }; if (cand.alt) article.imageQuery = cand.alt; };
       if (hero?.candidates?.length) {
         let portrait = null; // first passing-but-portrait candidate, used only if no landscape clears the gate
@@ -541,9 +619,10 @@ for (let i = 0; i < topics.length; i++) {
           sourceUrls: (topic.sources || []).map((s) => s?.url).filter(Boolean),
           priority: topic.priority, signals: topic.signals,
           image: image?.image || null, category: classification.category,
+          verifyStatus: topic.verification?.status || null,
         });
       }
-      rec.status = "published"; rec.score = scored.score; rec.category = classification.category; rec.subcategory = classification.subcategory; pub++;
+      rec.status = "published"; rec.score = scored.score; rec.category = classification.category; rec.subcategory = classification.subcategory;
       console.log(`  ✓ ${DRY ? "DRY (md not written)" : "WROTE " + out.slug + ".md"}${rec.acceptReason ? " [" + rec.acceptReason + "]" : ""} [${classification.category}/${classification.subcategory}] score ${scored.score}`);
     } else {
       // C6 terminal disposition: distinguish a HELD-FOR-FABRICATION/grounding failure (a block remained) from a
@@ -551,7 +630,7 @@ for (let i = 0; i < topics.length; i++) {
       // reason makes the queue triageable (and tells us whether the writer or the grounding is the bottleneck).
       const finalBlocks = classifyBlocks(scored.hardBlocks);
       rec.holdReason = finalBlocks.block.length ? `accuracy/grounding block: ${finalBlocks.block.slice(0, 3).join("; ")}` : `verified accurate but score ${scored.score} < ${ACCEPT_FLOOR} (weak writing)`;
-      rec.status = "needs_review"; review++;
+      rec.status = "needs_review";
       console.log(`  → REVIEW QUEUE (score ${scored.score}) — ${finalBlocks.block.length ? "ACCURACY/GROUNDING block" : "weak writing, accurate"}`);
     }
     // FULL-PIPELINE MONITOR — verify every stage was covered + audit the article for everything.
@@ -560,7 +639,7 @@ for (let i = 0; i < topics.length; i++) {
     rec.audit = { ok: report.ok, internalLinks: internalLinks.length, failed: report.failed.map((f) => f.name) };
     rec.ms = Date.now() - t0;
   } catch (e) {
-    rec.status = "error"; rec.error = String(e?.stack || e).slice(0, 300); err++;
+    rec.status = "error"; rec.error = String(e?.stack || e).slice(0, 300);
     console.log("  ERROR", rec.error);
   }
   // AUDIT TRAIL (2026-07-03 strip): never silently overwrite a prior run's state for the same topic id —
@@ -572,8 +651,35 @@ for (let i = 0; i < topics.length; i++) {
     rec.previousRuns = [...(previousRuns || []).slice(-4), prevRec];
   } catch { /* first run for this id */ }
   fs.writeFileSync(stateFile, JSON.stringify(rec, null, 2));
+  return rec;
 }
-console.log(`\nDONE. published:${pub} review:${review} rejected:${rej} error:${err}. State in ${STATE}`);
+
+// ── CONCURRENCY POOL — run several topics at once (the speed win). CONCURRENCY workers pull from the queue; each
+// runs the FULL per-article pipeline unchanged. --target=N stops launching new topics once N have PUBLISHED, so
+// "give me 5" reliably delivers 5 (or exhausts the queue and reports honestly). Default concurrency 4 for a FIND
+// batch (tune via CONCURRENCY=n); 1 for the manual single-topic path. Sonar/OpenRouter tolerate this; each call
+// keeps its own retry/fail-closed safety, so a transient rate-limit on one topic never affects another.
+const CONCURRENCY = Math.max(1, Number(process.env.CONCURRENCY) || (FROM_FIND ? 4 : 1));
+const TARGET = Number((process.argv.find((a) => a.startsWith("--target=")) || "").split("=")[1]) || 0;
+let cursor = 0, publishedCount = 0;
+const results = [];
+async function worker() {
+  while (true) {
+    if (TARGET && publishedCount >= TARGET) return;
+    const i = cursor++;
+    if (i >= topics.length) return;
+    const rec = await processTopic(topics[i], i);
+    results.push(rec);
+    if (rec.status === "published") publishedCount++;
+  }
+}
+console.log(`\n▶ processing ${topics.length} topic(s) · concurrency ${CONCURRENCY}${TARGET ? ` · target ${TARGET} published` : ""}`);
+await Promise.all(Array.from({ length: Math.min(CONCURRENCY, topics.length || 1) }, () => worker()));
+const pub = results.filter((r) => r.status === "published").length;
+const review = results.filter((r) => r.status === "needs_review").length;
+const rej = results.filter((r) => r.status === "rejected_editorial").length;
+const err = results.filter((r) => r.status === "error").length;
+console.log(`\nDONE. published:${pub} review:${review} rejected:${rej} error:${err} (processed ${results.length}/${topics.length}). State in ${STATE}`);
 
 // MEASURED cost of this run (real OpenRouter token usage × current rates).
 const cost = costReport();

@@ -126,7 +126,10 @@ Return STRICT JSON: { "ranked": [ { "index": 0, "identityMatch": true, "impact":
     const ranked = Array.isArray(data?.ranked) ? data.ranked : [];
     if (!ranked.length) return null;
     const score = (r) => (r.identityMatch ? 100 : 0) + (Number(r.impact) || 0) + (Number(r.fit) || 0);
-    const withScore = ranked.filter((r) => candidates[r.index]).map((r) => ({ cand: candidates[r.index], s: score(r), why: r.why || "" }));
+    // DROP a candidate the vision gate says is the WRONG subject / off-topic (identityMatch:false AND low fit) — a
+    // wrong hero is worse than none (2026-07-03). If everything is rejected the caller falls back to Wikimedia/holds.
+    const isReject = (r) => r.identityMatch === false && (Number(r.fit) || 0) <= 3;
+    const withScore = ranked.filter((r) => candidates[r.index] && !isReject(r)).map((r) => ({ cand: candidates[r.index], s: score(r), why: r.why || "" }));
     if (!withScore.length) return null;
     withScore.sort((a, b) => b.s - a.s);
     // Return the FULL candidate list reordered best-first (so the caller can fall through to the next pick if the top
@@ -141,19 +144,24 @@ Return STRICT JSON: { "ranked": [ { "index": 0, "identityMatch": true, "impact":
 
 // Pick the hero image for a news topic. `isTitleStory` decides TMDB lane (title backdrops vs person profiles).
 export async function pickHeroImage(
-  { topic, article, bundle, isTitleStory } = {},
+  { topic, article, bundle, isTitleStory, titleOverride = null } = {},
   { getPersonImagesImpl = getPersonImages, getTitleImagesImpl = getTitleImages, visionImpl, model, vision = true, ogImpl = fetchOgImage, sourcePhoto = true, maxSourcePhotos = 3, fetchImpl = fetch } = {}
 ) {
-  const entity = topic?.primaryEntity || article?.entity || topic?.title || "";
+  // For a TITLE story, the image MUST be searched by the WORK (e.g. "Silo"), NOT by topic.primaryEntity — the
+  // editorial gate may have corrected the subject to a PERSON ("Michael Dinner"), and searching TMDB with that name
+  // grabbed a wrong same-name cooking show's chef backdrop (2026-07-03 Silo bug). titleOverride carries the real
+  // resolved work from the caller (editorial.work.title / the authoritative TMDB title).
+  const titleQuery = (isTitleStory && titleOverride) ? titleOverride : (topic?.primaryEntity || topic?.title || "");
+  const entity = isTitleStory ? titleQuery : (topic?.primaryEntity || article?.entity || topic?.title || "");
   const headline = article?.title || topic?.title || "";
   const newsType = topic?.eventType || topic?.formatTag || "news";
-  const titleContext = isTitleStory ? (topic?.primaryEntity || null) : (topic?.titleHint || null);
+  const titleContext = isTitleStory ? (titleQuery || null) : (topic?.titleHint || null);
 
   // 1) TMDB stills (fail-safe: a miss just means fewer candidates).
   let personSet = null, titleSet = null;
   const tmdbType = topic?.tmdbType === "tv" ? "tv" : "movie";
   try {
-    if (isTitleStory && (topic?.primaryEntity || topic?.title)) titleSet = await getTitleImagesImpl(topic.primaryEntity || topic.title, tmdbType);
+    if (isTitleStory && titleQuery) titleSet = await getTitleImagesImpl(titleQuery, tmdbType);
     else if (entity) personSet = await getPersonImagesImpl(entity);
   } catch { /* skip */ }
   const candidates = stillCandidates(personSet, titleSet);

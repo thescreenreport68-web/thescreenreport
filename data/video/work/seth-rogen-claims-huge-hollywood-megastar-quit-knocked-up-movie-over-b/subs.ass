@@ -12,36 +12,33 @@ Style: KickDraw,Anton,40,&H002821D9,&H002821D9,&H00000000,&H00000000,0,0,0,0,100
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.12,0:00:06.50,KickDraw,,0,0,0,,{\fad(140,120)\pos(104,126)\1c&H000000&\1a&H78&\blur6\p1}m 18 0 l 866 0 b 884 0 884 0 884 18 l 884 70 b 884 88 884 88 866 88 l 18 88 b 0 88 0 88 0 70 l 0 18 b 0 0 0 0 18 0{\p0}
-Dialogue: 1,0:00:00.12,0:00:06.50,KickDraw,,0,0,0,,{\fad(140,120)\pos(98,118)\p1}m 18 0 l 866 0 b 884 0 884 0 884 18 l 884 70 b 884 88 884 88 866 88 l 18 88 b 0 88 0 88 0 70 l 0 18 b 0 0 0 0 18 0{\p0}
-Dialogue: 2,0:00:00.12,0:00:06.50,KickText,,0,0,0,,{\fad(140,120)\pos(540,163)}THE MYSTERY 'KNOCKED UP' STAR
-Dialogue: 0,0:00:00.05,0:00:01.09,Hook,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k16}A {\k31}HUGE {\k57}HOLLYWOOD
-Dialogue: 0,0:00:01.09,0:00:02.28,Hook,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k52}{\1c&H2821D9&}MEGASTAR{\1c&HFFFFFF&} {\k42}WALKED {\k26}OFF
-Dialogue: 0,0:00:02.28,0:00:03.27,Hook,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k47}KNOCKED {\k21}UP {\k31}OVER
-Dialogue: 0,0:00:03.27,0:00:04.31,Hook,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k16}A {\k52}BIRTHING {\k36}SCENE
-Dialogue: 0,0:00:04.31,0:00:05.24,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k31}SETH {\k36}ROGEN {\k26}NOW
-Dialogue: 0,0:00:05.24,0:00:06.28,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k42}CLAIMS {\k26}THE {\k36}ACTOR
-Dialogue: 0,0:00:06.28,0:00:07.16,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k31}{\1c&H2821D9&}QUIT{\1c&HFFFFFF&} {\k26}THE {\k31}2007
-Dialogue: 0,0:00:07.16,0:00:08.67,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k42}COMEDY {\k42}DURING {\k68}{\1c&H2821D9&}DEVELOPMENT{\1c&HFFFFFF&}
-Dialogue: 0,0:00:08.67,0:00:09.61,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k36}ROGEN {\k31}SAYS {\k26}THE
-Dialogue: 0,0:00:09.61,0:00:10.96,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k31}STAR {\k26}WAS {\k78}{\1c&H2821D9&}UNCOMFORTABLE{\1c&HFFFFFF&}
-Dialogue: 0,0:00:10.96,0:00:11.89,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k31}WITH {\k16}A {\k47}GRAPHIC
-Dialogue: 0,0:00:11.89,0:00:12.88,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k62}CHILDBIRTH {\k36}SCENE
-Dialogue: 0,0:00:12.88,0:00:14.07,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k26}THE {\k31}FILM {\k62}ULTIMATELY
-Dialogue: 0,0:00:14.07,0:00:15.47,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k47}STARRED {\k57}KATHERINE {\k36}HEIGL
-Dialogue: 0,0:00:15.47,0:00:16.36,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k52}OPPOSITE {\k36}ROGEN
-Dialogue: 0,0:00:16.36,0:00:17.55,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k31}THAT {\k52}BIRTHING {\k36}SCENE
-Dialogue: 0,0:00:17.55,0:00:18.28,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k21}IS {\k16}A {\k36}MAJOR
-Dialogue: 0,0:00:18.28,0:00:18.95,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k31}PLOT {\k36}POINT
-Dialogue: 0,0:00:18.95,0:00:19.99,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k36}ROGEN {\k42}SHARED {\k26}THE
-Dialogue: 0,0:00:19.99,0:00:21.24,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k52}ANECDOTE {\k31}WITH {\k42}FEMALE
-Dialogue: 0,0:00:21.24,0:00:22.28,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k36}FIRST {\k26}BUT {\k42}DIDN'T
-Dialogue: 0,0:00:22.28,0:00:22.95,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k31}NAME {\k36}NAMES
-Dialogue: 0,0:00:22.95,0:00:23.68,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k21}SO {\k26}WHO {\k26}WAS
-Dialogue: 0,0:00:23.68,0:00:24.77,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k42}ALMOST {\k21}IN {\k47}KNOCKED
-Dialogue: 0,0:00:24.77,0:00:25.44,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k21}UP {\k47}INSTEAD
-Dialogue: 0,0:00:25.44,0:00:26.33,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k31}FULL {\k36}STORY {\k21}AT
-Dialogue: 0,0:00:26.33,0:00:27.42,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k26}THE {\k42}SCREEN {\k42}REPORT
-Dialogue: 0,0:00:27.42,0:00:28.20,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k31}LINK {\k21}IN {\k26}BIO
-Dialogue: 0,0:00:28.20,0:00:29.18,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k26}ANY {\k47}GUESSES {\k26}FOR
-Dialogue: 0,0:00:29.18,0:00:30.22,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k26}THE {\k47}MYSTERY {\k31}STAR
+Dialogue: 0,0:00:00.12,0:00:06.50,KickDraw,,0,0,0,,{\fad(140,120)\pos(132,126)\1c&H000000&\1a&H78&\blur6\p1}m 18 0 l 810 0 b 828 0 828 0 828 18 l 828 70 b 828 88 828 88 810 88 l 18 88 b 0 88 0 88 0 70 l 0 18 b 0 0 0 0 18 0{\p0}
+Dialogue: 1,0:00:00.12,0:00:06.50,KickDraw,,0,0,0,,{\fad(140,120)\pos(126,118)\p1}m 18 0 l 810 0 b 828 0 828 0 828 18 l 828 70 b 828 88 828 88 810 88 l 18 88 b 0 88 0 88 0 70 l 0 18 b 0 0 0 0 18 0{\p0}
+Dialogue: 2,0:00:00.12,0:00:06.50,KickText,,0,0,0,,{\fad(140,120)\pos(540,163)}WHO WALKED OFF 'KNOCKED UP'
+Dialogue: 0,0:00:00.05,0:00:01.30,Hook,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k16}A {\k57}HOLLYWOOD {\k52}MEGASTAR
+Dialogue: 0,0:00:01.30,0:00:02.29,Hook,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k31}QUIT {\k47}KNOCKED {\k21}UP
+Dialogue: 0,0:00:02.29,0:00:03.22,Hook,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k31}OVER {\k16}A {\k47}GRAPHIC
+Dialogue: 0,0:00:03.22,0:00:04.11,Hook,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k52}BIRTHING {\k36}SCENE
+Dialogue: 0,0:00:04.11,0:00:05.15,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k42}THAT'S {\k26}THE {\k36}CLAIM
+Dialogue: 0,0:00:05.15,0:00:06.13,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k31}FROM {\k31}SETH {\k36}ROGEN
+Dialogue: 0,0:00:06.13,0:00:07.07,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k26}WHO {\k47}STARRED {\k21}IN
+Dialogue: 0,0:00:07.07,0:00:08.06,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k26}THE {\k31}2007 {\k42}COMEDY
+Dialogue: 0,0:00:08.06,0:00:08.84,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k21}HE {\k31}SAYS {\k26}THE
+Dialogue: 0,0:00:08.84,0:00:10.09,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k47}UNNAMED {\k36}ACTOR {\k42}WALKED
+Dialogue: 0,0:00:10.09,0:00:11.07,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k26}OFF {\k26}THE {\k47}PROJECT
+Dialogue: 0,0:00:11.07,0:00:12.43,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k42}DURING {\k26}ITS {\k68}DEVELOPMENT
+Dialogue: 0,0:00:12.43,0:00:13.36,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k36}ROGEN {\k31}SAYS {\k26}THE
+Dialogue: 0,0:00:13.36,0:00:14.71,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k31}STAR {\k26}WAS {\k78}{\1c&H2821D9&}UNCOMFORTABLE{\1c&HFFFFFF&}
+Dialogue: 0,0:00:14.71,0:00:15.70,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k31}WITH {\k26}THE {\k42}FILM'S
+Dialogue: 0,0:00:15.70,0:00:16.84,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k62}CHILDBIRTH {\k52}SEQUENCE
+Dialogue: 0,0:00:16.84,0:00:18.04,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k21}IT {\k52}CEMENTED {\k47}ROGEN'S
+Dialogue: 0,0:00:18.04,0:00:18.82,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k42}STATUS {\k21}AS {\k16}A
+Dialogue: 0,0:00:18.82,0:00:19.76,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k47}LEADING {\k26}MAN {\k21}IN
+Dialogue: 0,0:00:19.76,0:00:20.33,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k57}HOLLYWOOD
+Dialogue: 0,0:00:20.33,0:00:21.37,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k26}BUT {\k26}THE {\k52}IDENTITY
+Dialogue: 0,0:00:21.37,0:00:22.36,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k21}OF {\k31}THAT {\k47}MYSTERY
+Dialogue: 0,0:00:22.36,0:00:23.34,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k36}ACTOR {\k47}REMAINS {\k16}A
+Dialogue: 0,0:00:23.34,0:00:24.44,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k42}SECRET {\k26}PER {\k42}FEMALE
+Dialogue: 0,0:00:24.44,0:00:24.80,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k36}FIRST
+Dialogue: 0,0:00:24.80,0:00:25.53,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k26}WHO {\k21}DO {\k26}YOU
+Dialogue: 0,0:00:25.53,0:00:26.36,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k36}THINK {\k21}IT {\k26}WAS

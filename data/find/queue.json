@@ -1,262 +1,583 @@
 {
-  "runId": "run-2026-07-03T12-49-00",
-  "builtAt": "2026-07-03T12:53:25.749Z",
-  "count": 4,
+  "runId": "run-2026-07-04T08-09-48",
+  "builtAt": "2026-07-04T08:10:24.474Z",
+  "count": 9,
   "topics": [
     {
-      "id": "news-next-thor-casting",
-      "slug": "marvel-officially-casts-the-next-thor",
-      "title": "Marvel Officially Casts the Next Thor",
-      "contentType": "news",
-      "formatTag": "news",
+      "id": "box-office-minions-monsters-box-office-underperforms",
+      "slug": "minions-monsters-coming-up-short-with-63m-5-day-u-s-box-office",
+      "title": "Minions Monsters Coming Up Short With $63M 5-Day U.S. Box Office",
+      "contentType": "box-office",
+      "formatTag": "box-office",
       "category": "movies",
-      "subcategory": "news",
-      "eventType": "casting",
+      "subcategory": "box-office",
+      "eventType": "boxoffice",
       "sensitivity": "normal",
-      "eventSlug": "next-thor-casting",
-      "primaryKeyword": "next thor casting",
-      "primaryEntity": "Thor",
+      "eventSlug": "minions-monsters-box-office-underperforms",
+      "primaryKeyword": "minions monsters box office",
+      "primaryEntity": "Minions & Monsters",
       "entities": [
-        "Liam Karlsson"
+        "Minions Monsters",
+        "Illumination",
+        "Universal"
       ],
-      "angle": "Marvel officially casts the next actor to portray Thor.",
+      "angle": "Illumination's 'Minions Monsters' is underperforming at the domestic box office, falling short of initial projections for its five-day opening.",
       "tmdbType": "movie",
-      "source": "rss:ScreenRant",
+      "source": "rss:Deadline",
       "sources": [
         {
-          "outlet": "ScreenRant",
-          "tier": 5,
-          "url": "https://screenrant.com/new-thor-actor-liam-karlsson-iron-man/",
-          "ageMin": 19,
-          "headline": "Marvel Officially Casts the Next Thor",
-          "summary": "Liam Karlsson is appearing in the role."
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/box-office-minions-monsters-1236972754/",
+          "ageMin": 526,
+          "headline": "Minions Monsters Coming Up Short With $63M 5-Day U.S. — Friday Box Office Update",
+          "summary": "FRIDAY PM UPDATE: Illumination/Universal s Minions Monsters is creating less frenzy then expected with a 5-day start of $63.5M in North America versus the $80M that was hoped. Current 3-day is $38.5M at 4,243 theaters, making Minions Monsters easily No. 1. Note some exhibitors noticed in their forecasts that the little guys could be [ ]"
         }
       ],
-      "ageMin": 19,
+      "ageMin": 526,
       "_cand": {
-        "key": "rss:marvel-officially-casts-the-next-thor",
+        "key": "rss:minions-monsters-coming-up-short-with-63m-5-day-u-s-friday-b",
         "popularity": 0,
         "kind": "rss-news"
       },
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
+        "tier1Count": 1,
+        "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "ScreenRant"
+          "Deadline"
         ],
-        "maxTier": 5,
+        "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "ScreenRant",
+        "attribution": "Deadline",
         "framing": "attributed",
         "status": "DEVELOPING",
-        "publishable": true,
-        "gdelt": {
-          "majorOwners": 0,
-          "majors": []
-        }
+        "publishable": true
       },
-      "priority": 60,
+      "priority": 63,
       "signals": {
-        "recency": 24,
-        "corroboration": 8,
+        "recency": 4,
+        "corroboration": 12,
         "status": 18,
-        "type": 10,
+        "type": 11,
         "pop": 0,
-        "breakout": 0
+        "breakout": 0,
+        "big": 18,
+        "trending": 0
       }
     },
     {
-      "id": "watchguide-project-hail-mary-prime-video",
-      "slug": "project-hail-mary-is-officially-available-on-prime-video",
-      "title": "Project Hail Mary Is Officially Available On Prime Video",
-      "contentType": "watchguide",
-      "formatTag": "watchguide",
-      "category": "streaming",
-      "subcategory": "where-to-watch",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "project-hail-mary-prime-video",
-      "primaryKeyword": "Project Hail Mary Prime Video",
-      "primaryEntity": "Project Hail Mary",
-      "entities": [
-        "Prime Video"
-      ],
-      "angle": "A major sci-fi blockbuster is now available on streaming.",
-      "tmdbType": "movie",
-      "source": "rss:ScreenRant",
-      "sources": [
-        {
-          "outlet": "ScreenRant",
-          "tier": 5,
-          "url": "https://screenrant.com/project-hail-mary-movie-streaming-prime-video/",
-          "ageMin": 19,
-          "headline": "Project Hail Mary Is Officially Available On Prime Video",
-          "summary": "Amazon MGM Studios’ sci-fi blockbuster finally enters Amazon Prime Video on July 3, 105 days after its record-breaking theatrical premiere."
-        }
-      ],
-      "ageMin": 19,
-      "_cand": {
-        "key": "rss:project-hail-mary-is-officially-available-on-prime-video",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "ScreenRant"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "ScreenRant",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true,
-        "gdelt": {
-          "majorOwners": 0,
-          "majors": []
-        }
-      },
-      "priority": 58,
-      "signals": {
-        "recency": 24,
-        "corroboration": 8,
-        "status": 18,
-        "type": 8,
-        "pop": 0,
-        "breakout": 0
-      }
-    },
-    {
-      "id": "news-spider-man-brand-new-day-daredevil-crossover",
-      "slug": "spider-man-brand-new-day-teased-a-major-daredevil-crossover-in-plain-s",
-      "title": "'Spider-Man: Brand New Day' Teased a Major Daredevil Crossover in Plain Sight",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
+      "id": "music-news-tyga-starface-gave-u-racks",
+      "slug": "tyga-launches-new-persona-tarface-with-gave-u-racks",
+      "title": "Tyga Launches New Persona $TARFACE With 'GAVE U RACKS'",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "spider-man-brand-new-day-daredevil-crossover",
-      "primaryKeyword": "Spider-Man Brand New Day Daredevil crossover",
-      "primaryEntity": "Spider-Man: Brand New Day",
+      "tier": "popular",
+      "eventSlug": "tyga-starface-gave-u-racks",
+      "primaryKeyword": "tyga starface",
+      "primaryEntity": "$TARFACE",
       "entities": [
-        "Daredevil: Born Again"
+        "Aurora Teagarden Mysteries: How to Con A Con",
+        "Tyga"
       ],
-      "angle": "A new Spider-Man comic teases a significant crossover with Daredevil.",
+      "angle": "Tyga introduces his new artist persona $TARFACE with the release of 'GAVE U RACKS'.",
       "tmdbType": "movie",
-      "source": "rss:Collider",
+      "source": "rss:Billboard",
       "sources": [
         {
-          "outlet": "Collider",
-          "tier": 5,
-          "url": "https://collider.com/spider-man-brand-new-day-daredevil-kingpin-punisher-spider-man-5/",
-          "ageMin": 25,
-          "headline": "'Spider-Man: Brand New Day' Teased a Major Daredevil Crossover in Plain Sight",
-          "summary": "A secret Marvel villain in Spider-Man: Brand New Day could tie into Daredevil: Born Again."
+          "outlet": "Billboard",
+          "tier": 7,
+          "url": "https://www.billboard.com/music/rb-hip-hop/tyga-unveils-starface-alter-ego-10-track-project-1236287676/",
+          "ageMin": 157,
+          "headline": "Tyga Introduces New Artist Persona $TARFACE With GAVE U RACKS",
+          "summary": "\"I wanted this character and music to live on its own,\" says Tyga."
         }
       ],
-      "ageMin": 25,
+      "ageMin": 157,
       "_cand": {
-        "key": "rss:-spider-man-brand-new-day-teased-a-major-daredevil-crossover",
+        "key": "rss:tyga-introduces-new-artist-persona-tarface-with-gave-u-racks",
         "popularity": 0,
         "kind": "rss-news"
       },
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
+        "tier1Count": 1,
+        "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Collider"
+          "Billboard"
         ],
-        "maxTier": 5,
+        "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Collider",
+        "attribution": "Billboard",
         "framing": "attributed",
         "status": "DEVELOPING",
-        "publishable": true,
-        "gdelt": {
-          "majorOwners": 0,
-          "majors": []
-        }
+        "publishable": true
       },
-      "priority": 58,
+      "priority": 54,
       "signals": {
-        "recency": 24,
-        "corroboration": 8,
+        "recency": 16,
+        "corroboration": 12,
         "status": 18,
         "type": 8,
         "pop": 0,
-        "breakout": 0
+        "breakout": 0,
+        "big": 0,
+        "trending": 0
       }
     },
     {
-      "id": "news-mortal-kombat-ii-rotten-tomatoes-score",
-      "slug": "mortal-kombat-ii-director-addresses-record-breaking-rotten-tomatoes-sc",
-      "title": "Mortal Kombat II Director Addresses Record-Breaking Rotten Tomatoes Score",
+      "id": "news-cape-fear-acid-freakout-visual-tools",
+      "slug": "cinematographer-celiana-c-rdenas-on-the-visual-tools-behind-cape-fear-",
+      "title": "Cinematographer Celiana Cárdenas on the Visual Tools Behind 'Cape Fear' Acid Freakout",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "mortal-kombat-ii-rotten-tomatoes-score",
-      "primaryKeyword": "Mortal Kombat II",
-      "primaryEntity": "Mortal Kombat II",
+      "eventSlug": "cape-fear-acid-freakout-visual-tools",
+      "primaryKeyword": "cape fear acid freakout",
+      "primaryEntity": "Cape Fear",
       "entities": [
-        "Simon McQuoid"
+        "Cape Fear (film)",
+        "Celiana Cárdenas"
       ],
-      "angle": "Director addresses record-breaking Rotten Tomatoes score for upcoming film.",
+      "angle": "Cinematographer details innovative visual techniques used to capture the intense psychological experience in 'Cape Fear'.",
       "tmdbType": "movie",
-      "source": "rss:ScreenRant",
+      "source": "rss:IndieWire",
       "sources": [
         {
-          "outlet": "ScreenRant",
-          "tier": 5,
-          "url": "https://screenrant.com/mortal-kombat-2-rotten-tomatoes-franchise-record-simon-mcqouid-response/",
-          "ageMin": 26,
-          "headline": "Mortal Kombat II's Record-Breaking Rotten Tomatoes Score Addressed By Franchise Director",
-          "summary": "EXCLUSIVE: Mortal Kombat II director Simon McQuoid addresses the newest movie's record-breaking Rotten Tomatoes score as it prepares a new release."
+          "outlet": "IndieWire",
+          "tier": 7,
+          "url": "https://www.indiewire.com/features/craft/cape-fear-cinematographer-acid-trip-episode-six-1235202834/",
+          "ageMin": 970,
+          "headline": "Why the Cape Fear Acid Freakout Demanded a New Set of Visual Tools",
+          "summary": "Cinematographer Celiana Cárdenas talks about changing lenses and aspect ratios to depict the feverish intensity of the Bowden family's bad trip."
         }
       ],
-      "ageMin": 26,
+      "ageMin": 970,
       "_cand": {
-        "key": "rss:mortal-kombat-ii-s-record-breaking-rotten-tomatoes-score-add",
+        "key": "rss:why-the-cape-fear-acid-freakout-demanded-a-new-set-of-visual",
         "popularity": 0,
         "kind": "rss-news"
       },
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
+        "tier1Count": 1,
+        "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "ScreenRant"
+          "IndieWire"
         ],
-        "maxTier": 5,
+        "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "ScreenRant",
+        "attribution": "IndieWire",
         "framing": "attributed",
         "status": "DEVELOPING",
-        "publishable": true,
-        "gdelt": {
-          "majorOwners": 0,
-          "majors": []
-        }
+        "publishable": true
       },
-      "priority": 56,
+      "priority": 45,
       "signals": {
-        "recency": 24,
-        "corroboration": 8,
+        "recency": 1,
+        "corroboration": 12,
         "status": 18,
         "type": 6,
         "pop": 0,
-        "breakout": 0
+        "breakout": 0,
+        "big": 8,
+        "trending": 0
+      }
+    },
+    {
+      "id": "music-news-shakira-fundraising-venezuela-education",
+      "slug": "shakira-launches-fundraiser-for-venezuelan-children-s-education",
+      "title": "Shakira Launches Fundraiser for Venezuelan Children's Education",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "shakira-fundraising-venezuela-education",
+      "primaryKeyword": "Shakira",
+      "primaryEntity": "Shakira",
+      "entities": [
+        "Venezuela",
+        "FIFA Global Citizen Education Fund"
+      ],
+      "angle": "Shakira leverages her platform to raise funds for earthquake-affected children's education in Venezuela.",
+      "tmdbType": "movie",
+      "source": "rss:Rolling Stone",
+      "sources": [
+        {
+          "outlet": "Rolling Stone",
+          "tier": 7,
+          "url": "https://www.rollingstone.com/music/music-news/shakira-venezuela-fifa-global-citizen-education-fund-1235587352/",
+          "ageMin": 1010,
+          "headline": "Shakira Is Raising Money for Venezuela Through FIFA Global Citizen Education Fund",
+          "summary": "$500,000 will go to children whose education has been impacted by the recent earthquakes in Venezuela, the musician shared in a social media video"
+        }
+      ],
+      "ageMin": 1010,
+      "_cand": {
+        "key": "rss:shakira-is-raising-money-for-venezuela-through-fifa-global-c",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "breakoutVelocity": 0,
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Rolling Stone"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Rolling Stone",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 39,
+      "signals": {
+        "recency": 1,
+        "corroboration": 12,
+        "status": 18,
+        "type": 8,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0
+      }
+    },
+    {
+      "id": "music-news-margo-price-surprise-releases-mixtape",
+      "slug": "margo-price-surprise-releases-protest-song-mixtape-days-of-unrest",
+      "title": "Margo Price Surprise-Releases Protest Song Mixtape 'Days of Unrest'",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "margo-price-surprise-releases-mixtape",
+      "primaryKeyword": "Margo Price mixtape",
+      "primaryEntity": "Margo Price",
+      "entities": [
+        "Days of Unrest Mixtape",
+        "Woody Guthrie",
+        "Joan Baez",
+        "Memphis Mariachi"
+      ],
+      "angle": "Margo Price drops a surprise mixtape featuring protest songs, including a rendition of Woody Guthrie's 'Deportee'.",
+      "tmdbType": "movie",
+      "source": "rss:Rolling Stone",
+      "sources": [
+        {
+          "outlet": "Rolling Stone",
+          "tier": 7,
+          "url": "https://www.rollingstone.com/music/music-country/margo-price-days-of-unrest-mixtape-protest-songs-1235588869/",
+          "ageMin": 1075,
+          "headline": "Margo Price Surprise-Releases Days of Unrest Mixtape of Protest Songs",
+          "summary": "Hear singer's rendition of Woody Guthrie's \"Deportee (Plane Crash at Los Gatos)\" alongside Joan Baez and Memphis Mariachi"
+        }
+      ],
+      "ageMin": 1075,
+      "_cand": {
+        "key": "rss:margo-price-surprise-releases-days-of-unrest-mixtape-of-prot",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Rolling Stone"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Rolling Stone",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 39,
+      "signals": {
+        "recency": 1,
+        "corroboration": 12,
+        "status": 18,
+        "type": 8,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0
+      }
+    },
+    {
+      "id": "news-dolly-parton-taylor-swift-travis-kelce-donation",
+      "slug": "dolly-parton-thanks-taylor-swift-and-travis-kelce-for-generous-donatio",
+      "title": "Dolly Parton Thanks Taylor Swift and Travis Kelce for Generous Donation",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "dolly-parton-taylor-swift-travis-kelce-donation",
+      "primaryKeyword": "dolly parton donation",
+      "primaryEntity": "Dolly Parton",
+      "entities": [
+        "Taylor Swift",
+        "Travis Kelce"
+      ],
+      "angle": "Dolly Parton expresses gratitude for a significant donation from Taylor Swift and Travis Kelce.",
+      "tmdbType": "movie",
+      "source": "rss:Billboard",
+      "sources": [
+        {
+          "outlet": "Billboard",
+          "tier": 7,
+          "url": "https://www.billboard.com/music/music-news/dolly-thanks-taylor-swift-travis-kelce-1236287798/",
+          "ageMin": 7,
+          "headline": "Dolly Parton Thanks Taylor Swift and Travis Kelce for $2 Million Donation",
+          "summary": "\"Thank you, thank you, thank you. I’m blown away and overjoyed with that gratitude,\" Dolly said in her message to the newlyweds."
+        }
+      ],
+      "ageMin": 7,
+      "_cand": {
+        "key": "rss:dolly-parton-thanks-taylor-swift-and-travis-kelce-for-2-mill",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Billboard"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Billboard",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 66,
+      "signals": {
+        "recency": 30,
+        "corroboration": 12,
+        "status": 18,
+        "type": 6,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0
+      }
+    },
+    {
+      "id": "news-celebrity-arrivals-taylor-swift-travis-kelce-wedding",
+      "slug": "ed-sheeran-bradley-cooper-dakota-johnson-and-more-pictured-heading-to-",
+      "title": "Ed Sheeran, Bradley Cooper, Dakota Johnson and More Pictured Heading to Taylor Swift and Travis Kelce's Wedding",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "celebrity-arrivals-taylor-swift-travis-kelce-wedding",
+      "primaryKeyword": "ed sheeran bradley cooper dakota johnson taylor swift travis kelce wedding",
+      "primaryEntity": "Taylor Swift",
+      "entities": [
+        "Travis Kelce",
+        "Ed Sheeran",
+        "Bradley Cooper",
+        "Dakota Johnson"
+      ],
+      "angle": "A-list celebrities including Ed Sheeran, Bradley Cooper, and Dakota Johnson were spotted arriving at Madison Square Garden for Taylor Swift and Travis Kelce's wedding.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/music/news/ed-sheeran-dakota-johnson-guests-taylor-swift-wedding-1236801619/",
+          "ageMin": 519,
+          "headline": "Ed Sheeran, Bradley Cooper, Dakota Johnson and More Pictured Heading to Taylor Swift and Travis Kelce s Wedding",
+          "summary": "Anybody who is anybody is making their way to New York’s Madison Square Garden dressed to the nines in an apparent march to get to Taylor Swift and Travis Kelce’s wedding. A-listers who have been photographed heading to MSG for the Swift-Kelce union (via People) include Ed Sheeran, Bradley Cooper, Zoë Kravitz, Jack Antonoff, Gigi [ ]"
+        }
+      ],
+      "ageMin": 519,
+      "_cand": {
+        "key": "rss:ed-sheeran-bradley-cooper-dakota-johnson-and-more-pictured-h",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 40,
+      "signals": {
+        "recency": 4,
+        "corroboration": 12,
+        "status": 18,
+        "type": 6,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0
+      }
+    },
+    {
+      "id": "news-prince-william-taylor-swift-travis-kelce-wedding",
+      "slug": "prince-william-won-t-attend-taylor-swift-and-travis-kelce-s-wedding",
+      "title": "Prince William Won't Attend Taylor Swift and Travis Kelce's Wedding",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "prince-william-taylor-swift-travis-kelce-wedding",
+      "primaryKeyword": "Taylor Swift Travis Kelce wedding",
+      "primaryEntity": "Taylor Swift",
+      "entities": [
+        "Travis Kelce",
+        "Prince William"
+      ],
+      "angle": "Royal family member's attendance (or lack thereof) at a high-profile celebrity wedding.",
+      "tmdbType": "movie",
+      "source": "rss:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/taylor-swift-wedding-prince-william-1236973926/",
+          "ageMin": 753,
+          "headline": "London Calling Indeed: Prince William Isn t Going To Taylor Swift Travis Kelce s Wedding, But Heir Hung With Groom To Talk Eras Tour, World Cup",
+          "summary": "The Prince of Wales sadly won t be attending Taylor Swift and Travis Kelce s wedding Friday in New York City, but the heir to the British throne nonetheless made sure to offer some royal prestige to events. In the hours before today s festivities are set to start at Madison Square Garden for music superstar Swift and [ ]"
+        }
+      ],
+      "ageMin": 753,
+      "_cand": {
+        "key": "rss:london-calling-indeed-prince-william-isn-t-going-to-taylor-s",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 37,
+      "signals": {
+        "recency": 1,
+        "corroboration": 12,
+        "status": 18,
+        "type": 6,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0
+      }
+    },
+    {
+      "id": "news-john-waters-ryan-murphy-provincetown-talk",
+      "slug": "john-waters-and-ryan-murphy-discuss-critics-camp-and-tv-success",
+      "title": "John Waters and Ryan Murphy Discuss Critics, Camp, and TV Success",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "john-waters-ryan-murphy-provincetown-talk",
+      "primaryKeyword": "John Waters Ryan Murphy",
+      "primaryEntity": "John Waters",
+      "entities": [
+        "Ryan Murphy",
+        "Provincetown International Film Festival",
+        "Kim Kardashian"
+      ],
+      "angle": "John Waters and Ryan Murphy share candid insights on critics, camp, and their TV successes at a film festival panel.",
+      "tmdbType": "movie",
+      "source": "rss:IndieWire",
+      "sources": [
+        {
+          "outlet": "IndieWire",
+          "tier": 7,
+          "url": "https://www.indiewire.com/news/festivals/john-waters-interviews-ryan-murphy-provincetown-1235203641/",
+          "ageMin": 1027,
+          "headline": "John Waters and Ryan Murphy Get Candid About Critics, Camp, and TV Success",
+          "summary": "Waters and Murphy sat down at the Provincetown International Film Festival to talk everything from bad reviews to Kim Kardashian."
+        }
+      ],
+      "ageMin": 1027,
+      "_cand": {
+        "key": "rss:john-waters-and-ryan-murphy-get-candid-about-critics-camp-an",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "IndieWire"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "IndieWire",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 37,
+      "signals": {
+        "recency": 1,
+        "corroboration": 12,
+        "status": 18,
+        "type": 6,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0
       }
     }
   ]

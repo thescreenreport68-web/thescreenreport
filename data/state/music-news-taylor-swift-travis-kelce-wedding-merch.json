@@ -1,0 +1,118 @@
+{
+  "id": "music-news-taylor-swift-travis-kelce-wedding-merch",
+  "slug": "taylor-swift-and-travis-kelce-s-wedding-inspires-a-flood-of-unofficial",
+  "status": "needs_review",
+  "stages": {
+    "attempt1": {
+      "score": 65,
+      "cat": "music/news",
+      "hardBlocks": [
+        "primary keyword not in title",
+        "verify-gate CUT: 2 claim(s) not in the gathered sources — A set of two champagne glasses etched with lyrics from ; A 128-page trivia and puzzle book themed around the cou",
+        "fabricated/altered quote: \"appear on T-shirts, ring dishes, and greeting card\" — use the exact source words or drop the quotation marks",
+        "3 unverified claim(s) (need correction)"
+      ],
+      "block": [
+        "verify-gate CUT: 2 claim(s) not in the gathered sources — A set of two champagne glasses etched with lyrics from ; A 128-page trivia and puzzle book themed around the cou",
+        "fabricated/altered quote: \"appear on T-shirts, ring dishes, and greeting card\" — use the exact source words or drop the quotation marks",
+        "3 unverified claim(s) (need correction)"
+      ],
+      "fixable": [
+        "primary keyword not in title"
+      ],
+      "badClaims": 3
+    },
+    "attempt2": {
+      "score": 68,
+      "cat": "music/news",
+      "hardBlocks": [
+        "primary keyword not in title",
+        "verify-gate CUT: 2 claim(s) not in the gathered sources — An illustrated sticker book titled \"My Sticker Dress-Up; A trivia book themed around the couple is listed on Ama"
+      ],
+      "block": [
+        "verify-gate CUT: 2 claim(s) not in the gathered sources — An illustrated sticker book titled \"My Sticker Dress-Up; A trivia book themed around the couple is listed on Ama"
+      ],
+      "fixable": [
+        "primary keyword not in title"
+      ],
+      "badClaims": 0
+    }
+  },
+  "editorial": {
+    "status": "unconfirmed",
+    "entity": "Taylor Swift",
+    "work": null,
+    "outlet": "billboard.com"
+  },
+  "acceptReason": "cut-and-publish (removed 2 sentence(s) + 0 field item(s); 232w remain)",
+  "holdReason": "accuracy/grounding block: verify-gate CUT: 2 claim(s) not in the gathered sources — An illustrated sticker book titled \"My Sticker Dress-Up; A trivia book themed around the couple is listed on Ama",
+  "scorecard": {
+    "score": 68,
+    "subscores": {
+      "accuracy": 10,
+      "readability": 7,
+      "humanVoice": 6,
+      "phrasing": 7,
+      "curiosity": 7,
+      "structure": 7,
+      "infoGain": 6,
+      "seo": 8,
+      "faqQuality": 5,
+      "completeness": 5
+    },
+    "strengths": [
+      "The article accurately reflects the provided source material, attributing the core claim about the wedding to Billboard.",
+      "The lead quickly delivers the main answer regarding the availability of unofficial merchandise.",
+      "The use of subheadings helps break up the text and guide the reader.",
+      "The SEO elements, particularly the meta description and keyword usage, are natural and not forced.",
+      "The article avoids generic AI tells and breathless filler praise, maintaining a relatively neutral tone.",
+      "The Flesch score and average sentence length are within acceptable ranges, indicating reasonable readability."
+    ],
+    "weaknesses": [
+      "The human voice is somewhat muted; while it avoids AI tells, it also lacks a distinct personality or wit.",
+      "The information gain is limited, primarily summarizing the provided source material without much original analysis or framing.",
+      "The FAQ section, while present, doesn't add substantial new information beyond what's already in the body.",
+      "The article feels a bit like a list of products rather than a narrative, which could impact engagement.",
+      "The phrasing, while not overtly bad, could be more dynamic and varied to enhance reader experience.",
+      "The completeness score is low because the article only covers a fraction of the provided source material, omitting several specific merchandise examples and details."
+    ],
+    "deterministic": {
+      "words": 267,
+      "h2s": 2,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 3,
+      "ktCount": 3,
+      "kwInTitle": false,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 31,
+      "avgSentence": 16,
+      "flesch": 48,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": [
+        "primary keyword not in title"
+      ]
+    },
+    "hardBlocks": [
+      "primary keyword not in title",
+      "verify-gate CUT: 2 claim(s) not in the gathered sources — An illustrated sticker book titled \"My Sticker Dress-Up; A trivia book themed around the couple is listed on Ama"
+    ]
+  },
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "body ≥ 220w",
+      "≥1200px legal image",
+      "credit",
+      "score ≥ 70",
+      "zero hard-blocks"
+    ]
+  },
+  "ms": 187536
+}

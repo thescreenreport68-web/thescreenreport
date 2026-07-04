@@ -1,0 +1,118 @@
+{
+  "id": "news-marvel-casts-next-thor",
+  "slug": "marvel-officially-casts-the-next-thor",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": 0,
+      "cat": "tv/news",
+      "hardBlocks": [
+        "primary keyword not in title",
+        "CONTRADICTED [platform]: article says Iron Man and His Awesome Friends streams on Disney+ — TMDB/JustWatch shows Iron Man and His Awesome Friends streams on Disney Plus, fuboTV, YouTube TV, DisneyNOW, NOT Disney+. State only Disney Plus, fuboTV, YouTube TV, DisneyNOW."
+      ],
+      "block": [
+        "CONTRADICTED [platform]: article says Iron Man and His Awesome Friends streams on Disney+ — TMDB/JustWatch shows Iron Man and His Awesome Friends streams on Disney Plus, fuboTV, YouTube TV, DisneyNOW, NOT Disney+. State only Disney Plus, fuboTV, YouTube TV, DisneyNOW."
+      ],
+      "fixable": [
+        "primary keyword not in title"
+      ],
+      "badClaims": 0
+    },
+    "attempt2": {
+      "score": 75,
+      "cat": "tv/news",
+      "hardBlocks": [
+        "primary keyword not in title"
+      ],
+      "block": [],
+      "fixable": [
+        "primary keyword not in title"
+      ],
+      "badClaims": 0
+    }
+  },
+  "editorial": {
+    "status": "official",
+    "entity": "Liam Karlsson",
+    "work": {
+      "title": "Iron Man and His Awesome Friends",
+      "year": null,
+      "medium": "tv"
+    },
+    "outlet": "screenrant.com"
+  },
+  "acceptReason": "terminal-accept (verified accurate, score 75, 1 quality nit(s))",
+  "webCheck": {
+    "ran": false,
+    "contradictions": 0
+  },
+  "scorecard": {
+    "score": 75,
+    "subscores": {
+      "accuracy": 9,
+      "readability": 8,
+      "humanVoice": 7,
+      "phrasing": 8,
+      "curiosity": 8,
+      "structure": 8,
+      "infoGain": 7,
+      "seo": 7,
+      "faqQuality": 8,
+      "completeness": 8
+    },
+    "strengths": [
+      "The headline is clear, specific, and delivers on its promise without clickbait.",
+      "The lead quickly answers the core question of who the new Thor is and where they appear.",
+      "The article maintains a good flow and uses plain language, making it easy to read for a busy fan.",
+      "Subheadings are relevant and help break up the text, improving scannability.",
+      "The FAQ section provides genuinely new and useful information, addressing common reader questions.",
+      "Attribution to ScreenRant is consistent and clear, especially for developing information.",
+      "The article avoids generic AI tells and filler praise, focusing on specific details.",
+      "The 'as of July 2026' phrasing for streaming availability is accurate and correctly attributed to the current date."
+    ],
+    "weaknesses": [
+      "The article states 'Karlsson is set to reprise the role in the upcoming 2027 series 'Avengers: Mightiest Friends.'' and 'Liam Karlsson is confirmed to reprise his role as Thor in the upcoming Disney Jr. series *Avengers: Mightiest Friends*, which is scheduled for release in 2027.' This information about 'Avengers: Mightiest Friends' and its release date is not present in the provided grounding material, making it an unverified claim.",
+      "The Key Takeaways include a claim about 'Avengers: Mightiest Friends' that is not supported by the provided source material, impacting accuracy and information gain.",
+      "The article mentions 'Thor and Loki are set to recur throughout the remaining episodes of the season, with future installments titled 'Loki's Movie Mania,' 'Thor and the Frost Giant,' and 'Thor and Loki Hit the Road.'' This specific detail about future episode titles is not present in the provided source material.",
+      "While generally good, some transitions could be smoother to enhance fluency further.",
+      "The article states 'According to ScreenRant, the episode sees Thor and Loki team up with the Iron Friends, only for Loki to enchant their vehicles to act as his henchmen.' The source material states 'The episode sees the Iron Friends (Tony Stark's Iron Man, Amadeus Cho's Iron Hulk, and Riri Williams' Ironheart) meet up with Thor to hang out and play with team pet Gamma, aka Iron Pup. Sadly, they're beset by Thor's mischievous brother Loki, who enchants the team's vehicles to act as his henchmen.' The article's phrasing implies Thor and Loki team up, which is not what the source says; Loki is the antagonist here."
+    ],
+    "deterministic": {
+      "words": 351,
+      "h2s": 3,
+      "h2Questions": 3,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 3,
+      "ktCount": 4,
+      "kwInTitle": false,
+      "kwInFirst100": false,
+      "kwInH2": true,
+      "maxSentence": 44,
+      "avgSentence": 22,
+      "flesch": 57,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": [
+        "primary keyword not in title"
+      ]
+    },
+    "hardBlocks": [
+      "primary keyword not in title"
+    ]
+  },
+  "score": 75,
+  "category": "tv",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 2,
+    "failed": [
+      "keyword in title",
+      "zero hard-blocks"
+    ]
+  },
+  "ms": 250583
+}

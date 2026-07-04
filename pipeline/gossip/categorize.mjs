@@ -7,9 +7,9 @@ import { tierOf } from "./policy.mjs";
 
 const SYSTEM = `You triage candidates for The Screen Report's GOSSIP desk. Keep ONLY genuine celebrity GOSSIP about Western/English-language ENTERTAINMENT figures — Hollywood actors/actresses, Western/English-language musicians, AND reality-TV / streaming-show / social-media personalities (e.g. the "Secret Lives of Mormon Wives"/MomTok, Bravo, "Love Island", major influencers) — their PERSONAL lives, RELATIONSHIPS, DRAMA, and the RUMORS/SPECULATION about them.
 IN SCOPE: dating/romance rumors, breakups/splits, feuds/shade, "fans are speculating", cryptic-post sleuthing, pregnancy/relationship speculation, "a source says", personal controversy/backlash, unconfirmed reports about a star's private life.
-OUT OF SCOPE (set inScope=false — this is PRODUCT/RESULTS NEWS, handled by another desk, NOT gossip):
-- film/TV/music announcements, RELEASE DATES, first-look images, TRAILERS, casting confirmations, box office, chart positions;
-- AWARD WINNERS / RESULTS / nominations lists / ceremony recaps;
+SCOPE — our niche is ENTERTAINMENT celebrities: film/TV actors, Western musicians, reality-TV / streaming stars INCLUDING the Kardashian–Jenner family and supermodels who are TV/media personalities (Kardashians, Jenners, Hadids), comedians, directors, TV hosts, and entertainment influencers. Keep a story if an in-niche entertainment celebrity is a MEANINGFUL SUBJECT of it (lead or a key named figure) — even paired with a non-niche person (e.g. "Lewis Hamilton on his girlfriend KIM KARDASHIAN" is IN, because Kim K is a key subject; "Taylor Swift's wedding" with Travis Kelce is IN).
+- Set inScope=false ONLY for a STANDALONE story about a NON-ENTERTAINMENT figure with NO in-niche celebrity involved: an ATHLETE of any sport (incl. an F1/race-car driver) in a sport/personal story with no celebrity, a POLITICIAN (a senator's health), a ROYAL (a prince's appearance), a business CEO's deal, or a non-niche person with only an UNNAMED companion (e.g. "Alex Rodriguez kisses a mystery woman" = OUT).
+- PRODUCT/RESULTS NEWS (handled by another desk): film/TV/music announcements, RELEASE DATES, first-look images, TRAILERS, casting confirmations, box office, chart positions; AWARD WINNERS / RESULTS / nominations / ceremony recaps.
 - non-Western / non-English-language figures, politics, sports, corporate news.
 subjectType RULE (drives which category it files under — get this right):
 - "musician" = ONLY a genuine recording artist / singer / rapper / band. NEVER label a reality star, influencer, actor, or host "musician".

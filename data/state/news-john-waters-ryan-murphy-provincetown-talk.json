@@ -1,0 +1,108 @@
+{
+  "id": "news-john-waters-ryan-murphy-provincetown-talk",
+  "slug": "john-waters-and-ryan-murphy-discuss-critics-camp-and-tv-success",
+  "status": "needs_review",
+  "stages": {
+    "attempt1": {
+      "score": 55,
+      "cat": "movies/reactions",
+      "hardBlocks": [
+        "fabricated/altered quote: \"he said. Waters also expressed admiration for Kard\" — use the exact source words or drop the quotation marks",
+        "reaction: no embedded posts"
+      ],
+      "block": [
+        "fabricated/altered quote: \"he said. Waters also expressed admiration for Kard\" — use the exact source words or drop the quotation marks",
+        "reaction: no embedded posts"
+      ],
+      "fixable": [],
+      "badClaims": 0
+    },
+    "attempt2": {
+      "score": 65,
+      "cat": "movies/reactions",
+      "hardBlocks": [
+        "fabricated/altered quote: \"he said. Waters also expressed admiration for Kard\" — use the exact source words or drop the quotation marks",
+        "reaction: no embedded posts"
+      ],
+      "block": [
+        "fabricated/altered quote: \"he said. Waters also expressed admiration for Kard\" — use the exact source words or drop the quotation marks",
+        "reaction: no embedded posts"
+      ],
+      "fixable": [],
+      "badClaims": 0
+    }
+  },
+  "editorial": {
+    "status": "unconfirmed",
+    "entity": "John Waters",
+    "work": null,
+    "outlet": "indiewire.com"
+  },
+  "scorecard": {
+    "score": 65,
+    "subscores": {
+      "accuracy": 9,
+      "readability": 7,
+      "humanVoice": 7,
+      "phrasing": 6,
+      "curiosity": 6,
+      "structure": 7,
+      "infoGain": 6,
+      "seo": 6,
+      "faqQuality": 7,
+      "completeness": 7
+    },
+    "strengths": [
+      "The article accurately reports the core event and quotes from the source material.",
+      "The subheads are clear and help organize the content, making it easy to navigate.",
+      "The 'Key Takeaways' provide a good summary of the main points.",
+      "The FAQ section adds relevant, new information not directly in the body.",
+      "The article avoids generic AI tells and filler praise, maintaining a more authentic voice."
+    ],
+    "weaknesses": [
+      "The title and dek are a bit generic and could be more specific to spark greater curiosity.",
+      "The phrasing in some areas is slightly stiff, particularly in the lead, which feels a bit like a direct report rather than an engaging narrative.",
+      "The article could benefit from more varied sentence structure to improve readability and flow.",
+      "While avoiding AI tells, the human voice could be stronger with more distinct personality or wit, given the subject matter.",
+      "The 'What Personal Stories Did They Share?' section feels a bit disjointed, jumping from Jessica Lange to Kim Kardashian without a smooth transition.",
+      "The keyword 'John Waters Ryan Murphy' is present but could be integrated more naturally in the body rather than feeling like a requirement."
+    ],
+    "deterministic": {
+      "words": 328,
+      "h2s": 2,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 4,
+      "ktCount": 5,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 48,
+      "avgSentence": 23,
+      "flesch": 56,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": []
+    },
+    "hardBlocks": [
+      "fabricated/altered quote: \"he said. Waters also expressed admiration for Kard\" — use the exact source words or drop the quotation marks",
+      "reaction: no embedded posts"
+    ]
+  },
+  "holdReason": "accuracy/grounding block: fabricated/altered quote: \"he said. Waters also expressed admiration for Kard\" — use the exact source words or drop the quotation marks; reaction: no embedded posts",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "tweet grounding",
+      "≥1200px legal image",
+      "credit",
+      "score ≥ 70",
+      "zero hard-blocks"
+    ]
+  },
+  "ms": 137434
+}

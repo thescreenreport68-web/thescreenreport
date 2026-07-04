@@ -12,6 +12,7 @@ import { VIDEO } from "./config.mjs";
 import { makeVideo } from "./makevideo.mjs";
 import { costReport } from "../lib/openrouter.mjs";
 import { detectSensitive } from "./sensitive.mjs";
+import { chat } from "../lib/openrouter.mjs";
 
 const ROOT = "/Users/sivajithcu/Movie News site/site";
 const arg = (k, d = null) => (process.argv.find((a) => a.startsWith(`--${k}=`)) || "").split("=").slice(1).join("=") || d;
@@ -44,8 +45,30 @@ for (const r of [...ledger].reverse()) { // newest first
     sensitivity: fm?.provenance?.sensitivity || null,
   });
 }
-// ── 2 · RANK: priority + popularity, newest as tiebreak; CATEGORY DIVERSITY cap so one beat can't own the feed
-candidates.sort((a, b) => (b.priority + b.pop) - (a.priority + a.pop) || Date.parse(b.at) - Date.parse(a.at));
+// ── 2 · RANK: EDITORIAL IMPORTANCE first (owner 2026-07-03: social gets only IMPORTANT stories —
+// A-list stars, major films/shows, big money; kids-content/voice-casting/minor beats rank low),
+// then priority+popularity, newest as tiebreak.
+if (candidates.length > 1) {
+  try {
+    const { data } = await chat({
+      model: "google/gemini-2.5-flash-lite", json: true, maxTokens: 300, temperature: 0,
+      system: "You are the social editor of a mainstream Hollywood news brand. STRICT JSON only.",
+      user: `Score each story 1-10 for how much a GENERAL entertainment audience on Instagram would stop scrolling for it. ANCHORS:
+9-10 = A-list star news, major franchise (Marvel/DC/Star Wars/etc) casting or release, huge box-office, big scandal/breakup/feud, an award sweep.
+6-7 = notable trailer drop, a popular show renewed/returning, a well-known actor cast in a big project.
+3-4 = behind-the-scenes / a director's creative "influences" / process talk, niche-cast news, a minor programming note, festival-circuit inside-baseball.
+1-2 = kids-cartoon voice casting, obscure/regional, trivia.
+Score by the STORY's mainstream pull, not just the topic. Titles:\n${candidates.map((c, i) => `${i}: ${c.title}`).join("\n")}\n{"0": n, "1": n, ...}`,
+    });
+    for (let i = 0; i < candidates.length; i++) candidates[i].importance = Number(data?.[i]) || 5;
+    console.log("  importance:", candidates.map((c) => `${c.importance}·${c.title.slice(0, 40)}`).join(" | "));
+  } catch { for (const c of candidates) c.importance = 5; }
+} else for (const c of candidates) c.importance = 5;
+candidates.sort((a, b) => (b.importance * 12 + b.priority + b.pop) - (a.importance * 12 + a.priority + a.pop) || Date.parse(b.at) - Date.parse(a.at));
+// E · FLOOR: when better material exists, skip weak (<5) stories entirely — at 100-300 articles/day we
+// can afford to be picky; a niche director-interview should not become a video if a real story is waiting.
+const strong = candidates.filter((c) => c.importance >= 5);
+if (strong.length >= COUNT) { const dropped = candidates.length - strong.length; candidates.length = 0; candidates.push(...strong); if (dropped) console.log(`  importance floor: dropped ${dropped} weak (<5) stor${dropped === 1 ? "y" : "ies"}`); }
 const capPerCat = Math.max(2, Math.ceil(COUNT * 0.4));
 const catCount = {}, queue = [], overflow = [];
 for (const c of candidates) {

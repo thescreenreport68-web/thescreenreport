@@ -1,47 +1,57 @@
 ---
-title: Liam Karlsson Confirmed as the Next Thor in Marvel's Animated Series
+title: Liam Karlsson Confirmed as New Thor in Marvel's Animated Kids Series
 slug: marvel-officially-casts-the-next-thor
 category: tv
 subcategory: news
 author: editorial-team
-date: '2026-07-03T12:54:15.269Z'
+date: '2026-07-03T13:11:07.977Z'
 dek: >-
-  The voice actor debuts as a younger God of Thunder in the new episodes of
-  'Iron Man and His Awesome Friends' now streaming.
-metaTitle: 'Next Thor Casting: Liam Karlsson Voices Thor in Marvel Show'
+  The voice actor debuts as a younger God of Thunder in the second half of 'Iron
+  Man and His Awesome Friends' Season 1, with Nylan Parthipan as Loki.
+metaTitle: Marvel Casts Liam Karlsson as New Thor in Animated Series
 metaDescription: >-
-  Marvel has officially cast Liam Karlsson as the new Thor, voicing a younger
-  version of the hero in the animated series 'Iron Man and His Awesome Friends.'
+  Liam Karlsson is the new voice of Thor in Marvel's animated kids show 'Iron
+  Man and His Awesome Friends,' according to a new report.
 tags:
-  - next thor casting
+  - next thor
   - liam karlsson
   - thor
   - nylan parthipan
   - iron man and his awesome friends
-targetKeyword: next thor casting
+  - marvel
+targetKeyword: next thor
 keyTakeaways:
   - >-
-    Karlsson will reprise the role in the upcoming 'Avengers: Mightiest Friends'
-    series in 2027.
+    Liam Karlsson has been confirmed as the new voice of Thor in the animated
+    series 'Iron Man and His Awesome Friends.'
   - >-
-    The character is portrayed as a younger, brashly confident version of the
-    God of Thunder.
+    His debut episode, 'The Mighty Thor and Mischievous Loki,' is available to
+    stream now on Disney+.
+  - >-
+    Karlsson is set to reprise the role in the upcoming 2027 series 'Avengers:
+    Mightiest Friends.'
+  - Nylan Parthipan voices Loki and Alan Ruck voices Odin in the series.
 faq:
-  - q: What other roles has Liam Karlsson played?
+  - q: Where can I watch 'Iron Man and His Awesome Friends'?
     a: >-
-      According to the report, Liam Karlsson's previous voice acting credits
-      include appearances in Star Wars: Visions and Tokyo Override before
-      landing the role of Thor.
-  - q: How many episodes are in the new season?
+      The series is available to stream on Disney Plus, fuboTV, YouTube TV, and
+      DisneyNOW in the United States. The episode featuring the new Thor, 'The
+      Mighty Thor and Mischievous Loki,' is available now.
+  - q: What other projects has Liam Karlsson worked on?
     a: >-
-      The specific episode count for the second half of Season 1 is not detailed
-      in the report, but several future episode titles featuring Thor and Loki
-      are confirmed.
+      According to the report, Karlsson has previously appeared in Star Wars:
+      Visions and Tokyo Override prior to landing the role of Thor in the Marvel
+      animated series.
+  - q: Will Chris Hemsworth still play Thor in the MCU?
+    a: >-
+      This casting is specifically for the animated Disney Jr. universe. There
+      is no information in the report about Chris Hemsworth's future as Thor in
+      the live-action Marvel Cinematic Universe films.
 about:
   - name: Iron Man and His Awesome Friends
-    type: TV Show
+    type: TV Series
 imageAlt: >-
-  Liam Karlsson — Liam Karlsson Confirmed as the Next Thor in Marvel's Animated
+  Liam Karlsson — Liam Karlsson Confirmed as New Thor in Marvel's Animated Kids
   Series
 imageCredit: Photo via ScreenRant
 image: >-
@@ -57,11 +67,11 @@ signals:
   type: 10
   pop: 0
   breakout: 0
-eventSlug: next-thor-casting
+eventSlug: marvel-casts-next-thor
 eventType: casting
 outletCount: 1
 provenance:
-  eventSlug: next-thor-casting
+  eventSlug: marvel-casts-next-thor
   primaryEntity: Liam Karlsson
   eventType: casting
   sensitivity: normal
@@ -69,55 +79,65 @@ provenance:
   attribution: screenrant.com
   outlets:
     - ScreenRant
-  publishedAt: '2026-07-03T12:54:15.269Z'
-dateModified: '2026-07-03T12:54:15.269Z'
+  publishedAt: '2026-07-03T13:11:07.977Z'
+dateModified: '2026-07-03T13:11:07.977Z'
 storyStatus: DEVELOPING
 newsType: general
 pullQuote:
   text: >-
     There's officially a new Thor in town, as Marvel confirms that Liam Karlsson
     is the latest version of the God of Thunder.
-  attribution: ScreenRant report
+  attribution: ScreenRant
 keyPoints:
-  - Liam Karlsson is confirmed as the new voice of Thor.
-  - He debuts in a new episode of 'Iron Man and His Awesome Friends'.
-  - 'He will return in the 2027 series ''Avengers: Mightiest Friends''.'
+  - Liam Karlsson has been cast as the voice of a younger Thor.
+  - >-
+    He debuts in the 'Iron Man and His Awesome Friends' episode 'The Mighty Thor
+    and Mischievous Loki.'
+  - >-
+    Karlsson is scheduled to reprise the role in the 2027 series 'Avengers:
+    Mightiest Friends.'
 seriesContext:
   network: Disney Jr.
   premiere: '2025'
-  status: Returned with second half of Season 1
+  status: Currently Airing
   seasons: '1'
   creator: ''
   cast:
     - Mason Blomberg
     - Kapri Ladd
     - Aidyn James Ahn
-  whereToWatch: 'Disney Plus, fuboTV, YouTube TV, DisneyNOW'
+  whereToWatch: 'Disney+, fuboTV, YouTube TV, DisneyNOW'
 seriesStatus:
   show: Iron Man and His Awesome Friends
   network: Disney Jr.
-  status: renewed
+  status: ordered
   season: Season 1
   window: ''
   castAdded:
     - name: Liam Karlsson
       role: Thor
+    - name: Nylan Parthipan
+      role: Loki
+    - name: Alan Ruck
+      role: Odin
 ---
 
-Karlsson's debut as a younger version of the God of Thunder is available to watch now.
+Liam Karlsson is the new voice of Thor, according to a ScreenRant report on the animated kids series *Iron Man and His Awesome Friends*. The actor portrays a younger version of the God of Thunder in the show, which is currently airing on Disney Jr.
 
-He appears in the animated kids' series *Iron Man and His Awesome Friends*, which recently returned with the second half of its first season on Disney Jr.
+Karlsson's debut came in the episode 'The Mighty Thor and Mischievous Loki,' which launched with the second half of the show's first season. Nylan Parthipan joins the cast as the voice of Loki, with Alan Ruck voicing Odin.
 
-## Who else joins the cast?
+## Who else is in the cast?
 
-The episode features the core trio of Tony Stark's Iron Man, Amadeus Cho's Iron Hulk, and Riri Williams' Ironheart teaming up with Thor. Their adventure is interrupted by Loki, who enchants the team's vehicles to act as his henchmen.
+The series features Mason Blomberg as Tony Stark/Iron Man, Kapri Ladd as Riri Williams/Ironheart, and Aidyn James Ahn as Amadeus Cho/Iron Hulk. Tony Hale voices Ultron, and Fred Tatasciore provides the voice for the team pet, Gamma, also known as Iron Pup. According to ScreenRant, the episode sees Thor and Loki team up with the Iron Friends, only for Loki to enchant their vehicles to act as his henchmen.
 
-ScreenRant describes Karlsson's Thor as having "brash confidence on full display." The character is depicted with two designs—a hi-tech armored form and a civilian look with a blond undercut—and switches between them using his enchanted hammer.
+## Is this Thor different from the MCU version?
 
-## Where can I watch it?
+Yes. The report describes Karlsson's Thor as a younger, brashly confident version of the character, distinct from Chris Hemsworth's portrayal in the [Marvel](/movies/spider-man-brand-new-day-trailer-drops-teasing-a-world-without-recogni/) Cinematic Universe. The character is depicted as a good friend to the Iron Friends and utilizes both a hi-tech armored form and a civilian appearance with a blond undercut.
 
-*Iron Man and His Awesome Friends* is currently streaming on [Disney Plus](/tv/x-men-97-season-2-to-feature-innovative-format-change/), fuboTV, YouTube TV, and DisneyNOW, as of July 2026. According to OMDb, the series carries a TV-Y rating. The show follows the adventures of super-genius friends Tony Stark, Riri Williams, and Amadeus Cho as they solve problems and protect their city.
+Thor and Loki are set to recur throughout the remaining episodes of the season, with future installments titled 'Loki's Movie Mania,' 'Thor and the Frost Giant,' and 'Thor and Loki Hit the Road.'
 
-## What's next for this Thor?
+## What's next for this version of Thor?
 
-That series will feature kid-friendly versions of Avengers staples like Captain America, Hulk, Black Widow, Iron Man, and Spider-Man.
+Liam Karlsson is confirmed to reprise his role as Thor in the upcoming Disney Jr. series *Avengers: Mightiest Friends*, which is scheduled for release in 2027. The new show will feature kid-friendly versions of Captain America, Hulk, Black Widow, Iron Man, Spider-Man, and Thor. It is likely Nylan Parthipan will return as Loki.
+
+*Iron Man and His Awesome Friends* is an animated series that first aired in August 2025. It is rated TV-Y and is available to stream on [Disney Plus](/tv/x-men-97-season-2-to-feature-innovative-format-change/), fuboTV, YouTube TV, and DisneyNOW as of July 2026.

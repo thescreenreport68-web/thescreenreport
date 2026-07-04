@@ -1,0 +1,92 @@
+{
+  "id": "music-news-tyga-launches-starface-persona",
+  "slug": "tyga-launches-new-artist-persona-tarface-with-single-gave-u-racks",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": 78,
+      "cat": "music/news",
+      "hardBlocks": [
+        "verify-gate CUT: 1 claim(s) not in the gathered sources — The track 'GAVE U RACKS' is expected to be on all major"
+      ],
+      "block": [
+        "verify-gate CUT: 1 claim(s) not in the gathered sources — The track 'GAVE U RACKS' is expected to be on all major"
+      ],
+      "fixable": [],
+      "badClaims": 0
+    },
+    "attempt2": {
+      "score": 85,
+      "cat": "music/news",
+      "hardBlocks": [],
+      "block": [],
+      "fixable": [],
+      "badClaims": 0
+    }
+  },
+  "editorial": {
+    "status": "official",
+    "entity": "Tyga",
+    "work": null,
+    "outlet": "billboard.com"
+  },
+  "scorecard": {
+    "score": 85,
+    "subscores": {
+      "accuracy": 10,
+      "readability": 9,
+      "humanVoice": 8,
+      "phrasing": 9,
+      "curiosity": 9,
+      "structure": 9,
+      "infoGain": 8,
+      "seo": 8,
+      "faqQuality": 9,
+      "completeness": 8
+    },
+    "strengths": [
+      "The article accurately reports all facts from the provided sources without fabrication or inference.",
+      "Readability is strong, with varied sentence lengths, short paragraphs, and clear subheadings.",
+      "The human voice is present through direct quotes from Tyga, adding authenticity and insight into his creative process.",
+      "Phrasing is fluent and professional, avoiding keyword stuffing or awkward constructions.",
+      "The headline and lead deliver the core information quickly, satisfying curiosity without clickbait.",
+      "The structure is logical, starting with an answer-first lead and using subheads effectively.",
+      "The FAQ section adds genuine new information and clarifies common reader questions.",
+      "The article successfully integrates the primary keyword 'Tyga' naturally without over-optimization."
+    ],
+    "weaknesses": [
+      "While good, the article could have pushed for slightly more original framing or analysis beyond summarizing the provided material to boost 'Information Gain'.",
+      "The 'Completeness' score is slightly impacted by the lack of internal links, which could enhance the reader's journey within the site."
+    ],
+    "deterministic": {
+      "words": 294,
+      "h2s": 3,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": true,
+      "faqCount": 4,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": true,
+      "maxSentence": 30,
+      "avgSentence": 17,
+      "flesch": 54,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 5,
+      "hardBlocks": []
+    },
+    "hardBlocks": []
+  },
+  "score": 85,
+  "category": "music",
+  "subcategory": "news",
+  "audit": {
+    "ok": true,
+    "internalLinks": 0,
+    "failed": []
+  },
+  "ms": 155845
+}

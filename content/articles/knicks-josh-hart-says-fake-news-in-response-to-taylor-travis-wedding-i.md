@@ -70,7 +70,7 @@ aiDisclosure: >-
   Rumors and speculation are labeled as unconfirmed and updated or removed as
   facts develop.
 sensitivity: normal
-dateModified: '2026-07-03T12:53:33.930Z'
+dateModified: '2026-07-04T08:10:31.328Z'
 provenance:
   primaryEntity: Josh Hart
   claim: Josh Hart denies a report that he was invited to Taylor Travis's wedding.
@@ -93,6 +93,24 @@ correction: >-
   Being Invited to Taylor Swift and Travis Kelce's Wedding - People.com"
 robots: noindex
 ---
+> **Correction (2026-07-04):** contradiction found: "Josh Hart Claims 'Fake News' on Knicks' Starting Lineup Being Invited to Taylor Swift and Travis Kelce's Wedding - People.com"
+
+> **Correction (2026-07-04):** contradiction found: "Josh Hart Claims 'Fake News' on Knicks' Starting Lineup Being Invited to Taylor Swift and Travis Kelce's Wedding - People.com"
+
+> **Correction (2026-07-04):** contradiction found: "Josh Hart Claims 'Fake News' on Knicks' Starting Lineup Being Invited to Taylor Swift and Travis Kelce's Wedding - People.com"
+
+> **Correction (2026-07-04):** contradiction found: "Josh Hart Claims 'Fake News' on Knicks' Starting Lineup Being Invited to Taylor Swift and Travis Kelce's Wedding - People.com"
+
+> **Correction (2026-07-04):** contradiction found: "Josh Hart Claims 'Fake News' on Knicks' Starting Lineup Being Invited to Taylor Swift and Travis Kelce's Wedding - People.com"
+
+> **Correction (2026-07-04):** contradiction found: "Josh Hart Claims 'Fake News' on Knicks' Starting Lineup Being Invited to Taylor Swift and Travis Kelce's Wedding - People.com"
+
+> **Correction (2026-07-03):** contradiction found: "Josh Hart Appears to Deny Rumor Taylor Swift Invited New York Knicks to Her Wedding: ‘Fake News’ - Us Weekly"
+
+> **Correction (2026-07-03):** contradiction found: "Josh Hart Appears to Deny Rumor Taylor Swift Invited New York Knicks to Her Wedding: ‘Fake News’ - Us Weekly"
+
+> **Correction (2026-07-03):** contradiction found: "Josh Hart Claims 'Fake News' on Knicks' Starting Lineup Being Invited to Taylor Swift and Travis Kelce's Wedding - People.com"
+
 > **Correction (2026-07-03):** contradiction found: "Josh Hart Claims 'Fake News' on Knicks' Starting Lineup Being Invited to Taylor Swift and Travis Kelce's Wedding - People.com"
 
 > **Correction (2026-07-03):** contradiction found: "Josh Hart Claims 'Fake News' on Knicks' Starting Lineup Being Invited to Taylor Swift and Travis Kelce's Wedding - People.com"

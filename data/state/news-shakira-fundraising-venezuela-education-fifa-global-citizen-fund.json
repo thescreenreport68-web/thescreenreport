@@ -1,0 +1,114 @@
+{
+  "id": "news-shakira-fundraising-venezuela-education-fifa-global-citizen-fund",
+  "slug": "shakira-raises-funds-for-venezuelan-children-s-education-through-fifa-",
+  "status": "needs_review",
+  "stages": {
+    "attempt1": {
+      "score": 55,
+      "cat": "music/news",
+      "hardBlocks": [
+        "ungrounded specific(s): $500,000 — every figure/outlet must exist in the gathered sources or authoritative facts",
+        "1 unverified claim(s) (need correction)"
+      ],
+      "block": [
+        "ungrounded specific(s): $500,000 — every figure/outlet must exist in the gathered sources or authoritative facts",
+        "1 unverified claim(s) (need correction)"
+      ],
+      "fixable": [],
+      "badClaims": 1
+    },
+    "attempt2": {
+      "score": 55,
+      "cat": "music/news",
+      "hardBlocks": [
+        "ungrounded specific(s): $500,000 — every figure/outlet must exist in the gathered sources or authoritative facts",
+        "1 unverified claim(s) (need correction)"
+      ],
+      "block": [
+        "ungrounded specific(s): $500,000 — every figure/outlet must exist in the gathered sources or authoritative facts",
+        "1 unverified claim(s) (need correction)"
+      ],
+      "fixable": [],
+      "badClaims": 1
+    }
+  },
+  "editorial": {
+    "status": "official",
+    "entity": "Shakira",
+    "work": null,
+    "outlet": "rollingstone.com"
+  },
+  "acceptReason": "cut-and-publish (removed 1 sentence(s) + 0 field item(s); 276w remain)",
+  "webCheck": {
+    "ran": false,
+    "error": "Expected ',' or ']' after array element in JSON at position 5961"
+  },
+  "holdReason": "accuracy/grounding block: ungrounded specific(s): $500,000 — every figure/outlet must exist in the gathered sources or authoritative facts; 1 unverified claim(s) (need correction)",
+  "scorecard": {
+    "score": 55,
+    "subscores": {
+      "accuracy": 7,
+      "readability": 6,
+      "humanVoice": 5,
+      "phrasing": 5,
+      "curiosity": 6,
+      "structure": 6,
+      "infoGain": 5,
+      "seo": 6,
+      "faqQuality": 5,
+      "completeness": 4
+    },
+    "strengths": [
+      "The headline and dek are clear and informative, directly stating the main news.",
+      "The article uses subheadings effectively to break up the text and guide the reader.",
+      "The lead paragraph quickly delivers the core information.",
+      "The article correctly attributes information to Rolling Stone where necessary.",
+      "The FAQ section attempts to add new, relevant information."
+    ],
+    "weaknesses": [
+      "The article fabricates a quote and a song title, severely impacting accuracy and trust. The quote \"I’ve spent my life doing two things — making songs and building schools. At the FIFA World Cup, those two paths come together\" and the song \"Dai Dai\" are not present in the provided source material.",
+      "The article states Madonna and BTS will perform at the halftime show, but the source only mentions Shakira and Chris Martin curating.",
+      "The article states the halftime show is at MetLife Stadium in New Jersey, which is not in the provided source material.",
+      "The Flesch score of 51 indicates dense prose, falling short of the target readability range.",
+      "The human voice feels somewhat generic and lacks distinct personality or wit, relying on factual reporting without much flair.",
+      "The phrasing is generally acceptable but occasionally leans towards a more formal, less engaging tone.",
+      "The 'completeness' is low due to the significant fabricated details, which undermine the entire piece.",
+      "The FAQ section, while attempting to add new info, includes a fabricated quote in the last FAQ, further hurting accuracy."
+    ],
+    "deterministic": {
+      "words": 299,
+      "h2s": 2,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 4,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": true,
+      "maxSentence": 27,
+      "avgSentence": 17,
+      "flesch": 51,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 7,
+      "hardBlocks": []
+    },
+    "hardBlocks": [
+      "ungrounded specific(s): $500,000 — every figure/outlet must exist in the gathered sources or authoritative facts",
+      "1 unverified claim(s) (need correction)"
+    ]
+  },
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "≥1200px legal image",
+      "credit",
+      "score ≥ 70",
+      "zero hard-blocks"
+    ]
+  },
+  "ms": 317979
+}

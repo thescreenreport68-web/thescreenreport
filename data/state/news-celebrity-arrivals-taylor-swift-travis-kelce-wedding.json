@@ -1,0 +1,107 @@
+{
+  "id": "news-celebrity-arrivals-taylor-swift-travis-kelce-wedding",
+  "slug": "ed-sheeran-bradley-cooper-dakota-johnson-and-more-pictured-heading-to-",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": 75,
+      "cat": "celebrity/news",
+      "hardBlocks": [
+        "ungrounded specific(s): 1,000 — every figure/outlet must exist in the gathered sources or authoritative facts",
+        "1 unverified claim(s) (need correction)"
+      ],
+      "block": [
+        "ungrounded specific(s): 1,000 — every figure/outlet must exist in the gathered sources or authoritative facts",
+        "1 unverified claim(s) (need correction)"
+      ],
+      "fixable": [],
+      "badClaims": 1
+    },
+    "attempt2": {
+      "score": 75,
+      "cat": "celebrity/news",
+      "hardBlocks": [],
+      "block": [],
+      "fixable": [],
+      "badClaims": 0
+    }
+  },
+  "editorial": {
+    "status": "confirmed",
+    "entity": "Taylor Swift",
+    "work": null,
+    "outlet": "Associated Press"
+  },
+  "acceptReason": "terminal-accept (verified accurate, score 75, 0 quality nit(s)) → re-gated clean at 75",
+  "webCheck": {
+    "ran": true,
+    "corrected": 2,
+    "remaining": 3
+  },
+  "scorecard": {
+    "score": 75,
+    "subscores": {
+      "accuracy": 9,
+      "readability": 8,
+      "humanVoice": 7,
+      "phrasing": 7,
+      "curiosity": 8,
+      "structure": 7,
+      "infoGain": 7,
+      "seo": 7,
+      "faqQuality": 8,
+      "completeness": 7
+    },
+    "strengths": [
+      "The lead quickly delivers the core information, adhering to news standards.",
+      "Specific celebrity names are used, adding concrete detail and engagement.",
+      "The article directly attributes key information to the Associated Press and Variety, enhancing credibility.",
+      "The FAQ section provides genuinely new information not explicitly stated in the main body, particularly the full list of attendees and the detailed Kelce quote.",
+      "The headline is clear and makes a specific, true claim.",
+      "The article avoids generic AI tells and filler praise, maintaining a straightforward tone."
+    ],
+    "weaknesses": [
+      "The phrasing \"making their way to the ceremony\" is slightly stiff and could be more dynamic.",
+      "The transition between the general list of attendees and the specific quote from Kelce feels a bit abrupt, lacking a smoother setup.",
+      "While short and news-focused, the article could benefit from slightly more varied sentence structure in places to enhance readability further.",
+      "The subheads are functional but could be more engaging or descriptive, especially for a short piece where every word counts.",
+      "The article repeats the full names of Taylor Swift and Travis Kelce in close proximity in the lead, where a pronoun might have sufficed after the initial introduction."
+    ],
+    "deterministic": {
+      "words": 242,
+      "h2s": 2,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 2,
+      "ktCount": 3,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 62,
+      "avgSentence": 18,
+      "flesch": 55,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": [
+        "a 62-word run-on sentence (>55 — split it)"
+      ]
+    },
+    "hardBlocks": [
+      "a 62-word run-on sentence (>55 — split it)"
+    ]
+  },
+  "score": 75,
+  "category": "celebrity",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 3,
+    "failed": [
+      "zero hard-blocks"
+    ]
+  },
+  "ms": 223161
+}

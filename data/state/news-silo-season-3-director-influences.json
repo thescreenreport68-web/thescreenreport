@@ -1,0 +1,121 @@
+{
+  "id": "news-silo-season-3-director-influences",
+  "slug": "silo-season-3-channels-classic-thrillers-for-political-plot",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": 75,
+      "cat": "tv/news",
+      "hardBlocks": [
+        "verify-gate CUT: 3 claim(s) not in the gathered sources — Cop Paul Billings (Chinaza Uche) investigates another m; Director noted that composer Atli Örvarsson's score hel; Season 3 premiered as of July 2026",
+        "1 unverified claim(s) (need correction)"
+      ],
+      "block": [
+        "verify-gate CUT: 3 claim(s) not in the gathered sources — Cop Paul Billings (Chinaza Uche) investigates another m; Director noted that composer Atli Örvarsson's score hel; Season 3 premiered as of July 2026",
+        "1 unverified claim(s) (need correction)"
+      ],
+      "fixable": [],
+      "badClaims": 1
+    },
+    "attempt2": {
+      "score": 78,
+      "cat": "tv/news",
+      "hardBlocks": [
+        "verify-gate CUT: 2 claim(s) not in the gathered sources — Season 3 premiered as of July 2026; As of July 2026, the newly premiered Season 3 of Silo i"
+      ],
+      "block": [
+        "verify-gate CUT: 2 claim(s) not in the gathered sources — Season 3 premiered as of July 2026; As of July 2026, the newly premiered Season 3 of Silo i"
+      ],
+      "fixable": [],
+      "badClaims": 0
+    }
+  },
+  "editorial": {
+    "status": "official",
+    "entity": "Michael Dinner",
+    "work": {
+      "title": "Silo",
+      "year": null,
+      "medium": "tv"
+    },
+    "outlet": "IndieWire"
+  },
+  "acceptReason": "cut-and-publish (removed 0 sentence(s) + 2 field item(s); 305w remain) → re-gated clean at 75",
+  "webCheck": {
+    "ran": true,
+    "corrected": 3,
+    "remaining": 6
+  },
+  "scorecard": {
+    "score": 75,
+    "subscores": {
+      "accuracy": 9,
+      "readability": 8,
+      "humanVoice": 7,
+      "phrasing": 8,
+      "curiosity": 7,
+      "structure": 7,
+      "infoGain": 7,
+      "seo": 6,
+      "faqQuality": 6,
+      "completeness": 8
+    },
+    "strengths": [
+      "Accurate reporting based on the provided source material.",
+      "Clear and concise lead paragraph, delivering key information quickly.",
+      "Good use of direct quotes to add human voice and credibility.",
+      "Varied sentence structure contributes to readability.",
+      "Effective use of subheadings to break up content and guide the reader.",
+      "The 'Key Takeaways' section is useful for quick consumption."
+    ],
+    "weaknesses": [
+      "The headline is a bit generic and could be more specific about the classic thriller influence mentioned in the dek.",
+      "The dek mentions Alan Pakula and Sydney Pollack, but the body only cites 'Three Days of the Condor' and 'The Parallax View' (which is a Pakula film, but Pollack isn't explicitly named in the body as an influence). This creates a slight disconnect.",
+      "The FAQ section is very brief and only offers one question, which doesn't add significant new information beyond what's in the article.",
+      "While the article is short news, it could benefit from one more unique sourced fact beyond the headline to fully meet the news standard.",
+      "The 'Silo Season 3' keyword is present but could be integrated slightly more naturally in the body without being forced, especially given the short length."
+    ],
+    "deterministic": {
+      "words": 215,
+      "h2s": 2,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 1,
+      "ktCount": 1,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": true,
+      "maxSentence": 28,
+      "avgSentence": 15,
+      "flesch": 56,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 1,
+      "hardBlocks": [
+        "FAQ 1 < 2",
+        "body 215w < 220"
+      ]
+    },
+    "hardBlocks": [
+      "FAQ 1 < 2",
+      "body 215w < 220"
+    ]
+  },
+  "score": 75,
+  "category": "tv",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "body ≥ 220w",
+      "2+ FAQ",
+      "key takeaways",
+      "keyword in title",
+      "zero hard-blocks"
+    ]
+  },
+  "ms": 214431
+}

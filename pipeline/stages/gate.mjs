@@ -20,6 +20,12 @@ export function classifyBlocks(blocks) {
   return { block, fixable };
 }
 
+// A claim carries a CHECKABLE, DANGEROUS specific (the "fake news" kind) — a number/$/%/date, platform, award,
+// season/episode, credit, chart position, or a direct quote — vs. a benign QUALITATIVE background line. We hold/cut
+// ONLY the former; a true-but-unsourced qualitative background ("X is a literacy program") is common knowledge and
+// is kept so a faithful article isn't gutted into a hold (owner 2026-07-03).
+export const CHECKABLE_CLAIM = /\d|%|\$|["“”']|\b(netflix|prime|hulu|disney\+?|max|peacock|paramount|apple tv|amazon|hbo|theaters?|million|billion|grammy|oscar|emmy|bafta|golden globe|award|nominee|nominat|winner|won|renew|cancel|seasons?|episodes?|album|single|song|track|chart|billboard|hot 100|no\.?\s*1|number one|played|plays|stars?|starring|directed|produced|co-?wrote|composed|role as|premiere|release date|box office|gross|debut|opening|cinemascore|rotten tomatoes|metacritic|certified fresh|rated|rating)\b/i;
+
 // ---- Readability / human-voice helpers (free, deterministic) ----
 function plainProse(md) {
   return (md || "")
@@ -348,7 +354,9 @@ export async function gate({ article, topic, judgeModel }) {
     hardBlocks.push(`verify-gate CUT: ${vg.unsupported.length} claim(s) not in the gathered sources — ${vg.unsupported.slice(0, 3).map((u) => u.claim.slice(0, 55)).join("; ")}`);
   if (!qg.ok) hardBlocks.push(`fabricated/altered quote: ${qg.badQuotes.slice(0, 2).map((q) => '"' + q.slice(0, 50) + '"').join("; ")} — use the exact source words or drop the quotation marks`);
   if (!sg.ok) hardBlocks.push(`ungrounded specific(s): ${sg.bad.slice(0, 3).map((b) => b.text).join("; ")} — every figure/outlet must exist in the gathered sources or authoritative facts`);
-  if (cc.bad.length) hardBlocks.push(`${cc.bad.length} unverified claim(s) (need correction)`);
+  // Only the CHECKABLE unverified claims block the piece — a benign qualitative background line doesn't (2026-07-03).
+  const ccBadCheckable = (cc.bad || []).filter((b) => CHECKABLE_CLAIM.test(typeof b === "string" ? b : (b && b.claim) || ""));
+  if (ccBadCheckable.length) hardBlocks.push(`${ccBadCheckable.length} unverified claim(s) (need correction)`);
   if (gt.findings.length > gt.contradicted.length) hardBlocks.push(`${gt.findings.length - gt.contradicted.length} ungrounded fact(s) (verify against the authoritative facts)`);
 
   // SOFT quality floors LOWERED for the brand-new-volume strategy (owner 2026-07-01): a real, accurate story that is
@@ -374,9 +382,15 @@ export async function gate({ article, topic, judgeModel }) {
     // CUT those exact sentences from the body and still publish (owner 2026-07-02: publish everything the automation
     // builds — but a fabrication is REMOVED, never shipped).
     cutClaims: [
-      ...(vg && vg.unsupported ? vg.unsupported.map((u) => u.claim) : []),
+      // Only CUT an unsupported/unverified claim that carries a CHECKABLE SPECIFIC — a number/$/%/date, a platform,
+      // an award, a season/episode, a credit verb, a chart position, or a direct quote. A benign QUALITATIVE
+      // background line the thin source happened to omit (e.g. "the Imagination Library is a literacy program") is
+      // TRUE common knowledge and LOW risk; cutting it just guts a faithful article into a hold (owner 2026-07-03:
+      // publish engaging faithful briefs — hold only over DANGEROUS specifics). Contradictions + specifics-guard
+      // number findings are ALWAYS cut (they're wrong or a bad figure, not merely un-sourced).
+      ...(vg && vg.unsupported ? vg.unsupported.map((u) => u.claim).filter((c) => CHECKABLE_CLAIM.test(c)) : []),
       ...claimCheck.contradicted.map((c) => c.claim),
-      ...(cc.bad || []).map((b) => (typeof b === "string" ? b : b && b.claim) || null),
+      ...(cc.bad || []).map((b) => (typeof b === "string" ? b : b && b.claim) || null).filter((c) => typeof c === "string" && CHECKABLE_CLAIM.test(c)),
       ...sg.bad.map((b) => b.text),
     ].filter((c) => typeof c === "string" && c.length > 8),
     strengths: j.strengths,

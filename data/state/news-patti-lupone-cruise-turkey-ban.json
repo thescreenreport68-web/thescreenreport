@@ -1,0 +1,105 @@
+{
+  "id": "news-patti-lupone-cruise-turkey-ban",
+  "slug": "patti-lupone-s-gay-cruise-ship-turned-away-by-turkey-i-am-furious-but-",
+  "status": "needs_review",
+  "stages": {
+    "attempt1": {
+      "score": 85,
+      "cat": "celebrity/news",
+      "hardBlocks": [
+        "fabricated/altered quote: \"simply because of who is on board. [lifted from a \" — use the exact source words or drop the quotation marks",
+        "ungrounded specific(s): 2,500 — every figure/outlet must exist in the gathered sources or authoritative facts",
+        "1 unverified claim(s) (need correction)"
+      ],
+      "block": [
+        "fabricated/altered quote: \"simply because of who is on board. [lifted from a \" — use the exact source words or drop the quotation marks",
+        "ungrounded specific(s): 2,500 — every figure/outlet must exist in the gathered sources or authoritative facts",
+        "1 unverified claim(s) (need correction)"
+      ],
+      "fixable": [],
+      "badClaims": 1
+    },
+    "attempt2": {
+      "score": 85,
+      "cat": "celebrity/news",
+      "hardBlocks": [
+        "ungrounded specific(s): 2,500 — every figure/outlet must exist in the gathered sources or authoritative facts"
+      ],
+      "block": [
+        "ungrounded specific(s): 2,500 — every figure/outlet must exist in the gathered sources or authoritative facts"
+      ],
+      "fixable": [],
+      "badClaims": 0
+    }
+  },
+  "editorial": {
+    "status": "unconfirmed",
+    "entity": "Patti LuPone",
+    "work": null,
+    "outlet": "hollywoodreporter.com"
+  },
+  "scorecard": {
+    "score": 85,
+    "subscores": {
+      "accuracy": 10,
+      "readability": 9,
+      "humanVoice": 9,
+      "phrasing": 8,
+      "curiosity": 9,
+      "structure": 8,
+      "infoGain": 8,
+      "seo": 8,
+      "faqQuality": 8,
+      "completeness": 8
+    },
+    "strengths": [
+      "Accurate reporting, sticking closely to the provided source material and quotes.",
+      "Clear, concise lead that answers the core question immediately.",
+      "Good use of direct quotes to convey human emotion and specific details.",
+      "Subheads effectively break up the text and guide the reader.",
+      "Key Takeaways provide a quick summary for busy readers.",
+      "FAQ section adds genuinely new and useful information, not just rephrasing the article.",
+      "Natural keyword integration without feeling forced.",
+      "The article is tight and to the point, fitting the 'short-news' standard well."
+    ],
+    "weaknesses": [
+      "The phrase \"Broadway legend Patti LuPone says\" in the lead is a slight instance of filler praise, though minor.",
+      "The transition between the second and third paragraphs could be smoother; it jumps directly into a subhead.",
+      "While the article is short, a single internal link or external source beyond the primary one would strengthen the SEO score slightly, even for a news piece."
+    ],
+    "deterministic": {
+      "words": 250,
+      "h2s": 2,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 4,
+      "ktCount": 3,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": true,
+      "maxSentence": 29,
+      "avgSentence": 17,
+      "flesch": 66,
+      "bannedTells": 0,
+      "fillerPraise": 1,
+      "kwExact": 2,
+      "hardBlocks": []
+    },
+    "hardBlocks": [
+      "ungrounded specific(s): 2,500 — every figure/outlet must exist in the gathered sources or authoritative facts"
+    ]
+  },
+  "holdReason": "accuracy/grounding block: ungrounded specific(s): 2,500 — every figure/outlet must exist in the gathered sources or authoritative facts",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "≥1200px legal image",
+      "credit",
+      "zero hard-blocks"
+    ]
+  },
+  "ms": 120195
+}

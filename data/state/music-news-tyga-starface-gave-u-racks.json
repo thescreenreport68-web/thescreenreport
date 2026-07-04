@@ -1,0 +1,121 @@
+{
+  "id": "music-news-tyga-starface-gave-u-racks",
+  "slug": "tyga-launches-new-persona-tarface-with-gave-u-racks",
+  "status": "needs_review",
+  "stages": {
+    "attempt1": {
+      "score": 85,
+      "cat": "music/news",
+      "hardBlocks": [
+        "primary keyword not in title",
+        "verify-gate CUT: 1 claim(s) not in the gathered sources — Tyga’s main artist profile and future releases under th",
+        "2 unverified claim(s) (need correction)"
+      ],
+      "block": [
+        "verify-gate CUT: 1 claim(s) not in the gathered sources — Tyga’s main artist profile and future releases under th",
+        "2 unverified claim(s) (need correction)"
+      ],
+      "fixable": [
+        "primary keyword not in title"
+      ],
+      "badClaims": 2
+    },
+    "attempt2": {
+      "score": 85,
+      "cat": "music/news",
+      "hardBlocks": [
+        "primary keyword not in title",
+        "2 unverified claim(s) (need correction)"
+      ],
+      "block": [
+        "2 unverified claim(s) (need correction)"
+      ],
+      "fixable": [
+        "primary keyword not in title"
+      ],
+      "badClaims": 2
+    }
+  },
+  "editorial": {
+    "status": "official",
+    "entity": "$TARFACE",
+    "work": null,
+    "outlet": "billboard.com"
+  },
+  "acceptReason": "cut-and-publish (removed 2 sentence(s) + 2 field item(s); 236w remain)",
+  "webCheck": {
+    "ran": true,
+    "corrected": 4,
+    "remaining": 3
+  },
+  "holdReason": "accuracy/grounding block: 2 unverified claim(s) (need correction)",
+  "scorecard": {
+    "score": 85,
+    "subscores": {
+      "accuracy": 10,
+      "readability": 9,
+      "humanVoice": 9,
+      "phrasing": 9,
+      "curiosity": 8,
+      "structure": 9,
+      "infoGain": 9,
+      "seo": 8,
+      "faqQuality": 9,
+      "completeness": 9
+    },
+    "strengths": [
+      "Accuracy is excellent, adhering strictly to the provided source material.",
+      "Readability is strong, with clear, concise sentences and good paragraph breaks.",
+      "Human voice is present through the effective use of direct quotes and specific details about the project's aesthetic and musical style.",
+      "Phrasing is fluent and professional, avoiding keyword stuffing or awkward constructions.",
+      "Structure is logical, with an answer-first lead and useful subheadings.",
+      "Information gain is good, providing a clear understanding of the project's concept and origins.",
+      "FAQ section adds genuine new information and clarifies common reader questions.",
+      "The article effectively communicates the distinct nature of the $TARFACE persona from Tyga's established work."
+    ],
+    "weaknesses": [
+      "The headline is a bit generic; while accurate, it doesn't fully capture the unique 'persona' aspect as strongly as it could.",
+      "The 'dek' is strong but could be slightly more punchy to draw in a busy reader.",
+      "While the Flesch score is below target, the article doesn't *feel* overly dense due to good paragraphing and clear language, but there's room for slightly more varied sentence structure to improve flow further."
+    ],
+    "deterministic": {
+      "words": 268,
+      "h2s": 2,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 4,
+      "ktCount": 5,
+      "kwInTitle": false,
+      "kwInFirst100": false,
+      "kwInH2": false,
+      "maxSentence": 45,
+      "avgSentence": 18,
+      "flesch": 49,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": [
+        "primary keyword not in title"
+      ]
+    },
+    "hardBlocks": [
+      "primary keyword not in title",
+      "2 unverified claim(s) (need correction)"
+    ]
+  },
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "body ≥ 220w",
+      "2+ FAQ",
+      "keyword in title",
+      "≥1200px legal image",
+      "credit",
+      "zero hard-blocks"
+    ]
+  },
+  "ms": 164014
+}

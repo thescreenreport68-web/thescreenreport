@@ -17,6 +17,12 @@ const CATS = ["celebrity", "music", "awards"];
 
 const SYSTEM = `You are the EDITOR-IN-CHIEF of a celebrity news desk. You are handed the RAW COLLECTED TEXT of one candidate story (what our crawler actually pulled from the source). Decide, using ONLY that text, whether and how to run it. Be strict — a news brand's credibility depends on NOT publishing filler, and on filing/attributing every story correctly. Output strict JSON only.
 
+inScope — OUR NICHE (check this FIRST; it overrides EVERYTHING). The test: does the story genuinely FEATURE, as a real subject, a HOLLYWOOD / Western ENTERTAINMENT celebrity?
+OUR NICHE = film/TV actors & actresses; Western/English-language musicians/singers/rappers/bands; reality-TV / streaming-show stars INCLUDING the KARDASHIAN–JENNER family; supermodels / models who are media or reality-TV personalities (e.g. the Kardashians, Jenners, Hadids); comedians, film/TV directors, TV hosts, and major ENTERTAINMENT influencers.
+- inScope=TRUE whenever an in-niche entertainment celebrity (as above) is a MEANINGFUL SUBJECT of the story — whether the lead OR a key named figure the story is genuinely about. Their involvement makes the story ours, EVEN IF they are paired with a non-niche person. (So "Lewis Hamilton on his girlfriend KIM KARDASHIAN" is IN, because Kim Kardashian — a reality-TV star — is a key subject; "Taylor Swift's wedding" is IN even with NFL's Travis Kelce as co-subject.)
+- inScope=FALSE ONLY when the story is a STANDALONE item about a NON-ENTERTAINMENT figure with NO in-niche entertainment celebrity meaningfully involved: an ATHLETE of any sport (incl. a Formula 1 / race-car driver) in a sport/personal story with no celebrity (e.g. "Lewis Hamilton wins the British GP"), a POLITICIAN (a senator's health), a ROYAL (a prince's appearance), a BUSINESS figure (a CEO's deal), or a non-niche person with only an UNNAMED companion (e.g. "Alex Rodriguez kisses a mystery woman at a party" — a retired baseball player + an unidentified woman, no named in-niche celebrity → OUT).
+- When no in-niche entertainment celebrity is genuinely a subject, set inScope=FALSE.
+
 isStory (the REJECT power — this is the most important call):
 - FALSE for: a bare social-media post or photo caption with no reporting ("X stuns by a waterfall", "happy birthday to…", "N years ago today…"), a sports score, a food/product blurb, an anniversary, a "reacts to"/"wears"/"spotted" item with NO concrete newsworthy development, or anything where the collected text has no specific who/what/when substance.
 - TRUE only if there is a SPECIFIC, substantive development a reader learns something from (an event that happened, an announcement, a legal/health/relationship development, real quotes, concrete facts).
@@ -56,7 +62,7 @@ ${text || "(no article body was extractable — only the short discovery blurb a
 """
 
 Return JSON:
-{"isStory":<bool>,"substanceScore":<0-10>,"rejectReason":"<if not a story, why>","category":"celebrity|music|awards","secondaryCategory":"music|null","attribution":"<real reporting outlet>","confirmed":<bool>,"official":<bool>,"denied":<bool>,"eventSummary":"<one sentence naming the specific event>","primaryEntity":"<the person the story is really about>","coSubjects":["<other central people>"],"angle":"<one neutral sentence of the verified development>"}`;
+{"inScope":<bool>,"outOfNicheReason":"<if inScope=false, WHY — e.g. 'politician' / 'royal' / 'business figure'>","isStory":<bool>,"substanceScore":<0-10>,"rejectReason":"<if not a story, why>","category":"celebrity|music|awards","secondaryCategory":"music|null","attribution":"<real reporting outlet>","confirmed":<bool>,"official":<bool>,"denied":<bool>,"eventSummary":"<one sentence naming the specific event>","primaryEntity":"<the person the story is really about>","coSubjects":["<other central people>"],"angle":"<one neutral sentence of the verified development>"}`;
 }
 
 async function defaultReview({ topic, bundle }) {
@@ -75,6 +81,8 @@ function normalize(raw, topic) {
   const category = CATS.includes((raw.category || "").toLowerCase()) ? raw.category.toLowerCase() : null;
   const sec = (raw.secondaryCategory && CATS.includes(String(raw.secondaryCategory).toLowerCase())) ? raw.secondaryCategory.toLowerCase() : null;
   return {
+    inScope: raw.inScope !== false, // only reject when the model EXPLICITLY says out-of-niche
+    outOfNicheReason: String(raw.outOfNicheReason || "").slice(0, 120),
     isStory: raw.isStory !== false, // default to letting it through only if the model didn't explicitly reject
     substanceScore: Number.isFinite(raw.substanceScore) ? raw.substanceScore : (raw.isStory === false ? 2 : 6),
     rejectReason: String(raw.rejectReason || "").slice(0, 200),
@@ -100,6 +108,13 @@ export async function editorialReview({ topic, bundle, reviewImpl = defaultRevie
   try { raw = await reviewImpl({ topic, bundle }); } catch { return null; }
   const v = normalize(raw, topic);
   if (!v) return null;
+  // NICHE GATE (owner's hard rule): a subject outside our Hollywood/Western-entertainment niche — a politician, a
+  // royal, a business figure, a pure athlete — is REJECTED here, before we ever write it. Reuses the reject path.
+  if (!v.inScope) {
+    v.isStory = false;
+    v.rejectReason = `outside our entertainment niche${v.outOfNicheReason ? ` (${v.outOfNicheReason})` : " (a politician / royal / business / non-entertainment figure)"}`;
+    return v;
+  }
   const seedText = (bundle.sources || []).filter((s) => !s.corroborating).map((s) => s.text || "").join(" ").trim();
   // Hard non-story backstop: only a thin blurb was collected AND the model wasn't confident it's substantive.
   if (v.isStory && (v.substanceScore < minSubstance || seedText.length < minTextForStory)) {

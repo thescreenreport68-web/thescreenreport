@@ -10,7 +10,7 @@ export const VIDEO = {
   visionModel: "google/gemini-2.5-flash-lite", // image identity/event/watermark gate (~$0.0002/check)
 
   // ── voice (Kokoro-82M via kokoro-onnx: $0 forever, runs on CPU; af_heart = grade-A energetic narrator)
-  voice: "af_heart",
+  voice: "af_heart:55,af_bella:45", // blend (fix K): af_heart warmth + af_bella dynamics
   speed: 1.0, // owner 2026-07-03: 1.08 read too fast — natural pace so every word lands (still energetic via af_heart)
   python: `${ROOT}/video-venv/bin/python`,
   modelDir: `${ROOT}/video-models`, // kokoro-v1.0.onnx (310MB) + voices-v1.0.bin — outside the repo; CI restores from release URL + actions/cache

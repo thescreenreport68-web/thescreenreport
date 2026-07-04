@@ -1,0 +1,121 @@
+{
+  "id": "news-moritz-borman-death-tribute-oliver-stone",
+  "slug": "oliver-stone-pays-tribute-to-his-alexander-snowden-producer-moritz-bor",
+  "status": "needs_review",
+  "stages": {
+    "attempt1": {
+      "score": 85,
+      "cat": "celebrity/news",
+      "hardBlocks": [
+        "primary keyword not in title",
+        "a 63-word run-on sentence (>55 — split it)",
+        "verify-gate CUT: 1 claim(s) not in the gathered sources — Moritz Borman produced Oliver Stone's 'World Trade Cent",
+        "fabricated/altered quote: \"Beyond his work with Stone, Borman's extensive fil\"; \"a project titled\" — use the exact source words or drop the quotation marks",
+        "ungrounded specific(s): 2006 — every figure/outlet must exist in the gathered sources or authoritative facts"
+      ],
+      "block": [
+        "verify-gate CUT: 1 claim(s) not in the gathered sources — Moritz Borman produced Oliver Stone's 'World Trade Cent",
+        "fabricated/altered quote: \"Beyond his work with Stone, Borman's extensive fil\"; \"a project titled\" — use the exact source words or drop the quotation marks",
+        "ungrounded specific(s): 2006 — every figure/outlet must exist in the gathered sources or authoritative facts"
+      ],
+      "fixable": [
+        "primary keyword not in title",
+        "a 63-word run-on sentence (>55 — split it)"
+      ],
+      "badClaims": 0
+    },
+    "attempt2": {
+      "score": 85,
+      "cat": "celebrity/news",
+      "hardBlocks": [
+        "primary keyword not in title",
+        "a 58-word run-on sentence (>55 — split it)",
+        "fabricated/altered quote: \"and Stone's most recent feature, 2016's\"; \"Beyond his work with Stone, Borman had producer cr\" — use the exact source words or drop the quotation marks"
+      ],
+      "block": [
+        "fabricated/altered quote: \"and Stone's most recent feature, 2016's\"; \"Beyond his work with Stone, Borman had producer cr\" — use the exact source words or drop the quotation marks"
+      ],
+      "fixable": [
+        "primary keyword not in title",
+        "a 58-word run-on sentence (>55 — split it)"
+      ],
+      "badClaims": 0
+    }
+  },
+  "editorial": {
+    "status": "confirmed",
+    "entity": "Moritz Borman",
+    "work": null,
+    "outlet": "deadline.com"
+  },
+  "scorecard": {
+    "score": 85,
+    "subscores": {
+      "accuracy": 10,
+      "readability": 9,
+      "humanVoice": 9,
+      "phrasing": 9,
+      "curiosity": 9,
+      "structure": 9,
+      "infoGain": 8,
+      "seo": 8,
+      "faqQuality": 9,
+      "completeness": 9
+    },
+    "strengths": [
+      "The article is highly accurate, faithfully reporting only what was stated in the source material and attributing claims appropriately.",
+      "The readability is excellent, with short paragraphs, clear language, and a good flow that makes it easy for a busy fan to consume quickly.",
+      "The human voice is strong, particularly through the direct quotes from Oliver Stone, which are presented without unnecessary embellishment.",
+      "Phrasing is natural and fluent, avoiding keyword stuffing or awkward constructions. Pronoun usage is correct.",
+      "The headline and dek are clear and deliver the core information immediately, satisfying curiosity without resorting to clickbait.",
+      "The structure is well-suited for a short news article, with an answer-first lead and relevant subheads.",
+      "The article provides good information gain by consolidating key facts and Stone's tribute in a concise manner.",
+      "SEO elements are naturally integrated, with the primary keyword present but not forced. The FAQ section adds genuine, new information.",
+      "The FAQ section is well-executed, providing concise and relevant answers that enhance the article's utility.",
+      "The article feels complete for a short news piece, covering all essential details about Borman's death and Stone's tribute."
+    ],
+    "weaknesses": [
+      "While good, the 'Information Gain' could be slightly higher if there was one more unique, sourced fact beyond the headline, even for a short news piece.",
+      "The 'SEO' score is good, but could be marginally improved with one more internal link if relevant content existed, though this is a minor point for a short news article."
+    ],
+    "deterministic": {
+      "words": 240,
+      "h2s": 2,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 3,
+      "ktCount": 4,
+      "kwInTitle": false,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 58,
+      "avgSentence": 16,
+      "flesch": 57,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": [
+        "primary keyword not in title",
+        "a 58-word run-on sentence (>55 — split it)"
+      ]
+    },
+    "hardBlocks": [
+      "primary keyword not in title",
+      "a 58-word run-on sentence (>55 — split it)",
+      "fabricated/altered quote: \"and Stone's most recent feature, 2016's\"; \"Beyond his work with Stone, Borman had producer cr\" — use the exact source words or drop the quotation marks"
+    ]
+  },
+  "holdReason": "accuracy/grounding block: fabricated/altered quote: \"and Stone's most recent feature, 2016's\"; \"Beyond his work with Stone, Borman had producer cr\" — use the exact source words or drop the quotation marks",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "≥1200px legal image",
+      "credit",
+      "zero hard-blocks"
+    ]
+  },
+  "ms": 144575
+}

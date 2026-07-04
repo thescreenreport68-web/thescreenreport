@@ -1,0 +1,56 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Cap,Anton,92,&H00FFFFFF,&H00B9B9B9,&H00101010,&HA0000000,0,0,0,0,100,100,1,0,1,4,2,2,70,70,330,1
+Style: Hook,Anton,120,&H00FFFFFF,&H00CFCFCF,&H00101010,&HA0000000,0,0,0,0,100,100,1,0,1,5,3,5,70,70,0,1
+Style: KickText,Anton,40,&H00FFFFFF,&H00FFFFFF,&H00101010,&H00000000,0,0,0,0,100,100,4,0,1,0,0,5,0,0,0,1
+Style: KickDraw,Anton,40,&H002821D9,&H002821D9,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,7,0,0,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.12,0:00:06.50,KickDraw,,0,0,0,,{\fad(140,120)\pos(272,126)\1c&H000000&\1a&H78&\blur6\p1}m 18 0 l 530 0 b 548 0 548 0 548 18 l 548 70 b 548 88 548 88 530 88 l 18 88 b 0 88 0 88 0 70 l 0 18 b 0 0 0 0 18 0{\p0}
+Dialogue: 1,0:00:00.12,0:00:06.50,KickDraw,,0,0,0,,{\fad(140,120)\pos(266,118)\p1}m 18 0 l 530 0 b 548 0 548 0 548 18 l 548 70 b 548 88 548 88 530 88 l 18 88 b 0 88 0 88 0 70 l 0 18 b 0 0 0 0 18 0{\p0}
+Dialogue: 2,0:00:00.12,0:00:06.50,KickText,,0,0,0,,{\fad(140,120)\pos(540,163)}SURPRISE CEREMONY
+Dialogue: 0,0:00:00.05,0:00:01.11,Hook,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k43}TAYLOR {\k37}SWIFT {\k27}AND
+Dialogue: 0,0:00:01.11,0:00:02.23,Hook,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k43}TRAVIS {\k37}KELCE {\k32}JUST
+Dialogue: 0,0:00:02.23,0:00:03.19,Hook,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k27}GOT {\k48}{\1c&H2821D9&}MARRIED{\1c&HFFFFFF&} {\k21}AT
+Dialogue: 0,0:00:03.19,0:00:04.52,Hook,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k48}MADISON {\k43}SQUARE {\k43}GARDEN
+Dialogue: 0,0:00:04.52,0:00:05.37,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k27}THE {\k27}POP {\k32}STAR
+Dialogue: 0,0:00:05.37,0:00:06.27,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k27}AND {\k27}NFL {\k37}TIGHT
+Dialogue: 0,0:00:06.27,0:00:07.44,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k27}END {\k59}EXCHANGED {\k32}VOWS
+Dialogue: 0,0:00:07.44,0:00:08.24,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k21}ON {\k32}JULY {\k27}3RD
+Dialogue: 0,0:00:08.24,0:00:09.25,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k27}BUT {\k27}THE {\k48}BIGGEST
+Dialogue: 0,0:00:09.25,0:00:10.64,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k59}SURPRISE? {\k32}ADAM {\k48}SANDLER
+Dialogue: 0,0:00:10.64,0:00:12.07,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k64}{\1c&H2821D9&}OFFICIATED{\1c&HFFFFFF&} {\k27}THE {\k53}CEREMONY
+Dialogue: 0,0:00:12.07,0:00:13.51,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k59}{\1c&H2821D9&}BILLBOARD{\1c&HFFFFFF&} {\k59}CONFIRMED {\k27}THE
+Dialogue: 0,0:00:13.51,0:00:14.73,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k53}NUPTIALS {\k37}WHICH {\k32}TOOK
+Dialogue: 0,0:00:14.73,0:00:15.58,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k37}PLACE {\k21}IN {\k27}NEW
+Dialogue: 0,0:00:15.58,0:00:16.22,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k32}YORK {\k32}CITY
+Dialogue: 0,0:00:16.22,0:00:17.29,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k32}BOTH {\k32}WORE {\k43}CUSTOM
+Dialogue: 0,0:00:17.29,0:00:18.56,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k59}CHRISTIAN {\k32}DIOR {\k37}HAUTE
+Dialogue: 0,0:00:18.56,0:00:19.79,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k48}COUTURE {\k53}DESIGNED {\k21}BY
+Dialogue: 0,0:00:19.79,0:00:20.85,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k53}JONATHAN {\k53}ANDERSON
+Dialogue: 0,0:00:20.85,0:00:21.91,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k43}AUSTIN {\k37}SWIFT {\k27}WAS
+Dialogue: 0,0:00:21.91,0:00:22.77,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k27}MAN {\k21}OF {\k37}HONOR
+Dialogue: 0,0:00:22.77,0:00:23.78,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k37}JASON {\k37}KELCE {\k27}THE
+Dialogue: 0,0:00:23.78,0:00:24.36,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k32}BEST {\k27}MAN
+Dialogue: 0,0:00:24.36,0:00:25.32,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k27}THE {\k37}GUEST {\k32}LIST
+Dialogue: 0,0:00:25.32,0:00:26.65,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k27}WAS {\k48}{\1c&H2821D9&}MASSIVE{\1c&HFFFFFF&} {\k59}INCLUDING
+Dialogue: 0,0:00:26.65,0:00:27.66,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k21}ED {\k48}SHEERAN {\k32}HUGH
+Dialogue: 0,0:00:27.66,0:00:28.62,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k37}GRANT {\k27}AND {\k32}ANDY
+Dialogue: 0,0:00:28.62,0:00:28.94,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k32}REID
+Dialogue: 0,0:00:28.94,0:00:30.11,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k32}EVEN {\k43}GEORGE {\k43}KITTLE
+Dialogue: 0,0:00:30.11,0:00:31.12,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k43}DIDN'T {\k32}KNOW {\k27}THE
+Dialogue: 0,0:00:31.12,0:00:32.13,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k37}VENUE {\k37}UNTIL {\k27}THE
+Dialogue: 0,0:00:32.13,0:00:32.87,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k32}LAST {\k43}MINUTE
+Dialogue: 0,0:00:32.87,0:00:33.88,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k27}THE {\k43}COUPLE {\k32}USED
+Dialogue: 0,0:00:33.88,0:00:35.48,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k69}WATERMARKED {\k69}INVITATIONS {\k21}TO
+Dialogue: 0,0:00:35.48,0:00:36.33,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k48}PREVENT {\k37}LEAKS
+Dialogue: 0,0:00:36.33,0:00:37.24,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k27}HOW {\k32}LONG {\k32}WILL
+Dialogue: 0,0:00:37.24,0:00:38.03,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k21}IT {\k32}TAKE {\k27}FOR
+Dialogue: 0,0:00:38.03,0:00:39.20,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k27}THE {\k48}WEDDING {\k43}PHOTOS
+Dialogue: 0,0:00:39.20,0:00:39.74,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k21}TO {\k32}DROP

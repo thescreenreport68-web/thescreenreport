@@ -1,0 +1,121 @@
+{
+  "id": "trailer-the-raid-icon-new-action-thriller-trailer",
+  "slug": "icon-from-the-raid-stars-in-new-action-thriller-trailer-streaming-now",
+  "status": "needs_review",
+  "stages": {
+    "attempt1": {
+      "score": 78,
+      "cat": "movies/trailers",
+      "hardBlocks": [
+        "primary keyword not in title",
+        "verify-gate CUT: 3 claim(s) not in the gathered sources — Iko Uwais's breakout role was in Gareth Evans's 2012 fi; MovieWeb confirmed only Iko Uwais's involvement in the ; The director of the new film is not named in the availa",
+        "fabricated/altered quote: \"breaking bad\" — use the exact source words or drop the quotation marks"
+      ],
+      "block": [
+        "verify-gate CUT: 3 claim(s) not in the gathered sources — Iko Uwais's breakout role was in Gareth Evans's 2012 fi; MovieWeb confirmed only Iko Uwais's involvement in the ; The director of the new film is not named in the availa",
+        "fabricated/altered quote: \"breaking bad\" — use the exact source words or drop the quotation marks"
+      ],
+      "fixable": [
+        "primary keyword not in title"
+      ],
+      "badClaims": 0
+    },
+    "attempt2": {
+      "score": 65,
+      "cat": "movies/trailers",
+      "hardBlocks": [
+        "primary keyword not in title",
+        "body 176w < 220",
+        "verify-gate CUT: 1 claim(s) not in the gathered sources — The new film is available to stream now"
+      ],
+      "block": [
+        "verify-gate CUT: 1 claim(s) not in the gathered sources — The new film is available to stream now"
+      ],
+      "fixable": [
+        "primary keyword not in title",
+        "body 176w < 220"
+      ],
+      "badClaims": 0
+    }
+  },
+  "editorial": {
+    "status": "unconfirmed",
+    "entity": "The Raid",
+    "work": null,
+    "outlet": "Valnet"
+  },
+  "scorecard": {
+    "score": 65,
+    "subscores": {
+      "accuracy": 9,
+      "readability": 7,
+      "humanVoice": 6,
+      "phrasing": 7,
+      "curiosity": 7,
+      "structure": 7,
+      "infoGain": 6,
+      "seo": 6,
+      "faqQuality": 8,
+      "completeness": 6
+    },
+    "strengths": [
+      "The headline is clear and makes a specific, true claim.",
+      "The lead delivers the core information quickly.",
+      "The article avoids describing specific trailer shots or dialogue, adhering to the 'trailer preview' constraint.",
+      "The FAQ section genuinely adds new information by addressing common reader questions that aren't covered in the main body.",
+      "The 'What is The Raid?' section provides good, grounded context for the original film.",
+      "The use of 'as of July 2026' for the streaming availability is accurate and adheres to date discipline.",
+      "The article correctly attributes the core claim about the trailer and the 'breaking bad' description to MovieWeb."
+    ],
+    "weaknesses": [
+      "The 'dek' is a bit generic and could be more engaging.",
+      "The phrase 'high-flying film' and 'high-octane, physical action genre' are repeated, bordering on generic filler praise without specific examples.",
+      "The human voice is present but could be stronger; it feels a bit detached and report-like rather than a fan's perspective.",
+      "The article uses 'icon from The Raid' repeatedly, which, while accurate, could be varied with the actor's name if it were available in the source material (though it wasn't, so this is a constraint issue rather than an article flaw).",
+      "The 'Where can I watch the new movie?' section is very brief and doesn't add much beyond what's in the lead.",
+      "The article lacks a strong, original framing or analysis beyond summarizing the trailer's existence and the 'breaking bad' description.",
+      "The internal linking and external sourcing are minimal, though this is constrained by the single source provided."
+    ],
+    "deterministic": {
+      "words": 176,
+      "h2s": 3,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 1,
+      "hasSources": true,
+      "faqCount": 3,
+      "ktCount": 3,
+      "kwInTitle": false,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 22,
+      "avgSentence": 13,
+      "flesch": 57,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": [
+        "primary keyword not in title",
+        "body 176w < 220"
+      ]
+    },
+    "hardBlocks": [
+      "primary keyword not in title",
+      "body 176w < 220",
+      "verify-gate CUT: 1 claim(s) not in the gathered sources — The new film is available to stream now"
+    ]
+  },
+  "holdReason": "accuracy/grounding block: verify-gate CUT: 1 claim(s) not in the gathered sources — The new film is available to stream now",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "body ≥ 220w",
+      "≥1200px legal image",
+      "credit",
+      "score ≥ 70",
+      "zero hard-blocks"
+    ]
+  },
+  "ms": 190434
+}

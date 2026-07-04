@@ -37,6 +37,14 @@ function corroborationPts(t) {
   return Math.min(25, distinct * 6 + Math.max(0, maxTier - 4) * 2);
 }
 
+// BIG TRENDING HOLLYWOOD (owner 2026-07-03): focus ~70% on the film/TV stories every outlet is covering — a big
+// trailer drop (the Odyssey!), a box-office result, a movie's audience reaction, a major casting/award — and less
+// on celebrity fashion/wedding-look color. These film/TV production forms get a boost so they out-rank a same-hour
+// celebrity-fashion piece; and a story carried by MULTIPLE top outlets is, by definition, "what's trending".
+const BIG_FILMTV_FORM = new Set(["boxoffice", "trailer", "reaction", "casting", "award", "renewal", "cancellation", "review", "announcement"]);
+const isFilmTV = (t) => ["movies", "tv", "streaming"].includes((t.category || "").toLowerCase());
+const outletCount = (t) => t.verification?.outletCount || (t.sources ? new Set((t.sources || []).map((s) => s.outlet)).size : 1) || 1;
+
 export function scoreTopics(topics, monitor) {
   for (const t of topics) {
     const rec = recencyPts(t.ageMin);
@@ -45,9 +53,15 @@ export function scoreTopics(topics, monitor) {
     const typeW = (TYPE_WEIGHT[t.eventType] ?? 0.4) * 15;
     const popNudge = Math.min(6, Math.log10(1 + (t._cand?.popularity || 0)) * 2); // mild TMDB-backbone tilt
     const breakoutPts = Math.min(10, (t.breakoutVelocity || 0) / 4); // an accelerating indie breakout ranks up
-    const priority = Math.round(rec + corr + statusW + typeW + popNudge + breakoutPts);
+    // BIG-HOLLYWOOD boost: a film/TV story gets +8; a marquee film/TV form (trailer/box-office/reaction/casting/
+    // award) gets a further +10 — so a big movie trailer beats a fresher celebrity-fashion piece on the same feed.
+    const bigBonus = (isFilmTV(t) ? 8 : 0) + (isFilmTV(t) && BIG_FILMTV_FORM.has(t.eventType) ? 10 : 0);
+    // TRENDING = many top outlets carrying it. Each extra top outlet beyond the first adds up to +15 (cap): the
+    // Odyssey trailer, covered by Variety+THR+Deadline, out-ranks a one-outlet wedding-look item.
+    const trendingBonus = Math.min(15, Math.max(0, outletCount(t) - 1) * 8);
+    const priority = Math.round(rec + corr + statusW + typeW + popNudge + breakoutPts + bigBonus + trendingBonus);
     t.priority = priority;
-    t.signals = { recency: rec, corroboration: corr, status: statusW, type: Math.round(typeW), pop: Math.round(popNudge), breakout: Math.round(breakoutPts) };
+    t.signals = { recency: rec, corroboration: corr, status: statusW, type: Math.round(typeW), pop: Math.round(popNudge), breakout: Math.round(breakoutPts), big: bigBonus, trending: trendingBonus };
   }
   topics.sort((a, b) => b.priority - a.priority);
   if (monitor) monitor.stage("score", `ranked ${topics.length} topics by freshness+corroboration+type (top=${topics[0]?.priority ?? "-"})`);
@@ -61,21 +75,34 @@ export function scoreTopics(topics, monitor) {
 // small penalty so near-ties spread out, but a genuinely higher-priority trending story is NEVER displaced. Music,
 // box-office, celebrity, every shape compete in this ONE pool (the old music 10% quota / 60-40 lanes are gone —
 // topic.tier pop/indie survives only as a downstream WRITING preset). publishableOnly drops held topics.
-export function selectDiverse(rankedTopics, { n = 10, spreadPenalty = 6, publishableOnly = true } = {}) {
+// 70/30 CONTENT MIX (owner 2026-07-03): ~70% of the queue is BIG film/TV/streaming/music news (movies, trailers,
+// box office, reactions, castings — the trending Hollywood stories), ~30% is celebrity personal-life (weddings,
+// relationships, fashion). We pick strictly by priority WITHIN each bucket, filling the big bucket first up to its
+// target and overflowing either way if one bucket runs dry — so a normal news day leads with movies, not weddings.
+export function selectDiverse(rankedTopics, { n = 10, spreadPenalty = 6, publishableOnly = true, bigShare = 0.7 } = {}) {
   const pool = (publishableOnly ? rankedTopics.filter((t) => t.verification?.publishable) : rankedTopics).slice();
+  const isBig = (t) => (t.category || "").toLowerCase() !== "celebrity"; // celebrity = the personal-life 30% bucket
+  const bigTarget = Math.round(n * bigShare);
   const picked = [];
   const taken = {};
-  while (picked.length < n && pool.length) {
-    let bestIdx = 0, bestEff = -Infinity;
+  const pickFrom = (wantBig) => {
+    let bestIdx = -1, bestEff = -Infinity;
     for (let i = 0; i < pool.length; i++) {
+      if (wantBig !== null && isBig(pool[i]) !== wantBig) continue; // this pass only draws from the wanted bucket
       const k = `${pool[i].category}/${pool[i].subcategory}`;
       const eff = (pool[i].priority || 0) - (taken[k] || 0) * spreadPenalty; // soft diversity nudge, NOT a hard cap
       if (eff > bestEff) { bestEff = eff; bestIdx = i; }
     }
+    if (bestIdx < 0) return false;
     const t = pool.splice(bestIdx, 1)[0];
-    const k = `${t.category}/${t.subcategory}`;
-    taken[k] = (taken[k] || 0) + 1;
+    taken[`${t.category}/${t.subcategory}`] = (taken[`${t.category}/${t.subcategory}`] || 0) + 1;
     picked.push(t);
+    return true;
+  };
+  while (picked.length < n && pool.length) {
+    const bigSoFar = picked.filter(isBig).length;
+    const wantBig = bigSoFar < bigTarget; // still under the 70% big target → prefer a big story
+    if (!pickFrom(wantBig)) pickFrom(!wantBig); // bucket empty → overflow from the other
   }
   return picked;
 }

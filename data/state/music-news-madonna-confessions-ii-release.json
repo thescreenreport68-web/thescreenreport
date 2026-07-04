@@ -1,108 +1,222 @@
 {
   "id": "music-news-madonna-confessions-ii-release",
-  "slug": "madonna-is-back-with-confessions-ii-stream-it-now",
+  "slug": "madonna-returns-with-long-awaited-confessions-ii",
   "status": "needs_review",
   "stages": {
     "attempt1": {
-      "score": 65,
+      "score": 75,
       "cat": "music/news",
-      "img": "https://www.billboard.com/wp-content/uploads/2026/07/02-madonna-2026-Credit-Rafael-Pavarotti-billboard-1800.jpg?w=1600",
       "hardBlocks": [
-        "verify-gate CUT: 1 claim(s) not in the gathered sources — Confessions on a Dance Floor was a critical and commerc",
-        "fabricated/altered quote: \"Colombian reggaeton star Feid appears on\"; \"A particularly personal moment comes with the song\" — use the exact source words or drop the quotation marks"
+        "verify-gate CUT: 1 claim(s) not in the gathered sources — *Confessions II* is available on all major streaming pl",
+        "1 unverified claim(s) (need correction)"
       ],
       "block": [
-        "verify-gate CUT: 1 claim(s) not in the gathered sources — Confessions on a Dance Floor was a critical and commerc",
-        "fabricated/altered quote: \"Colombian reggaeton star Feid appears on\"; \"A particularly personal moment comes with the song\" — use the exact source words or drop the quotation marks"
+        "verify-gate CUT: 1 claim(s) not in the gathered sources — *Confessions II* is available on all major streaming pl",
+        "1 unverified claim(s) (need correction)"
       ],
       "fixable": [],
-      "badClaims": 0
+      "badClaims": 1
     },
     "attempt2": {
-      "score": 65,
+      "score": 75,
       "cat": "music/news",
-      "img": "https://www.billboard.com/wp-content/uploads/2026/07/02-madonna-2026-Credit-Rafael-Pavarotti-billboard-1800.jpg?w=1600",
       "hardBlocks": [
-        "fabricated/altered quote: \"The lyrics explore their mother-daughter relations\" — use the exact source words or drop the quotation marks"
+        "verify-gate CUT: 1 claim(s) not in the gathered sources — Confessions on a Dance Floor reinvigorated her career",
+        "1 unverified claim(s) (need correction)"
       ],
       "block": [
-        "fabricated/altered quote: \"The lyrics explore their mother-daughter relations\" — use the exact source words or drop the quotation marks"
+        "verify-gate CUT: 1 claim(s) not in the gathered sources — Confessions on a Dance Floor reinvigorated her career",
+        "1 unverified claim(s) (need correction)"
       ],
       "fixable": [],
-      "badClaims": 0
+      "badClaims": 1
     }
   },
-  "webCheck": {
-    "contradictions": 3,
-    "cut": 3
+  "editorial": {
+    "status": "confirmed",
+    "entity": "Madonna",
+    "work": {
+      "title": "Confessions II",
+      "year": null,
+      "medium": null
+    },
+    "outlet": "hollywoodreporter.com"
   },
+  "acceptReason": "cut-and-publish (removed 2 sentence(s) + 3 field item(s); 208w remain)",
+  "holdReason": "accuracy/grounding block: verify-gate CUT: 1 claim(s) not in the gathered sources — Confessions on a Dance Floor reinvigorated her career; 1 unverified claim(s) (need correction)",
   "scorecard": {
-    "score": 65,
+    "score": 75,
     "subscores": {
-      "accuracy": 10,
-      "readability": 7,
-      "humanVoice": 6,
-      "phrasing": 7,
-      "curiosity": 6,
+      "accuracy": 9,
+      "readability": 8,
+      "humanVoice": 7,
+      "phrasing": 8,
+      "curiosity": 7,
       "structure": 8,
-      "infoGain": 6,
-      "seo": 6,
-      "faqQuality": 6,
+      "infoGain": 7,
+      "seo": 7,
+      "faqQuality": 7,
       "completeness": 7
     },
     "strengths": [
-      "All claims are accurately sourced from the provided reference facts.",
-      "The article is well-structured with clear subheadings and key takeaways.",
-      "The lead delivers the core information quickly.",
-      "The FAQ section adds new, relevant information without repeating the body.",
-      "The use of bullet points in Key Takeaways aids readability."
+      "The article accurately reports the core facts from the provided sources.",
+      "The readability is good, with short paragraphs and clear language.",
+      "The structure is logical, starting with the main news and then detailing the rollout and critical reception.",
+      "The Key Takeaways are concise and informative.",
+      "The FAQ section provides genuinely new information and answers relevant questions."
     ],
     "weaknesses": [
-      "The Flesch score of 52 is below the target range, indicating denser prose.",
-      "The phrase \"serves as a direct sequel\" in the second paragraph is a generic AI-tell.",
-      "The headline is functional but lacks a strong hook or unique angle.",
-      "The article uses \"Billboard's report states\" and \"The report notes\" which, while accurate, can feel a bit repetitive and less fluid than integrating the information more seamlessly.",
-      "The phrase \"The release continues Madonna's long-standing pattern of artistic reinvention, this time by extending the sonic and thematic world of one of her most celebrated eras\" in the conclusion feels a bit like filler praise and lacks specific examples to back it up within the article's scope.",
-      "The meta description (dek) is a bit dry and could be more engaging.",
-      "The article states \"The album is available to stream on all major digital music platforms as of July 2026\" without explicitly naming any platforms, which could be more helpful to a reader."
+      "The headline is a bit generic and could be more specific to pique curiosity.",
+      "The human voice, while present, could be more distinctive and less reportorial in places.",
+      "The transition from the album rollout to critical reception feels a little abrupt.",
+      "The 'What are critics saying?' section is quite brief and could offer a touch more detail or specific examples of praise (even if qualitative).",
+      "The article mentions 'early critical praise' but doesn't elaborate on *why* it's praised, which could enhance information gain."
     ],
     "deterministic": {
-      "words": 350,
-      "h2s": 3,
-      "h2Questions": 3,
+      "words": 243,
+      "h2s": 2,
+      "h2Questions": 2,
       "internalLinks": 0,
       "externalLinks": 0,
       "hasSources": false,
-      "faqCount": 3,
+      "faqCount": 4,
       "ktCount": 4,
       "kwInTitle": true,
       "kwInFirst100": true,
       "kwInH2": false,
-      "maxSentence": 53,
-      "avgSentence": 17,
-      "flesch": 52,
+      "maxSentence": 27,
+      "avgSentence": 19,
+      "flesch": 48,
       "bannedTells": 0,
       "fillerPraise": 0,
       "kwExact": 0,
       "hardBlocks": []
     },
     "hardBlocks": [
-      "fabricated/altered quote: \"The lyrics explore their mother-daughter relations\" — use the exact source words or drop the quotation marks"
+      "verify-gate CUT: 1 claim(s) not in the gathered sources — Confessions on a Dance Floor reinvigorated her career",
+      "1 unverified claim(s) (need correction)"
     ]
   },
-  "holdReason": "accuracy/grounding block: fabricated/altered quote: \"The lyrics explore their mother-daughter relations\" — use the exact source words or drop the quotation marks",
   "audit": {
     "ok": false,
     "internalLinks": 0,
     "failed": [
-      "body ≥ 400w",
-      "4+ FAQ",
+      "body ≥ 220w",
       "keyword in title",
-      "external sources ≥2",
-      "score ≥ 70",
-      "zero hard-blocks",
-      "humanVoice ≥ 7"
+      "≥1200px legal image",
+      "credit",
+      "zero hard-blocks"
     ]
   },
-  "ms": 334679
+  "ms": 218988,
+  "previousRuns": [
+    {
+      "id": "music-news-madonna-confessions-ii-release",
+      "slug": "madonna-is-back-with-confessions-ii-stream-it-now",
+      "status": "needs_review",
+      "stages": {
+        "attempt1": {
+          "score": 65,
+          "cat": "music/news",
+          "img": "https://www.billboard.com/wp-content/uploads/2026/07/02-madonna-2026-Credit-Rafael-Pavarotti-billboard-1800.jpg?w=1600",
+          "hardBlocks": [
+            "verify-gate CUT: 1 claim(s) not in the gathered sources — Confessions on a Dance Floor was a critical and commerc",
+            "fabricated/altered quote: \"Colombian reggaeton star Feid appears on\"; \"A particularly personal moment comes with the song\" — use the exact source words or drop the quotation marks"
+          ],
+          "block": [
+            "verify-gate CUT: 1 claim(s) not in the gathered sources — Confessions on a Dance Floor was a critical and commerc",
+            "fabricated/altered quote: \"Colombian reggaeton star Feid appears on\"; \"A particularly personal moment comes with the song\" — use the exact source words or drop the quotation marks"
+          ],
+          "fixable": [],
+          "badClaims": 0
+        },
+        "attempt2": {
+          "score": 65,
+          "cat": "music/news",
+          "img": "https://www.billboard.com/wp-content/uploads/2026/07/02-madonna-2026-Credit-Rafael-Pavarotti-billboard-1800.jpg?w=1600",
+          "hardBlocks": [
+            "fabricated/altered quote: \"The lyrics explore their mother-daughter relations\" — use the exact source words or drop the quotation marks"
+          ],
+          "block": [
+            "fabricated/altered quote: \"The lyrics explore their mother-daughter relations\" — use the exact source words or drop the quotation marks"
+          ],
+          "fixable": [],
+          "badClaims": 0
+        }
+      },
+      "webCheck": {
+        "contradictions": 3,
+        "cut": 3
+      },
+      "scorecard": {
+        "score": 65,
+        "subscores": {
+          "accuracy": 10,
+          "readability": 7,
+          "humanVoice": 6,
+          "phrasing": 7,
+          "curiosity": 6,
+          "structure": 8,
+          "infoGain": 6,
+          "seo": 6,
+          "faqQuality": 6,
+          "completeness": 7
+        },
+        "strengths": [
+          "All claims are accurately sourced from the provided reference facts.",
+          "The article is well-structured with clear subheadings and key takeaways.",
+          "The lead delivers the core information quickly.",
+          "The FAQ section adds new, relevant information without repeating the body.",
+          "The use of bullet points in Key Takeaways aids readability."
+        ],
+        "weaknesses": [
+          "The Flesch score of 52 is below the target range, indicating denser prose.",
+          "The phrase \"serves as a direct sequel\" in the second paragraph is a generic AI-tell.",
+          "The headline is functional but lacks a strong hook or unique angle.",
+          "The article uses \"Billboard's report states\" and \"The report notes\" which, while accurate, can feel a bit repetitive and less fluid than integrating the information more seamlessly.",
+          "The phrase \"The release continues Madonna's long-standing pattern of artistic reinvention, this time by extending the sonic and thematic world of one of her most celebrated eras\" in the conclusion feels a bit like filler praise and lacks specific examples to back it up within the article's scope.",
+          "The meta description (dek) is a bit dry and could be more engaging.",
+          "The article states \"The album is available to stream on all major digital music platforms as of July 2026\" without explicitly naming any platforms, which could be more helpful to a reader."
+        ],
+        "deterministic": {
+          "words": 350,
+          "h2s": 3,
+          "h2Questions": 3,
+          "internalLinks": 0,
+          "externalLinks": 0,
+          "hasSources": false,
+          "faqCount": 3,
+          "ktCount": 4,
+          "kwInTitle": true,
+          "kwInFirst100": true,
+          "kwInH2": false,
+          "maxSentence": 53,
+          "avgSentence": 17,
+          "flesch": 52,
+          "bannedTells": 0,
+          "fillerPraise": 0,
+          "kwExact": 0,
+          "hardBlocks": []
+        },
+        "hardBlocks": [
+          "fabricated/altered quote: \"The lyrics explore their mother-daughter relations\" — use the exact source words or drop the quotation marks"
+        ]
+      },
+      "holdReason": "accuracy/grounding block: fabricated/altered quote: \"The lyrics explore their mother-daughter relations\" — use the exact source words or drop the quotation marks",
+      "audit": {
+        "ok": false,
+        "internalLinks": 0,
+        "failed": [
+          "body ≥ 400w",
+          "4+ FAQ",
+          "keyword in title",
+          "external sources ≥2",
+          "score ≥ 70",
+          "zero hard-blocks",
+          "humanVoice ≥ 7"
+        ]
+      },
+      "ms": 334679
+    }
+  ]
 }

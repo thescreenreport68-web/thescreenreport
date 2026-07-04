@@ -1,0 +1,51 @@
+{
+  "runId": "vrun-2026-07-03T15-13-17",
+  "at": "2026-07-03T15:17:39.812Z",
+  "windowHours": 48,
+  "target": 1,
+  "candidates": 4,
+  "made": [
+    {
+      "slug": "passion-of-the-christ-set-for-theatrical-return",
+      "title": "'Passion of the Christ' Set For Theatrical Return",
+      "category": "movies",
+      "seconds": 29.647,
+      "usd": 0.01129,
+      "file": "/Users/sivajithcu/Movie News site/site/data/video/out/passion-of-the-christ-set-for-theatrical-return.mp4"
+    }
+  ],
+  "failed": [
+    {
+      "slug": "power-book-iii-raising-kanan-introduces-young-spoiler-character-to-app",
+      "error": "skip: sensitive story (legal/minor)"
+    },
+    {
+      "slug": "star-wars-kicks-off-new-era-this-august",
+      "error": "script gate BLOCKED story: word count 133 outside 75-112 (over = video runs past 40s)"
+    }
+  ],
+  "cost": {
+    "total": 0.029632810699999998,
+    "byModel": {
+      "google/gemini-2.5-flash-lite": {
+        "calls": 3,
+        "in": 4002,
+        "out": 34,
+        "usd": 0.0004138
+      },
+      "google/gemini-2.5-flash": {
+        "calls": 4,
+        "in": 8539,
+        "out": 7135,
+        "usd": 0.01987
+      },
+      "deepseek/deepseek-v3.2": {
+        "calls": 4,
+        "in": 8402,
+        "out": 6608,
+        "usd": 0.0093490107
+      }
+    },
+    "calls": 11
+  }
+}

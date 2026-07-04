@@ -1,0 +1,113 @@
+{
+  "id": "news-power-book-iii-raising-kanan-young-spoiler-character",
+  "slug": "power-book-iii-raising-kanan-introduces-young-spoiler-character-to-app",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": 72,
+      "cat": "tv/news",
+      "hardBlocks": [
+        "a 70-word run-on sentence (>55 — split it)"
+      ],
+      "block": [],
+      "fixable": [
+        "a 70-word run-on sentence (>55 — split it)"
+      ],
+      "badClaims": 0
+    },
+    "attempt2": {
+      "score": 78,
+      "cat": "tv/news",
+      "hardBlocks": [
+        "a 70-word run-on sentence (>55 — split it)"
+      ],
+      "block": [],
+      "fixable": [
+        "a 70-word run-on sentence (>55 — split it)"
+      ],
+      "badClaims": 0
+    }
+  },
+  "editorial": {
+    "status": "unconfirmed",
+    "entity": "Power Book III: Raising Kanan",
+    "work": {
+      "title": "Power Book III: Raising Kanan",
+      "year": null,
+      "medium": "tv"
+    },
+    "outlet": "variety.com"
+  },
+  "acceptReason": "terminal-accept (verified accurate, score 78, 1 quality nit(s))",
+  "webCheck": {
+    "contradictions": 3,
+    "cut": 2
+  },
+  "scorecard": {
+    "score": 78,
+    "subscores": {
+      "accuracy": 9,
+      "readability": 8,
+      "humanVoice": 7,
+      "phrasing": 8,
+      "curiosity": 8,
+      "structure": 8,
+      "infoGain": 7,
+      "seo": 7,
+      "faqQuality": 8,
+      "completeness": 8
+    },
+    "strengths": [
+      "The article is accurate and well-sourced, attributing key information to Variety.",
+      "The lead quickly delivers the core news, adhering to news standards.",
+      "The structure is clear with relevant subheadings and helpful Key Takeaways.",
+      "The FAQs provide genuinely new and useful information, enhancing the article's value.",
+      "The language is generally clear and avoids excessive jargon, making it accessible to a broad audience.",
+      "The headline is specific and true, avoiding clickbait.",
+      "The article successfully integrates the primary keyword naturally without forcing it."
+    ],
+    "weaknesses": [
+      "The Flesch score of 44 indicates dense prose, suggesting some sentences could be shorter or simpler for better readability.",
+      "The phrase \"delve into the story\" in the 'What is Power: Origins?' section is a generic AI-tell that detracts from human voice.",
+      "The article could benefit from slightly more varied sentence structure to improve rhythm and engagement.",
+      "While accurate, the article's tone is quite factual and could occasionally benefit from a touch more wit or distinctive phrasing to elevate the human voice.",
+      "The 'Who is involved in the production?' section, while informative, reads a bit like a list of credits rather than integrated prose, impacting flow slightly."
+    ],
+    "deterministic": {
+      "words": 291,
+      "h2s": 2,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 4,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 70,
+      "avgSentence": 21,
+      "flesch": 44,
+      "bannedTells": 1,
+      "fillerPraise": 0,
+      "kwExact": 2,
+      "hardBlocks": [
+        "a 70-word run-on sentence (>55 — split it)"
+      ]
+    },
+    "hardBlocks": [
+      "a 70-word run-on sentence (>55 — split it)"
+    ]
+  },
+  "score": 78,
+  "category": "tv",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "zero hard-blocks"
+    ]
+  },
+  "ms": 210983
+}

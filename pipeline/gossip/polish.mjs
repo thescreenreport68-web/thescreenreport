@@ -81,6 +81,42 @@ export function cutSentencesWith(body, needles) {
   return paras.filter((p) => p.trim()).join("\n\n");
 }
 
+// APPLY a verified CORRECTION everywhere: replace an exact wrong specific with the right value from the source
+// (word-boundary, case-insensitive) — so a wrong year/number/name is FIXED in the body AND every structured field,
+// not just deleted. corrections = [{ bad, correction }]. Never invents: only substitutes a value the verifier
+// took from the source bundle.
+const escRe = (s) => String(s).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+export function applyCorrections(text, corrections = []) {
+  let s = String(text ?? "");
+  for (const c of corrections) {
+    if (!c || !c.bad || c.correction == null || String(c.correction).trim() === "") continue;
+    s = s.replace(new RegExp(`(^|[^\\w])${escRe(c.bad)}([^\\w]|$)`, "gi"), (m, a, b) => `${a}${c.correction}${b}`);
+  }
+  return s;
+}
+
+// HOLD EVERY reader-facing STRUCTURED field to the same specifics bar as the body. After the writer's correction
+// passes, any specific the source did NOT support is either CORRECTED (source gave the right value) or DROPPED
+// (uncorrectable ⇒ removed, never published — owner's hard rule). This closes the hole where a wrong date/number
+// in keyTakeaways / whatWeKnow / dek / an FAQ answer bypassed the body-only verifier. drops = specific texts with
+// no source-correction. Mutates + returns the article.
+export function scrubStructuredFields(article, { corrections = [], drops = [] } = {}) {
+  if (!article || typeof article !== "object") return article;
+  const terms = [...new Set((drops || []).map((d) => String(d || "").trim()).filter((d) => d.length >= 2))];
+  const rx = terms.map((t) => new RegExp(`(^|[^\\w])${escRe(t)}([^\\w]|$)`, "i"));
+  const stillBad = (str) => rx.some((r) => r.test(String(str)));
+  const fix = (str) => applyCorrections(str, corrections);
+  const cleanArr = (arr) => Array.isArray(arr) ? arr.map(fix).filter((x) => x && String(x).trim() && !stillBad(x)) : arr;
+  for (const f of ["dek", "pullQuote", "gossipPull", "metaTitle", "metaDescription"]) if (article[f]) article[f] = fix(article[f]);
+  if ("keyTakeaways" in article) article.keyTakeaways = cleanArr(article.keyTakeaways);
+  if ("whatWeKnow" in article) article.whatWeKnow = cleanArr(article.whatWeKnow);
+  if ("whatWeDont" in article) article.whatWeDont = cleanArr(article.whatWeDont);
+  if (Array.isArray(article.faq)) article.faq = article.faq
+    .map((f) => (f && f.q && f.a) ? { q: fix(f.q), a: fix(f.a) } : f)
+    .filter((f) => f && f.q && f.a && !stillBad(f.q) && !stillBad(f.a));
+  return article;
+}
+
 // TRIM a dangling incomplete sentence from the end (truncation backstop): if the last generation got cut off
 // mid-sentence, drop that trailing fragment so the published article never ends mid-thought.
 export function trimIncomplete(body) {
@@ -124,9 +160,36 @@ function toQuestion(s) {
   else q = q.charAt(0).toUpperCase() + q.slice(1);
   return q.replace(/\s+/g, " ").trim() + "?";
 }
+// Turn a confirmed FACT (a whatWeKnow line) into a reader Q&A whose ANSWER is the fact itself — never a placeholder.
+// Deterministic, invents nothing: it just phrases a natural question around the fact's subject + beat.
+function factToQuestion(fact, article) {
+  const f = String(fact).trim();
+  const subjM = f.match(/^((?:[A-Z][\w'’.&-]+)(?:\s+(?:and\s+|&\s+)?[A-Z][\w'’.&-]+){0,3})/);
+  const subj = (subjM && subjM[1].trim()) || String(article?.primaryEntity || "").trim() || (String(article?.title || "").split(/[:—–-]/)[0] || "this story").trim();
+  const low = f.toLowerCase();
+  if (/\bfiled for divorce|\bsplit\b|broke up|separat/.test(low)) return `What happened between ${subj} and their partner?`;
+  if (/\bwed\b|married|engaged|wedding|nuptials/.test(low)) return `What's the latest on ${subj}'s wedding?`;
+  if (/\bwore|dress|gown|outfit|heels|\blook\b/.test(low)) return `What did ${subj} wear?`;
+  if (/\bdonat|charity|\bgift\b/.test(low)) return `What did ${subj} donate?`;
+  if (/\bspotted|\bseen\b|attended|arriv/.test(low)) return `Where was ${subj} spotted?`;
+  if (/\bannounc|reveal|shared|confirmed/.test(low)) return `What did ${subj} announce?`;
+  return `What do we know about ${subj}?`;
+}
 export function ensureFaq(article) {
-  const cur = (article.faq || []).filter((f) => f && f.q && f.a);
+  const cur = (article.faq || []).filter((f) => f && f.q && f.a && String(f.a).trim());
   if (cur.length >= 1) return cur.slice(0, 4);
+  // Prefer REAL answers from confirmed facts (whatWeKnow) over "we don't know yet" placeholders — an FAQ a reader
+  // actually learns something from (owner: every published article must carry relevant FAQs WITH real answers).
+  const known = [...new Set((article.whatWeKnow || []).map((x) => String(x).trim()).filter(Boolean))];
+  if (known.length) {
+    const seen = new Set();
+    return known.slice(0, 3).map((fact) => {
+      let q = factToQuestion(fact, article);
+      if (seen.has(q)) q = q.replace(/^What\b/, "What else").replace(/^Where\b/, "Where else");
+      seen.add(q);
+      return { q, a: fact };
+    });
+  }
   return (article.whatWeDont || [])
     .map((x) => String(x).trim())
     .filter(Boolean)

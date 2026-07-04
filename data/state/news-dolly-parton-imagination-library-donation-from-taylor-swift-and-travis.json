@@ -1,0 +1,87 @@
+{
+  "id": "news-dolly-parton-imagination-library-donation-from-taylor-swift-and-travis",
+  "slug": "dolly-parton-overjoyed-by-taylor-swift-and-travis-kelce-s-2-million-do",
+  "status": "needs_review",
+  "stages": {
+    "attempt1": {
+      "score": 85,
+      "cat": "celebrity/news",
+      "hardBlocks": [],
+      "block": [],
+      "fixable": [],
+      "badClaims": 0
+    }
+  },
+  "editorial": {
+    "status": "official",
+    "entity": "Dolly Parton",
+    "work": null,
+    "outlet": "rollingstone.com"
+  },
+  "webCheck": {
+    "ran": true,
+    "corrected": 3,
+    "remaining": 2
+  },
+  "holdReason": "verified accurate but score 85 < 65 (weak writing)",
+  "scorecard": {
+    "score": 85,
+    "subscores": {
+      "accuracy": 10,
+      "readability": 9,
+      "humanVoice": 9,
+      "phrasing": 9,
+      "curiosity": 9,
+      "structure": 8,
+      "infoGain": 8,
+      "seo": 8,
+      "faqQuality": 8,
+      "completeness": 7
+    },
+    "strengths": [
+      "The article is highly accurate, faithfully reporting the sourced information without embellishment or fabrication.",
+      "The human voice is strong, particularly in the direct quotes from Dolly Parton, which are engaging and authentic.",
+      "Readability is excellent for a news piece; short paragraphs and clear language make it easy to digest quickly.",
+      "The phrasing is natural and avoids keyword stuffing, making it flow well.",
+      "The headline and dek are clear and directly answer the 'what happened' question, satisfying curiosity immediately.",
+      "The structure is appropriate for a short news article, with an answer-first lead and relevant subheads.",
+      "The FAQ section adds genuinely new information, enhancing the overall value.",
+      "The article effectively conveys the core event and its significance without unnecessary length."
+    ],
+    "weaknesses": [
+      "While the structure is good for news, it could benefit from a slightly more explicit 'Key Takeaways' section at the very top for ultra-fast consumption, though the existing dek and lead serve a similar purpose.",
+      "The 'completeness' score is slightly lower because, while it covers the core event well, it doesn't delve into the broader impact or context of the Imagination Library or the couple's philanthropy beyond what was strictly reported in the single source. This is acceptable for a short news piece but limits its overall depth."
+    ],
+    "deterministic": {
+      "words": 238,
+      "h2s": 2,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 3,
+      "ktCount": 3,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": true,
+      "maxSentence": 31,
+      "avgSentence": 18,
+      "flesch": 53,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 2,
+      "hardBlocks": []
+    },
+    "hardBlocks": []
+  },
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "body ≥ 220w",
+      "≥1200px legal image",
+      "credit"
+    ]
+  },
+  "ms": 109661
+}

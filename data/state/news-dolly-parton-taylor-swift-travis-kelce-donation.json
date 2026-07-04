@@ -1,0 +1,114 @@
+{
+  "id": "news-dolly-parton-taylor-swift-travis-kelce-donation",
+  "slug": "dolly-parton-thanks-taylor-swift-and-travis-kelce-for-generous-donatio",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": 85,
+      "cat": "celebrity/news",
+      "hardBlocks": [
+        "verify-gate CUT: 2 claim(s) not in the gathered sources — Dolly Parton founded the Imagination Library; The Imagination Library mails free books to children fr"
+      ],
+      "block": [
+        "verify-gate CUT: 2 claim(s) not in the gathered sources — Dolly Parton founded the Imagination Library; The Imagination Library mails free books to children fr"
+      ],
+      "fixable": [],
+      "badClaims": 0
+    },
+    "attempt2": {
+      "score": 85,
+      "cat": "celebrity/news",
+      "hardBlocks": [
+        "verify-gate CUT: 2 claim(s) not in the gathered sources — Taylor Swift and Travis Kelce were married on July 3, 2; Dolly Parton's Imagination Library mails free, high-qua"
+      ],
+      "block": [
+        "verify-gate CUT: 2 claim(s) not in the gathered sources — Taylor Swift and Travis Kelce were married on July 3, 2; Dolly Parton's Imagination Library mails free, high-qua"
+      ],
+      "fixable": [],
+      "badClaims": 0
+    }
+  },
+  "editorial": {
+    "status": "official",
+    "entity": "Dolly Parton",
+    "work": null,
+    "outlet": "billboard.com"
+  },
+  "acceptReason": "cut-and-publish (removed 1 sentence(s) + 2 field item(s); 270w remain) → re-gated clean at 75",
+  "webCheck": {
+    "ran": true,
+    "corrected": 4,
+    "remaining": 3
+  },
+  "scorecard": {
+    "score": 75,
+    "subscores": {
+      "accuracy": 10,
+      "readability": 8,
+      "humanVoice": 8,
+      "phrasing": 7,
+      "curiosity": 7,
+      "structure": 7,
+      "infoGain": 7,
+      "seo": 7,
+      "faqQuality": 0,
+      "completeness": 4
+    },
+    "strengths": [
+      "Accurate reporting based on the provided source material.",
+      "The lead quickly delivers the core information.",
+      "Direct quotes from Dolly Parton are used effectively to convey her voice and the article's central event.",
+      "The article uses plain language and avoids jargon.",
+      "The subheadings are clear and relevant to the content.",
+      "The article avoids generic AI tells and filler praise."
+    ],
+    "weaknesses": [
+      "The article is missing the 'about' section for Dolly Parton, which would add valuable context and completeness.",
+      "The 'How Was the Donation Made?' section could benefit from explicitly attributing the broader donation details to Billboard, as per the instructions for 'DEVELOPING' facts.",
+      "The phrasing 'The country music icon shared a video message expressing her gratitude for the gift' in the lead is a bit generic; it could be more specific about the 'gift' being the donation.",
+      "The article does not include any FAQ, which was an optional but beneficial component for information gain.",
+      "The article feels a bit abrupt due to its brevity and lack of the 'about' section."
+    ],
+    "deterministic": {
+      "words": 215,
+      "h2s": 3,
+      "h2Questions": 3,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 0,
+      "ktCount": 1,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 38,
+      "avgSentence": 15,
+      "flesch": 61,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": [
+        "FAQ 0 < 2",
+        "body 215w < 220"
+      ]
+    },
+    "hardBlocks": [
+      "FAQ 0 < 2",
+      "body 215w < 220"
+    ]
+  },
+  "score": 75,
+  "category": "celebrity",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "body ≥ 220w",
+      "2+ FAQ",
+      "key takeaways",
+      "zero hard-blocks"
+    ]
+  },
+  "ms": 212735
+}

@@ -77,8 +77,11 @@ export function verifyClaims(article, topic) {
     //    least somewhere in the facts; a number in neither is invented.
     else {
       const nums = numberTokens(text);
-      const qLoose = stripPunct(quote);
-      const missing = nums.filter((n) => !qLoose.includes(n) && !hayLoose.includes(n));
+      // BOUNDARY match, not substring (2026-07-03 audit #2): a figure counts as grounded only if it appears as a
+      // WHOLE token in the receipt or facts — "2003" inside "12003" is not grounding.
+      const qSet = new Set(stripPunct(quote).split(/\s+/).filter(Boolean));
+      const haySet = new Set(hayLoose.split(/\s+/).filter(Boolean));
+      const missing = nums.filter((n) => !qSet.has(n) && !haySet.has(n));
       if (missing.length) { status = "UNVERIFIED"; why = `figure(s) not grounded in the facts (likely invented): ${missing.join(", ")}`; }
     }
 

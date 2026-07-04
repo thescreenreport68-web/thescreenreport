@@ -19,7 +19,7 @@ export const HOMEPAGE = {
 
   HERO_AGE_LADDER_H: [24, 48, 72], // widen the window on slow days
   HERO_MIN_IMAGE_WIDTH: 1200,
-  HERO_FORMS: new Set(["news", "box-office", "awards", "music-news", "music-awards", "trailer"]),
+  HERO_FORMS: new Set(["news", "box-office", "awards", "music-news", "music-awards", "trailer", "inside"]),
 
   TRENDING_HALF_LIFE_H: 8,
   TRENDING_MAX_AGE_H: 24,

@@ -1,0 +1,42 @@
+{
+  "runId": "vrun-2026-07-03T13-07-58",
+  "at": "2026-07-03T13:11:56.821Z",
+  "windowHours": 96,
+  "target": 1,
+  "candidates": 5,
+  "made": [
+    {
+      "slug": "supergirl-cast-meet-the-stars-of-dcu-s-upcoming-film",
+      "title": "Supergirl Cast: Meet the Stars of DCU's Upcoming Film",
+      "category": "movies",
+      "seconds": 45.967,
+      "usd": 0.01749,
+      "file": "/Users/sivajithcu/Movie News site/site/data/video/out/supergirl-cast-meet-the-stars-of-dcu-s-upcoming-film.mp4"
+    }
+  ],
+  "failed": [],
+  "cost": {
+    "total": 0.01749036,
+    "byModel": {
+      "google/gemini-2.5-flash": {
+        "calls": 2,
+        "in": 4307,
+        "out": 4620,
+        "usd": 0.0128421
+      },
+      "deepseek/deepseek-v3.2": {
+        "calls": 1,
+        "in": 2084,
+        "out": 1786,
+        "usd": 0.0010865599999999999
+      },
+      "google/gemini-2.5-flash-lite": {
+        "calls": 17,
+        "in": 34069,
+        "out": 387,
+        "usd": 0.0035616999999999997
+      }
+    },
+    "calls": 20
+  }
+}

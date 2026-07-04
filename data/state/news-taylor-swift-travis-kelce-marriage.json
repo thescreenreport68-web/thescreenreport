@@ -1,0 +1,119 @@
+{
+  "id": "news-taylor-swift-travis-kelce-marriage",
+  "slug": "taylor-swift-and-travis-kelce-s-wedding-details-revealed",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": 65,
+      "cat": "celebrity/news",
+      "hardBlocks": [
+        "primary keyword not in title",
+        "verify-gate CUT: 4 claim(s) not in the gathered sources — Guests were not told the exact location—Madison Square ; The pair requested no gifts; George Kittle noted he might still get Kelce an old coi",
+        "ungrounded specific(s): 1,000 — every figure/outlet must exist in the gathered sources or authoritative facts",
+        "1 unverified claim(s) (need correction)"
+      ],
+      "block": [
+        "verify-gate CUT: 4 claim(s) not in the gathered sources — Guests were not told the exact location—Madison Square ; The pair requested no gifts; George Kittle noted he might still get Kelce an old coi",
+        "ungrounded specific(s): 1,000 — every figure/outlet must exist in the gathered sources or authoritative facts",
+        "1 unverified claim(s) (need correction)"
+      ],
+      "fixable": [
+        "primary keyword not in title"
+      ],
+      "badClaims": 1
+    },
+    "attempt2": {
+      "score": 75,
+      "cat": "celebrity/news",
+      "hardBlocks": [
+        "primary keyword not in title",
+        "verify-gate CUT: 1 claim(s) not in the gathered sources — According to reporting by Billboard, the couple request"
+      ],
+      "block": [
+        "verify-gate CUT: 1 claim(s) not in the gathered sources — According to reporting by Billboard, the couple request"
+      ],
+      "fixable": [
+        "primary keyword not in title"
+      ],
+      "badClaims": 0
+    }
+  },
+  "editorial": {
+    "status": "confirmed",
+    "entity": "Taylor Swift",
+    "work": null,
+    "outlet": "billboard.com"
+  },
+  "acceptReason": "cut-and-publish (removed 0 sentence(s) + 1 field item(s); 512w remain) → re-gated clean at 75",
+  "scorecard": {
+    "score": 75,
+    "subscores": {
+      "accuracy": 7,
+      "readability": 8,
+      "humanVoice": 7,
+      "phrasing": 7,
+      "curiosity": 8,
+      "structure": 8,
+      "infoGain": 7,
+      "seo": 6,
+      "faqQuality": 8,
+      "completeness": 7
+    },
+    "strengths": [
+      "The lead quickly delivers the core information about the wedding.",
+      "The article uses clear and concise language, making it easy to read.",
+      "Quotes from Donna Kelce and Kylie Kelce add a human touch and specific detail.",
+      "The subheadings are clear and directly address common reader questions.",
+      "The FAQ section provides genuinely new and interesting information not covered in the main body.",
+      "The article attributes claims to specific sources (Billboard, Rolling Stone, Deadline, AP), enhancing credibility."
+    ],
+    "weaknesses": [
+      "The article states Austin Swift served as Man of Honor and Jason Kelce as Best Man, but this specific detail is not present in the provided source material. The source only mentions 'a few people close to the duo... shared bits and pieces'. This is a fabrication.",
+      "The claim about Christian Dior Haute Couture and Christian Louboutin shoes for both the bride and groom is attributed to Rolling Stone and Deadline, but the provided source material only mentions 'Christian Dior haute couture and Christian Louboutin shoes' without explicitly stating both wore them, and the specific roles of Jonathan Anderson are not in the provided sources.",
+      "The guest list details (Ed Sheeran, Sabrina Carpenter, etc.) are not present in the provided source material, indicating a fabrication.",
+      "The 'jumbo jet on a runway' quote from George Kittle is not in the provided source material, indicating a fabrication.",
+      "The detail about custom watermarked invitations is not in the provided source material, indicating a fabrication.",
+      "The 'Taylor Swift had previously joked about the size of her guest list' quote from The Graham Norton Show is not in the provided source material, indicating a fabrication.",
+      "The FAQ answer about charity donations is not present in the provided source material, indicating a fabrication.",
+      "The FAQ answer about Madison Square Garden's 'JUST MARRIED!' sign is not present in the provided source material, indicating a fabrication.",
+      "The article repeats 'Taylor Swift and Travis Kelce' in the first paragraph when a pronoun could have been used, slightly impacting fluency.",
+      "The SEO section is missing internal links, which would improve its score."
+    ],
+    "deterministic": {
+      "words": 496,
+      "h2s": 3,
+      "h2Questions": 3,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 3,
+      "ktCount": 4,
+      "kwInTitle": false,
+      "kwInFirst100": true,
+      "kwInH2": true,
+      "maxSentence": 33,
+      "avgSentence": 16,
+      "flesch": 64,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": [
+        "primary keyword not in title"
+      ]
+    },
+    "hardBlocks": [
+      "primary keyword not in title"
+    ]
+  },
+  "score": 75,
+  "category": "celebrity",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "zero hard-blocks"
+    ]
+  },
+  "ms": 220273
+}

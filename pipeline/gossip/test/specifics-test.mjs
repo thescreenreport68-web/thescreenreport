@@ -41,7 +41,22 @@ const llmOff = async () => ({ list: [], ran: false }); // LLM down → only the 
 {
   const badTitle = { body: "The scandal is detailed in her memoir *Totally Invented Title*, out now.", claims: [] };
   const v = await verifyGate({ article: badTitle, bundle, llmImpl: llmOff });
-  check("an INVENTED work title is flagged", v.unsupported.some((u) => /Totally Invented Title/.test(u.claim) && u.kind === "title"));
+  check("an INVENTED italic work title is flagged", v.unsupported.some((u) => /Totally Invented Title/.test(u.claim) && u.kind === "title"));
+}
+// THE NORTH-WEST GAP: a fabricated song title in "quotes" (< 12 chars, not italic) must now be flagged even LLM-off.
+{
+  const songBundle = { sources: [{ outlet: "E!", text: "North West shared TikTok videos showing off blue lips and face piercings while dancing. Kesha commented on one clip." }] };
+  const fake = { body: `North danced to tracks like Kesha's "Grow a Pear" and Eiffel's "A Decade in Blue" in the video.`, claims: [] };
+  const v = await verifyGate({ article: fake, bundle: songBundle, llmImpl: llmOff });
+  check("a fabricated QUOTED song title is flagged (the North West bug)", v.unsupported.some((u) => /Grow a Pear/.test(u.claim) && u.kind === "title"), JSON.stringify(v.unsupported.map((u) => u.claim)));
+  check("both fabricated quoted songs are caught", v.unsupported.some((u) => /Decade in Blue/.test(u.claim)));
+}
+{
+  // a GROUNDED quoted title passes; a real spoken-sentence quote is NOT mis-extracted as a title (no false positive)
+  const gb = { sources: [{ outlet: "E!", text: `She released a track called "Piercing on My Hand" and told fans "i love you all so much" at the show.` }] };
+  const good = { body: `Her track "Piercing on My Hand" is out now. She told fans "i love you all so much".`, claims: [] };
+  const v = await verifyGate({ article: good, bundle: gb, llmImpl: llmOff });
+  check("a grounded quoted title + a lowercase spoken quote do NOT false-flag", v.ok, JSON.stringify(v.unsupported.map((u) => u.claim)));
 }
 
 // ── quoteGuard: contiguous vs scattered ──

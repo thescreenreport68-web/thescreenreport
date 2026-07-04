@@ -1,0 +1,55 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Cap,Anton,92,&H00FFFFFF,&H00B9B9B9,&H00101010,&HA0000000,0,0,0,0,100,100,1,0,1,4,2,2,70,70,330,1
+Style: Hook,Anton,120,&H00FFFFFF,&H00CFCFCF,&H00101010,&HA0000000,0,0,0,0,100,100,1,0,1,5,3,5,70,70,0,1
+Style: KickText,Anton,40,&H00FFFFFF,&H00FFFFFF,&H00101010,&H00000000,0,0,0,0,100,100,4,0,1,0,0,5,0,0,0,1
+Style: KickDraw,Anton,40,&H002821D9,&H002821D9,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,7,0,0,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.12,0:00:06.50,KickDraw,,0,0,0,,{\fad(140,120)\pos(62,126)\1c&H000000&\1a&H78&\blur6\p1}m 18 0 l 950 0 b 968 0 968 0 968 18 l 968 70 b 968 88 968 88 950 88 l 18 88 b 0 88 0 88 0 70 l 0 18 b 0 0 0 0 18 0{\p0}
+Dialogue: 1,0:00:00.12,0:00:06.50,KickDraw,,0,0,0,,{\fad(140,120)\pos(56,118)\p1}m 18 0 l 950 0 b 968 0 968 0 968 18 l 968 70 b 968 88 968 88 950 88 l 18 88 b 0 88 0 88 0 70 l 0 18 b 0 0 0 0 18 0{\p0}
+Dialogue: 2,0:00:00.12,0:00:06.50,KickText,,0,0,0,,{\fad(140,120)\pos(540,163)}PASSION OF THE CHRIST THEATRICAL
+Dialogue: 0,0:00:00.05,0:00:00.75,Hook,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k25}ONE {\k20}OF {\k25}THE
+Dialogue: 0,0:00:00.75,0:00:02.16,Hook,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k30}MOST {\k75}CONTROVERSIAL {\k35}FILMS
+Dialogue: 0,0:00:02.16,0:00:02.96,Hook,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k30}EVER {\k30}MADE {\k20}IS
+Dialogue: 0,0:00:02.96,0:00:03.86,Hook,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k40}HEADED {\k30}BACK {\k20}TO
+Dialogue: 0,0:00:03.86,0:00:04.37,Hook,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k50}THEATERS
+Dialogue: 0,0:00:04.37,0:00:05.47,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k40}THAT'S {\k25}THE {\k45}PASSION
+Dialogue: 0,0:00:05.47,0:00:06.32,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k20}OF {\k25}THE {\k40}CHRIST
+Dialogue: 0,0:00:06.32,0:00:07.53,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k25}MEL {\k50}GIBSON'S {\k45}{\1c&H2821D9&}GRAPHIC{\1c&HFFFFFF&}
+Dialogue: 0,0:00:07.53,0:00:08.53,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k50}BIBLICAL {\k30}EPIC {\k20}IS
+Dialogue: 0,0:00:08.53,0:00:09.89,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k60}REPORTEDLY {\k50}PREPPING {\k25}FOR
+Dialogue: 0,0:00:09.89,0:00:10.64,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k15}A {\k60}{\1c&H2821D9&}RE-RELEASE{\1c&HFFFFFF&}
+Dialogue: 0,0:00:10.64,0:00:11.54,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k20}IT {\k35}WOULD {\k35}BRING
+Dialogue: 0,0:00:11.54,0:00:12.65,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k25}THE {\k40}FILM'S {\k45}INTENSE
+Dialogue: 0,0:00:12.65,0:00:13.85,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k55}DEPICTION {\k20}OF {\k45}JESUS'S
+Dialogue: 0,0:00:13.85,0:00:14.85,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k35}FINAL {\k35}HOURS {\k30}BACK
+Dialogue: 0,0:00:14.85,0:00:15.56,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k20}TO {\k25}THE {\k25}BIG
+Dialogue: 0,0:00:15.56,0:00:15.96,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k40}SCREEN
+Dialogue: 0,0:00:15.96,0:00:17.06,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k25}THE {\k40}REPORT {\k45}DOESN'T
+Dialogue: 0,0:00:17.06,0:00:17.91,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k30}NAME {\k35}DATES {\k20}OR
+Dialogue: 0,0:00:17.91,0:00:19.07,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k50}THEATERS {\k40}THAT'S {\k25}PER
+Dialogue: 0,0:00:19.07,0:00:20.22,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k25}THE {\k60}WASHINGTON {\k30}POST
+Dialogue: 0,0:00:20.22,0:00:21.23,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k25}BUT {\k40}{\1c&H2821D9&}EASTER{\1c&HFFFFFF&} {\k35}WOULD
+Dialogue: 0,0:00:21.23,0:00:22.13,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k20}BE {\k25}THE {\k45}OBVIOUS
+Dialogue: 0,0:00:22.13,0:00:22.38,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k25}FIT
+Dialogue: 0,0:00:22.38,0:00:23.48,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k15}A {\k60}RE-RELEASE {\k35}WOULD
+Dialogue: 0,0:00:23.48,0:00:24.49,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k50}{\1c&H2821D9&}REIGNITE{\1c&HFFFFFF&} {\k25}ALL {\k25}THE
+Dialogue: 0,0:00:24.49,0:00:25.19,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k25}OLD {\k45}DEBATES
+Dialogue: 0,0:00:25.19,0:00:26.04,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k20}IT {\k25}WAS {\k40}HAILED
+Dialogue: 0,0:00:26.04,0:00:27.05,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k25}FOR {\k25}ITS {\k50}{\1c&H2821D9&}DEVOTION{\1c&HFFFFFF&}
+Dialogue: 0,0:00:27.05,0:00:28.15,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k25}AND {\k60}CRITICIZED {\k25}FOR
+Dialogue: 0,0:00:28.15,0:00:28.90,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k25}ITS {\k50}{\1c&H2821D9&}VIOLENCE{\1c&HFFFFFF&}
+Dialogue: 0,0:00:28.90,0:00:29.76,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k20}SO {\k25}THE {\k40}FILM'S
+Dialogue: 0,0:00:29.76,0:00:30.71,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k40}RETURN {\k35}COULD {\k20}BE
+Dialogue: 0,0:00:30.71,0:00:31.71,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k15}A {\k35}MAJOR {\k50}CULTURAL
+Dialogue: 0,0:00:31.71,0:00:32.12,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k40}MOMENT
+Dialogue: 0,0:00:32.12,0:00:32.92,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k30}WILL {\k25}YOU {\k25}SEE
+Dialogue: 0,0:00:32.92,0:00:33.82,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k20}IT {\k20}IN {\k50}THEATERS
+Dialogue: 0,0:00:33.82,0:00:34.42,Cap,,0,0,0,,{\fad(70,50)\t(0,130,\fscx106\fscy106)\t(130,220,\fscx100\fscy100)}{\k30}THIS {\k30}TIME

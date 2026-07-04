@@ -1,0 +1,96 @@
+{
+  "id": "news-taylor-swift-travis-kelce-no-gifts",
+  "slug": "what-do-you-buy-taylor-swift-and-travis-kelce-apparently-nothing",
+  "status": "needs_review",
+  "stages": {
+    "attempt1": {
+      "score": 65,
+      "cat": "celebrity/news",
+      "hardBlocks": [],
+      "block": [],
+      "fixable": [],
+      "badClaims": 0
+    },
+    "attempt2": {
+      "score": 75,
+      "cat": "celebrity/news",
+      "hardBlocks": [
+        "ungrounded specific(s): 1,000 — every figure/outlet must exist in the gathered sources or authoritative facts"
+      ],
+      "block": [
+        "ungrounded specific(s): 1,000 — every figure/outlet must exist in the gathered sources or authoritative facts"
+      ],
+      "fixable": [],
+      "badClaims": 0
+    }
+  },
+  "editorial": {
+    "status": "unconfirmed",
+    "entity": "Taylor Swift",
+    "work": null,
+    "outlet": "hollywoodreporter.com"
+  },
+  "scorecard": {
+    "score": 75,
+    "subscores": {
+      "accuracy": 10,
+      "readability": 8,
+      "humanVoice": 7,
+      "phrasing": 8,
+      "curiosity": 8,
+      "structure": 8,
+      "infoGain": 6,
+      "seo": 7,
+      "faqQuality": 8,
+      "completeness": 5
+    },
+    "strengths": [
+      "The article is highly accurate, sticking strictly to the provided source material and attributing claims clearly.",
+      "The readability is good, with short paragraphs and clear, concise language.",
+      "The headline and dek are effective, delivering the core information quickly and accurately.",
+      "The structure is logical, using subheadings to break up the content and address common questions.",
+      "The FAQ section adds genuine, new information by elaborating on details from the main body.",
+      "The article avoids AI-tells and generic filler praise, maintaining a straightforward, news-like tone."
+    ],
+    "weaknesses": [
+      "The human voice, while not generic, is somewhat muted; it could benefit from a touch more personality or wit, even for a short news piece.",
+      "Information gain is limited, as the article primarily summarizes the provided source without offering much original framing or analysis beyond the expert quotes.",
+      "The article introduces two new 'gifting experts' (Nicole Pollard Bayme and Jaclyn Sienna India) in the body without them being present in the provided source material. This is a significant accuracy and completeness issue, as the instructions explicitly stated to only use the provided source reporting and quotes.",
+      "The 'completeness' score is low due to the introduction of ungrounded expert quotes, which violates the strict instruction to only use the provided source material."
+    ],
+    "deterministic": {
+      "words": 334,
+      "h2s": 3,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": true,
+      "faqCount": 3,
+      "ktCount": 3,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 38,
+      "avgSentence": 18,
+      "flesch": 42,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": []
+    },
+    "hardBlocks": [
+      "ungrounded specific(s): 1,000 — every figure/outlet must exist in the gathered sources or authoritative facts"
+    ]
+  },
+  "holdReason": "accuracy/grounding block: ungrounded specific(s): 1,000 — every figure/outlet must exist in the gathered sources or authoritative facts",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "≥1200px legal image",
+      "credit",
+      "zero hard-blocks"
+    ]
+  },
+  "ms": 139073
+}

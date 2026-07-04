@@ -1,0 +1,327 @@
+// HARVEST — the lane's core stage. Per angle: gather outlet coverage of the ripple (contentFinder,
+// free), LLM-extract every on-record reaction, then pass each through a DETERMINISTIC verbatim
+// wall (a quote must literally exist in the extracted source text or it never enters the fact
+// block). Per-form floors decide if the angle has enough real material to become an article.
+// Fail-closed at every step: no material → no angle → no article. Never an invented reaction.
+import { chat } from "../lib/openrouter.mjs";
+import { findContent } from "../lib/contentFinder.mjs";
+import { cacheTweets } from "../lib/tweets.mjs";
+import { MODELS, FORMS, MAX_EMBEDS } from "./config.inside.mjs";
+
+// Normalization for the verbatim wall: curly→straight quotes, dashes unified, whitespace
+// collapsed, lowercased. Loose enough to survive extraction artifacts, strict enough that a
+// paraphrase can never pass as a quote.
+export const norm = (s) =>
+  (s || "")
+    .replace(/[‘’‛′]/g, "'")
+    .replace(/[“”‟″]/g, '"')
+    .replace(/[–—]/g, "-")
+    .replace(/\s+/g, " ")
+    .trim()
+    .toLowerCase();
+
+export function quoteIsVerbatim(quote, sources) {
+  const q = norm(quote);
+  if (q.length < 8) return false;
+  return sources.some((s) => norm(s.text || "").includes(q));
+}
+
+const EXTRACT_SYS = `You extract ON-THE-RECORD REACTIONS from news source text for a reaction-roundup desk.
+A reaction = a specific person/organization responding to THE EVENT: a quoted social post, an official
+statement, a published interview/podcast remark. Extract ONLY what is literally in the text.
+ABSOLUTE RULES:
+- "quote" must be COPIED CHARACTER-FOR-CHARACTER from the source text (it will be machine-checked; any
+  edited, merged, trimmed-mid-sentence or paraphrased quote is discarded). Pick the most distinctive
+  1-2 sentence span, ≤45 words.
+- speaker = who said it (exact name as written). Anonymous/unnamed sources are NOT reactions — skip them.
+- ordinary private fans: set speakerType "fan" and speaker "" (we never name private individuals).
+- connection = their stated relationship to the subject ("co-star in X", "director of Y", "longtime friend"),
+  ONLY if the text states it. Never guess.
+- stance: positive | negative | mixed | neutral (as evidenced by the quote itself).
+Output STRICT JSON only.`;
+
+async function extractFromSource(src, i, trigger, angle, { model, chatImpl }) {
+  const user = `EVENT: ${trigger.parentTitle} (${trigger.eventType}; subject: ${trigger.primaryEntity})
+ANGLE BEING RESEARCHED: ${angle.angle} (form: ${angle.form})
+
+SOURCE ${i} (${src.domain || src.owner || "unknown"}):
+${(src.text || "").slice(0, 5800)}
+
+Extract every distinct on-record reaction TO THIS EVENT. JSON:
+{"reactions":[{"speaker":"","speakerType":"celebrity|filmmaker|castmate|crew|musician|company|official|fan|other",
+"connection":"","platform":"X|Instagram|statement|interview|podcast|press|other","date":"","quote":"","stance":"positive|negative|mixed|neutral"}]}
+No reactions in this text → {"reactions":[]}.`;
+  try {
+    const { data } = await chatImpl({ model, system: EXTRACT_SYS, user, json: true, maxTokens: 2200, temperature: 0 });
+    return (data?.reactions || []).map((r) => ({ ...r, sourceIdx: i }));
+  } catch {
+    return [];
+  }
+}
+
+const TWEET_URL_RX = /https?:\/\/(?:twitter\.com|x\.com)\/[A-Za-z0-9_]+\/status(?:es)?\/(\d{8,25})/g;
+export function findTweetIds(sources) {
+  const ids = new Set();
+  for (const s of sources) {
+    for (const m of (s.text || "").matchAll(TWEET_URL_RX)) ids.add(m[1]);
+    for (const m of (s.url || "").matchAll(TWEET_URL_RX)) ids.add(m[1]);
+  }
+  return [...ids];
+}
+
+// Text extraction STRIPS embedded tweets (blockquotes/scripts don't survive into the clean text),
+// so reaction-roundup pages read as tweet-free — the exact posts the fan-pulse form needs. Scan
+// the RAW HTML of the top source pages instead; hard-capped fetches, every failure skipped.
+export async function scanPagesForTweets(sources, { fetchImpl = fetch, maxPages = 4, timeoutMs = 8000 } = {}) {
+  const ids = new Set();
+  for (const s of (sources || []).filter((x) => x?.url && !/x\.com|twitter\.com/.test(x.url)).slice(0, maxPages)) {
+    try {
+      const ctrl = new AbortController();
+      const t = setTimeout(() => ctrl.abort(), timeoutMs);
+      t.unref?.();
+      const res = await fetchImpl(s.url, { signal: ctrl.signal, headers: { "user-agent": "Mozilla/5.0 (compatible; ScreenReportBot)" }, redirect: "follow" });
+      const html = await res.text();
+      clearTimeout(t);
+      for (const m of html.matchAll(TWEET_URL_RX)) ids.add(m[1]);
+    } catch { /* dead/slow page — skip */ }
+  }
+  return [...ids];
+}
+
+// Tweets ARE reactions, not just embeds: a public post is the primary artifact itself (the
+// playbook's "official oEmbed is the receipt"). The text comes from X's own syndication API, so
+// it is verbatim by construction; one cheap LLM pass classifies relevance + who the author is.
+const CLASSIFY_TWEETS_SYS = `You classify public X posts for a reaction-roundup desk. For each post decide:
+- aboutEvent: is it a genuine reaction TO THIS EVENT (not spam/ads/unrelated)?
+- speakerType: celebrity|filmmaker|castmate|crew|musician|company|official if the AUTHOR is a publicly known
+  figure/organization (judge by the account name; verified helps) — otherwise "fan" for ordinary users.
+- connection: the author's publicly-known relationship to the subject ("co-star in X", "the show's official
+  account") ONLY if you are certain — else "".
+- stance: positive|negative|mixed|neutral. Output STRICT JSON only.`;
+
+async function classifyTweets(tweets, trigger, angle, { model, chatImpl }) {
+  const items = tweets.map((t, i) => ({
+    i, author: t.user?.name || "", handle: t.user?.screen_name || "",
+    verified: !!(t.user?.verified || t.user?.is_blue_verified), text: (t.text || "").slice(0, 500),
+  }));
+  const user = `EVENT: ${trigger.parentTitle} (${trigger.eventType}; subject: ${trigger.primaryEntity})
+ANGLE: ${angle.angle} (form: ${angle.form})
+
+POSTS:
+${JSON.stringify(items, null, 1)}
+
+JSON: {"posts":[{"i":0,"aboutEvent":true,"speakerType":"","connection":"","stance":""}]}`;
+  try {
+    const { data } = await chatImpl({ model, system: CLASSIFY_TWEETS_SYS, user, json: true, maxTokens: 1200, temperature: 0 });
+    return (data?.posts || []).filter((p) => p && p.aboutEvent && Number.isInteger(p.i) && tweets[p.i]);
+  } catch {
+    return [];
+  }
+}
+
+// Per-form floors — the fail-closed angle gate ("maximal breadth, grounding-gated").
+export function meetsFloor(form, stats) {
+  const f = FORMS[form] || {};
+  if (f.minNamedVoices && stats.namedVoices < f.minNamedVoices)
+    return { ok: false, reason: `named voices ${stats.namedVoices} < ${f.minNamedVoices}` };
+  if (f.minFanPosts && stats.fanPosts < f.minFanPosts)
+    return { ok: false, reason: `fan posts ${stats.fanPosts} < ${f.minFanPosts}` };
+  if (f.minPrimaryQuoteWords && stats.longestQuoteWords < f.minPrimaryQuoteWords)
+    return { ok: false, reason: `primary quote ${stats.longestQuoteWords}w < ${f.minPrimaryQuoteWords}w` };
+  // namedVoices already counts company/official speakers — no double-counting, 2 means 2.
+  if (f.minConfirmedEffects && stats.namedVoices < f.minConfirmedEffects)
+    return { ok: false, reason: `confirmed effect voices ${stats.namedVoices} < ${f.minConfirmedEffects}` };
+  return { ok: true };
+}
+
+// Deterministic per-form fallback queries — plain words, the way a person actually searches.
+// Used after the LLM's angle queries so an over-specific proposal can't starve the harvest.
+export function fallbackQueries(trigger, angle) {
+  const who = angle.focusEntity || trigger.primaryEntity;
+  const F = {
+    "peer-tributes": [`${who} tributes`, `${who} stars react`],
+    "fan-pulse": [`${who} fans react`, `${who} reactions`],
+    "cast-crew-voices": [`${who} cast reacts`, `${who} speaks out`],
+    "breakout-spotlight": [`who is ${who}`, `${who} breakout`],
+    "single-voice": [`${who} responds`, `${who} statement`],
+    "ripple-effects": [`${who} what happens next`, `${who} aftermath`],
+  };
+  return F[angle.form] || [`${who} reactions`];
+}
+
+export async function harvestReactions(trigger, angle, {
+  findContentImpl = findContent,
+  chatImpl = chat,
+  cacheTweetsImpl = cacheTweets,
+  model = MODELS.verify, // flash-lite: extraction is cheap classification, not writing
+  embeds = true,
+  scanImpl = scanPagesForTweets,
+  maxQueries = 3,
+  // Soft self-deadline: stop STARTING new queries past this, return gracefully with whatever was
+  // harvested (→ under-floor park + retry next cycle) instead of being watchdog-killed (→ blocked,
+  // no retry accounting). The orchestrator watchdog stays as the hard backstop.
+  softDeadlineMs = 120000,
+} = {}) {
+  const t0 = Date.now();
+  // 1. Enumerate + extract ripple coverage (free: gnews/GDELT/extraction inside contentFinder).
+  //    The PARENT event's own source articles seed the first pass — initial coverage routinely
+  //    carries the first statements/reactions, so the harvest always has a foothold. Then LLM
+  //    angle queries, then deterministic per-form fallbacks, until the floor is met (≤maxQueries).
+  const queries = [...new Set([...(angle.searchQueries || []), ...fallbackQueries(trigger, angle)])].slice(0, maxQueries);
+  const parentSeeds = (trigger.sources || []).filter((s) => s?.url).slice(0, 4);
+
+  let bundle = null;
+  let withText = [];
+  let raw = [];
+  const seenUrl = new Set();
+
+  const runQuery = async (q, seeds) => {
+    const b = await findContentImpl(
+      { primaryEntity: trigger.primaryEntity, title: angle.workingTitle, query: q, sources: seeds },
+      // corroborate:true is LOAD-BEARING — the post-restructure default (false) extracts ONLY the
+      // seeds and ignores the query (news' trust-the-source model). The ripple harvest exists to
+      // widen across outlets, so it always searches (gnews + GDELT). maxExtract caps the parallel
+      // extraction burst (free keyless Jina is per-minute limited); a single reaction-roundup page
+      // already carries many named voices, so 5 sources is ample for the floors.
+      { maxSources: 5, maxExtract: 5, corroborate: true },
+    ).catch(() => ({ blocked: true, reason: "finder error" }));
+    if (b.blocked) return false;
+    const fresh = (b.sources || []).filter((s) => (s.text || "").length > 200 && (!s.url || !seenUrl.has(s.url)));
+    for (const s of fresh) if (s.url) seenUrl.add(s.url);
+    if (fresh.length) {
+      const base = withText.length;
+      const lists = await Promise.all(fresh.map((s, i) => extractFromSource(s, base + i, trigger, angle, { model, chatImpl })));
+      withText = [...withText, ...fresh];
+      raw = [...raw, ...lists.flat()];
+    }
+    bundle = bundle ? { ...bundle, sources: [...(bundle.sources || []), ...fresh] } : b;
+    return true;
+  };
+
+  await runQuery(queries[0], parentSeeds);
+
+  // 2. THE VERBATIM WALL — deterministic, not a model opinion. A quote that isn't literally in a
+  //    source is dropped here and can never reach the writer.
+  const wall = (list, sources) => list.filter((r) => r.quote && quoteIsVerbatim(r.quote, sources));
+
+  const dedupe = (list) => {
+    const seen = new Set(); const out = [];
+    for (const r of list) {
+      const k = norm(r.quote).slice(0, 90);
+      if (seen.has(k)) continue;
+      seen.add(k); out.push(r);
+    }
+    return out;
+  };
+
+  const split = (list) => ({
+    named: list.filter((r) => r.speaker && r.speakerType !== "fan"),
+    fans: list.filter((r) => r.speakerType === "fan").map(({ speaker, ...rest }) => ({ ...rest, speaker: "" })),
+  });
+
+  let passed = [], named = [], fans = [];
+  const statsOf = () => ({
+    namedVoices: new Set(named.map((r) => norm(r.speaker))).size,
+    companyVoices: named.filter((r) => ["company", "official"].includes(r.speakerType)).length,
+    fanPosts: fans.length,
+    hasPositive: [...named, ...fans].some((r) => r.stance === "positive"),
+    hasNegative: [...named, ...fans].some((r) => r.stance === "negative"),
+    longestQuoteWords: Math.max(0, ...passed.map((r) => (r.quote || "").split(/\s+/).length)),
+    reactionsTotal: passed.length,
+  });
+  const recompute = () => { passed = dedupe(wall(raw, withText)); ({ named, fans } = split(passed)); };
+  recompute();
+
+  // 3. Remaining queries only while the floor is unmet — a met floor stops the spend immediately;
+  //    the soft deadline stops new queries when time is nearly up.
+  for (let qi = 1; qi < queries.length && !meetsFloor(angle.form, statsOf()).ok; qi++) {
+    if (Date.now() - t0 > softDeadlineMs) break;
+    if (await runQuery(queries[qi], [])) recompute();
+  }
+
+  if (!withText.length) return { ok: false, reason: "no material: no extractable sources on any query", stats: null };
+
+  // 3b. TWEETS AS REACTIONS. The outlet coverage carries the reaction posts' URLs; resolve them
+  //     through the keyless syndication cache (deleted/protected drop silently), classify author
+  //     + relevance once, and feed them into the pool: known figures = named voices, ordinary
+  //     users = the fan pool. Quote = the post's own text (verbatim by construction; the ≤45-word
+  //     cut stays substring-safe under norm()'s whitespace collapse).
+  let tweetIds = [];
+  let tweets = [];
+  if (embeds) {
+    try {
+      let ids = findTweetIds(withText);
+      // Clean text rarely carries the tweet links — fall back to the raw pages.
+      if (!ids.length) ids = await scanImpl(bundle?.sources || withText);
+      ({ tweets = [], ids: tweetIds = [] } = await cacheTweetsImpl(ids.slice(0, MAX_EMBEDS * 2)));
+    } catch { tweets = []; tweetIds = []; }
+  }
+  if (tweets.length) {
+    const classified = await classifyTweets(tweets, trigger, angle, { model, chatImpl });
+    for (const c of classified) {
+      const t = tweets[c.i];
+      const text = (t.text || "").trim();
+      if (!text) continue;
+      const quote = text.split(/\s+/).slice(0, 45).join(" ");
+      const id = String(t.id_str || tweetIds[c.i] || "");
+      withText.push({ url: id ? `https://x.com/i/status/${id}` : null, domain: "x.com", owner: "x", tier: "social", title: "public post", text, quotes: [text] });
+      raw.push({
+        speaker: c.speakerType === "fan" ? "" : (t.user?.name || ""),
+        speakerType: c.speakerType || "fan",
+        connection: c.connection || "",
+        platform: "X",
+        date: (t.created_at || "").slice(0, 10),
+        quote,
+        stance: c.stance || "neutral",
+        sourceIdx: withText.length - 1,
+        tweetId: id || undefined,
+      });
+    }
+    recompute();
+  }
+
+  const stats = statsOf();
+  const floor = meetsFloor(angle.form, stats);
+  if (!floor.ok) return { ok: false, reason: `under floor: ${floor.reason}`, stats };
+
+  // fan-pulse honesty precondition: "divided" framing needs BOTH stances in the harvest.
+  stats.divided = stats.hasPositive && stats.hasNegative;
+  tweetIds = tweetIds.slice(0, MAX_EMBEDS); // embed cap is separate from the reaction pool
+
+  return {
+    ok: true,
+    factBlock: { reactions: named, aggregateFans: fans, tweetIds, sources: bundle.sources || [], stats },
+    bundle,
+  };
+}
+
+// The writer's ONLY quote source + the verify-gate grounding. Numbered so the writer can cite.
+export function factBlockText(factBlock, trigger) {
+  const L = [`CONFIRMED EVENT: ${trigger.parentTitle} (${trigger.eventType}; subject: ${trigger.primaryEntity})`];
+  L.push("ON-RECORD REACTIONS (the ONLY quotes and voices that exist — never invent, merge, or extend):");
+  factBlock.reactions.forEach((r, i) =>
+    L.push(`R${i + 1}. ${r.speaker}${r.connection ? ` (${r.connection})` : ""} — ${r.platform || "on the record"}${r.date ? `, ${r.date}` : ""} [${r.stance}]${r.tweetId ? ` [tweet:${r.tweetId}]` : ""}: "${r.quote}"`));
+  if (factBlock.aggregateFans.length) {
+    L.push("FAN POSTS (public, quote WITHOUT any name — attribute in aggregate: \"fans on X\", \"one fan wrote\"):");
+    factBlock.aggregateFans.forEach((r, i) => L.push(`F${i + 1}. [${r.stance}] ${r.platform || ""}: "${r.quote}"`));
+  }
+  const s = factBlock.stats;
+  L.push(`HARVEST STATS: ${s.namedVoices} named voices, ${s.fanPosts} fan posts, sentiment ${s.divided ? "DIVIDED" : s.hasNegative && !s.hasPositive ? "negative" : s.hasPositive && !s.hasNegative ? "positive" : "mixed/neutral"}.`);
+  return L.join("\n");
+}
+
+// verifyGate/quoteGuard bundle: outlet sources + the fact block itself as a "fact"-tier source so
+// every reaction line is entailment-checkable and every quote substring-checkable.
+export function buildVBundle(factBlock, trigger) {
+  return {
+    sources: [
+      ...factBlock.sources,
+      {
+        url: null, domain: "reaction-harvest", owner: "harvest", tier: "fact",
+        title: "verified reaction fact block",
+        text: factBlockText(factBlock, trigger),
+        quotes: [...factBlock.reactions, ...factBlock.aggregateFans].map((r) => r.quote),
+      },
+    ],
+  };
+}

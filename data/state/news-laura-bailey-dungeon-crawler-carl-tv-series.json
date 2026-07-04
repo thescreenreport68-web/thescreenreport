@@ -1,0 +1,118 @@
+{
+  "id": "news-laura-bailey-dungeon-crawler-carl-tv-series",
+  "slug": "laura-bailey-pitches-herself-for-dungeon-crawler-carl-tv-series",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": 85,
+      "cat": "tv/news",
+      "hardBlocks": [
+        "a 82-word run-on sentence (>55 — split it)",
+        "verify-gate CUT: 7 claim(s) not in the gathered sources — Samantha is described as hilarious and psycho; Marisha Ray responded with enthusiasm for the pitch; Marisha Ray said Bailey’s description had convinced her"
+      ],
+      "block": [
+        "verify-gate CUT: 7 claim(s) not in the gathered sources — Samantha is described as hilarious and psycho; Marisha Ray responded with enthusiasm for the pitch; Marisha Ray said Bailey’s description had convinced her"
+      ],
+      "fixable": [
+        "a 82-word run-on sentence (>55 — split it)"
+      ],
+      "badClaims": 0
+    },
+    "attempt2": {
+      "score": 88,
+      "cat": "tv/news",
+      "hardBlocks": [
+        "a 62-word run-on sentence (>55 — split it)"
+      ],
+      "block": [],
+      "fixable": [
+        "a 62-word run-on sentence (>55 — split it)"
+      ],
+      "badClaims": 0
+    }
+  },
+  "editorial": {
+    "status": "unconfirmed",
+    "entity": "Laura Bailey",
+    "work": {
+      "title": "Dungeon Crawler Carl",
+      "year": null,
+      "medium": "tv"
+    },
+    "outlet": "collider.com"
+  },
+  "acceptReason": "terminal-accept (verified accurate, score 88, 1 quality nit(s)) → re-gated clean at 85",
+  "webCheck": {
+    "ran": true,
+    "corrected": 3,
+    "remaining": 0
+  },
+  "scorecard": {
+    "score": 85,
+    "subscores": {
+      "accuracy": 10,
+      "readability": 9,
+      "humanVoice": 9,
+      "phrasing": 9,
+      "curiosity": 8,
+      "structure": 8,
+      "infoGain": 8,
+      "seo": 7,
+      "faqQuality": 8,
+      "completeness": 9
+    },
+    "strengths": [
+      "Accurate reporting, faithfully adhering to the provided source material.",
+      "Clear, concise, and easy to read, with short paragraphs and plain language.",
+      "Strong human voice, especially in the quotes from Bailey and Ray, which add personality and engagement.",
+      "Excellent phrasing and fluency; reads like a professional news desk report.",
+      "The lead quickly delivers the core information, satisfying curiosity immediately.",
+      "Good use of subheadings to break up the text and guide the reader.",
+      "Provides relevant context about 'Dungeon Crawler Carl' and the production status without over-explaining.",
+      "Keywords are present naturally without feeling forced.",
+      "The FAQ section adds genuinely new and useful information."
+    ],
+    "weaknesses": [
+      "The headline is a true claim but could be slightly more dynamic to maximize curiosity.",
+      "While the structure is good for a short news piece, more distinct 'Key Takeaways' could be integrated more seamlessly into the flow rather than feeling like a separate list.",
+      "The 'dek' is a bit generic; it states a fact but doesn't add much intrigue beyond the headline.",
+      "The article could benefit from one more internal link, if applicable, to enhance SEO slightly without over-optimizing."
+    ],
+    "deterministic": {
+      "words": 263,
+      "h2s": 2,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 2,
+      "ktCount": 3,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 62,
+      "avgSentence": 19,
+      "flesch": 61,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 1,
+      "hardBlocks": [
+        "a 62-word run-on sentence (>55 — split it)"
+      ]
+    },
+    "hardBlocks": [
+      "a 62-word run-on sentence (>55 — split it)"
+    ]
+  },
+  "score": 85,
+  "category": "tv",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 1,
+    "failed": [
+      "zero hard-blocks"
+    ]
+  },
+  "ms": 206981
+}

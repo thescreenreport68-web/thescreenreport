@@ -1,0 +1,47 @@
+{
+  "runId": "vrun-2026-07-03T14-38-50",
+  "at": "2026-07-03T14:43:55.168Z",
+  "windowHours": 24,
+  "target": 1,
+  "candidates": 5,
+  "made": [
+    {
+      "slug": "marvel-officially-casts-the-next-thor",
+      "title": "Marvel Officially Casts the Next Thor",
+      "category": "tv",
+      "seconds": 36.58,
+      "usd": 0.01662,
+      "file": "/Users/sivajithcu/Movie News site/site/data/video/out/marvel-officially-casts-the-next-thor.mp4"
+    }
+  ],
+  "failed": [
+    {
+      "slug": "power-book-iii-raising-kanan-introduces-young-spoiler-character-to-app",
+      "error": "skip: sensitive story (legal/minor)"
+    }
+  ],
+  "cost": {
+    "total": 0.016618249999999998,
+    "byModel": {
+      "google/gemini-2.5-flash": {
+        "calls": 2,
+        "in": 4286,
+        "out": 4068,
+        "usd": 0.011455799999999999
+      },
+      "deepseek/deepseek-v3.2": {
+        "calls": 2,
+        "in": 4277,
+        "out": 3256,
+        "usd": 0.0020907500000000006
+      },
+      "google/gemini-2.5-flash-lite": {
+        "calls": 14,
+        "in": 29681,
+        "out": 259,
+        "usd": 0.0030717
+      }
+    },
+    "calls": 18
+  }
+}

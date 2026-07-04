@@ -15,11 +15,13 @@ export const MODELS = {
   // The CHEAP model for the universal verify gate's claim-extraction + entailment (lib/verifyGate.mjs) — it does
   // deterministic-heavy work a cheap model handles fine, so the higher judge spend stays one call per article.
   verify: "google/gemini-2.5-flash-lite",
-  // The INDEPENDENT WEB reality-check (lib/webVerify.mjs) — a CHEAP model + OpenRouter's web-search plugin verifies
-  // the article's load-bearing specifics (roles/numbers/dates) against the LIVE web, the one thing a bundle-only
-  // check can't do. gemini-2.5-flash for the role/plot reasoning; STILL a cheap-tier model (owner hard rule: NEVER
-  // premium). ~1 web-grounded call/article (~$0.012-0.02 incl. web results). Set WEB_VERIFY=0 to disable.
-  webVerify: "google/gemini-2.5-flash",
+  // THE INDEPENDENT WEB REALITY-CHECK (lib/webVerify.mjs) — the ONLY non-circular accuracy layer, so its model must
+  // verify FACTS against the live web WITH CITATIONS. Owner decision (2026-07-03): PERPLEXITY SONAR — a purpose-built
+  // cited-web-search model (native search, returns url_citation receipts, ~$0.005-0.015/call incl. its search fee).
+  // Cheap-tier (NOT premium — owner hard rule holds). Live-probed: it correctly flagged "directed by Kamiyama" as
+  // wrong (he is supervising director) with a real source URL. Override for the A/B bake-off with WEB_VERIFY_MODEL=
+  // google/gemini-2.5-flash (the previous plugin-based check). The JUDGE stays gemini-2.5-flash (quality, not facts).
+  webVerify: "perplexity/sonar",
   // Cheap-ONLY escalation ladder if flash-lite ever under-delivers on the §7.5 validation (NO Opus):
   //   flash-lite (cheapest) → llama-4-maverick (~$0.0017/call) → gemini-2.5-flash (~$0.0039/call, ceiling).
   judgeFallbacks: ["meta-llama/llama-4-maverick", "google/gemini-2.5-flash"],

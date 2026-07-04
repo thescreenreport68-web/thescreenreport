@@ -1,0 +1,208 @@
+{
+  "id": "news-taylor-swift-travis-kelce-wedding-celebrity-reactions",
+  "slug": "jessica-chastain-dolly-parton-among-stars-celebrating-taylor-swift-tra",
+  "status": "needs_review",
+  "stages": {
+    "attempt1": {
+      "score": 65,
+      "cat": "movies/reactions",
+      "hardBlocks": [
+        "reaction: no embedded posts"
+      ],
+      "block": [
+        "reaction: no embedded posts"
+      ],
+      "fixable": [],
+      "badClaims": 0
+    },
+    "attempt2": {
+      "score": 65,
+      "cat": "movies/reactions",
+      "hardBlocks": [
+        "body 189w < 220",
+        "a 65-word run-on sentence (>55 — split it)",
+        "reaction: no embedded posts"
+      ],
+      "block": [
+        "reaction: no embedded posts"
+      ],
+      "fixable": [
+        "body 189w < 220",
+        "a 65-word run-on sentence (>55 — split it)"
+      ],
+      "badClaims": 0
+    }
+  },
+  "editorial": {
+    "status": "unconfirmed",
+    "entity": "Taylor Swift",
+    "work": null,
+    "outlet": "hollywoodreporter.com"
+  },
+  "scorecard": {
+    "score": 65,
+    "subscores": {
+      "accuracy": 10,
+      "readability": 7,
+      "humanVoice": 6,
+      "phrasing": 6,
+      "curiosity": 7,
+      "structure": 7,
+      "infoGain": 6,
+      "seo": 7,
+      "faqQuality": 7,
+      "completeness": 8
+    },
+    "strengths": [
+      "The article accurately reports the celebrity reactions and charitable donations based on the provided source material.",
+      "The lead quickly delivers the core information about the celebrity reactions and donations.",
+      "The use of subheadings helps break up the text and guide the reader.",
+      "The FAQ section provides genuinely new information not explicitly stated in the main body, enhancing information gain.",
+      "The article avoids sensationalism and sticks to reporting the reactions and donations."
+    ],
+    "weaknesses": [
+      "The Flesch score of 40 indicates dense prose, making it less effortless for a busy fan to read.",
+      "The average sentence length of 24 words is on the higher side, contributing to the density.",
+      "The human voice is somewhat muted; while it avoids AI tells, it also lacks a strong, engaging POV or wit.",
+      "The phrasing, while not overtly bad, could be more dynamic and less report-like to enhance reader engagement.",
+      "The article could benefit from more varied sentence structure and rhythm to improve readability.",
+      "The article mentions the Grammy Museum Foundation's donation in the body but doesn't include it in the Key Takeaways, which is a missed opportunity for completeness."
+    ],
+    "deterministic": {
+      "words": 189,
+      "h2s": 1,
+      "h2Questions": 1,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 3,
+      "ktCount": 3,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 65,
+      "avgSentence": 24,
+      "flesch": 40,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 1,
+      "hardBlocks": [
+        "body 189w < 220",
+        "a 65-word run-on sentence (>55 — split it)"
+      ]
+    },
+    "hardBlocks": [
+      "body 189w < 220",
+      "a 65-word run-on sentence (>55 — split it)",
+      "reaction: no embedded posts"
+    ]
+  },
+  "holdReason": "accuracy/grounding block: reaction: no embedded posts",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "tweet grounding",
+      "body ≥ 220w",
+      "≥1200px legal image",
+      "credit",
+      "score ≥ 70",
+      "zero hard-blocks"
+    ]
+  },
+  "ms": 128772,
+  "previousRuns": [
+    {
+      "id": "news-taylor-swift-travis-kelce-wedding-celebrity-reactions",
+      "slug": "jessica-chastain-dolly-parton-and-elmo-among-stars-celebrating-taylor-",
+      "status": "needs_review",
+      "stages": {
+        "attempt1": {
+          "score": 75,
+          "cat": "celebrity/news",
+          "hardBlocks": [],
+          "block": [],
+          "fixable": [],
+          "badClaims": 0
+        },
+        "attempt2": {
+          "score": 85,
+          "cat": "celebrity/news",
+          "hardBlocks": [],
+          "block": [],
+          "fixable": [],
+          "badClaims": 0
+        }
+      },
+      "editorial": {
+        "status": "unconfirmed",
+        "entity": "Taylor Swift",
+        "work": null,
+        "outlet": "hollywoodreporter.com"
+      },
+      "holdReason": "verified accurate but score 85 < 65 (weak writing)",
+      "scorecard": {
+        "score": 85,
+        "subscores": {
+          "accuracy": 9,
+          "readability": 9,
+          "humanVoice": 8,
+          "phrasing": 9,
+          "curiosity": 8,
+          "structure": 9,
+          "infoGain": 8,
+          "seo": 8,
+          "faqQuality": 9,
+          "completeness": 8
+        },
+        "strengths": [
+          "The lead quickly delivers the core information, adhering to news standards.",
+          "Quotes are accurately attributed and used effectively to convey celebrity reactions.",
+          "The language is plain and accessible, making it easy for a busy fan to read.",
+          "Paragraphs are short and digestible, aiding readability.",
+          "The article maintains a clear, concise human voice without resorting to AI-like filler.",
+          "The FAQ section provides genuinely new and useful information, not just rehashed points.",
+          "The headline is specific and makes a true claim.",
+          "The structure is clear with an answer-first lead and relevant subheads."
+        ],
+        "weaknesses": [
+          "The article mentions 'reports of Taylor Swift and Travis Kelce's wedding' but then proceeds to discuss it as a confirmed event, which could be slightly confusing given the 'reported' qualifier. A consistent tone regarding the event's confirmation would improve accuracy.",
+          "While the article mentions 'other celebrities like Shark Tank star Barbara Corcoran and singer Camila Cabello also shared posts about getting ready for the event,' it doesn't include their specific quotes or details, which were available in the source material. This slightly reduces the 'information gain' and 'human voice' by omitting specific examples.",
+          "The 'What was the reaction?' subhead is a bit generic; a more specific subhead related to the 'trolling' aspect would be stronger."
+        ],
+        "deterministic": {
+          "words": 275,
+          "h2s": 2,
+          "h2Questions": 2,
+          "internalLinks": 0,
+          "externalLinks": 0,
+          "hasSources": false,
+          "faqCount": 3,
+          "ktCount": 3,
+          "kwInTitle": true,
+          "kwInFirst100": true,
+          "kwInH2": false,
+          "maxSentence": 51,
+          "avgSentence": 16,
+          "flesch": 54,
+          "bannedTells": 0,
+          "fillerPraise": 0,
+          "kwExact": 0,
+          "hardBlocks": []
+        },
+        "hardBlocks": []
+      },
+      "audit": {
+        "ok": false,
+        "internalLinks": 0,
+        "failed": [
+          "body ≥ 220w",
+          "key takeaways",
+          "≥1200px legal image",
+          "credit"
+        ]
+      },
+      "ms": 195395
+    }
+  ]
+}

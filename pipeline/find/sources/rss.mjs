@@ -10,28 +10,24 @@ const { XMLParser } = require("fast-xml-parser");
 const parser = new XMLParser({ ignoreAttributes: false, attributeNamePrefix: "@_", textNodeName: "#text" });
 const UA = "The Screen Report/1.0 (+https://thescreenreport.com)";
 
-// Outlet tier = corroboration weight (App-L): wire/AP 8, major trade 7, major celebrity outlet 6,
-// reputable secondary/aggregator 5, tabloid 4. verify.mjs uses tier≥7 as the "single-source-publishable
-// major" threshold (owner policy); lone tier-5/6 reports wait for corroboration.
+// TOP NEWS CHANNELS ONLY (owner directive 2026-07-03: "focus ONLY on top news channels — Variety, THR,
+// Deadline… their latest stories; write them in our own way; trust their facts"). We deliberately DROPPED the
+// quiz/listicle/anime factories (ScreenRant, Collider, SlashFilm) and the indie music blogs (Pitchfork/Stereogum/
+// The Fader/Consequence) — those were the source of the junk (quizzes, "X ranked" listicles, anime/game coverage,
+// the SAO leak). Every feed here is a major, fact-checked trade → its story IS the verification; we re-report it
+// faithfully + attributed, never inventing beyond it. Tier is just a display/ranking hint now (no corroboration).
 const FEEDS = [
   { url: "https://variety.com/feed/", outlet: "Variety", tier: 7, cats: ["movies", "tv", "celebrity"] },
-  { url: "https://deadline.com/feed/", outlet: "Deadline", tier: 7, cats: ["movies", "tv"] },
+  { url: "https://deadline.com/feed/", outlet: "Deadline", tier: 7, cats: ["movies", "tv", "celebrity"] },
   { url: "https://www.hollywoodreporter.com/feed/", outlet: "THR", tier: 7, cats: ["movies", "tv", "celebrity"] },
-  { url: "https://people.com/feed/", outlet: "People", tier: 6, cats: ["celebrity"] },
-  { url: "https://www.indiewire.com/feed/", outlet: "IndieWire", tier: 6, cats: ["movies", "tv"] },
-  { url: "https://collider.com/feed/", outlet: "Collider", tier: 5, cats: ["movies", "tv"] },
-  { url: "https://www.slashfilm.com/feed/", outlet: "SlashFilm", tier: 5, cats: ["movies"] },
-  { url: "https://screenrant.com/feed/", outlet: "ScreenRant", tier: 5, cats: ["movies", "tv"] },
-  // ── MUSIC discovery feeds (decided 2026-06-28) — DISCOVERY SIGNAL ONLY, same legal posture: read the
-  // headline to know an event happened, then re-report grounded. Tier-5 indie feeds feed the breakout
-  // detector's candidate NAMES; the breakout SIGNAL comes from breakout.mjs (Reddit + Wikipedia), not here.
+  { url: "https://www.thewrap.com/feed/", outlet: "TheWrap", tier: 7, cats: ["movies", "tv", "celebrity"] },
+  { url: "https://ew.com/feed/", outlet: "Entertainment Weekly", tier: 7, cats: ["movies", "tv", "celebrity"] },
+  { url: "https://people.com/feed/", outlet: "People", tier: 7, cats: ["celebrity"] },
+  { url: "https://www.indiewire.com/feed/", outlet: "IndieWire", tier: 7, cats: ["movies", "tv"] },
+  // ── MUSIC — the top music trades only (Billboard, Rolling Stone, Variety's music desk).
   { url: "https://www.billboard.com/feed/", outlet: "Billboard", tier: 7, cats: ["music"] },
   { url: "https://www.rollingstone.com/music/feed/", outlet: "Rolling Stone", tier: 7, cats: ["music"] },
   { url: "https://variety.com/v/music/feed/", outlet: "Variety Music", tier: 7, cats: ["music"] },
-  { url: "https://pitchfork.com/feed/feed-news/rss", outlet: "Pitchfork", tier: 6, cats: ["music"] },
-  { url: "https://www.stereogum.com/feed/", outlet: "Stereogum", tier: 5, cats: ["music"] },
-  { url: "https://www.thefader.com/rss", outlet: "The Fader", tier: 5, cats: ["music"] },
-  { url: "https://consequence.net/category/music/feed/", outlet: "Consequence", tier: 5, cats: ["music"] },
 ];
 
 const strip = (s) => {

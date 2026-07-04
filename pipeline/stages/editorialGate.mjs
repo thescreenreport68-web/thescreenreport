@@ -48,26 +48,34 @@ reporting for a story our discovery layer filed as:
 Read the gathered text and decide — from THE TEXT ONLY (the discovery metadata above may be WRONG; your job is
 to correct it):
 
-1. isStory: is this ONE concrete, CURRENT news EVENT (a casting, release, statement, verdict, chart/box-office
-   result, death, renewal, trailer drop...)? false if it is a multi-item roundup, an anniversary retrospective,
-   an opinion/analysis essay, a ranked list, an evergreen explainer, or no discernible current event.
-2. primaryEntity: the story's TRUE primary subject exactly as the text names it (a person, film, show, or album).
-3. coSubjects: up to 3 other named people/works central to the event.
-4. work: if the story centers on (or heavily involves) a specific FILM/SHOW, identify it PRECISELY from the
+1. isStory: does the text report ANY concrete entertainment happening we can turn into a news brief — a casting,
+   deal, release/premiere, trailer, box-office or chart result, an award, a wedding/engagement/split, a death, an
+   arrest, a renewal/cancellation, an on-the-record statement or reveal, a tour/album announcement? Say TRUE for
+   all of these — INCLUDING a story framed as a "who-attended"/"reactions"/color piece IF a real event sits under
+   it (we'll just write the event). Say FALSE only for a genuine NON-article: an interactive quiz or personality
+   poll, a pure shopping/product listicle with no news, or text with no discernible happening at all. Do NOT reject
+   something merely for being a feature or having multiple names — if there's a real event, it's a story.
+2. inScope: is this ENGLISH-LANGUAGE HOLLYWOOD / Western entertainment — a film, TV show, streaming title, a
+   film/TV/music celebrity, or Western/English-language music? Say FALSE (out of scope) for: VIDEO GAMES / gaming,
+   ANIME or MANGA (Japanese animation/comics), NON-ENGLISH regional cinema (Bollywood, K-drama, etc. with no major
+   Hollywood tie-in), sports, politics, or tech. When unsure on a borderline anime/game item, say false.
+3. primaryEntity: the story's TRUE primary subject exactly as the text names it (a person, film, show, or album).
+4. coSubjects: up to 3 other named people/works central to the event.
+5. work: if the story centers on (or heavily involves) a specific FILM/SHOW, identify it PRECISELY from the
    text: { "title": "...", "year": <the year the TEXT associates with it, or null>, "medium": "movie"|"tv"|null }.
    Many works share a name — the year/medium you extract here selects the right one. null if no specific work.
-5. reportingOutlet: which outlet the text shows ACTUALLY reported/broke the core claim (never an aggregator like
+6. reportingOutlet: which outlet the text shows ACTUALLY reported/broke the core claim (never an aggregator like
    Yahoo/MSN; if our own gathered source IS the reporter, name that outlet). null if unclear.
-6. status: "confirmed" (multiple independent reports or on-the-record confirmation) | "official" (an official
+7. status: "confirmed" (multiple independent reports or on-the-record confirmation) | "official" (an official
    statement/announcement) | "denied" (the claim is denied in the text) | "unconfirmed" (single-source report).
-7. form: the best of ${NEWS_FORMS.join("|")} for this event. category: the best of ${CATS.join("|")}.
-8. eventSummary: 1-2 plain sentences stating exactly what happened per the text (names, work, what changed).
+8. form: the best of ${NEWS_FORMS.join("|")} for this event. category: the best of ${CATS.join("|")}.
+9. eventSummary: 1-2 plain sentences stating exactly what happened per the text (names, work, what changed).
 
 GATHERED SOURCE REPORTING:
 ${srcText}
 
 Return STRICT JSON:
-{"isStory":true|false,"reason":"...","primaryEntity":"...","coSubjects":["..."],"work":{"title":"...","year":2010,"medium":"tv"}|null,"reportingOutlet":"..."|null,"status":"confirmed|official|denied|unconfirmed","form":"...","category":"...","eventSummary":"..."}`;
+{"isStory":true|false,"inScope":true|false,"reason":"...","primaryEntity":"...","coSubjects":["..."],"work":{"title":"...","year":2010,"medium":"tv"}|null,"reportingOutlet":"..."|null,"status":"confirmed|official|denied|unconfirmed","form":"...","category":"...","eventSummary":"..."}`;
 
   try {
     const { data } = await chat({
@@ -79,11 +87,17 @@ Return STRICT JSON:
       temperature: 0,
     });
     if (!data || typeof data.isStory !== "boolean") return { ran: false, reject: false, reason: "unparseable editorial verdict" };
+    // REJECT only a true non-article OR an OUT-OF-SCOPE item (video games / anime / non-English regional). Note:
+    // inScope defaults to TRUE when the model omits it, so we never over-reject on a parse gap — the scope drop is
+    // deliberate and explicit only.
+    const inScope = data.inScope !== false;
+    const reject = data.isStory === false || !inScope;
     return {
       ran: true,
       isStory: data.isStory,
-      reject: data.isStory === false,
-      reason: data.reason || "",
+      inScope,
+      reject,
+      reason: reject ? (!inScope ? `out of scope: ${data.reason || "not English-language Hollywood/Western entertainment"}` : (data.reason || "not a story")) : (data.reason || ""),
       primaryEntity: typeof data.primaryEntity === "string" && data.primaryEntity.trim().length >= 2 ? data.primaryEntity.trim() : null,
       coSubjects: Array.isArray(data.coSubjects) ? data.coSubjects.filter((x) => typeof x === "string").slice(0, 3) : [],
       work: data.work && typeof data.work.title === "string" && data.work.title.trim()

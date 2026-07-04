@@ -9,7 +9,7 @@ export default function Faq({ items }: { items: FaqType[] }) {
       </div>
       <div className="divide-y divide-hair">
         {items.map((f, i) => (
-          <details key={i} className="group py-4">
+          <details key={i} open className="group py-4">
             <summary className="hed-s flex cursor-pointer list-none items-center justify-between gap-4 transition-colors duration-150 hover:text-red">
               {f.q}
               <span

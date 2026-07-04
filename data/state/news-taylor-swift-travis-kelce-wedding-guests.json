@@ -1,0 +1,98 @@
+{
+  "id": "news-taylor-swift-travis-kelce-wedding-guests",
+  "slug": "ed-sheeran-bradley-cooper-dakota-johnson-among-stars-arriving-for-tayl",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": 75,
+      "cat": "celebrity/news",
+      "hardBlocks": [
+        "verify-gate CUT: 2 claim(s) not in the gathered sources — Stevie Nicks is set to perform; The Associated Press confirmed the wedding is taking pl",
+        "ungrounded specific(s): 1,000 — every figure/outlet must exist in the gathered sources or authoritative facts",
+        "1 unverified claim(s) (need correction)"
+      ],
+      "block": [
+        "verify-gate CUT: 2 claim(s) not in the gathered sources — Stevie Nicks is set to perform; The Associated Press confirmed the wedding is taking pl",
+        "ungrounded specific(s): 1,000 — every figure/outlet must exist in the gathered sources or authoritative facts",
+        "1 unverified claim(s) (need correction)"
+      ],
+      "fixable": [],
+      "badClaims": 1
+    },
+    "attempt2": {
+      "score": 75,
+      "cat": "celebrity/news",
+      "hardBlocks": [],
+      "block": [],
+      "fixable": [],
+      "badClaims": 0
+    }
+  },
+  "editorial": {
+    "status": "confirmed",
+    "entity": "Taylor Swift",
+    "work": null,
+    "outlet": "Associated Press"
+  },
+  "acceptReason": "terminal-accept (verified accurate, score 75, 0 quality nit(s))",
+  "scorecard": {
+    "score": 75,
+    "subscores": {
+      "accuracy": 9,
+      "readability": 8,
+      "humanVoice": 7,
+      "phrasing": 8,
+      "curiosity": 7,
+      "structure": 8,
+      "infoGain": 7,
+      "seo": 7,
+      "faqQuality": 8,
+      "completeness": 6
+    },
+    "strengths": [
+      "The headline is clear, specific, and makes a true claim.",
+      "The dek effectively summarizes key information and creates curiosity.",
+      "The article uses short paragraphs and clear subheadings, aiding readability.",
+      "The direct quote from Travis Kelce adds a human touch and specific detail.",
+      "The FAQ section provides genuinely new information not explicitly stated in the body, enhancing information gain.",
+      "The article attributes claims clearly, especially regarding the celebrity sightings and NDA information.",
+      "The keyword is present naturally in the title and body without feeling forced."
+    ],
+    "weaknesses": [
+      "The lead could be slightly more 'answer-first' by explicitly stating the wedding happened, rather than 'for the wedding'.",
+      "The 'completeness' is slightly lower as it doesn't explicitly state the wedding *did* happen, only that stars were arriving 'for' it and it was 'taking place'. While implied, a news piece should be definitive.",
+      "The article mentions 'some reports state' about the guest list and performances but doesn't include this in the body or FAQ, which feels like a missed opportunity for additional information gain if it was deemed credible enough to mention in the prompt's context.",
+      "The 'About' section only lists Taylor Swift, which is a minor oversight given Travis Kelce is equally central to the topic."
+    ],
+    "deterministic": {
+      "words": 226,
+      "h2s": 2,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 3,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 40,
+      "avgSentence": 22,
+      "flesch": 52,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": []
+    },
+    "hardBlocks": []
+  },
+  "score": 75,
+  "category": "celebrity",
+  "subcategory": "news",
+  "audit": {
+    "ok": true,
+    "internalLinks": 3,
+    "failed": []
+  },
+  "ms": 131692
+}

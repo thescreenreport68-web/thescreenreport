@@ -1,0 +1,94 @@
+{
+  "id": "news-brad-paisley-kimberly-williams-paisley-taylor-swift-travis-kelce-donat",
+  "slug": "brad-paisley-kimberly-williams-paisley-thank-taylor-swift-and-travis-k",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": 85,
+      "cat": "celebrity/news",
+      "hardBlocks": [],
+      "block": [],
+      "fixable": [],
+      "badClaims": 0
+    }
+  },
+  "editorial": {
+    "status": "confirmed",
+    "entity": "Brad Paisley",
+    "work": null,
+    "outlet": "rollingstone.com"
+  },
+  "acceptReason": "cut-and-publish → re-gated clean at 78",
+  "webCheck": {
+    "ran": true,
+    "corrected": 3,
+    "remaining": 2
+  },
+  "scorecard": {
+    "score": 78,
+    "subscores": {
+      "accuracy": 10,
+      "readability": 8,
+      "humanVoice": 7,
+      "phrasing": 8,
+      "curiosity": 8,
+      "structure": 8,
+      "infoGain": 7,
+      "seo": 7,
+      "faqQuality": 8,
+      "completeness": 7
+    },
+    "strengths": [
+      "Accurate reporting, sticking closely to the provided source material.",
+      "Clear and concise lead paragraph that answers the main question immediately.",
+      "Good use of direct quotes to add human voice and authenticity.",
+      "Appropriate subheadings that break up the text and guide the reader.",
+      "The FAQ section adds genuinely new and useful information about The Store's mission and approach.",
+      "Natural integration of the primary keyword without forcing it."
+    ],
+    "weaknesses": [
+      "The Flesch score (55) is below the target range, indicating some density in the prose.",
+      "While direct quotes are good, the article could benefit from slightly more varied phrasing around them to enhance flow.",
+      "The 'How big was the donation?' section could be slightly more impactful in its opening sentence to immediately convey the scale.",
+      "The 'Sources' section is minimal; while only one source was provided, it could be presented with a bit more context or a direct link if allowed in a real-world scenario (understanding the constraints here)."
+    ],
+    "deterministic": {
+      "words": 241,
+      "h2s": 3,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": true,
+      "faqCount": 1,
+      "ktCount": 1,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 32,
+      "avgSentence": 18,
+      "flesch": 55,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": [
+        "FAQ 1 < 2"
+      ]
+    },
+    "hardBlocks": [
+      "FAQ 1 < 2"
+    ]
+  },
+  "score": 78,
+  "category": "celebrity",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 2,
+    "failed": [
+      "2+ FAQ",
+      "key takeaways",
+      "zero hard-blocks"
+    ]
+  },
+  "ms": 130991
+}

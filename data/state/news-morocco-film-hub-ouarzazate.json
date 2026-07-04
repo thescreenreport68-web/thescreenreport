@@ -1,0 +1,121 @@
+{
+  "id": "news-morocco-film-hub-ouarzazate",
+  "slug": "morocco-launches-25-million-film-hub-in-gladiator-2-location",
+  "status": "needs_review",
+  "stages": {
+    "attempt1": {
+      "score": 78,
+      "cat": "movies/news",
+      "hardBlocks": [
+        "primary keyword not in title",
+        "Flesch 34 < 40 (too dense to read comfortably)",
+        "ungrounded specific(s): $130M — every figure/outlet must exist in the gathered sources or authoritative facts"
+      ],
+      "block": [
+        "ungrounded specific(s): $130M — every figure/outlet must exist in the gathered sources or authoritative facts"
+      ],
+      "fixable": [
+        "primary keyword not in title",
+        "Flesch 34 < 40 (too dense to read comfortably)"
+      ],
+      "badClaims": 0
+    },
+    "attempt2": {
+      "score": 75,
+      "cat": "movies/news",
+      "hardBlocks": [
+        "primary keyword not in title",
+        "Flesch 33 < 40 (too dense to read comfortably)",
+        "ungrounded specific(s): $130M — every figure/outlet must exist in the gathered sources or authoritative facts"
+      ],
+      "block": [
+        "ungrounded specific(s): $130M — every figure/outlet must exist in the gathered sources or authoritative facts"
+      ],
+      "fixable": [
+        "primary keyword not in title",
+        "Flesch 33 < 40 (too dense to read comfortably)"
+      ],
+      "badClaims": 0
+    }
+  },
+  "editorial": {
+    "status": "official",
+    "entity": "International Cinema City",
+    "work": {
+      "title": "Gladiator 2",
+      "year": null,
+      "medium": "movie"
+    },
+    "outlet": "variety.com"
+  },
+  "scorecard": {
+    "score": 75,
+    "subscores": {
+      "accuracy": 9,
+      "readability": 8,
+      "humanVoice": 7,
+      "phrasing": 8,
+      "curiosity": 7,
+      "structure": 8,
+      "infoGain": 7,
+      "seo": 7,
+      "faqQuality": 8,
+      "completeness": 6
+    },
+    "strengths": [
+      "The lead delivers the core information quickly and clearly, adhering to news standards.",
+      "The article maintains a good balance of conciseness and detail, appropriate for a short news piece.",
+      "Subheads are clear and guide the reader through the information effectively.",
+      "The FAQ section adds genuinely new and useful information, enhancing the overall value.",
+      "The article avoids generic AI tells and maintains a relatively human voice.",
+      "The keyword 'Morocco film production hub' is present naturally without feeling forced."
+    ],
+    "weaknesses": [
+      "The Flesch score of 33 indicates dense prose, which could be improved for readability (target 60-72).",
+      "The article mentions 'Gladiator II' and 'Indiana Jones and the Dial of Destiny' as recent productions but then adds 'a Nicolas Cage Lord of War sequel' without attribution, which could be seen as a minor accuracy/sourcing issue given the strict instructions.",
+      "The article states 'In 2025, foreign investment in productions shot in Morocco reached roughly $130 million,' which, given the current date of July 2026, implies a future event or a typo in the source material. This should be clarified or rephrased for accuracy.",
+      "The article mentions 'Gladiator II' in the headline and lead but doesn't provide any specific details about the film itself (e.g., director, cast, plot) that would add more context for the reader, beyond its filming location.",
+      "The article could benefit from slightly more varied sentence structure to improve flow and engagement, given the average sentence length of 21 words and longest at 50 words."
+    ],
+    "deterministic": {
+      "words": 276,
+      "h2s": 2,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 3,
+      "ktCount": 4,
+      "kwInTitle": false,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 50,
+      "avgSentence": 21,
+      "flesch": 33,
+      "bannedTells": 0,
+      "fillerPraise": 1,
+      "kwExact": 0,
+      "hardBlocks": [
+        "primary keyword not in title",
+        "Flesch 33 < 40 (too dense to read comfortably)"
+      ]
+    },
+    "hardBlocks": [
+      "primary keyword not in title",
+      "Flesch 33 < 40 (too dense to read comfortably)",
+      "ungrounded specific(s): $130M — every figure/outlet must exist in the gathered sources or authoritative facts"
+    ]
+  },
+  "holdReason": "accuracy/grounding block: ungrounded specific(s): $130M — every figure/outlet must exist in the gathered sources or authoritative facts",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "keyword in title",
+      "≥1200px legal image",
+      "credit",
+      "zero hard-blocks"
+    ]
+  },
+  "ms": 141100
+}

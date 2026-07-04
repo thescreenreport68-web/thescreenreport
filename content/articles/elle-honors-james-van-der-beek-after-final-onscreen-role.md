@@ -66,8 +66,8 @@ provenance:
   outlets:
     - THR
   publishedAt: '2026-07-03T03:28:20.804Z'
-dateModified: '2026-07-03T12:53:32.376Z'
-storyStatus: DEVELOPING
+dateModified: '2026-07-04T08:10:29.547Z'
+storyStatus: CONFIRMED
 sensitivity: high
 newsType: general
 pullQuote:

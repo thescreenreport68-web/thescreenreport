@@ -19,6 +19,20 @@ console.log("\n=== EDITORIAL GATE TEST ===\n");
   check("reject reason is captured", v && /photo|news/i.test(v.rejectReason));
 }
 
+// 1b) NICHE GATE — an out-of-niche subject (a politician / royal) is REJECTED even if it's a substantive story
+{
+  const long = "Senator Mitch McConnell remains hospitalized after a fall, his office said in a statement on Tuesday, and doctors are monitoring his recovery closely over the coming days. ".repeat(3);
+  const bundle = { sources: [{ outlet: "Just Jared", url: "x", text: long, corroborating: false }], corroboratingOutlets: [] };
+  const review = async () => ({ inScope: false, outOfNicheReason: "politician (US senator)", isStory: true, substanceScore: 8, category: "celebrity", attribution: "Just Jared", confirmed: true, eventSummary: "Mitch McConnell hospitalized" });
+  const v = await editorialReview({ topic: { primaryEntity: "Mitch McConnell", title: "Mitch McConnell health update", subjectType: "celebrity" }, bundle, reviewImpl: review });
+  check("an out-of-niche subject (politician) is REJECTED (isStory=false)", v && v.isStory === false, JSON.stringify(v));
+  check("the niche-reject reason names WHY (politician/niche)", v && /niche|politician/i.test(v.rejectReason), v?.rejectReason);
+  // an in-niche entertainment subject with the same substance PASSES
+  const review2 = async () => ({ inScope: true, isStory: true, substanceScore: 8, category: "celebrity", attribution: "Just Jared", confirmed: false, eventSummary: "actress reveals filming detail", primaryEntity: "Some Actress" });
+  const v2 = await editorialReview({ topic: { primaryEntity: "Some Actress", title: "x", subjectType: "actor" }, bundle, reviewImpl: review2 });
+  check("an in-niche entertainment subject is NOT niche-rejected", v2 && v2.isStory === true && v2.inScope === true);
+}
+
 // 2) THIN-TEXT BACKSTOP — model says story but almost no text was collected → still rejected
 {
   const bundle = { sources: [{ outlet: "Pop Crave", url: "x", text: "Rihanna wore a slip dress.", corroborating: false }], corroboratingOutlets: [] };

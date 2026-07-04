@@ -1,0 +1,112 @@
+{
+  "id": "news-raising-kanan-asjha-cooper-jarita-power-origins",
+  "slug": "raising-kanan-s-asjha-cooper-revealed-as-young-jarita-joins-power-orig",
+  "status": "needs_review",
+  "stages": {
+    "attempt1": {
+      "score": 85,
+      "cat": "tv/news",
+      "hardBlocks": [
+        "verify-gate CUT: 2 claim(s) not in the gathered sources — Power: Origins will explore the early, formative relati; A producer sent Asjha Cooper footage of Tasha Smith's p"
+      ],
+      "block": [
+        "verify-gate CUT: 2 claim(s) not in the gathered sources — Power: Origins will explore the early, formative relati; A producer sent Asjha Cooper footage of Tasha Smith's p"
+      ],
+      "fixable": [],
+      "badClaims": 0
+    },
+    "attempt2": {
+      "score": 78,
+      "cat": "tv/news",
+      "hardBlocks": [
+        "verify-gate CUT: 1 claim(s) not in the gathered sources — A producer sent Asjha Cooper footage of Tasha Smith's p"
+      ],
+      "block": [
+        "verify-gate CUT: 1 claim(s) not in the gathered sources — A producer sent Asjha Cooper footage of Tasha Smith's p"
+      ],
+      "fixable": [],
+      "badClaims": 0
+    }
+  },
+  "editorial": {
+    "status": "unconfirmed",
+    "entity": "Asjha Cooper",
+    "work": {
+      "title": "Power Book III: Raising Kanan",
+      "year": null,
+      "medium": "tv"
+    },
+    "outlet": "deadline.com"
+  },
+  "acceptReason": "terminal-accept (verified accurate, score 78, 1 qualitative stray(s) accepted)",
+  "holdReason": "accuracy/grounding block: verify-gate CUT: 1 claim(s) not in the gathered sources — A producer sent Asjha Cooper footage of Tasha Smith's p",
+  "webCheck": {
+    "contradictions": 5,
+    "cut": 9
+  },
+  "scorecard": {
+    "score": 78,
+    "subscores": {
+      "accuracy": 9,
+      "readability": 8,
+      "humanVoice": 8,
+      "phrasing": 8,
+      "curiosity": 8,
+      "structure": 7,
+      "infoGain": 7,
+      "seo": 7,
+      "faqQuality": 8,
+      "completeness": 8
+    },
+    "strengths": [
+      "The article accurately reports the key news about Asjha Cooper's casting and character reveal, attributing the information to Deadline.",
+      "The lead quickly delivers the core information, adhering to news standards.",
+      "The inclusion of direct quotes from Asjha Cooper adds a human voice and specific insight into her preparation.",
+      "The phrasing is generally clear and concise, avoiding excessive jargon or stiffness.",
+      "The FAQ section provides genuinely new and useful information, expanding on the article's core content.",
+      "The article is well-structured for a short news piece, with a clear lead, subheads, and key takeaways."
+    ],
+    "weaknesses": [
+      "The article mentions 'Flossie's deal with Raq Thomas means her workers now also deliver drugs' and 'Kanan meets Tiana after booking a night with her, knowing she has a connection to his mother' without explicit attribution to the source material or the Deadline report. While plausible, for a news piece, this could benefit from clearer sourcing.",
+      "The 'What is Asjha Cooper's role?' section introduces plot details that, while relevant, could be more explicitly framed as coming from the show's narrative rather than presented as un-attributed facts within a news report.",
+      "The article could benefit from a slightly stronger meta description to enhance its SEO, though the current one is functional.",
+      "While the subheads are present, they are somewhat generic ('What is Asjha Cooper's role?', 'What happens next for the character?'). More descriptive subheads could further improve readability and scannability."
+    ],
+    "deterministic": {
+      "words": 224,
+      "h2s": 2,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 3,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": true,
+      "maxSentence": 35,
+      "avgSentence": 15,
+      "flesch": 58,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 2,
+      "hardBlocks": []
+    },
+    "hardBlocks": [
+      "verify-gate CUT: 1 claim(s) not in the gathered sources — A producer sent Asjha Cooper footage of Tasha Smith's p"
+    ]
+  },
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "body ≥ 220w",
+      "2+ FAQ",
+      "key takeaways",
+      "≥1200px legal image",
+      "credit",
+      "zero hard-blocks"
+    ]
+  },
+  "ms": 164115
+}

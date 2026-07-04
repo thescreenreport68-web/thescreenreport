@@ -1,0 +1,118 @@
+{
+  "id": "news-prince-william-new-heights-podcast-taylor-swift-travis-kelce",
+  "slug": "prince-william-joins-new-heights-podcast-on-taylor-swift-and-travis-ke",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": 75,
+      "cat": "celebrity/news",
+      "hardBlocks": [
+        "primary keyword not in title",
+        "verify-gate CUT: 1 claim(s) not in the gathered sources — Prince William and his family attended Taylor Swift's E",
+        "ungrounded specific(s): 1,000 — every figure/outlet must exist in the gathered sources or authoritative facts"
+      ],
+      "block": [
+        "verify-gate CUT: 1 claim(s) not in the gathered sources — Prince William and his family attended Taylor Swift's E",
+        "ungrounded specific(s): 1,000 — every figure/outlet must exist in the gathered sources or authoritative facts"
+      ],
+      "fixable": [
+        "primary keyword not in title"
+      ],
+      "badClaims": 0
+    },
+    "attempt2": {
+      "score": 75,
+      "cat": "celebrity/news",
+      "hardBlocks": [
+        "primary keyword not in title"
+      ],
+      "block": [],
+      "fixable": [
+        "primary keyword not in title"
+      ],
+      "badClaims": 0
+    }
+  },
+  "editorial": {
+    "status": "unconfirmed",
+    "entity": "Prince William",
+    "work": null,
+    "outlet": "variety.com"
+  },
+  "acceptReason": "terminal-accept (verified accurate, score 75, 1 quality nit(s)) → re-gated clean at 65",
+  "webCheck": {
+    "ran": true,
+    "corrected": 4,
+    "remaining": 4
+  },
+  "scorecard": {
+    "score": 65,
+    "subscores": {
+      "accuracy": 8,
+      "readability": 7,
+      "humanVoice": 6,
+      "phrasing": 6,
+      "curiosity": 7,
+      "structure": 7,
+      "infoGain": 6,
+      "seo": 6,
+      "faqQuality": 6,
+      "completeness": 6
+    },
+    "strengths": [
+      "The headline is clear and makes a specific, true claim.",
+      "The lead quickly delivers the core information.",
+      "The article uses direct quotes effectively to add human voice and specificity.",
+      "The key takeaways are concise and informative.",
+      "The article is short and to the point, suitable for a news piece."
+    ],
+    "weaknesses": [
+      "The article attributes the wedding claim to 'widespread reports' rather than the specific source (Associated Press) mentioned in the reference facts, which impacts accuracy and attribution.",
+      "The phrasing 'The surprise interview was released on the same day that Travis Kelce and his fiancée Taylor Swift are reportedly set to get married' is a bit clunky and could be more direct.",
+      "The FAQ section is quite generic and doesn't add much new, specific information beyond what's in the body.",
+      "The 'What's the Wedding Context?' section introduces 'Some reports suggest performances from artists including Stevie Nicks and Tim McGraw' without attributing these reports, which is a missed opportunity for stronger sourcing.",
+      "The article mentions 'Swift's influence and her recent performances' in the FAQ without elaborating on what specific influence or performances were discussed, making it vague.",
+      "The article misses the specific quote from Prince William about 'Travis as a backup dancer' which was a key part of the reference material and would have enhanced human voice and engagement."
+    ],
+    "deterministic": {
+      "words": 154,
+      "h2s": 2,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 2,
+      "ktCount": 2,
+      "kwInTitle": false,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 38,
+      "avgSentence": 17,
+      "flesch": 62,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": [
+        "primary keyword not in title",
+        "body 154w < 220"
+      ]
+    },
+    "hardBlocks": [
+      "primary keyword not in title",
+      "body 154w < 220"
+    ]
+  },
+  "score": 65,
+  "category": "celebrity",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 2,
+    "failed": [
+      "body ≥ 220w",
+      "score ≥ 70",
+      "zero hard-blocks"
+    ]
+  },
+  "ms": 208005
+}

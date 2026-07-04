@@ -1,0 +1,125 @@
+{
+  "id": "news-prince-william-taylor-swift-travis-kelce-wedding",
+  "slug": "prince-william-won-t-attend-taylor-swift-and-travis-kelce-s-wedding",
+  "status": "needs_review",
+  "stages": {
+    "attempt1": {
+      "score": 65,
+      "cat": "celebrity/news",
+      "hardBlocks": [
+        "a 94-word run-on sentence (>55 — split it)",
+        "verify-gate CUT: 5 claim(s) not in the gathered sources — The guest list reportedly includes Selena Gomez; The guest list reportedly includes Beyoncé and Jay-Z; The guest list reportedly includes Stevie Nicks",
+        "ungrounded specific(s): 1,000 — every figure/outlet must exist in the gathered sources or authoritative facts",
+        "1 unverified claim(s) (need correction)"
+      ],
+      "block": [
+        "verify-gate CUT: 5 claim(s) not in the gathered sources — The guest list reportedly includes Selena Gomez; The guest list reportedly includes Beyoncé and Jay-Z; The guest list reportedly includes Stevie Nicks",
+        "ungrounded specific(s): 1,000 — every figure/outlet must exist in the gathered sources or authoritative facts",
+        "1 unverified claim(s) (need correction)"
+      ],
+      "fixable": [
+        "a 94-word run-on sentence (>55 — split it)"
+      ],
+      "badClaims": 1
+    },
+    "attempt2": {
+      "score": 78,
+      "cat": "celebrity/news",
+      "hardBlocks": [
+        "a 94-word run-on sentence (>55 — split it)",
+        "ungrounded specific(s): 1,000 — every figure/outlet must exist in the gathered sources or authoritative facts"
+      ],
+      "block": [
+        "ungrounded specific(s): 1,000 — every figure/outlet must exist in the gathered sources or authoritative facts"
+      ],
+      "fixable": [
+        "a 94-word run-on sentence (>55 — split it)"
+      ],
+      "badClaims": 0
+    }
+  },
+  "editorial": {
+    "status": "confirmed",
+    "entity": "Prince William",
+    "work": null,
+    "outlet": "deadline.com"
+  },
+  "scorecard": {
+    "score": 78,
+    "subscores": {
+      "accuracy": 9,
+      "readability": 8,
+      "humanVoice": 8,
+      "phrasing": 8,
+      "curiosity": 8,
+      "structure": 8,
+      "infoGain": 7,
+      "seo": 7,
+      "faqQuality": 8,
+      "completeness": 8
+    },
+    "strengths": [
+      "The headline is clear, concise, and delivers the core information immediately.",
+      "The lead paragraph answers the main question quickly, adhering to news standards.",
+      "The article maintains a good human voice, especially through direct quotes from the podcast.",
+      "Phrasing is generally fluent and avoids excessive keyword repetition.",
+      "The structure is logical with clear subheadings that guide the reader.",
+      "Key Takeaways effectively summarize the main points.",
+      "The FAQ section provides genuinely new and relevant information, not just rehashed points.",
+      "Attribution to Deadline is consistent and clear, respecting the single-source constraint."
+    ],
+    "weaknesses": [
+      "The article states 'The wedding is set to take place at Madison Square Garden with approximately 1,000 guests in attendance.' and 'The ceremony follows a rehearsal dinner for about 100 guests held at the same venue on Thursday night.' which is not explicitly stated in the provided source material. The source only mentions 'today’s festivities are set to start at Madison Square Garden' and 'the Swift-Kelce wedding media frenzy reached fever pitch', but not the guest numbers or rehearsal dinner details.",
+      "The 'dek' mentions 'the King's dislike of football' which is a slight oversimplification of 'King Charles “hates football”' as stated by William, but not a major issue.",
+      "The 'Who is attending the wedding?' section could have been slightly more concise, but it's a minor point.",
+      "While the article is short news, the 'about' section is empty, which could be a missed opportunity for a brief author bio or publication mission statement, though not strictly required by the prompt for scoring."
+    ],
+    "deterministic": {
+      "words": 278,
+      "h2s": 2,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 3,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 94,
+      "avgSentence": 28,
+      "flesch": 55,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": [
+        "a 94-word run-on sentence (>55 — split it)"
+      ]
+    },
+    "hardBlocks": [
+      "a 94-word run-on sentence (>55 — split it)",
+      "ungrounded specific(s): 1,000 — every figure/outlet must exist in the gathered sources or authoritative facts"
+    ]
+  },
+  "holdReason": "accuracy/grounding block: ungrounded specific(s): 1,000 — every figure/outlet must exist in the gathered sources or authoritative facts",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "≥1200px legal image",
+      "credit",
+      "zero hard-blocks"
+    ]
+  },
+  "ms": 90523,
+  "previousRuns": [
+    {
+      "id": "news-prince-william-taylor-swift-travis-kelce-wedding",
+      "slug": "london-calling-indeed-prince-william-isn-t-going-to-taylor-swift-travi",
+      "status": "rejected_editorial",
+      "stages": {},
+      "holdReason": "editorial gate: out of scope: The text is a review/opinion piece about movies released in 2026, not a news report about a specific event. It also mentions an animated series that is out of scope.",
+      "ms": 3297
+    }
+  ]
+}

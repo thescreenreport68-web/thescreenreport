@@ -223,7 +223,11 @@ export function inlineSource(s) {
 // MAIN. topic = { query|title|primaryEntity, sources?[{outlet,tier,url,headline,summary}], seedUrls?[] }.
 // Returns the verified-content bundle; BLOCKS only on ZERO extractable/inline material (fail-closed on nothing,
 // never starved on single-source — the owner's pivot policy, finally enforced in the collection layer).
-export async function findContent(topic, { maxSources = 6, maxExtract = 8, skipGdelt = false } = {}) {
+// corroborate (default FALSE, 2026-07-03 simplification): under the trust-the-source model we extract ONLY the
+// top outlet's own article (topic.sources' URLs) — no Google-News corroboration search, no GDELT. The story from
+// Variety/THR IS the source of truth; we don't gather other outlets to cross-check it. Set corroborate=true only
+// if untrusted sources are ever re-introduced.
+export async function findContent(topic, { maxSources = 6, maxExtract = 8, corroborate = false } = {}) {
   const query = (topic.query || topic.title || topic.primaryEntity || "").trim();
   if (!query) return { blocked: true, reason: "no query", query: "" };
   const ent = (topic.primaryEntity || "").trim();
@@ -244,14 +248,14 @@ export async function findContent(topic, { maxSources = 6, maxExtract = 8, skipG
   }
 
   // 1) ENUMERATE candidate URLs for FULL-TEXT extraction:
-  //    SEEDS — FIND's own source URLs (freshest; INCLUDING news.google.com redirects, now Jina-resolvable) +
-  //    explicit seedUrls. CORR — Google-News search for this story + GDELT artlist (skipped when FIND already
-  //    corroborated — the double-GDELT fix).
-  const gq = buildGdeltQuery(topic);
-  const [gnFound, gdelt] = await Promise.all([
+  //    SEEDS — the outlet's own article URL(s) from FIND. CORR (only when corroborate=true) — a Google-News search
+  //    + GDELT artlist to widen the bundle. Under the trust-the-source model corroborate is FALSE, so we extract
+  //    ONLY the top outlet's story.
+  const gq = corroborate ? buildGdeltQuery(topic) : null;
+  const [gnFound, gdelt] = corroborate ? await Promise.all([
     gq ? gnewsSearch(gq, ent, { max: 6 }).catch(() => []) : [],
-    (!skipGdelt && gq) ? gdeltArticles(gq, { sinceHours: 168, maxRecords: 50 }).catch(() => []) : [],
-  ]);
+    gq ? gdeltArticles(gq, { sinceHours: 168, maxRecords: 50 }).catch(() => []) : [],
+  ]) : [[], []];
   const seedEntries = [
     ...(topic.seedUrls || []).map((u) => ({ url: u, outlet: null })),
     ...findSources.filter((s) => s.url).map((s) => ({ url: s.url, outlet: s.outlet || null })),
@@ -280,11 +284,16 @@ export async function findContent(topic, { maxSources = 6, maxExtract = 8, skipG
   }).slice(0, maxExtract);
 
   // 2) EXTRACT full text (+ quotes for SEEDS only) per candidate until enough independent owners.
+  // The slow part is the per-URL network fetch — do ALL of them in PARALLEL first (2026-07-03 speed: sequential
+  // 8×~14s → ~14s), then run the ORDER-DEPENDENT admission + owner-dedup below on the pre-fetched results so that
+  // logic is byte-for-byte unchanged (the early-break just stops iterating the already-fetched list sooner).
   const extracted = [];
   const owners = new Set();
   const failures = [];
-  for (const c of ordered) {
-    const ex = await extractOne(c.url, { gnewsRedirect: c.gnewsRedirect });
+  const prefetched = await Promise.all(ordered.map((c) =>
+    extractOne(c.url, { gnewsRedirect: c.gnewsRedirect }).then((ex) => ({ c, ex })).catch(() => ({ c, ex: null }))
+  ));
+  for (const { c, ex } of prefetched) {
     if (!ex) { failures.push(c.domain || c.outlet || c.url.slice(0, 40)); continue; }
     // A corroborating article must actually be about THIS story (gossip's entity-mention admission gate).
     if (c.from !== "seed" && !mentionsEntity(ex.text)) { failures.push((c.domain || c.outlet || "?") + ":off-entity"); continue; }

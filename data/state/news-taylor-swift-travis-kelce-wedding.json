@@ -1,0 +1,181 @@
+{
+  "id": "news-taylor-swift-travis-kelce-wedding",
+  "slug": "taylor-swift-s-wedding-look-included-a-subtle-eras-tour-nod",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": 85,
+      "cat": "celebrity/news",
+      "hardBlocks": [],
+      "block": [],
+      "fixable": [],
+      "badClaims": 0
+    }
+  },
+  "editorial": {
+    "status": "official",
+    "entity": "Taylor Swift",
+    "work": null,
+    "outlet": "billboard.com"
+  },
+  "scorecard": {
+    "score": 85,
+    "subscores": {
+      "accuracy": 10,
+      "readability": 9,
+      "humanVoice": 8,
+      "phrasing": 9,
+      "curiosity": 9,
+      "structure": 9,
+      "infoGain": 8,
+      "seo": 8,
+      "faqQuality": 8,
+      "completeness": 7
+    },
+    "strengths": [
+      "The article is highly accurate, adhering strictly to the provided source material and attributing claims appropriately.",
+      "Readability is excellent, with short paragraphs, clear language, and a Flesch score of 56, indicating good comprehension for a general audience.",
+      "The human voice is present through specific details (named designers, specific shoe styles, Adam Sandler's role) and avoids generic filler.",
+      "Phrasing is fluent and professional, free from forced keywords or awkward constructions.",
+      "The headline and dek are clear and deliver on the promise, satisfying curiosity quickly.",
+      "The structure is effective for a news article, with an answer-first lead and useful subheadings.",
+      "The FAQ section genuinely adds value by re-framing and consolidating key information.",
+      "SEO elements are naturally integrated without feeling forced, and the meta description is strong."
+    ],
+    "weaknesses": [
+      "The 'completeness' score is slightly lower due to the article's brevity, which is appropriate for a news piece but means less exhaustive detail compared to a feature.",
+      "While the human voice is good, there's limited opportunity for wit or surprise in a short news format, which slightly impacts the 'humanVoice' score.",
+      "The 'Information Gain' is good for a news piece, but it primarily reports facts rather than offering deep analysis or a unique POV, which is expected given the format but limits the score in this category."
+    ],
+    "deterministic": {
+      "words": 234,
+      "h2s": 3,
+      "h2Questions": 3,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 3,
+      "ktCount": 3,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": true,
+      "maxSentence": 25,
+      "avgSentence": 15,
+      "flesch": 56,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": []
+    },
+    "hardBlocks": []
+  },
+  "score": 85,
+  "category": "celebrity",
+  "subcategory": "news",
+  "audit": {
+    "ok": true,
+    "internalLinks": 2,
+    "failed": []
+  },
+  "ms": 86200,
+  "previousRuns": [
+    {
+      "id": "news-taylor-swift-travis-kelce-wedding",
+      "slug": "taylor-swift-s-wedding-look-included-a-subtle-eras-tour-nod",
+      "status": "needs_review",
+      "stages": {
+        "attempt1": {
+          "score": 85,
+          "cat": "celebrity/news",
+          "hardBlocks": [
+            "primary keyword not in title"
+          ],
+          "block": [],
+          "fixable": [
+            "primary keyword not in title"
+          ],
+          "badClaims": 0
+        },
+        "attempt2": {
+          "score": 85,
+          "cat": "celebrity/news",
+          "hardBlocks": [],
+          "block": [],
+          "fixable": [],
+          "badClaims": 0
+        }
+      },
+      "editorial": {
+        "status": "official",
+        "entity": "Taylor Swift",
+        "work": null,
+        "outlet": "billboard.com"
+      },
+      "holdReason": "verified accurate but score 85 < 65 (weak writing)",
+      "scorecard": {
+        "score": 85,
+        "subscores": {
+          "accuracy": 9,
+          "readability": 9,
+          "humanVoice": 8,
+          "phrasing": 9,
+          "curiosity": 8,
+          "structure": 9,
+          "infoGain": 8,
+          "seo": 8,
+          "faqQuality": 9,
+          "completeness": 8
+        },
+        "strengths": [
+          "The article is highly accurate, faithfully reporting only what is stated in the provided source material.",
+          "Readability is excellent, with short paragraphs and clear, concise language. The Flesch score of 51 is acceptable for news, and the average sentence length of 15 words contributes to easy consumption.",
+          "The human voice is present through direct reporting and specific details, avoiding generic AI-like phrasing.",
+          "Phrasing is fluent and professional, reading like a top news desk report. No forced keywords or awkward constructions.",
+          "The headline and dek deliver on the promise, providing specific information upfront without clickbait.",
+          "The structure is effective for a short news piece, with an answer-first lead and relevant subheadings.",
+          "Information gain is good for a short news article, providing specific details about the wedding attire and the Eras Tour connection.",
+          "SEO elements are naturally integrated, with the keyword present without stuffing. The FAQ section adds genuine new information.",
+          "The FAQ section is well-executed, providing new, relevant details not explicitly covered in the main body.",
+          "The article feels complete for a short news report, covering the essential details of the event and the specific angle promised by the headline."
+        ],
+        "weaknesses": [
+          "The article states 'Official photos of Swift’s bridal look had not yet been released as of Friday evening, according to Billboard.' The current date is July 2026, so 'Friday evening' is ambiguous and could be updated to 'as of July 2026' for clarity, though the original phrasing is directly from the source.",
+          "While the article is strong, the 'human voice' could be slightly elevated with a touch more personality or a unique turn of phrase, though for a short news piece, its current level is appropriate."
+        ],
+        "deterministic": {
+          "words": 234,
+          "h2s": 2,
+          "h2Questions": 2,
+          "internalLinks": 0,
+          "externalLinks": 0,
+          "hasSources": false,
+          "faqCount": 3,
+          "ktCount": 3,
+          "kwInTitle": true,
+          "kwInFirst100": true,
+          "kwInH2": false,
+          "maxSentence": 26,
+          "avgSentence": 15,
+          "flesch": 51,
+          "bannedTells": 0,
+          "fillerPraise": 0,
+          "kwExact": 0,
+          "hardBlocks": []
+        },
+        "hardBlocks": []
+      },
+      "audit": {
+        "ok": false,
+        "internalLinks": 0,
+        "failed": [
+          "body ≥ 220w",
+          "2+ FAQ",
+          "key takeaways",
+          "≥1200px legal image",
+          "credit"
+        ]
+      },
+      "ms": 162468
+    }
+  ]
+}

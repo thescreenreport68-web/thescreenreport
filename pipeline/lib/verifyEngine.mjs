@@ -183,6 +183,29 @@ export function verifyGroundTruth(article, topic) {
     }
   }
 
+  // ── Layer 1f — CAST / ROLE, vs TMDB credits (2026-07-03 audit #8: the deterministic backstop for the wrong-
+  // credit class — "X plays Y" when TMDB shows X plays Z). HIGH-PRECISION so it can never cut a TRUE sentence:
+  // it flags ONLY when TMDB bills the SAME actor (surname-exact) to a character with ZERO token overlap with the
+  // claimed role. An actor TMDB doesn't list (incomplete/animated casts) is never flagged. Complements the LLM
+  // web-check with a $0 structured check the model can't "sample past."
+  if (tf && Array.isArray(tf.cast) && tf.cast.length) {
+    const surname = (n) => norm(n).split(" ").filter(Boolean).pop() || "";
+    const overlap = (a, b) => a && b && (a.includes(b) || b.includes(a) || a.split(" ").some((w) => w.length > 3 && b.split(" ").includes(w)));
+    const byActor = tf.cast.filter((c) => c && c.name && c.character).map((c) => ({ name: c.name, sur: surname(c.name), char: norm(c.character) }));
+    const rx = /\b([A-Z][a-zA-Z.'’-]+(?:\s+[A-Z][a-zA-Z.'’-]+){1,2})\s+(?:plays|portrays|voices|stars as|appears as|will play|is playing)\s+([A-Z][a-zA-Z.'’-]+(?:\s+[A-Z][a-zA-Z.'’-]+){0,2})/g;
+    const seen = new Set();
+    for (const x of text.matchAll(rx)) {
+      const actorSur = surname(x[1]); const claimedChar = norm(x[2]);
+      if (actorSur.length <= 3 || claimedChar.length <= 2) continue;
+      const hit = byActor.find((c) => c.sur === actorSur);
+      const key = `${actorSur}|${claimedChar}`;
+      if (hit && !seen.has(key) && !overlap(claimedChar, hit.char)) {
+        seen.add(key);
+        findings.push({ layer: "cast", severity: "CONTRADICTED", claim: `article says ${x[1]} plays ${x[2]}`, correct: `${hit.name} plays ${hit.char}`, why: `Per TMDB credits, ${hit.name} plays "${hit.char}" in ${title}, not "${x[2]}". Correct the role.` });
+      }
+    }
+  }
+
   // ── Layer 2 — AWARDS (PR5): hard CATEGORY-LEVEL winner diff vs the authoritative map (topic._awards from
   // the official Academy Awards DB / first-party Golden Globes/Emmys), falling back to a grounding-presence
   // check for categories the authoritative source doesn't cover. This is what catches the 97th-Oscars

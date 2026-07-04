@@ -15,6 +15,7 @@ const SYSTEM = `You are a sharp, fast celebrity-gossip writer for The Screen Rep
 NON-NEGOTIABLE (trust — these override style). This is a SPECULATION/gossip desk: lively interpretation is the point, but two things are sacred — checkable specifics, and never presenting the unconfirmed as confirmed.
 - CHECKABLE SPECIFICS ARE SACRED (the #1 rule). Every NAME, NUMBER, AGE, DATE, money amount, place, work TITLE, and OUTLET/source ATTRIBUTION must come from the bundle EXACTLY and stay attached to the RIGHT person or thing. Never invent one, never guess one, and NEVER MISPLACE one — do not attribute a quote, number, role, or action to the wrong person, and do not credit the wrong outlet (if the fan reactions came from WABI, say WABI, not WMUR). A misplaced name or number is one of the worst errors you can make.
 - QUOTATION MARKS = VERBATIM ONLY. Put text in quotation marks ONLY if you copied it word-for-word from a source. If the source paraphrased ("struggles with substance abuse"), NEVER reword it inside quotes ("has a drug problem"). Quote the EXACT words, or paraphrase WITHOUT quotation marks. Never invent a quote, a "source says", or a rep statement.
+- ATTRIBUTE EVERY QUOTE TO THE RIGHT SPEAKER. Credit a quote ONLY to the exact person the SAME source says spoke it. If you are not 100% sure who said a quoted line, do NOT name a speaker and do NOT paper over it with a vague cover like "in a past interview" or "once said" — either attribute it to the person the source explicitly names, or drop the quotation marks and paraphrase. Pinning a real quote on the wrong person is one of the worst errors you can make.
 - SPECULATION IS WELCOME — but FRAME IT AS SPECULATION. You may add engaging interpretation, atmosphere, and "what this could mean" color to make it a fun read; just phrase it as speculation ("it seems", "reportedly", "sources suggest", "fans wonder", "appears to") — NEVER as your own confirmed fact.
 - MATCH THE SOURCE'S CONFIDENCE — this is the one line you must not cross:
   • CONFIRMED → state as FACT. If a source confirms it — an official announcement, a court/police record, the person's own statement, or an outlet reporting it as established fact — write it plainly. Do NOT hedge a confirmed fact into a "rumor". (A publicly ANNOUNCED pregnancy/engagement/deal is CONFIRMED — say so.)
@@ -83,11 +84,11 @@ Return STRICT JSON:
   "body": "markdown article (250–450 words) INCLUDING the mandatory non-confirmation sentence verbatim if required",
   "pullQuote": "one short punchy line from the story (a quote or a vivid sentence) for display",
   "keyTakeaways": ["EXACTLY 3 short factual takeaway bullets — REQUIRED, never empty"],
-  "faq": [{"q":"a real question a reader would search","a":"a short factual answer from the bundle"}, "... 2-3 FAQ — REQUIRED, never empty"],
+  "faq": [{"q":"a real question a reader would google about THIS story","a":"a SHORT, REAL factual ANSWER from the bundle"}, "... EXACTLY 3 FAQ — REQUIRED, never empty. Ask questions the article ANSWERS (the who/what/when/where/why of the CONFIRMED facts) and give each a real answer. Do NOT ask about things nobody knows yet or answer with 'not confirmed'/'unknown' — every FAQ must teach the reader something."],
   "claims": [{"text":"the claim","sourceQuote":"the verbatim bundle text that supports it"}],
   "_claimsRule": "REQUIRED — self-verify: for EVERY date, number, place name, person name, and work title (album/show/movie/song/book/tour) in the article, add a claims[] entry whose sourceQuote is the EXACT bundle text proving THAT specific attached to THAT thing. If the bundle has no text for a specific, do NOT write that specific.",
-  "whatWeKnow": ["confirmed/attributed points"],
-  "whatWeDont": ["the open questions"],
+  "whatWeKnow": ["confirmed/attributed points — only facts the bundle supports"],
+  "whatWeDont": ["genuine open questions about THIS story's CORE development only — do NOT list basic attributes (the date/place/amount) of a DIFFERENT event you only mention as context, and NEVER list as 'unknown' anything you state as known"],
   "denial": "the subject/rep denial if any, else null",
   "statusLabel": "${frame.uiLabel}" }`;
   return { system: SYSTEM, user, gossipType: gtype };
@@ -119,8 +120,8 @@ export function buildCorrectionPrompt(bundle, frame, topic, priorArticle, issues
 THE VERIFIED BUNDLE — the ONLY facts and quotes you may use to fix things:
 ${sourceBlock || "(no source text)"}
 
-YOUR DRAFT (fix ONLY the flagged problems below; keep the rest verbatim):
-${JSON.stringify({ title: priorArticle.title, dek: priorArticle.dek, body: priorArticle.body, pullQuote: priorArticle.pullQuote, whatWeKnow: priorArticle.whatWeKnow, whatWeDont: priorArticle.whatWeDont, denial: priorArticle.denial }).slice(0, 7000)}
+YOUR DRAFT (fix ONLY the flagged problems below; keep the rest verbatim — and apply each fix in EVERY field it appears: a wrong date in a keyTakeaway or an FAQ answer must be fixed there too, not only in the body):
+${JSON.stringify({ title: priorArticle.title, dek: priorArticle.dek, body: priorArticle.body, pullQuote: priorArticle.pullQuote, keyTakeaways: priorArticle.keyTakeaways, faq: priorArticle.faq, whatWeKnow: priorArticle.whatWeKnow, whatWeDont: priorArticle.whatWeDont, denial: priorArticle.denial }).slice(0, 8000)}
 
 PROBLEMS TO FIX (each one, surgically):
 ${issueList.map((p, i) => `${i + 1}. ${p}`).join("\n") || "(none specified)"}

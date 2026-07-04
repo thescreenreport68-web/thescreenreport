@@ -238,6 +238,15 @@ WORD BUDGET: ${thinGrounding
     ? "the gathered grounding is THIN — write a TIGHT, fully-grounded ~230-320-word brief. Do NOT stretch toward a \"full\" article length by adding background, career history, or franchise context the sources below don't contain — padding beyond the sources is exactly how fabrications happen. Short and 100% grounded is the CORRECT outcome here."
     : "solid grounding — write the form's natural length (~450-650 words), every fact from the sources below."}
 
+⛔ NUMBERS & NAMED SPECIFICS — the #1 rule (this is what gets articles held): NEVER state a NUMBER or hard specific
+unless that EXACT value appears in the REFERENCE FACTS below. This means: box-office grosses, opening/5-day figures,
+theater counts, budgets, CinemaScores, Rotten Tomatoes/Metacritic %, chart peaks, dates/years, ages, counts, dollar
+amounts. If the source gives you ONE figure (e.g. a "$63M 5-day" headline), use ONLY that one — do NOT add a theater
+count, a budget, a rating, or a "compared to $X" you weren't given, even if you think you know it. A story whose
+source has few numbers = a SHORT, tight, engaging brief built around ONLY those numbers. It is far better to publish
+a faithful 230-word brief than to invent one figure and get the whole piece held. Same for QUOTES: only quotation-
+mark a phrase that is verbatim in the facts. When unsure whether a specific is in the source — leave it out.
+
 REFERENCE FACTS — ground EVERY factual claim ONLY in these; add NOTHING from your own memory, no matter how well-known it seems (an independent verifier re-checks every claim against these exact facts and CUTS or BLOCKS anything not found here):
 ${facts}
 

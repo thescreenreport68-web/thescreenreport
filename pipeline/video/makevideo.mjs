@@ -103,7 +103,14 @@ export async function makeVideo({ slug, tmdbType, persons, titleEntity } = {}) {
   });
 
   // 6 · OUTBOX SIDECAR — captions per platform + provenance log (image credits/URLs for takedown response)
-  if (script.captions?.x) script.captions.x = String(script.captions.x).replace(/#[a-z0-9]{0,3}$/i, "").trim();
+  // G (owner 2026-07-03): strip markdown from EVERY platform caption — "*Three Days of the Condor*" was
+  // showing literal asterisks on X/IG. (Also removed the old #tag-trim that deleted legit short tags like #F1.)
+  const stripMd = (s) => String(s).replace(/[*_`~]+/g, "").replace(/\s{2,}/g, " ").trim();
+  if (script.captions) {
+    const c = script.captions;
+    for (const k of ["instagram", "facebook", "x"]) if (typeof c[k] === "string") c[k] = stripMd(c[k]);
+    for (const k of ["pinterest", "youtube"]) if (c[k] && typeof c[k] === "object") for (const kk of Object.keys(c[k])) if (typeof c[k][kk] === "string") c[k][kk] = stripMd(c[k][kk]);
+  }
   const sidecar = {
     slug, title: fm.title, madeAt: new Date().toISOString(), seconds: r.seconds, file: out,
     captions: script.captions, onScreenTitle: script.onScreenTitle,
