@@ -7,8 +7,7 @@
       "score": null,
       "cat": "movies/trailers",
       "format": [
-        "body 325w < 400",
-        "a 68-word run-on sentence (>55 — split it)"
+        "a 92-word run-on sentence (>55 — split it)"
       ],
       "cuts": 1,
       "broken": []
@@ -17,7 +16,7 @@
       "score": null,
       "cat": "movies/trailers",
       "format": [
-        "body 317w < 400"
+        "a 92-word run-on sentence (>55 — split it)"
       ],
       "cuts": 0,
       "broken": []
@@ -40,7 +39,7 @@
     "strengths": [],
     "weaknesses": [],
     "deterministic": {
-      "words": 317,
+      "words": 404,
       "h2s": 4,
       "h2Questions": 3,
       "internalLinks": 0,
@@ -51,14 +50,14 @@
       "kwInTitle": true,
       "kwInFirst100": true,
       "kwInH2": false,
-      "maxSentence": 39,
-      "avgSentence": 19,
-      "flesch": 52,
+      "maxSentence": 92,
+      "avgSentence": 24,
+      "flesch": 51,
       "bannedTells": 0,
       "fillerPraise": 0,
       "kwExact": 0,
       "hardBlocks": [
-        "body 317w < 400"
+        "a 92-word run-on sentence (>55 — split it)"
       ]
     },
     "hardBlocks": []
@@ -68,12 +67,11 @@
     "internalLinks": 0,
     "failed": [
       "video grounding",
-      "body ≥ 400w",
       "≥1200px legal image",
       "credit"
     ]
   },
-  "ms": 188983,
+  "ms": 177408,
   "previousRuns": [
     {
       "id": "trailer-oasis-liam-gallagher-reunion-tour-doc-teaser",
@@ -151,6 +149,83 @@
         ]
       },
       "ms": 396790
+    },
+    {
+      "id": "trailer-oasis-liam-gallagher-reunion-tour-doc-teaser",
+      "slug": "oasis-reunion-tour-doc-don-t-look-back-in-anger-drops-teaser",
+      "status": "needs_review",
+      "stages": {
+        "attempt1": {
+          "score": null,
+          "cat": "movies/trailers",
+          "format": [
+            "body 325w < 400",
+            "a 68-word run-on sentence (>55 — split it)"
+          ],
+          "cuts": 1,
+          "broken": []
+        },
+        "attempt2": {
+          "score": null,
+          "cat": "movies/trailers",
+          "format": [
+            "body 317w < 400"
+          ],
+          "cuts": 0,
+          "broken": []
+        }
+      },
+      "editorial": {
+        "status": "official",
+        "entity": "Don't Look Back in Anger",
+        "work": {
+          "title": "Don't Look Back in Anger",
+          "year": null,
+          "medium": "movie"
+        },
+        "outlet": "deadline.com"
+      },
+      "holdReason": "trailer: required embed missing",
+      "scorecard": {
+        "score": null,
+        "subscores": {},
+        "strengths": [],
+        "weaknesses": [],
+        "deterministic": {
+          "words": 317,
+          "h2s": 4,
+          "h2Questions": 3,
+          "internalLinks": 0,
+          "externalLinks": 0,
+          "hasSources": true,
+          "faqCount": 3,
+          "ktCount": 4,
+          "kwInTitle": true,
+          "kwInFirst100": true,
+          "kwInH2": false,
+          "maxSentence": 39,
+          "avgSentence": 19,
+          "flesch": 52,
+          "bannedTells": 0,
+          "fillerPraise": 0,
+          "kwExact": 0,
+          "hardBlocks": [
+            "body 317w < 400"
+          ]
+        },
+        "hardBlocks": []
+      },
+      "audit": {
+        "ok": false,
+        "internalLinks": 0,
+        "failed": [
+          "video grounding",
+          "body ≥ 400w",
+          "≥1200px legal image",
+          "credit"
+        ]
+      },
+      "ms": 188983
     }
   ]
 }

@@ -1,0 +1,75 @@
+{
+  "id": "news-vin-diesel-fast-forever-production-commences",
+  "slug": "vin-diesel-begins-fast-forever-production-teases-most-amazing-finale",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": null,
+      "cat": "movies/news",
+      "format": [
+        "body 185w < 220"
+      ],
+      "cuts": 2,
+      "broken": []
+    },
+    "attempt2": {
+      "score": null,
+      "cat": "movies/news",
+      "format": [
+        "body 181w < 220"
+      ],
+      "cuts": 1,
+      "broken": []
+    }
+  },
+  "editorial": {
+    "status": "official",
+    "entity": "Vin Diesel",
+    "work": {
+      "title": "Fast Forever",
+      "year": 2028,
+      "medium": "movie"
+    },
+    "outlet": "deadline.com"
+  },
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
+    "deterministic": {
+      "words": 181,
+      "h2s": 2,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 3,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 28,
+      "avgSentence": 15,
+      "flesch": 63,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 1,
+      "hardBlocks": [
+        "body 181w < 220"
+      ]
+    },
+    "hardBlocks": []
+  },
+  "score": null,
+  "category": "movies",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 1,
+    "failed": [
+      "body ≥ 220w"
+    ]
+  },
+  "ms": 113706
+}
