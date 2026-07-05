@@ -4,9 +4,10 @@ compatibility_date = "2025-01-01"
 # Cron-only Worker (no HTTP endpoint) — don't publish to workers.dev; the Cron Trigger fires the scheduled() handler.
 workers_dev = false
 
-# Fires every 5 minutes. The Worker gates to LA 10am-10pm PT and calls the GitHub workflow_dispatch API.
+# Fires every 2 hours at ODD UTC hours (01:00, 03:00, … 23:00) → ~12 articles/day, 24/7. Odd hours keep the news lane
+# offset 1h from the gossip lane (even hours, run by a separate chat) so the two never post at the same time.
 [triggers]
-crons = ["*/5 * * * *"]
+crons = ["0 1-23/2 * * *"]
 
 # Non-secret config. GH_REF MUST be the repo's DEFAULT branch (workflow_dispatch only sees workflows on default).
 [vars]

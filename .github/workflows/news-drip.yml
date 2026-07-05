@@ -59,9 +59,9 @@ jobs:
           OMDB_API_KEY: ${{ secrets.OMDB_API_KEY }}
           LASTFM_API_KEY: ${{ secrets.LASTFM_API_KEY }}
           JINA_API_KEY: ${{ secrets.JINA_API_KEY }}
-          # force=true (manual test) bypasses the LA-hours gate so a dispatch publishes immediately.
-          LA_START: ${{ github.event.inputs.force == 'true' && '0' || '10' }}
-          LA_END: ${{ github.event.inputs.force == 'true' && '24' || '22' }}
+          # 24/7 posting (owner 2026-07-05): NO LA-hours gate — the cron's 2-hour cadence is what controls timing.
+          LA_START: "0"
+          LA_END: "24"
         run: node pipeline/scheduler.mjs --limit=${{ github.event.inputs.limit || '1' }}
 
       - name: Commit new article + state

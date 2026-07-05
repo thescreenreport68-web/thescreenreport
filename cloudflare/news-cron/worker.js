@@ -20,11 +20,9 @@ export default {
   async scheduled(event, env, ctx) {
     const now = new Date(event.scheduledTime || Date.now());
     const h = laHour(now);
-    // -1 = couldn't resolve TZ here → dispatch anyway (the node scheduler gates). Otherwise gate to 10:00–21:59 PT.
-    if (h !== -1 && (h < 10 || h >= 22)) {
-      console.log(`news-cron: LA hour ${h} outside 10-22, skip`);
-      return;
-    }
+    // 24/7 posting (owner 2026-07-05): the cron fires every 2 hours (odd UTC hours) — NO LA-hours gate; dispatch on
+    // every fire so we hit ~12 articles/day at a 2-hour cadence. The odd-hour schedule keeps news offset 1h from the
+    // gossip lane (even hours, run by a separate chat), so the two never post at the same time.
     const url = `https://api.github.com/repos/${env.GH_OWNER}/${env.GH_REPO}/actions/workflows/news-drip.yml/dispatches`;
     const res = await fetch(url, {
       method: "POST",
