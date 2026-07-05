@@ -1,0 +1,79 @@
+{
+  "id": "watchguide-macys-fourth-of-july-fireworks-spectacular-watch-guide",
+  "slug": "where-to-watch-macy-s-fourth-of-july-fireworks-spectacular-on-tv-or-st",
+  "status": "needs_review",
+  "stages": {
+    "attempt1": {
+      "score": null,
+      "cat": "streaming/where-to-watch",
+      "format": [
+        "body 206w < 220"
+      ],
+      "cuts": 3,
+      "broken": [
+        "prompt-leak / meta-refusal phrase reached reader copy (e.g. 'not detailed in the provided facts' / 'the reference facts') — rewrite or omit"
+      ]
+    },
+    "attempt2": {
+      "score": null,
+      "cat": "streaming/where-to-watch",
+      "format": [
+        "body 206w < 220"
+      ],
+      "cuts": 1,
+      "broken": [
+        "prompt-leak / meta-refusal phrase reached reader copy (e.g. 'not detailed in the provided facts' / 'the reference facts') — rewrite or omit"
+      ]
+    }
+  },
+  "editorial": {
+    "status": "official",
+    "entity": "Macy's Fourth of July Fireworks Spectacular",
+    "work": null,
+    "outlet": "thewrap.com"
+  },
+  "holdReason": "broken article: prompt-leak / meta-refusal phrase reached reader copy (e.g. 'not detailed in the provided facts' / 'the reference facts') — rewrite or omit",
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
+    "deterministic": {
+      "words": 206,
+      "h2s": 4,
+      "h2Questions": 3,
+      "internalLinks": 0,
+      "externalLinks": 1,
+      "hasSources": true,
+      "faqCount": 4,
+      "ktCount": 3,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 25,
+      "avgSentence": 13,
+      "flesch": 64,
+      "bannedTells": 0,
+      "fillerPraise": 4,
+      "kwExact": 1,
+      "hardBlocks": [
+        "body 206w < 220",
+        "prompt-leak / meta-refusal phrase reached reader copy (e.g. 'not detailed in the provided facts' / 'the reference facts') — rewrite or omit"
+      ]
+    },
+    "hardBlocks": [
+      "prompt-leak / meta-refusal phrase reached reader copy (e.g. 'not detailed in the provided facts' / 'the reference facts') — rewrite or omit"
+    ]
+  },
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "body ≥ 220w",
+      "≥1200px legal image",
+      "credit",
+      "zero hard-blocks"
+    ]
+  },
+  "ms": 247269
+}
