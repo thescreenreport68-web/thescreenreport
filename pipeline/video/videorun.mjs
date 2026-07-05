@@ -14,7 +14,7 @@ import { costReport } from "../lib/openrouter.mjs";
 import { detectSensitive } from "./sensitive.mjs";
 import { chat } from "../lib/openrouter.mjs";
 
-const ROOT = "/Users/sivajithcu/Movie News site/site";
+const ROOT = process.env.TSR_SITE || "/Users/sivajithcu/Movie News site/site";
 const arg = (k, d = null) => (process.argv.find((a) => a.startsWith(`--${k}=`)) || "").split("=").slice(1).join("=") || d;
 const COUNT = Number(arg("count", VIDEO.dailyCount));
 const WINDOW_H = Number(arg("window-hours", VIDEO.windowHours));
@@ -89,7 +89,7 @@ for (const c of queue) {
   try {
     const r = await makeVideo({ slug: c.slug });
     const usd = (costReport().total || 0) - before;
-    fs.copyFileSync(r.out, "/Users/sivajithcu/Movie News site/Latest-Video.mp4"); // stable owner-review handle
+    try { fs.copyFileSync(r.out, path.join(path.dirname(ROOT), "Latest-Video.mp4")); } catch {} // stable local owner-review handle (best-effort; skipped in CI)
     made.push({ slug: c.slug, title: c.title, category: c.category, seconds: r.seconds, usd: +usd.toFixed(5), file: r.out });
     console.log(`  ✓ ${r.seconds}s · $${usd.toFixed(4)}`);
   } catch (e) {

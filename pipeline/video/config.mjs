@@ -1,7 +1,10 @@
 // REELS VIDEO AUTOMATION — config (see /Users/sivajithcu/Movie News site/REELS_AUTOMATION_PLAN.md).
 // Self-contained on purpose: the article pipeline's config.mjs is NOT touched (owner: no damage to the
-// article automation). Same conventions: absolute paths, cheap-models-only hard rule.
-const ROOT = "/Users/sivajithcu/Movie News site";
+// article automation). Cheap-models-only hard rule.
+// PATHS: local default = the Mac checkout; in CI set TSR_SITE=$GITHUB_WORKSPACE (+ optional TSR_PYTHON/TSR_MODELS).
+import path from "node:path";
+const SITE = process.env.TSR_SITE || "/Users/sivajithcu/Movie News site/site"; // the `site` repo dir
+const ROOT = path.dirname(SITE); // parent (holds video-venv/ + video-models/ locally)
 
 export const VIDEO = {
   // ── models (cheap-only hard rule; both already in the article pipeline's allowlist family)
@@ -12,8 +15,8 @@ export const VIDEO = {
   // ── voice (Kokoro-82M via kokoro-onnx: $0 forever, runs on CPU; af_heart = grade-A energetic narrator)
   voice: "af_heart:55,af_bella:45", // blend (fix K): af_heart warmth + af_bella dynamics
   speed: 1.0, // owner 2026-07-03: 1.08 read too fast — natural pace so every word lands (still energetic via af_heart)
-  python: `${ROOT}/video-venv/bin/python`,
-  modelDir: `${ROOT}/video-models`, // kokoro-v1.0.onnx (310MB) + voices-v1.0.bin — outside the repo; CI restores from release URL + actions/cache
+  python: process.env.TSR_PYTHON || `${ROOT}/video-venv/bin/python`,
+  modelDir: process.env.TSR_MODELS || `${ROOT}/video-models`, // kokoro-v1.0.onnx (310MB) + voices-v1.0.bin — CI downloads from the upstream kokoro-onnx release + caches
 
   // ── SENSITIVITY POLICY (Phase 2, owner-approved plan): death stories "block" (default) or "somber"
   // (proceed with forced somber register + no music). Legal/minor-involved stories are ALWAYS blocked.
@@ -33,9 +36,9 @@ export const VIDEO = {
   minImageWidth: 700, // code-side floor — vision models can't judge original resolution (providers downscale)
 
   // ── dirs (data/video/* mirrors data/find/* conventions: plain inspectable JSON + artifacts)
-  workDir: `${ROOT}/site/data/video/work`,
-  outDir: `${ROOT}/site/data/video/out`, // finished MP4s + caption sidecars; the X/YouTube manual OUTBOX for now
-  assetsDir: `${ROOT}/site/pipeline/video/assets`, // logo-white.png, endcard.mp4, fonts/, music/
-  fontsDir: `${ROOT}/site/pipeline/video/assets/fonts`, // Anton (captions) — shipped with the repo
-  musicDir: `${ROOT}/site/pipeline/video/assets/music`, // optional CC/royalty-free beds; auto-ducked under the voice
+  workDir: `${SITE}/data/video/work`,
+  outDir: `${SITE}/data/video/out`, // finished MP4s + caption sidecars; the X/YouTube manual OUTBOX for now
+  assetsDir: `${SITE}/pipeline/video/assets`, // logo-white.png, endcard.mp4, fonts/, music/
+  fontsDir: `${SITE}/pipeline/video/assets/fonts`, // Anton (captions) — shipped with the repo
+  musicDir: `${SITE}/pipeline/video/assets/music`, // optional CC/royalty-free beds; auto-ducked under the voice
 };

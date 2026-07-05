@@ -15,7 +15,7 @@ import { planShots } from "./shots.mjs";
 import { detectSensitive } from "./sensitive.mjs";
 import { renderVideo } from "./render.mjs";
 
-const ROOT = "/Users/sivajithcu/Movie News site/site";
+const ROOT = process.env.TSR_SITE || "/Users/sivajithcu/Movie News site/site";
 const arg = (k, d = null) => (process.argv.find((a) => a.startsWith(`--${k}=`)) || "").split("=").slice(1).join("=") || d;
 
 export async function makeVideo({ slug, tmdbType, persons, titleEntity } = {}) {
