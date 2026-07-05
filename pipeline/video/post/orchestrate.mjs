@@ -61,6 +61,14 @@ function slotBase(category) {
 
 const catOf = (slug) => { try { return matter(fs.readFileSync(path.join(ROOT, "content/articles", slug + ".md"), "utf8")).data.category; } catch { return null; } };
 
+// slugs that already had a LIVE (non-draft) successful post — cross-run dedup so we never re-post the same video
+function livePostedSlugs() {
+  try {
+    const log = JSON.parse(fs.readFileSync(LOG, "utf8"));
+    return new Set(log.filter((e) => !e.draft && e.results && Object.values(e.results).some((r) => r?.ok)).map((e) => e.slug));
+  } catch { return new Set(); }
+}
+
 // pick the best recent published article for a category (highest priority, within the window, not already posted)
 function pickForCategory(category, postedSlugs) {
   const pub = JSON.parse(fs.readFileSync(path.join(ROOT, "data/find/published.json"), "utf8"));
@@ -176,7 +184,8 @@ async function main() {
   if (fs.existsSync(STOP)) { console.log("POSTING_OFF present — paused. Remove", STOP, "to resume."); return; }
 
   const cats = only ? [only] : ["movies", "tv", "celebrity"];
-  const posted = new Set(); // in-run dedup only; add a cross-run ledger later if needed
+  // seed with already-live-posted slugs (cross-run dedup) so daily runs pick fresh stories; forced --slug bypasses this
+  const posted = forceSlug ? new Set() : livePostedSlugs();
   const summary = [];
   for (const category of cats) {
     if (!(category in SLOTS)) { console.log(`skip unknown category ${category}`); continue; }
