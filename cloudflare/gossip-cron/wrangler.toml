@@ -2,10 +2,10 @@ name = "gossip-cron"
 main = "worker.js"
 compatibility_date = "2025-01-01"
 
-# Fires hourly, 24/7, and calls the GitHub workflow_dispatch API. The node scheduler's interval gate posts ~1
-# article every ~2h (so ~half of these hourly ticks publish, the rest no-op).
+# Fires at EVEN UTC hours (00:00, 02:00, 04:00 … 22:00), 24/7 → 12 posts/day. This keeps gossip exactly 1 hour
+# apart from the NEWS lane (which posts on ODD UTC hours) — the two never overlap.
 [triggers]
-crons = ["0 * * * *"]
+crons = ["0 */2 * * *"]
 
 # Non-secret config. GH_REF MUST be the repo's DEFAULT branch (workflow_dispatch only sees workflows on default).
 [vars]
