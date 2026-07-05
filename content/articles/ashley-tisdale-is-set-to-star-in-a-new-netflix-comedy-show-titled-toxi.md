@@ -1,7 +1,7 @@
 ---
 title: Ashley Tisdale Turns Her Viral 'Toxic Mom Group' Essay Into a Netflix Comedy
 slug: ashley-tisdale-is-set-to-star-in-a-new-netflix-comedy-show-titled-toxi
-category: celebrity
+category: tv
 subcategory: news
 author: alicia-bernard
 date: '2026-07-03T05:20:09.922Z'
@@ -18,7 +18,6 @@ tags:
   - Ashley Tisdale
   - celebrity
   - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Ashley Tisdale is developing and set to star in a Netflix comedy series

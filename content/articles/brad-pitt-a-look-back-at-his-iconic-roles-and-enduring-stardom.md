@@ -1,8 +1,8 @@
 ---
 title: 'Brad Pitt Movies: The Evolution of a Hollywood Icon'
 slug: brad-pitt-a-look-back-at-his-iconic-roles-and-enduring-stardom
-category: celebrity
-subcategory: profiles-careers
+category: movies
+subcategory: rankings-lists
 author: editorial-team
 date: '2026-06-27T10:25:08.454Z'
 dek: >-

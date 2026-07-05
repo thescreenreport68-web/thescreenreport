@@ -18,7 +18,6 @@ tags:
   - Anne Hathaway
   - celebrity
   - pregnancy
-  - celebrity gossip
 keyTakeaways:
   - >-
     Anne Hathaway is pregnant and was photographed in New York City on June 30,

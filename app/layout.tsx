@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Fraunces, Source_Serif_4, Karla, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AnchorAd from "@/components/AnchorAd";
 import Beacon from "@/components/Beacon";
+import CloudflareAnalytics from "@/components/CloudflareAnalytics";
 import GoogleOneTap from "@/components/GoogleOneTap";
 import JsonLd from "@/components/JsonLd";
 import { SITE } from "@/lib/site";
@@ -70,7 +72,7 @@ export const metadata: Metadata = {
     template: `%s — ${SITE.name}`,
   },
   description: SITE.description,
-  robots: { index: false, follow: false },
+  robots: { index: true, follow: true },
   alternates: { types: { "application/rss+xml": "/feed.xml" } },
   verification: { other: { "p:domain_verify": "732df0e14a6881379e2a7185fdde95a4" } },
   openGraph: {
@@ -80,9 +82,12 @@ export const metadata: Metadata = {
     url: SITE.url,
     title: SITE.name,
     description: SITE.description,
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: SITE.name }],
   },
-  twitter: { card: "summary_large_image", site: SITE.twitter },
+  twitter: { card: "summary_large_image", site: SITE.twitter, images: ["/og.png"] },
 };
+
+export const viewport = { themeColor: "#101010" };
 
 export default function RootLayout({
   children,
@@ -102,12 +107,26 @@ export default function RootLayout({
           Skip to content
         </a>
         <JsonLd data={SITE_SCHEMA} />
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9157799451949681"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
         <Beacon />
+        <CloudflareAnalytics />
         <GoogleOneTap />
         <Header />
         <main id="content">{children}</main>
         <Footer />
-        <div aria-hidden className="h-[72px] md:h-[104px]" />
+        {/* Reserved space for the bottom anchor ad — constant height (even when
+            the reader collapses the bar) so content is never hidden behind it
+            and collapsing causes zero layout shift. */}
+        <div
+          aria-hidden
+          className="h-[58px] md:h-[98px]"
+          style={{ paddingBottom: "env(safe-area-inset-bottom, 0px)" }}
+        />
         <AnchorAd />
       </body>
     </html>

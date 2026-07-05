@@ -22,7 +22,6 @@ tags:
   - Erin Moriarty
   - celebrity
   - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Erin Moriarty revealed on a podcast she filmed a *The Boys* sex scene in

@@ -18,7 +18,6 @@ tags:
   - Sean Preston Federline
   - celebrity
   - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Sean Preston Federline, 20, and Jayden James Federline, 19, walked in the

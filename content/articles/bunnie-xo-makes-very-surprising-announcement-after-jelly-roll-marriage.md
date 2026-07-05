@@ -18,7 +18,6 @@ tags:
   - Bunnie Xo
   - celebrity
   - breakup
-  - celebrity gossip
 keyTakeaways:
   - >-
     Bunnie Xo announced her acceptance to Arizona State University via Instagram

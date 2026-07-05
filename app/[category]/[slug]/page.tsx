@@ -340,9 +340,13 @@ export default function ArticlePage({
           </div>
         </article>
 
-        {/* Right rail: 300x600 + Must Reads + sticky 300x600 */}
+        {/* Right rail (THR pattern): 300x600 → Must Reads → the LAST ad wrapped
+            sticky so it rides the frame for the entire remaining read. The
+            wrapper is h-full (the grid stretches the aside to the article's
+            height) — without that the sticky has no travel room and never
+            sticks. */}
         <aside className="hidden lg:block">
-          <div className="space-y-7">
+          <div className="flex h-full flex-col gap-7">
             <AdSlot format="halfpage" />
             <div className="border-t-2 border-ink">
               <div className="border-b border-hair pb-2 pt-2.5">
@@ -354,7 +358,7 @@ export default function ArticlePage({
                 ))}
               </div>
             </div>
-            <div className="sticky top-[76px]">
+            <div className="sticky top-[68px]">
               <AdSlot format="halfpage" />
             </div>
           </div>

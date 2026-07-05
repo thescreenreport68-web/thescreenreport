@@ -1,7 +1,7 @@
 ---
 title: 'Victor Willis, Village People Frontman, Dies at 74'
 slug: victor-willis-village-people-frontman-dies-at-74
-category: celebrity
+category: music
 subcategory: news
 author: editorial-team
 date: '2026-07-01T09:09:00.700Z'

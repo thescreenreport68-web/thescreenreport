@@ -2,15 +2,16 @@ name = "gossip-cron"
 main = "worker.js"
 compatibility_date = "2025-01-01"
 
-# Fires every 5 minutes. The Worker gates to LA 10am-10pm PT and calls the GitHub workflow_dispatch API.
+# Fires hourly, 24/7, and calls the GitHub workflow_dispatch API. The node scheduler's interval gate posts ~1
+# article every ~2h (so ~half of these hourly ticks publish, the rest no-op).
 [triggers]
-crons = ["*/5 * * * *"]
+crons = ["0 * * * *"]
 
 # Non-secret config. GH_REF MUST be the repo's DEFAULT branch (workflow_dispatch only sees workflows on default).
 [vars]
 GH_OWNER = "thescreenreport68-web"
 GH_REPO = "thescreenreport"
-GH_REF = "main"
+GH_REF = "rebuild-trending-news"
 
 # Secret (NOT here — set once with:  wrangler secret put GH_TOKEN):
 #   GH_TOKEN = a fine-grained GitHub PAT scoped to this repo with "Actions: Read and write".

@@ -1,7 +1,7 @@
 ---
 title: 'Margot Robbie''s Best Movies Ranked: Why I, Tonya Beats Barbie at #1'
 slug: margot-robbie-best-movies
-category: celebrity
+category: movies
 author: editorial-team
 date: '2026-06-18T23:00:00.000Z'
 dek: >-
@@ -124,7 +124,7 @@ about:
     sameAs: 'https://en.wikipedia.org/wiki/The_Big_Short_(film)'
 imageWidth: 1920
 imageHeight: 2400
-subcategory: profiles-careers
+subcategory: rankings-lists
 ---
 
 Here is the answer most lists bury: the best Margot Robbie movie is not the billion-dollar **Barbie**, and it is not **The Wolf of Wall Street**, the breakout that made her famous. By the critical consensus that runs across Rotten Tomatoes and awards-season trackers, the top of any honest **margot robbie best movies ranked** countdown is **I, Tonya** — her transformative, Oscar-nominated turn as Tonya Harding. That is the role that proved she could disappear into a character and carry an entire film on her back.

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import AdSlot from "./AdSlot";
 import PlaceholderImage from "./PlaceholderImage";
 import TrendingBadge from "./TrendingBadge";
 import { getAuthor, getCategory } from "@/lib/site";
@@ -9,6 +10,23 @@ export const RIVER_PAGE_SIZE = 12;
 
 // Page 1 of a category archive shows the lead package (1 + 3) before the river.
 export const ARCHIVE_LEAD_COUNT = 4;
+
+// In-river ad after this many items (THR runs river banners; Better Ads says
+// every 6-8 list items is the safe floor on list pages).
+export const RIVER_AD_AFTER = 6;
+
+// The in-feed river ad unit — hairline-framed like the in-article units so it
+// reads as a deliberate break, never mimicking a story row.
+export function RiverAd() {
+  return (
+    <div className="border-b border-dotted border-gray py-6">
+      <div className="flex justify-center border-y border-hair py-4">
+        <AdSlot format="leaderboard" className="hidden md:flex" />
+        <AdSlot format="rectangle" className="md:hidden" />
+      </div>
+    </div>
+  );
+}
 
 // One river row (spec §E): 16:9 thumb left, meta row → display headline →
 // clamped dek → byline, over dotted separators.

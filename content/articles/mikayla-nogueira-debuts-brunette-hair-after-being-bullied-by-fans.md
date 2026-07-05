@@ -18,7 +18,6 @@ tags:
   - Mikayla Nogueira
   - celebrity
   - feud
-  - celebrity gossip
 keyTakeaways:
   - Mikayla Nogueira changed her hair color from blonde to dark brown.
   - >-

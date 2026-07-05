@@ -1,6 +1,6 @@
 ---
 title: 'Cardi B Wins $60,000 From Tasha K in Latest Legal Clash'
-slug: cardi-b-wins-60-000-from-tasha-k-after-the-gossip-blogger-violated-the
+slug: cardi-b-wins-60-000-from-tasha-k-in-latest-legal-clash
 category: music
 secondaryCategory: celebrity
 subcategory: news
@@ -19,7 +19,6 @@ tags:
   - Cardi B
   - music
   - general
-  - celebrity gossip
 keyTakeaways:
   - 'Billboard reports Cardi B won a $60,000 payment from Tasha K.'
   - >-

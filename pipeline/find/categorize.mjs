@@ -62,6 +62,11 @@ You output STRICT JSON only. Be CONSERVATIVE: when a candidate is off-topic OR p
 
 const NICHE_GUIDE = `This automation posts ONLY hardcore trending NEWS — a real EVENT. Pick ONE formatTag from THESE NEWS FORMS ONLY (there are no others; if the story is not one of these, it is NOT for us — set relevant=false):
 - "news" → movies|tv|celebrity / "news": a development/announcement/casting/deal/scandal/health/legal/DEATH story (the default for any breaking item).
+  CATEGORY CHOICE for a "news" item — MOVIES-FIRST. File the story in its TRUE home; do NOT lazily default to celebrity:
+    • "movies" when the story centers on a FILM — a movie's casting, deal, production, release, or a filmmaker's movie work (e.g. "Zendaya joins Christopher Nolan's The Odyssey" is MOVIES, not celebrity).
+    • "tv" when it centers on a TV or streaming SERIES — a show's casting, renewal, cancellation, premiere, or episodes.
+    • "celebrity" ONLY for a person's PERSONAL life with no specific screen/music WORK as the subject — a relationship, wedding, family, appearance, feud, or a non-musician's health/legal/death story.
+    • If the SUBJECT is a MUSICIAN and the event is a MUSIC event (a musician's death, tour, album/single, label deal, or a music ceremony), pick "music-news"/"music-awards" (category "music") — NEVER "celebrity".
 - "box-office" → movies / box-office: a film whose box-office RESULT/record is the story.
 - "trailer" → movies|tv / trailers: a title whose NEW TRAILER just dropped (the trailer RELEASE is the news event).
 - "reaction" → movies|tv / reactions: a roundup of the public/critic REACTION to a just-released trailer/film/show (the reaction is the news).

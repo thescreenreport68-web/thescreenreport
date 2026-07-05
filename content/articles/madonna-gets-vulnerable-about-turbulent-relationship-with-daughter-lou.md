@@ -19,7 +19,6 @@ tags:
   - Madonna
   - music
   - romance
-  - celebrity gossip
 keyTakeaways:
   - >-
     Madonna and Lourdes Leon have released a duet titled "The Test" on the album

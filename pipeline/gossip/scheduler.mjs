@@ -1,28 +1,38 @@
-// GOSSIP — SCHEDULER (one drip "tick"). Called by the GitHub Actions workflow, which is clocked by a Cloudflare
-// Worker Cron Trigger (the same reliable mechanism the news automation uses). One tick does exactly this:
-//   1) GATE on Los Angeles posting hours (10:00–22:00 PT) — DST-proof via Intl; outside hours it no-ops.
-//   2) TOP UP the backlog queue only if it's running low (find on demand = lean; no discovery every tick).
-//   3) PUBLISH ONE article from the backlog (draining past any held/dup until one publishes).
-// It writes the article .md + updates dedup/queue state; the WORKFLOW then commits + builds + deploys. It emits
+// GOSSIP — SCHEDULER (one "tick"). Called by the GitHub Actions workflow, clocked by a Cloudflare Worker Cron
+// Trigger. Timing model (owner 2026-07-05): post ~1 article every ~2 HOURS, AROUND THE CLOCK (24/7) — ~12/day.
+// One tick:
+//   1) INTERVAL GATE — publish only if >= INTERVAL_MIN minutes since the LAST published article (tracked in
+//      data/gossip/schedule.json). Otherwise no-op. (`--force` / FORCE=1 bypasses it — e.g. to post immediately.)
+//   2) TOP UP the backlog queue if it's running low.
+//   3) PUBLISH ONE article; on success, stamp lastPostAt = now (a dry slot leaves the clock so the next tick retries).
+// It writes the article .md + updates dedup/queue state; the WORKFLOW then commits + builds + deploys. Emits
 // `published=<n>` + `slugs=<..>` to $GITHUB_OUTPUT so the workflow only builds/deploys when something published.
-// Run (manual): cd site && set -a; . "../.env"; set +a; node pipeline/gossip/scheduler.mjs
+// The CONTENT pipeline (find → make → verify → publish) is UNCHANGED — this only governs WHEN we post.
+// Run (manual, post now):  cd site && set -a; . "../.env"; set +a; node pipeline/gossip/scheduler.mjs --force
 import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 import { gossipFind, enqueue, loadQueue } from "./find.mjs";
 import { gossipRun } from "./gossiprun.mjs";
 
-const POST_START = Number(process.env.LA_START ?? 10); // 10am PT (inclusive)
-const POST_END = Number(process.env.LA_END ?? 22);     // 10pm PT (exclusive)
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const SCHED_PATH = path.resolve(__dirname, "../../data/gossip/schedule.json");
+
+const INTERVAL_MIN = Number(process.env.INTERVAL_MIN ?? 115); // ~2h between posts (24/7) ⇒ ~12/day
 const MIN_BACKLOG = Number(process.env.MIN_BACKLOG ?? 15);
 const PER_TICK = Number((process.argv.find((a) => a.startsWith("--limit=")) || "").split("=")[1]) || 1;
+const FORCE = process.argv.includes("--force") || process.env.FORCE === "1";
 
-// Is `now` within LA posting hours? Pure + DST-proof — America/Los_Angeles resolves PST/PDT automatically, so the
-// window is always local 10am–10pm with no cron edits across daylight saving.
-export function laHour(now = new Date()) {
-  return Number(new Intl.DateTimeFormat("en-US", { timeZone: "America/Los_Angeles", hour: "2-digit", hourCycle: "h23" }).format(now));
+export function loadSchedule(filePath = SCHED_PATH) {
+  try { return JSON.parse(fs.readFileSync(filePath, "utf8")); } catch { return {}; }
 }
-export function laPostingHours(now = new Date(), start = POST_START, end = POST_END) {
-  const h = laHour(now);
-  return h >= start && h < end;
+export function saveSchedule(obj, filePath = SCHED_PATH) {
+  try { fs.mkdirSync(path.dirname(filePath), { recursive: true }); fs.writeFileSync(filePath, JSON.stringify(obj, null, 2)); } catch { /* best-effort */ }
+}
+// Minutes since the last PUBLISHED article (Infinity if never posted → post now).
+export function minsSinceLastPost(now = new Date(), sched = loadSchedule()) {
+  if (!sched?.lastPostAt) return Infinity;
+  return (now.getTime() - new Date(sched.lastPostAt).getTime()) / 60000;
 }
 
 function setOutput(kv) {
@@ -31,13 +41,15 @@ function setOutput(kv) {
   try { fs.appendFileSync(f, Object.entries(kv).map(([k, v]) => `${k}=${v}`).join("\n") + "\n"); } catch { /* not on CI */ }
 }
 
-export async function tick({ now = new Date(), findImpl = gossipFind, runImpl = gossipRun } = {}) {
-  if (!laPostingHours(now)) {
-    console.log(`[scheduler] ${now.toISOString()} — outside LA posting hours (${POST_START}:00–${POST_END}:00 PT); no-op.`);
-    setOutput({ published: 0, reason: "outside-hours" });
-    return { published: 0, reason: "outside-hours" };
+export async function tick({ now = new Date(), findImpl = gossipFind, runImpl = gossipRun, force = FORCE, intervalMin = INTERVAL_MIN, schedPath = SCHED_PATH } = {}) {
+  const sched = loadSchedule(schedPath);
+  const since = minsSinceLastPost(now, sched);
+  if (!force && since < intervalMin) {
+    console.log(`[scheduler] only ${Math.round(since)}min since last post (< ${intervalMin}); no-op.`);
+    setOutput({ published: 0, reason: "too-soon" });
+    return { published: 0, reason: "too-soon" };
   }
-  // TOP UP only when the backlog is low — keeps discovery cost down (no find every single tick).
+  // TOP UP only when the backlog is low (find on demand = lean; no discovery every tick).
   const before = loadQueue().topics.length;
   if (before < MIN_BACKLOG) {
     try {
@@ -48,8 +60,10 @@ export async function tick({ now = new Date(), findImpl = gossipFind, runImpl = 
   }
   // PUBLISH one from the backlog.
   const report = await runImpl({ fromFind: true, limit: PER_TICK, hero: true, links: true, categoryGuard: true });
+  // Stamp the interval clock ONLY when something actually published (a dry slot retries on the next tick).
+  if (report.published.length > 0) saveSchedule({ ...sched, lastPostAt: now.toISOString(), lastSlugs: report.published.map((p) => p.slug) }, schedPath);
   const slugs = report.published.map((p) => p.slug);
-  console.log(`[scheduler] published ${report.published.length} (processed ${report.topics}; held ${report.held.length}, rejected ${report.rejected.length}, skipped ${report.skipped.length}, blocked ${report.blocked.length}). backlog now ${loadQueue().topics.length}.`);
+  console.log(`[scheduler] ${force ? "(forced) " : ""}published ${report.published.length} (processed ${report.topics}; held ${report.held.length}, rejected ${report.rejected.length}, skipped ${report.skipped.length}, blocked ${report.blocked.length}). backlog now ${loadQueue().topics.length}.`);
   setOutput({ published: report.published.length, slugs: slugs.join(",") });
   return { published: report.published.length, slugs };
 }

@@ -18,7 +18,6 @@ tags:
   - James Kennedy
   - celebrity
   - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     James Kennedy announced his engagement to Jordan Meyers via Instagram on

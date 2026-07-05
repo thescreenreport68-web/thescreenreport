@@ -19,7 +19,6 @@ tags:
   - Chris Brown
   - music
   - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     A jury verdict in 2026 found Chris Brown liable for $13 million in a civil

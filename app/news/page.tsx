@@ -4,6 +4,8 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import {
   ArchiveMasthead,
   RiverItem,
+  RiverAd,
+  RIVER_AD_AFTER,
   RiverPagination,
   RIVER_PAGE_SIZE,
 } from "@/components/ArchiveRiver";
@@ -38,8 +40,11 @@ export default function NewsPage() {
       </div>
 
       <div className="mx-auto max-w-4xl">
-        {river.map((a) => (
-          <RiverItem key={a.slug} article={a} />
+        {river.map((a, i) => (
+          <div key={a.slug}>
+            <RiverItem article={a} />
+            {i === RIVER_AD_AFTER - 1 ? <RiverAd /> : null}
+          </div>
         ))}
         <RiverPagination basePath="/news" page={1} totalPages={totalPages} />
       </div>
