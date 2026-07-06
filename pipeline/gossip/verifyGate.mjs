@@ -100,6 +100,72 @@ function deterministicSpecifics(article, bundle) {
   return bad;
 }
 
+// L2.5 — DATE-ATTACHMENT check. The presence check above passes any YEAR that appears ANYWHERE in the source. But
+// the writer's #1 background-fact error is MISATTACHING a real year: the source says "dating since 2023", the writer
+// writes "engaged in 2023". The year is present, so L2 passes it, and the cheap LLM misses it. This catches it
+// deterministically: a year the article ties to a historical EVENT (engaged/married/born/died/released…) must have
+// that same event next to that year in the SOURCE too — else it is misattached. Conservative + synonym-aware ("wed"
+// ≈ "married"), and it only fires when the source NEVER puts the event near that year, so a correct date is safe.
+const ANCHOR_GROUPS = [
+  ["engaged", "engagement", "propose", "proposal"],
+  ["married", "marry", "marries", "wed ", "weds", "wedding", "nuptials", "tied the knot"],
+  ["born", "birth"],
+  ["died", "death", "passed away", "passing", " dead"],
+  ["divorce", "split", "separated", "separation", "broke up", "breakup"],
+  ["released", "dropped", "debuted", "premiered", "launched", "came out"],
+  ["founded", "co founded", "formed the"],
+  ["dating", "dated", "romance", "began dating", "first linked"],
+  ["first met", " met "],
+  ["arrested", "charged", "convicted", "sentenced", "pleaded"],
+  ["hospitalized", "diagnosed"],
+  ["joined", "signed", "cast in", "hired", "left the", "exited", "quit"],
+];
+function dateAttachmentCheck(article, bundle) {
+  const body = readerFacingText(article);
+  const srcLow = norm((bundle?.sources || []).map((s) => s.text || "").join("  ")); // lowercased, letters+digits+spaces
+  if (!srcLow) return [];
+  const bad = [];
+  const seen = new Set();
+  const MAXD = 55; // the event word must be within ~10 words of the year to count as "attached"
+  // the anchor GROUP whose word sits CLOSEST to `pos` in the source (within MAXD), or -1 if none is close.
+  const nearestGroupTo = (pos, ylen) => {
+    let bestGi = -1, bestDist = Infinity;
+    ANCHOR_GROUPS.forEach((g, gi) => {
+      for (const w of g) {
+        const word = w.trim();
+        for (let idx = srcLow.indexOf(word, Math.max(0, pos - MAXD)); idx >= 0 && idx <= pos + ylen + MAXD; idx = srcLow.indexOf(word, idx + 1)) {
+          const d = idx < pos ? pos - (idx + word.length) : idx - (pos + ylen);
+          if (d >= 0 && d <= MAXD && d < bestDist) { bestDist = d; bestGi = gi; }
+        }
+      }
+    });
+    return bestGi;
+  };
+  for (const m of body.matchAll(/\b(?:19|20)\d{2}\b/g)) {
+    const year = m[0];
+    if (seen.has(year)) continue;
+    const ctx = body.slice(Math.max(0, m.index - 130), m.index + 130).toLowerCase();
+    const artGroups = new Set();
+    ANCHOR_GROUPS.forEach((g, gi) => { if (g.some((w) => ctx.includes(w.trim()))) artGroups.add(gi); });
+    if (!artGroups.size) continue;        // the year is not tied to a historical event → don't check (avoid false flags)
+    if (!srcLow.includes(year)) continue; // year absent from the source → L2 already flags it as invented
+    // The year is CORRECTLY attached only if, at some occurrence in the source, the CLOSEST event word to it belongs
+    // to the SAME event group the article ties it to. If the source's nearest event to that year is a DIFFERENT
+    // event (or none), the writer misattached it.
+    let attached = false;
+    for (let i = srcLow.indexOf(year); i >= 0 && !attached; i = srcLow.indexOf(year, i + 1)) {
+      const gi = nearestGroupTo(i, year.length);
+      if (gi >= 0 && artGroups.has(gi)) attached = true;
+    }
+    if (!attached) {
+      seen.add(year);
+      const ev = ANCHOR_GROUPS[[...artGroups][0]][0].trim();
+      bad.push({ claim: year, why: `the year ${year} is in the source but not tied to "${ev}" there (the source dates a different event to ${year}) — misattached; use the year the source gives for that event, or remove it`, kind: "date", problem: "misattached", correction: null, isSpecific: true });
+    }
+  }
+  return bad;
+}
+
 // L3 — the cheap-LLM CORRECTNESS + ATTACHMENT check over EVERY specific. Model = gemini-2.5-flash (owner rule:
 // cheap, never premium; flash is more reliable than flash-lite for this accuracy-critical pass).
 const VERIFY_SYS = `You are a strict fact-checker for a celebrity gossip desk. You get an ARTICLE and the SOURCE BUNDLE it was written from. This desk MAY speculate about a STORY, but every CHECKABLE SPECIFIC must be exactly supported by the source.
@@ -108,6 +174,7 @@ VERIFY THE SPEAKER OF EVERY QUOTE: a quotation credited to a person ("X said", "
 For EVERY specific in the article, check the source supports it EXACTLY AS USED — the right value, attached to the right thing. Flag a specific if:
   • it is NOT in the source at all (invented), OR
   • the source attaches it to something DIFFERENT / gives a different value (misattached) — e.g. the article says "married in 2022" but the source only mentions a 2022 interview and says the marriage was 2021; or a quote/number/role credited to the wrong person or outlet.
+BE ESPECIALLY STRICT ON BACKGROUND / HISTORICAL YEARS: a YEAR attached to a PAST event (an engagement year, a marriage/wedding year, a birth or death year, a release year, a "dating since" year) is MISATTACHED if the source ties that year to a DIFFERENT event. Example: the source says the couple began DATING in 2023 but the article says they got ENGAGED in 2023 — the engagement year is wrong. The year for an event must be the exact year the SOURCE gives FOR THAT EVENT; if the source gives no year for that event, the writer must not state one. Flag it (kind "date", problem "misattached") and set correction to the year the source actually gives for that event, or null to remove it.
 Also flag any statement the source directly CONTRADICTS.
 DO NOT FLAG: paraphrase or rewording of a supported fact; characterization/color/idiom ("whirlwind romance", "sparked speculation"); attributed speculation about the STORY ("reportedly", "a source claims", "fans think", "appears to"); a reasonable non-specific inference. Only SPECIFICS must be exact — speculation about the story is fine.
 For each flagged item, give the CORRECT value from the source if the source contains it, else null (meaning: it must be removed).
@@ -139,6 +206,7 @@ Return STRICT JSON:
 export async function verifyGate({ article, bundle, model = "google/gemini-2.5-flash", llmImpl = llmSpecifics } = {}) {
   const l1 = checkCitedEvidence(article, bundle);
   const l2 = deterministicSpecifics(article, bundle);
+  const l2b = dateAttachmentCheck(article, bundle); // catch a present-but-MISATTACHED historical year
   const l3 = await llmImpl(article, bundle, model);
   const fromL3 = (l3.list || []).map((u) => {
     const problem = ["invented", "misattached", "contradicted"].includes(u.problem) ? u.problem : "invented";
@@ -149,7 +217,7 @@ export async function verifyGate({ article, bundle, model = "google/gemini-2.5-f
   // merge, de-dup by normalized claim text
   const seen = new Set();
   const unsupported = [];
-  for (const u of [...l1.unsupported, ...l2, ...fromL3]) {
+  for (const u of [...l1.unsupported, ...l2, ...l2b, ...fromL3]) {
     const k = norm(u.claim).slice(0, 60) || String(u.claim ?? "").trim().slice(0, 60);
     if (!k || seen.has(k)) continue;
     seen.add(k);
