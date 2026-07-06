@@ -102,6 +102,10 @@ A Department of Education spokesperson confirmed the appointment to The New York
 
 ## What is the reported salary for the role?
 
+According to The Hollywood Reporter and the New York Post, the chief of mass engagement position pays roughly $203,500 a year.
+
+## What is her background for the role?
+
 She previously worked in former Mayor Bill de Blasio's administration and helped found the Alliance for Quality Education in New York, where she first met Nixon.
 
 ## Is this a political hire?
