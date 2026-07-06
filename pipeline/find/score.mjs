@@ -4,19 +4,27 @@
 // This is the free-stack approximation of MASTER_PLAN App-S (demand) + App-N (priority); the GDELT-NGram
 // velocity + Wikipedia-pageview spike signals slot in here later (they only raise accuracy, not shape).
 
-// App-S Signal D — article-type weight (static for v1; the learning loop auto-tunes it later).
-// Ordered by AUDIENCE ENGAGEMENT: what a general Hollywood-news reader actually clicks. High = human-interest
-// (deaths, scandals, breakups); mid = title/production news (box office, casting, trailers); LOW = industry
-// inside-baseball (festival panels, dealmaking, financing) — accurate but dull, so it ranks below real news and
-// only surfaces when nothing better trends (owner 2026-07-01: prioritize engaging trending news).
+// App-S Signal D — article-type weight. REALIGNED MOVIES-FIRST (owner 2026-07-06): the mandate is big trending
+// Hollywood — movies/box-office FIRST (~80/20). The old table was engagement-first (death/scandal/marriage on top,
+// box-office/trailer only mid) — which is why soft celebrity personal-life items kept out-ranking the tentpole film
+// news the site is supposed to lead with. Now the BIG FILM/TV forms lead; a major death/scandal is still real news
+// (kept high) but no longer ABOVE the tentpole film forms; soft celebrity personal-life is demoted to the ~20% side;
+// industry inside-baseball stays lowest.
 const TYPE_WEIGHT = {
-  death: 1.0, health: 0.95, arrest: 0.95, legal: 0.9, lawsuit: 0.9, scandal: 0.9,
-  divorce: 0.8, breakup: 0.8, marriage: 0.8, pregnancy: 0.8, birth: 0.75,
-  boxoffice: 0.7, award: 0.7, breakout: 0.7, casting: 0.65, trailer: 0.65, renewal: 0.55, cancellation: 0.6,
-  reaction: 0.55, interview: 0.55, review: 0.5, announcement: 0.5, other: 0.4,
-  // industry inside-baseball — low engagement for a general audience; keep well under the 0.4 default
-  festival: 0.3, industry: 0.3, panel: 0.28, dealmaking: 0.28, financing: 0.28, promo: 0.35, market: 0.3,
+  // BIG FILM/TV NEWS — leads.
+  boxoffice: 1.0, trailer: 1.0, casting: 0.92, award: 0.9, breakout: 0.72, reaction: 0.72,
+  cancellation: 0.7, announcement: 0.62, renewal: 0.6, review: 0.58,
+  // MAJOR human-interest — still real news, just not above the tentpole film forms.
+  death: 0.9, arrest: 0.85, scandal: 0.8, health: 0.8, legal: 0.8, lawsuit: 0.8,
+  // SOFT celebrity personal-life — the ~20% side, demoted below film news.
+  divorce: 0.55, breakup: 0.5, marriage: 0.5, pregnancy: 0.48, birth: 0.42, interview: 0.45, other: 0.35,
+  // industry inside-baseball — lowest (unchanged).
+  festival: 0.3, industry: 0.3, panel: 0.28, dealmaking: 0.28, financing: 0.28, promo: 0.3, market: 0.3,
 };
+// REALITY / COMPETITION-TV demotion (owner 2026-07-06): a reality-show casting/announcement is NOT marquee scripted
+// film/TV news — but it lands category=tv, so isFilmTV() wrongly gave it the big-Hollywood bonus (Love Island tied a
+// $400M box-office story at the top). Demote these out of the big tier so real movie/TV news leads.
+const SOFT_TV = /\b(love island|summer house|the bachelor(ette)?|big brother|the kardashians|keeping up|real housewives|below deck|vanderpump|survivor|the voice|american idol|dancing with the stars|90 day fianc|teen mom|jersey shore|selling sunset|the traitors|rupaul|drag race|love is blind|the ultimatum|married at first sight)\b/i;
 const STATUS_WEIGHT = { CONFIRMED: 25, DEVELOPING: 18, EVERGREEN: 14, RUMOR: 8, QUEUE: 4, CONFIRMING: 3, "EDITORIAL-HOLD": 1 };
 
 function recencyPts(ageMin) {
@@ -55,13 +63,22 @@ export function scoreTopics(topics, monitor) {
     const breakoutPts = Math.min(10, (t.breakoutVelocity || 0) / 4); // an accelerating indie breakout ranks up
     // BIG-HOLLYWOOD boost: a film/TV story gets +8; a marquee film/TV form (trailer/box-office/reaction/casting/
     // award) gets a further +10 — so a big movie trailer beats a fresher celebrity-fashion piece on the same feed.
-    const bigBonus = (isFilmTV(t) ? 8 : 0) + (isFilmTV(t) && BIG_FILMTV_FORM.has(t.eventType) ? 10 : 0);
+    // reality/competition-TV lands category=tv, so isFilmTV would wrongly hand it the big-Hollywood bonus (Love Island
+    // tied a $400M box-office story). Treat it as NOT big (FORFEIT the film/TV bonus) AND apply a small penalty so
+    // routine reality casting/announcements fall below the newsworthiness floor; a genuinely huge reality story still
+    // clears on its own recency + a scandal/death eventType.
+    const isSoftTv = SOFT_TV.test(`${t.title || ""} ${t.primaryEntity || ""}`);
+    const bigBonus = isSoftTv ? 0 : (
+      (isFilmTV(t) ? 6 : 0)
+      + (isFilmTV(t) && BIG_FILMTV_FORM.has(t.eventType) ? 12 : 0)
+      + ((t.category || "").toLowerCase() === "movies" ? 6 : 0)); // movies-first tilt (owner 2026-07-06)
     // TRENDING = many top outlets carrying it. Each extra top outlet beyond the first adds up to +15 (cap): the
     // Odyssey trailer, covered by Variety+THR+Deadline, out-ranks a one-outlet wedding-look item.
     const trendingBonus = Math.min(15, Math.max(0, outletCount(t) - 1) * 8);
-    const priority = Math.round(rec + corr + statusW + typeW + popNudge + breakoutPts + bigBonus + trendingBonus);
+    const softTvPenalty = isSoftTv ? 12 : 0;
+    const priority = Math.round(rec + corr + statusW + typeW + popNudge + breakoutPts + bigBonus + trendingBonus - softTvPenalty);
     t.priority = priority;
-    t.signals = { recency: rec, corroboration: corr, status: statusW, type: Math.round(typeW), pop: Math.round(popNudge), breakout: Math.round(breakoutPts), big: bigBonus, trending: trendingBonus };
+    t.signals = { recency: rec, corroboration: corr, status: statusW, type: Math.round(typeW), pop: Math.round(popNudge), breakout: Math.round(breakoutPts), big: bigBonus, trending: trendingBonus, softTv: -softTvPenalty };
   }
   topics.sort((a, b) => b.priority - a.priority);
   if (monitor) monitor.stage("score", `ranked ${topics.length} topics by freshness+corroboration+type (top=${topics[0]?.priority ?? "-"})`);
@@ -79,8 +96,14 @@ export function scoreTopics(topics, monitor) {
 // box office, reactions, castings — the trending Hollywood stories), ~30% is celebrity personal-life (weddings,
 // relationships, fashion). We pick strictly by priority WITHIN each bucket, filling the big bucket first up to its
 // target and overflowing either way if one bucket runs dry — so a normal news day leads with movies, not weddings.
-export function selectDiverse(rankedTopics, { n = 10, spreadPenalty = 6, publishableOnly = true, bigShare = 0.7 } = {}) {
-  const pool = (publishableOnly ? rankedTopics.filter((t) => t.verification?.publishable) : rankedTopics).slice();
+export function selectDiverse(rankedTopics, { n = 10, spreadPenalty = 6, publishableOnly = true, bigShare = 0.7, floor = 0, minKeep = 4 } = {}) {
+  let pool = (publishableOnly ? rankedTopics.filter((t) => t.verification?.publishable) : rankedTopics).slice();
+  // NEWSWORTHINESS FLOOR (owner 2026-07-06): drop soft filler below `floor` so the drip stops padding a slow tick with
+  // marginal items — but ALWAYS keep at least `minKeep` (the pool is priority-sorted) so the queue never fully starves.
+  if (floor > 0 && pool.length > minKeep) {
+    const above = pool.filter((t) => (t.priority || 0) >= floor);
+    pool = above.length >= minKeep ? above : pool.slice(0, minKeep);
+  }
   const isBig = (t) => (t.category || "").toLowerCase() !== "celebrity"; // celebrity = the personal-life 30% bucket
   const bigTarget = Math.round(n * bigShare);
   const picked = [];
