@@ -15,7 +15,7 @@ import { recordPublished, slugKey, loadPublished, entityKey } from "./find/store
 import { sourceImage, measureRemote } from "./stages/image.mjs";
 import { pickHeroImage } from "./lib/heroImage.mjs";
 import { cutArticle } from "./lib/cutter.mjs";
-import { dedupeSentences, trimIncomplete } from "./lib/polish.mjs";
+import { dedupeSentences, trimIncomplete, dropOrphanHeadings } from "./lib/polish.mjs";
 import { gate } from "./stages/gate.mjs";
 import { assemble } from "./stages/assemble.mjs";
 import { getWhereToWatch, factBlock, toWhereToWatch, discoverTop, discoverFactBlock, getTrailer, trailerFactBlock, getBoxOffice, boxOfficeFactBlock, getTitleFacts, titleFactBlock } from "./lib/tmdb.mjs";
@@ -414,7 +414,7 @@ async function processTopic(topic, i) {
 
     // FINAL POLISH (deterministic, before assemble): collapse duplicated sentences and trim any truncated/
     // cut-orphaned fragment — can never add a fact.
-    if (pass && article?.body) article.body = trimIncomplete(dedupeSentences(article.body));
+    if (pass && article?.body) article.body = dropOrphanHeadings(trimIncomplete(dedupeSentences(article.body)));
 
     // ── HERO IMAGE — LAST MILE (2026-07-03, audit D9: previously picked BEFORE the gate, so og:image fetches +
     // the vision call + measure downloads were fully wasted on every held article — 4/6 in the last run). Picked
