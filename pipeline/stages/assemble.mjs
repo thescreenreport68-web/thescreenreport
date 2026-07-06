@@ -62,7 +62,11 @@ export function assemble({ article, classification, image, topic, dateISO }) {
       : s;
   let body = clean(article.body || "");
 
-  const slug = topic.slug || slugify(article.title);
+  // SLUG from the writer's FINAL, corrected headline — NOT the stale FIND topic headline (owner 2026-07-06). The FIND
+  // angle can be pre-correction (a "Reba McEntire to HOST…" topic the writer rightly rewrites to "…JOINS…"); using
+  // topic.slug first baked the wrong word into the URL. Prefer slugify(article.title); fall back to topic.slug only
+  // if the writer somehow returned no title.
+  const slug = slugify(article.title) || topic.slug;
   // Support-system #1: insert 2-3 REAL, tone-safe internal links to related published articles +
   // strip any dangling "see our feature" phantom phrases. Runs AFTER fixLinks (these links are valid).
   const tagsForLinks = classification.tags?.length ? classification.tags : article.tags || [];

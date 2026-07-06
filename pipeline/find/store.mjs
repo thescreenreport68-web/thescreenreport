@@ -34,18 +34,24 @@ export const slugKey = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]+/g, "-"
 // skip a genuinely-new same-entity/same-type story than burn credits re-posting — the owner's stated priority.)
 export const entityKey = (primaryEntity, eventType) => (primaryEntity && eventType ? `${slugKey(primaryEntity)}:${slugKey(eventType)}` : null);
 
-// Returns { events:Set, titles:Set, entities:Set } of everything published in the last `windowDays` (default 45).
-export function loadPublished(windowDays = 45) {
+// Returns { events:Set, titles:Set, entities:Set, recentEntities:Set } of everything published in the last
+// `windowDays` (default 45). recentEntities holds ONLY the primaryEntity slug (the eventType-agnostic prefix of the
+// entityKey) for stories published within `recentHours` (default 20) — a short-window ENTITY-ONLY dedup so the same
+// person is not written twice in one posting-day even when the two stories carry different eventTypes (the Vin Diesel
+// 'Fast Forever' ×2 case, 2h apart, that the eventType-folded entityKey missed).
+export function loadPublished(windowDays = 45, recentHours = 20) {
   const list = readJSON(PUBLISHED_FILE, []);
   const cutoff = Date.now() - windowDays * 24 * 3600 * 1000;
-  const events = new Set(), titles = new Set(), entities = new Set();
+  const recentCut = Date.now() - recentHours * 3600 * 1000;
+  const events = new Set(), titles = new Set(), entities = new Set(), recentEntities = new Set();
   for (const r of Array.isArray(list) ? list : []) {
     if (r.at && Date.parse(r.at) < cutoff) continue;
     if (r.eventSlug) events.add(r.eventSlug);
     if (r.titleKey) titles.add(r.titleKey);
     if (r.entityKey) entities.add(r.entityKey);
+    if (r.entityKey && r.at && Date.parse(r.at) >= recentCut) recentEntities.add(r.entityKey.split(":")[0]);
   }
-  return { events, titles, entities };
+  return { events, titles, entities, recentEntities };
 }
 
 // Append a published story to the ledger (deduped by slug; capped so the file can't grow unbounded).

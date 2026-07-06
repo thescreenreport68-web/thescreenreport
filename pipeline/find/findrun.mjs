@@ -50,13 +50,22 @@ const JUNK_OUTLETS = new Set(["crunchyroll", "pinkvilla", "bollywood hungama", "
 // soundstage-infrastructure class is accurate but LOW-ENGAGEMENT, off the big-tentpole brand). Deterministic
 // pre-categorize drop. Kept NARROW so real news (a studio greenlight, a festival AWARD/premiere) still passes — we
 // drop only policy/infrastructure/lineup items a general fan never searches.
-const DULL_INDUSTRY = /\bfilm commission(er)?\b|\bsound\s?stage\b|\bstudio (space|lot|complex|infrastructure)\b|\btax (incentive|rebate|credit)s?\b|\bfilming incentive|\bco-?production (treaty|fund)\b|\bfestival (lineup|line-up|jury|panel|slate|market|dates)\b|\bindustry (days|panel|conference|summit)\b|\bfilm fund\b|\brebate program|\bcrystal globe\b|\bguest of honou?r\b|\blifetime achievement\b|\bcareer achievement\b|honou?red at (the )?[^.]{0,25}festival/i;
+// (owner 2026-07-06) EXTENDED with festival-HONORS/TRIBUTE patterns: a "Receives Top Honors at Karlovy Vary" /
+// President's-Award / honorary-globe ceremony piece is festival color, not hard movie news — it slipped this guard
+// twice (KVIFF). Kept narrow so a real festival AWARD-WIN or PREMIERE headline still passes.
+const DULL_INDUSTRY = /\bfilm commission(er)?\b|\bsound\s?stage\b|\bstudio (space|lot|complex|infrastructure)\b|\btax (incentive|rebate|credit)s?\b|\bfilming incentive|\bco-?production (treaty|fund)\b|\bfestival (lineup|line-up|jury|panel|slate|market|dates)\b|\bindustry (days|panel|conference|summit)\b|\bfilm fund\b|\brebate program|\bcrystal globe\b|\bguest of honou?r\b|\blifetime achievement\b|\bcareer achievement\b|honou?red at (the )?[^.]{0,25}festival|\bkarlovy vary\b|\btop honou?rs?\b|\bpresident'?s award\b|\bhonorary (award|globe|prize|palme|golden lion|golden bear)\b/i;
+// LIVE-EVENT / non-title where-to-watch (owner 2026-07-06): a "where to watch [fireworks/parade/telecast]" item is
+// not a film/TV story — it's off the movies-first mandate AND high-error (the Macy's July-4 fireworks item inherited
+// a WRONG network from its single source, TheWrap, and went live saying ABC when it was NBC). Drop live civic-event
+// viewing guides; a real film/show where-to-watch still passes.
+const LIVE_EVENT = /\bfireworks (spectacular|show|display|celebration)\b|\b(where|how) to (watch|stream)\b[^.]{0,45}\b(fireworks|parade|marathon|telethon|red carpet|pre-?show|telecast|ceremony|game|match)\b|\b(macy'?s|nathan'?s|thanksgiving|new year'?s eve)\b[^.]{0,30}\b(fireworks|parade|telecast|ball drop|day special)\b/i;
 const freshCandidates = candidates.filter((c) =>
   !published.titles.has(slugKey(c.title)) &&
   !ROUNDUP_REVIEW.test(c.title || "") &&
   !RETRO_OPINION.test(c.title || "") &&
   !SCOPE_JUNK.test(c.title || "") &&
   !DULL_INDUSTRY.test(c.title || "") &&
+  !LIVE_EVENT.test(c.title || "") &&
   !JUNK_OUTLETS.has((c.outlet || "").toLowerCase().trim()));
 if (candBefore - freshCandidates.length > 0) monitor.stage("dedup", `dropped ${candBefore - freshCandidates.length} already-published candidate(s) by title; ${freshCandidates.length} remain`);
 // EXTRACTABILITY-FIRST shortlist (2026-07-04): a clean publisher URL (an RSS main/section feed) extracts to full
@@ -97,6 +106,11 @@ const topics = topicsRaw.filter((t) => {
   if (t.eventSlug && published.events.has(t.eventSlug)) return false;
   const ek = entityKey(t.primaryEntity, t.eventType);
   if (ek && published.entities.has(ek)) return false;
+  // ENTITY-ONLY same-day dedup (owner 2026-07-06): one story per primaryEntity per posting-day, regardless of
+  // eventType — kills the same-person same-day duplicate the eventType-folded key misses (two Vin Diesel 'Fast
+  // Forever' posts 2h apart got different eventTypes, so entityKey didn't match; this entity-only window catches it).
+  const es = slugKey(t.primaryEntity || "");
+  if (es && published.recentEntities.has(es)) return false;
   return true;
 });
 if (topics.length < topicsRaw.length) monitor.stage("dedup", `dropped ${topicsRaw.length - topics.length} already-published topic(s) by eventSlug/entity+type`);

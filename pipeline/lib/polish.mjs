@@ -72,3 +72,32 @@ export function trimIncomplete(body) {
   }
   return paras.filter(Boolean).join("\n\n");
 }
+
+// DROP an orphaned QUESTION subheading the body never answers (owner 2026-07-06 — the "## What is the reported salary?"
+// bug: a question-H2 followed by a paragraph that never states one). Deterministic backstop to the writer's
+// answerable-only rule. Conservative: only touches interrogative (`?`) H2s, only when the section beneath is either
+// near-empty OR a numeric/date question with no number/date in it, and it removes ONLY the heading line (the paragraph
+// is kept, flowing into the prior section) so no reporting is ever lost.
+const NUMERIC_Q = /\b(salary|salaries|pay|paid|worth|net worth|cost|costs?|price|budget|how much|how many|figure|revenue|gross|earn(ed|ings)?)\b/i;
+const DATE_Q = /\b(when|what date|which date|release date|premiere date|air date|come out|hit (theaters|streaming))\b/i;
+const HAS_NUM = /\d|\$|\bmillion\b|\bbillion\b|\bpercent\b|%/i;
+const HAS_DATE = /\d|\b(january|february|march|april|may|june|july|august|september|october|november|december|monday|tuesday|wednesday|thursday|friday|saturday|sunday|today|tomorrow|yesterday|next (week|month|year)|this (week|month|year))\b/i;
+export function dropOrphanHeadings(body) {
+  if (!body) return body;
+  const lines = String(body).split("\n");
+  const out = [];
+  for (let i = 0; i < lines.length; i++) {
+    if (/^##\s+.*\?\s*$/.test(lines[i])) {
+      let j = i + 1, txt = "";
+      while (j < lines.length && !/^#{2,3}\s/.test(lines[j])) { txt += " " + lines[j]; j++; }
+      const words = txt.trim().split(/\s+/).filter(Boolean).length;
+      const unanswered =
+        words < 8 ||
+        (NUMERIC_Q.test(lines[i]) && !HAS_NUM.test(txt)) ||
+        (DATE_Q.test(lines[i]) && !HAS_DATE.test(txt));
+      if (unanswered) continue; // drop the heading line only; the paragraph below stays (flows into the prior section)
+    }
+    out.push(lines[i]);
+  }
+  return out.join("\n");
+}
