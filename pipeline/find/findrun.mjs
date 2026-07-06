@@ -143,8 +143,23 @@ const verified = verify(topics, monitor);
 // priority-ranked pool — music, box-office, celebrity, every shape — with diversity only a soft tiebreak. No music
 // quota, no hard per-subcategory cap: a genuinely trending story is never dropped for its category/shape.
 scoreTopics(verified, monitor);
-const queue = selectDiverse(verified, { n: QUEUE_N, publishableOnly: true, floor: SELECT_FLOOR, minKeep: 3 });
-monitor.stage("select", `selected ${queue.length}/${QUEUE_N} by trend-priority (floor ${SELECT_FLOOR}; music competes in the single pool; soft category spread)`);
+let queue = selectDiverse(verified, { n: QUEUE_N, publishableOnly: true, floor: SELECT_FLOOR, minKeep: 3 });
+// NEVER PUBLISH 0 (owner 2026-07-06): our niche ALWAYS has something trending — a movie, TV show, musician/music, or
+// celebrity story. So the automation must never skip a tick for lack of content. If the strict newsworthiness floor +
+// verify left the queue empty, salvage the single best-available NEW, on-brand story (floor 0) so the tick still posts.
+// The dedup ledger still applies (never a re-post), and an unconfirmed death/legal (sensitivity:high) is NOT salvaged
+// (the hoax guard stays). This trades a notch of the ideal quality bar for guaranteed coverage — exactly the owner's ask.
+if (queue.length === 0) {
+  const pool = verified.length ? verified : topics.filter((t) => (t.sensitivity || t.verification?.sensitivity) !== "high");
+  if (pool.length) {
+    scoreTopics(pool);
+    queue = selectDiverse(pool, { n: QUEUE_N, publishableOnly: false, floor: 0, minKeep: 1 });
+    monitor.stage("select", `NEVER-EMPTY fallback: strict queue was empty → salvaged ${queue.length} best NEW on-brand topic(s) so this tick still posts`);
+  } else {
+    monitor.stage("select", `WARNING: 0 candidates survived discovery+categorize this run — nothing to salvage (widen discovery)`);
+  }
+}
+monitor.stage("select", `selected ${queue.length}/${QUEUE_N} by trend-priority (floor ${SELECT_FLOOR}; never-empty guarantee on; music competes in the single pool)`);
 
 // Inside-stories expansion (opt-in): a Tier-S event → many tone-safe angle articles, appended to the queue.
 if (EXPAND) {
