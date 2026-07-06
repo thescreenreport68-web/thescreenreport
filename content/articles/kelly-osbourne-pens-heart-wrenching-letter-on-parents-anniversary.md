@@ -91,7 +91,7 @@ On July 4, Kelly, 41, took to Instagram to share a heartfelt message with Sharon
 
 "Today feels different," Kelly wrote, according to E! News. "A day that was once filled with celebration now carries a quiet ache. This is your first wedding anniversary without Daddy by your side, and I can only imagine how heavy your heart must feel."
 
-Kelly reflected on her parents' long union, noting they were "married since 1980" and "shared an unbreakable bond until his passing last year." She offered comfort, suggesting her father's love endures in new forms. "I hope you know that love like yours doesn’t end when a life does," she continued. "It changes shape."
+Kelly reflected on her parents' long union — Sharon and Ozzy married on July 4, 1982 — and their enduring bond until his passing last year. She offered comfort, suggesting her father's love endures in new forms. "I hope you know that love like yours doesn’t end when a life does," she continued. "It changes shape."
 
 She shared that she often imagines "the Black Sabbath frontman looking down on Sharon from Heaven." Addressing her mother directly, Kelly wrote, "I know he would want you to see yourself through his eyes: resilient, compassionate, courageous, and endlessly loving." She praised Sharon's grace in grief, adding, "Every day since he left, you’ve had to learn how to carry both grief and hope in the same heart, and somehow, you’ve continued to do it with extraordinary grace. He would be so incredibly proud of the woman you are becoming."
 

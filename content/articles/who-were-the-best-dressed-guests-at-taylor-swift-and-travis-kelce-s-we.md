@@ -116,4 +116,4 @@ The guest list was a fascinating mix of Swift's inner circle and Kelce's footbal
 
 The wedding itself was a major event, according to PEOPLE.
 
-After the ceremony, it seems the jumbotrons outside Madison Square Garden displayed the happy news: "JUST&T MARRIED!" The celebration marks the culmination of a relationship that led to an engagement announcement in August 2023. With such a star-studded guest list and impeccable fashion on display, the wedding was as much a red carpet event as it was a personal milestone.
+After the ceremony, it seems the jumbotrons outside Madison Square Garden displayed the happy news: "JUST&T MARRIED!" The celebration marks the culmination of a relationship that led to an engagement announcement in August 2025. With such a star-studded guest list and impeccable fashion on display, the wedding was as much a red carpet event as it was a personal milestone.
