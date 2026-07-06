@@ -1,0 +1,76 @@
+{
+  "id": "news-robert-richardson-wants-to-work-with-paul-thomas-anderson",
+  "slug": "robert-richardson-wants-to-work-with-paul-thomas-anderson",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": null,
+      "cat": "celebrity/news",
+      "format": [
+        "body 183w < 220",
+        "Flesch 38 < 40 (too dense to read comfortably)"
+      ],
+      "cuts": 0,
+      "broken": []
+    },
+    "attempt2": {
+      "score": null,
+      "cat": "celebrity/news",
+      "format": [
+        "body 174w < 220"
+      ],
+      "cuts": 0,
+      "broken": []
+    }
+  },
+  "editorial": {
+    "status": "unconfirmed",
+    "entity": "Robert Richardson",
+    "work": {
+      "title": "Robert Richardson: The White Devil",
+      "year": null,
+      "medium": "movie"
+    },
+    "outlet": "thewrap.com"
+  },
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
+    "deterministic": {
+      "words": 174,
+      "h2s": 1,
+      "h2Questions": 1,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 3,
+      "ktCount": 3,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 54,
+      "avgSentence": 19,
+      "flesch": 41,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 2,
+      "hardBlocks": [
+        "body 174w < 220"
+      ]
+    },
+    "hardBlocks": []
+  },
+  "score": null,
+  "category": "celebrity",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "body ≥ 220w"
+    ]
+  },
+  "ms": 94759
+}
