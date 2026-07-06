@@ -32,6 +32,7 @@ concurrency:
 
 permissions:
   contents: write        # to commit the article + dedup/state back to the repo
+  actions: write         # to dispatch deploy-live (GITHUB_TOKEN push does NOT trigger workflows, but it CAN dispatch)
 
 jobs:
   drip:
@@ -83,6 +84,18 @@ jobs:
           done
           echo "::error::could not push state after 5 attempts"; exit 1
 
-      # Build + Deploy REMOVED (2026-07-06): deploys are now handled by the authoritative deploy-live.yml workflow,
-      # which fires on this push (commit has no [skip ci]), rebuilds the COMPLETE latest main, and deploys it to
-      # Cloudflare — so a stale per-lane build can never clobber the live site again.
+      # PUT THE NEW ARTICLE LIVE — explicitly dispatch the authoritative deploy-live workflow (2026-07-06).
+      # Deploys are centralized in deploy-live.yml (rebuilds the COMPLETE latest main → Cloudflare) so a stale
+      # per-lane build can never clobber the live site. NOTE: a push made by GITHUB_TOKEN does NOT trigger an
+      # `on: push` workflow (GitHub's recursion guard) — but GITHUB_TOKEN CAN trigger `workflow_dispatch`, so we
+      # dispatch deploy-live here instead of relying on the push event.
+      - name: Deploy live (dispatch deploy-live)
+        if: steps.tick.outputs.published != '0' && steps.tick.outputs.published != ''
+        run: |
+          curl -sS -X POST \
+            -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            "https://api.github.com/repos/${{ github.repository }}/actions/workflows/deploy-live.yml/dispatches" \
+            -d '{"ref":"main"}'
+          echo "dispatched deploy-live → it will rebuild + deploy the complete site (this new article included)"
