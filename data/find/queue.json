@@ -1,115 +1,227 @@
 {
-  "runId": "run-2026-07-05T05-01-22",
-  "builtAt": "2026-07-05T05:01:47.539Z",
-  "count": 15,
+  "runId": "run-2026-07-06T05-01-05",
+  "builtAt": "2026-07-06T05:01:24.997Z",
+  "count": 17,
   "topics": [
     {
-      "id": "trailer-oasis-liam-gallagher-reunion-tour-doc-teaser",
-      "slug": "oasis-reunion-tour-doc-don-t-look-back-in-anger-drops-teaser",
-      "title": "Oasis Reunion Tour Doc 'Don't Look Back in Anger' Drops Teaser",
-      "contentType": "trailer",
-      "formatTag": "trailer",
+      "id": "box-office-obsession-surpasses-400-million-globally",
+      "slug": "box-office-obsession-surpasses-400-million-globally",
+      "title": "Box Office: 'Obsession' Surpasses $400 Million Globally",
+      "contentType": "box-office",
+      "formatTag": "box-office",
       "category": "movies",
-      "subcategory": "trailers",
-      "eventType": "trailer",
+      "subcategory": "box-office",
+      "eventType": "boxoffice",
       "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "oasis-liam-gallagher-reunion-tour-doc-teaser",
-      "primaryKeyword": "oasis reunion tour documentary",
-      "primaryEntity": "Oasis",
-      "entities": [
-        "Liam Gallagher"
-      ],
-      "angle": "First look at the Oasis reunion tour documentary.",
+      "eventSlug": "obsession-surpasses-400-million-globally",
+      "primaryKeyword": "obsession box office",
+      "primaryEntity": "Obsession",
+      "entities": [],
+      "angle": "The indie horror film 'Obsession' has crossed the $400 million mark in global box office sales.",
       "tmdbType": "movie",
-      "source": "rss:Deadline",
+      "source": "rss:Variety",
       "sources": [
         {
-          "outlet": "Deadline",
+          "outlet": "Variety",
           "tier": 7,
-          "url": "https://deadline.com/2026/07/dont-look-back-in-anger-teaser-oasis-reunion-tour-1236974261/",
-          "ageMin": 394,
-          "headline": "Don t Look Back in Anger Teaser: Oasis Doc Follows Liam Noel Gallagher s Reunion Tour",
-          "summary": "A year after Oasis reunited to kick off their world tour in Cardiff, Wales, fans can see their first performance together in 16 years on the big screen. On Saturday, Disney released the teaser for Don t Look Back in Anger, a documentary that follows brothers Liam and Noel Gallagher s highly-anticipated reunion for last year s Oasis [ ]"
-        },
-        {
-          "outlet": "Rolling Stone",
-          "tier": 7,
-          "url": "https://www.rollingstone.com/music/music-news/oasis-first-teaser-documentary-dont-look-back-in-anger-1235589204/",
-          "ageMin": 809,
-          "headline": "Oasis Share First Teaser for Upcoming Doc Don t Look Back in Anger",
-          "summary": "Steven Knight-produced film about Gallagher brothers' unlikely reunion to hit cinemas in September before its Disney+ and Hulu streaming premiere later this year"
+          "url": "https://variety.com/2026/film/box-office/obsession-box-office-milestone-400-million-globally-1236801943/",
+          "ageMin": 690,
+          "headline": "Box Office: Obsession Surpasses $400 Million Globally",
+          "summary": "Obsession has notched another major box office milestone, clearing $400 million in global ticket sales. After two months in theaters, the indie horror breakout has grossed a remarkable $403 million, including $245 million domestically and $157 million overseas. The twisted romantic fantasy, directed by YouTuber Curry Barker, was produced for a mere $750,000 and acquired [ ]"
         }
       ],
-      "ageMin": 394,
+      "ageMin": 690,
       "_cand": {
-        "key": "rss:don-t-look-back-in-anger-teaser-oasis-doc-follows-liam-noel-",
+        "key": "rss:box-office-obsession-surpasses-400-million-globally",
         "popularity": 0,
         "kind": "rss-news"
       },
-      "corroborationCount": 2,
+      "corroborationCount": 1,
       "verification": {
-        "tier1Count": 2,
+        "tier1Count": 1,
         "tier1Owners": 1,
-        "outletCount": 2,
+        "outletCount": 1,
         "outlets": [
-          "Deadline",
-          "Rolling Stone"
+          "Variety"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Deadline",
+        "attribution": "Variety",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 76,
+      "priority": 63,
       "signals": {
         "recency": 4,
-        "corroboration": 18,
+        "corroboration": 12,
+        "status": 18,
+        "type": 11,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0
+      }
+    },
+    {
+      "id": "news-love-island-usa-season-8-cast-revealed",
+      "slug": "love-island-usa-season-8-cast-revealed",
+      "title": "Love Island USA Season 8 Cast Revealed",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "love-island-usa-season-8-cast-revealed",
+      "primaryKeyword": "love island usa season 8 cast",
+      "primaryEntity": "Love Island USA",
+      "entities": [
+        "Ariana Madix",
+        "Peacock"
+      ],
+      "angle": "The cast for the upcoming season of Peacock's reality dating show 'Love Island USA' has been revealed.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/lists/love-island-usa-season-8-cast/",
+          "ageMin": 649,
+          "headline": "Love Island USA Season 8 Cast Revealed",
+          "summary": "The new season of Peacock's hit reality show, hosted by Ariana Madix, premiered June 2."
+        }
+      ],
+      "ageMin": 649,
+      "_cand": {
+        "key": "rss:love-island-usa-season-8-cast-revealed",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 62,
+      "signals": {
+        "recency": 4,
+        "corroboration": 12,
         "status": 18,
         "type": 10,
         "pop": 0,
         "breakout": 0,
         "big": 18,
-        "trending": 8
+        "trending": 0
       }
     },
     {
-      "id": "news-muhammad-ali-series-the-greatest-prime-video-release-date",
-      "slug": "muhammad-ali-series-the-greatest-sets-prime-video-premiere-date",
-      "title": "Muhammad Ali Series 'The Greatest' Sets Prime Video Premiere Date",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
+      "id": "music-news-dizzee-rascal-example-arrdee-australia-new-zealand-tour-2026",
+      "slug": "dizzee-rascal-announces-2026-australian-and-new-zealand-tour-with-exam",
+      "title": "Dizzee Rascal Announces 2026 Australian and New Zealand Tour With Example and Arrdee",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "muhammad-ali-series-the-greatest-prime-video-release-date",
-      "primaryKeyword": "The Greatest Muhammad Ali series",
-      "primaryEntity": "The Greatest",
+      "eventSlug": "dizzee-rascal-example-arrdee-australia-new-zealand-tour-2026",
+      "primaryKeyword": "Dizzee Rascal tour",
+      "primaryEntity": "Dizzee Rascal",
       "entities": [
-        "The Greatest (TV series)",
-        "Muhammad Ali",
-        "Prime Video"
+        "Example",
+        "Arrdee"
       ],
-      "angle": "Prime Video announces release date and drops teaser for Muhammad Ali limited series.",
+      "angle": "Grime icon Dizzee Rascal is heading to Australia and New Zealand in late 2026 for a co-headlining tour with Example and Arrdee.",
+      "tmdbType": "movie",
+      "source": "rss:Billboard",
+      "sources": [
+        {
+          "outlet": "Billboard",
+          "tier": 7,
+          "url": "https://www.billboard.com/music/rb-hip-hop/dizzee-rascal-australia-new-zealand-2026-1236288010/",
+          "ageMin": 39,
+          "headline": "Dizzee Rascal Announces 2026 Australian and New Zealand Tour With Example and Arrdee",
+          "summary": "The grime icon is returning to Australia and New Zealand this November and December for the We Want Bass tour."
+        }
+      ],
+      "ageMin": 39,
+      "_cand": {
+        "key": "rss:dizzee-rascal-announces-2026-australian-and-new-zealand-tour",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Billboard"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Billboard",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 62,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 8,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0
+      }
+    },
+    {
+      "id": "news-young-washington-sequel-in-the-works",
+      "slug": "angel-studios-announces-young-washington-sequel-after-record-live-acti",
+      "title": "Angel Studios Announces 'Young Washington' Sequel After Record Live-Action Opening",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "young-washington-sequel-in-the-works",
+      "primaryKeyword": "young washington sequel",
+      "primaryEntity": "Young Washington",
+      "entities": [
+        "Angel Studios"
+      ],
+      "angle": "Angel Studios announces a sequel to 'Young Washington' following the success of its live-action opening.",
       "tmdbType": "movie",
       "source": "rss:Deadline",
       "sources": [
         {
           "outlet": "Deadline",
           "tier": 7,
-          "url": "https://deadline.com/2026/07/muhammad-ali-series-the-greatest-sets-prime-video-release-date-first-look-teaser-1236973883/",
-          "ageMin": 421,
-          "headline": "Muhammad Ali Series The Greatest Sets Prime Video Release Date; First-Look Teaser",
-          "summary": "Prime Video has set Wednesday, November 4 for the premiere of its Muhammad Ali limited series The Greatest. The date was revealed Saturday during a presentation at Essence Festival of Culture, featuring creator, showrunner and exec producer Ben Watkins, star Jaalen Best, and cast members Dana Gourrier, Amin Joseph, Kai Parham, and Michael Ealy. The [ ]"
+          "url": "https://deadline.com/2026/07/young-washington-sequel-1776-box-office-1236974374/",
+          "ageMin": 644,
+          "headline": "Young Washington Sequel 1776 In The Works After $20M+ Angel Studios Live-Action Opening Record",
+          "summary": "Angel Studios has done it again. After winning over the heartland with the 2023 trafficking thriller Sound of Freedom which posted a 3-day of $19.6M (and a six-day start of $41.6M), the faith-based media company posted its best opening for a live-action feature with Jon Erwin s historical period pic, Young Washington, which conquered its $15M [ ]"
         }
       ],
-      "ageMin": 421,
+      "ageMin": 644,
       "_cand": {
-        "key": "rss:muhammad-ali-series-the-greatest-sets-prime-video-release-da",
+        "key": "rss:young-washington-sequel-1776-in-the-works-after-20m-angel-st",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -141,38 +253,168 @@
       }
     },
     {
-      "id": "news-vin-diesel-fast-forever-behind-the-scenes",
-      "slug": "vin-diesel-shares-behind-the-scenes-look-at-fast-forever",
-      "title": "Vin Diesel Shares Behind-the-Scenes Look at 'Fast Forever'",
+      "id": "trailer-oasis-dont-look-back-in-anger-teaser",
+      "slug": "oasis-share-first-teaser-for-upcoming-doc-don-t-look-back-in-anger",
+      "title": "Oasis Share First Teaser for Upcoming Doc 'Don't Look Back in Anger'",
+      "contentType": "trailer",
+      "formatTag": "trailer",
+      "category": "movies",
+      "subcategory": "trailers",
+      "eventType": "trailer",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "oasis-dont-look-back-in-anger-teaser",
+      "primaryKeyword": "oasis don't look back in anger teaser",
+      "primaryEntity": "Oasis",
+      "entities": [
+        "Steven Knight",
+        "Disney+",
+        "Hulu"
+      ],
+      "angle": "Oasis releases the first teaser for their upcoming documentary 'Don't Look Back in Anger', chronicling the Gallagher brothers' reunion.",
+      "tmdbType": "movie",
+      "source": "rss:Rolling Stone",
+      "sources": [
+        {
+          "outlet": "Rolling Stone",
+          "tier": 7,
+          "url": "https://www.rollingstone.com/music/music-news/oasis-first-teaser-documentary-dont-look-back-in-anger-1235589204/",
+          "ageMin": 2248,
+          "headline": "Oasis Share First Teaser for Upcoming Doc Don t Look Back in Anger",
+          "summary": "Steven Knight-produced film about Gallagher brothers' unlikely reunion to hit cinemas in September before its Disney+ and Hulu streaming premiere later this year"
+        }
+      ],
+      "ageMin": 2248,
+      "_cand": {
+        "key": "rss:oasis-share-first-teaser-for-upcoming-doc-don-t-look-back-in",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Rolling Stone"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Rolling Stone",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 59,
+      "signals": {
+        "recency": 1,
+        "corroboration": 12,
+        "status": 18,
+        "type": 10,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0
+      }
+    },
+    {
+      "id": "news-now-you-see-me-4-development",
+      "slug": "jesse-eisenberg-eager-for-now-you-see-me-4-it-s-my-happiest-place",
+      "title": "Jesse Eisenberg Eager for 'Now You See Me 4': 'It's My Happiest Place'",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "announcement",
-      "sensitivity": "high",
-      "eventSlug": "vin-diesel-fast-forever-behind-the-scenes",
-      "primaryKeyword": "Fast Forever",
-      "primaryEntity": "Fast Forever",
+      "sensitivity": "normal",
+      "eventSlug": "now-you-see-me-4-development",
+      "primaryKeyword": "now you see me 4",
+      "primaryEntity": "Now You See Me 4",
       "entities": [
-        "Vin Diesel",
-        "Fast & Furious franchise"
+        "The Debut",
+        "Jesse Eisenberg"
       ],
-      "angle": "Vin Diesel shares behind-the-scenes look at the final Fast & Furious film.",
+      "angle": "Jesse Eisenberg expresses strong desire for 'Now You See Me 4' and calls the franchise his 'happiest place'.",
+      "tmdbType": "movie",
+      "source": "rss:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/jesse-eisenberg-eager-make-now-you-see-me-4-1236974395/",
+          "ageMin": 474,
+          "headline": "Jesse Eisenberg Is Eager To Make Now You See Me 4 : It s My Happiest Place",
+          "summary": "After three movies, Jesse Eisenberg is patiently awaiting another magical journey with the Four Horsemen. The 2x Oscar nominee recently admitted he s never felt happier than when playing street magician J. Daniel Atlas in the Now You See Me movies, noting that he d love to do a fourth installment. Honestly, I d love to do Now [ ]"
+        }
+      ],
+      "ageMin": 474,
+      "_cand": {
+        "key": "rss:jesse-eisenberg-is-eager-to-make-now-you-see-me-4-it-s-my-ha",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 60,
+      "signals": {
+        "recency": 4,
+        "corroboration": 12,
+        "status": 18,
+        "type": 8,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0
+      }
+    },
+    {
+      "id": "news-jason-moore-elle-murder-she-wrote-movie",
+      "slug": "elle-director-jason-moore-on-murder-she-wrote-movie-plans",
+      "title": "‘Elle’ Director Jason Moore on ‘Murder, She Wrote’ Movie Plans",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "jason-moore-elle-murder-she-wrote-movie",
+      "primaryKeyword": "murder she wrote movie",
+      "primaryEntity": "Murder, She Wrote (film)",
+      "entities": [
+        "Elle",
+        "Jason Moore",
+        "Elle (Prime Video series)",
+        "Reese Witherspoon"
+      ],
+      "angle": "Director Jason Moore discusses the upcoming 'Murder, She Wrote' movie and the 'Elle' series.",
       "tmdbType": "movie",
       "source": "rss:Variety",
       "sources": [
         {
           "outlet": "Variety",
           "tier": 7,
-          "url": "https://variety.com/2026/film/news/vin-diesel-behind-the-scenes-fast-forever-1236801804/",
-          "ageMin": 434,
-          "headline": "Vin Diesel Shares Behind-the-Scenes Look at Fast Forever : We ve Been Grinding",
-          "summary": "Vin Diesel took to Instagram on Thursday to give fans a behind-the-scenes look at “Fast Forever,” the 11th and final film in “The Fast and Furious” franchise. It hits theaters on March 17, 2028. “I’m on set. People are grinding. Incredible crews are working,” said Diesel in the post. “I just wanted to take a [ ]"
+          "url": "https://variety.com/2026/tv/columns/elle-director-reese-witherspoon-set-visit-season-2-wardrobe-murder-she-wrote-movie-1236801951/",
+          "ageMin": 613,
+          "headline": "‘Elle’ Director Jason Moore on Reese Witherspoon s Set Visit, Season 2’s Archival-Only Wardrobe and What ‘Hardcore’ Fans Can Expect From ‘Murder, She Wrote’ Movie",
+          "summary": "Film, television and Broadway director Jason Moore knows what’s old is new again. The Tony-nominee not only directed the first two episodes of the Prime Video “Legally Blonde” prequel series “Elle,” but he is also helming the upcoming feature film adaptation of “Murder, She Wrote,” which stars Jamie Lee Curtis as Jessica Fletcher, the role [ ]"
         }
       ],
-      "ageMin": 434,
+      "ageMin": 613,
       "_cand": {
-        "key": "rss:vin-diesel-shares-behind-the-scenes-look-at-fast-forever-we-",
+        "key": "rss:-elle-director-jason-moore-on-reese-witherspoon-s-set-visit-",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -185,7 +427,7 @@
           "Variety"
         ],
         "maxTier": 7,
-        "sensitivity": "high",
+        "sensitivity": "normal",
         "attribution": "Variety",
         "framing": "attributed",
         "status": "DEVELOPING",
@@ -204,38 +446,39 @@
       }
     },
     {
-      "id": "news-vin-diesel-fast-forever-production-commences",
-      "slug": "vin-diesel-begins-fast-forever-production-teases-most-amazing-finale",
-      "title": "Vin Diesel Begins 'Fast Forever' Production, Teases Most Amazing Finale",
+      "id": "news-house-of-the-dragon-season-3-episode-3-corlys-rhaenyra-request",
+      "slug": "house-of-the-dragon-star-steve-toussaint-teases-consequences-of-corlys",
+      "title": "House of the Dragon Star Steve Toussaint Teases Consequences of Corlys Very Dangerous Request of Rhaenyra",
       "contentType": "news",
       "formatTag": "news",
-      "category": "movies",
+      "category": "tv",
       "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "high",
-      "eventSlug": "vin-diesel-fast-forever-production-commences",
-      "primaryKeyword": "Fast Forever",
-      "primaryEntity": "Fast Forever",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "house-of-the-dragon-season-3-episode-3-corlys-rhaenyra-request",
+      "primaryKeyword": "House of the Dragon",
+      "primaryEntity": "House of the Dragon",
       "entities": [
-        "Vin Diesel",
-        "Fast & Furious franchise"
+        "Steve Toussaint",
+        "Rhaenyra Targaryen",
+        "Corlys Velaryon"
       ],
-      "angle": "Vin Diesel announces production has started on the final Fast & Furious film.",
+      "angle": "Steve Toussaint, who plays Corlys Velaryon, teases the dangerous consequences of his character's latest request to Rhaenyra in the latest episode of 'House of the Dragon'.",
       "tmdbType": "movie",
-      "source": "rss:Deadline",
+      "source": "rss:Variety",
       "sources": [
         {
-          "outlet": "Deadline",
+          "outlet": "Variety",
           "tier": 7,
-          "url": "https://deadline.com/2026/07/vin-diesel-begins-fast-forever-production-1236974251/",
-          "ageMin": 480,
-          "headline": "Vin Diesel Begins Fast Forever Production, Teases Most Amazing Finale",
-          "summary": "Vin Diesel is back in the driver s seat as the Fast Furious franchise makes one last lap after 25 years. On Thursday, the star and producer revealed that production has commenced on Fast Forever, which is set for a March 17, 2028 premiere, the 11th and final chapter in the $7 billion action franchise [ ]"
+          "url": "https://variety.com/2026/tv/features/house-of-the-dragon-corlys-rhaenyra-sons-bastards-1236800257/",
+          "ageMin": 181,
+          "headline": "House of the Dragon Star Steve Toussaint Teases Consequences of Corlys Very Dangerous Request of Rhaenyra",
+          "summary": "SPOILER ALERT: This article contains spoilers for Season 3, Episode 3 of “House of the Dragon,” now streaming on HBO Max. Queen Rhaenyra Targaryen got a slap in the face from her hand of the queen, Corlys Velaryon, on tonight s episode of House of the Dragon, when the Sea Snake publicly called out Rhaenyra s sons (his [ ]"
         }
       ],
-      "ageMin": 480,
+      "ageMin": 181,
       "_cand": {
-        "key": "rss:vin-diesel-begins-fast-forever-production-teases-most-amazin",
+        "key": "rss:house-of-the-dragon-star-steve-toussaint-teases-consequences",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -245,61 +488,62 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Deadline"
+          "Variety"
         ],
         "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "Deadline",
+        "sensitivity": "normal",
+        "attribution": "Variety",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 60,
+      "priority": 53,
       "signals": {
-        "recency": 4,
+        "recency": 9,
         "corroboration": 12,
         "status": 18,
-        "type": 8,
+        "type": 6,
         "pop": 0,
         "breakout": 0,
-        "big": 18,
+        "big": 8,
         "trending": 0
       }
     },
     {
-      "id": "watchguide-macys-fourth-of-july-fireworks-spectacular-watch-guide",
-      "slug": "where-to-watch-macy-s-fourth-of-july-fireworks-spectacular-on-tv-or-st",
-      "title": "Where to Watch Macy's Fourth of July Fireworks Spectacular on TV or Streaming",
-      "contentType": "watchguide",
-      "formatTag": "watchguide",
-      "category": "streaming",
-      "subcategory": "where-to-watch",
-      "eventType": "other",
+      "id": "news-robert-richardson-wants-to-work-with-paul-thomas-anderson",
+      "slug": "robert-richardson-wants-to-work-with-paul-thomas-anderson",
+      "title": "Robert Richardson Wants to Work With Paul Thomas Anderson",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "macys-fourth-of-july-fireworks-spectacular-watch-guide",
-      "primaryKeyword": "Macy's Fourth of July Fireworks Spectacular",
-      "primaryEntity": "Macy's Fourth of July Fireworks Spectacular",
+      "eventSlug": "robert-richardson-wants-to-work-with-paul-thomas-anderson",
+      "primaryKeyword": "Paul Thomas Anderson",
+      "primaryEntity": "Paul Thomas Anderson",
       "entities": [
-        "Noah Kahan",
-        "Post Malone",
-        "Salt-N-Pepa"
+        "Robert Richardson",
+        "Oliver Stone",
+        "Martin Scorsese",
+        "Quentin Tarantino"
       ],
-      "angle": "Guide on where to watch Macy's Fourth of July Fireworks Spectacular featuring musical performances.",
+      "angle": "Acclaimed cinematographer Robert Richardson expresses his desire to collaborate with director Paul Thomas Anderson.",
       "tmdbType": "movie",
       "source": "rss:TheWrap",
       "sources": [
         {
           "outlet": "TheWrap",
           "tier": 7,
-          "url": "https://www.thewrap.com/culture-lifestyle/culture/where-to-watch-2026-macys-fourth-of-july-spectacular-live-streaming/",
-          "ageMin": 421,
-          "headline": "Where to Watch Macy s Fourth of July Fireworks Spectacular on TV or Streaming",
-          "summary": "Noah Kahan, Post Malone, Salt-N-Pepa, and more will perform during the show The post Where to Watch Macy s Fourth of July Fireworks Spectacular on TV or Streaming appeared first on TheWrap ."
+          "url": "https://www.thewrap.com/creative-content/movies/robert-richardson-collaborations-karlovy-vary-interview/",
+          "ageMin": 639,
+          "headline": "Robert Richardson Wants to Work With You Next, Paul Thomas Anderson",
+          "summary": "Karlovy Vary 2026: The \"White Devil\" documentary subject tells TheWrap all about his collaborations with Oliver Stone, Martin Scorsese, Quentin Tarantino and more The post Robert Richardson Wants to Work With You Next, Paul Thomas Anderson appeared first on TheWrap ."
         }
       ],
-      "ageMin": 421,
+      "ageMin": 639,
       "_cand": {
-        "key": "rss:where-to-watch-macy-s-fourth-of-july-fireworks-spectacular-o",
+        "key": "rss:robert-richardson-wants-to-work-with-you-next-paul-thomas-an",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -318,52 +562,51 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 48,
+      "priority": 60,
       "signals": {
         "recency": 4,
         "corroboration": 12,
         "status": 18,
-        "type": 6,
+        "type": 8,
         "pop": 0,
         "breakout": 0,
-        "big": 8,
+        "big": 18,
         "trending": 0
       }
     },
     {
-      "id": "news-i-will-find-you-netflix-series-britt-lower-villain-casting",
-      "slug": "i-will-find-you-star-britt-lower-on-villain-casting",
-      "title": "'I Will Find You' Star Britt Lower on Villain Casting",
+      "id": "news-the-vampire-lestat-costume-designer-lestat-wardrobe-easter-eggs",
+      "slug": "the-vampire-lestat-costume-designer-breaks-down-lestat-s-rockstar-ward",
+      "title": "The Vampire Lestat Costume Designer Breaks Down Lestat s Rockstar Wardrobe and the Season s Hidden Easter Eggs",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "i-will-find-you-netflix-series-britt-lower-villain-casting",
-      "primaryKeyword": "I Will Find You Netflix series",
-      "primaryEntity": "I Will Find You (TV series)",
+      "eventSlug": "the-vampire-lestat-costume-designer-lestat-wardrobe-easter-eggs",
+      "primaryKeyword": "The Vampire Lestat",
+      "primaryEntity": "The Vampire Lestat",
       "entities": [
-        "Britt Lower",
-        "Netflix"
+        "Lestat",
+        "Lex Wood"
       ],
-      "angle": "Star Britt Lower discusses the villain casting in Harlan Coben's Netflix mystery series.",
+      "angle": "The costume designer for 'The Vampire Lestat' breaks down Lestat's rockstar-inspired wardrobe and hidden Easter eggs in the latest episode.",
       "tmdbType": "movie",
       "source": "rss:Variety",
       "sources": [
         {
           "outlet": "Variety",
           "tier": 7,
-          "url": "https://variety.com/2026/streaming/columns/i-will-find-you-britt-lower-rachel-netflix-milo-ventimiglia-1236801455/",
-          "ageMin": 603,
-          "headline": "‘I Will Find You’ Star Britt Lower on Rachel’s ‘Spidey Sense’ and Why [SPOILER] as the Murderous Villain Was ‘Perfect Casting’",
-          "summary": "SPOILER ALERT: This story includes key storylines and details about “I Will Find You,” now streaming on Netflix. Harlan Coben’s latest Netflix murder mystery series, “I Will Find You,” appears to have captured most everyone’s attention. Just look at the numbers. As Variety’s Jennifer Maas reported on Tuesday, “I Will Find You” had the streamer’s highest [ ]"
+          "url": "https://variety.com/2026/tv/news/the-vampire-lestat-costume-designer-wardrobe-easter-eggs-1236800981/",
+          "ageMin": 181,
+          "headline": "The Vampire Lestat Costume Designer Breaks Down Lestat s Rockstar Wardrobe and the Season s Hidden Easter Eggs",
+          "summary": "SPOILER ALERT: This post contains spoilers from “New York,” the fifth episode of “The Vampire Lestat,” now streaming on AMC+. When costume designer Lex Wood started planning the wardrobe for “The Vampire Lestat” — or Season 3 of “Interview with the Vampire” — she had one word in mind: color. And lots of it, to reflect the [ ]"
         }
       ],
-      "ageMin": 603,
+      "ageMin": 181,
       "_cand": {
-        "key": "rss:-i-will-find-you-star-britt-lower-on-rachel-s-spidey-sense-a",
+        "key": "rss:the-vampire-lestat-costume-designer-breaks-down-lestat-s-roc",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -382,9 +625,9 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 48,
+      "priority": 53,
       "signals": {
-        "recency": 4,
+        "recency": 9,
         "corroboration": 12,
         "status": 18,
         "type": 6,
@@ -395,9 +638,9 @@
       }
     },
     {
-      "id": "music-news-madonna-confessions-ii-pop-ups",
-      "slug": "madonna-celebrates-confessions-ii-album-with-limited-time-pop-ups",
-      "title": "Madonna Celebrates Confessions II Album With Limited-Time Pop-Ups",
+      "id": "music-news-toy-story-5-soundtrack-billboard-charts",
+      "slug": "toy-story-5-soundtrack-hits-top-10-on-three-billboard-charts",
+      "title": "'Toy Story 5' Soundtrack Hits Top 10 on Three Billboard Charts",
       "contentType": "music-news",
       "formatTag": "music-news",
       "category": "music",
@@ -405,28 +648,157 @@
       "eventType": "announcement",
       "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "madonna-confessions-ii-pop-ups",
-      "primaryKeyword": "Madonna Confessions II",
-      "primaryEntity": "Madonna",
+      "eventSlug": "toy-story-5-soundtrack-billboard-charts",
+      "primaryKeyword": "toy story 5 soundtrack",
+      "primaryEntity": "Toy Story 5",
       "entities": [
-        "Confessions II"
+        "Taylor Swift",
+        "Billboard Charts"
       ],
-      "angle": "Madonna is celebrating her 'Confessions II' album with limited-time pop-up experiences in major cities.",
+      "angle": "The soundtrack for the upcoming 'Toy Story 5,' featuring Taylor Swift, has achieved a significant chart debut.",
       "tmdbType": "movie",
       "source": "rss:Billboard",
       "sources": [
         {
           "outlet": "Billboard",
           "tier": 7,
-          "url": "https://www.billboard.com/music/music-news/madonna-confessions-ii-album-pop-up-shop-events-1236287839/",
-          "ageMin": 582,
-          "headline": "Madonna Celebrates Confessions II Album With Limited-Time Pop-Ups",
-          "summary": "Fans can get into the groove and confess at four pop-up experiences in New York, Los Angeles and London over the July 3-5 weekend."
+          "url": "https://www.billboard.com/music/chart-beat/toy-story-5-soundtrack-taylor-swift-top-10-billboard-debut-1236287995/",
+          "ageMin": 252,
+          "headline": "‘Toy Story 5’ Soundtrack Debuts in Top 10 on Three Billboard Charts",
+          "summary": "The Taylor Swift-led set makes a No. 1 bow on the Kid Albums tally."
         }
       ],
-      "ageMin": 582,
+      "ageMin": 252,
       "_cand": {
-        "key": "rss:madonna-celebrates-confessions-ii-album-with-limited-time-po",
+        "key": "rss:-toy-story-5-soundtrack-debuts-in-top-10-on-three-billboard-",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Billboard"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Billboard",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 47,
+      "signals": {
+        "recency": 9,
+        "corroboration": 12,
+        "status": 18,
+        "type": 8,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0
+      }
+    },
+    {
+      "id": "news-harvey-keitel-shooting-new-film-ai-concerns",
+      "slug": "harvey-keitel-shooting-film-written-by-wife-calls-out-danger-of-ai",
+      "title": "Harvey Keitel Shooting Film Written by Wife, Calls Out ‘Danger’ of AI",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "high",
+      "eventSlug": "harvey-keitel-shooting-new-film-ai-concerns",
+      "primaryKeyword": "Harvey Keitel",
+      "primaryEntity": "Harvey Keitel",
+      "entities": [
+        "Daphna Kastner",
+        "Michael Caine",
+        "Martin Scorsese"
+      ],
+      "angle": "Harvey Keitel is currently shooting a new film written by his wife and voices concerns about AI in filmmaking.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/film/global/harvey-keitel-daphna-kastner-ai-michael-caine-1236801929/",
+          "ageMin": 648,
+          "headline": "Harvey Keitel Shooting Film Written by Wife Daphna Kastner, Calls Out ‘Danger’ of AI When Mentioning Michael Caine AI-Narrated ‘The Odyssey’ Audiobook",
+          "summary": "Harvey Keitel, who is at the Karlovy Vary Film Festival for the third time to present a screening of Martin Scorsese’s “Mean Streets,” has revealed he is shooting a new film written by his wife, actor Daphna Kastner. Speaking with Variety at the festival, the actor said he is working on something that “really excites [ ]"
+        }
+      ],
+      "ageMin": 648,
+      "_cand": {
+        "key": "rss:harvey-keitel-shooting-film-written-by-wife-daphna-kastner-c",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 60,
+      "signals": {
+        "recency": 4,
+        "corroboration": 12,
+        "status": 18,
+        "type": 8,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0
+      }
+    },
+    {
+      "id": "music-news-ateez-golden-hour-part-5-no-1-billboard-200",
+      "slug": "ateez-lands-third-no-1-on-albums-chart-with-golden-hour-part-5",
+      "title": "Ateez Lands Third No. 1 on Albums Chart With Golden Hour : Part.5",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "ateez-golden-hour-part-5-no-1-billboard-200",
+      "primaryKeyword": "Ateez Golden Hour Part 5",
+      "primaryEntity": "ATEEZ",
+      "entities": [
+        "Ateez",
+        "Billboard 200"
+      ],
+      "angle": "K-pop group Ateez achieves their third No. 1 on the Billboard 200 chart with their latest album.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/music/news/ateez-lands-third-no-1-albums-chart-golden-hour-part-5-1236801984/",
+          "ageMin": 556,
+          "headline": "Ateez Lands Third No. 1 on Albums Chart With Golden Hour : Part.5",
+          "summary": "K-pop group Ateez has scored its third No. 1 on the Billboard 200 with Golden Hour : Part.5. The album starts with 228,000 equivalent album units, with 223,000 accounting for pure album sales thanks to 30 CD variants and five vinyl variants. This marks Ateez s ninth top 10 on the albums chart and their third [ ]"
+        }
+      ],
+      "ageMin": 556,
+      "_cand": {
+        "key": "rss:ateez-lands-third-no-1-on-albums-chart-with-golden-hour-part",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -437,11 +809,11 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Billboard"
+          "Variety"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Billboard",
+        "attribution": "Variety",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -459,134 +831,9 @@
       }
     },
     {
-      "id": "news-joby-baker-death",
-      "slug": "joby-baker-star-of-good-morning-world-dies-at-92",
-      "title": "Joby Baker, Star of 'Good Morning World,' Dies at 92",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "death",
-      "sensitivity": "high",
-      "eventSlug": "joby-baker-death",
-      "primaryKeyword": "joby baker",
-      "primaryEntity": "Joby Baker",
-      "entities": [
-        "Good Morning World"
-      ],
-      "angle": "Veteran actor Joby Baker, known for his roles in films alongside stars like Elvis Presley and Jack Lemmon, has passed away at 92.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/tv/tv-news/joby-baker-dead-good-morning-world-elvis-presley-1236637648/",
-          "ageMin": 808,
-          "headline": "Joby Baker, Star of Good Morning World, Dies at 92",
-          "summary": "After surviving Pearl Harbor as a youngster, he acted in films with Paul Muni, Elvis Presley, Connie Francis, Jack Lemmon and three Gidgets."
-        }
-      ],
-      "ageMin": 808,
-      "_cand": {
-        "key": "rss:joby-baker-star-of-good-morning-world-dies-at-92",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 46,
-      "signals": {
-        "recency": 1,
-        "corroboration": 12,
-        "status": 18,
-        "type": 15,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0
-      }
-    },
-    {
-      "id": "news-noah-wyle-roles-saving-private-ryan-good-night-and-good-luck",
-      "slug": "the-pitt-star-noah-wyle-was-offered-roles-in-saving-private-ryan-and-g",
-      "title": "The Pitt Star Noah Wyle Was Offered Roles in Saving Private Ryan and Good Night, and Good Luck but Couldn't Get Out of Filming ER",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "noah-wyle-roles-saving-private-ryan-good-night-and-good-luck",
-      "primaryKeyword": "Noah Wyle roles",
-      "primaryEntity": "Noah Wyle",
-      "entities": [
-        "Saving Private Ryan",
-        "Good Night, and Good Luck"
-      ],
-      "angle": "Noah Wyle reveals he was offered roles in 'Saving Private Ryan' and 'Good Night, and Good Luck' but couldn't take them due to filming 'ER'.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/film/news/the-pitt-noah-wyle-saving-private-ryan-er-1236801812/",
-          "ageMin": 333,
-          "headline": "The Pitt Star Noah Wyle Was Offered Roles in Saving Private Ryan and Good Night, and Good Luck but Couldn t Get Out of Filming ER",
-          "summary": "“The Pitt” star Noah Wyle recently told the “Still Here Hollywood” podcast that he missed out on roles in “Saving Private Ryan” and “Good Night, and Good Luck” because he couldn’t get out of filming the long-running medical series “ER.” When asked if he had any roles that got away, Wyle said, “Yeah, tons. Happens [ ]"
-        }
-      ],
-      "ageMin": 333,
-      "_cand": {
-        "key": "rss:the-pitt-star-noah-wyle-was-offered-roles-in-saving-private-",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 45,
-      "signals": {
-        "recency": 9,
-        "corroboration": 12,
-        "status": 18,
-        "type": 6,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0
-      }
-    },
-    {
-      "id": "news-reba-mcentire-nashville-star-spangled-bash",
-      "slug": "reba-mcentire-to-host-star-spangled-bash-with-nick-jonas-boyz-ii-men",
-      "title": "Reba McEntire to Host Star-Spangled Bash With Nick Jonas, Boyz II Men",
+      "id": "news-maren-morris-touring-break",
+      "slug": "maren-morris-taking-break-from-touring-to-write-for-broadway",
+      "title": "Maren Morris Taking Break From Touring to Write for Broadway",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
@@ -594,30 +841,28 @@
       "eventType": "announcement",
       "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "reba-mcentire-nashville-star-spangled-bash",
-      "primaryKeyword": "reba mcentire",
-      "primaryEntity": "Reba McEntire",
+      "eventSlug": "maren-morris-touring-break",
+      "primaryKeyword": "maren morris",
+      "primaryEntity": "Maren Morris",
       "entities": [
-        "Ryan Seacrest",
-        "Nick Jonas",
-        "Boyz II Men"
+        "Broadway"
       ],
-      "angle": "Reba McEntire to host star-studded holiday music special featuring fireworks and drones.",
+      "angle": "Maren Morris announces a break from touring to focus on writing for Broadway and spending time with her son.",
       "tmdbType": "movie",
       "source": "rss:Billboard",
       "sources": [
         {
           "outlet": "Billboard",
           "tier": 7,
-          "url": "https://www.billboard.com/culture/product-recommendations/watch-nashville-america-250-star-spangled-bash-online-free-1236287306/",
-          "ageMin": 655,
-          "headline": "How to Watch Nashville s Star-Spangled Bash With Reba McEntire, Nick Jonas, Boyz II Men and More",
-          "summary": "Hosted by Ryan Seacrest, the live event will also feature one of the largest fireworks and drone shows in the United States"
+          "url": "https://www.billboard.com/music/country/maren-morris-taking-break-from-touring-broadway-songwriting-1236287946/",
+          "ageMin": 548,
+          "headline": "Maren Morris Says She s Taking a Break From Touring, Wants to Write for Broadway",
+          "summary": "The country-pop star plans to step away from the road to spend more time with her son."
         }
       ],
-      "ageMin": 655,
+      "ageMin": 548,
       "_cand": {
-        "key": "rss:how-to-watch-nashville-s-star-spangled-bash-with-reba-mcenti",
+        "key": "rss:maren-morris-says-she-s-taking-a-break-from-touring-wants-to",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -649,289 +894,38 @@
       }
     },
     {
-      "id": "news-cynthia-nixon-wife-public-schools-job",
-      "slug": "cynthia-nixon-s-wife-reportedly-lands-nyc-public-schools-job",
-      "title": "Cynthia Nixon's Wife Reportedly Lands NYC Public Schools Job",
+      "id": "news-tom-holland-odyssey-filming-nolan",
+      "slug": "tom-holland-thought-christopher-nolan-hated-his-odyssey-performance-on",
+      "title": "Tom Holland Thought Christopher Nolan Hated His 'Odyssey' Performance on First Day",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "cynthia-nixon-wife-public-schools-job",
-      "primaryKeyword": "Cynthia Nixon wife job",
-      "primaryEntity": "Cynthia Nixon",
+      "eventSlug": "tom-holland-odyssey-filming-nolan",
+      "primaryKeyword": "tom holland christopher nolan",
+      "primaryEntity": "Tom Holland",
       "entities": [
-        "Christine Marinoni"
+        "Christopher Nolan",
+        "The Odyssey"
       ],
-      "angle": "Cynthia Nixon's wife lands a job in NYC Public Schools.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/news/politics-news/cynthia-nixon-wife-christine-marinoni-ny-schools-job-report-1236637851/",
-          "ageMin": 421,
-          "headline": "Cynthia Nixon s Wife Reportedly Lands NYC Public Schools Job Amid Sex and the City Star s Mamdani Support",
-          "summary": "Christine Marinoni is working as the chief of mass engagement for the Family and Community Empowerment division of the Department of Education."
-        }
-      ],
-      "ageMin": 421,
-      "_cand": {
-        "key": "rss:cynthia-nixon-s-wife-reportedly-lands-nyc-public-schools-job",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 40,
-      "signals": {
-        "recency": 4,
-        "corroboration": 12,
-        "status": 18,
-        "type": 6,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0
-      }
-    },
-    {
-      "id": "news-maren-morris-gift-swift-kelce-wedding",
-      "slug": "maren-morris-reveals-custom-gift-from-taylor-swift-and-travis-kelce-s-",
-      "title": "Maren Morris Reveals Custom Gift From Taylor Swift and Travis Kelce’s Wedding",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "maren-morris-gift-swift-kelce-wedding",
-      "primaryKeyword": "Maren Morris Taylor Swift wedding gift",
-      "primaryEntity": "Maren Morris",
-      "entities": [
-        "Taylor Swift",
-        "Travis Kelce"
-      ],
-      "angle": "Country singer Maren Morris revealed a custom gift she received from Taylor Swift and Travis Kelce at their wedding.",
-      "tmdbType": "movie",
-      "source": "rss:Billboard",
-      "sources": [
-        {
-          "outlet": "Billboard",
-          "tier": 7,
-          "url": "https://www.billboard.com/music/music-news/maren-morris-taylor-swift-wedding-handkerchief-gift-1236287840/",
-          "ageMin": 604,
-          "headline": "Maren Morris Reveals Custom Gift From Taylor Swift and Travis Kelce’s Wedding",
-          "summary": "The country singer was one of more than 1,000 guests at the superstar couple’s MSG ceremony."
-        }
-      ],
-      "ageMin": 604,
-      "_cand": {
-        "key": "rss:maren-morris-reveals-custom-gift-from-taylor-swift-and-travi",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Billboard"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Billboard",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 40,
-      "signals": {
-        "recency": 4,
-        "corroboration": 12,
-        "status": 18,
-        "type": 6,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0
-      }
-    },
-    {
-      "id": "news-amc-ceo-swift-kelce-wedding-details",
-      "slug": "amc-theaters-ceo-lets-slip-details-of-taylor-swift-s-wedding-before-de",
-      "title": "AMC Theaters CEO Lets Slip Details of Taylor Swift s Wedding Before Deleting Post",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "amc-ceo-swift-kelce-wedding-details",
-      "primaryKeyword": "AMC CEO Taylor Swift wedding",
-      "primaryEntity": "Adam Aron",
-      "entities": [
-        "TAYLOR SWIFT | THE ERAS TOUR",
-        "Taylor Swift",
-        "Travis Kelce",
-        "AMC Theaters"
-      ],
-      "angle": "AMC Theaters CEO Adam Aron accidentally shared details about the Taylor Swift-Kelce wedding before deleting the post.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/news/general-news/adam-aron-taylor-swift-wedding-details-1236637796/",
-          "ageMin": 608,
-          "headline": "AMC Theaters CEO Lets Slip Details of Taylor Swift s Wedding Before Deleting Post",
-          "summary": "Adam Aron posted a lengthy insider's account of the Swift-Kelce ceremony on X."
-        }
-      ],
-      "ageMin": 608,
-      "_cand": {
-        "key": "rss:amc-theaters-ceo-lets-slip-details-of-taylor-swift-s-wedding",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 40,
-      "signals": {
-        "recency": 4,
-        "corroboration": 12,
-        "status": 18,
-        "type": 6,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0
-      }
-    },
-    {
-      "id": "news-maggie-gyllenhaal-directing-motherhood",
-      "slug": "maggie-gyllenhaal-explains-her-love-of-directing-and-why-it-s-like-bei",
-      "title": "Maggie Gyllenhaal Explains Her Love of Directing And Why It’s Like Being a Mother",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "maggie-gyllenhaal-directing-motherhood",
-      "primaryKeyword": "Maggie Gyllenhaal",
-      "primaryEntity": "Maggie Gyllenhaal",
-      "entities": [
-        "Karlovy Vary film festival"
-      ],
-      "angle": "Maggie Gyllenhaal likens directing to motherhood and discusses gender dynamics in the industry.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/maggie-gyllenhaal-directing-acting-independence-day-gaza-1236637531/",
-          "ageMin": 697,
-          "headline": "Maggie Gyllenhaal Explains Her Love of Directing And Why It’s Like Being a Mother",
-          "summary": "At the Karlovy Vary film festival in the Czech Republic, she also discussed directing still being “predominantly a male job.”"
-        }
-      ],
-      "ageMin": 697,
-      "_cand": {
-        "key": "rss:maggie-gyllenhaal-explains-her-love-of-directing-and-why-it-",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 40,
-      "signals": {
-        "recency": 4,
-        "corroboration": 12,
-        "status": 18,
-        "type": 6,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0
-      }
-    },
-    {
-      "id": "news-maggie-gyllenhaal-subverting-female-stereotypes",
-      "slug": "maggie-gyllenhaal-on-subverting-female-stereotypes-and-why-she-never-s",
-      "title": "Maggie Gyllenhaal on Subverting Female Stereotypes and Why She Never Set Out to Break Taboos",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "maggie-gyllenhaal-subverting-female-stereotypes",
-      "primaryKeyword": "Maggie Gyllenhaal",
-      "primaryEntity": "Maggie Gyllenhaal",
-      "entities": [
-        "The Lost Daughter"
-      ],
-      "angle": "Maggie Gyllenhaal discusses her approach to subverting female stereotypes in her directorial work.",
+      "angle": "Tom Holland shares his initial fear that Christopher Nolan disliked his performance on 'The Odyssey' during their first day of filming.",
       "tmdbType": "movie",
       "source": "rss:Variety",
       "sources": [
         {
           "outlet": "Variety",
           "tier": 7,
-          "url": "https://variety.com/2026/film/festivals/karlovy-vary-maggie-gyllenhaal-1236801706/",
-          "ageMin": 726,
-          "headline": "Maggie Gyllenhaal on Subverting Female Stereotypes and Why She Never Set Out to Break Taboos: I’m Just Trying to Make Space for My Own Experience to Be Expressed",
-          "summary": "In only two directorial outings, Karlovy Vary Film Festival honoree Maggie Gyllenhaal has managed to subvert more than 100 years of cinematic female stereotypes — “The Lost Daughter” acknowledged the darker aspects of motherhood and what’s expected of women, while “The Bride” gave the Bride of Frankenstein agency and autonomy. Gyllenhaal received the President’s Award [ ]"
+          "url": "https://variety.com/2026/film/news/tom-holland-christopher-nolan-hated-odyssey-performance-1236801979/",
+          "ageMin": 553,
+          "headline": "Tom Holland Thought Christopher Nolan Hated His Odyssey Performance on His First Day Filming: I Thought I Was Totally S -ing the Bed",
+          "summary": "Tom Holland recently told Fandango that he thought director Christopher Nolan hated his performance on his first day filming The Odyssey because he kept calling cut. In reality, Nolan s cuts were due to the limitations of the Imax cameras he was using. “Working with the Imax cameras for the first time is an experience,” Holland [ ]"
         }
       ],
-      "ageMin": 726,
+      "ageMin": 553,
       "_cand": {
-        "key": "rss:maggie-gyllenhaal-on-subverting-female-stereotypes-and-why-s",
+        "key": "rss:tom-holland-thought-christopher-nolan-hated-his-odyssey-perf",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -950,15 +944,142 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 37,
+      "priority": 40,
       "signals": {
-        "recency": 1,
+        "recency": 4,
         "corroboration": 12,
         "status": 18,
         "type": 6,
         "pop": 0,
         "breakout": 0,
         "big": 0,
+        "trending": 0
+      }
+    },
+    {
+      "id": "news-basic-instinct-reboot-in-development",
+      "slug": "basic-instinct-writer-joe-eszterhas-gives-update-on-reboot-catherine-t",
+      "title": "Basic Instinct Writer Joe Eszterhas Gives Update On Reboot, Catherine Tramell Is Back",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "basic-instinct-reboot-in-development",
+      "primaryKeyword": "basic instinct reboot",
+      "primaryEntity": "Basic Instinct",
+      "entities": [
+        "Joe Eszterhas",
+        "Amazon MGM Studios"
+      ],
+      "angle": "Writer Joe Eszterhas provides an update on a potential reboot of the erotic thriller 'Basic Instinct', confirming the return of Catherine Tramell.",
+      "tmdbType": "movie",
+      "source": "rss:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/basic-instinct-writer-joe-eszterhas-update-reboot-1236974342/",
+          "ageMin": 773,
+          "headline": "Basic Instinct Writer Joe Eszterhas Gives Update On Reboot, Catherine Tramell Is Back",
+          "summary": "After nearly 35 years, Joe Eszterhas is back to basics with the follow-up to his 1992 erotic thriller. The Basic Instinct screenwriter, who was tapped to pen a reboot for Amazon MGM Studio s United Artists last year, has given an update on the script, which features the onscreen return of Catherine Tramell (originated by Sharon [ ]"
+        }
+      ],
+      "ageMin": 773,
+      "_cand": {
+        "key": "rss:basic-instinct-writer-joe-eszterhas-gives-update-on-reboot-c",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 57,
+      "signals": {
+        "recency": 1,
+        "corroboration": 12,
+        "status": 18,
+        "type": 8,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0
+      }
+    },
+    {
+      "id": "news-tom-holland-the-odyssey-christopher-nolan",
+      "slug": "tom-holland-thought-christopher-nolan-didn-t-like-his-the-odyssey-perf",
+      "title": "Tom Holland Thought Christopher Nolan Didn t Like His The Odyssey Performance On First Day: I Thought I Was Totally Sh*tting The Bed",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "high",
+      "eventSlug": "tom-holland-the-odyssey-christopher-nolan",
+      "primaryKeyword": "Tom Holland The Odyssey",
+      "primaryEntity": "The Odyssey",
+      "entities": [
+        "The Odyssey (2025 film)",
+        "Tom Holland",
+        "Christopher Nolan"
+      ],
+      "angle": "Tom Holland shares his initial anxieties about his performance in Christopher Nolan's upcoming film 'The Odyssey'.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/film/festivals/black-money-for-white-nights-1236795831/",
+          "ageMin": 577,
+          "headline": "Kristina Grozeva and Petar Valchanov Probe Corruption and Pro-Russia Nostalgia in ‘Black Money for White Nights’",
+          "summary": "Acclaimed Bulgarian directing duo Kristina Grozeva and Petar Valchanov return to the Karlovy Vary Film Festival competition with “Black Money for White Nights.” They won the Crystal Globe in 2019 with ‘The Father,” which repped Bulgaria in the foreign-language film Oscar race. An indictment of modern Bulgarian corruption and moral decay set in 2022, “Black [ ]"
+        }
+      ],
+      "ageMin": 577,
+      "_cand": {
+        "key": "rss:kristina-grozeva-and-petar-valchanov-probe-corruption-and-pr",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 48,
+      "signals": {
+        "recency": 4,
+        "corroboration": 12,
+        "status": 18,
+        "type": 6,
+        "pop": 0,
+        "breakout": 0,
+        "big": 8,
         "trending": 0
       }
     }
