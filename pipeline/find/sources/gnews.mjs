@@ -8,14 +8,23 @@ const UA = "The Screen Report/1.0 (+https://thescreenreport.com)";
 
 // Broad in-niche queries (Google News `when:Nd` recency operator) — wide enough to surface trending Hollywood
 // film/TV, celebrity, and Western/English-music news from across the open web; the categorize LLM filters relevance.
+// (owner 2026-07-06) Broadened for full cross-category coverage so a tick ALWAYS has fresh trending content — the
+// niche always has SOMETHING trending across movies / TV / music / musicians / celebrity. Kept in-niche; the
+// categorize LLM + scope/editorial gate filter relevance downstream.
 const QUERIES = [
   "Hollywood movie when:2d",
+  "movie casting OR sequel OR reboot OR director when:2d",
   "TV series renewed OR canceled OR casting when:2d",
+  "TV show premiere OR finale OR trailer when:2d",
   "celebrity when:1d",
+  "celebrity dating OR wedding OR split OR feud when:2d",
   "weekend box office when:3d",
   "new trailer OR teaser when:2d",
-  "Netflix OR HBO OR Marvel OR DC OR A24 when:2d",
-  "new album OR world tour OR single when:2d",
+  "Netflix OR HBO OR Marvel OR DC OR A24 OR Disney when:2d",
+  "new album OR world tour OR single OR music video when:2d",
+  "pop star OR rapper OR singer OR band OR musician when:2d",
+  "streaming series OR limited series OR docuseries when:3d",
+  "Star Wars OR Marvel OR DC OR franchise when:3d",
   "Grammys OR Oscars OR Emmys OR award winners when:5d",
 ];
 
@@ -31,7 +40,7 @@ async function searchOne(q) {
     const r = await fetch(url, { headers: { "User-Agent": UA } });
     if (!r.ok) return [];
     const xml = await r.text();
-    return [...xml.matchAll(/<item>([\s\S]*?)<\/item>/g)].slice(0, 18).map((m) => {
+    return [...xml.matchAll(/<item>([\s\S]*?)<\/item>/g)].slice(0, 24).map((m) => {
       const b = m[1];
       const rawLink = strip((b.match(/<link>([\s\S]*?)<\/link>/) || [])[1]);
       return {
