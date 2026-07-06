@@ -58,12 +58,20 @@ const JUNK_OUTLETS = new Set(["crunchyroll", "pinkvilla", "bollywood hungama", "
 // (owner 2026-07-06) EXTENDED with festival-HONORS/TRIBUTE patterns: a "Receives Top Honors at Karlovy Vary" /
 // President's-Award / honorary-globe ceremony piece is festival color, not hard movie news — it slipped this guard
 // twice (KVIFF). Kept narrow so a real festival AWARD-WIN or PREMIERE headline still passes.
-const DULL_INDUSTRY = /\bfilm commission(er)?\b|\bsound\s?stage\b|\bstudio (space|lot|complex|infrastructure)\b|\btax (incentive|rebate|credit)s?\b|\bfilming incentive|\bco-?production (treaty|fund)\b|\bfestival (lineup|line-up|jury|panel|slate|market|dates)\b|\bindustry (days|panel|conference|summit)\b|\bfilm fund\b|\brebate program|\bcrystal globe\b|\bguest of honou?r\b|\blifetime achievement\b|\bcareer achievement\b|honou?red at (the )?[^.]{0,25}festival|\bkarlovy vary\b|\btop honou?rs?\b|\bpresident'?s award\b|\bhonorary (award|globe|prize|palme|golden lion|golden bear)\b/i;
+// NOTE (audit 2026-07-06): festival-honor patterns are ANCHORED to a festival/ceremony context so they drop only
+// tribute/honorary color — NOT a festival COMPETITION WIN or a genuine news hook that merely mentions an honor
+// ("Denzel Receives Lifetime Achievement Award, Announces Retirement" must still pass; "Karlovy Vary Competition
+// Winner" must still pass). "top honou?rs?" only fires when a festival name is nearby; "honorary" only for
+// festival-specific prizes (an honorary Oscar/Governors Award is on-brand Hollywood and is NOT dropped).
+const DULL_INDUSTRY = /\bfilm commission(er)?\b|\bsound\s?stage\b|\bstudio (space|lot|complex|infrastructure)\b|\btax (incentive|rebate|credit)s?\b|\bfilming incentive|\bco-?production (treaty|fund)\b|\bfestival (lineup|line-up|jury|panel|slate|market|dates)\b|\bindustry (days|panel|conference|summit)\b|\bfilm fund\b|\brebate program|\bcrystal globe\b|\bguest of honou?r\b|honou?red at (the )?[^.]{0,25}festival|\btop honou?rs?\b[^.]{0,30}\b(festival|karlovy|cannes|venice|berlinale|sundance|tiff|locarno|san sebasti)\b|\bpresident'?s award\b|\bhonorary (palme|golden lion|golden bear|c[eé]sar|goya|leopard)\b/i;
 // LIVE-EVENT / non-title where-to-watch (owner 2026-07-06): a "where to watch [fireworks/parade/telecast]" item is
 // not a film/TV story — it's off the movies-first mandate AND high-error (the Macy's July-4 fireworks item inherited
 // a WRONG network from its single source, TheWrap, and went live saying ABC when it was NBC). Drop live civic-event
 // viewing guides; a real film/show where-to-watch still passes.
-const LIVE_EVENT = /\bfireworks (spectacular|show|display|celebration)\b|\b(where|how) to (watch|stream)\b[^.]{0,45}\b(fireworks|parade|marathon|telethon|red carpet|pre-?show|telecast|ceremony|game|match)\b|\b(macy'?s|nathan'?s|thanksgiving|new year'?s eve)\b[^.]{0,30}\b(fireworks|parade|telecast|ball drop|day special)\b/i;
+// NOTE (audit 2026-07-06): the where-to-watch branch is CIVIC-EVENTS-ONLY (fireworks/parade/marathon/telethon/ball
+// drop). It deliberately does NOT include ceremony/telecast/red-carpet/pre-show — those match on-brand Hollywood
+// AWARDS viewing guides ("How to Watch the Oscars", "Golden Globes Red Carpet Pre-Show"), which we WANT to keep.
+const LIVE_EVENT = /\bfireworks (spectacular|show|display|celebration)\b|\b(where|how) to (watch|stream)\b[^.]{0,45}\b(fireworks|parade|marathon|telethon|ball drop)\b|\b(macy'?s|nathan'?s|thanksgiving|new year'?s eve)\b[^.]{0,30}\b(fireworks|parade|ball drop|day special)\b/i;
 const freshCandidates = candidates.filter((c) =>
   !published.titles.has(slugKey(c.title)) &&
   !ROUNDUP_REVIEW.test(c.title || "") &&

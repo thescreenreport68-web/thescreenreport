@@ -142,7 +142,7 @@ export function deterministic(article, topic) {
     : base;
 
   const hardBlocks = [];
-  if (!article.title) hardBlocks.push("no title");
+  if (!article.title || !String(article.title).trim()) hardBlocks.push("no title"); // trim: a whitespace-only title slugifies to "" (audit 2026-07-06) — hold it as broken so it never reaches assemble
   if (faqCount < p.faq) hardBlocks.push(`FAQ ${faqCount} < ${p.faq}`);
   if (externalLinks < p.ext) hardBlocks.push(`external links ${externalLinks} < ${p.ext}`);
   if (h2s.length < p.h2) hardBlocks.push(`H2s ${h2s.length} < ${p.h2}`);
