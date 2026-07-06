@@ -24,7 +24,11 @@ const TYPE_WEIGHT = {
 // REALITY / COMPETITION-TV demotion (owner 2026-07-06): a reality-show casting/announcement is NOT marquee scripted
 // film/TV news — but it lands category=tv, so isFilmTV() wrongly gave it the big-Hollywood bonus (Love Island tied a
 // $400M box-office story at the top). Demote these out of the big tier so real movie/TV news leads.
-const SOFT_TV = /\b(love island|summer house|the bachelor(ette)?|big brother|the kardashians|keeping up|real housewives|below deck|vanderpump|survivor|the voice|american idol|dancing with the stars|90 day fianc|teen mom|jersey shore|selling sunset|the traitors|rupaul|drag race|love is blind|the ultimatum|married at first sight)\b/i;
+// (audit 2026-07-06) Tested against primaryEntity ONLY (not the title) so a SCRIPTED/movie story that merely NAMES a
+// reality show ("Big Brother Alum Joins A24 Drama") is NOT demoted — only stories whose SUBJECT is the reality show
+// are. Collision-prone names that are also real film/scripted titles (survivor, big brother, the traitors, the voice)
+// are excluded to avoid demoting a legit movie that shares the name.
+const SOFT_TV = /\b(love island|summer house|the bachelor(ette)?|the kardashians|keeping up with|real housewives|below deck|vanderpump|american idol|dancing with the stars|90 day fianc|teen mom|jersey shore|selling sunset|rupaul|love is blind|married at first sight)\b/i;
 const STATUS_WEIGHT = { CONFIRMED: 25, DEVELOPING: 18, EVERGREEN: 14, RUMOR: 8, QUEUE: 4, CONFIRMING: 3, "EDITORIAL-HOLD": 1 };
 
 function recencyPts(ageMin) {
@@ -67,7 +71,7 @@ export function scoreTopics(topics, monitor) {
     // tied a $400M box-office story). Treat it as NOT big (FORFEIT the film/TV bonus) AND apply a small penalty so
     // routine reality casting/announcements fall below the newsworthiness floor; a genuinely huge reality story still
     // clears on its own recency + a scandal/death eventType.
-    const isSoftTv = SOFT_TV.test(`${t.title || ""} ${t.primaryEntity || ""}`);
+    const isSoftTv = SOFT_TV.test(t.primaryEntity || ""); // primaryEntity only (audit 2026-07-06) — don't demote a scripted story that merely names a reality show
     const bigBonus = isSoftTv ? 0 : (
       (isFilmTV(t) ? 6 : 0)
       + (isFilmTV(t) && BIG_FILMTV_FORM.has(t.eventType) ? 12 : 0)

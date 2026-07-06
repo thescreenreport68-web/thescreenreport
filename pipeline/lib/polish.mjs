@@ -91,8 +91,11 @@ export function dropOrphanHeadings(body) {
       let j = i + 1, txt = "";
       while (j < lines.length && !/^#{2,3}\s/.test(lines[j])) { txt += " " + lines[j]; j++; }
       const words = txt.trim().split(/\s+/).filter(Boolean).length;
+      // (audit 2026-07-06) Only strip a TRULY-EMPTY question-H2 (heading directly followed by another heading/end) or a
+      // numeric/date question the section never answers. A valid SHORT answer ("It hits theaters July 18.", "Yes, on
+      // Netflix now.") is KEPT — the old `words < 8` wrongly stripped those.
       const unanswered =
-        words < 8 ||
+        words === 0 ||
         (NUMERIC_Q.test(lines[i]) && !HAS_NUM.test(txt)) ||
         (DATE_Q.test(lines[i]) && !HAS_DATE.test(txt));
       if (unanswered) continue; // drop the heading line only; the paragraph below stays (flows into the prior section)

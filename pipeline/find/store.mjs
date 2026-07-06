@@ -37,9 +37,12 @@ export const entityKey = (primaryEntity, eventType) => (primaryEntity && eventTy
 // Returns { events:Set, titles:Set, entities:Set, recentEntities:Set } of everything published in the last
 // `windowDays` (default 45). recentEntities holds ONLY the primaryEntity slug (the eventType-agnostic prefix of the
 // entityKey) for stories published within `recentHours` (default 20) — a short-window ENTITY-ONLY dedup so the same
-// person is not written twice in one posting-day even when the two stories carry different eventTypes (the Vin Diesel
-// 'Fast Forever' ×2 case, 2h apart, that the eventType-folded entityKey missed).
-export function loadPublished(windowDays = 45, recentHours = 20) {
+// person is not written twice in the SAME NEWS CYCLE even when the two stories carry different eventTypes (the Vin
+// Diesel 'Fast Forever' ×2 case, 2h apart, that the eventType-folded entityKey missed). (audit 2026-07-06) Window
+// narrowed 20h→6h: a 20h window collapsed genuine same-day FOLLOW-UP beats on a hot story (a death post then a
+// tribute; a trailer then a box-office result) — losing real trending coverage. 6h catches near-simultaneous
+// re-frames while letting a genuinely-new later beat through. Tunable if needed.
+export function loadPublished(windowDays = 45, recentHours = 6) {
   const list = readJSON(PUBLISHED_FILE, []);
   const cutoff = Date.now() - windowDays * 24 * 3600 * 1000;
   const recentCut = Date.now() - recentHours * 3600 * 1000;
