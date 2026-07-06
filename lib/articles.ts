@@ -335,9 +335,20 @@ export function getAllArticles(): Article[] {
     };
   });
 
-  articles.sort((a, b) => (a.date < b.date ? 1 : -1));
-  cache = articles;
-  return articles;
+  // DRIP-HOLD (owner 2026-07-06): slugs listed in data/drip-hold.json are committed to the repo but HELD BACK from the
+  // live build, so a backlog of already-written articles is revealed gradually (one every ~30 min via the backlog-drip
+  // workflow, which pops a slug then triggers a rebuild) instead of flooding the site at once. Fail-safe: a missing or
+  // malformed file holds nothing, so every article shows.
+  let held: Set<string> = new Set();
+  try {
+    const parsed = JSON.parse(fs.readFileSync(path.join(process.cwd(), "data", "drip-hold.json"), "utf8"));
+    if (Array.isArray(parsed)) held = new Set(parsed as string[]);
+  } catch {}
+  const visible = held.size ? articles.filter((a) => !held.has(a.slug)) : articles;
+
+  visible.sort((a, b) => (a.date < b.date ? 1 : -1));
+  cache = visible;
+  return visible;
 }
 
 export function getArticle(category: string, slug: string): Article | undefined {

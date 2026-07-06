@@ -1,0 +1,50 @@
+name: deploy-live
+
+# THE authoritative deploy (owner 2026-07-06). Every push to `main` (from ANY lane — news, gossip, or a human commit)
+# rebuilds the WHOLE site from the very latest main and deploys it to Cloudflare Pages production. This fixes the
+# two-lane clobbering bug where a lane building from a STALE checkout overwrote live articles with an incomplete site:
+# this workflow always builds COMPLETE latest main, and `cancel-in-progress` means the newest push wins the race.
+# Publishing is decoupled from deploying — the news/gossip lanes just commit+push; THIS puts every article live.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Only one live deploy at a time; a newer push cancels an in-flight build so the freshest complete main always wins.
+concurrency:
+  group: deploy-live
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+
+      # Belt-and-suspenders: hard-sync to the very latest origin/main so we can NEVER build a stale tree.
+      - name: Sync to latest main
+        run: git fetch origin main && git reset --hard origin/main
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+          cache-dependency-path: package-lock.json
+
+      - name: Install deps
+        run: npm ci --prefer-offline --no-audit --no-fund
+
+      - name: Build the complete site
+        run: npm run build
+
+      - name: Deploy to Cloudflare Pages (production)
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: npx -y wrangler@3 pages deploy out --project-name=thescreenreport --branch=main --commit-dirty=true

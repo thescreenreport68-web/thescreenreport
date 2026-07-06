@@ -1,0 +1,53 @@
+name: backlog-drip
+
+# ONE-TIME backlog catch-up (owner 2026-07-06). 15 already-written articles were committed to the repo but held OUT of
+# the live build (data/drip-hold.json) so revealing them doesn't flood the site all at once. This reveals ONE every
+# 30 minutes by popping it off the hold list and pushing — which triggers deploy-live to put that article online.
+# It self-terminates when the hold list is empty. DEPLOY-ONLY: it never writes/publishes an article, so GitHub-cron
+# drift carries no double-post risk. Runs at :15 and :45 to sit between the news lane's on-the-hour ticks.
+on:
+  schedule:
+    - cron: "15,45 * * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: backlog-drip
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  reveal:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+
+      - name: Pop one held article off the hold list
+        run: |
+          node -e '
+            const fs = require("fs");
+            const p = "data/drip-hold.json";
+            let held = [];
+            try { held = JSON.parse(fs.readFileSync(p, "utf8")); } catch {}
+            if (!Array.isArray(held) || held.length === 0) { console.log("drip-hold empty — backlog fully revealed, nothing to do"); process.exit(0); }
+            const revealed = held.shift();
+            fs.writeFileSync(p, JSON.stringify(held, null, 2) + "\n");
+            console.log("revealing " + revealed + " (" + held.length + " still held)");
+          '
+
+      - name: Commit + push (triggers deploy-live to put it online)
+        run: |
+          if git diff --quiet data/drip-hold.json; then echo "no change — hold list already empty"; exit 0; fi
+          git config user.name  "screenreport-bot"
+          git config user.email "bot@thescreenreport.com"
+          git add data/drip-hold.json
+          git commit -m "drip: reveal one backlog article onto the live site"
+          for i in 1 2 3 4 5; do
+            git fetch origin main -q && git rebase origin/main && git push origin HEAD:main && { echo "pushed on attempt $i"; exit 0; }
+            echo "attempt $i lost the race; retrying…"; git rebase --abort 2>/dev/null; sleep 5
+          done
+          echo "::error::could not push the drip reveal after 5 attempts"; exit 1
