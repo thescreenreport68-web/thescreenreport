@@ -7,8 +7,10 @@ name: backlog-drip
 # It self-terminates when the hold list is empty. DEPLOY-ONLY: it never writes/publishes an article, so GitHub-cron
 # drift carries no double-post risk. Runs at :15 and :45 to sit between the news lane's on-the-hour ticks.
 on:
-  schedule:
-    - cron: "15,45 * * * *"
+  # SCHEDULE DISABLED (owner 2026-07-06): hold the 14 remaining backlog articles until the owner says "push".
+  # Reveal them one at a time only on demand (workflow_dispatch, or by popping data/drip-hold.json + pushing).
+  # schedule:
+  #   - cron: "15,45 * * * *"
   workflow_dispatch:
 
 concurrency:
