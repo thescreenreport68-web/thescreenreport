@@ -14,7 +14,7 @@ export default function LatestNews({ items }: { items: Article[] }) {
   return (
     <div className="border-t-2 border-ink">
       <div className="border-b border-hair pb-2 pt-2.5">
-        <h2 className="sect-head text-2xl lg:text-2xl">Latest News</h2>
+        <h2 className="sect-head text-2xl lg:text-2xl">Latest</h2>
       </div>
       <ol>
         {items.map((a, i) => {
