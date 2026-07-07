@@ -25,6 +25,7 @@ import { boardFor } from "./accounts.mjs";
 const ROOT = process.env.TSR_SITE || "/Users/sivajithcu/Movie News site/site";
 const OUT = VIDEO.outDir;
 const LOG = path.join(ROOT, "data/video/posted.json");
+const STATEF = path.join(ROOT, "data/video/daily-state.json"); // idempotency: which slot-date we already scheduled a set for
 const STOP = path.join(ROOT, "data/video/POSTING_OFF"); // touch this file to pause all posting
 
 // ── categories → daily slot (PT wall-clock hour) + per-platform forward stagger (minutes)
@@ -57,6 +58,12 @@ function slotBase(category) {
   let base = laWallToUTC(y, m, d, SLOTS[category], 0);
   if (base.getTime() < Date.now() + 120000) base = new Date(base.getTime() + 864e5);
   return base;
+}
+
+// the LA date (YYYY-MM-DD) whose slots this run would fill — used as the idempotency key so we schedule
+// exactly ONE set per day even if the run fires twice (cron drift double-fire, or manual + cron same day)
+function targetSlotDate() {
+  return new Intl.DateTimeFormat("en-CA", { timeZone: "America/Los_Angeles", year: "numeric", month: "2-digit", day: "2-digit" }).format(slotBase("movies"));
 }
 
 const catOf = (slug) => { try { return matter(fs.readFileSync(path.join(ROOT, "content/articles", slug + ".md"), "utf8")).data.category; } catch { return null; } };
@@ -181,9 +188,19 @@ async function main() {
   const draft = !args.includes("--live"); // DRAFT-SAFE by default; real posts require explicit --live
   const dry = args.includes("--dry");
   const immediate = args.includes("--now");
+  const onceDaily = args.includes("--once-daily"); // idempotent daily set: skip if this slot-date is already scheduled
   const forceSlug = (args.find((a) => a.startsWith("--slug=")) || "").split("=")[1];
   const only = (args.find((a) => a.startsWith("--category=")) || "").split("=")[1];
   if (fs.existsSync(STOP)) { console.log("POSTING_OFF present — paused. Remove", STOP, "to resume."); return; }
+
+  // guard: one daily set per slot-date. Blocks a double-post when a run fires twice for the same day.
+  const guarded = onceDaily && !draft && !dry && !immediate && !forceSlug;
+  if (guarded) {
+    const target = targetSlotDate();
+    let state = {};
+    try { state = JSON.parse(fs.readFileSync(STATEF, "utf8")); } catch {}
+    if (state.date === target) { console.log(`daily set for ${target} already scheduled (${state.count || "?"} videos) — skipping to avoid a double-post.`); return; }
+  }
 
   const cats = only ? [only] : ["movies", "tv", "celebrity"];
   // seed with already-live-posted slugs (cross-run dedup) so daily runs pick fresh stories; forced --slug bypasses this
@@ -219,6 +236,10 @@ async function main() {
       }
     }
     if (!posted_ok) console.log(`[${category}] ⚠ no postable story after trying ${cands.length} candidate(s)`);
+  }
+  // record the daily set so a second same-day run (cron double-fire / manual + cron) won't double-post
+  if (guarded && summary.length) {
+    try { fs.writeFileSync(STATEF, JSON.stringify({ date: targetSlotDate(), count: summary.length, at: new Date().toISOString() }, null, 2)); } catch {}
   }
   if (!draft && !dry) { try { const n = await pruneHost(14); if (n) console.log(`pruned ${n} old hosted videos`); } catch {} }
   console.log(`\nDone. ${summary.length} video(s) processed.`);
