@@ -7,19 +7,18 @@
       "score": null,
       "cat": "movies/reactions",
       "format": [
-        "primary keyword not in title"
+        "body 186w < 220"
       ],
-      "cuts": 2,
+      "cuts": 1,
       "broken": []
     },
     "attempt2": {
       "score": null,
       "cat": "movies/reactions",
       "format": [
-        "primary keyword not in title",
-        "body 202w < 220"
+        "body 186w < 220"
       ],
-      "cuts": 1,
+      "cuts": 2,
       "broken": []
     }
   },
@@ -40,26 +39,25 @@
     "strengths": [],
     "weaknesses": [],
     "deterministic": {
-      "words": 202,
+      "words": 186,
       "h2s": 3,
-      "h2Questions": 3,
+      "h2Questions": 2,
       "internalLinks": 0,
       "externalLinks": 0,
-      "hasSources": false,
-      "faqCount": 4,
+      "hasSources": true,
+      "faqCount": 3,
       "ktCount": 4,
-      "kwInTitle": false,
+      "kwInTitle": true,
       "kwInFirst100": false,
       "kwInH2": false,
-      "maxSentence": 40,
-      "avgSentence": 18,
-      "flesch": 44,
+      "maxSentence": 34,
+      "avgSentence": 20,
+      "flesch": 48,
       "bannedTells": 0,
       "fillerPraise": 0,
       "kwExact": 0,
       "hardBlocks": [
-        "primary keyword not in title",
-        "body 202w < 220"
+        "body 186w < 220"
       ]
     },
     "hardBlocks": []
@@ -74,7 +72,7 @@
       "credit"
     ]
   },
-  "ms": 116988,
+  "ms": 100328,
   "previousRuns": [
     {
       "id": "reaction-the-odyssey-world-premiere-london",
@@ -306,6 +304,84 @@
         ]
       },
       "ms": 157875
+    },
+    {
+      "id": "reaction-the-odyssey-world-premiere-london",
+      "slug": "christopher-nolan-s-the-odyssey-world-premiere-london-goes-wild-for-ep",
+      "status": "needs_review",
+      "stages": {
+        "attempt1": {
+          "score": null,
+          "cat": "movies/reactions",
+          "format": [
+            "primary keyword not in title"
+          ],
+          "cuts": 2,
+          "broken": []
+        },
+        "attempt2": {
+          "score": null,
+          "cat": "movies/reactions",
+          "format": [
+            "primary keyword not in title",
+            "body 202w < 220"
+          ],
+          "cuts": 1,
+          "broken": []
+        }
+      },
+      "editorial": {
+        "status": "unconfirmed",
+        "entity": "The Odyssey",
+        "work": {
+          "title": "The Odyssey",
+          "year": null,
+          "medium": "movie"
+        },
+        "outlet": "deadline.com"
+      },
+      "holdReason": "reaction: required embed missing",
+      "scorecard": {
+        "score": null,
+        "subscores": {},
+        "strengths": [],
+        "weaknesses": [],
+        "deterministic": {
+          "words": 202,
+          "h2s": 3,
+          "h2Questions": 3,
+          "internalLinks": 0,
+          "externalLinks": 0,
+          "hasSources": false,
+          "faqCount": 4,
+          "ktCount": 4,
+          "kwInTitle": false,
+          "kwInFirst100": false,
+          "kwInH2": false,
+          "maxSentence": 40,
+          "avgSentence": 18,
+          "flesch": 44,
+          "bannedTells": 0,
+          "fillerPraise": 0,
+          "kwExact": 0,
+          "hardBlocks": [
+            "primary keyword not in title",
+            "body 202w < 220"
+          ]
+        },
+        "hardBlocks": []
+      },
+      "audit": {
+        "ok": false,
+        "internalLinks": 0,
+        "failed": [
+          "tweet grounding",
+          "body ≥ 220w",
+          "≥1200px legal image",
+          "credit"
+        ]
+      },
+      "ms": 116988
     }
   ]
 }

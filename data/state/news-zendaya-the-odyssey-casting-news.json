@@ -1,0 +1,75 @@
+{
+  "id": "news-zendaya-the-odyssey-casting-news",
+  "slug": "the-unusual-way-zendaya-found-out-she-was-up-for-a-prime-role-in-the-o",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": null,
+      "cat": "movies/news",
+      "format": [
+        "primary keyword not in title"
+      ],
+      "cuts": 0,
+      "broken": []
+    },
+    "attempt2": {
+      "score": null,
+      "cat": "movies/news",
+      "format": [
+        "primary keyword not in title"
+      ],
+      "cuts": 0,
+      "broken": []
+    }
+  },
+  "editorial": {
+    "status": "confirmed",
+    "entity": "Zendaya",
+    "work": {
+      "title": "The Odyssey",
+      "year": null,
+      "medium": "movie"
+    },
+    "outlet": "deadline.com"
+  },
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
+    "deterministic": {
+      "words": 301,
+      "h2s": 2,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 3,
+      "ktCount": 3,
+      "kwInTitle": false,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 34,
+      "avgSentence": 18,
+      "flesch": 55,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": [
+        "primary keyword not in title"
+      ]
+    },
+    "hardBlocks": []
+  },
+  "score": null,
+  "category": "movies",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "keyword in title"
+    ]
+  },
+  "ms": 98133
+}
