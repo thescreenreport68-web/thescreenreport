@@ -7,8 +7,7 @@
       "score": null,
       "cat": "movies/reactions",
       "format": [
-        "a 56-word run-on sentence (>55 — split it)",
-        "Flesch 37 < 40 (too dense to read comfortably)"
+        "a 78-word run-on sentence (>55 — split it)"
       ],
       "cuts": 0,
       "broken": []
@@ -17,7 +16,7 @@
       "score": null,
       "cat": "movies/reactions",
       "format": [
-        "a 56-word run-on sentence (>55 — split it)"
+        "a 78-word run-on sentence (>55 — split it)"
       ],
       "cuts": 0,
       "broken": []
@@ -40,25 +39,25 @@
     "strengths": [],
     "weaknesses": [],
     "deterministic": {
-      "words": 308,
+      "words": 279,
       "h2s": 2,
       "h2Questions": 2,
       "internalLinks": 0,
       "externalLinks": 0,
       "hasSources": false,
       "faqCount": 4,
-      "ktCount": 5,
+      "ktCount": 4,
       "kwInTitle": true,
       "kwInFirst100": false,
       "kwInH2": false,
-      "maxSentence": 56,
-      "avgSentence": 20,
-      "flesch": 42,
+      "maxSentence": 78,
+      "avgSentence": 19,
+      "flesch": 47,
       "bannedTells": 0,
-      "fillerPraise": 1,
+      "fillerPraise": 0,
       "kwExact": 0,
       "hardBlocks": [
-        "a 56-word run-on sentence (>55 — split it)"
+        "a 78-word run-on sentence (>55 — split it)"
       ]
     },
     "hardBlocks": []
@@ -72,7 +71,7 @@
       "credit"
     ]
   },
-  "ms": 97313,
+  "ms": 95308,
   "previousRuns": [
     {
       "id": "reaction-the-odyssey-first-reactions",
@@ -374,6 +373,82 @@
         ]
       },
       "ms": 90134
+    },
+    {
+      "id": "reaction-the-odyssey-first-reactions",
+      "slug": "the-odyssey-first-reactions-critics-rave-about-christopher-nolan-s-ast",
+      "status": "needs_review",
+      "stages": {
+        "attempt1": {
+          "score": null,
+          "cat": "movies/reactions",
+          "format": [
+            "a 56-word run-on sentence (>55 — split it)",
+            "Flesch 37 < 40 (too dense to read comfortably)"
+          ],
+          "cuts": 0,
+          "broken": []
+        },
+        "attempt2": {
+          "score": null,
+          "cat": "movies/reactions",
+          "format": [
+            "a 56-word run-on sentence (>55 — split it)"
+          ],
+          "cuts": 0,
+          "broken": []
+        }
+      },
+      "editorial": {
+        "status": "official",
+        "entity": "The Odyssey",
+        "work": {
+          "title": "The Odyssey",
+          "year": null,
+          "medium": "movie"
+        },
+        "outlet": "hollywoodreporter.com"
+      },
+      "holdReason": "reaction: required embed missing",
+      "scorecard": {
+        "score": null,
+        "subscores": {},
+        "strengths": [],
+        "weaknesses": [],
+        "deterministic": {
+          "words": 308,
+          "h2s": 2,
+          "h2Questions": 2,
+          "internalLinks": 0,
+          "externalLinks": 0,
+          "hasSources": false,
+          "faqCount": 4,
+          "ktCount": 5,
+          "kwInTitle": true,
+          "kwInFirst100": false,
+          "kwInH2": false,
+          "maxSentence": 56,
+          "avgSentence": 20,
+          "flesch": 42,
+          "bannedTells": 0,
+          "fillerPraise": 1,
+          "kwExact": 0,
+          "hardBlocks": [
+            "a 56-word run-on sentence (>55 — split it)"
+          ]
+        },
+        "hardBlocks": []
+      },
+      "audit": {
+        "ok": false,
+        "internalLinks": 0,
+        "failed": [
+          "tweet grounding",
+          "≥1200px legal image",
+          "credit"
+        ]
+      },
+      "ms": 97313
     }
   ]
 }

@@ -6,20 +6,15 @@
     "attempt1": {
       "score": null,
       "cat": "movies/reactions",
-      "format": [
-        "a 73-word run-on sentence (>55 — split it)",
-        "Flesch 38 < 40 (too dense to read comfortably)"
-      ],
-      "cuts": 2,
+      "format": [],
+      "cuts": 0,
       "broken": []
     },
     "attempt2": {
       "score": null,
       "cat": "movies/reactions",
-      "format": [
-        "a 73-word run-on sentence (>55 — split it)"
-      ],
-      "cuts": 0,
+      "format": [],
+      "cuts": 3,
       "broken": []
     }
   },
@@ -40,26 +35,24 @@
     "strengths": [],
     "weaknesses": [],
     "deterministic": {
-      "words": 291,
+      "words": 309,
       "h2s": 2,
       "h2Questions": 2,
       "internalLinks": 0,
       "externalLinks": 0,
       "hasSources": false,
-      "faqCount": 4,
-      "ktCount": 3,
+      "faqCount": 3,
+      "ktCount": 4,
       "kwInTitle": true,
       "kwInFirst100": true,
       "kwInH2": false,
-      "maxSentence": 73,
+      "maxSentence": 50,
       "avgSentence": 24,
-      "flesch": 40,
+      "flesch": 41,
       "bannedTells": 0,
       "fillerPraise": 0,
       "kwExact": 0,
-      "hardBlocks": [
-        "a 73-word run-on sentence (>55 — split it)"
-      ]
+      "hardBlocks": []
     },
     "hardBlocks": []
   },
@@ -72,7 +65,7 @@
       "credit"
     ]
   },
-  "ms": 68173,
+  "ms": 54314,
   "previousRuns": [
     {
       "id": "news-the-odyssey-world-premiere",
@@ -149,6 +142,82 @@
         ]
       },
       "ms": 76459
+    },
+    {
+      "id": "news-the-odyssey-world-premiere",
+      "slug": "stars-praise-christopher-nolan-s-the-odyssey-at-world-premiere-this-wa",
+      "status": "needs_review",
+      "stages": {
+        "attempt1": {
+          "score": null,
+          "cat": "movies/reactions",
+          "format": [
+            "a 73-word run-on sentence (>55 — split it)",
+            "Flesch 38 < 40 (too dense to read comfortably)"
+          ],
+          "cuts": 2,
+          "broken": []
+        },
+        "attempt2": {
+          "score": null,
+          "cat": "movies/reactions",
+          "format": [
+            "a 73-word run-on sentence (>55 — split it)"
+          ],
+          "cuts": 0,
+          "broken": []
+        }
+      },
+      "editorial": {
+        "status": "confirmed",
+        "entity": "The Odyssey",
+        "work": {
+          "title": "The Odyssey",
+          "year": null,
+          "medium": "movie"
+        },
+        "outlet": "variety.com"
+      },
+      "holdReason": "reaction: required embed missing",
+      "scorecard": {
+        "score": null,
+        "subscores": {},
+        "strengths": [],
+        "weaknesses": [],
+        "deterministic": {
+          "words": 291,
+          "h2s": 2,
+          "h2Questions": 2,
+          "internalLinks": 0,
+          "externalLinks": 0,
+          "hasSources": false,
+          "faqCount": 4,
+          "ktCount": 3,
+          "kwInTitle": true,
+          "kwInFirst100": true,
+          "kwInH2": false,
+          "maxSentence": 73,
+          "avgSentence": 24,
+          "flesch": 40,
+          "bannedTells": 0,
+          "fillerPraise": 0,
+          "kwExact": 0,
+          "hardBlocks": [
+            "a 73-word run-on sentence (>55 — split it)"
+          ]
+        },
+        "hardBlocks": []
+      },
+      "audit": {
+        "ok": false,
+        "internalLinks": 0,
+        "failed": [
+          "tweet grounding",
+          "≥1200px legal image",
+          "credit"
+        ]
+      },
+      "ms": 68173
     }
   ]
 }
