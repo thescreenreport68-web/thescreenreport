@@ -1,0 +1,69 @@
+{
+  "id": "news-robert-pattinson-compares-odyssey-character-to-jacob-twilight",
+  "slug": "robert-pattinson-compares-the-odyssey-character-to-jacob-in-twilight",
+  "status": "needs_review",
+  "stages": {
+    "attempt1": {
+      "score": null,
+      "cat": "movies/reactions",
+      "format": [],
+      "cuts": 0,
+      "broken": []
+    },
+    "attempt2": {
+      "score": null,
+      "cat": "movies/reactions",
+      "format": [],
+      "cuts": 1,
+      "broken": []
+    }
+  },
+  "editorial": {
+    "status": "unconfirmed",
+    "entity": "Robert Pattinson",
+    "work": {
+      "title": "The Odyssey",
+      "year": null,
+      "medium": "movie"
+    },
+    "outlet": "hollywoodreporter.com"
+  },
+  "holdReason": "reaction: required embed missing",
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
+    "deterministic": {
+      "words": 256,
+      "h2s": 2,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 4,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 36,
+      "avgSentence": 21,
+      "flesch": 50,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 1,
+      "hardBlocks": []
+    },
+    "hardBlocks": []
+  },
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "tweet grounding",
+      "≥1200px legal image",
+      "credit"
+    ]
+  },
+  "ms": 91670
+}
