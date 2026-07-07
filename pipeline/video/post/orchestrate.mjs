@@ -69,15 +69,17 @@ function livePostedSlugs() {
   } catch { return new Set(); }
 }
 
-// pick the best recent published article for a category (highest priority, within the window, not already posted)
-function pickForCategory(category, postedSlugs) {
+// ranked candidates for a category (highest priority first, within the window, not already posted).
+// Returns a LIST so the caller can fall back to the next story if the top one is blocked or fails to render.
+function pickCandidates(category, postedSlugs, limit = 8) {
   const pub = JSON.parse(fs.readFileSync(path.join(ROOT, "data/find/published.json"), "utf8"));
   const now = Date.now();
   return pub
     .filter((r) => r.slug && r.at && now - Date.parse(r.at) < 14 * 864e5)
     .filter((r) => (r.category || catOf(r.slug)) === category)
     .filter((r) => !postedSlugs.has(r.slug))
-    .sort((a, b) => (b.priority || 0) - (a.priority || 0))[0] || null;
+    .sort((a, b) => (b.priority || 0) - (a.priority || 0))
+    .slice(0, limit);
 }
 
 // ensure a finished video + sidecar exist for a slug (generate if missing)
@@ -189,26 +191,34 @@ async function main() {
   const summary = [];
   for (const category of cats) {
     if (!(category in SLOTS)) { console.log(`skip unknown category ${category}`); continue; }
-    const pick = forceSlug ? { slug: forceSlug } : pickForCategory(category, posted);
-    if (!pick) { console.log(`[${category}] no candidate article`); continue; }
-    posted.add(pick.slug);
-    try {
-      if (!dry) await ensureVideo(pick.slug);
-      const base = immediate ? new Date(Date.now() + 120000) : slotBase(category); // --now = ~2 min out (Zernio scheduler lead)
-      const entry = await postOne({ category, slug: pick.slug, base, draft, dry, immediate });
-      summary.push(entry);
-      // for a live immediate post, poll until each platform actually publishes
-      if (immediate && !draft && !dry && entry.results) {
-        console.log("  polling publish status (up to ~3 min)…");
-        const status = await pollPublish(entry);
-        for (const plat of ["facebook", "instagram", "youtube", "pinterest"]) {
-          const s = status[plat];
-          console.log(`    ${plat.padEnd(10)} ${s ? (s.ok ? "✅ PUBLISHED" : "❌ FAILED: " + (s.error || s.status)) + (s.url ? " " + s.url : "") : "⏳ still queued (check dashboard)"}`);
+    // try candidates in priority order until ONE renders + posts — so a blocked/thin top story never drops the whole category
+    const cands = forceSlug ? [{ slug: forceSlug }] : pickCandidates(category, posted);
+    if (!cands.length) { console.log(`[${category}] no candidate article`); continue; }
+    let posted_ok = false;
+    for (const cand of cands) {
+      if (posted.has(cand.slug)) continue;
+      posted.add(cand.slug); // don't retry this slug in a later category
+      try {
+        if (!dry) await ensureVideo(cand.slug); // may throw: sensitive story, thin imagery, gen failure → fall back
+        const base = immediate ? new Date(Date.now() + 120000) : slotBase(category); // --now = ~2 min out (Zernio scheduler lead)
+        const entry = await postOne({ category, slug: cand.slug, base, draft, dry, immediate });
+        summary.push(entry);
+        // for a live immediate post, poll until each platform actually publishes
+        if (immediate && !draft && !dry && entry.results) {
+          console.log("  polling publish status (up to ~3 min)…");
+          const status = await pollPublish(entry);
+          for (const plat of ["facebook", "instagram", "youtube", "pinterest"]) {
+            const s = status[plat];
+            console.log(`    ${plat.padEnd(10)} ${s ? (s.ok ? "✅ PUBLISHED" : "❌ FAILED: " + (s.error || s.status)) + (s.url ? " " + s.url : "") : "⏳ still queued (check dashboard)"}`);
+          }
         }
+        posted_ok = true;
+        break; // category satisfied
+      } catch (e) {
+        console.log(`[${category}] skip ${cand.slug}: ${String(e.message).slice(0, 110)} — trying next candidate`);
       }
-    } catch (e) {
-      console.log(`[${category}] ERROR ${pick.slug}: ${String(e.message).slice(0, 160)}`);
     }
+    if (!posted_ok) console.log(`[${category}] ⚠ no postable story after trying ${cands.length} candidate(s)`);
   }
   if (!draft && !dry) { try { const n = await pruneHost(14); if (n) console.log(`pruned ${n} old hosted videos`); } catch {} }
   console.log(`\nDone. ${summary.length} video(s) processed.`);

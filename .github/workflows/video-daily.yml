@@ -32,8 +32,10 @@ on:
         required: false
         default: "false"
   schedule:
-    - cron: "0 13 * * *"   # 13:00 UTC ≈ 6am PT — generate + schedule the day's 3 posts before the 10am slot
-                            # (GitHub cron drifts a few min; harmless — posts fire server-side at exact PT slots)
+    # 08:00 UTC = ~1am PT. Deliberately EARLY: GitHub's scheduled runs can drift several hours under load
+    # (we saw +3.5h and +6.4h), so we generate well before the 10am slot — even a big drift still lands
+    # before it, so the movies post never bumps to the next day. Posts fire server-side at the exact PT slots.
+    - cron: "0 8 * * *"
 
 concurrency:
   group: video-daily
