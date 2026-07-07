@@ -1,38 +1,42 @@
 {
-  "runId": "run-2026-07-06T05-01-05",
-  "builtAt": "2026-07-06T05:01:24.997Z",
-  "count": 17,
+  "runId": "run-2026-07-07T07-01-06",
+  "builtAt": "2026-07-07T07:01:28.821Z",
+  "count": 16,
   "topics": [
     {
-      "id": "box-office-obsession-surpasses-400-million-globally",
-      "slug": "box-office-obsession-surpasses-400-million-globally",
-      "title": "Box Office: 'Obsession' Surpasses $400 Million Globally",
-      "contentType": "box-office",
-      "formatTag": "box-office",
-      "category": "movies",
-      "subcategory": "box-office",
-      "eventType": "boxoffice",
+      "id": "news-jilly-cooper-a-pressing-engagement-audible-adaptation",
+      "slug": "rhea-norwood-hannah-waddingham-richard-ayoade-set-for-jilly-cooper-aud",
+      "title": "Rhea Norwood, Hannah Waddingham, Richard Ayoade Set for Jilly Cooper Audible Original 'A Pressing Engagement'",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "obsession-surpasses-400-million-globally",
-      "primaryKeyword": "obsession box office",
-      "primaryEntity": "Obsession",
-      "entities": [],
-      "angle": "The indie horror film 'Obsession' has crossed the $400 million mark in global box office sales.",
+      "eventSlug": "jilly-cooper-a-pressing-engagement-audible-adaptation",
+      "primaryKeyword": "jilly cooper audible",
+      "primaryEntity": "A Pressing Engagement",
+      "entities": [
+        "Rhea Norwood",
+        "Corey Mylchreest",
+        "Hannah Waddingham"
+      ],
+      "angle": "Jilly Cooper's 'A Pressing Engagement' gets Audible adaptation with star-studded voice cast.",
       "tmdbType": "movie",
-      "source": "rss:Variety",
+      "source": "rss:Deadline",
       "sources": [
         {
-          "outlet": "Variety",
+          "outlet": "Deadline",
           "tier": 7,
-          "url": "https://variety.com/2026/film/box-office/obsession-box-office-milestone-400-million-globally-1236801943/",
-          "ageMin": 690,
-          "headline": "Box Office: Obsession Surpasses $400 Million Globally",
-          "summary": "Obsession has notched another major box office milestone, clearing $400 million in global ticket sales. After two months in theaters, the indie horror breakout has grossed a remarkable $403 million, including $245 million domestically and $157 million overseas. The twisted romantic fantasy, directed by YouTuber Curry Barker, was produced for a mere $750,000 and acquired [ ]"
+          "url": "https://deadline.com/2026/07/jilly-cooper-audible-rhea-norwood-corey-mylchreest-hannah-waddingham-1236975169/",
+          "ageMin": 31,
+          "headline": "Jilly Cooper Audible Original A Pressing Engagement To Star Rhea Norwood, Corey Mylchreest, Hannah Waddingham, Richard Ayoade, Vivian Oparah Bessie Carter",
+          "summary": "EXCLUSIVE: Jilly Cooper (Rivals) short story A Pressing Engagement is being adapted by Audible with a voice cast featuring Rhea Norwood (Heartstopper), Corey Mylchreest (Queen Charlotte: A Bridgerton Story), Hannah Waddingham (Ted Lasso), Richard Ayoade (The IT Crowd), Vivian Oparah (Rye Lane) and Bessie Carter (Bridgerton). Set in London in 1978, the show will chart the story of Hester – a secret"
         }
       ],
-      "ageMin": 690,
+      "ageMin": 31,
       "_cand": {
-        "key": "rss:box-office-obsession-surpasses-400-million-globally",
+        "key": "rss:jilly-cooper-audible-original-a-pressing-engagement-to-star-",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -42,16 +46,147 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Variety"
+          "Deadline"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Variety",
+        "attribution": "Deadline",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 63,
+      "priority": 81,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-the-gatekeeper-film-development",
+      "slug": "matthew-michael-carnahan-to-direct-the-gatekeeper-for-amazon-mgm-studi",
+      "title": "Matthew Michael Carnahan to Direct 'The Gatekeeper' for Amazon MGM Studios",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "high",
+      "eventSlug": "the-gatekeeper-film-development",
+      "primaryKeyword": "the gatekeeper film",
+      "primaryEntity": "The Gatekeeper (film)",
+      "entities": [
+        "Matthew Michael Carnahan",
+        "Brian Helgeland",
+        "Amazon MGM Studios"
+      ],
+      "angle": "Matthew Michael Carnahan to direct 'The Gatekeeper' for Amazon MGM Studios, with Brian Helgeland adapting.",
+      "tmdbType": "movie",
+      "source": "rss:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/james-byrne-the-gatekeeper-movie-matthew-michael-carnahan-1236974997/",
+          "ageMin": 549,
+          "headline": "Matthew Michael Carnahan To Direct The Gatekeeper For Amazon MGM Studios Di Bonaventura Pictures; Brian Helgeland Adapting",
+          "summary": "EXCLUSIVE: Mosul filmmaker Matthew Michael Carnahan is set to direct The Gatekeeper, which is in development for Amazon MGM Studios and Di Bonaventura Pictures. The pic is based on New York Times bestselling author James Byrne s novel Deadlock and follows Desmond “Dez” Aloysius Limerick, an unconventional multi-talented ex-operative. After a chance meeting saving the life of a [ ]"
+        }
+      ],
+      "ageMin": 549,
+      "_cand": {
+        "key": "rss:matthew-michael-carnahan-to-direct-the-gatekeeper-for-amazon",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 72,
+      "signals": {
+        "recency": 4,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "reaction-the-odyssey-world-premiere-london",
+      "slug": "christopher-nolan-s-the-odyssey-world-premiere-london-goes-wild-for-ep",
+      "title": "Christopher Nolan's 'The Odyssey' World Premiere: London Goes Wild for Epic at Star-Studded Event",
+      "contentType": "reaction",
+      "formatTag": "reaction",
+      "category": "movies",
+      "subcategory": "reactions",
+      "eventType": "reaction",
+      "sensitivity": "normal",
+      "eventSlug": "the-odyssey-world-premiere-london",
+      "primaryKeyword": "the odyssey premiere",
+      "primaryEntity": "The Odyssey",
+      "entities": [
+        "The Odyssey (2025 film)",
+        "Christopher Nolan",
+        "Tom Holland",
+        "Zendaya"
+      ],
+      "angle": "Critics and fans react to Christopher Nolan's 'The Odyssey' at its star-studded world premiere in London.",
+      "tmdbType": "movie",
+      "source": "rss:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/the-odyssey-movie-first-reactions-critics-fanboys-1236975274/",
+          "ageMin": 438,
+          "headline": "The Odyssey : First Reactions From Critics And Fanboys",
+          "summary": "While we knew when 70mm IMAX tickets were selling out a year ago that Christopher Nolan s The Odyssey would be a hit, we now have some confirmation that the film itself lives up to the standard we ve come to expect from the Oscar-winner director of Oppenheimer. Early reactions dropped Monday, and while these are always [ ]"
+        }
+      ],
+      "ageMin": 438,
+      "_cand": {
+        "key": "rss:the-odyssey-first-reactions-from-critics-and-fanboys",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 69,
       "signals": {
         "recency": 4,
         "corroboration": 12,
@@ -59,43 +194,44 @@
         "type": 11,
         "pop": 0,
         "breakout": 0,
-        "big": 18,
-        "trending": 0
+        "big": 24,
+        "trending": 0,
+        "softTv": 0
       }
     },
     {
-      "id": "news-love-island-usa-season-8-cast-revealed",
-      "slug": "love-island-usa-season-8-cast-revealed",
-      "title": "Love Island USA Season 8 Cast Revealed",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "casting",
+      "id": "reaction-the-odyssey-first-reactions",
+      "slug": "the-odyssey-first-reactions-critics-rave-about-christopher-nolan-s-ast",
+      "title": "'The Odyssey' First Reactions: Critics Rave About Christopher Nolan's Astonishing Epic",
+      "contentType": "reaction",
+      "formatTag": "reaction",
+      "category": "movies",
+      "subcategory": "reactions",
+      "eventType": "reaction",
       "sensitivity": "normal",
-      "eventSlug": "love-island-usa-season-8-cast-revealed",
-      "primaryKeyword": "love island usa season 8 cast",
-      "primaryEntity": "Love Island USA",
+      "eventSlug": "the-odyssey-first-reactions",
+      "primaryKeyword": "the odyssey reactions",
+      "primaryEntity": "The Odyssey",
       "entities": [
-        "Ariana Madix",
-        "Peacock"
+        "The Odyssey (2025 film)",
+        "Christopher Nolan"
       ],
-      "angle": "The cast for the upcoming season of Peacock's reality dating show 'Love Island USA' has been revealed.",
+      "angle": "Early critical reactions to Christopher Nolan's 'The Odyssey' are overwhelmingly positive, calling it his biggest and most astonishing film to date.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
         {
           "outlet": "THR",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/lists/love-island-usa-season-8-cast/",
-          "ageMin": 649,
-          "headline": "Love Island USA Season 8 Cast Revealed",
-          "summary": "The new season of Peacock's hit reality show, hosted by Ariana Madix, premiered June 2."
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/the-odyssey-premiere-london-film-nolan-holland-zendaya-1236638693/",
+          "ageMin": 525,
+          "headline": "The Odyssey Comes Ashore: London Goes Wild for Christopher Nolan Epic at Star-Studded World Premiere",
+          "summary": "As a Trojan horse towered over Leicester Square, Tom Holland, Zendaya, Matt Damon, Anne Hathaway and Robert Pattinson delighted screaming fans ahead of the world's first screening of Nolan's latest three-hour feat."
         }
       ],
-      "ageMin": 649,
+      "ageMin": 525,
       "_cand": {
-        "key": "rss:love-island-usa-season-8-cast-revealed",
+        "key": "rss:the-odyssey-comes-ashore-london-goes-wild-for-christopher-no",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -114,22 +250,285 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 62,
+      "priority": 69,
       "signals": {
         "recency": 4,
         "corroboration": 12,
         "status": 18,
-        "type": 10,
+        "type": 11,
         "pop": 0,
         "breakout": 0,
-        "big": 18,
-        "trending": 0
+        "big": 24,
+        "trending": 0,
+        "softTv": 0
       }
     },
     {
-      "id": "music-news-dizzee-rascal-example-arrdee-australia-new-zealand-tour-2026",
-      "slug": "dizzee-rascal-announces-2026-australian-and-new-zealand-tour-with-exam",
-      "title": "Dizzee Rascal Announces 2026 Australian and New Zealand Tour With Example and Arrdee",
+      "id": "news-vhs-scp-foundation-movie",
+      "slug": "v-h-s-franchise-taps-scp-foundation-universe-for-new-movie",
+      "title": "'V/H/S' Franchise Taps SCP Foundation Universe for New Movie",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "vhs-scp-foundation-movie",
+      "primaryKeyword": "v/h/s scp movie",
+      "primaryEntity": "V/H/S: SCP",
+      "entities": [
+        "Roy Lee",
+        "Steven Schneider",
+        "SCP Foundation"
+      ],
+      "angle": "The 'V/H/S' horror anthology franchise is expanding with a new installment based on the popular SCP Foundation universe.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/film/news/vhs-anthology-film-scp-foundation-universe-roy-lee-1236802817/",
+          "ageMin": 586,
+          "headline": "V/H/S Franchise Sets New Roy Lee and Steven Schneider-Produced Movie Based on SCP Foundation Universe (EXCLUSIVE)",
+          "summary": "Indie genre label Spooky Pictures and global film and television studio Image Nation Studios are partnering to produce “V/H/S: SCP.” The feature-length project is the latest installment in the long-running “V/H/S” found-footage horror franchise, and the first feature-length addition to the online collective fiction project, the SCP (Special Containment Procedures) Foundation. Roy Lee and Steven [ "
+        }
+      ],
+      "ageMin": 586,
+      "_cand": {
+        "key": "rss:v-h-s-franchise-sets-new-roy-lee-and-steven-schneider-produc",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 67,
+      "signals": {
+        "recency": 4,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-myron-bolitar-netflix-casting",
+      "slug": "colin-woodell-kj-apa-diane-guerrero-to-star-in-netflix-s-harlan-coben-",
+      "title": "Colin Woodell, KJ Apa, Diane Guerrero to Star in Netflix's Harlan Coben Series 'Myron Bolitar'",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "myron-bolitar-netflix-casting",
+      "primaryKeyword": "myron bolitar netflix",
+      "primaryEntity": "Myron Bolitar",
+      "entities": [
+        "Colin Woodell",
+        "KJ Apa",
+        "Diane Guerrero",
+        "Harlan Coben"
+      ],
+      "angle": "Netflix is assembling its cast for the upcoming series adaptation of Harlan Coben's 'Myron Bolitar' novels.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/tv/tv-news/colin-woodell-kj-apa-diane-guerrero-netflix-myron-bolitar-1236639007/",
+          "ageMin": 627,
+          "headline": "Colin Woodell, KJ Apa and Diane Guerrero to Lead Netflix s Myron Bolitar",
+          "summary": "The series about a sports agent is based on novels by Harlan Coben."
+        }
+      ],
+      "ageMin": 627,
+      "_cand": {
+        "key": "rss:colin-woodell-kj-apa-and-diane-guerrero-to-lead-netflix-s-my",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 66,
+      "signals": {
+        "recency": 4,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-julia-garner-guilty-creatures-apple-tv",
+      "slug": "julia-garner-to-star-in-apple-tv-true-crime-series-guilty-creatures",
+      "title": "Julia Garner to Star in Apple TV+ True Crime Series 'Guilty Creatures'",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "julia-garner-guilty-creatures-apple-tv",
+      "primaryKeyword": "julia garner guilty creatures",
+      "primaryEntity": "Guilty Creatures",
+      "entities": [
+        "Julia Garner",
+        "Apple TV+",
+        "Craig Gillespie",
+        "Stuart Zicherman"
+      ],
+      "angle": "Julia Garner is set to lead Apple TV+'s new true crime series 'Guilty Creatures,' based on a popular book.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/tv/news/julia-garner-apple-tv-guilty-creatures-1236802666/",
+          "ageMin": 631,
+          "headline": "Julia Garner to Star in Apple TV True Crime Series Guilty Creatures From Craig Gillespie, Stuart Zicherman",
+          "summary": "Julia Garner is attached to star in an Apple TV adaptation of the Mikita Brottman true crime book Guilty Creatures: Sex, God, and Murder in Tallahassee, Florida, Variety has learned. The logline for the series states that it delves into the psyche of a torrid romance and subsequent act of murder between two young, adulterous [ ]"
+        }
+      ],
+      "ageMin": 631,
+      "_cand": {
+        "key": "rss:julia-garner-to-star-in-apple-tv-true-crime-series-guilty-cr",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 66,
+      "signals": {
+        "recency": 4,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-the-odyssey-world-premiere",
+      "slug": "stars-praise-christopher-nolan-s-the-odyssey-at-world-premiere-this-wa",
+      "title": "Stars Praise Christopher Nolan's 'The Odyssey' at World Premiere: 'This Was His Magnum Opus'",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "the-odyssey-world-premiere",
+      "primaryKeyword": "the odyssey premiere",
+      "primaryEntity": "The Odyssey",
+      "entities": [
+        "Zendaya",
+        "Matt Damon",
+        "Christopher Nolan"
+      ],
+      "angle": "Stars and the director gathered for the world premiere of Christopher Nolan's epic film adaptation 'The Odyssey.'",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/film/global/the-odyssey-world-premiere-london-1236802285/",
+          "ageMin": 744,
+          "headline": "The Odyssey World Premiere Sees Stars Including Zendaya, Matt Damon and More Praise Christopher Nolan’s Epic: ‘This Was His Magnum Opus’",
+          "summary": "The Odyssey has begun its grand voyage. Christopher Nolan s major adaptation of Homer s nearly 3,000 year-old Greek poem and arguably history s most famous epic splashed down in London on Monday for its world premiere, the official launch of what many expect to become among the hottest releases of the summer (something that, given the $250 [ ]"
+        }
+      ],
+      "ageMin": 744,
+      "_cand": {
+        "key": "rss:the-odyssey-world-premiere-sees-stars-including-zendaya-matt",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 64,
+      "signals": {
+        "recency": 1,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "music-news-noah-kahan-rolling-stone-festival",
+      "slug": "noah-kahan-headlines-rolling-stone-s-first-ever-stateside-festival",
+      "title": "Noah Kahan Headlines Rolling Stone’s First Ever Stateside Festival",
       "contentType": "music-news",
       "formatTag": "music-news",
       "category": "music",
@@ -137,29 +536,28 @@
       "eventType": "announcement",
       "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "dizzee-rascal-example-arrdee-australia-new-zealand-tour-2026",
-      "primaryKeyword": "Dizzee Rascal tour",
-      "primaryEntity": "Dizzee Rascal",
+      "eventSlug": "noah-kahan-rolling-stone-festival",
+      "primaryKeyword": "noah kahan",
+      "primaryEntity": "Noah Kahan",
       "entities": [
-        "Example",
-        "Arrdee"
+        "Rolling Stone"
       ],
-      "angle": "Grime icon Dizzee Rascal is heading to Australia and New Zealand in late 2026 for a co-headlining tour with Example and Arrdee.",
+      "angle": "Noah Kahan headlined Rolling Stone's first-ever festival.",
       "tmdbType": "movie",
-      "source": "rss:Billboard",
+      "source": "rss:THR",
       "sources": [
         {
-          "outlet": "Billboard",
+          "outlet": "THR",
           "tier": 7,
-          "url": "https://www.billboard.com/music/rb-hip-hop/dizzee-rascal-australia-new-zealand-2026-1236288010/",
-          "ageMin": 39,
-          "headline": "Dizzee Rascal Announces 2026 Australian and New Zealand Tour With Example and Arrdee",
-          "summary": "The grime icon is returning to Australia and New Zealand this November and December for the We Want Bass tour."
+          "url": "https://www.hollywoodreporter.com/music/music-news/noah-kahan-headline-rolling-stone-music-festival-1236638943/",
+          "ageMin": 226,
+          "headline": "Noah Kahan Headlines Rolling Stone’s First Ever Stateside Festival",
+          "summary": "The folk superstar played the magazine’s festival days before a series of sold-out shows at Fenway Park this week."
         }
       ],
-      "ageMin": 39,
+      "ageMin": 226,
       "_cand": {
-        "key": "rss:dizzee-rascal-announces-2026-australian-and-new-zealand-tour",
+        "key": "rss:noah-kahan-headlines-rolling-stone-s-first-ever-stateside-fe",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -169,59 +567,127 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Billboard"
+          "THR"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Billboard",
+        "attribution": "THR",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 62,
+      "priority": 48,
       "signals": {
-        "recency": 24,
+        "recency": 9,
         "corroboration": 12,
         "status": 18,
-        "type": 8,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
         "big": 0,
-        "trending": 0
+        "trending": 0,
+        "softTv": 0
       }
     },
     {
-      "id": "news-young-washington-sequel-in-the-works",
-      "slug": "angel-studios-announces-young-washington-sequel-after-record-live-acti",
-      "title": "Angel Studios Announces 'Young Washington' Sequel After Record Live-Action Opening",
+      "id": "news-zendaya-the-odyssey-filming-lines",
+      "slug": "why-zendaya-botched-her-lines-on-first-day-of-the-odyssey-filming-my-m",
+      "title": "Why Zendaya Botched Her Lines on First Day of The Odyssey Filming: My Mouth Was Just Frozen",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
-      "eventType": "announcement",
+      "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "young-washington-sequel-in-the-works",
-      "primaryKeyword": "young washington sequel",
-      "primaryEntity": "Young Washington",
+      "eventSlug": "zendaya-the-odyssey-filming-lines",
+      "primaryKeyword": "zendaya the odyssey filming",
+      "primaryEntity": "The Odyssey",
       "entities": [
-        "Angel Studios"
+        "The Odyssey (2025 film)",
+        "Zendaya",
+        "Christopher Nolan"
       ],
-      "angle": "Angel Studios announces a sequel to 'Young Washington' following the success of its live-action opening.",
+      "angle": "Zendaya discusses a difficult first day of filming for Christopher Nolan's 'The Odyssey' due to botching lines.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/zendaya-mouth-frozen-botched-lines-first-day-odyssey-filming-1236639515/",
+          "ageMin": 168,
+          "headline": "Why Zendaya Botched Her Lines on First Day of The Odyssey Filming: My Mouth Was Just Frozen",
+          "summary": "The actress plays Greek goddess Athena in filmmaker Christopher Nolan's latest film."
+        }
+      ],
+      "ageMin": 168,
+      "_cand": {
+        "key": "rss:why-zendaya-botched-her-lines-on-first-day-of-the-odyssey-fi",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 63,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 12,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-zendaya-the-odyssey-casting-news",
+      "slug": "the-unusual-way-zendaya-found-out-she-was-up-for-a-prime-role-in-the-o",
+      "title": "The Unusual Way Zendaya Found Out She Was Up For A Prime Role In The Odyssey",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "zendaya-the-odyssey-casting-news",
+      "primaryKeyword": "zendaya the odyssey casting",
+      "primaryEntity": "The Odyssey",
+      "entities": [
+        "The Odyssey (2025 film)",
+        "Zendaya",
+        "Christopher Nolan"
+      ],
+      "angle": "Zendaya reveals the unusual way she found out about her casting in Christopher Nolan's 'The Odyssey'.",
       "tmdbType": "movie",
       "source": "rss:Deadline",
       "sources": [
         {
           "outlet": "Deadline",
           "tier": 7,
-          "url": "https://deadline.com/2026/07/young-washington-sequel-1776-box-office-1236974374/",
-          "ageMin": 644,
-          "headline": "Young Washington Sequel 1776 In The Works After $20M+ Angel Studios Live-Action Opening Record",
-          "summary": "Angel Studios has done it again. After winning over the heartland with the 2023 trafficking thriller Sound of Freedom which posted a 3-day of $19.6M (and a six-day start of $41.6M), the faith-based media company posted its best opening for a live-action feature with Jon Erwin s historical period pic, Young Washington, which conquered its $15M [ ]"
+          "url": "https://deadline.com/2026/07/how-zendaya-found-out-odyssey-role-1236975367/",
+          "ageMin": 223,
+          "headline": "The Unusual Way Zendaya Found Out She Was Up For A Prime Role In The Odyssey",
+          "summary": "Zendaya may play the all-knowing goddess Athena in Christopher Nolan s epic adaptation of The Odyssey, but the actress was not nearly so omniscient about her casting in the film. In fact, she didn t even know she was up for it. Turns out, it was her husband who told her. I was already excited, she said [ ]"
         }
       ],
-      "ageMin": 644,
+      "ageMin": 223,
       "_cand": {
-        "key": "rss:young-washington-sequel-1776-in-the-works-after-20m-angel-st",
+        "key": "rss:the-unusual-way-zendaya-found-out-she-was-up-for-a-prime-rol",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -240,245 +706,53 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 60,
+      "priority": 56,
       "signals": {
-        "recency": 4,
+        "recency": 9,
         "corroboration": 12,
         "status": 18,
-        "type": 8,
+        "type": 5,
         "pop": 0,
         "breakout": 0,
-        "big": 18,
-        "trending": 0
+        "big": 12,
+        "trending": 0,
+        "softTv": 0
       }
     },
     {
-      "id": "trailer-oasis-dont-look-back-in-anger-teaser",
-      "slug": "oasis-share-first-teaser-for-upcoming-doc-don-t-look-back-in-anger",
-      "title": "Oasis Share First Teaser for Upcoming Doc 'Don't Look Back in Anger'",
-      "contentType": "trailer",
-      "formatTag": "trailer",
-      "category": "movies",
-      "subcategory": "trailers",
-      "eventType": "trailer",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "oasis-dont-look-back-in-anger-teaser",
-      "primaryKeyword": "oasis don't look back in anger teaser",
-      "primaryEntity": "Oasis",
-      "entities": [
-        "Steven Knight",
-        "Disney+",
-        "Hulu"
-      ],
-      "angle": "Oasis releases the first teaser for their upcoming documentary 'Don't Look Back in Anger', chronicling the Gallagher brothers' reunion.",
-      "tmdbType": "movie",
-      "source": "rss:Rolling Stone",
-      "sources": [
-        {
-          "outlet": "Rolling Stone",
-          "tier": 7,
-          "url": "https://www.rollingstone.com/music/music-news/oasis-first-teaser-documentary-dont-look-back-in-anger-1235589204/",
-          "ageMin": 2248,
-          "headline": "Oasis Share First Teaser for Upcoming Doc Don t Look Back in Anger",
-          "summary": "Steven Knight-produced film about Gallagher brothers' unlikely reunion to hit cinemas in September before its Disney+ and Hulu streaming premiere later this year"
-        }
-      ],
-      "ageMin": 2248,
-      "_cand": {
-        "key": "rss:oasis-share-first-teaser-for-upcoming-doc-don-t-look-back-in",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Rolling Stone"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Rolling Stone",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 59,
-      "signals": {
-        "recency": 1,
-        "corroboration": 12,
-        "status": 18,
-        "type": 10,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0
-      }
-    },
-    {
-      "id": "news-now-you-see-me-4-development",
-      "slug": "jesse-eisenberg-eager-for-now-you-see-me-4-it-s-my-happiest-place",
-      "title": "Jesse Eisenberg Eager for 'Now You See Me 4': 'It's My Happiest Place'",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "now-you-see-me-4-development",
-      "primaryKeyword": "now you see me 4",
-      "primaryEntity": "Now You See Me 4",
-      "entities": [
-        "The Debut",
-        "Jesse Eisenberg"
-      ],
-      "angle": "Jesse Eisenberg expresses strong desire for 'Now You See Me 4' and calls the franchise his 'happiest place'.",
-      "tmdbType": "movie",
-      "source": "rss:Deadline",
-      "sources": [
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/jesse-eisenberg-eager-make-now-you-see-me-4-1236974395/",
-          "ageMin": 474,
-          "headline": "Jesse Eisenberg Is Eager To Make Now You See Me 4 : It s My Happiest Place",
-          "summary": "After three movies, Jesse Eisenberg is patiently awaiting another magical journey with the Four Horsemen. The 2x Oscar nominee recently admitted he s never felt happier than when playing street magician J. Daniel Atlas in the Now You See Me movies, noting that he d love to do a fourth installment. Honestly, I d love to do Now [ ]"
-        }
-      ],
-      "ageMin": 474,
-      "_cand": {
-        "key": "rss:jesse-eisenberg-is-eager-to-make-now-you-see-me-4-it-s-my-ha",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Deadline"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Deadline",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 60,
-      "signals": {
-        "recency": 4,
-        "corroboration": 12,
-        "status": 18,
-        "type": 8,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0
-      }
-    },
-    {
-      "id": "news-jason-moore-elle-murder-she-wrote-movie",
-      "slug": "elle-director-jason-moore-on-murder-she-wrote-movie-plans",
-      "title": "‘Elle’ Director Jason Moore on ‘Murder, She Wrote’ Movie Plans",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "jason-moore-elle-murder-she-wrote-movie",
-      "primaryKeyword": "murder she wrote movie",
-      "primaryEntity": "Murder, She Wrote (film)",
-      "entities": [
-        "Elle",
-        "Jason Moore",
-        "Elle (Prime Video series)",
-        "Reese Witherspoon"
-      ],
-      "angle": "Director Jason Moore discusses the upcoming 'Murder, She Wrote' movie and the 'Elle' series.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/tv/columns/elle-director-reese-witherspoon-set-visit-season-2-wardrobe-murder-she-wrote-movie-1236801951/",
-          "ageMin": 613,
-          "headline": "‘Elle’ Director Jason Moore on Reese Witherspoon s Set Visit, Season 2’s Archival-Only Wardrobe and What ‘Hardcore’ Fans Can Expect From ‘Murder, She Wrote’ Movie",
-          "summary": "Film, television and Broadway director Jason Moore knows what’s old is new again. The Tony-nominee not only directed the first two episodes of the Prime Video “Legally Blonde” prequel series “Elle,” but he is also helming the upcoming feature film adaptation of “Murder, She Wrote,” which stars Jamie Lee Curtis as Jessica Fletcher, the role [ ]"
-        }
-      ],
-      "ageMin": 613,
-      "_cand": {
-        "key": "rss:-elle-director-jason-moore-on-reese-witherspoon-s-set-visit-",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 60,
-      "signals": {
-        "recency": 4,
-        "corroboration": 12,
-        "status": 18,
-        "type": 8,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0
-      }
-    },
-    {
-      "id": "news-house-of-the-dragon-season-3-episode-3-corlys-rhaenyra-request",
-      "slug": "house-of-the-dragon-star-steve-toussaint-teases-consequences-of-corlys",
-      "title": "House of the Dragon Star Steve Toussaint Teases Consequences of Corlys Very Dangerous Request of Rhaenyra",
+      "id": "news-orbital-studios-moves-to-television-city",
+      "slug": "orbital-studios-moving-to-television-city-in-los-angeles",
+      "title": "Orbital Studios Moving To Television City In Los Angeles",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "house-of-the-dragon-season-3-episode-3-corlys-rhaenyra-request",
-      "primaryKeyword": "House of the Dragon",
-      "primaryEntity": "House of the Dragon",
+      "eventSlug": "orbital-studios-moves-to-television-city",
+      "primaryKeyword": "orbital studios",
+      "primaryEntity": "Orbital Studios",
       "entities": [
-        "Steve Toussaint",
-        "Rhaenyra Targaryen",
-        "Corlys Velaryon"
+        "FX's A Christmas Carol",
+        "Netflix",
+        "FX"
       ],
-      "angle": "Steve Toussaint, who plays Corlys Velaryon, teases the dangerous consequences of his character's latest request to Rhaenyra in the latest episode of 'House of the Dragon'.",
+      "angle": "Virtual production company Orbital Studios is relocating its operations to Television City in Los Angeles.",
       "tmdbType": "movie",
-      "source": "rss:Variety",
+      "source": "rss:Deadline",
       "sources": [
         {
-          "outlet": "Variety",
+          "outlet": "Deadline",
           "tier": 7,
-          "url": "https://variety.com/2026/tv/features/house-of-the-dragon-corlys-rhaenyra-sons-bastards-1236800257/",
-          "ageMin": 181,
-          "headline": "House of the Dragon Star Steve Toussaint Teases Consequences of Corlys Very Dangerous Request of Rhaenyra",
-          "summary": "SPOILER ALERT: This article contains spoilers for Season 3, Episode 3 of “House of the Dragon,” now streaming on HBO Max. Queen Rhaenyra Targaryen got a slap in the face from her hand of the queen, Corlys Velaryon, on tonight s episode of House of the Dragon, when the Sea Snake publicly called out Rhaenyra s sons (his [ ]"
+          "url": "https://deadline.com/2026/07/orbital-studios-moving-to-television-city-los-angeles-1236975338/",
+          "ageMin": 271,
+          "headline": "Orbital Studios Moving To Television City In Los Angeles",
+          "summary": "Virtual production company Orbital Studios has a new brick-and-mortar home. The producer whose credits include Netflix s Nemesis and FX s upcoming The Drop: A Snowfall Saga is setting up shop at Television City in Los Angeles. Established in 2020, Orbital Studios offers art teams, tools, software and pipelines aimed at making virtual production faster, leaner and [ ]"
         }
       ],
-      "ageMin": 181,
+      "ageMin": 271,
       "_cand": {
-        "key": "rss:house-of-the-dragon-star-steve-toussaint-teases-consequences",
+        "key": "rss:orbital-studios-moving-to-television-city-in-los-angeles",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -488,62 +762,125 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Variety"
+          "Deadline"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Variety",
+        "attribution": "Deadline",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 53,
+      "priority": 50,
       "signals": {
         "recency": 9,
         "corroboration": 12,
         "status": 18,
-        "type": 6,
+        "type": 5,
         "pop": 0,
         "breakout": 0,
-        "big": 8,
-        "trending": 0
+        "big": 6,
+        "trending": 0,
+        "softTv": 0
       }
     },
     {
-      "id": "news-robert-richardson-wants-to-work-with-paul-thomas-anderson",
-      "slug": "robert-richardson-wants-to-work-with-paul-thomas-anderson",
-      "title": "Robert Richardson Wants to Work With Paul Thomas Anderson",
+      "id": "news-robert-pattinson-compares-odyssey-character-to-jacob-twilight",
+      "slug": "robert-pattinson-compares-the-odyssey-character-to-jacob-in-twilight",
+      "title": "Robert Pattinson Compares The Odyssey Character to Jacob in Twilight",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
-      "eventType": "announcement",
+      "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "robert-richardson-wants-to-work-with-paul-thomas-anderson",
-      "primaryKeyword": "Paul Thomas Anderson",
-      "primaryEntity": "Paul Thomas Anderson",
+      "eventSlug": "robert-pattinson-compares-odyssey-character-to-jacob-twilight",
+      "primaryKeyword": "robert pattinson",
+      "primaryEntity": "Robert Pattinson",
       "entities": [
-        "Robert Richardson",
-        "Oliver Stone",
-        "Martin Scorsese",
-        "Quentin Tarantino"
+        "The Odyssey",
+        "Twilight"
       ],
-      "angle": "Acclaimed cinematographer Robert Richardson expresses his desire to collaborate with director Paul Thomas Anderson.",
+      "angle": "Robert Pattinson draws a parallel between his character in 'The Odyssey' and Jacob from 'Twilight'.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/robert-pattinson-compares-the-odyssey-role-jacob-twilight-1236639465/",
+          "ageMin": 355,
+          "headline": "Robert Pattinson Compares The Odyssey Character to Jacob in Twilight",
+          "summary": "The actor plays the primary antagonist Antinous in Christopher Nolan's epic action-fantasy film."
+        }
+      ],
+      "ageMin": 355,
+      "_cand": {
+        "key": "rss:robert-pattinson-compares-the-odyssey-character-to-jacob-in-",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 56,
+      "signals": {
+        "recency": 9,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 12,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-tiffany-haddish-george-stephanopoulos-taylor-swift-wedding",
+      "slug": "tiffany-haddish-can-t-believe-george-stephanopoulos-got-taylor-swift-w",
+      "title": "Tiffany Haddish Can't Believe George Stephanopoulos Got Taylor Swift Wedding Invite and She Didn't",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "tiffany-haddish-george-stephanopoulos-taylor-swift-wedding",
+      "primaryKeyword": "tiffany haddish taylor swift wedding",
+      "primaryEntity": "Tiffany Haddish",
+      "entities": [
+        "Taylor Swift",
+        "George Stephanopoulos"
+      ],
+      "angle": "Comedian Tiffany Haddish expresses disbelief at not receiving a Taylor Swift wedding invitation while George Stephanopoulos did.",
       "tmdbType": "movie",
       "source": "rss:TheWrap",
       "sources": [
         {
           "outlet": "TheWrap",
           "tier": 7,
-          "url": "https://www.thewrap.com/creative-content/movies/robert-richardson-collaborations-karlovy-vary-interview/",
-          "ageMin": 639,
-          "headline": "Robert Richardson Wants to Work With You Next, Paul Thomas Anderson",
-          "summary": "Karlovy Vary 2026: The \"White Devil\" documentary subject tells TheWrap all about his collaborations with Oliver Stone, Martin Scorsese, Quentin Tarantino and more The post Robert Richardson Wants to Work With You Next, Paul Thomas Anderson appeared first on TheWrap ."
+          "url": "https://www.thewrap.com/creative-content/tv-shows/tiffany-haddish-reacts-taylor-swift-wedding-invite-snub/",
+          "ageMin": 107,
+          "headline": "Tiffany Haddish Can t Believe George Stephanopoulos Got Taylor Swift Wedding Invite and She Didn t: ‘The F—k?!’",
+          "summary": "“What a waste. All those sexy men in tuxedos and no Tiffany to make them feel beautiful,” the comedian adds The post Tiffany Haddish Can t Believe George Stephanopoulos Got Taylor Swift Wedding Invite and She Didn t: ‘The F—k?!’ appeared first on TheWrap ."
         }
       ],
-      "ageMin": 639,
+      "ageMin": 107,
       "_cand": {
-        "key": "rss:robert-richardson-wants-to-work-with-you-next-paul-thomas-an",
+        "key": "rss:tiffany-haddish-can-t-believe-george-stephanopoulos-got-tayl",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -562,115 +899,54 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 60,
+      "priority": 51,
       "signals": {
-        "recency": 4,
+        "recency": 16,
         "corroboration": 12,
         "status": 18,
-        "type": 8,
+        "type": 5,
         "pop": 0,
         "breakout": 0,
-        "big": 18,
-        "trending": 0
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
       }
     },
     {
-      "id": "news-the-vampire-lestat-costume-designer-lestat-wardrobe-easter-eggs",
-      "slug": "the-vampire-lestat-costume-designer-breaks-down-lestat-s-rockstar-ward",
-      "title": "The Vampire Lestat Costume Designer Breaks Down Lestat s Rockstar Wardrobe and the Season s Hidden Easter Eggs",
+      "id": "news-yungblud-industry-plant-accusations-sza-scott-ian",
+      "slug": "yungblud-backed-by-sza-scott-ian-more-after-responding-to-industry-pla",
+      "title": "Yungblud Backed by SZA, Scott Ian More After Responding to ‘Industry Plant’ Accusations",
       "contentType": "news",
       "formatTag": "news",
-      "category": "tv",
+      "category": "celebrity",
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "the-vampire-lestat-costume-designer-lestat-wardrobe-easter-eggs",
-      "primaryKeyword": "The Vampire Lestat",
-      "primaryEntity": "The Vampire Lestat",
-      "entities": [
-        "Lestat",
-        "Lex Wood"
-      ],
-      "angle": "The costume designer for 'The Vampire Lestat' breaks down Lestat's rockstar-inspired wardrobe and hidden Easter eggs in the latest episode.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/tv/news/the-vampire-lestat-costume-designer-wardrobe-easter-eggs-1236800981/",
-          "ageMin": 181,
-          "headline": "The Vampire Lestat Costume Designer Breaks Down Lestat s Rockstar Wardrobe and the Season s Hidden Easter Eggs",
-          "summary": "SPOILER ALERT: This post contains spoilers from “New York,” the fifth episode of “The Vampire Lestat,” now streaming on AMC+. When costume designer Lex Wood started planning the wardrobe for “The Vampire Lestat” — or Season 3 of “Interview with the Vampire” — she had one word in mind: color. And lots of it, to reflect the [ ]"
-        }
-      ],
-      "ageMin": 181,
-      "_cand": {
-        "key": "rss:the-vampire-lestat-costume-designer-breaks-down-lestat-s-roc",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 53,
-      "signals": {
-        "recency": 9,
-        "corroboration": 12,
-        "status": 18,
-        "type": 6,
-        "pop": 0,
-        "breakout": 0,
-        "big": 8,
-        "trending": 0
-      }
-    },
-    {
-      "id": "music-news-toy-story-5-soundtrack-billboard-charts",
-      "slug": "toy-story-5-soundtrack-hits-top-10-on-three-billboard-charts",
-      "title": "'Toy Story 5' Soundtrack Hits Top 10 on Three Billboard Charts",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "toy-story-5-soundtrack-billboard-charts",
-      "primaryKeyword": "toy story 5 soundtrack",
-      "primaryEntity": "Toy Story 5",
+      "eventSlug": "yungblud-industry-plant-accusations-sza-scott-ian",
+      "primaryKeyword": "yungblud industry plant accusations",
+      "primaryEntity": "YUNGBLUD",
       "entities": [
-        "Taylor Swift",
-        "Billboard Charts"
+        "Yungblud",
+        "SZA",
+        "Scott Ian"
       ],
-      "angle": "The soundtrack for the upcoming 'Toy Story 5,' featuring Taylor Swift, has achieved a significant chart debut.",
+      "angle": "Musician Yungblud receives support from SZA and Scott Ian after addressing 'industry plant' accusations.",
       "tmdbType": "movie",
       "source": "rss:Billboard",
       "sources": [
         {
           "outlet": "Billboard",
           "tier": 7,
-          "url": "https://www.billboard.com/music/chart-beat/toy-story-5-soundtrack-taylor-swift-top-10-billboard-debut-1236287995/",
-          "ageMin": 252,
-          "headline": "‘Toy Story 5’ Soundtrack Debuts in Top 10 on Three Billboard Charts",
-          "summary": "The Taylor Swift-led set makes a No. 1 bow on the Kid Albums tally."
+          "url": "https://www.billboard.com/music/music-news/yungblud-support-sza-scott-ian-1236288667/",
+          "ageMin": 115,
+          "headline": "Yungblud Backed by SZA, Scott Ian More After Responding to ‘Industry Plant’ Accusations",
+          "summary": "\"To be truthful. Recently, I’ve been really struggling,” Yungblud wrote."
         }
       ],
-      "ageMin": 252,
+      "ageMin": 115,
       "_cand": {
-        "key": "rss:-toy-story-5-soundtrack-debuts-in-top-10-on-three-billboard-",
+        "key": "rss:yungblud-backed-by-sza-scott-ian-more-after-responding-to-in",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -689,370 +965,52 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 47,
+      "priority": 51,
       "signals": {
-        "recency": 9,
+        "recency": 16,
         "corroboration": 12,
         "status": 18,
-        "type": 8,
+        "type": 5,
         "pop": 0,
         "breakout": 0,
         "big": 0,
-        "trending": 0
+        "trending": 0,
+        "softTv": 0
       }
     },
     {
-      "id": "news-harvey-keitel-shooting-new-film-ai-concerns",
-      "slug": "harvey-keitel-shooting-film-written-by-wife-calls-out-danger-of-ai",
-      "title": "Harvey Keitel Shooting Film Written by Wife, Calls Out ‘Danger’ of AI",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "high",
-      "eventSlug": "harvey-keitel-shooting-new-film-ai-concerns",
-      "primaryKeyword": "Harvey Keitel",
-      "primaryEntity": "Harvey Keitel",
-      "entities": [
-        "Daphna Kastner",
-        "Michael Caine",
-        "Martin Scorsese"
-      ],
-      "angle": "Harvey Keitel is currently shooting a new film written by his wife and voices concerns about AI in filmmaking.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/film/global/harvey-keitel-daphna-kastner-ai-michael-caine-1236801929/",
-          "ageMin": 648,
-          "headline": "Harvey Keitel Shooting Film Written by Wife Daphna Kastner, Calls Out ‘Danger’ of AI When Mentioning Michael Caine AI-Narrated ‘The Odyssey’ Audiobook",
-          "summary": "Harvey Keitel, who is at the Karlovy Vary Film Festival for the third time to present a screening of Martin Scorsese’s “Mean Streets,” has revealed he is shooting a new film written by his wife, actor Daphna Kastner. Speaking with Variety at the festival, the actor said he is working on something that “really excites [ ]"
-        }
-      ],
-      "ageMin": 648,
-      "_cand": {
-        "key": "rss:harvey-keitel-shooting-film-written-by-wife-daphna-kastner-c",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 60,
-      "signals": {
-        "recency": 4,
-        "corroboration": 12,
-        "status": 18,
-        "type": 8,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0
-      }
-    },
-    {
-      "id": "music-news-ateez-golden-hour-part-5-no-1-billboard-200",
-      "slug": "ateez-lands-third-no-1-on-albums-chart-with-golden-hour-part-5",
-      "title": "Ateez Lands Third No. 1 on Albums Chart With Golden Hour : Part.5",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "ateez-golden-hour-part-5-no-1-billboard-200",
-      "primaryKeyword": "Ateez Golden Hour Part 5",
-      "primaryEntity": "ATEEZ",
-      "entities": [
-        "Ateez",
-        "Billboard 200"
-      ],
-      "angle": "K-pop group Ateez achieves their third No. 1 on the Billboard 200 chart with their latest album.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/music/news/ateez-lands-third-no-1-albums-chart-golden-hour-part-5-1236801984/",
-          "ageMin": 556,
-          "headline": "Ateez Lands Third No. 1 on Albums Chart With Golden Hour : Part.5",
-          "summary": "K-pop group Ateez has scored its third No. 1 on the Billboard 200 with Golden Hour : Part.5. The album starts with 228,000 equivalent album units, with 223,000 accounting for pure album sales thanks to 30 CD variants and five vinyl variants. This marks Ateez s ninth top 10 on the albums chart and their third [ ]"
-        }
-      ],
-      "ageMin": 556,
-      "_cand": {
-        "key": "rss:ateez-lands-third-no-1-on-albums-chart-with-golden-hour-part",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "breakoutVelocity": 0,
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 42,
-      "signals": {
-        "recency": 4,
-        "corroboration": 12,
-        "status": 18,
-        "type": 8,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0
-      }
-    },
-    {
-      "id": "news-maren-morris-touring-break",
-      "slug": "maren-morris-taking-break-from-touring-to-write-for-broadway",
-      "title": "Maren Morris Taking Break From Touring to Write for Broadway",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "maren-morris-touring-break",
-      "primaryKeyword": "maren morris",
-      "primaryEntity": "Maren Morris",
-      "entities": [
-        "Broadway"
-      ],
-      "angle": "Maren Morris announces a break from touring to focus on writing for Broadway and spending time with her son.",
-      "tmdbType": "movie",
-      "source": "rss:Billboard",
-      "sources": [
-        {
-          "outlet": "Billboard",
-          "tier": 7,
-          "url": "https://www.billboard.com/music/country/maren-morris-taking-break-from-touring-broadway-songwriting-1236287946/",
-          "ageMin": 548,
-          "headline": "Maren Morris Says She s Taking a Break From Touring, Wants to Write for Broadway",
-          "summary": "The country-pop star plans to step away from the road to spend more time with her son."
-        }
-      ],
-      "ageMin": 548,
-      "_cand": {
-        "key": "rss:maren-morris-says-she-s-taking-a-break-from-touring-wants-to",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Billboard"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Billboard",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 42,
-      "signals": {
-        "recency": 4,
-        "corroboration": 12,
-        "status": 18,
-        "type": 8,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0
-      }
-    },
-    {
-      "id": "news-tom-holland-odyssey-filming-nolan",
-      "slug": "tom-holland-thought-christopher-nolan-hated-his-odyssey-performance-on",
-      "title": "Tom Holland Thought Christopher Nolan Hated His 'Odyssey' Performance on First Day",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "tom-holland-odyssey-filming-nolan",
-      "primaryKeyword": "tom holland christopher nolan",
-      "primaryEntity": "Tom Holland",
-      "entities": [
-        "Christopher Nolan",
-        "The Odyssey"
-      ],
-      "angle": "Tom Holland shares his initial fear that Christopher Nolan disliked his performance on 'The Odyssey' during their first day of filming.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/film/news/tom-holland-christopher-nolan-hated-odyssey-performance-1236801979/",
-          "ageMin": 553,
-          "headline": "Tom Holland Thought Christopher Nolan Hated His Odyssey Performance on His First Day Filming: I Thought I Was Totally S -ing the Bed",
-          "summary": "Tom Holland recently told Fandango that he thought director Christopher Nolan hated his performance on his first day filming The Odyssey because he kept calling cut. In reality, Nolan s cuts were due to the limitations of the Imax cameras he was using. “Working with the Imax cameras for the first time is an experience,” Holland [ ]"
-        }
-      ],
-      "ageMin": 553,
-      "_cand": {
-        "key": "rss:tom-holland-thought-christopher-nolan-hated-his-odyssey-perf",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 40,
-      "signals": {
-        "recency": 4,
-        "corroboration": 12,
-        "status": 18,
-        "type": 6,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0
-      }
-    },
-    {
-      "id": "news-basic-instinct-reboot-in-development",
-      "slug": "basic-instinct-writer-joe-eszterhas-gives-update-on-reboot-catherine-t",
-      "title": "Basic Instinct Writer Joe Eszterhas Gives Update On Reboot, Catherine Tramell Is Back",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "basic-instinct-reboot-in-development",
-      "primaryKeyword": "basic instinct reboot",
-      "primaryEntity": "Basic Instinct",
-      "entities": [
-        "Joe Eszterhas",
-        "Amazon MGM Studios"
-      ],
-      "angle": "Writer Joe Eszterhas provides an update on a potential reboot of the erotic thriller 'Basic Instinct', confirming the return of Catherine Tramell.",
-      "tmdbType": "movie",
-      "source": "rss:Deadline",
-      "sources": [
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/basic-instinct-writer-joe-eszterhas-update-reboot-1236974342/",
-          "ageMin": 773,
-          "headline": "Basic Instinct Writer Joe Eszterhas Gives Update On Reboot, Catherine Tramell Is Back",
-          "summary": "After nearly 35 years, Joe Eszterhas is back to basics with the follow-up to his 1992 erotic thriller. The Basic Instinct screenwriter, who was tapped to pen a reboot for Amazon MGM Studio s United Artists last year, has given an update on the script, which features the onscreen return of Catherine Tramell (originated by Sharon [ ]"
-        }
-      ],
-      "ageMin": 773,
-      "_cand": {
-        "key": "rss:basic-instinct-writer-joe-eszterhas-gives-update-on-reboot-c",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Deadline"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Deadline",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 57,
-      "signals": {
-        "recency": 1,
-        "corroboration": 12,
-        "status": 18,
-        "type": 8,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0
-      }
-    },
-    {
-      "id": "news-tom-holland-the-odyssey-christopher-nolan",
-      "slug": "tom-holland-thought-christopher-nolan-didn-t-like-his-the-odyssey-perf",
-      "title": "Tom Holland Thought Christopher Nolan Didn t Like His The Odyssey Performance On First Day: I Thought I Was Totally Sh*tting The Bed",
+      "id": "news-danny-mcbride-tropic-thunder-today",
+      "slug": "danny-mcbride-disagrees-with-ben-stiller-and-thinks-tropic-thunder-cou",
+      "title": "Danny McBride Disagrees With Ben Stiller and Thinks Tropic Thunder Could Actually Get Made Today",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "other",
-      "sensitivity": "high",
-      "eventSlug": "tom-holland-the-odyssey-christopher-nolan",
-      "primaryKeyword": "Tom Holland The Odyssey",
-      "primaryEntity": "The Odyssey",
+      "sensitivity": "normal",
+      "eventSlug": "danny-mcbride-tropic-thunder-today",
+      "primaryKeyword": "Tropic Thunder",
+      "primaryEntity": "Tropic Thunder",
       "entities": [
-        "The Odyssey (2025 film)",
-        "Tom Holland",
-        "Christopher Nolan"
+        "Danny McBride",
+        "Ben Stiller"
       ],
-      "angle": "Tom Holland shares his initial anxieties about his performance in Christopher Nolan's upcoming film 'The Odyssey'.",
+      "angle": "Danny McBride believes 'Tropic Thunder' could be made today, disagreeing with Ben Stiller.",
       "tmdbType": "movie",
-      "source": "rss:Variety",
+      "source": "rss:TheWrap",
       "sources": [
         {
-          "outlet": "Variety",
+          "outlet": "TheWrap",
           "tier": 7,
-          "url": "https://variety.com/2026/film/festivals/black-money-for-white-nights-1236795831/",
-          "ageMin": 577,
-          "headline": "Kristina Grozeva and Petar Valchanov Probe Corruption and Pro-Russia Nostalgia in ‘Black Money for White Nights’",
-          "summary": "Acclaimed Bulgarian directing duo Kristina Grozeva and Petar Valchanov return to the Karlovy Vary Film Festival competition with “Black Money for White Nights.” They won the Crystal Globe in 2019 with ‘The Father,” which repped Bulgaria in the foreign-language film Oscar race. An indictment of modern Bulgarian corruption and moral decay set in 2022, “Black [ ]"
+          "url": "https://www.thewrap.com/creative-content/movies/danny-mcbride-thinks-tropic-thunder-could-get-made-today/",
+          "ageMin": 431,
+          "headline": "Danny McBride Disagrees With Ben Stiller and Thinks Tropic Thunder Could Actually Get Made Today",
+          "summary": "\"The Righteous Gemstones\" actor argues that not just anyone could have gotten away with the controversial R-rated satire film, though The post Danny McBride Disagrees With Ben Stiller and Thinks Tropic Thunder Could Actually Get Made Today appeared first on TheWrap ."
         }
       ],
-      "ageMin": 577,
+      "ageMin": 431,
       "_cand": {
-        "key": "rss:kristina-grozeva-and-petar-valchanov-probe-corruption-and-pr",
+        "key": "rss:danny-mcbride-disagrees-with-ben-stiller-and-thinks-tropic-t",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -1062,25 +1020,26 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Variety"
+          "TheWrap"
         ],
         "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "Variety",
+        "sensitivity": "normal",
+        "attribution": "TheWrap",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 48,
+      "priority": 51,
       "signals": {
         "recency": 4,
         "corroboration": 12,
         "status": 18,
-        "type": 6,
+        "type": 5,
         "pop": 0,
         "breakout": 0,
-        "big": 8,
-        "trending": 0
+        "big": 12,
+        "trending": 0,
+        "softTv": 0
       }
     }
   ]
