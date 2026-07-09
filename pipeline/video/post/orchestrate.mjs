@@ -28,8 +28,12 @@ const LOG = path.join(ROOT, "data/video/posted.json");
 const STATEF = path.join(ROOT, "data/video/daily-state.json"); // idempotency: which slot-date we already scheduled a set for
 const STOP = path.join(ROOT, "data/video/POSTING_OFF"); // touch this file to pause all posting
 
-// ── categories → daily slot (PT wall-clock hour) + per-platform forward stagger (minutes)
-const SLOTS = { movies: 10, tv: 14, celebrity: 18 };
+// ── the 3 daily slots (PT wall-clock hours) + per-platform forward stagger (minutes).
+// Slots are filled by RECENCY (newest story → 10am, next → 2pm, next → 6pm), not fixed to a category.
+const SLOT_HOURS = [10, 14, 18];
+const VIDEO_CATEGORIES = new Set(["movies", "tv", "celebrity"]);
+const MAX_PER_CATEGORY = 2; // owner rule 2026-07-08: newest stories, at most 2 of the same category
+const FRESH_DAYS = 7; // outer bound; newest-first sort means we almost always pick today's/yesterday's
 const STAGGER = { facebook: 0, instagram: 4, youtube: 8, pinterest: 12 };
 
 // ── America/Los_Angeles wall-clock → exact UTC Date (handles PST/PDT automatically)
@@ -52,21 +56,19 @@ function laTodayParts() {
   return { y: +p.year, m: +p.month, d: +p.day };
 }
 
-// base publish instant for a category slot today (bump to tomorrow if already past)
-function slotBase(category) {
+// base publish instant for a given PT hour today (bump to tomorrow if already past)
+function slotBaseAt(hour) {
   const { y, m, d } = laTodayParts();
-  let base = laWallToUTC(y, m, d, SLOTS[category], 0);
+  let base = laWallToUTC(y, m, d, hour, 0);
   if (base.getTime() < Date.now() + 120000) base = new Date(base.getTime() + 864e5);
   return base;
 }
 
-// the LA date (YYYY-MM-DD) whose slots this run would fill — used as the idempotency key so we schedule
-// exactly ONE set per day even if the run fires twice (cron drift double-fire, or manual + cron same day)
+// the LA date (YYYY-MM-DD) whose slots this run would fill — idempotency key so we schedule exactly ONE
+// set per day even if the run fires twice (cron drift double-fire, or manual + cron same day)
 function targetSlotDate() {
-  return new Intl.DateTimeFormat("en-CA", { timeZone: "America/Los_Angeles", year: "numeric", month: "2-digit", day: "2-digit" }).format(slotBase("movies"));
+  return new Intl.DateTimeFormat("en-CA", { timeZone: "America/Los_Angeles", year: "numeric", month: "2-digit", day: "2-digit" }).format(slotBaseAt(SLOT_HOURS[0]));
 }
-
-const catOf = (slug) => { try { return matter(fs.readFileSync(path.join(ROOT, "content/articles", slug + ".md"), "utf8")).data.category; } catch { return null; } };
 
 // slugs that already had a LIVE (non-draft) successful post — cross-run dedup so we never re-post the same video
 function livePostedSlugs() {
@@ -76,17 +78,37 @@ function livePostedSlugs() {
   } catch { return new Set(); }
 }
 
-// ranked candidates for a category (highest priority first, within the window, not already posted).
-// Returns a LIST so the caller can fall back to the next story if the top one is blocked or fails to render.
-function pickCandidates(category, postedSlugs, limit = 8) {
-  const pub = JSON.parse(fs.readFileSync(path.join(ROOT, "data/find/published.json"), "utf8"));
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+const categoryOfSlug = (slug) => { try { return String(matter(fs.readFileSync(path.join(ROOT, "content/articles", slug + ".md"), "utf8")).data.category || "").toLowerCase(); } catch { return null; } };
+
+// Zernio's own docs cite a ~10% IG failure rate → one transient-error retry on the create call
+async function postZernioRetry(opts) {
+  let r = await postZernio(opts);
+  if (!r.ok) { await sleep(4000); const r2 = await postZernio(opts); if (r2.ok) return r2; }
+  return r;
+}
+
+// THE LATEST published articles from BOTH automations (news + gossip both write to content/articles/),
+// newest first, video-eligible categories only, not a rumor, not already posted. Owner rule (2026-07-08):
+// only the latest stories become videos — never old/repeated content.
+function latestArticles(postedSlugs) {
+  const dir = path.join(ROOT, "content/articles");
   const now = Date.now();
-  return pub
-    .filter((r) => r.slug && r.at && now - Date.parse(r.at) < 14 * 864e5)
-    .filter((r) => (r.category || catOf(r.slug)) === category)
-    .filter((r) => !postedSlugs.has(r.slug))
-    .sort((a, b) => (b.priority || 0) - (a.priority || 0))
-    .slice(0, limit);
+  const out = [];
+  for (const f of fs.readdirSync(dir)) {
+    if (!f.endsWith(".md")) continue;
+    const slug = f.slice(0, -3);
+    if (postedSlugs.has(slug)) continue; // strict no-repeat
+    let fm;
+    try { fm = matter(fs.readFileSync(path.join(dir, f), "utf8")).data; } catch { continue; }
+    const category = String(fm.category || "").toLowerCase();
+    if (!VIDEO_CATEGORIES.has(category)) continue;
+    if (String(fm.storyStatus).toUpperCase() === "RUMOR") continue;
+    const date = Date.parse(fm.date || fm.publishedAt || 0);
+    if (!date || now - date > FRESH_DAYS * 864e5) continue; // freshness floor
+    out.push({ slug, category, date, title: fm.title });
+  }
+  return out.sort((a, b) => b.date - a.date); // newest first
 }
 
 // ensure a finished video + sidecar exist for a slug (generate if missing)
@@ -151,8 +173,8 @@ async function postOne({ category, slug, base, draft, dry, immediate }) {
   const thumb = await hostThumb(mp4, slug); // cover image (Pinterest requires it; nicer everywhere)
   const results = {};
   // sequential so the media URL is warm and we never burst
-  results.facebook = await postZernio({ platform: "facebook", videoUrl: host.url, caption: caps.facebook, whenISO: plan.facebook.when, draft });
-  results.instagram = await postZernio({ platform: "instagram", videoUrl: host.url, caption: caps.instagram, whenISO: plan.instagram.when, draft });
+  results.facebook = await postZernioRetry({ platform: "facebook", videoUrl: host.url, caption: caps.facebook, whenISO: plan.facebook.when, draft });
+  results.instagram = await postZernioRetry({ platform: "instagram", videoUrl: host.url, caption: caps.instagram, whenISO: plan.instagram.when, draft });
   results.youtube = await postYouTube({ videoUrl: host.url, thumbnailUrl: thumb.url, caps: caps.youtube, whenISO: plan.youtube.when, draft, immediate });
   results.pinterest = await postPinterest({ videoUrl: host.url, thumbnailUrl: thumb.url, caps: caps.pinterest, articleUrl, boardServiceId: plan.pinterest.board, whenISO: plan.pinterest.when, draft, immediate });
 
@@ -202,40 +224,57 @@ async function main() {
     if (state.date === target) { console.log(`daily set for ${target} already scheduled (${state.count || "?"} videos) — skipping to avoid a double-post.`); return; }
   }
 
-  const cats = only ? [only] : ["movies", "tv", "celebrity"];
   // seed with already-live-posted slugs (cross-run dedup) so daily runs pick fresh stories; forced --slug bypasses this
   const posted = forceSlug ? new Set() : livePostedSlugs();
-  const summary = [];
-  for (const category of cats) {
-    if (!(category in SLOTS)) { console.log(`skip unknown category ${category}`); continue; }
-    // try candidates in priority order until ONE renders + posts — so a blocked/thin top story never drops the whole category
-    const cands = forceSlug ? [{ slug: forceSlug }] : pickCandidates(category, posted);
-    if (!cands.length) { console.log(`[${category}] no candidate article`); continue; }
-    let posted_ok = false;
-    for (const cand of cands) {
-      if (posted.has(cand.slug)) continue;
-      posted.add(cand.slug); // don't retry this slug in a later category
-      try {
-        if (!dry) await ensureVideo(cand.slug); // may throw: sensitive story, thin imagery, gen failure → fall back
-        const base = immediate ? new Date(Date.now() + 120000) : slotBase(category); // --now = ~2 min out (Zernio scheduler lead)
-        const entry = await postOne({ category, slug: cand.slug, base, draft, dry, immediate });
-        summary.push(entry);
-        // for a live immediate post, poll until each platform actually publishes
-        if (immediate && !draft && !dry && entry.results) {
-          console.log("  polling publish status (up to ~3 min)…");
-          const status = await pollPublish(entry);
-          for (const plat of ["facebook", "instagram", "youtube", "pinterest"]) {
-            const s = status[plat];
-            console.log(`    ${plat.padEnd(10)} ${s ? (s.ok ? "✅ PUBLISHED" : "❌ FAILED: " + (s.error || s.status)) + (s.url ? " " + s.url : "") : "⏳ still queued (check dashboard)"}`);
-          }
-        }
-        posted_ok = true;
-        break; // category satisfied
-      } catch (e) {
-        console.log(`[${category}] skip ${cand.slug}: ${String(e.message).slice(0, 110)} — trying next candidate`);
-      }
+
+  // CANDIDATE POOL: forced slug, or the LATEST articles from BOTH automations (newest first)
+  let pool;
+  if (forceSlug) pool = [{ slug: forceSlug, category: only || categoryOfSlug(forceSlug) || "celebrity", date: Date.now() }];
+  else { pool = latestArticles(posted); if (only) pool = pool.filter((c) => c.category === only); }
+
+  // SELECT up to 3 newest, at most MAX_PER_CATEGORY of any category, each must actually render (fallback to next)
+  const want = only || forceSlug ? 1 : 3;
+  const selected = [];
+  const catCount = {};
+  for (const cand of pool) {
+    if (selected.length >= want) break;
+    if (posted.has(cand.slug)) continue;
+    if (!forceSlug && (catCount[cand.category] || 0) >= MAX_PER_CATEGORY) continue;
+    posted.add(cand.slug);
+    if (dry) { selected.push(cand); catCount[cand.category] = (catCount[cand.category] || 0) + 1; continue; }
+    try {
+      await ensureVideo(cand.slug); // may throw: sensitive/thin/gen-failure → fall through to the next-newest story
+      selected.push(cand); catCount[cand.category] = (catCount[cand.category] || 0) + 1;
+    } catch (e) {
+      console.log(`  skip ${cand.slug} [${cand.category}]: ${String(e.message).slice(0, 100)} — trying next-newest`);
     }
-    if (!posted_ok) console.log(`[${category}] ⚠ no postable story after trying ${cands.length} candidate(s)`);
+  }
+  if (dry) {
+    console.log(`\nWould post ${selected.length} (newest-first, max ${MAX_PER_CATEGORY}/category, from news+gossip):`);
+    selected.forEach((c, i) => console.log(`  ${String(SLOT_HOURS[i] ?? 18).padStart(2)}:00 PT  [${c.category}]  ${new Date(c.date).toISOString().slice(0, 10)}  ${c.slug}`));
+    return;
+  }
+  if (!selected.length) console.log("⚠ no fresh, postable story found in the window");
+
+  // POST each selected video into a slot by recency order (newest → 10am, next → 2pm, next → 6pm)
+  const summary = [];
+  for (let i = 0; i < selected.length; i++) {
+    const cand = selected[i];
+    const base = immediate ? new Date(Date.now() + 120000) : slotBaseAt(SLOT_HOURS[i] ?? SLOT_HOURS[SLOT_HOURS.length - 1]);
+    try {
+      const entry = await postOne({ category: cand.category, slug: cand.slug, base, draft, dry, immediate });
+      summary.push(entry);
+      if (immediate && !draft && entry.results) {
+        console.log("  polling publish status (up to ~3 min)…");
+        const status = await pollPublish(entry);
+        for (const plat of ["facebook", "instagram", "youtube", "pinterest"]) {
+          const s = status[plat];
+          console.log(`    ${plat.padEnd(10)} ${s ? (s.ok ? "✅ PUBLISHED" : "❌ FAILED: " + (s.error || s.status)) + (s.url ? " " + s.url : "") : "⏳ still queued (check dashboard)"}`);
+        }
+      }
+    } catch (e) {
+      console.log(`  post error ${cand.slug}: ${String(e.message).slice(0, 120)}`);
+    }
   }
   // record the daily set so a second same-day run (cron double-fire / manual + cron) won't double-post
   if (guarded && summary.length) {

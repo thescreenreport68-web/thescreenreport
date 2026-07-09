@@ -38,7 +38,9 @@ function baseInput({ channelId, videoUrl, thumbnailUrl, text, whenISO, draft, im
     schedulingType: "automatic", // Buffer auto-publishes (no phone-notification step)
     text: text || "",
     tagIds: [],
-    assets: [{ video: { url: videoUrl, thumbnailUrl: thumbnailUrl || undefined } }],
+    // Buffer (2026-07 change) REJECTS thumbnailUrl on a video asset ("never sent to the network").
+    // Cover frame is picked via metadata.video.thumbnailOffset; Pinterest adds a separate image asset below.
+    assets: [{ video: { url: videoUrl, metadata: { thumbnailOffset: 1200 } } }],
     saveToDraft: !!draft,
     aiAssisted: false,
   };
@@ -67,7 +69,8 @@ export function postYouTube({ videoUrl, thumbnailUrl, caps, whenISO, draft, imme
 // Buffer requires an IMAGE asset for Pinterest (the pin cover) alongside the video → send both.
 export function postPinterest({ videoUrl, thumbnailUrl, caps, articleUrl, boardServiceId, whenISO, draft, immediate }) {
   const input = baseInput({ channelId: BUFFER.pinterest, videoUrl, thumbnailUrl, text: caps.description, whenISO, draft, immediate });
-  input.assets = [{ image: { url: thumbnailUrl } }, { video: { url: videoUrl, thumbnailUrl } }];
+  // Pinterest needs a real image asset (the pin cover); the video asset must NOT carry thumbnailUrl (Buffer rejects it)
+  input.assets = [{ image: { url: thumbnailUrl } }, { video: { url: videoUrl, metadata: { thumbnailOffset: 1200 } } }];
   input.metadata = { pinterest: { title: caps.title, url: articleUrl, boardServiceId } };
   return gql(input);
 }
