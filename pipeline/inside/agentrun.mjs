@@ -165,11 +165,16 @@ export async function agentRun({
         await withTimeout(qaReviewImpl(job), AGENTS.qa.watchdogMs, `qa ${tag}`);
         console.log(`  qa: score ${job.qa.score}, blocks ${job.qa.hardBlocks.length}, cuts ${job.qa.cutClaims.length}${job.qa.hardBlocks.length ? " :: " + job.qa.hardBlocks.slice(0, 4).join(" | ") : ""}`);
         if (job.qa.pass) { pass = true; break; }
-        if (job.qa.cutClaims.length) {
+        // ITERATIVE CUTS FIRST (run 11: attempt 1 scored 92 with ONE cuttable claim, but a single
+        // cut-recheck escalated to a full surgical rewrite that mangled quotes). Cutting is
+        // deterministic and safe — keep cutting while cuts remain and nothing hard blocks; hand
+        // the article back to the writer only when cutting alone cannot fix it.
+        for (let cutPass = 0; cutPass < 3 && job.qa.cutClaims.length && !job.qa.hardBlocks.length; cutPass++) {
           cutArticle(job.article, job.qa.cutClaims);
           await withTimeout(qaReviewImpl(job), AGENTS.qa.watchdogMs, `qa-recut ${tag}`);
           if (job.qa.pass) { pass = true; break; }
         }
+        if (pass) break;
         let { block, fixable } = qa.classifyBlocks(job.qa.hardBlocks);
         if (attempt === MAX_ATTEMPTS && block.length === 0 && (job.qa.score || 0) >= ACCEPT_FLOOR) {
           if (job.qa.cutClaims.length) {

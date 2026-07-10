@@ -248,7 +248,7 @@ await check("terminal-accept REFUSED when uncut flagged claims remain (held + pa
   const flagged = () => qaResult({ score: 66, cutClaims: ["The film grossed 999 million dollars"] });
   const report = await agentRun(baseImpls({
     storeImpl: store,
-    qaReviewImpl: scriptedQA([flagged(), flagged(), flagged(), flagged(), flagged(), flagged()]),
+    qaReviewImpl: scriptedQA(Array.from({ length: 14 }, () => flagged())), // iterative cuts consume more reviews now
   }));
   assert.equal(report.published.length, 0, "never publishes with uncut flagged claims");
   assert.equal(report.held.length, 1);
