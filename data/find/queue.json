@@ -1,42 +1,40 @@
 {
-  "runId": "run-2026-07-07T07-01-06",
-  "builtAt": "2026-07-07T07:01:28.821Z",
-  "count": 16,
+  "runId": "run-2026-07-10T13-21-21",
+  "builtAt": "2026-07-10T13:22:05.823Z",
+  "count": 15,
   "topics": [
     {
-      "id": "news-jilly-cooper-a-pressing-engagement-audible-adaptation",
-      "slug": "rhea-norwood-hannah-waddingham-richard-ayoade-set-for-jilly-cooper-aud",
-      "title": "Rhea Norwood, Hannah Waddingham, Richard Ayoade Set for Jilly Cooper Audible Original 'A Pressing Engagement'",
+      "id": "news-next-james-bond-actor-speculation",
+      "slug": "the-next-james-bond-should-be-an-unknown-says-industry-insider",
+      "title": "The Next James Bond Should Be an Unknown, Says Industry Insider",
       "contentType": "news",
       "formatTag": "news",
-      "category": "tv",
+      "category": "movies",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "jilly-cooper-a-pressing-engagement-audible-adaptation",
-      "primaryKeyword": "jilly cooper audible",
-      "primaryEntity": "A Pressing Engagement",
+      "eventSlug": "next-james-bond-actor-speculation",
+      "primaryKeyword": "James Bond actor",
+      "primaryEntity": "James Bond (film series)",
       "entities": [
-        "Rhea Norwood",
-        "Corey Mylchreest",
-        "Hannah Waddingham"
+        "Denis Villeneuve"
       ],
-      "angle": "Jilly Cooper's 'A Pressing Engagement' gets Audible adaptation with star-studded voice cast.",
+      "angle": "Speculation mounts on who will be the next actor to don the iconic spy mantle, with suggestions favoring an unknown talent.",
       "tmdbType": "movie",
-      "source": "rss:Deadline",
+      "source": "rss:IndieWire",
       "sources": [
         {
-          "outlet": "Deadline",
+          "outlet": "IndieWire",
           "tier": 7,
-          "url": "https://deadline.com/2026/07/jilly-cooper-audible-rhea-norwood-corey-mylchreest-hannah-waddingham-1236975169/",
-          "ageMin": 31,
-          "headline": "Jilly Cooper Audible Original A Pressing Engagement To Star Rhea Norwood, Corey Mylchreest, Hannah Waddingham, Richard Ayoade, Vivian Oparah Bessie Carter",
-          "summary": "EXCLUSIVE: Jilly Cooper (Rivals) short story A Pressing Engagement is being adapted by Audible with a voice cast featuring Rhea Norwood (Heartstopper), Corey Mylchreest (Queen Charlotte: A Bridgerton Story), Hannah Waddingham (Ted Lasso), Richard Ayoade (The IT Crowd), Vivian Oparah (Rye Lane) and Bessie Carter (Bridgerton). Set in London in 1978, the show will chart the story of Hester – a secret"
+          "url": "https://www.indiewire.com/features/commentary/next-james-bond-unknown-1235204146/",
+          "ageMin": 21,
+          "headline": "The Next James Bond Should Be an Unknown",
+          "summary": "Who will Denis Villeneuve back as the next James Bond? Perhaps an actor we have never seen before."
         }
       ],
-      "ageMin": 31,
+      "ageMin": 21,
       "_cand": {
-        "key": "rss:jilly-cooper-audible-original-a-pressing-engagement-to-star-",
+        "key": "rss:the-next-james-bond-should-be-an-unknown",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -46,16 +44,16 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Deadline"
+          "IndieWire"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Deadline",
+        "attribution": "IndieWire",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 81,
+      "priority": 87,
       "signals": {
         "recency": 24,
         "corroboration": 12,
@@ -63,111 +61,44 @@
         "type": 9,
         "pop": 0,
         "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "news-the-gatekeeper-film-development",
-      "slug": "matthew-michael-carnahan-to-direct-the-gatekeeper-for-amazon-mgm-studi",
-      "title": "Matthew Michael Carnahan to Direct 'The Gatekeeper' for Amazon MGM Studios",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "high",
-      "eventSlug": "the-gatekeeper-film-development",
-      "primaryKeyword": "the gatekeeper film",
-      "primaryEntity": "The Gatekeeper (film)",
-      "entities": [
-        "Matthew Michael Carnahan",
-        "Brian Helgeland",
-        "Amazon MGM Studios"
-      ],
-      "angle": "Matthew Michael Carnahan to direct 'The Gatekeeper' for Amazon MGM Studios, with Brian Helgeland adapting.",
-      "tmdbType": "movie",
-      "source": "rss:Deadline",
-      "sources": [
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/james-byrne-the-gatekeeper-movie-matthew-michael-carnahan-1236974997/",
-          "ageMin": 549,
-          "headline": "Matthew Michael Carnahan To Direct The Gatekeeper For Amazon MGM Studios Di Bonaventura Pictures; Brian Helgeland Adapting",
-          "summary": "EXCLUSIVE: Mosul filmmaker Matthew Michael Carnahan is set to direct The Gatekeeper, which is in development for Amazon MGM Studios and Di Bonaventura Pictures. The pic is based on New York Times bestselling author James Byrne s novel Deadlock and follows Desmond “Dez” Aloysius Limerick, an unconventional multi-talented ex-operative. After a chance meeting saving the life of a [ ]"
-        }
-      ],
-      "ageMin": 549,
-      "_cand": {
-        "key": "rss:matthew-michael-carnahan-to-direct-the-gatekeeper-for-amazon",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Deadline"
-        ],
-        "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "Deadline",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 72,
-      "signals": {
-        "recency": 4,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
         "big": 24,
         "trending": 0,
         "softTv": 0
       }
     },
     {
-      "id": "reaction-the-odyssey-world-premiere-london",
-      "slug": "christopher-nolan-s-the-odyssey-world-premiere-london-goes-wild-for-ep",
-      "title": "Christopher Nolan's 'The Odyssey' World Premiere: London Goes Wild for Epic at Star-Studded Event",
-      "contentType": "reaction",
-      "formatTag": "reaction",
+      "id": "news-jodie-whittaker-the-country-short-film",
+      "slug": "jodie-whittaker-to-star-in-exec-produce-ella-grace-kennedy-short-the-c",
+      "title": "Jodie Whittaker To Star In Exec Produce Ella Grace Kennedy Short The Country",
+      "contentType": "news",
+      "formatTag": "news",
       "category": "movies",
-      "subcategory": "reactions",
-      "eventType": "reaction",
+      "subcategory": "news",
+      "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "the-odyssey-world-premiere-london",
-      "primaryKeyword": "the odyssey premiere",
-      "primaryEntity": "The Odyssey",
+      "eventSlug": "jodie-whittaker-the-country-short-film",
+      "primaryKeyword": "jodie whittaker the country",
+      "primaryEntity": "Jodie Whittaker",
       "entities": [
-        "The Odyssey (2025 film)",
-        "Christopher Nolan",
-        "Tom Holland",
-        "Zendaya"
+        "The Country Bears",
+        "The Country"
       ],
-      "angle": "Critics and fans react to Christopher Nolan's 'The Odyssey' at its star-studded world premiere in London.",
+      "angle": "Jodie Whittaker to star in and executive produce short film 'The Country'.",
       "tmdbType": "movie",
       "source": "rss:Deadline",
       "sources": [
         {
           "outlet": "Deadline",
           "tier": 7,
-          "url": "https://deadline.com/2026/07/the-odyssey-movie-first-reactions-critics-fanboys-1236975274/",
-          "ageMin": 438,
-          "headline": "The Odyssey : First Reactions From Critics And Fanboys",
-          "summary": "While we knew when 70mm IMAX tickets were selling out a year ago that Christopher Nolan s The Odyssey would be a hit, we now have some confirmation that the film itself lives up to the standard we ve come to expect from the Oscar-winner director of Oppenheimer. Early reactions dropped Monday, and while these are always [ ]"
+          "url": "https://deadline.com/2026/07/jodie-whittaker-to-star-in-dystopian-short-film-the-country-1236979092/",
+          "ageMin": 110,
+          "headline": "Jodie Whittaker To Star In Exec Produce Ella Grace Kennedy Short The Country",
+          "summary": "EXCLUSIVE: Jodie Whittaker will star in and exec produce The Country, a role-reversal short film from filmmaker Ella Grace Kennedy. The cast of the dystopian thriller short also features Eoin McCaul, Anna Popplewell (The Chronicles of Narnia) and Jake Kenny-Byrne (Miss Austen). The Country tackles bodily autonomy, oppression and control through the lens of an extremist religious commune, [ ]"
         }
       ],
-      "ageMin": 438,
+      "ageMin": 110,
       "_cand": {
-        "key": "rss:the-odyssey-first-reactions-from-critics-and-fanboys",
+        "key": "rss:jodie-whittaker-to-star-in-exec-produce-ella-grace-kennedy-s",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -186,12 +117,12 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 69,
+      "priority": 84,
       "signals": {
-        "recency": 4,
+        "recency": 16,
         "corroboration": 12,
         "status": 18,
-        "type": 11,
+        "type": 14,
         "pop": 0,
         "breakout": 0,
         "big": 24,
@@ -200,38 +131,37 @@
       }
     },
     {
-      "id": "reaction-the-odyssey-first-reactions",
-      "slug": "the-odyssey-first-reactions-critics-rave-about-christopher-nolan-s-ast",
-      "title": "'The Odyssey' First Reactions: Critics Rave About Christopher Nolan's Astonishing Epic",
-      "contentType": "reaction",
-      "formatTag": "reaction",
+      "id": "box-office-moana-live-action-box-office-test",
+      "slug": "moana-faces-box-office-test-less-than-two-years-after-franchise-s-last",
+      "title": "Moana Faces Box Office Test, Less Than Two Years After Franchise s Last Big Theatrical Splash",
+      "contentType": "box-office",
+      "formatTag": "box-office",
       "category": "movies",
-      "subcategory": "reactions",
-      "eventType": "reaction",
+      "subcategory": "box-office",
+      "eventType": "boxoffice",
       "sensitivity": "normal",
-      "eventSlug": "the-odyssey-first-reactions",
-      "primaryKeyword": "the odyssey reactions",
-      "primaryEntity": "The Odyssey",
+      "eventSlug": "moana-live-action-box-office-test",
+      "primaryKeyword": "moana live action box office",
+      "primaryEntity": "Moana",
       "entities": [
-        "The Odyssey (2025 film)",
-        "Christopher Nolan"
+        "Dwayne Johnson"
       ],
-      "angle": "Early critical reactions to Christopher Nolan's 'The Odyssey' are overwhelmingly positive, calling it his biggest and most astonishing film to date.",
+      "angle": "Analysis of the box office potential for the upcoming live-action 'Moana' film.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
         {
           "outlet": "THR",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/the-odyssey-premiere-london-film-nolan-holland-zendaya-1236638693/",
-          "ageMin": 525,
-          "headline": "The Odyssey Comes Ashore: London Goes Wild for Christopher Nolan Epic at Star-Studded World Premiere",
-          "summary": "As a Trojan horse towered over Leicester Square, Tom Holland, Zendaya, Matt Damon, Anne Hathaway and Robert Pattinson delighted screaming fans ahead of the world's first screening of Nolan's latest three-hour feat."
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/moana-box-office-test-disney-live-action-dwayne-johnson-1236643385/",
+          "ageMin": 699,
+          "headline": "Moana Faces Box Office Test, Less Than Two Years After Franchise s Last Big Theatrical Splash",
+          "summary": "Dwayne Johnson returns as Maui for Disney's live-action take on the 2016 animated original that recently spawned a mammoth hit with 2024's 'Moana 2.'"
         }
       ],
-      "ageMin": 525,
+      "ageMin": 699,
       "_cand": {
-        "key": "rss:the-odyssey-comes-ashore-london-goes-wild-for-christopher-no",
+        "key": "rss:moana-faces-box-office-test-less-than-two-years-after-franch",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -250,12 +180,12 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 69,
+      "priority": 73,
       "signals": {
         "recency": 4,
         "corroboration": 12,
         "status": 18,
-        "type": 11,
+        "type": 15,
         "pop": 0,
         "breakout": 0,
         "big": 24,
@@ -264,105 +194,38 @@
       }
     },
     {
-      "id": "news-vhs-scp-foundation-movie",
-      "slug": "v-h-s-franchise-taps-scp-foundation-universe-for-new-movie",
-      "title": "'V/H/S' Franchise Taps SCP Foundation Universe for New Movie",
-      "contentType": "news",
-      "formatTag": "news",
+      "id": "box-office-backrooms-box-office-a24-record",
+      "slug": "backrooms-passes-350m-globally-as-it-sets-a24-records-in-multiple-coun",
+      "title": "'Backrooms' Passes $350M Globally as It Sets A24 Records in Multiple Countries",
+      "contentType": "box-office",
+      "formatTag": "box-office",
       "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
+      "subcategory": "box-office",
+      "eventType": "boxoffice",
       "sensitivity": "normal",
-      "eventSlug": "vhs-scp-foundation-movie",
-      "primaryKeyword": "v/h/s scp movie",
-      "primaryEntity": "V/H/S: SCP",
+      "eventSlug": "backrooms-box-office-a24-record",
+      "primaryKeyword": "Backrooms box office",
+      "primaryEntity": "Backrooms",
       "entities": [
-        "Roy Lee",
-        "Steven Schneider",
-        "SCP Foundation"
+        "Backrooms (film)",
+        "A24"
       ],
-      "angle": "The 'V/H/S' horror anthology franchise is expanding with a new installment based on the popular SCP Foundation universe.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/film/news/vhs-anthology-film-scp-foundation-universe-roy-lee-1236802817/",
-          "ageMin": 586,
-          "headline": "V/H/S Franchise Sets New Roy Lee and Steven Schneider-Produced Movie Based on SCP Foundation Universe (EXCLUSIVE)",
-          "summary": "Indie genre label Spooky Pictures and global film and television studio Image Nation Studios are partnering to produce “V/H/S: SCP.” The feature-length project is the latest installment in the long-running “V/H/S” found-footage horror franchise, and the first feature-length addition to the online collective fiction project, the SCP (Special Containment Procedures) Foundation. Roy Lee and Steven [ "
-        }
-      ],
-      "ageMin": 586,
-      "_cand": {
-        "key": "rss:v-h-s-franchise-sets-new-roy-lee-and-steven-schneider-produc",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 67,
-      "signals": {
-        "recency": 4,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "news-myron-bolitar-netflix-casting",
-      "slug": "colin-woodell-kj-apa-diane-guerrero-to-star-in-netflix-s-harlan-coben-",
-      "title": "Colin Woodell, KJ Apa, Diane Guerrero to Star in Netflix's Harlan Coben Series 'Myron Bolitar'",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "myron-bolitar-netflix-casting",
-      "primaryKeyword": "myron bolitar netflix",
-      "primaryEntity": "Myron Bolitar",
-      "entities": [
-        "Colin Woodell",
-        "KJ Apa",
-        "Diane Guerrero",
-        "Harlan Coben"
-      ],
-      "angle": "Netflix is assembling its cast for the upcoming series adaptation of Harlan Coben's 'Myron Bolitar' novels.",
+      "angle": "The film 'Backrooms' has surpassed $350 million globally, setting box office records for A24 in several countries.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
         {
           "outlet": "THR",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/tv/tv-news/colin-woodell-kj-apa-diane-guerrero-netflix-myron-bolitar-1236639007/",
-          "ageMin": 627,
-          "headline": "Colin Woodell, KJ Apa and Diane Guerrero to Lead Netflix s Myron Bolitar",
-          "summary": "The series about a sports agent is based on novels by Harlan Coben."
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/backrooms-passes-350m-globally-1236639400/",
+          "ageMin": 3954,
+          "headline": "Backrooms Passes $350M Globally as It Sets A24 Records in Multiple Countries",
+          "summary": "It stands as the top film for the indie studio in China, France and Taiwan."
         }
       ],
-      "ageMin": 627,
+      "ageMin": 3954,
       "_cand": {
-        "key": "rss:colin-woodell-kj-apa-and-diane-guerrero-to-lead-netflix-s-my",
+        "key": "rss:backrooms-passes-350m-globally-as-it-sets-a24-records-in-mul",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -381,143 +244,12 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 66,
-      "signals": {
-        "recency": 4,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "news-julia-garner-guilty-creatures-apple-tv",
-      "slug": "julia-garner-to-star-in-apple-tv-true-crime-series-guilty-creatures",
-      "title": "Julia Garner to Star in Apple TV+ True Crime Series 'Guilty Creatures'",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "julia-garner-guilty-creatures-apple-tv",
-      "primaryKeyword": "julia garner guilty creatures",
-      "primaryEntity": "Guilty Creatures",
-      "entities": [
-        "Julia Garner",
-        "Apple TV+",
-        "Craig Gillespie",
-        "Stuart Zicherman"
-      ],
-      "angle": "Julia Garner is set to lead Apple TV+'s new true crime series 'Guilty Creatures,' based on a popular book.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/tv/news/julia-garner-apple-tv-guilty-creatures-1236802666/",
-          "ageMin": 631,
-          "headline": "Julia Garner to Star in Apple TV True Crime Series Guilty Creatures From Craig Gillespie, Stuart Zicherman",
-          "summary": "Julia Garner is attached to star in an Apple TV adaptation of the Mikita Brottman true crime book Guilty Creatures: Sex, God, and Murder in Tallahassee, Florida, Variety has learned. The logline for the series states that it delves into the psyche of a torrid romance and subsequent act of murder between two young, adulterous [ ]"
-        }
-      ],
-      "ageMin": 631,
-      "_cand": {
-        "key": "rss:julia-garner-to-star-in-apple-tv-true-crime-series-guilty-cr",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 66,
-      "signals": {
-        "recency": 4,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "news-the-odyssey-world-premiere",
-      "slug": "stars-praise-christopher-nolan-s-the-odyssey-at-world-premiere-this-wa",
-      "title": "Stars Praise Christopher Nolan's 'The Odyssey' at World Premiere: 'This Was His Magnum Opus'",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "the-odyssey-world-premiere",
-      "primaryKeyword": "the odyssey premiere",
-      "primaryEntity": "The Odyssey",
-      "entities": [
-        "Zendaya",
-        "Matt Damon",
-        "Christopher Nolan"
-      ],
-      "angle": "Stars and the director gathered for the world premiere of Christopher Nolan's epic film adaptation 'The Odyssey.'",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/film/global/the-odyssey-world-premiere-london-1236802285/",
-          "ageMin": 744,
-          "headline": "The Odyssey World Premiere Sees Stars Including Zendaya, Matt Damon and More Praise Christopher Nolan’s Epic: ‘This Was His Magnum Opus’",
-          "summary": "The Odyssey has begun its grand voyage. Christopher Nolan s major adaptation of Homer s nearly 3,000 year-old Greek poem and arguably history s most famous epic splashed down in London on Monday for its world premiere, the official launch of what many expect to become among the hottest releases of the summer (something that, given the $250 [ ]"
-        }
-      ],
-      "ageMin": 744,
-      "_cand": {
-        "key": "rss:the-odyssey-world-premiere-sees-stars-including-zendaya-matt",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 64,
+      "priority": 70,
       "signals": {
         "recency": 1,
         "corroboration": 12,
         "status": 18,
-        "type": 9,
+        "type": 15,
         "pop": 0,
         "breakout": 0,
         "big": 24,
@@ -526,9 +258,9 @@
       }
     },
     {
-      "id": "music-news-noah-kahan-rolling-stone-festival",
-      "slug": "noah-kahan-headlines-rolling-stone-s-first-ever-stateside-festival",
-      "title": "Noah Kahan Headlines Rolling Stone’s First Ever Stateside Festival",
+      "id": "music-news-shakira-egypt-concert-2023",
+      "slug": "shakira-returning-to-egypt-for-first-time-in-20-years-for-concert-at-t",
+      "title": "Shakira Returning to Egypt For First Time in 20 Years For Concert at the Great Pyramids of Giza",
       "contentType": "music-news",
       "formatTag": "music-news",
       "category": "music",
@@ -536,49 +268,50 @@
       "eventType": "announcement",
       "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "noah-kahan-rolling-stone-festival",
-      "primaryKeyword": "noah kahan",
-      "primaryEntity": "Noah Kahan",
+      "eventSlug": "shakira-egypt-concert-2023",
+      "primaryKeyword": "Shakira concert",
+      "primaryEntity": "Shakira",
       "entities": [
-        "Rolling Stone"
+        "Great Pyramids of Giza"
       ],
-      "angle": "Noah Kahan headlined Rolling Stone's first-ever festival.",
+      "angle": "Global music superstar Shakira is set to perform her first concert in Egypt in 20 years at the historic Great Pyramids of Giza.",
       "tmdbType": "movie",
-      "source": "rss:THR",
+      "source": "rss:Billboard",
       "sources": [
         {
-          "outlet": "THR",
+          "outlet": "Billboard",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/music/music-news/noah-kahan-headline-rolling-stone-music-festival-1236638943/",
-          "ageMin": 226,
-          "headline": "Noah Kahan Headlines Rolling Stone’s First Ever Stateside Festival",
-          "summary": "The folk superstar played the magazine’s festival days before a series of sold-out shows at Fenway Park this week."
+          "url": "https://www.billboard.com/music/latin/shakira-egypt-concert-great-pyramids-giza-1236291545/",
+          "ageMin": 36,
+          "headline": "Shakira Returning to Egypt For First Time in 20 Years For Concert at the Great Pyramids of Giza",
+          "summary": "The Nov. 28 show is the singer's long-awaited follow-up to her 2007 show at the pyramids on her Oral Fixation tour."
         }
       ],
-      "ageMin": 226,
+      "ageMin": 36,
       "_cand": {
-        "key": "rss:noah-kahan-headlines-rolling-stone-s-first-ever-stateside-fe",
+        "key": "rss:shakira-returning-to-egypt-for-first-time-in-20-years-for-co",
         "popularity": 0,
         "kind": "rss-news"
       },
+      "breakoutVelocity": 0,
       "corroborationCount": 1,
       "verification": {
         "tier1Count": 1,
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "THR"
+          "Billboard"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "THR",
+        "attribution": "Billboard",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 48,
+      "priority": 63,
       "signals": {
-        "recency": 9,
+        "recency": 24,
         "corroboration": 12,
         "status": 18,
         "type": 9,
@@ -590,39 +323,37 @@
       }
     },
     {
-      "id": "news-zendaya-the-odyssey-filming-lines",
-      "slug": "why-zendaya-botched-her-lines-on-first-day-of-the-odyssey-filming-my-m",
-      "title": "Why Zendaya Botched Her Lines on First Day of The Odyssey Filming: My Mouth Was Just Frozen",
+      "id": "news-wildcard-production-company-launch-kneecap",
+      "slug": "ireland-s-wildcard-production-company-makes-splash-with-debut-film-kne",
+      "title": "Ireland's Wildcard Production Company Makes Splash with Debut Film 'Kneecap'",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "zendaya-the-odyssey-filming-lines",
-      "primaryKeyword": "zendaya the odyssey filming",
-      "primaryEntity": "The Odyssey",
+      "eventType": "announcement",
+      "sensitivity": "high",
+      "eventSlug": "wildcard-production-company-launch-kneecap",
+      "primaryKeyword": "kneecap movie",
+      "primaryEntity": "Kneecap",
       "entities": [
-        "The Odyssey (2025 film)",
-        "Zendaya",
-        "Christopher Nolan"
+        "Mia Hansen-Løve"
       ],
-      "angle": "Zendaya discusses a difficult first day of filming for Christopher Nolan's 'The Odyssey' due to botching lines.",
+      "angle": "Irish production company Wildcard launches with its first film, 'Kneecap,' making an impact at Karlovy Vary.",
       "tmdbType": "movie",
-      "source": "rss:THR",
+      "source": "rss:Variety",
       "sources": [
         {
-          "outlet": "THR",
+          "outlet": "Variety",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/zendaya-mouth-frozen-botched-lines-first-day-odyssey-filming-1236639515/",
-          "ageMin": 168,
-          "headline": "Why Zendaya Botched Her Lines on First Day of The Odyssey Filming: My Mouth Was Just Frozen",
-          "summary": "The actress plays Greek goddess Athena in filmmaker Christopher Nolan's latest film."
+          "url": "https://variety.com/2026/film/global/how-irelands-wildcard-made-instant-splash-as-producer-1236805814/",
+          "ageMin": 184,
+          "headline": "From ‘Kneecap’ to a Karlovy Vary Hit to Mia Hansen-Løve’s Next Film: Ireland’s Wildcard Makes Instant Splash as Producer",
+          "summary": "When setting up a production company, most filmmakers hope that the first feature out of the gate at least makes a little bit of noise. Thankfully for Dublin-based Wildcard, “Kneecap” didn’t do anything quietly. Rich Peppiatt’s rowdy, raucous, drug-soaked and politically-charged directorial debut, a comedy almost-biopic about the Northern Irish rap group of the same [ ]"
         }
       ],
-      "ageMin": 168,
+      "ageMin": 184,
       "_cand": {
-        "key": "rss:why-zendaya-botched-her-lines-on-first-day-of-the-odyssey-fi",
+        "key": "rss:from-kneecap-to-a-karlovy-vary-hit-to-mia-hansen-l-ve-s-next",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -632,62 +363,129 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "THR"
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 72,
+      "signals": {
+        "recency": 9,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "music-news-riaa-ifpi-ai-song-tagging-system",
+      "slug": "riaa-ifpi-more-come-together-to-create-system-for-tagging-ai-generated",
+      "title": "RIAA, IFPI More Come Together to Create System for Tagging AI-Generated Songs",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "riaa-ifpi-ai-song-tagging-system",
+      "primaryKeyword": "AI music tagging",
+      "primaryEntity": "Rihanna",
+      "entities": [
+        "RIAA",
+        "IFPI"
+      ],
+      "angle": "Music industry bodies RIAA and IFPI are collaborating to develop a system for tagging AI-generated songs, similar to explicit content labels.",
+      "tmdbType": "movie",
+      "source": "rss:Billboard",
+      "sources": [
+        {
+          "outlet": "Billboard",
+          "tier": 7,
+          "url": "https://www.billboard.com/pro/riaa-ifpi-more-create-system-for-tagging-ai-songs/",
+          "ageMin": 60,
+          "headline": "RIAA, IFPI More Come Together to Create System for Tagging AI-Generated Songs",
+          "summary": "Working similarly to explicit labels on records, the tags will distinguish between \"AI-generated\" and \"AI-assisted\" songs."
+        }
+      ],
+      "ageMin": 60,
+      "_cand": {
+        "key": "rss:riaa-ifpi-more-come-together-to-create-system-for-tagging-ai",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "breakoutVelocity": 0,
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Billboard"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "THR",
+        "attribution": "Billboard",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
       "priority": 63,
       "signals": {
-        "recency": 16,
+        "recency": 24,
         "corroboration": 12,
         "status": 18,
-        "type": 5,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
-        "big": 12,
+        "big": 0,
         "trending": 0,
         "softTv": 0
       }
     },
     {
-      "id": "news-zendaya-the-odyssey-casting-news",
-      "slug": "the-unusual-way-zendaya-found-out-she-was-up-for-a-prime-role-in-the-o",
-      "title": "The Unusual Way Zendaya Found Out She Was Up For A Prime Role In The Odyssey",
+      "id": "news-european-tv-film-news-roundup-sky-itv-banijay-all3-emmys",
+      "slug": "international-insider-sky-buys-itv-banijay-all3-complete-merger-emmy-n",
+      "title": "International Insider: Sky Buys ITV; Banijay-All3 Complete Merger; Emmy Noms",
       "contentType": "news",
       "formatTag": "news",
-      "category": "movies",
+      "category": "tv",
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "zendaya-the-odyssey-casting-news",
-      "primaryKeyword": "zendaya the odyssey casting",
-      "primaryEntity": "The Odyssey",
+      "eventSlug": "european-tv-film-news-roundup-sky-itv-banijay-all3-emmys",
+      "primaryKeyword": "European TV film news",
+      "primaryEntity": "Sky",
       "entities": [
-        "The Odyssey (2025 film)",
-        "Zendaya",
-        "Christopher Nolan"
+        "ITV",
+        "Banijay",
+        "All3Media",
+        "Emmy Awards"
       ],
-      "angle": "Zendaya reveals the unusual way she found out about her casting in Christopher Nolan's 'The Odyssey'.",
+      "angle": "A roundup of major European TV and film industry developments, including Sky's acquisition of ITV, the completion of the Banijay-All3Media merger, and Emmy nominations.",
       "tmdbType": "movie",
       "source": "rss:Deadline",
       "sources": [
         {
           "outlet": "Deadline",
           "tier": 7,
-          "url": "https://deadline.com/2026/07/how-zendaya-found-out-odyssey-role-1236975367/",
-          "ageMin": 223,
-          "headline": "The Unusual Way Zendaya Found Out She Was Up For A Prime Role In The Odyssey",
-          "summary": "Zendaya may play the all-knowing goddess Athena in Christopher Nolan s epic adaptation of The Odyssey, but the actress was not nearly so omniscient about her casting in the film. In fact, she didn t even know she was up for it. Turns out, it was her husband who told her. I was already excited, she said [ ]"
+          "url": "https://deadline.com/2026/07/international-insider-sky-itv-banijay-all3-complete-merger-1236978483/",
+          "ageMin": 81,
+          "headline": "International Insider: Sky Buys ITV; Banijay-All3 Complete Merger; Emmy Noms",
+          "summary": "Hello again, Insider Squad. Jesse Whittock here to update you on the top headlines from the world of TV and film this week, as Europe went M A crazy. Here s what happened but before that sign up to the newsletter for the full Insider experience. First, Sky Buys ITV New Sky thinking: It was the week [ ]"
         }
       ],
-      "ageMin": 223,
+      "ageMin": 81,
       "_cand": {
-        "key": "rss:the-unusual-way-zendaya-found-out-she-was-up-for-a-prime-rol",
+        "key": "rss:international-insider-sky-buys-itv-banijay-all3-complete-mer",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -706,53 +504,182 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 56,
+      "priority": 57,
       "signals": {
-        "recency": 9,
+        "recency": 16,
         "corroboration": 12,
         "status": 18,
         "type": 5,
         "pop": 0,
         "breakout": 0,
-        "big": 12,
+        "big": 6,
         "trending": 0,
         "softTv": 0
       }
     },
     {
-      "id": "news-orbital-studios-moves-to-television-city",
-      "slug": "orbital-studios-moving-to-television-city-in-los-angeles",
-      "title": "Orbital Studios Moving To Television City In Los Angeles",
+      "id": "news-paul-feig-detention-horror-movie",
+      "slug": "paul-feig-to-direct-horror-movie-detention-for-blumhouse-atomic-monste",
+      "title": "Paul Feig to Direct Horror Movie 'Detention' for Blumhouse Atomic Monster",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "paul-feig-detention-horror-movie",
+      "primaryKeyword": "detention movie",
+      "primaryEntity": "Detention",
+      "entities": [
+        "Detention (film)",
+        "Paul Feig",
+        "Blumhouse Atomic Monster"
+      ],
+      "angle": "Paul Feig is set to direct the new horror film 'Detention' for Blumhouse Atomic Monster.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/paul-feig-direct-horror-movie-detention-1236627366/",
+          "ageMin": 969,
+          "headline": "Paul Feig to Direct Horror Movie Detention for Blumhouse Atomic Monster",
+          "summary": "Daniel Gold, who wrote the upcoming Ryan Gosling-Will Ferrell movie 'Tough Guys,' penned the feature as a spec, which also has Michael Bay’s Platinum Dunes involved."
+        }
+      ],
+      "ageMin": 969,
+      "_cand": {
+        "key": "rss:paul-feig-to-direct-horror-movie-detention-for-blumhouse-ato",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 69,
+      "signals": {
+        "recency": 1,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-jennifer-garner-the-five-star-weekend",
+      "slug": "jennifer-garner-on-working-with-a-group-of-women-for-the-first-time-on",
+      "title": "Jennifer Garner on Working With a Group of Women for the First Time on 'The Five Star Weekend'",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "jennifer-garner-the-five-star-weekend",
+      "primaryKeyword": "The Five Star Weekend",
+      "primaryEntity": "The Five Star Weekend",
+      "entities": [
+        "The Five Star Weekend (film)",
+        "Jennifer Garner",
+        "Regina Hall",
+        "Chloë Sevigny"
+      ],
+      "angle": "Jennifer Garner discusses working with an all-female cast for the first time in 'The Five Star Weekend'.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/tv/tv-news/jennifer-garner-women-the-five-star-weekend-food-influencer-1236643217/",
+          "ageMin": 1084,
+          "headline": "Jennifer Garner on Working With a Group of Women for the First Time on The Five Star Weekend and Channeling Her Inner Food Influencer",
+          "summary": "Garner stars alongside Regina Hall, Chloë Sevigny, Gemma Chan and D'Arcy Carden in the adaptation of Elin Hilderbrand's hit novel."
+        }
+      ],
+      "ageMin": 1084,
+      "_cand": {
+        "key": "rss:jennifer-garner-on-working-with-a-group-of-women-for-the-fir",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 69,
+      "signals": {
+        "recency": 1,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-big-brother-tribute-mickey-lee-season-28",
+      "slug": "big-brother-pays-tribute-to-mickey-lee-during-season-28-premiere",
+      "title": "Big Brother Pays Tribute To Mickey Lee During Season 28 Premiere",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "orbital-studios-moves-to-television-city",
-      "primaryKeyword": "orbital studios",
-      "primaryEntity": "Orbital Studios",
+      "eventSlug": "big-brother-tribute-mickey-lee-season-28",
+      "primaryKeyword": "big brother mickey lee tribute",
+      "primaryEntity": "Big Brother",
       "entities": [
-        "FX's A Christmas Carol",
-        "Netflix",
-        "FX"
+        "Mickey Lee"
       ],
-      "angle": "Virtual production company Orbital Studios is relocating its operations to Television City in Los Angeles.",
+      "angle": "Big Brother pays tribute to alum Mickey Lee during the Season 28 premiere.",
       "tmdbType": "movie",
       "source": "rss:Deadline",
       "sources": [
         {
           "outlet": "Deadline",
           "tier": 7,
-          "url": "https://deadline.com/2026/07/orbital-studios-moving-to-television-city-los-angeles-1236975338/",
-          "ageMin": 271,
-          "headline": "Orbital Studios Moving To Television City In Los Angeles",
-          "summary": "Virtual production company Orbital Studios has a new brick-and-mortar home. The producer whose credits include Netflix s Nemesis and FX s upcoming The Drop: A Snowfall Saga is setting up shop at Television City in Los Angeles. Established in 2020, Orbital Studios offers art teams, tools, software and pipelines aimed at making virtual production faster, leaner and [ ]"
+          "url": "https://deadline.com/2026/07/big-brother-tribute-mickey-lee-season-28-premiere-1236979049/",
+          "ageMin": 310,
+          "headline": "Big Brother Pays Tribute To Mickey Lee During Season 28 Premiere",
+          "summary": "Big Brother paid tribute to alum Mickey Lee during the Season 28 premiere on CBS. Right before the new season of the reality TV competition started with the introduction of the new houseguests entering the game, a title card in honor of Lee appeared. In loving memory, read the card paying tribute to Lee, which [ ]"
         }
       ],
-      "ageMin": 271,
+      "ageMin": 310,
       "_cand": {
-        "key": "rss:orbital-studios-moving-to-television-city-in-los-angeles",
+        "key": "rss:big-brother-pays-tribute-to-mickey-lee-during-season-28-prem",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -785,38 +712,169 @@
       }
     },
     {
-      "id": "news-robert-pattinson-compares-odyssey-character-to-jacob-twilight",
-      "slug": "robert-pattinson-compares-the-odyssey-character-to-jacob-in-twilight",
-      "title": "Robert Pattinson Compares The Odyssey Character to Jacob in Twilight",
+      "id": "music-news-cage-the-elephant-big-loud-rock-signing",
+      "slug": "cage-the-elephant-signs-with-big-loud-rock",
+      "title": "Cage the Elephant Signs With Big Loud Rock",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "cage-the-elephant-big-loud-rock-signing",
+      "primaryKeyword": "Cage the Elephant",
+      "primaryEntity": "Cage The Elephant",
+      "entities": [
+        "Cage the Elephant",
+        "Big Loud Rock"
+      ],
+      "angle": "Established rock band Cage the Elephant signs with new label Big Loud Rock and releases new single.",
+      "tmdbType": "movie",
+      "source": "rss:Billboard",
+      "sources": [
+        {
+          "outlet": "Billboard",
+          "tier": 7,
+          "url": "https://www.billboard.com/pro/cage-the-elephant-signs-big-loud-rock/",
+          "ageMin": 81,
+          "headline": "Cage the Elephant Signs With Big Loud Rock",
+          "summary": "The group has also released the new song \"Beaches in Tennessee.\""
+        }
+      ],
+      "ageMin": 81,
+      "_cand": {
+        "key": "rss:cage-the-elephant-signs-with-big-loud-rock",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "breakoutVelocity": 0,
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Billboard"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Billboard",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 55,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "music-news-bts-the-city-arirang-new-york",
+      "slug": "bts-bringing-immersive-bts-the-city-arirang-to-new-york",
+      "title": "BTS Bringing Immersive BTS The City Arirang To New York",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "bts-the-city-arirang-new-york",
+      "primaryKeyword": "BTS The City Arirang",
+      "primaryEntity": "BTS",
+      "entities": [
+        "The City Arirang"
+      ],
+      "angle": "Global phenomenon BTS is bringing its immersive 'BTS The City Arirang' exhibition to New York.",
+      "tmdbType": "movie",
+      "source": "rss:Billboard",
+      "sources": [
+        {
+          "outlet": "Billboard",
+          "tier": 7,
+          "url": "https://www.billboard.com/music/pop/bts-immersive-bts-the-city-arirang-new-york-1236291524/",
+          "ageMin": 98,
+          "headline": "BTS Bringing Immersive BTS The City Arirang To New York",
+          "summary": "The traveling exhibition has already taken place in Seoul, Las Vegas, Busan and London ahead of the group's shows in those cities."
+        }
+      ],
+      "ageMin": 98,
+      "_cand": {
+        "key": "rss:bts-bringing-immersive-bts-the-city-arirang-to-new-york",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "breakoutVelocity": 0,
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Billboard"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Billboard",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 55,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-julian-schnabel-lifetime-honor-lucca-festival",
+      "slug": "julian-schnabel-to-receive-lifetime-honor-at-lucca-festival",
+      "title": "Julian Schnabel to Receive Lifetime Honor at Lucca Festival",
       "contentType": "news",
       "formatTag": "news",
-      "category": "movies",
+      "category": "celebrity",
       "subcategory": "news",
-      "eventType": "other",
+      "eventType": "award",
       "sensitivity": "normal",
-      "eventSlug": "robert-pattinson-compares-odyssey-character-to-jacob-twilight",
-      "primaryKeyword": "robert pattinson",
-      "primaryEntity": "Robert Pattinson",
+      "eventSlug": "julian-schnabel-lifetime-honor-lucca-festival",
+      "primaryKeyword": "julian schnabel",
+      "primaryEntity": "Julian Schnabel",
       "entities": [
-        "The Odyssey",
-        "Twilight"
+        "The Diving Bell and the Butterfly",
+        "Before Night Falls"
       ],
-      "angle": "Robert Pattinson draws a parallel between his character in 'The Odyssey' and Jacob from 'Twilight'.",
+      "angle": "Director Julian Schnabel to receive a lifetime honor and retrospective at the Lucca Festival.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
         {
           "outlet": "THR",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/robert-pattinson-compares-the-odyssey-role-jacob-twilight-1236639465/",
-          "ageMin": 355,
-          "headline": "Robert Pattinson Compares The Odyssey Character to Jacob in Twilight",
-          "summary": "The actor plays the primary antagonist Antinous in Christopher Nolan's epic action-fantasy film."
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/julian-schnabel-lifetime-honor-at-lucca-festival-1236643802/",
+          "ageMin": 185,
+          "headline": "Julian Schnabel to Get Lifetime Honor at Lucca Festival",
+          "summary": "The artist and director of 'The Diving Bell and the Butterfly' and 'Before Night Falls' will receive a retrospective at the Italian event, which runs Sept.26-Oct.4."
         }
       ],
-      "ageMin": 355,
+      "ageMin": 185,
       "_cand": {
-        "key": "rss:robert-pattinson-compares-the-odyssey-character-to-jacob-in-",
+        "key": "rss:julian-schnabel-to-get-lifetime-honor-at-lucca-festival",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -835,76 +893,12 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 56,
+      "priority": 53,
       "signals": {
         "recency": 9,
         "corroboration": 12,
         "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 12,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "news-tiffany-haddish-george-stephanopoulos-taylor-swift-wedding",
-      "slug": "tiffany-haddish-can-t-believe-george-stephanopoulos-got-taylor-swift-w",
-      "title": "Tiffany Haddish Can't Believe George Stephanopoulos Got Taylor Swift Wedding Invite and She Didn't",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "tiffany-haddish-george-stephanopoulos-taylor-swift-wedding",
-      "primaryKeyword": "tiffany haddish taylor swift wedding",
-      "primaryEntity": "Tiffany Haddish",
-      "entities": [
-        "Taylor Swift",
-        "George Stephanopoulos"
-      ],
-      "angle": "Comedian Tiffany Haddish expresses disbelief at not receiving a Taylor Swift wedding invitation while George Stephanopoulos did.",
-      "tmdbType": "movie",
-      "source": "rss:TheWrap",
-      "sources": [
-        {
-          "outlet": "TheWrap",
-          "tier": 7,
-          "url": "https://www.thewrap.com/creative-content/tv-shows/tiffany-haddish-reacts-taylor-swift-wedding-invite-snub/",
-          "ageMin": 107,
-          "headline": "Tiffany Haddish Can t Believe George Stephanopoulos Got Taylor Swift Wedding Invite and She Didn t: ‘The F—k?!’",
-          "summary": "“What a waste. All those sexy men in tuxedos and no Tiffany to make them feel beautiful,” the comedian adds The post Tiffany Haddish Can t Believe George Stephanopoulos Got Taylor Swift Wedding Invite and She Didn t: ‘The F—k?!’ appeared first on TheWrap ."
-        }
-      ],
-      "ageMin": 107,
-      "_cand": {
-        "key": "rss:tiffany-haddish-can-t-believe-george-stephanopoulos-got-tayl",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "TheWrap"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "TheWrap",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 51,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
+        "type": 14,
         "pop": 0,
         "breakout": 0,
         "big": 0,
@@ -913,104 +907,39 @@
       }
     },
     {
-      "id": "news-yungblud-industry-plant-accusations-sza-scott-ian",
-      "slug": "yungblud-backed-by-sza-scott-ian-more-after-responding-to-industry-pla",
-      "title": "Yungblud Backed by SZA, Scott Ian More After Responding to ‘Industry Plant’ Accusations",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "yungblud-industry-plant-accusations-sza-scott-ian",
-      "primaryKeyword": "yungblud industry plant accusations",
-      "primaryEntity": "YUNGBLUD",
-      "entities": [
-        "Yungblud",
-        "SZA",
-        "Scott Ian"
-      ],
-      "angle": "Musician Yungblud receives support from SZA and Scott Ian after addressing 'industry plant' accusations.",
-      "tmdbType": "movie",
-      "source": "rss:Billboard",
-      "sources": [
-        {
-          "outlet": "Billboard",
-          "tier": 7,
-          "url": "https://www.billboard.com/music/music-news/yungblud-support-sza-scott-ian-1236288667/",
-          "ageMin": 115,
-          "headline": "Yungblud Backed by SZA, Scott Ian More After Responding to ‘Industry Plant’ Accusations",
-          "summary": "\"To be truthful. Recently, I’ve been really struggling,” Yungblud wrote."
-        }
-      ],
-      "ageMin": 115,
-      "_cand": {
-        "key": "rss:yungblud-backed-by-sza-scott-ian-more-after-responding-to-in",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Billboard"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Billboard",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 51,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "news-danny-mcbride-tropic-thunder-today",
-      "slug": "danny-mcbride-disagrees-with-ben-stiller-and-thinks-tropic-thunder-cou",
-      "title": "Danny McBride Disagrees With Ben Stiller and Thinks Tropic Thunder Could Actually Get Made Today",
+      "id": "news-secretary-live-reading-jane-schoenbrun",
+      "slug": "teenage-sex-and-death-at-camp-miasma-director-cast-set-secretary-live-",
+      "title": "Teenage Sex and Death At Camp Miasma Director Cast Set Secretary Live Reading",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "danny-mcbride-tropic-thunder-today",
-      "primaryKeyword": "Tropic Thunder",
-      "primaryEntity": "Tropic Thunder",
+      "sensitivity": "high",
+      "eventSlug": "secretary-live-reading-jane-schoenbrun",
+      "primaryKeyword": "secretary live reading",
+      "primaryEntity": "Secretary",
       "entities": [
-        "Danny McBride",
-        "Ben Stiller"
+        "Jane Schoenbrun",
+        "Film Independent",
+        "Mubi"
       ],
-      "angle": "Danny McBride believes 'Tropic Thunder' could be made today, disagreeing with Ben Stiller.",
+      "angle": "Director and cast of 'Teenage Sex and Death' to do a live reading of erotic film 'Secretary'.",
       "tmdbType": "movie",
-      "source": "rss:TheWrap",
+      "source": "rss:Deadline",
       "sources": [
         {
-          "outlet": "TheWrap",
+          "outlet": "Deadline",
           "tier": 7,
-          "url": "https://www.thewrap.com/creative-content/movies/danny-mcbride-thinks-tropic-thunder-could-get-made-today/",
-          "ageMin": 431,
-          "headline": "Danny McBride Disagrees With Ben Stiller and Thinks Tropic Thunder Could Actually Get Made Today",
-          "summary": "\"The Righteous Gemstones\" actor argues that not just anyone could have gotten away with the controversial R-rated satire film, though The post Danny McBride Disagrees With Ben Stiller and Thinks Tropic Thunder Could Actually Get Made Today appeared first on TheWrap ."
+          "url": "https://deadline.com/2026/07/teenage-sex-and-death-at-camp-miasma-secretary-live-reading-1236979016/",
+          "ageMin": 616,
+          "headline": "Teenage Sex and Death At Camp Miasma Director Cast Set Secretary Live Reading",
+          "summary": "Nearly 25 years, Secretary will get a one-night-only revival by the director and cast of another erotic title, thanks to Film Independent and Mubi. Jane Schoenbrun, writer/director of Teenage Sex and Death at Camp Miasma, will direct the cast of their upcoming Mubi film in a live reading of the 2002 Steven Shainberg-helmed erotic romance, [ ]"
         }
       ],
-      "ageMin": 431,
+      "ageMin": 616,
       "_cand": {
-        "key": "rss:danny-mcbride-disagrees-with-ben-stiller-and-thinks-tropic-t",
+        "key": "rss:teenage-sex-and-death-at-camp-miasma-director-cast-set-secre",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -1020,11 +949,11 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "TheWrap"
+          "Deadline"
         ],
         "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "TheWrap",
+        "sensitivity": "high",
+        "attribution": "Deadline",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
