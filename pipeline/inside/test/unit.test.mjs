@@ -10,6 +10,7 @@ import { run as writerRun } from "../agents/writer.mjs";
 import { factLocks, review as qaReview, webCheck as qaWebCheck, classifyBlocks } from "../agents/qa.mjs";
 import { buildInsideMarkdown } from "../assemble.mjs";
 import { discoverReddit, redditSearchPosts, redditTopComments } from "../../find/sources/reddit.mjs";
+import { gnewsArticleId, decodeGnewsBase64, decodeGnewsUrl } from "../../lib/gnewsDecode.mjs";
 import { discoverStories } from "../discover.mjs";
 import { norm, quoteIsVerbatim, meetsFloor, fallbackQueries } from "../reactionFinder.mjs";
 import { routeForStory, MAX_EMBEDS } from "../config.inside.mjs";
@@ -587,6 +588,73 @@ await check("routeForStory maps every category", () => {
   assert.deepEqual(routeForStory({ category: "celebrity" }), { category: "celebrity", subcategory: "news" });
   assert.deepEqual(routeForStory({ category: "music" }), { category: "music", subcategory: "news" });
   assert.deepEqual(routeForStory({ category: "unknown-x" }), { category: "celebrity", subcategory: "news" });
+});
+
+
+// ── gnewsDecode.mjs: keyless Google-News redirect decoding (the datacenter-runner supply fix) ────
+console.log("— gnewsDecode.mjs —");
+
+await check("gnewsArticleId parses rss/articles, articles and read paths; rejects non-gnews", () => {
+  assert.equal(gnewsArticleId("https://news.google.com/rss/articles/ABC123?oc=5"), "ABC123");
+  assert.equal(gnewsArticleId("https://news.google.com/articles/XYZ_9-8"), "XYZ_9-8");
+  assert.equal(gnewsArticleId("https://news.google.com/read/QQ#frag"), "QQ");
+  assert.equal(gnewsArticleId("https://variety.com/rss/articles/ABC"), null);
+  assert.equal(gnewsArticleId("not a url"), null);
+});
+
+await check("decodeGnewsBase64 pulls the embedded publisher URL from a legacy blob", () => {
+  const url = "https://variety.com/2026/film/news/some-story-1236012345/";
+  const blob = "\x08\x13\x22" + String.fromCharCode(url.length) + url + "\xd2\x01\x00";
+  const id = Buffer.from(blob, "latin1").toString("base64").replace(/\+/g, "-").replace(/\//g, "_");
+  assert.equal(decodeGnewsBase64(id), url);
+});
+
+await check("decodeGnewsBase64 skips google/amp URLs (incl. bare host) and returns null on garbage", () => {
+  const g = "https://news.google.com";
+  const a = "https://cdn.ampproject.org/y";
+  const blob = "\x22" + String.fromCharCode(g.length) + g + "\x22" + String.fromCharCode(a.length) + a;
+  const id = Buffer.from(blob, "latin1").toString("base64");
+  assert.equal(decodeGnewsBase64(id), null);
+  assert.equal(decodeGnewsBase64("AU_yqLNoUrlHere"), null);
+});
+
+await check("decodeGnewsBase64 exact-field parse: no glued trailing byte, no UTF-8 truncation", () => {
+  const url = "https://variety.com/2026/film/story-123/";
+  // printable tag byte 'B' RIGHT AFTER the field — the old regex glued it onto the URL
+  const glued = "\x22" + String.fromCharCode(url.length) + url + "B\x00";
+  assert.equal(decodeGnewsBase64(Buffer.from(glued, "latin1").toString("base64")), url);
+  // raw UTF-8 byte INSIDE the field — the old regex truncated at it and returned a wrong prefix
+  const utf = "https://variety.com/caf\xe9-story/";
+  const trunc = "\x22" + String.fromCharCode(utf.length) + utf + "\x00";
+  assert.equal(decodeGnewsBase64(Buffer.from(trunc, "latin1").toString("base64")), null);
+});
+
+await check("decodeGnewsUrl falls back to batchexecute and parses the RPC response", async () => {
+  const real = "https://deadline.com/2026/07/fans-react-story/";
+  const calls = [];
+  const fetchImpl = async (u, opts = {}) => {
+    calls.push(u);
+    if (String(u).includes("/rss/articles/")) {
+      return { ok: true, text: async () => '<c-wiz data-n-a-sg="SIG9" data-n-a-ts="1720000000"></c-wiz>' };
+    }
+    assert.ok(String(u).includes("batchexecute"));
+    assert.ok(String(opts.body).includes("SIG9"));
+    const payload = JSON.stringify(["garturlres", real]);
+    return { ok: true, text: async () => ")]}'\n\n123\n" + JSON.stringify([["wrb.fr", "Fbv4je", payload, null, null, null, "generic"]]) };
+  };
+  // AU_-prefixed id → fast path yields nothing → network path (cache-busted with a unique id)
+  assert.equal(await decodeGnewsUrl("https://news.google.com/rss/articles/AU_testONE?oc=5", { fetchImpl }), real);
+  // cached: no further fetches
+  const n = calls.length;
+  assert.equal(await decodeGnewsUrl("https://news.google.com/rss/articles/AU_testONE", { fetchImpl }), real);
+  assert.equal(calls.length, n);
+});
+
+await check("decodeGnewsUrl returns null (and caches it) when the page has no signature", async () => {
+  const fetchImpl = async (u) => ({ ok: true, text: async () => "<html>consent wall</html>" });
+  assert.equal(await decodeGnewsUrl("https://news.google.com/rss/articles/AU_testTWO", { fetchImpl }), null);
+  const boom = async () => { throw new Error("no network allowed on cache hit"); };
+  assert.equal(await decodeGnewsUrl("https://news.google.com/rss/articles/AU_testTWO", { fetchImpl: boom }), null);
 });
 
 console.log(`\n=== UNIT: ${pass} passed, ${fail} failed ===`);

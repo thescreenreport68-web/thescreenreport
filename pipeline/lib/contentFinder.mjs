@@ -20,6 +20,7 @@
 // The trend layer says a topic is HOT; this layer gathers the TRUTH the writer must stay inside. Nothing here
 // proves a claim — verification diffs every claim against THIS bundle. Cost: $0 (all sources free).
 import { extract } from "@extractus/article-extractor";
+import { decodeGnewsUrl } from "./gnewsDecode.mjs";
 import { gdeltArticles } from "./news.mjs";
 import { DOMAIN_OWNER, MAJORS, dom, canonOwner, tierFor, OUTLET_NAME_OWNER, isAggregator, titleNamesEntity, nameTier } from "./outlets.mjs";
 export { canonOwner, tierFor }; // long-standing re-exports (tests + callers import them from here)
@@ -141,26 +142,36 @@ export function buildGdeltQuery(topic) {
 // gives the hero picker a real article page to pull og:image from.
 async function extractOne(url, { gnewsRedirect = false } = {}) {
   if (!safeHttpUrl(url)) return null;
-  if (!gnewsRedirect) {
+  // Keyless decode of a Google-News redirect (base64 fast path → batchexecute) so the DIRECT
+  // extractor gets a real publisher page. Anonymous Jina is blocked from datacenter IPs (GitHub
+  // runners) — redirect-only extraction died there (2026-07-10 inside-lane cloud run). Decode
+  // failure falls through to the proven Jina URL-Source path below, byte-for-byte unchanged.
+  let target = url;
+  if (gnewsRedirect) {
+    const real = await decodeGnewsUrl(url).catch(() => null);
+    if (real && safeHttpUrl(real)) target = real;
+  }
+  if (!gnewsRedirect || target !== url) {
     try {
-      const a = await withTimeout(extract(url), EXTRACTOR_MS);
+      const a = await withTimeout(extract(target), EXTRACTOR_MS);
       if (a && a.content) {
         const text = htmlToText(a.content);
-        if (text.length > 350) return { resolvedUrl: a.url || url, title: a.title || null, text, published: a.published || null, via: "extractor" };
+        if (text.length > 350) return { resolvedUrl: a.url || target, title: a.title || null, text, published: a.published || null, via: target !== url ? "gnews-decode" : "extractor" };
       }
     } catch { /* fall through */ }
   }
   try {
     const h = { "User-Agent": UA };
     if (JINA_KEY) h["Authorization"] = "Bearer " + JINA_KEY;
-    const r = await withTimeout(fetch("https://r.jina.ai/" + url, { headers: h, signal: AbortSignal.timeout(JINA_MS) }), JINA_MS + 1000);
+    // A decoded target also improves the Jina pass: the real page, not the JS interstitial.
+    const r = await withTimeout(fetch("https://r.jina.ai/" + target, { headers: h, signal: AbortSignal.timeout(JINA_MS) }), JINA_MS + 1000);
     if (r.ok) {
       const raw = await r.text();
       const resolved = (raw.match(/URL Source:\s*(\S+)/i) || [])[1] || "";
       const bodyIdx = raw.indexOf("Markdown Content:");
       const text = mdToText(bodyIdx >= 0 ? raw.slice(bodyIdx + 17) : raw);
       if (text.length > 350) {
-        return { resolvedUrl: /^https?:\/\//.test(resolved) && safeHttpUrl(resolved) ? resolved : (gnewsRedirect ? null : url), title: null, text: text.slice(0, 9000), published: null, via: "jina" };
+        return { resolvedUrl: /^https?:\/\//.test(resolved) && safeHttpUrl(resolved) ? resolved : (gnewsRedirect && target === url ? null : target), title: null, text: text.slice(0, 9000), published: null, via: "jina" };
       }
     }
   } catch { /* fall through */ }

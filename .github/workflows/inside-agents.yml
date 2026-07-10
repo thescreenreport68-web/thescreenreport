@@ -63,6 +63,7 @@ jobs:
           LASTFM_API_KEY: ${{ secrets.LASTFM_API_KEY }}
           JINA_API_KEY: ${{ secrets.JINA_API_KEY }}
           INSIDE_PACE_MS: "12000"        # free-tier pacing between stories
+          INSIDE_DIAG: "1"               # supply probes + per-story harvest telemetry in the log
           MAX_ARTICLES_PER_DAY: "30"     # owner volume knob
           MAX_RUN_COST_USD: "0.50"       # hard spend cap per tick
           INSIDE_REVIEW_DIR: ${{ github.event.inputs.review == 'true' && 'data/inside/review' || '' }}

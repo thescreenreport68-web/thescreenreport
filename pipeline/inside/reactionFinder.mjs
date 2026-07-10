@@ -182,6 +182,12 @@ JSON: {"comments":[{"i":0,"aboutSubject":true,"stance":"positive|negative|mixed|
   }
 }
 
+// Harvest telemetry, gated on INSIDE_DIAG=1 (the 24/7 workflow sets it): every supply step logs
+// what it actually delivered, so a starved cloud run diagnoses from the Actions log in one look
+// instead of guessing which free tier / datacenter block ate the material. Log-only — no behavior.
+const DIAG = process.env.INSIDE_DIAG === "1";
+const diag = (...a) => { if (DIAG) console.log("    [diag]", ...a); };
+
 export async function harvestReactions(trigger, angle, {
   findContentImpl = findContent,
   chatImpl = chat,
@@ -229,8 +235,9 @@ export async function harvestReactions(trigger, angle, {
       // already carries many named voices, so 5 sources is ample for the floors.
       { maxSources: 5, maxExtract: 5, corroborate: true },
     ).catch(() => ({ blocked: true, reason: "finder error" }));
-    if (b.blocked) return false;
+    if (b.blocked) { diag(`q="${q}" → BLOCKED (${b.reason || "?"})`); return false; }
     const fresh = (b.sources || []).filter((s) => (s.text || "").length > 200 && (!s.url || !seenUrl.has(s.url)));
+    diag(`q="${q}" → sources ${(b.sources || []).length} (fresh ${fresh.length})${fresh.length ? ": " + fresh.map((s) => `${s.via || "?"}/${s.domain || s.owner || "?"}/${(s.text || "").length}ch`).join(" ") : ""}`);
     for (const s of fresh) if (s.url) seenUrl.add(s.url);
     if (fresh.length) {
       const base = withText.length;
@@ -299,7 +306,8 @@ export async function harvestReactions(trigger, angle, {
       // embeds, so the page-scan is the primary path, not a fallback).
       const ids = [...new Set([...findTweetIds(withText), ...await scanImpl(bundle?.sources || withText)])];
       ({ tweets = [], ids: tweetIds = [] } = await cacheTweetsImpl(ids.slice(0, MAX_EMBEDS * 2)));
-    } catch { tweets = []; tweetIds = []; }
+      diag(`tweet-scan → ids ${ids.length}, syndication-resolved ${tweets.length}`);
+    } catch (e) { diag(`tweet-scan → ERR ${String(e?.message || e).slice(0, 80)}`); tweets = []; tweetIds = []; }
   }
   if (tweets.length) {
     const classified = await classifyTweets(tweets, trigger, angle, { model, chatImpl, subject });
@@ -331,7 +339,8 @@ export async function harvestReactions(trigger, angle, {
   if (reddit) {
     try {
       const who = angle.focusEntity || trigger.primaryEntity;
-      const found = await redditSearchImpl(who, { nowMs: t0 }).catch(() => []);
+      const found = await redditSearchImpl(who, { nowMs: t0 }).catch((e) => { diag(`reddit-search → ERR ${String(e?.message || e).slice(0, 80)}`); return []; });
+      diag(`reddit → discovered ${(trigger.redditPosts || []).length}, searched ${found.length}`);
       const posts = [...(trigger.redditPosts || []), ...found];
       const seenPerma = new Set();
       const topPosts = posts.filter((p) => p?.permalink && !seenPerma.has(p.permalink) && (seenPerma.add(p.permalink), true)).slice(0, 4);
@@ -351,6 +360,7 @@ export async function harvestReactions(trigger, angle, {
   }
 
   const stats = statsOf();
+  diag(`harvest done → ${JSON.stringify(stats)}`);
   const floor = meetsFloor(angle.form, stats);
   if (!floor.ok) return { ok: false, reason: `under floor: ${floor.reason}`, stats };
 

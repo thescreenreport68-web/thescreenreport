@@ -51,6 +51,22 @@ const publishedToday = (store, now) => {
   return store.published.filter((r) => (r.at || "").slice(0, 10) === day).length;
 };
 
+// Supply probes (INSIDE_DIAG=1): one status line per free harvest dependency, so a starved cloud
+// run shows in the Actions log WHICH tier is blocked from the runner's IP. Log-only, never throws.
+async function diagProbes() {
+  const t = (ms) => ({ signal: AbortSignal.timeout(ms) });
+  const P = [
+    ["jina-keyless", () => fetch("https://r.jina.ai/https://example.com/", t(8000))],
+    ["reddit-json", () => fetch("https://www.reddit.com/search.json?q=movie&limit=1", { headers: { "user-agent": "Mozilla/5.0 (compatible; ScreenReportBot)" }, ...t(8000) })],
+    ["x-syndication", () => fetch("https://cdn.syndication.twimg.com/tweet-result?id=20&token=a", t(8000))],
+    ["gnews-rss", () => fetch("https://news.google.com/rss/search?q=movie&hl=en-US&gl=US&ceid=US:en", t(8000))],
+  ];
+  for (const [name, fn] of P) {
+    try { const r = await fn(); console.log(`[diag] probe ${name}: HTTP ${r.status}`); }
+    catch (e) { console.log(`[diag] probe ${name}: ${String(e?.message || e).slice(0, 60)}`); }
+  }
+}
+
 export async function agentRun({
   findImpl = findStories,
   gatherImpl = gatherer.run,
@@ -79,6 +95,9 @@ export async function agentRun({
 
   // ── 24/7 guards ──
   if (fs.existsSync(PAUSED_FILE)) { report.paused = true; return finish(report, dryRun); }
+  // Probes only on REAL runs: injected finders mean an offline test — the suite must never touch
+  // the network even with INSIDE_DIAG exported in the shell (adversarial review 2026-07-10).
+  if (process.env.INSIDE_DIAG === "1" && !dryRun && findImpl === findStories) await diagProbes();
   // Baseline BEFORE this run publishes anything — records land in the store mid-run, so counting
   // live would tally each new article twice (baseline+written is correct in both wet and dry runs).
   const baseToday = publishedToday(store, now);
