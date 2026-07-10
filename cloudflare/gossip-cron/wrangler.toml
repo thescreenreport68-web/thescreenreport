@@ -7,11 +7,14 @@ compatibility_date = "2025-01-01"
 [triggers]
 crons = ["0 * * * *"]
 
-# Non-secret config. GH_REF MUST be the repo's DEFAULT branch (workflow_dispatch only sees workflows on default).
+# Non-secret config. GH_REF = the branch the workflow RUNS ON and publishes to. It MUST be `main` — the ONE deploy
+# branch that deploy-live builds. (workflow_dispatch finds gossip-drip via the repo default branch, but runs it on
+# whatever ref we pass here — news-cron already uses main. Do NOT point this at rebuild-trending-news: articles
+# pushed there are never deployed and 404 on the live site.)
 [vars]
 GH_OWNER = "thescreenreport68-web"
 GH_REPO = "thescreenreport"
-GH_REF = "rebuild-trending-news"
+GH_REF = "main"
 
 # Secret (NOT here — set once with:  wrangler secret put GH_TOKEN):
 #   GH_TOKEN = a fine-grained GitHub PAT scoped to this repo with "Actions: Read and write".

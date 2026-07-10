@@ -1,11 +1,13 @@
 name: gossip-drip
 
-# One drip "tick": the scheduler gates on LA posting hours (10am-10pm PT), tops up the backlog if low, publishes ONE
-# gossip article, then (only if something published) commits state + builds + deploys live.
+# One drip "tick": the scheduler gates on a ~2h interval (INTERVAL_MIN), tops up the backlog if low, publishes ONE
+# gossip article, then (only if something published) commits it to main and dispatches deploy-live to ship it.
 #
-# CLOCK: a Cloudflare Worker Cron Trigger fires every ~5 min and calls this via workflow_dispatch (the same reliable
-# mechanism the news automation uses — GitHub's own cron is drifty). The `schedule:` block below is a COMMENTED-OUT
-# fallback; leave it commented until the owner approves the dry run, so merging this file never starts auto-posting.
+# BRANCH: everything runs on and pushes to `main` — the ONE deploy branch deploy-live builds. Do NOT point this at
+# rebuild-trending-news; that leftover branch is never deployed, so articles pushed there 404 on the live site.
+# CLOCK: a Cloudflare Worker Cron Trigger fires hourly and calls this via workflow_dispatch (GitHub's own cron is
+# drifty); the interval gate makes ~half of those ticks publish. The `schedule:` block below is a COMMENTED-OUT
+# fallback; leave it commented so merging this file never starts auto-posting.
 
 on:
   workflow_dispatch:
@@ -36,6 +38,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          ref: main            # the deploy branch — deploy-live builds main
           fetch-depth: 1
 
       - uses: actions/setup-node@v4
@@ -64,23 +67,26 @@ jobs:
           git config user.name  "screenreport-bot"
           git config user.email "bot@thescreenreport.com"
           git add content/articles data/gossip
-          git commit -m "gossip: publish ${{ steps.tick.outputs.slugs }} [skip ci]" || { echo "nothing to commit"; exit 0; }
-          # Other lanes/sessions push to this same branch — rebase onto the latest remote and retry so a concurrent
-          # push never fails ours (a failed state-commit would break dedup and risk a double-post).
+          git commit -m "gossip: publish ${{ steps.tick.outputs.slugs }}" || { echo "nothing to commit"; exit 0; }
+          # main is the ONE deploy branch. Other lanes push here too — rebase onto the latest origin/main and retry so
+          # a concurrent push never fails ours (a failed state-commit would break dedup and risk a double-post).
           for i in 1 2 3 4 5; do
-            git pull --rebase --autostash origin "${{ github.ref_name }}" \
-              && git push origin "HEAD:${{ github.ref_name }}" && { echo "pushed on attempt $i"; exit 0; }
+            git pull --rebase --autostash origin main \
+              && git push origin "HEAD:main" && { echo "pushed on attempt $i"; exit 0; }
             echo "push attempt $i lost the race; retrying in 5s…"; sleep 5
           done
           echo "::error::could not push state after 5 attempts"; exit 1
 
-      - name: Build
+      # ONE authoritative deployer. Don't build/deploy here (that caused the two-lane clobber). Just dispatch
+      # deploy-live, which cleanly checks out main → full build → wrangler deploy. A push made with GITHUB_TOKEN
+      # can't auto-trigger deploy-live's on:push, so we dispatch it explicitly (same pattern as inside-agents).
+      - name: Deploy live (dispatch deploy-live)
         if: steps.tick.outputs.published != '0' && steps.tick.outputs.published != ''
-        run: npm run build
-
-      - name: Deploy to Cloudflare Pages
-        if: steps.tick.outputs.published != '0' && steps.tick.outputs.published != ''
-        env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-        run: npx -y wrangler@3 pages deploy out --project-name=thescreenreport --branch=main --commit-dirty=true
+        run: |
+          curl -sS -X POST \
+            -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            "https://api.github.com/repos/${{ github.repository }}/actions/workflows/deploy-live.yml/dispatches" \
+            -d '{"ref":"main"}'
+          echo "dispatched deploy-live → the new gossip article goes live with the next complete build"
