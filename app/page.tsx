@@ -106,11 +106,15 @@ export default function HomePage() {
     news.filter((a) => a.image),
     3
   );
-  // Latest rail: chronology within news, capped so no single category monopolizes.
-  // "Latest" rail = the freshest stories across EVERY category (incl. celebrity),
-  // newest-first, capped 4/category — so whatever the automation drops (news OR
-  // gossip) surfaces at the top immediately, not only in its zone further down.
-  const latest = fill(pickDiverse(all, 12, used, 4), all, 12);
+  // "Latest" rail = pure reverse-chronological across EVERY category (owner call
+  // 2026-07-10): the most recently PUBLISHED stories by time, with NO per-category
+  // cap. A cap forced stale backfill — when one lane (e.g. gossip) is the only one
+  // publishing, capping it at 4 made the rail reach back to days-old news to fill
+  // the remaining slots (that was the "everything after the ad is July 7" bug).
+  // Newest-first shows whatever was just published and self-rebalances the moment
+  // the news lane ramps back up. `all` is already date-desc (getAllArticles); the
+  // dedup vs the hero package just prevents a story appearing twice on the page.
+  const latest = fill(pickDiverse(all, 12, used), all, 12);
 
   // In Theaters (movies, non-box-office) + Box Office (movies box-office) — the
   // movies-first two-column block that replaces the stale "Now Streaming".
