@@ -1,4 +1,4 @@
-// MONITOR (inside) — an UPDATER first, a safety net second. Reaction waves build for 24-72h, so:
+// UPDATER (inside, multi-agent lane) — an UPDATER first, a safety net second. Reaction waves build for 24-72h, so:
 // (a) TOP-UP: re-harvest each watched article's angle; genuinely NEW named voices (verbatim-walled
 //     again) are appended to the frontmatter reactions[] — the UI renders them as new cards, the
 //     gate-verified body is never touched. Real update → dateModified bump (the freshness lever).
@@ -7,11 +7,12 @@
 // (c) PARENT CASCADE: if the parent news article was retracted (file gone) or corrected, the
 //     inside child gets a correction banner + noindex (gossip-lane pattern) — the ripple of a
 //     retracted event must never keep ranking.
-// Run: node site/pipeline/inside/monitor.mjs [--dry-run]
+// Run: node site/pipeline/inside/updater.mjs [--dry-run]
 import fs from "node:fs";
 import path from "node:path";
 import { createRequire } from "node:module";
-import { CONTENT_DIR, INSIDE_FORMAT_TAG, MONITOR_WINDOW_HOURS, MAX_EMBEDS } from "./config.inside.mjs";
+import { CONTENT_DIR, DATA_DIR, INSIDE_FORMAT_TAG, MONITOR_WINDOW_HOURS } from "./config.inside.mjs";
+import { costReport } from "../lib/openrouter.mjs";
 import { loadStore, bumpUpdated } from "./store.mjs";
 import { harvestReactions, norm } from "./reactionFinder.mjs";
 import { getTweet } from "react-tweet/api";
@@ -36,6 +37,10 @@ function loadWatched(dir, nowMs) {
 
 const save = (a, fm, body, dryRun) => { if (!dryRun) fs.writeFileSync(a.fp, matter.stringify("\n" + body.trim() + "\n", fm)); };
 
+const PAUSED_FILE = path.join(DATA_DIR, "PAUSED");
+const MAX_PASS_MS = Number(process.env.UPDATER_MAX_PASS_MS) || 12 * 60e3;
+const MAX_PASS_COST_USD = Number(process.env.MAX_RUN_COST_USD) || 0.5;
+
 export async function monitorInside({
   dir = CONTENT_DIR,
   harvestImpl = harvestReactions,
@@ -45,11 +50,18 @@ export async function monitorInside({
   nowMs = null,
 } = {}) {
   const now = nowMs ?? Date.now();
+  if (fs.existsSync(PAUSED_FILE)) return { watched: 0, results: [], paused: true };
   const store = storeImpl || loadStore();
   const watched = loadWatched(dir, now);
   const results = [];
+  const t0 = Date.now();
 
   for (const a of watched) {
+    // Per-pass budget: an unattended 24/7 job may never overrun its window or spend cap.
+    if (Date.now() - t0 > MAX_PASS_MS || (costReport()?.total || 0) > MAX_PASS_COST_USD) {
+      results.push({ slug: "(pass)", action: "BUDGET-STOP", reason: "time/cost budget reached — remaining articles next pass" });
+      break;
+    }
     const actions = [];
     let fm = { ...a.data };
     let body = a.content;
@@ -141,6 +153,6 @@ export async function monitorInside({
 // CLI
 if (import.meta.url === new URL(`file://${process.argv[1]}`).href) {
   const r = await monitorInside({ dryRun: process.argv.includes("--dry-run") });
-  console.log(`━━ INSIDE MONITOR ━━ watched ${r.watched}`);
+  console.log(`━━ INSIDE UPDATER ━━ watched ${r.watched}`);
   for (const x of r.results) if (x.action !== "UNCHANGED") console.log(`  ${x.slug}: ${x.action} — ${x.reason}`);
 }

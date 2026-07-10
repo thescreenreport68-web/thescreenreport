@@ -6,6 +6,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { createRequire } from "node:module";
 import { CONTENT_DIR, INSIDE_FORMAT_TAG, INSIDE_AUTHOR_SLUG, AI_DISCLOSURE, MONITOR_WINDOW_HOURS, FORMS, routeForStory } from "./config.inside.mjs";
+import { norm } from "./reactionFinder.mjs";
 
 const require = createRequire(import.meta.url);
 const matter = require("gray-matter");
@@ -13,7 +14,7 @@ const matter = require("gray-matter");
 const slugify = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 80);
 const clean = (o) => Object.fromEntries(Object.entries(o).filter(([, v]) => v !== undefined && v !== null && v !== ""));
 
-export function buildInsideMarkdown({ article, trigger, angle, factBlock, image, dateISO }) {
+export function buildInsideMarkdown({ article, trigger, angle, factBlock, image, embeds = null, dateISO }) {
   const route = routeForStory(trigger);
   const slug = slugify(article.title);
   // Sibling inside-articles must not collapse into each other (or the parent) in the homepage's
@@ -21,12 +22,21 @@ export function buildInsideMarkdown({ article, trigger, angle, factBlock, image,
   const eventSlug = `${trigger.parentEventSlug || slugify(trigger.primaryEntity)}--in-${angle.form}`;
   const flagship = !!FORMS[angle.form]?.flagship;
 
+  // Tweet↔quote pairing is DETERMINISTIC from the harvest's own knowledge (which anchor came from
+  // which post) — never trust the writer's id pairing. Fall back to the writer's id only when it's
+  // cached AND the harvest has no opinion.
+  const tweetPool = [...(factBlock.reactions || []), ...(factBlock.aggregateFans || [])].filter((h) => h.tweetId && h.quote);
+  const tweetIdFor = (q) => {
+    const nq = norm(q);
+    if (nq.length < 8) return undefined;
+    return tweetPool.find((h) => norm(h.quote).includes(nq) || nq.includes(norm(h.quote)))?.tweetId;
+  };
   const reactions = (article.reactionsRender || [])
     .filter((r) => r && r.speaker !== undefined && r.quote)
     .map((r) => clean({
       speaker: r.speaker || "A viewer",
       connection: r.connection, platform: r.platform, date: r.date, quote: r.quote,
-      tweetId: factBlock.tweetIds.includes(r.tweetId) ? r.tweetId : undefined, // cached-only — a dead id renders nothing
+      tweetId: tweetIdFor(r.quote) ?? (factBlock.tweetIds.includes(r.tweetId) ? r.tweetId : undefined), // cached-only — a dead id renders nothing
     }));
 
   const fm = clean({
@@ -52,7 +62,8 @@ export function buildInsideMarkdown({ article, trigger, angle, factBlock, image,
     anchorStatement: article.anchorStatement?.speaker && article.anchorStatement?.quote
       ? clean(article.anchorStatement) : undefined,
     fanConsensus: article.fanConsensus || undefined, // the honest sentiment read, all forms
-    tweetIds: factBlock.tweetIds.length ? factBlock.tweetIds : undefined,
+    tweetIds: (embeds?.tweetIds?.length ? embeds.tweetIds : factBlock.tweetIds.length ? factBlock.tweetIds : undefined),
+    instagramUrls: embeds?.instagramUrls?.length ? embeds.instagramUrls : undefined,
     updatedCount: 0,
     // Homepage placement contract. Non-flagship siblings run 5 under the parent's heat so one
     // story's angle set never monopolizes the fold.
@@ -86,8 +97,8 @@ export function buildInsideMarkdown({ article, trigger, angle, factBlock, image,
   return { slug, frontmatter: fm, md };
 }
 
-export function writeInsideArticle({ article, trigger, angle, factBlock, image, dateISO, dir = CONTENT_DIR, dryRun = false }) {
-  const out = buildInsideMarkdown({ article, trigger, angle, factBlock, image, dateISO });
+export function writeInsideArticle({ article, trigger, angle, factBlock, image, embeds = null, dateISO, dir = CONTENT_DIR, dryRun = false }) {
+  const out = buildInsideMarkdown({ article, trigger, angle, factBlock, image, embeds, dateISO });
   if (!dryRun) {
     fs.mkdirSync(dir, { recursive: true });
     fs.writeFileSync(path.join(dir, out.slug + ".md"), out.md);

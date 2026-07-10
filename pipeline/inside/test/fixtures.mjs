@@ -1,10 +1,12 @@
-// INSIDE lane — shared OFFLINE test fixtures (REV 2 = audience-reaction & discourse). Zero network,
-// zero keys: every quote below is a REAL substring of the fake source texts (the verbatim wall must
-// pass them), every trigger/angle/factBlock mirrors the exact shapes the REV 2 stages produce/consume.
+// INSIDE lane — shared OFFLINE test fixtures (multi-agent lane, audience-reaction & discourse).
+// Zero network, zero keys: every quote below is a REAL substring of the fake source texts (the
+// verbatim wall must pass them); every story/angle/factBlock/job mirrors the exact shapes the
+// agent team produces/consumes.
 import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
 import { FORMS } from "../config.inside.mjs";
+import { factBlockText } from "../reactionFinder.mjs";
 
 export const NOW = Date.parse("2026-07-04T12:00:00Z");
 
@@ -302,3 +304,50 @@ export function redditCommentsListing(comments) {
   // reddit comments endpoint returns [postListing, commentListing]
   return [{ data: { children: [] } }, { data: { children: comments.map((d) => ({ data: d })) } }];
 }
+
+// ── Multi-agent layer fixtures ────────────────────────────────────────────────────────────────────
+
+// A synthesizer-shaped brief (already clamped).
+export function fakeBrief(form = "audience-reaction") {
+  return {
+    hook: "The Sable Coast did not just open — it split its audience straight down the middle.",
+    mood: "genuinely divided: passionate defenders vs furious detractors",
+    sides: [
+      { stance: "for", summary: "Viewers who loved it call the open ending earned and bold.", anchorRefs: ["A1"] },
+      { stance: "against", summary: "Detractors feel the film refused to resolve its own story.", anchorRefs: ["A2"] },
+    ],
+    standoutRefs: ["A1", "A2", "A3"],
+    mustInclude: ["the ending is deliberately ambiguous", "the split itself is the story"],
+    suggestedTitle: "The Sable Coast Has Audiences Sharply Divided Over Its Ending",
+    seoKeyword: "The Sable Coast reactions",
+  };
+}
+
+// A complete work-file job, ready for any downstream agent.
+export function fakeJob(form = "audience-reaction", over = {}) {
+  const story = fakeTrigger();
+  const angle = fakeAngle(form);
+  const factBlock = fakeFactBlock(form);
+  return {
+    story,
+    angle,
+    factBlock,
+    factText: factBlockText(factBlock, story),
+    bundle: { sources: SOURCES.map((s) => ({ ...s })) },
+    gatherStats: factBlock.stats,
+    embeds: { tweetIds: [TWEET_ID_A], instagramUrls: [] },
+    brief: fakeBrief(form),
+    ...over,
+  };
+}
+
+// ── Instagram embed-scan fixtures (raw HTML the embed agent scans) ────────────────────────────────
+export const IG_CODE_A = "ABCdef1234";
+export const IG_CODE_B = "XYZghi5678";
+export const IG_HTML =
+  `<html><body><p>Reactions poured in.</p>` +
+  `<blockquote class="instagram-media"><a href="https://www.instagram.com/p/${IG_CODE_A}/">Nora Idris celebrating The Sable Coast opening weekend</a></blockquote>` +
+  `<p>Another post made the rounds:</p>` +
+  `<blockquote><a href="https://instagram.com/reel/${IG_CODE_B}/">unrelated sneaker ad from a brand account</a></blockquote>` +
+  `<a href="https://www.instagram.com/p/${IG_CODE_A}/">duplicate of the first</a>` +
+  `</body></html>`;

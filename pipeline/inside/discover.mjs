@@ -1,11 +1,16 @@
-// DISCOVERY (REV 2) — "any top story, any source." Two signals merged:
-//   • TMDB trending + now-playing = the WORKS people are watching right now (the subject list).
-//   • Reddit hot/top across film/TV subs = the actual DISCOURSE (people arguing) + the anchor posts.
-// Match the discourse to the works, rank by discourse heat (comments >> upvotes >> popularity), and
-// emit story candidates. Person stories (breakout-buzz) come from TMDB trending-person. No confirmed-
-// event gate — the discourse IS the trigger.
+// DISCOVERY (REV 2.1 — owner 2026-07-10: "no boundaries — scour the Hollywood news, find whatever is
+// spicy and trending"). THREE signals merged:
+//   • HEADLINES — trade RSS (20 feeds) + Google News search: the trending Hollywood TOPICS/moments
+//     (a casting shock, a star's claim, a controversy — Elliot Page in the Odyssey, Lupita on Homer).
+//     Clustered across outlets: many outlets on one story = trending. THE PRIMARY SIGNAL.
+//   • TMDB trending + now-playing = the WORKS people are watching (release-reaction stories).
+//   • Reddit hot/top across film/TV subs = raw audience discourse + anchor posts (cloud IPs).
+// Rank everything by discourse heat and emit story candidates. No confirmed-event gate — the
+// discourse IS the trigger.
 import { discoverTMDB } from "../find/sources/tmdb.mjs";
 import { discoverReddit } from "../find/sources/reddit.mjs";
+import { discoverGoogleNews } from "../find/sources/gnews.mjs";
+import { discoverRSS } from "../find/sources/rss.mjs";
 import { HEAT, MAX_STORIES_PER_RUN } from "./config.inside.mjs";
 
 const STOP = new Set(["the", "a", "an", "of", "and", "movie", "film", "series", "show", "season", "part", "chapter", "2", "3", "ii", "iii"]);
@@ -25,22 +30,99 @@ function postMatchesWork(post, work) {
 
 const CAT_FOR = { "trending-movie": "movies", "now-playing": "movies", "upcoming": "movies", "trending-tv": "tv" };
 
+// Default HEADLINE source: trade RSS + Google News, merged (both keyless, both already built for
+// the news lane). Every failure degrades to [] — discovery never dies on one source.
+async function defaultNewsHeadlines() {
+  const [rss, gn] = await Promise.all([
+    discoverRSS({ freshHours: 48 }).catch(() => []),
+    discoverGoogleNews({ freshHours: 48 }).catch(() => []),
+  ]);
+  return [...rss, ...gn];
+}
+
+// Cluster headlines covering the SAME story (shared significant tokens): cluster size across
+// distinct outlets = how trending the topic is. Cheap and deterministic — the finder LLM does the
+// editorial picking afterwards.
+export function clusterHeadlines(items, { minOutlets = 2 } = {}) {
+  const entries = (items || [])
+    .filter((h) => h?.title)
+    .map((h) => ({ h, toks: new Set(sigTokens(h.title)) }))
+    .filter((e) => e.toks.size >= 2);
+  const clusters = [];
+  for (const e of entries) {
+    let home = null;
+    for (const c of clusters) {
+      const inter = [...e.toks].filter((t) => c.toks.has(t)).length;
+      const denom = Math.min(e.toks.size, c.toks.size);
+      if (denom && inter / denom >= 0.5) { home = c; break; }
+    }
+    if (home) {
+      home.items.push(e.h);
+      for (const t of e.toks) home.toks.add(t);
+    } else {
+      clusters.push({ items: [e.h], toks: new Set(e.toks) });
+    }
+  }
+  return clusters
+    .map((c) => {
+      const outlets = new Set(c.items.map((h) => h.outlet || h.source).filter(Boolean));
+      const best = c.items.reduce((a, b) => ((a.sourceTier || 0) >= (b.sourceTier || 0) ? a : b));
+      const freshest = Math.min(...c.items.map((h) => h.ageMin ?? 9999));
+      return { headline: best.title, summary: best.summary || "", cats: best.cats || [], outlets: outlets.size, freshMin: freshest, urls: [...new Set(c.items.map((h) => h.url).filter(Boolean))].slice(0, 6) };
+    })
+    .filter((c) => c.outlets >= minOutlets)
+    .sort((a, b) => b.outlets - a.outlets || a.freshMin - b.freshMin);
+}
+
 export async function discoverStories({
   discoverTMDBImpl = discoverTMDB,
   discoverRedditImpl = discoverReddit,
+  discoverNewsImpl = defaultNewsHeadlines,
   max = MAX_STORIES_PER_RUN,
   nowMs = null,
 } = {}) {
   const now = nowMs ?? Date.now();
-  const [tmdb, reddit] = await Promise.all([
+  const [tmdb, reddit, headlines] = await Promise.all([
     discoverTMDBImpl({ limitEach: 15 }).catch(() => []),
     discoverRedditImpl({ nowMs: now }).catch(() => []),
+    discoverNewsImpl().catch(() => []),
   ]);
 
   const works = tmdb.filter((t) => ["trending-movie", "trending-tv", "now-playing", "upcoming"].includes(t.kind));
   const people = tmdb.filter((t) => t.kind === "trending-person");
 
   const stories = [];
+
+  // ── HEADLINE-TOPIC stories (the primary signal): the trending Hollywood story itself — a casting
+  //    shock, a star's claim, a controversy — whatever many outlets are covering right now. The
+  //    reddit threads about it (when available) attach as discourse + anchors.
+  const CATSET = new Set(["movies", "tv", "celebrity", "music", "streaming", "awards"]);
+  for (const c of clusterHeadlines(headlines)) {
+    const matched = reddit.filter((p) => {
+      const toks = sigTokens(c.headline).slice(0, 4);
+      const t = norm(p.title);
+      return toks.filter((tok) => t.includes(tok)).length >= 2;
+    });
+    const comments = matched.reduce((s, p) => s + p.numComments, 0);
+    const heat = c.outlets * HEAT.outletCount + comments * HEAT.redditComments + Math.max(0, HEAT.freshness - c.freshMin / 30);
+    const cat = (c.cats || []).find((x) => CATSET.has(x)) || "celebrity";
+    stories.push({
+      storySlug: slugify(c.headline).slice(0, 60),
+      kind: "headline",
+      primaryEntity: c.headline.replace(/[|:–—-].*$/, "").trim().slice(0, 80) || c.headline.slice(0, 80),
+      work: null,
+      category: cat,
+      released: null,
+      overview: c.summary,
+      headline: c.headline,
+      redditPosts: matched.slice(0, 8),
+      sources: c.urls.map((url) => ({ url, outlet: null })),
+      popularity: 0,
+      discourseHeat: Math.round(heat),
+      signals: { outlets: c.outlets, comments, headline: true },
+      via: matched.length ? "news+reddit" : "news",
+    });
+  }
 
   // ── WORK stories: a trending work + the reddit discourse about it ──
   const usedPosts = new Set();

@@ -132,8 +132,15 @@ export function meetsFloor(form, stats) {
   const anchors = (stats.namedVoices || 0) + (stats.fanPosts || 0);
   if (f.minCreatorQuotes && stats.namedVoices < f.minCreatorQuotes)
     return { ok: false, reason: `creator quotes ${stats.namedVoices} < ${f.minCreatorQuotes}` };
+  // Audience-first (owner): these articles are about NORMAL PEOPLE's posts — critics can't fill in.
+  if (f.minFanPosts && stats.fanPosts < f.minFanPosts)
+    return { ok: false, reason: `audience posts ${stats.fanPosts} < ${f.minFanPosts}` };
   if (f.minAnchors && anchors < f.minAnchors)
     return { ok: false, reason: `real anchor posts ${anchors} < ${f.minAnchors}` };
+  // A debate needs BOTH sides in the anchors — a one-sided harvest parks here instead of tempting
+  // the writer into a dishonest "divided" framing that the honesty wall would kill anyway.
+  if (f.needsBothSides && !(stats.hasPositive && stats.hasNegative))
+    return { ok: false, reason: "one-sided anchors for a both-sides form" };
   return { ok: true };
 }
 
@@ -144,8 +151,9 @@ export function fallbackQueries(trigger, angle) {
   const medium = trigger.work ? (trigger.work.type === "tv" ? "TV series" : "movie") : "";
   const w = trigger.work && who === trigger.work.title ? `${who} ${medium}` : who;
   const F = {
-    "audience-reaction": [`${w} fans react`, `${w} reactions`],
-    "the-debate": [`${w} controversy`, `${w} fans divided`],
+    // Hunt pages that EMBED real fan posts (roundups carry the tweets we need in their raw HTML).
+    "audience-reaction": [`${w} fans react twitter`, `${w} fan reactions`],
+    "the-debate": [`${w} fans divided`, `${w} twitter debate`],
     "creator-answers-critics": [`${w} responds criticism`, `${w} addresses backlash`],
     "breakout-buzz": [`who is ${who}`, `${who} everyone talking`],
   };
@@ -194,9 +202,11 @@ export async function harvestReactions(trigger, angle, {
   // Disambiguated subject label — threaded into EVERY extraction/classification pass so off-topic
   // material (a different work with a short/common title, an unrelated news story) is rejected at the
   // source. This replaces REV 1's heavy editorial event-match gate with a cheap in-pass filter.
-  const subject = trigger.work
+  const subject = trigger.headline
+    ? `the trending story: "${trigger.headline}"${trigger.overview ? ` — ${trigger.overview.slice(0, 160)}` : ""}`
+    : trigger.work
     ? `the ${trigger.work.type === "tv" ? "TV series" : "movie"} "${trigger.work.title}"${trigger.work.year ? ` (${trigger.work.year})` : ""}${trigger.overview ? ` — ${trigger.overview.slice(0, 160)}` : ""}`
-    : `${trigger.primaryEntity} (a ${trigger.category} figure)`;
+    : `${trigger.primaryEntity} (a ${trigger.category || "film/TV"} figure)`;
   // 1. Enumerate + extract ripple coverage (free: gnews/GDELT/extraction inside contentFinder).
   //    The PARENT event's own source articles seed the first pass — initial coverage routinely
   //    carries the first statements/reactions, so the harvest always has a foothold. Then LLM
@@ -285,9 +295,9 @@ export async function harvestReactions(trigger, angle, {
   let tweets = [];
   if (embeds) {
     try {
-      let ids = findTweetIds(withText);
-      // Clean text rarely carries the tweet links — fall back to the raw pages.
-      if (!ids.length) ids = await scanImpl(bundle?.sources || withText);
+      // ALWAYS scan raw pages too (owner: the real posts ARE the content — extraction strips their
+      // embeds, so the page-scan is the primary path, not a fallback).
+      const ids = [...new Set([...findTweetIds(withText), ...await scanImpl(bundle?.sources || withText)])];
       ({ tweets = [], ids: tweetIds = [] } = await cacheTweetsImpl(ids.slice(0, MAX_EMBEDS * 2)));
     } catch { tweets = []; tweetIds = []; }
   }
@@ -358,11 +368,11 @@ export async function harvestReactions(trigger, angle, {
 // The writer's ONLY quote source + the verify-gate grounding. Numbered so the writer can cite.
 export function factBlockText(factBlock, trigger) {
   const L = [`STORY: ${trigger.parentTitle} (subject: ${trigger.primaryEntity})`];
-  L.push("NAMED ON-RECORD QUOTES (creators/known figures — reproduce EXACTLY, attribute to this name; never invent, merge, or extend):");
+  L.push("NAMED QUOTES (creators/critics — SECONDARY color only: at most ONE short beat in the article unless the form is creator-answers-critics; reproduce EXACTLY, attribute to this name):");
   factBlock.reactions.forEach((r, i) =>
     L.push(`R${i + 1}. ${r.speaker}${r.connection ? ` (${r.connection})` : ""} — ${r.platform || "on the record"}${r.date ? `, ${r.date}` : ""} [${r.stance}]${r.tweetId ? ` [tweet:${r.tweetId}]` : ""}: "${r.quote}"`));
   if (factBlock.aggregateFans.length) {
-    L.push("AUDIENCE POSTS (real public reactions — quote WITHOUT any name; attribute in aggregate: \"one viewer wrote,\" \"fans on Reddit,\" \"one X user said\"):");
+    L.push("AUDIENCE POSTS (THE SPINE of the article — real posts by normal people; quote WITHOUT any name, ALWAYS naming the platform: \"one X user wrote,\" \"a fan on Reddit said\"; posts with [tweet:id] render as the real embedded post):");
     factBlock.aggregateFans.forEach((r, i) => L.push(`A${i + 1}. [${r.stance}] ${r.platform || ""}: "${r.quote}"`));
   }
   const s = factBlock.stats;

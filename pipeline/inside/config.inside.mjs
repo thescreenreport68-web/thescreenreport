@@ -34,15 +34,18 @@ export const AI_DISCLOSURE =
 // we write, so the embeds are real and the sentiment we characterize is honest ("go maximal on the
 // narrative, but anchor it"). Everything else the writer crafts.
 export const FORMS = {
+  // AUDIENCE-FIRST floors (owner 2026-07-10): these two forms are about NORMAL PEOPLE's posts —
+  // real audience posts are REQUIRED; an all-critics harvest can never fill them.
   "audience-reaction": {
     label: "How fans/viewers are reacting",
-    minAnchors: 3,
+    minFanPosts: 3,
     words: [500, 900],
     flagship: true,
   },
   "the-debate": {
     label: "The one thing the internet is arguing about",
     minAnchors: 3,
+    minFanPosts: 2,
     needsBothSides: true, // a "divided/split" framing must show both stances in the anchors
     words: [550, 950],
   },

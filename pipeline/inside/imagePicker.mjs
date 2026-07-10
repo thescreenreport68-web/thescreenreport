@@ -12,6 +12,7 @@ export async function pickInsideImage({
   measureImpl = measureRemote,
   heroImpl = pickHeroImage,
   commonsImpl = sourceImage,
+  visionModel = null, // registry-routed vision model (models.mjs AGENTS.image)
 } = {}) {
   const isTitleStory = trigger?.subjectKind === "title";
   const topic = {
@@ -28,6 +29,7 @@ export async function pickInsideImage({
   // 1) Gather + vision-rank for relevance (news machinery), best-first.
   const hero = await heroImpl(
     { topic, article, bundle, isTitleStory, titleOverride: trigger?.work?.title || null },
+    visionModel ? { model: visionModel } : {},
   ).catch(() => null);
 
   const measurePick = async (cands) => {

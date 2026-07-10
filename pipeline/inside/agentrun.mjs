@@ -1,0 +1,256 @@
+// ORCHESTRATOR — the only entry point of the multi-agent inside lane (replaces insiderun.mjs).
+// No LLM of its own: it drives the work-file through the agent team, enforces watchdogs/pacing/
+// dedup/caps/kill-switch, adds internal links, assembles, publishes, and writes the per-run
+// cost+token report the 24/7 cloud monitoring reads.
+//
+//   FINDER → per story: GATHERER → EMBED → SYNTHESIZER → WRITER ⇄ QA (corrections) → webCheck →
+//   IMAGE (mandatory) → internal links → ASSEMBLE → publish → record
+//
+// Run: cd "/Users/sivajithcu/Movie News site" && set -a; . ./.env; set +a; \
+//      node site/pipeline/inside/agentrun.mjs [--limit=N] [--dry-run] [--story=<slug>]
+import fs from "node:fs";
+import path from "node:path";
+import { AGENTS, meterReport, meterReset } from "./models.mjs";
+import { findStories } from "./agents/finder.mjs";
+import * as gatherer from "./agents/gatherer.mjs";
+import * as embedAgent from "./agents/embed.mjs";
+import * as synthesizer from "./agents/synthesizer.mjs";
+import * as writer from "./agents/writer.mjs";
+import * as imageAgent from "./agents/image.mjs";
+import * as qa from "./agents/qa.mjs";
+import { writeInsideArticle } from "./assemble.mjs";
+import { loadStore, alreadyPublished, recordInsidePublished, parkAngle, parkedTries, clearParked } from "./store.mjs";
+import { ACCEPT_FLOOR, MAX_ATTEMPTS, GATE, DATA_DIR } from "./config.inside.mjs";
+import { cutArticle } from "../lib/cutter.mjs";
+import { dedupeSentences, trimIncomplete } from "../lib/polish.mjs";
+import { addInternalLinks } from "../lib/internalLinks.mjs";
+import { norm } from "./reactionFinder.mjs";
+import { costReport } from "../lib/openrouter.mjs";
+
+const PAUSED_FILE = path.join(DATA_DIR, "PAUSED");
+// REVIEW MODE (owner preview-first rule): articles land in a holding dir (uploaded as a workflow
+// artifact) instead of content/articles, and are NOT dedup-recorded — nothing can go live until the
+// owner approves and the file is moved + committed.
+const REVIEW_DIR = process.env.INSIDE_REVIEW_DIR || null;
+const RUNS_DIR = path.join(DATA_DIR, "runs");
+const MAX_ARTICLES_PER_DAY = Number(process.env.MAX_ARTICLES_PER_DAY) || 30;
+const MAX_RUN_COST_USD = Number(process.env.MAX_RUN_COST_USD) || 0.5;
+const WEB_VERIFY = process.env.WEB_VERIFY !== "0";
+
+// WATCHDOG — no stage may hang the 24/7 loop; a timeout is a logged skip, never a stuck run.
+const withTimeout = (p, ms, label) => {
+  let timer;
+  return Promise.race([
+    p,
+    new Promise((_, rej) => { timer = setTimeout(() => rej(new Error(`watchdog: ${label} exceeded ${Math.round(ms / 1000)}s`)), ms); timer.unref?.(); }),
+  ]).finally(() => clearTimeout(timer));
+};
+
+const publishedToday = (store, now) => {
+  const day = new Date(now).toISOString().slice(0, 10);
+  return store.published.filter((r) => (r.at || "").slice(0, 10) === day).length;
+};
+
+export async function agentRun({
+  findImpl = findStories,
+  gatherImpl = gatherer.run,
+  embedImpl = embedAgent.run,
+  synthImpl = synthesizer.run,
+  writeArticleImpl = writer.run,
+  imageImpl = imageAgent.run,
+  qaReviewImpl = qa.review,
+  qaWebCheckImpl = qa.webCheck,
+  publishImpl = writeInsideArticle,
+  storeImpl = null,
+  hero = true,
+  webVerify = WEB_VERIFY,
+  dryRun = false,
+  limit = 3,
+  onlyStory = null,
+  nowMs = null,
+  paceMs = Number(process.env.INSIDE_PACE_MS) || 0,
+} = {}) {
+  const now = nowMs ?? Date.now();
+  const runId = `run-${new Date(now).toISOString().replace(/[:.]/g, "-").slice(0, 19)}`;
+  const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+  const store = storeImpl || loadStore();
+  const report = { runId, startedAt: new Date(now).toISOString(), stories: 0, published: [], held: [], rejected: [], skipped: [], blocked: [] };
+  meterReset();
+
+  // ── 24/7 guards ──
+  if (fs.existsSync(PAUSED_FILE)) { report.paused = true; return finish(report, dryRun); }
+  // Baseline BEFORE this run publishes anything — records land in the store mid-run, so counting
+  // live would tally each new article twice (baseline+written is correct in both wet and dry runs).
+  const baseToday = publishedToday(store, now);
+  if (baseToday >= MAX_ARTICLES_PER_DAY) { report.dailyCapHit = baseToday; return finish(report, dryRun); }
+
+  // ── FINDER ──
+  let found = [];
+  try { found = await withTimeout(findImpl({ limit: Math.max(limit * 3, 6), nowMs: now }), AGENTS.finder.watchdogMs + 90e3, "finder"); }
+  catch (e) { report.blocked.push({ stage: "finder", reason: String(e?.message || e).slice(0, 140) }); return finish(report, dryRun); }
+  if (onlyStory) found = found.filter((f) => f.story.parentEventSlug === onlyStory);
+  report.stories = found.length;
+
+  let written = 0;
+  for (const { story, angle } of found) {
+    if (written >= limit) break;
+    if (baseToday + written >= MAX_ARTICLES_PER_DAY) { report.dailyCapHit = true; break; }
+    // costReport() covers EVERY LLM call in-process (agentChat routes through the same client, and
+    // so do imagePicker's vision + webVerify) — do NOT add meterReport on top: that double-counts.
+    if ((costReport()?.total || 0) > MAX_RUN_COST_USD) { report.costCapHit = true; break; }
+    const tag = `${story.parentEventSlug}×${angle.form}`;
+    const job = { story, angle };
+    try {
+      // dedup + parked-dead (never repost; a ripple that never materialized stops retrying)
+      if (alreadyPublished(store, story.parentEventSlug, angle.form)) { report.skipped.push({ tag, reason: "already published" }); continue; }
+      if (parkedTries(store, story.parentEventSlug, angle.form) === Infinity) { report.skipped.push({ tag, reason: "parked dead" }); continue; }
+      if (paceMs && (report.published.length + report.rejected.length + report.held.length + report.blocked.length)) await sleep(paceMs);
+      console.log(`\n■ ${tag} (heat ${story.priority}, ${story.via})`);
+      // Deterministic quality holds PARK (3 strikes → dead) so a losing story doesn't re-run the
+      // full paid pipeline every tick forever; transient infra holds (web-check outage) do NOT.
+      const hold = (reason, { park = true, score = null } = {}) => {
+        report.held.push({ tag, reason, ...(score != null ? { score } : {}) });
+        if (park && !dryRun) parkAngle(store, story.parentEventSlug, angle.form, reason);
+      };
+
+      // ── GATHERER ──
+      await withTimeout(gatherImpl(job), AGENTS.gatherer.watchdogMs, `gatherer ${tag}`);
+      if (job.gatherFail) {
+        const genuineThin = /^under floor/.test(job.gatherFail);
+        const tries = (dryRun || !genuineThin) ? 0 : parkAngle(store, story.parentEventSlug, angle.form, job.gatherFail);
+        report.rejected.push({ tag, stage: "gatherer", reason: `${job.gatherFail}${genuineThin ? ` (try ${tries})` : " (transient — not parked)"}` });
+        console.log(`  ✗ gatherer: ${job.gatherFail}`);
+        continue;
+      }
+      console.log(`  ✓ gathered: ${job.gatherStats.namedVoices} named + ${job.gatherStats.fanPosts} audience anchors`);
+
+      // ── EMBED (best-effort, never blocks) ──
+      await withTimeout(embedImpl(job), AGENTS.embed.watchdogMs, `embed ${tag}`).catch(() => { job.embeds = { tweetIds: job.factBlock?.tweetIds || [], instagramUrls: [] }; });
+      console.log(`  ✓ embeds: ${job.embeds.tweetIds.length} X, ${job.embeds.instagramUrls.length} IG`);
+
+      // ── SYNTHESIZER ──
+      await withTimeout(synthImpl(job), AGENTS.synthesizer.watchdogMs, `synthesizer ${tag}`);
+      if (job.synthFail || !job.brief) { hold(job.synthFail || "no brief"); continue; }
+
+      // ── WRITER ⇄ QA (correction loop) ──
+      let pass = false, acceptReason = null, corrections = null, prevArticle = null;
+      for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
+        console.log(`  attempt ${attempt}: writing…`);
+        await withTimeout(writeArticleImpl(job, { corrections, previousArticle: prevArticle }), AGENTS.writer.watchdogMs, `writer ${tag}`);
+        if (!job.article?.body) { corrections = "- Return the COMPLETE JSON article."; continue; }
+        prevArticle = job.article;
+        await withTimeout(qaReviewImpl(job), AGENTS.qa.watchdogMs, `qa ${tag}`);
+        console.log(`  qa: score ${job.qa.score}, blocks ${job.qa.hardBlocks.length}, cuts ${job.qa.cutClaims.length}${job.qa.hardBlocks.length ? " :: " + job.qa.hardBlocks.slice(0, 4).join(" | ") : ""}`);
+        if (job.qa.pass) { pass = true; break; }
+        if (job.qa.cutClaims.length) {
+          cutArticle(job.article, job.qa.cutClaims);
+          await withTimeout(qaReviewImpl(job), AGENTS.qa.watchdogMs, `qa-recut ${tag}`);
+          if (job.qa.pass) { pass = true; break; }
+        }
+        let { block, fixable } = qa.classifyBlocks(job.qa.hardBlocks);
+        if (attempt === MAX_ATTEMPTS && block.length === 0 && (job.qa.score || 0) >= ACCEPT_FLOOR) {
+          if (job.qa.cutClaims.length) {
+            cutArticle(job.article, job.qa.cutClaims);
+            await withTimeout(qaReviewImpl(job), AGENTS.qa.watchdogMs, `qa-terminal ${tag}`);
+            ({ block, fixable } = qa.classifyBlocks(job.qa.hardBlocks));
+          }
+          if (block.length === 0 && job.qa.cutClaims.length === 0 && (job.qa.score || 0) >= ACCEPT_FLOOR) {
+            pass = true; acceptReason = `terminal-accept: locks verified, score ${job.qa.score} >= ${ACCEPT_FLOOR}`;
+            break;
+          }
+        }
+        corrections = [...block, ...fixable, ...(job.qa.weaknesses || [])].slice(0, 6).map((b) => `- ${b}`).join("\n");
+      }
+      if (!pass) { hold(job.qa?.hardBlocks?.join(" | ") || `score ${job.qa?.score} < ${GATE.publishMin}`, { score: job.qa?.score }); continue; }
+
+      // ── webCheck — ALWAYS-last content gate ──
+      if (webVerify && !dryRun) {
+        console.log(`  web-check…`);
+        // webVerify internally retries; give it a bigger budget than a judge call, and treat a
+        // check that DID NOT RUN as a HOLD — never publish unverified (fail-closed; the Thor
+        // regression guard). Transient outage → retry next tick (not parked).
+        const wv = await withTimeout(qaWebCheckImpl(job), 360e3, `webcheck ${tag}`).catch((e) => ({ ran: false, ok: false, contradictions: [], error: String(e?.message || e).slice(0, 120) }));
+        if (!wv.ran) { hold(`web-check did not run (${wv.error || "no evidence"}) — held unverified`, { park: false, score: job.qa.score }); continue; }
+        if (wv.contradictions?.length) {
+          cutArticle(job.article, wv.contradictions.map((c) => c.claim));
+          await withTimeout(qaReviewImpl(job), AGENTS.qa.watchdogMs, `qa-webcut ${tag}`);
+          if (job.qa.cutClaims.length) { cutArticle(job.article, job.qa.cutClaims); await withTimeout(qaReviewImpl(job), AGENTS.qa.watchdogMs, `qa-webcut2 ${tag}`); }
+          const reBlock = qa.classifyBlocks(job.qa.hardBlocks || []).block;
+          if (reBlock.length || job.qa.cutClaims.length || (job.qa.score || 0) < ACCEPT_FLOOR) {
+            hold(`web-check cuts didn't re-clear (${wv.contradictions.length} contradictions)`, { score: job.qa.score });
+            continue;
+          }
+        }
+      }
+      job.article.body = trimIncomplete(dedupeSentences(job.article.body));
+
+      // ── IMAGE (mandatory featured image) ──
+      if (hero && !dryRun) {
+        console.log(`  featured image…`);
+        await withTimeout(imageImpl(job), AGENTS.image.watchdogMs, `image ${tag}`).catch(() => { job.image = null; });
+        if (!job.image) { hold("no >=1200px relevant featured image"); continue; }
+      }
+
+      // ── INTERNAL LINKS (deterministic, tone-gated; zero links beats one wrong link) ──
+      try {
+        const linked = addInternalLinks({ body: job.article.body, title: job.article.title, tags: job.article.tags || [], category: story.category, slug: "" }, { max: 3 });
+        if (linked?.body) { job.article.body = linked.body; job.links = linked.linked; }
+      } catch { job.links = []; }
+
+      // ── ASSEMBLE + PUBLISH ──
+      const dateISO = new Date(now - written * 60000).toISOString();
+      const out = publishImpl({ article: job.article, trigger: story, angle, factBlock: job.factBlock, image: job.image, embeds: job.embeds, dateISO, dryRun, ...(REVIEW_DIR ? { dir: REVIEW_DIR } : {}) });
+      written++;
+      if (!dryRun && !REVIEW_DIR) {
+        clearParked(store, story.parentEventSlug, angle.form);
+        recordInsidePublished(store, {
+          parentEventSlug: story.parentEventSlug, form: angle.form, slug: out.slug,
+          title: job.article.title, primaryEntity: story.primaryEntity, eventType: story.eventType,
+          harvestQuoteKeys: [...job.factBlock.reactions, ...job.factBlock.aggregateFans].map((r) => norm(r.quote).slice(0, 90)),
+          angle: { form: angle.form, angle: angle.angle, workingTitle: angle.workingTitle, focusEntity: angle.focusEntity, searchQueries: angle.searchQueries },
+          trigger: { parentEventSlug: story.parentEventSlug, parentSlug: story.parentSlug, parentTitle: story.parentTitle, primaryEntity: story.primaryEntity, eventType: story.eventType, tmdbType: story.tmdbType, subjectKind: story.subjectKind, priority: story.priority, category: story.category, overview: story.overview || "", work: story.work || null, sources: story.sources || [], redditPosts: story.redditPosts || [] },
+        });
+      }
+      report.published.push({ tag, slug: out.slug, score: job.qa.score, ...(acceptReason ? { acceptReason } : {}), anchors: job.gatherStats.namedVoices + job.gatherStats.fanPosts, embeds: job.embeds });
+      console.log(`  ✅ published: ${out.slug} (score ${job.qa.score})`);
+    } catch (e) {
+      console.log(`  ⛔ ${String(e?.message || e).slice(0, 120)}`);
+      report.blocked.push({ tag, reason: String(e?.message || e).slice(0, 140) });
+    }
+  }
+  return finish(report, dryRun);
+}
+
+function finish(report, dryRun) {
+  report.finishedAt = new Date().toISOString();
+  report.meter = meterReport();
+  report.openrouterTotalUsd = Number((costReport()?.total || 0).toFixed(5));
+  if (!dryRun) {
+    fs.mkdirSync(RUNS_DIR, { recursive: true });
+    fs.writeFileSync(path.join(RUNS_DIR, `${report.runId}.json`), JSON.stringify(report, null, 1));
+  }
+  return report;
+}
+
+// CLI
+if (import.meta.url === new URL(`file://${process.argv[1]}`).href) {
+  const arg = (n) => (process.argv.find((a) => a.startsWith(`--${n}=`)) || "").split("=")[1];
+  const report = await agentRun({
+    dryRun: process.argv.includes("--dry-run"),
+    limit: Number(arg("limit")) || 3,
+    onlyStory: arg("story") || null,
+  });
+  const line = (x) => `  ${x.tag || x.stage || ""} — ${x.reason || x.slug || ""}${x.score != null ? ` (score ${x.score})` : ""}`;
+  console.log(`\n━━ AGENT RUN ${report.runId} ━━ stories ${report.stories}${report.paused ? " · PAUSED" : ""}${report.dailyCapHit ? " · DAILY CAP" : ""}${report.costCapHit ? " · COST CAP" : ""}`);
+  console.log(`PUBLISHED ${report.published.length}`); report.published.forEach((p) => console.log(line(p)));
+  console.log(`HELD ${report.held.length}`); report.held.forEach((p) => console.log(line(p)));
+  console.log(`REJECTED ${report.rejected.length}`); report.rejected.forEach((p) => console.log(line(p)));
+  console.log(`SKIPPED ${report.skipped.length}`); report.skipped.forEach((p) => console.log(line(p)));
+  console.log(`BLOCKED ${report.blocked.length}`); report.blocked.forEach((p) => console.log(line(p)));
+  console.log(`cost: $${report.openrouterTotalUsd} · per-agent:`, JSON.stringify(report.meter.byRole));
+  // GitHub Actions outputs (the cloud workflow's commit/deploy steps key off these).
+  if (process.env.GITHUB_OUTPUT) {
+    fs.appendFileSync(process.env.GITHUB_OUTPUT,
+      `published=${report.published.length}\nslugs=${report.published.map((p) => p.slug).join(" ")}\n`);
+  }
+}
