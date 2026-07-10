@@ -1,104 +1,42 @@
 {
-  "runId": "run-2026-07-10T13-21-21",
-  "builtAt": "2026-07-10T13:22:05.823Z",
-  "count": 15,
+  "runId": "run-2026-07-10T17-01-30",
+  "builtAt": "2026-07-10T17:02:03.082Z",
+  "count": 13,
   "topics": [
     {
-      "id": "news-next-james-bond-actor-speculation",
-      "slug": "the-next-james-bond-should-be-an-unknown-says-industry-insider",
-      "title": "The Next James Bond Should Be an Unknown, Says Industry Insider",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "next-james-bond-actor-speculation",
-      "primaryKeyword": "James Bond actor",
-      "primaryEntity": "James Bond (film series)",
-      "entities": [
-        "Denis Villeneuve"
-      ],
-      "angle": "Speculation mounts on who will be the next actor to don the iconic spy mantle, with suggestions favoring an unknown talent.",
-      "tmdbType": "movie",
-      "source": "rss:IndieWire",
-      "sources": [
-        {
-          "outlet": "IndieWire",
-          "tier": 7,
-          "url": "https://www.indiewire.com/features/commentary/next-james-bond-unknown-1235204146/",
-          "ageMin": 21,
-          "headline": "The Next James Bond Should Be an Unknown",
-          "summary": "Who will Denis Villeneuve back as the next James Bond? Perhaps an actor we have never seen before."
-        }
-      ],
-      "ageMin": 21,
-      "_cand": {
-        "key": "rss:the-next-james-bond-should-be-an-unknown",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "IndieWire"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "IndieWire",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 87,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "news-jodie-whittaker-the-country-short-film",
-      "slug": "jodie-whittaker-to-star-in-exec-produce-ella-grace-kennedy-short-the-c",
-      "title": "Jodie Whittaker To Star In Exec Produce Ella Grace Kennedy Short The Country",
+      "id": "news-elle-fanning-julianne-moore-rebecca-miller-margaret-wise-brown-film",
+      "slug": "elle-fanning-and-julianne-moore-to-star-in-rebecca-miller-s-next-film-",
+      "title": "Elle Fanning And Julianne Moore To Star In Rebecca Miller s Next Film On Acclaimed Children s Book Author Margaret Wise Brown",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "jodie-whittaker-the-country-short-film",
-      "primaryKeyword": "jodie whittaker the country",
-      "primaryEntity": "Jodie Whittaker",
+      "eventSlug": "elle-fanning-julianne-moore-rebecca-miller-margaret-wise-brown-film",
+      "primaryKeyword": "Elle Fanning Julianne Moore Margaret Wise Brown film",
+      "primaryEntity": "Moonsong: A Life In Seven Verses",
       "entities": [
-        "The Country Bears",
-        "The Country"
+        "Elle Fanning",
+        "Julianne Moore",
+        "Rebecca Miller"
       ],
-      "angle": "Jodie Whittaker to star in and executive produce short film 'The Country'.",
+      "angle": "Elle Fanning and Julianne Moore to star in Rebecca Miller's biopic about children's author Margaret Wise Brown.",
       "tmdbType": "movie",
       "source": "rss:Deadline",
       "sources": [
         {
           "outlet": "Deadline",
           "tier": 7,
-          "url": "https://deadline.com/2026/07/jodie-whittaker-to-star-in-dystopian-short-film-the-country-1236979092/",
-          "ageMin": 110,
-          "headline": "Jodie Whittaker To Star In Exec Produce Ella Grace Kennedy Short The Country",
-          "summary": "EXCLUSIVE: Jodie Whittaker will star in and exec produce The Country, a role-reversal short film from filmmaker Ella Grace Kennedy. The cast of the dystopian thriller short also features Eoin McCaul, Anna Popplewell (The Chronicles of Narnia) and Jake Kenny-Byrne (Miss Austen). The Country tackles bodily autonomy, oppression and control through the lens of an extremist religious commune, [ ]"
+          "url": "https://deadline.com/2026/07/elle-fanning-julianne-moore-margaret-wise-brown-1236979230/",
+          "ageMin": 2,
+          "headline": "Elle Fanning And Julianne Moore To Star In Rebecca Miller s Next Film On Acclaimed Children s Book Author Margaret Wise Brown",
+          "summary": "EXCLUSIVE: Elle Fanning and Julianne Moore are set to star in Moonsong: A Life In Seven Verses, a new film from Rebecca Miller that tells the story of famous children s book author Margaret Wise Brown. This marks Miller s ninth film she will direct and she is also penning the script. The film is based on [ ]"
         }
       ],
-      "ageMin": 110,
+      "ageMin": 2,
       "_cand": {
-        "key": "rss:jodie-whittaker-to-star-in-exec-produce-ella-grace-kennedy-s",
+        "key": "rss:elle-fanning-and-julianne-moore-to-star-in-rebecca-miller-s-",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -117,9 +55,9 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 84,
+      "priority": 98,
       "signals": {
-        "recency": 16,
+        "recency": 30,
         "corroboration": 12,
         "status": 18,
         "type": 14,
@@ -131,37 +69,112 @@
       }
     },
     {
-      "id": "box-office-moana-live-action-box-office-test",
-      "slug": "moana-faces-box-office-test-less-than-two-years-after-franchise-s-last",
-      "title": "Moana Faces Box Office Test, Less Than Two Years After Franchise s Last Big Theatrical Splash",
-      "contentType": "box-office",
-      "formatTag": "box-office",
-      "category": "movies",
-      "subcategory": "box-office",
-      "eventType": "boxoffice",
+      "id": "watchguide-obsession-peacock-streaming-date",
+      "slug": "obsession-sets-mid-july-streaming-date-on-peacock",
+      "title": "Obsession Sets Mid-July Streaming Date On Peacock",
+      "contentType": "watchguide",
+      "formatTag": "watchguide",
+      "category": "streaming",
+      "subcategory": "where-to-watch",
+      "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "moana-live-action-box-office-test",
-      "primaryKeyword": "moana live action box office",
-      "primaryEntity": "Moana",
+      "eventSlug": "obsession-peacock-streaming-date",
+      "primaryKeyword": "obsession peacock",
+      "primaryEntity": "Obsession",
       "entities": [
-        "Dwayne Johnson"
+        "Obsession (2024 film)",
+        "Peacock"
       ],
-      "angle": "Analysis of the box office potential for the upcoming live-action 'Moana' film.",
+      "angle": "Curry Barker's romance horror 'Obsession' sets mid-July streaming date on Peacock.",
       "tmdbType": "movie",
-      "source": "rss:THR",
+      "source": "rss:Deadline",
       "sources": [
         {
-          "outlet": "THR",
+          "outlet": "Variety",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/moana-box-office-test-disney-live-action-dwayne-johnson-1236643385/",
-          "ageMin": 699,
-          "headline": "Moana Faces Box Office Test, Less Than Two Years After Franchise s Last Big Theatrical Splash",
-          "summary": "Dwayne Johnson returns as Maui for Disney's live-action take on the 2016 animated original that recently spawned a mammoth hit with 2024's 'Moana 2.'"
+          "url": "https://variety.com/2026/film/news/obsession-peacock-release-date-streaming-how-to-watch-1236798622/",
+          "ageMin": 141,
+          "headline": "Obsession Sets Peacock Streaming Release Date",
+          "summary": "Curry Barker’s breakout horror hit “Obsession” will start streaming on Peacock on July 17. Barker s debut film follows Bear (Michael Johnston), a hopeless romantic afraid to admit his crush for co-worker Nikki (Inde Navarrette). After making a wish for Nikki to love him more than anything else in the world, Nikki suddenly becomes dangerously obsessed [ ]"
+        },
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/obsession-peacock-date-1236979194/",
+          "ageMin": 87,
+          "headline": "Obsession Sets Mid-July Streaming Date On Peacock",
+          "summary": "Curry Barker s surprise $400M global grossing romance horror Obsession has set a streaming date on Peacock of July 17. That s a 63-day theatrical window to streaming. Focus Features, as we told you, acquired North American and certain foreign on the movie out of TIFF Midnight for $15M+. Obsession tells the tale about a guy, Bear [ ]"
         }
       ],
-      "ageMin": 699,
+      "ageMin": 87,
       "_cand": {
-        "key": "rss:moana-faces-box-office-test-less-than-two-years-after-franch",
+        "key": "rss:obsession-sets-mid-july-streaming-date-on-peacock",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 2,
+      "verification": {
+        "tier1Count": 2,
+        "tier1Owners": 1,
+        "outletCount": 2,
+        "outlets": [
+          "Variety",
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 87,
+      "signals": {
+        "recency": 16,
+        "corroboration": 18,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 8,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-children-of-blood-and-bone-preview-mvaff",
+      "slug": "gina-prince-bythewood-and-thuso-mbedu-to-preview-children-of-blood-and",
+      "title": "Gina Prince-Bythewood and Thuso Mbedu to Preview Children of Blood and Bone at Martha’s Vineyard African American Film Festival (EXCLUSIVE)",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "children-of-blood-and-bone-preview-mvaff",
+      "primaryKeyword": "children of blood and bone",
+      "primaryEntity": "Children of Blood and Bone (film)",
+      "entities": [
+        "Gina Prince-Bythewood",
+        "Thuso Mbedu",
+        "Martha’s Vineyard African American Film Festival"
+      ],
+      "angle": "Gina Prince-Bythewood and Thuso Mbedu to preview their fantasy epic 'Children of Blood and Bone' at the Martha’s Vineyard African American Film Festival.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/film/news/children-of-blood-and-bone-mvaaff-lineup-1236806495/",
+          "ageMin": 92,
+          "headline": "Gina Prince-Bythewood and Thuso Mbedu to Preview Children of Blood and Bone at Martha’s Vineyard African American Film Festival (EXCLUSIVE)",
+          "summary": "Children of Blood and Bone filmmaker Gina Prince-Bythewood and star Thuso Mbedu will preview the fantasy epic on opening night of the Martha’s Vineyard African American Film Festival. Exclusive footage from the Paramount Pictures film — set in the fictional mystical kingdom of Orisha and starring Mbedu as Zélie, a young woman who embarks on [ ]"
+        }
+      ],
+      "ageMin": 92,
+      "_cand": {
+        "key": "rss:gina-prince-bythewood-and-thuso-mbedu-to-preview-children-of",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -171,21 +184,21 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "THR"
+          "Variety"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "THR",
+        "attribution": "Variety",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 73,
+      "priority": 79,
       "signals": {
-        "recency": 4,
+        "recency": 16,
         "corroboration": 12,
         "status": 18,
-        "type": 15,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
         "big": 24,
@@ -194,38 +207,38 @@
       }
     },
     {
-      "id": "box-office-backrooms-box-office-a24-record",
+      "id": "box-office-backrooms-global-box-office",
       "slug": "backrooms-passes-350m-globally-as-it-sets-a24-records-in-multiple-coun",
-      "title": "'Backrooms' Passes $350M Globally as It Sets A24 Records in Multiple Countries",
+      "title": "Backrooms Passes $350M Globally as It Sets A24 Records in Multiple Countries",
       "contentType": "box-office",
       "formatTag": "box-office",
       "category": "movies",
       "subcategory": "box-office",
       "eventType": "boxoffice",
       "sensitivity": "normal",
-      "eventSlug": "backrooms-box-office-a24-record",
-      "primaryKeyword": "Backrooms box office",
+      "eventSlug": "backrooms-global-box-office",
+      "primaryKeyword": "backrooms box office",
       "primaryEntity": "Backrooms",
       "entities": [
         "Backrooms (film)",
         "A24"
       ],
-      "angle": "The film 'Backrooms' has surpassed $350 million globally, setting box office records for A24 in several countries.",
+      "angle": "'Backrooms' surpasses $350M globally, setting A24 records in multiple countries.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
         {
           "outlet": "THR",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/backrooms-passes-350m-globally-1236639400/",
-          "ageMin": 3954,
-          "headline": "Backrooms Passes $350M Globally as It Sets A24 Records in Multiple Countries",
-          "summary": "It stands as the top film for the indie studio in China, France and Taiwan."
+          "url": "https://www.hollywoodreporter.com/lists/baywatch-reboot-cast/",
+          "ageMin": 1071,
+          "headline": "Baywatch Reboot Cast: Meet the New Stars (and Four Returning Faces) in Red Suits",
+          "summary": "With the Fox series reimagining of the classic lifeguard drama in production, The Hollywood Reporter rounds up the influencer-heavy cast heading to Venice Beach."
         }
       ],
-      "ageMin": 3954,
+      "ageMin": 1071,
       "_cand": {
-        "key": "rss:backrooms-passes-350m-globally-as-it-sets-a24-records-in-mul",
+        "key": "rss:baywatch-reboot-cast-meet-the-new-stars-and-four-returning-f",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -258,234 +271,38 @@
       }
     },
     {
-      "id": "music-news-shakira-egypt-concert-2023",
-      "slug": "shakira-returning-to-egypt-for-first-time-in-20-years-for-concert-at-t",
-      "title": "Shakira Returning to Egypt For First Time in 20 Years For Concert at the Great Pyramids of Giza",
+      "id": "music-news-sam-fender-olivia-dean-rein-me-in-uk-no-1-record",
+      "slug": "sam-fender-olivia-dean-s-rein-me-in-becomes-longest-running-british-no",
+      "title": "Sam Fender Olivia Dean s Rein Me In Becomes Longest-Running British No. 1 Single in U.K. Chart History",
       "contentType": "music-news",
       "formatTag": "music-news",
       "category": "music",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "shakira-egypt-concert-2023",
-      "primaryKeyword": "Shakira concert",
-      "primaryEntity": "Shakira",
-      "entities": [
-        "Great Pyramids of Giza"
-      ],
-      "angle": "Global music superstar Shakira is set to perform her first concert in Egypt in 20 years at the historic Great Pyramids of Giza.",
-      "tmdbType": "movie",
-      "source": "rss:Billboard",
-      "sources": [
-        {
-          "outlet": "Billboard",
-          "tier": 7,
-          "url": "https://www.billboard.com/music/latin/shakira-egypt-concert-great-pyramids-giza-1236291545/",
-          "ageMin": 36,
-          "headline": "Shakira Returning to Egypt For First Time in 20 Years For Concert at the Great Pyramids of Giza",
-          "summary": "The Nov. 28 show is the singer's long-awaited follow-up to her 2007 show at the pyramids on her Oral Fixation tour."
-        }
-      ],
-      "ageMin": 36,
-      "_cand": {
-        "key": "rss:shakira-returning-to-egypt-for-first-time-in-20-years-for-co",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "breakoutVelocity": 0,
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Billboard"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Billboard",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 63,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "news-wildcard-production-company-launch-kneecap",
-      "slug": "ireland-s-wildcard-production-company-makes-splash-with-debut-film-kne",
-      "title": "Ireland's Wildcard Production Company Makes Splash with Debut Film 'Kneecap'",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "high",
-      "eventSlug": "wildcard-production-company-launch-kneecap",
-      "primaryKeyword": "kneecap movie",
-      "primaryEntity": "Kneecap",
-      "entities": [
-        "Mia Hansen-Løve"
-      ],
-      "angle": "Irish production company Wildcard launches with its first film, 'Kneecap,' making an impact at Karlovy Vary.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/film/global/how-irelands-wildcard-made-instant-splash-as-producer-1236805814/",
-          "ageMin": 184,
-          "headline": "From ‘Kneecap’ to a Karlovy Vary Hit to Mia Hansen-Løve’s Next Film: Ireland’s Wildcard Makes Instant Splash as Producer",
-          "summary": "When setting up a production company, most filmmakers hope that the first feature out of the gate at least makes a little bit of noise. Thankfully for Dublin-based Wildcard, “Kneecap” didn’t do anything quietly. Rich Peppiatt’s rowdy, raucous, drug-soaked and politically-charged directorial debut, a comedy almost-biopic about the Northern Irish rap group of the same [ ]"
-        }
-      ],
-      "ageMin": 184,
-      "_cand": {
-        "key": "rss:from-kneecap-to-a-karlovy-vary-hit-to-mia-hansen-l-ve-s-next",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 72,
-      "signals": {
-        "recency": 9,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "music-news-riaa-ifpi-ai-song-tagging-system",
-      "slug": "riaa-ifpi-more-come-together-to-create-system-for-tagging-ai-generated",
-      "title": "RIAA, IFPI More Come Together to Create System for Tagging AI-Generated Songs",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "riaa-ifpi-ai-song-tagging-system",
-      "primaryKeyword": "AI music tagging",
-      "primaryEntity": "Rihanna",
-      "entities": [
-        "RIAA",
-        "IFPI"
-      ],
-      "angle": "Music industry bodies RIAA and IFPI are collaborating to develop a system for tagging AI-generated songs, similar to explicit content labels.",
-      "tmdbType": "movie",
-      "source": "rss:Billboard",
-      "sources": [
-        {
-          "outlet": "Billboard",
-          "tier": 7,
-          "url": "https://www.billboard.com/pro/riaa-ifpi-more-create-system-for-tagging-ai-songs/",
-          "ageMin": 60,
-          "headline": "RIAA, IFPI More Come Together to Create System for Tagging AI-Generated Songs",
-          "summary": "Working similarly to explicit labels on records, the tags will distinguish between \"AI-generated\" and \"AI-assisted\" songs."
-        }
-      ],
-      "ageMin": 60,
-      "_cand": {
-        "key": "rss:riaa-ifpi-more-come-together-to-create-system-for-tagging-ai",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "breakoutVelocity": 0,
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Billboard"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Billboard",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 63,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "news-european-tv-film-news-roundup-sky-itv-banijay-all3-emmys",
-      "slug": "international-insider-sky-buys-itv-banijay-all3-complete-merger-emmy-n",
-      "title": "International Insider: Sky Buys ITV; Banijay-All3 Complete Merger; Emmy Noms",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "european-tv-film-news-roundup-sky-itv-banijay-all3-emmys",
-      "primaryKeyword": "European TV film news",
-      "primaryEntity": "Sky",
+      "tier": "popular",
+      "eventSlug": "sam-fender-olivia-dean-rein-me-in-uk-no-1-record",
+      "primaryKeyword": "sam fender olivia dean longest running no 1",
+      "primaryEntity": "Sam Fender",
       "entities": [
-        "ITV",
-        "Banijay",
-        "All3Media",
-        "Emmy Awards"
+        "Olivia Dean"
       ],
-      "angle": "A roundup of major European TV and film industry developments, including Sky's acquisition of ITV, the completion of the Banijay-All3Media merger, and Emmy nominations.",
+      "angle": "Sam Fender and Olivia Dean's 'Won't You Come Back To Me' becomes longest-running British No. 1 single in UK chart history.",
       "tmdbType": "movie",
-      "source": "rss:Deadline",
+      "source": "rss:TheWrap",
       "sources": [
         {
-          "outlet": "Deadline",
+          "outlet": "TheWrap",
           "tier": 7,
-          "url": "https://deadline.com/2026/07/international-insider-sky-itv-banijay-all3-complete-merger-1236978483/",
-          "ageMin": 81,
-          "headline": "International Insider: Sky Buys ITV; Banijay-All3 Complete Merger; Emmy Noms",
-          "summary": "Hello again, Insider Squad. Jesse Whittock here to update you on the top headlines from the world of TV and film this week, as Europe went M A crazy. Here s what happened but before that sign up to the newsletter for the full Insider experience. First, Sky Buys ITV New Sky thinking: It was the week [ ]"
+          "url": "https://www.thewrap.com/industry-news/awards/pam-grier-lifetime-achievement-award-santa-fe-international-film-festival/",
+          "ageMin": 2,
+          "headline": "Pam Grier to Receive Lifetime Achievement Award at Santa Fe International Film Festival Exclusive",
+          "summary": "“[Grier] is the definition of a leading lady, her charm, grace and ability is unmatched,\" SFIFF Executive Director Liesette Bailey says The post Pam Grier to Receive Lifetime Achievement Award at Santa Fe International Film Festival | Exclusive appeared first on TheWrap ."
         }
       ],
-      "ageMin": 81,
+      "ageMin": 2,
       "_cand": {
-        "key": "rss:international-insider-sky-buys-itv-banijay-all3-complete-mer",
+        "key": "rss:pam-grier-to-receive-lifetime-achievement-award-at-santa-fe-",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -495,11 +312,204 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Deadline"
+          "TheWrap"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Deadline",
+        "attribution": "TheWrap",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 65,
+      "signals": {
+        "recency": 30,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "music-news-shania-twain-faded-blue-jeans-josh-homme",
+      "slug": "shania-twain-taps-queens-of-the-stone-age-s-josh-homme-for-country-roc",
+      "title": "Shania Twain Taps Queens of the Stone Age's Josh Homme for Country Rock Bop Faded Blue Jeans",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "shania-twain-faded-blue-jeans-josh-homme",
+      "primaryKeyword": "Shania Twain",
+      "primaryEntity": "Shania Twain",
+      "entities": [
+        "Josh Homme",
+        "Little Miss Twain"
+      ],
+      "angle": "Shania Twain releases new single featuring Josh Homme.",
+      "tmdbType": "movie",
+      "source": "rss:Rolling Stone",
+      "sources": [
+        {
+          "outlet": "Rolling Stone",
+          "tier": 7,
+          "url": "https://www.rollingstone.com/music/music-country/shania-twain-queens-of-the-stone-age-josh-homme-new-song-1235591937/",
+          "ageMin": 19,
+          "headline": "Shania Twain Taps Queens of the Stone Age s Josh Homme for Country Rock Bop Faded Blue Jeans",
+          "summary": "The gritty, nostalgic track previews the country pop queen's forthcoming LP Little Miss Twain"
+        }
+      ],
+      "ageMin": 19,
+      "_cand": {
+        "key": "rss:shania-twain-taps-queens-of-the-stone-age-s-josh-homme-for-c",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "breakoutVelocity": 0,
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Rolling Stone"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Rolling Stone",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 63,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "music-news-alabama-shakes-i-feel-hope-coming-single-release",
+      "slug": "alabama-shakes-unveil-optimistic-single-i-feel-hope-coming-from-upcomi",
+      "title": "Alabama Shakes Unveil Optimistic Single ‘I Feel Hope Coming’ From Upcoming New Album",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "alabama-shakes-i-feel-hope-coming-single-release",
+      "primaryKeyword": "Alabama Shakes",
+      "primaryEntity": "Alabama Shakes",
+      "entities": [
+        "I Must Be Dreaming (album)"
+      ],
+      "angle": "Alabama Shakes release first single in 11 years from upcoming album.",
+      "tmdbType": "movie",
+      "source": "rss:Rolling Stone",
+      "sources": [
+        {
+          "outlet": "Rolling Stone",
+          "tier": 7,
+          "url": "https://www.rollingstone.com/music/music-news/alabama-shakes-new-song-i-feel-hope-coming-new-album-1235591943/",
+          "ageMin": 50,
+          "headline": "Alabama Shakes Unveil Optimistic Single ‘I Feel Hope Coming’ From Upcoming New Album",
+          "summary": "I Must Be Dreaming , band’s first album in 11 years, out Aug. 28"
+        }
+      ],
+      "ageMin": 50,
+      "_cand": {
+        "key": "rss:alabama-shakes-unveil-optimistic-single-i-feel-hope-coming-f",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Rolling Stone"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Rolling Stone",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 63,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "watchguide-evil-dead-movies-streaming-guide",
+      "slug": "where-to-stream-all-the-evil-dead-movies",
+      "title": "Where to Stream All the Evil Dead Movies",
+      "contentType": "watchguide",
+      "formatTag": "watchguide",
+      "category": "streaming",
+      "subcategory": "where-to-watch",
+      "eventType": "other",
+      "sensitivity": "high",
+      "eventSlug": "evil-dead-movies-streaming-guide",
+      "primaryKeyword": "Evil Dead movies streaming",
+      "primaryEntity": "Evil Dead",
+      "entities": [
+        "Evil Dead (film series)"
+      ],
+      "angle": "Guide to where all 'Evil Dead' movies can be streamed.",
+      "tmdbType": "movie",
+      "source": "rss:TheWrap",
+      "sources": [
+        {
+          "outlet": "TheWrap",
+          "tier": 7,
+          "url": "https://www.thewrap.com/creative-content/what-to-watch/evil-dead-movies-streaming-where/",
+          "ageMin": 62,
+          "headline": "Where to Stream All the Evil Dead Movies",
+          "summary": "Time to lock in for \"Evil Dead Burn\" The post Where to Stream All the Evil Dead Movies appeared first on TheWrap ."
+        }
+      ],
+      "ageMin": 62,
+      "_cand": {
+        "key": "rss:where-to-stream-all-the-evil-dead-movies",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "TheWrap"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": "TheWrap",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -518,168 +528,39 @@
       }
     },
     {
-      "id": "news-paul-feig-detention-horror-movie",
-      "slug": "paul-feig-to-direct-horror-movie-detention-for-blumhouse-atomic-monste",
-      "title": "Paul Feig to Direct Horror Movie 'Detention' for Blumhouse Atomic Monster",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "paul-feig-detention-horror-movie",
-      "primaryKeyword": "detention movie",
-      "primaryEntity": "Detention",
-      "entities": [
-        "Detention (film)",
-        "Paul Feig",
-        "Blumhouse Atomic Monster"
-      ],
-      "angle": "Paul Feig is set to direct the new horror film 'Detention' for Blumhouse Atomic Monster.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/paul-feig-direct-horror-movie-detention-1236627366/",
-          "ageMin": 969,
-          "headline": "Paul Feig to Direct Horror Movie Detention for Blumhouse Atomic Monster",
-          "summary": "Daniel Gold, who wrote the upcoming Ryan Gosling-Will Ferrell movie 'Tough Guys,' penned the feature as a spec, which also has Michael Bay’s Platinum Dunes involved."
-        }
-      ],
-      "ageMin": 969,
-      "_cand": {
-        "key": "rss:paul-feig-to-direct-horror-movie-detention-for-blumhouse-ato",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 69,
-      "signals": {
-        "recency": 1,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "news-jennifer-garner-the-five-star-weekend",
-      "slug": "jennifer-garner-on-working-with-a-group-of-women-for-the-first-time-on",
-      "title": "Jennifer Garner on Working With a Group of Women for the First Time on 'The Five Star Weekend'",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "jennifer-garner-the-five-star-weekend",
-      "primaryKeyword": "The Five Star Weekend",
-      "primaryEntity": "The Five Star Weekend",
-      "entities": [
-        "The Five Star Weekend (film)",
-        "Jennifer Garner",
-        "Regina Hall",
-        "Chloë Sevigny"
-      ],
-      "angle": "Jennifer Garner discusses working with an all-female cast for the first time in 'The Five Star Weekend'.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/tv/tv-news/jennifer-garner-women-the-five-star-weekend-food-influencer-1236643217/",
-          "ageMin": 1084,
-          "headline": "Jennifer Garner on Working With a Group of Women for the First Time on The Five Star Weekend and Channeling Her Inner Food Influencer",
-          "summary": "Garner stars alongside Regina Hall, Chloë Sevigny, Gemma Chan and D'Arcy Carden in the adaptation of Elin Hilderbrand's hit novel."
-        }
-      ],
-      "ageMin": 1084,
-      "_cand": {
-        "key": "rss:jennifer-garner-on-working-with-a-group-of-women-for-the-fir",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 69,
-      "signals": {
-        "recency": 1,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "news-big-brother-tribute-mickey-lee-season-28",
-      "slug": "big-brother-pays-tribute-to-mickey-lee-during-season-28-premiere",
-      "title": "Big Brother Pays Tribute To Mickey Lee During Season 28 Premiere",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
+      "id": "music-news-jack-white-twin-temple-opening-act",
+      "slug": "jack-white-invites-satanic-band-twin-temple-to-open-for-him",
+      "title": "Jack White Invites Satanic Band Twin Temple to Open for Him",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "big-brother-tribute-mickey-lee-season-28",
-      "primaryKeyword": "big brother mickey lee tribute",
-      "primaryEntity": "Big Brother",
+      "tier": "popular",
+      "eventSlug": "jack-white-twin-temple-opening-act",
+      "primaryKeyword": "Jack White",
+      "primaryEntity": "Jack White",
       "entities": [
-        "Mickey Lee"
+        "Twin Temple",
+        "Charley Crockett"
       ],
-      "angle": "Big Brother pays tribute to alum Mickey Lee during the Season 28 premiere.",
+      "angle": "Jack White invites controversial band Twin Temple to open for him.",
       "tmdbType": "movie",
-      "source": "rss:Deadline",
+      "source": "rss:Rolling Stone",
       "sources": [
         {
-          "outlet": "Deadline",
+          "outlet": "Rolling Stone",
           "tier": 7,
-          "url": "https://deadline.com/2026/07/big-brother-tribute-mickey-lee-season-28-premiere-1236979049/",
-          "ageMin": 310,
-          "headline": "Big Brother Pays Tribute To Mickey Lee During Season 28 Premiere",
-          "summary": "Big Brother paid tribute to alum Mickey Lee during the Season 28 premiere on CBS. Right before the new season of the reality TV competition started with the introduction of the new houseguests entering the game, a title card in honor of Lee appeared. In loving memory, read the card paying tribute to Lee, which [ ]"
+          "url": "https://www.rollingstone.com/music/music-news/jack-white-invites-satanic-band-twin-temple-to-open-1235591970/",
+          "ageMin": 27,
+          "headline": "Jack White Invites Satanic Band Twin Temple to Open for Him",
+          "summary": "The invitation comes after the L.A. duo were reportedly fired from Charley Crockett's tour over their Lucifer-loving imagery"
         }
       ],
-      "ageMin": 310,
+      "ageMin": 27,
       "_cand": {
-        "key": "rss:big-brother-pays-tribute-to-mickey-lee-during-season-28-prem",
+        "key": "rss:jack-white-invites-satanic-band-twin-temple-to-open-for-him",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -689,32 +570,96 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Deadline"
+          "Rolling Stone"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Deadline",
+        "attribution": "Rolling Stone",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 50,
+      "priority": 59,
       "signals": {
-        "recency": 9,
+        "recency": 24,
         "corroboration": 12,
         "status": 18,
         "type": 5,
         "pop": 0,
         "breakout": 0,
-        "big": 6,
+        "big": 0,
         "trending": 0,
         "softTv": 0
       }
     },
     {
-      "id": "music-news-cage-the-elephant-big-loud-rock-signing",
-      "slug": "cage-the-elephant-signs-with-big-loud-rock",
-      "title": "Cage the Elephant Signs With Big Loud Rock",
+      "id": "music-news-benson-boone-megan-moroney-beautiful-things-performance",
+      "slug": "benson-boone-surprises-megan-moroney-crowd-for-back-to-back-performanc",
+      "title": "Benson Boone Surprises Megan Moroney Crowd For Back-to-Back Performances of Their Beautiful Things Hits",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "benson-boone-megan-moroney-beautiful-things-performance",
+      "primaryKeyword": "Benson Boone Megan Moroney",
+      "primaryEntity": "Benson Boone",
+      "entities": [
+        "Megan Moroney"
+      ],
+      "angle": "Benson Boone makes surprise appearance at Megan Moroney concert for joint performance.",
+      "tmdbType": "movie",
+      "source": "rss:Billboard",
+      "sources": [
+        {
+          "outlet": "Billboard",
+          "tier": 7,
+          "url": "https://www.billboard.com/music/music-news/benson-boone-megan-moroney-stage-beautiful-things-combo-1236291647/",
+          "ageMin": 42,
+          "headline": "Benson Boone Surprises Megan Moroney Crowd For Back-to-Back Performances of Their Beautiful Things Hits",
+          "summary": "The country singer took a page out of her guest's book and flipped expectations."
+        }
+      ],
+      "ageMin": 42,
+      "_cand": {
+        "key": "rss:benson-boone-surprises-megan-moroney-crowd-for-back-to-back-",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Billboard"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Billboard",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 59,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "music-news-katy-perry-justin-trudeau-watch-it-burn-tiktok",
+      "slug": "justin-trudeau-joins-katy-perry-for-silly-tiktok-dance-to-promote-new-",
+      "title": "Justin Trudeau Joins Katy Perry for Silly TikTok Dance to Promote New Single",
       "contentType": "music-news",
       "formatTag": "music-news",
       "category": "music",
@@ -722,29 +667,28 @@
       "eventType": "announcement",
       "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "cage-the-elephant-big-loud-rock-signing",
-      "primaryKeyword": "Cage the Elephant",
-      "primaryEntity": "Cage The Elephant",
+      "eventSlug": "katy-perry-justin-trudeau-watch-it-burn-tiktok",
+      "primaryKeyword": "Katy Perry",
+      "primaryEntity": "Katy Perry",
       "entities": [
-        "Cage the Elephant",
-        "Big Loud Rock"
+        "Justin Trudeau"
       ],
-      "angle": "Established rock band Cage the Elephant signs with new label Big Loud Rock and releases new single.",
+      "angle": "Katy Perry enlisted Justin Trudeau for a TikTok dance to promote her new single 'Watch it Burn'.",
       "tmdbType": "movie",
       "source": "rss:Billboard",
       "sources": [
         {
           "outlet": "Billboard",
           "tier": 7,
-          "url": "https://www.billboard.com/pro/cage-the-elephant-signs-big-loud-rock/",
-          "ageMin": 81,
-          "headline": "Cage the Elephant Signs With Big Loud Rock",
-          "summary": "The group has also released the new song \"Beaches in Tennessee.\""
+          "url": "https://www.billboard.com/music/music-news/justin-trudeau-dancing-katy-perry-tiktok-watch-it-burn-1236291602/",
+          "ageMin": 108,
+          "headline": "Justin Trudeau Helps Katy Perry Promote Watch it Burn Single With Goofy TikTok Dance: Watch",
+          "summary": "The former prime minister hopped up and down with the pop star and friends to the silly clip."
         }
       ],
-      "ageMin": 81,
+      "ageMin": 108,
       "_cand": {
-        "key": "rss:cage-the-elephant-signs-with-big-loud-rock",
+        "key": "rss:justin-trudeau-helps-katy-perry-promote-watch-it-burn-single",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -778,103 +722,102 @@
       }
     },
     {
-      "id": "music-news-bts-the-city-arirang-new-york",
-      "slug": "bts-bringing-immersive-bts-the-city-arirang-to-new-york",
-      "title": "BTS Bringing Immersive BTS The City Arirang To New York",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "bts-the-city-arirang-new-york",
-      "primaryKeyword": "BTS The City Arirang",
-      "primaryEntity": "BTS",
-      "entities": [
-        "The City Arirang"
-      ],
-      "angle": "Global phenomenon BTS is bringing its immersive 'BTS The City Arirang' exhibition to New York.",
-      "tmdbType": "movie",
-      "source": "rss:Billboard",
-      "sources": [
-        {
-          "outlet": "Billboard",
-          "tier": 7,
-          "url": "https://www.billboard.com/music/pop/bts-immersive-bts-the-city-arirang-new-york-1236291524/",
-          "ageMin": 98,
-          "headline": "BTS Bringing Immersive BTS The City Arirang To New York",
-          "summary": "The traveling exhibition has already taken place in Seoul, Las Vegas, Busan and London ahead of the group's shows in those cities."
-        }
-      ],
-      "ageMin": 98,
-      "_cand": {
-        "key": "rss:bts-bringing-immersive-bts-the-city-arirang-to-new-york",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "breakoutVelocity": 0,
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Billboard"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Billboard",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 55,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "news-julian-schnabel-lifetime-honor-lucca-festival",
-      "slug": "julian-schnabel-to-receive-lifetime-honor-at-lucca-festival",
-      "title": "Julian Schnabel to Receive Lifetime Honor at Lucca Festival",
+      "id": "news-aulii-cravalho-live-action-moana-role",
+      "slug": "original-moana-actress-auli-i-cravalho-gets-candid-on-passing-the-torc",
+      "title": "Original Moana Actress Auliʻi Cravalho Gets Candid on Passing the Torch for Disney s Live-Action Redo",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
-      "eventType": "award",
+      "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "julian-schnabel-lifetime-honor-lucca-festival",
-      "primaryKeyword": "julian schnabel",
-      "primaryEntity": "Julian Schnabel",
+      "eventSlug": "aulii-cravalho-live-action-moana-role",
+      "primaryKeyword": "Auli'i Cravalho Moana",
+      "primaryEntity": "Auliʻi Cravalho",
       "entities": [
-        "The Diving Bell and the Butterfly",
-        "Before Night Falls"
+        "Auli'i Cravalho",
+        "Moana (film)"
       ],
-      "angle": "Director Julian Schnabel to receive a lifetime honor and retrospective at the Lucca Festival.",
+      "angle": "Original Moana voice actress Auli'i Cravalho discusses passing the torch for the live-action remake.",
+      "tmdbType": "movie",
+      "source": "rss:TheWrap",
+      "sources": [
+        {
+          "outlet": "TheWrap",
+          "tier": 7,
+          "url": "https://www.thewrap.com/creative-content/movies/original-moana-actress-aulii-cravalho-real-reaction-live-action-casting/",
+          "ageMin": 56,
+          "headline": "Original Moana Actress Auliʻi Cravalho Gets Candid on Passing the Torch for Disney s Live-Action Redo",
+          "summary": "\"The first call brought me to tears,\" the actress admits to TheWrap as she explains how she came to embrace giving the role to a new actress — and becoming an executive producer The post Original Moana Actress Auliʻi Cravalho Gets Candid on Passing the Torch for Disney s Live-Action Redo appeared first on TheWrap ."
+        }
+      ],
+      "ageMin": 56,
+      "_cand": {
+        "key": "rss:original-moana-actress-auli-i-cravalho-gets-candid-on-passin",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "TheWrap"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "TheWrap",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 59,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-micheal-ward-rape-charge-acquittal",
+      "slug": "top-boy-star-micheal-ward-found-not-guilty-of-rape",
+      "title": "Top Boy Star Micheal Ward Found Not Guilty of Rape",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "legal",
+      "sensitivity": "high",
+      "eventSlug": "micheal-ward-rape-charge-acquittal",
+      "primaryKeyword": "micheal ward",
+      "primaryEntity": "Micheal Ward",
+      "entities": [
+        "Top Boy",
+        "Eddington"
+      ],
+      "angle": "Top Boy star Micheal Ward has been found not guilty of rape in a London court.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
         {
           "outlet": "THR",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/julian-schnabel-lifetime-honor-at-lucca-festival-1236643802/",
-          "ageMin": 185,
-          "headline": "Julian Schnabel to Get Lifetime Honor at Lucca Festival",
-          "summary": "The artist and director of 'The Diving Bell and the Butterfly' and 'Before Night Falls' will receive a retrospective at the Italian event, which runs Sept.26-Oct.4."
+          "url": "https://www.hollywoodreporter.com/news/general-news/top-boy-micheal-ward-not-guilty-rape-acquitted-1236643910/",
+          "ageMin": 100,
+          "headline": "Top Boy Star Micheal Ward Found Not Guilty of Rape in London Court",
+          "summary": "Ward, who also appeared in Ari Aster's 'Eddington' and won the BAFTA rising star award, reportedly sobbed as he was cleared of all charges."
         }
       ],
-      "ageMin": 185,
+      "ageMin": 100,
       "_cand": {
-        "key": "rss:julian-schnabel-to-get-lifetime-honor-at-lucca-festival",
+        "key": "rss:top-boy-star-micheal-ward-found-not-guilty-of-rape-in-london",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -887,86 +830,21 @@
           "THR"
         ],
         "maxTier": 7,
-        "sensitivity": "normal",
+        "sensitivity": "high",
         "attribution": "THR",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 53,
+      "priority": 58,
       "signals": {
-        "recency": 9,
+        "recency": 16,
         "corroboration": 12,
         "status": 18,
-        "type": 14,
+        "type": 12,
         "pop": 0,
         "breakout": 0,
         "big": 0,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "news-secretary-live-reading-jane-schoenbrun",
-      "slug": "teenage-sex-and-death-at-camp-miasma-director-cast-set-secretary-live-",
-      "title": "Teenage Sex and Death At Camp Miasma Director Cast Set Secretary Live Reading",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "high",
-      "eventSlug": "secretary-live-reading-jane-schoenbrun",
-      "primaryKeyword": "secretary live reading",
-      "primaryEntity": "Secretary",
-      "entities": [
-        "Jane Schoenbrun",
-        "Film Independent",
-        "Mubi"
-      ],
-      "angle": "Director and cast of 'Teenage Sex and Death' to do a live reading of erotic film 'Secretary'.",
-      "tmdbType": "movie",
-      "source": "rss:Deadline",
-      "sources": [
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/teenage-sex-and-death-at-camp-miasma-secretary-live-reading-1236979016/",
-          "ageMin": 616,
-          "headline": "Teenage Sex and Death At Camp Miasma Director Cast Set Secretary Live Reading",
-          "summary": "Nearly 25 years, Secretary will get a one-night-only revival by the director and cast of another erotic title, thanks to Film Independent and Mubi. Jane Schoenbrun, writer/director of Teenage Sex and Death at Camp Miasma, will direct the cast of their upcoming Mubi film in a live reading of the 2002 Steven Shainberg-helmed erotic romance, [ ]"
-        }
-      ],
-      "ageMin": 616,
-      "_cand": {
-        "key": "rss:teenage-sex-and-death-at-camp-miasma-director-cast-set-secre",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Deadline"
-        ],
-        "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "Deadline",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 51,
-      "signals": {
-        "recency": 4,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 12,
         "trending": 0,
         "softTv": 0
       }
