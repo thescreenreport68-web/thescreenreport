@@ -6,7 +6,7 @@ import { AGENTS, FLAGSHIP_WRITER, flagshipOn, agentChat, METER, meterReport, met
 import { findStories } from "../agents/finder.mjs";
 import { run as embedRun, scanPagesForInstagram } from "../agents/embed.mjs";
 import { run as synthRun } from "../agents/synthesizer.mjs";
-import { run as writerRun } from "../agents/writer.mjs";
+import { run as writerRun, repairBodyQuotes } from "../agents/writer.mjs";
 import { factLocks, review as qaReview, webCheck as qaWebCheck, classifyBlocks } from "../agents/qa.mjs";
 import { buildInsideMarkdown } from "../assemble.mjs";
 import { discoverReddit, redditSearchPosts, redditTopComments } from "../../find/sources/reddit.mjs";
@@ -274,6 +274,57 @@ await check("writer retries ONCE on an incomplete draft", async () => {
   await writerRun(job, { chatImpl });
   assert.equal(calls, 2);
   assert.equal(job.article.body, full.body);
+});
+
+await check("writer anchor-id cards substitute the EXACT harvested quote (never model-typed text)", async () => {
+  const job = fakeJob("audience-reaction");
+  const fb = job.factBlock;
+  const full = fakeArticle({ form: "audience-reaction", factBlock: fb });
+  const idCards = { ...full, reactionsRender: [
+    { anchorId: "A1", tweetId: "999999" },          // writer-guessed tweetId ignored — anchor's own only
+    { anchorId: "A2" },                              // audience anchor
+    { anchorId: "A99" },                             // unknown id → dropped
+    { speaker: "", platform: "X", quote: fb.aggregateFans[2].quote, tweetId: "" }, // legacy card passes through
+  ] };
+  await writerRun(job, { chatImpl: async () => ({ data: idCards, usage: {} }) });
+  const cards = job.article.reactionsRender;
+  assert.equal(cards.length, 3, "unknown id dropped");
+  assert.equal(cards[0].quote, fb.aggregateFans[0].quote, "A1 quote is the harvested original");
+  assert.equal(cards[0].tweetId, fb.aggregateFans[0].tweetId || "", "anchor tweetId only, never the writer's guess");
+  assert.equal(cards[1].quote, fb.aggregateFans[1].quote, "A2 → second audience anchor");
+  assert.equal(cards[1].speaker, "", "audience cards never carry a name");
+  assert.equal(cards[2].quote, fb.aggregateFans[2].quote, "legacy full card untouched");
+});
+
+await check("writer anchorStatement by id snaps to the named anchor; bad id → null", async () => {
+  const job = fakeJob("creator-answers-critics");
+  const fb = job.factBlock;
+  const full = fakeArticle({ form: "creator-answers-critics", factBlock: fb });
+  await writerRun(job, { chatImpl: async () => ({ data: { ...full, anchorStatement: { anchorId: "R1" } }, usage: {} }) });
+  assert.equal(job.article.anchorStatement.quote, fb.reactions[0].quote);
+  assert.equal(job.article.anchorStatement.speaker, fb.reactions[0].speaker);
+  const job2 = fakeJob("creator-answers-critics");
+  await writerRun(job2, { chatImpl: async () => ({ data: { ...full, anchorStatement: { anchorId: "R42" } }, usage: {} }) });
+  assert.equal(job2.article.anchorStatement, null, "unknown id → no anchorStatement");
+});
+
+await check("repairBodyQuotes heals markdown-inside-quote and snaps a unique prefix to the full anchor", () => {
+  const fb = {
+    reactions: [{ quote: "The battle sequence rewired what television can even attempt this year" }],
+    aggregateFans: [{ quote: "honestly the finale broke me in the best possible way" }],
+  };
+  const a = { body: [
+    '\u201cThe **battle** sequence rewired what television can even attempt this year\u201d said a critic.',
+    'One fan wrote \u201chonestly the finale broke me in the bes\u201d and it was cut mid-word.',
+    'Another said \u201chonestly the finale broke me in the\u201d which ends at a word boundary.',
+    'And \u201csomething nobody ever posted anywhere at all here\u201d stays untouched.',
+  ].join("\n\n") };
+  const n = repairBodyQuotes(a, fb);
+  assert.equal(n, 2, "two repairs");
+  assert.ok(a.body.includes("\u201cThe battle sequence rewired what television can even attempt this year\u201d"), "markdown stripped");
+  assert.ok(a.body.includes("\u201chonestly the finale broke me in the best possible way\u201d"), "mid-word scar snapped to the full anchor");
+  assert.ok(a.body.includes("\u201chonestly the finale broke me in the\u201d"), "word-boundary shortening is a legit quote — untouched");
+  assert.ok(a.body.includes("\u201csomething nobody ever posted anywhere at all here\u201d"), "unanchored span left for the wall");
 });
 
 // ── agents/qa.mjs: factLocks (the deterministic walls) ────────────────────────────────────────────

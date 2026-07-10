@@ -5,6 +5,7 @@
 // are the goal; SEO stays basic (one natural keyword, no stuffing).
 import { agentChat } from "../models.mjs";
 import { FORMS, SEO } from "../config.inside.mjs";
+import { norm } from "../reactionFinder.mjs";
 
 const FORM_GUIDE = {
   "audience-reaction": `SKELETON — how people are reacting:
@@ -48,6 +49,72 @@ CRAFT: hook first (use the brief's hook), short paragraphs, the real posts as vi
 structure (build to the standout anchors — strongest last), at most ${SEO.maxQuestionH2s} question-style H2s,
 one natural use of the SEO keyword — nothing stuffed. Return STRICT JSON only.`;
 
+// The writer NEVER copies quote text for display cards — it picks anchors BY ID and the code
+// substitutes the exact harvested text (cloud runs 2-3: every model mutation class — markdown
+// leaked into quotes, light rephrasing, merged spans — died at the wall; a card the writer never
+// types cannot mutate). Unknown/malformed ids drop the card; legacy full-card shapes pass through
+// untouched (the wall still checks them).
+function cardFor(factBlock, id) {
+  const m = /^([RA])\s*(\d+)$/i.exec(String(id || "").trim());
+  if (!m) return null;
+  const list = m[1].toUpperCase() === "R" ? factBlock.reactions : factBlock.aggregateFans;
+  const r = list?.[Number(m[2]) - 1];
+  if (!r?.quote) return null;
+  return {
+    speaker: r.speaker || "", connection: r.connection || "", platform: r.platform || "",
+    date: r.date || "", quote: r.quote, ...(r.tweetId ? { tweetId: r.tweetId } : { tweetId: "" }),
+  };
+}
+
+function substituteAnchorCards(article, factBlock) {
+  if (!article || !factBlock) return article;
+  if (Array.isArray(article.reactionsRender)) {
+    article.reactionsRender = article.reactionsRender
+      .map((c) => {
+        const snap = cardFor(factBlock, c?.anchorId);
+        if (snap) return snap; // anchor's own tweetId only — a writer-guessed id could mispair
+        return c?.anchorId ? null : c; // unknown id → drop; legacy full card → wall checks it
+      })
+      .filter((c) => c && c.quote);
+  }
+  if (article.anchorStatement?.anchorId) {
+    const snap = cardFor(factBlock, article.anchorStatement.anchorId);
+    article.anchorStatement = snap ? { speaker: snap.speaker, connection: snap.connection, quote: snap.quote, platform: snap.platform } : null;
+  }
+  return article;
+}
+
+// Deterministic repair of body-prose quotes BEFORE QA: (1) markdown the model leaked INSIDE a
+// quotation heals when the stripped span is verbatim; (2) a span that is a prefix of exactly ONE
+// anchor snaps to that anchor's full text (kills truncation scars). Anything else is left for the
+// wall — repair never invents, it only restores the harvested original.
+export function repairBodyQuotes(article, factBlock) {
+  if (!article?.body || !factBlock) return 0;
+  const anchors = [...(factBlock.reactions || []), ...(factBlock.aggregateFans || [])]
+    .map((r) => r.quote).filter(Boolean);
+  const nA = anchors.map((a) => ({ a, n: norm(a) }));
+  let repairs = 0;
+  article.body = article.body.replace(/([“"])([^“”"\n]{20,400})([”"])/g, (m, o, span, c) => {
+    const ns = norm(span);
+    if (!ns) return m;
+    const at = (x) => x.n.indexOf(ns);
+    if (nA.some((x) => at(x) >= 0)) {
+      // Substring of an anchor. A word-boundary shortening is a legitimate quote (the wall passes
+      // it); a MID-WORD truncation is the scar class the QA guard hard-blocks — snap it to the one
+      // anchor it was cut from.
+      const cleanHit = nA.some((x) => { const i = at(x); return i >= 0 && !/[a-z0-9]/.test(x.n[i + ns.length] || ""); });
+      if (cleanHit) return m;
+      const scarred = nA.filter((x) => { const i = at(x); return i >= 0 && /[a-z0-9]/.test(x.n[i + ns.length] || ""); });
+      if (ns.length >= 20 && scarred.length === 1) { repairs++; return o + scarred[0].a + c; }
+      return m;
+    }
+    const stripped = span.replace(/(\*\*|\*|__|`)/g, "");
+    if (stripped !== span && nA.some((x) => x.n.includes(norm(stripped)))) { repairs++; return o + stripped + c; }
+    return m; // genuinely unanchored — the wall blocks it, corrections handle it
+  });
+  return repairs;
+}
+
 // run(job, {corrections, previousArticle}) → job.article
 export async function run(job, { corrections = null, previousArticle = null, chatImpl = null } = {}) {
   const form = FORMS[job.angle.form];
@@ -58,8 +125,8 @@ export async function run(job, { corrections = null, previousArticle = null, cha
   const schema = `{"title":"","metaTitle":"<=60 chars","dek":"1-2 engaging sentences","metaDescription":"<=155 chars",
 "keyTakeaways":["3-4 items"],"body":"markdown with ## H2s","faq":[{"q":"","a":"40-60 word answer"}],
 "about":[{"name":"","type":"Person|Movie|TVSeries|Organization"}],"tags":["4-8"],"imageQuery":"image search phrase",
-"reactionsRender":[{"speaker":"","connection":"","platform":"","date":"","quote":"EXACT anchor quote","tweetId":""}],
-"anchorStatement":{"speaker":"","connection":"","quote":"","platform":""},
+"reactionsRender":[{"anchorId":"R1 or A3 — the anchor to show as a display card","tweetId":""}],
+"anchorStatement":{"anchorId":"R# — creator-answers-critics ONLY, else omit"},
 "fanConsensus":"one-line honest sentiment read","claims":[{"text":"hard fact used","sourceQuote":"anchor line"}]}`;
 
   const user = `Write the article.
@@ -75,14 +142,16 @@ ${job.factText}
 
 WORD BUDGET: ~${budget} words. SEO keyword (use once, naturally): ${job.brief.seoKeyword}
 Available X embed ids (use in reactionsRender only if the post matches): ${job.embeds?.tweetIds?.join(", ") || "none"}
-reactionsRender = 6-12 display cards, ordered to build to the standouts. anchorStatement ONLY for
-creator-answers-critics. ${corrections ? `\n⚠⚠ MANDATORY CORRECTIONS — fix ONLY these, change nothing else:\n${corrections}` : ""}
+reactionsRender = 6-12 display cards chosen BY ANCHOR ID (the exact quote text is substituted
+mechanically from the block — you never copy it), ordered to build to the standouts. anchorStatement ONLY
+for creator-answers-critics. ${corrections ? `\n⚠⚠ MANDATORY CORRECTIONS — fix ONLY these, change nothing else:\n${corrections}` : ""}
 
 Return JSON with EXACTLY these fields: ${schema}`;
 
   if (previousArticle && corrections) {
     const { data } = await agentChat("writer", { system: SYS, user, surgical: true }, chatImpl ? { chatImpl } : {});
-    job.article = { ...previousArticle, ...(data || {}) };
+    job.article = substituteAnchorCards({ ...previousArticle, ...(data || {}) }, job.factBlock);
+    repairBodyQuotes(job.article, job.factBlock);
     return job;
   }
 
@@ -94,6 +163,7 @@ Return JSON with EXACTLY these fields: ${schema}`;
     const words = (article?.body || "").split(/\s+/).filter(Boolean).length;
     if (article && words >= Math.min(lo, 300) && (article.keyTakeaways || []).length >= 3 && (article.faq || []).length >= 2) break;
   }
-  job.article = article;
+  job.article = substituteAnchorCards(article, job.factBlock);
+  repairBodyQuotes(job.article, job.factBlock);
   return job;
 }
