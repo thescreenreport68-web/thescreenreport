@@ -19,7 +19,10 @@ export const AGENTS = {
     fallback: "openai/gpt-5-nano",
     temperature: 0,
     maxTokens: 2200,
-    watchdogMs: 180e3,
+    // 240s: the harvest's soft QUERY deadline is 150s, and the anchor passes (tweet-scan, Bluesky,
+    // reddit, classifies) legitimately run AFTER it — cloud run 8 watchdog-killed a floor-met
+    // harvest (Bonnie Tyler, 15 fan posts) at 180s. The soft deadline still bounds the slow part.
+    watchdogMs: 240e3,
   },
   // IG/X embed relevance pick — deterministic scanning + one cheap classify.
   embed: {
