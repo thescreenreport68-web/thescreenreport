@@ -38,7 +38,8 @@ export const AGENTS = {
     fallback: "qwen/qwen3-235b-a22b-2507",
     temperature: 0.3,
     maxTokens: 1600,
-    watchdogMs: 120e3,
+    watchdogMs: 150e3,
+    attemptDeadlineMs: 80e3, // slow primary → FALLBACK (cloud run 10: v4-flash overran the whole watchdog)
   },
   // The prose. Creative on fresh drafts, surgical on corrections.
   // 2026-07-10 proof-run verdict: deepseek-v4-flash EDITS quotes (drops apostrophes, merges spans,
