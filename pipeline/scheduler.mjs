@@ -46,6 +46,17 @@ export function freshBacklog() {
     !(entityKey(t.primaryEntity, t.eventType) && pub.entities.has(entityKey(t.primaryEntity, t.eventType)))).length;
 }
 
+// Age (hours) since findrun last (re)built the queue. Breaks the STUCK-QUEUE DEADLOCK (owner 2026-07-10): a queue of
+// topics that are "fresh" (not in the ledger) but UNPUBLISHABLE — stale 3-day-old sources, repeatedly held — keeps
+// freshBacklog >= MIN_BACKLOG forever, so the backlog gate NEVER fires a top-up, discovery stalls, and run.mjs keeps
+// failing the same topics → published 0 indefinitely (this stopped the news lane for ~2.5 days). A stale queue must
+// force a refresh regardless of the backlog count so CURRENT stories replace the stuck ones.
+export function queueAgeHours() {
+  try { const b = JSON.parse(fs.readFileSync(QUEUE, "utf8")).builtAt; return b ? (Date.now() - Date.parse(b)) / 3.6e6 : Infinity; }
+  catch { return Infinity; }
+}
+const QUEUE_STALE_HOURS = Number(process.env.QUEUE_STALE_HOURS ?? 3); // refresh a queue older than this even if backlog looks high
+
 function setOutput(kv) {
   const f = process.env.GITHUB_OUTPUT;
   if (!f) return;
@@ -64,14 +75,17 @@ export async function tick({ now = new Date() } = {}) {
     setOutput({ published: 0, reason: "outside-hours" });
     return { published: 0, reason: "outside-hours" };
   }
-  // TOP UP only when the fresh backlog is low — keeps discovery cost down (no FIND every tick).
+  // TOP UP when the fresh backlog is low (cost control: no FIND every tick) OR when the queue is STALE (deadlock
+  // breaker — see queueAgeHours: a backlog of unpublishable-but-unpublished topics must not permanently block discovery).
   const backlog = freshBacklog();
-  if (backlog < MIN_BACKLOG) {
-    console.log(`[news-scheduler] fresh backlog ${backlog} (< ${MIN_BACKLOG}) → running FIND top-up…`);
+  const ageH = queueAgeHours();
+  const ageStr = ageH === Infinity ? "∞" : ageH.toFixed(1);
+  if (backlog < MIN_BACKLOG || ageH > QUEUE_STALE_HOURS) {
+    console.log(`[news-scheduler] fresh backlog ${backlog}, queue age ${ageStr}h → running FIND top-up (trigger: backlog<${MIN_BACKLOG} or age>${QUEUE_STALE_HOURS}h)…`);
     try { runNode("find/findrun.mjs", [`--candidates=${FIND_CANDIDATES}`, `--queue=${FIND_QUEUE}`], { FIND_SKIP_RECHECK: process.env.FIND_KEEP_RECHECK ? "" : "1" }); }
     catch (e) { console.error(`[news-scheduler] FIND top-up failed: ${String(e?.message || e).slice(0, 160)}`); }
   } else {
-    console.log(`[news-scheduler] fresh backlog ${backlog} (>= ${MIN_BACKLOG}) → publishing from existing queue.`);
+    console.log(`[news-scheduler] fresh backlog ${backlog} (>= ${MIN_BACKLOG}), queue age ${ageStr}h (<= ${QUEUE_STALE_HOURS}h) → publishing from existing queue.`);
   }
   // PUBLISH one from the queue (CONCURRENCY=1 → exactly one per tick; run.mjs ledger-skips already-published topics).
   let out = "";
