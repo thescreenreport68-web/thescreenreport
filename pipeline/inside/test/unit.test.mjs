@@ -540,6 +540,7 @@ await check("a source HEADLINE extracted as a 'fan quote' never becomes an ancho
     ] }, usage: {} } : { data: {}, usage: {} },
     cacheTweetsImpl: async () => ({ tweets: [], ids: [] }),
     scanImpl: async () => [],
+    bskyImpl: async () => [],
     reddit: false, embeds: false,
   });
   assert.equal(res.ok, false, "1 real fan post < floor 3 → refuses");

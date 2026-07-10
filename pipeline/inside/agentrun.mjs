@@ -60,6 +60,7 @@ async function diagProbes() {
     ["jina-keyless", () => fetch("https://r.jina.ai/https://example.com/", t(8000))],
     ["reddit-json", () => fetch("https://www.reddit.com/search.json?q=movie&limit=1", { headers: { "user-agent": "Mozilla/5.0 (compatible; ScreenReportBot)" }, ...t(8000) })],
     ["x-syndication", () => fetch("https://cdn.syndication.twimg.com/tweet-result?id=20&token=a", t(8000))],
+    ["bsky-search", () => fetch("https://api.bsky.app/xrpc/app.bsky.feed.searchPosts?q=movie&limit=1", { headers: { "user-agent": "Mozilla/5.0 (compatible; ScreenReportBot)" }, ...t(8000) })],
     ["gnews-rss", () => fetch("https://news.google.com/rss/search?q=movie&hl=en-US&gl=US&ceid=US:en", t(8000))],
   ];
   for (const [name, fn] of P) {

@@ -7,6 +7,7 @@ import { chat } from "../lib/openrouter.mjs";
 import { findContent } from "../lib/contentFinder.mjs";
 import { cacheTweets } from "../lib/tweets.mjs";
 import { redditSearchPosts, redditTopComments } from "../find/sources/reddit.mjs";
+import { bskySearchPosts } from "./bsky.mjs";
 import { MODELS, FORMS, MAX_EMBEDS } from "./config.inside.mjs";
 
 // Normalization for the verbatim wall: curly→straight quotes, dashes unified, whitespace
@@ -96,7 +97,7 @@ export async function scanPagesForTweets(sources, { fetchImpl = fetch, maxPages 
 // Tweets ARE reactions, not just embeds: a public post is the primary artifact itself (the
 // playbook's "official oEmbed is the receipt"). The text comes from X's own syndication API, so
 // it is verbatim by construction; one cheap LLM pass classifies relevance + who the author is.
-const CLASSIFY_TWEETS_SYS = `You classify public X posts for an audience-reaction desk. For each post decide:
+const CLASSIFY_TWEETS_SYS = `You classify public social posts (X / Bluesky) for an audience-reaction desk. For each post decide:
 - aboutEvent: is it a genuine reaction ABOUT THE SUBJECT (not spam/ads/unrelated, not a different work with
   a similar name)? Be strict for short/common titles.
 - speakerType: celebrity|filmmaker|castmate|crew|musician|company|official if the AUTHOR is a publicly known
@@ -198,6 +199,7 @@ export async function harvestReactions(trigger, angle, {
   reddit = true,
   redditSearchImpl = redditSearchPosts,
   redditCommentsImpl = redditTopComments,
+  bskyImpl = bskySearchPosts,
   maxQueries = 3,
   // Soft self-deadline: stop STARTING new queries past this, return gracefully with whatever was
   // harvested (→ under-floor park + retry next cycle) instead of being watchdog-killed (→ blocked,
@@ -348,6 +350,37 @@ export async function harvestReactions(trigger, angle, {
     }
     recompute();
   }
+
+  // 3b2. BLUESKY AS ANCHORS — the keyless raw-fan-post source that works from ANY IP (Reddit ended
+  //      self-serve API keys; runners are 403 keyless). Post text is verbatim by construction; the
+  //      same relevance/speaker classify used for tweets gates every post; likes rank them.
+  try {
+    const who = angle.focusEntity || trigger.primaryEntity;
+    const found = await bskyImpl(who, { nowMs: t0 }).catch((e) => { diag(`bsky-search → ERR ${String(e?.message || e).slice(0, 80)}`); return []; });
+    diag(`bsky → found ${found.length}`);
+    if (found.length) {
+      const asPosts = found.slice(0, 14).map((p) => ({ text: p.text, user: { name: p.displayName, screen_name: p.handle }, created_at: p.createdAt, _url: p.url }));
+      const classified = await classifyTweets(asPosts, trigger, angle, { model, chatImpl, subject });
+      for (const c of classified) {
+        const p = asPosts[c.i];
+        const text = (p.text || "").trim();
+        if (!text) continue;
+        const quote = text.split(/\s+/).slice(0, 45).join(" ");
+        withText.push({ url: p._url, domain: "bsky.app", owner: "bluesky", tier: "social", title: "public post", text, quotes: [text] });
+        raw.push({
+          speaker: c.speakerType === "fan" ? "" : (p.user?.name || ""),
+          speakerType: c.speakerType || "fan",
+          connection: c.connection || "",
+          platform: "Bluesky",
+          date: (p.created_at || "").slice(0, 10),
+          quote,
+          stance: c.stance || "neutral",
+          sourceIdx: withText.length - 1,
+        });
+      }
+      recompute();
+    }
+  } catch { /* bsky outage — other anchor sources may suffice */ }
 
   // 3c. REDDIT AS ANCHORS — the keyless, reliable discourse source (audience posts, verbatim from the
   //     API). Discovered posts + a targeted search; pull top comments; classify relevance+stance once.
