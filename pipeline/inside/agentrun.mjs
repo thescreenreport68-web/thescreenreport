@@ -179,6 +179,11 @@ export async function agentRun({
           }
         }
         corrections = [...block, ...fixable, ...(job.qa.weaknesses || [])].slice(0, 6).map((b) => `- ${b}`).join("\n");
+        // Fabricated/unverbatim quotes get an explicit remediation: the fix is REMOVING quote marks
+        // (or swapping in an exact anchor), not paraphrasing the same span into a new fake quote.
+        if (/fabricated-quote|unverbatim/.test(corrections)) {
+          corrections += "\n- FIX RULE for the quote blocks above: either replace the span with an EXACT anchor quote (copy by id), or keep the sentence and DELETE the quotation marks so it reads as your own analysis. Do NOT reword it into another quoted span.";
+        }
       }
       if (!pass) { hold(job.qa?.hardBlocks?.join(" | ") || `score ${job.qa?.score} < ${GATE.publishMin}`, { score: job.qa?.score }); continue; }
 

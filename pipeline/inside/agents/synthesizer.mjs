@@ -15,6 +15,8 @@ Your brief must:
 - Note what MUST be included (the facts/points the article is incomplete without).
 - Refer to anchors ONLY by id (R2, A5) — never re-quote or paraphrase quote text (the writer copies
   verbatim from the block; your job is selection and structure).
+- Write summaries in flat editorial register — never in a fan's/viewer's voice, never a sentence that
+  reads like a quotable post (the writer must never be tempted to put YOUR words inside quotation marks).
 Output STRICT JSON only.`;
 
 // run(job) → job.brief

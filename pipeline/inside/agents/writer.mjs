@@ -35,6 +35,10 @@ THE ACCURACY LINE (machine-enforced; violations kill the article):
 - Craft the narrative freely, anchored by the brief — but NEVER invent a quote, name, date, time, or title.
 - Every quoted span must be copied EXACTLY from the ANCHOR block (find the anchor by its id) — with ZERO
   added formatting: never bold/italic markers or brackets inside quotation marks, never a leading space.
+- QUOTATION MARKS ARE RESERVED for exact anchor copies. Your own analysis, the brief's summaries, and any
+  characterization of what fans think must appear WITHOUT quotation marks — the wall reads every "…" span
+  as a claimed real post and kills the article if it isn't one. If you can't find the exact anchor for a
+  line, drop the quote marks and say it in your own words instead.
 - AUDIENCE posts are the article's spine: attribute in aggregate WITH THE PLATFORM ("one X user wrote",
   "a fan on Reddit said") — never a name/handle for an ordinary person. Prefer posts with [tweet:id] (they
   render as the real embedded post). Named/critic quotes = one short beat at most. Never state a rumor as
