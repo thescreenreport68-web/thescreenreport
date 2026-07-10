@@ -2,7 +2,6 @@ import Link from "next/link";
 import { getArticleBySlug, type Article } from "@/lib/articles";
 import { SectionLabel } from "@/components/NicheModules";
 import TweetEmbed from "@/components/embed/TweetEmbed";
-import SocialReactionGrid from "@/components/embed/SocialReactionGrid";
 import { formatDateShort } from "@/lib/format";
 
 /* Inside (audience-reaction & discourse) per-form UI — formatTag "inside". Each component guards on its
@@ -133,21 +132,6 @@ function ReactionList({ article }: { article: Article }) {
   );
 }
 
-/* ---------- Instagram embed strip (Embed-agent curated permalinks, capped at 4) ---------- */
-function InstagramStrip({ article }: { article: Article }) {
-  if (!article.instagramUrls?.length) return null;
-  return (
-    <section className="mt-10 not-prose">
-      <div className="mb-1 border-b-2 border-ink pb-1">
-        <h2 className="font-display text-2xl font-bold uppercase tracking-tight text-ink">
-          From Instagram
-        </h2>
-      </div>
-      <SocialReactionGrid instagramUrls={article.instagramUrls.slice(0, 4)} />
-    </section>
-  );
-}
-
 /* ---------- dispatchers ---------- */
 export function InsideTop({ article }: { article: Article }) {
   if (article.formatTag !== "inside") return null;
@@ -162,10 +146,7 @@ export function InsideTop({ article }: { article: Article }) {
 
 export function InsideBottom({ article }: { article: Article }) {
   if (article.formatTag !== "inside") return null;
-  return (
-    <>
-      <ReactionList article={article} />
-      <InstagramStrip article={article} />
-    </>
-  );
+  // REV 3: Instagram posts render INLINE in the body (below the paragraph quoting them) via
+  // ArticleBody's embed markers — the bottom strip is retired; cards remain for non-embedded voices.
+  return <ReactionList article={article} />;
 }

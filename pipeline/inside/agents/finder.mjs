@@ -18,6 +18,9 @@ const SYS = `You are the story editor of an AUDIENCE-REACTION & DISCOURSE desk (
 argue about movies, TV and music; how creators answer critics — never gossip/speculation, never invented
 debates). For EACH numbered story, pick the ONE best form from its allowed list, a working headline
 (honest, curiosity without clickbait), the focus entity, and 2 SIMPLE search queries (2-5 plain words).
+MAINSTREAM HOLLYWOOD FIRST: prefer film/TV/celebrity/music stories with broad AUDIENCE buzz (the buzz
+badges show it: search-trend, wiki-spike, comments). Anime/gaming-adjacent topics only when their
+audience signal is overwhelming. Order by buzz strength, not by coverage volume.
 Skip stories with no genuine discourse angle. Output STRICT JSON only.`;
 
 // story (trigger-shaped, engine-compatible) + angle (form pick) per publishable story.
@@ -25,8 +28,14 @@ export async function findStories({ limit = 6, discoverImpl = discoverStories, c
   const stories = await discoverImpl({ nowMs });
   if (!stories.length) return [];
 
+  const buzzOf = (s) => [
+    s.signals?.trend ? `search-trend${s.signals.trend > 1 ? ` ${s.signals.trend.toLocaleString()}` : ""}` : "",
+    s.signals?.wiki ? `wiki-spike ${Math.round(s.signals.wiki / 1000)}k views` : "",
+    s.signals?.comments ? `${s.signals.comments} comments` : "",
+    s.signals?.outlets ? `${s.signals.outlets} outlets` : "",
+  ].filter(Boolean).join(" + ") || "weak";
   const listing = stories.map((s, i) =>
-    `${i}. [${s.kind}] ${s.headline || s.primaryEntity}${s.work ? ` — the ${s.work.type} "${s.work.title}"` : ""} | heat ${s.discourseHeat}${s.signals?.outlets ? ` | ${s.signals.outlets} outlets` : ""} | threads: ${(s.redditPosts || []).slice(0, 3).map((p) => p.title.slice(0, 60)).join(" · ") || "none captured"} | allowed: ${(ALLOWED[s.kind] || ALLOWED.work).join(", ")}`).join("\n");
+    `${i}. [${s.kind}] ${s.headline || s.primaryEntity}${s.work ? ` — the ${s.work.type} "${s.work.title}"` : ""} | heat ${s.discourseHeat} | buzz: ${buzzOf(s)} | threads: ${(s.redditPosts || []).slice(0, 3).map((p) => p.title.slice(0, 60)).join(" · ") || "none captured"} | allowed: ${(ALLOWED[s.kind] || ALLOWED.work).join(", ")}`).join("\n");
 
   // The classify gets its OWN deadline well inside the orchestrator watchdog, so a hung provider
   // call degrades to the deterministic fallback instead of killing the whole run.

@@ -14,6 +14,40 @@ const matter = require("gray-matter");
 const slugify = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 80);
 const clean = (o) => Object.fromEntries(Object.entries(o).filter(([, v]) => v !== undefined && v !== null && v !== ""));
 
+// INLINE EMBEDS (REV 3, owner): the real post renders DIRECTLY BELOW the paragraph that quotes it —
+// never pooled at the bottom — so readers scroll through the receipts as they read. Deterministic:
+// the harvest's own quote↔tweet pairing decides placement (once per post); Instagram posts (no
+// quote pairing) slot after the first paragraph that speaks of Instagram, else right after the
+// lede. Markers are their own blocks; ArticleBody renders them as the real embed components.
+export function insertInlineEmbeds(body, factBlock, embeds = null) {
+  const blocks = (body || "").trim().split(/\n\n+/).filter(Boolean);
+  if (!blocks.length) return body || "";
+  const tweetPool = [...(factBlock?.reactions || []), ...(factBlock?.aggregateFans || [])].filter((h) => h.tweetId && h.quote);
+  const used = new Set();
+  const out = [];
+  for (const blk of blocks) {
+    out.push(blk);
+    if (/^#/.test(blk.trim())) continue;
+    for (const m of blk.matchAll(/["“]([^"“”\n]{12,400})["”]/g)) {
+      const nq = norm(m[1]);
+      if (nq.length < 12) continue;
+      const hit = tweetPool.find((h) => !used.has(h.tweetId) && (norm(h.quote).includes(nq) || nq.includes(norm(h.quote))));
+      if (hit) { used.add(hit.tweetId); out.push(`[embed:tweet:${hit.tweetId}]`); }
+    }
+  }
+  const igUrls = (embeds?.instagramUrls || []).slice(0, 2);
+  if (igUrls.length) {
+    let idx = out.findIndex((b) => /instagram/i.test(b) && !b.startsWith("[embed:"));
+    if (idx === -1) idx = Math.min(1, out.length - 1);
+    out.splice(idx + 1, 0, `[embed:instagram:${igUrls[0]}]`);
+    if (igUrls[1]) {
+      const mid = Math.min(out.length - 1, Math.max(idx + 3, Math.floor(out.length * 0.66)));
+      out.splice(mid + 1, 0, `[embed:instagram:${igUrls[1]}]`);
+    }
+  }
+  return { body: out.join("\n\n"), inlinedTweetIds: used };
+}
+
 export function buildInsideMarkdown({ article, trigger, angle, factBlock, image, embeds = null, dateISO }) {
   const route = routeForStory(trigger);
   const slug = slugify(article.title);
@@ -31,13 +65,16 @@ export function buildInsideMarkdown({ article, trigger, angle, factBlock, image,
     if (nq.length < 8) return undefined;
     return tweetPool.find((h) => norm(h.quote).includes(nq) || nq.includes(norm(h.quote)))?.tweetId;
   };
+  const inlined = insertInlineEmbeds((article.body || "").trim(), factBlock, embeds);
   const reactions = (article.reactionsRender || [])
     .filter((r) => r && r.speaker !== undefined && r.quote)
     .map((r) => clean({
       speaker: r.speaker || "A viewer",
       connection: r.connection, platform: r.platform, date: r.date, quote: r.quote,
       tweetId: tweetIdFor(r.quote) ?? (factBlock.tweetIds.includes(r.tweetId) ? r.tweetId : undefined), // cached-only — a dead id renders nothing
-    }));
+    }))
+    // A post embedded INLINE is its own display — a duplicate bottom card would repeat it.
+    .filter((r) => !r.tweetId || !inlined.inlinedTweetIds.has(r.tweetId));
 
   const fm = clean({
     title: article.title,
@@ -93,7 +130,7 @@ export function buildInsideMarkdown({ article, trigger, angle, factBlock, image,
     } : {}),
   });
 
-  const md = matter.stringify("\n" + (article.body || "").trim() + "\n", fm);
+  const md = matter.stringify("\n" + inlined.body + "\n", fm);
   return { slug, frontmatter: fm, md };
 }
 

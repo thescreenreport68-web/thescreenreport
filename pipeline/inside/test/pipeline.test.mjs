@@ -60,6 +60,7 @@ const baseImpls = (over = {}) => ({
   embedImpl: async (job) => { job.embeds = { tweetIds: ["1809000000000000001"], instagramUrls: ["https://www.instagram.com/p/RUNIG12345/"] }; return job; },
   synthImpl: async (job) => { job.brief = fakeBrief(job.angle.form); return job; },
   writeArticleImpl: async (job) => { job.article = fakeArticle({ form: job.angle.form }); return job; },
+  voiceImpl: async (job) => job, // no-op: the suite stays hermetic; voice has its own unit tests
   qaReviewImpl: scriptedQA([]),
   qaWebCheckImpl: async () => ({ ran: true, ok: true, contradictions: [] }),
   imageImpl: async (job) => { job.image = { ...fakeImage(), alt: "alt" }; return job; },
@@ -413,6 +414,31 @@ await check("finder totally down → report.blocked stage finder, run ends clean
 
 // ── cleanup: remove the run-report file the non-dry tests wrote into the real DATA_DIR ────────────
 if (!runFileExistedBefore && fs.existsSync(RUN_FILE)) fs.unlinkSync(RUN_FILE);
+
+
+await check("voice pass: a lock-damaging edit REVERTS to the QA-passed draft; a clean edit ships", async () => {
+  const store = freshStore();
+  const good = await agentRun(baseImpls({
+    storeImpl: store, dryRun: true,
+    voiceImpl: async (job) => { job.article = { ...job.article, title: "The internet has a new obsession", body: job.article.body }; return job; },
+  }));
+  assert.equal(good.published.length, 1, JSON.stringify(good.held));
+
+  const store2 = freshStore();
+  let mangledTitle = null;
+  const bad = await agentRun(baseImpls({
+    storeImpl: store2, dryRun: true,
+    voiceImpl: async (job) => {
+      // the "editor" invents a quoted span that anchors nowhere — the lock recheck must revert
+      job.article = { ...job.article, title: "Mangled", body: job.article.body + '\n\nOne fan supposedly said, "a completely invented viral line that exists nowhere online at all."' };
+      mangledTitle = job.article.title;
+      return job;
+    },
+    publishImpl: (args) => { assert.notEqual(args.article.title, "Mangled", "reverted article publishes, not the mangled one"); return { slug: "s", path: "/tmp/x" }; },
+  }));
+  assert.equal(mangledTitle, "Mangled", "voice impl actually ran");
+  assert.equal(bad.published.length, 1, "still publishes — the PRE-voice draft");
+});
 
 console.log(`\n=== PIPELINE: ${pass} passed, ${fail} failed ===`);
 if (fail) { console.log("FAILED: " + fails.join(", ")); process.exit(1); }

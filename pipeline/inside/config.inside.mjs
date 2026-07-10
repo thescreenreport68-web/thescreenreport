@@ -74,7 +74,9 @@ export function routeForStory(story) {
 // ── DISCOURSE-HEAT ranking weights (used by discover.mjs) ────────────────────────────────────────
 // num_comments (people ARGUING) is the strongest true-discourse signal; upvotes/popularity anchor
 // "is this even a top story"; cross-outlet coverage confirms it's real. Freshness boosts new waves.
-export const HEAT = { redditComments: 1.0, redditScore: 0.05, tmdbPopularity: 0.15, outletCount: 6, freshness: 40 };
+// REV 3: tmdbPopularity DEMOTED to a tie-break (0.15 → 0.05) — popularity is "people watch it",
+// not "people are arguing about it"; the buzz signals (trends/wiki/reddit) carry the ranking now.
+export const HEAT = { redditComments: 1.0, redditScore: 0.05, tmdbPopularity: 0.05, outletCount: 6, freshness: 40 };
 
 // SEO posture (owner: basic-to-moderate ONLY — over-optimizing gets Google-punished; readability +
 // engagement are the KPI). Consumed by the writer/gate prompts.

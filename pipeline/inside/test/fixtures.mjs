@@ -224,13 +224,13 @@ export function fakeArticle({ form = "audience-reaction", factBlock = null, trig
   const paras = [
     `${trigger.parentTitle} did not just open this week — it detonated an argument. ${FILLER[0]}`,
     FILLER[1], FILLER[7],
-    `## How are audiences reacting?`,
+    `## The ending that split the room`,
     FILLER[2], FILLER[8],
     ...fans.map((r, i) => FAN_FRAMES[i % FAN_FRAMES.length](r)),
     FILLER[5],
     ...named.map((r, i) => NAMED_FRAMES[i % NAMED_FRAMES.length](r)),
     FILLER[3], FILLER[6], FILLER[9],
-    `## Where does the debate go from here?`,
+    `## Nobody is done arguing yet`,
     FILLER[4], FILLER[10],
     `The conversation is still building, and this piece will be updated as more voices weigh in on where it all lands.`,
   ];

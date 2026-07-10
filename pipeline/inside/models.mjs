@@ -59,6 +59,16 @@ export const AGENTS = {
     maxTokens: 400,
     watchdogMs: 120e3,
   },
+  // Native-register rewrite over a QUOTE-MASKED article (agents/voice.mjs): the editor never sees
+  // a quote, so v4-flash's quote-editing vice is neutralized and its cheap fluent prose is safe.
+  voice: {
+    model: "deepseek/deepseek-v4-flash",
+    fallback: "deepseek/deepseek-v3.2",
+    temperature: 0.75,
+    maxTokens: 5000,
+    watchdogMs: 180e3,
+    attemptDeadlineMs: 120e3,
+  },
   // The judge. Accuracy is existential; QA output is short so flash's output price barely bites.
   qa: {
     model: "google/gemini-2.5-flash",         // $0.30/$2.50

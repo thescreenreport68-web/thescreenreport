@@ -4,7 +4,14 @@ import remarkGfm from "remark-gfm";
 import rehypeSlug from "rehype-slug";
 import Link from "next/link";
 import ReadNext from "./ReadNext";
+import TweetEmbed from "./embed/TweetEmbed";
+import InstagramEmbed from "./embed/InstagramEmbed";
 import type { Article } from "@/lib/articles";
+
+/* Inline embed marker (inside lane, REV 3): a block of the form [embed:tweet:<id>] or
+   [embed:instagram:<url>] renders as the real post, directly where the pipeline placed it —
+   below the paragraph quoting that post. Only inside-lane articles emit markers. */
+const EMBED_RX = /^\[embed:(tweet|instagram):([^\]\s]+)\]$/;
 
 // THR's measured in-content cadence (live-audited 2026-07): first unit after
 // ~2 paragraphs, second after ~6, then one every ~5 to the end — keeps ≥1
@@ -61,6 +68,14 @@ export default function ArticleBody({
       }`}
     >
       {blocks.map((blk, i) => {
+        const em = blk.match(EMBED_RX);
+        if (em) {
+          return (
+            <div key={i} className="not-prose my-6">
+              {em[1] === "tweet" ? <TweetEmbed id={em[2]} /> : <InstagramEmbed url={em[2]} />}
+            </div>
+          );
+        }
         const paragraph = isParagraph(blk);
         if (paragraph) para += 1;
         const showAd = paragraph && adAfter(para);

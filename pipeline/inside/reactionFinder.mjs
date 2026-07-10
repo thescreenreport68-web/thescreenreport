@@ -256,7 +256,20 @@ export async function harvestReactions(trigger, angle, {
 
   // 2. THE VERBATIM WALL — deterministic, not a model opinion. A quote that isn't literally in a
   //    source is dropped here and can never reach the writer.
-  const wall = (list, sources) => list.filter((r) => r.quote && quoteIsVerbatim(r.quote, sources));
+  // HEADLINE-QUOTE GUARD (owner review of the run-6 article): outlet headlines live inside the
+  // extracted page text, so a headline passes the verbatim wall and can masquerade as "a viewer"
+  // post. A quote that IS a title — of any harvested source or of the parent story — is never a
+  // reaction, whoever it's attributed to.
+  const titlePool = () => [trigger.headline, trigger.parentTitle, ...withText.map((s) => s.title)]
+    .filter(Boolean).map((t) => norm(t)).filter((t) => t.length >= 15);
+  const isHeadlineQuote = (q) => {
+    const nq = norm(q);
+    if (nq.length < 15) return false;
+    // Drop when the quote IS a title: contained in one, or a title plus a small tail (site suffix,
+    // punctuation). A quote that merely MENTIONS the work's title is normal fan speech — keep it.
+    return titlePool().some((t) => t.includes(nq) || (nq.includes(t) && nq.length <= t.length + 25));
+  };
+  const wall = (list, sources) => list.filter((r) => r.quote && quoteIsVerbatim(r.quote, sources) && !isHeadlineQuote(r.quote));
 
   const dedupe = (list) => {
     const seen = new Set(); const out = [];

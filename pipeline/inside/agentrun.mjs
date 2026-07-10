@@ -16,6 +16,7 @@ import * as gatherer from "./agents/gatherer.mjs";
 import * as embedAgent from "./agents/embed.mjs";
 import * as synthesizer from "./agents/synthesizer.mjs";
 import * as writer from "./agents/writer.mjs";
+import * as voiceAgent from "./agents/voice.mjs";
 import * as imageAgent from "./agents/image.mjs";
 import * as qa from "./agents/qa.mjs";
 import { writeInsideArticle } from "./assemble.mjs";
@@ -73,6 +74,7 @@ export async function agentRun({
   embedImpl = embedAgent.run,
   synthImpl = synthesizer.run,
   writeArticleImpl = writer.run,
+  voiceImpl = voiceAgent.run,
   imageImpl = imageAgent.run,
   qaReviewImpl = qa.review,
   qaWebCheckImpl = qa.webCheck,
@@ -186,6 +188,27 @@ export async function agentRun({
         }
       }
       if (!pass) { hold(job.qa?.hardBlocks?.join(" | ") || `score ${job.qa?.score} < ${GATE.publishMin}`, { score: job.qa?.score }); continue; }
+
+      // ── VOICE — native-register pass (REV 3). Cosmetic ONLY by construction: quotes are masked
+      //    from the editor, and the fact-locks re-run on the result — any damage reverts to the
+      //    QA-passed draft. A voice outage ships the un-voiced article; it never holds anything.
+      try {
+        const preVoice = JSON.parse(JSON.stringify(job.article));
+        await withTimeout(voiceImpl(job), AGENTS.voice.watchdogMs, `voice ${tag}`);
+        if (job.voiceSkipped) {
+          job.article = preVoice;
+          console.log(`  voice: skipped (${job.voiceSkipped})`);
+        } else {
+          const post = qa.factLocks(job.article, job.factBlock, angle);
+          if (post.hardBlocks.length || (post.proseCuts || []).length) {
+            job.article = preVoice;
+            console.log(`  voice: REVERTED (${post.hardBlocks[0] || "unanchored quote introduced"})`);
+          } else {
+            console.log("  voice: applied");
+          }
+        }
+        delete job.voiceSkipped;
+      } catch (e) { console.log(`  voice: skipped (${String(e?.message || e).slice(0, 60)})`); }
 
       // ── webCheck — ALWAYS-last content gate ──
       if (webVerify && !dryRun) {

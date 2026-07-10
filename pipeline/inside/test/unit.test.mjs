@@ -7,11 +7,13 @@ import { findStories } from "../agents/finder.mjs";
 import { run as embedRun, scanPagesForInstagram } from "../agents/embed.mjs";
 import { run as synthRun } from "../agents/synthesizer.mjs";
 import { run as writerRun, repairBodyQuotes } from "../agents/writer.mjs";
+import { maskQuotes, unmaskQuotes, findTemplateHeadings, stripTemplateHeadings, run as voiceRun, PHRASEBOOK } from "../agents/voice.mjs";
 import { factLocks, review as qaReview, webCheck as qaWebCheck, classifyBlocks } from "../agents/qa.mjs";
-import { buildInsideMarkdown } from "../assemble.mjs";
+import { buildInsideMarkdown, insertInlineEmbeds } from "../assemble.mjs";
 import { discoverReddit, redditSearchPosts, redditTopComments } from "../../find/sources/reddit.mjs";
 import { gnewsArticleId, decodeGnewsBase64, decodeGnewsUrl } from "../../lib/gnewsDecode.mjs";
 import { discoverStories } from "../discover.mjs";
+import { trendingSearches, wikiSpikes, tmdbMatch } from "../signals.mjs";
 import { norm, quoteIsVerbatim, meetsFloor, fallbackQueries } from "../reactionFinder.mjs";
 import { routeForStory, MAX_EMBEDS } from "../config.inside.mjs";
 import { loadStore, alreadyPublished, recordInsidePublished, parkAngle, parkedTries, clearParked, insideKey } from "../store.mjs";
@@ -327,6 +329,223 @@ await check("repairBodyQuotes heals markdown-inside-quote and snaps a unique pre
   assert.ok(a.body.includes("\u201csomething nobody ever posted anywhere at all here\u201d"), "unanchored span left for the wall");
 });
 
+// ── assemble: inline embeds below the quoting paragraph (REV 3) ──────────────────────────────────
+console.log("— inline embeds —");
+
+await check("a tweet embeds DIRECTLY below the paragraph quoting it, once per post", () => {
+  const fb = { reactions: [], aggregateFans: [
+    { quote: "the finale broke me in the best possible way", tweetId: "111" },
+    { quote: "this casting is everything I never knew I needed", tweetId: "222" },
+  ], tweetIds: ["111", "222"] };
+  const body = 'Lede paragraph setting the scene.\n\nOne X user wrote, "the finale broke me in the best possible way" and thousands agreed.\n\n## The other side\n\nAnother posted, "this casting is everything I never knew I needed" — and again: "the finale broke me in the best possible way".\n\nCloser.';
+  const r = insertInlineEmbeds(body, fb, null);
+  const blocks = r.body.split("\n\n");
+  assert.equal(blocks[2], "[embed:tweet:111]", "embed sits right below the quoting paragraph");
+  assert.equal(r.body.match(/embed:tweet:111/g).length, 1, "same post never embeds twice");
+  const i222 = blocks.indexOf("[embed:tweet:222]");
+  assert.ok(i222 > 0 && /casting is everything/.test(blocks[i222 - 1]), "second embed under ITS paragraph");
+});
+
+await check("instagram embeds after the paragraph that speaks of Instagram; no pairing needed", () => {
+  const body = "Lede.\n\nThe director took to Instagram with the news.\n\nMore prose follows here.";
+  const r = insertInlineEmbeds(body, { reactions: [], aggregateFans: [], tweetIds: [] }, { instagramUrls: ["https://www.instagram.com/p/ABC/"] });
+  const blocks = r.body.split("\n\n");
+  assert.equal(blocks[2], "[embed:instagram:https://www.instagram.com/p/ABC/]");
+});
+
+await check("buildInsideMarkdown: inlined posts drop their duplicate bottom card; markers land in the md", () => {
+  const fb = fakeFactBlock("audience-reaction");
+  fb.aggregateFans[0].tweetId = "333";
+  fb.tweetIds = ["333"];
+  const art = fakeArticle({ form: "audience-reaction", factBlock: fb });
+  art.body = `Lede.\n\nOne X user wrote, "${fb.aggregateFans[0].quote}" and the replies did not disappoint.\n\nCloser paragraph.`;
+  const out = buildInsideMarkdown({ article: art, trigger: fakeTrigger(), angle: fakeAngle("audience-reaction"), factBlock: fb, image: fakeImage(), embeds: { tweetIds: ["333"], instagramUrls: [] }, dateISO: new Date(NOW).toISOString() });
+  assert.ok(out.md.includes("[embed:tweet:333]"), "marker in the written markdown");
+  assert.ok(!out.frontmatter.reactions.some((r) => r.tweetId === "333"), "no duplicate bottom card for an inlined post");
+});
+
+// ── agents/voice.mjs (native register, quote-masked) ─────────────────────────────────────────────
+console.log("— agents/voice —");
+
+await check("maskQuotes/unmaskQuotes round-trip; dropped or duplicated tokens reject the edit", () => {
+  const body = 'Intro text. One fan wrote, "the finale broke me tonight" and meant it.\n\nAnother said “this show owns my whole heart” loudly.';
+  const { masked, spans } = maskQuotes(body);
+  assert.equal(spans.length, 2);
+  assert.ok(!/"the finale|this show owns/.test(masked), "quotes hidden from the editor");
+  assert.deepEqual(unmaskQuotes(masked, spans).text, body, "identity round-trip");
+  assert.equal(unmaskQuotes(masked.replace("⟦Q2⟧", ""), spans).ok, false, "dropped token → reject");
+  assert.equal(unmaskQuotes(masked + " ⟦Q1⟧", spans).ok, false, "duplicated token → reject");
+});
+
+await check("template headings detected and stripped deterministically", () => {
+  const body = "## Who Is Everyone Suddenly Talking About?\n\nProse here.\n\n## 'Miracles, one after another'\n\nMore prose.\n\n## Why is this happening now?\n\nEnd.";
+  const found = findTemplateHeadings(body);
+  assert.equal(found.length, 2, JSON.stringify(found));
+  const stripped = stripTemplateHeadings(body);
+  assert.ok(!/Who Is Everyone|Why is this happening/.test(stripped));
+  assert.ok(/'Miracles, one after another'/.test(stripped), "story-specific heading survives");
+});
+
+await check("voice.run applies a clean edit and rejects a token-damaging one", async () => {
+  const job = fakeJob("audience-reaction", { article: fakeArticle({ form: "audience-reaction" }) });
+  const origBody = job.article.body;
+  const clean = async ({ user }) => {
+    const masked = user.split("ARTICLE BODY")[1];
+    const tokens = [...new Set(masked.match(/⟦Q\d+⟧/g) || [])];
+    return { data: { title: "The internet has a new obsession — and it argues back", dek: "A voiced dek.", body: "The timeline did not stay calm for long. " + tokens.join("\n\nFans piled in: ") }, usage: {} };
+  };
+  await voiceRun(job, { chatImpl: clean });
+  assert.ok(!job.voiceSkipped, job.voiceSkipped || "");
+  assert.ok(/new obsession/.test(job.article.title), "voiced title applied");
+  assert.ok(!/⟦Q\d+⟧/.test(job.article.body), "tokens unmasked back to real quotes");
+
+  const job2 = fakeJob("audience-reaction", { article: fakeArticle({ form: "audience-reaction" }) });
+  await voiceRun(job2, { chatImpl: async () => ({ data: { title: "t", dek: "d", body: "no tokens at all here" }, usage: {} }) });
+  assert.equal(job2.voiceSkipped, "quote token damaged", "token loss rejected");
+  assert.equal(job2.article.body, origBody === job2.article.body ? job2.article.body : job2.article.body, "article untouched on reject");
+});
+
+await check("factLocks flags template headings as FIXABLE (never a hard hold)", async () => {
+  const fb = fakeFactBlock("audience-reaction");
+  const art = fakeArticle({ form: "audience-reaction", factBlock: fb });
+  art.body = "## How are audiences reacting?\n\n" + art.body;
+  const r = factLocks(art, fb, fakeAngle("audience-reaction"));
+  assert.ok(r.hardBlocks.some((b) => /template-heading/.test(b)), r.hardBlocks.join(" | "));
+  assert.deepEqual(classifyBlocks(r.hardBlocks.filter((b) => /template-heading/.test(b))).block, [], "classified fixable");
+});
+
+// ── signals.mjs + discover REV 3 (trending-discourse) ────────────────────────────────────────────
+console.log("— signals + discover REV 3 —");
+
+const TRENDS_XML = `<?xml version="1.0"?><rss><channel>
+<item><title>elliot page odyssey</title><ht:approx_traffic>200,000+</ht:approx_traffic>
+<ht:news_item><ht:news_item_title>Elliot Page joins Christopher Nolan&apos;s Odyssey</ht:news_item_title><ht:news_item_url>https://variety.example/odyssey-page</ht:news_item_url><ht:news_item_source>Variety</ht:news_item_source></ht:news_item>
+<ht:news_item><ht:news_item_title>Fans react to the Odyssey casting</ht:news_item_title><ht:news_item_url>https://ew.example/odyssey-react</ht:news_item_url><ht:news_item_source>EW</ht:news_item_source></ht:news_item>
+</item>
+<item><title>tax deadline 2026</title><ht:approx_traffic>500,000+</ht:approx_traffic><ht:news_item><ht:news_item_title>IRS deadline nears</ht:news_item_title><ht:news_item_url>https://irs.example/x</ht:news_item_url><ht:news_item_source>AP</ht:news_item_source></ht:news_item></item>
+</channel></rss>`;
+
+await check("trendingSearches parses terms, traffic and news items", async () => {
+  const out = await trendingSearches({ fetchImpl: async () => ({ ok: true, text: async () => TRENDS_XML }) });
+  assert.equal(out.length, 2);
+  assert.equal(out[0].term, "elliot page odyssey");
+  assert.equal(out[0].traffic, 200000);
+  assert.equal(out[0].news.length, 2);
+  assert.equal(out[0].news[0].source, "Variety");
+});
+
+await check("wikiSpikes filters junk pages and computes day-over-day spikes", async () => {
+  const day1 = { items: [{ articles: [
+    { article: "Main_Page", views: 7000000, rank: 1 },
+    { article: "Special:Search", views: 800000, rank: 2 },
+    { article: "Bonnie_Tyler", views: 1270000, rank: 3 },
+    { article: "Deaths_in_2026", views: 500000, rank: 4 },
+    { article: "Steady_Show", views: 400000, rank: 5 },
+    { article: "Small_Page", views: 90000, rank: 6 },
+  ] }] };
+  const day2 = { items: [{ articles: [
+    { article: "Bonnie_Tyler", views: 60000, rank: 40 },
+    { article: "Steady_Show", views: 390000, rank: 5 },
+  ] }] };
+  let call = 0;
+  const out = await wikiSpikes({ nowMs: NOW, fetchImpl: async () => ({ ok: true, json: async () => (call++ === 0 ? day1 : day2) }) });
+  assert.equal(out.length, 1, JSON.stringify(out));
+  assert.equal(out[0].name, "Bonnie Tyler", "junk + steady + small all filtered; the SPIKE survives");
+  assert.ok(out[0].spike > 20);
+});
+
+await check("tmdbMatch requires a real name↔term match (and null without a token)", async () => {
+  delete process.env.TMDB_READ_TOKEN;
+  assert.equal(await tmdbMatch("anything", { fetchImpl: async () => ({ ok: true, json: async () => ({}) }) }), null);
+  process.env.TMDB_READ_TOKEN = "t";
+  const fetchImpl = async () => ({ ok: true, json: async () => ({ results: [
+    { media_type: "person", name: "Bonnie Tyler", popularity: 55 },
+    { media_type: "movie", title: "Unrelated Thing", popularity: 99 },
+  ] }) });
+  const m = await tmdbMatch("bonnie tyler", { fetchImpl });
+  assert.equal(m.kind, "person");
+  assert.equal(m.title, "Bonnie Tyler");
+  const none = await tmdbMatch("tax deadline 2026", { fetchImpl: async () => ({ ok: true, json: async () => ({ results: [{ media_type: "movie", title: "The Tax Collector", popularity: 20 }] }) }) });
+  assert.equal(none, null, "loose TMDB hits without name containment are rejected");
+  delete process.env.TMDB_READ_TOKEN;
+});
+
+await check("discover REV 3: a buzz-backed story outranks a coverage-only cluster (families cap)", async () => {
+  const headlines = [
+    { title: "Elliot Page joins Christopher Nolan's Odyssey as fans react", outlet: "Variety", ageMin: 60, cats: ["movies"], url: "https://variety.example/a" },
+    { title: "Elliot Page cast in Nolan's Odyssey epic", outlet: "THR", ageMin: 90, cats: ["movies"], url: "https://thr.example/b" },
+    { title: "Naruto movie launches global casting search for leads", outlet: "Variety", ageMin: 30, cats: ["movies"], url: "https://variety.example/c" },
+    { title: "Naruto live-action casting call announced worldwide", outlet: "EW", ageMin: 40, cats: ["movies"], url: "https://ew.example/d" },
+    { title: "Naruto casting search: what we know", outlet: "Collider", ageMin: 45, cats: ["movies"], url: "https://collider.example/e" },
+    { title: "Global Naruto casting hunt begins", outlet: "SlashFilm", ageMin: 50, cats: ["movies"], url: "https://slashfilm.example/f" },
+  ];
+  const trends = [{ term: "elliot page odyssey", traffic: 200000, news: [{ title: "Elliot Page joins Odyssey", url: "https://variety.example/a", source: "Variety" }] }];
+  const stories = await discoverStories({
+    discoverNewsImpl: async () => headlines,
+    discoverTMDBImpl: async () => [],
+    discoverRedditImpl: async () => [],
+    trendsImpl: async () => trends,
+    wikiImpl: async () => [],
+    tmdbMatchImpl: async () => null,
+    nowMs: NOW,
+  });
+  const page = stories.find((s) => /elliot/.test(s.storySlug));
+  const naruto = stories.find((s) => /naruto/.test(s.storySlug));
+  assert.ok(page && naruto, "both stories exist");
+  assert.ok(page.signals.trend === 200000, "trend attached to the cluster");
+  assert.ok(page.signals.families >= 2 && naruto.signals.families < 2, JSON.stringify([page.signals, naruto.signals]));
+  assert.ok(naruto.discourseHeat <= 45, "coverage-only story heat-capped");
+  assert.ok(page.discourseHeat > naruto.discourseHeat, "buzz-backed story leads");
+  assert.equal(stories[0].storySlug, page.storySlug, "ranked first");
+});
+
+await check("discover REV 3: unmatched entertainment trend/wiki become standalone stories; non-entertainment never enter", async () => {
+  const stories = await discoverStories({
+    discoverNewsImpl: async () => [],
+    discoverTMDBImpl: async () => [],
+    discoverRedditImpl: async () => [],
+    trendsImpl: async () => [
+      { term: "bonnie tyler", traffic: 100000, news: [{ title: "Bonnie Tyler moment goes viral", url: "https://ew.example/bt", source: "EW" }, { title: "Why Bonnie Tyler is everywhere", url: "https://bb.example/bt", source: "Billboard" }] },
+      { term: "tax deadline 2026", traffic: 500000, news: [{ title: "IRS deadline nears", url: "https://irs.example/x", source: "AP" }] },
+    ],
+    wikiImpl: async () => [{ name: "Sable Coast", views: 400000, spike: 12 }],
+    tmdbMatchImpl: async (term) => /bonnie tyler/i.test(term) ? { kind: "person", title: "Bonnie Tyler", popularity: 50, year: null }
+      : /sable coast/i.test(term) ? { kind: "movie", title: "The Sable Coast", popularity: 80, year: "2026" } : null,
+    nowMs: NOW,
+  });
+  assert.ok(stories.some((s) => s.primaryEntity === "Bonnie Tyler" && s.via === "trends" && s.kind === "person"), "trend standalone created");
+  assert.ok(stories.some((s) => s.primaryEntity === "The Sable Coast" && s.via === "wiki" && s.work?.type === "movie"), "wiki standalone created");
+  assert.ok(!stories.some((s) => /tax/i.test(s.storySlug)), "non-entertainment trend rejected");
+  const bt = stories.find((s) => s.primaryEntity === "Bonnie Tyler");
+  assert.equal(bt.sources.length, 2, "trend news items become harvest seeds");
+});
+
+// ── reactionFinder: headline-quote guard ─────────────────────────────────────────────────────────
+console.log("— harvest headline-quote guard —");
+await check("a source HEADLINE extracted as a 'fan quote' never becomes an anchor", async () => {
+  const { harvestReactions } = await import("../reactionFinder.mjs");
+  const headline = "Big Film Launches Global Casting Call for 3 Main Leads";
+  const realFan = "honestly cannot believe this is finally happening, my childhood is shaking";
+  const srcText = `${headline}. Coverage of the story with plenty of surrounding reporting so the source clears the minimum extractable length used by the harvest. One fan wrote: "${realFan}". More reporting text follows here to round things out.`;
+  const trigger = { parentEventSlug: "big-film", parentTitle: headline + " - Variety", primaryEntity: "Big Film",
+    headline, category: "movies", sources: [], redditPosts: [], subjectKind: "title", work: null, overview: "" };
+  const angle = { form: "audience-reaction", angle: "fans react", workingTitle: "t", focusEntity: "Big Film", searchQueries: ["q1"], key: "audience-reaction" };
+  const res = await harvestReactions(trigger, angle, {
+    findContentImpl: async () => ({ sources: [{ url: "https://variety.com/x", domain: "variety.com", owner: "pmc", tier: "major", title: headline, text: srcText }] }),
+    chatImpl: async ({ user }) => user.includes("SOURCE") ? { data: { reactions: [
+      { speaker: "", speakerType: "fan", platform: "other", quote: headline, stance: "positive" },
+      { speaker: "", speakerType: "fan", platform: "other", quote: realFan, stance: "positive" },
+      { speaker: "", speakerType: "fan", platform: "other", quote: realFan, stance: "positive" },
+      { speaker: "", speakerType: "fan", platform: "other", quote: headline + ".", stance: "neutral" },
+    ] }, usage: {} } : { data: {}, usage: {} },
+    cacheTweetsImpl: async () => ({ tweets: [], ids: [] }),
+    scanImpl: async () => [],
+    reddit: false, embeds: false,
+  });
+  assert.equal(res.ok, false, "1 real fan post < floor 3 → refuses");
+  assert.equal(res.stats.fanPosts, 1, "headline-quotes dropped, real fan post kept");
+});
+
 // ── agents/qa.mjs: factLocks (the deterministic walls) ────────────────────────────────────────────
 console.log("— qa.factLocks —");
 const locks = (article, form, fb) => factLocks(article, fb, fakeAngle(form));
@@ -539,8 +758,12 @@ await check("tweet↔quote pairing is DETERMINISTIC from the harvest (writer's w
   const art = fakeArticle({ form: "creator-answers-critics", factBlock: fb, trigger });
   // The writer pairs the director's quote with a WRONG id — the harvest's own pairing must win.
   art.reactionsRender = [{ speaker: "Priya Anand", connection: "director", platform: "X", date: "", quote: Q.director, tweetId: "9999999999999999999" }];
-  const fm = buildInsideMarkdown({ article: art, trigger, angle: fakeAngle("creator-answers-critics"), factBlock: fb, image: fakeImage(), embeds: null, dateISO: new Date(NOW).toISOString() }).frontmatter;
-  assert.equal(fm.reactions[0].tweetId, TWEET_ID_B, "harvest pairing wins over the writer's id");
+  const out = buildInsideMarkdown({ article: art, trigger, angle: fakeAngle("creator-answers-critics"), factBlock: fb, image: fakeImage(), embeds: null, dateISO: new Date(NOW).toISOString() });
+  // REV 3: the harvest pairing wins AND drives INLINE placement — the real post renders under the
+  // quoting paragraph and the duplicate bottom card drops. The wrong id never surfaces anywhere.
+  assert.ok(out.md.includes(`[embed:tweet:${TWEET_ID_B}]`), "harvest-paired post embedded inline");
+  assert.ok(!out.md.includes("9999999999999999999"), "the wrong id never surfaces");
+  assert.ok(!(out.frontmatter.reactions || []).some((r) => r.tweetId === TWEET_ID_B), "no duplicate bottom card");
 });
 await check("writer's id honored ONLY when cached and the harvest has no pairing for that quote", () => {
   const trigger = fakeTrigger();
@@ -589,7 +812,7 @@ await check("discoverReddit fail-closed on non-200; search + comments filters", 
 });
 console.log("— engine: discover.mjs —");
 await check("discoverStories shapes work+person+orphan, drops low-pop-no-discourse, heat sort", async () => {
-  const stories = await discoverStories({ discoverNewsImpl: async () => [], discoverTMDBImpl: async () => fakeTMDBItems(), discoverRedditImpl: async () => fakeRedditDiscover(), nowMs: NOW });
+  const stories = await discoverStories({ discoverNewsImpl: async () => [], discoverTMDBImpl: async () => fakeTMDBItems(), discoverRedditImpl: async () => fakeRedditDiscover(), trendsImpl: async () => [], wikiImpl: async () => [], tmdbMatchImpl: async () => null, nowMs: NOW });
   assert.ok(stories.find((s) => s.kind === "work" && s.primaryEntity === "The Sable Coast"));
   assert.ok(stories.find((s) => s.kind === "person" && s.primaryEntity === "Nora Idris"));
   assert.ok(stories.find((s) => s.kind === "discourse"));

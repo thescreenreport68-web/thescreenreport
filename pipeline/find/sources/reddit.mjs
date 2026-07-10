@@ -4,16 +4,52 @@
 // non-200 so a Reddit outage never crashes a run. Used two ways: (1) DISCOVERY — hot/top across film/TV
 // subs → what people are talking about now; (2) HARVEST — search.json per subject → real anchor posts.
 const UA = "The Screen Report/1.0 (+https://thescreenreport.com)";
-const DEFAULT_SUBS = ["movies", "television", "boxoffice", "marvelstudios", "DC_Cinematic", "StarWars", "Music"];
+const DEFAULT_SUBS = ["movies", "television", "boxoffice", "marvelstudios", "DC_Cinematic", "StarWars", "Music", "popculturechat", "Fauxmoi", "entertainment"];
 
 const strip = (s) => (s || "").replace(/\s+/g, " ").trim();
 
+// OFFICIAL OAUTH (REV 3): keyless reddit JSON is 403-blocked from datacenter IPs (probe-confirmed
+// on GitHub runners 2026-07-10), so when REDDIT_CLIENT_ID/SECRET exist we use the app-only
+// client_credentials grant against oauth.reddit.com — same endpoints, same shapes. No creds (or a
+// failed token) falls back to the keyless path unchanged, so local runs and tests never need keys.
+let TOKEN = null; // { value, exp }
+async function bearer(fetchImpl) {
+  const id = process.env.REDDIT_CLIENT_ID || "";
+  const secret = process.env.REDDIT_CLIENT_SECRET || "";
+  if (!id || !secret) return null;
+  if (TOKEN && Date.now() < TOKEN.exp - 60e3) return TOKEN.value;
+  try {
+    const res = await fetchImpl("https://www.reddit.com/api/v1/access_token", {
+      method: "POST",
+      headers: {
+        authorization: "Basic " + Buffer.from(`${id}:${secret}`).toString("base64"),
+        "content-type": "application/x-www-form-urlencoded",
+        "User-Agent": UA,
+      },
+      body: "grant_type=client_credentials",
+      signal: AbortSignal.timeout(9000),
+    });
+    if (!res.ok) return null;
+    const j = await res.json();
+    if (!j?.access_token) return null;
+    TOKEN = { value: j.access_token, exp: Date.now() + (j.expires_in || 3600) * 1000 };
+    return TOKEN.value;
+  } catch {
+    return null;
+  }
+}
+
 async function getJson(url, fetchImpl) {
   try {
+    const tok = await bearer(fetchImpl);
+    const u = tok ? url.replace("://www.reddit.com", "://oauth.reddit.com") : url;
     const ctrl = new AbortController();
     const t = setTimeout(() => ctrl.abort(), 9000);
     t.unref?.();
-    const res = await fetchImpl(url, { signal: ctrl.signal, headers: { "User-Agent": UA, accept: "application/json" } });
+    const res = await fetchImpl(u, {
+      signal: ctrl.signal,
+      headers: { "User-Agent": UA, accept: "application/json", ...(tok ? { authorization: `Bearer ${tok}` } : {}) },
+    });
     clearTimeout(t);
     if (!res.ok) return null;
     return await res.json();

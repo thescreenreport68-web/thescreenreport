@@ -12,6 +12,7 @@ import { specificsGuard } from "../../lib/specificsGuard.mjs";
 import { webVerifyArticle } from "../../lib/webVerify.mjs";
 import { GATE, FORMS } from "../config.inside.mjs";
 import { norm, quoteIsVerbatim, buildVBundle } from "../reactionFinder.mjs";
+import { findTemplateHeadings } from "./voice.mjs";
 import { agentChat, AGENTS } from "../models.mjs";
 
 export function factLocks(article, factBlock, angle) {
@@ -131,6 +132,9 @@ export function factLocks(article, factBlock, angle) {
     if (claimsDivided && !factBlock.stats.divided) hardBlocks.push("divided-claim-without-both-sides");
   }
   if (/@[A-Za-z0-9_]{3,15}\b/.test(body)) hardBlocks.push("audience-handle-in-prose");
+  // Template/meta headings telegraph the format (owner REV 3) — FIXABLE: the correction loop and
+  // the voice pass rewrite them; stripTemplateHeadings is the deterministic last resort.
+  for (const h of findTemplateHeadings(body)) hardBlocks.push(`template-heading: "${h.slice(0, 60)}" — rewrite story-specific`);
 
   const h2s = (body.match(/^##\s/gm) || []).length;
   const anchors = (factBlock.stats?.namedVoices || 0) + (factBlock.stats?.fanPosts || 0);
@@ -223,7 +227,7 @@ export async function webCheck(job, { webVerifyImpl = webVerifyArticle } = {}) {
 
 // Fixable = engagement soft-floors; everything else (a broken fact-lock) is a hard stop.
 export function classifyBlocks(blocks) {
-  const fixable = blocks.filter((b) => /^soft-floor/.test(b));
+  const fixable = blocks.filter((b) => /^soft-floor|^template-heading/.test(b));
   const block = blocks.filter((b) => !fixable.includes(b));
   return { block, fixable };
 }
