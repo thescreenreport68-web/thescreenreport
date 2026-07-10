@@ -202,7 +202,7 @@ export async function harvestReactions(trigger, angle, {
   // Soft self-deadline: stop STARTING new queries past this, return gracefully with whatever was
   // harvested (→ under-floor park + retry next cycle) instead of being watchdog-killed (→ blocked,
   // no retry accounting). The orchestrator watchdog stays as the hard backstop.
-  softDeadlineMs = 120000,
+  softDeadlineMs = 150000, // decode adds batchexecute round-trips; gatherer watchdog (180s) keeps 30s headroom
 } = {}) {
   const t0 = Date.now();
   // Disambiguated subject label — threaded into EVERY extraction/classification pass so off-topic
@@ -217,7 +217,10 @@ export async function harvestReactions(trigger, angle, {
   //    The PARENT event's own source articles seed the first pass — initial coverage routinely
   //    carries the first statements/reactions, so the harvest always has a foothold. Then LLM
   //    angle queries, then deterministic per-form fallbacks, until the floor is met (≤maxQueries).
-  const queries = [...new Set([...(angle.searchQueries || []), ...fallbackQueries(trigger, angle)])].slice(0, maxQueries);
+  // FORM-TARGETED queries FIRST (deterministic, entity-disambiguated — the "fans react" roundup
+  // hunt is what actually fills the audience floors; cloud run 3 got 13 fan posts from it, run 4
+  // starved because the soft deadline cut it off as query #3). The finder-LLM's queries follow.
+  const queries = [...new Set([...fallbackQueries(trigger, angle), ...(angle.searchQueries || [])])].slice(0, maxQueries);
   const parentSeeds = (trigger.sources || []).filter((s) => s?.url).slice(0, 4);
 
   let bundle = null;
