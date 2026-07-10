@@ -16,6 +16,7 @@ import { agentChat, AGENTS } from "../models.mjs";
 
 export function factLocks(article, factBlock, angle) {
   const hardBlocks = [];
+  const proseCuts = []; // unanchored PROSE quotes — cut the sentence, don't hold (owner: publish-everything)
   const body = article?.body || "";
   const words = body.split(/\s+/).filter(Boolean).length;
   const form = FORMS[angle.form] || { words: [400, 900] };
@@ -62,7 +63,11 @@ export function factLocks(article, factBlock, angle) {
     if (/^\s/.test(m[1])) continue;
     const core = m[1].replace(/[\s.,!?;:…]+$/, "");
     if (core.length < 12) continue;
-    if (!quoteIsVerbatim(core, anyPool)) { hardBlocks.push(`unverbatim-prose-quote: "${m[1].slice(0, 60)}…"`); continue; }
+    // An unanchored span in BODY PROSE routes to the CUTTER (sentence removed, article publishes
+    // clean) per the owner's cut-don't-hold policy — cloud run 5: the writer keeps re-wording its
+    // own analysis inside quote marks instead of deleting them; the deterministic cut IS the fix.
+    // Card-level and named-speaker violations above stay hard blocks.
+    if (!quoteIsVerbatim(core, anyPool)) { proseCuts.push(m[1]); continue; }
     // TRUNCATION GUARD: a cut can leave a dangling fragment ("often-thrilling mixtu") that still
     // passes the substring wall. A span that ends MID-WORD relative to its anchor (the anchor
     // continues with a letter right after the match) is a scar, not a quote.
@@ -132,7 +137,7 @@ export function factLocks(article, factBlock, angle) {
   const floorWords = anchors <= 3 ? 300 : Math.min(form.words[0], 400); // tight+punchy beats padded
   if (words < floorWords) hardBlocks.push(`words ${words} < ${floorWords}`);
 
-  return { words, h2s, quoteRatio: ratio, hardBlocks };
+  return { words, h2s, quoteRatio: ratio, hardBlocks, proseCuts };
 }
 
 const RUBRIC = `Score this AUDIENCE-REACTION / DISCOURSE article 0-100 with subscores 0-10:
@@ -163,7 +168,12 @@ export async function review(job, { chatImpl = null } = {}) {
     article.anchorStatement?.connection,
   ].filter(Boolean).join("\n");
   const qg = verifyQuotes({ ...article, body: extendedBody }, vbundle);
-  if (!qg.ok) hardBlocks.push(...qg.badQuotes.map((q) => `fabricated-quote: "${String(q).slice(0, 60)}…"`));
+  // Unanchored prose quotes (walls + shared quoteGuard) become CUT claims: the cutter removes the
+  // sentence and the article ships without it — never with it. A draft SATURATED with them (>4)
+  // is not salvageable-by-cutting and still holds.
+  const proseCuts = [...(det.proseCuts || []), ...(qg.ok ? [] : qg.badQuotes.map((q) => String(q)))];
+  if (proseCuts.length > 4) hardBlocks.push(`fabricated-quotes x${proseCuts.length} — draft-level failure (cut cap exceeded)`);
+  else cutClaims.push(...proseCuts);
 
   const sg = specificsGuard(article, vbundle.sources, { facts: [], sources: [], verification: { attribution: null } });
   if (!sg.ok) cutClaims.push(...sg.bad.map((b) => b.text));

@@ -396,11 +396,13 @@ await check("GENERIC_AUD strip: lane-mandated aggregate labels pass; a leftover 
   art.reactionsRender = [{ speaker: "Sable Fanatic", connection: "", platform: "Reddit", date: "", quote: Q.fanLove, tweetId: "" }];
   assert.ok(locks(art, "audience-reaction", fb).hardBlocks.some((b) => /invented-speaker/.test(b)), "a real-looking name is NOT aggregate");
 });
-await check("unverbatim prose quote in body blocked", () => {
+await check("unverbatim prose quote in body → routed to CUT, not a hold (publish-everything)", () => {
   const fb = fakeFactBlock("audience-reaction");
   const art = fakeArticle({ form: "audience-reaction", factBlock: fb });
   art.body += `\n\nAnother viewer declared, "this film changed my entire life forever and always."`;
-  assert.ok(locks(art, "audience-reaction", fb).hardBlocks.some((b) => /unverbatim-prose-quote/.test(b)));
+  const r = locks(art, "audience-reaction", fb);
+  assert.ok(r.proseCuts.some((c) => /changed my entire life/.test(c)), "span collected for the cutter");
+  assert.ok(!r.hardBlocks.some((b) => /unverbatim-prose-quote/.test(b)), "no hard block for a cuttable span");
 });
 await check("unknown-attribution ('<Name> said') blocked", () => {
   const fb = fakeFactBlock("audience-reaction");
@@ -455,12 +457,21 @@ await check("judge soft-floors: subscore < 5 → soft-floor block (fixable)", as
   assert.ok(job.qa.hardBlocks.some((b) => /soft-floor engagement 4 < 5/.test(b)));
   assert.deepEqual(classifyBlocks(job.qa.hardBlocks).block, [], "soft-floor is fixable, not hard");
 });
-await check("fabricated quote in the FAQ (extended surface) → fabricated-quote block", async () => {
+await check("fabricated quote in the FAQ (extended surface) → CUT claim, pass stays false until cut", async () => {
   const art = fakeArticle({ form: "audience-reaction" });
   art.faq = [...art.faq, { q: "What did fans say?", a: 'One post read, "a totally invented viral sentence nobody ever posted anywhere online."' }];
   const job = fakeJob("audience-reaction", { article: art });
   await qaReview(job, { chatImpl: judgeChat(88) });
-  assert.ok(job.qa.hardBlocks.some((b) => /fabricated-quote/.test(b)), job.qa.hardBlocks.join(" | "));
+  assert.ok(job.qa.cutClaims.some((c) => /totally invented viral sentence/.test(c)), JSON.stringify(job.qa.cutClaims));
+  assert.equal(job.qa.pass, false, "cut must happen before publish");
+});
+
+await check("a draft SATURATED with fabricated prose quotes (>4) still holds — cut cap", async () => {
+  const art = fakeArticle({ form: "audience-reaction" });
+  for (let i = 1; i <= 5; i++) art.body += `\n\nSomeone posted, "completely invented viral reaction number ${i} that exists nowhere online."`;
+  const job = fakeJob("audience-reaction", { article: art });
+  await qaReview(job, { chatImpl: judgeChat(88) });
+  assert.ok(job.qa.hardBlocks.some((b) => /cut cap exceeded/.test(b)), job.qa.hardBlocks.join(" | "));
 });
 await check("specificsGuard: un-anchored number → cutClaims AND pass=false even at score 90", async () => {
   const art = fakeArticle({ form: "audience-reaction" });
