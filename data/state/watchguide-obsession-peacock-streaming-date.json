@@ -1,0 +1,80 @@
+{
+  "id": "watchguide-obsession-peacock-streaming-date",
+  "slug": "obsession-sets-mid-july-streaming-date-on-peacock",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": null,
+      "cat": "streaming/where-to-watch",
+      "format": [
+        "external links 0 < 2",
+        "body 529w < 600"
+      ],
+      "cuts": 2,
+      "broken": []
+    },
+    "attempt2": {
+      "score": null,
+      "cat": "streaming/where-to-watch",
+      "format": [
+        "external links 0 < 2",
+        "body 493w < 600"
+      ],
+      "cuts": 0,
+      "broken": []
+    }
+  },
+  "editorial": {
+    "status": "confirmed",
+    "entity": "Obsession",
+    "work": {
+      "title": "Obsession",
+      "year": null,
+      "medium": "movie"
+    },
+    "outlet": "variety.com"
+  },
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
+    "deterministic": {
+      "words": 493,
+      "h2s": 5,
+      "h2Questions": 4,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": true,
+      "faqCount": 4,
+      "ktCount": 5,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 35,
+      "avgSentence": 18,
+      "flesch": 51,
+      "bannedTells": 1,
+      "fillerPraise": 1,
+      "kwExact": 0,
+      "hardBlocks": [
+        "external links 0 < 2",
+        "body 493w < 600"
+      ]
+    },
+    "hardBlocks": []
+  },
+  "score": null,
+  "category": "streaming",
+  "subcategory": "where-to-watch",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "body ≥ 600w",
+      "keyword in title",
+      "external sources ≥2"
+    ]
+  },
+  "ms": 151879
+}
