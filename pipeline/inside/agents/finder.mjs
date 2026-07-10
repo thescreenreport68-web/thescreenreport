@@ -29,10 +29,12 @@ export async function findStories({ limit = 6, discoverImpl = discoverStories, c
   if (!stories.length) return [];
 
   const buzzOf = (s) => [
+    s.signals?.audiencePosts ? `${s.signals.audiencePosts} audience posts${s.signals.audienceEngagement ? ` (${s.signals.audienceEngagement.toLocaleString()} likes)` : ""}` : "",
     s.signals?.trend ? `search-trend${s.signals.trend > 1 ? ` ${s.signals.trend.toLocaleString()}` : ""}` : "",
     s.signals?.wiki ? `wiki-spike ${Math.round(s.signals.wiki / 1000)}k views` : "",
     s.signals?.comments ? `${s.signals.comments} comments` : "",
     s.signals?.outlets ? `${s.signals.outlets} outlets` : "",
+    s.signals?.animeAdjacent ? "ANIME-ADJACENT (demoted)" : "",
   ].filter(Boolean).join(" + ") || "weak";
   const listing = stories.map((s, i) =>
     `${i}. [${s.kind}] ${s.headline || s.primaryEntity}${s.work ? ` — the ${s.work.type} "${s.work.title}"` : ""} | heat ${s.discourseHeat} | buzz: ${buzzOf(s)} | threads: ${(s.redditPosts || []).slice(0, 3).map((p) => p.title.slice(0, 60)).join(" · ") || "none captured"} | allowed: ${(ALLOWED[s.kind] || ALLOWED.work).join(", ")}`).join("\n");

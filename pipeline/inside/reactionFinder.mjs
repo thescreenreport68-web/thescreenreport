@@ -359,7 +359,7 @@ export async function harvestReactions(trigger, angle, {
     const found = await bskyImpl(who, { nowMs: t0 }).catch((e) => { diag(`bsky-search → ERR ${String(e?.message || e).slice(0, 80)}`); return []; });
     diag(`bsky → found ${found.length}`);
     if (found.length) {
-      const asPosts = found.slice(0, 14).map((p) => ({ text: p.text, user: { name: p.displayName, screen_name: p.handle }, created_at: p.createdAt, _url: p.url }));
+      const asPosts = found.slice(0, 14).map((p) => ({ text: p.text, user: { name: p.displayName, screen_name: p.handle }, created_at: p.createdAt, _url: p.url, _atUri: p.atUri }));
       const classified = await classifyTweets(asPosts, trigger, angle, { model, chatImpl, subject });
       for (const c of classified) {
         const p = asPosts[c.i];
@@ -376,6 +376,7 @@ export async function harvestReactions(trigger, angle, {
           quote,
           stance: c.stance || "neutral",
           sourceIdx: withText.length - 1,
+          ...(p._atUri ? { bskyUri: p._atUri } : {}),
         });
       }
       recompute();

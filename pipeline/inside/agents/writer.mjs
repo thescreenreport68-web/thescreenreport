@@ -129,7 +129,7 @@ export async function run(job, { corrections = null, previousArticle = null, cha
   const budget = Math.min(hi, Math.max(lo, lo + anchors * 40));
 
   const schema = `{"title":"","metaTitle":"<=60 chars","dek":"1-2 engaging sentences","metaDescription":"<=155 chars",
-"keyTakeaways":["3-4 items"],"body":"markdown with ## H2s","faq":[{"q":"","a":"40-60 word answer"}],
+"keyTakeaways":["3-4 items"],"body":"markdown with ## H2s","faq":[{"q":"","a":"40-60 word answer"},{"q":"2-3 REAL questions a reader would search","a":""}],
 "about":[{"name":"","type":"Person|Movie|TVSeries|Organization"}],"tags":["4-8"],"imageQuery":"image search phrase",
 "reactionsRender":[{"anchorId":"R1 or A3 — the anchor to show as a display card","tweetId":""}],
 "anchorStatement":{"anchorId":"R# — creator-answers-critics ONLY, else omit"},

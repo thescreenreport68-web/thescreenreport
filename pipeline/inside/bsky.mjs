@@ -26,6 +26,7 @@ export async function bskySearchPosts(query, { limit = 20, sort = "top", sinceDa
           createdAt,
           likes: p?.likeCount || 0,
           url: rkey && p?.author?.did ? `https://bsky.app/profile/${p.author.handle || p.author.did}/post/${rkey}` : null,
+          atUri: p?.uri || null, // at://did/app.bsky.feed.post/rkey — the official embed's key
         };
       })
       .filter((p) => p.text.length >= 12 && p.text.length <= 600)

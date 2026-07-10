@@ -11,7 +11,27 @@ import { norm } from "./reactionFinder.mjs";
 const require = createRequire(import.meta.url);
 const matter = require("gray-matter");
 
-const slugify = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 80);
+// Slug capped at a WORD boundary — "…the-memes-ar" class artifacts read broken in the URL bar.
+const slugify = (s) => {
+  const full = (s || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+  if (full.length <= 80) return full;
+  const cut = full.slice(0, 80);
+  return cut.includes("-") ? cut.replace(/-[^-]*$/, "") : cut;
+};
+
+// SEO FINISHER (owner: AVERAGE seo, mechanically guaranteed, METADATA ONLY — never a word of the
+// prose is touched and never a keyword injected). Trims at word boundaries so nothing reads cut.
+const trimAtWord = (str, max) => {
+  const t = (str || "").trim();
+  if (t.length <= max) return t;
+  const cut = t.slice(0, max + 1);
+  const atSpace = cut.lastIndexOf(" ");
+  return (atSpace > max * 0.6 ? cut.slice(0, atSpace) : cut.slice(0, max)).replace(/[\s,;:—–-]+$/, "");
+};
+export const seoFinish = ({ metaTitle, metaDescription }) => ({
+  metaTitle: trimAtWord(metaTitle, 60),
+  metaDescription: trimAtWord(metaDescription, 155),
+});
 const clean = (o) => Object.fromEntries(Object.entries(o).filter(([, v]) => v !== undefined && v !== null && v !== ""));
 
 // INLINE EMBEDS (REV 3, owner): the real post renders DIRECTLY BELOW the paragraph that quotes it —
@@ -22,7 +42,9 @@ const clean = (o) => Object.fromEntries(Object.entries(o).filter(([, v]) => v !=
 export function insertInlineEmbeds(body, factBlock, embeds = null) {
   const blocks = (body || "").trim().split(/\n\n+/).filter(Boolean);
   if (!blocks.length) return body || "";
-  const tweetPool = [...(factBlock?.reactions || []), ...(factBlock?.aggregateFans || [])].filter((h) => h.tweetId && h.quote);
+  const anchorPool = [...(factBlock?.reactions || []), ...(factBlock?.aggregateFans || [])];
+  const tweetPool = anchorPool.filter((h) => h.tweetId && h.quote);
+  const bskyPool = anchorPool.filter((h) => h.bskyUri && h.quote);
   const used = new Set();
   const out = [];
   for (const blk of blocks) {
@@ -31,8 +53,10 @@ export function insertInlineEmbeds(body, factBlock, embeds = null) {
     for (const m of blk.matchAll(/["“]([^"“”\n]{12,400})["”]/g)) {
       const nq = norm(m[1]);
       if (nq.length < 12) continue;
-      const hit = tweetPool.find((h) => !used.has(h.tweetId) && (norm(h.quote).includes(nq) || nq.includes(norm(h.quote))));
-      if (hit) { used.add(hit.tweetId); out.push(`[embed:tweet:${hit.tweetId}]`); }
+      const t = tweetPool.find((h) => !used.has(h.tweetId) && (norm(h.quote).includes(nq) || nq.includes(norm(h.quote))));
+      if (t) { used.add(t.tweetId); out.push(`[embed:tweet:${t.tweetId}]`); continue; }
+      const b = bskyPool.find((h) => !used.has(h.bskyUri) && (norm(h.quote).includes(nq) || nq.includes(norm(h.quote))));
+      if (b) { used.add(b.bskyUri); out.push(`[embed:bsky:${b.bskyUri}]`); }
     }
   }
   const igUrls = (embeds?.instagramUrls || []).slice(0, 2);
@@ -45,7 +69,7 @@ export function insertInlineEmbeds(body, factBlock, embeds = null) {
       out.splice(mid + 1, 0, `[embed:instagram:${igUrls[1]}]`);
     }
   }
-  return { body: out.join("\n\n"), inlinedTweetIds: used };
+  return { body: out.join("\n\n"), inlined: used };
 }
 
 export function buildInsideMarkdown({ article, trigger, angle, factBlock, image, embeds = null, dateISO }) {
@@ -65,6 +89,12 @@ export function buildInsideMarkdown({ article, trigger, angle, factBlock, image,
     if (nq.length < 8) return undefined;
     return tweetPool.find((h) => norm(h.quote).includes(nq) || nq.includes(norm(h.quote)))?.tweetId;
   };
+  const allAnchors = [...(factBlock.reactions || []), ...(factBlock.aggregateFans || [])];
+  const anchorFor = (q) => {
+    const nq = norm(q || "");
+    if (nq.length < 8) return undefined;
+    return allAnchors.find((h) => h.quote && (norm(h.quote).includes(nq) || nq.includes(norm(h.quote))));
+  };
   const inlined = insertInlineEmbeds((article.body || "").trim(), factBlock, embeds);
   const reactions = (article.reactionsRender || [])
     .filter((r) => r && r.speaker !== undefined && r.quote)
@@ -74,7 +104,11 @@ export function buildInsideMarkdown({ article, trigger, angle, factBlock, image,
       tweetId: tweetIdFor(r.quote) ?? (factBlock.tweetIds.includes(r.tweetId) ? r.tweetId : undefined), // cached-only — a dead id renders nothing
     }))
     // A post embedded INLINE is its own display — a duplicate bottom card would repeat it.
-    .filter((r) => !r.tweetId || !inlined.inlinedTweetIds.has(r.tweetId));
+    .filter((r) => {
+      if (r.tweetId && inlined.inlined.has(r.tweetId)) return false;
+      const src = anchorFor(r.quote);
+      return !(src?.bskyUri && inlined.inlined.has(src.bskyUri));
+    });
 
   const fm = clean({
     title: article.title,
@@ -84,8 +118,10 @@ export function buildInsideMarkdown({ article, trigger, angle, factBlock, image,
     author: INSIDE_AUTHOR_SLUG,
     date: dateISO,
     dek: article.dek || "",
-    metaTitle: article.metaTitle || article.title,
-    metaDescription: article.metaDescription || article.dek || "",
+    ...seoFinish({
+      metaTitle: article.metaTitle || article.title,
+      metaDescription: article.metaDescription || article.dek || "",
+    }),
     tags: article.tags || [],
     keyTakeaways: article.keyTakeaways || [],
     faq: (article.faq || []).filter((f) => f?.q && f?.a),

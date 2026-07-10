@@ -32,7 +32,7 @@ const PAUSED_FILE = path.join(DATA_DIR, "PAUSED");
 // REVIEW MODE (owner preview-first rule): articles land in a holding dir (uploaded as a workflow
 // artifact) instead of content/articles, and are NOT dedup-recorded — nothing can go live until the
 // owner approves and the file is moved + committed.
-const REVIEW_DIR = process.env.INSIDE_REVIEW_DIR || null;
+// (read per-run inside agentRun so the offline suite can exercise review mode)
 const RUNS_DIR = path.join(DATA_DIR, "runs");
 const MAX_ARTICLES_PER_DAY = Number(process.env.MAX_ARTICLES_PER_DAY) || 30;
 const MAX_RUN_COST_USD = Number(process.env.MAX_RUN_COST_USD) || 0.5;
@@ -49,7 +49,7 @@ const withTimeout = (p, ms, label) => {
 
 const publishedToday = (store, now) => {
   const day = new Date(now).toISOString().slice(0, 10);
-  return store.published.filter((r) => (r.at || "").slice(0, 10) === day).length;
+  return store.published.filter((r) => !r.review && (r.at || "").slice(0, 10) === day).length;
 };
 
 // Supply probes (INSIDE_DIAG=1): one status line per free harvest dependency, so a starved cloud
@@ -89,6 +89,7 @@ export async function agentRun({
   nowMs = null,
   paceMs = Number(process.env.INSIDE_PACE_MS) || 0,
 } = {}) {
+  const REVIEW_DIR = process.env.INSIDE_REVIEW_DIR || null;
   const now = nowMs ?? Date.now();
   const runId = `run-${new Date(now).toISOString().replace(/[:.]/g, "-").slice(0, 19)}`;
   const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -249,9 +250,13 @@ export async function agentRun({
       const dateISO = new Date(now - written * 60000).toISOString();
       const out = publishImpl({ article: job.article, trigger: story, angle, factBlock: job.factBlock, image: job.image, embeds: job.embeds, dateISO, dryRun, ...(REVIEW_DIR ? { dir: REVIEW_DIR } : {}) });
       written++;
-      if (!dryRun && !REVIEW_DIR) {
+      // Review mode ALSO records — flagged review:true so the daily cap ignores it — because the
+      // owner previews one story per run and a preview must never repeat (REV 4). The article file
+      // itself still lives only in the run artifact; the workflow commits ONLY the state files.
+      if (!dryRun) {
         clearParked(store, story.parentEventSlug, angle.form);
         recordInsidePublished(store, {
+          ...(REVIEW_DIR ? { review: true } : {}),
           parentEventSlug: story.parentEventSlug, form: angle.form, slug: out.slug,
           title: job.article.title, primaryEntity: story.primaryEntity, eventType: story.eventType,
           harvestQuoteKeys: [...job.factBlock.reactions, ...job.factBlock.aggregateFans].map((r) => norm(r.quote).slice(0, 90)),

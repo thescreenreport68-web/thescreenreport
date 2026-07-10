@@ -135,6 +135,9 @@ export function factLocks(article, factBlock, angle) {
   // Template/meta headings telegraph the format (owner REV 3) — FIXABLE: the correction loop and
   // the voice pass rewrite them; stripTemplateHeadings is the deterministic last resort.
   for (const h of findTemplateHeadings(body)) hardBlocks.push(`template-heading: "${h.slice(0, 60)}" — rewrite story-specific`);
+  // Average-SEO floor (owner: basic, never stuffed): 2+ real FAQs. Metadata lengths are fixed
+  // deterministically at assemble; this is the one item only the writer can supply.
+  if ((article?.faq || []).filter((f) => f?.q && f?.a).length < 2) hardBlocks.push("seo-faq: fewer than 2 FAQs — add 1-2 REAL reader questions with 40-60 word answers");
 
   const h2s = (body.match(/^##\s/gm) || []).length;
   const anchors = (factBlock.stats?.namedVoices || 0) + (factBlock.stats?.fanPosts || 0);
@@ -227,7 +230,7 @@ export async function webCheck(job, { webVerifyImpl = webVerifyArticle } = {}) {
 
 // Fixable = engagement soft-floors; everything else (a broken fact-lock) is a hard stop.
 export function classifyBlocks(blocks) {
-  const fixable = blocks.filter((b) => /^soft-floor|^template-heading/.test(b));
+  const fixable = blocks.filter((b) => /^soft-floor|^template-heading|^seo-faq/.test(b));
   const block = blocks.filter((b) => !fixable.includes(b));
   return { block, fixable };
 }

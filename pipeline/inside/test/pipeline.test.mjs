@@ -440,5 +440,33 @@ await check("voice pass: a lock-damaging edit REVERTS to the QA-passed draft; a 
   assert.equal(bad.published.length, 1, "still publishes — the PRE-voice draft");
 });
 
+
+await check("REVIEW MODE: records a flagged ledger entry, never repeats, never eats the daily cap", async () => {
+  process.env.INSIDE_REVIEW_DIR = tmp("review-out");
+  try {
+    const store = freshStore();
+    let publishedDir = null;
+    const r1 = await agentRun(baseImpls({
+      storeImpl: store,
+      publishImpl: (args) => { publishedDir = args.dir || null; return { slug: "review-slug", path: "/tmp/x" }; },
+    }));
+    assert.equal(r1.published.length, 1, JSON.stringify(r1));
+    assert.ok(publishedDir && /review-out/.test(publishedDir), "article routed to the review dir");
+    const rec = store.published.find((x) => x.slug === "review-slug");
+    assert.ok(rec?.review === true, "ledger entry flagged review");
+
+    const r2 = await agentRun(baseImpls({ storeImpl: store }));
+    assert.equal(r2.published.length, 0, "same story never previews twice");
+    assert.ok(r2.skipped.some((x) => /already published/.test(x.reason)), JSON.stringify(r2.skipped));
+  } finally { delete process.env.INSIDE_REVIEW_DIR; }
+});
+
+await check("review ledger entries do NOT consume the live daily cap", async () => {
+  const store = freshStore();
+  for (let i = 0; i < 40; i++) store.published.push({ key: `k${i}|audience-reaction`, review: true, at: new Date(NOW).toISOString(), slug: `s${i}`, parentEventSlug: `k${i}`, form: "audience-reaction" });
+  const r = await agentRun(baseImpls({ storeImpl: store, dryRun: true, nowMs: NOW }));
+  assert.equal(r.published.length, 1, "40 review records today, cap untouched → still publishes: " + JSON.stringify(r));
+});
+
 console.log(`\n=== PIPELINE: ${pass} passed, ${fail} failed ===`);
 if (fail) { console.log("FAILED: " + fails.join(", ")); process.exit(1); }

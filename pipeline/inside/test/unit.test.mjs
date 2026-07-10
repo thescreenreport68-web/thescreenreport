@@ -9,7 +9,7 @@ import { run as synthRun } from "../agents/synthesizer.mjs";
 import { run as writerRun, repairBodyQuotes } from "../agents/writer.mjs";
 import { maskQuotes, unmaskQuotes, findTemplateHeadings, stripTemplateHeadings, run as voiceRun, PHRASEBOOK } from "../agents/voice.mjs";
 import { factLocks, review as qaReview, webCheck as qaWebCheck, classifyBlocks } from "../agents/qa.mjs";
-import { buildInsideMarkdown, insertInlineEmbeds } from "../assemble.mjs";
+import { buildInsideMarkdown, insertInlineEmbeds, seoFinish } from "../assemble.mjs";
 import { discoverReddit, redditSearchPosts, redditTopComments } from "../../find/sources/reddit.mjs";
 import { gnewsArticleId, decodeGnewsBase64, decodeGnewsUrl } from "../../lib/gnewsDecode.mjs";
 import { discoverStories } from "../discover.mjs";
@@ -329,6 +329,28 @@ await check("repairBodyQuotes heals markdown-inside-quote and snaps a unique pre
   assert.ok(a.body.includes("\u201csomething nobody ever posted anywhere at all here\u201d"), "unanchored span left for the wall");
 });
 
+// ── SEO finisher (metadata only, never prose) ────────────────────────────────────────────────────
+console.log("— seo finisher —");
+await check("meta title/description trimmed at word boundaries to average-SEO lengths", () => {
+  const long = "Fans react to the global casting search for the live-action Naruto movie, with excitement over director Destin Daniel Cretton and creator Masashi Kishimoto's miracle quote, alongside some classic anime adaptation skepticism.";
+  const out = seoFinish({ metaTitle: "A Very Long Meta Title That Would Overflow The Google SERP Display Limit Badly", metaDescription: long });
+  assert.ok(out.metaTitle.length <= 60, `title ${out.metaTitle.length}`);
+  assert.ok(!/\s$/.test(out.metaTitle) && !out.metaTitle.endsWith("-"), "clean tail");
+  assert.ok(out.metaDescription.length <= 155, `desc ${out.metaDescription.length}`);
+  assert.ok(long.startsWith(out.metaDescription.slice(0, 40)), "prefix preserved — nothing rewritten");
+  const short = seoFinish({ metaTitle: "Short Title", metaDescription: "Short description." });
+  assert.equal(short.metaTitle, "Short Title");
+  assert.equal(short.metaDescription, "Short description.");
+});
+await check("fewer than 2 FAQs → fixable seo-faq correction, never a hard hold", async () => {
+  const art = fakeArticle({ form: "audience-reaction" });
+  art.faq = [art.faq[0]];
+  const fb = fakeFactBlock("audience-reaction");
+  const r = factLocks(art, fb, fakeAngle("audience-reaction"));
+  assert.ok(r.hardBlocks.some((b) => /^seo-faq/.test(b)), r.hardBlocks.join(" | "));
+  assert.deepEqual(classifyBlocks(r.hardBlocks.filter((b) => /^seo-faq/.test(b))).block, [], "fixable");
+});
+
 // ── assemble: inline embeds below the quoting paragraph (REV 3) ──────────────────────────────────
 console.log("— inline embeds —");
 
@@ -344,6 +366,20 @@ await check("a tweet embeds DIRECTLY below the paragraph quoting it, once per po
   assert.equal(r.body.match(/embed:tweet:111/g).length, 1, "same post never embeds twice");
   const i222 = blocks.indexOf("[embed:tweet:222]");
   assert.ok(i222 > 0 && /casting is everything/.test(blocks[i222 - 1]), "second embed under ITS paragraph");
+});
+
+await check("a Bluesky post embeds below its quoting paragraph; its bottom card drops", () => {
+  const uri = "at://did:plc:abc123/app.bsky.feed.post/3xyz";
+  const fb = fakeFactBlock("audience-reaction");
+  fb.aggregateFans[0].bskyUri = uri;
+  const art = fakeArticle({ form: "audience-reaction", factBlock: fb });
+  art.body = `Lede paragraph here.\n\nOne Bluesky user wrote, "${fb.aggregateFans[0].quote}" and it spread fast.\n\nCloser.`;
+  const out = buildInsideMarkdown({ article: art, trigger: fakeTrigger(), angle: fakeAngle("audience-reaction"), factBlock: fb, image: fakeImage(), embeds: null, dateISO: new Date(NOW).toISOString() });
+  const blocks = out.md.split("---\n")[2].trim().split("\n\n");
+  const i = blocks.indexOf(`[embed:bsky:${uri}]`);
+  assert.ok(i > 0, "bsky marker present: " + blocks.join(" | ").slice(0, 200));
+  assert.ok(/spread fast/.test(blocks[i - 1]), "marker sits under the quoting paragraph");
+  assert.ok(!(out.frontmatter.reactions || []).some((r) => r.quote === fb.aggregateFans[0].quote), "duplicate bottom card dropped");
 });
 
 await check("instagram embeds after the paragraph that speaks of Instagram; no pairing needed", () => {
@@ -487,6 +523,7 @@ await check("discover REV 3: a buzz-backed story outranks a coverage-only cluste
     trendsImpl: async () => trends,
     wikiImpl: async () => [],
     tmdbMatchImpl: async () => null,
+    bskyCountImpl: async () => [{ likes: 5 }],
     nowMs: NOW,
   });
   const page = stories.find((s) => /elliot/.test(s.storySlug));
@@ -511,6 +548,7 @@ await check("discover REV 3: unmatched entertainment trend/wiki become standalon
     wikiImpl: async () => [{ name: "Sable Coast", views: 400000, spike: 12 }],
     tmdbMatchImpl: async (term) => /bonnie tyler/i.test(term) ? { kind: "person", title: "Bonnie Tyler", popularity: 50, year: null }
       : /sable coast/i.test(term) ? { kind: "movie", title: "The Sable Coast", popularity: 80, year: "2026" } : null,
+    bskyCountImpl: async () => [{ likes: 5 }],
     nowMs: NOW,
   });
   assert.ok(stories.some((s) => s.primaryEntity === "Bonnie Tyler" && s.via === "trends" && s.kind === "person"), "trend standalone created");
@@ -518,6 +556,53 @@ await check("discover REV 3: unmatched entertainment trend/wiki become standalon
   assert.ok(!stories.some((s) => /tax/i.test(s.storySlug)), "non-entertainment trend rejected");
   const bt = stories.find((s) => s.primaryEntity === "Bonnie Tyler");
   assert.equal(bt.sources.length, 2, "trend news items become harvest seeds");
+});
+
+// ── discover REV 4: the people-talking gate + anime demotion ─────────────────────────────────────
+console.log("— people-talking gate —");
+
+const gateHeadlines = [
+  { title: "Elliot Page joins Christopher Nolan's Odyssey as fans react", outlet: "Variety", ageMin: 60, cats: ["movies"], url: "https://variety.example/a" },
+  { title: "Elliot Page cast in Nolan's Odyssey epic", outlet: "THR", ageMin: 90, cats: ["movies"], url: "https://thr.example/b" },
+  { title: "Quiet Industry Deal Closes For Mid-Size Studio Platform", outlet: "Variety", ageMin: 30, cats: ["movies"], url: "https://variety.example/c" },
+  { title: "Quiet industry deal closes for mid-size studio platform group", outlet: "Deadline", ageMin: 35, cats: ["movies"], url: "https://deadline.example/d" },
+  { title: "Naruto movie launches global casting search for its leads", outlet: "Variety", ageMin: 30, cats: ["movies"], url: "https://variety.example/e" },
+  { title: "Naruto live-action global casting search announced worldwide", outlet: "EW", ageMin: 40, cats: ["movies"], url: "https://ew.example/f" },
+];
+const gateOpts = (bsky) => ({
+  discoverNewsImpl: async () => gateHeadlines,
+  discoverTMDBImpl: async () => [],
+  discoverRedditImpl: async () => [],
+  trendsImpl: async () => [],
+  wikiImpl: async () => [],
+  tmdbMatchImpl: async () => null,
+  bskyCountImpl: bsky,
+  nowMs: NOW,
+});
+
+await check("a story NOBODY posts about is DROPPED outright — coverage alone is not trending", async () => {
+  const stories = await discoverStories(gateOpts(async (term) => /elliot|odyssey/i.test(term) ? [{ likes: 900 }, { likes: 40 }, { likes: 12 }] : []));
+  assert.ok(!stories.some((s) => /quiet-industry|quiet_industry|quiet/.test(s.storySlug)), "no-buzz story gone: " + stories.map((x) => x.storySlug).join(","));
+  const page = stories.find((s) => /elliot/.test(s.storySlug));
+  assert.ok(page, "buzz-backed story survives");
+  assert.equal(page.signals.audiencePosts, 3);
+  assert.ok(page.signals.audienceEngagement >= 950);
+  assert.ok(page.signals.families >= 2, "audience posts count as a family");
+});
+
+await check("anime-adjacent stories are demoted hard; overwhelming buzz un-caps them", async () => {
+  const modest = await discoverStories(gateOpts(async (term) => /naruto/i.test(term) ? [{ likes: 10 }, { likes: 5 }] : /elliot|odyssey/i.test(term) ? [{ likes: 50 }] : []));
+  const naruto = modest.find((s) => /naruto/.test(s.storySlug));
+  assert.ok(naruto.signals.animeAdjacent, "flagged");
+  assert.ok(naruto.discourseHeat <= 40, `capped: ${naruto.discourseHeat}`);
+  const page = modest.find((s) => /elliot/.test(s.storySlug));
+  assert.ok(page.discourseHeat > naruto.discourseHeat, "mainstream Hollywood outranks anime");
+
+  const big = await discoverStories(gateOpts(async (term) => /naruto/i.test(term)
+    ? Array.from({ length: 20 }, () => ({ likes: 300 })) : []));
+  const naruto2 = big.find((s) => /naruto/.test(s.storySlug));
+  // 20 posts + 6k likes + 2 outlets + trend-free: families = outlets + audiencePosts = 2 → still <3 → stays capped.
+  assert.ok(naruto2.discourseHeat <= 40, "2 families is still not overwhelming");
 });
 
 // ── reactionFinder: headline-quote guard ─────────────────────────────────────────────────────────
@@ -813,7 +898,8 @@ await check("discoverReddit fail-closed on non-200; search + comments filters", 
 });
 console.log("— engine: discover.mjs —");
 await check("discoverStories shapes work+person+orphan, drops low-pop-no-discourse, heat sort", async () => {
-  const stories = await discoverStories({ discoverNewsImpl: async () => [], discoverTMDBImpl: async () => fakeTMDBItems(), discoverRedditImpl: async () => fakeRedditDiscover(), trendsImpl: async () => [], wikiImpl: async () => [], tmdbMatchImpl: async () => null, nowMs: NOW });
+  const stories = await discoverStories({ discoverNewsImpl: async () => [], discoverTMDBImpl: async () => fakeTMDBItems(), discoverRedditImpl: async () => fakeRedditDiscover(), trendsImpl: async () => [], wikiImpl: async () => [], tmdbMatchImpl: async () => null,
+    bskyCountImpl: async () => [{ likes: 5 }], nowMs: NOW });
   assert.ok(stories.find((s) => s.kind === "work" && s.primaryEntity === "The Sable Coast"));
   assert.ok(stories.find((s) => s.kind === "person" && s.primaryEntity === "Nora Idris"));
   assert.ok(stories.find((s) => s.kind === "discourse"));

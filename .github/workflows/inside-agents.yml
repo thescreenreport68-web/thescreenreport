@@ -84,13 +84,18 @@ jobs:
           if-no-files-found: ignore
 
       # (F1 fix) State commits on EVERY tick — park/dedup counters and the kill-switch live in
-      # data/inside and must survive zero-publish ticks on the ephemeral runner.
+      # data/inside and must survive zero-publish ticks on the ephemeral runner. REVIEW mode commits
+      # ONLY the state files (the preview ledger — REV 4 no-repeat) — never articles, never the
+      # review dir (gitignored anyway); the article exists solely in the run artifact.
       - name: Commit articles + lane state
-        if: github.event.inputs.review != 'true'
         run: |
           git config user.name  "screenreport-bot"
           git config user.email "bot@thescreenreport.com"
-          git add content/articles data/inside data/tweets
+          if [ "${{ github.event.inputs.review }}" = "true" ]; then
+            git add data/inside/store.json data/inside/last-run.json
+          else
+            git add content/articles data/inside data/tweets
+          fi
           git commit -m "inside: tick — ${{ steps.tick.outputs.slugs || 'lane state (park/dedup)' }}" || { echo "nothing to commit"; exit 0; }
           for i in 1 2 3 4 5; do
             git pull --rebase --autostash origin main \

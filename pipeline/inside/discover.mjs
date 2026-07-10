@@ -11,6 +11,7 @@
 // discourse IS the trigger.
 import { discoverTMDB } from "../find/sources/tmdb.mjs";
 import { trendingSearches, wikiSpikes, tmdbMatch } from "./signals.mjs";
+import { bskySearchPosts } from "./bsky.mjs";
 import { discoverReddit } from "../find/sources/reddit.mjs";
 import { discoverGoogleNews } from "../find/sources/gnews.mjs";
 import { discoverRSS } from "../find/sources/rss.mjs";
@@ -46,9 +47,17 @@ const labelMatch = (term, label) => {
   return tt.length > 0 && tt.every((x) => L.includes(x));
 };
 // Independent signal families: cross-outlet coverage, reddit argument, search trend, wiki spike,
-// genuine TMDB heat. <2 families → the story can support an article but never lead the run.
+// real audience posts, genuine TMDB heat. <2 families → the story can support an article but never
+// lead the run.
 const familiesOf = (sig, popularity) =>
-  ((sig.outlets || 0) >= 2 ? 1 : 0) + ((sig.comments || 0) > 0 ? 1 : 0) + (sig.trend ? 1 : 0) + (sig.wiki ? 1 : 0) + ((popularity || 0) >= 40 ? 1 : 0);
+  ((sig.outlets || 0) >= 2 ? 1 : 0) + ((sig.comments || 0) > 0 ? 1 : 0) + (sig.trend ? 1 : 0) + (sig.wiki ? 1 : 0) + ((sig.audiencePosts || 0) >= 3 ? 1 : 0) + ((popularity || 0) >= 40 ? 1 : 0);
+
+// Anime/manga/game-adaptation detector (owner: "it is anime — we are talking about Hollywood").
+// Demoted HARD below: these stories only run on overwhelming real buzz, never as filler.
+const ANIME_RX = /\b(anime|manga|naruto|one piece|dragon ball|pok[eé]mon|jujutsu|demon slayer|attack on titan|my hero academia|sailor moon|bleach|ghibli|gundam|zelda|minecraft|street fighter|mortal kombat|video game adaptation)\b/i;
+
+// The short label a person would actually post about (search recall beats precision here).
+const buzzTermOf = (s) => (s.work?.title || s.primaryEntity || "").split(/[|:–—,]|\s[-]\s/)[0].trim().slice(0, 60);
 
 // Default HEADLINE source: trade RSS + Google News, merged (both keyless, both already built for
 // the news lane). Every failure degrades to [] — discovery never dies on one source.
@@ -101,6 +110,7 @@ export async function discoverStories({
   trendsImpl = trendingSearches,
   wikiImpl = wikiSpikes,
   tmdbMatchImpl = tmdbMatch,
+  bskyCountImpl = bskySearchPosts,
   max = MAX_STORIES_PER_RUN,
   nowMs = null,
 } = {}) {
@@ -298,12 +308,38 @@ export async function discoverStories({
   }
 
   const seen = new Set();
-  const deduped = stories.filter((s) => (seen.has(s.storySlug) ? false : (seen.add(s.storySlug), true)));
-  // ≥2 INDEPENDENT SIGNAL FAMILIES TO LEAD (owner: trade coverage alone crowned the wrong story) —
-  // single-signal stories stay eligible but heat-capped below any genuine multi-signal story.
+  let deduped = stories.filter((s) => (seen.has(s.storySlug) ? false : (seen.add(s.storySlug), true)));
+
+  // ── THE PEOPLE-TALKING GATE (owner REV 4: "if they are not talking about it, it's not trending").
+  // Count REAL audience posts per candidate (keyless Bluesky search) — the count and its engagement
+  // become the dominant heat signal, and a story with NO audience evidence anywhere (no posts, no
+  // reddit argument, no search trend, no wiki spike) is DROPPED outright, never used as filler.
+  deduped.sort((a, b) => b.discourseHeat - a.discourseHeat);
+  const probeList = deduped.slice(0, 14);
+  const counts = await Promise.all(probeList.map((st) =>
+    bskyCountImpl(buzzTermOf(st), { limit: 25, sort: "latest", nowMs: now }).catch(() => []),
+  ));
+  probeList.forEach((st, i) => {
+    const posts = counts[i] || [];
+    st.signals.audiencePosts = posts.length;
+    st.signals.audienceEngagement = posts.reduce((sum, p) => sum + (p.likes || 0), 0);
+    st.discourseHeat += Math.min(70, posts.length * 4 + Math.round(st.signals.audienceEngagement / 50));
+  });
+  deduped = deduped.filter((st) => {
+    const g = st.signals;
+    const talking = (g.audiencePosts || 0) > 0 || (g.comments || 0) > 0 || g.trend || g.wiki;
+    return talking; // nobody talking → not trending → gone
+  });
+
   for (const st of deduped) {
     st.signals.families = familiesOf(st.signals, st.popularity);
     if (st.signals.families < 2) st.discourseHeat = Math.min(st.discourseHeat, 45);
+    // Anime-adjacent: heavy demotion — only overwhelming, multi-family audience buzz un-caps it.
+    if (ANIME_RX.test(`${st.headline || ""} ${st.primaryEntity} ${st.work?.title || ""} ${st.overview || ""}`)) {
+      st.signals.animeAdjacent = true;
+      const overwhelming = st.signals.families >= 3 && (st.signals.audiencePosts || 0) >= 15;
+      if (!overwhelming) st.discourseHeat = Math.min(Math.round(st.discourseHeat * 0.5), 40);
+    }
   }
   deduped.sort((a, b) => b.discourseHeat - a.discourseHeat);
   return deduped.slice(0, max);
