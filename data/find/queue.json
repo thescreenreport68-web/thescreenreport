@@ -1,42 +1,187 @@
 {
-  "runId": "run-2026-07-10T17-01-30",
-  "builtAt": "2026-07-10T17:02:03.082Z",
-  "count": 13,
+  "runId": "run-2026-07-10T21-01-24",
+  "builtAt": "2026-07-10T21:01:53.972Z",
+  "count": 17,
   "topics": [
     {
-      "id": "news-elle-fanning-julianne-moore-rebecca-miller-margaret-wise-brown-film",
-      "slug": "elle-fanning-and-julianne-moore-to-star-in-rebecca-miller-s-next-film-",
-      "title": "Elle Fanning And Julianne Moore To Star In Rebecca Miller s Next Film On Acclaimed Children s Book Author Margaret Wise Brown",
+      "id": "news-the-nightingale-release-date-shift-march-2027",
+      "slug": "dakota-and-elle-fanning-starrer-the-nightingale-moves-to-march-facing-",
+      "title": "Dakota and Elle Fanning Starrer The Nightingale Moves to March, Facing Off Against Sonic 4",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
-      "eventType": "casting",
+      "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "elle-fanning-julianne-moore-rebecca-miller-margaret-wise-brown-film",
-      "primaryKeyword": "Elle Fanning Julianne Moore Margaret Wise Brown film",
-      "primaryEntity": "Moonsong: A Life In Seven Verses",
+      "eventSlug": "the-nightingale-release-date-shift-march-2027",
+      "primaryKeyword": "the nightingale movie",
+      "primaryEntity": "The Nightingale (2027 film)",
       "entities": [
-        "Elle Fanning",
-        "Julianne Moore",
-        "Rebecca Miller"
+        "Dakota Fanning",
+        "Elle Fanning"
       ],
-      "angle": "Elle Fanning and Julianne Moore to star in Rebecca Miller's biopic about children's author Margaret Wise Brown.",
+      "angle": "Dakota and Elle Fanning's WWII drama 'The Nightingale' is pushed back to March 2027, setting up a potential showdown with 'Sonic 4'.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/film/box-office/dakota-elle-fanning-nightingale-march-sonic-4-1236806835/",
+          "ageMin": 1,
+          "headline": "Dakota and Elle Fanning Starrer The Nightingale Moves to March, Facing Off Against Sonic 4",
+          "summary": "WWII drama The Nightingale, starring Dakota and Elle Fanning in their first starring movie role together, is moving a month later and will now face off against Sonic the Hedgehog 4 on March 19. The later date puts it in prime territory for college students on spring break in the lead-up to Easter especially [ ]"
+        },
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/dakota-fanning-and-elle-fannings-the-nightingale-1236644174/",
+          "ageMin": 1,
+          "headline": "Dakota Fanning and Elle Fanning s The Nightingale Shifts to March 2027",
+          "summary": "The sisters are coming off of Emmy nominations this week."
+        },
+        {
+          "outlet": "TheWrap",
+          "tier": 7,
+          "url": "https://www.thewrap.com/creative-content/movies/dakota-and-elle-fanning-the-nightingale-march-2027/",
+          "ageMin": 1,
+          "headline": "TriStar Pushes Dakota and Elle Fanning s The Nightingale to March 2027",
+          "summary": "The adaptation of Kristin Hannah’s WWII novel will be the first film starring the Fanning sisters together The post TriStar Pushes Dakota and Elle Fanning s The Nightingale to March 2027 appeared first on TheWrap ."
+        }
+      ],
+      "ageMin": 1,
+      "_cand": {
+        "key": "rss:dakota-and-elle-fanning-starrer-the-nightingale-moves-to-mar",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 3,
+      "verification": {
+        "tier1Count": 3,
+        "tier1Owners": 2,
+        "outletCount": 3,
+        "outlets": [
+          "Variety",
+          "THR",
+          "TheWrap"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": null,
+        "framing": "plain",
+        "status": "CONFIRMED",
+        "publishable": true
+      },
+      "priority": 127,
+      "signals": {
+        "recency": 30,
+        "corroboration": 24,
+        "status": 25,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 15,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-emmy-nominations-2026",
+      "slug": "broadcast-emmy-woes-lots-of-martin-short-bad-bunny-and-other-trivia-fr",
+      "title": "Broadcast Emmy Woes, Lots of Martin Short, Bad Bunny and Other Trivia From 2026’s Nominations",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "award",
+      "sensitivity": "normal",
+      "eventSlug": "emmy-nominations-2026",
+      "primaryKeyword": "emmy nominations",
+      "primaryEntity": "Emmy Awards",
+      "entities": [
+        "Martin Short"
+      ],
+      "angle": "Broadcast networks' diminished role in the 2026 Emmy nominations is highlighted, alongside other trivia.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/tv/awards/bad-bunny-martin-short-emmy-nominations-trivia-oddities-2026-1236806775/",
+          "ageMin": 20,
+          "headline": "Broadcast Emmy Woes, Lots of Martin Short, Bad Bunny and Other Trivia From 2026’s Nominations",
+          "summary": "It’s been a long time since the broadcast networks ruled at the Emmys, but this year’s nominations are a reminder of how little they now factor into the race. Among the major drama, comedy and limited/anthology series categories, just one broadcast show earned a nod: ABC’s “Abbott Elementary.” “Abbott” received noms for outstanding comedy series, [ ]"
+        }
+      ],
+      "ageMin": 20,
+      "_cand": {
+        "key": "rss:broadcast-emmy-woes-lots-of-martin-short-bad-bunny-and-other",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 86,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-gail-daughtry-and-the-celebrity-sex-pass-remake-baby-doe-barrio-triste",
+      "slug": "gail-daughtry-and-the-celebrity-sex-pass-new-in-theaters-with-remake-b",
+      "title": "Gail Daughtry And The Celebrity Sex Pass‘ New In Theaters With ‘Remake’, ‘Baby Doe’ Docs Barrio Triste From Longtime Bad Bunny Collaborator – Specialty Preview",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "gail-daughtry-and-the-celebrity-sex-pass-remake-baby-doe-barrio-triste",
+      "primaryKeyword": "Gail Daughtry and the Celebrity Sex Pass",
+      "primaryEntity": "Gail Daughtry and the Celebrity Sex Pass",
+      "entities": [
+        "Sony Pictures Classics",
+        "Stillz",
+        "Bad Bunny"
+      ],
+      "angle": "Specialty films 'Gail Daughtry and the Celebrity Sex Pass' and 'Barrio Triste' from Bad Bunny collaborator Stillz are set for theatrical release.",
       "tmdbType": "movie",
       "source": "rss:Deadline",
       "sources": [
         {
           "outlet": "Deadline",
           "tier": 7,
-          "url": "https://deadline.com/2026/07/elle-fanning-julianne-moore-margaret-wise-brown-1236979230/",
-          "ageMin": 2,
-          "headline": "Elle Fanning And Julianne Moore To Star In Rebecca Miller s Next Film On Acclaimed Children s Book Author Margaret Wise Brown",
-          "summary": "EXCLUSIVE: Elle Fanning and Julianne Moore are set to star in Moonsong: A Life In Seven Verses, a new film from Rebecca Miller that tells the story of famous children s book author Margaret Wise Brown. This marks Miller s ninth film she will direct and she is also penning the script. The film is based on [ ]"
+          "url": "https://deadline.com/2026/07/indie-films-july-10-gail-daughtry-and-the-celebrity-sex-pass-remake-1236979097/",
+          "ageMin": 23,
+          "headline": "Gail Daughtry And The Celebrity Sex Pass‘ New In Theaters With ‘Remake’, ‘Baby Doe’ Docs Barrio Triste From Longtime Bad Bunny Collaborator – Specialty Preview",
+          "summary": "Sony Pictures Classics’ comedy Gail Daughtry and the Celebrity Sex Pass opens wide along with IFC erotic thriller Night Nurse. Buzzy Barrio Triste by longtime Bad Bunny collaborator Stillz and documentaries including Ross McElwee’s Venice award-winning Remake and Jessica Earnshaw’s Baby Doe are other indie debuts this weekend. SPC’s Gail Daughtry and the Celebrity Sex [ ]"
         }
       ],
-      "ageMin": 2,
+      "ageMin": 23,
       "_cand": {
-        "key": "rss:elle-fanning-and-julianne-moore-to-star-in-rebecca-miller-s-",
+        "key": "rss:gail-daughtry-and-the-celebrity-sex-pass-new-in-theaters-wit",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -55,12 +200,12 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 98,
+      "priority": 87,
       "signals": {
-        "recency": 30,
+        "recency": 24,
         "corroboration": 12,
         "status": 18,
-        "type": 14,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
         "big": 24,
@@ -69,57 +214,175 @@
       }
     },
     {
-      "id": "watchguide-obsession-peacock-streaming-date",
-      "slug": "obsession-sets-mid-july-streaming-date-on-peacock",
-      "title": "Obsession Sets Mid-July Streaming Date On Peacock",
+      "id": "watchguide-backrooms-digital-release",
+      "slug": "backrooms-arriving-in-homes-next-week",
+      "title": "Backrooms Arriving In Homes Next Week",
       "contentType": "watchguide",
       "formatTag": "watchguide",
       "category": "streaming",
       "subcategory": "where-to-watch",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "obsession-peacock-streaming-date",
-      "primaryKeyword": "obsession peacock",
-      "primaryEntity": "Obsession",
+      "eventSlug": "backrooms-digital-release",
+      "primaryKeyword": "Backrooms digital release",
+      "primaryEntity": "Backrooms",
       "entities": [
-        "Obsession (2024 film)",
-        "Peacock"
+        "A24",
+        "July 14"
       ],
-      "angle": "Curry Barker's romance horror 'Obsession' sets mid-July streaming date on Peacock.",
+      "angle": "A24's highest-grossing film 'Backrooms' is now available for digital purchase and rental.",
       "tmdbType": "movie",
       "source": "rss:Deadline",
       "sources": [
         {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/film/news/obsession-peacock-release-date-streaming-how-to-watch-1236798622/",
-          "ageMin": 141,
-          "headline": "Obsession Sets Peacock Streaming Release Date",
-          "summary": "Curry Barker’s breakout horror hit “Obsession” will start streaming on Peacock on July 17. Barker s debut film follows Bear (Michael Johnston), a hopeless romantic afraid to admit his crush for co-worker Nikki (Inde Navarrette). After making a wish for Nikki to love him more than anything else in the world, Nikki suddenly becomes dangerously obsessed [ ]"
-        },
-        {
           "outlet": "Deadline",
           "tier": 7,
-          "url": "https://deadline.com/2026/07/obsession-peacock-date-1236979194/",
-          "ageMin": 87,
-          "headline": "Obsession Sets Mid-July Streaming Date On Peacock",
-          "summary": "Curry Barker s surprise $400M global grossing romance horror Obsession has set a streaming date on Peacock of July 17. That s a 63-day theatrical window to streaming. Focus Features, as we told you, acquired North American and certain foreign on the movie out of TIFF Midnight for $15M+. Obsession tells the tale about a guy, Bear [ ]"
+          "url": "https://deadline.com/2026/07/backrooms-digial-release-date-1236979465/",
+          "ageMin": 24,
+          "headline": "Backrooms Arriving In Homes Next Week",
+          "summary": "A24 s highest grossing movie at the domestic and global box office, Backrooms, is coming home on Tuesday, July 14 via digital sales and rentals. That s a 46-day theatrical window to digital sales/rental. The movie from YouTube content creator Kane Parsons shocked many, initially tracking around a $20M-$30M opening before becoming A24 s biggest opening ever at [ ]"
         }
       ],
-      "ageMin": 87,
+      "ageMin": 24,
       "_cand": {
-        "key": "rss:obsession-sets-mid-july-streaming-date-on-peacock",
+        "key": "rss:backrooms-arriving-in-homes-next-week",
         "popularity": 0,
         "kind": "rss-news"
       },
-      "corroborationCount": 2,
+      "corroborationCount": 1,
       "verification": {
-        "tier1Count": 2,
+        "tier1Count": 1,
         "tier1Owners": 1,
-        "outletCount": 2,
+        "outletCount": 1,
         "outlets": [
-          "Variety",
           "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 81,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-dutton-ranch-paramount-plus-record",
+      "slug": "dutton-ranch-breaks-paramount-records-as-biggest-freshman-series-ever",
+      "title": "Dutton Ranch Breaks Paramount+ Records as Biggest Freshman Series Ever",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "dutton-ranch-paramount-plus-record",
+      "primaryKeyword": "dutton ranch paramount plus",
+      "primaryEntity": "Dutton Ranch",
+      "entities": [
+        "Yellowstone"
+      ],
+      "angle": "Paramount+'s 'Yellowstone' spinoff 'Dutton Ranch' becomes its biggest freshman series ever with over 13 million views.",
+      "tmdbType": "movie",
+      "source": "rss:TheWrap",
+      "sources": [
+        {
+          "outlet": "TheWrap",
+          "tier": 7,
+          "url": "https://www.thewrap.com/media-platforms/tv/dutton-ranch-season-1-ratings-paramount-plus/",
+          "ageMin": 18,
+          "headline": "Dutton Ranch Marks Paramount+ s Biggest Freshman Series Ever With More Than 13 Million Views Exclusive",
+          "summary": "The \"Yellowstone\" spinoff has ranked as the No. 1 title globally on the streamer every week since its May launch, with Season 2 already renewed The post Dutton Ranch Marks Paramount+ s Biggest Freshman Series Ever With More Than 13 Million Views | Exclusive appeared first on TheWrap ."
+        }
+      ],
+      "ageMin": 18,
+      "_cand": {
+        "key": "rss:dutton-ranch-marks-paramount-s-biggest-freshman-series-ever-",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "TheWrap"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "TheWrap",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 81,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "watchguide-new-movies-streaming-july",
+      "slug": "the-top-21-new-movies-streaming-now",
+      "title": "The Top 21 New Movies Streaming Now",
+      "contentType": "watchguide",
+      "formatTag": "watchguide",
+      "category": "streaming",
+      "subcategory": "where-to-watch",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "new-movies-streaming-july",
+      "primaryKeyword": "new movies streaming",
+      "primaryEntity": "Project Hail Mary",
+      "entities": [
+        "Super Mario Galaxy Movie",
+        "TheWrap"
+      ],
+      "angle": "A curated list of the top 21 new movies making their streaming debuts in July.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/film/news/moana-lin-manuel-miranda-oscar-race-taylor-swift-1236802380/",
+          "ageMin": 31,
+          "headline": "Moana : Lin-Manuel Miranda on Writing the Song Along The Way in a Week and Being in the Oscar Race With Taylor Swift",
+          "summary": "A little over 10 years ago, Lin-Manuel Miranda was still performing on Broadway in “Hamilton” while writing the music for Disney’s “Moana.” Since then, Moana has grossed more than $643 million at the global box office, and its 2024 sequel earned more than $1 billion worldwide. This weekend, the live-action version of the film starring [ ]"
+        }
+      ],
+      "ageMin": 31,
+      "_cand": {
+        "key": "rss:moana-lin-manuel-miranda-on-writing-the-song-along-the-way-i",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
@@ -128,53 +391,249 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 87,
+      "priority": 81,
       "signals": {
-        "recency": 16,
-        "corroboration": 18,
+        "recency": 24,
+        "corroboration": 12,
         "status": 18,
         "type": 9,
         "pop": 0,
         "breakout": 0,
         "big": 18,
-        "trending": 8,
+        "trending": 0,
         "softTv": 0
       }
     },
     {
-      "id": "news-children-of-blood-and-bone-preview-mvaff",
-      "slug": "gina-prince-bythewood-and-thuso-mbedu-to-preview-children-of-blood-and",
-      "title": "Gina Prince-Bythewood and Thuso Mbedu to Preview Children of Blood and Bone at Martha’s Vineyard African American Film Festival (EXCLUSIVE)",
+      "id": "news-how-to-rob-a-bank-release-date-change",
+      "slug": "nicholas-hoult-zo-kravitz-pete-davidson-action-pic-how-to-rob-a-bank-m",
+      "title": "Nicholas Hoult, Zoë Kravitz, Pete Davidson Action Pic 'How to Rob a Bank' Moves to November",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "children-of-blood-and-bone-preview-mvaff",
-      "primaryKeyword": "children of blood and bone",
-      "primaryEntity": "Children of Blood and Bone (film)",
+      "tier": "popular",
+      "eventSlug": "how-to-rob-a-bank-release-date-change",
+      "primaryKeyword": "how to rob a bank movie",
+      "primaryEntity": "How to Rob a Bank",
       "entities": [
-        "Gina Prince-Bythewood",
-        "Thuso Mbedu",
-        "Martha’s Vineyard African American Film Festival"
+        "Nicholas Hoult",
+        "Zoë Kravitz",
+        "Pete Davidson",
+        "David Leitch"
       ],
-      "angle": "Gina Prince-Bythewood and Thuso Mbedu to preview their fantasy epic 'Children of Blood and Bone' at the Martha’s Vineyard African American Film Festival.",
+      "angle": "Nicholas Hoult, Zoë Kravitz, and Pete Davidson action pic 'How to Rob a Bank' moves its release date to November 13.",
+      "tmdbType": "movie",
+      "source": "rss:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/nicholas-hoult-zoe-kravitz-how-to-rob-a-bank-changes-release-date-1236979381/",
+          "ageMin": 121,
+          "headline": "Nicholas Hoult, Zoë Kravitz Pete Davidson Action Pic How To Rob A Bank Heads To November",
+          "summary": "EXCLUSIVE: The David Leitch-directed action movie How to Rob a Bank is driving away from its Labor Day weekend release on September 4 to November 13. The change is in an effort for the Amazon MGM Studios movie to grab a bigger 18-34 audience and play into the Thanksgiving holiday. The studio noticed recently how [ ]"
+        }
+      ],
+      "ageMin": 121,
+      "_cand": {
+        "key": "rss:nicholas-hoult-zo-kravitz-pete-davidson-action-pic-how-to-ro",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 79,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-ariana-grande-american-horror-story-exit",
+      "slug": "ariana-grande-exits-american-horror-story-season-13-amid-tour",
+      "title": "Ariana Grande Exits 'American Horror Story' Season 13 Amid Tour",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "ariana-grande-american-horror-story-exit",
+      "primaryKeyword": "ariana grande american horror story",
+      "primaryEntity": "Bethany",
+      "entities": [
+        "American Horror Story",
+        "Ariana Grande"
+      ],
+      "angle": "Pop star Ariana Grande exits 'American Horror Story' Season 13 due to her ongoing tour.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/tv/tv-news/ariana-grande-exits-american-horror-story-season-13-1236644074/",
+          "ageMin": 121,
+          "headline": "Ariana Grande Exits ‘American Horror Story’ Season 13 Amid Eternal Sunshine Tour",
+          "summary": "The pop star and Oscar nominee was previously cast among its star-studded slew of franchise actors returning for the horror anthology series."
+        }
+      ],
+      "ageMin": 121,
+      "_cand": {
+        "key": "rss:ariana-grande-exits-american-horror-story-season-13-amid-ete",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 78,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "music-news-zac-brown-band-love-fear-tour",
+      "slug": "zac-brown-band-talks-new-tour-creating-their-recent-sphere-residency-y",
+      "title": "Zac Brown Band Talks New Tour Creating Their Recent Sphere Residency: You Learn Your Limits",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "zac-brown-band-love-fear-tour",
+      "primaryKeyword": "Zac Brown Band tour",
+      "primaryEntity": "Zac Brown Band",
+      "entities": [
+        "Love Fear Tour",
+        "Billboard"
+      ],
+      "angle": "Zac Brown Band announces new tour following independent album release and Sphere residency.",
+      "tmdbType": "movie",
+      "source": "rss:Billboard",
+      "sources": [
+        {
+          "outlet": "Billboard",
+          "tier": 7,
+          "url": "https://www.billboard.com/music/country/zac-brown-band-tour-love-fear-1236291969/",
+          "ageMin": 21,
+          "headline": "Zac Brown Band Talks New Tour Creating Their Recent Sphere Residency: You Learn Your Limits",
+          "summary": "The Love Fear Tour follows the band's independently released album."
+        }
+      ],
+      "ageMin": 21,
+      "_cand": {
+        "key": "rss:zac-brown-band-talks-new-tour-creating-their-recent-sphere-r",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Billboard"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Billboard",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 63,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-wes-anderson-bottle-rocket-screening-houston",
+      "slug": "wes-anderson-to-screen-bottle-rocket-in-houston-to-save-historic-theat",
+      "title": "Wes Anderson to Screen 'Bottle Rocket' in Houston to Save Historic Theater",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "wes-anderson-bottle-rocket-screening-houston",
+      "primaryKeyword": "wes anderson bottle rocket",
+      "primaryEntity": "Wes Anderson",
+      "entities": [
+        "Bottle Rocket"
+      ],
+      "angle": "Wes Anderson will screen his debut film 'Bottle Rocket' in his hometown of Houston to help save a historic theater.",
       "tmdbType": "movie",
       "source": "rss:Variety",
       "sources": [
         {
           "outlet": "Variety",
           "tier": 7,
-          "url": "https://variety.com/2026/film/news/children-of-blood-and-bone-mvaaff-lineup-1236806495/",
-          "ageMin": 92,
-          "headline": "Gina Prince-Bythewood and Thuso Mbedu to Preview Children of Blood and Bone at Martha’s Vineyard African American Film Festival (EXCLUSIVE)",
-          "summary": "Children of Blood and Bone filmmaker Gina Prince-Bythewood and star Thuso Mbedu will preview the fantasy epic on opening night of the Martha’s Vineyard African American Film Festival. Exclusive footage from the Paramount Pictures film — set in the fictional mystical kingdom of Orisha and starring Mbedu as Zélie, a young woman who embarks on [ ]"
+          "url": "https://variety.com/2026/film/news/film-news-in-brief-july-6-2026-1236802346/",
+          "ageMin": 131,
+          "headline": "Wes Anderson to Screen ‘Bottle Rocket’ in Houston to Help Save Historic Theater- Film News in Brief",
+          "summary": "Filmmaker Wes Anderson will return to his hometown of Houston on July 17 to support the preservation of the historic Garden Oaks Theater. The one-night-only benefit will raise funds to help save the 1947 neighborhood movie theater and create a new Arts and Film Center. The evening also marks the 30th anniversary of Anderson’s career [ ]"
         }
       ],
-      "ageMin": 92,
+      "ageMin": 131,
       "_cand": {
-        "key": "rss:gina-prince-bythewood-and-thuso-mbedu-to-preview-children-of",
+        "key": "rss:wes-anderson-to-screen-bottle-rocket-in-houston-to-help-save",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -207,23 +666,86 @@
       }
     },
     {
-      "id": "box-office-backrooms-global-box-office",
-      "slug": "backrooms-passes-350m-globally-as-it-sets-a24-records-in-multiple-coun",
-      "title": "Backrooms Passes $350M Globally as It Sets A24 Records in Multiple Countries",
-      "contentType": "box-office",
-      "formatTag": "box-office",
-      "category": "movies",
-      "subcategory": "box-office",
-      "eventType": "boxoffice",
+      "id": "watchguide-the-five-star-weekend-peacock-streaming",
+      "slug": "the-five-star-weekend-now-streaming-on-peacock",
+      "title": "The Five Star Weekend Now Streaming on Peacock",
+      "contentType": "watchguide",
+      "formatTag": "watchguide",
+      "category": "streaming",
+      "subcategory": "where-to-watch",
+      "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "backrooms-global-box-office",
-      "primaryKeyword": "backrooms box office",
-      "primaryEntity": "Backrooms",
+      "eventSlug": "the-five-star-weekend-peacock-streaming",
+      "primaryKeyword": "the five star weekend peacock",
+      "primaryEntity": "The Five Star Weekend",
       "entities": [
-        "Backrooms (film)",
-        "A24"
+        "Peacock",
+        "Elin Hilderbrand"
       ],
-      "angle": "'Backrooms' surpasses $350M globally, setting A24 records in multiple countries.",
+      "angle": "Peacock's adaptation of Elin Hilderbrand's novel 'The Five Star Weekend' is now available to stream.",
+      "tmdbType": "movie",
+      "source": "rss:TheWrap",
+      "sources": [
+        {
+          "outlet": "TheWrap",
+          "tier": 7,
+          "url": "https://www.thewrap.com/creative-content/tv-shows/five-star-weekend-peacock-series-cast-character-guide/",
+          "ageMin": 61,
+          "headline": "Meet the All-Star Cast of The Five Star Weekend",
+          "summary": "Peacock's adaptation of Elin Hilderbrand's book is now streaming The post Meet the All-Star Cast of The Five Star Weekend appeared first on TheWrap ."
+        }
+      ],
+      "ageMin": 61,
+      "_cand": {
+        "key": "rss:meet-the-all-star-cast-of-the-five-star-weekend",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "TheWrap"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "TheWrap",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 73,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-baywatch-reboot-cast",
+      "slug": "baywatch-reboot-cast-meet-the-new-stars-and-four-returning-faces-in-re",
+      "title": "Baywatch Reboot Cast: Meet the New Stars (and Four Returning Faces) in Red Suits",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "baywatch-reboot-cast",
+      "primaryKeyword": "baywatch reboot cast",
+      "primaryEntity": "Baywatch",
+      "entities": [
+        "Fox"
+      ],
+      "angle": "Meet the new stars, including returning faces, joining the cast of the upcoming 'Baywatch' reboot.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
@@ -231,12 +753,12 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/lists/baywatch-reboot-cast/",
-          "ageMin": 1071,
+          "ageMin": 1311,
           "headline": "Baywatch Reboot Cast: Meet the New Stars (and Four Returning Faces) in Red Suits",
           "summary": "With the Fox series reimagining of the classic lifeguard drama in production, The Hollywood Reporter rounds up the influencer-heavy cast heading to Venice Beach."
         }
       ],
-      "ageMin": 1071,
+      "ageMin": 1311,
       "_cand": {
         "key": "rss:baywatch-reboot-cast-meet-the-new-stars-and-four-returning-f",
         "popularity": 0,
@@ -257,52 +779,51 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 70,
+      "priority": 63,
       "signals": {
         "recency": 1,
         "corroboration": 12,
         "status": 18,
-        "type": 15,
+        "type": 14,
         "pop": 0,
         "breakout": 0,
-        "big": 24,
+        "big": 18,
         "trending": 0,
         "softTv": 0
       }
     },
     {
-      "id": "music-news-sam-fender-olivia-dean-rein-me-in-uk-no-1-record",
-      "slug": "sam-fender-olivia-dean-s-rein-me-in-becomes-longest-running-british-no",
-      "title": "Sam Fender Olivia Dean s Rein Me In Becomes Longest-Running British No. 1 Single in U.K. Chart History",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
+      "id": "news-christopher-nolan-odyssey-backlash",
+      "slug": "christopher-nolan-unfazed-by-odyssey-backlash-compares-to-batman-years",
+      "title": "Christopher Nolan Unfazed by 'Odyssey' Backlash, Compares to Batman Years",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "sam-fender-olivia-dean-rein-me-in-uk-no-1-record",
-      "primaryKeyword": "sam fender olivia dean longest running no 1",
-      "primaryEntity": "Sam Fender",
+      "eventSlug": "christopher-nolan-odyssey-backlash",
+      "primaryKeyword": "christopher nolan odyssey",
+      "primaryEntity": "Christopher Nolan",
       "entities": [
-        "Olivia Dean"
+        "The Odyssey"
       ],
-      "angle": "Sam Fender and Olivia Dean's 'Won't You Come Back To Me' becomes longest-running British No. 1 single in UK chart history.",
+      "angle": "Director Christopher Nolan dismisses backlash over his upcoming film 'The Odyssey', drawing parallels to his experience with 'Batman'.",
       "tmdbType": "movie",
-      "source": "rss:TheWrap",
+      "source": "rss:Variety",
       "sources": [
         {
-          "outlet": "TheWrap",
+          "outlet": "Variety",
           "tier": 7,
-          "url": "https://www.thewrap.com/industry-news/awards/pam-grier-lifetime-achievement-award-santa-fe-international-film-festival/",
-          "ageMin": 2,
-          "headline": "Pam Grier to Receive Lifetime Achievement Award at Santa Fe International Film Festival Exclusive",
-          "summary": "“[Grier] is the definition of a leading lady, her charm, grace and ability is unmatched,\" SFIFF Executive Director Liesette Bailey says The post Pam Grier to Receive Lifetime Achievement Award at Santa Fe International Film Festival | Exclusive appeared first on TheWrap ."
+          "url": "https://variety.com/2026/film/news/christopher-nolan-odyssey-backlash-elon-musk-irrelevant-1236806375/",
+          "ageMin": 78,
+          "headline": "Christopher Nolan Says Odyssey Backlash Over Casting and More Is Irrelevant and He s Learned Not to Worry: Remember, I Spent 10 Years Dealing With Batman",
+          "summary": "Christopher Nolan is not phased by the pre-release backlash that s been erupting on social media in the months leading up to his latest directorial effort, The Odyssey. The movie, a star-studded adaptation of Homer s Greek epic, has irked Elon Musk and Trump s MAGA base over its casting choices and riled up historical purists over Nolan s [ ]"
         }
       ],
-      "ageMin": 2,
+      "ageMin": 78,
       "_cand": {
-        "key": "rss:pam-grier-to-receive-lifetime-achievement-award-at-santa-fe-",
+        "key": "rss:christopher-nolan-says-odyssey-backlash-over-casting-and-mor",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -312,18 +833,82 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "TheWrap"
+          "Variety"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "TheWrap",
+        "attribution": "Variety",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 65,
+      "priority": 63,
       "signals": {
-        "recency": 30,
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 12,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-jeffrey-wright-batman-wes-anderson",
+      "slug": "jeffrey-wright-on-the-batman-franchise-wes-anderson-and-politics",
+      "title": "Jeffrey Wright on 'The Batman' Franchise, Wes Anderson, and Politics",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "jeffrey-wright-batman-wes-anderson",
+      "primaryKeyword": "jeffrey wright batman wes anderson",
+      "primaryEntity": "Jeffrey Wright",
+      "entities": [
+        "The Batman",
+        "Wes Anderson"
+      ],
+      "angle": "Jeffrey Wright reflects on 'The Batman' franchise and collaborating with Wes Anderson, while also commenting on politics.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/news/general-news/taylor-swift-new-york-city-permit-fee-wedding-1236644083/",
+          "ageMin": 125,
+          "headline": "Taylor Swift Paid New York City $160K Fee for Star-Studded Wedding, Says Zohran Mamdani",
+          "summary": "The NYC mayor told reporters on Friday the superstar performer has covered the permit fee required for the police role in supervising the July 3 event at Madison Square Gardens."
+        }
+      ],
+      "ageMin": 125,
+      "_cand": {
+        "key": "rss:taylor-swift-paid-new-york-city-160k-fee-for-star-studded-we",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 51,
+      "signals": {
+        "recency": 16,
         "corroboration": 12,
         "status": 18,
         "type": 5,
@@ -335,167 +920,38 @@
       }
     },
     {
-      "id": "music-news-shania-twain-faded-blue-jeans-josh-homme",
-      "slug": "shania-twain-taps-queens-of-the-stone-age-s-josh-homme-for-country-roc",
-      "title": "Shania Twain Taps Queens of the Stone Age's Josh Homme for Country Rock Bop Faded Blue Jeans",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
+      "id": "news-the-vampire-lestat-sheila-atim-akasha-monologue",
+      "slug": "the-vampire-lestat-star-sheila-atim-unpacks-akasha-s-big-monologue-pur",
+      "title": "The Vampire Lestat Star Sheila Atim Unpacks Akasha s Big Monologue: Pure Vulnerability and Rage",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
       "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "shania-twain-faded-blue-jeans-josh-homme",
-      "primaryKeyword": "Shania Twain",
-      "primaryEntity": "Shania Twain",
-      "entities": [
-        "Josh Homme",
-        "Little Miss Twain"
-      ],
-      "angle": "Shania Twain releases new single featuring Josh Homme.",
-      "tmdbType": "movie",
-      "source": "rss:Rolling Stone",
-      "sources": [
-        {
-          "outlet": "Rolling Stone",
-          "tier": 7,
-          "url": "https://www.rollingstone.com/music/music-country/shania-twain-queens-of-the-stone-age-josh-homme-new-song-1235591937/",
-          "ageMin": 19,
-          "headline": "Shania Twain Taps Queens of the Stone Age s Josh Homme for Country Rock Bop Faded Blue Jeans",
-          "summary": "The gritty, nostalgic track previews the country pop queen's forthcoming LP Little Miss Twain"
-        }
-      ],
-      "ageMin": 19,
-      "_cand": {
-        "key": "rss:shania-twain-taps-queens-of-the-stone-age-s-josh-homme-for-c",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "breakoutVelocity": 0,
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Rolling Stone"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Rolling Stone",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 63,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "music-news-alabama-shakes-i-feel-hope-coming-single-release",
-      "slug": "alabama-shakes-unveil-optimistic-single-i-feel-hope-coming-from-upcomi",
-      "title": "Alabama Shakes Unveil Optimistic Single ‘I Feel Hope Coming’ From Upcoming New Album",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "alabama-shakes-i-feel-hope-coming-single-release",
-      "primaryKeyword": "Alabama Shakes",
-      "primaryEntity": "Alabama Shakes",
-      "entities": [
-        "I Must Be Dreaming (album)"
-      ],
-      "angle": "Alabama Shakes release first single in 11 years from upcoming album.",
-      "tmdbType": "movie",
-      "source": "rss:Rolling Stone",
-      "sources": [
-        {
-          "outlet": "Rolling Stone",
-          "tier": 7,
-          "url": "https://www.rollingstone.com/music/music-news/alabama-shakes-new-song-i-feel-hope-coming-new-album-1235591943/",
-          "ageMin": 50,
-          "headline": "Alabama Shakes Unveil Optimistic Single ‘I Feel Hope Coming’ From Upcoming New Album",
-          "summary": "I Must Be Dreaming , band’s first album in 11 years, out Aug. 28"
-        }
-      ],
-      "ageMin": 50,
-      "_cand": {
-        "key": "rss:alabama-shakes-unveil-optimistic-single-i-feel-hope-coming-f",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Rolling Stone"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Rolling Stone",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 63,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "watchguide-evil-dead-movies-streaming-guide",
-      "slug": "where-to-stream-all-the-evil-dead-movies",
-      "title": "Where to Stream All the Evil Dead Movies",
-      "contentType": "watchguide",
-      "formatTag": "watchguide",
-      "category": "streaming",
-      "subcategory": "where-to-watch",
       "eventType": "other",
-      "sensitivity": "high",
-      "eventSlug": "evil-dead-movies-streaming-guide",
-      "primaryKeyword": "Evil Dead movies streaming",
-      "primaryEntity": "Evil Dead",
+      "sensitivity": "normal",
+      "eventSlug": "the-vampire-lestat-sheila-atim-akasha-monologue",
+      "primaryKeyword": "the vampire lestat akasha",
+      "primaryEntity": "The Vampire Lestat",
       "entities": [
-        "Evil Dead (film series)"
+        "The Vampire Lestat (TV series)",
+        "Sheila Atim"
       ],
-      "angle": "Guide to where all 'Evil Dead' movies can be streamed.",
+      "angle": "Actress Sheila Atim discusses a key monologue from 'The Vampire Lestat'.",
       "tmdbType": "movie",
       "source": "rss:TheWrap",
       "sources": [
         {
           "outlet": "TheWrap",
           "tier": 7,
-          "url": "https://www.thewrap.com/creative-content/what-to-watch/evil-dead-movies-streaming-where/",
-          "ageMin": 62,
-          "headline": "Where to Stream All the Evil Dead Movies",
-          "summary": "Time to lock in for \"Evil Dead Burn\" The post Where to Stream All the Evil Dead Movies appeared first on TheWrap ."
+          "url": "https://www.thewrap.com/creative-content/tv-shows/akasha-monologue-the-vampire-lestat-sheila-atim-interview/",
+          "ageMin": 101,
+          "headline": "The Vampire Lestat Star Sheila Atim Unpacks Akasha s Big Monologue: Pure Vulnerability and Rage",
+          "summary": "\"She is catching up with millennia's worth of questions,\" the actress tells TheWrap of the Queen's much-anticipated debut The post The Vampire Lestat Star Sheila Atim Unpacks Akasha s Big Monologue: Pure Vulnerability and Rage appeared first on TheWrap ."
         }
       ],
-      "ageMin": 62,
+      "ageMin": 101,
       "_cand": {
-        "key": "rss:where-to-stream-all-the-evil-dead-movies",
+        "key": "rss:the-vampire-lestat-star-sheila-atim-unpacks-akasha-s-big-mon",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -508,7 +964,7 @@
           "TheWrap"
         ],
         "maxTier": 7,
-        "sensitivity": "high",
+        "sensitivity": "normal",
         "attribution": "TheWrap",
         "framing": "attributed",
         "status": "DEVELOPING",
@@ -528,296 +984,39 @@
       }
     },
     {
-      "id": "music-news-jack-white-twin-temple-opening-act",
-      "slug": "jack-white-invites-satanic-band-twin-temple-to-open-for-him",
-      "title": "Jack White Invites Satanic Band Twin Temple to Open for Him",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "jack-white-twin-temple-opening-act",
-      "primaryKeyword": "Jack White",
-      "primaryEntity": "Jack White",
-      "entities": [
-        "Twin Temple",
-        "Charley Crockett"
-      ],
-      "angle": "Jack White invites controversial band Twin Temple to open for him.",
-      "tmdbType": "movie",
-      "source": "rss:Rolling Stone",
-      "sources": [
-        {
-          "outlet": "Rolling Stone",
-          "tier": 7,
-          "url": "https://www.rollingstone.com/music/music-news/jack-white-invites-satanic-band-twin-temple-to-open-1235591970/",
-          "ageMin": 27,
-          "headline": "Jack White Invites Satanic Band Twin Temple to Open for Him",
-          "summary": "The invitation comes after the L.A. duo were reportedly fired from Charley Crockett's tour over their Lucifer-loving imagery"
-        }
-      ],
-      "ageMin": 27,
-      "_cand": {
-        "key": "rss:jack-white-invites-satanic-band-twin-temple-to-open-for-him",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Rolling Stone"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Rolling Stone",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 59,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "music-news-benson-boone-megan-moroney-beautiful-things-performance",
-      "slug": "benson-boone-surprises-megan-moroney-crowd-for-back-to-back-performanc",
-      "title": "Benson Boone Surprises Megan Moroney Crowd For Back-to-Back Performances of Their Beautiful Things Hits",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "benson-boone-megan-moroney-beautiful-things-performance",
-      "primaryKeyword": "Benson Boone Megan Moroney",
-      "primaryEntity": "Benson Boone",
-      "entities": [
-        "Megan Moroney"
-      ],
-      "angle": "Benson Boone makes surprise appearance at Megan Moroney concert for joint performance.",
-      "tmdbType": "movie",
-      "source": "rss:Billboard",
-      "sources": [
-        {
-          "outlet": "Billboard",
-          "tier": 7,
-          "url": "https://www.billboard.com/music/music-news/benson-boone-megan-moroney-stage-beautiful-things-combo-1236291647/",
-          "ageMin": 42,
-          "headline": "Benson Boone Surprises Megan Moroney Crowd For Back-to-Back Performances of Their Beautiful Things Hits",
-          "summary": "The country singer took a page out of her guest's book and flipped expectations."
-        }
-      ],
-      "ageMin": 42,
-      "_cand": {
-        "key": "rss:benson-boone-surprises-megan-moroney-crowd-for-back-to-back-",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Billboard"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Billboard",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 59,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "music-news-katy-perry-justin-trudeau-watch-it-burn-tiktok",
-      "slug": "justin-trudeau-joins-katy-perry-for-silly-tiktok-dance-to-promote-new-",
-      "title": "Justin Trudeau Joins Katy Perry for Silly TikTok Dance to Promote New Single",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "katy-perry-justin-trudeau-watch-it-burn-tiktok",
-      "primaryKeyword": "Katy Perry",
-      "primaryEntity": "Katy Perry",
-      "entities": [
-        "Justin Trudeau"
-      ],
-      "angle": "Katy Perry enlisted Justin Trudeau for a TikTok dance to promote her new single 'Watch it Burn'.",
-      "tmdbType": "movie",
-      "source": "rss:Billboard",
-      "sources": [
-        {
-          "outlet": "Billboard",
-          "tier": 7,
-          "url": "https://www.billboard.com/music/music-news/justin-trudeau-dancing-katy-perry-tiktok-watch-it-burn-1236291602/",
-          "ageMin": 108,
-          "headline": "Justin Trudeau Helps Katy Perry Promote Watch it Burn Single With Goofy TikTok Dance: Watch",
-          "summary": "The former prime minister hopped up and down with the pop star and friends to the silly clip."
-        }
-      ],
-      "ageMin": 108,
-      "_cand": {
-        "key": "rss:justin-trudeau-helps-katy-perry-promote-watch-it-burn-single",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "breakoutVelocity": 0,
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Billboard"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Billboard",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 55,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "news-aulii-cravalho-live-action-moana-role",
-      "slug": "original-moana-actress-auli-i-cravalho-gets-candid-on-passing-the-torc",
-      "title": "Original Moana Actress Auliʻi Cravalho Gets Candid on Passing the Torch for Disney s Live-Action Redo",
+      "id": "news-will-ferrell-hawk-vs-happy-gilmore",
+      "slug": "will-ferrell-weighs-in-on-how-his-golf-character-would-fare-against-ha",
+      "title": "Will Ferrell Weighs In on How His Golf Character Would Fare Against Happy Gilmore",
       "contentType": "news",
       "formatTag": "news",
-      "category": "celebrity",
+      "category": "tv",
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "aulii-cravalho-live-action-moana-role",
-      "primaryKeyword": "Auli'i Cravalho Moana",
-      "primaryEntity": "Auliʻi Cravalho",
+      "tier": "popular",
+      "eventSlug": "will-ferrell-hawk-vs-happy-gilmore",
+      "primaryKeyword": "will ferrell happy gilmore",
+      "primaryEntity": "Will Ferrell: You're Welcome America - A Final Night with George W. Bush",
       "entities": [
-        "Auli'i Cravalho",
-        "Moana (film)"
+        "Will Ferrell",
+        "Happy Gilmore"
       ],
-      "angle": "Original Moana voice actress Auli'i Cravalho discusses passing the torch for the live-action remake.",
-      "tmdbType": "movie",
-      "source": "rss:TheWrap",
-      "sources": [
-        {
-          "outlet": "TheWrap",
-          "tier": 7,
-          "url": "https://www.thewrap.com/creative-content/movies/original-moana-actress-aulii-cravalho-real-reaction-live-action-casting/",
-          "ageMin": 56,
-          "headline": "Original Moana Actress Auliʻi Cravalho Gets Candid on Passing the Torch for Disney s Live-Action Redo",
-          "summary": "\"The first call brought me to tears,\" the actress admits to TheWrap as she explains how she came to embrace giving the role to a new actress — and becoming an executive producer The post Original Moana Actress Auliʻi Cravalho Gets Candid on Passing the Torch for Disney s Live-Action Redo appeared first on TheWrap ."
-        }
-      ],
-      "ageMin": 56,
-      "_cand": {
-        "key": "rss:original-moana-actress-auli-i-cravalho-gets-candid-on-passin",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "TheWrap"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "TheWrap",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 59,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "news-micheal-ward-rape-charge-acquittal",
-      "slug": "top-boy-star-micheal-ward-found-not-guilty-of-rape",
-      "title": "Top Boy Star Micheal Ward Found Not Guilty of Rape",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "legal",
-      "sensitivity": "high",
-      "eventSlug": "micheal-ward-rape-charge-acquittal",
-      "primaryKeyword": "micheal ward",
-      "primaryEntity": "Micheal Ward",
-      "entities": [
-        "Top Boy",
-        "Eddington"
-      ],
-      "angle": "Top Boy star Micheal Ward has been found not guilty of rape in a London court.",
+      "angle": "Will Ferrell speculates on how his new golf character 'The Hawk' would fare against Adam Sandler's Happy Gilmore.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
         {
           "outlet": "THR",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/news/general-news/top-boy-micheal-ward-not-guilty-rape-acquitted-1236643910/",
-          "ageMin": 100,
-          "headline": "Top Boy Star Micheal Ward Found Not Guilty of Rape in London Court",
-          "summary": "Ward, who also appeared in Ari Aster's 'Eddington' and won the BAFTA rising star award, reportedly sobbed as he was cleared of all charges."
+          "url": "https://www.hollywoodreporter.com/tv/tv-news/will-ferrell-the-hawk-character-golf-happy-gilmore-1236643957/",
+          "ageMin": 129,
+          "headline": "Will Ferrell Weighs In on How His The Hawk Character Would Do Against Fellow Golfer Happy Gilmore",
+          "summary": "In his new Netflix series, Ferrell stars as a rowdy golf star chasing one last big win — who, he thinks, would \"get inside the head\" of Adam Sandler's iconic character."
         }
       ],
-      "ageMin": 100,
+      "ageMin": 129,
       "_cand": {
-        "key": "rss:top-boy-star-micheal-ward-found-not-guilty-of-rape-in-london",
+        "key": "rss:will-ferrell-weighs-in-on-how-his-the-hawk-character-would-d",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -830,21 +1029,85 @@
           "THR"
         ],
         "maxTier": 7,
-        "sensitivity": "high",
+        "sensitivity": "normal",
         "attribution": "THR",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 58,
+      "priority": 57,
       "signals": {
         "recency": 16,
         "corroboration": 12,
         "status": 18,
-        "type": 12,
+        "type": 5,
         "pop": 0,
         "breakout": 0,
-        "big": 0,
+        "big": 6,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-bond-casting-director-next-007",
+      "slug": "the-woman-who-cast-14-james-bonds-has-thoughts-on-who-should-play-007-",
+      "title": "The Woman Who Cast 14 James Bonds Has Thoughts on Who Should Play 007 Next",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "bond-casting-director-next-007",
+      "primaryKeyword": "next james bond actor",
+      "primaryEntity": "James Bond",
+      "entities": [
+        "Daniel Craig",
+        "Judi Dench"
+      ],
+      "angle": "The casting director behind 14 James Bond films shares her thoughts on who should play 007 next.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/james-bond-casting-director-next-actor-karlovy-vary-1236643045/",
+          "ageMin": 326,
+          "headline": "The Woman Who Cast 14 James Bonds Has Thoughts on Who Should Play 007 Next",
+          "summary": "The casting legend behind 14 Bond films opened up at Karlovy Vary about landing Daniel Craig, bringing in Judi Dench — and why she's never read a single Ian Fleming novel."
+        }
+      ],
+      "ageMin": 326,
+      "_cand": {
+        "key": "rss:the-woman-who-cast-14-james-bonds-has-thoughts-on-who-should",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 56,
+      "signals": {
+        "recency": 9,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 12,
         "trending": 0,
         "softTv": 0
       }
