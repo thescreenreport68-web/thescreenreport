@@ -40,6 +40,11 @@ export const HOMEPAGE = {
   HERO_AGE_LADDER_H: [24, 48, 72], // widen the window on slow days
   HERO_MIN_IMAGE_WIDTH: 1200,
   HERO_FORMS: new Set(["news", "box-office", "awards", "music-news", "music-awards", "trailer", "inside"]),
+  // Anti-freeze: if the news lane goes quiet, the featured slot must NOT stay stuck
+  // on days-old news. Within this window the hero is the hottest story of ANY
+  // category/format (incl. gossip) — heat's category weight still keeps it movies-led
+  // WHEN fresh news exists; it only falls to fresh gossip when news is dry.
+  FRESH_HERO_H: 30,
 
   TRENDING_HALF_LIFE_H: 8,
   TRENDING_MAX_AGE_H: 24,
@@ -275,6 +280,15 @@ function heroEligible(a: Article, now: number, maxAgeH: number): boolean {
   return true;
 }
 
+// Relaxed eligibility for the anti-freeze fresh pass: any category/format with real
+// art, published within FRESH_HERO_H. Only RUMOR/HOLD and image quality are gated.
+function heroEligibleFresh(a: Article, now: number): boolean {
+  if (!a.image) return false;
+  if (a.imageWidth !== undefined && a.imageWidth < HOMEPAGE.HERO_MIN_IMAGE_WIDTH) return false;
+  if (a.storyStatus === "RUMOR" || a.storyStatus === "HOLD") return false;
+  return hoursSince(a.date, now) <= HOMEPAGE.FRESH_HERO_H;
+}
+
 export function pickHero(all: Article[], now: number): Article {
   const pinned = all.filter((a) => isPinned(a, now));
   if (pinned.length) return pinned[0]; // newest pinned (list is date-sorted)
@@ -293,6 +307,13 @@ export function pickHero(all: Article[], now: number): Article {
     if (a.date !== b.date) return a.date > b.date;
     return a.slug < b.slug;
   };
+  // 1) FRESH pass (anti-freeze): the hottest hero-worthy story of ANY category from
+  //    the last FRESH_HERO_H hours. Keeps the featured slot alive daily even when only
+  //    the gossip lane is publishing; heat's category weight keeps it movies-led when
+  //    fresh news exists, and only surfaces fresh gossip when news is dry.
+  const fresh = all.filter((a) => heroEligibleFresh(a, now));
+  if (fresh.length) return fresh.reduce((best, a) => (better(a, best) ? a : best));
+  // 2) News-forms age ladder for genuinely slow stretches (nothing fresh at all).
   for (const window of HOMEPAGE.HERO_AGE_LADDER_H) {
     const pool = all.filter((a) => heroEligible(a, now, window));
     if (pool.length) return pool.reduce((best, a) => (better(a, best) ? a : best));

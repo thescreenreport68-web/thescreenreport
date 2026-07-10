@@ -107,7 +107,10 @@ export default function HomePage() {
     3
   );
   // Latest rail: chronology within news, capped so no single category monopolizes.
-  const latest = fill(pickDiverse(news, 12, used, 6), news, 12);
+  // "Latest" rail = the freshest stories across EVERY category (incl. celebrity),
+  // newest-first, capped 4/category — so whatever the automation drops (news OR
+  // gossip) surfaces at the top immediately, not only in its zone further down.
+  const latest = fill(pickDiverse(all, 12, used, 4), all, 12);
 
   // In Theaters (movies, non-box-office) + Box Office (movies box-office) — the
   // movies-first two-column block that replaces the stale "Now Streaming".
