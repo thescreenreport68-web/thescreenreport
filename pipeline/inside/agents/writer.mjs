@@ -52,7 +52,8 @@ VOICE (the genre's native register — the phrases matter): write like a real fa
 template. Natural expressions like "the internet went into full meltdown", "fans are losing it over",
 "the replies did not disappoint" — a FEW, varied, never stacked. Subheadings must be STORY-SPECIFIC and a
 little creative; generic meta questions ("Why is this happening now?", "How are fans reacting?", "Who is
-everyone talking about?") are BANNED and machine-detected. Return STRICT JSON only.`;
+everyone talking about?") are BANNED and machine-detected. For a death/illness/tragedy story the
+register flips to restraint: warm, somber, no hype phrasing, no exclamation marks. Return STRICT JSON only.`;
 
 // The writer NEVER copies quote text for display cards — it picks anchors BY ID and the code
 // substitutes the exact harvested text (cloud runs 2-3: every model mutation class — markdown

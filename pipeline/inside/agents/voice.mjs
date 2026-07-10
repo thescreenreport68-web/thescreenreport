@@ -101,6 +101,9 @@ HARD RULES:
 - Subheadings must be STORY-SPECIFIC and a little creative — never generic template questions
   ("Why is this happening now?", "How are fans reacting?" and anything like them are banned).
 - Keep the same rough length (±15%) and keep it scannable (short paragraphs, ## subheads).
+- MATCH THE EMOTIONAL REGISTER: the phrasebook is for hype/debate/celebration stories. A death,
+  illness or tragedy takes restraint — warm, somber, no meltdown/losing-it phrasing, no exclamation
+  marks. Read the story first; the register follows the story, never the other way.
 Output STRICT JSON only.`;
 
 // run(job) → job.article with voiced title/dek/body (orchestrator verifies + may revert).
