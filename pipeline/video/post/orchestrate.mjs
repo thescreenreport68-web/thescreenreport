@@ -56,18 +56,28 @@ function laTodayParts() {
   return { y: +p.year, m: +p.month, d: +p.day };
 }
 
-// base publish instant for a given PT hour today (bump to tomorrow if already past)
-function slotBaseAt(hour) {
+// The ONE LA calendar day we schedule a full 10am/2pm/6pm set for: TODAY if we're still before today's
+// first slot, otherwise TOMORROW. Keeping all 3 slots on a SINGLE day (never splitting a run across two
+// days) is what lets the guard work: a late/duplicate run for the same day gets a matching target and is
+// skipped, instead of half-filling today's remaining slots (the 2026-07-09 double-post bug).
+function targetParts() {
   const { y, m, d } = laTodayParts();
-  let base = laWallToUTC(y, m, d, hour, 0);
-  if (base.getTime() < Date.now() + 120000) base = new Date(base.getTime() + 864e5);
-  return base;
+  const firstSlot = laWallToUTC(y, m, d, SLOT_HOURS[0], 0);
+  if (Date.now() < firstSlot.getTime() - 120000) return { y, m, d }; // still before today's 10am → today
+  const p = Object.fromEntries( // else the whole set goes to tomorrow
+    new Intl.DateTimeFormat("en-CA", { timeZone: "America/Los_Angeles", year: "numeric", month: "2-digit", day: "2-digit" })
+      .formatToParts(new Date(firstSlot.getTime() + 864e5)).map((x) => [x.type, x.value]));
+  return { y: +p.year, m: +p.month, d: +p.day };
 }
-
-// the LA date (YYYY-MM-DD) whose slots this run would fill — idempotency key so we schedule exactly ONE
-// set per day even if the run fires twice (cron drift double-fire, or manual + cron same day)
+// publish instant for a slot hour on the target day (all slots share ONE day, so never split across days)
+function slotBaseFor(hour) {
+  const { y, m, d } = targetParts();
+  return laWallToUTC(y, m, d, hour, 0);
+}
+// idempotency key: the target day. A second run for the same day is skipped (no double-post).
 function targetSlotDate() {
-  return new Intl.DateTimeFormat("en-CA", { timeZone: "America/Los_Angeles", year: "numeric", month: "2-digit", day: "2-digit" }).format(slotBaseAt(SLOT_HOURS[0]));
+  const { y, m, d } = targetParts();
+  return `${y}-${String(m).padStart(2, "0")}-${String(d).padStart(2, "0")}`;
 }
 
 // slugs that already had a LIVE (non-draft) successful post — cross-run dedup so we never re-post the same video
@@ -260,7 +270,7 @@ async function main() {
   const summary = [];
   for (let i = 0; i < selected.length; i++) {
     const cand = selected[i];
-    const base = immediate ? new Date(Date.now() + 120000) : slotBaseAt(SLOT_HOURS[i] ?? SLOT_HOURS[SLOT_HOURS.length - 1]);
+    const base = immediate ? new Date(Date.now() + 120000) : slotBaseFor(SLOT_HOURS[i] ?? SLOT_HOURS[SLOT_HOURS.length - 1]);
     try {
       const entry = await postOne({ category: cand.category, slug: cand.slug, base, draft, dry, immediate });
       summary.push(entry);
