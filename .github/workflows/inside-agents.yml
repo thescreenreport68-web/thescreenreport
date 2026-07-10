@@ -1,0 +1,107 @@
+name: inside-agents
+
+# INSIDE-STORIES multi-agent lane — one 24/7 tick (plan: INSIDE_MULTI_AGENT_PLAN.md).
+# The agent team (finder → gatherer → embed → synthesizer → writer ⇄ qa → image → publish) runs a
+# paced batch, commits the articles + state, then dispatches deploy-live (the ONE authoritative
+# deploy) — same architecture as news-drip/gossip-drip so the lanes can never clobber each other.
+#
+# GUARDS built into agentrun.mjs: PAUSED kill-switch file (data/inside/PAUSED), MAX_ARTICLES_PER_DAY,
+# MAX_RUN_COST_USD, per-stage watchdogs, cross-run dedup. Per-run cost/token report → data/inside/runs/.
+#
+# REQUIRES the same repo Secrets the other lanes use: OPENROUTER_API_KEY, TMDB_READ_TOKEN,
+# TMDB_API_KEY, OMDB_API_KEY, LASTFM_API_KEY, (optional) JINA_API_KEY.
+
+on:
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "max articles this tick"
+        required: false
+        default: "2"
+      review:
+        description: "review mode: hold articles as an artifact for owner preview (no commit, no deploy)"
+        required: false
+        default: "false"
+  # ── OWNER: uncomment to enable the 24/7 cron AFTER the dry run is approved ──
+  # schedule:
+  #   - cron: "23 */2 * * *"   # every 2h at :23 (offset from the news/gossip ticks)
+
+concurrency:
+  group: inside-agents
+  cancel-in-progress: false   # never two ticks at once (no double-post)
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  tick:
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main            # the deploy branch — deploy-live builds main
+          fetch-depth: 1
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+          cache-dependency-path: package-lock.json
+
+      - name: Install deps
+        run: npm ci --prefer-offline --no-audit --no-fund
+
+      - name: Agent run (find → gather → synthesize → write → qa → image → publish)
+        id: tick
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          TMDB_READ_TOKEN: ${{ secrets.TMDB_READ_TOKEN }}
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+          OMDB_API_KEY: ${{ secrets.OMDB_API_KEY }}
+          LASTFM_API_KEY: ${{ secrets.LASTFM_API_KEY }}
+          JINA_API_KEY: ${{ secrets.JINA_API_KEY }}
+          INSIDE_PACE_MS: "12000"        # free-tier pacing between stories
+          MAX_ARTICLES_PER_DAY: "30"     # owner volume knob
+          MAX_RUN_COST_USD: "0.50"       # hard spend cap per tick
+          INSIDE_REVIEW_DIR: ${{ github.event.inputs.review == 'true' && 'data/inside/review' || '' }}
+        run: node pipeline/inside/agentrun.mjs --limit=${{ github.event.inputs.limit || '2' }}
+
+      - name: Upload run report (always — failing ticks stay visible)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: inside-run-report-${{ github.run_id }}
+          path: |
+            data/inside/runs/
+            data/inside/review/
+          if-no-files-found: ignore
+
+      # (F1 fix) State commits on EVERY tick — park/dedup counters and the kill-switch live in
+      # data/inside and must survive zero-publish ticks on the ephemeral runner.
+      - name: Commit articles + lane state
+        if: github.event.inputs.review != 'true'
+        run: |
+          git config user.name  "screenreport-bot"
+          git config user.email "bot@thescreenreport.com"
+          git add content/articles data/inside data/tweets
+          git commit -m "inside: tick — ${{ steps.tick.outputs.slugs || 'lane state (park/dedup)' }}" || { echo "nothing to commit"; exit 0; }
+          for i in 1 2 3 4 5; do
+            git pull --rebase --autostash origin main \
+              && git push origin "HEAD:main" && { echo "pushed on attempt $i"; exit 0; }
+            echo "push attempt $i lost the race; retrying in 5s…"; sleep 5
+          done
+          echo "::error::could not push state after 5 attempts"; exit 1
+
+      - name: Deploy live (dispatch deploy-live)
+        # review mode never deploys — the article exists only as the run artifact until the owner approves
+        if: github.event.inputs.review != 'true' && steps.tick.outputs.published != '0' && steps.tick.outputs.published != ''
+        run: |
+          curl -sS -X POST \
+            -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            "https://api.github.com/repos/${{ github.repository }}/actions/workflows/deploy-live.yml/dispatches" \
+            -d '{"ref":"main"}'
+          echo "dispatched deploy-live → the new inside articles go live with the next complete build"

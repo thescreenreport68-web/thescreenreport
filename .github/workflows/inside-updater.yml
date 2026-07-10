@@ -1,0 +1,65 @@
+name: inside-updater
+
+# INSIDE lane freshness pass (every 6h): tops up live inside articles with genuinely NEW reactions
+# (verbatim-walled), drops dead X embeds, and cascades parent retractions — then dispatches
+# deploy-live only if something actually changed. Keeps discourse articles alive while the wave builds.
+
+on:
+  workflow_dispatch:
+  # ── OWNER: uncomment AFTER the dry run is approved ──
+  # schedule:
+  #   - cron: "41 1,7,13,19 * * *"   # every 6h at :41 (offset from all publish ticks)
+
+concurrency:
+  group: inside-updater
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+          cache-dependency-path: package-lock.json
+
+      - name: Install deps
+        run: npm ci --prefer-offline --no-audit --no-fund
+
+      - name: Updater pass (top-ups, dead embeds, cascades)
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          TMDB_READ_TOKEN: ${{ secrets.TMDB_READ_TOKEN }}
+          JINA_API_KEY: ${{ secrets.JINA_API_KEY }}
+        run: node pipeline/inside/updater.mjs
+
+      - name: Commit + deploy if anything changed
+        run: |
+          git config user.name  "screenreport-bot"
+          git config user.email "bot@thescreenreport.com"
+          git add content/articles data/inside
+          git commit -m "inside: freshness update (top-ups / dead embeds)" || { echo "no updates this pass"; exit 0; }
+          pushed=
+          for i in 1 2 3 4 5; do
+            git pull --rebase --autostash origin main \
+              && git push origin "HEAD:main" && pushed=1 && break
+            echo "push attempt $i lost the race; retrying in 5s…"; sleep 5
+          done
+          [ -n "$pushed" ] || { echo "::error::could not push freshness updates after 5 attempts"; exit 1; }
+          curl -sS -X POST \
+            -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            "https://api.github.com/repos/${{ github.repository }}/actions/workflows/deploy-live.yml/dispatches" \
+            -d '{"ref":"main"}'
