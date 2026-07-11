@@ -562,6 +562,8 @@ await check("discover REV 3: a buzz-backed story outranks a coverage-only cluste
     wikiImpl: async () => [],
     tmdbMatchImpl: async () => null,
     bskyCountImpl: async () => [{ likes: 5 }],
+    xStatsImpl: async () => ({ popularPosts: 0, maxLikes: 0, sumLikes: 0, topIds: [] }),
+    xPaceMs: 0,
     nowMs: NOW,
   });
   const page = stories.find((s) => /elliot/.test(s.storySlug));
@@ -587,6 +589,8 @@ await check("discover REV 3: unmatched entertainment trend/wiki become standalon
     tmdbMatchImpl: async (term) => /bonnie tyler/i.test(term) ? { kind: "person", title: "Bonnie Tyler", popularity: 50, year: null }
       : /sable coast/i.test(term) ? { kind: "movie", title: "The Sable Coast", popularity: 80, year: "2026" } : null,
     bskyCountImpl: async () => [{ likes: 5 }],
+    xStatsImpl: async () => ({ popularPosts: 0, maxLikes: 0, sumLikes: 0, topIds: [] }),
+    xPaceMs: 0,
     nowMs: NOW,
   });
   assert.ok(stories.some((s) => s.primaryEntity === "Bonnie Tyler" && s.via === "trends" && s.kind === "person"), "trend standalone created");
@@ -607,7 +611,8 @@ const gateHeadlines = [
   { title: "Naruto movie launches global casting search for its leads", outlet: "Variety", ageMin: 30, cats: ["movies"], url: "https://variety.example/e" },
   { title: "Naruto live-action global casting search announced worldwide", outlet: "EW", ageMin: 40, cats: ["movies"], url: "https://ew.example/f" },
 ];
-const gateOpts = (bsky) => ({
+const NO_X = async () => ({ popularPosts: 0, maxLikes: 0, sumLikes: 0, topIds: [] });
+const gateOpts = (bsky, xstats = NO_X) => ({
   discoverNewsImpl: async () => gateHeadlines,
   discoverTMDBImpl: async () => [],
   discoverRedditImpl: async () => [],
@@ -615,32 +620,77 @@ const gateOpts = (bsky) => ({
   wikiImpl: async () => [],
   tmdbMatchImpl: async () => null,
   bskyCountImpl: bsky,
+  xStatsImpl: xstats,
+  xPaceMs: 0,
   nowMs: NOW,
 });
 
-await check("a story NOBODY posts about is DROPPED outright — coverage alone is not trending", async () => {
-  const stories = await discoverStories(gateOpts(async (term) => /elliot|odyssey/i.test(term) ? [{ likes: 900 }, { likes: 40 }, { likes: 12 }] : []));
-  assert.ok(!stories.some((s) => /quiet-industry|quiet_industry|quiet/.test(s.storySlug)), "no-buzz story gone: " + stories.map((x) => x.storySlug).join(","));
-  const page = stories.find((s) => /elliot/.test(s.storySlug));
-  assert.ok(page, "buzz-backed story survives");
-  assert.equal(page.signals.audiencePosts, 3);
-  assert.ok(page.signals.audienceEngagement >= 950);
-  assert.ok(page.signals.families >= 2, "audience posts count as a family");
+await check("non-entertainment (politician) stories are DROPPED even when viral", async () => {
+  const heads = [
+    { title: "Ann Widdecombe faces Brexit backlash as the MP defends her policy in parliament", outlet: "GBNews", ageMin: 20, cats: [], url: "https://gb.example/w" },
+    { title: "Ann Widdecombe Brexit parliament policy row deepens with Tory election campaign", outlet: "Politico", ageMin: 25, cats: [], url: "https://po.example/x" },
+    { title: "Zoey Deutch comedy film clip goes viral ahead of movie premiere buzz", outlet: "Variety", ageMin: 30, cats: ["movies"], url: "https://variety.example/z" },
+    { title: "Zoey Deutch film clip viral premiere movie generating buzz", outlet: "THR", ageMin: 35, cats: ["movies"], url: "https://thr.example/z2" },
+  ];
+  const opts = { ...gateOpts(async () => [{}, {}, {}], async () => ({ popularPosts: 20, maxLikes: 1300, sumLikes: 7000, topIds: [] })), discoverNewsImpl: async () => heads };
+  const stories = await discoverStories(opts);
+  assert.ok(!stories.some((s) => /widdecombe/i.test(s.storySlug)), "viral politician dropped: " + stories.map((x) => x.storySlug).join(","));
+  assert.ok(stories.some((s) => /deutch/i.test(s.storySlug)), "the entertainment story survives");
 });
 
-await check("anime-adjacent stories are demoted hard; overwhelming buzz un-caps them", async () => {
-  const modest = await discoverStories(gateOpts(async (term) => /naruto/i.test(term) ? [{ likes: 10 }, { likes: 5 }] : /elliot|odyssey/i.test(term) ? [{ likes: 50 }] : []));
-  const naruto = modest.find((s) => /naruto/.test(s.storySlug));
-  assert.ok(naruto.signals.animeAdjacent, "flagged");
-  assert.ok(naruto.discourseHeat <= 40, `capped: ${naruto.discourseHeat}`);
-  const page = modest.find((s) => /elliot/.test(s.storySlug));
-  assert.ok(page.discourseHeat > naruto.discourseHeat, "mainstream Hollywood outranks anime");
+await check("detectCategory routes music and TV stories correctly (not defaulted to movies)", async () => {
+  const heads = [
+    { title: "Kelela drops new album New Avatar with lead single music video", outlet: "Pitchfork", ageMin: 20, cats: [], url: "https://p.example/k" },
+    { title: "Kelela drops new album New Avatar single music video acclaim", outlet: "Billboard", ageMin: 25, cats: [], url: "https://b.example/k2" },
+    { title: "Severance season 2 series finale renewed episode shocks fans", outlet: "Variety", ageMin: 30, cats: [], url: "https://v.example/s" },
+    { title: "Severance season 2 series finale renewed episode premiere date", outlet: "THR", ageMin: 35, cats: [], url: "https://t.example/s2" },
+  ];
+  const opts = { ...gateOpts(async () => [{}, {}, {}], async () => ({ popularPosts: 8, maxLikes: 500, sumLikes: 2000, topIds: [] })), discoverNewsImpl: async () => heads };
+  const stories = await discoverStories(opts);
+  const kelela = stories.find((s) => /kelela/i.test(s.storySlug));
+  const sev = stories.find((s) => /severance/i.test(s.storySlug));
+  assert.equal(kelela?.category, "music", "album story → music, got " + JSON.stringify(kelela?.category) + " (stories: " + stories.map((x) => x.storySlug).join(",") + ")");
+  assert.equal(sev?.category, "tv", "series story → tv, got " + sev?.category);
+});
 
-  const big = await discoverStories(gateOpts(async (term) => /naruto/i.test(term)
-    ? Array.from({ length: 20 }, () => ({ likes: 300 })) : []));
+await check("a story nobody posts about is DROPPED; a POPULAR one (100+-like posts) leads", async () => {
+  const bsky = async (term) => /elliot|odyssey/i.test(term) ? [{}, {}, {}] : [];
+  const xstats = async (term) => /elliot|odyssey/i.test(term)
+    ? ({ popularPosts: 6, maxLikes: 1400, sumLikes: 5000, topIds: [] }) : NO_X();
+  const stories = await discoverStories(gateOpts(bsky, xstats));
+  assert.ok(!stories.some((s) => /quiet/.test(s.storySlug)), "no-buzz coverage-only story dropped: " + stories.map((x) => x.storySlug).join(","));
+  const page = stories.find((s) => /elliot/.test(s.storySlug));
+  assert.ok(page, "the popular story survives");
+  assert.equal(page.signals.xPopular, 6, "measured 6 posts with 100+ likes");
+  assert.ok(page.signals.families >= 2, "6 popular posts count as a signal family");
+  assert.equal(stories[0].storySlug, page.storySlug, "the popular story leads the run");
+});
+
+await check("TOP-TIER GATE: a measured story with ZERO 100+-like posts is capped and cannot lead", async () => {
+  const bsky = async (term) => /elliot|odyssey/i.test(term) ? [{}, {}] : [];  // it IS being posted about (bsky)…
+  const xstats = async () => NO_X();                                          // …but NOBODY popular is talking
+  const stories = await discoverStories(gateOpts(bsky, xstats));
+  const page = stories.find((s) => /elliot/.test(s.storySlug));
+  assert.ok(page, "story survives the cheap pre-filter (someone is posting)");
+  assert.equal(page.signals.xPopular, 0);
+  assert.ok(page.discourseHeat <= 35, `unpopular story capped hard: ${page.discourseHeat}`);
+});
+
+await check("anime demoted unless OVERWHELMING real popularity (10+ posts, 1000+ likes)", async () => {
+  const bsky = async () => [{}, {}, {}];
+  const modest = await discoverStories(gateOpts(bsky, async (term) => /naruto/i.test(term)
+    ? ({ popularPosts: 4, maxLikes: 300, sumLikes: 800, topIds: [] })
+    : ({ popularPosts: 2, maxLikes: 150, sumLikes: 300, topIds: [] })));
+  const naruto = modest.find((s) => /naruto/.test(s.storySlug));
+  assert.ok(naruto.signals.animeAdjacent, "flagged anime");
+  assert.ok(naruto.discourseHeat <= 40, `anime capped despite 4 popular posts: ${naruto.discourseHeat}`);
+  const page = modest.find((s) => /elliot/.test(s.storySlug));
+  assert.ok(page.discourseHeat > naruto.discourseHeat, "mainstream outranks anime");
+
+  const big = await discoverStories(gateOpts(bsky, async (term) => /naruto/i.test(term)
+    ? ({ popularPosts: 15, maxLikes: 2200, sumLikes: 30000, topIds: [] }) : NO_X()));
   const naruto2 = big.find((s) => /naruto/.test(s.storySlug));
-  // 20 posts + 6k likes + 2 outlets + trend-free: families = outlets + audiencePosts = 2 → still <3 → stays capped.
-  assert.ok(naruto2.discourseHeat <= 40, "2 families is still not overwhelming");
+  assert.ok(naruto2.discourseHeat > 40, "overwhelming real popularity un-caps anime");
 });
 
 // ── reactionFinder: headline-quote guard ─────────────────────────────────────────────────────────
@@ -937,7 +987,9 @@ await check("discoverReddit fail-closed on non-200; search + comments filters", 
 console.log("— engine: discover.mjs —");
 await check("discoverStories shapes work+person+orphan, drops low-pop-no-discourse, heat sort", async () => {
   const stories = await discoverStories({ discoverNewsImpl: async () => [], discoverTMDBImpl: async () => fakeTMDBItems(), discoverRedditImpl: async () => fakeRedditDiscover(), trendsImpl: async () => [], wikiImpl: async () => [], tmdbMatchImpl: async () => null,
-    bskyCountImpl: async () => [{ likes: 5 }], nowMs: NOW });
+    bskyCountImpl: async () => [{ likes: 5 }],
+    xStatsImpl: async () => ({ popularPosts: 0, maxLikes: 0, sumLikes: 0, topIds: [] }),
+    xPaceMs: 0, nowMs: NOW });
   assert.ok(stories.find((s) => s.kind === "work" && s.primaryEntity === "The Sable Coast"));
   assert.ok(stories.find((s) => s.kind === "person" && s.primaryEntity === "Nora Idris"));
   assert.ok(stories.find((s) => s.kind === "discourse"));

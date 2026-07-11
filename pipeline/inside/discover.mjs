@@ -12,6 +12,7 @@
 import { discoverTMDB } from "../find/sources/tmdb.mjs";
 import { trendingSearches, wikiSpikes, tmdbMatch } from "./signals.mjs";
 import { bskySearchPosts } from "./bsky.mjs";
+import { xSearchStats } from "./xsearch.mjs";
 import { discoverReddit } from "../find/sources/reddit.mjs";
 import { discoverGoogleNews } from "../find/sources/gnews.mjs";
 import { discoverRSS } from "../find/sources/rss.mjs";
@@ -34,6 +35,25 @@ function postMatchesWork(post, work) {
 
 const CAT_FOR = { "trending-movie": "movies", "now-playing": "movies", "upcoming": "movies", "trending-tv": "tv" };
 
+// Category from the story text (fixes music/TV misrouting to "movies"). Music FIRST — album/single/
+// tour/rapper are unambiguous; then TV; then a person → celebrity; else movies.
+const MUSIC_RX = /\b(album|single|EP|mixtape|track|song|music video|tour|rapper|singer|R&B|hip-hop|pop star|band|drops? .* (album|single|video)|billboard|grammy|debut record)\b/i;
+const TV_RX = /\b(series|season|episode|showrunner|TV show|streaming series|renewed|cancell?ed|finale|premiere date|Netflix series|HBO|limited series)\b/i;
+const MOVIE_RX = /\b(film|movie|box office|trailer|sequel|casting|director|premiere|theaters|studio|franchise|reboot)\b/i;
+function detectCategory(text, fallback = "celebrity") {
+  const t = text || "";
+  if (MUSIC_RX.test(t)) return "music";
+  if (TV_RX.test(t)) return "tv";
+  if (MOVIE_RX.test(t)) return "movies";
+  return fallback;
+}
+
+// NON-ENTERTAINMENT deterministic reject (owner audit: a viral POLITICIAN ranked #1). Clear politics/
+// government/sports/business/crime markers in the headline/overview drop the story before it can lead;
+// the finder LLM is the semantic backstop for name-only cases (e.g. a politician with no keyword).
+const NON_ENT_RX = /\b(elect(ion|ed)|politic(s|al|ian)|parliament|MP|senator|congress|governor|president|prime minister|minister|Brexit|Tory|Labour|Republican|Democrat|campaign|policy|referendum|court|trial|verdict|lawsuit indictment|stock|earnings|IPO|quarterly|NFL|NBA|MLB|Premier League|World Cup|golf tournament|championship match|Wimbledon|Olympics)\b/i;
+const isEntertainmentTopic = (text) => !NON_ENT_RX.test(text || "");
+
 // Signal→heat boosts. Sized so a real audience-buzz hit outranks any coverage-only story:
 // trade cluster of 8 outlets = 48 heat; a 100k+ search trend alone = 70.
 const trendBoost = (traffic) => (traffic >= 500000 ? 90 : traffic >= 100000 ? 70 : traffic >= 50000 ? 55 : traffic >= 20000 ? 40 : traffic >= 5000 ? 28 : 15);
@@ -50,7 +70,7 @@ const labelMatch = (term, label) => {
 // real audience posts, genuine TMDB heat. <2 families → the story can support an article but never
 // lead the run.
 const familiesOf = (sig, popularity) =>
-  ((sig.outlets || 0) >= 2 ? 1 : 0) + ((sig.comments || 0) > 0 ? 1 : 0) + (sig.trend ? 1 : 0) + (sig.wiki ? 1 : 0) + ((sig.audiencePosts || 0) >= 3 ? 1 : 0) + ((popularity || 0) >= 40 ? 1 : 0);
+  ((sig.outlets || 0) >= 2 ? 1 : 0) + ((sig.comments || 0) > 0 ? 1 : 0) + (sig.trend ? 1 : 0) + (sig.wiki ? 1 : 0) + ((sig.xPopular || 0) >= 3 ? 1 : 0) + ((popularity || 0) >= 40 ? 1 : 0);
 
 // Anime/manga/game-adaptation detector (owner: "it is anime — we are talking about Hollywood").
 // Demoted HARD below: these stories only run on overwhelming real buzz, never as filler.
@@ -111,6 +131,8 @@ export async function discoverStories({
   wikiImpl = wikiSpikes,
   tmdbMatchImpl = tmdbMatch,
   bskyCountImpl = bskySearchPosts,
+  xStatsImpl = xSearchStats,
+  xPaceMs = 5500,
   max = MAX_STORIES_PER_RUN,
   nowMs = null,
 } = {}) {
@@ -153,7 +175,7 @@ export async function discoverStories({
     const signals = { outlets: c.outlets, comments, headline: true };
     const buzz = attachSignals(`${c.headline} ${c.summary || ""}`, signals);
     const heat = c.outlets * HEAT.outletCount + comments * HEAT.redditComments + buzz + Math.max(0, HEAT.freshness - c.freshMin / 30);
-    const cat = (c.cats || []).find((x) => CATSET.has(x)) || "celebrity";
+    const cat = detectCategory(`${c.headline} ${c.summary || ""}`, (c.cats || []).find((x) => CATSET.has(x)) || "celebrity");
     stories.push({
       storySlug: slugify(c.headline).slice(0, 60),
       kind: "headline",
@@ -250,7 +272,7 @@ export async function discoverStories({
       kind: m.kind === "person" ? "person" : "headline",
       primaryEntity: m.title,
       work: m.kind === "movie" || m.kind === "tv" ? { title: m.title, type: m.kind === "tv" ? "tv" : "movie", year: m.year } : null,
-      category: m.kind === "person" ? "celebrity" : m.kind === "tv" ? "tv" : "movies",
+      category: detectCategory(`${m.title} ${t.news.map((n) => n.title).join(" ")}`, m.kind === "person" ? "celebrity" : m.kind === "tv" ? "tv" : "movies"),
       released: null,
       overview: t.news.map((n) => n.title).filter(Boolean).join(" · ").slice(0, 300),
       headline: t.news[0]?.title || null,
@@ -273,7 +295,7 @@ export async function discoverStories({
       kind: m.kind === "person" ? "person" : "work",
       primaryEntity: m.title,
       work: m.kind === "movie" || m.kind === "tv" ? { title: m.title, type: m.kind === "tv" ? "tv" : "movie", year: m.year } : null,
-      category: m.kind === "person" ? "celebrity" : m.kind === "tv" ? "tv" : "movies",
+      category: detectCategory(m.title, m.kind === "person" ? "celebrity" : m.kind === "tv" ? "tv" : "movies"),
       released: null,
       overview: "",
       headline: null,
@@ -310,34 +332,56 @@ export async function discoverStories({
   const seen = new Set();
   let deduped = stories.filter((s) => (seen.has(s.storySlug) ? false : (seen.add(s.storySlug), true)));
 
-  // ── THE PEOPLE-TALKING GATE (owner REV 4: "if they are not talking about it, it's not trending").
-  // Count REAL audience posts per candidate (keyless Bluesky search) — the count and its engagement
-  // become the dominant heat signal, and a story with NO audience evidence anywhere (no posts, no
-  // reddit argument, no search trend, no wiki spike) is DROPPED outright, never used as filler.
+  // ── STAGE 1 — CHEAP "is anyone talking?" PRE-FILTER (keyless Bluesky count; free, no QPS). A story
+  //    with zero audience posts, zero reddit argument, no search trend and no wiki spike is DROPPED
+  //    before we spend a paid X call on it.
   deduped.sort((a, b) => b.discourseHeat - a.discourseHeat);
-  const probeList = deduped.slice(0, 14);
-  const counts = await Promise.all(probeList.map((st) =>
+  const preList = deduped.slice(0, 14);
+  const bskyCounts = await Promise.all(preList.map((st) =>
     bskyCountImpl(buzzTermOf(st), { limit: 25, sort: "latest", nowMs: now }).catch(() => []),
   ));
-  probeList.forEach((st, i) => {
-    const posts = counts[i] || [];
-    st.signals.audiencePosts = posts.length;
-    st.signals.audienceEngagement = posts.reduce((sum, p) => sum + (p.likes || 0), 0);
-    st.discourseHeat += Math.min(70, posts.length * 4 + Math.round(st.signals.audienceEngagement / 50));
-  });
+  preList.forEach((st, i) => { st.signals.audiencePosts = (bskyCounts[i] || []).length; });
   deduped = deduped.filter((st) => {
     const g = st.signals;
     const talking = (g.audiencePosts || 0) > 0 || (g.comments || 0) > 0 || g.trend || g.wiki;
-    return talking; // nobody talking → not trending → gone
+    // ENTERTAINMENT-ONLY (owner audit): a viral politician/athlete/general-news subject is dropped
+    // here on clear keywords; the finder LLM rejects the name-only cases downstream.
+    const ent = isEntertainmentTopic(`${st.headline || ""} ${st.primaryEntity} ${st.overview || ""}`);
+    return talking && ent;
   });
+
+  // ── STAGE 2 — REAL POPULARITY (owner: "make sure POPULAR people are talking — 100+ likes"). For
+  //    the top survivors, MEASURE X: how many posts already have ≥100 likes, and their peak/total
+  //    engagement. This is the DOMINANT ranking signal and a hard top-tier gate. Serialized with 5.5s
+  //    spacing for the free tier's 1-req/5s limit; a story we can't measure keeps its pre-filter heat.
+  deduped.sort((a, b) => b.discourseHeat - a.discourseHeat);
+  const measure = deduped.slice(0, 8);
+  for (let i = 0; i < measure.length; i++) {
+    const st = measure[i];
+    // NOTE: do NOT unref this timer — we deliberately await the QPS delay; unref would let a
+    // discovery-only process (no other active handles) exit early and abandon the await (Node exit 13).
+    if (i > 0 && xPaceMs) await new Promise((r) => setTimeout(r, xPaceMs));
+    const x = await xStatsImpl(buzzTermOf(st)).catch(() => null);
+    if (!x) continue;
+    st.signals.xPopular = x.popularPosts;      // # posts about it with 100+ likes
+    st.signals.xMaxLikes = x.maxLikes;         // the single most-liked reaction
+    st.signals.xSumLikes = x.sumLikes;         // total engagement of the popular posts
+    // Popularity dominates heat: each 100+-like post is worth real weight, plus a log-scaled bump for
+    // total engagement so a 5,000-like wave outranks a 300-like trickle.
+    st.discourseHeat += Math.min(120, x.popularPosts * 12 + Math.round(Math.log10(1 + x.sumLikes) * 20));
+  }
 
   for (const st of deduped) {
     st.signals.families = familiesOf(st.signals, st.popularity);
     if (st.signals.families < 2) st.discourseHeat = Math.min(st.discourseHeat, 45);
-    // Anime-adjacent: heavy demotion — only overwhelming, multi-family audience buzz un-caps it.
+    // TOP-TIER GATE (owner): a story where we MEASURED X and found NOBODY with 100+ likes talking is
+    // not top-tier — cap it hard so it can never lead (it may still exist as a minor entry). Stories
+    // we never measured (rank > 8) are left as-is; only a measured, proven-unpopular story is capped.
+    if (st.signals.xPopular === 0) st.discourseHeat = Math.min(st.discourseHeat, 35);
+    // Anime-adjacent: heavy demotion — only overwhelming REAL popularity un-caps it.
     if (ANIME_RX.test(`${st.headline || ""} ${st.primaryEntity} ${st.work?.title || ""} ${st.overview || ""}`)) {
       st.signals.animeAdjacent = true;
-      const overwhelming = st.signals.families >= 3 && (st.signals.audiencePosts || 0) >= 15;
+      const overwhelming = (st.signals.xPopular || 0) >= 10 && (st.signals.xMaxLikes || 0) >= 1000;
       if (!overwhelming) st.discourseHeat = Math.min(Math.round(st.discourseHeat * 0.5), 40);
     }
   }
