@@ -9,7 +9,7 @@ import { cacheTweets } from "../lib/tweets.mjs";
 import { redditSearchPosts, redditTopComments } from "../find/sources/reddit.mjs";
 import { xSearchIds } from "./xsearch.mjs";
 import { bskySearchPosts } from "./bsky.mjs";
-import { MODELS, FORMS, MAX_EMBEDS, NO_X } from "./config.inside.mjs";
+import { MODELS, FORMS, MAX_EMBEDS, NO_X, MIN_QUOTE_WORDS } from "./config.inside.mjs";
 
 // Normalization for the verbatim wall: curly→straight quotes, dashes unified, whitespace
 // collapsed, lowercased. Loose enough to survive extraction artifacts, strict enough that a
@@ -332,9 +332,16 @@ export async function harvestReactions(trigger, angle, {
     return out;
   };
 
+  // SUBSTANTIVE QUOTES ONLY (owner: the selector kept tiny one-liners — "When season 3?", "love this!").
+  // A fan quote must be a real, meaningful thought: ≥ MIN_QUOTE_WORDS words AND ≥ 40 chars. And the pool
+  // is sorted LONGEST/most-substantive first so the writer builds on the best, most explainable posts.
+  const wc = (q) => (q || "").trim().split(/\s+/).filter(Boolean).length;
+  const substantive = (r) => wc(r.quote) >= MIN_QUOTE_WORDS && (r.quote || "").trim().length >= 40;
   const split = (list) => ({
     named: list.filter((r) => r.speaker && r.speakerType !== "fan"),
-    fans: list.filter((r) => r.speakerType === "fan").map(({ speaker, ...rest }) => ({ ...rest, speaker: "" })),
+    fans: list.filter((r) => r.speakerType === "fan" && substantive(r))
+      .map(({ speaker, ...rest }) => ({ ...rest, speaker: "" }))
+      .sort((a, b) => wc(b.quote) - wc(a.quote)),
   });
 
   let passed = [], named = [], fans = [];

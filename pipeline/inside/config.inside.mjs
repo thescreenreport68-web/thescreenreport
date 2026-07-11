@@ -34,6 +34,11 @@ export const MAX_EMBEDS = 6; // page weight cap; native quote text is always can
 export const NO_X = process.env.INSIDE_NO_X === "1";
 export const NO_EMBEDS = process.env.INSIDE_NO_EMBEDS === "1";
 
+// SUBSTANTIVE QUOTES (owner 2026-07-11: "the quotes are very very small — we want meaningful, a little
+// bit long ones"). A fan quote must clear this word floor to become an anchor; the pool is sorted
+// longest-first so the writer builds on the most explainable, meaningful posts.
+export const MIN_QUOTE_WORDS = Number(process.env.INSIDE_MIN_QUOTE_WORDS) || 9;
+
 export const AI_DISCLOSURE =
   "This article was produced with AI-assisted research and reviewed editorially. Quoted reactions are real public posts and statements; the surrounding analysis is our own.";
 

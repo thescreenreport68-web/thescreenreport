@@ -14,7 +14,9 @@ Your brief must:
 - Surface BOTH the positive AND the negative reactions. If any reactions are hateful (racist/sexist/bigoted/
   cruel), flag them plainly in "mustInclude" as the ugly side to be REPORTED CRITICALLY (the site exposes
   and condemns the bad behavior — never neutral, never endorsing).
-- Pick the STANDOUT anchors by their ids (the quotes that carry the piece; best saved for last).
+- Pick the STANDOUT anchors by their ids — the MEANINGFUL, substantive posts that actually say something
+  (a real take, a vivid feeling, a sharp joke), NOT bland one-liners; note for each WHY it matters so the
+  writer can unpack it. The quotes that carry the piece; best saved for last.
 - Note what MUST be included (the facts/points the article is incomplete without).
 - Refer to anchors ONLY by id (R2, A5) — never re-quote or paraphrase quote text (the writer copies
   verbatim from the block; your job is selection and structure).

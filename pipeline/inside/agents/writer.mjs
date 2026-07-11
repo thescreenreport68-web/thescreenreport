@@ -52,6 +52,12 @@ THE ACCURACY LINE (machine-enforced; violations kill the article):
   "spicy", "a hot take", or frame it approvingly. Show readers the good and the bad, and stand clearly on
   the right side of it.
 
+QUOTE CRAFT (the heart of this desk — how the best fans-react writers work): choose the MOST MEANINGFUL,
+substantive posts in the anchor block — the ones that actually SAY something (a real take, a vivid
+feeling, a sharp joke, a specific criticism). Skip bland one-liners. And never just drop a quote and move
+on — UNPACK it: set it up, quote it, then explain in YOUR words what the person is really getting at and
+why it lands. One well-explained meaningful quote beats five bare short ones. Aim for a rhythm of
+context → quote → your read on it.
 CRAFT: hook first (use the brief's hook), short paragraphs, the real posts as visual beats, curiosity in
 structure (build to the standout anchors — strongest last), at most ${SEO.maxQuestionH2s} question-style H2s,
 one natural use of the SEO keyword — nothing stuffed.
