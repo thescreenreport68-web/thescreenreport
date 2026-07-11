@@ -11,12 +11,14 @@ const HOST = "https://api.twitterapi.io";
 export async function xSearchIds(term, { max = 12, minLikes = 0, fetchImpl = fetch } = {}) {
   const key = process.env.TWITTERAPI_KEY;
   if (!key || !term) return [];
-  // Standard Twitter search operators: English, no retweets, exclude pure links/spam. "Top" query
-  // type biases toward engaged posts (real reactions) over the raw firehose.
-  const q = `${term} lang:en -filter:retweets -filter:replies`;
+  // English, no retweets — but KEEP replies (a reply IS a reaction). queryType=Latest is the one
+  // that actually returns results on twitterapi.io (Top comes back empty, verified 2026-07-11);
+  // downstream classifyTweets filters for genuine on-subject reactions and we sort by likes, so
+  // "latest" doesn't mean "lowest quality".
+  const q = `${term} lang:en -filter:retweets`;
   try {
     const r = await fetchImpl(
-      `${HOST}/twitter/tweet/advanced_search?query=${encodeURIComponent(q)}&queryType=Top`,
+      `${HOST}/twitter/tweet/advanced_search?query=${encodeURIComponent(q)}&queryType=Latest`,
       { headers: { "X-API-Key": key }, signal: AbortSignal.timeout(12000) },
     );
     if (!r.ok) return [];
