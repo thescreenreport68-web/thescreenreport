@@ -150,10 +150,10 @@ const FIELDS_OVERRIDE = {
 };
 
 export function resolveNiche(topic) {
-  // NEWS-ONLY: this automation has exactly 8 trending-news forms. resolveNiche can ONLY return one of
-  // {news, boxoffice, trailer, reaction, watchguide, awards, music-news, music-awards}. There is no
-  // review/list/explainer/profile/guide/interview/recap/predictions/music-profile/screen-music form
-  // anymore — those are separate future automations and the categorizer never emits them.
+  // NEWS-ONLY: this automation has exactly 6 trending-news forms. resolveNiche can ONLY return one of
+  // {news, trailer, reaction, awards, music-news, music-awards}. box-office + watchguide (where-to-watch /
+  // streaming-platform) were REMOVED (owner 2026-07-10) → the separate box-office-&-releases automation. The
+  // review/list/explainer/profile/guide/interview/recap/predictions forms are also gone (separate automations).
   const t = (topic.contentType || "").toLowerCase();
   if ((topic.category || "").toLowerCase() === "music") {
     const sub = (topic.subcategory || "").toLowerCase();
@@ -162,8 +162,6 @@ export function resolveNiche(topic) {
   }
   const cat = (topic.category || "").toLowerCase();
   const sub = (topic.subcategory || "").toLowerCase();
-  if (cat === "streaming" && (sub === "where-to-watch" || t.includes("where to watch") || t.includes("where-to-watch"))) return "watchguide";
-  if (cat === "movies" && (sub === "box-office" || t.includes("box office") || t.includes("box-office"))) return "boxoffice";
   if (sub === "trailers" || t.includes("trailer")) return "trailer";
   if (sub === "reactions" || t.includes("reaction")) return "reaction";
   if (cat === "awards" || t.includes("award") || t.includes("oscar") || t.includes("emmy")) return "awards";

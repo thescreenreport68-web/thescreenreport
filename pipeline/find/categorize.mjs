@@ -20,7 +20,9 @@ const slugify = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").repla
 // future automation. This is the SINGLE SOURCE OF TRUTH — imported by the MAKE path (run.mjs/classify.mjs)
 // and the inside-stories expander so the news-only invariant is enforced in CODE (fail-closed), not just
 // by the categorizer prompt.
-export const NEWS_FORMS = ["news", "box-office", "trailer", "reaction", "watchguide", "awards", "music-news", "music-awards"];
+// box-office + watchguide REMOVED (owner 2026-07-10): box-office numbers/results, release DATES, and streaming-PLATFORM
+// / where-to-watch content moved to a SEPARATE box-office-&-releases automation. The news lane = trending NEWS only.
+export const NEWS_FORMS = ["news", "trailer", "reaction", "awards", "music-news", "music-awards"];
 
 // Force category+subcategory onto the REAL taxonomy (the LLM sometimes invents one, e.g. "tv/animation").
 // Mirrors classify.mjs's niche-snapping so FIND and MAKE agree on the URL silo.
@@ -31,10 +33,8 @@ export function canonicalize(t) {
   let ft = t.formatTag;
   if (!NEWS_FORMS.includes(ft)) ft = t.formatTag = "news";
   if (ft === "awards") { cat = "awards"; if (!TAXONOMY.awards.includes(sub)) sub = "winners"; }
-  else if (ft === "box-office") { cat = "movies"; sub = "box-office"; }
   else if (ft === "trailer") { if (!["movies", "tv"].includes(cat)) cat = "movies"; sub = "trailers"; }
   else if (ft === "reaction") { if (!["movies", "tv"].includes(cat)) cat = "movies"; sub = "reactions"; }
-  else if (ft === "watchguide") { cat = "streaming"; sub = "where-to-watch"; }
   else if (ft === "music-news") { cat = "music"; sub = "news"; }
   else if (ft === "music-awards") { cat = "music"; sub = "awards"; }
   else { ft = t.formatTag = "news"; if (!["movies", "tv", "celebrity"].includes(cat)) cat = "celebrity"; sub = "news"; }
@@ -56,7 +56,7 @@ const SYS = `You are the news editor of The Screen Report, an English-language H
     • video games / gaming hardware (Xbox, PlayStation, Game Pass, Elden Ring, gameplay, "officially releases").
     • anime or manga (One Piece chapter, episode-number releases, shonen), comics-only releases.
     • K-drama or non-English/regional cinema (unless a major Hollywood/Netflix-English production); MUSIC-INDUSTRY TRADE MINUTIAE (chart-methodology, label finance, royalty/business-legal filings, setlist/gig-listing trivia, pure local-scene reporting with NO breakout and NO screen/A-list hook); non-English regional music with no Hollywood/screen hook; sports, crypto/tech, deals/coupons/merch.
-    ⚠ FORM RULE — this automation posts TRENDING NEWS EVENTS ONLY. Also set relevant=false for anything that is a REVIEW (a critical verdict, ours or a critic's), an INTERVIEW write-up, a RANKING / "best … of all time" / listicle, a celebrity PROFILE or career retrospective, an ending/lore EXPLAINER, an episode RECAP, an awards PREDICTION (a who-will-win forecast — award RESULTS are fine), a "how to watch all the X movies" binge GUIDE, or any opinion / theory / speculation piece. Those are NOT news events and belong to SEPARATE automations. Keep ONLY a real news EVENT (casting, deal, death, box-office RESULT, trailer drop, award RESULT, music announcement, scandal, legal/health news).
+    ⚠ FORM RULE — this automation posts TRENDING NEWS EVENTS ONLY. Also set relevant=false for anything that is a REVIEW (a critical verdict, ours or a critic's), an INTERVIEW write-up, a RANKING / "best … of all time" / listicle, a celebrity PROFILE or career retrospective, an ending/lore EXPLAINER, an episode RECAP, an awards PREDICTION (a who-will-win forecast — award RESULTS are fine), a "how to watch all the X movies" binge GUIDE, or any opinion / theory / speculation piece. ⚠ ALSO set relevant=false (owner 2026-07-10) for anything primarily about BOX-OFFICE numbers/results/records ("$X million opening", "grossed", "highest-grossing"), a film/show RELEASE DATE or release SCHEDULE ("when it comes out", "gets a 2027 release date"), or WHERE-TO-WATCH / which STREAMING PLATFORM / OTT-release ("now streaming on Netflix", "where to watch X", "hits Max") — those belong to a SEPARATE box-office-&-releases automation. Those are NOT news events for us. Keep ONLY a real TRENDING news EVENT (casting, deal, death, trailer drop, award RESULT, music announcement, scandal, legal/health news, audience reactions).
 (2) The single best ANGLE/niche to cover it RIGHT NOW, exactly as a real editor would.
 You output STRICT JSON only. Be CONSERVATIVE: when a candidate is off-topic OR primarily political, set relevant=false with a one-word reason.`;
 
@@ -67,21 +67,19 @@ const NICHE_GUIDE = `This automation posts ONLY hardcore trending NEWS — a rea
     • "tv" when it centers on a TV or streaming SERIES — a show's casting, renewal, cancellation, premiere, or episodes.
     • "celebrity" ONLY for a person's PERSONAL life with no specific screen/music WORK as the subject — a relationship, wedding, family, appearance, feud, or a non-musician's health/legal/death story.
     • If the SUBJECT is a MUSICIAN and the event is a MUSIC event (a musician's death, tour, album/single, label deal, or a music ceremony), pick "music-news"/"music-awards" (category "music") — NEVER "celebrity".
-- "box-office" → movies / box-office: a film whose box-office RESULT/record is the story.
 - "trailer" → movies|tv / trailers: a title whose NEW TRAILER just dropped (the trailer RELEASE is the news event).
 - "reaction" → movies|tv / reactions: a roundup of the public/critic REACTION to a just-released trailer/film/show (the reaction is the news).
-- "watchguide" → streaming / where-to-watch: a SINGLE title that JUST hit streaming or got a streaming DATE (the "now streaming" news).
 - "awards" → awards / winners: a film/TV ceremony's WINNERS / RESULTS (a real result — NEVER a prediction).
 - "music-news" → music / news: a trending music NEWS event (tour announced, album/single dropped, label/streaming deal, a pop star's move).
 - "music-awards" → music / awards: a music ceremony's WINNERS / RESULTS (Grammys/AMAs/VMAs/CMAs).
-Prefer "news" when unsure. HARD RULE: NEVER pick "box-office" for an UNRELEASED film — use "trailer" or "news". Honor any [SUGGESTED NICHE] hint unless the summary clearly points elsewhere.`;
+Prefer "news" when unsure. ⚠ A story primarily about BOX-OFFICE numbers, a RELEASE DATE/schedule, or WHERE-TO-WATCH / streaming PLATFORM is NOT for this automation — set relevant=false (it belongs to the separate box-office-&-releases automation). Honor any [SUGGESTED NICHE] hint unless the summary clearly points elsewhere.`;
 
 // Output contract for each candidate the model judges relevant.
 const SCHEMA = `Return JSON: {"items":[{
  "i": <index>,
  "relevant": true|false,
  "reason": "short why-keep-or-drop",
- "formatTag": "news|box-office|trailer|reaction|watchguide|awards|music-news|music-awards",
+ "formatTag": "news|trailer|reaction|awards|music-news|music-awards",
  "category": "movies|tv|streaming|celebrity|awards|music",
  "subcategory": "the matching subcategory",
  "musicTier": "popular|indie — set ONLY for a music item: 'indie' if it's an under-the-radar/underground artist or track that UNEXPECTEDLY broke out; 'popular' for an established/trending mainstream act. Omit for non-music.",

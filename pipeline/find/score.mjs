@@ -12,7 +12,7 @@
 // industry inside-baseball stays lowest.
 const TYPE_WEIGHT = {
   // BIG FILM/TV NEWS — leads.
-  boxoffice: 1.0, trailer: 1.0, casting: 0.92, award: 0.9, breakout: 0.72, reaction: 0.72,
+  trailer: 1.0, casting: 0.92, award: 0.9, breakout: 0.72, reaction: 0.72, boxoffice: 0.35, /* boxoffice OUT OF SCOPE (owner 2026-07-10) — demoted; also dropped at discovery/categorize */
   cancellation: 0.7, announcement: 0.62, renewal: 0.6, review: 0.58,
   // MAJOR human-interest — still real news, just not above the tentpole film forms.
   death: 0.9, arrest: 0.85, scandal: 0.8, health: 0.8, legal: 0.8, lawsuit: 0.8,
@@ -53,7 +53,7 @@ function corroborationPts(t) {
 // trailer drop (the Odyssey!), a box-office result, a movie's audience reaction, a major casting/award — and less
 // on celebrity fashion/wedding-look color. These film/TV production forms get a boost so they out-rank a same-hour
 // celebrity-fashion piece; and a story carried by MULTIPLE top outlets is, by definition, "what's trending".
-const BIG_FILMTV_FORM = new Set(["boxoffice", "trailer", "reaction", "casting", "award", "renewal", "cancellation", "review", "announcement"]);
+const BIG_FILMTV_FORM = new Set(["trailer", "reaction", "casting", "award", "renewal", "cancellation", "review", "announcement"]); // boxoffice removed (out of scope, owner 2026-07-10)
 const isFilmTV = (t) => ["movies", "tv", "streaming"].includes((t.category || "").toLowerCase());
 const outletCount = (t) => t.verification?.outletCount || (t.sources ? new Set((t.sources || []).map((s) => s.outlet)).size : 1) || 1;
 

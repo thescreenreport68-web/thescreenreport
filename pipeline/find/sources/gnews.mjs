@@ -18,7 +18,6 @@ const QUERIES = [
   "TV show premiere OR finale OR trailer when:2d",
   "celebrity when:1d",
   "celebrity dating OR wedding OR split OR feud when:2d",
-  "weekend box office when:3d",
   "new trailer OR teaser when:2d",
   "Netflix OR HBO OR Marvel OR DC OR A24 OR Disney when:2d",
   "new album OR world tour OR single OR music video when:2d",

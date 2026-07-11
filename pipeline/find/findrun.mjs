@@ -72,6 +72,12 @@ const DULL_INDUSTRY = /\bfilm commission(er)?\b|\bsound\s?stage\b|\bstudio (spac
 // drop). It deliberately does NOT include ceremony/telecast/red-carpet/pre-show — those match on-brand Hollywood
 // AWARDS viewing guides ("How to Watch the Oscars", "Golden Globes Red Carpet Pre-Show"), which we WANT to keep.
 const LIVE_EVENT = /\bfireworks (spectacular|show|display|celebration)\b|\b(where|how) to (watch|stream)\b[^.]{0,45}\b(fireworks|parade|marathon|telethon|ball drop)\b|\b(macy'?s|nathan'?s|thanksgiving|new year'?s eve)\b[^.]{0,30}\b(fireworks|parade|ball drop|day special)\b/i;
+// OFF-SCOPE for the NEWS lane (owner 2026-07-10): box-office numbers/results/records, film/show RELEASE DATES &
+// schedules ("when it comes out"), and streaming-PLATFORM / where-to-watch / OTT-release stories now belong to a
+// SEPARATE box-office-&-releases automation. The news lane covers ONLY latest TRENDING Hollywood/music/celebrity news
+// (casting, trailers, reactions, deals, awards RESULTS, music, scandals). Deterministic drop so the writer never makes them.
+const BOX_OFFICE = /\bbox[- ]?office\b|\bopening weekend\b|\bweekend (debut|gross|haul|estimate|numbers?)\b|\bgrosse[ds]\b|\b(domestic|worldwide|global|overseas|international)\s+(gross|debut|total|haul)\b|\bhighest[- ]grossing\b|\bbiggest (opening|debut)\b|\b(passes?|crosses?|tops?|surpasses?)\b[^.?!]{0,20}\$\s?\d[\d.,]*\s?(m|b|k|million|billion)\b|\$\s?\d[\d.,]*\s?(m|b|k|million|billion)\b[^.?!]{0,40}\b(opening|weekend|globally|worldwide|domestic|box[- ]?office|debut|theaters|gross)\b/i;
+const RELEASE_PLATFORM = /\b(where|how) to (watch|stream)\b|\bwhere to watch\b|\bnow streaming\b|\brelease date\b|\b(gets?|sets?|lands?|reveals?|announces?|scores?)\s+(a |its |new )?(release|streaming|premiere|digital|theatrical) date\b|\bstreaming (date|release|debut|premiere|guide|window)\b|\bott (release|platform|date)\b|\b(streaming|available|premieres?|premiering|arriv(es?|ing)|land(s|ing)|hit(s|ting)?|drop(s|ping)?|debut(s|ing)?|coming|heading) (on|to)\s+(netflix|hulu|disney\+?|max|hbo( ?max)?|peacock|prime video|amazon( prime)?|apple tv\+?|paramount\+?|starz|showtime|mubi|tubi|hallmark)\b|\bhits? (theaters|cinemas|streaming)\b/i;
 const freshCandidates = candidates.filter((c) =>
   !published.titles.has(slugKey(c.title)) &&
   !ROUNDUP_REVIEW.test(c.title || "") &&
@@ -79,6 +85,8 @@ const freshCandidates = candidates.filter((c) =>
   !SCOPE_JUNK.test(c.title || "") &&
   !DULL_INDUSTRY.test(c.title || "") &&
   !LIVE_EVENT.test(c.title || "") &&
+  !BOX_OFFICE.test(c.title || "") &&
+  !RELEASE_PLATFORM.test(c.title || "") &&
   !JUNK_OUTLETS.has((c.outlet || "").toLowerCase().trim()));
 if (candBefore - freshCandidates.length > 0) monitor.stage("dedup", `dropped ${candBefore - freshCandidates.length} already-published candidate(s) by title; ${freshCandidates.length} remain`);
 // EXTRACTABILITY-FIRST shortlist (2026-07-04): a clean publisher URL (an RSS main/section feed) extracts to full
