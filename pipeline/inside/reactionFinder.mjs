@@ -7,7 +7,7 @@ import { chat } from "../lib/openrouter.mjs";
 import { findContent } from "../lib/contentFinder.mjs";
 import { cacheTweets } from "../lib/tweets.mjs";
 import { redditSearchPosts, redditTopComments } from "../find/sources/reddit.mjs";
-import { bskySearchPosts } from "./bsky.mjs";
+import { xSearchIds } from "./xsearch.mjs";
 import { MODELS, FORMS, MAX_EMBEDS } from "./config.inside.mjs";
 
 // Normalization for the verbatim wall: curly→straight quotes, dashes unified, whitespace
@@ -97,7 +97,7 @@ export async function scanPagesForTweets(sources, { fetchImpl = fetch, maxPages 
 // Tweets ARE reactions, not just embeds: a public post is the primary artifact itself (the
 // playbook's "official oEmbed is the receipt"). The text comes from X's own syndication API, so
 // it is verbatim by construction; one cheap LLM pass classifies relevance + who the author is.
-const CLASSIFY_TWEETS_SYS = `You classify public social posts (X / Bluesky) for an audience-reaction desk. For each post decide:
+const CLASSIFY_TWEETS_SYS = `You classify public X (Twitter) posts for an audience-reaction desk. For each post decide:
 - aboutEvent: is it a genuine reaction ABOUT THE SUBJECT (not spam/ads/unrelated, not a different work with
   a similar name)? Be strict for short/common titles.
 - speakerType: celebrity|filmmaker|castmate|crew|musician|company|official if the AUTHOR is a publicly known
@@ -152,11 +152,12 @@ export function fallbackQueries(trigger, angle) {
   const medium = trigger.work ? (trigger.work.type === "tv" ? "TV series" : "movie") : "";
   const w = trigger.work && who === trigger.work.title ? `${who} ${medium}` : who;
   const F = {
-    // Hunt pages that EMBED real fan posts (roundups carry the tweets we need in their raw HTML).
-    "audience-reaction": [`${w} fans react twitter`, `${w} fan reactions`],
-    "the-debate": [`${w} fans divided`, `${w} twitter debate`],
-    "creator-answers-critics": [`${w} responds criticism`, `${w} addresses backlash`],
-    "breakout-buzz": [`who is ${who}`, `${who} everyone talking`],
+    // Hunt pages that EMBED real fan posts (roundups carry the X/Instagram/Reddit posts we need in
+    // their raw HTML) — the X-search source finds tweets directly; these surface IG/Reddit posts too.
+    "audience-reaction": [`${w} fans react twitter`, `${w} reddit reaction`, `${w} instagram reaction`],
+    "the-debate": [`${w} fans divided`, `${w} reddit debate`, `${w} twitter debate`],
+    "creator-answers-critics": [`${w} responds criticism`, `${w} instagram statement`, `${w} addresses backlash`],
+    "breakout-buzz": [`who is ${who}`, `${who} reddit`, `${who} everyone talking`],
   };
   return F[angle.form] || [`${w} reactions`];
 }
@@ -199,7 +200,7 @@ export async function harvestReactions(trigger, angle, {
   reddit = true,
   redditSearchImpl = redditSearchPosts,
   redditCommentsImpl = redditTopComments,
-  bskyImpl = bskySearchPosts,
+  xSearchImpl = xSearchIds,
   maxQueries = 3,
   // Soft self-deadline: stop STARTING new queries past this, return gracefully with whatever was
   // harvested (→ under-floor park + retry next cycle) instead of being watchdog-killed (→ blocked,
@@ -320,11 +321,15 @@ export async function harvestReactions(trigger, angle, {
   let tweets = [];
   if (embeds) {
     try {
-      // ALWAYS scan raw pages too (owner: the real posts ARE the content — extraction strips their
-      // embeds, so the page-scan is the primary path, not a fallback).
-      const ids = [...new Set([...findTweetIds(withText), ...await scanImpl(bundle?.sources || withText)])];
-      ({ tweets = [], ids: tweetIds = [] } = await cacheTweetsImpl(ids.slice(0, MAX_EMBEDS * 2)));
-      diag(`tweet-scan → ids ${ids.length}, syndication-resolved ${tweets.length}`);
+      // THREE tweet sources merged, all resolved through the ONE syndication cache (verbatim +
+      // embeddable): (1) twitterapi.io SEARCH — the real reaction posts about the subject (REV 5,
+      // the fan-post spine once TWITTERAPI_KEY is set); (2) tweet URLs already embedded in the
+      // coverage pages; (3) a raw-HTML page scan (roundups carry the posts extraction strips).
+      const who = angle.focusEntity || trigger.primaryEntity;
+      const searchIds = await xSearchImpl(who, { max: MAX_EMBEDS * 2 }).catch((e) => { diag(`x-search → ERR ${String(e?.message || e).slice(0, 80)}`); return []; });
+      const ids = [...new Set([...searchIds, ...findTweetIds(withText), ...await scanImpl(bundle?.sources || withText)])];
+      ({ tweets = [], ids: tweetIds = [] } = await cacheTweetsImpl(ids.slice(0, MAX_EMBEDS * 3)));
+      diag(`x → search ${searchIds.length}, total-ids ${ids.length}, syndication-resolved ${tweets.length}`);
     } catch (e) { diag(`tweet-scan → ERR ${String(e?.message || e).slice(0, 80)}`); tweets = []; tweetIds = []; }
   }
   if (tweets.length) {
@@ -351,38 +356,6 @@ export async function harvestReactions(trigger, angle, {
     recompute();
   }
 
-  // 3b2. BLUESKY AS ANCHORS — the keyless raw-fan-post source that works from ANY IP (Reddit ended
-  //      self-serve API keys; runners are 403 keyless). Post text is verbatim by construction; the
-  //      same relevance/speaker classify used for tweets gates every post; likes rank them.
-  try {
-    const who = angle.focusEntity || trigger.primaryEntity;
-    const found = await bskyImpl(who, { nowMs: t0 }).catch((e) => { diag(`bsky-search → ERR ${String(e?.message || e).slice(0, 80)}`); return []; });
-    diag(`bsky → found ${found.length}`);
-    if (found.length) {
-      const asPosts = found.slice(0, 14).map((p) => ({ text: p.text, user: { name: p.displayName, screen_name: p.handle }, created_at: p.createdAt, _url: p.url, _atUri: p.atUri }));
-      const classified = await classifyTweets(asPosts, trigger, angle, { model, chatImpl, subject });
-      for (const c of classified) {
-        const p = asPosts[c.i];
-        const text = (p.text || "").trim();
-        if (!text) continue;
-        const quote = text.split(/\s+/).slice(0, 45).join(" ");
-        withText.push({ url: p._url, domain: "bsky.app", owner: "bluesky", tier: "social", title: "public post", text, quotes: [text] });
-        raw.push({
-          speaker: c.speakerType === "fan" ? "" : (p.user?.name || ""),
-          speakerType: c.speakerType || "fan",
-          connection: c.connection || "",
-          platform: "Bluesky",
-          date: (p.created_at || "").slice(0, 10),
-          quote,
-          stance: c.stance || "neutral",
-          sourceIdx: withText.length - 1,
-          ...(p._atUri ? { bskyUri: p._atUri } : {}),
-        });
-      }
-      recompute();
-    }
-  } catch { /* bsky outage — other anchor sources may suffice */ }
-
   // 3c. REDDIT AS ANCHORS — the keyless, reliable discourse source (audience posts, verbatim from the
   //     API). Discovered posts + a targeted search; pull top comments; classify relevance+stance once.
   //     Reddit users are pseudonymous → aggregate "fan" anchors (never named).
@@ -394,15 +367,16 @@ export async function harvestReactions(trigger, angle, {
       const posts = [...(trigger.redditPosts || []), ...found];
       const seenPerma = new Set();
       const topPosts = posts.filter((p) => p?.permalink && !seenPerma.has(p.permalink) && (seenPerma.add(p.permalink), true)).slice(0, 4);
-      const commentLists = await Promise.all(topPosts.map((p) => redditCommentsImpl(p.permalink).catch(() => [])));
+      const commentLists = await Promise.all(topPosts.map((p) => redditCommentsImpl(p.permalink).then((cs) => cs.map((c) => ({ ...c, _perma: p.permalink }))).catch(() => [])));
       const comments = commentLists.flat().slice(0, 14);
       if (comments.length) {
         const classified = await classifyRedditComments(comments, trigger, angle, { model, chatImpl, subject });
         for (const c of classified) {
           const cm = comments[c.i];
           if (!cm?.text) continue;
-          withText.push({ url: null, domain: "reddit.com", owner: "reddit", tier: "social", title: "reddit comment", text: cm.text, quotes: [cm.text] });
-          raw.push({ speaker: "", speakerType: "fan", connection: "", platform: "Reddit", date: "", quote: cm.text.split(/\s+/).slice(0, 45).join(" "), stance: c.stance || "neutral", sourceIdx: withText.length - 1 });
+          withText.push({ url: cm._perma || null, domain: "reddit.com", owner: "reddit", tier: "social", title: "reddit comment", text: cm.text, quotes: [cm.text] });
+          // redditUrl = the thread the comment lives in → assemble embeds that discussion inline.
+          raw.push({ speaker: "", speakerType: "fan", connection: "", platform: "Reddit", date: "", quote: cm.text.split(/\s+/).slice(0, 45).join(" "), stance: c.stance || "neutral", sourceIdx: withText.length - 1, ...(cm._perma ? { redditUrl: cm._perma } : {}) });
         }
         recompute();
       }

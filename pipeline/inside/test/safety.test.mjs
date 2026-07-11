@@ -51,7 +51,7 @@ function makeFinder(sources = SOURCES) {
 const gatherJob = async (form, chatImpl) => {
   const job = { story: fakeTrigger(), angle: fakeAngle(form) };
   const harvestImpl = (story, angle, opts) => harvestReactions(story, angle, {
-    bskyImpl: async () => [],
+    xSearchImpl: async () => [],
     ...opts, // keeps the gatherer's chatImpl shim + model routing in play
     findContentImpl: makeFinder(),
     cacheTweetsImpl: async () => ({ tweets: [], ids: [] }),
@@ -165,7 +165,7 @@ await check("harvest subject label falls back to 'film/TV' when the trigger has 
   const story = fakeTrigger({ work: null, category: undefined, subjectKind: "person", primaryEntity: "Nora Idris" });
   const job = { story, angle: fakeAngle("breakout-buzz", { focusEntity: "Nora Idris" }) };
   const harvestImpl = (s, a, opts) => harvestReactions(s, a, {
-    bskyImpl: async () => [],
+    xSearchImpl: async () => [],
     ...opts,
     findContentImpl: makeFinder(),
     cacheTweetsImpl: async () => ({ tweets: [], ids: [] }),

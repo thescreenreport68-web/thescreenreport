@@ -14,6 +14,7 @@ import { discoverReddit, redditSearchPosts, redditTopComments } from "../../find
 import { gnewsArticleId, decodeGnewsBase64, decodeGnewsUrl } from "../../lib/gnewsDecode.mjs";
 import { discoverStories } from "../discover.mjs";
 import { trendingSearches, wikiSpikes, tmdbMatch } from "../signals.mjs";
+import { xSearchIds } from "../xsearch.mjs";
 import { norm, quoteIsVerbatim, meetsFloor, fallbackQueries } from "../reactionFinder.mjs";
 import { routeForStory, MAX_EMBEDS } from "../config.inside.mjs";
 import { loadStore, alreadyPublished, recordInsidePublished, parkAngle, parkedTries, clearParked, insideKey } from "../store.mjs";
@@ -368,18 +369,26 @@ await check("a tweet embeds DIRECTLY below the paragraph quoting it, once per po
   assert.ok(i222 > 0 && /casting is everything/.test(blocks[i222 - 1]), "second embed under ITS paragraph");
 });
 
-await check("a Bluesky post embeds below its quoting paragraph; its bottom card drops", () => {
-  const uri = "at://did:plc:abc123/app.bsky.feed.post/3xyz";
+await check("a Reddit comment embeds its thread below the quoting paragraph; its bottom card drops", () => {
+  const perma = "https://www.reddit.com/r/movies/comments/abc123/thread/";
   const fb = fakeFactBlock("audience-reaction");
-  fb.aggregateFans[0].bskyUri = uri;
+  fb.aggregateFans[0].redditUrl = perma;
   const art = fakeArticle({ form: "audience-reaction", factBlock: fb });
-  art.body = `Lede paragraph here.\n\nOne Bluesky user wrote, "${fb.aggregateFans[0].quote}" and it spread fast.\n\nCloser.`;
+  art.body = `Lede paragraph here.\n\nOne Reddit user wrote, "${fb.aggregateFans[0].quote}" and the thread lit up.\n\nCloser.`;
   const out = buildInsideMarkdown({ article: art, trigger: fakeTrigger(), angle: fakeAngle("audience-reaction"), factBlock: fb, image: fakeImage(), embeds: null, dateISO: new Date(NOW).toISOString() });
   const blocks = out.md.split("---\n")[2].trim().split("\n\n");
-  const i = blocks.indexOf(`[embed:bsky:${uri}]`);
-  assert.ok(i > 0, "bsky marker present: " + blocks.join(" | ").slice(0, 200));
-  assert.ok(/spread fast/.test(blocks[i - 1]), "marker sits under the quoting paragraph");
+  const i = blocks.indexOf(`[embed:reddit:${perma}]`);
+  assert.ok(i > 0, "reddit marker present: " + blocks.join(" | ").slice(0, 200));
+  assert.ok(/thread lit up/.test(blocks[i - 1]), "marker sits under the quoting paragraph");
   assert.ok(!(out.frontmatter.reactions || []).some((r) => r.quote === fb.aggregateFans[0].quote), "duplicate bottom card dropped");
+});
+
+await check("inline tweet embeds are capped at MAX_EMBEDS even with a large search pool", () => {
+  const fb = { reactions: [], aggregateFans: Array.from({ length: MAX_EMBEDS + 4 }, (_, i) => ({ quote: `reaction number ${i} that is long enough to pair here`, tweetId: `${1000 + i}` })), tweetIds: [] };
+  const body = fb.aggregateFans.map((f) => `One fan wrote, "${f.quote}" and more.`).join("\n\n");
+  const r = insertInlineEmbeds(body, fb, null);
+  const n = (r.body.match(/\[embed:tweet:/g) || []).length;
+  assert.equal(n, MAX_EMBEDS, `capped at ${MAX_EMBEDS}, got ${n}`);
 });
 
 await check("instagram embeds after the paragraph that speaks of Instagram; no pairing needed", () => {
@@ -448,6 +457,35 @@ await check("factLocks flags template headings as FIXABLE (never a hard hold)", 
   const r = factLocks(art, fb, fakeAngle("audience-reaction"));
   assert.ok(r.hardBlocks.some((b) => /template-heading/.test(b)), r.hardBlocks.join(" | "));
   assert.deepEqual(classifyBlocks(r.hardBlocks.filter((b) => /template-heading/.test(b))).block, [], "classified fixable");
+});
+
+// ── xsearch.mjs: twitterapi.io tweet search → embeddable IDs (REV 5) ─────────────────────────────
+console.log("— xsearch —");
+await check("xSearchIds returns engaged tweet IDs newest-by-likes; no key → []", async () => {
+  delete process.env.TWITTERAPI_KEY;
+  assert.deepEqual(await xSearchIds("anything", { fetchImpl: async () => ({ ok: true, json: async () => ({}) }) }), []);
+  process.env.TWITTERAPI_KEY = "k";
+  let sentQuery = null;
+  const fetchImpl = async (url, opts) => {
+    sentQuery = decodeURIComponent(url);
+    assert.equal(opts.headers["X-API-Key"], "k", "key sent in header");
+    return { ok: true, json: async () => ({ tweets: [
+      { id: "1111111", text: "meh", likeCount: 3 },
+      { id: "2222222", text: "huge", likeCount: 900 },
+      { id: "bad", text: "no", likeCount: 50 },
+      { id: "3333333", text: "mid", likeCount: 120 },
+    ] }) };
+  };
+  const ids = await xSearchIds("Bonnie Tyler", { max: 2, fetchImpl });
+  assert.deepEqual(ids, ["2222222", "3333333"], "top-liked valid IDs, capped");
+  assert.ok(/Bonnie Tyler/.test(sentQuery) && /-filter:retweets/.test(sentQuery), "query has subject + operators");
+  delete process.env.TWITTERAPI_KEY;
+});
+await check("xSearchIds fails closed on a non-200 or throw", async () => {
+  process.env.TWITTERAPI_KEY = "k";
+  assert.deepEqual(await xSearchIds("x", { fetchImpl: async () => ({ ok: false }) }), []);
+  assert.deepEqual(await xSearchIds("x", { fetchImpl: async () => { throw new Error("net"); } }), []);
+  delete process.env.TWITTERAPI_KEY;
 });
 
 // ── signals.mjs + discover REV 3 (trending-discourse) ────────────────────────────────────────────
@@ -625,7 +663,7 @@ await check("a source HEADLINE extracted as a 'fan quote' never becomes an ancho
     ] }, usage: {} } : { data: {}, usage: {} },
     cacheTweetsImpl: async () => ({ tweets: [], ids: [] }),
     scanImpl: async () => [],
-    bskyImpl: async () => [],
+    xSearchImpl: async () => [],
     reddit: false, embeds: false,
   });
   assert.equal(res.ok, false, "1 real fan post < floor 3 → refuses");

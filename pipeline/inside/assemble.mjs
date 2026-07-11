@@ -5,7 +5,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { createRequire } from "node:module";
-import { CONTENT_DIR, INSIDE_FORMAT_TAG, INSIDE_AUTHOR_SLUG, AI_DISCLOSURE, MONITOR_WINDOW_HOURS, FORMS, routeForStory } from "./config.inside.mjs";
+import { CONTENT_DIR, INSIDE_FORMAT_TAG, INSIDE_AUTHOR_SLUG, AI_DISCLOSURE, MONITOR_WINDOW_HOURS, FORMS, MAX_EMBEDS, routeForStory } from "./config.inside.mjs";
 import { norm } from "./reactionFinder.mjs";
 
 const require = createRequire(import.meta.url);
@@ -44,19 +44,23 @@ export function insertInlineEmbeds(body, factBlock, embeds = null) {
   if (!blocks.length) return body || "";
   const anchorPool = [...(factBlock?.reactions || []), ...(factBlock?.aggregateFans || [])];
   const tweetPool = anchorPool.filter((h) => h.tweetId && h.quote);
-  const bskyPool = anchorPool.filter((h) => h.bskyUri && h.quote);
+  const redditPool = anchorPool.filter((h) => h.redditUrl && h.quote);
   const used = new Set();
   const out = [];
+  // Cap the inline embeds per article — the X-search pool can be large, but a wall of live iframes
+  // hurts load + reads as spam. MAX_EMBEDS keeps it to a handful of the best-placed receipts.
   for (const blk of blocks) {
     out.push(blk);
     if (/^#/.test(blk.trim())) continue;
+    if (used.size >= MAX_EMBEDS) continue;
     for (const m of blk.matchAll(/["“]([^"“”\n]{12,400})["”]/g)) {
+      if (used.size >= MAX_EMBEDS) break;
       const nq = norm(m[1]);
       if (nq.length < 12) continue;
       const t = tweetPool.find((h) => !used.has(h.tweetId) && (norm(h.quote).includes(nq) || nq.includes(norm(h.quote))));
       if (t) { used.add(t.tweetId); out.push(`[embed:tweet:${t.tweetId}]`); continue; }
-      const b = bskyPool.find((h) => !used.has(h.bskyUri) && (norm(h.quote).includes(nq) || nq.includes(norm(h.quote))));
-      if (b) { used.add(b.bskyUri); out.push(`[embed:bsky:${b.bskyUri}]`); }
+      const b = redditPool.find((h) => !used.has(h.redditUrl) && (norm(h.quote).includes(nq) || nq.includes(norm(h.quote))));
+      if (b) { used.add(b.redditUrl); out.push(`[embed:reddit:${b.redditUrl}]`); }
     }
   }
   const igUrls = (embeds?.instagramUrls || []).slice(0, 2);
@@ -107,7 +111,7 @@ export function buildInsideMarkdown({ article, trigger, angle, factBlock, image,
     .filter((r) => {
       if (r.tweetId && inlined.inlined.has(r.tweetId)) return false;
       const src = anchorFor(r.quote);
-      return !(src?.bskyUri && inlined.inlined.has(src.bskyUri));
+      return !(src?.redditUrl && inlined.inlined.has(src.redditUrl));
     });
 
   const fm = clean({
