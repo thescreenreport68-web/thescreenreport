@@ -106,8 +106,11 @@ export function alignDisplayWords(displaySentences, whisperWords) {
   return out;
 }
 
-export function align({ wav, speakable, displaySentences }) {
-  const whisper = whisperAlign(wav);
+export function align({ wav, speakable, displaySentences, preWhisper = null }) {
+  // preWhisper: the voice bake-off already transcribed the WINNING take and confirmed it
+  // clean — reuse that transcription here instead of running whisper a second time on the
+  // identical audio (the winner wav is copied verbatim to voice.wav). (2026-07-11)
+  const whisper = preWhisper || whisperAlign(wav);
   const verdict = verbatimVerdict(speakable.join(" "), whisper);
   const windows = verdict.pass ? sentenceWindows(displaySentences, whisper.words) : [];
   const displayWords = verdict.pass ? alignDisplayWords(displaySentences, whisper.words) : [];

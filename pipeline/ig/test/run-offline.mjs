@@ -42,15 +42,15 @@ const ENTITIES = [{ name: "Superman", kind: "movie" }, { name: "James Gunn", kin
 // ── lint: script gates ──────────────────────────────────────────────────────────
 const CLEAN_SCRIPT = { sentences: [
   "Superman just smashed a box office record nobody predicted.",
-  "The film pulled in $220M during its opening weekend.",
-  "James Gunn confirmed those numbers on Friday morning.",
+  "The film pulled in a huge $220M during its opening weekend.",
+  "James Gunn confirmed those record numbers himself on Friday morning.",
   "And he already has a sequel dated for June 2028.",
-  "Warner Bros calls this their biggest debut since 2019.",
-  "Because the previous champ was Aquaman back in December.",
-  "Now critics are handing it the franchise's best reviews in years.",
-  "Fans queued overnight in forty cities for the first showings.",
-  "Even the studio admits nobody modeled an opening like this.",
-  "So does the DC rebuild finally have its proof?",
+  "Warner Bros calls this their biggest studio debut since early 2019.",
+  "Because the previous champ was Aquaman back in late December.",
+  "Now critics are handing it the whole franchise's best reviews in years.",
+  "Fans queued up overnight in forty different cities for the first showings.",
+  "Even the studio quietly admits nobody modeled an opening quite like this.",
+  "So does the DC rebuild finally have its real proof?",
   "Let us know in the comments below.",
 ], ending: "question" };
 await t("lint: clean 90+ word script passes (30-40s floor)", () => {
@@ -425,6 +425,26 @@ await t("writer: lint violation triggers retry with named violation, then passes
   assert.equal(r.attempts, 2);
   assert.ok(r.script);
   assert.ok(/comments/.test(r.script.sentences[r.script.sentences.length - 1]), "ends on the comments ask");
+  setMock(null);
+});
+await t("writer: overlong hook is deterministically split, not held (mechanical repair)", async () => {
+  const { ASK_FAMILIES } = await import("../agents/engage.mjs");
+  // an 18-word hook that the model refuses to shorten across all 3 attempts — the repair
+  // must split it at its comma seam and ship, never hold on a purely mechanical miss.
+  const LONG_HOOK = "Superman just smashed a giant box office record this weekend, and James Gunn says nobody on earth predicted it.";
+  setMock(({ kind }) => {
+    if (kind !== "llm") return undefined;
+    return { sentences: [LONG_HOOK, ...CLEAN_SCRIPT.sentences.slice(1)], hookStyle: "record-number", ending: "question" };
+  });
+  const r = await writeScript({
+    article: { title: "Superman box office" },
+    facts: { storyOneLine: "Superman broke a box office record", entities: ENTITIES, facts: [{ claim: "c", surprise: 9 }] },
+    segment: "Box Office in 30",
+    engage: { goal: "comments", family: ASK_FAMILIES.comments },
+  });
+  assert.ok(r.script, "repaired, not held");
+  assert.ok(normWords(r.script.sentences[0]).length <= 14, "hook trimmed to <=14 words");
+  assert.deepEqual(lintScript(r.script, ENTITIES, "Superman box office"), [], "repaired script passes all gates");
   setMock(null);
 });
 await t("caption: retry loop then full assembly", async () => {

@@ -18,6 +18,7 @@ import { speak, listen } from "../models.mjs";
 import { normWords, tokenDiff } from "../lib/util.mjs";
 import { workDirFor } from "../job.mjs";
 import { loadWeights, saveWeights } from "../lib/ledger.mjs";
+import { whisperAlign, verbatimVerdict } from "./align.mjs";
 
 // quick verbatim precheck on the provider transcript (authoritative check = whisper, agent 14)
 // tolerance 0.18: provider transcripts format numbers/dates differently (8-12% token
@@ -262,7 +263,34 @@ export async function synthVoice({ slug, speakable, mood }) {
   // a floor-PASSING take always beats a failing one (a bad ending / low axis is
   // non-negotiable), then rank by score. (audit 2026-07-11)
   const rank = (a, b) => (Number(b.pass || false) - Number(a.pass || false)) || ((b.score ?? 0) - (a.score ?? 0));
-  const winner = usable.sort(rank)[0];
+  const ranked = usable.slice().sort(rank);
+  // THE VERBATIM WALL, MOVED INTO THE BAKE-OFF (2026-07-11): gpt-audio ad-libs a stray
+  // phrase in ~1/3 of takes. Ranking by EAR alone kept crowning an ad-lib take that then
+  // died at the align stage → Kokoro (below floor) → HOLD, on story after story. Whisper
+  // each take in delivery-rank order and take the FIRST that survives the wall; a pure
+  // whisper DRIFT (mishearing names, not the model adding words) still counts as clean.
+  // The winner's whisper is returned so the align stage reuses it (no second transcription).
+  const spoken = speakable.join(" ");
+  let winner = null, winnerWhisper = null;
+  for (const t of ranked) {
+    try {
+      const wh = whisperAlign(t.wav);
+      const vv = verbatimVerdict(spoken, wh);
+      t.verbatim = vv;
+      if (vv.pass || vv.kind === "drift") { winner = t; winnerWhisper = wh; break; }
+    } catch (e) {
+      t.verbatim = { pass: false, kind: "whisper-error", reason: String(e?.message || e) };
+    }
+  }
+  if (!winner) {
+    // every gpt take ad-libbed in the AUDIO — the model cannot be trusted for this script.
+    // Kokoro reads the exact words (it CANNOT ad-lib); fall back to it (its floor still applies).
+    const fb = kokoroFallback({ slug, text: spoken });
+    fb.belowFloor = undefined;
+    fb.takes = takes.map((t) => ({ voice: t.voice, score: t.score ?? null, fail: t.fail || (t.verbatim && !t.verbatim.pass ? t.verbatim.reason : null) }));
+    if (locked) { delete weights.voice; saveWeights(weights); } // the locked voice keeps ad-libbing → re-bake next run
+    return fb;
+  }
   // learn: persist/refresh the winning plan; unlock if a locked plan keeps failing
   if (winner.pass) {
     weights.voice = { label: winner.realVoice || winner.voice, voice: winner.realVoice, model: winner.model || null, score: winner.score, at: new Date().toISOString() };
@@ -282,11 +310,13 @@ export async function synthVoice({ slug, speakable, mood }) {
     transcript: winner.transcript,
     cost: takes.reduce((s, t) => s + (t.cost || 0), 0),
     verbatimPre: "pass",
+    verbatim: winner.verbatim?.reason,
+    whisper: winnerWhisper, // ALREADY verbatim-clean — the align stage reuses this, no re-transcribe
     judge: winner.judge,
     gaps: winner.gaps,
     score: winner.score,
     belowFloor: !winner.pass || undefined, // surfaced in the job for the run report
-    takes: takes.map((t) => ({ voice: t.voice, score: t.score ?? null, fail: t.fail || null })),
+    takes: takes.map((t) => ({ voice: t.voice, score: t.score ?? null, fail: t.fail || null, verbatim: t.verbatim?.reason || null })),
   };
 }
 

@@ -101,18 +101,20 @@ export async function vision({ system, user, images = [], temp = 0, maxTokens = 
 // slow-but-flowing stream) AND an absolute HARD ceiling that never re-arms (a stream
 // that keeps sending keepalive pings but no real data, or just runs forever, is killed).
 // Either firing aborts the fetch so the socket closes and the Node event loop can drain.
-async function streamAudio(body, { label, timeoutMs }) {
+async function streamAudio(body, { label, timeoutMs, maxAudioBytes = 0 }) {
   const ctl = new AbortController();
   const hardMs = Math.max(timeoutMs * 3, 300000);
   let t = setTimeout(() => ctl.abort(), timeoutMs);
   const hard = setTimeout(() => ctl.abort(), hardMs);
   const rearm = () => { clearTimeout(t); t = setTimeout(() => ctl.abort(), timeoutMs); };
+  let runaway = false;
   try {
     const res = await fetch(OR_URL, { method: "POST", headers: HEADERS(), body: JSON.stringify(body), signal: ctl.signal });
     if (!res.ok || !res.body) throw new Error(`${label}: HTTP ${res.status} ${(await res.text().catch(() => "")).slice(0, 200)}`);
     const decoder = new TextDecoder();
     let buf = "";
     const audioB64 = [];
+    let bytes = 0; // running decoded-audio size — the runaway guard (audit 2026-07-11)
     let transcript = "";
     let usage = null;
     let errObj = null;
@@ -132,17 +134,25 @@ async function streamAudio(body, { label, timeoutMs }) {
         if (d.usage) usage = d.usage;
         for (const ch of d.choices || []) {
           const a = ch.delta?.audio;
-          if (a?.data) audioB64.push(a.data);
+          if (a?.data) { audioB64.push(a.data); bytes += Math.floor(a.data.length * 0.75); }
           if (a?.transcript) transcript += a.transcript;
           if (ch.finish_reason || ch.native_finish_reason) finished = true;
         }
       }
+      // RUNAWAY GUARD: gpt-audio-mini intermittently emits 10+ minutes of garbage audio for
+      // a short script (240s, 13min, $0.04). Abort the instant it exceeds a sane length so
+      // we never wait for, pay for, or feed downstream a broken take. (audit 2026-07-11)
+      if (maxAudioBytes && bytes > maxAudioBytes) { runaway = true; ctl.abort(); break; }
     }
+    if (runaway) throw new Error(`${label}: runaway audio (>${Math.round(maxAudioBytes / 48000)}s) — take rejected`);
     if (errObj) throw new Error(`${label}: ${JSON.stringify(errObj).slice(0, 300)}`);
     if (!finished) throw new Error(`${label}: stream died mid-read (partial audio rejected)`);
     const audio = Buffer.concat(audioB64.map((x) => Buffer.from(x, "base64")));
     if (!audio.length) throw new Error(`${label}: stream returned no audio`);
     return { audio, transcript, cost: usage?.cost ?? 0 };
+  } catch (e) {
+    if (runaway) throw new Error(`${label}: runaway audio (>${Math.round(maxAudioBytes / 48000)}s) — take rejected`);
+    throw e;
   } finally { clearTimeout(t); clearTimeout(hard); }
 }
 
@@ -175,7 +185,13 @@ export async function speak({ text, voice = IG.voice.candidates[0], style, conte
       { role: "user", content: `<script>\n${text}\n</script>` },
     ],
   };
-  const out = await retry(() => streamAudio(body, { label: "speak", timeoutMs }), { tries: 2, label: "speak" });
+  // runaway cap: a natural read of N words is ~N/2.2 seconds of audio; anything past ~2×
+  // that (floor 30s) is the broken-generation failure mode → abort the take. pcm16 @24kHz
+  // mono = 48000 bytes/sec.
+  const words = String(text).trim().split(/\s+/).filter(Boolean).length;
+  const capSec = Math.max((words / 2.2) * 2 + 8, 30);
+  const maxAudioBytes = Math.round(capSec * 48000);
+  const out = await retry(() => streamAudio(body, { label: "speak", timeoutMs, maxAudioBytes }), { tries: 2, label: "speak" });
   record("voice", model, out.cost);
   return { pcm: out.audio, transcript: out.transcript, cost: out.cost };
 }

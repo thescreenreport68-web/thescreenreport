@@ -15,7 +15,7 @@ HARD RULES:
 - ONE story only. No background tangents.
 - HOOK (sentence 1): ≤12 words, contains the star/film name AND the single most surprising concrete fact. No greetings, no "in recent news", never open with "revealed/teased/talked about".
 - Order facts by DESCENDING surprise — the best material inside the first 10 seconds, never saved for the end.
-- Sentences ≤14 words, punchy, spoken-word rhythm (contractions fine). 90-125 words total (this is a 33-42 second read — use the material).
+- Sentences ≤14 words, punchy, spoken-word rhythm (contractions fine). ${IG.script.minWords}-${IG.script.maxWords} words total (this is a 32-40 second read — use the material).
 - WRITE FOR THE VOICE: read your script aloud in your head — it must flow as ONE continuous
   broadcast, never a list of disconnected lines. Get flow from SHORT connected sentences, never
   from long ones: start sentences with natural momentum connectives where they help the handoff
@@ -26,6 +26,11 @@ HARD RULES:
   {ENDING_GUIDANCE}. The ask must feel inevitable after the question — never a topic change,
   never bolted on. Ask examples for this video: {ASK_EXAMPLES}. NEVER "follow for more".
   Never bait phrases ("wait for it", "you won't believe", "tag a friend").
+- THE RUN-UP TO THE ENDING MUST BUILD TOWARD THE QUESTION. The 2 sentences right before the
+  closing question carry momentum INTO it — they raise the exact tension the question resolves.
+  NEVER put a tangent, a roster/list ("also have kids X, Y, Z"), a side-fact, or a date-dump in
+  the final third; those belong in the MIDDLE. A low-energy fact dropped before the question is
+  what makes an ending feel "tacked on" — end on the through-line, not a footnote.
 - Never state the same fact twice — every sentence adds NEW information.
 - Numbers: write digits (the pronunciation pass handles speech).
 
@@ -95,11 +100,26 @@ export async function writeScript({ article, facts, segment, engage }) {
     }
     lastScript = script;
   }
-  // DETERMINISTIC LENGTH REPAIR: an overlong script trims whole sentences from just
-  // before the ending pair (hook block + ending stay intact) — repair beats retry-and-pray.
-  if (lastScript && violations.every((v) => ["too-long", "duration"].includes(v.rule))) {
-    const s = [...lastScript.sentences];
-    while (normWords(s.join(" ")).length > (IG?.script?.maxWords ?? 125) && s.length > 7) s.splice(s.length - 3, 1);
+  // DETERMINISTIC MECHANICAL REPAIR: length/hook overruns are the model's most common miss
+  // and are deterministically fixable — split an overlong hook at its natural break, then
+  // trim whole body sentences (hook block + ending pair stay intact) until under the ceiling.
+  // Only fires when EVERY remaining violation is mechanical; content gates are never papered over.
+  const MECH = new Set(["too-long", "duration", "hook-too-long", "sentence-too-long"]);
+  if (lastScript && violations.length && violations.every((v) => MECH.has(v.rule))) {
+    let s = [...lastScript.sentences];
+    // 1) an overlong HOOK splits at its last natural break (keeps the entity+fact up front)
+    if (s.length && normWords(s[0]).length > 14) {
+      const m = s[0].match(/^(.{8,}?)\s*[,;:—–-]\s+(.+)$/); // a comma/dash gives a clean seam
+      if (m) s = [m[1].replace(/[,;:—–-]\s*$/, "") + ".", m[2], ...s.slice(1)];
+      else {
+        const w = s[0].split(/\s+/);
+        const cut = Math.min(12, Math.ceil(w.length / 2));
+        s = [w.slice(0, cut).join(" ").replace(/[,;:]+$/, "") + ".", w.slice(cut).join(" "), ...s.slice(1)];
+      }
+    }
+    // 2) trim body sentences from just before the ending pair until under the word ceiling
+    const cap = IG?.script?.maxWords ?? 144;
+    while (normWords(s.join(" ")).length > cap && s.length > 7) s.splice(s.length - 3, 1);
     const trimmed = { ...lastScript, sentences: s };
     const still = [...lintScript(trimmed, facts.entities, `${article.title} ${facts.storyOneLine || ""}`), ...lintEnding(trimmed.sentences, engage?.goal || "comments")];
     if (!still.length) return { script: trimmed, attempts: 3, trimmed: true };

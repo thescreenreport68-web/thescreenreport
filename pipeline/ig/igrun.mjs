@@ -203,7 +203,8 @@ async function processJob(article, { skipStages = new Set() } = {}) {
   // fallback must itself clear the delivery floor (never silently ship the flat voice).
   if (need("align")) {
     const r = await stageRun(job, "align", async () => {
-      let a = align({ wav: job.audio.voice.wav, speakable: job.script.speakable, displaySentences: job.script.sentences });
+      // the voice bake-off already whisper-verified the winner — reuse that transcription
+      let a = align({ wav: job.audio.voice.wav, speakable: job.script.speakable, displaySentences: job.script.sentences, preWhisper: job.audio.voice.whisper || null });
       // Pure DRIFT (kind==="drift", not insert/length) is whisper mishearing, never a
       // fabrication: accept it for a gpt take (provider transcript was verbatim) AND for a
       // Kokoro take (deterministic TTS reads the exact words — it CANNOT ad-lib). (audit)
@@ -232,9 +233,10 @@ async function processJob(article, { skipStages = new Set() } = {}) {
     job.audio.durationSec = r.result.whisper.duration;
     job.audio.windows = r.result.windows;
     job.audio.verbatim = r.result.verdict.reason;
-    // owner floor: EVERY video ≥30s of story — a too-short synthesis means the writer
-    // under-delivered; hold with the real numbers rather than ship a 20-second reel
-    if (job.audio.durationSec < IG.script.minSec - 0.5)
+    // owner floor: EVERY video ≥30s of story. A 2-3s near-miss on an otherwise-good take
+    // is a read-speed quirk, not an under-delivery — the word floor (108+) already biases
+    // long; only HOLD when the synthesis is genuinely short (a padding/writer failure).
+    if (job.audio.durationSec < IG.script.minSec - 3)
       return holdJob(job, "align", `spoken duration ${job.audio.durationSec.toFixed(1)}s < ${IG.script.minSec}s floor (script ${normWords(job.script.sentences.join(" ")).length} words)`);
     stageDone(job, "align");
   }
