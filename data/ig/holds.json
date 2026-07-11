@@ -28,5 +28,15 @@
     "stage": "shots",
     "reason": "Command failed: python3 /home/runner/work/thescreenreport/thescreenreport/pipeline/ig/py/face_crop.py /home/runner/work/thescreenreport/thescreenreport/data/ig/work/nara-smith-details-hardest-parts-of-daughter-s-cancer-journey/_frame_jobs.json\nTraceback (most recent call last):\n  File \"/home/runner/work/thescreenreport/thescreenreport/pipeline/ig/py/face_crop.py\", line 11, in <module>\n    CASCADE = cv2.CascadeClassifier(cv2.data.haarcascades + \"haarcascade_frontalface_default.xml\")\n              ^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'cv2' has no attribute 'CascadeClassifier'\n",
     "at": "2026-07-11T09:00:45.707Z"
+  },
+  "inside-brad-pitt-and-ines-de-ramon-s-private-romance": {
+    "stage": "script",
+    "reason": "script failed lint after 3 attempts: hook-too-long(15 words (max 14)), too-short(98 words (min 108) — NEVER pad; hold if the story is thin)",
+    "at": "2026-07-11T09:10:03.016Z"
+  },
+  "the-bear-s-ayo-edebiri-reveals-her-full-name": {
+    "stage": "script",
+    "reason": "script failed lint after 3 attempts: too-short(87 words (min 108) — NEVER pad; hold if the story is thin)",
+    "at": "2026-07-11T09:10:25.138Z"
   }
 }
