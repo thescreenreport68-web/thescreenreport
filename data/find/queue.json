@@ -1,83 +1,141 @@
 {
-  "runId": "run-2026-07-11T13-01-23",
-  "builtAt": "2026-07-11T13:01:43.929Z",
-  "count": 5,
+  "runId": "run-2026-07-11T17-01-23",
+  "builtAt": "2026-07-11T17:01:44.619Z",
+  "count": 7,
   "topics": [
     {
-      "id": "news-christopher-nolan-rejects-ai-in-filmmaking",
-      "slug": "christopher-nolan-praises-gen-z-filmmakers-for-utterly-rejecting-ai-sl",
-      "title": "Christopher Nolan Praises Gen Z Filmmakers For Utterly Rejecting AI Slop: It s Hitting At Exactly The Wrong Time",
+      "id": "news-alice-halsey-little-house-on-the-prairie-netflix",
+      "slug": "meet-the-11-year-old-actress-leading-netflix-s-new-take-on-little-hous",
+      "title": "Meet the 11-Year-Old Actress Leading Netflix’s New Take on ‘Little House on the Prairie’",
       "contentType": "news",
       "formatTag": "news",
-      "category": "movies",
+      "category": "tv",
       "subcategory": "news",
-      "eventType": "other",
+      "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "christopher-nolan-rejects-ai-in-filmmaking",
-      "primaryKeyword": "Christopher Nolan AI",
-      "primaryEntity": "Christopher Nolan",
+      "eventSlug": "alice-halsey-little-house-on-the-prairie-netflix",
+      "primaryKeyword": "little house on the prairie netflix",
+      "primaryEntity": "Little House on the Prairie (Netflix series)",
       "entities": [
-        "Ai Kayano",
-        "AI"
+        "Alice Halsey",
+        "Netflix"
       ],
-      "angle": "Christopher Nolan praises Gen Z filmmakers for rejecting AI in filmmaking, calling it 'AI slop'.",
+      "angle": "An 11-year-old actress has been cast as the lead in Netflix's upcoming adaptation of 'Little House on the Prairie'.",
       "tmdbType": "movie",
-      "source": "rss:Deadline",
+      "source": "rss:THR",
       "sources": [
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/christopher-nolan-praises-gen-z-utterly-rejecting-ai-1236979769/",
-          "ageMin": 629,
-          "headline": "Christopher Nolan Praises Gen Z Filmmakers For Utterly Rejecting AI Slop: It s Hitting At Exactly The Wrong Time",
-          "summary": "As Christopher Nolan prepares to take viewers on an Imax odyssey, he s hopeful for the future of filmmaking without the use of AI. The 2x Oscar winner admitted that not all applications of artificial intelligence are useless of meaningless, he explained that generative AI is hitting at exactly the wrong time for Hollywood. I ve never [ ]"
-        },
         {
           "outlet": "THR",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/christopher-nolan-young-audiences-reject-ai-slop-1236644273/",
-          "ageMin": 664,
-          "headline": "Christopher Nolan Praises Obsession and Backrooms, Says Young Audiences Are Rejecting AI Slop",
-          "summary": "\"I've never seen a more rapid wholesale dismissal of a supposedly foundational jump in technology in my lifetime,\" the Oscar winner said in a recent interview with The Telegraph."
+          "url": "https://www.hollywoodreporter.com/tv/tv-features/alice-halsey-little-house-on-the-prairie-netflix-interview-1236643390/",
+          "ageMin": 61,
+          "headline": "Meet the 11-Year-Old Actress Leading Netflix’s New Take on ‘Little House on the Prairie’",
+          "summary": "Alice Halsey stars as the Laura Ingalls in the streamer’s adaptation of the beloved novels."
         }
       ],
-      "ageMin": 629,
+      "ageMin": 61,
       "_cand": {
-        "key": "rss:christopher-nolan-praises-gen-z-filmmakers-for-utterly-rejec",
+        "key": "rss:meet-the-11-year-old-actress-leading-netflix-s-new-take-on-l",
         "popularity": 0,
         "kind": "rss-news"
       },
-      "corroborationCount": 2,
+      "corroborationCount": 1,
       "verification": {
-        "tier1Count": 2,
+        "tier1Count": 1,
         "tier1Owners": 1,
-        "outletCount": 2,
+        "outletCount": 1,
         "outlets": [
-          "Deadline",
           "THR"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Deadline",
+        "attribution": "THR",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 65,
+      "priority": 78,
       "signals": {
-        "recency": 4,
-        "corroboration": 18,
+        "recency": 16,
+        "corroboration": 12,
         "status": 18,
-        "type": 5,
+        "type": 14,
         "pop": 0,
         "breakout": 0,
-        "big": 12,
-        "trending": 8,
+        "big": 18,
+        "trending": 0,
         "softTv": 0
       }
     },
     {
-      "id": "news-evil-dead-army-of-darkness-revisit",
+      "id": "music-news-charli-xcx-debuts-new-songs-brooklyn",
+      "slug": "charli-xcx-debuts-new-music-fashion-film-songs-at-brooklyn-gig",
+      "title": "Charli XCX Debuts New Music, Fashion, Film Songs at Brooklyn Gig",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "high",
+      "tier": "popular",
+      "eventSlug": "charli-xcx-debuts-new-songs-brooklyn",
+      "primaryKeyword": "Charli XCX new songs",
+      "primaryEntity": "Charli xcx",
+      "entities": [
+        "Charli XCX",
+        "Clairo",
+        "Kim Petras"
+      ],
+      "angle": "Charli XCX debuted new music for film and fashion at an intimate Brooklyn show, joined by guests like Clairo and Kim Petras.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/film/news/peter-van-norden-dead-police-academy-1236807230/",
+          "ageMin": 21,
+          "headline": "Peter Van Norden, Actor in Police Academy 2 and The Stand, Dies at 75",
+          "summary": "Peter Van Norden, a frequent character actor in films including Police Academy 2, and TV projects including The Stand, died Thursday in California, his son Robert confirmed on Instagram. He was 75. Born in New York, Van Norden graduated Colgate University and started out onstage in plays including Measure for Measure, A Country Scandal and [ ]"
+        }
+      ],
+      "ageMin": 21,
+      "_cand": {
+        "key": "rss:peter-van-norden-actor-in-police-academy-2-and-the-stand-die",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "breakoutVelocity": 0,
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 63,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-evil-dead-rise-army-of-darkness-revisit",
       "slug": "evil-dead-burn-just-made-sam-raimi-s-profoundly-silly-army-of-darkness",
       "title": "Evil Dead Burn Just Made Sam Raimi s Profoundly Silly Army of Darkness Essential Viewing Again",
       "contentType": "news",
@@ -86,14 +144,15 @@
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "high",
-      "eventSlug": "evil-dead-army-of-darkness-revisit",
-      "primaryKeyword": "army of darkness",
+      "eventSlug": "evil-dead-rise-army-of-darkness-revisit",
+      "primaryKeyword": "Army of Darkness",
       "primaryEntity": "Army of Darkness",
       "entities": [
         "Army of Darkness (1992 film)",
+        "Evil Dead Rise",
         "Sam Raimi"
       ],
-      "angle": "Article argues for revisiting Sam Raimi's 'Army of Darkness'",
+      "angle": "The success of 'Evil Dead Rise' makes revisiting Sam Raimi's 'Army of Darkness essential viewing.",
       "tmdbType": "movie",
       "source": "rss:IndieWire",
       "sources": [
@@ -101,12 +160,12 @@
           "outlet": "IndieWire",
           "tier": 7,
           "url": "https://www.indiewire.com/features/best-of/army-of-darkness-sam-raimi-evil-dead-burn-wise-men-rewatch-1235204582/",
-          "ageMin": 542,
+          "ageMin": 782,
           "headline": "Evil Dead Burn Just Made Sam Raimi s Profoundly Silly Army of Darkness Essential Viewing Again",
           "summary": "There's never been a better time to revisit this slapstick (er, boomstick?) fantasy adventure from 1993."
         }
       ],
-      "ageMin": 542,
+      "ageMin": 782,
       "_cand": {
         "key": "rss:evil-dead-burn-just-made-sam-raimi-s-profoundly-silly-army-o",
         "popularity": 0,
@@ -127,9 +186,9 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 51,
+      "priority": 48,
       "signals": {
-        "recency": 4,
+        "recency": 1,
         "corroboration": 12,
         "status": 18,
         "type": 5,
@@ -141,80 +200,7 @@
       }
     },
     {
-      "id": "news-don-iwerks-dies-at-96",
-      "slug": "don-iwerks-disney-camera-and-projection-pioneer-dies-at-96",
-      "title": "Don Iwerks, Disney Camera and Projection Pioneer, Dies at 96",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "death",
-      "sensitivity": "high",
-      "eventSlug": "don-iwerks-dies-at-96",
-      "primaryKeyword": "Don Iwerks",
-      "primaryEntity": "Don Iwerks",
-      "entities": [
-        "Walt Disney",
-        "Disney"
-      ],
-      "angle": "Disney camera and projection pioneer Don Iwerks has died at 96.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/don-iwerks-dead-disney-camera-legend-1236644425/",
-          "ageMin": 554,
-          "headline": "Don Iwerks, Disney Camera and Projection Pioneer, Dies at 96",
-          "summary": "In 1997, he received the Gordon E. Sawyer Award from the Academy of Motion Picture Arts and Sciences’ Board of Governors, then was named a Disney Legend in 2009."
-        },
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/don-iwerks-dead-disney-exec-1236979775/",
-          "ageMin": 597,
-          "headline": "Don Iwerks Dead: Former Disney Exec Cinematic Innovator Was 96",
-          "summary": "Don Iwerks, the former Disney executive who innovated several cinematic advancements during his career, has died. He was 96. The Iwerks Entertainment co-founder died peacefully on Thursday at Ojai Community Memorial Care Center, surrounded by the love of family and friends, according to an obituary shared by his family. Those who knew Don remember not [ ]"
-        }
-      ],
-      "ageMin": 554,
-      "_cand": {
-        "key": "rss:don-iwerks-disney-camera-and-projection-pioneer-dies-at-96",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 2,
-      "verification": {
-        "tier1Count": 2,
-        "tier1Owners": 1,
-        "outletCount": 2,
-        "outlets": [
-          "THR",
-          "Deadline"
-        ],
-        "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 62,
-      "signals": {
-        "recency": 4,
-        "corroboration": 18,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 8,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "news-peter-van-norden-dies-at-75",
+      "id": "news-peter-van-norden-death",
       "slug": "peter-van-norden-police-academy-2-actor-dies-at-75",
       "title": "Peter Van Norden, Police Academy 2 Actor, Dies at 75",
       "contentType": "news",
@@ -223,22 +209,30 @@
       "subcategory": "news",
       "eventType": "death",
       "sensitivity": "high",
-      "eventSlug": "peter-van-norden-dies-at-75",
+      "eventSlug": "peter-van-norden-death",
       "primaryKeyword": "Peter Van Norden",
       "primaryEntity": "Peter Van Norden",
       "entities": [
         "Police Academy 2: Their First Assignment",
         "Police Academy 2"
       ],
-      "angle": "Peter Van Norden, known for his role in 'Police Academy 2', has died at 75.",
+      "angle": "Actor Peter Van Norden, known for 'Police Academy 2', has died at 75.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
         {
+          "outlet": "Variety Music",
+          "tier": 7,
+          "url": "https://variety.com/2026/music/news/taylor-swift-paid-nyc-police-overtime-wedding-1236806715/",
+          "ageMin": 1380,
+          "headline": "Taylor Swift Paid NYC More Than $160,000 for Wedding Weekend Permit, Including Police Overtime",
+          "summary": "Taylor Swift paid more than $160,000 to cover police overtime as part of a New York City permit required for her and Travis Kelce s wedding at Madison Square Garden. Mayor Zohran Mamdani confirmed in a press conference on Friday that the billionaire pop star footed the bill for the increased law enforcement personnel required for [ ]"
+        },
+        {
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/movies/movie-news/peter-van-norden-dead-police-academy-naked-gun-actor-1236644400/",
-          "ageMin": 647,
+          "ageMin": 887,
           "headline": "Peter Van Norden, Police Academy 2 Actor, Dies at 75",
           "summary": "Van Norden had an extensive stage career, appearing in various Broadway, off-Broadway and regional productions"
         },
@@ -246,80 +240,81 @@
           "outlet": "Deadline",
           "tier": 7,
           "url": "https://deadline.com/2026/07/peter-van-norden-dead-1236979743/",
-          "ageMin": 678,
+          "ageMin": 918,
           "headline": "Peter Van Norden Dies: Police Academy 2 The Naked Gun 2½ Actor Was 75",
           "summary": "Peter Van Norden, the actor who appeared in Police Academy 2: Their First Assignment and The Naked Gun 2½: The Smell of Fear, has died. He was 75. The actor s wife Wendy was by his side as he died peacefully Thursday morning in a Southern California hospice facility, where he was struggling with multiple health [ ]"
         }
       ],
-      "ageMin": 647,
+      "ageMin": 887,
       "_cand": {
         "key": "rss:peter-van-norden-police-academy-2-actor-dies-at-75",
         "popularity": 0,
         "kind": "rss-news"
       },
-      "corroborationCount": 2,
+      "corroborationCount": 3,
       "verification": {
-        "tier1Count": 2,
+        "tier1Count": 3,
         "tier1Owners": 1,
-        "outletCount": 2,
+        "outletCount": 3,
         "outlets": [
+          "Variety Music",
           "THR",
           "Deadline"
         ],
         "maxTier": 7,
         "sensitivity": "high",
-        "attribution": "THR",
+        "attribution": "Variety Music",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 62,
+      "priority": 72,
       "signals": {
-        "recency": 4,
-        "corroboration": 18,
+        "recency": 1,
+        "corroboration": 24,
         "status": 18,
         "type": 14,
         "pop": 0,
         "breakout": 0,
         "big": 0,
-        "trending": 8,
+        "trending": 15,
         "softTv": 0
       }
     },
     {
-      "id": "news-donald-iwerks-dies-at-96",
-      "slug": "donald-iwerks-disney-camera-technician-and-co-founder-of-iwerks-entert",
-      "title": "Donald Iwerks, Disney Camera Technician and Co-Founder of Iwerks Entertainment, Dies at 96",
+      "id": "news-antoinette-bower-death",
+      "slug": "antoinette-bower-star-trek-twilight-zone-and-prom-night-actress-dies-a",
+      "title": "Antoinette Bower, ‘Star Trek,’ ‘Twilight Zone’ and ‘Prom Night’ Actress, Dies at 93",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
       "eventType": "death",
       "sensitivity": "high",
-      "eventSlug": "donald-iwerks-dies-at-96",
-      "primaryKeyword": "donald iwerks",
-      "primaryEntity": "Donald Iwerks",
+      "eventSlug": "antoinette-bower-death",
+      "primaryKeyword": "antoinette bower",
+      "primaryEntity": "Antoinette Bower",
       "entities": [
-        "Walt Disney",
-        "Disney",
-        "Ub Iwerks"
+        "Star Trek",
+        "The Twilight Zone",
+        "Prom Night"
       ],
-      "angle": "Disney pioneer and son of co-creator Ub Iwerks dies at 96.",
+      "angle": "Actress Antoinette Bower, known for her roles in 'Star Trek,' 'The Twilight Zone,' and 'Prom Night,' has passed away at 93.",
       "tmdbType": "movie",
-      "source": "rss:Variety",
+      "source": "rss:THR",
       "sources": [
         {
-          "outlet": "Variety",
+          "outlet": "THR",
           "tier": 7,
-          "url": "https://variety.com/2026/artisans/news/donald-iwerks-dead-disney-camera-technician-iwerks-entertainment-1236807071/",
-          "ageMin": 676,
-          "headline": "Donald Iwerks, Disney Camera Technician and Co-Founder of Iwerks Entertainment, Dies at 96",
-          "summary": "Donald Iwerks, son of Mickey Mouse co-creator Ub Iwerks, whose groundbreaking innovations transformed cinematic storytelling and immersive entertainment, died July 9. He was 96. Iwerks spent over six deacdes on projects for The Walt Disney Company, along with his own studio, Iwerks Entertainment. Don pioneered innovations in projection technology, 3D and large-format filmmaking, and immersive [ ]"
+          "url": "https://www.hollywoodreporter.com/tv/tv-news/antoinette-bower-dead-star-trek-twilight-zone-prom-night-1236644450/",
+          "ageMin": 179,
+          "headline": "Antoinette Bower, ‘Star Trek,’ ‘Twilight Zone’ and ‘Prom Night’ Actress, Dies at 93",
+          "summary": "Born in Germany, she started out on the CBC in Canada, appeared with Charles Bronson in ‘The Evil That Men Do’ and had a recurring role on ‘Neon Rider.’"
         }
       ],
-      "ageMin": 676,
+      "ageMin": 179,
       "_cand": {
-        "key": "rss:donald-iwerks-disney-camera-technician-and-co-founder-of-iwe",
+        "key": "rss:antoinette-bower-star-trek-twilight-zone-and-prom-night-actr",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -329,21 +324,152 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Variety"
+          "THR"
         ],
         "maxTier": 7,
         "sensitivity": "high",
-        "attribution": "Variety",
+        "attribution": "THR",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 48,
+      "priority": 60,
       "signals": {
-        "recency": 4,
+        "recency": 16,
         "corroboration": 12,
         "status": 18,
         "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-miranda-hope-music-debut",
+      "slug": "secret-lives-of-mormon-wives-star-miranda-hope-talks-music-debut-and-s",
+      "title": "‘Secret Lives of Mormon Wives’ Star Miranda Hope Talks Music Debut and Shares a Season 5 Update",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "miranda-hope-music-debut",
+      "primaryKeyword": "miranda hope music",
+      "primaryEntity": "Miranda Hope",
+      "entities": [
+        "The Secret Lives of Mormon Wives",
+        "Secret Lives of Mormon Wives"
+      ],
+      "angle": "Reality star Miranda Hope discusses her upcoming music debut and provides an update on 'Secret Lives of Mormon Wives'.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/music/music-features/mormon-wives-miranda-hope-music-season-5-taylor-interview-1236643126/",
+          "ageMin": 106,
+          "headline": "Secret Lives of Mormon Wives Star Miranda Hope Talks Music Debut and Shares a Season 5 Update",
+          "summary": "In an interview with The Hollywood Reporter, the reality star reflects on MomTok's future after months of off-camera drama: \"I see no reason why we can't survive past this.\""
+        }
+      ],
+      "ageMin": 106,
+      "_cand": {
+        "key": "rss:secret-lives-of-mormon-wives-star-miranda-hope-talks-music-d",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 55,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-jay-z-reasonable-doubt-yankee-stadium-concert",
+      "slug": "jay-z-performs-reasonable-doubt-at-yankee-stadium-with-nas-beyonc-and-",
+      "title": "Jay-Z Performs Reasonable Doubt at Yankee Stadium with Nas, Beyoncé, and More",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "jay-z-reasonable-doubt-yankee-stadium-concert",
+      "primaryKeyword": "jay-z reasonable doubt concert",
+      "primaryEntity": "JAŸ-Z",
+      "entities": [
+        "Jay-Z",
+        "Reasonable Doubt",
+        "Nas",
+        "Beyoncé"
+      ],
+      "angle": "Jay-Z celebrated the 30th anniversary of his album 'Reasonable Doubt' with a star-studded performance at Yankee Stadium.",
+      "tmdbType": "movie",
+      "source": "rss:Rolling Stone",
+      "sources": [
+        {
+          "outlet": "Rolling Stone",
+          "tier": 7,
+          "url": "https://www.rollingstone.com/music/music-live-reviews/jay-z-reasonable-doubt-yankee-stadium-nas-beyonce-review-1235592389/",
+          "ageMin": 127,
+          "headline": "Jay-Z Performs Reasonable Doubt at Yankee Stadium with Nas, Beyoncé, and More",
+          "summary": "Alicia Keys, Blue Ivy, Memphis Bleek and more join rapper to celebrate 30th anniversary of his 1996 album in the Bronx"
+        }
+      ],
+      "ageMin": 127,
+      "_cand": {
+        "key": "rss:jay-z-performs-reasonable-doubt-at-yankee-stadium-with-nas-b",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Rolling Stone"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Rolling Stone",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 55,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
         "big": 0,
