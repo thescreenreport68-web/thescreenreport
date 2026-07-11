@@ -66,6 +66,9 @@ jobs:
           # discovery + fan-comment anchors go through oauth.reddit.com. Absent = keyless fallback.
           REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
           REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
+          # X/Twitter reaction search (REV 5) — twitterapi.io. Add TWITTERAPI_KEY as a repo secret to
+          # enable real tweet search on cloud; absent = page-scan fallback (still finds embedded tweets).
+          TWITTERAPI_KEY: ${{ secrets.TWITTERAPI_KEY }}
           INSIDE_PACE_MS: "12000"        # free-tier pacing between stories
           INSIDE_DIAG: "1"               # supply probes + per-story harvest telemetry in the log
           MAX_ARTICLES_PER_DAY: "30"     # owner volume knob
