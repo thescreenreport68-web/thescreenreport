@@ -8,7 +8,8 @@ import { findContent } from "../lib/contentFinder.mjs";
 import { cacheTweets } from "../lib/tweets.mjs";
 import { redditSearchPosts, redditTopComments } from "../find/sources/reddit.mjs";
 import { xSearchIds } from "./xsearch.mjs";
-import { MODELS, FORMS, MAX_EMBEDS } from "./config.inside.mjs";
+import { bskySearchPosts } from "./bsky.mjs";
+import { MODELS, FORMS, MAX_EMBEDS, NO_X } from "./config.inside.mjs";
 
 // Normalization for the verbatim wall: curly→straight quotes, dashes unified, whitespace
 // collapsed, lowercased. Loose enough to survive extraction artifacts, strict enough that a
@@ -25,6 +26,32 @@ export const norm = (s) =>
     .replace(/\s+/g, " ")
     .trim()
     .toLowerCase();
+
+// Bot/spam/foreign filter (owner audit of the Barbara Ling article: auto-repost bot posts —
+// ftwr.cloud, hashtag spam, foreign-language reposts — were quoted as "fans"). A real reaction is a
+// person's own words, not a headline-bot with 3 hashtags + a link, and English for an English desk.
+const BOT_DOMAINS = /\b(ftwr\.cloud|dlvr\.it|ift\.tt|buff\.ly|paper\.li)\b/i;
+export function looksLikeSpam(text) {
+  const t = text || "";
+  const tags = (t.match(/#[\w]+/g) || []).length;
+  const links = (t.match(/https?:\/\/\S+/g) || []).length;
+  if (BOT_DOMAINS.test(t)) return true;
+  if (tags >= 2 && links >= 1) return true;               // headline-bot pattern
+  if (tags >= 4) return true;                             // hashtag spam
+  const nonAscii = (t.replace(/\s/g, "").match(/[^\x00-\x7F]/g) || []).length;
+  if (t.length > 20 && nonAscii / t.replace(/\s/g, "").length > 0.15) return true; // non-Latin script
+  // Latin-script foreign (Spanish/Portuguese/etc.) is mostly ASCII — catch by distinctly-Iberian words.
+  const iberian = (t.match(/\b(uma|una|que|con|para|por|del|você|não|são|homenagem|pioneira|leyenda|transformó|diseño|pel[ií]cula|producci[óo]n|produção|espetacular|una?\s+leyenda|cine)\b/gi) || []).length;
+  if (iberian >= 2) return true;
+  return false;
+}
+// The quotable span = the person's words BEFORE any trailing link/hashtag run — still a verbatim
+// prefix of the source text (the wall passes it), just without the URL/hashtag noise in the card.
+export function cleanQuote(text, maxWords = 45) {
+  let t = (text || "").split(/\s+(?=https?:\/\/|#\w)/)[0].trim();
+  t = t.replace(/\s+[#@]\w+(\s+[#@]\w+)*\s*$/g, "").trim();
+  return t.split(/\s+/).slice(0, maxWords).join(" ");
+}
 
 export function quoteIsVerbatim(quote, sources) {
   const q = norm(quote);
@@ -221,6 +248,7 @@ export async function harvestReactions(trigger, angle, {
   redditSearchImpl = redditSearchPosts,
   redditCommentsImpl = redditTopComments,
   xSearchImpl = xSearchIds,
+  bskyImpl = bskySearchPosts,
   maxQueries = 3,
   // Soft self-deadline: stop STARTING new queries past this, return gracefully with whatever was
   // harvested (→ under-floor park + retry next cycle) instead of being watchdog-killed (→ blocked,
@@ -346,7 +374,8 @@ export async function harvestReactions(trigger, angle, {
       // the fan-post spine once TWITTERAPI_KEY is set); (2) tweet URLs already embedded in the
       // coverage pages; (3) a raw-HTML page scan (roundups carry the posts extraction strips).
       const who = angle.focusEntity || trigger.primaryEntity;
-      const searchIds = await xSearchImpl(who, { max: MAX_EMBEDS * 3 }).catch((e) => { diag(`x-search → ERR ${String(e?.message || e).slice(0, 80)}`); return []; });
+      // FREE MODE: skip the paid twitterapi.io search; keep the free page-scan tweet sources.
+      const searchIds = NO_X ? [] : await xSearchImpl(who, { max: MAX_EMBEDS * 3 }).catch((e) => { diag(`x-search → ERR ${String(e?.message || e).slice(0, 80)}`); return []; });
       const ids = [...new Set([...searchIds, ...findTweetIds(withText), ...await scanImpl(bundle?.sources || withText)])];
       ({ tweets = [], ids: tweetIds = [] } = await cacheTweetsImpl(ids.slice(0, MAX_EMBEDS * 3)));
       diag(`x → search ${searchIds.length}, total-ids ${ids.length}, syndication-resolved ${tweets.length}`);
@@ -357,15 +386,16 @@ export async function harvestReactions(trigger, angle, {
     for (const c of classified) {
       const t = tweets[c.i];
       const text = (t.text || "").trim();
-      if (!text) continue;
-      const quote = text.split(/\s+/).slice(0, 45).join(" ");
+      if (!text || looksLikeSpam(text)) continue;
+      const quote = cleanQuote(text);
+      if (norm(quote).length < 8) continue;
       const id = String(t.id_str || tweetIds[c.i] || "");
       withText.push({ url: id ? `https://x.com/i/status/${id}` : null, domain: "x.com", owner: "x", tier: "social", title: "public post", text, quotes: [text] });
       raw.push({
         speaker: c.speakerType === "fan" ? "" : (t.user?.name || ""),
         speakerType: c.speakerType || "fan",
         connection: c.connection || "",
-        platform: "X",
+        platform: "", // FREE MODE: generic attribution ("one user wrote") — never a platform name
         date: (t.created_at || "").slice(0, 10),
         quote,
         stance: c.stance || "neutral",
@@ -375,6 +405,38 @@ export async function harvestReactions(trigger, angle, {
     }
     recompute();
   }
+
+  // 3b2. BLUESKY AS TEXT QUOTES — the keyless, free raw-fan-post source (works from any IP). Used
+  //      ONLY for quote TEXT here (never embedded, never named as "Bluesky" to the reader — attributed
+  //      generically as "one user"). The same relevance/speaker classify gates every post.
+  try {
+    const who = angle.focusEntity || trigger.primaryEntity;
+    const found = await bskyImpl(who, { nowMs: t0 }).catch((e) => { diag(`bsky → ERR ${String(e?.message || e).slice(0, 80)}`); return []; });
+    diag(`bsky → found ${found.length}`);
+    if (found.length) {
+      const asPosts = found.slice(0, 16).map((p) => ({ text: p.text, user: { name: p.displayName, screen_name: p.handle }, created_at: p.createdAt }));
+      const classified = await classifyTweets(asPosts, trigger, angle, { model, chatImpl, subject });
+      for (const c of classified) {
+        const p = asPosts[c.i];
+        const text = (p.text || "").trim();
+        if (!text || looksLikeSpam(text)) continue;
+        const quote = cleanQuote(text);
+        if (norm(quote).length < 8) continue;
+        withText.push({ url: null, domain: "social", owner: "social", tier: "social", title: "public post", text, quotes: [text] });
+        raw.push({
+          speaker: c.speakerType === "fan" ? "" : (p.user?.name || ""),
+          speakerType: c.speakerType || "fan",
+          connection: c.connection || "",
+          platform: "", // generic — never "Bluesky"
+          date: (p.created_at || "").slice(0, 10),
+          quote,
+          stance: c.stance || "neutral",
+          sourceIdx: withText.length - 1,
+        });
+      }
+      recompute();
+    }
+  } catch { /* bsky outage — other anchors may suffice */ }
 
   // 3c. REDDIT AS ANCHORS — the keyless, reliable discourse source (audience posts, verbatim from the
   //     API). Discovered posts + a targeted search; pull top comments; classify relevance+stance once.
@@ -393,10 +455,11 @@ export async function harvestReactions(trigger, angle, {
         const classified = await classifyRedditComments(comments, trigger, angle, { model, chatImpl, subject });
         for (const c of classified) {
           const cm = comments[c.i];
-          if (!cm?.text) continue;
+          if (!cm?.text || looksLikeSpam(cm.text)) continue;
+          const rq = cleanQuote(cm.text);
+          if (norm(rq).length < 8) continue;
           withText.push({ url: cm._perma || null, domain: "reddit.com", owner: "reddit", tier: "social", title: "reddit comment", text: cm.text, quotes: [cm.text] });
-          // redditUrl = the thread the comment lives in → assemble embeds that discussion inline.
-          raw.push({ speaker: "", speakerType: "fan", connection: "", platform: "Reddit", date: "", quote: cm.text.split(/\s+/).slice(0, 45).join(" "), stance: c.stance || "neutral", sourceIdx: withText.length - 1, ...(cm._perma ? { redditUrl: cm._perma } : {}) });
+          raw.push({ speaker: "", speakerType: "fan", connection: "", platform: "", date: "", quote: rq, stance: c.stance || "neutral", sourceIdx: withText.length - 1, ...(cm._perma ? { redditUrl: cm._perma } : {}) });
         }
         recompute();
       }
@@ -426,7 +489,7 @@ export function factBlockText(factBlock, trigger) {
   factBlock.reactions.forEach((r, i) =>
     L.push(`R${i + 1}. ${r.speaker}${r.connection ? ` (${r.connection})` : ""} — ${r.platform || "on the record"}${r.date ? `, ${r.date}` : ""} [${r.stance}]${r.tweetId ? ` [tweet:${r.tweetId}]` : ""}: "${r.quote}"`));
   if (factBlock.aggregateFans.length) {
-    L.push("AUDIENCE POSTS (THE SPINE of the article — real posts by normal people; quote WITHOUT any name, ALWAYS naming the platform: \"one X user wrote,\" \"a fan on Reddit said\"; posts with [tweet:id] render as the real embedded post):");
+    L.push("AUDIENCE POSTS (THE SPINE of the article — real posts by normal people; quote WITHOUT any name and WITHOUT naming a platform: \"one user wrote,\" \"another viewer said,\" \"a fan online posted\" — these are TEXT quotes, not embeds):");
     factBlock.aggregateFans.forEach((r, i) => L.push(`A${i + 1}. [${r.stance}] ${r.platform || ""}: "${r.quote}"`));
   }
   const s = factBlock.stats;

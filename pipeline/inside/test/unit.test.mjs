@@ -15,7 +15,8 @@ import { gnewsArticleId, decodeGnewsBase64, decodeGnewsUrl } from "../../lib/gne
 import { discoverStories } from "../discover.mjs";
 import { trendingSearches, wikiSpikes, tmdbMatch } from "../signals.mjs";
 import { xSearchIds } from "../xsearch.mjs";
-import { norm, quoteIsVerbatim, meetsFloor, fallbackQueries, isMediaHandle } from "../reactionFinder.mjs";
+import { norm, quoteIsVerbatim, meetsFloor, fallbackQueries, isMediaHandle, looksLikeSpam, cleanQuote } from "../reactionFinder.mjs";
+import { cleanTitle } from "../assemble.mjs";
 import { routeForStory, MAX_EMBEDS } from "../config.inside.mjs";
 import { loadStore, alreadyPublished, recordInsidePublished, parkAngle, parkedTries, clearParked, insideKey } from "../store.mjs";
 import {
@@ -691,6 +692,27 @@ await check("anime demoted unless OVERWHELMING real popularity (10+ posts, 1000+
     ? ({ popularPosts: 15, maxLikes: 2200, sumLikes: 30000, topIds: [] }) : NO_X()));
   const naruto2 = big.find((s) => /naruto/.test(s.storySlug));
   assert.ok(naruto2.discourseHeat > 40, "overwhelming real popularity un-caps anime");
+});
+
+// ── free-mode hygiene: bot/spam filter + quote clean + title clean (owner audit) ─────────────────
+console.log("— spam / quote / title hygiene —");
+await check("looksLikeSpam drops bot reposts, hashtag spam and foreign-language posts", () => {
+  assert.ok(looksLikeSpam("Remembering Barbara Ling #BarbaraLing #FilmLegacy https://ftwr.cloud/en/x"));
+  assert.ok(looksLikeSpam("cool #a #b #c #d #e news"));
+  assert.ok(looksLikeSpam("Uma homenagem a Barbara Ling, uma pioneira no design de produção espetacular"));
+  assert.ok(!looksLikeSpam("She turned LA back to 1969 and Gotham neon. Barbara Ling could do anything. RIP"));
+  assert.ok(!looksLikeSpam("honestly this casting is everything I never knew I needed #excited"));
+});
+await check("cleanQuote strips trailing links/hashtags but keeps a verbatim prefix", () => {
+  const src = "Remembering Barbara Ling, the visionary who shaped Hollywood. #BarbaraLing https://x.co/y";
+  const q = cleanQuote(src);
+  assert.equal(q, "Remembering Barbara Ling, the visionary who shaped Hollywood.");
+  assert.ok(norm(src).includes(norm(q)), "still a verbatim prefix (wall passes)");
+});
+await check("cleanTitle drops a dangling run-on tail and never ends on a connector", () => {
+  assert.equal(cleanTitle("Barbara Ling, the Oscar-Winning Production Designer Behind 'Once Upon a Time in Hollywood', Dies at 73—and the Tributes Are a Masterclass in"),
+    "Barbara Ling, the Oscar-Winning Production Designer Behind 'Once Upon a Time in Hollywood'");
+  assert.equal(cleanTitle("A Perfectly Fine Headline"), "A Perfectly Fine Headline");
 });
 
 // ── reactionFinder: media-vs-people embed filter (owner REV 7) ───────────────────────────────────

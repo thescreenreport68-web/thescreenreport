@@ -13,6 +13,7 @@ import { discoverTMDB } from "../find/sources/tmdb.mjs";
 import { trendingSearches, wikiSpikes, tmdbMatch } from "./signals.mjs";
 import { bskySearchPosts } from "./bsky.mjs";
 import { xSearchStats } from "./xsearch.mjs";
+import { NO_X } from "./config.inside.mjs";
 import { discoverReddit } from "../find/sources/reddit.mjs";
 import { discoverGoogleNews } from "../find/sources/gnews.mjs";
 import { discoverRSS } from "../find/sources/rss.mjs";
@@ -70,7 +71,7 @@ const labelMatch = (term, label) => {
 // real audience posts, genuine TMDB heat. <2 families → the story can support an article but never
 // lead the run.
 const familiesOf = (sig, popularity) =>
-  ((sig.outlets || 0) >= 2 ? 1 : 0) + ((sig.comments || 0) > 0 ? 1 : 0) + (sig.trend ? 1 : 0) + (sig.wiki ? 1 : 0) + ((sig.xPopular || 0) >= 3 ? 1 : 0) + ((popularity || 0) >= 40 ? 1 : 0);
+  ((sig.outlets || 0) >= 2 ? 1 : 0) + ((sig.comments || 0) > 0 ? 1 : 0) + (sig.trend ? 1 : 0) + (sig.wiki ? 1 : 0) + (((sig.xPopular || 0) >= 3 || (sig.audiencePosts || 0) >= 3) ? 1 : 0) + ((popularity || 0) >= 40 ? 1 : 0);
 
 // Anime/manga/game-adaptation detector (owner: "it is anime — we are talking about Hollywood").
 // Demoted HARD below: these stories only run on overwhelming real buzz, never as filler.
@@ -357,7 +358,13 @@ export async function discoverStories({
   const bskyCounts = await Promise.all(preList.map((st) =>
     bskyCountImpl(buzzTermOf(st), { limit: 25, sort: "latest", nowMs: now }).catch(() => []),
   ));
-  preList.forEach((st, i) => { st.signals.audiencePosts = (bskyCounts[i] || []).length; });
+  preList.forEach((st, i) => {
+    const posts = bskyCounts[i] || [];
+    st.signals.audiencePosts = posts.length;
+    st.signals.audienceEngagement = posts.reduce((sum, p) => sum + (p.likes || 0), 0);
+    // FREE MODE: with the paid X measure off, Bluesky post-count + likes is the popularity signal.
+    if (NO_X) st.discourseHeat += Math.min(70, posts.length * 4 + Math.round(st.signals.audienceEngagement / 50));
+  });
   deduped = deduped.filter((st) => {
     const g = st.signals;
     const talking = (g.audiencePosts || 0) > 0 || (g.comments || 0) > 0 || g.trend || g.wiki;
@@ -372,7 +379,7 @@ export async function discoverStories({
   //    engagement. This is the DOMINANT ranking signal and a hard top-tier gate. Serialized with 5.5s
   //    spacing for the free tier's 1-req/5s limit; a story we can't measure keeps its pre-filter heat.
   deduped.sort((a, b) => b.discourseHeat - a.discourseHeat);
-  const measure = deduped.slice(0, 8);
+  const measure = NO_X ? [] : deduped.slice(0, 8); // FREE MODE: no paid X measurement
   for (let i = 0; i < measure.length; i++) {
     const st = measure[i];
     // NOTE: do NOT unref this timer — we deliberately await the QPS delay; unref would let a
@@ -394,11 +401,11 @@ export async function discoverStories({
     // TOP-TIER GATE (owner): a story where we MEASURED X and found NOBODY with 100+ likes talking is
     // not top-tier — cap it hard so it can never lead (it may still exist as a minor entry). Stories
     // we never measured (rank > 8) are left as-is; only a measured, proven-unpopular story is capped.
-    if (st.signals.xPopular === 0) st.discourseHeat = Math.min(st.discourseHeat, 35);
+    if (!NO_X && st.signals.xPopular === 0) st.discourseHeat = Math.min(st.discourseHeat, 35);
     // Anime-adjacent: heavy demotion — only overwhelming REAL popularity un-caps it.
     if (ANIME_RX.test(`${st.headline || ""} ${st.primaryEntity} ${st.work?.title || ""} ${st.overview || ""}`)) {
       st.signals.animeAdjacent = true;
-      const overwhelming = (st.signals.xPopular || 0) >= 10 && (st.signals.xMaxLikes || 0) >= 1000;
+      const overwhelming = NO_X ? (st.signals.audiencePosts || 0) >= 15 : ((st.signals.xPopular || 0) >= 10 && (st.signals.xMaxLikes || 0) >= 1000);
       if (!overwhelming) st.discourseHeat = Math.min(Math.round(st.discourseHeat * 0.5), 40);
     }
   }

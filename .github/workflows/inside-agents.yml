@@ -69,6 +69,10 @@ jobs:
           # X/Twitter reaction search (REV 5) — twitterapi.io. Add TWITTERAPI_KEY as a repo secret to
           # enable real tweet search on cloud; absent = page-scan fallback (still finds embedded tweets).
           TWITTERAPI_KEY: ${{ secrets.TWITTERAPI_KEY }}
+          # FREE MODE (owner 2026-07-11): no paid Twitter API, no embeds — quotes are text from free
+          # Bluesky/page-scan/Reddit. Set both to "0" the moment twitterapi.io credit is funded.
+          INSIDE_NO_X: "1"
+          INSIDE_NO_EMBEDS: "1"
           INSIDE_PACE_MS: "12000"        # free-tier pacing between stories
           INSIDE_DIAG: "1"               # supply probes + per-story harvest telemetry in the log
           MAX_ARTICLES_PER_DAY: "30"     # owner volume knob

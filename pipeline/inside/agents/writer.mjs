@@ -11,13 +11,13 @@ const FORM_GUIDE = {
   "audience-reaction": `SKELETON — how people are reacting:
 1. HOOK lede (from the brief): the work + the honest shape of the reaction, written to pull the reader in.
 2. THE SPINE = the AUDIENCE posts (A1, A2…): characterize the mood in YOUR words, then SHOW the real posts
-   as beats, grouped by sentiment, ALWAYS naming the platform ("one X user wrote…", "a fan on Reddit said…");
+   as beats, grouped by sentiment, attributed GENERICALLY ("one user wrote…", "another viewer said…") — never a platform name;
    if divided, both sides get real posts.
 3. Critics/named voices: AT MOST one short "critics, meanwhile…" paragraph — never the spine.
 4. One "why it's landing this way" beat (your analysis). 5. Close on where the conversation is heading.`,
   "the-debate": `SKELETON — the argument:
 1. HOOK: the ONE specific thing people are arguing about.
-2. Side A (framing + real AUDIENCE posts, platform named) → Side B (same); your voice between the quotes;
+2. Side A (framing + real AUDIENCE posts, attributed generically as "one user") → Side B (same); your voice between;
    named/critic quotes at most one beat.
 3. "Why this hit a nerve" beat. 4. Close without forcing a winner.`,
   "creator-answers-critics": `SKELETON — a creator answers back:
@@ -40,10 +40,10 @@ THE ACCURACY LINE (machine-enforced; violations kill the article):
   characterization of what fans think must appear WITHOUT quotation marks — the wall reads every "…" span
   as a claimed real post and kills the article if it isn't one. If you can't find the exact anchor for a
   line, drop the quote marks and say it in your own words instead.
-- AUDIENCE posts are the article's spine: attribute in aggregate WITH THE PLATFORM ("one X user wrote",
-  "a fan on Reddit said") — never a name/handle for an ordinary person. Prefer posts with [tweet:id] (they
-  render as the real embedded post). Named/critic quotes = one short beat at most. Never state a rumor as
-  fact. No numbers not in the anchors.
+- AUDIENCE posts are the article's spine: attribute in aggregate GENERICALLY and WITHOUT a platform name
+  ("one user wrote", "another viewer posted", "a fan online said") — never a name/handle for an ordinary
+  person, and NEVER name a platform (no "on X", "on Bluesky", "on Reddit"). Quotes are TEXT, not embeds.
+  Named/critic quotes = one short beat at most. Never state a rumor as fact. No numbers not in the anchors.
 - BOTH SIDES, HONESTLY — the good AND the ugly. Report the praise and the criticism. When reactions turn
   hateful — racist, sexist, bigoted, cruel — you REPORT it as the ugly side of the response and NAME IT
   PLAINLY for what it is, in the site's own critical voice ("the reaction also curdled into outright

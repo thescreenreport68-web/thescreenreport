@@ -26,6 +26,14 @@ export const MAX_ANGLES_PER_STORY = 3;
 export const MAX_STORIES_PER_RUN = 10;
 export const MAX_EMBEDS = 6; // page weight cap; native quote text is always canonical
 
+// FREE MODE (owner 2026-07-11: "forget embeds; don't spend on Twitter API; quote what people say as
+// text"). NO_X skips the paid twitterapi.io search (discovery ranks on free Bluesky/outlets/trends;
+// harvest quotes come from free Bluesky + page-scan + Reddit). NO_EMBEDS emits ZERO iframe embeds —
+// every reaction is a TEXT quote attributed generically ("one user wrote…"). Both default ON now;
+// flip the env to "0" the moment X credits are funded to bring embeds + X search back.
+export const NO_X = process.env.INSIDE_NO_X === "1";
+export const NO_EMBEDS = process.env.INSIDE_NO_EMBEDS === "1";
+
 export const AI_DISCLOSURE =
   "This article was produced with AI-assisted research and reviewed editorially. Quoted reactions are real public posts and statements; the surrounding analysis is our own.";
 

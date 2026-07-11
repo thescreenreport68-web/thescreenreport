@@ -5,7 +5,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { createRequire } from "node:module";
-import { CONTENT_DIR, INSIDE_FORMAT_TAG, INSIDE_AUTHOR_SLUG, AI_DISCLOSURE, MONITOR_WINDOW_HOURS, FORMS, MAX_EMBEDS, routeForStory } from "./config.inside.mjs";
+import { CONTENT_DIR, INSIDE_FORMAT_TAG, INSIDE_AUTHOR_SLUG, AI_DISCLOSURE, MONITOR_WINDOW_HOURS, FORMS, MAX_EMBEDS, NO_EMBEDS, routeForStory } from "./config.inside.mjs";
 import { norm } from "./reactionFinder.mjs";
 
 const require = createRequire(import.meta.url);
@@ -32,6 +32,25 @@ export const seoFinish = ({ metaTitle, metaDescription }) => ({
   metaTitle: trimAtWord(metaTitle, 60),
   metaDescription: trimAtWord(metaDescription, 155),
 });
+
+// Headline hygiene (owner audit: a title trailed off "…and the Tributes Are a Masterclass in"). Drop a
+// dangling em-dash tail, and if it still runs long, cut at the last sentence/clause boundary — never
+// leave the headline ending on a preposition/connector.
+const DANGLING_TAIL = /\s+(in|on|of|to|for|with|and|but|as|the|a|an|that|which|from|about|—and|- and)\s*$/i;
+export function cleanTitle(title) {
+  let t = (title || "").trim();
+  if (t.length > 92) {
+    const dash = t.search(/\s[—–-]\s?(and|but|as)\b/i);
+    if (dash > 30) t = t.slice(0, dash).trim();          // drop a run-on "— and …" clause
+  }
+  if (t.length > 100) {
+    const cut = t.slice(0, 100);
+    const stop = Math.max(cut.lastIndexOf(". "), cut.lastIndexOf(", "), cut.lastIndexOf(" — "));
+    t = (stop > 40 ? cut.slice(0, stop) : cut.replace(/\s+\S*$/, "")).trim();
+  }
+  while (DANGLING_TAIL.test(t)) t = t.replace(DANGLING_TAIL, "").trim();
+  return t.replace(/[\s,;:—–-]+$/, "").trim();
+}
 const clean = (o) => Object.fromEntries(Object.entries(o).filter(([, v]) => v !== undefined && v !== null && v !== ""));
 
 // INLINE EMBEDS (REV 3, owner): the real post renders DIRECTLY BELOW the paragraph that quotes it —
@@ -78,7 +97,8 @@ export function insertInlineEmbeds(body, factBlock, embeds = null) {
 
 export function buildInsideMarkdown({ article, trigger, angle, factBlock, image, embeds = null, dateISO }) {
   const route = routeForStory(trigger);
-  const slug = slugify(article.title);
+  const title = cleanTitle(article.title);
+  const slug = slugify(title);
   // Sibling inside-articles must not collapse into each other (or the parent) in the homepage's
   // eventSlug dedup — each gets a derived, unique eventSlug; parentEventSlug carries the cluster.
   const eventSlug = `${trigger.parentEventSlug || slugify(trigger.primaryEntity)}--in-${angle.form}`;
@@ -99,13 +119,16 @@ export function buildInsideMarkdown({ article, trigger, angle, factBlock, image,
     if (nq.length < 8) return undefined;
     return allAnchors.find((h) => h.quote && (norm(h.quote).includes(nq) || nq.includes(norm(h.quote))));
   };
-  const inlined = insertInlineEmbeds((article.body || "").trim(), factBlock, embeds);
+  // FREE MODE (NO_EMBEDS): zero iframe embeds — the body stays as-is (no [embed:] markers), and the
+  // reaction display cards carry ONLY the quote text (no tweetId, so nothing renders an embed).
+  const inlined = NO_EMBEDS ? { body: (article.body || "").trim(), inlined: new Set() }
+    : insertInlineEmbeds((article.body || "").trim(), factBlock, embeds);
   const reactions = (article.reactionsRender || [])
     .filter((r) => r && r.speaker !== undefined && r.quote)
     .map((r) => clean({
       speaker: r.speaker || "A viewer",
       connection: r.connection, platform: r.platform, date: r.date, quote: r.quote,
-      tweetId: tweetIdFor(r.quote) ?? (factBlock.tweetIds.includes(r.tweetId) ? r.tweetId : undefined), // cached-only — a dead id renders nothing
+      ...(NO_EMBEDS ? {} : { tweetId: tweetIdFor(r.quote) ?? (factBlock.tweetIds.includes(r.tweetId) ? r.tweetId : undefined) }),
     }))
     // A post embedded INLINE is its own display — a duplicate bottom card would repeat it.
     .filter((r) => {
@@ -115,7 +138,7 @@ export function buildInsideMarkdown({ article, trigger, angle, factBlock, image,
     });
 
   const fm = clean({
-    title: article.title,
+    title,
     slug,
     category: route.category,
     subcategory: route.subcategory,
@@ -139,8 +162,8 @@ export function buildInsideMarkdown({ article, trigger, angle, factBlock, image,
     anchorStatement: article.anchorStatement?.speaker && article.anchorStatement?.quote
       ? clean(article.anchorStatement) : undefined,
     fanConsensus: article.fanConsensus || undefined, // the honest sentiment read, all forms
-    tweetIds: (embeds?.tweetIds?.length ? embeds.tweetIds : factBlock.tweetIds.length ? factBlock.tweetIds : undefined),
-    instagramUrls: embeds?.instagramUrls?.length ? embeds.instagramUrls : undefined,
+    tweetIds: NO_EMBEDS ? undefined : (embeds?.tweetIds?.length ? embeds.tweetIds : factBlock.tweetIds.length ? factBlock.tweetIds : undefined),
+    instagramUrls: NO_EMBEDS ? undefined : (embeds?.instagramUrls?.length ? embeds.instagramUrls : undefined),
     updatedCount: 0,
     // Homepage placement contract. Non-flagship siblings run 5 under the parent's heat so one
     // story's angle set never monopolizes the fold.
