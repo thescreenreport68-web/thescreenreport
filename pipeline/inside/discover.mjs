@@ -81,12 +81,18 @@ const ANIME_RX = /\b(anime|manga|naruto|one piece|dragon ball|pok[eé]mon|jujuts
 // read as the prefix — "Release Rundown: …" → "Release Rundown", so the X search found nothing).
 // A quoted work title wins (most entertainment headlines quote the work); else strip a label prefix.
 const ROUNDUP_PREFIX = /^\s*(release rundown|box office|stream|trailer|first look|exclusive|interview|watch|review|recap|roundup|what to watch|new on \S+|weekend box office|opinion|analysis|report|breaking|update|listen)\b[:\-—|]*\s*/i;
+// Entertainment headlines are "SUBJECT verbs OBJECT" — cut at the first action verb / preposition so
+// the subject (a name or work) leads, which is what the X search and harvest need.
+const ACTION_STOP = /\b(exits?|dies?|dead|drops?|sets?|launch(es|ed)?|brings?|praises?|responds?|addresses?|reveals?|confirms?|announces?|joins?|lands?|signs?|makes?|shares?|slams?|defends?|teases?|debuts?|returns?|leaves?|quits?|calls?|says?|talks?|opens?|clears?|hits?|earns?|scores?|breaks?|unveils?|premieres?|renewed|cancell?ed|cast|stars?|is|are|was|were|has|have|to|on|in|at|with|amid|after|as|over|for|from)\b/i;
 function headlineEntity(headline, fallback = "") {
   const h = (headline || "").trim();
   const q = h.match(/[‘’“”'"]([^‘’“”'"]{2,60})[‘’“”'"]/);
-  if (q && /[A-Za-z]{3}/.test(q[1])) return q[1].trim();
-  const stripped = h.replace(ROUNDUP_PREFIX, "").trim();
-  return (stripped || fallback || h).replace(/\s*[|:–—].*$/, "").trim().slice(0, 70) || (fallback || h).slice(0, 70);
+  if (q && /[A-Za-z]{3}/.test(q[1])) return q[1].trim();               // a quoted work title wins
+  const stripped = (h.replace(ROUNDUP_PREFIX, "").trim() || fallback || h);
+  const m = stripped.match(ACTION_STOP);
+  let ent = m && m.index > 2 ? stripped.slice(0, m.index) : stripped;  // subject before the first verb
+  ent = ent.replace(/\s*[|:,–—].*$/, "").trim();
+  return ent.slice(0, 60) || stripped.replace(/\s*[|:,–—].*$/, "").trim().slice(0, 60) || (fallback || h).slice(0, 60);
 }
 const buzzTermOf = (s) => (s.work?.title || headlineEntity(s.headline, s.primaryEntity) || s.primaryEntity || "").split(/[|,]|\s[-]\s/)[0].trim().slice(0, 60);
 
