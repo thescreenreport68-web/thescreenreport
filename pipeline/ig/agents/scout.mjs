@@ -6,7 +6,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { IG } from "../config.mjs";
 import { llm } from "../models.mjs";
-import { isPosted, isHeld, loadWeights } from "../lib/ledger.mjs";
+import { isPosted, isHeld, isBuilt, loadWeights } from "../lib/ledger.mjs";
 import { parseFrontmatter, stripMarkdown } from "../lib/util.mjs";
 
 export function listCandidates({ now = new Date() } = {}) {
@@ -24,6 +24,7 @@ export function listCandidates({ now = new Date() } = {}) {
     const date = new Date(data.date || 0).getTime();
     if (!date || date < cutoff) continue;
     if (isPosted(slug)) continue; // never repost — mine OR the old lane's
+    if (isBuilt(slug)) continue; // never rebuild an already-built story (repetition guard)
     if (isHeld(slug)) continue; // held stories don't consume slate slots run after run
     // owner floor: every video is 30-40s of REAL story — thin articles can't carry that
     // without padding, so they never enter the slate (skip up front, zero spend)

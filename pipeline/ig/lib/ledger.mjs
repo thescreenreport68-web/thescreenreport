@@ -51,6 +51,19 @@ export function clearHold(slug) {
   delete h[slug];
   writeJson(holdsFile(), h);
 }
+
+// ── built ledger: a story that has been BUILT is never rebuilt, even in --no-publish.
+// posted.json only records LIVE posts, so without this every no-publish/test run re-picks
+// the same top-scored story (the "McConaughey again and again" repetition). (2026-07-11)
+const builtFile = () => path.join(IG.dataDir, "built.json");
+export function recordBuilt(slug) {
+  const b = readJson(builtFile(), {});
+  b[slug] = { at: new Date().toISOString() };
+  writeJson(builtFile(), b);
+}
+export function isBuilt(slug) {
+  return Boolean(readJson(builtFile(), {})[slug]);
+}
 export function postedToday() {
   const day = todayInTz(IG.slots.postTz);
   return loadPosted().posts.filter((p) => (p.scheduledDay || (p.at || "").slice(0, 10)) === day).length;

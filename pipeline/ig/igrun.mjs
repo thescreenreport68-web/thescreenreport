@@ -20,7 +20,7 @@ import { IG, SITE } from "./config.mjs";
 import { costSpent, costCalls, costReset } from "./models.mjs";
 import { newJob, loadJob, saveJob, jlog, holdJob, stageDone, workDirFor } from "./job.mjs";
 import { ensureDir, todayInTz, normWords, parseFrontmatter, stripMarkdown } from "./lib/util.mjs";
-import { isPaused, recordPosted, postedToday, dayAlreadyScheduled, markDayScheduled, isPosted, recordHold, isHeld, loadPosted, savePosted } from "./lib/ledger.mjs";
+import { isPaused, recordPosted, recordBuilt, postedToday, dayAlreadyScheduled, markDayScheduled, isPosted, recordHold, isHeld, loadPosted, savePosted } from "./lib/ledger.mjs";
 import { lintManifest } from "./lib/lint.mjs";
 import { estimateSeconds } from "./lib/lint.mjs";
 
@@ -425,6 +425,7 @@ async function main() {
     }
     if (job.hold) { console.log(`  ⏸ HOLD at ${job.hold.stage}: ${job.hold.reason}`); continue; }
     console.log(`  ✅ built: ${job.render.mp4} (QC ${job.qc.watch?.score})`);
+    recordBuilt(job.id); // never rebuild this story — even in --no-publish (repetition guard)
     built.push(job);
   }
 
