@@ -24,7 +24,7 @@ const { groupPhrases, buildAss } = await import("../agents/subs.mjs");
 const { planSlots } = await import("../agents/slots.mjs");
 const { isPosted, recordPosted, dayAlreadyScheduled, markDayScheduled } = await import("../lib/ledger.mjs");
 const { newJob, saveJob, loadJob, stageDone, holdJob } = await import("../job.mjs");
-const { listCandidates, scout } = await import("../agents/scout.mjs");
+const { listCandidates, scout, isReactionArticle } = await import("../agents/scout.mjs");
 const { verify } = await import("../agents/verify.mjs");
 const { writeScript, mergeMidPhraseBreaks } = await import("../agents/script.mjs");
 const { writeCaption } = await import("../agents/caption.mjs");
@@ -461,6 +461,17 @@ await t("writer: mid-phrase break is stitched back, valid endings are left alone
     "valid endings are preserved",
   );
   assert.deepEqual(mergeMidPhraseBreaks(["He confirmed their status.", "Fans reacted."]).length, 2, "'their status' is not a break");
+  setMock(null);
+});
+await t("scout: reaction/social-media articles are excluded, real news is not", () => {
+  // the reaction lane is a separate automation; the video lane must skip these
+  assert.ok(isReactionArticle({ title: "'House of David' Season 3 Renewal Has Fans Celebrating — and Already Asking for More", tags: ["Fan Reactions", "TV Renewal"] }), "has-fans-celebrating reaction excluded");
+  assert.ok(isReactionArticle({ title: "Toy Story 5 Has the Internet Divided: Pure Perfection or Milking the Franchise" }), "has-the-internet-divided excluded");
+  assert.ok(isReactionArticle({ title: "Fans react to the new Superman trailer" }), "fans-react excluded");
+  assert.ok(isReactionArticle({ title: "Marvel news", tags: ["Social Media Reactions"] }), "reaction tag excluded");
+  // genuine news that merely names a star/event is NOT a reaction piece
+  assert.ok(!isReactionArticle({ title: "Superman Smashes the July Box Office Record", tags: ["Box Office", "DC"] }), "real box-office news kept");
+  assert.ok(!isReactionArticle({ title: "Timothée Chalamet Joins the Next Denis Villeneuve Film", tags: ["Casting"] }), "real casting news kept");
   setMock(null);
 });
 await t("caption: retry loop then full assembly", async () => {

@@ -185,47 +185,32 @@ async function pool(items, worker, concurrency = 2) {
 }
 
 async function makeTake({ dir, sentences, voice, mood, harder, model, label }) {
-  // BODY in one continuous take (chunking the body kills flow — proven), but the ENDING
-  // (final question + ask) is its own take: a deliberate beat, then a warm, slower,
-  // signing-off delivery. The one seam that belongs is the one before the ending.
-  const parts =
-    sentences.length >= 5
-      ? [
-          { text: sentences.slice(0, -2).join(" "), context: "This is the reel minus its ending — hit the very first word at full energy and drive to the last line without winding down." },
-          { text: sentences.slice(-2).join(" "), context: "This is the CLOSING of the SAME take — same room, same breath, same voice register as the story you just told. Do NOT restart with fresh announcer energy: come down naturally from the story's momentum into a warm, personal close. The question lands directly to the viewer; the final ask is calm and easy, like a friend saying it. Let it breathe; never rush it. You are NARRATING these two lines to the audience — voice them EXACTLY as written and then STOP. Do NOT answer the question, do NOT react to it, and add NOTHING after the final word." },
-        ]
-      : [{ text: sentences.join(" "), context: "This is the OPENING of the reel — hit the very first word at full energy." }];
-  // body + ending are independent generations — parallel halves the take's wall time
-  let results;
-  try {
-    results = await Promise.all(
-      parts.map((p) => speak({ text: p.text, voice, model, style: deliveryStyle(mood, harder), context: p.context })),
-    );
-  } catch (e) {
-    // A part ran away (gpt-audio instability — almost always the ISOLATED ending: given the
-    // closing question alone, the model treats it as directed at IT and "answers", overrunning
-    // the runaway cap). Rather than surrender to the flat Kokoro voice, re-synthesize the WHOLE
-    // script in ONE call — in-context the ending is just the last line of a script, not a
-    // question to answer, so it doesn't run away. Keeps the marin voice. (owner 2026-07-11)
-    if (parts.length < 2) throw e;
-    results = [
-      await speak({
-        text: sentences.join(" "),
-        voice,
-        model,
-        style: deliveryStyle(mood, harder),
-        context:
-          "This is the WHOLE reel, read as ONE continuous take: hit the very first word at full energy and drive through the story. Then, before the final question, take a clear BEAT — a real breath — and deliver the closing question and ask slower and warmer than the rest, letting them land unhurried. Read every word exactly; you are NARRATING the question to the audience, NEVER answering it, and add nothing after the final word.",
-      }),
-    ];
-  }
-  const ENDING_BEAT = Buffer.alloc(Math.round(24000 * 0.32) * 2); // the breath before the close
-  const pcms = results.flatMap((r, i) => (i < results.length - 1 ? [r.pcm, ENDING_BEAT] : [r.pcm]));
-  // the whole ending part + its lead-in beat is sacred — the tightener never touches it
-  const endingProtectSec = results.length > 1 ? results[results.length - 1].pcm.length / 2 / 24000 + 0.32 + 0.4 : undefined;
-  const transcript = results.map((r) => r.transcript).join(" ");
-  const cost = results.reduce((s, r) => s + r.cost, 0);
+  // SINGLE-CALL synthesis of the WHOLE script (ROOT FIX, owner 2026-07-11). The ending must
+  // FLOW out of the story, not be a separately-synthesized clip glued on at a seam. The old
+  // two-part synthesis (a body take + an ISOLATED ending take joined by a silence) made EVERY
+  // reel's closing question read as "tacked on" (judge 13-16/30 on story after story): the model
+  // cannot match the pitch/pace/energy of a body it never heard, so the join is audible. Reading
+  // the entire script in ONE continuous take carries the momentum straight into a warm, beat-led
+  // close — and in-context the closing question is just the last line, so it neither runs away
+  // nor gets "answered" the way an isolated ending did (that was also the Kokoro-swap trigger).
   const text = sentences.join(" ");
+  const context =
+    sentences.length >= 5
+      ? "This is the WHOLE reel, read as ONE continuous take: hit the very first word at full energy and drive through the story. Then, before the final question, take a clear BEAT — a real breath — and deliver the closing question and ask slower and warmer than the rest of the read, letting them land unhurried. Read every word exactly; you are NARRATING the closing question to the audience, NEVER answering or reacting to it, and add NOTHING after the final word."
+      : "This is the OPENING of the reel — hit the very first word at full energy; read every word exactly and add nothing after the final word.";
+  let r;
+  try {
+    r = await speak({ text, voice, model, style: deliveryStyle(mood, harder), context });
+  } catch (e) {
+    return { voice: label, fail: `synth: ${String(e?.message || e).slice(0, 80)}`, cost: 0 };
+  }
+  const pcms = [r.pcm];
+  // protect the closing (~last 2 sentences + a breath) from the pause tightener so the
+  // deliberate ending beat survives the silence compression
+  const endingProtectSec =
+    sentences.length >= 5 ? Math.max(3.5, normWords(sentences.slice(-2).join(" ")).length / 2.4 + 0.6) : undefined;
+  const transcript = r.transcript;
+  const cost = r.cost;
   if (!transcriptMatches(text, transcript)) {
     const a = normWords(text), b = normWords(transcript);
     const drift = (tokenDiff(a, b) / Math.max(1, a.length)).toFixed(3);

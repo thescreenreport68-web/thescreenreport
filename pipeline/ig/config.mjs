@@ -76,7 +76,7 @@ export const IG = {
   hardDailyCap: 20, // absolute (platform quota is 50-100; we stay far under)
   maxRunUsd: 1.0, // kill the run if LLM+voice+music spend exceeds this
   maxJobUsd: 0.25, // park a single job if it alone exceeds this
-  freshDays: 2, // scout candidate window
+  freshDays: 4, // scout candidate window (2 was too tight — fresh news/gossip aged out by hours while only reaction pieces were day-of; 4 keeps it recent but gives real stories a slate)
   categories: ["movies", "tv", "celebrity"],
   moviesFirstShare: 0.8, // ~80/20 movies-first bias in slate scoring
 

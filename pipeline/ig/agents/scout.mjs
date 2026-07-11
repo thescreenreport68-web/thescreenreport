@@ -9,6 +9,19 @@ import { llm } from "../models.mjs";
 import { isPosted, isHeld, isBuilt, loadWeights } from "../lib/ledger.mjs";
 import { parseFrontmatter, stripMarkdown } from "../lib/util.mjs";
 
+// The reaction / social-media lane is a SEPARATE automation (owner 2026-07-11): the VIDEO lane
+// builds ONLY from genuine NEWS + GOSSIP stories — never a "how fans are reacting online" piece
+// (those articles are wall-to-wall fan quotes and read terribly as a reel). Targeted so it drops
+// reaction pieces ("Has Fans Celebrating", "Has the Internet Divided", "Fans react…") without
+// nuking a real news story that merely mentions a reaction.
+const REACTION_TITLE_RE = /\bhas (fans?|viewers?|the internet|audiences?)\b|^\s*(fans?|viewers?|the internet|social ?media)\b|\b(fans?|viewers?|the internet|social ?media|audiences?)\b[^.!?]{0,40}\b(are (reacting|divided|losing it|freaking|obsess\w*|split|melting)|react to|can'?t (stop|get over|even))|\b(reactions? (pour|flood|are pouring|erupt)|go(es|ing)? viral|took to (social|twitter|x|reddit|instagram)|sparked? (a )?(frenzy|backlash|debate|meltdown|wave of (praise|reactions)))\b/i;
+const REACTION_TAGS = new Set(["fan reactions", "fan reaction", "social media reactions", "internet reactions", "viral moments", "reactions"]);
+export function isReactionArticle(data) {
+  if (REACTION_TITLE_RE.test(`${data.title || ""} ${data.dek || data.description || ""}`)) return true;
+  const tags = Array.isArray(data.tags) ? data.tags.map((x) => String(x).toLowerCase().trim()) : [];
+  return tags.some((x) => REACTION_TAGS.has(x));
+}
+
 export function listCandidates({ now = new Date() } = {}) {
   const files = fs.readdirSync(IG.articlesDir).filter((f) => f.endsWith(".md"));
   const cutoff = now.getTime() - IG.freshDays * 864e5;
@@ -21,6 +34,7 @@ export function listCandidates({ now = new Date() } = {}) {
     const category = String(data.category || "").toLowerCase();
     if (!IG.categories.includes(category)) continue;
     if (String(data.storyStatus || "").toUpperCase() === "RUMOR") continue;
+    if (isReactionArticle(data)) continue; // reaction/social-media lane = separate automation, not video
     const date = new Date(data.date || 0).getTime();
     if (!date || date < cutoff) continue;
     if (isPosted(slug)) continue; // never repost — mine OR the old lane's
