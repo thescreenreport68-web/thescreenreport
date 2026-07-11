@@ -1,106 +1,43 @@
 {
-  "runId": "run-2026-07-11T05-01-26",
-  "builtAt": "2026-07-11T05:02:08.622Z",
-  "count": 8,
+  "runId": "run-2026-07-11T09-01-32",
+  "builtAt": "2026-07-11T09:02:04.364Z",
+  "count": 6,
   "topics": [
     {
-      "id": "news-barbara-ling-death",
-      "slug": "barbara-ling-oscar-winning-production-designer-on-once-upon-a-time-in-",
-      "title": "Barbara Ling, Oscar-Winning Production Designer on ‘Once Upon a Time in Hollywood,’ Dies at 73",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "death",
-      "sensitivity": "high",
-      "eventSlug": "barbara-ling-death",
-      "primaryKeyword": "barbara ling",
-      "primaryEntity": "Barbara Ling",
-      "entities": [
-        "Once Upon a Time... in Hollywood",
-        "Once Upon a Time in Hollywood",
-        "Pee-wee Herman Show"
-      ],
-      "angle": "Oscar-winning production designer Barbara Ling has died at 73.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/barbara-ling-dead-once-upon-time-hollywood-production-designer-1236644433/",
-          "ageMin": 57,
-          "headline": "Barbara Ling, Oscar-Winning Production Designer on ‘Once Upon a Time in Hollywood,’ Dies at 73",
-          "summary": "Her credits also included ‘The Pee-Wee Herman Show,’ ‘Falling Down, ‘The Doors,’ ‘Fried Green Tomatoes’ and ‘Michael.’"
-        }
-      ],
-      "ageMin": 57,
-      "_cand": {
-        "key": "rss:barbara-ling-oscar-winning-production-designer-on-once-upon-",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 80,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 12,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "news-big-brother-season-28-cast-revealed",
-      "slug": "big-brother-season-28-cast-revealed-rupaul-s-drag-race-alum-rocket-sci",
-      "title": "Big Brother Season 28 Cast Revealed: RuPaul's Drag Race Alum, Rocket Scientist, MMA Fighter and More",
+      "id": "news-ariana-grande-american-horror-story-season-13-delay",
+      "slug": "ariana-grande-drops-american-horror-story-season-13-amid-touring-sched",
+      "title": "Ariana Grande Drops American Horror Story Season 13 Amid Touring Schedule",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "big-brother-season-28-cast-revealed",
-      "primaryKeyword": "Big Brother cast",
-      "primaryEntity": "Big Brother",
+      "tier": "popular",
+      "eventSlug": "ariana-grande-american-horror-story-season-13-delay",
+      "primaryKeyword": "ariana grande american horror story",
+      "primaryEntity": "Bethany",
       "entities": [
-        "Big Brother (TV series)",
-        "RuPaul's Drag Race"
+        "American Horror Story",
+        "Ariana Grande",
+        "Ryan Murphy"
       ],
-      "angle": "Reality competition series Big Brother reveals its diverse cast for Season 28, featuring a Drag Race alum, rocket scientist, and MMA fighter.",
+      "angle": "Pop star Ariana Grande's role in 'American Horror Story' Season 13 is postponed due to scheduling conflicts.",
       "tmdbType": "movie",
-      "source": "rss:THR",
+      "source": "rss:Billboard",
       "sources": [
         {
-          "outlet": "THR",
+          "outlet": "Billboard",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/lists/big-brother-season-28-cast/",
-          "ageMin": 175,
-          "headline": "Big Brother Season 28 Cast Revealed: RuPaul s Drag Race Alum, Rocket Scientist, MMA Fighter and More",
-          "summary": "The reality competition series, which also includes a pickleball coach and jumbotron engineer among its players, premiered July 9 on CBS."
+          "url": "https://www.billboard.com/music/music-news/ariana-grande-american-horror-story-season-13-1236292283/",
+          "ageMin": 119,
+          "headline": "Ariana Grande Drops American Horror Story Season 13 Amid Touring Schedule",
+          "summary": "The singer's Ryan Murphy reunion is on hold after her tour schedule conflicted with a change in the show's production dates."
         }
       ],
-      "ageMin": 175,
+      "ageMin": 119,
       "_cand": {
-        "key": "rss:big-brother-season-28-cast-revealed-rupaul-s-drag-race-alum-",
+        "key": "rss:ariana-grande-drops-american-horror-story-season-13-amid-tou",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -110,11 +47,11 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "THR"
+          "Billboard"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "THR",
+        "attribution": "Billboard",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -146,10 +83,11 @@
       "primaryKeyword": "Moana live action cast",
       "primaryEntity": "Moana",
       "entities": [
-        "Moana (film)",
-        "Moana (character)"
+        "Moana (2026 film)",
+        "Dwayne Johnson",
+        "Catherine Laga'aia"
       ],
-      "angle": "A guide comparing the cast of the upcoming live-action Moana to the original animated characters.",
+      "angle": "Guide comparing the cast of the upcoming live-action 'Moana' to the original animated characters.",
       "tmdbType": "movie",
       "source": "rss:Variety",
       "sources": [
@@ -157,143 +95,14 @@
           "outlet": "Variety",
           "tier": 7,
           "url": "https://variety.com/lists/moana-cast-characters-live-action-animated/",
-          "ageMin": 331,
+          "ageMin": 572,
           "headline": "‘Moana’ Cast Guide: Every Live-Action Character vs. the Original Animation",
           "summary": "Moana and Maui are setting sail once again this time, in live-action. Releasing in theaters July 10, Disney s animated musical Moana comes back to life with a brand new live-action remake led by Catherine Laga’aia, who stars as the titular character. Similar to the original, the film follows Moana’s journey to restore the heart [ ]"
         }
       ],
-      "ageMin": 331,
+      "ageMin": 572,
       "_cand": {
         "key": "rss:-moana-cast-guide-every-live-action-character-vs-the-origina",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 56,
-      "signals": {
-        "recency": 9,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 12,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "music-news-jack-white-twin-temple-opening-slot",
-      "slug": "jack-white-offers-opening-slot-to-satanic-band-twin-temple-get-in-fron",
-      "title": "Jack White Offers Opening Slot to Satanic Band Twin Temple — Get in Front of Me, Satan! — as Charley Crockett Defends Decision to Dump Them",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "tier": "indie",
-      "eventSlug": "jack-white-twin-temple-opening-slot",
-      "primaryKeyword": "Jack White Twin Temple",
-      "primaryEntity": "Jack White",
-      "entities": [
-        "Twin Temple",
-        "Charley Crockett"
-      ],
-      "angle": "Jack White offers an opening slot to Satanic band Twin Temple, sparking a defense from Charley Crockett.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/music/news/jack-white-satanic-band-twin-temple-charley-crockett-1236807060/",
-          "ageMin": 202,
-          "headline": "Jack White Offers Opening Slot to Satanic Band Twin Temple — Get in Front of Me, Satan! — as Charley Crockett Defends Decision to Dump Them",
-          "summary": "Not today, Satan or Hell yeah, Beelzebub ? A split is taking place in the polarizing realm of devil-rock, as practiced by self-styled Satanic duo Twin Temple. On Friday, country singer Charley Crockett took to social media to defend his decision to drop the act from his tour dates — even as Jack White piped up [ ]"
-        }
-      ],
-      "ageMin": 202,
-      "_cand": {
-        "key": "rss:jack-white-offers-opening-slot-to-satanic-band-twin-temple-g",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 48,
-      "signals": {
-        "recency": 9,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "news-christopher-nolan-odyssey-backlash-comments",
-      "slug": "christopher-nolan-says-odyssey-backlash-over-casting-and-more-is-irrel",
-      "title": "Christopher Nolan Says Odyssey Backlash Over Casting and More Is Irrelevant and He s Learned Not to Worry: Remember, I Spent 10 Years Dealing With Batman",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "christopher-nolan-odyssey-backlash-comments",
-      "primaryKeyword": "Christopher Nolan The Odyssey",
-      "primaryEntity": "Christopher Nolan",
-      "entities": [
-        "The Odyssey",
-        "The Odyssey (film)"
-      ],
-      "angle": "Director Christopher Nolan dismisses backlash over his upcoming film 'The Odyssey,' stating he's learned not to worry about such issues.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/film/news/christopher-nolan-odyssey-backlash-elon-musk-irrelevant-1236806375/",
-          "ageMin": 558,
-          "headline": "Christopher Nolan Says Odyssey Backlash Over Casting and More Is Irrelevant and He s Learned Not to Worry: Remember, I Spent 10 Years Dealing With Batman",
-          "summary": "Christopher Nolan is not fazed by the prerelease backlash that s been erupting on social media in the months leading up to his latest directorial effort, The Odyssey. The movie, a star-studded adaptation of Homer s Greek epic, has irked Elon Musk and Trump s MAGA base over its casting choices and riled up historical purists over Nolan s [ ]"
-        }
-      ],
-      "ageMin": 558,
-      "_cand": {
-        "key": "rss:christopher-nolan-says-odyssey-backlash-over-casting-and-mor",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -326,7 +135,7 @@
       }
     },
     {
-      "id": "news-don-iwerks-dies",
+      "id": "news-don-iwerks-dies-at-96",
       "slug": "don-iwerks-disney-camera-and-projection-pioneer-dies-at-96",
       "title": "Don Iwerks, Disney Camera and Projection Pioneer, Dies at 96",
       "contentType": "news",
@@ -335,14 +144,15 @@
       "subcategory": "news",
       "eventType": "death",
       "sensitivity": "high",
-      "eventSlug": "don-iwerks-dies",
-      "primaryKeyword": "Don Iwerks",
+      "eventSlug": "don-iwerks-dies-at-96",
+      "primaryKeyword": "don iwerks dies",
       "primaryEntity": "Don Iwerks",
       "entities": [
         "Walt Disney",
-        "Disney"
+        "Disney",
+        "Academy of Motion Picture Arts and Sciences"
       ],
-      "angle": "Disney camera and projection pioneer Don Iwerks has died at 96.",
+      "angle": "Disney camera and projection innovator Don Iwerks, a recipient of the Gordon E. Sawyer Award and Disney Legend, has passed away at 96.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
@@ -350,7 +160,7 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/movies/movie-news/don-iwerks-dead-disney-camera-legend-1236644425/",
-          "ageMin": 74,
+          "ageMin": 314,
           "headline": "Don Iwerks, Disney Camera and Projection Pioneer, Dies at 96",
           "summary": "In 1997, he received the Gordon E. Sawyer Award from the Academy of Motion Picture Arts and Sciences’ Board of Governors, then was named a Disney Legend in 2009."
         },
@@ -358,12 +168,12 @@
           "outlet": "Deadline",
           "tier": 7,
           "url": "https://deadline.com/2026/07/don-iwerks-dead-disney-exec-1236979775/",
-          "ageMin": 117,
+          "ageMin": 357,
           "headline": "Don Iwerks Dead: Former Disney Exec Cinematic Innovator Was 96",
           "summary": "Don Iwerks, the former Disney executive who innovated several cinematic advancements during his career, has died. He was 96. The Iwerks Entertainment co-founder died peacefully on Thursday at Ojai Community Memorial Care Center, surrounded by the love of family and friends, according to an obituary shared by his family. Those who knew Don remember not [ ]"
         }
       ],
-      "ageMin": 74,
+      "ageMin": 314,
       "_cand": {
         "key": "rss:don-iwerks-disney-camera-and-projection-pioneer-dies-at-96",
         "popularity": 0,
@@ -385,9 +195,9 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 74,
+      "priority": 67,
       "signals": {
-        "recency": 16,
+        "recency": 9,
         "corroboration": 18,
         "status": 18,
         "type": 14,
@@ -399,7 +209,7 @@
       }
     },
     {
-      "id": "news-peter-van-norden-dies",
+      "id": "news-peter-van-norden-dies-at-75",
       "slug": "peter-van-norden-police-academy-2-actor-dies-at-75",
       "title": "Peter Van Norden, Police Academy 2 Actor, Dies at 75",
       "contentType": "news",
@@ -408,14 +218,14 @@
       "subcategory": "news",
       "eventType": "death",
       "sensitivity": "high",
-      "eventSlug": "peter-van-norden-dies",
+      "eventSlug": "peter-van-norden-dies-at-75",
       "primaryKeyword": "Peter Van Norden",
       "primaryEntity": "Peter Van Norden",
       "entities": [
         "Police Academy 2: Their First Assignment",
         "Police Academy 2"
       ],
-      "angle": "Peter Van Norden, actor known for 'Police Academy 2', has died at 75.",
+      "angle": "Peter Van Norden, an actor known for his role in 'Police Academy 2,' has died at the age of 75.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
@@ -423,7 +233,7 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/movies/movie-news/peter-van-norden-dead-police-academy-naked-gun-actor-1236644400/",
-          "ageMin": 167,
+          "ageMin": 407,
           "headline": "Peter Van Norden, Police Academy 2 Actor, Dies at 75",
           "summary": "Van Norden had an extensive stage career, appearing in various Broadway, off-Broadway and regional productions"
         },
@@ -431,12 +241,12 @@
           "outlet": "Deadline",
           "tier": 7,
           "url": "https://deadline.com/2026/07/peter-van-norden-dead-1236979743/",
-          "ageMin": 198,
+          "ageMin": 438,
           "headline": "Peter Van Norden Dies: Police Academy 2 The Naked Gun 2½ Actor Was 75",
           "summary": "Peter Van Norden, the actor who appeared in Police Academy 2: Their First Assignment and The Naked Gun 2½: The Smell of Fear, has died. He was 75. The actor s wife Wendy was by his side as he died peacefully Thursday morning in a Southern California hospice facility, where he was struggling with multiple health [ ]"
         }
       ],
-      "ageMin": 167,
+      "ageMin": 407,
       "_cand": {
         "key": "rss:peter-van-norden-police-academy-2-actor-dies-at-75",
         "popularity": 0,
@@ -458,9 +268,9 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 74,
+      "priority": 62,
       "signals": {
-        "recency": 16,
+        "recency": 4,
         "corroboration": 18,
         "status": 18,
         "type": 14,
@@ -472,39 +282,40 @@
       }
     },
     {
-      "id": "news-bad-bunny-ex-wins-round-in-voice-note-battle",
-      "slug": "bad-bunny-s-ex-wins-round-in-battle-over-voice-note-used-on-un-verano-",
-      "title": "Bad Bunny’s Ex Wins Round in Battle Over Voice Note Used on Un Verano Sin Ti",
+      "id": "news-donald-iwerks-disney-camera-technician-and-co-founder-of-iwerks-entert",
+      "slug": "donald-iwerks-disney-camera-technician-and-co-founder-of-iwerks-entert",
+      "title": "Donald Iwerks, Disney Camera Technician and Co-Founder of Iwerks Entertainment, Dies at 96",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
-      "eventType": "lawsuit",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "bad-bunny-ex-wins-round-in-voice-note-battle",
-      "primaryKeyword": "Bad Bunny lawsuit",
-      "primaryEntity": "Bad Bunny",
+      "eventType": "death",
+      "sensitivity": "high",
+      "eventSlug": "donald-iwerks-disney-camera-technician-and-co-founder-of-iwerks-entert",
+      "primaryKeyword": "Donald Iwerks",
+      "primaryEntity": "Donald Iwerks",
       "entities": [
-        "Un Verano Sin Ti",
-        "Carliz De La Cruz Hernández"
+        "Walt Disney",
+        "Disney",
+        "Iwerks Entertainment",
+        "Ub Iwerks"
       ],
-      "angle": "Bad Bunny's ex wins a legal round concerning a voice note used on his album 'Un Verano Sin Ti'.",
+      "angle": "Donald Iwerks, a Disney executive and innovator in cinematic technology, has died at 96.",
       "tmdbType": "movie",
-      "source": "rss:Rolling Stone",
+      "source": "rss:Variety",
       "sources": [
         {
-          "outlet": "Rolling Stone",
+          "outlet": "Variety",
           "tier": 7,
-          "url": "https://www.rollingstone.com/music/music-news/bad-bunny-ex-girlfriend-un-verano-sin-ti-lawsuit-1235592278/",
-          "ageMin": 267,
-          "headline": "Bad Bunny’s Ex Wins Round in Battle Over Voice Note Used on Un Verano Sin Ti",
-          "summary": "Carliz De La Cruz Hernández got a green light to pursue her claim over the “Bad Bunny baby” tagline on “Dos Mil 16\""
+          "url": "https://variety.com/2026/artisans/news/donald-iwerks-dead-disney-camera-technician-iwerks-entertainment-1236807071/",
+          "ageMin": 436,
+          "headline": "Donald Iwerks, Disney Camera Technician and Co-Founder of Iwerks Entertainment, Dies at 96",
+          "summary": "Donald Iwerks, son of Mickey Mouse co-creator Ub Iwerks, whose groundbreaking innovations transformed cinematic storytelling and immersive entertainment, died July 9. He was 96. Iwerks spent over six deacdes on projects for The Walt Disney Company, along with his own studio, Iwerks Entertainment. Don pioneered innovations in projection technology, 3D and large-format filmmaking, and immersive [ ]"
         }
       ],
-      "ageMin": 267,
+      "ageMin": 436,
       "_cand": {
-        "key": "rss:bad-bunny-s-ex-wins-round-in-battle-over-voice-note-used-on-",
+        "key": "rss:donald-iwerks-disney-camera-technician-and-co-founder-of-iwe",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -514,21 +325,84 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Rolling Stone"
+          "Variety"
         ],
         "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Rolling Stone",
+        "sensitivity": "high",
+        "attribution": "Variety",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 51,
+      "priority": 48,
       "signals": {
-        "recency": 9,
+        "recency": 4,
         "corroboration": 12,
         "status": 18,
-        "type": 12,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-randolph-mantooth-dies",
+      "slug": "randolph-mantooth-dies-emergency-star-was-80",
+      "title": "Randolph Mantooth Dies: 'Emergency!' Star Was 80",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "death",
+      "sensitivity": "high",
+      "eventSlug": "randolph-mantooth-dies",
+      "primaryKeyword": "randolph mantooth",
+      "primaryEntity": "Randolph Mantooth",
+      "entities": [
+        "Emergency!"
+      ],
+      "angle": "Randolph Mantooth, star of the NBC series 'Emergency!', has died at the age of 80.",
+      "tmdbType": "movie",
+      "source": "rss:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/randolph-mantooth-dead-emergency-1236979651/",
+          "ageMin": 525,
+          "headline": "Randolph Mantooth Dies: Emergency! Star Who Appeared On Soap Operas Other Series Was 80",
+          "summary": "Randolph Mantooth, who starred as a Los Angeles paramedic on the NBC series Emergency! along with turns on soap operas including As the World Turns, One Life to Live and The City, has died. He was 80. His family told our sister site The Hollywood Reporter that Mantooth died July 9 in hospice in Ventura, [ ]"
+        }
+      ],
+      "ageMin": 525,
+      "_cand": {
+        "key": "rss:randolph-mantooth-dies-emergency-star-who-appeared-on-soap-o",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 48,
+      "signals": {
+        "recency": 4,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
         "pop": 0,
         "breakout": 0,
         "big": 0,
