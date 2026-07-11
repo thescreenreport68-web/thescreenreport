@@ -10,7 +10,6 @@ Usage: compose.py --out o.jpg --mode grid|hero --cells "file|LABEL,file|LABEL,..
 """
 import argparse, sys
 
-import cv2
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont, ImageOps
 
@@ -18,8 +17,22 @@ INK = (16, 16, 16)
 RED = (217, 33, 40)
 DIV = 12  # divider thickness
 
-CASCADE = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
-PROFILE = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_profileface.xml")
+# cv2 face detection is OPTIONAL (see face_crop.py): on some CI runners the headless opencv
+# native extension half-loads against a mismatched numpy ABI and `cv2.CascadeClassifier` is
+# missing. Never let that crash the composer — degrade face_center to None (center-fill). (2026-07-11)
+FACE_OK = False
+cv2 = None
+CASCADE = PROFILE = None
+try:
+    import cv2 as _cv2
+    CASCADE = _cv2.CascadeClassifier(_cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
+    PROFILE = _cv2.CascadeClassifier(_cv2.data.haarcascades + "haarcascade_profileface.xml")
+    if CASCADE.empty() or PROFILE.empty():
+        raise RuntimeError("haar cascade failed to load")
+    cv2 = _cv2
+    FACE_OK = True
+except Exception as e:
+    sys.stderr.write(f"compose: face detection disabled ({type(e).__name__}: {e}) — center-fill fallback\n")
 
 
 def detect_faces(gray):
@@ -38,6 +51,8 @@ def detect_faces(gray):
 
 
 def face_center(pil):
+    if not FACE_OK:
+        return None
     img = cv2.cvtColor(np.asarray(pil.convert("RGB")), cv2.COLOR_RGB2BGR)
     faces = detect_faces(cv2.cvtColor(img, cv2.COLOR_BGR2GRAY))
     if len(faces) == 0:

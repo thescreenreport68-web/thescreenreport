@@ -42,8 +42,14 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ~/.cache/pip
-          key: ig-pip-${{ runner.os }}-v1
-      - run: pip -q install faster-whisper kokoro-onnx soundfile opencv-python-headless pillow numpy
+          key: ig-pip-${{ runner.os }}-v2 # v2: pin opencv (numpy-ABI fix) — invalidates the stale v1 wheel cache
+      # opencv-python-headless PINNED to 4.10.0.84: the first build shipping wheels compatible
+      # with BOTH numpy 1.x and 2.x. Unpinned, pip paired the latest opencv with whatever numpy
+      # the other deps resolved, half-loading cv2 (cv2.data present but CascadeClassifier missing)
+      # → face_crop.py crashed the shots stage on the runner. (2026-07-11)
+      - run: pip -q install faster-whisper kokoro-onnx soundfile "opencv-python-headless==4.10.0.84" pillow numpy
+      # non-fatal probe: face_crop.py already degrades to center-crop, but surface a broken cv2 loudly
+      - run: python -c "import cv2; c=cv2.CascadeClassifier(cv2.data.haarcascades+'haarcascade_frontalface_default.xml'); assert not c.empty(); print('cv2 face detection OK', cv2.__version__)" || echo "::warning::cv2 face detection unavailable — reels will use center-crop fallback"
       - name: kokoro models (fallback voice — cached)
         uses: actions/cache@v4
         id: kokoro

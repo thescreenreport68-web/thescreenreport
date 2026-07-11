@@ -4,12 +4,27 @@ target canvas, luminance auto-correct. Fresh implementation for the IG lane (cv2
 Reads a JSON job list: [{"src":..., "dst":..., "w":2700, "h":4800}] — batch = one process."""
 import json, sys
 
-import cv2
 import numpy as np
 from PIL import Image, ImageEnhance, ImageOps
 
-CASCADE = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
-PROFILE = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_profileface.xml")
+# cv2 is used ONLY for face detection (a framing ENHANCEMENT). On some CI runners the
+# opencv-python-headless native extension half-loads against a mismatched numpy ABI — cv2
+# imports but `cv2.CascadeClassifier` is missing, which used to crash this whole script at
+# module load and HOLD the video. Face detection is optional: if cv2 or the cascades are
+# unavailable, degrade to a center/upper-third crop (best_face → None) and still ship. (2026-07-11)
+FACE_OK = False
+cv2 = None
+CASCADE = PROFILE = None
+try:
+    import cv2 as _cv2
+    CASCADE = _cv2.CascadeClassifier(_cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
+    PROFILE = _cv2.CascadeClassifier(_cv2.data.haarcascades + "haarcascade_profileface.xml")
+    if CASCADE.empty() or PROFILE.empty():
+        raise RuntimeError("haar cascade failed to load")
+    cv2 = _cv2
+    FACE_OK = True
+except Exception as e:
+    sys.stderr.write(f"face_crop: face detection disabled ({type(e).__name__}: {e}) — center-crop fallback\n")
 
 
 def detect_faces(gray):
@@ -26,7 +41,10 @@ def detect_faces(gray):
         return [(gray.shape[1] - x - w, y, w, h) for (x, y, w, h) in flipped]
     return []
 
-def best_face(img_bgr):
+def best_face(pil_rgb):
+    if not FACE_OK:
+        return None
+    img_bgr = cv2.cvtColor(np.asarray(pil_rgb), cv2.COLOR_RGB2BGR)
     gray = cv2.cvtColor(img_bgr, cv2.COLOR_BGR2GRAY)
     faces = detect_faces(gray)
     if len(faces) == 0:
@@ -63,8 +81,7 @@ def process(src, dst, tw, th):
     if eff_cw < 420 or eff_ch < 760:
         return {"src": src, "ok": False, "reason": f"crop-too-small-{eff_cw}x{eff_ch}"}
 
-    img_bgr = cv2.cvtColor(np.asarray(pil), cv2.COLOR_RGB2BGR)
-    face = best_face(img_bgr)
+    face = best_face(pil)  # None when cv2 face detection is unavailable → center-crop below
 
     # cover-fill crop of tw:th with the face kept in the upper-center third
     target_ratio = tw / th
