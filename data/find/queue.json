@@ -1,373 +1,106 @@
 {
-  "runId": "run-2026-07-11T01-01-23",
-  "builtAt": "2026-07-11T01:01:56.014Z",
-  "count": 11,
+  "runId": "run-2026-07-11T05-01-26",
+  "builtAt": "2026-07-11T05:02:08.622Z",
+  "count": 8,
   "topics": [
     {
-      "id": "news-morgan-spector-robert-langdon-netflix-series",
-      "slug": "morgan-spector-in-talks-to-play-robert-langdon-in-netflix-series",
-      "title": "Morgan Spector in Talks to Play Robert Langdon in Netflix Series",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "morgan-spector-robert-langdon-netflix-series",
-      "primaryKeyword": "morgan spector robert langdon",
-      "primaryEntity": "The Da Vinci Code",
-      "entities": [
-        "Robert Langdon",
-        "Morgan Spector",
-        "Netflix",
-        "Dan Brown"
-      ],
-      "angle": "Morgan Spector is in negotiations to star as Robert Langdon in Netflix's upcoming series adaptation of Dan Brown's 'The Secret of Secrets'.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/tv/news/morgan-spector-robert-langdon-netflix-series-dan-brown-1236806909/",
-          "ageMin": 180,
-          "headline": "Morgan Spector in Talks to Play Robert Langdon in Netflix Series From Carlton Cuse, Dan Brown",
-          "summary": "Morgan Spector is in negotiations for the lead role of Robert Langdon in Netflix s upcoming series based on the Dan Brown book The Secret of Secrets, Variety has learned from sources. Furthermore, Rebecca Hall is in talks for the female lead in the series, which was ordered at Netflix in May 2025. Reps for Netflix [ ]"
-        },
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/morgan-spector-robert-langdon-rebecca-hall-dan-brown-netflix-1236978951/",
-          "ageMin": 196,
-          "headline": "Morgan Spector In Talks To Play Robert Langdon, Rebecca Hall Eyed As Female Lead In Netflix Series Based On Dan Brown s ‘The Secret of Secrets’",
-          "summary": "EXCLUSIVE: Railroad Daddy Morgan Spector is poised to succeed America s Dad Tom Hanks as Professor Robert Langdon. The Gilded Age star is in negotiations to headline Netflix s series adaptation of Dan Brown s latest novel, The Secret of Secrets, sources said. Rebecca Hall (The Town) is in talks for the female lead opposite Morgan in the [ ]"
-        }
-      ],
-      "ageMin": 180,
-      "_cand": {
-        "key": "rss:morgan-spector-in-talks-to-play-robert-langdon-in-netflix-se",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 2,
-      "verification": {
-        "tier1Count": 2,
-        "tier1Owners": 1,
-        "outletCount": 2,
-        "outlets": [
-          "Variety",
-          "Deadline"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 92,
-      "signals": {
-        "recency": 16,
-        "corroboration": 18,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 8,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "news-chris-kattan-trash-queen-horror-feature",
-      "slug": "chris-kattan-returns-to-horror-with-feature-trash-queen",
-      "title": "Chris Kattan Returns To Horror With Feature Trash Queen",
+      "id": "news-barbara-ling-death",
+      "slug": "barbara-ling-oscar-winning-production-designer-on-once-upon-a-time-in-",
+      "title": "Barbara Ling, Oscar-Winning Production Designer on ‘Once Upon a Time in Hollywood,’ Dies at 73",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "chris-kattan-trash-queen-horror-feature",
-      "primaryKeyword": "trash queen horror",
-      "primaryEntity": "Trash Queen (film)",
+      "eventType": "death",
+      "sensitivity": "high",
+      "eventSlug": "barbara-ling-death",
+      "primaryKeyword": "barbara ling",
+      "primaryEntity": "Barbara Ling",
       "entities": [
-        "Chris Kattan",
-        "House on Haunted Hill"
+        "Once Upon a Time... in Hollywood",
+        "Once Upon a Time in Hollywood",
+        "Pee-wee Herman Show"
       ],
-      "angle": "Chris Kattan is returning to the horror genre with a role in the indie feature 'Trash Queen'.",
-      "tmdbType": "movie",
-      "source": "rss:Deadline",
-      "sources": [
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/chris-kattan-trash-queen-1236979544/",
-          "ageMin": 170,
-          "headline": "Chris Kattan Returns To Horror With Feature Trash Queen",
-          "summary": "EXCLUSIVE: Chris Kattan has boarded the indie horror feature Trash Queen, marking his return to the genre for the first time since starring in the 1999 cult pic House on Haunted Hill. Kattan joins a cast that includes Matty Cardarople (Stranger Things, Fallout), Lynn Lowry (The Crazies, Shivers), Jonathan Stoddard (The Roaring Games), Kevin Keppy [ ]"
-        }
-      ],
-      "ageMin": 170,
-      "_cand": {
-        "key": "rss:chris-kattan-returns-to-horror-with-feature-trash-queen",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Deadline"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Deadline",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 84,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "news-gemma-chan-anna-may-wong-biopic-update",
-      "slug": "gemma-chan-shares-update-on-anna-may-wong-biopic-it-s-a-really-resonan",
-      "title": "Gemma Chan Shares Update On Anna May Wong Biopic: It's A Really Resonant Story",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "gemma-chan-anna-may-wong-biopic-update",
-      "primaryKeyword": "anna may wong biopic",
-      "primaryEntity": "Anna May Wong",
-      "entities": [
-        "Gemma Chan"
-      ],
-      "angle": "Gemma Chan provides an update on the Anna May Wong biopic, emphasizing its resonant story.",
-      "tmdbType": "movie",
-      "source": "rss:Deadline",
-      "sources": [
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/gemma-chan-update-anna-may-wong-biopic-1236979528/",
-          "ageMin": 165,
-          "headline": "Gemma Chan Shares Update On Anna May Wong Biopic: It s A Really Resonant Story",
-          "summary": "As Gemma Chan prepares to channel Hollywood s first Chinese-American movie star for a biopic, she s looking forward to bringing Anna May Wong s life and legacy to the big screen. The actress recently shared news on her upcoming biopic, which she said is still in development with producer Nina Yang Bongiovi and Working Title Films, for [ ]"
-        }
-      ],
-      "ageMin": 165,
-      "_cand": {
-        "key": "rss:gemma-chan-shares-update-on-anna-may-wong-biopic-it-s-a-real",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Deadline"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Deadline",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 79,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "news-morgan-spector-rebecca-hall-secret-of-secrets-netflix",
-      "slug": "morgan-spector-rebecca-hall-circling-netflix-tv-adaptation-of-dan-brow",
-      "title": "Morgan Spector, Rebecca Hall Circling Netflix TV Adaptation of Dan Brown's 'The Secret of Secrets'",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "morgan-spector-rebecca-hall-secret-of-secrets-netflix",
-      "primaryKeyword": "secret of secrets netflix",
-      "primaryEntity": "Secret of Secrets (TV series)",
-      "entities": [
-        "Morgan Spector",
-        "Rebecca Hall",
-        "Netflix"
-      ],
-      "angle": "Morgan Spector and Rebecca Hall are in talks to star in Netflix's adaptation of Dan Brown's 'The Secret of Secrets'.",
-      "tmdbType": "movie",
-      "source": "rss:TheWrap",
-      "sources": [
-        {
-          "outlet": "TheWrap",
-          "tier": 7,
-          "url": "https://www.thewrap.com/media-platforms/tv/morgan-spector-rebecca-hall-netflix-robert-langdon-series-netflix/",
-          "ageMin": 153,
-          "headline": "Morgan Spector and Rebecca Hall Circling Netflix TV Adaptation of Dan Brown s The Secret of Secrets",
-          "summary": "\"The Gilded Age\" star would follow in Tom Hanks' steps as the next Robert Langdon The post Morgan Spector and Rebecca Hall Circling Netflix TV Adaptation of Dan Brown s The Secret of Secrets appeared first on TheWrap ."
-        }
-      ],
-      "ageMin": 153,
-      "_cand": {
-        "key": "rss:morgan-spector-and-rebecca-hall-circling-netflix-tv-adaptati",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "TheWrap"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "TheWrap",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 78,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "music-news-bad-bunny-ex-wins-round-voice-note-un-verano-sin-ti",
-      "slug": "bad-bunny-s-ex-wins-round-in-battle-over-voice-note-used-on-un-verano-",
-      "title": "Bad Bunny’s Ex Wins Round in Battle Over Voice Note Used on Un Verano Sin Ti",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
-      "subcategory": "news",
-      "eventType": "lawsuit",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "bad-bunny-ex-wins-round-voice-note-un-verano-sin-ti",
-      "primaryKeyword": "Bad Bunny",
-      "primaryEntity": "Bad Bunny",
-      "entities": [
-        "Un Verano Sin Ti"
-      ],
-      "angle": "Bad Bunny's ex-girlfriend wins a legal round concerning a voice note used in his album.",
-      "tmdbType": "movie",
-      "source": "rss:Rolling Stone",
-      "sources": [
-        {
-          "outlet": "Rolling Stone",
-          "tier": 7,
-          "url": "https://www.rollingstone.com/music/music-news/bad-bunny-ex-girlfriend-un-verano-sin-ti-lawsuit-1235592278/",
-          "ageMin": 27,
-          "headline": "Bad Bunny’s Ex Wins Round in Battle Over Voice Note Used on Un Verano Sin Ti",
-          "summary": "Carliz De La Cruz Hernández got a green light to pursue her claim over the “Bad Bunny baby” tagline on “Dos Mil 16\""
-        }
-      ],
-      "ageMin": 27,
-      "_cand": {
-        "key": "rss:bad-bunny-s-ex-wins-round-in-battle-over-voice-note-used-on-",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "breakoutVelocity": 0,
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Rolling Stone"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Rolling Stone",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 66,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 12,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "news-james-bond-casting-director-thoughts",
-      "slug": "james-bond-casting-director-on-future-007-picks",
-      "title": "James Bond Casting Director on Future 007 Picks",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "james-bond-casting-director-thoughts",
-      "primaryKeyword": "james bond casting",
-      "primaryEntity": "James Bond",
-      "entities": [
-        "Daniel Craig",
-        "Judi Dench"
-      ],
-      "angle": "The casting director behind 14 James Bond films shares her thoughts on future casting and past successes.",
+      "angle": "Oscar-winning production designer Barbara Ling has died at 73.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
         {
           "outlet": "THR",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/james-bond-casting-director-next-actor-karlovy-vary-1236643045/",
-          "ageMin": 566,
-          "headline": "The Woman Who Cast 14 James Bonds Has Thoughts on Who Should Play 007 Next",
-          "summary": "The casting legend behind 14 Bond films opened up at Karlovy Vary about landing Daniel Craig, bringing in Judi Dench — and why she's never read a single Ian Fleming novel."
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/barbara-ling-dead-once-upon-time-hollywood-production-designer-1236644433/",
+          "ageMin": 57,
+          "headline": "Barbara Ling, Oscar-Winning Production Designer on ‘Once Upon a Time in Hollywood,’ Dies at 73",
+          "summary": "Her credits also included ‘The Pee-Wee Herman Show,’ ‘Falling Down, ‘The Doors,’ ‘Fried Green Tomatoes’ and ‘Michael.’"
         }
       ],
-      "ageMin": 566,
+      "ageMin": 57,
       "_cand": {
-        "key": "rss:the-woman-who-cast-14-james-bonds-has-thoughts-on-who-should",
+        "key": "rss:barbara-ling-oscar-winning-production-designer-on-once-upon-",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 80,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 12,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-big-brother-season-28-cast-revealed",
+      "slug": "big-brother-season-28-cast-revealed-rupaul-s-drag-race-alum-rocket-sci",
+      "title": "Big Brother Season 28 Cast Revealed: RuPaul's Drag Race Alum, Rocket Scientist, MMA Fighter and More",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "big-brother-season-28-cast-revealed",
+      "primaryKeyword": "Big Brother cast",
+      "primaryEntity": "Big Brother",
+      "entities": [
+        "Big Brother (TV series)",
+        "RuPaul's Drag Race"
+      ],
+      "angle": "Reality competition series Big Brother reveals its diverse cast for Season 28, featuring a Drag Race alum, rocket scientist, and MMA fighter.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/lists/big-brother-season-28-cast/",
+          "ageMin": 175,
+          "headline": "Big Brother Season 28 Cast Revealed: RuPaul s Drag Race Alum, Rocket Scientist, MMA Fighter and More",
+          "summary": "The reality competition series, which also includes a pickleball coach and jumbotron engineer among its players, premiered July 9 on CBS."
+        }
+      ],
+      "ageMin": 175,
+      "_cand": {
+        "key": "rss:big-brother-season-28-cast-revealed-rupaul-s-drag-race-alum-",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -386,51 +119,52 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 72,
+      "priority": 78,
       "signals": {
-        "recency": 4,
+        "recency": 16,
         "corroboration": 12,
         "status": 18,
         "type": 14,
         "pop": 0,
         "breakout": 0,
-        "big": 24,
+        "big": 18,
         "trending": 0,
         "softTv": 0
       }
     },
     {
-      "id": "news-christopher-nolan-the-odyssey-backlash",
-      "slug": "christopher-nolan-brushes-off-the-odyssey-backlash",
-      "title": "Christopher Nolan Brushes Off 'The Odyssey' Backlash",
+      "id": "news-moana-live-action-cast-guide",
+      "slug": "moana-cast-guide-every-live-action-character-vs-the-original-animation",
+      "title": "‘Moana’ Cast Guide: Every Live-Action Character vs. the Original Animation",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "christopher-nolan-the-odyssey-backlash",
-      "primaryKeyword": "christopher nolan the odyssey",
-      "primaryEntity": "Christopher Nolan",
+      "eventSlug": "moana-live-action-cast-guide",
+      "primaryKeyword": "Moana live action cast",
+      "primaryEntity": "Moana",
       "entities": [
-        "The Odyssey"
+        "Moana (film)",
+        "Moana (character)"
       ],
-      "angle": "Christopher Nolan dismisses online criticism of his upcoming film 'The Odyssey'.",
+      "angle": "A guide comparing the cast of the upcoming live-action Moana to the original animated characters.",
       "tmdbType": "movie",
       "source": "rss:Variety",
       "sources": [
         {
           "outlet": "Variety",
           "tier": 7,
-          "url": "https://variety.com/2026/film/news/christopher-nolan-odyssey-backlash-elon-musk-irrelevant-1236806375/",
-          "ageMin": 318,
-          "headline": "Christopher Nolan Says Odyssey Backlash Over Casting and More Is Irrelevant and He s Learned Not to Worry: Remember, I Spent 10 Years Dealing With Batman",
-          "summary": "Christopher Nolan is not fazed by the prerelease backlash that s been erupting on social media in the months leading up to his latest directorial effort, The Odyssey. The movie, a star-studded adaptation of Homer s Greek epic, has irked Elon Musk and Trump s MAGA base over its casting choices and riled up historical purists over Nolan s [ ]"
+          "url": "https://variety.com/lists/moana-cast-characters-live-action-animated/",
+          "ageMin": 331,
+          "headline": "‘Moana’ Cast Guide: Every Live-Action Character vs. the Original Animation",
+          "summary": "Moana and Maui are setting sail once again this time, in live-action. Releasing in theaters July 10, Disney s animated musical Moana comes back to life with a brand new live-action remake led by Catherine Laga’aia, who stars as the titular character. Similar to the original, the film follows Moana’s journey to restore the heart [ ]"
         }
       ],
-      "ageMin": 318,
+      "ageMin": 331,
       "_cand": {
-        "key": "rss:christopher-nolan-says-odyssey-backlash-over-casting-and-mor",
+        "key": "rss:-moana-cast-guide-every-live-action-character-vs-the-origina",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -463,39 +197,39 @@
       }
     },
     {
-      "id": "news-jeffrey-wright-the-batman-franchise",
-      "slug": "jeffrey-wright-on-the-batman-franchise-and-wes-anderson",
-      "title": "Jeffrey Wright on 'The Batman' Franchise and Wes Anderson",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
+      "id": "music-news-jack-white-twin-temple-opening-slot",
+      "slug": "jack-white-offers-opening-slot-to-satanic-band-twin-temple-get-in-fron",
+      "title": "Jack White Offers Opening Slot to Satanic Band Twin Temple — Get in Front of Me, Satan! — as Charley Crockett Defends Decision to Dump Them",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
       "subcategory": "news",
-      "eventType": "other",
+      "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "jeffrey-wright-the-batman-franchise",
-      "primaryKeyword": "jeffrey wright the batman",
-      "primaryEntity": "O.G.",
+      "tier": "indie",
+      "eventSlug": "jack-white-twin-temple-opening-slot",
+      "primaryKeyword": "Jack White Twin Temple",
+      "primaryEntity": "Jack White",
       "entities": [
-        "Jeffrey Wright",
-        "The Batman",
-        "Wes Anderson"
+        "Twin Temple",
+        "Charley Crockett"
       ],
-      "angle": "Jeffrey Wright reflects on the fresh take of 'The Batman' franchise and his collaboration with Wes Anderson.",
+      "angle": "Jack White offers an opening slot to Satanic band Twin Temple, sparking a defense from Charley Crockett.",
       "tmdbType": "movie",
-      "source": "rss:THR",
+      "source": "rss:Variety",
       "sources": [
         {
-          "outlet": "THR",
+          "outlet": "Variety",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/jeffrey-wright-the-batman-sequel-wes-anderson-karlovy-vary-1236643996/",
-          "ageMin": 385,
-          "headline": "Jeffrey Wright Reflects on Matt Reeves’ “Fresh” Take of ‘The Batman’ Franchise, Collaborating With Wes Anderson: “He’s His Own Genre”",
-          "summary": "In a chat with reporters at the Karlovy Vary film fest in the Czech Republic, the U.S. star also discussed how \"politics has gotten increasingly like show business\" and the influence of Dustin Hoffman."
+          "url": "https://variety.com/2026/music/news/jack-white-satanic-band-twin-temple-charley-crockett-1236807060/",
+          "ageMin": 202,
+          "headline": "Jack White Offers Opening Slot to Satanic Band Twin Temple — Get in Front of Me, Satan! — as Charley Crockett Defends Decision to Dump Them",
+          "summary": "Not today, Satan or Hell yeah, Beelzebub ? A split is taking place in the polarizing realm of devil-rock, as practiced by self-styled Satanic duo Twin Temple. On Friday, country singer Charley Crockett took to social media to defend his decision to drop the act from his tour dates — even as Jack White piped up [ ]"
         }
       ],
-      "ageMin": 385,
+      "ageMin": 202,
       "_cand": {
-        "key": "rss:jeffrey-wright-reflects-on-matt-reeves-fresh-take-of-the-bat",
+        "key": "rss:jack-white-offers-opening-slot-to-satanic-band-twin-temple-g",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -505,11 +239,75 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "THR"
+          "Variety"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "THR",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 48,
+      "signals": {
+        "recency": 9,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-christopher-nolan-odyssey-backlash-comments",
+      "slug": "christopher-nolan-says-odyssey-backlash-over-casting-and-more-is-irrel",
+      "title": "Christopher Nolan Says Odyssey Backlash Over Casting and More Is Irrelevant and He s Learned Not to Worry: Remember, I Spent 10 Years Dealing With Batman",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "christopher-nolan-odyssey-backlash-comments",
+      "primaryKeyword": "Christopher Nolan The Odyssey",
+      "primaryEntity": "Christopher Nolan",
+      "entities": [
+        "The Odyssey",
+        "The Odyssey (film)"
+      ],
+      "angle": "Director Christopher Nolan dismisses backlash over his upcoming film 'The Odyssey,' stating he's learned not to worry about such issues.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/film/news/christopher-nolan-odyssey-backlash-elon-musk-irrelevant-1236806375/",
+          "ageMin": 558,
+          "headline": "Christopher Nolan Says Odyssey Backlash Over Casting and More Is Irrelevant and He s Learned Not to Worry: Remember, I Spent 10 Years Dealing With Batman",
+          "summary": "Christopher Nolan is not fazed by the prerelease backlash that s been erupting on social media in the months leading up to his latest directorial effort, The Odyssey. The movie, a star-studded adaptation of Homer s Greek epic, has irked Elon Musk and Trump s MAGA base over its casting choices and riled up historical purists over Nolan s [ ]"
+        }
+      ],
+      "ageMin": 558,
+      "_cand": {
+        "key": "rss:christopher-nolan-says-odyssey-backlash-over-casting-and-mor",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -528,167 +326,185 @@
       }
     },
     {
-      "id": "news-meta-ai-image-generator-disabled-caa-sag-aftra-pressure",
-      "slug": "zucked-up-meta-disables-its-new-ai-image-generator-after-caa-sag-aftra",
-      "title": "Zucked Up! Meta Disables Its New AI Image Generator After CAA SAG-AFTRA Trashed It",
+      "id": "news-don-iwerks-dies",
+      "slug": "don-iwerks-disney-camera-and-projection-pioneer-dies-at-96",
+      "title": "Don Iwerks, Disney Camera and Projection Pioneer, Dies at 96",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "meta-ai-image-generator-disabled-caa-sag-aftra-pressure",
-      "primaryKeyword": "Meta AI Image Generator",
-      "primaryEntity": "Meta",
+      "eventType": "death",
+      "sensitivity": "high",
+      "eventSlug": "don-iwerks-dies",
+      "primaryKeyword": "Don Iwerks",
+      "primaryEntity": "Don Iwerks",
       "entities": [
-        "Wheels on Meals",
-        "CAA",
-        "SAG-AFTRA"
+        "Walt Disney",
+        "Disney"
       ],
-      "angle": "Meta disables its new AI image generator after pressure from Hollywood unions.",
+      "angle": "Disney camera and projection pioneer Don Iwerks has died at 96.",
       "tmdbType": "movie",
-      "source": "rss:Deadline",
+      "source": "rss:THR",
       "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/don-iwerks-dead-disney-camera-legend-1236644425/",
+          "ageMin": 74,
+          "headline": "Don Iwerks, Disney Camera and Projection Pioneer, Dies at 96",
+          "summary": "In 1997, he received the Gordon E. Sawyer Award from the Academy of Motion Picture Arts and Sciences’ Board of Governors, then was named a Disney Legend in 2009."
+        },
         {
           "outlet": "Deadline",
           "tier": 7,
-          "url": "https://deadline.com/2026/07/meta-disables-new-ai-image-generator-zuckerberg-1236979706/",
-          "ageMin": 10,
-          "headline": "Zucked Up! Meta Disables Its New AI Image Generator After CAA SAG-AFTRA Trashed It",
-          "summary": "Just days after Meta introduced its Muse Image AI generator, the Mark Zuckerberg-run company has done a complete U-turn. Under pressure from a now-victory-lap-taking CAA and SAG-AFTRA, the tech giant late Friday revealed that the Instagram-trolling Muse Image is essential DOA. Earlier this week, we announced that one way for people to generate images in [ ]"
+          "url": "https://deadline.com/2026/07/don-iwerks-dead-disney-exec-1236979775/",
+          "ageMin": 117,
+          "headline": "Don Iwerks Dead: Former Disney Exec Cinematic Innovator Was 96",
+          "summary": "Don Iwerks, the former Disney executive who innovated several cinematic advancements during his career, has died. He was 96. The Iwerks Entertainment co-founder died peacefully on Thursday at Ojai Community Memorial Care Center, surrounded by the love of family and friends, according to an obituary shared by his family. Those who knew Don remember not [ ]"
         }
       ],
-      "ageMin": 10,
+      "ageMin": 74,
       "_cand": {
-        "key": "rss:zucked-up-meta-disables-its-new-ai-image-generator-after-caa",
+        "key": "rss:don-iwerks-disney-camera-and-projection-pioneer-dies-at-96",
         "popularity": 0,
         "kind": "rss-news"
       },
-      "corroborationCount": 1,
+      "corroborationCount": 2,
       "verification": {
-        "tier1Count": 1,
+        "tier1Count": 2,
         "tier1Owners": 1,
-        "outletCount": 1,
+        "outletCount": 2,
         "outlets": [
+          "THR",
           "Deadline"
         ],
         "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Deadline",
+        "sensitivity": "high",
+        "attribution": "THR",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 65,
+      "priority": 74,
       "signals": {
-        "recency": 30,
-        "corroboration": 12,
+        "recency": 16,
+        "corroboration": 18,
         "status": 18,
-        "type": 5,
+        "type": 14,
         "pop": 0,
         "breakout": 0,
         "big": 0,
-        "trending": 0,
+        "trending": 8,
         "softTv": 0
       }
     },
     {
-      "id": "news-kevin-bacon-karlovy-vary-family",
-      "slug": "kevin-bacon-kyra-sedgwick-and-son-travis-make-karlovy-vary-a-family-af",
-      "title": "Kevin Bacon, Kyra Sedgwick, and Son Travis Make Karlovy Vary a Family Affair",
+      "id": "news-peter-van-norden-dies",
+      "slug": "peter-van-norden-police-academy-2-actor-dies-at-75",
+      "title": "Peter Van Norden, Police Academy 2 Actor, Dies at 75",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
-      "eventType": "other",
+      "eventType": "death",
       "sensitivity": "high",
-      "eventSlug": "kevin-bacon-karlovy-vary-family",
-      "primaryKeyword": "kevin bacon family",
-      "primaryEntity": "Kevin Bacon",
+      "eventSlug": "peter-van-norden-dies",
+      "primaryKeyword": "Peter Van Norden",
+      "primaryEntity": "Peter Van Norden",
       "entities": [
-        "Kyra Sedgwick",
-        "Karlovy Vary International Film Festival"
+        "Police Academy 2: Their First Assignment",
+        "Police Academy 2"
       ],
-      "angle": "Kevin Bacon, Kyra Sedgwick, and son Travis bring a family affair to the Karlovy Vary Film Festival.",
+      "angle": "Peter Van Norden, actor known for 'Police Academy 2', has died at 75.",
       "tmdbType": "movie",
-      "source": "rss:Variety",
+      "source": "rss:THR",
       "sources": [
         {
-          "outlet": "Variety",
+          "outlet": "THR",
           "tier": 7,
-          "url": "https://variety.com/2026/tv/news/randolph-mantooth-dead-emergency-1236806971/",
-          "ageMin": 97,
-          "headline": "Randolph Mantooth, Who Played Johnny Gage on Emergency!, Dies at 80",
-          "summary": "Randolph Mantooth, known for playing paramedic Johnny Gage on the “Emergency!” TV series in the 1970s, died July 9 in Ventura. He was 80. Mantooth broke out in 1972 when he was cast in “Emergency!,” which introduced the profession of paramedics to the public. He co-starred with Kevin Tighe in the popular NBC series which [ ]"
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/peter-van-norden-dead-police-academy-naked-gun-actor-1236644400/",
+          "ageMin": 167,
+          "headline": "Peter Van Norden, Police Academy 2 Actor, Dies at 75",
+          "summary": "Van Norden had an extensive stage career, appearing in various Broadway, off-Broadway and regional productions"
+        },
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/peter-van-norden-dead-1236979743/",
+          "ageMin": 198,
+          "headline": "Peter Van Norden Dies: Police Academy 2 The Naked Gun 2½ Actor Was 75",
+          "summary": "Peter Van Norden, the actor who appeared in Police Academy 2: Their First Assignment and The Naked Gun 2½: The Smell of Fear, has died. He was 75. The actor s wife Wendy was by his side as he died peacefully Thursday morning in a Southern California hospice facility, where he was struggling with multiple health [ ]"
         }
       ],
-      "ageMin": 97,
+      "ageMin": 167,
       "_cand": {
-        "key": "rss:randolph-mantooth-who-played-johnny-gage-on-emergency-dies-a",
+        "key": "rss:peter-van-norden-police-academy-2-actor-dies-at-75",
         "popularity": 0,
         "kind": "rss-news"
       },
-      "corroborationCount": 1,
+      "corroborationCount": 2,
       "verification": {
-        "tier1Count": 1,
+        "tier1Count": 2,
         "tier1Owners": 1,
-        "outletCount": 1,
+        "outletCount": 2,
         "outlets": [
-          "Variety"
+          "THR",
+          "Deadline"
         ],
         "maxTier": 7,
         "sensitivity": "high",
-        "attribution": "Variety",
+        "attribution": "THR",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 51,
+      "priority": 74,
       "signals": {
         "recency": 16,
-        "corroboration": 12,
+        "corroboration": 18,
         "status": 18,
-        "type": 5,
+        "type": 14,
         "pop": 0,
         "breakout": 0,
         "big": 0,
-        "trending": 0,
+        "trending": 8,
         "softTv": 0
       }
     },
     {
-      "id": "news-hilary-duff-lucky-me-tour-forum-tee",
-      "slug": "hilary-duff-wears-her-own-2004-throwback-concert-tee-for-2-sold-out-ni",
-      "title": "Hilary Duff Wears Her Own 2004 Throwback Concert Tee for 2 Sold-Out Nights at L.A.'s Forum",
+      "id": "news-bad-bunny-ex-wins-round-in-voice-note-battle",
+      "slug": "bad-bunny-s-ex-wins-round-in-battle-over-voice-note-used-on-un-verano-",
+      "title": "Bad Bunny’s Ex Wins Round in Battle Over Voice Note Used on Un Verano Sin Ti",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
-      "eventType": "other",
+      "eventType": "lawsuit",
       "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "hilary-duff-lucky-me-tour-forum-tee",
-      "primaryKeyword": "hilary duff tour",
-      "primaryEntity": "Hilary Duff",
+      "eventSlug": "bad-bunny-ex-wins-round-in-voice-note-battle",
+      "primaryKeyword": "Bad Bunny lawsuit",
+      "primaryEntity": "Bad Bunny",
       "entities": [
-        "Lucky Me Tour"
+        "Un Verano Sin Ti",
+        "Carliz De La Cruz Hernández"
       ],
-      "angle": "Hilary Duff sported a vintage concert tee from 2004 during two sold-out shows at L.A.'s Forum as part of her Lucky Me Tour.",
+      "angle": "Bad Bunny's ex wins a legal round concerning a voice note used on his album 'Un Verano Sin Ti'.",
       "tmdbType": "movie",
-      "source": "rss:Billboard",
+      "source": "rss:Rolling Stone",
       "sources": [
         {
-          "outlet": "Billboard",
+          "outlet": "Rolling Stone",
           "tier": 7,
-          "url": "https://www.billboard.com/music/pop/hilary-duff-2004-throwback-concert-tee-la-forum-concerts-1236292162/",
-          "ageMin": 161,
-          "headline": "Hilary Duff Wears Her Own 2004 Throwback Concert Tee for 2 Sold-Out Nights at L.A. s Forum",
-          "summary": "The Lucky Me Tour continues Saturday night in Mountain View, California."
+          "url": "https://www.rollingstone.com/music/music-news/bad-bunny-ex-girlfriend-un-verano-sin-ti-lawsuit-1235592278/",
+          "ageMin": 267,
+          "headline": "Bad Bunny’s Ex Wins Round in Battle Over Voice Note Used on Un Verano Sin Ti",
+          "summary": "Carliz De La Cruz Hernández got a green light to pursue her claim over the “Bad Bunny baby” tagline on “Dos Mil 16\""
         }
       ],
-      "ageMin": 161,
+      "ageMin": 267,
       "_cand": {
-        "key": "rss:hilary-duff-wears-her-own-2004-throwback-concert-tee-for-2-s",
+        "key": "rss:bad-bunny-s-ex-wins-round-in-battle-over-voice-note-used-on-",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -698,21 +514,21 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Billboard"
+          "Rolling Stone"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Billboard",
+        "attribution": "Rolling Stone",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
       "priority": 51,
       "signals": {
-        "recency": 16,
+        "recency": 9,
         "corroboration": 12,
         "status": 18,
-        "type": 5,
+        "type": 12,
         "pop": 0,
         "breakout": 0,
         "big": 0,
