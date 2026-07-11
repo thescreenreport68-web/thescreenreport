@@ -35,7 +35,10 @@ export function lintScript(script, entities = [], topicText = "") {
   const hook = sentences[0];
   const hookWords = normWords(hook);
 
-  if (hookWords.length > 14) v.push({ rule: "hook-too-long", detail: `${hookWords.length} words (max 14)` });
+  // hook target is short (prompt says ≤12), but tolerate up to 16 so an unsplittable
+  // long-named hook ("Brad Pitt and Ines de Ramon just went public…") stays ONE clean
+  // sentence read in a single breath, rather than being split mid-phrase. (2026-07-11)
+  if (hookWords.length > 16) v.push({ rule: "hook-too-long", detail: `${hookWords.length} words (max 16)` });
   if (GREETING_RE.test(hook)) v.push({ rule: "hook-greeting", detail: hook.slice(0, 60) });
   if (WEAK_HOOK_RE.test(hook) && !/\d/.test(hook)) v.push({ rule: "hook-meta", detail: "process-framing hook without a concrete payoff" });
   const entityTokens = entities.flatMap((e) => normWords(e.name || e)).filter((t) => t.length > 2);

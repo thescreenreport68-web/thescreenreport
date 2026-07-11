@@ -37,6 +37,32 @@ HARD RULES:
 
 Return STRICT JSON: {"sentences":[string], "hookStyle":"record-number"|"casting-shock"|"first-look"|"return-nostalgia"|"debate"|"reveal", "ending":"question"}`;
 
+// A sentence that ends on a word that grammatically CANNOT end a sentence (article,
+// possessive, preposition, conjunction) is a spurious mid-phrase break from the writer
+// (e.g. "...just made their." + "public debut...") — it makes the VOICE pause mid-thought
+// at the very start. Stitch it back into the next sentence. (owner 2026-07-11)
+// Only words that RELIABLY cannot end a sentence: articles, determiner-only possessives
+// (whose pronoun form differs — "their"→"theirs", so a trailing "their" is always a break),
+// and coordinating conjunctions. Deliberately EXCLUDES this/that/here/prepositions/his/her/its
+// — those legitimately end sentences ("...like this.", "what it's for.") and must not merge.
+const CANT_END = new Set("a an the my your our their and or but nor".split(" "));
+export function mergeMidPhraseBreaks(sents) {
+  const endWord = (s) => (s.replace(/["'’)\]]*[.!?…,;:]*$/u, "").split(/\s+/).pop() || "").toLowerCase().replace(/[^a-z]/g, "");
+  const out = [];
+  for (const s of sents) {
+    // Two signals of a spurious break the writer emitted mid-phrase: the previous sentence
+    // ends on a word that can't end one ("...made their."), OR THIS sentence starts with a
+    // lowercase word ("...went." + "public at...") — a real sentence always starts capitalized.
+    const startsLower = /^[a-z]/u.test(s);
+    if (out.length && (CANT_END.has(endWord(out[out.length - 1])) || startsLower)) {
+      out[out.length - 1] = out[out.length - 1].replace(/[.!?…]+$/u, "").trim() + " " + s;
+    } else {
+      out.push(s);
+    }
+  }
+  return out;
+}
+
 export async function writeScript({ article, facts, segment, engage }) {
   const weights = loadWeights();
   const factList = facts.facts
@@ -64,11 +90,15 @@ export async function writeScript({ article, facts, segment, engage }) {
     });
     const script = {
       // deterministic re-chunking: however the model groups the array, we lint and speak
-      // real sentences (the flow prompt tempts it to return one flowing paragraph)
-      sentences: (res.sentences || [])
-        .flatMap((s) => String(s).split(/(?<=[.!?…])\s+/))
-        .map((s) => s.trim())
-        .filter(Boolean),
+      // real sentences (the flow prompt tempts it to return one flowing paragraph), then
+      // MERGE any spurious mid-phrase break (a sentence ending on a word that can't end one)
+      // so the voice never pauses mid-thought at the start.
+      sentences: mergeMidPhraseBreaks(
+        (res.sentences || [])
+          .flatMap((s) => String(s).split(/(?<=[.!?…])\s+/))
+          .map((s) => s.trim())
+          .filter(Boolean),
+      ),
       hookStyle: res.hookStyle || "reveal",
       ending: "question",
     };

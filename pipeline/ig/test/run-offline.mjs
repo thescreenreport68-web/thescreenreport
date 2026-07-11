@@ -26,7 +26,7 @@ const { isPosted, recordPosted, dayAlreadyScheduled, markDayScheduled } = await 
 const { newJob, saveJob, loadJob, stageDone, holdJob } = await import("../job.mjs");
 const { listCandidates, scout } = await import("../agents/scout.mjs");
 const { verify } = await import("../agents/verify.mjs");
-const { writeScript } = await import("../agents/script.mjs");
+const { writeScript, mergeMidPhraseBreaks } = await import("../agents/script.mjs");
 const { writeCaption } = await import("../agents/caption.mjs");
 
 let passed = 0, failed = 0;
@@ -445,6 +445,22 @@ await t("writer: overlong hook is deterministically split, not held (mechanical 
   assert.ok(r.script, "repaired, not held");
   assert.ok(normWords(r.script.sentences[0]).length <= 14, "hook trimmed to <=14 words");
   assert.deepEqual(lintScript(r.script, ENTITIES, "Superman box office"), [], "repaired script passes all gates");
+  setMock(null);
+});
+await t("writer: mid-phrase break is stitched back, valid endings are left alone", () => {
+  // the Brad Pitt bug: writer emitted a spurious period after a possessive → voice paused mid-thought
+  assert.deepEqual(
+    mergeMidPhraseBreaks(["Brad Pitt and Ines de Ramon just made their.", "public debut at the 2024 F1 Grand Prix."]),
+    ["Brad Pitt and Ines de Ramon just made their public debut at the 2024 F1 Grand Prix."],
+    "possessive-ended fragment merges into the next sentence",
+  );
+  // words that legitimately END a sentence must NOT merge (pronoun 'this', a real noun)
+  assert.deepEqual(
+    mergeMidPhraseBreaks(["I really like this.", "So does he win?"]),
+    ["I really like this.", "So does he win?"],
+    "valid endings are preserved",
+  );
+  assert.deepEqual(mergeMidPhraseBreaks(["He confirmed their status.", "Fans reacted."]).length, 2, "'their status' is not a break");
   setMock(null);
 });
 await t("caption: retry loop then full assembly", async () => {
