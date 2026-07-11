@@ -20,9 +20,9 @@
     "at": "2026-07-11T07:20:34.798Z"
   },
   "matthew-mcconaughey-s-son-levi-is-his-twin-in-18th-birthday-photo": {
-    "stage": "shots",
-    "reason": "Command failed: python3 /home/runner/work/thescreenreport/thescreenreport/pipeline/ig/py/face_crop.py /home/runner/work/thescreenreport/thescreenreport/data/ig/work/matthew-mcconaughey-s-son-levi-is-his-twin-in-18th-birthday-photo/_frame_jobs.json\nTraceback (most recent call last):\n  File \"/home/runner/work/thescreenreport/thescreenreport/pipeline/ig/py/face_crop.py\", line 11, in <module>\n    CASCADE = cv2.CascadeClassifier(cv2.data.haarcascades + \"haarcascade_frontalface_default.xml\")\n              ^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'cv2' has no attribute 'CascadeClassifier'\n",
-    "at": "2026-07-11T08:59:18.974Z"
+    "stage": "synccheck",
+    "reason": "entity-sync: \"Matthew McConaughey\" spoken at 25.4s without their image (±0.7s); entity-sync: \"Camila Alves McConaughey\" spoken at 25.4s without their image (±0.7s); entity-sync: \"Vida McConaughey\" spoken at 25.4s without their image (±0.7s)",
+    "at": "2026-07-11T09:17:34.686Z"
   },
   "nara-smith-details-hardest-parts-of-daughter-s-cancer-journey": {
     "stage": "shots",
