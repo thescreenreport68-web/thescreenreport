@@ -1,41 +1,169 @@
 {
-  "runId": "run-2026-07-11T17-01-23",
-  "builtAt": "2026-07-11T17:01:44.619Z",
-  "count": 7,
+  "runId": "run-2026-07-11T21-01-25",
+  "builtAt": "2026-07-11T21:01:52.711Z",
+  "count": 8,
   "topics": [
     {
-      "id": "news-alice-halsey-little-house-on-the-prairie-netflix",
-      "slug": "meet-the-11-year-old-actress-leading-netflix-s-new-take-on-little-hous",
-      "title": "Meet the 11-Year-Old Actress Leading Netflix’s New Take on ‘Little House on the Prairie’",
+      "id": "news-50-cent-reacts-diddy-doc-emmy-noms",
+      "slug": "50-cent-reacts-to-his-diddy-documentary-receiving-3-emmy-noms-you-can-",
+      "title": "50 Cent Reacts to His Diddy Documentary Receiving 3 Emmy Noms: You Can’t Argue With the Work",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
-      "eventType": "casting",
+      "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "alice-halsey-little-house-on-the-prairie-netflix",
-      "primaryKeyword": "little house on the prairie netflix",
-      "primaryEntity": "Little House on the Prairie (Netflix series)",
+      "eventSlug": "50-cent-reacts-diddy-doc-emmy-noms",
+      "primaryKeyword": "50 Cent Diddy documentary",
+      "primaryEntity": "Sean Combs: The Reckoning",
       "entities": [
-        "Alice Halsey",
-        "Netflix"
+        "50 Cent",
+        "Diddy"
       ],
-      "angle": "An 11-year-old actress has been cast as the lead in Netflix's upcoming adaptation of 'Little House on the Prairie'.",
+      "angle": "50 Cent comments on the Emmy nominations received by the Diddy docuseries.",
+      "tmdbType": "movie",
+      "source": "rss:Billboard",
+      "sources": [
+        {
+          "outlet": "Billboard",
+          "tier": 7,
+          "url": "https://www.billboard.com/music/rb-hip-hop/50-cent-diddy-documentary-emmy-nominations-1236290583/",
+          "ageMin": 50,
+          "headline": "50 Cent Reacts to His Diddy Documentary Receiving 3 Emmy Noms: You Can’t Argue With the Work",
+          "summary": "The four-part Netflix docuseries Sean Combs: The Reckoning earned 21.8 million views in its first six days."
+        }
+      ],
+      "ageMin": 50,
+      "_cand": {
+        "key": "rss:50-cent-reacts-to-his-diddy-documentary-receiving-3-emmy-nom",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Billboard"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Billboard",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 81,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-moana-live-action-representation",
+      "slug": "moana-creatives-on-working-closely-to-honor-polynesian-culture-and-tra",
+      "title": "Moana Creatives on Working Closely to Honor Polynesian Culture and Traditions, and Why Representation Matters in the Live-Action Film",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "moana-live-action-representation",
+      "primaryKeyword": "Moana live-action",
+      "primaryEntity": "Moana",
+      "entities": [
+        "Dwayne Johnson"
+      ],
+      "angle": "Creatives behind the live-action 'Moana' discuss their commitment to honoring Polynesian culture and the importance of representation.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/film/features/moana-creatives-polynesian-culture-traditions-1236807177/",
+          "ageMin": 166,
+          "headline": "Moana Creatives on Working Closely to Honor Polynesian Culture and Traditions, and Why Representation Matters in the Live-Action Film",
+          "summary": "Dwayne Johnson can finally rejoice. At the premiere of Disney’s live-action “Moana,” the star said that, growing up, he didn’t see himself represented in the media. “‘Indiana Jones’ inspired me. When I was 8 years old watching Harrison Ford, I was like, ‘I want to be that guy,’ but that guy didn’t look like me.” [ ]"
+        }
+      ],
+      "ageMin": 166,
+      "_cand": {
+        "key": "rss:moana-creatives-on-working-closely-to-honor-polynesian-cultu",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 79,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "awards-karlovy-vary-film-fest-awards-results",
+      "slug": "karlovy-vary-film-fest-awards-go-to-fruit-gathering-the-guest-lover-no",
+      "title": "Karlovy Vary Film Fest Awards Go to Fruit Gathering, The Guest, Lover, Not a Fighter and Incinerator",
+      "contentType": "awards",
+      "formatTag": "awards",
+      "category": "awards",
+      "subcategory": "winners",
+      "eventType": "award",
+      "sensitivity": "normal",
+      "eventSlug": "karlovy-vary-film-fest-awards-results",
+      "primaryKeyword": "Karlovy Vary Film Festival",
+      "primaryEntity": "Karlovy Vary Film Festival",
+      "entities": [
+        "Juliette Binoche",
+        "Jeffrey Wright",
+        "Fruit Gathering"
+      ],
+      "angle": "The Karlovy Vary Film Festival has announced its award winners, including Juliette Binoche and Jeffrey Wright, with 'Fruit Gathering' also recognized.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
         {
           "outlet": "THR",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/tv/tv-features/alice-halsey-little-house-on-the-prairie-netflix-interview-1236643390/",
-          "ageMin": 61,
-          "headline": "Meet the 11-Year-Old Actress Leading Netflix’s New Take on ‘Little House on the Prairie’",
-          "summary": "Alice Halsey stars as the Laura Ingalls in the streamer’s adaptation of the beloved novels."
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/karlovy-vary-2026-awards-fruit-gathering-juliette-binoche-1236644514/",
+          "ageMin": 166,
+          "headline": "Karlovy Vary Film Fest Awards Go to Fruit Gathering, The Guest, Lover, Not a Fighter and Incinerator",
+          "summary": "Juliette Binoche was honored with the Crystal Globe Award at the closing ceremony, while Jeffrey Wright received the President's Award as the star-studded Czech fest's double anniversary edition wrapped."
         }
       ],
-      "ageMin": 61,
+      "ageMin": 166,
       "_cand": {
-        "key": "rss:meet-the-11-year-old-actress-leading-netflix-s-new-take-on-l",
+        "key": "rss:karlovy-vary-film-fest-awards-go-to-fruit-gathering-the-gues",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -54,7 +182,7 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 78,
+      "priority": 60,
       "signals": {
         "recency": 16,
         "corroboration": 12,
@@ -62,46 +190,46 @@
         "type": 14,
         "pop": 0,
         "breakout": 0,
-        "big": 18,
+        "big": 0,
         "trending": 0,
         "softTv": 0
       }
     },
     {
-      "id": "music-news-charli-xcx-debuts-new-songs-brooklyn",
-      "slug": "charli-xcx-debuts-new-music-fashion-film-songs-at-brooklyn-gig",
-      "title": "Charli XCX Debuts New Music, Fashion, Film Songs at Brooklyn Gig",
+      "id": "music-news-charli-xcx-debuts-songs-brooklyn-gig",
+      "slug": "charli-xcx-debuts-new-music-and-fashion-songs-at-brooklyn-gig",
+      "title": "Charli XCX Debuts New Music and Fashion Songs at Brooklyn Gig",
       "contentType": "music-news",
       "formatTag": "music-news",
       "category": "music",
       "subcategory": "news",
       "eventType": "announcement",
-      "sensitivity": "high",
+      "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "charli-xcx-debuts-new-songs-brooklyn",
-      "primaryKeyword": "Charli XCX new songs",
+      "eventSlug": "charli-xcx-debuts-songs-brooklyn-gig",
+      "primaryKeyword": "Charli XCX music",
       "primaryEntity": "Charli xcx",
       "entities": [
         "Charli XCX",
         "Clairo",
         "Kim Petras"
       ],
-      "angle": "Charli XCX debuted new music for film and fashion at an intimate Brooklyn show, joined by guests like Clairo and Kim Petras.",
+      "angle": "Charli XCX debuts new music and fashion-inspired songs at an intimate Brooklyn show.",
       "tmdbType": "movie",
-      "source": "rss:Variety",
+      "source": "rss:Rolling Stone",
       "sources": [
         {
-          "outlet": "Variety",
+          "outlet": "Rolling Stone",
           "tier": 7,
-          "url": "https://variety.com/2026/film/news/peter-van-norden-dead-police-academy-1236807230/",
-          "ageMin": 21,
-          "headline": "Peter Van Norden, Actor in Police Academy 2 and The Stand, Dies at 75",
-          "summary": "Peter Van Norden, a frequent character actor in films including Police Academy 2, and TV projects including The Stand, died Thursday in California, his son Robert confirmed on Instagram. He was 75. Born in New York, Van Norden graduated Colgate University and started out onstage in plays including Measure for Measure, A Country Scandal and [ ]"
+          "url": "https://www.rollingstone.com/music/music-news/charli-xcx-music-fashion-film-songs-brooklyn-1235592401/",
+          "ageMin": 271,
+          "headline": "See Charli XCX Debut Music, Fashion, Film Songs at Brooklyn Gig",
+          "summary": "Clairo, Kim Petras, and Underscores also joined singer onstage at intimate Music Hall of Williamsburg show"
         }
       ],
-      "ageMin": 21,
+      "ageMin": 271,
       "_cand": {
-        "key": "rss:peter-van-norden-actor-in-police-academy-2-and-the-stand-die",
+        "key": "rss:see-charli-xcx-debut-music-fashion-film-songs-at-brooklyn-gi",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -112,18 +240,18 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Variety"
+          "Rolling Stone"
         ],
         "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "Variety",
+        "sensitivity": "normal",
+        "attribution": "Rolling Stone",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 63,
+      "priority": 48,
       "signals": {
-        "recency": 24,
+        "recency": 9,
         "corroboration": 12,
         "status": 18,
         "type": 9,
@@ -135,39 +263,37 @@
       }
     },
     {
-      "id": "news-evil-dead-rise-army-of-darkness-revisit",
-      "slug": "evil-dead-burn-just-made-sam-raimi-s-profoundly-silly-army-of-darkness",
-      "title": "Evil Dead Burn Just Made Sam Raimi s Profoundly Silly Army of Darkness Essential Viewing Again",
+      "id": "news-johnny-galecki-acting-return",
+      "slug": "johnny-galecki-returning-to-acting-after-7-year-break",
+      "title": "Johnny Galecki Returning to Acting After 7-Year Break",
       "contentType": "news",
       "formatTag": "news",
-      "category": "movies",
+      "category": "celebrity",
       "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "high",
-      "eventSlug": "evil-dead-rise-army-of-darkness-revisit",
-      "primaryKeyword": "Army of Darkness",
-      "primaryEntity": "Army of Darkness",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "johnny-galecki-acting-return",
+      "primaryKeyword": "Johnny Galecki acting",
+      "primaryEntity": "Johnny Galecki",
       "entities": [
-        "Army of Darkness (1992 film)",
-        "Evil Dead Rise",
-        "Sam Raimi"
+        "The Big Bang Theory"
       ],
-      "angle": "The success of 'Evil Dead Rise' makes revisiting Sam Raimi's 'Army of Darkness essential viewing.",
+      "angle": "Johnny Galecki is set to return to acting after a seven-year hiatus, taking on a new role.",
       "tmdbType": "movie",
-      "source": "rss:IndieWire",
+      "source": "rss:TheWrap",
       "sources": [
         {
-          "outlet": "IndieWire",
+          "outlet": "TheWrap",
           "tier": 7,
-          "url": "https://www.indiewire.com/features/best-of/army-of-darkness-sam-raimi-evil-dead-burn-wise-men-rewatch-1235204582/",
-          "ageMin": 782,
-          "headline": "Evil Dead Burn Just Made Sam Raimi s Profoundly Silly Army of Darkness Essential Viewing Again",
-          "summary": "There's never been a better time to revisit this slapstick (er, boomstick?) fantasy adventure from 1993."
+          "url": "https://www.thewrap.com/creative-content/tv-shows/johnny-galecki-returning-acting-7-year-break-big-bang-theory/",
+          "ageMin": 109,
+          "headline": "Johnny Galecki Returning to Acting After 7-Year Break",
+          "summary": "The 'Big Bang Theory' actor is taking on a new role after playing Dr. Leonard Hofstadter for 12 seasons The post Johnny Galecki Returning to Acting After 7-Year Break appeared first on TheWrap ."
         }
       ],
-      "ageMin": 782,
+      "ageMin": 109,
       "_cand": {
-        "key": "rss:evil-dead-burn-just-made-sam-raimi-s-profoundly-silly-army-o",
+        "key": "rss:johnny-galecki-returning-to-acting-after-7-year-break",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -177,129 +303,172 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "IndieWire"
+          "TheWrap"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "TheWrap",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 55,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-hilary-duff-lucky-me-tour",
+      "slug": "hilary-duff-delights-with-equal-parts-nostalgia-and-evolution-on-the-l",
+      "title": "Hilary Duff Delights With Equal Parts Nostalgia and Evolution on The Lucky Me Tour: “Joyful, Fun and Extremely Rewarding”",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "hilary-duff-lucky-me-tour",
+      "primaryKeyword": "Hilary Duff tour",
+      "primaryEntity": "Hilary Duff",
+      "entities": [
+        "The Lucky Me Tour"
+      ],
+      "angle": "Hilary Duff is delighting fans with her 'Lucky Me Tour,' blending nostalgic hits with new music.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/music/music-features/hilary-duff-la-lucky-me-tour-concert-highlights-interview-1236644505/",
+          "ageMin": 120,
+          "headline": "Hilary Duff Delights With Equal Parts Nostalgia and Evolution on The Lucky Me Tour: “Joyful, Fun and Extremely Rewarding”",
+          "summary": "The 38-year-old age singer sold out two nights of her most expansive tour in over a decade, bringing her aughts hits and new pop offerings to a captivated crowd at Inglewood’s Kia Forum."
+        }
+      ],
+      "ageMin": 120,
+      "_cand": {
+        "key": "rss:hilary-duff-delights-with-equal-parts-nostalgia-and-evolutio",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 55,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-ann-widdecombe-death-investigation-update",
+      "slug": "man-released-without-charges-in-death-of-ann-widdecombe",
+      "title": "Man Released Without Charges in Death of Ann Widdecombe",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "death",
+      "sensitivity": "high",
+      "eventSlug": "ann-widdecombe-death-investigation-update",
+      "primaryKeyword": "Ann Widdecombe death",
+      "primaryEntity": "Ann Widdecombe",
+      "entities": [],
+      "angle": "Police have released a man without charges in connection with the death of former MP and reality TV personality Ann Widdecombe.",
+      "tmdbType": "movie",
+      "source": "rss:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/ann-widdecombe-death-homicide-1236979243/",
+          "ageMin": 379,
+          "headline": "Arrested Man Released Without Charges In Death Of Former MP UK Reality Star Ann Widdecombe",
+          "summary": "UPDATE, Saturday July 11: British police have released the 26-year-old man arrested Friday in connection with the death of Ann Widdecombe, the former Member of Parliament and frequent participant in British reality TV programs and news shows. The man is no longer part of the investigation, law enforcement officials said. “Our priority remains identifying those [ ]"
+        }
+      ],
+      "ageMin": 379,
+      "_cand": {
+        "key": "rss:arrested-man-released-without-charges-in-death-of-former-mp-",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Deadline"
         ],
         "maxTier": 7,
         "sensitivity": "high",
-        "attribution": "IndieWire",
+        "attribution": "Deadline",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
       "priority": 48,
       "signals": {
-        "recency": 1,
+        "recency": 4,
         "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 12,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "news-peter-van-norden-death",
-      "slug": "peter-van-norden-police-academy-2-actor-dies-at-75",
-      "title": "Peter Van Norden, Police Academy 2 Actor, Dies at 75",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "death",
-      "sensitivity": "high",
-      "eventSlug": "peter-van-norden-death",
-      "primaryKeyword": "Peter Van Norden",
-      "primaryEntity": "Peter Van Norden",
-      "entities": [
-        "Police Academy 2: Their First Assignment",
-        "Police Academy 2"
-      ],
-      "angle": "Actor Peter Van Norden, known for 'Police Academy 2', has died at 75.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "Variety Music",
-          "tier": 7,
-          "url": "https://variety.com/2026/music/news/taylor-swift-paid-nyc-police-overtime-wedding-1236806715/",
-          "ageMin": 1380,
-          "headline": "Taylor Swift Paid NYC More Than $160,000 for Wedding Weekend Permit, Including Police Overtime",
-          "summary": "Taylor Swift paid more than $160,000 to cover police overtime as part of a New York City permit required for her and Travis Kelce s wedding at Madison Square Garden. Mayor Zohran Mamdani confirmed in a press conference on Friday that the billionaire pop star footed the bill for the increased law enforcement personnel required for [ ]"
-        },
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/peter-van-norden-dead-police-academy-naked-gun-actor-1236644400/",
-          "ageMin": 887,
-          "headline": "Peter Van Norden, Police Academy 2 Actor, Dies at 75",
-          "summary": "Van Norden had an extensive stage career, appearing in various Broadway, off-Broadway and regional productions"
-        },
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/peter-van-norden-dead-1236979743/",
-          "ageMin": 918,
-          "headline": "Peter Van Norden Dies: Police Academy 2 The Naked Gun 2½ Actor Was 75",
-          "summary": "Peter Van Norden, the actor who appeared in Police Academy 2: Their First Assignment and The Naked Gun 2½: The Smell of Fear, has died. He was 75. The actor s wife Wendy was by his side as he died peacefully Thursday morning in a Southern California hospice facility, where he was struggling with multiple health [ ]"
-        }
-      ],
-      "ageMin": 887,
-      "_cand": {
-        "key": "rss:peter-van-norden-police-academy-2-actor-dies-at-75",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 3,
-      "verification": {
-        "tier1Count": 3,
-        "tier1Owners": 1,
-        "outletCount": 3,
-        "outlets": [
-          "Variety Music",
-          "THR",
-          "Deadline"
-        ],
-        "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "Variety Music",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 72,
-      "signals": {
-        "recency": 1,
-        "corroboration": 24,
         "status": 18,
         "type": 14,
         "pop": 0,
         "breakout": 0,
         "big": 0,
-        "trending": 15,
+        "trending": 0,
         "softTv": 0
       }
     },
     {
-      "id": "news-antoinette-bower-death",
-      "slug": "antoinette-bower-star-trek-twilight-zone-and-prom-night-actress-dies-a",
-      "title": "Antoinette Bower, ‘Star Trek,’ ‘Twilight Zone’ and ‘Prom Night’ Actress, Dies at 93",
+      "id": "news-antoinette-bower-dies-at-93",
+      "slug": "antoinette-bower-star-trek-and-twilight-zone-actress-dies-at-93",
+      "title": "Antoinette Bower, 'Star Trek' and 'Twilight Zone' Actress, Dies at 93",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
       "eventType": "death",
       "sensitivity": "high",
-      "eventSlug": "antoinette-bower-death",
-      "primaryKeyword": "antoinette bower",
+      "eventSlug": "antoinette-bower-dies-at-93",
+      "primaryKeyword": "Antoinette Bower death",
       "primaryEntity": "Antoinette Bower",
       "entities": [
         "Star Trek",
         "The Twilight Zone",
         "Prom Night"
       ],
-      "angle": "Actress Antoinette Bower, known for her roles in 'Star Trek,' 'The Twilight Zone,' and 'Prom Night,' has passed away at 93.",
+      "angle": "Actress Antoinette Bower, known for her roles in 'Star Trek,' 'The Twilight Zone,' and 'Prom Night,' has passed away at the age of 93.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
@@ -307,12 +476,12 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/tv/tv-news/antoinette-bower-dead-star-trek-twilight-zone-prom-night-1236644450/",
-          "ageMin": 179,
+          "ageMin": 419,
           "headline": "Antoinette Bower, ‘Star Trek,’ ‘Twilight Zone’ and ‘Prom Night’ Actress, Dies at 93",
           "summary": "Born in Germany, she started out on the CBC in Canada, appeared with Charles Bronson in ‘The Evil That Men Do’ and had a recurring role on ‘Neon Rider.’"
         }
       ],
-      "ageMin": 179,
+      "ageMin": 419,
       "_cand": {
         "key": "rss:antoinette-bower-star-trek-twilight-zone-and-prom-night-actr",
         "popularity": 0,
@@ -333,143 +502,12 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 60,
+      "priority": 48,
       "signals": {
-        "recency": 16,
+        "recency": 4,
         "corroboration": 12,
         "status": 18,
         "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "news-miranda-hope-music-debut",
-      "slug": "secret-lives-of-mormon-wives-star-miranda-hope-talks-music-debut-and-s",
-      "title": "‘Secret Lives of Mormon Wives’ Star Miranda Hope Talks Music Debut and Shares a Season 5 Update",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "miranda-hope-music-debut",
-      "primaryKeyword": "miranda hope music",
-      "primaryEntity": "Miranda Hope",
-      "entities": [
-        "The Secret Lives of Mormon Wives",
-        "Secret Lives of Mormon Wives"
-      ],
-      "angle": "Reality star Miranda Hope discusses her upcoming music debut and provides an update on 'Secret Lives of Mormon Wives'.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/music/music-features/mormon-wives-miranda-hope-music-season-5-taylor-interview-1236643126/",
-          "ageMin": 106,
-          "headline": "Secret Lives of Mormon Wives Star Miranda Hope Talks Music Debut and Shares a Season 5 Update",
-          "summary": "In an interview with The Hollywood Reporter, the reality star reflects on MomTok's future after months of off-camera drama: \"I see no reason why we can't survive past this.\""
-        }
-      ],
-      "ageMin": 106,
-      "_cand": {
-        "key": "rss:secret-lives-of-mormon-wives-star-miranda-hope-talks-music-d",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 55,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "news-jay-z-reasonable-doubt-yankee-stadium-concert",
-      "slug": "jay-z-performs-reasonable-doubt-at-yankee-stadium-with-nas-beyonc-and-",
-      "title": "Jay-Z Performs Reasonable Doubt at Yankee Stadium with Nas, Beyoncé, and More",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "jay-z-reasonable-doubt-yankee-stadium-concert",
-      "primaryKeyword": "jay-z reasonable doubt concert",
-      "primaryEntity": "JAŸ-Z",
-      "entities": [
-        "Jay-Z",
-        "Reasonable Doubt",
-        "Nas",
-        "Beyoncé"
-      ],
-      "angle": "Jay-Z celebrated the 30th anniversary of his album 'Reasonable Doubt' with a star-studded performance at Yankee Stadium.",
-      "tmdbType": "movie",
-      "source": "rss:Rolling Stone",
-      "sources": [
-        {
-          "outlet": "Rolling Stone",
-          "tier": 7,
-          "url": "https://www.rollingstone.com/music/music-live-reviews/jay-z-reasonable-doubt-yankee-stadium-nas-beyonce-review-1235592389/",
-          "ageMin": 127,
-          "headline": "Jay-Z Performs Reasonable Doubt at Yankee Stadium with Nas, Beyoncé, and More",
-          "summary": "Alicia Keys, Blue Ivy, Memphis Bleek and more join rapper to celebrate 30th anniversary of his 1996 album in the Bronx"
-        }
-      ],
-      "ageMin": 127,
-      "_cand": {
-        "key": "rss:jay-z-performs-reasonable-doubt-at-yankee-stadium-with-nas-b",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Rolling Stone"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Rolling Stone",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 55,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
         "pop": 0,
         "breakout": 0,
         "big": 0,
