@@ -77,7 +77,18 @@ const familiesOf = (sig, popularity) =>
 const ANIME_RX = /\b(anime|manga|naruto|one piece|dragon ball|pok[eé]mon|jujutsu|demon slayer|attack on titan|my hero academia|sailor moon|bleach|ghibli|gundam|zelda|minecraft|street fighter|mortal kombat|video game adaptation)\b/i;
 
 // The short label a person would actually post about (search recall beats precision here).
-const buzzTermOf = (s) => (s.work?.title || s.primaryEntity || "").split(/[|:–—,]|\s[-]\s/)[0].trim().slice(0, 60);
+// Extract the real SUBJECT from a headline (fixes roundup/label headlines whose entity was being
+// read as the prefix — "Release Rundown: …" → "Release Rundown", so the X search found nothing).
+// A quoted work title wins (most entertainment headlines quote the work); else strip a label prefix.
+const ROUNDUP_PREFIX = /^\s*(release rundown|box office|stream|trailer|first look|exclusive|interview|watch|review|recap|roundup|what to watch|new on \S+|weekend box office|opinion|analysis|report|breaking|update|listen)\b[:\-—|]*\s*/i;
+function headlineEntity(headline, fallback = "") {
+  const h = (headline || "").trim();
+  const q = h.match(/[‘’“”'"]([^‘’“”'"]{2,60})[‘’“”'"]/);
+  if (q && /[A-Za-z]{3}/.test(q[1])) return q[1].trim();
+  const stripped = h.replace(ROUNDUP_PREFIX, "").trim();
+  return (stripped || fallback || h).replace(/\s*[|:–—].*$/, "").trim().slice(0, 70) || (fallback || h).slice(0, 70);
+}
+const buzzTermOf = (s) => (s.work?.title || headlineEntity(s.headline, s.primaryEntity) || s.primaryEntity || "").split(/[|,]|\s[-]\s/)[0].trim().slice(0, 60);
 
 // Default HEADLINE source: trade RSS + Google News, merged (both keyless, both already built for
 // the news lane). Every failure degrades to [] — discovery never dies on one source.
@@ -179,7 +190,7 @@ export async function discoverStories({
     stories.push({
       storySlug: slugify(c.headline).slice(0, 60),
       kind: "headline",
-      primaryEntity: c.headline.replace(/[|:–—-].*$/, "").trim().slice(0, 80) || c.headline.slice(0, 80),
+      primaryEntity: headlineEntity(c.headline).slice(0, 80) || c.headline.slice(0, 80),
       work: null,
       category: cat,
       released: null,
