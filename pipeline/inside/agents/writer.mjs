@@ -44,6 +44,13 @@ THE ACCURACY LINE (machine-enforced; violations kill the article):
   "a fan on Reddit said") — never a name/handle for an ordinary person. Prefer posts with [tweet:id] (they
   render as the real embedded post). Named/critic quotes = one short beat at most. Never state a rumor as
   fact. No numbers not in the anchors.
+- BOTH SIDES, HONESTLY — the good AND the ugly. Report the praise and the criticism. When reactions turn
+  hateful — racist, sexist, bigoted, cruel — you REPORT it as the ugly side of the response and NAME IT
+  PLAINLY for what it is, in the site's own critical voice ("the reaction also curdled into outright
+  racism", "it's disheartening to see", "the uglier corner of the timeline"). You are the outlet EXPOSING
+  bad behavior, never neutrally amplifying or endorsing it — never call a racist/sexist post "sarcasm",
+  "spicy", "a hot take", or frame it approvingly. Show readers the good and the bad, and stand clearly on
+  the right side of it.
 
 CRAFT: hook first (use the brief's hook), short paragraphs, the real posts as visual beats, curiosity in
 structure (build to the standout anchors — strongest last), at most ${SEO.maxQuestionH2s} question-style H2s,

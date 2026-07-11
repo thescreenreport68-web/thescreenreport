@@ -15,7 +15,7 @@ import { gnewsArticleId, decodeGnewsBase64, decodeGnewsUrl } from "../../lib/gne
 import { discoverStories } from "../discover.mjs";
 import { trendingSearches, wikiSpikes, tmdbMatch } from "../signals.mjs";
 import { xSearchIds } from "../xsearch.mjs";
-import { norm, quoteIsVerbatim, meetsFloor, fallbackQueries } from "../reactionFinder.mjs";
+import { norm, quoteIsVerbatim, meetsFloor, fallbackQueries, isMediaHandle } from "../reactionFinder.mjs";
 import { routeForStory, MAX_EMBEDS } from "../config.inside.mjs";
 import { loadStore, alreadyPublished, recordInsidePublished, parkAngle, parkedTries, clearParked, insideKey } from "../store.mjs";
 import {
@@ -691,6 +691,17 @@ await check("anime demoted unless OVERWHELMING real popularity (10+ posts, 1000+
     ? ({ popularPosts: 15, maxLikes: 2200, sumLikes: 30000, topIds: [] }) : NO_X()));
   const naruto2 = big.find((s) => /naruto/.test(s.storySlug));
   assert.ok(naruto2.discourseHeat > 40, "overwhelming real popularity un-caps anime");
+});
+
+// ── reactionFinder: media-vs-people embed filter (owner REV 7) ───────────────────────────────────
+console.log("— media-vs-people filter —");
+await check("news outlets/aggregators are excluded; individual people (incl. commentators) are kept", () => {
+  for (const h of ["Deadline", "@Variety", "DiscussingFilm", "IGN", "PopCrave", "ToonHive", "THR"]) {
+    assert.ok(isMediaHandle(h), `${h} should be excluded as media`);
+  }
+  for (const h of ["jdrider02", "MelohRush", "ChannelAwesome", "ramzpaul", "somefan123"]) {
+    assert.ok(!isMediaHandle(h), `${h} is a person and must be kept`);
+  }
 });
 
 // ── reactionFinder: headline-quote guard ─────────────────────────────────────────────────────────

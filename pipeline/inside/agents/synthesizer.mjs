@@ -11,6 +11,9 @@ and numbered AUDIENCE posts (A1, A2…), plus a sentiment picture.
 Your brief must:
 - Find the genuinely interesting story in the material (the hook a reader can't skip).
 - Lay out the sides of the reaction/argument honestly — never overstate; if the material skews one way, say so.
+- Surface BOTH the positive AND the negative reactions. If any reactions are hateful (racist/sexist/bigoted/
+  cruel), flag them plainly in "mustInclude" as the ugly side to be REPORTED CRITICALLY (the site exposes
+  and condemns the bad behavior — never neutral, never endorsing).
 - Pick the STANDOUT anchors by their ids (the quotes that carry the piece; best saved for last).
 - Note what MUST be included (the facts/points the article is incomplete without).
 - Refer to anchors ONLY by id (R2, A5) — never re-quote or paraphrase quote text (the writer copies

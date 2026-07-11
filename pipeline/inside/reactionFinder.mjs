@@ -97,11 +97,29 @@ export async function scanPagesForTweets(sources, { fetchImpl = fetch, maxPages 
 // Tweets ARE reactions, not just embeds: a public post is the primary artifact itself (the
 // playbook's "official oEmbed is the receipt"). The text comes from X's own syndication API, so
 // it is verbatim by construction; one cheap LLM pass classifies relevance + who the author is.
+// Known ENTERTAINMENT-NEWS OUTLET / AGGREGATOR handles (owner REV 7: "we want PEOPLE, not media"). A
+// news org posting a headline is not "people talking". Individual critics/commentators/creators are
+// NOT here (owner keeps them). Deterministic backstop for the LLM's isOutlet flag.
+const MEDIA_HANDLES = new Set([
+  "deadline", "variety", "thr", "hollywoodreporter", "thewrap", "ign", "collider", "discussingfilm",
+  "screenrant", "comicbook", "comicbookmovie", "empiremagazine", "totalfilm", "rottentomatoes",
+  "metacritic", "cinemablend", "slashfilm", "indiewire", "ew", "entertainmentweekly", "people",
+  "tmz", "etonline", "accessonline", "billboard", "pitchfork", "rollingstone", "complex", "pagesix",
+  "toonhive", "culturecrave", "popbase", "popcrave", "filmupdates", "worldofreel", "thefilmstage",
+  "cbr", "gamespot", "polygon", "kotaku", "nme", "consequence", "stereogum", "uproxx", "bleedingcool",
+  "screendaily", "filmupdates", "flixchatter", "discussingfilm", "culturecrave", "dexerto",
+]);
+export const isMediaHandle = (h) => MEDIA_HANDLES.has(String(h || "").toLowerCase().replace(/^@/, ""));
+
 const CLASSIFY_TWEETS_SYS = `You classify public X (Twitter) posts for an audience-reaction desk. For each post decide:
 - aboutEvent: is it a genuine reaction ABOUT THE SUBJECT (not spam/ads/unrelated, not a different work with
   a similar name)? Be strict for short/common titles.
-- speakerType: celebrity|filmmaker|castmate|crew|musician|company|official if the AUTHOR is a publicly known
-  figure/organization (judge by the account name; verified helps) — otherwise "fan" for ordinary users.
+- isOutlet: is the AUTHOR a NEWS ORGANIZATION, media outlet, or news-AGGREGATOR account that REPORTS
+  entertainment news / posts headlines (e.g. Deadline, Variety, The Hollywood Reporter, IGN, DiscussingFilm,
+  Pop Crave, Culture Crave)? true ONLY for such reporting/aggregator accounts. An individual critic,
+  commentator, creator, celebrity, or ordinary fan giving their OWN opinion is NOT an outlet → false.
+- speakerType: celebrity|filmmaker|castmate|crew|musician|critic|creator if the AUTHOR is a publicly known
+  individual — otherwise "fan" for ordinary users. (Never label an ordinary user a company.)
 - connection: the author's publicly-known relationship to the subject ONLY if certain — else "".
 - stance: positive|negative|mixed|neutral. Output STRICT JSON only.`;
 
@@ -116,10 +134,12 @@ ANGLE: ${angle.angle} (form: ${angle.form})
 POSTS:
 ${JSON.stringify(items, null, 1)}
 
-JSON: {"posts":[{"i":0,"aboutEvent":true,"speakerType":"","connection":"","stance":""}]}`;
+JSON: {"posts":[{"i":0,"aboutEvent":true,"isOutlet":false,"speakerType":"","connection":"","stance":""}]}`;
   try {
     const { data } = await chatImpl({ model, system: CLASSIFY_TWEETS_SYS, user, json: true, maxTokens: 1200, temperature: 0 });
-    return (data?.posts || []).filter((p) => p && p.aboutEvent && Number.isInteger(p.i) && tweets[p.i]);
+    // Drop MEDIA/OUTLET posts entirely — we embed PEOPLE, not news orgs posting headlines (owner REV 7).
+    return (data?.posts || []).filter((p) => p && p.aboutEvent && Number.isInteger(p.i) && tweets[p.i]
+      && !p.isOutlet && !isMediaHandle(tweets[p.i]?.user?.screen_name));
   } catch {
     return [];
   }
@@ -326,7 +346,7 @@ export async function harvestReactions(trigger, angle, {
       // the fan-post spine once TWITTERAPI_KEY is set); (2) tweet URLs already embedded in the
       // coverage pages; (3) a raw-HTML page scan (roundups carry the posts extraction strips).
       const who = angle.focusEntity || trigger.primaryEntity;
-      const searchIds = await xSearchImpl(who, { max: MAX_EMBEDS * 2 }).catch((e) => { diag(`x-search → ERR ${String(e?.message || e).slice(0, 80)}`); return []; });
+      const searchIds = await xSearchImpl(who, { max: MAX_EMBEDS * 3 }).catch((e) => { diag(`x-search → ERR ${String(e?.message || e).slice(0, 80)}`); return []; });
       const ids = [...new Set([...searchIds, ...findTweetIds(withText), ...await scanImpl(bundle?.sources || withText)])];
       ({ tweets = [], ids: tweetIds = [] } = await cacheTweetsImpl(ids.slice(0, MAX_EMBEDS * 3)));
       diag(`x → search ${searchIds.length}, total-ids ${ids.length}, syndication-resolved ${tweets.length}`);
