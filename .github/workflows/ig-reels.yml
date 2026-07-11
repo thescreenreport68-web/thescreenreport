@@ -23,6 +23,9 @@ concurrency:
   group: ig-lane # shared with ig-analytics so the two never race on the ledger commit
   cancel-in-progress: false
 
+permissions:
+  contents: write # helps if the org allows it; the PAT push below is the reliable path
+
 jobs:
   run:
     runs-on: ubuntu-latest
@@ -82,6 +85,8 @@ jobs:
       # around other lanes' pushes, and FAILS LOUDLY if the ledger can't be persisted.
       - name: commit state (ledgers — must never be lost)
         if: always()
+        env:
+          TSR_GH_TOKEN: ${{ secrets.TSR_GH_TOKEN }}
         run: |
           git config user.name "tsr-ig-bot" && git config user.email "bot@thescreenreport.com"
           # `git add -A data/ig` stages every non-ignored ledger change and is a no-op for
@@ -90,9 +95,11 @@ jobs:
           git add -A data/ig
           if git diff --cached --quiet; then echo "no state changes"; exit 0; fi
           git commit -m "ig: state $(date -u +%FT%H%M)"
+          # push with the PAT — the default github-actions token is read-only on this repo (403).
+          REMOTE="https://x-access-token:${TSR_GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
           for i in 1 2 3 4 5; do
             git rebase --abort 2>/dev/null || true   # clear any halted rebase from a prior conflicting attempt
-            git pull --rebase --autostash origin ${GITHUB_REF_NAME} && git push origin HEAD:${GITHUB_REF_NAME} && exit 0
+            git pull --rebase --autostash "$REMOTE" ${GITHUB_REF_NAME} && git push "$REMOTE" HEAD:${GITHUB_REF_NAME} && exit 0
             echo "push attempt $i failed — retrying"; sleep $((i * 10))
           done
           echo "::error::ig ledger could not be pushed — manual reconcile required" && exit 1
