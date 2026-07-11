@@ -1,0 +1,70 @@
+{
+  "id": "news-don-iwerks-dies-at-96",
+  "slug": "don-iwerks-disney-camera-and-projection-pioneer-dies-at-96",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": null,
+      "cat": "celebrity/news",
+      "format": [
+        "a 142-word run-on sentence (>55 — split it)",
+        "Flesch 39 < 40 (too dense to read comfortably)"
+      ],
+      "cuts": 1,
+      "broken": []
+    },
+    "attempt2": {
+      "score": null,
+      "cat": "celebrity/news",
+      "format": [
+        "a 142-word run-on sentence (>55 — split it)"
+      ],
+      "cuts": 1,
+      "broken": []
+    }
+  },
+  "editorial": {
+    "status": "confirmed",
+    "entity": "Don Iwerks",
+    "work": null,
+    "outlet": "hollywoodreporter.com"
+  },
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
+    "deterministic": {
+      "words": 397,
+      "h2s": 3,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 2,
+      "hasSources": true,
+      "faqCount": 4,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": true,
+      "maxSentence": 142,
+      "avgSentence": 22,
+      "flesch": 40,
+      "bannedTells": 0,
+      "fillerPraise": 1,
+      "kwExact": 3,
+      "hardBlocks": [
+        "a 142-word run-on sentence (>55 — split it)"
+      ]
+    },
+    "hardBlocks": []
+  },
+  "score": null,
+  "category": "celebrity",
+  "subcategory": "news",
+  "audit": {
+    "ok": true,
+    "internalLinks": 0,
+    "failed": []
+  },
+  "ms": 107644
+}
