@@ -296,7 +296,12 @@ async function processJob(article, { skipStages = new Set() } = {}) {
     const violations = lintManifest(job.shots, job.audio.words, durationSec, job.facts.entities);
     const hard = violations.filter((v) => ["no-shots", "coverage"].includes(v.rule));
     const syncViolations = violations.filter((v) => v.rule === "entity-sync");
-    if (syncViolations.length >= 3) hard.push(...syncViolations);
+    // Count DISTINCT spoken beats, not raw mentions: one sentence that names several people
+    // at the same instant (a family roster, a cast list) is ONE unavoidable miss, not a
+    // systematic composer failure — it should never HOLD a fully-rendered video. Hold only
+    // when ≥3 SEPARATE beats miss their subject (a genuinely broken manifest). (2026-07-11)
+    const syncBeats = new Set(syncViolations.map((v) => (v.detail.match(/at ([\d.]+)s/) || [, ""])[1]));
+    if (syncBeats.size >= 3) hard.push(...syncViolations);
     job.qc.sync = { violations, pass: hard.length === 0 };
     jlog(job, "synccheck", violations.length ? violations.map((v) => v.rule).join(",") : "clean");
     if (hard.length) return holdJob(job, "synccheck", hard.map((v) => `${v.rule}: ${v.detail}`).join("; "));
