@@ -233,10 +233,10 @@ async function processJob(article, { skipStages = new Set() } = {}) {
     job.audio.durationSec = r.result.whisper.duration;
     job.audio.windows = r.result.windows;
     job.audio.verbatim = r.result.verdict.reason;
-    // owner floor: EVERY video ≥30s of story. A 2-3s near-miss on an otherwise-good take
-    // is a read-speed quirk, not an under-delivery — the word floor (108+) already biases
-    // long; only HOLD when the synthesis is genuinely short (a padding/writer failure).
-    if (job.audio.durationSec < IG.script.minSec - 3)
+    // owner floor: ~25s minimum. Kept 1s below minSec so a fast read of a floor-length script
+    // (90 words ≈ 24.3s at the fast ~3.7wps pace) SHIPS rather than passing the word floor and
+    // then dying here — the two floors must agree. Typical reads land 25-40s. (2026-07-11)
+    if (job.audio.durationSec < IG.script.minSec - 1)
       return holdJob(job, "align", `spoken duration ${job.audio.durationSec.toFixed(1)}s < ${IG.script.minSec}s floor (script ${normWords(job.script.sentences.join(" ")).length} words)`);
     stageDone(job, "align");
   }

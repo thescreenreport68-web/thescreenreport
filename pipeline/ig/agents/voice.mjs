@@ -111,11 +111,12 @@ function wavDuration(wav) {
 
 // ── the listening judge (the automation's own ear) ──────────────────────────────
 const JUDGE_SYS =
-  'You are a strict broadcast voice director for a premium entertainment-news brand. Listen to this Instagram-reel voiceover and judge DELIVERY only (not content). STRICT JSON {"flow":0-10,"energy":0-10,"pauseQuality":0-10,"endingLands":boolean,"soundsRobotic":boolean,"worstMoment":string} — ' +
+  'You are a strict broadcast voice director for a premium entertainment-news brand. Listen to this Instagram-reel voiceover and judge DELIVERY only (not content). STRICT JSON {"flow":0-10,"energy":0-10,"pauseQuality":0-10,"endingLands":boolean,"engagementLands":boolean,"soundsRobotic":boolean,"worstMoment":string} — ' +
   "flow: does it drive forward as ONE continuous story, every sentence handing off to the next, or does it die between sentences? " +
   "energy: does it sound genuinely excited and alive throughout, including AFTER pauses? " +
   "pauseQuality: are pauses tight, purposeful beats with an energetic pickup after — or momentum killers? " +
   "endingLands: does the ending BREATHE and land its final question/ask naturally and warmly (true), or does it feel abrupt, rushed, cut off, or bolted-on (false)? " +
+  "engagementLands: are the rhetorical questions and punchy/engaging phrases DELIVERED so they land — a real beat on a question, a lift on the payoff (true) — or rushed over and flat so the moment is lost (false)? " +
   "Hold a HIGH bar (an average automated read scores 5-6; only a genuinely engaging anchor read scores 8+).";
 
 export async function judgeTake(wavPath) {
@@ -124,6 +125,7 @@ export async function judgeTake(wavPath) {
   return {
     flow, energy, pauseQuality,
     endingLands: j.endingLands !== false, // absent = benefit of the doubt
+    engagementLands: j.engagementLands !== false, // absent = benefit of the doubt
     soundsRobotic: Boolean(j.soundsRobotic),
     worstMoment: String(j.worstMoment || ""),
   };
@@ -136,6 +138,7 @@ export function scoreTake(judge, gaps) {
   total -= Math.min(2, Math.max(0, gaps.count - IG.voice.maxLongGaps) * 2);
   if (judge.soundsRobotic) total -= 5;
   if (judge.endingLands === false) total -= 4; // an abrupt/bolted ending is a real defect (owner rule)
+  if (judge.engagementLands === false) total -= 3; // flat questions/phrases lose the moment — rank down (owner 2026-07-11)
   return total;
 }
 

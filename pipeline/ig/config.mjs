@@ -82,10 +82,11 @@ export const IG = {
 
   // ── script bounds (owner 2026-07-10: EVERY video ≥30s, target 30-40s; still NO
   // padding — length comes from verified facts, thin stories are skipped by the scout)
-  // wps is the OBSERVED gpt-audio pace after pause-tightening (~3.6, faster than a human read);
-  // the word floor is set so even a fast read clears the 30s minimum, and the ceiling gives
-  // the writer room (108-144 words ≈ 30-40s) so it doesn't hold by overshooting. (2026-07-11)
-  script: { minWords: 108, maxWords: 144, minSec: 30, maxSec: 48, targetSec: [33, 42], wps: 3.4 },
+  // Length band 25-40s (owner 2026-07-11): 25s is the HARD floor (never below), 30-40s is the
+  // TARGET the writer reaches for. minWords clears 25s even at a fast ~3.7wps read; the writer
+  // engagingly expands a thin story up to the floor rather than holding. wps = the observed
+  // gpt-audio pace after pause-tightening.
+  script: { minWords: 88, maxWords: 136, minSec: 25, maxSec: 44, targetSec: [30, 40], wps: 3.4 },
 
   // ── render spec (plan §1.3 anti-downrank invariants + §5.6 premium bar)
   width: 1080,
