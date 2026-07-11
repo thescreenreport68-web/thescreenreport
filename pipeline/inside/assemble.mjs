@@ -123,11 +123,18 @@ export function buildInsideMarkdown({ article, trigger, angle, factBlock, image,
   // reaction display cards carry ONLY the quote text (no tweetId, so nothing renders an embed).
   const inlined = NO_EMBEDS ? { body: (article.body || "").trim(), inlined: new Set() }
     : insertInlineEmbeds((article.body || "").trim(), factBlock, embeds);
+  // FREE MODE: reaction cards for ordinary people carry ONLY "A viewer" + the quote — no platform
+  // name (owner: generic attribution) and no raw relative date ("6h"). Named voices keep attribution.
+  const isNamed = (r) => r.speaker && r.speaker !== "A viewer";
+  const okDate = (d) => (typeof d === "string" && /^\d{4}-\d{2}-\d{2}/.test(d) ? d : undefined);
   const reactions = (article.reactionsRender || [])
     .filter((r) => r && r.speaker !== undefined && r.quote)
     .map((r) => clean({
       speaker: r.speaker || "A viewer",
-      connection: r.connection, platform: r.platform, date: r.date, quote: r.quote,
+      connection: r.connection,
+      platform: NO_EMBEDS && !isNamed(r) ? undefined : r.platform,
+      date: NO_EMBEDS ? okDate(r.date) : r.date,
+      quote: r.quote,
       ...(NO_EMBEDS ? {} : { tweetId: tweetIdFor(r.quote) ?? (factBlock.tweetIds.includes(r.tweetId) ? r.tweetId : undefined) }),
     }))
     // A post embedded INLINE is its own display — a duplicate bottom card would repeat it.
