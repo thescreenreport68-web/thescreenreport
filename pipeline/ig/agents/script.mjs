@@ -1,0 +1,120 @@
+// AGENT 5 — SCRIPT WRITER: the viral-hook heart (plan §2.2 #5, §1.5).
+// Writes ONLY from verified facts. Deterministic lint (agent 6) drives the retry loop —
+// violations are named back to the writer at low temperature. Max 2 attempts, then hold.
+import { llm } from "../models.mjs";
+import { IG } from "../config.mjs";
+import { lintScript } from "../lib/lint.mjs";
+import { lintEnding } from "./engage.mjs";
+import { loadWeights } from "../lib/ledger.mjs";
+import { normWords } from "../lib/util.mjs";
+
+const SYS = `You write 33-42 second spoken scripts for Instagram Reels about Hollywood news. Your ONLY goal: the reel goes viral — maximum watch time (hook + density), maximum engagement on the chosen ask.
+
+HARD RULES:
+- Use ONLY the verified facts provided. Never add, infer, or embellish a fact. Go DEEP on the real facts (the vivid specifics, the numbers, the who-said-what) to fill the runtime — never pad with filler or repetition.
+- ONE story only. No background tangents.
+- HOOK (sentence 1): ≤12 words, contains the star/film name AND the single most surprising concrete fact. No greetings, no "in recent news", never open with "revealed/teased/talked about".
+- Order facts by DESCENDING surprise — the best material inside the first 10 seconds, never saved for the end.
+- Sentences ≤14 words, punchy, spoken-word rhythm (contractions fine). 90-125 words total (this is a 33-42 second read — use the material).
+- WRITE FOR THE VOICE: read your script aloud in your head — it must flow as ONE continuous
+  broadcast, never a list of disconnected lines. Get flow from SHORT connected sentences, never
+  from long ones: start sentences with natural momentum connectives where they help the handoff
+  (And, But, Now, Then, Because, So — connectives are FLOW, not padding), and if any sentence
+  runs past 14 words, SPLIT it into two short ones. Vary the rhythm (a 6-word jab after a
+  12-word line). Every sentence should pull the listener into the next one.
+- THE ENDING IS ONE FLOWING BEAT OF TWO SENTENCES, written by YOU as part of the story:
+  {ENDING_GUIDANCE}. The ask must feel inevitable after the question — never a topic change,
+  never bolted on. Ask examples for this video: {ASK_EXAMPLES}. NEVER "follow for more".
+  Never bait phrases ("wait for it", "you won't believe", "tag a friend").
+- Never state the same fact twice — every sentence adds NEW information.
+- Numbers: write digits (the pronunciation pass handles speech).
+
+Return STRICT JSON: {"sentences":[string], "hookStyle":"record-number"|"casting-shock"|"first-look"|"return-nostalgia"|"debate"|"reveal", "ending":"question"}`;
+
+export async function writeScript({ article, facts, segment, engage }) {
+  const weights = loadWeights();
+  const factList = facts.facts
+    .map((f) => `- (surprise ${f.surprise}) ${f.claim}`)
+    .join("\n");
+  const learned = Object.keys(weights.hookStyles || {}).length
+    ? `\nLEARNED: these hook styles over/under-perform for our audience: ${JSON.stringify(weights.hookStyles)} — prefer high performers when the story allows.`
+    : "";
+  const sys = SYS
+    .replace("{ENDING_GUIDANCE}", engage?.family?.writerGuidance || "end with a genuine question the audience wants to answer, then invite them to answer it in the comments")
+    .replace("{ASK_EXAMPLES}", (engage?.family?.examples || ['"Let us know in the comments below."']).join(" or "));
+  const base = `STORY: ${facts.storyOneLine || article.title}\nSEGMENT: ${segment || "news"}\nENGAGEMENT GOAL: ${engage?.goal || "comments"}\nENTITIES: ${facts.entities.map((e) => e.name).join(", ")}\nVERIFIED FACTS (the ONLY allowed material):\n${factList}${learned}`;
+
+  let violations = [];
+  let lastScript = null;
+  for (let attempt = 0; attempt < 3; attempt++) {
+    const user = attempt === 0 ? base : `${base}\n\nYOUR PREVIOUS ATTEMPT FAILED THESE GATES — fix exactly these, change nothing else that worked:\n${violations.map((v) => `- ${v.rule}: ${v.detail}`).join("\n")}`;
+    const res = await llm({
+      role: "writer",
+      system: sys,
+      user,
+      temp: attempt === 0 ? 0.7 : 0.2,
+      maxTokens: 1600,
+      json: true,
+    });
+    const script = {
+      // deterministic re-chunking: however the model groups the array, we lint and speak
+      // real sentences (the flow prompt tempts it to return one flowing paragraph)
+      sentences: (res.sentences || [])
+        .flatMap((s) => String(s).split(/(?<=[.!?…])\s+/))
+        .map((s) => s.trim())
+        .filter(Boolean),
+      hookStyle: res.hookStyle || "reveal",
+      ending: "question",
+    };
+    violations = [
+      ...lintScript(script, facts.entities, `${article.title} ${facts.storyOneLine || ""}`),
+      ...lintEnding(script.sentences, engage?.goal || "comments"),
+    ];
+    if (!violations.length) {
+      // SEMANTIC ending check (text-only, ~free): regex can't hear a non-sequitur ask —
+      // "Save this for when you need a peek inside" passes patterns and still lands flat.
+      if (attempt < 2) {
+        try {
+          const sem = await llm({
+            role: "classify",
+            system:
+              'Judge ONLY the ending of a short news reel script. STRICT JSON {"lands":boolean,"fix":string} — lands: do the final two sentences read as a natural, satisfying conclusion of THIS story (a question that grows out of the story, then an ask that follows from the question)? false if the ask feels bolted-on, generic, or a non-sequitur. fix: one sentence of direction if false.',
+            user: `STORY: ${facts.storyOneLine}\nSCRIPT ENDING:\n${script.sentences.slice(-3).join("\n")}`,
+            temp: 0,
+            maxTokens: 120,
+            json: true,
+          });
+          if (sem.lands === false) {
+            violations = [{ rule: "ending-semantic", detail: sem.fix || "the ask does not follow from the story — rewrite the final two sentences as one natural beat" }];
+            lastScript = script;
+            continue;
+          }
+        } catch { /* semantic check is best-effort */ }
+      }
+      return { script, attempts: attempt + 1 };
+    }
+    lastScript = script;
+  }
+  // DETERMINISTIC LENGTH REPAIR: an overlong script trims whole sentences from just
+  // before the ending pair (hook block + ending stay intact) — repair beats retry-and-pray.
+  if (lastScript && violations.every((v) => ["too-long", "duration"].includes(v.rule))) {
+    const s = [...lastScript.sentences];
+    while (normWords(s.join(" ")).length > (IG?.script?.maxWords ?? 125) && s.length > 7) s.splice(s.length - 3, 1);
+    const trimmed = { ...lastScript, sentences: s };
+    const still = [...lintScript(trimmed, facts.entities, `${article.title} ${facts.storyOneLine || ""}`), ...lintEnding(trimmed.sentences, engage?.goal || "comments")];
+    if (!still.length) return { script: trimmed, attempts: 3, trimmed: true };
+  }
+  // DETERMINISTIC ENDING REPAIR: if the story passed every gate except ask PHRASING,
+  // swap in the canonical ask for the goal (the writer's flow + question stay intact) —
+  // repair beats retry-and-pray (same philosophy as the caption repair).
+  if (lastScript && violations.every((v) => v.rule.startsWith("ending"))) {
+    const canonical = (engage?.family?.examples?.[0] || '"Let us know in the comments below."').replace(/^"|"$/g, "");
+    const s = [...lastScript.sentences];
+    if (/\b(save|send|show|comment|bookmark|let us know|tell us)\b/i.test(s[s.length - 1])) s.pop();
+    s.push(canonical);
+    const repaired = { ...lastScript, sentences: s };
+    const still = [...lintScript(repaired, facts.entities, `${article.title} ${facts.storyOneLine || ""}`), ...lintEnding(repaired.sentences, engage?.goal || "comments")];
+    if (!still.length) return { script: repaired, attempts: 3, repairedEnding: true };
+  }
+  return { script: null, attempts: 3, hold: `script failed lint after 3 attempts: ${violations.map((v) => `${v.rule}(${v.detail?.slice(0, 60)})`).join(", ")}` };
+}

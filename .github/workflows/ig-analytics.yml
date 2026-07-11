@@ -1,0 +1,43 @@
+# INSTAGRAM REELS LANE — insights collection + weekly learner (plan §5.7).
+# ⛔ CRON DISABLED (owner 2026-07-10: nothing runs unattended until go-live). This
+# workflow never posts (read-only insights + verify), but stays off until we go live.
+# To activate: uncomment the `schedule:` block. Manual dispatch works any time.
+name: ig-analytics
+on:
+  # schedule:
+  #   - cron: "30 */6 * * *" # every 6h: collect due insight marks (T+3h/24h/72h/7d)
+  #   - cron: "0 8 * * 1" # Mondays: the strategy learner
+  workflow_dispatch: {}
+
+concurrency:
+  group: ig-analytics
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - name: verify-live + collect + learn
+        env:
+          TSR_SITE: ${{ github.workspace }}
+          ZERNIO_API_KEY: ${{ secrets.ZERNIO_API_KEY }}
+        run: |
+          node pipeline/ig/igrun.mjs --verify || echo "::warning::some scheduled posts failed live verification"
+          node pipeline/ig/igrun.mjs --analytics
+          if [ "$(date -u +%u)" = "1" ]; then node pipeline/ig/igrun.mjs --learn; fi
+      - name: commit ledgers
+        if: always()
+        run: |
+          git config user.name "tsr-ig-bot" && git config user.email "bot@thescreenreport.com"
+          git add data/ig/ledger data/ig/weights.json data/ig/posted.json data/ig/holds.json 2>/dev/null || true
+          if git diff --cached --quiet; then echo "no changes"; exit 0; fi
+          git commit -m "ig: insights $(date -u +%FT%H)"
+          for i in 1 2 3; do
+            git pull --rebase --autostash origin ${GITHUB_REF_NAME} && git push origin HEAD:${GITHUB_REF_NAME} && exit 0
+            sleep $((i * 10))
+          done
+          echo "::error::insights ledger push failed" && exit 1

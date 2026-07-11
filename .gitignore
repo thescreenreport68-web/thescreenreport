@@ -34,3 +34,9 @@ next-env.d.ts
 # FIND-engine volatile run logs (regenerated every run; per FIND_HALF_PLAN §5 state belongs in D1, not git)
 data/find/runs/
 pipeline/data/imdb/
+
+# IG reels lane — ephemeral artifacts (source of truth = pipeline/ig/; ledgers persist via the workflow)
+data/ig/work/
+data/ig/out/
+data/ig/runs/
+data/ig/music/

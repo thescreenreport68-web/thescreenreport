@@ -1,0 +1,101 @@
+# INSTAGRAM REELS LANE — daily slate (plan §6.3).
+# ⛔ AUTO-POST CRON DISABLED (owner 2026-07-10: "do not publish to Instagram yet").
+# The schedule below is commented out so NOTHING posts unattended. Manual dispatch stays
+# available and defaults to DRAFT (nothing published). To GO LIVE later: uncomment the
+# `schedule:` block — a schedule event forces --live. Kill switch: commit site/data/ig/PAUSED.
+name: ig-reels
+on:
+  # schedule:
+  #   - cron: "0 13 * * *" # 13:00 UTC ≈ 9am ET — builds the slate before the 12:30 ET slot
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "draft | live | dry | no-publish"
+        default: "draft"
+      limit:
+        description: "reels this run"
+        default: "1"
+      slug:
+        description: "force one article slug (optional)"
+        default: ""
+
+concurrency:
+  group: ig-reels
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - name: system deps
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: python deps (cached)
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ig-pip-${{ runner.os }}-v1
+      - run: pip -q install faster-whisper kokoro-onnx soundfile opencv-python-headless pillow numpy
+      - name: kokoro models (fallback voice — cached)
+        uses: actions/cache@v4
+        id: kokoro
+        with:
+          path: .models
+          key: kokoro-v1.0
+      - if: steps.kokoro.outputs.cache-hit != 'true'
+        run: |
+          mkdir -p .models
+          curl -sL -o .models/kokoro-v1.0.onnx https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/kokoro-v1.0.onnx
+          curl -sL -o .models/voices-v1.0.bin https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/voices-v1.0.bin
+      - name: whisper model (alignment wall — cached, ~490MB)
+        uses: actions/cache@v4
+        with:
+          path: .models/whisper
+          key: whisper-small-en-int8
+      - name: run
+        env:
+          TSR_SITE: ${{ github.workspace }}
+          TSR_PYTHON: python3
+          TSR_MODELS: ${{ github.workspace }}/.models
+          WHISPER_CACHE: ${{ github.workspace }}/.models/whisper
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+          ZERNIO_API_KEY: ${{ secrets.ZERNIO_API_KEY }}
+          TSR_GH_TOKEN: ${{ secrets.TSR_GH_TOKEN }}
+        run: |
+          MODE="${{ github.event.inputs.mode || 'live' }}"   # schedule event ⇒ live
+          LIMIT="${{ github.event.inputs.limit || '1' }}"
+          SLUG="${{ github.event.inputs.slug }}"
+          FLAGS="--limit=$LIMIT"
+          [ "$MODE" = "live" ] && FLAGS="$FLAGS --live"
+          [ "$MODE" = "dry" ] && FLAGS="--dry"
+          [ "$MODE" = "no-publish" ] && FLAGS="$FLAGS --no-publish"
+          [ -n "$SLUG" ] && FLAGS="$FLAGS --slug=$SLUG"
+          node pipeline/ig/igrun.mjs $FLAGS
+      # ⚠ LOAD-BEARING: posted.json is the record of reels ALREADY scheduled on Zernio —
+      # losing this commit = a double-post next run. Runs even after failures, retries
+      # around other lanes' pushes, and FAILS LOUDLY if the ledger can't be persisted.
+      - name: commit state (ledgers — must never be lost)
+        if: always()
+        run: |
+          git config user.name "tsr-ig-bot" && git config user.email "bot@thescreenreport.com"
+          git add data/ig/posted.json data/ig/daily-state.json data/ig/holds.json data/ig/weights.json data/ig/lexicon.json data/ig/audio-provenance.json data/ig/ledger data/ig/asset-provenance data/ig/music 2>/dev/null || true
+          if git diff --cached --quiet; then echo "no state changes"; exit 0; fi
+          git commit -m "ig: state $(date -u +%FT%H%M)"
+          for i in 1 2 3 4 5; do
+            git pull --rebase --autostash origin ${GITHUB_REF_NAME} && git push origin HEAD:${GITHUB_REF_NAME} && exit 0
+            echo "push attempt $i failed — retrying"; sleep $((i * 10))
+          done
+          echo "::error::ig ledger could not be pushed — manual reconcile required" && exit 1
+      - name: run report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ig-run-report
+          path: data/ig/runs/
+          if-no-files-found: ignore
