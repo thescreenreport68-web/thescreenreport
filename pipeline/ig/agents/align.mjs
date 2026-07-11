@@ -19,9 +19,12 @@ export function whisperAlign(wavPath) {
 }
 
 // Verbatim verdict: normalized token edit distance vs the SPEAKABLE script.
-// Whisper itself mishears ~2-4% of words, so the wall allows small drift but fails on
-// real paraphrase (insertions of content phrases, dropped sentences).
-export function verbatimVerdict(speakableText, whisper, { tolerance = 0.12, maxRunInserted = 4 } = {}) {
+// Whisper mishears names/numbers, so plain token DRIFT is tolerated up to 0.18 (matching
+// the provider-transcript precheck — one consistent bar) while the real fabrication guards
+// stay strict: a run of 4+ inserted unknown words (ad-lib) and >15% length change (dropped/
+// added sentence) always fail. (audit 2026-07-11: 0.12 here vs 0.18 precheck caused a valid
+// take to pass one gate and hold at the next.)
+export function verbatimVerdict(speakableText, whisper, { tolerance = 0.18, maxRunInserted = 4 } = {}) {
   const a = normWords(speakableText);
   const b = normWords(whisper.text);
   if (!a.length || !b.length) return { pass: false, kind: "empty", reason: "empty transcript" };

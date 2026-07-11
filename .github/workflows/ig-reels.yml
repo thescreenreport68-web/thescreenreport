@@ -20,7 +20,7 @@ on:
         default: ""
 
 concurrency:
-  group: ig-reels
+  group: ig-lane # shared with ig-analytics so the two never race on the ledger commit
   cancel-in-progress: false
 
 jobs:
@@ -84,10 +84,14 @@ jobs:
         if: always()
         run: |
           git config user.name "tsr-ig-bot" && git config user.email "bot@thescreenreport.com"
-          git add data/ig/posted.json data/ig/daily-state.json data/ig/holds.json data/ig/weights.json data/ig/lexicon.json data/ig/audio-provenance.json data/ig/ledger data/ig/asset-provenance data/ig/music 2>/dev/null || true
+          # `git add -A data/ig` stages every non-ignored ledger change and is a no-op for
+          # missing files — the old enumerated list aborted atomically (exit 128) whenever
+          # any listed path was absent, silently committing NOTHING → double-post. (audit)
+          git add -A data/ig
           if git diff --cached --quiet; then echo "no state changes"; exit 0; fi
           git commit -m "ig: state $(date -u +%FT%H%M)"
           for i in 1 2 3 4 5; do
+            git rebase --abort 2>/dev/null || true   # clear any halted rebase from a prior conflicting attempt
             git pull --rebase --autostash origin ${GITHUB_REF_NAME} && git push origin HEAD:${GITHUB_REF_NAME} && exit 0
             echo "push attempt $i failed — retrying"; sleep $((i * 10))
           done
@@ -99,3 +103,15 @@ jobs:
           name: ig-run-report
           path: data/ig/runs/
           if-no-files-found: ignore
+      # the built reel(s) — downloadable for owner review (works for draft/no-publish test runs;
+      # out/ is git-ignored + ephemeral in CI, so the artifact is the only way to retrieve it)
+      - name: built video
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ig-video
+          path: |
+            data/ig/out/
+            data/ig/work/*/job.json
+          if-no-files-found: ignore
+          retention-days: 7

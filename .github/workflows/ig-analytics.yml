@@ -10,7 +10,7 @@ on:
   workflow_dispatch: {}
 
 concurrency:
-  group: ig-analytics
+  group: ig-lane # shared with ig-reels so the two never race on the ledger commit
   cancel-in-progress: false
 
 jobs:
@@ -33,10 +33,11 @@ jobs:
         if: always()
         run: |
           git config user.name "tsr-ig-bot" && git config user.email "bot@thescreenreport.com"
-          git add data/ig/ledger data/ig/weights.json data/ig/posted.json data/ig/holds.json 2>/dev/null || true
+          git add -A data/ig # -A stages all non-ignored ledger changes; no atomic-abort on a missing path (audit)
           if git diff --cached --quiet; then echo "no changes"; exit 0; fi
           git commit -m "ig: insights $(date -u +%FT%H)"
           for i in 1 2 3; do
+            git rebase --abort 2>/dev/null || true
             git pull --rebase --autostash origin ${GITHUB_REF_NAME} && git push origin HEAD:${GITHUB_REF_NAME} && exit 0
             sleep $((i * 10))
           done

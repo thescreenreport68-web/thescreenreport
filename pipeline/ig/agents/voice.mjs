@@ -244,7 +244,7 @@ export async function synthVoice({ slug, speakable, mood }) {
   // nothing passed the floor → one harder-directed retry on the best-scoring plan so far
   let usable = takes.filter((t) => t.wav);
   if (!usable.some((t) => t.pass)) {
-    const best = usable.sort((a, b) => (b.score ?? 0) - (a.score ?? 0))[0];
+    const best = usable.slice().sort((a, b) => (b.score ?? 0) - (a.score ?? 0))[0];
     const plan = plans.find((p) => p.label === best?.voice) || plans[0];
     try {
       const harder = await makeTake({ dir, sentences: speakable, voice: plan.voice, model: plan.model, mood, harder: true, label: `${plan.label}-hard` });
@@ -259,7 +259,10 @@ export async function synthVoice({ slug, speakable, mood }) {
     return fb;
   }
 
-  const winner = usable.sort((a, b) => (b.score ?? 0) - (a.score ?? 0))[0];
+  // a floor-PASSING take always beats a failing one (a bad ending / low axis is
+  // non-negotiable), then rank by score. (audit 2026-07-11)
+  const rank = (a, b) => (Number(b.pass || false) - Number(a.pass || false)) || ((b.score ?? 0) - (a.score ?? 0));
+  const winner = usable.sort(rank)[0];
   // learn: persist/refresh the winning plan; unlock if a locked plan keeps failing
   if (winner.pass) {
     weights.voice = { label: winner.realVoice || winner.voice, voice: winner.realVoice, model: winner.model || null, score: winner.score, at: new Date().toISOString() };

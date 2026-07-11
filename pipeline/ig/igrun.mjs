@@ -82,13 +82,16 @@ async function stageRun(job, stage, fn, timeoutMs) {
   }
 }
 
-// per-JOB cost attribution + both cap tiers (job parks, run stops)
+// per-JOB cost attribution + both cap tiers. JOB cap = park THIS job (distinct error kind
+// caught by processJob → holdJob → continue). RUN cap = stop the whole run. (audit 2026-07-11)
+class JobCapError extends Error {}
+class RunCapError extends Error {}
 function costGuard(job) {
   const jobUsd = costSpent() - (job.costs.baseline ?? 0);
   job.costs.usd = +jobUsd.toFixed(4);
   job.costs.calls = costCalls().length;
-  if (jobUsd > IG.maxJobUsd) throw new Error(`JOB COST CAP: $${jobUsd.toFixed(3)} > $${IG.maxJobUsd} — parking job`);
-  if (costSpent() > IG.maxRunUsd) throw new Error(`RUN COST CAP hit: $${costSpent().toFixed(3)} > $${IG.maxRunUsd}`);
+  if (jobUsd > IG.maxJobUsd) throw new JobCapError(`job cost $${jobUsd.toFixed(3)} > $${IG.maxJobUsd}`);
+  if (costSpent() > IG.maxRunUsd) throw new RunCapError(`RUN COST CAP $${costSpent().toFixed(3)} > $${IG.maxRunUsd}`);
 }
 
 // ── one job through the whole line ──────────────────────────────────────────────
@@ -201,8 +204,11 @@ async function processJob(article, { skipStages = new Set() } = {}) {
   if (need("align")) {
     const r = await stageRun(job, "align", async () => {
       let a = align({ wav: job.audio.voice.wav, speakable: job.script.speakable, displaySentences: job.script.sentences });
-      if (!a.verdict.pass && a.verdict.kind === "drift" && job.audio.voice.verbatimPre === "pass") {
-        jlog(job, "align", `whisper ${a.verdict.reason} ACCEPTED (provider transcript verbatim + ear-judge passed)`);
+      // Pure DRIFT (kind==="drift", not insert/length) is whisper mishearing, never a
+      // fabrication: accept it for a gpt take (provider transcript was verbatim) AND for a
+      // Kokoro take (deterministic TTS reads the exact words — it CANNOT ad-lib). (audit)
+      if (!a.verdict.pass && a.verdict.kind === "drift" && (job.audio.voice.verbatimPre === "pass" || job.audio.voice.engine === "kokoro")) {
+        jlog(job, "align", `whisper ${a.verdict.reason} ACCEPTED (${job.audio.voice.engine}: not an ad-lib)`);
         a.verdict = { ...a.verdict, pass: true, accepted: "drift-noise" };
         a.windows = sentenceWindowsSafe(job.script.sentences, a.whisper.words);
         a.displayWords = alignDisplayWordsSafe(job.script.sentences, a.whisper.words);
@@ -367,7 +373,14 @@ async function main() {
     };
     slate = [{ ...cand, score: 100, sendability: 8, breaking: false, segment: "Casting Watch" }];
   } else {
-    slate = await scout({ limit });
+    // a momentary OpenRouter/discovery outage must NOT crash the unattended workflow —
+    // treat a scout failure as "no candidates today" (the run exits cleanly). (audit 2026-07-11)
+    try {
+      slate = await scout({ limit });
+    } catch (e) {
+      console.error(`scout failed (${e.message}) — no slate this run`);
+      return;
+    }
   }
   if (args.dry) {
     console.log(JSON.stringify(slate.map((s) => ({ slug: s.slug, score: s.score, sendability: s.sendability, segment: s.segment, breaking: s.breaking })), null, 2));
@@ -392,8 +405,15 @@ async function main() {
     try {
       job = await processJob(cand);
     } catch (e) {
+      if (e instanceof RunCapError) { console.error(`  ${e.message} — stopping the run`); break; }
+      if (e instanceof JobCapError) {
+        // park THIS job (recorded so scout skips it next run) and keep going — one
+        // expensive story must never kill the run or silently re-charge every run
+        console.error(`  ${e.message} — parking this story`);
+        holdJob(loadJob(cand.slug) || saveJob(newJob(cand)), "cost", e.message);
+        continue;
+      }
       console.error(`  run-level error: ${e.message}`);
-      if (/COST CAP/.test(e.message)) break; // stop the whole run on budget
       continue;
     }
     if (job.hold) { console.log(`  ⏸ HOLD at ${job.hold.stage}: ${job.hold.reason}`); continue; }
@@ -448,4 +468,9 @@ async function main() {
   console.log(`\n═ run: ${built.length}/${slate.length} built · $${report.usd} total · $${report.usdPerPublished ?? "—"}/published · ${report.calls} calls`);
 }
 
-main().catch((e) => { console.error("FATAL:", e); process.exit(1); });
+// Always terminate explicitly: a lingering keep-alive socket (or any un-refd handle)
+// must never hang the unattended CI step after the work is done. (audit 2026-07-11)
+main().then(
+  () => process.exit(0),
+  (e) => { console.error("FATAL:", e); process.exit(1); },
+);

@@ -67,6 +67,15 @@ def fill_cell(src_path, cw, ch):
     return pil.crop((left, top, left + crop_w, top + crop_h)).resize((cw, ch), Image.LANCZOS)
 
 
+def safe_fill(src_path, cw, ch):
+    """One undecodable cell must never crash the whole composite — fall back to an ink
+    placeholder so the rest of the frame still renders (audit 2026-07-11)."""
+    try:
+        return fill_cell(src_path, cw, ch)
+    except Exception:
+        return Image.new("RGB", (cw, ch), INK)
+
+
 def boxes_for(n, x0, y0, w, h):
     """The formula: n<=3 -> n rows x 1 col; n>3 -> rows of 2, odd remainder = 1 full-width row."""
     rows = [1] * n if n <= 3 else [2] * (n // 2) + ([1] if n % 2 else [])
@@ -124,17 +133,17 @@ def main():
     if a.mode == "hero" and a.hero:
         hf, hl = (a.hero.split("|", 1) + [""])[:2]
         hero_h = int(H * 0.62)
-        canvas.paste(fill_cell(hf, W, hero_h), (0, 0))
+        canvas.paste(safe_fill(hf, W, hero_h), (0, 0))
         draw.rectangle([0, hero_h, W, hero_h + DIV], fill=RED)
         strip_y = hero_h + DIV
         for (x, y, cw, ch), (f, label) in zip(boxes_for(len(cells), 0, strip_y, W, H - strip_y) if cells else [], cells):
-            canvas.paste(fill_cell(f, cw, ch), (x, y))
+            canvas.paste(safe_fill(f, cw, ch), (x, y))
             name_chip(draw, canvas, label, x, y, cw, ch, font)
         if hl:
             name_chip(draw, canvas, hl, 0, 0, W, hero_h, font)
     else:
         for (x, y, cw, ch), (f, label) in zip(boxes_for(len(cells), 0, 0, W, H), cells):
-            canvas.paste(fill_cell(f, cw, ch), (x, y))
+            canvas.paste(safe_fill(f, cw, ch), (x, y))
             name_chip(draw, canvas, label, x, y, cw, ch, font)
         # red dividers over the seams
         n = len(cells)

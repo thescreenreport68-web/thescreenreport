@@ -97,13 +97,15 @@ export async function vision({ system, user, images = [], temp = 0, maxTokens = 
 }
 
 // ── shared SSE audio collector ─────────────────────────────────────────────────
-// timeoutMs is an IDLE timeout: the timer re-arms on every chunk. A slow-but-flowing
-// stream lives however long it needs (the stage watchdog is the outer bound); only a
-// stream that goes silent for the window is killed (2026-07-10: fixed total timeouts
-// murdered healthy slow streams all night).
+// Two guards (audit 2026-07-11): an IDLE timer (re-armed on each chunk — tolerates a
+// slow-but-flowing stream) AND an absolute HARD ceiling that never re-arms (a stream
+// that keeps sending keepalive pings but no real data, or just runs forever, is killed).
+// Either firing aborts the fetch so the socket closes and the Node event loop can drain.
 async function streamAudio(body, { label, timeoutMs }) {
   const ctl = new AbortController();
+  const hardMs = Math.max(timeoutMs * 3, 300000);
   let t = setTimeout(() => ctl.abort(), timeoutMs);
+  const hard = setTimeout(() => ctl.abort(), hardMs);
   const rearm = () => { clearTimeout(t); t = setTimeout(() => ctl.abort(), timeoutMs); };
   try {
     const res = await fetch(OR_URL, { method: "POST", headers: HEADERS(), body: JSON.stringify(body), signal: ctl.signal });
@@ -116,7 +118,7 @@ async function streamAudio(body, { label, timeoutMs }) {
     let errObj = null;
     let finished = false; // a stream that dies mid-read returns PARTIAL audio — reject it
     for await (const chunk of res.body) {
-      rearm(); // data is flowing — the stream earns more time
+      rearm(); // data is flowing — the stream earns more idle time (bounded by hardMs)
       buf += decoder.decode(chunk, { stream: true });
       let idx;
       while ((idx = buf.indexOf("\n")) !== -1) {
@@ -141,7 +143,7 @@ async function streamAudio(body, { label, timeoutMs }) {
     const audio = Buffer.concat(audioB64.map((x) => Buffer.from(x, "base64")));
     if (!audio.length) throw new Error(`${label}: stream returned no audio`);
     return { audio, transcript, cost: usage?.cost ?? 0 };
-  } finally { clearTimeout(t); }
+  } finally { clearTimeout(t); clearTimeout(hard); }
 }
 
 // ── SPEECH: verbatim-locked but PERFORMED, not read (probe-proven verbatim wall
@@ -167,6 +169,7 @@ export async function speak({ text, voice = IG.voice.candidates[0], style, conte
     audio: { voice, format: "pcm16" },
     stream: true,
     temperature: 0,
+    usage: { include: true }, // else OpenRouter emits no cost chunk → voice recorded $0 → caps blind (audit)
     messages: [
       { role: "system", content: system },
       { role: "user", content: `<script>\n${text}\n</script>` },
@@ -221,6 +224,7 @@ export async function music({ prompt, timeoutMs = 180000 }) {
     model: IG.models.music,
     stream: true,
     modalities: ["text", "audio"],
+    usage: { include: true }, // cost chunk → music spend counts toward the caps (audit)
     messages: [{ role: "user", content: prompt }],
   };
   const out = await retry(() => streamAudio(body, { label: "music", timeoutMs }), { tries: 2, label: "music" });
