@@ -47,11 +47,20 @@ export function looksLikeSpam(text) {
 }
 // The quotable span = the person's words BEFORE any trailing link/hashtag run — still a verbatim
 // prefix of the source text (the wall passes it), just without the URL/hashtag noise in the card.
+// A LEADING reply-mention run ("@user @user2 totally agree…") is also stripped — the remainder is a
+// verbatim SUBSTRING of the source (the wall passes it) and reads clean, without an @handle that the
+// QA fact-lock (no handles in prose) would otherwise block on.
 export function cleanQuote(text, maxWords = 45) {
   let t = (text || "").split(/\s+(?=https?:\/\/|#\w)/)[0].trim();
+  t = t.replace(/^(@[A-Za-z0-9_.]+[\s,:]+)+/, "").trim();      // reply prefix ("@user great point…")
   t = t.replace(/\s+[#@]\w+(\s+[#@]\w+)*\s*$/g, "").trim();
   return t.split(/\s+/).slice(0, maxWords).join(" ");
 }
+// An @handle anywhere in the FINAL quote would leak into reader-facing prose (the audience-handle
+// fact-lock blocks it, and it breaks the generic-attribution rule). Reply-prefix mentions are already
+// stripped by cleanQuote; a post with an INTERIOR @mention is a conversation fragment — drop it from
+// the anchor pool (the free-mode Bluesky/Reddit supply has plenty of clean standalone posts).
+export const hasHandle = (q) => /@[A-Za-z0-9_]{3,15}\b/.test(q || "");
 
 export function quoteIsVerbatim(quote, sources) {
   const q = norm(quote);
@@ -59,18 +68,53 @@ export function quoteIsVerbatim(quote, sources) {
   return sources.some((s) => norm(s.text || "").includes(q));
 }
 
-const EXTRACT_SYS = `You extract REACTIONS & QUOTES about a specific movie/TV/music SUBJECT from source text, for an
-audience-reaction desk. Extract ONLY what is literally in the text.
+// TRUNCATION SCAR (owner review of the Toy Story 5 run): a page's text is sliced at a char boundary
+// before extraction, so a quote near the cut ends MID-WORD ("…on cognitive, social, emot"). It's
+// verbatim (the wall passes it) but reads broken. If the quote ends where its source continues with a
+// letter, drop the trailing partial word (and any dangling connector) until it ends on a whole word —
+// still a verbatim prefix, just clean. Bounded loop; leaves clean quotes untouched.
+export function trimScar(quote, srcText) {
+  let q = (quote || "").trim();
+  const ns = norm(srcText || "");
+  if (!ns) return q;
+  for (let i = 0; i < 4; i++) {
+    const nq = norm(q);
+    if (nq.length < 8) break;
+    const idx = ns.indexOf(nq);
+    if (idx < 0) break;
+    if (!/[a-z0-9]/.test(ns[idx + nq.length] || "")) break;   // ends on a clean boundary in the source
+    const trimmed = q.replace(/[\s,;:—–-]*\S+$/, "").trim();   // drop the trailing (partial) word + connector
+    if (!trimmed || trimmed === q) break;
+    q = trimmed;
+  }
+  return q;
+}
+
+const EXTRACT_SYS = `You extract REACTIONS & QUOTES BY REAL PEOPLE about a specific movie/TV/music SUBJECT from source text,
+for an audience-reaction desk. Extract ONLY what is literally in the text.
 ABSOLUTE RULES:
 - SUBJECT-MATCH FIRST: only extract material genuinely about the SUBJECT named below. If the text is about
   something else — a different work with a similar/short title, an unrelated news story (local politics,
   a different person) — return {"reactions":[]}. A short/common title (e.g. "From", "It", "Us") is NOT a
   license to grab unrelated text.
-- "quote" must be COPIED CHARACTER-FOR-CHARACTER from the text (machine-checked; edited/merged/paraphrased
-  quotes are discarded). Pick the most distinctive 1-2 sentence span, ≤45 words.
-- speaker = who said it (exact name). A KNOWN figure (director/actor/musician/critic/official) → their name +
+- PEOPLE ONLY — NEVER the outlet's own voice. The source is an ARTICLE/BLOG. Its author's own editorial
+  prose (the writer's opinion, analysis, plot summary, "the film feels…", "critics are divided…") is NOT a
+  reaction — SKIP it. Extract ONLY: (a) words the article explicitly attributes to a NAMED person (a critic,
+  filmmaker, cast member, musician — "X wrote", "X said", "according to X"), or (b) a clearly-quoted
+  reaction/post it reproduces. If a sentence has no identifiable human speaker, DO NOT extract it.
+- NEVER use a website, publication, outlet, blog, aggregator, or domain as the speaker (e.g.
+  "animatedviews.com", "Collider", "Variety", "the site"). The speaker is a HUMAN BEING or it is not extracted.
+- QUOTE = the PERSON'S OWN WORDS ONLY — copied CHARACTER-FOR-CHARACTER (machine-checked; edited/merged/
+  paraphrased quotes are discarded). When the person's words sit inside the article's framing
+  (The film "ranks alongside the classics," she wrote), extract ONLY the words inside the person's
+  quotation marks — never the outlet's lead-in words around them. Pick the most distinctive 1-2 sentence
+  span, ≤45 words.
+- speaker = who said it (exact human name). A KNOWN figure (director/actor/musician/critic) → their name +
   speakerType. An ordinary viewer/fan → speakerType "fan" and speaker "" (never name private individuals).
 - connection = their stated relationship to the subject, ONLY if the text states it. Never guess.
+- isMedia = true if the speaker is a professional CRITIC, reviewer, journalist, or an editor/writer/staffer
+  at a media outlet or publication (a Variety editor, a Collider writer, "film critic", etc.). false for a
+  cast/crew member, filmmaker, musician, the work's own creators, a celebrity reacting, or an ordinary viewer.
 - stance: positive | negative | mixed | neutral. Output STRICT JSON only.`;
 
 async function extractFromSource(src, i, trigger, angle, { model, chatImpl, subject }) {
@@ -82,11 +126,14 @@ ${(src.text || "").slice(0, 5800)}
 
 Extract every distinct reaction/quote ABOUT THE SUBJECT (see the subject-match rule). JSON:
 {"reactions":[{"speaker":"","speakerType":"celebrity|filmmaker|castmate|crew|musician|company|official|fan|other",
-"connection":"","platform":"X|Instagram|statement|interview|podcast|press|other","date":"","quote":"","stance":"positive|negative|mixed|neutral"}]}
+"connection":"","isMedia":false,"platform":"X|Instagram|statement|interview|podcast|press|other","date":"","quote":"","stance":"positive|negative|mixed|neutral"}]}
 Not about the subject, or no quotes → {"reactions":[]}.`;
   try {
     const { data } = await chatImpl({ model, system: EXTRACT_SYS, user, json: true, maxTokens: 2200, temperature: 0 });
-    return (data?.reactions || []).map((r) => ({ ...r, sourceIdx: i }));
+    // A named voice pulled from an article often arrives wrapped in the outlet's framing
+    // (The fifth film "ranks right alongside…") — snap to the person's own quoted words so the card
+    // shows the speaker, not the outlet. Fan/anonymous rows are left as-is (and dropped downstream).
+    return (data?.reactions || []).map((r) => ({ ...r, quote: r.speaker ? unwrapQuote(r.quote) : r.quote, sourceIdx: i }));
   } catch {
     return [];
   }
@@ -137,6 +184,62 @@ const MEDIA_HANDLES = new Set([
   "screendaily", "filmupdates", "flixchatter", "discussingfilm", "culturecrave", "dexerto",
 ]);
 export const isMediaHandle = (h) => MEDIA_HANDLES.has(String(h || "").toLowerCase().replace(/^@/, ""));
+
+// ── PROVENANCE GUARD (owner review of the Toy Story 5 run, 2026-07-11) ─────────────────────────────
+// The media filter above guards the X path; the ARTICLE-extraction path had no equivalent, so free-mode
+// runs (X off, thin social) let a BLOG'S OWN editorial prose become "reactions" and let a DOMAIN
+// ("animatedviews.com") become a "speaker". The rule: a reaction is trustworthy iff it is a real SOCIAL
+// POST (the whole text IS the person's words) OR a NAMED, real-person, on-record voice quoted in an
+// article. An article's unattributed editorial prose, or the outlet/domain as a "person", is never a
+// reaction. "We want PEOPLE, not media" — enforced deterministically.
+const SOCIAL_OWNERS = new Set(["x", "social", "reddit", "bluesky"]);
+export const isSocialSrc = (src) => !!src && (src.tier === "social" || SOCIAL_OWNERS.has(src.owner));
+
+// A "speaker" string that is really a website / outlet / brand rather than a human being — the
+// animatedviews.com failure: the article-extraction path let a DOMAIN become a "viewer".
+const DOMAINISH = /\S*\.(com|net|org|tv|io|co|news|film|movie|blog|info|uk|me)\b/i;
+export function isOutletSpeaker(speaker, srcDomain) {
+  const v = String(speaker || "").toLowerCase().trim();
+  if (!v) return false;                                           // anonymous (a reproduced fan post) is NOT an outlet
+  if (DOMAINISH.test(v)) return true;                             // "animatedviews.com", "the-wrap.com"
+  if (isMediaHandle(v.replace(/[^a-z0-9]/g, ""))) return true;    // "Collider", "Variety" used as a name
+  const brand = String(srcDomain || "").toLowerCase().replace(/\.(com|net|org|tv|io|co).*$/, "").replace(/[^a-z0-9]/g, "");
+  if (brand.length >= 4 && v.replace(/[^a-z0-9]/g, "").includes(brand)) return true; // matches the source's own brand
+  return false;
+}
+// A reaction is trusted iff it is a real SOCIAL post (its whole text is the person's own words), OR it
+// is NOT the outlet/site/domain masquerading as a person. This is the one deterministic wall the
+// article-extraction path lacked: a website is never a "viewer". Anonymous posts a roundup REPRODUCES
+// ("one fan wrote: …") stay — the verbatim wall + headline guard + the extractor's people-only,
+// skip-the-blog's-own-editorial prompt gate those. The owner's failure was the DOMAIN-as-speaker and
+// the blog's own opinion voice; this kills the former outright and the prompt starves the latter.
+export function reliableProvenance(r, src) {
+  if (isSocialSrc(src)) return true;
+  return !isOutletSpeaker(r.speaker, src?.domain);
+}
+
+// FREE-MODE MEDIA FILTER (owner review of the Toy Story 5 run, 2026-07-11: "the quotes taken from X and
+// media are the issue — we want PEOPLE, not media"). In free mode the article's spine is ordinary people
+// plus the work's OWN creators (a director/actor/musician who made it). A professional CRITIC / reviewer /
+// journalist / outlet editor is MEDIA — kept out of the named pool here. The extractor's isMedia flag is
+// the primary signal; speakerType "critic"/"journalist" (the tweet/bsky classify path) is the backstop.
+// Independent creators (castmate/filmmaker/musician) and celebrities reacting are NOT media → kept.
+export const isMediaVoice = (r) =>
+  !!(r && (r.isMedia === true || r.speakerType === "critic" || r.speakerType === "journalist"));
+
+// Outlet/article sentences frame a person's words in quotation marks with prose around them
+// (The fifth "Toy Story" film "ranks right alongside…"). For a NAMED voice pulled from an article,
+// snap to the longest quoted span (≥6 words) so the card shows the PERSON'S words, not the outlet's
+// framing — still a verbatim substring of the source, so the wall passes. No inner span → unchanged.
+export function unwrapQuote(text) {
+  const s = String(text || "").trim();
+  const spans = [...s.matchAll(/[“"«]([^“”"«»]{16,})[”"»]/g)]
+    .map((m) => m[1].trim())
+    .filter((x) => x.split(/\s+/).filter(Boolean).length >= 6);
+  if (!spans.length) return s;
+  const best = spans.sort((a, b) => b.length - a.length)[0];
+  return best.length < s.length - 4 ? best : s;                   // only unwrap when real framing sits outside
+}
 
 const CLASSIFY_TWEETS_SYS = `You classify public X (Twitter) posts for an audience-reaction desk. For each post decide:
 - aboutEvent: is it a genuine reaction ABOUT THE SUBJECT (not spam/ads/unrelated, not a different work with
@@ -337,8 +440,11 @@ export async function harvestReactions(trigger, angle, {
   // is sorted LONGEST/most-substantive first so the writer builds on the best, most explainable posts.
   const wc = (q) => (q || "").trim().split(/\s+/).filter(Boolean).length;
   const substantive = (r) => wc(r.quote) >= MIN_QUOTE_WORDS && (r.quote || "").trim().length >= 40;
+  // Free mode drops MEDIA voices (critics/editors/journalists) from the named pool so the article is
+  // built on real people + the work's own creators — read at call time so a run's env decides it.
+  const dropMedia = process.env.INSIDE_NO_X === "1";
   const split = (list) => ({
-    named: list.filter((r) => r.speaker && r.speakerType !== "fan"),
+    named: list.filter((r) => r.speaker && r.speakerType !== "fan" && !(dropMedia && isMediaVoice(r))),
     fans: list.filter((r) => r.speakerType === "fan" && substantive(r))
       .map(({ speaker, ...rest }) => ({ ...rest, speaker: "" }))
       .sort((a, b) => wc(b.quote) - wc(a.quote)),
@@ -354,7 +460,15 @@ export async function harvestReactions(trigger, angle, {
     longestQuoteWords: Math.max(0, ...passed.map((r) => (r.quote || "").split(/\s+/).length)),
     reactionsTotal: passed.length,
   });
-  const recompute = () => { passed = dedupe(wall(raw, withText)); ({ named, fans } = split(passed)); };
+  // PROVENANCE first (people, not the outlet's own voice), heal truncation scars, THEN the verbatim
+  // wall, THEN dedupe/split.
+  const recompute = () => {
+    const trusted = raw
+      .filter((r) => reliableProvenance(r, withText[r.sourceIdx]))
+      .map((r) => ({ ...r, quote: trimScar(r.quote, withText[r.sourceIdx]?.text) }));
+    passed = dedupe(wall(trusted, withText));
+    ({ named, fans } = split(passed));
+  };
   recompute();
 
   // 3. Remaining queries only while the floor is unmet — a met floor stops the spend immediately;
@@ -395,7 +509,7 @@ export async function harvestReactions(trigger, angle, {
       const text = (t.text || "").trim();
       if (!text || looksLikeSpam(text)) continue;
       const quote = cleanQuote(text);
-      if (norm(quote).length < 8) continue;
+      if (norm(quote).length < 8 || hasHandle(quote)) continue;
       const id = String(t.id_str || tweetIds[c.i] || "");
       withText.push({ url: id ? `https://x.com/i/status/${id}` : null, domain: "x.com", owner: "x", tier: "social", title: "public post", text, quotes: [text] });
       raw.push({
@@ -418,8 +532,20 @@ export async function harvestReactions(trigger, angle, {
   //      generically as "one user"). The same relevance/speaker classify gates every post.
   try {
     const who = angle.focusEntity || trigger.primaryEntity;
-    const found = await bskyImpl(who, { nowMs: t0 }).catch((e) => { diag(`bsky → ERR ${String(e?.message || e).slice(0, 80)}`); return []; });
-    diag(`bsky → found ${found.length}`);
+    // BOTH SIDES, HONESTLY (owner): run the plain search PLUS skeptic/praise sentiment queries for the
+    // divided forms, so a "divided" framing is anchored by REAL posts from each camp — never padded with
+    // a blog's opinion. Merge + dedupe by text; the relevance/stance classify still gates every post.
+    const bqueries = ["audience-reaction", "the-debate"].includes(angle.form)
+      ? [who, `${who} disappointed`, `${who} amazing`]
+      : [who];
+    const bResults = await Promise.all(bqueries.map((q) =>
+      bskyImpl(q, { nowMs: t0 }).catch((e) => { diag(`bsky q="${q}" → ERR ${String(e?.message || e).slice(0, 60)}`); return []; })));
+    const seenB = new Set();
+    const found = bResults.flat().filter((p) => {
+      const k = norm(p.text || "").slice(0, 80);
+      return p.text && k.length >= 8 && !seenB.has(k) && (seenB.add(k), true);
+    });
+    diag(`bsky → found ${found.length} (queries ${bqueries.length})`);
     if (found.length) {
       const asPosts = found.slice(0, 16).map((p) => ({ text: p.text, user: { name: p.displayName, screen_name: p.handle }, created_at: p.createdAt }));
       const classified = await classifyTweets(asPosts, trigger, angle, { model, chatImpl, subject });
@@ -428,7 +554,7 @@ export async function harvestReactions(trigger, angle, {
         const text = (p.text || "").trim();
         if (!text || looksLikeSpam(text)) continue;
         const quote = cleanQuote(text);
-        if (norm(quote).length < 8) continue;
+        if (norm(quote).length < 8 || hasHandle(quote)) continue;
         withText.push({ url: null, domain: "social", owner: "social", tier: "social", title: "public post", text, quotes: [text] });
         raw.push({
           speaker: c.speakerType === "fan" ? "" : (p.user?.name || ""),
@@ -464,7 +590,7 @@ export async function harvestReactions(trigger, angle, {
           const cm = comments[c.i];
           if (!cm?.text || looksLikeSpam(cm.text)) continue;
           const rq = cleanQuote(cm.text);
-          if (norm(rq).length < 8) continue;
+          if (norm(rq).length < 8 || hasHandle(rq)) continue;
           withText.push({ url: cm._perma || null, domain: "reddit.com", owner: "reddit", tier: "social", title: "reddit comment", text: cm.text, quotes: [cm.text] });
           raw.push({ speaker: "", speakerType: "fan", connection: "", platform: "", date: "", quote: rq, stance: c.stance || "neutral", sourceIdx: withText.length - 1, ...(cm._perma ? { redditUrl: cm._perma } : {}) });
         }

@@ -35,18 +35,29 @@ function postMatchesWork(post, work) {
 }
 
 const CAT_FOR = { "trending-movie": "movies", "now-playing": "movies", "upcoming": "movies", "trending-tv": "tv" };
+export const CATSET = new Set(["movies", "tv", "celebrity", "music", "streaming", "awards"]);
 
-// Category from the story text (fixes music/TV misrouting to "movies"). Music FIRST — album/single/
-// tour/rapper are unambiguous; then TV; then a person → celebrity; else movies.
-const MUSIC_RX = /\b(album|single|EP|mixtape|track|song|music video|tour|rapper|singer|R&B|hip-hop|pop star|band|drops? .* (album|single|video)|billboard|grammy|debut record)\b/i;
-const TV_RX = /\b(series|season|episode|showrunner|TV show|streaming series|renewed|cancell?ed|finale|premiere date|Netflix series|HBO|limited series)\b/i;
-const MOVIE_RX = /\b(film|movie|box office|trailer|sequel|casting|director|premiere|theaters|studio|franchise|reboot)\b/i;
-function detectCategory(text, fallback = "celebrity") {
+// CATEGORY = the STORY'S SUBJECT, never the person's profession (owner 2026-07-12: a musician in a TV/
+// movie story is TV/movies, NOT music; an actor's album is music). Two rules that killed the real bugs:
+//   1. A TMDB-CONFIRMED work's medium is authoritative (movie→movies, tv→tv) — keywords never override it.
+//   2. The text signals are WORK/EVENT words only. Job titles ("singer/rapper/pop star/band") are GONE —
+//      they described the person and hijacked screen stories (e.g. "pop star exits AHS Season 13" → music).
+//      Screen signals are tested BEFORE music so a musician's film/TV story routes to movies/tv, not music.
+const TV_RX = /\b(tv series|television series|streaming series|limited series|mini-?series|netflix series|hbo series|season \d+|(new|next|final|first|latest) season|new episode|showrunner|renewed for|cancell?ed after|series finale|season finale|now streaming)\b/i;
+const MOVIE_RX = /\b(film|movie|box office|in theaters|theatrical|opening weekend|sequel|prequel|reboot|casting|directed by|the director|trailer|franchise|screening)\b/i;
+const MUSIC_RX = /\b(album|single|mixtape|new song|music video|world tour|concert tour|on tour|tour dates|residency|grammy|billboard (hot|200)|debut record|drops? (a |the |his |her |their )?(album|single|ep|mixtape|song))\b/i;
+
+// work: {type:"movie"|"tv"} when TMDB-confirmed; text: headline/summary for topic stories; hint: the
+// news-lane's category guess (used ONLY when the text carries no clear subject signal). Falls to celebrity.
+export function categoryFor({ work = null, text = "", hint = null } = {}) {
+  if (work?.type === "tv") return "tv";
+  if (work?.type === "movie") return "movies";
   const t = text || "";
-  if (MUSIC_RX.test(t)) return "music";
   if (TV_RX.test(t)) return "tv";
   if (MOVIE_RX.test(t)) return "movies";
-  return fallback;
+  if (MUSIC_RX.test(t)) return "music";
+  if (hint && CATSET.has(hint)) return hint;
+  return "celebrity";
 }
 
 // NON-ENTERTAINMENT deterministic reject (owner audit: a viral POLITICIAN ranked #1). Clear politics/
@@ -182,7 +193,6 @@ export async function discoverStories({
   // ── HEADLINE-TOPIC stories (the primary signal): the trending Hollywood story itself — a casting
   //    shock, a star's claim, a controversy — whatever many outlets are covering right now. The
   //    reddit threads about it (when available) attach as discourse + anchors.
-  const CATSET = new Set(["movies", "tv", "celebrity", "music", "streaming", "awards"]);
   for (const c of clusterHeadlines(headlines)) {
     const matched = reddit.filter((p) => {
       const toks = sigTokens(c.headline).slice(0, 4);
@@ -193,7 +203,7 @@ export async function discoverStories({
     const signals = { outlets: c.outlets, comments, headline: true };
     const buzz = attachSignals(`${c.headline} ${c.summary || ""}`, signals);
     const heat = c.outlets * HEAT.outletCount + comments * HEAT.redditComments + buzz + Math.max(0, HEAT.freshness - c.freshMin / 30);
-    const cat = detectCategory(`${c.headline} ${c.summary || ""}`, (c.cats || []).find((x) => CATSET.has(x)) || "celebrity");
+    const cat = categoryFor({ text: `${c.headline} ${c.summary || ""}`, hint: (c.cats || []).find((x) => CATSET.has(x)) });
     stories.push({
       storySlug: slugify(c.headline).slice(0, 60),
       kind: "headline",
@@ -285,12 +295,13 @@ export async function discoverStories({
     const signals = { trend: t.traffic || 1, comments, outlets: new Set(t.news.map((n) => n.source).filter(Boolean)).size };
     const wHit = wiki.find((w) => labelMatch(w.name, m.title));
     if (wHit) { usedWiki.add(wHit.name); signals.wiki = wHit.views; }
+    const wk = m.kind === "movie" || m.kind === "tv" ? { title: m.title, type: m.kind === "tv" ? "tv" : "movie", year: m.year } : null;
     stories.push({
       storySlug: slugify(t.term).slice(0, 60),
       kind: m.kind === "person" ? "person" : "headline",
       primaryEntity: m.title,
-      work: m.kind === "movie" || m.kind === "tv" ? { title: m.title, type: m.kind === "tv" ? "tv" : "movie", year: m.year } : null,
-      category: detectCategory(`${m.title} ${t.news.map((n) => n.title).join(" ")}`, m.kind === "person" ? "celebrity" : m.kind === "tv" ? "tv" : "movies"),
+      work: wk,
+      category: categoryFor({ work: wk, text: `${m.title} ${t.news.map((n) => n.title).join(" ")}` }),
       released: null,
       overview: t.news.map((n) => n.title).filter(Boolean).join(" · ").slice(0, 300),
       headline: t.news[0]?.title || null,
@@ -308,12 +319,13 @@ export async function discoverStories({
     if (!m) return;
     const matched = reddit.filter((p) => labelMatch(m.title, p.title));
     const comments = matched.reduce((s, x) => s + x.numComments, 0);
+    const wk = m.kind === "movie" || m.kind === "tv" ? { title: m.title, type: m.kind === "tv" ? "tv" : "movie", year: m.year } : null;
     stories.push({
       storySlug: slugify(`${w.name}-surge`).slice(0, 60),
       kind: m.kind === "person" ? "person" : "work",
       primaryEntity: m.title,
-      work: m.kind === "movie" || m.kind === "tv" ? { title: m.title, type: m.kind === "tv" ? "tv" : "movie", year: m.year } : null,
-      category: detectCategory(m.title, m.kind === "person" ? "celebrity" : m.kind === "tv" ? "tv" : "movies"),
+      work: wk,
+      category: categoryFor({ work: wk, text: `${m.title} ${(w.name || "")}` }),
       released: null,
       overview: "",
       headline: null,

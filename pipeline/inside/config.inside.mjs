@@ -77,11 +77,15 @@ export const FORMS = {
 
 // Inside articles route by the story's category; every subcategory below is legal per site.ts.
 const CATEGORIES = new Set(["movies", "tv", "streaming", "celebrity", "awards", "music"]);
-const SUB_FOR = { movies: "news", tv: "news", celebrity: "news", music: "news", awards: "winners", streaming: "where-to-watch" };
+// Inside posts ARE audience reactions → Movies/TV file under the "reactions" sub-tab (owner 2026-07-12,
+// mirrors the news lane's reaction form); Celebrity/Music have no reactions sub so they stay "news".
+const SUB_FOR = { movies: "reactions", tv: "reactions", celebrity: "news", music: "news", awards: "winners", streaming: "where-to-watch" };
 export function routeForStory(story) {
-  const c = (story?.category || "").toLowerCase();
-  if (CATEGORIES.has(c)) return { category: c, subcategory: SUB_FOR[c] };
-  return { category: "celebrity", subcategory: "news" };
+  // Route by the STORY'S SUBJECT. A TMDB-confirmed work's medium is AUTHORITATIVE (a musician's film/TV
+  // story can never slip into music); else the discovery-assigned category; else celebrity.
+  let c = story?.work?.type === "tv" ? "tv" : story?.work?.type === "movie" ? "movies" : (story?.category || "").toLowerCase();
+  if (!CATEGORIES.has(c)) c = "celebrity";
+  return { category: c, subcategory: SUB_FOR[c] };
 }
 
 // ── DISCOURSE-HEAT ranking weights (used by discover.mjs) ────────────────────────────────────────

@@ -12,10 +12,10 @@ import { factLocks, review as qaReview, webCheck as qaWebCheck, classifyBlocks }
 import { buildInsideMarkdown, insertInlineEmbeds, seoFinish } from "../assemble.mjs";
 import { discoverReddit, redditSearchPosts, redditTopComments } from "../../find/sources/reddit.mjs";
 import { gnewsArticleId, decodeGnewsBase64, decodeGnewsUrl } from "../../lib/gnewsDecode.mjs";
-import { discoverStories } from "../discover.mjs";
+import { discoverStories, categoryFor } from "../discover.mjs";
 import { trendingSearches, wikiSpikes, tmdbMatch } from "../signals.mjs";
 import { xSearchIds } from "../xsearch.mjs";
-import { norm, quoteIsVerbatim, meetsFloor, fallbackQueries, isMediaHandle, looksLikeSpam, cleanQuote } from "../reactionFinder.mjs";
+import { norm, quoteIsVerbatim, meetsFloor, fallbackQueries, isMediaHandle, looksLikeSpam, cleanQuote, isOutletSpeaker, reliableProvenance, isMediaVoice, unwrapQuote, isSocialSrc, hasHandle, trimScar } from "../reactionFinder.mjs";
 import { cleanTitle } from "../assemble.mjs";
 import { routeForStory, MAX_EMBEDS } from "../config.inside.mjs";
 import { loadStore, alreadyPublished, recordInsidePublished, parkAngle, parkedTries, clearParked, insideKey } from "../store.mjs";
@@ -709,6 +709,15 @@ await check("cleanQuote strips trailing links/hashtags but keeps a verbatim pref
   assert.equal(q, "Remembering Barbara Ling, the visionary who shaped Hollywood.");
   assert.ok(norm(src).includes(norm(q)), "still a verbatim prefix (wall passes)");
 });
+await check("cleanQuote strips a leading reply-mention; hasHandle flags interior mentions", () => {
+  const reply = "@pixarfan totally agree, Toy Story 5 is the best entry since the third film";
+  const q = cleanQuote(reply);
+  assert.equal(q, "totally agree, Toy Story 5 is the best entry since the third film");
+  assert.ok(norm(reply).includes(norm(q)), "remainder is a verbatim substring (wall passes)");
+  assert.ok(!hasHandle(q), "no @handle survives to leak into prose");
+  assert.ok(hasHandle("great point @someone this movie rocked"), "an interior @mention is flagged for drop");
+  assert.ok(!hasHandle("email me at test dot com, no handles here"), "plain prose is not flagged");
+});
 await check("cleanTitle drops a dangling run-on tail and never ends on a connector", () => {
   assert.equal(cleanTitle("Barbara Ling, the Oscar-Winning Production Designer Behind 'Once Upon a Time in Hollywood', Dies at 73—and the Tributes Are a Masterclass in"),
     "Barbara Ling, the Oscar-Winning Production Designer Behind 'Once Upon a Time in Hollywood'");
@@ -724,6 +733,94 @@ await check("news outlets/aggregators are excluded; individual people (incl. com
   for (const h of ["jdrider02", "MelohRush", "ChannelAwesome", "ramzpaul", "somefan123"]) {
     assert.ok(!isMediaHandle(h), `${h} is a person and must be kept`);
   }
+});
+
+// ── reactionFinder: outlet-as-speaker provenance guard (owner review, Toy Story 5, 2026-07-11) ────
+console.log("— provenance guard: a website is never a viewer —");
+await check("isOutletSpeaker catches domains/brands, passes real people and anonymous posts", () => {
+  assert.ok(isOutletSpeaker("animatedviews.com"), "a domain is not a person");
+  assert.ok(isOutletSpeaker("AnimatedViews.com", "animatedviews.com"), "case-insensitive domain");
+  assert.ok(isOutletSpeaker("Collider"), "a known outlet brand used as a name");
+  assert.ok(isOutletSpeaker("The Wrap", "thewrap.com"), "speaker matches the source's own brand");
+  assert.ok(!isOutletSpeaker(""), "anonymous (a reproduced fan post) is NOT an outlet");
+  assert.ok(!isOutletSpeaker("Scott Menzel", "variety.com"), "a real critic name is kept");
+  assert.ok(!isOutletSpeaker("Joan Cusack"), "a real person is kept");
+});
+await check("reliableProvenance: social posts always trusted; articles drop only the outlet-as-speaker", () => {
+  const outlet = { domain: "animatedviews.com", owner: "animatedviews", tier: "major" };
+  const social = { domain: "social", owner: "bluesky", tier: "social" };
+  // the exact Toy Story failure: a blog's domain quoted as a "reaction" → dropped
+  assert.equal(reliableProvenance({ speaker: "animatedviews.com", speakerType: "other", quote: "x" }, outlet), false);
+  // a real named critic pulled from an article (even speakerType "other") → kept
+  assert.equal(reliableProvenance({ speaker: "Dominic Ray", speakerType: "other", quote: "x" }, outlet), true);
+  // an anonymous fan post a roundup reproduces → kept (headline guard + wall handle the rest)
+  assert.equal(reliableProvenance({ speaker: "", speakerType: "fan", quote: "x" }, outlet), true);
+  // any real social post → trusted regardless of speaker
+  assert.equal(reliableProvenance({ speaker: "", speakerType: "fan", quote: "x" }, social), true);
+  assert.ok(isSocialSrc(social) && !isSocialSrc(outlet), "social-source detector");
+});
+await check("isMediaVoice flags critics/editors/journalists, keeps creators + celebrities + fans", () => {
+  // the exact Toy Story failure: Variety/Collider editors treated as reaction voices
+  assert.ok(isMediaVoice({ speaker: "Jazz Tangcay", isMedia: true, speakerType: "other" }), "extractor isMedia flag");
+  assert.ok(isMediaVoice({ speaker: "Someone", speakerType: "critic" }), "classify critic backstop");
+  assert.ok(isMediaVoice({ speaker: "Someone", speakerType: "journalist" }), "journalist backstop");
+  // the work's OWN creators + a celebrity reacting are NOT media → kept
+  assert.ok(!isMediaVoice({ speaker: "Joan Cusack", speakerType: "castmate", isMedia: false }), "a castmate is a creator");
+  assert.ok(!isMediaVoice({ speaker: "Andrew Stanton", speakerType: "filmmaker" }), "a filmmaker is a creator");
+  assert.ok(!isMediaVoice({ speaker: "", speakerType: "fan" }), "an ordinary fan is never media");
+  assert.ok(!isMediaVoice(null) && !isMediaVoice(undefined), "null-safe");
+});
+await check("categoryFor routes by the story SUBJECT, never the person's profession (owner 2026-07-12)", () => {
+  // A TMDB-confirmed work's medium is AUTHORITATIVE — keywords can't override it.
+  assert.equal(categoryFor({ work: { type: "movie" }, text: "the pop star sings on the soundtrack" }), "movies");
+  assert.equal(categoryFor({ work: { type: "tv" }, text: "the rapper's album drops" }), "tv");
+  // THE EXACT BUG: a musician in a TV story → tv, NOT music (was miscategorized "music").
+  assert.equal(categoryFor({ text: "Ariana Grande Exits American Horror Story Season 13 amid tour" }), "tv");
+  // a musician cast in a film → movies, not music
+  assert.equal(categoryFor({ text: "The Weeknd cast in new film, casting announced" }), "movies");
+  // a genuine music RELEASE/event → music
+  assert.equal(categoryFor({ text: "Drake drops a new album and announces a world tour" }), "music");
+  assert.equal(categoryFor({ text: "Taylor Swift's new single tops the Billboard Hot 100" }), "music");
+  // a bare person story (no work, no event) → celebrity
+  assert.equal(categoryFor({ text: "Zendaya spotted at dinner with Tom Holland" }), "celebrity");
+  // a real film / TV subject with no confirmed work → detected from text
+  assert.equal(categoryFor({ text: "Dune Part Three box office opening weekend" }), "movies");
+  assert.equal(categoryFor({ text: "Stranger Things final season new episode reactions" }), "tv");
+  // the news-lane hint is used ONLY when the text has no subject signal
+  assert.equal(categoryFor({ text: "everyone is talking about this", hint: "tv" }), "tv");
+  assert.equal(categoryFor({ text: "no signal here", hint: "bogus" }), "celebrity");
+});
+await check("routeForStory: work.type is authoritative + Movies/TV reactions file under the Reactions sub", () => {
+  // work.type wins even if a stale category says music
+  assert.deepEqual(routeForStory({ work: { type: "movie" }, category: "music" }), { category: "movies", subcategory: "reactions" });
+  assert.deepEqual(routeForStory({ work: { type: "tv" }, category: "celebrity" }), { category: "tv", subcategory: "reactions" });
+  // no work → the discovery-assigned category; celebrity/music keep the "news" sub
+  assert.deepEqual(routeForStory({ category: "celebrity" }), { category: "celebrity", subcategory: "news" });
+  assert.deepEqual(routeForStory({ category: "music" }), { category: "music", subcategory: "news" });
+  assert.deepEqual(routeForStory({ category: "movies" }), { category: "movies", subcategory: "reactions" });
+  // unknown/garbage → celebrity/news
+  assert.deepEqual(routeForStory({ category: "sports" }), { category: "celebrity", subcategory: "news" });
+});
+await check("unwrapQuote snaps a framed outlet quote to the person's own words (kills nested-quote card)", () => {
+  // the exact card #2 bug: outlet framing + a nested quotation
+  const framed = `The fifth "Toy Story" film "ranks right alongside the first three films, delivering a perfect blend of humor, heart, and that signature Pixar magic."`;
+  assert.equal(unwrapQuote(framed), "ranks right alongside the first three films, delivering a perfect blend of humor, heart, and that signature Pixar magic.");
+  // a clean quote with no outer framing is left untouched
+  const clean = "Toy Story 5 is a magical and pure perfection, a fantastic entry into the franchise.";
+  assert.equal(unwrapQuote(clean), clean);
+  // a short title-reference in quotes is not treated as the span (too few words)
+  assert.equal(unwrapQuote(`I love "Toy Story 5" so much more than I expected to`), `I love "Toy Story 5" so much more than I expected to`);
+});
+
+await check("trimScar heals a mid-word truncation to a clean whole-word ending", () => {
+  const src = "the psychologist said the film glosses over the harm of these devices on cognitive, social, emotional and developmental health of children.";
+  const scarred = "glosses over the harm of these devices on cognitive, social, emot"; // sliced mid-word
+  const healed = trimScar(scarred, src);
+  assert.equal(healed, "glosses over the harm of these devices on cognitive, social");
+  assert.ok(norm(src).includes(norm(healed)), "still a verbatim substring (wall passes)");
+  // a quote that already ends cleanly is untouched
+  const clean = "Jessie finally gets the story she deserves";
+  assert.equal(trimScar(clean, `${clean}!`), clean);
 });
 
 // ── reactionFinder: headline-quote guard ─────────────────────────────────────────────────────────
@@ -944,7 +1041,7 @@ await check("formatTag inside, insideForm, unique eventSlug --in-<form>", () => 
   assert.equal(fm.insideForm, "audience-reaction");
   assert.equal(fm.eventSlug, "the-sable-coast-2026--in-audience-reaction");
   assert.equal(fm.category, "movies");
-  assert.equal(fm.subcategory, "news");
+  assert.equal(fm.subcategory, "reactions"); // movie/TV reactions file under the Reactions sub-tab
   assert.notEqual(mkFM("the-debate").eventSlug, fm.eventSlug, "sibling forms distinct");
 });
 await check("tweetIds prefer embeds over factBlock; instagramUrls emitted only when non-empty", () => {
@@ -1078,8 +1175,8 @@ await check("store lifecycle: park 3→dead, record+dedup, clearParked, insideKe
 await check("routeForStory maps every category", () => {
   assert.deepEqual(routeForStory({ category: "awards" }), { category: "awards", subcategory: "winners" });
   assert.deepEqual(routeForStory({ category: "streaming" }), { category: "streaming", subcategory: "where-to-watch" });
-  assert.deepEqual(routeForStory({ category: "movies" }), { category: "movies", subcategory: "news" });
-  assert.deepEqual(routeForStory({ category: "tv" }), { category: "tv", subcategory: "news" });
+  assert.deepEqual(routeForStory({ category: "movies" }), { category: "movies", subcategory: "reactions" });
+  assert.deepEqual(routeForStory({ category: "tv" }), { category: "tv", subcategory: "reactions" });
   assert.deepEqual(routeForStory({ category: "celebrity" }), { category: "celebrity", subcategory: "news" });
   assert.deepEqual(routeForStory({ category: "music" }), { category: "music", subcategory: "news" });
   assert.deepEqual(routeForStory({ category: "unknown-x" }), { category: "celebrity", subcategory: "news" });
