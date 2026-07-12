@@ -1,41 +1,41 @@
 {
-  "runId": "run-2026-07-11T21-01-25",
-  "builtAt": "2026-07-11T21:01:52.711Z",
-  "count": 8,
+  "runId": "run-2026-07-12T01-02-48",
+  "builtAt": "2026-07-12T01:03:14.961Z",
+  "count": 7,
   "topics": [
     {
-      "id": "news-50-cent-reacts-diddy-doc-emmy-noms",
-      "slug": "50-cent-reacts-to-his-diddy-documentary-receiving-3-emmy-noms-you-can-",
-      "title": "50 Cent Reacts to His Diddy Documentary Receiving 3 Emmy Noms: You Can’t Argue With the Work",
+      "id": "news-new-girl-lamorne-morris-casting-fight",
+      "slug": "zooey-deschanel-says-cast-fought-for-lamorne-morris-s-role-on-new-girl",
+      "title": "Zooey Deschanel Says Cast Fought for Lamorne Morris's Role on 'New Girl'",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
-      "eventType": "announcement",
+      "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "50-cent-reacts-diddy-doc-emmy-noms",
-      "primaryKeyword": "50 Cent Diddy documentary",
-      "primaryEntity": "Sean Combs: The Reckoning",
+      "eventSlug": "new-girl-lamorne-morris-casting-fight",
+      "primaryKeyword": "new girl lamorne morris",
+      "primaryEntity": "New Girl",
       "entities": [
-        "50 Cent",
-        "Diddy"
+        "Lamorne Morris",
+        "Zooey Deschanel"
       ],
-      "angle": "50 Cent comments on the Emmy nominations received by the Diddy docuseries.",
+      "angle": "Zooey Deschanel reveals the New Girl cast had to fight for Lamorne Morris's role.",
       "tmdbType": "movie",
-      "source": "rss:Billboard",
+      "source": "rss:Deadline",
       "sources": [
         {
-          "outlet": "Billboard",
+          "outlet": "Deadline",
           "tier": 7,
-          "url": "https://www.billboard.com/music/rb-hip-hop/50-cent-diddy-documentary-emmy-nominations-1236290583/",
-          "ageMin": 50,
-          "headline": "50 Cent Reacts to His Diddy Documentary Receiving 3 Emmy Noms: You Can’t Argue With the Work",
-          "summary": "The four-part Netflix docuseries Sean Combs: The Reckoning earned 21.8 million views in its first six days."
+          "url": "https://deadline.com/2026/07/new-girl-cast-fought-for-lamorne-morris-zooey-deschanel-1236980001/",
+          "ageMin": 66,
+          "headline": "New Girl Cast Had To Fight To Get Lamorne Morris On Fox Comedy, Recalls Zooey Deschanel",
+          "summary": "Zooey Deschanel says it s impossible to think of New Girl without Lamorne Morris but there was a minute when he wasn t a lock to play Winston Bishop. During a recent appearance on the Zach Sang Show, Deschanel said she and her fellow castmates had to fight to get the now Emmy-winning actor on the comedy. Morris [ ]"
         }
       ],
-      "ageMin": 50,
+      "ageMin": 66,
       "_cand": {
-        "key": "rss:50-cent-reacts-to-his-diddy-documentary-receiving-3-emmy-nom",
+        "key": "rss:new-girl-cast-had-to-fight-to-get-lamorne-morris-on-fox-come",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -45,21 +45,21 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Billboard"
+          "Deadline"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Billboard",
+        "attribution": "Deadline",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 81,
+      "priority": 78,
       "signals": {
-        "recency": 24,
+        "recency": 16,
         "corroboration": 12,
         "status": 18,
-        "type": 9,
+        "type": 14,
         "pop": 0,
         "breakout": 0,
         "big": 18,
@@ -68,22 +68,24 @@
       }
     },
     {
-      "id": "news-moana-live-action-representation",
-      "slug": "moana-creatives-on-working-closely-to-honor-polynesian-culture-and-tra",
-      "title": "Moana Creatives on Working Closely to Honor Polynesian Culture and Traditions, and Why Representation Matters in the Live-Action Film",
+      "id": "news-moana-live-action-creatives-on-culture-representation",
+      "slug": "moana-live-action-creatives-emphasize-cultural-authenticity-and-repres",
+      "title": "'Moana' Live-Action Creatives Emphasize Cultural Authenticity and Representation",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "moana-live-action-representation",
-      "primaryKeyword": "Moana live-action",
+      "eventSlug": "moana-live-action-creatives-on-culture-representation",
+      "primaryKeyword": "Moana live-action movie",
       "primaryEntity": "Moana",
       "entities": [
-        "Dwayne Johnson"
+        "Moana (film)",
+        "Dwayne Johnson",
+        "Disney"
       ],
-      "angle": "Creatives behind the live-action 'Moana' discuss their commitment to honoring Polynesian culture and the importance of representation.",
+      "angle": "Creatives behind the live-action 'Moana' discuss honoring Polynesian culture and the importance of representation, with Dwayne Johnson sharing his personal connection.",
       "tmdbType": "movie",
       "source": "rss:Variety",
       "sources": [
@@ -91,12 +93,12 @@
           "outlet": "Variety",
           "tier": 7,
           "url": "https://variety.com/2026/film/features/moana-creatives-polynesian-culture-traditions-1236807177/",
-          "ageMin": 166,
+          "ageMin": 408,
           "headline": "Moana Creatives on Working Closely to Honor Polynesian Culture and Traditions, and Why Representation Matters in the Live-Action Film",
           "summary": "Dwayne Johnson can finally rejoice. At the premiere of Disney’s live-action “Moana,” the star said that, growing up, he didn’t see himself represented in the media. “‘Indiana Jones’ inspired me. When I was 8 years old watching Harrison Ford, I was like, ‘I want to be that guy,’ but that guy didn’t look like me.” [ ]"
         }
       ],
-      "ageMin": 166,
+      "ageMin": 408,
       "_cand": {
         "key": "rss:moana-creatives-on-working-closely-to-honor-polynesian-cultu",
         "popularity": 0,
@@ -117,9 +119,9 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 79,
+      "priority": 67,
       "signals": {
-        "recency": 16,
+        "recency": 4,
         "corroboration": 12,
         "status": 18,
         "type": 9,
@@ -131,154 +133,22 @@
       }
     },
     {
-      "id": "awards-karlovy-vary-film-fest-awards-results",
-      "slug": "karlovy-vary-film-fest-awards-go-to-fruit-gathering-the-guest-lover-no",
-      "title": "Karlovy Vary Film Fest Awards Go to Fruit Gathering, The Guest, Lover, Not a Fighter and Incinerator",
-      "contentType": "awards",
-      "formatTag": "awards",
-      "category": "awards",
-      "subcategory": "winners",
-      "eventType": "award",
-      "sensitivity": "normal",
-      "eventSlug": "karlovy-vary-film-fest-awards-results",
-      "primaryKeyword": "Karlovy Vary Film Festival",
-      "primaryEntity": "Karlovy Vary Film Festival",
-      "entities": [
-        "Juliette Binoche",
-        "Jeffrey Wright",
-        "Fruit Gathering"
-      ],
-      "angle": "The Karlovy Vary Film Festival has announced its award winners, including Juliette Binoche and Jeffrey Wright, with 'Fruit Gathering' also recognized.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/karlovy-vary-2026-awards-fruit-gathering-juliette-binoche-1236644514/",
-          "ageMin": 166,
-          "headline": "Karlovy Vary Film Fest Awards Go to Fruit Gathering, The Guest, Lover, Not a Fighter and Incinerator",
-          "summary": "Juliette Binoche was honored with the Crystal Globe Award at the closing ceremony, while Jeffrey Wright received the President's Award as the star-studded Czech fest's double anniversary edition wrapped."
-        }
-      ],
-      "ageMin": 166,
-      "_cand": {
-        "key": "rss:karlovy-vary-film-fest-awards-go-to-fruit-gathering-the-gues",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 60,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "music-news-charli-xcx-debuts-songs-brooklyn-gig",
-      "slug": "charli-xcx-debuts-new-music-and-fashion-songs-at-brooklyn-gig",
-      "title": "Charli XCX Debuts New Music and Fashion Songs at Brooklyn Gig",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "charli-xcx-debuts-songs-brooklyn-gig",
-      "primaryKeyword": "Charli XCX music",
-      "primaryEntity": "Charli xcx",
-      "entities": [
-        "Charli XCX",
-        "Clairo",
-        "Kim Petras"
-      ],
-      "angle": "Charli XCX debuts new music and fashion-inspired songs at an intimate Brooklyn show.",
-      "tmdbType": "movie",
-      "source": "rss:Rolling Stone",
-      "sources": [
-        {
-          "outlet": "Rolling Stone",
-          "tier": 7,
-          "url": "https://www.rollingstone.com/music/music-news/charli-xcx-music-fashion-film-songs-brooklyn-1235592401/",
-          "ageMin": 271,
-          "headline": "See Charli XCX Debut Music, Fashion, Film Songs at Brooklyn Gig",
-          "summary": "Clairo, Kim Petras, and Underscores also joined singer onstage at intimate Music Hall of Williamsburg show"
-        }
-      ],
-      "ageMin": 271,
-      "_cand": {
-        "key": "rss:see-charli-xcx-debut-music-fashion-film-songs-at-brooklyn-gi",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "breakoutVelocity": 0,
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Rolling Stone"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Rolling Stone",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 48,
-      "signals": {
-        "recency": 9,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
       "id": "news-johnny-galecki-acting-return",
       "slug": "johnny-galecki-returning-to-acting-after-7-year-break",
       "title": "Johnny Galecki Returning to Acting After 7-Year Break",
       "contentType": "news",
       "formatTag": "news",
-      "category": "celebrity",
+      "category": "tv",
       "subcategory": "news",
-      "eventType": "announcement",
+      "eventType": "casting",
       "sensitivity": "normal",
       "eventSlug": "johnny-galecki-acting-return",
-      "primaryKeyword": "Johnny Galecki acting",
+      "primaryKeyword": "Johnny Galecki acting return",
       "primaryEntity": "Johnny Galecki",
       "entities": [
         "The Big Bang Theory"
       ],
-      "angle": "Johnny Galecki is set to return to acting after a seven-year hiatus, taking on a new role.",
+      "angle": "'The Big Bang Theory' star Johnny Galecki is returning to acting after a seven-year break.",
       "tmdbType": "movie",
       "source": "rss:TheWrap",
       "sources": [
@@ -286,12 +156,12 @@
           "outlet": "TheWrap",
           "tier": 7,
           "url": "https://www.thewrap.com/creative-content/tv-shows/johnny-galecki-returning-acting-7-year-break-big-bang-theory/",
-          "ageMin": 109,
+          "ageMin": 351,
           "headline": "Johnny Galecki Returning to Acting After 7-Year Break",
           "summary": "The 'Big Bang Theory' actor is taking on a new role after playing Dr. Leonard Hofstadter for 12 seasons The post Johnny Galecki Returning to Acting After 7-Year Break appeared first on TheWrap ."
         }
       ],
-      "ageMin": 109,
+      "ageMin": 351,
       "_cand": {
         "key": "rss:johnny-galecki-returning-to-acting-after-7-year-break",
         "popularity": 0,
@@ -312,52 +182,53 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 55,
+      "priority": 71,
       "signals": {
-        "recency": 16,
+        "recency": 9,
         "corroboration": 12,
         "status": 18,
-        "type": 9,
+        "type": 14,
         "pop": 0,
         "breakout": 0,
-        "big": 0,
+        "big": 18,
         "trending": 0,
         "softTv": 0
       }
     },
     {
-      "id": "news-hilary-duff-lucky-me-tour",
-      "slug": "hilary-duff-delights-with-equal-parts-nostalgia-and-evolution-on-the-l",
-      "title": "Hilary Duff Delights With Equal Parts Nostalgia and Evolution on The Lucky Me Tour: “Joyful, Fun and Extremely Rewarding”",
+      "id": "news-i-will-find-you-logan-browning-on-set-details",
+      "slug": "logan-browning-on-i-will-find-you-action-scenes-and-on-set-training",
+      "title": "Logan Browning on 'I Will Find You': Action Scenes and On-Set Training",
       "contentType": "news",
       "formatTag": "news",
-      "category": "celebrity",
+      "category": "tv",
       "subcategory": "news",
-      "eventType": "announcement",
+      "eventType": "casting",
       "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "hilary-duff-lucky-me-tour",
-      "primaryKeyword": "Hilary Duff tour",
-      "primaryEntity": "Hilary Duff",
+      "eventSlug": "i-will-find-you-logan-browning-on-set-details",
+      "primaryKeyword": "I Will Find You tv series",
+      "primaryEntity": "I Will Find You (TV series)",
       "entities": [
-        "The Lucky Me Tour"
+        "Logan Browning",
+        "Harlan Coben",
+        "Netflix"
       ],
-      "angle": "Hilary Duff is delighting fans with her 'Lucky Me Tour,' blending nostalgic hits with new music.",
+      "angle": "Logan Browning discusses her role and on-set experiences in Harlan Coben's Netflix series 'I Will Find You'.",
       "tmdbType": "movie",
-      "source": "rss:THR",
+      "source": "rss:Variety",
       "sources": [
         {
-          "outlet": "THR",
+          "outlet": "Variety",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/music/music-features/hilary-duff-la-lucky-me-tour-concert-highlights-interview-1236644505/",
-          "ageMin": 120,
-          "headline": "Hilary Duff Delights With Equal Parts Nostalgia and Evolution on The Lucky Me Tour: “Joyful, Fun and Extremely Rewarding”",
-          "summary": "The 38-year-old age singer sold out two nights of her most expansive tour in over a decade, bringing her aughts hits and new pop offerings to a captivated crowd at Inglewood’s Kia Forum."
+          "url": "https://variety.com/2026/streaming/columns/i-will-find-you-logan-browning-sam-worthington-guns-1236807256/",
+          "ageMin": 407,
+          "headline": "I Will Find You : Logan Browning on Sam Worthington Teaching Her How to Reload a Gun and the Show s Wild Action Scenes: I Can Hop Buildings, Didn t You Know That?",
+          "summary": "Logan Browning had just moved from Los Angeles to Atlanta when she was offered the role of FBI agent Sarah Greer in Harlan Coben’s latest Netflix hit series “I Will Find You.” “Maybe there’s something special in the water in Atlanta, because it all worked out,” Browning tells me over Zoom. Sarah is not just [ ]"
         }
       ],
-      "ageMin": 120,
+      "ageMin": 407,
       "_cand": {
-        "key": "rss:hilary-duff-delights-with-equal-parts-nostalgia-and-evolutio",
+        "key": "rss:i-will-find-you-logan-browning-on-sam-worthington-teaching-h",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -367,77 +238,16 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "THR"
+          "Variety"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "THR",
+        "attribution": "Variety",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 55,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "news-ann-widdecombe-death-investigation-update",
-      "slug": "man-released-without-charges-in-death-of-ann-widdecombe",
-      "title": "Man Released Without Charges in Death of Ann Widdecombe",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "death",
-      "sensitivity": "high",
-      "eventSlug": "ann-widdecombe-death-investigation-update",
-      "primaryKeyword": "Ann Widdecombe death",
-      "primaryEntity": "Ann Widdecombe",
-      "entities": [],
-      "angle": "Police have released a man without charges in connection with the death of former MP and reality TV personality Ann Widdecombe.",
-      "tmdbType": "movie",
-      "source": "rss:Deadline",
-      "sources": [
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/ann-widdecombe-death-homicide-1236979243/",
-          "ageMin": 379,
-          "headline": "Arrested Man Released Without Charges In Death Of Former MP UK Reality Star Ann Widdecombe",
-          "summary": "UPDATE, Saturday July 11: British police have released the 26-year-old man arrested Friday in connection with the death of Ann Widdecombe, the former Member of Parliament and frequent participant in British reality TV programs and news shows. The man is no longer part of the investigation, law enforcement officials said. “Our priority remains identifying those [ ]"
-        }
-      ],
-      "ageMin": 379,
-      "_cand": {
-        "key": "rss:arrested-man-released-without-charges-in-death-of-former-mp-",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Deadline"
-        ],
-        "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "Deadline",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 48,
+      "priority": 66,
       "signals": {
         "recency": 4,
         "corroboration": 12,
@@ -445,30 +255,30 @@
         "type": 14,
         "pop": 0,
         "breakout": 0,
-        "big": 0,
+        "big": 18,
         "trending": 0,
         "softTv": 0
       }
     },
     {
       "id": "news-antoinette-bower-dies-at-93",
-      "slug": "antoinette-bower-star-trek-and-twilight-zone-actress-dies-at-93",
-      "title": "Antoinette Bower, 'Star Trek' and 'Twilight Zone' Actress, Dies at 93",
+      "slug": "antoinette-bower-star-trek-twilight-zone-and-prom-night-actress-dies-a",
+      "title": "Antoinette Bower, ‘Star Trek,’ ‘Twilight Zone’ and ‘Prom Night’ Actress, Dies at 93",
       "contentType": "news",
       "formatTag": "news",
-      "category": "celebrity",
+      "category": "movies",
       "subcategory": "news",
       "eventType": "death",
       "sensitivity": "high",
       "eventSlug": "antoinette-bower-dies-at-93",
-      "primaryKeyword": "Antoinette Bower death",
+      "primaryKeyword": "antoinette bower",
       "primaryEntity": "Antoinette Bower",
       "entities": [
         "Star Trek",
         "The Twilight Zone",
         "Prom Night"
       ],
-      "angle": "Actress Antoinette Bower, known for her roles in 'Star Trek,' 'The Twilight Zone,' and 'Prom Night,' has passed away at the age of 93.",
+      "angle": "Actress Antoinette Bower, known for her roles in 'Star Trek,' 'The Twilight Zone,' and 'Prom Night,' has passed away at 93.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
@@ -476,12 +286,12 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/tv/tv-news/antoinette-bower-dead-star-trek-twilight-zone-prom-night-1236644450/",
-          "ageMin": 419,
+          "ageMin": 661,
           "headline": "Antoinette Bower, ‘Star Trek,’ ‘Twilight Zone’ and ‘Prom Night’ Actress, Dies at 93",
           "summary": "Born in Germany, she started out on the CBC in Canada, appeared with Charles Bronson in ‘The Evil That Men Do’ and had a recurring role on ‘Neon Rider.’"
         }
       ],
-      "ageMin": 419,
+      "ageMin": 661,
       "_cand": {
         "key": "rss:antoinette-bower-star-trek-twilight-zone-and-prom-night-actr",
         "popularity": 0,
@@ -502,7 +312,7 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 48,
+      "priority": 60,
       "signals": {
         "recency": 4,
         "corroboration": 12,
@@ -510,7 +320,138 @@
         "type": 14,
         "pop": 0,
         "breakout": 0,
-        "big": 0,
+        "big": 12,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-christopher-nolan-the-odyssey-dialogue-backlash",
+      "slug": "christopher-nolan-addresses-the-odyssey-backlash-explains-why-film-use",
+      "title": "Christopher Nolan Addresses The Odyssey Backlash, Explains Why Film Uses Modern Dialogue",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "christopher-nolan-the-odyssey-dialogue-backlash",
+      "primaryKeyword": "The Odyssey",
+      "primaryEntity": "The Odyssey",
+      "entities": [
+        "Christopher Nolan",
+        "Matt Damon",
+        "Anne Hathaway",
+        "Tom Holland"
+      ],
+      "angle": "Director Christopher Nolan addresses backlash over the modern dialogue used in his upcoming film 'The Odyssey'.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/the-odyssey-christopher-nolan-backlash-modern-dialogue-1236644558/",
+          "ageMin": 229,
+          "headline": "Christopher Nolan Addresses The Odyssey Backlash, Explains Why Film Uses Modern Dialogue",
+          "summary": "The epic starring Matt Damon, Anne Hathaway, Tom Holland, Lupita Nyong'o, Elliot Page and more, arrives in theaters July 17."
+        }
+      ],
+      "ageMin": 229,
+      "_cand": {
+        "key": "rss:christopher-nolan-addresses-the-odyssey-backlash-explains-wh",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 56,
+      "signals": {
+        "recency": 9,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 12,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-evil-dead-burn-army-of-darkness-revisit",
+      "slug": "evil-dead-burn-just-made-sam-raimi-s-profoundly-silly-army-of-darkness",
+      "title": "Evil Dead Burn Just Made Sam Raimi s Profoundly Silly Army of Darkness Essential Viewing Again",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "high",
+      "eventSlug": "evil-dead-burn-army-of-darkness-revisit",
+      "primaryKeyword": "Army of Darkness",
+      "primaryEntity": "Army of Darkness",
+      "entities": [
+        "Army of Darkness (1993 film)",
+        "Evil Dead Burn",
+        "Sam Raimi"
+      ],
+      "angle": "The release of 'Evil Dead Burn' makes revisiting Sam Raimi's 'Army of Darkness' timely.",
+      "tmdbType": "movie",
+      "source": "rss:IndieWire",
+      "sources": [
+        {
+          "outlet": "IndieWire",
+          "tier": 7,
+          "url": "https://www.indiewire.com/features/best-of/army-of-darkness-sam-raimi-evil-dead-burn-wise-men-rewatch-1235204582/",
+          "ageMin": 1264,
+          "headline": "Evil Dead Burn Just Made Sam Raimi s Profoundly Silly Army of Darkness Essential Viewing Again",
+          "summary": "There's never been a better time to revisit this slapstick (er, boomstick?) fantasy adventure from 1993."
+        }
+      ],
+      "ageMin": 1264,
+      "_cand": {
+        "key": "rss:evil-dead-burn-just-made-sam-raimi-s-profoundly-silly-army-o",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "IndieWire"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": "IndieWire",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 48,
+      "signals": {
+        "recency": 1,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 12,
         "trending": 0,
         "softTv": 0
       }
