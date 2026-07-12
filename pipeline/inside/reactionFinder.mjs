@@ -535,11 +535,14 @@ export async function harvestReactions(trigger, angle, {
     // BOTH SIDES, HONESTLY (owner): run the plain search PLUS skeptic/praise sentiment queries for the
     // divided forms, so a "divided" framing is anchored by REAL posts from each camp — never padded with
     // a blog's opinion. Merge + dedupe by text; the relevance/stance classify still gates every post.
-    const bqueries = ["audience-reaction", "the-debate"].includes(angle.form)
-      ? [who, `${who} disappointed`, `${who} amazing`]
-      : [who];
+    // Widened for reaction SUPPLY (owner 2026-07-12): more angles + the work title + a higher per-query
+    // limit → more real fan posts clear the floor. Deduped by text below; the relevance classify still gates.
+    const workQ = trigger.work?.title && trigger.work.title !== who ? [trigger.work.title] : [];
+    const bqueries = [...new Set(["audience-reaction", "the-debate"].includes(angle.form)
+      ? [who, `${who} reactions`, `${who} fans`, `${who} disappointed`, `${who} amazing`, ...workQ]
+      : [who, `${who} reactions`, ...workQ])];
     const bResults = await Promise.all(bqueries.map((q) =>
-      bskyImpl(q, { nowMs: t0 }).catch((e) => { diag(`bsky q="${q}" → ERR ${String(e?.message || e).slice(0, 60)}`); return []; })));
+      bskyImpl(q, { nowMs: t0, limit: 30 }).catch((e) => { diag(`bsky q="${q}" → ERR ${String(e?.message || e).slice(0, 60)}`); return []; })));
     const seenB = new Set();
     const found = bResults.flat().filter((p) => {
       const k = norm(p.text || "").slice(0, 80);
@@ -547,7 +550,7 @@ export async function harvestReactions(trigger, angle, {
     });
     diag(`bsky → found ${found.length} (queries ${bqueries.length})`);
     if (found.length) {
-      const asPosts = found.slice(0, 16).map((p) => ({ text: p.text, user: { name: p.displayName, screen_name: p.handle }, created_at: p.createdAt }));
+      const asPosts = found.slice(0, 32).map((p) => ({ text: p.text, user: { name: p.displayName, screen_name: p.handle }, created_at: p.createdAt }));
       const classified = await classifyTweets(asPosts, trigger, angle, { model, chatImpl, subject });
       for (const c of classified) {
         const p = asPosts[c.i];

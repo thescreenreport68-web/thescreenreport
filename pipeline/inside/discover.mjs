@@ -63,7 +63,7 @@ export function categoryFor({ work = null, text = "", hint = null } = {}) {
 // NON-ENTERTAINMENT deterministic reject (owner audit: a viral POLITICIAN ranked #1). Clear politics/
 // government/sports/business/crime markers in the headline/overview drop the story before it can lead;
 // the finder LLM is the semantic backstop for name-only cases (e.g. a politician with no keyword).
-const NON_ENT_RX = /\b(elect(ion|ed)|politic(s|al|ian)|parliament|MP|senator|congress|governor|president|prime minister|minister|Brexit|Tory|Labour|Republican|Democrat|campaign|policy|referendum|court|trial|verdict|lawsuit indictment|stock|earnings|IPO|quarterly|NFL|NBA|MLB|Premier League|World Cup|golf tournament|championship match|Wimbledon|Olympics)\b/i;
+const NON_ENT_RX = /\b(elect(ion|ed)|politic(s|al|ian)|parliament|MP|senator|congress|governor|president|prime minister|minister|Brexit|Tory|Labour|Republican|Democrat|campaign|policy|referendum|court|trial|verdict|lawsuit indictment|stock|earnings|IPO|quarterly|NFL|NBA|MLB|Premier League|World Cup|golf tournament|championship match|Wimbledon|Olympics|shot and killed|fatally shot|shooting|stabb(ed|ing)|homicide|manslaughter|carjacking|robbery|kidnap|wildfire|hurricane|earthquake|tornado|\bflooding\b|plane crash|road accident)\b/i;
 const isEntertainmentTopic = (text) => !NON_ENT_RX.test(text || "");
 
 // Signal→heat boosts. Sized so a real audience-buzz hit outranks any coverage-only story:
@@ -366,16 +366,23 @@ export async function discoverStories({
   //    with zero audience posts, zero reddit argument, no search trend and no wiki spike is DROPPED
   //    before we spend a paid X call on it.
   deduped.sort((a, b) => b.discourseHeat - a.discourseHeat);
-  const preList = deduped.slice(0, 14);
+  // Measure MORE candidates, DEEPER (owner 2026-07-12: boost reaction supply). In free mode Bluesky is
+  // the primary audience signal, so it carries the ranking — a story with lots of bsky reactions should
+  // outrank a widely-covered trade item with none, and it's the pool the harvest will draw from.
+  const preList = deduped.slice(0, 18);
   const bskyCounts = await Promise.all(preList.map((st) =>
-    bskyCountImpl(buzzTermOf(st), { limit: 25, sort: "latest", nowMs: now }).catch(() => []),
+    bskyCountImpl(buzzTermOf(st), { limit: 40, sort: "latest", nowMs: now }).catch(() => []),
   ));
   preList.forEach((st, i) => {
     const posts = bskyCounts[i] || [];
     st.signals.audiencePosts = posts.length;
     st.signals.audienceEngagement = posts.reduce((sum, p) => sum + (p.likes || 0), 0);
-    // FREE MODE: with the paid X measure off, Bluesky post-count + likes is the popularity signal.
-    if (NO_X) st.discourseHeat += Math.min(70, posts.length * 4 + Math.round(st.signals.audienceEngagement / 50));
+    // FREE MODE: with the paid X measure off, Bluesky post-count + likes IS the popularity signal and now
+    // dominates the (down-weighted) outlet heat, so reacted-to stories lead the run.
+    // Modest boost (bsky term-counts are noisy — many loose matches aren't genuine reactions; the harvest
+    // classify is the real gate). Enough to lift a reacted-to story over a coverage-only one, not so much
+    // that raw count crowns noise. ENGAGEMENT (likes) weighted higher — a liked post is likelier genuine.
+    if (NO_X) st.discourseHeat += Math.min(70, posts.length * 3 + Math.round(st.signals.audienceEngagement / 25));
   });
   deduped = deduped.filter((st) => {
     const g = st.signals;

@@ -93,7 +93,11 @@ export function routeForStory(story) {
 // "is this even a top story"; cross-outlet coverage confirms it's real. Freshness boosts new waves.
 // REV 3: tmdbPopularity DEMOTED to a tie-break (0.15 → 0.05) — popularity is "people watch it",
 // not "people are arguing about it"; the buzz signals (trends/wiki/reddit) carry the ranking now.
-export const HEAT = { redditComments: 1.0, redditScore: 0.05, tmdbPopularity: 0.05, outletCount: 6, freshness: 40 };
+// outletCount DOWN-WEIGHTED 6→2 (owner 2026-07-12): a trade item covered by ~20 outlets was crowning
+// the run (Karlovy Vary festival award, heat 120, ZERO reactions). Outlet coverage is now a minor
+// tiebreak; the ACTUAL audience-reaction signals (reddit comments + free-mode Bluesky audiencePosts +
+// search trends + wiki spikes) carry the ranking, so the finder picks stories people are really reacting to.
+export const HEAT = { redditComments: 1.0, redditScore: 0.05, tmdbPopularity: 0.05, outletCount: 2, freshness: 40 };
 
 // SEO posture (owner: basic-to-moderate ONLY — over-optimizing gets Google-punished; readability +
 // engagement are the KPI). Consumed by the writer/gate prompts.
