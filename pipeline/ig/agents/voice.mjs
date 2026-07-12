@@ -296,15 +296,16 @@ export async function synthVoice({ slug, speakable, mood }) {
     const fb = kokoroFallback({ slug, text: spoken });
     fb.belowFloor = undefined;
     fb.takes = takes.map((t) => ({ voice: t.voice, score: t.score ?? null, fail: t.fail || (t.verbatim && !t.verbatim.pass ? t.verbatim.reason : null) }));
-    if (locked) { delete weights.voice; saveWeights(weights); } // the locked voice keeps ad-libbing → re-bake next run
+    // keep the locked voice — a Kokoro fallback is a transient synthesis failure, NOT a reason to
+    // abandon the owner's chosen voice and re-audition (which caused the drift to ash). (owner 2026-07-12)
     return fb;
   }
-  // learn: persist/refresh the winning plan; unlock if a locked plan keeps failing
+  // learn: persist/refresh the winning plan. A below-floor run no longer UNLOCKS the voice —
+  // the locked voice (marin) is the owner's chosen voice, and one transient weak take must NOT
+  // swap it out and cause the voice to drift across videos (that was the ash-vs-marin drift).
+  // The bake-off only re-runs when there is NO lock (first run / manual reset). (owner 2026-07-12)
   if (winner.pass) {
     weights.voice = { label: winner.realVoice || winner.voice, voice: winner.realVoice, model: winner.model || null, score: winner.score, at: new Date().toISOString() };
-    saveWeights(weights);
-  } else if (locked) {
-    delete weights.voice; // force a fresh bake-off next run
     saveWeights(weights);
   }
   // canonical output path the rest of the pipeline expects

@@ -38,13 +38,12 @@ export async function verify(facts) {
   for (const orig of facts.facts) {
     let f = orig;
     if (f.quote) {
+      // The source article is VERIFIED upstream and the writer PARAPHRASES quotes (never voices
+      // them verbatim), so a gathered quote that isn't a verbatim span is just paraphrasable
+      // material — NOT a fabrication. Never HOLD on it (that clashed with paraphrasing and held
+      // real, true stories). Drop the quote flag so downstream treats it as a normal claim. (2026-07-12)
       const spans = extractQuoteSpans(f.claim);
-      const missing = spans.find((s) => !artNorm.includes(s));
-      if (missing) {
-        hold = `fabricated/altered quote not found verbatim in article/sources: "${missing.slice(0, 80)}"`;
-        break;
-      }
-      if (!spans.length) f = { ...f, quote: false }; // no clean span — verify as a normal claim
+      if (!spans.length || spans.some((s) => !artNorm.includes(s))) f = { ...f, quote: false };
     }
     walled.push(f);
   }
@@ -69,8 +68,10 @@ export async function verify(facts) {
   const kept = [];
   walled.forEach((f, i) => {
     const v = verdicts.get(i) || "unsupported";
-    if (v === "contradicted") hold = hold || `contradicted claim: "${f.claim.slice(0, 90)}"`;
-    else if (v === "unsupported") cuts.push({ type: "claim", value: f.claim, reason: "unsupported" });
+    // Source is verified upstream, so an LLM "contradicted" verdict is far more likely its own
+    // misjudgment than a real error — CUT the single claim (build from the rest) rather than HOLD
+    // the whole video. Trust the source; drop what doesn't match; never block on accuracy. (2026-07-12)
+    if (v === "contradicted" || v === "unsupported") cuts.push({ type: "claim", value: f.claim, reason: v });
     else if ([...badNumbers].some((n) => normalizeForQuote(f.claim).includes(n)))
       cuts.push({ type: "claim", value: f.claim, reason: "contains unverified number" });
     else kept.push(f);

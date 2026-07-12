@@ -33,8 +33,13 @@ function ff(args, timeout = 900000, cwd = undefined) {
 export function ensureFonts(dir) {
   const dst = path.join(dir, "fonts");
   fs.mkdirSync(dst, { recursive: true });
-  const f = path.join(dst, "Anton-Regular.ttf");
-  if (!fs.existsSync(f)) fs.copyFileSync(path.join(IG.fontsDir, "Anton-Regular.ttf"), f);
+  // Anton = karaoke subs; Fraunces = the site's brand display serif (matches the wordmark),
+  // used for the endcard tagline so it is NOT a plain sans. (owner 2026-07-12)
+  for (const name of ["Anton-Regular.ttf", "Fraunces.ttf"]) {
+    const f = path.join(dst, name);
+    const src = path.join(IG.fontsDir, name);
+    if (!fs.existsSync(f) && fs.existsSync(src)) fs.copyFileSync(src, f);
+  }
   return dst;
 }
 
@@ -114,7 +119,7 @@ export function renderVideo({ slug, shots, assFile, mood = "neutral", durationSe
     `[vx]${grade},noise=alls=${tpl.grain}:allf=t,vignette=${tpl.vignette},` +
     `ass=${assRel}:fontsdir=fonts,` +
     `drawbox=y=0:h=ih:t=fill:color=black@0.55:enable='gte(t,${endStart})',` +
-    `drawtext=fontfile=fonts/Anton-Regular.ttf:text='${tpl.endTag}':fontsize=40:fontcolor=white@0.85:x=(w-tw)/2:y=(h/2)+130:enable='gte(t,${endStart})',` +
+    `drawtext=fontfile=fonts/Fraunces.ttf:text='${tpl.endTag}':fontsize=42:fontcolor=white@0.85:letter_spacing=3:x=(w-tw)/2:y=(h/2)+132:enable='gte(t,${endStart})',` +
     `trim=duration=${durationSec.toFixed(3)},setpts=PTS-STARTPTS[base]`
   );
   // TSR corner mark (persistent, small, brand opacity) + wordmark (endcard only, full)

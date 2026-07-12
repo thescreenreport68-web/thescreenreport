@@ -191,7 +191,9 @@ export async function speak({ text, voice = IG.voice.candidates[0], style, conte
   const words = String(text).trim().split(/\s+/).filter(Boolean).length;
   const capSec = Math.max((words / 2.2) * 2 + 8, 30);
   const maxAudioBytes = Math.round(capSec * 48000);
-  const out = await retry(() => streamAudio(body, { label: "speak", timeoutMs, maxAudioBytes }), { tries: 2, label: "speak" });
+  // 4 tries: a runaway/drift generation is transient — a fresh attempt almost always comes back
+  // clean, so we exhaust marin retries before EVER surrendering the voice to Kokoro. (owner 2026-07-12)
+  const out = await retry(() => streamAudio(body, { label: "speak", timeoutMs, maxAudioBytes }), { tries: 4, label: "speak" });
   record("voice", model, out.cost);
   return { pcm: out.audio, transcript: out.transcript, cost: out.cost };
 }
