@@ -1,0 +1,75 @@
+{
+  "id": "news-johnny-galecki-acting-return",
+  "slug": "johnny-galecki-returning-to-acting-after-7-year-break",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": null,
+      "cat": "celebrity/news",
+      "format": [
+        "body 215w < 220"
+      ],
+      "cuts": 2,
+      "broken": []
+    },
+    "attempt2": {
+      "score": null,
+      "cat": "celebrity/news",
+      "format": [
+        "body 201w < 220"
+      ],
+      "cuts": 1,
+      "broken": []
+    }
+  },
+  "editorial": {
+    "status": "official",
+    "entity": "Johnny Galecki",
+    "work": {
+      "title": "Kowalski",
+      "year": null,
+      "medium": null
+    },
+    "outlet": "thewrap.com"
+  },
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
+    "deterministic": {
+      "words": 201,
+      "h2s": 3,
+      "h2Questions": 3,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 3,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": true,
+      "maxSentence": 31,
+      "avgSentence": 15,
+      "flesch": 55,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 2,
+      "hardBlocks": [
+        "body 201w < 220"
+      ]
+    },
+    "hardBlocks": []
+  },
+  "score": null,
+  "category": "celebrity",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "body ≥ 220w"
+    ]
+  },
+  "ms": 96638
+}
