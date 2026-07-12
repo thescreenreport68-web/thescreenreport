@@ -4,7 +4,15 @@
 // non-200 so a Reddit outage never crashes a run. Used two ways: (1) DISCOVERY — hot/top across film/TV
 // subs → what people are talking about now; (2) HARVEST — search.json per subject → real anchor posts.
 const UA = "The Screen Report/1.0 (+https://thescreenreport.com)";
-const DEFAULT_SUBS = ["movies", "television", "boxoffice", "marvelstudios", "DC_Cinematic", "StarWars", "Music", "popculturechat", "Fauxmoi", "entertainment"];
+const DEFAULT_SUBS = ["movies", "television", "boxoffice", "marvelstudios", "DC_Cinematic", "StarWars", "Music", "popculturechat", "Fauxmoi", "entertainment", "popheads", "hiphopheads", "popculture"];
+// Subreddit → site category (owner 2026-07-12: route reddit-primary stories correctly). Music subs → music,
+// TV subs → tv, celebrity/gossip subs → celebrity, everything else (film subs) → movies.
+export const SUBREDDIT_CAT = {
+  music: "music", popheads: "music", hiphopheads: "music",
+  television: "tv",
+  popculturechat: "celebrity", fauxmoi: "celebrity", popculture: "celebrity",
+};
+export const catForSub = (sub) => SUBREDDIT_CAT[String(sub || "").toLowerCase()] || "movies";
 
 const strip = (s) => (s || "").replace(/\s+/g, " ").trim();
 
@@ -118,20 +126,28 @@ export async function redditSearchPosts(query, { subs = DEFAULT_SUBS, limit = 25
 
 // Top real comments on a post (the actual "what people are saying" quotes). Comments JSON = the post
 // URL + ".json". Returns short, quotable, upvoted comments (verbatim — the harvest wall re-checks them).
-export async function redditTopComments(permalink, { limit = 8, maxLen = 280, fetchImpl = fetch } = {}) {
+export async function redditTopComments(permalink, { limit = 25, maxLen = 600, fetchImpl = fetch } = {}) {
   if (!permalink) return [];
   const j = await getJson(`${permalink.replace(/\/$/, "")}.json?sort=top&limit=${limit}`, fetchImpl);
   const listing = Array.isArray(j) ? j[1] : null;
   const kids = listing?.data?.children || [];
   const out = [];
-  for (const c of kids) {
-    const d = c?.data;
-    if (!d || d.stickied || !d.body || d.body === "[deleted]" || d.body === "[removed]") continue;
-    const body = strip(d.body);
-    if (body.length < 12 || body.length > maxLen) continue; // short + quotable only
-    if (/^https?:\/\//.test(body)) continue;
-    out.push({ text: body, score: d.score || 0, author: d.author || "" });
-    if (out.length >= limit) break;
-  }
+  // Reaction SUPPLY (owner 2026-07-12): mine the thread DEEP — top-level comments AND one reply level —
+  // so a single hot thread yields many real fan reactions (the >=3 fan-post floor is met by construction).
+  // Skip kind:"more" stubs (no body) so we never emit an undefined quote.
+  const harvest = (nodes, depth) => {
+    for (const c of nodes || []) {
+      if (out.length >= limit) return;
+      if (c?.kind === "more") continue;
+      const d = c?.data;
+      if (!d || d.stickied || !d.body || d.body === "[deleted]" || d.body === "[removed]") { if (depth === 0 && d?.replies?.data?.children) harvest(d.replies.data.children, depth + 1); continue; }
+      const body = strip(d.body);
+      if (body.length >= 12 && body.length <= maxLen && !/^https?:\/\//.test(body)) {
+        out.push({ text: body, score: d.score || 0, author: d.author || "" });
+      }
+      if (depth === 0 && d?.replies?.data?.children) harvest(d.replies.data.children, depth + 1); // one reply level down
+    }
+  };
+  harvest(kids, 0);
   return out.sort((a, b) => b.score - a.score);
 }

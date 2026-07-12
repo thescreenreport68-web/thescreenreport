@@ -35,7 +35,7 @@ const PAUSED_FILE = path.join(DATA_DIR, "PAUSED");
 // (read per-run inside agentRun so the offline suite can exercise review mode)
 const RUNS_DIR = path.join(DATA_DIR, "runs");
 const MAX_ARTICLES_PER_DAY = Number(process.env.MAX_ARTICLES_PER_DAY) || 30;
-const MAX_RUN_COST_USD = Number(process.env.MAX_RUN_COST_USD) || 0.5;
+const MAX_RUN_COST_USD = Number(process.env.MAX_RUN_COST_USD) || 0.75; // funds ~40 cheap floor-fails + several full pipelines to LAND one publish per slot (owner: keep trying until it publishes)
 const WEB_VERIFY = process.env.WEB_VERIFY !== "0";
 
 // WATCHDOG — no stage may hang the 24/7 loop; a timeout is a logged skip, never a stuck run.
@@ -109,7 +109,10 @@ export async function agentRun({
 
   // ── FINDER ──
   let found = [];
-  try { found = await withTimeout(findImpl({ limit: Math.max(limit * 3, 6), nowMs: now }), AGENTS.finder.watchdogMs + 90e3, "finder"); }
+  // Deep candidate pool the try-until-published loop walks — decoupled from the publish quota so a slot
+  // always has a reacted-to story in reach (owner 2026-07-12: publish at EVERY slot, no matter the cancels).
+  const POOL = Number(process.env.INSIDE_CANDIDATE_POOL) || Math.max(limit * 12, 30);
+  try { found = await withTimeout(findImpl({ limit: POOL, nowMs: now }), AGENTS.finder.watchdogMs + 90e3, "finder"); }
   catch (e) { report.blocked.push({ stage: "finder", reason: String(e?.message || e).slice(0, 140) }); return finish(report, dryRun); }
   if (onlyStory) found = found.filter((f) => f.story.parentEventSlug === onlyStory);
   report.stories = found.length;

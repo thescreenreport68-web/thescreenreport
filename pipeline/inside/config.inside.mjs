@@ -23,7 +23,7 @@ export const ACCEPT_FLOOR = 65;
 export const MAX_ATTEMPTS = Number(process.env.MAX_ATTEMPTS) || 2;
 export const MONITOR_WINDOW_HOURS = 72; // discourse builds for days; monitor = UPDATER
 export const MAX_ANGLES_PER_STORY = 3;
-export const MAX_STORIES_PER_RUN = 10;
+export const MAX_STORIES_PER_RUN = Number(process.env.INSIDE_MAX_STORIES) || 24; // deep candidate pool so the try-until-published loop always has a reacted-to story in reach (owner: 12/day)
 export const MAX_EMBEDS = 6; // page weight cap; native quote text is always canonical
 
 // FREE MODE (owner 2026-07-11: "forget embeds; don't spend on Twitter API; quote what people say as

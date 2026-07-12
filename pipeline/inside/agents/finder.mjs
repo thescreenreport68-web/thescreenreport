@@ -48,7 +48,7 @@ export function isNonReactionHeadline(text) {
 }
 
 // story (trigger-shaped, engine-compatible) + angle (form pick) per publishable story.
-export async function findStories({ limit = 6, discoverImpl = discoverStories, chatImpl = null, nowMs = null } = {}) {
+export async function findStories({ limit = 16, discoverImpl = discoverStories, chatImpl = null, nowMs = null } = {}) {
   const stories = (await discoverImpl({ nowMs })).filter((s) => !isNonReactionHeadline(`${s.headline || ""} ${s.primaryEntity || ""}`));
   if (!stories.length) return [];
 

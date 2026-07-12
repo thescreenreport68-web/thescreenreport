@@ -584,9 +584,9 @@ export async function harvestReactions(trigger, angle, {
       diag(`reddit → discovered ${(trigger.redditPosts || []).length}, searched ${found.length}`);
       const posts = [...(trigger.redditPosts || []), ...found];
       const seenPerma = new Set();
-      const topPosts = posts.filter((p) => p?.permalink && !seenPerma.has(p.permalink) && (seenPerma.add(p.permalink), true)).slice(0, 4);
+      const topPosts = posts.filter((p) => p?.permalink && !seenPerma.has(p.permalink) && (seenPerma.add(p.permalink), true)).slice(0, 6);
       const commentLists = await Promise.all(topPosts.map((p) => redditCommentsImpl(p.permalink).then((cs) => cs.map((c) => ({ ...c, _perma: p.permalink }))).catch(() => [])));
-      const comments = commentLists.flat().slice(0, 14);
+      const comments = commentLists.flat().slice(0, 30); // deep thread supply — a hot reddit story's OWN comments fill the fan floor by construction (owner: 12/day)
       if (comments.length) {
         const classified = await classifyRedditComments(comments, trigger, angle, { model, chatImpl, subject });
         for (const c of classified) {

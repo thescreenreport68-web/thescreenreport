@@ -10,9 +10,9 @@ import { run as writerRun, repairBodyQuotes } from "../agents/writer.mjs";
 import { maskQuotes, unmaskQuotes, findTemplateHeadings, stripTemplateHeadings, run as voiceRun, PHRASEBOOK } from "../agents/voice.mjs";
 import { factLocks, review as qaReview, webCheck as qaWebCheck, classifyBlocks } from "../agents/qa.mjs";
 import { buildInsideMarkdown, insertInlineEmbeds, seoFinish } from "../assemble.mjs";
-import { discoverReddit, redditSearchPosts, redditTopComments } from "../../find/sources/reddit.mjs";
+import { discoverReddit, redditSearchPosts, redditTopComments, catForSub } from "../../find/sources/reddit.mjs";
 import { gnewsArticleId, decodeGnewsBase64, decodeGnewsUrl } from "../../lib/gnewsDecode.mjs";
-import { discoverStories, categoryFor } from "../discover.mjs";
+import { discoverStories, categoryFor, redditSubject } from "../discover.mjs";
 import { trendingSearches, wikiSpikes, tmdbMatch } from "../signals.mjs";
 import { xSearchIds } from "../xsearch.mjs";
 import { norm, quoteIsVerbatim, meetsFloor, fallbackQueries, isMediaHandle, looksLikeSpam, cleanQuote, isOutletSpeaker, reliableProvenance, isMediaVoice, unwrapQuote, isSocialSrc, hasHandle, trimScar } from "../reactionFinder.mjs";
@@ -583,7 +583,7 @@ await check("discover REV 3: unmatched entertainment trend/wiki become standalon
     discoverTMDBImpl: async () => [],
     discoverRedditImpl: async () => [],
     trendsImpl: async () => [
-      { term: "bonnie tyler", traffic: 100000, news: [{ title: "Bonnie Tyler moment goes viral", url: "https://ew.example/bt", source: "EW" }, { title: "Why Bonnie Tyler is everywhere", url: "https://bb.example/bt", source: "Billboard" }] },
+      { term: "bonnie tyler", traffic: 100000, news: [{ title: "Bonnie Tyler announces world tour dates", url: "https://ew.example/bt", source: "EW" }, { title: "Why Bonnie Tyler is everywhere", url: "https://bb.example/bt", source: "Billboard" }] },
       { term: "tax deadline 2026", traffic: 500000, news: [{ title: "IRS deadline nears", url: "https://irs.example/x", source: "AP" }] },
     ],
     wikiImpl: async () => [{ name: "Sable Coast", views: 400000, spike: 12 }],
@@ -783,6 +783,37 @@ await check("isNonReactionHeadline drops reviews/guides/listicles, keeps real re
   assert.ok(!isNonReactionHeadline("Zendaya cast in the new Dune spinoff"), "a casting");
   assert.ok(!isNonReactionHeadline("Fans review-bomb the new Snow White trailer"), "review-BOMBING is a reaction");
   assert.ok(!isNonReactionHeadline("Taylor Swift announces surprise album"), "a music event");
+});
+await check("reddit-primary: a hot entertainment thread LEADS as a reacted-to story; framing stripped; sub→category; sports dropped", async () => {
+  const stories = await discoverStories({
+    discoverNewsImpl: async () => [], discoverTMDBImpl: async () => [],
+    discoverRedditImpl: async () => [
+      { id: "rp1", subreddit: "movies", title: "Everyone is losing it over the Dune Part Three trailer", numComments: 420, score: 8000, ageMin: 120, permalink: "https://www.reddit.com/r/movies/comments/rp1/", url: null },
+      { id: "rp2", subreddit: "popheads", title: "Official Discussion - Taylor Swift new album [SPOILERS]", numComments: 300, score: 6000, ageMin: 60, permalink: "https://www.reddit.com/r/popheads/comments/rp2/", url: null },
+      { id: "rp3", subreddit: "movies", title: "Bellingham scores winner in the Champions League final", numComments: 900, score: 20000, ageMin: 30, permalink: "https://www.reddit.com/r/movies/comments/rp3/", url: null },
+    ],
+    trendsImpl: async () => [], wikiImpl: async () => [], tmdbMatchImpl: async () => null,
+    bskyCountImpl: async () => [], xStatsImpl: async () => ({ popularPosts: 0, maxLikes: 0, sumLikes: 0, topIds: [] }),
+    xPaceMs: 0, nowMs: NOW,
+  });
+  const dune = stories.find((s) => s.via === "reddit" && /dune/i.test(s.primaryEntity));
+  assert.ok(dune, "reddit-primary story created from a hot thread");
+  assert.equal(dune.signals.redditHot, true, "carries the redditHot family");
+  assert.equal(dune.redditPosts.length, 1, "carries its own thread as reaction supply");
+  assert.equal(dune.category, "movies", "r/movies → movies");
+  assert.ok(!/everyone|losing/i.test(dune.primaryEntity), "reddit framing stripped from the subject");
+  assert.equal(stories[0].via, "reddit", "a hot thread LEADS the run");
+  const music = stories.find((s) => /taylor swift/i.test(s.primaryEntity));
+  assert.ok(music && music.category === "music", "r/popheads → music + discussion framing stripped");
+  assert.ok(!stories.some((s) => /bellingham/i.test(s.primaryEntity)), "a sports thread is dropped (Champions League keyword)");
+});
+await check("redditSubject strips conversational framing; catForSub routes subreddits", () => {
+  const s = redditSubject("What did everyone think of The Bear finale?");
+  assert.ok(!/what did/i.test(s) && /bear/i.test(s), "framing stripped, work kept");
+  assert.equal(catForSub("popheads"), "music");
+  assert.equal(catForSub("Fauxmoi"), "celebrity");
+  assert.equal(catForSub("television"), "tv");
+  assert.equal(catForSub("movies"), "movies");
 });
 await check("categoryFor routes by the story SUBJECT, never the person's profession (owner 2026-07-12)", () => {
   // A TMDB-confirmed work's medium is AUTHORITATIVE — keywords can't override it.
@@ -1125,7 +1156,7 @@ await check("discoverReddit fail-closed on non-200; search + comments filters", 
   const sOut = await redditSearchPosts("q", { sinceDays: 14, fetchImpl: async () => ({ ok: true, json: async () => redditListing([rawPost("a", 40, 1), rawPost("old", 200, 24 * 40)]) }), nowMs: NOW });
   assert.deepEqual(sOut.map((p) => p.id), ["a"]);
   const c = (body, score) => ({ body, score, author: "u" });
-  const cOut = await redditTopComments("https://www.reddit.com/r/movies/comments/p/", { fetchImpl: async () => ({ ok: true, json: async () => redditCommentsListing([c("This ending was incredible", 10), c("[deleted]", 99), c("short", 50), c("x".repeat(400), 70)]) }) });
+  const cOut = await redditTopComments("https://www.reddit.com/r/movies/comments/p/", { fetchImpl: async () => ({ ok: true, json: async () => redditCommentsListing([c("This ending was incredible", 10), c("[deleted]", 99), c("short", 50), c("x".repeat(700), 70)]) }) });
   assert.equal(cOut.length, 1, "deleted/short/too-long filtered");
 });
 console.log("— engine: discover.mjs —");

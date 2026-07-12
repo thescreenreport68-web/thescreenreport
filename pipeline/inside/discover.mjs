@@ -14,7 +14,7 @@ import { trendingSearches, wikiSpikes, tmdbMatch } from "./signals.mjs";
 import { bskySearchPosts } from "./bsky.mjs";
 import { xSearchStats } from "./xsearch.mjs";
 import { NO_X } from "./config.inside.mjs";
-import { discoverReddit } from "../find/sources/reddit.mjs";
+import { discoverReddit, catForSub } from "../find/sources/reddit.mjs";
 import { discoverGoogleNews } from "../find/sources/gnews.mjs";
 import { discoverRSS } from "../find/sources/rss.mjs";
 import { HEAT, MAX_STORIES_PER_RUN } from "./config.inside.mjs";
@@ -63,7 +63,7 @@ export function categoryFor({ work = null, text = "", hint = null } = {}) {
 // NON-ENTERTAINMENT deterministic reject (owner audit: a viral POLITICIAN ranked #1). Clear politics/
 // government/sports/business/crime markers in the headline/overview drop the story before it can lead;
 // the finder LLM is the semantic backstop for name-only cases (e.g. a politician with no keyword).
-const NON_ENT_RX = /\b(elect(ion|ed)|politic(s|al|ian)|parliament|MP|senator|congress|governor|president|prime minister|minister|Brexit|Tory|Labour|Republican|Democrat|campaign|policy|referendum|court|trial|verdict|lawsuit indictment|stock|earnings|IPO|quarterly|NFL|NBA|MLB|Premier League|World Cup|golf tournament|championship match|Wimbledon|Olympics|shot and killed|fatally shot|shooting|stabb(ed|ing)|homicide|manslaughter|carjacking|robbery|kidnap|wildfire|hurricane|earthquake|tornado|\bflooding\b|plane crash|road accident)\b/i;
+const NON_ENT_RX = /\b(elect(ion|ed)|politic(s|al|ian)|parliament|MP|senator|congress|governor|president|prime minister|minister|Brexit|Tory|Labour|Republican|Democrat|campaign|policy|referendum|court|trial|verdict|lawsuit indictment|stock|earnings|IPO|quarterly|NFL|NBA|MLB|Premier League|World Cup|golf tournament|championship match|Wimbledon|Olympics|striker|midfielder|goalkeeper|Ballon d.Or|transfer window|Bundesliga|La Liga|Serie A|UEFA|FIFA|Champions League|quarterback|touchdown|Grand Prix|Formula 1|shot and killed|fatally shot|shooting|stabb(ed|ing)|homicide|manslaughter|carjacking|robbery|kidnap|wildfire|hurricane|earthquake|tornado|\bflooding\b|plane crash|road accident)\b/i;
 const isEntertainmentTopic = (text) => !NON_ENT_RX.test(text || "");
 
 // Signal→heat boosts. Sized so a real audience-buzz hit outranks any coverage-only story:
@@ -82,7 +82,11 @@ const labelMatch = (term, label) => {
 // real audience posts, genuine TMDB heat. <2 families → the story can support an article but never
 // lead the run.
 const familiesOf = (sig, popularity) =>
-  ((sig.outlets || 0) >= 2 ? 1 : 0) + ((sig.comments || 0) > 0 ? 1 : 0) + (sig.trend ? 1 : 0) + (sig.wiki ? 1 : 0) + (((sig.xPopular || 0) >= 3 || (sig.audiencePosts || 0) >= 3) ? 1 : 0) + ((popularity || 0) >= 40 ? 1 : 0);
+  ((sig.outlets || 0) >= 2 ? 1 : 0) + ((sig.comments || 0) > 0 ? 1 : 0) + (sig.trend ? 1 : 0) + (sig.wiki ? 1 : 0) + (((sig.xPopular || 0) >= 3 || (sig.audiencePosts || 0) >= 3) ? 1 : 0) + ((popularity || 0) >= 40 ? 1 : 0) + (sig.redditHot ? 1 : 0);
+// A genuine AUDIENCE-REACTION family (owner 2026-07-12: a story may only LEAD if PEOPLE are reacting —
+// not on coverage/lookup alone). A festival award covered by 8 outlets + a wiki spike has 2 families but
+// ZERO reactions; it must not lead. Reddit comments, a hot reddit thread, or real audience posts qualify.
+const hasReactionFamily = (sig) => (sig.comments || 0) > 0 || !!sig.redditHot || (sig.audiencePosts || 0) >= 3 || (sig.xPopular || 0) >= 3;
 
 // Anime/manga/game-adaptation detector (owner: "it is anime — we are talking about Hollywood").
 // Demoted HARD below: these stories only run on overwhelming real buzz, never as filler.
@@ -107,6 +111,15 @@ function headlineEntity(headline, fallback = "") {
   return ent.slice(0, 60) || stripped.replace(/\s*[|:,–—].*$/, "").trim().slice(0, 60) || (fallback || h).slice(0, 60);
 }
 const buzzTermOf = (s) => (s.work?.title || headlineEntity(s.headline, s.primaryEntity) || s.primaryEntity || "").split(/[|,]|\s[-]\s/)[0].trim().slice(0, 60);
+
+// Reddit titles are conversational ("Everyone is losing it over X", "Official Discussion - X [SPOILERS]"),
+// not news "SUBJECT verbs OBJECT" — strip the reddit FRAMING to recover the work/subject people react to.
+const REDDIT_FRAME = /^\s*(official\s+)?(post-?premiere\s+)?(discussion|megathread|unpopular opinion|hot take|can we (talk about|appreciate)|what did (everyone|you all|people|we) think (of|about)|(everyone|the internet)('?s| is| are)?\s*(talking about|losing it over|obsessed with)|am i the only one who|my (thoughts|review) (on|of)|so,? |just (watched|finished|saw) )\s*[:\-—]*\s*/i;
+export function redditSubject(title) {
+  let t = String(title || "").replace(REDDIT_FRAME, "").replace(/\s*\[(spoilers?|no spoilers?|discussion|serious)\]\s*/gi, " ").trim();
+  t = t.replace(/\?.*$/, "").trim();
+  return t.slice(0, 80) || String(title || "").replace(/[?!.].*$/, "").slice(0, 80);
+}
 
 // Default HEADLINE source: trade RSS + Google News, merged (both keyless, both already built for
 // the news lane). Every failure degrades to [] — discovery never dies on one source.
@@ -189,6 +202,9 @@ export async function discoverStories({
   const people = tmdb.filter((t) => t.kind === "trending-person");
 
   const stories = [];
+  // Declared BEFORE the headline loop so a headline-matched reddit post can't ALSO emit as a reddit-primary
+  // story (double-emit fix). Every loop that consumes a post marks it here.
+  const usedPosts = new Set();
 
   // ── HEADLINE-TOPIC stories (the primary signal): the trending Hollywood story itself — a casting
   //    shock, a star's claim, a controversy — whatever many outlets are covering right now. The
@@ -199,6 +215,7 @@ export async function discoverStories({
       const t = norm(p.title);
       return toks.filter((tok) => t.includes(tok)).length >= 2;
     });
+    matched.forEach((p) => usedPosts.add(p.id)); // headline consumes these posts — don't re-emit as reddit-primary
     const comments = matched.reduce((s, p) => s + p.numComments, 0);
     const signals = { outlets: c.outlets, comments, headline: true };
     const buzz = attachSignals(`${c.headline} ${c.summary || ""}`, signals);
@@ -223,7 +240,6 @@ export async function discoverStories({
   }
 
   // ── WORK stories: a trending work + the reddit discourse about it ──
-  const usedPosts = new Set();
   for (const w of works) {
     const matched = reddit.filter((p) => postMatchesWork(p, w));
     matched.forEach((p) => usedPosts.add(p.id));
@@ -292,6 +308,10 @@ export async function discoverStories({
     if (!m) return;
     const matched = reddit.filter((p) => labelMatch(m.title, p.title));
     const comments = matched.reduce((s, x) => s + x.numComments, 0);
+    // Corroborate a bare-name PERSON (owner 2026-07-12: a trending SEARCH person is often a politician/
+    // athlete TMDB indexes as "person" from archive/doc credits; keep only one that is IN-NICHE — has
+    // film/TV/music reddit discourse OR entertainment keywords in its news). Works are inherently in-niche.
+    if (m.kind === "person") { const nt = t.news.map((n) => n.title).join(" "); if (!(matched.length > 0 || MOVIE_RX.test(nt) || TV_RX.test(nt) || MUSIC_RX.test(nt))) return; }
     const signals = { trend: t.traffic || 1, comments, outlets: new Set(t.news.map((n) => n.source).filter(Boolean)).size };
     const wHit = wiki.find((w) => labelMatch(w.name, m.title));
     if (wHit) { usedWiki.add(wHit.name); signals.wiki = wHit.views; }
@@ -319,6 +339,9 @@ export async function discoverStories({
     if (!m) return;
     const matched = reddit.filter((p) => labelMatch(m.title, p.title));
     const comments = matched.reduce((s, x) => s + x.numComments, 0);
+    // A wiki-surge PERSON with no film/TV/music reddit corroboration is likely a politician/athlete — drop
+    // (the wiki path has no news text to keyword-check, so reddit discourse is the only in-niche signal).
+    if (m.kind === "person" && matched.length === 0) return;
     const wk = m.kind === "movie" || m.kind === "tv" ? { title: m.title, type: m.kind === "tv" ? "tv" : "movie", year: m.year } : null;
     stories.push({
       storySlug: slugify(`${w.name}-surge`).slice(0, 60),
@@ -338,23 +361,35 @@ export async function discoverStories({
     });
   });
 
-  // ── Orphan reddit stories: a hot argument whose subject isn't in TMDB trending ──
-  // (a specific controversy about an older/again-viral title). Subject = cleaned post title.
-  for (const post of reddit) {
-    if (usedPosts.has(post.id)) continue;
-    if (post.numComments < 120) continue; // only genuinely big standalone arguments
-    const subject = post.title.replace(/[?!.].*$/, "").slice(0, 80);
+  // ── REDDIT-PRIMARY lane (owner 2026-07-12: the reliable reacted-to supply for 12/day). A HOT
+  //    entertainment-sub post IS a trending story AND its comment thread IS hundreds of audience
+  //    reactions ready to quote. Every hot post people are actively arguing about (>=40 comments,
+  //    >=300 upvotes, <=48h, in-niche, non-anime) becomes a FIRST-CLASS candidate carrying its own
+  //    thread as the reaction supply — so the harvest's >=3-fan-post floor is met by construction.
+  const REDDIT_MIN_COMMENTS = Number(process.env.INSIDE_REDDIT_MIN_COMMENTS) || 40;
+  const REDDIT_MIN_SCORE = Number(process.env.INSIDE_REDDIT_MIN_SCORE) || 300;
+  const redditPrimary = reddit
+    .filter((post) => !usedPosts.has(post.id)
+      && (post.numComments || 0) >= REDDIT_MIN_COMMENTS && (post.score || 0) >= REDDIT_MIN_SCORE && (post.ageMin ?? 0) <= 48 * 60
+      && !ANIME_RX.test(post.title) && isEntertainmentTopic(post.title))
+    .sort((a, b) => b.numComments - a.numComments)
+    .slice(0, 24);
+  for (const post of redditPrimary) {
+    usedPosts.add(post.id);
+    const subject = redditSubject(post.title);
     stories.push({
-      storySlug: slugify(subject).slice(0, 60),
+      storySlug: slugify(subject || post.title).slice(0, 60),
       kind: "discourse",
       primaryEntity: subject,
       work: null,
-      category: post.subreddit && /television|tv/i.test(post.subreddit) ? "tv" : "movies",
+      category: catForSub(post.subreddit),
       redditPosts: [post],
       sources: post.url ? [{ url: post.url, outlet: null }] : [],
       popularity: 0,
-      discourseHeat: post.numComments,
-      signals: { comments: post.numComments, redditPosts: 1, orphan: true },
+      // Heat led by the discussion volume (real reactions) + a bounded upvote bump — a 300-comment thread
+      // outranks a down-weighted trade cluster, and the redditHot family lets it escape the lead cap.
+      discourseHeat: Math.round((post.numComments || 0) + Math.min(60, (post.score || 0) / 200)),
+      signals: { comments: post.numComments, redditPosts: 1, redditHot: true },
       via: "reddit",
     });
   }
@@ -369,7 +404,7 @@ export async function discoverStories({
   // Measure MORE candidates, DEEPER (owner 2026-07-12: boost reaction supply). In free mode Bluesky is
   // the primary audience signal, so it carries the ranking — a story with lots of bsky reactions should
   // outrank a widely-covered trade item with none, and it's the pool the harvest will draw from.
-  const preList = deduped.slice(0, 18);
+  const preList = deduped.slice(0, Math.max(30, max)); // measure the free reaction signal on the WHOLE surviving pool, not just the top 18 (keyless, no QPS)
   const bskyCounts = await Promise.all(preList.map((st) =>
     bskyCountImpl(buzzTermOf(st), { limit: 40, sort: "latest", nowMs: now }).catch(() => []),
   ));
@@ -417,6 +452,10 @@ export async function discoverStories({
   for (const st of deduped) {
     st.signals.families = familiesOf(st.signals, st.popularity);
     if (st.signals.families < 2) st.discourseHeat = Math.min(st.discourseHeat, 45);
+    // A story may only LEAD if PEOPLE are reacting (owner 2026-07-12) — a trade item with only
+    // outlets+wiki (2 families, ZERO reactions) is capped so it can never crown the run over a
+    // reddit thread or Bluesky wave. Reacted-to stories climb; coverage-only ones sink.
+    if (!hasReactionFamily(st.signals)) st.discourseHeat = Math.min(st.discourseHeat, 45);
     // TOP-TIER GATE (owner): a story where we MEASURED X and found NOBODY with 100+ likes talking is
     // not top-tier — cap it hard so it can never lead (it may still exist as a minor entry). Stories
     // we never measured (rank > 8) are left as-is; only a measured, proven-unpopular story is capped.
