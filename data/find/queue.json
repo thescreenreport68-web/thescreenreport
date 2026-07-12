@@ -1,44 +1,42 @@
 {
-  "runId": "run-2026-07-12T15-01-22",
-  "builtAt": "2026-07-12T15:01:48.475Z",
-  "count": 3,
+  "runId": "run-2026-07-12T17-01-31",
+  "builtAt": "2026-07-12T17:02:11.472Z",
+  "count": 7,
   "topics": [
     {
-      "id": "news-jay-z-yankee-stadium-night-2",
-      "slug": "see-jay-z-bring-out-eminem-pharrell-williams-at-yankee-stadium-night-2",
-      "title": "See Jay-Z Bring Out Eminem, Pharrell Williams at Yankee Stadium Night 2",
+      "id": "news-avengers-doomsday-doctor-doom-concept-art",
+      "slug": "avengers-doomsday-concept-art-reveals-first-look-at-robert-downey-jr-s",
+      "title": "Avengers: Doomsday Concept Art Reveals First Look at Robert Downey Jr.'s Doctor Doom, Returning X-Men Characters",
       "contentType": "news",
       "formatTag": "news",
-      "category": "celebrity",
+      "category": "movies",
       "subcategory": "news",
-      "eventType": "other",
+      "eventType": "announcement",
       "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "jay-z-yankee-stadium-night-2",
-      "primaryKeyword": "Jay-Z",
-      "primaryEntity": "JAŸ-Z",
+      "eventSlug": "avengers-doomsday-doctor-doom-concept-art",
+      "primaryKeyword": "doctor doom concept art",
+      "primaryEntity": "Avengers: Doomsday",
       "entities": [
-        "Jay-Z",
-        "Eminem",
-        "Pharrell Williams",
-        "The Blueprint"
+        "Doctor Doom",
+        "Robert Downey Jr.",
+        "X-Men"
       ],
-      "angle": "Jay-Z brought out surprise guests Eminem and Pharrell Williams during the second night of his Yankee Stadium concert, celebrating his album 'The Blueprint'.",
+      "angle": "First look at Robert Downey Jr.'s Doctor Doom and returning X-Men characters revealed in concept art for 'Avengers: Doomsday'.",
       "tmdbType": "movie",
-      "source": "rss:Rolling Stone",
+      "source": "rss:Variety",
       "sources": [
         {
-          "outlet": "Rolling Stone",
+          "outlet": "Variety",
           "tier": 7,
-          "url": "https://www.rollingstone.com/music/music-news/jay-z-eminem-pharrell-williams-yankee-stadium-night-two-1235592434/",
-          "ageMin": 56,
-          "headline": "See Jay-Z Bring Out Eminem, Pharrell Williams at Yankee Stadium Night 2",
-          "summary": "Rapper's second night in the Bronx focused on his 2001 album The Blueprint"
+          "url": "https://variety.com/2026/film/news/avengers-doomsday-art-doctor-doom-mask-x-men-1236809075/",
+          "ageMin": 52,
+          "headline": "Avengers: Doomsday Concept Art Reveals First Look at Robert Downey Jr. s Doctor Doom, Returning X-Men Characters",
+          "summary": "The first clear look at Robert Downey Jr. s Doctor Doom mask has arrived, courtesy of some concept art posted by a Marvel Cinematic Universe icon. Former Marvel visual department director Andy Park took to X on July 11 to share an illustration from the upcoming blockbuster. “AVENGERS: DOOMSDAY the final full film I had [ ]"
         }
       ],
-      "ageMin": 56,
+      "ageMin": 52,
       "_cand": {
-        "key": "rss:see-jay-z-bring-out-eminem-pharrell-williams-at-yankee-stadi",
+        "key": "rss:avengers-doomsday-concept-art-reveals-first-look-at-robert-d",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -48,11 +46,142 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Rolling Stone"
+          "Variety"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Rolling Stone",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 87,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-wai-ching-ho-death",
+      "slug": "wai-ching-ho-dead-daredevil-hustlers-actress-was-82",
+      "title": "Wai Ching Ho Dead: Daredevil Hustlers Actress Was 82",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "death",
+      "sensitivity": "high",
+      "eventSlug": "wai-ching-ho-death",
+      "primaryKeyword": "wai ching ho",
+      "primaryEntity": "Wai Ching Ho",
+      "entities": [
+        "Daredevil",
+        "Madame Gao"
+      ],
+      "angle": "Wai Ching Ho, who played Madame Gao in Marvel's 'Daredevil', has passed away at 82.",
+      "tmdbType": "movie",
+      "source": "rss:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/wai-ching-ho-dead-daredevil-1236980099/",
+          "ageMin": 38,
+          "headline": "Wai Ching Ho Dead: Daredevil Hustlers Actress Was 82",
+          "summary": "Wai Ching Ho, the actress known for playing Madame Gao in the Marvel Cinematic Universe, has died. She was 82. The actress Daredevil co-star Peter Shinkoda was one of several to react to Wai s passing on social media, after playing Gao s The Hand supervillain organization co-founder Kagenobu Yoshioka on the Netflix series from 2015- 16. Just [ ]"
+        }
+      ],
+      "ageMin": 38,
+      "_cand": {
+        "key": "rss:wai-ching-ho-dead-daredevil-hustlers-actress-was-82",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 74,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 6,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "music-news-niall-horan-thomas-rhett-cover-ella-langley",
+      "slug": "niall-horan-thomas-rhett-cover-ella-langley-s-choosin-texas-in-nashvil",
+      "title": "Niall Horan Thomas Rhett Cover Ella Langley s Choosin Texas in Nashville",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "niall-horan-thomas-rhett-cover-ella-langley",
+      "primaryKeyword": "niall horan thomas rhett",
+      "primaryEntity": "Niall Horan",
+      "entities": [
+        "Thomas Rhett",
+        "Ella Langley",
+        "Choosin Texas"
+      ],
+      "angle": "Niall Horan and Thomas Rhett teamed up for a surprise duet of Ella Langley's 'Choosin Texas'.",
+      "tmdbType": "movie",
+      "source": "rss:Billboard",
+      "sources": [
+        {
+          "outlet": "Billboard",
+          "tier": 7,
+          "url": "https://www.billboard.com/music/music-news/niall-horan-thomas-rhett-hoosin-texas-ella-langley-1236292539/",
+          "ageMin": 58,
+          "headline": "Niall Horan Thomas Rhett Cover Ella Langley s Choosin Texas in Nashville",
+          "summary": "The pair performed a duet of the country hit at their co-headlining stadium gig at GEODIS Park."
+        }
+      ],
+      "ageMin": 58,
+      "_cand": {
+        "key": "rss:niall-horan-thomas-rhett-cover-ella-langley-s-choosin-texas-",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "breakoutVelocity": 0,
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Billboard"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Billboard",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -71,97 +200,85 @@
       }
     },
     {
-      "id": "news-byron-allen-nolan-wells-gofundme-donation",
-      "slug": "byron-allen-donates-100-000-to-nolan-wells-gofundme",
-      "title": "Byron Allen Donates $100,000 to Nolan Wells GoFundMe",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
+      "id": "music-news-baby-rose-new-music-growth",
+      "slug": "baby-rose-s-story-is-still-unfolding",
+      "title": "Baby Rose s Story Is Still Unfolding",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
       "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "high",
-      "eventSlug": "byron-allen-nolan-wells-gofundme-donation",
-      "primaryKeyword": "byron allen donation",
-      "primaryEntity": "Byron Allen",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "indie",
+      "eventSlug": "baby-rose-new-music-growth",
+      "primaryKeyword": "baby rose",
+      "primaryEntity": "Baby Rose",
       "entities": [
-        "Tyler Perry's Finding Joy",
-        "Nolan Wells",
-        "Tyler Perry"
+        "Olivia Dean"
       ],
-      "angle": "Media mogul Byron Allen makes a significant donation to a GoFundMe for a deceased teen, with Tyler Perry covering funeral costs.",
+      "angle": "Baby Rose is on tour with Olivia Dean and discusses her evolving sound and personal journey.",
       "tmdbType": "movie",
-      "source": "rss:TheWrap",
+      "source": "rss:Rolling Stone",
       "sources": [
         {
-          "outlet": "TheWrap",
+          "outlet": "Rolling Stone",
           "tier": 7,
-          "url": "https://www.thewrap.com/media-platforms/tv/byron-allen-donates-100000-to-nolan-wells-gofundme/",
-          "ageMin": 896,
-          "headline": "Byron Allen Donates $100,000 to Nolan Wells GoFundMe",
-          "summary": "Meanwhile, Tyler Perry is covering the 18-year-old's funeral costs The post Byron Allen Donates $100,000 to Nolan Wells GoFundMe appeared first on TheWrap ."
-        },
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/tv/news/byron-allen-donates-nolan-wells-tyler-perry-funeral-costs-1236807312/",
-          "ageMin": 1113,
-          "headline": "Byron Allen Donates $100,000 to Nolan Wells Family s GoFundMe as Tyler Perry Covers Funeral Costs",
-          "summary": "Media mogul and late night host Byron Allen has donated $100,000 to the GoFundMe set up by the family of Nolan Xavier Wells, the 18-year-old who was found dead following his disappearance over the July 4 holiday. Wells death has sparked much suspicion and left unanswered questions after he took a boating trip with friends [ ]"
+          "url": "https://www.rollingstone.com/music/music-features/baby-rose-new-album-tour-olivia-dean-1235592172/",
+          "ageMin": 62,
+          "headline": "Baby Rose s Story Is Still Unfolding",
+          "summary": "The singer, who's currently on tour with Olivia Dean, tells us about her new music and the personal growth that went into it"
         }
       ],
-      "ageMin": 896,
+      "ageMin": 62,
       "_cand": {
-        "key": "rss:byron-allen-donates-100-000-to-nolan-wells-gofundme",
+        "key": "rss:baby-rose-s-story-is-still-unfolding",
         "popularity": 0,
         "kind": "rss-news"
       },
-      "corroborationCount": 2,
+      "corroborationCount": 1,
       "verification": {
-        "tier1Count": 2,
-        "tier1Owners": 2,
-        "outletCount": 2,
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
         "outlets": [
-          "TheWrap",
-          "Variety"
+          "Rolling Stone"
         ],
         "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": null,
-        "framing": "plain",
-        "status": "CONFIRMED",
+        "sensitivity": "normal",
+        "attribution": "Rolling Stone",
+        "framing": "attributed",
+        "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 57,
+      "priority": 55,
       "signals": {
-        "recency": 1,
-        "corroboration": 18,
-        "status": 25,
-        "type": 5,
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
         "big": 0,
-        "trending": 8,
+        "trending": 0,
         "softTv": 0
       }
     },
     {
-      "id": "news-goose-jam-band-scene",
+      "id": "music-news-goose-reinvention",
       "slug": "goose-didn-t-just-inherit-the-jam-band-scene-they-reinvented-it",
       "title": "Goose Didn’t Just Inherit the Jam Band Scene — They Reinvented It",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
       "subcategory": "news",
-      "eventType": "other",
+      "eventType": "announcement",
       "sensitivity": "normal",
       "tier": "indie",
-      "eventSlug": "goose-jam-band-scene",
-      "primaryKeyword": "Goose",
-      "primaryEntity": "Claire Goose",
-      "entities": [
-        "Goose"
-      ],
-      "angle": "The Connecticut-based jam band Goose is reinventing the genre with their blend of precision, risk, and pop-minded hooks, becoming a fast-rising act.",
+      "eventSlug": "goose-reinvention",
+      "primaryKeyword": "Goose band",
+      "primaryEntity": "Goose",
+      "entities": [],
+      "angle": "Connecticut-based band Goose is reinventing the jam band scene.",
       "tmdbType": "movie",
       "source": "rss:Rolling Stone",
       "sources": [
@@ -169,14 +286,75 @@
           "outlet": "Rolling Stone",
           "tier": 7,
           "url": "https://www.rollingstone.com/music/music-features/goose-madison-square-garden-jam-band-backlash-influences-1235591813/",
-          "ageMin": 61,
+          "ageMin": 182,
           "headline": "Goose Didn’t Just Inherit the Jam Band Scene — They Reinvented It",
           "summary": "Onstage and on record, the Connecticut-based group blends precision, risk and pop-minded hooks in ways that have made them one of live music’s fastest-rising acts"
         }
       ],
-      "ageMin": 61,
+      "ageMin": 182,
       "_cand": {
         "key": "rss:goose-didn-t-just-inherit-the-jam-band-scene-they-reinvented",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Rolling Stone"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Rolling Stone",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 48,
+      "signals": {
+        "recency": 9,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-britney-spears-highway-incident",
+      "slug": "britney-spears-dismisses-odd-behavior-on-l-a-highway-nothing-is-what-i",
+      "title": "Britney Spears Dismisses Odd Behavior on L.A. Highway: Nothing Is What It Seems",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "britney-spears-highway-incident",
+      "primaryKeyword": "britney spears",
+      "primaryEntity": "Britney Spears",
+      "entities": [],
+      "angle": "Britney Spears has spoken out about the recent incident where she was seen standing through a sunroof on a highway.",
+      "tmdbType": "movie",
+      "source": "rss:Rolling Stone",
+      "sources": [
+        {
+          "outlet": "Rolling Stone",
+          "tier": 7,
+          "url": "https://www.rollingstone.com/music/music-news/britney-spears-dismisses-odd-behavior-la-highway-1235592451/",
+          "ageMin": 82,
+          "headline": "Britney Spears Dismisses Odd Behavior on L.A. Highway: Nothing Is What It Seems",
+          "summary": "\"What people see is two seconds of insanity of me arching me to the lords,\" singer writes of standing through a moonroof on 101 Freeway"
+        }
+      ],
+      "ageMin": 82,
+      "_cand": {
+        "key": "rss:britney-spears-dismisses-odd-behavior-on-l-a-highway-nothing",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -201,6 +379,69 @@
         "corroboration": 12,
         "status": 18,
         "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-lindsey-graham-death",
+      "slug": "lindsey-graham-dies-trump-ally-suffered-brief-sudden-illness",
+      "title": "Lindsey Graham Dies: Trump Ally Suffered Brief Sudden Illness",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "death",
+      "sensitivity": "high",
+      "eventSlug": "lindsey-graham-death",
+      "primaryKeyword": "Lindsey Graham death",
+      "primaryEntity": "Lindsey Graham",
+      "entities": [
+        "Donald Trump"
+      ],
+      "angle": "US Senator Lindsey Graham has died at 71.",
+      "tmdbType": "movie",
+      "source": "rss:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/lindsey-graham-dead-trump-brief-sudden-illness-1236980078/",
+          "ageMin": 515,
+          "headline": "Lindsey Graham Dies: Trump Ally Suffered Brief Sudden Illness",
+          "summary": "Sen. Lindsey Graham has died at the age of 71. Graham suffered what his office described as a brief and sudden illness on Saturday evening. NBC News reported that emergency services responded to a call for “cardiac arrest” at Graham’s Capitol Hill home. On the evening of Saturday, July 11, U.S. Senator Lindsey Graham passed [ ]"
+        }
+      ],
+      "ageMin": 515,
+      "_cand": {
+        "key": "rss:lindsey-graham-dies-trump-ally-suffered-brief-sudden-illness",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 48,
+      "signals": {
+        "recency": 4,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
         "pop": 0,
         "breakout": 0,
         "big": 0,
