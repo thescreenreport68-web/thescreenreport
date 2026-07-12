@@ -1,0 +1,73 @@
+{
+  "id": "music-news-rolling-stones-foreign-tongues-favorite-new-music",
+  "slug": "the-rolling-stones-foreign-tongues-voted-favorite-new-music-by-fans",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": null,
+      "cat": "music/news",
+      "format": [
+        "a 57-word run-on sentence (>55 — split it)"
+      ],
+      "cuts": 1,
+      "broken": []
+    },
+    "attempt2": {
+      "score": null,
+      "cat": "music/news",
+      "format": [
+        "a 57-word run-on sentence (>55 — split it)"
+      ],
+      "cuts": 2,
+      "broken": []
+    }
+  },
+  "editorial": {
+    "status": "official",
+    "entity": "Foreign Tongues",
+    "work": {
+      "title": "Foreign Tongues",
+      "year": null,
+      "medium": null
+    },
+    "outlet": "billboard.com"
+  },
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
+    "deterministic": {
+      "words": 351,
+      "h2s": 3,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 1,
+      "hasSources": true,
+      "faqCount": 3,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 57,
+      "avgSentence": 21,
+      "flesch": 66,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": [
+        "a 57-word run-on sentence (>55 — split it)"
+      ]
+    },
+    "hardBlocks": []
+  },
+  "score": null,
+  "category": "music",
+  "subcategory": "news",
+  "audit": {
+    "ok": true,
+    "internalLinks": 0,
+    "failed": []
+  },
+  "ms": 125999
+}
