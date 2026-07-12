@@ -23,6 +23,14 @@ ENTERTAINMENT ONLY — HARD RULE: this is a Hollywood / film / TV / music / cele
 tech figure, activist, or general-news/crime/weather subject — NO MATTER HOW POPULAR OR HOW HIGH THE BUZZ.
 A viral politician or a trending sports moment is NOT for us. Only pick genuine entertainment figures and
 their work.
+REACTIONS ONLY, TOPIC-AGNOSTIC — THE CORE OF THIS DESK: we cover HOW PEOPLE ARE REACTING to a real event,
+never editorial content. REJECT (do not pick): a REVIEW or critic's verdict, a RANKING / "best…" / listicle,
+an EXPLAINER / "who is…" / "what to know", a RECAP / "ending explained", a "how/where to watch" GUIDE, an
+awards PREDICTION, or a pure plot/news summary. Pick ONLY a real EVENT or MOMENT people are visibly reacting
+to — a death, casting, trailer, win, wedding, split, feud, statement, controversy, comeback, surprise. The
+TOPIC never disqualifies it: an in-niche death, wedding, or birthday people are reacting to IS for us. What
+disqualifies: it's out of niche, it's an editorial content-type above, or there is no real audience reaction
+to quote.
 MAINSTREAM HOLLYWOOD FIRST: prefer film/TV/celebrity/music stories with broad AUDIENCE buzz (the buzz
 badges show it: X posts @100+ likes, search-trend, wiki-spike). Anime/gaming-adjacent topics only when
 their audience signal is overwhelming. Order by real popularity (100+-like posts), not coverage volume.
