@@ -297,10 +297,14 @@ export async function discoverStories({
     if (!m) return;
     const matched = reddit.filter((p) => labelMatch(m.title, p.title));
     const comments = matched.reduce((s, x) => s + x.numComments, 0);
-    // Corroborate a bare-name PERSON (owner 2026-07-12: a trending SEARCH person is often a politician/
-    // athlete TMDB indexes as "person" from archive/doc credits; keep only one that is IN-NICHE — has
-    // film/TV/music reddit discourse OR entertainment keywords in its news). Works are inherently in-niche.
-    if (m.kind === "person") { const nt = t.news.map((n) => n.title).join(" "); if (!(matched.length > 0 || MOVIE_RX.test(nt) || TV_RX.test(nt) || MUSIC_RX.test(nt))) return; }
+    // IN-NICHE corroboration for EVERY kind (owner 2026-07-12: a garbage search term like "maps" can
+    // coincidentally match an obscure, cold TMDB title and leak through as a "work"). A real trending
+    // entertainment story shows it: film/TV/music keywords in its news, OR a genuinely popular TMDB match.
+    // A bare common word whose only claim is a fuzzy title collision with a cold title is dropped.
+    const nt = t.news.map((n) => n.title).join(" ");
+    const inNicheNews = MOVIE_RX.test(nt) || TV_RX.test(nt) || MUSIC_RX.test(nt);
+    if (!(inNicheNews || (m.popularity || 0) >= 10)) return;
+    if (m.kind === "person" && !(matched.length > 0 || inNicheNews)) return;
     const signals = { trend: t.traffic || 1, comments, outlets: new Set(t.news.map((n) => n.source).filter(Boolean)).size };
     const wHit = wiki.find((w) => labelMatch(w.name, m.title));
     if (wHit) { usedWiki.add(wHit.name); signals.wiki = wHit.views; }
@@ -328,9 +332,11 @@ export async function discoverStories({
     if (!m) return;
     const matched = reddit.filter((p) => labelMatch(m.title, p.title));
     const comments = matched.reduce((s, x) => s + x.numComments, 0);
-    // A wiki-surge PERSON with no film/TV/music reddit corroboration is likely a politician/athlete — drop
-    // (the wiki path has no news text to keyword-check, so reddit discourse is the only in-niche signal).
-    if (m.kind === "person" && matched.length === 0) return;
+    // The wiki path has NO news text to keyword-check, so a cold title collision can't be caught by keywords
+    // (owner 2026-07-12, "maps" leak). Require a genuinely popular TMDB match — a real wiki-surging film/show
+    // has meaningful popularity; a coincidental obscure title (or a politician/athlete indexed as "person")
+    // does not. This drops both the bare-name non-entertainment person AND the cold work collision.
+    if ((m.popularity || 0) < 10) return;
     const wk = m.kind === "movie" || m.kind === "tv" ? { title: m.title, type: m.kind === "tv" ? "tv" : "movie", year: m.year } : null;
     stories.push({
       storySlug: slugify(`${w.name}-surge`).slice(0, 60),
