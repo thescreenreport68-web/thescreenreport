@@ -5,14 +5,6 @@
 // subs → what people are talking about now; (2) HARVEST — search.json per subject → real anchor posts.
 const UA = "The Screen Report/1.0 (+https://thescreenreport.com)";
 const DEFAULT_SUBS = ["movies", "television", "boxoffice", "marvelstudios", "DC_Cinematic", "StarWars", "Music", "popculturechat", "Fauxmoi", "entertainment", "popheads", "hiphopheads", "popculture"];
-// Subreddit → site category (owner 2026-07-12: route reddit-primary stories correctly). Music subs → music,
-// TV subs → tv, celebrity/gossip subs → celebrity, everything else (film subs) → movies.
-export const SUBREDDIT_CAT = {
-  music: "music", popheads: "music", hiphopheads: "music",
-  television: "tv",
-  popculturechat: "celebrity", fauxmoi: "celebrity", popculture: "celebrity",
-};
-export const catForSub = (sub) => SUBREDDIT_CAT[String(sub || "").toLowerCase()] || "movies";
 
 const strip = (s) => (s || "").replace(/\s+/g, " ").trim();
 

@@ -34,7 +34,11 @@ to quote.
 MAINSTREAM HOLLYWOOD FIRST: prefer film/TV/celebrity/music stories with broad AUDIENCE buzz (the buzz
 badges show it: X posts @100+ likes, search-trend, wiki-spike). Anime/gaming-adjacent topics only when
 their audience signal is overwhelming. Order by real popularity (100+-like posts), not coverage volume.
-Skip stories with no genuine discourse angle. Output STRICT JSON only.`;
+TOPIC-FIRST (owner 2026-07-12): your job is to pick the TRENDING topics — pick EVERY in-niche story people
+would plausibly be reacting to, up to the whole list, ordered by how hot/trending it is. DON'T be stingy and
+DON'T require proof of reactions here — a dedicated reaction team gathers the reactions AFTER you pick. Only
+skip a story that is OUT OF NICHE or an editorial content-type (review / listicle / explainer / guide).
+Output STRICT JSON only.`;
 
 // Deterministic backstop for the REACTIONS-ONLY rule (the cheap finder-LLM sometimes still picks a
 // "what to watch" guide or a review). Drops obvious NON-REACTION editorial headlines before ranking:
@@ -79,7 +83,7 @@ export async function findStories({ limit = 16, discoverImpl = discoverStories, 
   try {
     const { data } = await deadline(agentChat("finder", {
       system: SYS,
-      user: `STORIES:\n${listing}\n\nJSON: {"picks":[{"i":0,"form":"","workingTitle":"","focusEntity":"","angle":"one line: the specific discourse","searchQueries":["",""]}]}\nOnly include stories worth covering. Order by strength.`,
+      user: `STORIES:\n${listing}\n\nJSON: {"picks":[{"i":0,"form":"","workingTitle":"","focusEntity":"","angle":"one line: the specific discourse","searchQueries":["",""]}]}\nInclude EVERY trending in-niche story worth a reactions piece (as many as the list allows), ordered by how hot/trending it is.`,
     }, chatImpl ? { chatImpl } : {}), 60e3);
     picks = data?.picks || [];
   } catch {

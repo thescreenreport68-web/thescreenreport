@@ -10,9 +10,9 @@ import { run as writerRun, repairBodyQuotes } from "../agents/writer.mjs";
 import { maskQuotes, unmaskQuotes, findTemplateHeadings, stripTemplateHeadings, run as voiceRun, PHRASEBOOK } from "../agents/voice.mjs";
 import { factLocks, review as qaReview, webCheck as qaWebCheck, classifyBlocks } from "../agents/qa.mjs";
 import { buildInsideMarkdown, insertInlineEmbeds, seoFinish } from "../assemble.mjs";
-import { discoverReddit, redditSearchPosts, redditTopComments, catForSub } from "../../find/sources/reddit.mjs";
+import { discoverReddit, redditSearchPosts, redditTopComments } from "../../find/sources/reddit.mjs";
 import { gnewsArticleId, decodeGnewsBase64, decodeGnewsUrl } from "../../lib/gnewsDecode.mjs";
-import { discoverStories, categoryFor, redditSubject } from "../discover.mjs";
+import { discoverStories, categoryFor } from "../discover.mjs";
 import { trendingSearches, wikiSpikes, tmdbMatch } from "../signals.mjs";
 import { xSearchIds } from "../xsearch.mjs";
 import { norm, quoteIsVerbatim, meetsFloor, fallbackQueries, isMediaHandle, looksLikeSpam, cleanQuote, isOutletSpeaker, reliableProvenance, isMediaVoice, unwrapQuote, isSocialSrc, hasHandle, trimScar } from "../reactionFinder.mjs";
@@ -784,37 +784,6 @@ await check("isNonReactionHeadline drops reviews/guides/listicles, keeps real re
   assert.ok(!isNonReactionHeadline("Fans review-bomb the new Snow White trailer"), "review-BOMBING is a reaction");
   assert.ok(!isNonReactionHeadline("Taylor Swift announces surprise album"), "a music event");
 });
-await check("reddit-primary: a hot entertainment thread LEADS as a reacted-to story; framing stripped; sub→category; sports dropped", async () => {
-  const stories = await discoverStories({
-    discoverNewsImpl: async () => [], discoverTMDBImpl: async () => [],
-    discoverRedditImpl: async () => [
-      { id: "rp1", subreddit: "movies", title: "Everyone is losing it over the Dune Part Three trailer", numComments: 420, score: 8000, ageMin: 120, permalink: "https://www.reddit.com/r/movies/comments/rp1/", url: null },
-      { id: "rp2", subreddit: "popheads", title: "Official Discussion - Taylor Swift new album [SPOILERS]", numComments: 300, score: 6000, ageMin: 60, permalink: "https://www.reddit.com/r/popheads/comments/rp2/", url: null },
-      { id: "rp3", subreddit: "movies", title: "Bellingham scores winner in the Champions League final", numComments: 900, score: 20000, ageMin: 30, permalink: "https://www.reddit.com/r/movies/comments/rp3/", url: null },
-    ],
-    trendsImpl: async () => [], wikiImpl: async () => [], tmdbMatchImpl: async () => null,
-    bskyCountImpl: async () => [], xStatsImpl: async () => ({ popularPosts: 0, maxLikes: 0, sumLikes: 0, topIds: [] }),
-    xPaceMs: 0, nowMs: NOW,
-  });
-  const dune = stories.find((s) => s.via === "reddit" && /dune/i.test(s.primaryEntity));
-  assert.ok(dune, "reddit-primary story created from a hot thread");
-  assert.equal(dune.signals.redditHot, true, "carries the redditHot family");
-  assert.equal(dune.redditPosts.length, 1, "carries its own thread as reaction supply");
-  assert.equal(dune.category, "movies", "r/movies → movies");
-  assert.ok(!/everyone|losing/i.test(dune.primaryEntity), "reddit framing stripped from the subject");
-  assert.equal(stories[0].via, "reddit", "a hot thread LEADS the run");
-  const music = stories.find((s) => /taylor swift/i.test(s.primaryEntity));
-  assert.ok(music && music.category === "music", "r/popheads → music + discussion framing stripped");
-  assert.ok(!stories.some((s) => /bellingham/i.test(s.primaryEntity)), "a sports thread is dropped (Champions League keyword)");
-});
-await check("redditSubject strips conversational framing; catForSub routes subreddits", () => {
-  const s = redditSubject("What did everyone think of The Bear finale?");
-  assert.ok(!/what did/i.test(s) && /bear/i.test(s), "framing stripped, work kept");
-  assert.equal(catForSub("popheads"), "music");
-  assert.equal(catForSub("Fauxmoi"), "celebrity");
-  assert.equal(catForSub("television"), "tv");
-  assert.equal(catForSub("movies"), "movies");
-});
 await check("categoryFor routes by the story SUBJECT, never the person's profession (owner 2026-07-12)", () => {
   // A TMDB-confirmed work's medium is AUTHORITATIVE — keywords can't override it.
   assert.equal(categoryFor({ work: { type: "movie" }, text: "the pop star sings on the soundtrack" }), "movies");
@@ -1160,15 +1129,14 @@ await check("discoverReddit fail-closed on non-200; search + comments filters", 
   assert.equal(cOut.length, 1, "deleted/short/too-long filtered");
 });
 console.log("— engine: discover.mjs —");
-await check("discoverStories shapes work+person+orphan, drops low-pop-no-discourse, heat sort", async () => {
+await check("discoverStories shapes work + person, drops low-pop, heat sort (reddit lane removed — reddit is policy-dead)", async () => {
   const stories = await discoverStories({ discoverNewsImpl: async () => [], discoverTMDBImpl: async () => fakeTMDBItems(), discoverRedditImpl: async () => fakeRedditDiscover(), trendsImpl: async () => [], wikiImpl: async () => [], tmdbMatchImpl: async () => null,
     bskyCountImpl: async () => [{ likes: 5 }],
     xStatsImpl: async () => ({ popularPosts: 0, maxLikes: 0, sumLikes: 0, topIds: [] }),
     xPaceMs: 0, nowMs: NOW });
   assert.ok(stories.find((s) => s.kind === "work" && s.primaryEntity === "The Sable Coast"));
   assert.ok(stories.find((s) => s.kind === "person" && s.primaryEntity === "Nora Idris"));
-  assert.ok(stories.find((s) => s.kind === "discourse"));
-  assert.ok(!stories.some((s) => s.primaryEntity === "Quiet Nobody Cares"));
+  assert.ok(!stories.some((s) => s.primaryEntity === "Quiet Nobody Cares"), "low-pop (5) work dropped by the works gate");
   for (let i = 1; i < stories.length; i++) assert.ok(stories[i - 1].discourseHeat >= stories[i].discourseHeat);
 });
 console.log("— engine: norm / verbatim wall / floors —");
