@@ -58,7 +58,6 @@ async function diagProbes() {
   const t = (ms) => ({ signal: AbortSignal.timeout(ms) });
   const P = [
     ["jina-keyless", () => fetch("https://r.jina.ai/https://example.com/", t(8000))],
-    ["reddit-json", () => fetch("https://www.reddit.com/search.json?q=movie&limit=1", { headers: { "user-agent": "Mozilla/5.0 (compatible; ScreenReportBot)" }, ...t(8000) })],
     ["x-syndication", () => fetch("https://cdn.syndication.twimg.com/tweet-result?id=20&token=a", t(8000))],
     ["bsky-search", () => fetch("https://api.bsky.app/xrpc/app.bsky.feed.searchPosts?q=movie&limit=1", { headers: { "user-agent": "Mozilla/5.0 (compatible; ScreenReportBot)" }, ...t(8000) })],
     ["gnews-rss", () => fetch("https://news.google.com/rss/search?q=movie&hl=en-US&gl=US&ceid=US:en", t(8000))],
@@ -269,7 +268,7 @@ export async function agentRun({
           title: job.article.title, primaryEntity: story.primaryEntity, eventType: story.eventType,
           harvestQuoteKeys: [...job.factBlock.reactions, ...job.factBlock.aggregateFans].map((r) => norm(r.quote).slice(0, 90)),
           angle: { form: angle.form, angle: angle.angle, workingTitle: angle.workingTitle, focusEntity: angle.focusEntity, searchQueries: angle.searchQueries },
-          trigger: { parentEventSlug: story.parentEventSlug, parentSlug: story.parentSlug, parentTitle: story.parentTitle, primaryEntity: story.primaryEntity, eventType: story.eventType, tmdbType: story.tmdbType, subjectKind: story.subjectKind, priority: story.priority, category: story.category, overview: story.overview || "", work: story.work || null, sources: story.sources || [], redditPosts: story.redditPosts || [] },
+          trigger: { parentEventSlug: story.parentEventSlug, parentSlug: story.parentSlug, parentTitle: story.parentTitle, primaryEntity: story.primaryEntity, eventType: story.eventType, tmdbType: story.tmdbType, subjectKind: story.subjectKind, priority: story.priority, category: story.category, overview: story.overview || "", work: story.work || null, sources: story.sources || [] },
         });
       }
       report.published.push({ tag, slug: out.slug, score: job.qa.score, ...(acceptReason ? { acceptReason } : {}), anchors: job.gatherStats.namedVoices + job.gatherStats.fanPosts, embeds: job.embeds });

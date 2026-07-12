@@ -370,19 +370,6 @@ await check("a tweet embeds DIRECTLY below the paragraph quoting it, once per po
   assert.ok(i222 > 0 && /casting is everything/.test(blocks[i222 - 1]), "second embed under ITS paragraph");
 });
 
-await check("a Reddit comment embeds its thread below the quoting paragraph; its bottom card drops", () => {
-  const perma = "https://www.reddit.com/r/movies/comments/abc123/thread/";
-  const fb = fakeFactBlock("audience-reaction");
-  fb.aggregateFans[0].redditUrl = perma;
-  const art = fakeArticle({ form: "audience-reaction", factBlock: fb });
-  art.body = `Lede paragraph here.\n\nOne Reddit user wrote, "${fb.aggregateFans[0].quote}" and the thread lit up.\n\nCloser.`;
-  const out = buildInsideMarkdown({ article: art, trigger: fakeTrigger(), angle: fakeAngle("audience-reaction"), factBlock: fb, image: fakeImage(), embeds: null, dateISO: new Date(NOW).toISOString() });
-  const blocks = out.md.split("---\n")[2].trim().split("\n\n");
-  const i = blocks.indexOf(`[embed:reddit:${perma}]`);
-  assert.ok(i > 0, "reddit marker present: " + blocks.join(" | ").slice(0, 200));
-  assert.ok(/thread lit up/.test(blocks[i - 1]), "marker sits under the quoting paragraph");
-  assert.ok(!(out.frontmatter.reactions || []).some((r) => r.quote === fb.aggregateFans[0].quote), "duplicate bottom card dropped");
-});
 
 await check("inline tweet embeds are capped at MAX_EMBEDS even with a large search pool", () => {
   const fb = { reactions: [], aggregateFans: Array.from({ length: MAX_EMBEDS + 4 }, (_, i) => ({ quote: `reaction number ${i} that is long enough to pair here`, tweetId: `${1000 + i}` })), tweetIds: [] };

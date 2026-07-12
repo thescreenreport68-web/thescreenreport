@@ -100,7 +100,7 @@ export function routeForStory(story) {
 // tmdbPopularity 0.05→0.25 (owner 2026-07-12): with Reddit dead, a trending TMDB work/person needs enough
 // base heat to reach the Bluesky-measurement pool (where reactions decide the final rank); it's in-niche by
 // construction, so popularity earning a measurement slot is safe — a reaction-less popular title still sinks.
-export const HEAT = { redditComments: 1.0, redditScore: 0.05, tmdbPopularity: 0.25, outletCount: 2, freshness: 40 };
+export const HEAT = { tmdbPopularity: 0.25, outletCount: 2, freshness: 40 };
 
 // SEO posture (owner: basic-to-moderate ONLY — over-optimizing gets Google-punished; readability +
 // engagement are the KPI). Consumed by the writer/gate prompts.

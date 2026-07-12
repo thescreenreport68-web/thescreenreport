@@ -6,7 +6,6 @@
 import { chat } from "../lib/openrouter.mjs";
 import { findContent } from "../lib/contentFinder.mjs";
 import { cacheTweets } from "../lib/tweets.mjs";
-import { redditSearchPosts, redditTopComments } from "../find/sources/reddit.mjs";
 import { xSearchIds } from "./xsearch.mjs";
 import { bskySearchPosts } from "./bsky.mjs";
 import { MODELS, FORMS, MAX_EMBEDS, NO_X, MIN_QUOTE_WORDS } from "./config.inside.mjs";
@@ -312,28 +311,6 @@ export function fallbackQueries(trigger, angle) {
   return F[angle.form] || [`${w} reactions`];
 }
 
-// Cheap relevance+stance pass over Reddit comments (the audience anchors). Comment text is verbatim
-// from the API; this only decides which are on-subject and their stance.
-const CLASSIFY_REDDIT_SYS = `You classify Reddit comments for an audience-reaction desk. For each comment:
-- aboutSubject: is it genuinely reacting to / discussing THIS subject (not off-topic, spam, or meta)?
-- stance: positive|negative|mixed|neutral toward the subject. Output STRICT JSON only.`;
-async function classifyRedditComments(comments, trigger, angle, { model, chatImpl, subject }) {
-  const items = comments.map((c, i) => ({ i, text: (c.text || "").slice(0, 300) }));
-  const user = `SUBJECT: ${subject}
-ANGLE: ${angle.angle} (form: ${angle.form})
-
-COMMENTS:
-${JSON.stringify(items, null, 1)}
-
-JSON: {"comments":[{"i":0,"aboutSubject":true,"stance":"positive|negative|mixed|neutral"}]}`;
-  try {
-    const { data } = await chatImpl({ model, system: CLASSIFY_REDDIT_SYS, user, json: true, maxTokens: 1000, temperature: 0 });
-    return (data?.comments || []).filter((p) => p && p.aboutSubject && Number.isInteger(p.i) && comments[p.i]);
-  } catch {
-    return [];
-  }
-}
-
 // Harvest telemetry, gated on INSIDE_DIAG=1 (the 24/7 workflow sets it): every supply step logs
 // what it actually delivered, so a starved cloud run diagnoses from the Actions log in one look
 // instead of guessing which free tier / datacenter block ate the material. Log-only — no behavior.
@@ -347,9 +324,6 @@ export async function harvestReactions(trigger, angle, {
   model = MODELS.verify, // flash-lite: extraction is cheap classification, not writing
   embeds = true,
   scanImpl = scanPagesForTweets,
-  reddit = true,
-  redditSearchImpl = redditSearchPosts,
-  redditCommentsImpl = redditTopComments,
   xSearchImpl = xSearchIds,
   bskyImpl = bskySearchPosts,
   maxQueries = 3,
@@ -478,7 +452,7 @@ export async function harvestReactions(trigger, angle, {
     if (await runQuery(queries[qi], [])) recompute();
   }
 
-  // (No early bail on empty contentFinder — Reddit below is an independent anchor source that works
+  // (No early bail on empty contentFinder — Bluesky below is an independent anchor source that works
   // even when the keyless article-extraction tier is throttled.)
 
   // 3b. TWEETS AS REACTIONS. The outlet coverage carries the reaction posts' URLs; resolve them
@@ -574,33 +548,8 @@ export async function harvestReactions(trigger, angle, {
     }
   } catch { /* bsky outage — other anchors may suffice */ }
 
-  // 3c. REDDIT AS ANCHORS — the keyless, reliable discourse source (audience posts, verbatim from the
-  //     API). Discovered posts + a targeted search; pull top comments; classify relevance+stance once.
-  //     Reddit users are pseudonymous → aggregate "fan" anchors (never named).
-  if (reddit) {
-    try {
-      const who = angle.focusEntity || trigger.primaryEntity;
-      const found = await redditSearchImpl(who, { nowMs: t0 }).catch((e) => { diag(`reddit-search → ERR ${String(e?.message || e).slice(0, 80)}`); return []; });
-      diag(`reddit → discovered ${(trigger.redditPosts || []).length}, searched ${found.length}`);
-      const posts = [...(trigger.redditPosts || []), ...found];
-      const seenPerma = new Set();
-      const topPosts = posts.filter((p) => p?.permalink && !seenPerma.has(p.permalink) && (seenPerma.add(p.permalink), true)).slice(0, 6);
-      const commentLists = await Promise.all(topPosts.map((p) => redditCommentsImpl(p.permalink).then((cs) => cs.map((c) => ({ ...c, _perma: p.permalink }))).catch(() => [])));
-      const comments = commentLists.flat().slice(0, 30); // deep thread supply — a hot reddit story's OWN comments fill the fan floor by construction (owner: 12/day)
-      if (comments.length) {
-        const classified = await classifyRedditComments(comments, trigger, angle, { model, chatImpl, subject });
-        for (const c of classified) {
-          const cm = comments[c.i];
-          if (!cm?.text || looksLikeSpam(cm.text)) continue;
-          const rq = cleanQuote(cm.text);
-          if (norm(rq).length < 8 || hasHandle(rq)) continue;
-          withText.push({ url: cm._perma || null, domain: "reddit.com", owner: "reddit", tier: "social", title: "reddit comment", text: cm.text, quotes: [cm.text] });
-          raw.push({ speaker: "", speakerType: "fan", connection: "", platform: "", date: "", quote: rq, stance: c.stance || "neutral", sourceIdx: withText.length - 1, ...(cm._perma ? { redditUrl: cm._perma } : {}) });
-        }
-        recompute();
-      }
-    } catch { /* reddit outage — skip; other anchors may suffice */ }
-  }
+  // (Reddit as an anchor source was REMOVED 2026-07-12 — permanently 403-blocked from datacenter
+  //  runners. Bluesky (3b2) + the X-syndication page-scan + outlet extraction carry the reaction supply.)
 
   const stats = statsOf();
   diag(`harvest done → ${JSON.stringify(stats)}`);

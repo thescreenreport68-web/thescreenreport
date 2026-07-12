@@ -87,7 +87,7 @@ await check("happy path publishes; publishImpl receives embeds; store records ha
   assert.ok(alreadyPublished(store, "the-sable-coast-2026", "audience-reaction"), "dedup key recorded");
   const rec = store.published.find((r) => r.form === "audience-reaction");
   assert.ok(rec.harvestQuoteKeys.length > 0, "harvestQuoteKeys snapshot");
-  assert.ok(rec.trigger && Array.isArray(rec.trigger.redditPosts) && rec.trigger.work.title === "The Sable Coast", "trigger snapshot");
+  assert.ok(rec.trigger && Array.isArray(rec.trigger.sources) && rec.trigger.work.title === "The Sable Coast", "trigger snapshot");
   assert.equal(rec.trigger.category, "movies", "snapshot carries category (2026-07-10)");
   assert.ok(typeof rec.trigger.overview === "string" && rec.trigger.overview.length > 0, "snapshot carries overview (2026-07-10)");
   assert.ok(rec.angle && rec.angle.form === "audience-reaction", "angle snapshot");

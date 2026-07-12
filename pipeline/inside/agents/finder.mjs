@@ -1,5 +1,5 @@
 // AGENT 1 — FINDER. Its one job: find the top stories worth covering RIGHT NOW and pick the best
-// form for each. Discovery itself is the proven deterministic engine (TMDB trending + Reddit heat);
+// form for each. Discovery itself is the proven deterministic engine (TMDB trending + news + Bluesky buzz);
 // the LLM does ONE cheap batched classify over the whole story list (nova-micro, temp 0.2) — the
 // highest-call-count role gets the cheapest model, because every pick is re-verified downstream.
 import { discoverStories } from "../discover.mjs";
@@ -74,7 +74,7 @@ export async function findStories({ limit = 16, discoverImpl = discoverStories, 
     s.signals?.animeAdjacent ? "ANIME-ADJACENT (demoted)" : "",
   ].filter(Boolean).join(" + ") || "weak";
   const listing = stories.map((s, i) =>
-    `${i}. [${s.kind}] ${s.headline || s.primaryEntity}${s.work ? ` — the ${s.work.type} "${s.work.title}"` : ""} | heat ${s.discourseHeat} | buzz: ${buzzOf(s)} | threads: ${(s.redditPosts || []).slice(0, 3).map((p) => p.title.slice(0, 60)).join(" · ") || "none captured"} | allowed: ${(ALLOWED[s.kind] || ALLOWED.work).join(", ")}`).join("\n");
+    `${i}. [${s.kind}] ${s.headline || s.primaryEntity}${s.work ? ` — the ${s.work.type} "${s.work.title}"` : ""} | heat ${s.discourseHeat} | buzz: ${buzzOf(s)} | allowed: ${(ALLOWED[s.kind] || ALLOWED.work).join(", ")}`).join("\n");
 
   // The classify gets its OWN deadline well inside the orchestrator watchdog, so a hung provider
   // call degrades to the deterministic fallback instead of killing the whole run.
@@ -118,7 +118,6 @@ export async function findStories({ limit = 16, discoverImpl = discoverStories, 
         tmdbType: s.work?.type || "movie",
         subjectKind: s.kind === "person" || !s.work ? "person" : "title",
         via: s.via,
-        redditPosts: s.redditPosts || [],
         work: s.work || null,
         overview: s.overview || "",
         headline: s.headline || null,

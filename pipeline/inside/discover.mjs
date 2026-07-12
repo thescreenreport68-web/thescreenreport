@@ -1,20 +1,20 @@
 // DISCOVERY (REV 3 — owner 2026-07-10 evening: "find the stories people are ACTUALLY crazy about").
-// FIVE signals merged; AUDIENCE-BUZZ signals (search trends, wiki spikes, reddit argument) now
+// FOUR signals merged; AUDIENCE-BUZZ signals (search trends, wiki spikes) now
 // dominate the heat; TMDB popularity is a tie-break; a story needs ≥2 independent signal families
 // to lead a run (single-signal stories are heat-capped — trade coverage alone can't crown a story):
 //   • HEADLINES — trade RSS (20 feeds) + Google News search: the trending Hollywood TOPICS/moments
 //     (a casting shock, a star's claim, a controversy — Elliot Page in the Odyssey, Lupita on Homer).
 //     Clustered across outlets: many outlets on one story = trending. THE PRIMARY SIGNAL.
 //   • TMDB trending + now-playing = the WORKS people are watching (release-reaction stories).
-//   • Reddit hot/top across film/TV subs = raw audience discourse + anchor posts (cloud IPs).
+//   • Google Trends + Wikipedia pageview spikes = what audiences are suddenly searching for.
 // Rank everything by discourse heat and emit story candidates. No confirmed-event gate — the
-// discourse IS the trigger.
+// discourse IS the trigger. (Reddit was REMOVED 2026-07-12: permanently policy-blocked from the
+// datacenter runners; BLUESKY is the reaction engine — see reactionFinder.mjs.)
 import { discoverTMDB } from "../find/sources/tmdb.mjs";
 import { trendingSearches, wikiSpikes, tmdbMatch } from "./signals.mjs";
 import { bskySearchPosts } from "./bsky.mjs";
 import { xSearchStats } from "./xsearch.mjs";
 import { NO_X } from "./config.inside.mjs";
-import { discoverReddit } from "../find/sources/reddit.mjs";
 import { discoverGoogleNews } from "../find/sources/gnews.mjs";
 import { discoverRSS } from "../find/sources/rss.mjs";
 import { HEAT, MAX_STORIES_PER_RUN } from "./config.inside.mjs";
@@ -23,16 +23,6 @@ const STOP = new Set(["the", "a", "an", "of", "and", "movie", "film", "series", 
 const slugify = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 70);
 const norm = (s) => (s || "").toLowerCase().replace(/[^a-z0-9 ]+/g, " ").replace(/\s+/g, " ").trim();
 const sigTokens = (title) => norm(title).split(" ").filter((w) => w.length > 2 && !STOP.has(w));
-
-// A reddit post is ABOUT a work when the work's full normalized title appears as a phrase in the post
-// title, OR all of the work's significant tokens do (handles "Superman" and "The Odyssey" alike).
-function postMatchesWork(post, work) {
-  const t = norm(`${post.title} ${post.url || ""}`);
-  const wt = norm(work.title);
-  if (wt.length >= 4 && t.includes(wt)) return true;
-  const toks = sigTokens(work.title);
-  return toks.length > 0 && toks.every((tok) => t.includes(tok));
-}
 
 const CAT_FOR = { "trending-movie": "movies", "now-playing": "movies", "upcoming": "movies", "trending-tv": "tv" };
 export const CATSET = new Set(["movies", "tv", "celebrity", "music", "streaming", "awards"]);
@@ -78,11 +68,10 @@ const labelMatch = (term, label) => {
   const tt = sigTokens(term);
   return tt.length > 0 && tt.every((x) => L.includes(x));
 };
-// Independent signal families: cross-outlet coverage, reddit argument, search trend, wiki spike,
-// real audience posts, genuine TMDB heat. <2 families → the story can support an article but never
-// lead the run.
+// Independent signal families: cross-outlet coverage, search trend, wiki spike, real audience posts
+// (Bluesky/X), genuine TMDB heat. <2 families → the story can support an article but never lead the run.
 const familiesOf = (sig, popularity) =>
-  ((sig.outlets || 0) >= 2 ? 1 : 0) + ((sig.comments || 0) > 0 ? 1 : 0) + (sig.trend ? 1 : 0) + (sig.wiki ? 1 : 0) + (((sig.xPopular || 0) >= 3 || (sig.audiencePosts || 0) >= 3) ? 1 : 0) + ((popularity || 0) >= 40 ? 1 : 0) + (sig.redditHot ? 1 : 0);
+  ((sig.outlets || 0) >= 2 ? 1 : 0) + (sig.trend ? 1 : 0) + (sig.wiki ? 1 : 0) + (((sig.xPopular || 0) >= 3 || (sig.audiencePosts || 0) >= 3) ? 1 : 0) + ((popularity || 0) >= 40 ? 1 : 0);
 
 // Anime/manga/game-adaptation detector (owner: "it is anime — we are talking about Hollywood").
 // Demoted HARD below: these stories only run on overwhelming real buzz, never as filler.
@@ -154,7 +143,6 @@ export function clusterHeadlines(items, { minOutlets = 2 } = {}) {
 
 export async function discoverStories({
   discoverTMDBImpl = discoverTMDB,
-  discoverRedditImpl = discoverReddit,
   discoverNewsImpl = defaultNewsHeadlines,
   trendsImpl = trendingSearches,
   wikiImpl = wikiSpikes,
@@ -166,9 +154,8 @@ export async function discoverStories({
   nowMs = null,
 } = {}) {
   const now = nowMs ?? Date.now();
-  const [tmdb, reddit, headlines, trends, wiki] = await Promise.all([
+  const [tmdb, headlines, trends, wiki] = await Promise.all([
     discoverTMDBImpl({ limitEach: 15 }).catch(() => []),
-    discoverRedditImpl({ nowMs: now }).catch(() => []),
     discoverNewsImpl().catch(() => []),
     trendsImpl({}).catch(() => []),
     wikiImpl({ nowMs: now }).catch(() => []),
@@ -189,24 +176,14 @@ export async function discoverStories({
   const people = tmdb.filter((t) => t.kind === "trending-person");
 
   const stories = [];
-  // Declared BEFORE the headline loop so a headline-matched reddit post can't ALSO emit as a reddit-primary
-  // story (double-emit fix). Every loop that consumes a post marks it here.
-  const usedPosts = new Set();
 
   // ── HEADLINE-TOPIC stories (the primary signal): the trending Hollywood story itself — a casting
-  //    shock, a star's claim, a controversy — whatever many outlets are covering right now. The
-  //    reddit threads about it (when available) attach as discourse + anchors.
+  //    shock, a star's claim, a controversy — whatever many outlets are covering right now. Clustered
+  //    across outlets; Bluesky measures the audience reaction downstream.
   for (const c of clusterHeadlines(headlines)) {
-    const matched = reddit.filter((p) => {
-      const toks = sigTokens(c.headline).slice(0, 4);
-      const t = norm(p.title);
-      return toks.filter((tok) => t.includes(tok)).length >= 2;
-    });
-    matched.forEach((p) => usedPosts.add(p.id)); // headline consumes these posts — don't re-emit as reddit-primary
-    const comments = matched.reduce((s, p) => s + p.numComments, 0);
-    const signals = { outlets: c.outlets, comments, headline: true };
+    const signals = { outlets: c.outlets, headline: true };
     const buzz = attachSignals(`${c.headline} ${c.summary || ""}`, signals);
-    const heat = c.outlets * HEAT.outletCount + comments * HEAT.redditComments + buzz + Math.max(0, HEAT.freshness - c.freshMin / 30);
+    const heat = c.outlets * HEAT.outletCount + buzz + Math.max(0, HEAT.freshness - c.freshMin / 30);
     const cat = categoryFor({ text: `${c.headline} ${c.summary || ""}`, hint: (c.cats || []).find((x) => CATSET.has(x)) });
     stories.push({
       storySlug: slugify(c.headline).slice(0, 60),
@@ -217,32 +194,22 @@ export async function discoverStories({
       released: null,
       overview: c.summary,
       headline: c.headline,
-      redditPosts: matched.slice(0, 8),
       sources: c.urls.map((url) => ({ url, outlet: null })),
       popularity: 0,
       discourseHeat: Math.round(heat),
       signals,
-      via: matched.length ? "news+reddit" : "news",
+      via: "news",
     });
   }
 
-  // ── WORK stories: a trending work + the reddit discourse about it ──
+  // ── WORK stories: a TMDB-trending work; Bluesky measures the reaction downstream ──
   for (const w of works) {
-    const matched = reddit.filter((p) => postMatchesWork(p, w));
-    matched.forEach((p) => usedPosts.add(p.id));
-    const comments = matched.reduce((s, p) => s + p.numComments, 0);
-    const score = matched.reduce((s, p) => s + p.score, 0);
-    const wSignals = { comments, redditPosts: matched.length, popularity: Math.round(w.popularity || 0) };
+    const wSignals = { popularity: Math.round(w.popularity || 0) };
     const wBuzz = attachSignals(w.title, wSignals);
-    const heat =
-      comments * HEAT.redditComments +
-      score * HEAT.redditScore +
-      wBuzz +
-      (w.popularity || 0) * HEAT.tmdbPopularity;
-    // Reddit is dead in the cloud (policy-blocked) so BLUESKY is the reaction signal — keep more in-niche
-    // TMDB-trending works as candidates (they're entertainment by construction) and let the Stage-1
-    // Bluesky measurement decide which are actually reacted-to. Only the truly cold ones are dropped.
-    if (matched.length === 0 && (w.popularity || 0) < 12) continue;
+    const heat = wBuzz + (w.popularity || 0) * HEAT.tmdbPopularity;
+    // Keep in-niche TMDB-trending works (entertainment by construction); the Stage-1 Bluesky
+    // measurement decides which are actually reacted-to. Only the truly cold ones are dropped.
+    if ((w.popularity || 0) < 12) continue;
     stories.push({
       storySlug: slugify(`${w.title}-${w.year || ""}`),
       kind: "work",
@@ -251,35 +218,31 @@ export async function discoverStories({
       category: CAT_FOR[w.kind] || "movies",
       released: w.released,
       overview: w.overview || "",
-      redditPosts: matched.slice(0, 8),
-      sources: [...new Set(matched.map((p) => p.url).filter(Boolean))].slice(0, 6).map((url) => ({ url, outlet: null })),
+      sources: [],
       popularity: w.popularity || 0,
       discourseHeat: Math.round(heat),
       signals: wSignals,
-      via: matched.length ? "tmdb+reddit" : "tmdb",
+      via: "tmdb",
     });
   }
 
   // ── PERSON stories: someone everyone's suddenly talking about (breakout-buzz lane) ──
   for (const p of people.slice(0, 12)) {
-    const matched = reddit.filter((post) => norm(post.title).includes(norm(p.title)) && !usedPosts.has(post.id));
-    const comments = matched.reduce((s, x) => s + x.numComments, 0);
-    const pSignals = { comments, redditPosts: matched.length, popularity: Math.round(p.popularity || 0), person: true };
+    const pSignals = { popularity: Math.round(p.popularity || 0), person: true };
     const pBuzz = attachSignals(p.title, pSignals);
-    const heat = comments * HEAT.redditComments + pBuzz + (p.popularity || 0) * HEAT.tmdbPopularity;
-    if (matched.length === 0 && (p.popularity || 0) < 8) continue; // Bluesky is the reaction signal now — keep more in-niche celebs, let bsky rank
+    const heat = pBuzz + (p.popularity || 0) * HEAT.tmdbPopularity;
+    if ((p.popularity || 0) < 8) continue; // Bluesky is the reaction signal; keep in-niche celebs, let bsky rank
     stories.push({
       storySlug: slugify(`${p.title}-buzz`),
       kind: "person",
       primaryEntity: p.title,
       work: null,
       category: "celebrity",
-      redditPosts: matched.slice(0, 8),
-      sources: [...new Set(matched.map((x) => x.url).filter(Boolean))].slice(0, 6).map((url) => ({ url, outlet: null })),
+      sources: [],
       popularity: p.popularity || 0,
       discourseHeat: Math.round(heat),
       signals: pSignals,
-      via: matched.length ? "tmdb+reddit" : "tmdb",
+      via: "tmdb",
     });
   }
 
@@ -295,8 +258,6 @@ export async function discoverStories({
   leftoverTrends.forEach((t, i) => {
     const m = trendEnts[i];
     if (!m) return;
-    const matched = reddit.filter((p) => labelMatch(m.title, p.title));
-    const comments = matched.reduce((s, x) => s + x.numComments, 0);
     // IN-NICHE corroboration for EVERY kind (owner 2026-07-12: a garbage search term like "maps" can
     // coincidentally match an obscure, cold TMDB title and leak through as a "work"). A real trending
     // entertainment story shows it: film/TV/music keywords in its news, OR a genuinely popular TMDB match.
@@ -304,8 +265,8 @@ export async function discoverStories({
     const nt = t.news.map((n) => n.title).join(" ");
     const inNicheNews = MOVIE_RX.test(nt) || TV_RX.test(nt) || MUSIC_RX.test(nt);
     if (!(inNicheNews || (m.popularity || 0) >= 10)) return;
-    if (m.kind === "person" && !(matched.length > 0 || inNicheNews)) return;
-    const signals = { trend: t.traffic || 1, comments, outlets: new Set(t.news.map((n) => n.source).filter(Boolean)).size };
+    if (m.kind === "person" && !inNicheNews) return;
+    const signals = { trend: t.traffic || 1, outlets: new Set(t.news.map((n) => n.source).filter(Boolean)).size };
     const wHit = wiki.find((w) => labelMatch(w.name, m.title));
     if (wHit) { usedWiki.add(wHit.name); signals.wiki = wHit.views; }
     const wk = m.kind === "movie" || m.kind === "tv" ? { title: m.title, type: m.kind === "tv" ? "tv" : "movie", year: m.year } : null;
@@ -318,10 +279,9 @@ export async function discoverStories({
       released: null,
       overview: t.news.map((n) => n.title).filter(Boolean).join(" · ").slice(0, 300),
       headline: t.news[0]?.title || null,
-      redditPosts: matched.slice(0, 8),
       sources: t.news.slice(0, 4).map((n) => ({ url: n.url, outlet: n.source || null })),
       popularity: m.popularity || 0,
-      discourseHeat: Math.round(trendBoost(t.traffic) + (signals.wiki ? wikiBoost(signals.wiki) : 0) + comments * HEAT.redditComments),
+      discourseHeat: Math.round(trendBoost(t.traffic) + (signals.wiki ? wikiBoost(signals.wiki) : 0)),
       signals,
       via: "trends",
     });
@@ -330,8 +290,6 @@ export async function discoverStories({
     if (usedWiki.has(w.name)) return;
     const m = wikiEnts[i];
     if (!m) return;
-    const matched = reddit.filter((p) => labelMatch(m.title, p.title));
-    const comments = matched.reduce((s, x) => s + x.numComments, 0);
     // The wiki path has NO news text to keyword-check, so a cold title collision can't be caught by keywords
     // (owner 2026-07-12, "maps" leak). Require a genuinely popular TMDB match — a real wiki-surging film/show
     // has meaningful popularity; a coincidental obscure title (or a politician/athlete indexed as "person")
@@ -347,19 +305,13 @@ export async function discoverStories({
       released: null,
       overview: "",
       headline: null,
-      redditPosts: matched.slice(0, 8),
-      sources: [...new Set(matched.map((x) => x.url).filter(Boolean))].slice(0, 4).map((url) => ({ url, outlet: null })),
+      sources: [],
       popularity: m.popularity || 0,
-      discourseHeat: Math.round(wikiBoost(w.views) + comments * HEAT.redditComments),
-      signals: { wiki: w.views, wikiSpike: w.spike, comments },
+      discourseHeat: Math.round(wikiBoost(w.views)),
+      signals: { wiki: w.views, wikiSpike: w.spike },
       via: "wiki",
     });
   });
-
-  // NOTE: Reddit is policy-blocked from datacenter runners (keyless=403, OAuth blocked by the Responsible
-  // Builder policy — owner confirmed the app path fails). The reddit-primary discovery lane was REMOVED
-  // 2026-07-12; BLUESKY is the reaction engine and TMDB-trending works/people + news clusters are the topic
-  // supply. `reddit` stays only as a graceful-empty input to the match loops above.
 
   const seen = new Set();
   let deduped = stories.filter((s) => (seen.has(s.storySlug) ? false : (seen.add(s.storySlug), true)));

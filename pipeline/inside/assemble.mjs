@@ -63,7 +63,6 @@ export function insertInlineEmbeds(body, factBlock, embeds = null) {
   if (!blocks.length) return body || "";
   const anchorPool = [...(factBlock?.reactions || []), ...(factBlock?.aggregateFans || [])];
   const tweetPool = anchorPool.filter((h) => h.tweetId && h.quote);
-  const redditPool = anchorPool.filter((h) => h.redditUrl && h.quote);
   const used = new Set();
   const out = [];
   // Cap the inline embeds per article — the X-search pool can be large, but a wall of live iframes
@@ -77,9 +76,7 @@ export function insertInlineEmbeds(body, factBlock, embeds = null) {
       const nq = norm(m[1]);
       if (nq.length < 12) continue;
       const t = tweetPool.find((h) => !used.has(h.tweetId) && (norm(h.quote).includes(nq) || nq.includes(norm(h.quote))));
-      if (t) { used.add(t.tweetId); out.push(`[embed:tweet:${t.tweetId}]`); continue; }
-      const b = redditPool.find((h) => !used.has(h.redditUrl) && (norm(h.quote).includes(nq) || nq.includes(norm(h.quote))));
-      if (b) { used.add(b.redditUrl); out.push(`[embed:reddit:${b.redditUrl}]`); }
+      if (t) { used.add(t.tweetId); out.push(`[embed:tweet:${t.tweetId}]`); }
     }
   }
   const igUrls = (embeds?.instagramUrls || []).slice(0, 2);
@@ -138,11 +135,7 @@ export function buildInsideMarkdown({ article, trigger, angle, factBlock, image,
       ...(NO_EMBEDS ? {} : { tweetId: tweetIdFor(r.quote) ?? (factBlock.tweetIds.includes(r.tweetId) ? r.tweetId : undefined) }),
     }))
     // A post embedded INLINE is its own display — a duplicate bottom card would repeat it.
-    .filter((r) => {
-      if (r.tweetId && inlined.inlined.has(r.tweetId)) return false;
-      const src = anchorFor(r.quote);
-      return !(src?.redditUrl && inlined.inlined.has(src.redditUrl));
-    });
+    .filter((r) => !(r.tweetId && inlined.inlined.has(r.tweetId)));
 
   const fm = clean({
     title,
