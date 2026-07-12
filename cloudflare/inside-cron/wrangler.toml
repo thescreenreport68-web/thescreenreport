@@ -1,0 +1,17 @@
+name = "inside-cron"
+main = "worker.js"
+compatibility_date = "2025-01-01"
+
+# Fires at :30 past EVEN UTC hours (00:30, 02:30, 04:30 … 22:30), 24/7 → 12 Inside posts/day. This lands
+# each Inside post BETWEEN the gossip lane (even :00) and the news lane (odd :00) so the three never collide.
+[triggers]
+crons = ["30 */2 * * *"]
+
+# Non-secret config. GH_REF = the branch the workflow runs on (inside-agents checks out + commits to main).
+[vars]
+GH_OWNER = "thescreenreport68-web"
+GH_REPO = "thescreenreport"
+GH_REF = "main"
+
+# Secret (NOT here — set once with:  wrangler secret put GH_TOKEN):
+#   GH_TOKEN = a GitHub PAT scoped to this repo with "Actions: Read and write".
