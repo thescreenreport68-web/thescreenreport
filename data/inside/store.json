@@ -694,6 +694,53 @@
     },
     "sources": []
    }
+  },
+  {
+   "key": "silo-2023|audience-reaction",
+   "at": "2026-07-12T16:41:20.074Z",
+   "updatedCount": 0,
+   "parentEventSlug": "silo-2023",
+   "form": "audience-reaction",
+   "slug": "is-silo-season-3-already-disappointing-some-of-its-biggest-fans",
+   "title": "Is ‘Silo’ Season 3 Already Disappointing Some of Its Biggest Fans?",
+   "primaryEntity": "Silo",
+   "eventType": "discourse",
+   "harvestQuoteKeys": [
+    "man, this is something that people can see and think that these things could actually happ",
+    "the writers for silo did an incredible job at giving sims the story of not just being a he",
+    "none of these characters are all good or all bad. you might like some things about them, o",
+    "july promosky! 25+ | system, name/pronouns vary interests: ☆ resident evil/silent hill ☆ f",
+    "cette saison 3 de silo est juste dingue ! par respect pour les gens qui me suivent par mii",
+    "silo is amazing. season 2 really popped off and im excited to see where they take it with ",
+    "starting season 3 of silo and i definitely remember everything that happened in season 2 o",
+    "os recuerdo que ya han estrenado la tercera temporada de silo",
+    "i was kinda disappointed with episode 1 of season 3 of"
+   ],
+   "angle": {
+    "form": "audience-reaction",
+    "angle": "audience discourse",
+    "workingTitle": "Silo: what people are saying",
+    "focusEntity": "Silo",
+    "searchQueries": []
+   },
+   "trigger": {
+    "parentEventSlug": "silo-2023",
+    "parentSlug": null,
+    "parentTitle": "Silo",
+    "primaryEntity": "Silo",
+    "eventType": "discourse",
+    "tmdbType": "tv",
+    "subjectKind": "title",
+    "priority": 45,
+    "category": "tv",
+    "overview": "In a ruined and toxic future, thousands live in a giant silo deep underground. After its sheriff breaks a cardinal rule and residents die mysteriously, engineer Juliette starts to uncover shocking secrets and the truth about the silo.",
+    "work": {
+     "title": "Silo",
+     "type": "tv",
+     "year": "2023"
+    },
+    "sources": []
+   }
   }
  ],
  "parked": [
@@ -801,6 +848,22 @@
    "reason": "divided-claim-without-both-sides",
    "tries": 1,
    "at": "2026-07-12T10:19:56.056Z"
+  },
+  {
+   "key": "from-2022|audience-reaction",
+   "parentEventSlug": "from-2022",
+   "form": "audience-reaction",
+   "reason": "under floor: audience posts 0 < 3",
+   "tries": 1,
+   "at": "2026-07-12T16:33:35.037Z"
+  },
+  {
+   "key": "passenger-2026|audience-reaction",
+   "parentEventSlug": "passenger-2026",
+   "form": "audience-reaction",
+   "reason": "under floor: audience posts 0 < 3",
+   "tries": 1,
+   "at": "2026-07-12T16:36:22.457Z"
   }
  ]
 }
