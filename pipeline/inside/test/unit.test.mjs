@@ -3,7 +3,7 @@
 import assert from "node:assert/strict";
 
 import { AGENTS, FLAGSHIP_WRITER, flagshipOn, agentChat, METER, meterReport, meterReset } from "../models.mjs";
-import { findStories } from "../agents/finder.mjs";
+import { findStories, isNonReactionHeadline } from "../agents/finder.mjs";
 import { run as embedRun, scanPagesForInstagram } from "../agents/embed.mjs";
 import { run as synthRun } from "../agents/synthesizer.mjs";
 import { run as writerRun, repairBodyQuotes } from "../agents/writer.mjs";
@@ -769,6 +769,20 @@ await check("isMediaVoice flags critics/editors/journalists, keeps creators + ce
   assert.ok(!isMediaVoice({ speaker: "Andrew Stanton", speakerType: "filmmaker" }), "a filmmaker is a creator");
   assert.ok(!isMediaVoice({ speaker: "", speakerType: "fan" }), "an ordinary fan is never media");
   assert.ok(!isMediaVoice(null) && !isMediaVoice(undefined), "null-safe");
+});
+await check("isNonReactionHeadline drops reviews/guides/listicles, keeps real reaction EVENTS", () => {
+  // editorial content-types the lane must NOT cover (owner 2026-07-12: "not building for reviews")
+  assert.ok(isNonReactionHeadline("The Westies Review: J.K. Simmons shines"), "a critic review");
+  assert.ok(isNonReactionHeadline("What to Watch This Weekend: New Shows and Movies"), "a what-to-watch guide");
+  assert.ok(isNonReactionHeadline("The 7 Best Movies on HBO Max in July"), "a listicle");
+  assert.ok(isNonReactionHeadline("Severance ending explained"), "an explainer/recap");
+  assert.ok(isNonReactionHeadline("Oscars 2027 predictions"), "a prediction");
+  assert.ok(isNonReactionHeadline("Where to watch every Wes Anderson film"), "a where-to-watch guide");
+  // real EVENTS people react to — must be KEPT (topic-agnostic)
+  assert.ok(!isNonReactionHeadline("Barbara Ling, Oscar-Winning Production Designer, Dies at 73"), "a death");
+  assert.ok(!isNonReactionHeadline("Zendaya cast in the new Dune spinoff"), "a casting");
+  assert.ok(!isNonReactionHeadline("Fans review-bomb the new Snow White trailer"), "review-BOMBING is a reaction");
+  assert.ok(!isNonReactionHeadline("Taylor Swift announces surprise album"), "a music event");
 });
 await check("categoryFor routes by the story SUBJECT, never the person's profession (owner 2026-07-12)", () => {
   // A TMDB-confirmed work's medium is AUTHORITATIVE — keywords can't override it.

@@ -36,9 +36,20 @@ badges show it: X posts @100+ likes, search-trend, wiki-spike). Anime/gaming-adj
 their audience signal is overwhelming. Order by real popularity (100+-like posts), not coverage volume.
 Skip stories with no genuine discourse angle. Output STRICT JSON only.`;
 
+// Deterministic backstop for the REACTIONS-ONLY rule (the cheap finder-LLM sometimes still picks a
+// "what to watch" guide or a review). Drops obvious NON-REACTION editorial headlines before ranking:
+// reviews (but NOT review-bombing — that IS a reaction), listicles/rankings, explainers, recaps, guides,
+// predictions. A real EVENT people react to (death/casting/trailer/win/wedding/feud) is never matched here.
+const NON_REACTION_RX = /\b(reviewed|ranking|ranked|top \d+|best (movies|shows|films|series)|what to watch|where to watch|how to watch|streaming guide|ending explained|explainer|recap|predictions?|watch this weekend|things? to know|everything (we know|to know))\b/i;
+export function isNonReactionHeadline(text) {
+  const t = text || "";
+  if (/\breview\b/i.test(t) && !/review[-\s]?bomb/i.test(t)) return true; // a critic's-verdict review, not review-bombing
+  return NON_REACTION_RX.test(t);
+}
+
 // story (trigger-shaped, engine-compatible) + angle (form pick) per publishable story.
 export async function findStories({ limit = 6, discoverImpl = discoverStories, chatImpl = null, nowMs = null } = {}) {
-  const stories = await discoverImpl({ nowMs });
+  const stories = (await discoverImpl({ nowMs })).filter((s) => !isNonReactionHeadline(`${s.headline || ""} ${s.primaryEntity || ""}`));
   if (!stories.length) return [];
 
   const buzzOf = (s) => [
