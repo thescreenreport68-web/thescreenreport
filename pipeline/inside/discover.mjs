@@ -252,8 +252,10 @@ export async function discoverStories({
       score * HEAT.redditScore +
       wBuzz +
       (w.popularity || 0) * HEAT.tmdbPopularity;
-    // Keep a work only if it has real discourse OR is genuinely hot (a top story worth covering).
-    if (matched.length === 0 && (w.popularity || 0) < 40) continue;
+    // Reddit is dead in the cloud (policy-blocked) so BLUESKY is the reaction signal — keep more in-niche
+    // TMDB-trending works as candidates (they're entertainment by construction) and let the Stage-1
+    // Bluesky measurement decide which are actually reacted-to. Only the truly cold ones are dropped.
+    if (matched.length === 0 && (w.popularity || 0) < 12) continue;
     stories.push({
       storySlug: slugify(`${w.title}-${w.year || ""}`),
       kind: "work",
@@ -272,13 +274,13 @@ export async function discoverStories({
   }
 
   // ── PERSON stories: someone everyone's suddenly talking about (breakout-buzz lane) ──
-  for (const p of people.slice(0, 6)) {
+  for (const p of people.slice(0, 12)) {
     const matched = reddit.filter((post) => norm(post.title).includes(norm(p.title)) && !usedPosts.has(post.id));
     const comments = matched.reduce((s, x) => s + x.numComments, 0);
     const pSignals = { comments, redditPosts: matched.length, popularity: Math.round(p.popularity || 0), person: true };
     const pBuzz = attachSignals(p.title, pSignals);
     const heat = comments * HEAT.redditComments + pBuzz + (p.popularity || 0) * HEAT.tmdbPopularity;
-    if (matched.length === 0 && (p.popularity || 0) < 15) continue;
+    if (matched.length === 0 && (p.popularity || 0) < 8) continue; // Bluesky is the reaction signal now — keep more in-niche celebs, let bsky rank
     stories.push({
       storySlug: slugify(`${p.title}-buzz`),
       kind: "person",
@@ -404,7 +406,7 @@ export async function discoverStories({
   // Measure MORE candidates, DEEPER (owner 2026-07-12: boost reaction supply). In free mode Bluesky is
   // the primary audience signal, so it carries the ranking — a story with lots of bsky reactions should
   // outrank a widely-covered trade item with none, and it's the pool the harvest will draw from.
-  const preList = deduped.slice(0, Math.max(30, max)); // measure the free reaction signal on the WHOLE surviving pool, not just the top 18 (keyless, no QPS)
+  const preList = deduped.slice(0, 50); // Bluesky is the ONLY reaction signal (Reddit dead) — measure it WIDE (keyless, no QPS) so every in-niche candidate gets a fair reaction read, not just the coverage-ranked top
   const bskyCounts = await Promise.all(preList.map((st) =>
     bskyCountImpl(buzzTermOf(st), { limit: 40, sort: "latest", nowMs: now }).catch(() => []),
   ));
