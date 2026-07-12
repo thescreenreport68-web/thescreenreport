@@ -741,6 +741,62 @@
     },
     "sources": []
    }
+  },
+  {
+   "key": "disney-s-live-action-moana-crashes-to-shore-with-an-underwhe|audience-reaction",
+   "at": "2026-07-12T18:55:19.673Z",
+   "updatedCount": 0,
+   "parentEventSlug": "disney-s-live-action-moana-crashes-to-shore-with-an-underwhe",
+   "form": "audience-reaction",
+   "slug": "why-audiences-are-underwhelmed-by-moana-and-it-s-not-just-about-one-weekend",
+   "title": "Why Audiences Are Underwhelmed by 'Moana' – And It's Not Just About One Weekend",
+   "primaryEntity": "s live-action",
+   "eventType": "discourse",
+   "harvestQuoteKeys": [
+    "families love going to the movies, but right now there are three of them,",
+    "moana s performance may not be a case of family movie fatigue, he said, but simply shows t",
+    "disneys live-action moana: first reactions from premiere moana, disneys latest live-action",
+    "not much difference tbh, im just still pissed they completely ruined l&s with that live ac",
+    "moanas aulii cravalho watched live-action star catherine lagaaias audition tape.… read mor"
+   ],
+   "angle": {
+    "form": "audience-reaction",
+    "angle": "audience discourse",
+    "workingTitle": "s live-action: what people are saying",
+    "focusEntity": "s live-action",
+    "searchQueries": []
+   },
+   "trigger": {
+    "parentEventSlug": "disney-s-live-action-moana-crashes-to-shore-with-an-underwhe",
+    "parentSlug": null,
+    "parentTitle": "Disney's live-action 'Moana' crashes to shore with an underwhelming splash at the box office - AP News",
+    "primaryEntity": "s live-action",
+    "eventType": "discourse",
+    "tmdbType": "movie",
+    "subjectKind": "person",
+    "priority": 45,
+    "category": "movies",
+    "overview": "a href=\"https://news.google.com/rss/articles/CBMiggFBVV95cUxPUmp1MFdramN1R2ZzZHRDcE15UXl1SjAxdzV0bnFHY0QtVWtvQlh2aWRtYlg2MnhJUjVuaXlMOEJyYi1GUm1USEtBcTdjbDBGVVNHWGhhazNqX3NCaHF1UWg4RkVSUTNlTEFhTHY5NWprcGFkdVhUMXZyQnRSVFhZWEhB?oc=5\" target=\"_blank\" Disney's live-action 'Moana' crashes to shore with a",
+    "work": null,
+    "sources": [
+     {
+      "url": "https://variety.com/2026/film/box-office/box-office-moana-struggles-overseas-toy-story-5-milestone-1236809109/",
+      "outlet": null
+     },
+     {
+      "url": "https://www.hollywoodreporter.com/movies/movie-news/moana-box-office-disney-opening-evil-dead-burn-1236644503/",
+      "outlet": null
+     },
+     {
+      "url": "https://www.billboard.com/culture/tv-film/moana-box-office-opening-disney-1236292593/",
+      "outlet": null
+     },
+     {
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPUmp1MFdramN1R2ZzZHRDcE15UXl1SjAxdzV0bnFHY0QtVWtvQlh2aWRtYlg2MnhJUjVuaXlMOEJyYi1GUm1USEtBcTdjbDBGVVNHWGhhazNqX3NCaHF1UWg4RkVSUTNlTEFhTHY5NWprcGFkdVhUMXZyQnRSVFhZWEhB?oc=5",
+      "outlet": null
+     }
+    ]
+   }
   }
  ],
  "parked": [
@@ -854,16 +910,32 @@
    "parentEventSlug": "from-2022",
    "form": "audience-reaction",
    "reason": "under floor: audience posts 0 < 3",
-   "tries": 1,
-   "at": "2026-07-12T16:33:35.037Z"
+   "tries": 2,
+   "at": "2026-07-12T18:33:21.674Z"
   },
   {
    "key": "passenger-2026|audience-reaction",
    "parentEventSlug": "passenger-2026",
    "form": "audience-reaction",
    "reason": "under floor: audience posts 0 < 3",
+   "tries": 2,
+   "at": "2026-07-12T18:35:53.645Z"
+  },
+  {
+   "key": "citizen-vigilante-2026|audience-reaction",
+   "parentEventSlug": "citizen-vigilante-2026",
+   "form": "audience-reaction",
+   "reason": "misattributed-prose-quote: \"Citizen Vigilante is the worst movie of 2026. The …\" attributed to Giancarlo Sopo",
    "tries": 1,
-   "at": "2026-07-12T16:36:22.457Z"
+   "at": "2026-07-12T18:41:42.056Z"
+  },
+  {
+   "key": "moana-2026|audience-reaction",
+   "parentEventSlug": "moana-2026",
+   "form": "audience-reaction",
+   "reason": "score 88 < 70",
+   "tries": 1,
+   "at": "2026-07-12T18:49:08.004Z"
   }
  ]
 }
