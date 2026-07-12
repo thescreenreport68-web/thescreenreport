@@ -47,9 +47,18 @@ export function isNonReactionHeadline(text) {
   return NON_REACTION_RX.test(t);
 }
 
+// OFF-NICHE deterministic drop (owner: Hollywood film/TV/celebrity/Western-music ONLY — not gaming/anime).
+// GAME-specific terms (not bare "video game", so a game-ADAPTATION movie like a Minecraft/Last of Us film
+// stays), plus core anime markers. A Soulframe/TennoCon game trailer leaked through the finder LLM once.
+const OFF_NICHE_RX = /\b(gameplay|game ?trailer|Nintendo Direct|TennoCon|Warframe|Soulframe|The Game Awards|Summer Game Fest|\bE3\b|Elden Ring|Fortnite|Call of Duty|Baldur.?s Gate|Steam Deck|speedrun|patch notes|\bDLC\b|anime|manga|shonen|\bmangaka\b|light novel)\b/i;
+export const isOffNiche = (text) => OFF_NICHE_RX.test(text || "");
+
 // story (trigger-shaped, engine-compatible) + angle (form pick) per publishable story.
 export async function findStories({ limit = 16, discoverImpl = discoverStories, chatImpl = null, nowMs = null } = {}) {
-  const stories = (await discoverImpl({ nowMs })).filter((s) => !isNonReactionHeadline(`${s.headline || ""} ${s.primaryEntity || ""}`));
+  const stories = (await discoverImpl({ nowMs })).filter((s) => {
+    const t = `${s.headline || ""} ${s.primaryEntity || ""}`;
+    return !isNonReactionHeadline(t) && !isOffNiche(t);
+  });
   if (!stories.length) return [];
 
   const buzzOf = (s) => [
