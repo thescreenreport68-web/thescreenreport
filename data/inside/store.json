@@ -797,6 +797,60 @@
      }
     ]
    }
+  },
+  {
+   "key": "box-office-moana-struggles-with-52-million-overseas-toy-stor|breakout-buzz",
+   "at": "2026-07-12T20:55:53.234Z",
+   "updatedCount": 0,
+   "parentEventSlug": "box-office-moana-struggles-with-52-million-overseas-toy-stor",
+   "form": "breakout-buzz",
+   "slug": "moana-s-box-office-trouble-has-fans-in-a-chokehold-as-toy-story-5-runs-away",
+   "title": "Moana's Box Office Trouble Has Fans in a Chokehold as Toy Story 5 Runs Away",
+   "primaryEntity": "Moana Struggles",
+   "eventType": "discourse",
+   "harvestQuoteKeys": [
+    "es un éxito de disney vs. un fracaso de disney en la taquilla argentina: cifras de jueves ",
+    "taylor swift toy story 5 song vs. mirandas moana oscar showdown the taylor swift toy story",
+    "supergirl vs toy story 5, the minions, 4th july and next weekend the live action moana (co",
+    "that said, the lilo and stitch first reviews were not great, either, faithful could very w"
+   ],
+   "angle": {
+    "form": "breakout-buzz",
+    "angle": "one line: the specific discourse",
+    "workingTitle": "Box Office: Moana's Overseas Struggles vs. Toy Story 5's Triumph",
+    "focusEntity": "Moana vs. Toy Story 5",
+    "searchQueries": [
+     "Moana box office",
+     "Toy Story 5 box office"
+    ]
+   },
+   "trigger": {
+    "parentEventSlug": "box-office-moana-struggles-with-52-million-overseas-toy-stor",
+    "parentSlug": null,
+    "parentTitle": "Box Office: Moana Struggles With $52 Million Overseas, Toy Story 5 Powers to $879 Million Globally",
+    "primaryEntity": "Moana Struggles",
+    "eventType": "discourse",
+    "tmdbType": "movie",
+    "subjectKind": "person",
+    "priority": 41,
+    "category": "movies",
+    "overview": "Apparently the call wasn’t out there at all for “Moana,” which brought in just $52 million in its international box office debut. Disney s latest live-action remake struggled to make waves with $43 million domestically and $95 million worldwide, a catastrophic start given the film cost $250 million to produce. Heading into the weekend, Disney was [ ]",
+    "work": null,
+    "sources": [
+     {
+      "url": "https://variety.com/2026/film/box-office/box-office-moana-struggles-overseas-toy-story-5-milestone-1236809109/",
+      "outlet": null
+     },
+     {
+      "url": "https://www.hollywoodreporter.com/movies/movie-news/moana-box-office-disney-opening-evil-dead-burn-1236644503/",
+      "outlet": null
+     },
+     {
+      "url": "https://www.billboard.com/culture/tv-film/moana-box-office-opening-disney-1236292593/",
+      "outlet": null
+     }
+    ]
+   }
   }
  ],
  "parked": [
@@ -910,32 +964,34 @@
    "parentEventSlug": "from-2022",
    "form": "audience-reaction",
    "reason": "under floor: audience posts 0 < 3",
-   "tries": 2,
-   "at": "2026-07-12T18:33:21.674Z"
+   "tries": 3,
+   "at": "2026-07-12T20:35:23.819Z",
+   "dead": true
   },
   {
    "key": "passenger-2026|audience-reaction",
    "parentEventSlug": "passenger-2026",
    "form": "audience-reaction",
    "reason": "under floor: audience posts 0 < 3",
-   "tries": 2,
-   "at": "2026-07-12T18:35:53.645Z"
+   "tries": 3,
+   "at": "2026-07-12T20:38:11.581Z",
+   "dead": true
   },
   {
    "key": "citizen-vigilante-2026|audience-reaction",
    "parentEventSlug": "citizen-vigilante-2026",
    "form": "audience-reaction",
-   "reason": "misattributed-prose-quote: \"Citizen Vigilante is the worst movie of 2026. The …\" attributed to Giancarlo Sopo",
-   "tries": 1,
-   "at": "2026-07-12T18:41:42.056Z"
+   "reason": "score 90 < 70",
+   "tries": 2,
+   "at": "2026-07-12T20:45:10.905Z"
   },
   {
    "key": "moana-2026|audience-reaction",
    "parentEventSlug": "moana-2026",
    "form": "audience-reaction",
    "reason": "score 88 < 70",
-   "tries": 1,
-   "at": "2026-07-12T18:49:08.004Z"
+   "tries": 2,
+   "at": "2026-07-12T20:50:59.451Z"
   }
  ]
 }
