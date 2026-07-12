@@ -44,7 +44,7 @@ Output STRICT JSON only.`;
 // "what to watch" guide or a review). Drops obvious NON-REACTION editorial headlines before ranking:
 // reviews (but NOT review-bombing — that IS a reaction), listicles/rankings, explainers, recaps, guides,
 // predictions. A real EVENT people react to (death/casting/trailer/win/wedding/feud) is never matched here.
-const NON_REACTION_RX = /\b(reviewed|ranking|ranked|top \d+|best (movies|shows|films|series)|what to watch|where to watch|how to watch|streaming guide|ending explained|explainer|recap|predictions?|watch this weekend|things? to know|everything (we know|to know))\b/i;
+const NON_REACTION_RX = /\b(reviewed|ranking|ranked|top \d+|\d+ best|best (new |top |\d+ )?(movies|shows|films|series|tv|comedies|thrillers|horror movies)|what to watch|where to watch|how to watch|streaming guide|ending explained|explainer|recap|predictions?|watch this weekend|things? to know|everything (we know|to know))\b/i;
 export function isNonReactionHeadline(text) {
   const t = text || "";
   if (/\breview\b/i.test(t) && !/review[-\s]?bomb/i.test(t)) return true; // a critic's-verdict review, not review-bombing
@@ -95,11 +95,26 @@ export async function findStories({ limit = 16, discoverImpl = discoverStories, 
     }));
   }
 
-  const out = [];
+  // Index the LLM's valid picks by story. The finder NEVER shrinks the candidate pool: discovery
+  // already heat-ranked and off-niche/non-reaction-filtered every story, so the LLM's only job is to
+  // ANNOTATE (best form + working title + queries). The cheap finder model is stingy and erratic
+  // (it picked 5 of 24 and skipped the hottest titles), so we DETERMINISTICALLY include every top
+  // story in heat order — LLM form where it annotated one, flagship form otherwise. This guarantees
+  // the try-until-published loop always has the hottest reacted-to stories in reach (owner: 12/day).
+  const flagshipForm = (s) => (ALLOWED[s.kind] || ALLOWED.work)[0];
+  const pickByIdx = new Map();
   for (const p of picks) {
+    if (!Number.isInteger(p?.i) || pickByIdx.has(p.i)) continue;
     const s = stories[p.i];
-    if (!s || !p.form || !FORMS[p.form]) continue;
-    if (!(ALLOWED[s.kind] || ALLOWED.work).includes(p.form)) continue; // form clamp — never trust the enum
+    if (s && p.form && FORMS[p.form] && (ALLOWED[s.kind] || ALLOWED.work).includes(p.form)) pickByIdx.set(p.i, p);
+  }
+
+  const out = [];
+  for (let i = 0; i < stories.length && out.length < limit; i++) {
+    const s = stories[i];
+    const p = pickByIdx.get(i) || null;
+    const form = p?.form || flagshipForm(s);
+    if (!FORMS[form] || !(ALLOWED[s.kind] || ALLOWED.work).includes(form)) continue;
     out.push({
       story: { // trigger-shaped: the engine modules (harvest/assemble) consume this unchanged
         parentEventSlug: s.storySlug,
@@ -123,15 +138,14 @@ export async function findStories({ limit = 16, discoverImpl = discoverStories, 
         headline: s.headline || null,
       },
       angle: {
-        form: p.form,
-        angle: (p.angle || "audience discourse").slice(0, 200),
-        workingTitle: p.workingTitle || `${s.primaryEntity}: what people are saying`,
-        focusEntity: p.focusEntity || s.primaryEntity,
-        searchQueries: (Array.isArray(p.searchQueries) ? p.searchQueries : []).filter(Boolean).slice(0, 3),
-        key: p.form,
+        form,
+        angle: (p?.angle || "audience discourse").slice(0, 200),
+        workingTitle: p?.workingTitle || `${s.primaryEntity}: what people are saying`,
+        focusEntity: p?.focusEntity || s.primaryEntity,
+        searchQueries: (Array.isArray(p?.searchQueries) ? p.searchQueries : []).filter(Boolean).slice(0, 3),
+        key: form,
       },
     });
-    if (out.length >= limit) break;
   }
   return out;
 }

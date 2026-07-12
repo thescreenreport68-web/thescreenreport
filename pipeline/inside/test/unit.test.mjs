@@ -118,8 +118,10 @@ const finderStories = () => [
 await check("findStories maps story→trigger shape + angle from the classify picks", async () => {
   const chatImpl = async () => ({ data: { picks: [{ i: 0, form: "audience-reaction", workingTitle: "WT", focusEntity: "The Sable Coast", angle: "the ending fight", searchQueries: ["sable coast reactions", "sable ending", "extra", "too-many"] }] }, usage: {} });
   const out = await findStories({ discoverImpl: async () => finderStories(), chatImpl, nowMs: NOW });
-  assert.equal(out.length, 1);
-  const { story, angle } = out[0];
+  // The finder NEVER shrinks the pool: BOTH discovery stories are included (the LLM annotated only #0;
+  // #1 gets its flagship form) so the try-until-published loop always has the full trending pool.
+  assert.equal(out.length, 2);
+  const { story, angle } = out[0]; // #0 = the LLM-annotated Sable Coast (kept in discovery order)
   assert.equal(story.parentEventSlug, "the-sable-coast-2026");
   assert.equal(story.eventType, "discourse");
   assert.equal(story.status, "CONFIRMED");
@@ -130,8 +132,9 @@ await check("findStories maps story→trigger shape + angle from the classify pi
   assert.equal(angle.form, "audience-reaction");
   assert.equal(angle.workingTitle, "WT");
   assert.equal(angle.searchQueries.length, 3, "searchQueries capped at 3");
+  assert.equal(out[1].angle.form, "breakout-buzz", "the un-annotated person gets its flagship form, not dropped");
 });
-await check("form clamp: disallowed/unknown form or bad index dropped (never trust the enum)", async () => {
+await check("form clamp: an illegal/unknown LLM form clamps to the flagship (story kept, never an illegal form)", async () => {
   const chatImpl = async () => ({ data: { picks: [
     { i: 1, form: "audience-reaction", workingTitle: "bad", focusEntity: "Nora Idris", angle: "x" },  // not allowed for person
     { i: 1, form: "breakout-buzz", workingTitle: "good", focusEntity: "Nora Idris", angle: "x" },     // allowed
@@ -139,8 +142,13 @@ await check("form clamp: disallowed/unknown form or bad index dropped (never tru
     { i: 99, form: "the-debate", workingTitle: "bad index", angle: "x" },                             // bad index
   ] }, usage: {} });
   const out = await findStories({ discoverImpl: async () => finderStories(), chatImpl, nowMs: NOW });
-  assert.equal(out.length, 1, "only the legal pick survives");
-  assert.equal(out[0].angle.form, "breakout-buzz");
+  assert.equal(out.length, 2, "both stories kept — a bad form clamps to flagship, it does not drop the story");
+  // #0 (Sable Coast, work): its only LLM pick had an illegal "review" form → clamped to flagship, NEVER "review"
+  assert.equal(out[0].angle.form, "audience-reaction");
+  // #1 (Nora Idris, person): the legal breakout-buzz pick is respected; the illegal audience-reaction pick ignored
+  assert.equal(out[1].angle.form, "breakout-buzz");
+  const VALID = new Set(["audience-reaction", "the-debate", "creator-answers-critics", "breakout-buzz"]);
+  for (const o of out) assert.ok(VALID.has(o.angle.form), "every returned form is a real form");
 });
 await check("finder LLM total failure → deterministic fallback (flagship form per kind)", async () => {
   const out = await findStories({ discoverImpl: async () => finderStories(), chatImpl: async () => { throw new Error("llm down"); }, nowMs: NOW });
