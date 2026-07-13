@@ -1,144 +1,236 @@
 {
-  "runId": "run-2026-07-13T15-01-18",
-  "builtAt": "2026-07-13T15:02:23.605Z",
-  "count": 9,
+  "runId": "run-2026-07-13T19-01-16",
+  "builtAt": "2026-07-13T19:01:45.899Z",
+  "count": 15,
   "topics": [
     {
-      "id": "trailer-digger-trailer-tom-cruise-alejandro-g-inarritu",
-      "slug": "digger-trailer-tom-cruise-is-unrecognizable-in-alejandro-g-i-rritu-s-a",
-      "title": "‘Digger’ Trailer: Tom Cruise Is Unrecognizable in Alejandro G. Iñárritu s Apocalyptic Comedy",
+      "id": "trailer-prime-video-carrie-series-first-look",
+      "slug": "prime-video-releases-first-look-at-mike-flanagan-s-carrie-series",
+      "title": "Prime Video Releases First Look at Mike Flanagan’s Carrie Series",
       "contentType": "trailer",
       "formatTag": "trailer",
-      "category": "movies",
+      "category": "tv",
       "subcategory": "trailers",
       "eventType": "trailer",
       "sensitivity": "normal",
-      "eventSlug": "digger-trailer-tom-cruise-alejandro-g-inarritu",
-      "primaryKeyword": "digger trailer",
-      "primaryEntity": "Digger",
+      "eventSlug": "prime-video-carrie-series-first-look",
+      "primaryKeyword": "carrie series trailer",
+      "primaryEntity": "Carrie",
       "entities": [
-        "Digger (2024 film)",
-        "Tom Cruise",
-        "Alejandro G. Iñárritu"
+        "Carrie (TV Series)",
+        "Mike Flanagan",
+        "Stephen King"
       ],
-      "angle": "The first trailer for Alejandro G. Iñárritu's apocalyptic comedy 'Digger' has been released, featuring an unrecognizable Tom Cruise.",
+      "angle": "Prime Video offers a first look at Mike Flanagan's adaptation of Stephen King's 'Carrie'.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/tv/tv-news/prime-video-carrie-series-first-look-mike-flanagan-1236646525/",
+          "ageMin": 180,
+          "headline": "Prime Video Releases First Look at Mike Flanagan’s Carrie Series",
+          "summary": "The reimagining marks the first time Stephen King’s classic novel has been adapted for a television series."
+        }
+      ],
+      "ageMin": 180,
+      "_cand": {
+        "key": "rss:prime-video-releases-first-look-at-mike-flanagan-s-carrie-se",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 79,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 15,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-paramount-a-nightmare-on-elm-street-us-rights",
+      "slug": "paramount-lands-u-s-rights-to-a-nightmare-on-elm-street-franchise",
+      "title": "Paramount Lands U.S. Rights to 'A Nightmare on Elm Street' Franchise",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "paramount-a-nightmare-on-elm-street-us-rights",
+      "primaryKeyword": "a nightmare on elm street rights",
+      "primaryEntity": "A Nightmare on Elm Street",
+      "entities": [
+        "Paramount Pictures",
+        "Wes Craven"
+      ],
+      "angle": "Paramount Pictures has acquired the U.S. rights to the 'A Nightmare on Elm Street' franchise for its new genre label, Paramount Primal.",
       "tmdbType": "movie",
       "source": "rss:TheWrap",
       "sources": [
         {
           "outlet": "TheWrap",
           "tier": 7,
-          "url": "https://www.thewrap.com/creative-content/movies/digger-new-trailer-tom-cruise/",
-          "ageMin": 98,
-          "headline": "‘Digger’ Trailer: Tom Cruise Is Unrecognizable in Alejandro G. Iñárritu s Apocalyptic Comedy",
-          "summary": "Warner Bros. unveils a first full look at the movie, which will hit theaters in October as awards season heats up. The post ‘Digger’ Trailer: Tom Cruise Is Unrecognizable in Alejandro G. Iñárritu s Apocalyptic Comedy appeared first on TheWrap ."
-        },
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/digger-trailer-tom-cruise-1236980669/",
-          "ageMin": 116,
-          "headline": "Digger Trailer Unveils Tom Cruise s Crusty Oil Baron, A Role That Took The Actor 40 Years To Prepare",
-          "summary": "Warner Bros has just dropped the first trailer for the Tom Cruise-starring, Alejandro G. Iñárritu-directed Digger, and, well, buckle up. Ala Cruise s major studio boss Les Grossman in Tropic Thunder, the actor transforms into another kind of opposite once again: a very blunt Southern-talking, older potbelly oil baron who may have set off a massive [ ]"
-        },
-        {
-          "outlet": "IndieWire",
-          "tier": 7,
-          "url": "https://www.indiewire.com/news/trailers/digger-trailer-tom-cruise-alejandro-g-inarritu-1235204741/",
-          "ageMin": 118,
-          "headline": "Digger Trailer: Tom Cruise and Alejandro G. Iñárritu Unite for a VistaVision Comedy Epic",
-          "summary": "Cruise gave the press an early look at his wild return to audacious auteur filmmaking and promised that his collaboration with Iñárritu was worth the 26-year wait."
-        },
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-features/tom-cruise-digger-trailer-1236646274/",
-          "ageMin": 121,
-          "headline": "Digger Trailer: Tom Cruise Spent Days Listening to Alejandro G. Iñárritu Read Him the Script",
-          "summary": "The first clip shows an unrecognizable Cruise in the film that is set for release on Oct. 2."
-        },
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/film/news/digger-trailer-tom-cruise-alejandro-inarritu-comedy-1236654206/",
-          "ageMin": 121,
-          "headline": "Digger Trailer: Tom Cruise Transforms Into an Eccentric Billionaire Facing an Eco-Disaster in Alejandro G. Iñárritu s Absurdist Comedy",
-          "summary": "Tom Cruise had to dig deep for his latest starring role pun intended. I have never had something that could challenge me in this way, and neither has Alejandro, Cruise said about starring in Digger, the black comedy from two-time Academy Award-winning filmmaker Alejandro González Iñárritu ( Birdman, The Revenant ). Described as “a comedy of [ ]"
+          "url": "https://www.thewrap.com/creative-content/movies/nightmare-on-elm-street-remake-paramount-primal/",
+          "ageMin": 131,
+          "headline": "Paramount Lands ‘A Nightmare on Elm Street’ U.S. Rights",
+          "summary": "The deal comes from the studio's new genre label Paramount Primal and the Wes Craven estate The post Paramount Lands ‘A Nightmare on Elm Street’ U.S. Rights appeared first on TheWrap ."
         }
       ],
-      "ageMin": 98,
+      "ageMin": 131,
       "_cand": {
-        "key": "rss:-digger-trailer-tom-cruise-is-unrecognizable-in-alejandro-g-",
+        "key": "rss:paramount-lands-a-nightmare-on-elm-street-u-s-rights",
         "popularity": 0,
         "kind": "rss-news"
       },
-      "corroborationCount": 5,
+      "corroborationCount": 1,
       "verification": {
-        "tier1Count": 5,
-        "tier1Owners": 2,
-        "outletCount": 5,
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
         "outlets": [
-          "TheWrap",
-          "Deadline",
-          "IndieWire",
-          "THR",
-          "Variety"
+          "TheWrap"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": null,
-        "framing": "plain",
-        "status": "CONFIRMED",
+        "attribution": "TheWrap",
+        "framing": "attributed",
+        "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 120,
+      "priority": 79,
       "signals": {
         "recency": 16,
-        "corroboration": 25,
-        "status": 25,
-        "type": 15,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
         "big": 24,
-        "trending": 15,
+        "trending": 0,
         "softTv": 0
       }
     },
     {
-      "id": "news-vampire-lestat-episode-6-breakdown",
-      "slug": "the-vampire-lestat-stars-discuss-cathartic-episode-6-and-what-s-next",
-      "title": "The Vampire Lestat Stars Discuss Cathartic Episode 6 and What's Next",
+      "id": "news-emily-meade-mae-whitman-lead-pilot-whisper-sisters",
+      "slug": "emily-meade-mae-whitman-to-lead-comedy-pilot-whisper-sisters",
+      "title": "Emily Meade, Mae Whitman to Lead Comedy Pilot 'Whisper Sisters'",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "emily-meade-mae-whitman-lead-pilot-whisper-sisters",
+      "primaryKeyword": "whisper sisters pilot",
+      "primaryEntity": "Whisper Sisters (TV Pilot)",
+      "entities": [
+        "Emily Meade",
+        "Mae Whitman"
+      ],
+      "angle": "Emily Meade and Mae Whitman to star in new comedy pilot 'Whisper Sisters'.",
+      "tmdbType": "movie",
+      "source": "rss:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/emily-meade-mae-whitman-cast-comedy-pilot-whisper-sisters-1236980906/",
+          "ageMin": 79,
+          "headline": "Emily Meade Mae Whitman To Lead Comedy Pilot Whisper Sisters",
+          "summary": "EXCLUSIVE: Emily Meade (The Deuce, The Leftovers) and Mae Whitman (Good Girls, Parenthood) will co-lead Whisper Sisters, a single-camera half-hour comedy pilot from Corey Roederer that takes aim at the male-dominated world of Kentucky bourbon and moonshine. The pilot begins production in Louisville, Kentucky, this summer. Whisper Sisters pays homage to the real women who helped build [ ]"
+        }
+      ],
+      "ageMin": 79,
+      "_cand": {
+        "key": "rss:emily-meade-mae-whitman-to-lead-comedy-pilot-whisper-sisters",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 78,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-gail-daughtry-screenplay-mad-men-wizard-of-oz-connection",
+      "slug": "david-wain-ken-marino-on-gail-daughtry-screenplay-s-mad-men-wizard-of-",
+      "title": "David Wain & Ken Marino on 'Gail Daughtry' Screenplay's 'Mad Men' & 'Wizard of Oz' Links",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "vampire-lestat-episode-6-breakdown",
-      "primaryKeyword": "The Vampire Lestat",
-      "primaryEntity": "The Vampire Lestat",
+      "eventSlug": "gail-daughtry-screenplay-mad-men-wizard-of-oz-connection",
+      "primaryKeyword": "Gail Daughtry screenplay",
+      "primaryEntity": "Gail Daughtry",
       "entities": [
-        "Sam Reid",
-        "Jacob Anderson",
-        "Lestat",
-        "Louis"
+        "David Wain",
+        "Ken Marino",
+        "Mad Men",
+        "The Wizard of Oz"
       ],
-      "angle": "Stars of AMC's 'The Vampire Lestat' break down a pivotal episode and tease future plotlines.",
+      "angle": "David Wain and Ken Marino discuss the writing of their screenplay 'Gail Daughtry' and its influences.",
       "tmdbType": "movie",
       "source": "rss:IndieWire",
       "sources": [
         {
           "outlet": "IndieWire",
           "tier": 7,
-          "url": "https://www.indiewire.com/features/interviews/the-vampire-lestat-episode-6-spoilers-interview-1235204846/",
+          "url": "https://www.indiewire.com/features/interviews/gail-daughtry-the-wizard-of-oz-mad-men-explained-1235204833/",
           "ageMin": 1,
-          "headline": "The Vampire Lestat Stars Break Down a Cathartic, Climactic Episode 6 — and What s Next for Lestat and Louis",
-          "summary": "Sam Reid and Jacob Anderson tell IndieWire about the cathartic reunion in Episode 6 of the lusty Anne Rice AMC series. Spoilers ahead!"
+          "headline": "Don’t Let the Silly Skits Fool You, ‘Gail Daughtry’ Is a Seriously Well-Written Screenplay",
+          "summary": "David Wain and Ken Marino tell IndieWire about their latest film's connection to \"Mad Men\" and \"The Wizard of Oz,\" and how their \"Wet Hot American Summer\" absurdity takes careful planning."
         }
       ],
       "ageMin": 1,
       "_cand": {
-        "key": "rss:the-vampire-lestat-stars-break-down-a-cathartic-climactic-ep",
+        "key": "rss:don-t-let-the-silly-skits-fool-you-gail-daughtry-is-a-seriou",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -157,73 +249,9 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 71,
+      "priority": 77,
       "signals": {
         "recency": 30,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 6,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "news-andy-serkis-animal-farm-hunt-for-gollum-ai",
-      "slug": "andy-serkis-on-u-s-outrage-over-his-animal-farm-movie-ai-use-in-hunt-f",
-      "title": "Andy Serkis on U.S. ‘Outrage’ Over His ‘Animal Farm’ Movie, AI Use in ‘Hunt for Gollum’ and Wanting Oscars to Recognize Motion Capture: ‘It’s Been a Long Time Coming’",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "andy-serkis-animal-farm-hunt-for-gollum-ai",
-      "primaryKeyword": "Andy Serkis Hunt for Gollum",
-      "primaryEntity": "Andy Serkis",
-      "entities": [
-        "The Lord of the Rings: The Hunt for Gollum",
-        "Animal Farm"
-      ],
-      "angle": "Andy Serkis discusses the US 'outrage' over his 'Animal Farm' movie, AI use in 'The Hunt for Gollum,' and the push for Oscars to recognize motion capture.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/film/global/andy-serkis-animal-farm-ai-hunt-for-gollum-motion-capture-1236809573/",
-          "ageMin": 30,
-          "headline": "Andy Serkis on U.S. ‘Outrage’ Over His ‘Animal Farm’ Movie, AI Use in ‘Hunt for Gollum’ and Wanting Oscars to Recognize Motion Capture: ‘It’s Been a Long Time Coming’",
-          "summary": "Andy Serkis is currently in New Zealand taking on orcs, wizards, elves and boney-fingered ring fanciers in one of the highest profile films now in production: The Lord of the Rings: The Hunt for Gollum. Serkis grand return to the franchise — due for release by Warner Bros. at the end of 2027, just shy of [ ]"
-        }
-      ],
-      "ageMin": 30,
-      "_cand": {
-        "key": "rss:andy-serkis-on-u-s-outrage-over-his-animal-farm-movie-ai-use",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 71,
-      "signals": {
-        "recency": 24,
         "corroboration": 12,
         "status": 18,
         "type": 5,
@@ -235,128 +263,62 @@
       }
     },
     {
-      "id": "music-news-bts-munich-louder-than-bombs-performance",
-      "slug": "bts-thrill-munich-fans-with-debut-louder-than-bombs-performance",
-      "title": "BTS Thrill Munich Fans With Debut Louder Than Bombs Performance",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
+      "id": "news-the-daily-show-jon-stewart-ratings-q2-2024",
+      "slug": "the-daily-show-hits-9-year-q2-ratings-high-with-jon-stewart-at-the-hel",
+      "title": "'The Daily Show' Hits 9-Year Q2 Ratings High With Jon Stewart at the Helm",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "bts-munich-louder-than-bombs-performance",
-      "primaryKeyword": "BTS",
-      "primaryEntity": "BTS",
+      "eventSlug": "the-daily-show-jon-stewart-ratings-q2-2024",
+      "primaryKeyword": "The Daily Show ratings",
+      "primaryEntity": "The Daily Show",
       "entities": [
-        "Map of the Soul: 7",
-        "ARMY"
+        "Jon Stewart",
+        "Comedy Central"
       ],
-      "angle": "BTS performed their song 'Louder Than Bombs' live for the first time in Munich.",
+      "angle": "Jon Stewart's return boosts 'The Daily Show' to highest Q2 ratings in nine years.",
       "tmdbType": "movie",
-      "source": "rss:Billboard",
+      "source": "rss:Deadline",
       "sources": [
         {
-          "outlet": "Billboard",
+          "outlet": "Deadline",
           "tier": 7,
-          "url": "https://www.billboard.com/music/pop/bts-munich-live-debut-louder-than-bombs-1236292800/",
-          "ageMin": 10,
-          "headline": "BTS Thrill Munich Fans With Debut Louder Than Bombs Performance",
-          "summary": "ARMY has been waiting since 2020 to hear the Map of the Soul: 7 track before Sunday night's (July 12) premiere at Allianz Arena in Germany."
+          "url": "https://deadline.com/2026/07/the-daily-show-ratings-growth-2026-jon-stewart-1236981016/",
+          "ageMin": 1,
+          "headline": "The Daily Show : Jon Stewart Leads Comedy Central s Late-Night Staple To Best Ratings In Years",
+          "summary": "EXCLUSIVE: The Daily Show is on a hot streak. Comedy Central s late-night satirical talk show scored its highest-rated Q2 in the key 18-49 demo in nine years, led by Jon Stewart s Monday night episodes, per new data from Paramount Skydance. In the second quarter of the year, The Daily Show averaged a 0.574 among adults [ ]"
         }
       ],
-      "ageMin": 10,
+      "ageMin": 1,
       "_cand": {
-        "key": "rss:bts-thrill-munich-fans-with-debut-louder-than-bombs-performa",
+        "key": "rss:the-daily-show-jon-stewart-leads-comedy-central-s-late-night",
         "popularity": 0,
         "kind": "rss-news"
       },
-      "breakoutVelocity": 0,
       "corroborationCount": 1,
       "verification": {
         "tier1Count": 1,
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Billboard"
+          "Deadline"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Billboard",
+        "attribution": "Deadline",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 65,
+      "priority": 71,
       "signals": {
         "recency": 30,
         "corroboration": 12,
         "status": 18,
         "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "news-josh-grisetti-death",
-      "slug": "josh-grisetti-marvelous-mrs-maisel-actor-and-broadway-star-dies-at-44",
-      "title": "Josh Grisetti, Marvelous Mrs. Maisel Actor and Broadway Star, Dies at 44",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "death",
-      "sensitivity": "high",
-      "eventSlug": "josh-grisetti-death",
-      "primaryKeyword": "josh grisetti",
-      "primaryEntity": "Josh Grisetti",
-      "entities": [
-        "The Marvelous Mrs. Maisel",
-        "Something Rotten"
-      ],
-      "angle": "Broadway actor and 'The Marvelous Mrs. Maisel' alum Josh Grisetti has died at 44.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/tv/obituaries-people-news/josh-grisetti-dead-marvelous-mrs-maisel-broadway-1236809592/",
-          "ageMin": 85,
-          "headline": "Josh Grisetti, Marvelous Mrs. Maisel Actor and Broadway Star, Dies at 44",
-          "summary": "Josh Grisetti, who appeared in the Broadway musical Something Rotten and Prime Video s The Marvelous Mrs. Maisel, died July 10. He was 44. Broadway actor Rob McClure, who starred in Something Rotten with Grisetti, announced his friend s death on Instagram Sunday night. It is with a shattered heart that I share that the brilliant Josh [ ]"
-        }
-      ],
-      "ageMin": 85,
-      "_cand": {
-        "key": "rss:josh-grisetti-marvelous-mrs-maisel-actor-and-broadway-star-d",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 66,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
         "pop": 0,
         "breakout": 0,
         "big": 6,
@@ -365,73 +327,9 @@
       }
     },
     {
-      "id": "awards-grammys-emmy-nomination-race",
-      "slug": "the-grammys-have-never-won-a-top-program-emmy-could-this-be-the-year",
-      "title": "The Grammys Have Never Won a Top Program Emmy: Could This Be the Year?",
-      "contentType": "awards",
-      "formatTag": "awards",
-      "category": "awards",
-      "subcategory": "winners",
-      "eventType": "award",
-      "sensitivity": "normal",
-      "eventSlug": "grammys-emmy-nomination-race",
-      "primaryKeyword": "grammys",
-      "primaryEntity": "The Grammys",
-      "entities": [
-        "Bad Bunny",
-        "Super Bowl"
-      ],
-      "angle": "The Grammy telecast is in contention for a Top Program Emmy, facing competition from the Super Bowl halftime show.",
-      "tmdbType": "movie",
-      "source": "rss:Billboard",
-      "sources": [
-        {
-          "outlet": "Billboard",
-          "tier": 7,
-          "url": "https://www.billboard.com/lists/grammy-telecasts-nominated-for-top-primetime-emmy-full-list/",
-          "ageMin": 61,
-          "headline": "The Grammys Have Never Won a Top Program Emmy: Could This Be the Year?",
-          "summary": "The Grammy telecast where Bad Bunny made history with his album of the year win is competing with the superstar's Super Bowl halftime show."
-        }
-      ],
-      "ageMin": 61,
-      "_cand": {
-        "key": "rss:the-grammys-have-never-won-a-top-program-emmy-could-this-be-",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Billboard"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Billboard",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 60,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "music-news-bts-arirang-album-new-radio-single",
-      "slug": "this-is-the-next-radio-single-from-bts-arirang-album",
-      "title": "This Is the Next Radio Single From BTS ARIRANG Album",
+      "id": "music-news-young-thug-ysl-new-generation-tour",
+      "slug": "young-thug-plots-ysl-the-new-generation-tour",
+      "title": "Young Thug Plots YSL The New Generation Tour",
       "contentType": "music-news",
       "formatTag": "music-news",
       "category": "music",
@@ -439,28 +337,28 @@
       "eventType": "announcement",
       "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "bts-arirang-album-new-radio-single",
-      "primaryKeyword": "BTS new single",
-      "primaryEntity": "BTS",
+      "eventSlug": "young-thug-ysl-new-generation-tour",
+      "primaryKeyword": "Young Thug tour",
+      "primaryEntity": "Young Thug",
       "entities": [
-        "ARIRANG"
+        "YSL Records"
       ],
-      "angle": "BTS announces the next radio single from their 'ARIRANG' album.",
+      "angle": "Rapper Young Thug announces his 'YSL The New Generation Tour'.",
       "tmdbType": "movie",
-      "source": "rss:Billboard",
+      "source": "rss:Rolling Stone",
       "sources": [
         {
-          "outlet": "Billboard",
+          "outlet": "Rolling Stone",
           "tier": 7,
-          "url": "https://www.billboard.com/music/music-news/bts-arirang-second-single-normal-1236292946/",
-          "ageMin": 19,
-          "headline": "This Is the Next Radio Single From BTS ARIRANG Album",
-          "summary": "The new promoted track follows the Hot 100 No. 1 “SWIM.”"
+          "url": "https://www.rollingstone.com/music/music-news/young-thug-ysl-the-new-generation-tour-1235592866/",
+          "ageMin": 33,
+          "headline": "Young Thug Plots YSL The New Generation Tour",
+          "summary": "Rapper taps YSL Records artists Tezzus, 1300saint, Iyrus, Yume, Biggs, Unky, and Diamond* for the run"
         }
       ],
-      "ageMin": 19,
+      "ageMin": 33,
       "_cand": {
-        "key": "rss:this-is-the-next-radio-single-from-bts-arirang-album",
+        "key": "rss:young-thug-plots-ysl-the-new-generation-tour",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -471,11 +369,11 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Billboard"
+          "Rolling Stone"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Billboard",
+        "attribution": "Rolling Stone",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -494,38 +392,39 @@
       }
     },
     {
-      "id": "music-news-mastodon-marrow-deep-album-snakes-for-dinner-single",
-      "slug": "mastodon-previews-new-album-marrow-deep-with-single-snakes-for-dinner",
-      "title": "Mastodon Previews New Album 'Marrow Deep' With Single 'Snakes For Dinner'",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
+      "id": "news-nansun-shi-dies",
+      "slug": "nansun-shi-producer-of-infernal-affairs-dies-at-75",
+      "title": "Nansun Shi, Producer of 'Infernal Affairs,' Dies at 75",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
       "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "mastodon-marrow-deep-album-snakes-for-dinner-single",
-      "primaryKeyword": "Mastodon new album",
-      "primaryEntity": "Mastodon",
+      "eventType": "death",
+      "sensitivity": "high",
+      "eventSlug": "nansun-shi-dies",
+      "primaryKeyword": "nansun shi",
+      "primaryEntity": "Nansun Shi",
       "entities": [
-        "Marrow Deep"
+        "Infernal Affairs",
+        "John Woo",
+        "Tsui Hark"
       ],
-      "angle": "Grammy-winning rock band Mastodon announces ninth studio album 'Marrow Deep' with new single 'Snakes For Dinner'.",
+      "angle": "Hong Kong producer Nansun Shi, known for her work on films like 'Infernal Affairs' and collaborations with John Woo and Tsui Hark, has died at 75.",
       "tmdbType": "movie",
-      "source": "rss:Rolling Stone",
+      "source": "rss:Deadline",
       "sources": [
         {
-          "outlet": "Rolling Stone",
+          "outlet": "Deadline",
           "tier": 7,
-          "url": "https://www.rollingstone.com/music/music-news/mastodon-snakes-for-dinner-single-marrow-deep-album-1235592538/",
-          "ageMin": 95,
-          "headline": "Mastodon Preview New Album With Rousing Single ‘Snakes For Dinner’",
-          "summary": "Grammy-winning rock band will release Marrow Deep , their ninth studio album, next month"
+          "url": "https://deadline.com/2026/07/nansun-shi-infernal-affairs-film-workshop-1236980818/",
+          "ageMin": 132,
+          "headline": "Nansun Shi Dies: Film Workshop Founder ‘Infernal Affairs’ Producer Was 75",
+          "summary": "Hong Kong producer Nansun Shi, whose credits include John Woo’s A Better Tomorrow, Andrew Lau and Alan Mak s Infernal Affairs and multiple films with Tsui Hark, has died aged 75. Film Workshop, the iconic Hong Kong production house she co-founded with director-producer Tsui Hark, sent out this statement: “We are deeply saddened to announce the [ ]"
         }
       ],
-      "ageMin": 95,
+      "ageMin": 132,
       "_cand": {
-        "key": "rss:mastodon-preview-new-album-with-rousing-single-snakes-for-di",
+        "key": "rss:nansun-shi-dies-film-workshop-founder-infernal-affairs-produ",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -535,11 +434,206 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Rolling Stone"
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 72,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 12,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-jeff-schaffer-larry-david-obama-trump-life-larry-and-the-pursuit-of-un",
+      "slug": "life-larry-and-the-pursuit-of-unhappiness-showrunner-jeff-schaffer-on-",
+      "title": "Life, Larry and the Pursuit of Unhappiness Showrunner Jeff Schaffer on Working With Obama (and Navigating Trump) With Larry David",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "jeff-schaffer-larry-david-obama-trump-life-larry-and-the-pursuit-of-un",
+      "primaryKeyword": "Life, Larry and the Pursuit of Unhappiness",
+      "primaryEntity": "Life, Larry and the Pursuit of Unhappiness: An Almost History of America",
+      "entities": [
+        "Life, Larry and the Pursuit of Unhappiness",
+        "Larry David",
+        "Jeff Schaffer"
+      ],
+      "angle": "Showrunner Jeff Schaffer discusses working with Larry David and navigating politics on 'Life, Larry and the Pursuit of Unhappiness'.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/tv/tv-features/life-larry-and-the-pursuit-of-unhappiness-obama-larry-david-1236644205/",
+          "ageMin": 34,
+          "headline": "Life, Larry and the Pursuit of Unhappiness Showrunner Jeff Schaffer on Working With Obama (and Navigating Trump) With Larry David",
+          "summary": "The longtime David collaborator knows that 2026 is both a fitting and bizarre time to be feting the U.S.: \"We’re celebrating America, warts and all. And right now, there's a saggy orange wart.\""
+        }
+      ],
+      "ageMin": 34,
+      "_cand": {
+        "key": "rss:life-larry-and-the-pursuit-of-unhappiness-showrunner-jeff-sc",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Rolling Stone",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 65,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 6,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "music-news-shakira-burna-boy-dai-dai-billboard-global-charts",
+      "slug": "shakira-burna-boy-s-world-cup-anthem-dai-dai-rules-billboard-global-ch",
+      "title": "Shakira & Burna Boy's World Cup Anthem 'Dai Dai' Rules Billboard Global Charts",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "shakira-burna-boy-dai-dai-billboard-global-charts",
+      "primaryKeyword": "Shakira Burna Boy Dai Dai",
+      "primaryEntity": "Shakira",
+      "entities": [
+        "Burna Boy",
+        "Billboard Global 200"
+      ],
+      "angle": "Shakira and Burna Boy's World Cup anthem 'Dai Dai' tops Billboard Global charts.",
+      "tmdbType": "movie",
+      "source": "rss:Billboard",
+      "sources": [
+        {
+          "outlet": "Billboard",
+          "tier": 7,
+          "url": "https://www.billboard.com/music/chart-beat/shakira-burna-boy-dai-dai-global-chart-number-one-1236293292/",
+          "ageMin": 29,
+          "headline": "Shakira Burna Boy’s World Cup Anthem ‘Dai Dai’ Rules Both Billboard Global Charts",
+          "summary": "The song scores its first week at No. 1 on the Global 200 and its third atop Global Excl. U.S."
+        }
+      ],
+      "ageMin": 29,
+      "_cand": {
+        "key": "rss:shakira-burna-boy-s-world-cup-anthem-dai-dai-rules-both-bill",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "breakoutVelocity": 0,
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Billboard"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Billboard",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 59,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "music-news-billie-joe-armstrong-marshall-amp-dookie",
+      "slug": "billie-joe-armstrong-partners-with-marshall-on-handwired-amp-inspired-",
+      "title": "Billie Joe Armstrong Partners With Marshall on Handwired Amp Inspired by Green Day's Dookie Era",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "billie-joe-armstrong-marshall-amp-dookie",
+      "primaryKeyword": "billie joe armstrong marshall amp",
+      "primaryEntity": "Billie Joe Armstrong",
+      "entities": [
+        "Green Day"
+      ],
+      "angle": "Billie Joe Armstrong partners with Marshall on a new amplifier inspired by Green Day's 'Dookie' era.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/shopping/news/billie-joe-armstrong-marshall-amp-dookie-shop-online-1236809833/",
+          "ageMin": 77,
+          "headline": "Billie Joe Armstrong Partners With Marshall on Handwired Amp Inspired by Green Day s Dookie Era",
+          "summary": "Billie Joe Armstrong is turning one of punk rock’s most recognizable guitar sounds into a signature Marshall amplifier. Marshall has unveiled the 1959BJA Artist Signature, a handwired, 100-watt amp developed with the Green Day frontman and modeled in part on the guitar tone heard during the band’s “Dookie” era. The release marks Marshall’s first artist-signature [ ]"
+        }
+      ],
+      "ageMin": 77,
+      "_cand": {
+        "key": "rss:billie-joe-armstrong-partners-with-marshall-on-handwired-amp",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -558,9 +652,9 @@
       }
     },
     {
-      "id": "music-news-pitbull-bst-hyde-park-bald-cap-world-record",
-      "slug": "pitbull-sets-guinness-world-record-for-largest-bald-cap-gathering-at-b",
-      "title": "Pitbull Sets Guinness World Record for Largest Bald Cap Gathering at BST Hyde Park Show",
+      "id": "music-news-ella-langley-choosin-texas-13-weeks-no-1",
+      "slug": "ella-langley-s-choosin-texas-extends-no-1-run-on-billboard-hot-100-to-",
+      "title": "Ella Langley’s ‘Choosin’ Texas’ Extends No. 1 Run on Billboard Hot 100 to 13 Weeks",
       "contentType": "music-news",
       "formatTag": "music-news",
       "category": "music",
@@ -568,32 +662,31 @@
       "eventType": "other",
       "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "pitbull-bst-hyde-park-bald-cap-world-record",
-      "primaryKeyword": "Pitbull world record",
-      "primaryEntity": "Pitbull",
+      "eventSlug": "ella-langley-choosin-texas-13-weeks-no-1",
+      "primaryKeyword": "Ella Langley",
+      "primaryEntity": "Ella Langley",
       "entities": [
-        "BST Hyde Park"
+        "Billboard Hot 100"
       ],
-      "angle": "Pitbull sets a Guinness World Record for the largest gathering of bald caps during his BST Hyde Park show.",
+      "angle": "Ella Langley's song 'Choosin' Texas' continues its dominant run at No. 1 on the Billboard Hot 100, setting a new record for country songs.",
       "tmdbType": "movie",
       "source": "rss:Billboard",
       "sources": [
         {
           "outlet": "Billboard",
           "tier": 7,
-          "url": "https://www.billboard.com/music/rb-hip-hop/pitbull-guinness-world-record-largest-gathering-bald-caps-1236292781/",
-          "ageMin": 137,
-          "headline": "Pitbull Sets Guinness World Record With Largest Gathering of Bald Caps at BST Hyde Park Show: We Did It Baldies! Dale!",
-          "summary": "What began as a fun inside joke among Mr. Worldwide's biggest fans is now in the record books."
+          "url": "https://www.billboard.com/lists/ella-langley-choosin-texas-hot-100-number-one-13th-week/",
+          "ageMin": 108,
+          "headline": "Ella Langley’s ‘Choosin’ Texas’ Extends No. 1 Run on Billboard Hot 100 to 13 Weeks",
+          "summary": "Langley also becomes the first woman with three country songs in the chart’s top four spots simultaneously."
         }
       ],
-      "ageMin": 137,
+      "ageMin": 108,
       "_cand": {
-        "key": "rss:pitbull-sets-guinness-world-record-with-largest-gathering-of",
+        "key": "rss:ella-langley-s-choosin-texas-extends-no-1-run-on-billboard-h",
         "popularity": 0,
         "kind": "rss-news"
       },
-      "breakoutVelocity": 0,
       "corroborationCount": 1,
       "verification": {
         "tier1Count": 1,
@@ -605,6 +698,265 @@
         "maxTier": 7,
         "sensitivity": "normal",
         "attribution": "Billboard",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 51,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-william-fichtner-signs-with-paradigm",
+      "slug": "william-fichtner-signs-with-paradigm",
+      "title": "William Fichtner Signs With Paradigm",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "william-fichtner-signs-with-paradigm",
+      "primaryKeyword": "William Fichtner",
+      "primaryEntity": "William Fichtner",
+      "entities": [
+        "Paradigm",
+        "Beef (TV series)"
+      ],
+      "angle": "Prolific character actor William Fichtner signs with new representation.",
+      "tmdbType": "movie",
+      "source": "rss:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/william-fichtner-paradigm-agency-1236981026/",
+          "ageMin": 1,
+          "headline": "William Fichtner, Prolific Character Actor With Credits From Armageddon To Beef , Signs With Paradigm",
+          "summary": "EXCLUSIVE: William Fichtner has signed with Paradigm for representation. Most recently, Fichtner can be seen in the second season of Netflix s Beef, starring opposite Oscar Isaac and Carey Mulligan. He plays Troy, a self-serving older man who marries a millennial. He also recently starred in AMC s Anne Rice s Talamasca: The Secret Order as American vampire Jasper. Fichtner [ ]"
+        }
+      ],
+      "ageMin": 1,
+      "_cand": {
+        "key": "rss:william-fichtner-prolific-character-actor-with-credits-from-",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 74,
+      "signals": {
+        "recency": 30,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-jay-z-yankee-stadium-concert-security-breach",
+      "slug": "jay-z-yankee-stadium-concert-security-breach-caught-on-video",
+      "title": "Jay-Z Yankee Stadium Concert Security Breach Caught on Video",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "jay-z-yankee-stadium-concert-security-breach",
+      "primaryKeyword": "Jay-Z Yankee Stadium concert",
+      "primaryEntity": "JAŸ-Z",
+      "entities": [
+        "Jay-Z",
+        "Yankee Stadium"
+      ],
+      "angle": "Security breach outside Jay-Z's Yankee Stadium concert captured on video.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/news/general-news/jay-z-yankee-stadium-concert-security-breach-fans-rush-entrence-1236646755/",
+          "ageMin": 31,
+          "headline": "Jay-Z Yankee Stadium Concert Security Breach Caught on Video",
+          "summary": "Some of the \"10,000 fans\" outside began to storm the gates of the Sunday night show, which didn't begin until after midnight on Monday."
+        }
+      ],
+      "ageMin": 31,
+      "_cand": {
+        "key": "rss:jay-z-yankee-stadium-concert-security-breach-caught-on-video",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 59,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-jay-z-yankee-stadium-guest-performers",
+      "slug": "every-guest-jay-z-brought-out-during-his-three-yankee-stadium-shows",
+      "title": "Every Guest Jay-Z Brought Out During His Three Yankee Stadium Shows",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "jay-z-yankee-stadium-guest-performers",
+      "primaryKeyword": "Jay-Z Yankee Stadium guests",
+      "primaryEntity": "JAŸ-Z",
+      "entities": [
+        "Jay-Z",
+        "Yankee Stadium",
+        "Beyoncé",
+        "Rihanna"
+      ],
+      "angle": "Jay-Z brought out a star-studded lineup of guests during his Yankee Stadium shows.",
+      "tmdbType": "movie",
+      "source": "rss:Billboard",
+      "sources": [
+        {
+          "outlet": "Billboard",
+          "tier": 7,
+          "url": "https://www.billboard.com/lists/jay-z-yankee-stadium-guests-rihanna-beyonce/",
+          "ageMin": 33,
+          "headline": "Every Guest Jay-Z Brought Out During His Three Yankee Stadium Shows",
+          "summary": "From Beyoncé to Rihanna, it was a star-studded affair in the Bronx."
+        }
+      ],
+      "ageMin": 33,
+      "_cand": {
+        "key": "rss:every-guest-jay-z-brought-out-during-his-three-yankee-stadiu",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Billboard"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Billboard",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 59,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-whoopi-goldberg-nepo-babies-the-view",
+      "slug": "whoopi-goldberg-compares-nepo-babies-to-dei-hires-on-the-view",
+      "title": "Whoopi Goldberg Compares 'Nepo Babies' To DEI Hires On The View",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "whoopi-goldberg-nepo-babies-the-view",
+      "primaryKeyword": "whoopi goldberg nepo babies",
+      "primaryEntity": "Whoopi Goldberg",
+      "entities": [
+        "The View"
+      ],
+      "angle": "Whoopi Goldberg weighed in on the 'nepo babies' discussion on The View, comparing it to calling someone a DEI hire.",
+      "tmdbType": "movie",
+      "source": "rss:TheWrap",
+      "sources": [
+        {
+          "outlet": "TheWrap",
+          "tier": 7,
+          "url": "https://www.thewrap.com/creative-content/tv-shows/the-view-whoopi-goes-off-on-nepo-babies/",
+          "ageMin": 129,
+          "headline": "Whoopi Goldberg Goes Off on the Term Nepo Babies on The View : Like Calling Them a DEI Hire",
+          "summary": "\"A lot of these kids, their parents don't open doors for this very reason,\" the ABC moderator says The post Whoopi Goldberg Goes Off on the Term Nepo Babies on The View : Like Calling Them a DEI Hire appeared first on TheWrap ."
+        }
+      ],
+      "ageMin": 129,
+      "_cand": {
+        "key": "rss:whoopi-goldberg-goes-off-on-the-term-nepo-babies-on-the-view",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "TheWrap"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "TheWrap",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
