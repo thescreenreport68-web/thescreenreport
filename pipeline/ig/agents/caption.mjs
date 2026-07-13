@@ -15,6 +15,13 @@ const CTAS = [
 // Kept to ONE subtle line, placed above the hashtags, never inside line1 (the clean Google snippet).
 const AI_NOTE = "AI-assisted recap by The Screen Report.";
 
+// SINGLE SOURCE OF TRUTH for the posted caption body. Both this agent AND igrun (which re-assembles
+// `full` after applying engage-agent cta/firstComment overrides) MUST use this — otherwise igrun's
+// rebuild silently drops the AI_NOTE (which is exactly what happened on the first live test). (2026-07-13)
+export function assembleFull(cap) {
+  return [cap.line1, "", cap.body, "", cap.cta, "", AI_NOTE, "", (cap.hashtags || []).join(" ")].join("\n").trim();
+}
+
 const SYS = `You write Instagram Reel captions for a Hollywood news brand. Goal: search reach + sends.
 Return STRICT JSON: {"line1":string,"body":string,"hashtags":[string],"cta":string,"firstComment":string}
 
@@ -97,7 +104,7 @@ export async function writeCaption({ facts, segment, ctaIndex = 0, engage = null
     );
     violations = lintCaption(cap, facts.entities);
     if (!violations.length) {
-      cap.full = [cap.line1, "", cap.body, "", cap.cta, "", AI_NOTE, "", cap.hashtags.join(" ")].join("\n").trim();
+      cap.full = assembleFull(cap);
       return { caption: cap, attempts: attempt + 1 };
     }
   }

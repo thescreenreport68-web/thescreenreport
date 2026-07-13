@@ -31,7 +31,7 @@ import { enrich } from "./agents/enrich.mjs";
 import { sensitiveGate } from "./agents/sensitive.mjs";
 import { writeScript } from "./agents/script.mjs";
 import { pronounce } from "./agents/pronounce.mjs";
-import { writeCaption } from "./agents/caption.mjs";
+import { writeCaption, assembleFull } from "./agents/caption.mjs";
 import { pickGoal, ASK_FAMILIES } from "./agents/engage.mjs";
 import { buildBeats } from "./agents/scenes.mjs";
 import { synthVoice, kokoroFallback, judgeTake, gapStats, scoreTake, passesFloor } from "./agents/voice.mjs";
@@ -170,7 +170,7 @@ async function processJob(article, { skipStages = new Set() } = {}) {
     job.caption = r.result.caption;
     if (job.engage?.cta) job.caption.cta = job.engage.cta;
     if (job.engage?.firstComment) job.caption.firstComment = job.engage.firstComment;
-    job.caption.full = [job.caption.line1, "", job.caption.body, "", job.caption.cta, "", job.caption.hashtags.join(" ")].join("\n").trim();
+    job.caption.full = assembleFull(job.caption); // shared assembler — keeps the AI-assisted disclosure
     stageDone(job, "caption");
   }
   // 7 PRONOUNCE
