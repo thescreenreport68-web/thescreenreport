@@ -1,0 +1,77 @@
+{
+ "runId": "run-2026-07-13T14-31-21",
+ "mode": "live",
+ "startedAt": "2026-07-13T14:31:21.471Z",
+ "films": 4,
+ "published": [
+  {
+   "tag": "voicemails-for-isabelle-netflix-top10×NETFLIX-TOP10",
+   "slug": "zoey-deutch-s-voicemails-for-isabelle-tops-netflix-with-61-million-hours-in",
+   "path": "/home/runner/work/thescreenreport/thescreenreport/content/articles/zoey-deutch-s-voicemails-for-isabelle-tops-netflix-with-61-million-hours-in.md",
+   "score": 78,
+   "acceptReason": "terminal-accept: score 78 >= 68 (1 un-locatable soft flag left)"
+  }
+ ],
+ "held": [
+  {
+   "tag": "obsession-bo-opening×BO-OPENING",
+   "reason": "seo-faq: fewer than 2 real FAQs",
+   "score": 75
+  },
+  {
+   "tag": "toy-story-5-bo-opening×BO-OPENING",
+   "reason": "seo-faq: fewer than 2 real FAQs",
+   "score": 65
+  }
+ ],
+ "rejected": [],
+ "skipped": [],
+ "blocked": [],
+ "finishedAt": "2026-07-13T14:39:39.099Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 2,
+    "errors": 2,
+    "in": 0,
+    "out": 0,
+    "usd": 0,
+    "ms": 0
+   },
+   "gatherer": {
+    "calls": 3,
+    "errors": 0,
+    "in": 10882,
+    "out": 1069,
+    "usd": 0.00152,
+    "ms": 5199
+   },
+   "synthesizer": {
+    "calls": 3,
+    "errors": 0,
+    "in": 2416,
+    "out": 1979,
+    "usd": 0.00057,
+    "ms": 31352
+   },
+   "writer": {
+    "calls": 9,
+    "errors": 0,
+    "in": 29631,
+    "out": 10064,
+    "usd": 0.02795,
+    "ms": 169995
+   },
+   "qa": {
+    "calls": 38,
+    "errors": 0,
+    "in": 113297,
+    "out": 15435,
+    "usd": 0.07258,
+    "ms": 131360
+   }
+  },
+  "totalUsd": 0.10262
+ },
+ "openrouterTotalUsd": 0.09931
+}
