@@ -28,23 +28,26 @@ Netflix rank / hours + platform + why it's blowing up. Use relative timing, neve
 };
 
 const SYS = `You are a staff box-office reporter for a major entertainment outlet (Variety / Deadline / THR / TMZ).
-Write ONE complete, engaging, scannable article a reader actually finishes — and write the WHOLE story, in two parts:
+RE-REPORT the story from the material you're given — same facts, better words — as ONE complete, engaging article a
+reader actually finishes, in two parts:
 
-  PART 1 — THE MOVIE: what it is, who DIRECTED it, the CAST, how people are talking about it (the buzz /
-  reception), and whether it's shaping up as a hit or a disappointment.
+  PART 1 — THE MOVIE: what it is (the premise + genre), who DIRECTED it, the CAST and the characters they play, and
+  how it's being received (the buzz / reception) — is it shaping up as a hit or a disappointment.
   PART 2 — THE BOX OFFICE (or, for streaming, THE VIEWERSHIP): the money/audience story — the opening or current
-  gross, how it's trending (up or down, the % move, holding or fading), the worldwide total, the budget-vs-gross
-  profit read (for streaming: the hours viewed / rank + platform).
+  gross, how it's trending (the % move, holding or fading), the worldwide total, the budget-vs-gross profit read
+  (for streaming: the hours viewed / rank + platform).
 
-Open with a hook (the stars + the number), then develop BOTH parts into full paragraphs. This is a real article,
-not a caption — hit the WORD BUDGET below by developing each real fact into a full thought (what a number is,
-what it MEANS, who's in it and who they play, why audiences showed up).
+Open with a hook (the stars + the number), then DEVELOP each real fact into a full thought: what a number MEANS,
+who is in the cast and the characters they play, what the premise is, how the gross compares to the budget, why
+audiences did or didn't show up. You are given abundant real material below (the source reporting + the TMDB
+context + the verified figures) — re-report it fully. This is a real article, not a caption.
 
-ACCURACY — the one rule: use ONLY the facts given to you below (the VERIFIED FIGURES + the CONTEXT: cast,
-director, reception, worldwide, budget). If a fact isn't provided, don't state it — leave it out. Never invent or
-round a number, a name, a record, a comparison, or a "now streaming" platform. Automatic guards remove anything
-unsupported, so write with the plain authority of a byline and simply stay on the facts you're given — no hedging,
-no "analysts say", no AI voice, no commenting on your own accuracy.
+ACCURACY — the one rule: every fact must come from the MATERIAL below. Re-word freely, but never invent or change a
+number, a name, a character, a record, a comparison, or a "now streaming" platform, and never add a fact the
+material doesn't contain. The SOURCE REPORTING may mention OTHER films (weekend roundups do) — use it only for THIS
+film, and every NUMBER you state must appear in the VERIFIED FIGURES or the TMDB context. Automatic guards remove
+anything unsupported, so write with the plain authority of a byline — no hedging, no "analysts say", no AI voice,
+no commenting on your own accuracy.
 
 STYLE: strong hook, short human paragraphs, a clear why-up/why-down, at most ${SEO.maxQuestionH2s} question-style
 subheadings and they must be STORY-SPECIFIC (never "What's next?"-type filler), one natural use of the SEO keyword.
@@ -73,24 +76,51 @@ export async function run(job, { corrections = null, previousArticle = null, cha
 "keyTakeaways":["3-4 items"],"body":"markdown with ## H2s","faq":[{"q":"","a":"40-60 word answer"},{"q":"2-3 REAL reader questions","a":""}],
 "about":[{"name":"","type":"Movie|Person|Organization"}],"tags":["4-8"],"imageQuery":"image search phrase for the film/star"}`;
 
+  // THE FIX FOR SHORT ARTICLES: feed the writer the raw multi-outlet source prose the gatherer already
+  // captured (job.bundle.sources[].text) — the same rich material the news lane hands its writer — instead
+  // of only a 800-char distilled narrative. With real material to re-report, a cheap model reaches full
+  // length faithfully; without it, it correctly wrote ~150 words. (plan: mirror generate.mjs's grounding.)
+  // Redact $ money figures from the source prose. Weekend roundups are full of OTHER films' numbers, and a
+  // cheap writer will lift them — then the fidelity wall cuts every unsupported figure and the article shrinks
+  // back under the floor (the exact failure we saw: 8-12 cuts/draft). With money masked, the writer takes the
+  // MOVIE + its RECEPTION from the prose and every NUMBER from the VERIFIED FIGURES block only.
+  const redactMoney = (t) => String(t)
+    .replace(/\$\s?\d[\d.,]*\s*(billion|million|thousand|[mbk])?\b/gi, "[$ figure]")
+    .replace(/\b\d[\d.,]*\s*(billion|million)\b/gi, "[figure]");
+  const sourceProse = redactMoney((job.bundle?.sources || [])
+    .map((s) => `[${s.owner || s.domain || "source"}]\n${(s.text || "").trim().slice(0, 2200)}`)
+    .filter((t) => t.replace(/^\[.*\]\n/, "").trim().length > 40)
+    .join("\n\n---\n\n").slice(0, 6000));
+  // Grounding-matched WORD BUDGET (news lane's technique): a target sized to how much real material exists,
+  // never a hard floor that forces padding (padding = the fabrication this lane exists to prevent).
+  const solidMaterial = sourceProse.length > 400 || (job.film?.overview || "").length > 100 || (job.boxData?.castRoles?.length || 0) >= 3;
+  const [budgetLo, budgetHi] = solidMaterial ? [240, 330] : [180, 240];
+
   const user = `Write the article.
 
 FORM: ${job.angle.form} — ${form.label}
 ${FORM_GUIDE[job.angle.form]}
 
+STRUCTURE — develop EACH of these into full paragraph(s) (this is what makes it a real article, not a stub):
+1) LEAD: the hook — the star(s) + the headline number, in one or two punchy sentences.
+2) THE MOVIE: what it is (premise + genre + runtime), the director, and the CAST with the characters they play.
+3) THE RECEPTION: how it's landing with audiences/critics (from the source reporting) — hit or miss.
+4) THE MONEY: the opening/current gross, the % move (holding or fading), the worldwide total, budget-vs-gross.
+5) A closing line on what the number means for the film.
+
 THE BRIEF (your editor's engagement distillation — follow it):
 ${JSON.stringify(job.brief, null, 1)}
 
-PART 1 MATERIAL — the movie (write Part 1 from this + the cast/director in the CONTEXT below):
-${[job.film?.overview ? `What it is: ${job.film.overview}` : "", g.narrative ? `How it's being received / the story the trades tell: ${g.narrative}` : ""].filter(Boolean).join("\n") || "(develop Part 1 from the cast, director, and the brief's hook)"}
-
-PART 2 — VERIFIED FIGURES (the ONLY numbers that exist — copy exactly, invent nothing):
-${verifiedFigures || "(no explicit trade figures — use ONLY the TMDB context below; do not state a number not shown there)"}
+SOURCE REPORTING — the trade coverage for THIS film's story + reception, to RE-REPORT in your own words (same facts, better words; never copy a sentence verbatim). Money figures are masked as [$ figure] on purpose — take the MOVIE and its RECEPTION from here, but EVERY number in your article must come from the VERIFIED FIGURES block below, never from this prose:
+${sourceProse || "(no extended source prose — develop from the TMDB context + the brief + the verified figures below)"}
 
 ${boxDataBlock(job.boxData)}
 ${form.streaming ? "\n" + netflixBlock({ title: job.film.title, rank: g.netflixRank, hours: g.hoursViewed, weeksInTop10: g.weeksInTop10 }, { week: g.netflixWeek }) : ""}
 
-WORD BUDGET: at least 340 words (target ${lo}-${hi}). This is a HARD floor — a draft under 340 words is REJECTED. Develop BOTH parts in full: the movie (what it is + director + the FULL cast + the buzz + hit-or-miss) and the money story (each figure, what it means, the trend, the profit read) — keep writing until you are well past 340. Never invent to reach length; you have enough real facts. SEO keyword (use once, naturally): ${job.brief.seoKeyword}
+VERIFIED FIGURES (the ONLY numbers that exist — copy exactly, invent nothing):
+${verifiedFigures || "(no explicit trade figures — use ONLY the TMDB context above; do not state a number not shown there)"}
+
+WORD BUDGET: aim for ${budgetLo}-${budgetHi} words — the natural length of a real box-office story told from this much material. This is a TARGET, not a padding quota: develop every real fact above (what each number means, who the cast play, the premise, the profit math) into a full thought and you will land here. NEVER invent a fact to reach length — a faithful, fully-developed article is the goal. SEO keyword (use once, naturally): ${job.brief.seoKeyword}
 ${corrections ? `\n⚠⚠ MANDATORY CORRECTIONS — fix ONLY these, change nothing else:\n${corrections}` : ""}
 
 Return JSON with EXACTLY these fields: ${schema}`;
@@ -101,19 +131,19 @@ Return JSON with EXACTLY these fields: ${schema}`;
     return job;
   }
 
-  // Affordable writers vary a LOT in length run-to-run (same input → 94-290 words). Rather than fight that,
-  // EXPLOIT it: generate a few drafts and KEEP THE LONGEST complete one — this reliably lands a full-length
-  // draft (≥ the owner's minimum) without a premium model. Stop early once a draft clears the bar.
+  // Rich material in hand, generate up to 2 drafts and keep the most fully-developed one. The retry NUDGE
+  // asks the model to develop the material it left on the table (faithful) — it never asks it to pad to a
+  // number (padding = the fabrication this lane exists to avoid). Stop early once a complete draft clears
+  // the grounding-matched budget.
   const wc = (a) => (a?.body || "").split(/\s+/).filter(Boolean).length;
-  let best = null, bestWords = -1;
-  for (let attempt = 0; attempt < 3; attempt++) {
-    const suffix = attempt ? `\n\n⚠ Your previous draft was only ${bestWords} words — that is TOO SHORT. Write a LONGER, fuller article (develop the movie AND the money story in more depth, using the facts above). Return the FULL JSON.` : "";
-    const { data } = await agentChat("writer", { system: SYS, user: user + suffix }, chatImpl ? { chatImpl } : {});
+  const complete = (d) => !!d?.body && (d?.keyTakeaways || []).length >= 3 && (d?.faq || []).length >= 2;
+  let best = null;
+  for (let attempt = 0; attempt < 2; attempt++) {
+    const nudge = attempt ? `\n\n⚠ Your previous draft left real material undeveloped — you have the full cast and the characters they play, the premise, the reception, and what each number means in the material above. Develop those into full paragraphs (same facts, better words). Do NOT invent anything; use only the material given.` : "";
+    const { data } = await agentChat("writer", { system: SYS, user: user + nudge }, chatImpl ? { chatImpl } : {});
     if (!data?.body) continue;
-    const words = wc(data);
-    const complete = (data.keyTakeaways || []).length >= 3 && (data.faq || []).length >= 2;
-    if ((complete && words > bestWords) || !best) { best = data; bestWords = words; }
-    if (best && bestWords >= Math.min(lo, 190) && (best.keyTakeaways || []).length >= 3 && (best.faq || []).length >= 2) break;
+    if (!best || (complete(data) && !complete(best)) || (complete(data) === complete(best) && wc(data) > wc(best))) best = data;
+    if (complete(best) && wc(best) >= budgetLo) break;
   }
   job.article = best;
   return job;

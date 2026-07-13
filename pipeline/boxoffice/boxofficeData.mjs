@@ -56,7 +56,14 @@ export async function run(job, { boxOfficeImpl = getBoxOffice, factsImpl = getTi
     providers,
     whereToWatch,
     cast: castTrusted ? (facts?.cast || []).map((c) => c.name).filter(Boolean).slice(0, 8) : [],
+    // castRoles keeps the {name, character} pairs TMDB already returned (boxofficeData used to throw the
+    // character away). "Actor as Character" is rich, faithful material the writer develops into a full
+    // cast paragraph — the single biggest source of the length the writer was starved of.
+    castRoles: castTrusted ? (facts?.cast || []).filter((c) => c?.name).slice(0, 8) : [],
     director: castTrusted ? (facts?.director || "") : "",
+    genres: Array.isArray(facts?.genres) ? facts.genres.filter(Boolean).slice(0, 4) : [],
+    runtime: facts?.runtime || null,
+    overview: facts?.overview || "",
     status: facts?.status || "",
     isOTT: !!facts?.isOTT,
     castTrusted,
@@ -65,17 +72,22 @@ export async function run(job, { boxOfficeImpl = getBoxOffice, factsImpl = getTi
   return job;
 }
 
-// A compact plain-text grounding block for the writer/synthesizer (never invent beyond it).
+// A plain-text grounding block for the writer/synthesizer: REAL, verified material to DEVELOP the article
+// from (cast+characters, premise, genre, runtime, the money) — never invent beyond it.
 export function boxDataBlock(b) {
   if (!b) return "";
-  const L = [`TMDB VERIFIED CONTEXT for ${b.title}${b.year ? ` (${b.year})` : ""} — use these EXACT figures; NEVER invent a number, split, or record:`];
+  const L = [`TMDB VERIFIED CONTEXT for ${b.title}${b.year ? ` (${b.year})` : ""} — real material to DEVELOP into full paragraphs; use these EXACT figures and NEVER invent a number, split, name, character, or record:`];
+  if (b.overview) L.push(`Premise (develop this into the "what it is"): ${b.overview}`);
+  if (b.genres?.length) L.push(`Genre: ${b.genres.join(", ")}`);
+  if (b.runtime) L.push(`Runtime: ${b.runtime} minutes`);
+  if (b.director) L.push(`Director: ${b.director}`);
+  if (b.castRoles?.length) L.push(`Cast — develop who each plays: ${b.castRoles.map((c) => c.character ? `${c.name} as ${c.character}` : c.name).join("; ")}`);
+  else if (b.cast?.length) L.push(`Top cast: ${b.cast.join(", ")}`);
   if (b.worldwide) L.push(`Worldwide box office (lifetime, TMDB): ${b.worldwide}`);
   if (b.budget) L.push(`Production budget (before marketing): ${b.budget}`);
   if (b.releaseDate) L.push(`US release date: ${b.releaseDate}`);
-  if (b.cast.length) L.push(`Top cast: ${b.cast.join(", ")}`);
-  if (b.director) L.push(`Director: ${b.director}`);
-  const stream = b.providers.stream?.length ? b.providers.stream.join(", ") : null;
+  const stream = b.providers?.stream?.length ? b.providers.stream.join(", ") : null;
   if (stream) L.push(`CURRENTLY STREAMING (US, TMDB/JustWatch — the ONLY correct platform): ${stream}`);
-  else if (b.providers.rent?.length) L.push(`Available to rent/buy (US): ${b.providers.rent.slice(0, 4).join(", ")}`);
+  else if (b.providers?.rent?.length) L.push(`Available to rent/buy (US): ${b.providers.rent.slice(0, 4).join(", ")}`);
   return L.join("\n");
 }

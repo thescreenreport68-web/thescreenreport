@@ -53,12 +53,14 @@ export function trendCuts(body) {
 }
 
 // FABRICATION CHECK appended to the judge — it gets the GROUNDED FACTS and returns an "ungrounded" list.
-const GROUNDING_RULE = ` \nFABRICATION CHECK (critical): you are also given GROUNDED FACTS. Add an "ungrounded" array to your JSON
-listing EVERY specific claim in the article NOT supported by those facts — an invented plot/premise detail,
-a SETTING or LOCATION, any NAMED person not in the cast list, a comparison to another film/filmmaker, an
-audience-reaction claim ("moved to tears", "everyone's talking"), a TREND/rise/drop/decline not backed by the
-numbers given, or unattributed analysis/opinion ("analysts say", "questions are being raised"). Copy the exact
-offending phrase. Empty array if the article invents nothing. This is the accuracy backbone — be thorough.`;
+const GROUNDING_RULE = ` \nFABRICATION CHECK (critical): the GROUNDED FACTS above — the cast list, the premise/genre, the SOURCE REPORTING
+prose, and the reported figures — are everything the article may draw on. Add an "ungrounded" array listing only
+claims that are CONTRADICTED BY or ABSENT FROM all of that material: an invented plot/premise detail, a SETTING or
+NAMED person that appears NOWHERE in the material, a comparison or audience-reaction the material doesn't support,
+a TREND/rise/drop not backed by the figures, or unattributed analysis ("analysts say", "questions are being raised").
+IMPORTANT: a name, a comparison, or a reception point that APPEARS IN THE SOURCE REPORTING is grounded — do NOT flag
+it. Be precise, not trigger-happy — flag genuine fabrications only. Copy the exact offending phrase; empty array if
+the article invents nothing. This is the accuracy backbone.`;
 
 // The deterministic walls — pure, no LLM. Exported so the offline suite can exercise them directly.
 export function fidelityLocks(job) {
@@ -168,11 +170,22 @@ export async function review(job, { chatImpl = null } = {}) {
     // `ungrounded` → cut. This is what stops the thin-source writer inventing plot/setting/cast/reactions.
     const g = job.gathered || {}, bd = job.boxData || {};
     const castList = [...new Set([...(bd.cast || []), ...(g.cast || [])])].filter(Boolean);
+    // The judge must see the SAME rich material the writer got — the full source reporting + TMDB
+    // premise/genre — or it flags faithfully re-reported facts as "ungrounded" and cuts them, shrinking the
+    // article back under the floor (the bug that held good drafts). A prose claim supported by this material
+    // IS grounded. NUMBERS stay strict regardless: the deterministic numberFidelity wall above still requires
+    // every figure to be in the extracted allowed set, so widening prose-grounding never loosens number safety.
+    const sourceProse = (job.bundle?.sources || []).map((s) => (s.text || "").trim()).filter((t) => t.length > 40).join("\n\n").slice(0, 6000);
     const grounded = [
       castList.length ? `Cast (the ONLY real names that may appear): ${castList.join(", ")}` : "Cast: none provided — do NOT name any actors/crew.",
       bd.director ? `Director: ${bd.director}` : "",
-      g.narrative ? `Source narrative (the only plot/context there is): ${g.narrative}` : "No plot/premise/setting provided — do NOT describe a plot or a setting/location.",
-      (g.numbers || []).length ? `Reported figures: ${(g.numbers || []).join("; ")}` : "",
+      bd.overview ? `Premise (TMDB — grounded): ${bd.overview}` : "",
+      bd.genres?.length ? `Genre (TMDB — grounded): ${bd.genres.join(", ")}` : "",
+      bd.runtime ? `Runtime: ${bd.runtime} min` : "",
+      g.narrative ? `Trade narrative: ${g.narrative}` : "",
+      sourceProse ? `SOURCE REPORTING — any prose claim SUPPORTED BY this trade coverage is GROUNDED (do NOT flag it ungrounded); flag only claims that CONTRADICT or are ABSENT from ALL material here:\n${sourceProse}` : "",
+      (!g.narrative && !sourceProse) ? "No plot/premise/setting provided — do NOT describe a plot or a setting/location." : "",
+      (g.numbers || []).length ? `Reported figures (the ONLY numbers allowed): ${(g.numbers || []).join("; ")}` : "",
       (g.platform || (bd.providers?.stream || []).length) ? `Platform: ${g.platform || (bd.providers.stream || []).join(", ")}` : "",
     ].filter(Boolean).join("\n");
     try {
