@@ -1,41 +1,208 @@
 {
-  "runId": "run-2026-07-13T11-01-10",
-  "builtAt": "2026-07-13T11:01:36.470Z",
-  "count": 8,
+  "runId": "run-2026-07-13T15-01-18",
+  "builtAt": "2026-07-13T15:02:23.605Z",
+  "count": 9,
   "topics": [
     {
-      "id": "news-the-odyssey-world-premiere-trojan-horse",
-      "slug": "how-universal-made-a-8-800-pound-trojan-horse-for-the-odyssey-world-pr",
-      "title": "How Universal Made a 8,800-Pound Trojan Horse for The Odyssey World Premiere",
+      "id": "trailer-digger-trailer-tom-cruise-alejandro-g-inarritu",
+      "slug": "digger-trailer-tom-cruise-is-unrecognizable-in-alejandro-g-i-rritu-s-a",
+      "title": "‘Digger’ Trailer: Tom Cruise Is Unrecognizable in Alejandro G. Iñárritu s Apocalyptic Comedy",
+      "contentType": "trailer",
+      "formatTag": "trailer",
+      "category": "movies",
+      "subcategory": "trailers",
+      "eventType": "trailer",
+      "sensitivity": "normal",
+      "eventSlug": "digger-trailer-tom-cruise-alejandro-g-inarritu",
+      "primaryKeyword": "digger trailer",
+      "primaryEntity": "Digger",
+      "entities": [
+        "Digger (2024 film)",
+        "Tom Cruise",
+        "Alejandro G. Iñárritu"
+      ],
+      "angle": "The first trailer for Alejandro G. Iñárritu's apocalyptic comedy 'Digger' has been released, featuring an unrecognizable Tom Cruise.",
+      "tmdbType": "movie",
+      "source": "rss:TheWrap",
+      "sources": [
+        {
+          "outlet": "TheWrap",
+          "tier": 7,
+          "url": "https://www.thewrap.com/creative-content/movies/digger-new-trailer-tom-cruise/",
+          "ageMin": 98,
+          "headline": "‘Digger’ Trailer: Tom Cruise Is Unrecognizable in Alejandro G. Iñárritu s Apocalyptic Comedy",
+          "summary": "Warner Bros. unveils a first full look at the movie, which will hit theaters in October as awards season heats up. The post ‘Digger’ Trailer: Tom Cruise Is Unrecognizable in Alejandro G. Iñárritu s Apocalyptic Comedy appeared first on TheWrap ."
+        },
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/digger-trailer-tom-cruise-1236980669/",
+          "ageMin": 116,
+          "headline": "Digger Trailer Unveils Tom Cruise s Crusty Oil Baron, A Role That Took The Actor 40 Years To Prepare",
+          "summary": "Warner Bros has just dropped the first trailer for the Tom Cruise-starring, Alejandro G. Iñárritu-directed Digger, and, well, buckle up. Ala Cruise s major studio boss Les Grossman in Tropic Thunder, the actor transforms into another kind of opposite once again: a very blunt Southern-talking, older potbelly oil baron who may have set off a massive [ ]"
+        },
+        {
+          "outlet": "IndieWire",
+          "tier": 7,
+          "url": "https://www.indiewire.com/news/trailers/digger-trailer-tom-cruise-alejandro-g-inarritu-1235204741/",
+          "ageMin": 118,
+          "headline": "Digger Trailer: Tom Cruise and Alejandro G. Iñárritu Unite for a VistaVision Comedy Epic",
+          "summary": "Cruise gave the press an early look at his wild return to audacious auteur filmmaking and promised that his collaboration with Iñárritu was worth the 26-year wait."
+        },
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/movies/movie-features/tom-cruise-digger-trailer-1236646274/",
+          "ageMin": 121,
+          "headline": "Digger Trailer: Tom Cruise Spent Days Listening to Alejandro G. Iñárritu Read Him the Script",
+          "summary": "The first clip shows an unrecognizable Cruise in the film that is set for release on Oct. 2."
+        },
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/film/news/digger-trailer-tom-cruise-alejandro-inarritu-comedy-1236654206/",
+          "ageMin": 121,
+          "headline": "Digger Trailer: Tom Cruise Transforms Into an Eccentric Billionaire Facing an Eco-Disaster in Alejandro G. Iñárritu s Absurdist Comedy",
+          "summary": "Tom Cruise had to dig deep for his latest starring role pun intended. I have never had something that could challenge me in this way, and neither has Alejandro, Cruise said about starring in Digger, the black comedy from two-time Academy Award-winning filmmaker Alejandro González Iñárritu ( Birdman, The Revenant ). Described as “a comedy of [ ]"
+        }
+      ],
+      "ageMin": 98,
+      "_cand": {
+        "key": "rss:-digger-trailer-tom-cruise-is-unrecognizable-in-alejandro-g-",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 5,
+      "verification": {
+        "tier1Count": 5,
+        "tier1Owners": 2,
+        "outletCount": 5,
+        "outlets": [
+          "TheWrap",
+          "Deadline",
+          "IndieWire",
+          "THR",
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": null,
+        "framing": "plain",
+        "status": "CONFIRMED",
+        "publishable": true
+      },
+      "priority": 120,
+      "signals": {
+        "recency": 16,
+        "corroboration": 25,
+        "status": 25,
+        "type": 15,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 15,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-vampire-lestat-episode-6-breakdown",
+      "slug": "the-vampire-lestat-stars-discuss-cathartic-episode-6-and-what-s-next",
+      "title": "The Vampire Lestat Stars Discuss Cathartic Episode 6 and What's Next",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "vampire-lestat-episode-6-breakdown",
+      "primaryKeyword": "The Vampire Lestat",
+      "primaryEntity": "The Vampire Lestat",
+      "entities": [
+        "Sam Reid",
+        "Jacob Anderson",
+        "Lestat",
+        "Louis"
+      ],
+      "angle": "Stars of AMC's 'The Vampire Lestat' break down a pivotal episode and tease future plotlines.",
+      "tmdbType": "movie",
+      "source": "rss:IndieWire",
+      "sources": [
+        {
+          "outlet": "IndieWire",
+          "tier": 7,
+          "url": "https://www.indiewire.com/features/interviews/the-vampire-lestat-episode-6-spoilers-interview-1235204846/",
+          "ageMin": 1,
+          "headline": "The Vampire Lestat Stars Break Down a Cathartic, Climactic Episode 6 — and What s Next for Lestat and Louis",
+          "summary": "Sam Reid and Jacob Anderson tell IndieWire about the cathartic reunion in Episode 6 of the lusty Anne Rice AMC series. Spoilers ahead!"
+        }
+      ],
+      "ageMin": 1,
+      "_cand": {
+        "key": "rss:the-vampire-lestat-stars-break-down-a-cathartic-climactic-ep",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "IndieWire"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "IndieWire",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 71,
+      "signals": {
+        "recency": 30,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 6,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-andy-serkis-animal-farm-hunt-for-gollum-ai",
+      "slug": "andy-serkis-on-u-s-outrage-over-his-animal-farm-movie-ai-use-in-hunt-f",
+      "title": "Andy Serkis on U.S. ‘Outrage’ Over His ‘Animal Farm’ Movie, AI Use in ‘Hunt for Gollum’ and Wanting Oscars to Recognize Motion Capture: ‘It’s Been a Long Time Coming’",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "the-odyssey-world-premiere-trojan-horse",
-      "primaryKeyword": "the odyssey premiere stunt",
-      "primaryEntity": "The Odyssey",
+      "eventSlug": "andy-serkis-animal-farm-hunt-for-gollum-ai",
+      "primaryKeyword": "Andy Serkis Hunt for Gollum",
+      "primaryEntity": "Andy Serkis",
       "entities": [
-        "The Odyssey (film)",
-        "Universal Pictures"
+        "The Lord of the Rings: The Hunt for Gollum",
+        "Animal Farm"
       ],
-      "angle": "Universal's elaborate Trojan Horse stunt for The Odyssey premiere",
+      "angle": "Andy Serkis discusses the US 'outrage' over his 'Animal Farm' movie, AI use in 'The Hunt for Gollum,' and the push for Oscars to recognize motion capture.",
       "tmdbType": "movie",
       "source": "rss:Variety",
       "sources": [
         {
           "outlet": "Variety",
           "tier": 7,
-          "url": "https://variety.com/2026/film/global/odyssey-world-premiere-giant-trojan-horse-8800lb-1236806583/",
-          "ageMin": 118,
-          "headline": "How Universal Made a 8,800-Pound Trojan Horse for The Odyssey World Premiere",
-          "summary": "With almost the full cast in attendance, last week s The Odyssey world premiere in London offered more star power than any other event seen in Leicester Square this year. And yet on the night, the likes of Christopher Nolan, Matt Damon, Anne Hathaway, Zendaya, Tom Holland, Robert Pattinson, Charlize Theron and many others were somewhat [ ]"
+          "url": "https://variety.com/2026/film/global/andy-serkis-animal-farm-ai-hunt-for-gollum-motion-capture-1236809573/",
+          "ageMin": 30,
+          "headline": "Andy Serkis on U.S. ‘Outrage’ Over His ‘Animal Farm’ Movie, AI Use in ‘Hunt for Gollum’ and Wanting Oscars to Recognize Motion Capture: ‘It’s Been a Long Time Coming’",
+          "summary": "Andy Serkis is currently in New Zealand taking on orcs, wizards, elves and boney-fingered ring fanciers in one of the highest profile films now in production: The Lord of the Rings: The Hunt for Gollum. Serkis grand return to the franchise — due for release by Warner Bros. at the end of 2027, just shy of [ ]"
         }
       ],
-      "ageMin": 118,
+      "ageMin": 30,
       "_cand": {
-        "key": "rss:how-universal-made-a-8-800-pound-trojan-horse-for-the-odysse",
+        "key": "rss:andy-serkis-on-u-s-outrage-over-his-animal-farm-movie-ai-use",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -54,9 +221,9 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 63,
+      "priority": 71,
       "signals": {
-        "recency": 16,
+        "recency": 24,
         "corroboration": 12,
         "status": 18,
         "type": 5,
@@ -68,9 +235,203 @@
       }
     },
     {
-      "id": "music-news-sam-fender-olivia-dean-rein-me-in-uk-chart-record",
-      "slug": "sam-fender-and-olivia-dean-s-rein-me-in-becomes-longest-running-no-1-s",
-      "title": "Sam Fender and Olivia Dean's 'Rein Me In' Becomes Longest-Running No. 1 Single of the Decade in U.K.",
+      "id": "music-news-bts-munich-louder-than-bombs-performance",
+      "slug": "bts-thrill-munich-fans-with-debut-louder-than-bombs-performance",
+      "title": "BTS Thrill Munich Fans With Debut Louder Than Bombs Performance",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "bts-munich-louder-than-bombs-performance",
+      "primaryKeyword": "BTS",
+      "primaryEntity": "BTS",
+      "entities": [
+        "Map of the Soul: 7",
+        "ARMY"
+      ],
+      "angle": "BTS performed their song 'Louder Than Bombs' live for the first time in Munich.",
+      "tmdbType": "movie",
+      "source": "rss:Billboard",
+      "sources": [
+        {
+          "outlet": "Billboard",
+          "tier": 7,
+          "url": "https://www.billboard.com/music/pop/bts-munich-live-debut-louder-than-bombs-1236292800/",
+          "ageMin": 10,
+          "headline": "BTS Thrill Munich Fans With Debut Louder Than Bombs Performance",
+          "summary": "ARMY has been waiting since 2020 to hear the Map of the Soul: 7 track before Sunday night's (July 12) premiere at Allianz Arena in Germany."
+        }
+      ],
+      "ageMin": 10,
+      "_cand": {
+        "key": "rss:bts-thrill-munich-fans-with-debut-louder-than-bombs-performa",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "breakoutVelocity": 0,
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Billboard"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Billboard",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 65,
+      "signals": {
+        "recency": 30,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-josh-grisetti-death",
+      "slug": "josh-grisetti-marvelous-mrs-maisel-actor-and-broadway-star-dies-at-44",
+      "title": "Josh Grisetti, Marvelous Mrs. Maisel Actor and Broadway Star, Dies at 44",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "death",
+      "sensitivity": "high",
+      "eventSlug": "josh-grisetti-death",
+      "primaryKeyword": "josh grisetti",
+      "primaryEntity": "Josh Grisetti",
+      "entities": [
+        "The Marvelous Mrs. Maisel",
+        "Something Rotten"
+      ],
+      "angle": "Broadway actor and 'The Marvelous Mrs. Maisel' alum Josh Grisetti has died at 44.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/tv/obituaries-people-news/josh-grisetti-dead-marvelous-mrs-maisel-broadway-1236809592/",
+          "ageMin": 85,
+          "headline": "Josh Grisetti, Marvelous Mrs. Maisel Actor and Broadway Star, Dies at 44",
+          "summary": "Josh Grisetti, who appeared in the Broadway musical Something Rotten and Prime Video s The Marvelous Mrs. Maisel, died July 10. He was 44. Broadway actor Rob McClure, who starred in Something Rotten with Grisetti, announced his friend s death on Instagram Sunday night. It is with a shattered heart that I share that the brilliant Josh [ ]"
+        }
+      ],
+      "ageMin": 85,
+      "_cand": {
+        "key": "rss:josh-grisetti-marvelous-mrs-maisel-actor-and-broadway-star-d",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 66,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 6,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "awards-grammys-emmy-nomination-race",
+      "slug": "the-grammys-have-never-won-a-top-program-emmy-could-this-be-the-year",
+      "title": "The Grammys Have Never Won a Top Program Emmy: Could This Be the Year?",
+      "contentType": "awards",
+      "formatTag": "awards",
+      "category": "awards",
+      "subcategory": "winners",
+      "eventType": "award",
+      "sensitivity": "normal",
+      "eventSlug": "grammys-emmy-nomination-race",
+      "primaryKeyword": "grammys",
+      "primaryEntity": "The Grammys",
+      "entities": [
+        "Bad Bunny",
+        "Super Bowl"
+      ],
+      "angle": "The Grammy telecast is in contention for a Top Program Emmy, facing competition from the Super Bowl halftime show.",
+      "tmdbType": "movie",
+      "source": "rss:Billboard",
+      "sources": [
+        {
+          "outlet": "Billboard",
+          "tier": 7,
+          "url": "https://www.billboard.com/lists/grammy-telecasts-nominated-for-top-primetime-emmy-full-list/",
+          "ageMin": 61,
+          "headline": "The Grammys Have Never Won a Top Program Emmy: Could This Be the Year?",
+          "summary": "The Grammy telecast where Bad Bunny made history with his album of the year win is competing with the superstar's Super Bowl halftime show."
+        }
+      ],
+      "ageMin": 61,
+      "_cand": {
+        "key": "rss:the-grammys-have-never-won-a-top-program-emmy-could-this-be-",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Billboard"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Billboard",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 60,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "music-news-bts-arirang-album-new-radio-single",
+      "slug": "this-is-the-next-radio-single-from-bts-arirang-album",
+      "title": "This Is the Next Radio Single From BTS ARIRANG Album",
       "contentType": "music-news",
       "formatTag": "music-news",
       "category": "music",
@@ -78,31 +439,32 @@
       "eventType": "announcement",
       "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "sam-fender-olivia-dean-rein-me-in-uk-chart-record",
-      "primaryKeyword": "Sam Fender Olivia Dean",
-      "primaryEntity": "Sam Fender",
+      "eventSlug": "bts-arirang-album-new-radio-single",
+      "primaryKeyword": "BTS new single",
+      "primaryEntity": "BTS",
       "entities": [
-        "Olivia Dean"
+        "ARIRANG"
       ],
-      "angle": "Sam Fender and Olivia Dean's 'Rein Me In' achieves record-breaking chart success in the UK.",
+      "angle": "BTS announces the next radio single from their 'ARIRANG' album.",
       "tmdbType": "movie",
       "source": "rss:Billboard",
       "sources": [
         {
           "outlet": "Billboard",
           "tier": 7,
-          "url": "https://www.billboard.com/lists/sam-fender-olivia-dean-rein-mein-uk-chart-records/",
-          "ageMin": 51,
-          "headline": "How Sam Fender Olivia Dean’s ‘Rein Me In’ Became a Record-Breaking U.K. Chart Success",
-          "summary": "The song is now the U.K.'s longest-running No. 1 single of the decade."
+          "url": "https://www.billboard.com/music/music-news/bts-arirang-second-single-normal-1236292946/",
+          "ageMin": 19,
+          "headline": "This Is the Next Radio Single From BTS ARIRANG Album",
+          "summary": "The new promoted track follows the Hot 100 No. 1 “SWIM.”"
         }
       ],
-      "ageMin": 51,
+      "ageMin": 19,
       "_cand": {
-        "key": "rss:how-sam-fender-olivia-dean-s-rein-me-in-became-a-record-brea",
+        "key": "rss:this-is-the-next-radio-single-from-bts-arirang-album",
         "popularity": 0,
         "kind": "rss-news"
       },
+      "breakoutVelocity": 0,
       "corroborationCount": 1,
       "verification": {
         "tier1Count": 1,
@@ -132,9 +494,9 @@
       }
     },
     {
-      "id": "music-news-jay-z-yankee-stadium-residency-finale",
-      "slug": "jay-z-s-yankee-stadium-residency-ends-with-star-studded-finale-featuri",
-      "title": "Jay-Z's Yankee Stadium Residency Ends with Star-Studded Finale Featuring Beyoncé, Rihanna, Usher",
+      "id": "music-news-mastodon-marrow-deep-album-snakes-for-dinner-single",
+      "slug": "mastodon-previews-new-album-marrow-deep-with-single-snakes-for-dinner",
+      "title": "Mastodon Previews New Album 'Marrow Deep' With Single 'Snakes For Dinner'",
       "contentType": "music-news",
       "formatTag": "music-news",
       "category": "music",
@@ -142,46 +504,42 @@
       "eventType": "announcement",
       "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "jay-z-yankee-stadium-residency-finale",
-      "primaryKeyword": "Jay-Z concert",
-      "primaryEntity": "JAY Z",
+      "eventSlug": "mastodon-marrow-deep-album-snakes-for-dinner-single",
+      "primaryKeyword": "Mastodon new album",
+      "primaryEntity": "Mastodon",
       "entities": [
-        "Jay-Z",
-        "Beyoncé",
-        "Rihanna",
-        "Usher"
+        "Marrow Deep"
       ],
-      "angle": "Jay-Z concludes his Yankee Stadium residency with a star-studded finale featuring Beyoncé, Rihanna, and more.",
+      "angle": "Grammy-winning rock band Mastodon announces ninth studio album 'Marrow Deep' with new single 'Snakes For Dinner'.",
       "tmdbType": "movie",
-      "source": "rss:Variety",
+      "source": "rss:Rolling Stone",
       "sources": [
         {
-          "outlet": "Variety",
+          "outlet": "Rolling Stone",
           "tier": 7,
-          "url": "https://variety.com/2026/music/news/jay-z-closes-yankee-stadium-residency-beyonce-rihanna-usher-1236809402/",
-          "ageMin": 129,
-          "headline": "Jay-Z Closes Yankee Stadium Residency With Epic Late Night Show Featuring Beyoncé, Rihanna, Usher, Teyana Taylor and More",
-          "summary": "We re going to go until like 5 a.m., so don t be scared, said Jay-Z not long after he started the third and final show of his Yankee Stadium residency on Sunday night, the concluding chapter to a weekend that paid homage to the 25th and 30th anniversaries of his seminal albums The Blueprint and Reasonable [ ]"
+          "url": "https://www.rollingstone.com/music/music-news/mastodon-snakes-for-dinner-single-marrow-deep-album-1235592538/",
+          "ageMin": 95,
+          "headline": "Mastodon Preview New Album With Rousing Single ‘Snakes For Dinner’",
+          "summary": "Grammy-winning rock band will release Marrow Deep , their ninth studio album, next month"
         }
       ],
-      "ageMin": 129,
+      "ageMin": 95,
       "_cand": {
-        "key": "rss:jay-z-closes-yankee-stadium-residency-with-epic-late-night-s",
+        "key": "rss:mastodon-preview-new-album-with-rousing-single-snakes-for-di",
         "popularity": 0,
         "kind": "rss-news"
       },
-      "breakoutVelocity": 0,
       "corroborationCount": 1,
       "verification": {
         "tier1Count": 1,
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Variety"
+          "Rolling Stone"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Variety",
+        "attribution": "Rolling Stone",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -200,39 +558,38 @@
       }
     },
     {
-      "id": "music-news-jay-z-yankee-stadium-concert-delay",
-      "slug": "jay-z-addresses-three-hour-delay-at-yankee-stadium-concert-cites-fan-s",
-      "title": "Jay-Z Addresses Three-Hour Delay at Yankee Stadium Concert, Cites Fan Safety",
+      "id": "music-news-pitbull-bst-hyde-park-bald-cap-world-record",
+      "slug": "pitbull-sets-guinness-world-record-for-largest-bald-cap-gathering-at-b",
+      "title": "Pitbull Sets Guinness World Record for Largest Bald Cap Gathering at BST Hyde Park Show",
       "contentType": "music-news",
       "formatTag": "music-news",
       "category": "music",
       "subcategory": "news",
-      "eventType": "announcement",
+      "eventType": "other",
       "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "jay-z-yankee-stadium-concert-delay",
-      "primaryKeyword": "jay-z concert delay",
-      "primaryEntity": "JAY Z",
+      "eventSlug": "pitbull-bst-hyde-park-bald-cap-world-record",
+      "primaryKeyword": "Pitbull world record",
+      "primaryEntity": "Pitbull",
       "entities": [
-        "Jay-Z",
-        "Yankee Stadium"
+        "BST Hyde Park"
       ],
-      "angle": "Jay-Z explains the significant delay at his Yankee Stadium concert, citing safety concerns for fans.",
+      "angle": "Pitbull sets a Guinness World Record for the largest gathering of bald caps during his BST Hyde Park show.",
       "tmdbType": "movie",
-      "source": "rss:THR",
+      "source": "rss:Billboard",
       "sources": [
         {
-          "outlet": "THR",
+          "outlet": "Billboard",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/music/music-news/jay-z-addresses-three-hour-delay-yankee-stadium-concert-1236646285/",
-          "ageMin": 330,
-          "headline": "Jay-Z Addresses Three-Hour Delay at Yankee Stadium Concert, Says He Wanted to Avoid Fans Getting Trampled",
-          "summary": "\"I'm really sorry for the inconvenience, but I had to make sure everyone was OK,\" the rapper said after his show started more than three hours after its original expected start time."
+          "url": "https://www.billboard.com/music/rb-hip-hop/pitbull-guinness-world-record-largest-gathering-bald-caps-1236292781/",
+          "ageMin": 137,
+          "headline": "Pitbull Sets Guinness World Record With Largest Gathering of Bald Caps at BST Hyde Park Show: We Did It Baldies! Dale!",
+          "summary": "What began as a fun inside joke among Mr. Worldwide's biggest fans is now in the record books."
         }
       ],
-      "ageMin": 330,
+      "ageMin": 137,
       "_cand": {
-        "key": "rss:jay-z-addresses-three-hour-delay-at-yankee-stadium-concert-s",
+        "key": "rss:pitbull-sets-guinness-world-record-with-largest-gathering-of",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -243,148 +600,11 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "THR"
+          "Billboard"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 48,
-      "signals": {
-        "recency": 9,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "news-sacha-baron-cohen-ali-g-wimbledon-appearance",
-      "slug": "sacha-baron-cohen-attends-wimbledon-as-ali-g-delighting-fans",
-      "title": "Sacha Baron Cohen Attends Wimbledon as Ali G, Delighting Fans",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "sacha-baron-cohen-ali-g-wimbledon-appearance",
-      "primaryKeyword": "Sacha Baron Cohen Ali G",
-      "primaryEntity": "Sacha Baron Cohen",
-      "entities": [
-        "Ali G",
-        "Wimbledon"
-      ],
-      "angle": "Sacha Baron Cohen made a surprise appearance at Wimbledon in character as his iconic alter ego Ali G, delighting fans.",
-      "tmdbType": "movie",
-      "source": "rss:TheWrap",
-      "sources": [
-        {
-          "outlet": "TheWrap",
-          "tier": 7,
-          "url": "https://www.thewrap.com/creative-content/movies/sacha-baron-cohen-wimbledon-ali-g-new-film-report/",
-          "ageMin": 736,
-          "headline": "Sacha Baron Cohen Attends Wimbledon as Ali G After New Film Report",
-          "summary": "Fans were thrilled by a video of the actor in character at the tennis Grand Slam event in London The post Sacha Baron Cohen Attends Wimbledon as Ali G After New Film Report appeared first on TheWrap ."
-        },
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/sacha-baron-cohen-ali-g-surprise-appearance-wimbledon-1236646214/",
-          "ageMin": 771,
-          "headline": "Sacha Baron Cohen s Ali G Makes Surprise Appearance at Wimbledon",
-          "summary": "\"I iz BACK! And if u iz at dis borin wimbledore final lookin 2 get grand slammed, I iz here wif de hookup,\" the actor's alter ego wrote on social media."
-        }
-      ],
-      "ageMin": 736,
-      "_cand": {
-        "key": "rss:sacha-baron-cohen-attends-wimbledon-as-ali-g-after-new-film-",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 2,
-      "verification": {
-        "tier1Count": 2,
-        "tier1Owners": 2,
-        "outletCount": 2,
-        "outlets": [
-          "TheWrap",
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": null,
-        "framing": "plain",
-        "status": "CONFIRMED",
-        "publishable": true
-      },
-      "priority": 57,
-      "signals": {
-        "recency": 1,
-        "corroboration": 18,
-        "status": 25,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 8,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "news-tom-holland-historian-tom-holland-meet-up",
-      "slug": "tom-holland-meets-historian-tom-holland-amid-culture-war-clash-over-ch",
-      "title": "Tom Holland Meets Historian Tom Holland Amid Culture War Clash Over Christopher Nolan Film",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "tom-holland-historian-tom-holland-meet-up",
-      "primaryKeyword": "Tom Holland",
-      "primaryEntity": "Tom Holland",
-      "entities": [
-        "The Rest Is History podcast",
-        "Christopher Nolan"
-      ],
-      "angle": "Tom Holland meets historian Tom Holland as the latter faces a culture war clash related to Christopher Nolan's film.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/tom-holland-odyssey-rest-is-history-conversation-elon-musk-1236646333/",
-          "ageMin": 66,
-          "headline": "Tom Holland, Meet Tom Holland: Odyssey Star and Rest Is History Podcaster Talk Myth and Movies",
-          "summary": "The internet-breaking meet-up comes as the historian finds himself at the center of a culture-war clash with Elon Musk, who has launched an anti-\"woke\" campaign against Nolan's blockbuster."
-        }
-      ],
-      "ageMin": 66,
-      "_cand": {
-        "key": "rss:tom-holland-meet-tom-holland-odyssey-star-and-rest-is-histor",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
+        "attribution": "Billboard",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -395,136 +615,6 @@
         "corroboration": 12,
         "status": 18,
         "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "news-sacha-baron-cohen-ali-g-wimbledon",
-      "slug": "sacha-baron-cohen-revives-ali-g-at-wimbledon-tries-selling-weed-on-cen",
-      "title": "Sacha Baron Cohen Revives Ali G at Wimbledon, Tries Selling Weed on Center Court",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "sacha-baron-cohen-ali-g-wimbledon",
-      "primaryKeyword": "Sacha Baron Cohen Ali G",
-      "primaryEntity": "Sacha Baron Cohen",
-      "entities": [
-        "Ali G",
-        "Wimbledon"
-      ],
-      "angle": "Sacha Baron Cohen revives his iconic character Ali G at Wimbledon, creating a stir with a public stunt.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/film/global/sacha-baron-cohen-ali-g-wimbledon-tries-selling-weed-1236809387/",
-          "ageMin": 132,
-          "headline": "Sacha Baron Cohen Revives Ali G at Wimbledon Ahead of New Film — and Tries Selling Weed on Center Court",
-          "summary": "Ali G was among the surprise special guests at the Wimbledon men s final on Sunday — and got straight to work trying to sell drugs from his seat on centre court. While Sacha Baron Cohen s comedy creation may have been kitted out in classic whites for the occasion, his Wimbledon-themed jacket did feature a large [ ]"
-        }
-      ],
-      "ageMin": 132,
-      "_cand": {
-        "key": "rss:sacha-baron-cohen-revives-ali-g-at-wimbledon-ahead-of-new-fi",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 51,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "news-john-mulaney-wrigley-field-show",
-      "slug": "john-mulaney-makes-history-in-chicago-brings-out-david-letterman-fred-",
-      "title": "John Mulaney Makes History in Chicago, Brings Out David Letterman, Fred Armisen and Richard Kind",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "high",
-      "eventSlug": "john-mulaney-wrigley-field-show",
-      "primaryKeyword": "John Mulaney Wrigley Field",
-      "primaryEntity": "John Mulaney",
-      "entities": [
-        "Wrigley Field",
-        "David Letterman",
-        "Fred Armisen",
-        "Richard Kind"
-      ],
-      "angle": "John Mulaney makes history by selling out Wrigley Field for a comedy show, bringing out special guests.",
-      "tmdbType": "movie",
-      "source": "rss:Deadline",
-      "sources": [
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/sam-neill-jurassic-park-actor-dead-1236980409/",
-          "ageMin": 304,
-          "headline": "Sam Neill Dies: Jurassic Park Actor Was 78",
-          "summary": "Sam Neill, the New Zealand actor best known for his role in the Jurassic Park franchise, Peaky Blinders and a plethora of independent films has died in Australia, it was announced tonight. The multiple Golden Globe and Primetime Emmy nominee was 78. It is with immense sadness that the whānau of Sam Neill share the [ ]"
-        }
-      ],
-      "ageMin": 304,
-      "_cand": {
-        "key": "rss:sam-neill-dies-jurassic-park-actor-was-78",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Deadline"
-        ],
-        "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "Deadline",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 48,
-      "signals": {
-        "recency": 9,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
         "pop": 0,
         "breakout": 0,
         "big": 0,

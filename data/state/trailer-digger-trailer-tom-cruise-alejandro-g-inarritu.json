@@ -1,0 +1,79 @@
+{
+  "id": "trailer-digger-trailer-tom-cruise-alejandro-g-inarritu",
+  "slug": "digger-trailer-tom-cruise-is-unrecognizable-in-alejandro-g-i-rritu-s-a",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": null,
+      "cat": "movies/trailers",
+      "format": [
+        "a 78-word run-on sentence (>55 — split it)"
+      ],
+      "cuts": 0,
+      "broken": []
+    },
+    "attempt2": {
+      "score": null,
+      "cat": "movies/trailers",
+      "format": [
+        "body 393w < 400",
+        "a 78-word run-on sentence (>55 — split it)"
+      ],
+      "cuts": 3,
+      "broken": []
+    }
+  },
+  "editorial": {
+    "status": "official",
+    "entity": "Digger",
+    "work": {
+      "title": "Digger",
+      "year": null,
+      "medium": "movie"
+    },
+    "outlet": "thewrap.com"
+  },
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
+    "deterministic": {
+      "words": 393,
+      "h2s": 3,
+      "h2Questions": 3,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 4,
+      "ktCount": 5,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 78,
+      "avgSentence": 20,
+      "flesch": 45,
+      "bannedTells": 1,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": [
+        "body 393w < 400",
+        "a 78-word run-on sentence (>55 — split it)"
+      ]
+    },
+    "hardBlocks": []
+  },
+  "score": null,
+  "category": "movies",
+  "subcategory": "trailers",
+  "audit": {
+    "ok": false,
+    "internalLinks": 2,
+    "failed": [
+      "body ≥ 400w",
+      "3+ FAQ",
+      "keyword in title"
+    ]
+  },
+  "ms": 166237
+}
