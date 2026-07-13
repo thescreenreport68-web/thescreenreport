@@ -1,0 +1,66 @@
+{
+ "runId": "run-2026-07-13T12-48-54",
+ "mode": "live",
+ "startedAt": "2026-07-13T12:48:54.346Z",
+ "films": 4,
+ "published": [
+  {
+   "tag": "michael-bo-opening×BO-OPENING",
+   "slug": "michael-jackson-s-michael-crosses-1-billion-becomes-highest-grossing-biopic-ever",
+   "path": "/home/runner/work/thescreenreport/thescreenreport/content/articles/michael-jackson-s-michael-crosses-1-billion-becomes-highest-grossing-biopic-ever.md",
+   "score": 85,
+   "acceptReason": "terminal-accept: score 85 >= 68 (1 un-locatable soft flag left)"
+  }
+ ],
+ "held": [],
+ "rejected": [],
+ "skipped": [],
+ "blocked": [],
+ "finishedAt": "2026-07-13T12:51:44.176Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 2450,
+    "out": 380,
+    "usd": 0.00014,
+    "ms": 1527
+   },
+   "gatherer": {
+    "calls": 1,
+    "errors": 0,
+    "in": 4367,
+    "out": 482,
+    "usd": 0.00063,
+    "ms": 2127
+   },
+   "synthesizer": {
+    "calls": 1,
+    "errors": 0,
+    "in": 1027,
+    "out": 331,
+    "usd": 0.00015,
+    "ms": 15497
+   },
+   "writer": {
+    "calls": 3,
+    "errors": 0,
+    "in": 10682,
+    "out": 3067,
+    "usd": 0.00918,
+    "ms": 46752
+   },
+   "qa": {
+    "calls": 13,
+    "errors": 0,
+    "in": 43588,
+    "out": 4436,
+    "usd": 0.02417,
+    "ms": 33796
+   }
+  },
+  "totalUsd": 0.03427
+ },
+ "openrouterTotalUsd": 0.0329
+}
