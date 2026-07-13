@@ -43,5 +43,10 @@
     "stage": "sensitive",
     "reason": "Unverified death/suicide/overdose: The prompt describes a posthumous airing of a secret final role and an 'In Memoriam' card following the actor's death, indicating the actor (Rob Reiner) is deceased. This falls under the block category due to the unverified nature of the death details and the sensitive context.",
     "at": "2026-07-13T04:18:10.462Z"
+  },
+  "dolly-parton-makes-surprise-career-announcement-after-delivering-bad-h": {
+    "stage": "script",
+    "reason": "script failed lint after 3 attempts: ending-ask(final sentence must be the comments ask (like \"Let us know i), ending-question(the sentence before the ask must be the audience question (e)",
+    "at": "2026-07-13T04:57:40.965Z"
   }
 }
