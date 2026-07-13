@@ -35,9 +35,13 @@ const VIDEO_CATEGORIES = new Set(["movies", "tv", "celebrity"]);
 const MAX_PER_CATEGORY = 2; // owner rule 2026-07-08: newest stories, at most 2 of the same category
 const FRESH_DAYS = 7; // outer bound; newest-first sort means we almost always pick today's/yesterday's
 const STAGGER = { facebook: 0, instagram: 4, youtube: 8, pinterest: 12 };
-// Instagram is OFF for this automation (owner 2026-07-10: a separate dedicated IG agent now owns Instagram).
-// Keep FB + YouTube + Pinterest. Flip to true to re-enable IG here.
+// Per-platform posting switches. Owner 2026-07-12: ONLY PINTEREST stays on — Instagram (a separate
+// dedicated IG agent owns it now), Facebook, and YouTube are all OFF. Flip a flag to true to re-enable
+// that platform here. Videos are still generated + hosted; they just only post to Pinterest.
+const POST_FACEBOOK = false;
 const POST_INSTAGRAM = false;
+const POST_YOUTUBE = false;
+const POST_PINTEREST = true;
 
 // ── America/Los_Angeles wall-clock → exact UTC Date (handles PST/PDT automatically)
 function laOffsetMin(dateUTC) {
@@ -185,12 +189,15 @@ async function postOne({ category, slug, base, draft, dry, immediate }) {
   const host = await hostVideo(mp4, slug);
   const thumb = await hostThumb(mp4, slug); // cover image (Pinterest requires it; nicer everywhere)
   const results = {};
-  // sequential so the media URL is warm and we never burst
-  results.facebook = await postZernioRetry({ platform: "facebook", videoUrl: host.url, caption: caps.facebook, whenISO: plan.facebook.when, draft });
-  if (POST_INSTAGRAM) // Instagram is owned by a separate agent now — this automation does NOT post to IG
+  // sequential so the media URL is warm and we never burst. Only enabled platforms post (see the switches above).
+  if (POST_FACEBOOK)
+    results.facebook = await postZernioRetry({ platform: "facebook", videoUrl: host.url, caption: caps.facebook, whenISO: plan.facebook.when, draft });
+  if (POST_INSTAGRAM)
     results.instagram = await postZernioRetry({ platform: "instagram", videoUrl: host.url, caption: caps.instagram, whenISO: plan.instagram.when, draft });
-  results.youtube = await postYouTube({ videoUrl: host.url, thumbnailUrl: thumb.url, caps: caps.youtube, whenISO: plan.youtube.when, draft, immediate });
-  results.pinterest = await postPinterest({ videoUrl: host.url, thumbnailUrl: thumb.url, caps: caps.pinterest, articleUrl, boardServiceId: plan.pinterest.board, whenISO: plan.pinterest.when, draft, immediate });
+  if (POST_YOUTUBE)
+    results.youtube = await postYouTube({ videoUrl: host.url, thumbnailUrl: thumb.url, caps: caps.youtube, whenISO: plan.youtube.when, draft, immediate });
+  if (POST_PINTEREST)
+    results.pinterest = await postPinterest({ videoUrl: host.url, thumbnailUrl: thumb.url, caps: caps.pinterest, articleUrl, boardServiceId: plan.pinterest.board, whenISO: plan.pinterest.when, draft, immediate });
 
   const entry = { slug, category, hostUrl: host.url, thumbUrl: thumb.url, base: base.toISOString(), draft: !!draft, immediate: !!immediate, at: new Date().toISOString(), results };
   logPost(entry);
