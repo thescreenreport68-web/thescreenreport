@@ -1,0 +1,79 @@
+{
+ "runId": "run-2026-07-13T16-31-27",
+ "mode": "live",
+ "startedAt": "2026-07-13T16:31:27.134Z",
+ "films": 4,
+ "published": [],
+ "held": [
+  {
+   "tag": "voicemails-for-isabelle-now-streaming×NOW-STREAMING",
+   "reason": "seo-faq: fewer than 2 real FAQs",
+   "score": 65
+  },
+  {
+   "tag": "toy-story-5-bo-opening×BO-OPENING",
+   "reason": "words 164 < 180 (owner-set ~200-word minimum)",
+   "score": 60
+  },
+  {
+   "tag": "little-brother-netflix-top10×NETFLIX-TOP10",
+   "reason": "words 151 < 180 (owner-set ~200-word minimum) | seo-faq: fewer than 2 real FAQs",
+   "score": 65
+  },
+  {
+   "tag": "i-will-find-you-trending-tv×TRENDING-TV",
+   "reason": "platform: names max not in confirmed providers",
+   "score": 0
+  }
+ ],
+ "rejected": [],
+ "skipped": [],
+ "blocked": [],
+ "finishedAt": "2026-07-13T16:41:14.914Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 2507,
+    "out": 359,
+    "usd": 0.00014,
+    "ms": 1725
+   },
+   "gatherer": {
+    "calls": 4,
+    "errors": 0,
+    "in": 12712,
+    "out": 816,
+    "usd": 0.0016,
+    "ms": 14995
+   },
+   "synthesizer": {
+    "calls": 5,
+    "errors": 1,
+    "in": 2932,
+    "out": 2039,
+    "usd": 0.00061,
+    "ms": 23705
+   },
+   "writer": {
+    "calls": 12,
+    "errors": 0,
+    "in": 36815,
+    "out": 12740,
+    "usd": 0.03511,
+    "ms": 239573
+   },
+   "qa": {
+    "calls": 30,
+    "errors": 0,
+    "in": 85011,
+    "out": 12573,
+    "usd": 0.05694,
+    "ms": 112051
+   }
+  },
+  "totalUsd": 0.09439
+ },
+ "openrouterTotalUsd": 0.09058
+}

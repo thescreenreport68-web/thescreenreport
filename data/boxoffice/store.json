@@ -56,8 +56,9 @@
    "eventSlug": "i-will-find-you-trending-tv",
    "form": "TRENDING-TV",
    "reason": "platform: names max not in confirmed providers",
-   "tries": 2,
-   "at": "2026-07-13T15:42:20.911Z"
+   "tries": 3,
+   "at": "2026-07-13T16:41:14.913Z",
+   "dead": true
   },
   {
    "key": "obsession-bo-update-d62|BO-UPDATE",
@@ -79,25 +80,25 @@
    "key": "voicemails-for-isabelle-now-streaming|NOW-STREAMING",
    "eventSlug": "voicemails-for-isabelle-now-streaming",
    "form": "NOW-STREAMING",
-   "reason": "words 151 < 180 (owner-set ~200-word minimum)",
-   "tries": 1,
-   "at": "2026-07-13T15:33:52.104Z"
+   "reason": "seo-faq: fewer than 2 real FAQs",
+   "tries": 2,
+   "at": "2026-07-13T16:34:45.566Z"
   },
   {
    "key": "toy-story-5-bo-update-d25|BO-UPDATE",
    "eventSlug": "toy-story-5-bo-update-d25",
    "form": "BO-UPDATE",
-   "reason": "words 99 < 180 (owner-set ~200-word minimum) | seo-faq: fewer than 2 real FAQs",
-   "tries": 1,
-   "at": "2026-07-13T15:37:22.804Z"
+   "reason": "words 164 < 180 (owner-set ~200-word minimum)",
+   "tries": 2,
+   "at": "2026-07-13T16:37:39.742Z"
   },
   {
    "key": "little-brother-netflix-top10|NETFLIX-TOP10",
    "eventSlug": "little-brother-netflix-top10",
    "form": "NETFLIX-TOP10",
-   "reason": "words 141 < 180 (owner-set ~200-word minimum) | seo-faq: fewer than 2 real FAQs | template-heading: \"## What Does This Mean for 'Little Brother' on Net\" — rewrite story-specific",
-   "tries": 1,
-   "at": "2026-07-13T15:40:28.376Z"
+   "reason": "words 151 < 180 (owner-set ~200-word minimum) | seo-faq: fewer than 2 real FAQs",
+   "tries": 2,
+   "at": "2026-07-13T16:39:49.907Z"
   }
  ]
 }
