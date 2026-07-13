@@ -1,38 +1,41 @@
 {
-  "runId": "run-2026-07-13T07-01-08",
-  "builtAt": "2026-07-13T07:01:38.424Z",
-  "count": 7,
+  "runId": "run-2026-07-13T11-01-10",
+  "builtAt": "2026-07-13T11:01:36.470Z",
+  "count": 8,
   "topics": [
     {
-      "id": "news-evil-dead-burn-director-interview",
-      "slug": "director-discusses-evil-dead-burn-s-brutality-and-controversial-moment",
-      "title": "Director Discusses 'Evil Dead Burn's' Brutality and Controversial Moments",
+      "id": "news-the-odyssey-world-premiere-trojan-horse",
+      "slug": "how-universal-made-a-8-800-pound-trojan-horse-for-the-odyssey-world-pr",
+      "title": "How Universal Made a 8,800-Pound Trojan Horse for The Odyssey World Premiere",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "other",
-      "sensitivity": "high",
-      "eventSlug": "evil-dead-burn-director-interview",
-      "primaryKeyword": "Evil Dead Burn director",
-      "primaryEntity": "Evil Dead Burn",
-      "entities": [],
-      "angle": "The director of 'Evil Dead Burn' breaks down the film's brutal style and controversial choices.",
+      "sensitivity": "normal",
+      "eventSlug": "the-odyssey-world-premiere-trojan-horse",
+      "primaryKeyword": "the odyssey premiere stunt",
+      "primaryEntity": "The Odyssey",
+      "entities": [
+        "The Odyssey (film)",
+        "Universal Pictures"
+      ],
+      "angle": "Universal's elaborate Trojan Horse stunt for The Odyssey premiere",
       "tmdbType": "movie",
       "source": "rss:Variety",
       "sources": [
         {
           "outlet": "Variety",
           "tier": 7,
-          "url": "https://variety.com/2026/film/news/evil-dead-burn-director-practical-effects-post-credits-scene-1236808969/",
-          "ageMin": 576,
-          "headline": "Evil Dead Burn Director Breaks Down His Brand of French Brutality, From Practical Effects and Real Fire to That Post-Credits Scene",
-          "summary": "SPOILER ALERT: This story contains major spoilers for “Evil Dead Burn,” now playing in theaters. “Evil Dead Burn” breaks one of the fundamental rules of cinema: Don’t kill the dog. “If you don t do that in Evil Dead, in which movie do you do that? These are the most insane, wild and basically evil movies,” director [ ]"
+          "url": "https://variety.com/2026/film/global/odyssey-world-premiere-giant-trojan-horse-8800lb-1236806583/",
+          "ageMin": 118,
+          "headline": "How Universal Made a 8,800-Pound Trojan Horse for The Odyssey World Premiere",
+          "summary": "With almost the full cast in attendance, last week s The Odyssey world premiere in London offered more star power than any other event seen in Leicester Square this year. And yet on the night, the likes of Christopher Nolan, Matt Damon, Anne Hathaway, Zendaya, Tom Holland, Robert Pattinson, Charlize Theron and many others were somewhat [ ]"
         }
       ],
-      "ageMin": 576,
+      "ageMin": 118,
       "_cand": {
-        "key": "rss:evil-dead-burn-director-breaks-down-his-brand-of-french-brut",
+        "key": "rss:how-universal-made-a-8-800-pound-trojan-horse-for-the-odysse",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -45,15 +48,15 @@
           "Variety"
         ],
         "maxTier": 7,
-        "sensitivity": "high",
+        "sensitivity": "normal",
         "attribution": "Variety",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 51,
+      "priority": 63,
       "signals": {
-        "recency": 4,
+        "recency": 16,
         "corroboration": 12,
         "status": 18,
         "type": 5,
@@ -65,91 +68,207 @@
       }
     },
     {
-      "id": "news-sam-neill-dies",
-      "slug": "sam-neill-jurassic-park-star-dies-at-78",
-      "title": "Sam Neill, Jurassic Park Star, Dies at 78",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
+      "id": "music-news-sam-fender-olivia-dean-rein-me-in-uk-chart-record",
+      "slug": "sam-fender-and-olivia-dean-s-rein-me-in-becomes-longest-running-no-1-s",
+      "title": "Sam Fender and Olivia Dean's 'Rein Me In' Becomes Longest-Running No. 1 Single of the Decade in U.K.",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
       "subcategory": "news",
-      "eventType": "death",
-      "sensitivity": "high",
-      "eventSlug": "sam-neill-dies",
-      "primaryKeyword": "sam neill",
-      "primaryEntity": "Sam Neill",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "sam-fender-olivia-dean-rein-me-in-uk-chart-record",
+      "primaryKeyword": "Sam Fender Olivia Dean",
+      "primaryEntity": "Sam Fender",
       "entities": [
-        "Jurassic Park",
-        "The Piano"
+        "Olivia Dean"
       ],
-      "angle": "Jurassic Park star Sam Neill has died at 78.",
+      "angle": "Sam Fender and Olivia Dean's 'Rein Me In' achieves record-breaking chart success in the UK.",
+      "tmdbType": "movie",
+      "source": "rss:Billboard",
+      "sources": [
+        {
+          "outlet": "Billboard",
+          "tier": 7,
+          "url": "https://www.billboard.com/lists/sam-fender-olivia-dean-rein-mein-uk-chart-records/",
+          "ageMin": 51,
+          "headline": "How Sam Fender Olivia Dean’s ‘Rein Me In’ Became a Record-Breaking U.K. Chart Success",
+          "summary": "The song is now the U.K.'s longest-running No. 1 single of the decade."
+        }
+      ],
+      "ageMin": 51,
+      "_cand": {
+        "key": "rss:how-sam-fender-olivia-dean-s-rein-me-in-became-a-record-brea",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Billboard"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Billboard",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 63,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "music-news-jay-z-yankee-stadium-residency-finale",
+      "slug": "jay-z-s-yankee-stadium-residency-ends-with-star-studded-finale-featuri",
+      "title": "Jay-Z's Yankee Stadium Residency Ends with Star-Studded Finale Featuring Beyoncé, Rihanna, Usher",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "jay-z-yankee-stadium-residency-finale",
+      "primaryKeyword": "Jay-Z concert",
+      "primaryEntity": "JAY Z",
+      "entities": [
+        "Jay-Z",
+        "Beyoncé",
+        "Rihanna",
+        "Usher"
+      ],
+      "angle": "Jay-Z concludes his Yankee Stadium residency with a star-studded finale featuring Beyoncé, Rihanna, and more.",
       "tmdbType": "movie",
       "source": "rss:Variety",
       "sources": [
         {
           "outlet": "Variety",
           "tier": 7,
-          "url": "https://variety.com/2026/film/obituaries-people-news/sam-neill-dead-jurassic-park-1236809330/",
-          "ageMin": 44,
-          "headline": "Sam Neill, Jurassic Park Star, Dies at 78",
-          "summary": "Sam Neill, the versatile actor whose career of more than 50 years was highlighted by his three appearances in the blockbuster “Jurassic Park” and “Jurassic World” franchises, died on July 13 in Sydney, Australia. He was 78. It is with immense sadness that the whānau [family] of Sam Neill share the news of his passing [ ]"
-        },
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/sam-neill-dead-actor-jurassic-park-the-piano-dies-1236646308/",
-          "ageMin": 60,
-          "headline": "Sam Neill, Actor in ‘Jurassic Park’ and ‘The Piano,’ Dies at 78",
-          "summary": "The pride of New Zealand and Australia also starred in ‘My Brilliant Career,’ ‘Dead Calm,’ ‘In the Mouth of Madness,’ ‘The Final Conflict’ and ‘Event Horizon.’"
-        },
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/sam-neill-jurassic-park-actor-dead-1236980409/",
-          "ageMin": 64,
-          "headline": "Sam Neill Dies: Jurassic Park Actor Was 78",
-          "summary": "Sam Neill, the New Zealand actor best known for his role in the Jurassic Park franchise, Peaky Blinders and a plethora of independent films has died in Australia, it was announced tonight. The multiple Golden Globe and Primetime Emmy nominee was 78. It is with immense sadness that the whānau of Sam Neill share the [ ]"
+          "url": "https://variety.com/2026/music/news/jay-z-closes-yankee-stadium-residency-beyonce-rihanna-usher-1236809402/",
+          "ageMin": 129,
+          "headline": "Jay-Z Closes Yankee Stadium Residency With Epic Late Night Show Featuring Beyoncé, Rihanna, Usher, Teyana Taylor and More",
+          "summary": "We re going to go until like 5 a.m., so don t be scared, said Jay-Z not long after he started the third and final show of his Yankee Stadium residency on Sunday night, the concluding chapter to a weekend that paid homage to the 25th and 30th anniversaries of his seminal albums The Blueprint and Reasonable [ ]"
         }
       ],
-      "ageMin": 44,
+      "ageMin": 129,
       "_cand": {
-        "key": "rss:sam-neill-jurassic-park-star-dies-at-78",
+        "key": "rss:jay-z-closes-yankee-stadium-residency-with-epic-late-night-s",
         "popularity": 0,
         "kind": "rss-news"
       },
-      "corroborationCount": 3,
+      "breakoutVelocity": 0,
+      "corroborationCount": 1,
       "verification": {
-        "tier1Count": 3,
+        "tier1Count": 1,
         "tier1Owners": 1,
-        "outletCount": 3,
+        "outletCount": 1,
         "outlets": [
-          "Variety",
-          "THR",
-          "Deadline"
+          "Variety"
         ],
         "maxTier": 7,
-        "sensitivity": "high",
+        "sensitivity": "normal",
         "attribution": "Variety",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 95,
+      "priority": 55,
       "signals": {
-        "recency": 24,
-        "corroboration": 24,
+        "recency": 16,
+        "corroboration": 12,
         "status": 18,
-        "type": 14,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
         "big": 0,
-        "trending": 15,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "music-news-jay-z-yankee-stadium-concert-delay",
+      "slug": "jay-z-addresses-three-hour-delay-at-yankee-stadium-concert-cites-fan-s",
+      "title": "Jay-Z Addresses Three-Hour Delay at Yankee Stadium Concert, Cites Fan Safety",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "jay-z-yankee-stadium-concert-delay",
+      "primaryKeyword": "jay-z concert delay",
+      "primaryEntity": "JAY Z",
+      "entities": [
+        "Jay-Z",
+        "Yankee Stadium"
+      ],
+      "angle": "Jay-Z explains the significant delay at his Yankee Stadium concert, citing safety concerns for fans.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/music/music-news/jay-z-addresses-three-hour-delay-yankee-stadium-concert-1236646285/",
+          "ageMin": 330,
+          "headline": "Jay-Z Addresses Three-Hour Delay at Yankee Stadium Concert, Says He Wanted to Avoid Fans Getting Trampled",
+          "summary": "\"I'm really sorry for the inconvenience, but I had to make sure everyone was OK,\" the rapper said after his show started more than three hours after its original expected start time."
+        }
+      ],
+      "ageMin": 330,
+      "_cand": {
+        "key": "rss:jay-z-addresses-three-hour-delay-at-yankee-stadium-concert-s",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "breakoutVelocity": 0,
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 48,
+      "signals": {
+        "recency": 9,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
         "softTv": 0
       }
     },
     {
       "id": "news-sacha-baron-cohen-ali-g-wimbledon-appearance",
-      "slug": "sacha-baron-cohen-appears-as-ali-g-at-wimbledon-amid-new-film-rumors",
-      "title": "Sacha Baron Cohen Appears as Ali G at Wimbledon Amid New Film Rumors",
+      "slug": "sacha-baron-cohen-attends-wimbledon-as-ali-g-delighting-fans",
+      "title": "Sacha Baron Cohen Attends Wimbledon as Ali G, Delighting Fans",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
@@ -160,9 +279,10 @@
       "primaryKeyword": "Sacha Baron Cohen Ali G",
       "primaryEntity": "Sacha Baron Cohen",
       "entities": [
-        "Ali G"
+        "Ali G",
+        "Wimbledon"
       ],
-      "angle": "Sacha Baron Cohen made a surprise appearance at Wimbledon in his Ali G character, fueling reports of a new film.",
+      "angle": "Sacha Baron Cohen made a surprise appearance at Wimbledon in character as his iconic alter ego Ali G, delighting fans.",
       "tmdbType": "movie",
       "source": "rss:TheWrap",
       "sources": [
@@ -170,7 +290,7 @@
           "outlet": "TheWrap",
           "tier": 7,
           "url": "https://www.thewrap.com/creative-content/movies/sacha-baron-cohen-wimbledon-ali-g-new-film-report/",
-          "ageMin": 496,
+          "ageMin": 736,
           "headline": "Sacha Baron Cohen Attends Wimbledon as Ali G After New Film Report",
           "summary": "Fans were thrilled by a video of the actor in character at the tennis Grand Slam event in London The post Sacha Baron Cohen Attends Wimbledon as Ali G After New Film Report appeared first on TheWrap ."
         },
@@ -178,12 +298,12 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/movies/movie-news/sacha-baron-cohen-ali-g-surprise-appearance-wimbledon-1236646214/",
-          "ageMin": 531,
+          "ageMin": 771,
           "headline": "Sacha Baron Cohen s Ali G Makes Surprise Appearance at Wimbledon",
           "summary": "\"I iz BACK! And if u iz at dis borin wimbledore final lookin 2 get grand slammed, I iz here wif de hookup,\" the actor's alter ego wrote on social media."
         }
       ],
-      "ageMin": 496,
+      "ageMin": 736,
       "_cand": {
         "key": "rss:sacha-baron-cohen-attends-wimbledon-as-ali-g-after-new-film-",
         "popularity": 0,
@@ -205,9 +325,9 @@
         "status": "CONFIRMED",
         "publishable": true
       },
-      "priority": 60,
+      "priority": 57,
       "signals": {
-        "recency": 4,
+        "recency": 1,
         "corroboration": 18,
         "status": 25,
         "type": 5,
@@ -219,231 +339,38 @@
       }
     },
     {
-      "id": "news-john-mulaney-wrigley-field-show",
-      "slug": "john-mulaney-makes-history-in-chicago-brings-out-david-letterman-fred-",
-      "title": "John Mulaney Makes History in Chicago, Brings Out David Letterman, Fred Armisen and Richard Kind",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "john-mulaney-wrigley-field-show",
-      "primaryKeyword": "john mulaney",
-      "primaryEntity": "John Mulaney",
-      "entities": [
-        "David Letterman",
-        "Fred Armisen"
-      ],
-      "angle": "John Mulaney made history by becoming the first comedian to sell out Wrigley Field.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/news/general-news/john-mulaney-chicago-wrigley-field-david-letterman-armisen-1236646257/",
-          "ageMin": 72,
-          "headline": "John Mulaney Makes History in Chicago, Brings Out David Letterman, Fred Armisen and Richard Kind",
-          "summary": "The Chicago native returned home to become the first comedian to perform at Wrigley Field, and he sold out the venue to boot, performing for one of the largest stand-up audiences ever."
-        }
-      ],
-      "ageMin": 72,
-      "_cand": {
-        "key": "rss:john-mulaney-makes-history-in-chicago-brings-out-david-lette",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 55,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "news-dwayne-johnson-kevin-hart-the-odd-couple-broadway",
-      "slug": "dwayne-johnson-reveals-plans-to-star-in-the-odd-couple-on-broadway-wit",
-      "title": "Dwayne Johnson Reveals Plans to Star in 'The Odd Couple' on Broadway With Kevin Hart",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "dwayne-johnson-kevin-hart-the-odd-couple-broadway",
-      "primaryKeyword": "dwayne johnson kevin hart broadway",
-      "primaryEntity": "Dwayne Johnson",
-      "entities": [
-        "Kevin Hart",
-        "The Odd Couple"
-      ],
-      "angle": "Dwayne Johnson reveals plans to star alongside Kevin Hart in a Broadway production of 'The Odd Couple'.",
-      "tmdbType": "movie",
-      "source": "rss:TheWrap",
-      "sources": [
-        {
-          "outlet": "TheWrap",
-          "tier": 7,
-          "url": "https://www.thewrap.com/creative-content/theater/dwayne-johnson-wants-broadway-kevin-hart/",
-          "ageMin": 352,
-          "headline": "Dwayne Johnson Reveals Plans to Star in The Odd Couple on Broadway With Kevin Hart",
-          "summary": "The star shares that he is also discussing other theatrical projects with his live-action \"Moana\" director Thomas Kail The post Dwayne Johnson Reveals Plans to Star in The Odd Couple on Broadway With Kevin Hart appeared first on TheWrap ."
-        }
-      ],
-      "ageMin": 352,
-      "_cand": {
-        "key": "rss:dwayne-johnson-reveals-plans-to-star-in-the-odd-couple-on-br",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "TheWrap"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "TheWrap",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 53,
-      "signals": {
-        "recency": 9,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "news-josh-grisetti-death",
-      "slug": "josh-grisetti-mrs-maisel-actor-dies-at-44",
-      "title": "Josh Grisetti, 'Mrs. Maisel' Actor, Dies at 44",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "death",
-      "sensitivity": "high",
-      "eventSlug": "josh-grisetti-death",
-      "primaryKeyword": "josh grisetti",
-      "primaryEntity": "Josh Grisetti",
-      "entities": [
-        "The Marvelous Mrs. Maisel",
-        "Something Rotten!"
-      ],
-      "angle": "Broadway and TV actor Josh Grisetti has died at the age of 44.",
-      "tmdbType": "movie",
-      "source": "rss:Deadline",
-      "sources": [
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/josh-grisetti-actor-dead-suicide-1236980383/",
-          "ageMin": 228,
-          "headline": "Josh Grisetti Dies: Actor Known For Mrs. Maisel And Something Rotten! On Broadway Was 44",
-          "summary": "Josh Grisetti, the Broadway actor best known for Something Rotten! and It Shoulda Been You as well as a recurring role on The Marvelous Mrs. Maisel, died Friday by suicide, according to his co-star and friend Rob McClure. He was 44. It is with a shattered heart that I share that the brilliant Josh Grisetti [ ]"
-        }
-      ],
-      "ageMin": 228,
-      "_cand": {
-        "key": "rss:josh-grisetti-dies-actor-known-for-mrs-maisel-and-something-",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Deadline"
-        ],
-        "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "Deadline",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 53,
-      "signals": {
-        "recency": 9,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "news-jay-z-yankee-stadium-delay",
-      "slug": "jay-z-addresses-three-hour-delay-at-yankee-stadium-concert-says-he-wan",
-      "title": "Jay-Z Addresses Three-Hour Delay at Yankee Stadium Concert, Says He Wanted to Avoid Fans Getting Trampled",
+      "id": "news-tom-holland-historian-tom-holland-meet-up",
+      "slug": "tom-holland-meets-historian-tom-holland-amid-culture-war-clash-over-ch",
+      "title": "Tom Holland Meets Historian Tom Holland Amid Culture War Clash Over Christopher Nolan Film",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "jay-z-yankee-stadium-delay",
-      "primaryKeyword": "jay-z",
-      "primaryEntity": "JAŸ-Z",
+      "eventSlug": "tom-holland-historian-tom-holland-meet-up",
+      "primaryKeyword": "Tom Holland",
+      "primaryEntity": "Tom Holland",
       "entities": [
-        "Jay-Z",
-        "Yankee Stadium"
+        "The Rest Is History podcast",
+        "Christopher Nolan"
       ],
-      "angle": "Jay-Z explained the nearly four-hour delay at his Yankee Stadium concert, citing safety concerns.",
+      "angle": "Tom Holland meets historian Tom Holland as the latter faces a culture war clash related to Christopher Nolan's film.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
         {
           "outlet": "THR",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/music/music-news/jay-z-addresses-three-hour-delay-yankee-stadium-concert-1236646285/",
-          "ageMin": 89,
-          "headline": "Jay-Z Addresses Three-Hour Delay at Yankee Stadium Concert, Says He Wanted to Avoid Fans Getting Trampled",
-          "summary": "\"I'm really sorry for the inconvenience, but I had to make sure everyone was OK,\" the rapper said after his show started nearly four hours after its original expected start time."
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/tom-holland-odyssey-rest-is-history-conversation-elon-musk-1236646333/",
+          "ageMin": 66,
+          "headline": "Tom Holland, Meet Tom Holland: Odyssey Star and Rest Is History Podcaster Talk Myth and Movies",
+          "summary": "The internet-breaking meet-up comes as the historian finds himself at the center of a culture-war clash with Elon Musk, who has launched an anti-\"woke\" campaign against Nolan's blockbuster."
         }
       ],
-      "ageMin": 89,
+      "ageMin": 66,
       "_cand": {
-        "key": "rss:jay-z-addresses-three-hour-delay-at-yankee-stadium-concert-s",
+        "key": "rss:tom-holland-meet-tom-holland-odyssey-star-and-rest-is-histor",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -468,6 +395,136 @@
         "corroboration": 12,
         "status": 18,
         "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-sacha-baron-cohen-ali-g-wimbledon",
+      "slug": "sacha-baron-cohen-revives-ali-g-at-wimbledon-tries-selling-weed-on-cen",
+      "title": "Sacha Baron Cohen Revives Ali G at Wimbledon, Tries Selling Weed on Center Court",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "sacha-baron-cohen-ali-g-wimbledon",
+      "primaryKeyword": "Sacha Baron Cohen Ali G",
+      "primaryEntity": "Sacha Baron Cohen",
+      "entities": [
+        "Ali G",
+        "Wimbledon"
+      ],
+      "angle": "Sacha Baron Cohen revives his iconic character Ali G at Wimbledon, creating a stir with a public stunt.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/film/global/sacha-baron-cohen-ali-g-wimbledon-tries-selling-weed-1236809387/",
+          "ageMin": 132,
+          "headline": "Sacha Baron Cohen Revives Ali G at Wimbledon Ahead of New Film — and Tries Selling Weed on Center Court",
+          "summary": "Ali G was among the surprise special guests at the Wimbledon men s final on Sunday — and got straight to work trying to sell drugs from his seat on centre court. While Sacha Baron Cohen s comedy creation may have been kitted out in classic whites for the occasion, his Wimbledon-themed jacket did feature a large [ ]"
+        }
+      ],
+      "ageMin": 132,
+      "_cand": {
+        "key": "rss:sacha-baron-cohen-revives-ali-g-at-wimbledon-ahead-of-new-fi",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 51,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-john-mulaney-wrigley-field-show",
+      "slug": "john-mulaney-makes-history-in-chicago-brings-out-david-letterman-fred-",
+      "title": "John Mulaney Makes History in Chicago, Brings Out David Letterman, Fred Armisen and Richard Kind",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "high",
+      "eventSlug": "john-mulaney-wrigley-field-show",
+      "primaryKeyword": "John Mulaney Wrigley Field",
+      "primaryEntity": "John Mulaney",
+      "entities": [
+        "Wrigley Field",
+        "David Letterman",
+        "Fred Armisen",
+        "Richard Kind"
+      ],
+      "angle": "John Mulaney makes history by selling out Wrigley Field for a comedy show, bringing out special guests.",
+      "tmdbType": "movie",
+      "source": "rss:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/sam-neill-jurassic-park-actor-dead-1236980409/",
+          "ageMin": 304,
+          "headline": "Sam Neill Dies: Jurassic Park Actor Was 78",
+          "summary": "Sam Neill, the New Zealand actor best known for his role in the Jurassic Park franchise, Peaky Blinders and a plethora of independent films has died in Australia, it was announced tonight. The multiple Golden Globe and Primetime Emmy nominee was 78. It is with immense sadness that the whānau of Sam Neill share the [ ]"
+        }
+      ],
+      "ageMin": 304,
+      "_cand": {
+        "key": "rss:sam-neill-dies-jurassic-park-actor-was-78",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 48,
+      "signals": {
+        "recency": 9,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
         "big": 0,
