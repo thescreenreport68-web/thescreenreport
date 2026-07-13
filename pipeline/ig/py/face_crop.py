@@ -63,14 +63,18 @@ def luminance_fix(pil):
         return None    # uncorrectable
     return pil
 
-def process(src, dst, tw, th):
+def process(src, dst, tw, th, relax=False):
     pil = Image.open(src)
     pil = ImageOps.exif_transpose(pil).convert("RGB")
     pil = luminance_fix(pil)
     if pil is None:
         return {"src": src, "ok": False, "reason": "uncorrectable-luminance"}
     w, h = pil.size
-    if w < 450:
+    # relax=True is the LAST-RESORT pass for a subject that would otherwise be imageless (small
+    # source photos — common for streamers/creators/musicians): accept a softer upscale rather than
+    # ship a one-image loop or hold the story. The strict bar stays the default for everyone. (2026-07-12)
+    min_w = 300 if relax else 450
+    if w < min_w:
         return {"src": src, "ok": False, "reason": f"too-small-{w}px"}
     # crop-vs-target gate, calibrated to the DISPLAY size (1080x1920 — the 2700x4800
     # canvas is downscaled for output, so a ~500px crop is a fine ~2x upscale; the gate
@@ -78,7 +82,8 @@ def process(src, dst, tw, th):
     target_ratio = tw / th
     eff_cw = min(w, int(h * target_ratio))
     eff_ch = min(h, int(w / target_ratio))
-    if eff_cw < 420 or eff_ch < 760:
+    min_cw, min_ch = (280, 520) if relax else (420, 760)
+    if eff_cw < min_cw or eff_ch < min_ch:
         return {"src": src, "ok": False, "reason": f"crop-too-small-{eff_cw}x{eff_ch}"}
 
     face = best_face(pil)  # None when cv2 face detection is unavailable → center-crop below
@@ -108,7 +113,7 @@ def process(src, dst, tw, th):
 
 def safe_process(j):
     try:
-        return process(j["src"], j["dst"], j.get("w", 2700), j.get("h", 4800))
+        return process(j["src"], j["dst"], j.get("w", 2700), j.get("h", 4800), j.get("relax", False))
     except Exception as e:  # one undecodable image must not kill the whole batch
         return {"src": j.get("src"), "ok": False, "reason": f"error:{type(e).__name__}:{e}"}
 

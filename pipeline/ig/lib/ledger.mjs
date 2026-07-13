@@ -56,17 +56,38 @@ export function clearHold(slug) {
 // posted.json only records LIVE posts, so without this every no-publish/test run re-picks
 // the same top-scored story (the "McConaughey again and again" repetition). (2026-07-11)
 const builtFile = () => path.join(IG.dataDir, "built.json");
-export function recordBuilt(slug) {
+// significant topic tokens (names/nouns) from a title/entity string — used for cross-run
+// TOPIC dedup so the automation doesn't build reel after reel about the SAME event (the
+// Taylor Swift wedding produced a dozen gossip articles; we want ONE, then move on). (2026-07-12)
+const TOPIC_STOP = new Set(
+  "this that with from they have been said after over more most just what were will your when this reveals reportedly during into about could would their there video watch star show says amid says".split(" "),
+);
+export function topicKey(text) {
+  return [...new Set(String(text || "").toLowerCase().replace(/[^a-z0-9\s]/g, " ").split(/\s+/).filter((w) => w.length >= 4 && !TOPIC_STOP.has(w)))];
+}
+export function recordBuilt(slug, topics = []) {
   const b = readJson(builtFile(), {});
-  b[slug] = { at: new Date().toISOString() };
+  b[slug] = { at: new Date().toISOString(), topics };
   writeJson(builtFile(), b);
 }
 export function isBuilt(slug) {
   return Boolean(readJson(builtFile(), {})[slug]);
 }
+// every built story's topic tokens — the scout skips a candidate that overlaps an already-built topic
+export function builtTopics() {
+  return Object.values(readJson(builtFile(), {})).map((v) => v?.topics || []).filter((a) => a.length);
+}
 export function postedToday() {
   const day = todayInTz(IG.slots.postTz);
   return loadPosted().posts.filter((p) => (p.scheduledDay || (p.at || "").slice(0, 10)) === day).length;
+}
+// slot labels already scheduled for a given LA day — lets each per-slot run take the NEXT EMPTY slot
+// instead of double-filling one (the 7-runs-per-day model, owner 2026-07-13). Runs are serialized by
+// the workflow's concurrency group, so a prior run's ledger is always committed before the next reads.
+export function scheduledSlotsToday(day = todayInTz(IG.slots.postTz)) {
+  return loadPosted().posts
+    .filter((p) => (p.scheduledDay || (p.at || "").slice(0, 10)) === day && p.slot && p.slot !== "breaking")
+    .map((p) => p.slot);
 }
 
 // ── one-whole-day guard (the July-9 double-post fix, ported as a fresh impl)

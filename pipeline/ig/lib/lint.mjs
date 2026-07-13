@@ -134,22 +134,29 @@ export function lintManifest(shots, words, durationSec, entities = []) {
   if (words?.length) {
     const covers = (s, name) => (s.subjects || [s.entity]).includes(name);
     for (const e of entities) {
+      // events are shown THROUGH their people (people-first beat mapping), never as their own
+      // image (a private event has no photo → news-coverage = a reporter). So an event is not
+      // entity-synced: its people carry the visual and are synced individually. (owner 2026-07-12)
+      if (e.kind === "event") continue;
       const tokens = normWords(e.name).filter((t) => t.length > 2);
       if (!tokens.length) continue;
       const anyImageForEntity = shots.some((s) => covers(s, e.name));
-      for (const w of words) {
-        if (!tokens.includes(normWords(w.w)[0] ?? "")) continue;
-        const t = w.t0;
-        if (!anyImageForEntity) {
-          v.push({ rule: "unshowable-mention", detail: `"${e.name}" spoken at ${t.toFixed(1)}s but has no imagery at all` });
-          break; // one flag per imageless entity is enough
-        }
-        const onScreen = shots.some(
-          (s) => covers(s, e.name) && t >= s.t0 - IG.entitySyncTolSec && t <= s.t1 + IG.entitySyncTolSec
-        );
-        if (!onScreen)
-          v.push({ rule: "entity-sync", detail: `"${e.name}" spoken at ${t.toFixed(1)}s without their image (±${IG.entitySyncTolSec}s)` });
+      const mentions = words.filter((w) => tokens.includes(normWords(w.w)[0] ?? ""));
+      if (!mentions.length) continue;
+      if (!anyImageForEntity) {
+        v.push({ rule: "unshowable-mention", detail: `"${e.name}" spoken ${mentions.length}× but has no imagery at all` });
+        continue;
       }
+      // SHOWN AT LEAST ONCE (owner 2026-07-12): a sparse-image subject (a non-famous name with only
+      // 1-2 photos) in a longer, enriched script cannot be on screen at EVERY mention — being shown
+      // near AT LEAST ONE of their mentions satisfies the intent (the viewer sees who we mean). Only
+      // flag entity-sync when a subject we CAN show is on screen at NONE of its mentions (a real
+      // placement miss). Well-imaged people (TMDB) are shown at their beats and pass as before.
+      const shownAtAnyMention = mentions.some((w) =>
+        shots.some((s) => covers(s, e.name) && w.t0 >= s.t0 - IG.entitySyncTolSec && w.t0 <= s.t1 + IG.entitySyncTolSec),
+      );
+      if (!shownAtAnyMention)
+        v.push({ rule: "entity-sync", detail: `"${e.name}" on screen at NONE of its ${mentions.length} mentions` });
     }
   }
   return v;

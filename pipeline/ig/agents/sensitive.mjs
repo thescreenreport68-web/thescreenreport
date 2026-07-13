@@ -7,8 +7,8 @@ const TRIGGER_RE = /\b(dead|dies|died|death|killed|suicide|overdose|arrest(ed)?|
 
 const SYS = `Classify a Hollywood story for a video automation. Return STRICT JSON {"decision":"ok"|"somber"|"block","reason":string}.
 block: unverified death/suicide/overdose, anything involving minors as subjects, active criminal/legal proceedings where facts are contested, celebrity-x-politics (elections, war, activism controversies).
-somber: confirmed deaths/tributes and serious-but-settled news — proceed with respectful tone, NO music.
-ok: everything else (casting, box office, trailers, renewals, relationships, awards).`;
+somber (RARE — only genuine grief): ONLY a confirmed real-person DEATH, memorial, tribute, funeral, or genuine tragedy (fatal accident, terminal illness). A movie/franchise's "final" or "last" film is NOT a death. A feud, breakup, split, lawsuit, casting exit, firing, or any drama/conflict is NOT somber. Somber means someone actually died or is grieving.
+ok: EVERYTHING else — casting, box office, trailers, renewals, relationships, breakups, feuds, disputes, lawsuits, exits, drama, awards, and all gossip. When torn between somber and ok, choose ok (these keep music + an energetic read).`;
 
 export async function sensitiveGate(article, facts) {
   const text = `${article.title}. ${facts.storyOneLine || ""} ${facts.facts.map((f) => f.claim).join(" ")}`;

@@ -15,7 +15,7 @@ import { fileURLToPath } from "node:url";
 import { execFileSync, spawnSync } from "node:child_process";
 import { IG, FFMPEG, FFPROBE } from "../config.mjs";
 import { speak, listen } from "../models.mjs";
-import { normWords, tokenDiff } from "../lib/util.mjs";
+import { normWords, tokenDiff, contentWords } from "../lib/util.mjs";
 import { workDirFor } from "../job.mjs";
 import { loadWeights, saveWeights } from "../lib/ledger.mjs";
 import { whisperAlign, verbatimVerdict } from "./align.mjs";
@@ -25,23 +25,46 @@ import { whisperAlign, verbatimVerdict } from "./align.mjs";
 // 'drift' on perfect audio) — conversation-mode failures drift 50%+; the ad-lib run
 // detector + whisper wall + ear-judge are the true fabrication guards
 export function transcriptMatches(scriptText, transcript, tolerance = 0.18) {
-  const a = normWords(scriptText);
-  const b = normWords(transcript);
+  // content words only — numbers/currency diverge between pronounced text and provider transcript
+  // and are verified by their own wall; counting them false-fails number-heavy scripts. (2026-07-12)
+  const a = contentWords(scriptText);
+  const b = contentWords(transcript);
   if (!a.length || !b.length) return false;
   return tokenDiff(a, b) / a.length <= tolerance;
+}
+
+// ENDING-PRESENCE WALL (root fix, owner 2026-07-12): gpt-audio-mini sometimes DROPS the final
+// short call-to-action sentence ("Tell us in the comments") after a question — its own provider
+// transcript still claims it said it, and a ~5-word drop is under the verbatim wall's length/drift
+// thresholds, so the take PASSED and the aligner then FABRICATED timings for the unspoken words →
+// subtitles flashed a CTA the voice never spoke. Guard: the ending only counts as spoken if the
+// DISTINCTIVE content words of the last sentence actually appear in the whisper (ground-truth)
+// transcript. "comments" is the load-bearing word for every CTA variant and is never mis-heard.
+const ENDING_STOP = new Set([
+  "us", "in", "the", "a", "to", "of", "and", "on", "it", "me", "we", "you", "your", "our",
+  "so", "now", "let", "know", "down", "below", "this", "that", "is", "are", "be", "for", "with", "what", "do",
+]);
+export function endingSpoken(lastSentence, whisper) {
+  const need = contentWords(lastSentence).filter((w) => !ENDING_STOP.has(w));
+  if (!need.length) return true; // nothing distinctive to verify → don't block
+  const heard = new Set(contentWords((whisper && whisper.text) || ""));
+  const hit = need.filter((w) => heard.has(w)).length;
+  return hit >= Math.ceil(need.length / 2); // at least half the distinctive CTA words were actually spoken
 }
 
 function deliveryStyle(mood, harder = false) {
   if (mood === "somber") return "measured, respectful American news anchor; calm, warm, unhurried but continuous — no dead air";
   // the faster-paced directive won the first bake-off (+2 over the softer read) → default
   return (
-    "energetic American entertainment-news anchor delivering ONE continuous, driving story at a bright, fast clip. " +
-    "Momentum is everything: near-zero gaps between sentences, pauses are tight purposeful beats only, and after every pause come back IN with MORE energy — " +
-    "never let a sentence die with a flat falling ending; each line hands off to the next like live breaking news. " +
-    "Punch the names and numbers, vary your pace, sound genuinely thrilled by the story. " +
+    // owner 2026-07-12: the read was a touch TOO fast to follow. Keep the energy + warmth, but
+    // dial the SPEED back a notch so every word lands and more viewers catch it — clear over hurried.
+    "engaging American entertainment-news anchor delivering ONE continuous story at a CLEAR, controlled pace — lively and warm, but never rushed: speak a touch slower than a hype ad-read so every word is easy to catch. " +
+    "Momentum comes from the CONNECTION between sentences, not from speed: keep the gaps tight and natural, and after each beat come back in with energy — " +
+    "never let a sentence die with a flat falling ending; each line hands off to the next. " +
+    "Punch the names and numbers, let the key facts breathe for a beat, and sound genuinely interested in the story. " +
     "THE ENDING: the last two sentences are a question to the viewer and then the ask — take a natural beat before them, " +
     "deliver the question warm and direct, and the final ask calm and inviting, like signing off to a friend — it must LAND, never feel cut off." +
-    (harder ? " MAXIMUM urgency in the body: read it like the story just broke seconds ago — breathless, gripping, zero dead air (but still let the ending land)." : "")
+    (harder ? " Bring a bit MORE drive to the body (like the story just broke), but stay clear and easy to follow — energetic, never rushed or breathless." : "")
   );
 }
 
@@ -196,7 +219,7 @@ async function makeTake({ dir, sentences, voice, mood, harder, model, label }) {
   const text = sentences.join(" ");
   const context =
     sentences.length >= 5
-      ? "This is the WHOLE reel, read as ONE continuous take: hit the very first word at full energy and drive through the story. Then, before the final question, take a clear BEAT — a real breath — and deliver the closing question and ask slower and warmer than the rest of the read, letting them land unhurried. Read every word exactly; you are NARRATING the closing question to the audience, NEVER answering or reacting to it, and add NOTHING after the final word."
+      ? "This is the WHOLE reel, read as ONE continuous take: hit the very first word at full energy and drive through the story. Then, before the final question, take a clear BEAT — a real breath — and deliver the closing question and ask slower and warmer than the rest of the read, letting them land unhurried. Read every word exactly, INCLUDING the very last short call-to-action line that comes AFTER the question (e.g. 'Tell us in the comments') — never stop at the question mark, always speak that final line too. You are NARRATING the closing question to the audience, NEVER answering or reacting to it, and add NOTHING beyond the script's final word."
       : "This is the OPENING of the reel — hit the very first word at full energy; read every word exactly and add nothing after the final word.";
   let r;
   try {
@@ -279,10 +302,18 @@ export async function synthVoice({ slug, speakable, mood }) {
   // whisper DRIFT (mishearing names, not the model adding words) still counts as clean.
   // The winner's whisper is returned so the align stage reuses it (no second transcription).
   const spoken = speakable.join(" ");
+  const lastSentence = speakable[speakable.length - 1] || "";
   let winner = null, winnerWhisper = null;
   for (const t of ranked) {
     try {
       const wh = whisperAlign(t.wav);
+      // the ENDING (the comments CTA) must ACTUALLY be in the audio. A take that dropped it is
+      // NOT clean even though overall drift is low (~5 words) — shipping it makes the subtitles
+      // flash a CTA the voice never says. Skip to the next take. (root fix, owner 2026-07-12)
+      if (!endingSpoken(lastSentence, wh)) {
+        t.verbatim = { pass: false, kind: "ending-dropped", reason: `ending not spoken ("${lastSentence.slice(0, 40)}")` };
+        continue;
+      }
       const vv = verbatimVerdict(spoken, wh);
       t.verbatim = vv;
       if (vv.pass || vv.kind === "drift") { winner = t; winnerWhisper = wh; break; }
@@ -300,6 +331,12 @@ export async function synthVoice({ slug, speakable, mood }) {
     // abandon the owner's chosen voice and re-audition (which caused the drift to ash). (owner 2026-07-12)
     return fb;
   }
+  // NOTE (owner 2026-07-12): an experiment that INSERTED a 0.4s silence before the closing question
+  // was REMOVED — it did the opposite of intended. The model already reads the whole script as one
+  // continuous take; injecting a hard silence chopped the ending into a STOP ("keeps stopping, never
+  // flows") and dragged scores DOWN (16-20 → 11). The ending flows best when the continuous read is
+  // left ALONE — the ending's warmth/landing is handled by the delivery prompt + the writer's ending
+  // run-up, not by post-hoc silence. Do NOT re-add an inserted ending pause.
   // learn: persist/refresh the winning plan. A below-floor run no longer UNLOCKS the voice —
   // the locked voice (marin) is the owner's chosen voice, and one transient weak take must NOT
   // swap it out and cause the voice to drift across videos (that was the ash-vs-marin drift).

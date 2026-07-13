@@ -152,22 +152,21 @@ export async function laneNewsSearch(query, { maxArticles = 8 } = {}) {
     if (!res.ok) return [];
     const xml = await res.text();
     const links = [...xml.matchAll(/<item>[\s\S]*?<link>([^<]+)<\/link>/g)]
-      .map((m) => m[1].trim())
+      .map((m) => m[1].trim().replace(/&amp;/g, "&")) // Bing RSS HTML-encodes the '&' in the link — decode it FIRST
       .map((l) => {
-        // bing sometimes wraps links: apiclick.aspx?...&url=<real>
+        // Bing wraps every result through apiclick.aspx?...&url=<realUrl>&... — pull the real target
         const m = l.match(/[?&]url=([^&]+)/);
         return m ? decodeURIComponent(m[1]) : l;
       })
-      .filter((l) => /^https?:\/\//.test(l) && !/bing\.com|msn\.com/.test(l));
-    // one article per OUTLET — breadth beats depth for finding a clean photo
-    const perHost = new Map();
-    for (const l of links) {
-      try {
-        const host = new URL(l).hostname.replace(/^www\./, "");
-        if (!perHost.has(host)) perHost.set(host, l);
-      } catch {}
-    }
-    const pages = [...perHost.values()].slice(0, maxArticles);
+      // keep msn.com — Bing routes results through it and those ARE real article pages with og:images;
+      // only drop the bing.com search-page wrappers. (fix 2026-07-12: every result was msn-wrapped, so
+      // the old `&amp;`-blind extractor + msn.com filter dropped 100% → the news lane produced ZERO images,
+      // which is why streamers/athletes/musicians ended with one photo and the reel looped it.)
+      .filter((l) => /^https?:\/\//.test(l) && !/bing\.com/.test(l));
+    // dedupe by full URL (not host) — Bing serves many DIFFERENT articles under one msn.com host and
+    // we want several distinct photos, not one per host.
+    const seen = new Set();
+    const pages = links.filter((l) => (seen.has(l) ? false : (seen.add(l), true))).slice(0, maxArticles);
     const out = [];
     for (const page of pages) {
       try {
@@ -191,8 +190,8 @@ export async function gateImages(entity, candidates, storyContext = "") {
       system:
         'You inspect candidate images for a news video. Return STRICT JSON {"images":[{"i":number,"watermark":boolean,"textHeavy":boolean,"sharp":boolean,"match":boolean}]} — one entry per image, in order. watermark=ANY visible logo/watermark/UI from an outlet, agency (Getty/AP/Backgrid), or app (TikTok/YouTube). textHeavy=image is mostly text. ' +
         (isEvent
-          ? 'match=the image plausibly shows THIS SPECIFIC event or its venue/moment (crowd shots, ceremony, red carpet of THIS event — not a generic or different event).'
-          : "match=the image plausibly shows the named subject (true for posters/stills of the named title)."),
+          ? 'match=the image plausibly shows THIS SPECIFIC event or its venue/moment (crowd shots, ceremony, red carpet of THIS event — not a generic or different event). CRITICAL: match=false for a NEWS ANCHOR, REPORTER, TV studio/desk, talking-head, or program logo/graphic merely COVERING or discussing the event — we want the event itself, never its news coverage.'
+          : "match=the image plausibly shows the named PERSON/title themselves (a portrait, still, or red-carpet photo of them). match=false for a different person, a reporter/anchor, or a generic news-desk/graphic."),
       user: `Subject: ${entity.name} (${entity.kind}).${storyContext ? ` Story: ${storyContext}.` : ""} Judge each image in order.`,
       images: batch.map((c) => c.url),
       maxTokens: 450,
@@ -260,8 +259,10 @@ export function composeFrame({ dir, mode, cells, hero }) {
 // ── BEAT-DRIVEN PLANNER (the placement guarantee, by construction) ───────────────
 // beats: from the Scene Director. images: {entityName: [files]}. Returns shots with
 // subjects[] so the sync gate credits composites for every face in them.
-export function planFromBeats({ beats, images, rawImages = {}, duration, dir, primary }) {
+export function planFromBeats({ beats, images, rawImages = {}, duration, dir, primary, kindByName = {} }) {
   const PACE = 2.6, MIN_SHOT = 1.1;
+  const namedInScript = new Set(beats.flatMap((b) => b.subjects || []));
+  const isWork = (n) => kindByName[n] === "movie" || kindByName[n] === "tv";
   const used = {};
   const pick = (name) => {
     const list = images[name] || [];
@@ -317,8 +318,23 @@ export function planFromBeats({ beats, images, rawImages = {}, duration, dir, pr
       }
     }
     if (!visual) {
-      const solo = withImg.find((s) => images[s]?.length) || (images[primary]?.length ? primary : Object.keys(images).find((k) => images[k].length));
-      if (!solo) continue;
+      // ROOT FIX (owner 2026-07-12): an imageless beat must NEVER just default to `primary` — that
+      // one line is why a single face filled 2/3 of video after video (every gap resolved to the
+      // most-mentioned person). Rotate instead: an imaged subject NAMED in this beat wins; else
+      // prefer the story's WORK (a movie/TV poster is always on-topic), then people actually NAMED
+      // somewhere in the script, spreading by LEAST-USED and never repeating the previous shot's
+      // face. This distributes the timeline across ALL sourced imagery (poster + every person).
+      const pool = Object.keys(images).filter((k) => images[k].length);
+      if (!pool.length) continue;
+      const prevLabel = shots.length ? shots[shots.length - 1].entity : null;
+      const rank = (n) =>
+        (beat.subjects.includes(n) ? 0 : 1000) +   // a subject named in THIS beat wins outright
+        (isWork(n) ? -80 : 0) +                     // the work is always on-topic for a gap
+        (namedInScript.has(n) ? -20 : 0) +          // prefer people the script actually names
+        (used[n] ?? 0) * 8 +                        // least-used first → even spread
+        (n === prevLabel ? 500 : 0) +               // don't repeat the previous shot's face
+        (n === primary ? 6 : 0);                    // faintly ease off the already-heavy primary
+      const solo = pool.slice().sort((a, b) => rank(a) - rank(b))[0];
       visual = { img: pick(solo), label: solo, subjects: [solo] };
     }
 
@@ -404,6 +420,8 @@ export async function buildShots({ job, words, duration, beats, articleBodyRaw =
   const rawImages = {}; // ungated originals — composite cells only
   const provenance = [];
   const sourcing = {}; // the per-entity REPORT — no more silent failures
+  const TARGET_IMAGES = 4; // aim this many DISTINCT photos per subject so the timeline rotates, never loops
+  const MIN_DISTINCT = 3;  // a finished reel using fewer distinct images than this is a loop → hold it
 
   // shared page/gdelt pools fetched ONCE
   const articlePool = laneArticle(job.article, articleBodyRaw);
@@ -413,19 +431,28 @@ export async function buildShots({ job, words, duration, beats, articleBodyRaw =
     const report = { lanes: {}, gated: 0, downloaded: 0, framed: 0, final: 0, reasons: [] };
     sourcing[e.name] = report;
     let candidates = [];
+    const fetched = new Set(); // lanes actually called for THIS entity — the top-up won't re-run them
     if (e.kind === "event") {
       // the multi-platform hunt: our article + its sources + Bing News (one photo per
       // outlet, watermark-free wins) + GDELT's news-image index
       const q = e.searchTerms || `${e.name} ${job.article.title}`.slice(0, 60);
       const news = await laneNewsSearch(q);
       const gd = await laneGdelt(q);
+      fetched.add("news"); fetched.add("gdelt");
       candidates = [...sourcePool, ...articlePool, ...news, ...gd];
       report.lanes = { source: sourcePool.length, article: articlePool.length, news: news.length, gdelt: gd.length };
     } else {
       const [t, w] = [await laneTmdb(e), await laneWikipedia(e)];
-      const gd = t.length + w.length >= 3 ? [] : await laneGdelt(e.searchTerms || e.name);
-      candidates = [...t, ...w, ...articlePool, ...sourcePool, ...gd];
-      report.lanes = { tmdb: t.length, wiki: w.length, article: articlePool.length, source: sourcePool.length, gdelt: gd.length };
+      // TMDB is thin for NON-actors (streamers, athletes, musicians, internet figures) — with too
+      // few photos the timeline LOOPS one image for the whole reel. When TMDB is sparse, widen the
+      // pool with GDELT + Bing-News photos so there are enough DISTINCT images to rotate. Every
+      // candidate is still vision-gated down to real photos of the subject. (variety fix 2026-07-12)
+      const sparse = t.length < TARGET_IMAGES;
+      let gd = [], news = [];
+      if (sparse) { gd = await laneGdelt(e.searchTerms || e.name); fetched.add("gdelt"); }
+      if (sparse && t.length + w.length + gd.length < 6) { news = await laneNewsSearch(e.searchTerms || e.name, { maxArticles: 5 }); fetched.add("news"); }
+      candidates = [...t, ...w, ...gd, ...news, ...articlePool, ...sourcePool];
+      report.lanes = { tmdb: t.length, wiki: w.length, gdelt: gd.length, news: news.length, article: articlePool.length, source: sourcePool.length };
     }
     // dedupe by URL — TMDB returns the main profile AND the same file again in the
     // image list, which burned both trusted-fallback slots on one photo
@@ -439,18 +466,26 @@ export async function buildShots({ job, words, duration, beats, articleBodyRaw =
     if (!passed.length && e.kind === "event" && candidates.length > 6) {
       passed = await gateImages(e, candidates.slice(6, 12), story);
     }
-    // the vision gate is flaky run-to-run — a 0-pass on curated sources is far more
-    // likely a judge miss than 4 bad images. TMDB/Wikipedia are watermark-free by
-    // construction; trust their top candidates rather than blank a prominent subject.
-    if (!passed.length && e.kind !== "event") {
-      const trusted = candidates.filter((c) => /^(tmdb|wikipedia)/.test(c.prov)).slice(0, 2);
-      if (trusted.length) { passed = trusted; report.reasons.push("vision gate 0-pass → trusted-provenance fallback"); }
+    // the vision gate is flaky run-to-run — a 0-pass is far more likely a judge miss than
+    // every image being bad. Never blank a PROMINENT subject: fall back to the best available
+    // candidate. TMDB/Wikipedia first (watermark-free by construction); otherwise the top
+    // news-sourced photo — a person or EVENT found only via news search (Charles Barkley, "the
+    // Swift/Kelce wedding") still deserves a picture rather than an imageless beat. (owner 2026-07-12)
+    if (!passed.length) {
+      // ONLY fall back to TRUSTED images (TMDB/Wikipedia) — those are the named subject by
+      // construction, so a 0-pass there is a flaky-gate miss, not a wrong photo. We do NOT fall
+      // back to a gate-REJECTED news-search image: for a private event or a non-TMDB name (an NFL
+      // coach, a sports personality) that image is almost always a reporter/anchor/wrong person.
+      // Better an imageless beat — the composite then shows the OTHER real subject / carries a
+      // real face — than a reporter's face on screen. (owner 2026-07-12)
+      const trusted = candidates.filter((c) => /^(tmdb|wikipedia)/.test(String(c.prov || ""))).slice(0, 2);
+      if (trusted.length) { passed = trusted; report.reasons.push("vision gate 0-pass → trusted (TMDB/Wiki) fallback"); }
     }
     report.gated = passed.length;
     if (!passed.length) { report.reasons.push("all candidates failed the vision gate"); continue; }
 
     const locals = [];
-    for (let i = 0; i < Math.min(passed.length, 4); i++) {
+    for (let i = 0; i < Math.min(passed.length, 6); i++) { // up to 6 (was 4) → more distinct images to rotate
       const raw = path.join(dir, `raw-${normWords(e.name).join("_")}-${i}.img`);
       try {
         await download(passed[i].url, raw);
@@ -474,26 +509,46 @@ export async function buildShots({ job, words, duration, beats, articleBodyRaw =
     rawImages[e.name] = [...withFace, ...withoutFace];
     frames.forEach((f, i) => { if (!f?.ok) report.reasons.push(`framing: ${f?.reason || "?"}`); });
 
-    // SECOND CHANCE: a person/title whose primary lanes only produced unframeable images
-    // gets one GDELT pass (recent news photos are usually large enough)
-    if (!images[e.name].length && e.kind !== "event" && !report.lanes.gdelt) {
-      const gd2 = await laneGdelt(e.searchTerms || e.name);
-      report.lanes.gdelt = gd2.length;
-      const passed2 = await gateImages(e, gd2, story);
-      for (let i = 0; i < Math.min(passed2.length, 2); i++) {
-        const raw2 = path.join(dir, `raw2-${normWords(e.name).join("_")}-${i}.img`);
-        try {
-          await download(passed2[i].url, raw2);
-          const dst2 = path.join(dir, `shot2-${normWords(e.name).join("_")}-${i}.jpg`);
-          const fr2 = frameBatch([{ src: raw2, dst: dst2, w: IG.upscale[0], h: IG.upscale[1] }]);
-          if (fr2[0]?.ok) {
-            images[e.name].push(dst2);
-            provenance.push({ entity: e.name, url: passed2[i].url, prov: "gdelt-2nd" });
-          }
-          rawImages[e.name].push(raw2);
-        } catch {}
+    // VARIETY TOP-UP (owner 2026-07-12): a reel must NEVER loop one photo. A non-event subject with
+    // fewer than TARGET_IMAGES framed photos (framing rejects small ones; TMDB barely covers non-
+    // actors) is topped up from any lane NOT yet tried — GDELT, then Bing News — until it has enough
+    // DISTINCT images to rotate. Every added photo is vision-gated (a real photo of the subject, no
+    // reporters). This also revives the old zero-image "second chance" as the same code path.
+    if (e.kind !== "event" && images[e.name].length < TARGET_IMAGES) {
+      for (const lane of ["gdelt", "news"]) {
+        if (fetched.has(lane) || images[e.name].length >= TARGET_IMAGES) continue;
+        fetched.add(lane);
+        const raw = (lane === "gdelt")
+          ? await laneGdelt(e.searchTerms || e.name)
+          : await laneNewsSearch(e.searchTerms || e.name, { maxArticles: 6 });
+        const more = raw.filter((c) => (seenUrl.has(c.url) ? false : (seenUrl.add(c.url), true)));
+        report.lanes[lane] = (report.lanes[lane] || 0) + more.length;
+        if (!more.length) continue;
+        const passedX = await gateImages(e, more, story);
+        for (let i = 0; i < passedX.length && images[e.name].length < TARGET_IMAGES; i++) {
+          const rawX = path.join(dir, `rawtop-${normWords(e.name).join("_")}-${lane}-${i}.img`);
+          try {
+            await download(passedX[i].url, rawX);
+            const dstX = path.join(dir, `shottop-${normWords(e.name).join("_")}-${lane}-${i}.jpg`);
+            const frX = frameBatch([{ src: rawX, dst: dstX, w: IG.upscale[0], h: IG.upscale[1] }]);
+            if (frX[0]?.ok) { images[e.name].push(dstX); provenance.push({ entity: e.name, url: passedX[i].url, prov: `topup-${lane}` }); }
+            rawImages[e.name].push(rawX);
+          } catch {}
+        }
       }
-      if (images[e.name].length) report.reasons.push("recovered via gdelt second chance");
+      if (images[e.name].length) report.reasons.push(`variety top-up → ${images[e.name].length} imgs`);
+    }
+    // LAST RESORT (owner 2026-07-12): still nearly imageless after every lane — the only photos
+    // found were too small for the strict framing bar (streamers/creators/musicians often have only
+    // low-res press images). Re-frame those SAME photos with a RELAXED size bar (a softer upscale)
+    // rather than hold the story or ship a one-image loop. Strict framing stays the default.
+    if (e.kind !== "event" && images[e.name].length < 2 && locals.length) {
+      const failed = locals.filter((_, i) => !frames[i]?.ok);
+      const relaxJobs = failed.map((l, i) => ({ src: l.raw, dst: path.join(dir, `shotrelax-${normWords(e.name).join("_")}-${i}.jpg`), w: IG.upscale[0], h: IG.upscale[1], relax: true }));
+      if (relaxJobs.length) {
+        frameBatch(relaxJobs).forEach((f, i) => { if (f?.ok) images[e.name].push(relaxJobs[i].dst); });
+        if (images[e.name].length) report.reasons.push(`relaxed framing → ${images[e.name].length} imgs`);
+      }
     }
     report.framed = images[e.name].length;
     report.final = images[e.name].length;
@@ -521,10 +576,19 @@ export async function buildShots({ job, words, duration, beats, articleBodyRaw =
   };
   const primary = withImages.sort((a, b) => mentionCount(b) - mentionCount(a))[0];
 
+  const kindByName = Object.fromEntries(entities.map((e) => [e.name, e.kind]));
   const shots = beats?.length
-    ? planFromBeats({ beats, images, rawImages, duration, dir, primary })
+    ? planFromBeats({ beats, images, rawImages, duration, dir, primary, kindByName })
     : planTimeline({ words, duration, entities, images, primary });
   if (shots.length < 3) return { shots: null, hold: `only ${shots.length} shots plannable — too visually thin`, sourcing };
+  // HARD VARIETY GUARANTEE (owner 2026-07-12): never ship a reel that LOOPS one image. If the whole
+  // timeline still resolves to fewer than MIN_DISTINCT distinct image files, HOLD it — a one-photo
+  // slideshow reads as broken no matter how good the audio is. Aggressive multi-lane sourcing +
+  // top-up above makes this rare; when it fires the subject is genuinely un-illustratable.
+  const distinctImgs = new Set(shots.map((s) => s.img)).size;
+  if (distinctImgs < MIN_DISTINCT) {
+    return { shots: null, hold: `visually thin — only ${distinctImgs} distinct image(s) across ${Math.round(duration)}s (would loop one photo)`, sourcing, warnings };
+  }
   saveAssetProvenance(job.id, provenance);
-  return { shots, primary, imageCount: Object.values(images).flat().length, sourcing, warnings };
+  return { shots, primary, distinctImages: distinctImgs, imageCount: Object.values(images).flat().length, sourcing, warnings };
 }

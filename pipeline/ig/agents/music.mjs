@@ -10,11 +10,11 @@ import { llm, music as lyria } from "../models.mjs";
 import { ensureDir } from "../lib/util.mjs";
 import { appendAudioProvenance } from "../lib/ledger.mjs";
 
-const SYS = `You write a music-generation brief for an ORIGINAL 30-second instrumental bed under a Hollywood news voiceover.
+const SYS = `You write a music-generation brief for an ORIGINAL 30-second instrumental bed under a Hollywood entertainment-news voiceover on Instagram Reels. It must sound PREMIUM and CONTEMPORARY — a bed under a top entertainment brand's reel — never generic stock, corporate, or elevator music.
 Return STRICT JSON {"styleProfile":string,"cacheKey":string}.
-styleProfile: 12-25 words of pure style language — genre, mood, tempo, instrumentation, energy arc (e.g. "dark heroic cinematic orchestral, driving low brass, taiko percussion, rising tension, blockbuster trailer energy").
+styleProfile: 14-28 words of pure style language — genre, mood, tempo (give a BPM), instrumentation, groove, and an energy ARC that subtly BUILDS (never flat). Match the story: celebrity/gossip => glossy modern pop or confident hip-hop-tinged groove with tasteful bounce; box office/trailer => epic cinematic orchestral with driving percussion; awards => elegant and refined; TV => sleek contemporary. Keep it hooky and forward-driving but MIX-SAFE under a voice — no busy melodic leads, leave a clean mid pocket for the voiceover. e.g. "glossy modern pop-culture groove, ~100 BPM, warm synth bass, crisp finger-snaps and soft claps, tasteful bounce, subtly building, clean space for voiceover".
 HARD RULE: never name a film, franchise, composer, artist, or song — style words only.
-cacheKey: a short kebab-case genre-mood key (e.g. "epic-superhero-dark", "romcom-light", "awards-elegant") so similar stories reuse the same bed family.`;
+cacheKey: a short kebab-case genre-mood key (e.g. "gossip-glossy-pop", "epic-superhero-dark", "awards-elegant") so similar stories reuse the same bed family.`;
 
 const BANNED_IN_PROMPT = /\b(john williams|hans zimmer|zimmer|goransson|göransson|elfman|morricone|score of|theme from|soundtrack of)\b/i;
 
@@ -33,10 +33,10 @@ export async function pickMusic({ facts, mood, segment }) {
       json: true,
     });
   } catch {
-    profile = { styleProfile: "modern cinematic underscore, mid-tempo pulse, neutral tension, clean percussion", cacheKey: "neutral-news" };
+    profile = { styleProfile: "glossy modern entertainment groove, mid-tempo, warm bass, crisp light percussion, subtly building, clean space for voiceover", cacheKey: "neutral-news" };
   }
   if (BANNED_IN_PROMPT.test(profile.styleProfile || "")) {
-    profile.styleProfile = "modern cinematic underscore, mid-tempo pulse, neutral tension, clean percussion";
+    profile.styleProfile = "glossy modern entertainment groove, mid-tempo, warm bass, crisp light percussion, subtly building, clean space for voiceover";
     profile.cacheKey = "neutral-news";
   }
 

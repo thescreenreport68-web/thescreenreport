@@ -12,6 +12,7 @@ const SYS = `You REWRITE a Hollywood news article into a spoken script for an In
 
 HARD RULES:
 - Use ONLY the verified facts provided. Never add, infer, or embellish a fact. Go DEEP on the real facts (the vivid specifics, the numbers, the who-said-what) to fill the runtime — never pad with filler or repetition.
+- You do NOT have to use EVERY fact. SELECT the most surprising, on-story facts that fit the length — a tight, well-paced reel beats a crammed one. When you have more material than fits, cut the weakest, never repeat a detail to stretch.
 - REWRITE, DON'T RECAP. Turn the facts into an engaging spoken STORY: lead with the most surprising CONCRETE fact, build curiosity beat by beat, and use the punchy, direct phrasing a top creator uses. If the story is thin, go DEEPER on the REAL details you have — the context, what's surprising, why it matters, what fans react to — to reach the length that way. The audience QUESTION belongs in the ending beat (below), NEVER in the hook — the hook is always a concrete fact. Engagement comes from FRAMING and curiosity, NEVER from inventing a fact, number, date, or quote (hard line).
 - REACTIONS ARE PARAPHRASED, NEVER QUOTED. Never put a fan's, viewer's, or social-media
   reaction in quotation marks — say the sentiment in YOUR OWN words ("audiences are calling
@@ -19,9 +20,15 @@ HARD RULES:
   glowing"). Quoting a random person verbatim reads terribly in a reel. A SHORT on-record
   quote from a NAMED star or director is fine; an unnamed person's reaction is always reworded.
 - ONE story only. No background tangents.
+- NEVER break the fourth wall or reference the source or your own reporting. BANNED phrasings: "the article notes/says", "the report says/adds/notes", "the story says", "sources say", "it's been reported", "as mentioned", and any "according to [outlet/anyone]". You ARE the reporter — state every fact directly and first-hand, as if you have the information yourself. (A named on-record quote from a real star or director is still fine.)
 - HOOK (sentence 1): ≤12 words, contains the star/film name AND the single most surprising concrete fact. No greetings, no "in recent news", never open with "revealed/teased/talked about".
 - Order facts by DESCENDING surprise — the best material inside the first 10 seconds, never saved for the end.
-- Sentences ≤14 words, punchy, spoken-word rhythm (contractions fine). ${IG.script.minWords}-${IG.script.maxWords} words total (aim for the 30-40s upper range when the material allows; 25-30s is fine for a thinner story — reach the floor by expanding the REAL details engagingly, never by padding).
+- LENGTH IS A HARD GATE — over-length gets the whole script AUTO-REJECTED, so stay disciplined:
+  COUNT the words in every sentence and keep EACH ONE to ≤14 words; the moment a sentence reaches
+  15, split it into two short ones. Keep the WHOLE script ${IG.script.minWords}-130 words (aim 30-40s
+  when the material allows; 25-30s is fine for a thinner story — reach the floor by expanding REAL
+  details engagingly, never padding). The CLOSING QUESTION is the strictest: 12 words MAX, punchy and
+  direct — a long, winding question kills the ending AND cannot be auto-fixed, so it will HOLD the video.
 - WRITE FOR THE VOICE: read your script aloud in your head — it must flow as ONE continuous
   broadcast, never a list of disconnected lines. Get flow from SHORT connected sentences, never
   from long ones: start sentences with natural momentum connectives where they help the handoff
@@ -36,9 +43,10 @@ HARD RULES:
   closing question carry momentum INTO it — they raise the exact tension the question resolves.
   NEVER put a tangent, a roster/list ("also have kids X, Y, Z"), a side-fact, or a date-dump in
   the final third; those belong in the MIDDLE. A low-energy fact dropped before the question is
-  what makes an ending feel "tacked on" — end on the through-line, not a footnote.
+  what makes an ending feel "tacked on" — end on the through-line, not a footnote. The LAST person or work you NAME before the closing question MUST be the story's MAIN subject — never a secondary name (a sibling, a bystander, a separate sighting): the closing shot follows the last subject named, so a side character there hijacks the final frame. Secondary names go in the MIDDLE only.
 - USE THE FULL RANGE of facts — every sentence adds a DIFFERENT fact or angle, never circling back. COMBINE closely-related facts into ONE beat (two facts about the same detail = one sentence, not two restatements). Never repeat the same fact, phrase, or point.
 - Numbers: write digits (the pronunciation pass handles speech).
+- PACE THE NUMBERS. Never stack multiple figures in one sentence — a voice rushes them and the scale is lost. Give each key number its OWN short beat with a word of context: "It opened to $160 million at home. Another $640 million overseas. That's $800 million worldwide." — NOT "160 million domestic and 640 million overseas for 800 million total." One figure per breath.
 
 Return STRICT JSON: {"sentences":[string], "hookStyle":"record-number"|"casting-shock"|"first-look"|"return-nostalgia"|"debate"|"reveal", "ending":"question"}`;
 
@@ -140,9 +148,19 @@ export async function writeScript({ article, facts, segment, engage }) {
   // and are deterministically fixable — split an overlong hook at its natural break, then
   // trim whole body sentences (hook block + ending pair stay intact) until under the ceiling.
   // Only fires when EVERY remaining violation is mechanical; content gates are never papered over.
-  const MECH = new Set(["too-long", "duration", "hook-too-long", "sentence-too-long"]);
+  const MECH = new Set(["too-long", "duration", "hook-too-long", "sentence-too-long", "repetition"]);
   if (lastScript && violations.length && violations.every((v) => MECH.has(v.rule))) {
     let s = [...lastScript.sentences];
+    // 0) a repeated body line is deterministically fixable — DROP the later sentence of each
+    //    repeated pair (the linter reports "sentences X and Y repeat …"; Y is the later one).
+    //    Never drop the hook (0) or the ending pair (last 2). (owner 2026-07-12)
+    const dropIdx = new Set();
+    for (const v of violations) {
+      if (v.rule !== "repetition") continue;
+      const m = String(v.detail).match(/sentences \d+ and (\d+)/);
+      if (m) { const y = parseInt(m[1], 10) - 1; if (y > 0 && y < s.length - 2) dropIdx.add(y); }
+    }
+    if (dropIdx.size) s = s.filter((_, i) => !dropIdx.has(i));
     // 1) an overlong HOOK splits at its last natural break (keeps the entity+fact up front)
     if (s.length && normWords(s[0]).length > 14) {
       const m = s[0].match(/^(.{8,}?)\s*[,;:—–-]\s+(.+)$/); // a comma/dash gives a clean seam
@@ -166,9 +184,17 @@ export async function writeScript({ article, facts, segment, engage }) {
       const cut = Math.ceil(w.length / 2);
       return [w.slice(0, cut).join(" ").replace(/[,;:]+$/u, "") + ".", w.slice(cut).join(" ")];
     });
-    // 2) trim body sentences from just before the ending pair until under the word ceiling
-    const cap = IG?.script?.maxWords ?? 144;
-    while (normWords(s.join(" ")).length > cap && s.length > 7) s.splice(s.length - 3, 1);
+    // 2) converge: drop body sentences until BOTH the total is under the word ceiling AND no
+    //    body line is still over the sentence cap (an un-splittable quote — Dolly Parton's 152w
+    //    held because a 21-word quote line could not be split and was never trimmed). Prefer
+    //    dropping the over-cap line; else the last body line. Hook + ending pair stay intact.
+    const cap = IG?.script?.maxWords ?? 136;
+    const overIdx = (arr) => arr.findIndex((sent, i) => i > 0 && i < arr.length - 2 && normWords(sent).length > SENT_CAP);
+    let guard = 0;
+    while ((normWords(s.join(" ")).length > cap || overIdx(s) >= 0) && s.length > 6 && guard++ < 24) {
+      const oi = overIdx(s);
+      s.splice(oi >= 0 ? oi : s.length - 3, 1);
+    }
     const trimmed = { ...lastScript, sentences: s };
     const still = [...lintScript(trimmed, facts.entities, `${article.title} ${facts.storyOneLine || ""}`), ...lintEnding(trimmed.sentences, engage?.goal || "comments")];
     if (!still.length) return { script: trimmed, attempts: 3, trimmed: true };

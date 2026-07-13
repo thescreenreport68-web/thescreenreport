@@ -4,8 +4,13 @@
 // no spend, fully testable offline.
 import { normWords } from "../lib/util.mjs";
 
+// STRONG event words only. "set", "filming", "shoot", "tour" were REMOVED (owner 2026-07-12):
+// they appear in ordinary movie-news sentences ("one before filming", "on the set") and were
+// binding beats to hollow, imageless "event" entities (e.g. a "2008 Vanity Fair interview" that
+// then owned a third of the video with no picture). An event owns a beat only on an unambiguous
+// event word — or when the event entity itself is named.
 const EVENT_HINT_RE =
-  /\b(wedding|ceremony|vows|reception|premiere|red carpet|award|awards|oscars|emmys|globes|festival|comic.?con|set|filming|shoot|concert|tour|funeral|memorial|gala|afterparty|after-party)\b/i;
+  /\b(wedding|ceremony|vows|reception|premiere|red carpet|award|awards|oscars|emmys|globes|festival|comic.?con|concert|funeral|memorial|gala|afterparty|after-party)\b/i;
 
 // tokens that identify an entity in spoken text (surname alone counts: "Kelce cried")
 function entityTokens(e) {
@@ -32,19 +37,34 @@ export function buildBeats({ sentences, windows, entities }) {
     const win = windows[i] || windows[windows.length - 1] || { t0: 0, t1: 0 };
     let subjects = subjectsInSentence(sentences[i], entities);
     let kind;
-    const mentionsEvent =
-      (eventEntity && subjects.includes(eventEntity.name)) || EVENT_HINT_RE.test(sentences[i]);
-    if (mentionsEvent && eventEntity) {
-      // the event owns the beat; people named alongside ride in the hero strip
-      subjects = [eventEntity.name, ...subjects.filter((s) => s !== eventEntity.name)].slice(0, 4);
-      kind = "event";
-    } else if (subjects.length >= 3) {
-      subjects = subjects.slice(0, 4);
+    // PEOPLE FIRST (owner 2026-07-12): a named PERSON always owns the beat — people have real
+    // photos; a hard-to-image EVENT (a private wedding has NO photo, so its "image" resolves to
+    // news-coverage = a reporter's face) must NEVER hijack a beat just because the sentence says
+    // "wedding". The event image only owns a beat when NO person is named in that sentence.
+    const people = eventEntity ? subjects.filter((s) => s !== eventEntity.name) : subjects;
+    if (people.length >= 3) {
+      subjects = people.slice(0, 4);
       kind = "group";
-    } else if (subjects.length === 2) {
+    } else if (people.length === 2) {
+      subjects = people;
       kind = "duo";
-    } else if (subjects.length === 1) {
+    } else if (people.length === 1) {
+      subjects = people;
       kind = "single";
+    } else if (eventEntity && (subjects.includes(eventEntity.name) || EVENT_HINT_RE.test(sentences[i]))) {
+      // The beat is about the event but names no person. Show the PEOPLE the event is ABOUT — a
+      // wedding IS its couple — instead of a generic "event" image (a private event has no photo,
+      // so it resolves to news-coverage = a reporter). Use the event entity itself only if it
+      // names nobody (then a real public-event photo, e.g. a premiere, is legitimate). (2026-07-12)
+      const ev = eventEntity.name.toLowerCase();
+      const eventPeople = entities.filter((e) => e.kind !== "event" && entityTokens(e).some((t) => t.length > 2 && ev.includes(t)));
+      if (eventPeople.length) {
+        subjects = eventPeople.slice(0, 4).map((e) => e.name);
+        kind = eventPeople.length >= 3 ? "group" : eventPeople.length === 2 ? "duo" : "single";
+      } else {
+        subjects = [eventEntity.name];
+        kind = "event";
+      }
     } else {
       kind = "carry";
     }

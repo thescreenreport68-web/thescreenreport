@@ -10,12 +10,17 @@ const CTAS = [
   "Follow @thescreenreport for daily movie news.",
 ];
 
+// Light AI-assisted disclosure (VIDEO_PUBLISHING_PLAYBOOK.md §1 Meta + to-do #7): Meta best practice
+// for a news brand — the API-level isAiGenerated flag is set too, but "undisclosed-then-caught is worse".
+// Kept to ONE subtle line, placed above the hashtags, never inside line1 (the clean Google snippet).
+const AI_NOTE = "AI-assisted recap by The Screen Report.";
+
 const SYS = `You write Instagram Reel captions for a Hollywood news brand. Goal: search reach + sends.
 Return STRICT JSON: {"line1":string,"body":string,"hashtags":[string],"cta":string,"firstComment":string}
 
 RULES:
 - line1: ≤55 characters, MUST contain the #1 entity name literally, states the hook fact plainly (it doubles as the Google snippet — factual, no emoji, no clickbait).
-- body: 2-3 short factual sentences from the provided facts ONLY; natural keywords (full title, person names, event words like "box office", "casting", "trailer"); attribution style "according to Variety" (name, never a link).
+- body: 2-3 short factual sentences from the provided facts ONLY; natural keywords (full title, person names, event words like "box office", "casting", "trailer"). NEVER name, cite, or attribute to a news outlet or source — no "according to <outlet>", no "per <outlet>", no "reports say", no publication names anywhere. State the facts directly, as our own reporting.
 - hashtags: exactly 4, ONLY in the hashtags array (never inside line1/body/cta) — 1-2 evergreen niche (#MovieNews #BoxOffice #Hollywood #CelebrityNews pick relevant) + 2-3 story entities (#Superman #JamesGunn). No generic tags ever (#fyp #viral #reels).
 - cta: ONE of the provided CTA patterns, adapted to this story's fandom.
 - firstComment: one warm, factual line that invites replies (a real question about the story, no bait phrasing).
@@ -30,6 +35,17 @@ export function repairCaption(cap, entities = []) {
     let text = strip(out[field]);
     // only letter-initial tags — "#1 movie in America" must keep its rank token
     text = text.replace(/#([A-Za-z]\w*)/g, (_, t) => { foundTags.push(`#${t}`); return ""; }).replace(/\s{2,}/g, " ").trim();
+    // HARD source-attribution strip (owner 2026-07-12): an IG reel/caption must NEVER cite a source.
+    // The prompt used to append "according to Variety" and the model did so on EVERY caption
+    // regardless of the real outlet — remove any attribution clause deterministically so none ships.
+    text = text
+      // unambiguous attribution clauses only (NOT bare "per"/"via" — those hit "$5M per screen",
+      // "shared via Instagram"); the prompt already forbids all attribution, this is the net.
+      .replace(/[\s,;:—-]*\b(?:according to|as reported by|reported by|as per|sourced from)\b[^.?!]*(?=[.?!]|$)/gi, "")
+      .replace(/[\s,;:—-]*\b(?:per|via)\s+[A-Z][A-Za-z.&'’-]+(?:\s+[A-Z][A-Za-z.&'’-]+){0,2}/g, "") // "per Variety", "via TMZ", "per Rolling Stone" — capitalized outlet only
+      .replace(/\s{2,}/g, " ")
+      .replace(/\s+([.?!,;:])/g, "$1")
+      .trim();
     out[field] = text;
   }
   let tags = [...(out.hashtags || []).map((t) => (String(t).startsWith("#") ? String(t) : `#${t}`)), ...foundTags];
@@ -81,7 +97,7 @@ export async function writeCaption({ facts, segment, ctaIndex = 0, engage = null
     );
     violations = lintCaption(cap, facts.entities);
     if (!violations.length) {
-      cap.full = [cap.line1, "", cap.body, "", cap.cta, "", cap.hashtags.join(" ")].join("\n").trim();
+      cap.full = [cap.line1, "", cap.body, "", cap.cta, "", AI_NOTE, "", cap.hashtags.join(" ")].join("\n").trim();
       return { caption: cap, attempts: attempt + 1 };
     }
   }

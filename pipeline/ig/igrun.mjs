@@ -20,13 +20,14 @@ import { IG, SITE } from "./config.mjs";
 import { costSpent, costCalls, costReset } from "./models.mjs";
 import { newJob, loadJob, saveJob, jlog, holdJob, stageDone, workDirFor } from "./job.mjs";
 import { ensureDir, todayInTz, normWords, parseFrontmatter, stripMarkdown } from "./lib/util.mjs";
-import { isPaused, recordPosted, recordBuilt, postedToday, dayAlreadyScheduled, markDayScheduled, isPosted, recordHold, isHeld, loadPosted, savePosted } from "./lib/ledger.mjs";
+import { isPaused, recordPosted, recordBuilt, topicKey, postedToday, scheduledSlotsToday, isPosted, recordHold, isHeld, loadPosted, savePosted } from "./lib/ledger.mjs";
 import { lintManifest } from "./lib/lint.mjs";
 import { estimateSeconds } from "./lib/lint.mjs";
 
 import { scout, listCandidates } from "./agents/scout.mjs";
 import { gather } from "./agents/gather.mjs";
 import { verify } from "./agents/verify.mjs";
+import { enrich } from "./agents/enrich.mjs";
 import { sensitiveGate } from "./agents/sensitive.mjs";
 import { writeScript } from "./agents/script.mjs";
 import { pronounce } from "./agents/pronounce.mjs";
@@ -113,7 +114,22 @@ async function processJob(article, { skipStages = new Set() } = {}) {
   }
   // 3 VERIFY
   if (need("verify")) {
-    const r = await stageRun(job, "verify", () => verify(job.facts), 120000);
+    const r = await stageRun(job, "verify", async () => {
+      let result = await verify(job.facts);
+      // ENRICH thin stories (owner 2026-07-12): if OUR article alone yields too few verified facts
+      // to fill a reel, pull MORE verified facts about the SAME people/event from related news, then
+      // RE-VERIFY (the added facts are entailment-checked against the coverage they came from, so
+      // nothing unsupported survives). Only runs when thin; fully best-effort (never throws).
+      if (result.facts.length < (IG.enrich?.minFacts ?? 6)) {
+        const added = await enrich(job.facts);
+        if (added.count) {
+          jlog(job, "verify", `thin (${result.facts.length}) → enrich +${added.count} related facts → re-verify`);
+          result = await verify(job.facts);
+          job.enrich = { added: added.count, kept: result.facts.length, queries: added.queries };
+        }
+      }
+      return result;
+    }, 200000);
     if (!r.ok) return holdJob(job, "verify", r.error);
     if (r.result.hold) return holdJob(job, "verify", r.result.hold);
     job.facts.facts = r.result.facts;
@@ -357,6 +373,10 @@ async function main() {
   const live = Boolean(args.live);
   const noPublish = Boolean(args["no-publish"]);
   const limit = Math.min(parseInt(args.limit || "1", 10), IG.maxPerDay);
+  // --posts = how many videos this run should actually BUILD+schedule (stop after N successes even if
+  // the slate is larger — a per-slot cron uses --limit=4 --posts=1: attempt up to 4 candidates, ship
+  // the first that builds). Defaults to --limit for back-compat. (owner 2026-07-13)
+  const targetPosts = Math.min(parseInt(args.posts || String(limit), 10), IG.maxPerDay);
 
   // slate
   let slate;
@@ -383,7 +403,7 @@ async function main() {
     // a momentary OpenRouter/discovery outage must NOT crash the unattended workflow —
     // treat a scout failure as "no candidates today" (the run exits cleanly). (audit 2026-07-11)
     try {
-      slate = await scout({ limit });
+      slate = await scout({ limit, lane: args.lane });
     } catch (e) {
       console.error(`scout failed (${e.message}) — no slate this run`);
       return;
@@ -395,11 +415,15 @@ async function main() {
   }
   if (!slate.length) { console.log("scout: no viable candidates today"); return; }
 
-  // caps + one-whole-day guard (live only)
+  // caps + per-slot guard (live only). 7-runs-per-day model (owner 2026-07-13): each run fills the
+  // NEXT EMPTY slot, so the guard is per-SLOT (never double-fill a taken slot) + a daily count — NOT
+  // the old one-whole-day flag, which would have made runs 2-7 exit as "already scheduled".
   const day = todayInTz(IG.slots.postTz);
+  let filledSlots = [];
   if (live) {
-    if (dayAlreadyScheduled(day)) { console.log(`already scheduled for ${day} — exiting (double-post guard)`); return; }
-    if (postedToday() + slate.length > IG.hardDailyCap) { console.log("daily hard cap would be exceeded — exiting"); return; }
+    filledSlots = scheduledSlotsToday(day);
+    if (filledSlots.length >= IG.slots.primeET.length) { console.log(`all ${IG.slots.primeET.length} slots for ${day} already filled — exiting (double-post guard)`); return; }
+    if (postedToday() >= IG.hardDailyCap) { console.log("daily hard cap reached — exiting"); return; }
   }
 
   // build every job
@@ -425,16 +449,20 @@ async function main() {
     }
     if (job.hold) { console.log(`  ⏸ HOLD at ${job.hold.stage}: ${job.hold.reason}`); continue; }
     console.log(`  ✅ built: ${job.render.mp4} (QC ${job.qc.watch?.score})`);
-    recordBuilt(job.id); // never rebuild this story — even in --no-publish (repetition guard)
+    // never rebuild this story, and record its TOPIC (title + real entity names) so the scout
+    // skips other reels about the SAME event next run (topic dedup, not just slug dedup)
+    recordBuilt(job.id, topicKey(`${job.article?.title || job.id} ${(job.facts?.entities || []).map((e) => e.name).join(" ")}`));
     built.push(job);
+    if (built.length >= targetPosts) break; // built enough for this run's slot(s) — stop, don't over-build
   }
 
   // publish
   let anyPublished = false;
   if (built.length && !noPublish) {
-    const slots = planSlots(built);
+    const slots = planSlots(built, { filledSlots });
     for (const job of built) {
       const slot = slots.find((s) => s.slug === job.id);
+      if (!slot) { console.log(`  ⏸ no open slot left today for ${job.id} — not scheduling`); continue; }
       try {
         const pub = await publish({ job, mp4: job.render.mp4, cover: job.render.cover, whenISO: slot.whenISO, live });
         job.publish = { ...pub, slot: slot.slot };
@@ -456,9 +484,6 @@ async function main() {
         console.error(`  📛 publish failed for ${job.id}: ${e.message}`);
       }
     }
-    // a day counts as scheduled ONLY if something actually got scheduled — a transient
-    // publish outage must not silence the whole day (review finding)
-    if (live && anyPublished) markDayScheduled(day);
   }
 
   // run report (cost honesty: spend ÷ PUBLISHED)

@@ -1,7 +1,6 @@
 // AGENT 22 — SLOT PLANNER (plan §2.2 #22, §1.9): breaking → now; else prime ET slots
 // with jitter; ramp caps enforced; one-whole-day guard lives in the orchestrator.
 import { IG } from "../config.mjs";
-import { loadWeights } from "../lib/ledger.mjs";
 
 // tz-aware "next occurrence of HH:MM in ET" without deps.
 // Offset trick uses BOTH-sides-toLocaleString so the runner's own timezone cancels out
@@ -32,25 +31,26 @@ function jitterMin(slug) {
   return (h % (IG.slots.jitterMin * 2 + 1)) - IG.slots.jitterMin;
 }
 
-export function planSlots(jobs, { now = new Date() } = {}) {
-  const weights = loadWeights();
-  const slotOrder = [...IG.slots.primeET].sort((a, b) => (weights.slots?.[b] ?? 0) - (weights.slots?.[a] ?? 0));
-  let slotIdx = 0;
+// Assign each job to the EARLIEST UPCOMING slot that isn't already taken — by a prior run today
+// (`filledSlots`) or by an earlier job in this same run. A slot that already passed today resolves
+// (via nextEt) to tomorrow, so a missed slot is simply skipped, never back-filled and never doubled.
+// This is what makes the 7-separate-runs-per-day model correct. (owner 2026-07-13)
+export function planSlots(jobs, { now = new Date(), filledSlots = [] } = {}) {
+  const taken = new Set(filledSlots);
   const assignments = [];
   for (const job of jobs) {
     if (job.scout?.breaking) {
       assignments.push({ slug: job.id, whenISO: new Date(now.getTime() + 6 * 60000).toISOString(), slot: "breaking" });
       continue;
     }
-    const base = nextEt(slotOrder[slotIdx % slotOrder.length], assignments.length ? new Date(assignments[assignments.length - 1].whenISO) : now);
-    const when = new Date(base.getTime() + jitterMin(job.id) * 60000);
-    // never closer than 2h to the previous assignment (never burst-fire)
-    const prev = assignments[assignments.length - 1];
-    const finalWhen = prev && when.getTime() - new Date(prev.whenISO).getTime() < 2 * 3600e3
-      ? new Date(new Date(prev.whenISO).getTime() + 2.5 * 3600e3)
-      : when;
-    assignments.push({ slug: job.id, whenISO: finalWhen.toISOString(), slot: slotOrder[slotIdx % slotOrder.length] });
-    slotIdx++;
+    const option = IG.slots.primeET
+      .filter((s) => !taken.has(s))
+      .map((s) => ({ s, t: nextEt(s, now) }))
+      .sort((a, b) => a.t.getTime() - b.t.getTime())[0];
+    if (!option) break; // every slot is taken — the caller leaves this job unscheduled
+    const when = new Date(option.t.getTime() + jitterMin(job.id) * 60000);
+    assignments.push({ slug: job.id, whenISO: when.toISOString(), slot: option.s });
+    taken.add(option.s);
   }
   return assignments;
 }

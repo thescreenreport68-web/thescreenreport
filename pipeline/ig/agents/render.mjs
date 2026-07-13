@@ -119,7 +119,7 @@ export function renderVideo({ slug, shots, assFile, mood = "neutral", durationSe
     `[vx]${grade},noise=alls=${tpl.grain}:allf=t,vignette=${tpl.vignette},` +
     `ass=${assRel}:fontsdir=fonts,` +
     `drawbox=y=0:h=ih:t=fill:color=black@0.55:enable='gte(t,${endStart})',` +
-    `drawtext=fontfile=fonts/Fraunces.ttf:text='${tpl.endTag}':fontsize=42:fontcolor=white@0.85:letter_spacing=3:x=(w-tw)/2:y=(h/2)+132:enable='gte(t,${endStart})',` +
+    `drawtext=fontfile=fonts/Fraunces.ttf:text='${tpl.endTag}':fontsize=44:fontcolor=white@0.9:x=(w-tw)/2:y=(h/2)+132:enable='gte(t,${endStart})',` +
     `trim=duration=${durationSec.toFixed(3)},setpts=PTS-STARTPTS[base]`
   );
   // TSR corner mark (persistent, small, brand opacity) + wordmark (endcard only, full)

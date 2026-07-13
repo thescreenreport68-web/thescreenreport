@@ -210,16 +210,20 @@ await t("scenes: multi-name beat + event beat + carry inheritance", async () => 
     { name: "Adam Sandler", kind: "person" }, { name: "the wedding", kind: "event" },
   ];
   const sentences = [
-    "Travis Kelce cried during his wedding vows to Taylor Swift.",
-    "He was more emotional than anyone expected.",
-    "Adam Sandler officiated the ceremony.",
-    "Would you have Adam Sandler and Taylor Swift at your party?",
+    "Travis Kelce cried during his wedding vows to Taylor Swift.", // names the couple → show the COUPLE, not an event image
+    "The wedding was the event of the year.", // names NO person → event image legitimately owns it
+    "Adam Sandler officiated it.", // one person → single
+    "Would you have Adam Sandler and Taylor Swift at your party?", // two people → duo
   ];
   const windows = sentences.map((_, i) => ({ t0: i * 3, t1: i * 3 + 2.8 }));
   const beats = buildBeats({ sentences, windows, entities: ents });
-  assert.equal(beats[0].kind, "event", "wedding sentence = event beat");
-  assert.ok(beats[0].subjects[0] === "the wedding", "event owns the beat");
-  assert.deepEqual(beats[1].subjects, [beats[0].subjects[0]].slice(0, 1), "carry inherits");
+  // PEOPLE FIRST: a wedding sentence that names the couple shows the couple, never a reporter-ish event image
+  assert.equal(beats[0].kind, "duo", "wedding sentence naming the couple = show the couple");
+  assert.deepEqual([...beats[0].subjects].sort(), ["Taylor Swift", "Travis Kelce"], "the couple owns the beat");
+  // only a sentence naming NO person may fall to the event image
+  assert.equal(beats[1].kind, "event", "wedding sentence naming nobody = event beat");
+  assert.equal(beats[1].subjects[0], "the wedding", "event owns the person-less beat");
+  assert.equal(beats[2].kind, "single", "one person named = single");
   assert.equal(beats[3].kind, "duo");
   assert.deepEqual(subjectsInSentence(sentences[3], ents).sort(), ["Adam Sandler", "Taylor Swift"]);
 });
@@ -355,7 +359,7 @@ await t("scout: candidate scan honors category/rumor/freshness/dedup", async () 
   const fresh = now.toISOString();
   write("cand-movie", { cat: "movies", date: fresh });
   write("cand-rumor", { cat: "celebrity", date: fresh, more: "storyStatus: RUMOR\n" });
-  write("cand-old", { cat: "movies", date: new Date(now - 10 * 864e5).toISOString() });
+  write("cand-old", { cat: "movies", date: new Date(now - 20 * 864e5).toISOString() }); // well past freshDays=10
   write("cand-music", { cat: "music", date: fresh });
   write("old-lane-slug", { cat: "movies", date: fresh }); // already in old ledger
   const c = listCandidates({ now });
@@ -381,7 +385,7 @@ await t("scout: mocked scoring + variety cap", async () => {
 });
 
 // ── verify agent (mocked LLM, real walls) ──────────────────────────────────────
-await t("verify: fabricated quote → hold; unsupported → cut; thin → hold", async () => {
+await t("verify: source trusted — unverified quote/contradiction never HOLD (cut, not block)", async () => {
   setMock(({ kind }) => (kind === "llm" ? { verdicts: [{ i: 0, verdict: "supported" }, { i: 1, verdict: "supported" }, { i: 2, verdict: "unsupported" }, { i: 3, verdict: "supported" }] } : undefined));
   const facts = {
     articleText: 'Superman opened to $220 million. James Gunn said "the fans made this happen" on Friday. A sequel is dated.',
@@ -397,10 +401,16 @@ await t("verify: fabricated quote → hold; unsupported → cut; thin → hold",
   assert.equal(r.hold, null);
   assert.equal(r.facts.length, 3);
   assert.equal(r.cuts.filter((c) => c.type === "claim").length, 1);
-  // fabricated quote
+  // an unverified/altered quote no longer HOLDS — source is trusted + writer paraphrases, so it
+  // drops to a normal claim and is kept
   const bad = { ...facts, facts: [{ claim: 'Gunn said "this movie saved cinema forever".', quote: true, surprise: 8 }, ...facts.facts.slice(1)] };
   const r2 = await verify(bad);
-  assert.ok(r2.hold && /quote/.test(r2.hold));
+  assert.ok(!r2.hold || !/quote/.test(r2.hold), "no fabricated-quote hold");
+  // a "contradicted" verdict is CUT, never a hold
+  setMock(({ kind }) => (kind === "llm" ? { verdicts: [{ i: 0, verdict: "contradicted" }, { i: 1, verdict: "supported" }, { i: 2, verdict: "supported" }, { i: 3, verdict: "supported" }] } : undefined));
+  const r3 = await verify(facts);
+  assert.ok(!r3.hold || !/contradict/.test(r3.hold), "no contradicted hold");
+  assert.ok(r3.cuts.some((c) => c.reason === "contradicted"), "contradicted claim is cut, not held");
   setMock(null);
 });
 

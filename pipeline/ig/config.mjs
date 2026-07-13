@@ -35,7 +35,13 @@ export const IG = {
     classify: ["inclusionai/ling-2.6-flash", "google/gemini-2.5-flash-lite"],
     gather: ["qwen/qwen3.5-flash-02-23", "google/gemini-2.5-flash-lite"],
     verify: ["google/gemini-2.5-flash-lite", "openai/gpt-5-nano"],
-    writer: ["deepseek/deepseek-v4-flash", "deepseek/deepseek-v3.2"],
+    // Writer: GPT-4.1-mini primary, Haiku 4.5 fallback (owner 2026-07-12). Haiku wrote the best-QUALITY
+    // scripts in the bake-off but proved TOO UNRELIABLE in live runs — it persistently over-writes
+    // (17-22w hooks vs the 16 cap, 20-23w sentences, 146-159w totals) and botches the mandatory
+    // question+CTA ending, and the mechanical repair CANNOT fix an over-long ending → it HELD 3 straight
+    // runs (build rate ~27%). GPT-4.1-mini built 100% of test topics, is faithful + no-fourth-wall, and is
+    // ~6x cheaper. Reliability wins for a 24/7 automation; Haiku stays as the fallback. (owner 2026-07-12)
+    writer: ["openai/gpt-4.1-mini", "anthropic/claude-haiku-4.5"],
     caption: ["google/gemini-2.5-flash-lite", "inclusionai/ling-2.6-flash"],
     vision: ["google/gemini-2.5-flash-lite", "qwen/qwen3.5-flash-02-23"],
     judge: ["google/gemini-2.5-flash", "google/gemini-2.5-flash-lite"],
@@ -61,22 +67,29 @@ export const IG = {
     // reads score structurally lower than the short ones the old floor was tuned on)
     floorPerAxis: 6,
     floorTotal: 18,
-    hardFloorScore: 12, // below this = unusable, hold; between hardFloor and floor = ship best + warn
+    // The ear-judge RANKS takes well but is a NOISY absolute gate (identical marin delivery scores
+    // 8-22). marin is the owner's APPROVED voice, so a noisy low score must not HOLD an otherwise-
+    // good video — ship the best marin take with a warning and let the owner arbitrate; only a truly
+    // broken read (<8) or the owner-rejected Kokoro fallback still holds. (owner 2026-07-12)
+    hardFloorScore: 8, // below this = unusable, hold; between hardFloor and floor = ship best + warn
     // -34dB (not -40): TTS breath/room tone sits ~-38dB and must count as silence,
     // or long gaps survive the tightener (bake-off finding 2026-07-10).
     // protectTailSec: the ENDING must breathe — no tightening inside the final beat
     // (owner: the ask needs a natural pause before it, never slammed).
-    tighten: { minSilence: 0.3, keepSilence: 0.22, threshold: "-34dB", protectTailSec: 4.5, floorSec: 30 },
+    // keepSilence 0.22 → 0.26: leave inter-sentence pauses a touch longer so the read breathes and
+    // is easier to follow (owner 2026-07-12: "reduce the pacing a little"). Paired with the slower
+    // delivery prompt; both nudges are small so durations stay inside the 25-44s band.
+    tighten: { minSilence: 0.3, keepSilence: 0.26, threshold: "-34dB", protectTailSec: 4.5, floorSec: 30 },
     maxLongGaps: 1, // remaining pauses >0.45s allowed after tightening (outside the tail)
   },
   endTailSec: 1.8, // endcard/audio ease-out after the last word (was 0.9 — too abrupt)
 
   // ── caps + ramp (plan §1.9/§6.1) — the orchestrator enforces these in code.
-  maxPerDay: 4, // ramp ceiling; week-1 operators run --limit=1
+  maxPerDay: 7, // owner 2026-07-13: 7 posts/day, one per LA slot (10a/12p/2p/4p/6p/8p/10p)
   hardDailyCap: 20, // absolute (platform quota is 50-100; we stay far under)
   maxRunUsd: 1.0, // kill the run if LLM+voice+music spend exceeds this
   maxJobUsd: 0.25, // park a single job if it alone exceeds this
-  freshDays: 4, // scout candidate window (2 was too tight — fresh news/gossip aged out by hours while only reaction pieces were day-of; 4 keeps it recent but gives real stories a slate)
+  freshDays: 10, // scout candidate window. Reels REPURPOSE already-published entertainment stories — a gossip/box-office piece from a week ago is still perfectly shareable (it's not breaking news), and a 4-day window left the gossip lane with 0 candidates (56/91 aged out). 10 days keeps a healthy slate. (owner 2026-07-12)
   categories: ["movies", "tv", "celebrity"],
   moviesFirstShare: 0.8, // ~80/20 movies-first bias in slate scoring
 
@@ -87,6 +100,12 @@ export const IG = {
   // engagingly expands a thin story up to the floor rather than holding. wps = the observed
   // gpt-audio pace after pause-tightening.
   script: { minWords: 88, maxWords: 136, minSec: 25, maxSec: 44, targetSec: [30, 40], wps: 3.4 },
+
+  // Enrichment (owner 2026-07-12): when OUR article yields fewer than `minFacts` verified facts,
+  // pull MORE verified facts about the SAME people/event from related news so the reel can reach
+  // length — never padding/inventing (every added fact is re-verified). Best-effort; only for thin
+  // stories. maxFullFetches caps the deeper Jina article fetches per run (snippets are always used).
+  enrich: { minFacts: 7, maxAdd: 5, maxFullFetches: 3 },
 
   // ── render spec (plan §1.3 anti-downrank invariants + §5.6 premium bar)
   width: 1080,
@@ -112,8 +131,11 @@ export const IG = {
     watermarkOpacity: 0.7,
   },
 
-  // ── slots (plan §1.9): breaking posts immediately; else prime ET slots, jittered
-  slots: { primeET: ["12:30", "19:30"], timezone: "America/New_York", postTz: "America/Los_Angeles", jitterMin: 9 },
+  // ── slots (owner 2026-07-13): 7 posts/day at fixed LOS ANGELES local times. `timezone` drives
+  // slot computation (nextEt) and `postTz` is what Zernio schedules against — both LA now, so the
+  // times are DST-correct year-round. Small jitter keeps it human without drifting off the hour.
+  // (the `primeET` key name is kept for back-compat; the values are LA times.)
+  slots: { primeET: ["10:00", "12:00", "14:00", "16:00", "18:00", "20:00", "22:00"], timezone: "America/Los_Angeles", postTz: "America/Los_Angeles", jitterMin: 4 },
 
   // ── zernio (bridge; posts via Meta's official API — no reach penalty, verified)
   zernio: {

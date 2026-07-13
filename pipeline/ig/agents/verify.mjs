@@ -59,7 +59,7 @@ export async function verify(facts) {
   const res = await llm({
     role: "verify",
     system: SYS,
-    user: `ARTICLE:\n${article.slice(0, 8000)}${facts.sourceText ? `\n\nSOURCE EXCERPTS (also count as support):\n${facts.sourceText.slice(0, 4000)}` : ""}\n\nCLAIMS:\n${claims}`,
+    user: `ARTICLE:\n${article.slice(0, 8000)}${facts.sourceText ? `\n\nSOURCE EXCERPTS (also count as support):\n${facts.sourceText.slice(0, 9000)}` : ""}\n\nCLAIMS:\n${claims}`,
     temp: 0,
     maxTokens: 700,
     json: true,

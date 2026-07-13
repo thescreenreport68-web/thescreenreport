@@ -78,7 +78,23 @@ export function normWords(s) {
     .replace(/[’‘]/g, "'")
     .replace(/[^a-z0-9'$% ]+/g, " ")
     .split(/\s+/)
+    // strip WRAPPING quote apostrophes so a quoted title matches its own tokens:
+    // "'knocked" → "knocked", "up'" → "up". Internal apostrophes stay, so contractions
+    // ("didn't") and possessives are untouched. Titles are ALWAYS quoted in scripts, so without
+    // this a movie/TV title never matched its sentence → its poster was sourced but never placed
+    // and every gap fell back to the primary person's face. (root fix, owner 2026-07-12)
+    .map((w) => w.replace(/^'+|'+$/g, ""))
     .filter(Boolean);
+}
+
+// NUMBER/CURRENCY tokens — the ONE place the spoken audio and its transcript legitimately
+// diverge: the pronounce stage expands "$1 billion" → "one billion dollars" while whisper writes
+// "1 billion" / "$1B". Numbers are checked by their own literal wall, so the VERBATIM comparison
+// (ad-lib/length/drift) must ignore them or a number-heavy box-office script shows a huge false
+// drift and every take gets rejected → Kokoro → hold. (owner 2026-07-12)
+const NUM_TOKEN = /^(\$?\d[\d,.]*%?|one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen|twenty|thirty|forty|fifty|sixty|seventy|eighty|ninety|hundred|thousand|million|billion|trillion|dollar|dollars|cent|cents|percent|first|second|third)$/;
+export function contentWords(s) {
+  return normWords(s).filter((w) => !NUM_TOKEN.test(w));
 }
 
 // Token-level edit ops between two word arrays (small inputs — O(n*m) fine).

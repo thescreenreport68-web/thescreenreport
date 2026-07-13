@@ -6,7 +6,7 @@ import { execFileSync } from "node:child_process";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { IG } from "../config.mjs";
-import { normWords, tokenDiff } from "../lib/util.mjs";
+import { normWords, tokenDiff, contentWords } from "../lib/util.mjs";
 
 const PY_DIR = path.join(path.dirname(fileURLToPath(import.meta.url)), "..", "py");
 
@@ -25,8 +25,11 @@ export function whisperAlign(wavPath) {
 // added sentence) always fail. (audit 2026-07-11: 0.12 here vs 0.18 precheck caused a valid
 // take to pass one gate and hold at the next.)
 export function verbatimVerdict(speakableText, whisper, { tolerance = 0.18, maxRunInserted = 4 } = {}) {
-  const a = normWords(speakableText);
-  const b = normWords(whisper.text);
+  // compare CONTENT words only — numbers/currency legitimately differ between the pronounced
+  // script and whisper ("one billion dollars" vs "1 billion") and have their own literal wall;
+  // counting them caused number-heavy box-office reels to false-fail on "length drift". (2026-07-12)
+  const a = contentWords(speakableText);
+  const b = contentWords(whisper.text);
   if (!a.length || !b.length) return { pass: false, kind: "empty", reason: "empty transcript" };
   // the ad-lib catcher FIRST — a long run of unknown words is the real fabrication signal
   const aSet = new Set(a);
