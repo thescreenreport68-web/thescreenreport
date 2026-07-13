@@ -1132,6 +1132,62 @@
      }
     ]
    }
+  },
+  {
+   "key": "rick-and-morty-2013|audience-reaction",
+   "at": "2026-07-13T06:51:21.091Z",
+   "updatedCount": 0,
+   "parentEventSlug": "rick-and-morty-2013",
+   "form": "audience-reaction",
+   "slug": "rick-and-morty-season-9-promises-a-full-tank-but-fans-are-still-split-on-the",
+   "title": "Rick and Morty Season 9 Promises a Full Tank — But Fans Are Still Split on the Ride",
+   "primaryEntity": "Rick and Morty",
+   "eventType": "discourse",
+   "harvestQuoteKeys": [
+    "i believe we will",
+    "the lease on my mazda miata certainly hopes so!",
+    "season 9 is 1 olive and 10 is 0 olives. actually thats tough i could go either way with th",
+    "i would say season 9 will convince everyone weve got a full tank of gas left in us.",
+    "the episode ideas are still really flowing, and rick still has plenty of mean left in him.",
+    "im excited for where we take rick over the course of the next few seasons. he has come a v",
+    "weve got a real cool one in season 9 that deals with false reality in a totally different ",
+    "jerry has some really memorable ones coming in 9!",
+    "portal colors do have meaning.",
+    "i am not at liberty to say, but there could be some interdimensional cable in the near fut",
+    "we had a lot of back and forth on this one, and ultimately felt like it not only provided ",
+    "the worst thing is that there are a lot of star trek fans that would *love* lower decks bu",
+    "didnt realize rick and morty season 9 (2026) is running on a 3-week delay on hulu and hbo ",
+    "watching rick and morty sounds super cool! its like diving into a mind-bending adventure, ",
+    "tune into adult swim on sunday, july 12th at 11:00 pm to catch the next brand new episode ",
+    "i had never seen a whole episode of rick and morty until now, and now i get it, rick and m",
+    "just saw mitch mcconnell walk out of the smoke shop with a rick and morty bong and $40 in ",
+    "last two rick and morty eps have been pretty amazing."
+   ],
+   "angle": {
+    "form": "audience-reaction",
+    "angle": "audience discourse",
+    "workingTitle": "Rick and Morty: what people are saying",
+    "focusEntity": "Rick and Morty",
+    "searchQueries": []
+   },
+   "trigger": {
+    "parentEventSlug": "rick-and-morty-2013",
+    "parentSlug": null,
+    "parentTitle": "Rick and Morty",
+    "primaryEntity": "Rick and Morty",
+    "eventType": "discourse",
+    "tmdbType": "tv",
+    "subjectKind": "title",
+    "priority": 44,
+    "category": "tv",
+    "overview": "Follows a sociopathic genius scientist who drags his inherently timid grandson on adventures across the universe.",
+    "work": {
+     "title": "Rick and Morty",
+     "type": "tv",
+     "year": "2013"
+    },
+    "sources": []
+   }
   }
  ],
  "parked": [
@@ -1262,9 +1318,9 @@
    "key": "michael-2026|audience-reaction",
    "parentEventSlug": "michael-2026",
    "form": "audience-reaction",
-   "reason": "under floor: audience posts 0 < 3",
-   "tries": 1,
-   "at": "2026-07-13T04:35:41.868Z"
+   "reason": "under floor: audience posts 1 < 3",
+   "tries": 2,
+   "at": "2026-07-13T06:44:24.418Z"
   },
   {
    "key": "love-island-beyond-the-villa-renewed-for-season-3-on-peacock|audience-reaction",
@@ -1273,6 +1329,30 @@
    "reason": "under floor: audience posts 1 < 3",
    "tries": 1,
    "at": "2026-07-13T04:37:58.936Z"
+  },
+  {
+   "key": "sam-neill-dies-jurassic-park-actor-was-78|audience-reaction",
+   "parentEventSlug": "sam-neill-dies-jurassic-park-actor-was-78",
+   "form": "audience-reaction",
+   "reason": "score 88 < 70",
+   "tries": 1,
+   "at": "2026-07-13T06:37:13.090Z"
+  },
+  {
+   "key": "ariana-madix-pays-tribute-to-late-love-island-usa-producer-j|audience-reaction",
+   "parentEventSlug": "ariana-madix-pays-tribute-to-late-love-island-usa-producer-j",
+   "form": "audience-reaction",
+   "reason": "under floor: audience posts 1 < 3",
+   "tries": 1,
+   "at": "2026-07-13T06:39:23.050Z"
+  },
+  {
+   "key": "anne-rice-s-mayfair-witches-alexandra-daddario-is-electrifyi|audience-reaction",
+   "parentEventSlug": "anne-rice-s-mayfair-witches-alexandra-daddario-is-electrifyi",
+   "form": "audience-reaction",
+   "reason": "under floor: audience posts 0 < 3",
+   "tries": 1,
+   "at": "2026-07-13T06:42:44.347Z"
   }
  ]
 }
