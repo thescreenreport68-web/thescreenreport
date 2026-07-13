@@ -1,25 +1,23 @@
 {
-  "runId": "run-2026-07-13T05-01-10",
-  "builtAt": "2026-07-13T05:01:39.852Z",
-  "count": 4,
+  "runId": "run-2026-07-13T07-01-08",
+  "builtAt": "2026-07-13T07:01:38.424Z",
+  "count": 7,
   "topics": [
     {
-      "id": "news-evil-dead-burn-director-breakdown",
-      "slug": "director-explains-the-brutal-vision-behind-evil-dead-burn",
-      "title": "Director Explains the Brutal Vision Behind 'Evil Dead Burn'",
+      "id": "news-evil-dead-burn-director-interview",
+      "slug": "director-discusses-evil-dead-burn-s-brutality-and-controversial-moment",
+      "title": "Director Discusses 'Evil Dead Burn's' Brutality and Controversial Moments",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
-      "eventType": "behind-the-scenes",
+      "eventType": "other",
       "sensitivity": "high",
-      "eventSlug": "evil-dead-burn-director-breakdown",
-      "primaryKeyword": "Evil Dead Burn director interview",
+      "eventSlug": "evil-dead-burn-director-interview",
+      "primaryKeyword": "Evil Dead Burn director",
       "primaryEntity": "Evil Dead Burn",
-      "entities": [
-        "Evil Dead Burn director"
-      ],
-      "angle": "The director of 'Evil Dead Burn' breaks down the film's brutal approach, discussing practical effects, real fire, and controversial plot points.",
+      "entities": [],
+      "angle": "The director of 'Evil Dead Burn' breaks down the film's brutal style and controversial choices.",
       "tmdbType": "movie",
       "source": "rss:Variety",
       "sources": [
@@ -27,12 +25,12 @@
           "outlet": "Variety",
           "tier": 7,
           "url": "https://variety.com/2026/film/news/evil-dead-burn-director-practical-effects-post-credits-scene-1236808969/",
-          "ageMin": 456,
+          "ageMin": 576,
           "headline": "Evil Dead Burn Director Breaks Down His Brand of French Brutality, From Practical Effects and Real Fire to That Post-Credits Scene",
           "summary": "SPOILER ALERT: This story contains major spoilers for “Evil Dead Burn,” now playing in theaters. “Evil Dead Burn” breaks one of the fundamental rules of cinema: Don’t kill the dog. “If you don t do that in Evil Dead, in which movie do you do that? These are the most insane, wild and basically evil movies,” director [ ]"
         }
       ],
-      "ageMin": 456,
+      "ageMin": 576,
       "_cand": {
         "key": "rss:evil-dead-burn-director-breaks-down-his-brand-of-french-brut",
         "popularity": 0,
@@ -53,12 +51,12 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 52,
+      "priority": 51,
       "signals": {
         "recency": 4,
         "corroboration": 12,
         "status": 18,
-        "type": 6,
+        "type": 5,
         "pop": 0,
         "breakout": 0,
         "big": 12,
@@ -67,40 +65,192 @@
       }
     },
     {
-      "id": "awards-italian-global-series-festival-winners",
-      "slug": "marco-bellocchio-sally-wainwright-win-big-at-italian-global-series-fes",
-      "title": "Marco Bellocchio, Sally Wainwright Win Big at Italian Global Series Festival Which Celebrated ‘Star Trek’ and ‘Lost’ and Lamented Industry Crisis",
-      "contentType": "awards",
-      "formatTag": "awards",
-      "category": "awards",
-      "subcategory": "winners",
-      "eventType": "award",
-      "sensitivity": "normal",
-      "eventSlug": "italian-global-series-festival-winners",
-      "primaryKeyword": "Italian Global Series Festival winners",
-      "primaryEntity": "Italian Global Series Festival",
+      "id": "news-sam-neill-dies",
+      "slug": "sam-neill-jurassic-park-star-dies-at-78",
+      "title": "Sam Neill, Jurassic Park Star, Dies at 78",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "death",
+      "sensitivity": "high",
+      "eventSlug": "sam-neill-dies",
+      "primaryKeyword": "sam neill",
+      "primaryEntity": "Sam Neill",
       "entities": [
-        "Richard Gadd",
-        "Natasha Lyonne",
-        "Half Man",
-        "Poker Face"
+        "Jurassic Park",
+        "The Piano"
       ],
-      "angle": "Richard Gadd and Natasha Lyonne were among the big winners at the Italian Global Series Festival.",
+      "angle": "Jurassic Park star Sam Neill has died at 78.",
       "tmdbType": "movie",
       "source": "rss:Variety",
       "sources": [
         {
           "outlet": "Variety",
           "tier": 7,
-          "url": "https://variety.com/2026/tv/global/anson-mount-richard-gadd-natasha-lyonne-marco-bellocchio-1236809133/",
-          "ageMin": 690,
-          "headline": "Marco Bellocchio, Sally Wainwright Win Big at Italian Global Series Festival Which Celebrated ‘Star Trek’ and ‘Lost’ and Lamented Industry Crisis",
-          "summary": "In honors, Richard Gadd ( Half Man ) and Natasha Lyonne ( Poker Face, Russian Doll ) were among the big winners at this year s Italian Global Series Festival, which wrapped July 11. The two received the Breakthrough Storyteller Award and the Maximo Excellence Award respectively, which they had picked up in person earlier last week at awards ceremonies [ ]"
+          "url": "https://variety.com/2026/film/obituaries-people-news/sam-neill-dead-jurassic-park-1236809330/",
+          "ageMin": 44,
+          "headline": "Sam Neill, Jurassic Park Star, Dies at 78",
+          "summary": "Sam Neill, the versatile actor whose career of more than 50 years was highlighted by his three appearances in the blockbuster “Jurassic Park” and “Jurassic World” franchises, died on July 13 in Sydney, Australia. He was 78. It is with immense sadness that the whānau [family] of Sam Neill share the news of his passing [ ]"
+        },
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/sam-neill-dead-actor-jurassic-park-the-piano-dies-1236646308/",
+          "ageMin": 60,
+          "headline": "Sam Neill, Actor in ‘Jurassic Park’ and ‘The Piano,’ Dies at 78",
+          "summary": "The pride of New Zealand and Australia also starred in ‘My Brilliant Career,’ ‘Dead Calm,’ ‘In the Mouth of Madness,’ ‘The Final Conflict’ and ‘Event Horizon.’"
+        },
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/sam-neill-jurassic-park-actor-dead-1236980409/",
+          "ageMin": 64,
+          "headline": "Sam Neill Dies: Jurassic Park Actor Was 78",
+          "summary": "Sam Neill, the New Zealand actor best known for his role in the Jurassic Park franchise, Peaky Blinders and a plethora of independent films has died in Australia, it was announced tonight. The multiple Golden Globe and Primetime Emmy nominee was 78. It is with immense sadness that the whānau of Sam Neill share the [ ]"
         }
       ],
-      "ageMin": 690,
+      "ageMin": 44,
       "_cand": {
-        "key": "rss:marco-bellocchio-sally-wainwright-win-big-at-italian-global-",
+        "key": "rss:sam-neill-jurassic-park-star-dies-at-78",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 3,
+      "verification": {
+        "tier1Count": 3,
+        "tier1Owners": 1,
+        "outletCount": 3,
+        "outlets": [
+          "Variety",
+          "THR",
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 95,
+      "signals": {
+        "recency": 24,
+        "corroboration": 24,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 15,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-sacha-baron-cohen-ali-g-wimbledon-appearance",
+      "slug": "sacha-baron-cohen-appears-as-ali-g-at-wimbledon-amid-new-film-rumors",
+      "title": "Sacha Baron Cohen Appears as Ali G at Wimbledon Amid New Film Rumors",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "sacha-baron-cohen-ali-g-wimbledon-appearance",
+      "primaryKeyword": "Sacha Baron Cohen Ali G",
+      "primaryEntity": "Sacha Baron Cohen",
+      "entities": [
+        "Ali G"
+      ],
+      "angle": "Sacha Baron Cohen made a surprise appearance at Wimbledon in his Ali G character, fueling reports of a new film.",
+      "tmdbType": "movie",
+      "source": "rss:TheWrap",
+      "sources": [
+        {
+          "outlet": "TheWrap",
+          "tier": 7,
+          "url": "https://www.thewrap.com/creative-content/movies/sacha-baron-cohen-wimbledon-ali-g-new-film-report/",
+          "ageMin": 496,
+          "headline": "Sacha Baron Cohen Attends Wimbledon as Ali G After New Film Report",
+          "summary": "Fans were thrilled by a video of the actor in character at the tennis Grand Slam event in London The post Sacha Baron Cohen Attends Wimbledon as Ali G After New Film Report appeared first on TheWrap ."
+        },
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/sacha-baron-cohen-ali-g-surprise-appearance-wimbledon-1236646214/",
+          "ageMin": 531,
+          "headline": "Sacha Baron Cohen s Ali G Makes Surprise Appearance at Wimbledon",
+          "summary": "\"I iz BACK! And if u iz at dis borin wimbledore final lookin 2 get grand slammed, I iz here wif de hookup,\" the actor's alter ego wrote on social media."
+        }
+      ],
+      "ageMin": 496,
+      "_cand": {
+        "key": "rss:sacha-baron-cohen-attends-wimbledon-as-ali-g-after-new-film-",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 2,
+      "verification": {
+        "tier1Count": 2,
+        "tier1Owners": 2,
+        "outletCount": 2,
+        "outlets": [
+          "TheWrap",
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": null,
+        "framing": "plain",
+        "status": "CONFIRMED",
+        "publishable": true
+      },
+      "priority": 60,
+      "signals": {
+        "recency": 4,
+        "corroboration": 18,
+        "status": 25,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 8,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-john-mulaney-wrigley-field-show",
+      "slug": "john-mulaney-makes-history-in-chicago-brings-out-david-letterman-fred-",
+      "title": "John Mulaney Makes History in Chicago, Brings Out David Letterman, Fred Armisen and Richard Kind",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "john-mulaney-wrigley-field-show",
+      "primaryKeyword": "john mulaney",
+      "primaryEntity": "John Mulaney",
+      "entities": [
+        "David Letterman",
+        "Fred Armisen"
+      ],
+      "angle": "John Mulaney made history by becoming the first comedian to sell out Wrigley Field.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/news/general-news/john-mulaney-chicago-wrigley-field-david-letterman-armisen-1236646257/",
+          "ageMin": 72,
+          "headline": "John Mulaney Makes History in Chicago, Brings Out David Letterman, Fred Armisen and Richard Kind",
+          "summary": "The Chicago native returned home to become the first comedian to perform at Wrigley Field, and he sold out the venue to boot, performing for one of the largest stand-up audiences ever."
+        }
+      ],
+      "ageMin": 72,
+      "_cand": {
+        "key": "rss:john-mulaney-makes-history-in-chicago-brings-out-david-lette",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -110,18 +260,82 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Variety"
+          "THR"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Variety",
+        "attribution": "THR",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 48,
+      "priority": 55,
       "signals": {
-        "recency": 4,
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-dwayne-johnson-kevin-hart-the-odd-couple-broadway",
+      "slug": "dwayne-johnson-reveals-plans-to-star-in-the-odd-couple-on-broadway-wit",
+      "title": "Dwayne Johnson Reveals Plans to Star in 'The Odd Couple' on Broadway With Kevin Hart",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "dwayne-johnson-kevin-hart-the-odd-couple-broadway",
+      "primaryKeyword": "dwayne johnson kevin hart broadway",
+      "primaryEntity": "Dwayne Johnson",
+      "entities": [
+        "Kevin Hart",
+        "The Odd Couple"
+      ],
+      "angle": "Dwayne Johnson reveals plans to star alongside Kevin Hart in a Broadway production of 'The Odd Couple'.",
+      "tmdbType": "movie",
+      "source": "rss:TheWrap",
+      "sources": [
+        {
+          "outlet": "TheWrap",
+          "tier": 7,
+          "url": "https://www.thewrap.com/creative-content/theater/dwayne-johnson-wants-broadway-kevin-hart/",
+          "ageMin": 352,
+          "headline": "Dwayne Johnson Reveals Plans to Star in The Odd Couple on Broadway With Kevin Hart",
+          "summary": "The star shares that he is also discussing other theatrical projects with his live-action \"Moana\" director Thomas Kail The post Dwayne Johnson Reveals Plans to Star in The Odd Couple on Broadway With Kevin Hart appeared first on TheWrap ."
+        }
+      ],
+      "ageMin": 352,
+      "_cand": {
+        "key": "rss:dwayne-johnson-reveals-plans-to-star-in-the-odd-couple-on-br",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "TheWrap"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "TheWrap",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 53,
+      "signals": {
+        "recency": 9,
         "corroboration": 12,
         "status": 18,
         "type": 14,
@@ -134,8 +348,8 @@
     },
     {
       "id": "news-josh-grisetti-death",
-      "slug": "josh-grisetti-dies-actor-known-for-mrs-maisel-and-something-rotten-on-",
-      "title": "Josh Grisetti Dies: Actor Known For Mrs. Maisel And Something Rotten! On Broadway Was 44",
+      "slug": "josh-grisetti-mrs-maisel-actor-dies-at-44",
+      "title": "Josh Grisetti, 'Mrs. Maisel' Actor, Dies at 44",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
@@ -143,13 +357,13 @@
       "eventType": "death",
       "sensitivity": "high",
       "eventSlug": "josh-grisetti-death",
-      "primaryKeyword": "josh grisetti death",
+      "primaryKeyword": "josh grisetti",
       "primaryEntity": "Josh Grisetti",
       "entities": [
         "The Marvelous Mrs. Maisel",
         "Something Rotten!"
       ],
-      "angle": "Actor Josh Grisetti, known for 'The Marvelous Mrs. Maisel' and Broadway's 'Something Rotten!', dies at 44.",
+      "angle": "Broadway and TV actor Josh Grisetti has died at the age of 44.",
       "tmdbType": "movie",
       "source": "rss:Deadline",
       "sources": [
@@ -157,12 +371,12 @@
           "outlet": "Deadline",
           "tier": 7,
           "url": "https://deadline.com/2026/07/josh-grisetti-actor-dead-suicide-1236980383/",
-          "ageMin": 108,
+          "ageMin": 228,
           "headline": "Josh Grisetti Dies: Actor Known For Mrs. Maisel And Something Rotten! On Broadway Was 44",
           "summary": "Josh Grisetti, the Broadway actor best known for Something Rotten! and It Shoulda Been You as well as a recurring role on The Marvelous Mrs. Maisel, died Friday by suicide, according to his co-star and friend Rob McClure. He was 44. It is with a shattered heart that I share that the brilliant Josh Grisetti [ ]"
         }
       ],
-      "ageMin": 108,
+      "ageMin": 228,
       "_cand": {
         "key": "rss:josh-grisetti-dies-actor-known-for-mrs-maisel-and-something-",
         "popularity": 0,
@@ -183,9 +397,9 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 60,
+      "priority": 53,
       "signals": {
-        "recency": 16,
+        "recency": 9,
         "corroboration": 12,
         "status": 18,
         "type": 14,
@@ -197,9 +411,9 @@
       }
     },
     {
-      "id": "news-jay-z-yankee-stadium-concert-delay-security-breach",
-      "slug": "jay-z-s-yankee-stadium-concert-delayed-for-hours-after-security-breach",
-      "title": "Jay-Z's Yankee Stadium Concert Delayed for Hours After Security Breach",
+      "id": "news-jay-z-yankee-stadium-delay",
+      "slug": "jay-z-addresses-three-hour-delay-at-yankee-stadium-concert-says-he-wan",
+      "title": "Jay-Z Addresses Three-Hour Delay at Yankee Stadium Concert, Says He Wanted to Avoid Fans Getting Trampled",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
@@ -207,29 +421,29 @@
       "eventType": "other",
       "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "jay-z-yankee-stadium-concert-delay-security-breach",
-      "primaryKeyword": "jay-z yankee stadium concert delay",
+      "eventSlug": "jay-z-yankee-stadium-delay",
+      "primaryKeyword": "jay-z",
       "primaryEntity": "JAŸ-Z",
       "entities": [
         "Jay-Z",
         "Yankee Stadium"
       ],
-      "angle": "Jay-Z's concert at Yankee Stadium was significantly delayed due to a security breach.",
+      "angle": "Jay-Z explained the nearly four-hour delay at his Yankee Stadium concert, citing safety concerns.",
       "tmdbType": "movie",
-      "source": "rss:Variety",
+      "source": "rss:THR",
       "sources": [
         {
-          "outlet": "Variety",
+          "outlet": "THR",
           "tier": 7,
-          "url": "https://variety.com/2026/music/news/jay-z-yankee-stadium-concert-delay-security-breach-1236809269/",
-          "ageMin": 53,
-          "headline": "Jay-Z’s Third Yankee Stadium Concert Plagued by Hours-Long Delay After Security Breach",
-          "summary": "Jay-Z’s third and most hotly anticipated concert at Yankee Stadium on Sunday night was plagued by a nearly four-hour delay, apparently due to fans rushing the venue’s gates, with Jay finally taking the stage four hours after the concert s listed start time (and around three hours after the previous two nights). “I appreciate your patience. [ ]"
+          "url": "https://www.hollywoodreporter.com/music/music-news/jay-z-addresses-three-hour-delay-yankee-stadium-concert-1236646285/",
+          "ageMin": 89,
+          "headline": "Jay-Z Addresses Three-Hour Delay at Yankee Stadium Concert, Says He Wanted to Avoid Fans Getting Trampled",
+          "summary": "\"I'm really sorry for the inconvenience, but I had to make sure everyone was OK,\" the rapper said after his show started nearly four hours after its original expected start time."
         }
       ],
-      "ageMin": 53,
+      "ageMin": 89,
       "_cand": {
-        "key": "rss:jay-z-s-third-yankee-stadium-concert-plagued-by-hours-long-d",
+        "key": "rss:jay-z-addresses-three-hour-delay-at-yankee-stadium-concert-s",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -239,18 +453,18 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Variety"
+          "THR"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Variety",
+        "attribution": "THR",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 59,
+      "priority": 51,
       "signals": {
-        "recency": 24,
+        "recency": 16,
         "corroboration": 12,
         "status": 18,
         "type": 5,
