@@ -22,12 +22,13 @@ export function isReactionArticle(data) {
   return tags.some((x) => REACTION_TAGS.has(x));
 }
 
-// LANE FILTER (owner 2026-07-12): the video builds ONLY from the NEWS and GOSSIP automations.
-// Every article carries a `formatTag` naming the lane/format that produced it. `inside` = the
-// inside-stories/reaction automation (excluded), and the evergreen formats (review/list/
-// explainer/profile/interview/screen-music) are not news or gossip either. A whitelist of the
-// news + gossip formats; an untagged legacy article is allowed through (treated as news).
-const VIDEO_FORMATS = new Set(["news", "gossip", "box-office", "trailer", "music-news", "music-awards", "awards", "streaming", "watchguide"]);
+// LANE FILTER (owner 2026-07-13): this video automation builds ONLY from the NEWS and GOSSIP
+// automations — NOTHING else. Every article carries a `formatTag` naming the lane that produced it.
+// box-office / streaming / watchguide (the BOX-OFFICE automation), trailer, music-news / music-awards
+// (the MUSIC automation), awards, and inside (inside-stories) all belong to OTHER automations and are
+// EXCLUDED. Accepting them was the scope leak that let a box-office "streaming" article get picked. An
+// untagged legacy article is still allowed (treated as news; every real lane tags its output).
+const VIDEO_FORMATS = new Set(["news", "gossip"]);
 function inNewsOrGossipLane(data) {
   const ft = String(data.formatTag || "").toLowerCase().trim();
   return !ft || VIDEO_FORMATS.has(ft);
@@ -105,8 +106,9 @@ export async function scout({ limit = 3, candidates = null, lane = null } = {}) 
   // The gossip lane out-produces news daily, so a plain newest-18 slice was ~all gossip and the news
   // lane never reached the scorer. Interleave newest-from-each so both lanes always get scored; the
   // virality score + movies-first bias still decide the final slate.
-  const NEWS_FMT = new Set(["news", "box-office", "trailer", "music-news", "music-awards", "awards", "streaming", "watchguide"]);
-  const laneOf = (c) => (NEWS_FMT.has(String(c.formatTag || "").toLowerCase()) ? "news" : "gossip");
+  // only two lanes reach here now (VIDEO_FORMATS = news + gossip): gossip → gossip lane, everything
+  // else (news + untagged legacy) → news lane.
+  const laneOf = (c) => (String(c.formatTag || "").toLowerCase() === "gossip" ? "gossip" : "news");
   const newsPool = pool.filter((c) => laneOf(c) === "news");
   const gossipPool = pool.filter((c) => laneOf(c) === "gossip");
   const batch = [];

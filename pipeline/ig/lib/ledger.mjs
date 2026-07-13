@@ -18,14 +18,11 @@ const F = {
 export function loadPosted() {
   return readJson(F.posted(), { posts: [] });
 }
+// FULLY INDEPENDENT of the old video automation (owner 2026-07-13): this lane owns IG/FB/YouTube, the
+// old one keeps ONLY Pinterest — different platforms, so a story the old lane posted must NOT be
+// skipped here. We no longer read its ledger at all → zero cross-automation interaction or exchange.
 export function isPosted(slug) {
-  const mine = loadPosted().posts.some((p) => p.slug === slug);
-  if (mine) return true;
-  const old = readJson(IG.oldVideoLedger, null); // the old cross-poster's ledger (never written)
-  if (Array.isArray(old?.posts)) return old.posts.some((p) => p.slug === slug || p === slug);
-  if (Array.isArray(old)) return old.some((p) => p.slug === slug || p === slug);
-  if (old && typeof old === "object") return Boolean(old[slug]);
-  return false;
+  return loadPosted().posts.some((p) => p.slug === slug);
 }
 export function recordPosted(entry) {
   const led = loadPosted();
@@ -77,17 +74,24 @@ export function isBuilt(slug) {
 export function builtTopics() {
   return Object.values(readJson(builtFile(), {})).map((v) => v?.topics || []).filter((a) => a.length);
 }
+// Count distinct STORIES posted today, NOT ledger rows — a multi-platform story writes one row per
+// platform (IG+FB+YT), and the daily cap is about stories/slots, not rows. (multi-platform 2026-07-13)
 export function postedToday() {
   const day = todayInTz(IG.slots.postTz);
-  return loadPosted().posts.filter((p) => (p.scheduledDay || (p.at || "").slice(0, 10)) === day).length;
+  return new Set(
+    loadPosted().posts.filter((p) => (p.scheduledDay || (p.at || "").slice(0, 10)) === day).map((p) => p.slug),
+  ).size;
 }
-// slot labels already scheduled for a given LA day — lets each per-slot run take the NEXT EMPTY slot
-// instead of double-filling one (the 7-runs-per-day model, owner 2026-07-13). Runs are serialized by
-// the workflow's concurrency group, so a prior run's ledger is always committed before the next reads.
+// DISTINCT slot labels already scheduled for a given LA day — lets each per-slot run take the NEXT
+// EMPTY slot instead of double-filling one (the 7-runs-per-day model, owner 2026-07-13). Deduped so
+// the 3 platform rows for one story count as ONE filled slot. Runs are serialized by the workflow's
+// concurrency group, so a prior run's ledger is always committed before the next reads.
 export function scheduledSlotsToday(day = todayInTz(IG.slots.postTz)) {
-  return loadPosted().posts
-    .filter((p) => (p.scheduledDay || (p.at || "").slice(0, 10)) === day && p.slot && p.slot !== "breaking")
-    .map((p) => p.slot);
+  return [...new Set(
+    loadPosted().posts
+      .filter((p) => (p.scheduledDay || (p.at || "").slice(0, 10)) === day && p.slot && p.slot !== "breaking")
+      .map((p) => p.slot),
+  )];
 }
 
 // ── one-whole-day guard (the July-9 double-post fix, ported as a fresh impl)

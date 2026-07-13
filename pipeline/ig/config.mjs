@@ -1,7 +1,9 @@
-// INSTAGRAM REELS MULTI-AGENT AUTOMATION — config
-// Plan: /INSTAGRAM_REELS_MULTI_AGENT_PLAN.md (REV 2). Self-contained lane — NOTHING is imported
-// from pipeline/video/ (owner directive 2026-07-10: the old automation must not interfere).
-// The ONLY cross-lane touch is READ-ONLY dedup against data/video/posted.json.
+// YIF MULTI-AGENT AUTOMATION (YouTube + Instagram + Facebook) — config. (Formerly the IG-only lane;
+// folder stays pipeline/ig/ by owner choice.) Plan: /YIF_IMPLEMENTATION_PLAN.md.
+// FULLY SELF-CONTAINED + INDEPENDENT (owner 2026-07-13): NOTHING is imported from, read from, or
+// written to any other automation (incl. pipeline/video/ and its ledger). This lane takes content
+// ONLY from the news + gossip automations and posts ONLY to YouTube/Instagram/Facebook; the old
+// video automation keeps Pinterest and must never interact with this one.
 import path from "node:path";
 import fs from "node:fs";
 import { fileURLToPath } from "node:url";
@@ -45,7 +47,11 @@ export const IG = {
     caption: ["google/gemini-2.5-flash-lite", "inclusionai/ling-2.6-flash"],
     vision: ["google/gemini-2.5-flash-lite", "qwen/qwen3.5-flash-02-23"],
     judge: ["google/gemini-2.5-flash", "google/gemini-2.5-flash-lite"],
-    voice: "openai/gpt-audio-mini", // streamed pcm16@24kHz; verbatim wall + Kokoro fallback
+    // FULL gpt-audio, marin (owner 2026-07-13): the MINI is a chat model that intermittently CONVERSES
+    // ("Got it!…") or RUNS AWAY (100s+ of audio) instead of narrating → constant Kokoro/holds. The full
+    // gpt-audio stays reliable (tested: mini 0/3 runaway vs gpt-audio 3/3 clean, same marin voice, same
+    // OpenRouter key). Costs ~$0.02/video for the bake-off — reliability wins. Kokoro is last resort.
+    voice: "openai/gpt-audio",
     music: "google/lyria-3-clip-preview", // streamed mp3, ~30s, $0.04/clip
   },
   // ── voice quality system (owner feedback 2026-07-10: flow/pauses/engagement were bad).
@@ -53,15 +59,20 @@ export const IG = {
   // the video may render. First runs bake off candidate voices; the winner persists in
   // weights.json and later runs do single-take + judge floor.
   voice: {
-    candidates: [process.env.IG_VOICE, "marin", "ash"].filter(Boolean), // cedar-on-mini aborts repeatedly — premium-only
-    // premium gpt-audio BANNED from bake-offs: it lost every round tonight (scored
-    // 4-17, never beat mini) at 30x the cost
-    premiumCandidate: null,
+    candidates: [process.env.IG_VOICE, "marin", "ash"].filter(Boolean), // first-run bake-off; marin is owner-locked in weights.json
     // Chunked synthesis DISABLED (bake-off rounds 3-5: every chunk join reads as a
     // momentum break — single-call reads consistently score higher). 0 = single call.
     chunkSentences: 0,
     joinSilenceSec: 0.18,
     takesPerVoice: 3, // delivery variance is high (same voice scored 10 and 22) — best-of-3
+    // ADAPTIVE PACE (owner 2026-07-13): gpt-audio-mini reads at a VARYING fast rate (~3.5-4.0 wps) and
+    // IGNORES "speak slower" prompts, so a FIXED slowdown can't normalize it (0.95 fixed left one take
+    // at 3.4 and another at 3.8). Instead we MEASURE each take's real pace and slow it just enough to
+    // hit targetWps (ffmpeg atempo, PITCH-PRESERVED — voice sounds identical, just a touch slower),
+    // CLAMPED so it never speeds a slow take up (≤1.0) and never over-slows (≥minTempo: a 4.0-wps read
+    // lands at ~3.4, faster reads are capped so it's never too slow). Applied before whisper-align so
+    // subtitles/images stay in sync. pace:null = off.
+    pace: { targetWps: 3.4, minTempo: 0.85 },
     // calibrated to the owner's ACTUAL bars: every axis ≥6 (his rejected take had
     // pauses=5), the ending MUST land, and the total floor fits 33-42s reads (long
     // reads score structurally lower than the short ones the old floor was tuned on)
@@ -87,8 +98,8 @@ export const IG = {
   // ── caps + ramp (plan §1.9/§6.1) — the orchestrator enforces these in code.
   maxPerDay: 7, // owner 2026-07-13: 7 posts/day, one per LA slot (10a/12p/2p/4p/6p/8p/10p)
   hardDailyCap: 20, // absolute (platform quota is 50-100; we stay far under)
-  maxRunUsd: 1.0, // kill the run if LLM+voice+music spend exceeds this
-  maxJobUsd: 0.25, // park a single job if it alone exceeds this
+  maxRunUsd: 3.0, // kill the run if LLM+voice+music spend exceeds this
+  maxJobUsd: 0.80, // park a single job if it alone exceeds this
   freshDays: 10, // scout candidate window. Reels REPURPOSE already-published entertainment stories — a gossip/box-office piece from a week ago is still perfectly shareable (it's not breaking news), and a 4-day window left the gossip lane with 0 candidates (56/91 aged out). 10 days keeps a healthy slate. (owner 2026-07-12)
   categories: ["movies", "tv", "celebrity"],
   moviesFirstShare: 0.8, // ~80/20 movies-first bias in slate scoring
@@ -137,12 +148,29 @@ export const IG = {
   // (the `primeET` key name is kept for back-compat; the values are LA times.)
   slots: { primeET: ["10:00", "12:00", "14:00", "16:00", "18:00", "20:00", "22:00"], timezone: "America/Los_Angeles", postTz: "America/Los_Angeles", jitterMin: 4 },
 
-  // ── zernio (bridge; posts via Meta's official API — no reach penalty, verified)
+  // ── multi-platform distribution (YIF: YouTube + Instagram + Facebook). One build → all enabled
+  // platforms, same LA slots. Instagram + Facebook post via Zernio; YouTube via Buffer. Account IDs
+  // live-verified 2026-07-05 (from the old video lane's accounts.mjs). Pinterest is a SEPARATE future
+  // automation, deliberately excluded here. Per-platform kill switch: data/ig/PAUSED_<PLATFORM>.
+  // This automation OWNS Instagram + Facebook + YouTube (news + gossip content only). Pinterest is
+  // handled by the SEPARATE old video automation — this lane never posts there. FB + YouTube were
+  // live-proven (a real test posted to both). A run can override with --platforms=... for a targeted
+  // test. (owner 2026-07-13)
+  platforms: ["instagram", "facebook", "youtube"],
+  siteBase: "https://thescreenreport.com", // for the YouTube description's article link
+
+  // ── zernio (bridge; posts via Meta's official API — no reach penalty, verified) → Instagram + Facebook
   zernio: {
     base: "https://zernio.com/api/v1",
     igAccountId: "6a49d2b69d9472faae7e109f", // The Screen Report IG (verified 2026-07-05)
+    fbAccountId: "6a49d30b9d9472faae7e1258", // The Screen Report Facebook Page (verified 2026-07-05)
     isAiGenerated: true, // plan §1.8 — Meta requires disclosure for realistic AI audio
     audioName: "The Screen Report",
+  },
+  // ── buffer (bridge; GraphQL, Periphery plan) → YouTube Shorts
+  buffer: {
+    base: "https://api.buffer.com",
+    youtubeChannel: "6a49d51440483446286f712e", // The Screen Report YouTube channel (verified 2026-07-05)
   },
   // public hosting for the mp4/cover (bridges fetch by URL) — the tsr-media public repo
   host: { repo: "thescreenreport68-web/tsr-media", dir: "ig", pruneDays: 14 },
@@ -154,7 +182,6 @@ export const IG = {
   musicDir: `${SITE}/data/ig/music`, // the Lyria bed cache
   runsDir: `${SITE}/data/ig/runs`,
   articlesDir: `${SITE}/content/articles`,
-  oldVideoLedger: `${SITE}/data/video/posted.json`, // READ-ONLY cross-lane dedup
   assetsDir: `${HERE}/assets`,
   fontsDir: `${HERE}/assets/fonts`,
   legacyMusicDir: `${SITE}/pipeline/video/assets/music`, // read-only fallback beds if Lyria is down

@@ -6,6 +6,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { IG } from "../config.mjs";
 import { fetchWithTimeout, sleep } from "../lib/util.mjs"; // sleep used by verifyLive + host HEAD-poll
+import { postYouTube } from "../lib/buffer.mjs"; // YouTube Shorts via Buffer (multi-platform 2026-07-13)
 
 const GH_API = "https://api.github.com";
 const ghHeaders = () => ({
@@ -76,6 +77,24 @@ export async function postToInstagram({ videoUrl, coverUrl, caption, firstCommen
   return { id: data._id || data.id || data.post?._id || data.post?.id || data.data?._id || data.data?.id, paramsHonored, raw: data };
 }
 
+// Facebook via Zernio — same bridge as Instagram, platform "facebook" + the FB Page account. Kept
+// SEPARATE from postToInstagram so the live IG path is never touched. Its own caption (platformMeta).
+export async function postToFacebook({ videoUrl, coverUrl, caption, whenISO, live = false }) {
+  const body = {
+    content: caption,
+    status: live ? "scheduled" : "draft",
+    ...(live && whenISO ? { scheduledFor: whenISO, timezone: IG.slots.postTz } : {}),
+    platforms: [{ accountId: IG.zernio.fbAccountId, platform: "facebook" }],
+    mediaItems: [{ type: "video", url: videoUrl, ...(coverUrl ? { thumbnail: coverUrl } : {}) }],
+    isAiGenerated: IG.zernio.isAiGenerated,
+    shareToFeed: true,
+  };
+  const res = await fetchWithTimeout(`${IG.zernio.base}/posts`, { method: "POST", headers: zHeaders(), body: JSON.stringify(body) }, 60000);
+  const data = await res.json().catch(() => ({}));
+  if (!res.ok) throw new Error(`zernio(fb) ${res.status}: ${JSON.stringify(data).slice(0, 250)}`);
+  return { id: data._id || data.id || data.post?._id || data.post?.id || data.data?._id || data.data?.id };
+}
+
 export async function zernioStatus(postId) {
   const res = await fetchWithTimeout(`${IG.zernio.base}/posts/${postId}`, { headers: zHeaders() }, 30000);
   const data = await res.json().catch(() => ({}));
@@ -96,10 +115,38 @@ export async function verifyLive(postId, { timeoutMin = 15, everySec = 60 } = {}
   return { live: false, timedOut: true, last };
 }
 
+// per-platform kill switch: data/ig/PAUSED_INSTAGRAM | PAUSED_FACEBOOK | PAUSED_YOUTUBE
+function platformPaused(platform) {
+  return fs.existsSync(path.join(IG.dataDir, `PAUSED_${platform.toUpperCase()}`));
+}
+
+// Fan ONE build out to every enabled platform. Host the video+cover ONCE, then post to each,
+// error-ISOLATED (one platform failing never blocks the others). Instagram posts FIRST and exactly as
+// before (its own proven caption); Facebook (Zernio) + YouTube (Buffer) use platformMeta metadata.
 export async function publish({ job, mp4, cover, whenISO, live = false }) {
   const videoUrl = await hostFile(mp4, `${job.id}.mp4`);
   const coverUrl = cover ? await hostFile(cover, `${job.id}-cover.jpg`) : null;
-  const caption = job.caption.full;
-  const post = await postToInstagram({ videoUrl, coverUrl, caption, firstComment: job.caption.firstComment, whenISO, live });
-  return { videoUrl, coverUrl, zernioId: post.id, paramsHonored: post.paramsHonored, mode: live ? "scheduled" : "draft", whenISO: live ? whenISO : null };
+  const enabled = (IG.platforms || ["instagram"]).filter((p) => !platformPaused(p));
+  const results = [];
+  for (const platform of enabled) {
+    try {
+      if (platform === "instagram") {
+        const post = await postToInstagram({ videoUrl, coverUrl, caption: job.caption.full, firstComment: job.caption.firstComment, whenISO, live });
+        results.push({ platform, id: post.id, ok: Boolean(post.id), paramsHonored: post.paramsHonored });
+      } else if (platform === "facebook") {
+        const cap = job.platformMeta?.facebook?.full;
+        if (!cap) { results.push({ platform, ok: false, error: "no facebook metadata" }); continue; }
+        const post = await postToFacebook({ videoUrl, coverUrl, caption: cap, whenISO, live });
+        results.push({ platform, id: post.id, ok: Boolean(post.id) });
+      } else if (platform === "youtube") {
+        const yt = job.platformMeta?.youtube;
+        if (!yt?.title) { results.push({ platform, ok: false, error: "no youtube metadata" }); continue; }
+        const post = await postYouTube({ videoUrl, title: yt.title, description: yt.description, whenISO, draft: !live });
+        results.push({ platform, id: post.id, ok: post.ok, error: post.error });
+      }
+    } catch (e) {
+      results.push({ platform, ok: false, error: String(e.message || e).slice(0, 200) });
+    }
+  }
+  return { videoUrl, coverUrl, mode: live ? "scheduled" : "draft", whenISO: live ? whenISO : null, results };
 }

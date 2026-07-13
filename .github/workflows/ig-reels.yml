@@ -93,6 +93,7 @@ jobs:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
           ZERNIO_API_KEY: ${{ secrets.ZERNIO_API_KEY }}
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
           TSR_GH_TOKEN: ${{ secrets.TSR_GH_TOKEN }}
         run: |
           if [ "${{ github.event_name }}" = "schedule" ]; then

@@ -32,6 +32,7 @@ import { sensitiveGate } from "./agents/sensitive.mjs";
 import { writeScript } from "./agents/script.mjs";
 import { pronounce } from "./agents/pronounce.mjs";
 import { writeCaption, assembleFull } from "./agents/caption.mjs";
+import { writePlatformMeta } from "./agents/platformMeta.mjs";
 import { pickGoal, ASK_FAMILIES } from "./agents/engage.mjs";
 import { buildBeats } from "./agents/scenes.mjs";
 import { synthVoice, kokoroFallback, judgeTake, gapStats, scoreTake, passesFloor } from "./agents/voice.mjs";
@@ -172,6 +173,17 @@ async function processJob(article, { skipStages = new Set() } = {}) {
     if (job.engage?.firstComment) job.caption.firstComment = job.engage.firstComment;
     job.caption.full = assembleFull(job.caption); // shared assembler — keeps the AI-assisted disclosure
     stageDone(job, "caption");
+  }
+  // 8b PLATFORM METADATA — Facebook + YouTube copy (Instagram keeps its own caption above). One call,
+  // two platform-native outputs. Best-effort: a failure just skips FB/YT for this story, never holds
+  // and never touches the IG path. (multi-platform 2026-07-13)
+  if (need("platformMeta")) {
+    const cat = job.article?.category;
+    const articleUrl = cat ? `${IG.siteBase}/${cat}/${job.id}/` : "";
+    const r = await stageRun(job, "platformMeta", () => writePlatformMeta({ facts: job.facts, segment: job.scout?.segment, engage: job.engage, articleUrl }), 90000);
+    if (r.ok && r.result?.meta) job.platformMeta = r.result.meta;
+    else { job.platformMeta = null; jlog(job, "platformMeta", `⚠ ${r.error || r.result?.hold || "no metadata"} — FB/YT skipped for this story`); }
+    stageDone(job, "platformMeta");
   }
   // 7 PRONOUNCE
   if (need("pronounce")) {
@@ -375,6 +387,9 @@ async function main() {
   // --now: publish the built reel ~immediately (a few minutes out) instead of the next LA slot. For a
   // manual "prove it posts" test only; the scheduled crons never pass it. (owner 2026-07-13)
   const publishNow = Boolean(args.now);
+  // --platforms=instagram,facebook,youtube overrides the enabled set for THIS run only (in-memory) —
+  // for owner-approved test posts to Facebook/YouTube before flipping the config default. (2026-07-13)
+  if (args.platforms) { IG.platforms = String(args.platforms).split(",").map((s) => s.trim().toLowerCase()).filter(Boolean); console.log(`  platforms override: ${IG.platforms.join(", ")}`); }
   const limit = Math.min(parseInt(args.limit || "1", 10), IG.maxPerDay);
   // --posts = how many videos this run should actually BUILD+schedule (stop after N successes even if
   // the slate is larger — a per-slot cron uses --limit=4 --posts=1: attempt up to 4 candidates, ship
@@ -474,18 +489,24 @@ async function main() {
         const pub = await publish({ job, mp4: job.render.mp4, cover: job.render.cover, whenISO, live });
         job.publish = { ...pub, slot: slotLabel };
         saveJob(job);
-        recordPosted({
-          slug: job.id, zernioId: pub.zernioId, mode: pub.mode, slot: slotLabel,
-          scheduledDay: day, whenISO: live ? whenISO : null,
-          hookStyle: job.script.hookStyle, segment: job.scout.segment,
-          goal: job.engage?.goal || null, // the learner correlates engagement asks per niche
-          videoUrl: pub.videoUrl,
-        });
-        anyPublished = true;
-        console.log(`  📤 ${pub.mode} → ${slotLabel} ${live ? whenISO : "(draft, no schedule)"} [zernio ${pub.zernioId}]`);
+        // ONE ledger row per platform. Build-once dedup keys on slug (any row); the daily/slot guards
+        // count DISTINCT slugs/slots (see ledger.mjs), so 3 rows for one story = one slot/one story.
+        for (const r of pub.results) {
+          recordPosted({
+            slug: job.id, platform: r.platform, postId: r.id ?? null, published: !!r.ok, error: r.error || null,
+            mode: pub.mode, slot: slotLabel, scheduledDay: day, whenISO: live ? whenISO : null,
+            hookStyle: job.script.hookStyle, segment: job.scout.segment,
+            goal: job.engage?.goal || null, // the learner correlates engagement asks per niche
+            videoUrl: pub.videoUrl,
+          });
+        }
+        const ok = pub.results.filter((r) => r.ok).map((r) => r.platform);
+        const bad = pub.results.filter((r) => !r.ok);
+        if (ok.length) anyPublished = true;
+        console.log(`  📤 ${pub.mode} → ${slotLabel} ${live ? whenISO : "(draft)"} · ok:[${ok.join(", ") || "none"}]${bad.length ? ` · FAILED:[${bad.map((b) => `${b.platform}: ${(b.error || "?").slice(0, 45)}`).join("; ")}]` : ""}`);
         if (live && (slotLabel === "breaking" || publishNow)) {
-          const v = await verifyLive(pub.zernioId, { timeoutMin: 15 });
-          console.log(`  🔎 live-verify: ${v.live ? `LIVE ${v.permalink}` : JSON.stringify(v)}`);
+          const ig = pub.results.find((r) => r.platform === "instagram" && r.ok);
+          if (ig) { const v = await verifyLive(ig.id, { timeoutMin: 15 }); console.log(`  🔎 IG live-verify: ${v.live ? `LIVE ${v.permalink}` : JSON.stringify(v)}`); }
         }
       } catch (e) {
         console.error(`  📛 publish failed for ${job.id}: ${e.message}`);

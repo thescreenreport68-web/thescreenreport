@@ -323,13 +323,15 @@ await t("slots: breaking goes now, others spaced ≥2h, jitter deterministic", (
 });
 
 // ── ledgers ─────────────────────────────────────────────────────────────────────
-await t("ledger: dedup across my ledger AND the old lane's", () => {
+await t("ledger: dedup on OUR ledger only — fully independent of the old lane", () => {
   assert.ok(!isPosted("fresh-slug"));
   recordPosted({ slug: "fresh-slug", mode: "draft" });
-  assert.ok(isPosted("fresh-slug"));
+  assert.ok(isPosted("fresh-slug"), "our own posts dedup");
+  // the old video automation owns Pinterest only (different platforms) — a slug it posted must NOT
+  // be blocked here, and we must not even read its ledger. (independence, owner 2026-07-13)
   fs.mkdirSync(path.join(SITE, "data/video"), { recursive: true });
   fs.writeFileSync(path.join(SITE, "data/video/posted.json"), JSON.stringify({ posts: [{ slug: "old-lane-slug" }] }));
-  assert.ok(isPosted("old-lane-slug"), "old cross-poster slug blocked");
+  assert.ok(!isPosted("old-lane-slug"), "old lane's slug is NOT blocked here (no cross-automation dedup)");
 });
 await t("ledger: one-whole-day guard", () => {
   assert.ok(!dayAlreadyScheduled("2026-07-10"));
@@ -357,18 +359,24 @@ await t("scout: candidate scan honors category/rumor/freshness/dedup", async () 
       `---\ntitle: "T ${slug}"\ncategory: ${extra.cat}\ndate: "${extra.date}"\n${extra.more || ""}---\n${body}\n`);
   const now = new Date();
   const fresh = now.toISOString();
-  write("cand-movie", { cat: "movies", date: fresh });
+  write("cand-movie", { cat: "movies", date: fresh }); // untagged legacy → allowed as news
+  write("cand-gossip", { cat: "celebrity", date: fresh, more: "formatTag: gossip\n" });
+  write("cand-boxoffice", { cat: "movies", date: fresh, more: "formatTag: box-office\n" }); // OTHER automation
+  write("cand-streaming", { cat: "tv", date: fresh, more: "formatTag: streaming\n" }); // OTHER automation
   write("cand-rumor", { cat: "celebrity", date: fresh, more: "storyStatus: RUMOR\n" });
   write("cand-old", { cat: "movies", date: new Date(now - 20 * 864e5).toISOString() }); // well past freshDays=10
   write("cand-music", { cat: "music", date: fresh });
-  write("old-lane-slug", { cat: "movies", date: fresh }); // already in old ledger
+  write("old-lane-slug", { cat: "movies", date: fresh, more: "formatTag: news\n" }); // also in the old ledger
   const c = listCandidates({ now });
   const slugs = c.map((x) => x.slug);
-  assert.ok(slugs.includes("cand-movie"));
+  assert.ok(slugs.includes("cand-movie"), "untagged legacy kept as news");
+  assert.ok(slugs.includes("cand-gossip"), "gossip kept");
+  assert.ok(!slugs.includes("cand-boxoffice"), "box-office EXCLUDED (belongs to the box-office automation)");
+  assert.ok(!slugs.includes("cand-streaming"), "streaming EXCLUDED (belongs to the box-office automation)");
   assert.ok(!slugs.includes("cand-rumor"));
   assert.ok(!slugs.includes("cand-old"));
   assert.ok(!slugs.includes("cand-music"));
-  assert.ok(!slugs.includes("old-lane-slug"));
+  assert.ok(slugs.includes("old-lane-slug"), "independent of the old lane now — no cross-lane dedup");
 });
 
 await t("scout: mocked scoring + variety cap", async () => {

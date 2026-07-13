@@ -118,6 +118,28 @@ export function tightenPauses(inWav, outWav, { protectTail } = {}) {
   return outWav;
 }
 
+// ADAPTIVE PACE (owner 2026-07-13): the model reads at a VARYING fast rate, so a fixed atempo can't
+// normalize it. Measure THIS take's real pace (words ÷ audio seconds) and slow it just enough to hit
+// targetWps — CLAMPED so it never speeds a slow take up (≤1.0) and never over-slows (≥minTempo, so a
+// 4.0-wps read lands at ~3.4 and faster reads are capped, never too slow). atempo preserves pitch.
+// No-op if pace is off or the take is already at/under target. Falls back to the input on ffmpeg error.
+function paceTake(inWav, words) {
+  const p = IG.voice.pace;
+  if (!p?.targetWps || !(words > 0)) return inWav;
+  const dur = wavDuration(inWav);
+  if (!(dur > 0)) return inWav;
+  const actualWps = words / dur;
+  const tempo = Math.min(1, Math.max(p.minTempo ?? 0.85, p.targetWps / actualWps));
+  if (Math.abs(tempo - 1) < 0.01) return inWav; // already comfortable — don't touch it
+  const out = inWav.replace(/\.wav$/, "-paced.wav");
+  try {
+    execFileSync(FFMPEG, ["-y", "-loglevel", "error", "-i", inWav, "-filter:a", `atempo=${tempo.toFixed(3)}`, out], { timeout: 60000 });
+    return out;
+  } catch {
+    return inWav;
+  }
+}
+
 // Remaining long-gap stats (should be ~zero after tightening) — judge penalty input.
 // The protected TAIL is exempt: the deliberate beat before the final ask is a feature.
 export function gapStats(wav, { noise = "-38dB", minGap = 0.45 } = {}) {
@@ -244,9 +266,12 @@ async function makeTake({ dir, sentences, voice, mood, harder, model, label }) {
   fs.writeFileSync(pcmPath, Buffer.concat(pcms));
   execFileSync(FFMPEG, ["-y", "-loglevel", "error", "-f", "s16le", "-ar", "24000", "-ac", "1", "-i", pcmPath, raw], { timeout: 60000 });
   const tight = tightenPauses(raw, raw.replace("-raw.wav", ".wav"), { protectTail: endingProtectSec });
-  const gaps = gapStats(tight);
-  const judge = await judgeTake(tight);
-  return { voice: label, realVoice: voice, model, wav: tight, transcript, cost, gaps, judge, score: scoreTake(judge, gaps), pass: passesFloor(judge, gaps) };
+  // adaptive slowdown to a comfortable target pace, AFTER tightening so the ear-judge AND the
+  // downstream whisper-align both evaluate the FINAL pace — keeping subtitles/images perfectly in sync.
+  const paced = paceTake(tight, normWords(sentences.join(" ")).length);
+  const gaps = gapStats(paced);
+  const judge = await judgeTake(paced);
+  return { voice: label, realVoice: voice, model, wav: paced, transcript, cost, gaps, judge, score: scoreTake(judge, gaps), pass: passesFloor(judge, gaps) };
 }
 
 // ── the stage ────────────────────────────────────────────────────────────────────
@@ -254,17 +279,13 @@ export async function synthVoice({ slug, speakable, mood }) {
   const dir = workDirFor(slug);
   const weights = loadWeights();
   const locked = weights.voice || null; // { label, voice, model }
-  const prem = IG.voice.premiumCandidate;
   const perVoice = Math.max(1, IG.voice.takesPerVoice || 1);
   const plans = locked
     ? Array.from({ length: perVoice }, (_, i) => ({ label: `${locked.label}${perVoice > 1 ? `-t${i + 1}` : ""}`, voice: locked.voice, model: locked.model || undefined }))
-    : [
-        // best-of-N per cheap voice (delivery variance is real), single take on premium
-        ...IG.voice.candidates.flatMap((v) =>
-          Array.from({ length: perVoice }, (_, i) => ({ label: perVoice > 1 ? `${v}-${i + 1}` : v, voice: v, model: undefined })),
-        ),
-        ...(prem ? [{ label: `${prem.voice}-premium`, voice: prem.voice, model: prem.model }] : []),
-      ];
+    : // best-of-N per candidate voice (delivery variance is real) — first-run bake-off before the lock
+      IG.voice.candidates.flatMap((v) =>
+        Array.from({ length: perVoice }, (_, i) => ({ label: perVoice > 1 ? `${v}-${i + 1}` : v, voice: v, model: undefined })),
+      );
   // pooled (concurrency 3): parallel enough to be fast, gentle enough to avoid aborts
   const takes = await pool(
     plans,
@@ -349,7 +370,7 @@ export async function synthVoice({ slug, speakable, mood }) {
   const wavPath = path.join(dir, "voice.wav");
   fs.copyFileSync(winner.wav, wavPath);
   return {
-    engine: winner.model || "gpt-audio-mini",
+    engine: winner.model || IG.models.voice,
     voice: winner.voice,
     wav: wavPath,
     durationSec: wavDuration(wavPath),
