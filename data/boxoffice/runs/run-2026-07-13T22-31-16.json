@@ -1,0 +1,78 @@
+{
+ "runId": "run-2026-07-13T22-31-16",
+ "mode": "live",
+ "startedAt": "2026-07-13T22:31:16.783Z",
+ "films": 4,
+ "published": [
+  {
+   "tag": "obsession-bo-opening×BO-OPENING",
+   "slug": "obsession-defies-box-office-norms-with-rare-third-weekend-surge-crossing-100m",
+   "path": "/home/runner/work/thescreenreport/thescreenreport/content/articles/obsession-defies-box-office-norms-with-rare-third-weekend-surge-crossing-100m.md",
+   "score": 90
+  }
+ ],
+ "held": [],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "little-brother-netflix-top10×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "i-will-find-you-trending-tv×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "voicemails-for-isabelle-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  }
+ ],
+ "blocked": [],
+ "finishedAt": "2026-07-13T22:33:27.224Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 2563,
+    "out": 701,
+    "usd": 0.00019,
+    "ms": 3401
+   },
+   "gatherer": {
+    "calls": 1,
+    "errors": 0,
+    "in": 4487,
+    "out": 947,
+    "usd": 0.00083,
+    "ms": 3793
+   },
+   "synthesizer": {
+    "calls": 1,
+    "errors": 0,
+    "in": 955,
+    "out": 364,
+    "usd": 0.00015,
+    "ms": 10828
+   },
+   "writer": {
+    "calls": 2,
+    "errors": 0,
+    "in": 8088,
+    "out": 2190,
+    "usd": 0.00674,
+    "ms": 44625
+   },
+   "qa": {
+    "calls": 7,
+    "errors": 0,
+    "in": 25053,
+    "out": 2514,
+    "usd": 0.0138,
+    "ms": 16427
+   }
+  },
+  "totalUsd": 0.02171
+ },
+ "openrouterTotalUsd": 0.02115
+}
