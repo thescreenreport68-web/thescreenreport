@@ -1,0 +1,77 @@
+{
+ "runId": "run-2026-07-13T18-31-12",
+ "mode": "live",
+ "startedAt": "2026-07-13T18:31:12.138Z",
+ "films": 4,
+ "published": [],
+ "held": [
+  {
+   "tag": "disclosure-day-bo-opening×BO-OPENING",
+   "reason": "words 126 < 180 (owner-set ~200-word minimum) | seo-faq: fewer than 2 real FAQs | soft-floor engagement 3 < 5",
+   "score": 40
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "voicemails-for-isabelle-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "little-brother-netflix-top10×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "i-will-find-you-trending-tv×TRENDING-TV",
+   "reason": "parked dead"
+  }
+ ],
+ "blocked": [],
+ "finishedAt": "2026-07-13T18:33:36.168Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 2502,
+    "out": 329,
+    "usd": 0.00013,
+    "ms": 1913
+   },
+   "gatherer": {
+    "calls": 1,
+    "errors": 0,
+    "in": 4133,
+    "out": 335,
+    "usd": 0.00055,
+    "ms": 3445
+   },
+   "synthesizer": {
+    "calls": 1,
+    "errors": 0,
+    "in": 843,
+    "out": 324,
+    "usd": 0.00013,
+    "ms": 17799
+   },
+   "writer": {
+    "calls": 3,
+    "errors": 0,
+    "in": 9795,
+    "out": 3389,
+    "usd": 0.00934,
+    "ms": 45555
+   },
+   "qa": {
+    "calls": 10,
+    "errors": 0,
+    "in": 29188,
+    "out": 4141,
+    "usd": 0.01911,
+    "ms": 34487
+   }
+  },
+  "totalUsd": 0.02926
+ },
+ "openrouterTotalUsd": 0.0278
+}
