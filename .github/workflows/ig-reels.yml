@@ -25,8 +25,11 @@ on:
         description: "draft | live | dry | no-publish"
         default: "draft"
       limit:
-        description: "reels this run"
+        description: "candidates to ATTEMPT this run"
         default: "1"
+      posts:
+        description: "reels to actually BUILD+post (stop after N; blank = same as limit)"
+        default: ""
       slug:
         description: "force one article slug (optional)"
         default: ""
@@ -97,8 +100,10 @@ jobs:
             # manual dispatch — defaults to DRAFT (nothing posts) unless you pick mode=live
             MODE="${{ github.event.inputs.mode || 'draft' }}"
             LIMIT="${{ github.event.inputs.limit || '1' }}"
+            POSTS="${{ github.event.inputs.posts }}"
             SLUG="${{ github.event.inputs.slug }}"
             FLAGS="--limit=$LIMIT"
+            [ -n "$POSTS" ] && FLAGS="$FLAGS --posts=$POSTS"
             [ "$MODE" = "live" ] && FLAGS="$FLAGS --live"
             [ "$MODE" = "dry" ] && FLAGS="--dry"
             [ "$MODE" = "no-publish" ] && FLAGS="$FLAGS --no-publish"
