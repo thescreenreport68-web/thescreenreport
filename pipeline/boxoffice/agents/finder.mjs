@@ -1,0 +1,174 @@
+// AGENT 1 — FINDER / SCOUT. One job: from the discovered in-theater + trending pool, pick the
+// films worth a money story RIGHT NOW, assign the best FORM, and write plain search queries the
+// gatherer feeds to contentFinder to pull the trade box-office report. Highest call-count role →
+// the cheapest model (nova-micro), because every pick is re-verified downstream (plan §8).
+import { discoverFilms } from "../discover.mjs";
+import { agentChat } from "../models.mjs";
+import { FORMS, scopeOk, BOX_OFFICE_FORMS } from "../config.bo.mjs";
+import { loadTracked, streamingExits } from "../tracker.mjs";
+import { fetchNetflixTop10 } from "../netflix.mjs";
+import { getTitleFacts } from "../../lib/tmdb.mjs";
+
+// Build a {film, trigger, angle} entry in the finder's canonical shape (used for tracker-surfaced
+// NOW-STREAMING exits; the LLM-classified in-theater picks build the same shape inline below).
+function mkEntry(f, formKey, { workingTitle = "", star = "", queries = [] } = {}) {
+  const form = FORMS[formKey];
+  const priority = Math.max(1, Math.min(100, Math.round(f.popularity || 0)));
+  const base = String(f.title || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+  return {
+    film: { tmdbId: f.id, title: f.title, year: f.year, releaseDate: f.releaseDate, primaryEntity: f.title, overview: f.overview || "", originalLanguage: f.originalLanguage, popularity: f.popularity || 0, via: f.via, providers: f.providers, netflix: f.netflix || null },
+    trigger: { eventSlug: `${base}-${formKey.toLowerCase()}`, title: f.title, primaryEntity: star || f.title, category: form.category, subcategory: form.subcategory, priority, signals: { recency: f.trendingHot ? 5 : 3, pop: Math.min(10, Math.round((f.popularity || 0) / 50)), breakout: f.trendingHot ? 4 : 0 }, eventType: "boxoffice", sources: [] },
+    angle: { form: formKey, workingTitle: (workingTitle || `${f.title} box office`).slice(0, 140), star, queries: (Array.isArray(queries) ? queries : []).filter(Boolean).slice(0, 3) },
+  };
+}
+
+const SYS = `You are the editor of a BOX-OFFICE money desk for a Hollywood / English-language film site.
+For EACH numbered film, decide whether it is worth a box-office story right now and pick ONE form:
+- BO-OPENING: the film just opened / is posting its first weekend.
+- BO-UPDATE: an in-theater film made a MATERIAL move (weekend actuals, a hold/drop, a milestone like $100M, overtaking another film).
+- NOW-STREAMING: the film has left theaters and just landed on a streaming/PVOD platform.
+HARD SCOPE: Hollywood / English-language films ONLY. REJECT Bollywood / other-language / non-Hollywood
+box office no matter how popular. Skip films with no genuine money angle right now.
+For each pick: a working headline (stars + the number, curiosity without clickbait), the star(s) to lead
+with, and 2 SIMPLE search queries (3-5 plain words, e.g. "Wicked box office weekend"). Output STRICT JSON only.`;
+
+export async function findFilms({ limit = 3, discoverImpl = discoverFilms, chatImpl = null, nowMs = null, trackedImpl = null, providersImpl = null, netflixImpl = null, preferStreaming = false, seen = null } = {}) {
+  const films = await discoverImpl({ nowMs });
+  const seenSlugs = seen?.slugs || new Set();
+  const seenTitles = seen?.titles || new Set();
+  // A pick is a REPEAT (drop it → rotate to something fresh) when: a BO-OPENING whose film we've already
+  // covered (by title), or any non-update piece whose exact eventSlug we've already published. BO-UPDATE
+  // is NEVER dropped here — the materiality gate downstream decides if the new number is a real story.
+  const isRepeat = (eventSlug, form, title) =>
+    form === "BO-UPDATE" ? false
+      : form === "BO-OPENING" ? seenTitles.has(String(title || "").toLowerCase())
+      : seenSlugs.has(eventSlug);
+
+  // NOW-STREAMING exit candidates from the tracker: films tracked in theaters that have since left and
+  // now carry a TMDB-confirmed platform (plan §6). Best-effort — never break normal discovery.
+  let exitEntries = [];
+  try {
+    const tracked = trackedImpl || loadTracked();
+    const providersFor = providersImpl || (async (rec) => {
+      const f = await getTitleFacts(rec.title, "movie", (rec.releaseDate || "").slice(0, 4)).catch(() => null);
+      return f?.providers || null;
+    });
+    const nowPlayingIds = films.filter((f) => f.via === "now_playing").map((f) => f.id);
+    const exits = await streamingExits(tracked, nowPlayingIds, { providersFor, max: 2 });
+    exitEntries = exits.filter((f) => scopeOk(f)).map((f) => mkEntry(f, "NOW-STREAMING", {
+      workingTitle: `${f.title} now streaming`, queries: [`${f.title} streaming`, `${f.title} where to watch`],
+    })).filter((e) => !isRepeat(e.trigger.eventSlug, "NOW-STREAMING", e.film.title));
+  } catch { exitEntries = []; }
+
+  // STREAMING picks (deterministic, from Netflix Top 10 — first-hand hours; plan §4b/§5). Best-effort.
+  // NETFLIX-TOP10 = the week's top English film; TRENDING-TV = the week's top English series. Priority
+  // tracks the Netflix rank so #1 places well.
+  let streamPicks = [];
+  try {
+    const nf = await (netflixImpl || fetchNetflixTop10)();
+    const mkStream = (row, formKey, kind, wt, q2) => mkEntry(
+      { id: null, title: row.title, year: "", releaseDate: "", popularity: Math.max(40, 100 - (row.rank || 1) * 8), overview: "", originalLanguage: "en", via: kind, netflix: { ...row, week: nf.week } },
+      formKey, { workingTitle: wt, queries: [`${row.title} netflix`, q2] });
+    const slugFor = (title, formKey) => `${String(title || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "")}-${formKey.toLowerCase()}`;
+    // Rotate to the first Netflix title we have NOT covered yet — so a title staying #1 for weeks never
+    // gets re-posted; we move to the next fresh entry on the chart instead (owner: always find new).
+    const freshRow = (rows, formKey) => (rows || []).find((r) => r?.title && !seenSlugs.has(slugFor(r.title, formKey)));
+    const fFilm = freshRow(nf?.films, "NETFLIX-TOP10");
+    const fTv = freshRow(nf?.tv, "TRENDING-TV");
+    if (fFilm) streamPicks.push(mkStream(fFilm, "NETFLIX-TOP10", "netflix-top10", `${fFilm.title} on Netflix's Top 10`, `${fFilm.title} netflix cast`));
+    if (fTv) streamPicks.push(mkStream(fTv, "TRENDING-TV", "netflix-tv", `${fTv.title} trending on Netflix`, `${fTv.title} season reactions`));
+  } catch { streamPicks = []; }
+
+  const merge = (bo) => (preferStreaming ? [...streamPicks, ...exitEntries, ...bo] : [...exitEntries, ...bo, ...streamPicks]).slice(0, limit);
+
+  if (!films.length) return merge([]);
+
+  const listing = films.map((f, i) =>
+    `${i}. "${f.title}"${f.year ? ` (${f.year})` : ""} | released ${f.releaseDate || "?"} | popularity ${Math.round(f.popularity)} | via ${f.via}${f.trendingHot ? " · TRENDING" : ""} | ${(f.overview || "").slice(0, 90)}`).join("\n");
+
+  const deadline = (p, ms) => Promise.race([p, new Promise((_, rej) => { const t = setTimeout(() => rej(new Error(`classify deadline ${ms / 1e3}s`)), ms); t.unref?.(); })]);
+  let picks = [];
+  try {
+    const { data } = await deadline(agentChat("finder", {
+      system: SYS,
+      user: `FILMS:\n${listing}\n\nForms allowed: ${BOX_OFFICE_FORMS.join(", ")}\nJSON: {"picks":[{"i":0,"form":"BO-OPENING","workingTitle":"","star":"","queries":["",""]}]}\nOnly films worth covering now. Order strongest first.`,
+    }, chatImpl ? { chatImpl } : {}), 55e3);
+    picks = data?.picks || [];
+  } catch {
+    // Finder LLM down → deterministic fallback: freshest films get BO-OPENING, entity queries.
+    picks = films.slice(0, limit).map((f, i) => ({
+      i, form: "BO-OPENING", workingTitle: `${f.title} box office`, star: "",
+      queries: [`${f.title} box office`, `${f.title} weekend`],
+    }));
+  }
+
+  const priorityOf = (f) => Math.max(1, Math.min(100, Math.round(f.popularity)));
+  const out = [];
+  for (const p of picks) {
+    const f = films[p.i];
+    if (!f || !p.form || !FORMS[p.form] || FORMS[p.form].streaming) continue; // never let the LLM assign a streaming form to a theatrical film
+    if (!scopeOk(f)) continue; // scope clamp — never trust the enum
+    const form = FORMS[p.form];
+    const priority = priorityOf(f);
+    const eventSlug = `${f.title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "")}-${p.form.toLowerCase()}`;
+    if (isRepeat(eventSlug, p.form, f.title)) continue; // already covered → rotate to a fresh story
+    out.push({
+      film: {
+        tmdbId: f.id, title: f.title, year: f.year, releaseDate: f.releaseDate,
+        primaryEntity: f.title, overview: f.overview, originalLanguage: f.originalLanguage,
+        popularity: f.popularity, via: f.via,
+      },
+      trigger: {
+        eventSlug,
+        title: f.title,
+        primaryEntity: p.star || f.title,
+        category: form.category, subcategory: form.subcategory,
+        priority,
+        signals: { recency: f.trendingHot ? 5 : 3, pop: Math.min(10, Math.round(f.popularity / 50)), breakout: f.trendingHot ? 4 : 0 },
+        eventType: "boxoffice",
+        sources: [], // the gatherer's contentFinder fills real trade-report sources
+      },
+      angle: {
+        form: p.form,
+        workingTitle: (p.workingTitle || `${f.title} box office`).slice(0, 140),
+        star: p.star || "",
+        queries: (Array.isArray(p.queries) ? p.queries : []).filter(Boolean).slice(0, 3),
+      },
+    });
+    if (exitEntries.length + streamPicks.length + out.length >= limit) break;
+  }
+
+  // BACKFILL — if repeats/scope drops left us short, rotate DOWN the discovered pool to fresh, uncovered
+  // films (deterministic BO-OPENING) so a run never comes up empty just because the top story was already
+  // covered. borun reclassifies + materiality-gates these downstream, so a stale one still won't publish.
+  const picked = new Set(out.map((e) => String(e.film.title || "").toLowerCase()));
+  for (const f of films) {
+    if (exitEntries.length + streamPicks.length + out.length >= Math.max(limit, 1)) break;
+    if (!scopeOk(f)) continue;
+    const t = String(f.title || "").toLowerCase();
+    if (!t || picked.has(t) || seenTitles.has(t)) continue;
+    out.push(mkEntry(f, "BO-OPENING", { workingTitle: `${f.title} box office`, queries: [`${f.title} box office`, `${f.title} weekend`] }));
+    picked.add(t);
+  }
+
+  // ADVANCE-COVERED (owner's fallback): when the fresh/uncovered pool is exhausted and slots remain, surface
+  // films we've ALREADY covered as BO-UPDATE candidates — advancing them day-by-day (Day 10 → Day 11+). The
+  // tracker's strictly-higher rule downstream only lets one through if today's number is genuinely higher than
+  // the last we published, so this NEVER re-posts old numbers.
+  const filled = () => exitEntries.length + streamPicks.length + out.length >= Math.max(limit, 1);
+  if (!filled()) {
+    const covered = trackedImpl || loadTracked();
+    const byTitle = new Map(films.map((f) => [String(f.title || "").toLowerCase(), f]));
+    for (const rec of Object.values(covered?.films || {})) {
+      if (filled()) break;
+      if (rec.status !== "in-theaters" || !rec.title) continue;
+      const t = String(rec.title).toLowerCase();
+      if (picked.has(t)) continue;
+      const f = byTitle.get(t) || { id: rec.tmdbId, title: rec.title, year: (rec.releaseDate || "").slice(0, 4), releaseDate: rec.releaseDate, popularity: 0, overview: "", originalLanguage: "en", via: "advance-covered" };
+      if (!scopeOk(f)) continue;
+      out.push(mkEntry(f, "BO-UPDATE", { workingTitle: `${f.title} box office`, queries: [`${f.title} box office latest`, `${f.title} box office cume`] }));
+      picked.add(t);
+    }
+  }
+  return merge(out);
+}

@@ -1,0 +1,21 @@
+name = "boxoffice-cron"
+main = "worker.js"
+compatibility_date = "2025-01-01"
+# Cron-only Worker (no HTTP endpoint) — the Cron Trigger fires the scheduled() handler; nothing to serve.
+workers_dev = false
+
+# Fires every hour at :30 UTC (00:30, 01:30, … 23:30). The :30 slot sits BETWEEN the other three lanes:
+# news + gossip own the top of every hour (:00), the reaction lane owns :23 — so box-office never collides.
+# 24 fires/day; the node orchestrator caps publishing at MAX_ARTICLES_PER_DAY=20 (≈15 box-office + 5 streaming)
+# and HOLDS anything that doesn't clear the accuracy gates, so the ~4 unused fires just publish nothing.
+[triggers]
+crons = ["30 * * * *"]
+
+# Non-secret config. GH_REF MUST be the repo's DEFAULT branch (workflow_dispatch only sees workflows on default).
+[vars]
+GH_OWNER = "thescreenreport68-web"
+GH_REPO = "thescreenreport"
+GH_REF = "main"
+
+# Secret (NOT here — set once with:  wrangler secret put GH_TOKEN):
+#   GH_TOKEN = a fine-grained GitHub PAT scoped to this repo with "Actions: Read and write".

@@ -1,0 +1,213 @@
+// ASSEMBLE (box-office) — frontmatter per the SITE CONTRACT (site/lib/articles.ts): the structured
+// boxOffice{}/records[]/whereToWatch[] fields the UI renders, plus the homepage-placement signals
+// (category/subcategory/author/trendScore/signals/eventSlug/eventType/outletCount/storyStatus). The
+// structured money fields are built DETERMINISTICALLY from the gatherer's verbatim figures + the TMDB
+// data — never from the writer's prose (fidelity). gray-matter via createRequire (same as every lane).
+// NEVER emit an undefined key — gray-matter throws.
+import fs from "node:fs";
+import path from "node:path";
+import { createRequire } from "node:module";
+import { CONTENT_DIR, BOXOFFICE_AUTHOR_SLUG, EVENT_TYPE, FORMS, SEO } from "./config.bo.mjs";
+
+const require = createRequire(import.meta.url);
+const matter = require("gray-matter");
+
+const slugify = (s) => {
+  const full = (s || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+  if (full.length <= 80) return full;
+  const cut = full.slice(0, 80);
+  return cut.includes("-") ? cut.replace(/-[^-]*$/, "") : cut;
+};
+
+const trimAtWord = (str, max) => {
+  const t = (str || "").trim();
+  if (t.length <= max) return t;
+  const cut = t.slice(0, max + 1);
+  const atSpace = cut.lastIndexOf(" ");
+  return (atSpace > max * 0.6 ? cut.slice(0, atSpace) : cut.slice(0, max)).replace(/[\s,;:—–-]+$/, "");
+};
+// Trailing "as/in/to/the/…" left by a hard length-trim reads broken — strip it (titles + meta share this).
+const DANGLING_TAIL = /\s+(in|on|of|to|for|with|and|but|as|the|a|an|that|which|from|about)\s*$/i;
+const stripDangling = (s) => { let t = (s || "").trim(); while (DANGLING_TAIL.test(t)) t = t.replace(DANGLING_TAIL, "").trim(); return t.replace(/[\s,;:—–-]+$/, "").trim(); };
+// A meta description cut mid-clause ("…best of the year, as it") reads broken: if the final
+// comma-clause is a dangling fragment (starts with a conjunction / is 1-2 words), drop it so the line
+// ends on a complete thought.
+const tidyMeta = (raw, max) => {
+  let t = stripDangling(trimAtWord(raw, max));
+  const lc = t.lastIndexOf(", ");
+  if (lc > max * 0.5) {
+    const tail = t.slice(lc + 2).trim();
+    if (/^(as|and|but|which|that|to|for|with|while|when|because|since|so|it|its)\b/i.test(tail) || tail.split(/\s+/).length <= 2)
+      t = t.slice(0, lc);
+  }
+  return stripDangling(t);
+};
+export const seoFinish = ({ metaTitle, metaDescription }) => ({
+  metaTitle: stripDangling(trimAtWord(metaTitle, SEO.metaTitleMax)),
+  metaDescription: tidyMeta(metaDescription, SEO.metaDescMax),
+});
+export function cleanTitle(title) {
+  let t = (title || "").trim();
+  if (t.length > 100) {
+    const cut = t.slice(0, 100);
+    const stop = Math.max(cut.lastIndexOf(". "), cut.lastIndexOf(", "), cut.lastIndexOf(" — "));
+    t = (stop > 40 ? cut.slice(0, stop) : cut.replace(/\s+\S*$/, "")).trim();
+  }
+  while (DANGLING_TAIL.test(t)) t = t.replace(DANGLING_TAIL, "").trim();
+  return t.replace(/[\s,;:—–-]+$/, "").trim();
+}
+const clean = (o) => Object.fromEntries(Object.entries(o).filter(([, v]) => v !== undefined && v !== null && v !== ""));
+
+// Collapse provider tier variants + dedupe: "Netflix, Netflix Standard with Ads" → "Netflix".
+const normPlatform = (p) => {
+  const parts = String(p || "").split(/,\s*/)
+    .map((s) => s.replace(/\s+(Standard|Basic|Premium|Ad-Supported)(\s+with\s+Ads)?$/i, "").replace(/\s+with\s+Ads$/i, "").trim())
+    .filter(Boolean);
+  return [...new Set(parts)].join(", ");
+};
+
+// Build the structured boxOffice{} strictly from verified figures (gatherer verbatim + TMDB).
+function buildBoxOffice(gathered = {}, boxData = {}) {
+  const bo = clean({
+    domestic: gathered.domestic || undefined,
+    international: gathered.international || undefined,
+    worldwide: gathered.worldwide || boxData.worldwide || undefined,
+    budget: boxData.budget || undefined,
+    openingWeekend: gathered.openingWeekend || undefined,
+    theaters: gathered.theaters || undefined,
+    perTheater: gathered.perTheater || undefined,
+    changePct: gathered.dropPct || undefined,
+  });
+  return Object.keys(bo).length ? bo : undefined;
+}
+
+// DETERMINISTIC COMPLETENESS — the writer/QA can slip; these guarantee the article is never published
+// missing FAQs, carrying a generic template heading, or mislabelling a series as a movie. Non-bypassable.
+
+// ≥2 REAL FAQs with REAL answers, built from the verified facts if the writer under-delivered.
+function ensureFaq(article, { gathered = {}, boxData = {}, film = {}, form = {} }) {
+  const cand = (article.faq || []).filter((f) => f?.q && f?.a && String(f.a).trim().length > 15).slice(0, 4);
+  const t = film.title || article.title || "the title";
+  const add = (q, a) => { a = (a || "").trim(); if (a.length > 15 && cand.length < 4 && !cand.some((f) => f.q === q)) cand.push({ q, a }); };
+  if (form.streaming) {
+    if (gathered.hoursViewed) add(`How many hours has '${t}' been viewed on Netflix?`,
+      `According to Netflix's Top 10 data${gathered.netflixWeek ? ` for the week of ${gathered.netflixWeek}` : ""}, '${t}' logged ${gathered.hoursViewed}${gathered.netflixRank ? `, ranking #${gathered.netflixRank} on the chart` : ""}.`);
+    add(`Where can I watch '${t}'?`, `'${t}' is streaming on ${gathered.platform || "Netflix"}.`);
+    if (gathered.weeksInTop10) add(`How long has '${t}' been in the Netflix Top 10?`,
+      `'${t}' has spent ${gathered.weeksInTop10} week${gathered.weeksInTop10 > 1 ? "s" : ""} in the Netflix Top 10.`);
+  } else {
+    const bo = buildBoxOffice(gathered, boxData) || {};
+    if (bo.openingWeekend || bo.domestic || bo.worldwide) add(`How much did '${t}' make at the box office?`,
+      `${bo.openingWeekend ? `'${t}' opened to ${bo.openingWeekend}. ` : ""}${bo.worldwide ? `Its worldwide total stands at ${bo.worldwide}.` : bo.domestic ? `It has grossed ${bo.domestic} domestically.` : ""}`);
+    if (bo.budget) add(`What is the production budget of '${t}'?`, `'${t}' was produced on a reported budget of ${bo.budget} before marketing.`);
+    if (gathered.platform || (boxData.providers?.stream || []).length) add(`Where can I watch '${t}'?`,
+      `'${t}' is available on ${gathered.platform || (boxData.providers.stream || []).join(", ")}.`);
+  }
+  return cand.slice(0, 4);
+}
+
+// Strip GENERIC template headings (## or **bold?** pseudo-headings) — story-specific headings are kept.
+const TEMPLATE_HEADING_RE = /^(why (is|are|did|does|has)\b|how (big|did|are|does|much|is)\b|what(?:'s| is| are| does| comes|'s next| happens| happened| behind| next)\b|where (can|to|is)\b|who (is|are|stars)\b|is (it|this|the)\b|what comes next\b)/i;
+function deTemplate(body) {
+  const out = [];
+  for (const line of String(body || "").split("\n")) {
+    const l = line.trim();
+    const heading = /^#{1,6}\s/.test(l) ? l.replace(/^#{1,6}\s*/, "")
+      : /^\*\*[^*]+\*\*$/.test(l) ? l.replace(/^\*\*/, "").replace(/\*\*$/, "") : null;
+    if (heading !== null && TEMPLATE_HEADING_RE.test(heading.trim())) continue; // drop the generic heading; the paragraph still reads
+    out.push(line);
+  }
+  return out.join("\n").replace(/\n{3,}/g, "\n\n").trim();
+}
+
+// LEDE FIX (SEO heading hygiene): the article TITLE is the page H1; the body must OPEN with a paragraph, not
+// a heading. If the writer put the opening hook as an ## H2 (or #), strip the heading markers so the lede is a
+// normal paragraph and the H2s below it stay a proper sub-heading hierarchy.
+function fixLede(body) {
+  const lines = String(body || "").split("\n");
+  for (let i = 0; i < lines.length; i++) {
+    if (!lines[i].trim()) continue;
+    if (/^#{1,6}\s/.test(lines[i])) lines[i] = lines[i].replace(/^#{1,6}\s+/, "").replace(/^\s*[-–—]\s+/, "");
+    break;
+  }
+  return lines.join("\n");
+}
+
+// A TRENDING-TV subject is a series, not a movie — correct the schema type the writer emits.
+function fixAbout(about, { film, form }) {
+  const arr = Array.isArray(about) ? about.filter((e) => e && e.name && e.type) : [];
+  if (!(form.category === "tv")) return arr;
+  const ft = String(film.title || "").toLowerCase().trim();
+  return arr.map((e) => (e.type === "Movie" && String(e.name).toLowerCase().trim() === ft ? { ...e, type: "TVSeries" } : e));
+}
+
+export function buildBoxOfficeMarkdown({ article, trigger, angle, film, gathered = {}, boxData = {}, image, dateISO }) {
+  const form = FORMS[angle.form];
+  const title = cleanTitle(article.title);
+  const slug = slugify(title);
+  const boxOffice = buildBoxOffice(gathered, boxData);
+  const records = (gathered.records || []).filter(Boolean).map((r) => (typeof r === "string" ? { claim: r } : clean({ claim: r.claim, detail: r.detail })))
+    .filter((r) => r.claim);
+  // whereToWatch: TMDB providers (NOW-STREAMING / a landed title), or — for a Netflix Top 10 / trending
+  // streaming piece — the platform the piece is about (Netflix) so the reader still gets a where-to-watch row.
+  let whereToWatch = (boxData.whereToWatch || []).filter((w) => w?.title && w?.platform);
+  if (!whereToWatch.length && form?.streaming && gathered?.platform) {
+    whereToWatch = [{ title: film.title, platform: gathered.platform, type: "Stream" }];
+  }
+  whereToWatch = whereToWatch.map((w) => ({ ...w, platform: normPlatform(w.platform) }));
+
+  const fm = clean({
+    title,
+    slug,
+    category: form.category,
+    subcategory: form.subcategory,
+    author: BOXOFFICE_AUTHOR_SLUG,
+    date: dateISO,
+    dek: article.dek || "",
+    ...seoFinish({ metaTitle: article.metaTitle || article.title, metaDescription: article.metaDescription || article.dek || "" }),
+    tags: article.tags || [],
+    keyTakeaways: article.keyTakeaways || [],
+    faq: ensureFaq(article, { gathered, boxData, film, form }),
+    about: fixAbout(article.about, { film, form }),
+    formatTag: form.formatTag,
+    boxOffice,
+    records: records.length ? records : undefined,
+    whereToWatch: whereToWatch.length ? whereToWatch : undefined,
+    // TODO (tracker increment, plan §6): weekendChart[] (the multi-film weekend chart) needs the full
+    // trade weekend table + the run ledger — omitted in the lean single unit.
+    // Homepage placement contract.
+    trendScore: Number.isFinite(trigger.priority) ? trigger.priority : undefined,
+    // Homepage trendingScore reads breakout + corroboration + type; enrich the finder's
+    // recency/pop/breakout with corroboration (from the real outlet count) + a boxoffice type weight
+    // so BO pieces earn trending-rail rank instead of scoring 0 on those axes.
+    signals: (() => {
+      const s = { ...(trigger.signals || {}) };
+      s.corroboration = Math.min(10, gathered.outletCount || (trigger.sources || []).length || 1);
+      s.type = 6;
+      return Object.keys(s).length ? s : undefined;
+    })(),
+    eventSlug: trigger.eventSlug,
+    eventType: EVENT_TYPE,
+    outletCount: gathered.outletCount || (trigger.sources || []).length || undefined,
+    storyStatus: "CONFIRMED",
+    ...(image ? {
+      image: image.image,
+      imageAlt: image.alt || article.imageQuery || film.title,
+      imageCredit: image.credit || "Photo via source",
+      imageWidth: image.imageWidth,
+      imageHeight: image.imageHeight,
+    } : {}),
+  });
+
+  const md = matter.stringify("\n" + fixLede(deTemplate(article.body || "")).trim() + "\n", fm);
+  return { slug, frontmatter: fm, md };
+}
+
+export function writeBoxOfficeArticle({ article, trigger, angle, film, gathered, boxData, image, dateISO, dir = CONTENT_DIR, dryRun = false }) {
+  const out = buildBoxOfficeMarkdown({ article, trigger, angle, film, gathered, boxData, image, dateISO });
+  if (!dryRun) {
+    fs.mkdirSync(dir, { recursive: true });
+    fs.writeFileSync(path.join(dir, out.slug + ".md"), out.md);
+  }
+  return { ...out, path: path.join(dir, out.slug + ".md"), written: !dryRun };
+}
