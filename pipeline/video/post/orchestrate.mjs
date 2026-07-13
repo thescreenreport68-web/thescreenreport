@@ -35,6 +35,9 @@ const VIDEO_CATEGORIES = new Set(["movies", "tv", "celebrity"]);
 const MAX_PER_CATEGORY = 2; // owner rule 2026-07-08: newest stories, at most 2 of the same category
 const FRESH_DAYS = 7; // outer bound; newest-first sort means we almost always pick today's/yesterday's
 const STAGGER = { facebook: 0, instagram: 4, youtube: 8, pinterest: 12 };
+// Instagram is OFF for this automation (owner 2026-07-10: a separate dedicated IG agent now owns Instagram).
+// Keep FB + YouTube + Pinterest. Flip to true to re-enable IG here.
+const POST_INSTAGRAM = false;
 
 // ── America/Los_Angeles wall-clock → exact UTC Date (handles PST/PDT automatically)
 function laOffsetMin(dateUTC) {
@@ -184,7 +187,8 @@ async function postOne({ category, slug, base, draft, dry, immediate }) {
   const results = {};
   // sequential so the media URL is warm and we never burst
   results.facebook = await postZernioRetry({ platform: "facebook", videoUrl: host.url, caption: caps.facebook, whenISO: plan.facebook.when, draft });
-  results.instagram = await postZernioRetry({ platform: "instagram", videoUrl: host.url, caption: caps.instagram, whenISO: plan.instagram.when, draft });
+  if (POST_INSTAGRAM) // Instagram is owned by a separate agent now — this automation does NOT post to IG
+    results.instagram = await postZernioRetry({ platform: "instagram", videoUrl: host.url, caption: caps.instagram, whenISO: plan.instagram.when, draft });
   results.youtube = await postYouTube({ videoUrl: host.url, thumbnailUrl: thumb.url, caps: caps.youtube, whenISO: plan.youtube.when, draft, immediate });
   results.pinterest = await postPinterest({ videoUrl: host.url, thumbnailUrl: thumb.url, caps: caps.pinterest, articleUrl, boardServiceId: plan.pinterest.board, whenISO: plan.pinterest.when, draft, immediate });
 
