@@ -1,0 +1,77 @@
+{
+ "runId": "run-2026-07-13T19-31-24",
+ "mode": "live",
+ "startedAt": "2026-07-13T19:31:24.913Z",
+ "films": 4,
+ "published": [],
+ "held": [
+  {
+   "tag": "passenger-bo-opening×BO-OPENING",
+   "reason": "reconcile: domestic+international ($23M) does not match worldwide ($14M) — present each figure as separately reported, never imply a sum | words 133 < 180 (owner-set ~200-word minimum) | soft-floor readability 4 < 5 | soft-floor engagement 2 < 5 | soft-floor humanVoice 3 < 5",
+   "score": 30
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "voicemails-for-isabelle-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "little-brother-netflix-top10×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "i-will-find-you-trending-tv×TRENDING-TV",
+   "reason": "parked dead"
+  }
+ ],
+ "blocked": [],
+ "finishedAt": "2026-07-13T19:33:19.407Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 2388,
+    "out": 547,
+    "usd": 0.00016,
+    "ms": 3025
+   },
+   "gatherer": {
+    "calls": 1,
+    "errors": 0,
+    "in": 2974,
+    "out": 357,
+    "usd": 0.00044,
+    "ms": 1330
+   },
+   "synthesizer": {
+    "calls": 1,
+    "errors": 0,
+    "in": 859,
+    "out": 323,
+    "usd": 0.00014,
+    "ms": 18645
+   },
+   "writer": {
+    "calls": 3,
+    "errors": 0,
+    "in": 9853,
+    "out": 3032,
+    "usd": 0.00879,
+    "ms": 41614
+   },
+   "qa": {
+    "calls": 9,
+    "errors": 0,
+    "in": 27318,
+    "out": 4591,
+    "usd": 0.01967,
+    "ms": 31421
+   }
+  },
+  "totalUsd": 0.0292
+ },
+ "openrouterTotalUsd": 0.02751
+}
