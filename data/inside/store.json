@@ -992,6 +992,56 @@
     },
     "sources": []
    }
+  },
+  {
+   "key": "moana-2026|audience-reaction",
+   "at": "2026-07-13T02:40:15.922Z",
+   "updatedCount": 0,
+   "parentEventSlug": "moana-2026",
+   "form": "audience-reaction",
+   "slug": "moana-live-action-has-the-internet-split-down-the-middle",
+   "title": "Moana Live-Action Has the Internet Split Down the Middle",
+   "primaryEntity": "Moana",
+   "eventType": "discourse",
+   "harvestQuoteKeys": [
+    "what to know about the live-action moana",
+    "kotaku.com/moana-live-a...",
+    "tl;dr: while i do think that there are some animation fans that are liking the dragons rem",
+    "im open to the idea that disney in particular has diminished its returns in this space in ",
+    "disneys live-action moana has debuted, with early reactions praising the films visual sple",
+    "i really dont care what the critics are saying. i will support the hell out of anything wi",
+    "moana live-action remake is poorly received by critics. wwe fans: the rock for wrestlemani",
+    "so called animation fans explaining why theyd prefer httyd remake over moana despite shari",
+    "troque moana por 95% de todos live action de animações da disney"
+   ],
+   "angle": {
+    "form": "audience-reaction",
+    "angle": "one line: enthusiastic audience response to a new Moana project",
+    "workingTitle": "Massive Praise for 'Moana' Sequel Tease",
+    "focusEntity": "Moana",
+    "searchQueries": [
+     "Moana sequel",
+     "Moana fan reaction"
+    ]
+   },
+   "trigger": {
+    "parentEventSlug": "moana-2026",
+    "parentSlug": null,
+    "parentTitle": "Moana",
+    "primaryEntity": "Moana",
+    "eventType": "discourse",
+    "tmdbType": "movie",
+    "subjectKind": "title",
+    "priority": 152,
+    "category": "movies",
+    "overview": "Teenage Moana answers the Ocean's call and, for the first time, voyages beyond the reef of her island of Motunui with infamous demigod Maui on an unforgettable journey to restore prosperity to her people.",
+    "work": {
+     "title": "Moana",
+     "type": "movie",
+     "year": "2026"
+    },
+    "sources": []
+   }
   }
  ],
  "parked": [
@@ -1117,14 +1167,6 @@
    "tries": 3,
    "at": "2026-07-12T20:38:11.581Z",
    "dead": true
-  },
-  {
-   "key": "moana-2026|audience-reaction",
-   "parentEventSlug": "moana-2026",
-   "form": "audience-reaction",
-   "reason": "score 88 < 70",
-   "tries": 2,
-   "at": "2026-07-12T20:50:59.451Z"
   }
  ]
 }
