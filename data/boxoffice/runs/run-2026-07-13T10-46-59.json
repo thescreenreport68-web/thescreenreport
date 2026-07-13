@@ -1,0 +1,79 @@
+{
+ "runId": "run-2026-07-13T10-46-59",
+ "mode": "live",
+ "startedAt": "2026-07-13T10:46:59.661Z",
+ "films": 4,
+ "published": [],
+ "held": [
+  {
+   "tag": "michael-bo-opening×BO-OPENING",
+   "reason": "words 142 < 180 (owner-set ~200-word minimum)",
+   "score": 60
+  },
+  {
+   "tag": "disclosure-day-bo-opening×BO-OPENING",
+   "reason": "words 178 < 180 (owner-set ~200-word minimum) | seo-faq: fewer than 2 real FAQs",
+   "score": 40
+  },
+  {
+   "tag": "voicemails-for-isabelle-netflix-top10×NETFLIX-TOP10",
+   "reason": "words 178 < 180 (owner-set ~200-word minimum)",
+   "score": 85
+  },
+  {
+   "tag": "i-will-find-you-trending-tv×TRENDING-TV",
+   "reason": "words 163 < 180 (owner-set ~200-word minimum) | seo-faq: fewer than 2 real FAQs",
+   "score": 75
+  }
+ ],
+ "rejected": [],
+ "skipped": [],
+ "blocked": [],
+ "finishedAt": "2026-07-13T10:58:25.449Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 2450,
+    "out": 643,
+    "usd": 0.00018,
+    "ms": 3619
+   },
+   "gatherer": {
+    "calls": 4,
+    "errors": 0,
+    "in": 12314,
+    "out": 1022,
+    "usd": 0.00164,
+    "ms": 6058
+   },
+   "synthesizer": {
+    "calls": 4,
+    "errors": 0,
+    "in": 2728,
+    "out": 1851,
+    "usd": 0.00058,
+    "ms": 55968
+   },
+   "writer": {
+    "calls": 12,
+    "errors": 0,
+    "in": 19091,
+    "out": 11994,
+    "usd": 0.02683,
+    "ms": 288521
+   },
+   "qa": {
+    "calls": 30,
+    "errors": 0,
+    "in": 37779,
+    "out": 11604,
+    "usd": 0.04034,
+    "ms": 81688
+   }
+  },
+  "totalUsd": 0.06957
+ },
+ "openrouterTotalUsd": 0.06966
+}
