@@ -1,0 +1,52 @@
+{
+ "runId": "run-2026-07-13T23-31-12",
+ "mode": "live",
+ "startedAt": "2026-07-13T23:31:12.215Z",
+ "films": 4,
+ "published": [],
+ "held": [],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "voicemails-for-isabelle-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "toy-story-5-bo-opening×BO-OPENING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "little-brother-netflix-top10×NETFLIX-TOP10",
+   "reason": "parked dead"
+  }
+ ],
+ "blocked": [
+  {
+   "tag": "obsession-now-streaming×NOW-STREAMING",
+   "reason": "watchdog: gatherer obsession-now-streaming×NOW-STREAMING exceeded 180s"
+  }
+ ],
+ "finishedAt": "2026-07-13T23:34:17.750Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 2563,
+    "out": 420,
+    "usd": 0.00015,
+    "ms": 3923
+   },
+   "gatherer": {
+    "calls": 2,
+    "errors": 2,
+    "in": 0,
+    "out": 0,
+    "usd": 0,
+    "ms": 0
+   }
+  },
+  "totalUsd": 0.00015
+ },
+ "openrouterTotalUsd": 0.00244
+}
