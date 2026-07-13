@@ -1,0 +1,79 @@
+{
+ "runId": "run-2026-07-13T15-31-17",
+ "mode": "live",
+ "startedAt": "2026-07-13T15:31:17.952Z",
+ "films": 4,
+ "published": [],
+ "held": [
+  {
+   "tag": "voicemails-for-isabelle-now-streaming×NOW-STREAMING",
+   "reason": "words 151 < 180 (owner-set ~200-word minimum)",
+   "score": 65
+  },
+  {
+   "tag": "toy-story-5-bo-opening×BO-OPENING",
+   "reason": "words 99 < 180 (owner-set ~200-word minimum) | seo-faq: fewer than 2 real FAQs",
+   "score": 50
+  },
+  {
+   "tag": "little-brother-netflix-top10×NETFLIX-TOP10",
+   "reason": "words 141 < 180 (owner-set ~200-word minimum) | seo-faq: fewer than 2 real FAQs | template-heading: \"## What Does This Mean for 'Little Brother' on Net\" — rewrite story-specific",
+   "score": 60
+  },
+  {
+   "tag": "i-will-find-you-trending-tv×TRENDING-TV",
+   "reason": "platform: names max not in confirmed providers",
+   "score": 0
+  }
+ ],
+ "rejected": [],
+ "skipped": [],
+ "blocked": [],
+ "finishedAt": "2026-07-13T15:42:20.911Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 2507,
+    "out": 326,
+    "usd": 0.00013,
+    "ms": 2042
+   },
+   "gatherer": {
+    "calls": 4,
+    "errors": 0,
+    "in": 12495,
+    "out": 891,
+    "usd": 0.00161,
+    "ms": 5025
+   },
+   "synthesizer": {
+    "calls": 4,
+    "errors": 0,
+    "in": 2946,
+    "out": 1565,
+    "usd": 0.00055,
+    "ms": 43078
+   },
+   "writer": {
+    "calls": 12,
+    "errors": 0,
+    "in": 37260,
+    "out": 13165,
+    "usd": 0.03597,
+    "ms": 262243
+   },
+   "qa": {
+    "calls": 30,
+    "errors": 0,
+    "in": 85119,
+    "out": 14028,
+    "usd": 0.06061,
+    "ms": 116460
+   }
+  },
+  "totalUsd": 0.09886
+ },
+ "openrouterTotalUsd": 0.09256
+}
