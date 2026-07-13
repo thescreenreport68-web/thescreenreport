@@ -1,0 +1,66 @@
+{
+ "runId": "run-2026-07-13T13-31-22",
+ "mode": "live",
+ "startedAt": "2026-07-13T13:31:22.845Z",
+ "films": 4,
+ "published": [
+  {
+   "tag": "michael-now-streaming×NOW-STREAMING",
+   "slug": "jaafar-jackson-s-michael-smashes-888m-at-box-office-now-streaming",
+   "path": "/home/runner/work/thescreenreport/thescreenreport/content/articles/jaafar-jackson-s-michael-smashes-888m-at-box-office-now-streaming.md",
+   "score": 76,
+   "acceptReason": "terminal-accept: score 76 >= 68"
+  }
+ ],
+ "held": [],
+ "rejected": [],
+ "skipped": [],
+ "blocked": [],
+ "finishedAt": "2026-07-13T13:34:23.218Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 2452,
+    "out": 470,
+    "usd": 0.00015,
+    "ms": 6071
+   },
+   "gatherer": {
+    "calls": 1,
+    "errors": 0,
+    "in": 4124,
+    "out": 294,
+    "usd": 0.00053,
+    "ms": 4707
+   },
+   "synthesizer": {
+    "calls": 1,
+    "errors": 0,
+    "in": 759,
+    "out": 1115,
+    "usd": 0.00027,
+    "ms": 10828
+   },
+   "writer": {
+    "calls": 3,
+    "errors": 0,
+    "in": 9280,
+    "out": 3023,
+    "usd": 0.00855,
+    "ms": 55196
+   },
+   "qa": {
+    "calls": 7,
+    "errors": 2,
+    "in": 14623,
+    "out": 1777,
+    "usd": 0.00585,
+    "ms": 28591
+   }
+  },
+  "totalUsd": 0.01535
+ },
+ "openrouterTotalUsd": 0.01599
+}
