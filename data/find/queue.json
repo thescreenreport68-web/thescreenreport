@@ -1,41 +1,115 @@
 {
-  "runId": "run-2026-07-12T21-03-28",
-  "builtAt": "2026-07-12T21:03:54.061Z",
-  "count": 10,
+  "runId": "run-2026-07-13T01-03-58",
+  "builtAt": "2026-07-13T01:04:32.337Z",
+  "count": 9,
   "topics": [
     {
-      "id": "news-sacha-baron-cohen-ali-g-wimbledon-new-movie",
-      "slug": "sacha-baron-cohen-s-ali-g-crashes-wimbledon-amid-new-movie-buzz",
-      "title": "Sacha Baron Cohen's Ali G Crashes Wimbledon Amid New Movie Buzz",
+      "id": "news-love-island-usa-season-8-winners-revealed",
+      "slug": "love-island-usa-season-8-winners-revealed",
+      "title": "Love Island USA Season 8 Winners Revealed",
       "contentType": "news",
       "formatTag": "news",
-      "category": "movies",
+      "category": "tv",
       "subcategory": "news",
-      "eventType": "announcement",
+      "eventType": "award",
       "sensitivity": "normal",
-      "eventSlug": "sacha-baron-cohen-ali-g-wimbledon-new-movie",
-      "primaryKeyword": "Ali G new movie",
-      "primaryEntity": "Sacha Baron Cohen",
+      "eventSlug": "love-island-usa-season-8-winners-revealed",
+      "primaryKeyword": "love island usa season 8 winners",
+      "primaryEntity": "Love Island USA (TV Series)",
       "entities": [
-        "Ali G Indahouse",
-        "Ali G"
+        "Peacock"
       ],
-      "angle": "Sacha Baron Cohen's iconic Ali G character makes a public appearance amid news of a new film.",
+      "angle": "The winners of the latest season of the Peacock dating competition have been crowned.",
+      "tmdbType": "movie",
+      "source": "rss:TheWrap",
+      "sources": [
+        {
+          "outlet": "TheWrap",
+          "tier": 7,
+          "url": "https://www.thewrap.com/creative-content/tv-shows/love-island-usa-season-8-winners/",
+          "ageMin": 3,
+          "headline": "Love Island USA Season 8 Winners Revealed: Which Couple Won the $100,000 Prize?",
+          "summary": "The Peacock series also shares a reunion premiere date and the return of \"Beyond the Villa\" The post Love Island USA Season 8 Winners Revealed: Which Couple Won the $100,000 Prize? appeared first on TheWrap ."
+        },
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/tv/tv-news/love-island-usa-season-8-winners-1236640996/",
+          "ageMin": 14,
+          "headline": "‘Love Island USA’ Season 8 Winners Revealed",
+          "summary": "The couples heading into the hit Peacock show's finale were Trinity and Bryce, Aniya and Carl, Kayda and Zach, and Melanie and Sincere."
+        }
+      ],
+      "ageMin": 3,
+      "_cand": {
+        "key": "rss:love-island-usa-season-8-winners-revealed-which-couple-won-t",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 2,
+      "verification": {
+        "tier1Count": 2,
+        "tier1Owners": 2,
+        "outletCount": 2,
+        "outlets": [
+          "TheWrap",
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": null,
+        "framing": "plain",
+        "status": "CONFIRMED",
+        "publishable": true
+      },
+      "priority": 83,
+      "signals": {
+        "recency": 30,
+        "corroboration": 18,
+        "status": 25,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 8,
+        "softTv": -12
+      }
+    },
+    {
+      "id": "news-elin-hilderbrand-no-interest-writing-for-tv",
+      "slug": "elin-hilderbrand-on-writing-for-tv-i-have-no-interest",
+      "title": "Elin Hilderbrand On Writing For TV: I Have No Interest",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "elin-hilderbrand-no-interest-writing-for-tv",
+      "primaryKeyword": "elin hilderbrand tv adaptation",
+      "primaryEntity": "Elin Hilderbrand",
+      "entities": [
+        "The Five Star Weekend",
+        "The Five-Star Weekend (TV Series)",
+        "Peacock",
+        "Jennifer Garner"
+      ],
+      "angle": "Author Elin Hilderbrand states she has no interest in writing for television, despite her novel being adapted for Peacock.",
       "tmdbType": "movie",
       "source": "rss:Deadline",
       "sources": [
         {
           "outlet": "Deadline",
           "tier": 7,
-          "url": "https://deadline.com/2026/07/ali-g-wimbledon-sacha-baron-cohen-1236980220/",
-          "ageMin": 126,
-          "headline": "Sacha Baron Cohen s Ali G Shows Up At Wimbledon Amid News Of New Movie",
-          "summary": "Three-time Oscar nominee Sacha Baron Cohen was at Wimbledon today, but so was his alter-ego, Ali G, as you can see from the social media posts below. We hear it s really Ali G, and the news comes in the wake of a brand new Ali G movie being filmed sub rosa. While the man-on-the-street comedic [ ]"
+          "url": "https://deadline.com/2026/07/elin-hilderbrand-new-book-called-the-novelists-1236980353/",
+          "ageMin": 1,
+          "headline": "Elin Hilderbrand On Writing For TV: I Have No Interest ; Author Also Reveals New Book",
+          "summary": "The series adaptation of Elin Hiderbrand s The Five-Star Weekend dropped on Peacock this week. Based on her 2023 novel, the series stars Jennifer Garner. Bekah Brunstetter (Maid, This Is Us) created and wrote the series adaptation. The first adaptation of her work, The Perfect Couple, was a hit for Netflix and has spawned a Season 2, which will be [ ]"
         }
       ],
-      "ageMin": 126,
+      "ageMin": 1,
       "_cand": {
-        "key": "rss:sacha-baron-cohen-s-ali-g-shows-up-at-wimbledon-amid-news-of",
+        "key": "rss:elin-hilderbrand-on-writing-for-tv-i-have-no-interest-author",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -54,77 +128,203 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 79,
+      "priority": 71,
       "signals": {
-        "recency": 16,
+        "recency": 30,
         "corroboration": 12,
         "status": 18,
-        "type": 9,
+        "type": 5,
         "pop": 0,
         "breakout": 0,
-        "big": 24,
+        "big": 6,
         "trending": 0,
         "softTv": 0
       }
     },
     {
-      "id": "music-news-rolling-stones-foreign-tongues-favorite-new-music",
-      "slug": "the-rolling-stones-foreign-tongues-voted-favorite-new-music-by-fans",
-      "title": "The Rolling Stones' 'Foreign Tongues' Voted Favorite New Music by Fans",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
+      "id": "news-evil-dead-burn-director-discusses-brutality",
+      "slug": "evil-dead-burn-director-breaks-down-his-brand-of-french-brutality",
+      "title": "Evil Dead Burn Director Breaks Down His Brand of French Brutality",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
       "subcategory": "news",
       "eventType": "other",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "rolling-stones-foreign-tongues-favorite-new-music",
-      "primaryKeyword": "Rolling Stones Foreign Tongues",
-      "primaryEntity": "The Rolling Stones",
-      "entities": [
-        "Foreign Tongues"
-      ],
-      "angle": "Fans have chosen The Rolling Stones' new album 'Foreign Tongues' as their favorite new music of the week.",
+      "sensitivity": "high",
+      "eventSlug": "evil-dead-burn-director-discusses-brutality",
+      "primaryKeyword": "Evil Dead Burn director",
+      "primaryEntity": "Evil Dead Burn",
+      "entities": [],
+      "angle": "Director breaks down the practical effects and brutal moments in the horror film.",
       "tmdbType": "movie",
-      "source": "rss:Billboard",
+      "source": "rss:Variety",
       "sources": [
         {
-          "outlet": "Billboard",
+          "outlet": "Variety",
           "tier": 7,
-          "url": "https://www.billboard.com/music/music-news/rolling-stones-foreign-tongues-best-new-music-poll-results-1236292705/",
-          "ageMin": 9,
-          "headline": "Fans Choose The Rolling Stones Foreign Tongues as This Week s Favorite New Music",
-          "summary": "The Stones' new 14-track collection brought in more than 42% of the vote this week."
+          "url": "https://variety.com/2026/film/news/evil-dead-burn-director-practical-effects-post-credits-scene-1236808969/",
+          "ageMin": 219,
+          "headline": "Evil Dead Burn Director Breaks Down His Brand of French Brutality, From Practical Effects and Real Fire to That Post-Credits Scene",
+          "summary": "SPOILER ALERT: This story contains major spoilers for “Evil Dead Burn,” now playing in theaters. “Evil Dead Burn” breaks one of the fundamental rules of cinema: Don’t kill the dog. “If you don t do that in Evil Dead, in which movie do you do that? These are the most insane, wild and basically evil movies,” director [ ]"
         }
       ],
-      "ageMin": 9,
+      "ageMin": 219,
       "_cand": {
-        "key": "rss:fans-choose-the-rolling-stones-foreign-tongues-as-this-week-",
+        "key": "rss:evil-dead-burn-director-breaks-down-his-brand-of-french-brut",
         "popularity": 0,
         "kind": "rss-news"
       },
-      "breakoutVelocity": 0,
       "corroborationCount": 1,
       "verification": {
         "tier1Count": 1,
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Billboard"
+          "Variety"
         ],
         "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Billboard",
+        "sensitivity": "high",
+        "attribution": "Variety",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 65,
+      "priority": 56,
       "signals": {
-        "recency": 30,
+        "recency": 9,
         "corroboration": 12,
         "status": 18,
         "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 12,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-crosby-fitzgerald-little-house-on-the-prairie-season-2",
+      "slug": "little-house-star-crosby-fitzgerald-on-american-primeval-inspiration-t",
+      "title": "Little House Star Crosby Fitzgerald on American Primeval Inspiration, the Ingalls Risky Move and Welcoming a Baby Cow in Season 2",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "crosby-fitzgerald-little-house-on-the-prairie-season-2",
+      "primaryKeyword": "Little House on the Prairie",
+      "primaryEntity": "Little House on the Prairie",
+      "entities": [
+        "Crosby Fitzgerald",
+        "Palm Royale"
+      ],
+      "angle": "Little House star Crosby Fitzgerald discusses her role and upcoming season.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/tv/news/little-house-on-the-prairie-season-2-caroline-ingalls-1236805789/",
+          "ageMin": 454,
+          "headline": "Little House Star Crosby Fitzgerald on American Primeval Inspiration, the Ingalls Risky Move and Welcoming a Baby Cow in Season 2",
+          "summary": "SPOILER ALERT: This article contains spoilers for “Little House on the Prairie, now streaming on Netflix. Palm Royale star Crosby Fitzgerald swears she manifested her role as Caroline Ma Ingalls on Netflix s new Little House on the Prairie adaptation by watching a lot of the streamer s American Primeval before being cast. I just wanted to be [ ]"
+        }
+      ],
+      "ageMin": 454,
+      "_cand": {
+        "key": "rss:little-house-star-crosby-fitzgerald-on-american-primeval-ins",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 66,
+      "signals": {
+        "recency": 4,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "awards-italian-global-series-festival-winners-2024",
+      "slug": "marco-bellocchio-sally-wainwright-win-big-at-italian-global-series-fes",
+      "title": "Marco Bellocchio, Sally Wainwright Win Big at Italian Global Series Festival Which Celebrated ‘Star Trek’ and ‘Lost’ and Lamented Industry Crisis",
+      "contentType": "awards",
+      "formatTag": "awards",
+      "category": "awards",
+      "subcategory": "winners",
+      "eventType": "award",
+      "sensitivity": "normal",
+      "eventSlug": "italian-global-series-festival-winners-2024",
+      "primaryKeyword": "italian global series festival",
+      "primaryEntity": "Italian Global Series Festival",
+      "entities": [
+        "Richard Gadd",
+        "Natasha Lyonne",
+        "Star Trek",
+        "Lost"
+      ],
+      "angle": "Italian festival honors Richard Gadd and Natasha Lyonne among international series.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/tv/global/anson-mount-richard-gadd-natasha-lyonne-marco-bellocchio-1236809133/",
+          "ageMin": 453,
+          "headline": "Marco Bellocchio, Sally Wainwright Win Big at Italian Global Series Festival Which Celebrated ‘Star Trek’ and ‘Lost’ and Lamented Industry Crisis",
+          "summary": "In honors, Richard Gadd ( Half Man ) and Natasha Lyonne ( Poker Face, Russian Doll ) were among the big winners at this year s Italian Global Series Festival, which wrapped July 11. The two received the Breakthrough Storyteller Award and the Maximo Excellence Award respectively, which they had picked up in person earlier last week at awards ceremonies [ ]"
+        }
+      ],
+      "ageMin": 453,
+      "_cand": {
+        "key": "rss:marco-bellocchio-sally-wainwright-win-big-at-italian-global-",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 48,
+      "signals": {
+        "recency": 4,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
         "pop": 0,
         "breakout": 0,
         "big": 0,
@@ -133,88 +333,24 @@
       }
     },
     {
-      "id": "news-evil-dead-army-of-darkness-revisit",
-      "slug": "evil-dead-burn-just-made-sam-raimi-s-profoundly-silly-army-of-darkness",
-      "title": "Evil Dead Burn Just Made Sam Raimi s Profoundly Silly Army of Darkness Essential Viewing Again",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "review",
-      "sensitivity": "high",
-      "eventSlug": "evil-dead-army-of-darkness-revisit",
-      "primaryKeyword": "army of darkness",
-      "primaryEntity": "Army of Darkness",
-      "entities": [
-        "Army of Darkness (1992 film)",
-        "Sam Raimi"
-      ],
-      "angle": "Revisiting a cult classic fantasy adventure.",
-      "tmdbType": "movie",
-      "source": "rss:IndieWire",
-      "sources": [
-        {
-          "outlet": "IndieWire",
-          "tier": 7,
-          "url": "https://www.indiewire.com/features/best-of/army-of-darkness-sam-raimi-evil-dead-burn-wise-men-rewatch-1235204582/",
-          "ageMin": 2464,
-          "headline": "Evil Dead Burn Just Made Sam Raimi s Profoundly Silly Army of Darkness Essential Viewing Again",
-          "summary": "There's never been a better time to revisit this slapstick (er, boomstick?) fantasy adventure from 1993."
-        }
-      ],
-      "ageMin": 2464,
-      "_cand": {
-        "key": "rss:evil-dead-burn-just-made-sam-raimi-s-profoundly-silly-army-o",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "IndieWire"
-        ],
-        "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "IndieWire",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 64,
-      "signals": {
-        "recency": 1,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "news-the-westies-review-mgm-gangster-drama",
+      "id": "news-the-westies-series-premiere",
       "slug": "the-westies-review-j-k-simmons-and-titus-welliver-lead-mgm-s-handsome-",
       "title": "The Westies Review: J.K. Simmons and Titus Welliver Lead MGM+ s Handsome but Generic Gangster Drama",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
-      "eventType": "review",
+      "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "the-westies-review-mgm-gangster-drama",
-      "primaryKeyword": "The Westies",
-      "primaryEntity": "The Westies (TV series)",
+      "eventSlug": "the-westies-series-premiere",
+      "primaryKeyword": "The Westies series",
+      "primaryEntity": "The Westies",
       "entities": [
         "J.K. Simmons",
         "Titus Welliver",
         "MGM+"
       ],
-      "angle": "J.K. Simmons and Titus Welliver star in MGM+'s new gangster drama 'The Westies,' a handsome but generic series about New York crime organizations.",
+      "angle": "MGM+ is premiering a new gangster drama series titled 'The Westies' starring J.K. Simmons and Titus Welliver.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
@@ -222,12 +358,12 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/tv/tv-reviews/the-westies-review-jk-simmons-mgm-plus-1236644059/",
-          "ageMin": 1009,
+          "ageMin": 1250,
           "headline": "The Westies Review: J.K. Simmons and Titus Welliver Lead MGM+ s Handsome but Generic Gangster Drama",
           "summary": "The series about the conflicts within and between Irish and Italian crime organizations in 1980s New York hails from 'Narcos' and 'Godfather of Harlem' co-creator Chris Brancato."
         }
       ],
-      "ageMin": 1009,
+      "ageMin": 1250,
       "_cand": {
         "key": "rss:the-westies-review-j-k-simmons-and-titus-welliver-lead-mgm-s",
         "popularity": 0,
@@ -262,171 +398,39 @@
       }
     },
     {
-      "id": "music-news-madonna-confessions-ii-number-one",
-      "slug": "madonna-returns-to-number-one-with-confessions-ii-becomes-first-artist",
-      "title": "Madonna Returns to Number One with 'Confessions II,' Becomes First Artist with Chart-Toppers in Four Decades",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "madonna-confessions-ii-number-one",
-      "primaryKeyword": "Madonna Confessions II",
-      "primaryEntity": "Madonna",
-      "entities": [
-        "Confessions II"
-      ],
-      "angle": "Madonna has returned to the top of the charts with 'Confessions II,' marking her 10th chart-topping album and achieving a unique multi-decade milestone.",
-      "tmdbType": "movie",
-      "source": "rss:Rolling Stone",
-      "sources": [
-        {
-          "outlet": "Rolling Stone",
-          "tier": 7,
-          "url": "https://www.rollingstone.com/music/music-news/madonna-number-one-charts-confessions-ii-1235592485/",
-          "ageMin": 38,
-          "headline": "Madonna Returns to Number One on the Charts With Confessions II",
-          "summary": "Singer scores her 10th chart-topping album, and becomes first artist of the 2020s to land Number Ones in four different decades"
-        }
-      ],
-      "ageMin": 38,
-      "_cand": {
-        "key": "rss:madonna-returns-to-number-one-on-the-charts-with-confessions",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "breakoutVelocity": 0,
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Rolling Stone"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Rolling Stone",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 59,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "awards-italian-global-series-festival-winners-2024",
-      "slug": "marco-bellocchio-and-sally-wainwright-win-top-honors-at-italian-global",
-      "title": "Marco Bellocchio and Sally Wainwright Win Top Honors at Italian Global Series Festival",
-      "contentType": "awards",
-      "formatTag": "awards",
-      "category": "awards",
-      "subcategory": "winners",
-      "eventType": "award",
-      "sensitivity": "normal",
-      "eventSlug": "italian-global-series-festival-winners-2024",
-      "primaryKeyword": "Italian Global Series Festival winners",
-      "primaryEntity": "Italian Global Series Festival",
-      "entities": [
-        "Portobello",
-        "Marco Bellocchio",
-        "Sally Wainwright",
-        "Richard Gadd"
-      ],
-      "angle": "Key figures in international television recognized at the Italian Global Series Festival.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/tv/global/anson-mount-richard-gadd-natasha-lyonne-marco-bellocchio-1236809133/",
-          "ageMin": 212,
-          "headline": "Marco Bellocchio, Sally Wainwright Win Big at Italian Global Series Festival Which Celebrated ‘Star Trek’ and ‘Lost’ and Lamented Industry Crisis",
-          "summary": "In honors, Richard Gadd ( Half Man ) and Natasha Lyonne ( Poker Face, Russian Doll ) were among the big winners at this year s Italian Global Series Festival, which wrapped July 11. The two received the Breakthrough Storyteller Award and the Maximo Excellence Award respectively, which they had picked up in person earlier last week at awards ceremonies [ ]"
-        }
-      ],
-      "ageMin": 212,
-      "_cand": {
-        "key": "rss:marco-bellocchio-sally-wainwright-win-big-at-italian-global-",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 53,
-      "signals": {
-        "recency": 9,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "news-emmy-nominations-roundtable-the-pitt-hacks-widows-bay",
-      "slug": "emmy-nominations-roundtable-the-pitt-and-hacks-dominate-but-widow-s-ba",
-      "title": "Emmy Nominations Roundtable: ‘The Pitt’ and ‘Hacks’ Dominate, But ‘Widow’s Bay’ and ‘Pluribus’ Are Waiting in the Wings",
+      "id": "news-love-island-usa-season-8-reunion-hosts-ariana-madix-andy-cohen",
+      "slug": "ariana-madix-and-andy-cohen-to-host-love-island-usa-season-8-reunion-o",
+      "title": "Ariana Madix and Andy Cohen to Host Love Island USA Season 8 Reunion on Peacock",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "emmy-nominations-roundtable-the-pitt-hacks-widows-bay",
-      "primaryKeyword": "Emmy nominations",
-      "primaryEntity": "Emmy Awards",
+      "eventSlug": "love-island-usa-season-8-reunion-hosts-ariana-madix-andy-cohen",
+      "primaryKeyword": "love island usa season 8 reunion hosts",
+      "primaryEntity": "Love Island USA (TV Series)",
       "entities": [
-        "Widow's Bay",
-        "The Pitt (TV series)",
-        "Hacks (TV series)",
-        "Widow's Bay (TV series)"
+        "Ariana Madix",
+        "Andy Cohen",
+        "Peacock"
       ],
-      "angle": "A roundtable discussion on the Emmy nominations, highlighting 'The Pitt' and 'Hacks' dominance, and anticipating potential contenders like 'Widow's Bay' and 'Pluribus'.",
+      "angle": "Ariana Madix and Andy Cohen are set to host the reunion special for the Peacock dating series.",
       "tmdbType": "movie",
-      "source": "rss:Variety",
+      "source": "rss:Deadline",
       "sources": [
         {
-          "outlet": "Variety",
+          "outlet": "Deadline",
           "tier": 7,
-          "url": "https://variety.com/2026/tv/awards/emmy-nominations-roundtable-the-pitt-hacks-podcast-1236807336/",
-          "ageMin": 1301,
-          "headline": "Emmy Nominations Roundtable: ‘The Pitt’ and ‘Hacks’ Dominate, But ‘Widow’s Bay’ and ‘Pluribus’ Are Waiting in the Wings",
-          "summary": "At 25 noms, is “The Pitt” heading toward its second consecutive drama win? In breaking the record for most comedy noms ever, is “Hacks” a shoo-in? What happened to “Half Man”? How did “Dancing With the Stars” end its ten-year nomination drought? What can we expect from Emmys host Mariska Hargitay? Those questions, and a [ ]"
+          "url": "https://deadline.com/2026/07/peacock-love-island-usa-season-8-reunion-august-premiere-1236980355/",
+          "ageMin": 4,
+          "headline": "Peacock s Love Island USA Season 8 Reunion Sets August Premiere With Andy Cohen Ariana Madix As Hosts",
+          "summary": "Ariana Madix and Andy Cohen are both set to co-host the Love Island USA Season 8 reunion on Peacock. The streamer has set the premiere date for the reunion to Monday, August 31, at 9 p.m. ET and 6 p.m. PT. Madix and Cohen will reunite with the season s winners, fan-favorite couples, and the bombshells [ ]"
         }
       ],
-      "ageMin": 1301,
+      "ageMin": 4,
       "_cand": {
-        "key": "rss:emmy-nominations-roundtable-the-pitt-and-hacks-dominate-but-",
+        "key": "rss:peacock-s-love-island-usa-season-8-reunion-sets-august-premi",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -436,147 +440,18 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Variety"
+          "Deadline"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Variety",
+        "attribution": "Deadline",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 58,
+      "priority": 57,
       "signals": {
-        "recency": 1,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "news-crosby-fitzgerald-american-primeval-season-2",
-      "slug": "little-house-star-crosby-fitzgerald-on-american-primeval-inspiration-a",
-      "title": "Little House Star Crosby Fitzgerald on American Primeval Inspiration and Season 2",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "crosby-fitzgerald-american-primeval-season-2",
-      "primaryKeyword": "Crosby Fitzgerald American Primeval",
-      "primaryEntity": "American Primeval",
-      "entities": [
-        "Crosby Fitzgerald",
-        "Little House on the Prairie"
-      ],
-      "angle": "Actress Crosby Fitzgerald shares insights into her role and the upcoming season of 'American Primeval'.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/tv/news/little-house-on-the-prairie-season-2-caroline-ingalls-1236805789/",
-          "ageMin": 213,
-          "headline": "Little House Star Crosby Fitzgerald on American Primeval Inspiration, the Ingalls Risky Move and Welcoming a Baby Cow in Season 2",
-          "summary": "SPOILER ALERT: This article contains spoilers for “Little House on the Prairie, now streaming on Netflix. Palm Royale star Crosby Fitzgerald swears she manifested her role as Caroline Ma Ingalls on Netflix s new Little House on the Prairie adaptation by watching a lot of the streamer s American Primeval before being cast. I just wanted to be [ ]"
-        }
-      ],
-      "ageMin": 213,
-      "_cand": {
-        "key": "rss:little-house-star-crosby-fitzgerald-on-american-primeval-ins",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 50,
-      "signals": {
-        "recency": 9,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 6,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "music-news-bob-dylan-touring-guitarist-jad-tariq",
-      "slug": "bob-dylan-s-touring-guitarists-welcome-another-new-addition",
-      "title": "Bob Dylan's Touring Guitarists Welcome Another New Addition",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "bob-dylan-touring-guitarist-jad-tariq",
-      "primaryKeyword": "Bob Dylan new guitarist",
-      "primaryEntity": "Bob Dylan",
-      "entities": [
-        "Jad Tariq"
-      ],
-      "angle": "Bob Dylan's touring band features a new guitarist joining the lineup.",
-      "tmdbType": "movie",
-      "source": "rss:Rolling Stone",
-      "sources": [
-        {
-          "outlet": "Rolling Stone",
-          "tier": 7,
-          "url": "https://www.rollingstone.com/music/music-news/bob-dylan-revolving-door-touring-guitarists-jad-tariq-1235592455/",
-          "ageMin": 218,
-          "headline": "Bob Dylan s Revolving Door of Touring Guitarists Welcomes Another New Addition",
-          "summary": "Memphis-based guitarist Jad Tariq made his debut in Dylan's unit Friday in Cincinnati, filling in for fellow new addition Julian Lage"
-        }
-      ],
-      "ageMin": 218,
-      "_cand": {
-        "key": "rss:bob-dylan-s-revolving-door-of-touring-guitarists-welcomes-an",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "breakoutVelocity": 0,
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Rolling Stone"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Rolling Stone",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 48,
-      "signals": {
-        "recency": 9,
+        "recency": 30,
         "corroboration": 12,
         "status": 18,
         "type": 9,
@@ -584,44 +459,41 @@
         "breakout": 0,
         "big": 0,
         "trending": 0,
-        "softTv": 0
+        "softTv": -12
       }
     },
     {
-      "id": "news-jackson-browne-beck-honor-wes-anderson-needle-drops",
-      "slug": "jackson-browne-beck-honor-wes-anderson-s-film-needle-drops-at-concert",
-      "title": "Jackson Browne, Beck Honor Wes Anderson's Film Needle Drops at Concert",
+      "id": "news-love-island-beyond-the-villa-renewed-season-3",
+      "slug": "love-island-beyond-the-villa-renewed-for-season-3-on-peacock",
+      "title": "Love Island: Beyond The Villa Renewed For Season 3 On Peacock",
       "contentType": "news",
       "formatTag": "news",
-      "category": "celebrity",
+      "category": "tv",
       "subcategory": "news",
-      "eventType": "other",
+      "eventType": "renewal",
       "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "jackson-browne-beck-honor-wes-anderson-needle-drops",
-      "primaryKeyword": "wes anderson needle drops",
-      "primaryEntity": "Wes Anderson",
+      "eventSlug": "love-island-beyond-the-villa-renewed-season-3",
+      "primaryKeyword": "love island beyond the villa renewal",
+      "primaryEntity": "Love Island: Beyond the Villa (TV Series)",
       "entities": [
-        "Jackson Browne",
-        "Beck",
-        "The Royal Tenenbaums"
+        "Peacock"
       ],
-      "angle": "Jackson Browne and Beck paid tribute to Wes Anderson's film soundtracks by performing iconic 'needle drops' at a Hollywood Bowl concert.",
+      "angle": "The Peacock spinoff series following Islanders after the main show has been picked up for a third season.",
       "tmdbType": "movie",
-      "source": "rss:THR",
+      "source": "rss:Deadline",
       "sources": [
         {
-          "outlet": "THR",
+          "outlet": "Deadline",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/music/film-tv-music-news/jackson-browne-beck-wes-anderson-music-hollywood-bowl-1236646062/",
-          "ageMin": 107,
-          "headline": "Jackson Browne, Beck Honor Wes Anderson Needle Drops at Hollywood Bowl Concert",
-          "summary": "\"I'm indebted to Wes for having discovered this song and giving it this life,\" Browne said before playing \"These Days,\" which was featured prominently in 'The Royal Tenenbaums.'"
+          "url": "https://deadline.com/2026/07/love-island-beyond-the-villa-renewed-season-3-peacock-1236980356/",
+          "ageMin": 4,
+          "headline": "Love Island: Beyond The Villa Renewed For Season 3 On Peacock",
+          "summary": "Love Island USA spinoff Love Island: Beyond the Villa has been renewed for a third season on Peacock. The lifestyle series follows the Islanders from the dating series after they leave the Love Island USA villa, as they adapt to their newfound fame. The cast for the series will be confirmed later this year, with Season 3 [ ]"
         }
       ],
-      "ageMin": 107,
+      "ageMin": 4,
       "_cand": {
-        "key": "rss:jackson-browne-beck-honor-wes-anderson-needle-drops-at-holly",
+        "key": "rss:love-island-beyond-the-villa-renewed-for-season-3-on-peacock",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -631,16 +503,80 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "THR"
+          "Deadline"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "THR",
+        "attribution": "Deadline",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 51,
+      "priority": 57,
+      "signals": {
+        "recency": 30,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": -12
+      }
+    },
+    {
+      "id": "news-cristo-fernandez-pro-soccer-debut",
+      "slug": "ted-lasso-star-cristo-fern-ndez-makes-pro-soccer-debut",
+      "title": "Ted Lasso Star Cristo Fernández Makes Pro Soccer Debut",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "cristo-fernandez-pro-soccer-debut",
+      "primaryKeyword": "Cristo Fernandez soccer debut",
+      "primaryEntity": "Cristo Fernández",
+      "entities": [
+        "Ted Lasso",
+        "El Paso Locomotive FC"
+      ],
+      "angle": "Ted Lasso star Cristo Fernández makes his professional soccer debut.",
+      "tmdbType": "movie",
+      "source": "rss:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/ted-lasso-cristo-fernandez-us-pro-soccer-debut-1236980293/",
+          "ageMin": 177,
+          "headline": "Ted Lasso s Cristó Fernández Makes U.S. Pro Soccer Debut With El Paso Locomotive FC",
+          "summary": "From London to the Lone Star State, Cristó Fernández is experiencing a bit of life imitating art with his professional soccer debut. The Ted Lasso star, who signed with El Paso Locomotive FC in May, played his first game with the second division team on Saturday against New Mexico United, during which the Texas team [ ]"
+        }
+      ],
+      "ageMin": 177,
+      "_cand": {
+        "key": "rss:ted-lasso-s-crist-fern-ndez-makes-u-s-pro-soccer-debut-with-",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 57,
       "signals": {
         "recency": 16,
         "corroboration": 12,
@@ -648,7 +584,7 @@
         "type": 5,
         "pop": 0,
         "breakout": 0,
-        "big": 0,
+        "big": 6,
         "trending": 0,
         "softTv": 0
       }
