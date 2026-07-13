@@ -70,7 +70,10 @@ export async function postToInstagram({ videoUrl, coverUrl, caption, firstCommen
   // capability discovery (plan agent 21): which of our reels params did the bridge echo back?
   const echoed = JSON.stringify(data);
   const paramsHonored = ["isAiGenerated", "audioName", "shareToFeed", "instagramThumbnail", "firstComment"].filter((k) => echoed.includes(k));
-  return { id: data.id || data.post?.id || data.data?.id, paramsHonored, raw: data };
+  // Zernio returns the post id as `_id` (Mongo-style) — verified live 2026-07-13; the older
+  // id/post.id/data.id guesses all missed it, so zernioId came back undefined and verifyLive/tracking
+  // couldn't run. `_id` first now.
+  return { id: data._id || data.id || data.post?._id || data.post?.id || data.data?._id || data.data?.id, paramsHonored, raw: data };
 }
 
 export async function zernioStatus(postId) {

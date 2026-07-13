@@ -11,14 +11,14 @@ on:
   # lead just grows to ~1h45 — still fine, and Zernio keeps the POST time DST-correct year-round).
   # Runs are serialized by the concurrency group, so each reads the prior run's committed ledger and
   # takes the next EMPTY slot — no double-posts. Kill switch: commit site/data/ig/PAUSED.
-  # schedule:
-  #   - cron: "15 16 * * *" # 16:15 UTC → 10:00 AM LA
-  #   - cron: "15 18 * * *" # 18:15 UTC → 12:00 PM LA
-  #   - cron: "15 20 * * *" # 20:15 UTC →  2:00 PM LA
-  #   - cron: "15 22 * * *" # 22:15 UTC →  4:00 PM LA
-  #   - cron: "15 0 * * *"  # 00:15 UTC →  6:00 PM LA
-  #   - cron: "15 2 * * *"  # 02:15 UTC →  8:00 PM LA
-  #   - cron: "15 4 * * *"  # 04:15 UTC → 10:00 PM LA
+  schedule:
+    - cron: "15 16 * * *" # 16:15 UTC → 10:00 AM LA
+    - cron: "15 18 * * *" # 18:15 UTC → 12:00 PM LA
+    - cron: "15 20 * * *" # 20:15 UTC →  2:00 PM LA
+    - cron: "15 22 * * *" # 22:15 UTC →  4:00 PM LA
+    - cron: "15 0 * * *"  # 00:15 UTC →  6:00 PM LA
+    - cron: "15 2 * * *"  # 02:15 UTC →  8:00 PM LA
+    - cron: "15 4 * * *"  # 04:15 UTC → 10:00 PM LA
   workflow_dispatch:
     inputs:
       mode:
