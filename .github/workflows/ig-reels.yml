@@ -30,6 +30,9 @@ on:
       posts:
         description: "reels to actually BUILD+post (stop after N; blank = same as limit)"
         default: ""
+      immediate:
+        description: "publish NOW (~3 min out) instead of the next LA slot — test only"
+        default: ""
       slug:
         description: "force one article slug (optional)"
         default: ""
@@ -101,9 +104,11 @@ jobs:
             MODE="${{ github.event.inputs.mode || 'draft' }}"
             LIMIT="${{ github.event.inputs.limit || '1' }}"
             POSTS="${{ github.event.inputs.posts }}"
+            IMMEDIATE="${{ github.event.inputs.immediate }}"
             SLUG="${{ github.event.inputs.slug }}"
             FLAGS="--limit=$LIMIT"
             [ -n "$POSTS" ] && FLAGS="$FLAGS --posts=$POSTS"
+            [ -n "$IMMEDIATE" ] && FLAGS="$FLAGS --now"
             [ "$MODE" = "live" ] && FLAGS="$FLAGS --live"
             [ "$MODE" = "dry" ] && FLAGS="--dry"
             [ "$MODE" = "no-publish" ] && FLAGS="$FLAGS --no-publish"

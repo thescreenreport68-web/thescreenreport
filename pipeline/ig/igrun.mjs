@@ -372,6 +372,9 @@ async function main() {
 
   const live = Boolean(args.live);
   const noPublish = Boolean(args["no-publish"]);
+  // --now: publish the built reel ~immediately (a few minutes out) instead of the next LA slot. For a
+  // manual "prove it posts" test only; the scheduled crons never pass it. (owner 2026-07-13)
+  const publishNow = Boolean(args.now);
   const limit = Math.min(parseInt(args.limit || "1", 10), IG.maxPerDay);
   // --posts = how many videos this run should actually BUILD+schedule (stop after N successes even if
   // the slate is larger — a per-slot cron uses --limit=4 --posts=1: attempt up to 4 candidates, ship
@@ -420,7 +423,7 @@ async function main() {
   // the old one-whole-day flag, which would have made runs 2-7 exit as "already scheduled".
   const day = todayInTz(IG.slots.postTz);
   let filledSlots = [];
-  if (live) {
+  if (live && !publishNow) {
     filledSlots = scheduledSlotsToday(day);
     if (filledSlots.length >= IG.slots.primeET.length) { console.log(`all ${IG.slots.primeET.length} slots for ${day} already filled — exiting (double-post guard)`); return; }
     if (postedToday() >= IG.hardDailyCap) { console.log("daily hard cap reached — exiting"); return; }
@@ -459,24 +462,28 @@ async function main() {
   // publish
   let anyPublished = false;
   if (built.length && !noPublish) {
-    const slots = planSlots(built, { filledSlots });
+    const slots = publishNow ? [] : planSlots(built, { filledSlots });
     for (const job of built) {
       const slot = slots.find((s) => s.slug === job.id);
-      if (!slot) { console.log(`  ⏸ no open slot left today for ${job.id} — not scheduling`); continue; }
+      // --now overrides the slot with ~3 minutes from now (computed HERE, after the long build, so it
+      // is still in the future when Zernio receives it); otherwise use the assigned LA slot.
+      const whenISO = publishNow ? new Date(Date.now() + 3 * 60000).toISOString() : slot?.whenISO;
+      const slotLabel = publishNow ? "now" : slot?.slot;
+      if (!publishNow && !slot) { console.log(`  ⏸ no open slot left today for ${job.id} — not scheduling`); continue; }
       try {
-        const pub = await publish({ job, mp4: job.render.mp4, cover: job.render.cover, whenISO: slot.whenISO, live });
-        job.publish = { ...pub, slot: slot.slot };
+        const pub = await publish({ job, mp4: job.render.mp4, cover: job.render.cover, whenISO, live });
+        job.publish = { ...pub, slot: slotLabel };
         saveJob(job);
         recordPosted({
-          slug: job.id, zernioId: pub.zernioId, mode: pub.mode, slot: slot.slot,
-          scheduledDay: day, whenISO: live ? slot.whenISO : null,
+          slug: job.id, zernioId: pub.zernioId, mode: pub.mode, slot: slotLabel,
+          scheduledDay: day, whenISO: live ? whenISO : null,
           hookStyle: job.script.hookStyle, segment: job.scout.segment,
           goal: job.engage?.goal || null, // the learner correlates engagement asks per niche
           videoUrl: pub.videoUrl,
         });
         anyPublished = true;
-        console.log(`  📤 ${pub.mode} → ${slot.slot} ${live ? slot.whenISO : "(draft, no schedule)"} [zernio ${pub.zernioId}]`);
-        if (live && slot.slot === "breaking") {
+        console.log(`  📤 ${pub.mode} → ${slotLabel} ${live ? whenISO : "(draft, no schedule)"} [zernio ${pub.zernioId}]`);
+        if (live && (slotLabel === "breaking" || publishNow)) {
           const v = await verifyLive(pub.zernioId, { timeoutMin: 15 });
           console.log(`  🔎 live-verify: ${v.live ? `LIVE ${v.permalink}` : JSON.stringify(v)}`);
         }
