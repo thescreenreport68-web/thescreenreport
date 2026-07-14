@@ -18,3 +18,10 @@ export function boardFor(category = "") {
   if (["celebrity", "celebrities", "gossip", "music"].includes(c)) return BUFFER.boards.celebrity;
   return BUFFER.boards.movies; // movies, box-office, awards, etc.
 }
+
+// route a CONTENT-CLASSIFIED board key ("movies" | "tv" | "celebrity") → its native board serviceId.
+// This is what the content router (write.classifyBoard) feeds, so the pin lands on the board that matches
+// what the story is actually about. Falls back to Movie News for anything unexpected.
+export function boardById(key = "") {
+  return BUFFER.boards[String(key).toLowerCase()] || BUFFER.boards.movies;
+}
