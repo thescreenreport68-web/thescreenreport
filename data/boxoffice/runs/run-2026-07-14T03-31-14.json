@@ -1,0 +1,53 @@
+{
+ "runId": "run-2026-07-14T03-31-14",
+ "mode": "live",
+ "startedAt": "2026-07-14T03:31:14.861Z",
+ "films": 4,
+ "published": [],
+ "held": [],
+ "rejected": [
+  {
+   "tag": "chum-bo-opening×BO-OPENING",
+   "stage": "gatherer",
+   "reason": "under floor: streaming original — no theatrical box office (belongs in a streaming form) (try 1)"
+  }
+ ],
+ "skipped": [
+  {
+   "tag": "obsession-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "voicemails-for-isabelle-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "little-brother-netflix-top10×NETFLIX-TOP10",
+   "reason": "parked dead"
+  }
+ ],
+ "blocked": [],
+ "finishedAt": "2026-07-14T03:33:52.815Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 2558,
+    "out": 652,
+    "usd": 0.00018,
+    "ms": 3167
+   },
+   "gatherer": {
+    "calls": 3,
+    "errors": 0,
+    "in": 12075,
+    "out": 528,
+    "usd": 0.00142,
+    "ms": 2950
+   }
+  },
+  "totalUsd": 0.0016
+ },
+ "openrouterTotalUsd": 0.00124
+}
