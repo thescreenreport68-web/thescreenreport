@@ -28,6 +28,7 @@ const { listCandidates, scout, isReactionArticle } = await import("../agents/sco
 const { verify } = await import("../agents/verify.mjs");
 const { writeScript, mergeMidPhraseBreaks } = await import("../agents/script.mjs");
 const { writeCaption } = await import("../agents/caption.mjs");
+const { __test: PM } = await import("../agents/platformMeta.mjs");
 
 let passed = 0, failed = 0;
 function t(name, fn) {
@@ -517,6 +518,56 @@ await t("util: frontmatter arrays", () => {
 });
 await t("util: tokenDiff basic", () => {
   assert.equal(tokenDiff(["a", "b", "c"], ["a", "x", "c"]), 1);
+});
+
+await t("platformMeta YouTube SEO: guards catch the two real failing videos, spare good ones", () => {
+  const { pickPrimaryEntity, ytIssues, normTags, finalTitle } = PM;
+
+  // Video 2 (Elliot Page) — the subject must come from the SLUG (leads with the subject), NOT prose
+  // order (the one-line opens on the sender, Julia Shiplett — the exact bug the review caught).
+  const elliotFacts = {
+    storyOneLine: "Julia Shiplett shared a birthday tribute to Elliot Page.",
+    entities: [{ name: "Julia Shiplett", kind: "person" }, { name: "Elliot Page", kind: "person" }],
+    facts: [{ claim: "Julia Shiplett paid tribute to Elliot Page." }],
+  };
+  const elliotUrl = "https://thescreenreport.com/celebrity/elliot-page-girlfriend-julia-shiplett-give-rare-glimpse-into-romance/";
+  const primary = pickPrimaryEntity(elliotFacts, elliotUrl);
+  assert.equal(primary, "Elliot Page", "primary = slug subject, not the prose sender");
+
+  // the ACTUAL shipped-bad title + description must be flagged (length + generic tail + buried subject)
+  const badKinds = ytIssues({
+    title: "Elliot Page's Girlfriend Julia Shiplett's Sweet Birthday Message",
+    description: "Julia Shiplett shared a loving birthday tribute to Elliot Page, calling him her boo thang.",
+    hashtags: ["#BirthdayTribute", "#ElliotPage"],
+  }, primary, elliotFacts.entities).map((i) => i.kind);
+  assert.ok(badKinds.includes("length"), "over-60 title flagged");
+  assert.ok(badKinds.includes("tail"), "generic 'Sweet Birthday Message' tail flagged");
+  assert.ok(badKinds.includes("lead"), "description burying Elliot Page flagged");
+
+  // a well-formed pair passes clean (no false re-prompts)
+  assert.equal(ytIssues({
+    title: "Elliot Page: 'Boo Thang' Birthday Tribute From Girlfriend",
+    description: "Elliot Page got a sweet birthday tribute from girlfriend Julia Shiplett.",
+    hashtags: ["#ElliotPage", "#JuliaShiplett"],
+  }, primary, elliotFacts.entities).length, 0, "clean title+desc passes");
+
+  // Video 1 (Bam Margera) — 67-char title flagged to shorten
+  const bamFacts = {
+    storyOneLine: "Bam Margera said he will never reunite with Jackass co-stars.",
+    entities: [{ name: "Bam Margera", kind: "person" }, { name: "Jackass", kind: "movie" }],
+    facts: [{ claim: "Bam Margera won't reunite with Jackass." }],
+  };
+  const bamUrl = "https://thescreenreport.com/celebrity/bam-margera-won-t-reunite-with-jackass-crew-for-final-film/";
+  assert.equal(pickPrimaryEntity(bamFacts, bamUrl), "Bam Margera");
+  assert.ok(ytIssues({ title: "Bam Margera: No Reunion with Johnny Knoxville 'in 10 Million Years'", description: "Bam Margera says no reunion happening.", hashtags: [] }, "Bam Margera", bamFacts.entities)
+    .some((i) => i.kind === "length"), "67-char title flagged to shorten");
+
+  // deterministic guarantees: title hard-capped at 70; hashtag gate ranks entities first, drops vague
+  assert.ok(finalTitle("A".repeat(40) + " " + "B".repeat(40)).length <= 70, "title hard-capped at 70");
+  const tags = normTags(["#BirthdayTribute", "#Legend"], [{ name: "Elliot Page", kind: "person" }, { name: "Legend", kind: "movie" }]);
+  assert.equal(tags[0], "#ElliotPage", "entity tag ranked first");
+  assert.ok(tags.includes("#Legend"), "a film literally named Legend survives the vague filter");
+  assert.ok(!tags.map((x) => x.toLowerCase()).includes("#birthdaytribute"), "vague model tag dropped");
 });
 
 console.log(`\n${passed} passed, ${failed} failed`);
