@@ -1,0 +1,85 @@
+{
+ "runId": "run-2026-07-14T09-31-20",
+ "mode": "live",
+ "startedAt": "2026-07-14T09:31:20.523Z",
+ "films": 6,
+ "published": [],
+ "held": [
+  {
+   "tag": "office-romance-netflix-top10×NETFLIX-TOP10",
+   "reason": "words 145 < 180 (owner-set ~200-word minimum) | seo-faq: fewer than 2 real FAQs | soft-floor humanVoice 3 < 5",
+   "score": 50
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "obsession-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "voicemails-for-isabelle-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "toy-story-5-bo-opening×BO-OPENING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "little-brother-netflix-top10×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "swapped-netflix-top10×NETFLIX-TOP10",
+   "reason": "parked dead"
+  }
+ ],
+ "blocked": [],
+ "finishedAt": "2026-07-14T09:34:09.227Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3471,
+    "out": 668,
+    "usd": 0.00022,
+    "ms": 6202
+   },
+   "gatherer": {
+    "calls": 1,
+    "errors": 0,
+    "in": 1805,
+    "out": 166,
+    "usd": 0.00025,
+    "ms": 1046
+   },
+   "synthesizer": {
+    "calls": 1,
+    "errors": 0,
+    "in": 706,
+    "out": 595,
+    "usd": 0.00017,
+    "ms": 11425
+   },
+   "writer": {
+    "calls": 3,
+    "errors": 0,
+    "in": 9516,
+    "out": 3345,
+    "usd": 0.00916,
+    "ms": 46931
+   },
+   "qa": {
+    "calls": 12,
+    "errors": 0,
+    "in": 32863,
+    "out": 4743,
+    "usd": 0.02172,
+    "ms": 43885
+   }
+  },
+  "totalUsd": 0.03151
+ },
+ "openrouterTotalUsd": 0.03016
+}
