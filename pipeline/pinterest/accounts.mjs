@@ -14,7 +14,7 @@ export const BUFFER = {
 // route an article category → the pin's board (fallback → Movie News)
 export function boardFor(category = "") {
   const c = String(category).toLowerCase();
-  if (["tv", "series", "television"].includes(c)) return BUFFER.boards.tv;
+  if (["tv", "series", "television", "streaming"].includes(c)) return BUFFER.boards.tv;
   if (["celebrity", "celebrities", "gossip", "music"].includes(c)) return BUFFER.boards.celebrity;
-  return BUFFER.boards.movies;
+  return BUFFER.boards.movies; // movies, box-office, awards, etc.
 }
