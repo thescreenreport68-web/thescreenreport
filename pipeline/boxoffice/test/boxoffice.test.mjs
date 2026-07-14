@@ -145,15 +145,42 @@ await ta("BO-UPDATE with no reported number fails the needsNewNumber floor", asy
   await gatherRun(job, { findImpl: gFind("Wicked had a good weekend, analysts said."), chatImpl: gData() });
   assert.ok(/under floor: no new box-office number/.test(job.gatherFail || ""), job.gatherFail);
 });
-await ta("NOW-STREAMING with no TMDB-confirmed platform fails the needsPlatform floor", async () => {
+await ta("NOW-STREAMING with no platform fails the needsPlatform floor", async () => {
   const job = { film: { title: "Wicked" }, angle: { form: "NOW-STREAMING", queries: ["Wicked streaming"] }, trigger: { sources: [] }, boxData: { providers: { stream: [], rent: [], buy: [] } } };
   await gatherRun(job, { findImpl: gFind("Wicked heads to streaming soon."), chatImpl: gData({ openingWeekend: "$45.2 million" }) });
-  assert.ok(/no TMDB-confirmed streaming platform/.test(job.gatherFail || ""), job.gatherFail);
+  assert.ok(/subscription-streaming platform|not 'now streaming'/.test(job.gatherFail || ""), job.gatherFail);
 });
-await ta("NOW-STREAMING WITH a confirmed platform passes the floor", async () => {
+await ta("NOW-STREAMING with ONLY rent/buy (no subscription) fails — rent/buy is not 'now streaming' (the Michael bug)", async () => {
+  const job = { film: { title: "Michael" }, angle: { form: "NOW-STREAMING", queries: ["Michael streaming"] }, trigger: { sources: [] }, boxData: { providers: { stream: [], rent: ["Amazon Video", "Apple TV"], buy: ["Amazon Video"] } } };
+  await gatherRun(job, { findImpl: gFind("Michael is available to rent."), chatImpl: gData({ openingWeekend: "$97 million" }) });
+  assert.ok(/subscription-streaming platform|not 'now streaming'/.test(job.gatherFail || ""), job.gatherFail);
+});
+await ta("NOW-STREAMING WITH a flatrate (subscription) platform passes the floor", async () => {
   const job = { film: { title: "Wicked" }, angle: { form: "NOW-STREAMING", queries: ["Wicked streaming"] }, trigger: { sources: [] }, boxData: { providers: { stream: ["Max"], rent: [], buy: [] } } };
   await gatherRun(job, { findImpl: gFind("Wicked is now on Max."), chatImpl: gData({ openingWeekend: "$45.2 million" }) });
   assert.ok(!job.gatherFail, job.gatherFail);
+});
+t("VERIFICATION hard-blocks a 'now streaming' claim when only rent/buy is confirmed (the live Michael bug)", () => {
+  const job = {
+    film: { title: "Michael", originalLanguage: "en" },
+    angle: { form: "NOW-STREAMING" },
+    gathered: { numbers: ["$97 million"], platform: "" },
+    boxData: { providers: { stream: [], rent: ["Amazon Video", "Apple TV"], buy: ["Amazon Video"] }, cast: [], moneyStrings: [] },
+    article: { title: "Michael Now Streaming", dek: "The biopic is now streaming for fans at home.", body: "Michael is now streaming. It grossed $97 million. The cast is strong. The story is compelling. Fans are thrilled.", faq: [{ q: "a", a: "b" }, { q: "c", a: "d" }] },
+  };
+  const det = fidelityLocks(job);
+  assert.ok(det.hardBlocks.some((b) => /^streaming-claim/.test(b)), "must hard-block the false 'now streaming' claim: " + JSON.stringify(det.hardBlocks));
+});
+t("VERIFICATION allows a real 'now streaming' when a subscription (flatrate) provider is confirmed", () => {
+  const job = {
+    film: { title: "Wicked", originalLanguage: "en" },
+    angle: { form: "NOW-STREAMING" },
+    gathered: { numbers: ["$45.2 million"], platform: "" },
+    boxData: { providers: { stream: ["Max"], rent: [], buy: [] }, cast: [], moneyStrings: [] },
+    article: { title: "Wicked Now Streaming on Max", dek: "Wicked is now streaming on Max.", body: "Wicked is now streaming on Max. It opened to $45.2 million. The cast is strong. The story is compelling. Fans are thrilled to watch at home.", faq: [{ q: "a", a: "b" }, { q: "c", a: "d" }] },
+  };
+  const det = fidelityLocks(job);
+  assert.ok(!det.hardBlocks.some((b) => /^streaming-claim/.test(b)), "must NOT flag a real subscription-streaming claim: " + JSON.stringify(det.hardBlocks));
 });
 
 // ── 7. QA fidelity locks (deterministic) ─────────────────────────────────────────────────────────

@@ -4,7 +4,7 @@
 //      draft saturated with cuts (>4) holds.
 //  (2) THE ENGAGEMENT JUDGE (gemini-2.5-flash, temp 0): readability/engagement/humanVoice — the
 //      owner's KPI — with soft floors + correction flags the writer can act on.
-import { numberFidelity, noInvention, platformGuard, buildAllowed, stripUnsupportedSentences, firstCleanSentence, normMoney } from "../moneyGuard.mjs";
+import { numberFidelity, noInvention, platformGuard, streamingClaimGuard, buildAllowed, stripUnsupportedSentences, firstCleanSentence, normMoney } from "../moneyGuard.mjs";
 import { FORMS, GATE, SCOPE_JUNK, scopeOk } from "../config.bo.mjs";
 import { agentChat } from "../models.mjs";
 
@@ -105,6 +105,16 @@ export function fidelityLocks(job) {
       ...(gathered.platform ? [gathered.platform] : [])];
     const pg = platformGuard(article, allowPlat);
     if (!pg.ok) hardBlocks.push(`platform: names ${pg.bad.join(", ")} not in confirmed providers`);
+
+    // STREAMING-AVAILABILITY GUARD — the "now streaming" = rent/buy bug. A streaming CLAIM must be backed by a
+    // FLATRATE (subscription) provider, never rent/buy. Rent/buy-only "now streaming" language → cut those
+    // sentences; a title/dek hinging on the false claim → HOLD (the writer reframes it as "available to rent/buy").
+    const STREAMY = /netflix|\bmax\b|hbo|disney\s*\+|disney plus|hulu|prime video|amazon prime|apple tv\s*\+|apple tv plus|peacock|paramount\s*\+|paramount plus|starz|showtime/i;
+    const flatrate = [...(boxData.providers?.stream || []),
+      ...((gathered.platform && STREAMY.test(gathered.platform)) ? [gathered.platform] : [])];
+    const sc = streamingClaimGuard(article, { flatrate });
+    cutClaims.push(...sc.cuts);
+    if (sc.hardWrong) hardBlocks.push(`streaming-claim: title/dek says "streaming" but only rent/buy is confirmed for this title — it is NOT on a subscription streaming service`);
   }
 
   // SELF-HEDGE / AI meta-commentary → CUT the sentence (a pro never doubts its own facts in print).
