@@ -1,0 +1,86 @@
+{
+ "runId": "run-2026-07-14T05-31-12",
+ "mode": "live",
+ "startedAt": "2026-07-14T05:31:12.446Z",
+ "films": 6,
+ "published": [],
+ "held": [
+  {
+   "tag": "maternal-instinct-netflix-top10×NETFLIX-TOP10",
+   "reason": "words 177 < 180 (owner-set ~200-word minimum) | seo-faq: fewer than 2 real FAQs",
+   "score": 85
+  },
+  {
+   "tag": "swapped-netflix-top10×NETFLIX-TOP10",
+   "reason": "seo-faq: fewer than 2 real FAQs | soft-floor engagement 3 < 5 | soft-floor humanVoice 4 < 5",
+   "score": 40
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "obsession-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "voicemails-for-isabelle-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "toy-story-5-bo-opening×BO-OPENING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "little-brother-netflix-top10×NETFLIX-TOP10",
+   "reason": "parked dead"
+  }
+ ],
+ "blocked": [],
+ "finishedAt": "2026-07-14T05:36:32.596Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3410,
+    "out": 518,
+    "usd": 0.00019,
+    "ms": 6747
+   },
+   "gatherer": {
+    "calls": 2,
+    "errors": 0,
+    "in": 3788,
+    "out": 302,
+    "usd": 0.0005,
+    "ms": 2621
+   },
+   "synthesizer": {
+    "calls": 2,
+    "errors": 0,
+    "in": 1377,
+    "out": 1086,
+    "usd": 0.00032,
+    "ms": 23502
+   },
+   "writer": {
+    "calls": 6,
+    "errors": 0,
+    "in": 18169,
+    "out": 6463,
+    "usd": 0.01761,
+    "ms": 88457
+   },
+   "qa": {
+    "calls": 24,
+    "errors": 0,
+    "in": 67022,
+    "out": 10535,
+    "usd": 0.04644,
+    "ms": 69457
+   }
+  },
+  "totalUsd": 0.06506
+ },
+ "openrouterTotalUsd": 0.063
+}
