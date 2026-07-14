@@ -1,42 +1,40 @@
 {
-  "runId": "run-2026-07-14T03-01-07",
-  "builtAt": "2026-07-14T03:01:30.440Z",
-  "count": 8,
+  "runId": "run-2026-07-14T07-01-08",
+  "builtAt": "2026-07-14T07:01:31.130Z",
+  "count": 10,
   "topics": [
     {
-      "id": "news-beast-in-me-emmy-nom-questioned",
-      "slug": "tv-academy-backs-beast-in-me-emmy-nomination-amid-eligibility-question",
-      "title": "TV Academy Backs 'Beast in Me' Emmy Nomination Amid Eligibility Questions",
+      "id": "news-anya-taylor-joy-lord-of-the-rings-hunt-for-gollum",
+      "slug": "anya-taylor-joy-prepares-for-lord-of-the-rings-hunt-for-gollum",
+      "title": "Anya Taylor-Joy Prepares for 'Lord of the Rings: Hunt for Gollum'",
       "contentType": "news",
       "formatTag": "news",
-      "category": "tv",
+      "category": "movies",
       "subcategory": "news",
-      "eventType": "award",
+      "eventType": "casting",
       "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "beast-in-me-emmy-nom-questioned",
-      "primaryKeyword": "Beast in Me Emmy",
-      "primaryEntity": "Beast",
+      "eventSlug": "anya-taylor-joy-lord-of-the-rings-hunt-for-gollum",
+      "primaryKeyword": "anya taylor-joy lord of the rings",
+      "primaryEntity": "The Lord of the Rings: The Hunt for Gollum (film)",
       "entities": [
-        "Beast in Me",
-        "TV Academy"
+        "Anya Taylor-Joy"
       ],
-      "angle": "TV Academy defends Emmy nomination for limited series music despite eligibility questions.",
+      "angle": "Anya Taylor-Joy is preparing to dive into J.R.R. Tolkien's world for 'The Hunt for Gollum' after being cast.",
       "tmdbType": "movie",
-      "source": "rss:THR",
+      "source": "rss:Variety",
       "sources": [
         {
-          "outlet": "THR",
+          "outlet": "Variety",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/tv/tv-news/beast-in-me-music-emmy-nom-questioned-tv-academy-response-1236646991/",
-          "ageMin": 47,
-          "headline": "Beast in Me Music Emmy Nom Questioned, But TV Academy Backs It",
-          "summary": "In response to the assertion that the limited series doesn't meet the criteria to be eligible for the best original main title theme music nomination it received, the TV Academy acknowledged that it needs \"to tighten up the language before next year’s competition,\" but took no action."
+          "url": "https://variety.com/2026/film/columns/anya-taylor-joy-lord-of-the-rings-books-hunt-for-gollum-1236810271/",
+          "ageMin": 130,
+          "headline": "The Hunt for Gollum Star Anya Taylor-Joy Has Not Read the Lord of the Rings Books Yet, but Is About to Soon",
+          "summary": "Anya Taylor-Joy was a strict “Harry Potter” fan as a child, but now, having been cast in “The Lord of the Rings: The Hunt for Gollum,” she’s ready to dive into the world of J.R.R. Tolkien. “I m about to read the books now, actually,” Taylor-Joy told Variety s Marc Malkin at the Monday night premiere of [ ]"
         }
       ],
-      "ageMin": 47,
+      "ageMin": 130,
       "_cand": {
-        "key": "rss:beast-in-me-music-emmy-nom-questioned-but-tv-academy-backs-i",
+        "key": "rss:the-hunt-for-gollum-star-anya-taylor-joy-has-not-read-the-lo",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -46,85 +44,148 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "THR"
+          "Variety"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "THR",
+        "attribution": "Variety",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 86,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "news-daytime-emmy-nominations-2026",
-      "slug": "the-kelly-clarkson-show-the-view-score-in-2026-daytime-emmy-nomination",
-      "title": "'The Kelly Clarkson Show,' 'The View' Score in 2026 Daytime Emmy Nominations",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "award",
-      "sensitivity": "normal",
-      "eventSlug": "daytime-emmy-nominations-2026",
-      "primaryKeyword": "Daytime Emmy nominations",
-      "primaryEntity": "Daytime Emmy Awards",
-      "entities": [
-        "The Kelly Clarkson Show",
-        "The View"
-      ],
-      "angle": "Nominations for the 2026 Daytime Emmy Awards reveal strong showings for talk shows like 'The Kelly Clarkson Show' and 'The View'.",
-      "tmdbType": "movie",
-      "source": "rss:Billboard",
-      "sources": [
-        {
-          "outlet": "Billboard",
-          "tier": 7,
-          "url": "https://www.billboard.com/music/awards/daytime-emmy-nominations-2026-kelly-clarkson-show-1236293651/",
-          "ageMin": 118,
-          "headline": "‘The Kelly Clarkson Show,’ ‘The View’ Score in 2026 Daytime Emmy Nominations",
-          "summary": "Clarkson has been a double nominee in the two talk show categories for all seven seasons of her eponymous show."
-        }
-      ],
-      "ageMin": 118,
-      "_cand": {
-        "key": "rss:-the-kelly-clarkson-show-the-view-score-in-2026-daytime-emmy",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Billboard"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Billboard",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 78,
+      "priority": 84,
       "signals": {
         "recency": 16,
         "corroboration": 12,
         "status": 18,
         "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-christopher-nolan-the-odyssey-oppenheimer",
+      "slug": "nolan-oppenheimer-paved-way-for-the-odyssey",
+      "title": "Nolan: 'Oppenheimer' Paved Way for 'The Odyssey'",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "christopher-nolan-the-odyssey-oppenheimer",
+      "primaryKeyword": "christopher nolan the odyssey",
+      "primaryEntity": "The Odyssey",
+      "entities": [
+        "The Odyssey (film)",
+        "Christopher Nolan"
+      ],
+      "angle": "Christopher Nolan credits 'Oppenheimer' for enabling his upcoming film 'The Odyssey'.",
+      "tmdbType": "movie",
+      "source": "rss:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/christopher-nolan-no-odyssey-without-oppenheimer-1236981622/",
+          "ageMin": 119,
+          "headline": "Christopher Nolan Says He Wouldn t Have Been Able To Make The Odyssey Without Oppenheimer",
+          "summary": "I will never get a chance to get high with you in a dorm room, said Jon Stewart on The Daily Show tonight, preparing Christopher Nolan for his somewhat unusual questions about The Odyssey. Among the queries: Why didn t the cyclops tell a joke? What happened to the wheels on the Trojan horse? And is [ ]"
+        }
+      ],
+      "ageMin": 119,
+      "_cand": {
+        "key": "rss:christopher-nolan-says-he-wouldn-t-have-been-able-to-make-th",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 79,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-the-beauty-fx-series-pause",
+      "slug": "the-beauty-cast-released-future-of-fx-series-unclear",
+      "title": "The Beauty Cast Released; Future Of FX Series Unclear",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "cancellation",
+      "sensitivity": "normal",
+      "eventSlug": "the-beauty-fx-series-pause",
+      "primaryKeyword": "the beauty fx series",
+      "primaryEntity": "The Beauty",
+      "entities": [
+        "Ryan Murphy"
+      ],
+      "angle": "The future of FX's 'The Beauty' is uncertain as cast options have lapsed.",
+      "tmdbType": "movie",
+      "source": "rss:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/the-beauty-cast-released-canceled-renewed-season-2-fx-1236979577/",
+          "ageMin": 391,
+          "headline": "The Beauty Cast Released; Future Of FX Series Unclear",
+          "summary": "EXCLUSIVE: The Beauty is on pause at FX. The options on the cast of Ryan Murphy and Matthew Hodgson’s series, based on a comic book series by Jeremy Haun and Jason A. Hurley, have lapsed, and the actors are moving onto other projects. That includes leads Evan Peters, who is filming Season 13 of American [ ]"
+        }
+      ],
+      "ageMin": 391,
+      "_cand": {
+        "key": "rss:the-beauty-cast-released-future-of-fx-series-unclear",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 63,
+      "signals": {
+        "recency": 4,
+        "corroboration": 12,
+        "status": 18,
+        "type": 11,
         "pop": 0,
         "breakout": 0,
         "big": 18,
@@ -150,7 +211,7 @@
         "The Departed",
         "Film Workshop"
       ],
-      "angle": "Producer Nansun Shi, instrumental in Hong Kong cinema's golden age and producer of 'Infernal Affairs,' has died at 75.",
+      "angle": "Obituary for the influential producer behind Hong Kong cinema's golden age and the original 'Infernal Affairs'.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
@@ -158,12 +219,12 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/movies/movie-news/nansun-shi-dead-infernal-affairs-producer-1236647162/",
-          "ageMin": 128,
+          "ageMin": 368,
           "headline": "Nansun Shi, Infernal Affairs Producer and Pioneer of Hong Kong Cinema s Golden Age, Dies at 75",
           "summary": "The Film Workshop co-founder helped shape a glorious 1980s boom before producing the 2002 classic cop thriller that Martin Scorsese would remake as the Oscar-winning 'The Departed.'"
         }
       ],
-      "ageMin": 128,
+      "ageMin": 368,
       "_cand": {
         "key": "rss:nansun-shi-infernal-affairs-producer-and-pioneer-of-hong-kon",
         "popularity": 0,
@@ -184,9 +245,9 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 72,
+      "priority": 60,
       "signals": {
-        "recency": 16,
+        "recency": 4,
         "corroboration": 12,
         "status": 18,
         "type": 14,
@@ -198,74 +259,9 @@
       }
     },
     {
-      "id": "news-eraser-30th-anniversary",
-      "slug": "arnold-schwarzenegger-s-eraser-turns-30-director-chuck-russell-spills-",
-      "title": "Arnold Schwarzenegger's 'Eraser' Turns 30: Director Chuck Russell Spills on the Fan-Favorite Thriller",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "eraser-30th-anniversary",
-      "primaryKeyword": "Eraser",
-      "primaryEntity": "Eraser",
-      "entities": [
-        "Eraser (1996 film)",
-        "Arnold Schwarzenegger",
-        "Chuck Russell"
-      ],
-      "angle": "Director Chuck Russell reflects on Arnold Schwarzenegger's 1996 action film 'Eraser' as it celebrates its 30th anniversary.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/film/news/kong-godzilla-ride-korea-lotte-world-1236809506/",
-          "ageMin": 151,
-          "headline": "Kong x Godzilla Ride Set to Open at Korea s Lotte World This Month: It s Extremely Immersive (EXCLUSIVE)",
-          "summary": "Legendary Entertainment s first theme park attraction, Kong x Godzilla at Lotte World in Seoul, opens July 24, marking the studio s entry into location-based entertainment after several years of development on the project. It was a big priority for me when I joined Legendary nine years ago, James Ngo, Legendary s executive VP of franchise management, tells [ ]"
-        }
-      ],
-      "ageMin": 151,
-      "_cand": {
-        "key": "rss:kong-x-godzilla-ride-set-to-open-at-korea-s-lotte-world-this",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 63,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 12,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
       "id": "awards-humanitas-prizes-2026-nominations",
-      "slug": "humanitas-prizes-2026-nominations-announced-including-kpop-demon-hunte",
-      "title": "Humanitas Prizes 2026 Nominations Announced, Including 'KPop Demon Hunters' and Billy Joel Doc",
+      "slug": "kpop-demon-hunters-billy-joel-doc-among-2026-humanitas-prize-nominees",
+      "title": "‘KPop Demon Hunters,’ Billy Joel Doc Among 2026 Humanitas Prize Nominees",
       "contentType": "awards",
       "formatTag": "awards",
       "category": "awards",
@@ -276,26 +272,155 @@
       "primaryKeyword": "Humanitas Prizes",
       "primaryEntity": "Humanitas Prizes",
       "entities": [
+        "Ashley Nicole Black",
+        "KPop Demon Hunters",
         "Song Sung Blue",
-        "Billy Joel Doc",
-        "KPop Demon Hunters"
+        "Billy Joel"
       ],
-      "angle": "The Humanitas Prizes have announced their 2026 nominations, recognizing excellence in film and TV writing, with 'KPop Demon Hunters,' 'Song Sung Blue,' and a Billy Joel documentary among the nominated works.",
+      "angle": "The Humanitas Prizes, honoring film and TV writers, have announced their 2026 nominees, including those for 'KPop Demon Hunters,' a Billy Joel documentary, and more.",
+      "tmdbType": "movie",
+      "source": "rss:Billboard",
+      "sources": [
+        {
+          "outlet": "Billboard",
+          "tier": 7,
+          "url": "https://www.billboard.com/music/awards/kpop-demon-hunters-nominated-2026-humanitas-prize-full-list-1236293600/",
+          "ageMin": 491,
+          "headline": "‘KPop Demon Hunters,’ Song Sung Blue, Billy Joel Doc More Nominated for 2026 Humanitas Prizes: Full List",
+          "summary": "Ashley Nicole Black is set to host the Sept. 9 ceremony honoring film and TV writers across 10 categories."
+        }
+      ],
+      "ageMin": 491,
+      "_cand": {
+        "key": "rss:-kpop-demon-hunters-song-sung-blue-billy-joel-doc-more-nomin",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Billboard"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Billboard",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 48,
+      "signals": {
+        "recency": 4,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-justin-baldoni-blake-lively-legal-fee-dispute",
+      "slug": "justin-baldoni-asks-judge-to-reject-or-substantially-reduce-blake-live",
+      "title": "Justin Baldoni Asks Judge to Reject or ‘Substantially Reduce’ Blake Lively’s $8 Million Legal Fee Request",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "lawsuit",
+      "sensitivity": "high",
+      "eventSlug": "justin-baldoni-blake-lively-legal-fee-dispute",
+      "primaryKeyword": "blake lively legal fees",
+      "primaryEntity": "Blake Lively",
+      "entities": [
+        "Justin Baldoni"
+      ],
+      "angle": "Justin Baldoni is contesting Blake Lively's substantial legal fee request in court.",
+      "tmdbType": "movie",
+      "source": "rss:TheWrap",
+      "sources": [
+        {
+          "outlet": "TheWrap",
+          "tier": 7,
+          "url": "https://www.thewrap.com/industry-news/public-policy-legal/justin-baldoni-asks-judge-to-reject-reduce-blake-lively-legal-fee-request/",
+          "ageMin": 139,
+          "headline": "Justin Baldoni Asks Judge to Reject or ‘Substantially Reduce’ Blake Lively’s $8 Million Legal Fee Request",
+          "summary": "\"Lively fails to meet her burden to present credible evidence showing that the fees and costs she seeks to recover are reasonable,\" the filing states The post Justin Baldoni Asks Judge to Reject or ‘Substantially Reduce’ Blake Lively’s $8 Million Legal Fee Request appeared first on TheWrap ."
+        }
+      ],
+      "ageMin": 139,
+      "_cand": {
+        "key": "rss:justin-baldoni-asks-judge-to-reject-or-substantially-reduce-",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "TheWrap"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": "TheWrap",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 58,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 12,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-beast-in-me-music-emmy-nomination-questioned",
+      "slug": "beast-in-me-music-emmy-nom-questioned-but-tv-academy-backs-it",
+      "title": "Beast in Me Music Emmy Nom Questioned, But TV Academy Backs It",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "award",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "beast-in-me-music-emmy-nomination-questioned",
+      "primaryKeyword": "Beast in Me Emmy nomination",
+      "primaryEntity": "Beast",
+      "entities": [
+        "Beast in Me",
+        "TV Academy"
+      ],
+      "angle": "The TV Academy is defending the Emmy nomination for the theme music of 'Beast in Me' despite questions about its eligibility.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
         {
           "outlet": "THR",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/lifestyle/lifestyle-news/best-peacock-subscription-streaming-deal-1235500478/",
-          "ageMin": 245,
-          "headline": "The Best Peacock Subscription Deals and Free Trial Hacks",
-          "summary": "Just in time for the Peacock debut of Curry Barker's 'Obsession,' here's how deal-savvy streamers can save on the NBCUniversal-owned service, including three little-known ways to get it for free."
+          "url": "https://www.hollywoodreporter.com/tv/tv-news/beast-in-me-music-emmy-nom-questioned-tv-academy-response-1236646991/",
+          "ageMin": 287,
+          "headline": "Beast in Me Music Emmy Nom Questioned, But TV Academy Backs It",
+          "summary": "In response to the assertion that the limited series doesn't meet the criteria to be eligible for the best original main title theme music nomination it received, the TV Academy acknowledged that it needs \"to tighten up the language before next year’s competition,\" but took no action."
         }
       ],
-      "ageMin": 245,
+      "ageMin": 287,
       "_cand": {
-        "key": "rss:the-best-peacock-subscription-deals-and-free-trial-hacks",
+        "key": "rss:beast-in-me-music-emmy-nom-questioned-but-tv-academy-backs-i",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -328,136 +453,9 @@
       }
     },
     {
-      "id": "news-little-house-on-the-prairie-woke-backlash",
-      "slug": "little-house-on-the-prairie-boss-on-netflix-show-s-woke-backlash-and-m",
-      "title": "'Little House on the Prairie' Boss on Netflix Show's 'Woke' Backlash and Moving Towns in Season 2",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "little-house-on-the-prairie-woke-backlash",
-      "primaryKeyword": "Little House on the Prairie",
-      "primaryEntity": "Little House on the Prairie",
-      "entities": [
-        "Netflix",
-        "Rebecca Sonnenshine"
-      ],
-      "angle": "The showrunner of the Netflix series 'Little House on the Prairie' discusses fan backlash over 'woke' elements and plans for the show's second season.",
-      "tmdbType": "movie",
-      "source": "rss:TheWrap",
-      "sources": [
-        {
-          "outlet": "TheWrap",
-          "tier": 7,
-          "url": "https://www.thewrap.com/creative-content/tv-shows/little-house-on-the-prairie-ending-rebecca-sonnenshine-interview/",
-          "ageMin": 140,
-          "headline": "Little House on the Prairie Boss on Netflix Show s Woke Backlash, Moving Towns in Season 2",
-          "summary": "Showrunner Rebecca Sonnenshine also tells TheWrap about reckoning with the problematic parts from the books The post Little House on the Prairie Boss on Netflix Show s Woke Backlash, Moving Towns in Season 2 appeared first on TheWrap ."
-        }
-      ],
-      "ageMin": 140,
-      "_cand": {
-        "key": "rss:little-house-on-the-prairie-boss-on-netflix-show-s-woke-back",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "TheWrap"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "TheWrap",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 57,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 6,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "news-blake-garrett-death-cause-fentanyl-overdose",
-      "slug": "cause-of-death-revealed-for-former-child-actor-blake-garrett",
-      "title": "Cause of Death Revealed for Former Child Actor Blake Garrett",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "death",
-      "sensitivity": "high",
-      "eventSlug": "blake-garrett-death-cause-fentanyl-overdose",
-      "primaryKeyword": "Blake Garrett",
-      "primaryEntity": "Blake Garrett",
-      "entities": [
-        "How to Eat Fried Worms"
-      ],
-      "angle": "The cause of death for former child actor Blake Garrett, known for 'How to Eat Fried Worms,' has been revealed as a fentanyl overdose.",
-      "tmdbType": "movie",
-      "source": "rss:Deadline",
-      "sources": [
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/blake-garrett-cause-of-death-former-child-actor-1236981450/",
-          "ageMin": 217,
-          "headline": "Blake Garrett Cause Of Death Revealed",
-          "summary": "Former child actor Blake Garrett, known best for his role as Plug in the family comedy How To Eat Fried Worms, died from a fentanyl overdose, TMZ reported, citing a summary report from the Oklahoma Office of the Chief Medical Examiner. According to the report, Garrett s cause of death is listed as acute fentanyl toxicity, with [ ]"
-        }
-      ],
-      "ageMin": 217,
-      "_cand": {
-        "key": "rss:blake-garrett-cause-of-death-revealed",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Deadline"
-        ],
-        "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "Deadline",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 53,
-      "signals": {
-        "recency": 9,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "news-jack-white-performs-white-stripes-cannon-with-scarlett",
-      "slug": "jack-white-performs-white-stripes-classic-cannon-with-daughter-scarlet",
-      "title": "Jack White Performs White Stripes Classic 'Cannon' With Daughter Scarlett",
+      "id": "news-teyana-taylor-jay-z-yankee-stadium",
+      "slug": "teyana-taylor-thanks-jay-z-after-joint-yankee-stadium-performance",
+      "title": "Teyana Taylor Thanks Jay-Z After Joint Yankee Stadium Performance",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
@@ -465,29 +463,28 @@
       "eventType": "other",
       "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "jack-white-performs-white-stripes-cannon-with-scarlett",
-      "primaryKeyword": "Jack White White Stripes",
-      "primaryEntity": "Jack White",
+      "eventSlug": "teyana-taylor-jay-z-yankee-stadium",
+      "primaryKeyword": "teyana taylor jay-z",
+      "primaryEntity": "Teyana Taylor",
       "entities": [
-        "The White Stripes",
-        "Scarlett White"
+        "Jay-Z"
       ],
-      "angle": "Jack White revives a White Stripes classic with a performance alongside his daughter.",
+      "angle": "Teyana Taylor expresses gratitude to Jay-Z after performing together at his Yankee Stadium finale.",
       "tmdbType": "movie",
       "source": "rss:Rolling Stone",
       "sources": [
         {
           "outlet": "Rolling Stone",
           "tier": 7,
-          "url": "https://www.rollingstone.com/music/music-news/jack-white-the-white-stripes-cannon-daughter-scarlett-white-1235593068/",
-          "ageMin": 115,
-          "headline": "Jack White Performs the White Stripes 1999 Track Cannon With Daughter Scarlett",
-          "summary": "The track featured on the White Stripes' debut album"
+          "url": "https://www.rollingstone.com/music/music-news/teyana-taylor-jay-z-yankee-stadium-residency-1235593085/",
+          "ageMin": 153,
+          "headline": "Teyana Taylor Thanks Jay-Z After Performing Together at Iconic Yankee Stadium Finale",
+          "summary": "Taylor was among the A-list guests that the rap legend brought during his three anniversary concerts"
         }
       ],
-      "ageMin": 115,
+      "ageMin": 153,
       "_cand": {
-        "key": "rss:jack-white-performs-the-white-stripes-1999-track-cannon-with",
+        "key": "rss:teyana-taylor-thanks-jay-z-after-performing-together-at-icon",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -512,6 +509,130 @@
         "corroboration": 12,
         "status": 18,
         "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-james-franco-alien-footage-tiktok",
+      "slug": "james-franco-claims-to-have-real-alien-footage",
+      "title": "James Franco Claims to Have Real Alien Footage",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "james-franco-alien-footage-tiktok",
+      "primaryKeyword": "james franco alien footage",
+      "primaryEntity": "James Franco",
+      "entities": [],
+      "angle": "James Franco is posting cryptic videos on TikTok, claiming to have footage of an extraterrestrial encounter.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/news/general-news/james-franco-alien-footage-tiktok-1236647261/",
+          "ageMin": 173,
+          "headline": "Did James Franco Find Real Alien Footage or Is He Just Trolling Everyone?",
+          "summary": "The actor has been posting cryptic videos on TikTok since the beginning of June, teasing footage he claimed to have of an extraterrestrial encounter: \"I need to get this out for that very reason that people are trying to stop me.\""
+        }
+      ],
+      "ageMin": 173,
+      "_cand": {
+        "key": "rss:did-james-franco-find-real-alien-footage-or-is-he-just-troll",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 51,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-blake-garrett-death-cause",
+      "slug": "blake-garrett-cause-of-death-revealed",
+      "title": "Blake Garrett Cause Of Death Revealed",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "death",
+      "sensitivity": "high",
+      "eventSlug": "blake-garrett-death-cause",
+      "primaryKeyword": "Blake Garrett",
+      "primaryEntity": "Blake Garrett",
+      "entities": [
+        "How to Eat Fried Worms"
+      ],
+      "angle": "Cause of death revealed for former child actor Blake Garrett.",
+      "tmdbType": "movie",
+      "source": "rss:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/blake-garrett-cause-of-death-former-child-actor-1236981450/",
+          "ageMin": 457,
+          "headline": "Blake Garrett Cause Of Death Revealed",
+          "summary": "Former child actor Blake Garrett, known best for his role as Plug in the family comedy How To Eat Fried Worms, died from a fentanyl overdose, TMZ reported, citing a summary report from the Oklahoma Office of the Chief Medical Examiner. According to the report, Garrett s cause of death is listed as acute fentanyl toxicity, with [ ]"
+        }
+      ],
+      "ageMin": 457,
+      "_cand": {
+        "key": "rss:blake-garrett-cause-of-death-revealed",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 48,
+      "signals": {
+        "recency": 4,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
         "pop": 0,
         "breakout": 0,
         "big": 0,
