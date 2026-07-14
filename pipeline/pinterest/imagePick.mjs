@@ -15,9 +15,14 @@ async function toDataUri(url) {
   return `data:${ct.split(";")[0]};base64,${buf.toString("base64")}`;
 }
 
-const GATE = `You are checking an image for a Hollywood-news Pinterest card. Editorial imagery is fine — real photos AND film/TV stills (live-action OR animated) AND clean promotional shots all count. Return STRICT JSON only:
-{"usable": true if it clearly shows the story's subject as a photo, a film/TV still, or a clean promo image; set FALSE only for junk: a bare logo, a text-only / title / big-caption graphic, a busy multi-image collage, a tweet/screenshot, a watermarked stock placeholder, or something clearly unrelated,
- "relevant": true if it depicts the people, film, or show in the headline,
+// The image is the article's OWN editorial hero photo for THIS exact story, so it is on-topic by construction
+// — a film/TV still (a character, a scene, live-action OR animated), a poster, a red-carpet photo, or a clean
+// promo shot are ALL good. We do NOT require it to show the person named in the headline (a Gollum still for a
+// "Hunt for Gollum" story is perfect). The gate only screens out genuinely UNUSABLE frames; qcCard re-checks
+// the finished card as a second line of defense.
+const GATE = `You are checking the hero image for a premium Hollywood-news Pinterest card. This is the article's own editorial photo for this exact story, so treat it as on-topic — a real photo, a film/TV still (live-action OR animated), a single character or scene shot, a movie poster, or a clean promotional image are ALL usable. Do NOT require the specific person named in the headline to appear; the film/show/scene itself is fine.
+Return STRICT JSON only:
+{"usable": set FALSE ONLY for a genuinely unusable frame — a bare logo, a text-only / title-card / big-caption graphic, a multi-image collage, a tweet or app screenshot, a watermarked stock placeholder, a corrupt/blank frame, or a photo that is clearly upside-down or rotated sideways; otherwise TRUE,
  "reason":"<=8 words"}`;
 
 // returns { ok, imgDataUri, reason } — ok=false means find another story
@@ -26,15 +31,14 @@ export async function pickImage(article) {
   let uri;
   try { uri = await toDataUri(article.image); }
   catch (e) { return { ok: false, reason: "download: " + String(e.message).slice(0, 40) }; }
-  // vision gate (fail-OPEN on API error — the outlet image is usually fine)
+  // vision gate (fail-OPEN on API error — the outlet image is on-topic by construction)
   try {
     const { data } = await chat({
       model: PIN.visionModel, json: true, maxTokens: 120, temperature: 0,
-      system: GATE, user: `Headline: "${article.title}". Category: ${article.category}. Judge the image.`,
+      system: GATE, user: `Headline: "${article.title}". Category: ${article.category}. Is this hero image usable for the card?`,
       images: [uri],
     });
-    if (data && data.usable === false) return { ok: false, reason: "junk image: " + (data.reason || "") };
-    if (data && data.relevant === false) return { ok: false, reason: "off-topic: " + (data.reason || "") };
+    if (data && data.usable === false) return { ok: false, reason: "unusable image: " + (data.reason || "") };
   } catch { /* fail-open */ }
   return { ok: true, imgDataUri: uri };
 }
