@@ -90,6 +90,10 @@ export function scopeOk(film = {}) {
 
 // ── CAPS / kill switch (mirrors the inside lane orchestrator) ─────────────────────────────────────
 export const MAX_ARTICLES_PER_DAY = Number(process.env.BOXOFFICE_MAX_PER_DAY) || 20;
+// MIX (owner: 15 box-office / 5 streaming per day). The streaming cap protects the box-office majority — once
+// 5 streaming pieces are out, further ticks publish box-office only (a thin-box-office day means fewer than 20
+// total, never a streaming-flooded 20; the mix is the contract, and we NEVER fabricate box-office to pad it).
+export const STREAMING_DAILY_CAP = Number(process.env.BOXOFFICE_STREAMING_CAP) || 5;
 export const MAX_RUN_COST_USD = Number(process.env.BOXOFFICE_MAX_RUN_COST_USD) || 0.5;
 // FLOOD CAP: never dump N near-identical box-office pieces in one tick (plan §6). The orchestrator's
 // per-run `limit` is the burst cap; default 1 for the lean unit.
