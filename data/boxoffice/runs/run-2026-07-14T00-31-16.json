@@ -1,0 +1,69 @@
+{
+ "runId": "run-2026-07-14T00-31-16",
+ "mode": "live",
+ "startedAt": "2026-07-14T00:31:16.634Z",
+ "films": 4,
+ "published": [],
+ "held": [
+  {
+   "tag": "obsession-now-streaming×NOW-STREAMING",
+   "reason": "platform: names peacock not in confirmed providers | fidelity: 5 unsupported figures/claims — draft-level failure",
+   "score": 0
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "voicemails-for-isabelle-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "toy-story-5-bo-opening×BO-OPENING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "little-brother-netflix-top10×NETFLIX-TOP10",
+   "reason": "parked dead"
+  }
+ ],
+ "blocked": [],
+ "finishedAt": "2026-07-14T00:32:58.600Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 2563,
+    "out": 484,
+    "usd": 0.00016,
+    "ms": 2478
+   },
+   "gatherer": {
+    "calls": 1,
+    "errors": 0,
+    "in": 2956,
+    "out": 436,
+    "usd": 0.00047,
+    "ms": 2422
+   },
+   "synthesizer": {
+    "calls": 1,
+    "errors": 0,
+    "in": 826,
+    "out": 457,
+    "usd": 0.00016,
+    "ms": 9637
+   },
+   "writer": {
+    "calls": 2,
+    "errors": 0,
+    "in": 6244,
+    "out": 2172,
+    "usd": 0.00597,
+    "ms": 20638
+   }
+  },
+  "totalUsd": 0.00676
+ },
+ "openrouterTotalUsd": 0.00627
+}
