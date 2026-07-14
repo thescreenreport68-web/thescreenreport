@@ -1,40 +1,180 @@
 {
-  "runId": "run-2026-07-14T07-01-08",
-  "builtAt": "2026-07-14T07:01:31.130Z",
-  "count": 10,
+  "runId": "run-2026-07-14T11-01-12",
+  "builtAt": "2026-07-14T11:01:43.151Z",
+  "count": 5,
   "topics": [
     {
-      "id": "news-anya-taylor-joy-lord-of-the-rings-hunt-for-gollum",
-      "slug": "anya-taylor-joy-prepares-for-lord-of-the-rings-hunt-for-gollum",
-      "title": "Anya Taylor-Joy Prepares for 'Lord of the Rings: Hunt for Gollum'",
+      "id": "news-andy-serkis-defends-gollum-casting",
+      "slug": "andy-serkis-defends-hunt-for-gollum-cast-amid-diversity-criticism",
+      "title": "Andy Serkis Defends Hunt for Gollum Cast Amid Diversity Criticism",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "anya-taylor-joy-lord-of-the-rings-hunt-for-gollum",
-      "primaryKeyword": "anya taylor-joy lord of the rings",
-      "primaryEntity": "The Lord of the Rings: The Hunt for Gollum (film)",
+      "eventSlug": "andy-serkis-defends-gollum-casting",
+      "primaryKeyword": "hunt for gollum casting",
+      "primaryEntity": "The Hunt for Gollum",
       "entities": [
-        "Anya Taylor-Joy"
+        "Andy Serkis",
+        "Anya Taylor-Joy",
+        "Leo Woodall",
+        "Kate Winslet"
       ],
-      "angle": "Anya Taylor-Joy is preparing to dive into J.R.R. Tolkien's world for 'The Hunt for Gollum' after being cast.",
+      "angle": "Andy Serkis defends the casting choices for his upcoming 'Lord of the Rings' film, addressing diversity concerns.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/andy-serkis-hunt-for-gollum-cast-lord-of-the-rings-colbert-1236647367/",
+          "ageMin": 97,
+          "headline": "Andy Serkis Defends His Hunt for Gollum Cast and Confirms He s Not Directing Stephen Colbert s Lord of the Rings Film",
+          "summary": "The British actor-filmmaker addressed criticism around the lack of diversity in his 'Lord of the Rings' film, which currently stars Anya Taylor-Joy, Leo Woodall, Kate Winslet and Jamie Dornan."
+        },
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/andy-serkis-diversity-lord-of-the-rings-casting-1236981679/",
+          "ageMin": 103,
+          "headline": "Andy Serkis Responds To Question About Lack Of Diversity In ‘LOTR: The Hunt For Gollum’ Casting",
+          "summary": "Andy Serkis has said his Lord Of The Rings film The Hunt For Gollum will address concerns about diversity “where relevant and without just “ticking boxes” during an interview with the BBC. The BBC asked the veteran actor and director about what they described as a “lack of diversity” in the Lord Of The Rings [ ]"
+        }
+      ],
+      "ageMin": 97,
+      "_cand": {
+        "key": "rss:andy-serkis-defends-his-hunt-for-gollum-cast-and-confirms-he",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 2,
+      "verification": {
+        "tier1Count": 2,
+        "tier1Owners": 1,
+        "outletCount": 2,
+        "outlets": [
+          "THR",
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 98,
+      "signals": {
+        "recency": 16,
+        "corroboration": 18,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 8,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-ellen-burstyn-venice-film-festival-lifetime-achievement-award",
+      "slug": "ellen-burstyn-to-receive-venice-golden-lion-for-lifetime-achievement-h",
+      "title": "Ellen Burstyn to Receive Venice Golden Lion for Lifetime Achievement, Honored With New Short Film",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "ellen-burstyn-venice-film-festival-lifetime-achievement-award",
+      "primaryKeyword": "ellen burstyn venice",
+      "primaryEntity": "Ellen Burstyn",
+      "entities": [
+        "The Bride!",
+        "Venice Film Festival",
+        "Maggie Gyllenhaal"
+      ],
+      "angle": "Ellen Burstyn to receive Venice Film Festival's Golden Lion for lifetime achievement, honored with screening of new Maggie Gyllenhaal-directed short.",
+      "tmdbType": "movie",
+      "source": "rss:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/venice-ellen-burstyn-maggie-gyllenhaal-marilyn-monroe-short-1236981707/",
+          "ageMin": 42,
+          "headline": "Venice To Fete Ellen Burstyn Screen New Maggie Gyllenhaal-Directed Short About Marilyn Monroe Starring The Actress",
+          "summary": "The Venice Film Festival is to celebrate Ellen Burstyn with a Golden Lion for lifetime achievement. The award will be presented to Burstyn at the screening of Flesh Impact, a short film directed by Maggie Gyllenhaal, in which Burstyn also stars. The synopsis for the short provided by Venice reads: “Dedicated to Marilyn Monroe on [ ]"
+        }
+      ],
+      "ageMin": 42,
+      "_cand": {
+        "key": "rss:venice-to-fete-ellen-burstyn-screen-new-maggie-gyllenhaal-di",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 87,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-linnea-berthelsen-uk-stage-debut-darkling",
+      "slug": "stranger-things-star-linnea-berthelsen-to-make-u-k-stage-debut",
+      "title": "Stranger Things Star Linnea Berthelsen to Make U.K. Stage Debut",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "linnea-berthelsen-uk-stage-debut-darkling",
+      "primaryKeyword": "linnea berthelsen stage debut",
+      "primaryEntity": "Linnea Berthelsen",
+      "entities": [
+        "Stranger Things"
+      ],
+      "angle": "Stranger Things star Linnea Berthelsen is set to make her U.K. stage debut in the play Darkling.",
       "tmdbType": "movie",
       "source": "rss:Variety",
       "sources": [
         {
           "outlet": "Variety",
           "tier": 7,
-          "url": "https://variety.com/2026/film/columns/anya-taylor-joy-lord-of-the-rings-books-hunt-for-gollum-1236810271/",
-          "ageMin": 130,
-          "headline": "The Hunt for Gollum Star Anya Taylor-Joy Has Not Read the Lord of the Rings Books Yet, but Is About to Soon",
-          "summary": "Anya Taylor-Joy was a strict “Harry Potter” fan as a child, but now, having been cast in “The Lord of the Rings: The Hunt for Gollum,” she’s ready to dive into the world of J.R.R. Tolkien. “I m about to read the books now, actually,” Taylor-Joy told Variety s Marc Malkin at the Monday night premiere of [ ]"
+          "url": "https://variety.com/2026/theater/global/stranger-things-eight-linnea-berthelsen-uk-stage-darkling-1236810349/",
+          "ageMin": 121,
+          "headline": "Stranger Things Star Linnea Berthelsen to Make U.K. Stage Debut in Darkling (EXCLUSIVE)",
+          "summary": "Linnea Berthelsen, best known for playing Kali Prasad/008 in the second and final season of Netflix s smash hit Stranger Things, is to make her U.K. stage debut in the Darkling at London s Bush Theatre. The solo play is presented by Actors Touring Company and co-produced with the Bush Theatre. Described as an epic story of [ ]"
         }
       ],
-      "ageMin": 130,
+      "ageMin": 121,
       "_cand": {
-        "key": "rss:the-hunt-for-gollum-star-anya-taylor-joy-has-not-read-the-lo",
+        "key": "rss:stranger-things-star-linnea-berthelsen-to-make-u-k-stage-deb",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -53,139 +193,12 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 84,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "news-christopher-nolan-the-odyssey-oppenheimer",
-      "slug": "nolan-oppenheimer-paved-way-for-the-odyssey",
-      "title": "Nolan: 'Oppenheimer' Paved Way for 'The Odyssey'",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "christopher-nolan-the-odyssey-oppenheimer",
-      "primaryKeyword": "christopher nolan the odyssey",
-      "primaryEntity": "The Odyssey",
-      "entities": [
-        "The Odyssey (film)",
-        "Christopher Nolan"
-      ],
-      "angle": "Christopher Nolan credits 'Oppenheimer' for enabling his upcoming film 'The Odyssey'.",
-      "tmdbType": "movie",
-      "source": "rss:Deadline",
-      "sources": [
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/christopher-nolan-no-odyssey-without-oppenheimer-1236981622/",
-          "ageMin": 119,
-          "headline": "Christopher Nolan Says He Wouldn t Have Been Able To Make The Odyssey Without Oppenheimer",
-          "summary": "I will never get a chance to get high with you in a dorm room, said Jon Stewart on The Daily Show tonight, preparing Christopher Nolan for his somewhat unusual questions about The Odyssey. Among the queries: Why didn t the cyclops tell a joke? What happened to the wheels on the Trojan horse? And is [ ]"
-        }
-      ],
-      "ageMin": 119,
-      "_cand": {
-        "key": "rss:christopher-nolan-says-he-wouldn-t-have-been-able-to-make-th",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Deadline"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Deadline",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 79,
+      "priority": 73,
       "signals": {
         "recency": 16,
         "corroboration": 12,
         "status": 18,
         "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "news-the-beauty-fx-series-pause",
-      "slug": "the-beauty-cast-released-future-of-fx-series-unclear",
-      "title": "The Beauty Cast Released; Future Of FX Series Unclear",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "cancellation",
-      "sensitivity": "normal",
-      "eventSlug": "the-beauty-fx-series-pause",
-      "primaryKeyword": "the beauty fx series",
-      "primaryEntity": "The Beauty",
-      "entities": [
-        "Ryan Murphy"
-      ],
-      "angle": "The future of FX's 'The Beauty' is uncertain as cast options have lapsed.",
-      "tmdbType": "movie",
-      "source": "rss:Deadline",
-      "sources": [
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/the-beauty-cast-released-canceled-renewed-season-2-fx-1236979577/",
-          "ageMin": 391,
-          "headline": "The Beauty Cast Released; Future Of FX Series Unclear",
-          "summary": "EXCLUSIVE: The Beauty is on pause at FX. The options on the cast of Ryan Murphy and Matthew Hodgson’s series, based on a comic book series by Jeremy Haun and Jason A. Hurley, have lapsed, and the actors are moving onto other projects. That includes leads Evan Peters, who is filming Season 13 of American [ ]"
-        }
-      ],
-      "ageMin": 391,
-      "_cand": {
-        "key": "rss:the-beauty-cast-released-future-of-fx-series-unclear",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Deadline"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Deadline",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 63,
-      "signals": {
-        "recency": 4,
-        "corroboration": 12,
-        "status": 18,
-        "type": 11,
         "pop": 0,
         "breakout": 0,
         "big": 18,
@@ -194,24 +207,89 @@
       }
     },
     {
-      "id": "news-nansun-shi-death",
-      "slug": "nansun-shi-infernal-affairs-producer-and-hong-kong-cinema-pioneer-dies",
-      "title": "Nansun Shi, 'Infernal Affairs' Producer and Hong Kong Cinema Pioneer, Dies at 75",
+      "id": "news-crystal-lake-teaser-photos",
+      "slug": "peacock-unveils-crystal-lake-teaser-and-photos-for-friday-the-13th-pre",
+      "title": "Peacock Unveils Crystal Lake Teaser and Photos for Friday the 13th Prequel",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "high",
+      "eventSlug": "crystal-lake-teaser-photos",
+      "primaryKeyword": "crystal lake teaser",
+      "primaryEntity": "Crystal Lake",
+      "entities": [
+        "Peacock",
+        "Linda Cardellini",
+        "Pamela Voorhees"
+      ],
+      "angle": "Peacock releases a teaser and photos for the 'Friday the 13th' prequel series 'Crystal Lake,' featuring Linda Cardellini as Pamela Voorhees.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/tv/news/jon-stewart-donald-trump-reaction-lindsey-graham-daily-show-1236810256/",
+          "ageMin": 415,
+          "headline": "Jon Stewart Slams Donald Trump s Reaction to Lindsey Graham s Death",
+          "summary": "On Monday night’s episode of “The Daily Show,” Jon Stewart slammed President Donald Trump for the reaction he gave to the press following the death of Republican Sen. Lindsey Graham. Graham died on July 11 at 71 years old. “The big news from the weekend was the sudden passing of Sen. Lindsey Graham of South [ ]"
+        }
+      ],
+      "ageMin": 415,
+      "_cand": {
+        "key": "rss:jon-stewart-slams-donald-trump-s-reaction-to-lindsey-graham-",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 61,
+      "signals": {
+        "recency": 4,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-nansun-shi-dies-at-75",
+      "slug": "nansun-shi-infernal-affairs-producer-and-pioneer-of-hong-kong-cinema-s",
+      "title": "Nansun Shi, Infernal Affairs Producer and Pioneer of Hong Kong Cinema's Golden Age, Dies at 75",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "death",
       "sensitivity": "high",
-      "eventSlug": "nansun-shi-death",
-      "primaryKeyword": "Nansun Shi",
+      "eventSlug": "nansun-shi-dies-at-75",
+      "primaryKeyword": "nansun shi death",
       "primaryEntity": "Nansun Shi",
       "entities": [
         "Infernal Affairs",
         "The Departed",
         "Film Workshop"
       ],
-      "angle": "Obituary for the influential producer behind Hong Kong cinema's golden age and the original 'Infernal Affairs'.",
+      "angle": "Nansun Shi, producer of Hong Kong cinema classics like 'Infernal Affairs', has died at 75.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
@@ -219,12 +297,12 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/movies/movie-news/nansun-shi-dead-infernal-affairs-producer-1236647162/",
-          "ageMin": 368,
+          "ageMin": 608,
           "headline": "Nansun Shi, Infernal Affairs Producer and Pioneer of Hong Kong Cinema s Golden Age, Dies at 75",
           "summary": "The Film Workshop co-founder helped shape a glorious 1980s boom before producing the 2002 classic cop thriller that Martin Scorsese would remake as the Oscar-winning 'The Departed.'"
         }
       ],
-      "ageMin": 368,
+      "ageMin": 608,
       "_cand": {
         "key": "rss:nansun-shi-infernal-affairs-producer-and-pioneer-of-hong-kon",
         "popularity": 0,
@@ -254,388 +332,6 @@
         "pop": 0,
         "breakout": 0,
         "big": 12,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "awards-humanitas-prizes-2026-nominations",
-      "slug": "kpop-demon-hunters-billy-joel-doc-among-2026-humanitas-prize-nominees",
-      "title": "‘KPop Demon Hunters,’ Billy Joel Doc Among 2026 Humanitas Prize Nominees",
-      "contentType": "awards",
-      "formatTag": "awards",
-      "category": "awards",
-      "subcategory": "winners",
-      "eventType": "award",
-      "sensitivity": "normal",
-      "eventSlug": "humanitas-prizes-2026-nominations",
-      "primaryKeyword": "Humanitas Prizes",
-      "primaryEntity": "Humanitas Prizes",
-      "entities": [
-        "Ashley Nicole Black",
-        "KPop Demon Hunters",
-        "Song Sung Blue",
-        "Billy Joel"
-      ],
-      "angle": "The Humanitas Prizes, honoring film and TV writers, have announced their 2026 nominees, including those for 'KPop Demon Hunters,' a Billy Joel documentary, and more.",
-      "tmdbType": "movie",
-      "source": "rss:Billboard",
-      "sources": [
-        {
-          "outlet": "Billboard",
-          "tier": 7,
-          "url": "https://www.billboard.com/music/awards/kpop-demon-hunters-nominated-2026-humanitas-prize-full-list-1236293600/",
-          "ageMin": 491,
-          "headline": "‘KPop Demon Hunters,’ Song Sung Blue, Billy Joel Doc More Nominated for 2026 Humanitas Prizes: Full List",
-          "summary": "Ashley Nicole Black is set to host the Sept. 9 ceremony honoring film and TV writers across 10 categories."
-        }
-      ],
-      "ageMin": 491,
-      "_cand": {
-        "key": "rss:-kpop-demon-hunters-song-sung-blue-billy-joel-doc-more-nomin",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Billboard"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Billboard",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 48,
-      "signals": {
-        "recency": 4,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "news-justin-baldoni-blake-lively-legal-fee-dispute",
-      "slug": "justin-baldoni-asks-judge-to-reject-or-substantially-reduce-blake-live",
-      "title": "Justin Baldoni Asks Judge to Reject or ‘Substantially Reduce’ Blake Lively’s $8 Million Legal Fee Request",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "lawsuit",
-      "sensitivity": "high",
-      "eventSlug": "justin-baldoni-blake-lively-legal-fee-dispute",
-      "primaryKeyword": "blake lively legal fees",
-      "primaryEntity": "Blake Lively",
-      "entities": [
-        "Justin Baldoni"
-      ],
-      "angle": "Justin Baldoni is contesting Blake Lively's substantial legal fee request in court.",
-      "tmdbType": "movie",
-      "source": "rss:TheWrap",
-      "sources": [
-        {
-          "outlet": "TheWrap",
-          "tier": 7,
-          "url": "https://www.thewrap.com/industry-news/public-policy-legal/justin-baldoni-asks-judge-to-reject-reduce-blake-lively-legal-fee-request/",
-          "ageMin": 139,
-          "headline": "Justin Baldoni Asks Judge to Reject or ‘Substantially Reduce’ Blake Lively’s $8 Million Legal Fee Request",
-          "summary": "\"Lively fails to meet her burden to present credible evidence showing that the fees and costs she seeks to recover are reasonable,\" the filing states The post Justin Baldoni Asks Judge to Reject or ‘Substantially Reduce’ Blake Lively’s $8 Million Legal Fee Request appeared first on TheWrap ."
-        }
-      ],
-      "ageMin": 139,
-      "_cand": {
-        "key": "rss:justin-baldoni-asks-judge-to-reject-or-substantially-reduce-",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "TheWrap"
-        ],
-        "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "TheWrap",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 58,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 12,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "news-beast-in-me-music-emmy-nomination-questioned",
-      "slug": "beast-in-me-music-emmy-nom-questioned-but-tv-academy-backs-it",
-      "title": "Beast in Me Music Emmy Nom Questioned, But TV Academy Backs It",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "award",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "beast-in-me-music-emmy-nomination-questioned",
-      "primaryKeyword": "Beast in Me Emmy nomination",
-      "primaryEntity": "Beast",
-      "entities": [
-        "Beast in Me",
-        "TV Academy"
-      ],
-      "angle": "The TV Academy is defending the Emmy nomination for the theme music of 'Beast in Me' despite questions about its eligibility.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/tv/tv-news/beast-in-me-music-emmy-nom-questioned-tv-academy-response-1236646991/",
-          "ageMin": 287,
-          "headline": "Beast in Me Music Emmy Nom Questioned, But TV Academy Backs It",
-          "summary": "In response to the assertion that the limited series doesn't meet the criteria to be eligible for the best original main title theme music nomination it received, the TV Academy acknowledged that it needs \"to tighten up the language before next year’s competition,\" but took no action."
-        }
-      ],
-      "ageMin": 287,
-      "_cand": {
-        "key": "rss:beast-in-me-music-emmy-nom-questioned-but-tv-academy-backs-i",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 53,
-      "signals": {
-        "recency": 9,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "news-teyana-taylor-jay-z-yankee-stadium",
-      "slug": "teyana-taylor-thanks-jay-z-after-joint-yankee-stadium-performance",
-      "title": "Teyana Taylor Thanks Jay-Z After Joint Yankee Stadium Performance",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "teyana-taylor-jay-z-yankee-stadium",
-      "primaryKeyword": "teyana taylor jay-z",
-      "primaryEntity": "Teyana Taylor",
-      "entities": [
-        "Jay-Z"
-      ],
-      "angle": "Teyana Taylor expresses gratitude to Jay-Z after performing together at his Yankee Stadium finale.",
-      "tmdbType": "movie",
-      "source": "rss:Rolling Stone",
-      "sources": [
-        {
-          "outlet": "Rolling Stone",
-          "tier": 7,
-          "url": "https://www.rollingstone.com/music/music-news/teyana-taylor-jay-z-yankee-stadium-residency-1235593085/",
-          "ageMin": 153,
-          "headline": "Teyana Taylor Thanks Jay-Z After Performing Together at Iconic Yankee Stadium Finale",
-          "summary": "Taylor was among the A-list guests that the rap legend brought during his three anniversary concerts"
-        }
-      ],
-      "ageMin": 153,
-      "_cand": {
-        "key": "rss:teyana-taylor-thanks-jay-z-after-performing-together-at-icon",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Rolling Stone"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Rolling Stone",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 51,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "news-james-franco-alien-footage-tiktok",
-      "slug": "james-franco-claims-to-have-real-alien-footage",
-      "title": "James Franco Claims to Have Real Alien Footage",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "james-franco-alien-footage-tiktok",
-      "primaryKeyword": "james franco alien footage",
-      "primaryEntity": "James Franco",
-      "entities": [],
-      "angle": "James Franco is posting cryptic videos on TikTok, claiming to have footage of an extraterrestrial encounter.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/news/general-news/james-franco-alien-footage-tiktok-1236647261/",
-          "ageMin": 173,
-          "headline": "Did James Franco Find Real Alien Footage or Is He Just Trolling Everyone?",
-          "summary": "The actor has been posting cryptic videos on TikTok since the beginning of June, teasing footage he claimed to have of an extraterrestrial encounter: \"I need to get this out for that very reason that people are trying to stop me.\""
-        }
-      ],
-      "ageMin": 173,
-      "_cand": {
-        "key": "rss:did-james-franco-find-real-alien-footage-or-is-he-just-troll",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 51,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "news-blake-garrett-death-cause",
-      "slug": "blake-garrett-cause-of-death-revealed",
-      "title": "Blake Garrett Cause Of Death Revealed",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "death",
-      "sensitivity": "high",
-      "eventSlug": "blake-garrett-death-cause",
-      "primaryKeyword": "Blake Garrett",
-      "primaryEntity": "Blake Garrett",
-      "entities": [
-        "How to Eat Fried Worms"
-      ],
-      "angle": "Cause of death revealed for former child actor Blake Garrett.",
-      "tmdbType": "movie",
-      "source": "rss:Deadline",
-      "sources": [
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/blake-garrett-cause-of-death-former-child-actor-1236981450/",
-          "ageMin": 457,
-          "headline": "Blake Garrett Cause Of Death Revealed",
-          "summary": "Former child actor Blake Garrett, known best for his role as Plug in the family comedy How To Eat Fried Worms, died from a fentanyl overdose, TMZ reported, citing a summary report from the Oklahoma Office of the Chief Medical Examiner. According to the report, Garrett s cause of death is listed as acute fentanyl toxicity, with [ ]"
-        }
-      ],
-      "ageMin": 457,
-      "_cand": {
-        "key": "rss:blake-garrett-cause-of-death-revealed",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Deadline"
-        ],
-        "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "Deadline",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 48,
-      "signals": {
-        "recency": 4,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
         "trending": 0,
         "softTv": 0
       }
