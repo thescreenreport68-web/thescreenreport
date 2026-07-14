@@ -1,0 +1,84 @@
+{
+ "runId": "run-2026-07-14T23-31-14",
+ "mode": "live",
+ "startedAt": "2026-07-14T23:31:14.826Z",
+ "films": 6,
+ "published": [
+  {
+   "tag": "shipwrecked-nightmare-at-sea-netflix-top10×NETFLIX-TOP10",
+   "slug": "shipwrecked-nightmare-at-sea-draws-9-million-views-in-netflix-debut",
+   "path": "/home/runner/work/thescreenreport/thescreenreport/content/articles/shipwrecked-nightmare-at-sea-draws-9-million-views-in-netflix-debut.md",
+   "score": 90
+  }
+ ],
+ "held": [
+  {
+   "tag": "enola-holmes-3-netflix-top10×NETFLIX-TOP10",
+   "reason": "words 133 < 180 (owner-set ~200-word minimum) | soft-floor engagement 4 < 5 | soft-floor humanVoice 2 < 5",
+   "score": 45
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "obsession-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "voicemails-for-isabelle-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "toy-story-5-bo-opening×BO-OPENING",
+   "reason": "parked dead"
+  }
+ ],
+ "blocked": [],
+ "finishedAt": "2026-07-14T23:35:23.181Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3476,
+    "out": 718,
+    "usd": 0.00022,
+    "ms": 3175
+   },
+   "gatherer": {
+    "calls": 2,
+    "errors": 0,
+    "in": 3806,
+    "out": 190,
+    "usd": 0.00046,
+    "ms": 1670
+   },
+   "synthesizer": {
+    "calls": 2,
+    "errors": 0,
+    "in": 1403,
+    "out": 1289,
+    "usd": 0.00036,
+    "ms": 21607
+   },
+   "writer": {
+    "calls": 5,
+    "errors": 0,
+    "in": 15507,
+    "out": 5128,
+    "usd": 0.01441,
+    "ms": 88702
+   },
+   "qa": {
+    "calls": 15,
+    "errors": 0,
+    "in": 41482,
+    "out": 7099,
+    "usd": 0.03019,
+    "ms": 39054
+   }
+  },
+  "totalUsd": 0.04564
+ },
+ "openrouterTotalUsd": 0.04353
+}
