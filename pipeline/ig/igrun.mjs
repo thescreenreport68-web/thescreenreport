@@ -44,7 +44,7 @@ import { render } from "./agents/render.mjs";
 import { makeCover } from "./agents/cover.mjs";
 import { watchQC } from "./agents/watchqc.mjs";
 import { publish, verifyLive } from "./agents/publish.mjs";
-import { planSlots } from "./agents/slots.mjs";
+import { planSlots, upcomingSlotsToday } from "./agents/slots.mjs";
 import { collect } from "./agents/analytics.mjs";
 import { learn } from "./agents/learner.mjs";
 
@@ -390,7 +390,9 @@ async function main() {
   // --platforms=instagram,facebook,youtube overrides the enabled set for THIS run only (in-memory) —
   // for owner-approved test posts to Facebook/YouTube before flipping the config default. (2026-07-13)
   if (args.platforms) { IG.platforms = String(args.platforms).split(",").map((s) => s.trim().toLowerCase()).filter(Boolean); console.log(`  platforms override: ${IG.platforms.join(", ")}`); }
-  const limit = Math.min(parseInt(args.limit || "1", 10), IG.maxPerDay);
+  // limit = candidates to ATTEMPT (capped at the hard daily cap, NOT maxPerDay) — a build-ahead run
+  // needs to try MORE than 7 to actually SHIP 7 when some hold. targetPosts below is what caps at 7.
+  const limit = Math.min(parseInt(args.limit || "1", 10), IG.hardDailyCap);
   // --posts = how many videos this run should actually BUILD+schedule (stop after N successes even if
   // the slate is larger — a per-slot cron uses --limit=4 --posts=1: attempt up to 4 candidates, ship
   // the first that builds). Defaults to --limit for back-compat. (owner 2026-07-13)
@@ -438,10 +440,16 @@ async function main() {
   // the old one-whole-day flag, which would have made runs 2-7 exit as "already scheduled".
   const day = todayInTz(IG.slots.postTz);
   let filledSlots = [];
+  let effectivePosts = targetPosts; // no-publish/--now: no slot capping
   if (live && !publishNow) {
     filledSlots = scheduledSlotsToday(day);
     if (filledSlots.length >= IG.slots.primeET.length) { console.log(`all ${IG.slots.primeET.length} slots for ${day} already filled — exiting (double-post guard)`); return; }
     if (postedToday() >= IG.hardDailyCap) { console.log("daily hard cap reached — exiting"); return; }
+    // BUILD-AHEAD cap: only build as many reels as there are slots still UPCOMING today so a run never
+    // spills into tomorrow's slots (which would record the wrong scheduledDay). (owner 2026-07-14)
+    const slotsLeftToday = upcomingSlotsToday(new Date(), filledSlots).length;
+    if (slotsLeftToday < 1) { console.log(`no slots left upcoming today (${day}) — exiting`); return; }
+    effectivePosts = Math.min(targetPosts, slotsLeftToday);
   }
 
   // build every job
@@ -471,7 +479,7 @@ async function main() {
     // skips other reels about the SAME event next run (topic dedup, not just slug dedup)
     recordBuilt(job.id, topicKey(`${job.article?.title || job.id} ${(job.facts?.entities || []).map((e) => e.name).join(" ")}`));
     built.push(job);
-    if (built.length >= targetPosts) break; // built enough for this run's slot(s) — stop, don't over-build
+    if (built.length >= effectivePosts) break; // built enough for today's remaining slots — stop, don't over-build
   }
 
   // publish

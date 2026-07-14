@@ -12,13 +12,17 @@ on:
   # Runs are serialized by the concurrency group, so each reads the prior run's committed ledger and
   # takes the next EMPTY slot — no double-posts. Kill switch: commit site/data/ig/PAUSED.
   schedule:
-    - cron: "15 16 * * *" # 16:15 UTC → 10:00 AM LA
-    - cron: "15 18 * * *" # 18:15 UTC → 12:00 PM LA
-    - cron: "15 20 * * *" # 20:15 UTC →  2:00 PM LA
-    - cron: "15 22 * * *" # 22:15 UTC →  4:00 PM LA
-    - cron: "15 0 * * *"  # 00:15 UTC →  6:00 PM LA
-    - cron: "15 2 * * *"  # 02:15 UTC →  8:00 PM LA
-    - cron: "15 4 * * *"  # 04:15 UTC → 10:00 PM LA
+    # BUILD-AHEAD model (owner 2026-07-14): GitHub cron DROPS/DELAYS runs (20-70 min drift + skipped
+    # firings), so we do NOT depend on 7 separate firings. Each EARLY run builds the whole day's
+    # remaining slate at once and SCHEDULES each reel for its LA slot (10a/12p/2p/4p/6p/8p/10p) via
+    # Zernio/Buffer — so ONE reliable early firing fills all 7 slots regardless of GitHub's timing. The
+    # later runs are cheap no-ops when the day is already full, or catch-ups if an early one was dropped.
+    - cron: "15 12 * * *" # 12:15 UTC →  5:15 AM LA (primary — builds all 7, done well before the 10am slot)
+    - cron: "15 13 * * *" # 13:15 UTC →  6:15 AM LA (backup)
+    - cron: "15 14 * * *" # 14:15 UTC →  7:15 AM LA (backup)
+    - cron: "15 16 * * *" # 16:15 UTC →  9:15 AM LA (backup)
+    - cron: "15 18 * * *" # 18:15 UTC → 11:15 AM LA (catch-up for any still-empty slots)
+    - cron: "15 21 * * *" # 21:15 UTC →  2:15 PM LA (late catch-up)
   workflow_dispatch:
     inputs:
       mode:
@@ -97,9 +101,10 @@ jobs:
           TSR_GH_TOKEN: ${{ secrets.TSR_GH_TOKEN }}
         run: |
           if [ "${{ github.event_name }}" = "schedule" ]; then
-            # 7-runs-per-day model: build ONE reel (attempt up to 4 candidates so a hold doesn't miss
-            # the slot) and schedule it for the next EMPTY LA slot via Zernio.
-            FLAGS="--limit=4 --posts=1 --live"
+            # BUILD-AHEAD: attempt up to 15 candidates and SHIP up to 7 reels (posts=7), scheduling each
+            # for the next EMPTY LA slot today via Zernio/Buffer. A run that finds the day already full
+            # exits immediately (cheap). One reliable early firing fills all 7 slots.
+            FLAGS="--limit=15 --posts=7 --live"
           else
             # manual dispatch — defaults to DRAFT (nothing posts) unless you pick mode=live
             MODE="${{ github.event.inputs.mode || 'draft' }}"

@@ -98,7 +98,7 @@ export const IG = {
   // ── caps + ramp (plan §1.9/§6.1) — the orchestrator enforces these in code.
   maxPerDay: 7, // owner 2026-07-13: 7 posts/day, one per LA slot (10a/12p/2p/4p/6p/8p/10p)
   hardDailyCap: 20, // absolute (platform quota is 50-100; we stay far under)
-  maxRunUsd: 3.0, // kill the run if LLM+voice+music spend exceeds this
+  maxRunUsd: 5.0, // kill the run if spend exceeds this — raised for the build-ahead model (7 reels/run)
   maxJobUsd: 0.80, // park a single job if it alone exceeds this
   freshDays: 10, // scout candidate window. Reels REPURPOSE already-published entertainment stories — a gossip/box-office piece from a week ago is still perfectly shareable (it's not breaking news), and a 4-day window left the gossip lane with 0 candidates (56/91 aged out). 10 days keeps a healthy slate. (owner 2026-07-12)
   categories: ["movies", "tv", "celebrity"],

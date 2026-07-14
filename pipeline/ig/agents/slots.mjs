@@ -24,6 +24,16 @@ function nextEt(hhmm, from = new Date()) {
   return new Date(from.getTime() + 3600e3);
 }
 
+// How many prime slots are still UPCOMING today (LA) and not already filled. Caps the build-ahead so
+// a run never builds into TOMORROW's slots (which would record the wrong scheduledDay + get rebuilt
+// tomorrow). A morning run sees all 7; an afternoon catch-up sees only what's left today. (2026-07-14)
+export function upcomingSlotsToday(now = new Date(), filledSlots = []) {
+  const taken = new Set(filledSlots);
+  const dayOf = (d) => d.toLocaleDateString("en-US", { timeZone: IG.slots.timezone });
+  const today = dayOf(now);
+  return IG.slots.primeET.filter((s) => !taken.has(s) && dayOf(nextEt(s, now)) === today);
+}
+
 // deterministic jitter from the slug (no Math.random — reproducible runs)
 function jitterMin(slug) {
   let h = 0;
