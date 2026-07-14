@@ -2,7 +2,7 @@
 // Returns the finished PNG path + the pin metadata (incl. the CONTENT-classified board). Throws if the story
 // can't/shouldn't make a card (off-mandate, dead link, no photo, failed QC) so the caller falls to the next.
 import path from "node:path";
-import { readArticle } from "./curate.mjs";
+import { readLiveArticle } from "./curate.mjs";
 import { pickImage } from "./imagePick.mjs";
 import { classifyBoard, copywriter, seo } from "./write.mjs";
 import { renderCard } from "./render.mjs";
@@ -20,14 +20,17 @@ async function isLive(url) {
   } catch { return true; } // network hiccup → fail-open so a transient error never zeroes out the day
 }
 
-export async function makeCard(slug) {
-  const a = readArticle(slug);
+// `cand` is a candidate from curate.pickCandidates (carries the live feed row + canonical URL).
+export async function makeCard(cand) {
+  const a = await readLiveArticle(cand.row);      // fetch the live story (image + dek + lede facts)
+  const slug = a.slug;
   // 1) CONTENT ROUTER + on-brand gate FIRST (cheap): which board does this story belong on — or skip it?
   const route = await classifyBoard(a);
   if (route.board === "skip") throw new Error("off-mandate — " + route.why);
-  // 2) never build a card that links to a dead page
-  const articleUrl = `${PIN.articleBase}/${a.category}/${slug}/`;
+  // 2) never build a card that links to a dead page (canonical URL comes from the live feed; cheap re-check)
+  const articleUrl = a.url;
   if (!(await isLive(articleUrl))) throw new Error("article not live (404) — " + articleUrl);
+  if (!a.image) throw new Error("no image on the live story");
   // 3) the expensive steps
   const img = await pickImage(a);                 // most-relevant photo, vision-verified
   if (!img.ok) throw new Error("image — " + img.reason);
