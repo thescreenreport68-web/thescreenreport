@@ -1,0 +1,95 @@
+name: pinterest-daily
+
+# Builds the day's Pinterest news CARDS (image pins) from our latest published articles and schedules them
+# across the day. Separate, self-contained lane (site/pipeline/pinterest/) — independent of the video lane.
+# Publishing is server-side (Buffer holds the scheduled pins), so this runs once/day and exits.
+#
+# SAFETY: default is DRAFT (nothing publishes). The daily cron posts for real (mode=live). schedule is
+# COMMENTED until the owner approves a live run — enable it (or wire a Cloudflare Worker cron) then.
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "draft (safe) or live"
+        default: "draft"
+      count:
+        description: "how many pins"
+        default: "5"
+      only_slug:
+        description: "optional: force one article slug"
+        default: ""
+      now:
+        description: "publish immediately (true/false)"
+        default: "false"
+  # ── OWNER: uncomment to enable the daily cron AFTER a green live run ──
+  # schedule:
+  #   - cron: "0 5 * * *"   # 05:00 UTC ≈ 10pm PT the night before — schedules the next day's pins
+
+concurrency:
+  group: pinterest-daily
+  cancel-in-progress: false
+
+permissions:
+  contents: write   # commit the pinned-ledger + daily-state back
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    env:
+      TSR_SITE: ${{ github.workspace }}
+      PIN_PYTHON: python3
+      OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+      TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+      TMDB_READ_TOKEN: ${{ secrets.TMDB_READ_TOKEN }}
+      BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+      GITHUB_TOKEN: ${{ secrets.TSR_GH_TOKEN }}   # host.mjs pushes the card PNG to the tsr-media repo
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 1 }
+
+      - uses: actions/setup-node@v4
+        with: { node-version: "20", cache: npm, cache-dependency-path: package-lock.json }
+      - run: npm ci --prefer-offline --no-audit --no-fund
+
+      - uses: browser-actions/setup-chrome@v1
+        id: chrome
+        with: { chrome-version: stable }
+
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: python3 -m pip install --quiet pillow
+
+      - name: Build + schedule the day's pins
+        env:
+          CHROME_BIN: ${{ steps.chrome.outputs.chrome-path }}
+          EVENT: ${{ github.event_name }}
+          IN_MODE: ${{ github.event.inputs.mode }}
+          IN_COUNT: ${{ github.event.inputs.count }}
+          IN_SLUG: ${{ github.event.inputs.only_slug }}
+          IN_NOW: ${{ github.event.inputs.now }}
+        run: |
+          set -euo pipefail
+          MODE="${IN_MODE:-draft}"; [ "$EVENT" = "schedule" ] && MODE="live"
+          FLAGS=""
+          [ "$MODE" = "live" ] && FLAGS="$FLAGS --live --once-daily"
+          [ "${IN_NOW:-false}" = "true" ] && FLAGS="$FLAGS --now"
+          [ -n "${IN_COUNT:-}" ] && FLAGS="$FLAGS --count=${IN_COUNT}"
+          [ -n "${IN_SLUG:-}" ] && FLAGS="$FLAGS --slug=${IN_SLUG}"
+          echo "event=$EVENT mode=$MODE flags:$FLAGS"
+          node pipeline/pinterest/pinrun.mjs $FLAGS
+
+      - name: Persist ledger + daily-state
+        if: always()
+        run: |
+          git config user.name  "screenreport-bot"
+          git config user.email "bot@thescreenreport.com"
+          git add data/pinterest/pinned.json data/pinterest/daily-state.json 2>/dev/null || true
+          if git diff --cached --quiet; then echo "no state change"; exit 0; fi
+          git commit -m "pinterest: update ledger [skip ci]" || exit 0
+          for i in 1 2 3 4 5; do
+            git pull --rebase --autostash origin "${{ github.ref_name }}" && git push origin "HEAD:${{ github.ref_name }}" && exit 0
+            sleep 5
+          done
+          echo "::warning::could not push ledger"
