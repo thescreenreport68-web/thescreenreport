@@ -71,30 +71,40 @@ async function main() {
   if (!candidates.length) { console.log("no fresh un-pinned candidates."); return; }
 
   const want = forceSlug ? 1 : count;
-  const made = []; const catCount = {}; const usedEvents = new Set();
+  const made = []; const boardCount = {}; const usedEvents = new Set();
+  const taken = new Set(); const attempted = new Set(); // in-run dedup + don't rebuild a story that already failed
   const times = slotTimes(want);
-  for (const c of candidates) {
-    if (made.length >= want) break;
-    if (pinned.has(c.slug)) continue;
-    if (c.eventSlug && usedEvents.has(c.eventSlug)) continue; // no two pins about the same event in one batch
-    if (!forceSlug && (catCount[c.category] || 0) >= PIN.perCategoryCap) continue;
-    pinned.add(c.slug);
-    if (dry) { made.push({ slug: c.slug, category: c.category, dry: true }); console.log(`  [dry] ${c.category}  ${c.slug}`); catCount[c.category] = (catCount[c.category] || 0) + 1; if (c.eventSlug) usedEvents.add(c.eventSlug); continue; }
+
+  // attempt ONE candidate → build (routes to its content-classified board), post, record. Returns on no-op.
+  // respectCap: pass-1 prefers board diversity; pass-2 drops the cap so the daily count is never compromised.
+  async function tryPick(c, respectCap) {
+    if (made.length >= want) return;
+    if (pinned.has(c.slug) || taken.has(c.slug) || attempted.has(c.slug)) return;
+    if (c.eventSlug && usedEvents.has(c.eventSlug)) return; // no two pins about the same event in one batch
+    // soft diversity: use the article category as a cheap pre-build proxy for the board so we don't waste a build
+    if (respectCap && !forceSlug && (boardCount[c.category] || 0) >= PIN.perCategoryCap) return; // defer to pass 2
+    if (dry) { taken.add(c.slug); attempted.add(c.slug); made.push({ slug: c.slug, category: c.category, dry: true }); console.log(`  [dry] ${c.category}  ${c.slug}`); boardCount[c.category] = (boardCount[c.category] || 0) + 1; if (c.eventSlug) usedEvents.add(c.eventSlug); return; }
+    taken.add(c.slug); attempted.add(c.slug);
     try {
-      const card = await makeCard(c.slug);
+      const card = await makeCard(c.slug); // classifies the board, gates off-mandate, checks the link is live
       const host = await hostCard(card.pngPath, c.slug);
       const i = made.length;
       const whenISO = immediate ? new Date(Date.now() + (i * 3 + 1) * 60000).toISOString() : times[i];
       const res = await postPin({ imageUrl: host.url, meta: card.meta, whenISO, draft, immediate });
-      const entry = { slug: c.slug, category: c.category, at: new Date().toISOString(), draft: !!draft, whenISO, pinUrl: host.url, headline: card.card.headline.replace(/<br>/g, " "), title: card.meta.title, result: res };
+      const entry = { slug: c.slug, category: c.category, board: card.board, at: new Date().toISOString(), draft: !!draft, whenISO, pinUrl: host.url, headline: card.card.headline.replace(/<br>/g, " "), title: card.meta.title, result: res };
       if (res.ok && !draft) recordPinned(entry);
       made.push(entry);
-      catCount[c.category] = (catCount[c.category] || 0) + 1; if (c.eventSlug) usedEvents.add(c.eventSlug);
-      console.log(`  ${draft ? "DRAFT" : immediate ? "LIVE-NOW" : whenISO.slice(11, 16) + "Z"}  [${c.category}] ${res.ok ? "ok " + res.id : "FAIL " + res.error}\n     “${entry.headline}”`);
+      boardCount[card.board] = (boardCount[card.board] || 0) + 1; if (c.eventSlug) usedEvents.add(c.eventSlug);
+      console.log(`  ${draft ? "DRAFT" : immediate ? "LIVE-NOW" : whenISO.slice(11, 16) + "Z"}  → ${card.board.toUpperCase()} board ${res.ok ? "ok " + res.id : "FAIL " + res.error}\n     “${entry.headline}”`);
     } catch (e) {
+      taken.delete(c.slug); // release the slot so another story can fill it (attempted stays → we won't rebuild this one)
       console.log(`  skip ${c.slug}: ${String(e.message).slice(0, 90)} — trying next`);
     }
   }
+
+  // pass 1: fill preferring board spread; pass 2: guarantee the daily count (5/day, no compromise)
+  for (const c of candidates) { if (made.length >= want) break; await tryPick(c, true); }
+  if (made.length < want) for (const c of candidates) { if (made.length >= want) break; await tryPick(c, false); }
 
   if (guarded && made.length) { try { fs.writeFileSync(PIN.stateFile, JSON.stringify({ date: targetDateStr(), count: made.length, at: new Date().toISOString() }, null, 2)); } catch {} }
   if (!draft && !dry) { try { const n = await pruneCards(21); if (n) console.log(`pruned ${n} old cards`); } catch {} }
