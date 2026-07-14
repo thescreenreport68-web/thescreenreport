@@ -1,564 +1,42 @@
 {
-  "runId": "run-2026-07-13T23-01-13",
-  "builtAt": "2026-07-13T23:01:44.488Z",
-  "count": 15,
+  "runId": "run-2026-07-14T03-01-07",
+  "builtAt": "2026-07-14T03:01:30.440Z",
+  "count": 8,
   "topics": [
     {
-      "id": "news-christmas-wrapped-in-love-casting",
-      "slug": "cindy-busby-to-star-in-great-american-media-holiday-film-christmas-wra",
-      "title": "Cindy Busby To Star In Great American Media Holiday Film Christmas Wrapped In Love",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "christmas-wrapped-in-love-casting",
-      "primaryKeyword": "christmas wrapped in love",
-      "primaryEntity": "Christmas Wrapped in Love (film)",
-      "entities": [
-        "Cindy Busby",
-        "Great American Media"
-      ],
-      "angle": "Cindy Busby to star in Great American Media's new holiday film Christmas Wrapped in Love, which has begun production.",
-      "tmdbType": "movie",
-      "source": "rss:Deadline",
-      "sources": [
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/cindy-busby-cast-film-christmas-wrapped-in-love-1236981200/",
-          "ageMin": 126,
-          "headline": "Cindy Busby To Star In Great American Media Holiday Film Christmas Wrapped In Love",
-          "summary": "EXCLUSIVE: Cindy Busby (When Hope Calls, There’s No Place Like Christmas) is set to star in the Great American Media holiday film Christmas Wrapped in Love, which just began production. The film will have its world premiere across Great American Pure Flix, Great American Family, and GFAM+ during the network’s top-rated Great American Christmas programming [ ]"
-        }
-      ],
-      "ageMin": 126,
-      "_cand": {
-        "key": "rss:cindy-busby-to-star-in-great-american-media-holiday-film-chr",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Deadline"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Deadline",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 84,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "news-pinkpantheress-acting-debut-daniels-film",
-      "slug": "pinkpantheress-to-make-feature-acting-debut-in-daniels-secret-film",
-      "title": "PinkPantheress to Make Feature Acting Debut in Daniels' Secret Film",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "pinkpantheress-acting-debut-daniels-film",
-      "primaryKeyword": "PinkPantheress acting",
-      "primaryEntity": "PinkPantheress",
-      "entities": [
-        "William Daniels",
-        "Daniels"
-      ],
-      "angle": "British recording artist PinkPantheress is set to make her feature film acting debut in the mysterious new project from directors Daniels.",
-      "tmdbType": "movie",
-      "source": "rss:Deadline",
-      "sources": [
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/pinkpantheress-daniels-secret-movie-1236981169/",
-          "ageMin": 151,
-          "headline": "PinkPantheress Making Feature Acting Debut In Daniels Secret Event Pic At Universal",
-          "summary": "EXCLUSIVE: Multiplatinum British recording artist, songwriter and producer PinkPantheress, aka Victoria Walker, is set to make her feature acting debut in the Daniels secret event film at Universal. She joins previously announced Matt Damon, Sandra Oh, Charles Melton, Sean Kaufman, Silvia Dionicio, Jackson Kelly, Kerrice Brooks, Thalia Dudek and Michael Gandolfini in the feature which [ ]"
-        }
-      ],
-      "ageMin": 151,
-      "_cand": {
-        "key": "rss:pinkpantheress-making-feature-acting-debut-in-daniels-secret",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Deadline"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Deadline",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 84,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "awards-daytime-emmys-2026-nominations",
-      "slug": "daytime-emmys-announce-2026-nominations",
-      "title": "Daytime Emmys Announce 2026 Nominations",
-      "contentType": "awards",
-      "formatTag": "awards",
-      "category": "awards",
-      "subcategory": "winners",
-      "eventType": "award",
-      "sensitivity": "normal",
-      "eventSlug": "daytime-emmys-2026-nominations",
-      "primaryKeyword": "Daytime Emmys",
-      "primaryEntity": "Daytime Emmy Awards",
-      "entities": [
-        "The Kelly Clarkson Show",
-        "Sherri"
-      ],
-      "angle": "Daytime Emmy nominations announced, recognizing talk shows and hosts.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/tv/awards/daytime-emmys-2026-nominations-list-1236810049/",
-          "ageMin": 1,
-          "headline": "Daytime Emmys Announce 2026 Nominations (UPDATING)",
-          "summary": "The 53rd annual Daytime Emmy nominations announcement is underway. Among early nominees: Recently ended talkers The Kelly Clarkson Show (recognized for talk series and talk host) and Sherri (with a nod for talk host). The Daytime Emmys, administered by the New York-based National Academy of Television Arts Sciences, recognize daytime dramas, talk series, entertainment [ ]"
-        }
-      ],
-      "ageMin": 1,
-      "_cand": {
-        "key": "rss:daytime-emmys-announce-2026-nominations-updating-",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 74,
-      "signals": {
-        "recency": 30,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "awards-humanitas-prizes-2026-nominations",
-      "slug": "kpop-demon-hunters-song-sung-blue-billy-joel-doc-more-nominated-for-20",
-      "title": "‘KPop Demon Hunters,’ Song Sung Blue, Billy Joel Doc More Nominated for 2026 Humanitas Prizes",
-      "contentType": "awards",
-      "formatTag": "awards",
-      "category": "awards",
-      "subcategory": "winners",
-      "eventType": "award",
-      "sensitivity": "normal",
-      "eventSlug": "humanitas-prizes-2026-nominations",
-      "primaryKeyword": "Humanitas Prizes",
-      "primaryEntity": "Humanitas Prizes",
-      "entities": [
-        "KPop Demon Hunters",
-        "Song Sung Blue",
-        "Billy Joel Doc"
-      ],
-      "angle": "Humanitas Prizes announce nominations for film and TV writers.",
-      "tmdbType": "movie",
-      "source": "rss:Billboard",
-      "sources": [
-        {
-          "outlet": "Billboard",
-          "tier": 7,
-          "url": "https://www.billboard.com/music/awards/kpop-demon-hunters-nominated-2026-humanitas-prize-full-list-1236293600/",
-          "ageMin": 11,
-          "headline": "‘KPop Demon Hunters,’ Song Sung Blue, Billy Joel Doc More Nominated for 2026 Humanitas Prizes: Full List",
-          "summary": "Ashley Nicole Black is set to host the Sept. 9 ceremony honoring film and TV writers across 10 categories."
-        }
-      ],
-      "ageMin": 11,
-      "_cand": {
-        "key": "rss:-kpop-demon-hunters-song-sung-blue-billy-joel-doc-more-nomin",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Billboard"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Billboard",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 74,
-      "signals": {
-        "recency": 30,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "news-love-love-rom-com-casting",
-      "slug": "tyriq-withers-to-star-opposite-isabel-may-in-amazon-mgm-studios-rom-co",
-      "title": "Tyriq Withers To Star Opposite Isabel May In Amazon MGM Studios Rom-Com Love Love",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "love-love-rom-com-casting",
-      "primaryKeyword": "Love Love rom-com",
-      "primaryEntity": "Love Lesson",
-      "entities": [
-        "Love Love (film)",
-        "Tyriq Withers",
-        "Isabel May",
-        "Amazon MGM Studios"
-      ],
-      "angle": "Tyriq Withers and Isabel May to star in Amazon MGM Studios' upcoming romantic comedy Love Love.",
-      "tmdbType": "movie",
-      "source": "rss:Deadline",
-      "sources": [
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/tyriq-withers-isabel-may-love-love-1236980378/",
-          "ageMin": 226,
-          "headline": "Tyriq Withers To Star Opposite Isabel May In Amazon MGM Studios Rom-Com Love Love",
-          "summary": "EXCLUSIVE: Reminders Of Him star Tyriq Withers is set to star and exec produce the Amazon MGM Studios’ romantic comedy Love Love from writer-director Joey Power. Isabel May is also on board to star. Power will direct with RK Films’ Joe Roth and Jeff Kirschenbaum and 3 Arts Entertainments’ Ari Lubet and Jonathan Berry producing. In addition to May, [ ]"
-        }
-      ],
-      "ageMin": 226,
-      "_cand": {
-        "key": "rss:tyriq-withers-to-star-opposite-isabel-may-in-amazon-mgm-stud",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Deadline"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Deadline",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 77,
-      "signals": {
-        "recency": 9,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "news-michael-waldron-developing-nova-movie",
-      "slug": "michael-waldron-developing-nova-movie-at-marvel-studios",
-      "title": "Michael Waldron Developing Nova Movie At Marvel Studios",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "high",
-      "eventSlug": "michael-waldron-developing-nova-movie",
-      "primaryKeyword": "nova movie",
-      "primaryEntity": "Nova (character)",
-      "entities": [
-        "Marvel Studios: Assembling a Universe",
-        "Marvel Studios",
-        "Michael Waldron"
-      ],
-      "angle": "Marvel Studios is developing a feature film centered on the Nova character, with Michael Waldron attached to develop.",
-      "tmdbType": "movie",
-      "source": "rss:Deadline",
-      "sources": [
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/michael-waldron-nova-movie-marvel-studios-1236981012/",
-          "ageMin": 196,
-          "headline": "Michael Waldron Developing Nova Movie At Marvel Studios",
-          "summary": "After rumors started to spread of a potential Nova project from filmmaker Michael Waldron last week, sources now tell Deadline that the Chad Powers creator is developing a feature film around the comic at Marvel Studios. Insiders stress the project is still in early development but that Waldron is on board to pen the script [ ]"
-        }
-      ],
-      "ageMin": 196,
-      "_cand": {
-        "key": "rss:michael-waldron-developing-nova-movie-at-marvel-studios",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Deadline"
-        ],
-        "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "Deadline",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 77,
-      "signals": {
-        "recency": 9,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "news-rhoda-magbitang-signs-with-buchwald",
-      "slug": "top-chef-winner-rhoda-magbitang-signs-with-buchwald-and-ltpr-talent-ma",
-      "title": "Top Chef Winner Rhoda Magbitang Signs With Buchwald and LTPR+ Talent Management (EXCLUSIVE)",
+      "id": "news-beast-in-me-emmy-nom-questioned",
+      "slug": "tv-academy-backs-beast-in-me-emmy-nomination-amid-eligibility-question",
+      "title": "TV Academy Backs 'Beast in Me' Emmy Nomination Amid Eligibility Questions",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "rhoda-magbitang-signs-with-buchwald",
-      "primaryKeyword": "Rhoda Magbitang",
-      "primaryEntity": "Rhoda Magbitang",
-      "entities": [
-        "Ciara Bravo",
-        "Top Chef",
-        "Bravo"
-      ],
-      "angle": "Top Chef winner Rhoda Magbitang has signed with Buchwald and LTPR+ Talent Management for representation.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/tv/news/top-chef-winner-rhoda-magbitang-buchwald-ltpr-representation-1236810042/",
-          "ageMin": 73,
-          "headline": "Top Chef Winner Rhoda Magbitang Signs With Buchwald and LTPR+ Talent Management (EXCLUSIVE)",
-          "summary": "Top Chef winner Rhoda Magbitang has signed with Buchwald and Leigh Taylor Public Relations+ Talent Management for representation. Magbitang is best known for winning Season 23 of Bravo’s “Top Chef.” She’s currently completing her culinary residency at Mauna Lani following her win, which features a series of intimate dinners hosted by Magbitang from June through [ ]"
-        }
-      ],
-      "ageMin": 73,
-      "_cand": {
-        "key": "rss:top-chef-winner-rhoda-magbitang-signs-with-buchwald-and-ltpr",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 57,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 6,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "music-news-artists-most-billboard-200-hot-100-no-1s",
-      "slug": "the-beatles-taylor-swift-drake-mariah-carey-more-acts-with-the-most-bi",
-      "title": "The Beatles, Taylor Swift, Drake, Mariah Carey More: Acts With the Most Billboard 200 Hot 100 No. 1s Combined",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
-      "subcategory": "news",
-      "eventType": "other",
+      "eventType": "award",
       "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "artists-most-billboard-200-hot-100-no-1s",
-      "primaryKeyword": "Billboard charts",
-      "primaryEntity": "Billboard 200",
+      "eventSlug": "beast-in-me-emmy-nom-questioned",
+      "primaryKeyword": "Beast in Me Emmy",
+      "primaryEntity": "Beast",
       "entities": [
-        "TAYLOR SWIFT | THE ERAS TOUR",
-        "The Beatles",
-        "Taylor Swift",
-        "Drake"
+        "Beast in Me",
+        "TV Academy"
       ],
-      "angle": "Highlighting artists with the most combined No. 1 hits on the Billboard 200 and Hot 100 charts.",
-      "tmdbType": "movie",
-      "source": "rss:Billboard",
-      "sources": [
-        {
-          "outlet": "Billboard",
-          "tier": 7,
-          "url": "https://www.billboard.com/lists/acts-with-most-billboard-200-hot-100-number-ones-combined/",
-          "ageMin": 129,
-          "headline": "The Beatles, Taylor Swift, Drake, Mariah Carey More: Acts With the Most Billboard 200 Hot 100 No. 1s Combined",
-          "summary": "These artists stand at the pinnacle of chart success with both albums and songs."
-        }
-      ],
-      "ageMin": 129,
-      "_cand": {
-        "key": "rss:the-beatles-taylor-swift-drake-mariah-carey-more-acts-with-t",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Billboard"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Billboard",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 51,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "news-summer-house-season-11-cast-revealed",
-      "slug": "summer-house-season-11-cast-revealed",
-      "title": "Summer House Season 11 Cast Revealed",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "summer-house-season-11-cast-revealed",
-      "primaryKeyword": "summer house season 11 cast",
-      "primaryEntity": "Summer House",
-      "entities": [
-        "Summer House (TV series)",
-        "Bravo",
-        "Amanda Batula",
-        "West Wilson"
-      ],
-      "angle": "Bravo officially reveals the cast for the upcoming season of its hit reality series Summer House.",
+      "angle": "TV Academy defends Emmy nomination for limited series music despite eligibility questions.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
         {
           "outlet": "THR",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/tv/tv-news/summer-house-season-11-cast-revealed-1236646977/",
-          "ageMin": 84,
-          "headline": "Summer House Season 11 Cast Revealed",
-          "summary": "The returning cast for Bravo's hit summer series has been made official following the high-profile exits of Amanda Batula and West Wilson."
+          "url": "https://www.hollywoodreporter.com/tv/tv-news/beast-in-me-music-emmy-nom-questioned-tv-academy-response-1236646991/",
+          "ageMin": 47,
+          "headline": "Beast in Me Music Emmy Nom Questioned, But TV Academy Backs It",
+          "summary": "In response to the assertion that the limited series doesn't meet the criteria to be eligible for the best original main title theme music nomination it received, the TV Academy acknowledged that it needs \"to tighten up the language before next year’s competition,\" but took no action."
         }
       ],
-      "ageMin": 84,
+      "ageMin": 47,
       "_cand": {
-        "key": "rss:summer-house-season-11-cast-revealed",
+        "key": "rss:beast-in-me-music-emmy-nom-questioned-but-tv-academy-backs-i",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -577,243 +55,52 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 48,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "softTv": -12
-      }
-    },
-    {
-      "id": "news-shi-nansun-dies-at-75",
-      "slug": "shi-nansun-hong-kong-producer-behind-infernal-affairs-dies-at-75",
-      "title": "Shi Nansun, Hong Kong Producer Behind 'Infernal Affairs,' Dies at 75",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "death",
-      "sensitivity": "high",
-      "eventSlug": "shi-nansun-dies-at-75",
-      "primaryKeyword": "shi nansun",
-      "primaryEntity": "Shi Nansun",
-      "entities": [
-        "Infernal Affairs",
-        "Film Workshop"
-      ],
-      "angle": "The passing of Shi Nansun, a key figure in Hong Kong cinema and co-founder of Film Workshop, is reported.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/film/obituaries-people-news/shi-nansun-dead-hong-kong-producer-infernal-affairs-1236809988/",
-          "ageMin": 193,
-          "headline": "Shi Nansun, Hong Kong Producer Behind Infernal Affairs, Dies at 75",
-          "summary": "Shi Nansun, the Hong Kong producer and executive who co-founded Film Workshop and helped establish international distribution networks for Chinese-language cinema, died Monday at Hong Kong Sanatorium Hospital. She was 75. In a statement, Film Workshop said Shi had been in declining health since 2022 due to complications affecting her immune system, and that [ ]"
-        }
-      ],
-      "ageMin": 193,
-      "_cand": {
-        "key": "rss:shi-nansun-hong-kong-producer-behind-infernal-affairs-dies-a",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 65,
-      "signals": {
-        "recency": 9,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 12,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "news-sam-rockwell-audition-trick-smartless",
-      "slug": "sam-rockwell-s-fail-safe-audition-trick-to-book-early-career-roles-stu",
-      "title": "Sam Rockwell’s Fail-Safe Audition Trick to Book Early Career Roles Stuns ‘Smartless’ Crew",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "sam-rockwell-audition-trick-smartless",
-      "primaryKeyword": "Sam Rockwell audition",
-      "primaryEntity": "Sam Rockwell",
-      "entities": [
-        "Olivia Wilde",
-        "Mali Finn"
-      ],
-      "angle": "Sam Rockwell's unique audition technique shared on 'Smartless'.",
-      "tmdbType": "movie",
-      "source": "rss:TheWrap",
-      "sources": [
-        {
-          "outlet": "TheWrap",
-          "tier": 7,
-          "url": "https://www.thewrap.com/creative-content/movies/sam-rockwell-audition-trick-smartless/",
-          "ageMin": 13,
-          "headline": "Sam Rockwell’s Fail-Safe Audition Trick to Book Early Career Roles Stuns ‘Smartless’ Crew",
-          "summary": "Olivia Wilde shares the story from her casting assistant days working for Mali Finn: \"I really saw how the sausage was made\" The post Sam Rockwell’s Fail-Safe Audition Trick to Book Early Career Roles Stuns ‘Smartless’ Crew appeared first on TheWrap ."
-        }
-      ],
-      "ageMin": 13,
-      "_cand": {
-        "key": "rss:sam-rockwell-s-fail-safe-audition-trick-to-book-early-career",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "TheWrap"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "TheWrap",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 65,
-      "signals": {
-        "recency": 30,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "news-hudson-williams-confronts-paparazzi",
-      "slug": "hudson-williams-confronts-autograph-hounds-who-followed-him-home-in-vi",
-      "title": "Hudson Williams Confronts Autograph Hounds Who Followed Him Home in Viral Video: Please F ing Leave",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "hudson-williams-confronts-paparazzi",
-      "primaryKeyword": "Hudson Williams",
-      "primaryEntity": "Hudson Williams",
-      "entities": [
-        "Heated Rivalry"
-      ],
-      "angle": "Actor Hudson Williams confronted paparazzi who followed him to his home in Paris, captured in a viral video.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/tv/news/hudson-williams-confronts-fans-followed-him-home-autograph-1236810084/",
-          "ageMin": 42,
-          "headline": "Hudson Williams Confronts Autograph Hounds Who Followed Him Home in Viral Video: Please F ing Leave",
-          "summary": "“Heated Rivalry” star Hudson Williams told off a group of autograph hounds who followed him to a private residence in Paris for his signature. The confrontation was captured in a now viral video shared on social media on Monday. As Williams stepped out of a car, someone handed him pictures and asked for his signature. [ ]"
-        }
-      ],
-      "ageMin": 42,
-      "_cand": {
-        "key": "rss:hudson-williams-confronts-autograph-hounds-who-followed-him-",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 59,
+      "priority": 86,
       "signals": {
         "recency": 24,
         "corroboration": 12,
         "status": 18,
-        "type": 5,
+        "type": 14,
         "pop": 0,
         "breakout": 0,
-        "big": 0,
+        "big": 18,
         "trending": 0,
         "softTv": 0
       }
     },
     {
-      "id": "news-belinda-denim-brand-ambassador-latin-america",
-      "slug": "belinda-named-new-face-of-denim-brand-in-latin-america",
-      "title": "Belinda Named New Face of Denim Brand in Latin America",
+      "id": "news-daytime-emmy-nominations-2026",
+      "slug": "the-kelly-clarkson-show-the-view-score-in-2026-daytime-emmy-nomination",
+      "title": "'The Kelly Clarkson Show,' 'The View' Score in 2026 Daytime Emmy Nominations",
       "contentType": "news",
       "formatTag": "news",
-      "category": "celebrity",
+      "category": "tv",
       "subcategory": "news",
-      "eventType": "announcement",
+      "eventType": "award",
       "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "belinda-denim-brand-ambassador-latin-america",
-      "primaryKeyword": "Belinda music",
-      "primaryEntity": "Belinda Bromilow",
+      "eventSlug": "daytime-emmy-nominations-2026",
+      "primaryKeyword": "Daytime Emmy nominations",
+      "primaryEntity": "Daytime Emmy Awards",
       "entities": [
-        "Belinda"
+        "The Kelly Clarkson Show",
+        "The View"
       ],
-      "angle": "Mexican pop star Belinda lands a new ambassadorship with a major denim brand in Latin America.",
+      "angle": "Nominations for the 2026 Daytime Emmy Awards reveal strong showings for talk shows like 'The Kelly Clarkson Show' and 'The View'.",
       "tmdbType": "movie",
       "source": "rss:Billboard",
       "sources": [
         {
           "outlet": "Billboard",
           "tier": 7,
-          "url": "https://www.billboard.com/music/latin/belinda-levis-brand-ambassador-latin-america-1236293357/",
-          "ageMin": 137,
-          "headline": "Belinda Is the New Face of This Denim Brand in Latin America",
-          "summary": "The Mexican pop singer is named brand ambassador for the iconic fashion company."
+          "url": "https://www.billboard.com/music/awards/daytime-emmy-nominations-2026-kelly-clarkson-show-1236293651/",
+          "ageMin": 118,
+          "headline": "‘The Kelly Clarkson Show,’ ‘The View’ Score in 2026 Daytime Emmy Nominations",
+          "summary": "Clarkson has been a double nominee in the two talk show categories for all seven seasons of her eponymous show."
         }
       ],
-      "ageMin": 137,
+      "ageMin": 118,
       "_cand": {
-        "key": "rss:belinda-is-the-new-face-of-this-denim-brand-in-latin-america",
+        "key": "rss:-the-kelly-clarkson-show-the-view-score-in-2026-daytime-emmy",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -832,51 +119,118 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 55,
+      "priority": 78,
       "signals": {
         "recency": 16,
         "corroboration": 12,
         "status": 18,
-        "type": 9,
+        "type": 14,
         "pop": 0,
         "breakout": 0,
-        "big": 0,
+        "big": 18,
         "trending": 0,
         "softTv": 0
       }
     },
     {
-      "id": "news-ashley-johnson-nearly-abducted-on-set",
-      "slug": "ashley-johnson-recounts-near-abduction-on-growing-pains-set",
-      "title": "Ashley Johnson Recounts Near-Abduction on 'Growing Pains' Set",
+      "id": "news-nansun-shi-death",
+      "slug": "nansun-shi-infernal-affairs-producer-and-hong-kong-cinema-pioneer-dies",
+      "title": "Nansun Shi, 'Infernal Affairs' Producer and Hong Kong Cinema Pioneer, Dies at 75",
       "contentType": "news",
       "formatTag": "news",
-      "category": "celebrity",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "death",
+      "sensitivity": "high",
+      "eventSlug": "nansun-shi-death",
+      "primaryKeyword": "Nansun Shi",
+      "primaryEntity": "Nansun Shi",
+      "entities": [
+        "Infernal Affairs",
+        "The Departed",
+        "Film Workshop"
+      ],
+      "angle": "Producer Nansun Shi, instrumental in Hong Kong cinema's golden age and producer of 'Infernal Affairs,' has died at 75.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/nansun-shi-dead-infernal-affairs-producer-1236647162/",
+          "ageMin": 128,
+          "headline": "Nansun Shi, Infernal Affairs Producer and Pioneer of Hong Kong Cinema s Golden Age, Dies at 75",
+          "summary": "The Film Workshop co-founder helped shape a glorious 1980s boom before producing the 2002 classic cop thriller that Martin Scorsese would remake as the Oscar-winning 'The Departed.'"
+        }
+      ],
+      "ageMin": 128,
+      "_cand": {
+        "key": "rss:nansun-shi-infernal-affairs-producer-and-pioneer-of-hong-kon",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 72,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 12,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-eraser-30th-anniversary",
+      "slug": "arnold-schwarzenegger-s-eraser-turns-30-director-chuck-russell-spills-",
+      "title": "Arnold Schwarzenegger's 'Eraser' Turns 30: Director Chuck Russell Spills on the Fan-Favorite Thriller",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
       "subcategory": "news",
       "eventType": "other",
-      "sensitivity": "high",
-      "eventSlug": "ashley-johnson-nearly-abducted-on-set",
-      "primaryKeyword": "ashley johnson growing pains",
-      "primaryEntity": "Ashley Johnson",
+      "sensitivity": "normal",
+      "eventSlug": "eraser-30th-anniversary",
+      "primaryKeyword": "Eraser",
+      "primaryEntity": "Eraser",
       "entities": [
-        "Growing Pains"
+        "Eraser (1996 film)",
+        "Arnold Schwarzenegger",
+        "Chuck Russell"
       ],
-      "angle": "The 'Growing Pains' and 'The Last of Us' actress recounts a terrifying near-abduction incident from her childhood on the sitcom's set.",
+      "angle": "Director Chuck Russell reflects on Arnold Schwarzenegger's 1996 action film 'Eraser' as it celebrates its 30th anniversary.",
       "tmdbType": "movie",
       "source": "rss:Variety",
       "sources": [
         {
           "outlet": "Variety",
           "tier": 7,
-          "url": "https://variety.com/2026/tv/news/ashley-johnson-kidnapped-growing-pains-epispde-filming-1236809871/",
-          "ageMin": 134,
-          "headline": "Growing Pains Star Ashley Johnson Was Nearly Abducted on Set When a Kidnapper Grabbed Her After Episode Taping: I Was Clueless and Very Upset",
-          "summary": "The Last of Us voice actor Ashley Johnson got her start in Hollywood as a child actor, playing the role of Chrissy Seaver on the final two seasons of ABC s sitcom Growing Pains from 1990 to 1992. On a recent episode of her Weird Kids podcast, Johnson revealed she was once nearly abducted by a [ ]"
+          "url": "https://variety.com/2026/film/news/kong-godzilla-ride-korea-lotte-world-1236809506/",
+          "ageMin": 151,
+          "headline": "Kong x Godzilla Ride Set to Open at Korea s Lotte World This Month: It s Extremely Immersive (EXCLUSIVE)",
+          "summary": "Legendary Entertainment s first theme park attraction, Kong x Godzilla at Lotte World in Seoul, opens July 24, marking the studio s entry into location-based entertainment after several years of development on the project. It was a big priority for me when I joined Legendary nine years ago, James Ngo, Legendary s executive VP of franchise management, tells [ ]"
         }
       ],
-      "ageMin": 134,
+      "ageMin": 151,
       "_cand": {
-        "key": "rss:growing-pains-star-ashley-johnson-was-nearly-abducted-on-set",
+        "key": "rss:kong-x-godzilla-ride-set-to-open-at-korea-s-lotte-world-this",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -889,18 +243,83 @@
           "Variety"
         ],
         "maxTier": 7,
-        "sensitivity": "high",
+        "sensitivity": "normal",
         "attribution": "Variety",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 51,
+      "priority": 63,
       "signals": {
         "recency": 16,
         "corroboration": 12,
         "status": 18,
         "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 12,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "awards-humanitas-prizes-2026-nominations",
+      "slug": "humanitas-prizes-2026-nominations-announced-including-kpop-demon-hunte",
+      "title": "Humanitas Prizes 2026 Nominations Announced, Including 'KPop Demon Hunters' and Billy Joel Doc",
+      "contentType": "awards",
+      "formatTag": "awards",
+      "category": "awards",
+      "subcategory": "winners",
+      "eventType": "award",
+      "sensitivity": "normal",
+      "eventSlug": "humanitas-prizes-2026-nominations",
+      "primaryKeyword": "Humanitas Prizes",
+      "primaryEntity": "Humanitas Prizes",
+      "entities": [
+        "Song Sung Blue",
+        "Billy Joel Doc",
+        "KPop Demon Hunters"
+      ],
+      "angle": "The Humanitas Prizes have announced their 2026 nominations, recognizing excellence in film and TV writing, with 'KPop Demon Hunters,' 'Song Sung Blue,' and a Billy Joel documentary among the nominated works.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/lifestyle/lifestyle-news/best-peacock-subscription-streaming-deal-1235500478/",
+          "ageMin": 245,
+          "headline": "The Best Peacock Subscription Deals and Free Trial Hacks",
+          "summary": "Just in time for the Peacock debut of Curry Barker's 'Obsession,' here's how deal-savvy streamers can save on the NBCUniversal-owned service, including three little-known ways to get it for free."
+        }
+      ],
+      "ageMin": 245,
+      "_cand": {
+        "key": "rss:the-best-peacock-subscription-deals-and-free-trial-hacks",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 53,
+      "signals": {
+        "recency": 9,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
         "pop": 0,
         "breakout": 0,
         "big": 0,
@@ -909,9 +328,136 @@
       }
     },
     {
-      "id": "news-jay-z-yankee-stadium-surprise-guests",
-      "slug": "jay-z-s-yankee-stadium-shows-feature-surprise-appearances-from-beyonc-",
-      "title": "Jay-Z's Yankee Stadium Shows Feature Surprise Appearances from Beyoncé, Rihanna, and More",
+      "id": "news-little-house-on-the-prairie-woke-backlash",
+      "slug": "little-house-on-the-prairie-boss-on-netflix-show-s-woke-backlash-and-m",
+      "title": "'Little House on the Prairie' Boss on Netflix Show's 'Woke' Backlash and Moving Towns in Season 2",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "little-house-on-the-prairie-woke-backlash",
+      "primaryKeyword": "Little House on the Prairie",
+      "primaryEntity": "Little House on the Prairie",
+      "entities": [
+        "Netflix",
+        "Rebecca Sonnenshine"
+      ],
+      "angle": "The showrunner of the Netflix series 'Little House on the Prairie' discusses fan backlash over 'woke' elements and plans for the show's second season.",
+      "tmdbType": "movie",
+      "source": "rss:TheWrap",
+      "sources": [
+        {
+          "outlet": "TheWrap",
+          "tier": 7,
+          "url": "https://www.thewrap.com/creative-content/tv-shows/little-house-on-the-prairie-ending-rebecca-sonnenshine-interview/",
+          "ageMin": 140,
+          "headline": "Little House on the Prairie Boss on Netflix Show s Woke Backlash, Moving Towns in Season 2",
+          "summary": "Showrunner Rebecca Sonnenshine also tells TheWrap about reckoning with the problematic parts from the books The post Little House on the Prairie Boss on Netflix Show s Woke Backlash, Moving Towns in Season 2 appeared first on TheWrap ."
+        }
+      ],
+      "ageMin": 140,
+      "_cand": {
+        "key": "rss:little-house-on-the-prairie-boss-on-netflix-show-s-woke-back",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "TheWrap"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "TheWrap",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 57,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 6,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-blake-garrett-death-cause-fentanyl-overdose",
+      "slug": "cause-of-death-revealed-for-former-child-actor-blake-garrett",
+      "title": "Cause of Death Revealed for Former Child Actor Blake Garrett",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "death",
+      "sensitivity": "high",
+      "eventSlug": "blake-garrett-death-cause-fentanyl-overdose",
+      "primaryKeyword": "Blake Garrett",
+      "primaryEntity": "Blake Garrett",
+      "entities": [
+        "How to Eat Fried Worms"
+      ],
+      "angle": "The cause of death for former child actor Blake Garrett, known for 'How to Eat Fried Worms,' has been revealed as a fentanyl overdose.",
+      "tmdbType": "movie",
+      "source": "rss:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/blake-garrett-cause-of-death-former-child-actor-1236981450/",
+          "ageMin": 217,
+          "headline": "Blake Garrett Cause Of Death Revealed",
+          "summary": "Former child actor Blake Garrett, known best for his role as Plug in the family comedy How To Eat Fried Worms, died from a fentanyl overdose, TMZ reported, citing a summary report from the Oklahoma Office of the Chief Medical Examiner. According to the report, Garrett s cause of death is listed as acute fentanyl toxicity, with [ ]"
+        }
+      ],
+      "ageMin": 217,
+      "_cand": {
+        "key": "rss:blake-garrett-cause-of-death-revealed",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 53,
+      "signals": {
+        "recency": 9,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-jack-white-performs-white-stripes-cannon-with-scarlett",
+      "slug": "jack-white-performs-white-stripes-classic-cannon-with-daughter-scarlet",
+      "title": "Jack White Performs White Stripes Classic 'Cannon' With Daughter Scarlett",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
@@ -919,31 +465,29 @@
       "eventType": "other",
       "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "jay-z-yankee-stadium-surprise-guests",
-      "primaryKeyword": "Jay-Z concert",
-      "primaryEntity": "JAŸ-Z",
+      "eventSlug": "jack-white-performs-white-stripes-cannon-with-scarlett",
+      "primaryKeyword": "Jack White White Stripes",
+      "primaryEntity": "Jack White",
       "entities": [
-        "Jay-Z",
-        "Beyoncé",
-        "Rihanna",
-        "Eminem"
+        "The White Stripes",
+        "Scarlett White"
       ],
-      "angle": "Jay-Z brought out a star-studded lineup of surprise guests, including Beyoncé, Rihanna, and Eminem, during his recent shows at Yankee Stadium.",
+      "angle": "Jack White revives a White Stripes classic with a performance alongside his daughter.",
       "tmdbType": "movie",
       "source": "rss:Rolling Stone",
       "sources": [
         {
           "outlet": "Rolling Stone",
           "tier": 7,
-          "url": "https://www.rollingstone.com/music/music-lists/jay-z-yankee-stadium-guests-beyonce-rihanna-eminem-1235592808/",
-          "ageMin": 178,
-          "headline": "All the Guests Jay-Z Brought Out at Yankee Stadium",
-          "summary": "The rap legend brought out Beyoncé, Rihanna, Eminem and more friends from throughout his career over three nights in the Bronx"
+          "url": "https://www.rollingstone.com/music/music-news/jack-white-the-white-stripes-cannon-daughter-scarlett-white-1235593068/",
+          "ageMin": 115,
+          "headline": "Jack White Performs the White Stripes 1999 Track Cannon With Daughter Scarlett",
+          "summary": "The track featured on the White Stripes' debut album"
         }
       ],
-      "ageMin": 178,
+      "ageMin": 115,
       "_cand": {
-        "key": "rss:all-the-guests-jay-z-brought-out-at-yankee-stadium",
+        "key": "rss:jack-white-performs-the-white-stripes-1999-track-cannon-with",
         "popularity": 0,
         "kind": "rss-news"
       },
