@@ -2062,6 +2062,56 @@
     "work": null,
     "sources": []
    }
+  },
+  {
+   "key": "minions-monsters-2026|audience-reaction",
+   "at": "2026-07-14T12:58:58.213Z",
+   "updatedCount": 0,
+   "parentEventSlug": "minions-monsters-2026",
+   "form": "audience-reaction",
+   "slug": "minions-monsters-is-raking-in-cash-but-the-audience-is-split-right-down-the",
+   "title": "Minions & Monsters Is Raking In Cash, But the Audience Is Split Right Down the Middle",
+   "primaryEntity": "Minions & Monsters",
+   "eventType": "discourse",
+   "harvestQuoteKeys": [
+    "illumination once again provides global audiences with a film that audiences are embracing",
+    "i was a little surprised that one of the first gags in minions and monsters was a cyclops ",
+    "the slapstick elements that are inherent to the minions franchise engaged my 8-year-old en",
+    "#julymovies 8) minions & monsters (2026) the minions go to hollywood. delightfully silly s",
+    "as if on cue, my 6-year-old reached the bottom of her popcorn bucket, her head fell on my ",
+    "true star wars fans get tickets to watch minions & monsters to enjoy 10 seconds of animate",
+    "minions & monsters only grossed about $36.4 million, according to early figures reported b",
+    "theyre calling it the burn dead minions & invite the evil monsters triple feature",
+    "animação do século! my ★★★★★ review of minions & monsters (2026) boxd.it/f5ggdv",
+    "all ready for the movies!! going to see minions & monsters today😃",
+    "i cant stop thinking about the gay minions from minions and monsters",
+    "this is my favorite scene from minions & monsters (2026)"
+   ],
+   "angle": {
+    "form": "audience-reaction",
+    "angle": "audience discourse",
+    "workingTitle": "Minions & Monsters: what people are saying",
+    "focusEntity": "Minions & Monsters",
+    "searchQueries": []
+   },
+   "trigger": {
+    "parentEventSlug": "minions-monsters-2026",
+    "parentSlug": null,
+    "parentTitle": "Minions & Monsters",
+    "primaryEntity": "Minions & Monsters",
+    "eventType": "discourse",
+    "tmdbType": "movie",
+    "subjectKind": "title",
+    "priority": 27,
+    "category": "movies",
+    "overview": "This is the rambunctious, ridiculous and totally true story of how the Minions conquered Hollywood, became movie stars, lost everything, unleashed monsters onto the world and then banded together to try and save the planet from the mayhem they had just created.",
+    "work": {
+     "title": "Minions & Monsters",
+     "type": "movie",
+     "year": "2026"
+    },
+    "sources": []
+   }
   }
  ],
  "parked": [
@@ -2275,8 +2325,9 @@
    "parentEventSlug": "the-get-out-2026",
    "form": "audience-reaction",
    "reason": "under floor: audience posts 0 < 3",
-   "tries": 2,
-   "at": "2026-07-14T10:50:46.388Z"
+   "tries": 3,
+   "at": "2026-07-14T12:51:51.013Z",
+   "dead": true
   },
   {
    "key": "digger-trailer-tom-cruise-is-unrecognizable-in-alejandro-g-i|breakout-buzz",
@@ -2435,25 +2486,33 @@
    "key": "the-odyssey-2026|audience-reaction",
    "parentEventSlug": "the-odyssey-2026",
    "form": "audience-reaction",
-   "reason": "score 88 < 70",
-   "tries": 1,
-   "at": "2026-07-14T10:35:25.746Z"
+   "reason": "score 85 < 70",
+   "tries": 2,
+   "at": "2026-07-14T12:43:07.192Z"
   },
   {
    "key": "instawork-announces-2026-flexible-work-award-winners-newswir|audience-reaction",
    "parentEventSlug": "instawork-announces-2026-flexible-work-award-winners-newswir",
    "form": "audience-reaction",
    "reason": "under floor: audience posts 0 < 3",
-   "tries": 1,
-   "at": "2026-07-14T10:38:24.280Z"
+   "tries": 2,
+   "at": "2026-07-14T12:36:31.885Z"
   },
   {
    "key": "evil-dead-burn-2026|audience-reaction",
    "parentEventSlug": "evil-dead-burn-2026",
    "form": "audience-reaction",
-   "reason": "divided-claim-without-both-sides",
+   "reason": "web-check cuts didn't re-clear (2 contradictions)",
+   "tries": 2,
+   "at": "2026-07-14T12:48:33.873Z"
+  },
+  {
+   "key": "ellen-burstyn-to-receive-venice-s-golden-lion-for-lifetime-a|audience-reaction",
+   "parentEventSlug": "ellen-burstyn-to-receive-venice-s-golden-lion-for-lifetime-a",
+   "form": "audience-reaction",
+   "reason": "under floor: audience posts 0 < 3",
    "tries": 1,
-   "at": "2026-07-14T10:47:28.916Z"
+   "at": "2026-07-14T12:33:27.547Z"
   }
  ]
 }
