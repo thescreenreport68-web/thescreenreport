@@ -1,0 +1,78 @@
+{
+ "runId": "run-2026-07-14T01-31-11",
+ "mode": "live",
+ "startedAt": "2026-07-14T01:31:11.363Z",
+ "films": 4,
+ "published": [],
+ "held": [
+  {
+   "tag": "obsession-now-streaming×NOW-STREAMING",
+   "reason": "platform: names peacock not in confirmed providers",
+   "score": 0
+  },
+  {
+   "tag": "girls-like-girls-bo-opening×BO-OPENING",
+   "reason": "seo-faq: fewer than 2 real FAQs | soft-floor engagement 4 < 5",
+   "score": 50
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "voicemails-for-isabelle-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "little-brother-netflix-top10×NETFLIX-TOP10",
+   "reason": "parked dead"
+  }
+ ],
+ "blocked": [],
+ "finishedAt": "2026-07-14T01:35:44.838Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 2558,
+    "out": 541,
+    "usd": 0.00017,
+    "ms": 1962
+   },
+   "gatherer": {
+    "calls": 2,
+    "errors": 0,
+    "in": 6556,
+    "out": 670,
+    "usd": 0.00092,
+    "ms": 8866
+   },
+   "synthesizer": {
+    "calls": 2,
+    "errors": 0,
+    "in": 1537,
+    "out": 1511,
+    "usd": 0.00041,
+    "ms": 25234
+   },
+   "writer": {
+    "calls": 6,
+    "errors": 0,
+    "in": 19113,
+    "out": 6418,
+    "usd": 0.01791,
+    "ms": 89600
+   },
+   "qa": {
+    "calls": 12,
+    "errors": 0,
+    "in": 34988,
+    "out": 3695,
+    "usd": 0.01973,
+    "ms": 24083
+   }
+  },
+  "totalUsd": 0.03915
+ },
+ "openrouterTotalUsd": 0.03698
+}
