@@ -14,9 +14,11 @@ export const PIN = {
 
   // ── cadence (start small on a new account; ramp later)
   dailyCount: Number(process.env.PIN_COUNT || 5),
-  freshDays: 10,                                // only pin recent stories
-  categories: new Set(["movies", "tv", "celebrity"]),
-  perCategoryCap: 3,                            // don't spam one board in a single day's batch
+  freshDays: 7,                                 // only pin recent stories (latest + trending)
+  // every content category maps to one of our 3 boards (see boardFor); music/awards/streaming included
+  categories: new Set(["movies", "tv", "celebrity", "streaming", "music", "awards"]),
+  perCategoryCap: 3,                            // board health: never more than 3 of 5 pins to one board
+  fallbackTrend: 20,                            // score for un-scored articles (gossip) → only fill if too few trending
 
   // ── design / render
   chrome: process.env.CHROME_BIN || "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
