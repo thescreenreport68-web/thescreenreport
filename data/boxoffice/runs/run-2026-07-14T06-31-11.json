@@ -1,0 +1,82 @@
+{
+ "runId": "run-2026-07-14T06-31-11",
+ "mode": "live",
+ "startedAt": "2026-07-14T06:31:11.466Z",
+ "films": 6,
+ "published": [
+  {
+   "tag": "maternal-instinct-netflix-top10×NETFLIX-TOP10",
+   "slug": "jessica-dimmock-s-maternal-instinct-holds-at-3-on-netflix-with-14m-hours",
+   "path": "/home/runner/work/thescreenreport/thescreenreport/content/articles/jessica-dimmock-s-maternal-instinct-holds-at-3-on-netflix-with-14m-hours.md",
+   "score": 88
+  }
+ ],
+ "held": [],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "obsession-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "voicemails-for-isabelle-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "toy-story-5-bo-opening×BO-OPENING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "little-brother-netflix-top10×NETFLIX-TOP10",
+   "reason": "parked dead"
+  }
+ ],
+ "blocked": [],
+ "finishedAt": "2026-07-14T06:34:27.681Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 2,
+    "errors": 2,
+    "in": 0,
+    "out": 0,
+    "usd": 0,
+    "ms": 0
+   },
+   "gatherer": {
+    "calls": 1,
+    "errors": 0,
+    "in": 1790,
+    "out": 99,
+    "usd": 0.00022,
+    "ms": 1436
+   },
+   "synthesizer": {
+    "calls": 1,
+    "errors": 0,
+    "in": 625,
+    "out": 791,
+    "usd": 0.0002,
+    "ms": 11394
+   },
+   "writer": {
+    "calls": 3,
+    "errors": 0,
+    "in": 8829,
+    "out": 3433,
+    "usd": 0.00902,
+    "ms": 45138
+   },
+   "qa": {
+    "calls": 9,
+    "errors": 0,
+    "in": 24542,
+    "out": 3514,
+    "usd": 0.01615,
+    "ms": 24917
+   }
+  },
+  "totalUsd": 0.02559
+ },
+ "openrouterTotalUsd": 0.02639
+}
