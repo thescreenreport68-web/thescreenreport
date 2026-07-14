@@ -20,7 +20,7 @@ import * as imageAgent from "./agents/image.mjs";
 import { writeBoxOfficeArticle } from "./assemble.mjs";
 import { loadStore, alreadyPublished, recordPublished, parkAngle, parkedTries, clearParked, coveredEventSlugs } from "./store.mjs";
 import { loadTracked, isMaterial, updateEventSuffix, recordArticle, linkPriorCoverage, isPastOpening } from "./tracker.mjs";
-import { ACCEPT_FLOOR, MAX_ATTEMPTS, GATE, DATA_DIR, REVIEW_DIR, FLOOD_CAP, MAX_ARTICLES_PER_DAY, MAX_RUN_COST_USD } from "./config.bo.mjs";
+import { FORMS, ACCEPT_FLOOR, MAX_ATTEMPTS, GATE, DATA_DIR, REVIEW_DIR, FLOOD_CAP, MAX_ARTICLES_PER_DAY, MAX_RUN_COST_USD, STREAMING_DAILY_CAP } from "./config.bo.mjs";
 import { cutArticle } from "../lib/cutter.mjs";
 import { addInternalLinks } from "../lib/internalLinks.mjs";
 import { costReport } from "../lib/openrouter.mjs";
@@ -40,6 +40,11 @@ const withTimeout = (p, ms, label) => {
 const publishedToday = (store, now) => {
   const day = new Date(now).toISOString().slice(0, 10);
   return store.published.filter((r) => !r.review && (r.at || "").slice(0, 10) === day).length;
+};
+// Today's STREAMING publishes (for the 5-a-day streaming cap → protects the 15 box-office majority).
+const streamingPublishedToday = (store, now) => {
+  const day = new Date(now).toISOString().slice(0, 10);
+  return store.published.filter((r) => !r.review && (r.at || "").slice(0, 10) === day && (FORMS[r.form] || {}).streaming).length;
 };
 
 // Engagement is KPI #1 (plan §0): an unresolved engagement/readability/humanVoice soft-floor must
@@ -78,6 +83,7 @@ export async function boRun({
   // ── 24/7 guards ──
   if (fs.existsSync(PAUSED_FILE)) { report.paused = true; return finish(report, dryRun); }
   const baseToday = publishedToday(store, now);
+  const streamBaseToday = streamingPublishedToday(store, now);
   if (baseToday >= MAX_ARTICLES_PER_DAY) { report.dailyCapHit = baseToday; return finish(report, dryRun); }
   const burst = Math.min(limit, FLOOD_CAP);
 
@@ -87,7 +93,7 @@ export async function boRun({
   catch (e) { report.blocked.push({ stage: "finder", reason: String(e?.message || e).slice(0, 140) }); return finish(report, dryRun); }
   report.films = found.length;
 
-  let written = 0;
+  let written = 0, streamWritten = 0;
   for (const { film, trigger, angle } of found) {
     if (written >= burst) break;
     if (baseToday + written >= MAX_ARTICLES_PER_DAY) { report.dailyCapHit = true; break; }
@@ -95,6 +101,11 @@ export async function boRun({
     const tag = `${trigger.eventSlug}×${angle.form}`;
     const job = { film, trigger, angle };
     try {
+      // MIX CAP (owner 15/5): once 5 streaming pieces are out today, skip further streaming so the day stays
+      // box-office-majority — we never flood streaming to reach 20.
+      if ((FORMS[angle.form] || {}).streaming && streamBaseToday + streamWritten >= STREAMING_DAILY_CAP) {
+        report.skipped.push({ tag, reason: `streaming daily cap ${STREAMING_DAILY_CAP} reached — box-office only` }); continue;
+      }
       if (angle.form !== "BO-UPDATE" && alreadyPublished(store, trigger.eventSlug, angle.form)) { report.skipped.push({ tag, reason: "already published" }); continue; }
       if (parkedTries(store, trigger.eventSlug, angle.form) === Infinity) { report.skipped.push({ tag, reason: "parked dead" }); continue; }
       if (paceMs && (report.published.length + report.rejected.length + report.held.length)) await sleep(paceMs);
@@ -204,6 +215,7 @@ export async function boRun({
       const dateISO = new Date(now - written * 60000).toISOString();
       const out = publishImpl({ article: job.article, trigger, angle, film, gathered: job.gathered, boxData: job.boxData, image: job.image, dateISO, dryRun, ...(reviewDir ? { dir: reviewDir } : {}) });
       written++;
+      if ((FORMS[angle.form] || {}).streaming) streamWritten++;
       if (!dryRun) {
         clearParked(store, trigger.eventSlug, angle.form);
         recordPublished(store, {
