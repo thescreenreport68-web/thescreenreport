@@ -1,0 +1,87 @@
+{
+ "runId": "run-2026-07-14T12-31-16",
+ "mode": "live",
+ "startedAt": "2026-07-14T12:31:16.722Z",
+ "films": 6,
+ "published": [],
+ "held": [
+  {
+   "tag": "kpop-demon-hunters-netflix-top10×NETFLIX-TOP10",
+   "reason": "seo-faq: fewer than 2 real FAQs",
+   "score": 65
+  },
+  {
+   "tag": "the-contractor-netflix-top10×NETFLIX-TOP10",
+   "reason": "words 141 < 180 (owner-set ~200-word minimum) | seo-faq: fewer than 2 real FAQs",
+   "score": 65
+  },
+  {
+   "tag": "turbo-netflix-top10×NETFLIX-TOP10",
+   "reason": "platform: names peacock not in confirmed providers",
+   "score": 0
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "little-brother-netflix-top10×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "swapped-netflix-top10×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "office-romance-netflix-top10×NETFLIX-TOP10",
+   "reason": "parked dead"
+  }
+ ],
+ "blocked": [],
+ "finishedAt": "2026-07-14T12:39:12.221Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3522,
+    "out": 664,
+    "usd": 0.00022,
+    "ms": 3050
+   },
+   "gatherer": {
+    "calls": 3,
+    "errors": 0,
+    "in": 6307,
+    "out": 319,
+    "usd": 0.00076,
+    "ms": 5878
+   },
+   "synthesizer": {
+    "calls": 3,
+    "errors": 0,
+    "in": 1981,
+    "out": 2049,
+    "usd": 0.00055,
+    "ms": 68555
+   },
+   "writer": {
+    "calls": 9,
+    "errors": 0,
+    "in": 28286,
+    "out": 8859,
+    "usd": 0.02549,
+    "ms": 196122
+   },
+   "qa": {
+    "calls": 31,
+    "errors": 0,
+    "in": 89000,
+    "out": 12681,
+    "usd": 0.0584,
+    "ms": 106928
+   }
+  },
+  "totalUsd": 0.08541
+ },
+ "openrouterTotalUsd": 0.08287
+}
