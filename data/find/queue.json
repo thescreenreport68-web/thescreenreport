@@ -1,62 +1,321 @@
 {
-  "runId": "run-2026-07-14T15-01-08",
-  "builtAt": "2026-07-14T15:02:00.087Z",
-  "count": 10,
+  "runId": "run-2026-07-14T19-01-07",
+  "builtAt": "2026-07-14T19:01:45.587Z",
+  "count": 15,
   "topics": [
     {
-      "id": "news-sam-rockwell-a-view-from-the-bridge-off-broadway",
-      "slug": "sam-rockwell-to-star-in-arthur-miller-s-a-view-from-the-bridge-off-bro",
-      "title": "Sam Rockwell to Star in Arthur Miller's 'A View From The Bridge' Off-Broadway",
+      "id": "news-the-conjuring-first-communion-casting",
+      "slug": "the-conjuring-prequel-casts-its-young-ed-and-loraine-with-garrett-ware",
+      "title": "The Conjuring Prequel Casts Its Young Ed and Loraine with Garrett Wareing, Amanda Fix",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "the-conjuring-first-communion-casting",
+      "primaryKeyword": "the conjuring first communion casting",
+      "primaryEntity": "The Conjuring: First Communion",
+      "entities": [
+        "Garrett Wareing",
+        "Amanda Fix"
+      ],
+      "angle": "Garrett Wareing and Amanda Fix have been cast as the young Ed and Lorraine Warren in the upcoming 'The Conjuring' prequel.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/the-conjuring-prequel-casts-its-young-ed-and-loraine-1236647707/",
+          "ageMin": 105,
+          "headline": "The Conjuring Prequel Casts Its Young Ed and Loraine with Garrett Wareing, Amanda Fix",
+          "summary": "'The Conjuring: First Communion' arrives from New Line on Sept. 10, 2027."
+        },
+        {
+          "outlet": "TheWrap",
+          "tier": 7,
+          "url": "https://www.thewrap.com/creative-content/movies/the-conjuring-first-communion-cast-young-warrens-garrett-wareing-amanda-fix/",
+          "ageMin": 116,
+          "headline": "‘The Conjuring: First Communion’ Casts Garrett Wareing and Amanda Fix as Young Ed and Lorraine Warren",
+          "summary": "The prequel for the characters popularized by Patrick Wilson and Vera Farmiga arrives next fall The post ‘The Conjuring: First Communion’ Casts Garrett Wareing and Amanda Fix as Young Ed and Lorraine Warren appeared first on TheWrap ."
+        }
+      ],
+      "ageMin": 105,
+      "_cand": {
+        "key": "rss:the-conjuring-prequel-casts-its-young-ed-and-loraine-with-ga",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 2,
+      "verification": {
+        "tier1Count": 2,
+        "tier1Owners": 2,
+        "outletCount": 2,
+        "outlets": [
+          "THR",
+          "TheWrap"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": null,
+        "framing": "plain",
+        "status": "CONFIRMED",
+        "publishable": true
+      },
+      "priority": 105,
+      "signals": {
+        "recency": 16,
+        "corroboration": 18,
+        "status": 25,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 8,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-anne-hathaway-christopher-nolan-the-odyssey",
+      "slug": "anne-hathaway-feared-she-offended-christopher-nolan-on-interstellar-wh",
+      "title": "Anne Hathaway Feared She Offended Christopher Nolan on ‘Interstellar’ When He Didn’t Cast Her Again for 3 Movies",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "anne-hathaway-christopher-nolan-the-odyssey",
+      "primaryKeyword": "Anne Hathaway Christopher Nolan",
+      "primaryEntity": "One Day",
+      "entities": [
+        "Anne Hathaway",
+        "Christopher Nolan",
+        "The Odyssey",
+        "Interstellar"
+      ],
+      "angle": "Anne Hathaway expresses excitement about rejoining Christopher Nolan's directorial projects after a period of perceived absence.",
+      "tmdbType": "movie",
+      "source": "rss:TheWrap",
+      "sources": [
+        {
+          "outlet": "TheWrap",
+          "tier": 7,
+          "url": "https://www.thewrap.com/creative-content/movies/anne-hathaway-thought-she-offended-christopher-nolan-after-interstellar/",
+          "ageMin": 13,
+          "headline": "Anne Hathaway Feared She Offended Christopher Nolan on ‘Interstellar’ When He Didn’t Cast Her Again for 3 Movies",
+          "summary": "The Oscar winner shares her excitement for \"The Odyssey\" and getting the call to come back to Nolan's repertory of actors The post Anne Hathaway Feared She Offended Christopher Nolan on ‘Interstellar’ When He Didn’t Cast Her Again for 3 Movies appeared first on TheWrap ."
+        }
+      ],
+      "ageMin": 13,
+      "_cand": {
+        "key": "rss:anne-hathaway-feared-she-offended-christopher-nolan-on-inter",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "TheWrap"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "TheWrap",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 98,
+      "signals": {
+        "recency": 30,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-stranger-things-assouline-photo-book",
+      "slug": "stranger-things-gets-195-assouline-photo-book-featuring-behind-the-sce",
+      "title": "‘Stranger Things’ Gets $195 Assouline Photo Book Featuring Behind-the-Scenes Images",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "stranger-things-assouline-photo-book",
+      "primaryKeyword": "stranger things photo book",
+      "primaryEntity": "Stranger Things",
+      "entities": [
+        "Assouline"
+      ],
+      "angle": "Fans can now revisit 'Stranger Things' with a new luxury photo book featuring behind-the-scenes images.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/shopping/news/stranger-things-photo-book-assouline-buy-online-1236809919/",
+          "ageMin": 46,
+          "headline": "‘Stranger Things’ Gets $195 Assouline Photo Book Featuring Behind-the-Scenes Images From All Five Seasons",
+          "summary": "Stranger Things fans will soon be able to revisit a decade in Hawkins through a new luxury photo book from Assouline. Set for release in September, Stranger Things is a 392-page hardcover featuring film stills, behind-the-scenes photography, concept art and personal images captured on the set of the Netflix sci-fi series. Written by creators Matt [ ]"
+        }
+      ],
+      "ageMin": 46,
+      "_cand": {
+        "key": "rss:-stranger-things-gets-195-assouline-photo-book-featuring-beh",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 81,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-keith-carradine-skeletons-brie-larson",
+      "slug": "keith-carradine-joins-brie-larson-in-sony-pictures-horror-thriller-ske",
+      "title": "Keith Carradine Joins Brie Larson In Sony Pictures Horror Thriller Skeletons",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "keith-carradine-skeletons-brie-larson",
+      "primaryKeyword": "Keith Carradine Skeletons",
+      "primaryEntity": "Skeletons",
+      "entities": [
+        "Keith Carradine",
+        "Brie Larson",
+        "Sony Pictures",
+        "JT Mollner"
+      ],
+      "angle": "Keith Carradine joins Brie Larson in the upcoming Sony Pictures horror thriller 'Skeletons'.",
+      "tmdbType": "movie",
+      "source": "rss:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/keith-carradine-brie-larson-skeletons-1236981998/",
+          "ageMin": 24,
+          "headline": "Keith Carradine Joins Brie Larson In Sony Pictures Horror Thriller Skeletons",
+          "summary": "EXCLUSIVE: Keith Carradine is set to join Brie Larson in the Sony Pictures thriller Skeletons. JT Mollner is directing the pic. Kyle Gallner, Willa Fitzgerald, Ione Skye, John Goodman and Daithí Ó Haragáin also are on board. The film is a modern take on creature horror movies told from the perspective of a young boy who slowly [ ]"
+        }
+      ],
+      "ageMin": 24,
+      "_cand": {
+        "key": "rss:keith-carradine-joins-brie-larson-in-sony-pictures-horror-th",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 92,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-rosario-dawson-lamorne-morris-joshua-jackson-join-the-girlfriend",
+      "slug": "rosario-dawson-lamorne-morris-joshua-jackson-among-new-additions-to-th",
+      "title": "Rosario Dawson, Lamorne Morris, Joshua Jackson Among New Additions to 'The Girlfriend'",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "sam-rockwell-a-view-from-the-bridge-off-broadway",
-      "primaryKeyword": "sam rockwell a view from the bridge",
-      "primaryEntity": "A View from the Bridge (play)",
+      "eventSlug": "rosario-dawson-lamorne-morris-joshua-jackson-join-the-girlfriend",
+      "primaryKeyword": "The Girlfriend cast",
+      "primaryEntity": "The Girlfriend",
       "entities": [
-        "Sam Rockwell",
-        "Arthur Miller",
-        "Marin Ireland",
-        "Alfred Molina"
+        "Rosario Dawson",
+        "Lamorne Morris",
+        "Joshua Jackson",
+        "Stephen Root"
       ],
-      "angle": "Sam Rockwell is set to star in a new Off-Broadway production of Arthur Miller's classic play 'A View from the Bridge.'",
+      "angle": "Rosario Dawson, Lamorne Morris, Joshua Jackson, Stephen Root, and Edi Patterson join ensemble cast of 'The Girlfriend'",
       "tmdbType": "movie",
       "source": "rss:Deadline",
       "sources": [
         {
           "outlet": "Deadline",
           "tier": 7,
-          "url": "https://deadline.com/2026/07/sam-rockwell-a-view-from-the-bridge-1236981792/",
-          "ageMin": 28,
-          "headline": "Sam Rockwell To Star In New Off-Broadway Production Of Arthur Miller s A View From The Bridge",
-          "summary": "Oscar winner and Tony nominee Sam Rockwell will headline a new production of Arthur Miller s A View From the Bridge at the Ellen Stewart Theatre at La MaMa for a 13-week engagement, with previews beginning Nov. 27 and opening night on Sunday, Dec. 13. The Neil Pepe-directed production is produced by Mark Berger and Rockwell. [ ]"
-        },
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/lifestyle/arts/sam-rockwell-view-from-the-bridge-revival-in-new-york-1236646996/",
-          "ageMin": 31,
-          "headline": "Sam Rockwell to Lead A View from the Bridge Revival In New York",
-          "summary": "Rockwell will star alongside Marin Ireland and Alfred Molina in the production at LaMaMa's Ellen Stewart Theatre Off-Off-Broadway."
+          "url": "https://deadline.com/2026/07/rosario-dawson-lamorne-morris-joshua-jackson-the-girlfriend-1236981794/",
+          "ageMin": 72,
+          "headline": "Rosario Dawson, Lamorne Morris, Joshua Jackson, Stephen Root Edi Patterson Join The Girlfriend",
+          "summary": "EXCLUSIVE: Rosario Dawson (Ahsoka), Lamorne Morris (Fargo), Joshua Jackson (The Affair), Stephen Root (Barry) and Edi Patterson (The Righteous Gemstones) are joining Meghann Fahy and Glenn Howerton in movie The Girlfriend. As we told you last week, Natalie Morales is directing for XYZ Films from a Glenn Howerton and Rich Appel (Family Guy) script. Production is currently underway with Dawson [ ]"
         }
       ],
-      "ageMin": 28,
+      "ageMin": 72,
       "_cand": {
-        "key": "rss:sam-rockwell-to-star-in-new-off-broadway-production-of-arthu",
+        "key": "rss:rosario-dawson-lamorne-morris-joshua-jackson-stephen-root-ed",
         "popularity": 0,
         "kind": "rss-news"
       },
-      "corroborationCount": 2,
+      "corroborationCount": 1,
       "verification": {
-        "tier1Count": 2,
+        "tier1Count": 1,
         "tier1Owners": 1,
-        "outletCount": 2,
+        "outletCount": 1,
         "outlets": [
-          "Deadline",
-          "THR"
+          "Deadline"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
@@ -65,73 +324,193 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 100,
+      "priority": 78,
       "signals": {
-        "recency": 24,
-        "corroboration": 18,
+        "recency": 16,
+        "corroboration": 12,
         "status": 18,
         "type": 14,
         "pop": 0,
         "breakout": 0,
         "big": 18,
-        "trending": 8,
+        "trending": 0,
         "softTv": 0
       }
     },
     {
-      "id": "news-a-man-of-his-time-north-america-distribution",
-      "slug": "1-2-special-acquires-emmanuel-marre-s-cannes-title-a-man-of-his-time-f",
-      "title": "1-2 Special Acquires Emmanuel Marre’s Cannes Title ‘A Man Of His Time’ for North America",
+      "id": "news-maelstrom-alan-ritchson-netflix-movie",
+      "slug": "reacher-star-alan-ritchson-in-talks-to-lead-splashy-netflix-action-mov",
+      "title": "‘Reacher’ Star Alan Ritchson in Talks to Lead Splashy Netflix Action Movie ‘Maelstrom’",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
-      "eventType": "announcement",
+      "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "a-man-of-his-time-north-america-distribution",
-      "primaryKeyword": "A Man of His Time",
-      "primaryEntity": "A Man of His Time",
+      "eventSlug": "maelstrom-alan-ritchson-netflix-movie",
+      "primaryKeyword": "alan ritchson maelstrom",
+      "primaryEntity": "Maelström",
       "entities": [
-        "Ranma ½",
-        "1-2 Special",
-        "Emmanuel Marre",
-        "Cannes Film Festival"
+        "Maelstrom",
+        "Alan Ritchson",
+        "Netflix"
       ],
-      "angle": "1-2 Special has acquired North American distribution rights for Emmanuel Marre's Cannes competition film 'A Man of His Time'.",
+      "angle": "'Reacher' star Alan Ritchson is in talks to lead a new Netflix action movie titled 'Maelstrom'.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/film/news/alan-ritchson-maelstrom-action-movie-netflix-1236810075/",
+          "ageMin": 110,
+          "headline": "‘Reacher’ Star Alan Ritchson in Talks to Lead Splashy Netflix Action Movie ‘Maelstrom’ (EXCLUSIVE)",
+          "summary": "A hot action movie package is coming together at Netflix, multiple sources told Variety, one roughly 33 years in the making. Reacher and War Machine star Alan Ritchson is in negotiations to topline Maelstrom, a spec originally sold to Warner Bros. in 1993 by prolific producer Jeff Robinov when he was an agent. Jaume Collet-Serra, helmer [ ]"
+        }
+      ],
+      "ageMin": 110,
+      "_cand": {
+        "key": "rss:-reacher-star-alan-ritchson-in-talks-to-lead-splashy-netflix",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 84,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-curry-barker-directs-horror-short-starring-dane-cook",
+      "slug": "dane-cook-to-star-in-horror-short-directed-by-his-father",
+      "title": "Dane Cook to Star in Horror Short Directed by His Father",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "curry-barker-directs-horror-short-starring-dane-cook",
+      "primaryKeyword": "Dane Cook horror short",
+      "primaryEntity": "Dane Cook",
+      "entities": [
+        "Curry Barker",
+        "Lesley Ann Warren"
+      ],
+      "angle": "Dane Cook to star in horror short written and directed by his Obsession director father",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/obsession-curry-barker-jeff-barker-horror-short-dane-cook-1236646534/",
+          "ageMin": 61,
+          "headline": "Obsession Director Curry Barker s Dad Jeff Barker to Write, Direct Horror Short Starring Dane Cook (Exclusive)",
+          "summary": "'Medium Rare' will also star Oscar-nominated actress Lesley Ann Warren and is expected to begin filming in Los Angeles later this summer."
+        }
+      ],
+      "ageMin": 61,
+      "_cand": {
+        "key": "rss:obsession-director-curry-barker-s-dad-jeff-barker-to-write-d",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 84,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-shifter-series-hulu",
+      "slug": "shifter-series-based-on-graphic-novel-in-the-works-at-hulu-from-severa",
+      "title": "‘Shifter’ Series, Based On Graphic Novel, In The Works At Hulu From ‘Severance’ Trio Adam Scott, Ezra Claytan Daniels Eli Jorné",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "development",
+      "sensitivity": "normal",
+      "eventSlug": "shifter-series-hulu",
+      "primaryKeyword": "shifter series",
+      "primaryEntity": "Shifter",
+      "entities": [
+        "Man of the West",
+        "Adam Scott",
+        "Ezra Claytan Daniels",
+        "Eli Jorné"
+      ],
+      "angle": "Hulu developing new sci-fi series 'Shifter' from the 'Severance' creative team.",
       "tmdbType": "movie",
       "source": "rss:Deadline",
       "sources": [
         {
           "outlet": "Deadline",
           "tier": 7,
-          "url": "https://deadline.com/2026/07/1-2-special-emmanuel-marre-a-man-of-his-time-1236981687/",
-          "ageMin": 61,
-          "headline": "1-2 Special Acquires Emmanuel Marre’s ‘A Man Of His Time’",
-          "summary": "1-2 Special has acquired all North American distribution rights to Emmanuel Marre’s Cannes competition title A Man of His Time. The film had its world premiere at the 2026 Cannes Film Festival in Competition, where it was awarded the Best Screenplay Prize. 1-2 Special will release the film in theaters next year. Inspired by the [ ]"
-        },
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/1-2-special-buys-french-period-drama-a-man-of-his-time-1236647377/",
-          "ageMin": 61,
-          "headline": "1-2 Special Takes Cannes Winner A Man of His Time for North America",
-          "summary": "The Nazi collaboration film, from French director Emmanuel Marre, won the best screenplay honor at Cannes."
+          "url": "https://deadline.com/2026/07/shifter-tv-hulu-ezra-claytan-daniels-eli-jorne-adam-scott-1236981473/",
+          "ageMin": 1,
+          "headline": "‘Shifter’ Series, Based On Graphic Novel, In The Works At Hulu From ‘Severance’ Trio Adam Scott, Ezra Claytan Daniels Eli Jorné",
+          "summary": "EXCLUSIVE: Three of the gang behind Severance have teamed up on a new sci-fi series for Hulu. Adam Scott, who stars as Mark Scout in the Apple series, and writers Ezra Claytan Daniels and Eli Jorné are developing a series based on graphic novel Shifter for the Disney-owned streamer. Shifter is based on the Hachette [ ]"
         }
       ],
-      "ageMin": 61,
+      "ageMin": 1,
       "_cand": {
-        "key": "rss:1-2-special-acquires-emmanuel-marre-s-a-man-of-his-time-",
+        "key": "rss:-shifter-series-based-on-graphic-novel-in-the-works-at-hulu-",
         "popularity": 0,
         "kind": "rss-news"
       },
-      "corroborationCount": 2,
+      "corroborationCount": 1,
       "verification": {
-        "tier1Count": 2,
+        "tier1Count": 1,
         "tier1Owners": 1,
-        "outletCount": 2,
+        "outletCount": 1,
         "outlets": [
-          "Deadline",
-          "THR"
+          "Deadline"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
@@ -140,311 +519,50 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 93,
-      "signals": {
-        "recency": 16,
-        "corroboration": 18,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 8,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "news-cold-feet-co-pro-partners-cast-added",
-      "slug": "fronti-res-buzzy-zombie-romcom-cold-feet-adds-co-pro-partners-cast-exc",
-      "title": "Frontières Buzzy Zombie Romcom ‘Cold Feet’ Adds Co-Pro Partners, Cast (EXCLUSIVE)",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "cold-feet-co-pro-partners-cast-added",
-      "primaryKeyword": "cold feet zombie romcom",
-      "primaryEntity": "Cold Feet",
-      "entities": [
-        "Cold Feet (film)",
-        "Apoorva Satish"
-      ],
-      "angle": "The zombie romcom 'Cold Feet' adds co-production partners and cast ahead of its festival buzz.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/film/markets-festivals/cold-feet-zombie-romcom-frontieres-apoorva-satish-1236809266/",
-          "ageMin": 141,
-          "headline": "Frontières Buzzy Zombie Romcom ‘Cold Feet’ Adds Co-Pro Partners, Cast (EXCLUSIVE)",
-          "summary": "Intercultural zombie romcom “Cold Feet,” from Prague-based writer-director Apoorva Satish, has secured co-producers Telemark (Poland, Ici et Là Productions (France) and line producer LaSutra Pictures (India). The news comes ahead of the project’s debut at the Fantasia International Film Festival’s Frontières Co-Production Market, held July 22–25 in Montreal. “Cold Feet” has been developed through "
-        }
-      ],
-      "ageMin": 141,
-      "_cand": {
-        "key": "rss:fronti-res-buzzy-zombie-romcom-cold-feet-adds-co-pro-partner",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 79,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "news-crystal-lake-teaser-photos-release",
-      "slug": "peacock-unveils-crystal-lake-teaser-and-photos-for-friday-the-13th-pre",
-      "title": "Peacock Unveils 'Crystal Lake' Teaser and Photos for 'Friday the 13th' Prequel Series",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "crystal-lake-teaser-photos-release",
-      "primaryKeyword": "crystal lake series",
-      "primaryEntity": "Crystal Lake",
-      "entities": [
-        "Peacock",
-        "Linda Cardellini",
-        "Friday the 13th"
-      ],
-      "angle": "Peacock releases a teaser and photos for its 'Friday the 13th' prequel series, 'Crystal Lake,' starring Linda Cardellini.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/tv/tv-news/crystal-lake-teaser-pics-peacock-1236646998/",
-          "ageMin": 1019,
-          "headline": "Peacock Promises a Terrible Time at Camp With Crystal Lake Teaser and Photos",
-          "summary": "Linda Cardellini plays Pamela Voorhees in the 'Friday the 13th' prequel series"
-        }
-      ],
-      "ageMin": 1019,
-      "_cand": {
-        "key": "rss:peacock-promises-a-terrible-time-at-camp-with-crystal-lake-t",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 58,
-      "signals": {
-        "recency": 1,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "news-ai-generated-odyssey-movie-unveiled",
-      "slug": "ai-generated-odyssey-movie-costing-a-few-thousand-dollars-unveiled-ahe",
-      "title": "AI-Generated Odyssey Movie Costing a Few Thousand Dollars Unveiled Ahead of Nolan's $250 Million Feature",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "ai-generated-odyssey-movie-unveiled",
-      "primaryKeyword": "ai generated odyssey movie",
-      "primaryEntity": "Dreams of Violets (film)",
-      "entities": [
-        "Ash Koosha",
-        "Christopher Nolan"
-      ],
-      "angle": "An AI-generated film titled 'Dreams of Violets' is unveiled, contrasting with Christopher Nolan's upcoming 'The Odyssey'.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/business/digital/ai-generated-feature-odysseus-the-fall-1236646751/",
-          "ageMin": 121,
-          "headline": "AI-Generated Odyssey Movie Costing a Few Thousand Dollars Unveiled Ahead of Nolan s $250 Million Feature",
-          "summary": "Ash Koosha, ‘Dreams of Violets’ director, is cutting in on the star-studded Universal tentpole with a 135-minute feature that he describes as \"one man's collaboration with AI.\""
-        }
-      ],
-      "ageMin": 121,
-      "_cand": {
-        "key": "rss:ai-generated-odyssey-movie-costing-a-few-thousand-dollars-un",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 63,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 12,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "news-variety-power-of-young-hollywood-honorees-2026",
-      "slug": "tate-mcrae-sombr-tyriq-withers-malachi-barton-to-be-honored-at-variety",
-      "title": "Tate McRae, Sombr, Tyriq Withers, Malachi Barton to Be Honored at Variety's Power of Young Hollywood",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "variety-power-of-young-hollywood-honorees-2026",
-      "primaryKeyword": "power of young hollywood",
-      "primaryEntity": "Variety's Power of Young Hollywood",
-      "entities": [
-        "The Shadow's Edge",
-        "Tate McRae",
-        "Sombr",
-        "Tyriq Withers"
-      ],
-      "angle": "Variety announces honorees for its 2026 Power of Young Hollywood event, including musicians Tate McRae and Sombr, and actors Tyriq Withers and Malachi Barton.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/film/news/tate-mcrae-sombr-tyriq-withers-power-of-young-hollywood-1236810170/",
-          "ageMin": 1,
-          "headline": "Tate McRae, Sombr, Tyriq Withers, Malachi Barton to Be Honored at Variety’s Power of Young Hollywood",
-          "summary": "Grammy-nominated artists Tate McRae and Sombr, along with actors Tyriq Withers and Malachi Barton, will be honored at Variety’s 2026 Power of Young Hollywood presented by Disney+, on Aug. 5 in Los Angeles. The annual event will recognize the best new and upcoming actors, musicians and artists who are taking the industry by storm. McRae [ ]"
-        }
-      ],
-      "ageMin": 1,
-      "_cand": {
-        "key": "rss:tate-mcrae-sombr-tyriq-withers-malachi-barton-to-be-honored-",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 69,
+      "priority": 72,
       "signals": {
         "recency": 30,
         "corroboration": 12,
         "status": 18,
-        "type": 9,
+        "type": 6,
         "pop": 0,
         "breakout": 0,
-        "big": 0,
+        "big": 6,
         "trending": 0,
         "softTv": 0
       }
     },
     {
-      "id": "news-ariana-grande-eternal-sunshine-tour",
-      "slug": "road-work-ariana-grande-s-first-tour-in-seven-years-squeezes-multiple-",
-      "title": "Road Work: Ariana Grande s First Tour in Seven Years Squeezes Multiple Eras Into One Show",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
+      "id": "music-news-bts-normal-single-release-promo",
+      "slug": "bts-hype-normal-single-release-with-mysterious-tabloid-style-newspaper",
+      "title": "BTS Hype 'NORMAL' Single Release With Mysterious Tabloid-Style Newspaper Ads",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "ariana-grande-eternal-sunshine-tour",
-      "primaryKeyword": "ariana grande tour",
-      "primaryEntity": "Ariana Grande",
-      "entities": [
-        "Eternal Sunshine"
-      ],
-      "angle": "Ariana Grande's 'Eternal Sunshine Tour' is generating significant revenue and covering multiple eras of her music.",
+      "eventSlug": "bts-normal-single-release-promo",
+      "primaryKeyword": "bts normal single",
+      "primaryEntity": "BTS",
+      "entities": [],
+      "angle": "K-pop superstars BTS are employing a unique, tabloid-style promotional campaign using mysterious late-night newspaper ads for their upcoming single 'NORMAL'.",
       "tmdbType": "movie",
       "source": "rss:Billboard",
       "sources": [
         {
           "outlet": "Billboard",
           "tier": 7,
-          "url": "https://www.billboard.com/lists/ariana-grande-eternal-sunshine-tour-road-work/",
-          "ageMin": 2,
-          "headline": "Road Work: Ariana Grande s First Tour in Seven Years Squeezes Multiple Eras Into One Show",
-          "summary": "The Eternal Sunshine Tour is on track to circle $100 million in just three months."
+          "url": "https://www.billboard.com/music/pop/bts-normal-single-tabloid-late-night-gathering-newspaper-ads-1236293905/",
+          "ageMin": 98,
+          "headline": "BTS Hype NORMAL Single Release With Tabloid-Style Mysterious Late-Night Gathering Newspaper Ads",
+          "summary": "The K-pop superstars appear to be taking a group bathroom break in the promo images."
         }
       ],
-      "ageMin": 2,
+      "ageMin": 98,
       "_cand": {
-        "key": "rss:road-work-ariana-grande-s-first-tour-in-seven-years-squeezes",
+        "key": "rss:bts-hype-normal-single-release-with-tabloid-style-mysterious",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -463,9 +581,9 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 69,
+      "priority": 55,
       "signals": {
-        "recency": 30,
+        "recency": 16,
         "corroboration": 12,
         "status": 18,
         "type": 9,
@@ -477,9 +595,267 @@
       }
     },
     {
-      "id": "news-gracie-abrams-daughter-from-hell-album",
-      "slug": "gracie-abrams-cuts-deep-on-daughter-from-hell",
-      "title": "Gracie Abrams Cuts Deep on ‘Daughter From Hell’",
+      "id": "news-chris-ferguson-first-look-deal-warner-bros",
+      "slug": "backrooms-producer-chris-ferguson-signs-first-look-deal-with-warner-br",
+      "title": "‘Backrooms’ Producer Chris Ferguson Signs First Look Deal With Warner Bros. Clockwork",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "chris-ferguson-first-look-deal-warner-bros",
+      "primaryKeyword": "Chris Ferguson deal",
+      "primaryEntity": "Chris Ferguson",
+      "entities": [
+        "Warner Bros. Clockwork",
+        "Backrooms",
+        "Longlegs",
+        "The Monkey"
+      ],
+      "angle": "Producer Chris Ferguson, known for 'Backrooms,' signs a first-look deal with Warner Bros. Clockwork.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/backrooms-producer-chris-ferguson-wb-clockwork-1st-look-deal-1236647939/",
+          "ageMin": 10,
+          "headline": "‘Backrooms’ Producer Chris Ferguson Signs First Look Deal With Warner Bros. Clockwork",
+          "summary": "The deal with the Vancouver-based producer and his Oddfellows banner also follows his work with Osgood Perkins on ‘Longlegs’ and ‘The Monkey.'"
+        }
+      ],
+      "ageMin": 10,
+      "_cand": {
+        "key": "rss:-backrooms-producer-chris-ferguson-signs-first-look-deal-wit",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 77,
+      "signals": {
+        "recency": 30,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 12,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-big-brother-season-28-premiere-ratings",
+      "slug": "big-brother-season-28-debuts-to-series-best-premiere-audience-in-5-yea",
+      "title": "‘Big Brother’ Season 28 Debuts To Series Best Premiere Audience In 5 Years",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "big-brother-season-28-premiere-ratings",
+      "primaryKeyword": "big brother ratings",
+      "primaryEntity": "Big Brother",
+      "entities": [],
+      "angle": "'Big Brother' Season 28 premiere draws the series' best audience in five years.",
+      "tmdbType": "movie",
+      "source": "rss:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/big-brother-season-28-premiere-ratings-cbs-1236982018/",
+          "ageMin": 61,
+          "headline": "Big Brother Season 28 Debuts To Series Best Premiere Audience In 5 Years",
+          "summary": "EXCLUSIVE: Big Brother is back with a bang. Season 28 debuted 3.88 million live + same-day viewers, according to Nielsen Big Data + Panel, making it the series most-watched premiere episode in five years (since the July 7, 2021 premiere s 4.27M total viewers). The episode was also up 22% from last year s premiere audience of [ ]"
+        }
+      ],
+      "ageMin": 61,
+      "_cand": {
+        "key": "rss:big-brother-season-28-debuts-to-series-best-premiere-audienc",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 57,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 6,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-tom-holland-erling-haaland-instagram-dm",
+      "slug": "tom-holland-s-instagram-dm-to-erling-haaland-went-unanswered",
+      "title": "Tom Holland's Instagram DM to Erling Haaland Went Unanswered",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "tom-holland-erling-haaland-instagram-dm",
+      "primaryKeyword": "Tom Holland Erling Haaland",
+      "primaryEntity": "Tom Holland",
+      "entities": [
+        "Erling Haaland",
+        "Jimmy Fallon"
+      ],
+      "angle": "Tom Holland humorously shares his 'humbling' experience of being ignored by soccer star Erling Haaland on Instagram.",
+      "tmdbType": "movie",
+      "source": "rss:TheWrap",
+      "sources": [
+        {
+          "outlet": "TheWrap",
+          "tier": 7,
+          "url": "https://www.thewrap.com/culture-lifestyle/culture/tom-holland-erling-haaland-instagram-dm-tonight-show-jimmy-fallon-video/",
+          "ageMin": 14,
+          "headline": "Tom Holland Confesses World Cup Star Erling Haaland Ignored His Instagram DM: Humbling Experience",
+          "summary": "\"I never imagined I would talk about it on live television, but here we are,\" the \"Spider-Man\" and \"The Odyssey\" star tells \"Tonight Show\" host Jimmy Fallon The post Tom Holland Confesses World Cup Star Erling Haaland Ignored His Instagram DM: Humbling Experience appeared first on TheWrap ."
+        }
+      ],
+      "ageMin": 14,
+      "_cand": {
+        "key": "rss:tom-holland-confesses-world-cup-star-erling-haaland-ignored-",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "TheWrap"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "TheWrap",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 65,
+      "signals": {
+        "recency": 30,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-bts-hybe-lawsuit-bad-bunny-stubhub-class-action",
+      "slug": "hybe-faces-copyright-cases-bad-bunny-ruling-stubhub-sued-in-music-law-",
+      "title": "HYBE Faces Copyright Cases, Bad Bunny Ruling, StubHub Sued in Music Law Roundup",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "legal",
+      "sensitivity": "high",
+      "tier": "popular",
+      "eventSlug": "bts-hybe-lawsuit-bad-bunny-stubhub-class-action",
+      "primaryKeyword": "music law news",
+      "primaryEntity": "HYBE",
+      "entities": [
+        "BTS: THE RETURN",
+        "BTS",
+        "Bad Bunny",
+        "StubHub"
+      ],
+      "angle": "This week's music law news includes HYBE facing copyright cases, a ruling for Bad Bunny, and a StubHub class action lawsuit",
+      "tmdbType": "movie",
+      "source": "rss:Billboard",
+      "sources": [
+        {
+          "outlet": "Billboard",
+          "tier": 7,
+          "url": "https://www.billboard.com/pro/legal-beat-bts-swim-lawsuit-bad-bunny-ruling/",
+          "ageMin": 76,
+          "headline": "BTS Swim Lawsuit, Bad Bunny Ruling, StubHub Class Action More Top Music Law News",
+          "summary": "In this week's Legal Beat newsletter, HYBE faces a pair of copyright cases, Bad Bunny gets bad news, StubHub sued over scalping, and much more."
+        }
+      ],
+      "ageMin": 76,
+      "_cand": {
+        "key": "rss:bts-swim-lawsuit-bad-bunny-ruling-stubhub-class-action-more-",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Billboard"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": "Billboard",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 58,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 12,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-fifa-world-cup-final-halftime-show-madonna-bts-justin-bieber-shakira",
+      "slug": "madonna-bts-justin-bieber-shakira-to-perform-at-fifa-world-cup-final",
+      "title": "Madonna, BTS, Justin Bieber, Shakira to Perform at FIFA World Cup Final",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
@@ -487,28 +863,96 @@
       "eventType": "announcement",
       "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "gracie-abrams-daughter-from-hell-album",
-      "primaryKeyword": "gracie abrams album",
-      "primaryEntity": "Gracie Abrams",
+      "eventSlug": "fifa-world-cup-final-halftime-show-madonna-bts-justin-bieber-shakira",
+      "primaryKeyword": "FIFA World Cup halftime show",
+      "primaryEntity": "FIFA World Cup Final",
       "entities": [
-        "Daughter From Hell"
+        "Madonna",
+        "BTS",
+        "Justin Bieber",
+        "Shakira"
       ],
-      "angle": "Gracie Abrams releases her third album, 'Daughter From Hell,' delving deeper into her personal experiences with an expanded sound.",
+      "angle": "Madonna, BTS, Justin Bieber, and Shakira set for FIFA World Cup Final halftime show",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/business/business-news/tom-cruise-jennifer-hudson-2026-fifa-world-cup-final-1236647775/",
+          "ageMin": 68,
+          "headline": "FIFA World Cup Final Adds a Tom Cruise Special Appearance and Jennifer Hudson National Anthem",
+          "summary": "The July 19 event has already lined up a halftime show that will include Madonna, BTS, Justin Bieber and Shakira."
+        }
+      ],
+      "ageMin": 68,
+      "_cand": {
+        "key": "rss:fifa-world-cup-final-adds-a-tom-cruise-special-appearance-an",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 55,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-ella-langley-choosin-texas-billboard-hot-100-milestone",
+      "slug": "ella-langley-nears-whitney-houston-mariah-carey-chart-record",
+      "title": "Ella Langley Nears Whitney Houston, Mariah Carey Chart Record",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "ella-langley-choosin-texas-billboard-hot-100-milestone",
+      "primaryKeyword": "Ella Langley Billboard Hot 100",
+      "primaryEntity": "Ella Langley",
+      "entities": [
+        "Whitney Houston",
+        "Mariah Carey"
+      ],
+      "angle": "Ella Langley's 'Choosin' Texas' is on track to tie Whitney Houston and Mariah Carey for weeks atop the Billboard Hot 100",
       "tmdbType": "movie",
       "source": "rss:Rolling Stone",
       "sources": [
         {
           "outlet": "Rolling Stone",
           "tier": 7,
-          "url": "https://www.rollingstone.com/music/music-album-reviews/gracie-abrams-album-review-daughter-from-hell-1235587533/",
-          "ageMin": 9,
-          "headline": "Gracie Abrams Cuts Deep on ‘Daughter From Hell’",
-          "summary": "The star’s third album dives more fully into her inner world, with a bigger, more satisfying sound to match"
+          "url": "https://www.rollingstone.com/music/music-country/ella-langley-choosin-texas-may-tie-whitney-houston-1235593283/",
+          "ageMin": 75,
+          "headline": "How Big Is Ella Langley Right Now? She’s About to Tie Whitney and Mariah",
+          "summary": "If “Choosin’ Texas” holds its momentum on the Billboard Hot 100, Langley will join Houston and Carey as the only women to have a song spend 14 weeks on top of the chart"
         }
       ],
-      "ageMin": 9,
+      "ageMin": 75,
       "_cand": {
-        "key": "rss:gracie-abrams-cuts-deep-on-daughter-from-hell-",
+        "key": "rss:how-big-is-ella-langley-right-now-she-s-about-to-tie-whitney",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -527,140 +971,9 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 69,
+      "priority": 51,
       "signals": {
-        "recency": 30,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "news-olivia-rodrigo-tour-merch",
-      "slug": "shop-official-olivia-rodrigo-merch-online-before-the-unraveled-tour",
-      "title": "Shop Official Olivia Rodrigo Merch Online Before the Unraveled Tour",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "olivia-rodrigo-tour-merch",
-      "primaryKeyword": "Olivia Rodrigo",
-      "primaryEntity": "Olivia Rodrigo",
-      "entities": [
-        "Unraveled Tour"
-      ],
-      "angle": "Official Olivia Rodrigo merchandise is available online ahead of her Unraveled Tour.",
-      "tmdbType": "movie",
-      "source": "rss:Billboard",
-      "sources": [
-        {
-          "outlet": "Billboard",
-          "tier": 7,
-          "url": "https://www.billboard.com/culture/product-recommendations/olivia-rodrigo-merch-apparel-shop-online-1236271313/",
-          "ageMin": 38,
-          "headline": "From Hot Topic to Aeropostale, Here s Where to Find Official Olivia Rodrigo T-Shirts Online",
-          "summary": "Olivia Rodrigo fans can shop these official T-shirts and accessories online before the Unraveled Tour kicks off."
-        }
-      ],
-      "ageMin": 38,
-      "_cand": {
-        "key": "rss:from-hot-topic-to-aeropostale-here-s-where-to-find-official-",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Billboard"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Billboard",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 59,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "news-jay-z-yankee-stadium-concerts",
-      "slug": "jay-z-s-epic-yankee-stadium-run-featured-surprise-guests-like-beyonc-a",
-      "title": "Jay-Z's Epic Yankee Stadium Run Featured Surprise Guests Like Beyoncé and Rihanna",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "jay-z-yankee-stadium-concerts",
-      "primaryKeyword": "Jay-Z",
-      "primaryEntity": "JAŸ-Z",
-      "entities": [
-        "Jay-Z",
-        "Beyoncé",
-        "Nas",
-        "Rihanna"
-      ],
-      "angle": "Jay-Z's three-night concert series at Yankee Stadium celebrated his career with surprise guests.",
-      "tmdbType": "movie",
-      "source": "rss:Billboard",
-      "sources": [
-        {
-          "outlet": "Billboard",
-          "tier": 7,
-          "url": "https://www.billboard.com/video/jay-z-yankee-stadium-shows-recap-beyonce-rihanna-nas/",
-          "ageMin": 39,
-          "headline": "Jay-Z s Epic Yankee Stadium Run: Beyoncé, Nas, Rihanna More All Access",
-          "summary": "Go inside Jay-Z’s unforgettable three-night run at Yankee Stadium. From Reasonable Doubt and The Blueprint to a final night packed with surprise guests, the weekend felt like a celebration of hip-hop history. Watch Billboard staffers break down the biggest moments, the crowd energy and why this was one of Jay-Z’s most legendary live runs yet. [ ]"
-        }
-      ],
-      "ageMin": 39,
-      "_cand": {
-        "key": "rss:jay-z-s-epic-yankee-stadium-run-beyonc-nas-rihanna-more-all-",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Billboard"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Billboard",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 59,
-      "signals": {
-        "recency": 24,
+        "recency": 16,
         "corroboration": 12,
         "status": 18,
         "type": 5,
