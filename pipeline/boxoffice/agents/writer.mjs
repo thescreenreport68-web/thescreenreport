@@ -94,19 +94,33 @@ export async function run(job, { corrections = null, previousArticle = null, cha
   // Grounding-matched WORD BUDGET (news lane's technique): a target sized to how much real material exists,
   // never a hard floor that forces padding (padding = the fabrication this lane exists to prevent).
   const solidMaterial = sourceProse.length > 400 || (job.film?.overview || "").length > 100 || (job.boxData?.castRoles?.length || 0) >= 3;
-  const [budgetLo, budgetHi] = solidMaterial ? [240, 330] : [180, 240];
+  const isStreaming = !!form.streaming;
+  const isTV = form.category === "tv";
+  // Streaming pieces are FULL 200+ word stories too (owner rule): the show + cast + a short description of the
+  // story, THEN the platform + views/hours/rank + why people love it. The material is always there (Netflix
+  // numbers + TMDB cast/premise), so aim high; box-office keeps its grounding-matched budget.
+  const [budgetLo, budgetHi] = isStreaming ? [220, 320] : (solidMaterial ? [240, 330] : [180, 240]);
+  const structure = isStreaming
+    ? `STRUCTURE — build the FULL story, developing EACH part into a full paragraph so the article clears 200 words (a real article, never a stub):
+1) LEAD: a hook — the title and why it's a phenomenon right now (its Netflix rank or hours viewed).
+2) WHAT IT IS: a brief introduction to the ${isTV ? "series" : "movie"} — a short description of the premise/story and its genre.
+3) THE CAST: who stars in it and the characters they play, plus the creator/director.
+4) THE NUMBERS: it's on Netflix — the hours viewed / views in the millions, this week's rank, and how many weeks it has held in the Top 10; explain how big that is.
+5) WHY PEOPLE LOVE IT: the reception — why audiences are watching and what's driving the buzz (from the source reporting).
+6) A closing line on its momentum.`
+    : `STRUCTURE — develop EACH of these into full paragraph(s) (this is what makes it a real article, not a stub):
+1) LEAD: the hook — the star(s) + the headline number, in one or two punchy sentences.
+2) THE MOVIE: what it is (premise + genre + runtime), the director, and the CAST with the characters they play.
+3) THE RECEPTION: how it's landing with audiences/critics (from the source reporting) — hit or miss.
+4) THE MONEY: the opening/current gross, the % move (holding or fading), the worldwide total, budget-vs-gross.
+5) A closing line on what the number means for the film.`;
 
   const user = `Write the article.
 
 FORM: ${job.angle.form} — ${form.label}
 ${FORM_GUIDE[job.angle.form]}
 
-STRUCTURE — develop EACH of these into full paragraph(s) (this is what makes it a real article, not a stub):
-1) LEAD: the hook — the star(s) + the headline number, in one or two punchy sentences.
-2) THE MOVIE: what it is (premise + genre + runtime), the director, and the CAST with the characters they play.
-3) THE RECEPTION: how it's landing with audiences/critics (from the source reporting) — hit or miss.
-4) THE MONEY: the opening/current gross, the % move (holding or fading), the worldwide total, budget-vs-gross.
-5) A closing line on what the number means for the film.
+${structure}
 
 THE BRIEF (your editor's engagement distillation — follow it):
 ${JSON.stringify(job.brief, null, 1)}
@@ -120,7 +134,7 @@ ${form.streaming ? "\n" + netflixBlock({ title: job.film.title, rank: g.netflixR
 VERIFIED FIGURES (the ONLY numbers that exist — copy exactly, invent nothing):
 ${verifiedFigures || "(no explicit trade figures — use ONLY the TMDB context above; do not state a number not shown there)"}
 
-WORD BUDGET: aim for ${budgetLo}-${budgetHi} words — the natural length of a real box-office story told from this much material. This is a TARGET, not a padding quota: develop every real fact above (what each number means, who the cast play, the premise, the profit math) into a full thought and you will land here. NEVER invent a fact to reach length — a faithful, fully-developed article is the goal. SEO keyword (use once, naturally): ${job.brief.seoKeyword}
+WORD BUDGET: ${budgetLo}-${budgetHi} words, and NEVER below 200 — a real, fully-developed story of this length. This is NOT a padding quota: develop every part of the STRUCTURE above (what it is, the cast and who they play, the description, what each number means, the reception) into a full paragraph and you will clear 200 naturally. NEVER invent a fact to reach length — a faithful, fully-developed article is the goal. SEO keyword (use once, naturally): ${job.brief.seoKeyword}
 ${corrections ? `\n⚠⚠ MANDATORY CORRECTIONS — fix ONLY these, change nothing else:\n${corrections}` : ""}
 
 Return JSON with EXACTLY these fields: ${schema}`;

@@ -127,7 +127,7 @@ async function gatherStreaming(job, { findImpl = findContent, chatImpl = null } 
   let narrative = "", cast = [], outletCount = 0;
   try {
     const q = job.angle?.queries?.[0] || `${film.title} netflix`;
-    const res = await findImpl({ query: q, title: film.title, primaryEntity: film.title, sources: [] }, { corroborate: true, maxSources: 3, maxExtract: 4 })
+    const res = await findImpl({ query: q, title: film.title, primaryEntity: film.title, sources: [] }, { corroborate: true, maxSources: 5, maxExtract: 6 })
       .catch(() => ({ blocked: true }));
     if (res && !res.blocked && res.sources?.length) {
       job.trigger.sources = res.sources.filter((s) => s.url).map((s) => ({ url: s.url, outlet: s.owner, tier: s.tier }));
