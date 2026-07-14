@@ -1,0 +1,69 @@
+{
+ "runId": "run-2026-07-14T02-31-21",
+ "mode": "live",
+ "startedAt": "2026-07-14T02:31:21.380Z",
+ "films": 4,
+ "published": [],
+ "held": [
+  {
+   "tag": "obsession-now-streaming×NOW-STREAMING",
+   "reason": "platform: names peacock not in confirmed providers",
+   "score": 0
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "little-brother-netflix-top10×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "i-will-find-you-trending-tv×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "voicemails-for-isabelle-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  }
+ ],
+ "blocked": [],
+ "finishedAt": "2026-07-14T02:33:56.386Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 2558,
+    "out": 679,
+    "usd": 0.00018,
+    "ms": 3737
+   },
+   "gatherer": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3769,
+    "out": 515,
+    "usd": 0.00058,
+    "ms": 2531
+   },
+   "synthesizer": {
+    "calls": 1,
+    "errors": 0,
+    "in": 814,
+    "out": 932,
+    "usd": 0.00024,
+    "ms": 17963
+   },
+   "writer": {
+    "calls": 3,
+    "errors": 0,
+    "in": 9829,
+    "out": 3343,
+    "usd": 0.00928,
+    "ms": 49413
+   }
+  },
+  "totalUsd": 0.01029
+ },
+ "openrouterTotalUsd": 0.00866
+}
