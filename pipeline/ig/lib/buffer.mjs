@@ -18,13 +18,26 @@ const MUT = `mutation Create($input: CreatePostInput!) {
 }`;
 
 async function gql(query, variables) {
-  const r = await fetch(IG.buffer.base, {
-    method: "POST",
-    headers: { authorization: `Bearer ${process.env.BUFFER_API_KEY}`, "content-type": "application/json" },
-    body: JSON.stringify({ query, variables }),
-    signal: AbortSignal.timeout(60000),
-  });
-  return r.json().catch(() => ({}));
+  // RETRY on a THROWN fetch (network/timeout) — a throw means the request never completed, so no
+  // post was created and a retry can't duplicate. A GraphQL error RESPONSE is returned as data and
+  // handled by the caller (permanent errors like Limit/Invalid must not be retried). (owner 2026-07-14)
+  let lastErr;
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    try {
+      const r = await fetch(IG.buffer.base, {
+        method: "POST",
+        headers: { authorization: `Bearer ${process.env.BUFFER_API_KEY}`, "content-type": "application/json" },
+        body: JSON.stringify({ query, variables }),
+        signal: AbortSignal.timeout(60000),
+      });
+      return r.json().catch(() => ({}));
+    } catch (e) {
+      lastErr = e;
+      if (attempt === 3) throw e;
+      await new Promise((res) => setTimeout(res, attempt * 3000));
+    }
+  }
+  throw lastErr;
 }
 
 // YouTube Short. title/description already platform-shaped (agent platformMeta). categoryId 24 =

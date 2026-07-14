@@ -20,23 +20,29 @@ export async function hostFile(localPath, destName) {
   const rel = `${IG.host.dir}/${destName}`;
   const url = `${GH_API}/repos/${owner}/${repo}/contents/${rel}`;
   const content = fs.readFileSync(localPath).toString("base64");
-  // existing sha (idempotent re-host)
-  let sha;
-  try {
-    const cur = await fetchWithTimeout(url, { headers: ghHeaders() }, 15000);
-    if (cur.ok) sha = (await cur.json()).sha;
-  } catch {}
-  const res = await fetchWithTimeout(
-    url,
-    {
-      method: "PUT",
-      headers: ghHeaders(),
-      body: JSON.stringify({ message: `host ${rel}`, content, branch: "main", ...(sha ? { sha } : {}) }),
-    },
-    180000,
-  );
-  if (!res.ok) throw new Error(`host ${rel}: HTTP ${res.status} ${(await res.text()).slice(0, 200)}`);
-  const data = await res.json();
+  // PUT with RETRY (owner 2026-07-14): the GitHub contents API intermittently 5xx's on large mp4
+  // uploads, and a single 500 here threw and lost the WHOLE post (hosting is upstream of every
+  // platform — that's why a built reel never posted). Retry transient 5xx/429/network with backoff;
+  // 4xx fails fast. Re-read the sha each attempt (a partial write can create the blob).
+  let data;
+  for (let attempt = 1; attempt <= 4; attempt++) {
+    let sha;
+    try { const cur = await fetchWithTimeout(url, { headers: ghHeaders() }, 15000); if (cur.ok) sha = (await cur.json()).sha; } catch {}
+    try {
+      const res = await fetchWithTimeout(
+        url,
+        { method: "PUT", headers: ghHeaders(), body: JSON.stringify({ message: `host ${rel}`, content, branch: "main", ...(sha ? { sha } : {}) }) },
+        180000,
+      );
+      if (res.ok) { data = await res.json(); break; }
+      const body = (await res.text().catch(() => "")).slice(0, 200);
+      if (res.status < 500 && res.status !== 429) throw new Error(`host ${rel}: HTTP ${res.status} ${body}`); // non-transient
+      if (attempt === 4) throw new Error(`host ${rel}: HTTP ${res.status} after 4 tries ${body}`);
+    } catch (e) {
+      if (attempt === 4) throw e;
+    }
+    await sleep(attempt * 4000); // backoff 4s / 8s / 12s
+  }
   const publicUrl = data?.content?.download_url || `https://raw.githubusercontent.com/${owner}/${repo}/main/${rel}`;
   // the bridge fetches this URL — confirm it actually serves before handing it over
   for (let i = 0; i < 6; i++) {
@@ -50,6 +56,19 @@ export async function hostFile(localPath, destName) {
 }
 
 const zHeaders = () => ({ Authorization: `Bearer ${process.env.ZERNIO_API_KEY}`, "Content-Type": "application/json" });
+
+// Create a Zernio post with RETRY — a transient 5xx/429 was dropping a single platform (Bam's IG
+// failed while FB went through). 4xx fails fast (a real bad request). (owner 2026-07-14)
+async function zernioCreate(body, label = "") {
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    const res = await fetchWithTimeout(`${IG.zernio.base}/posts`, { method: "POST", headers: zHeaders(), body: JSON.stringify(body) }, 60000);
+    const data = await res.json().catch(() => ({}));
+    if (res.ok) return data;
+    if (res.status < 500 && res.status !== 429) throw new Error(`zernio${label} ${res.status}: ${JSON.stringify(data).slice(0, 250)}`);
+    if (attempt === 3) throw new Error(`zernio${label} ${res.status} after 3 tries: ${JSON.stringify(data).slice(0, 200)}`);
+    await sleep(attempt * 3000);
+  }
+}
 
 export async function postToInstagram({ videoUrl, coverUrl, caption, firstComment, whenISO, live = false }) {
   const body = {
@@ -65,9 +84,7 @@ export async function postToInstagram({ videoUrl, coverUrl, caption, firstCommen
     ...(coverUrl ? { instagramThumbnail: coverUrl } : {}),
     ...(firstComment ? { firstComment } : {}),
   };
-  const res = await fetchWithTimeout(`${IG.zernio.base}/posts`, { method: "POST", headers: zHeaders(), body: JSON.stringify(body) }, 60000);
-  const data = await res.json().catch(() => ({}));
-  if (!res.ok) throw new Error(`zernio ${res.status}: ${JSON.stringify(data).slice(0, 250)}`);
+  const data = await zernioCreate(body, "");
   // capability discovery (plan agent 21): which of our reels params did the bridge echo back?
   const echoed = JSON.stringify(data);
   const paramsHonored = ["isAiGenerated", "audioName", "shareToFeed", "instagramThumbnail", "firstComment"].filter((k) => echoed.includes(k));
@@ -89,9 +106,7 @@ export async function postToFacebook({ videoUrl, coverUrl, caption, whenISO, liv
     isAiGenerated: IG.zernio.isAiGenerated,
     shareToFeed: true,
   };
-  const res = await fetchWithTimeout(`${IG.zernio.base}/posts`, { method: "POST", headers: zHeaders(), body: JSON.stringify(body) }, 60000);
-  const data = await res.json().catch(() => ({}));
-  if (!res.ok) throw new Error(`zernio(fb) ${res.status}: ${JSON.stringify(data).slice(0, 250)}`);
+  const data = await zernioCreate(body, "(fb)");
   return { id: data._id || data.id || data.post?._id || data.post?.id || data.data?._id || data.data?.id };
 }
 
