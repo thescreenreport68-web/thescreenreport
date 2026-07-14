@@ -24,21 +24,23 @@ function laOffsetMin(d) {
 }
 function laWall(y, m, d, h, min) { const naive = Date.UTC(y, m - 1, d, h, min); return new Date(naive - laOffsetMin(new Date(naive)) * 60000); }
 function laToday() { const p = Object.fromEntries(new Intl.DateTimeFormat("en-CA", { timeZone: "America/Los_Angeles", year: "numeric", month: "2-digit", day: "2-digit" }).formatToParts(new Date()).map((x) => [x.type, x.value])); return { y: +p.year, m: +p.month, d: +p.day }; }
-// the ONE day we fill: today if before the 10am first slot, else tomorrow (never split across days)
+// FIXED daily slots (owner 2026-07-14): 10am · 1pm · 4pm · 7pm · 10pm America/Los_Angeles
+const SLOT_HOURS = [10, 13, 16, 19, 22];
+// the ONE day we fill: today if before the first (10am) slot, else tomorrow (never split across days)
 function targetDay() {
   const { y, m, d } = laToday();
-  const first = laWall(y, m, d, 10, 0);
+  const first = laWall(y, m, d, SLOT_HOURS[0], 0);
   if (Date.now() < first.getTime() - 120000) return { y, m, d };
   const p = Object.fromEntries(new Intl.DateTimeFormat("en-CA", { timeZone: "America/Los_Angeles", year: "numeric", month: "2-digit", day: "2-digit" }).formatToParts(new Date(first.getTime() + 864e5)).map((x) => [x.type, x.value]));
   return { y: +p.year, m: +p.month, d: +p.day };
 }
 function targetDateStr() { const t = targetDay(); return `${t.y}-${String(t.m).padStart(2, "0")}-${String(t.d).padStart(2, "0")}`; }
-// N times evenly spread across 10:00–20:00 PT on the target day
+// N pins → their fixed slot times on the target day (10/1/4/7/10 PT; extras trail hourly after 10pm)
 function slotTimes(n) {
-  const t = targetDay(); const START = 10, END = 20;
+  const t = targetDay();
   return Array.from({ length: n }, (_, i) => {
-    const hf = n <= 1 ? START : START + (i * (END - START)) / (n - 1);
-    return laWall(t.y, t.m, t.d, Math.floor(hf), Math.round((hf % 1) * 60)).toISOString();
+    const h = SLOT_HOURS[i] ?? Math.min(22 + (i - SLOT_HOURS.length + 1), 23);
+    return laWall(t.y, t.m, t.d, h, 0).toISOString();
   });
 }
 
@@ -69,14 +71,15 @@ async function main() {
   if (!candidates.length) { console.log("no fresh un-pinned candidates."); return; }
 
   const want = forceSlug ? 1 : count;
-  const made = []; const catCount = {};
+  const made = []; const catCount = {}; const usedEvents = new Set();
   const times = slotTimes(want);
   for (const c of candidates) {
     if (made.length >= want) break;
     if (pinned.has(c.slug)) continue;
+    if (c.eventSlug && usedEvents.has(c.eventSlug)) continue; // no two pins about the same event in one batch
     if (!forceSlug && (catCount[c.category] || 0) >= PIN.perCategoryCap) continue;
     pinned.add(c.slug);
-    if (dry) { made.push({ slug: c.slug, category: c.category, dry: true }); console.log(`  [dry] ${c.category}  ${c.slug}`); catCount[c.category] = (catCount[c.category] || 0) + 1; continue; }
+    if (dry) { made.push({ slug: c.slug, category: c.category, dry: true }); console.log(`  [dry] ${c.category}  ${c.slug}`); catCount[c.category] = (catCount[c.category] || 0) + 1; if (c.eventSlug) usedEvents.add(c.eventSlug); continue; }
     try {
       const card = await makeCard(c.slug);
       const host = await hostCard(card.pngPath, c.slug);
@@ -86,7 +89,7 @@ async function main() {
       const entry = { slug: c.slug, category: c.category, at: new Date().toISOString(), draft: !!draft, whenISO, pinUrl: host.url, headline: card.card.headline.replace(/<br>/g, " "), title: card.meta.title, result: res };
       if (res.ok && !draft) recordPinned(entry);
       made.push(entry);
-      catCount[c.category] = (catCount[c.category] || 0) + 1;
+      catCount[c.category] = (catCount[c.category] || 0) + 1; if (c.eventSlug) usedEvents.add(c.eventSlug);
       console.log(`  ${draft ? "DRAFT" : immediate ? "LIVE-NOW" : whenISO.slice(11, 16) + "Z"}  [${c.category}] ${res.ok ? "ok " + res.id : "FAIL " + res.error}\n     “${entry.headline}”`);
     } catch (e) {
       console.log(`  skip ${c.slug}: ${String(e.message).slice(0, 90)} — trying next`);
