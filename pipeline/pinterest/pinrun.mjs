@@ -11,7 +11,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { PIN } from "./config.mjs";
-import { pickCandidates, readArticle } from "./curate.mjs";
+import { pickCandidates, findLive } from "./curate.mjs";
 import { makeCard } from "./makecard.mjs";
 import { hostCard, pruneCards } from "./host.mjs";
 import { postPin, pinStatus } from "./poster.mjs";
@@ -67,7 +67,14 @@ async function main() {
   }
 
   const pinned = forceSlug ? new Set() : pinnedSet();
-  const candidates = forceSlug ? [{ slug: forceSlug, category: readArticle(forceSlug).category }] : pickCandidates(pinned);
+  let candidates;
+  if (forceSlug) {
+    const row = await findLive(forceSlug);
+    if (!row) { console.log(`--slug ${forceSlug}: not found in the live feed.`); return; }
+    candidates = [{ slug: row.slug, url: row.url, category: row.category, title: row.title, eventSlug: row.eventKey, image: row.image, date: row.date, row }];
+  } else {
+    candidates = await pickCandidates(pinned);
+  }
   if (!candidates.length) { console.log("no fresh un-pinned candidates."); return; }
 
   const want = forceSlug ? 1 : count;
@@ -86,7 +93,7 @@ async function main() {
     if (dry) { taken.add(c.slug); attempted.add(c.slug); made.push({ slug: c.slug, category: c.category, dry: true }); console.log(`  [dry] ${c.category}  ${c.slug}`); boardCount[c.category] = (boardCount[c.category] || 0) + 1; if (c.eventSlug) usedEvents.add(c.eventSlug); return; }
     taken.add(c.slug); attempted.add(c.slug);
     try {
-      const card = await makeCard(c.slug); // classifies the board, gates off-mandate, checks the link is live
+      const card = await makeCard(c); // fetches the live story, classifies the board, gates off-mandate + dead links
       const host = await hostCard(card.pngPath, c.slug);
       const i = made.length;
       const whenISO = immediate ? new Date(Date.now() + (i * 3 + 1) * 60000).toISOString() : times[i];
