@@ -157,3 +157,20 @@ export function platformGuard(article, allowedPlatforms = []) {
   }
   return { ok: bad.length === 0, bad };
 }
+
+// STREAMING-AVAILABILITY GUARD — a "now streaming" CLAIM must be backed by a FLATRATE (subscription)
+// provider. A title available ONLY to rent/buy (Amazon Video, Apple TV storefront, Fandango At Home)
+// is NOT "now streaming" — saying so is a wrong message (the live "Michael now streaming" bug: it was
+// $19.99 rent/buy, not on any subscription service). This is the verification the platformGuard missed:
+// platformGuard checks the NAMED service is a provider; THIS checks the streaming CLAIM matches the
+// provider TYPE. `flatrate` = the confirmed subscription platforms (TMDB providers.stream + a
+// streaming gathered.platform like Netflix). Returns offending sentences to cut + whether a short
+// field (title/dek) carries the false claim (uncuttable → hard block).
+const STREAM_CLAIM_RE = /\b(now streaming|streaming (now|debut|today|this week|exclusively)|available (to|for) stream(ing)?|stream(s|ing)? (it |the film |the movie )?(now|today|on (netflix|max|hbo|disney|hulu|prime|apple tv\+|peacock|paramount|starz))|start(s|ed|ing)? streaming|hits? streaming|is streaming|streaming (debut|release|arrival)|watch it (now )?on (netflix|max|hbo max|disney\+|hulu|prime video|apple tv\+|peacock|paramount\+|starz))\b/i;
+export function streamingClaimGuard(article, { flatrate = [] } = {}) {
+  const hasFlatrate = (flatrate || []).map((x) => String(x || "").trim()).filter(Boolean).length > 0;
+  if (hasFlatrate) return { ok: true, cuts: [], hardWrong: false }; // real subscription provider → streaming is TRUE
+  const cuts = splitSentences(article?.body || "").filter((s) => STREAM_CLAIM_RE.test(s));
+  const inShort = STREAM_CLAIM_RE.test(`${article?.title || ""} ${article?.dek || ""} ${article?.metaTitle || ""}`);
+  return { ok: cuts.length === 0 && !inShort, cuts: [...new Set(cuts)], hardWrong: inShort };
+}

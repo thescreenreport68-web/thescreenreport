@@ -92,7 +92,9 @@ export async function run(job, { findImpl = findContent, chatImpl = null } = {})
   const g = job.gathered;
   const isOTT = !!job.boxData?.isOTT;
   const prov = job.boxData?.providers || {};
-  const hasPlatform = (prov.stream?.length || prov.rent?.length || prov.buy?.length);
+  // NOW-STREAMING = a real SUBSCRIPTION (flatrate) landing, NEVER rent/buy: a $19.99 Amazon/Apple rental is
+  // "available to rent", not "now streaming" (the live Michael bug). Require a flatrate stream provider.
+  const hasStreamPlatform = !!(prov.stream?.length);
   // A REAL theatrical box-office figure — a $ gross the trade reported (or a TMDB theatrical worldwide) —
   // NOT a stray theater count or percentage. Stops a Netflix film / thin roundup number passing as "box office".
   const hasGross = !!(g.openingWeekend || g.domestic || g.international || g.worldwide || g.cume
@@ -105,8 +107,8 @@ export async function run(job, { findImpl = findContent, chatImpl = null } = {})
     job.gatherFail = "under floor: no opening/weekend/gross figure in the report";
   else if (form?.needsNewNumber && !hasGross)
     job.gatherFail = "under floor: no new box-office number to report";
-  else if (form?.needsPlatform && !hasPlatform)
-    job.gatherFail = "under floor: no TMDB-confirmed streaming platform for a NOW-STREAMING claim";
+  else if (form?.needsPlatform && !hasStreamPlatform)
+    job.gatherFail = "under floor: no subscription-streaming platform — rent/buy is not 'now streaming'";
   return job;
 }
 

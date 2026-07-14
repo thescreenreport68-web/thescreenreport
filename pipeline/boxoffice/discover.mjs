@@ -38,18 +38,21 @@ const toFilm = (m, via) => ({
 
 // discoverFilms({ region, nowMs }) → scope-filtered candidate films, hottest first, deduped by id.
 // Injected fetchImpl keeps the offline suite network-free.
-export async function discoverFilms({ region = "US", nowMs = null, fetchImpl = fetch, max = 40 } = {}) {
+export async function discoverFilms({ region = "US", nowMs = null, fetchImpl = fetch, max = 60 } = {}) {
   // Broaden the in-theater pool so EVERY movie in theaters can be covered (owner: cover them all): two pages
   // of now-playing + the week's trending. Page 2 surfaces the smaller/older-but-still-running releases.
-  const [np1, np2, trending] = await Promise.all([
+  const [np1, np2, np3, trendWeek, trendDay] = await Promise.all([
     tmdbGet(`/movie/now_playing?region=${region}&page=1`, { fetchImpl }),
     tmdbGet(`/movie/now_playing?region=${region}&page=2`, { fetchImpl }),
+    tmdbGet(`/movie/now_playing?region=${region}&page=3`, { fetchImpl }),
     tmdbGet(`/trending/movie/week`, { fetchImpl }),
+    tmdbGet(`/trending/movie/day`, { fetchImpl }),
   ]);
   const byId = new Map();
-  for (const src of [np1, np2]) for (const m of src?.results || []) if (!byId.has(m.id)) byId.set(m.id, toFilm(m, "now_playing"));
-  for (const m of trending?.results || []) {
-    // trending gives the "what's hot" signal; only merge films that are also plausibly in release.
+  for (const src of [np1, np2, np3]) for (const m of src?.results || []) if (!byId.has(m.id)) byId.set(m.id, toFilm(m, "now_playing"));
+  for (const src of [trendWeek, trendDay]) for (const m of src?.results || []) {
+    // trending gives the "what's hot" signal (and trending films tend to have trade coverage → they publish);
+    // only merge films that are also plausibly in release.
     if (byId.has(m.id)) { byId.get(m.id).trendingHot = true; continue; }
     const f = toFilm(m, "trending"); f.trendingHot = true;
     if (f.releaseDate) byId.set(m.id, f);

@@ -66,20 +66,43 @@ export async function findFilms({ limit = 3, discoverImpl = discoverFilms, chatI
   let streamPicks = [];
   try {
     const nf = await (netflixImpl || fetchNetflixTop10)();
+    // Year hint = the Netflix chart week's year, so TMDB resolves the CURRENT title (not an old same-name
+    // film): without it, "Turbo"/"Swapped" match a decade-old movie, castTrustworthy rejects the cast, and the
+    // writer is starved to ~120 words. With the hint, the current title's cast+characters+premise+genre flow
+    // through → a full 200-word streaming brief.
+    const nfYear = String(nf?.week || "").slice(0, 4);
     const mkStream = (row, formKey, kind, wt, q2) => mkEntry(
-      { id: null, title: row.title, year: "", releaseDate: "", popularity: Math.max(40, 100 - (row.rank || 1) * 8), overview: "", originalLanguage: "en", via: kind, netflix: { ...row, week: nf.week } },
+      { id: null, title: row.title, year: nfYear, releaseDate: nf?.week || "", popularity: Math.max(40, 100 - (row.rank || 1) * 8), overview: "", originalLanguage: "en", via: kind, netflix: { ...row, week: nf.week } },
       formKey, { workingTitle: wt, queries: [`${row.title} netflix`, q2] });
     const slugFor = (title, formKey) => `${String(title || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "")}-${formKey.toLowerCase()}`;
-    // Rotate to the first Netflix title we have NOT covered yet — so a title staying #1 for weeks never
-    // gets re-posted; we move to the next fresh entry on the chart instead (owner: always find new).
-    const freshRow = (rows, formKey) => (rows || []).find((r) => r?.title && !seenSlugs.has(slugFor(r.title, formKey)));
-    const fFilm = freshRow(nf?.films, "NETFLIX-TOP10");
-    const fTv = freshRow(nf?.tv, "TRENDING-TV");
-    if (fFilm) streamPicks.push(mkStream(fFilm, "NETFLIX-TOP10", "netflix-top10", `${fFilm.title} on Netflix's Top 10`, `${fFilm.title} netflix cast`));
-    if (fTv) streamPicks.push(mkStream(fTv, "TRENDING-TV", "netflix-tv", `${fTv.title} trending on Netflix`, `${fTv.title} season reactions`));
+    // VOLUME FIX: surface EVERY fresh (uncovered) Netflix Top 10 entry — not just the first — so the lane can
+    // work the WHOLE chart (10 films + 10 TV per week = ~20 reliable streaming stories) across the day's ticks,
+    // rotating to the next uncovered title each tick. Netflix's own hours anchor these, so they publish
+    // reliably (a title staying #1 for weeks still never re-posts — it's already in seenSlugs).
+    const freshRows = (rows, formKey, n) => {
+      const picked = new Set(); const out = [];
+      for (const r of rows || []) {
+        const sl = r?.title ? slugFor(r.title, formKey) : null;
+        if (!sl || seenSlugs.has(sl) || picked.has(sl)) continue; // skip covered + within-pool dupes (same title at 2 ranks)
+        picked.add(sl); out.push(r);
+        if (out.length >= n) break;
+      }
+      return out;
+    };
+    for (const r of freshRows(nf?.films, "NETFLIX-TOP10", 8))
+      streamPicks.push(mkStream(r, "NETFLIX-TOP10", "netflix-top10", `${r.title} on Netflix's Top 10`, `${r.title} netflix cast`));
+    for (const r of freshRows(nf?.tv, "TRENDING-TV", 8))
+      streamPicks.push(mkStream(r, "TRENDING-TV", "netflix-tv", `${r.title} trending on Netflix`, `${r.title} season reactions`));
   } catch { streamPicks = []; }
 
-  const merge = (bo) => (preferStreaming ? [...streamPicks, ...exitEntries, ...bo] : [...exitEntries, ...bo, ...streamPicks]).slice(0, limit);
+  // Candidate POOL for the tick (not just 1). Box-office LEADS (owner's priority), but streaming picks are
+  // REACHABLE as a reliable fallback — a tick whose box-office picks are all thin/uncoverable still publishes
+  // a real streaming story instead of coming up empty (the core volume fix). preferStreaming (the ~5 stream
+  // ticks/day) puts streaming first. borun then tries candidates in order until one clears the gates.
+  const poolSize = Math.max(limit, 6);
+  const merge = (bo) => (preferStreaming
+    ? [...streamPicks, ...exitEntries, ...bo]
+    : [...exitEntries, ...bo.slice(0, 3), ...streamPicks, ...bo.slice(3)]).slice(0, poolSize);
 
   if (!films.length) return merge([]);
 
