@@ -73,5 +73,20 @@
     "stage": "script",
     "reason": "script failed lint after 3 attempts: hook-too-long(17 words (max 16)), sentence-too-long(21 words — split it: \"Tristan says the secret to their co-pa), ending-ask(final sentence must be the comments ask (like \"Let us know i), ending-question(the sentence before the ask must be the audience question (e)",
     "at": "2026-07-13T23:30:19.678Z"
+  },
+  "kanye-west-poses-with-shane-gillis-backstage-at-san-antonio-concert": {
+    "stage": "script",
+    "reason": "script failed lint after 3 attempts: ending-ask(final sentence must be the comments ask (like \"Let us know i), ending-question(the sentence before the ask must be the audience question (e)",
+    "at": "2026-07-14T03:10:57.721Z"
+  },
+  "author-tomi-adeyemi-will-not-watch-film-adaptation-of-her-book-childre": {
+    "stage": "watchqc",
+    "reason": "QC fix: third-party watermark #2 (hard fail) (score 0)",
+    "at": "2026-07-14T03:16:03.554Z"
+  },
+  "real-housewives-of-london-season-1-to-debut-on-bravo-ahead-of-second-s": {
+    "stage": "watchqc",
+    "reason": "QC fix: over max length (score 0)",
+    "at": "2026-07-14T03:21:30.640Z"
   }
 }
