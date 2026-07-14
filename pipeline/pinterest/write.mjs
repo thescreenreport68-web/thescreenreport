@@ -41,9 +41,9 @@ const BOARD_SYS = `You are the board editor for The Screen Report's Pinterest. R
 BOARDS:
 - "movies"    — theatrical or streaming FILMS: box office, film casting, trailers, reviews, release news, franchises, animated features (e.g. Moana, Toy Story 5, a Marvel film, a biopic movie).
 - "tv"        — TV & streaming SERIES: show renewals/cancellations, series casting, episode/season/finale talk, streaming-series news (e.g. House of David, a Netflix series, a reality-TV season).
-- "celebrity" — stories primarily about a PERSON: relationships, family, red carpet, feuds, personal milestones, singers/musicians, a star's private life.
-- "skip"      — NOT Hollywood/English-language entertainment: pure crime with no film/TV angle, non-entertainment sports figures, politics, or anything off our movie·TV·celebrity mandate.
-RULES: If a FILM is the main subject → movies. If a SERIES is the main subject → tv. If a PERSON (their life/gossip/music) is the main subject → celebrity. When a film or show is the star of the story, prefer movies/tv over celebrity even if a famous name is attached. Use the given CATEGORY only as a hint; the actual content decides.
+- "celebrity" — UPBEAT entertainment-celebrity news: relationships, dating, marriages, family/baby news, red carpet, career moves, feuds, brand launches, music releases, a star's public life. Entertainment figures only (film/TV/music stars, name reality-TV personalities).
+- "skip"      — anything that does NOT belong on a premium movie-news Pinterest. ALWAYS skip, even if a famous/music/reality person is attached: crime, shootings, 911 calls, arrests, indictments, lawsuits, abuse or assault, death investigations, overdoses, accidents, disturbing/tragic incidents; also non-entertainment sports figures, politics, and anything off our movie·TV·celebrity entertainment mandate.
+RULES: If a FILM is the main subject → movies. If a SERIES is the main subject → tv. If an entertainment PERSON's public life is the subject → celebrity. When a film or show is the star of the story, prefer movies/tv over celebrity even if a famous name is attached. A crime/tragedy/legal story is ALWAYS "skip" — never route it to celebrity just because a person is involved. Use the given CATEGORY only as a hint; the actual content decides.
 Return STRICT JSON only: {"board":"movies|tv|celebrity|skip","why":"<=8 words"}`;
 
 export async function classifyBoard(a) {
