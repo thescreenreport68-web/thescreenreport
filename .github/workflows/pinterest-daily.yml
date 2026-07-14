@@ -22,9 +22,11 @@ on:
       now:
         description: "publish immediately (true/false)"
         default: "false"
-  # ── OWNER: uncomment to enable the daily cron AFTER a green live run ──
-  # schedule:
-  #   - cron: "0 5 * * *"   # 05:00 UTC ≈ 10pm PT the night before — schedules the next day's pins
+  schedule:
+    # 05:00 UTC ≈ 10pm PT the night before → schedules the next day's 5 pins at 10am/1pm/4pm/7pm/10pm PT.
+    # Deliberately early so GitHub-cron drift still lands before the 10am first slot. Runs 24/7 until the
+    # owner stops it (create data/pinterest/POSTING_OFF to pause).
+    - cron: "0 5 * * *"
 
 concurrency:
   group: pinterest-daily
