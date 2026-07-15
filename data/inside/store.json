@@ -2516,6 +2516,51 @@
      }
     ]
    }
+  },
+  {
+   "key": "spider-man-brand-new-day-2026|audience-reaction",
+   "at": "2026-07-15T10:38:33.468Z",
+   "updatedCount": 0,
+   "parentEventSlug": "spider-man-brand-new-day-2026",
+   "form": "audience-reaction",
+   "slug": "spider-man-brand-new-day-has-fans-split-hulk-fears-downey-s-villain-tease-and",
+   "title": "Spider-Man: Brand New Day Has Fans Split — Hulk Fears, Downey's Villain Tease, and Yelena Hints",
+   "primaryEntity": "Spider-Man: Brand New Day",
+   "eventType": "discourse",
+   "harvestQuoteKeys": [
+    "because in the comics, he does interact with all these characters. so thats been a wonderf",
+    "because the truth is that the rule that we set for ourselves is to take it one movie at a ",
+    "you might see yelena a little bit sooner in the movies",
+    "i played the best hero. i can play the best villain",
+    "if spider man brand new day really does give us the savage hulk back only for him to loss ",
+    "my sister gave me two birthday presents. first, she surprised me with a the amazing spider",
+    "being upside down isnt for the faint of heart."
+   ],
+   "angle": {
+    "form": "audience-reaction",
+    "angle": "audience discourse",
+    "workingTitle": "Spider-Man: Brand New Day: what people are saying",
+    "focusEntity": "Spider-Man: Brand New Day",
+    "searchQueries": []
+   },
+   "trigger": {
+    "parentEventSlug": "spider-man-brand-new-day-2026",
+    "parentSlug": null,
+    "parentTitle": "Spider-Man: Brand New Day",
+    "primaryEntity": "Spider-Man: Brand New Day",
+    "eventType": "discourse",
+    "tmdbType": "movie",
+    "subjectKind": "title",
+    "priority": 25,
+    "category": "movies",
+    "overview": "Fighting crime full-time as Spider-Man in a world that doesn't remember him—and the pressure of seeing his old friends move on without him—sparks a change in Peter Parker he may not have the power to control. But that transformation might also be the only thing that can stop a shocking new threat to the city and those he loves - a powerful villain no one can even see.",
+    "work": {
+     "title": "Spider-Man: Brand New Day",
+     "type": "movie",
+     "year": "2026"
+    },
+    "sources": []
+   }
   }
  ],
  "parked": [
@@ -2969,14 +3014,6 @@
    "at": "2026-07-14T18:50:38.095Z"
   },
   {
-   "key": "spider-man-brand-new-day-2026|audience-reaction",
-   "parentEventSlug": "spider-man-brand-new-day-2026",
-   "form": "audience-reaction",
-   "reason": "under floor: audience posts 2 < 3",
-   "tries": 2,
-   "at": "2026-07-15T06:35:50.199Z"
-  },
-  {
    "key": "far-cry-fx-series-casts-steve-buscemi|audience-reaction",
    "parentEventSlug": "far-cry-fx-series-casts-steve-buscemi",
    "form": "audience-reaction",
@@ -3071,6 +3108,14 @@
    "reason": "template-heading: \"Why This Hit a Nerve\" — rewrite story-specific",
    "tries": 1,
    "at": "2026-07-15T08:34:29.180Z"
+  },
+  {
+   "key": "fall-2026-premiere-dates-full-schedule-for-new-returning-sho|audience-reaction",
+   "parentEventSlug": "fall-2026-premiere-dates-full-schedule-for-new-returning-sho",
+   "form": "audience-reaction",
+   "reason": "under floor: audience posts 0 < 3",
+   "tries": 1,
+   "at": "2026-07-15T10:32:14.277Z"
   }
  ]
 }
