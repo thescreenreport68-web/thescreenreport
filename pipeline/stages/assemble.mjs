@@ -86,9 +86,16 @@ export function assemble({ article, classification, image, topic, dateISO }) {
     const cut = s.slice(0, max), at = cut.lastIndexOf(" ");
     return (at > max * 0.4 ? cut.slice(0, at) : cut).replace(/[\s,;:–—\-]+$/, "");
   };
-  let metaTitle = stripBrand(article.metaTitle);
-  if (!metaTitle) metaTitle = stripBrand(article.title).replace(/\s*\(\d{4}\)\s*$/, ""); // derive from the headline; drop a trailing year
-  if (metaTitle.length > 55) metaTitle = clampWords(metaTitle.replace(/\s*\([^)]*\)\s*$/, "").trim(), 55); // drop a trailing parenthetical, then hard-cap 55
+  // metaTitle TARGET 45–55 chars (owner 2026-07-14: min 45, max 55 — never too short). Build from BOTH the model's
+  // metaTitle and the full headline; prefer whichever lands in [45,55]; else the longest available; hard-cap 55.
+  const clamp55 = (s) => { s = stripBrand(s); return s.length <= 55 ? s : clampWords(s.replace(/\s*\([^)]*\)\s*$/, "").trim() || s, 55); };
+  const mtModel = clamp55(article.metaTitle);
+  const mtTitle = clamp55(stripBrand(article.title).replace(/\s*\(\d{4}\)\s*$/, "")); // full headline (brand+year stripped) — usually 45–55 once clamped
+  let metaTitle;
+  if (mtModel.length >= 45 && mtModel.length <= 55) metaTitle = mtModel;           // model nailed the range
+  else if (mtTitle.length >= 45 && mtTitle.length <= 55) metaTitle = mtTitle;       // else use the headline (fixes a too-short model metaTitle without inventing text)
+  else metaTitle = [mtModel, mtTitle].filter(Boolean).sort((a, b) => b.length - a.length)[0] || stripBrand(article.title); // else the longest available (closest to the 45 floor)
+  if (metaTitle.length > 55) metaTitle = clampWords(metaTitle, 55);                 // final hard cap
   let metaDescription = String(article.metaDescription || article.dek || article.title || "").replace(/\s+/g, " ").trim();
   if (metaDescription.length > 160) metaDescription = clampWords(metaDescription, 157) + "…";
   let seoTags = (classification.tags?.length ? classification.tags : article.tags || []).filter(Boolean);
