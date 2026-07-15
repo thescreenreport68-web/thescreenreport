@@ -70,13 +70,19 @@ export function generateMetadata({
         },
       ]
     : undefined;
+  // SEO <title>: Google truncates past ~60 chars, and the root layout template
+  // appends " — The Screen Report" (20 chars). Only let that brand suffix through
+  // when metaTitle is short enough to keep the whole tag ≤60; otherwise emit the
+  // metaTitle ALONE (absolute) so the headline is never cut off by the brand.
+  // This touches ONLY the hidden <title>/browser-tab/Google blue-link — the on-page
+  // <h1> readers see stays `article.title` (full, expressive, UNCHANGED).
+  const titleTag =
+    article.metaTitle.length + 20 <= 60
+      ? article.metaTitle
+      : { absolute: article.metaTitle };
   return {
-    title: article.metaTitle,
+    title: titleTag,
     description: article.metaDescription,
-    // Basic keyword SEO on every article (owner 2026-07-14): emit a <meta name="keywords"> from the
-    // article's own tags (the metaTitle field itself stays brand-free; the site <title> template still
-    // adds the brand, matching the news lane). JSON-LD keywords stay in sync below; readability untouched.
-    ...(article.tags?.length ? { keywords: article.tags } : {}),
     alternates: { canonical: `/${article.category}/${article.slug}/` },
     // Recheck corrections / the inside parent-retraction cascade write robots: "noindex".
     ...(article.robots === "noindex" ? { robots: { index: false, follow: false } } : {}),
@@ -135,7 +141,17 @@ export default function ArticlePage({
             ...(author.sameAs?.length ? { sameAs: author.sameAs } : {}),
           }
         : undefined,
-      publisher: { "@type": "Organization", name: SITE.name, url: SITE.url },
+      publisher: {
+        "@type": "Organization",
+        name: SITE.name,
+        url: SITE.url,
+        logo: {
+          "@type": "ImageObject",
+          url: `${SITE.url}${SITE.logoPath}`,
+          width: SITE.logoWidth,
+          height: SITE.logoHeight,
+        },
+      },
       mainEntityOfPage: `${SITE.url}/${article.category}/${article.slug}/`,
       articleSection: cat?.name,
       keywords: article.tags.join(", "),

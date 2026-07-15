@@ -7,7 +7,7 @@ import path from "node:path";
 import { createRequire } from "node:module";
 import { CONTENT_DIR, INSIDE_FORMAT_TAG, INSIDE_AUTHOR_SLUG, AI_DISCLOSURE, MONITOR_WINDOW_HOURS, FORMS, MAX_EMBEDS, NO_EMBEDS, routeForStory } from "./config.inside.mjs";
 import { norm } from "./reactionFinder.mjs";
-import { seoTitle } from "../lib/seo.mjs";
+import { seoTitle } from "./seo.mjs";
 
 const require = createRequire(import.meta.url);
 const matter = require("gray-matter");

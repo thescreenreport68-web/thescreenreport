@@ -811,7 +811,7 @@ await check("routeForStory: work.type is authoritative + Movies/TV reactions fil
   assert.deepEqual(routeForStory({ category: "sports" }), { category: "celebrity", subcategory: "news" });
 });
 await check("seoTitle: 45–55 range — strip brand, prefer an in-range value, fall back to the headline when the model is too short, hard-cap 55", async () => {
-  const { seoTitle, stripBrand } = await import("../../lib/seo.mjs");
+  const { seoTitle, stripBrand } = await import("../seo.mjs");
   assert.equal(stripBrand("Moana Live-Action Divides Fans — The Screen Report"), "Moana Live-Action Divides Fans");
   // model metaTitle already in [45,55] → kept as-is
   const good = "Zooey Deschanel: New Girl Cast Fought for Lamorne";
