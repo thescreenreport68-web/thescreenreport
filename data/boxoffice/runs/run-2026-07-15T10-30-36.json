@@ -1,0 +1,89 @@
+{
+ "runId": "run-2026-07-15T10-30-36",
+ "mode": "live",
+ "startedAt": "2026-07-15T10:30:36.910Z",
+ "films": 6,
+ "published": [],
+ "held": [
+  {
+   "tag": "moana-bo-update×BO-UPDATE",
+   "reason": "soft-floor humanVoice 4 < 5",
+   "score": 55
+  },
+  {
+   "tag": "minions-monsters-bo-update×BO-UPDATE",
+   "reason": "fidelity: 5 unsupported figures/claims — draft-level failure",
+   "score": 0
+  },
+  {
+   "tag": "toy-story-5-bo-update×BO-UPDATE",
+   "reason": "words 89 < 180 (owner-set ~200-word minimum)",
+   "score": 55
+  },
+  {
+   "tag": "evil-dead-burn-bo-update×BO-UPDATE",
+   "reason": "words 124 < 180 (owner-set ~200-word minimum) | soft-floor engagement 3 < 5 | soft-floor humanVoice 3 < 5",
+   "score": 40
+  },
+  {
+   "tag": "young-washington-bo-update×BO-UPDATE",
+   "reason": "words 175 < 180 (owner-set ~200-word minimum) | seo-faq: fewer than 2 real FAQs | soft-floor readability 4 < 5 | soft-floor engagement 3 < 5 | soft-floor humanVoice 3 < 5",
+   "score": 35
+  },
+  {
+   "tag": "obsession-bo-update×BO-UPDATE",
+   "reason": "words 178 < 180 (owner-set ~200-word minimum) | seo-faq: fewer than 2 real FAQs | soft-floor engagement 4 < 5",
+   "score": 45
+  }
+ ],
+ "rejected": [],
+ "skipped": [],
+ "blocked": [],
+ "finishedAt": "2026-07-15T10:45:35.149Z",
+ "meter": {
+  "byRole": {
+   "gatherer": {
+    "calls": 7,
+    "errors": 0,
+    "in": 22436,
+    "out": 2788,
+    "usd": 0.00336,
+    "ms": 12093
+   },
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3311,
+    "out": 449,
+    "usd": 0.00018,
+    "ms": 1814
+   },
+   "synthesizer": {
+    "calls": 6,
+    "errors": 0,
+    "in": 4502,
+    "out": 4885,
+    "usd": 0.00128,
+    "ms": 79149
+   },
+   "writer": {
+    "calls": 16,
+    "errors": 0,
+    "in": 30483,
+    "out": 16082,
+    "usd": 0.03792,
+    "ms": 219234
+   },
+   "qa": {
+    "calls": 52,
+    "errors": 3,
+    "in": 144874,
+    "out": 21814,
+    "usd": 0.0931,
+    "ms": 184320
+   }
+  },
+  "totalUsd": 0.13585
+ },
+ "openrouterTotalUsd": 0.14777
+}
