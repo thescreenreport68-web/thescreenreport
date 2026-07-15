@@ -76,6 +76,24 @@ export function assemble({ article, classification, image, topic, dateISO }) {
     (article.imageQuery ? article.imageQuery + " — " : "") + (article.title || "")
   ).slice(0, 125);
 
+  // BASIC SEO — deterministic guarantee (owner 2026-07-14): EVERY article ships a search-optimized metaTitle
+  // (≤55 chars, brand-free — the site template adds branding), a metaDescription, and keyword tags, even when the
+  // cheap writer model slips. These live only in <head> + JSON-LD, so they never affect on-page readability.
+  const stripBrand = (s) => String(s || "").replace(/\s*[|—–\-]\s*The Screen Report\s*$/i, "").replace(/\s+/g, " ").trim();
+  const clampWords = (s, max) => {
+    s = String(s || "").trim();
+    if (s.length <= max) return s;
+    const cut = s.slice(0, max), at = cut.lastIndexOf(" ");
+    return (at > max * 0.4 ? cut.slice(0, at) : cut).replace(/[\s,;:–—\-]+$/, "");
+  };
+  let metaTitle = stripBrand(article.metaTitle);
+  if (!metaTitle) metaTitle = stripBrand(article.title).replace(/\s*\(\d{4}\)\s*$/, ""); // derive from the headline; drop a trailing year
+  if (metaTitle.length > 55) metaTitle = clampWords(metaTitle.replace(/\s*\([^)]*\)\s*$/, "").trim(), 55); // drop a trailing parenthetical, then hard-cap 55
+  let metaDescription = String(article.metaDescription || article.dek || article.title || "").replace(/\s+/g, " ").trim();
+  if (metaDescription.length > 160) metaDescription = clampWords(metaDescription, 157) + "…";
+  let seoTags = (classification.tags?.length ? classification.tags : article.tags || []).filter(Boolean);
+  if (!seoTags.length) seoTags = [...new Set([topic.primaryEntity, classification.category, ...String(topic.primaryKeyword || "").split(/\s+/)].filter(Boolean).map((s) => String(s).toLowerCase()))].slice(0, 8);
+
   const fm = {
     title: article.title,
     slug,
@@ -84,9 +102,9 @@ export function assemble({ article, classification, image, topic, dateISO }) {
     author: AUTHOR_SLUG,
     date: dateISO,
     dek: article.dek || "",
-    metaTitle: article.metaTitle || article.title,
-    metaDescription: article.metaDescription || article.dek || "",
-    tags: classification.tags?.length ? classification.tags : article.tags || [],
+    metaTitle,
+    metaDescription,
+    tags: seoTags,
     targetKeyword: topic.primaryKeyword,
     keyTakeaways: article.keyTakeaways || [],
     // Drop any FAQ that leaked a meta-refusal (insurance behind the gate's hard-block — a reader/JSON-LD
