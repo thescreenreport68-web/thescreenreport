@@ -130,11 +130,19 @@ export async function scout({ limit = 3, candidates = null, lane = null } = {}) 
     .filter((c) => c.score >= 40);
   // movies-first ~80/20: stable-sort movies (and movie-adjacent tv) ahead when scores are close
   scored.sort((a, b) => (b.score + (b.category === "movies" ? 8 : 0)) - (a.score + (a.category === "movies" ? 8 : 0)));
-  // category variety: max 2 per category in a slate
+  // Category variety cap — SCALES with the run's target so the slate can actually REACH `limit`.
+  // ROOT CAUSE of "only 3/7 per day" (owner 2026-07-15): the old FLAT cap of 2, across just 3
+  // categories (movies/tv/celebrity), hard-capped EVERY slate at 6 — so a single run could never build
+  // the 7 the owner wants, and with celebrity/gossip-heavy supply it yielded ~3 (2 celebrity + 1 tv + 0
+  // movies). The cap is now max(2, limit-2), so a scheduled --limit=15 run assembles up to ~13 of the
+  // abundant category (attempt many, ship 7 after holds — the guarantee comes from ATTEMPTS surviving
+  // holds, not from a small slate). The movies-first sort above still LEADS with movies/tv when they
+  // exist, and topic-dedup still guarantees 7 DISTINCT stories. Small manual runs keep a tight cap.
+  const perCatCap = Math.max(2, limit - 2);
   const out = [];
   const perCat = {};
   for (const c of scored) {
-    if ((perCat[c.category] || 0) >= 2) continue;
+    if ((perCat[c.category] || 0) >= perCatCap) continue;
     perCat[c.category] = (perCat[c.category] || 0) + 1;
     out.push(c);
     if (out.length >= limit) break;

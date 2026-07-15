@@ -60,7 +60,11 @@ permissions:
 jobs:
   run:
     runs-on: ubuntu-latest
-    timeout-minutes: 55
+    # 120 not 55 (owner 2026-07-15): a build-ahead run now builds the whole slate (up to 7) in ONE
+    # firing, and publish happens AFTER the build loop — so a mid-build timeout would lose every built
+    # reel. At ~5-6 min/reel, 7 builds + held attempts is ~50-60 min; 120 gives ample headroom so the run
+    # always reaches the publish+ledger-commit steps. Extra minutes are free (idle after the day is full).
+    timeout-minutes: 120
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4

@@ -393,6 +393,26 @@ await t("scout: mocked scoring + variety cap", async () => {
   setMock(null);
 });
 
+await t("scout: per-category cap scales with limit so a run can reach 7 (7/day structural fix)", async () => {
+  // 14 celebrity/gossip candidates all scored high. The OLD flat cap of 2 returned just 2 (→ max 6/run
+  // across 3 categories, so a run could NEVER build 7). The scaled cap (max(2, limit-2)) must let the
+  // slate reach the target so one run can attempt enough to ship 7 after holds.
+  const cands = Array.from({ length: 14 }, (_, i) => ({
+    slug: `cel-${i}`, title: `Celebrity story number ${i} breaks today`, dek: "detail", category: "celebrity",
+    date: "2026-07-15", formatTag: "gossip", body: "body", sourceUrls: [], heroImage: null,
+  }));
+  setMock(({ kind }) => {
+    if (kind !== "llm") return undefined;
+    return { scores: cands.map((c) => ({ slug: c.slug, score: 80, sendability: 8, breaking: false, segment: "Celebrity Wire" })) };
+  });
+  const slate15 = await scout({ limit: 15, candidates: cands });
+  assert.ok(slate15.length >= 7, `single-category slate reached ${slate15.length} (need ≥7), old cap gave 2`);
+  // a tiny manual run still keeps a tight variety cap
+  const slate3 = await scout({ limit: 3, candidates: cands });
+  assert.ok(slate3.length <= 2, `small run keeps tight cap, got ${slate3.length}`);
+  setMock(null);
+});
+
 // ── verify agent (mocked LLM, real walls) ──────────────────────────────────────
 await t("verify: source trusted — unverified quote/contradiction never HOLD (cut, not block)", async () => {
   setMock(({ kind }) => (kind === "llm" ? { verdicts: [{ i: 0, verdict: "supported" }, { i: 1, verdict: "supported" }, { i: 2, verdict: "unsupported" }, { i: 3, verdict: "supported" }] } : undefined));
