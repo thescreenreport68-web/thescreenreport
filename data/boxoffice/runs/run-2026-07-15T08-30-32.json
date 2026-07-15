@@ -1,0 +1,89 @@
+{
+ "runId": "run-2026-07-15T08-30-32",
+ "mode": "live",
+ "startedAt": "2026-07-15T08:30:32.529Z",
+ "films": 6,
+ "published": [],
+ "held": [
+  {
+   "tag": "moana-bo-update×BO-UPDATE",
+   "reason": "words 152 < 180 (owner-set ~200-word minimum) | seo-faq: fewer than 2 real FAQs",
+   "score": 50
+  },
+  {
+   "tag": "minions-monsters-bo-update×BO-UPDATE",
+   "reason": "fidelity: 6 unsupported figures/claims — draft-level failure",
+   "score": 0
+  },
+  {
+   "tag": "toy-story-5-bo-update×BO-UPDATE",
+   "reason": "words 95 < 180 (owner-set ~200-word minimum) | seo-faq: fewer than 2 real FAQs | soft-floor engagement 4 < 5",
+   "score": 45
+  },
+  {
+   "tag": "evil-dead-burn-bo-update×BO-UPDATE",
+   "reason": "fidelity: 8 unsupported figures/claims — draft-level failure",
+   "score": 0
+  },
+  {
+   "tag": "young-washington-bo-update×BO-UPDATE",
+   "reason": "fidelity: 5 unsupported figures/claims — draft-level failure",
+   "score": 0
+  },
+  {
+   "tag": "obsession-bo-update×BO-UPDATE",
+   "reason": "words 140 < 180 (owner-set ~200-word minimum) | seo-faq: fewer than 2 real FAQs | soft-floor engagement 4 < 5",
+   "score": 45
+  }
+ ],
+ "rejected": [],
+ "skipped": [],
+ "blocked": [],
+ "finishedAt": "2026-07-15T08:43:13.868Z",
+ "meter": {
+  "byRole": {
+   "gatherer": {
+    "calls": 7,
+    "errors": 0,
+    "in": 22500,
+    "out": 2581,
+    "usd": 0.00328,
+    "ms": 9872
+   },
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3370,
+    "out": 348,
+    "usd": 0.00017,
+    "ms": 1213
+   },
+   "synthesizer": {
+    "calls": 6,
+    "errors": 0,
+    "in": 4544,
+    "out": 4578,
+    "usd": 0.00123,
+    "ms": 90501
+   },
+   "writer": {
+    "calls": 12,
+    "errors": 0,
+    "in": 22481,
+    "out": 11903,
+    "usd": 0.02804,
+    "ms": 211522
+   },
+   "qa": {
+    "calls": 28,
+    "errors": 1,
+    "in": 82087,
+    "out": 11826,
+    "usd": 0.05232,
+    "ms": 95726
+   }
+  },
+  "totalUsd": 0.08504
+ },
+ "openrouterTotalUsd": 0.09083
+}
