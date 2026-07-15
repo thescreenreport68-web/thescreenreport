@@ -1,42 +1,105 @@
 {
-  "runId": "run-2026-07-15T11-00-32",
-  "builtAt": "2026-07-15T11:00:59.469Z",
-  "count": 11,
+  "runId": "run-2026-07-15T15-00-34",
+  "builtAt": "2026-07-15T15:01:22.865Z",
+  "count": 10,
   "topics": [
     {
-      "id": "news-venice-film-festival-immersive-lineup",
-      "slug": "venice-margot-robbie-andy-serkis-omar-sy-david-bowie-projects-among-im",
-      "title": "Venice: Margot Robbie, Andy Serkis, Omar Sy David Bowie Projects Among Immersive Lineup",
+      "id": "news-creatives-from-sharknado-and-doctor-who-making-ai-films",
+      "slug": "creatives-from-sharknado-and-doctor-who-are-now-making-ai-films",
+      "title": "Creatives from 'Sharknado' and 'Doctor Who' Are Now Making AI Films",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "venice-film-festival-immersive-lineup",
-      "primaryKeyword": "venice film festival",
-      "primaryEntity": "Venice Film Festival",
+      "eventSlug": "creatives-from-sharknado-and-doctor-who-making-ai-films",
+      "primaryKeyword": "ai films",
+      "primaryEntity": "AI Films",
       "entities": [
-        "Margot Robbie",
-        "Andy Serkis",
-        "Omar Sy"
+        "Sharknado",
+        "Doctor Who"
       ],
-      "angle": "Venice Film Festival announces immersive sidebar lineup featuring projects with Margot Robbie and Andy Serkis",
+      "angle": "Creatives known for 'Sharknado' and 'Doctor Who' are now involved in making AI-generated films for the startup Promise AI.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/business/digital/ai-films-promise-sharknado-doctor-who-1236648616/",
+          "ageMin": 1,
+          "headline": "Creatives from Sharknado and Doctor Who’ Are Now Making AI Films (Exclusive)",
+          "summary": "For its new slate, the startup Promise AI is boldly bringing in traditionalists to pair with generative creators."
+        }
+      ],
+      "ageMin": 1,
+      "_cand": {
+        "key": "rss:creatives-from-sharknado-and-doctor-who-are-now-making-ai-fi",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 93,
+      "signals": {
+        "recency": 30,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-its-always-sunny-in-philadelphia-season-18-renewal",
+      "slug": "it-s-always-sunny-in-philadelphia-sets-return-for-expanded-season-18-a",
+      "title": "'It's Always Sunny In Philadelphia' Sets Return For Expanded Season 18 At FX",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "renewal",
+      "sensitivity": "normal",
+      "eventSlug": "its-always-sunny-in-philadelphia-season-18-renewal",
+      "primaryKeyword": "its always sunny in philadelphia season 18",
+      "primaryEntity": "It's Always Sunny in Philadelphia",
+      "entities": [
+        "FX's A Christmas Carol",
+        "FX"
+      ],
+      "angle": "FX has renewed 'It's Always Sunny in Philadelphia' for an expanded 18th season, with the premiere date set for August 17.",
       "tmdbType": "movie",
       "source": "rss:Deadline",
       "sources": [
         {
           "outlet": "Deadline",
           "tier": 7,
-          "url": "https://deadline.com/2026/07/venice-immersive-margot-robbie-david-bowie-lineup-1236982769/",
-          "ageMin": 33,
-          "headline": "Venice: Margot Robbie, Andy Serkis, Omar Sy David Bowie Projects Among Immersive Lineup",
-          "summary": "The Venice Film Festival’s immersive sidebar celebrates its 10th anniversary this year with a selection of projects, including titles featuring contributions by high-profile names such as Margot Robbie and Omar Sy. Overall, Venice Immersive will present 68 projects from 26 countries, of which 30 will play in competition, and 35 will be out of competition. [ ]"
+          "url": "https://deadline.com/2026/07/its-always-sunny-in-philadelphia-season-18-release-date-1236982870/",
+          "ageMin": 0,
+          "headline": "It s Always Sunny In Philadelphia Sets Return For Expanded Season 18 At FX",
+          "summary": "FX has set Monday, August 17 for the Season 18 premiere of It s Always Sunny in Philadelphia. It returns with an expanded 10-episode season, up from eight episodes in the previous three seasons. It will premiere at 9 p.m. ET/6 p.m. PT on FXX, FX and Hulu, and streaming on Disney+ internationally. The network also [ ]"
         }
       ],
-      "ageMin": 33,
+      "ageMin": 0,
       "_cand": {
-        "key": "rss:venice-margot-robbie-andy-serkis-omar-sy-david-bowie-project",
+        "key": "rss:it-s-always-sunny-in-philadelphia-sets-return-for-expanded-s",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -57,52 +120,50 @@
       },
       "priority": 87,
       "signals": {
-        "recency": 24,
+        "recency": 30,
         "corroboration": 12,
         "status": 18,
         "type": 9,
         "pop": 0,
         "breakout": 0,
-        "big": 24,
+        "big": 18,
         "trending": 0,
         "softTv": 0
       }
     },
     {
-      "id": "news-army-of-shadows-thriller-series-casting",
-      "slug": "paddy-considine-america-ferrera-alex-hassell-kit-harington-to-lead-ron",
-      "title": "Paddy Considine, America Ferrera, Alex Hassell, Kit Harington to Lead Ronan Bennett's Thriller Series 'Army of Shadows'",
-      "contentType": "news",
-      "formatTag": "news",
+      "id": "trailer-the-challenge-season-42-trailer-paramount-plus",
+      "slug": "the-challenge-leaves-mtv-for-season-42-meet-the-cast-and-watch-the-tra",
+      "title": "‘The Challenge’ Leaves MTV for Season 42: Meet the Cast and Watch the Trailer for Cutthroat on Paramount+ (EXCLUSIVE)",
+      "contentType": "trailer",
+      "formatTag": "trailer",
       "category": "tv",
-      "subcategory": "news",
-      "eventType": "casting",
+      "subcategory": "trailers",
+      "eventType": "trailer",
       "sensitivity": "normal",
-      "eventSlug": "army-of-shadows-thriller-series-casting",
-      "primaryKeyword": "army of shadows series casting",
-      "primaryEntity": "Army of Shadows",
+      "eventSlug": "the-challenge-season-42-trailer-paramount-plus",
+      "primaryKeyword": "the challenge season 42 trailer",
+      "primaryEntity": "The Challenge",
       "entities": [
-        "Army of Shadows (TV series)",
-        "Paddy Considine",
-        "America Ferrera",
-        "Alex Hassell"
+        "The Challenge (TV series)",
+        "Paramount+"
       ],
-      "angle": "Paddy Considine, America Ferrera, Alex Hassell, and Kit Harington have been cast in Ronan Bennett's upcoming thriller series 'Army of Shadows'.",
+      "angle": "The reality competition series 'The Challenge' is moving to Paramount+ for its 42nd season, with the trailer for 'The Challenge: Cutthroat' released.",
       "tmdbType": "movie",
       "source": "rss:Variety",
       "sources": [
         {
           "outlet": "Variety",
           "tier": 7,
-          "url": "https://variety.com/2026/tv/global/kit-harington-paddy-considine-ronan-bennett-army-of-shadows-1236810822/",
-          "ageMin": 31,
-          "headline": "Paddy Considine, America Ferrera, Alex Hassell and Kit Harington to Lead Ronan Bennett s Thriller Series Army of Shadows (EXCLUSIVE)",
-          "summary": "Army of Shadows, the upcoming thriller series from BAFTA-winning MobLand and The Day of the Jackal creator Ronan Bennett and set in a near-future authoritarian Britain, has set its top cast. Leading the ensemble are BAFTA winner Paddy Considine ( House of The Dragon, MobLand ), Oscar nominee and Golden Globe winner America Ferrera ( Barbie, The Lost [ ]"
+          "url": "https://variety.com/gallery/the-challenge-42-cast-trailer-cutthroat-paramount-plus/",
+          "ageMin": 120,
+          "headline": "‘The Challenge’ Leaves MTV for Season 42: Meet the Cast and Watch the Trailer for Cutthroat on Paramount+ (EXCLUSIVE)",
+          "summary": "The Challenge is heading to a new home, but it s bringing back a familiar theme. The upcoming Season 42, The Challenge: Cutthroat, will debut on August 5 on Paramount+. The show will still have a weekly rollout with new episodes dropping at 12 a.m. PT/3 a.m. ET. The series, now billed as a Paramount+ original, has [ ]"
         }
       ],
-      "ageMin": 31,
+      "ageMin": 120,
       "_cand": {
-        "key": "rss:paddy-considine-america-ferrera-alex-hassell-and-kit-haringt",
+        "key": "rss:-the-challenge-leaves-mtv-for-season-42-meet-the-cast-and-wa",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -121,12 +182,12 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 86,
+      "priority": 79,
       "signals": {
-        "recency": 24,
+        "recency": 16,
         "corroboration": 12,
         "status": 18,
-        "type": 14,
+        "type": 15,
         "pop": 0,
         "breakout": 0,
         "big": 18,
@@ -135,39 +196,38 @@
       }
     },
     {
-      "id": "news-colin-from-accounts-ending-season-3",
-      "slug": "colin-from-accounts-to-end-after-season-3",
-      "title": "'Colin From Accounts' to End After Season 3",
-      "contentType": "news",
-      "formatTag": "news",
+      "id": "trailer-my-life-with-the-walter-boys-season-3-trailer",
+      "slug": "netflix-s-my-life-with-the-walter-boys-season-3-trailer-teases-fallout",
+      "title": "Netflix’s My Life With the Walter Boys Season 3 Trailer Teases Fallout From That Big Love Confession",
+      "contentType": "trailer",
+      "formatTag": "trailer",
       "category": "tv",
-      "subcategory": "news",
-      "eventType": "cancellation",
+      "subcategory": "trailers",
+      "eventType": "trailer",
       "sensitivity": "normal",
-      "eventSlug": "colin-from-accounts-ending-season-3",
-      "primaryKeyword": "Colin From Accounts ending",
-      "primaryEntity": "Colin from Accounts",
+      "eventSlug": "my-life-with-the-walter-boys-season-3-trailer",
+      "primaryKeyword": "my life with the walter boys season 3 trailer",
+      "primaryEntity": "My Life with the Walter Boys",
       "entities": [
-        "Colin From Accounts",
-        "Harriet Dyer",
-        "Patrick Brammall"
+        "My Life with the Walter Boys (TV series)",
+        "Netflix"
       ],
-      "angle": "The Australian comedy 'Colin From Accounts' will conclude with its upcoming third season.",
+      "angle": "The trailer for 'My Life With the Walter Boys' Season 3 teases the fallout from a major love confession and the patriarch's hospitalization.",
       "tmdbType": "movie",
-      "source": "rss:Deadline",
+      "source": "rss:THR",
       "sources": [
         {
-          "outlet": "Deadline",
+          "outlet": "THR",
           "tier": 7,
-          "url": "https://deadline.com/2026/07/colin-from-accounts-ending-season-3-launch-confirmed-1236982698/",
-          "ageMin": 171,
-          "headline": "Colin From Accounts Ending With Season 3, Confirm Harriet Dyer Patrick Brammall; Final Launch Date Set",
-          "summary": "The upcoming third season of beloved Australian comedy Colin From Accounts will be last, the show s stars have confirmed. Harriet Dyer and Patrick Brammall, who play a mismatched Sydney couple who adopt an injured dog, made the announcement alongside production house Easy Tiger and streamer Binge. The news came as Binge revealed a July 27 [ ]"
+          "url": "https://www.hollywoodreporter.com/tv/tv-news/netflix-my-life-with-the-walter-boys-season-3-trailer-1236648871/",
+          "ageMin": 121,
+          "headline": "Netflix’s My Life With the Walter Boys Season 3 Trailer Teases Fallout From That Big Love Confession",
+          "summary": "Season three kicks off after the cliffhanger with the family reeling from Walter patriarch George now being in the hospital and Jackie, Cole and Alex left to deal with that big love confession."
         }
       ],
-      "ageMin": 171,
+      "ageMin": 121,
       "_cand": {
-        "key": "rss:colin-from-accounts-ending-with-season-3-confirm-harriet-dye",
+        "key": "rss:netflix-s-my-life-with-the-walter-boys-season-3-trailer-teas",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -177,21 +237,21 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Deadline"
+          "THR"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Deadline",
+        "attribution": "THR",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 75,
+      "priority": 79,
       "signals": {
         "recency": 16,
         "corroboration": 12,
         "status": 18,
-        "type": 11,
+        "type": 15,
         "pop": 0,
         "breakout": 0,
         "big": 18,
@@ -200,39 +260,104 @@
       }
     },
     {
-      "id": "news-itv-jeff-pope-lauren-cowell-social-media-drama",
-      "slug": "itv-and-jeff-pope-developing-drama-on-social-media-s-impact-on-kids",
-      "title": "ITV and Jeff Pope Developing Drama on Social Media's Impact on Kids",
+      "id": "news-lincoln-center-scary-movies-lineup",
+      "slug": "lincoln-center-reveals-scary-movies-lineup-including-henry-portrait-of",
+      "title": "Lincoln Center Reveals 'Scary Movies' Lineup Including 'Henry: Portrait of a Serial Killer'",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "lincoln-center-scary-movies-lineup",
+      "primaryKeyword": "Lincoln Center Scary Movies",
+      "primaryEntity": "Scary Movies",
+      "entities": [
+        "Lincoln Center",
+        "Henry: Portrait of a Serial Killer",
+        "Wendigo"
+      ],
+      "angle": "Lincoln Center announces its 'Scary Movies' film series lineup, featuring titles like 'Henry: Portrait of a Serial Killer' and 'Wendigo'.",
+      "tmdbType": "movie",
+      "source": "rss:IndieWire",
+      "sources": [
+        {
+          "outlet": "IndieWire",
+          "tier": 7,
+          "url": "https://www.indiewire.com/news/festivals/scary-movies-film-at-lincoln-center-series-lineup-1235205376/",
+          "ageMin": 61,
+          "headline": "Henry: Portrait of a Serial Killer, Wendigo Restorations, and 14 More Films Set for Lincoln Center s Scary Movies Lineup",
+          "summary": "Exclusive: Film at Lincoln Center's series runs August 12-20, starting with Casper Kelly's Sundance favorite \"Buddy.\""
+        }
+      ],
+      "ageMin": 61,
+      "_cand": {
+        "key": "rss:henry-portrait-of-a-serial-killer-wendigo-restorations-and-1",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "IndieWire"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "IndieWire",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 79,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-kevin-hart-cold-as-balls-netflix",
+      "slug": "kevin-hart-s-cold-as-balls-ice-bath-interview-show-moves-to-netflix",
+      "title": "Kevin Hart's 'Cold as Balls' Ice-Bath Interview Show Moves to Netflix",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
       "eventType": "announcement",
-      "sensitivity": "high",
-      "eventSlug": "itv-jeff-pope-lauren-cowell-social-media-drama",
-      "primaryKeyword": "social media drama",
-      "primaryEntity": "ITV",
+      "sensitivity": "normal",
+      "eventSlug": "kevin-hart-cold-as-balls-netflix",
+      "primaryKeyword": "Kevin Hart Cold as Balls",
+      "primaryEntity": "Cold as Balls",
       "entities": [
-        "Jeff Pope",
-        "Lauren Cowell",
-        "Simon Cowell"
+        "Kevin Hart: What Now?",
+        "Kevin Hart",
+        "Netflix"
       ],
-      "angle": "ITV and Jeff Pope are developing a drama about the impact of social media on children, an idea from Lauren Cowell.",
+      "angle": "Kevin Hart's ice-bath interview series 'Cold as Balls' is set to debut new episodes on Netflix.",
       "tmdbType": "movie",
-      "source": "rss:Deadline",
+      "source": "rss:Variety",
       "sources": [
         {
-          "outlet": "Deadline",
+          "outlet": "Variety",
           "tier": 7,
-          "url": "https://deadline.com/2026/07/itv-simon-cowell-partner-making-social-media-drama-jeff-pope-1236981923/",
-          "ageMin": 151,
-          "headline": "ITV, Jeff Pope Lauren Cowell Teaming On Devastating Drama About Social Media s Impact On Kids",
-          "summary": "EXCLUSIVE: ITV and Oscar-nominee Jeff Pope are teaming on a drama examining the devastating impact of social media on children, an idea that came to the broadcaster from Simon Cowell’s partner Lauren Cowell. The as-yet-untitled series will follow the story of multiple families and campaigners including Ellen Roome, who believes that the tragic death of [ ]"
+          "url": "https://variety.com/2026/tv/news/kevin-hart-cold-as-balls-new-episodes-netflix-1236811300/",
+          "ageMin": 61,
+          "headline": "Kevin Hart s Ice-Bath Interview Show Cold as Balls to Debut New Episodes on Netflix (EXCLUSIVE)",
+          "summary": "Kevin Hart will get down to the cold hard truth in his ice-bath interview show Cold as Balls, six new episodes of which are coming to Netflix later this summer. The new interviews will be filmed live at Fanatics Fest in New York this week. Hart s guests include Serena Williams, Rob Gronkowski, Cooper Flagg, Sean [ ]"
         }
       ],
-      "ageMin": 151,
+      "ageMin": 61,
       "_cand": {
-        "key": "rss:itv-jeff-pope-lauren-cowell-teaming-on-devastating-drama-abo",
+        "key": "rss:kevin-hart-s-ice-bath-interview-show-cold-as-balls-to-debut-",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -242,11 +367,11 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Deadline"
+          "Variety"
         ],
         "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "Deadline",
+        "sensitivity": "normal",
+        "attribution": "Variety",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -265,38 +390,104 @@
       }
     },
     {
-      "id": "music-news-queens-of-the-stone-age-new-song-tour",
-      "slug": "queens-of-the-stone-age-return-with-easy-street-announce-tour-of-austr",
-      "title": "Queens of the Stone Age Return With ‘Easy Street, Announce Tour of Australia and NZ",
+      "id": "news-the-great-beyond-delayed-year",
+      "slug": "j-j-abrams-glen-powell-film-the-great-beyond-delayed-a-year",
+      "title": "J.J. Abrams, Glen Powell Film 'The Great Beyond' Delayed a Year",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "the-great-beyond-delayed-year",
+      "primaryKeyword": "the great beyond movie",
+      "primaryEntity": "The Great Beyond (film)",
+      "entities": [
+        "Cloverfield",
+        "J.J. Abrams",
+        "Glen Powell",
+        "Warner Bros."
+      ],
+      "angle": "J.J. Abrams and Glen Powell's sci-fi movie 'The Great Beyond' has been delayed by a year as part of Warner Bros.' slate shakeup.",
+      "tmdbType": "movie",
+      "source": "rss:TheWrap",
+      "sources": [
+        {
+          "outlet": "TheWrap",
+          "tier": 7,
+          "url": "https://www.thewrap.com/creative-content/movies/jj-abrams-great-beyond-delayed-release-date/",
+          "ageMin": 35,
+          "headline": "J.J. Abrams Glen Powell Movie The Great Beyond Delayed a Year in Warner Bros. Slate Shakeup",
+          "summary": "The original sci-fi movie was originally slated to hit theaters this fall The post J.J. Abrams Glen Powell Movie The Great Beyond Delayed a Year in Warner Bros. Slate Shakeup appeared first on TheWrap ."
+        }
+      ],
+      "ageMin": 35,
+      "_cand": {
+        "key": "rss:j-j-abrams-glen-powell-movie-the-great-beyond-delayed-a-year",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "TheWrap"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "TheWrap",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 71,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 12,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "music-news-madonna-confessions-ii-debut",
+      "slug": "how-did-madonna-s-confessions-ii-score-such-a-successful-first-week-de",
+      "title": "How Did Madonna s Confessions II Score Such a Successful First-Week Debut?",
       "contentType": "music-news",
       "formatTag": "music-news",
       "category": "music",
       "subcategory": "news",
-      "eventType": "announcement",
+      "eventType": "other",
       "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "queens-of-the-stone-age-new-song-tour",
-      "primaryKeyword": "queens of the stone age",
-      "primaryEntity": "Queens of the Stone Age",
+      "eventSlug": "madonna-confessions-ii-debut",
+      "primaryKeyword": "Madonna Confessions II",
+      "primaryEntity": "Madonna",
       "entities": [
-        "Easy Street"
+        "Confessions II"
       ],
-      "angle": "Queens of the Stone Age release new single 'Easy Street' and announce Australia/NZ tour",
+      "angle": "Analysis of Madonna's latest album's chart success.",
       "tmdbType": "movie",
       "source": "rss:Billboard",
       "sources": [
         {
           "outlet": "Billboard",
           "tier": 7,
-          "url": "https://www.billboard.com/music/rock/queens-of-the-stone-age-easy-street-tour-australia-and-nz-1236294451/",
-          "ageMin": 63,
-          "headline": "Queens of the Stone Age Return With ‘Easy Street, Announce Tour of Australia and NZ",
-          "summary": "“Easy Street” is the band’s first new song since 2023’s In Times New Roman."
+          "url": "https://www.billboard.com/music/chart-beat/madonna-confessions-ii-five-burning-questions-1236294093/",
+          "ageMin": 46,
+          "headline": "How Did Madonna s Confessions II Score Such a Successful First-Week Debut?",
+          "summary": "This week's Five Burning Questions looks at the Billboard 200-topping sequel set, and how the Queen of Pop pulled off her best numbers in over a decade for its first week."
         }
       ],
-      "ageMin": 63,
+      "ageMin": 46,
       "_cand": {
-        "key": "rss:queens-of-the-stone-age-return-with-easy-street-announce-tou",
+        "key": "rss:how-did-madonna-s-confessions-ii-score-such-a-successful-fir",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -316,12 +507,12 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 55,
+      "priority": 59,
       "signals": {
-        "recency": 16,
+        "recency": 24,
         "corroboration": 12,
         "status": 18,
-        "type": 9,
+        "type": 5,
         "pop": 0,
         "breakout": 0,
         "big": 0,
@@ -330,104 +521,37 @@
       }
     },
     {
-      "id": "news-daddy-issues-ending-season-3",
-      "slug": "daddy-issues-concluding-with-third-and-final-season-on-bbc",
-      "title": "'Daddy Issues' Concluding with Third and Final Season on BBC",
+      "id": "news-the-challenge-moves-to-paramount-plus",
+      "slug": "the-challenge-moves-to-paramount-for-season-42",
+      "title": "The Challenge Moves to Paramount+ for Season 42",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
-      "eventType": "cancellation",
-      "sensitivity": "normal",
-      "eventSlug": "daddy-issues-ending-season-3",
-      "primaryKeyword": "Daddy Issues ending",
-      "primaryEntity": "Daddy Issues",
-      "entities": [
-        "Aimee Lou Wood",
-        "David Morrissey",
-        "BBC"
-      ],
-      "angle": "The BBC show 'Daddy Issues' starring Aimee Lou Wood and David Morrissey will conclude with its third season.",
-      "tmdbType": "movie",
-      "source": "rss:Deadline",
-      "sources": [
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/daddy-issues-aimee-lou-wood-bbc-final-season-1236981874/",
-          "ageMin": 181,
-          "headline": "Aimee Lou Wood Returning For Daddy Issues Third And Final Season On BBC",
-          "summary": "EXCLUSIVE: Aimee Lou Wood and David Morrissey are set for a one final round of Daddy Issues. The star will return to star in a six-part Season 3 of the BBC show, which has been BBC Three s biggest comedy launch since the start of 2022. The show, which is filmed and set in Stockport, England, [ ]"
-        }
-      ],
-      "ageMin": 181,
-      "_cand": {
-        "key": "rss:aimee-lou-wood-returning-for-daddy-issues-third-and-final-se",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Deadline"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Deadline",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 68,
-      "signals": {
-        "recency": 9,
-        "corroboration": 12,
-        "status": 18,
-        "type": 11,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "news-matt-damon-tom-holland-odyssey-costume-mishap",
-      "slug": "matt-damon-admits-he-mistook-odyssey-co-star-tom-holland-s-costume-mis",
-      "title": "Matt Damon Admits He Mistook Odyssey Co-Star Tom Holland s Costume Mishap for Heartfelt Acting Choice",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "matt-damon-tom-holland-odyssey-costume-mishap",
-      "primaryKeyword": "matt damon tom holland",
-      "primaryEntity": "Matt Damon",
+      "eventSlug": "the-challenge-moves-to-paramount-plus",
+      "primaryKeyword": "The Challenge",
+      "primaryEntity": "The Challenge",
       "entities": [
-        "Captain Tsubasa Movie 05: The Most Powerful Opponent! Holland Youth",
-        "Tom Holland",
-        "The Odyssey (film)"
+        "Paramount+"
       ],
-      "angle": "Matt Damon recounts mistaking Tom Holland's costume mishap for intentional acting during 'The Odyssey' filming.",
+      "angle": "The reality competition series 'The Challenge' is moving to Paramount+.",
       "tmdbType": "movie",
       "source": "rss:TheWrap",
       "sources": [
         {
           "outlet": "TheWrap",
           "tier": 7,
-          "url": "https://www.thewrap.com/creative-content/movies/matt-damon-mistook-tom-holland-costume-mishap-acting-choice-the-odyssey/",
-          "ageMin": 364,
-          "headline": "Matt Damon Admits He Mistook Odyssey Co-Star Tom Holland s Costume Mishap for Heartfelt Acting Choice",
-          "summary": "\"Needless to say, it's not in the final film,\" the Oscar winner adds The post Matt Damon Admits He Mistook Odyssey Co-Star Tom Holland s Costume Mishap for Heartfelt Acting Choice appeared first on TheWrap ."
+          "url": "https://www.thewrap.com/creative-content/tv-shows/the-challenge-season-42-cutthroat-paramount-plus-premiere/",
+          "ageMin": 61,
+          "headline": "The Challenge Moves to Paramount+ for Season 42",
+          "summary": "\"The Challenge: Cutthroat II\" premieres Aug. 5 The post The Challenge Moves to Paramount+ for Season 42 appeared first on TheWrap ."
         }
       ],
-      "ageMin": 364,
+      "ageMin": 61,
       "_cand": {
-        "key": "rss:matt-damon-admits-he-mistook-odyssey-co-star-tom-holland-s-c",
+        "key": "rss:the-challenge-moves-to-paramount-for-season-42",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -446,247 +570,54 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 51,
+      "priority": 57,
       "signals": {
-        "recency": 4,
+        "recency": 16,
         "corroboration": 12,
         "status": 18,
         "type": 5,
         "pop": 0,
         "breakout": 0,
-        "big": 12,
+        "big": 6,
         "trending": 0,
         "softTv": 0
       }
     },
     {
-      "id": "news-anya-taylor-joy-lucky-apple-tv-series",
-      "slug": "anya-taylor-joy-is-a-con-artist-on-the-run-in-apple-tv-s-high-voltage-",
-      "title": "Anya Taylor-Joy Is a Con Artist on the Run in Apple TV’s High-Voltage Thriller ‘Lucky’",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "anya-taylor-joy-lucky-apple-tv-series",
-      "primaryKeyword": "anya taylor-joy lucky apple tv",
-      "primaryEntity": "Lucky",
-      "entities": [
-        "Lucky (TV series)",
-        "Anya Taylor-Joy",
-        "Apple TV+"
-      ],
-      "angle": "Anya Taylor-Joy stars in Apple TV+'s new crime thriller 'Lucky'.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/tv/reviews/lucky-review-apple-tv-anya-taylor-joy-1236806733/",
-          "ageMin": 601,
-          "headline": "Anya Taylor-Joy Is a Con Artist on the Run in Apple TV’s High-Voltage Thriller ‘Lucky’: TV Review",
-          "summary": "Based on Marissa Stapley’s 2021 novel of the same name and adapted for television by “Your Friends Neighbors” creator Jonathan Tropper, Apple TV limited series “Lucky” is the captivating story of one young woman’s desperate attempt to break free of the dark and violent life that’s shaped her. More than an intricate game of [ ]"
-        }
-      ],
-      "ageMin": 601,
-      "_cand": {
-        "key": "rss:anya-taylor-joy-is-a-con-artist-on-the-run-in-apple-tv-s-hig",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 66,
-      "signals": {
-        "recency": 4,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "news-chris-ferguson-warner-bros-first-look-deal",
-      "slug": "backrooms-producer-chris-ferguson-signs-first-look-deal-with-warner-br",
-      "title": "'Backrooms' Producer Chris Ferguson Signs First Look Deal With Warner Bros.",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "deal",
-      "sensitivity": "normal",
-      "eventSlug": "chris-ferguson-warner-bros-first-look-deal",
-      "primaryKeyword": "chris ferguson warner bros deal",
-      "primaryEntity": "Chris Ferguson",
-      "entities": [
-        "Longlegs",
-        "Warner Bros.",
-        "Oddfellows",
-        "Longlegs (film)"
-      ],
-      "angle": "'Backrooms' producer Chris Ferguson has signed a first-look deal with Warner Bros. for his banner Oddfellows.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/backrooms-producer-chris-ferguson-warner-bros-1st-look-deal-1236647939/",
-          "ageMin": 969,
-          "headline": "‘Backrooms’ Producer Chris Ferguson Signs First Look Deal With Warner Bros.",
-          "summary": "The deal with the Vancouver-based producer and his Oddfellows banner also follows his work with Osgood Perkins on ‘Longlegs’ and ‘The Monkey.'"
-        }
-      ],
-      "ageMin": 969,
-      "_cand": {
-        "key": "rss:-backrooms-producer-chris-ferguson-signs-first-look-deal-wit",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 49,
-      "signals": {
-        "recency": 1,
-        "corroboration": 12,
-        "status": 18,
-        "type": 6,
-        "pop": 0,
-        "breakout": 0,
-        "big": 12,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "news-heartstopper-forever-world-premiere",
-      "slug": "kit-connor-and-joe-locke-lead-heartstopper-forever-at-feel-good-world-",
-      "title": "Kit Connor and Joe Locke Lead 'Heartstopper Forever' at Feel-Good World Premiere",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "heartstopper-forever-world-premiere",
-      "primaryKeyword": "heartstopper forever premiere",
-      "primaryEntity": "Heartstopper Forever",
-      "entities": [
-        "Kit Connor",
-        "Joe Locke",
-        "Heartstopper (TV series)"
-      ],
-      "angle": "Stars Kit Connor and Joe Locke led the feel-good world premiere of 'Heartstopper Forever,' marking the closing of the beloved franchise.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/kit-connor-joe-locke-heartstopper-forever-premiere-netflix-1236647618/",
-          "ageMin": 772,
-          "headline": "Kit Connor and Joe Locke Lead the Cast of Heartstopper Forever at Feel-Good World Premiere",
-          "summary": "The vibes were, as expected, incredibly wholesome at London's Cineworld theater, where the film's stars sat for a post-screening Q A on closing out the beloved 'Heartstopper' franchise."
-        }
-      ],
-      "ageMin": 772,
-      "_cand": {
-        "key": "rss:kit-connor-and-joe-locke-lead-the-cast-of-heartstopper-forev",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 58,
-      "signals": {
-        "recency": 1,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "news-scott-bryce-death",
-      "slug": "scott-bryce-as-the-world-turns-star-dies-at-68",
-      "title": "Scott Bryce, As the World Turns Star, Dies at 68",
+      "id": "news-david-bowie-rare-recordings-1965-release",
+      "slug": "david-bowie-s-rare-1965-recordings-to-be-released",
+      "title": "David Bowie's Rare 1965 Recordings to Be Released",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
-      "eventType": "death",
-      "sensitivity": "high",
-      "eventSlug": "scott-bryce-death",
-      "primaryKeyword": "scott bryce death",
-      "primaryEntity": "Scott Bryce",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "david-bowie-rare-recordings-1965-release",
+      "primaryKeyword": "david bowie",
+      "primaryEntity": "David Bowie",
       "entities": [
-        "As the World Turns"
+        "Shel Talmy",
+        "Jimmy Page",
+        "Nicky Hopkins"
       ],
-      "angle": "Obituary for 'As the World Turns' star Scott Bryce, who has died at 68.",
+      "angle": "Rare 1965 recordings by David Bowie, featuring sessions with Jimmy Page and Nicky Hopkins, are set for release.",
       "tmdbType": "movie",
-      "source": "rss:TheWrap",
+      "source": "rss:Rolling Stone",
       "sources": [
         {
-          "outlet": "TheWrap",
+          "outlet": "Rolling Stone",
           "tier": 7,
-          "url": "https://www.thewrap.com/culture-lifestyle/culture/scott-bryce-dies-as-the-world-turns-star/",
-          "ageMin": 516,
-          "headline": "Scott Bryce, As the World Turns Star, Dies at 68",
-          "summary": "\"He fought the hardest and most honorable fight I have ever witnessed,\" the actor's son writes The post Scott Bryce, As the World Turns Star, Dies at 68 appeared first on TheWrap ."
+          "url": "https://www.rollingstone.com/music/music-news/david-bowie-rare-recordings-shel-talmy-1965-album-1235593903/",
+          "ageMin": 28,
+          "headline": "David Bowie’s Rare Recordings From 1965 With Shel Talmy Will Finally Be Released",
+          "summary": "“I Want Your Love” shows Bowie playing to the era, which included sessions with Jimmy Page and Nicky Hopkins"
         }
       ],
-      "ageMin": 516,
+      "ageMin": 28,
       "_cand": {
-        "key": "rss:scott-bryce-as-the-world-turns-star-dies-at-68",
+        "key": "rss:david-bowie-s-rare-recordings-from-1965-with-shel-talmy-will",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -696,21 +627,21 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "TheWrap"
+          "Rolling Stone"
         ],
         "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "TheWrap",
+        "sensitivity": "normal",
+        "attribution": "Rolling Stone",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 48,
+      "priority": 63,
       "signals": {
-        "recency": 4,
+        "recency": 24,
         "corroboration": 12,
         "status": 18,
-        "type": 14,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
         "big": 0,
