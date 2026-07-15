@@ -7,6 +7,7 @@ import { agentChat } from "../models.mjs";
 import { FORMS, scopeOk, BOX_OFFICE_FORMS } from "../config.bo.mjs";
 import { loadTracked, streamingExits } from "../tracker.mjs";
 import { fetchNetflixTop10 } from "../netflix.mjs";
+import { fetchDailyChart } from "../dailyChart.mjs";
 import { getTitleFacts } from "../../lib/tmdb.mjs";
 
 // Build a {film, trigger, angle} entry in the finder's canonical shape (used for tracker-surfaced
@@ -32,7 +33,7 @@ box office no matter how popular. Skip films with no genuine money angle right n
 For each pick: a working headline (stars + the number, curiosity without clickbait), the star(s) to lead
 with, and 2 SIMPLE search queries (3-5 plain words, e.g. "Wicked box office weekend"). Output STRICT JSON only.`;
 
-export async function findFilms({ limit = 3, discoverImpl = discoverFilms, chatImpl = null, nowMs = null, trackedImpl = null, providersImpl = null, netflixImpl = null, preferStreaming = false, seen = null } = {}) {
+export async function findFilms({ limit = 3, discoverImpl = discoverFilms, chatImpl = null, nowMs = null, trackedImpl = null, providersImpl = null, netflixImpl = null, dailyChartImpl = null, preferStreaming = false, seen = null } = {}) {
   const films = await discoverImpl({ nowMs });
   const seenSlugs = seen?.slugs || new Set();
   const seenTitles = seen?.titles || new Set();
@@ -95,14 +96,32 @@ export async function findFilms({ limit = 3, discoverImpl = discoverFilms, chatI
       streamPicks.push(mkStream(r, "TRENDING-TV", "netflix-tv", `${r.title} trending on Netflix`, `${r.title} season reactions`));
   } catch { streamPicks = []; }
 
-  // Candidate POOL for the tick (not just 1). Box-office LEADS (owner's priority), but streaming picks are
-  // REACHABLE as a reliable fallback — a tick whose box-office picks are all thin/uncoverable still publishes
-  // a real streaming story instead of coming up empty (the core volume fix). preferStreaming (the ~5 stream
-  // ticks/day) puts streaming first. borun then tries candidates in order until one clears the gates.
+  // DAILY BOX-OFFICE CHART — the box-office volume engine (owner: cover EVERY film in theaters, day 11 → day 12
+  // with its real running cume). Each in-release film becomes a BO-UPDATE carrying its chart cume; the
+  // strictly-higher materiality gate downstream publishes it ONCE/day and never reuses yesterday's number.
+  let chartPicks = [];
+  try {
+    const nowYear = String(new Date(nowMs || Date.now()).getFullYear()); // year hint → TMDB resolves the CURRENT film
+    const chart = await (dailyChartImpl || fetchDailyChart)({ chatImpl, nowMs });
+    for (const f of chart?.films || []) {
+      if (!f?.title || !scopeOk({ title: f.title })) continue;
+      const e = mkEntry(
+        { id: null, title: f.title, year: nowYear, releaseDate: "", popularity: Math.max(50, 100 - (f.rank || 1) * 4), overview: "", originalLanguage: "en", via: "daily-chart" },
+        "BO-UPDATE",
+        { workingTitle: `${f.title} box office ${f.dayInRelease || ""}`.trim(), queries: [`${f.title} box office ${f.dayInRelease || "latest"}`, `${f.title} box office cume`] },
+      );
+      e.film.dailyChart = { cume: f.cume || null, dailyGross: f.dailyGross || null, dailyChangePct: f.dailyChangePct || null, theaters: f.theaters || null, dayInRelease: f.dayInRelease || null };
+      chartPicks.push(e);
+    }
+  } catch { chartPicks = []; }
+
+  // Candidate POOL for the tick. DAILY-CHART box-office LEADS (real running numbers for every film in theaters =
+  // the 15/day engine); streaming picks are a REACHABLE fallback so a tick never comes up empty. preferStreaming
+  // (the ~5 stream ticks/day) puts streaming first. borun tries candidates in order until one clears the gates.
   const poolSize = Math.max(limit, 6);
   const merge = (bo) => (preferStreaming
-    ? [...streamPicks, ...exitEntries, ...bo]
-    : [...exitEntries, ...bo.slice(0, 3), ...streamPicks, ...bo.slice(3)]).slice(0, poolSize);
+    ? [...streamPicks, ...chartPicks, ...exitEntries, ...bo]
+    : [...chartPicks, ...exitEntries, ...bo.slice(0, 2), ...streamPicks, ...bo.slice(2)]).slice(0, poolSize);
 
   if (!films.length) return merge([]);
 

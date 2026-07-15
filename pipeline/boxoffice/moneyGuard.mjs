@@ -77,11 +77,13 @@ export function extractFigures(text) {
 // strings we actually hand the writer (TMDB worldwide/budget); `pcts`/`counts` optional.
 export function buildAllowed({ numbers = [], moneyStrings = [], pcts = [], counts = [] } = {}) {
   const set = new Set();
-  const addFromText = (s) => { for (const f of extractFigures(String(s))) set.add(f.bucket); };
+  const vals = []; // raw allowed money values, for the faithful-rounding tolerance in numberFidelity
+  const addFromText = (s) => { for (const f of extractFigures(String(s))) { set.add(f.bucket); if (f.kind === "money") { const v = normMoney(f.raw); if (v) vals.push(v); } } };
   for (const n of numbers) addFromText(n);
-  for (const s of moneyStrings) { const v = normMoney(s); if (v != null) set.add(moneyBucket(v)); addFromText(s); }
+  for (const s of moneyStrings) { const v = normMoney(s); if (v != null) { set.add(moneyBucket(v)); vals.push(v); } addFromText(s); }
   for (const p of pcts) { const n = parseFloat(p); if (Number.isFinite(n)) set.add(pctBucket(n)); }
   for (const c of counts) { const n = parseInt(String(c).replace(/,/g, ""), 10); if (Number.isFinite(n)) set.add(countBucket(n)); }
+  set.moneyValues = vals; // (a Set can carry a property; existing `.has(bucket)` callers are unaffected)
   return set;
 }
 
@@ -97,14 +99,18 @@ export function numberFidelity(article, allowed) {
   // cutClaim here. Only body + keyTakeaways + faq (all cuttable) feed the cut-generating scan.
   const extra = [...(article?.keyTakeaways || []),
     ...(article?.faq || []).flatMap((f) => [f?.q, f?.a])].filter(Boolean).join(". ");
+  // A faithful ROUNDING of an allowed money figure ($111.7M reported as "$111 million") is not a fabrication —
+  // accept a money figure within ~1.5% of an allowed value; a genuinely wrong number is still cut.
+  const money = allowed.moneyValues || [];
+  const roundedFromAllowed = (raw) => { const v = normMoney(raw); return v != null && money.some((a) => a > 0 && Math.abs(v - a) / a <= 0.015); };
   const unsupported = [];
   const cutClaims = [];
   for (const sent of splitSentences(body + ". " + extra)) {
     for (const f of extractFigures(sent)) {
-      if (!allowed.has(f.bucket)) {
-        unsupported.push({ raw: f.raw, bucket: f.bucket, sentence: sent.trim() });
-        cutClaims.push(sent.trim());
-      }
+      if (allowed.has(f.bucket)) continue;
+      if (f.kind === "money" && roundedFromAllowed(f.raw)) continue;
+      unsupported.push({ raw: f.raw, bucket: f.bucket, sentence: sent.trim() });
+      cutClaims.push(sent.trim());
     }
   }
   return { ok: unsupported.length === 0, unsupported, cutClaims: [...new Set(cutClaims)] };
