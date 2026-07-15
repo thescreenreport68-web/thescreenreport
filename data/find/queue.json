@@ -1,51 +1,143 @@
 {
-  "runId": "run-2026-07-15T15-00-34",
-  "builtAt": "2026-07-15T15:01:22.865Z",
-  "count": 10,
+  "runId": "run-2026-07-15T19-00-34",
+  "builtAt": "2026-07-15T19:01:10.553Z",
+  "count": 18,
   "topics": [
     {
-      "id": "news-creatives-from-sharknado-and-doctor-who-making-ai-films",
-      "slug": "creatives-from-sharknado-and-doctor-who-are-now-making-ai-films",
-      "title": "Creatives from 'Sharknado' and 'Doctor Who' Are Now Making AI Films",
+      "id": "news-danny-mcbride-directs-new-gi-joe-movie",
+      "slug": "danny-mcbride-to-direct-new-g-i-joe-movie-at-paramount",
+      "title": "Danny McBride to Direct New G.I. Joe Movie at Paramount",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
-      "eventType": "announcement",
+      "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "creatives-from-sharknado-and-doctor-who-making-ai-films",
-      "primaryKeyword": "ai films",
-      "primaryEntity": "AI Films",
+      "eventSlug": "danny-mcbride-directs-new-gi-joe-movie",
+      "primaryKeyword": "G.I. Joe movie",
+      "primaryEntity": "G.I. Joe: The Rise of Cobra",
       "entities": [
-        "Sharknado",
-        "Doctor Who"
+        "G.I. Joe",
+        "Danny McBride",
+        "Paramount"
       ],
-      "angle": "Creatives known for 'Sharknado' and 'Doctor Who' are now involved in making AI-generated films for the startup Promise AI.",
+      "angle": "Danny McBride to make his directorial debut on a new G.I. Joe film for Paramount.",
+      "tmdbType": "movie",
+      "source": "rss:Deadline",
+      "sources": [
+        {
+          "outlet": "TheWrap",
+          "tier": 7,
+          "url": "https://www.thewrap.com/creative-content/movies/danny-mcbride-directing-gi-joe-movie/",
+          "ageMin": 151,
+          "headline": "Danny McBride to Direct New G.I. Joe Movie for Paramount",
+          "summary": "The \"Eastbound and Down\" creator also wrote the script for the next film based on the Hasbro franchise The post Danny McBride to Direct New G.I. Joe Movie for Paramount appeared first on TheWrap ."
+        },
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/danny-mcbride-to-direct-g-i-joe-movie-1236647496/",
+          "ageMin": 151,
+          "headline": "Danny McBride to Direct G.I. Joe Movie for Paramount",
+          "summary": "The triple threat was already on board as screenwriter for the Paramount feature."
+        },
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/g-i-joe-movie-danny-mcbride-1236983118/",
+          "ageMin": 74,
+          "headline": "New G.I. Joe Movie At Paramount To Be Directed By Danny McBride",
+          "summary": "After being tapped to pen the next G.I. Joe movie at Paramount, Danny McBride is now set to make his directorial debut on a new feature film on the classic Hasbro toy franchise. Plot details are being kept under wraps at this time, though sources say this is certainly a high priority at the studio [ ]"
+        }
+      ],
+      "ageMin": 74,
+      "_cand": {
+        "key": "rss:new-g-i-joe-movie-at-paramount-to-be-directed-by-danny-mcbri",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 3,
+      "verification": {
+        "tier1Count": 3,
+        "tier1Owners": 2,
+        "outletCount": 3,
+        "outlets": [
+          "TheWrap",
+          "THR",
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": null,
+        "framing": "plain",
+        "status": "CONFIRMED",
+        "publishable": true
+      },
+      "priority": 118,
+      "signals": {
+        "recency": 16,
+        "corroboration": 24,
+        "status": 25,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 15,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-dexter-resurrection-season-2-casting-gabriel-luna",
+      "slug": "dexter-resurrection-adds-gabriel-luna-to-season-2-cast",
+      "title": "Dexter: Resurrection Adds Gabriel Luna to Season 2 Cast",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "dexter-resurrection-season-2-casting-gabriel-luna",
+      "primaryKeyword": "Dexter Resurrection casting",
+      "primaryEntity": "Dexter: Resurrection",
+      "entities": [
+        "Gabriel Luna",
+        "The Last of Us"
+      ],
+      "angle": "Gabriel Luna cast as a serial killer in the second season of 'Dexter: Resurrection'.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
         {
           "outlet": "THR",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/business/digital/ai-films-promise-sharknado-doctor-who-1236648616/",
-          "ageMin": 1,
-          "headline": "Creatives from Sharknado and Doctor Who’ Are Now Making AI Films (Exclusive)",
-          "summary": "For its new slate, the startup Promise AI is boldly bringing in traditionalists to pair with generative creators."
+          "url": "https://www.hollywoodreporter.com/tv/tv-news/dexter-resurrection-season-2-gabriel-luna-1236649380/",
+          "ageMin": 136,
+          "headline": "Dexter: Resurrection Adds Gabriel Luna to Season 2 Cast",
+          "summary": "The 'Last of Us' actor will play — surprise — a serial killer."
+        },
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/tv/news/dexter-resurrection-season-2-cast-gabriel-luna-1236811702/",
+          "ageMin": 136,
+          "headline": "Dexter: Resurrection Season 2 Casts Gabriel Luna",
+          "summary": "Dexter: Resurrection Season 2 has added Gabriel Luna in a guest star role, Variety has learned. Luna will play Ray Ballard, a serial killer operating under the name The Sleepy-Eyed Stranger. He will go up against series lead and returning star Michael C. Hall, the titular Dexter. Luna is the latest new addition to the [ ]"
         }
       ],
-      "ageMin": 1,
+      "ageMin": 136,
       "_cand": {
-        "key": "rss:creatives-from-sharknado-and-doctor-who-are-now-making-ai-fi",
+        "key": "rss:dexter-resurrection-adds-gabriel-luna-to-season-2-cast",
         "popularity": 0,
         "kind": "rss-news"
       },
-      "corroborationCount": 1,
+      "corroborationCount": 2,
       "verification": {
-        "tier1Count": 1,
+        "tier1Count": 2,
         "tier1Owners": 1,
-        "outletCount": 1,
+        "outletCount": 2,
         "outlets": [
-          "THR"
+          "THR",
+          "Variety"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
@@ -54,52 +146,53 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 93,
+      "priority": 92,
       "signals": {
-        "recency": 30,
-        "corroboration": 12,
+        "recency": 16,
+        "corroboration": 18,
         "status": 18,
-        "type": 9,
+        "type": 14,
         "pop": 0,
         "breakout": 0,
-        "big": 24,
-        "trending": 0,
+        "big": 18,
+        "trending": 8,
         "softTv": 0
       }
     },
     {
-      "id": "news-its-always-sunny-in-philadelphia-season-18-renewal",
-      "slug": "it-s-always-sunny-in-philadelphia-sets-return-for-expanded-season-18-a",
-      "title": "'It's Always Sunny In Philadelphia' Sets Return For Expanded Season 18 At FX",
+      "id": "news-jessica-alba-13-going-on-30-reboot-casting",
+      "slug": "jessica-alba-joins-netflix-s-13-going-on-30-reboot",
+      "title": "Jessica Alba Joins Netflix s ‘13 Going On 30 Reboot",
       "contentType": "news",
       "formatTag": "news",
-      "category": "tv",
+      "category": "movies",
       "subcategory": "news",
-      "eventType": "renewal",
-      "sensitivity": "normal",
-      "eventSlug": "its-always-sunny-in-philadelphia-season-18-renewal",
-      "primaryKeyword": "its always sunny in philadelphia season 18",
-      "primaryEntity": "It's Always Sunny in Philadelphia",
+      "eventType": "casting",
+      "sensitivity": "high",
+      "eventSlug": "jessica-alba-13-going-on-30-reboot-casting",
+      "primaryKeyword": "Jessica Alba 13 Going on 30",
+      "primaryEntity": "Jessica Alba",
       "entities": [
-        "FX's A Christmas Carol",
-        "FX"
+        "13 Going on 30",
+        "13 Going on 30 (reboot)",
+        "Netflix"
       ],
-      "angle": "FX has renewed 'It's Always Sunny in Philadelphia' for an expanded 18th season, with the premiere date set for August 17.",
+      "angle": "Jessica Alba joins Netflix's upcoming reboot of the rom-com '13 Going on 30'.",
       "tmdbType": "movie",
       "source": "rss:Deadline",
       "sources": [
         {
           "outlet": "Deadline",
           "tier": 7,
-          "url": "https://deadline.com/2026/07/its-always-sunny-in-philadelphia-season-18-release-date-1236982870/",
-          "ageMin": 0,
-          "headline": "It s Always Sunny In Philadelphia Sets Return For Expanded Season 18 At FX",
-          "summary": "FX has set Monday, August 17 for the Season 18 premiere of It s Always Sunny in Philadelphia. It returns with an expanded 10-episode season, up from eight episodes in the previous three seasons. It will premiere at 9 p.m. ET/6 p.m. PT on FXX, FX and Hulu, and streaming on Disney+ internationally. The network also [ ]"
+          "url": "https://deadline.com/2026/07/13-going-on-30-reboot-casts-jessica-alba-1236983044/",
+          "ageMin": 61,
+          "headline": "Jessica Alba Joins Netflix s ‘13 Going On 30 Reboot",
+          "summary": "EXCLUSIVE: Jessica Alba (Trigger Warning) has inked a deal to join Emily Bader, Logan Lerman and Adeline Rudolph in Netflix s reboot of rom-com 13 Going on 30, sources tell Deadline. Reps for Netflix declined comment. Alba s role, and the sequel s logline, are being kept under wraps. Jennifer Garner, who starred in the original film, is an exec [ ]"
         }
       ],
-      "ageMin": 0,
+      "ageMin": 61,
       "_cand": {
-        "key": "rss:it-s-always-sunny-in-philadelphia-sets-return-for-expanded-s",
+        "key": "rss:jessica-alba-joins-netflix-s-13-going-on-30-reboot",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -112,18 +205,146 @@
           "Deadline"
         ],
         "maxTier": 7,
-        "sensitivity": "normal",
+        "sensitivity": "high",
         "attribution": "Deadline",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 87,
+      "priority": 84,
       "signals": {
-        "recency": 30,
+        "recency": 16,
         "corroboration": 12,
         "status": 18,
-        "type": 9,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "trailer-dont-move-trailer-debut",
+      "slug": "trailer-debut-for-impractical-jokers-star-james-murray-s-horror-movie-",
+      "title": "Trailer Debut for Impractical Jokers Star James Murray's Horror Movie 'Don't Move'",
+      "contentType": "trailer",
+      "formatTag": "trailer",
+      "category": "movies",
+      "subcategory": "trailers",
+      "eventType": "trailer",
+      "sensitivity": "normal",
+      "eventSlug": "dont-move-trailer-debut",
+      "primaryKeyword": "don't move trailer",
+      "primaryEntity": "Don't Move",
+      "entities": [
+        "Don't Move (film)",
+        "James Murray"
+      ],
+      "angle": "The trailer for the giant spider horror movie 'Don't Move', starring Impractical Jokers' James Murray, has debuted.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/film/features/dont-move-trailer-impractical-jokers-james-murray-1236811020/",
+          "ageMin": 186,
+          "headline": "Don t Move : How Impractical Jokers Star James Murray Got His Giant Spider Horror Movie Made, Plus See Trailer Debut",
+          "summary": "Audiences are most familiar with James Murray from his 15 years as one of the stars of “Impractical Jokers,” the hit hidden-camera show where Murray and some of his oldest friends pull pranks on each other and embarrass themselves in front of unsuspecting onlookers. But Murray has also embraced darkness with a lucrative side gig [ ]"
+        }
+      ],
+      "ageMin": 186,
+      "_cand": {
+        "key": "rss:don-t-move-how-impractical-jokers-star-james-murray-got-his-",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 78,
+      "signals": {
+        "recency": 9,
+        "corroboration": 12,
+        "status": 18,
+        "type": 15,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-hulu-pilot-chicks-casting-jodie-whittaker-ellen-pompeo",
+      "slug": "jodie-whittaker-joins-ellen-pompeo-in-hulu-dramedy-pilot-chicks",
+      "title": "Jodie Whittaker Joins Ellen Pompeo in Hulu Dramedy Pilot 'Chicks'",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "hulu-pilot-chicks-casting-jodie-whittaker-ellen-pompeo",
+      "primaryKeyword": "hulu pilot chicks",
+      "primaryEntity": "Chicks (TV pilot)",
+      "entities": [
+        "Jodie Whittaker",
+        "Ellen Pompeo"
+      ],
+      "angle": "Jodie Whittaker joins Ellen Pompeo in the Hulu dramedy pilot 'Chicks'.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/tv/news/jodie-whittaker-ellen-pompeo-hulu-pilot-chicks-1236811789/",
+          "ageMin": 140,
+          "headline": "Jodie Whittaker Joins Ellen Pompeo in Hulu Dramedy Pilot Chicks",
+          "summary": "Jodie Whittaker has been cast opposite Ellen Pompeo in the Hulu pilot Chicks, Variety has confirmed. The pilot was first announced with Pompeo in a lead role back in June. The logline describes it as “a family dramedy set in the rapidly gentrifying neighborhoods of old Boston, about Chickie (Pompeo) and Doreen (Whittaker), two estranged [ ]"
+        }
+      ],
+      "ageMin": 140,
+      "_cand": {
+        "key": "rss:jodie-whittaker-joins-ellen-pompeo-in-hulu-dramedy-pilot-chi",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 78,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
         "pop": 0,
         "breakout": 0,
         "big": 18,
@@ -132,38 +353,39 @@
       }
     },
     {
-      "id": "trailer-the-challenge-season-42-trailer-paramount-plus",
-      "slug": "the-challenge-leaves-mtv-for-season-42-meet-the-cast-and-watch-the-tra",
-      "title": "‘The Challenge’ Leaves MTV for Season 42: Meet the Cast and Watch the Trailer for Cutthroat on Paramount+ (EXCLUSIVE)",
-      "contentType": "trailer",
-      "formatTag": "trailer",
-      "category": "tv",
-      "subcategory": "trailers",
-      "eventType": "trailer",
+      "id": "news-na-hong-jin-hope-comic-con-panel",
+      "slug": "na-hong-jin-to-debut-at-comic-con-for-his-film-hope",
+      "title": "Na Hong-Jin to Debut at Comic-Con for His Film 'Hope'",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "the-challenge-season-42-trailer-paramount-plus",
-      "primaryKeyword": "the challenge season 42 trailer",
-      "primaryEntity": "The Challenge",
+      "eventSlug": "na-hong-jin-hope-comic-con-panel",
+      "primaryKeyword": "na hong-jin hope",
+      "primaryEntity": "Hope",
       "entities": [
-        "The Challenge (TV series)",
-        "Paramount+"
+        "Hope (2024 film)",
+        "Na Hong-jin",
+        "San Diego Comic-Con"
       ],
-      "angle": "The reality competition series 'The Challenge' is moving to Paramount+ for its 42nd season, with the trailer for 'The Challenge: Cutthroat' released.",
+      "angle": "South Korean director Na Hong-jin to debut at Comic-Con to promote his Cannes film 'Hope'.",
       "tmdbType": "movie",
       "source": "rss:Variety",
       "sources": [
         {
           "outlet": "Variety",
           "tier": 7,
-          "url": "https://variety.com/gallery/the-challenge-42-cast-trailer-cutthroat-paramount-plus/",
-          "ageMin": 120,
-          "headline": "‘The Challenge’ Leaves MTV for Season 42: Meet the Cast and Watch the Trailer for Cutthroat on Paramount+ (EXCLUSIVE)",
-          "summary": "The Challenge is heading to a new home, but it s bringing back a familiar theme. The upcoming Season 42, The Challenge: Cutthroat, will debut on August 5 on Paramount+. The show will still have a weekly rollout with new episodes dropping at 12 a.m. PT/3 a.m. ET. The series, now billed as a Paramount+ original, has [ ]"
+          "url": "https://variety.com/2026/film/news/neon-na-hong-jin-hope-comic-con-panel-1236811805/",
+          "ageMin": 91,
+          "headline": "Neon Bringing Na Hong-Jin’s Hope to Comic-Con (EXCLUSIVE)",
+          "summary": "South Korean director Na Hong-Jin will make his San Diego Comic-Con debut with a panel celebrating his latest film “Hope.” The film premiered in competition at this year’s Cannes Film Festival and will be released by Neon in the U.S. this September. The special panel will feature an exclusive introduction from Korean breakout star Hoyeon [ ]"
         }
       ],
-      "ageMin": 120,
+      "ageMin": 91,
       "_cand": {
-        "key": "rss:-the-challenge-leaves-mtv-for-season-42-meet-the-cast-and-wa",
+        "key": "rss:neon-bringing-na-hong-jin-s-hope-to-comic-con-exclusive-",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -187,10 +409,10 @@
         "recency": 16,
         "corroboration": 12,
         "status": 18,
-        "type": 15,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
-        "big": 18,
+        "big": 24,
         "trending": 0,
         "softTv": 0
       }
@@ -198,7 +420,7 @@
     {
       "id": "trailer-my-life-with-the-walter-boys-season-3-trailer",
       "slug": "netflix-s-my-life-with-the-walter-boys-season-3-trailer-teases-fallout",
-      "title": "Netflix’s My Life With the Walter Boys Season 3 Trailer Teases Fallout From That Big Love Confession",
+      "title": "Netflix's 'My Life with the Walter Boys' Season 3 Trailer Teases Fallout From Big Love Confession",
       "contentType": "trailer",
       "formatTag": "trailer",
       "category": "tv",
@@ -208,11 +430,8 @@
       "eventSlug": "my-life-with-the-walter-boys-season-3-trailer",
       "primaryKeyword": "my life with the walter boys season 3 trailer",
       "primaryEntity": "My Life with the Walter Boys",
-      "entities": [
-        "My Life with the Walter Boys (TV series)",
-        "Netflix"
-      ],
-      "angle": "The trailer for 'My Life With the Walter Boys' Season 3 teases the fallout from a major love confession and the patriarch's hospitalization.",
+      "entities": [],
+      "angle": "The trailer for Season 3 of Netflix's 'My Life with the Walter Boys' teases fallout from a major love confession.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
@@ -220,12 +439,12 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/tv/tv-news/netflix-my-life-with-the-walter-boys-season-3-trailer-1236648871/",
-          "ageMin": 121,
+          "ageMin": 361,
           "headline": "Netflix’s My Life With the Walter Boys Season 3 Trailer Teases Fallout From That Big Love Confession",
           "summary": "Season three kicks off after the cliffhanger with the family reeling from Walter patriarch George now being in the hospital and Jackie, Cole and Alex left to deal with that big love confession."
         }
       ],
-      "ageMin": 121,
+      "ageMin": 361,
       "_cand": {
         "key": "rss:netflix-s-my-life-with-the-walter-boys-season-3-trailer-teas",
         "popularity": 0,
@@ -246,9 +465,9 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 79,
+      "priority": 67,
       "signals": {
-        "recency": 16,
+        "recency": 4,
         "corroboration": 12,
         "status": 18,
         "type": 15,
@@ -260,39 +479,38 @@
       }
     },
     {
-      "id": "news-lincoln-center-scary-movies-lineup",
-      "slug": "lincoln-center-reveals-scary-movies-lineup-including-henry-portrait-of",
-      "title": "Lincoln Center Reveals 'Scary Movies' Lineup Including 'Henry: Portrait of a Serial Killer'",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
+      "id": "music-news-tyla-a-pop-album-tracklist-reveal",
+      "slug": "watch-tyla-reveal-her-a-pop-tracklist-using-fluorescent-spray-paint",
+      "title": "Watch Tyla Reveal Her A*Pop Tracklist Using Fluorescent Spray Paint",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "lincoln-center-scary-movies-lineup",
-      "primaryKeyword": "Lincoln Center Scary Movies",
-      "primaryEntity": "Scary Movies",
+      "tier": "popular",
+      "eventSlug": "tyla-a-pop-album-tracklist-reveal",
+      "primaryKeyword": "tyla a pop tracklist",
+      "primaryEntity": "Tyla",
       "entities": [
-        "Lincoln Center",
-        "Henry: Portrait of a Serial Killer",
-        "Wendigo"
+        "A*Pop (album)"
       ],
-      "angle": "Lincoln Center announces its 'Scary Movies' film series lineup, featuring titles like 'Henry: Portrait of a Serial Killer' and 'Wendigo'.",
+      "angle": "Grammy-winning singer Tyla unveils her sophomore album's tracklist.",
       "tmdbType": "movie",
-      "source": "rss:IndieWire",
+      "source": "rss:Billboard",
       "sources": [
         {
-          "outlet": "IndieWire",
+          "outlet": "Billboard",
           "tier": 7,
-          "url": "https://www.indiewire.com/news/festivals/scary-movies-film-at-lincoln-center-series-lineup-1235205376/",
-          "ageMin": 61,
-          "headline": "Henry: Portrait of a Serial Killer, Wendigo Restorations, and 14 More Films Set for Lincoln Center s Scary Movies Lineup",
-          "summary": "Exclusive: Film at Lincoln Center's series runs August 12-20, starting with Casper Kelly's Sundance favorite \"Buddy.\""
+          "url": "https://www.billboard.com/music/rb-hip-hop/tyla-a-pop-album-tracklist-video-1236294643/",
+          "ageMin": 24,
+          "headline": "Watch Tyla Reveal Her A*Pop Tracklist Using Fluorescent Spray Paint",
+          "summary": "The Grammy-winning singer's sophomore album arrives on July 24."
         }
       ],
-      "ageMin": 61,
+      "ageMin": 24,
       "_cand": {
-        "key": "rss:henry-portrait-of-a-serial-killer-wendigo-restorations-and-1",
+        "key": "rss:watch-tyla-reveal-her-a-pop-tracklist-using-fluorescent-spra",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -302,11 +520,77 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "IndieWire"
+          "Billboard"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "IndieWire",
+        "attribution": "Billboard",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 63,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-rob-liefeld-avengelyne-comic-image-warner-bros-movie",
+      "slug": "rob-liefeld-penning-new-avengelyne-comic-for-image-movie-in-developmen",
+      "title": "Rob Liefeld Penning New Avengelyne Comic for Image, Movie in Development",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "rob-liefeld-avengelyne-comic-image-warner-bros-movie",
+      "primaryKeyword": "avengelyne movie",
+      "primaryEntity": "Avengelyne",
+      "entities": [
+        "Rob Liefeld",
+        "Image Comics",
+        "Warner Bros.",
+        "Olivia Wilde"
+      ],
+      "angle": "Rob Liefeld is writing a new Avengelyne comic, with the property already in movie development with Olivia Wilde and Margot Robbie attached.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/rob-liefeld-penning-new-avengelyne-comic-1236648163/",
+          "ageMin": 107,
+          "headline": "Rob Liefeld Penning New Avengelyne Comic for Image",
+          "summary": "The property is already in development as a movie at Warner Bros. with filmmaker Olivia Wilde and producer Margot Robbie among the talents attached."
+        }
+      ],
+      "ageMin": 107,
+      "_cand": {
+        "key": "rss:rob-liefeld-penning-new-avengelyne-comic-for-image",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -325,39 +609,38 @@
       }
     },
     {
-      "id": "news-kevin-hart-cold-as-balls-netflix",
-      "slug": "kevin-hart-s-cold-as-balls-ice-bath-interview-show-moves-to-netflix",
-      "title": "Kevin Hart's 'Cold as Balls' Ice-Bath Interview Show Moves to Netflix",
+      "id": "news-sunday-in-the-park-with-george-london-revival-ticket-delay",
+      "slug": "london-revival-of-sunday-in-the-park-with-george-delays-ticket-sales",
+      "title": "London Revival of 'Sunday in the Park with George' Delays Ticket Sales",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
       "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "kevin-hart-cold-as-balls-netflix",
-      "primaryKeyword": "Kevin Hart Cold as Balls",
-      "primaryEntity": "Cold as Balls",
+      "sensitivity": "high",
+      "eventSlug": "sunday-in-the-park-with-george-london-revival-ticket-delay",
+      "primaryKeyword": "sunday in the park with george london",
+      "primaryEntity": "Sunday in the Park with George (musical)",
       "entities": [
-        "Kevin Hart: What Now?",
-        "Kevin Hart",
-        "Netflix"
+        "Jonathan Bailey",
+        "Ariana Grande"
       ],
-      "angle": "Kevin Hart's ice-bath interview series 'Cold as Balls' is set to debut new episodes on Netflix.",
+      "angle": "Ticket sales for the London revival of 'Sunday in the Park with George,' starring Jonathan Bailey and Ariana Grande, have been delayed until the fall.",
       "tmdbType": "movie",
-      "source": "rss:Variety",
+      "source": "rss:Deadline",
       "sources": [
         {
-          "outlet": "Variety",
+          "outlet": "Deadline",
           "tier": 7,
-          "url": "https://variety.com/2026/tv/news/kevin-hart-cold-as-balls-new-episodes-netflix-1236811300/",
-          "ageMin": 61,
-          "headline": "Kevin Hart s Ice-Bath Interview Show Cold as Balls to Debut New Episodes on Netflix (EXCLUSIVE)",
-          "summary": "Kevin Hart will get down to the cold hard truth in his ice-bath interview show Cold as Balls, six new episodes of which are coming to Netflix later this summer. The new interviews will be filmed live at Fanatics Fest in New York this week. Hart s guests include Serena Williams, Rob Gronkowski, Cooper Flagg, Sean [ ]"
+          "url": "https://deadline.com/2026/07/jonathan-bailey-ariana-grande-stephen-sondheim-1236682640/",
+          "ageMin": 100,
+          "headline": "London s Sunday In The Park With George Starring Jonathan Bailey Ariana Grande Delays Ticket Sales Until Fall",
+          "summary": "UPDATED July 15: Ticket sales for the 2027 London revival of Sunday in the Park with George starring Jonathan Bailey and Ariana Grande will begin this fall, a several-month delay from the original May 2026 launch, Deadline has confirmed. The summer 2027 production date for the Sondheim musical, to be directed at the Barbican Centre [ ]"
         }
       ],
-      "ageMin": 61,
+      "ageMin": 100,
       "_cand": {
-        "key": "rss:kevin-hart-s-ice-bath-interview-show-cold-as-balls-to-debut-",
+        "key": "rss:london-s-sunday-in-the-park-with-george-starring-jonathan-ba",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -367,11 +650,11 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Variety"
+          "Deadline"
         ],
         "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety",
+        "sensitivity": "high",
+        "attribution": "Deadline",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -390,40 +673,39 @@
       }
     },
     {
-      "id": "news-the-great-beyond-delayed-year",
-      "slug": "j-j-abrams-glen-powell-film-the-great-beyond-delayed-a-year",
-      "title": "J.J. Abrams, Glen Powell Film 'The Great Beyond' Delayed a Year",
+      "id": "news-the-rookie-extended-cut-episode-810-hulu",
+      "slug": "the-rookie-to-release-extended-cut-of-episode-810-on-hulu",
+      "title": "The Rookie to Release Extended Cut of Episode 810 on Hulu",
       "contentType": "news",
       "formatTag": "news",
-      "category": "movies",
+      "category": "tv",
       "subcategory": "news",
-      "eventType": "other",
+      "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "the-great-beyond-delayed-year",
-      "primaryKeyword": "the great beyond movie",
-      "primaryEntity": "The Great Beyond (film)",
+      "eventSlug": "the-rookie-extended-cut-episode-810-hulu",
+      "primaryKeyword": "the rookie extended cut",
+      "primaryEntity": "The Rookie",
       "entities": [
-        "Cloverfield",
-        "J.J. Abrams",
-        "Glen Powell",
-        "Warner Bros."
+        "The Rookie (TV series)",
+        "Hulu",
+        "ABC"
       ],
-      "angle": "J.J. Abrams and Glen Powell's sci-fi movie 'The Great Beyond' has been delayed by a year as part of Warner Bros.' slate shakeup.",
+      "angle": "The Rookie is releasing an extended cut of an episode on Hulu, a rare move for an ABC scripted series.",
       "tmdbType": "movie",
-      "source": "rss:TheWrap",
+      "source": "rss:Deadline",
       "sources": [
         {
-          "outlet": "TheWrap",
+          "outlet": "Deadline",
           "tier": 7,
-          "url": "https://www.thewrap.com/creative-content/movies/jj-abrams-great-beyond-delayed-release-date/",
-          "ageMin": 35,
-          "headline": "J.J. Abrams Glen Powell Movie The Great Beyond Delayed a Year in Warner Bros. Slate Shakeup",
-          "summary": "The original sci-fi movie was originally slated to hit theaters this fall The post J.J. Abrams Glen Powell Movie The Great Beyond Delayed a Year in Warner Bros. Slate Shakeup appeared first on TheWrap ."
+          "url": "https://deadline.com/2026/07/the-rookie-extended-cut-episode-810-hulu-nathan-fillion-1236982682/",
+          "ageMin": 101,
+          "headline": "The Rookie To Release Extended Cut Of Episode 810 On Hulu In Rare Move For ABC Scripted Series",
+          "summary": "EXCLUSIVE: With Season 9 of The Rookie still six months away, fans of the popular ABC police drama are getting some extra original content to carry them through the hiatus. An extended cut of Episode 810, His Name Was Martin, will be released on Hulu July 20 in the Extras section of the series landing [ ]"
         }
       ],
-      "ageMin": 35,
+      "ageMin": 101,
       "_cand": {
-        "key": "rss:j-j-abrams-glen-powell-movie-the-great-beyond-delayed-a-year",
+        "key": "rss:the-rookie-to-release-extended-cut-of-episode-810-on-hulu-in",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -433,61 +715,126 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "TheWrap"
+          "Deadline"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "TheWrap",
+        "attribution": "Deadline",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 71,
+      "priority": 73,
       "signals": {
-        "recency": 24,
+        "recency": 16,
         "corroboration": 12,
         "status": 18,
-        "type": 5,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
-        "big": 12,
+        "big": 18,
         "trending": 0,
         "softTv": 0
       }
     },
     {
-      "id": "music-news-madonna-confessions-ii-debut",
-      "slug": "how-did-madonna-s-confessions-ii-score-such-a-successful-first-week-de",
-      "title": "How Did Madonna s Confessions II Score Such a Successful First-Week Debut?",
+      "id": "music-news-nashville-songwriters-hall-of-fame-2026-nominees",
+      "slug": "taylor-swift-miranda-lambert-nominated-for-2026-nashville-songwriters-",
+      "title": "Taylor Swift, Miranda Lambert Nominated for 2026 Nashville Songwriters Hall of Fame",
       "contentType": "music-news",
       "formatTag": "music-news",
       "category": "music",
       "subcategory": "news",
-      "eventType": "other",
+      "eventType": "award",
       "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "madonna-confessions-ii-debut",
-      "primaryKeyword": "Madonna Confessions II",
-      "primaryEntity": "Madonna",
+      "eventSlug": "nashville-songwriters-hall-of-fame-2026-nominees",
+      "primaryKeyword": "Nashville Songwriters Hall of Fame",
+      "primaryEntity": "Nashville Songwriters Hall of Fame",
       "entities": [
-        "Confessions II"
+        "Taylor Swift",
+        "Miranda Lambert"
       ],
-      "angle": "Analysis of Madonna's latest album's chart success.",
+      "angle": "Taylor Swift and Miranda Lambert are among the nominees for the 2026 Nashville Songwriters Hall of Fame.",
       "tmdbType": "movie",
       "source": "rss:Billboard",
       "sources": [
         {
           "outlet": "Billboard",
           "tier": 7,
-          "url": "https://www.billboard.com/music/chart-beat/madonna-confessions-ii-five-burning-questions-1236294093/",
-          "ageMin": 46,
-          "headline": "How Did Madonna s Confessions II Score Such a Successful First-Week Debut?",
-          "summary": "This week's Five Burning Questions looks at the Billboard 200-topping sequel set, and how the Queen of Pop pulled off her best numbers in over a decade for its first week."
+          "url": "https://www.billboard.com/music/awards/2026-nashville-songwriters-hall-of-fame-nominees-taylor-swift-1236294738/",
+          "ageMin": 82,
+          "headline": "Taylor Swift, Miranda Lambert More Nominated for 2026 Nashville Songwriters Hall of Fame",
+          "summary": "Here's the full list of nominees in the two contemporary categories."
         }
       ],
-      "ageMin": 46,
+      "ageMin": 82,
       "_cand": {
-        "key": "rss:how-did-madonna-s-confessions-ii-score-such-a-successful-fir",
+        "key": "rss:taylor-swift-miranda-lambert-more-nominated-for-2026-nashvil",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Billboard"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Billboard",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 60,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "music-news-post-malone-world-cup-closing-ceremony-2026",
+      "slug": "post-malone-to-headline-2026-world-cup-closing-ceremony",
+      "title": "Post Malone to Headline 2026 World Cup Closing Ceremony",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "post-malone-world-cup-closing-ceremony-2026",
+      "primaryKeyword": "post malone world cup",
+      "primaryEntity": "Post Malone",
+      "entities": [
+        "2026 World Cup"
+      ],
+      "angle": "Post Malone is set to headline the closing ceremony of the 2026 World Cup.",
+      "tmdbType": "movie",
+      "source": "rss:Billboard",
+      "sources": [
+        {
+          "outlet": "Billboard",
+          "tier": 7,
+          "url": "https://www.billboard.com/music/music-news/2026-world-cup-post-malone-headline-closing-ceremony-1236294756/",
+          "ageMin": 101,
+          "headline": "Post Malone to Headline 2026 World Cup Closing Ceremony",
+          "summary": "The ceremony's previously announced lineup includes Jennifer Hudson delivering the national anthem, and more stars."
+        }
+      ],
+      "ageMin": 101,
+      "_cand": {
+        "key": "rss:post-malone-to-headline-2026-world-cup-closing-ceremony",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -507,12 +854,12 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 59,
+      "priority": 55,
       "signals": {
-        "recency": 24,
+        "recency": 16,
         "corroboration": 12,
         "status": 18,
-        "type": 5,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
         "big": 0,
@@ -521,37 +868,39 @@
       }
     },
     {
-      "id": "news-the-challenge-moves-to-paramount-plus",
-      "slug": "the-challenge-moves-to-paramount-for-season-42",
-      "title": "The Challenge Moves to Paramount+ for Season 42",
+      "id": "news-critics-choice-super-awards-nominations",
+      "slug": "superman-leads-critics-choice-super-award-nominations-obsession-and-we",
+      "title": "Superman Leads Critics Choice Super Award Nominations, Obsession and Weapons Top Horror Nominees",
       "contentType": "news",
       "formatTag": "news",
-      "category": "tv",
+      "category": "celebrity",
       "subcategory": "news",
-      "eventType": "other",
+      "eventType": "award",
       "sensitivity": "normal",
-      "eventSlug": "the-challenge-moves-to-paramount-plus",
-      "primaryKeyword": "The Challenge",
-      "primaryEntity": "The Challenge",
+      "eventSlug": "critics-choice-super-awards-nominations",
+      "primaryKeyword": "critics choice super awards nominations",
+      "primaryEntity": "Critics Choice Super Awards",
       "entities": [
-        "Paramount+"
+        "Superman",
+        "Obsession",
+        "Weapons"
       ],
-      "angle": "The reality competition series 'The Challenge' is moving to Paramount+.",
+      "angle": "Nominations are announced for the Critics Choice Super Awards.",
       "tmdbType": "movie",
-      "source": "rss:TheWrap",
+      "source": "rss:Variety",
       "sources": [
         {
-          "outlet": "TheWrap",
+          "outlet": "Variety",
           "tier": 7,
-          "url": "https://www.thewrap.com/creative-content/tv-shows/the-challenge-season-42-cutthroat-paramount-plus-premiere/",
-          "ageMin": 61,
-          "headline": "The Challenge Moves to Paramount+ for Season 42",
-          "summary": "\"The Challenge: Cutthroat II\" premieres Aug. 5 The post The Challenge Moves to Paramount+ for Season 42 appeared first on TheWrap ."
+          "url": "https://variety.com/2026/film/awards/critics-choice-super-awards-2026-nominations-superman-1236811861/",
+          "ageMin": 40,
+          "headline": "Superman Leads Critics Choice Super Award Nominations, Obsession and Weapons Top Horror Nominees",
+          "summary": "Superman flew to the head of the pack with the sixth annual Critics Choice Super Awards, the Critics Choice Association s celebration of the most popular, fan-favorite corners of film and television across the superhero, science fiction/fantasy, horror and action genres. James Gunn s DC Studios tentpole led all films with six nominations, including best superhero movie. [ ]"
         }
       ],
-      "ageMin": 61,
+      "ageMin": 40,
       "_cand": {
-        "key": "rss:the-challenge-moves-to-paramount-for-season-42",
+        "key": "rss:superman-leads-critics-choice-super-award-nominations-obsess",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -561,63 +910,189 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "TheWrap"
+          "Variety"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "TheWrap",
+        "attribution": "Variety",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 57,
+      "priority": 68,
       "signals": {
-        "recency": 16,
+        "recency": 24,
         "corroboration": 12,
         "status": 18,
-        "type": 5,
+        "type": 14,
         "pop": 0,
         "breakout": 0,
-        "big": 6,
+        "big": 0,
         "trending": 0,
         "softTv": 0
       }
     },
     {
-      "id": "news-david-bowie-rare-recordings-1965-release",
-      "slug": "david-bowie-s-rare-1965-recordings-to-be-released",
-      "title": "David Bowie's Rare 1965 Recordings to Be Released",
+      "id": "news-r-kelly-sentence-commute-request",
+      "slug": "r-kelly-formally-asks-trump-to-commute-30-year-sentence",
+      "title": "R. Kelly Formally Asks Trump to Commute 30-Year Sentence",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "david-bowie-rare-recordings-1965-release",
-      "primaryKeyword": "david bowie",
-      "primaryEntity": "David Bowie",
+      "eventType": "legal",
+      "sensitivity": "high",
+      "eventSlug": "r-kelly-sentence-commute-request",
+      "primaryKeyword": "r kelly sentence commutation",
+      "primaryEntity": "R. Kelly",
       "entities": [
-        "Shel Talmy",
-        "Jimmy Page",
-        "Nicky Hopkins"
+        "Donald Trump"
       ],
-      "angle": "Rare 1965 recordings by David Bowie, featuring sessions with Jimmy Page and Nicky Hopkins, are set for release.",
+      "angle": "R. Kelly seeks presidential commutation for his sentence.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/music/news/r-kelly-formally-asks-trump-commute-30-year-sentence-1236811935/",
+          "ageMin": 24,
+          "headline": "R. Kelly Formally Asks Trump to Commute 30-Year Sentence",
+          "summary": "R. Kelly has formally asked President Donald Trump to commute his 30-year sentence, according to court records made public this week by the Office of the Pardon Attorney. The request for commutation, as first reported by the Chicago Tribune, is listed as currently pending and is not asking Trump for a full pardon. It comes [ ]"
+        }
+      ],
+      "ageMin": 24,
+      "_cand": {
+        "key": "rss:r-kelly-formally-asks-trump-to-commute-30-year-sentence",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 66,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 12,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-snoop-dogg-biggie-estate-diddy-nasty-girl-i-wanna-thank-ya-lawsuit",
+      "slug": "snoop-dogg-biggie-estate-diddy-sued-over-sample-in-hip-hop-tracks",
+      "title": "Snoop Dogg, Biggie Estate, Diddy Sued Over Sample in Hip-Hop Tracks",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "lawsuit",
+      "sensitivity": "high",
+      "tier": "popular",
+      "eventSlug": "snoop-dogg-biggie-estate-diddy-nasty-girl-i-wanna-thank-ya-lawsuit",
+      "primaryKeyword": "snoop dogg biggie estate lawsuit",
+      "primaryEntity": "Snoop Dogg",
+      "entities": [
+        "The Notorious B.I.G.",
+        "Sean 'Diddy' Combs"
+      ],
+      "angle": "Snoop Dogg, Biggie Estate, and Diddy are among those sued over alleged copyright infringement on two early 2000s hip-hop tracks.",
+      "tmdbType": "movie",
+      "source": "rss:Billboard",
+      "sources": [
+        {
+          "outlet": "Billboard",
+          "tier": 7,
+          "url": "https://www.billboard.com/pro/biggie-snoop-dogg-diddy-lawsuit-sample/",
+          "ageMin": 94,
+          "headline": "Snoop Dogg, Biggie Estate, Diddy and Others Sued Over Sample on ‘Nasty Girl’ and ‘I Wanna Thank Ya’",
+          "summary": "A new copyright lawsuit claims the two early aughts hip-hop tracks infringe a 1980 funk song."
+        }
+      ],
+      "ageMin": 94,
+      "_cand": {
+        "key": "rss:snoop-dogg-biggie-estate-diddy-and-others-sued-over-sample-o",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Billboard"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": "Billboard",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 58,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 12,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-matty-healy-performs-tribute-band-bachelor-party",
+      "slug": "matty-healy-performs-with-the-1975-tribute-band-at-bachelor-party",
+      "title": "Matty Healy Performs With The 1975 Tribute Band at Bachelor Party",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "matty-healy-performs-tribute-band-bachelor-party",
+      "primaryKeyword": "Matty Healy",
+      "primaryEntity": "Matty Healy",
+      "entities": [
+        "The Devil Wears Prada 2",
+        "The 1975"
+      ],
+      "angle": "Matty Healy performed with a tribute band at his own bachelor party.",
       "tmdbType": "movie",
       "source": "rss:Rolling Stone",
       "sources": [
         {
           "outlet": "Rolling Stone",
           "tier": 7,
-          "url": "https://www.rollingstone.com/music/music-news/david-bowie-rare-recordings-shel-talmy-1965-album-1235593903/",
-          "ageMin": 28,
-          "headline": "David Bowie’s Rare Recordings From 1965 With Shel Talmy Will Finally Be Released",
-          "summary": "“I Want Your Love” shows Bowie playing to the era, which included sessions with Jimmy Page and Nicky Hopkins"
+          "url": "https://www.rollingstone.com/music/music-news/matty-healy-performs-the-1975-tribute-band-bachelor-party-1235594019/",
+          "ageMin": 74,
+          "headline": "Watch Matty Healy Perform With the 1975 Tribute Band at His Own Bachelor Party",
+          "summary": "Meta Healy, more like ..."
         }
       ],
-      "ageMin": 28,
+      "ageMin": 74,
       "_cand": {
-        "key": "rss:david-bowie-s-rare-recordings-from-1965-with-shel-talmy-will",
+        "key": "rss:watch-matty-healy-perform-with-the-1975-tribute-band-at-his-",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -636,12 +1111,77 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 63,
+      "priority": 51,
       "signals": {
-        "recency": 24,
+        "recency": 16,
         "corroboration": 12,
         "status": 18,
-        "type": 9,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-napalm-death-tiny-desk-performance",
+      "slug": "napalm-death-delivers-intense-set-on-npr-s-tiny-desk",
+      "title": "Napalm Death Delivers Intense Set on NPR's Tiny Desk",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "high",
+      "tier": "popular",
+      "eventSlug": "napalm-death-tiny-desk-performance",
+      "primaryKeyword": "napalm death tiny desk",
+      "primaryEntity": "Napalm Death",
+      "entities": [
+        "NPR Tiny Desk Concerts",
+        "NPR Tiny Desk"
+      ],
+      "angle": "Death-metal band Napalm Death performed their career-spanning set on NPR's Tiny Desk, featuring the world's shortest song.",
+      "tmdbType": "movie",
+      "source": "rss:Rolling Stone",
+      "sources": [
+        {
+          "outlet": "Rolling Stone",
+          "tier": 7,
+          "url": "https://www.rollingstone.com/music/music-news/napalm-death-npr-tiny-desk-concert-1235594015/",
+          "ageMin": 96,
+          "headline": "See Napalm Death Eviscerate NPR’s Tiny Desk With World’s Shortest Song",
+          "summary": "Death-metal and grindcore greats played a career-spanning set in only 20 minutes"
+        }
+      ],
+      "ageMin": 96,
+      "_cand": {
+        "key": "rss:see-napalm-death-eviscerate-npr-s-tiny-desk-with-world-s-sho",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Rolling Stone"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": "Rolling Stone",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 51,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
         "pop": 0,
         "breakout": 0,
         "big": 0,
