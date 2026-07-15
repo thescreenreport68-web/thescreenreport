@@ -1,0 +1,89 @@
+{
+ "runId": "run-2026-07-15T15-30-33",
+ "mode": "live",
+ "startedAt": "2026-07-15T15:30:33.432Z",
+ "films": 6,
+ "published": [],
+ "held": [
+  {
+   "tag": "evil-dead-burn-bo-update×BO-UPDATE",
+   "reason": "fidelity: 6 unsupported figures/claims — draft-level failure",
+   "score": 0
+  },
+  {
+   "tag": "moana-bo-update×BO-UPDATE",
+   "reason": "seo-faq: fewer than 2 real FAQs",
+   "score": 65
+  },
+  {
+   "tag": "supergirl-bo-update×BO-UPDATE",
+   "reason": "fidelity: 6 unsupported figures/claims — draft-level failure",
+   "score": 0
+  },
+  {
+   "tag": "minions-monsters-bo-update×BO-UPDATE",
+   "reason": "fidelity: 6 unsupported figures/claims — draft-level failure",
+   "score": 0
+  },
+  {
+   "tag": "gail-daughtry-and-the-celebrity-sex-pass-bo-update×BO-UPDATE",
+   "reason": "words 157 < 180 (owner-set ~200-word minimum) | soft-floor engagement 3 < 5 | soft-floor humanVoice 4 < 5",
+   "score": 40
+  },
+  {
+   "tag": "toy-story-5-bo-update×BO-UPDATE",
+   "reason": "seo-faq: fewer than 2 real FAQs",
+   "score": 65
+  }
+ ],
+ "rejected": [],
+ "skipped": [],
+ "blocked": [],
+ "finishedAt": "2026-07-15T15:42:13.164Z",
+ "meter": {
+  "byRole": {
+   "gatherer": {
+    "calls": 9,
+    "errors": 0,
+    "in": 21684,
+    "out": 3134,
+    "usd": 0.00342,
+    "ms": 15812
+   },
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3299,
+    "out": 519,
+    "usd": 0.00019,
+    "ms": 2263
+   },
+   "synthesizer": {
+    "calls": 6,
+    "errors": 0,
+    "in": 4495,
+    "out": 5208,
+    "usd": 0.00134,
+    "ms": 87121
+   },
+   "writer": {
+    "calls": 12,
+    "errors": 0,
+    "in": 23336,
+    "out": 12164,
+    "usd": 0.0288,
+    "ms": 178370
+   },
+   "qa": {
+    "calls": 28,
+    "errors": 0,
+    "in": 81809,
+    "out": 11945,
+    "usd": 0.05441,
+    "ms": 94009
+   }
+  },
+  "totalUsd": 0.08815
+ },
+ "openrouterTotalUsd": 0.08717
+}

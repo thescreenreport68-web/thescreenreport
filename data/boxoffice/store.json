@@ -281,36 +281,36 @@
    "key": "moana-bo-update-d0|BO-UPDATE",
    "eventSlug": "moana-bo-update-d0",
    "form": "BO-UPDATE",
-   "reason": "4 unverified claim(s) cut, unrecovered",
-   "tries": 6,
-   "at": "2026-07-15T14:33:43.108Z",
+   "reason": "seo-faq: fewer than 2 real FAQs",
+   "tries": 7,
+   "at": "2026-07-15T15:34:33.713Z",
    "dead": true
   },
   {
    "key": "minions-monsters-bo-update-d0|BO-UPDATE",
    "eventSlug": "minions-monsters-bo-update-d0",
    "form": "BO-UPDATE",
-   "reason": "fidelity: 5 unsupported figures/claims — draft-level failure",
-   "tries": 6,
-   "at": "2026-07-15T14:35:58.777Z",
+   "reason": "fidelity: 6 unsupported figures/claims — draft-level failure",
+   "tries": 7,
+   "at": "2026-07-15T15:36:53.871Z",
    "dead": true
   },
   {
    "key": "toy-story-5-bo-update-d0|BO-UPDATE",
    "eventSlug": "toy-story-5-bo-update-d0",
    "form": "BO-UPDATE",
-   "reason": "fidelity: 5 unsupported figures/claims — draft-level failure",
-   "tries": 6,
-   "at": "2026-07-15T14:37:44.846Z",
+   "reason": "seo-faq: fewer than 2 real FAQs",
+   "tries": 7,
+   "at": "2026-07-15T15:42:13.164Z",
    "dead": true
   },
   {
    "key": "evil-dead-burn-bo-update-d0|BO-UPDATE",
    "eventSlug": "evil-dead-burn-bo-update-d0",
    "form": "BO-UPDATE",
-   "reason": "fidelity: 5 unsupported figures/claims — draft-level failure",
-   "tries": 6,
-   "at": "2026-07-15T14:40:08.704Z",
+   "reason": "fidelity: 6 unsupported figures/claims — draft-level failure",
+   "tries": 7,
+   "at": "2026-07-15T15:32:04.894Z",
    "dead": true
   },
   {
@@ -330,6 +330,22 @@
    "tries": 6,
    "at": "2026-07-15T14:45:44.503Z",
    "dead": true
+  },
+  {
+   "key": "supergirl-bo-update-d0|BO-UPDATE",
+   "eventSlug": "supergirl-bo-update-d0",
+   "form": "BO-UPDATE",
+   "reason": "fidelity: 6 unsupported figures/claims — draft-level failure",
+   "tries": 1,
+   "at": "2026-07-15T15:35:25.120Z"
+  },
+  {
+   "key": "gail-daughtry-and-the-celebrity-sex-pass-bo-update-d0|BO-UPDATE",
+   "eventSlug": "gail-daughtry-and-the-celebrity-sex-pass-bo-update-d0",
+   "form": "BO-UPDATE",
+   "reason": "words 157 < 180 (owner-set ~200-word minimum) | soft-floor engagement 3 < 5 | soft-floor humanVoice 4 < 5",
+   "tries": 1,
+   "at": "2026-07-15T15:39:39.623Z"
   }
  ]
 }
