@@ -44,40 +44,15 @@
     "reason": "Unverified death/suicide/overdose: The prompt describes a posthumous airing of a secret final role and an 'In Memoriam' card following the actor's death, indicating the actor (Rob Reiner) is deceased. This falls under the block category due to the unverified nature of the death details and the sensitive context.",
     "at": "2026-07-13T04:18:10.462Z"
   },
-  "dolly-parton-makes-surprise-career-announcement-after-delivering-bad-h": {
-    "stage": "script",
-    "reason": "script failed lint after 3 attempts: ending-ask(final sentence must be the comments ask (like \"Let us know i), ending-question(the sentence before the ask must be the audience question (e)",
-    "at": "2026-07-13T04:57:40.965Z"
-  },
-  "behind-the-supergirl-bomb-competing-cuts-and-creative-differences-reve": {
-    "stage": "script",
-    "reason": "script failed lint after 3 attempts: ending-ask(final sentence must be the comments ask (like \"Let us know i)",
-    "at": "2026-07-13T20:38:27.206Z"
-  },
   "matthew-mcconaughey-honors-america-in-speech-for-250th-independence-da": {
     "stage": "watchqc",
     "reason": "QC fix: over max length (score 0)",
     "at": "2026-07-13T20:42:45.028Z"
   },
-  "rhobh-annemarie-wiley-has-lost-touch-with-former-castmates-amid-divorc": {
-    "stage": "script",
-    "reason": "script failed lint after 3 attempts: ending-ask(final sentence must be the comments ask (like \"Let us know i), ending-question(the sentence before the ask must be the audience question (e)",
-    "at": "2026-07-13T20:43:26.004Z"
-  },
   "dutton-ranch-season-1-finale-features-shocking-murder-drug-lord-reveal": {
     "stage": "sensitive",
     "reason": "Content involves murder, trafficking (fentanyl), and kidnapping by a cartel, which are active criminal/legal subject matters that fall under the block category.",
     "at": "2026-07-13T20:43:31.857Z"
-  },
-  "khlo-kardashian-spends-4th-of-july-with-tristan-thompson-in-idaho": {
-    "stage": "script",
-    "reason": "script failed lint after 3 attempts: hook-too-long(17 words (max 16)), sentence-too-long(21 words — split it: \"Tristan says the secret to their co-pa), ending-ask(final sentence must be the comments ask (like \"Let us know i), ending-question(the sentence before the ask must be the audience question (e)",
-    "at": "2026-07-13T23:30:19.678Z"
-  },
-  "kanye-west-poses-with-shane-gillis-backstage-at-san-antonio-concert": {
-    "stage": "script",
-    "reason": "script failed lint after 3 attempts: ending-ask(final sentence must be the comments ask (like \"Let us know i), ending-question(the sentence before the ask must be the audience question (e)",
-    "at": "2026-07-14T03:10:57.721Z"
   },
   "author-tomi-adeyemi-will-not-watch-film-adaptation-of-her-book-childre": {
     "stage": "watchqc",
@@ -99,40 +74,10 @@
     "reason": "QC fix: premium-look check failed (bot-slideshow feel) (score 0)",
     "at": "2026-07-14T17:44:40.675Z"
   },
-  "amy-schumer-flaunts-trim-figure-in-swimwear-for-july-4th-holiday-after": {
-    "stage": "script",
-    "reason": "script failed lint after 3 attempts: ending-ask(final sentence must be the comments ask (like \"Let us know i), ending-question(the sentence before the ask must be the audience question (e)",
-    "at": "2026-07-14T17:45:01.670Z"
-  },
-  "kai-cenat-announces-return-to-streaming-after-9-month-hiatus-missed-ya": {
-    "stage": "script",
-    "reason": "script failed lint after 3 attempts: ending-ask(final sentence must be the comments ask (like \"Let us know i), ending-question(the sentence before the ask must be the audience question (e)",
-    "at": "2026-07-14T17:55:22.821Z"
-  },
-  "mary-bonnet-says-leaving-selling-sunset-felt-like-being-in-a-different": {
-    "stage": "script",
-    "reason": "script failed lint after 3 attempts: ending-ask(final sentence must be the comments ask (like \"Let us know i), ending-question(the sentence before the ask must be the audience question (e)",
-    "at": "2026-07-14T17:56:10.136Z"
-  },
   "lionel-richie-reassures-fans-he-is-doing-well-after-dizzy-spell-forced": {
     "stage": "voice",
     "reason": "speech API unavailable and Kokoro fallback scores 11/30 — below the delivery floor",
     "at": "2026-07-14T20:42:00.265Z"
-  },
-  "chris-pratt-wife-katherine-schwarzenegger-have-family-outing-after-act": {
-    "stage": "script",
-    "reason": "script failed lint after 3 attempts: ending-ask(final sentence must be the comments ask (like \"Let us know i), ending-question(the sentence before the ask must be the audience question (e)",
-    "at": "2026-07-14T21:36:08.922Z"
-  },
-  "how-david-and-victoria-beckham-s-marriage-grew-stronger-after-scandal": {
-    "stage": "script",
-    "reason": "script failed lint after 3 attempts: ending-ask(final sentence must be the comments ask (like \"Let us know i), ending-question(the sentence before the ask must be the audience question (e)",
-    "at": "2026-07-14T21:36:25.744Z"
-  },
-  "90-day-fianc-josh-finally-lays-into-catie-for-her-embarrassing-behavio": {
-    "stage": "script",
-    "reason": "script failed lint after 3 attempts: ending-ask(final sentence must be the comments ask (like \"Let us know i), ending-question(the sentence before the ask must be the audience question (e)",
-    "at": "2026-07-15T00:11:53.656Z"
   },
   "lionel-richie-speaks-out-following-health-scare-that-left-him-hospital": {
     "stage": "script",
