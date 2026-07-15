@@ -70,8 +70,18 @@ export function generateMetadata({
         },
       ]
     : undefined;
+  // SEO <title>: Google truncates past ~60 chars, and the root layout template
+  // appends " — The Screen Report" (20 chars). Only let that brand suffix through
+  // when metaTitle is short enough to keep the whole tag ≤60; otherwise emit the
+  // metaTitle ALONE (absolute) so the headline is never cut off by the brand.
+  // This touches ONLY the hidden <title>/browser-tab/Google blue-link — the on-page
+  // <h1> readers see stays `article.title` (full, expressive, UNCHANGED).
+  const titleTag =
+    article.metaTitle.length + 20 <= 60
+      ? article.metaTitle
+      : { absolute: article.metaTitle };
   return {
-    title: article.metaTitle,
+    title: titleTag,
     description: article.metaDescription,
     alternates: { canonical: `/${article.category}/${article.slug}/` },
     // Recheck corrections / the inside parent-retraction cascade write robots: "noindex".
