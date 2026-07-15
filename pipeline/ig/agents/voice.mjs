@@ -286,70 +286,62 @@ export async function synthVoice({ slug, speakable, mood }) {
       IG.voice.candidates.flatMap((v) =>
         Array.from({ length: perVoice }, (_, i) => ({ label: perVoice > 1 ? `${v}-${i + 1}` : v, voice: v, model: undefined })),
       );
-  // pooled (concurrency 3): parallel enough to be fast, gentle enough to avoid aborts
-  const takes = await pool(
-    plans,
-    (p) =>
-      makeTake({ dir, sentences: speakable, voice: p.voice, model: p.model, mood, label: p.label })
-        .catch((e) => ({ voice: p.label, fail: e.message })),
-    2,
-  );
-  // nothing passed the floor → one harder-directed retry on the best-scoring plan so far
-  let usable = takes.filter((t) => t.wav);
-  if (!usable.some((t) => t.pass)) {
-    const best = usable.slice().sort((a, b) => (b.score ?? 0) - (a.score ?? 0))[0];
-    const plan = plans.find((p) => p.label === best?.voice) || plans[0];
-    try {
-      const harder = await makeTake({ dir, sentences: speakable, voice: plan.voice, model: plan.model, mood, harder: true, label: `${plan.label}-hard` });
-      takes.push(harder);
-      usable = takes.filter((t) => t.wav);
-    } catch {}
-  }
-  if (!usable.length) {
-    // preserve WHY every take failed — a silent fallback is undiagnosable (bake-off finding)
-    const fb = kokoroFallback({ slug, text: speakable.join(" ") });
-    fb.takes = takes.map((t) => ({ voice: t.voice, score: t.score ?? null, fail: t.fail || null }));
-    return fb;
-  }
-
-  // a floor-PASSING take always beats a failing one (a bad ending / low axis is
-  // non-negotiable), then rank by score. (audit 2026-07-11)
-  const rank = (a, b) => (Number(b.pass || false) - Number(a.pass || false)) || ((b.score ?? 0) - (a.score ?? 0));
-  const ranked = usable.slice().sort(rank);
-  // THE VERBATIM WALL, MOVED INTO THE BAKE-OFF (2026-07-11): gpt-audio ad-libs a stray
-  // phrase in ~1/3 of takes. Ranking by EAR alone kept crowning an ad-lib take that then
-  // died at the align stage → Kokoro (below floor) → HOLD, on story after story. Whisper
-  // each take in delivery-rank order and take the FIRST that survives the wall; a pure
-  // whisper DRIFT (mishearing names, not the model adding words) still counts as clean.
-  // The winner's whisper is returned so the align stage reuses it (no second transcription).
+  // COST CUT (owner 2026-07-15): SEQUENTIAL "take-until-clean" instead of always paying for 3 parallel
+  // gpt-audio reads. gpt-audio is ~92% of a reel's cost; synth ONE read at a time and SHIP the moment a
+  // take is verbatim-clean + ending-present + passes the delivery floor. EVERY quality gate is IDENTICAL
+  // to before (same whisper verbatim wall + ending-spoken check + floor) — the shipped audio is exactly as
+  // good; we only stop re-rolling a NOISY delivery score (identical marin reads score 8-22, and a
+  // floor-passing clean take already IS the owner's bar). Holds do NOT rise: we roll again on an ad-lib and
+  // keep the 4th "harder" rescue read. Common case (clean first read) = 1 gpt-audio call, not 3.
   const spoken = speakable.join(" ");
   const lastSentence = speakable[speakable.length - 1] || "";
-  let winner = null, winnerWhisper = null;
-  for (const t of ranked) {
+  const takes = [];
+  // whisper-check ONE take against the script — returns the whisper result if verbatim-clean AND the
+  // ending was actually spoken, else null. Mirrors the old verbatim wall exactly (a pure whisper DRIFT,
+  // i.e. misheard names not added words, still counts as clean). The winner's whisper is reused downstream.
+  const cleanWhisper = (t) => {
     try {
       const wh = whisperAlign(t.wav);
-      // the ENDING (the comments CTA) must ACTUALLY be in the audio. A take that dropped it is
-      // NOT clean even though overall drift is low (~5 words) — shipping it makes the subtitles
-      // flash a CTA the voice never says. Skip to the next take. (root fix, owner 2026-07-12)
-      if (!endingSpoken(lastSentence, wh)) {
-        t.verbatim = { pass: false, kind: "ending-dropped", reason: `ending not spoken ("${lastSentence.slice(0, 40)}")` };
-        continue;
-      }
+      if (!endingSpoken(lastSentence, wh)) { t.verbatim = { pass: false, kind: "ending-dropped", reason: `ending not spoken ("${lastSentence.slice(0, 40)}")` }; return null; }
       const vv = verbatimVerdict(spoken, wh);
       t.verbatim = vv;
-      if (vv.pass || vv.kind === "drift") { winner = t; winnerWhisper = wh; break; }
-    } catch (e) {
-      t.verbatim = { pass: false, kind: "whisper-error", reason: String(e?.message || e) };
-    }
+      return (vv.pass || vv.kind === "drift") ? wh : null;
+    } catch (e) { t.verbatim = { pass: false, kind: "whisper-error", reason: String(e?.message || e) }; return null; }
+  };
+  const oneTake = async (p, harder = false) => {
+    const t = await makeTake({ dir, sentences: speakable, voice: p.voice, model: p.model, mood, harder, label: harder ? `${p.label}-hard` : p.label }).catch((e) => ({ voice: p.label, fail: String(e?.message || e) }));
+    takes.push(t);
+    return t;
+  };
+  let winner = null, winnerWhisper = null;
+  // roll takes ONE AT A TIME (plans = up to takesPerVoice reads of the locked voice) — ship the first that
+  // is clean + passes the floor; keep clean-but-below-floor takes as a warn-and-ship fallback.
+  for (let i = 0; i < plans.length && !winner; i++) {
+    const t = await oneTake(plans[i]);
+    if (!t.wav) continue; // synth failed → roll the next
+    const wh = cleanWhisper(t);
+    if (wh && t.pass) { winner = t; winnerWhisper = wh; } // clean + floor pass → SHIP (early exit)
+    else if (wh) t.cleanWh = wh; // clean but below floor → remember it
+  }
+  // no clean+passing take → ONE harder-directed retry on the best plan so far (preserves today's 4th rescue)
+  if (!winner) {
+    const best = takes.filter((t) => t.wav).sort((a, b) => (b.score ?? 0) - (a.score ?? 0))[0];
+    const plan = plans.find((p) => p.label === best?.voice) || plans[0];
+    const h = await oneTake(plan, true);
+    if (h.wav) { const wh = cleanWhisper(h); if (wh && h.pass) { winner = h; winnerWhisper = wh; } else if (wh) h.cleanWh = wh; }
+  }
+  // still no floor-PASSING take → ship the best CLEAN below-floor take (warn-and-ship, exactly as before)
+  if (!winner) {
+    const cleanBelow = takes.filter((t) => t.cleanWh).sort((a, b) => (b.score ?? 0) - (a.score ?? 0))[0];
+    if (cleanBelow) { winner = cleanBelow; winnerWhisper = cleanBelow.cleanWh; }
   }
   if (!winner) {
-    // every gpt take ad-libbed in the AUDIO — the model cannot be trusted for this script.
-    // Kokoro reads the exact words (it CANNOT ad-lib); fall back to it (its floor still applies).
+    // every take failed synth OR ad-libbed in the AUDIO — Kokoro reads the exact words (CANNOT ad-lib);
+    // fall back to it (its floor still applies). Keep the locked marin voice — a Kokoro fallback is a
+    // transient synthesis failure, NOT a reason to re-audition (that caused the ash drift). (owner 2026-07-12)
     const fb = kokoroFallback({ slug, text: spoken });
     fb.belowFloor = undefined;
     fb.takes = takes.map((t) => ({ voice: t.voice, score: t.score ?? null, fail: t.fail || (t.verbatim && !t.verbatim.pass ? t.verbatim.reason : null) }));
-    // keep the locked voice — a Kokoro fallback is a transient synthesis failure, NOT a reason to
-    // abandon the owner's chosen voice and re-audition (which caused the drift to ash). (owner 2026-07-12)
     return fb;
   }
   // NOTE (owner 2026-07-12): an experiment that INSERTED a 0.4s silence before the closing question
