@@ -199,16 +199,33 @@ export async function writeScript({ article, facts, segment, engage }) {
     const still = [...lintScript(trimmed, facts.entities, `${article.title} ${facts.storyOneLine || ""}`), ...lintEnding(trimmed.sentences, engage?.goal || "comments")];
     if (!still.length) return { script: trimmed, attempts: 3, trimmed: true };
   }
-  // DETERMINISTIC ENDING REPAIR: if the story passed every gate except ask PHRASING,
-  // swap in the canonical ask for the goal (the writer's flow + question stay intact) —
-  // repair beats retry-and-pray (same philosophy as the caption repair).
+  // DETERMINISTIC ENDING REPAIR: if the story cleared every CONTENT gate and ONLY the ending
+  // PHRASING is off, BUILD a complete valid ending — drop any trailing ask, GUARANTEE the audience
+  // question (comments goal), then append the canonical ask — so a good story never HOLDS on ending
+  // phrasing. ROOT CAUSE of the 3-of-7-per-day shortfall (owner 2026-07-15): the old repair swapped in
+  // the ask but NEVER supplied the question, so every "ending-ask + ending-question" story held
+  // (Chris Pratt, the Beckhams, 90 Day Fiancé all held this way). Ship-instead-of-hold: the writer
+  // already had 3 tries at a bespoke question; this is the safety net, not the first choice.
   if (lastScript && violations.every((v) => v.rule.startsWith("ending"))) {
+    const goal = engage?.goal || "comments";
     const canonical = (engage?.family?.examples?.[0] || '"Let us know in the comments below."').replace(/^"|"$/g, "");
     const s = [...lastScript.sentences];
-    if (/\b(save|send|show|comment|bookmark|let us know|tell us)\b/i.test(s[s.length - 1])) s.pop();
+    // drop a trailing ask-ish line (broadened so more malformed asks are removed, not left in place)
+    if (/\b(save|send|show|comment|bookmark|let us know|tell us|drop|sound off|hit the|link in|check (it|this)|follow us)\b/i.test(s[s.length - 1] || "")) s.pop();
+    // comments goal: the line before the ask MUST be an audience question — if the tail isn't one,
+    // append a short on-topic question anchored to the lead entity (a valid ship beats a hold).
+    if (goal === "comments" && !/\?\s*$/.test((s[s.length - 1] || "").trim())) {
+      const who = String(facts.entities?.[0]?.name || "").trim();
+      s.push(who ? `What's your take on ${who}?` : "What's your take on this?");
+    }
     s.push(canonical);
+    // stay under the word ceiling: drop the last BODY line (never the hook/question/ask) if the
+    // added ending pushed it over (rare — the swap is usually net-neutral).
+    const cap = IG?.script?.maxWords ?? 136;
+    let g = 0;
+    while (normWords(s.join(" ")).length > cap && s.length > 5 && g++ < 24) s.splice(s.length - 3, 1);
     const repaired = { ...lastScript, sentences: s };
-    const still = [...lintScript(repaired, facts.entities, `${article.title} ${facts.storyOneLine || ""}`), ...lintEnding(repaired.sentences, engage?.goal || "comments")];
+    const still = [...lintScript(repaired, facts.entities, `${article.title} ${facts.storyOneLine || ""}`), ...lintEnding(repaired.sentences, goal)];
     if (!still.length) return { script: repaired, attempts: 3, repairedEnding: true };
   }
   return { script: null, attempts: 3, hold: `script failed lint after 3 attempts: ${violations.map((v) => `${v.rule}(${v.detail?.slice(0, 60)})`).join(", ")}` };

@@ -17,12 +17,21 @@ on:
     # remaining slate at once and SCHEDULES each reel for its LA slot (10a/12p/2p/4p/6p/8p/10p) via
     # Zernio/Buffer — so ONE reliable early firing fills all 7 slots regardless of GitHub's timing. The
     # later runs are cheap no-ops when the day is already full, or catch-ups if an early one was dropped.
-    - cron: "15 12 * * *" # 12:15 UTC →  5:15 AM LA (primary — builds all 7, done well before the 10am slot)
-    - cron: "15 13 * * *" # 13:15 UTC →  6:15 AM LA (backup)
-    - cron: "15 14 * * *" # 14:15 UTC →  7:15 AM LA (backup)
-    - cron: "15 16 * * *" # 16:15 UTC →  9:15 AM LA (backup)
+    # DENSE early-morning coverage (owner 2026-07-15): on 2026-07-14 GitHub DROPPED the 12/13/14 UTC
+    # firings entirely, so the day didn't start until 16:47 UTC (9:47 AM LA) and the 10 AM slot was
+    # skipped (the build finished after 10:00). Firing hourly from 3–9 AM LA means even if GitHub drops
+    # several, at least one lands early enough to build the whole slate BEFORE the 10 AM slot. Runs after
+    # the day is full exit immediately (cheap no-op), so extra firings cost almost nothing.
+    - cron: "15 10 * * *" # 10:15 UTC →  3:15 AM LA
+    - cron: "15 11 * * *" # 11:15 UTC →  4:15 AM LA
+    - cron: "15 12 * * *" # 12:15 UTC →  5:15 AM LA (target primary — whole slate built well before 10 AM)
+    - cron: "15 13 * * *" # 13:15 UTC →  6:15 AM LA
+    - cron: "15 14 * * *" # 14:15 UTC →  7:15 AM LA
+    - cron: "15 15 * * *" # 15:15 UTC →  8:15 AM LA (last comfortable start to finish before the 10 AM slot)
+    - cron: "15 16 * * *" # 16:15 UTC →  9:15 AM LA (catch-up — 10 AM slot may already be tight)
     - cron: "15 18 * * *" # 18:15 UTC → 11:15 AM LA (catch-up for any still-empty slots)
-    - cron: "15 21 * * *" # 21:15 UTC →  2:15 PM LA (late catch-up)
+    - cron: "15 20 * * *" # 20:15 UTC →  1:15 PM LA (catch-up)
+    - cron: "15 22 * * *" # 22:15 UTC →  3:15 PM LA (late catch-up)
   workflow_dispatch:
     inputs:
       mode:

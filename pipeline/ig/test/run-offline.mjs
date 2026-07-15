@@ -466,6 +466,32 @@ await t("writer: overlong hook is deterministically split, not held (mechanical 
   assert.deepEqual(lintScript(r.script, ENTITIES, "Superman box office"), [], "repaired script passes all gates");
   setMock(null);
 });
+await t("writer: ending-only failure is REPAIRED into a valid question+ask, never held (7/day fix)", async () => {
+  const { ASK_FAMILIES, lintEnding } = await import("../agents/engage.mjs");
+  // a script that clears every CONTENT gate but ends on two plain STATEMENTS (no question, no ask) —
+  // the model refuses to fix it across all 3 attempts. The old repair swapped in the ask but left the
+  // missing question → the story HELD. It must now ship with a guaranteed question + ask.
+  const BAD_ENDING = { sentences: [
+    ...CLEAN_SCRIPT.sentences.slice(0, 9),
+    "The studio expects strong holds through the coming weekend.",
+    "Analysts believe this rebuild is only just getting started.",
+  ], ending: "question" };
+  setMock(({ kind }) => { if (kind !== "llm") return undefined; return BAD_ENDING; });
+  const r = await writeScript({
+    article: { title: "Superman box office" },
+    facts: { storyOneLine: "Superman broke a box office record", entities: ENTITIES, facts: [{ claim: "c", surprise: 9 }] },
+    segment: "Box Office in 30",
+    engage: { goal: "comments", family: ASK_FAMILIES.comments },
+  });
+  assert.ok(r.script, "repaired and shipped, NOT held");
+  assert.ok(r.repairedEnding, "flagged as an ending repair");
+  const sents = r.script.sentences;
+  assert.ok(/\?\s*$/.test(sents[sents.length - 2].trim()), "second-to-last sentence is an audience question");
+  assert.ok(/comments/i.test(sents[sents.length - 1]), "last sentence is the comments ask");
+  assert.deepEqual(lintEnding(r.script.sentences, "comments"), [], "ending gate passes after repair");
+  assert.deepEqual(lintScript(r.script, ENTITIES, "Superman box office"), [], "content gates still pass after repair");
+  setMock(null);
+});
 await t("writer: mid-phrase break is stitched back, valid endings are left alone", () => {
   // the Brad Pitt bug: writer emitted a spurious period after a possessive → voice paused mid-thought
   assert.deepEqual(
