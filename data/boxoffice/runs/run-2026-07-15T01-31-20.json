@@ -1,0 +1,86 @@
+{
+ "runId": "run-2026-07-15T01-31-20",
+ "mode": "live",
+ "startedAt": "2026-07-15T01:31:20.115Z",
+ "films": 6,
+ "published": [],
+ "held": [
+  {
+   "tag": "enola-holmes-3-netflix-top10×NETFLIX-TOP10",
+   "reason": "words 140 < 180 (owner-set ~200-word minimum) | seo-faq: fewer than 2 real FAQs | soft-floor engagement 4 < 5 | soft-floor humanVoice 3 < 5",
+   "score": 45
+  },
+  {
+   "tag": "the-doorman-netflix-top10×NETFLIX-TOP10",
+   "reason": "platform: names max not in confirmed providers",
+   "score": 0
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "obsession-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "voicemails-for-isabelle-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "toy-story-5-bo-opening×BO-OPENING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "little-brother-netflix-top10×NETFLIX-TOP10",
+   "reason": "parked dead"
+  }
+ ],
+ "blocked": [],
+ "finishedAt": "2026-07-15T01:35:56.678Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3476,
+    "out": 598,
+    "usd": 0.00021,
+    "ms": 2388
+   },
+   "gatherer": {
+    "calls": 2,
+    "errors": 0,
+    "in": 4020,
+    "out": 171,
+    "usd": 0.00047,
+    "ms": 1694
+   },
+   "synthesizer": {
+    "calls": 2,
+    "errors": 0,
+    "in": 1416,
+    "out": 964,
+    "usd": 0.0003,
+    "ms": 22670
+   },
+   "writer": {
+    "calls": 6,
+    "errors": 0,
+    "in": 18946,
+    "out": 6555,
+    "usd": 0.01807,
+    "ms": 108344
+   },
+   "qa": {
+    "calls": 15,
+    "errors": 0,
+    "in": 41395,
+    "out": 6463,
+    "usd": 0.02858,
+    "ms": 39720
+   }
+  },
+  "totalUsd": 0.04762
+ },
+ "openrouterTotalUsd": 0.04508
+}
