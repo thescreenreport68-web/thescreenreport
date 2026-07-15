@@ -72,7 +72,7 @@ export async function run(job, { corrections = null, previousArticle = null, cha
     ...(g.numbers || []).map((n) => `Other reported figure (verbatim): ${n}`),
   ].filter(Boolean).join("\n");
 
-  const schema = `{"title":"","metaTitle":"<=60 chars","dek":"1-2 engaging sentences","metaDescription":"<=155 chars",
+  const schema = `{"title":"","metaTitle":"<=55 chars, NO brand/site name, LEAD with the FILM title + the concrete number/rank/milestone (e.g. \\"'Superman' Tops $500M at Box Office\\")","dek":"1-2 engaging sentences","metaDescription":"<=155 chars",
 "keyTakeaways":["3-4 items"],"body":"markdown with ## H2s","faq":[{"q":"","a":"40-60 word answer"},{"q":"2-3 REAL reader questions","a":""}],
 "about":[{"name":"","type":"Movie|Person|Organization"}],"tags":["4-8"],"imageQuery":"image search phrase for the film/star"}`;
 
