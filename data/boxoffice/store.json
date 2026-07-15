@@ -219,9 +219,17 @@
    "key": "enola-holmes-3-netflix-top10|NETFLIX-TOP10",
    "eventSlug": "enola-holmes-3-netflix-top10",
    "form": "NETFLIX-TOP10",
-   "reason": "words 133 < 180 (owner-set ~200-word minimum) | soft-floor engagement 4 < 5 | soft-floor humanVoice 2 < 5",
+   "reason": "soft-floor engagement 3 < 5",
+   "tries": 2,
+   "at": "2026-07-15T00:33:29.677Z"
+  },
+  {
+   "key": "the-doorman-netflix-top10|NETFLIX-TOP10",
+   "eventSlug": "the-doorman-netflix-top10",
+   "form": "NETFLIX-TOP10",
+   "reason": "platform: names max not in confirmed providers",
    "tries": 1,
-   "at": "2026-07-14T23:34:09.998Z"
+   "at": "2026-07-15T00:35:54.944Z"
   }
  ]
 }
