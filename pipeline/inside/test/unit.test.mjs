@@ -810,6 +810,20 @@ await check("routeForStory: work.type is authoritative + Movies/TV reactions fil
   // unknown/garbage → celebrity/news
   assert.deepEqual(routeForStory({ category: "sports" }), { category: "celebrity", subcategory: "news" });
 });
+await check("seoTitle: 45–55 range — strip brand, prefer an in-range value, fall back to the headline when the model is too short, hard-cap 55", async () => {
+  const { seoTitle, stripBrand } = await import("../../lib/seo.mjs");
+  assert.equal(stripBrand("Moana Live-Action Divides Fans — The Screen Report"), "Moana Live-Action Divides Fans");
+  // model metaTitle already in [45,55] → kept as-is
+  const good = "Zooey Deschanel: New Girl Cast Fought for Lamorne";
+  assert.ok(good.length >= 45 && good.length <= 55, `fixture in range (${good.length})`);
+  assert.equal(seoTitle(good, "Zooey Deschanel Says New Girl Cast Fought to Get Lamorne Morris"), good);
+  // model too SHORT (<45) → fall back to the fuller headline (never ship an 18-char title), still ≤55
+  const out = seoTitle("Moana Divides Fans", "Moana Live-Action Has the Internet Split Down the Middle Over the Remake");
+  assert.ok(out.length > 30 && out.length <= 55, `short model → headline: "${out}" (${out.length})`);
+  // both long → hard-capped at 55 at a word boundary, never over, never mid-word
+  const long = seoTitle("", "State AGs Move to Block the Paramount WBD Merger and the Internet Is Deeply Split");
+  assert.ok(long.length <= 55 && !long.endsWith(" "), `capped 55 clean: "${long}" (${long.length})`);
+});
 await check("unwrapQuote snaps a framed outlet quote to the person's own words (kills nested-quote card)", () => {
   // the exact card #2 bug: outlet framing + a nested quotation
   const framed = `The fifth "Toy Story" film "ranks right alongside the first three films, delivering a perfect blend of humor, heart, and that signature Pixar magic."`;

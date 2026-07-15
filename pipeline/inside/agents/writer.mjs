@@ -66,6 +66,14 @@ context → quote → your read on it.
 CRAFT: hook first (use the brief's hook), short paragraphs, the real posts as visual beats, curiosity in
 structure (build to the standout anchors — strongest last), at most ${SEO.maxQuestionH2s} question-style H2s,
 one natural use of the SEO keyword — nothing stuffed.
+SEO METADATA (metadata ONLY — never changes the reader-facing display "title" or the body):
+- metaTitle: a 45–55-character SEARCH title (MIN 45, MAX 55 — never too short, never over), DISTINCT from the
+  display title. FRONT-LOAD the person/show name, then a colon, then the specific reveal — "[Name]: the
+  specific thing". NO site/brand name (never "— The Screen Report"), no trailing "…". Example — display
+  "Zooey Deschanel Says New Girl Cast Fought to Get Lamorne Morris on the Show" → metaTitle
+  "Zooey Deschanel: 'New Girl' Cast Fought for Lamorne Morris".
+- metaDescription: ≤155 chars that TEASE the actual reveal/payoff — the specific thing that happened, not a
+  vague "fans are reacting" summary — so it earns the click.
 VOICE (the genre's native register — the phrases matter): write like a real fans-react desk, not a
 template. Natural expressions like "the internet went into full meltdown", "fans are losing it over",
 "the replies did not disappoint" — a FEW, varied, never stacked. Subheadings must be STORY-SPECIFIC and a
@@ -149,7 +157,7 @@ export async function run(job, { corrections = null, previousArticle = null, cha
   const anchors = (job.factBlock.stats.namedVoices || 0) + (job.factBlock.stats.fanPosts || 0);
   const budget = Math.min(hi, Math.max(lo, lo + anchors * 40));
 
-  const schema = `{"title":"","metaTitle":"<=60 chars","dek":"1-2 engaging sentences","metaDescription":"<=155 chars",
+  const schema = `{"title":"","metaTitle":"45-55 chars (min 45, max 55), front-loaded [Name]: reveal, NO brand","dek":"1-2 engaging sentences","metaDescription":"<=155 chars teasing the reveal",
 "keyTakeaways":["3-4 items"],"body":"markdown with ## H2s","faq":[{"q":"","a":"40-60 word answer"},{"q":"2-3 REAL questions a reader would search","a":""}],
 "about":[{"name":"","type":"Person|Movie|TVSeries|Organization"}],"tags":["4-8"],"imageQuery":"image search phrase",
 "reactionsRender":[{"anchorId":"R1 or A3 — the anchor to show as a display card","tweetId":""}],

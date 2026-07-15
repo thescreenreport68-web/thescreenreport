@@ -10,6 +10,7 @@ const matter = require("gray-matter");
 import { GOSSIP_AUTHOR_SLUG, AI_DISCLOSURE } from "./config.gossip.mjs";
 import { detectGossipType } from "./writer.mjs";
 import { deriveTags } from "./polish.mjs";
+import { seoTitle } from "../lib/seo.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url)); // …/pipeline/gossip
 const CONTENT_DIR = path.resolve(__dirname, "../../content/articles");
@@ -48,8 +49,8 @@ export function buildGossipMarkdown({ article, frame, provenance, route, topic, 
     author: GOSSIP_AUTHOR_SLUG,
     date: dateISO,
     dek: article.dek || "",
-    metaTitle: article.title,
-    metaDescription: article.dek || "",
+    metaTitle: seoTitle(article.metaTitle, article.title),
+    metaDescription: article.metaDescription || article.dek || "",
     formatTag: "gossip",
     gossipType,
     tags: deriveTags(topic, article, route.category, gossipType),

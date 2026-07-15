@@ -7,6 +7,7 @@ import path from "node:path";
 import { createRequire } from "node:module";
 import { CONTENT_DIR, INSIDE_FORMAT_TAG, INSIDE_AUTHOR_SLUG, AI_DISCLOSURE, MONITOR_WINDOW_HOURS, FORMS, MAX_EMBEDS, NO_EMBEDS, routeForStory } from "./config.inside.mjs";
 import { norm } from "./reactionFinder.mjs";
+import { seoTitle } from "../lib/seo.mjs";
 
 const require = createRequire(import.meta.url);
 const matter = require("gray-matter");
@@ -28,8 +29,10 @@ const trimAtWord = (str, max) => {
   const atSpace = cut.lastIndexOf(" ");
   return (atSpace > max * 0.6 ? cut.slice(0, atSpace) : cut.slice(0, max)).replace(/[\s,;:—–-]+$/, "");
 };
-export const seoFinish = ({ metaTitle, metaDescription }) => ({
-  metaTitle: trimAtWord(metaTitle, 60),
+// metaTitle = a front-loaded SEARCH title, ≤55 chars, NO brand suffix (owner 2026-07-14) — via the
+// shared lib so every lane behaves identically. metaDescription trimmed to 155 (teases the reveal).
+export const seoFinish = ({ metaTitle, title, metaDescription }) => ({
+  metaTitle: seoTitle(metaTitle, title),
   metaDescription: trimAtWord(metaDescription, 155),
 });
 
@@ -146,7 +149,8 @@ export function buildInsideMarkdown({ article, trigger, angle, factBlock, image,
     date: dateISO,
     dek: article.dek || "",
     ...seoFinish({
-      metaTitle: article.metaTitle || article.title,
+      metaTitle: article.metaTitle,
+      title: article.title,
       metaDescription: article.metaDescription || article.dek || "",
     }),
     tags: article.tags || [],
