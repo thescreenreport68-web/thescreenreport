@@ -87,7 +87,12 @@ export async function run(job, { corrections = null, previousArticle = null, cha
   const redactMoney = (t) => String(t)
     .replace(/\$\s?\d[\d.,]*\s*(billion|million|thousand|[mbk])?\b/gi, "[$ figure]")
     .replace(/\b\d[\d.,]*\s*(billion|million)\b/gi, "[figure]");
-  const sourceProse = redactMoney((job.bundle?.sources || [])
+  // Daily-chart box-office UPDATES skip the raw multi-outlet source prose: box-office coverage is number-dense,
+  // so the writer lifts stray weekend / other-film figures that the fidelity wall then cuts en masse (the
+  // draft-level-failure we saw). The update instead develops the RICH TMDB movie material (cast, premise, genre,
+  // director, worldwide, budget) + the chart's own cume/daily/theaters + the milestone. Openings + streaming keep
+  // the source prose — it's their length engine and their numbers are the story.
+  const sourceProse = job.film?.dailyChart ? "" : redactMoney((job.bundle?.sources || [])
     .map((s) => `[${s.owner || s.domain || "source"}]\n${(s.text || "").trim().slice(0, 2200)}`)
     .filter((t) => t.replace(/^\[.*\]\n/, "").trim().length > 40)
     .join("\n\n---\n\n").slice(0, 6000));
@@ -95,11 +100,12 @@ export async function run(job, { corrections = null, previousArticle = null, cha
   // never a hard floor that forces padding (padding = the fabrication this lane exists to prevent).
   const solidMaterial = sourceProse.length > 400 || (job.film?.overview || "").length > 100 || (job.boxData?.castRoles?.length || 0) >= 3;
   const isStreaming = !!form.streaming;
+  const isDailyUpdate = !!job.film?.dailyChart;
   const isTV = form.category === "tv";
-  // Streaming pieces are FULL 200+ word stories too (owner rule): the show + cast + a short description of the
-  // story, THEN the platform + views/hours/rank + why people love it. The material is always there (Netflix
-  // numbers + TMDB cast/premise), so aim high; box-office keeps its grounding-matched budget.
-  const [budgetLo, budgetHi] = isStreaming ? [220, 320] : (solidMaterial ? [240, 330] : [180, 240]);
+  // Streaming + daily box-office updates are FULL 200+ word stories built from the ALWAYS-rich TMDB material +
+  // their own numbers (Netflix hours / the chart cume), so aim high; a first-report opening keeps the grounding-
+  // matched budget tied to its trade coverage.
+  const [budgetLo, budgetHi] = (isStreaming || isDailyUpdate) ? [220, 320] : (solidMaterial ? [240, 330] : [180, 240]);
   const structure = isStreaming
     ? `STRUCTURE — build the FULL story, developing EACH part into a full paragraph so the article clears 200 words (a real article, never a stub):
 1) LEAD: a hook — the title and why it's a phenomenon right now (its Netflix rank or hours viewed).
@@ -108,6 +114,13 @@ export async function run(job, { corrections = null, previousArticle = null, cha
 4) THE NUMBERS: it's on Netflix — the hours viewed / views in the millions, this week's rank, and how many weeks it has held in the Top 10; explain how big that is.
 5) WHY PEOPLE LOVE IT: the reception — why audiences are watching and what's driving the buzz (from the source reporting).
 6) A closing line on its momentum.`
+    : isDailyUpdate
+    ? `STRUCTURE — build the FULL story to 200+ words, developing EACH part into a full paragraph (a real article, never a stub). Draw the MOVIE section entirely from the TMDB context below; draw every NUMBER from the VERIFIED FIGURES:
+1) LEAD: the hook — the film and where its box office stands now (its running domestic total, its day-in-release, or the milestone it just hit).
+2) THE MOVIE: what it is (premise + genre + runtime), the director, and the FULL cast and the characters they play — develop this fully.
+3) THE RUN: its box-office run — the running domestic cume, yesterday's daily gross, its theater count, and how many days it has been in release; whether it's holding or fading.
+4) THE MONEY / MILESTONE: any record or milestone it has hit, and how the domestic + worldwide gross compares to its production budget (the profit picture).
+5) A closing line on its trajectory.`
     : `STRUCTURE — develop EACH of these into full paragraph(s) (this is what makes it a real article, not a stub):
 1) LEAD: the hook — the star(s) + the headline number, in one or two punchy sentences.
 2) THE MOVIE: what it is (premise + genre + runtime), the director, and the CAST with the characters they play.

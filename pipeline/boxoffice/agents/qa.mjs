@@ -78,7 +78,9 @@ export function fidelityLocks(job) {
 
   // NUMBER-FIDELITY WALL.
   const allowed = buildAllowed({
-    numbers: gathered.numbers || [],
+    // records carry the film's own real milestone figures ("crossed $1 billion", "passed Oppenheimer's $975.8M")
+    // pulled from its coverage — allow them, else the fidelity wall cuts the milestone story into a draft-failure.
+    numbers: [...(gathered.numbers || []), ...(gathered.records || [])],
     moneyStrings: [...(boxData.moneyStrings || []), ...(gathered.numbers || [])],
     pcts: [gathered.dropPct].filter(Boolean),
     counts: [gathered.theaters].filter(Boolean),

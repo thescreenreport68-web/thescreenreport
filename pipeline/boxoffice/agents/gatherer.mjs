@@ -28,6 +28,7 @@ const SCHEMA = `{
 export async function run(job, { findImpl = findContent, chatImpl = null } = {}) {
   const film = job.film;
   if ((FORMS[job.angle?.form] || {}).streaming) return gatherStreaming(job, { findImpl, chatImpl });
+  if (film?.dailyChart) return gatherFromDailyChart(job, { findImpl, chatImpl });
   // Extract box-office figures from a set of source articles (used for the first pass + the deep fallback).
   const extractFrom = async (srcs) => {
     const reportText = srcs.map((s) => `[${s.owner || s.domain || "source"}]\n${s.text}`).join("\n\n---\n\n").slice(0, 16000);
@@ -117,6 +118,15 @@ export async function run(job, { findImpl = findContent, chatImpl = null } = {})
 // pull (the Netflix data is the backbone). The platform is Netflix — the source is its own chart.
 const STREAM_SYS = `You extract ONLY: a 1-3 sentence narrative on WHY a title is popular this week (from the
 given sources — no invented numbers or viewership figures) and the named stars/creators. STRICT JSON only.`;
+
+// Daily-chart reception+records extractor — the box-office numbers already come from the chart; here we pull the
+// "how it's holding" narrative, the cast, and any REAL records/milestones the coverage states about THIS film,
+// so the writer can tell the milestone story (a "$1B / highest-grossing" claim) without the no-invention wall
+// gutting every record phrase (the bug that cut a rich Michael update down to 85 words).
+const DAILYCHART_SYS = `You extract, for THE SUBJECT FILM ONLY, from box-office coverage: a 1-3 sentence narrative
+on how it is performing (no invented numbers), its named stars, and any RECORDS or MILESTONES the coverage states
+about THIS film (e.g. "highest-grossing biopic", "crossed $1 billion", "biggest opening of the year") — verbatim,
+ONLY this film's records, NEVER another film's or a studio-wide one. STRICT JSON only.`;
 async function gatherStreaming(job, { findImpl = findContent, chatImpl = null } = {}) {
   const film = job.film;
   const nf = film.netflix || {};
@@ -159,5 +169,50 @@ async function gatherStreaming(job, { findImpl = findContent, chatImpl = null } 
 
   if (form?.needsHours && !nf.hoursRaw) job.gatherFail = "under floor: no Netflix hours data";
   else if (form?.needsPlatform && !platform) job.gatherFail = "under floor: no confirmed platform";
+  return job;
+}
+
+// DAILY-CHART gather — the daily box-office chart already gave THIS film's authoritative running cume + daily
+// gross (the volume engine). Use those numbers directly (never re-search a stale figure); a light coverage
+// search only adds the "how it's holding" narrative + cast, which the writer develops with the TMDB context.
+async function gatherFromDailyChart(job, { findImpl = findContent, chatImpl = null } = {}) {
+  const film = job.film;
+  const dc = film.dailyChart || {};
+  let narrative = "", cast = [], records = [], sources = [];
+  try {
+    const res = await findImpl(
+      { query: job.angle?.queries?.[0] || `${film.title} box office ${dc.dayInRelease || "latest"}`, title: film.title, primaryEntity: film.title, sources: [] },
+      { corroborate: true, maxSources: 5, maxExtract: 6 },
+    ).catch(() => ({ blocked: true }));
+    if (res && !res.blocked && res.sources?.length) {
+      sources = res.sources;
+      job.bundle = { sources };
+      job.trigger.sources = sources.filter((s) => s.url).map((s) => ({ url: s.url, outlet: s.owner, tier: s.tier }));
+      const text = sources.map((s) => `[${s.owner || s.domain || "src"}]\n${s.text}`).join("\n\n---\n\n").slice(0, 12000);
+      try {
+        const { data } = await agentChat("gatherer", {
+          system: DAILYCHART_SYS,
+          user: `FILM: ${film.title}\nSOURCES:\n${text}\n\nJSON: {"narrative":"how the film is holding at the box office, 1-3 sentences, NO invented numbers","cast":["named stars of THIS film"],"records":["records/milestones the coverage states about THIS FILM ONLY, verbatim — e.g. 'highest-grossing biopic', 'crossed $1 billion' — never another film's or a studio-wide record; empty if none"]}`,
+        }, chatImpl ? { chatImpl } : {});
+        narrative = (data?.narrative || "").slice(0, 800);
+        cast = (Array.isArray(data?.cast) ? data.cast : []).filter(Boolean).slice(0, 8);
+        records = (Array.isArray(data?.records) ? data.records : []).filter(Boolean).slice(0, 6);
+      } catch { /* narrative is garnish; the chart cume carries the piece */ }
+    }
+  } catch { /* coverage search is best-effort */ }
+
+  const numbers = [dc.cume, dc.dailyGross, dc.theaters ? `${dc.theaters} theaters` : null].filter(Boolean);
+  job.gathered = {
+    openingWeekend: null, domestic: dc.cume || null, international: null, worldwide: null,
+    cume: dc.cume || null, dropPct: null, theaters: dc.theaters || null, perTheater: null,
+    numbers, records, cast,
+    narrative: narrative || `${film.title} continues its theatrical run${dc.dayInRelease ? ` (${dc.dayInRelease})` : ""}${dc.cume ? `, with a domestic cume of ${dc.cume}` : ""}.`,
+    hasSplit: false,
+    dayInRelease: dc.dayInRelease || null,
+    sources: sources.map((s) => ({ owner: s.owner, tier: s.tier, url: s.url || null })),
+    outletCount: sources.filter((s) => s.url || s.owner).length,
+  };
+  // The chart always carries a real domestic figure → the floor passes.
+  if (!dc.cume && !dc.dailyGross) job.gatherFail = "under floor: no daily-chart figure for this film";
   return job;
 }
