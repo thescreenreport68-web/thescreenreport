@@ -1,0 +1,85 @@
+{
+ "runId": "run-2026-07-15T06-30-33",
+ "mode": "live",
+ "startedAt": "2026-07-15T06:30:33.607Z",
+ "films": 6,
+ "published": [],
+ "held": [
+  {
+   "tag": "the-get-out-bo-opening×BO-OPENING",
+   "reason": "words 87 < 180 (owner-set ~200-word minimum) | seo-faq: fewer than 2 real FAQs | soft-floor readability 3 < 5 | soft-floor engagement 1 < 5 | soft-floor humanVoice 2 < 5",
+   "score": 20
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "obsession-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "voicemails-for-isabelle-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "enola-holmes-3-netflix-top10×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "the-doorman-netflix-top10×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "little-brother-netflix-top10×NETFLIX-TOP10",
+   "reason": "parked dead"
+  }
+ ],
+ "blocked": [],
+ "finishedAt": "2026-07-15T06:33:12.421Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3434,
+    "out": 693,
+    "usd": 0.00022,
+    "ms": 2665
+   },
+   "gatherer": {
+    "calls": 1,
+    "errors": 0,
+    "in": 4184,
+    "out": 302,
+    "usd": 0.00054,
+    "ms": 1307
+   },
+   "synthesizer": {
+    "calls": 1,
+    "errors": 0,
+    "in": 891,
+    "out": 420,
+    "usd": 0.00016,
+    "ms": 11418
+   },
+   "writer": {
+    "calls": 3,
+    "errors": 0,
+    "in": 9785,
+    "out": 3351,
+    "usd": 0.00928,
+    "ms": 44655
+   },
+   "qa": {
+    "calls": 11,
+    "errors": 1,
+    "in": 28780,
+    "out": 5977,
+    "usd": 0.0213,
+    "ms": 44483
+   }
+  },
+  "totalUsd": 0.03149
+ },
+ "openrouterTotalUsd": 0.03568
+}
