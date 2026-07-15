@@ -1,0 +1,86 @@
+{
+ "runId": "run-2026-07-15T02-30-38",
+ "mode": "live",
+ "startedAt": "2026-07-15T02:30:38.978Z",
+ "films": 6,
+ "published": [
+  {
+   "tag": "f9-the-fast-saga-netflix-top10×NETFLIX-TOP10",
+   "slug": "vin-diesel-s-f9-the-fast-saga-drives-9-4-million-netflix-hours-at-7",
+   "path": "/home/runner/work/thescreenreport/thescreenreport/content/articles/vin-diesel-s-f9-the-fast-saga-drives-9-4-million-netflix-hours-at-7.md",
+   "score": 75,
+   "acceptReason": "terminal-accept: score 75 >= 68 (1 un-locatable soft flag left)"
+  }
+ ],
+ "held": [
+  {
+   "tag": "the-doorman-netflix-top10×NETFLIX-TOP10",
+   "reason": "platform: names max not in confirmed providers",
+   "score": 0
+  },
+  {
+   "tag": "rust-creek-netflix-top10×NETFLIX-TOP10",
+   "reason": "words 171 < 180 (owner-set ~200-word minimum)",
+   "score": 70
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "enola-holmes-3-netflix-top10×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "little-brother-netflix-top10×NETFLIX-TOP10",
+   "reason": "parked dead"
+  }
+ ],
+ "blocked": [],
+ "finishedAt": "2026-07-15T02:36:56.164Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3423,
+    "out": 560,
+    "usd": 0.0002,
+    "ms": 2039
+   },
+   "gatherer": {
+    "calls": 3,
+    "errors": 0,
+    "in": 5216,
+    "out": 342,
+    "usd": 0.00066,
+    "ms": 3456
+   },
+   "synthesizer": {
+    "calls": 3,
+    "errors": 0,
+    "in": 2047,
+    "out": 2397,
+    "usd": 0.00062,
+    "ms": 47484
+   },
+   "writer": {
+    "calls": 9,
+    "errors": 0,
+    "in": 27212,
+    "out": 9546,
+    "usd": 0.02616,
+    "ms": 129871
+   },
+   "qa": {
+    "calls": 26,
+    "errors": 0,
+    "in": 66351,
+    "out": 9991,
+    "usd": 0.04488,
+    "ms": 69178
+   }
+  },
+  "totalUsd": 0.07251
+ },
+ "openrouterTotalUsd": 0.06863
+}

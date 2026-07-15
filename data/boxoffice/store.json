@@ -65,6 +65,17 @@
    "film": "Shipwrecked: Nightmare at Sea",
    "tmdbId": null,
    "eventType": "boxoffice"
+  },
+  {
+   "key": "f9-the-fast-saga-netflix-top10|NETFLIX-TOP10",
+   "at": "2026-07-15T02:36:56.163Z",
+   "eventSlug": "f9-the-fast-saga-netflix-top10",
+   "form": "NETFLIX-TOP10",
+   "slug": "vin-diesel-s-f9-the-fast-saga-drives-9-4-million-netflix-hours-at-7",
+   "title": "Vin Diesel's F9: The Fast Saga Drives 9.4 Million Netflix Hours at #7",
+   "film": "F9: The Fast Saga",
+   "tmdbId": null,
+   "eventType": "boxoffice"
   }
  ],
  "parked": [
@@ -229,8 +240,17 @@
    "eventSlug": "the-doorman-netflix-top10",
    "form": "NETFLIX-TOP10",
    "reason": "platform: names max not in confirmed providers",
-   "tries": 2,
-   "at": "2026-07-15T01:35:56.677Z"
+   "tries": 3,
+   "at": "2026-07-15T02:32:39.993Z",
+   "dead": true
+  },
+  {
+   "key": "rust-creek-netflix-top10|NETFLIX-TOP10",
+   "eventSlug": "rust-creek-netflix-top10",
+   "form": "NETFLIX-TOP10",
+   "reason": "words 171 < 180 (owner-set ~200-word minimum)",
+   "tries": 1,
+   "at": "2026-07-15T02:34:27.581Z"
   }
  ]
 }
