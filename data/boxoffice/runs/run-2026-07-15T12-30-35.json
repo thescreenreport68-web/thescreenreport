@@ -1,0 +1,87 @@
+{
+ "runId": "run-2026-07-15T12-30-35",
+ "mode": "live",
+ "startedAt": "2026-07-15T12:30:35.659Z",
+ "films": 6,
+ "published": [],
+ "held": [
+  {
+   "tag": "rust-creek-netflix-top10×NETFLIX-TOP10",
+   "reason": "2 unverified claim(s) cut, unrecovered",
+   "score": 78
+  },
+  {
+   "tag": "old-henry-netflix-top10×NETFLIX-TOP10",
+   "reason": "platform: names max not in confirmed providers",
+   "score": 0
+  },
+  {
+   "tag": "the-boss-baby-netflix-top10×NETFLIX-TOP10",
+   "reason": "words 152 < 180 (owner-set ~200-word minimum) | seo-faq: fewer than 2 real FAQs | soft-floor engagement 4 < 5",
+   "score": 45
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "enola-holmes-3-netflix-top10×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "the-doorman-netflix-top10×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "little-brother-netflix-top10×NETFLIX-TOP10",
+   "reason": "parked dead"
+  }
+ ],
+ "blocked": [],
+ "finishedAt": "2026-07-15T12:38:08.243Z",
+ "meter": {
+  "byRole": {
+   "gatherer": {
+    "calls": 4,
+    "errors": 0,
+    "in": 9236,
+    "out": 1832,
+    "usd": 0.00166,
+    "ms": 6610
+   },
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3313,
+    "out": 667,
+    "usd": 0.00021,
+    "ms": 2096
+   },
+   "synthesizer": {
+    "calls": 3,
+    "errors": 0,
+    "in": 2066,
+    "out": 1236,
+    "usd": 0.00041,
+    "ms": 37156
+   },
+   "writer": {
+    "calls": 9,
+    "errors": 0,
+    "in": 29418,
+    "out": 9442,
+    "usd": 0.02687,
+    "ms": 134170
+   },
+   "qa": {
+    "calls": 21,
+    "errors": 0,
+    "in": 58992,
+    "out": 8491,
+    "usd": 0.03893,
+    "ms": 71383
+   }
+  },
+  "totalUsd": 0.06807
+ },
+ "openrouterTotalUsd": 0.0629
+}
