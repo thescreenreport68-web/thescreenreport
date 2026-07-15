@@ -8,6 +8,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { createRequire } from "node:module";
 import { CONTENT_DIR, BOXOFFICE_AUTHOR_SLUG, EVENT_TYPE, FORMS, SEO } from "./config.bo.mjs";
+import { normMoney } from "./moneyGuard.mjs";
 
 const require = createRequire(import.meta.url);
 const matter = require("gray-matter");
@@ -46,6 +47,56 @@ export const seoFinish = ({ metaTitle, metaDescription }) => ({
   metaTitle: stripDangling(trimAtWord(metaTitle, SEO.metaTitleMax)),
   metaDescription: tidyMeta(metaDescription, SEO.metaDescMax),
 });
+
+// ── SEO metaTitle (the reader-facing `title` is left UNTOUCHED) ─────────────────────────────────────
+// Owner rules: ≤55 chars, NO brand suffix, FILM title + the concrete number/rank/milestone FRONT-LOADED
+// (box-office search is number/rank driven). Always carries a real figure or "#1". Deterministic, so every
+// article complies even when the writer's metaTitle drifts long/brand-suffixed/number-less.
+const BRAND_SUFFIX_RE = /\s*[|–—:-]\s*(the\s+)?screen\s*report\b.*$/i;
+const HAS_FIGURE_RE = /\$\s?\d|\b\d+(\.\d+)?\s?(million|billion|m|b)\b|#\s?\d|\bno\.?\s?1\b|\btops\b|\bweekend\b/i;
+const compactUSD = (raw) => {
+  const v = normMoney(raw);
+  if (v == null) return null;
+  if (v >= 1e9) return `$${(v / 1e9).toFixed(v % 1e9 ? 1 : 0)}B`;
+  if (v >= 1e6) return `$${Math.round(v / 1e6)}M`;
+  if (v >= 1e3) return `$${Math.round(v / 1e3)}K`;
+  return `$${v}`;
+};
+const quoteFilm = (name) => { const n = String(name || "").trim(); return n ? (/^['"‘“]/.test(n) ? n : `'${n}'`) : ""; };
+export function buildMetaTitle(rawMeta, { title, film = {}, gathered = {}, boxData = {}, form = {} }) {
+  const MAX = SEO.metaTitleMax;
+  const filmName = String(film.title || "").trim();
+  let m = String(rawMeta || title || "").replace(BRAND_SUFFIX_RE, "").trim();
+  const leadsWithFilm = filmName && m.toLowerCase().slice(0, filmName.length + 4).includes(filmName.toLowerCase());
+  const compliant = m.length <= MAX && HAS_FIGURE_RE.test(m) && (!filmName || leadsWithFilm);
+  if (!compliant) {
+    const q = quoteFilm(filmName);
+    if (form.streaming) {
+      m = gathered.netflixRank ? `${q} Hits #${gathered.netflixRank} on Netflix`
+        : gathered.hoursViewed ? `${q}: ${gathered.hoursViewed} on Netflix`
+        : `${q} Climbs Netflix's Top 10`;
+    } else {
+      const fig = compactUSD(gathered.cume) || compactUSD(gathered.worldwide) || compactUSD(boxData.worldwide)
+        || compactUSD(gathered.openingWeekend) || compactUSD(gathered.domestic);
+      m = fig ? `${q} Hits ${fig} at the Box Office` : (q ? `${q} Box Office Report` : m);
+    }
+  }
+  return stripDangling(trimAtWord(m.replace(BRAND_SUFFIX_RE, "").trim(), MAX)) || cleanTitle(title);
+}
+
+// Basic SEO KEYWORDS (tags) on EVERY article — non-stuffy, drawn from the real facts (film, cast, category,
+// year). Guarantees ≥4 relevant tags; readability is untouched (they live in frontmatter, never the prose).
+function ensureTags(article, { film = {}, form = {}, gathered = {} }) {
+  const seen = new Set(); const out = [];
+  const push = (t) => { t = String(t || "").trim(); const k = t.toLowerCase(); if (t && t.length <= 40 && !seen.has(k) && out.length < 8) { seen.add(k); out.push(t); } };
+  for (const t of (Array.isArray(article.tags) ? article.tags : [])) push(t);
+  if (film.title) { push(film.title); push(form.streaming ? `${film.title} Netflix` : `${film.title} box office`); }
+  for (const c of (gathered.cast || []).slice(0, 2)) push(c);
+  push(form.category === "tv" ? "TV shows" : form.streaming ? "Streaming" : "Box office");
+  const yr = String(film.year || (film.releaseDate || "").slice(0, 4) || "").trim();
+  if (/^\d{4}$/.test(yr)) push(`${yr} movies`);
+  return out.slice(0, 8);
+}
 export function cleanTitle(title) {
   let t = (title || "").trim();
   if (t.length > 100) {
@@ -164,8 +215,8 @@ export function buildBoxOfficeMarkdown({ article, trigger, angle, film, gathered
     author: BOXOFFICE_AUTHOR_SLUG,
     date: dateISO,
     dek: article.dek || "",
-    ...seoFinish({ metaTitle: article.metaTitle || article.title, metaDescription: article.metaDescription || article.dek || "" }),
-    tags: article.tags || [],
+    ...seoFinish({ metaTitle: buildMetaTitle(article.metaTitle, { title, film, gathered, boxData, form }), metaDescription: article.metaDescription || article.dek || "" }),
+    tags: ensureTags(article, { film, form, gathered }),
     keyTakeaways: article.keyTakeaways || [],
     faq: ensureFaq(article, { gathered, boxData, film, form }),
     about: fixAbout(article.about, { film, form }),

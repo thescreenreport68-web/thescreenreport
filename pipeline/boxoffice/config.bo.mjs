@@ -101,4 +101,4 @@ export const FLOOD_CAP = Number(process.env.BOXOFFICE_FLOOD_CAP) || 3;
 
 // SEO posture (owner: LIGHT + natural only — over-optimizing is a DEFECT; readability + engagement
 // are the KPI). Consumed by the writer/QA prompts + the assemble finisher.
-export const SEO = { metaTitleMax: 60, metaDescMax: 155, minFaqs: 2, maxQuestionH2s: 2, note: "light+natural; readability+engagement first; never stuff keywords" };
+export const SEO = { metaTitleMax: 55, metaDescMax: 155, minFaqs: 2, maxQuestionH2s: 2, note: "light+natural; readability+engagement first; never stuff keywords" };
