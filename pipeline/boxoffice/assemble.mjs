@@ -64,24 +64,46 @@ const compactUSD = (raw) => {
 };
 const quoteFilm = (name) => { const n = String(name || "").trim(); return n ? (/^['"‘“]/.test(n) ? n : `'${n}'`) : ""; };
 export function buildMetaTitle(rawMeta, { title, film = {}, gathered = {}, boxData = {}, form = {} }) {
-  const MAX = SEO.metaTitleMax;
+  const MIN = SEO.metaTitleMin, MAX = SEO.metaTitleMax;
   const filmName = String(film.title || "").trim();
-  let m = String(rawMeta || title || "").replace(BRAND_SUFFIX_RE, "").trim();
-  const leadsWithFilm = filmName && m.toLowerCase().slice(0, filmName.length + 4).includes(filmName.toLowerCase());
-  const compliant = m.length <= MAX && HAS_FIGURE_RE.test(m) && (!filmName || leadsWithFilm);
-  if (!compliant) {
-    const q = quoteFilm(filmName);
-    if (form.streaming) {
-      m = gathered.netflixRank ? `${q} Hits #${gathered.netflixRank} on Netflix`
-        : gathered.hoursViewed ? `${q}: ${gathered.hoursViewed} on Netflix`
-        : `${q} Climbs Netflix's Top 10`;
-    } else {
-      const fig = compactUSD(gathered.cume) || compactUSD(gathered.worldwide) || compactUSD(boxData.worldwide)
-        || compactUSD(gathered.openingWeekend) || compactUSD(gathered.domestic);
-      m = fig ? `${q} Hits ${fig} at the Box Office` : (q ? `${q} Box Office Report` : m);
-    }
+  const q = quoteFilm(filmName);
+  const clean = (s) => stripDangling(String(s || "").replace(BRAND_SUFFIX_RE, "").trim());
+  const leads = (s) => !filmName || s.toLowerCase().slice(0, filmName.length + 4).includes(filmName.toLowerCase());
+
+  // Candidate metaTitles (varied length), all FILM-led with a real figure/rank. Pick the LONGEST that fits
+  // [45,55]; else the longest ≤55; last resort a trimmed base. So the metaTitle lands in the search-friendly band.
+  const cands = [];
+  const w = clean(rawMeta);
+  if (w && leads(w) && HAS_FIGURE_RE.test(w)) cands.push(w); // keep the writer's own if it's already good
+  if (form.streaming) {
+    const r = gathered.netflixRank ? `#${gathered.netflixRank}` : null;
+    const hrs = gathered.hoursViewed || null;
+    if (r && hrs) cands.push(`${q} Hits ${r} on Netflix With ${hrs}`);
+    if (r) cands.push(`${q} Climbs to ${r} on Netflix's Top 10 Chart`, `${q} Hits ${r} on Netflix's Top 10`, `${q} Is ${r} on Netflix This Week`);
+    if (hrs) cands.push(`${q} Draws ${hrs} on the Netflix Top 10`);
+    cands.push(`${q} Is Blowing Up on Netflix's Top 10 Chart`, `${q} Climbs the Netflix Global Top 10`);
+  } else {
+    const wwRaw = normMoney(gathered.worldwide || boxData.worldwide);
+    const domRaw = normMoney(gathered.cume || gathered.openingWeekend || gathered.domestic);
+    const useWW = wwRaw != null && (domRaw == null || wwRaw >= domRaw);
+    const fig = useWW ? (compactUSD(gathered.worldwide) || compactUSD(boxData.worldwide))
+      : (compactUSD(gathered.cume) || compactUSD(gathered.openingWeekend) || compactUSD(gathered.domestic) || compactUSD(gathered.worldwide) || compactUSD(boxData.worldwide));
+    const scope = useWW ? "Worldwide" : "Domestic";
+    if (fig) cands.push(
+      `${q} Crosses ${fig} at the ${scope} Box Office`,
+      `${q} Climbs to ${fig} at the ${scope} Box Office`,
+      `${q} Hits ${fig} at the ${scope} Box Office`,
+      `${q} Reaches ${fig} at the Box Office`,
+      `${q} Hits ${fig} at the Box Office`,
+    );
+    cands.push(`${q} Box Office: ${fig || "The Latest Numbers Explained"}`, `${q} Box Office Report and Latest Numbers`);
   }
-  return stripDangling(trimAtWord(m.replace(BRAND_SUFFIX_RE, "").trim(), MAX)) || cleanTitle(title);
+  const fit = cands.map(clean).filter((c) => c && leads(c));
+  const inRange = fit.filter((c) => c.length >= MIN && c.length <= MAX).sort((a, b) => b.length - a.length);
+  if (inRange.length) return inRange[0];
+  const underMax = fit.filter((c) => c.length <= MAX).sort((a, b) => b.length - a.length);
+  if (underMax.length) return underMax[0];
+  return stripDangling(trimAtWord(fit[0] || w || cleanTitle(title), MAX)) || cleanTitle(title);
 }
 
 // Basic SEO KEYWORDS (tags) on EVERY article — non-stuffy, drawn from the real facts (film, cast, category,

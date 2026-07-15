@@ -8,7 +8,8 @@
 // our own voice (owner's rule). This module only READS + EXTRACTS; it invents nothing.
 import { findContent } from "../lib/contentFinder.mjs";
 import { agentChat } from "./models.mjs";
-import { scopeOk } from "./config.bo.mjs";
+import { scopeOk, DAILY_GROSS_FLOOR } from "./config.bo.mjs";
+import { normMoney } from "./moneyGuard.mjs";
 
 const SYS = `You extract structured data from a DAILY / weekend DOMESTIC box-office chart or report. You are given
 the text of one or more box-office chart pages (Box Office Mojo / The Numbers / Deadline / Variety class). Return
@@ -53,6 +54,11 @@ export async function fetchDailyChart({ findImpl = findContent, chatImpl = null,
       if (seen.has(key)) continue;
       if (!(f.cume || f.dailyGross)) continue;                 // must carry a real domestic figure
       if (!scopeOk({ title, overview: "" })) continue;         // Hollywood / English-language only
+      // ACTIVE box office ONLY — skip a film winding down / released long ago (owner: don't post about
+      // months-ago films). Daily gross below the floor = essentially done its theatrical run. When the daily
+      // figure is missing we keep it (the chart is rank-ordered by daily gross, so it's still a top title).
+      const daily = normMoney(f.dailyGross);
+      if (daily != null && daily < DAILY_GROSS_FLOOR) continue;
       seen.add(key);
       merged.push({ title, dailyGross: f.dailyGross || null, cume: f.cume || null, dailyChangePct: f.dailyChangePct || null, theaters: f.theaters || null, dayInRelease: f.dayInRelease || null, rank: Number(f.rank) || merged.length + 1 });
     }
