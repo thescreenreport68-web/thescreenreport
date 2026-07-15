@@ -308,18 +308,18 @@
    "key": "evil-dead-burn-bo-update-d0|BO-UPDATE",
    "eventSlug": "evil-dead-burn-bo-update-d0",
    "form": "BO-UPDATE",
-   "reason": "fidelity: 6 unsupported figures/claims — draft-level failure",
-   "tries": 7,
-   "at": "2026-07-15T15:32:04.894Z",
+   "reason": "fidelity: 5 unsupported figures/claims — draft-level failure",
+   "tries": 8,
+   "at": "2026-07-15T16:33:55.873Z",
    "dead": true
   },
   {
    "key": "young-washington-bo-update-d0|BO-UPDATE",
    "eventSlug": "young-washington-bo-update-d0",
    "form": "BO-UPDATE",
-   "reason": "words 153 < 180 (owner-set ~200-word minimum) | seo-faq: fewer than 2 real FAQs",
-   "tries": 6,
-   "at": "2026-07-15T14:42:41.157Z",
+   "reason": "words 115 < 180 (owner-set ~200-word minimum) | seo-faq: fewer than 2 real FAQs | soft-floor readability 3 < 5 | soft-floor engagement 1 < 5 | soft-floor humanVoice 1 < 5",
+   "tries": 7,
+   "at": "2026-07-15T16:37:24.385Z",
    "dead": true
   },
   {
@@ -336,16 +336,16 @@
    "eventSlug": "supergirl-bo-update-d0",
    "form": "BO-UPDATE",
    "reason": "fidelity: 6 unsupported figures/claims — draft-level failure",
-   "tries": 1,
-   "at": "2026-07-15T15:35:25.120Z"
+   "tries": 2,
+   "at": "2026-07-15T16:39:33.319Z"
   },
   {
    "key": "gail-daughtry-and-the-celebrity-sex-pass-bo-update-d0|BO-UPDATE",
    "eventSlug": "gail-daughtry-and-the-celebrity-sex-pass-bo-update-d0",
    "form": "BO-UPDATE",
-   "reason": "words 157 < 180 (owner-set ~200-word minimum) | soft-floor engagement 3 < 5 | soft-floor humanVoice 4 < 5",
-   "tries": 1,
-   "at": "2026-07-15T15:39:39.623Z"
+   "reason": "soft-floor engagement 3 < 5 | soft-floor humanVoice 4 < 5",
+   "tries": 2,
+   "at": "2026-07-15T16:42:34.705Z"
   }
  ]
 }

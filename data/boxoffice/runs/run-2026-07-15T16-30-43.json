@@ -1,0 +1,88 @@
+{
+ "runId": "run-2026-07-15T16-30-43",
+ "mode": "live",
+ "startedAt": "2026-07-15T16:30:43.457Z",
+ "films": 6,
+ "published": [],
+ "held": [
+  {
+   "tag": "evil-dead-burn-bo-update×BO-UPDATE",
+   "reason": "fidelity: 5 unsupported figures/claims — draft-level failure",
+   "score": 0
+  },
+  {
+   "tag": "young-washington-bo-update×BO-UPDATE",
+   "reason": "words 115 < 180 (owner-set ~200-word minimum) | seo-faq: fewer than 2 real FAQs | soft-floor readability 3 < 5 | soft-floor engagement 1 < 5 | soft-floor humanVoice 1 < 5",
+   "score": 25
+  },
+  {
+   "tag": "supergirl-bo-update×BO-UPDATE",
+   "reason": "fidelity: 6 unsupported figures/claims — draft-level failure",
+   "score": 0
+  },
+  {
+   "tag": "gail-daughtry-and-the-celebrity-sex-pass-bo-update×BO-UPDATE",
+   "reason": "soft-floor engagement 3 < 5 | soft-floor humanVoice 4 < 5",
+   "score": 40
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "obsession-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "voicemails-for-isabelle-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  }
+ ],
+ "blocked": [],
+ "finishedAt": "2026-07-15T16:42:34.706Z",
+ "meter": {
+  "byRole": {
+   "gatherer": {
+    "calls": 8,
+    "errors": 2,
+    "in": 13923,
+    "out": 1197,
+    "usd": 0.00187,
+    "ms": 8436
+   },
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3372,
+    "out": 515,
+    "usd": 0.00019,
+    "ms": 1811
+   },
+   "synthesizer": {
+    "calls": 5,
+    "errors": 1,
+    "in": 2936,
+    "out": 3376,
+    "usd": 0.00085,
+    "ms": 92948
+   },
+   "writer": {
+    "calls": 8,
+    "errors": 0,
+    "in": 15489,
+    "out": 8510,
+    "usd": 0.01981,
+    "ms": 102560
+   },
+   "qa": {
+    "calls": 20,
+    "errors": 0,
+    "in": 56753,
+    "out": 9229,
+    "usd": 0.0401,
+    "ms": 82108
+   }
+  },
+  "totalUsd": 0.06282
+ },
+ "openrouterTotalUsd": 0.06247
+}
