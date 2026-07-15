@@ -83,5 +83,25 @@
     "stage": "script",
     "reason": "script failed lint after 3 attempts: sentence-too-long(26 words — split it: \"Now that Richie has recovered and retu)",
     "at": "2026-07-15T00:12:33.520Z"
+  },
+  "dolly-parton-makes-surprise-career-announcement-after-delivering-bad-h": {
+    "stage": "voice",
+    "reason": "speech API unavailable and Kokoro fallback scores 9/30 — below the delivery floor",
+    "at": "2026-07-15T15:17:53.415Z"
+  },
+  "khlo-kardashian-spends-4th-of-july-with-tristan-thompson-in-idaho": {
+    "stage": "script",
+    "reason": "script failed lint after 3 attempts: repetition(sentences 2 and 5 repeat \"in coeur d'alene\")",
+    "at": "2026-07-15T15:18:16.859Z"
+  },
+  "90-day-fianc-josh-finally-lays-into-catie-for-her-embarrassing-behavio": {
+    "stage": "script",
+    "reason": "script failed lint after 3 attempts: too-short(87 words (min 88) — NEVER pad; hold if the story is thin), ending-ask(final sentence must be the comments ask (like \"Let us know i), ending-question(the sentence before the ask must be the audience question (e)",
+    "at": "2026-07-15T15:35:48.100Z"
+  },
+  "rhobh-annemarie-wiley-has-lost-touch-with-former-castmates-amid-divorc": {
+    "stage": "watchqc",
+    "reason": "QC fix: over max length (score 0)",
+    "at": "2026-07-15T15:42:17.930Z"
   }
 }
