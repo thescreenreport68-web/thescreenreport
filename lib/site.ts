@@ -7,6 +7,13 @@ export const SITE = {
   url: "https://thescreenreport.com",
   locale: "en_US",
   twitter: "@thescreenreport",
+  // Publisher logo for Article / NewsMediaOrganization structured data — Google's
+  // Top Stories eligibility wants a valid publisher.logo. This is a dedicated
+  // structured-data asset (public/logo.png); the on-site wordmark stays NATIVE TYPE
+  // per project rules — we are not replacing the UI logo with an image.
+  logoPath: "/logo.png",
+  logoWidth: 600,
+  logoHeight: 60,
 };
 
 export type Category = {

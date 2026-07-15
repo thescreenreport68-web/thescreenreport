@@ -141,7 +141,17 @@ export default function ArticlePage({
             ...(author.sameAs?.length ? { sameAs: author.sameAs } : {}),
           }
         : undefined,
-      publisher: { "@type": "Organization", name: SITE.name, url: SITE.url },
+      publisher: {
+        "@type": "Organization",
+        name: SITE.name,
+        url: SITE.url,
+        logo: {
+          "@type": "ImageObject",
+          url: `${SITE.url}${SITE.logoPath}`,
+          width: SITE.logoWidth,
+          height: SITE.logoHeight,
+        },
+      },
       mainEntityOfPage: `${SITE.url}/${article.category}/${article.slug}/`,
       articleSection: cat?.name,
       keywords: article.tags.join(", "),

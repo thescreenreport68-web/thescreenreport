@@ -18,6 +18,12 @@ const SITE_SCHEMA = [
     name: SITE.name,
     url: SITE.url,
     description: SITE.description,
+    logo: {
+      "@type": "ImageObject",
+      url: `${SITE.url}${SITE.logoPath}`,
+      width: SITE.logoWidth,
+      height: SITE.logoHeight,
+    },
     sameAs: ["https://twitter.com/thescreenreport"],
   },
   {
