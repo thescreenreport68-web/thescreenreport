@@ -1,0 +1,74 @@
+{
+  "id": "news-venice-film-festival-immersive-lineup",
+  "slug": "venice-margot-robbie-andy-serkis-omar-sy-david-bowie-projects-among-im",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": null,
+      "cat": "movies/news",
+      "format": [
+        "body 215w < 220",
+        "breathless filler pile-up (5 empty intensifiers — back them with specifics or cut)"
+      ],
+      "cuts": 3,
+      "broken": []
+    },
+    "attempt2": {
+      "score": null,
+      "cat": "movies/news",
+      "format": [
+        "body 215w < 220",
+        "breathless filler pile-up (5 empty intensifiers — back them with specifics or cut)"
+      ],
+      "cuts": 1,
+      "broken": []
+    }
+  },
+  "editorial": {
+    "status": "official",
+    "entity": "Venice Immersive",
+    "work": null,
+    "outlet": "deadline.com"
+  },
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
+    "deterministic": {
+      "words": 215,
+      "h2s": 2,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 3,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 27,
+      "avgSentence": 15,
+      "flesch": 46,
+      "bannedTells": 0,
+      "fillerPraise": 5,
+      "kwExact": 2,
+      "hardBlocks": [
+        "body 215w < 220",
+        "breathless filler pile-up (5 empty intensifiers — back them with specifics or cut)"
+      ]
+    },
+    "hardBlocks": []
+  },
+  "score": null,
+  "category": "movies",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 2,
+    "failed": [
+      "body ≥ 220w"
+    ]
+  },
+  "ms": 80253
+}
