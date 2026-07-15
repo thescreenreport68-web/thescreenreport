@@ -1,0 +1,89 @@
+{
+ "runId": "run-2026-07-15T11-30-32",
+ "mode": "live",
+ "startedAt": "2026-07-15T11:30:32.816Z",
+ "films": 6,
+ "published": [],
+ "held": [
+  {
+   "tag": "moana-bo-update×BO-UPDATE",
+   "reason": "fidelity: 5 unsupported figures/claims — draft-level failure",
+   "score": 0
+  },
+  {
+   "tag": "minions-monsters-bo-update×BO-UPDATE",
+   "reason": "fidelity: 6 unsupported figures/claims — draft-level failure",
+   "score": 0
+  },
+  {
+   "tag": "toy-story-5-bo-update×BO-UPDATE",
+   "reason": "words 131 < 180 (owner-set ~200-word minimum) | seo-faq: fewer than 2 real FAQs",
+   "score": 50
+  },
+  {
+   "tag": "evil-dead-burn-bo-update×BO-UPDATE",
+   "reason": "fidelity: 5 unsupported figures/claims — draft-level failure",
+   "score": 0
+  },
+  {
+   "tag": "young-washington-bo-update×BO-UPDATE",
+   "reason": "words 171 < 180 (owner-set ~200-word minimum) | seo-faq: fewer than 2 real FAQs | soft-floor engagement 4 < 5",
+   "score": 45
+  },
+  {
+   "tag": "obsession-bo-update×BO-UPDATE",
+   "reason": "words 130 < 180 (owner-set ~200-word minimum) | seo-faq: fewer than 2 real FAQs | soft-floor engagement 4 < 5",
+   "score": 45
+  }
+ ],
+ "rejected": [],
+ "skipped": [],
+ "blocked": [],
+ "finishedAt": "2026-07-15T11:46:02.974Z",
+ "meter": {
+  "byRole": {
+   "gatherer": {
+    "calls": 7,
+    "errors": 0,
+    "in": 22963,
+    "out": 3069,
+    "usd": 0.00352,
+    "ms": 13198
+   },
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3311,
+    "out": 622,
+    "usd": 0.0002,
+    "ms": 1863
+   },
+   "synthesizer": {
+    "calls": 6,
+    "errors": 0,
+    "in": 4533,
+    "out": 3151,
+    "usd": 0.00098,
+    "ms": 153112
+   },
+   "writer": {
+    "calls": 16,
+    "errors": 0,
+    "in": 31652,
+    "out": 16193,
+    "usd": 0.03857,
+    "ms": 255774
+   },
+   "qa": {
+    "calls": 37,
+    "errors": 0,
+    "in": 111918,
+    "out": 15428,
+    "usd": 0.07215,
+    "ms": 112570
+   }
+  },
+  "totalUsd": 0.11542
+ },
+ "openrouterTotalUsd": 0.11535
+}
