@@ -190,3 +190,155 @@ export const NAV: NavItem[] = [
   { label: "Awards", href: "/awards/", subs: subNav("awards") },
   { label: "Music", href: "/music/", subs: subNav("music") },
 ];
+
+// ─────────────────────────────────────────────────────────────────────────────
+// SEO helpers — applied at RENDER to EVERY article (all lanes, existing + future).
+// The reader-facing `title` (the <h1> + JSON-LD headline) is NEVER shortened; these
+// only shape the <title>/OG/Twitter tags, <meta name="keywords">, and JSON-LD.
+// metaTitle rule (owner): 45–55 chars (45 is a firm floor — don't make it too small; 55 ceiling),
+// no brand suffix, START with the celebrity's NAME (highest search-volume term) then the hook.
+// Keep in sync with pipeline/lib/seo.mjs.
+
+const BRAND_SUFFIX_RE = /\s*[—|–-]\s*(?:The Screen Report|Screen Report)\s*$/i;
+// Headline lead-ins that aren't the subject — dropped so the NAME leads. Only used as a
+// fallback when no proper name is detected (name-reslice handles the common case).
+const FILLER_LEAD_RE =
+  /^(?:inside|meet|watch|see|look|exclusive|report|revealed|pics?|photos?|video|why|how|what|when|where|the truth about|is|are|did|does)\b[:\s]+/i;
+
+type SeoArticleLike = {
+  title: string;
+  metaTitle?: string;
+  tags?: string[];
+  about?: { name: string; type?: string }[];
+};
+
+function leadNameOf(base: string, article: SeoArticleLike): string {
+  // 1) a Person named in `about` that appears in the title (inside/news lanes)
+  const person = (article.about ?? []).find(
+    (e) => e?.name && (e.type === "Person" || !e.type) && base.toLowerCase().includes(e.name.toLowerCase())
+  );
+  if (person) return person.name;
+  // 2) the first tag that is a multi-word proper name present in the title (gossip: tags[0] = primaryEntity)
+  const nameTag = (article.tags ?? []).find(
+    (t) => /^[A-Z][a-zà-ÿ]/u.test(t) && /\s/.test(t) && base.includes(t)
+  );
+  if (nameTag) return nameTag;
+  // 3) a name-like span (2+ capitalized words) from the title itself
+  const m = base.match(/[A-ZÀ-Þ][a-zà-ÿA-Z.'’-]+(?:\s+[A-ZÀ-Þ][a-zà-ÿA-Z.'’-]+)+/u);
+  return m ? m[0] : "";
+}
+
+// Function/connector words we don't want a title to END on (a cut clause shouldn't dangle on "Amid"/"of"/"&").
+const FUNCTION_WORDS = new Set(
+  "a an the of to in on at for with and or amid after before while when as about into over from by per via vs is are was were his her their its that who whom whose & de la le da".split(" ")
+);
+const endsFunc = (s: string): boolean => {
+  const w = (s.toLowerCase().replace(/[^a-z0-9'’&]+$/u, "").split(/\s+/).pop() || "");
+  return FUNCTION_WORDS.has(w);
+};
+const cleanEnds = (s: string): string =>
+  s.replace(/^[\s—–\-|:,]+/u, "").replace(/[\s—–\-|:,]+$/u, "").trim();
+
+// Choose the best SEO title from a name-first `base`: land in [MIN,MAX] chars, prefer a clean
+// (content-word) ending, and prefer the "&" compression stylistically. Never reorders the words,
+// so the leading NAME stays first. MIN=45 floor (owner: don't make it too small); MAX=55 ceiling.
+const SEO_MIN = 45;
+const SEO_MAX = 55;
+function bestTitle(base: string): string {
+  const start = cleanEnds(base);
+  if (!start) return "";
+  const variants: { s: string; comp: boolean }[] = [{ s: start, comp: false }];
+  const compressed = cleanEnds(start.replace(/ and /g, " & "));
+  if (compressed !== start) variants.push({ s: compressed, comp: true });
+
+  let best = "";
+  let bestScore = -1;
+  for (const { s, comp } of variants) {
+    const words = s.split(/\s+/);
+    let acc = "";
+    for (const w of words) {
+      acc = acc ? `${acc} ${w}` : w;
+      if (acc.length > SEO_MAX) break; // every longer prefix is also too long
+      const cand = cleanEnds(acc);
+      const L = cand.length;
+      if (!L) continue;
+      // in-band (≥MIN) dominates; then a content-word ending; then length; small nudge for "&".
+      const score = (L >= SEO_MIN ? 1000 : 0) + (endsFunc(cand) ? 0 : 300) + L + (comp ? 3 : 0);
+      if (score > bestScore) {
+        bestScore = score;
+        best = cand;
+      }
+    }
+  }
+  // fallback (source shorter than MIN, or nothing scored): longest ≤MAX we can take
+  return best || cleanEnds(start.slice(0, SEO_MAX));
+}
+
+/** Name-first, 45–55-char, brand-free SEO title. Never mutates the reader-facing `title`. */
+export function seoTitle(article: SeoArticleLike): string {
+  const title = (article.title ?? "").trim();
+  if (!title) return SITE.name;
+  // honor an already-good hand-written metaTitle; otherwise derive from the full title
+  let base =
+    article.metaTitle && article.metaTitle !== title && article.metaTitle.length <= SEO_MAX && article.metaTitle.length >= SEO_MIN
+      ? article.metaTitle
+      : title;
+  base = base.replace(BRAND_SUFFIX_RE, "").trim();
+
+  const lead = leadNameOf(base, article);
+  if (lead) {
+    const idx = base.toLowerCase().indexOf(lead.toLowerCase());
+    const before = base.slice(0, idx);
+    // Put the NAME first ONLY when the text before it is a recognized filler lead-in ("Inside"/"Why"/
+    // "Here's Why"…) — never a meaningful clause ("The 30 Best", "Mira Sorvino Announces") and never
+    // the 2nd name of a pair ("Justin and Hailey Bieber" keeps Justin).
+    const secondOfPair = /(?:\band\b|&|,|\bwith\b)\s*$/i.test(before);
+    // both guards: the prefix is SHORT (≤16, so it's just a lead-in) AND is a recognized filler —
+    // "What Was Adam Sandler's Advice for …" starts with "What" but is a 40-char clause, so it stays.
+    if (idx > 0 && !secondOfPair && before.length <= 16 && FILLER_LEAD_RE.test(before)) base = base.slice(idx).trim();
+  } else {
+    base = base.replace(FILLER_LEAD_RE, "").trim();
+  }
+  base = base.replace(/^[\s—–\-|:,]+/u, "").trim();
+  let out = bestTitle(base); // handles and↔& + fits the 45–55 band, name stays first
+  if (!out) out = bestTitle(title.replace(BRAND_SUFFIX_RE, ""));
+  return out.charAt(0).toUpperCase() + out.slice(1);
+}
+
+/** Meta description clamped to ≤160 chars at a word boundary (search engines truncate past that). */
+export function clampMeta(s: string | undefined, max = 160): string {
+  const t = (s ?? "").trim();
+  if (t.length <= max) return t;
+  let cut = t.slice(0, max - 1);
+  const sp = cut.lastIndexOf(" ");
+  if (sp > 40) cut = cut.slice(0, sp);
+  return cut.replace(/[\s,;:—–-]+$/u, "").trim() + "…";
+}
+
+/** De-duped keyword list for <meta name="keywords"> + JSON-LD (targetKeyword → tags → entities → category). */
+export function seoKeywords(article: {
+  tags?: string[];
+  targetKeyword?: string;
+  about?: { name: string }[];
+  category?: string;
+}): string[] {
+  const catName = article.category ? getCategory(article.category)?.name : "";
+  const raw = [
+    article.targetKeyword ?? "",
+    ...(article.tags ?? []),
+    ...((article.about ?? []).map((e) => e?.name ?? "")),
+    catName ?? "",
+  ]
+    .map((k) => String(k || "").trim())
+    .filter(Boolean);
+  const seen = new Set<string>();
+  const out: string[] = [];
+  for (const k of raw) {
+    const key = k.toLowerCase();
+    if (!seen.has(key)) {
+      seen.add(key);
+      out.push(k);
+    }
+  }
+  return out.slice(0, 12);
+}

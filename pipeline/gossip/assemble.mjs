@@ -10,6 +10,7 @@ const matter = require("gray-matter");
 import { GOSSIP_AUTHOR_SLUG, AI_DISCLOSURE } from "./config.gossip.mjs";
 import { detectGossipType } from "./writer.mjs";
 import { deriveTags } from "./polish.mjs";
+import { seoMetaTitle, clampDesc, targetKeywordFor } from "../lib/seo.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url)); // …/pipeline/gossip
 const CONTENT_DIR = path.resolve(__dirname, "../../content/articles");
@@ -35,6 +36,7 @@ export function buildGossipMarkdown({ article, frame, provenance, route, topic, 
   const slug = topic.slug || slugify(article.title);
   const gossipType = detectGossipType(topic);
   const badge = badgeFor(frame);
+  const tags = deriveTags(topic, article, route.category, gossipType);
   const fm = {
     title: article.title,
     slug,
@@ -48,11 +50,14 @@ export function buildGossipMarkdown({ article, frame, provenance, route, topic, 
     author: GOSSIP_AUTHOR_SLUG,
     date: dateISO,
     dek: article.dek || "",
-    metaTitle: article.title,
-    metaDescription: article.dek || "",
+    // SEO (readers see the full `title` above unchanged): name-first 45–55 metaTitle, clamped
+    // description, and a targetKeyword — mirrors lib/site.ts so the stored data matches the head.
+    metaTitle: seoMetaTitle({ title: article.title, primaryEntity: topic.primaryEntity, tags }),
+    metaDescription: clampDesc(article.dek || ""),
+    targetKeyword: targetKeywordFor({ primaryEntity: topic.primaryEntity, tags }),
     formatTag: "gossip",
     gossipType,
-    tags: deriveTags(topic, article, route.category, gossipType),
+    tags,
     keyTakeaways: article.keyTakeaways || [],
     faq: (article.faq || []).filter((f) => f && f.q && f.a).map((f) => ({ q: f.q, a: f.a })),
     // ── rumor-UI fields (rendered by the gossip modules) ──

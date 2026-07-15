@@ -26,6 +26,9 @@ import {
   getSubcategoriesForCategory,
   CATEGORIES,
   SITE,
+  seoTitle,
+  clampMeta,
+  seoKeywords,
 } from "@/lib/site";
 
 export const dynamicParams = false;
@@ -70,33 +73,41 @@ export function generateMetadata({
         },
       ]
     : undefined;
-  // SEO <title>: Google truncates past ~60 chars, and the root layout template
-  // appends " — The Screen Report" (20 chars). Only let that brand suffix through
-  // when metaTitle is short enough to keep the whole tag ≤60; otherwise emit the
-  // metaTitle ALONE (absolute) so the headline is never cut off by the brand.
-  // This touches ONLY the hidden <title>/browser-tab/Google blue-link — the on-page
-  // <h1> readers see stays `article.title` (full, expressive, UNCHANGED).
-  const titleTag =
-    article.metaTitle.length + 20 <= 60
-      ? article.metaTitle
-      : { absolute: article.metaTitle };
+  // Basic SEO applied to EVERY article at render (all lanes, existing + future): a name-first
+  // 45–55 char <title> with NO brand suffix (owner rule), a clamped meta description, a
+  // <meta name="keywords"> list, and author + article OG metadata. The on-page <h1> readers
+  // see stays `article.title` (full, expressive, UNCHANGED) — this is <head> only.
+  const headTitle = seoTitle(article);
+  const desc = clampMeta(article.metaDescription || article.dek);
+  const keywords = seoKeywords(article);
+  const author = getAuthor(article.author);
+  const catName = getCategory(article.category)?.name;
   return {
-    title: titleTag,
-    description: article.metaDescription,
+    // `absolute` opts out of the layout's "%s — The Screen Report" template so the <title> is the
+    // exact ≤55 name-first metaTitle with NO brand suffix.
+    title: { absolute: headTitle },
+    description: desc,
+    ...(keywords.length ? { keywords } : {}),
+    ...(author ? { authors: [{ name: author.name, url: `${SITE.url}/author/${author.slug}/` }] } : {}),
     alternates: { canonical: `/${article.category}/${article.slug}/` },
     // Recheck corrections / the inside parent-retraction cascade write robots: "noindex".
     ...(article.robots === "noindex" ? { robots: { index: false, follow: false } } : {}),
     openGraph: {
-      title: article.metaTitle,
-      description: article.metaDescription,
+      title: headTitle,
+      description: desc,
       type: "article",
       url: `/${article.category}/${article.slug}/`,
       images: ogImages,
+      publishedTime: article.date,
+      modifiedTime: article.updated ?? article.date,
+      ...(author ? { authors: [author.name] } : {}),
+      ...(catName ? { section: catName } : {}),
+      ...(article.tags?.length ? { tags: article.tags } : {}),
     },
     twitter: {
       card: "summary_large_image",
-      title: article.metaTitle,
-      description: article.metaDescription,
+      title: headTitle,
+      description: desc,
       images: article.image ? [article.image] : undefined,
     },
   };
@@ -122,7 +133,7 @@ export default function ArticlePage({
       "@context": "https://schema.org",
       "@type": "NewsArticle",
       headline: article.title,
-      description: article.metaDescription,
+      description: clampMeta(article.metaDescription || article.dek),
       image: article.image
         ? {
             "@type": "ImageObject",
@@ -154,7 +165,7 @@ export default function ArticlePage({
       },
       mainEntityOfPage: `${SITE.url}/${article.category}/${article.slug}/`,
       articleSection: cat?.name,
-      keywords: article.tags.join(", "),
+      keywords: seoKeywords(article).join(", "),
     },
     {
       "@context": "https://schema.org",
