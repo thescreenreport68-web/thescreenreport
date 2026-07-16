@@ -1,9 +1,12 @@
 // COPYWRITER + SEO agents. Faithful-only: condense the article, never invent facts (project accuracy mandate).
+// 2026-07-16 external audit root fixes: '#'-preserving sanitizer, hashtags as validated DATA (0–3, not prose),
+// fact/entity verification with regenerate-then-fallback, no ellipsis-truncated copy, CTA rotation.
 import { chat } from "../lib/openrouter.mjs";
 import { PIN } from "./config.mjs";
+import { noMd, factCheck, cleanHashtags, completeSentences, finishPinTitle, frontLoaded, ctaFor } from "./copyfinish.mjs";
 
-const noMd = (s) => String(s || "").replace(/[*_`~#]+/g, "").replace(/\s{2,}/g, " ").trim();
-const clamp = (s, n) => { s = noMd(s); return s.length <= n ? s : s.slice(0, n - 1).replace(/\s+\S*$/, "") + "…"; };
+// word-boundary shorten (kicker/on-card only — pin titles/descriptions use the finishers, never this)
+const shorten = (s, n) => { s = noMd(s); return s.length <= n ? s : s.slice(0, n).replace(/\s+\S*$/, "").replace(/[\s,;:-]+$/, ""); };
 
 const brief = (a) => `HEADLINE: ${a.title}
 CATEGORY: ${a.category}
@@ -25,11 +28,11 @@ export async function copywriter(a) {
   try { ({ data } = await chat({ model: PIN.copyModel, system: COPY_SYS, user: brief(a), json: true, maxTokens: 500, temperature: 0.6 })); }
   catch { try { ({ data } = await chat({ model: PIN.copyFallback, system: COPY_SYS, user: brief(a), json: true, maxTokens: 500, temperature: 0.6 })); } catch {} }
   let lines = (data.headlineLines || []).map((l) => noMd(l)).filter(Boolean).slice(0, 2);
-  if (!lines.length) lines = [clamp(a.title, 40)];
+  if (!lines.length) lines = [shorten(a.title, 40)];
   return {
-    kicker: clamp(data.kicker || a.category, 18),
+    kicker: shorten(data.kicker || a.category, 18),
     headline: lines.join("<br>"),
-    dek: clamp(data.dek || a.dek, 150),
+    dek: completeSentences(data.dek || a.dek, 150),
   };
 }
 
@@ -63,18 +66,42 @@ export async function classifyBoard(a) {
 }
 
 // ── SEO strategist: the pin's keyword-rich TITLE + DESCRIPTION (Pinterest = a search engine).
-const SEO_SYS = `You are the Pinterest SEO strategist for The Screen Report. Pinterest is a visual SEARCH engine — keyword relevance in the pin title and description is the #1 ranking signal. Front-load the specific searchable terms people type (names, film/show titles, "cast", "release date", "2026", etc.). Faithful to the facts only.
+// Copy must read naturally to a HUMAN first — keywords woven into real sentences, never keyword salad.
+// Hashtags come back as a separate ARRAY (validated data, 0–3 max — Pinterest gives hashtags ~no ranking
+// weight post-2020, so prose keywords carry the load). Every draft is fact-checked against the article;
+// one regeneration on mismatch, then a deterministic article-derived fallback (faithful by construction).
+const SEO_SYS = `You are the Pinterest SEO strategist for The Screen Report, a premium Hollywood-news brand. Pinterest is a visual SEARCH engine — but pins are read by PEOPLE first: write natural, complete sentences a human enjoys reading, with the searchable terms (names, film/show titles, "cast", "release date", the year) woven in organically. Use ONLY facts, names, numbers and years that appear in the material below — never invent or "correct" anything.
 Return STRICT JSON only:
-{"title":"<=95 chars, keyword-rich and searchable, front-loaded with the main entity + hook",
- "description":"2-3 sentences, <=480 chars, keyword-rich and natural, weaves in the searchable terms + a soft call to action to read the full story. 3-6 relevant hashtags at the end (#MovieNews etc.)."}`;
+{"title":"a COMPLETE phrase, 40-70 chars, that puts the main entity + topic inside the first 40 characters. Never end mid-phrase.",
+ "description":"2-4 complete sentences, 200-400 chars total, natural and specific, weaving in searchable terms. End with this exact call to action: <CTA>",
+ "hashtags":["0-3 hashtags, each a single #CamelCase token naming this story's entities or a broad category like #MovieNews. Omit entirely if none feel natural."]}`;
 
 export async function seo(a, copy) {
-  const u = brief(a) + `\nCARD HOOK: ${copy.headline.replace(/<br>/g, " ")}`;
-  let data = {};
-  try { ({ data } = await chat({ model: PIN.seoModel, system: SEO_SYS, user: u, json: true, maxTokens: 500, temperature: 0.5 })); }
-  catch {}
-  return {
-    title: clamp(data.title || a.metaTitle || a.title, 95),
-    description: clamp(data.description || a.dek, 480),
-  };
+  const cta = ctaFor(a.slug);
+  const sys = SEO_SYS.replace("<CTA>", cta);
+  const base = brief(a) + `\nCARD HOOK: ${copy.headline.replace(/<br>/g, " ")}`;
+  let title = "", description = "", tags = [];
+  let feedback = "";
+  for (let attempt = 0; attempt < 2; attempt++) {
+    let data = {};
+    try { ({ data } = await chat({ model: PIN.seoModel, system: sys, user: base + feedback, json: true, maxTokens: 500, temperature: attempt ? 0.3 : 0.5 })); }
+    catch { break; }
+    title = finishPinTitle({ model: data.title, article: a });
+    description = completeSentences(data.description, 400);
+    tags = cleanHashtags(Array.isArray(data.hashtags) ? data.hashtags : [], a);
+    const fc = factCheck(a, title + " " + description);
+    if (fc.ok && frontLoaded(title, a)) break;
+    feedback = `\n\nYOUR PREVIOUS DRAFT FAILED VERIFICATION. These items are NOT supported by the article — remove or correct each one using only the article's own words: ${fc.missing.join(", ") || "(title must open with the story's main entity)"}. Rewrite completely.`;
+    title = ""; description = "";
+  }
+  // deterministic fallback — built purely from the article, so it can never assert an unsupported fact
+  if (!title || !description || !factCheck(a, title + " " + description).ok) {
+    title = finishPinTitle({ model: "", article: a });
+    description = completeSentences(a.dek || a.whatWeKnow || a.title, 320) + " " + cta;
+    tags = cleanHashtags(["#MovieNews"], a);
+  }
+  // budget-aware assembly (Pinterest cap 480) — drop hashtags before ever cutting a sentence
+  let full = tags.length ? `${description} ${tags.join(" ")}` : description;
+  if (full.length > 480) full = description.length <= 480 ? description : completeSentences(description, 480);
+  return { title, description: full.trim() };
 }
