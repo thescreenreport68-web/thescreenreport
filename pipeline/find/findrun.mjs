@@ -11,6 +11,7 @@ import { scoreTopics, selectDiverse } from "./score.mjs";
 import { detectBreakouts } from "./sources/breakout.mjs";
 import { expandInsideStories, TIER_S } from "./expand.mjs";
 import { buildRadar, loadRadar, radarBoost } from "./radar.mjs";
+import { load as paceLoad, save as paceSave, recordCandidates } from "../lib/pacing.mjs";
 
 const arg = (k, d) => Number((process.argv.find((a) => a.startsWith(`--${k}=`)) || "").split("=")[1]) || d;
 const SHORTLIST = arg("candidates", 28); // how many candidates the categorize LLM judges (cost control)
@@ -167,6 +168,11 @@ for (const t of verified) {
   const sType = t.sensitivity === "high" || /death|arrest|lawsuit|divorce|legal/.test(String(t.eventType || ""));
   t.tierClass = sType ? "S" : (rb || (t.verification?.outletCount || 0) >= 3) ? "A" : (t.priority || 0) >= 60 ? "B" : "C";
 }
+// PACING GOVERNOR window feed (Phase 4): every sweep's scored, eligible candidates enter the rolling 24h
+// quantile window (max-score-per-event — dedup/hygiene handled inside recordCandidates). This is what lets the
+// scheduler's bar float with the day's real volume instead of a fixed percentile.
+try { const _ps = paceLoad(); recordCandidates(_ps, verified); paceSave(_ps); monitor.stage("pacing", `window fed with ${verified.length} scored candidates`); }
+catch (e) { monitor.stage("pacing", `window feed failed (non-fatal): ${String(e?.message || e).slice(0, 100)}`); }
 let queue = selectDiverse(verified, { n: QUEUE_N, publishableOnly: true, floor: SELECT_FLOOR, minKeep: 3 });
 // NEVER PUBLISH 0 (owner 2026-07-06): our niche ALWAYS has something trending — a movie, TV show, musician/music, or
 // celebrity story. So the automation must never skip a tick for lack of content. If the strict newsworthiness floor +

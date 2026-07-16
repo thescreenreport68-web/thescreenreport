@@ -16,6 +16,7 @@ import { execFileSync } from "node:child_process";
 import { categorize } from "./find/categorize.mjs";
 import { loadPublished, slugKey } from "./find/store.mjs";
 import { recentArticles, findDuplicate, entityDayCap } from "./lib/dupGuard.mjs";
+import * as pace from "./lib/pacing.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const QUEUE = path.resolve(__dirname, "../data/find/queue.json");
@@ -51,6 +52,16 @@ if (dup) bail(`duplicate of published "${dup.slug}" (${dup.shared.slice(0, 4).jo
 const cap = entityDayCap(t, recent);
 if (cap) bail(`entity day-cap (${cap.count}/${cap.cap} in 24h)`);
 
+// PACING GOVERNOR gate (Phase 4): breaking DEBITS the bucket first; only a Tier-S story may bypass an empty
+// bucket, under the 4/hour + 12/day caps. PREVIEW here (no state mutation) — the spend commits only after the
+// article actually publishes, so a gate-hold can never waste a token.
+const paceState = pace.load();
+pace.dayRoll(paceState);
+pace.refill(paceState);
+const gate = pace.breakingGate(paceState, cls);
+if (!gate) bail(`pacing: bucket empty + Tier-S caps reached (day ${paceState.day.tierS}/${pace.CFG.TIER_S_DAY}) — left to the drip`);
+console.log(`[breaking] pacing gate: ${gate.mode} (tokens ${paceState.bucket.tokens.toFixed(2)})`);
+
 // Single tier-1 source ⇒ DEVELOPING, attributed (trust model). run.mjs injects this framing into the writer.
 t.verification = { status: "DEVELOPING", publishable: true, framing: "attributed", attribution: outletName, outlets: [outletName], outletCount: 1, sensitivity: t.sensitivity || "normal" };
 t.priority = cls === "S" ? 96 : 88; // hero-worthy trendScore; the drip's next FIND re-ranks everything after
@@ -67,5 +78,15 @@ const output = execFileSync("node", [path.resolve(__dirname, "run.mjs"), "--from
 });
 process.stdout.write(output);
 const slugs = [...output.matchAll(/✓ WROTE (\S+?)\.md/g)].map((m) => m[1]);
+if (slugs.length) {
+  // Commit the governor spend + the day's stats ONLY for what actually published.
+  pace.commitBreaking(paceState, gate);
+  pace.save(paceState);
+  const costM = output.match(/TOTAL: \$([\d.]+) across (\d+) calls/);
+  pace.statsAppend({
+    breaking: [{ at: new Date().toISOString(), cls, mode: gate.mode, slugs, outlet: outletName, costUsd: costM ? Number(costM[1]) : null }],
+    published: slugs.length, costUsd: costM ? Number(costM[1]) : 0,
+  });
+}
 out({ published: slugs.length, slugs: slugs.join(",") });
 console.log(`[breaking] done — published ${slugs.length} (${slugs.join(", ") || "held by the gate"})`);

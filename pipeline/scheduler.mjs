@@ -14,6 +14,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { execFileSync } from "node:child_process";
 import { loadPublished, slugKey, entityKey } from "./find/store.mjs";
+import * as pace from "./lib/pacing.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url)); // …/site/pipeline
 const QUEUE = path.resolve(__dirname, "../data/find/queue.json");
@@ -90,17 +91,48 @@ export async function tick({ now = new Date() } = {}) {
   } else {
     console.log(`[news-scheduler] fresh backlog ${backlog} (>= ${MIN_BACKLOG}), queue age ${ageStr}h (<= ${QUEUE_STALE_HOURS}h) → publishing from existing queue.`);
   }
-  // PUBLISH up to PER_TICK from the queue (run.mjs ledger-skips already-published topics). CONCURRENCY scales with
-  // the per-tick target (max 3 parallel writers) — each article still runs the FULL gate chain independently.
+  // ── PACING GOVERNOR (Phase 4, NEWS_REALTIME_SCALE_PLAN §6) ─────────────────────────────────────
+  // Load AFTER the FIND top-up (findrun feeds the quantile window), roll the LA day (fires the daily
+  // missed-story audit for the closed day), refill the bucket by wall-clock, compute the day's bar.
+  const st = pace.load();
+  const closed = pace.dayRoll(st, now.getTime());
+  if (closed) {
+    console.log(`[news-scheduler] LA day rolled (${closed.date} → ${st.day.date}; published ${closed.published}, tierS ${closed.tierS}) — running missed-story audit…`);
+    try { process.stdout.write(runNode("scripts/audit-missed.mjs", [closed.date])); }
+    catch (e) { console.error(`[news-scheduler] audit-missed failed: ${String(e?.message || e).slice(0, 140)}`); }
+  }
+  pace.refill(st, now.getTime());
+  const { bar, q, n, cold } = pace.computeBar(st, now.getTime());
+  // Allowance: bucket-limited, tick-capped; a tick only publishes 0 when the day is AHEAD of its pace curve
+  // (the owner's always-post rule bends the pace to 1/tick, never to silence while behind).
+  let allow = Math.min(PER_TICK, Math.floor(st.bucket.tokens));
+  if (allow < 1 && pace.behindPace(st, now.getTime())) allow = 1;
+  console.log(`[news-scheduler] pacing: bar ${bar}${cold ? " (cold-start floor)" : ` (q=${q}, n=${n})`} · tokens ${st.bucket.tokens.toFixed(2)} · day ${st.day.published}/${pace.CFG.TARGET} → allow ${allow}`);
+  if (allow < 1) {
+    pace.save(st);
+    console.log(`[news-scheduler] ahead of pace — skipping this tick (tokens rebuild by wall-clock).`);
+    setOutput({ published: 0, reason: "pacing-ahead" });
+    return { published: 0, reason: "pacing-ahead" };
+  }
+  // PUBLISH up to `allow` from the queue (run.mjs ledger-skips already-published topics; PACE_BAR drops topics
+  // below the day's bar). CONCURRENCY scales with the target (max 3) — every article runs the FULL gate chain.
   let out = "";
-  try { out = runNode("run.mjs", ["--from-find", `--target=${PER_TICK}`], { CONCURRENCY: String(Math.min(3, Math.max(1, PER_TICK))) }); }
-  catch (e) { console.error(`[news-scheduler] MAKE failed: ${String(e?.message || e).slice(0, 160)}`); setOutput({ published: 0, reason: "make-error" }); return { published: 0, reason: "make-error" }; }
+  try { out = runNode("run.mjs", ["--from-find", `--target=${allow}`], { CONCURRENCY: String(Math.min(3, Math.max(1, allow))), PACE_BAR: cold ? "" : String(bar) }); }
+  catch (e) { console.error(`[news-scheduler] MAKE failed: ${String(e?.message || e).slice(0, 160)}`); pace.save(st); setOutput({ published: 0, reason: "make-error" }); return { published: 0, reason: "make-error" }; }
   // Echo the child's full output into OUR log — run.mjs prints the MEASURED COST + per-stage detail, and swallowing
   // it made per-article cost unrecoverable (owner 2026-07-16: cost must be visible in the cloud logs).
   process.stdout.write(out);
   const slugs = [...out.matchAll(/✓ WROTE (\S+?)\.md/g)].map((m) => m[1]);
   const published = Number((out.match(/DONE\. published:(\d+)/) || [])[1] || slugs.length || 0);
-  console.log(`[news-scheduler] published ${published} (${slugs.join(", ") || "—"}). fresh backlog now ${freshBacklog()}.`);
+  // Spend tokens for what actually published + append the tick to the day's stats ledger (incl. measured cost).
+  pace.take(st, published, now.getTime());
+  pace.save(st);
+  const costM = out.match(/TOTAL: \$([\d.]+) across (\d+) calls(?: · \$([\d.]+)\/article)?/);
+  pace.statsAppend({
+    ticks: [{ at: now.toISOString(), bar: cold ? null : bar, q, windowN: n, allow, published, slugs, costUsd: costM ? Number(costM[1]) : null }],
+    published, costUsd: costM ? Number(costM[1]) : 0,
+  });
+  console.log(`[news-scheduler] published ${published} (${slugs.join(", ") || "—"}). day ${st.day.published}/${pace.CFG.TARGET} · tokens ${st.bucket.tokens.toFixed(2)} · fresh backlog ${freshBacklog()}.`);
   setOutput({ published, slugs: slugs.join(",") });
   return { published, slugs };
 }

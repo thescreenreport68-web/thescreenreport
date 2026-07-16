@@ -71,6 +71,14 @@ if (FROM_FIND) {
     return true;
   });
   if (_n1 !== SOURCE_TOPICS.length) console.log(`  dup guard: ${_n1 - SOURCE_TOPICS.length} duplicate/capped topic(s) dropped → ${SOURCE_TOPICS.length} publishable`);
+  // PACING BAR (Phase 4): the scheduler passes the day's adaptive quality bar — topics scoring below it wait for
+  // a richer moment (or the bar to relax). Breaking topics are exempt (they pre-cleared the governor's gate).
+  const PACE_BAR = Number(process.env.PACE_BAR || 0);
+  if (PACE_BAR > 0) {
+    const _n2 = SOURCE_TOPICS.length;
+    SOURCE_TOPICS = SOURCE_TOPICS.filter((t) => t.breaking || !Number.isFinite(t.priority) || t.priority >= PACE_BAR);
+    if (_n2 !== SOURCE_TOPICS.length) console.log(`  pacing bar ${PACE_BAR}: ${_n2 - SOURCE_TOPICS.length} below-bar topic(s) held → ${SOURCE_TOPICS.length} eligible`);
+  }
 }
 let topics = ONLY ? SOURCE_TOPICS.filter((t) => t.id === ONLY) : SOURCE_TOPICS;
 if (LIMIT) topics = topics.slice(0, LIMIT);
