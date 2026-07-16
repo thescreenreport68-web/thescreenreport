@@ -11,8 +11,8 @@ dek: >-
 metaTitle: Jennifer Lopez and Tom Hiddleston Spark Wimbledon Buzz
 metaDescription: >-
   The stars were spotted side-by-side at the finals, but was it just a friendly
-  match? Jennifer Lopez and Tom Hiddleston were both in attendance at the 2026
-  Wimbledon.
+  match? Jennifer Lopez and Tom Hiddleston were photographed sitting next to
+  each.
 formatTag: gossip
 gossipType: general
 tags:

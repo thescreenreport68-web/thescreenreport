@@ -11,8 +11,7 @@ dek: >-
 metaTitle: Gigi Hadid's 'Soft Serve' Wedding Hair Is the Sweetest
 metaDescription: >-
   The model's hairstylist gives us a peek at her look for Taylor Swift's
-  nuptials, complete with vintage waves and a pink Wiederhoeft gown. Gigi
-  Hadid's hairstylist.
+  nuptials, complete with vintage waves and a pink Wiederhoeft gown.
 formatTag: gossip
 gossipType: general
 tags:

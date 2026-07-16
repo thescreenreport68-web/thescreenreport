@@ -11,8 +11,8 @@ dek: >-
 metaTitle: Marcellus Wiley Denies Abuse Allegations in Explosive
 metaDescription: >-
   The former NFL star responds to his wife's restraining order with a series of
-  counter-claims, including a 'voodoo spell' accusation. A judge ordered
-  Marcellus Wiley.
+  counter-claims, including a 'voodoo spell' accusation. Marcellus Wiley
+  publicly.
 formatTag: gossip
 gossipType: general
 tags:

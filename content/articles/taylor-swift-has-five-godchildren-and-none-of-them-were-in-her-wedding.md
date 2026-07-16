@@ -12,8 +12,8 @@ dek: >-
 metaTitle: Where Were Taylor Swift's Godchildren During
 metaDescription: >-
   A new report suggests the singer's five godchildren, including those of Blake
-  Lively and Jaime King, were not part of the festivities. The godchildren
-  include Blake.
+  Lively and Jaime King, were not part of the festivities. Reps for the
+  involved.
 formatTag: gossip
 gossipType: general
 tags:

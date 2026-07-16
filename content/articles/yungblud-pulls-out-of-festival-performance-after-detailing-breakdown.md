@@ -13,7 +13,7 @@ metaTitle: Yungblud Steps Back from Festival After Candid Mental
 metaDescription: >-
   The rocker pulls out of a Canadian festival performance days after sharing a
   raw message about his struggles. The festival has offered refunds and
-  expressed support.
+  expressed.
 formatTag: gossip
 gossipType: general
 tags:

@@ -11,8 +11,8 @@ dek: >-
 metaTitle: 'Bunnie Xo Announces Next Chapter: College Bound'
 metaDescription: >-
   The 'Dumb Blonde' podcast host shares her acceptance to Arizona State
-  University, turning a new page after her divorce filing. Bunnie Xo announced
-  her acceptance.
+  University, turning a new page after her divorce filing. Jelly Roll filed for
+  divorce.
 formatTag: gossip
 gossipType: breakup
 tags:

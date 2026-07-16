@@ -11,8 +11,7 @@ dek: >-
 metaTitle: Diddy's Twin Daughters Launch Streetwear Brand While
 metaDescription: >-
   Jessie and D'Lila Combs debut '12TWINTY1' as their father expresses pride from
-  federal prison. The 18-year-old sisters have recently been seen with
-  celebrities like.
+  federal prison. Diddy, from federal prison, told TMZ he is "incredibly proud".
 formatTag: gossip
 gossipType: general
 tags:

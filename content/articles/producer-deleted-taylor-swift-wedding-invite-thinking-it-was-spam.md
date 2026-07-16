@@ -12,8 +12,8 @@ dek: >-
 metaTitle: Music Producer's Wife Reveals He Deleted Taylor
 metaDescription: >-
   Jacknife Lee thought a text from Swift's manager was spam, his wife writes in
-  a HuffPost op-ed. His wife, Melissa Garner Lee, revealed the story in a
-  HuffPost op-ed.
+  a HuffPost op-ed. Lee believed the text from Swift's manager was spam,
+  fearing.
 formatTag: gossip
 gossipType: general
 tags:

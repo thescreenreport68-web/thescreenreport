@@ -12,8 +12,8 @@ dek: >-
 metaTitle: Kanye West and Shane Gillis Spark Collaboration Rumors
 metaDescription: >-
   The rapper and the comedian, who have a history of near-misses, reunited at a
-  Texas concert, setting fans' speculation alight. The two have been in the same
-  orbit.
+  Texas concert, setting fans' speculation alight. The two have been in the
+  same.
 formatTag: gossip
 gossipType: general
 tags:

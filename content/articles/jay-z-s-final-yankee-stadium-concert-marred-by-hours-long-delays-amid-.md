@@ -12,8 +12,8 @@ dek: >-
 metaTitle: Jay-Z's Final Yankee Stadium Show Locked Down After Fans Rush
 metaDescription: >-
   A chaotic security breach led to hours of delays, locked-out A-listers, and a
-  late-night apology from the rap icon. Celebrities including A$AP Rocky and
-  Charlamagne.
+  late-night apology from the rap icon. A security breach involving fans
+  rushing.
 formatTag: gossip
 gossipType: general
 tags:

@@ -12,8 +12,8 @@ dek: >-
 metaTitle: Bad Bunny's Ex Gets a Partial Win in Voice Recording
 metaDescription: >-
   A Puerto Rico court dismissed some claims as too old, but the legal drama over
-  a famous whisper isn't over yet. The Puerto Rico Supreme Court partially
-  reversed.
+  a famous whisper isn't over yet. The Puerto Rico Supreme Court issued a
+  ruling.
 formatTag: gossip
 gossipType: breakup
 tags:

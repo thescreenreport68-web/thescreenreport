@@ -12,8 +12,8 @@ dek: >-
 metaTitle: Kylie Kelce Calls Taylor and Travis's Wedding
 metaDescription: >-
   The Kelce family is finally sharing a few details—and one very telling
-  word—about the star-studded MSG nuptials. The wedding reportedly took place
-  July 3 at Madison.
+  word—about the star-studded MSG nuptials. Jason Kelce, who was best man, told
+  fans.
 formatTag: gossip
 gossipType: general
 tags:

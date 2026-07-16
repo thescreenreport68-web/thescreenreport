@@ -11,8 +11,7 @@ dek: >-
 metaTitle: 'Kai Cenat Ends His Streaming Break: What''s Next'
 metaDescription: >-
   The top streamer announces his official return after stepping back to build
-  his brand. Streamer University is an event he started last year, featuring 120
-  selected.
+  his brand. Streamer University is an event he launched last year for selected.
 formatTag: gossip
 gossipType: general
 tags:

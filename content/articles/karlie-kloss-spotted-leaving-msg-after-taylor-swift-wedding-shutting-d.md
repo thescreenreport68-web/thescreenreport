@@ -11,8 +11,8 @@ dek: >-
 metaTitle: Karlie Kloss Spotted Leaving MSG After Taylor
 metaDescription: >-
   A late-night sighting appears to settle a fan-fueled conspiracy about the
-  model's attendance. She attended the Eras Tour in 2023 and liked Swift's
-  reported 2025.
+  model's attendance. The pair's friendship began in 2012 and was once highly
+  public.
 formatTag: gossip
 gossipType: career
 tags:

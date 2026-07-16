@@ -12,8 +12,8 @@ dek: >-
 metaTitle: 'Lil Wayne Apologizes After Fans Wait Hours, Only'
 metaDescription: >-
   The rapper was a no-show for his tour kickoff in Maine, leaving a packed
-  amphitheater in the lurch late into the night. Fans were informed of the
-  cancellation at 11.
+  amphitheater in the lurch late into the night. He apologized on Instagram
+  Stories.
 formatTag: gossip
 gossipType: general
 tags:

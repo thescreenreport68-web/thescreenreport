@@ -13,8 +13,8 @@ dek: >-
 metaTitle: Elliot Page's Girlfriend Julia Shiplett Shares a Witty
 metaDescription: >-
   Comedian Julia Shiplett gave fans a peek at their private celebration for
-  Page's role in the epic 'The Odyssey'. The pair first went public with their
-  relationship.
+  Page's role in the epic 'The Odyssey'. Elliot Page walked the red carpet
+  separately.
 formatTag: gossip
 gossipType: romance
 tags:

@@ -11,8 +11,7 @@ dek: >-
 metaTitle: Who Were the Best-Dressed Guests at Taylor Swift
 metaDescription: >-
   The power couple's famous friends pulled out all the sartorial stops for the
-  Madison Square Garden affair. The wedding was attended by approximately 1,000
-  guests.
+  Madison Square Garden affair. The wedding was held at Madison Square Garden.
 formatTag: gossip
 gossipType: general
 tags:

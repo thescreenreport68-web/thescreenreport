@@ -11,8 +11,8 @@ dek: >-
 metaTitle: Selena Gomez Brings the Sparkle (and Benny Blanco)
 metaDescription: >-
   The longtime bestie stepped out in a shimmering gold gown for the big day,
-  capping off a 16-year friendship. Gomez publicly celebrated Swift's engagement
-  to Travis.
+  capping off a 16-year friendship. The appearance highlights a 16-year
+  friendship.
 formatTag: gossip
 gossipType: general
 tags:

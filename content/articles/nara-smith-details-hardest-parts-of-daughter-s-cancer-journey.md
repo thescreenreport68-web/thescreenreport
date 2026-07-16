@@ -11,8 +11,8 @@ dek: >-
 metaTitle: Nara Smith Shares the "Hardest Parts" of Her Daughter's Cancer
 metaDescription: >-
   The influencer opens up about grieving the loss of her toddler's hair—and
-  celebrates its return. She ended the post by sharing that Whimsy's curls are
-  now returning.
+  celebrates its return. Nara Smith's 2-year-old daughter Whimsy is battling
+  cancer.
 formatTag: gossip
 gossipType: pregnancy
 tags:

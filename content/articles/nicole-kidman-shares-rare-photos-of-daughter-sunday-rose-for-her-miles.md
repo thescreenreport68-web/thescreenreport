@@ -12,7 +12,7 @@ metaTitle: Nicole Kidman Celebrates Daughter Sunday Rose's 18th
 metaDescription: >-
   The actress marks her daughter's milestone birthday as Sunday Rose herself
   struts the Dior runway. Nicole Kidman posted Instagram photos celebrating
-  daughter Sunday.
+  daughter.
 formatTag: gossip
 gossipType: general
 tags:

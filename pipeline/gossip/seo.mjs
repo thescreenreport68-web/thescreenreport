@@ -183,7 +183,9 @@ function trimToSentence(s, max = 160) {
 
 export function validMetaDesc(s, dek = "") {
   const t = String(s || "").trim();
-  if (t.length < 118 || t.length > 170) return false;            // ~140–160 target, a little slack each side
+  // Must be ≤160: the site render's clampMeta collapses anything >160 to its FIRST sentence (= the dek),
+  // so a 161–165 description silently loses its second sentence. Keep it whole and ≤160.
+  if (t.length < 118 || t.length > 160) return false;
   if (!endsSentence(t)) return false;
   if (((t.match(/["“”]/g) || []).length) % 2 !== 0) return false; // unclosed quote
   if (dek && norm(t) === norm(dek)) return false;                 // must be DISTINCT from the dek
@@ -192,6 +194,8 @@ export function validMetaDesc(s, dek = "") {
 
 // metaDescription = the writer's teaser if good, else build a 140–160 teaser from dek + one concrete
 // fact (keyTakeaways / whatWeKnow), ending on a full sentence, distinct from the dek. (Fix #1)
+// ends on a bare number/currency ("$13", "13") that's almost always a cut "$13 million" — but a 4-digit year is fine.
+const endsOnNumber = (c) => { const w = (c.split(" ").pop() || ""); return /^[$€£]?\d[\d,.]*[kmb%]?$/i.test(w) && !/^(?:19|20)\d\d$/.test(w); };
 // Longest CLEAN-ENDING word-prefix of `fact` that fits in `room` chars (no mid-number / mid-name / dangler cut).
 function fitPhrase(fact, room) {
   if (fact.length <= room) return fact;
@@ -201,17 +205,17 @@ function fitPhrase(fact, room) {
     if (nx.length > room) break;
     acc = nx;
     const c = cleanEnds(acc);
-    if (c.length >= 20 && endsClean(c, acc.length, [])) best = c; // ends on a content word
+    if (c.length >= 20 && endsClean(c, acc.length, []) && !endsOnNumber(c)) best = c; // ends on a content word
   }
   return best;
 }
-export function buildMetaDescription({ writerMetaDesc, dek = "", keyTakeaways = [], whatWeKnow = [] } = {}, max = 165) {
+export function buildMetaDescription({ writerMetaDesc, dek = "", keyTakeaways = [], whatWeKnow = [] } = {}, max = 158) {
   const w = String(writerMetaDesc || "").trim();
-  if (validMetaDesc(w, dek)) return w.length > 165 ? trimToSentence(w, 162) : w;
+  if (validMetaDesc(w, dek)) return w;                            // already a clean ≤160 teaser — honored verbatim
 
   let d = String(dek || "").trim();
   if (d && !endsSentence(d)) d = d.replace(/[\s,;:—–-]+$/u, "") + ".";
-  if (d.length >= 138) return d.length > 165 ? trimToSentence(d, 162) : d; // dek alone already fills the snippet
+  if (d.length >= 138) return d.length > 160 ? trimToSentence(d, 158) : d; // dek alone already fills the snippet
 
   // Append ONE distinct fact, WHOLE if it fits else clean-truncated to a word boundary, so it always ends on a
   // full sentence. Pick whichever fact fills the snippet closest to ~160.

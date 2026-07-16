@@ -11,8 +11,8 @@ dek: >-
 metaTitle: How Did Love Island USA Producers Explain Alannah Keyser's Exit?
 metaDescription: >-
   A castmate reveals what the islanders were told after Keyser's abrupt removal
-  from the villa. Keyser addressed the controversy in a TikTok video on June 27,
-  calling.
+  from the villa. Alannah Keyser was removed from *Love Island USA* after
+  videos.
 formatTag: gossip
 gossipType: career
 tags:

@@ -13,8 +13,8 @@ dek: >-
 metaTitle: Pamela Anderson's Son Dylan Jagger Lee Ties the Knot
 metaDescription: >-
   The model and musician married longtime love Paula Bruss in a
-  wildflower-filled ceremony, with his famous parents looking on. The wedding
-  took place in Saint-Tropez.
+  wildflower-filled ceremony, with his famous parents looking on. Dylan Jagger
+  Lee and Paula.
 formatTag: gossip
 gossipType: general
 tags:

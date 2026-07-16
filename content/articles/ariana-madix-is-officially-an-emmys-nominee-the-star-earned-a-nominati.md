@@ -13,7 +13,7 @@ metaTitle: 'Ariana Madix''s Emmy Nod: Reality Star Turned Awards'
 metaDescription: >-
   The 'Vanderpump Rules' alum reportedly scores her first major awards
   nomination, but is it official? Pop Crave reported on July 8, 2026, that
-  Ariana Madix earned.
+  Ariana Madix.
 formatTag: gossip
 gossipType: general
 tags:

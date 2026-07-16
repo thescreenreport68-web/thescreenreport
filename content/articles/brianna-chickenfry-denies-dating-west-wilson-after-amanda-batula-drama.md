@@ -12,7 +12,7 @@ metaTitle: Brianna Chickenfry Has a Question for the Rumor Mill
 metaDescription: >-
   The Barstool personality shuts down dating rumors with the 'Summer House'
   alum, insisting she hasn't seen him in months. The rumor began after a TikTok
-  user claimed.
+  user.
 formatTag: gossip
 gossipType: romance
 tags:

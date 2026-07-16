@@ -12,8 +12,8 @@ dek: >-
 metaTitle: Madonna Drops a Late-Night Surprise
 metaDescription: >-
   The Queen of Pop serves two new 'Love Sensation' remixes just one week after
-  her album's debut. The album is projected to sell over 100,000 units and has
-  the edge.
+  her album's debut. Madonna released *Confessions II: Afterhours Edition* on
+  July.
 formatTag: gossip
 gossipType: general
 tags:

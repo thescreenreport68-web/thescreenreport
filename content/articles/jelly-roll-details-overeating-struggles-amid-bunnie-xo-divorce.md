@@ -12,8 +12,8 @@ dek: >-
 metaTitle: 'Jelly Roll Opens Up About Food Addiction: ''The Addict'
 metaDescription: >-
   The country star gets candid about his struggles with overeating, drawing a
-  direct line to his past battles. Jelly Roll has lost nearly 300 pounds during
-  his weight.
+  direct line to his past battles. The 41-year-old singer compared his
+  relationship.
 targetKeyword: Jelly Roll
 formatTag: gossip
 gossipType: general

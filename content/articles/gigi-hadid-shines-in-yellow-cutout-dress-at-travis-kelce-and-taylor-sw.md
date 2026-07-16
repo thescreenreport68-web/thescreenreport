@@ -11,8 +11,7 @@ dek: >-
 metaTitle: Gigi Hadid's Wedding Weekend Wardrobe Steals the Show
 metaDescription: >-
   The supermodel served two distinct, designer looks for Taylor Swift and Travis
-  Kelce's rehearsal dinner and wedding. Photos of the rehearsal dinner look were
-  shared.
+  Kelce's rehearsal dinner and wedding. Both events were held at Madison Square.
 formatTag: gossip
 gossipType: general
 tags:

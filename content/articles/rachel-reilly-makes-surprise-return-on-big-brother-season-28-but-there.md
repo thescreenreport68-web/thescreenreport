@@ -12,8 +12,8 @@ dek: >-
 metaTitle: Rachel Reilly's Big Brother Return Was a Blink-and-You-Miss-It
 metaDescription: >-
   The reality star's surprise comeback on the season 28 premiere ended with a
-  very quick—and very bizarre—exit. According to a report, she was eliminated in
-  the same.
+  very quick—and very bizarre—exit. Rachel Reilly returned as a surprise
+  houseguest.
 formatTag: gossip
 gossipType: general
 tags:

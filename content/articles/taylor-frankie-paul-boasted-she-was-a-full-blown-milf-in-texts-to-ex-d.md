@@ -11,8 +11,8 @@ dek: >-
 metaTitle: Taylor Frankie Paul's Alleged Texts to Ex Surface
 metaDescription: >-
   Court documents reportedly contain messages where the reality TV star
-  complimented her own appearance. The messages, which sources say were sent in
-  2025, reportedly.
+  complimented her own appearance. TMZ's sources say the messages, sent in 2025,
+  include.
 formatTag: gossip
 gossipType: breakup
 tags:

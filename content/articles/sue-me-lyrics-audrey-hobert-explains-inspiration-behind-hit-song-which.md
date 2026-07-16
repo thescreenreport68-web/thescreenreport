@@ -14,8 +14,8 @@ dek: >-
 metaTitle: Audrey Hobert's 'Sue Me' Climbs the Charts a Year Later
 metaDescription: >-
   The singer-songwriter explains the post-breakup inspiration behind her
-  Spotify-charting track to Cosmopolitan. Hobert is also a songwriter for other
-  artists, having.
+  Spotify-charting track to Cosmopolitan. Audrey Hobert's song "Sue Me" entered
+  the U.S..
 formatTag: gossip
 gossipType: general
 tags:

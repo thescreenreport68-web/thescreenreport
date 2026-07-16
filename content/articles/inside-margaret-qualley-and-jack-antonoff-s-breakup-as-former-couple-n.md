@@ -11,8 +11,8 @@ dek: >-
 metaTitle: How are Margaret Qualley and Jack Antonoff navigating
 metaDescription: >-
   Sources say the former couple is handling their separation with 'love and
-  kindness' and shutting down rumors. News broke after Jack Antonoff attended a
-  wedding solo.
+  kindness' and shutting down rumors. The couple is separating after less than
+  three.
 formatTag: gossip
 gossipType: breakup
 tags:

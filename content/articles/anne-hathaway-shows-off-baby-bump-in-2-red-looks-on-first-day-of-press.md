@@ -12,7 +12,7 @@ metaTitle: Anne Hathaway's Press Tour Red Carpet Sparks Baby Bump
 metaDescription: >-
   The actress stepped out in New York, and fans are reading into her wardrobe
   and a recent sighting. Anne Hathaway is pregnant and was photographed in New
-  York City.
+  York.
 formatTag: gossip
 gossipType: pregnancy
 tags:

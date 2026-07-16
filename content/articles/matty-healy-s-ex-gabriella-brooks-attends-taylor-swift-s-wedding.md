@@ -12,8 +12,8 @@ dek: >-
 metaTitle: Matty Healy's Ex Gabriella Brooks Steps Out at Taylor
 metaDescription: >-
   The model attended the star-studded event with fiancé Liam Hemsworth, sharing
-  a glimpse of the 'night of our lives.' Swift dated Brooks's ex, Matty Healy,
-  for a few.
+  a glimpse of the 'night of our lives.' Brooks and Hemsworth reportedly
+  attended.
 formatTag: gossip
 gossipType: breakup
 tags:

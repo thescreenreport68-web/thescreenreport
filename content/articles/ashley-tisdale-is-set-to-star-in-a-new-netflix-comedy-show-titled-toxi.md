@@ -12,7 +12,7 @@ metaTitle: Ashley Tisdale Turns Her Viral 'Toxic Mom Group' Essay
 metaDescription: >-
   The 'High School Musical' star is developing a new series with Ali Wong and
   Sabrina Jalees. Ashley Tisdale is developing and set to star in a Netflix
-  comedy series.
+  comedy.
 formatTag: gossip
 gossipType: general
 tags:

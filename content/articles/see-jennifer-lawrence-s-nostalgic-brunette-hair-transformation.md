@@ -11,8 +11,8 @@ dek: >-
 metaTitle: Jennifer Lawrence's Nostalgic Brunette Hair
 metaDescription: >-
   The Oscar winner debuts a dark new look in NYC, and fans are flashing back to
-  her 'Hunger Games' era. She is 35 and a mother of two sons with husband Cooke
-  Maroney.
+  her 'Hunger Games' era. She previously discussed plans for a boob job in a
+  2025.
 targetKeyword: Jennifer Lawrence
 formatTag: gossip
 gossipType: general

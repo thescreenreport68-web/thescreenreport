@@ -14,8 +14,7 @@ dek: >-
 metaTitle: Jennifer Garner Shares How the '13 Going on 30' Reboot
 metaDescription: >-
   The original star and new executive producer dishes on the Netflix project,
-  her adorable successor, and the legacy of the late director. Plot details for
-  the reboot.
+  her adorable successor, and the legacy of the late director.
 formatTag: gossip
 gossipType: career
 tags:

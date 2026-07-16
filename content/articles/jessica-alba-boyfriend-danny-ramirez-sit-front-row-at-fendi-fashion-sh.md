@@ -11,8 +11,8 @@ dek: >-
 metaTitle: Jessica Alba & Danny Ramirez Step Out in Style at Fendi
 metaDescription: >-
   The couple held hands at the couture event in Rome, sparking fresh romance
-  buzz. Jessica Alba and Danny Ramirez were photographed holding hands at the
-  Fendi Couture.
+  buzz. Alba wore a black lace and sheer dress, while Ramirez reportedly wore a
+  blue.
 formatTag: gossip
 gossipType: general
 tags:

@@ -13,8 +13,7 @@ dek: >-
 metaTitle: Julia Roberts on Her Kids' Fame Check
 metaDescription: >-
   The Oscar winner reveals how her three teenagers finally grasped her celebrity
-  status, with a little help from a pop superstar. Julia Roberts's
-  children—twins Hazel.
+  status, with a little help from a pop superstar. Taylor Swift invited Roberts.
 formatTag: gossip
 gossipType: general
 tags:

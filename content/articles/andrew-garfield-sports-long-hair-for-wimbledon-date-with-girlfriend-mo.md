@@ -11,8 +11,8 @@ dek: >-
 metaTitle: Andrew Garfield & Monica Barbaro Make Their Wimbledon
 metaDescription: >-
   The long-term couple and co-stars were spotted courtside in London, sparking
-  fresh buzz about their upcoming project. Andrew Garfield and Monica Barbaro
-  were seen.
+  fresh buzz about their upcoming project. They are co-stars in the upcoming
+  film.
 formatTag: gossip
 gossipType: spotted
 tags:

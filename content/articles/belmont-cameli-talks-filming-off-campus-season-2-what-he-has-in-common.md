@@ -14,8 +14,8 @@ dek: >-
 metaTitle: Belmont Cameli Spills on 'Off Campus' Season 2 Filming
 metaDescription: >-
   The actor reveals where production stands and the surprising link he shares
-  with 'Heated Rivalry' star Hudson Williams. Cameli revealed he and 'Heated
-  Rivalry' star.
+  with 'Heated Rivalry' star Hudson Williams. Production is ongoing, with the
+  first.
 formatTag: gossip
 gossipType: general
 tags:

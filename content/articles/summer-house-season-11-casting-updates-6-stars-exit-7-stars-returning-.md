@@ -12,8 +12,8 @@ dek: >-
 metaTitle: Summer House Season 11 Cameras Roll This Weekend
 metaDescription: >-
   Filming kicks off for the new season amid a major cast shake-up, with exits,
-  returns, and new faces all in the mix. Filming for Summer House Season 11 is
-  reportedly.
+  returns, and new faces all in the mix. The season was announced by Bravo in
+  May.
 formatTag: gossip
 gossipType: career
 tags:

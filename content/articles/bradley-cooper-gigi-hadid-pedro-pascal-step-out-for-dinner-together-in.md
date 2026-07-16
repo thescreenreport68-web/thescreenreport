@@ -12,7 +12,7 @@ metaTitle: 'Bradley Cooper, Gigi Hadid & Pedro Pascal Grab'
 metaDescription: >-
   A starry quartet, including Pedro's sister Lux, sparked a flurry of fan
   chatter after a low-key meal in the City of Light. Bradley Cooper, Gigi Hadid,
-  Pedro Pascal.
+  Pedro.
 formatTag: gossip
 gossipType: general
 tags:

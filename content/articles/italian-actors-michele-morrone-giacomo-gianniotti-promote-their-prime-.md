@@ -12,8 +12,7 @@ dek: >-
 metaTitle: Michele Morrone Steps Out in Rome with Big News
 metaDescription: >-
   The '365 Days' star was all smiles at a Prime Video event, fresh off landing a
-  major English-language rom-com. The event was also attended by Giacomo
-  Gianniotti.
+  major English-language rom-com. The event was also attended by Giacomo.
 formatTag: gossip
 gossipType: general
 tags:

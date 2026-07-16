@@ -10,7 +10,7 @@ metaTitle: Did Catie's Birthday Party Antics Push Josh Too Far?
 metaDescription: >-
   A '90 Day Fiancé' confrontation exposes a painful pattern. Catie apologized
   but admitted she couldn't remember the event, and has a past pattern of
-  similar behavior.
+  similar.
 formatTag: gossip
 gossipType: romance
 tags:

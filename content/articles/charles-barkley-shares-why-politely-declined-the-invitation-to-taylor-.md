@@ -11,8 +11,8 @@ dek: >-
 metaTitle: Charles Barkley Says He Passed on Taylor Swift & Travis
 metaDescription: >-
   The NBA legend reveals why he opted for golf over glitz, offering a candid
-  take on the star-studded event. His stated reasons were a dislike for dressing
-  up, large.
+  take on the star-studded event. His stated reasons were a dislike for
+  dressing.
 formatTag: gossip
 gossipType: general
 tags:

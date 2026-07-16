@@ -13,8 +13,8 @@ dek: >-
 metaTitle: Chris Pratt & Katherine Schwarzenegger Celebrate July
 metaDescription: >-
   The actor and his wife were spotted at a patriotic parade, days after his ex
-  Anna Faris opened up about their divorce. They were joined by Katherine's
-  mother, Maria.
+  Anna Faris opened up about their divorce. Faris and Pratt were married for
+  eight.
 formatTag: gossip
 gossipType: general
 tags:

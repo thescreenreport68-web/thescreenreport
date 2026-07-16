@@ -11,8 +11,8 @@ dek: >-
 metaTitle: Broadway & 'Marvelous Mrs. Maisel' Actor Josh Grisetti
 metaDescription: >-
   A beloved performer's tragic death is confirmed by a close friend, sending
-  shockwaves through the theater and TV communities. Grisetti worked on the
-  Musical Theatre.
+  shockwaves through the theater and TV communities. Grisetti was known for his
+  role.
 formatTag: gossip
 gossipType: general
 tags:

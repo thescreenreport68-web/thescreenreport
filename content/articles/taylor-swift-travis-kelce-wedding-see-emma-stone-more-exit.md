@@ -15,7 +15,7 @@ metaTitle: Taylor Swift and Travis Kelce's Madison Square Garden
 metaDescription: >-
   The pop icon and the NFL star tied the knot in a star-studded ceremony
   officiated by Adam Sandler. Taylor Swift and Travis Kelce married on July 3 at
-  Madison Square.
+  Madison.
 formatTag: gossip
 gossipType: career
 tags:

@@ -11,8 +11,7 @@ dek: >-
 metaTitle: Alex Rodriguez Spotted Kissing Mystery Woman
 metaDescription: >-
   The MLB alum, recently single, was photographed in a lip-lock with a brunette
-  at Michael Rubin's star-studded bash. Rodriguez's relationship with Jaclyn
-  Cordeiro.
+  at Michael Rubin's star-studded bash. Alex Rodriguez was photographed kissing.
 formatTag: gossip
 gossipType: general
 tags:

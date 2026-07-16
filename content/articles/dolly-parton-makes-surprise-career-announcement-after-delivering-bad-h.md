@@ -12,8 +12,8 @@ dek: >-
 metaTitle: 'Dolly Parton Announces Broadway Musical, Updates Fans'
 metaDescription: >-
   The country icon shares a 'dream come true' and a recovery update, all in one
-  Instagram video. Dolly Parton announced her musical, 'Dolly: A True Original
-  Musical,'.
+  Instagram video. Parton will not perform in the show but has written new
+  songs.
 formatTag: gossip
 gossipType: general
 tags:

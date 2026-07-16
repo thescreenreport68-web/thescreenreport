@@ -12,8 +12,7 @@ dek: >-
 metaTitle: Chris Brown Faces $13 Million Judgment in Dog Attack
 metaDescription: >-
   A jury delivers a massive verdict after the singer's pet allegedly left a
-  housekeeper disfigured. The case involved a claim that Brown's dog attacked
-  and disfigured.
+  housekeeper disfigured. The case involved a claim that Brown's dog attacked.
 formatTag: gossip
 gossipType: general
 tags:

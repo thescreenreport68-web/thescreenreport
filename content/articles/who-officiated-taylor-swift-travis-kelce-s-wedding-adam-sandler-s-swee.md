@@ -12,8 +12,8 @@ dek: The power couple's 'I do's' came with a very famous friend making it offici
 metaTitle: Who Officiated Taylor Swift and Travis Kelce's Wedding?
 metaDescription: >-
   The power couple's 'I do's' came with a very famous friend making it official.
-  Sandler has publicly supported the couple for years and worked with Kelce on
-  *Happy.
+  Sandler has publicly supported the couple's relationship and worked with
+  Kelce.
 formatTag: gossip
 gossipType: general
 tags:

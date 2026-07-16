@@ -11,8 +11,8 @@ dek: >-
 metaTitle: Amy Schumer's Bikini Photo Puts Her C-Section Scar
 metaDescription: >-
   The comedian shares a powerful message about her postpartum body and the
-  'really scary' birth of her son. Amy Schumer posted an Instagram Story on July
-  10 showing.
+  'really scary' birth of her son. Schumer and Fischer announced their
+  separation last.
 targetKeyword: Amy Schumer
 formatTag: gossip
 gossipType: general

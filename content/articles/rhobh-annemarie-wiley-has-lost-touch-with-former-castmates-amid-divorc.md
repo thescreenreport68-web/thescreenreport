@@ -11,8 +11,7 @@ dek: >-
 metaTitle: Where Do Annemarie Wiley's 'RHOBH' Castmates Stand
 metaDescription: >-
   A new report reveals the surprising sympathy from her former co-stars, despite
-  a lack of contact. Her court filings detail allegations of physical violence,
-  sexual.
+  a lack of contact. Her court filings detail allegations of physical violence.
 formatTag: gossip
 gossipType: general
 tags:

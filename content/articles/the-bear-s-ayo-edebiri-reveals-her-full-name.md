@@ -11,8 +11,8 @@ dek: >-
 metaTitle: Ayo Edebiri Reveals Her Full Name in a GQ Friendship
 metaDescription: >-
   The Bear star stumps costar Jeremy Allen White with the revelation that 'Ayo'
-  is just the beginning. Fans reacted with surprise that White didn't know her
-  full name.
+  is just the beginning. The name 'Ayo' is short for Funmilayo; 'Ayo' means
+  'joy'.
 formatTag: gossip
 gossipType: general
 tags:

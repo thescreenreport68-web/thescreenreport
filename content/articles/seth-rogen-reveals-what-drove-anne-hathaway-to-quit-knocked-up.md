@@ -11,8 +11,8 @@ dek: >-
 metaTitle: Seth Rogen Says Anne Hathaway Quit 'Knocked Up'
 metaDescription: >-
   The actor reveals the 'brand' clash that led to a major recast for the 2007
-  comedy hit. The role was recast with Katherine Heigl, and the 2007 film earned
-  over $219.
+  comedy hit. Rogen attributed her departure primarily to discomfort with a
+  graphic.
 formatTag: gossip
 gossipType: general
 tags:

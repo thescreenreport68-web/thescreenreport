@@ -12,7 +12,7 @@ metaTitle: Bunnie XO Spotted Getting Cozy with a New Guy at Jelly
 metaDescription: >-
   Video shows the recently separated podcaster sharing a Fourth of July kiss
   with a much younger reality star. Video obtained by TMZ shows Bunnie XO and
-  Dylan Wolf.
+  Dylan.
 formatTag: gossip
 gossipType: general
 tags:

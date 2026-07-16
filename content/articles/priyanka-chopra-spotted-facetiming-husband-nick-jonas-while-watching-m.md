@@ -11,8 +11,7 @@ dek: >-
 metaTitle: Priyanka Chopra Shares the Wimbledon View With Nick
 metaDescription: >-
   The actress brought her husband to the royal box virtually during a nail-biter
-  of a match. Priyanka Chopra was seen FaceTiming husband Nick Jonas from the
-  royal box.
+  of a match. Priyanka Chopra attended day 11 of Wimbledon in London on July 9.
 formatTag: gossip
 gossipType: spotted
 tags:

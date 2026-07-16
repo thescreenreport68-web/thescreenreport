@@ -12,8 +12,8 @@ dek: >-
 metaTitle: Lionel Richie Dances Back with a Smile After On-Stage
 metaDescription: >-
   The music legend posts a grateful update after a dizzy spell forced him to
-  postpone shows. The post follows a June 24, 2026 incident where he felt dizzy
-  on stage.
+  postpone shows. Lionel Richie, 77, posted a health update on Instagram,
+  thanking.
 formatTag: gossip
 gossipType: general
 tags:

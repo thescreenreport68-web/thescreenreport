@@ -11,8 +11,8 @@ dek: >-
 metaTitle: 'From a Box in China to the Top of OnlyFans: Christie'
 metaDescription: >-
   The influencer reveals to TMZ how she turned a story of abandonment into a
-  multimillion-follower empire. McCarthy says she had two Brazilian Butt Lifts
-  to overcome.
+  multimillion-follower empire. She underwent cosmetic surgery, which she
+  credits.
 formatTag: gossip
 gossipType: general
 tags:

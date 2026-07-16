@@ -12,8 +12,8 @@ dek: >-
 metaTitle: Taylor Swift Wedding Guest Joseph Kahn Calls Out Fake
 metaDescription: >-
   The director says every picture he's seen from the star-studded MSG ceremony
-  is bogus. Kahn shared a genuine photo from the wedding on Instagram, showing
-  pink decor.
+  is bogus. Director Joseph Kahn attended Taylor Swift and Travis Kelce's
+  wedding.
 formatTag: gossip
 gossipType: controversy
 tags:

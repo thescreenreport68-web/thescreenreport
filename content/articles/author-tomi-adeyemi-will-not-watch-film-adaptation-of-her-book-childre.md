@@ -12,8 +12,8 @@ dek: >-
 metaTitle: Tomi Adeyemi Says She 'Will Not Watch'
 metaDescription: >-
   The author's TikTok posts reveal a stark distance from the film adaptation and
-  a pointed message to its star. Tomi Adeyemi posted on TikTok that she will not
-  watch.
+  a pointed message to its star. She reportedly shared a screenshot of a
+  message.
 formatTag: gossip
 gossipType: general
 tags:

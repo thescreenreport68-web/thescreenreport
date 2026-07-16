@@ -12,8 +12,7 @@ dek: >-
 metaTitle: Is Taylor Frankie Paul Back on 'Mormon Wives'?
 metaDescription: >-
   The reality star is filming for season five, but her role is smaller than fans
-  might expect. Production was paused in mid-March following allegations of a
-  domestic.
+  might expect. Paul has publicly stated her focus is on her mental health.
 formatTag: gossip
 gossipType: general
 tags:

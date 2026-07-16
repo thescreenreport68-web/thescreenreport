@@ -13,8 +13,8 @@ dek: >-
 metaTitle: Kelly Osbourne Shares a Quietly Aching Letter to Mom
 metaDescription: >-
   The reality star and mom of one marks a poignant family milestone with a
-  tribute to her parents' 'unbreakable bond.' Ozzy Osbourne, the Black Sabbath
-  frontman, died.
+  tribute to her parents' 'unbreakable bond.' Kelly Osbourne posted a heartfelt
+  letter.
 formatTag: gossip
 gossipType: general
 tags:

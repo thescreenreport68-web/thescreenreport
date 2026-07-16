@@ -14,7 +14,7 @@ metaTitle: Patrick and Brittany Mahomes Reportedly Step
 metaDescription: >-
   The quarterback and his wife were reportedly among the stars celebrating the
   pop icon and the tight end's big day. The reported wedding took place at
-  Madison Square.
+  Madison.
 formatTag: gossip
 gossipType: general
 tags:

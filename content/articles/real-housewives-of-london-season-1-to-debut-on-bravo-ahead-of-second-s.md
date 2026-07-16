@@ -14,8 +14,8 @@ dek: >-
 metaTitle: Bravo Brings 'Real Housewives of London' Stateside
 metaDescription: >-
   The UK franchise is crossing the pond, and a familiar face from 'Ladies of
-  London' is leading the charge. The series has already been renewed, with
-  Season 2 having.
+  London' is leading the charge. The show has been renewed for Season 2, and
+  filming.
 formatTag: gossip
 gossipType: general
 tags:

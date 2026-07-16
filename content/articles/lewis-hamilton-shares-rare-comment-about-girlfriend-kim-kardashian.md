@@ -11,8 +11,8 @@ dek: >-
 metaTitle: Lewis Hamilton Credits Kim Kardashian for His Happiness
 metaDescription: >-
   The F1 star makes a rare public nod to the reality star during a fan event,
-  putting their relationship in the spotlight. Kardashian attended the Monaco
-  Grand Prix.
+  putting their relationship in the spotlight. Lewis Hamilton publicly credited
+  Kim.
 formatTag: gossip
 gossipType: romance
 tags:

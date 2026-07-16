@@ -14,8 +14,8 @@ dek: >-
 metaTitle: Emmy Rossum Finally Sets the Record Straight
 metaDescription: >-
   The actress is clearing up a persistent rumor about her exit from the
-  long-running Showtime series. She expressed gratitude for her time on the
-  show, particularly.
+  long-running Showtime series. Emmy Rossum says she did not leave 'Shameless'
+  to start.
 formatTag: gossip
 gossipType: career
 tags:

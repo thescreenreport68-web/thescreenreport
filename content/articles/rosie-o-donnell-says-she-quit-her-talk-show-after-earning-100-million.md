@@ -13,8 +13,8 @@ dek: >-
 metaTitle: Rosie O'Donnell Explains the $100 Million Reason
 metaDescription: >-
   The comedian reveals the exact moment she knew it was time to quit and focus
-  on family. O'Donnell cited a desire to spend more time with her five children
-  as a key.
+  on family. She declined a later $100 million offer from Warner Brothers for
+  two.
 targetKeyword: Rosie O'Donnell
 formatTag: gossip
 gossipType: general

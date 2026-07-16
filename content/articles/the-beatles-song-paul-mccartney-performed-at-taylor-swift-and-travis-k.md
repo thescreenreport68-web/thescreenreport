@@ -12,8 +12,7 @@ dek: >-
 metaTitle: What Song Did Paul McCartney Play at Taylor Swift's Wedding?
 metaDescription: >-
   The Beatles legend reportedly serenaded Swift and Travis Kelce with a classic
-  hit at their star-studded Madison Square Garden reception. The wedding
-  reportedly drew.
+  hit at their star-studded Madison Square Garden reception.
 formatTag: gossip
 gossipType: general
 tags:

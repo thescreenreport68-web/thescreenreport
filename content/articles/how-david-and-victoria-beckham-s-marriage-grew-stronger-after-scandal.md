@@ -12,7 +12,7 @@ metaTitle: How Did David & Victoria Beckham Survive That Infamous
 metaDescription: >-
   The Beckhams open up about the 'hardest period' of their marriage in a new
   documentary, revealing how they fought to stay together. They have been
-  married since.
+  married.
 formatTag: gossip
 gossipType: general
 tags:

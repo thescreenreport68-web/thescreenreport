@@ -11,8 +11,8 @@ dek: >-
 metaTitle: Peter Weber Fires Back at 'Bachelor' Producer's Memoir
 metaDescription: >-
   The former lead says he's 'deeply disappointed' by revelations in a new book,
-  alleging he was misled during his season. He alleges LaPlaca and Chris
-  Harrison misled.
+  alleging he was misled during his season. Weber alleges LaPlaca and former
+  host.
 formatTag: gossip
 gossipType: general
 tags:

@@ -12,7 +12,7 @@ metaTitle: RHOC's Jennifer Pedranti Confirms Her Son's Role
 metaDescription: >-
   The 'Real Housewives of Orange County' star addresses the incident on social
   media, calling it a 'tough learning moment.' Jennifer Pedranti confirmed her
-  son helped.
+  son.
 formatTag: gossip
 gossipType: general
 tags:

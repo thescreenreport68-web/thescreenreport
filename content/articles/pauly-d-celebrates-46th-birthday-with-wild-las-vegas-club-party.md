@@ -11,8 +11,8 @@ dek: >-
 metaTitle: Pauly D Rings in 46 With a Vegas Nightclub Takeover
 metaDescription: >-
   The 'Jersey Shore' star celebrated his birthday the only way he knows
-  how—behind the DJ booth. Pauly D DJed a packed birthday party at Marquee Las
-  Vegas on Saturday.
+  how—behind the DJ booth. Pauly D celebrated his birthday by DJing at a packed
+  Marquee.
 formatTag: gossip
 gossipType: general
 tags:

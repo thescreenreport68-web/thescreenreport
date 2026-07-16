@@ -12,8 +12,8 @@ dek: >-
 metaTitle: Drake's Million-Dollar Bet on Conor McGregor
 metaDescription: >-
   The rapper's public wager on 'The Notorious' ended in a 69-second defeat at
-  UFC 329. Drake placed a public $1 million bet on Conor McGregor to win his UFC
-  329 fight.
+  UFC 329. Conor McGregor lost the fight to Max Holloway via TKO (referee
+  stoppage).
 targetKeyword: Drake
 formatTag: gossip
 gossipType: general

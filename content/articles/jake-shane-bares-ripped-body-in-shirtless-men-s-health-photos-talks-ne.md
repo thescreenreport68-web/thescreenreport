@@ -11,8 +11,8 @@ dek: >-
 metaTitle: Jake Shane Shows Off a New Physique and a New Mindset
 metaDescription: >-
   The comedian and 'Therapuss' host gets candid about fitness, mental health,
-  and the struggle to stay funny while getting fit. Shane humorously worries
-  about staying.
+  and the struggle to stay funny while getting fit. He credits his rigorous
+  workout.
 formatTag: gossip
 gossipType: general
 tags:

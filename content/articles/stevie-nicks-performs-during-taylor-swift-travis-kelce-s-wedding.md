@@ -14,8 +14,8 @@ dek: >-
 metaTitle: Stevie Nicks Casts a Spell at Taylor Swift and Travis
 metaDescription: >-
   The rock legend performed for the newlyweds and a thousand of their closest
-  friends, including high school pals and A-listers. Stevie Nicks performed live
-  at Taylor.
+  friends, including high school pals and A-listers. Stevie Nicks performed
+  live.
 formatTag: gossip
 gossipType: general
 tags:

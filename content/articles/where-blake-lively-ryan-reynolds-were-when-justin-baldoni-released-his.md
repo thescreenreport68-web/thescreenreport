@@ -13,8 +13,8 @@ dek: >-
 metaTitle: Blake Lively and Ryan Reynolds Spotted in Canada
 metaDescription: >-
   The couple enjoyed a rooftop lunch just hours before their co-star Justin
-  Baldoni broke his silence on the settled lawsuit. Blake Lively and Ryan
-  Reynolds were seen.
+  Baldoni broke his silence on the settled lawsuit. Justin Baldoni and Emily
+  Baldoni.
 formatTag: gossip
 gossipType: spotted
 tags:

@@ -12,8 +12,8 @@ dek: >-
 metaTitle: Mary Bonnet Navigates a 'Different Universe'
 metaDescription: >-
   The original cast member opens up about FOMO and the surreal feeling of
-  watching her former co-stars film without her. She remains Vice President at
-  The Oppenheim.
+  watching her former co-stars film without her. Mary Bonnet confirmed her
+  contract.
 formatTag: gossip
 gossipType: career
 tags:

@@ -12,8 +12,8 @@ dek: >-
 metaTitle: Travis Kelce Reportedly Cried During Taylor Swift
 metaDescription: >-
   The groom was reportedly more emotional than the bride during the deeply
-  personal ceremony at Madison Square Garden. Guests reported Travis Kelce was
-  more emotional.
+  personal ceremony at Madison Square Garden. Stevie Nicks performed at the
+  reception.
 formatTag: gossip
 gossipType: general
 tags:

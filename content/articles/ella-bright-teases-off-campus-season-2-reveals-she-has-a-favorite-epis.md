@@ -12,8 +12,8 @@ dek: >-
 metaTitle: Ella Bright Gives a Juicy Tease for 'Off Campus' Season
 metaDescription: >-
   The star reveals which episode has her 'dying' as the Prime Video series
-  shifts focus to a new couple. Bright has a favorite episode so far and calls
-  episode three.
+  shifts focus to a new couple. The season is based on Elle Kennedy's book 'The
+  Score'.
 formatTag: gossip
 gossipType: romance
 tags:

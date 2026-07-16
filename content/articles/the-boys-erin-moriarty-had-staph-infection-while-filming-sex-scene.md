@@ -13,8 +13,8 @@ dek: >-
 metaTitle: Erin Moriarty Reveals She Filmed a 'Boys' Sex Scene
 metaDescription: >-
   The Starlight actress says a severe staph infection, fueled by Graves'
-  disease, didn't stop a season two night shoot. Erin Moriarty revealed on a
-  podcast she filmed.
+  disease, didn't stop a season two night shoot. She told production about the
+  infection.
 formatTag: gossip
 gossipType: general
 tags:

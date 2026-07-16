@@ -11,8 +11,7 @@ dek: >-
 metaTitle: Navarone Garibaldi Garcia Defends Driveway Pizza
 metaDescription: >-
   Priscilla Presley's son responds to backlash after asking the public for
-  $5,500 to launch an organic pizza business from his L.A. home. Navarone
-  Garibaldi Garcia.
+  $5,500 to launch an organic pizza business from his L.A. home.
 targetKeyword: Navarone Garibaldi Garcia
 formatTag: gossip
 gossipType: controversy

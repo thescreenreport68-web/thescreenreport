@@ -13,8 +13,8 @@ dek: >-
 metaTitle: Khloé Kardashian and Tristan Thompson Spotted
 metaDescription: >-
   The exes were seen together with their kids in Coeur d'Alene, a favorite
-  Kardashian family spot. Tristan was seen lifting their son Tatum onto his
-  shoulders during.
+  Kardashian family spot. Khloé Kardashian and Tristan Thompson were spotted
+  together.
 formatTag: gossip
 gossipType: spotted
 tags:

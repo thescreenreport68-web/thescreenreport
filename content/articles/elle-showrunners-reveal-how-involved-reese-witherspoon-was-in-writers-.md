@@ -12,8 +12,8 @@ dek: >-
 metaTitle: How Reese Witherspoon's 90s Teenage Years Shaped
 metaDescription: >-
   The showrunners of the 'Legally Blonde' prequel series reveal the 'nuggets of
-  gold' Reese Witherspoon dropped in the writers' room. The series stars Lexi
-  Minetree.
+  gold' Reese Witherspoon dropped in the writers' room. Reese Witherspoon
+  served.
 formatTag: gossip
 gossipType: general
 tags:

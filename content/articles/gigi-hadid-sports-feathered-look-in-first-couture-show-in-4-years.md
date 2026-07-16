@@ -11,8 +11,7 @@ dek: >-
 metaTitle: Gigi Hadid Returns to Couture in a Dramatic Feathered
 metaDescription: >-
   The supermodel made her first couture runway appearance in four years, closing
-  a pivotal show for the fashion house. Hadid recently attended Taylor Swift's
-  wedding.
+  a pivotal show for the fashion house. The show marked the debut couture.
 formatTag: gossip
 gossipType: general
 tags:

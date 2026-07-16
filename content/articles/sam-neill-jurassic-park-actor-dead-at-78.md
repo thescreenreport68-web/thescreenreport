@@ -11,8 +11,8 @@ dek: >-
 metaTitle: 'Sam Neill, Beloved ''Jurassic Park'' Star, Dies at 78'
 metaDescription: >-
   The actor's family confirmed his sudden passing in Sydney, noting he was
-  'surrounded by family' and had remained cancer-free. Sam Neill, star of the
-  'Jurassic Park'.
+  'surrounded by family' and had remained cancer-free. He is survived by four
+  children.
 formatTag: gossip
 gossipType: general
 tags:

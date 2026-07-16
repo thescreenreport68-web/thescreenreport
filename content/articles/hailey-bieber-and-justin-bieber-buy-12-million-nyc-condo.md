@@ -11,8 +11,8 @@ dek: >-
 metaTitle: Justin and Hailey Bieber Drop $12 Million on a West
 metaDescription: >-
   Property records confirm the Biebers' latest real estate move, trading L.A.
-  for a family-friendly NYC pad with a Hudson River view. The couple, who have
-  been mostly.
+  for a family-friendly NYC pad with a Hudson River view. The unit is
+  approximately.
 formatTag: gossip
 gossipType: general
 tags:

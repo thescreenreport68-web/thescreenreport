@@ -12,8 +12,8 @@ dek: >-
 metaTitle: Summer House Heads North for a Canadian Spinoff
 metaDescription: >-
   NBCUniversal announces 'Summer House Canada,' set to film in Muskoka and air
-  in 2027. Former cast members Amanda Batula and West Wilson confirmed a romance
-  in March.
+  in 2027. The series will film in Muskoka, Ontario, and premiere on Hayu in
+  2027.
 formatTag: gossip
 gossipType: general
 tags:

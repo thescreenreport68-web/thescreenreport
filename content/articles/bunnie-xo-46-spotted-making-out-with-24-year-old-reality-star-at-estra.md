@@ -12,7 +12,7 @@ metaTitle: Bunnie Xo Spotted Kissing Reality Star Dylan Wolf
 metaDescription: >-
   Video shows the 46-year-old podcaster and the 24-year-old 'Calabasas
   Confidential' star locking lips on the Fourth of July. Wolf stars in the
-  Netflix reality series.
+  Netflix reality.
 formatTag: gossip
 gossipType: spotted
 tags:

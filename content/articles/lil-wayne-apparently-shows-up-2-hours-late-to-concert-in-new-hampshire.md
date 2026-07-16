@@ -12,8 +12,8 @@ dek: >-
 metaTitle: Lil Wayne's Late Night in New Hampshire Leaves Fans
 metaDescription: >-
   The rapper's delayed arrival and short set at a Gilford concert sparks
-  frustration, just days after a no-show in Maine. This incident follows a
-  no-show at a concert.
+  frustration, just days after a no-show in Maine. The rapper played for only
+  one hour.
 formatTag: gossip
 gossipType: career
 tags:

@@ -13,8 +13,8 @@ dek: >-
 metaTitle: Ashley Williams Wasn't at the Swift-Kelce Wedding
 metaDescription: >-
   The Hallmark star shared a behind-the-scenes look at her sister Kimberly
-  Williams-Paisley's big night out. Brad Paisley has known Taylor Swift for
-  nearly 20 years.
+  Williams-Paisley's big night out. Ashley Williams shared an Instagram video on
+  July.
 formatTag: gossip
 gossipType: general
 tags:

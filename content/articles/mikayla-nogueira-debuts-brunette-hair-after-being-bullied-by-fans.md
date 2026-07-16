@@ -11,8 +11,8 @@ dek: >-
 metaTitle: Mikayla Nogueira Ditches Blonde After a Poll
 metaDescription: >-
   The TikTok beauty guru is back to brunette, and she's got a message for the
-  internet. The change followed a poll she put to her followers, where over
-  10,000 voted.
+  internet. She stated she is 'done touching' her hair and plans to keep this
+  color.
 formatTag: gossip
 gossipType: feud
 tags:

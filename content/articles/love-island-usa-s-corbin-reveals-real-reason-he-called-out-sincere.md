@@ -11,8 +11,8 @@ dek: >-
 metaTitle: Corbin Mims Explains Why He Called Out Sincere on Love
 metaDescription: >-
   The bombshell reveals what — and who — finally pushed him to speak his mind
-  after Movie Night. Corbin Mims confronted Sincere Rhea about his behavior
-  toward Melanie.
+  after Movie Night. Corbin and Parmida were subsequently voted off *Love
+  Island.
 targetKeyword: Corbin Mims
 formatTag: gossip
 gossipType: controversy

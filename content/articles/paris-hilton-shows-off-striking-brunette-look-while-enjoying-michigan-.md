@@ -11,8 +11,8 @@ dek: >-
 metaTitle: Paris Hilton Goes Brunette for a Cherry Festival Family
 metaDescription: >-
   The hotel heiress traded her signature platinum for a soft brown while making
-  'core memories' with her toddlers in Michigan. She has experimented with
-  brunette hair.
+  'core memories' with her toddlers in Michigan. Paris Hilton was seen with
+  light.
 formatTag: gossip
 gossipType: general
 tags:

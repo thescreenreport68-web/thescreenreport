@@ -11,8 +11,7 @@ dek: >-
 metaTitle: Gina Rodriguez & Brett Dier Rally Around Justin Baldoni
 metaDescription: >-
   The former 'Jane the Virgin' costars show up with love in the comments as the
-  Baldonis break their silence. Gina Rodriguez and Brett Dier left supportive
-  comments.
+  Baldonis break their silence. Justin Baldoni reached a settlement with Blake.
 formatTag: gossip
 gossipType: general
 tags:

@@ -12,8 +12,8 @@ dek: >-
 metaTitle: Jon Pardi & Wife Summer Announce End of Their Marriage
 metaDescription: >-
   The country singer and his wife share a joint statement on Instagram,
-  prioritizing their two young daughters. Jon Pardi is currently on tour and
-  announced a social.
+  prioritizing their two young daughters. Jon and Summer Pardi announced their
+  divorce.
 formatTag: gossip
 gossipType: general
 tags:

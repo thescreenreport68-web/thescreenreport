@@ -11,8 +11,8 @@ dek: >-
 metaTitle: Were MSG Workers Escorted Out Over Swift-Kelce Wedding
 metaDescription: >-
   A 'Cruel Summer' for some union workers as tight security and NDAs marked the
-  star-studded event. Many of the 1,000 wedding guests were reportedly required
-  to sign.
+  star-studded event. The wedding reportedly took place at Madison Square
+  Garden.
 formatTag: gossip
 gossipType: general
 tags:

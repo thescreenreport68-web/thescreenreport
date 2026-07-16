@@ -12,8 +12,8 @@ dek: >-
 metaTitle: Did Jay-Z Get His Kaepernick Facts Wrong?
 metaDescription: >-
   Sources directly refute the rap mogul's on-stage claim about a
-  'non-disparagement' clause. Jay-Z performed at Yankee Stadium and made a claim
-  about Colin Kaepernick.
+  'non-disparagement' clause. Sources with direct knowledge tell TMZ Sports that
+  no such clause.
 targetKeyword: Jay-Z
 formatTag: gossip
 gossipType: general

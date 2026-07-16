@@ -13,7 +13,7 @@ metaTitle: Rick Springfield's Shirtless Stage Stunt Has Joe Rogan
 metaDescription: >-
   The 76-year-old rocker's ripped physique and high-energy performance are
   sparking conversations and admiration. Rick Springfield, 76, performed
-  shirtless at a Sammy.
+  shirtless.
 formatTag: gossip
 gossipType: general
 tags:

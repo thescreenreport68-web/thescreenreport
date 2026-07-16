@@ -13,7 +13,7 @@ metaTitle: Taylor Swift and Travis Kelce Host Rehearsal Dinner
 metaDescription: >-
   The power couple's wedding weekend kicks off with a star-studded pre-party at
   the iconic arena. The event was attended by close friends and family,
-  including Selena.
+  including.
 formatTag: gossip
 gossipType: general
 tags:

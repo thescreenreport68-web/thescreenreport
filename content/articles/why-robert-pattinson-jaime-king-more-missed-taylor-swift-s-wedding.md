@@ -14,8 +14,8 @@ dek: >-
 metaTitle: 'Why Robert Pattinson, Ryan Seacrest, & Charles Barkley'
 metaDescription: >-
   The 'The Batman sequel sequel' star, the TV host, and the NBA legend all had
-  their reasons for skipping the event of the year. Over 1,000 guests were
-  confidentially.
+  their reasons for skipping the event of the year. Ryan Seacrest canceled to
+  host.
 formatTag: gossip
 gossipType: general
 tags:

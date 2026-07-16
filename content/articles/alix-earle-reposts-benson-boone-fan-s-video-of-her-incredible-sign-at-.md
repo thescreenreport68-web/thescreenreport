@@ -12,8 +12,8 @@ dek: >-
 metaTitle: Alix Earle Gives a Wink to Benson Boone Fan's Hilarious
 metaDescription: >-
   The TikTok star reposted a video referencing their past dinner date, but are
-  they more than friends? The fan's sign read: 'Not Alix but blonde with fake
-  boobs too.'.
+  they more than friends? Alix Earle reposted a TikTok video from a fan at
+  Benson.
 formatTag: gossip
 gossipType: romance
 tags:

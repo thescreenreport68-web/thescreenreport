@@ -11,8 +11,8 @@ dek: >-
 metaTitle: Mido's 'Emotionally Immature' Stance Sparks Concern
 metaDescription: >-
   The reality star refuses to take responsibility after a public blow-up,
-  leaving Debby frustrated and her daughter on edge. Debby stated Mido ignored
-  her for weeks.
+  leaving Debby frustrated and her daughter on edge. On Sunday's episode, Mido
+  refused.
 formatTag: gossip
 gossipType: general
 tags:

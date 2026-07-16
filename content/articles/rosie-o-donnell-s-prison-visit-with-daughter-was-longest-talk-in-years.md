@@ -13,8 +13,8 @@ dek: >-
 metaTitle: Rosie O'Donnell's Prison Visit With Daughter
 metaDescription: >-
   The actress reveals an emotional four-hour reunion and a major milestone for
-  her daughter, Chelsea. Chelsea Belle O'Donnell, 28, has been sober for almost
-  two years.
+  her daughter, Chelsea. Rosie adopted Chelsea in 1997 with her ex-partner,
+  Kelly.
 targetKeyword: Rosie O'Donnell
 formatTag: gossip
 gossipType: general

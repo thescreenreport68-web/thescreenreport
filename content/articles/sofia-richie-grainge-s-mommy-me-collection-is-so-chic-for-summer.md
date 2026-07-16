@@ -14,7 +14,7 @@ metaTitle: Sofia Richie Grainge's New Amazon Collab is All
 metaDescription: >-
   The style icon brings her 'Quiet Luxury' aesthetic to an affordable family
   capsule collection. The collection is available now and emphasizes 'Quiet
-  Luxury' style.
+  Luxury'.
 formatTag: gossip
 gossipType: general
 tags:

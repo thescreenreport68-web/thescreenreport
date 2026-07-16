@@ -11,8 +11,8 @@ dek: >-
 metaTitle: 'DreamDoll Brii Shooting: Chilling 911 Audio Captures'
 metaDescription: >-
   TMZ releases frantic emergency calls made moments after the influencer was
-  gunned down in her Lamborghini. A third victim was injured but released from
-  the hospital.
+  gunned down in her Lamborghini. Influencer DreamDoll Brii (Brianna Johnson,
+  21).
 formatTag: gossip
 gossipType: general
 tags:

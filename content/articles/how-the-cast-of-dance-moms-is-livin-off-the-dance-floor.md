@@ -11,8 +11,8 @@ dek: >-
 metaTitle: Chloe Lukasiak Reflects on the 'Manufactured' Drama
 metaDescription: >-
   The reality TV alum opens up about the show's 'intense negativity' and where
-  she is now, 15 years after its debut. She described the competition with
-  Maddie Ziegler.
+  she is now, 15 years after its debut. Chloe Lukasiak gave a reflective
+  interview.
 formatTag: gossip
 gossipType: career
 tags:

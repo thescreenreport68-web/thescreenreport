@@ -13,8 +13,8 @@ dek: >-
 metaTitle: Elijah Blue Allman's Wife Calls Off Divorce
 metaDescription: >-
   Marieangela King is back in the picture, filing a declaration in the ongoing
-  legal drama over her husband's estate. King cited Allman's placement in a
-  treatment.
+  legal drama over her husband's estate. King is seeking to review case
+  documents.
 formatTag: gossip
 keyTakeaways:
   - >-

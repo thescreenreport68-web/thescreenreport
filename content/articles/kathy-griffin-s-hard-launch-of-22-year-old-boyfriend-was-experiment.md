@@ -8,9 +8,9 @@ date: '2026-07-16T00:00:42.140Z'
 dek: The comedian reveals her viral dating post was a pointed social experiment.
 metaTitle: Kathy Griffin's 'Hard Launch' of a 22-Year-Old
 metaDescription: >-
-  The comedian reveals her viral dating post was a pointed social experiment. On
-  July 10, she revealed the post was a 'sociological experiment' to gauge
-  reactions.
+  The comedian reveals her viral dating post was a pointed social experiment.
+  She contrasted the mostly positive Instagram comments with more critical
+  Threads.
 targetKeyword: Kathy Griffin
 formatTag: gossip
 gossipType: romance

@@ -12,8 +12,8 @@ dek: >-
 metaTitle: 'Anthony Hopkins, 88, Launches a Second Act'
 metaDescription: >-
   The Oscar-winning actor signs with Decca Classics, releasing a lifetime of
-  music inspired by his Welsh roots. Anthony Hopkins, 88, has officially signed
-  a recording.
+  music inspired by his Welsh roots. The album features the Philharmonia
+  Orchestra.
 formatTag: gossip
 gossipType: general
 tags:

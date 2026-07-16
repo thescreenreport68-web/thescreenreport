@@ -11,8 +11,8 @@ dek: >-
 metaTitle: Renee Graziano Reveals Drita D'Avanzo Blocked
 metaDescription: >-
   The 'Mob Wives' alum opens up about a frozen friendship and the infamous
-  rooftop fight that almost didn't air. Renee and Jennifer Graziano are
-  launching a new tour.
+  rooftop fight that almost didn't air. Renee Graziano stated in an E! News
+  interview.
 formatTag: gossip
 gossipType: pregnancy
 tags:

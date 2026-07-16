@@ -13,7 +13,7 @@ metaTitle: Chloë Sevigny's Son Vanja Is Already a Red Carpet Pro
 metaDescription: >-
   The actress reveals how her 6-year-old son insisted on joining her at a
   premiere and is already developing his own distinct style. Chloë Sevigny's
-  6-year-old son.
+  6-year-old.
 formatTag: gossip
 gossipType: general
 tags:

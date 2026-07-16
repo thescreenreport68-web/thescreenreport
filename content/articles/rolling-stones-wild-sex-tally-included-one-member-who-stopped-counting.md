@@ -14,8 +14,7 @@ dek: >-
 metaTitle: What's the real tally behind the Rolling Stones'
 metaDescription: >-
   A new biography claims the band once compared notes on their conquests, with
-  one member's count reaching a staggering number. Spitz told Fox News Digital
-  that Bill.
+  one member's count reaching a staggering number. Biographer Bob Spitz claims.
 formatTag: gossip
 gossipType: general
 tags:

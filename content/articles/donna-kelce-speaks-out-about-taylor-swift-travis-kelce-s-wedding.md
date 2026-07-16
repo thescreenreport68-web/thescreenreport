@@ -11,8 +11,7 @@ dek: >-
 metaTitle: Donna Kelce Breaks Her Silence on Taylor and Travis's 'Magical'
 metaDescription: >-
   The Kelce matriarch finally shares a few words about the star-studded nuptials
-  that captivated the world. Donna Kelce called Taylor Swift and Travis Kelce's
-  wedding.
+  that captivated the world. The wedding took place on July 3 at Madison Square.
 formatTag: gossip
 gossipType: general
 tags:
