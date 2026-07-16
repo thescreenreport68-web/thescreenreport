@@ -76,6 +76,17 @@
    "film": "F9: The Fast Saga",
    "tmdbId": null,
    "eventType": "boxoffice"
+  },
+  {
+   "key": "moana-bo-update-d0|BO-UPDATE",
+   "at": "2026-07-16T06:11:45.117Z",
+   "eventSlug": "moana-bo-update-d0",
+   "form": "BO-UPDATE",
+   "slug": "moana-box-office-day-5-domestic-total-climbs-to-54-9-million",
+   "title": "Dwayne Johnson's 'Moana' Remake Sinks With $54.9M Domestic Start, $100M Worldwide Against $250M Budget",
+   "film": "Moana",
+   "tmdbId": null,
+   "eventType": "boxoffice"
   }
  ],
  "parked": [
@@ -280,15 +291,6 @@
    "dead": true
   },
   {
-   "key": "moana-bo-update-d0|BO-UPDATE",
-   "eventSlug": "moana-bo-update-d0",
-   "form": "BO-UPDATE",
-   "reason": "words 155 < 180 (owner-set ~200-word minimum) | soft-floor engagement 3 < 4 | soft-floor humanVoice 3 < 4",
-   "tries": 18,
-   "at": "2026-07-16T05:33:06.124Z",
-   "dead": true
-  },
-  {
    "key": "minions-monsters-bo-update-d0|BO-UPDATE",
    "eventSlug": "minions-monsters-bo-update-d0",
    "form": "BO-UPDATE",
@@ -358,5 +360,6 @@
    "tries": 1,
    "at": "2026-07-16T04:42:23.102Z"
   }
- ]
+ ],
+ "zeroStreak": 0
 }

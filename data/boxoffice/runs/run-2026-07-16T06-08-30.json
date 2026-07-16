@@ -1,0 +1,67 @@
+{
+ "runId": "run-2026-07-16T06-08-30",
+ "mode": "live",
+ "startedAt": "2026-07-16T06:08:30.477Z",
+ "films": 6,
+ "published": [
+  {
+   "tag": "moana-bo-update×BO-UPDATE",
+   "slug": "moana-box-office-day-5-domestic-total-climbs-to-54-9-million",
+   "path": "/home/runner/work/thescreenreport/thescreenreport/content/articles/moana-box-office-day-5-domestic-total-climbs-to-54-9-million.md",
+   "score": 45,
+   "acceptReason": "daily factual update — deterministic numbers + accuracy walls + word floor all pass"
+  }
+ ],
+ "held": [],
+ "rejected": [],
+ "skipped": [],
+ "blocked": [],
+ "zeroStreak": 0,
+ "finishedAt": "2026-07-16T06:11:45.119Z",
+ "meter": {
+  "byRole": {
+   "gatherer": {
+    "calls": 2,
+    "errors": 0,
+    "in": 6248,
+    "out": 1929,
+    "usd": 0.0014,
+    "ms": 5902
+   },
+   "finder": {
+    "calls": 2,
+    "errors": 2,
+    "in": 0,
+    "out": 0,
+    "usd": 0,
+    "ms": 0
+   },
+   "synthesizer": {
+    "calls": 1,
+    "errors": 0,
+    "in": 713,
+    "out": 1063,
+    "usd": 0.00026,
+    "ms": 12576
+   },
+   "writer": {
+    "calls": 3,
+    "errors": 0,
+    "in": 5674,
+    "out": 2932,
+    "usd": 0.00696,
+    "ms": 42966
+   },
+   "qa": {
+    "calls": 11,
+    "errors": 0,
+    "in": 31941,
+    "out": 5997,
+    "usd": 0.02457,
+    "ms": 37361
+   }
+  },
+  "totalUsd": 0.03319
+ },
+ "openrouterTotalUsd": 0.03536
+}
