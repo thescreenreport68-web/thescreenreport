@@ -763,5 +763,21 @@ await t("music: cache hit costs ZERO llm calls (deterministic key, beds committe
   assert.equal(m.cost, 0);
 });
 
+await t("platformMeta: agent failure falls back to deterministic FB/YT copy — never IG-only", async () => {
+  const { fallbackPlatformMeta } = await import("../agents/platformMeta.mjs");
+  const meta = fallbackPlatformMeta({
+    caption: { line1: "Superman smashes a $220M opening record", body: "James Gunn confirmed the numbers on Friday. A sequel is dated for 2028.", hashtags: ["#Superman", "#JamesGunn", "#MovieNews"] },
+    article: { title: "Superman smashes box office record" },
+    facts: { entities: ENTITIES },
+    articleUrl: "https://thescreenreport.com/movies/superman-record/",
+  });
+  assert.ok(meta, "fallback produced");
+  assert.ok(meta.facebook.full.includes("AI-assisted recap"), "FB carries the AI note");
+  assert.ok(meta.facebook.hashtags.length <= 2, "FB ships ≤2 hashtags");
+  assert.ok(meta.youtube.title.length > 0 && meta.youtube.title.length <= 70, "YT title within hard cap");
+  assert.ok(meta.youtube.description.includes("#Shorts"), "YT description carries the tag line");
+  assert.ok(meta.youtube.fallback, "marked as fallback for the ledger");
+});
+
 console.log(`\n${passed} passed, ${failed} failed`);
 process.exit(failed ? 1 : 0);

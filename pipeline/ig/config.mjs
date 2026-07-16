@@ -72,7 +72,9 @@ export const IG = {
     // CLAMPED so it never speeds a slow take up (≤1.0) and never over-slows (≥minTempo: a 4.0-wps read
     // lands at ~3.4, faster reads are capped so it's never too slow). Applied before whisper-align so
     // subtitles/images stay in sync. pace:null = off.
-    pace: { targetWps: 3.4, minTempo: 0.85 },
+    // maxTempo 1.12 (2026-07-16): slow reads now speed UP to target too — a 3.0-wps read of a
+    // max-length script rendered past the 47s ceiling and died at watchqc after full spend.
+    pace: { targetWps: 3.4, minTempo: 0.85, maxTempo: 1.12 },
     // calibrated to the owner's ACTUAL bars: every axis ≥6 (his rejected take had
     // pauses=5), the ending MUST land, and the total floor fits 33-42s reads (long
     // reads score structurally lower than the short ones the old floor was tuned on)

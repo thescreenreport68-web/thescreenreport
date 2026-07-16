@@ -118,18 +118,20 @@ export function tightenPauses(inWav, outWav, { protectTail } = {}) {
   return outWav;
 }
 
-// ADAPTIVE PACE (owner 2026-07-13): the model reads at a VARYING fast rate, so a fixed atempo can't
-// normalize it. Measure THIS take's real pace (words ÷ audio seconds) and slow it just enough to hit
-// targetWps — CLAMPED so it never speeds a slow take up (≤1.0) and never over-slows (≥minTempo, so a
-// 4.0-wps read lands at ~3.4 and faster reads are capped, never too slow). atempo preserves pitch.
-// No-op if pace is off or the take is already at/under target. Falls back to the input on ffmpeg error.
+// ADAPTIVE PACE (owner 2026-07-13; two-way 2026-07-16): the model reads at a VARYING rate, so a fixed
+// atempo can't normalize it. Measure THIS take's real pace (words ÷ audio seconds) and nudge it to
+// targetWps — pitch-preserved both ways: fast reads slow down (≥minTempo) and SLOW reads now speed up
+// (≤maxTempo 1.12, inaudible). The one-way clamp let a slow ~3.0-wps read of a max-length script render
+// past the 47s ceiling and die at watchqc AFTER the full voice+render spend (3 reels on the first live
+// run). Normalizing to the owner-approved ~3.4 pace fixes the overruns AND keeps delivery consistent.
+// No-op if pace is off or already on target. Falls back to the input on ffmpeg error.
 function paceTake(inWav, words) {
   const p = IG.voice.pace;
   if (!p?.targetWps || !(words > 0)) return inWav;
   const dur = wavDuration(inWav);
   if (!(dur > 0)) return inWav;
   const actualWps = words / dur;
-  const tempo = Math.min(1, Math.max(p.minTempo ?? 0.85, p.targetWps / actualWps));
+  const tempo = Math.min(p.maxTempo ?? 1.12, Math.max(p.minTempo ?? 0.85, p.targetWps / actualWps));
   if (Math.abs(tempo - 1) < 0.01) return inWav; // already comfortable — don't touch it
   const out = inWav.replace(/\.wav$/, "-paced.wav");
   try {

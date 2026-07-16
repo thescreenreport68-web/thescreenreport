@@ -32,7 +32,7 @@ import { sensitiveGate } from "./agents/sensitive.mjs";
 import { writeScript } from "./agents/script.mjs";
 import { pronounce } from "./agents/pronounce.mjs";
 import { writeCaption, assembleFull } from "./agents/caption.mjs";
-import { writePlatformMeta } from "./agents/platformMeta.mjs";
+import { writePlatformMeta, fallbackPlatformMeta } from "./agents/platformMeta.mjs";
 import { pickGoal, ASK_FAMILIES } from "./agents/engage.mjs";
 import { buildBeats } from "./agents/scenes.mjs";
 import { synthVoice, kokoroFallback, judgeTake, gapStats, scoreTake, passesFloor } from "./agents/voice.mjs";
@@ -181,14 +181,20 @@ async function processJob(article, { skipStages = new Set() } = {}) {
     stageDone(job, "caption");
   }
   // 8b PLATFORM METADATA — Facebook + YouTube copy (Instagram keeps its own caption above). One call,
-  // two platform-native outputs. Best-effort: a failure just skips FB/YT for this story, never holds
-  // and never touches the IG path. (multi-platform 2026-07-13)
+  // two platform-native outputs. Never holds — but a failure no longer SKIPS FB/YT (that shipped two
+  // Instagram-only reels on the first live run, breaking the one-video-3-platforms contract): the
+  // deterministic fallback assembles FB/YT copy from the already-gated IG caption + title. (2026-07-16)
   if (need("platformMeta")) {
     const cat = job.article?.category;
     const articleUrl = cat ? `${IG.siteBase}/${cat}/${job.id}/` : "";
     const r = await stageRun(job, "platformMeta", () => writePlatformMeta({ facts: job.facts, segment: job.scout?.segment, engage: job.engage, articleUrl }), 90000);
     if (r.ok && r.result?.meta) job.platformMeta = r.result.meta;
-    else { job.platformMeta = null; jlog(job, "platformMeta", `⚠ ${r.error || r.result?.hold || "no metadata"} — FB/YT skipped for this story`); }
+    else {
+      job.platformMeta = fallbackPlatformMeta({ caption: job.caption, article: job.article, facts: job.facts, articleUrl });
+      const why = r.error || r.result?.hold || "no metadata";
+      jlog(job, "platformMeta", job.platformMeta ? `⚠ ${why} — deterministic fallback copy used for FB/YT` : `⚠ ${why} — FB/YT skipped (no usable fallback)`);
+      if (job.platformMeta) console.warn(`  ⚠ platformMeta fallback used (${String(why).slice(0, 70)})`);
+    }
     stageDone(job, "platformMeta");
   }
   // 7 PRONOUNCE

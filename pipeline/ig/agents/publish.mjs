@@ -56,10 +56,59 @@ async function hostViaGitData(owner, repo, rel, contentB64) {
   }
 }
 
+// LARGE-FILE host path via a GitHub RELEASE ASSET (owner audit follow-up 2026-07-16): BOTH JSON API
+// paths reject big mp4s — the contents PUT 413s and the git-data blob API 422s ("input was too large")
+// around ~40MB base64, which cost two fully-built reels their slots today. Release assets are GitHub's
+// designed path for large binaries (up to 2GB), uploaded as RAW bytes (no base64 inflation) to a fixed
+// "media" release on the same public repo. The download URL is public and stable.
+async function hostViaReleaseAsset(owner, repo, destName, localPath) {
+  const base = `/repos/${owner}/${repo}`;
+  // get-or-create the fixed "media" release
+  let rel;
+  try {
+    rel = await ghApi("GET", `${base}/releases/tags/media`, null, { timeout: 30000 });
+  } catch {
+    rel = await ghApi("POST", `${base}/releases`, { tag_name: "media", name: "media", body: "reel media (large files)", make_latest: "false" });
+  }
+  // replace any same-name asset (re-hosting the same slug must not 422 on name conflict)
+  const existing = (rel.assets || []).find((a) => a.name === destName);
+  if (existing) await ghApi("DELETE", `${base}/releases/assets/${existing.id}`, null, { timeout: 30000 }).catch(() => {});
+  const bytes = fs.readFileSync(localPath);
+  const type = destName.endsWith(".mp4") ? "video/mp4" : "image/jpeg";
+  let lastErr;
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    try {
+      const res = await fetchWithTimeout(
+        `https://uploads.github.com/repos/${owner}/${repo}/releases/${rel.id}/assets?name=${encodeURIComponent(destName)}`,
+        { method: "POST", headers: { ...ghHeaders(), "Content-Type": type, "Content-Length": String(bytes.length) }, body: bytes },
+        300000,
+      );
+      const j = await res.json().catch(() => ({}));
+      if (res.ok && j.browser_download_url) return j.browser_download_url;
+      lastErr = new Error(`asset upload HTTP ${res.status}: ${JSON.stringify(j).slice(0, 150)}`);
+      if (res.status === 422 && /already_exists/.test(JSON.stringify(j))) {
+        // race with a retry that half-uploaded — delete and go again
+        const again = await ghApi("GET", `${base}/releases/tags/media`, null, { timeout: 30000 });
+        const dup = (again.assets || []).find((a) => a.name === destName);
+        if (dup) await ghApi("DELETE", `${base}/releases/assets/${dup.id}`, null, { timeout: 30000 }).catch(() => {});
+      }
+    } catch (e) { lastErr = e; }
+    if (attempt < 3) await sleep(5000 * attempt);
+  }
+  throw lastErr;
+}
+
 export async function hostFile(localPath, destName) {
   const [owner, repo] = IG.host.repo.split("/");
   const rel = `${IG.host.dir}/${destName}`;
   const url = `${GH_API}/repos/${owner}/${repo}/contents/${rel}`;
+  // SIZE ROUTING: GitHub's JSON APIs (contents PUT + git-data blobs) both fail near ~30MB of raw file
+  // (base64 inflates 33%). Route big files straight to the release-asset path — raw upload, no inflation.
+  if (fs.statSync(localPath).size > 28 * 1024 * 1024) {
+    const dl = await hostViaReleaseAsset(owner, repo, destName, localPath);
+    console.log(`  hosted (release asset, large file): ${destName}`);
+    return dl;
+  }
   const content = fs.readFileSync(localPath).toString("base64");
   // NEVER lose a fully-built reel to a transient hosting error (owner 2026-07-16: a GitHub 500 threw away a
   // built video — hosting is upstream of EVERY platform). TWO independent upload paths: (1) the contents
@@ -77,7 +126,15 @@ export async function hostFile(localPath, destName) {
     } catch (e) { if (attempt === 6) console.error(`  host ${rel}: ${String(e.message).slice(0, 120)}`); }
     if (attempt < 6) await sleep(Math.min(60000, 5000 * 2 ** (attempt - 1))); // 5,10,20,40,60s
   }
-  if (!ok) await hostViaGitData(owner, repo, rel, content); // throws only if this INDEPENDENT path also fails
+  if (!ok) {
+    try {
+      await hostViaGitData(owner, repo, rel, content); // independent JSON path
+    } catch (e) {
+      // FINAL fallback: release asset (raw upload — immune to the JSON APIs' size/5xx failure modes)
+      console.error(`  git-data host failed (${String(e.message).slice(0, 80)}) — trying release asset`);
+      return await hostViaReleaseAsset(owner, repo, destName, localPath);
+    }
+  }
   // Past here the file IS uploaded (both paths throw on real failure). Confirm the raw CDN serves it before
   // handing the URL to the bridge — but a slow CDN warm-up must NOT throw away a fully-built + uploaded reel
   // (recordBuilt already ran, so scout won't rebuild it → permanent loss). Return it either way. (review 2026-07-16)

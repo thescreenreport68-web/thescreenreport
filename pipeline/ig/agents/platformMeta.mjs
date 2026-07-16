@@ -253,6 +253,26 @@ export async function writePlatformMeta({ facts, segment, engage, articleUrl = "
   return { meta: { facebook, youtube } };
 }
 
+// DETERMINISTIC FALLBACK (owner audit follow-up 2026-07-16): when the platformMeta agent fails or
+// holds, the reel used to ship INSTAGRAM-ONLY ("no facebook metadata; no youtube metadata" — two reels
+// on the first live run). One video → three platforms is the contract, so a metadata miss now falls
+// back to copy assembled from pieces that ALREADY passed their own gates (the IG caption + article
+// title) — zero LLM cost, nothing invented, no skipped platform.
+export function fallbackPlatformMeta({ caption, article, facts, articleUrl = "" }) {
+  const entities = facts?.entities || [];
+  const line1 = String(caption?.line1 || article?.title || "").trim();
+  const body = String(caption?.body || "").trim();
+  const fbTags = normTags(caption?.hashtags || [], entities).slice(0, 2);
+  const fbText = [line1, body].filter(Boolean).join("\n\n");
+  const facebook = { text: fbText, hashtags: fbTags, full: [fbText, "", AI_NOTE, "", fbTags.join(" ")].join("\n").replace(/\n+$/, "").trim() };
+  const title = finalTitle(line1 || article?.title || "");
+  const ytTags = normTags(caption?.hashtags || [], entities);
+  const tagLine = [...ytTags.filter((t) => t.toLowerCase() !== "#shorts"), "#Shorts"].slice(0, 6).join(" ");
+  const description = [[line1, body].filter(Boolean).join(" "), "", AI_NOTE, articleUrl ? `\nWatch more: ${articleUrl}` : "", "", tagLine].join("\n").replace(/\n{3,}/g, "\n\n").trim();
+  if (!facebook.text || !title) return null; // nothing usable — caller keeps the old skip behavior
+  return { facebook, youtube: { title, description, hashtags: ytTags, fallback: true } };
+}
+
 // Pure SEO guards exposed for the offline suite (no LLM) so the "never repeat these mistakes" behavior
 // is regression-locked. Not used at runtime. (2026-07-14)
 export const __test = { pickPrimaryEntity, leadEntityOf, leadsWith, ytIssues, normTags, finalTitle };
