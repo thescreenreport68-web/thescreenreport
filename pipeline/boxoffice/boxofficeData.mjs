@@ -44,9 +44,16 @@ export async function run(job, { boxOfficeImpl = getBoxOffice, factsImpl = getTi
   const nowYear = parseInt(String(job?.film?.netflix?.week || job?.film?.releaseDate || yearHint || "").slice(0, 4)) || null;
   const castTrusted = castTrustworthy(facts, title, { nowYear });
 
-  const providers = facts?.providers || { stream: [], rent: [], buy: [] };
+  // 🔴 WRONG-ENTITY WALL: if the resolved TMDB entity is NOT trusted (title mismatch / old same-name film),
+  // NOTHING from it can be used — not just the cast. Trusting the wrong film's money/premise/providers is how
+  // "Moana" got Moana Pozzi's plot and Obsession got a $427M worldwide that poisoned its materiality baseline
+  // and produced a self-contradicting live article. bo (getBoxOffice) resolves by the same title → same risk.
+  const trustedFacts = castTrusted ? facts : null;
+  const trustedBo = castTrusted ? bo : null;
+
+  const providers = trustedFacts?.providers || { stream: [], rent: [], buy: [] };
   const whereList = [{
-    title, year: bo?.year || facts?.year || "",
+    title, year: trustedBo?.year || trustedFacts?.year || "",
     type: "movie", providers,
   }];
   const whereToWatch = (providers.stream.length || providers.rent.length || providers.buy.length)
@@ -54,27 +61,27 @@ export async function run(job, { boxOfficeImpl = getBoxOffice, factsImpl = getTi
 
   // The fmtUSD strings we actually hand the writer — the fidelity wall normalizes THESE so a
   // faithfully-copied TMDB figure always clears (see moneyGuard.buildAllowed).
-  const moneyStrings = [bo?.worldwide, bo?.budget].filter(Boolean);
+  const moneyStrings = [trustedBo?.worldwide, trustedBo?.budget].filter(Boolean);
 
   job.boxData = {
-    title: bo?.title || facts?.title || title,
-    year: bo?.year || facts?.year || "",
-    worldwide: bo?.worldwide || null, worldwideRaw: bo?.worldwideRaw || facts?.revenueRaw || 0,
-    budget: bo?.budget || null, budgetRaw: bo?.budgetRaw || facts?.budgetRaw || 0,
-    releaseDate: bo?.releaseDate || facts?.theatrical || "",
+    title: trustedBo?.title || trustedFacts?.title || title,
+    year: trustedBo?.year || trustedFacts?.year || "",
+    worldwide: trustedBo?.worldwide || null, worldwideRaw: trustedBo?.worldwideRaw || trustedFacts?.revenueRaw || 0,
+    budget: trustedBo?.budget || null, budgetRaw: trustedBo?.budgetRaw || trustedFacts?.budgetRaw || 0,
+    releaseDate: trustedBo?.releaseDate || trustedFacts?.theatrical || "",
     providers,
     whereToWatch,
-    cast: castTrusted ? (facts?.cast || []).map((c) => c.name).filter(Boolean).slice(0, 8) : [],
+    cast: (trustedFacts?.cast || []).map((c) => c.name).filter(Boolean).slice(0, 8),
     // castRoles keeps the {name, character} pairs TMDB already returned (boxofficeData used to throw the
     // character away). "Actor as Character" is rich, faithful material the writer develops into a full
     // cast paragraph — the single biggest source of the length the writer was starved of.
-    castRoles: castTrusted ? (facts?.cast || []).filter((c) => c?.name).slice(0, 8) : [],
-    director: castTrusted ? (facts?.director || "") : "",
-    genres: Array.isArray(facts?.genres) ? facts.genres.filter(Boolean).slice(0, 4) : [],
-    runtime: facts?.runtime || null,
-    overview: facts?.overview || "",
-    status: facts?.status || "",
-    isOTT: !!facts?.isOTT,
+    castRoles: (trustedFacts?.cast || []).filter((c) => c?.name).slice(0, 8),
+    director: trustedFacts?.director || "",
+    genres: Array.isArray(trustedFacts?.genres) ? trustedFacts.genres.filter(Boolean).slice(0, 4) : [],
+    runtime: trustedFacts?.runtime || null,
+    overview: trustedFacts?.overview || "",
+    status: trustedFacts?.status || "",
+    isOTT: !!trustedFacts?.isOTT,
     castTrusted,
     moneyStrings,
   };

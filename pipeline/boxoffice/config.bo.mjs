@@ -101,7 +101,7 @@ export const FLOOD_CAP = Number(process.env.BOXOFFICE_FLOOD_CAP) || 3;
 
 // SEO posture (owner: LIGHT + natural only — over-optimizing is a DEFECT; readability + engagement
 // are the KPI). Consumed by the writer/QA prompts + the assemble finisher.
-export const SEO = { metaTitleMin: 45, metaTitleMax: 55, metaDescMax: 155, minFaqs: 2, maxQuestionH2s: 2, note: "light+natural; readability+engagement first; never stuff keywords" };
+export const SEO = { metaTitleMin: 45, metaTitleMax: 55, metaDescMin: 140, metaDescMax: 160, minFaqs: 2, maxQuestionH2s: 2, note: "light+natural; readability+engagement first; never stuff keywords" };
 // A film winding down / released long ago is NOT a box-office story (owner: don't post about films from months
 // ago). Only cover the ACTIVE box office — films still grossing at least this much per day. The daily chart's
 // long tail (a $1.8K/day film 67 days in) is excluded here.
