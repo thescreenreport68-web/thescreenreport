@@ -170,9 +170,12 @@ function ensureFaq(article, { gathered = {}, boxData = {}, film = {}, form = {} 
       `'${t}' has spent ${gathered.weeksInTop10} week${gathered.weeksInTop10 > 1 ? "s" : ""} in the Netflix Top 10.`);
   } else {
     const bo = buildBoxOffice(gathered, boxData) || {};
-    if (bo.openingWeekend || bo.domestic || bo.worldwide) add(`How much did '${t}' make at the box office?`,
-      `${bo.openingWeekend ? `'${t}' opened to ${bo.openingWeekend}. ` : ""}${bo.worldwide ? `Its worldwide total stands at ${bo.worldwide}.` : bo.domestic ? `It has grossed ${bo.domestic} domestically.` : ""}`);
+    const total = gathered.cume || bo.openingWeekend || bo.domestic || bo.worldwide;
+    if (total) add(`How much has '${t}' made at the box office?`,
+      `'${t}' has grossed ${total}${gathered.cume && bo.worldwide ? ` domestically, with ${bo.worldwide} worldwide` : gathered.theaters ? ` across ${gathered.theaters} theaters` : ""}.`);
     if (bo.budget) add(`What is the production budget of '${t}'?`, `'${t}' was produced on a reported budget of ${bo.budget} before marketing.`);
+    if (gathered.theaters) add(`How many theaters is '${t}' playing in?`, `'${t}' is currently playing across ${gathered.theaters} theaters.`);
+    if (bo.worldwide && gathered.cume) add(`What is '${t}' worldwide box office total?`, `'${t}' has taken in ${bo.worldwide} at the worldwide box office.`);
     if (gathered.platform || (boxData.providers?.stream || []).length) add(`Where can I watch '${t}'?`,
       `'${t}' is available on ${gathered.platform || (boxData.providers.stream || []).join(", ")}.`);
   }

@@ -16,7 +16,16 @@ const normTitle = (s) => String(s || "").toLowerCase().replace(/[^a-z0-9]+/g, " 
 export function castTrustworthy(facts, requestedTitle, { nowYear } = {}) {
   if (!facts || !facts.title) return false;
   const a = normTitle(facts.title), b = normTitle(requestedTitle);
-  if (!(a === b || a.includes(b) || b.includes(a))) return false;
+  // Title must match EXACTLY, or one is the other plus a SUBTITLE (after ":"/"-") — NEVER the requested title
+  // plus a DIFFERENT word. "Moana" resolving to "Moana Pozzi" is a different film and is rejected (it was
+  // poisoning updates with the wrong movie's plot + budget). "Superman: Man of Tomorrow" for "Superman" is OK.
+  const rawA = String(facts.title || "").trim(), rawB = String(requestedTitle || "").trim();
+  const subtitleOf = (long, short) => {
+    if (!short || long.toLowerCase().indexOf(short.toLowerCase()) !== 0) return false;
+    const rest = long.slice(short.length);
+    return rest === "" || /^\s*[:\-–—]/.test(rest);
+  };
+  if (!(a === b || subtitleOf(rawA, rawB) || subtitleOf(rawB, rawA))) return false;
   const fy = parseInt(facts.year) || null;
   if (nowYear && fy && fy < nowYear - 6) return false; // a 2026 chart-topper resolving to a 1990s film = wrong entity
   return true;

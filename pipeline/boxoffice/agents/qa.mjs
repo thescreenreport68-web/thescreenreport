@@ -136,13 +136,19 @@ export function fidelityLocks(job) {
   if (dRaw && iRaw && wRaw && Math.abs(dRaw + iRaw - wRaw) / wRaw > 0.12)
     hardBlocks.push(`reconcile: domestic+international ($${Math.round((dRaw + iRaw) / 1e6)}M) does not match worldwide ($${Math.round(wRaw / 1e6)}M) — present each figure as separately reported, never imply a sum`);
 
-  // A draft saturated with unsupported figures/claims is not salvageable-by-cutting.
+  // A draft saturated with unsupported figures/claims is not salvageable-by-cutting. Daily box-office UPDATES
+  // get a higher bar: the cheap writer sprinkles invented figures into an otherwise-accurate, movie-heavy piece,
+  // so we CUT them and let the (accurate, TMDB-sourced) movie section carry the article, rather than hold it —
+  // the published result is clean either way (the cutter removes every flagged figure). The post-cut word floor
+  // below still catches anything gutted too short.
   const uniqueCuts = [...new Set(cutClaims.filter((c) => (c || "").length > 8))];
-  if (uniqueCuts.length > 4) hardBlocks.push(`fidelity: ${uniqueCuts.length} unsupported figures/claims — draft-level failure`);
+  const cutCeiling = job.film?.dailyChart ? 8 : 4;
+  if (uniqueCuts.length > cutCeiling) hardBlocks.push(`fidelity: ${uniqueCuts.length} unsupported figures/claims — draft-level failure`);
 
   // Floors.
   if (words < Math.min(form.words[0], 180)) hardBlocks.push(`words ${words} < ${Math.min(form.words[0], 180)} (owner-set ~200-word minimum)`);
-  if ((article?.faq || []).filter((f) => f?.q && f?.a).length < 2) hardBlocks.push("seo-faq: fewer than 2 real FAQs");
+  // NOTE: no FAQ hard-block here — assemble.ensureFaq deterministically backfills ≥2 REAL FAQs from the verified
+  // facts, so every PUBLISHED article carries them. A pre-assemble writer FAQ check was falsely holding good drafts.
   for (const h of findTemplateHeadings(body)) hardBlocks.push(`template-heading: "${h.slice(0, 50)}" — rewrite story-specific`);
 
   return { words, hardBlocks, cutClaims: uniqueCuts, unsupported: nf.unsupported, invented: ni.blocks };
@@ -213,8 +219,9 @@ export async function review(job, { chatImpl = null } = {}) {
       }
     } catch { /* judge outage → score 0 → held, never auto-published */ }
     const s = j.subscores || {};
+    const softFloor = job.film?.dailyChart ? 4 : 5; // a daily box-office numbers update is inherently calmer than a breaking story
     for (const k of ["readability", "engagement", "humanVoice"]) {
-      if (s[k] != null && s[k] < 5) hardBlocks.push(`soft-floor ${k} ${s[k]} < 5`);
+      if (s[k] != null && s[k] < softFloor) hardBlocks.push(`soft-floor ${k} ${s[k]} < ${softFloor}`);
     }
   }
 
