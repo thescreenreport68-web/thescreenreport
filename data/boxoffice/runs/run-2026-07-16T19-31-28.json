@@ -1,0 +1,89 @@
+{
+ "runId": "run-2026-07-16T19-31-28",
+ "mode": "live",
+ "startedAt": "2026-07-16T19:31:28.683Z",
+ "films": 6,
+ "published": [
+  {
+   "tag": "obsession-bo-update×BO-UPDATE",
+   "slug": "obsession-box-office-day-62-domestic-total-climbs-to-255-4-million",
+   "path": "/home/runner/work/thescreenreport/thescreenreport/content/articles/obsession-box-office-day-62-domestic-total-climbs-to-255-4-million.md",
+   "score": 40,
+   "acceptReason": "daily factual update — deterministic numbers + accuracy walls + word floor all pass"
+  }
+ ],
+ "held": [
+  {
+   "tag": "minions-monsters-bo-update×BO-UPDATE",
+   "reason": "not material: no new number (current $280M not above last published $280M)"
+  },
+  {
+   "tag": "moana-bo-update×BO-UPDATE",
+   "reason": "not material: no new number (current $100M not above last published $100M)"
+  },
+  {
+   "tag": "evil-dead-burn-bo-update×BO-UPDATE",
+   "reason": "not material: no new number (current $26M not above last published $26M)"
+  },
+  {
+   "tag": "young-washington-bo-update×BO-UPDATE",
+   "reason": "words 165 < 180 (owner-set ~200-word minimum)",
+   "score": 25
+  },
+  {
+   "tag": "toy-story-5-bo-update×BO-UPDATE",
+   "reason": "not material: no new number (current $882M not above last published $882M)"
+  }
+ ],
+ "rejected": [],
+ "skipped": [],
+ "blocked": [],
+ "zeroStreak": 0,
+ "finishedAt": "2026-07-16T19:40:11.813Z",
+ "meter": {
+  "byRole": {
+   "gatherer": {
+    "calls": 9,
+    "errors": 0,
+    "in": 22968,
+    "out": 4215,
+    "usd": 0.00398,
+    "ms": 19944
+   },
+   "finder": {
+    "calls": 2,
+    "errors": 2,
+    "in": 0,
+    "out": 0,
+    "usd": 0,
+    "ms": 0
+   },
+   "synthesizer": {
+    "calls": 3,
+    "errors": 1,
+    "in": 1617,
+    "out": 573,
+    "usd": 0.00023,
+    "ms": 16127
+   },
+   "writer": {
+    "calls": 4,
+    "errors": 0,
+    "in": 7834,
+    "out": 3383,
+    "usd": 0.00855,
+    "ms": 42111
+   },
+   "qa": {
+    "calls": 14,
+    "errors": 0,
+    "in": 40700,
+    "out": 5968,
+    "usd": 0.02713,
+    "ms": 45950
+   }
+  },
+  "totalUsd": 0.03989
+ },
+ "openrouterTotalUsd": 0.04131
+}
