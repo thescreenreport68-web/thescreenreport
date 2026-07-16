@@ -20,10 +20,13 @@ const QUEUE = path.resolve(__dirname, "../data/find/queue.json");
 
 const POST_START = Number(process.env.LA_START ?? 10); // 10am PT (inclusive)
 const POST_END = Number(process.env.LA_END ?? 22);     // 10pm PT (exclusive)
-const MIN_BACKLOG = Number(process.env.MIN_BACKLOG ?? 4); // top up when fewer than this many FRESH topics remain
+// SCALE-UP (owner 2026-07-16, NEWS_REALTIME_SCALE_PLAN Phase 1): ticks now come every 30 min with PER_TICK 2, so the
+// backlog burns 2×/tick — top up earlier, judge more candidates, keep a deeper queue, and refresh a stale queue in
+// minutes (a 45-min-old queue on a breaking day is already behind).
+const MIN_BACKLOG = Number(process.env.MIN_BACKLOG ?? 8); // top up when fewer than this many FRESH topics remain
 const PER_TICK = Number((process.argv.find((a) => a.startsWith("--limit=")) || "").split("=")[1]) || 1;
-const FIND_CANDIDATES = process.env.FIND_CANDIDATES || "45";
-const FIND_QUEUE = process.env.FIND_QUEUE || "18";
+const FIND_CANDIDATES = process.env.FIND_CANDIDATES || "120";
+const FIND_QUEUE = process.env.FIND_QUEUE || "30";
 
 // Is `now` within LA posting hours? Pure + DST-proof — America/Los_Angeles resolves PST/PDT automatically, so the
 // window is always local 10am–10pm with no cron edits across daylight saving.
@@ -55,7 +58,7 @@ export function queueAgeHours() {
   try { const b = JSON.parse(fs.readFileSync(QUEUE, "utf8")).builtAt; return b ? (Date.now() - Date.parse(b)) / 3.6e6 : Infinity; }
   catch { return Infinity; }
 }
-const QUEUE_STALE_HOURS = Number(process.env.QUEUE_STALE_HOURS ?? 3); // refresh a queue older than this even if backlog looks high
+const QUEUE_STALE_HOURS = Number(process.env.QUEUE_STALE_HOURS ?? 0.75); // refresh a queue older than this even if backlog looks high (45 min — scale-up 2026-07-16)
 
 function setOutput(kv) {
   const f = process.env.GITHUB_OUTPUT;
@@ -87,10 +90,14 @@ export async function tick({ now = new Date() } = {}) {
   } else {
     console.log(`[news-scheduler] fresh backlog ${backlog} (>= ${MIN_BACKLOG}), queue age ${ageStr}h (<= ${QUEUE_STALE_HOURS}h) → publishing from existing queue.`);
   }
-  // PUBLISH one from the queue (CONCURRENCY=1 → exactly one per tick; run.mjs ledger-skips already-published topics).
+  // PUBLISH up to PER_TICK from the queue (run.mjs ledger-skips already-published topics). CONCURRENCY scales with
+  // the per-tick target (max 3 parallel writers) — each article still runs the FULL gate chain independently.
   let out = "";
-  try { out = runNode("run.mjs", ["--from-find", `--target=${PER_TICK}`], { CONCURRENCY: "1" }); }
+  try { out = runNode("run.mjs", ["--from-find", `--target=${PER_TICK}`], { CONCURRENCY: String(Math.min(3, Math.max(1, PER_TICK))) }); }
   catch (e) { console.error(`[news-scheduler] MAKE failed: ${String(e?.message || e).slice(0, 160)}`); setOutput({ published: 0, reason: "make-error" }); return { published: 0, reason: "make-error" }; }
+  // Echo the child's full output into OUR log — run.mjs prints the MEASURED COST + per-stage detail, and swallowing
+  // it made per-article cost unrecoverable (owner 2026-07-16: cost must be visible in the cloud logs).
+  process.stdout.write(out);
   const slugs = [...out.matchAll(/✓ WROTE (\S+?)\.md/g)].map((m) => m[1]);
   const published = Number((out.match(/DONE\. published:(\d+)/) || [])[1] || slugs.length || 0);
   console.log(`[news-scheduler] published ${published} (${slugs.join(", ") || "—"}). fresh backlog now ${freshBacklog()}.`);

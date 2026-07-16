@@ -12,7 +12,7 @@ import { classify } from "./stages/classify.mjs";
 import { editorialGate } from "./stages/editorialGate.mjs";
 import { canonicalize } from "./find/categorize.mjs";
 import { recordPublished, slugKey, loadPublished, entityKey } from "./find/store.mjs";
-import { recentArticles, findDuplicate } from "./lib/dupGuard.mjs";
+import { recentArticles, findDuplicate, entityDayCap } from "./lib/dupGuard.mjs";
 import { sourceImage, measureRemote } from "./stages/image.mjs";
 import { pickHeroImage } from "./lib/heroImage.mjs";
 import { cutArticle } from "./lib/cutter.mjs";
@@ -62,10 +62,15 @@ if (FROM_FIND) {
   const _n1 = SOURCE_TOPICS.length;
   SOURCE_TOPICS = SOURCE_TOPICS.filter((t) => {
     const d = findDuplicate(t, _recent);
-    if (d) console.log(`  ⏭ dup-story skip: "${(t.title || "").slice(0, 70)}" ≈ published "${d.slug}" (shared: ${d.shared.slice(0, 5).join(", ")})`);
-    return !d;
+    if (d) { console.log(`  ⏭ dup-story skip: "${(t.title || "").slice(0, 70)}" ≈ published "${d.slug}" (shared: ${d.shared.slice(0, 5).join(", ")})`); return false; }
+    // PER-ENTITY DAY CAP (scale-up 2026-07-16): defer a topic whose entity already has ≥4 articles in 24h — the
+    // measured professional ceiling (even Variety caps one film at ~3-4/day in its biggest release week). The topic
+    // stays in the queue and becomes eligible again as the 24h window rolls.
+    const cap = entityDayCap(t, _recent);
+    if (cap) { console.log(`  ⏸ entity day-cap: "${(t.title || "").slice(0, 70)}" — ${cap.count} article(s) on this entity in 24h (cap ${cap.cap}; e.g. ${cap.sample.join(", ")})`); return false; }
+    return true;
   });
-  if (_n1 !== SOURCE_TOPICS.length) console.log(`  dup guard: ${_n1 - SOURCE_TOPICS.length} cross-lane duplicate(s) dropped → ${SOURCE_TOPICS.length} publishable`);
+  if (_n1 !== SOURCE_TOPICS.length) console.log(`  dup guard: ${_n1 - SOURCE_TOPICS.length} duplicate/capped topic(s) dropped → ${SOURCE_TOPICS.length} publishable`);
 }
 let topics = ONLY ? SOURCE_TOPICS.filter((t) => t.id === ONLY) : SOURCE_TOPICS;
 if (LIMIT) topics = topics.slice(0, LIMIT);

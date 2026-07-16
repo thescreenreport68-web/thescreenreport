@@ -25,9 +25,10 @@ on:
   # schedule:
   #   - cron: "2,7,12,17,22,27,32,37,42,47,52,57 * * * *"   # ~every 5 min (belt-and-suspenders vs the Worker clock)
 
-# Never let two ticks run at once (no double-post); a running tick finishes before the next starts.
+# ONE publish at a time across the whole news lane (drip + breaking share this group, scale-up 2026-07-16): two
+# concurrent publishes would race the queue/ledger commit. Queued, never cancelled.
 concurrency:
-  group: news-drip
+  group: news-publish
   cancel-in-progress: false
 
 permissions:

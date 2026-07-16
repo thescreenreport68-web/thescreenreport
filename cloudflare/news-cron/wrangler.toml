@@ -4,16 +4,19 @@ compatibility_date = "2025-01-01"
 # Cron-only Worker (no HTTP endpoint) — don't publish to workers.dev; the Cron Trigger fires the scheduled() handler.
 workers_dev = false
 
-# Fires every 2 hours at ODD UTC hours (01:00, 03:00, … 23:00) → ~12 articles/day, 24/7. Odd hours keep the news lane
-# offset 1h from the gossip lane (even hours, run by a separate chat) so the two never post at the same time.
+# SENTINEL cadence (scale-up 2026-07-16, NEWS_REALTIME_SCALE_PLAN §3/§4): every 2 minutes. Each firing is a cheap
+# non-AI feed sweep; it dispatches news-breaking IMMEDIATELY on urgent items, the news-drip batch tick (limit=2) on
+# the :00/:30 boundaries, and a dead-man forced drip if none ran for 45 min. REPLACES the old 2-hour clock
+# ("0 1-23/2 * * *") — same single cron slot on the account, just a faster schedule.
 [triggers]
-crons = ["0 1-23/2 * * *"]
+crons = ["*/2 * * * *"]
 
 # Non-secret config. GH_REF MUST be the repo's DEFAULT branch (workflow_dispatch only sees workflows on default).
 [vars]
 GH_OWNER = "thescreenreport68-web"
 GH_REPO = "thescreenreport"
 GH_REF = "main"
+
 
 # Secret (NOT here — set once with:  wrangler secret put GH_TOKEN):
 #   GH_TOKEN = a fine-grained GitHub PAT scoped to this repo with "Actions: Read and write".

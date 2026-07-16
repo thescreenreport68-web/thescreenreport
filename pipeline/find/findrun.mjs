@@ -10,6 +10,7 @@ import { verify } from "./verify.mjs";
 import { scoreTopics, selectDiverse } from "./score.mjs";
 import { detectBreakouts } from "./sources/breakout.mjs";
 import { expandInsideStories, TIER_S } from "./expand.mjs";
+import { buildRadar, loadRadar, radarBoost } from "./radar.mjs";
 
 const arg = (k, d) => Number((process.argv.find((a) => a.startsWith(`--${k}=`)) || "").split("=")[1]) || d;
 const SHORTLIST = arg("candidates", 28); // how many candidates the categorize LLM judges (cost control)
@@ -151,6 +152,21 @@ const verified = verify(topics, monitor);
 // priority-ranked pool — music, box-office, celebrity, every shape — with diversity only a soft tiebreak. No music
 // quota, no hard per-subcategory cap: a genuinely trending story is never dropped for its category/shape.
 scoreTopics(verified, monitor);
+// EVENT RADAR (scale-up 2026-07-16, NEWS_REALTIME_SCALE_PLAN §3): autonomous awareness of what's releasing/airing/
+// trending — NO manual pinning. Refresh when >6h old (free JSON/RSS sources), then boost every topic inside an
+// active window (a film in release week, a show whose episode just aired, an industry-wide surge) and stamp a
+// wire-style tierClass. The committed radar.json ALSO feeds the sentinel worker's urgency keywords.
+let radar = loadRadar();
+if (!radar) {
+  try { radar = await buildRadar(); monitor.stage("radar", `rebuilt — ${radar.hotEntities.length} hot entities (top: ${radar.hotEntities.slice(0, 5).join(", ")})`); }
+  catch (e) { monitor.stage("radar", `rebuild failed (${String(e?.message || e).slice(0, 80)}) — continuing without boosts`); }
+}
+for (const t of verified) {
+  const rb = radarBoost(t, radar);
+  if (rb) { t.priority = (t.priority || 0) + rb.boost; (t.signals ||= {}).radar = rb.boost; t.radarKind = rb.kind; }
+  const sType = t.sensitivity === "high" || /death|arrest|lawsuit|divorce|legal/.test(String(t.eventType || ""));
+  t.tierClass = sType ? "S" : (rb || (t.verification?.outletCount || 0) >= 3) ? "A" : (t.priority || 0) >= 60 ? "B" : "C";
+}
 let queue = selectDiverse(verified, { n: QUEUE_N, publishableOnly: true, floor: SELECT_FLOOR, minKeep: 3 });
 // NEVER PUBLISH 0 (owner 2026-07-06): our niche ALWAYS has something trending — a movie, TV show, musician/music, or
 // celebrity story. So the automation must never skip a tick for lack of content. If the strict newsworthiness floor +
