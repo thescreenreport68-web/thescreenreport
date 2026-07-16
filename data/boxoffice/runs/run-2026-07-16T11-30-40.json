@@ -1,0 +1,85 @@
+{
+ "runId": "run-2026-07-16T11-30-40",
+ "mode": "live",
+ "startedAt": "2026-07-16T11:30:40.267Z",
+ "films": 6,
+ "published": [
+  {
+   "tag": "young-washington-bo-update×BO-UPDATE",
+   "slug": "young-washington-box-office-day-12-domestic-total-climbs-to-35-7-million",
+   "path": "/home/runner/work/thescreenreport/thescreenreport/content/articles/young-washington-box-office-day-12-domestic-total-climbs-to-35-7-million.md",
+   "score": 50,
+   "acceptReason": "daily factual update — deterministic numbers + accuracy walls + word floor all pass"
+  }
+ ],
+ "held": [
+  {
+   "tag": "moana-bo-update×BO-UPDATE",
+   "reason": "not material: no new number (current $100M not above last published $100M)"
+  },
+  {
+   "tag": "minions-monsters-bo-update×BO-UPDATE",
+   "reason": "not material: no new number (current $280M not above last published $280M)"
+  },
+  {
+   "tag": "toy-story-5-bo-update×BO-UPDATE",
+   "reason": "not material: no new number (current $882M not above last published $882M)"
+  },
+  {
+   "tag": "evil-dead-burn-bo-update×BO-UPDATE",
+   "reason": "words 127 < 180 (owner-set ~200-word minimum)",
+   "score": 30
+  }
+ ],
+ "rejected": [],
+ "skipped": [],
+ "blocked": [],
+ "zeroStreak": 0,
+ "finishedAt": "2026-07-16T11:39:38.731Z",
+ "meter": {
+  "byRole": {
+   "gatherer": {
+    "calls": 6,
+    "errors": 0,
+    "in": 19247,
+    "out": 2834,
+    "usd": 0.00306,
+    "ms": 9829
+   },
+   "finder": {
+    "calls": 2,
+    "errors": 2,
+    "in": 0,
+    "out": 0,
+    "usd": 0,
+    "ms": 0
+   },
+   "synthesizer": {
+    "calls": 2,
+    "errors": 0,
+    "in": 1493,
+    "out": 1736,
+    "usd": 0.00045,
+    "ms": 68543
+   },
+   "writer": {
+    "calls": 4,
+    "errors": 0,
+    "in": 7988,
+    "out": 3793,
+    "usd": 0.00926,
+    "ms": 85841
+   },
+   "qa": {
+    "calls": 13,
+    "errors": 0,
+    "in": 37807,
+    "out": 6033,
+    "usd": 0.02642,
+    "ms": 48389
+   }
+  },
+  "totalUsd": 0.03919
+ },
+ "openrouterTotalUsd": 0.04106
+}
