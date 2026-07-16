@@ -1,0 +1,81 @@
+{
+ "runId": "run-2026-07-16T00-30-38",
+ "mode": "live",
+ "startedAt": "2026-07-16T00:30:38.752Z",
+ "films": 6,
+ "published": [],
+ "held": [
+  {
+   "tag": "moana-bo-update×BO-UPDATE",
+   "reason": "fidelity: 5 unsupported figures/claims — draft-level failure",
+   "score": 0
+  },
+  {
+   "tag": "minions-monsters-bo-update×BO-UPDATE",
+   "reason": "fidelity: 7 unsupported figures/claims — draft-level failure",
+   "score": 0
+  },
+  {
+   "tag": "toy-story-5-bo-update×BO-UPDATE",
+   "reason": "fidelity: 5 unsupported figures/claims — draft-level failure",
+   "score": 0
+  },
+  {
+   "tag": "evil-dead-burn-bo-update×BO-UPDATE",
+   "reason": "fidelity: 8 unsupported figures/claims — draft-level failure",
+   "score": 0
+  },
+  {
+   "tag": "young-washington-bo-update×BO-UPDATE",
+   "reason": "fidelity: 5 unsupported figures/claims — draft-level failure",
+   "score": 0
+  },
+  {
+   "tag": "supergirl-bo-update×BO-UPDATE",
+   "reason": "fidelity: 5 unsupported figures/claims — draft-level failure | template-heading: \"## What Does This Mean Financially?\" — rewrite story-specific",
+   "score": 0
+  }
+ ],
+ "rejected": [],
+ "skipped": [],
+ "blocked": [],
+ "finishedAt": "2026-07-16T00:41:41.485Z",
+ "meter": {
+  "byRole": {
+   "gatherer": {
+    "calls": 7,
+    "errors": 0,
+    "in": 22522,
+    "out": 2982,
+    "usd": 0.00345,
+    "ms": 11555
+   },
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3428,
+    "out": 611,
+    "usd": 0.00021,
+    "ms": 1940
+   },
+   "synthesizer": {
+    "calls": 6,
+    "errors": 0,
+    "in": 4364,
+    "out": 4271,
+    "usd": 0.00116,
+    "ms": 162065
+   },
+   "writer": {
+    "calls": 6,
+    "errors": 0,
+    "in": 11000,
+    "out": 5927,
+    "usd": 0.01388,
+    "ms": 61446
+   }
+  },
+  "totalUsd": 0.0187
+ },
+ "openrouterTotalUsd": 0.01909
+}
