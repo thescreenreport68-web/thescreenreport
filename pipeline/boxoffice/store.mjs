@@ -17,16 +17,25 @@ export const boKey = (eventSlug, form) => `${eventSlug || "no-event"}|${form}`;
 export function loadStore(file = STORE_PATH) {
   try {
     const s = JSON.parse(fs.readFileSync(file, "utf8"));
-    return { published: s.published || [], parked: s.parked || [], file };
+    return { published: s.published || [], parked: s.parked || [], zeroStreak: s.zeroStreak || 0, file };
   } catch {
-    return { published: [], parked: [], file };
+    return { published: [], parked: [], zeroStreak: 0, file };
   }
 }
 
 function save(store) {
   fs.mkdirSync(path.dirname(store.file), { recursive: true });
-  const out = { published: store.published.slice(-CAP), parked: store.parked.slice(-500) };
+  const out = { published: store.published.slice(-CAP), parked: store.parked.slice(-500), zeroStreak: store.zeroStreak || 0 };
   fs.writeFileSync(store.file, JSON.stringify(out, null, 1));
+}
+
+// ZERO-PUBLISH ALARM (the 48h silent-burn lesson): count consecutive LIVE ticks that published nothing.
+// borun calls this each live tick; at/over the threshold the run emits a GitHub Actions ::warning::
+// annotation + flags the report, so a stuck lane is VISIBLE instead of silently burning hourly spend.
+export function bumpZeroStreak(store, publishedCount) {
+  store.zeroStreak = publishedCount > 0 ? 0 : (store.zeroStreak || 0) + 1;
+  save(store);
+  return store.zeroStreak;
 }
 
 export function alreadyPublished(store, eventSlug, form) {

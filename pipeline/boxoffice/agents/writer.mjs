@@ -9,6 +9,7 @@ import { agentChat } from "../models.mjs";
 import { FORMS, SEO } from "../config.bo.mjs";
 import { boxDataBlock } from "../boxofficeData.mjs";
 import { netflixBlock } from "../netflix.mjs";
+import { canonicalFigures } from "../moneyGuard.mjs";
 
 const FORM_GUIDE = {
   "BO-OPENING": `This is a DEBUT (opening weekend). PART 1 — the movie: what it is, its director + cast, the buzz,
@@ -52,6 +53,23 @@ no commenting on your own accuracy.
 STYLE: strong hook, short human paragraphs, a clear why-up/why-down, at most ${SEO.maxQuestionH2s} question-style
 subheadings and they must be STORY-SPECIFIC (never "What's next?"-type filler), one natural use of the SEO keyword.
 Engagement + readability is the #1 KPI. Return STRICT JSON only.`;
+
+// Deterministic box-office section for a daily UPDATE — built ONLY from the CANONICAL figure set (the
+// same single source of truth the title, metaTitle, boxOffice block, and FAQs draw from), so every number
+// is accurate, invention-free, AND self-consistent across every surface of the article.
+export function dailyBoxOfficeSection(job) {
+  const canon = canonicalFigures({ gathered: job.gathered || {}, boxData: job.boxData || {}, film: job.film || {} });
+  const sentences = [];
+  const clause = [];
+  if (canon.domestic) clause.push(`has grossed ${canon.domestic.text} at the domestic box office`);
+  if (canon.dayInRelease) clause.push(`${canon.dayInRelease} days into its theatrical run`);
+  if (canon.theaters) clause.push(`while playing across ${canon.theaters.text} theaters`);
+  if (clause.length) sentences.push(`${job.film.title} ${clause.join(", ")}.`);
+  if (canon.dailyGross) sentences.push(`The film added ${canon.dailyGross.text} in its most recent day of release.`);
+  if (canon.worldwide) sentences.push(`Worldwide, it has taken in ${canon.worldwide.text}.`);
+  if (canon.budget) sentences.push(`It carries a reported production budget of ${canon.budget.text}.`);
+  return sentences.length ? `\n\n## At the Box Office\n\n${sentences.join(" ")}` : "";
+}
 
 // run(job, {corrections, previousArticle}) → job.article
 export async function run(job, { corrections = null, previousArticle = null, chatImpl = null } = {}) {
@@ -105,7 +123,7 @@ export async function run(job, { corrections = null, previousArticle = null, cha
   // Streaming + daily box-office updates are FULL 200+ word stories built from the ALWAYS-rich TMDB material +
   // their own numbers (Netflix hours / the chart cume), so aim high; a first-report opening keeps the grounding-
   // matched budget tied to its trade coverage.
-  const [budgetLo, budgetHi] = isDailyUpdate ? [300, 380] : isStreaming ? [220, 320] : (solidMaterial ? [240, 330] : [180, 240]);
+  const [budgetLo, budgetHi] = isDailyUpdate ? [190, 250] : isStreaming ? [220, 320] : (solidMaterial ? [240, 330] : [180, 240]);
   const structure = isStreaming
     ? `STRUCTURE — build the FULL story, developing EACH part into a full paragraph so the article clears 200 words (a real article, never a stub):
 1) LEAD: a hook — the title and why it's a phenomenon right now (its Netflix rank or hours viewed).
@@ -115,13 +133,13 @@ export async function run(job, { corrections = null, previousArticle = null, cha
 5) WHY PEOPLE LOVE IT: the reception — why audiences are watching and what's driving the buzz (from the source reporting).
 6) A closing line on its momentum.`
     : isDailyUpdate
-    ? `STRUCTURE — build the FULL story to 200+ words. Get your LENGTH from the MOVIE (the TMDB context is rich); state every NUMBER EXACTLY as written in the VERIFIED FIGURES and INVENT NOTHING:
-1) LEAD: the hook — the film and where its box office stands now (its running domestic total or day-in-release).
-2) THE MOVIE (the bulk of the article): what it is (premise + genre + runtime), the director, and the FULL cast and the characters they play — develop each fully from the TMDB context.
-3) THE RUN: the running domestic total, yesterday's daily gross, and the theater count — each stated EXACTLY as given — plus how many days it has been in release.
-4) CONTEXT: its worldwide total and production budget ONLY IF they appear in the figures — state them plainly, verbatim.
-⛔ NEVER state a worldwide total, opening-weekend figure, profit, loss, or "below/above expectations" verdict that is not in the VERIFIED FIGURES. You do NOT have profit/loss data — do not compute or project it. No "costly gamble", no "far below expectations".
-5) A closing line on the film — factual, no speculation.`
+    ? `Write a ~210-word profile of the MOVIE ITSELF. The verified box-office figures are added by the system as a separate section, so you write ONLY about the film — develop each part into a full paragraph:
+1) LEAD: a hook introducing the film and why audiences are turning out for it (its premise, its stars) — NO numbers.
+2) WHAT IT IS: the premise/story, the genre, the runtime, and the director — developed fully from the TMDB context.
+3) THE CAST: the full cast and the characters they play.
+4) THE APPEAL: why it is resonating with audiences right now (from the reception/context provided).
+5) A closing line on the film.
+⛔ CRITICAL: do NOT write ANY dollar amount, gross, cume, budget, theater count, day-in-release, ranking, percentage, or profit/loss — the system inserts every verified box-office figure itself in a separate section. Writing a number here only gets it cut. Write ONLY about the movie and its appeal.`
     : `STRUCTURE — develop EACH of these into full paragraph(s) (this is what makes it a real article, not a stub):
 1) LEAD: the hook — the star(s) + the headline number, in one or two punchy sentences.
 2) THE MOVIE: what it is (premise + genre + runtime), the director, and the CAST with the characters they play.
@@ -172,6 +190,14 @@ Return JSON with EXACTLY these fields: ${schema}`;
     if (!data?.body) continue;
     if (!best || (complete(data) && !complete(best)) || (complete(data) === complete(best) && wc(data) > wc(best))) best = data;
     if (complete(best) && wc(best) >= budgetLo) break;
+  }
+  // Daily updates: strip any box-office NUMBER sentence the cheap writer slipped in despite the instruction, so
+  // nothing is left for the fidelity wall to cut, THEN append the deterministic verified figures. This is what
+  // makes daily updates publish reliably — the numbers are 100% system-generated and accurate.
+  if (isDailyUpdate && best?.body) {
+    const prose = best.body.split(/(?<=[.!?])\s+/).filter((s) => !/\$\s?\d|\b\d[\d.,]*\s*(million|billion)\b|#\s?\d/i.test(s)).join(" ").trim();
+    const keepProse = prose.split(/\s+/).filter(Boolean).length >= 120 ? prose : best.body.trim();
+    best.body = keepProse + dailyBoxOfficeSection(job);
   }
   job.article = best;
   return job;

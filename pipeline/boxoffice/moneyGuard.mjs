@@ -20,7 +20,9 @@ const MAG = { k: 1e3, thousand: 1e3, m: 1e6, mil: 1e6, million: 1e6, b: 1e9, bil
 export function normMoney(raw) {
   if (!raw) return null;
   const s = String(raw).toLowerCase().replace(/,/g, "").trim();
-  const m = s.match(/\$?\s*([\d]+(?:\.\d+)?)\s*(k|thousand|m|mil|million|b|bil|billion)?/);
+  // Longest-alternative-first + (?![a-z]) so a magnitude LETTER never eats the start of a following word:
+  // "$750,000 budget" must parse as $750,000 — not "b"(illion) = $750 trillion (a live false-cut source).
+  const m = s.match(/\$?\s*([\d]+(?:\.\d+)?)\s*(thousand|million|billion|mil|bil|[kmb])?(?![a-z])/);
   if (!m) return null;
   const num = parseFloat(m[1]);
   if (!Number.isFinite(num)) return null;
@@ -48,7 +50,9 @@ const countBucket = (n) => "count:" + n;
 // ── extraction from article prose ──────────────────────────────────────────────────────────────
 // A money token: "$1.45 billion", "$162M", "$636.8 million", "$50,000", or a magnitude-worded amount
 // even without "$" ("grossed 162 million"). Returns {raw, bucket}.
-const MONEY_RE = /\$\s?\d[\d,]*(?:\.\d+)?\s*(?:k|thousand|m|mil|million|b|bil|billion)?|\b\d[\d,]*(?:\.\d+)?\s*(?:million|billion|thousand)\b/gi;
+// Magnitude alternatives longest-first + (?![a-z]) so "m"/"b"/"k" never bite into a following word
+// ("$750,000 budget" is $750,000, not "$750,000 b[illion]" — that mis-parse produced false fidelity cuts).
+const MONEY_RE = /\$\s?\d[\d,]*(?:\.\d+)?(?:\s*(?:thousand|million|billion|mil|bil|[kmb])(?![a-z]))?|\b\d[\d,]*(?:\.\d+)?\s*(?:million|billion|thousand)\b/gi;
 // No trailing \b after "%" — between "%" and a following comma/space there is no word boundary.
 const PCT_RE = /\b\d+(?:\.\d+)?\s?%|\b\d+(?:\.\d+)?\s?percent\b/gi;
 // A count is only a "theater count" when a venue word sits right next to it.
@@ -127,6 +131,120 @@ export function stripUnsupportedSentences(text, allowed) {
 export function firstCleanSentence(body, allowed) {
   for (const s of splitSentences(body)) if (extractFigures(s).every((f) => allowed.has(f.bucket))) return s;
   return "";
+}
+
+// ── SINGLE SOURCE OF TRUTH (the anti-self-contradiction spine) ──────────────────────────────────
+// The live Obsession failure: metaTitle said "$100M+", the boxOffice block said $26.4M/$68.3M, the
+// takeaways said BOTH "$26.4M" and "$106M domestically", and two FAQs gave different worldwide totals —
+// every surface drew its numbers from a different place. canonicalFigures reconciles ONE figure set from
+// the LABELED sources only (the daily chart's cume, the gatherer's labeled fields, trusted TMDB), and
+// every downstream surface (title, metaTitle, dek, meta, takeaways, FAQ, boxOffice block, body) must draw
+// from it. numberConsistencyGate then diffs every dollar figure across all surfaces and BLOCKS publish on
+// contradiction — an article can no longer disagree with itself.
+export function canonicalFigures({ gathered = {}, boxData = {}, film = {} } = {}) {
+  const dc = film?.dailyChart || {};
+  const pick = (...cands) => {
+    for (const c of cands) { if (c == null || c === "") continue; const v = normMoney(c); if (v != null && v > 0) return { text: String(c), raw: v }; }
+    return null;
+  };
+  const openingWeekend = pick(gathered.openingWeekend);
+  // Domestic running total: the daily chart is ground truth when present; else the gatherer's labels.
+  const domestic = pick(dc.cume, gathered.cume, gathered.domestic);
+  const international = pick(gathered.international);
+  let worldwide = pick(gathered.worldwide, boxData.worldwide);
+  // Reconcile: worldwide ⊇ domestic — a "worldwide" below the domestic total is a wrong figure → drop it.
+  if (worldwide && domestic && worldwide.raw < domestic.raw * 0.99) worldwide = null;
+  // Reconcile: if domestic + international ≉ worldwide (>12% off), the worldwide is mis-extracted → drop it.
+  if (worldwide && domestic && international && Math.abs(domestic.raw + international.raw - worldwide.raw) / worldwide.raw > 0.12) worldwide = null;
+  const budget = pick(boxData.budget);
+  const dailyGross = pick(dc.dailyGross);
+  const hoursViewed = pick(gathered.hoursViewed);
+  const theatersN = parseInt(String(gathered.theaters || dc.theaters || "").replace(/,/g, ""), 10);
+  const theaters = Number.isFinite(theatersN) && theatersN > 0 ? { text: String(gathered.theaters || dc.theaters), raw: theatersN } : null;
+  const dropN = parseFloat(String(gathered.dropPct ?? "").replace("%", ""));
+  const dropPct = Number.isFinite(dropN) ? { text: String(gathered.dropPct), raw: dropN } : null;
+  const dayInRelease = (String(dc.dayInRelease || "").match(/\d+/) || [null])[0];
+  return { openingWeekend, domestic, international, worldwide, budget, dailyGross, hoursViewed, theaters, dropPct, dayInRelease };
+}
+
+// Scope words that BIND a nearby money figure to a specific canonical slot — "its domestic total hit
+// $106 million" must match canon.domestic, not merely SOME allowed figure. This is what catches a body
+// that contradicts the structured block.
+const FIGURE_SCOPES = [
+  { key: "domestic", re: /\bdomestic(ally)?\b|\bnorth americ(a|an)\b|\bstateside\b/i, keys: ["domestic", "openingWeekend", "dailyGross"] },
+  { key: "worldwide", re: /\bworldwide\b|\bglobal(ly)?\b|\bglobal box office\b/i, keys: ["worldwide"] },
+  { key: "budget", re: /\bbudget\b|\bproduction cost\b|\bcost(s)? to (produce|make)\b/i, keys: ["budget"] },
+  { key: "openingWeekend", re: /\bopening weekend\b|\bopened to\b|\bdebut(ed)? (to|with)\b/i, keys: ["openingWeekend", "domestic"] },
+];
+
+// numberConsistencyGate — run on the FINAL assembled surfaces right before publish.
+//  STRICT surfaces (title, metaTitle, dek, metaDescription, keyTakeaways, faq): every money figure must
+//  match a CANONICAL figure (±5%) or a figure inside the film's own verbatim record claims. No grab-bag.
+//  ALL surfaces (incl. body): a figure bound to a scope word must match THAT canonical slot.
+// Returns { ok, violations: [string] } — any violation must block publish (accuracy is existential).
+export function numberConsistencyGate(surfaces, canon, { recordTexts = [] } = {}) {
+  const canonMoney = [canon.openingWeekend, canon.domestic, canon.international, canon.worldwide,
+    canon.budget, canon.dailyGross, canon.hoursViewed].filter(Boolean).map((c) => c.raw);
+  const recFigs = recordTexts.flatMap((r) => extractFigures(String(r || "")));
+  const recMoney = recFigs.filter((f) => f.kind === "money").map((f) => normMoney(f.raw)).filter((v) => v != null);
+  const recPcts = new Set(recFigs.filter((f) => f.kind === "pct").map((f) => Math.round(parseFloat(f.raw))));
+  const okMoney = (v) => [...canonMoney, ...recMoney].some((a) => a > 0 && Math.abs(v - a) / a <= 0.05);
+  const okPct = (n) => (canon.dropPct && Math.abs(n - canon.dropPct.raw) <= 1) || recPcts.has(Math.round(n));
+  const okCount = (n) => !!(canon.theaters && n === canon.theaters.raw);
+  const violations = [];
+
+  const strict = (label, text) => {
+    for (const f of extractFigures(String(text || ""))) {
+      if (f.kind === "money") { const v = normMoney(f.raw); if (v != null && !okMoney(v)) violations.push(`${label}: "${f.raw}" is not a canonical figure for this film`); }
+      else if (f.kind === "pct") { const n = parseFloat(f.raw); if (Number.isFinite(n) && !okPct(n)) violations.push(`${label}: "${f.raw}" is not the film's verified change figure`); }
+      else if (f.kind === "count") { const n = parseInt(String(f.raw).replace(/[^\d]/g, ""), 10); if (Number.isFinite(n) && !okCount(n)) violations.push(`${label}: theater count "${f.raw}" is not the verified count`); }
+    }
+  };
+  strict("title", surfaces.title);
+  strict("metaTitle", surfaces.metaTitle);
+  strict("dek", surfaces.dek);
+  strict("metaDescription", surfaces.metaDescription);
+  (surfaces.keyTakeaways || []).forEach((t, i) => strict(`keyTakeaways[${i}]`, t));
+  (surfaces.faq || []).forEach((f, i) => { strict(`faq[${i}].q`, f?.q); strict(`faq[${i}].a`, f?.a); });
+
+  // Scoped-coherence over EVERY surface including the body: a figure bound to "domestic"/"worldwide"/
+  // "budget"/"opening weekend" must match that canonical slot — this catches "pushed its domestic total
+  // to $106 million" when the canonical domestic is $26.4M. A figure binds to its NEAREST scope word
+  // (never across another figure), so "$26.4M domestically, with $68.3M worldwide" binds each correctly.
+  const scoped = (label, text) => {
+    for (const sent of splitSentences(String(text || ""))) {
+      const tokens = [...sent.matchAll(MONEY_RE)]
+        .map((m) => ({ raw: m[0].trim(), v: normMoney(m[0]), start: m.index, end: m.index + m[0].length }))
+        .filter((t) => t.v != null);
+      if (!tokens.length) continue;
+      const occ = [];
+      for (const sc of FIGURE_SCOPES) {
+        const re = new RegExp(sc.re.source, "gi");
+        for (const m of sent.matchAll(re)) occ.push({ sc, start: m.index, end: m.index + m[0].length });
+      }
+      for (const t of tokens) {
+        let best = null;
+        for (const o of occ) {
+          const gap = o.start >= t.end ? o.start - t.end : (o.end <= t.start ? t.start - o.end : 0);
+          if (gap > 60) continue;
+          const lo = Math.min(o.start, t.start), hi = Math.max(o.end, t.end);
+          if (tokens.some((x) => x !== t && x.start >= lo && x.end <= hi)) continue; // never bind across another figure
+          if (!best || gap < best.gap) best = { sc: o.sc, gap };
+        }
+        if (!best) continue;
+        const targets = best.sc.keys.map((k) => canon[k]).filter(Boolean).map((c) => c.raw);
+        if (!targets.length) violations.push(`${label}: "${t.raw}" is scoped ${best.sc.key} but the film has no canonical ${best.sc.key} figure`);
+        else if (!targets.some((a) => Math.abs(t.v - a) / a <= 0.05) && !recMoney.some((a) => a > 0 && Math.abs(t.v - a) / a <= 0.05))
+          violations.push(`${label}: "${t.raw}" contradicts the canonical ${best.sc.key} figure (${best.sc.keys.map((k) => canon[k]?.text).filter(Boolean)[0] || "n/a"})`);
+      }
+    }
+  };
+  scoped("body", surfaces.body);
+  scoped("title", surfaces.title);
+  (surfaces.keyTakeaways || []).forEach((t, i) => scoped(`keyTakeaways[${i}]`, t));
+  (surfaces.faq || []).forEach((f, i) => scoped(`faq[${i}].a`, f?.a));
+
+  return { ok: violations.length === 0, violations: [...new Set(violations)] };
 }
 
 // NO-INVENTION WALL — a domestic/international SPLIT or a RECORD claim the source never stated.

@@ -7,11 +7,11 @@ import fs from "node:fs";
 import path from "node:path";
 import os from "node:os";
 
-import { normMoney, moneyBucket, extractFigures, buildAllowed, numberFidelity, noInvention, platformGuard } from "../moneyGuard.mjs";
+import { normMoney, moneyBucket, extractFigures, buildAllowed, numberFidelity, noInvention, platformGuard, canonicalFigures, numberConsistencyGate } from "../moneyGuard.mjs";
 import { scopeOk, FORMS, DATA_DIR } from "../config.bo.mjs";
 import { fidelityLocks, review as qaReview, classifyBlocks, findTemplateHeadings, hedgeCuts, dropSpin, speculationCuts, trendCuts } from "../agents/qa.mjs";
 import { castTrustworthy } from "../boxofficeData.mjs";
-import { buildBoxOfficeMarkdown, seoFinish } from "../assemble.mjs";
+import { buildBoxOfficeMarkdown, writeBoxOfficeArticle, seoFinish } from "../assemble.mjs";
 import { boRun } from "../borun.mjs";
 import { boKey, alreadyPublished, coveredEventSlugs } from "../store.mjs";
 import { run as gatherRun } from "../agents/gatherer.mjs";
@@ -287,8 +287,16 @@ t("fmtHours formats millions + raw", () => {
 // ── 8b. tracker — serialization engine ───────────────────────────────────────────────────────────
 console.log("tracker — serialization (ledger + materiality + link-chain + exits)");
 const TT = fs.mkdtempSync(path.join(os.tmpdir(), "bo-tracker-"));
-t("currentNumberRaw picks the biggest real dollar figure", () => {
-  assert.equal(currentNumberRaw({ worldwide: "$1.45 billion", openingWeekend: "$45.2 million", numbers: ["$45.2 million"] }, { worldwide: "$1.45 billion" }), 1450000000);
+t("currentNumberRaw uses LABELED fields only — the numbers grab-bag can NEVER poison the baseline", () => {
+  // A roundup carried another film's $427M in gathered.numbers; the baseline must ignore it entirely
+  // (the live Obsession poisoning: baseline $427M silently blocked all future coverage).
+  assert.equal(currentNumberRaw({ domestic: "$26.4 million", numbers: ["$427 million", "$26.4 million"] }, {}), 26400000);
+  // Labeled worldwide is legitimate and wins when consistent with the film's own domestic (within 3×).
+  assert.equal(currentNumberRaw({ worldwide: "$68.3 million", domestic: "$26.4 million" }, {}), 68300000);
+  // A wrong-entity TMDB worldwide that dwarfs the film's own domestic (>3×) is dropped by the sanity ratio.
+  assert.equal(currentNumberRaw({ domestic: "$26.4 million" }, { worldwide: "$427 million" }), 26400000);
+  // The daily chart's cume is the trusted anchor when present.
+  assert.equal(currentNumberRaw({}, {}, { cume: "$47,591,086" }), 47591086);
   assert.equal(currentNumberRaw({}, {}), null);
 });
 t("isMaterial: a milestone crossing is material with a milestone tag", () => {
@@ -404,7 +412,8 @@ t("buildBoxOfficeMarkdown emits a contract-valid frontmatter", () => {
   assert.ok(d.boxOffice && d.boxOffice.openingWeekend === "$45.2 million");
   assert.equal(d.boxOffice.worldwide, "$1.45 billion");
   assert.equal(d.boxOffice.budget, "$145 million");
-  assert.ok(d.metaTitle.length <= 60, `metaTitle ${d.metaTitle.length}`);
+  assert.ok(d.metaTitle.length >= 45 && d.metaTitle.length <= 55, `metaTitle must land in the owner's 45-55 band, got ${d.metaTitle.length}: "${d.metaTitle}"`);
+  assert.ok(!/screen report/i.test(d.metaTitle), "metaTitle must be brand-free");
   assert.ok(d.metaDescription.length <= 155, `metaDescription ${d.metaDescription.length}`);
   assert.ok(Array.isArray(d.faq) && d.faq.length >= 2);
   assert.equal(d.image, "https://x/y.jpg");
@@ -715,6 +724,93 @@ await ta("finder ADVANCES a covered in-theater film as a BO-UPDATE when the fres
   assert.ok(found.some((e) => e.film.title === "Wicked" && e.angle.form === "BO-UPDATE"), "covered film surfaced as a next-day BO-UPDATE: " + JSON.stringify(found.map((e) => e.angle.form)));
 });
 fs.rmSync(TMP, { recursive: true, force: true });
+
+// ── SINGLE SOURCE OF TRUTH — canonical figures + the pre-publish consistency gate ────────────────
+console.log("consistency — canonical figures + cross-surface gate (the Obsession class of failure)");
+t("canonicalFigures reconciles ONE set from labeled sources and drops an impossible worldwide", () => {
+  const c = canonicalFigures({ gathered: { cume: "$26.4 million", worldwide: "$14 million" }, boxData: {}, film: {} });
+  assert.equal(c.domestic.raw, 26400000);
+  assert.equal(c.worldwide, null, "a worldwide BELOW domestic is a wrong figure and must be dropped");
+  const c2 = canonicalFigures({ gathered: { domestic: "$100 million", international: "$50 million", worldwide: "$300 million" }, boxData: {}, film: {} });
+  assert.equal(c2.worldwide, null, "dom+intl ≉ worldwide (>12%) → worldwide dropped");
+  const c3 = canonicalFigures({ gathered: {}, boxData: {}, film: { dailyChart: { cume: "$47,591,086", dailyGross: "$4,448,262", dayInRelease: "Day 4" } } });
+  assert.equal(c3.domestic.raw, 47591086, "the daily chart is ground truth for the domestic total");
+  assert.equal(c3.dayInRelease, "4");
+});
+t("consistency gate BLOCKS the live Obsession failure — a title/takeaway/FAQ contradicting the canonical figures", () => {
+  const canon = canonicalFigures({ gathered: { domestic: "$26.4 million", worldwide: "$68.3 million", theaters: "3,100" }, boxData: { budget: "$750,000" }, film: {} });
+  const bad = numberConsistencyGate({
+    title: "Obsession Surge Crossing $100M",
+    metaTitle: "Obsession Box Office Third Weekend Surpasses $100M",
+    dek: "", metaDescription: "",
+    body: "This surge pushed its domestic total to $106 million and its worldwide gross to $148 million.",
+    keyTakeaways: ["It crossed $106M domestically and $148M worldwide against a $1M budget."],
+    faq: [{ q: "How much worldwide?", a: "Its worldwide total stands at $148 million." }],
+  }, canon, { recordTexts: [] });
+  assert.equal(bad.ok, false);
+  assert.ok(bad.violations.some((v) => /title/.test(v)), "the $100M title must violate: " + JSON.stringify(bad.violations));
+  assert.ok(bad.violations.some((v) => /domestic/.test(v)), "the $106M-domestic body claim must violate the canonical domestic");
+});
+t("consistency gate PASSES an article whose every surface draws from the canonical set", () => {
+  const canon = canonicalFigures({ gathered: { domestic: "$26.4 million", worldwide: "$68.3 million", theaters: "3,100" }, boxData: { budget: "$750,000" }, film: {} });
+  const good = numberConsistencyGate({
+    title: "Obsession Box Office: Domestic Total Climbs to $26.4 Million",
+    metaTitle: "'Obsession' Hits $26.4M at the Domestic Box Office",
+    dek: "The low-budget horror keeps climbing.", metaDescription: "Obsession has grossed $26.4 million domestically and $68.3 million worldwide on a $750,000 budget.",
+    body: "Obsession has grossed $26.4 million at the domestic box office across 3,100 theaters. Worldwide, it has taken in $68.3 million. It carries a reported production budget of $750,000.",
+    keyTakeaways: ["Obsession has grossed $26.4 million domestically."],
+    faq: [{ q: "How much has it made?", a: "It has grossed $26.4 million domestically, with $68.3 million worldwide." }],
+  }, canon, { recordTexts: [] });
+  assert.equal(good.ok, true, JSON.stringify(good.violations));
+});
+t("consistency gate allows the film's OWN record figures (verbatim milestones) but nothing else", () => {
+  const canon = canonicalFigures({ gathered: { domestic: "$371.9 million", worldwide: "$1.0 billion" }, boxData: { budget: "$250 million" }, film: {} });
+  const r = numberConsistencyGate({
+    title: "Michael Crosses $1 Billion Worldwide", metaTitle: "'Michael' Hits $1B at the Worldwide Box Office",
+    dek: "", metaDescription: "", body: "It passed Oppenheimer's $975.8 million to take the biopic record.",
+    keyTakeaways: [], faq: [],
+  }, canon, { recordTexts: ["passed Oppenheimer's $975.8 million on June 28"] });
+  assert.equal(r.ok, true, JSON.stringify(r.violations));
+});
+t("buildBoxOfficeMarkdown: a DAILY update gets a deterministic title from the canonical number (no writer spin)", () => {
+  const out = buildBoxOfficeMarkdown({
+    article: { title: "Moana Sinks With Disastrous $43M Opening as $250M Budget Faces Doom", metaTitle: "", dek: "A big week.", metaDescription: "A big week for the film.",
+      body: "Moana is a family adventure film.\n\n## At the Box Office\n\nMoana has grossed $47,591,086 at the domestic box office, 4 days into its theatrical run. The film added $4,448,262 in its most recent day of release.",
+      keyTakeaways: ["Moana leads the daily chart."], faq: [{ q: "Who directed Moana?", a: "The live-action film features the voyager Moana on a new adventure across the Pacific." }], tags: [] },
+    trigger: { eventSlug: "moana-bo-update", priority: 90, signals: {}, sources: [] },
+    angle: { form: "BO-UPDATE" },
+    film: { title: "Moana", year: "2026", dailyChart: { cume: "$47,591,086", dailyGross: "$4,448,262", dayInRelease: "Day 4" } },
+    gathered: { numbers: ["$47,591,086", "$4,448,262"] }, boxData: {},
+    image: { image: "https://x/y.jpg", imageWidth: 1600, imageHeight: 900, credit: "Disney", alt: "Moana" },
+    dateISO: new Date("2026-07-16T00:00:00Z").toISOString(),
+  });
+  assert.ok(/^Moana Box Office Day 4/.test(out.frontmatter.title), "deterministic title, got: " + out.frontmatter.title);
+  assert.ok(!/disastrous|sinks/i.test(out.frontmatter.title), "writer spin title must be discarded");
+  assert.equal(out.consistency.ok, true, JSON.stringify(out.consistency.violations));
+  assert.ok(out.frontmatter.metaTitle.length >= 45 && out.frontmatter.metaTitle.length <= 55, out.frontmatter.metaTitle);
+});
+t("tidyMeta: strips markdown, ends on a complete sentence (the live '## The Movie:' meta description bug)", () => {
+  const out = seoFinish({ metaTitle: "'Wicked' Hits $45M at the Domestic Box Office", metaDescription: "## The Movie: A Musical Journey\n\n**Wicked** is a hit. It has grossed $45.2 million in its opening weekend across the country, thrilling audiences everywhere. Another sentence that will not fit within the one-sixty character budget at all." });
+  assert.ok(!/[#*_`]/.test(out.metaDescription), "markdown stripped: " + out.metaDescription);
+  assert.ok(/[.!?…]$/.test(out.metaDescription), "ends complete: " + out.metaDescription);
+  assert.ok(out.metaDescription.length <= 160, `len ${out.metaDescription.length}`);
+});
+t("writeBoxOfficeArticle refuses to write a self-contradicting article to disk", () => {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), "bo-gate-"));
+  const out = writeBoxOfficeArticle({
+    article: { title: "Obsession Crosses $100M Domestically This Weekend In Style", metaTitle: "", dek: "", metaDescription: "",
+      body: "Obsession pushed its domestic total to $106 million this weekend.", keyTakeaways: [], faq: [{ q: "q1?", a: "Long enough real answer here." }, { q: "q2?", a: "Another long enough answer." }], tags: [] },
+    trigger: { eventSlug: "obsession-bo-update", priority: 90, signals: {}, sources: [] },
+    angle: { form: "BO-UPDATE" }, film: { title: "Obsession", year: "2026" },
+    gathered: { domestic: "$26.4 million", numbers: ["$26.4 million"] }, boxData: {},
+    image: { image: "https://x/y.jpg", imageWidth: 1600, imageHeight: 900, credit: "A24", alt: "Obsession" },
+    dateISO: new Date().toISOString(), dir,
+  });
+  assert.equal(out.written, false, "must refuse to write");
+  assert.equal(out.consistency.ok, false);
+  assert.ok(!fs.existsSync(out.path), "no file on disk");
+  fs.rmSync(dir, { recursive: true, force: true });
+});
 
 // ── summary ──────────────────────────────────────────────────────────────────────────────────────
 console.log(`\n━━ boxoffice suite: ${pass}/${pass + fail} passed ━━`);

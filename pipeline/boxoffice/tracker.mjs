@@ -34,13 +34,23 @@ function save(t) {
   fs.writeFileSync(t.file, JSON.stringify({ films }, null, 1));
 }
 
-// Best "current number" for a film in integer dollars — the biggest real gross figure we have.
-export function currentNumberRaw(gathered = {}, boxData = {}) {
-  const cands = [gathered.cume, gathered.worldwide, gathered.domestic, gathered.openingWeekend,
-    ...(Array.isArray(gathered.numbers) ? gathered.numbers : []), boxData.worldwide, boxData.worldwideRaw]
+// Best "current number" for a film in integer dollars — from FILM-LABELED fields ONLY (cume / domestic /
+// worldwide / openingWeekend / the daily chart's cume). NEVER the raw gathered.numbers grab-bag: a weekend
+// roundup carries OTHER films' grosses, and one stray figure poisoned Obsession's baseline at $427M, silently
+// blocking all future coverage (materiality demands strictly-higher, so nothing ever cleared it again).
+// A ≤3× sanity ratio between labeled candidates drops a figure that dwarfs the film's own domestic reality
+// (a wrong-entity TMDB worldwide, a mis-extracted roundup total) instead of letting it become the baseline.
+export function currentNumberRaw(gathered = {}, boxData = {}, dailyChart = null) {
+  const labeled = [gathered.cume, gathered.worldwide, gathered.domestic, gathered.openingWeekend,
+    dailyChart?.cume, boxData.worldwide, boxData.worldwideRaw]
     .map((x) => (typeof x === "number" ? x : normMoney(x)))
     .filter((n) => Number.isFinite(n) && n > 0);
-  return cands.length ? Math.max(...cands) : null;
+  if (!labeled.length) return null;
+  // Anchor on the most trustworthy figure (the film's own domestic reality): chart cume > gathered cume/domestic.
+  const anchor = [dailyChart?.cume, gathered.cume, gathered.domestic, gathered.openingWeekend]
+    .map((x) => (typeof x === "number" ? x : normMoney(x))).find((n) => Number.isFinite(n) && n > 0) || null;
+  const sane = anchor ? labeled.filter((n) => n <= anchor * 3) : labeled;
+  return Math.max(...(sane.length ? sane : [anchor].filter(Boolean)));
 }
 const milestonesCrossed = (prevHigh, cur) =>
   MILESTONES.filter((m) => (prevHigh == null || prevHigh < m) && cur != null && cur >= m);
@@ -56,7 +66,7 @@ export function isMaterial(film, gathered = {}, boxData = {}, tracked = null, { 
   const rec = tracked?.films?.[trackKey(film)] || null;
   const prev = rec?.lastNumberRaw ?? null;
   const prevMilestone = rec?.lastMilestone ?? null;
-  const cur = currentNumberRaw(gathered, boxData);
+  const cur = currentNumberRaw(gathered, boxData, film?.dailyChart || null);
   const days = rec?.daysInReleaseApprox ?? daysSince(film?.releaseDate, now);
 
   // FIRST time we cover this film — always a story.
@@ -120,7 +130,7 @@ export function linkPriorCoverage(body, tracked, film) {
 // Record a REAL publish into the ledger (call only on a non-dry-run publish).
 export function recordArticle(tracked, { film, form, slug, category, gathered = {}, boxData = {}, now = new Date() }) {
   const k = trackKey(film);
-  const cur = currentNumberRaw(gathered, boxData);
+  const cur = currentNumberRaw(gathered, boxData, film?.dailyChart || null);
   const rec = tracked.films[k] || {
     tmdbId: film?.tmdbId || null, title: film?.title || "", releaseDate: film?.releaseDate || "",
     firstSeenAt: now.toISOString(), articles: [], status: "in-theaters", lastNumberRaw: null, lastMilestone: null,
