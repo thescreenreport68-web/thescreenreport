@@ -105,7 +105,7 @@ export async function run(job, { corrections = null, previousArticle = null, cha
   // Streaming + daily box-office updates are FULL 200+ word stories built from the ALWAYS-rich TMDB material +
   // their own numbers (Netflix hours / the chart cume), so aim high; a first-report opening keeps the grounding-
   // matched budget tied to its trade coverage.
-  const [budgetLo, budgetHi] = (isStreaming || isDailyUpdate) ? [220, 320] : (solidMaterial ? [240, 330] : [180, 240]);
+  const [budgetLo, budgetHi] = isDailyUpdate ? [300, 380] : isStreaming ? [220, 320] : (solidMaterial ? [240, 330] : [180, 240]);
   const structure = isStreaming
     ? `STRUCTURE — build the FULL story, developing EACH part into a full paragraph so the article clears 200 words (a real article, never a stub):
 1) LEAD: a hook — the title and why it's a phenomenon right now (its Netflix rank or hours viewed).
@@ -115,12 +115,13 @@ export async function run(job, { corrections = null, previousArticle = null, cha
 5) WHY PEOPLE LOVE IT: the reception — why audiences are watching and what's driving the buzz (from the source reporting).
 6) A closing line on its momentum.`
     : isDailyUpdate
-    ? `STRUCTURE — build the FULL story to 200+ words, developing EACH part into a full paragraph (a real article, never a stub). Draw the MOVIE section entirely from the TMDB context below; draw every NUMBER from the VERIFIED FIGURES:
-1) LEAD: the hook — the film and where its box office stands now (its running domestic total, its day-in-release, or the milestone it just hit).
-2) THE MOVIE: what it is (premise + genre + runtime), the director, and the FULL cast and the characters they play — develop this fully.
-3) THE RUN: its box-office run — the running domestic cume, yesterday's daily gross, its theater count, and how many days it has been in release; whether it's holding or fading.
-4) THE MONEY / MILESTONE: any record or milestone it has hit, and how the domestic + worldwide gross compares to its production budget (the profit picture).
-5) A closing line on its trajectory.`
+    ? `STRUCTURE — build the FULL story to 200+ words. Get your LENGTH from the MOVIE (the TMDB context is rich); state every NUMBER EXACTLY as written in the VERIFIED FIGURES and INVENT NOTHING:
+1) LEAD: the hook — the film and where its box office stands now (its running domestic total or day-in-release).
+2) THE MOVIE (the bulk of the article): what it is (premise + genre + runtime), the director, and the FULL cast and the characters they play — develop each fully from the TMDB context.
+3) THE RUN: the running domestic total, yesterday's daily gross, and the theater count — each stated EXACTLY as given — plus how many days it has been in release.
+4) CONTEXT: its worldwide total and production budget ONLY IF they appear in the figures — state them plainly, verbatim.
+⛔ NEVER state a worldwide total, opening-weekend figure, profit, loss, or "below/above expectations" verdict that is not in the VERIFIED FIGURES. You do NOT have profit/loss data — do not compute or project it. No "costly gamble", no "far below expectations".
+5) A closing line on the film — factual, no speculation.`
     : `STRUCTURE — develop EACH of these into full paragraph(s) (this is what makes it a real article, not a stub):
 1) LEAD: the hook — the star(s) + the headline number, in one or two punchy sentences.
 2) THE MOVIE: what it is (premise + genre + runtime), the director, and the CAST with the characters they play.

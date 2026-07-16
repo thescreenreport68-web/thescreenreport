@@ -210,9 +210,9 @@ t("a short article hard-blocks on the word floor", () => {
   const job = baseJob(); job.article.body = "Wicked opened to $45.2 million.";
   assert.ok(fidelityLocks(job).hardBlocks.some((b) => /^words /.test(b)));
 });
-t("fewer than 2 FAQs hard-blocks", () => {
+t("fewer than 2 writer FAQs does NOT hard-block (assemble.ensureFaq backfills ≥2 at publish)", () => {
   const job = baseJob(); job.article.faq = [{ q: "one?", a: "just one" }];
-  assert.ok(fidelityLocks(job).hardBlocks.some((b) => /^seo-faq/.test(b)));
+  assert.ok(!fidelityLocks(job).hardBlocks.some((b) => /^seo-faq/.test(b)));
 });
 t("a generic meta heading is detected", () => {
   assert.equal(findTemplateHeadings("## Why is this happening now?").length, 1);
