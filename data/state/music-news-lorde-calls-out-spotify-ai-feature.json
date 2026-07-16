@@ -1,0 +1,71 @@
+{
+  "id": "music-news-lorde-calls-out-spotify-ai-feature",
+  "slug": "lorde-criticizes-spotify-s-ai-feature-for-about-the-song",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": null,
+      "cat": "music/news",
+      "format": [
+        "a 60-word run-on sentence (>55 — split it)"
+      ],
+      "cuts": 0,
+      "broken": []
+    },
+    "attempt2": {
+      "score": null,
+      "cat": "music/news",
+      "format": [
+        "a 60-word run-on sentence (>55 — split it)"
+      ],
+      "cuts": 0,
+      "broken": []
+    }
+  },
+  "editorial": {
+    "status": "confirmed",
+    "entity": "Lorde",
+    "work": null,
+    "outlet": "hollywoodreporter.com"
+  },
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
+    "deterministic": {
+      "words": 302,
+      "h2s": 2,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 4,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 60,
+      "avgSentence": 23,
+      "flesch": 48,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": [
+        "a 60-word run-on sentence (>55 — split it)"
+      ]
+    },
+    "hardBlocks": []
+  },
+  "score": null,
+  "category": "music",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "keyword in title"
+    ]
+  },
+  "ms": 92490
+}
