@@ -1,0 +1,76 @@
+{
+ "runId": "run-2026-07-16T09-30-41",
+ "mode": "live",
+ "startedAt": "2026-07-16T09:30:41.221Z",
+ "films": 6,
+ "published": [
+  {
+   "tag": "toy-story-5-bo-update×BO-UPDATE",
+   "slug": "toy-story-5-box-office-day-26-domestic-total-climbs-to-410-6-million",
+   "path": "/home/runner/work/thescreenreport/thescreenreport/content/articles/toy-story-5-box-office-day-26-domestic-total-climbs-to-410-6-million.md",
+   "score": 35,
+   "acceptReason": "daily factual update — deterministic numbers + accuracy walls + word floor all pass"
+  }
+ ],
+ "held": [
+  {
+   "tag": "moana-bo-update×BO-UPDATE",
+   "reason": "not material: no new number (current $100M not above last published $100M)"
+  },
+  {
+   "tag": "minions-monsters-bo-update×BO-UPDATE",
+   "reason": "not material: no new number (current $116M not above last published $280M)"
+  }
+ ],
+ "rejected": [],
+ "skipped": [],
+ "blocked": [],
+ "zeroStreak": 0,
+ "finishedAt": "2026-07-16T09:38:48.181Z",
+ "meter": {
+  "byRole": {
+   "gatherer": {
+    "calls": 4,
+    "errors": 0,
+    "in": 12903,
+    "out": 2241,
+    "usd": 0.00219,
+    "ms": 9862
+   },
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3309,
+    "out": 732,
+    "usd": 0.00022,
+    "ms": 4076
+   },
+   "synthesizer": {
+    "calls": 1,
+    "errors": 0,
+    "in": 705,
+    "out": 1084,
+    "usd": 0.00026,
+    "ms": 16273
+   },
+   "writer": {
+    "calls": 1,
+    "errors": 0,
+    "in": 1893,
+    "out": 742,
+    "usd": 0.00194,
+    "ms": 8357
+   },
+   "qa": {
+    "calls": 4,
+    "errors": 0,
+    "in": 12826,
+    "out": 1805,
+    "usd": 0.00836,
+    "ms": 12217
+   }
+  },
+  "totalUsd": 0.01297
+ },
+ "openrouterTotalUsd": 0.01336
+}
