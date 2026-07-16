@@ -53,6 +53,21 @@ async function validate(url) {
 }
 
 export async function huntImage(story, pack) {
+  // our own published article's hero image first — its lane already vetted it (Tier A-own)
+  if (pack.ownHeroUrl) {
+    const v = await validate(pack.ownHeroUrl);
+    if (v) {
+      return {
+        buf: v.buf,
+        provenance: {
+          imageUrl: pack.ownHeroUrl, articleUrl: `https://thescreenreport.com/${pack.ownSlug}/`, carrier: "thescreenreport.com",
+          tier: "A-own", width: v.width, height: v.height, format: v.format,
+          fetchedAt: new Date().toISOString(),
+          creditLine: pack.ownHeroCredit || "Photo: press asset",
+        },
+      };
+    }
+  }
   const articleUrls = [...new Set([...(pack.sourceUrls || []), ...(story.sourceLinks || [])])].slice(0, 4);
   for (const articleUrl of articleUrls) {
     for (const imgUrl of (await candidatesFrom(articleUrl)).slice(0, 3)) {
