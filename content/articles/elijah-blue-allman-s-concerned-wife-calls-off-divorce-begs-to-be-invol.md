@@ -10,12 +10,11 @@ date: '2026-06-29T15:44:30.263Z'
 dek: >-
   Marieangela King is back in the picture, filing a declaration in the ongoing
   legal drama over her husband's estate.
-metaTitle: >-
-  Elijah Blue Allman's Wife Calls Off Divorce, Wants a Say in Cher's
-  Conservatorship Bid
+metaTitle: Elijah Blue Allman's Wife Calls Off Divorce
 metaDescription: >-
   Marieangela King is back in the picture, filing a declaration in the ongoing
-  legal drama over her husband's estate.
+  legal drama over her husband's estate. King cited Allman's placement in a
+  treatment.
 formatTag: gossip
 keyTakeaways:
   - >-
@@ -82,6 +81,9 @@ provenance:
   outlets:
     - Page Six
   publishedAt: '2026-06-29T15:44:30.263Z'
+tags:
+  - Elijah Blue Allman
+  - music
 ---
 
 What happens when a mother's legal bid to protect her son collides with a wife's vow to stand by her husband? The drama in Elijah Blue Allman's life just got a new chapter.

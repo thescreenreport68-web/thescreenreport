@@ -3,6 +3,7 @@
 // a request for comment" boilerplate at both the top and the bottom — bad for SEO + looks broken); (2) empty
 // keyTakeaways / faq / tags. All deterministic — no LLM, no new facts invented (derivations only reuse the
 // article's OWN confirmed points), so it can never add a fabrication.
+import { deriveKeywords } from "./seo.mjs";
 
 const norm = (s) => String(s ?? "").toLowerCase().replace(/[^a-z0-9 ]/g, " ").replace(/\s+/g, " ").trim();
 const contentTokens = (s) => new Set(norm(s).split(" ").filter((w) => w.length > 3));
@@ -177,19 +178,23 @@ function factToQuestion(fact, article) {
 }
 export function ensureFaq(article) {
   const cur = (article.faq || []).filter((f) => f && f.q && f.a && String(f.a).trim());
-  if (cur.length >= 1) return cur.slice(0, 4);
+  // Keep the writer's own 2–5 FAQ (fix #3: vary the count by substance, never a fixed 3). Only synthesize when
+  // the writer returned too few (<2), and then match the count to how many real facts the story supports (2–4).
+  if (cur.length >= 2) return cur.slice(0, 5);
   // Prefer REAL answers from confirmed facts (whatWeKnow) over "we don't know yet" placeholders — an FAQ a reader
   // actually learns something from (owner: every published article must carry relevant FAQs WITH real answers).
   const known = [...new Set((article.whatWeKnow || []).map((x) => String(x).trim()).filter(Boolean))];
   if (known.length) {
     const seen = new Set();
-    return known.slice(0, 3).map((fact) => {
+    const target = Math.min(4, Math.max(2, known.length)); // vary 2–4 by substance
+    return [...cur, ...known.slice(0, target).map((fact) => {
       let q = factToQuestion(fact, article);
       if (seen.has(q)) q = q.replace(/^What\b/, "What else").replace(/^Where\b/, "Where else");
       seen.add(q);
       return { q, a: fact };
-    });
+    })].slice(0, 5);
   }
+  if (cur.length) return cur; // no facts to synthesize from → keep whatever real FAQ the writer gave
   return (article.whatWeDont || [])
     .map((x) => String(x).trim())
     .filter(Boolean)
@@ -197,8 +202,14 @@ export function ensureFaq(article) {
     .map((x) => ({ q: toQuestion(x), a: "This has not been confirmed or made public as of publication; we'll update the story as more is verified." }));
 }
 
-// Tags: the entity + the gossip angle + the category (deterministic, for internal-linking/SEO). No stuffing.
+// Tags/keywords: the people + the topic, deterministic, for internal-linking + keyword SEO. Fix #5 (owner 07-04
+// reader-facing purge): NEVER emit "gossip"/"celebrity gossip" or the junk "general" gossipType — only real
+// search terms (the entity, any co-subjects, and the category as a clean keyword).
 export function deriveTags(topic, article, category, gossipType) {
-  const tags = [topic?.primaryEntity, category, gossipType, "celebrity gossip"].map((t) => String(t || "").trim()).filter(Boolean);
-  return [...new Set(tags)].slice(0, 6);
+  return deriveKeywords({
+    primaryEntity: topic?.primaryEntity || "",
+    coSubjects: topic?.coSubjects || article?.coSubjects || [],
+    category,
+    subcategory: topic?.subcategory || "",
+  });
 }

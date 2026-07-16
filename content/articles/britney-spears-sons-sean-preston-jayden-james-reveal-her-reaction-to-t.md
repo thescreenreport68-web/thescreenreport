@@ -8,7 +8,7 @@ date: '2026-07-04T05:25:25.017Z'
 dek: >-
   Sean Preston and Jayden James Federline made their fashion debut at Vetements
   and shared how their famously private mother supported them from afar.
-metaTitle: Britney Spears' Sons Hit the Runway — And Spill on Mom's Reaction
+metaTitle: Britney Spears' Sons Hit the Runway — And Spill
 metaDescription: >-
   Sean Preston and Jayden James Federline made their fashion debut at Vetements
   and shared how their famously private mother supported them from afar.
@@ -17,7 +17,6 @@ gossipType: general
 tags:
   - Sean Preston Federline
   - celebrity
-  - general
 keyTakeaways:
   - >-
     Sean Preston Federline, 20, and Jayden James Federline, 19, walked in the

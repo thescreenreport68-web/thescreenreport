@@ -8,17 +8,16 @@ date: '2026-07-12T00:02:58.074Z'
 dek: >-
   A starry quartet, including Pedro's sister Lux, sparked a flurry of fan
   chatter after a low-key meal in the City of Light.
-metaTitle: 'Bradley Cooper, Gigi Hadid & Pedro Pascal Grab a Parisian Dinner'
+metaTitle: 'Bradley Cooper, Gigi Hadid & Pedro Pascal Grab'
 metaDescription: >-
   A starry quartet, including Pedro's sister Lux, sparked a flurry of fan
-  chatter after a low-key meal in the City of Light.
+  chatter after a low-key meal in the City of Light. Bradley Cooper, Gigi Hadid,
+  Pedro Pascal.
 formatTag: gossip
 gossipType: general
 tags:
   - Gigi Hadid
   - celebrity
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Bradley Cooper, Gigi Hadid, Pedro Pascal, and his sister Lux Pascal were

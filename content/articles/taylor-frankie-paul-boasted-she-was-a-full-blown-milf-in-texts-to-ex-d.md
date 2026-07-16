@@ -8,17 +8,16 @@ date: '2026-07-13T14:01:19.065Z'
 dek: >-
   Court documents reportedly contain messages where the reality TV star
   complimented her own appearance.
-metaTitle: Taylor Frankie Paul's Alleged Texts to Ex Surface in Custody Fight
+metaTitle: Taylor Frankie Paul's Alleged Texts to Ex Surface
 metaDescription: >-
   Court documents reportedly contain messages where the reality TV star
-  complimented her own appearance.
+  complimented her own appearance. The messages, which sources say were sent in
+  2025, reportedly.
 formatTag: gossip
 gossipType: breakup
 tags:
   - Taylor Frankie Paul
   - celebrity
-  - breakup
-  - celebrity gossip
 keyTakeaways:
   - >-
     Alleged text messages from Taylor Frankie Paul to ex Dakota Mortensen were

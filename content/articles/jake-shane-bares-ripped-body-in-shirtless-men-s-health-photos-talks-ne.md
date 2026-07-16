@@ -8,17 +8,16 @@ date: '2026-07-11T12:00:29.698Z'
 dek: >-
   The comedian and 'Therapuss' host gets candid about fitness, mental health,
   and the struggle to stay funny while getting fit.
-metaTitle: Jake Shane Shows Off a New Physique and a New Mindset in Men's Health
+metaTitle: Jake Shane Shows Off a New Physique and a New Mindset
 metaDescription: >-
   The comedian and 'Therapuss' host gets candid about fitness, mental health,
-  and the struggle to stay funny while getting fit.
+  and the struggle to stay funny while getting fit. Shane humorously worries
+  about staying.
 formatTag: gossip
 gossipType: general
 tags:
   - Jake Shane
   - celebrity
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Jake Shane, 26, showcased a body transformation in a shirtless *Men's

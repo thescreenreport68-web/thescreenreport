@@ -8,17 +8,16 @@ date: '2026-07-10T13:37:17.560Z'
 dek: >-
   The influencer reveals to TMZ how she turned a story of abandonment into a
   multimillion-follower empire.
-metaTitle: 'From a Box in China to the Top of OnlyFans: Christie McFit''s Unlikely Journey'
+metaTitle: 'From a Box in China to the Top of OnlyFans: Christie'
 metaDescription: >-
   The influencer reveals to TMZ how she turned a story of abandonment into a
-  multimillion-follower empire.
+  multimillion-follower empire. McCarthy says she had two Brazilian Butt Lifts
+  to overcome.
 formatTag: gossip
 gossipType: general
 tags:
   - Christie McCarthy
   - celebrity
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Christie McCarthy (Christie McFit) told TMZ she was abandoned in a box as a

@@ -8,17 +8,16 @@ date: '2026-07-12T08:02:38.107Z'
 dek: >-
   The 'Secret Lives of Mormon Wives' star shares a new video after recently
   coming out as bisexual.
-metaTitle: Layla Taylor Gives a Glimpse of Her Girlfriend in a Sweet Instagram Clip
+metaTitle: Layla Taylor Gives a Glimpse of Her Girlfriend
 metaDescription: >-
   The 'Secret Lives of Mormon Wives' star shares a new video after recently
-  coming out as bisexual.
+  coming out as bisexual. She came out as bisexual and confirmed she was dating
+  a woman.
 formatTag: gossip
 gossipType: general
 tags:
   - Layla Taylor
   - celebrity
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     The 25-year-old star of 'Secret Lives of Mormon Wives' came out as bisexual

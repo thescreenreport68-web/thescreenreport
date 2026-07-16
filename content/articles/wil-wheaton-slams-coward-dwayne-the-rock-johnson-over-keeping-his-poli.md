@@ -8,16 +8,16 @@ date: '2026-07-01T10:50:28.278Z'
 dek: >-
   The 'Stand By Me' star takes aim at The Rock's decision to keep his politics
   private, sparking a debate on celebrity influence.
-metaTitle: Wil Wheaton Calls Dwayne Johnson a 'Coward' Over Political Silence
+metaTitle: Wil Wheaton Calls Dwayne Johnson a 'Coward'
 metaDescription: >-
   The 'Stand By Me' star takes aim at The Rock's decision to keep his politics
-  private, sparking a debate on celebrity influence.
+  private, sparking a debate on celebrity influence. Wil Wheaton posted the
+  "coward".
 formatTag: gossip
 gossipType: general
 tags:
   - Dwayne Johnson
   - celebrity
-  - general
 keyTakeaways:
   - >-
     Wil Wheaton posted the "coward" comment on Threads on Monday, in response to

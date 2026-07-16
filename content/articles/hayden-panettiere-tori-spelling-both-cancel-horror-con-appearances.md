@@ -8,17 +8,16 @@ date: '2026-07-15T06:00:37.007Z'
 dek: >-
   Two scream queens cancel their Creep I.E. Aftermath appearances at the last
   minute, citing separate emergencies.
-metaTitle: Hayden Panettiere and Tori Spelling Bail on Horror Convention
+metaTitle: Hayden Panettiere and Tori Spelling Bail on Horror
 metaDescription: >-
   Two scream queens cancel their Creep I.E. Aftermath appearances at the last
-  minute, citing separate emergencies.
+  minute, citing separate emergencies. The convention announced Dominique Swain
+  and Brian.
 formatTag: gossip
 gossipType: controversy
 tags:
   - Hayden Panettiere
   - celebrity
-  - controversy
-  - celebrity gossip
 keyTakeaways:
   - >-
     Hayden Panettiere and Tori Spelling canceled their July 11-12 appearances at

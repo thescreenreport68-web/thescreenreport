@@ -8,17 +8,16 @@ date: '2026-07-10T13:26:54.990Z'
 dek: >-
   The former lead says he's 'deeply disappointed' by revelations in a new book,
   alleging he was misled during his season.
-metaTitle: Peter Weber Fires Back at 'Bachelor' Producer's Memoir Claims
+metaTitle: Peter Weber Fires Back at 'Bachelor' Producer's Memoir
 metaDescription: >-
   The former lead says he's 'deeply disappointed' by revelations in a new book,
-  alleging he was misled during his season.
+  alleging he was misled during his season. He alleges LaPlaca and Chris
+  Harrison misled.
 formatTag: gossip
 gossipType: general
 tags:
   - Peter Weber
   - celebrity
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Peter Weber has publicly denied and responded to claims made by former

@@ -10,19 +10,16 @@ date: '2026-07-08T02:01:06.366Z'
 dek: >-
   The quarterback and his wife were reportedly among the stars celebrating the
   pop icon and the tight end's big day.
-metaTitle: >-
-  Patrick and Brittany Mahomes Reportedly Step Out for Taylor Swift and Travis
-  Kelce's Wedding
+metaTitle: Patrick and Brittany Mahomes Reportedly Step
 metaDescription: >-
   The quarterback and his wife were reportedly among the stars celebrating the
-  pop icon and the tight end's big day.
+  pop icon and the tight end's big day. The reported wedding took place at
+  Madison Square.
 formatTag: gossip
 gossipType: general
 tags:
   - Taylor Swift
   - celebrity
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     E! News reports Patrick and Brittany Mahomes attended the wedding of Taylor

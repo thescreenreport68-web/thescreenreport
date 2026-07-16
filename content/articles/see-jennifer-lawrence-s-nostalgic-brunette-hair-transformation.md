@@ -11,15 +11,14 @@ dek: >-
 metaTitle: Jennifer Lawrence's Nostalgic Brunette Hair
 metaDescription: >-
   The Oscar winner debuts a dark new look in NYC, and fans are flashing back to
-  her 'Hunger Games' era.
+  her 'Hunger Games' era. She is 35 and a mother of two sons with husband Cooke
+  Maroney.
 targetKeyword: Jennifer Lawrence
 formatTag: gossip
 gossipType: general
 tags:
   - Jennifer Lawrence
   - celebrity
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Jennifer Lawrence debuted brunette hair in NYC on July 9, her darkest color

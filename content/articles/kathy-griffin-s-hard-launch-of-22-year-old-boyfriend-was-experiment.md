@@ -6,16 +6,17 @@ subcategory: news
 author: alicia-bernard
 date: '2026-07-16T00:00:42.140Z'
 dek: The comedian reveals her viral dating post was a pointed social experiment.
-metaTitle: Kathy Griffin's 'Hard Launch' of a 22-Year-Old Wasn't
-metaDescription: The comedian reveals her viral dating post was a pointed social experiment.
+metaTitle: Kathy Griffin's 'Hard Launch' of a 22-Year-Old
+metaDescription: >-
+  The comedian reveals her viral dating post was a pointed social experiment. On
+  July 10, she revealed the post was a 'sociological experiment' to gauge
+  reactions.
 targetKeyword: Kathy Griffin
 formatTag: gossip
 gossipType: romance
 tags:
   - Kathy Griffin
   - celebrity
-  - romance
-  - celebrity gossip
 keyTakeaways:
   - >-
     Kathy Griffin, 65, posted a photo with a 22-year-old man on July 9, sparking

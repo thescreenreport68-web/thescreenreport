@@ -8,17 +8,15 @@ date: '2026-07-15T00:00:04.438Z'
 dek: >-
   The comedian says a controversial policy blueprint prompted her family's
   transatlantic relocation.
-metaTitle: Rosie O'Donnell Explains Why She Moved to Ireland After Trump's Reelection
+metaTitle: Rosie O'Donnell Explains Why She Moved to Ireland
 metaDescription: >-
   The comedian says a controversial policy blueprint prompted her family's
-  transatlantic relocation.
+  transatlantic relocation. O’Donnell believes support for Trump in the U.S..
 formatTag: gossip
 gossipType: general
 tags:
   - Rosie O'Donnell
   - celebrity
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     O’Donnell believes support for Trump in the U.S. has 'diminished

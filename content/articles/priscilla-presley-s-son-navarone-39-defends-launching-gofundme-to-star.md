@@ -9,17 +9,16 @@ date: '2026-07-15T02:01:11.283Z'
 dek: >-
   Navarone Garibaldi Garcia is defending his GoFundMe for a driveway pizza biz,
   and he has a message for the haters.
-metaTitle: Why Won't Priscilla Presley's Son Just Ask Mom for Pizza Money?
+metaTitle: Why Won't Priscilla Presley's Son Just Ask Mom
 metaDescription: >-
   Navarone Garibaldi Garcia is defending his GoFundMe for a driveway pizza biz,
-  and he has a message for the haters.
+  and he has a message for the haters. Garcia is 39 years old, the son of
+  Priscilla.
 formatTag: gossip
 gossipType: general
 tags:
   - Navarone Garibaldi Garcia
   - celebrity
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Navarone Garibaldi Garcia, 39, launched a GoFundMe seeking $5,500 to start a

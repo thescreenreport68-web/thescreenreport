@@ -11,19 +11,16 @@ date: '2026-07-14T10:00:07.679Z'
 dek: >-
   A new biography claims the band once compared notes on their conquests, with
   one member's count reaching a staggering number.
-metaTitle: >-
-  What's the real tally behind the Rolling Stones' legendary rock 'n' roll
-  lifestyles?
+metaTitle: What's the real tally behind the Rolling Stones'
 metaDescription: >-
   A new biography claims the band once compared notes on their conquests, with
-  one member's count reaching a staggering number.
+  one member's count reaching a staggering number. Spitz told Fox News Digital
+  that Bill.
 formatTag: gossip
 gossipType: general
 tags:
   - Bill Wyman
   - celebrity
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Biographer Bob Spitz claims in a new book that Rolling Stones members once

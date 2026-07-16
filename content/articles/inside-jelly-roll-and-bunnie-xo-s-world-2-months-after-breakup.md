@@ -12,14 +12,13 @@ dek: >-
 metaTitle: Bunnie Xo and Jelly Roll's Unconventional Next Chapter
 metaDescription: >-
   The exes are dating new people but remain best friends and are still pursuing
-  IVF together.
+  IVF together. Bunnie Xo and Jelly Roll have both started dating other people
+  following.
 formatTag: gossip
 gossipType: breakup
 tags:
   - Bunnie Xo
   - celebrity
-  - breakup
-  - celebrity gossip
 keyTakeaways:
   - >-
     Bunnie Xo and Jelly Roll have both started dating other people following

@@ -10,18 +10,16 @@ date: '2026-07-03T12:48:15.257Z'
 dek: >-
   The Starlight actress says a severe staph infection, fueled by Graves'
   disease, didn't stop a season two night shoot.
-metaTitle: >-
-  Erin Moriarty Reveals She Filmed a 'Boys' Sex Scene With a 'Second Head' in
-  Her Armpit
+metaTitle: Erin Moriarty Reveals She Filmed a 'Boys' Sex Scene
 metaDescription: >-
   The Starlight actress says a severe staph infection, fueled by Graves'
-  disease, didn't stop a season two night shoot.
+  disease, didn't stop a season two night shoot. Erin Moriarty revealed on a
+  podcast she filmed.
 formatTag: gossip
 gossipType: general
 tags:
   - Erin Moriarty
   - celebrity
-  - general
 keyTakeaways:
   - >-
     Erin Moriarty revealed on a podcast she filmed a *The Boys* sex scene in

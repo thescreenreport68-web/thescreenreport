@@ -9,17 +9,16 @@ date: '2026-07-12T12:03:27.580Z'
 dek: >-
   The reality star is filming for season five, but her role is smaller than fans
   might expect.
-metaTitle: 'Is Taylor Frankie Paul Back on ''Mormon Wives''? The Limited Return, Explained'
+metaTitle: Is Taylor Frankie Paul Back on 'Mormon Wives'?
 metaDescription: >-
   The reality star is filming for season five, but her role is smaller than fans
-  might expect.
+  might expect. Production was paused in mid-March following allegations of a
+  domestic.
 formatTag: gossip
 gossipType: general
 tags:
   - Taylor Frankie Paul
   - tv
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Taylor Frankie Paul is returning to 'Secret Lives of Mormon Wives' for

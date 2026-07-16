@@ -10,19 +10,16 @@ date: '2026-07-11T08:01:24.309Z'
 dek: >-
   The couple enjoyed a rooftop lunch just hours before their co-star Justin
   Baldoni broke his silence on the settled lawsuit.
-metaTitle: >-
-  Blake Lively and Ryan Reynolds Spotted in Canada as 'It Ends With Us' Legal
-  Chapter Closes
+metaTitle: Blake Lively and Ryan Reynolds Spotted in Canada
 metaDescription: >-
   The couple enjoyed a rooftop lunch just hours before their co-star Justin
-  Baldoni broke his silence on the settled lawsuit.
+  Baldoni broke his silence on the settled lawsuit. Blake Lively and Ryan
+  Reynolds were seen.
 formatTag: gossip
 gossipType: spotted
 tags:
   - Blake Lively
   - celebrity
-  - spotted
-  - celebrity gossip
 keyTakeaways:
   - >-
     Blake Lively and Ryan Reynolds were seen at a Mexican restaurant in Canada

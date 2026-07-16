@@ -8,17 +8,16 @@ date: '2026-07-10T12:01:21.199Z'
 dek: >-
   A new report reveals the surprising sympathy from her former co-stars, despite
   a lack of contact.
-metaTitle: Where Do Annemarie Wiley's 'RHOBH' Castmates Stand Amid Her Divorce Drama?
+metaTitle: Where Do Annemarie Wiley's 'RHOBH' Castmates Stand
 metaDescription: >-
   A new report reveals the surprising sympathy from her former co-stars, despite
-  a lack of contact.
+  a lack of contact. Her court filings detail allegations of physical violence,
+  sexual.
 formatTag: gossip
 gossipType: general
 tags:
   - Annemarie Wiley
   - celebrity
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Sources tell TMZ those former co-stars are sympathetic to her amid her

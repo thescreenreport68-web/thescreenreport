@@ -12,15 +12,14 @@ dek: >-
 metaTitle: 'Jelly Roll Opens Up About Food Addiction: ''The Addict'
 metaDescription: >-
   The country star gets candid about his struggles with overeating, drawing a
-  direct line to his past battles.
+  direct line to his past battles. Jelly Roll has lost nearly 300 pounds during
+  his weight.
 targetKeyword: Jelly Roll
 formatTag: gossip
 gossipType: general
 tags:
   - Jelly Roll
   - celebrity
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Jelly Roll discussed his struggles with overeating and food addiction in a

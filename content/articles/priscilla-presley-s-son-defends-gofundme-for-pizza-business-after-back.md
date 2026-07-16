@@ -11,15 +11,14 @@ dek: >-
 metaTitle: Navarone Garibaldi Garcia Defends Driveway Pizza
 metaDescription: >-
   Priscilla Presley's son responds to backlash after asking the public for
-  $5,500 to launch an organic pizza business from his L.A. home.
+  $5,500 to launch an organic pizza business from his L.A. home. Navarone
+  Garibaldi Garcia.
 targetKeyword: Navarone Garibaldi Garcia
 formatTag: gossip
 gossipType: controversy
 tags:
   - Navarone Garibaldi Garcia
   - celebrity
-  - controversy
-  - celebrity gossip
 keyTakeaways:
   - >-
     Navarone Garibaldi Garcia, 37, launched a GoFundMe seeking $5,500 to start a

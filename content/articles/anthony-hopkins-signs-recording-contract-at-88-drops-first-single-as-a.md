@@ -9,17 +9,16 @@ date: '2026-07-10T17:57:26.828Z'
 dek: >-
   The Oscar-winning actor signs with Decca Classics, releasing a lifetime of
   music inspired by his Welsh roots.
-metaTitle: 'Anthony Hopkins, 88, Launches a Second Act as a Classical Composer'
+metaTitle: 'Anthony Hopkins, 88, Launches a Second Act'
 metaDescription: >-
   The Oscar-winning actor signs with Decca Classics, releasing a lifetime of
-  music inspired by his Welsh roots.
+  music inspired by his Welsh roots. Anthony Hopkins, 88, has officially signed
+  a recording.
 formatTag: gossip
 gossipType: general
 tags:
   - Anthony Hopkins
   - music
-  - general
-  - celebrity gossip
 keyTakeaways:
   - 'Anthony Hopkins, 88, has signed a recording contract with Decca Classics.'
   - >-

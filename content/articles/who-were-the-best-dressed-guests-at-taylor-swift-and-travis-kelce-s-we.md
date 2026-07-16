@@ -8,17 +8,16 @@ date: '2026-07-05T12:00:14.793Z'
 dek: >-
   The power couple's famous friends pulled out all the sartorial stops for the
   Madison Square Garden affair.
-metaTitle: Who Were the Best-Dressed Guests at Taylor Swift and Travis Kelce's Wedding?
+metaTitle: Who Were the Best-Dressed Guests at Taylor Swift
 metaDescription: >-
   The power couple's famous friends pulled out all the sartorial stops for the
-  Madison Square Garden affair.
+  Madison Square Garden affair. The wedding was attended by approximately 1,000
+  guests.
 formatTag: gossip
 gossipType: general
 tags:
   - Taylor Swift
   - celebrity
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     The wedding was attended by approximately 1,000 guests, including

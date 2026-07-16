@@ -8,17 +8,16 @@ date: '2026-07-05T16:00:16.856Z'
 dek: >-
   The longtime bestie stepped out in a shimmering gold gown for the big day,
   capping off a 16-year friendship.
-metaTitle: Selena Gomez Brings the Sparkle (and Benny Blanco) to Taylor Swift's Wedding
+metaTitle: Selena Gomez Brings the Sparkle (and Benny Blanco)
 metaDescription: >-
   The longtime bestie stepped out in a shimmering gold gown for the big day,
-  capping off a 16-year friendship.
+  capping off a 16-year friendship. Gomez publicly celebrated Swift's engagement
+  to Travis.
 formatTag: gossip
 gossipType: general
 tags:
   - Selena Gomez
   - celebrity
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Selena Gomez attended Taylor Swift and Travis Kelce's wedding at Madison

@@ -8,17 +8,16 @@ date: '2026-07-11T18:01:26.047Z'
 dek: >-
   Sources say the former couple is handling their separation with 'love and
   kindness' and shutting down rumors.
-metaTitle: How are Margaret Qualley and Jack Antonoff navigating their split?
+metaTitle: How are Margaret Qualley and Jack Antonoff navigating
 metaDescription: >-
   Sources say the former couple is handling their separation with 'love and
-  kindness' and shutting down rumors.
+  kindness' and shutting down rumors. News broke after Jack Antonoff attended a
+  wedding solo.
 formatTag: gossip
 gossipType: breakup
 tags:
   - Margaret Qualley
   - celebrity
-  - breakup
-  - celebrity gossip
 keyTakeaways:
   - >-
     Margaret Qualley and Jack Antonoff are separating after less than three

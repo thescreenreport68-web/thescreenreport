@@ -8,17 +8,16 @@ date: '2026-07-10T20:01:36.123Z'
 dek: >-
   The actress brought her husband to the royal box virtually during a nail-biter
   of a match.
-metaTitle: Priyanka Chopra Shares the Wimbledon View With Nick Jonas Via FaceTime
+metaTitle: Priyanka Chopra Shares the Wimbledon View With Nick
 metaDescription: >-
   The actress brought her husband to the royal box virtually during a nail-biter
-  of a match.
+  of a match. Priyanka Chopra was seen FaceTiming husband Nick Jonas from the
+  royal box.
 formatTag: gossip
 gossipType: spotted
 tags:
   - Priyanka Chopra
   - celebrity
-  - spotted
-  - celebrity gossip
 keyTakeaways:
   - >-
     Priyanka Chopra was seen FaceTiming husband Nick Jonas from the royal box at

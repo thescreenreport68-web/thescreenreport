@@ -9,17 +9,16 @@ date: '2026-07-07T09:58:58.004Z'
 dek: >-
   The director says every picture he's seen from the star-studded MSG ceremony
   is bogus.
-metaTitle: Taylor Swift Wedding Guest Joseph Kahn Calls Out Fake AI Photos
+metaTitle: Taylor Swift Wedding Guest Joseph Kahn Calls Out Fake
 metaDescription: >-
   The director says every picture he's seen from the star-studded MSG ceremony
-  is bogus.
+  is bogus. Kahn shared a genuine photo from the wedding on Instagram, showing
+  pink decor.
 formatTag: gossip
 gossipType: controversy
 tags:
   - Joseph Kahn
   - celebrity
-  - controversy
-  - celebrity gossip
 keyTakeaways:
   - >-
     Director Joseph Kahn, a guest at Taylor Swift and Travis Kelce's wedding,

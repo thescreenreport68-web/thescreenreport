@@ -9,17 +9,16 @@ date: '2026-07-13T16:01:09.137Z'
 dek: >-
   A Puerto Rico court dismissed some claims as too old, but the legal drama over
   a famous whisper isn't over yet.
-metaTitle: Bad Bunny's Ex Gets a Partial Win in Voice Recording Lawsuit
+metaTitle: Bad Bunny's Ex Gets a Partial Win in Voice Recording
 metaDescription: >-
   A Puerto Rico court dismissed some claims as too old, but the legal drama over
-  a famous whisper isn't over yet.
+  a famous whisper isn't over yet. The Puerto Rico Supreme Court partially
+  reversed.
 formatTag: gossip
 gossipType: breakup
 tags:
   - Bad Bunny
   - celebrity
-  - breakup
-  - celebrity gossip
 keyTakeaways:
   - >-
     The Puerto Rico Supreme Court partially reversed the dismissal of Carliz De

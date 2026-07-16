@@ -8,17 +8,16 @@ date: '2026-07-10T06:02:12.863Z'
 dek: >-
   TMZ releases frantic emergency calls made moments after the influencer was
   gunned down in her Lamborghini.
-metaTitle: 'DreamDoll Brii Shooting: Chilling 911 Audio Captures Panic After Fatal Attack'
+metaTitle: 'DreamDoll Brii Shooting: Chilling 911 Audio Captures'
 metaDescription: >-
   TMZ releases frantic emergency calls made moments after the influencer was
-  gunned down in her Lamborghini.
+  gunned down in her Lamborghini. A third victim was injured but released from
+  the hospital.
 formatTag: gossip
 gossipType: general
 tags:
   - DreamDoll Brii
   - celebrity
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     TMZ released frantic 911 calls from the scene of the shooting that killed

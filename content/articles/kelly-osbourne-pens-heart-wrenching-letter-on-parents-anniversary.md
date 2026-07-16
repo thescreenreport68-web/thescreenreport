@@ -10,19 +10,16 @@ date: '2026-07-05T08:00:17.806Z'
 dek: >-
   The reality star and mom of one marks a poignant family milestone with a
   tribute to her parents' 'unbreakable bond.'
-metaTitle: >-
-  Kelly Osbourne Shares a Quietly Aching Letter to Mom Sharon on Her First
-  Wedding Anniversary Without Ozzy
+metaTitle: Kelly Osbourne Shares a Quietly Aching Letter to Mom
 metaDescription: >-
   The reality star and mom of one marks a poignant family milestone with a
-  tribute to her parents' 'unbreakable bond.'
+  tribute to her parents' 'unbreakable bond.' Ozzy Osbourne, the Black Sabbath
+  frontman, died.
 formatTag: gossip
 gossipType: general
 tags:
   - Kelly Osbourne
   - celebrity
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Ozzy Osbourne, the Black Sabbath frontman, died on July 22, 2025, at the age

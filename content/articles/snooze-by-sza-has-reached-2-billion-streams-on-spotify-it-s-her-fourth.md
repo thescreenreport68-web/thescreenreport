@@ -12,14 +12,13 @@ dek: >-
 metaTitle: Is SZA's 'Snooze' Now a 2 Billion Stream Giant?
 metaDescription: >-
   Rumors are swirling that the soulful ballad has hit a colossal milestone,
-  joining an elite club of her hits.
+  joining an elite club of her hits. A post from Pop Crave on Bluesky is
+  circulating a claim.
 formatTag: gossip
 gossipType: general
 tags:
   - SZA
   - music
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     A Bluesky post from Pop Crave claims SZA's song "Snooze" has reached 2

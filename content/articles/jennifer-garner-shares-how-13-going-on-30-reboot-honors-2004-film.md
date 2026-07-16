@@ -11,19 +11,16 @@ date: '2026-07-13T04:02:59.347Z'
 dek: >-
   The original star and new executive producer dishes on the Netflix project,
   her adorable successor, and the legacy of the late director.
-metaTitle: >-
-  Jennifer Garner Shares How the '13 Going on 30' Reboot Will Honor the
-  Original's Magic
+metaTitle: Jennifer Garner Shares How the '13 Going on 30' Reboot
 metaDescription: >-
   The original star and new executive producer dishes on the Netflix project,
-  her adorable successor, and the legacy of the late director.
+  her adorable successor, and the legacy of the late director. Plot details for
+  the reboot.
 formatTag: gossip
 gossipType: career
 tags:
   - Jennifer Garner
   - tv
-  - career
-  - celebrity gossip
 keyTakeaways:
   - >-
     Jennifer Garner is an executive producer on Netflix's reboot of '13 Going on

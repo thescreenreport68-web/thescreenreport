@@ -8,17 +8,16 @@ date: '2026-07-06T03:59:59.988Z'
 dek: >-
   The long-term couple and co-stars were spotted courtside in London, sparking
   fresh buzz about their upcoming project.
-metaTitle: Andrew Garfield & Monica Barbaro Make Their Wimbledon Return
+metaTitle: Andrew Garfield & Monica Barbaro Make Their Wimbledon
 metaDescription: >-
   The long-term couple and co-stars were spotted courtside in London, sparking
-  fresh buzz about their upcoming project.
+  fresh buzz about their upcoming project. Andrew Garfield and Monica Barbaro
+  were seen.
 formatTag: gossip
 gossipType: spotted
 tags:
   - Andrew Garfield
   - celebrity
-  - spotted
-  - celebrity gossip
 keyTakeaways:
   - >-
     Andrew Garfield, 42, and Monica Barbaro, 36, were seen together at Wimbledon

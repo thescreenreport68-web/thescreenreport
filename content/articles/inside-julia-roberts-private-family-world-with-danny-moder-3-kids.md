@@ -10,19 +10,16 @@ date: '2026-07-06T10:00:58.005Z'
 dek: >-
   The Oscar winner reveals how her three teenagers finally grasped her celebrity
   status, with a little help from a pop superstar.
-metaTitle: >-
-  Julia Roberts on Her Kids' Fame Check: 'Are You More Famous Than Taylor
-  Swift?'
+metaTitle: Julia Roberts on Her Kids' Fame Check
 metaDescription: >-
   The Oscar winner reveals how her three teenagers finally grasped her celebrity
-  status, with a little help from a pop superstar.
+  status, with a little help from a pop superstar. Julia Roberts's
+  children—twins Hazel.
 formatTag: gossip
 gossipType: general
 tags:
   - Julia Roberts
   - celebrity
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Julia Roberts's children—twins Hazel and Phinnaeus and son Henry—asked if

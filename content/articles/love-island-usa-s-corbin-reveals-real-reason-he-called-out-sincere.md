@@ -11,15 +11,14 @@ dek: >-
 metaTitle: Corbin Mims Explains Why He Called Out Sincere on Love
 metaDescription: >-
   The bombshell reveals what — and who — finally pushed him to speak his mind
-  after Movie Night.
+  after Movie Night. Corbin Mims confronted Sincere Rhea about his behavior
+  toward Melanie.
 targetKeyword: Corbin Mims
 formatTag: gossip
 gossipType: controversy
 tags:
   - Corbin Mims
   - celebrity
-  - controversy
-  - celebrity gossip
 keyTakeaways:
   - >-
     Corbin Mims confronted Sincere Rhea about his behavior toward Melanie Moreno

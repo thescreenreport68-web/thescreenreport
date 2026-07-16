@@ -10,7 +10,7 @@ const matter = require("gray-matter");
 import { GOSSIP_AUTHOR_SLUG, AI_DISCLOSURE } from "./config.gossip.mjs";
 import { detectGossipType } from "./writer.mjs";
 import { deriveTags } from "./polish.mjs";
-import { seoMetaTitle, clampDesc, targetKeywordFor } from "../lib/seo.mjs";
+import { buildMetaTitle, buildMetaDescription, targetKeywordFor } from "./seo.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url)); // …/pipeline/gossip
 const CONTENT_DIR = path.resolve(__dirname, "../../content/articles");
@@ -50,10 +50,10 @@ export function buildGossipMarkdown({ article, frame, provenance, route, topic, 
     author: GOSSIP_AUTHOR_SLUG,
     date: dateISO,
     dek: article.dek || "",
-    // SEO (readers see the full `title` above unchanged): name-first 45–55 metaTitle, clamped
-    // description, and a targetKeyword — mirrors lib/site.ts so the stored data matches the head.
-    metaTitle: seoMetaTitle({ title: article.title, primaryEntity: topic.primaryEntity, tags }),
-    metaDescription: clampDesc(article.dek || ""),
+    // SEO (readers see the full `title` above unchanged): the WRITER's name-first 45–55 metaTitle +
+    // 140–160 metaDescription when they're clean, else a deterministic clean fallback (never a dangler).
+    metaTitle: buildMetaTitle({ writerMetaTitle: article.metaTitle, title: article.title, primaryEntity: topic.primaryEntity, tags, coSubjects: topic.coSubjects || [] }),
+    metaDescription: buildMetaDescription({ writerMetaDesc: article.metaDescription, dek: article.dek, keyTakeaways: article.keyTakeaways, whatWeKnow: article.whatWeKnow }),
     targetKeyword: targetKeywordFor({ primaryEntity: topic.primaryEntity, tags }),
     formatTag: "gossip",
     gossipType,

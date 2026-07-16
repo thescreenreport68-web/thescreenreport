@@ -8,16 +8,16 @@ date: '2026-07-04T05:33:25.017Z'
 dek: >-
   The 'Dumb Blonde' podcast host shares her acceptance to Arizona State
   University, turning a new page after her divorce filing.
-metaTitle: 'Bunnie Xo Announces Next Chapter: College Bound After Jelly Roll Split'
+metaTitle: 'Bunnie Xo Announces Next Chapter: College Bound'
 metaDescription: >-
   The 'Dumb Blonde' podcast host shares her acceptance to Arizona State
-  University, turning a new page after her divorce filing.
+  University, turning a new page after her divorce filing. Bunnie Xo announced
+  her acceptance.
 formatTag: gossip
 gossipType: breakup
 tags:
   - Bunnie Xo
   - celebrity
-  - breakup
 keyTakeaways:
   - >-
     Bunnie Xo announced her acceptance to Arizona State University via Instagram

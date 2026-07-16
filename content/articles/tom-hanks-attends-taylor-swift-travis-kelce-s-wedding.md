@@ -9,17 +9,16 @@ date: '2026-07-05T19:59:56.054Z'
 dek: >-
   The actor was photographed sharing a car with Paul McCartney after the
   star-studded ceremony.
-metaTitle: Tom Hanks Spotted Leaving Taylor Swift's Wedding With a Legendary Plus-One
+metaTitle: Tom Hanks Spotted Leaving Taylor Swift's Wedding
 metaDescription: >-
   The actor was photographed sharing a car with Paul McCartney after the
-  star-studded ceremony.
+  star-studded ceremony. Tom Hanks attended Taylor Swift and Travis Kelce's
+  wedding on July 3.
 formatTag: gossip
 gossipType: career
 tags:
   - Tom Hanks
   - celebrity
-  - career
-  - celebrity gossip
 keyTakeaways:
   - >-
     Tom Hanks was photographed leaving Taylor Swift and Travis Kelce's wedding

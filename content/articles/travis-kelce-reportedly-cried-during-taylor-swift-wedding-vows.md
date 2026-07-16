@@ -9,17 +9,16 @@ date: '2026-07-08T16:01:12.022Z'
 dek: >-
   The groom was reportedly more emotional than the bride during the deeply
   personal ceremony at Madison Square Garden.
-metaTitle: Travis Kelce Reportedly Cried During Taylor Swift Wedding Vows
+metaTitle: Travis Kelce Reportedly Cried During Taylor Swift
 metaDescription: >-
   The groom was reportedly more emotional than the bride during the deeply
-  personal ceremony at Madison Square Garden.
+  personal ceremony at Madison Square Garden. Guests reported Travis Kelce was
+  more emotional.
 formatTag: gossip
 gossipType: general
 tags:
   - Travis Kelce
   - celebrity
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Guests reported Travis Kelce was more emotional than Taylor Swift during

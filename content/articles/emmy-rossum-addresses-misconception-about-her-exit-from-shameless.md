@@ -11,19 +11,16 @@ date: '2026-07-13T08:01:12.015Z'
 dek: >-
   The actress is clearing up a persistent rumor about her exit from the
   long-running Showtime series.
-metaTitle: >-
-  Emmy Rossum Finally Sets the Record Straight on Why She Really Left
-  'Shameless'
+metaTitle: Emmy Rossum Finally Sets the Record Straight
 metaDescription: >-
   The actress is clearing up a persistent rumor about her exit from the
-  long-running Showtime series.
+  long-running Showtime series. She expressed gratitude for her time on the
+  show, particularly.
 formatTag: gossip
 gossipType: career
 tags:
   - Emmy Rossum
   - celebrity
-  - career
-  - celebrity gossip
 keyTakeaways:
   - >-
     Emmy Rossum says she did not leave 'Shameless' to start a family, calling

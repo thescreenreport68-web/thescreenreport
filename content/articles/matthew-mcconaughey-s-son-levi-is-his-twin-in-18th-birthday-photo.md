@@ -10,19 +10,16 @@ date: '2026-07-09T16:00:56.961Z'
 dek: >-
   The Oscar winner marks his look-alike son's birthday with a major shift in his
   own long-held stance on Hollywood.
-metaTitle: >-
-  Matthew McConaughey's Son Levi Turns 18 — And Gets Dad's Blessing to Pursue
-  Acting
+metaTitle: Matthew McConaughey's Son Levi Turns 18 — And Gets Dad's Blessing
 metaDescription: >-
   The Oscar winner marks his look-alike son's birthday with a major shift in his
-  own long-held stance on Hollywood.
+  own long-held stance on Hollywood. Matthew McConaughey's son Levi turned 18 on
+  July 7.
 formatTag: gossip
 gossipType: general
 tags:
   - Matthew McConaughey
   - celebrity
-  - general
-  - celebrity gossip
 keyTakeaways:
   - Matthew McConaughey's son Levi turned 18 on July 7.
   - >-

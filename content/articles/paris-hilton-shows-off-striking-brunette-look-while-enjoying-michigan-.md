@@ -8,17 +8,16 @@ date: '2026-07-14T20:01:06.164Z'
 dek: >-
   The hotel heiress traded her signature platinum for a soft brown while making
   'core memories' with her toddlers in Michigan.
-metaTitle: Paris Hilton Goes Brunette for a Cherry Festival Family Day
+metaTitle: Paris Hilton Goes Brunette for a Cherry Festival Family
 metaDescription: >-
   The hotel heiress traded her signature platinum for a soft brown while making
-  'core memories' with her toddlers in Michigan.
+  'core memories' with her toddlers in Michigan. She has experimented with
+  brunette hair.
 formatTag: gossip
 gossipType: general
 tags:
   - Paris Hilton
   - celebrity
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Paris Hilton debuted light brunette hair while attending the Traverse City

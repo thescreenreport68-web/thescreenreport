@@ -8,17 +8,16 @@ date: '2026-07-07T22:00:07.257Z'
 dek: >-
   The Kelce matriarch finally shares a few words about the star-studded nuptials
   that captivated the world.
-metaTitle: Donna Kelce Breaks Her Silence on Taylor and Travis's 'Magical' Wedding
+metaTitle: Donna Kelce Breaks Her Silence on Taylor and Travis's 'Magical'
 metaDescription: >-
   The Kelce matriarch finally shares a few words about the star-studded nuptials
-  that captivated the world.
+  that captivated the world. Donna Kelce called Taylor Swift and Travis Kelce's
+  wedding.
 formatTag: gossip
 gossipType: general
 tags:
   - Donna Kelce
   - celebrity
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Donna Kelce called Taylor Swift and Travis Kelce's wedding "magical" in an

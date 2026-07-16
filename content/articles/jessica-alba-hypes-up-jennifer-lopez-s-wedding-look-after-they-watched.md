@@ -10,18 +10,16 @@ dek: >-
   The 'Bad Blood' alum and J.Lo were among the star-studded crowd at Taylor
   Swift and Travis Kelce's Madison Square Garden wedding, and Alba's Instagram
   comment has fans talking.
-metaTitle: Jessica Alba Cheers Jennifer Lopez's Wedding Look After Swift-Kelce Nuptials
+metaTitle: Jessica Alba Cheers Jennifer Lopez's Wedding Look
 metaDescription: >-
   The 'Bad Blood' alum and J.Lo were among the star-studded crowd at Taylor
   Swift and Travis Kelce's Madison Square Garden wedding, and Alba's Instagram
-  comment has fans talking.
+  comment…
 formatTag: gossip
 gossipType: general
 tags:
   - Jessica Alba
   - celebrity
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Jessica Alba and Jennifer Lopez were reported guests at Taylor Swift and

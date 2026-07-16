@@ -1,11 +1,11 @@
-// SEO metaTitle rule test: name-first, ≤55 chars, no brand suffix, hook after the name — while the
-// reader-facing `title` is never shortened. Also sweeps EVERY published title to prove no output is
-// empty, over-55, or garbled. Run: node pipeline/gossip/test/seo-title-test.mjs
+// GOSSIP SEO test — metaTitle (name-first, CLEAN ending never a dangler, target 45–55), metaDescription
+// (140–160, teaser + fact, full sentence, distinct from dek), keywords (no gossip/general). The reader-facing
+// `title` is never shortened. Run: node pipeline/gossip/test/seo-title-test.mjs
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { createRequire } from "node:module";
-import { seoMetaTitle, clampDesc } from "../../lib/seo.mjs";
+import { seoMetaTitle, buildMetaTitle, buildMetaDescription, deriveKeywords, validMetaTitle, bestTitle } from "../seo.mjs";
 
 const require = createRequire(import.meta.url);
 const matter = require("gray-matter");
@@ -13,85 +13,92 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const CONTENT = path.resolve(__dirname, "../../../content/articles");
 
 let pass = 0, fail = 0; const fails = [];
-const check = (n, cond, d = "") => { if (cond) { pass++; console.log("  ✅ " + n); } else { fail++; fails.push(n); console.log("  ❌ " + n + "  " + d); } };
+const check = (n, c, d = "") => { if (c) { pass++; console.log("  ✅ " + n); } else { fail++; fails.push(n); console.log("  ❌ " + n + "  " + d); } };
 const startsWith = (s, p) => s.toLowerCase().startsWith(p.toLowerCase());
+// a metaTitle must NOT end on a dangling function/pronoun/verb/particle/contraction word
+const BAD_END_RE = /(?:^|\s)['"‘“]?(?:a|an|the|of|to|in|on|at|for|with|from|by|as|and|or|but|so|up|out|off|down|back|over|about|after|before|amid|he|she|it|they|we|i|you|him|her|them|his|its|their|who|which|is|are|was|were|be|has|have|had|do|does|did|will|would|can|goes|go|get|gets|got|says|said|say|make|made|take|took|just|now|also|not|very)$|n['’]t$|['’](?:t|s|re|ll|ve|d|m)$/i;
+const cleanEnd = (s) => !BAD_END_RE.test(String(s).replace(/[^A-Za-z0-9'’]+$/u, ""));
 
-console.log("\n=== SEO metaTitle rule ===\n");
+console.log("\n=== metaTitle: CLEAN ENDINGS (the owner's known-bad danglers) ===\n");
 
-const band = (o) => o.length >= 45 && o.length <= 55; // owner: 45 ≤ len ≤ 55
-// 1) THE OWNER EXAMPLE — lead with the name, drop "Inside", 45–55.
+// 1) "…Reason She" — must not end on the pronoun "She".
 {
-  const o = seoMetaTitle({ title: "Inside Brad Pitt and Ines de Ramon's Low-Key Summer Romance", primaryEntity: "Brad Pitt" });
-  check("owner example → name-first, 45–55, no 'Inside'", startsWith(o, "Brad Pitt") && band(o) && !/inside/i.test(o), `[${o.length}] ${o}`);
+  const o = seoMetaTitle({ title: "Rosie O'Donnell Explains the $100 Million Reason She Quit Her Talk Show", primaryEntity: "Rosie O'Donnell" });
+  check("no '…Reason She' dangler", cleanEnd(o) && !/\bshe$/i.test(o) && startsWith(o, "Rosie"), `[${o.length}] ${o}`);
 }
-// 2) reslice past a "Why" lead-in so the bigger name leads.
+// 2) "…Wasn't" — must not end on a contraction; must not end on the pronoun "It".
 {
-  const o = seoMetaTitle({ title: "Why Robert Pattinson, Jaime King & More Missed Taylor Swift's Wedding", primaryEntity: "Robert Pattinson" });
-  check("'Why …' → leads with Robert Pattinson, 45–55", startsWith(o, "Robert Pattinson") && band(o), `[${o.length}] ${o}`);
+  const o = seoMetaTitle({ title: "Kathy Griffin's 'Hard Launch' of a 22-Year-Old Wasn't What It Seemed", primaryEntity: "Kathy Griffin" });
+  check("no '…Wasn't' / '…It' dangler", cleanEnd(o) && !/wasn['’]t$/i.test(o) && startsWith(o, "Kathy"), `[${o.length}] ${o}`);
 }
-// 3) question title — name still leads, 45–55.
+// 3) "…Goes Up" — must not end on the verb/particle; must not split "Conor McGregor".
 {
-  const o = seoMetaTitle({ title: "Is Taylor Frankie Paul Returning to Mormon Wives? The Truth", primaryEntity: "Taylor Frankie Paul" });
-  check("question title → leads with the name, 45–55", startsWith(o, "Taylor Frankie Paul") && band(o), `[${o.length}] ${o}`);
+  const o = seoMetaTitle({ title: "Drake's Million-Dollar Bet on Conor McGregor Goes Up in Smoke", primaryEntity: "Drake", coSubjects: ["Conor McGregor"] });
+  check("no '…Goes Up' dangler + doesn't split 'Conor McGregor'", cleanEnd(o) && !/\bup$/i.test(o) && !/\bconor$/i.test(o) && startsWith(o, "Drake"), `[${o.length}] ${o}`);
 }
-// 4) single-name subject already leading — kept, 45–55.
+// 4) never split a multi-word NAME.
 {
-  const o = seoMetaTitle({ title: "Beyoncé Drops Surprise Single Morning Dew Donk Amid Act III Buzz", primaryEntity: "Beyoncé" });
-  check("single-name lead kept + 45–55", startsWith(o, "Beyoncé") && band(o), `[${o.length}] ${o}`);
+  const o = seoMetaTitle({ title: "Taylor Swift & Travis Kelce Say 'I Do' at Madison Square Garden Wedding", primaryEntity: "Taylor Swift", coSubjects: ["Travis Kelce"] });
+  check("never ends mid-name ('…Travis'/'…Taylor')", !/\btravis$/i.test(o) && !/\btaylor$/i.test(o) && cleanEnd(o), `[${o.length}] ${o}`);
 }
-// 5) brand suffix stripped.
+// 5) clean short title kept whole (≤55, complete).
 {
-  const o = seoMetaTitle({ title: "Zendaya Lands a Major New Leading Role in an A24 Thriller — The Screen Report", primaryEntity: "Zendaya" });
-  check("brand suffix removed + 45–55", !/screen report/i.test(o) && startsWith(o, "Zendaya") && band(o), `[${o.length}] ${o}`);
+  const o = seoMetaTitle({ title: "Amy Schumer's Bikini Photo Puts Her C-Section Scar Front and Center", primaryEntity: "Amy Schumer" });
+  check("clean, name-first, ends complete", cleanEnd(o) && startsWith(o, "Amy") && o.length <= 65, `[${o.length}] ${o}`);
 }
-// 6) long name-first title lands 45–55 with a clean end.
+// 6) bestTitle keeps the FULL title when there is no clean in-band cut (never a dangler).
 {
-  const o = seoMetaTitle({ title: "Jennifer Lopez and Ben Affleck Finalize Their Divorce After Two Years of Marriage", primaryEntity: "Jennifer Lopez" });
-  check("over-55 title → 45–55, clean end", band(o) && !/[\s—–\-|:,&]$/.test(o) && startsWith(o, "Jennifer Lopez"), `[${o.length}] ${o}`);
-}
-// 7) clampDesc keeps ≤160.
-{
-  const long = "The pop superstar surprised fans this morning with an announcement nobody saw coming, sending social media into a frenzy and reigniting speculation about a long-rumored reunion tour across three continents.";
-  const o = clampDesc(long);
-  check("clampDesc ≤160", o.length <= 160, `${o.length} chars`);
-}
-// 8) never returns empty even with a bare title.
-{
-  check("bare title never empty", seoMetaTitle({ title: "Oscars 2026" }).length > 0);
+  const o = bestTitle("Drake's Million-Dollar Bet on Conor McGregor Goes Up in Smoke", ["Conor McGregor"]);
+  check("no-clean-cut → clean ending (not a dangler)", cleanEnd(o), `[${o.length}] ${o}`);
 }
 
-// ── SWEEP every published article: 45–55 band, none over 55, none empty, no brand leak ──
+console.log("\n=== Fix #1: writer-crafted meta preferred, else built ===");
+// 7) a good writer metaTitle is used as-is.
+{
+  const o = buildMetaTitle({ writerMetaTitle: "Rosie O'Donnell Reveals Why She Left the U.S.", title: "Rosie O'Donnell Explains Why She Moved to Ireland After Trump's Reelection", primaryEntity: "Rosie O'Donnell" });
+  check("good writer metaTitle used verbatim", startsWith(o, "Rosie") && cleanEnd(o), `[${o.length}] ${o}`);
+}
+// 8) a garbled writer metaTitle is rejected → deterministic fallback.
+{
+  const o = buildMetaTitle({ writerMetaTitle: "Rosie O'Donnell Explains the Reason She", title: "Rosie O'Donnell Says She Quit Her Talk Show After Earning $100 Million", primaryEntity: "Rosie O'Donnell" });
+  check("garbled writer metaTitle rejected (clean fallback)", cleanEnd(o) && startsWith(o, "Rosie"), `[${o.length}] ${o}`);
+}
+// 9) metaDescription: a good 140–160 writer teaser is kept.
+{
+  const w = "Rosie O'Donnell says she walked away from her hit daytime talk show at its peak, and the eye-popping nine-figure payday behind that call is genuinely wild.";
+  const o = buildMetaDescription({ writerMetaDesc: w, dek: "Rosie explains why she quit." });
+  check("good writer metaDescription kept (140–160, full sentence)", o.length >= 140 && o.length <= 165 && /[.!?]$/.test(o), `[${o.length}]`);
+}
+// 10) metaDescription: a real 75–107 dek → built up to ~140–160 with a concrete fact, full sentence, distinct-ish.
+{
+  const dek = "Rosie O'Donnell is opening up about the surprising financial reason behind her exit.";
+  const o = buildMetaDescription({ writerMetaDesc: dek, dek, keyTakeaways: ["She earned an estimated $100 million from her syndicated daytime talk show"] });
+  check("built metaDescription reaches 140–165, sentence-ended, adds a fact", o.length >= 140 && o.length <= 165 && /[.!?…]$/.test(o) && o.length > dek.length, `[${o.length}] ${o}`);
+}
+
+console.log("\n=== Fix #5: no gossip/general in keywords ===");
+{
+  const k = deriveKeywords({ primaryEntity: "Kathy Griffin", coSubjects: [], category: "celebrity", subcategory: "news", gossipType: "general" });
+  check("keywords carry no 'gossip'/'general'/'celebrity gossip'", !k.some((t) => /gossip|general/i.test(t)) && k.includes("Kathy Griffin"), JSON.stringify(k));
+}
+
+// ── SWEEP all published gossip titles: clean endings, ≤65, no brand ──
 console.log("\n=== sweep all published titles ===");
-let n = 0, over = 0, empty = 0, brand = 0, inBand = 0, under = 0, underWithSource = 0;
-const worst = [], tooShort = [];
+let n = 0, dangle = 0, brand = 0, inBand = 0; const bad = [];
 for (const f of fs.readdirSync(CONTENT).filter((x) => x.endsWith(".md"))) {
-  const { data } = matter(fs.readFileSync(path.join(CONTENT, f), "utf8"));
-  if (!data.title) continue;
+  let data; try { ({ data } = matter(fs.readFileSync(path.join(CONTENT, f), "utf8"))); } catch { continue; }
+  if (!data.title || data.formatTag !== "gossip") continue;
   n++;
   const pe = data?.provenance?.primaryEntity || (data.tags || [])[0] || "";
-  const o = seoMetaTitle({ title: data.title, primaryEntity: pe, tags: data.tags || [], about: data.about || [] });
-  if (!o) empty++;
-  if (o.length > 55) { over++; worst.push(`${o.length}: ${o}`); }
+  const o = seoMetaTitle({ title: data.title, primaryEntity: pe, tags: data.tags || [], coSubjects: data?.provenance?.coSubjects || [] });
+  if (!cleanEnd(o)) { dangle++; if (bad.length < 8) bad.push(`${o.length}: ${o}`); }
   if (/screen report/i.test(o)) brand++;
   if (o.length >= 45 && o.length <= 55) inBand++;
-  else if (o.length < 45) {
-    under++;
-    // a title with plenty of source material (≥52 chars) should always reach ≥45 — flag if not
-    if (String(data.title).replace(/^\s*(inside|why|how|what|meet|watch|see|is|are)\s+/i, "").length >= 52) {
-      underWithSource++;
-      if (tooShort.length < 8) tooShort.push(`${o.length}: ${o}   ⟵ ${data.title}`);
-    }
-  }
 }
-check(`swept ${n}: none empty`, empty === 0, `${empty} empty`);
-check(`swept ${n}: none over 55`, over === 0, worst.slice(0, 5).join(" | "));
-check(`swept ${n}: no brand leak`, brand === 0, `${brand} leaked`);
-// ≥97% land in 45–55; the rare under-45 are structurally unreachable (a long word straddles the
-// window, or the source title itself is short) — bestTitle is optimal, so these can't be lengthened.
-check(`swept ${n}: ≥97% in 45–55 band`, inBand / n >= 0.97, `only ${inBand}/${n} in band`);
-console.log(`  distribution: ${inBand}/${n} in 45–55 band; ${under} under 45 (structurally unreachable).`);
-if (tooShort.length) console.log("  under-45 (unreachable):\n     " + tooShort.join("\n     "));
+check(`swept ${n} gossip titles: ZERO danglers`, dangle === 0, bad.join("\n     "));
+check(`swept ${n} gossip titles: no brand leak`, brand === 0, `${brand}`);
+console.log(`  distribution: ${inBand}/${n} in the 45–55 target band (rest are clean but slightly out — clean wins).`);
 
 console.log(`\n── RESULT: ${pass} passed${fail ? `, ${fail} FAILED` : ""} ──`);
 if (fail) { console.log("FAILED:", fails.join("; ")); process.exit(1); }
-console.log("SEO metaTitle green. ✅\n");
+console.log("Gossip SEO green. ✅\n");

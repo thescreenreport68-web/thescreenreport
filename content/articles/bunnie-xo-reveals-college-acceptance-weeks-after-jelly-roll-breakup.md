@@ -11,9 +11,7 @@ date: '2026-07-08T00:01:15.384Z'
 dek: >-
   The 'Dumb Blonde' host is starting a new chapter at Arizona State University,
   but confirms she and the country star still plan to have a baby.
-metaTitle: >-
-  Bunnie Xo Heads to College While Navigating an Unconventional Split from Jelly
-  Roll
+metaTitle: Bunnie Xo Heads to College While Navigating
 metaDescription: >-
   The 'Dumb Blonde' host is starting a new chapter at Arizona State University,
   but confirms she and the country star still plan to have a baby.
@@ -22,8 +20,6 @@ gossipType: breakup
 tags:
   - Bunnie Xo
   - celebrity
-  - breakup
-  - celebrity gossip
 keyTakeaways:
   - >-
     Bunnie Xo announced her acceptance to Arizona State University on July 3 via

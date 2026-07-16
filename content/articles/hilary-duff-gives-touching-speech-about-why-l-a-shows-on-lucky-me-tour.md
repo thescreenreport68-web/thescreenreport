@@ -9,17 +9,16 @@ date: '2026-07-12T04:02:28.002Z'
 dek: >-
   The pop icon reflects on headlining the iconic LA venue where she's seen
   countless shows.
-metaTitle: Hilary Duff's 'What Dreams Are Made Of' Moment at the Kia Forum
+metaTitle: Hilary Duff's 'What Dreams Are Made Of' Moment
 metaDescription: >-
   The pop icon reflects on headlining the iconic LA venue where she's seen
-  countless shows.
+  countless shows. During the show, she gave a speech about the personal
+  significance.
 formatTag: gossip
 gossipType: general
 tags:
   - Hilary Duff
   - music
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     During the show, she gave a speech about the personal significance of

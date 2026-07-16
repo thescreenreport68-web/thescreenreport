@@ -9,17 +9,16 @@ date: '2026-07-11T16:01:29.468Z'
 dek: >-
   The reality star's surprise comeback on the season 28 premiere ended with a
   very quick—and very bizarre—exit.
-metaTitle: Rachel Reilly's Big Brother Return Was a Blink-and-You-Miss-It Affair
+metaTitle: Rachel Reilly's Big Brother Return Was a Blink-and-You-Miss-It
 metaDescription: >-
   The reality star's surprise comeback on the season 28 premiere ended with a
-  very quick—and very bizarre—exit.
+  very quick—and very bizarre—exit. According to a report, she was eliminated in
+  the same.
 formatTag: gossip
 gossipType: general
 tags:
   - Rachel Reilly
   - tv
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Rachel Reilly, 41, returned to *Big Brother* during the season 28 premiere

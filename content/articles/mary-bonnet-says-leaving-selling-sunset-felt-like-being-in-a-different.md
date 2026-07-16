@@ -9,17 +9,16 @@ date: '2026-07-09T10:00:59.642Z'
 dek: >-
   The original cast member opens up about FOMO and the surreal feeling of
   watching her former co-stars film without her.
-metaTitle: Mary Bonnet Navigates a 'Different Universe' After Selling Sunset Exit
+metaTitle: Mary Bonnet Navigates a 'Different Universe'
 metaDescription: >-
   The original cast member opens up about FOMO and the surreal feeling of
-  watching her former co-stars film without her.
+  watching her former co-stars film without her. She remains Vice President at
+  The Oppenheim.
 formatTag: gossip
 gossipType: career
 tags:
   - Mary Bonnet
   - celebrity
-  - career
-  - celebrity gossip
 keyTakeaways:
   - >-
     Mary Bonnet confirmed her contract was not renewed for *Selling Sunset*

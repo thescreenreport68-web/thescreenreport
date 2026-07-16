@@ -8,17 +8,16 @@ date: '2026-07-11T10:01:24.190Z'
 dek: >-
   The reality star and entrepreneur explains her unique approach to teaching her
   children about money and work ethic.
-metaTitle: 'Kristin Cavallari''s Parenting Hack: Kids in Coach, Mom in First Class'
+metaTitle: 'Kristin Cavallari''s Parenting Hack: Kids in Coach, Mom'
 metaDescription: >-
   The reality star and entrepreneur explains her unique approach to teaching her
-  children about money and work ethic.
+  children about money and work ethic. Cavallari made these comments on the July
+  7.
 formatTag: gossip
 gossipType: general
 tags:
   - Kristin Cavallari
   - celebrity
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Kristin Cavallari said on a podcast that her children fly coach while she

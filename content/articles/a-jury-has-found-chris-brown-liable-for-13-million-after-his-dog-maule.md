@@ -9,16 +9,16 @@ date: '2026-07-01T10:44:28.278Z'
 dek: >-
   A jury delivers a massive verdict after the singer's pet allegedly left a
   housekeeper disfigured.
-metaTitle: Chris Brown Faces $13 Million Judgment in Dog Attack Lawsuit
+metaTitle: Chris Brown Faces $13 Million Judgment in Dog Attack
 metaDescription: >-
   A jury delivers a massive verdict after the singer's pet allegedly left a
-  housekeeper disfigured.
+  housekeeper disfigured. The case involved a claim that Brown's dog attacked
+  and disfigured.
 formatTag: gossip
 gossipType: general
 tags:
   - Chris Brown
   - music
-  - general
 keyTakeaways:
   - >-
     A jury verdict in 2026 found Chris Brown liable for $13 million in a civil

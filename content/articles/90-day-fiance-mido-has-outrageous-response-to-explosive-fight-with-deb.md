@@ -8,17 +8,16 @@ date: '2026-07-14T16:01:13.866Z'
 dek: >-
   The reality star refuses to take responsibility after a public blow-up,
   leaving Debby frustrated and her daughter on edge.
-metaTitle: Mido's 'Emotionally Immature' Stance Sparks Concern on '90 Day Fiancé'
+metaTitle: Mido's 'Emotionally Immature' Stance Sparks Concern
 metaDescription: >-
   The reality star refuses to take responsibility after a public blow-up,
-  leaving Debby frustrated and her daughter on edge.
+  leaving Debby frustrated and her daughter on edge. Debby stated Mido ignored
+  her for weeks.
 formatTag: gossip
 gossipType: general
 tags:
   - Mido
   - celebrity
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     On Sunday's episode, Mido refused to accept any blame for a prior fight

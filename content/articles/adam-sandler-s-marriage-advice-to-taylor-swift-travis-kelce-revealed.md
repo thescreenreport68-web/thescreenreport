@@ -9,17 +9,16 @@ date: '2026-07-07T03:59:56.648Z'
 dek: >-
   The 'Happy Gilmore' star officiated the wedding, and Coach Andy Reid just
   spilled the sweet, simple advice he gave.
-metaTitle: Adam Sandler's Simple Marriage Advice for Swift & Kelce Revealed
+metaTitle: Adam Sandler's Simple Marriage Advice for Swift & Kelce
 metaDescription: >-
   The 'Happy Gilmore' star officiated the wedding, and Coach Andy Reid just
-  spilled the sweet, simple advice he gave.
+  spilled the sweet, simple advice he gave. Sandler officiated the star-studded
+  Madison.
 formatTag: gossip
 gossipType: general
 tags:
   - Adam Sandler
   - celebrity
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Chiefs coach Andy Reid revealed Sandler's marriage advice to the couple:

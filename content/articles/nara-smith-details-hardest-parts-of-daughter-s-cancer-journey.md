@@ -8,17 +8,16 @@ date: '2026-07-09T19:59:54.294Z'
 dek: >-
   The influencer opens up about grieving the loss of her toddler's hair—and
   celebrates its return.
-metaTitle: Nara Smith Shares the "Hardest Parts" of Her Daughter's Cancer Journey
+metaTitle: Nara Smith Shares the "Hardest Parts" of Her Daughter's Cancer
 metaDescription: >-
   The influencer opens up about grieving the loss of her toddler's hair—and
-  celebrates its return.
+  celebrates its return. She ended the post by sharing that Whimsy's curls are
+  now returning.
 formatTag: gossip
 gossipType: pregnancy
 tags:
   - Nara Smith
   - celebrity
-  - pregnancy
-  - celebrity gossip
 keyTakeaways:
   - >-
     Nara Smith shared an emotional Instagram post on July 7 about her 2-year-old

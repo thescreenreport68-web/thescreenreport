@@ -11,19 +11,16 @@ date: '2026-07-14T14:01:12.214Z'
 dek: >-
   The actress gushes about her 'inspiring' scene with the icon in the new comedy
   'Gail Daughtry and the Celebrity Sex Pass'.
-metaTitle: >-
-  Zoey Deutch Calls Working with Jennifer Aniston 'One of the Most Surreal
-  Moments of My Life'
+metaTitle: Zoey Deutch Calls Working with Jennifer Aniston
 metaDescription: >-
   The actress gushes about her 'inspiring' scene with the icon in the new comedy
-  'Gail Daughtry and the Celebrity Sex Pass'.
+  'Gail Daughtry and the Celebrity Sex Pass'. Zoey Deutch shared her experience
+  working.
 formatTag: gossip
 gossipType: general
 tags:
   - Zoey Deutch
   - movies
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Zoey Deutch, 31, described working with Jennifer Aniston, 57, on 'Gail

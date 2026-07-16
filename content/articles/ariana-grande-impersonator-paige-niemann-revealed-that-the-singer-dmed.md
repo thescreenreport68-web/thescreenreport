@@ -9,17 +9,16 @@ date: '2026-07-10T15:58:25.095Z'
 dek: >-
   The 'Positions' singer reached out to Paige Niemann with a personal, and
   unexpected, message.
-metaTitle: Ariana Grande Sends a Surprising DM to Her Top Impersonator
+metaTitle: Ariana Grande Sends a Surprising DM to Her Top
 metaDescription: >-
   The 'Positions' singer reached out to Paige Niemann with a personal, and
-  unexpected, message.
+  unexpected, message. The interaction was reported by Pop Crave, confirming the
+  content.
 formatTag: gossip
 gossipType: general
 tags:
   - Paige Niemann
   - celebrity
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Paige Niemann, a popular Ariana Grande impersonator, shared a DM she

@@ -8,7 +8,7 @@ date: '2026-07-03T02:18:39.035Z'
 dek: >-
   The 'Fast & Furious' star opens up about her life-changing 2020 procedure and
   the personal overhaul that gave her the courage to go through with it.
-metaTitle: Jordana Brewster Details Undergoing Brain Surgery While Awake
+metaTitle: Jordana Brewster Details Undergoing Brain Surgery While
 metaDescription: >-
   The 'Fast & Furious' star opens up about her life-changing 2020 procedure and
   the personal overhaul that gave her the courage to go through with it.
@@ -17,7 +17,6 @@ gossipType: general
 tags:
   - Jordana Brewster
   - celebrity
-  - general
 keyTakeaways:
   - >-
     Jordana Brewster underwent awake brain surgery in 2020 for a cavernous

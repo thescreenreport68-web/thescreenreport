@@ -8,17 +8,16 @@ date: '2026-07-13T10:01:14.304Z'
 dek: >-
   The 'Real Housewives of Orange County' star addresses the incident on social
   media, calling it a 'tough learning moment.'
-metaTitle: RHOC's Jennifer Pedranti Confirms Her Son's Role in California Brush Fire
+metaTitle: RHOC's Jennifer Pedranti Confirms Her Son's Role
 metaDescription: >-
   The 'Real Housewives of Orange County' star addresses the incident on social
-  media, calling it a 'tough learning moment.'
+  media, calling it a 'tough learning moment.' Jennifer Pedranti confirmed her
+  son helped.
 formatTag: gossip
 gossipType: general
 tags:
   - Jennifer Pedranti
   - celebrity
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Jennifer Pedranti confirmed her son helped start a 7-acre brush fire in

@@ -10,9 +10,7 @@ date: '2026-07-12T16:01:31.256Z'
 dek: >-
   Patricia Arquette's daughter opens up about the fears that almost kept her
   from the family business—and how her mom is helping her find her footing.
-metaTitle: >-
-  Harlow Jane on Facing Her Family's Acting Legacy: 'I Didn't Want to Be the One
-  That Sucks'
+metaTitle: Harlow Jane on Facing Her Family's Acting Legacy
 metaDescription: >-
   Patricia Arquette's daughter opens up about the fears that almost kept her
   from the family business—and how her mom is helping her find her footing.
@@ -21,8 +19,6 @@ gossipType: general
 tags:
   - Harlow Jane
   - celebrity
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Harlow Jane, 23, is the daughter of actors Patricia Arquette and Thomas

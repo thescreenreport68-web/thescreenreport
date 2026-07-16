@@ -8,17 +8,16 @@ date: '2026-07-13T12:01:57.456Z'
 dek: >-
   TMZ-obtained video reveals a responding cop was a 'Storage Wars' fan, as new
   police reports detail the star's final struggles.
-metaTitle: Body Cam Footage Shows Officer Recognized Darrell Sheets at Death Scene
+metaTitle: Body Cam Footage Shows Officer Recognized Darrell Sheets at Death
 metaDescription: >-
   TMZ-obtained video reveals a responding cop was a 'Storage Wars' fan, as new
-  police reports detail the star's final struggles.
+  police reports detail the star's final struggles. Police reports cite stress,
+  insomnia.
 formatTag: gossip
 gossipType: general
 tags:
   - Darrell Sheets
   - celebrity
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     TMZ-obtained body cam footage shows an Arizona police officer recognized

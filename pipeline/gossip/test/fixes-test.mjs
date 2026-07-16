@@ -34,7 +34,7 @@ console.log("\n=== OWNER-REVIEW FIXES ===\n");
   check("faq empty → backfilled from whatWeDont as Q/A", faq.length === 2 && /\?$/.test(faq[0].q) && !!faq[0].a);
   check("faq present → kept", ensureFaq({ faq: [{ q: "Q?", a: "A." }], whatWeDont: ["x"] }).length === 1);
   const tags = deriveTags({ primaryEntity: "Taylor Frankie Paul" }, {}, "celebrity", "breakup");
-  check("tags derived from entity + category + type", tags.includes("Taylor Frankie Paul") && tags.includes("celebrity") && tags.length <= 6);
+  check("tags = clean keywords (entity + category, NO 'gossip'/'general')", tags.includes("Taylor Frankie Paul") && tags.includes("celebrity") && !tags.some((t) => /gossip|general/i.test(t)) && tags.length <= 6);
 }
 
 // ── confidence badge: a DEVELOPING (monitored) official-record story is NOT blanket CONFIRMED ──

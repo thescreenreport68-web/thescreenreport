@@ -12,14 +12,13 @@ dek: >-
 metaTitle: Ciara Miller Spills the Tea on Her Summer House Return
 metaDescription: >-
   The reality star confirms she's back for Season 11, but she's not in
-  Fiji—she's in the Hamptons.
+  Fiji—she's in the Hamptons. Her future on the show had reportedly been in
+  question due to past.
 formatTag: gossip
 gossipType: general
 tags:
   - Ciara Miller
   - tv
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Ciara Miller confirmed her return to Bravo's *Summer House* for its eleventh

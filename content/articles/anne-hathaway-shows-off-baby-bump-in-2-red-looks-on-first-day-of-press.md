@@ -8,16 +8,16 @@ date: '2026-07-01T10:49:28.278Z'
 dek: >-
   The actress stepped out in New York, and fans are reading into her wardrobe
   and a recent sighting.
-metaTitle: Anne Hathaway's Press Tour Red Carpet Sparks Baby Bump Speculation
+metaTitle: Anne Hathaway's Press Tour Red Carpet Sparks Baby Bump
 metaDescription: >-
   The actress stepped out in New York, and fans are reading into her wardrobe
-  and a recent sighting.
+  and a recent sighting. Anne Hathaway is pregnant and was photographed in New
+  York City.
 formatTag: gossip
 gossipType: pregnancy
 tags:
   - Anne Hathaway
   - celebrity
-  - pregnancy
 keyTakeaways:
   - >-
     Anne Hathaway is pregnant and was photographed in New York City on June 30,

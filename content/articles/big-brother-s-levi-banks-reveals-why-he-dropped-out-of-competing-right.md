@@ -9,17 +9,16 @@ date: '2026-07-11T02:01:23.160Z'
 dek: >-
   The would-be houseguest dropped a bombshell video just before Season 28 began,
   explaining his sudden exit.
-metaTitle: Levi Banks Reveals Why He Backed Out of 'Big Brother' at the Last Minute
+metaTitle: Levi Banks Reveals Why He Backed Out of 'Big Brother'
 metaDescription: >-
   The would-be houseguest dropped a bombshell video just before Season 28 began,
-  explaining his sudden exit.
+  explaining his sudden exit. Levi Banks announced via Instagram he withdrew
+  from *Big.
 formatTag: gossip
 gossipType: general
 tags:
   - Levi Banks
   - tv
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Levi Banks announced via Instagram he withdrew from *Big Brother* Season 28

@@ -8,17 +8,16 @@ date: '2026-07-13T00:00:13.549Z'
 dek: >-
   The supermodel made her first couture runway appearance in four years, closing
   a pivotal show for the fashion house.
-metaTitle: Gigi Hadid Returns to Couture in a Dramatic Feathered Look for Balenciaga
+metaTitle: Gigi Hadid Returns to Couture in a Dramatic Feathered
 metaDescription: >-
   The supermodel made her first couture runway appearance in four years, closing
-  a pivotal show for the fashion house.
+  a pivotal show for the fashion house. Hadid recently attended Taylor Swift's
+  wedding.
 formatTag: gossip
 gossipType: general
 tags:
   - Gigi Hadid
   - celebrity
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     The show marked the debut couture collection for Balenciaga's new creative

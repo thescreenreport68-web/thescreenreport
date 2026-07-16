@@ -14,15 +14,14 @@ dek: >-
 metaTitle: Beyoncé & Blue Ivy Carter Bring the Family Hustle
 metaDescription: >-
   The Carter family took over the Bronx for a surprise performance that had fans
-  and the proud papa cheering.
+  and the proud papa cheering. Beyoncé and Blue Ivy Carter made surprise
+  appearances.
 targetKeyword: Beyoncé
 formatTag: gossip
 gossipType: general
 tags:
   - Beyoncé
   - music
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Beyoncé and Blue Ivy Carter made surprise appearances at Jay-Z's 30th

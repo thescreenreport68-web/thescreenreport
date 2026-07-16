@@ -6,10 +6,14 @@
 //   FIND→MAKE (cloud drip):  node pipeline/gossip/find.mjs                          # fill the backlog
 //                            node pipeline/gossip/gossiprun.mjs --from-find --limit=1   # publish one from it
 //   One-shot local:          node pipeline/gossip/gossiprun.mjs --limit=20             # discover + publish inline
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 import { gossipFind, dequeue } from "./find.mjs";
 import { runGossip } from "./run.mjs";
 import { writeGossipArticle } from "./assemble.mjs";
-import { detectGossipType } from "./writer.mjs";
+import { detectGossipType, LEDE_ORDER } from "./writer.mjs";
+import { loadRecentIndex, isCrossDup } from "./crossDedup.mjs";
 import { routeBySubject } from "./config.gossip.mjs";
 import { openStore } from "./vecStore.mjs";
 import { dedupCheck, recordPublished } from "./dedup.mjs";
@@ -27,6 +31,12 @@ function onePerCategoryPick(topics) {
   }
   return [...byCat.values()];
 }
+
+// Lede-rotation counter (fix #3): persisted in data/gossip so consecutive PUBLISHED articles never open the
+// same way — the round-robin survives across drip ticks (each tick publishes ~1, committing data/gossip).
+const ROT_PATH = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../../data/gossip/rotation.json");
+function readRot() { try { return Number(JSON.parse(fs.readFileSync(ROT_PATH, "utf8")).ledeIndex) || 0; } catch { return 0; } }
+function saveRot(n) { try { fs.mkdirSync(path.dirname(ROT_PATH), { recursive: true }); fs.writeFileSync(ROT_PATH, JSON.stringify({ ledeIndex: n }, null, 2) + "\n"); } catch { /* best-effort */ } }
 
 export async function gossipRun({
   discoverImpl, categorizeImpl, runImpl = runGossip, writeImpl = writeGossipArticle,
@@ -56,6 +66,11 @@ export async function gossipRun({
 
   const report = { mode: fromFind ? "from-find" : "inline", inScope: fromFind ? null : inlineTopics.length, topics: 0, published: [], held: [], blocked: [], skipped: [], rejected: [] };
 
+  // Pre-publish cross-dedup index (ALL lanes' articles from the last 72h) + the lede-rotation counter.
+  // The cross-dedup only runs on the live drip (fromFind); inline/offline runs use fixture topics.
+  const recentIndex = fromFind ? loadRecentIndex({ now }) : [];
+  let rotIdx = readRot();
+
   // In --from-find mode, cap topics PROCESSED per invocation so one tick can't runaway-drain the whole backlog
   // chasing a publish (bounds the cloud tick's wall-clock). Inline mode is already bounded by its fixed list.
   let i = 0;
@@ -76,9 +91,15 @@ export async function gossipRun({
         continue;
       }
     }
+    // Fix #4 — cross-lane 72h fuzzy dup guard (entity+event, not slug equality): never publish the same story twice.
+    if (fromFind) {
+      const xdup = isCrossDup(t, recentIndex, { now });
+      if (xdup) { report.skipped.push({ id: t.id, category: cat, decision: "CROSS_DUP", reason: `same story as ${xdup.slug} (published in last 72h)` }); continue; }
+    }
+    const ledeStyle = LEDE_ORDER[rotIdx % LEDE_ORDER.length]; // fix #3 — rotate the lede so no two open alike
     let r;
     try {
-      r = await runImpl(t, { verify, judge });
+      r = await runImpl(t, { verify, judge, ledeStyle });
     } catch (e) {
       report.blocked.push({ id: t.id, category: cat, status: "ERROR", reason: String(e?.message || e).slice(0, 140) });
       continue;
@@ -102,6 +123,7 @@ export async function gossipRun({
         relatedLinks: (r.article.relatedLinks || []).map((l) => l.slug),
         sources: (r.bundle?.sources || []).map((s) => `${s.outlet}/${s.tier}`), written: out.written, path: out.path,
       });
+      rotIdx++; // advance the lede rotation ONLY on an actual publish, so consecutive live articles differ
     } else if (r.status === "HELD") {
       report.held.push({ id: t.id, category: cat, reason: r.reason });
     } else if (r.status === "REJECTED_THIN") {
@@ -112,6 +134,7 @@ export async function gossipRun({
       report.blocked.push({ id: t.id, category: cat, status: r.status, reason, autoScore: r.auto?.score ?? null });
     }
   }
+  if (!dryRun) saveRot(rotIdx); // persist the lede rotation for the next drip tick
   // Cost telemetry (owner): log the run's EXACT OpenRouter spend (usage.cost is what OpenRouter actually
   // billed per call) + the per-published-article cost, so every tick records its dollars in the run log.
   try {

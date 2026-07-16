@@ -9,17 +9,16 @@ date: '2026-07-09T04:00:59.397Z'
 dek: >-
   The star reveals which episode has her 'dying' as the Prime Video series
   shifts focus to a new couple.
-metaTitle: Ella Bright Gives a Juicy Tease for 'Off Campus' Season 2
+metaTitle: Ella Bright Gives a Juicy Tease for 'Off Campus' Season
 metaDescription: >-
   The star reveals which episode has her 'dying' as the Prime Video series
-  shifts focus to a new couple.
+  shifts focus to a new couple. Bright has a favorite episode so far and calls
+  episode three.
 formatTag: gossip
 gossipType: romance
 tags:
   - Ella Bright
   - tv
-  - romance
-  - celebrity gossip
 keyTakeaways:
   - >-
     Season 2 of 'Off Campus' will focus on the romance between Alli (Mika

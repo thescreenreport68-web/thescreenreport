@@ -10,7 +10,7 @@ dek: >-
   The pop icon and NFL star confirmed their marriage with a press release
   detailing a custom Jonathan Anderson gown and a guest list that reads like a
   who's who.
-metaTitle: 'Taylor Swift & Travis Kelce Say ''I Do'' in a Dior-Couture, MSG-Sized Spectacle'
+metaTitle: Taylor Swift & Travis Kelce Say 'I Do' in a Dior-Couture
 metaDescription: >-
   The pop icon and NFL star confirmed their marriage with a press release
   detailing a custom Jonathan Anderson gown and a guest list that reads like a
@@ -20,7 +20,6 @@ gossipType: general
 tags:
   - Taylor Swift
   - celebrity
-  - general
 keyTakeaways:
   - >-
     Taylor Swift and Travis Kelce married on July 3 at Madison Square Garden in

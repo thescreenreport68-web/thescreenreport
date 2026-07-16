@@ -11,19 +11,16 @@ date: '2026-07-08T06:02:00.426Z'
 dek: >-
   The rock legend performed for the newlyweds and a thousand of their closest
   friends, including high school pals and A-listers.
-metaTitle: >-
-  Stevie Nicks Casts a Spell at Taylor Swift and Travis Kelce's 'Intimate' MSG
-  Wedding
+metaTitle: Stevie Nicks Casts a Spell at Taylor Swift and Travis
 metaDescription: >-
   The rock legend performed for the newlyweds and a thousand of their closest
-  friends, including high school pals and A-listers.
+  friends, including high school pals and A-listers. Stevie Nicks performed live
+  at Taylor.
 formatTag: gossip
 gossipType: general
 tags:
   - Taylor Swift
   - celebrity
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Stevie Nicks performed live at Taylor Swift and Travis Kelce's wedding

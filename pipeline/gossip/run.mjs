@@ -103,7 +103,7 @@ export async function runGossip(topic, {
   verify = false, verifyImpl = verifyGate,
   judge = false, judgeImpl = judgeGossip,
   editorial = true, editorialImpl = editorialReview,
-  maxFix = 3,
+  maxFix = 3, ledeStyle = "scene",
 } = {}) {
   // Stage 3 — receipts (fail-closed). Step 4: corroborate pulls in more outlets so the writer rewrites from a
   // corroborated multi-source bundle, not one thin blurb (fail-safe).
@@ -139,14 +139,14 @@ export async function runGossip(topic, {
   // Stage 5+6 — WRITE, then the SELF-CORRECT loop. The writer fixes ONLY the flagged spots each pass (surgical),
   // keeping the good prose; a full rewrite is the fallback only when a draft is broken top-to-bottom. A hard-stop
   // (minor/intimate-media/HOLD/fabrication-class) is NEVER retried — it stays blocked.
-  let article = await writeImpl({ bundle, frame, topic, model });
+  let article = await writeImpl({ bundle, frame, topic, model, ledeStyle });
   let verifyResult = verify ? await verifyImpl({ article, bundle, model }) : null;
   let report = inspect(article, frame, topic, bundle, verifyResult);
 
   for (let fix = 1; fix <= maxFix && !report.allPass && !report.redLine; fix++) {
     // The writer fixes ONLY the flagged spots (surgical); full rewrite only when a draft is broadly broken.
     const broadlyBroken = (verifyResult && verifyResult.brokenRatio > 0.6) || report.qualityIssues.some((q) => /no body|empty|truncat/i.test(q));
-    article = await writeImpl({ bundle, frame, topic, model, priorArticle: article, issues: report.issues, rewrite: broadlyBroken });
+    article = await writeImpl({ bundle, frame, topic, model, priorArticle: article, issues: report.issues, rewrite: broadlyBroken, ledeStyle });
     verifyResult = verify ? await verifyImpl({ article, bundle, model }) : null; // re-verify the CORRECTED draft
     report = inspect(article, frame, topic, bundle, verifyResult);
   }

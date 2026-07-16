@@ -11,14 +11,13 @@ dek: >-
 metaTitle: Leven Rambin Details Terrifying Surgery Complication
 metaDescription: >-
   The actress shares a harrowing story from her hospital bed, revealing a 'freak
-  accident' during a routine procedure.
+  accident' during a routine procedure. She has been sharing updates on her
+  recovery.
 formatTag: gossip
 gossipType: general
 tags:
   - Leven Rambin
   - celebrity
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Leven Rambin experienced a life-threatening complication when her aorta was

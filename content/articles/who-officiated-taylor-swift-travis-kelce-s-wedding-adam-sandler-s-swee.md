@@ -9,16 +9,16 @@ subcategory: news
 author: alicia-bernard
 date: '2026-07-04T07:59:57.821Z'
 dek: The power couple's 'I do's' came with a very famous friend making it official.
-metaTitle: >-
-  Who Officiated Taylor Swift and Travis Kelce's Wedding? The Sweet Role Is
-  Confirmed
-metaDescription: The power couple's 'I do's' came with a very famous friend making it official.
+metaTitle: Who Officiated Taylor Swift and Travis Kelce's Wedding?
+metaDescription: >-
+  The power couple's 'I do's' came with a very famous friend making it official.
+  Sandler has publicly supported the couple for years and worked with Kelce on
+  *Happy.
 formatTag: gossip
 gossipType: general
 tags:
   - Taylor Swift
   - celebrity
-  - general
 keyTakeaways:
   - Taylor Swift and Travis Kelce were married on July 3.
   - >-

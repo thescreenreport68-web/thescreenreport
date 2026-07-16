@@ -9,7 +9,7 @@ date: '2026-07-09T00:00:58.335Z'
 dek: >-
   The singer and his model girlfriend were photographed enjoying a relaxed
   Italian getaway, sparking fresh fan chatter about their relationship.
-metaTitle: Joe Jonas & Tatiana Gabriela Take a Casual Stroll Through Portofino
+metaTitle: Joe Jonas & Tatiana Gabriela Take a Casual Stroll
 metaDescription: >-
   The singer and his model girlfriend were photographed enjoying a relaxed
   Italian getaway, sparking fresh fan chatter about their relationship.
@@ -18,8 +18,6 @@ gossipType: general
 tags:
   - Joe Jonas
   - celebrity
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Joe recently shared a story about his girlfriend on his podcast, according

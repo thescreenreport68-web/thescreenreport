@@ -10,7 +10,7 @@ import { chat } from "../lib/openrouter.mjs";
 const SYSTEM = `You are a sharp, fast celebrity-gossip writer for The Screen Report — the wit and energy of Page Six and TMZ, written like a smart friend who has the tea. CRAFT (do all of this):
 - Punchy and irreverent with a knowing wink — but tasteful and credible, never mean, sleazy, or moralizing.
 - Short, active sentences; plain vivid verbs; cut every wasted word (if five words work, don't use nine).
-- Open with a CURIOSITY HOOK — a question or an intriguing image — then deliver fast. Skimmable: short paragraphs, varied rhythm.
+- Open with a strong, SPECIFIC lede in the LEDE STYLE you're assigned below (scene / quote-first / fact-first / contrast / question). NEVER use the formula "What happens when…? For [NAME]…" or any recycled question template — vary how you open every time. Then deliver fast. Skimmable: short paragraphs, varied rhythm, and use one or two "## " subheads to break a longer piece into sections.
 - Light, natural gossip idiom is welcome ("sparked rumors", "set tongues wagging", "stepped out", "fans were quick to notice") — sprinkle a little, NEVER stuff; never read like a cliché generator or an AI.
 NON-NEGOTIABLE (trust — these override style). This is a SPECULATION/gossip desk: lively interpretation is the point, but two things are sacred — checkable specifics, and never presenting the unconfirmed as confirmed.
 - CHECKABLE SPECIFICS ARE SACRED (the #1 rule). Every NAME, NUMBER, AGE, DATE, money amount, place, work TITLE, and OUTLET/source ATTRIBUTION must come from the bundle EXACTLY and stay attached to the RIGHT person or thing. Never invent one, never guess one, and NEVER MISPLACE one — do not attribute a quote, number, role, or action to the wrong person, and do not credit the wrong outlet (if the fan reactions came from WABI, say WABI, not WMUR). A misplaced name or number is one of the worst errors you can make.
@@ -40,6 +40,18 @@ const TYPES = {
   general: "TYPE = GENERAL GOSSIP. Lead with the hook, attributed. Give the trigger, a little context, and what's still unconfirmed.",
 };
 
+// LEDE styles (fix #3 — kill the "What happens when…? For NAME…" template fingerprint). One is assigned
+// per article (rotated by the runner) so consecutive articles never open the same way. The order in this
+// object is the rotation order; keep `question` last + rare.
+export const LEDE_STYLES = {
+  scene: "LEDE = SCENE. Open IN THE MOMENT — a vivid, specific image of what happened (the place, the look, the action), taken straight from the bundle. Drop the reader into the scene, then pull back to the news. No question opener.",
+  fact: "LEDE = FACT-FIRST. Open with the hard news in ONE flat, confident declarative sentence — the what + who, attributed — then unpack the context. No question, no throat-clearing, no 'What happens when'.",
+  quote: "LEDE = QUOTE-FIRST. Open on the single most striking VERBATIM quote from the bundle (attributed), then say who said it and why it matters. Use ONLY if a real verbatim quote exists; otherwise open fact-first instead.",
+  contrast: "LEDE = CONTRAST / TWIST. Open on the tension or surprise — what everyone assumed vs. what actually happened, or then-vs-now — then deliver the reveal. No question opener.",
+  question: "LEDE = QUESTION (sparingly). Open on ONE sharp, SPECIFIC question the story answers — but NEVER 'What happens when…?' and NEVER 'For [NAME]…'. A concrete, unique question, answered fast in the next line.",
+};
+export const LEDE_ORDER = ["scene", "fact", "quote", "contrast", "fact", "scene", "question", "contrast"];
+
 // Detect the gossip TYPE from the claim/title (most specific first). Drives the template above.
 export function detectGossipType(topic) {
   const t = `${topic.angle || ""} ${topic.title || ""} ${topic.claim || ""}`.toLowerCase();
@@ -54,7 +66,7 @@ export function detectGossipType(topic) {
   return "general";
 }
 
-export function buildGossipPrompt(bundle, frame, topic, corrections = null) {
+export function buildGossipPrompt(bundle, frame, topic, corrections = null, ledeStyle = "scene") {
   const gtype = detectGossipType(topic);
   const sourceBlock = (bundle.sources || [])
     .map((s, i) => `[S${i + 1}] ${s.outlet}${s.url ? ` (${s.url})` : ""} — tier ${s.tier}\n${(s.text || "").slice(0, 2500)}`)
@@ -72,20 +84,25 @@ ${quoteBlock}
 
 ${TYPES[gtype] || TYPES.general}
 
+LEDE STYLE for THIS article — vary how you open (do NOT default to a question, NEVER "What happens when…? For [NAME]…"):
+${LEDE_STYLES[ledeStyle] || LEDE_STYLES.scene}
+
 FRAMING DIRECTIVE (follow exactly):
 ${frame.writerDirective}
 ${frame.needsDisclaimer ? `\nMANDATORY — include this exact sentence, as its own sentence in the body:\n"${frame.disclaimerText}"` : ""}
 ${corrections ? `\n⚠ FIX THESE FROM YOUR LAST DRAFT (keep the voice + the same facts; attribute any flagged claim, e.g. "according to ${frame.attribution || "the outlet"}", or add the required note): ${corrections}` : ""}
 
 LENGTH: write 450–600 words — IMPORTANT, do not stop short. Keep individual SENTENCES tight, but develop the story FULLY and make it interesting: the trigger, the who/what/when/where, the fan reaction, the what-we-know-vs-what's-unconfirmed, the relevant BACKGROUND and context (prior related events, the people involved, the timeline) — using ONLY facts supported by the bundle (add real, verifiable context, never invented filler). More RELEVANT specifics = a stronger, more engaging story. A rich article, never a caption.
-STRUCTURE: headline = a curiosity hook in present tense (NEVER state an unconfirmed damaging claim as fact in the headline). Hook → what sparked it (attributed) → what we know vs. what's unconfirmed → quick context / why it matters → the denial / other side if any. Pull one punchy line out as the pull-quote.
+STRUCTURE: the DISPLAY headline (title) = a specific present-tense hook that names the subject (NEVER state an unconfirmed damaging claim as fact). Open the BODY with your assigned LEDE STYLE above — never a recycled "What happens when…?" question. Then: what sparked it (attributed) → what we know vs. what's unconfirmed → quick context / why it matters → the denial / other side if any. Use one or two "## " subheads to break up a longer piece. Pull one punchy line out as the pull-quote.
 
 Return STRICT JSON:
 { "title": "...", "dek": "one-line standfirst with a little wit",
-  "body": "markdown article (250–450 words) INCLUDING the mandatory non-confirmation sentence verbatim if required",
+  "metaTitle": "SEARCH title: 45–55 chars, STARTS with the main person's NAME then the hook — a COMPLETE phrase (never cut mid-word / mid-name / mid-quote), no site name. Front-load the name so it wins in Google; may differ from the display title. Every specific must be bundle-supported.",
+  "metaDescription": "SEARCH snippet: 140–160 chars, a teaser that earns the click — the hook PLUS one concrete fact from the story (a name / number / what happened). One or two COMPLETE sentences ending in a period. Must be REWORDED, NOT identical to the dek. Only bundle-supported facts.",
+  "body": "markdown article (250–450 words) INCLUDING the mandatory non-confirmation sentence verbatim if required; use one or two '## ' subheads when it helps",
   "pullQuote": "one short punchy line from the story (a quote or a vivid sentence) for display",
   "keyTakeaways": ["EXACTLY 3 short factual takeaway bullets — REQUIRED, never empty"],
-  "faq": [{"q":"a real question a reader would google about THIS story","a":"a SHORT, REAL factual ANSWER from the bundle"}, "... EXACTLY 3 FAQ — REQUIRED, never empty. Ask questions the article ANSWERS (the who/what/when/where/why of the CONFIRMED facts) and give each a real answer. Do NOT ask about things nobody knows yet or answer with 'not confirmed'/'unknown' — every FAQ must teach the reader something."],
+  "faq": [{"q":"a real question a reader would google about THIS story","a":"a SHORT, REAL factual ANSWER from the bundle"}, "... 2 to 5 FAQ — pick the count by how much the story SUPPORTS (a rich, multi-fact story → 4–5; a thin one → 2), never pad to a fixed number. Ask questions the article ANSWERS (the who/what/when/where/why of the CONFIRMED facts) and give each a real answer. Do NOT ask about things nobody knows yet or answer with 'not confirmed'/'unknown' — every FAQ must teach the reader something."],
   "claims": [{"text":"the claim","sourceQuote":"the verbatim bundle text that supports it"}],
   "_claimsRule": "REQUIRED — self-verify: for EVERY date, number, place name, person name, and work title (album/show/movie/song/book/tour) in the article, add a claims[] entry whose sourceQuote is the EXACT bundle text proving THAT specific attached to THAT thing. If the bundle has no text for a specific, do NOT write that specific.",
   "whatWeKnow": ["confirmed/attributed points — only facts the bundle supports"],
@@ -122,24 +139,24 @@ THE VERIFIED BUNDLE — the ONLY facts and quotes you may use to fix things:
 ${sourceBlock || "(no source text)"}
 
 YOUR DRAFT (fix ONLY the flagged problems below; keep the rest verbatim — and apply each fix in EVERY field it appears: a wrong date in a keyTakeaway or an FAQ answer must be fixed there too, not only in the body):
-${JSON.stringify({ title: priorArticle.title, dek: priorArticle.dek, body: priorArticle.body, pullQuote: priorArticle.pullQuote, keyTakeaways: priorArticle.keyTakeaways, faq: priorArticle.faq, whatWeKnow: priorArticle.whatWeKnow, whatWeDont: priorArticle.whatWeDont, denial: priorArticle.denial }).slice(0, 8000)}
+${JSON.stringify({ title: priorArticle.title, dek: priorArticle.dek, metaTitle: priorArticle.metaTitle, metaDescription: priorArticle.metaDescription, body: priorArticle.body, pullQuote: priorArticle.pullQuote, keyTakeaways: priorArticle.keyTakeaways, faq: priorArticle.faq, whatWeKnow: priorArticle.whatWeKnow, whatWeDont: priorArticle.whatWeDont, denial: priorArticle.denial }).slice(0, 8000)}
 
-PROBLEMS TO FIX (each one, surgically):
+PROBLEMS TO FIX (each one, surgically — and apply each fix to metaTitle/metaDescription too if the flagged specific appears there):
 ${issueList.map((p, i) => `${i + 1}. ${p}`).join("\n") || "(none specified)"}
 ${frame.needsDisclaimer ? `\nKEEP this exact sentence in the body: "${frame.disclaimerText}"` : ""}
 
 Return the FULL corrected article as STRICT JSON, same shape:
-{ "title":"...","dek":"...","body":"...","pullQuote":"...","keyTakeaways":["..."],"faq":[{"q":"...","a":"..."}],
+{ "title":"...","dek":"...","metaTitle":"45–55, name-first, complete","metaDescription":"140–160, teaser + a fact, full sentence","body":"...","pullQuote":"...","keyTakeaways":["..."],"faq":[{"q":"...","a":"..."}],
   "claims":[{"text":"...","sourceQuote":"verbatim bundle text"}],"whatWeKnow":["..."],"whatWeDont":["..."],"denial":null,"statusLabel":"${frame.uiLabel}" }`;
   return { system: CORRECTION_SYS, user };
 }
 
-export async function writeGossip({ bundle, frame, topic, model = "deepseek/deepseek-v3.2", corrections = null, priorArticle = null, issues = null, rewrite = false }) {
+export async function writeGossip({ bundle, frame, topic, model = "deepseek/deepseek-v3.2", corrections = null, priorArticle = null, issues = null, rewrite = false, ledeStyle = "scene" }) {
   // SURGICAL self-correction when we have a prior draft and aren't forcing a rewrite; otherwise a fresh write.
   const useSurgical = priorArticle && !rewrite && (issues || corrections);
   const { system, user } = useSurgical
     ? buildCorrectionPrompt(bundle, frame, topic, priorArticle, issues || corrections)
-    : buildGossipPrompt(bundle, frame, topic, rewrite ? null : corrections);
+    : buildGossipPrompt(bundle, frame, topic, rewrite ? null : corrections, ledeStyle);
   // 2800 tokens: a 450-600-word body + dek + pull-quote + 3 takeaways + FAQ + claims + whatWeKnow/Dont must all fit
   // in the JSON, or the output truncates mid-sentence (the cause of an incomplete published article).
   const { data } = await chat({ model, system, user, json: true, maxTokens: 2800, temperature: useSurgical ? 0.2 : 0.4 });

@@ -8,16 +8,16 @@ date: '2026-07-03T13:33:27.456Z'
 dek: >-
   The TikTok beauty guru is back to brunette, and she's got a message for the
   internet.
-metaTitle: Mikayla Nogueira Ditches Blonde After a Poll of Her Followers
+metaTitle: Mikayla Nogueira Ditches Blonde After a Poll
 metaDescription: >-
   The TikTok beauty guru is back to brunette, and she's got a message for the
-  internet.
+  internet. The change followed a poll she put to her followers, where over
+  10,000 voted.
 formatTag: gossip
 gossipType: feud
 tags:
   - Mikayla Nogueira
   - celebrity
-  - feud
 keyTakeaways:
   - Mikayla Nogueira changed her hair color from blonde to dark brown.
   - >-

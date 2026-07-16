@@ -8,17 +8,16 @@ date: '2026-07-12T02:00:29.938Z'
 dek: >-
   The couple held hands at the couture event in Rome, sparking fresh romance
   buzz.
-metaTitle: Jessica Alba & Danny Ramirez Step Out in Style at Fendi Show
+metaTitle: Jessica Alba & Danny Ramirez Step Out in Style at Fendi
 metaDescription: >-
   The couple held hands at the couture event in Rome, sparking fresh romance
-  buzz.
+  buzz. Jessica Alba and Danny Ramirez were photographed holding hands at the
+  Fendi Couture.
 formatTag: gossip
 gossipType: general
 tags:
   - Jessica Alba
   - celebrity
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Jessica Alba and Danny Ramirez were photographed holding hands at the Fendi

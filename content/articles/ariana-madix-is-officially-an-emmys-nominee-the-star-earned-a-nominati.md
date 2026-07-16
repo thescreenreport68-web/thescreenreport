@@ -9,17 +9,17 @@ date: '2026-07-13T17:59:09.734Z'
 dek: >-
   The 'Vanderpump Rules' alum reportedly scores her first major awards
   nomination, but is it official?
-metaTitle: 'Ariana Madix''s Emmy Nod: Reality Star Turned Awards Contender?'
+metaTitle: 'Ariana Madix''s Emmy Nod: Reality Star Turned Awards'
 metaDescription: >-
   The 'Vanderpump Rules' alum reportedly scores her first major awards
-  nomination, but is it official?
+  nomination, but is it official? Pop Crave reported on July 8, 2026, that
+  Ariana Madix earned.
 formatTag: gossip
 gossipType: general
 tags:
   - Ariana Madix
   - awards
-  - general
-  - celebrity gossip
+  - predictions
 keyTakeaways:
   - >-
     Pop Crave reported on July 8, 2026, that Ariana Madix earned an Emmy

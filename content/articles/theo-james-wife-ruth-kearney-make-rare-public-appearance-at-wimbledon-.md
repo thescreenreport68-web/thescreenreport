@@ -10,19 +10,16 @@ date: '2026-07-14T18:01:26.610Z'
 dek: >-
   The famously low-key couple made a stylish appearance at the tennis finals,
   sparking fan delight.
-metaTitle: >-
-  Theo James and Ruth Kearney Step Out at Wimbledon — A Rare Glimpse of the
-  Private Pair
+metaTitle: Theo James and Ruth Kearney Step Out at Wimbledon
 metaDescription: >-
   The famously low-key couple made a stylish appearance at the tennis finals,
-  sparking fan delight.
+  sparking fan delight. The couple, married for eight years and parents to two
+  children.
 formatTag: gossip
 gossipType: general
 tags:
   - Theo James
   - celebrity
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     The couple, married for eight years and parents to two children, are known

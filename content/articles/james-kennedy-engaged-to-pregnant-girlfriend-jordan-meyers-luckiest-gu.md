@@ -8,16 +8,16 @@ date: '2026-07-01T09:33:16.702Z'
 dek: >-
   The 'Vanderpump Rules' alum popped the question in Italy, capping off a
   whirlwind year.
-metaTitle: James Kennedy Is Engaged and Expecting a Baby With Jordan Meyers
+metaTitle: James Kennedy Is Engaged & Expecting a Baby With Jordan
 metaDescription: >-
   The 'Vanderpump Rules' alum popped the question in Italy, capping off a
-  whirlwind year.
+  whirlwind year. James Kennedy and Jordan Meyers are engaged, as announced on
+  Instagram June.
 formatTag: gossip
 gossipType: general
 tags:
   - James Kennedy
   - celebrity
-  - general
 keyTakeaways:
   - >-
     James Kennedy announced his engagement to Jordan Meyers via Instagram on

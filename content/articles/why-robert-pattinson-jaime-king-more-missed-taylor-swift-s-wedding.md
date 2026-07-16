@@ -11,19 +11,16 @@ date: '2026-07-12T20:02:58.510Z'
 dek: >-
   The 'The Batman sequel sequel' star, the TV host, and the NBA legend all had
   their reasons for skipping the event of the year.
-metaTitle: >-
-  Why Robert Pattinson, Ryan Seacrest, and Charles Barkley Missed Taylor Swift's
-  Wedding
+metaTitle: 'Why Robert Pattinson, Ryan Seacrest, & Charles Barkley'
 metaDescription: >-
   The 'The Batman sequel sequel' star, the TV host, and the NBA legend all had
-  their reasons for skipping the event of the year.
+  their reasons for skipping the event of the year. Over 1,000 guests were
+  confidentially.
 formatTag: gossip
 gossipType: general
 tags:
   - Taylor Swift
   - celebrity
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Robert Pattinson missed the wedding due to filming *The The Batman sequel

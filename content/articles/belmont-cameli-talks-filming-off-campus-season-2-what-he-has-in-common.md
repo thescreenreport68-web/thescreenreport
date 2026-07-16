@@ -11,19 +11,16 @@ date: '2026-07-11T22:01:30.909Z'
 dek: >-
   The actor reveals where production stands and the surprising link he shares
   with 'Heated Rivalry' star Hudson Williams.
-metaTitle: >-
-  Belmont Cameli Spills on 'Off Campus' Season 2 Filming and His Hollywood Hair
-  Connection
+metaTitle: Belmont Cameli Spills on 'Off Campus' Season 2 Filming
 metaDescription: >-
   The actor reveals where production stands and the surprising link he shares
-  with 'Heated Rivalry' star Hudson Williams.
+  with 'Heated Rivalry' star Hudson Williams. Cameli revealed he and 'Heated
+  Rivalry' star.
 formatTag: gossip
 gossipType: general
 tags:
   - Belmont Cameli
   - tv
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Belmont Cameli confirmed filming for 'Off Campus' Season 2 is underway, with

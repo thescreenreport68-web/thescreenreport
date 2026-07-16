@@ -9,17 +9,16 @@ date: '2026-07-06T14:01:08.438Z'
 dek: >-
   The rapper's delayed arrival and short set at a Gilford concert sparks
   frustration, just days after a no-show in Maine.
-metaTitle: Lil Wayne's Late Night in New Hampshire Leaves Fans Wanting More
+metaTitle: Lil Wayne's Late Night in New Hampshire Leaves Fans
 metaDescription: >-
   The rapper's delayed arrival and short set at a Gilford concert sparks
-  frustration, just days after a no-show in Maine.
+  frustration, just days after a no-show in Maine. This incident follows a
+  no-show at a concert.
 formatTag: gossip
 gossipType: career
 tags:
   - Lil Wayne
   - celebrity
-  - career
-  - celebrity gossip
 keyTakeaways:
   - >-
     Lil Wayne arrived two hours late to his concert at the BankNH Pavilion in

@@ -11,19 +11,16 @@ date: '2026-07-06T05:56:59.381Z'
 dek: >-
   The pop icon and the NFL star tied the knot in a star-studded ceremony
   officiated by Adam Sandler.
-metaTitle: >-
-  Taylor Swift and Travis Kelce's Madison Square Garden Wedding: See Who Made
-  the Guest List
+metaTitle: Taylor Swift and Travis Kelce's Madison Square Garden
 metaDescription: >-
   The pop icon and the NFL star tied the knot in a star-studded ceremony
-  officiated by Adam Sandler.
+  officiated by Adam Sandler. Taylor Swift and Travis Kelce married on July 3 at
+  Madison Square.
 formatTag: gossip
 gossipType: career
 tags:
   - Taylor Swift
   - celebrity
-  - career
-  - celebrity gossip
 keyTakeaways:
   - Taylor Swift and Travis Kelce married on July 3 at Madison Square Garden.
   - >-

@@ -11,14 +11,13 @@ dek: >-
 metaTitle: Alix Earle and Lando Norris Spark London Club Run-In
 metaDescription: >-
   The TikTok star and F1 driver were spotted leaving a private London venue,
-  fueling fresh romance rumors.
+  fueling fresh romance rumors. Alix Earle and Lando Norris were spotted leaving
+  The Twenty.
 formatTag: gossip
 gossipType: career
 tags:
   - Alix Earle
   - celebrity
-  - career
-  - celebrity gossip
 keyTakeaways:
   - >-
     Alix Earle and Lando Norris were spotted leaving The Twenty Two private club

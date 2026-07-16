@@ -9,17 +9,16 @@ date: '2026-07-12T14:03:49.466Z'
 dek: >-
   The Kelce family is finally sharing a few details—and one very telling
   word—about the star-studded MSG nuptials.
-metaTitle: Kylie Kelce Calls Taylor and Travis's Wedding 'Incredible'
+metaTitle: Kylie Kelce Calls Taylor and Travis's Wedding
 metaDescription: >-
   The Kelce family is finally sharing a few details—and one very telling
-  word—about the star-studded MSG nuptials.
+  word—about the star-studded MSG nuptials. The wedding reportedly took place
+  July 3 at Madison.
 formatTag: gossip
 gossipType: general
 tags:
   - Kylie Kelce
   - celebrity
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Kylie Kelce described Taylor Swift and Travis Kelce's wedding with one word:

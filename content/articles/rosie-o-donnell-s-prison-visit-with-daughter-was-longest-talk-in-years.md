@@ -10,18 +10,17 @@ date: '2026-07-15T11:59:34.406Z'
 dek: >-
   The actress reveals an emotional four-hour reunion and a major milestone for
   her daughter, Chelsea.
-metaTitle: Rosie O'Donnell's Prison Visit With Daughter Was Their
+metaTitle: Rosie O'Donnell's Prison Visit With Daughter
 metaDescription: >-
   The actress reveals an emotional four-hour reunion and a major milestone for
-  her daughter, Chelsea.
+  her daughter, Chelsea. Chelsea Belle O'Donnell, 28, has been sober for almost
+  two years.
 targetKeyword: Rosie O'Donnell
 formatTag: gossip
 gossipType: general
 tags:
   - Rosie O'Donnell
   - celebrity
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Rosie O'Donnell told Page Six her prison visit with daughter Chelsea was

@@ -10,19 +10,16 @@ date: '2026-07-07T02:00:56.340Z'
 dek: >-
   The comedian celebrated with longtime friends, showing off her recent weight
   loss as she navigates life post-split from Chris Fischer.
-metaTitle: >-
-  Amy Schumer Steps Out in a Blue One-Piece for July 4th, Sparking Chatter About
-  Her 'Happier' Chapter
+metaTitle: Amy Schumer Steps Out in a Blue One-Piece for July 4th
 metaDescription: >-
   The comedian celebrated with longtime friends, showing off her recent weight
-  loss as she navigates life post-split from Chris Fischer.
+  loss as she navigates life post-split from Chris Fischer. Amy Schumer, 45,
+  posted July.
 formatTag: gossip
 gossipType: breakup
 tags:
   - Amy Schumer
   - celebrity
-  - breakup
-  - celebrity gossip
 keyTakeaways:
   - >-
     Amy Schumer, 45, posted July 4th photos on Instagram showing her in a blue

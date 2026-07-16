@@ -10,19 +10,16 @@ date: '2026-07-09T02:00:57.380Z'
 dek: >-
   Comedian Julia Shiplett gave fans a peek at their private celebration for
   Page's role in the epic 'The Odyssey'.
-metaTitle: >-
-  Elliot Page's Girlfriend Julia Shiplett Shares a Witty, Star-Studded Date
-  Night Glimpse
+metaTitle: Elliot Page's Girlfriend Julia Shiplett Shares a Witty
 metaDescription: >-
   Comedian Julia Shiplett gave fans a peek at their private celebration for
-  Page's role in the epic 'The Odyssey'.
+  Page's role in the epic 'The Odyssey'. The pair first went public with their
+  relationship.
 formatTag: gossip
 gossipType: romance
 tags:
   - Elliot Page
   - celebrity
-  - romance
-  - celebrity gossip
 keyTakeaways:
   - >-
     Julia Shiplett shared Instagram photos from a private date night celebrating

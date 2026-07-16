@@ -9,17 +9,16 @@ date: '2026-07-12T17:59:29.415Z'
 dek: >-
   The rocker pulls out of a Canadian festival performance days after sharing a
   raw message about his struggles.
-metaTitle: Yungblud Steps Back from Festival After Candid Mental Health Post
+metaTitle: Yungblud Steps Back from Festival After Candid Mental
 metaDescription: >-
   The rocker pulls out of a Canadian festival performance days after sharing a
-  raw message about his struggles.
+  raw message about his struggles. The festival has offered refunds and
+  expressed support.
 formatTag: gossip
 gossipType: general
 tags:
   - Yungblud
   - celebrity
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Yungblud (Dominic Harrison, 28) has pulled out of the Cowboys Music Festival

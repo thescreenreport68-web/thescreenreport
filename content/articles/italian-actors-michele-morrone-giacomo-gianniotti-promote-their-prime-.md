@@ -9,17 +9,16 @@ date: '2026-07-11T04:01:29.064Z'
 dek: >-
   The '365 Days' star was all smiles at a Prime Video event, fresh off landing a
   major English-language rom-com.
-metaTitle: Michele Morrone Steps Out in Rome with Big News on the Horizon
+metaTitle: Michele Morrone Steps Out in Rome with Big News
 metaDescription: >-
   The '365 Days' star was all smiles at a Prime Video event, fresh off landing a
-  major English-language rom-com.
+  major English-language rom-com. The event was also attended by Giacomo
+  Gianniotti.
 formatTag: gossip
 gossipType: general
 tags:
   - Michele Morrone
   - movies
-  - general
-  - celebrity gossip
 keyTakeaways:
   - The event was also attended by Giacomo Gianniotti and Eugenio Franceschini.
 faq:

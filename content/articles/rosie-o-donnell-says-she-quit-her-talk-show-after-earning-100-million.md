@@ -10,18 +10,17 @@ date: '2026-07-16T02:00:34.634Z'
 dek: >-
   The comedian reveals the exact moment she knew it was time to quit and focus
   on family.
-metaTitle: Rosie O'Donnell Explains the $100 Million Reason She
+metaTitle: Rosie O'Donnell Explains the $100 Million Reason
 metaDescription: >-
   The comedian reveals the exact moment she knew it was time to quit and focus
-  on family.
+  on family. O'Donnell cited a desire to spend more time with her five children
+  as a key.
 targetKeyword: Rosie O'Donnell
 formatTag: gossip
 gossipType: general
 tags:
   - Rosie O'Donnell
   - celebrity
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Rosie O'Donnell told Page Six she decided to end her talk show after

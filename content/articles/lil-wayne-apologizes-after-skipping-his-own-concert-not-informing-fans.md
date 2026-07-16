@@ -9,16 +9,16 @@ date: '2026-07-03T05:23:09.922Z'
 dek: >-
   The rapper was a no-show for his tour kickoff in Maine, leaving a packed
   amphitheater in the lurch late into the night.
-metaTitle: 'Lil Wayne Apologizes After Fans Wait Hours, Only to Be Told to Go Home'
+metaTitle: 'Lil Wayne Apologizes After Fans Wait Hours, Only'
 metaDescription: >-
   The rapper was a no-show for his tour kickoff in Maine, leaving a packed
-  amphitheater in the lurch late into the night.
+  amphitheater in the lurch late into the night. Fans were informed of the
+  cancellation at 11.
 formatTag: gossip
 gossipType: general
 tags:
   - Lil Wayne
   - music
-  - general
 keyTakeaways:
   - 'Lil Wayne skipped his scheduled concert in Bangor, Maine on June 30, 2026.'
   - Fans were informed of the cancellation at 11 p.m. after waiting for hours.

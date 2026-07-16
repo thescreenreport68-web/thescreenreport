@@ -7,15 +7,16 @@ subcategory: news
 author: alicia-bernard
 date: '2026-07-08T10:00:09.732Z'
 dek: Chiefs coach Andy Reid spills on the comedian's heartfelt wedding-day wisdom.
-metaTitle: What Was Adam Sandler's Marriage Advice for Taylor Swift and Travis Kelce?
-metaDescription: Chiefs coach Andy Reid spills on the comedian's heartfelt wedding-day wisdom.
+metaTitle: What Was Adam Sandler's Marriage Advice for Taylor Swift & Travis
+metaDescription: >-
+  Chiefs coach Andy Reid spills on the comedian's heartfelt wedding-day wisdom.
+  The couple married Friday at Madison Square Garden in a ceremony where they
+  wrote.
 formatTag: gossip
 gossipType: general
 tags:
   - Taylor Swift
   - celebrity
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Chiefs coach Andy Reid revealed on CNN that Adam Sandler gave marriage

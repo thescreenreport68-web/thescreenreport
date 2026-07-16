@@ -8,17 +8,16 @@ date: '2026-07-08T22:00:59.974Z'
 dek: >-
   Video shows the 46-year-old podcaster and the 24-year-old 'Calabasas
   Confidential' star locking lips on the Fourth of July.
-metaTitle: Bunnie Xo Spotted Kissing Reality Star Dylan Wolf at Jelly Roll's Bar
+metaTitle: Bunnie Xo Spotted Kissing Reality Star Dylan Wolf
 metaDescription: >-
   Video shows the 46-year-old podcaster and the 24-year-old 'Calabasas
-  Confidential' star locking lips on the Fourth of July.
+  Confidential' star locking lips on the Fourth of July. Wolf stars in the
+  Netflix reality series.
 formatTag: gossip
 gossipType: spotted
 tags:
   - Bunnie Xo
   - celebrity
-  - spotted
-  - celebrity gossip
 keyTakeaways:
   - >-
     Bunnie Xo, 46, was seen kissing 24-year-old reality star Dylan Wolf in video

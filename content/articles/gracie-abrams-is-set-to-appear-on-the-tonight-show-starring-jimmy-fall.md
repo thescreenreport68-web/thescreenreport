@@ -12,14 +12,13 @@ dek: >-
 metaTitle: Is Gracie Abrams Making a Late-Night Pit Stop?
 metaDescription: >-
   A music gossip account reports the singer-songwriter is booked for a July
-  appearance on Jimmy Fallon's couch.
+  appearance on Jimmy Fallon's couch. Pop Crave reported that Gracie Abrams is
+  set to appear.
 formatTag: gossip
 gossipType: general
 tags:
   - Gracie Abrams
   - celebrity
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Pop Crave reports Gracie Abrams is scheduled for 'The Tonight Show Starring

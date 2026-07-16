@@ -12,9 +12,7 @@ dek: >-
   The singer drops her first new music in two years, sparking a celebration of
   her iconic 2006 album and fresh speculation about her mysterious trilogy
   finale.
-metaTitle: >-
-  Beyoncé's 'Morning Dew (Donk)' Starts a Birthday Countdown — But What About
-  Act III?
+metaTitle: Beyoncé's 'Morning Dew (Donk)' Starts a Birthday
 metaDescription: >-
   The singer drops her first new music in two years, sparking a celebration of
   her iconic 2006 album and fresh speculation about her mysterious trilogy
@@ -24,8 +22,6 @@ gossipType: general
 tags:
   - Beyoncé
   - music
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Beyoncé released the single "Morning Dew (Donk)" on July 4, her first new

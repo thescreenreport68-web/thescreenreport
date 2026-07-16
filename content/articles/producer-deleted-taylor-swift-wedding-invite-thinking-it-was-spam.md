@@ -9,17 +9,16 @@ date: '2026-07-12T10:02:45.228Z'
 dek: >-
   Jacknife Lee thought a text from Swift's manager was spam, his wife writes in
   a HuffPost op-ed.
-metaTitle: Music Producer's Wife Reveals He Deleted Taylor Swift's Wedding Invite
+metaTitle: Music Producer's Wife Reveals He Deleted Taylor
 metaDescription: >-
   Jacknife Lee thought a text from Swift's manager was spam, his wife writes in
-  a HuffPost op-ed.
+  a HuffPost op-ed. His wife, Melissa Garner Lee, revealed the story in a
+  HuffPost op-ed.
 formatTag: gossip
 gossipType: general
 tags:
   - Jacknife Lee
   - celebrity
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Jacknife Lee, a music producer who worked on Taylor Swift's song "The Last

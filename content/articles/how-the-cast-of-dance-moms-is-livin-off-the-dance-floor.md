@@ -8,17 +8,16 @@ date: '2026-07-14T04:01:01.951Z'
 dek: >-
   The reality TV alum opens up about the show's 'intense negativity' and where
   she is now, 15 years after its debut.
-metaTitle: Chloe Lukasiak Reflects on the 'Manufactured' Drama of 'Dance Moms'
+metaTitle: Chloe Lukasiak Reflects on the 'Manufactured' Drama
 metaDescription: >-
   The reality TV alum opens up about the show's 'intense negativity' and where
-  she is now, 15 years after its debut.
+  she is now, 15 years after its debut. She described the competition with
+  Maddie Ziegler.
 formatTag: gossip
 gossipType: career
 tags:
   - Chloe Lukasiak
   - celebrity
-  - career
-  - celebrity gossip
 keyTakeaways:
   - >-
     Chloe Lukasiak reflected on her 'Dance Moms' experience in an E! News

@@ -8,17 +8,16 @@ date: '2026-07-05T14:01:22.149Z'
 dek: >-
   A 'Cruel Summer' for some union workers as tight security and NDAs marked the
   star-studded event.
-metaTitle: Were MSG Workers Escorted Out Over Swift-Kelce Wedding Photos?
+metaTitle: Were MSG Workers Escorted Out Over Swift-Kelce Wedding
 metaDescription: >-
   A 'Cruel Summer' for some union workers as tight security and NDAs marked the
-  star-studded event.
+  star-studded event. Many of the 1,000 wedding guests were reportedly required
+  to sign.
 formatTag: gossip
 gossipType: general
 tags:
   - Taylor Swift
   - celebrity
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     At least four union workers were reportedly escorted from MSG for allegedly

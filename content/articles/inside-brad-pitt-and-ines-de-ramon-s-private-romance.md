@@ -8,17 +8,16 @@ date: '2026-07-10T00:01:17.191Z'
 dek: >-
   The couple's relationship status gets a nod from a celebrity insider as they
   step out together.
-metaTitle: 'Brad Pitt and Ines de Ramon: A Public Debut and a Stylist''s Confirmation'
+metaTitle: 'Brad Pitt and Ines de Ramon: A Public Debut'
 metaDescription: >-
   The couple's relationship status gets a nod from a celebrity insider as they
-  step out together.
+  step out together. Celebrity hairstylist Laurie Zanoletti confirmed their
+  relationship.
 formatTag: gossip
 gossipType: romance
 tags:
   - Brad Pitt
   - celebrity
-  - romance
-  - celebrity gossip
 keyTakeaways:
   - >-
     Brad Pitt and Ines de Ramon officially made their public debut as a couple

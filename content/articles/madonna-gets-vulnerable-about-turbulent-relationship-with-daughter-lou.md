@@ -9,16 +9,16 @@ date: '2026-07-03T13:10:15.257Z'
 dek: >-
   The pop icon and her eldest daughter get candid about life in the spotlight on
   a track from Madonna's new album.
-metaTitle: Madonna and Lourdes Leon Sing Through the Strain on New Duet 'The Test'
+metaTitle: Madonna and Lourdes Leon Sing Through the Strain on New
 metaDescription: >-
   The pop icon and her eldest daughter get candid about life in the spotlight on
-  a track from Madonna's new album.
+  a track from Madonna's new album. Madonna and Lourdes Leon have released a
+  duet.
 formatTag: gossip
 gossipType: romance
 tags:
   - Madonna
   - music
-  - romance
 keyTakeaways:
   - >-
     Madonna and Lourdes Leon have released a duet titled "The Test" on the album

@@ -8,17 +8,16 @@ date: '2026-07-14T01:58:11.963Z'
 dek: >-
   A beloved performer's tragic death is confirmed by a close friend, sending
   shockwaves through the theater and TV communities.
-metaTitle: Broadway and 'Marvelous Mrs. Maisel' Actor Josh Grisetti Dies at 44
+metaTitle: Broadway & 'Marvelous Mrs. Maisel' Actor Josh Grisetti
 metaDescription: >-
   A beloved performer's tragic death is confirmed by a close friend, sending
-  shockwaves through the theater and TV communities.
+  shockwaves through the theater and TV communities. Grisetti worked on the
+  Musical Theatre.
 formatTag: gossip
 gossipType: general
 tags:
   - Josh Grisetti
   - celebrity
-  - general
-  - celebrity gossip
 keyTakeaways:
   - Actor Josh Grisetti died by suicide on Friday at the age of 44.
   - >-

@@ -8,17 +8,16 @@ date: '2026-07-11T06:01:31.485Z'
 dek: >-
   Jennifer Pedranti addresses the 'rumblings' after a blaze in Ladera Ranch,
   saying her son is facing 'consequences.'
-metaTitle: Real Housewives Star Confirms Son's Role in California Wildfire
+metaTitle: Real Housewives Star Confirms Son's Role in California
 metaDescription: >-
   Jennifer Pedranti addresses the 'rumblings' after a blaze in Ladera Ranch,
-  saying her son is facing 'consequences.'
+  saying her son is facing 'consequences.' The fire caused no property damage or
+  injuries.
 formatTag: gossip
 gossipType: general
 tags:
   - Jennifer Pedranti
   - celebrity
-  - general
-  - celebrity gossip
 keyTakeaways:
   - 'The fire caused no property damage or injuries, and no arrests were made.'
   - >-

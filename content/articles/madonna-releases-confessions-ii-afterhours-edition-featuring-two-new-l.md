@@ -9,17 +9,16 @@ date: '2026-07-10T22:01:27.934Z'
 dek: >-
   The Queen of Pop serves two new 'Love Sensation' remixes just one week after
   her album's debut.
-metaTitle: 'Madonna Drops a Late-Night Surprise with ''Confessions II: Afterhours'''
+metaTitle: Madonna Drops a Late-Night Surprise
 metaDescription: >-
   The Queen of Pop serves two new 'Love Sensation' remixes just one week after
-  her album's debut.
+  her album's debut. The album is projected to sell over 100,000 units and has
+  the edge.
 formatTag: gossip
 gossipType: general
 tags:
   - Madonna
   - music
-  - general
-  - celebrity gossip
 keyTakeaways:
   - 'Madonna released *Confessions II: Afterhours Edition* on Friday, July 10.'
   - >-
