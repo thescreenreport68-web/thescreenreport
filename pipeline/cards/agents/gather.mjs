@@ -8,7 +8,7 @@ import matter from "gray-matter";
 import { CARDS } from "../config.mjs";
 import { llm } from "../models.mjs";
 import { fetchWithTimeout, htmlToText } from "../lib/util.mjs";
-import { dom, DOMAIN_OWNER, MAJORS, isAggregator, tierFor } from "../../lib/outlets.mjs";
+import { dom, DOMAIN_OWNER, MAJORS, TABLOID, isAggregator, tierFor } from "../../lib/outlets.mjs";
 
 // find our own published article covering this story (shared-stem heuristic, dupGuard-style)
 function ownArticle(story) {
@@ -30,10 +30,11 @@ function ownArticle(story) {
 
 async function fetchArticle(url) {
   try {
-    // FACT sources must be MAJOR outlets (outlets.mjs roster) — a Google-News-rankable blog
-    // must never become a fact source, or the fact gate verifies against poison (audit D1)
+    // aggregators + tabloids never feed facts; other non-major outlets MAY corroborate but
+    // can never carry a card alone (the pass gate below requires ≥2 owners or a MAJOR or our
+    // own article — so a single attacker-rankable blog still can't pass; audit D1 refined)
     const domain = dom(new URL(url).hostname);
-    if (!MAJORS.has(domain) || isAggregator(domain)) return null;
+    if (isAggregator(domain) || TABLOID.has(domain)) return null;
     const r = await fetchWithTimeout(url, { headers: { "User-Agent": "Mozilla/5.0 (TSR fetch)" } }, 12000);
     if (!r.ok) return null;
     const text = htmlToText(await r.text());
