@@ -15,7 +15,7 @@ dek: >-
 metaTitle: Spielberg's 'Disclosure Day' Sparks Split Audience Reaction
 metaDescription: >-
   Audiences are split on Spielberg's 'Disclosure Day.' While some hail it as a
-  compassionate sci-fi masterpiece, others are mocking its failure to produce a
+  compassionate sci-fi masterpiece, others are mocking its failure to produce…
 tags:
   - Steven Spielberg
   - Disclosure Day

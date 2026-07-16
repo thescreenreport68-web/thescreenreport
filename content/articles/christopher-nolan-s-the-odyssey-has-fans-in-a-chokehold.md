@@ -1,5 +1,5 @@
 ---
-title: Christopher Nolan's *The Odyssey* Has Fans In a Chokehold
+title: Christopher Nolan's The Odyssey Has Fans In a Chokehold
 slug: christopher-nolan-s-the-odyssey-has-fans-in-a-chokehold
 category: celebrity
 subcategory: news
@@ -9,7 +9,7 @@ dek: >-
   Nolan's three-hour epic is sending audiences on literal pilgrimages to IMAX
   theaters while the internet wages a very online war over casting,
   authenticity, and who gets to claim myth.
-metaTitle: Christopher Nolan's The Odyssey Sparks Audience & Critic
+metaTitle: Christopher Nolan's The Odyssey Sparks Audience
 metaDescription: >-
   Audiences are deeply divided over Christopher Nolan's 'The Odyssey.' While
   some celebrate its cinematic ambition, others decry it as a cultural betrayal.
@@ -38,7 +38,7 @@ keyTakeaways:
     human-authored art and disdain for what some see as disrespectful
     adaptation.
 faq:
-  - q: How are audiences reacting to *The Odyssey* in theaters?
+  - q: How are audiences reacting to The Odyssey in theaters?
     a: >-
       A significant portion of the audience is reacting with extraordinary
       dedication, traveling internationally to see the film in specific IMAX

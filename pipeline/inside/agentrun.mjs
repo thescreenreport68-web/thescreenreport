@@ -20,7 +20,8 @@ import * as voiceAgent from "./agents/voice.mjs";
 import * as imageAgent from "./agents/image.mjs";
 import * as qa from "./agents/qa.mjs";
 import { writeInsideArticle } from "./assemble.mjs";
-import { loadStore, alreadyPublished, recentDuplicate, recordInsidePublished, parkAngle, parkedTries, clearParked } from "./store.mjs";
+import { loadStore, alreadyPublished, recentDuplicate, recordInsidePublished, parkAngle, parkedTries, clearParked, subjectTokens } from "./store.mjs";
+import { bannedHooksFrom, hookHit } from "./seo.mjs";
 import { ACCEPT_FLOOR, MAX_ATTEMPTS, GATE, DATA_DIR } from "./config.inside.mjs";
 import { cutArticle } from "../lib/cutter.mjs";
 import { dedupeSentences, trimIncomplete } from "../lib/polish.mjs";
@@ -163,12 +164,22 @@ export async function agentRun({
       if (job.synthFail || !job.brief) { hold(job.synthFail || "no brief"); continue; }
 
       // ── WRITER ⇄ QA (correction loop) ──
+      // TITLE-HOOK VARIETY (owner audit: "has fans in a chokehold" ×7): the rolling ledger of recent
+      // titles yields the overused hooks; the writer is told, and a slip demands ONE rewrite before QA.
+      const bannedHooks = bannedHooksFrom(store.published.slice(-20).map((r) => r.title).filter(Boolean));
+      const allowTokens = subjectTokens(`${story.primaryEntity || ""} ${story.parentTitle || ""}`);
       let pass = false, acceptReason = null, corrections = null, prevArticle = null;
       for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
         console.log(`  attempt ${attempt}: writing…`);
-        await withTimeout(writeArticleImpl(job, { corrections, previousArticle: prevArticle }), AGENTS.writer.watchdogMs, `writer ${tag}`);
+        await withTimeout(writeArticleImpl(job, { corrections, previousArticle: prevArticle, bannedHooks }), AGENTS.writer.watchdogMs, `writer ${tag}`);
         if (!job.article?.body) { corrections = "- Return the COMPLETE JSON article."; continue; }
         prevArticle = job.article;
+        const hooked = hookHit(job.article.title, bannedHooks, { allowTokens });
+        if (hooked && attempt < MAX_ATTEMPTS) {
+          corrections = `- TITLE VARIETY: the phrase "${hooked}" is overused in recent titles — rewrite the title (and metaTitle if it echoes it) with a FRESH story-specific hook. Change nothing else.`;
+          console.log(`  ✎ overused hook "${hooked}" — title rewrite demanded`);
+          continue;
+        }
         await withTimeout(qaReviewImpl(job), AGENTS.qa.watchdogMs, `qa ${tag}`);
         console.log(`  qa: score ${job.qa.score}, blocks ${job.qa.hardBlocks.length}, cuts ${job.qa.cutClaims.length}${job.qa.hardBlocks.length ? " :: " + job.qa.hardBlocks.slice(0, 4).join(" | ") : ""}`);
         if (job.qa.pass) { pass = true; break; }

@@ -14,7 +14,7 @@ dek: >-
 metaTitle: Mastodon's New Single Splits Fans Between Grief & Hope
 metaDescription: >-
   Mastodon's new single 'Snakes for Dinner' has sparked a raw and divided fan
-  reaction, as the band's journey through grief and resilience defines their new
+  reaction, as the band's journey through grief and resilience defines…
 tags:
   - Mastodon
   - Snakes for Dinner

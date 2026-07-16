@@ -9,10 +9,11 @@ dek: >-
   The new voyage of 'Moana' is here, and social media had thoughts — a lot of
   them. While some are celebrating a cultural milestone, others are groaning
   over another remake.
-metaTitle: 'Moana Live-Action Divides Fans: Representation vs. Remake'
+metaTitle: 'Moana Live-Action Divides Fans: Representation'
 metaDescription: >-
   Fans are split over Disney's live-action 'Moana,' with many championing its
-  Pacific Islander representation while others dismiss it as another unnecessary
+  Pacific Islander representation while others dismiss it as another
+  unnecessary…
 tags:
   - Moana
   - Live-Action Remake

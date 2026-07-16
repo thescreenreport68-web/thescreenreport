@@ -12,7 +12,7 @@ dek: >-
   Netflix just dropped the new footage, and the romance conflict is clearly far
   from settled. But so far, the internet is more in signal-boost mode than
   meltdown mode.
-metaTitle: 'My Life With the Walter Boys: Season 3 Trailer Teases'
+metaTitle: 'My Life With the Walter Boys: Season 3 Trailer'
 metaDescription: >-
   The Season 3 trailer promises more fallout from Jackie's big love confession,
   though the audience reaction remains surprisingly muted.

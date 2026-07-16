@@ -10,8 +10,8 @@ dek: >-
   box office, and fans are not holding back their thoughts on why.
 metaTitle: Moana vs Toy Story 5 Box Office Sparks Debate
 metaDescription: >-
-  The live-action Moana is underperforming at the box office against Toy Story
-  5, sparking fan debate over Disney's scheduling and a potential Oscar
+  Disney's live-action Moana is getting crushed by Pixar's Toy Story 5 at the
+  box office, and fans are not holding back their thoughts on why.
 tags:
   - Box Office
   - Disney

@@ -11,10 +11,10 @@ dek: >-
   The creators came out swinging in a Reddit AMA, insisting Season 9 proves the
   tank is far from empty. But the internet had thoughts — a lot of them — and
   the fandom is split between hype and hesitation.
-metaTitle: 'Rick and Morty Season 9 Fan Reaction to AMA: Optimism vs.'
+metaTitle: 'Rick and Morty Season 9 Fan Reaction to AMA: Optimism'
 metaDescription: >-
-  The Rick and Morty team's confident Season 9 AMA has fans split. Some are
-  optimistic about new episodes and Evil Morty, while others express frustration
+  The creators came out swinging in a Reddit AMA, insisting Season 9 proves the
+  tank is far from empty.
 tags:
   - Rick and Morty
   - Adult Swim

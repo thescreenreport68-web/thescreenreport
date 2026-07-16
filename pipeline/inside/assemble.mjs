@@ -7,7 +7,8 @@ import path from "node:path";
 import { createRequire } from "node:module";
 import { CONTENT_DIR, INSIDE_FORMAT_TAG, INSIDE_AUTHOR_SLUG, AI_DISCLOSURE, MONITOR_WINDOW_HOURS, FORMS, MAX_EMBEDS, NO_EMBEDS, routeForStory } from "./config.inside.mjs";
 import { norm } from "./reactionFinder.mjs";
-import { seoTitle } from "./seo.mjs";
+import { seoFinish, stripMd } from "./seo.mjs";
+export { seoFinish }; // the lane's ONE SEO finisher lives in ./seo.mjs (owner audit 2026-07-16)
 
 const require = createRequire(import.meta.url);
 const matter = require("gray-matter");
@@ -19,22 +20,6 @@ const slugify = (s) => {
   const cut = full.slice(0, 80);
   return cut.includes("-") ? cut.replace(/-[^-]*$/, "") : cut;
 };
-
-// SEO FINISHER (owner: AVERAGE seo, mechanically guaranteed, METADATA ONLY — never a word of the
-// prose is touched and never a keyword injected). Trims at word boundaries so nothing reads cut.
-const trimAtWord = (str, max) => {
-  const t = (str || "").trim();
-  if (t.length <= max) return t;
-  const cut = t.slice(0, max + 1);
-  const atSpace = cut.lastIndexOf(" ");
-  return (atSpace > max * 0.6 ? cut.slice(0, atSpace) : cut.slice(0, max)).replace(/[\s,;:—–-]+$/, "");
-};
-// metaTitle = a front-loaded SEARCH title, ≤55 chars, NO brand suffix (owner 2026-07-14) — via the
-// shared lib so every lane behaves identically. metaDescription trimmed to 155 (teases the reveal).
-export const seoFinish = ({ metaTitle, title, metaDescription }) => ({
-  metaTitle: seoTitle(metaTitle, title),
-  metaDescription: trimAtWord(metaDescription, 155),
-});
 
 // Headline hygiene (owner audit: a title trailed off "…and the Tributes Are a Masterclass in"). Drop a
 // dangling em-dash tail, and if it still runs long, cut at the last sentence/clause boundary — never
@@ -97,7 +82,9 @@ export function insertInlineEmbeds(body, factBlock, embeds = null) {
 
 export function buildInsideMarkdown({ article, trigger, angle, factBlock, image, embeds = null, dateISO }) {
   const route = routeForStory(trigger);
-  const title = cleanTitle(article.title);
+  // Markdown never ships in plain-text frontmatter (owner audit: readers saw literal *asterisks* in a
+  // title + FAQ answers). Reaction QUOTES are exempt — they're verbatim posts, never restyled.
+  const title = cleanTitle(stripMd(article.title));
   const slug = slugify(title);
   // Sibling inside-articles must not collapse into each other (or the parent) in the homepage's
   // eventSlug dedup — each gets a derived, unique eventSlug; parentEventSlug carries the cluster.
@@ -147,15 +134,16 @@ export function buildInsideMarkdown({ article, trigger, angle, factBlock, image,
     subcategory: route.subcategory,
     author: INSIDE_AUTHOR_SLUG,
     date: dateISO,
-    dek: article.dek || "",
+    dek: stripMd(article.dek) || "",
     ...seoFinish({
       metaTitle: article.metaTitle,
       title: article.title,
-      metaDescription: article.metaDescription || article.dek || "",
+      metaDescription: article.metaDescription,
+      dek: article.dek,
     }),
     tags: article.tags || [],
-    keyTakeaways: article.keyTakeaways || [],
-    faq: (article.faq || []).filter((f) => f?.q && f?.a),
+    keyTakeaways: (article.keyTakeaways || []).map((k) => stripMd(k)),
+    faq: (article.faq || []).filter((f) => f?.q && f?.a).map((f) => ({ q: stripMd(f.q), a: stripMd(f.a) })),
     about: Array.isArray(article.about) ? article.about.filter((e) => e && e.name && e.type) : [],
     formatTag: INSIDE_FORMAT_TAG,
     insideForm: angle.form,
@@ -165,7 +153,7 @@ export function buildInsideMarkdown({ article, trigger, angle, factBlock, image,
     reactions,
     anchorStatement: article.anchorStatement?.speaker && article.anchorStatement?.quote
       ? clean(article.anchorStatement) : undefined,
-    fanConsensus: article.fanConsensus || undefined, // the honest sentiment read, all forms
+    fanConsensus: stripMd(article.fanConsensus) || undefined, // the honest sentiment read, all forms
     tweetIds: NO_EMBEDS ? undefined : (embeds?.tweetIds?.length ? embeds.tweetIds : factBlock.tweetIds.length ? factBlock.tweetIds : undefined),
     instagramUrls: NO_EMBEDS ? undefined : (embeds?.instagramUrls?.length ? embeds.instagramUrls : undefined),
     updatedCount: 0,
@@ -190,7 +178,7 @@ export function buildInsideMarkdown({ article, trigger, angle, factBlock, image,
     }),
     ...(image ? {
       image: image.image,
-      imageAlt: article.imageQuery || `${trigger.primaryEntity}`,
+      imageAlt: stripMd(article.imageQuery) || `${trigger.primaryEntity}`,
       imageCredit: image.credit || "Photo via source",
       imageWidth: image.imageWidth,
       imageHeight: image.imageHeight,

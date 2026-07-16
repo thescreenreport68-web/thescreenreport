@@ -9,11 +9,11 @@ dek: >-
   The first season of Apple TV+'s dark thriller ended with a cliffhanger that
   sent fans into a frenzy — and now the discourse isn't cooling off any time
   soon.
-metaTitle: 'Maximum Pleasure Guaranteed: Finale Cliffhanger Sparks'
+metaTitle: 'Maximum Pleasure Guaranteed: Finale Cliffhanger'
 metaDescription: >-
-  Fans are split on the 'Maximum Pleasure Guaranteed' finale, with some
-  demanding a second season to resolve the cliffhanger while others defend the
-  ending
+  The first season of Apple TV+'s dark thriller ended with a cliffhanger that
+  sent fans into a frenzy — and now the discourse isn't cooling off any time
+  soon.
 tags:
   - Apple TV
   - Tatiana Maslany

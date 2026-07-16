@@ -14,7 +14,7 @@ dek: >-
 metaTitle: 'Sam Neill Death Reaction: Fan Tributes & Peaky Blinders'
 metaDescription: >-
   Fans and co-stars are mourning Sam Neill, celebrating his range from Jurassic
-  Park to Peaky Blinders. The reaction highlights the profound respect for an
+  Park to Peaky Blinders.
 tags:
   - Sam Neill
   - Peaky Blinders
@@ -41,9 +41,9 @@ faq:
   - q: What was Sam Neill's most famous role?
     a: >-
       Sam Neill is globally most famous for playing Dr. Alan Grant in Steven
-      Spielberg's *Jurassic Park* (1993). However, he earned immense critical
+      Spielberg's Jurassic Park (1993). However, he earned immense critical
       acclaim and a new generation of fans for his chilling portrayal of Chief
-      Inspector Campbell in the BBC series *Peaky Blinders*.
+      Inspector Campbell in the BBC series Peaky Blinders.
 about:
   - name: Sam Neill
     type: Person
@@ -99,7 +99,7 @@ reactions:
     quote: 'Rest in peace to our Jurassic legend, Sam Neill.'
 fanConsensus: >-
   Overwhelming admiration for a versatile and deeply skilled actor, with
-  particular praise for making his *Peaky Blinders* villain so despicably
+  particular praise for making his Peaky Blinders villain so despicably
   brilliant, and profound sadness at a loss that feels untimely after his cancer
   remission.
 updatedCount: 0

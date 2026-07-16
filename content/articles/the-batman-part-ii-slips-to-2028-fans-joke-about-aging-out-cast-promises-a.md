@@ -10,10 +10,10 @@ date: '2026-07-15T18:30:45.691Z'
 dek: >-
   Warner Bros. moved the sequel to February 2028, and the internet did what it
   does best — a mix of weary jokes, bitter sighs, and a glimmer of hope.
-metaTitle: 'The Batman Part II Delay: Release Pushed to 2028 as'
+metaTitle: 'The Batman Part II Delay: Release Pushed to 2028'
 metaDescription: >-
-  Robert Pattinson and Colin Farrell promise an 'extraordinary' sequel, but the
-  six-year wait until 2028 has fans joking they'll be old by the time it
+  Warner Bros. moved the sequel to February 2028, and the internet did what it
+  does best — a mix of weary jokes, bitter sighs, and a glimmer of hope.
 tags:
   - The Batman
   - Movie Delays

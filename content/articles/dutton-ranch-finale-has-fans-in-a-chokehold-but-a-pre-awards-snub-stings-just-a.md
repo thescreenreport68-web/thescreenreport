@@ -13,8 +13,8 @@ dek: >-
   that has viewers ecstatic, even as a minor awards snub stirs quiet discontent.
 metaTitle: Fans React to Dutton Ranch Finale & Emmy Snub
 metaDescription: >-
-  The Dutton Ranch season one finale delivered a shocking cliffhanger that fans
-  are calling 'vintage Yellowstone,' though some expressed disappointment over
+  The first season of the Yellowstone spinoff ended with a brutal cliffhanger
+  that has viewers ecstatic, even as a minor awards snub stirs quiet discontent.
 tags:
   - Yellowstone
   - Taylor Sheridan
@@ -75,7 +75,7 @@ reactions:
     quote: >-
       Omg Dutton ranch is fucking awesome ..Madison was pretty good But .. Beth
       and rip are fucking amazing !!!
-  - speaker: A viewer
+  - speaker: Report
     quote: >-
       Fans were devastated when they learned that the Yellowstone spinoff
       series, Dutton Ranch, was snubbed ahead of the September 14 ceremony.

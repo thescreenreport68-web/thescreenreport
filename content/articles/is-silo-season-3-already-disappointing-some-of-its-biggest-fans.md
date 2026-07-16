@@ -12,8 +12,7 @@ dek: >-
 metaTitle: Silo Season 3 Episode 1 Reaction Divides Fans
 metaDescription: >-
   The Silo Season 3 Episode 1 reaction is sharply divided, with some fans
-  calling the new season 'dingue' while others are left disappointed. Here's how
-  the
+  calling the new season 'dingue' while others are left disappointed.
 tags:
   - Silo
   - Apple TV+

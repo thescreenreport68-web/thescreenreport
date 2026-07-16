@@ -14,7 +14,7 @@ dek: >-
 metaTitle: 'G.I. Joe Movie: Fans React to Toy Lines and Crossovers'
 metaDescription: >-
   Fans are largely focused on the G.I. Joe Classified toy line and a Tomb Raider
-  crossover, with less immediate buzz around the new film's Springfield
+  crossover, with less immediate buzz around the new film's Springfield…
 tags:
   - G.I. Joe
   - Action Figures

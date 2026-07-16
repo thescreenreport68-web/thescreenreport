@@ -8,10 +8,10 @@ date: '2026-07-11T16:43:54.193Z'
 dek: >-
   The trailer for Pixar's latest sequel has landed, and the audience is deeply
   divided between heartfelt nostalgia and a weary sense of franchise exhaustion.
-metaTitle: 'Toy Story 5 Reactions: Fans Split Between Tears and Fatigue'
+metaTitle: 'Toy Story 5 Reactions: Fans Split Between Tears'
 metaDescription: >-
-  The reaction to the Toy Story 5 trailer reveals a split fandom. While many are
-  emotionally overwhelmed, others express franchise fatigue and skepticism
+  The trailer for Pixar's latest sequel has landed, and the audience is deeply
+  divided between heartfelt nostalgia and a weary sense of franchise exhaustion.
 tags:
   - Toy Story 5
   - Pixar

@@ -10,7 +10,7 @@ date: '2026-07-16T04:30:31.962Z'
 dek: >-
   The long-awaited trailer for adult Aang is finally here — but fans wasted no
   time turning the conversation into a battle over streaming vs. theaters.
-metaTitle: 'Avatar Aang: The Last Airbender Trailer Sparks'
+metaTitle: 'Avatar Aang: The Last Airbender Trailer'
 metaDescription: >-
   Fans are divided, praising the trailer but furious over the decision to limit
   'Avatar Aang: The Last Airbender' to a streaming release on Paramount+.

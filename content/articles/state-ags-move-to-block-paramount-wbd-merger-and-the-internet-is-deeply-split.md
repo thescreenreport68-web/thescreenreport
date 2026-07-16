@@ -14,7 +14,7 @@ dek: >-
 metaTitle: Paramount-WBD Merger Faces Legal Block from State AGs
 metaDescription: >-
   California and other states are suing to block the Paramount and Warner Bros.
-  Discovery merger, arguing it harms competition. The companies and DOJ say
+  Discovery merger, arguing it harms competition.
 tags:
   - Antitrust
   - Streaming Wars

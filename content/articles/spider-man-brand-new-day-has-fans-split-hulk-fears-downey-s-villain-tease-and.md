@@ -11,7 +11,7 @@ dek: >-
   The upcoming MCU film has sparked a heated debate online. While some are
   thrilled for new crossovers, others fear old characters will be disrespected,
   and Robert Downey Jr.'s tease adds a major new wrinkle.
-metaTitle: 'Spider-Man: Brand New Day: Fans Split on Hulk Fears &'
+metaTitle: 'Spider-Man: Brand New Day: Fans Split on Hulk Fears'
 metaDescription: >-
   Robert Downey Jr. teases playing 'the best villain' while fans voice fears
   over Hulk's treatment and Kevin Feige hints at Yelena's arrival.
@@ -56,8 +56,8 @@ faq:
       Marvel Studios President Kevin Feige has hinted that audiences might see
       Yelena Belova, played by Florence Pugh, "a little bit sooner" than
       expected. While not specifying which project, this has led to widespread
-      speculation that she could make an appearance in *Spider-Man: Brand New
-      Day*.
+      speculation that she could make an appearance in Spider-Man: Brand New
+      Day.
 about:
   - name: 'Spider-Man: Brand New Day'
     type: Movie

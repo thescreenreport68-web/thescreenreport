@@ -14,7 +14,7 @@ dek: >-
 metaTitle: 'Madonna Confessions II Reaction: Fans Celebrate Milestone'
 metaDescription: >-
   Fans are reacting to Madonna's 10th No. 1 album, Confessions II, with euphoric
-  celebration and some pointed questions about originality. Here's how the
+  celebration and some pointed questions about originality.
 tags:
   - Madonna
   - Confessions II
@@ -37,9 +37,9 @@ keyTakeaways:
 faq:
   - q: How many No. 1 albums does Madonna have now?
     a: >-
-      With the debut of *Confessions II* at the top of the Billboard 200,
-      Madonna has now achieved 10 No. 1 albums in her career, a historic
-      milestone that places her among an elite group of musical artists.
+      With the debut of Confessions II at the top of the Billboard 200, Madonna
+      has now achieved 10 No. 1 albums in her career, a historic milestone that
+      places her among an elite group of musical artists.
 about:
   - name: Madonna
     type: Person

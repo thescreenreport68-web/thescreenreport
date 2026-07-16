@@ -14,7 +14,7 @@ dek: >-
 metaTitle: 'Moana Live-Action Audience Reaction: Deeper Disney'
 metaDescription: >-
   Audience reaction to the live-action 'Moana' reveals deeper discontent with
-  Disney's remake approach than with one film's box office, with fans citing
+  Disney's remake approach than with one film's box office, with fans citing…
 tags:
   - Moana
   - Disney

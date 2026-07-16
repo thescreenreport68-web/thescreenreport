@@ -217,6 +217,28 @@ export function reliableProvenance(r, src) {
   return !isOutletSpeaker(r.speaker, src?.domain);
 }
 
+// ── VIEWER vs OUTLET-COPY (owner audit 2026-07-16, the Enola Holmes 3 case: press sentences shipped
+// labeled "A viewer") ────────────────────────────────────────────────────────────────────────────────
+// A quote extracted from an ARTICLE page that reads as the outlet's own third-person summary of the
+// reaction ("Fans are calling…", "Viewers have taken to…", "according to…") is REPORT prose, not a
+// person's own post. It must never wear a viewer label. Reclassified to speaker "Report" — it leaves
+// the fan pool (press copy can't fill an audience floor) and may appear only as a secondary voice.
+// Bias runs the SAFE direction: a real fan post that happens to open "Fans are…" becomes "Report"
+// (harmless), while outlet copy can never become "A viewer" (the accuracy failure). Social-source
+// posts are exempt — the whole text IS the person's own words.
+export const reportLike = (text) => {
+  const t = String(text || "").trim();
+  return (
+    (/^(fans|viewers|audiences|many|some|several|social media|the internet|users|people|critics)\b/i.test(t) &&
+      /\b(are|were|have|has|took to|flooded|reacted|responded|praised|slammed|criticized|criticised|called|hailed|mourned|celebrated|expressed|voiced|shared|noted|pointed out|wasted no time)\b/i.test(t.slice(0, 90))) ||
+    /\b(according to|in a statement|told reporters|the outlet|reported that|per the report|a source close)\b/i.test(t)
+  );
+};
+export const reclassifyReport = (r, src) =>
+  r?.speakerType === "fan" && !isSocialSrc(src) && reportLike(r.quote)
+    ? { ...r, speaker: "Report", speakerType: "report" }
+    : r;
+
 // FREE-MODE MEDIA FILTER (owner review of the Toy Story 5 run, 2026-07-11: "the quotes taken from X and
 // media are the issue — we want PEOPLE, not media"). In free mode the article's spine is ordinary people
 // plus the work's OWN creators (a director/actor/musician who made it). A professional CRITIC / reviewer /
@@ -439,7 +461,8 @@ export async function harvestReactions(trigger, angle, {
   const recompute = () => {
     const trusted = raw
       .filter((r) => reliableProvenance(r, withText[r.sourceIdx]))
-      .map((r) => ({ ...r, quote: trimScar(r.quote, withText[r.sourceIdx]?.text) }));
+      .map((r) => ({ ...r, quote: trimScar(r.quote, withText[r.sourceIdx]?.text) }))
+      .map((r) => reclassifyReport(r, withText[r.sourceIdx])); // press prose never wears a viewer label
     passed = dedupe(wall(trusted, withText));
     ({ named, fans } = split(passed));
   };

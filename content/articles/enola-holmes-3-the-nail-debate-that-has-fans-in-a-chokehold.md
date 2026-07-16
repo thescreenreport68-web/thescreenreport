@@ -10,9 +10,8 @@ dek: >-
   period-accurate fingernails, and social media had thoughts—a lot of them.
 metaTitle: Enola Holmes 3 Nail Backlash Sparks Period Accuracy Debate
 metaDescription: >-
-  Millie Bobby Brown's response to criticism over her modern nails in Enola
-  Holmes 3 has divided fans, sparking a larger conversation about period
-  accuracy
+  The latest mystery for Enola Holmes fans isn't a whodunit—it's a war over
+  period-accurate fingernails, and social media had thoughts—a lot of them.
 tags:
   - Enola Holmes
   - Netflix
@@ -78,7 +77,7 @@ reactions:
     quote: >-
       Watching Enola Holmes 3 and someone tell the English they can’t pull off
       lip fillers.
-  - speaker: A viewer
+  - speaker: Report
     date: '2026-07-05'
     quote: >-
       Some Netflix viewers have been left distracted by what they say is a

@@ -12,8 +12,8 @@ dek: >-
   tear-jerking sisterhood feels and eye-rolls at its predictable plot.
 metaTitle: 'Voicemails for Isabelle: Audience Split Over Taylor'
 metaDescription: >-
-  Director Leah McKendrick packed the film with Taylor Swift songs and a focus
-  on female friendship, but viewers are split between finding it heartwarming or
+  Leah McKendrick’s new Netflix rom-com is splitting the internet between
+  tear-jerking sisterhood feels and eye-rolls at its predictable plot.
 tags:
   - Netflix
   - Romantic Comedy

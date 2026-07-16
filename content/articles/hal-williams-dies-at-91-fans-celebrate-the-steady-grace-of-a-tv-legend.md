@@ -45,13 +45,13 @@ faq:
   - q: What was Hal Williams best known for?
     a: >-
       Hal Williams was best known for playing Officer Smitty on the classic
-      sitcom *Sanford and Son* and Lester Jenkins on *227*. He also had a
-      memorable role as Sergeant Ross in the film *Private Benjamin* and worked
-      consistently as a character actor for decades.
+      sitcom Sanford and Son and Lester Jenkins on 227. He also had a memorable
+      role as Sergeant Ross in the film Private Benjamin and worked consistently
+      as a character actor for decades.
   - q: Was Hal Williams still acting recently?
     a: >-
       Yes. Fans have pointed out that Hal Williams made a guest appearance on
-      the television series *Elsbeth* just last year, demonstrating that he
+      the television series Elsbeth just last year, demonstrating that he
       remained engaged with his craft well into his 90s.
 about:
   - name: Hal Williams

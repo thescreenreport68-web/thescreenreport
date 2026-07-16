@@ -16,7 +16,7 @@ dek: >-
 metaTitle: 'Barbara Ling Dies: Fans Mourn Oscar-Winning Production'
 metaDescription: >-
   Barbara Ling, the Oscar-winning production designer for 'Once Upon a Time in
-  Hollywood,' has died at 73. Fans are sharing tributes to her work on 'Batman
+  Hollywood,' has died at 73.
 tags:
   - Barbara Ling
   - Production Design

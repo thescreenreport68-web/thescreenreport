@@ -9,11 +9,11 @@ dek: >-
   The Dark Knight's return is now set for February 2028, and the internet went
   into full meltdown over the wait — but a fresh glimpse of Robert Pattinson has
   a few voices crying for patience.
-metaTitle: 'The Batman 2: Fan Reaction to 2028 Delay & New'
+metaTitle: ‘The Batman 2’ Delayed to 2028 — Fans Are Groaning
 metaDescription: >-
   Fans react to 'The Batman 2' being delayed to February 2028, with many
   expressing frustration at the wait while others are excited by new footage of
-  Robert
+  Robert…
 tags:
   - The Batman
   - Sequel

@@ -12,7 +12,7 @@ dek: >-
 metaTitle: 'Wes Anderson Hollywood Bowl Tribute: Fan & Star Reactions'
 metaDescription: >-
   Fans and stars react to the Wes Anderson Hollywood Bowl tribute concert, with
-  Jackson Browne, Beck, and Bill Murray celebrating the director's iconic
+  Jackson Browne, Beck, and Bill Murray celebrating the director's iconic…
 tags:
   - Wes Anderson
   - Hollywood Bowl
@@ -29,7 +29,7 @@ keyTakeaways:
     "another actor" in his films.
   - >-
     Jackson Browne expressed deep gratitude to Anderson for resurrecting his
-    song "These Days" through *The Royal Tenenbaums*, a film Anderson said he
+    song "These Days" through The Royal Tenenbaums, a film Anderson said he
     built around the song's spirit.
   - >-
     Audience reactions were overwhelmingly positive, praising the star-studded
@@ -43,7 +43,7 @@ faq:
       Jackson Browne expressed deep gratitude, stating, "I'm indebted to Wes for
       having discovered this song and giving it this life." He was referring to
       his song "These Days," which found a massive new audience after being
-      featured in Anderson's film *The Royal Tenenbaums*.
+      featured in Anderson's film The Royal Tenenbaums.
   - q: Who performed at the Wes Anderson Hollywood Bowl tribute?
     a: >-
       The star-studded lineup included Beck, Jackson Browne, Jim James, Karen O,

@@ -12,7 +12,7 @@ dek: >-
 metaTitle: Tributes Flow for Actor Sam Neill After Death at 78
 metaDescription: >-
   Following the death of Sam Neill at age 78, fans, fellow actors, and political
-  leaders are sharing heartfelt tributes to the Jurassic Park star
+  leaders are sharing heartfelt tributes to the Jurassic Park star…
 tags:
   - Sam Neill
   - Obituary

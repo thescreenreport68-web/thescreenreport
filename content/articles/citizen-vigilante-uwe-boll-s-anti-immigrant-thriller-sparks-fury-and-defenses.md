@@ -12,10 +12,10 @@ dek: >-
   landlord who kills immigrants, has ignited a firestorm. The reaction is deeply
   polarized, with Elon Musk's amplification and Hammer's public disgust adding
   fuel to the flames.
-metaTitle: 'Citizen Vigilante: Armie Hammer, Uwe Boll Film Sparks'
+metaTitle: 'Citizen Vigilante: Armie Hammer, Uwe Boll Film'
 metaDescription: >-
-  Uwe Boll's 'Citizen Vigilante' starring Armie Hammer has split audiences.
-  While some defend it as a blunt thriller, critics and many viewers condemn its
+  Uwe Boll's return with 'Citizen Vigilante,' starring Armie Hammer as a
+  landlord who kills immigrants, has ignited a firestorm.
 tags:
   - Uwe Boll
   - Armie Hammer

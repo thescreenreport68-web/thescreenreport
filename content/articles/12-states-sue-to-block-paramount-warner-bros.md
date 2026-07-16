@@ -12,8 +12,7 @@ dek: >-
 metaTitle: Paramount-Warner Bros. Merger Lawsuit Sparks Fierce Debate
 metaDescription: >-
   A coalition of 12 state attorneys general is suing to block the
-  Paramount-Warner Bros. merger. Read the divided fan and expert reactions over
-  whether the
+  Paramount-Warner Bros. merger.
 tags:
   - antitrust
   - streaming wars

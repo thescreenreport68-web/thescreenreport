@@ -12,9 +12,8 @@ dek: >-
   has fans quietly taking notes on what it means to leave a mark.
 metaTitle: Sam Neill Death Reactions Contrasted With Lindsey Graham
 metaDescription: >-
-  Audience reactions to the death of Sam Neill at 78 have been overwhelmingly
-  warm, but a striking discourse has emerged, contrasting his legacy with that
-  of
+  The actor's death sparked a flood of love — and an unavoidable comparison that
+  has fans quietly taking notes on what it means to leave a mark.
 tags:
   - Sam Neill
   - Obituary

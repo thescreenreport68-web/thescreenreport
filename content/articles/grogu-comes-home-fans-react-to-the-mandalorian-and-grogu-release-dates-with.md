@@ -14,7 +14,7 @@ dek: >-
 metaTitle: Fans React to Mandalorian & Grogu Home Video Release
 metaDescription: >-
   Fans share their heartfelt and sometimes critical reactions to the home video
-  release dates for 'The Mandalorian and Grogu,' from Sigourney Weaver's love
+  release dates for 'The Mandalorian and Grogu,' from Sigourney Weaver's love…
 tags:
   - Star Wars
   - The Mandalorian

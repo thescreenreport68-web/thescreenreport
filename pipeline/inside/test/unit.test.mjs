@@ -339,18 +339,91 @@ await check("repairBodyQuotes heals markdown-inside-quote and snaps a unique pre
   assert.ok(a.body.includes("\u201csomething nobody ever posted anywhere at all here\u201d"), "unanchored span left for the wall");
 });
 
-// ── SEO finisher (metadata only, never prose) ────────────────────────────────────────────────────
+// ── SEO finisher (metadata only, never prose) — THE one implementation, owner audit 2026-07-16 ────
 console.log("— seo finisher —");
-await check("meta title/description trimmed at word boundaries to average-SEO lengths", () => {
-  const long = "Fans react to the global casting search for the live-action Naruto movie, with excitement over director Destin Daniel Cretton and creator Masashi Kishimoto's miracle quote, alongside some classic anime adaptation skepticism.";
-  const out = seoFinish({ metaTitle: "A Very Long Meta Title That Would Overflow The Google SERP Display Limit Badly", metaDescription: long });
-  assert.ok(out.metaTitle.length <= 60, `title ${out.metaTitle.length}`);
-  assert.ok(!/\s$/.test(out.metaTitle) && !out.metaTitle.endsWith("-"), "clean tail");
-  assert.ok(out.metaDescription.length <= 155, `desc ${out.metaDescription.length}`);
-  assert.ok(long.startsWith(out.metaDescription.slice(0, 40)), "prefix preserved — nothing rewritten");
-  const short = seoFinish({ metaTitle: "Short Title", metaDescription: "Short description." });
-  assert.equal(short.metaTitle, "Short Title");
-  assert.equal(short.metaDescription, "Short description.");
+await check("metaTitle never ships a dangling-verb/fragment cut (the '…Sparks' / '…Teases' audit cases)", async () => {
+  const { metaTitleFor, endsClean } = await import("../seo.mjs");
+  // the exact live failures: cuts that ended on a transitive verb
+  const t1 = metaTitleFor({ metaTitle: "Maximum Pleasure Guaranteed: Finale Cliffhanger Sparks", title: "Maximum Pleasure Guaranteed Finale Has Fans in Shock Over the Cliffhanger Ending" });
+  assert.ok(!/\b(sparks|teases)$/i.test(t1), `no dangling verb: "${t1}"`);
+  assert.ok(endsClean(t1), `ends clean: "${t1}"`);
+  const t2 = metaTitleFor({ metaTitle: "My Life With the Walter Boys: Season 3 Trailer Teases", title: "My Life With the Walter Boys Season 3 Trailer Puts the Love Triangle Center Stage" });
+  assert.ok(!/\bteases$/i.test(t2) && endsClean(t2), `"${t2}"`);
+  // "Delay & New" class — never end on a dangling modifier either
+  const t3 = metaTitleFor({ metaTitle: "The Batman 2: Fan Reaction to 2028 Delay & New", title: "The Batman Part II Delay Pushes Release to 2028 as Fans Groan" });
+  assert.ok(!/\b(new|&)$/i.test(t3) && endsClean(t3), `"${t3}"`);
+  assert.ok([t1, t2, t3].every((t) => t.length <= 65), "all within the 65 ceiling");
+});
+await check("metaTitle keeps a complete 56–65 clause over a fragment; never splits a name; never orphans a quote", async () => {
+  const { metaTitleFor, quotesBalanced } = await import("../seo.mjs");
+  // a crafted 57-char complete clause ships whole (render honors ≤65 verbatim)
+  const whole = "Zooey Deschanel: 'New Girl' Cast Fought for Lamorne Morris";
+  assert.equal(metaTitleFor({ metaTitle: whole, title: "Zooey Deschanel Says New Girl Cast Fought to Get Lamorne Morris on the Show" }), whole);
+  // never cut inside a proper-name run
+  const t = metaTitleFor({ metaTitle: "", title: "George Lucas Tells Fans the Future of Movies Belongs to Artificial Intelligence Tools Now" });
+  assert.ok(!/\bArtificial$/.test(t), `name/compound not split: "${t}"`);
+  assert.ok(quotesBalanced(t), "quotes balanced");
+  // an in-band clean crafted metaTitle is used untouched
+  const good = "Dave Kendall: '120 Minutes' Host Mourned by MTV Fans";
+  assert.equal(metaTitleFor({ metaTitle: good, title: "Dave Kendall, the MTV VJ Who Made Outsiders Feel Seen, Has Died" }), good);
+});
+await check("metaDescription: sentence-boundary cuts, no silent mid-sentence chops, ellipsis only when unavoidable", async () => {
+  const { metaDescriptionFor } = await import("../seo.mjs");
+  // over-length → cut at the LAST FULL SENTENCE, no ellipsis
+  const twoSent = "Early reactions to the finale reveal a fandom split straight down the middle over the cliffhanger. Some are calling it the boldest ending of the year while others want a rewrite immediately and loudly.";
+  const d1 = metaDescriptionFor({ metaDescription: twoSent });
+  assert.ok(d1.endsWith("cliffhanger."), `sentence cut: "${d1}"`);
+  assert.ok(d1.length <= 160 && !d1.endsWith("…"), "no ellipsis when a sentence boundary works");
+  // ≤160 but chopped mid-thought with a usable inner sentence → recovers the full sentence
+  const chopped = "Fans are split over the new trailer and its love-triangle focus, with supporters loving the drama and critics calling it recycled. Others simply want the";
+  const d2 = metaDescriptionFor({ metaDescription: chopped, dek: "Fans are split over the new trailer and its love-triangle focus. Supporters love the drama; critics call it recycled." });
+  assert.ok(/[.!?]$/.test(d2) && !/\bthe$/.test(d2), `complete: "${d2}"`);
+  // one long unbreakable sentence → word-boundary + ellipsis (the unavoidable case)
+  const oneLong = "Fans viewers and longtime devotees of the franchise spent the entire weekend arguing about whether the surprise casting reveal was a stroke of genius or a desperate nostalgia play designed to paper over a thin script";
+  const d3 = metaDescriptionFor({ metaDescription: oneLong });
+  assert.ok(d3.endsWith("…") && d3.length <= 160, `ellipsis fallback: "${d3}"`);
+  // in-band complete input ships untouched
+  assert.equal(metaDescriptionFor({ metaDescription: "Short description." }), "Short description.");
+});
+await check("stripMd removes emphasis/links/code from plain-text fields (the *The Odyssey* / *120 Minutes* leaks)", async () => {
+  const { stripMd } = await import("../seo.mjs");
+  assert.equal(stripMd("George Lucas Says AI Is the Future — and *The Odyssey* Proves It"), "George Lucas Says AI Is the Future — and The Odyssey Proves It");
+  assert.equal(stripMd("He hosted *120 Minutes* for years."), "He hosted 120 Minutes for years.");
+  assert.equal(stripMd("**Bold claim** and [a link](https://x.com) and `code`"), "Bold claim and a link and code");
+  assert.equal(stripMd("2*3 equals 6 and 5*4 is 20"), "2*3 equals 6 and 5*4 is 20", "math asterisks untouched");
+});
+await check("hook-variety ledger: repeated hooks banned, entity phrases allowed, writer list capped", async () => {
+  const { bannedHooksFrom, hookHit } = await import("../seo.mjs");
+  const recent = [
+    "Scary Movie 2026 Has Fans in a Chokehold But Not Everyone Agrees",
+    "Voicemails for Isabelle Has Fans in a Chokehold and Split",
+    "G.I. Joe Fans Are Wasting No Time on the Toys",
+    "The Internet Had Thoughts About the Finale",
+  ];
+  const hooks = bannedHooksFrom(recent);
+  assert.ok(hooks.some((h) => h.includes("in a chokehold")), "static + dynamic chokehold banned");
+  assert.ok(hookHit("Silo Season 3 Has Fans in a Chokehold Again", hooks), "repeat caught");
+  assert.equal(hookHit("Silo Season 3 Splits Its Most Loyal Viewers", hooks), null, "fresh title passes");
+  // a hook that is purely the story's own entity tokens is allowed (follow-ups are dedup's job)
+  const entHooks = ["the walter boys"];
+  assert.equal(hookHit("My Life With the Walter Boys Gets a Surprise Renewal", entHooks, { allowTokens: new Set(["walter", "boys", "life"]) }), null);
+});
+await check("reportLike + reclassifyReport: press prose never wears a viewer label (Enola Holmes 3 case)", async () => {
+  const { reportLike, reclassifyReport } = await import("../reactionFinder.mjs");
+  // outlet-summary sentences → report
+  assert.ok(reportLike("Fans are calling the nail polish detail a period-accuracy problem"), "third-person press prose");
+  assert.ok(reportLike("Viewers have taken to social media to voice their frustration"), "press prose 2");
+  assert.ok(reportLike("According to the report, the backlash started within hours"), "attribution marker");
+  // a real first-person fan post → NOT report
+  assert.ok(!reportLike("I need this movie right now, June cannot come soon enough!"), "fan post passes");
+  const pageSrc = { domain: "screenrant.com", tier: "major" };
+  const socialSrc = { domain: "social", owner: "social", tier: "social" };
+  const pressRow = { speakerType: "fan", speaker: "", quote: "Fans are calling the detail historically impossible and demanding answers" };
+  const out = reclassifyReport(pressRow, pageSrc);
+  assert.equal(out.speaker, "Report");
+  assert.equal(out.speakerType, "report");
+  // the same text from a REAL social post keeps its viewer status (it IS someone's own words)
+  assert.equal(reclassifyReport(pressRow, socialSrc).speakerType, "fan");
 });
 await check("fewer than 2 FAQs → fixable seo-faq correction, never a hard hold", async () => {
   const art = fakeArticle({ form: "audience-reaction" });
@@ -829,18 +902,18 @@ await check("recentDuplicate: catches a same-event re-report under a different h
   assert.equal(recentDuplicate(stale, batmanReReport, { now }), null, "outside 48h → not flagged");
 });
 await check("seoTitle: 45–55 range — strip brand, prefer an in-range value, fall back to the headline when the model is too short, hard-cap 55", async () => {
-  const { seoTitle, stripBrand } = await import("../seo.mjs");
+  const { metaTitleFor, stripBrand, endsClean } = await import("../seo.mjs");
   assert.equal(stripBrand("Moana Live-Action Divides Fans — The Screen Report"), "Moana Live-Action Divides Fans");
-  // model metaTitle already in [45,55] → kept as-is
+  // model metaTitle already in [45,55] and clean → kept as-is
   const good = "Zooey Deschanel: New Girl Cast Fought for Lamorne";
   assert.ok(good.length >= 45 && good.length <= 55, `fixture in range (${good.length})`);
-  assert.equal(seoTitle(good, "Zooey Deschanel Says New Girl Cast Fought to Get Lamorne Morris"), good);
-  // model too SHORT (<45) → fall back to the fuller headline (never ship an 18-char title), still ≤55
-  const out = seoTitle("Moana Divides Fans", "Moana Live-Action Has the Internet Split Down the Middle Over the Remake");
-  assert.ok(out.length > 30 && out.length <= 55, `short model → headline: "${out}" (${out.length})`);
-  // both long → hard-capped at 55 at a word boundary, never over, never mid-word
-  const long = seoTitle("", "State AGs Move to Block the Paramount WBD Merger and the Internet Is Deeply Split");
-  assert.ok(long.length <= 55 && !long.endsWith(" "), `capped 55 clean: "${long}" (${long.length})`);
+  assert.equal(metaTitleFor({ metaTitle: good, title: "Zooey Deschanel Says New Girl Cast Fought to Get Lamorne Morris" }), good);
+  // model too SHORT (<45) → fall back to the fuller headline (never ship an 18-char title), ≤65
+  const out = metaTitleFor({ metaTitle: "Moana Divides Fans", title: "Moana Live-Action Has the Internet Split Down the Middle Over the Remake" });
+  assert.ok(out.length >= 45 && out.length <= 65 && endsClean(out), `short model → headline: "${out}" (${out.length})`);
+  // both long → clean in-band cut, never over 65, never a dangler
+  const long = metaTitleFor({ metaTitle: "", title: "State AGs Move to Block the Paramount WBD Merger and the Internet Is Deeply Split" });
+  assert.ok(long.length <= 65 && endsClean(long), `clean cut: "${long}" (${long.length})`);
 });
 await check("unwrapQuote snaps a framed outlet quote to the person's own words (kills nested-quote card)", () => {
   // the exact card #2 bug: outlet framing + a nested quotation

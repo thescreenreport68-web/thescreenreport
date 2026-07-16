@@ -14,7 +14,7 @@ dek: >-
 metaTitle: George Lucas AI Stance Sparks Heated Fan & Creator Debate
 metaDescription: >-
   George Lucas sparked a major debate by championing AI as the future of film
-  and dismissing fan influence. The reaction from fans and fellow creators like
+  and dismissing fan influence.
 tags:
   - George Lucas
   - Artificial Intelligence

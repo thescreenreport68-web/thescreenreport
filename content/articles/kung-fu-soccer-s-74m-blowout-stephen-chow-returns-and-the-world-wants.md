@@ -11,7 +11,7 @@ dek: >-
 metaTitle: Stephen Chow's Kung Fu Soccer Box Office Hit Sparks Global
 metaDescription: >-
   Stephen Chow's 'Kung Fu Soccer,' his first film in seven years, opened to $74
-  million in China. While fans celebrate his return, the overwhelming online
+  million in China.
 tags:
   - Stephen Chow
   - Kung Fu Soccer

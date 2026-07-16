@@ -12,9 +12,8 @@ dek: >-
   the reviews are a chaotic mix of pure delight and utter boredom.
 metaTitle: 'Minions & Monsters Audience Reaction: Fans Divided'
 metaDescription: >-
-  Audience reactions to 'Minions & Monsters' are sharply divided. While some
-  praise its silly slapstick charm, others call it dull and are shocked by a
-  crude
+  The latest banana-fueled adventure crushed the holiday box office, but online,
+  the reviews are a chaotic mix of pure delight and utter boredom.
 tags:
   - Minions
   - Box Office

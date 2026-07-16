@@ -10,10 +10,10 @@ date: '2026-07-15T02:32:01.577Z'
 dek: >-
   A single, modern term in a historical epic has split audiences down the middle
   — and the discourse isn't cooling off any time soon.
-metaTitle: The Dog Stars 'Dad' Line Sparks Fan Backlash
+metaTitle: The Internet Had Thoughts About Ridley Scott Using
 metaDescription: >-
-  The trailer for Ridley Scott's 'The Dog Stars' ignited a social media debate
-  after the word 'dad' was used, with many viewers calling it anachronistic and
+  A single, modern term in a historical epic has split audiences down the middle
+  — and the discourse isn't cooling off any time soon.
 tags:
   - The Dog Stars
   - Ridley Scott

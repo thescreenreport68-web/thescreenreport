@@ -11,10 +11,10 @@ dek: >-
   A terrifying gate-crashing incident pushed the show to a near-breaking point,
   but surprise superstar saves turned a night of chaos into surreal concert
   history.
-metaTitle: 'Jay-Z Yankee Stadium Show Delayed 4 Hours, Saved by Rihanna'
+metaTitle: 'Jay-Z Yankee Stadium Show Delayed 4 Hours, Saved'
 metaDescription: >-
   Jay-Z's Yankee Stadium show was delayed nearly four hours after ticketless
-  fans stormed the gates. Fans reacted with frustration and fear, but surprise
+  fans stormed the gates.
 tags:
   - Jay-Z
   - Yankee Stadium

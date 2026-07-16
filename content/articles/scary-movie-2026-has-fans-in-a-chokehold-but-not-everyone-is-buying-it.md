@@ -12,7 +12,7 @@ dek: >-
 metaTitle: 'Scary Movie 2026 Fan Reactions: Divided Over Sequel'
 metaDescription: >-
   Audience reactions to Scary Movie 2026 are deeply divided. Fans praise the
-  nostalgic humor and original cast, while critics slam its lack of plot and
+  nostalgic humor and original cast, while critics slam its lack of plot…
 tags:
   - Scary Movie
   - Scary Movie 2026

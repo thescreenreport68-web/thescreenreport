@@ -13,7 +13,7 @@ metaTitle: 'Dave Kendall: ''120 Minutes'' Host Mourned as Lifeline'
 metaDescription: >-
   Fans and colleagues mourn Dave Kendall, the original host of MTV's '120
   Minutes,' crediting him with shaping their musical taste and saving their
-  teenage
+  teenage…
 tags:
   - MTV
   - Alternative Music
@@ -41,14 +41,14 @@ faq:
   - q: Who was Dave Kendall?
     a: >-
       Dave Kendall was the original host of MTV's groundbreaking alternative
-      music video program, *120 Minutes*, which aired from 1986 into the early
+      music video program, 120 Minutes, which aired from 1986 into the early
       1990s. He is credited with introducing a mainstream cable audience to
       seminal underground and alternative artists long before the grunge
       explosion of the early '90s.
   - q: What bands did Dave Kendall introduce on '120 Minutes'?
     a: >-
-      Fans specifically credit Kendall and *120 Minutes* with their first
-      exposure to bands like Sonic Youth, Nine Inch Nails, Throwing Muses, The
+      Fans specifically credit Kendall and 120 Minutes with their first exposure
+      to bands like Sonic Youth, Nine Inch Nails, Throwing Muses, The
       Sugarcubes, Concrete Blonde, and Sinead O'Connor, among many others,
       helping to build the foundation of alternative rock's popularity.
   - q: How are fans reacting to Dave Kendall's death?

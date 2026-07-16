@@ -11,10 +11,10 @@ dek: >-
   Bryce and Trinity's win should be a pure celebration, but the online reaction
   is a complex mix of joy for representation, outrage over producer moves, and
   ugly racial discourse.
-metaTitle: 'Love Island USA Season 8 Winners: Fan Split Over Victory &'
+metaTitle: 'Love Island USA Season 8 Winners: Fan Split Over Victory'
 metaDescription: >-
   Fan reaction to Bryce and Trinity's Love Island USA Season 8 win is deeply
-  divided, split between celebrating two dark-skinned women winning and
+  divided, split between celebrating two dark-skinned women winning…
 tags:
   - Love Island USA
   - Season 8

@@ -15,7 +15,7 @@ metaTitle: 'Mayday Trailer Reaction: Fans Divided on Casting'
 metaDescription: >-
   Reactions to the Mayday trailer are split between excitement for the Game
   Night directors' new project and criticism over the typecasting of Polish
-  actor
+  actor…
 tags:
   - Mayday
   - Ryan Reynolds

@@ -11,7 +11,7 @@ dek: >-
   A film about talking-sheep detectives just became the year's most surprising
   emotional gut-punch, leaving viewers charmed, invested, and reaching for
   tissues.
-metaTitle: 'The Sheep Detectives Audience Reaction: Why Fans Are Crying'
+metaTitle: 'The Sheep Detectives Audience Reaction: Why Fans'
 metaDescription: >-
   Audiences are calling 'The Sheep Detectives' a stunning, charming surprise,
   praising its emotional depth, clever mystery, and Bryan Cranston's

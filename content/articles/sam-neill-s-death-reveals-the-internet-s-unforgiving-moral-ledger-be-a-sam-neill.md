@@ -12,11 +12,11 @@ dek: >-
   The internet's unified grief for actor Sam Neill, contrasted with the cold
   silence for Senator Lindsey Graham, has become a stark public lesson on how a
   life is remembered.
-metaTitle: Sam Neill vs. Lindsey Graham death reactions show legacy
+metaTitle: Sam Neill vs. Lindsey Graham death reactions show
 metaDescription: >-
   The internet's overwhelming, positive reaction to Sam Neill's death, set
   against the muted response to Lindsey Graham's passing, has created a viral
-  lesson
+  lesson…
 tags:
   - Sam Neill
   - Lindsey Graham

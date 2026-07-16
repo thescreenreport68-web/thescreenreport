@@ -75,14 +75,20 @@ context → quote → your read on it.
 CRAFT: hook first (use the brief's hook), short paragraphs, the real posts as visual beats, curiosity in
 structure (build to the standout anchors — strongest last), at most ${SEO.maxQuestionH2s} question-style H2s,
 one natural use of the SEO keyword — nothing stuffed.
+PLAIN TEXT ONLY in title, metaTitle, dek, metaDescription, keyTakeaways, faq, and fanConsensus: NO markdown
+of any kind — no *asterisks*, **bold**, _underscores_, \`backticks\`, or [links]. Write a work's name as
+The Odyssey, never *The Odyssey* — a reader would see the literal asterisks. (Markdown stays allowed in the
+body only.)
 SEO METADATA (metadata ONLY — never changes the reader-facing display "title" or the body):
-- metaTitle: a 45–55-character SEARCH title (MIN 45, MAX 55 — never too short, never over), DISTINCT from the
-  display title. FRONT-LOAD the person/show name, then a colon, then the specific reveal — "[Name]: the
-  specific thing". NO site/brand name (never "— The Screen Report"), no trailing "…". Example — display
-  "Zooey Deschanel Says New Girl Cast Fought to Get Lamorne Morris on the Show" → metaTitle
-  "Zooey Deschanel: 'New Girl' Cast Fought for Lamorne Morris".
-- metaDescription: ≤155 chars that TEASE the actual reveal/payoff — the specific thing that happened, not a
-  vague "fans are reacting" summary — so it earns the click.
+- metaTitle: a 45–55-character SEARCH title (MIN 45, MAX 55), DISTINCT from the display title. FRONT-LOAD
+  the person/show name, then a colon, then the specific reveal — "[Name]: the specific thing". It must be a
+  COMPLETE CLAUSE ending on a strong content word — NEVER a dangling verb ("…Sparks", "…Teases"), pronoun,
+  preposition, or half a name. NO site/brand name, no trailing "…". Example — display "Zooey Deschanel Says
+  New Girl Cast Fought to Get Lamorne Morris on the Show" → metaTitle "Zooey Deschanel: 'New Girl' Cast
+  Fought for Lamorne Morris".
+- metaDescription: 140–155 characters, ONE or TWO COMPLETE SENTENCES ending with a period — never a phrase
+  that stops mid-thought. TEASE the actual reveal/payoff — the specific thing that happened, not a vague
+  "fans are reacting" summary — so it earns the click.
 VOICE (the genre's native register — the phrases matter): write like a real fans-react desk, not a
 template. Natural expressions like "the internet went into full meltdown", "fans are losing it over",
 "the replies did not disappoint" — a FEW, varied, never stacked. Subheadings must be STORY-SPECIFIC and a
@@ -159,14 +165,14 @@ export function repairBodyQuotes(article, factBlock) {
   return repairs;
 }
 
-// run(job, {corrections, previousArticle}) → job.article
-export async function run(job, { corrections = null, previousArticle = null, chatImpl = null } = {}) {
+// run(job, {corrections, previousArticle, bannedHooks}) → job.article
+export async function run(job, { corrections = null, previousArticle = null, bannedHooks = [], chatImpl = null } = {}) {
   const form = FORMS[job.angle.form];
   const [lo, hi] = form.words;
   const anchors = (job.factBlock.stats.namedVoices || 0) + (job.factBlock.stats.fanPosts || 0);
   const budget = Math.min(hi, Math.max(lo, lo + anchors * 40));
 
-  const schema = `{"title":"","metaTitle":"45-55 chars (min 45, max 55), front-loaded [Name]: reveal, NO brand","dek":"1-2 engaging sentences","metaDescription":"<=155 chars teasing the reveal",
+  const schema = `{"title":"","metaTitle":"45-55 chars, front-loaded [Name]: reveal, complete clause, NO brand, NO markdown","dek":"1-2 engaging sentences","metaDescription":"140-155 chars, 1-2 COMPLETE sentences ending with a period, teasing the reveal",
 "keyTakeaways":["3-4 items"],"body":"markdown with ## H2s","faq":[{"q":"","a":"40-60 word answer"},{"q":"2-3 REAL questions a reader would search","a":""}],
 "about":[{"name":"","type":"Person|Movie|TVSeries|Organization"}],"tags":["4-8"],"imageQuery":"image search phrase",
 "reactionsRender":[{"anchorId":"R1 or A3 — the anchor to show as a display card","tweetId":""}],
@@ -184,7 +190,10 @@ ${JSON.stringify(job.brief, null, 1)}
 THE ANCHOR BLOCK (the ONLY quotes/voices that exist — copy quotes EXACTLY from here by ref):
 ${job.factText}
 
-WORD BUDGET: ~${budget} words. SEO keyword (use once, naturally): ${job.brief.seoKeyword}
+WORD BUDGET: ~${budget} words. SEO keyword (use once, naturally): ${job.brief.seoKeyword}${bannedHooks.length ? `
+TITLE VARIETY (machine-checked): these hook phrases are OVERUSED on the site right now — the title and
+metaTitle must NOT contain any of them: ${bannedHooks.map((h) => `"${h}"`).join(", ")}. Craft a FRESH,
+story-specific hook instead.` : ""}
 Available X embed ids (use in reactionsRender only if the post matches): ${job.embeds?.tweetIds?.join(", ") || "none"}
 reactionsRender = 6-12 display cards chosen BY ANCHOR ID (the exact quote text is substituted
 mechanically from the block — you never copy it), ordered to build to the standouts. anchorStatement ONLY

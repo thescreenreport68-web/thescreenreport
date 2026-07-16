@@ -11,10 +11,10 @@ dek: >-
   The projected nine-figure loss for Disney's live-action 'Moana' has been met
   with a wave of negative audience reactions, with viewers criticizing
   everything from the film's necessity to its visual style.
-metaTitle: Moana Remake's $100M Loss & Fan Backlash
+metaTitle: Moana Remake Could Lose $100 Million—Audiences Call
 metaDescription: >-
   News of the live-action 'Moana' remake's $100 million projected loss has
-  ignited a critical response from audiences, who call the film unnecessary
+  ignited a critical response from audiences, who call the film unnecessary…
 tags:
   - Moana
   - Disney

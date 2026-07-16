@@ -10,11 +10,10 @@ date: '2026-07-14T04:31:09.520Z'
 dek: >-
   Ryan Gosling's space epic has fans losing it over a rock creature and a
   heartfelt bond — though one critic is calling out a tired character archetype.
-metaTitle: 'Project Hail Mary Audience Reactions: Gosling, Rocky, and'
+metaTitle: 'Project Hail Mary Audience Reactions: Gosling, Rocky'
 metaDescription: >-
   Audience reactions to 'Project Hail Mary' are overwhelmingly positive,
-  praising Ryan Gosling, the alien Rocky, and the puppetry. A lone critic
-  questions
+  praising Ryan Gosling, the alien Rocky, and the puppetry.
 tags:
   - Project Hail Mary
   - Ryan Gosling
