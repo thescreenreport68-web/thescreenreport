@@ -22,7 +22,14 @@ function ownArticle(story) {
       if (!data?.date || Date.parse(data.date) < cut) continue;
       const title = String(data.title || "").toLowerCase();
       const shared = [...stems].filter((w) => title.includes(w));
-      if (shared.length >= 3) return { slug: data.slug || f.replace(/\.md$/, ""), title: data.title, text: htmlToText(content).slice(0, 8000) };
+      if (shared.length >= 3) {
+        return {
+          slug: data.slug || f.replace(/\.md$/, ""), title: data.title,
+          text: htmlToText(content).slice(0, 8000),
+          heroUrl: typeof data.image === "string" && /^https?:/.test(data.image) ? data.image : null,
+          heroCredit: data.imageCredit || null,
+        };
+      }
     } catch { /* unreadable article is not evidence */ }
   }
   return null;
@@ -69,6 +76,8 @@ export async function gather(story) {
   pack.sources = [...indepDomains, ...(own ? ["thescreenreport.com"] : [])];
   pack.sourceUrls = fetched.map((f) => f.url);
   pack.ownSlug = own?.slug || null;
+  pack.ownHeroUrl = own?.heroUrl || null; // our article's hero = a pre-vetted Tier-A image for the card
+  pack.ownHeroCredit = own?.heroCredit || null;
   pack.corroboration = indepDomains.size + (own ? 1 : 0);
   return pack;
 }
