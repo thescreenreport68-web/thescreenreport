@@ -67,6 +67,16 @@ jobs:
     timeout-minutes: 120
     steps:
       - uses: actions/checkout@v4
+      # FRESH ARTICLE SUPPLY (owner audit 2026-07-16, root-caused): the news/gossip/inside lanes
+      # publish articles to MAIN (hourly), but this branch's content/articles FROZE on 07-10 — the
+      # reels lane was living off a 6-day-old backlog until the freshness window emptied it ("scout:
+      # no viable candidates today", the 7/day starvation + the stale-date failure class). Overlay
+      # main's articles at run start; the ledger-commit step only adds data/ig, so nothing is pushed back.
+      - name: fresh article supply (articles live on main)
+        run: |
+          git fetch --depth=1 origin main
+          git checkout origin/main -- content/articles
+          echo "articles from main: $(ls content/articles/*.md | wc -l)"
       - uses: actions/setup-node@v4
         with: { node-version: 20 }
       - name: system deps
