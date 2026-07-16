@@ -1,0 +1,67 @@
+{
+ "runId": "run-2026-07-16T16-31-29",
+ "mode": "live",
+ "startedAt": "2026-07-16T16:31:29.698Z",
+ "films": 6,
+ "published": [
+  {
+   "tag": "evil-dead-burn-bo-update×BO-UPDATE",
+   "slug": "evil-dead-burn-box-office-day-6-domestic-total-climbs-to-18-1-million",
+   "path": "/home/runner/work/thescreenreport/thescreenreport/content/articles/evil-dead-burn-box-office-day-6-domestic-total-climbs-to-18-1-million.md",
+   "score": 40,
+   "acceptReason": "daily factual update — deterministic numbers + accuracy walls + word floor all pass"
+  }
+ ],
+ "held": [],
+ "rejected": [],
+ "skipped": [],
+ "blocked": [],
+ "zeroStreak": 0,
+ "finishedAt": "2026-07-16T16:33:58.784Z",
+ "meter": {
+  "byRole": {
+   "gatherer": {
+    "calls": 4,
+    "errors": 0,
+    "in": 6767,
+    "out": 2460,
+    "usd": 0.00166,
+    "ms": 26155
+   },
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3366,
+    "out": 371,
+    "usd": 0.00017,
+    "ms": 1619
+   },
+   "synthesizer": {
+    "calls": 1,
+    "errors": 0,
+    "in": 662,
+    "out": 1116,
+    "usd": 0.00026,
+    "ms": 14942
+   },
+   "writer": {
+    "calls": 1,
+    "errors": 0,
+    "in": 1801,
+    "out": 841,
+    "usd": 0.00207,
+    "ms": 9940
+   },
+   "qa": {
+    "calls": 4,
+    "errors": 0,
+    "in": 11938,
+    "out": 1937,
+    "usd": 0.00842,
+    "ms": 17457
+   }
+  },
+  "totalUsd": 0.01258
+ },
+ "openrouterTotalUsd": 0.01295
+}
