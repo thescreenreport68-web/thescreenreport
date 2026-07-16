@@ -1,0 +1,86 @@
+{
+ "runId": "run-2026-07-16T15-30-33",
+ "mode": "live",
+ "startedAt": "2026-07-16T15:30:33.134Z",
+ "films": 6,
+ "published": [],
+ "held": [
+  {
+   "tag": "moana-bo-update×BO-UPDATE",
+   "reason": "not material: no new number (current $100M not above last published $100M)"
+  },
+  {
+   "tag": "minions-monsters-bo-update×BO-UPDATE",
+   "reason": "not material: no new number (current $280M not above last published $280M)"
+  },
+  {
+   "tag": "evil-dead-burn-bo-update×BO-UPDATE",
+   "reason": "words 39 < 180 (owner-set ~200-word minimum)",
+   "score": 60
+  },
+  {
+   "tag": "young-washington-bo-update×BO-UPDATE",
+   "reason": "not material: no new number (current $36M not above last published $36M)"
+  },
+  {
+   "tag": "supergirl-bo-update×BO-UPDATE",
+   "reason": "not material: no new number (current $117M not above last published $117M)"
+  }
+ ],
+ "rejected": [],
+ "skipped": [],
+ "blocked": [
+  {
+   "tag": "toy-story-5-bo-update×BO-UPDATE",
+   "reason": "watchdog: gatherer toy-story-5-bo-update×BO-UPDATE exceeded 180s"
+  }
+ ],
+ "zeroStreak": 3,
+ "finishedAt": "2026-07-16T15:39:12.411Z",
+ "meter": {
+  "byRole": {
+   "gatherer": {
+    "calls": 8,
+    "errors": 2,
+    "in": 18184,
+    "out": 2667,
+    "usd": 0.00289,
+    "ms": 21103
+   },
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3366,
+    "out": 381,
+    "usd": 0.00017,
+    "ms": 1527
+   },
+   "synthesizer": {
+    "calls": 1,
+    "errors": 0,
+    "in": 658,
+    "out": 1039,
+    "usd": 0.00025,
+    "ms": 13617
+   },
+   "writer": {
+    "calls": 3,
+    "errors": 0,
+    "in": 5485,
+    "out": 2783,
+    "usd": 0.00665,
+    "ms": 37228
+   },
+   "qa": {
+    "calls": 8,
+    "errors": 0,
+    "in": 23065,
+    "out": 3460,
+    "usd": 0.01557,
+    "ms": 27414
+   }
+  },
+  "totalUsd": 0.02552
+ },
+ "openrouterTotalUsd": 0.02565
+}
