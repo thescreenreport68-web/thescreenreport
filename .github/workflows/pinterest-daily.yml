@@ -27,6 +27,11 @@ on:
     # Deliberately early so GitHub-cron drift still lands before the 10am first slot. Runs 24/7 until the
     # owner stops it (create data/pinterest/POSTING_OFF to pause).
     - cron: "0 5 * * *"
+    # Catch-ups (2026-07-16: the single 05:00 window drifted +6h and then never fired — a whole day of pins
+    # was lost). Both land before the 10am PT first slot; the once-daily guard makes them no-ops whenever
+    # the day's set is already scheduled, so a missed primary self-heals with zero double-post risk.
+    - cron: "0 9 * * *"
+    - cron: "0 13 * * *"
 
 concurrency:
   group: pinterest-daily
@@ -54,6 +59,10 @@ jobs:
       - uses: actions/setup-node@v4
         with: { node-version: "20", cache: npm, cache-dependency-path: package-lock.json }
       - run: npm ci --prefer-offline --no-audit --no-fund
+
+      # regression gate: the pin-copy invariants (hashtags-as-data, fact verification, no truncated
+      # titles/descriptions, CTA rotation) must hold before anything is built or posted
+      - run: node pipeline/pinterest/test-pin-copy.mjs
 
       - uses: browser-actions/setup-chrome@v1
         id: chrome
