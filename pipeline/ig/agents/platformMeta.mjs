@@ -25,6 +25,7 @@
 // is banned (natural/readable copy). Scope = title/description only; the video, thumbnail, and the
 // separate YouTube keywords field are intentionally untouched.
 import { llm } from "../models.mjs";
+import { stripOutletAttribution, isOutletTag, pastDateAsUpcoming } from "../lib/util.mjs";
 
 const AI_NOTE = "AI-assisted recap by The Screen Report.";
 const wc = (s) => String(s || "").trim().split(/\s+/).filter(Boolean).length;
@@ -36,13 +37,17 @@ const fold = (s) => String(s || "").normalize("NFD").replace(/[̀-ͯ]/g, "").toL
 // reach a public caption even if the model slips one in. Independent copy (keeps this agent from
 // importing/altering the live caption agent).
 function stripSource(s) {
-  return String(s || "")
-    .replace(/[\s,;:—-]*\b(?:according to|as reported by|reported by|as per|sourced from)\b[^.?!]*(?=[.?!]|$)/gi, "")
-    .replace(/[\s,;:—-]*\b(?:per|via)\s+[A-Z][A-Za-z.&'’-]+(?:\s+[A-Z][A-Za-z.&'’-]+){0,2}/g, "")
-    .replace(/#\w+/g, "") // hashtags belong only in the tags array
-    .replace(/\s{2,}/g, " ")
-    .replace(/\s+([.?!,;:])/g, "$1")
-    .trim();
+  // stripOutletAttribution (shared net, owner audit 2026-07-16) catches the framings the clause
+  // regexes miss: "Described by E! News as…", "told People", "Variety reports that…".
+  return stripOutletAttribution(
+    String(s || "")
+      .replace(/[\s,;:—-]*\b(?:according to|as reported by|reported by|as per|sourced from)\b[^.?!]*(?=[.?!]|$)/gi, "")
+      .replace(/[\s,;:—-]*\b(?:per|via)\s+[A-Z][A-Za-z.&'’-]+(?:\s+[A-Z][A-Za-z.&'’-]+){0,2}/g, "")
+      .replace(/#\w+/g, "") // hashtags belong only in the tags array
+      .replace(/\s{2,}/g, " ")
+      .replace(/\s+([.?!,;:])/g, "$1")
+      .trim(),
+  );
 }
 
 // Vague/low-search tags that add no SEO value and must never spend a hashtag slot (extends the old
@@ -54,9 +59,20 @@ const VAGUE_TAG = /^#(fyp|viral|reels?|trending|foryou|foryoupage|explore|shorts
 // vague model tags are dropped, then the niche backfill fills to 5. So named co-stars/films beat filler
 // like #BirthdayTribute. Shared by FB + YT (a strict improvement for both). (SEO audit 2026-07-14)
 function normTags(arr, entities = []) {
-  const clean = (t) => (String(t).startsWith("#") ? String(t) : "#" + String(t)).replace(/[^#A-Za-z0-9]/g, "");
-  const entTags = (entities || []).map((e) => clean(e.name)).filter((t) => t.length > 2); // real entities: never vague-filtered
-  const modelTags = (Array.isArray(arr) ? arr : []).map(clean).filter((t) => t.length > 2 && !VAGUE_TAG.test(t));
+  // CamelCase each word so multi-word names read as tags (#ElliotPage, #WestVillage) — the old
+  // squash produced mashed junk like #WestVillagecondominium (owner audit 2026-07-16).
+  const clean = (t) =>
+    "#" +
+    String(t)
+      .replace(/^#/, "")
+      .split(/[^A-Za-z0-9]+/)
+      .filter(Boolean)
+      .map((w) => w[0].toUpperCase() + w.slice(1))
+      .join("");
+  // junk gate: an outlet tag never ships; neither does a mashed >20-char or >3-word monster
+  const usable = (t) => t.length > 3 && t.length <= 21 && !isOutletTag(t);
+  const entTags = (entities || []).map((e) => clean(e.name)).filter(usable); // real entities: never vague-filtered
+  const modelTags = (Array.isArray(arr) ? arr : []).map(clean).filter((t) => usable(t) && !VAGUE_TAG.test(t));
   const ordered = [...entTags, ...modelTags, "#MovieNews", "#Hollywood"]; // entities first (highest search value)
   const seen = new Set();
   const out = [];
@@ -139,13 +155,21 @@ function ytIssues(yt, primary, entities = []) {
   if (!title) issues.push({ kind: "empty", msg: "the YouTube title is empty" });
   else {
     if (!leadsWith(title, primary, 40, entities)) issues.push({ kind: "lead", msg: `the title must LEAD with "${primary}" inside the first 40 characters` });
-    if (title.length > 60) issues.push({ kind: "length", msg: `the title is ${title.length} chars — cut it to 40-55 (max 70) while keeping the key fact` });
+    // >55 (not >60): live titles clustered 54-60, past the ~40-char mobile truncation with the hook
+    // still unseen — re-prompt down into the 40-55 landing zone (owner audit 2026-07-16)
+    if (title.length > 55) issues.push({ kind: "length", msg: `the title is ${title.length} chars — cut it to 40-55 (max 70) while keeping the key fact` });
     if (GENERIC_TAIL.test(title)) issues.push({ kind: "tail", msg: "the title ends on a soft generic phrase — end on the concrete quote, number, or fact instead" });
   }
   if (!desc) issues.push({ kind: "empty", msg: "the YouTube description is empty" });
   else {
     const titleLead = leadEntityOf(title, entities) || primary; // the description must lead with whatever the title leads with
     if (!leadsWith(desc, titleLead, 40, entities)) issues.push({ kind: "lead", msg: `the description's FIRST sentence must start with "${titleLead}" (the same name the title leads with), before any other person` });
+  }
+  // STALE-DATE NET (owner audit 2026-07-16): a >48h-old date framed as upcoming ("Returns July 6th"
+  // posted 07-15) reads as reposted old news — re-prompt to drop the date or reframe it as past tense.
+  for (const [what, text] of [["title", title], ["description", desc]]) {
+    const stale = pastDateAsUpcoming(text);
+    if (stale) issues.push({ kind: "stale-date", msg: `the ${what} frames "${stale.text}" (already ${Math.round((Date.now() - stale.date.getTime()) / 864e5)} days past) as upcoming — reframe it as something that HAPPENED or drop the date` });
   }
   return issues;
 }
@@ -162,7 +186,7 @@ SHARED HARD RULES (both platforms):
 
 FACEBOOK (share-driven; the first ~125 characters show before "more"):
 - text: lead with the topic + the single most surprising concrete fact in the FIRST 125 characters, then 1-2 more short factual sentences. Warm, direct, keyword-natural (full names, film titles, words like "box office"/"casting"/"trailer"). End with a short share-or-comment CTA. No hashtags inside the text.
-- hashtags: 3-5 light, relevant (story entities + niche). Never generic (#fyp/#viral).
+- hashtags: 1-2 ONLY, the story's main entities. Facebook reach is share-driven, not hashtag-driven — more than 2 reads as spam. Never generic (#fyp/#viral).
 
 YOUTUBE SHORTS (the title + description are the ONLY searchable text — THIS is where ranking is won):
 - title: TARGET 40-55 characters, hard cap 70. LEAD with the PRIMARY entity (named in PRIMARY below) in the FIRST 40 characters, immediately followed by the single most surprising concrete detail — a short quoted fragment, a number, or a hard fact — so the hook is visible before the feed truncates it. If the story's central subject is a film or franchise, include that exact name (it is the strongest search term); do NOT force in a film title that is only tangential context. NEVER end on a soft, generic phrase ("Sweet Birthday Message", "Rare Glimpse", "Adorable Moment") — end on the concrete fact. No hashtags in the title, no source names.
@@ -201,13 +225,15 @@ export async function writePlatformMeta({ facts, segment, engage, articleUrl = "
   const fb = res.facebook || {};
   const yt = res.youtube || {};
 
-  // ---- Facebook: text + AI-note + light hashtags ----
+  // ---- Facebook: text + AI-note + 0-2 hashtags ----
+  // FB ships MAX 2 hashtags (owner audit 2026-07-16, per our own research doc: FB reach is share/
+  // comment-driven and hashtag-stuffed posts read as spam — 0-2 entity tags, never 5).
   const fbText = stripSource(fb.text);
-  const fbTags = normTags(fb.hashtags, facts.entities);
+  const fbTags = normTags(fb.hashtags, facts.entities).slice(0, 2);
   const facebook = {
     text: fbText,
     hashtags: fbTags,
-    full: [fbText, "", AI_NOTE, "", fbTags.join(" ")].join("\n").trim(),
+    full: [fbText, "", AI_NOTE, "", fbTags.join(" ")].join("\n").replace(/\n+$/, "").trim(),
   };
 
   // ---- YouTube: title (final, ≤70, word-boundary) + description + link + tags ----

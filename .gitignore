@@ -34,9 +34,12 @@ next-env.d.ts
 # FIND-engine volatile run logs (regenerated every run; per FIND_HALF_PLAN §5 state belongs in D1, not git)
 data/find/runs/
 pipeline/data/imdb/
+data/inside/runs/
+data/inside/review/
 
 # IG reels lane — ephemeral artifacts (source of truth = pipeline/ig/; ledgers persist via the workflow)
 data/ig/work/
 data/ig/out/
 data/ig/runs/
-data/ig/music/
+# data/ig/music/ is COMMITTED (owner audit 2026-07-16): every CI run started cold and re-bought
+# Lyria beds (~13% of daily spend). The workflow's `git add -A data/ig` now persists CI-bought beds.

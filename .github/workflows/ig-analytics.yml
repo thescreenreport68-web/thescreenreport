@@ -1,12 +1,13 @@
-# INSTAGRAM REELS LANE — insights collection + weekly learner (plan §5.7).
-# ⛔ CRON DISABLED (owner 2026-07-10: nothing runs unattended until go-live). This
-# workflow never posts (read-only insights + verify), but stays off until we go live.
-# To activate: uncomment the `schedule:` block. Manual dispatch works any time.
+# YIF LANE — insights collection + weekly learner (plan §5.7). The feedback flywheel:
+# collect per-platform post metrics (IG/FB via Zernio, YouTube via Buffer) → insights ledger →
+# the Monday learner turns ≥5 scored reels into hookStyle/segment/slot/goal weights that the
+# scout + writer consume. LIVE (owner audit 2026-07-16 — the lane is posting 24/7; the flywheel
+# runs with it). Kill switch: comment the schedule block or commit site/data/ig/PAUSED.
 name: ig-analytics
 on:
-  # schedule:
-  #   - cron: "30 */6 * * *" # every 6h: collect due insight marks (T+3h/24h/72h/7d)
-  #   - cron: "0 8 * * 1" # Mondays: the strategy learner
+  schedule:
+    - cron: "30 */6 * * *" # every 6h: collect due insight marks (T+3h/24h/72h/7d)
+    - cron: "0 8 * * 1" # Mondays: the strategy learner
   workflow_dispatch: {}
 
 concurrency:
@@ -28,6 +29,7 @@ jobs:
         env:
           TSR_SITE: ${{ github.workspace }}
           ZERNIO_API_KEY: ${{ secrets.ZERNIO_API_KEY }}
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }} # YouTube metrics path (flywheel 2026-07-16)
         run: |
           node pipeline/ig/igrun.mjs --verify || echo "::warning::some scheduled posts failed live verification"
           node pipeline/ig/igrun.mjs --analytics

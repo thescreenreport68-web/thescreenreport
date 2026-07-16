@@ -167,3 +167,78 @@ export function stripMarkdown(s) {
 export function todayInTz(tz) {
   return new Intl.DateTimeFormat("en-CA", { timeZone: tz, year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date());
 }
+
+// ── OUTLET BLOCKLIST (owner audit 2026-07-16): a news outlet's name must NEVER ship in public copy —
+// not as an attribution ("Described by E! News as…"), not as an entity, not as a hashtag (#ENews,
+// #WallStreetJournal, #TIME shipped publicly). One shared list, applied at entity extraction
+// (gather), source-strip (caption + platformMeta), and hashtag gates (normTags/repairCaption).
+export const OUTLET_NAMES = [
+  "E! News", "E News", "TMZ", "People", "People Magazine", "Variety", "Deadline", "The Hollywood Reporter",
+  "Hollywood Reporter", "THR", "Wall Street Journal", "WSJ", "TIME", "Time Magazine", "Page Six",
+  "Us Weekly", "Entertainment Tonight", "Entertainment Weekly", "Daily Mail", "The Sun", "The Mirror",
+  "New York Times", "NYT", "New York Post", "Rolling Stone", "Billboard", "Vulture", "IndieWire",
+  "Collider", "ScreenRant", "Screen Rant", "Newsweek", "BBC", "CNN", "Fox News", "Reuters",
+  "Associated Press", "Bloomberg", "Forbes", "Business Insider", "Insider", "BuzzFeed", "Complex",
+  "Pitchfork", "TVLine", "Just Jared", "Hollywood Life", "In Touch", "Life & Style", "RadarOnline",
+  "The Blast", "People TV", "Extra", "Access Hollywood", "The Wrap", "TheWrap", "Puck", "Semafor",
+  "The Atlantic", "The Guardian", "USA Today", "Los Angeles Times", "LA Times",
+];
+// matches an outlet name as a whole word/phrase, case-insensitive ("TIME" only as standalone word)
+export const OUTLET_RE = new RegExp(
+  `\\b(?:${OUTLET_NAMES.map((n) => n.replace(/[.*+?^${}()|[\]\\]/g, "\\$&").replace(/\s+/g, "\\s+")).join("|")})\\b`,
+  "i",
+);
+// hashtag form: outlet names collapsed to tag tokens (#ENews, #WallStreetJournal, #TIME, #TMZ …)
+const OUTLET_TAG_TOKENS = new Set(OUTLET_NAMES.map((n) => n.toLowerCase().replace(/[^a-z0-9]/g, "")));
+export function isOutletTag(tag) {
+  return OUTLET_TAG_TOKENS.has(String(tag).replace(/^#/, "").toLowerCase().replace(/[^a-z0-9]/g, ""));
+}
+// strip attribution CLAUSES that smuggle an outlet into public copy. Covers the shipped failures:
+// "Described by E! News as …", "told People", "People reports/reported/wrote", "speaking to TMZ".
+// Only fires when a REAL outlet name is present — never mangles normal prose.
+export function stripOutletAttribution(s) {
+  const text = String(s || "");
+  if (!OUTLET_RE.test(text)) return text;
+  const O = OUTLET_RE.source.replace(/^\\b|\\b$/g, ""); // inner alternation, re-wrapped per rule below
+  return text
+    // "described by <outlet> as X" → "described as X"; same for called/named/dubbed
+    .replace(new RegExp(`\\b(described|called|named|dubbed)\\s+by\\s+\\b(?:${O})\\b\\s+as\\b`, "gi"), "$1 as")
+    // "told <outlet>" → "said"; "tells <outlet>" → "says"
+    .replace(new RegExp(`\\btold\\s+\\b(?:${O})\\b`, "gi"), "said")
+    .replace(new RegExp(`\\btells?\\s+\\b(?:${O})\\b`, "gi"), "says")
+    // "speaking to/with <outlet>," / "in an interview with <outlet>" → drop the clause
+    .replace(new RegExp(`[\\s,;:—-]*\\b(?:while\\s+)?(?:speaking|spoke|talking|talked)\\s+(?:to|with)\\s+\\b(?:${O})\\b[,]?`, "gi"), "")
+    .replace(new RegExp(`[\\s,;:—-]*\\bin\\s+an?\\s+(?:interview|statement|chat)\\s+(?:to|with)\\s+\\b(?:${O})\\b[,]?`, "gi"), "")
+    // "<outlet> reports/reported/wrote/says/said/confirmed/revealed (that)" → drop the frame
+    .replace(new RegExp(`\\b(?:${O})\\b\\s+(?:reports?|reported|wrote|writes|says?|said|confirmed|confirms|revealed|reveals)\\s*(?:that\\s+)?`, "gi"), "")
+    .replace(/\s{2,}/g, " ")
+    .replace(/\s+([.?!,;:])/g, "$1")
+    .trim()
+    .replace(/^([a-z])/, (m, c) => c.toUpperCase()); // a dropped leading frame can leave a lowercase start
+}
+
+// ── STALE-DATE GUARD (owner audit 2026-07-16): "Kai Cenat Returns July 6th" shipped on 07-15 — a
+// story from the fresh-window pool framed a PAST date as upcoming. Detects a month-day reference
+// more than `graceHours` in the past combined with future-framing language. Year-less dates assume
+// the nearest occurrence (a date >6 months ahead is treated as last year's = past).
+const MONTHS = { january:0, february:1, march:2, april:3, may:4, june:5, july:6, august:7, september:8, october:9, november:10, december:11, jan:0, feb:1, mar:2, apr:3, jun:5, jul:6, aug:7, sep:8, sept:8, oct:9, nov:10, dec:11 };
+const DATE_RE = /\b(january|february|march|april|may|june|july|august|september|october|november|december|jan|feb|mar|apr|jun|jul|aug|sept?|oct|nov|dec)\.?\s+(\d{1,2})(?:st|nd|rd|th)?\b/gi;
+const UPCOMING_RE = /\b(returns?|returning|premieres?|premiering|drops?|dropping|arrives?|arriving|comes?\s+(?:out|back)|coming|launches?|launching|debuts?|debuting|hits\s+(?:theaters|screens|netflix|streaming)|opens?|opening|set\s+(?:to|for)|scheduled\s+for|will\s+(?:return|premiere|drop|arrive|launch|debut|open))\b/i;
+export function pastDatesReferenced(text, now = new Date(), graceHours = 48) {
+  const out = [];
+  for (const m of String(text || "").matchAll(DATE_RE)) {
+    const mon = MONTHS[m[1].toLowerCase().replace(".", "")];
+    const day = parseInt(m[2], 10);
+    if (mon === undefined || !(day >= 1 && day <= 31)) continue;
+    let d = new Date(Date.UTC(now.getUTCFullYear(), mon, day, 12));
+    if (d.getTime() - now.getTime() > 183 * 864e5) d = new Date(Date.UTC(now.getUTCFullYear() - 1, mon, day, 12)); // "Dec 28" said in Jan = last month, not next winter
+    if (now.getTime() - d.getTime() > graceHours * 3600e3) out.push({ text: m[0], date: d });
+  }
+  return out;
+}
+export function pastDateAsUpcoming(text, now = new Date(), graceHours = 48) {
+  const t = String(text || "");
+  if (!UPCOMING_RE.test(t)) return null;
+  const past = pastDatesReferenced(t, now, graceHours);
+  return past.length ? past[0] : null;
+}

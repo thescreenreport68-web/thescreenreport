@@ -3,6 +3,7 @@
 // Deterministic lint (agent 9) drives the retry loop.
 import { llm } from "../models.mjs";
 import { lintCaption } from "../lib/lint.mjs";
+import { stripOutletAttribution, isOutletTag } from "../lib/util.mjs";
 
 const CTAS = [
   "Send this to a {fandom} fan.",
@@ -53,10 +54,12 @@ export function repairCaption(cap, entities = []) {
       .replace(/\s{2,}/g, " ")
       .replace(/\s+([.?!,;:])/g, "$1")
       .trim();
-    out[field] = text;
+    // OUTLET NET (owner audit 2026-07-16): "Described by E! News as…" shipped — the attribution regexes
+    // above miss described-by/told/reports framings. The shared outlet strip catches them all.
+    out[field] = stripOutletAttribution(text);
   }
   let tags = [...(out.hashtags || []).map((t) => (String(t).startsWith("#") ? String(t) : `#${t}`)), ...foundTags];
-  tags = [...new Map(tags.map((t) => [t.toLowerCase(), t])).values()].filter((t) => t.length > 2);
+  tags = [...new Map(tags.map((t) => [t.toLowerCase(), t])).values()].filter((t) => t.length > 2 && !isOutletTag(t));
   // top up from entities / evergreen if short; trim if long
   const evergreen = ["#MovieNews", "#Hollywood"];
   const entityTags = entities.map((e) => "#" + String(e.name).replace(/[^A-Za-z0-9]/g, ""));

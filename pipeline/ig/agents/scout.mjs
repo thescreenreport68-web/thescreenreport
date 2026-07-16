@@ -7,7 +7,7 @@ import path from "node:path";
 import { IG } from "../config.mjs";
 import { llm } from "../models.mjs";
 import { isPosted, isHeld, isBuilt, builtTopics, topicKey, loadWeights } from "../lib/ledger.mjs";
-import { parseFrontmatter, stripMarkdown, normWords } from "../lib/util.mjs";
+import { parseFrontmatter, stripMarkdown, normWords, pastDateAsUpcoming } from "../lib/util.mjs";
 
 // The reaction / social-media lane is a SEPARATE automation (owner 2026-07-11): the VIDEO lane
 // builds ONLY from genuine NEWS + GOSSIP stories — never a "how fans are reacting online" piece
@@ -52,6 +52,11 @@ export function listCandidates({ now = new Date(), lane = null } = {}) {
     if (isReactionArticle(data)) continue; // reaction/social-media lane = separate automation, not video
     const date = new Date(data.date || 0).getTime();
     if (!date || date < cutoff) continue;
+    // STALE-DATE GUARD (owner audit 2026-07-16): "Kai Cenat Returns July 6th" shipped as fresh news on
+    // 07-15 — the fresh-window pool (freshDays=10) keeps a story eligible long after its DATED moment
+    // passed. A title/dek that frames a >48h-past date as UPCOMING is stale news and never enters the
+    // slate. (The platformMeta validator is the downstream net for dates the writer introduces.)
+    if (pastDateAsUpcoming(`${data.title || ""} ${data.dek || data.description || ""}`, now)) continue;
     if (isPosted(slug)) continue; // never repost — mine OR the old lane's
     if (isBuilt(slug)) continue; // never rebuild an already-built story (repetition guard)
     // TOPIC dedup: skip a story that shares 2+ significant tokens (names/nouns) with an

@@ -5,7 +5,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { IG } from "../config.mjs";
 import { llm } from "../models.mjs";
-import { parseFrontmatter, stripMarkdown, fetchWithTimeout } from "../lib/util.mjs";
+import { parseFrontmatter, stripMarkdown, fetchWithTimeout, OUTLET_RE } from "../lib/util.mjs";
 
 const SYS = `You extract facts for a 30-second Instagram news reel. From the article (and optional source excerpts), return STRICT JSON:
 {"facts":[{"claim":string,"quote":boolean,"surprise":1-10}],
@@ -38,6 +38,9 @@ export async function gather(article) {
   pack.articleText = text; // kept in the job for the verifier's entailment pass
   pack.sourceText = sourceText.trim(); // quotes may come from here — verify against BOTH
   pack.facts = (pack.facts || []).slice(0, 14);
-  pack.entities = (pack.entities || []).slice(0, 6);
+  // OUTLET GUARD (owner audit 2026-07-16): a news outlet must never become an entity — entity names
+  // flow into hashtags (#ENews shipped), image searches, and the script's subject line. Drop any
+  // entity whose name matches the shared outlet blocklist regardless of the kind the model gave it.
+  pack.entities = (pack.entities || []).filter((e) => !OUTLET_RE.test(String(e?.name || ""))).slice(0, 6);
   return pack;
 }

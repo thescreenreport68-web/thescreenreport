@@ -12,10 +12,13 @@ import { workDirFor, outDirFor } from "../job.mjs";
 
 // TEMPLATE ROTATION (plan §5.6): 2-3 visual variants selected deterministically per slug
 // so the account never reads as one template (anti-templated-automation defense).
+// ending: "brand" = wordmark overlaid on the last LIVE shot (no dim); "loopback" = the tail cuts
+// back to frame 1's image so replays wrap seamlessly (replay rate is a ranking signal). The old
+// full-screen dim endcard was a dead zone viewers swiped during — removed. (owner audit 2026-07-16)
 export const TEMPLATES = [
-  { snap: "slideleft", snapEvery: 3, watermark: "tr", grain: 5, vignette: "PI/4.6", endTag: "Daily movie news" },
-  { snap: "wipeup", snapEvery: 4, watermark: "tl", grain: 7, vignette: "PI/5", endTag: "Hollywood, daily" },
-  { snap: "smoothleft", snapEvery: 3, watermark: "tr", grain: 4, vignette: "PI/4.2", endTag: "Movie news in 30 seconds" },
+  { snap: "slideleft", snapEvery: 3, watermark: "tr", grain: 5, vignette: "PI/4.6", endTag: "Daily movie news", ending: "brand" },
+  { snap: "wipeup", snapEvery: 4, watermark: "tl", grain: 7, vignette: "PI/5", endTag: "Hollywood, daily", ending: "loopback" },
+  { snap: "smoothleft", snapEvery: 3, watermark: "tr", grain: 4, vignette: "PI/4.2", endTag: "Movie news in 30 seconds", ending: "brand" },
 ];
 export function templateFor(slug) {
   let h = 0;
@@ -63,7 +66,18 @@ const GRADE = {
   neutral: "eq=contrast=1.05:saturation=1.05",
 };
 
-export function renderVideo({ slug, shots, assFile, mood = "neutral", durationSec }) {
+// two-line wrap for the frame-1 hook's big display type (local copy — cover.mjs has its own)
+function wrapHook(h, maxChars = 14) {
+  const words = String(h || "").split(/\s+/).filter(Boolean);
+  const lines = [""];
+  for (const w of words) {
+    if ((lines[lines.length - 1] + " " + w).trim().length > maxChars && lines.length < 3) lines.push(w);
+    else lines[lines.length - 1] = (lines[lines.length - 1] + " " + w).trim();
+  }
+  return lines.filter(Boolean);
+}
+
+export function renderVideo({ slug, shots, assFile, mood = "neutral", durationSec, hookHeadline = null, hookUntil = null, segment = null }) {
   const dir = workDirFor(slug);
   const fps = IG.fps;
   const xfadeSec = 0.34;
@@ -115,18 +129,58 @@ export function renderVideo({ slug, shots, assFile, mood = "neutral", durationSe
     "-loop", "1", "-t", durationSec.toFixed(3), "-i", path.join(IG.assetsDir, "logo-wordmark.png"),
   );
   const wmX = tpl.watermark === "tl" ? `${IG.safe.left + 8}` : `W-w-${IG.safe.right - 40}`;
+
+  // FRAME-1 SOUND-OFF HOOK (owner audit 2026-07-16): ~85% of feed viewing is MUTED — the plan's
+  // three-layer hook needs a HEADLINE TEXT layer on frame 1, not just spoken audio + subs. The
+  // already-generated cover headline is composited as large type over the first ~2.5s and fades as
+  // sentence 2 starts. Zero new LLM cost (the headline already exists for the cover).
+  let hookFilters = "";
+  if (hookHeadline) {
+    const until = Math.max(1.2, Math.min(hookUntil || IG.hook?.sec || 2.5, 4.0));
+    const fade = IG.hook?.fadeSec ?? 0.4;
+    const lines = wrapHook(hookHeadline);
+    const alpha = `if(lt(t,${(until - fade).toFixed(2)}),1,max(0,(${until.toFixed(2)}-t)/${fade.toFixed(2)}))`;
+    hookFilters = lines
+      .map((line, i) => {
+        fs.writeFileSync(path.join(dir, `hook-line-${i}.txt`), line);
+        const y = IG.safe.top + 130 + i * 118;
+        return `drawtext=fontfile=fonts/Anton-Regular.ttf:textfile=hook-line-${i}.txt:fontsize=104:fontcolor=white:borderw=4:bordercolor=black@0.6:shadowx=2:shadowy=3:shadowcolor=black@0.5:x=(w-tw)/2:y=${y}:alpha='${alpha}':enable='lte(t,${until.toFixed(2)})'`;
+      })
+      .join(",") + ",";
+  }
+  // ON-SCREEN SERIES BRANDING (owner audit 2026-07-16): the segment name ("Celebrity Wire",
+  // "Box Office in 30") as a small persistent chip — series identity converts viewers to followers.
+  let segFilter = "";
+  if (segment) {
+    fs.writeFileSync(path.join(dir, "seg-chip.txt"), String(segment).toUpperCase());
+    segFilter = `drawtext=fontfile=fonts/Fraunces.ttf:textfile=seg-chip.txt:fontsize=30:fontcolor=white@0.78:borderw=2:bordercolor=black@0.35:x=(w-tw)/2:y=${IG.safe.top + 14},`;
+  }
+  // ENDING (owner audit 2026-07-16): NO full-screen dim — the old dimmed endcard was a dead zone
+  // viewers swiped during. "brand": wordmark + tag overlaid on the last LIVE shot. "loopback": the
+  // tail shows frame 1's image (appended as a tail shot upstream) so the replay wraps seamlessly.
+  const brandEnd = tpl.ending !== "loopback";
+  const endTagFilter = brandEnd
+    ? `drawtext=fontfile=fonts/Fraunces.ttf:text='${tpl.endTag}':fontsize=44:fontcolor=white@0.9:borderw=2:bordercolor=black@0.4:x=(w-tw)/2:y=(h/2)+132:enable='gte(t,${endStart})',`
+    : "";
   filters.push(
     `[vx]${grade},noise=alls=${tpl.grain}:allf=t,vignette=${tpl.vignette},` +
     `ass=${assRel}:fontsdir=fonts,` +
-    `drawbox=y=0:h=ih:t=fill:color=black@0.55:enable='gte(t,${endStart})',` +
-    `drawtext=fontfile=fonts/Fraunces.ttf:text='${tpl.endTag}':fontsize=44:fontcolor=white@0.9:x=(w-tw)/2:y=(h/2)+132:enable='gte(t,${endStart})',` +
+    hookFilters +
+    segFilter +
+    endTagFilter +
     `trim=duration=${durationSec.toFixed(3)},setpts=PTS-STARTPTS[base]`
   );
-  // TSR corner mark (persistent, small, brand opacity) + wordmark (endcard only, full)
+  // TSR corner mark (persistent, small, brand opacity) + wordmark (brand ending only, on the live shot).
+  // The loopback ending consumes no [word] stream — a dangling filter label errors, so it is only
+  // created when the brand ending uses it.
   filters.push(`[${wmIdx}:v]scale=210:-1,format=rgba,colorchannelmixer=aa=${IG.brand.watermarkOpacity}[wm]`);
-  filters.push(`[${wordIdx}:v]scale=840:-1[word]`);
   filters.push(`[base][wm]overlay=x=${wmX}:y=${IG.safe.top + 6}[v1]`);
-  filters.push(`[v1][word]overlay=x=(W-w)/2:y=(H-h)/2-70:enable='gte(t,${endStart})'[vout]`);
+  if (brandEnd) {
+    filters.push(`[${wordIdx}:v]scale=840:-1[word]`);
+    filters.push(`[v1][word]overlay=x=(W-w)/2:y=(H-h)/2-70:enable='gte(t,${endStart})'[vout]`);
+  } else {
+    filters.push(`[v1]null[vout]`);
+  }
 
   const videoOnly = path.join(dir, "video-only.mp4");
   ff([
@@ -196,9 +250,14 @@ export function mux({ slug, videoOnly, mixWav }) {
   return out;
 }
 
-export function render({ slug, shots, assFile, mood, voiceWav, musicFile, durationSec }) {
+export function render({ slug, shots, assFile, mood, voiceWav, musicFile, durationSec, hookHeadline = null, hookUntil = null, segment = null }) {
   const total = durationSec + IG.endTailSec; // the video breathes OUT (owner: never slam shut)
-  const videoOnly = renderVideo({ slug, shots: padShots(shots, total), assFile, mood, durationSec: total });
+  const tpl = templateFor(slug);
+  // loopback ending: the ≤1s tail cuts back to FRAME 1's image so a replay wraps seamlessly
+  // (replay rate is a ranking signal); brand ending: the last live shot simply runs out under
+  // the wordmark. Both replaced the dimmed endcard. (owner audit 2026-07-16)
+  const finalShots = tpl.ending === "loopback" && shots.length > 1 ? loopbackShots(shots, durationSec, total) : padShots(shots, total);
+  const videoOnly = renderVideo({ slug, shots: finalShots, assFile, mood, durationSec: total, hookHeadline, hookUntil, segment });
   const mixWav = masterAudio({ slug, voiceWav, musicFile, durationSec: total });
   return mux({ slug, videoOnly, mixWav });
 }
@@ -206,5 +265,12 @@ export function render({ slug, shots, assFile, mood, voiceWav, musicFile, durati
 function padShots(shots, total) {
   const out = shots.map((s) => ({ ...s }));
   if (out.length) out[out.length - 1].t1 = Math.max(out[out.length - 1].t1, total);
+  return out;
+}
+
+function loopbackShots(shots, durationSec, total) {
+  const out = shots.map((s) => ({ ...s }));
+  out[out.length - 1].t1 = Math.max(out[out.length - 1].t1, durationSec);
+  out.push({ ...out[0], t0: durationSec, t1: total, motion: "out", entity: out[0].entity });
   return out;
 }

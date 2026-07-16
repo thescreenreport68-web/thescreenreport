@@ -590,12 +590,19 @@ await t("platformMeta YouTube SEO: guards catch the two real failing videos, spa
   assert.ok(badKinds.includes("tail"), "generic 'Sweet Birthday Message' tail flagged");
   assert.ok(badKinds.includes("lead"), "description burying Elliot Page flagged");
 
-  // a well-formed pair passes clean (no false re-prompts)
+  // a well-formed pair passes clean (no false re-prompts) — title inside the 40-55 landing zone
   assert.equal(ytIssues({
-    title: "Elliot Page: 'Boo Thang' Birthday Tribute From Girlfriend",
+    title: "Elliot Page Called 'Boo Thang' by Girlfriend",
     description: "Elliot Page got a sweet birthday tribute from girlfriend Julia Shiplett.",
     hashtags: ["#ElliotPage", "#JuliaShiplett"],
   }, primary, elliotFacts.entities).length, 0, "clean title+desc passes");
+  // the tightened threshold (owner audit 2026-07-16): 54-60-char titles cluster past the ~40-char
+  // mobile truncation — >55 now re-prompts
+  assert.ok(ytIssues({
+    title: "Elliot Page: 'Boo Thang' Birthday Tribute From Girlfriend", // 58 chars — old threshold let it ship
+    description: "Elliot Page got a sweet birthday tribute from girlfriend Julia Shiplett.",
+    hashtags: [],
+  }, primary, elliotFacts.entities).some((i) => i.kind === "length"), "56-60 char title now flagged");
 
   // Video 1 (Bam Margera) — 67-char title flagged to shorten
   const bamFacts = {
@@ -647,6 +654,113 @@ await t("writer: over-length script is TRIMMED to fit, never held (duration-awar
   assert.deepEqual(lintScript(r.script, ENTITIES), [], "trimmed script clears every lint gate incl. duration");
   const words = normWords(r.script.sentences.join(" ")).length;
   assert.ok(words >= IG.script.minWords, `trim stayed above minWords (${words} ≥ ${IG.script.minWords})`);
+});
+
+// ───────────────────────────── owner-audit root-cause locks (2026-07-16) ─────────────────────────────
+await t("flywheel: learner produces real hookStyle/segment/goal weights from ≥5 scored reels (platform-merged)", async () => {
+  const { appendInsight, readInsights, loadWeights } = await import("../lib/ledger.mjs");
+  const { learn } = await import("../agents/learner.mjs");
+  // 6 stories × (IG + YT rows) at the 24h mark — the exact shape analytics now writes (postId schema)
+  const mk = (slug, hookStyle, goal, igViews, ytViews, shares, reach) => {
+    appendInsight({ slug, platform: "instagram", postId: `z${slug}`, mark: 24, views: igViews, reach, shares, likes: 40, comments: 6, hookStyle, segment: "Celebrity Wire", slot: "12:00", goal, sendsPerReach: +(shares / reach).toFixed(4) });
+    appendInsight({ slug, platform: "youtube", postId: `b${slug}`, mark: 24, views: ytViews, likes: 20, comments: 2, engagementRate: 1.7, hookStyle, segment: "Celebrity Wire", slot: "12:00", goal });
+  };
+  mk("s1", "record-number", "sends", 9000, 1200, 90, 6000);
+  mk("s2", "record-number", "sends", 8000, 1500, 80, 5500);
+  mk("s3", "reveal", "comments", 2000, 400, 10, 1800);
+  mk("s4", "reveal", "comments", 1800, 300, 8, 1500);
+  mk("s5", "reveal", "comments", 2200, 500, 12, 2000);
+  mk("s6", "record-number", "sends", 7000, 1000, 70, 5000);
+  const res = learn({ minSamples: 5 });
+  assert.ok(res.updated, `learner updated (got: ${res.reason || "ok"})`);
+  assert.ok(res.weights.hookStyles["record-number"] > res.weights.hookStyles["reveal"], "record-number outperforms reveal in weights");
+  assert.ok(res.weights.goals["sends"] > res.weights.goals["comments"], "sends goal outperforms in weights");
+  assert.ok(res.weights.accountMedians.samples >= 5, "≥5 platform-merged scored reels");
+  const w = loadWeights();
+  assert.ok(Object.keys(w.hookStyles).length >= 2, "weights persisted for the scout/writer");
+});
+
+await t("CTA rotation: different slugs see different vetted asks, all matching the lint pattern", async () => {
+  const { rotatedExamples, ASK_FAMILIES } = await import("../agents/engage.mjs");
+  const seen = new Set();
+  for (const slug of ["kai-cenat-returns", "sofia-richie-collection", "bam-margera-reunion", "elliot-page-tribute", "lil-wayne-late"]) {
+    const [ex] = rotatedExamples("comments", slug);
+    seen.add(ex);
+    assert.ok(ASK_FAMILIES.comments.patterns.some((re) => re.test(ex.replace(/^"|"$/g, ""))), `variant matches lint: ${ex}`);
+  }
+  assert.ok(seen.size >= 3, `rotation varies across slugs (saw ${seen.size} distinct)`);
+});
+
+await t("sends: signal detector + quota override flips a comments default on send-trigger stories", async () => {
+  const { sendsSignal, pickGoal } = await import("../agents/engage.mjs");
+  const recordFacts = { storyOneLine: "Superman just smashed the biggest box office record in a decade.", facts: [{ claim: "It set a record." }], entities: [{ name: "Superman", kind: "movie" }], mood: "epic" };
+  const quietFacts = { storyOneLine: "An actor had a quiet dinner with friends.", facts: [{ claim: "They ate dinner." }], entities: [{ name: "Some Actor", kind: "person" }], mood: "neutral" };
+  assert.ok(sendsSignal(recordFacts), "record story carries a sends signal");
+  assert.ok(!sendsSignal(quietFacts), "quiet story does not");
+  setMock(({ kind }) => (kind === "llm" ? { goal: "comments", why: "default", cta: "", firstComment: "" } : undefined));
+  const forced = await pickGoal({ facts: recordFacts, segment: "Celebrity Wire", preferSends: true });
+  assert.equal(forced.goal, "sends", "quota + signal overrides comments → sends");
+  const notForced = await pickGoal({ facts: quietFacts, segment: "Celebrity Wire", preferSends: true });
+  assert.equal(notForced.goal, "comments", "no signal → never forced");
+  setMock(null);
+});
+
+await t("outlets: attribution stripped, outlet entities dropped, outlet hashtags never ship", async () => {
+  const { stripOutletAttribution, isOutletTag, OUTLET_RE } = await import("../lib/util.mjs");
+  assert.equal(stripOutletAttribution("Described by E! News as a whirlwind romance, they went public."), "Described as a whirlwind romance, they went public.");
+  assert.equal(stripOutletAttribution("She told People the wedding was intimate."), "She said the wedding was intimate.");
+  assert.ok(!/variety/i.test(stripOutletAttribution("Variety reports that the sequel is greenlit.")));
+  assert.ok(isOutletTag("#ENews") && isOutletTag("#WallStreetJournal") && isOutletTag("#TIME") && !isOutletTag("#ElliotPage"));
+  assert.ok(OUTLET_RE.test("E! News") && !OUTLET_RE.test("Elliot Page"), "entity filter regex");
+  const tags = PM.normTags(["#ENews", "#TIME", "#WestVillagecondominium"], [{ name: "Elliot Page", kind: "person" }]);
+  assert.ok(!tags.some((x) => isOutletTag(x)), "no outlet tag survives normTags");
+  assert.ok(!tags.some((x) => x.length > 21), "no mashed junk tag survives normTags");
+  assert.equal(tags[0], "#ElliotPage", "entity tag leads");
+});
+
+await t("stale-date: past date framed as upcoming is rejected at scout + flagged in platformMeta copy", async () => {
+  const now = new Date("2026-07-15T20:00:00Z");
+  const { pastDateAsUpcoming } = await import("../lib/util.mjs");
+  assert.ok(pastDateAsUpcoming("Kai Cenat Announces Return to Streaming July 6th", now), "the shipped failure is caught");
+  assert.ok(!pastDateAsUpcoming("Superman premieres July 18 in theaters", now), "future date passes");
+  assert.ok(!pastDateAsUpcoming("Inside the party at the July 4 weekend bash", now), "past-tense past date passes");
+  // scout-level: a fresh-dated article whose TITLE frames a past date as upcoming never enters the slate
+  fs.writeFileSync(path.join(SITE, "content/articles/stale-date-test.md"), `---\ntitle: "Star Returns to Streaming July 6th After Break"\ncategory: celebrity\ndate: "2026-07-14"\nformatTag: news\n---\n${"A real body paragraph. ".repeat(80)}`);
+  const cands = listCandidates({ now });
+  assert.ok(!cands.some((c) => c.slug === "stale-date-test"), "scout rejects the stale-dated candidate");
+});
+
+await t("FB slot shift: +3h from the IG slot, 22:00-LA clamps to 23:30 same day", async () => {
+  const { shiftFbSlot } = await import("../agents/publish.mjs");
+  const la = (iso) => new Date(iso).toLocaleString("en-US", { timeZone: "America/Los_Angeles", hour12: false });
+  const noonLA = "2026-07-15T19:00:00.000Z"; // 12:00 LA (PDT)
+  assert.ok(la(shiftFbSlot(noonLA)).includes("15:00"), "12:00 LA → 15:00 LA");
+  const tenPmLA = "2026-07-16T05:00:00.000Z"; // 22:00 LA
+  const shifted = shiftFbSlot(tenPmLA);
+  assert.ok(la(shifted).includes("23:30"), `22:00 LA clamps to 23:30 LA (got ${la(shifted)})`);
+  assert.equal(new Date(shifted).toLocaleDateString("en-US", { timeZone: "America/Los_Angeles" }), new Date(tenPmLA).toLocaleDateString("en-US", { timeZone: "America/Los_Angeles" }), "same LA day");
+});
+
+await t("render: template rotation carries endings (≥1 loopback) and endTail ≤1s", async () => {
+  const { TEMPLATES, templateFor } = await import("../agents/render.mjs");
+  assert.ok(TEMPLATES.every((tp) => ["brand", "loopback"].includes(tp.ending)), "every template declares an ending");
+  assert.ok(TEMPLATES.some((tp) => tp.ending === "loopback"), "loop-back ending is in rotation");
+  assert.ok(IG.endTailSec <= 1.0, `endTailSec ≤ 1s (got ${IG.endTailSec})`);
+  assert.ok(templateFor("any-slug"), "template picker works");
+});
+
+await t("music: cache hit costs ZERO llm calls (deterministic key, beds committed)", async () => {
+  const { pickMusic, musicCacheKey } = await import("../agents/music.mjs");
+  const key = musicCacheKey("Celebrity Wire", "fun");
+  assert.equal(key, "gossip-glossy-fun", "deterministic key from segment+mood");
+  fs.mkdirSync(IG.musicDir, { recursive: true });
+  fs.writeFileSync(path.join(IG.musicDir, `${key}-1.mp3`), "x");
+  fs.writeFileSync(path.join(IG.musicDir, `${key}-2.mp3`), "x");
+  setMock(() => { throw new Error("llm must NOT be called on a music cache hit"); });
+  const m = await pickMusic({ facts: { storyOneLine: "s", entities: [] }, mood: "fun", segment: "Celebrity Wire" });
+  setMock(null);
+  assert.equal(m.engine, "lyria-cache", "cache hit");
+  assert.equal(m.cost, 0);
 });
 
 console.log(`\n${passed} passed, ${failed} failed`);

@@ -173,28 +173,44 @@ function platformPaused(platform) {
   return fs.existsSync(path.join(IG.dataDir, `PAUSED_${platform.toUpperCase()}`));
 }
 
-// Fan ONE build out to every enabled platform. Host the video+cover ONCE, then post to each,
-// error-ISOLATED (one platform failing never blocks the others). Instagram posts FIRST and exactly as
-// before (its own proven caption); Facebook (Zernio) + YouTube (Buffer) use platformMeta metadata.
-export async function publish({ job, mp4, cover, whenISO, live = false }) {
-  const videoUrl = await hostFile(mp4, `${job.id}.mp4`);
-  // cover is BEST-EFFORT: a thumbnail hosting hiccup must never throw away a fully-built reel (the video
-  // is what matters; the platforms accept a null cover and pick their own frame). (review 2026-07-16)
-  const coverUrl = cover ? await hostFile(cover, `${job.id}-cover.jpg`).catch((e) => { console.error(`  cover host failed (non-fatal): ${String(e.message).slice(0, 80)}`); return null; }) : null;
+// FB posts +3h after the IG slot, clamped to 23:30 LA the same day (the 22:00 slot would otherwise
+// spill to 01:00 next day — wrong scheduledDay + a dead-hour post). (owner audit 2026-07-16)
+export function shiftFbSlot(whenISO, shiftH = 3) {
+  const t = new Date(new Date(whenISO).getTime() + shiftH * 3600e3);
+  // LA hour of the shifted time — clamp anything past 23:30 LA back to 23:30
+  const parts = new Intl.DateTimeFormat("en-US", { timeZone: IG.slots.postTz, hour: "2-digit", minute: "2-digit", hour12: false }).formatToParts(t).reduce((a, p) => ((a[p.type] = p.value), a), {});
+  const laMinutes = parseInt(parts.hour, 10) * 60 + parseInt(parts.minute, 10);
+  const origParts = new Intl.DateTimeFormat("en-US", { timeZone: IG.slots.postTz, hour: "2-digit", minute: "2-digit", hour12: false }).formatToParts(new Date(whenISO)).reduce((a, p) => ((a[p.type] = p.value), a), {});
+  const origMinutes = parseInt(origParts.hour, 10) * 60 + parseInt(origParts.minute, 10);
+  if (laMinutes < origMinutes || laMinutes > 23 * 60 + 30) {
+    // crossed midnight LA (or clamped): cap at 23:30 LA = original + (23:30 − orig)
+    return new Date(new Date(whenISO).getTime() + Math.max(0, 23 * 60 + 30 - origMinutes) * 60000).toISOString();
+  }
+  return t.toISOString();
+}
+
+// Fan ONE ALREADY-HOSTED reel out to every enabled platform, error-ISOLATED (one platform failing
+// never blocks the others). Takes URLs + metadata directly so the DRAIN path (a built reel recovered
+// from a prior run) can post without re-hosting or re-building. (owner audit 2026-07-16)
+export async function publishHosted({ id, caption, platformMeta, videoUrl, coverUrl = null, whenISO, live = false }) {
   const enabled = (IG.platforms || ["instagram"]).filter((p) => !platformPaused(p));
   const results = [];
   for (const platform of enabled) {
     try {
       if (platform === "instagram") {
-        const post = await postToInstagram({ videoUrl, coverUrl, caption: job.caption.full, firstComment: job.caption.firstComment, whenISO, live });
+        const post = await postToInstagram({ videoUrl, coverUrl, caption: caption?.full, firstComment: caption?.firstComment, whenISO, live });
         results.push({ platform, id: post.id, ok: Boolean(post.id), paramsHonored: post.paramsHonored });
       } else if (platform === "facebook") {
-        const cap = job.platformMeta?.facebook?.full;
+        const cap = platformMeta?.facebook?.full;
         if (!cap) { results.push({ platform, ok: false, error: "no facebook metadata" }); continue; }
-        const post = await postToFacebook({ videoUrl, coverUrl, caption: cap, whenISO, live });
-        results.push({ platform, id: post.id, ok: Boolean(post.id) });
+        // FB SLOT SHIFT (owner audit 2026-07-16, per the platform research doc): Facebook's audience
+        // peaks EVENINGS, later than IG's — and simultaneous cross-posting reads as syndication.
+        // Shift FB +3h from the IG slot, clamped so the 22:00-LA slot lands 23:30 same-day, not 01:00.
+        const fbWhenISO = live && whenISO ? shiftFbSlot(whenISO) : whenISO;
+        const post = await postToFacebook({ videoUrl, coverUrl, caption: cap, whenISO: fbWhenISO, live });
+        results.push({ platform, id: post.id, ok: Boolean(post.id), whenISO: fbWhenISO });
       } else if (platform === "youtube") {
-        const yt = job.platformMeta?.youtube;
+        const yt = platformMeta?.youtube;
         if (!yt?.title) { results.push({ platform, ok: false, error: "no youtube metadata" }); continue; }
         const post = await postYouTube({ videoUrl, title: yt.title, description: yt.description, whenISO, draft: !live });
         results.push({ platform, id: post.id, ok: post.ok, error: post.error });
@@ -204,4 +220,14 @@ export async function publish({ job, mp4, cover, whenISO, live = false }) {
     }
   }
   return { videoUrl, coverUrl, mode: live ? "scheduled" : "draft", whenISO: live ? whenISO : null, results };
+}
+
+// Host the video+cover ONCE, then fan out. Instagram posts FIRST and exactly as before (its own
+// proven caption); Facebook (Zernio) + YouTube (Buffer) use platformMeta metadata.
+export async function publish({ job, mp4, cover, whenISO, live = false }) {
+  const videoUrl = await hostFile(mp4, `${job.id}.mp4`);
+  // cover is BEST-EFFORT: a thumbnail hosting hiccup must never throw away a fully-built reel (the video
+  // is what matters; the platforms accept a null cover and pick their own frame). (review 2026-07-16)
+  const coverUrl = cover ? await hostFile(cover, `${job.id}-cover.jpg`).catch((e) => { console.error(`  cover host failed (non-fatal): ${String(e.message).slice(0, 80)}`); return null; }) : null;
+  return publishHosted({ id: job.id, caption: job.caption, platformMeta: job.platformMeta, videoUrl, coverUrl, whenISO, live });
 }

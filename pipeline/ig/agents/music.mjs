@@ -18,10 +18,36 @@ cacheKey: a short kebab-case genre-mood key (e.g. "gossip-glossy-pop", "epic-sup
 
 const BANNED_IN_PROMPT = /\b(john williams|hans zimmer|zimmer|goransson|göransson|elfman|morricone|score of|theme from|soundtrack of)\b/i;
 
+// DETERMINISTIC cache key from segment family + mood (owner audit 2026-07-16): the style-brief LLM
+// call used to fire on EVERY reel just to compute the cache key — even when the bed was already
+// cached. The key is now derived deterministically FIRST (cache check = zero LLM calls); the LLM
+// writes the Lyria prompt only on an actual cache miss.
+const SEG_FAMILY = {
+  "celebrity wire": "gossip-glossy",
+  "box office in 30": "epic-cinematic",
+  "trailer take": "epic-cinematic",
+  "tv signal": "tv-sleek",
+  "casting watch": "news-modern",
+};
+export function musicCacheKey(segment, mood) {
+  const fam = SEG_FAMILY[String(segment || "").toLowerCase().trim()] || "neutral-news";
+  return `${fam}-${mood || "neutral"}`.toLowerCase().replace(/[^a-z0-9-]/g, "-");
+}
+
 export async function pickMusic({ facts, mood, segment }) {
   if (mood === "somber") return { none: true, reason: "somber story — no music" };
   ensureDir(IG.musicDir);
 
+  // cache FIRST — a hit costs zero LLM calls (the beds are committed, so CI runs start warm too)
+  const key = musicCacheKey(segment, mood);
+  const variants = fs.existsSync(IG.musicDir) ? fs.readdirSync(IG.musicDir).filter((f) => f.startsWith(key + "-") && f.endsWith(".mp3")) : [];
+  const storyHash = crypto.createHash("md5").update(facts.storyOneLine || "").digest("hex");
+  if (variants.length >= 2) {
+    const pickIdx = parseInt(storyHash.slice(0, 6), 16) % variants.length;
+    return { file: path.join(IG.musicDir, variants[pickIdx]), engine: "lyria-cache", styleProfile: key, cacheKey: key, cost: 0 };
+  }
+
+  // cache miss → the LLM writes the Lyria prompt (style words only; the key stays deterministic)
   let profile;
   try {
     profile = await llm({
@@ -33,20 +59,10 @@ export async function pickMusic({ facts, mood, segment }) {
       json: true,
     });
   } catch {
-    profile = { styleProfile: "glossy modern entertainment groove, mid-tempo, warm bass, crisp light percussion, subtly building, clean space for voiceover", cacheKey: "neutral-news" };
+    profile = { styleProfile: "glossy modern entertainment groove, mid-tempo, warm bass, crisp light percussion, subtly building, clean space for voiceover" };
   }
   if (BANNED_IN_PROMPT.test(profile.styleProfile || "")) {
     profile.styleProfile = "glossy modern entertainment groove, mid-tempo, warm bass, crisp light percussion, subtly building, clean space for voiceover";
-    profile.cacheKey = "neutral-news";
-  }
-
-  const key = (profile.cacheKey || "neutral-news").toLowerCase().replace(/[^a-z0-9-]/g, "-");
-  // cache: up to 3 variants per key, rotate deterministically by story hash
-  const variants = fs.existsSync(IG.musicDir) ? fs.readdirSync(IG.musicDir).filter((f) => f.startsWith(key + "-") && f.endsWith(".mp3")) : [];
-  const storyHash = crypto.createHash("md5").update(facts.storyOneLine || "").digest("hex");
-  if (variants.length >= 2) {
-    const pickIdx = parseInt(storyHash.slice(0, 6), 16) % variants.length;
-    return { file: path.join(IG.musicDir, variants[pickIdx]), engine: "lyria-cache", styleProfile: profile.styleProfile, cacheKey: key, cost: 0 };
   }
 
   try {

@@ -4,7 +4,7 @@
 import { llm } from "../models.mjs";
 import { IG } from "../config.mjs";
 import { lintScript, estimateSeconds } from "../lib/lint.mjs";
-import { lintEnding } from "./engage.mjs";
+import { lintEnding, rotatedExamples } from "./engage.mjs";
 import { loadWeights } from "../lib/ledger.mjs";
 import { normWords } from "../lib/util.mjs";
 
@@ -84,9 +84,13 @@ export async function writeScript({ article, facts, segment, engage }) {
   const learned = Object.keys(weights.hookStyles || {}).length
     ? `\nLEARNED: these hook styles over/under-perform for our audience: ${JSON.stringify(weights.hookStyles)} — prefer high performers when the story allows.`
     : "";
+  // slug-rotated ask examples (owner audit 2026-07-16): the writer copies the example it sees, so
+  // showing every reel the same one shipped the identical CTA line 14/14 — a mass-produced-content
+  // fingerprint. Rotation gives per-video variation while every variant still matches the lint pattern.
+  const askExamples = rotatedExamples(engage?.goal || "comments", article.slug || "");
   const sys = SYS
     .replace("{ENDING_GUIDANCE}", engage?.family?.writerGuidance || "end with a genuine question the audience wants to answer, then invite them to answer it in the comments")
-    .replace("{ASK_EXAMPLES}", (engage?.family?.examples || ['"Let us know in the comments below."']).join(" or "));
+    .replace("{ASK_EXAMPLES}", (askExamples.length ? askExamples : ['"Let us know in the comments below."']).join(" or "));
   const base = `STORY: ${facts.storyOneLine || article.title}\nSEGMENT: ${segment || "news"}\nENGAGEMENT GOAL: ${engage?.goal || "comments"}\nENTITIES: ${facts.entities.map((e) => e.name).join(", ")}\nVERIFIED FACTS (the ONLY allowed material):\n${factList}${learned}`;
 
   let violations = [];
@@ -216,7 +220,9 @@ export async function writeScript({ article, facts, segment, engage }) {
   // already had 3 tries at a bespoke question; this is the safety net, not the first choice.
   if (lastScript && violations.every((v) => v.rule.startsWith("ending"))) {
     const goal = engage?.goal || "comments";
-    const canonical = (engage?.family?.examples?.[0] || '"Let us know in the comments below."').replace(/^"|"$/g, "");
+    // slug-rotated canonical (owner audit 2026-07-16) — the repair path was stamping the SAME line on
+    // every repaired reel; rotation keeps even the safety-net endings varied.
+    const canonical = (rotatedExamples(goal, article.slug || "")[0] || engage?.family?.examples?.[0] || '"Let us know in the comments below."').replace(/^"|"$/g, "");
     const s = [...lastScript.sentences];
     // drop a trailing ask-ish line (broadened so more malformed asks are removed, not left in place)
     if (/\b(save|send|show|comment|bookmark|let us know|tell us|drop|sound off|hit the|link in|check (it|this)|follow us)\b/i.test(s[s.length - 1] || "")) s.pop();

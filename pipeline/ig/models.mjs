@@ -108,15 +108,15 @@ async function streamAudio(body, { label, timeoutMs, maxAudioBytes = 0 }) {
   const hard = setTimeout(() => ctl.abort(), hardMs);
   const rearm = () => { clearTimeout(t); t = setTimeout(() => ctl.abort(), timeoutMs); };
   let runaway = false;
+  let bytes = 0; // hoisted: the abort-metering below needs the received-audio size (audit 2026-07-16)
+  let usage = null;
   try {
     const res = await fetch(OR_URL, { method: "POST", headers: HEADERS(), body: JSON.stringify(body), signal: ctl.signal });
     if (!res.ok || !res.body) throw new Error(`${label}: HTTP ${res.status} ${(await res.text().catch(() => "")).slice(0, 200)}`);
     const decoder = new TextDecoder();
     let buf = "";
     const audioB64 = [];
-    let bytes = 0; // running decoded-audio size — the runaway guard (audit 2026-07-11)
     let transcript = "";
-    let usage = null;
     let errObj = null;
     let finished = false; // a stream that dies mid-read returns PARTIAL audio — reject it
     for await (const chunk of res.body) {
@@ -151,6 +151,12 @@ async function streamAudio(body, { label, timeoutMs, maxAudioBytes = 0 }) {
     if (!audio.length) throw new Error(`${label}: stream returned no audio`);
     return { audio, transcript, cost: usage?.cost ?? 0 };
   } catch (e) {
+    // METER THE ABORT (owner audit 2026-07-16): OpenRouter bills the audio tokens generated BEFORE a
+    // runaway/idle abort, but the usage chunk never arrives — every aborted stream was recorded as $0
+    // and the ledgers undercounted real spend. Estimate from received audio (~$0.0018/s of pcm16@24k,
+    // derived from real ~40s reads billing ~$0.073) unless a usage chunk made it through.
+    const sec = bytes / 48000;
+    if (sec > 1) record("voice", `${body.model || "audio"}`, usage?.cost ?? +(sec * 0.0018).toFixed(4), "aborted-stream (estimated)");
     if (runaway) throw new Error(`${label}: runaway audio (>${Math.round(maxAudioBytes / 48000)}s) — take rejected`);
     throw e;
   } finally { clearTimeout(t); clearTimeout(hard); }

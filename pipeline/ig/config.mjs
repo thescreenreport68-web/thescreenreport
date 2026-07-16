@@ -93,7 +93,14 @@ export const IG = {
     tighten: { minSilence: 0.3, keepSilence: 0.26, threshold: "-34dB", protectTailSec: 4.5, floorSec: 30 },
     maxLongGaps: 1, // remaining pauses >0.45s allowed after tightening (outside the tail)
   },
-  endTailSec: 1.8, // endcard/audio ease-out after the last word (was 0.9 — too abrupt)
+  // ≤1s tail (owner audit 2026-07-16): the 1.8s dimmed endcard read as a DEAD ZONE — viewers swiped
+  // during it, killing the completion/loop metrics Shorts/Reels rank on. The ending now stays on the
+  // last LIVE shot (no full-screen dim) with the wordmark overlaid, or loops back to frame 1.
+  endTailSec: 0.9,
+  // FRAME-1 SOUND-OFF HOOK (owner audit 2026-07-16): ~85% of feed viewing is muted — the already-
+  // generated cover headline is composited as large type over the first ~2.5s (fades as sentence 2
+  // starts). hookSec is the fallback when sentence timings are unavailable.
+  hook: { sec: 2.5, fadeSec: 0.4 },
 
   // ── caps + ramp (plan §1.9/§6.1) — the orchestrator enforces these in code.
   maxPerDay: 7, // owner 2026-07-13: 7 posts/day, one per LA slot (10a/12p/2p/4p/6p/8p/10p)

@@ -257,9 +257,17 @@ async function makeTake({ dir, sentences, voice, mood, harder, model, label }) {
   const transcript = r.transcript;
   const cost = r.cost;
   if (!transcriptMatches(text, transcript)) {
-    const a = normWords(text), b = normWords(transcript);
-    const drift = (tokenDiff(a, b) / Math.max(1, a.length)).toFixed(3);
-    return { voice: label, fail: `verbatim-precheck (drift ${drift}, spoken tail: "${transcript.slice(-70)}")`, cost };
+    // TAIL-DROP SALVAGE (owner audit 2026-07-16): gpt-audio's #1 failure is dropping the final CTA
+    // line after the closing question — ~half of rejected takes died ONLY for that, throwing away a
+    // fully-paid body read. If the BODY (script minus the last sentence) is verbatim, let the take
+    // through — the whisper wall downstream detects the missing ending and rescueTail synthesizes
+    // just that one short line (~$0.005) instead of re-buying a whole ~$0.07 read.
+    const bodyText = sentences.slice(0, -1).join(" ");
+    if (!(sentences.length >= 3 && transcriptMatches(bodyText, transcript))) {
+      const a = normWords(text), b = normWords(transcript);
+      const drift = (tokenDiff(a, b) / Math.max(1, a.length)).toFixed(3);
+      return { voice: label, fail: `verbatim-precheck (drift ${drift}, spoken tail: "${transcript.slice(-70)}")`, cost };
+    }
   }
   const raw = path.join(dir, `take-${label}-raw.wav`);
   const pcmPath = raw.replace(".wav", ".pcm");
@@ -272,6 +280,36 @@ async function makeTake({ dir, sentences, voice, mood, harder, model, label }) {
   const gaps = gapStats(paced);
   const judge = await judgeTake(paced);
   return { voice: label, realVoice: voice, model, wav: paced, transcript, cost, gaps, judge, score: scoreTake(judge, gaps), pass: passesFloor(judge, gaps) };
+}
+
+// ── TAIL RESCUE (owner audit 2026-07-16): when a take dropped ONLY the final CTA line, synthesize
+// that one short line (~$0.005) and append it after a natural beat — instead of rejecting the whole
+// paid ~$0.07 read. The joined take still faces the full whisper wall (verbatim + ending-spoken), so
+// nothing unverified ships; the CTA is a discrete sign-off beat, so the join reads as the natural
+// pause the delivery prompt already asks for.
+async function rescueTail({ dir, take, lastSentence, mood, label }) {
+  const r = await speak({
+    text: lastSentence,
+    voice: take.realVoice || IG.voice.candidates[0],
+    model: take.model,
+    style: mood === "somber" ? "measured, warm, respectful sign-off" : "calm, warm, inviting sign-off to a friend — unhurried, like the closing line of a story",
+    context: "This is the final short call-to-action line of a reel, spoken after a natural beat. Read exactly these words and nothing more.",
+  });
+  if (!transcriptMatches(lastSentence, r.transcript, 0.4)) throw new Error("tail synth did not read the CTA verbatim");
+  const tailPcm = path.join(dir, `tail-${label}.pcm`);
+  fs.writeFileSync(tailPcm, r.pcm);
+  const tailWav = tailPcm.replace(".pcm", ".wav");
+  execFileSync(FFMPEG, ["-y", "-loglevel", "error", "-f", "s16le", "-ar", "24000", "-ac", "1", "-i", tailPcm, tailWav], { timeout: 60000 });
+  const joined = take.wav.replace(/\.wav$/, "-tailfix.wav");
+  execFileSync(
+    FFMPEG,
+    ["-y", "-loglevel", "error", "-i", take.wav, "-i", tailWav, "-filter_complex", "[0:a]apad=pad_dur=0.28[a];[a][1:a]concat=n=2:v=0:a=1[out]", "-map", "[out]", joined],
+    { timeout: 60000 },
+  );
+  take.wav = joined;
+  take.cost = (take.cost || 0) + (r.cost || 0);
+  take.transcript = `${take.transcript || ""} ${r.transcript || ""}`.trim();
+  take.tailRescued = true;
 }
 
 // ── the stage ────────────────────────────────────────────────────────────────────
@@ -314,21 +352,37 @@ export async function synthVoice({ slug, speakable, mood }) {
     return t;
   };
   let winner = null, winnerWhisper = null;
-  // roll takes ONE AT A TIME (plans = up to takesPerVoice reads of the locked voice) — ship the first that
-  // is clean + passes the floor; keep clean-but-below-floor takes as a warn-and-ship fallback.
+  // WIN-FAST THRESHOLD (owner audit 2026-07-16): the earlier "take-until-clean" loop still paid for
+  // all takes on most runs, because passesFloor (all axes ≥6 + total ≥18) almost never passes on the
+  // NOISY ear-judge (identical marin reads score 8-22) — so the loop rolled every take, then shipped a
+  // below-floor one anyway (igrun warn-and-ships anything ≥ hardFloorScore). Accepting a whisper-CLEAN
+  // take at score ≥ hardFloorScore(8) IMMEDIATELY ships the exact same audio the old path would have
+  // shipped after paying for 3-4 reads. A cleanWhisper miss that is ONLY the dropped CTA line gets the
+  // ~$0.005 tail rescue instead of a ~$0.07 re-roll (the #1 reject cause, ~50% of thrown-away takes).
+  const winScore = IG.voice.hardFloorScore ?? 8;
+  const tryClean = async (t) => {
+    let wh = cleanWhisper(t);
+    if (!wh && t.verbatim?.kind === "ending-dropped" && !t.tailRescued) {
+      try {
+        await rescueTail({ dir, take: t, lastSentence, mood, label: t.voice });
+        wh = cleanWhisper(t); // full wall re-run on the joined audio — nothing unverified ships
+      } catch (e) { t.verbatim = { ...t.verbatim, rescue: `tail rescue failed: ${String(e?.message || e).slice(0, 60)}` }; }
+    }
+    return wh;
+  };
   for (let i = 0; i < plans.length && !winner; i++) {
     const t = await oneTake(plans[i]);
     if (!t.wav) continue; // synth failed → roll the next
-    const wh = cleanWhisper(t);
-    if (wh && t.pass) { winner = t; winnerWhisper = wh; } // clean + floor pass → SHIP (early exit)
-    else if (wh) t.cleanWh = wh; // clean but below floor → remember it
+    const wh = await tryClean(t);
+    if (wh && (t.pass || (t.score ?? 0) >= winScore)) { winner = t; winnerWhisper = wh; } // clean + shippable → SHIP
+    else if (wh) t.cleanWh = wh; // clean but under the hard floor (a truly bad read) → remember, roll again
   }
-  // no clean+passing take → ONE harder-directed retry on the best plan so far (preserves today's 4th rescue)
+  // no clean shippable take → ONE harder-directed retry on the best plan so far (the 4th rescue read)
   if (!winner) {
     const best = takes.filter((t) => t.wav).sort((a, b) => (b.score ?? 0) - (a.score ?? 0))[0];
     const plan = plans.find((p) => p.label === best?.voice) || plans[0];
     const h = await oneTake(plan, true);
-    if (h.wav) { const wh = cleanWhisper(h); if (wh && h.pass) { winner = h; winnerWhisper = wh; } else if (wh) h.cleanWh = wh; }
+    if (h.wav) { const wh = await tryClean(h); if (wh && (h.pass || (h.score ?? 0) >= winScore)) { winner = h; winnerWhisper = wh; } else if (wh) h.cleanWh = wh; }
   }
   // still no floor-PASSING take → ship the best CLEAN below-floor take (warn-and-ship, exactly as before)
   if (!winner) {

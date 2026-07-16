@@ -52,7 +52,11 @@ export async function postYouTube({ videoUrl, title, description, whenISO, draft
     // Buffer (2026-07) REJECTS thumbnailUrl on a video asset; cover is picked via thumbnailOffset.
     assets: [{ video: { url: videoUrl, metadata: { thumbnailOffset: 1200 } } }],
     saveToDraft: !!draft,
-    aiAssisted: false,
+    // TRUE, matching metadata.youtube.isAiGenerated (owner audit 2026-07-16): the reel uses AI voice +
+    // imagery of real people/events, and from May 2026 YouTube auto-detects undisclosed synthetic
+    // content and can strip revenue — honest disclosure carries no reach penalty. The old `false` here
+    // was the silent flip that made Buffer store isAiGenerated=false despite our metadata flag.
+    aiAssisted: true,
     metadata: {
       youtube: {
         title,
@@ -78,6 +82,28 @@ export async function postYouTube({ videoUrl, title, description, whenISO, draft
 export async function bufferStatus(id) {
   const j = await gql(`query($input: PostInput!){ post(input:$input){ id status dueAt } }`, { input: { id } });
   return j?.data?.post || { error: j?.errors?.[0]?.message };
+}
+
+// YouTube post metrics via Buffer (flywheel, owner audit 2026-07-16). Live-probed shape:
+// metrics = [{type:"views"|"reactions"|"comments"|"engagementRate", value:number}]. NOTE: Buffer does
+// NOT expose YouTube's post-2025 "engagedViews" field — views + engagementRate (interactions/views) is
+// the best engagement-quality signal available on this path; the learner records both.
+export async function bufferMetrics(id) {
+  const j = await gql(
+    `query($input: PostInput!){ post(input:$input){ id status metricsUpdatedAt metrics{ type value } } }`,
+    { input: { id } },
+  );
+  const p = j?.data?.post;
+  if (!p) return null;
+  const get = (t) => p.metrics?.find((m) => m.type === t)?.value ?? null;
+  return {
+    status: p.status,
+    views: get("views"),
+    likes: get("reactions"),
+    comments: get("comments"),
+    engagementRate: get("engagementRate"), // percent: (reactions+comments)/views*100
+    updatedAt: p.metricsUpdatedAt || null,
+  };
 }
 
 // delete a Buffer post/draft by id (test cleanup)

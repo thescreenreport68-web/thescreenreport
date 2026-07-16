@@ -19,7 +19,7 @@ import path from "node:path";
 import { IG, SITE } from "./config.mjs";
 import { costSpent, costCalls, costReset } from "./models.mjs";
 import { newJob, loadJob, saveJob, jlog, holdJob, stageDone, workDirFor } from "./job.mjs";
-import { ensureDir, todayInTz, normWords, parseFrontmatter, stripMarkdown } from "./lib/util.mjs";
+import { ensureDir, todayInTz, normWords, parseFrontmatter, stripMarkdown, readJson, writeJson, fetchWithTimeout } from "./lib/util.mjs";
 import { isPaused, recordPosted, recordBuilt, topicKey, postedToday, scheduledSlotsToday, isPosted, recordHold, isHeld, loadPosted, savePosted } from "./lib/ledger.mjs";
 import { lintManifest } from "./lib/lint.mjs";
 import { estimateSeconds } from "./lib/lint.mjs";
@@ -43,7 +43,8 @@ import { styleEmphasis, buildAss } from "./agents/subs.mjs";
 import { render } from "./agents/render.mjs";
 import { makeCover } from "./agents/cover.mjs";
 import { watchQC } from "./agents/watchqc.mjs";
-import { publish, verifyLive } from "./agents/publish.mjs";
+import { publish, publishHosted, hostFile, verifyLive } from "./agents/publish.mjs";
+import { bufferStatus } from "./lib/buffer.mjs";
 import { planSlots, upcomingSlotsToday } from "./agents/slots.mjs";
 import { collect } from "./agents/analytics.mjs";
 import { learn } from "./agents/learner.mjs";
@@ -148,7 +149,12 @@ async function processJob(article, { skipStages = new Set() } = {}) {
   const mood = job.sensitive?.decision === "somber" ? "somber" : job.facts.mood || "neutral";
   // ENGAGE v2 (runs BEFORE the writer): pick the goal; the WRITER crafts the ending
   if (need("engage")) {
-    const r = await stageRun(job, "engage", () => pickGoal({ facts: job.facts, segment: job.scout?.segment }), 90000);
+    // SENDS QUOTA (owner audit 2026-07-16): goal was comments on 14/14 posted reels. When under 1/3
+    // of the recent posted+this-run goals are sends, pickGoal gets preferSends — it overrides to sends
+    // ONLY when the story carries a real send-trigger (record/shock/nostalgia signal).
+    const recentGoals = loadPosted().posts.slice(-21).map((p) => p.goal).filter(Boolean); // ~last 7 stories × 3 platform rows
+    const sendsShare = recentGoals.length ? recentGoals.filter((g) => g === "sends").length / recentGoals.length : 0;
+    const r = await stageRun(job, "engage", () => pickGoal({ facts: job.facts, segment: job.scout?.segment, preferSends: sendsShare < 1 / 3 }), 90000);
     job.engage = r.ok ? r.result : { goal: "comments", family: ASK_FAMILIES.comments, cta: "", firstComment: "" };
     jlog(job, "engage", `goal=${job.engage.goal}${job.engage.why ? ` (${job.engage.why})` : ""}`);
     stageDone(job, "engage");
@@ -303,8 +309,18 @@ async function processJob(article, { skipStages = new Set() } = {}) {
     job.render.assFile = r.result;
     stageDone(job, "subs");
   }
+  // 16.5 COVER — MOVED BEFORE RENDER (owner audit 2026-07-16): the cover headline doubles as the
+  // frame-1 sound-off hook overlay, so it must exist at render time. Cover is garnish (never holds).
+  if (need("cover")) {
+    const r = await stageRun(job, "cover", () => makeCover({ job, shots: job.shots }), 120000);
+    if (r.ok) job.render.cover = r.result.file, (job.render.coverHeadline = r.result.headline);
+    else job.render.cover = null; // garnish — publisher falls back to thumb offset
+    stageDone(job, "cover");
+  }
   // 17 RENDER
   if (need("render")) {
+    // frame-1 hook fades as sentence 2 starts (whisper window t0); falls back to IG.hook.sec
+    const hookUntil = job.audio.windows?.[1]?.t0 || null;
     const r = await stageRun(job, "render", async () =>
       render({
         slug: job.id,
@@ -314,6 +330,9 @@ async function processJob(article, { skipStages = new Set() } = {}) {
         voiceWav: job.audio.voice.wav,
         musicFile: job.audio.music?.file || null,
         durationSec,
+        hookHeadline: job.render.coverHeadline || null,
+        hookUntil,
+        segment: job.scout?.segment || null,
       }), 900000);
     if (!r.ok) return holdJob(job, "render", r.error);
     job.render.mp4 = r.result;
@@ -335,13 +354,7 @@ async function processJob(article, { skipStages = new Set() } = {}) {
     if (hard.length) return holdJob(job, "synccheck", hard.map((v) => `${v.rule}: ${v.detail}`).join("; "));
     stageDone(job, "synccheck");
   }
-  // 19 COVER
-  if (need("cover")) {
-    const r = await stageRun(job, "cover", () => makeCover({ job, shots: job.shots }), 120000);
-    if (r.ok) job.render.cover = r.result.file, (job.render.coverHeadline = r.result.headline);
-    else job.render.cover = null; // garnish — publisher falls back to thumb offset
-    stageDone(job, "cover");
-  }
+  // (cover now runs BEFORE render — see 16.5; its headline feeds the frame-1 hook overlay)
   // 20 WATCH-QC (fix loop = re-render once on fixable issues, then hold)
   if (need("watchqc")) {
     const r = await stageRun(job, "watchqc", () => watchQC({ job, mp4: job.render.mp4, expectedSec: durationSec + 1.0 }), 300000);
@@ -352,6 +365,80 @@ async function processJob(article, { skipStages = new Set() } = {}) {
   }
   costGuard(job);
   return saveJob(job);
+}
+
+// ── BUILT-META + DRAIN (owner audit 2026-07-16): "re-queue any finished mp4 with no posted rows" ──
+// The runner is ephemeral, so a built-but-unposted reel's mp4 evaporates unless it was hosted. The
+// small posting metadata (captions, per-platform copy, hosted URLs) is persisted under data/ig/
+// built-meta/ (COMMITTED by the workflow's ledger step). At the start of every live run, the drain
+// re-queues any built reel with no posted rows: hosted mp4 → schedule into today's next empty slot at
+// ZERO rebuild cost; media lost → surface a hold ONCE (rebuilding would re-pay the full build).
+const builtMetaDir = () => path.join(IG.dataDir, "built-meta");
+function writeBuiltMeta(job, extra = {}) {
+  try {
+    const f = path.join(builtMetaDir(), `${job.id}.json`);
+    const cur = readJson(f, {});
+    writeJson(f, {
+      ...cur,
+      slug: job.id,
+      caption: job.caption ? { full: job.caption.full, firstComment: job.caption.firstComment } : cur.caption,
+      platformMeta: job.platformMeta || cur.platformMeta,
+      hookStyle: job.script?.hookStyle ?? cur.hookStyle,
+      segment: job.scout?.segment ?? cur.segment,
+      goal: job.engage?.goal ?? cur.goal,
+      builtAt: cur.builtAt || new Date().toISOString(),
+      ...extra,
+    });
+  } catch (e) { console.error(`  built-meta write failed for ${job.id}: ${e.message}`); }
+}
+
+async function drainBuiltUnposted({ day, live }) {
+  const dir = builtMetaDir();
+  if (!live || !fs.existsSync(dir)) return 0;
+  const postedSlugs = new Set(loadPosted().posts.map((p) => p.slug));
+  let drained = 0;
+  for (const f of fs.readdirSync(dir).filter((x) => x.endsWith(".json"))) {
+    const metaFile = path.join(dir, f);
+    const meta = readJson(metaFile, null);
+    if (!meta?.slug || postedSlugs.has(meta.slug) || meta.drainedAt || meta.abandoned) continue;
+    // find the hosted mp4: the recorded URL, else the conventional raw location
+    let videoUrl = meta.videoUrl || null;
+    if (!videoUrl) {
+      const guess = `https://raw.githubusercontent.com/${IG.host.repo}/main/${IG.host.dir}/${meta.slug}.mp4`;
+      const head = await fetchWithTimeout(guess, { method: "HEAD" }, 10000).catch(() => null);
+      if (head?.ok) videoUrl = guess;
+    }
+    if (!videoUrl) {
+      meta.abandoned = "built but media never hosted (ephemeral CI) — not rebuilding (cost)";
+      writeJson(metaFile, meta);
+      recordHold(meta.slug, "drain", meta.abandoned);
+      console.warn(`  ⚠ drain: ${meta.slug} built but media lost — surfaced as hold, will not re-pay the build`);
+      continue;
+    }
+    if (!meta.caption?.full) { meta.abandoned = "no caption metadata persisted"; writeJson(metaFile, meta); continue; }
+    // next empty upcoming slot today — the drained reel is today's content, it consumes a real slot
+    const filled = scheduledSlotsToday(day);
+    const [assign] = planSlots([{ id: meta.slug }], { filledSlots: filled });
+    if (!assign) { console.log(`  drain: no open slot today for ${meta.slug} — will retry next run`); continue; }
+    try {
+      const pub = await publishHosted({ id: meta.slug, caption: meta.caption, platformMeta: meta.platformMeta, videoUrl, coverUrl: meta.coverUrl || null, whenISO: assign.whenISO, live });
+      for (const r of pub.results) {
+        recordPosted({
+          slug: meta.slug, platform: r.platform, postId: r.id ?? null, published: !!r.ok, error: r.error || null,
+          mode: pub.mode, slot: assign.slot, scheduledDay: day, whenISO: assign.whenISO,
+          hookStyle: meta.hookStyle || null, segment: meta.segment || null, goal: meta.goal || null,
+          videoUrl, drained: true,
+        });
+      }
+      meta.drainedAt = new Date().toISOString();
+      writeJson(metaFile, meta);
+      drained++;
+      console.log(`  ♻️  drained ${meta.slug} → slot ${assign.slot} (zero rebuild cost) · ok:[${pub.results.filter((r) => r.ok).map((r) => r.platform).join(", ")}]`);
+    } catch (e) {
+      console.error(`  drain publish failed for ${meta.slug}: ${String(e.message).slice(0, 120)}`);
+    }
+  }
+  return drained;
 }
 
 // ── the run ─────────────────────────────────────────────────────────────────────
@@ -365,16 +452,26 @@ async function main() {
   if (args.analytics) { const rows = await collect(); console.log(`analytics: ${rows.length} rows collected`); return; }
   if (args.learn) { const res = learn(); console.log("learner:", JSON.stringify(res.updated ? res.weights.accountMedians : res.reason)); return; }
   if (args.verify) {
-    // post-slot live verification for EVERY scheduled post (plan agent 21) — cron-able
+    // post-slot live verification for EVERY scheduled post (plan agent 21) — cron-able.
+    // FIXED (owner audit 2026-07-16): filtered on p.zernioId but recordPosted writes p.postId
+    // (one row per platform) → zero rows ever verified. Now: postId||zernioId, routed by platform
+    // (IG/FB via Zernio verifyLive, YouTube via Buffer status === "sent").
     const ledger = loadPosted();
     let failures = 0;
     for (const p of ledger.posts) {
-      if (p.mode !== "scheduled" || p.verifiedLive || !p.zernioId) continue;
+      const id = p.postId || p.zernioId;
+      if (p.mode !== "scheduled" || p.verifiedLive || !id || p.published === false) continue;
       const due = p.whenISO && new Date(p.whenISO).getTime() + 10 * 60000 < Date.now();
       if (!due) continue;
-      const v = await verifyLive(p.zernioId, { timeoutMin: 2, everySec: 30 });
-      if (v.live) { p.verifiedLive = true; p.permalink = v.permalink; console.log(`  ✔ live: ${p.slug} ${v.permalink || ""}`); }
-      else { p.verifyFailures = (p.verifyFailures || 0) + 1; failures++; console.error(`  ✖ NOT live: ${p.slug} (${JSON.stringify(v).slice(0, 120)})`); }
+      if ((p.platform || "instagram") === "youtube") {
+        const s = await bufferStatus(id).catch(() => null);
+        if (s?.status === "sent") { p.verifiedLive = true; console.log(`  ✔ live (yt): ${p.slug}`); }
+        else { p.verifyFailures = (p.verifyFailures || 0) + 1; failures++; console.error(`  ✖ NOT live (yt): ${p.slug} (${JSON.stringify(s).slice(0, 120)})`); }
+        continue;
+      }
+      const v = await verifyLive(id, { timeoutMin: 2, everySec: 30 });
+      if (v.live) { p.verifiedLive = true; p.permalink = v.permalink; console.log(`  ✔ live (${p.platform || "ig"}): ${p.slug} ${v.permalink || ""}`); }
+      else { p.verifyFailures = (p.verifyFailures || 0) + 1; failures++; console.error(`  ✖ NOT live (${p.platform || "ig"}): ${p.slug} (${JSON.stringify(v).slice(0, 120)})`); }
     }
     savePosted(ledger);
     if (failures) process.exitCode = 1; // GH Actions notifies the owner
@@ -450,6 +547,15 @@ async function main() {
     const slotsLeftToday = upcomingSlotsToday(new Date(), filledSlots).length;
     if (slotsLeftToday < 1) { console.log(`no slots left upcoming today (${day}) — exiting`); return; }
     effectivePosts = Math.min(targetPosts, slotsLeftToday);
+    // DRAIN built-but-unposted reels FIRST (owner audit 2026-07-16) — already-paid builds fill slots
+    // at zero cost before any new build spends a cent. Re-read the caps after: drained reels consume slots.
+    const drained = await drainBuiltUnposted({ day, live });
+    if (drained > 0) {
+      filledSlots = scheduledSlotsToday(day);
+      const left = upcomingSlotsToday(new Date(), filledSlots).length;
+      if (left < 1) { console.log(`drain filled the remaining slots (${drained} recovered) — nothing to build`); return; }
+      effectivePosts = Math.min(targetPosts, left);
+    }
   }
 
   // build every job
@@ -478,6 +584,11 @@ async function main() {
     // never rebuild this story, and record its TOPIC (title + real entity names) so the scout
     // skips other reels about the SAME event next run (topic dedup, not just slug dedup)
     recordBuilt(job.id, topicKey(`${job.article?.title || job.id} ${(job.facts?.entities || []).map((e) => e.name).join(" ")}`));
+    // DRAIN INSURANCE (owner audit 2026-07-16): persist the small posting metadata to the COMMITTED
+    // ledger dir. If this reel is built but never posted (publish failure, no slot), the next run's
+    // drain re-queues it from the hosted mp4 at ZERO rebuild cost — a paid build is never lost again
+    // (andrew-garfield + amy-schumer were built, never posted, and excluded forever by recordBuilt).
+    writeBuiltMeta(job, {});
     built.push(job);
     if (built.length >= effectivePosts) break; // built enough for today's remaining slots — stop, don't over-build
   }
@@ -492,11 +603,24 @@ async function main() {
       // is still in the future when Zernio receives it); otherwise use the assigned LA slot.
       const whenISO = publishNow ? new Date(Date.now() + 3 * 60000).toISOString() : slot?.whenISO;
       const slotLabel = publishNow ? "now" : slot?.slot;
-      if (!publishNow && !slot) { console.log(`  ⏸ no open slot left today for ${job.id} — not scheduling`); continue; }
+      if (!publishNow && !slot) {
+        // HOST NOW, POST TOMORROW (owner audit 2026-07-16): a built reel with no slot left today used
+        // to be silently stranded (recordBuilt blocks a rebuild; the runner's mp4 evaporates with CI).
+        // Host it to tsr-media + record the URL in built-meta so tomorrow's drain schedules it into a
+        // slot at zero rebuild cost.
+        console.log(`  ⏸ no open slot left today for ${job.id} — hosting for tomorrow's drain`);
+        try {
+          const videoUrl = await hostFile(job.render.mp4, `${job.id}.mp4`);
+          const coverUrl = job.render.cover ? await hostFile(job.render.cover, `${job.id}-cover.jpg`).catch(() => null) : null;
+          writeBuiltMeta(job, { videoUrl, coverUrl });
+        } catch (e) { console.error(`  📛 drain-hosting failed for ${job.id}: ${String(e.message).slice(0, 100)}`); }
+        continue;
+      }
       try {
         const pub = await publish({ job, mp4: job.render.mp4, cover: job.render.cover, whenISO, live });
         job.publish = { ...pub, slot: slotLabel };
         saveJob(job);
+        writeBuiltMeta(job, { videoUrl: pub.videoUrl, coverUrl: pub.coverUrl }); // hosted URL → drain can retry a failed platform tomorrow
         // ONE ledger row per platform. Build-once dedup keys on slug (any row); the daily/slot guards
         // count DISTINCT slugs/slots (see ledger.mjs), so 3 rows for one story = one slot/one story.
         for (const r of pub.results) {
