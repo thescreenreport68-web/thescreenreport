@@ -1,0 +1,90 @@
+{
+ "runId": "run-2026-07-16T10-30-37",
+ "mode": "live",
+ "startedAt": "2026-07-16T10:30:37.277Z",
+ "films": 6,
+ "published": [
+  {
+   "tag": "supergirl-bo-update×BO-UPDATE",
+   "slug": "supergirl-box-office-day-19-domestic-total-climbs-to-67-5-million",
+   "path": "/home/runner/work/thescreenreport/thescreenreport/content/articles/supergirl-box-office-day-19-domestic-total-climbs-to-67-5-million.md",
+   "score": 30,
+   "acceptReason": "daily factual update — deterministic numbers + accuracy walls + word floor all pass"
+  }
+ ],
+ "held": [
+  {
+   "tag": "moana-bo-update×BO-UPDATE",
+   "reason": "not material: no new number (current $100M not above last published $100M)"
+  },
+  {
+   "tag": "minions-monsters-bo-update×BO-UPDATE",
+   "reason": "not material: no new number (current $116M not above last published $280M)"
+  },
+  {
+   "tag": "toy-story-5-bo-update×BO-UPDATE",
+   "reason": "not material: no new number (current $411M not above last published $882M)"
+  },
+  {
+   "tag": "evil-dead-burn-bo-update×BO-UPDATE",
+   "reason": "words 128 < 180 (owner-set ~200-word minimum)",
+   "score": 30
+  },
+  {
+   "tag": "young-washington-bo-update×BO-UPDATE",
+   "reason": "words 133 < 180 (owner-set ~200-word minimum)",
+   "score": 35
+  }
+ ],
+ "rejected": [],
+ "skipped": [],
+ "blocked": [],
+ "zeroStreak": 0,
+ "finishedAt": "2026-07-16T10:44:37.417Z",
+ "meter": {
+  "byRole": {
+   "gatherer": {
+    "calls": 7,
+    "errors": 0,
+    "in": 22335,
+    "out": 2884,
+    "usd": 0.00339,
+    "ms": 15133
+   },
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 1972,
+    "out": 465,
+    "usd": 0.00013,
+    "ms": 1332
+   },
+   "synthesizer": {
+    "calls": 3,
+    "errors": 0,
+    "in": 2172,
+    "out": 1883,
+    "usd": 0.00053,
+    "ms": 52036
+   },
+   "writer": {
+    "calls": 7,
+    "errors": 0,
+    "in": 13388,
+    "out": 6239,
+    "usd": 0.01534,
+    "ms": 83203
+   },
+   "qa": {
+    "calls": 23,
+    "errors": 0,
+    "in": 64860,
+    "out": 10363,
+    "usd": 0.04537,
+    "ms": 71015
+   }
+  },
+  "totalUsd": 0.06476
+ },
+ "openrouterTotalUsd": 0.06529
+}
