@@ -202,6 +202,18 @@ function readingTimeFor(text: string): number {
   return Math.max(1, Math.round(words / 220));
 }
 
+// Defensive strip of markdown emphasis tokens that leak from writer output into PLAIN-TEXT
+// fields (frontmatter title/dek/FAQ are rendered verbatim, so "*The Odyssey*" shows literal
+// asterisks to readers). Root fix lives in the lanes; this guarantees readers never see it.
+// Text-only cleanup — never shortens or rewrites the title.
+function stripMdTokens<T>(v: T): T {
+  if (typeof v !== "string") return v;
+  return (v as string)
+    .replace(/\*\*([^*]+)\*\*/g, "$1")
+    .replace(/\*([^*]+)\*/g, "$1")
+    .replace(/`([^`]+)`/g, "$1") as T;
+}
+
 let cache: Article[] | null = null;
 
 export function getAllArticles(): Article[] {
@@ -219,7 +231,7 @@ export function getAllArticles(): Article[] {
     const { data, content } = matter(raw);
     const slug = (data.slug as string) || file.replace(/\.mdx?$/, "");
     return {
-      title: data.title,
+      title: stripMdTokens(data.title),
       slug,
       category: data.category,
       subcategory: data.subcategory,
@@ -228,9 +240,9 @@ export function getAllArticles(): Article[] {
       // dateModified is what the pipeline/recheck actually writes; `updated` kept for manual edits
       updated: data.updated ?? data.dateModified,
       robots: data.robots,
-      dek: data.dek ?? "",
-      metaTitle: data.metaTitle ?? data.title,
-      metaDescription: data.metaDescription ?? data.dek ?? "",
+      dek: stripMdTokens(data.dek ?? ""),
+      metaTitle: stripMdTokens(data.metaTitle ?? data.title),
+      metaDescription: stripMdTokens(data.metaDescription ?? data.dek ?? ""),
       tags: data.tags ?? [],
       targetKeyword: data.targetKeyword,
       imageAlt: data.imageAlt ?? data.title,
@@ -238,7 +250,11 @@ export function getAllArticles(): Article[] {
       image: data.image,
       imageWidth: data.imageWidth,
       imageHeight: data.imageHeight,
-      faq: data.faq ?? [],
+      faq: (data.faq ?? []).map((f: { q: string; a: string }) => ({
+        ...f,
+        q: stripMdTokens(f?.q),
+        a: stripMdTokens(f?.a),
+      })),
       keyTakeaways: data.keyTakeaways ?? [],
       about: data.about ?? [],
       featured: data.featured ?? false,

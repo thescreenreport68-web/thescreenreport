@@ -78,7 +78,22 @@ export const metadata: Metadata = {
     template: `%s — ${SITE.name}`,
   },
   description: SITE.description,
-  robots: { index: true, follow: true },
+  // max-image-preview:large is REQUIRED for Google Discover's large image cards — without it
+  // Discover cannot show the big card at all (the playbook's single highest-ROI directive).
+  robots: {
+    index: true,
+    follow: true,
+    "max-image-preview": "large",
+    "max-snippet": -1,
+    "max-video-preview": -1,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   alternates: { types: { "application/rss+xml": "/feed.xml" } },
   verification: { other: { "p:domain_verify": "732df0e14a6881379e2a7185fdde95a4" } },
   openGraph: {

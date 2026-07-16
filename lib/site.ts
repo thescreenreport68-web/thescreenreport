@@ -87,14 +87,16 @@ export const AUTHORS: Author[] = [
     slug: "alicia-bernard",
     name: "Alicia Bernard",
     role: "Editor, Celebrity & Music",
-    bio: "Alicia Bernard is a freelance entertainment editor for The Screen Report's celebrity and music coverage. Stories are produced with AI-assisted research and reviewed editorially; rumor and speculation are clearly labeled as unconfirmed and updated or removed as facts develop.",
+    bio: "Alicia Bernard is a freelance entertainment editor for The Screen Report's celebrity and music coverage. Stories are produced with AI-assisted research and automated editorial checks under her oversight; rumor and speculation are clearly labeled as unconfirmed and updated or removed as facts develop.",
     type: "Person",
   },
   {
     slug: "editorial-team",
     name: "The Screen Report Editorial Team",
     role: "Newsroom",
-    bio: "The Screen Report's editorial team covers Hollywood and English-language film, TV and celebrity news. Our editors write, fact-check and review every story; articles are produced with AI-assisted research and edited by a human before publishing.",
+    // Honest disclosure (2026-07-16): stories are produced by an automated editorial system —
+    // never claim a per-article human pre-publish edit that the 24/7 publish timestamps disprove.
+    bio: "The Screen Report's editorial team covers Hollywood and English-language film, TV and celebrity news. Stories are produced with AI-assisted research, checked against their sources by automated editorial gates before publishing, and operated under human editorial oversight — errors are corrected promptly under our corrections policy.",
     type: "Organization",
     sameAs: ["https://twitter.com/thescreenreport"],
   },
@@ -228,9 +230,19 @@ function leadNameOf(base: string, article: SeoArticleLike): string {
   return m ? m[0] : "";
 }
 
-// Function/connector words we don't want a title to END on (a cut clause shouldn't dangle on "Amid"/"of"/"&").
+// Words a CUT title must never END on. Only consulted for candidates that actually cut text —
+// a complete (uncut) title may end however its author wrote it. Extended set (2026-07-16 audit):
+// the old list missed pronouns, auxiliaries/contractions and light verbs, so live titles shipped
+// as "…the $100 Million Reason She" / "…Wasn't" / "…Goes Up". Aggressive is safe here: the worst
+// case is that we cut a little earlier or fall back to the full title.
 const FUNCTION_WORDS = new Set(
-  "a an the of to in on at for with and or amid after before while when as about into over from by per via vs is are was were his her their its that who whom whose & de la le da".split(" ")
+  (
+    "a an the of to in on at for with and or nor but so yet if then than not no amid after before while when as about into over under from by per via vs " +
+    "is are was were be been being has had have does did do wasn't isn't aren't weren't don't doesn't didn't won't can't couldn't wouldn't shouldn't hasn't hadn't haven't ain't " +
+    "she he it they we you i him them us me her his their its your our my this that these those who whom whose which what it's he's she's that's there's what's who's they're we're you're " +
+    "says said say saying gets get got getting goes going went reveals reveal teases tease sparks spark announces announce confirms confirm shares share breaks break makes make takes take gives give tells tell asks ask wants want needs need becomes become became turns turn keeps keep calls call " +
+    "new same just still only even more most very how why where & de la le da"
+  ).split(" ")
 );
 const endsFunc = (s: string): boolean => {
   const w = (s.toLowerCase().replace(/[^a-z0-9'’&]+$/u, "").split(/\s+/).pop() || "");
@@ -239,51 +251,114 @@ const endsFunc = (s: string): boolean => {
 const cleanEnds = (s: string): string =>
   s.replace(/^[\s—–\-|:,]+/u, "").replace(/[\s—–\-|:,]+$/u, "").trim();
 
-// Choose the best SEO title from a name-first `base`: land in [MIN,MAX] chars, prefer a clean
-// (content-word) ending, and prefer the "&" compression stylistically. Never reorders the words,
-// so the leading NAME stays first. MIN=45 floor (owner: don't make it too small); MAX=55 ceiling.
+// Strip markdown tokens that leak from writer output into titles/descriptions
+// ("*The Odyssey*", "## The Movie:", backticks, [text](url)). Render-side safety net —
+// the lanes are also expected to strip at the source.
+function sanitizeInline(s: string): string {
+  return s
+    .replace(/\*\*([^*]+)\*\*/g, "$1")
+    .replace(/\*([^*]+)\*/g, "$1")
+    .replace(/`([^`]+)`/g, "$1")
+    .replace(/^#{1,6}\s+/, "")
+    .replace(/\[([^\]]+)\]\([^)]*\)/g, "$1")
+    .replace(/\s{2,}/g, " ")
+    .trim();
+}
+
+// A cut candidate must not leave an opening quote dangling ("…Netflix's New 'Little House").
+// Straight apostrophes inside words (Nolan's) are not quote-opens: an open must follow
+// start/whitespace/bracket, a close must follow a non-space and precede space/punct/end.
+function quoteBalanced(s: string): boolean {
+  const opens = (s.match(/(?:^|[\s(—–-])['‘"“](?=\S)/g) ?? []).length;
+  const closes = (s.match(/\S['’"”](?=$|[\s.,!?;:)\]—–-])/g) ?? []).length;
+  return opens <= closes;
+}
+
+// A cut must not split a capitalized run — "…Advice for Taylor |Swift|" halves a person,
+// "…Became Stranger |Things|" changes the meaning. In Title-Case headlines this naturally
+// steers cuts to just before lowercase connectors, which are exactly the safe cut points.
+function splitsCapRun(lastKeptRaw: string, next: string | undefined): boolean {
+  if (!next) return false;
+  if (/[,:;.!?—–]["'’”]?$/.test(lastKeptRaw)) return false; // punctuation = real clause boundary
+  const kept = lastKeptRaw.replace(/^['‘"“(]+/, "");
+  return /^[A-ZÀ-Þ]/u.test(kept) && /^[A-ZÀ-Þ0-9$]/u.test(next);
+}
+
+// Cut policy (2026-07-16 root fix): NEVER ship a machine-garbled cut. Honor curated metaTitles
+// (see seoTitle); when deriving from the headline, cut only at a CLEAN point — content-word
+// ending, balanced quotes, no split proper noun — inside [CUT_MIN, SEO_MAX]. If no clean cut
+// exists, return the FULL title: Google truncates by pixel (~600px) with a proper ellipsis,
+// which always reads better than a broken fragment. SEO_MIN stays the target for lane-written
+// metaTitles; the render never garbles a title just to land in the band.
 const SEO_MIN = 45;
-const SEO_MAX = 55;
+const SEO_MAX = 60; // cut ceiling when deriving (Google's pixel limit ≈ 60+ chars)
+const CUT_MIN = 40; // don't bother cutting to something shorter than this
 function bestTitle(base: string): string {
-  const start = cleanEnds(base);
+  const start = cleanEnds(sanitizeInline(base));
   if (!start) return "";
+  if (start.length <= SEO_MAX) return start; // fits whole — never cut a complete title
+
   const variants: { s: string; comp: boolean }[] = [{ s: start, comp: false }];
   const compressed = cleanEnds(start.replace(/ and /g, " & "));
   if (compressed !== start) variants.push({ s: compressed, comp: true });
+  const short = variants.find((v) => v.s.length <= SEO_MAX);
+  if (short) return short.s; // "&" compression alone brought it into range
 
   let best = "";
   let bestScore = -1;
   for (const { s, comp } of variants) {
     const words = s.split(/\s+/);
     let acc = "";
-    for (const w of words) {
-      acc = acc ? `${acc} ${w}` : w;
+    for (let i = 0; i < words.length; i++) {
+      acc = acc ? `${acc} ${words[i]}` : words[i];
       if (acc.length > SEO_MAX) break; // every longer prefix is also too long
       const cand = cleanEnds(acc);
       const L = cand.length;
-      if (!L) continue;
-      // in-band (≥MIN) dominates; then a content-word ending; then length; small nudge for "&".
-      const score = (L >= SEO_MIN ? 1000 : 0) + (endsFunc(cand) ? 0 : 300) + L + (comp ? 3 : 0);
+      if (L < CUT_MIN) continue;
+      // validity gates — a cut candidate must read as a complete, unbroken phrase
+      if (endsFunc(cand)) continue;
+      if (!quoteBalanced(cand)) continue;
+      if (splitsCapRun(words[i], words[i + 1])) continue;
+      const rawPunct = /[,:;.!?]["'’”]?$/.test(words[i]); // source clause boundary
+      const score = L + (rawPunct ? 200 : 0) + (L >= SEO_MIN ? 50 : 0) + (comp ? 3 : 0);
       if (score > bestScore) {
         bestScore = score;
         best = cand;
       }
     }
   }
-  // fallback (source shorter than MIN, or nothing scored): longest ≤MAX we can take
-  return best || cleanEnds(start.slice(0, SEO_MAX));
+  // No clean cut → full title. Google's own ellipsis beats our broken fragment.
+  return best || start;
 }
 
-/** Name-first, 45–55-char, brand-free SEO title. Never mutates the reader-facing `title`. */
+// Honor band for a stored (lane-curated) metaTitle: a complete clause written for search beats
+// any machine cut, so we accept 30–65 chars (Google truncates by PIXEL ≈ 60+; a 58-char curated
+// title ships fine). The old strict 45–55 gate discarded curation over a 1-char miss and re-cut
+// the display headline — the root cause of the garbled-title bug class. Lanes still TARGET 45–55.
+const HONOR_MIN = 30;
+const HONOR_MAX = 65;
+
+/** Name-first, brand-free SEO title. Never mutates the reader-facing `title`. */
 export function seoTitle(article: SeoArticleLike): string {
-  const title = (article.title ?? "").trim();
+  const title = sanitizeInline((article.title ?? "").trim());
   if (!title) return SITE.name;
-  // honor an already-good hand-written metaTitle; otherwise derive from the full title
-  let base =
-    article.metaTitle && article.metaTitle !== title && article.metaTitle.length <= SEO_MAX && article.metaTitle.length >= SEO_MIN
-      ? article.metaTitle
-      : title;
-  base = base.replace(BRAND_SUFFIX_RE, "").trim();
+  // 1) Honor a curated metaTitle VERBATIM when it's usable (complete clause, balanced quotes,
+  //    sane length) — no re-cutting, no double transformation.
+  const stored = sanitizeInline(
+    (article.metaTitle ?? "").replace(BRAND_SUFFIX_RE, "").trim()
+  );
+  if (
+    stored &&
+    stored !== title &&
+    stored.length >= HONOR_MIN &&
+    stored.length <= HONOR_MAX &&
+    quoteBalanced(stored) &&
+    !endsFunc(stored)
+  ) {
+    return stored.charAt(0).toUpperCase() + stored.slice(1);
+  }
+  // 2) Otherwise derive from the full display title (name-first reslice + clean-cut policy).
+  let base = title.replace(BRAND_SUFFIX_RE, "").trim();
 
   const lead = leadNameOf(base, article);
   if (lead) {
@@ -300,15 +375,21 @@ export function seoTitle(article: SeoArticleLike): string {
     base = base.replace(FILLER_LEAD_RE, "").trim();
   }
   base = base.replace(/^[\s—–\-|:,]+/u, "").trim();
-  let out = bestTitle(base); // handles and↔& + fits the 45–55 band, name stays first
+  let out = bestTitle(base); // clean-cut policy: full title when no clean cut exists
   if (!out) out = bestTitle(title.replace(BRAND_SUFFIX_RE, ""));
+  if (!out) out = title;
   return out.charAt(0).toUpperCase() + out.slice(1);
 }
 
-/** Meta description clamped to ≤160 chars at a word boundary (search engines truncate past that). */
+/** Meta description ≤160 chars: prefer ending at a real sentence boundary; otherwise cut at a
+ *  word boundary WITH an ellipsis (never a bare mid-thought stop). Markdown tokens stripped. */
 export function clampMeta(s: string | undefined, max = 160): string {
-  const t = (s ?? "").trim();
+  const t = sanitizeInline((s ?? "").trim());
   if (t.length <= max) return t;
+  const window = t.slice(0, max);
+  // best sentence end (., !, ?) at or after char 80 — a complete sentence needs no ellipsis
+  const sent = window.match(/^[\s\S]*[.!?](?=["'’”)\]]*(?:\s|$))/u);
+  if (sent && sent[0].trim().length >= 80) return sent[0].trim();
   let cut = t.slice(0, max - 1);
   const sp = cut.lastIndexOf(" ");
   if (sp > 40) cut = cut.slice(0, sp);

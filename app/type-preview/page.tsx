@@ -50,7 +50,8 @@ const OPTIONS = [
   },
 ];
 
-export const metadata = { title: "Type Test" };
+// Internal design-QA page — must never appear in search.
+export const metadata = { title: "Type Test", robots: { index: false, follow: false } };
 
 export default function TypePreview() {
   return (
