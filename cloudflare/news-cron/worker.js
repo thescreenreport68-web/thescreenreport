@@ -52,6 +52,12 @@ export default {
     const now = event.scheduledTime || Date.now();
     const minute = new Date(now).getUTCMinutes();
 
+    // Regular batch tick FIRST — before the radar fetch + feed sweep, so a CPU-limit kill or a hung feed can
+    // never cost the deterministic :00/:30 drip (the clock is the one thing that must never miss).
+    if (minute % 30 < 2) {
+      if (await dispatch(env, "news-drip.yml", { limit: "2" })) console.log("sentinel: drip dispatched (limit=2)");
+    }
+
     // Event Radar entities (committed by the pipeline; optional — degrade to keyword-only urgency)
     let radar = [];
     try {
@@ -62,7 +68,9 @@ export default {
     // Sweep feeds; keep only items whose pubDate crossed the detection window this firing
     const results = await Promise.allSettled(FEEDS.map(async ([url, tier]) => {
       const r = await fetch(url, { headers: { "User-Agent": "Mozilla/5.0 (compatible; TSR-sentinel)" }, signal: AbortSignal.timeout(8000) });
-      return r.ok ? parseItems(await r.text(), tier) : [];
+      // slice: the free plan's CPU budget is small and regex over a 500KB feed is CPU, not I/O — the newest
+      // items sit at the top of every RSS doc, so 60KB always covers the fresh window
+      return r.ok ? parseItems((await r.text()).slice(0, 60000), tier) : [];
     }));
     const fresh = [];
     for (const res of results) if (res.status === "fulfilled") for (const it of res.value) if (now - it.pub <= FRESH_MS && now - it.pub > -60e3) fresh.push(it);
@@ -82,9 +90,5 @@ export default {
         console.log(`sentinel: BREAKING dispatched [${cls}] ${u.title.slice(0, 90)}${urgent.length > 1 ? ` (+${urgent.length - 1} deferred to the drip)` : ""}`);
     }
 
-    // Regular batch tick: exactly one 2-min slot per :00/:30 boundary
-    if (minute % 30 < 2) {
-      if (await dispatch(env, "news-drip.yml", { limit: "2" })) console.log("sentinel: drip dispatched (limit=2)");
-    }
   },
 };
