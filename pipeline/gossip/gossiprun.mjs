@@ -13,6 +13,7 @@ import { detectGossipType } from "./writer.mjs";
 import { routeBySubject } from "./config.gossip.mjs";
 import { openStore } from "./vecStore.mjs";
 import { dedupCheck, recordPublished } from "./dedup.mjs";
+import { costReport } from "../lib/openrouter.mjs";
 import { pickHero } from "./heroImage.mjs";
 import { buildLinkIndex } from "./linkIndex.mjs";
 import { findRelatedLinks } from "./internalLinks.mjs";
@@ -110,6 +111,20 @@ export async function gossipRun({
       const reason = (r.blocks || r.issues || [r.reason]).join ? (r.blocks || r.issues || [r.reason]).join(" | ") : r.reason;
       report.blocked.push({ id: t.id, category: cat, status: r.status, reason, autoScore: r.auto?.score ?? null });
     }
+  }
+  // Cost telemetry (owner): log the run's EXACT OpenRouter spend (usage.cost is what OpenRouter actually
+  // billed per call) + the per-published-article cost, so every tick records its dollars in the run log.
+  try {
+    const cr = costReport();
+    report.costUSD = cr.total;
+    report.costByModel = cr.byModel;
+    const perArt = report.published.length ? `  =  $${(cr.total / report.published.length).toFixed(4)}/article (${report.published.length} published)` : ` (0 published)`;
+    console.log(`\n💰 COST — $${cr.total.toFixed(4)} over ${cr.calls} model calls${perArt}`);
+    for (const [m, v] of Object.entries(cr.byModel).sort((a, b) => b[1].usd - a[1].usd)) {
+      console.log(`     ${m}: ${v.calls} calls · ${v.in}+${v.out} tok · $${v.usd.toFixed(4)}`);
+    }
+  } catch (e) {
+    console.error("[cost] report failed:", String(e?.message || e).slice(0, 100));
   }
   return report;
 }
