@@ -1,0 +1,46 @@
+# CARDS lane — build + publish the next due slate card. Dispatched every ~30 min inside
+# the LA window by the cards-cron Worker (SLOT_CLOCK="on"). Exits in seconds when no slot
+# is due. DRAFT-mode by default: real publishing requires the CARDS_LIVE repo variable
+# set to "1" (owner go-live, plan §7 Phase 4).
+name: cards-slot
+on:
+  workflow_dispatch: {}
+
+concurrency:
+  group: cards-lane
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  slot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20, cache: npm, cache-dependency-path: package-lock.json }
+      - run: npm ci --include=optional
+      - name: Run slot
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          ZERNIO_API_KEY: ${{ secrets.ZERNIO_API_KEY }}
+          TSR_GH_TOKEN: ${{ secrets.TSR_GH_TOKEN }}
+          IG_GRAPH_TOKEN: ${{ secrets.IG_GRAPH_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          CARDS_LIVE: ${{ vars.CARDS_LIVE }}
+        run: node pipeline/cards/cardsrun.mjs --slot
+      - name: Commit state
+        if: always()
+        run: |
+          git config user.name "screenreport-bot"
+          git config user.email "bot@thescreenreport.com"
+          git add data/cards
+          git commit -m "cards: slot state" || { echo "nothing to commit"; exit 0; }
+          for i in 1 2 3 4 5; do
+            git pull --rebase --autostash origin "${{ github.ref_name }}" \
+              && git push origin "HEAD:${{ github.ref_name }}" && exit 0
+            echo "push attempt $i lost the race; retrying…"; sleep 5
+          done
+          echo "::error::could not push state"; exit 1

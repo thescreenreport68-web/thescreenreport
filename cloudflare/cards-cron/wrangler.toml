@@ -1,0 +1,22 @@
+# CARDS sentinel + slot clock — STATELESS (no KV: this account's token cannot create
+# namespaces — proven by the news lane 2026-07-16).
+# Deploy (from this dir, creds auto-load from the repo parent .env):
+#   npx wrangler@3 secret put GH_TOKEN     # the TSR fine-grained PAT (Actions:write)
+#   npx wrangler@3 deploy
+# Arm/disarm without redeploying code: edit [vars] below + `npx wrangler@3 deploy`.
+name = "tsr-cards-cron"
+main = "worker.js"
+compatibility_date = "2026-07-01"
+
+[triggers]
+crons = ["*/2 * * * *"]
+
+[vars]
+GH_OWNER = "thescreenreport68-web"
+GH_REPO = "thescreenreport"
+# the repo's DEFAULT branch (workflow_dispatch only sees workflows on the requested ref)
+GH_REF = "rebuild-trending-news"
+# off | shadow (log-only) | live — plan §7: shadow first, arm after grading the log
+SENTINEL_MODE = "shadow"
+# on → dispatches cards-slate.yml (06:44 LA) + cards-slot.yml (:00/:30)
+SLOT_CLOCK = "off"

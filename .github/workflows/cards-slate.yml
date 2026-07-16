@@ -1,0 +1,41 @@
+# CARDS lane — build today's slot plan (60/40 top-topic mix). Dispatched once daily
+# (~06:45 LA) by the cards-cron Cloudflare Worker (SLOT_CLOCK="on"). NO `schedule:` here —
+# GitHub cron measured 27-min-median late in this repo; the Worker is the clock.
+# Plan: IMAGE_CARDS_AUTOMATION_PLAN.md
+name: cards-slate
+on:
+  workflow_dispatch: {}
+
+concurrency:
+  group: cards-lane # one group for slate/slot/breaking — serializes data/cards state pushes
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  slate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20, cache: npm, cache-dependency-path: package-lock.json }
+      - run: npm ci --include=optional
+      - name: Build slate
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: node pipeline/cards/cardsrun.mjs --slate
+      - name: Commit slate
+        if: always()
+        run: |
+          git config user.name "screenreport-bot"
+          git config user.email "bot@thescreenreport.com"
+          git add data/cards
+          git commit -m "cards: slate" || { echo "nothing to commit"; exit 0; }
+          for i in 1 2 3 4 5; do
+            git pull --rebase --autostash origin "${{ github.ref_name }}" \
+              && git push origin "HEAD:${{ github.ref_name }}" && exit 0
+            echo "push attempt $i lost the race; retrying…"; sleep 5
+          done
+          echo "::error::could not push slate"; exit 1
