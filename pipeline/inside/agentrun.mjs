@@ -20,7 +20,7 @@ import * as voiceAgent from "./agents/voice.mjs";
 import * as imageAgent from "./agents/image.mjs";
 import * as qa from "./agents/qa.mjs";
 import { writeInsideArticle } from "./assemble.mjs";
-import { loadStore, alreadyPublished, recordInsidePublished, parkAngle, parkedTries, clearParked } from "./store.mjs";
+import { loadStore, alreadyPublished, recentDuplicate, recordInsidePublished, parkAngle, parkedTries, clearParked } from "./store.mjs";
 import { ACCEPT_FLOOR, MAX_ATTEMPTS, GATE, DATA_DIR } from "./config.inside.mjs";
 import { cutArticle } from "../lib/cutter.mjs";
 import { dedupeSentences, trimIncomplete } from "../lib/polish.mjs";
@@ -128,6 +128,11 @@ export async function agentRun({
     try {
       // dedup + parked-dead (never repost; a ripple that never materialized stops retrying)
       if (alreadyPublished(store, story.parentEventSlug, angle.form)) { report.skipped.push({ tag, reason: "already published" }); continue; }
+      // NEAR-DUPLICATE guard (owner 2026-07-16): a re-report of an event we already covered under a
+      // different headline/slug within the last 48h — skip BEFORE any paid work so we never publish
+      // "The Batman 2 Delayed" and "The Batman Part II Delayed" twice.
+      const dup = recentDuplicate(store, story, { now });
+      if (dup) { report.skipped.push({ tag, reason: `near-duplicate of ${dup.slug} (${(dup.at || "").slice(0, 10)})` }); console.log(`  ⃠ skipped near-duplicate of ${dup.slug}`); continue; }
       if (parkedTries(store, story.parentEventSlug, angle.form) === Infinity) { report.skipped.push({ tag, reason: "parked dead" }); continue; }
       if (paceMs && (report.published.length + report.rejected.length + report.held.length + report.blocked.length)) await sleep(paceMs);
       console.log(`\n■ ${tag} (heat ${story.priority}, ${story.via})`);

@@ -387,6 +387,20 @@ export async function discoverStories({
       if (!overwhelming) st.discourseHeat = Math.min(Math.round(st.discourseHeat * 0.5), 40);
     }
   }
-  deduped.sort((a, b) => b.discourseHeat - a.discourseHeat);
+  // FINAL RANK. Free mode (owner 2026-07-16 cost audit): the try-until-published loop stops at the FIRST
+  // publish, so order matters — TRY REACTED-TO stories first. Reaction-COLD trade/schedule items
+  // (fall-premiere-dates, casting-this-week, ESPYs — 0 audience posts) were ranking ABOVE the winners on
+  // pure trade heat and getting gather-REJECTED first (82% of a run's wasted spend). Reaction bucket first
+  // (by measured audience-post count), trade heat breaks ties. NEVER drops a story — discovery's cheap bsky
+  // pre-count under-reads (a winner can measure 0 here yet have 11+ anchors in the fuller harvest) — it only
+  // deprioritizes the truly-cold ones so they're reached last, if at all.
+  deduped.sort((a, b) => {
+    if (NO_X) {
+      const rb = b.signals?.audiencePosts || 0, ra = a.signals?.audiencePosts || 0;
+      if ((rb > 0) !== (ra > 0)) return (rb > 0 ? 1 : 0) - (ra > 0 ? 1 : 0); // reacted-to stories first
+      if (rb !== ra) return rb - ra;                                          // then by reaction count
+    }
+    return b.discourseHeat - a.discourseHeat;                                 // then trade heat
+  });
   return deduped.slice(0, max);
 }

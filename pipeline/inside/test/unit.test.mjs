@@ -810,6 +810,24 @@ await check("routeForStory: work.type is authoritative + Movies/TV reactions fil
   // unknown/garbage → celebrity/news
   assert.deepEqual(routeForStory({ category: "sports" }), { category: "celebrity", subcategory: "news" });
 });
+await check("recentDuplicate: catches a same-event re-report under a different headline within 48h; passes distinct + stale stories", async () => {
+  const { recentDuplicate } = await import("../store.mjs");
+  const now = new Date("2026-07-15T18:30:00Z");
+  // the exact owner-reported failure: two differently-worded headlines for the SAME Batman delay
+  const store = { published: [{
+    slug: "the-batman-2-delayed-to-2028-fans-are-groaning", at: "2026-07-15T16:30:40Z",
+    title: "The Batman 2 Delayed to 2028 Fans Are Groaning", primaryEntity: "The Batman 2 Delayed Again",
+    trigger: { parentTitle: "The Batman 2 Delayed Again to February 2028 Matt Reeves Drop" },
+  }] };
+  const batmanReReport = { primaryEntity: "The Batman Part II", parentTitle: "The Batman Part II Release Delayed Again by Warner Bros" };
+  assert.equal(recentDuplicate(store, batmanReReport, { now })?.slug, "the-batman-2-delayed-to-2028-fans-are-groaning", "same event, different headline → caught");
+  // a DIFFERENT film in the same franchise must NOT be flagged (shares only the franchise token)
+  const spidey = { published: [{ slug: "s1", at: "2026-07-15T10:30:00Z", title: "Spider-Man Brand New Day Has Fans Split Over Hulk Fears", primaryEntity: "Spider-Man Brand New Day", trigger: { parentTitle: "Spider-Man Brand New Day" } }] };
+  assert.equal(recentDuplicate(spidey, { primaryEntity: "Spider-Man Beyond the Spider-Verse", parentTitle: "Spider-Man Beyond the Spider-Verse animation reveal" }, { now }), null, "distinct same-franchise film → not flagged");
+  // outside the 48h window → not flagged (a genuine later follow-up may run)
+  const stale = { published: [{ slug: "old", at: "2026-07-10T00:00:00Z", title: "The Batman 2 Delayed to 2028", primaryEntity: "The Batman", trigger: { parentTitle: "The Batman 2 Delayed to 2028" } }] };
+  assert.equal(recentDuplicate(stale, batmanReReport, { now }), null, "outside 48h → not flagged");
+});
 await check("seoTitle: 45–55 range — strip brand, prefer an in-range value, fall back to the headline when the model is too short, hard-cap 55", async () => {
   const { seoTitle, stripBrand } = await import("../seo.mjs");
   assert.equal(stripBrand("Moana Live-Action Divides Fans — The Screen Report"), "Moana Live-Action Divides Fans");

@@ -30,6 +30,39 @@ export function alreadyPublished(store, parentEventSlug, form) {
   return store.published.some((r) => r.key === k);
 }
 
+// ── NEAR-DUPLICATE GUARD (owner 2026-07-16: "The Batman 2 Delayed" + "The Batman Part II Delayed"
+// published 2h apart) ──────────────────────────────────────────────────────────────────────────
+// The exact-slug dedup above can't see two DIFFERENTLY-WORDED headlines about the SAME event: each
+// outlet phrases it differently, so storySlug=slugify(headline) and even primaryEntity differ. This
+// catches the re-report by SUBJECT-TOKEN overlap within a recency window. Structural + generic
+// reaction/entertainment words are stripped so a match requires a real shared SUBJECT (the work/person)
+// PLUS a shared event detail — e.g. {batman, delayed}. A single shared franchise token (spider) can't
+// trip it (needs ≥2), so distinct same-franchise stories still pass.
+const DEDUP_STOP = new Set(
+  "the a an and or but to of in on for at by from with as is are was were be been it its they them their who what which when where why how not no than then so more most very just also into out up off over after amid ahead about this that these those has have had will would can could s t ii iii".split(/\s+/));
+const DEDUP_GENERIC = new Set(
+  "fans fan react reacts reacting reaction reactions respond responds response split splits divided divide chokehold groan groaning groans joke jokes joking meltdown everyone buying viewers viewer audience audiences internet says say said reveal reveals revealed love loves hate hates hype teaser trailer official watch stream streaming episode episodes season seasons series show shows movie movies film films cast casting release releases date dates set sets drops drop back again new first look".split(/\s+/));
+export function subjectTokens(text) {
+  return new Set(
+    String(text || "").toLowerCase().replace(/[^a-z0-9]+/g, " ").split(/\s+/)
+      .filter((w) => (w.length >= 4 || /^\d{4}$/.test(w)) && !DEDUP_STOP.has(w) && !DEDUP_GENERIC.has(w)));
+}
+// Returns the matching recent record if `story` re-reports an event we already published inside `windowH`
+// hours (≥ minShared significant subject tokens in common), else null.
+export function recentDuplicate(store, story, { now = new Date(), windowH = 48, minShared = 2 } = {}) {
+  const nowMs = +now;
+  const cand = subjectTokens(`${story.primaryEntity || ""} ${story.parentTitle || story.headline || ""}`);
+  if (cand.size < minShared) return null;
+  for (const r of store.published) {
+    if (!r.at || nowMs - +new Date(r.at) > windowH * 3600e3) continue;
+    const prev = subjectTokens(`${r.primaryEntity || ""} ${r.title || ""} ${r.trigger?.parentTitle || ""}`);
+    let shared = 0;
+    for (const w of cand) if (prev.has(w)) shared++;
+    if (shared >= minShared) return r;
+  }
+  return null;
+}
+
 // rec: { parentEventSlug, form, slug, title, primaryEntity, eventType, at, angle, trigger }
 // angle+trigger snapshots are stored so monitor.mjs can re-run the exact same harvest for top-ups.
 export function recordInsidePublished(store, rec, { now = new Date() } = {}) {

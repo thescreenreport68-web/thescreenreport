@@ -45,6 +45,15 @@ THE ACCURACY LINE (machine-enforced; violations kill the article):
   characterization of what fans think must appear WITHOUT quotation marks — the wall reads every "…" span
   as a claimed real post and kills the article if it isn't one. If you can't find the exact anchor for a
   line, drop the quote marks and say it in your own words instead.
+- NAMED ATTRIBUTION (a top cause of killed drafts — get it right on the FIRST pass): never write "[Name]
+  said / says / wrote / posted" or "According to [Name]" unless that exact person is a SPEAKER in the
+  ANCHOR block. Do NOT attribute a quote or claim to an official, executive, or organization who isn't an
+  anchor (no "FCC Chairman Carr says", no "the studio said", no "the NAB argues") — drop the attribution or
+  state it generically ("regulators", "the company") without quotation marks.
+- SELF-CHECK before you output — for EVERY pair of quotation marks: the words inside MUST be copyable from a
+  specific anchor id. If they aren't, either swap in an exact anchor quote or DELETE the quote marks and make
+  it your own analysis. NEVER paraphrase a real post into a new quoted span, and NEVER quote a natural-sounding
+  line you imagined. An invented or reworded quote fails the machine wall and the whole draft is rejected.
 - AUDIENCE posts are the article's spine: attribute in aggregate GENERICALLY and WITHOUT a platform name
   ("one user wrote", "another viewer posted", "a fan online said") — never a name/handle for an ordinary
   person, and NEVER name a platform (no "on X", "on Bluesky", "on Reddit"). Quotes are TEXT, not embeds.
