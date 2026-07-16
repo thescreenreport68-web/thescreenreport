@@ -1,42 +1,183 @@
 {
-  "runId": "run-2026-07-16T21-30-38",
-  "builtAt": "2026-07-16T21:31:53.991Z",
-  "count": 20,
+  "runId": "run-2026-07-16T22-30-43",
+  "builtAt": "2026-07-16T22:32:08.377Z",
+  "count": 27,
   "topics": [
     {
-      "id": "news-jenna-ortega-rose-byrne-to-star-in-nasty",
-      "slug": "jenna-ortega-rose-byrne-to-star-in-new-film-nasty",
-      "title": "Jenna Ortega, Rose Byrne to Star in New Film 'Nasty'",
+      "id": "trailer-marvels-wolverine-cinematic-trailer-lady-deathstrike",
+      "slug": "lady-deathstrike-faces-logan-in-new-marvel-s-wolverine-cinematic-trail",
+      "title": "Lady Deathstrike Faces Logan In New Marvel’s Wolverine Cinematic Trailer",
+      "contentType": "trailer",
+      "formatTag": "trailer",
+      "category": "movies",
+      "subcategory": "trailers",
+      "eventType": "trailer",
+      "sensitivity": "high",
+      "eventSlug": "marvels-wolverine-cinematic-trailer-lady-deathstrike",
+      "primaryKeyword": "marvels wolverine trailer",
+      "primaryEntity": "Deadpool & Wolverine",
+      "entities": [
+        "Marvel's Wolverine",
+        "Lady Deathstrike",
+        "Logan"
+      ],
+      "angle": "A new cinematic trailer for Marvel's Wolverine features Lady Deathstrike and Logan.",
+      "tmdbType": "movie",
+      "source": "gnews:Game Informer",
+      "sources": [
+        {
+          "outlet": "Game Informer",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPN2MtaG9UN3lnWGt5QjNFTTgyQVZ3NnVfOGo4bEoxcHZObndJc0ZnMzVMaWJCWUh0eXdvNVFGaGJMUkticEFrRktCQzMwQXZ2enk5NGI0Y2RsYkt3aHV4RGFqNWp4SkRVVVgwQ0RlbXJKM1ZTLTZiZlZhYy1qZkZJdnUza2xqdFhhQVV6QmxhNWgyVjRWU3d1MXdvYlN5X1Q5aC1CbHlxejc2NlE?oc=5",
+          "ageMin": 150,
+          "headline": "Lady Deathstrike Faces Logan In New Marvel’s Wolverine Cinematic Trailer - Game Informer",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxPN2MtaG9UN3lnWGt5QjNFTTgyQVZ3NnVfOGo4bEoxcHZObndJc0ZnMzVMaWJCWUh0eXdvNVFGaGJMUkticEFrRktCQzMwQXZ2enk5NGI0Y2RsYkt3aHV4RGFqNWp4SkRVVVgwQ0RlbXJKM1ZTLTZiZlZhYy1qZkZJdnUza2xqdFhhQVV6QmxhNWgyVjRWU3d1MXdvYlN5X1Q5aC1CbHlxejc2NlE?oc=5\" target=\"_blan"
+        },
+        {
+          "outlet": "IGN",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNUFVKRmtyeUh4ZkUtV2N6UFBDanluUlNIME9NNzZRTjhHX05VZ1hxZF91aDB2NlFyTHREcjVtenJ0VmJwV2xVQi1VRU5hcWtVRTZTZDFyRVgtTlE0M29uNFFUQ3luRTRhblVNTHY3Y280d0dTNjg0ZExfcHh3WTdHSUxwczljYmhKUWhIOW1YUGJPZGgwbzhfS2hn?oc=5",
+          "ageMin": 163,
+          "headline": "Marvel's Wolverine Cinematic Trailer Features Cameos from Sabretooth and Lady Deathstrike - IGN",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMimgFBVV95cUxNUFVKRmtyeUh4ZkUtV2N6UFBDanluUlNIME9NNzZRTjhHX05VZ1hxZF91aDB2NlFyTHREcjVtenJ0VmJwV2xVQi1VRU5hcWtVRTZTZDFyRVgtTlE0M29uNFFUQ3luRTRhblVNTHY3Y280d0dTNjg0ZExfcHh3WTdHSUxwczljYmhKUWhIOW1YUGJPZGgwbzhfS2hn?oc=5\" target=\"_blank\" Marvel's Wolverine C"
+        }
+      ],
+      "ageMin": 150,
+      "_cand": {
+        "key": "rss:lady-deathstrike-faces-logan-in-new-marvel-s-wolverine-cinem",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 2,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 2,
+        "outlets": [
+          "Game Informer",
+          "IGN"
+        ],
+        "maxTier": 5,
+        "sensitivity": "high",
+        "attribution": "multiple outlets",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 95,
+      "signals": {
+        "recency": 16,
+        "corroboration": 14,
+        "status": 18,
+        "type": 15,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 8,
+        "softTv": 0
+      },
+      "tierClass": "S"
+    },
+    {
+      "id": "news-fx-color-force-develop-national-park-rescue-series",
+      "slug": "fx-developing-series-based-on-new-yorker-article-about-national-park-r",
+      "title": "FX Developing Series Based on New Yorker Article About National Park Rescue Squad",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "fx-color-force-develop-national-park-rescue-series",
+      "primaryKeyword": "national park rescue series",
+      "primaryEntity": "National Park Rescue Squad Series",
+      "entities": [
+        "FX's A Christmas Carol",
+        "FX",
+        "Color Force",
+        "The New Yorker"
+      ],
+      "angle": "FX and Color Force are developing a new TV series based on a New Yorker article about a National Park Volunteer Rescue Squad.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/tv/news/fx-series-new-yorker-national-park-volunteer-rescue-squad-1236813417/",
+          "ageMin": 1,
+          "headline": "FX, Color Force to Develop Series Based on New Yorker Article About National Park Volunteer Rescue Squad (EXCLUSIVE)",
+          "summary": "In a competitive situation, FX has secured the rights to develop a series based on the New Yorker article The Call of the Wild by Paige Williams, Variety has learned exclusively from sources. Also published online in January 2026 under the title The Backcountry Rescue Squad at America’s Busiest National Park, the article details the [ ]"
+        }
+      ],
+      "ageMin": 1,
+      "_cand": {
+        "key": "rss:fx-color-force-to-develop-series-based-on-new-yorker-article",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 87,
+      "signals": {
+        "recency": 30,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-tom-cruise-praises-the-odyssey",
+      "slug": "tom-cruise-praises-christopher-nolan-s-the-odyssey-i-can-t-wait-to-see",
+      "title": "Tom Cruise Praises Christopher Nolan's 'The Odyssey': 'I Can't Wait to See It Again'",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
-      "eventType": "casting",
+      "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "jenna-ortega-rose-byrne-to-star-in-nasty",
-      "primaryKeyword": "Nasty movie",
-      "primaryEntity": "Nasty (film)",
+      "eventSlug": "tom-cruise-praises-the-odyssey",
+      "primaryKeyword": "Tom Cruise",
+      "primaryEntity": "Tom Cruise",
       "entities": [
-        "Jenna Ortega",
-        "Rose Byrne",
-        "Mary Bronstein"
+        "Christopher Nolan",
+        "The Odyssey"
       ],
-      "angle": "Jenna Ortega and Rose Byrne are set to star in the new film 'Nasty' from director Mary Bronstein.",
+      "angle": "Tom Cruise has publicly praised Christopher Nolan's new film 'The Odyssey', expressing his eagerness to see it again.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
         {
           "outlet": "THR",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/jenna-ortega-rose-byrne-mary-bronstein-nasty-1236650204/",
-          "ageMin": 248,
-          "headline": "Jenna Ortega, Rose Byrne to Star in New Movie from ‘If I Had Legs’ Director Mary Bronstein",
-          "summary": "‘Nasty’, written by Isabella Jarosz, was on the 2024 Black List."
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/tom-cruise-the-odyssey-christopher-nolan-1236650292/",
+          "ageMin": 213,
+          "headline": "Tom Cruise Praises Christopher Nolan s The Odyssey : I Can t Wait to See It Again",
+          "summary": "\"Thank you for an amazing night in a movie theater,\" the actor and champion of the theatrical moviegoing experience wrote on social media Thursday ahead of the film's official release."
         }
       ],
-      "ageMin": 248,
+      "ageMin": 213,
       "_cand": {
-        "key": "rss:jenna-ortega-rose-byrne-to-star-in-new-movie-from-if-i-had-l",
+        "key": "rss:tom-cruise-praises-christopher-nolan-s-the-odyssey-i-can-t-w",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -51,6 +192,137 @@
         "maxTier": 7,
         "sensitivity": "normal",
         "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 82,
+      "signals": {
+        "recency": 9,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 12,
+        "trending": 0,
+        "softTv": 0,
+        "radar": 26
+      },
+      "radarKind": "movie-in-theaters",
+      "tierClass": "A"
+    },
+    {
+      "id": "trailer-new-cg-wolverine-trailer-to-air-during-movie-theater-preview-reels",
+      "slug": "new-cg-wolverine-trailer-to-air-during-movie-theater-preview-reels",
+      "title": "New CG Wolverine Trailer to Air During Movie Theater Preview Reels",
+      "contentType": "trailer",
+      "formatTag": "trailer",
+      "category": "movies",
+      "subcategory": "trailers",
+      "eventType": "trailer",
+      "sensitivity": "normal",
+      "eventSlug": "new-cg-wolverine-trailer-to-air-during-movie-theater-preview-reels",
+      "primaryKeyword": "wolverine trailer",
+      "primaryEntity": "Deadpool & Wolverine",
+      "entities": [
+        "Marvel's Wolverine"
+      ],
+      "angle": "A new CG trailer for Marvel's Wolverine is set to play before movies in theaters.",
+      "tmdbType": "movie",
+      "source": "gnews:Restart.run",
+      "sources": [
+        {
+          "outlet": "Restart.run",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNNjNkUUtHVG1qaG1pUVN4aGw0TjUwUC15YzNnZ1RVR2p2MTNyLWtOX3U0UElNN0ZCUTNxTmZsVF9qT1ROdFpKZVJJRUgtLTJKNmZBWEJGQ2t1WGdpdHVHSE5BQ0luZXF2eUZZR3ZTbWRnOWF4dGlhQjAwRmNEejJ3Mm9TNzdfTnlfWGJ6d3BycVBPcHNrbEtjSTZuMzhmMHpx?oc=5",
+          "ageMin": 161,
+          "headline": "New CG Wolverine Trailer to Air During Movie Theater Preview Reels - Restart.run",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMioAFBVV95cUxNNjNkUUtHVG1qaG1pUVN4aGw0TjUwUC15YzNnZ1RVR2p2MTNyLWtOX3U0UElNN0ZCUTNxTmZsVF9qT1ROdFpKZVJJRUgtLTJKNmZBWEJGQ2t1WGdpdHVHSE5BQ0luZXF2eUZZR3ZTbWRnOWF4dGlhQjAwRmNEejJ3Mm9TNzdfTnlfWGJ6d3BycVBPcHNrbEtjSTZuMzhmMHpx?oc=5\" target=\"_blank\" New CG Wolve"
+        }
+      ],
+      "ageMin": 161,
+      "_cand": {
+        "key": "rss:new-cg-wolverine-trailer-to-air-during-movie-theater-preview",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "Restart.run"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "Restart.run",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 81,
+      "signals": {
+        "recency": 16,
+        "corroboration": 8,
+        "status": 18,
+        "type": 15,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-jenna-ortega-rose-byrne-new-movie-nasty",
+      "slug": "jenna-ortega-rose-byrne-to-star-in-new-film-nasty",
+      "title": "Jenna Ortega, Rose Byrne to Star in New Film 'Nasty'",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "jenna-ortega-rose-byrne-new-movie-nasty",
+      "primaryKeyword": "jenna ortega",
+      "primaryEntity": "Nasty (film)",
+      "entities": [
+        "Jenna Ortega",
+        "Rose Byrne"
+      ],
+      "angle": "Jenna Ortega and Rose Byrne are set to star in 'Nasty,' a new film from director Mary Bronstein, which was featured on the 2024 Black List.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/tv/news/mcgregor-holloway-fight-ratings-ufc-1236812638/",
+          "ageMin": 211,
+          "headline": "UFC s McGregor-Holloway Fight Averages 6.5 Million Viewers Across U.S. and Latin America",
+          "summary": "UFC s July 11 main card telecast featuring the 69-second fight between Conor McGregor and Max Holloway averaged 6.5 million viewers across the U.S. and Latin America on Paramount+. That combined stat is according to Nielsen in the U.S. and Adobe Analytic + Channel Partner in Latin America. The two-and-a-half-hour broadcast peaked with 8 million concurrent [ ]"
+        }
+      ],
+      "ageMin": 211,
+      "_cand": {
+        "key": "rss:ufc-s-mcgregor-holloway-fight-averages-6-5-million-viewers-a",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -70,110 +342,38 @@
       "tierClass": "B"
     },
     {
-      "id": "news-sullivans-crossing-renewed-for-season-5",
-      "slug": "sullivan-s-crossing-renewed-for-season-5-by-cw",
-      "title": "‘Sullivan’s Crossing’ Renewed For Season 5 By CW",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "renewal",
-      "sensitivity": "high",
-      "eventSlug": "sullivans-crossing-renewed-for-season-5",
-      "primaryKeyword": "sullivan's crossing season 5",
-      "primaryEntity": "Sullivan's Crossing",
-      "entities": [
-        "The CW"
-      ],
-      "angle": "The CW has renewed the drama series 'Sullivan's Crossing' for a fifth season.",
-      "tmdbType": "movie",
-      "source": "gnews:Deadline",
-      "sources": [
-        {
-          "outlet": "IMDb",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE13T3hPRjdOYjhpMFo0b1dKWUd1OUpFVEJJUDhPOS1Wekk2TTYzSlNxY1gxOEJvZS1GNGZiYXhxeldZOW90TDJjdlNKWks4alI1c3VYRFZfOWZ0eVlqZHhKbmhxUndXeWc?oc=5",
-          "ageMin": 344,
-          "headline": "‘Sullivan’s Crossing’ Renewed For Season 5 By CW - IMDb",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiZ0FVX3lxTE13T3hPRjdOYjhpMFo0b1dKWUd1OUpFVEJJUDhPOS1Wekk2TTYzSlNxY1gxOEJvZS1GNGZiYXhxeldZOW90TDJjdlNKWks4alI1c3VYRFZfOWZ0eVlqZHhKbmhxUndXeWc?oc=5\" target=\"_blank\" ‘Sullivan’s Crossing’ Renewed For Season 5 By CW /a nbsp; nbsp; font color=\"#6f6f6f\" IMDb"
-        },
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNWXpaSU5IZUhHdGpaX3c4NHRXZjFqOUVWUlJMWExLYmdqMVRkR3hWXzZJWEVkMUtFT2FkakRuZ1l3cFhYei1KYm1lRFF2TEdyYkZuSWgyR0Fkb2hkNVJINU9IRllYRkZ4SzE5WFRGT21mSHpuMVM3a1h0NFJFTUJjX1N6MVpxV1U?oc=5",
-          "ageMin": 391,
-          "headline": "‘Sullivan’s Crossing’ Renewed For Season 5 By CW - Deadline",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMihwFBVV95cUxNWXpaSU5IZUhHdGpaX3c4NHRXZjFqOUVWUlJMWExLYmdqMVRkR3hWXzZJWEVkMUtFT2FkakRuZ1l3cFhYei1KYm1lRFF2TEdyYkZuSWgyR0Fkb2hkNVJINU9IRllYRkZ4SzE5WFRGT21mSHpuMVM3a1h0NFJFTUJjX1N6MVpxV1U?oc=5\" target=\"_blank\" ‘Sullivan’s Crossing’ Renewed For Season 5 By"
-        }
-      ],
-      "ageMin": 391,
-      "_cand": {
-        "key": "rss:-sullivan-s-crossing-renewed-for-season-5-by-cw-deadline",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 2,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 2,
-        "outlets": [
-          "IMDb",
-          "Deadline"
-        ],
-        "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "Deadline",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 75,
-      "signals": {
-        "recency": 4,
-        "corroboration": 18,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 8,
-        "softTv": 0
-      },
-      "tierClass": "S"
-    },
-    {
-      "id": "news-seth-green-wants-role-in-dungeon-crawler-carl-series",
-      "slug": "seth-green-wants-to-join-dungeon-crawler-carl-live-action-series",
-      "title": "Seth Green Wants to Join 'Dungeon Crawler Carl' Live-Action Series",
+      "id": "news-sophie-nelisse-yellowjackets-netflix-romance-novel-adaptation",
+      "slug": "yellowjackets-star-sophie-n-lisse-to-lead-netflix-romance-novel-adapta",
+      "title": "'Yellowjackets' Star Sophie Nélisse to Lead Netflix Romance Novel Adaptation",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "seth-green-wants-role-in-dungeon-crawler-carl-series",
-      "primaryKeyword": "Dungeon Crawler Carl series",
-      "primaryEntity": "Dungeon Crawler Carl (TV series)",
+      "eventSlug": "sophie-nelisse-yellowjackets-netflix-romance-novel-adaptation",
+      "primaryKeyword": "yellowjackets",
+      "primaryEntity": "This Summer Will Be Different (TV series)",
       "entities": [
-        "Seth Green"
+        "Sophie Nélisse",
+        "Yellowjackets"
       ],
-      "angle": "Seth Green publicly expresses his desire to be cast in the upcoming live-action 'Dungeon Crawler Carl' series.",
+      "angle": "Sophie Nélisse, star of 'Yellowjackets,' will lead a new Netflix adaptation of Carley Fortune's romance novel, 'This Summer Will Be Different.'",
       "tmdbType": "movie",
-      "source": "rss:Variety",
+      "source": "rss:IndieWire",
       "sources": [
         {
-          "outlet": "Variety",
+          "outlet": "IndieWire",
           "tier": 7,
-          "url": "https://variety.com/2026/tv/news/dungeon-crawler-carl-tv-series-seth-green-mordecai-1236810542/",
-          "ageMin": 193,
-          "headline": "Seth Green Wants to Join the Dungeon Crawler Carl Live-Action Series: I d Make a Really Good Mordecai",
-          "summary": "Family Guy star Seth Green is a big Dungeon Crawler Carl fan who wants it to be known he d love to join the cast of the live-action TV series but doesn t want to use his personal connections to land the part. The show, which was ordered to series at Peacock last month, is being [ ]"
+          "url": "https://www.indiewire.com/features/craft/how-horror-movies-are-cast-sam-raimi-movies-psycho-3-1235205289/",
+          "ageMin": 331,
+          "headline": "The Casting Director Behind Horror s Biggest Hits Reveals How the Genre s Breakout Stars Get Discovered",
+          "summary": "Casting director Nancy Nayor, whose horror credits include everything from Sam Raimi classics to hits like \"Barbarian,\" tells IndieWire about her approach to finding actors for the genre she loves."
         }
       ],
-      "ageMin": 193,
+      "ageMin": 331,
       "_cand": {
-        "key": "rss:seth-green-wants-to-join-the-dungeon-crawler-carl-live-actio",
+        "key": "rss:the-casting-director-behind-horror-s-biggest-hits-reveals-ho",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -183,11 +383,11 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Variety"
+          "IndieWire"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Variety",
+        "attribution": "IndieWire",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -207,73 +407,73 @@
       "tierClass": "B"
     },
     {
-      "id": "news-kpop-demon-hunters-netflix-viewership-report",
-      "slug": "kpop-demon-hunters-netflix-s-fourth-most-viewed-film-of-first-half-202",
-      "title": "KPop Demon Hunters Netflix's Fourth Most-Viewed Film Of First-Half 2026",
+      "id": "news-lost-r-rated-x-files-movie-debuts-on-new-streamer",
+      "slug": "lost-r-rated-x-files-movie-debuts-on-new-streamer",
+      "title": "Lost R-Rated 'X-Files' Movie Debuts on New Streamer",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
-      "eventType": "other",
+      "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "kpop-demon-hunters-netflix-viewership-report",
-      "primaryKeyword": "KPop Demon Hunters",
-      "primaryEntity": "KPop Demon Hunters",
+      "eventSlug": "lost-r-rated-x-files-movie-debuts-on-new-streamer",
+      "primaryKeyword": "x-files movie",
+      "primaryEntity": "The X-Files",
       "entities": [
-        "Netflix"
+        "new streamer"
       ],
-      "angle": "A K-pop related film is achieving significant viewership on Netflix over a year after its release.",
+      "angle": "A lost R-rated cut of an X-Files movie has surfaced on a new streaming platform.",
       "tmdbType": "movie",
-      "source": "rss:Deadline",
+      "source": "gnews:MovieWeb",
       "sources": [
         {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/kpop-demon-hunters-netflix-most-watched-what-we-watched-report-1236984520/",
-          "ageMin": 41,
-          "headline": "KPop Demon Hunters Netflix s Fourth Most-Viewed Film Of First-Half 2026 Almost A Year After Release What We Watched Report",
-          "summary": "Over a year on from its release, KPop Demon Hunters viewership stats on Netflix remain golden. In the latest edition of the streamer s What We Watched report released Wednesday examining viewership in film and television from January-June 2026, the animated juggernaut remained the fourth most-viewed film with 130.4 million views — coming in behind only War Machine, The Rip and fellow [ ]"
+          "outlet": "MovieWeb",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOQ2p6bDNHMlpoYW1VVURzMmRWU0ZCbVY1bUNmeVB3a0w1SmtwYVdWdnZXSVNhb3dUUGI2RlMxcy00QTNpcTVNU3FZYU16Q19jVG9OczRaVTBIQlRfMjE1d0dYTWUxRC1XZFJiOXE0RG93bHVTMWUza09RSEdLOHoyd21vcTRQdGdETnNj?oc=5",
+          "ageMin": 88,
+          "headline": "Lost R-Rated 'X-Files' Movie Debuts on New Streamer Ahead of New Reboot - MovieWeb",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiiwFBVV95cUxOQ2p6bDNHMlpoYW1VVURzMmRWU0ZCbVY1bUNmeVB3a0w1SmtwYVdWdnZXSVNhb3dUUGI2RlMxcy00QTNpcTVNU3FZYU16Q19jVG9OczRaVTBIQlRfMjE1d0dYTWUxRC1XZFJiOXE0RG93bHVTMWUza09RSEdLOHoyd21vcTRQdGdETnNj?oc=5\" target=\"_blank\" Lost R-Rated 'X-Files' Movie Debuts on N"
         }
       ],
-      "ageMin": 41,
+      "ageMin": 88,
       "_cand": {
-        "key": "rss:kpop-demon-hunters-netflix-s-fourth-most-viewed-film-of-firs",
+        "key": "rss:lost-r-rated-x-files-movie-debuts-on-new-streamer-ahead-of-n",
         "popularity": 0,
-        "kind": "rss-news"
+        "kind": "gnews"
       },
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
+        "tier1Count": 0,
+        "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "Deadline"
+          "MovieWeb"
         ],
-        "maxTier": 7,
+        "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "Deadline",
+        "attribution": "MovieWeb",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 71,
+      "priority": 75,
       "signals": {
-        "recency": 24,
-        "corroboration": 12,
+        "recency": 16,
+        "corroboration": 8,
         "status": 18,
-        "type": 5,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
-        "big": 12,
+        "big": 24,
         "trending": 0,
         "softTv": 0
       },
       "tierClass": "B"
     },
     {
-      "id": "music-news-kacey-musgraves-stanley-collection-sold-out",
-      "slug": "kacey-musgraves-rodeo-inspired-stanley-collection-is-almost-sold-out",
-      "title": "Kacey Musgraves' Rodeo-Inspired Stanley Collection Is Almost Sold Out",
+      "id": "music-news-post-malone-teases-return-to-hip-hop",
+      "slug": "post-malone-teases-return-to-hip-hop-that-one-mofo-that-don-t-know-whe",
+      "title": "Post Malone Teases Return to Hip-Hop: That One Mofo That Don t Know When to Leave",
       "contentType": "music-news",
       "formatTag": "music-news",
       "category": "music",
@@ -281,31 +481,30 @@
       "eventType": "announcement",
       "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "kacey-musgraves-stanley-collection-sold-out",
-      "primaryKeyword": "Kacey Musgraves",
-      "primaryEntity": "Kacey Musgraves",
-      "entities": [
-        "Stanley"
-      ],
-      "angle": "Kacey Musgraves' popular merchandise collaboration with Stanley is nearly sold out.",
+      "eventSlug": "post-malone-teases-return-to-hip-hop",
+      "primaryKeyword": "post malone hip hop return",
+      "primaryEntity": "Post Malone",
+      "entities": [],
+      "angle": "Post Malone hints at a return to his hip-hop roots after exploring country music.",
       "tmdbType": "movie",
       "source": "rss:Billboard",
       "sources": [
         {
           "outlet": "Billboard",
           "tier": 7,
-          "url": "https://www.billboard.com/culture/product-recommendations/kacey-musgraves-stanley-cup-collection-shop-tumblers-online-1236296034/",
-          "ageMin": 33,
-          "headline": "Kacey Musgraves’ Rodeo-Inspired Stanley Collection Is Almost Sold Out: Here’s What’s Still Available",
-          "summary": "The 'Dry Spell' singer's collaboration with Stanley includes three drinkware items for humans and one for pets."
+          "url": "https://www.billboard.com/music/rb-hip-hop/post-malone-hip-hop-return-tease-new-music-1236296025/",
+          "ageMin": 29,
+          "headline": "Post Malone Teases Return to Hip-Hop: That One Mofo That Don t Know When to Leave",
+          "summary": "Posty appears to be returning to his rap roots following a country pivot."
         }
       ],
-      "ageMin": 33,
+      "ageMin": 29,
       "_cand": {
-        "key": "rss:kacey-musgraves-rodeo-inspired-stanley-collection-is-almost-",
+        "key": "rss:post-malone-teases-return-to-hip-hop-that-one-mofo-that-don-",
         "popularity": 0,
         "kind": "rss-news"
       },
+      "breakoutVelocity": 0,
       "corroborationCount": 1,
       "verification": {
         "tier1Count": 1,
@@ -336,23 +535,22 @@
       "tierClass": "B"
     },
     {
-      "id": "trailer-the-challenge-season-42-premiere-date-trailer",
-      "slug": "the-challenge-season-42-paramount-unveils-competition-series-premiere-",
-      "title": "The Challenge: Season 42; Paramount+ Unveils Competition Series Premiere Date Trailer",
+      "id": "trailer-the-challenge-season-42-trailer-premiere-date",
+      "slug": "the-challenge-season-42-trailer-and-premiere-date-revealed-by-paramoun",
+      "title": "'The Challenge' Season 42 Trailer and Premiere Date Revealed by Paramount+",
       "contentType": "trailer",
       "formatTag": "trailer",
       "category": "tv",
       "subcategory": "trailers",
       "eventType": "trailer",
       "sensitivity": "normal",
-      "eventSlug": "the-challenge-season-42-premiere-date-trailer",
-      "primaryKeyword": "the challenge season 42 trailer",
+      "eventSlug": "the-challenge-season-42-trailer-premiere-date",
+      "primaryKeyword": "The Challenge",
       "primaryEntity": "The Challenge",
       "entities": [
-        "The Challenge (TV series)",
         "Paramount+"
       ],
-      "angle": "Paramount+ has released the premiere date and trailer for the upcoming season of 'The Challenge'.",
+      "angle": "Paramount+ has released a trailer and announced the premiere date for the 42nd season of 'The Challenge'.",
       "tmdbType": "movie",
       "source": "gnews:TV Series Finale",
       "sources": [
@@ -360,12 +558,12 @@
           "outlet": "TV Series Finale",
           "tier": 5,
           "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNMlluT3JUSzJjeU9XZjl0WGV5elpXSTdOQTFIUF9jSnZWMGx1OXJvWlp1VV9NVFR5WDFacmlWZXoxMGIzOEZ3cXVWbW5CY3pCalBaSFBvaWFIRmgwMGt5OUprU09zd0dKaW1pYzhQTkxoX3Q4NVZ5aEs2YWRTTnFmcGdfU3RaeDVYUDMyOGR3aGNZcS1OcXNlOTVKVWVIZWczbHNscnFMV0VFYlVhb181X21BY2NGZmZBdlE?oc=5",
-          "ageMin": 466,
+          "ageMin": 526,
           "headline": "The Challenge: Season 42; Paramount+ Unveils Competition Series Premiere Date Trailer - TV Series Finale",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMiugFBVV95cUxNMlluT3JUSzJjeU9XZjl0WGV5elpXSTdOQTFIUF9jSnZWMGx1OXJvWlp1VV9NVFR5WDFacmlWZXoxMGIzOEZ3cXVWbW5CY3pCalBaSFBvaWFIRmgwMGt5OUprU09zd0dKaW1pYzhQTkxoX3Q4NVZ5aEs2YWRTTnFmcGdfU3RaeDVYUDMyOGR3aGNZcS1OcXNlOTVKVWVIZWczbHNscnFMV0VFYlVhb181X21BY2NGZmZBdlE"
         }
       ],
-      "ageMin": 466,
+      "ageMin": 526,
       "_cand": {
         "key": "rss:the-challenge-season-42-paramount-unveils-competition-series",
         "popularity": 0,
@@ -401,9 +599,204 @@
       "tierClass": "B"
     },
     {
-      "id": "music-news-gracie-abrams-daughter-from-hell-tracks-voice-notes",
-      "slug": "gracie-abrams-shares-voice-notes-from-upcoming-daughter-from-hell-trac",
-      "title": "Gracie Abrams Shares Voice Notes From Upcoming Daughter From Hell Tracks",
+      "id": "awards-imagen-awards-nominations-2024",
+      "slug": "acapulco-leads-41st-imagen-awards-nominations-andy-garcia-to-receive-l",
+      "title": "Acapulco Leads 41st Imagen Awards Nominations; Andy Garcia to Receive Lifetime Achievement Award",
+      "contentType": "awards",
+      "formatTag": "awards",
+      "category": "awards",
+      "subcategory": "winners",
+      "eventType": "award",
+      "sensitivity": "normal",
+      "eventSlug": "imagen-awards-nominations-2024",
+      "primaryKeyword": "imagen awards",
+      "primaryEntity": "Imagen Awards",
+      "entities": [
+        "Acapulco",
+        "Andy Garcia"
+      ],
+      "angle": "Apple TV+'s 'Acapulco' leads nominations for the 41st Imagen Awards, with Andy Garcia set to receive a Lifetime Achievement Award.",
+      "tmdbType": "movie",
+      "source": "rss:Variety Music",
+      "sources": [
+        {
+          "outlet": "Variety Music",
+          "tier": 7,
+          "url": "https://variety.com/2026/tv/news/imagen-awards-nominations-andy-garcia-lifetime-achievement-1236812172/",
+          "ageMin": 331,
+          "headline": "Acapulco Leads 41st Imagen Awards Nominations; Andy Garcia to Receive Lifetime Achievement Award",
+          "summary": "Apple TV s Acapulco led all series as the Imagen Foundation announced nominations for the 41st Annual Imagen Awards on Thursday. Acapulco scored 13 nods in the competition, which recognizes Latino talent and creative work across film, television, documentaries, digital media and music. The Imagen Foundation also announced that actor, filmmaker, producer and musician Andy Garcia [ ]"
+        }
+      ],
+      "ageMin": 331,
+      "_cand": {
+        "key": "rss:acapulco-leads-41st-imagen-awards-nominations-andy-garcia-to",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety Music"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety Music",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 53,
+      "signals": {
+        "recency": 9,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-todd-mcfarlane-spawn-reboot-details",
+      "slug": "everything-we-know-about-todd-mcfarlane-s-r-rated-spawn-reboot",
+      "title": "Everything We Know About Todd McFarlane’s R-Rated ‘Spawn’ Reboot",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "todd-mcfarlane-spawn-reboot-details",
+      "primaryKeyword": "spawn reboot",
+      "primaryEntity": "Spawn",
+      "entities": [
+        "Spawn (film)",
+        "Todd McFarlane"
+      ],
+      "angle": "Details emerge on Todd McFarlane's R-rated Spawn reboot.",
+      "tmdbType": "movie",
+      "source": "gnews:Esquire",
+      "sources": [
+        {
+          "outlet": "Esquire",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5NSW5zLWJjVkxrbDNCZ1dqQ05wbVhVb0ZGbGtkc0h3V09NbjN3MXkwcjRZUmNjZFBFN3V2dUp1Um5vSk9YVGlwZlFFQjBtWVNCdTlyUVNkcmd5RFZnNm43VU1nUmhwWTJkREhCY3Y2QjBhTVZvazg0?oc=5",
+          "ageMin": 213,
+          "headline": "Everything We Know About Todd McFarlane’s R-Rated ‘Spawn’ Reboot - Esquire",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMid0FVX3lxTE5NSW5zLWJjVkxrbDNCZ1dqQ05wbVhVb0ZGbGtkc0h3V09NbjN3MXkwcjRZUmNjZFBFN3V2dUp1Um5vSk9YVGlwZlFFQjBtWVNCdTlyUVNkcmd5RFZnNm43VU1nUmhwWTJkREhCY3Y2QjBhTVZvazg0?oc=5\" target=\"_blank\" Everything We Know About Todd McFarlane’s R-Rated ‘Spawn’ Reboot /a "
+        }
+      ],
+      "ageMin": 213,
+      "_cand": {
+        "key": "rss:everything-we-know-about-todd-mcfarlane-s-r-rated-spawn-rebo",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "Esquire"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "Esquire",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 68,
+      "signals": {
+        "recency": 9,
+        "corroboration": 8,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-dexter-resurrection-season-two-gabriel-luna-joins-cast",
+      "slug": "gabriel-luna-joins-cast-of-dexter-resurrection-season-two",
+      "title": "Gabriel Luna Joins Cast of 'Dexter: Resurrection' Season Two",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "dexter-resurrection-season-two-gabriel-luna-joins-cast",
+      "primaryKeyword": "Dexter: Resurrection",
+      "primaryEntity": "Dexter: Resurrection",
+      "entities": [
+        "Gabriel Luna",
+        "Paramount+"
+      ],
+      "angle": "Gabriel Luna has been cast in the upcoming second season of the Paramount+ series 'Dexter: Resurrection'.",
+      "tmdbType": "movie",
+      "source": "gnews:TV Series Finale",
+      "sources": [
+        {
+          "outlet": "TV Series Finale",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNeWdmamthSHRRME1kbW03SF95U2lETWlkRnVWajcxN2hkaExMbjdTTTRBRHN5RUdpRXNJUXFSNXhXZlA4WENNWmN6MGVhQ29NQThWd3kzdGJBd3pQamNXYzY2VFhVWHlacGtJTUdsam1OaE8taVJ2RnltYldkQ3F0M1NNX0loWkpicHJvX2M1Y0k5N1M3MjFtRERXR3JSMEh4QlQ2V1JEUjdFdm9EUVo00gG0AUFVX3lxTFBrcWlJLTRHNERDTm5uN2xVLTg1aWV2OVFLT1M0bW1jcFNIUWtwckJZMjExM2Z2YzhtRlh6MEZzYWplMnk5RE1JZ2NkeTU5YzJobDVPT09zRXJNckM1akd4VkFoaXdrQy1FMlVXblVnVnBEa1FhdzlEZ01BUEtEdVJJWGV1cE10NDk5cGFYSFVvaDg4dU1OTWJlU2JfeldRSUdrSjFLVmNCOG9BRVBGR1dObTdFbw?oc=5",
+          "ageMin": 495,
+          "headline": "Dexter: Resurrection: Season Two; Gabriel Luna Joins Cast of Paramount+ Series - TV Series Finale",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxNeWdmamthSHRRME1kbW03SF95U2lETWlkRnVWajcxN2hkaExMbjdTTTRBRHN5RUdpRXNJUXFSNXhXZlA4WENNWmN6MGVhQ29NQThWd3kzdGJBd3pQamNXYzY2VFhVWHlacGtJTUdsam1OaE8taVJ2RnltYldkQ3F0M1NNX0loWkpicHJvX2M1Y0k5N1M3MjFtRERXR3JSMEh4QlQ2V1JEUjdFdm9EUVo00gG0AUFVX3lxTFB"
+        }
+      ],
+      "ageMin": 495,
+      "_cand": {
+        "key": "rss:dexter-resurrection-season-two-gabriel-luna-joins-cast-of-pa",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "TV Series Finale"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "TV Series Finale",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 62,
+      "signals": {
+        "recency": 4,
+        "corroboration": 8,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "music-news-music-catalog-investment-market-high-note-investors-cashing-out",
+      "slug": "music-catalog-investment-market-hits-high-note-as-financial-investors-",
+      "title": "Music Catalog Investment Market Hits High Note as Financial Investors Cash Out",
       "contentType": "music-news",
       "formatTag": "music-news",
       "category": "music",
@@ -411,28 +804,30 @@
       "eventType": "announcement",
       "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "gracie-abrams-daughter-from-hell-tracks-voice-notes",
-      "primaryKeyword": "Gracie Abrams",
-      "primaryEntity": "Gracie Abrams",
+      "eventSlug": "music-catalog-investment-market-high-note-investors-cashing-out",
+      "primaryKeyword": "music catalog investment",
+      "primaryEntity": "Music Catalog Investment Market",
       "entities": [
-        "Daughter From Hell"
+        "Iconoclast",
+        "Anthem",
+        "Crescendo"
       ],
-      "angle": "Gracie Abrams gives fans a preview of her upcoming album with shared voice notes.",
+      "angle": "Financial investors are cashing out of the music catalog investment market as it hits a high note.",
       "tmdbType": "movie",
       "source": "rss:Billboard",
       "sources": [
         {
           "outlet": "Billboard",
           "tier": 7,
-          "url": "https://www.billboard.com/music/pop/gracie-abrams-interview-daughter-from-hell-mews-sober-1236296116/",
-          "ageMin": 33,
-          "headline": "Gracie Abrams Shares Voice Notes From Upcoming Daughter From Hell Tracks, Including One With an Alternate Melody",
-          "summary": "The pop singer-songwriter sat backstage with Billboard at her intimate Bowery Ballroom concert."
+          "url": "https://www.billboard.com/pro/music-catalog-investment-market-grows-investors-cash-out/",
+          "ageMin": 84,
+          "headline": "As the Music Catalog Investment Market Hits a High Note, Financial Investors Are Cashing Out",
+          "summary": "Iconoclast, Anthem and Crescendo are among the music rights catalog companies in the final stages of sales."
         }
       ],
-      "ageMin": 33,
+      "ageMin": 84,
       "_cand": {
-        "key": "rss:gracie-abrams-shares-voice-notes-from-upcoming-daughter-from",
+        "key": "rss:as-the-music-catalog-investment-market-hits-a-high-note-fina",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -451,9 +846,9 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 63,
+      "priority": 55,
       "signals": {
-        "recency": 24,
+        "recency": 16,
         "corroboration": 12,
         "status": 18,
         "type": 9,
@@ -463,12 +858,12 @@
         "trending": 0,
         "softTv": 0
       },
-      "tierClass": "B"
+      "tierClass": "C"
     },
     {
       "id": "news-danny-mcbride-gi-joe-reboot-director",
       "slug": "danny-mcbride-to-direct-g-i-joe-movie-reboot",
-      "title": "Danny McBride to direct G.I. Joe movie reboot",
+      "title": "Danny McBride to Direct G.I. Joe Movie Reboot",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
@@ -476,13 +871,13 @@
       "eventType": "casting",
       "sensitivity": "normal",
       "eventSlug": "danny-mcbride-gi-joe-reboot-director",
-      "primaryKeyword": "danny mcbride gi joe reboot",
+      "primaryKeyword": "G.I. Joe reboot",
       "primaryEntity": "G.I. Joe: Retaliation",
       "entities": [
-        "G.I. Joe (film series)",
+        "G.I. Joe",
         "Danny McBride"
       ],
-      "angle": "Danny McBride has been tapped to direct the upcoming reboot of the G.I. Joe film franchise.",
+      "angle": "Danny McBride is set to direct the upcoming reboot of the 'G.I. Joe' film franchise.",
       "tmdbType": "movie",
       "source": "gnews:Flickering Myth",
       "sources": [
@@ -490,12 +885,12 @@
           "outlet": "Flickering Myth",
           "tier": 5,
           "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPcDhDLU1hV2tpVlVPbGhDNFFjRVllSEhxQ2tCaG9vYndsdlhMWllLNUpGZG9nZGVVb2VGWGhmNmJ4ZmI3TDlaNkluMlFPbGo2TTBwdmpQTGlPUThmRy1DLVVHUWdIaERtMlpCR1g5YXJlM25xTzZEakZSUEc3b1ZhTUJ3?oc=5",
-          "ageMin": 603,
+          "ageMin": 663,
           "headline": "Danny McBride to direct G.I. Joe movie reboot - Flickering Myth",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMiggFBVV95cUxPcDhDLU1hV2tpVlVPbGhDNFFjRVllSEhxQ2tCaG9vYndsdlhMWllLNUpGZG9nZGVVb2VGWGhmNmJ4ZmI3TDlaNkluMlFPbGo2TTBwdmpQTGlPUThmRy1DLVVHUWdIaERtMlpCR1g5YXJlM25xTzZEakZSUEc3b1ZhTUJ3?oc=5\" target=\"_blank\" Danny McBride to direct G.I. Joe movie reboot /a nbs"
         }
       ],
-      "ageMin": 603,
+      "ageMin": 663,
       "_cand": {
         "key": "rss:danny-mcbride-to-direct-g-i-joe-movie-reboot-flickering-myth",
         "popularity": 0,
@@ -531,39 +926,38 @@
       "tierClass": "B"
     },
     {
-      "id": "news-his-hers-leads-netflix-tv-viewing",
-      "slug": "his-hers-leads-netflix-tv-viewing-in-first-half-of-2026",
-      "title": "'His Hers' Leads Netflix TV Viewing in First Half of 2026",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
+      "id": "music-news-kacey-musgraves-stanley-collection-rodeo-inspired-sold-out",
+      "slug": "kacey-musgraves-rodeo-inspired-stanley-collection-is-almost-sold-out",
+      "title": "Kacey Musgraves' Rodeo-Inspired Stanley Collection Is Almost Sold Out",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
       "subcategory": "news",
-      "eventType": "other",
+      "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "his-hers-leads-netflix-tv-viewing",
-      "primaryKeyword": "netflix viewership report",
-      "primaryEntity": "His Hers",
+      "tier": "popular",
+      "eventSlug": "kacey-musgraves-stanley-collection-rodeo-inspired-sold-out",
+      "primaryKeyword": "Kacey Musgraves Stanley collection",
+      "primaryEntity": "Kacey Musgraves",
       "entities": [
-        "Netflix",
-        "Jon Bernthal",
-        "Tessa Thompson"
+        "Stanley"
       ],
-      "angle": "Jon Bernthal and Tessa Thompson's crime thriller 'His Hers' topped Netflix's TV viewership for the first half of 2026, outperforming returning series.",
+      "angle": "Kacey Musgraves' rodeo-inspired Stanley collection is nearly sold out, with limited items still available.",
       "tmdbType": "movie",
-      "source": "rss:Deadline",
+      "source": "rss:Billboard",
       "sources": [
         {
-          "outlet": "Deadline",
+          "outlet": "Billboard",
           "tier": 7,
-          "url": "https://deadline.com/2026/07/netflix-viewing-first-half-2026-his-and-hers-top-title-1236984471/",
-          "ageMin": 51,
-          "headline": "His Hers Leads TV Viewing On Netflix In First Half Of 2026 As New Series Outpace Returning Titles — What We Watched Report",
-          "summary": "Jon Bernthal and Tessa Thompson led the way for TV on Netflix in the first half of the year. The pair s crime thriller His Hers reached 104 million views globally from its premiere date on January 8 through the end of June, making it the most-watched show in H1 2026, according to the streamer s [ ]"
+          "url": "https://www.billboard.com/culture/product-recommendations/kacey-musgraves-stanley-cup-collection-shop-tumblers-online-1236296034/",
+          "ageMin": 93,
+          "headline": "Kacey Musgraves’ Rodeo-Inspired Stanley Collection Is Almost Sold Out: Here’s What’s Still Available",
+          "summary": "The 'Dry Spell' singer's collaboration with Stanley includes three drinkware items for humans and one for pets."
         }
       ],
-      "ageMin": 51,
+      "ageMin": 93,
       "_cand": {
-        "key": "rss:his-hers-leads-tv-viewing-on-netflix-in-first-half-of-2026-a",
+        "key": "rss:kacey-musgraves-rodeo-inspired-stanley-collection-is-almost-",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -573,86 +967,21 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Deadline"
+          "Billboard"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Deadline",
+        "attribution": "Billboard",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 65,
+      "priority": 55,
       "signals": {
-        "recency": 24,
+        "recency": 16,
         "corroboration": 12,
         "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 6,
-        "trending": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "awards-41st-imagen-awards-nominations",
-      "slug": "acapulco-leads-41st-imagen-awards-nominations-andy-garcia-to-receive-l",
-      "title": "Acapulco Leads 41st Imagen Awards Nominations; Andy Garcia to Receive Lifetime Achievement Award",
-      "contentType": "awards",
-      "formatTag": "awards",
-      "category": "awards",
-      "subcategory": "winners",
-      "eventType": "award",
-      "sensitivity": "normal",
-      "eventSlug": "41st-imagen-awards-nominations",
-      "primaryKeyword": "Imagen Awards",
-      "primaryEntity": "Imagen Awards",
-      "entities": [
-        "Acapulco",
-        "Andy Garcia"
-      ],
-      "angle": "Apple TV+'s 'Acapulco' leads nominations for the 41st Imagen Awards, with Andy Garcia set to receive a Lifetime Achievement Award.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/tv/news/imagen-awards-nominations-andy-garcia-lifetime-achievement-1236812172/",
-          "ageMin": 271,
-          "headline": "Acapulco Leads 41st Imagen Awards Nominations; Andy Garcia to Receive Lifetime Achievement Award",
-          "summary": "Apple TV s Acapulco led all series as the Imagen Foundation announced nominations for the 41st Annual Imagen Awards on Thursday. Acapulco scored 13 nods in the competition, which recognizes Latino talent and creative work across film, television, documentaries, digital media and music. The Imagen Foundation also announced that actor, filmmaker, producer and musician Andy Garcia [ ]"
-        }
-      ],
-      "ageMin": 271,
-      "_cand": {
-        "key": "rss:acapulco-leads-41st-imagen-awards-nominations-andy-garcia-to",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 53,
-      "signals": {
-        "recency": 9,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
         "big": 0,
@@ -662,40 +991,38 @@
       "tierClass": "C"
     },
     {
-      "id": "news-james-gray-paper-tiger-new-york-film-festival-opening",
-      "slug": "james-gray-s-paper-tiger-to-open-new-york-film-festival",
-      "title": "James Gray's 'Paper Tiger' to Open New York Film Festival",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
+      "id": "music-news-gracie-abrams-voice-notes-daughter-from-hell-tracks",
+      "slug": "gracie-abrams-shares-voice-notes-from-upcoming-daughter-from-hell-trac",
+      "title": "Gracie Abrams Shares Voice Notes From Upcoming 'Daughter From Hell' Tracks",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "james-gray-paper-tiger-new-york-film-festival-opening",
-      "primaryKeyword": "new york film festival opening",
-      "primaryEntity": "Paper Tiger (film)",
+      "tier": "popular",
+      "eventSlug": "gracie-abrams-voice-notes-daughter-from-hell-tracks",
+      "primaryKeyword": "Gracie Abrams new music",
+      "primaryEntity": "Gracie Abrams",
       "entities": [
-        "James Gray",
-        "Adam Driver",
-        "Miles Teller",
-        "Scarlett Johansson"
+        "Daughter From Hell"
       ],
-      "angle": "Auteur James Gray's latest film 'Paper Tiger' will open the New York Film Festival.",
+      "angle": "Gracie Abrams shared voice notes from her upcoming tracks, including one with an alternate melody.",
       "tmdbType": "movie",
-      "source": "rss:IndieWire",
+      "source": "rss:Billboard",
       "sources": [
         {
-          "outlet": "IndieWire",
+          "outlet": "Billboard",
           "tier": 7,
-          "url": "https://www.indiewire.com/news/festivals/2026-new-york-film-festival-james-gray-paper-tiger-1235205510/",
-          "ageMin": 451,
-          "headline": "James Gray s Paper Tiger Will Open This Year’s New York Film Festival",
-          "summary": "The auteur's latest heartbreaker, starring Adam Driver, Miles Teller, and Scarlett Johansson, premiered at Cannes earlier this year to strong reviews."
+          "url": "https://www.billboard.com/music/pop/gracie-abrams-interview-daughter-from-hell-mews-sober-1236296116/",
+          "ageMin": 93,
+          "headline": "Gracie Abrams Shares Voice Notes From Upcoming Daughter From Hell Tracks, Including One With an Alternate Melody",
+          "summary": "The pop singer-songwriter sat backstage with Billboard at her intimate Bowery Ballroom concert."
         }
       ],
-      "ageMin": 451,
+      "ageMin": 93,
       "_cand": {
-        "key": "rss:james-gray-s-paper-tiger-will-open-this-year-s-new-york-film",
+        "key": "rss:gracie-abrams-shares-voice-notes-from-upcoming-daughter-from",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -705,98 +1032,99 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "IndieWire"
+          "Billboard"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "IndieWire",
+        "attribution": "Billboard",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 67,
+      "priority": 55,
       "signals": {
-        "recency": 4,
+        "recency": 16,
         "corroboration": 12,
         "status": 18,
         "type": 9,
         "pop": 0,
         "breakout": 0,
-        "big": 24,
+        "big": 0,
         "trending": 0,
         "softTv": 0
       },
-      "tierClass": "B"
+      "tierClass": "C"
     },
     {
-      "id": "news-naruto-live-action-movie-casting-call-shippuden",
-      "slug": "naruto-live-action-movie-casting-call-teases-naruto-shippuden-timeline",
-      "title": "‘Naruto’ Live-Action Movie Casting Call Teases ‘Naruto: Shippuden’ Timeline",
+      "id": "news-heartstopper-series-finale",
+      "slug": "the-end-of-an-era-inside-heartstopper-forever-and-the-show-that-change",
+      "title": "The End of an Era: Inside Heartstopper Forever and the Show That Changed British YA",
       "contentType": "news",
       "formatTag": "news",
-      "category": "movies",
+      "category": "tv",
       "subcategory": "news",
-      "eventType": "casting",
+      "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "naruto-live-action-movie-casting-call-shippuden",
-      "primaryKeyword": "naruto live action movie casting",
-      "primaryEntity": "Naruto Shippuden the Movie: The Will of Fire",
+      "eventSlug": "heartstopper-series-finale",
+      "primaryKeyword": "heartstopper finale",
+      "primaryEntity": "Heartstopper",
       "entities": [
-        "Naruto (film series)",
-        "Naruto: Shippuden"
+        "Alice Oseman",
+        "Kit Connor",
+        "Joe Locke"
       ],
-      "angle": "A casting call for the live-action 'Naruto' movie suggests it will cover the 'Naruto: Shippuden' timeline.",
+      "angle": "Creator and stars reflect on the conclusion of the groundbreaking British YA series Heartstopper.",
       "tmdbType": "movie",
-      "source": "gnews:Knight Edge Media",
+      "source": "rss:THR",
       "sources": [
         {
-          "outlet": "Knight Edge Media",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNaGtiNnBHWGJ6MDd0aVQteU53OWpYcktJd0R3UUVLc2ttbm5ZQ0IzM0haM3k1dF91blA4UFVnMTd5Sm8wZ2FaS3ZBLWFIcnJQZHpPNUNpWUlhelFXbmFCNml5UWRTSmFaN1ZYclF2akkySERzajZESk5pUUdXTUliTUpiMHhtQ2FpVTVjR2Q1eExsQ0d4UU9rck01SUpSZHp1TkN5NW9Xa3o0V0XSAbABQVVfeXFMTUdJT0QwQ3ZUVFRkYldSYXhWNEV6T2tCLWYzekZfY09CMEtRMlBpTGtRU3JtOGVxd3E4NzdLQ0Q3SzI3Z3JFSXNmSzVidnJHaXYxbmtiTmFmM1dwYWExLXRjRHNydEhkTEZoaTdyS1BQRGlQellZVThKVWY3U2o3OUlPOEVrQmVaTVJURzVIeTVGUTQ3VHJTdF9aaTdtdzBCeTBBQnZybExtWnhoZHpzMjE?oc=5",
-          "ageMin": 837,
-          "headline": "‘Naruto’ Live-Action Movie Casting Call Teases ‘Naruto: Shippuden’ Timeline - Knight Edge Media",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxNaGtiNnBHWGJ6MDd0aVQteU53OWpYcktJd0R3UUVLc2ttbm5ZQ0IzM0haM3k1dF91blA4UFVnMTd5Sm8wZ2FaS3ZBLWFIcnJQZHpPNUNpWUlhelFXbmFCNml5UWRTSmFaN1ZYclF2akkySERzajZESk5pUUdXTUliTUpiMHhtQ2FpVTVjR2Q1eExsQ0d4UU9rck01SUpSZHp1TkN5NW9Xa3o0V0XSAbABQVVfeXFMTUdJT0Q"
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/the-end-of-an-era-inside-heartstopper-forever-and-the-show-that-changed-british-ya-1236646729/",
+          "ageMin": 296,
+          "headline": "The End of an Era: Inside Heartstopper Forever and the Show That Changed British YA",
+          "summary": "With the release of the two-hour finale that concludes the hit Netflix series, creator Alice Oseman along with Kit Connor, Joe Locke and more of the show's stars reflect on a groundbreaking, decade-long journey and what it means to end their queer love story."
         }
       ],
-      "ageMin": 837,
+      "ageMin": 296,
       "_cand": {
-        "key": "rss:-naruto-live-action-movie-casting-call-teases-naruto-shippud",
+        "key": "rss:the-end-of-an-era-inside-heartstopper-forever-and-the-show-t",
         "popularity": 0,
-        "kind": "gnews"
+        "kind": "rss-news"
       },
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
+        "tier1Count": 1,
+        "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Knight Edge Media"
+          "THR"
         ],
-        "maxTier": 5,
+        "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Knight Edge Media",
+        "attribution": "THR",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 65,
+      "priority": 50,
       "signals": {
-        "recency": 1,
-        "corroboration": 8,
+        "recency": 9,
+        "corroboration": 12,
         "status": 18,
-        "type": 14,
+        "type": 5,
         "pop": 0,
         "breakout": 0,
-        "big": 24,
+        "big": 6,
         "trending": 0,
         "softTv": 0
       },
-      "tierClass": "B"
+      "tierClass": "C"
     },
     {
-      "id": "music-news-english-language-music-listening-decline-us-2026",
-      "slug": "americans-are-listening-to-less-music-in-english-thanks-to-bad-bunny-a",
-      "title": "Americans Are Listening to Less Music in English, Thanks to Bad Bunny and BTS",
+      "id": "music-news-english-language-music-consumption-decline-bad-bunny-bts",
+      "slug": "americans-listening-to-less-english-music-thanks-to-bad-bunny-and-bts",
+      "title": "Americans Listening to Less English Music, Thanks to Bad Bunny and BTS",
       "contentType": "music-news",
       "formatTag": "music-news",
       "category": "music",
@@ -804,13 +1132,14 @@
       "eventType": "other",
       "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "english-language-music-listening-decline-us-2026",
-      "primaryKeyword": "bad bunny bts music trends",
+      "eventSlug": "english-language-music-consumption-decline-bad-bunny-bts",
+      "primaryKeyword": "english music listening decline",
       "primaryEntity": "Bad Bunny",
       "entities": [
-        "BTS"
+        "BTS",
+        "Luminate"
       ],
-      "angle": "Spanish-language music, led by artists like Bad Bunny and BTS, is increasingly dominating US streams, causing a decline in English-language music consumption.",
+      "angle": "Report shows a decline in English-language music streams in the US, driven by the popularity of artists like Bad Bunny and BTS.",
       "tmdbType": "movie",
       "source": "rss:Rolling Stone",
       "sources": [
@@ -818,12 +1147,12 @@
           "outlet": "Rolling Stone",
           "tier": 7,
           "url": "https://www.rollingstone.com/music/music-features/americans-english-music-bad-bunny-luminate-report-1235594219/",
-          "ageMin": 82,
+          "ageMin": 142,
           "headline": "Americans Are Listening to Less Music in English, Thanks to Bad Bunny and BTS",
           "summary": "One in 10 U.S. streams come from Spanish-language music — and other fascinating takeaways from Luminate’s midyear report"
         }
       ],
-      "ageMin": 82,
+      "ageMin": 142,
       "_cand": {
         "key": "rss:americans-are-listening-to-less-music-in-english-thanks-to-b",
         "popularity": 0,
@@ -860,23 +1189,410 @@
       "tierClass": "C"
     },
     {
-      "id": "news-shia-labeouf-unraveling-on-set-the-rooster-prince",
-      "slug": "shia-labeouf-s-on-set-unraveling-in-the-rooster-prince-detailed",
-      "title": "Shia LaBeouf's On-Set Unraveling in 'The Rooster Prince' Detailed",
+      "id": "news-atonement-kino-lorber-cannes-deal",
+      "slug": "cannes-film-deal-kino-lorber-acquires-boyd-holbrook-starrer-atonement",
+      "title": "Cannes Film Deal: Kino Lorber Acquires Boyd Holbrook-Starrer 'Atonement'",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "deal",
+      "sensitivity": "normal",
+      "eventSlug": "atonement-kino-lorber-cannes-deal",
+      "primaryKeyword": "atonement movie",
+      "primaryEntity": "Atonement",
+      "entities": [
+        "Kino Lorber",
+        "Boyd Holbrook",
+        "Kenneth Branagh",
+        "Hiam Abbass"
+      ],
+      "angle": "Kino Lorber acquires Reed Van Dyk's directorial debut 'Atonement' following its Cannes premiere.",
+      "tmdbType": "movie",
+      "source": "rss:IndieWire",
+      "sources": [
+        {
+          "outlet": "IndieWire",
+          "tier": 7,
+          "url": "https://www.indiewire.com/news/festivals/cannes-2026-movies-sold-so-far-paper-tiger-minotaur-1235191174/",
+          "ageMin": 511,
+          "headline": "Cannes 2026 Movies Sold: Atonement with Boyd Holbrook, Kenneth Branagh, and Hiam Abbass Lands at Kino Lorber",
+          "summary": "Reed Van Dyk made his feature directorial debut on the movie that premiered in Director's Fortnight and will continue playing festivals this fall."
+        }
+      ],
+      "ageMin": 511,
+      "_cand": {
+        "key": "rss:cannes-2026-movies-sold-atonement-with-boyd-holbrook-kenneth",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "IndieWire"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "IndieWire",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 52,
+      "signals": {
+        "recency": 4,
+        "corroboration": 12,
+        "status": 18,
+        "type": 6,
+        "pop": 0,
+        "breakout": 0,
+        "big": 12,
+        "trending": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-star-wars-lightsaber-auction-record",
+      "slug": "original-star-wars-lightsaber-sells-for-more-than-3-million",
+      "title": "Original Star Wars lightsaber sells for more than $3 million",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "shia-labeouf-unraveling-on-set-the-rooster-prince",
-      "primaryKeyword": "shia labeouf the rooster prince",
-      "primaryEntity": "The Rooster Prince",
-      "entities": [
-        "Shia LaBeouf",
-        "Josh Penn Soskin"
+      "eventSlug": "star-wars-lightsaber-auction-record",
+      "primaryKeyword": "star wars lightsaber auction",
+      "primaryEntity": "Star Wars",
+      "entities": [],
+      "angle": "A Star Wars lightsaber has set a new record at auction.",
+      "tmdbType": "movie",
+      "source": "gnews:news8000.com",
+      "sources": [
+        {
+          "outlet": "news8000.com",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNN2pnaDA0aG9JRWtLRmZwLUh1c3RTejVFWVBTeEtaMmRvMDNKbkdiWHhKcU1RdmEwd2NsWDBYaVZqTEdSZkpNdEp2a0pZLTROZVJXa2t2bndMSVBWQWxDb3hMbVJCWjk1S3FSS3d1WTBFUzY1RVRIc2JPMUE5Ulp2RDBTcWt2bEhnc1pZVmx0amhTQjY5aDgyMlp1d1psVUc0R2FQd3M0bkt1SnVNMVdWM3BtaXoyWVhFY2xNT01kRUJHcXdFLVp2LWppWUJNemwzMm4w?oc=5",
+          "ageMin": 252,
+          "headline": "Original Star Wars lightsaber sells for more than $3 million - news8000.com",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMi0wFBVV95cUxNN2pnaDA0aG9JRWtLRmZwLUh1c3RTejVFWVBTeEtaMmRvMDNKbkdiWHhKcU1RdmEwd2NsWDBYaVZqTEdSZkpNdEp2a0pZLTROZVJXa2t2bndMSVBWQWxDb3hMbVJCWjk1S3FSS3d1WTBFUzY1RVRIc2JPMUE5Ulp2RDBTcWt2bEhnc1pZVmx0amhTQjY5aDgyMlp1d1psVUc0R2FQd3M0bkt1SnVNMVdWM3BtaXoyWVhFY2x"
+        }
       ],
-      "angle": "Reports detail Shia LaBeouf's intense and reportedly difficult behavior on the set of the upcoming film 'The Rooster Prince,' based on the director's relationship with his late brother.",
+      "ageMin": 252,
+      "_cand": {
+        "key": "rss:original-star-wars-lightsaber-sells-for-more-than-3-million-",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "news8000.com"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "news8000.com",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 52,
+      "signals": {
+        "recency": 9,
+        "corroboration": 8,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 12,
+        "trending": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-luke-skywalker-lightsaber-auction-record",
+      "slug": "luke-skywalker-s-3-75-million-lightsaber-sets-new-star-wars-record",
+      "title": "Luke Skywalker’s $3.75 Million Lightsaber Sets New ‘Star Wars’ Record",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "luke-skywalker-lightsaber-auction-record",
+      "primaryKeyword": "luke skywalker lightsaber auction",
+      "primaryEntity": "Luke Skywalker",
+      "entities": [
+        "Star Wars"
+      ],
+      "angle": "Luke Skywalker's lightsaber fetched a record-breaking price at auction.",
+      "tmdbType": "movie",
+      "source": "gnews:Artnet News",
+      "sources": [
+        {
+          "outlet": "Artnet News",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPUkQteGQwNFQya2RxRHlSNldLc1FiTUc3UFVMNktibTJQSGo3RUg2bTF3OVZNcEl3aHJKdTh0Uld4N0dJaXpYblJBSnVlZi1kNm51TU5qQ1psYjBhRktoSTZNckFuNTJVR1RWSlhsUE5raVl3dXFCNnBXUmp0OHRHdUM2WWtsdVJEQk9aWmxzUHV0Qk5m0gGcAUFVX3lxTFBwcnFmTGZvUF9sSjcyZHE5WkFkcmdkZHV0ZE5kYWR1VG1xSlY2RUZYalR4WUk1V1Y1NldsOEhMTXBjeHBEdVRvYVpUY2VuVWtHYU9FSlNFZUd3c05oVXdHeHFVcmMzWWhyV05yZjhabWExRnZTVnlDUkhrdnVXOVRGVHRwVk8xSlBOVWVSaXo1NExob1daNlhlb2I4Qw?oc=5",
+          "ageMin": 270,
+          "headline": "Luke Skywalker’s $3.75 Million Lightsaber Sets New ‘Star Wars’ Record - Artnet News",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMilAFBVV95cUxPUkQteGQwNFQya2RxRHlSNldLc1FiTUc3UFVMNktibTJQSGo3RUg2bTF3OVZNcEl3aHJKdTh0Uld4N0dJaXpYblJBSnVlZi1kNm51TU5qQ1psYjBhRktoSTZNckFuNTJVR1RWSlhsUE5raVl3dXFCNnBXUmp0OHRHdUM2WWtsdVJEQk9aWmxzUHV0Qk5m0gGcAUFVX3lxTFBwcnFmTGZvUF9sSjcyZHE5WkFkcmdkZHV0ZE5"
+        }
+      ],
+      "ageMin": 270,
+      "_cand": {
+        "key": "rss:luke-skywalker-s-3-75-million-lightsaber-sets-new-star-wars-",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "Artnet News"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "Artnet News",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 52,
+      "signals": {
+        "recency": 9,
+        "corroboration": 8,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 12,
+        "trending": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-timothy-busfield-career-impacted-by-sex-abuse-allegations",
+      "slug": "timothy-busfield-says-child-sex-abuse-allegations-have-ended-his-caree",
+      "title": "Timothy Busfield Says Child Sex Abuse Allegations Have Ended His Career",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "legal",
+      "sensitivity": "high",
+      "eventSlug": "timothy-busfield-career-impacted-by-sex-abuse-allegations",
+      "primaryKeyword": "timothy busfield",
+      "primaryEntity": "Timothy Busfield",
+      "entities": [],
+      "angle": "Timothy Busfield speaks out about the devastating impact of child sex abuse allegations on his career, stating he believes he will never work again.",
+      "tmdbType": "movie",
+      "source": "rss:TheWrap",
+      "sources": [
+        {
+          "outlet": "TheWrap",
+          "tier": 7,
+          "url": "https://www.thewrap.com/industry-news/public-policy-legal/timothy-busfield-being-canceled-sex-abuse-allegations/",
+          "ageMin": 6,
+          "headline": "Timothy Busfield Bemoans Being Canceled Amid Child Sex Abuse Allegations: My Career Is Done",
+          "summary": "\"I’ll never work again just based on people’s fear that I would do this again and even if it wasn’t true,\" the actor says The post Timothy Busfield Bemoans Being Canceled Amid Child Sex Abuse Allegations: My Career Is Done appeared first on TheWrap ."
+        }
+      ],
+      "ageMin": 6,
+      "_cand": {
+        "key": "rss:timothy-busfield-bemoans-being-canceled-amid-child-sex-abuse",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "TheWrap"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": "TheWrap",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 72,
+      "signals": {
+        "recency": 30,
+        "corroboration": 12,
+        "status": 18,
+        "type": 12,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      },
+      "tierClass": "S"
+    },
+    {
+      "id": "news-netflix-live-programming-strategy",
+      "slug": "netflix-bets-big-on-live-programming-cites-bts-and-roast-of-kevin-hart",
+      "title": "Netflix Bets Big on Live Programming, Cites 'BTS' and 'Roast of Kevin Hart' Success",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "netflix-live-programming-strategy",
+      "primaryKeyword": "netflix live programming",
+      "primaryEntity": "Netflix",
+      "entities": [
+        "BTS: THE RETURN",
+        "BTS",
+        "Kevin Hart"
+      ],
+      "angle": "Netflix is increasing its focus on live programming, citing successes like 'The Roast of Kevin Hart' and 'BTS: The Comeback Live' as drivers of subscriber growth.",
+      "tmdbType": "movie",
+      "source": "rss:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/netflix-ramp-up-live-programming-bts-the-comeback-1236984610/",
+          "ageMin": 33,
+          "headline": "Netflix To Ramp Up Live Programming As ‘BTS: The Comeback Live’ ‘The Roast Of Kevin Hart’ Perform For Streamer, Drive Subscriber Numbers",
+          "summary": "Netflix is all in on live programming. After a number of its big-ticket live stunts such as The Roast of Kevin Hart, BTS: The Comeback Live – Arirang and Skyscraper Live performed well over the first six months of the year, the streamer said that it was doubling down on the nascent genre. The Roast [ ]"
+        }
+      ],
+      "ageMin": 33,
+      "_cand": {
+        "key": "rss:netflix-to-ramp-up-live-programming-as-bts-the-comeback-live",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 63,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-kevin-hart-funny-af-viewership",
+      "slug": "kevin-hart-s-funny-af-draws-nearly-42-million-views-on-netflix",
+      "title": "Kevin Hart's 'Funny AF' Draws Nearly 42 Million Views on Netflix",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "kevin-hart-funny-af-viewership",
+      "primaryKeyword": "Kevin Hart Funny AF viewership",
+      "primaryEntity": "Kevin Hart",
+      "entities": [
+        "Funny AF",
+        "Netflix",
+        "Katt Williams"
+      ],
+      "angle": "Kevin Hart's stand-up competition series 'Funny AF' on Netflix garnered nearly 42 million views, contributing to the streamer's decision to renew it.",
+      "tmdbType": "movie",
+      "source": "rss:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/kevin-hart-funny-af-netflix-what-we-watched-katt-williams-1236984588/",
+          "ageMin": 52,
+          "headline": "Kevin Hart s Funny AF Drums Up Nearly 42M Views On First Netflix Viewership Report; Katt Williams Lands Top-Performing Special With The Last Report",
+          "summary": "Netflix was quick to renew Funny AF, Kevin Hart s stand-up competition series launched in April — and now, it s clear why. While widely embraced by the comedy community as an effort to elevate a new generation of comedy stars at a time when comedy talent incubation has been deprioritized, the show has also drummed up huge [ ]"
+        }
+      ],
+      "ageMin": 52,
+      "_cand": {
+        "key": "rss:kevin-hart-s-funny-af-drums-up-nearly-42m-views-on-first-net",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 63,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-shia-labeouf-documentary-the-rooster-prince",
+      "slug": "documentary-the-rooster-prince-explores-shia-labeouf-s-struggles",
+      "title": "Documentary 'The Rooster Prince' Explores Shia LaBeouf's Struggles",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "shia-labeouf-documentary-the-rooster-prince",
+      "primaryKeyword": "Shia LaBeouf documentary",
+      "primaryEntity": "Shia LaBeouf",
+      "entities": [
+        "Josh Penn Soskin",
+        "The Rooster Prince"
+      ],
+      "angle": "A documentary is in production about Shia LaBeouf's struggles.",
       "tmdbType": "movie",
       "source": "rss:Variety",
       "sources": [
@@ -884,12 +1600,12 @@
           "outlet": "Variety",
           "tier": 7,
           "url": "https://variety.com/2026/film/news/shia-labeouf-angry-set-behavior-rooster-prince-1236812006/",
-          "ageMin": 61,
+          "ageMin": 121,
           "headline": "Watching Shia LaBeouf Unravel: He Was Exploding on Set and in Deep Pain",
           "summary": "In November 2025, writer-director Josh Penn Soskin began production on his debut feature, The Rooster Prince,” based on his relationship with his late brother, David, a renowned psychiatrist who suffered from bipolar disorder. He cast Shia LaBeouf to play Eli, the character based on his brother, along with Jackson White and Melissa Leo. These are his [ ]"
         }
       ],
-      "ageMin": 61,
+      "ageMin": 121,
       "_cand": {
         "key": "rss:watching-shia-labeouf-unravel-he-was-exploding-on-set-and-in",
         "popularity": 0,
@@ -910,69 +1626,6 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 63,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 12,
-        "trending": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "music-news-noah-kahan-supports-massachusetts-ticket-resale-bill",
-      "slug": "noah-kahan-backs-massachusetts-bill-limiting-ticket-resale-prices",
-      "title": "Noah Kahan Backs Massachusetts Bill Limiting Ticket Resale Prices",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "noah-kahan-supports-massachusetts-ticket-resale-bill",
-      "primaryKeyword": "noah kahan ticket resale",
-      "primaryEntity": "Noah Kahan",
-      "entities": [],
-      "angle": "Singer-songwriter Noah Kahan is backing a Massachusetts bill aimed at limiting ticket resale prices and combating speculative fees.",
-      "tmdbType": "movie",
-      "source": "rss:Rolling Stone",
-      "sources": [
-        {
-          "outlet": "Rolling Stone",
-          "tier": 7,
-          "url": "https://www.rollingstone.com/music/music-news/noah-kahan-massachusetts-bill-limiting-ticket-resale-prices-1235594747/",
-          "ageMin": 91,
-          "headline": "Noah Kahan Backs Massachusetts Bill Limiting Ticket Resale Prices",
-          "summary": "Following similar legislature in his native Vermont, singer-songwriter supports “The Great Divide Act” combating speculative tickets, resale fees, and more"
-        }
-      ],
-      "ageMin": 91,
-      "_cand": {
-        "key": "rss:noah-kahan-backs-massachusetts-bill-limiting-ticket-resale-p",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Rolling Stone"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Rolling Stone",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
       "priority": 51,
       "signals": {
         "recency": 16,
@@ -988,301 +1641,40 @@
       "tierClass": "C"
     },
     {
-      "id": "news-heartstopper-forever-finale",
-      "slug": "inside-heartstopper-forever-creator-and-stars-reflect-on-the-show-s-gr",
-      "title": "Inside 'Heartstopper Forever': Creator and Stars Reflect on the Show's Groundbreaking Impact Ahead of Finale",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "heartstopper-forever-finale",
-      "primaryKeyword": "Heartstopper Forever",
-      "primaryEntity": "Heartstopper",
-      "entities": [
-        "Alice Oseman",
-        "Kit Connor",
-        "Joe Locke"
-      ],
-      "angle": "Creator Alice Oseman and stars reflect on the groundbreaking impact of 'Heartstopper' as the Netflix series concludes with a two-hour finale.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/the-end-of-an-era-inside-heartstopper-forever-and-the-show-that-changed-british-ya-1236646729/",
-          "ageMin": 236,
-          "headline": "The End of an Era: Inside Heartstopper Forever and the Show That Changed British YA",
-          "summary": "With the release of the two-hour finale that concludes the hit Netflix series, creator Alice Oseman along with Kit Connor, Joe Locke and more of the show's stars reflect on a groundbreaking, decade-long journey and what it means to end their queer love story."
-        }
-      ],
-      "ageMin": 236,
-      "_cand": {
-        "key": "rss:the-end-of-an-era-inside-heartstopper-forever-and-the-show-t",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 50,
-      "signals": {
-        "recency": 9,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 6,
-        "trending": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-tom-cruise-praises-christopher-nolan-the-odyssey",
-      "slug": "tom-cruise-praises-christopher-nolan-s-the-odyssey-i-can-t-wait-to-see",
-      "title": "Tom Cruise Praises Christopher Nolan's The Odyssey: 'I Can't Wait to See It Again'",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "tom-cruise-praises-christopher-nolan-the-odyssey",
-      "primaryKeyword": "tom cruise christopher nolan",
-      "primaryEntity": "Tom Cruise",
-      "entities": [
-        "Christopher Nolan",
-        "The Odyssey"
-      ],
-      "angle": "Tom Cruise expresses his admiration for Christopher Nolan's film 'The Odyssey' after an early screening.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/tom-cruise-the-odyssey-christopher-nolan-1236650292/",
-          "ageMin": 153,
-          "headline": "Tom Cruise Praises Christopher Nolan s The Odyssey : I Can t Wait to See It Again",
-          "summary": "\"Thank you for an amazing night in a movie theater,\" the actor and champion of the theatrical moviegoing experience wrote on social media Thursday ahead of the film's official release."
-        }
-      ],
-      "ageMin": 153,
-      "_cand": {
-        "key": "rss:tom-cruise-praises-christopher-nolan-s-the-odyssey-i-can-t-w",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 63,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 12,
-        "trending": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-casting-director-nancy-nayor-on-horror-breakouts",
-      "slug": "horror-s-biggest-hits-casting-director-reveals-how-breakout-stars-are-",
-      "title": "Horror's Biggest Hits Casting Director Reveals How Breakout Stars Are Discovered",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "casting-director-nancy-nayor-on-horror-breakouts",
-      "primaryKeyword": "horror casting",
-      "primaryEntity": "Nancy Nayor",
-      "entities": [
-        "Sam Raimi",
-        "Barbarian (film)"
-      ],
-      "angle": "Veteran casting director Nancy Nayor shares insights into how breakout stars are discovered for horror films.",
-      "tmdbType": "movie",
-      "source": "rss:IndieWire",
-      "sources": [
-        {
-          "outlet": "IndieWire",
-          "tier": 7,
-          "url": "https://www.indiewire.com/features/craft/how-horror-movies-are-cast-sam-raimi-movies-psycho-3-1235205289/",
-          "ageMin": 271,
-          "headline": "The Casting Director Behind Horror s Biggest Hits Reveals How the Genre s Breakout Stars Get Discovered",
-          "summary": "Casting director Nancy Nayor, whose horror credits include everything from Sam Raimi classics to hits like \"Barbarian,\" tells IndieWire about her approach to finding actors for the genre she loves."
-        }
-      ],
-      "ageMin": 271,
-      "_cand": {
-        "key": "rss:the-casting-director-behind-horror-s-biggest-hits-reveals-ho",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "IndieWire"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "IndieWire",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 56,
-      "signals": {
-        "recency": 9,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 12,
-        "trending": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-shaboozey-comic-con-debut-comic-album",
-      "slug": "shaboozey-to-make-comic-con-debut-for-comic-tied-to-new-album-exclusiv",
-      "title": "Shaboozey to Make Comic-Con Debut for Comic Tied to New Album (Exclusive)",
+      "id": "news-mick-jagger-foreign-tongues-ai-music-rolling-stones",
+      "slug": "mick-jagger-on-foreign-tongues-ai-music-rolling-stones-legacy",
+      "title": "Mick Jagger On 'Foreign Tongues,' AI Music Rolling Stones Legacy",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
-      "eventType": "announcement",
+      "eventType": "other",
       "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "shaboozey-comic-con-debut-comic-album",
-      "primaryKeyword": "shaboozey comic con",
-      "primaryEntity": "Shaboozey",
+      "eventSlug": "mick-jagger-foreign-tongues-ai-music-rolling-stones",
+      "primaryKeyword": "mick jagger rolling stones ai music",
+      "primaryEntity": "Mick Jagger",
       "entities": [
-        "Comic-Con Episode IV: A Fan's Hope",
-        "Comic-Con"
+        "The Rolling Stones"
       ],
-      "angle": "Grammy-winning artist Shaboozey to make his Comic-Con debut to promote a comic tied to his new album.",
+      "angle": "Mick Jagger discusses AI music and the legacy of The Rolling Stones.",
       "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/music/music-news/shaboozey-to-make-comic-con-debut-1236650215/",
-          "ageMin": 151,
-          "headline": "Shaboozey to Make Comic-Con Debut for Comic Tied to New Album (Exclusive)",
-          "summary": "The Grammy winner will bring early editions of his comic 'The Outlaw Cherie Lee,' and also participate in a fan signing and take part in a live podcast recording."
-        }
-      ],
-      "ageMin": 151,
-      "_cand": {
-        "key": "rss:shaboozey-to-make-comic-con-debut-for-comic-tied-to-new-albu",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 55,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-hailey-bieber-gap-collaboration",
-      "slug": "hailey-bieber-s-gap-collaboration-revives-90s-denim-trends",
-      "title": "Hailey Bieber's Gap Collaboration Revives '90s Denim Trends",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "hailey-bieber-gap-collaboration",
-      "primaryKeyword": "hailey bieber gap",
-      "primaryEntity": "Hailey Bieber",
-      "entities": [
-        "Gap"
-      ],
-      "angle": "Hailey Bieber's new collaboration with Gap, featuring the 'Hailey Jean' capsule collection, revives popular '90s denim styles.",
-      "tmdbType": "movie",
-      "source": "rss:Billboard",
+      "source": "gnews:Billboard",
       "sources": [
         {
           "outlet": "Billboard",
           "tier": 7,
-          "url": "https://www.billboard.com/culture/product-recommendations/hailey-bieber-gap-collection-shop-now-online-1236296053/",
-          "ageMin": 65,
-          "headline": "Hailey Bieber’s New Gap Collaboration Brings Back the ’90s Denim Looks Dominating Pop Culture",
-          "summary": "The 'Hailey Jean' capsule serves as the headline act of the Gap collaboration, featuring two denim silhouettes created with Bieber herself."
+          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxONF9fc2h3UjdTQlVpcHhadmNjcWlTMUE0RWdQckNqbGQ2QTVzQmpqU3B0RDdkb3Q4Wk4tdHBCQ21uU01ZQ0ZJQklzUE4xd2hlSlk5bjlNbU1lMDN0d1B5eHRoNHlGcFdocDJvY0NBNGp5b2xmVmpfS0VZNVM3SHktYTVqeHIxMVhPTDJ4blQ1TndtYWtqR2c?oc=5",
+          "ageMin": 63,
+          "headline": "Mick Jagger On 'Foreign Tongues,' AI Music Rolling Stones Legacy - Billboard",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMilgFBVV95cUxONF9fc2h3UjdTQlVpcHhadmNjcWlTMUE0RWdQckNqbGQ2QTVzQmpqU3B0RDdkb3Q4Wk4tdHBCQ21uU01ZQ0ZJQklzUE4xd2hlSlk5bjlNbU1lMDN0d1B5eHRoNHlGcFdocDJvY0NBNGp5b2xmVmpfS0VZNVM3SHktYTVqeHIxMVhPTDJ4blQ1TndtYWtqR2c?oc=5\" target=\"_blank\" Mick Jagger On 'Foreign T"
         }
       ],
-      "ageMin": 65,
+      "ageMin": 63,
       "_cand": {
-        "key": "rss:hailey-bieber-s-new-gap-collaboration-brings-back-the-90s-de",
+        "key": "rss:mick-jagger-on-foreign-tongues-ai-music-rolling-stones-legac",
         "popularity": 0,
-        "kind": "rss-news"
+        "kind": "gnews"
       },
       "corroborationCount": 1,
       "verification": {
@@ -1305,6 +1697,73 @@
         "corroboration": 12,
         "status": 18,
         "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-ocean-way-festival-lineup",
+      "slug": "the-killers-olivia-dean-jack-white-to-headline-new-santa-monica-festiv",
+      "title": "The Killers, Olivia Dean, Jack White to Headline New Santa Monica Festival",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "ocean-way-festival-lineup",
+      "primaryKeyword": "the killers festival",
+      "primaryEntity": "The Killers",
+      "entities": [
+        "Olivia Dean",
+        "Jack White",
+        "Santa Monica"
+      ],
+      "angle": "The Killers, Olivia Dean, and Jack White are set to headline the inaugural Ocean Way festival in Santa Monica.",
+      "tmdbType": "movie",
+      "source": "rss:Rolling Stone",
+      "sources": [
+        {
+          "outlet": "Rolling Stone",
+          "tier": 7,
+          "url": "https://www.rollingstone.com/music/music-news/the-killers-olivia-dean-ocean-way-festival-2026-1235594583/",
+          "ageMin": 263,
+          "headline": "The Killers, Olivia Dean, Jack White to Headline New Santa Monica Festival",
+          "summary": "Taking place on the Santa Monica Beach in late September, the two-day Ocean Way will also feature sets from Sublime and Alvvays"
+        }
+      ],
+      "ageMin": 263,
+      "_cand": {
+        "key": "rss:the-killers-olivia-dean-jack-white-to-headline-new-santa-mon",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Rolling Stone"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Rolling Stone",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 48,
+      "signals": {
+        "recency": 9,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
         "big": 0,
