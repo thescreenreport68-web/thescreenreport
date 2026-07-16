@@ -95,11 +95,14 @@ export async function collect({ hoursMarks = [3, 24, 72, 168] } = {}) {
     } catch { /* per-post best-effort — one dead endpoint never stops the sweep */ }
     row.sendsPerReach = row.shares != null && row.reach ? +(row.shares / row.reach).toFixed(4) : null;
     row.likesPerReach = row.likes != null && row.reach ? +(row.likes / row.reach).toFixed(4) : null;
-    // only count the mark as collected when SOMETHING came back — a dead endpoint retries next sweep
+    // YouTube retries an empty sweep (Buffer metrics can lag); Zernio rows mark collected regardless —
+    // LIVE-PROBED 2026-07-16: Zernio's API exposes NO metrics fields at all (no views/reach/likes on
+    // any endpoint), so retrying forever would just append null rows every 6h. If Zernio ships an
+    // analytics surface later, drop this and the endpoint probe picks it up.
     const gotData = [row.views, row.reach, row.likes, row.comments].some((v) => v != null);
     appendInsight(row);
     rows.push(row);
-    if (gotData) p.collected = [...new Set([...(p.collected || []), ...hoursMarks.filter((h) => h <= mark)])];
+    if (gotData || platform !== "youtube") p.collected = [...new Set([...(p.collected || []), ...hoursMarks.filter((h) => h <= mark)])];
   }
   if (rows.length) savePosted(ledger);
   return rows;
