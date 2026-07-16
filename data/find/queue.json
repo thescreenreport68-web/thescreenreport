@@ -1,85 +1,141 @@
 {
-  "runId": "run-2026-07-16T17-30-45",
-  "builtAt": "2026-07-16T17:32:52.940Z",
-  "count": 24,
+  "runId": "run-2026-07-16T18-30-38",
+  "builtAt": "2026-07-16T18:32:41.352Z",
+  "count": 30,
   "topics": [
     {
-      "id": "news-nasty-movie-casting-rose-byrne-jenna-ortega",
-      "slug": "rose-byrne-and-jenna-ortega-starring-in-mary-bronstein-s-nasty-for-war",
-      "title": "Rose Byrne and Jenna Ortega Starring in Mary Bronstein s Nasty for Warner Bros. Clockwork",
+      "id": "news-seth-green-wants-to-join-dungeon-crawler-carl-series",
+      "slug": "seth-green-wants-to-join-the-dungeon-crawler-carl-live-action-series",
+      "title": "Seth Green Wants to Join the Dungeon Crawler Carl Live-Action Series",
       "contentType": "news",
       "formatTag": "news",
-      "category": "movies",
+      "category": "tv",
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "nasty-movie-casting-rose-byrne-jenna-ortega",
-      "primaryKeyword": "nasty movie",
-      "primaryEntity": "Nasty (film)",
+      "eventSlug": "seth-green-wants-to-join-dungeon-crawler-carl-series",
+      "primaryKeyword": "dungeon crawler carl series casting",
+      "primaryEntity": "Dungeon Crawler Carl (TV series)",
       "entities": [
-        "Rose Byrne",
-        "Jenna Ortega",
-        "Mary Bronstein"
+        "Seth Green"
       ],
-      "angle": "Rose Byrne and Jenna Ortega to star in Warner Bros. sports drama 'Nasty'",
+      "angle": "Seth Green expresses interest in joining the live-action 'Dungeon Crawler Carl' series.",
       "tmdbType": "movie",
       "source": "rss:Variety",
       "sources": [
         {
           "outlet": "Variety",
           "tier": 7,
-          "url": "https://variety.com/2026/film/news/rose-byrne-jenna-ortega-mary-bronstein-nasty-warner-bros-clockwork-1236812557/",
-          "ageMin": 45,
-          "headline": "Rose Byrne and Jenna Ortega Starring in Mary Bronstein s Nasty for Warner Bros. Clockwork",
-          "summary": "Rose Byrne and Jenna Ortega will star in Mary Bronstein s Nasty. The project, which will be released by Warner Bros. new indie label Clockwork, is a sports drama. If follows an athlete who is battling for a spot on the Olympic gymnastics team and who recognizes that her greatest opponent is her coach. The film [ ]"
-        },
-        {
-          "outlet": "TheWrap",
-          "tier": 7,
-          "url": "https://www.thewrap.com/creative-content/movies/nasty-jenna-ortega-rose-byrne-warner-bros-clockwork/",
-          "ageMin": 52,
-          "headline": "Warner Bros. Clockwork Gets ‘Nasty’ With Jenna Ortega and Rose Byrne",
-          "summary": "Mary Bronstein, director of last year’s “If I Had Legs I’d Kick You,” is attached to helm The post Warner Bros. Clockwork Gets ‘Nasty’ With Jenna Ortega and Rose Byrne appeared first on TheWrap ."
+          "url": "https://variety.com/2026/tv/news/dungeon-crawler-carl-tv-series-seth-green-mordecai-1236810542/",
+          "ageMin": 13,
+          "headline": "Seth Green Wants to Join the Dungeon Crawler Carl Live-Action Series: I d Make a Really Good Mordecai",
+          "summary": "Family Guy star Seth Green is a big Dungeon Crawler Carl fan who wants it to be known he d love to join the cast of the live-action TV series but doesn t want to use his personal connections to land the part. The show, which was ordered to series at Peacock last month, is being [ ]"
         }
       ],
-      "ageMin": 45,
+      "ageMin": 13,
       "_cand": {
-        "key": "rss:rose-byrne-and-jenna-ortega-starring-in-mary-bronstein-s-nas",
+        "key": "rss:seth-green-wants-to-join-the-dungeon-crawler-carl-live-actio",
         "popularity": 0,
         "kind": "rss-news"
       },
-      "corroborationCount": 2,
+      "corroborationCount": 1,
       "verification": {
-        "tier1Count": 2,
-        "tier1Owners": 2,
-        "outletCount": 2,
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
         "outlets": [
-          "Variety",
-          "TheWrap"
+          "Variety"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": null,
-        "framing": "plain",
-        "status": "CONFIRMED",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 113,
+      "priority": 92,
       "signals": {
-        "recency": 24,
-        "corroboration": 18,
-        "status": 25,
+        "recency": 30,
+        "corroboration": 12,
+        "status": 18,
         "type": 14,
         "pop": 0,
         "breakout": 0,
-        "big": 24,
-        "trending": 8,
+        "big": 18,
+        "trending": 0,
         "softTv": 0
       },
       "tierClass": "B"
     },
     {
-      "id": "news-jenna-ortega-rose-byrne-nasty-movie",
+      "id": "news-taylor-ortega-tim-meadows-dan-bucatinsky-join-13-going-on-30-reboot",
+      "slug": "taylor-ortega-tim-meadows-dan-bucatinsky-latest-to-join-netflix-s-13-g",
+      "title": "Taylor Ortega, Tim Meadows, Dan Bucatinsky Latest To Join Netflix’s ‘13 Going On 30’ Reboot",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "taylor-ortega-tim-meadows-dan-bucatinsky-join-13-going-on-30-reboot",
+      "primaryKeyword": "13 going on 30 reboot cast",
+      "primaryEntity": "13 Going on 30",
+      "entities": [
+        "13 Going on 30 (reboot)",
+        "Taylor Ortega",
+        "Tim Meadows",
+        "Dan Bucatinsky"
+      ],
+      "angle": "Taylor Ortega, Tim Meadows, and Dan Bucatinsky have been cast in Netflix's '13 Going on 30' reboot.",
+      "tmdbType": "movie",
+      "source": "rss:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/13-going-on-30-reboot-cast-adds-three-1236983936/",
+          "ageMin": 31,
+          "headline": "Taylor Ortega, Tim Meadows Dan Bucatinsky Latest To Join Netflix’s ‘13 Going On 30’ Reboot",
+          "summary": "EXCLUSIVE: Taylor Ortega (Big Mistakes), Tim Meadows (Peacemaker) and Dan Bucatinsky (The Comeback) have come aboard for undisclosed roles in Netflix s 13 Going on 30 reboot. They join the previously announced Emily Bader, Logan Lerman, Adeline Rudolph and Jessica Alba. No word yet on the sequel s plot or character details. Production kicked off in L.A. last [ ]"
+        }
+      ],
+      "ageMin": 31,
+      "_cand": {
+        "key": "rss:taylor-ortega-tim-meadows-dan-bucatinsky-latest-to-join-netf",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 92,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-jenna-ortega-rose-byrne-star-nasty-movie",
       "slug": "jenna-ortega-rose-byrne-to-star-in-new-movie-from-if-i-had-legs-direct",
       "title": "Jenna Ortega, Rose Byrne to Star in New Movie from ‘If I Had Legs’ Director Mary Bronstein",
       "contentType": "news",
@@ -88,14 +144,15 @@
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "jenna-ortega-rose-byrne-nasty-movie",
-      "primaryKeyword": "jenna ortega movie",
-      "primaryEntity": "Jenna Ortega",
+      "eventSlug": "jenna-ortega-rose-byrne-star-nasty-movie",
+      "primaryKeyword": "nasty movie cast",
+      "primaryEntity": "Nasty (film)",
       "entities": [
+        "Jenna Ortega",
         "Rose Byrne",
         "Mary Bronstein"
       ],
-      "angle": "Jenna Ortega and Rose Byrne are set to star in 'Nasty,' a new film from director Mary Bronstein.",
+      "angle": "Jenna Ortega and Rose Byrne are set to star in the new film 'Nasty' from director Mary Bronstein.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
@@ -103,12 +160,12 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/movies/movie-news/jenna-ortega-rose-byrne-mary-bronstein-nasty-1236650204/",
-          "ageMin": 8,
+          "ageMin": 68,
           "headline": "Jenna Ortega, Rose Byrne to Star in New Movie from ‘If I Had Legs’ Director Mary Bronstein",
           "summary": "‘Nasty’, written by Isabella Jarosz, was on the 2024 Black List."
         }
       ],
-      "ageMin": 8,
+      "ageMin": 68,
       "_cand": {
         "key": "rss:jenna-ortega-rose-byrne-to-star-in-new-movie-from-if-i-had-l",
         "popularity": 0,
@@ -129,9 +186,9 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 98,
+      "priority": 84,
       "signals": {
-        "recency": 30,
+        "recency": 16,
         "corroboration": 12,
         "status": 18,
         "type": 14,
@@ -144,64 +201,59 @@
       "tierClass": "B"
     },
     {
-      "id": "news-hamish-linklater-michelle-buteau-simu-liu-join-elizabeth-banks-apple-c",
-      "slug": "hamish-linklater-michelle-buteau-simu-liu-join-elizabeth-banks-led-app",
-      "title": "Hamish Linklater, Michelle Buteau, Simu Liu Join Elizabeth Banks-Led Apple Comedy Series",
-      "contentType": "news",
-      "formatTag": "news",
+      "id": "trailer-the-proud-family-louder-and-prouder-final-season-trailer",
+      "slug": "tv-trailer-the-proud-family-louder-and-prouder-fourth-final-season",
+      "title": "TV Trailer: ‘The Proud Family: Louder and Prouder’ Fourth Final Season",
+      "contentType": "trailer",
+      "formatTag": "trailer",
       "category": "tv",
-      "subcategory": "news",
-      "eventType": "casting",
+      "subcategory": "trailers",
+      "eventType": "trailer",
       "sensitivity": "normal",
-      "eventSlug": "hamish-linklater-michelle-buteau-simu-liu-join-elizabeth-banks-apple-c",
-      "primaryKeyword": "elizabeth banks apple tv series",
-      "primaryEntity": "Elizabeth Banks",
-      "entities": [
-        "Hamish Linklater",
-        "Michelle Buteau",
-        "Simu Liu",
-        "Apple TV+"
-      ],
-      "angle": "Hamish Linklater, Michelle Buteau, and Simu Liu have been cast in Elizabeth Banks' new Apple TV+ comedy series.",
+      "eventSlug": "the-proud-family-louder-and-prouder-final-season-trailer",
+      "primaryKeyword": "the proud family louder and prouder trailer",
+      "primaryEntity": "The Proud Family: Louder and Prouder",
+      "entities": [],
+      "angle": "A trailer has been released for the fourth and final season of 'The Proud Family: Louder and Prouder'.",
       "tmdbType": "movie",
-      "source": "rss:Deadline",
+      "source": "gnews:That Grape Juice.net",
       "sources": [
         {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/hamish-linklater-michelle-buteau-simu-liu-cast-apple-series-1236984258/",
-          "ageMin": 1,
-          "headline": "Hamish Linklater, Michelle Buteau Simu Liu Join Elizabeth Banks-Led Apple Comedy Series",
-          "summary": "EXCLUSIVE: The Elizabeth Banks-led Apple TV half-hour comedy series has cast Hamish Linklater (Widow’s Bay, Manhunt), Michelle Buteau (Survival of the Thickest), and Simu Liu (Shang-Chi, Barbie) in recurring roles. They join Ted Danson, Katey Sagal, Rob Delaney, Jared Goldstein, and Spencer Moss, who were also previously announced as part of the cast. The series will shoot in Los Angeles later thi"
+          "outlet": "That Grape Juice.net",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMiygJBVV95cUxQSFNCNzZCWkNJV2F2N0dtYVllX3FNQjc0alN0ZXp3V1YwblFUejZZeXVGSW8zekJmbWZ2allmdE1RRGpUZU1HUHZEQjhuWU9mV3IxaWg0TE5wdl9FSThiTGMzdjhqY0d3M0RwZTBGbWd6WXV5ZHN4dHpXQmJwcWNfbEstaDVQeGoyWW5IT1ZYX0xvWTRvUml1aHM0TlpGQkxiTUwtYVUzbzlQcDlDSXN3dVBOa01iQUVyVndpVTFvYlE1enlHZ3ZVaWIwdmtBS3k4ZDhqcUhxcWdpX3ZJTUF6Z1dXbGRGVWxrNFRWd1pLcmF3WVljOTQwREFUSWRvTF9TSmJpSnNmSlRma0MzTFlZWDMxY01tMUFZV29NVnZpVWVWYXVxblZ0c1dpSlA0S0VJV3lDLURnQUpEclNxUnpTZmhZR0FjYThMenfSAbwBQVVfeXFMTVpDOUI5NUVzdThyNEI5MjBQTDhObmxsbmI5amZxOWJ4dU9WYWdCV2xrY2FwMTZZZkFNSlJIWklkOUgzZVNvcVZWc0gzT2NTTDVRd3ZnOFdlQzJnVHRlX29mQ0htQ1V5cGp5cV9qanpDN2NwbVFkNldxZUgtZl9tdVNvQWR3czlabmFpS2dyZG5TY3NCbS1aS1FmNU1hektGM1RHVFhZV3FBaGFPMHlBUE9jNzNPZFVCMDhFV0Q?oc=5",
+          "ageMin": 170,
+          "headline": "TV Trailer: ‘The Proud Family: Louder and Prouder’ Fourth Final Season - That Grape Juice.net",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiygJBVV95cUxQSFNCNzZCWkNJV2F2N0dtYVllX3FNQjc0alN0ZXp3V1YwblFUejZZeXVGSW8zekJmbWZ2allmdE1RRGpUZU1HUHZEQjhuWU9mV3IxaWg0TE5wdl9FSThiTGMzdjhqY0d3M0RwZTBGbWd6WXV5ZHN4dHpXQmJwcWNfbEstaDVQeGoyWW5IT1ZYX0xvWTRvUml1aHM0TlpGQkxiTUwtYVUzbzlQcDlDSXN3dVBOa01iQUVyVnd"
         }
       ],
-      "ageMin": 1,
+      "ageMin": 170,
       "_cand": {
-        "key": "rss:hamish-linklater-michelle-buteau-simu-liu-join-elizabeth-ban",
+        "key": "rss:tv-trailer-the-proud-family-louder-and-prouder-fourth-final-",
         "popularity": 0,
-        "kind": "rss-news"
+        "kind": "gnews"
       },
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
+        "tier1Count": 0,
+        "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "Deadline"
+          "That Grape Juice.net"
         ],
-        "maxTier": 7,
+        "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "Deadline",
+        "attribution": "That Grape Juice.net",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 92,
+      "priority": 75,
       "signals": {
-        "recency": 30,
-        "corroboration": 12,
+        "recency": 16,
+        "corroboration": 8,
         "status": 18,
-        "type": 14,
+        "type": 15,
         "pop": 0,
         "breakout": 0,
         "big": 18,
@@ -211,39 +263,38 @@
       "tierClass": "B"
     },
     {
-      "id": "news-terrence-howard-kate-bosworth-broken-ones-movie",
-      "slug": "terrence-howard-guillermo-iv-n-kate-bosworth-set-to-star-in-legal-thri",
-      "title": "Terrence Howard, Guillermo Iván, Kate Bosworth Set to Star in Legal Thriller Broken Ones (EXCLUSIVE)",
+      "id": "news-rose-byrne-jenna-ortega-starring-nasty",
+      "slug": "rose-byrne-and-jenna-ortega-starring-in-mary-bronstein-s-nasty-for-war",
+      "title": "Rose Byrne and Jenna Ortega Starring in Mary Bronstein's Nasty for Warner Bros.",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "terrence-howard-kate-bosworth-broken-ones-movie",
-      "primaryKeyword": "terrence howard movie",
-      "primaryEntity": "Terrence Howard",
+      "eventSlug": "rose-byrne-jenna-ortega-starring-nasty",
+      "primaryKeyword": "rose byrne jenna ortega movie",
+      "primaryEntity": "Rose Byrne",
       "entities": [
-        "Guillermo Iván",
-        "Kate Bosworth",
-        "Broken Ones"
+        "Jenna Ortega",
+        "Mary Bronstein"
       ],
-      "angle": "Terrence Howard, Guillermo Iván, and Kate Bosworth are attached to star in the legal thriller 'Broken Ones'.",
+      "angle": "Rose Byrne and Jenna Ortega are set to star in Mary Bronstein's upcoming sports drama 'Nasty' for Warner Bros.",
       "tmdbType": "movie",
       "source": "rss:Variety",
       "sources": [
         {
           "outlet": "Variety",
           "tier": 7,
-          "url": "https://variety.com/2026/film/news/terrence-howard-kate-bosworth-legal-thriller-broken-ones-1236812216/",
-          "ageMin": 16,
-          "headline": "Terrence Howard, Guillermo Iván, Kate Bosworth Set to Star in Legal Thriller Broken Ones (EXCLUSIVE)",
-          "summary": "Terrence Howard, Guillermo Iván and Kate Bosworth are set to star in “Broken Ones,” a new legal thriller from writer-director Timothy Gagliardo. Inspired by the memoir of producer and co-writer Alejandro Zavala, “Broken Ones” pulls from “real-life experiences navigating both the criminal justice system and the legal profession,” and explores ”redemption, justice, family and the [ ]"
+          "url": "https://variety.com/2026/film/news/rose-byrne-jenna-ortega-mary-bronstein-nasty-warner-bros-clockwork-1236812557/",
+          "ageMin": 105,
+          "headline": "Rose Byrne and Jenna Ortega Starring in Mary Bronstein s Nasty for Warner Bros. Clockwork",
+          "summary": "Rose Byrne and Jenna Ortega will star in Mary Bronstein s Nasty. The project, which will be released by Warner Bros. new indie label Clockwork, is a sports drama. If follows an athlete who is battling for a spot on the Olympic gymnastics team and who recognizes that her greatest opponent is her coach. The film [ ]"
         }
       ],
-      "ageMin": 16,
+      "ageMin": 105,
       "_cand": {
-        "key": "rss:terrence-howard-guillermo-iv-n-kate-bosworth-set-to-star-in-",
+        "key": "rss:rose-byrne-and-jenna-ortega-starring-in-mary-bronstein-s-nas",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -262,9 +313,9 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 92,
+      "priority": 84,
       "signals": {
-        "recency": 24,
+        "recency": 16,
         "corroboration": 12,
         "status": 18,
         "type": 14,
@@ -277,38 +328,39 @@
       "tierClass": "B"
     },
     {
-      "id": "news-sophie-nelisse-cast-in-netflix-this-summer-will-be-different",
-      "slug": "sophie-n-lisse-to-star-in-netflix-s-this-summer-will-be-different",
-      "title": "Sophie Nélisse to Star in Netflix's 'This Summer Will Be Different'",
+      "id": "news-sophie-nelisse-to-star-in-this-summer-will-be-different-adaptation",
+      "slug": "yellowjackets-star-sophie-n-lisse-to-star-in-this-summer-will-be-diffe",
+      "title": "Yellowjackets Star Sophie Nélisse to Star in This Summer Will Be Different Netflix Adaptation",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "sophie-nelisse-cast-in-netflix-this-summer-will-be-different",
-      "primaryKeyword": "this summer will be different netflix",
+      "eventSlug": "sophie-nelisse-to-star-in-this-summer-will-be-different-adaptation",
+      "primaryKeyword": "this summer will be different netflix adaptation cast",
       "primaryEntity": "This Summer Will Be Different (TV series)",
       "entities": [
         "Sophie Nélisse",
+        "Yellowjackets",
         "Netflix"
       ],
-      "angle": "Sophie Nélisse lands lead role in upcoming Netflix book adaptation.",
+      "angle": "'Yellowjackets' star Sophie Nélisse will lead the cast of Netflix's adaptation of 'This Summer Will Be Different'.",
       "tmdbType": "movie",
-      "source": "rss:Deadline",
+      "source": "rss:TheWrap",
       "sources": [
         {
-          "outlet": "Deadline",
+          "outlet": "TheWrap",
           "tier": 7,
-          "url": "https://deadline.com/2026/07/sophie-nelisse-lucy-this-summer-will-be-different-netflix-1236983517/",
-          "ageMin": 51,
-          "headline": "Heated Rivalry s Sophie Nélisse To Star In Netflix s This Summer Will Be Different",
-          "summary": "EXCLUSIVE: French Canadian actress Sophie Nélisse (Heated Rivalry, Yellowjackets) has booked the first major role in the upcoming book-to-TV adaptation of the Carley Fortune novel for Netflix, This Summer Will Be Different. Production will take place in Prince Edward Island and Toronto later this summer. From creators and showrunner Dane Clark and Linsey Stewart, This Summer [ ]"
+          "url": "https://www.thewrap.com/media-platforms/tv/yellowjackets-sophie-nelisse-this-summer-will-be-different-netflix-adaptation/",
+          "ageMin": 78,
+          "headline": "Yellowjackets Star Sophie Nélisse to Star in This Summer Will Be Different Netflix Adaptation",
+          "summary": "The \"Heated Rivalry\" actress will play Lucy, who navigates her 20s and her first real love with her best friend’s brother The post Yellowjackets Star Sophie Nélisse to Star in This Summer Will Be Different Netflix Adaptation appeared first on TheWrap ."
         }
       ],
-      "ageMin": 51,
+      "ageMin": 78,
       "_cand": {
-        "key": "rss:heated-rivalry-s-sophie-n-lisse-to-star-in-netflix-s-this-su",
+        "key": "rss:yellowjackets-star-sophie-n-lisse-to-star-in-this-summer-wil",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -318,18 +370,18 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Deadline"
+          "TheWrap"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Deadline",
+        "attribution": "TheWrap",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 86,
+      "priority": 78,
       "signals": {
-        "recency": 24,
+        "recency": 16,
         "corroboration": 12,
         "status": 18,
         "type": 14,
@@ -342,7 +394,7 @@
       "tierClass": "B"
     },
     {
-      "id": "news-sophie-nelisse-to-lead-this-summer-will-be-different-netflix-adaptatio",
+      "id": "news-sophie-nelisse-this-summer-will-be-different-netflix",
       "slug": "yellowjackets-star-sophie-n-lisse-to-lead-netflix-adaptation-of-romanc",
       "title": "‘Yellowjackets’ Star Sophie Nélisse to Lead Netflix Adaptation of Romance Novel ‘This Summer Will Be Different’",
       "contentType": "news",
@@ -351,14 +403,14 @@
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "sophie-nelisse-to-lead-this-summer-will-be-different-netflix-adaptatio",
-      "primaryKeyword": "This Summer Will Be Different Netflix adaptation",
+      "eventSlug": "sophie-nelisse-this-summer-will-be-different-netflix",
+      "primaryKeyword": "sophie nelisse netflix",
       "primaryEntity": "This Summer Will Be Different",
       "entities": [
         "Sophie Nélisse",
         "Netflix"
       ],
-      "angle": "Sophie Nélisse, star of 'Yellowjackets', will lead the Netflix adaptation of the romance novel 'This Summer Will Be Different'.",
+      "angle": "Yellowjackets star Sophie Nélisse to lead Netflix adaptation.",
       "tmdbType": "movie",
       "source": "gnews:The Hollywood Reporter",
       "sources": [
@@ -366,12 +418,12 @@
           "outlet": "The Hollywood Reporter",
           "tier": 7,
           "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPR0FjLUM5VTByRENBSnZxMDhnT0NfWWQyV0YtWW1oUmxucTY1eGhjZEF1NHdyZkhDeHk3WHkycWNBNXc4RVFnRnZPejN4Y0xMSnhTQkw5ZkJLQ2RDdFFnMXl5czlScFY4WDNvQVlUSjhDQUpvRnRZWlN1blg1NDIySXZNaUhsYmJScV9McWx1eDQzb0xDaVlLVjdpTGpfSVZDOGlGNVQ3NFFhZk4wWWc?oc=5",
-          "ageMin": 48,
+          "ageMin": 108,
           "headline": "‘Yellowjackets’ Star Sophie Nélisse to Lead Netflix Adaptation of Romance Novel ‘This Summer Will Be Different’ - The Hollywood Reporter",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxPR0FjLUM5VTByRENBSnZxMDhnT0NfWWQyV0YtWW1oUmxucTY1eGhjZEF1NHdyZkhDeHk3WHkycWNBNXc4RVFnRnZPejN4Y0xMSnhTQkw5ZkJLQ2RDdFFnMXl5czlScFY4WDNvQVlUSjhDQUpvRnRZWlN1blg1NDIySXZNaUhsYmJScV9McWx1eDQzb0xDaVlLVjdpTGpfSVZDOGlGNVQ3NFFhZk4wWWc?oc=5\" target=\"_"
         }
       ],
-      "ageMin": 48,
+      "ageMin": 108,
       "_cand": {
         "key": "rss:-yellowjackets-star-sophie-n-lisse-to-lead-netflix-adaptatio",
         "popularity": 0,
@@ -392,9 +444,9 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 86,
+      "priority": 78,
       "signals": {
-        "recency": 24,
+        "recency": 16,
         "corroboration": 12,
         "status": 18,
         "type": 14,
@@ -407,245 +459,38 @@
       "tierClass": "B"
     },
     {
-      "id": "news-ny-film-festival-paper-tiger-opening-night",
-      "slug": "ny-film-festival-sets-james-gray-s-paper-tiger-as-opening-night-film",
-      "title": "NY Film Festival Sets James Gray's Paper Tiger as Opening Night Film",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "ny-film-festival-paper-tiger-opening-night",
-      "primaryKeyword": "ny film festival paper tiger",
-      "primaryEntity": "Paper Tiger (film)",
-      "entities": [
-        "NY Film Festival",
-        "James Gray",
-        "Adam Driver",
-        "Neon"
-      ],
-      "angle": "James Gray's crime drama 'Paper Tiger' will open the New York Film Festival.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/paper-tiger-2026-ny-film-festival-opening-night-1236649741/",
-          "ageMin": 211,
-          "headline": "NY Film Festival Sets James Gray s Paper Tiger as Opening Night Film",
-          "summary": "The Neon crime drama — starring Adam Driver, Miles Teller and Scarlett Johansson — had its world premiere at Cannes."
-        },
-        {
-          "outlet": "IndieWire",
-          "tier": 7,
-          "url": "https://www.indiewire.com/news/festivals/2026-new-york-film-festival-james-gray-paper-tiger-1235205510/",
-          "ageMin": 211,
-          "headline": "James Gray s Paper Tiger Will Open This Year’s New York Film Festival",
-          "summary": "The auteur's latest heartbreaker, starring Adam Driver, Miles Teller, and Scarlett Johansson, premiered at Cannes earlier this year to strong reviews."
-        }
-      ],
-      "ageMin": 211,
-      "_cand": {
-        "key": "rss:ny-film-festival-sets-james-gray-s-paper-tiger-as-opening-ni",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 2,
-      "verification": {
-        "tier1Count": 2,
-        "tier1Owners": 1,
-        "outletCount": 2,
-        "outlets": [
-          "THR",
-          "IndieWire"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 86,
-      "signals": {
-        "recency": 9,
-        "corroboration": 18,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 8,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "trailer-the-challenge-season-42-trailer-premiere-date",
-      "slug": "the-challenge-season-42-paramount-unveils-competition-series-premiere-",
-      "title": "The Challenge: Season 42; Paramount+ Unveils Competition Series Premiere Date Trailer",
-      "contentType": "trailer",
-      "formatTag": "trailer",
-      "category": "tv",
-      "subcategory": "trailers",
-      "eventType": "trailer",
-      "sensitivity": "normal",
-      "eventSlug": "the-challenge-season-42-trailer-premiere-date",
-      "primaryKeyword": "the challenge season 42 trailer",
-      "primaryEntity": "The Challenge",
-      "entities": [
-        "Paramount+"
-      ],
-      "angle": "Paramount+ has unveiled a trailer and premiere date for the 42nd season of the competition series.",
-      "tmdbType": "movie",
-      "source": "gnews:TV Series Finale",
-      "sources": [
-        {
-          "outlet": "TV Series Finale",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNMlluT3JUSzJjeU9XZjl0WGV5elpXSTdOQTFIUF9jSnZWMGx1OXJvWlp1VV9NVFR5WDFacmlWZXoxMGIzOEZ3cXVWbW5CY3pCalBaSFBvaWFIRmgwMGt5OUprU09zd0dKaW1pYzhQTkxoX3Q4NVZ5aEs2YWRTTnFmcGdfU3RaeDVYUDMyOGR3aGNZcS1OcXNlOTVKVWVIZWczbHNscnFMV0VFYlVhb181X21BY2NGZmZBdlE?oc=5",
-          "ageMin": 226,
-          "headline": "The Challenge: Season 42; Paramount+ Unveils Competition Series Premiere Date Trailer - TV Series Finale",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiugFBVV95cUxNMlluT3JUSzJjeU9XZjl0WGV5elpXSTdOQTFIUF9jSnZWMGx1OXJvWlp1VV9NVFR5WDFacmlWZXoxMGIzOEZ3cXVWbW5CY3pCalBaSFBvaWFIRmgwMGt5OUprU09zd0dKaW1pYzhQTkxoX3Q4NVZ5aEs2YWRTTnFmcGdfU3RaeDVYUDMyOGR3aGNZcS1OcXNlOTVKVWVIZWczbHNscnFMV0VFYlVhb181X21BY2NGZmZBdlE"
-        }
-      ],
-      "ageMin": 226,
-      "_cand": {
-        "key": "rss:the-challenge-season-42-paramount-unveils-competition-series",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "TV Series Finale"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "TV Series Finale",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 68,
-      "signals": {
-        "recency": 9,
-        "corroboration": 8,
-        "status": 18,
-        "type": 15,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-mickey-mouse-club-reboot-pilot",
-      "slug": "mickey-mouse-club-returns-disney-orders-pilot-for-reboot-of-iconic-kid",
-      "title": "Mickey Mouse Club Returns: Disney Orders Pilot for Reboot of Iconic Kids Show That Starred Young Britney Spears, Ryan Gosling",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "mickey-mouse-club-reboot-pilot",
-      "primaryKeyword": "mickey mouse club reboot",
-      "primaryEntity": "Mickey Mouse Club",
-      "entities": [
-        "Walt Disney",
-        "Disney+",
-        "Britney Spears",
-        "Ryan Gosling"
-      ],
-      "angle": "Disney+ has ordered a pilot for a reboot of the classic kids show 'The Mickey Mouse Club'.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/tv/news/mickey-mouse-club-reboot-disney-orders-pilot-new-cast-1236812553/",
-          "ageMin": 46,
-          "headline": "Mickey Mouse Club Returns: Disney Orders Pilot for Reboot of Iconic Kids Show That Starred Young Britney Spears, Ryan Gosling",
-          "summary": "There s a new group of Mouseketeers. The Mickey Mouse Club is eyeing a revival, as Disney+ has ordered a pilot for a reboot of the classic kids program. Originally launched in 1955 before undergoing several iterations, the show is responsible for discovering and launching young talent including Britney Spears, Ryan Gosling, Justin Timberlake and Christina [ ]"
-        }
-      ],
-      "ageMin": 46,
-      "_cand": {
-        "key": "rss:mickey-mouse-club-returns-disney-orders-pilot-for-reboot-of-",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 81,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "music-news-clave-especial-american-mexican-music-influence",
-      "slug": "clave-especial-discuss-how-both-american-and-mexican-music-have-influe",
-      "title": "Clave Especial discuss how both American and Mexican music have influenced their work",
+      "id": "music-news-corey-kent-empty-words-single",
+      "slug": "corey-kent-s-empty-words-becomes-his-second-current-single",
+      "title": "Corey Kent's 'Empty Words' Becomes His Second Current Single",
       "contentType": "music-news",
       "formatTag": "music-news",
       "category": "music",
       "subcategory": "news",
-      "eventType": "other",
+      "eventType": "announcement",
       "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "clave-especial-american-mexican-music-influence",
-      "primaryKeyword": "clave especial music influence",
-      "primaryEntity": "Clave Especial",
+      "eventSlug": "corey-kent-empty-words-single",
+      "primaryKeyword": "corey kent empty words",
+      "primaryEntity": "Corey Kent",
       "entities": [
-        "Billboard"
+        "Empty Words"
       ],
-      "angle": "Clave Especial discusses the influence of both American and Mexican music on their work.",
+      "angle": "Country singer Corey Kent's song 'Empty Words' is being pushed as his second current single.",
       "tmdbType": "movie",
       "source": "rss:Billboard",
       "sources": [
         {
           "outlet": "Billboard",
           "tier": 7,
-          "url": "https://www.billboard.com/video/clave-especial-discuss-how-american-and-mexican-music-have-influenced-their-work/",
-          "ageMin": 19,
-          "headline": "Clave Especial discuss how both American and Mexican music have influenced their work",
-          "summary": "This is partner content. Clave Especial discuss how both American and Mexican music have influenced their work"
+          "url": "https://www.billboard.com/music/country/corey-kent-empty-words-makin-tracks-1236296048/",
+          "ageMin": 44,
+          "headline": "Corey Kent’s ‘Empty Words’ Got His Full Attention, Becoming His Second Current Single: It Was Like a Twist of the Knife",
+          "summary": "Billboard's Makin' Tracks column looks at the writing and recording behind Corey Kent's \"Empty Words.\""
         }
       ],
-      "ageMin": 19,
+      "ageMin": 44,
       "_cand": {
-        "key": "rss:clave-especial-discuss-how-both-american-and-mexican-music-h",
+        "key": "rss:corey-kent-s-empty-words-got-his-full-attention-becoming-his",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -664,129 +509,184 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 59,
+      "priority": 63,
       "signals": {
         "recency": 24,
         "corroboration": 12,
         "status": 18,
-        "type": 5,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
         "big": 0,
         "trending": 0,
         "softTv": 0
       },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-power-origins-teaser-photos-ghost-tommy-kanan",
-      "slug": "power-origins-season-1-teaser-photos-reveal-new-generation-ghost-tommy",
-      "title": "Power: Origins Season 1 Teaser Photos Reveal New Generation Ghost Tommy Teaming With Kanan",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "power-origins-teaser-photos-ghost-tommy-kanan",
-      "primaryKeyword": "power origins teaser",
-      "primaryEntity": "Power: Origins (TV series)",
-      "entities": [
-        "Ghost",
-        "Starz",
-        "Ghost (character)",
-        "Tommy Egan"
-      ],
-      "angle": "First look at the younger versions of Ghost and Tommy in the 'Power' prequel series.",
-      "tmdbType": "movie",
-      "source": "rss:Deadline",
-      "sources": [
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/power-origins-season-1-trailer-first-look-photos-1236984183/",
-          "ageMin": 51,
-          "headline": "Power: Origins Season 1 Teaser Photos Reveal New Generation Ghost Tommy Teaming With Kanan",
-          "summary": "Starz dropped a teaser (above) and new photos of Power: Origins stars Spence Moore as Ghost, Charlie Mann as Tommy, and MeKai Curtis reprising the role of Kanan Stark from his hit series Power Book III: Raising Kanan. The original Ghost and Tommy were played by Omari Hardwick and Joseph Sikora in Power, the series [ ]"
-        },
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/tv/tv-news/power-origins-first-look-young-ghost-young-tommy-1236650029/",
-          "ageMin": 76,
-          "headline": "Starz Unveils First Looks at Young Ghost and Young Tommy in Power: Origins",
-          "summary": "And an \"early teaser.\""
-        }
-      ],
-      "ageMin": 51,
-      "_cand": {
-        "key": "rss:power-origins-season-1-teaser-photos-reveal-new-generation-g",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 2,
-      "verification": {
-        "tier1Count": 2,
-        "tier1Owners": 1,
-        "outletCount": 2,
-        "outlets": [
-          "Deadline",
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Deadline",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 79,
-      "signals": {
-        "recency": 24,
-        "corroboration": 18,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 6,
-        "trending": 8,
-        "softTv": 0
-      },
       "tierClass": "B"
     },
     {
-      "id": "news-daffy-season-looney-tunes-theatrical-short",
-      "slug": "inside-daffy-season-the-first-theatrical-looney-tunes-short-in-14-year",
-      "title": "Inside 'Daffy Season,' the First Theatrical Looney Tunes Short in 14 Years",
+      "id": "news-fortnite-odysseus-agamemnon-skins",
+      "slug": "fortnite-adds-the-odyssey-skins-for-odysseus-and-agamemnon",
+      "title": "Fortnite Adds The Odyssey Skins for Odysseus and Agamemnon",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "daffy-season-looney-tunes-theatrical-short",
-      "primaryKeyword": "Daffy Season Looney Tunes",
-      "primaryEntity": "Daffy Duck",
+      "eventSlug": "fortnite-odysseus-agamemnon-skins",
+      "primaryKeyword": "Fortnite The Odyssey skins",
+      "primaryEntity": "The Odyssey",
       "entities": [
-        "Looney Tunes: Back in Action",
-        "Looney Tunes"
+        "The Odyssey (film)",
+        "Fortnite",
+        "Matt Damon"
       ],
-      "angle": "Exclusive look at 'Daffy Season,' the first theatrical Looney Tunes short in 14 years.",
+      "angle": "Fortnite adds skins for Matt Damon's Odysseus from Christopher Nolan's 'The Odyssey'.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/film/news/odyssey-fortnite-skins-odysseus-agamemnon-1236812540/",
+          "ageMin": 77,
+          "headline": "Fortnite Adds The Odyssey Skins for Odysseus and Agamemnon",
+          "summary": "Fornite players can play as Matt Damon s Odysseus from Christopher Nolan s The Odyssey, Epic Games announced. Earlier this week, the company teased a short clip on its official X account showing Odysseus walking through a massive hallway lined with towering statues, captioned with the line some say each game is an epic journey of its [ ]"
+        }
+      ],
+      "ageMin": 77,
+      "_cand": {
+        "key": "rss:fortnite-adds-the-odyssey-skins-for-odysseus-and-agamemnon",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 79,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "awards-41st-imagen-awards-nominations",
+      "slug": "acapulco-leads-41st-imagen-awards-nominations-andy-garcia-to-receive-l",
+      "title": "Acapulco Leads 41st Imagen Awards Nominations; Andy Garcia to Receive Lifetime Achievement Award",
+      "contentType": "awards",
+      "formatTag": "awards",
+      "category": "awards",
+      "subcategory": "winners",
+      "eventType": "award",
+      "sensitivity": "normal",
+      "eventSlug": "41st-imagen-awards-nominations",
+      "primaryKeyword": "Imagen Awards nominations",
+      "primaryEntity": "Imagen Awards",
+      "entities": [
+        "Acapulco (TV series)",
+        "Andy Garcia"
+      ],
+      "angle": "Apple TV+'s 'Acapulco' leads nominations for the 41st Imagen Awards, honoring Latino talent.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/tv/news/imagen-awards-nominations-andy-garcia-lifetime-achievement-1236812172/",
+          "ageMin": 91,
+          "headline": "Acapulco Leads 41st Imagen Awards Nominations; Andy Garcia to Receive Lifetime Achievement Award",
+          "summary": "Apple TV s Acapulco led all series as the Imagen Foundation announced nominations for the 41st Annual Imagen Awards on Thursday. Acapulco scored 13 nods in the competition, which recognizes Latino talent and creative work across film, television, documentaries, digital media and music. The Imagen Foundation also announced that actor, filmmaker, producer and musician Andy Garcia [ ]"
+        }
+      ],
+      "ageMin": 91,
+      "_cand": {
+        "key": "rss:acapulco-leads-41st-imagen-awards-nominations-andy-garcia-to",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 60,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-warner-bros-clockwork-nasty-jenna-ortega-rose-byrne",
+      "slug": "jenna-ortega-and-rose-byrne-to-star-in-warner-bros-thriller-nasty",
+      "title": "Jenna Ortega and Rose Byrne to Star in Warner Bros. Thriller 'Nasty'",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "warner-bros-clockwork-nasty-jenna-ortega-rose-byrne",
+      "primaryKeyword": "Jenna Ortega Rose Byrne new movie",
+      "primaryEntity": "Jenna Ortega",
+      "entities": [
+        "Rose Byrne",
+        "Mary Bronstein"
+      ],
+      "angle": "Jenna Ortega and Rose Byrne set to star in Warner Bros. new film 'Nasty'",
       "tmdbType": "movie",
       "source": "rss:TheWrap",
       "sources": [
         {
           "outlet": "TheWrap",
           "tier": 7,
-          "url": "https://www.thewrap.com/creative-content/movies/looney-tunes-daffy-season-making-of-warner-bros-pictures-animation/",
-          "ageMin": 91,
-          "headline": "Goal! Inside ‘Daffy Season,’ the First Theatrical Looney Tunes Short in 14 Years Exclusive",
-          "summary": "The short will premiere theatrically with “The Cat in the Hat” later this year The post Goal! Inside ‘Daffy Season,’ the First Theatrical Looney Tunes Short in 14 Years | Exclusive appeared first on TheWrap ."
+          "url": "https://www.thewrap.com/creative-content/movies/nasty-jenna-ortega-rose-byrne-warner-bros-clockwork/",
+          "ageMin": 112,
+          "headline": "Warner Bros. Clockwork Gets ‘Nasty’ With Jenna Ortega and Rose Byrne",
+          "summary": "Mary Bronstein, director of last year’s “If I Had Legs I’d Kick You,” is attached to helm The post Warner Bros. Clockwork Gets ‘Nasty’ With Jenna Ortega and Rose Byrne appeared first on TheWrap ."
         }
       ],
-      "ageMin": 91,
+      "ageMin": 112,
       "_cand": {
-        "key": "rss:goal-inside-daffy-season-the-first-theatrical-looney-tunes-s",
+        "key": "rss:warner-bros-clockwork-gets-nasty-with-jenna-ortega-and-rose-",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -820,9 +720,141 @@
       "tierClass": "B"
     },
     {
-      "id": "music-news-shakira-burna-boy-world-cup-anthem-dai-dai",
-      "slug": "shakira-burna-boy-s-world-cup-anthem-dai-dai-tops-global-charts",
-      "title": "Shakira & Burna Boy's World Cup Anthem 'Dai Dai' Tops Global Charts",
+      "id": "news-mickey-mouse-club-reboot-pilot",
+      "slug": "mickey-mouse-club-revival-pilot-ordered-by-disney",
+      "title": "Mickey Mouse Club Revival Pilot Ordered by Disney+",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "mickey-mouse-club-reboot-pilot",
+      "primaryKeyword": "mickey mouse club reboot",
+      "primaryEntity": "Mickey Mouse Club",
+      "entities": [
+        "Walt Disney",
+        "Disney+",
+        "Britney Spears",
+        "Ryan Gosling"
+      ],
+      "angle": "Disney+ orders a pilot for a reboot of the iconic kids show that launched the careers of Britney Spears and Ryan Gosling.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/tv/news/mickey-mouse-club-reboot-disney-orders-pilot-new-cast-1236812553/",
+          "ageMin": 106,
+          "headline": "Mickey Mouse Club Returns: Disney Orders Pilot for Reboot of Iconic Kids Show That Starred Young Britney Spears, Ryan Gosling",
+          "summary": "There s a new group of Mouseketeers. The Mickey Mouse Club is eyeing a revival, as Disney+ has ordered a pilot for a reboot of the classic kids program. Originally launched in 1955 before undergoing several iterations, the show is responsible for discovering and launching young talent including Britney Spears, Ryan Gosling, Justin Timberlake and Christina [ ]"
+        }
+      ],
+      "ageMin": 106,
+      "_cand": {
+        "key": "rss:mickey-mouse-club-returns-disney-orders-pilot-for-reboot-of-",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 73,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-green-lantern-hbo-series-tom-king",
+      "slug": "green-lantern-is-cool-again-dc-writer-tom-king-on-making-hbo-s-lantern",
+      "title": "Green Lantern Is Cool Again: DC Writer Tom King on Making HBO's Lanterns",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "green-lantern-hbo-series-tom-king",
+      "primaryKeyword": "green lantern hbo series",
+      "primaryEntity": "Green Lantern",
+      "entities": [
+        "Tom King",
+        "HBO"
+      ],
+      "angle": "DC writer Tom King discusses his involvement in HBO's upcoming 'Lanterns' series.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/tv/news/lanterns-hbo-tom-king-cia-green-lantern-1236810243/",
+          "ageMin": 61,
+          "headline": "Green Lantern Is Cool Again: DC Writer Tom King on Making HBO s Lanterns After Fighting Terrorists as a CIA Officer",
+          "summary": "If comic book author Tom King has a superpower, it’s that everything he writes turns to gold. Marvel and DC have each adapted one of his comics, resulting in 2021’s “WandaVision” and 2026’s Supergirl.” Now, he’s helping forge the rebooted DC Universe with his take on the Green Lanterns — galactic peacekeepers who can create [ ]"
+        }
+      ],
+      "ageMin": 61,
+      "_cand": {
+        "key": "rss:green-lantern-is-cool-again-dc-writer-tom-king-on-making-hbo",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 73,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "music-news-steelheart-without-you-music-video",
+      "slug": "steelheart-premiere-official-music-video-for-orchestral-without-you-co",
+      "title": "SteelHeart premiere official music video for orchestral “Without You” cover",
       "contentType": "music-news",
       "formatTag": "music-news",
       "category": "music",
@@ -830,51 +862,50 @@
       "eventType": "announcement",
       "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "shakira-burna-boy-world-cup-anthem-dai-dai",
-      "primaryKeyword": "Shakira Burna Boy World Cup Anthem",
-      "primaryEntity": "Shakira",
+      "eventSlug": "steelheart-without-you-music-video",
+      "primaryKeyword": "steelheart music video",
+      "primaryEntity": "Steelheart",
       "entities": [
-        "Burna Boy"
+        "SteelHeart"
       ],
-      "angle": "Deep dive into the global performance of Shakira and Burna Boy's World Cup anthem 'Dai Dai'.",
+      "angle": "SteelHeart releases official music video for orchestral cover.",
       "tmdbType": "movie",
-      "source": "rss:Billboard",
+      "source": "gnews:NextMosh",
       "sources": [
         {
-          "outlet": "Billboard",
-          "tier": 7,
-          "url": "https://www.billboard.com/pro/shakira-burna-boy-biggest-song-in-the-world/",
-          "ageMin": 70,
-          "headline": "Shakira Burna Boy s World Cup Anthem Is the No. 1 Song in the World But Where Is It Biggest?",
-          "summary": "A deep dive into \"Dai Dai\" and its international streaming, country by country."
+          "outlet": "NextMosh",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQN3IzX2pJblVlb2tqODlXenVvS0xOaFhSTXhPNWlscVNZZDkxMl81UEk0c1BhTnZ2WHZoMHBObVAtQTIzamxlb1ZZQzJjc1BWRlBxRjJSRWRiUmJLOWFzcXExcEhadzNNSjRqY0JVdlhzQkh5X19zbHI0bkZoVUQtX3RNajM1eTVGWGhJaVhuME4wWXRVZjd6WG5rSQ?oc=5",
+          "ageMin": 80,
+          "headline": "SteelHeart premiere official music video for orchestral “Without You” cover - NextMosh",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMimwFBVV95cUxQN3IzX2pJblVlb2tqODlXenVvS0xOaFhSTXhPNWlscVNZZDkxMl81UEk0c1BhTnZ2WHZoMHBObVAtQTIzamxlb1ZZQzJjc1BWRlBxRjJSRWRiUmJLOWFzcXExcEhadzNNSjRqY0JVdlhzQkh5X19zbHI0bkZoVUQtX3RNajM1eTVGWGhJaVhuME4wWXRVZjd6WG5rSQ?oc=5\" target=\"_blank\" SteelHeart premier"
         }
       ],
-      "ageMin": 70,
+      "ageMin": 80,
       "_cand": {
-        "key": "rss:shakira-burna-boy-s-world-cup-anthem-is-the-no-1-song-in-the",
+        "key": "rss:steelheart-premiere-official-music-video-for-orchestral-with",
         "popularity": 0,
-        "kind": "rss-news"
+        "kind": "gnews"
       },
-      "breakoutVelocity": 0,
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
+        "tier1Count": 0,
+        "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "Billboard"
+          "NextMosh"
         ],
-        "maxTier": 7,
+        "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "Billboard",
+        "attribution": "NextMosh",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 55,
+      "priority": 51,
       "signals": {
         "recency": 16,
-        "corroboration": 12,
+        "corroboration": 8,
         "status": 18,
         "type": 9,
         "pop": 0,
@@ -886,39 +917,40 @@
       "tierClass": "C"
     },
     {
-      "id": "news-jon-bernthal-career-moves",
-      "slug": "jon-bernthal-on-his-diverse-career-moves-and-spider-man-role",
-      "title": "Jon Bernthal on His Diverse Career Moves and 'Spider-Man' Role",
+      "id": "news-james-gray-paper-tiger-nyff-opening",
+      "slug": "james-gray-s-paper-tiger-to-open-new-york-film-festival",
+      "title": "James Gray's 'Paper Tiger' to Open New York Film Festival",
       "contentType": "news",
       "formatTag": "news",
-      "category": "tv",
+      "category": "movies",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "jon-bernthal-career-moves",
-      "primaryKeyword": "Jon Bernthal",
-      "primaryEntity": "Jon Bernthal",
+      "eventSlug": "james-gray-paper-tiger-nyff-opening",
+      "primaryKeyword": "Paper Tiger movie",
+      "primaryEntity": "Paper Tiger (film)",
       "entities": [
-        "The Bear",
-        "The Bear (TV series)",
-        "Spider-Man: Brave New World (film)"
+        "James Gray",
+        "Adam Driver",
+        "Miles Teller",
+        "Scarlett Johansson"
       ],
-      "angle": "Jon Bernthal discusses his approach to acting, his involvement in 'The Bear,' and his upcoming role in 'Spider-Man: Brave New World.'",
+      "angle": "James Gray's latest film 'Paper Tiger' to open the New York Film Festival after its Cannes premiere.",
       "tmdbType": "movie",
-      "source": "rss:THR",
+      "source": "rss:IndieWire",
       "sources": [
         {
-          "outlet": "THR",
+          "outlet": "IndieWire",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-features/jon-bernthal-the-odyssey-spider-man-marvel-1236648432/",
+          "url": "https://www.indiewire.com/news/festivals/2026-new-york-film-festival-james-gray-paper-tiger-1235205510/",
           "ageMin": 271,
-          "headline": "Jon Bernthal on ‘Odyssey Battles, Counseling Spider-Man and Always Going Big: “Embarrass the F*** Out of Yourself”",
-          "summary": "The tough-guy actor considers himself a soldier for his directors. Now he’s commandeering his own career — creating a TV show, writing on ‘The Bear’ and reuniting with Tom Holland for ‘Spider-Man: Brand New Day.’"
+          "headline": "James Gray s Paper Tiger Will Open This Year’s New York Film Festival",
+          "summary": "The auteur's latest heartbreaker, starring Adam Driver, Miles Teller, and Scarlett Johansson, premiered at Cannes earlier this year to strong reviews."
         }
       ],
       "ageMin": 271,
       "_cand": {
-        "key": "rss:jon-bernthal-on-odyssey-battles-counseling-spider-man-and-al",
+        "key": "rss:james-gray-s-paper-tiger-will-open-this-year-s-new-york-film",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -928,16 +960,16 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "THR"
+          "IndieWire"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "THR",
+        "attribution": "IndieWire",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 76,
+      "priority": 72,
       "signals": {
         "recency": 9,
         "corroboration": 12,
@@ -945,18 +977,146 @@
         "type": 9,
         "pop": 0,
         "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-sullivans-crossing-renewed-season-5",
+      "slug": "sullivan-s-crossing-renewed-for-season-5-by-cw",
+      "title": "‘Sullivan’s Crossing’ Renewed For Season 5 By CW",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "renewal",
+      "sensitivity": "normal",
+      "eventSlug": "sullivans-crossing-renewed-season-5",
+      "primaryKeyword": "sullivans crossing renewal",
+      "primaryEntity": "Sullivan's Crossing",
+      "entities": [
+        "The CW"
+      ],
+      "angle": "The CW has renewed the drama series 'Sullivan's Crossing' for a fifth season.",
+      "tmdbType": "movie",
+      "source": "gnews:IMDb",
+      "sources": [
+        {
+          "outlet": "IMDb",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE13T3hPRjdOYjhpMFo0b1dKWUd1OUpFVEJJUDhPOS1Wekk2TTYzSlNxY1gxOEJvZS1GNGZiYXhxeldZOW90TDJjdlNKWks4alI1c3VYRFZfOWZ0eVlqZHhKbmhxUndXeWc?oc=5",
+          "ageMin": 164,
+          "headline": "‘Sullivan’s Crossing’ Renewed For Season 5 By CW - IMDb",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiZ0FVX3lxTE13T3hPRjdOYjhpMFo0b1dKWUd1OUpFVEJJUDhPOS1Wekk2TTYzSlNxY1gxOEJvZS1GNGZiYXhxeldZOW90TDJjdlNKWks4alI1c3VYRFZfOWZ0eVlqZHhKbmhxUndXeWc?oc=5\" target=\"_blank\" ‘Sullivan’s Crossing’ Renewed For Season 5 By CW /a nbsp; nbsp; font color=\"#6f6f6f\" IMDb"
+        }
+      ],
+      "ageMin": 164,
+      "_cand": {
+        "key": "rss:-sullivan-s-crossing-renewed-for-season-5-by-cw-imdb",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "IMDb"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "IMDb",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 69,
+      "signals": {
+        "recency": 16,
+        "corroboration": 8,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
         "big": 18,
         "trending": 0,
-        "softTv": 0,
-        "radar": 10
+        "softTv": 0
       },
-      "radarKind": "tv-trending",
-      "tierClass": "A"
+      "tierClass": "B"
+    },
+    {
+      "id": "music-news-nine-inch-nails-boys-noize-teaser",
+      "slug": "nine-inch-nails-share-new-teaser-video-with-boys-noize",
+      "title": "Nine Inch Nails share new teaser video with Boys Noize",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "nine-inch-nails-boys-noize-teaser",
+      "primaryKeyword": "nine inch nails boys noize",
+      "primaryEntity": "Nine Inch Nails",
+      "entities": [
+        "Boys Noize"
+      ],
+      "angle": "Nine Inch Nails shares a new teaser video featuring Boys Noize.",
+      "tmdbType": "movie",
+      "source": "gnews:98KUPD",
+      "sources": [
+        {
+          "outlet": "98KUPD",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1TdHFHTjhpeEhKdmloYVFZRmpTVlpodUYwSnZOaFFxdEtJYUUtSGNXUmc4ZjlTVkFVb2Y0cHJyMnlpTHpNZ3NwVU1NOUo0RnE2aU1pRlg1R1MyT0toYk5uLXpqaUt3NmR3Zlp1OG43bVp6bHVid3k3QnpaT3V2bEE?oc=5",
+          "ageMin": 151,
+          "headline": "Nine Inch Nails share new teaser video with Boys Noize - 98KUPD",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMif0FVX3lxTE1TdHFHTjhpeEhKdmloYVFZRmpTVlpodUYwSnZOaFFxdEtJYUUtSGNXUmc4ZjlTVkFVb2Y0cHJyMnlpTHpNZ3NwVU1NOUo0RnE2aU1pRlg1R1MyT0toYk5uLXpqaUt3NmR3Zlp1OG43bVp6bHVid3k3QnpaT3V2bEE?oc=5\" target=\"_blank\" Nine Inch Nails share new teaser video with Boys Noize /a"
+        }
+      ],
+      "ageMin": 151,
+      "_cand": {
+        "key": "rss:nine-inch-nails-share-new-teaser-video-with-boys-noize-98kup",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "breakoutVelocity": 0,
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "98KUPD"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "98KUPD",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 51,
+      "signals": {
+        "recency": 16,
+        "corroboration": 8,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
     },
     {
       "id": "news-alpha-gang-love-of-your-life-tiff-premieres",
-      "slug": "zellners-alpha-gang-and-rachel-morrison-s-love-of-your-life-to-premier",
-      "title": "Zellners' 'Alpha Gang' and Rachel Morrison's 'Love of Your Life' to Premiere at TIFF",
+      "slug": "mahershala-ali-s-alpha-gang-and-rachel-morrison-s-love-of-your-life-to",
+      "title": "Mahershala Ali's 'Alpha Gang' and Rachel Morrison's 'Love of Your Life' to Premiere at TIFF",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
@@ -968,11 +1128,11 @@
       "primaryEntity": "Alpha Gang (film)",
       "entities": [
         "Rachel Morrison",
+        "Mahershala Ali",
         "Margaret Qualley",
-        "Love of Your Life (film)",
-        "Toronto International Film Festival"
+        "TIFF"
       ],
-      "angle": "Rachel Morrison's directorial debut 'Love of Your Life,' starring Margaret Qualley, and the Zellners' sci-fi film 'Alpha Gang' are set for world premieres at TIFF.",
+      "angle": "Rachel Morrison's 'Love of Your Life' and the Zellners' 'Alpha Gang' set for world premieres at TIFF.",
       "tmdbType": "movie",
       "source": "rss:IndieWire",
       "sources": [
@@ -980,12 +1140,12 @@
           "outlet": "IndieWire",
           "tier": 7,
           "url": "https://www.indiewire.com/news/festivals/2026-tiff-special-presentations-alpha-gang-1235205711/",
-          "ageMin": 211,
+          "ageMin": 271,
           "headline": "The Zellners Starry Sci-Fi Alpha Gang, Mahershala Ali in Your Mother Your Mother Your Mother Set for TIFF Special Presentations",
           "summary": "Cinematographer-turned-director Rachel Morrison also brings a new film to Toronto with the world premiere of \"Love of Your Life,\" with Margaret Qualley."
         }
       ],
-      "ageMin": 211,
+      "ageMin": 271,
       "_cand": {
         "key": "rss:the-zellners-starry-sci-fi-alpha-gang-mahershala-ali-in-your",
         "popularity": 0,
@@ -1021,154 +1181,25 @@
       "tierClass": "B"
     },
     {
-      "id": "news-danny-mcbride-gi-joe-movie-director",
-      "slug": "danny-mcbride-s-g-i-joe-movie-lands-surprise-director-in-major-franchi",
-      "title": "Danny McBride’s G.I. Joe Movie Lands Surprise Director in Major Franchise Update",
+      "id": "news-tiff-special-presentations-cate-blanchett-margaret-qualley-naomi-watts",
+      "slug": "cate-blanchett-margaret-qualley-naomi-watts-films-set-for-world-premie",
+      "title": "Cate Blanchett, Margaret Qualley, Naomi Watts Films Set for World Premieres at TIFF",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "danny-mcbride-gi-joe-movie-director",
-      "primaryKeyword": "danny mcbride gi joe movie",
-      "primaryEntity": "G.I. Joe: Retaliation",
-      "entities": [
-        "G.I. Joe",
-        "Danny McBride"
-      ],
-      "angle": "Surprise director announced for Danny McBride's G.I. Joe movie.",
-      "tmdbType": "movie",
-      "source": "gnews:AOL.com",
-      "sources": [
-        {
-          "outlet": "AOL.com",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE4yanU4SGN6aEM1MnVCdV9fZkQ1VW5VQjRybnUzbkdPdkZHc2gtNVNmVXBSTFAzRzRrV1Baelg5dlU3UW5zc0lfbGI1V0dtejJSODVjcUFaZHVvMU4tUUpxSXhpU1NES0FGVXg0VHhscF8tZzFKN2tibjZKd1VybE0?oc=5",
-          "ageMin": 476,
-          "headline": "Danny McBride’s G.I. Joe Movie Lands Surprise Director in Major Franchise Update - AOL.com",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMif0FVX3lxTE4yanU4SGN6aEM1MnVCdV9fZkQ1VW5VQjRybnUzbkdPdkZHc2gtNVNmVXBSTFAzRzRrV1Baelg5dlU3UW5zc0lfbGI1V0dtejJSODVjcUFaZHVvMU4tUUpxSXhpU1NES0FGVXg0VHhscF8tZzFKN2tibjZKd1VybE0?oc=5\" target=\"_blank\" Danny McBride’s G.I. Joe Movie Lands Surprise Director in"
-        }
-      ],
-      "ageMin": 476,
-      "_cand": {
-        "key": "rss:danny-mcbride-s-g-i-joe-movie-lands-surprise-director-in-maj",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "AOL.com"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "AOL.com",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 68,
-      "signals": {
-        "recency": 4,
-        "corroboration": 8,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-gabriel-luna-joins-dexter-resurrection-season-2",
-      "slug": "dexter-resurrection-season-two-gabriel-luna-joins-cast-of-paramount-se",
-      "title": "Dexter: Resurrection: Season Two; Gabriel Luna Joins Cast of Paramount+ Series",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "gabriel-luna-joins-dexter-resurrection-season-2",
-      "primaryKeyword": "gabriel luna dexter",
-      "primaryEntity": "Dexter: Resurrection",
-      "entities": [
-        "Gabriel Luna",
-        "Paramount+"
-      ],
-      "angle": "Gabriel Luna has been cast in the upcoming second season of the Dexter revival series.",
-      "tmdbType": "movie",
-      "source": "gnews:TV Series Finale",
-      "sources": [
-        {
-          "outlet": "TV Series Finale",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNeWdmamthSHRRME1kbW03SF95U2lETWlkRnVWajcxN2hkaExMbjdTTTRBRHN5RUdpRXNJUXFSNXhXZlA4WENNWmN6MGVhQ29NQThWd3kzdGJBd3pQamNXYzY2VFhVWHlacGtJTUdsam1OaE8taVJ2RnltYldkQ3F0M1NNX0loWkpicHJvX2M1Y0k5N1M3MjFtRERXR3JSMEh4QlQ2V1JEUjdFdm9EUVo00gG0AUFVX3lxTFBrcWlJLTRHNERDTm5uN2xVLTg1aWV2OVFLT1M0bW1jcFNIUWtwckJZMjExM2Z2YzhtRlh6MEZzYWplMnk5RE1JZ2NkeTU5YzJobDVPT09zRXJNckM1akd4VkFoaXdrQy1FMlVXblVnVnBEa1FhdzlEZ01BUEtEdVJJWGV1cE10NDk5cGFYSFVvaDg4dU1OTWJlU2JfeldRSUdrSjFLVmNCOG9BRVBGR1dObTdFbw?oc=5",
-          "ageMin": 195,
-          "headline": "Dexter: Resurrection: Season Two; Gabriel Luna Joins Cast of Paramount+ Series - TV Series Finale",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxNeWdmamthSHRRME1kbW03SF95U2lETWlkRnVWajcxN2hkaExMbjdTTTRBRHN5RUdpRXNJUXFSNXhXZlA4WENNWmN6MGVhQ29NQThWd3kzdGJBd3pQamNXYzY2VFhVWHlacGtJTUdsam1OaE8taVJ2RnltYldkQ3F0M1NNX0loWkpicHJvX2M1Y0k5N1M3MjFtRERXR3JSMEh4QlQ2V1JEUjdFdm9EUVo00gG0AUFVX3lxTFB"
-        }
-      ],
-      "ageMin": 195,
-      "_cand": {
-        "key": "rss:dexter-resurrection-season-two-gabriel-luna-joins-cast-of-pa",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "TV Series Finale"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "TV Series Finale",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 67,
-      "signals": {
-        "recency": 9,
-        "corroboration": 8,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-tom-hiddleston-pompeii-out-of-time-nat-geo",
-      "slug": "tom-hiddleston-links-loki-and-pompeii-to-new-nat-geo-docudrama",
-      "title": "Tom Hiddleston Links 'Loki' and Pompeii to New Nat Geo Docudrama",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "tom-hiddleston-pompeii-out-of-time-nat-geo",
-      "primaryKeyword": "Pompeii: Out of Time",
-      "primaryEntity": "Pompeii: Out of Time (TV series)",
+      "eventSlug": "tiff-special-presentations-cate-blanchett-margaret-qualley-naomi-watts",
+      "primaryKeyword": "TIFF film premieres",
+      "primaryEntity": "TIFF",
       "entities": [
-        "Tom Hiddleston",
-        "Loki (TV series)",
-        "National Geographic"
+        "Cate Blanchett",
+        "Margaret Qualley",
+        "Naomi Watts",
+        "Rachel Morrison"
       ],
-      "angle": "Tom Hiddleston explains how his interest in Pompeii, sparked by a teen visit and his 'Loki' series, led to the Nat Geo docudrama 'Pompeii: Out of Time.'",
+      "angle": "TIFF announces world premieres for films starring Cate Blanchett, Margaret Qualley, and Naomi Watts.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
@@ -1176,12 +1207,12 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/tv/tv-features/tom-hiddleston-loki-pompeii-out-of-time-1236648387/",
-          "ageMin": 211,
+          "ageMin": 271,
           "headline": "Tom Hiddleston Explains How 1998, Loki and Thor Paved the Way for ‘Pompeii: Out of Time’ (Exclusive)",
           "summary": "The future star visited Pompeii as a teen in 1998, and years later suggested incorporating the destroyed city into his show ‘Loki.’ Now, he’s taking the logical next step with a Nat Geo docudrama."
         }
       ],
-      "ageMin": 211,
+      "ageMin": 271,
       "_cand": {
         "key": "rss:tom-hiddleston-explains-how-1998-loki-and-thor-paved-the-way",
         "popularity": 0,
@@ -1202,7 +1233,7 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 66,
+      "priority": 72,
       "signals": {
         "recency": 9,
         "corroboration": 12,
@@ -1210,46 +1241,47 @@
         "type": 9,
         "pop": 0,
         "breakout": 0,
-        "big": 18,
+        "big": 24,
         "trending": 0,
         "softTv": 0
       },
       "tierClass": "B"
     },
     {
-      "id": "news-matt-damon-screaming-odyssey-set",
-      "slug": "matt-damon-s-intense-on-set-screaming-worried-the-odyssey-co-stars",
-      "title": "Matt Damon's Intense On-Set Screaming Worried 'The Odyssey' Co-Stars",
+      "id": "news-heartstopper-forever-finale",
+      "slug": "inside-heartstopper-forever-and-the-show-that-changed-british-ya",
+      "title": "Inside 'Heartstopper Forever' and the Show That Changed British YA",
       "contentType": "news",
       "formatTag": "news",
-      "category": "movies",
+      "category": "tv",
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "matt-damon-screaming-odyssey-set",
-      "primaryKeyword": "matt damon odyssey",
-      "primaryEntity": "Matt Damon",
+      "eventSlug": "heartstopper-forever-finale",
+      "primaryKeyword": "heartstopper finale",
+      "primaryEntity": "Heartstopper",
       "entities": [
-        "The Odyssey",
-        "Robert Pattinson",
-        "Tom Holland"
+        "Alice Oseman",
+        "Kit Connor",
+        "Joe Locke",
+        "Netflix"
       ],
-      "angle": "Matt Damon's intense vocal warm-ups on 'The Odyssey' set concerned co-stars Robert Pattinson and Tom Holland.",
+      "angle": "The cast and creator reflect on the groundbreaking British YA series 'Heartstopper' as it concludes with its finale.",
       "tmdbType": "movie",
-      "source": "rss:Variety",
+      "source": "rss:THR",
       "sources": [
         {
-          "outlet": "Variety",
+          "outlet": "THR",
           "tier": 7,
-          "url": "https://variety.com/2026/film/news/matt-damon-pattinson-the-odyssey-set-screaming-blow-voice-out-1236812387/",
-          "ageMin": 195,
-          "headline": "Matt Damon Shocked Robert Pattinson on The Odyssey Set by Screaming and Screaming to Blow His Voice Out and Sound Older: A Complete Psycho",
-          "summary": "Robert Pattinson and Tom Holland got concerned on “The Odyssey” set when they heard their leading man, Matt Damon, screaming over and over again in his trailer. Was Damon in pain? Or having a blowout fight over the phone? Pattinson had questions and later discovered that Damon was simply blowing his voice out so he [ ]"
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/the-end-of-an-era-inside-heartstopper-forever-and-the-show-that-changed-british-ya-1236646729/",
+          "ageMin": 56,
+          "headline": "The End of an Era: Inside Heartstopper Forever and the Show That Changed British YA",
+          "summary": "With the release of the two-hour finale that concludes the hit Netflix series, creator Alice Oseman along with Kit Connor, Joe Locke and more of the show's stars reflect on a groundbreaking, decade-long journey and what it means to end their queer love story."
         }
       ],
-      "ageMin": 195,
+      "ageMin": 56,
       "_cand": {
-        "key": "rss:matt-damon-shocked-robert-pattinson-on-the-odyssey-set-by-sc",
+        "key": "rss:the-end-of-an-era-inside-heartstopper-forever-and-the-show-t",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -1259,7 +1291,158 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Variety"
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 65,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 6,
+        "trending": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-danny-mcbride-gi-joe-reboot",
+      "slug": "danny-mcbride-to-direct-g-i-joe-movie-reboot",
+      "title": "Danny McBride to direct G.I. Joe movie reboot",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "danny-mcbride-gi-joe-reboot",
+      "primaryKeyword": "Danny McBride G.I. Joe movie",
+      "primaryEntity": "G.I. Joe: Retaliation",
+      "entities": [
+        "G.I. Joe",
+        "Danny McBride"
+      ],
+      "angle": "Danny McBride set to direct the upcoming reboot of the G.I. Joe franchise.",
+      "tmdbType": "movie",
+      "source": "gnews:Flickering Myth",
+      "sources": [
+        {
+          "outlet": "Flickering Myth",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPcDhDLU1hV2tpVlVPbGhDNFFjRVllSEhxQ2tCaG9vYndsdlhMWllLNUpGZG9nZGVVb2VGWGhmNmJ4ZmI3TDlaNkluMlFPbGo2TTBwdmpQTGlPUThmRy1DLVVHUWdIaERtMlpCR1g5YXJlM25xTzZEakZSUEc3b1ZhTUJ3?oc=5",
+          "ageMin": 423,
+          "headline": "Danny McBride to direct G.I. Joe movie reboot - Flickering Myth",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiggFBVV95cUxPcDhDLU1hV2tpVlVPbGhDNFFjRVllSEhxQ2tCaG9vYndsdlhMWllLNUpGZG9nZGVVb2VGWGhmNmJ4ZmI3TDlaNkluMlFPbGo2TTBwdmpQTGlPUThmRy1DLVVHUWdIaERtMlpCR1g5YXJlM25xTzZEakZSUEc3b1ZhTUJ3?oc=5\" target=\"_blank\" Danny McBride to direct G.I. Joe movie reboot /a nbs"
+        }
+      ],
+      "ageMin": 423,
+      "_cand": {
+        "key": "rss:danny-mcbride-to-direct-g-i-joe-movie-reboot-flickering-myth",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "Flickering Myth"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "Flickering Myth",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 68,
+      "signals": {
+        "recency": 4,
+        "corroboration": 8,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-ocean-way-festival-santa-monica-september",
+      "slug": "the-killers-olivia-dean-jack-white-to-headline-new-santa-monica-festiv",
+      "title": "The Killers, Olivia Dean, Jack White to Headline New Santa Monica Festival",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "ocean-way-festival-santa-monica-september",
+      "primaryKeyword": "Ocean Way Festival",
+      "primaryEntity": "Ocean Way Festival",
+      "entities": [
+        "The Killers",
+        "Olivia Dean",
+        "Jack White",
+        "Khruangbin"
+      ],
+      "angle": "Santa Monica is getting a new music festival headlined by The Killers, Olivia Dean, and Jack White.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/music/news/ocean-way-festival-goldenvoice-olivia-dean-santa-monica-1236812595/",
+          "ageMin": 11,
+          "headline": "Santa Monica s Beach Will Rock With Olivia Dean, the Killers, Jack White and Khruangbin, as Goldenvoice Sets First Ocean Way Festival for September",
+          "summary": "Whatever its other breezy benefits might be, Santa Monica has not been much of a music destination since the Santa Monica Civic Auditorium stopped hosting concerts and especially since the beachside city s famous Twilight Series on the pier came to an end a dozen years ago. But tens of thousands of music enthusiasts from across [ ]"
+        },
+        {
+          "outlet": "Rolling Stone",
+          "tier": 7,
+          "url": "https://www.rollingstone.com/music/music-news/the-killers-olivia-dean-ocean-way-festival-2026-1235594583/",
+          "ageMin": 23,
+          "headline": "The Killers, Olivia Dean, Jack White to Headline New Santa Monica Festival",
+          "summary": "Taking place on the Santa Monica Beach in late September, the two-day Ocean Way will also feature sets from Sublime and Alvvays"
+        },
+        {
+          "outlet": "Billboard",
+          "tier": 7,
+          "url": "https://www.billboard.com/music/concerts/ocean-way-festival-santa-monica-killers-jack-white-olivia-dean-1236296051/",
+          "ageMin": 31,
+          "headline": "The Killers, Olivia Dean to Headline Inaugural Ocean Way Festival in Santa Monica",
+          "summary": "The Sept. 26-27 event will be the first major music festival on the city's iconic beach."
+        }
+      ],
+      "ageMin": 11,
+      "_cand": {
+        "key": "rss:santa-monica-s-beach-will-rock-with-olivia-dean-the-killers-",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 3,
+      "verification": {
+        "tier1Count": 3,
+        "tier1Owners": 1,
+        "outletCount": 3,
+        "outlets": [
+          "Variety",
+          "Rolling Stone",
+          "Billboard"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
@@ -1268,121 +1451,53 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 56,
+      "priority": 96,
       "signals": {
-        "recency": 9,
-        "corroboration": 12,
+        "recency": 30,
+        "corroboration": 24,
         "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 12,
-        "trending": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-ye-french-montana-sued-sample-paparazzi-fight",
-      "slug": "ye-french-montana-sued-over-sample-of-paparazzi-fight-video-don-t-take",
-      "title": "Ye French Montana Sued Over Sample of Paparazzi Fight Video: Don’t Take No Photos!",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "lawsuit",
-      "sensitivity": "high",
-      "tier": "popular",
-      "eventSlug": "ye-french-montana-sued-sample-paparazzi-fight",
-      "primaryKeyword": "Ye French Montana lawsuit",
-      "primaryEntity": "Ye Seul",
-      "entities": [
-        "Ye",
-        "French Montana"
-      ],
-      "angle": "Kanye West (Ye) and French Montana are facing a lawsuit over the use of a sample from a 2013 paparazzi confrontation in their song 'Where They At'.",
-      "tmdbType": "movie",
-      "source": "rss:Deadline",
-      "sources": [
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/imagen-awards-2026-nominations-list-1236983274/",
-          "ageMin": 31,
-          "headline": "Acapulco Leads 2026 Imagen Awards Nominations; Andy Garcia Set For Career Honor",
-          "summary": "Apple TV comedy Acapulco leads the field with 13 nominations for the 41st annual Imagen Awards, which celebrate Latino talent and creative work across film, television, documentaries, digital media and music. Among the titles earning multiple nominations are Hazbin Hotel, Belén, Hacks, Stick, The Lincoln Lawyer, The Morning Show, The Night Manager, Twisted Metal and [ ]"
-        }
-      ],
-      "ageMin": 31,
-      "_cand": {
-        "key": "rss:acapulco-leads-2026-imagen-awards-nominations-andy-garcia-se",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Deadline"
-        ],
-        "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "Deadline",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 66,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 12,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
         "big": 0,
-        "trending": 0,
+        "trending": 15,
         "softTv": 0
       },
-      "tierClass": "S"
+      "tierClass": "A"
     },
     {
-      "id": "news-social-impact-summit-lineup-additions",
-      "slug": "sepideh-moafi-harrison-ford-niecy-nash-betts-laverne-cox-added-to-2026",
-      "title": "Sepideh Moafi, Harrison Ford, Niecy Nash-Betts, Laverne Cox Added to 2026 Social Impact Summit, Hosted by The Hollywood Reporter and Social Impact Fund",
+      "id": "news-mattel-kpop-demon-hunters-dolls",
+      "slug": "mattel-s-new-k-pop-demon-hunters-dolls-sing-and-wear-iconic-outfits",
+      "title": "Mattel's New K-Pop Demon Hunters Dolls Sing and Wear Iconic Outfits",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "social-impact-summit-lineup-additions",
-      "primaryKeyword": "Social Impact Summit",
-      "primaryEntity": "Sepideh Moafi",
+      "eventSlug": "mattel-kpop-demon-hunters-dolls",
+      "primaryKeyword": "kpop demon hunters dolls",
+      "primaryEntity": "KPop Demon Hunters",
       "entities": [
-        "Harrison Ford",
-        "Niecy Nash-Betts",
-        "Laverne Cox",
-        "The Hollywood Reporter"
+        "K-Pop Demon Hunters",
+        "Mattel"
       ],
-      "angle": "Hollywood stars including Harrison Ford and Laverne Cox are added to the lineup for The Hollywood Reporter's Social Impact Summit.",
+      "angle": "Mattel is releasing new K-Pop Demon Hunters dolls inspired by the film, which sing and wear iconic outfits.",
       "tmdbType": "movie",
       "source": "rss:Billboard",
       "sources": [
         {
           "outlet": "Billboard",
           "tier": 7,
-          "url": "https://www.billboard.com/video/performance-clip-clave-especial-performs-ea-ea-ea-live/",
-          "ageMin": 31,
-          "headline": "Performance Clip: Clave Especial performs “EA EA EA” live for Billboard",
-          "summary": "This is partner content. Clave Especial performs “EA EA EA” live for Billboard"
+          "url": "https://www.billboard.com/culture/product-recommendations/mattel-kpop-demon-hunters-dolls-shop-online-1236294177/",
+          "ageMin": 48,
+          "headline": "Mattel s New KPop Demon Hunters Dolls Sing Golden Sport Iconic Outfits From the Film",
+          "summary": "The collection includes a Jinu doll and six HUNTR/X-inspired figures who also sing."
         }
       ],
-      "ageMin": 31,
+      "ageMin": 48,
       "_cand": {
-        "key": "rss:performance-clip-clave-especial-performs-ea-ea-ea-live-for-b",
+        "key": "rss:mattel-s-new-kpop-demon-hunters-dolls-sing-golden-sport-icon",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -1416,39 +1531,41 @@
       "tierClass": "B"
     },
     {
-      "id": "news-harrison-ford-social-impact-summit-speaker",
-      "slug": "harrison-ford-among-speakers-at-2026-social-impact-summit",
-      "title": "Harrison Ford Among Speakers at 2026 Social Impact Summit",
+      "id": "news-mick-jagger-ai-music-olivia-rodrigo",
+      "slug": "mick-jagger-ai-music-must-be-original-comments-on-olivia-rodrigo-s-roc",
+      "title": "Mick Jagger: AI Music Must Be Original, Comments on Olivia Rodrigo's Rock Sound",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
-      "eventType": "announcement",
+      "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "harrison-ford-social-impact-summit-speaker",
-      "primaryKeyword": "harrison ford",
-      "primaryEntity": "Harrison Ford",
+      "tier": "popular",
+      "eventSlug": "mick-jagger-ai-music-olivia-rodrigo",
+      "primaryKeyword": "Mick Jagger AI music",
+      "primaryEntity": "Mick Jagger",
       "entities": [
-        "Social Impact Summit"
+        "The Rolling Stones",
+        "Olivia Rodrigo"
       ],
-      "angle": "Harrison Ford is announced as a speaker at a summit focused on social impact.",
+      "angle": "Mick Jagger shares his thoughts on AI-generated music and comments on Olivia Rodrigo's rock sound.",
       "tmdbType": "movie",
-      "source": "gnews:The Hollywood Reporter",
+      "source": "rss:Rolling Stone",
       "sources": [
         {
-          "outlet": "The Hollywood Reporter",
+          "outlet": "Rolling Stone",
           "tier": 7,
-          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNaHRnaUxhdUNiQlh5blViT05aeTZEeVUydmwzRW1sa0hTdkdHX09ORjlVSlR4OWRUXzdHanRGY2Z0UHRVaTA1S3pIMFZQUjdLQWpzYVVoa3F2X0JIX2ZQbTZQVkZrSFRRU3JDQ19QRmthS1hxdDhEZWYwcW9VbHBnWHdyOGpCRXZHVENHM3B2cnlHOWxjczNTQmxnZmZrTGpGd0RHelRvZDctelNlT21EMnhUUEVxNjJNMmlR?oc=5",
-          "ageMin": 35,
-          "headline": "Harrison Ford Among Speakers at 2026 Social Impact Summit - The Hollywood Reporter",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiuwFBVV95cUxNaHRnaUxhdUNiQlh5blViT05aeTZEeVUydmwzRW1sa0hTdkdHX09ORjlVSlR4OWRUXzdHanRGY2Z0UHRVaTA1S3pIMFZQUjdLQWpzYVVoa3F2X0JIX2ZQbTZQVkZrSFRRU3JDQ19QRmthS1hxdDhEZWYwcW9VbHBnWHdyOGpCRXZHVENHM3B2cnlHOWxjczNTQmxnZmZrTGpGd0RHelRvZDctelNlT21EMnhUUEVxNjJNMml"
+          "url": "https://www.rollingstone.com/music/music-news/rolling-stones-artificial-intelligence-olivia-rodrigo-1235594625/",
+          "ageMin": 24,
+          "headline": "Mick Jagger: If Someone Wants to Make Music by AI, Go Ahead, but It Has to Be Original",
+          "summary": "The Rolling Stones also gave their impression of Olivia Rodrigo's rock music in a new interview"
         }
       ],
-      "ageMin": 35,
+      "ageMin": 24,
       "_cand": {
-        "key": "rss:harrison-ford-among-speakers-at-2026-social-impact-summit-th",
+        "key": "rss:mick-jagger-if-someone-wants-to-make-music-by-ai-go-ahead-bu",
         "popularity": 0,
-        "kind": "gnews"
+        "kind": "rss-news"
       },
       "corroborationCount": 1,
       "verification": {
@@ -1456,49 +1573,113 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "The Hollywood Reporter"
+          "Rolling Stone"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "The Hollywood Reporter",
+        "attribution": "Rolling Stone",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 63,
+      "priority": 59,
       "signals": {
         "recency": 24,
         "corroboration": 12,
         "status": 18,
-        "type": 9,
+        "type": 5,
         "pop": 0,
         "breakout": 0,
         "big": 0,
         "trending": 0,
         "softTv": 0
       },
-      "tierClass": "B"
+      "tierClass": "C"
     },
     {
-      "id": "news-thr-a-list-aesthetics-event",
-      "slug": "hollywood-s-top-docs-reveal-their-cosmetic-secrets-at-thr-s-a-list-aes",
-      "title": "Hollywood s Top Docs Reveal Their Cosmetic Secrets at THR s A-List Aesthetics Event: We Have to Be Scientists, Artists, Technicians and Psychologists",
+      "id": "news-willie-nelson-new-book-the-last-leaf",
+      "slug": "willie-nelson-reflects-on-marriage-and-late-life-artistry-in-new-book-",
+      "title": "Willie Nelson Reflects on Marriage and Late-Life Artistry in New Book The Last Leaf",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "thr-a-list-aesthetics-event",
-      "primaryKeyword": "A-List Aesthetics Event",
-      "primaryEntity": "Mindy Kaling",
+      "eventSlug": "willie-nelson-new-book-the-last-leaf",
+      "primaryKeyword": "Willie Nelson new book",
+      "primaryEntity": "Willie Nelson",
       "entities": [
-        "Chloe Fineman",
-        "Paula Abdul",
-        "Heather Graham",
-        "The Hollywood Reporter"
+        "The Last Leaf"
       ],
-      "angle": "Stars like Mindy Kaling and Paula Abdul gathered for The Hollywood Reporter's A-List Aesthetics Event to discuss cosmetic procedures and beauty.",
+      "angle": "Willie Nelson discusses his new book, 'The Last Leaf,' which reflects on his marriage and later-life artistry.",
+      "tmdbType": "movie",
+      "source": "rss:Rolling Stone",
+      "sources": [
+        {
+          "outlet": "Rolling Stone",
+          "tier": 7,
+          "url": "https://www.rollingstone.com/music/music-country/willie-nelson-marriage-late-life-artistry-new-book-last-leaf-1235594638/",
+          "ageMin": 39,
+          "headline": "Willie Nelson Reflects on Marriage and Late-Life Artistry in New Book The Last Leaf",
+          "summary": "\"The backbone of this book is a love story,\" country legend says of tome that's a tribute to his wife Annie"
+        }
+      ],
+      "ageMin": 39,
+      "_cand": {
+        "key": "rss:willie-nelson-reflects-on-marriage-and-late-life-artistry-in",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Rolling Stone"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Rolling Stone",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 59,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-hollywood-reporter-social-impact-summit-lineup",
+      "slug": "sepideh-moafi-harrison-ford-niecy-nash-betts-laverne-cox-added-to-2026",
+      "title": "Sepideh Moafi, Harrison Ford, Niecy Nash-Betts, Laverne Cox Added to 2026 Social Impact Summit",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "hollywood-reporter-social-impact-summit-lineup",
+      "primaryKeyword": "hollywood reporter social impact summit",
+      "primaryEntity": "Sepideh Moafi",
+      "entities": [
+        "Harrison Ford",
+        "Niecy Nash-Betts",
+        "Laverne Cox",
+        "Bill Lawrence"
+      ],
+      "angle": "Hollywood stars join industry leaders at The Hollywood Reporter's Social Impact Summit.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
@@ -1506,12 +1687,12 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/lifestyle/lifestyle-news/harrison-ford-speakers-2026-social-impact-summit-1236649916/",
-          "ageMin": 35,
+          "ageMin": 95,
           "headline": "Sepideh Moafi, Harrison Ford, Niecy Nash-Betts, Laverne Cox Added to 2026 Social Impact Summit, Hosted by The Hollywood Reporter and Social Impact Fund",
           "summary": "Bill Lawrence, W. Kamau Bell, Karamo Brown and Baron Davis also join the lineup for the July 22 event, where Gilead Sciences Inc. will be honored for “Excellence in Corporate Philanthropy.”"
         }
       ],
-      "ageMin": 35,
+      "ageMin": 95,
       "_cand": {
         "key": "rss:sepideh-moafi-harrison-ford-niecy-nash-betts-laverne-cox-add",
         "popularity": 0,
@@ -1532,12 +1713,12 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 59,
+      "priority": 55,
       "signals": {
-        "recency": 24,
+        "recency": 16,
         "corroboration": 12,
         "status": 18,
-        "type": 5,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
         "big": 0,
@@ -1547,9 +1728,75 @@
       "tierClass": "C"
     },
     {
-      "id": "news-questlove-the-next-move-web-series",
-      "slug": "questlove-launches-new-web-series-the-next-move-to-bring-game-nights-t",
-      "title": "Questlove Launches New Web Series 'The Next Move' to Bring Game Nights to the Masses",
+      "id": "news-hollywood-reporter-a-list-aesthetics-event",
+      "slug": "hollywood-s-top-docs-reveal-their-cosmetic-secrets-at-thr-s-a-list-aes",
+      "title": "Hollywood's Top Docs Reveal Their Cosmetic Secrets at THR's A-List Aesthetics Event",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "hollywood-reporter-a-list-aesthetics-event",
+      "primaryKeyword": "hollywood reporter aesthetics event",
+      "primaryEntity": "Mindy Kaling",
+      "entities": [
+        "Chloe Fineman",
+        "Paula Abdul",
+        "Heather Graham"
+      ],
+      "angle": "Stars like Mindy Kaling and Paula Abdul attended The Hollywood Reporter's A-List Aesthetics event discussing cosmetic secrets.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/lifestyle/style/hollywood-top-docs-cosmetic-secrets-a-list-aesthetics-1236649711/",
+          "ageMin": 101,
+          "headline": "Hollywood s Top Docs Reveal Their Cosmetic Secrets at THR s A-List Aesthetics Event: We Have to Be Scientists, Artists, Technicians and Psychologists",
+          "summary": "Mindy Kaling, Chloe Fineman, Paula Abdul and Heather Graham were among the stars who attended the day of beauty conversations, which accompanied THR's \"The New Face of Hollywood\" issue."
+        }
+      ],
+      "ageMin": 101,
+      "_cand": {
+        "key": "rss:hollywood-s-top-docs-reveal-their-cosmetic-secrets-at-thr-s-",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 55,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-questlove-launches-web-series",
+      "slug": "questlove-brings-his-vip-game-nights-to-the-masses-with-the-next-move",
+      "title": "Questlove Brings His VIP Game Nights to the Masses With ‘The Next Move’",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
@@ -1557,13 +1804,13 @@
       "eventType": "announcement",
       "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "questlove-the-next-move-web-series",
+      "eventSlug": "questlove-launches-web-series",
       "primaryKeyword": "questlove next move",
       "primaryEntity": "Questlove",
       "entities": [
-        "The Next Move"
+        "The Tonight Show"
       ],
-      "angle": "Questlove is bringing his popular game nights to a wider audience with a new web series.",
+      "angle": "The Oscar-winning musician expands his social experiment into a new web series.",
       "tmdbType": "movie",
       "source": "rss:Rolling Stone",
       "sources": [
@@ -1571,12 +1818,12 @@
           "outlet": "Rolling Stone",
           "tier": 7,
           "url": "https://www.rollingstone.com/music/music-features/questlove-game-night-series-the-next-move-party-1235593427/",
-          "ageMin": 115,
+          "ageMin": 175,
           "headline": "Questlove Brings His VIP Game Nights to the Masses With ‘The Next Move’",
           "summary": "At the launch party for his new web series, the Academy Award-winning musician, filmmaker, and producer built on a long-running social experiment: bringing strangers together over a shared game and seeing what happens next"
         }
       ],
-      "ageMin": 115,
+      "ageMin": 175,
       "_cand": {
         "key": "rss:questlove-brings-his-vip-game-nights-to-the-masses-with-the-",
         "popularity": 0,
@@ -1610,6 +1857,138 @@
         "softTv": 0
       },
       "tierClass": "C"
+    },
+    {
+      "id": "news-jon-bernthal-career-spider-man-the-bear",
+      "slug": "jon-bernthal-on-odyssey-battles-counseling-spider-man-and-always-going",
+      "title": "Jon Bernthal on 'Odyssey Battles, Counseling Spider-Man and Always Going Big'",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "jon-bernthal-career-spider-man-the-bear",
+      "primaryKeyword": "Jon Bernthal",
+      "primaryEntity": "Jon Bernthal",
+      "entities": [
+        "Spider-Man: Brave New World",
+        "The Bear"
+      ],
+      "angle": "Jon Bernthal discusses his approach to acting, his work on 'The Bear,' and upcoming projects.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/tv/tv-news/claudia-winkleman-show-canceled-exit-quits-traitors-bbc-1236650032/",
+          "ageMin": 323,
+          "headline": "Claudia Winkleman Quits Her Own Talk Show After One Season: I Was Just Too Nervous to Enjoy It",
+          "summary": "'The Claudia Winkleman Show' has been canceled at the BBC: \"Sometimes you have to try something to see how it fits.\""
+        }
+      ],
+      "ageMin": 323,
+      "_cand": {
+        "key": "rss:claudia-winkleman-quits-her-own-talk-show-after-one-season-i",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 60,
+      "signals": {
+        "recency": 9,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 6,
+        "trending": 0,
+        "softTv": 0,
+        "radar": 10
+      },
+      "radarKind": "tv-trending",
+      "tierClass": "A"
+    },
+    {
+      "id": "news-danny-mcbride-gi-joe-director",
+      "slug": "danny-mcbride-s-g-i-joe-movie-lands-surprise-director-in-major-franchi",
+      "title": "Danny McBride’s G.I. Joe Movie Lands Surprise Director in Major Franchise Update",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "danny-mcbride-gi-joe-director",
+      "primaryKeyword": "Danny McBride G.I. Joe movie",
+      "primaryEntity": "G.I. Joe: Retaliation",
+      "entities": [
+        "G.I. Joe",
+        "Danny McBride"
+      ],
+      "angle": "Danny McBride has been tapped to direct the new G.I. Joe movie.",
+      "tmdbType": "movie",
+      "source": "gnews:AOL.com",
+      "sources": [
+        {
+          "outlet": "AOL.com",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5Vbk5aclJRbFhfeERaWk1MRkFOVHJ3QmZNUmpSSmhmcGJpTlR0V2MyTXpEYUlaeThONW5pYjdYd3diWFo3WTNVd3pLdHlXM3lYdGk3TU5UdUtLSUV6SXpDWk02ODVxQnAtSGxSdkdvdko5UjdWVzFRWg?oc=5",
+          "ageMin": 577,
+          "headline": "Danny McBride’s G.I. Joe Movie Lands Surprise Director in Major Franchise Update - AOL.com",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMieEFVX3lxTE5Vbk5aclJRbFhfeERaWk1MRkFOVHJ3QmZNUmpSSmhmcGJpTlR0V2MyTXpEYUlaeThONW5pYjdYd3diWFo3WTNVd3pLdHlXM3lYdGk3TU5UdUtLSUV6SXpDWk02ODVxQnAtSGxSdkdvdko5UjdWVzFRWg?oc=5\" target=\"_blank\" Danny McBride’s G.I. Joe Movie Lands Surprise Director in Major Fr"
+        }
+      ],
+      "ageMin": 577,
+      "_cand": {
+        "key": "rss:danny-mcbride-s-g-i-joe-movie-lands-surprise-director-in-maj",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "AOL.com"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "AOL.com",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 68,
+      "signals": {
+        "recency": 4,
+        "corroboration": 8,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
     }
   ]
 }
