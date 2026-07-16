@@ -1,0 +1,60 @@
+{
+ "runId": "run-2026-07-16T07-30-35",
+ "mode": "live",
+ "startedAt": "2026-07-16T07:30:35.437Z",
+ "films": 6,
+ "published": [],
+ "held": [],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "enola-holmes-3-netflix-top10×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "the-doorman-netflix-top10×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "little-brother-netflix-top10×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "rust-creek-netflix-top10×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "old-henry-netflix-top10×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "the-boss-baby-netflix-top10×NETFLIX-TOP10",
+   "reason": "parked dead"
+  }
+ ],
+ "blocked": [],
+ "zeroStreak": 1,
+ "finishedAt": "2026-07-16T07:30:42.370Z",
+ "meter": {
+  "byRole": {
+   "gatherer": {
+    "calls": 1,
+    "errors": 0,
+    "in": 2945,
+    "out": 1798,
+    "usd": 0.00101,
+    "ms": 4165
+   },
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3198,
+    "out": 411,
+    "usd": 0.00017,
+    "ms": 1178
+   }
+  },
+  "totalUsd": 0.00118
+ },
+ "openrouterTotalUsd": 0.00118
+}
