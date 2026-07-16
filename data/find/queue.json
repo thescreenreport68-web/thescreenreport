@@ -1,42 +1,346 @@
 {
-  "runId": "run-2026-07-16T11-00-31",
-  "builtAt": "2026-07-16T11:06:02.199Z",
-  "count": 5,
+  "runId": "run-2026-07-16T15-00-34",
+  "builtAt": "2026-07-16T15:01:11.428Z",
+  "count": 17,
   "topics": [
     {
-      "id": "news-danny-mcbride-directs-gi-joe-movie",
-      "slug": "danny-mcbride-to-direct-g-i-joe-movie-for-paramount",
-      "title": "Danny McBride to Direct G.I. Joe Movie for Paramount",
+      "id": "news-paper-tiger-new-york-film-festival-opening",
+      "slug": "james-gray-crime-thriller-paper-tiger-with-adam-driver-scarlett-johans",
+      "title": "James Gray Crime Thriller ‘Paper Tiger’ With Adam Driver, Scarlett Johansson To Open New York Film Festival",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "paper-tiger-new-york-film-festival-opening",
+      "primaryKeyword": "paper tiger film festival",
+      "primaryEntity": "Paper Tiger (film)",
+      "entities": [
+        "James Gray",
+        "Adam Driver",
+        "Scarlett Johansson",
+        "New York Film Festival"
+      ],
+      "angle": "James Gray's crime thriller 'Paper Tiger' starring Adam Driver and Scarlett Johansson will open the New York Film Festival.",
+      "tmdbType": "movie",
+      "source": "rss:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/new-york-film-festival-opening-night-james-gray-paper-tiger-1236983888/",
+          "ageMin": 61,
+          "headline": "James Gray Crime Thriller ‘Paper Tiger’ With Adam Driver, Scarlett Johansson To Open New York Film Festival",
+          "summary": "James Gray’s Cannes-premiering crime thriller Paper Tiger will open the 64th New York Film Festival in its North American premiere on September 25. The fest’s parent, Film at Lincoln Center, announced the gala debut of the Neon release at Alice Tully Hall with Gray and members of cast and crew. Adam Driver, Miles Teller, and [ ]"
+        },
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/film/awards/paper-tiger-new-york-film-festival-opening-night-2026-1236812082/",
+          "ageMin": 61,
+          "headline": "Paper Tiger With Adam Driver and Scarlett Johansson to Open New York Film Festival",
+          "summary": "James Gray s crime drama Paper Tiger, starring Adam Driver, Scarlett Johansson and Miles Teller, will make its North American premiere as the opening night film of the 64th New York Film Festival on Sept. 25. This is Gray s fourth film to screen at the prestigious festival, following The Immigrant (2013) and Armageddon Time (2022), both [ ]"
+        },
+        {
+          "outlet": "TheWrap",
+          "tier": 7,
+          "url": "https://www.thewrap.com/creative-content/movies/paper-tiger-to-open-2026-new-york-film-festival-james-gray/",
+          "ageMin": 61,
+          "headline": "James Gray s Paper Tiger to Open 2026 New York Film Festival",
+          "summary": "The Adam Driver and Miles Teller-led film will have its North American premiere at the 64th NYFF in September The post James Gray s Paper Tiger to Open 2026 New York Film Festival appeared first on TheWrap ."
+        },
+        {
+          "outlet": "IndieWire",
+          "tier": 7,
+          "url": "https://www.indiewire.com/news/festivals/2026-new-york-film-festival-james-gray-paper-tiger-1235205510/",
+          "ageMin": 61,
+          "headline": "James Gray s Paper Tiger Will Open This Year’s New York Film Festival",
+          "summary": "The auteur's latest heartbreaker, starring Adam Driver, Miles Teller, and Scarlett Johansson, premiered at Cannes earlier this year to strong reviews."
+        }
+      ],
+      "ageMin": 61,
+      "_cand": {
+        "key": "rss:james-gray-crime-thriller-paper-tiger-with-adam-driver-scarl",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 4,
+      "verification": {
+        "tier1Count": 4,
+        "tier1Owners": 2,
+        "outletCount": 4,
+        "outlets": [
+          "Deadline",
+          "Variety",
+          "TheWrap",
+          "IndieWire"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": null,
+        "framing": "plain",
+        "status": "CONFIRMED",
+        "publishable": true
+      },
+      "priority": 114,
+      "signals": {
+        "recency": 16,
+        "corroboration": 25,
+        "status": 25,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 15,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-william-jackson-harper-joins-hulu-legal-drama-conviction",
+      "slug": "william-jackson-harper-joins-hulu-legal-drama-conviction",
+      "title": "William Jackson Harper Joins Hulu Legal Drama ‘Conviction’",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "danny-mcbride-directs-gi-joe-movie",
-      "primaryKeyword": "danny mcbride gi joe",
-      "primaryEntity": "G.I. Joe: Retaliation",
+      "eventSlug": "william-jackson-harper-joins-hulu-legal-drama-conviction",
+      "primaryKeyword": "william jackson harper conviction",
+      "primaryEntity": "William Jackson Harper",
       "entities": [
-        "G.I. Joe",
-        "Danny McBride",
-        "Paramount"
+        "Conviction",
+        "Hulu",
+        "Elisabeth Moss"
       ],
-      "angle": "Danny McBride set to direct a G.I. Joe movie for Paramount, having already penned the script.",
+      "angle": "William Jackson Harper, known for 'The Good Place,' has been cast as a series regular in Hulu's legal drama 'Conviction.'",
+      "tmdbType": "movie",
+      "source": "rss:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/william-jackson-harper-cast-conviction-hulu-series-1236983396/",
+          "ageMin": 1,
+          "headline": "William Jackson Harper Joins Hulu Legal Drama ‘Conviction’",
+          "summary": "EXCLUSIVE: William Jackson Harper (The Good Place) has joined the main cast of Conviction, Hulu‘s upcoming series starring Elisabeth Moss, from 20th Television. Anderson is set as a series regular in the legal drama alongside Moss, who also executive produces, and previously cast Jimmi Simpson, Kevin McKidd, Sebastian De Souza, Adam Godley, Linda Emond and [ ]"
+        }
+      ],
+      "ageMin": 1,
+      "_cand": {
+        "key": "rss:william-jackson-harper-joins-hulu-legal-drama-conviction-",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 92,
+      "signals": {
+        "recency": 30,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-kino-lorber-acquires-reed-van-dyks-atonement",
+      "slug": "kino-lorber-acquires-reed-van-dyk-s-atonement-starring-hiam-abbass-boy",
+      "title": "Kino Lorber Acquires Reed Van Dyk’s ‘Atonement’ Starring Hiam Abbass, Boyd Holbrook, Kenneth Branagh",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "kino-lorber-acquires-reed-van-dyks-atonement",
+      "primaryKeyword": "atonement movie",
+      "primaryEntity": "Atonement",
+      "entities": [
+        "Atonement (film)",
+        "Kino Lorber",
+        "Hiam Abbass",
+        "Boyd Holbrook"
+      ],
+      "angle": "Kino Lorber has acquired North American distribution rights for the Iraq War drama 'Atonement,' starring Hiam Abbass and Kenneth Branagh.",
+      "tmdbType": "movie",
+      "source": "rss:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/kino-lorber-reed-van-dyk-atonement-1236982719/",
+          "ageMin": 61,
+          "headline": "Kino Lorber Acquires Reed Van Dyk’s ‘Atonement’ Starring Hiam Abbass, Boyd Holbrook Kenneth Branagh",
+          "summary": "Kino Lorber has acquired North American distribution rights to Reed Van Dyk’s Iraq War drama Atonement, starring Hiam Abbass, Boyd Holbrook, and Kenneth Branagh. Based on the New Yorker article by Dexter Filkins, the film was written and directed by Van Dyk and debuted in the Quinzaine competition at this year’s Cannes Film Festival. Kino [ ]"
+        },
+        {
+          "outlet": "IndieWire",
+          "tier": 7,
+          "url": "https://www.indiewire.com/news/festivals/cannes-2026-movies-sold-so-far-paper-tiger-minotaur-1235191174/",
+          "ageMin": 61,
+          "headline": "Cannes 2026 Movies Sold: Atonement with Boyd Holbrook, Kenneth Branagh, and Hiam Abbass Lands at Kino Lorber",
+          "summary": "Reed Van Dyk made his feature directorial debut on the movie that premiered in Director's Fortnight and will continue playing festivals this fall."
+        }
+      ],
+      "ageMin": 61,
+      "_cand": {
+        "key": "rss:kino-lorber-acquires-reed-van-dyk-s-atonement-starring-hiam-",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 2,
+      "verification": {
+        "tier1Count": 2,
+        "tier1Owners": 1,
+        "outletCount": 2,
+        "outlets": [
+          "Deadline",
+          "IndieWire"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 93,
+      "signals": {
+        "recency": 16,
+        "corroboration": 18,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 8,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-ink-venice-film-festival-opening",
+      "slug": "danny-boyle-s-rupert-murdoch-drama-ink-to-open-venice-film-festival",
+      "title": "Danny Boyle's Rupert Murdoch Drama 'Ink' to Open Venice Film Festival",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "ink-venice-film-festival-opening",
+      "primaryKeyword": "danny boyle ink",
+      "primaryEntity": "Ink (film)",
+      "entities": [
+        "Danny Boyle"
+      ],
+      "angle": "Danny Boyle's new film 'Ink' has been selected to open the prestigious Venice Film Festival.",
+      "tmdbType": "movie",
+      "source": "rss:IndieWire",
+      "sources": [
+        {
+          "outlet": "IndieWire",
+          "tier": 7,
+          "url": "https://www.indiewire.com/news/festivals/venice-film-festival-2026-danny-boyle-ink-1235205720/",
+          "ageMin": 72,
+          "headline": "Danny Boyle s Rupert Murdoch Drama Ink to Open the Venice Film Festival",
+          "summary": "It's Boyle's first feature to play Venice — and his first non-franchise outing since 2019's \"Yesterday.\""
+        },
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/film/global/danny-boyle-ink-venice-film-festival-1236812367/",
+          "ageMin": 100,
+          "headline": "Danny Boyle s Ink, Starring Jack O’Connell, Guy Pearce and Claire Foy, to Open Venice Film Festival",
+          "summary": "Danny Boyle s Ink, starring Jack O’Connell, Guy Pearce and Claire Foy, will open the 83rd Venice Film Festival, which runs Sept. 2-12. The film will world premiere in the main competition section. Ink, about the acquisition and transformation of The Sun newspaper by Rupert Murdoch, is written by multi-Olivier award-winning playwright and screenwriter James Graham [ ]"
+        }
+      ],
+      "ageMin": 72,
+      "_cand": {
+        "key": "rss:danny-boyle-s-rupert-murdoch-drama-ink-to-open-the-venice-fi",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 2,
+      "verification": {
+        "tier1Count": 2,
+        "tier1Owners": 1,
+        "outletCount": 2,
+        "outlets": [
+          "IndieWire",
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "IndieWire",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 93,
+      "signals": {
+        "recency": 16,
+        "corroboration": 18,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 8,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-rupert-murdoch-drama-ink-to-open-venice-film-festival",
+      "slug": "danny-boyle-s-rupert-murdoch-drama-ink-to-open-venice-film-festival",
+      "title": "Danny Boyle's Rupert Murdoch Drama 'Ink' to Open Venice Film Festival",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "rupert-murdoch-drama-ink-to-open-venice-film-festival",
+      "primaryKeyword": "venice film festival",
+      "primaryEntity": "Venice Film Festival",
+      "entities": [
+        "Danny Boyle",
+        "Rupert Murdoch"
+      ],
+      "angle": "Danny Boyle's new drama 'Ink,' chronicling Rupert Murdoch's rise, has been selected to open the Venice Film Festival.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
         {
           "outlet": "THR",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/danny-mcbride-to-direct-g-i-joe-movie-1236647496/",
-          "ageMin": 1111,
-          "headline": "Danny McBride to Direct G.I. Joe Movie for Paramount",
-          "summary": "The triple threat was already on board as screenwriter for the Paramount feature."
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/danny-boyle-rupert-murdoch-drama-ink-to-open-venice-1236650055/",
+          "ageMin": 52,
+          "headline": "Danny Boyle s Rupert Murdoch Drama Ink to Open Venice Film Festival",
+          "summary": "Jack O’Connell, Guy Pearce and Claire Foy star in the drama about the media titan's rise to power through the British tabloids."
         }
       ],
-      "ageMin": 1111,
+      "ageMin": 52,
       "_cand": {
-        "key": "rss:danny-mcbride-to-direct-g-i-joe-movie-for-paramount",
+        "key": "rss:danny-boyle-s-rupert-murdoch-drama-ink-to-open-venice-film-f",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -55,12 +359,12 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 69,
+      "priority": 87,
       "signals": {
-        "recency": 1,
+        "recency": 24,
         "corroboration": 12,
         "status": 18,
-        "type": 14,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
         "big": 24,
@@ -69,103 +373,39 @@
       }
     },
     {
-      "id": "music-news-ronan-keating-new-album-ed-sheeran",
-      "slug": "music-and-songwriting-has-allowed-me-to-grieve-ronan-keating-reflects-",
-      "title": "Music and Songwriting Has Allowed Me to Grieve: Ronan Keating Reflects on Loss, New Music and Superstar Collaborations",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
+      "id": "news-tom-hiddleston-pompeii-out-of-time-doc",
+      "slug": "tom-hiddleston-explains-how-1998-loki-and-thor-paved-the-way-for-pompe",
+      "title": "Tom Hiddleston Explains How 1998, Loki and Thor Paved the Way for ‘Pompeii: Out of Time’ (Exclusive)",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "ronan-keating-new-album-ed-sheeran",
-      "primaryKeyword": "ronan keating new music",
-      "primaryEntity": "Ronan Keating",
+      "eventSlug": "tom-hiddleston-pompeii-out-of-time-doc",
+      "primaryKeyword": "tom hiddleston pompeii documentary",
+      "primaryEntity": "Pompeii: Out of Time (TV series)",
       "entities": [
-        "Ed Sheeran",
-        "Jose Carreras"
+        "Tom Hiddleston",
+        "Loki (TV series)",
+        "National Geographic"
       ],
-      "angle": "Ronan Keating announces new album featuring a song with Ed Sheeran and a concert with Jose Carreras.",
-      "tmdbType": "movie",
-      "source": "rss:Billboard",
-      "sources": [
-        {
-          "outlet": "Billboard",
-          "tier": 7,
-          "url": "https://www.billboard.com/music/pop/ronan-keating-interview-loss-new-music-collaborations-1236295718/",
-          "ageMin": 38,
-          "headline": "Music and Songwriting Has Allowed Me to Grieve: Ronan Keating Reflects on Loss, New Music and Superstar Collaborations",
-          "summary": "The Irish pop veteran is working on a new album, which will feature a song recorded with Ed Sheeran, and is looking to \"tick that box\" with a one-off concert starring Jose Carreras."
-        }
-      ],
-      "ageMin": 38,
-      "_cand": {
-        "key": "rss:music-and-songwriting-has-allowed-me-to-grieve-ronan-keating",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Billboard"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Billboard",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 63,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "softTv": 0
-      }
-    },
-    {
-      "id": "news-mark-hamill-star-wars-lightsaber-auction",
-      "slug": "mark-hamill-s-star-wars-lightsaber-smashes-predictions-and-sells-for-r",
-      "title": "Mark Hamill’s ‘Star Wars’ Lightsaber Smashes Predictions and Sells for Record Sum at Auction",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "mark-hamill-star-wars-lightsaber-auction",
-      "primaryKeyword": "Star Wars lightsaber auction",
-      "primaryEntity": "Star Wars: The Clone Wars",
-      "entities": [
-        "Star Wars",
-        "Mark Hamill"
-      ],
-      "angle": "Iconic Luke Skywalker lightsaber from Star Wars sells for record-breaking sum at auction.",
+      "angle": "Tom Hiddleston is expanding his 'Loki' connection to Pompeii with a new National Geographic documentary.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
         {
           "outlet": "THR",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/news/general-news/star-wars-lightsaber-auction-mark-hamill-luke-skywalker-1236649920/",
-          "ageMin": 111,
-          "headline": "Mark Hamill’s ‘Star Wars’ Lightsaber Smashes Predictions and Sells for Record Sum at Auction",
-          "summary": "Heritage Auctions confirmed that the original screen-used Luke Skywalker lightsaber sold for a whopping $3.75 million, setting a new world auction record for a screen-used ‘Star Wars’ prop."
+          "url": "https://www.hollywoodreporter.com/tv/tv-features/tom-hiddleston-loki-pompeii-out-of-time-1236648387/",
+          "ageMin": 61,
+          "headline": "Tom Hiddleston Explains How 1998, Loki and Thor Paved the Way for ‘Pompeii: Out of Time’ (Exclusive)",
+          "summary": "The future star visited Pompeii as a teen in 1998, and years later suggested incorporating the destroyed city into his show ‘Loki.’ Now, he’s taking the logical next step with a Nat Geo doc."
         }
       ],
-      "ageMin": 111,
+      "ageMin": 61,
       "_cand": {
-        "key": "rss:mark-hamill-s-star-wars-lightsaber-smashes-predictions-and-s",
+        "key": "rss:tom-hiddleston-explains-how-1998-loki-and-thor-paved-the-way",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -184,52 +424,117 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 63,
+      "priority": 73,
       "signals": {
         "recency": 16,
         "corroboration": 12,
         "status": 18,
-        "type": 5,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
-        "big": 12,
+        "big": 18,
         "trending": 0,
         "softTv": 0
       }
     },
     {
-      "id": "news-anya-taylor-joy-james-mcavoy-split-casting",
-      "slug": "anya-taylor-joy-admits-she-s-so-grateful-james-mcavoy-replaced-a-metho",
-      "title": "Anya Taylor-Joy Admits She s ‘So Grateful’ James McAvoy Replaced a Method Actor in ‘Split’",
+      "id": "news-tiff-special-presentations-additions-2026",
+      "slug": "tiff-sets-special-presentations-including-riley-keough-cate-blanchett-",
+      "title": "TIFF Sets Special Presentations Including Riley Keough, Cate Blanchett Comedy 'Alpha Gang,' Mahershala Ali's 'Your Mother Your Mother Your Mother' and More",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "tiff-special-presentations-additions-2026",
+      "primaryKeyword": "tiff",
+      "primaryEntity": "Toronto International Film Festival",
+      "entities": [
+        "Riley Keough",
+        "Cate Blanchett",
+        "Mahershala Ali"
+      ],
+      "angle": "The Toronto Film Festival announces its Special Presentations lineup, including films starring Cate Blanchett and Mahershala Ali.",
+      "tmdbType": "movie",
+      "source": "rss:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/tiff-2026-cate-blanchett-riley-keough-mahershala-ali-1236983904/",
+          "ageMin": 60,
+          "headline": "TIFF Sets Special Presentations Including Riley Keough Cate Blanchett Comedy Alpha Gang , Mahershala Ali s Your Mother Your Mother Your Mother More",
+          "summary": "This year s Toronto Film Festival continues to ramp up with its Special Presentations section including five titles: David and Nathan Zellner s alien invasion comedy Alpha Gang, Rachel Morrison s Amazon MGM Studios feature Love of Your Life; Bassam Tariq s action drama thriller from Amazon MGM Studios/Orion, Your Mother Your Mother Your Mother; Ben Shirinian s The Housewife [ ]"
+        }
+      ],
+      "ageMin": 60,
+      "_cand": {
+        "key": "rss:tiff-sets-special-presentations-including-riley-keough-cate-",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 87,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-ike-barinholtz-jimmy-kimmel-live-guest-host-joke",
+      "slug": "ike-barinholtz-tells-jimmy-kimmel-live-audience-to-be-on-best-behavior",
+      "title": "Ike Barinholtz Tells Jimmy Kimmel Live! Audience to Be on Best Behavior for His Boss: Take Whatever Drugs He Gives You",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "anya-taylor-joy-james-mcavoy-split-casting",
-      "primaryKeyword": "Anya Taylor-Joy James McAvoy Split",
-      "primaryEntity": "Anya Taylor-Joy",
+      "eventSlug": "ike-barinholtz-jimmy-kimmel-live-guest-host-joke",
+      "primaryKeyword": "Jimmy Kimmel Live",
+      "primaryEntity": "Jimmy Kimmel Live!",
       "entities": [
-        "James McAvoy",
-        "Split"
+        "Jimmy Kimmel Live",
+        "Ike Barinholtz"
       ],
-      "angle": "Actress expresses gratitude that James McAvoy replaced a method actor in the thriller 'Split,' impacting her experience.",
+      "angle": "Guest host Ike Barinholtz made a joke about the audience being on drugs during his appearance on 'Jimmy Kimmel Live!'.",
       "tmdbType": "movie",
       "source": "rss:TheWrap",
       "sources": [
         {
           "outlet": "TheWrap",
           "tier": 7,
-          "url": "https://www.thewrap.com/creative-content/movies/anya-taylor-joy-grateful-james-mcavoy-ended-up-in-split-over-method-actor/",
-          "ageMin": 479,
-          "headline": "Anya Taylor-Joy Admits She s ‘So Grateful’ James McAvoy Replaced a Method Actor in ‘Split’",
-          "summary": "\"I think that would have been a different experience,\" the actress adds The post Anya Taylor-Joy Admits She s ‘So Grateful’ James McAvoy Replaced a Method Actor in ‘Split’ appeared first on TheWrap ."
+          "url": "https://www.thewrap.com/creative-content/tv-shows/ike-barinholtz-jimmy-kimmel-live-hosting-audience-best-behavior/",
+          "ageMin": 12,
+          "headline": "Ike Barinholtz Tells Jimmy Kimmel Live! Audience to Be on Best Behavior for His Boss: Take Whatever Drugs He Gives You",
+          "summary": "The guest host jokes that the episode will be the \"highest\" episode in the show's history The post Ike Barinholtz Tells Jimmy Kimmel Live! Audience to Be on Best Behavior for His Boss: Take Whatever Drugs He Gives You appeared first on TheWrap ."
         }
       ],
-      "ageMin": 479,
+      "ageMin": 12,
       "_cand": {
-        "key": "rss:anya-taylor-joy-admits-she-s-so-grateful-james-mcavoy-replac",
+        "key": "rss:ike-barinholtz-tells-jimmy-kimmel-live-audience-to-be-on-bes",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -248,107 +553,602 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 51,
+      "priority": 71,
       "signals": {
-        "recency": 4,
+        "recency": 30,
         "corroboration": 12,
         "status": 18,
         "type": 5,
         "pop": 0,
         "breakout": 0,
-        "big": 12,
+        "big": 6,
         "trending": 0,
         "softTv": 0
       }
     },
     {
-      "id": "news-hal-williams-death",
-      "slug": "hal-williams-actor-on-227-and-sanford-and-son-dies-at-91",
-      "title": "Hal Williams, Actor on 227 and Sanford and Son, Dies at 91",
+      "id": "music-news-ella-langley-olivia-dean-dominate-luminate-chart",
+      "slug": "ella-langley-and-olivia-dean-dominate-luminate-s-mid-year-songs-chart-",
+      "title": "Ella Langley and Olivia Dean Dominate Luminate’s Mid-Year Songs Chart; Spanish-Language Music Soars in Popularity",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "ella-langley-olivia-dean-dominate-luminate-chart",
+      "primaryKeyword": "Ella Langley Olivia Dean Luminate chart",
+      "primaryEntity": "Ella Langley",
+      "entities": [
+        "Olivia Dean",
+        "Luminate"
+      ],
+      "angle": "Ella Langley and Olivia Dean are topping Luminate's mid-year songs chart, reflecting global music trends.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/music/news/ella-langley-olivia-dean-dominate-luminate-mid-year-2026-songs-chart-1236812450/",
+          "ageMin": 20,
+          "headline": "Ella Langley and Olivia Dean Dominate Luminate’s Mid-Year Songs Chart; Spanish-Language Music Soars in Popularity",
+          "summary": "The past year has minted a pair of new superstars as Ella Langley and Olivia Dean dominate the 2026 top songs chart from Luminate, Variety and Billboard’s official data partner, amid global trends that sees global streaming climb 10% and Spanish-language music soar to 1 in 10 U.S. streams, per Luminate s 2026 Midyear Report covering [ ]"
+        }
+      ],
+      "ageMin": 20,
+      "_cand": {
+        "key": "rss:ella-langley-and-olivia-dean-dominate-luminate-s-mid-year-so",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 59,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-tiff-2026-special-presentations-program-additions",
+      "slug": "tiff-2026-announces-special-presentations-program-additions-featuring-",
+      "title": "TIFF 2026 Announces Special Presentations Program Additions Featuring Margaret Qualley, Cate Blanchett and Mahershala Ali",
       "contentType": "news",
       "formatTag": "news",
-      "category": "celebrity",
+      "category": "movies",
       "subcategory": "news",
-      "eventType": "death",
-      "sensitivity": "high",
-      "eventSlug": "hal-williams-death",
-      "primaryKeyword": "Hal Williams death",
-      "primaryEntity": "Hal Williams",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "tiff-2026-special-presentations-program-additions",
+      "primaryKeyword": "tiff",
+      "primaryEntity": "Toronto International Film Festival",
       "entities": [
-        "227",
-        "Sanford and Son"
+        "Margaret Qualley",
+        "Cate Blanchett",
+        "Mahershala Ali"
       ],
-      "angle": "Veteran actor Hal Williams, known for '227' and 'Sanford and Son,' dies at 91.",
+      "angle": "The Toronto International Film Festival reveals additions to its Special Presentations program, featuring films with Cate Blanchett and Mahershala Ali.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/film/news/tiff-2026-special-presentations-program-additions-alpha-gang-margaret-qualley-cate-blanchett-1236812413/",
+          "ageMin": 60,
+          "headline": "TIFF 2026 Announces Special Presentations Program Additions Featuring Margaret Qualley, Cate Blanchett and Mahershala Ali",
+          "summary": "The 2026 Toronto International Film Festival announced five additions to its Special Presentation program today. Alpha Gang (Dir. David Zellner, Nathan Zellner) This sci-fi comedy from the Zellner brothers ( Sasquatch Sunset ) concerns a gang of humanoid aliens who visit Earth with the intent to wipe everyone out only to take a liking to its people. [ ]"
+        }
+      ],
+      "ageMin": 60,
+      "_cand": {
+        "key": "rss:tiff-2026-announces-special-presentations-program-additions-",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 87,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-ny-film-festival-sets-james-grays-paper-tiger-as-opening-night-film",
+      "slug": "ny-film-festival-sets-james-gray-s-paper-tiger-as-opening-night-film",
+      "title": "NY Film Festival Sets James Gray’s Paper Tiger as Opening Night Film",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "ny-film-festival-sets-james-grays-paper-tiger-as-opening-night-film",
+      "primaryKeyword": "paper tiger ny film festival",
+      "primaryEntity": "Paper Tiger",
+      "entities": [
+        "NY Film Festival",
+        "James Gray",
+        "Adam Driver"
+      ],
+      "angle": "James Gray's crime drama 'Paper Tiger,' starring Adam Driver, Miles Teller, and Scarlett Johansson, has been selected as the opening night film for the New York Film Festival.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
         {
           "outlet": "THR",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/tv/tv-news/hal-williams-actor-227-sanford-and-son-dies-at-91-1236649944/",
-          "ageMin": 155,
-          "headline": "Hal Williams, Actor on 227 and Sanford and Son, Dies at 91",
-          "summary": "He also played a 'Private Benjamin' drill sergeant in the film and TV versions and had a dramatic turn on 'The Waltons.'"
-        },
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/tv/news/hal-williams-dead-227-sanford-and-son-1236812244/",
-          "ageMin": 386,
-          "headline": "Hal Williams, 227 Star and Sanford and Son Regular, Dies at 91",
-          "summary": "Hal Williams, the TV veteran who appeared in American sitcom staples like 227 and Sanford and Son, has died, according to his manager. He was 91. 227 ran from 1985 to 1990, and followed a group of middle-aged tenants living together in an apartment building. Williams starred as Lester Jenkins, who was husband to Marla [ ]"
-        },
-        {
-          "outlet": "TheWrap",
-          "tier": 7,
-          "url": "https://www.thewrap.com/culture-lifestyle/culture/hal-williams-dies-sanford-and-son-private-benjamin/",
-          "ageMin": 392,
-          "headline": "Hal Williams, 227 and Sanford and Son Star, Dies at 91",
-          "summary": "His other acting credits include \"Private Benjamin,\" \"Flight\" and \"The Waltons\" The post Hal Williams, 227 and Sanford and Son Star, Dies at 91 appeared first on TheWrap ."
-        },
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/hal-williams-actor-dead-sanford-and-son-1236983727/",
-          "ageMin": 435,
-          "headline": "Hal Williams Dies: Beloved Sanford And Son Actor Was 91",
-          "summary": "Veteran actor Hal Williams, who is probably best known for playing Officer Smitty Smith on Sanford and Son, died this morning at his home in Rancho Mirage, according to his representative. He was 91. As Smitty, Williams was one half of a crimefighting duo who appeared on 22 episodes of the classic show. His partner, [ ]"
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/paper-tiger-2026-ny-film-festival-opening-night-1236649741/",
+          "ageMin": 61,
+          "headline": "NY Film Festival Sets James Gray s Paper Tiger as Opening Night Film",
+          "summary": "The Neon crime drama — starring Adam Driver, Miles Teller and Scarlett Johansson — had its world premiere at Cannes."
         }
       ],
-      "ageMin": 155,
+      "ageMin": 61,
       "_cand": {
-        "key": "rss:hal-williams-actor-on-227-and-sanford-and-son-dies-at-91",
+        "key": "rss:ny-film-festival-sets-james-gray-s-paper-tiger-as-opening-ni",
         "popularity": 0,
         "kind": "rss-news"
       },
-      "corroborationCount": 4,
+      "corroborationCount": 1,
       "verification": {
-        "tier1Count": 4,
-        "tier1Owners": 2,
-        "outletCount": 4,
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
         "outlets": [
-          "THR",
-          "Variety",
-          "TheWrap",
-          "Deadline"
+          "THR"
         ],
         "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": null,
-        "framing": "plain",
-        "status": "CONFIRMED",
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 95,
+      "priority": 79,
       "signals": {
         "recency": 16,
-        "corroboration": 25,
-        "status": 25,
-        "type": 14,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-toronto-film-festival-special-presentations",
+      "slug": "toronto-cate-blanchett-margaret-qualley-naomi-watts-films-to-get-world",
+      "title": "Toronto: Cate Blanchett, Margaret Qualley, Naomi Watts Films to Get World Premieres",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "toronto-film-festival-special-presentations",
+      "primaryKeyword": "toronto film festival premieres",
+      "primaryEntity": "Toronto International Film Festival",
+      "entities": [
+        "Cate Blanchett",
+        "Margaret Qualley",
+        "Naomi Watts",
+        "Rachel Morrison"
+      ],
+      "angle": "Several notable films starring Cate Blanchett, Margaret Qualley, and Naomi Watts will have their world premieres at the Toronto Film Festival.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/tiff-cate-blanchett-margaret-qualley-naomi-watts-premieres-1236650048/",
+          "ageMin": 61,
+          "headline": "Toronto: Cate Blanchett, Margaret Qualley, Naomi Watts Films to Get World Premieres",
+          "summary": "TIFF has given Special Presentations slots to movies by Rachel Morrison, the Zellner Brothers, Ben Shirinian, Bassam Tariq and Benjamín Naishtat."
+        }
+      ],
+      "ageMin": 61,
+      "_cand": {
+        "key": "rss:toronto-cate-blanchett-margaret-qualley-naomi-watts-films-to",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 79,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-toronto-film-festival-lineup-additions",
+      "slug": "cate-blanchett-riley-keough-chris-pine-margaret-qualley-films-headed-t",
+      "title": "Cate Blanchett, Riley Keough, Chris Pine, Margaret Qualley Films Headed to Toronto Film Festival",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "toronto-film-festival-lineup-additions",
+      "primaryKeyword": "toronto film festival lineup",
+      "primaryEntity": "Toronto International Film Festival",
+      "entities": [
+        "Cate Blanchett",
+        "Riley Keough",
+        "Chris Pine",
+        "Margaret Qualley"
+      ],
+      "angle": "Films starring Cate Blanchett, Riley Keough, Chris Pine, and Margaret Qualley are among the new additions to the Toronto Film Festival lineup.",
+      "tmdbType": "movie",
+      "source": "rss:TheWrap",
+      "sources": [
+        {
+          "outlet": "TheWrap",
+          "tier": 7,
+          "url": "https://www.thewrap.com/creative-content/movies/toronto-film-festival-adds-cate-blanchett-riley-keough-films/",
+          "ageMin": 61,
+          "headline": "Cate Blanchett, Riley Keough, Chris Pine, Margaret Qualley Films Headed to Toronto Film Festival",
+          "summary": "\"Alpha Gang,\" \"Glaxo,\" \"The Housewife,\" \"Love of Your Life\" and \"Your Mother Your Mother Your Mother\" have been added to the festival lineup The post Cate Blanchett, Riley Keough, Chris Pine, Margaret Qualley Films Headed to Toronto Film Festival appeared first on TheWrap ."
+        }
+      ],
+      "ageMin": 61,
+      "_cand": {
+        "key": "rss:cate-blanchett-riley-keough-chris-pine-margaret-qualley-film",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "TheWrap"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "TheWrap",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 79,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-mick-jagger-foreign-tongues-ai-billboard",
+      "slug": "mick-jagger-on-new-rolling-stones-album-foreign-tongues-and-ai-in-musi",
+      "title": "Mick Jagger on New Rolling Stones Album 'Foreign Tongues' and AI in Music",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "mick-jagger-foreign-tongues-ai-billboard",
+      "primaryKeyword": "Mick Jagger new album",
+      "primaryEntity": "Mick Jagger",
+      "entities": [
+        "The Rolling Stones",
+        "Foreign Tongues (album)"
+      ],
+      "angle": "Mick Jagger discusses the Rolling Stones' new album 'Foreign Tongues' and the impact of AI in music.",
+      "tmdbType": "movie",
+      "source": "rss:Billboard",
+      "sources": [
+        {
+          "outlet": "Billboard",
+          "tier": 7,
+          "url": "https://www.billboard.com/pro/tricky-stewart-signs-new-publishing-deal-with-bmg/",
+          "ageMin": 61,
+          "headline": "Producer/Composer Tricky Stewart Signs New Publishing Deal With BMG",
+          "summary": "Known for his work with Beyoncé and Rihanna, Stewart was inducted into the Songwriters Hall of Fame earlier this year."
+        }
+      ],
+      "ageMin": 61,
+      "_cand": {
+        "key": "rss:producer-composer-tricky-stewart-signs-new-publishing-deal-w",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Billboard"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Billboard",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 55,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
         "big": 0,
-        "trending": 15,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-keith-richards-foreign-tongues-rolling-stones-billboard",
+      "slug": "keith-richards-discusses-new-rolling-stones-music-and-band-s-evolution",
+      "title": "Keith Richards Discusses New Rolling Stones Music and Band's Evolution",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "keith-richards-foreign-tongues-rolling-stones-billboard",
+      "primaryKeyword": "Keith Richards new music",
+      "primaryEntity": "Keith Richards",
+      "entities": [
+        "The Rolling Stones",
+        "Foreign Tongues (album)"
+      ],
+      "angle": "Keith Richards talks about the Rolling Stones' new music, 'Foreign Tongues,' and the band's continued evolution.",
+      "tmdbType": "movie",
+      "source": "rss:Billboard",
+      "sources": [
+        {
+          "outlet": "Billboard",
+          "tier": 7,
+          "url": "https://www.billboard.com/video/mick-jagger-foreign-tongues-ai-music-rolling-stones-legacy/",
+          "ageMin": 61,
+          "headline": "Mick Jagger Breaks Down New Album, Foreign Tongues, AI in Music Rolling Stones Legacy Billboard Cover",
+          "summary": "Billboard cover star Mick Jagger opens up about the Rolling Stones’ latest creative streak, the making of the band’s new music, and how technology continues to shape the recording process. He reflects on songwriting, working with producer Andrew Watt, revisiting songs left off earlier sessions, and why the Stones feel closer than ever to releasing [ ]"
+        }
+      ],
+      "ageMin": 61,
+      "_cand": {
+        "key": "rss:mick-jagger-breaks-down-new-album-foreign-tongues-ai-in-musi",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Billboard"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Billboard",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 55,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-alpha-gang-love-of-your-life-tiff",
+      "slug": "mahershala-ali-s-alpha-gang-and-rachel-morrison-s-love-of-your-life-se",
+      "title": "Mahershala Ali's 'Alpha Gang' and Rachel Morrison's 'Love of Your Life' Set for TIFF",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "alpha-gang-love-of-your-life-tiff",
+      "primaryKeyword": "Alpha Gang movie",
+      "primaryEntity": "Alpha Gang (film)",
+      "entities": [
+        "Rachel Morrison",
+        "Mahershala Ali",
+        "Margaret Qualley",
+        "Love of Your Life (film)"
+      ],
+      "angle": "Rachel Morrison's new film 'Love of Your Life' and 'Alpha Gang' starring Mahershala Ali are set for TIFF Special Presentations.",
+      "tmdbType": "movie",
+      "source": "rss:IndieWire",
+      "sources": [
+        {
+          "outlet": "IndieWire",
+          "tier": 7,
+          "url": "https://www.indiewire.com/news/festivals/2026-tiff-special-presentations-alpha-gang-1235205711/",
+          "ageMin": 61,
+          "headline": "The Zellners Starry Sci-Fi Alpha Gang, Mahershala Ali in Your Mother Your Mother Your Mother Set for TIFF Special Presentations",
+          "summary": "Cinematographer-turned-director Rachel Morrison also brings a new film to Toronto with the world premiere of \"Love of Your Life,\" with Margaret Qualley."
+        }
+      ],
+      "ageMin": 61,
+      "_cand": {
+        "key": "rss:the-zellners-starry-sci-fi-alpha-gang-mahershala-ali-in-your",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "IndieWire"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "IndieWire",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 79,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "softTv": 0
+      }
+    },
+    {
+      "id": "news-eli-roth-ice-cream-man-ice-cream-flavor",
+      "slug": "eli-roth-launches-brain-freeze-ice-cream-flavor-to-promote-new-horror-",
+      "title": "Eli Roth Launches 'Brain Freeze' Ice Cream Flavor to Promote New Horror Film",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "eli-roth-ice-cream-man-ice-cream-flavor",
+      "primaryKeyword": "ice cream man movie",
+      "primaryEntity": "Ice Cream Man (film)",
+      "entities": [
+        "Eli Roth"
+      ],
+      "angle": "Horror director Eli Roth partners with an ice cream company for a unique promotional flavor.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/film/news/eli-roth-humphry-slocombe-ice-cream-flavor-1236812389/",
+          "ageMin": 63,
+          "headline": "Eli Roth, Humphry Slocombe Partner on Ice Cream Flavor Brain Freeze to Promote Ice Cream Man (EXCLUSIVE)",
+          "summary": "Humphry Slocombe, a San Francisco-based ice cream company, will team with Eli Roth to help promote his new horror film Ice Cream Man. The company has created Brain Freeze, a limited-edition flavor inspired by the upcoming film, which will debut in theaters on August 7 through Roth s company The Horror Section. Brain Freeze is described [ ]"
+        }
+      ],
+      "ageMin": 63,
+      "_cand": {
+        "key": "rss:eli-roth-humphry-slocombe-partner-on-ice-cream-flavor-brain-",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 79,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
         "softTv": 0
       }
     }
