@@ -1,0 +1,88 @@
+{
+ "runId": "run-2026-07-16T21-31-26",
+ "mode": "live",
+ "startedAt": "2026-07-16T21:31:26.023Z",
+ "films": 6,
+ "published": [
+  {
+   "tag": "disclosure-day-bo-update×BO-UPDATE",
+   "slug": "disclosure-day-box-office-day-34-domestic-total-climbs-to-112-9-million",
+   "path": "/home/runner/work/thescreenreport/thescreenreport/content/articles/disclosure-day-box-office-day-34-domestic-total-climbs-to-112-9-million.md",
+   "score": 45,
+   "acceptReason": "daily factual update — deterministic numbers + accuracy walls + word floor all pass"
+  }
+ ],
+ "held": [
+  {
+   "tag": "minions-monsters-bo-update×BO-UPDATE",
+   "reason": "not material: no new number (current $280M not above last published $280M)"
+  },
+  {
+   "tag": "evil-dead-burn-bo-update×BO-UPDATE",
+   "reason": "not material: no new number (current $26M not above last published $26M)"
+  },
+  {
+   "tag": "young-washington-bo-update×BO-UPDATE",
+   "reason": "not material: no new number (current $37M not above last published $37M)"
+  },
+  {
+   "tag": "obsession-bo-update×BO-UPDATE",
+   "reason": "not material: no new number (current $428M not above last published $428M)"
+  },
+  {
+   "tag": "supergirl-bo-update×BO-UPDATE",
+   "reason": "not material: no new number (current $117M not above last published $117M)"
+  }
+ ],
+ "rejected": [],
+ "skipped": [],
+ "blocked": [],
+ "zeroStreak": 0,
+ "finishedAt": "2026-07-16T21:39:51.180Z",
+ "meter": {
+  "byRole": {
+   "gatherer": {
+    "calls": 7,
+    "errors": 0,
+    "in": 21168,
+    "out": 2616,
+    "usd": 0.00316,
+    "ms": 11524
+   },
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3424,
+    "out": 344,
+    "usd": 0.00017,
+    "ms": 1662
+   },
+   "synthesizer": {
+    "calls": 1,
+    "errors": 0,
+    "in": 710,
+    "out": 819,
+    "usd": 0.00021,
+    "ms": 7911
+   },
+   "writer": {
+    "calls": 3,
+    "errors": 0,
+    "in": 5781,
+    "out": 2875,
+    "usd": 0.00691,
+    "ms": 32075
+   },
+   "qa": {
+    "calls": 10,
+    "errors": 1,
+    "in": 25277,
+    "out": 3872,
+    "usd": 0.01524,
+    "ms": 59977
+   }
+  },
+  "totalUsd": 0.0257
+ },
+ "openrouterTotalUsd": 0.02663
+}
