@@ -10,19 +10,16 @@ date: '2026-07-05T18:01:14.906Z'
 dek: >-
   The Hallmark star shared a behind-the-scenes look at her sister Kimberly
   Williams-Paisley's big night out.
-metaTitle: >-
-  Ashley Williams Wasn't at the Swift-Kelce Wedding, But She Had the Best Seat
-  in the House
+metaTitle: Ashley Williams Wasn't at the Swift-Kelce Wedding
 metaDescription: >-
   The Hallmark star shared a behind-the-scenes look at her sister Kimberly
-  Williams-Paisley's big night out.
+  Williams-Paisley's big night out. Ashley Williams shared an Instagram video on
+  July.
 formatTag: gossip
 gossipType: general
 tags:
   - Ashley Williams
   - celebrity
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Ashley Williams shared an Instagram video on July 3 of her helping sister

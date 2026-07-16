@@ -8,17 +8,16 @@ date: '2026-07-06T17:57:03.254Z'
 dek: >-
   A dramatic vote sends Parmida and Corbin packing just days before the season
   eight finale.
-metaTitle: 'Love Island USA''s Final Week Shake-Up: Which Couple Just Got Dumped?'
+metaTitle: 'Love Island USA''s Final Week Shake-Up: Which Couple'
 metaDescription: >-
   A dramatic vote sends Parmida and Corbin packing just days before the season
-  eight finale.
+  eight finale. Their elimination was the result of a combination of America's
+  vote.
 formatTag: gossip
 gossipType: general
 tags:
   - Parmida Keshani
   - tv
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Their elimination was decided by a combination of America's vote and a

@@ -8,17 +8,16 @@ date: '2026-07-08T20:01:08.707Z'
 dek: >-
   The NBA legend reveals why he opted for golf over glitz, offering a candid
   take on the star-studded event.
-metaTitle: Charles Barkley Says He Passed on Taylor Swift & Travis Kelce's Wedding Invite
+metaTitle: Charles Barkley Says He Passed on Taylor Swift & Travis
 metaDescription: >-
   The NBA legend reveals why he opted for golf over glitz, offering a candid
-  take on the star-studded event.
+  take on the star-studded event. His stated reasons were a dislike for
+  dressing.
 formatTag: gossip
 gossipType: general
 tags:
   - Charles Barkley
   - celebrity
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Barkley cited his dislike for dressing up and large events as his reason,

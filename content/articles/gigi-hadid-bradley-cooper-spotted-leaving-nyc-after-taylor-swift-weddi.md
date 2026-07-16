@@ -10,19 +10,15 @@ date: '2026-07-08T14:02:10.647Z'
 dek: >-
   The couple was spotted at the airport, putting a bow on a whirlwind weekend of
   celebrity nuptials.
-metaTitle: >-
-  Gigi Hadid and Bradley Cooper Exit NYC After Taylor Swift's Wedding
-  Festivities
+metaTitle: Gigi Hadid and Bradley Cooper Exit NYC After Taylor
 metaDescription: >-
   The couple was spotted at the airport, putting a bow on a whirlwind weekend of
-  celebrity nuptials.
+  celebrity nuptials. The couple attended the Swift-Kelce wedding festivities.
 formatTag: gossip
 gossipType: career
 tags:
   - Gigi Hadid
   - celebrity
-  - career
-  - celebrity gossip
 keyTakeaways:
   - >-
     Gigi Hadid and Bradley Cooper were seen at a New York airport departing

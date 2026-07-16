@@ -17,7 +17,6 @@ gossipType: general
 tags:
   - Kathy Griffin
   - celebrity
-  - general
 keyTakeaways:
   - >-
     Kathy Griffin posted an Instagram video on June 30 discussing her absence

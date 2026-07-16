@@ -8,16 +8,16 @@ date: '2026-07-03T13:58:27.456Z'
 dek: >-
   The F1 star makes a rare public nod to the reality star during a fan event,
   putting their relationship in the spotlight.
-metaTitle: Lewis Hamilton Credits Kim Kardashian for His Happiness at Silverstone
+metaTitle: Lewis Hamilton Credits Kim Kardashian for His Happiness
 metaDescription: >-
   The F1 star makes a rare public nod to the reality star during a fan event,
-  putting their relationship in the spotlight.
+  putting their relationship in the spotlight. Lewis Hamilton publicly credited
+  Kim.
 formatTag: gossip
 gossipType: romance
 tags:
   - Lewis Hamilton
   - celebrity
-  - romance
 keyTakeaways:
   - >-
     Lewis Hamilton publicly credited Kim Kardashian for his happiness at a

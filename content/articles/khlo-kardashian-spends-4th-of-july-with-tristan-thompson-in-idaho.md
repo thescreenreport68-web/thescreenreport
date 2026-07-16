@@ -10,19 +10,16 @@ date: '2026-07-06T11:58:00.124Z'
 dek: >-
   The exes were seen together with their kids in Coeur d'Alene, a favorite
   Kardashian family spot.
-metaTitle: >-
-  Khloé Kardashian and Tristan Thompson Spotted Co-Parenting at Idaho 4th of
-  July Parade
+metaTitle: Khloé Kardashian and Tristan Thompson Spotted
 metaDescription: >-
   The exes were seen together with their kids in Coeur d'Alene, a favorite
-  Kardashian family spot.
+  Kardashian family spot. Khloé Kardashian and Tristan Thompson were spotted
+  together.
 formatTag: gossip
 gossipType: spotted
 tags:
   - Khloé Kardashian
   - celebrity
-  - spotted
-  - celebrity gossip
 keyTakeaways:
   - >-
     Khloé Kardashian and Tristan Thompson were spotted together with their kids

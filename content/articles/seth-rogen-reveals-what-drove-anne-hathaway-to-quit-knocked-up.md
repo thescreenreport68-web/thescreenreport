@@ -8,16 +8,16 @@ date: '2026-07-03T11:04:02.025Z'
 dek: >-
   The actor reveals the 'brand' clash that led to a major recast for the 2007
   comedy hit.
-metaTitle: Seth Rogen Says Anne Hathaway Quit 'Knocked Up' Over a Graphic Birth Scene
+metaTitle: Seth Rogen Says Anne Hathaway Quit 'Knocked Up'
 metaDescription: >-
   The actor reveals the 'brand' clash that led to a major recast for the 2007
-  comedy hit.
+  comedy hit. Rogen attributed her departure primarily to discomfort with a
+  graphic.
 formatTag: gossip
 gossipType: general
 tags:
   - Anne Hathaway
   - celebrity
-  - general
 keyTakeaways:
   - >-
     Seth Rogen stated on 'The A24 Podcast' that Anne Hathaway withdrew from

@@ -9,17 +9,16 @@ date: '2026-07-07T16:01:09.290Z'
 dek: >-
   The model attended the star-studded event with fiancé Liam Hemsworth, sharing
   a glimpse of the 'night of our lives.'
-metaTitle: Matty Healy's Ex Gabriella Brooks Steps Out at Taylor Swift's Wedding
+metaTitle: Matty Healy's Ex Gabriella Brooks Steps Out at Taylor
 metaDescription: >-
   The model attended the star-studded event with fiancé Liam Hemsworth, sharing
-  a glimpse of the 'night of our lives.'
+  a glimpse of the 'night of our lives.' Brooks and Hemsworth reportedly
+  attended.
 formatTag: gossip
 gossipType: breakup
 tags:
   - Gabriella Brooks
   - celebrity
-  - breakup
-  - celebrity gossip
 keyTakeaways:
   - >-
     Gabriella Brooks, who dated Matty Healy for four years, attended Taylor

@@ -11,14 +11,12 @@ dek: >-
 metaTitle: Gigi Hadid's Wedding Weekend Wardrobe Steals the Show
 metaDescription: >-
   The supermodel served two distinct, designer looks for Taylor Swift and Travis
-  Kelce's rehearsal dinner and wedding.
+  Kelce's rehearsal dinner and wedding. Both events were held at Madison Square.
 formatTag: gossip
 gossipType: general
 tags:
   - Gigi Hadid
   - celebrity
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Gigi Hadid wore a yellow Christopher Esber dress with cutouts to Taylor

@@ -8,17 +8,16 @@ date: '2026-07-10T08:01:19.549Z'
 dek: >-
   The former NFL star responds to his wife's restraining order with a series of
   counter-claims, including a 'voodoo spell' accusation.
-metaTitle: Marcellus Wiley Denies Abuse Allegations in Explosive Divorce Filing
+metaTitle: Marcellus Wiley Denies Abuse Allegations in Explosive
 metaDescription: >-
   The former NFL star responds to his wife's restraining order with a series of
-  counter-claims, including a 'voodoo spell' accusation.
+  counter-claims, including a 'voodoo spell' accusation. Marcellus Wiley
+  publicly.
 formatTag: gossip
 gossipType: general
 tags:
   - Marcellus Wiley
   - celebrity
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Annemarie Wiley filed for divorce and obtained a temporary restraining order

@@ -8,17 +8,16 @@ date: '2026-07-09T22:01:17.398Z'
 dek: >-
   The Barstool personality shuts down dating rumors with the 'Summer House'
   alum, insisting she hasn't seen him in months.
-metaTitle: 'Brianna Chickenfry Has a Question for the Rumor Mill: ''Me? West Wilson?'''
+metaTitle: Brianna Chickenfry Has a Question for the Rumor Mill
 metaDescription: >-
   The Barstool personality shuts down dating rumors with the 'Summer House'
-  alum, insisting she hasn't seen him in months.
+  alum, insisting she hasn't seen him in months. The rumor began after a TikTok
+  user.
 formatTag: gossip
 gossipType: romance
 tags:
   - Brianna Chickenfry
   - celebrity
-  - romance
-  - celebrity gossip
 keyTakeaways:
   - >-
     Brianna Chickenfry (Brianna LaPaglia) denied rumors she is dating West

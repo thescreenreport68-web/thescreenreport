@@ -6,15 +6,15 @@ subcategory: news
 author: alicia-bernard
 date: '2026-07-08T18:00:11.414Z'
 dek: The 'American Idol' host had a star-spangled conflict of interest.
-metaTitle: Ryan Seacrest Reveals Why He Skipped the Swift-Kelce Wedding
-metaDescription: The 'American Idol' host had a star-spangled conflict of interest.
+metaTitle: Ryan Seacrest Reveals Why He Skipped the Swift-Kelce
+metaDescription: >-
+  The 'American Idol' host had a star-spangled conflict of interest. Ryan
+  Seacrest canceled his RSVP to Taylor Swift and Travis Kelce's wedding to host.
 formatTag: gossip
 gossipType: controversy
 tags:
   - Ryan Seacrest
   - celebrity
-  - controversy
-  - celebrity gossip
 keyTakeaways:
   - >-
     Ryan Seacrest canceled his RSVP to Taylor Swift and Travis Kelce's wedding

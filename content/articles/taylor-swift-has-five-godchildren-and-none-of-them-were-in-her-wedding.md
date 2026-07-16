@@ -9,17 +9,16 @@ date: '2026-07-09T08:02:12.354Z'
 dek: >-
   A new report suggests the singer's five godchildren, including those of Blake
   Lively and Jaime King, were not part of the festivities.
-metaTitle: Where Were Taylor Swift's Godchildren During Her Wedding Celebrations?
+metaTitle: Where Were Taylor Swift's Godchildren During
 metaDescription: >-
   A new report suggests the singer's five godchildren, including those of Blake
-  Lively and Jaime King, were not part of the festivities.
+  Lively and Jaime King, were not part of the festivities. Reps for the
+  involved.
 formatTag: gossip
 gossipType: general
 tags:
   - Taylor Swift
   - celebrity
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Page Six reports Taylor Swift's five godchildren were not present at her

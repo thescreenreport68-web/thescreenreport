@@ -8,16 +8,15 @@ date: '2026-07-03T13:34:27.456Z'
 dek: >-
   The MLB alum, recently single, was photographed in a lip-lock with a brunette
   at Michael Rubin's star-studded bash.
-metaTitle: Alex Rodriguez Spotted Kissing Mystery Woman at Hamptons White Party
+metaTitle: Alex Rodriguez Spotted Kissing Mystery Woman
 metaDescription: >-
   The MLB alum, recently single, was photographed in a lip-lock with a brunette
-  at Michael Rubin's star-studded bash.
+  at Michael Rubin's star-studded bash. Alex Rodriguez was photographed kissing.
 formatTag: gossip
 gossipType: general
 tags:
   - Alex Rodriguez
   - celebrity
-  - general
 keyTakeaways:
   - >-
     Alex Rodriguez was photographed kissing an unidentified brunette woman at

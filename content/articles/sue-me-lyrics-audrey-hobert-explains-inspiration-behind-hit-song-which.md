@@ -11,18 +11,16 @@ date: '2026-07-03T14:42:05.160Z'
 dek: >-
   The singer-songwriter explains the post-breakup inspiration behind her
   Spotify-charting track to Cosmopolitan.
-metaTitle: >-
-  Audrey Hobert's 'Sue Me' Climbs the Charts a Year Later — And She's Spilling
-  the Tea
+metaTitle: Audrey Hobert's 'Sue Me' Climbs the Charts a Year Later
 metaDescription: >-
   The singer-songwriter explains the post-breakup inspiration behind her
-  Spotify-charting track to Cosmopolitan.
+  Spotify-charting track to Cosmopolitan. Audrey Hobert's song "Sue Me" entered
+  the U.S..
 formatTag: gossip
 gossipType: general
 tags:
   - Audrey Hobert
   - music
-  - general
 keyTakeaways:
   - >-
     Audrey Hobert's song "Sue Me" entered the U.S. Spotify chart at #112 on July

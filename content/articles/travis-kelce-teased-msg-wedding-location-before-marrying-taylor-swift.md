@@ -9,16 +9,16 @@ date: '2026-07-04T06:25:44.365Z'
 dek: >-
   Fans are connecting the dots between the NFL star's curious podcast comments
   and his recent nuptials with Taylor Swift.
-metaTitle: Did Travis Kelce Drop Hints About His MSG Wedding Venue Months Ago?
+metaTitle: Did Travis Kelce Drop Hints About His MSG Wedding Venue
 metaDescription: >-
   Fans are connecting the dots between the NFL star's curious podcast comments
-  and his recent nuptials with Taylor Swift.
+  and his recent nuptials with Taylor Swift. The arena offers significant
+  privacy.
 formatTag: gossip
 gossipType: cryptic
 tags:
   - Taylor Swift
   - celebrity
-  - cryptic
 keyTakeaways:
   - >-
     The arena offers significant privacy features, including hidden tunnels and
@@ -28,12 +28,14 @@ faq:
     a: >-
       They tied the knot at Madison Square Garden in New York City on July 3,
       2026.
-  - q: Did Travis Kelce hint at the Madison Square Garden wedding venue in advance?
+  - q: >-
+      Did Travis Kelce hint at the Madison Square Garden wedding venue in
+      advance?
     a: >-
-      Weeks before the wedding, Kelce spoke fondly about Madison Square Garden on
-      his New Heights podcast — saying he'd "always wondered what MSG felt like
-      when it was rocking" — remarks fans later flagged as possible hints, though
-      he never framed them as intentional.
+      Weeks before the wedding, Kelce spoke fondly about Madison Square Garden
+      on his New Heights podcast — saying he'd "always wondered what MSG felt
+      like when it was rocking" — remarks fans later flagged as possible hints,
+      though he never framed them as intentional.
 rumorStatus: Confirmed
 gossipPull: '"I''ve always wondered what MSG felt like when it was rocking."'
 storyStatus: CONFIRMED

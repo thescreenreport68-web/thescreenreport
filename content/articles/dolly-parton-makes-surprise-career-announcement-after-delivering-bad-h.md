@@ -9,17 +9,16 @@ date: '2026-07-09T06:05:56.086Z'
 dek: >-
   The country icon shares a 'dream come true' and a recovery update, all in one
   Instagram video.
-metaTitle: 'Dolly Parton Announces Broadway Musical, Updates Fans on Her Health'
+metaTitle: 'Dolly Parton Announces Broadway Musical, Updates Fans'
 metaDescription: >-
   The country icon shares a 'dream come true' and a recovery update, all in one
-  Instagram video.
+  Instagram video. Parton will not perform in the show but has written new
+  songs.
 formatTag: gossip
 gossipType: general
 tags:
   - Dolly Parton
   - celebrity
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Dolly Parton announced her musical, 'Dolly: A True Original Musical,' will

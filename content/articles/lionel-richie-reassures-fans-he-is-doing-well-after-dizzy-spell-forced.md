@@ -9,17 +9,16 @@ date: '2026-07-06T22:01:06.660Z'
 dek: >-
   The music legend posts a grateful update after a dizzy spell forced him to
   postpone shows.
-metaTitle: Lionel Richie Dances Back with a Smile After On-Stage Health Scare
+metaTitle: Lionel Richie Dances Back with a Smile After On-Stage
 metaDescription: >-
   The music legend posts a grateful update after a dizzy spell forced him to
-  postpone shows.
+  postpone shows. Lionel Richie, 77, posted a health update on Instagram,
+  thanking.
 formatTag: gossip
 gossipType: general
 tags:
   - Lionel Richie
   - celebrity
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Lionel Richie, 77, posted a health update on Instagram, thanking fans and

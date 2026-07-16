@@ -8,17 +8,16 @@ date: '2026-07-05T10:00:19.752Z'
 dek: >-
   A late-night sighting appears to settle a fan-fueled conspiracy about the
   model's attendance.
-metaTitle: Karlie Kloss Spotted Leaving MSG After Taylor Swift's Reported Wedding
+metaTitle: Karlie Kloss Spotted Leaving MSG After Taylor
 metaDescription: >-
   A late-night sighting appears to settle a fan-fueled conspiracy about the
-  model's attendance.
+  model's attendance. The pair's friendship began in 2012 and was once highly
+  public.
 formatTag: gossip
 gossipType: career
 tags:
   - Karlie Kloss
   - celebrity
-  - career
-  - celebrity gossip
 keyTakeaways:
   - >-
     Karlie Kloss was photographed leaving Madison Square Garden in the early

@@ -18,8 +18,6 @@ gossipType: general
 tags:
   - Taylor Swift
   - celebrity
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Paul McCartney reportedly performed the Beatles' "I Want to Hold Your Hand"

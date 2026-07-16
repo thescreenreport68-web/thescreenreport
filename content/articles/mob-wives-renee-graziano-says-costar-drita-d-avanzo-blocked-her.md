@@ -8,16 +8,16 @@ date: '2026-07-03T12:50:15.257Z'
 dek: >-
   The 'Mob Wives' alum opens up about a frozen friendship and the infamous
   rooftop fight that almost didn't air.
-metaTitle: Renee Graziano Reveals Drita D'Avanzo Blocked Her After Rehab Amends Attempt
+metaTitle: Renee Graziano Reveals Drita D'Avanzo Blocked
 metaDescription: >-
   The 'Mob Wives' alum opens up about a frozen friendship and the infamous
-  rooftop fight that almost didn't air.
+  rooftop fight that almost didn't air. Renee Graziano stated in an E! News
+  interview.
 formatTag: gossip
 gossipType: pregnancy
 tags:
   - Renee Graziano
   - celebrity
-  - pregnancy
 keyTakeaways:
   - >-
     Renee Graziano stated in an E! News interview that Drita D'Avanzo blocked

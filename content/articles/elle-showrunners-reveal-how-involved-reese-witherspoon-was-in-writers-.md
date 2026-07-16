@@ -9,17 +9,16 @@ date: '2026-07-07T08:00:57.527Z'
 dek: >-
   The showrunners of the 'Legally Blonde' prequel series reveal the 'nuggets of
   gold' Reese Witherspoon dropped in the writers' room.
-metaTitle: How Reese Witherspoon's 90s Teenage Years Shaped the 'Elle' Prequel
+metaTitle: How Reese Witherspoon's 90s Teenage Years Shaped
 metaDescription: >-
   The showrunners of the 'Legally Blonde' prequel series reveal the 'nuggets of
-  gold' Reese Witherspoon dropped in the writers' room.
+  gold' Reese Witherspoon dropped in the writers' room. Reese Witherspoon
+  served.
 formatTag: gossip
 gossipType: general
 tags:
   - Reese Witherspoon
   - tv
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Reese Witherspoon served as an executive producer on 'Elle,' the Prime Video

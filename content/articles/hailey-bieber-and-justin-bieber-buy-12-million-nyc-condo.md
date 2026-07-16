@@ -8,17 +8,16 @@ date: '2026-07-10T02:01:20.981Z'
 dek: >-
   Property records confirm the Biebers' latest real estate move, trading L.A.
   for a family-friendly NYC pad with a Hudson River view.
-metaTitle: Justin and Hailey Bieber Drop $12 Million on a West Village Nest
+metaTitle: Justin and Hailey Bieber Drop $12 Million on a West
 metaDescription: >-
   Property records confirm the Biebers' latest real estate move, trading L.A.
-  for a family-friendly NYC pad with a Hudson River view.
+  for a family-friendly NYC pad with a Hudson River view. The unit is
+  approximately.
 formatTag: gossip
 gossipType: general
 tags:
   - Hailey Bieber
   - celebrity
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Justin and Hailey Bieber purchased a $12 million condominium in Manhattan's

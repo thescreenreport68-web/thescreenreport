@@ -11,19 +11,16 @@ date: '2026-07-07T06:00:56.872Z'
 dek: >-
   The UK franchise is crossing the pond, and a familiar face from 'Ladies of
   London' is leading the charge.
-metaTitle: >-
-  Bravo Brings 'Real Housewives of London' Stateside — With a Second Season
-  Already in the Can
+metaTitle: Bravo Brings 'Real Housewives of London' Stateside
 metaDescription: >-
   The UK franchise is crossing the pond, and a familiar face from 'Ladies of
-  London' is leading the charge.
+  London' is leading the charge. The show has been renewed for Season 2, and
+  filming.
 formatTag: gossip
 gossipType: general
 tags:
   - Juliet Angus
   - tv
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     *The Real Housewives of London* Season 1 premieres on Bravo Tuesday, July

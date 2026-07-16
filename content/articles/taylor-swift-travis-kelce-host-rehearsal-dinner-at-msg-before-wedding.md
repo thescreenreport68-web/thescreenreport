@@ -9,16 +9,16 @@ date: '2026-07-03T03:57:38.755Z'
 dek: >-
   The power couple's wedding weekend kicks off with a star-studded pre-party at
   the iconic arena.
-metaTitle: Taylor Swift and Travis Kelce Host Rehearsal Dinner at Madison Square Garden
+metaTitle: Taylor Swift and Travis Kelce Host Rehearsal Dinner
 metaDescription: >-
   The power couple's wedding weekend kicks off with a star-studded pre-party at
-  the iconic arena.
+  the iconic arena. The event was attended by close friends and family,
+  including.
 formatTag: gossip
 gossipType: general
 tags:
   - Taylor Swift
   - music
-  - general
 keyTakeaways:
   - A rehearsal dinner was hosted at Madison Square Garden on July 2.
   - >-

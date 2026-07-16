@@ -10,7 +10,7 @@ dek: >-
   The author and soccer legend were among the star-studded guests at Taylor
   Swift and Travis Kelce's nuptials, with a lyrical accessory and a heartfelt
   message.
-metaTitle: Glennon Doyle and Abby Wambach Brought a Swiftie Clutch to the Wedding
+metaTitle: Glennon Doyle and Abby Wambach Brought a Swiftie Clutch
 metaDescription: >-
   The author and soccer legend were among the star-studded guests at Taylor
   Swift and Travis Kelce's nuptials, with a lyrical accessory and a heartfelt
@@ -20,8 +20,6 @@ gossipType: general
 tags:
   - Glennon Doyle
   - celebrity
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Glennon Doyle and Abby Wambach attended Taylor Swift and Travis Kelce's

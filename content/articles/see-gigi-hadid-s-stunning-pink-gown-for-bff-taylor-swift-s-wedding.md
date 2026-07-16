@@ -8,7 +8,7 @@ date: '2026-07-06T00:00:05.198Z'
 dek: >-
   The model's hairstylist gives us a peek at her look for Taylor Swift's
   nuptials, complete with vintage waves and a pink Wiederhoeft gown.
-metaTitle: Gigi Hadid's 'Soft Serve' Wedding Hair Is the Sweetest Thing You'll See Today
+metaTitle: Gigi Hadid's 'Soft Serve' Wedding Hair Is the Sweetest
 metaDescription: >-
   The model's hairstylist gives us a peek at her look for Taylor Swift's
   nuptials, complete with vintage waves and a pink Wiederhoeft gown.
@@ -17,8 +17,6 @@ gossipType: general
 tags:
   - Gigi Hadid
   - celebrity
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Gigi Hadid's hairstylist, Dimitris Giannetos, shared photos of her getting

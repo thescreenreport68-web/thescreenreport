@@ -10,19 +10,16 @@ date: '2026-07-06T02:00:56.999Z'
 dek: >-
   The style icon brings her 'Quiet Luxury' aesthetic to an affordable family
   capsule collection.
-metaTitle: >-
-  Sofia Richie Grainge's New Amazon Collab is All About Matching With Your
-  Mini-Me
+metaTitle: Sofia Richie Grainge's New Amazon Collab is All
 metaDescription: >-
   The style icon brings her 'Quiet Luxury' aesthetic to an affordable family
-  capsule collection.
+  capsule collection. The collection is available now and emphasizes 'Quiet
+  Luxury'.
 formatTag: gossip
 gossipType: general
 tags:
   - Sofia Richie Grainge
   - celebrity
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Sofia Richie Grainge has launched a 'Mommy Me' capsule collection with

@@ -11,19 +11,16 @@ date: '2026-07-09T14:00:02.701Z'
 dek: >-
   The 'Too Hot to Handle' star gets a first look for his solo dating series
   'Let's Marry Harry,' premiering in August 2026.
-metaTitle: >-
-  Harry Jowsey Is Handing His Love Life to His Friends — and an Ex — in New
-  Netflix Show
+metaTitle: Harry Jowsey Is Handing His Love Life to His Friends
 metaDescription: >-
   The 'Too Hot to Handle' star gets a first look for his solo dating series
-  'Let's Marry Harry,' premiering in August 2026.
+  'Let's Marry Harry,' premiering in August 2026. According to a report, Amanda
+  Kloots.
 formatTag: gossip
 gossipType: romance
 tags:
   - Harry Jowsey
   - tv
-  - romance
-  - celebrity gossip
 keyTakeaways:
   - >-
     According to a report, Kloots said she felt 'so protective' of Jowsey

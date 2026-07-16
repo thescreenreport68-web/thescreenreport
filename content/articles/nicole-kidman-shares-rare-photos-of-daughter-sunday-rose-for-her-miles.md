@@ -8,17 +8,16 @@ date: '2026-07-09T12:05:53.772Z'
 dek: >-
   The actress marks her daughter's milestone birthday as Sunday Rose herself
   struts the Dior runway.
-metaTitle: Nicole Kidman Celebrates Daughter Sunday Rose's 18th with Throwback Angel Pics
+metaTitle: Nicole Kidman Celebrates Daughter Sunday Rose's 18th
 metaDescription: >-
   The actress marks her daughter's milestone birthday as Sunday Rose herself
-  struts the Dior runway.
+  struts the Dior runway. Nicole Kidman posted Instagram photos celebrating
+  daughter.
 formatTag: gossip
 gossipType: general
 tags:
   - Nicole Kidman
   - celebrity
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Nicole Kidman posted baby photos of her daughter Sunday Rose on Instagram to

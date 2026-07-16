@@ -8,17 +8,16 @@ date: '2026-07-10T04:01:20.110Z'
 dek: >-
   Video shows the recently separated podcaster sharing a Fourth of July kiss
   with a much younger reality star.
-metaTitle: Bunnie XO Spotted Getting Cozy with a New Guy at Jelly Roll's Bar
+metaTitle: Bunnie XO Spotted Getting Cozy with a New Guy at Jelly
 metaDescription: >-
   Video shows the recently separated podcaster sharing a Fourth of July kiss
-  with a much younger reality star.
+  with a much younger reality star. Video obtained by TMZ shows Bunnie XO and
+  Dylan.
 formatTag: gossip
 gossipType: general
 tags:
   - Bunnie XO
   - celebrity
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     TMZ obtained video showing Bunnie XO and Dylan Wolf kissing at Jelly Roll's

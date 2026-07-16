@@ -12,14 +12,13 @@ dek: >-
 metaTitle: Lionel Richie Back on Stage After Mid-Show Health Scare
 metaDescription: >-
   The music legend posts an update after a dizzy spell sent him to the hospital
-  last month.
+  last month. On June 24, he felt dizzy and strange during a concert in St.
+  Paul.
 formatTag: gossip
 gossipType: pregnancy
 tags:
   - Lionel Richie
   - celebrity
-  - pregnancy
-  - celebrity gossip
 keyTakeaways:
   - >-
     Lionel Richie posted on Instagram that he is "doing well" after a health

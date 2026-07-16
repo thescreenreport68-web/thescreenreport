@@ -9,17 +9,16 @@ date: '2026-07-08T12:01:19.416Z'
 dek: >-
   The rapper and the comedian, who have a history of near-misses, reunited at a
   Texas concert, setting fans' speculation alight.
-metaTitle: Kanye West and Shane Gillis Spark Collaboration Rumors After Backstage Hang
+metaTitle: Kanye West and Shane Gillis Spark Collaboration Rumors
 metaDescription: >-
   The rapper and the comedian, who have a history of near-misses, reunited at a
-  Texas concert, setting fans' speculation alight.
+  Texas concert, setting fans' speculation alight. The two have been in the
+  same.
 formatTag: gossip
 gossipType: general
 tags:
   - Kanye West
   - celebrity
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Shane Gillis posted a photo with Kanye West backstage after West's concert

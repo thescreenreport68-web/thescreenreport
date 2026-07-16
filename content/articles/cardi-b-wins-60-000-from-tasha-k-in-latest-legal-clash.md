@@ -12,13 +12,13 @@ dek: >-
 metaTitle: 'Cardi B Wins $60,000 From Tasha K in Latest Legal Clash'
 metaDescription: >-
   The rapper collects another payout after the gossip blogger reportedly broke
-  their settlement terms.
+  their settlement terms. This is due to Tasha K allegedly violating a
+  settlement.
 formatTag: gossip
 gossipType: general
 tags:
   - Cardi B
   - music
-  - general
 keyTakeaways:
   - 'Billboard reports Cardi B won a $60,000 payment from Tasha K.'
   - >-

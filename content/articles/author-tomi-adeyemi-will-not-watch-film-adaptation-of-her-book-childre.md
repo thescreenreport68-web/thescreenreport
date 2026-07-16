@@ -9,17 +9,16 @@ date: '2026-07-07T19:59:08.468Z'
 dek: >-
   The author's TikTok posts reveal a stark distance from the film adaptation and
   a pointed message to its star.
-metaTitle: Tomi Adeyemi Says She 'Will Not Watch' the 'Children of Blood and Bone' Movie
+metaTitle: Tomi Adeyemi Says She 'Will Not Watch'
 metaDescription: >-
   The author's TikTok posts reveal a stark distance from the film adaptation and
-  a pointed message to its star.
+  a pointed message to its star. She reportedly shared a screenshot of a
+  message.
 formatTag: gossip
 gossipType: general
 tags:
   - Tomi Adeyemi
   - celebrity
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Tomi Adeyemi posted on TikTok that she will not watch or promote the film

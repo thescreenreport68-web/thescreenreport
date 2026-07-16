@@ -10,19 +10,16 @@ date: '2026-07-07T11:59:14.396Z'
 dek: >-
   The actor and his wife were spotted at a patriotic parade, days after his ex
   Anna Faris opened up about their divorce.
-metaTitle: >-
-  Chris Pratt & Katherine Schwarzenegger Celebrate July 4th with Family in
-  Montecito
+metaTitle: Chris Pratt & Katherine Schwarzenegger Celebrate July
 metaDescription: >-
   The actor and his wife were spotted at a patriotic parade, days after his ex
-  Anna Faris opened up about their divorce.
+  Anna Faris opened up about their divorce. Faris and Pratt were married for
+  eight.
 formatTag: gossip
 gossipType: general
 tags:
   - Chris Pratt
   - celebrity
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Chris Pratt and Katherine Schwarzenegger attended a Fourth of July parade in

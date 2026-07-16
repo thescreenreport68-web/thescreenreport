@@ -8,17 +8,15 @@ date: '2026-07-10T10:01:17.144Z'
 dek: >-
   Jessie and D'Lila Combs debut '12TWINTY1' as their father expresses pride from
   federal prison.
-metaTitle: Diddy's Twin Daughters Launch Streetwear Brand While He's Behind Bars
+metaTitle: Diddy's Twin Daughters Launch Streetwear Brand While
 metaDescription: >-
   Jessie and D'Lila Combs debut '12TWINTY1' as their father expresses pride from
-  federal prison.
+  federal prison. Diddy, from federal prison, told TMZ he is "incredibly proud".
 formatTag: gossip
 gossipType: general
 tags:
   - Jessie Combs
   - celebrity
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Diddy's twin daughters, Jessie and D'Lila Combs, launched their streetwear

@@ -8,17 +8,15 @@ date: '2026-07-06T20:00:00.382Z'
 dek: >-
   The top streamer announces his official return after stepping back to build
   his brand.
-metaTitle: 'Kai Cenat Ends His Streaming Break: What''s Next for Streamer University?'
+metaTitle: 'Kai Cenat Ends His Streaming Break: What''s Next'
 metaDescription: >-
   The top streamer announces his official return after stepping back to build
-  his brand.
+  his brand. Streamer University is an event he launched last year for selected.
 formatTag: gossip
 gossipType: general
 tags:
   - Kai Cenat
   - celebrity
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     Kai Cenat announced his return to streaming with a 'Streamer University'

@@ -7,14 +7,15 @@ author: alicia-bernard
 date: '2026-07-07T00:01:02.697Z'
 dek: A '90 Day Fiancé' confrontation exposes a painful pattern.
 metaTitle: Did Catie's Birthday Party Antics Push Josh Too Far?
-metaDescription: A '90 Day Fiancé' confrontation exposes a painful pattern.
+metaDescription: >-
+  A '90 Day Fiancé' confrontation exposes a painful pattern. Catie apologized
+  but admitted she couldn't remember the event, and has a past pattern of
+  similar.
 formatTag: gossip
 gossipType: romance
 tags:
   - Catie
   - celebrity
-  - romance
-  - celebrity gossip
 keyTakeaways:
   - >-
     On Sunday's '90 Day Fiancé,' Josh confronted Catie about her attempts to

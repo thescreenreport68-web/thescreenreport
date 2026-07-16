@@ -8,17 +8,16 @@ date: '2026-07-06T08:01:56.173Z'
 dek: >-
   The Beckhams open up about the 'hardest period' of their marriage in a new
   documentary, revealing how they fought to stay together.
-metaTitle: How Did David and Victoria Beckham Survive That Infamous Affair Scandal?
+metaTitle: How Did David & Victoria Beckham Survive That Infamous
 metaDescription: >-
   The Beckhams open up about the 'hardest period' of their marriage in a new
-  documentary, revealing how they fought to stay together.
+  documentary, revealing how they fought to stay together. They have been
+  married.
 formatTag: gossip
 gossipType: general
 tags:
   - Victoria Beckham
   - celebrity
-  - general
-  - celebrity gossip
 keyTakeaways:
   - >-
     David and Victoria Beckham discussed surviving a past affair scandal in the
