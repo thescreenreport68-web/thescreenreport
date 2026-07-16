@@ -128,5 +128,20 @@
     "stage": "watchqc",
     "reason": "QC fix: over max length (score 0)",
     "at": "2026-07-16T17:25:11.396Z"
+  },
+  "james-gray-s-paper-tiger-with-adam-driver-scarlett-johansson-set-as-ny-film": {
+    "stage": "drain",
+    "reason": "built but media never hosted (ephemeral CI) — not rebuilding (cost)",
+    "at": "2026-07-16T18:55:59.124Z"
+  },
+  "rose-byrne-reunites-with-mary-bronstein-for-nasty-starring-jenna-ortega": {
+    "stage": "drain",
+    "reason": "built but media never hosted (ephemeral CI) — not rebuilding (cost)",
+    "at": "2026-07-16T18:55:59.209Z"
+  },
+  "priscilla-presley-s-son-defends-gofundme-for-pizza-business-after-back": {
+    "stage": "script",
+    "reason": "script failed lint after 3 attempts: too-long(145 words (max 136)), ending-ask(final sentence must be the comments ask (like \"Let us know i), ending-question(the sentence before the ask must be the audience question (e)",
+    "at": "2026-07-16T19:00:24.588Z"
   }
 }
