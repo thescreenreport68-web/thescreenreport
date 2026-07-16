@@ -6,7 +6,7 @@
 import sharp from "sharp";
 import { CARDS } from "../config.mjs";
 import { fetchWithTimeout } from "../lib/util.mjs";
-import { dom } from "../../lib/outlets.mjs";
+import { dom, MAJORS, isAggregator } from "../../lib/outlets.mjs";
 
 const OG_RE = /<meta[^>]+(?:property|name)=["'](?:og:image|og:image:secure_url|twitter:image)["'][^>]+content=["']([^"']+)["']/gi;
 const OG_RE_REV = /<meta[^>]+content=["']([^"']+)["'][^>]+(?:property|name)=["'](?:og:image|og:image:secure_url|twitter:image)["']/gi;
@@ -15,6 +15,9 @@ const UA = { "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) Appl
 function carrierAllowed(url) {
   try {
     const h = dom(new URL(url).hostname);
+    // any MAJOR outlet's article og:image is a studio press asset (same class as the trade
+    // CDNs) — the hand-picked carrier list alone starved legit stories (live drop 2026-07-16)
+    if (MAJORS.has(h) && !isAggregator(h)) return true;
     return CARDS.imageTiers.tierACarriers.some((c) => h === c || h.endsWith(`.${c}`));
   } catch { return false; }
 }
