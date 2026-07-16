@@ -1,0 +1,99 @@
+{
+ "runId": "run-2026-07-16T04-21-10",
+ "mode": "live",
+ "startedAt": "2026-07-16T04:21:10.594Z",
+ "films": 8,
+ "published": [],
+ "held": [
+  {
+   "tag": "moana-bo-update×BO-UPDATE",
+   "reason": "words 178 < 180 (owner-set ~200-word minimum)",
+   "score": 50
+  },
+  {
+   "tag": "minions-monsters-bo-update×BO-UPDATE",
+   "reason": "words 172 < 180 (owner-set ~200-word minimum)",
+   "score": 50
+  },
+  {
+   "tag": "toy-story-5-bo-update×BO-UPDATE",
+   "reason": "words 148 < 180 (owner-set ~200-word minimum)",
+   "score": 50
+  },
+  {
+   "tag": "evil-dead-burn-bo-update×BO-UPDATE",
+   "reason": "words 137 < 180 (owner-set ~200-word minimum)",
+   "score": 50
+  },
+  {
+   "tag": "young-washington-bo-update×BO-UPDATE",
+   "reason": "words 160 < 180 (owner-set ~200-word minimum) | soft-floor engagement 3 < 4 | soft-floor humanVoice 3 < 4",
+   "score": 40
+  },
+  {
+   "tag": "supergirl-bo-update×BO-UPDATE",
+   "reason": "words 175 < 180 (owner-set ~200-word minimum) | soft-floor engagement 3 < 4 | soft-floor humanVoice 3 < 4",
+   "score": 35
+  },
+  {
+   "tag": "obsession-bo-update×BO-UPDATE",
+   "reason": "words 132 < 180 (owner-set ~200-word minimum)",
+   "score": 60
+  },
+  {
+   "tag": "disclosure-day-bo-update×BO-UPDATE",
+   "reason": "fidelity: 9 unsupported figures/claims — draft-level failure",
+   "score": 0
+  }
+ ],
+ "rejected": [],
+ "skipped": [],
+ "blocked": [],
+ "finishedAt": "2026-07-16T04:42:23.102Z",
+ "meter": {
+  "byRole": {
+   "gatherer": {
+    "calls": 9,
+    "errors": 0,
+    "in": 28523,
+    "out": 3358,
+    "usd": 0.0042,
+    "ms": 13981
+   },
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3370,
+    "out": 332,
+    "usd": 0.00016,
+    "ms": 1216
+   },
+   "synthesizer": {
+    "calls": 8,
+    "errors": 0,
+    "in": 5937,
+    "out": 5617,
+    "usd": 0.00155,
+    "ms": 115256
+   },
+   "writer": {
+    "calls": 31,
+    "errors": 0,
+    "in": 60794,
+    "out": 30677,
+    "usd": 0.0734,
+    "ms": 466151
+   },
+   "qa": {
+    "calls": 61,
+    "errors": 1,
+    "in": 176456,
+    "out": 25520,
+    "usd": 0.11503,
+    "ms": 176014
+   }
+  },
+  "totalUsd": 0.19434
+ },
+ "openrouterTotalUsd": 0.1936
+}
