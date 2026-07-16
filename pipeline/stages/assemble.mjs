@@ -5,6 +5,7 @@ const require = createRequire(import.meta.url);
 const matter = require("gray-matter");
 import { TAXONOMY, AUTHOR_SLUG } from "../config.mjs";
 import { addInternalLinks, isRemovedForm } from "../lib/internalLinks.mjs";
+import { finishMetaTitle, finishMetaDescription, driftGuard, entityFidelity, slugifyTitle } from "../lib/seoFinish.mjs";
 
 import { fileURLToPath } from "node:url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url)); // …/site/pipeline/stages
@@ -14,8 +15,9 @@ const ART = path.resolve(__dirname, "../../content/articles");
 // insurance behind the gate's PROMPT_LEAK hard-block.
 const FAQ_LEAK = /\b(not (?:detailed|specified|mentioned|provided|stated|available|listed|included) in the (?:provided |reference |given |available )?(?:facts|information|sources|text|article|context|material)|the (?:provided |reference |given )?(?:facts|information|sources) (?:do(?:es)?n'?t|do not|does not)|based on the provided (?:facts|information)|as an ai|the reference facts)\b/i;
 
-const slugify = (s) =>
-  s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 75);
+// slug: diacritics transliterated + 75-char cap on a WORD boundary (root-fix 2026-07-16 — was a blind
+// slice(0,75) that shipped "…-merger-lawsu" and mangled "Maridueña" → "maridue-a"). Lives in seoFinish.mjs.
+const slugify = (s) => slugifyTitle(s, 75);
 
 // Set of every internal path that actually exists, for link validation.
 function validPaths() {
@@ -33,6 +35,11 @@ function validPaths() {
 }
 
 export function assemble({ article, classification, image, topic, dateISO }) {
+  // ENTITY-SPELLING FIDELITY (root-fix 2026-07-16, the 'Unleeshed'→"Unleashed" case): the writer must never
+  // spell-"correct" the real name of the thing the story is about — FIND's primaryEntity carries the SOURCE
+  // spelling; if it never appears verbatim but a near-miss variant does, every occurrence (title, body, FAQs,
+  // even inside direct quotes) is restored to the source spelling BEFORE anything downstream reads the article.
+  article = entityFidelity(article, topic.primaryEntity);
   const valid = validPaths();
   // Keep internal links that resolve to a real page; otherwise drop the link, keep the text. A BARE
   // homepage link ("[x](/)") is low-value filler the owner banned — drop it (keep the text) too.
@@ -72,34 +79,28 @@ export function assemble({ article, classification, image, topic, dateISO }) {
   const tagsForLinks = classification.tags?.length ? classification.tags : article.tags || [];
   const linkResult = addInternalLinks({ body, title: article.title, tags: tagsForLinks, category: classification.category, slug }, { max: 3 });
   body = linkResult.body;
-  const imageAlt = (
-    (article.imageQuery ? article.imageQuery + " — " : "") + (article.title || "")
-  ).slice(0, 125);
-
-  // BASIC SEO — deterministic guarantee (owner 2026-07-14): EVERY article ships a search-optimized metaTitle
-  // (≤55 chars, brand-free — the site template adds branding), a metaDescription, and keyword tags, even when the
-  // cheap writer model slips. These live only in <head> + JSON-LD, so they never affect on-page readability.
-  const stripBrand = (s) => String(s || "").replace(/\s*[|—–\-]\s*The Screen Report\s*$/i, "").replace(/\s+/g, " ").trim();
-  const clampWords = (s, max) => {
-    s = String(s || "").trim();
-    if (s.length <= max) return s;
-    const cut = s.slice(0, max), at = cut.lastIndexOf(" ");
-    return (at > max * 0.4 ? cut.slice(0, at) : cut).replace(/[\s,;:–—\-]+$/, "");
-  };
-  // metaTitle TARGET 45–55 chars (owner 2026-07-14: min 45, max 55 — never too short). Build from BOTH the model's
-  // metaTitle and the full headline; prefer whichever lands in [45,55]; else the longest available; hard-cap 55.
-  const clamp55 = (s) => { s = stripBrand(s); return s.length <= 55 ? s : clampWords(s.replace(/\s*\([^)]*\)\s*$/, "").trim() || s, 55); };
-  const mtModel = clamp55(article.metaTitle);
-  const mtTitle = clamp55(stripBrand(article.title).replace(/\s*\(\d{4}\)\s*$/, "")); // full headline (brand+year stripped) — usually 45–55 once clamped
-  let metaTitle;
-  if (mtModel.length >= 45 && mtModel.length <= 55) metaTitle = mtModel;           // model nailed the range
-  else if (mtTitle.length >= 45 && mtTitle.length <= 55) metaTitle = mtTitle;       // else use the headline (fixes a too-short model metaTitle without inventing text)
-  else metaTitle = [mtModel, mtTitle].filter(Boolean).sort((a, b) => b.length - a.length)[0] || stripBrand(article.title); // else the longest available (closest to the 45 floor)
-  if (metaTitle.length > 55) metaTitle = clampWords(metaTitle, 55);                 // final hard cap
-  let metaDescription = String(article.metaDescription || article.dek || article.title || "").replace(/\s+/g, " ").trim();
-  if (metaDescription.length > 160) metaDescription = clampWords(metaDescription, 157) + "…";
+  // BASIC SEO — deterministic guarantee (owner 2026-07-14; ROOT-CAUSE REBUILD 2026-07-16): EVERY article ships a
+  // search-optimized metaTitle (45–55 target, brand-free, NEVER a mid-phrase fragment — the old clampWords blind
+  // last-space cut shipped "…Cast in Netflix's The" / "…Lineup with Margot"), a 140–160 complete-sentence
+  // metaDescription, and keyword tags, even when the cheap writer model slips. All finishers live in
+  // lib/seoFinish.mjs (semantic tail rules + name-pair completion + quote balance; full-text ≤65 beats a fragment).
+  // These live only in <head> + JSON-LD, so they never affect on-page readability.
+  const bodyPlain = body.replace(/\[([^\]]+)\]\([^)]*\)/g, "$1").replace(/^#+\s.*$/gm, " ").replace(/[*_`>]/g, " ").replace(/\s+/g, " ").trim();
+  const metaTitle = finishMetaTitle({ model: article.metaTitle, title: article.title });
+  const metaDescription = finishMetaDescription({ model: article.metaDescription, dek: article.dek, bodyText: bodyPlain.slice(0, 1500) });
   let seoTags = (classification.tags?.length ? classification.tags : article.tags || []).filter(Boolean);
   if (!seoTags.length) seoTags = [...new Set([topic.primaryEntity, classification.category, ...String(topic.primaryKeyword || "").split(/\s+/)].filter(Boolean).map((s) => String(s).toLowerCase()))].slice(0, 8);
+  // TOPIC→ARTICLE DRIFT GUARD (root-fix 2026-07-16, the Bonta/"swimming lesson" case): FIND metadata describes
+  // the TOPIC that was selected; when the written article is about something else (wrong page behind a source
+  // redirect, an editorial subject correction), inheriting it verbatim ships wrong-story SEO. Validate every
+  // inherited field against the final title+body; re-derive from the article itself on mismatch.
+  const drift = driftGuard({ article, topic, tags: seoTags, bodyText: bodyPlain, slug });
+  if (drift.drifted) console.log(`  ✎ drift guard: topic keyword "${topic.primaryKeyword}" absent from article → targetKeyword "${drift.targetKeyword}", tags [${drift.tags.join(", ")}], eventSlug "${drift.eventSlug}"`);
+  if (drift.tags.length) seoTags = drift.tags;
+  // imageAlt only keeps the imageQuery prefix when the query actually matches this article (same drift class).
+  const imageAlt = (
+    (article.imageQuery && drift.imageQueryOk ? article.imageQuery + " — " : "") + (article.title || "")
+  ).slice(0, 125);
 
   const fm = {
     title: article.title,
@@ -112,7 +113,7 @@ export function assemble({ article, classification, image, topic, dateISO }) {
     metaTitle,
     metaDescription,
     tags: seoTags,
-    targetKeyword: topic.primaryKeyword,
+    targetKeyword: drift.targetKeyword,
     keyTakeaways: article.keyTakeaways || [],
     // Drop any FAQ that leaked a meta-refusal (insurance behind the gate's hard-block — a reader/JSON-LD
     // must never see "not detailed in the provided facts"). The Faq component renders the answer as PLAIN
@@ -135,8 +136,8 @@ export function assemble({ article, classification, image, topic, dateISO }) {
   // slots, rotate the hero, and badge trending stories at every rebuild.
   if (Number.isFinite(topic.priority)) fm.trendScore = topic.priority;
   if (topic.signals && typeof topic.signals === "object") fm.signals = topic.signals;
-  if (topic.eventSlug) fm.eventSlug = topic.eventSlug;
-  if (topic.eventType) fm.eventType = topic.eventType;
+  if (drift.eventSlug) fm.eventSlug = drift.eventSlug;
+  if (drift.eventType) fm.eventType = drift.eventType;
   {
     const outletCount = topic.verification?.outletCount ?? topic.corroborationCount;
     if (Number.isFinite(outletCount)) fm.outletCount = outletCount;

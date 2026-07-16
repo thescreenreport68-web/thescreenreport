@@ -14,13 +14,12 @@ metaDescription: >-
   California Attorney General Rob Bonta refutes an FCC claim that a CNN spinoff
   would end the state's antitrust lawsuit against the Paramount-WBD merger.
 tags:
-  - the swimming lesson cast
   - rob bonta
   - brendan carr
   - paramount-warner bros. discovery merger
-  - lamorne morris
-  - abby elliott
-targetKeyword: the swimming lesson cast
+  - cnn spinoff
+  - paramount merger lawsuit
+targetKeyword: rob bonta paramount merger lawsuit
 keyTakeaways:
   - >-
     California AG Rob Bonta denies ever suggesting the state would drop its
@@ -53,9 +52,7 @@ faq:
       Tuesday, citing similar antitrust and competition concerns regarding the
       proposed merger between Paramount and Warner Bros. Discovery.
 about: []
-imageAlt: >-
-  The Swimming Lesson — California AG Rob Bonta Denies CNN Spinoff Would End
-  Paramount Merger Lawsuit
+imageAlt: California AG Rob Bonta Denies CNN Spinoff Would End Paramount Merger Lawsuit
 imageCredit: Photo via TheWrap
 image: >-
   https://www.thewrap.com/wp-content/uploads/2026/07/Untitled-design-2026-07-15T182414.060.jpg
@@ -73,13 +70,13 @@ signals:
   big: 24
   trending: 0
   softTv: 0
-eventSlug: the-swimming-lesson-casting
-eventType: casting
+eventSlug: rob-bonta-paramount-merger-lawsuit
+eventType: news
 outletCount: 1
 provenance:
-  eventSlug: the-swimming-lesson-casting
+  eventSlug: rob-bonta-paramount-merger-lawsuit
   primaryEntity: Rob Bonta
-  eventType: casting
+  eventType: news
   sensitivity: high
   status: DEVELOPING
   attribution: thewrap.com

@@ -12,6 +12,7 @@ import { classify } from "./stages/classify.mjs";
 import { editorialGate } from "./stages/editorialGate.mjs";
 import { canonicalize } from "./find/categorize.mjs";
 import { recordPublished, slugKey, loadPublished, entityKey } from "./find/store.mjs";
+import { recentArticles, findDuplicate } from "./lib/dupGuard.mjs";
 import { sourceImage, measureRemote } from "./stages/image.mjs";
 import { pickHeroImage } from "./lib/heroImage.mjs";
 import { cutArticle } from "./lib/cutter.mjs";
@@ -52,6 +53,19 @@ if (FROM_FIND) {
     !(t.eventSlug && _pub.events.has(t.eventSlug)) &&
     !(entityKey(t.primaryEntity, t.eventType) && _pub.entities.has(entityKey(t.primaryEntity, t.eventType))));
   console.log(`FROM-FIND: loaded ${_n0} topics (queue run ${q.runId}); ${_n0 - SOURCE_TOPICS.length} already-published skipped → ${SOURCE_TOPICS.length} fresh`);
+  // CROSS-LANE 72h DUPLICATE-STORY GUARD (owner root-cause directive 2026-07-16): the ledger above only knows what
+  // THIS lane published and only matches exact keys — the same story covered by another lane (inside ran the
+  // Batman-2028 delay twice in 2h) or re-angled under a different headline slips through. Fuzzy-match each
+  // candidate's entities+event words against EVERY article in the shared content/articles dir from the last 72h
+  // (read-only — all lanes publish there); ≥3 shared non-generic stems = same story → skip.
+  const _recent = recentArticles(72);
+  const _n1 = SOURCE_TOPICS.length;
+  SOURCE_TOPICS = SOURCE_TOPICS.filter((t) => {
+    const d = findDuplicate(t, _recent);
+    if (d) console.log(`  ⏭ dup-story skip: "${(t.title || "").slice(0, 70)}" ≈ published "${d.slug}" (shared: ${d.shared.slice(0, 5).join(", ")})`);
+    return !d;
+  });
+  if (_n1 !== SOURCE_TOPICS.length) console.log(`  dup guard: ${_n1 - SOURCE_TOPICS.length} cross-lane duplicate(s) dropped → ${SOURCE_TOPICS.length} publishable`);
 }
 let topics = ONLY ? SOURCE_TOPICS.filter((t) => t.id === ONLY) : SOURCE_TOPICS;
 if (LIMIT) topics = topics.slice(0, LIMIT);

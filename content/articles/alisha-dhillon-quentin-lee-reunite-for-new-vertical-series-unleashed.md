@@ -1,5 +1,5 @@
 ---
-title: 'Alisha Dhillon, Quentin Lee Reunite for New Vertical Series ‘Unleashed’'
+title: 'Alisha Dhillon, Quentin Lee Reunite for New Vertical Series ‘Unleeshed’'
 slug: alisha-dhillon-quentin-lee-reunite-for-new-vertical-series-unleashed
 category: tv
 subcategory: news
@@ -8,22 +8,21 @@ date: '2026-07-15T07:00:55.962Z'
 dek: >-
   The ‘Comedy Invasion’ alumni will produce the show for Asian American Movies,
   with a worldwide Thanksgiving 2026 premiere planned.
-metaTitle: 'Alisha Dhillon, Quentin Lee Reunite for ‘Unleashed’ Series'
+metaTitle: 'Alisha Dhillon, Quentin Lee Reunite for ‘Unleeshed’ Series'
 metaDescription: >-
-  Alisha Dhillon and Quentin Lee are co-creating the vertical series ‘Unleashed’
-  for AAM.tv, with filming starting this August.
+  Alisha Dhillon and Quentin Lee are co-creating the vertical series ‘Unleeshed’
+  for AAM.tv, filming from August and premiering worldwide Thanksgiving 2026.
 tags:
-  - unleashed vertical series
-  - unleeshed
+  - unleeshed vertical series
   - alisha dhillon
   - quentin lee
-  - unleashed
+  - unleeshed
   - comedy invasion
-targetKeyword: unleashed vertical series
+targetKeyword: unleeshed vertical series
 keyTakeaways:
   - >-
     Alisha Dhillon and Quentin Lee are co-creating the vertical series
-    ‘Unleashed’.
+    ‘Unleeshed’.
   - >-
     Dhillon wrote the series and will star as a South Asian standup comic in Los
     Angeles.
@@ -46,11 +45,11 @@ faq:
       wrote the episode ‘Woman of Ganja,’ which Lee created and directed. That
       episode won the Canadian Screen Award for Best Comedy Special in 2024.
 about:
-  - name: Unleashed
+  - name: Unleeshed
     type: TV Series
 imageAlt: >-
   Alisha Dhillon — Alisha Dhillon, Quentin Lee Reunite for New Vertical Series
-  ‘Unleashed’
+  ‘Unleeshed’
 imageCredit: Marie-Lan Nguyen / Wikimedia Commons / CC BY 3.0
 image: >-
   https://commons.wikimedia.org/wiki/Special:FilePath/Lee%20Slattery%20Open%20de%20France%202013%20t151214.jpg?width=1600
@@ -68,11 +67,11 @@ signals:
   big: 18
   trending: 0
   softTv: 0
-eventSlug: alisha-dhillon-quentin-lee-reunite-vertical-series-unleashed
+eventSlug: alisha-dhillon-quentin-lee-reunite-vertical-series-unleeshed
 eventType: announcement
 outletCount: 1
 provenance:
-  eventSlug: alisha-dhillon-quentin-lee-reunite-vertical-series-unleashed
+  eventSlug: alisha-dhillon-quentin-lee-reunite-vertical-series-unleeshed
   primaryEntity: Unleeshed
   eventType: announcement
   sensitivity: normal
@@ -86,13 +85,13 @@ storyStatus: DEVELOPING
 newsType: general
 pullQuote:
   text: >-
-    “When I first read the pilot for ‘Unleashed,’ I immediately fell in love
+    “When I first read the pilot for ‘Unleeshed,’ I immediately fell in love
     with the world Alisha created – a world drawn from her own lived
     experiences.”
   attribution: 'Quentin Lee, co-creator'
 keyPoints:
   - Alisha Dhillon and Quentin Lee are co-creating a new vertical series.
-  - 'The show, ''Unleashed,'' is set for a Thanksgiving 2026 premiere on AAM.tv.'
+  - 'The show, ''Unleeshed,'' is set for a Thanksgiving 2026 premiere on AAM.tv.'
   - Filming for the first season begins in August 2026.
 seriesContext:
   network: Asian American Movies (AAM.tv)
@@ -104,7 +103,7 @@ seriesContext:
     - Alisha Dhillon
   whereToWatch: AAM.tv
 seriesStatus:
-  show: Unleashed
+  show: Unleeshed
   network: Asian American Movies (AAM.tv)
   status: ordered
   season: Season 1
@@ -114,11 +113,11 @@ seriesStatus:
       role: Lead
 ---
 
-Alisha Dhillon and Quentin Lee are reuniting to co-create the vertical series ‘Unleashed,’ according to an exclusive report from Variety. The pair previously worked together on the Canadian Screen Award-winning series ‘Comedy Invasion.’
+Alisha Dhillon and Quentin Lee are reuniting to co-create the vertical series ‘Unleeshed,’ according to an exclusive report from Variety. The pair previously worked together on the Canadian Screen Award-winning series ‘Comedy Invasion.’
 
 Dhillon wrote the series and will star in it, with Lee serving as co-creator, executive producer, and director. The show will be produced through Lee’s company, Margin Films.
 
-## What is ‘Unleashed’ about?
+## What is ‘Unleeshed’ about?
 
 Season 1 follows a South Asian standup comic and aspiring actor in Los Angeles who puts her ambitions on hold to care for her ailing father. The series explores her struggle with self-doubt as she navigates the world of comedy and roast battles.
 
@@ -126,8 +125,8 @@ Season 1 follows a South Asian standup comic and aspiring actor in Los Angeles w
 
 The completed first season is scheduled to broadcast worldwide on the streaming platform Asian American Movies (AAM.tv) for Thanksgiving 2026. It will serve as the platform’s inaugural original vertical series.
 
-Lee expressed his immediate connection to the project. “When I first read the pilot for ‘Unleashed,’ I immediately fell in love with the world Alisha created – a world drawn from her own lived experiences,” he said. He saw an opportunity in vertical storytelling to adapt the pilot into a proof of concept for future seasons.
+Lee expressed his immediate connection to the project. “When I first read the pilot for ‘Unleeshed,’ I immediately fell in love with the world Alisha created – a world drawn from her own lived experiences,” he said. He saw an opportunity in vertical storytelling to adapt the pilot into a proof of concept for future seasons.
 
-Dhillon shared the personal motivation behind the series. “I wrote ‘Unleashed’ to remind myself and others that confidence is built through action and our biggest limits are self-made,” she added.
+Dhillon shared the personal motivation behind the series. “I wrote ‘Unleeshed’ to remind myself and others that confidence is built through action and our biggest limits are self-made,” she added.
 
 Principal photography is set to begin in August. The platform AAM.tv, which hosts a curated lineup of diasporic Asian content, can be accessed via iOS, Android, or Roku devices.
