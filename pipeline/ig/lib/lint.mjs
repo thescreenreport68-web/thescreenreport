@@ -56,8 +56,19 @@ export function lintScript(script, entities = [], topicText = "") {
 
   if (words.length < IG.script.minWords) v.push({ rule: "too-short", detail: `${words.length} words (min ${IG.script.minWords}) — NEVER pad; hold if the story is thin` });
   if (words.length > IG.script.maxWords) v.push({ rule: "too-long", detail: `${words.length} words (max ${IG.script.maxWords})` });
-  const sec = estimateSeconds(words.length);
-  if (sec > IG.script.maxSec) v.push({ rule: "duration", detail: `~${sec.toFixed(0)}s (max ${IG.script.maxSec})` });
+  // duration gate on the REAL rendered length, not just words/wps: the tightened audio keeps a short
+  // pause between sentences (~keepSilence) and the endcard adds a tail (endTailSec). A script that
+  // estimates 40s from words alone actually renders ~44s+ and was getting caught at WATCHQC — AFTER a
+  // full, expensive render (owner 2026-07-16: an over-length reel was voiced+rendered then held). Budget
+  // that overhead HERE so over-length is trimmed at the SCRIPT stage (the "duration" rule is a mechanical
+  // repair — it trims, never holds; the shipped reel is unchanged in quality, just correctly ≤ maxSec).
+  // Gate against the SAME ceiling watchqc rejects at (maxSec + durTolSec = 47s), not maxSec — the estimate
+  // is imperfect (paced read ~3.4-3.6 wps), so gating at 44 would trim/hold reels whose ~44-47s renders
+  // ship fine. The "duration" rule is a MECHANICAL TRIM in the repair loop (script.mjs), never a hold.
+  const gaps = Math.max(0, sentences.length - 1);
+  const estSec = estimateSeconds(words.length) + gaps * (IG.voice?.tighten?.keepSilence ?? 0.26) + (IG.endTailSec ?? 1.8);
+  const durCeil = IG.script.maxSec + (IG.script.durTolSec ?? 3);
+  if (estSec > durCeil) v.push({ rule: "duration", detail: `~${estSec.toFixed(0)}s with pauses (max ${durCeil})` });
 
   // repetition: no fact RESTATED. Detector = a qualifying trigram (3 consecutive tokens,
   // ≥2 of them ≥4 chars) appearing in two NON-ADJACENT sentences. Exempt: (a) trigrams

@@ -110,7 +110,11 @@ export const IG = {
   // TARGET the writer reaches for. minWords clears 25s even at a fast ~3.7wps read; the writer
   // engagingly expands a thin story up to the floor rather than holding. wps = the observed
   // gpt-audio pace after pause-tightening.
-  script: { minWords: 88, maxWords: 136, minSec: 25, maxSec: 44, targetSec: [30, 40], wps: 3.4 },
+  // durTolSec = the slack between the script-stage length gate and the watchqc render-acceptance ceiling
+  // (maxSec + durTolSec = 47s). The pre-voice duration estimate is imperfect (read pace varies), so gating
+  // at exactly maxSec would trim/hold reels whose renders would clear watchqc — one shared constant keeps
+  // the script gate, the mechanical trim, and watchqc aligned so a good reel is NEVER held for length.
+  script: { minWords: 88, maxWords: 136, minSec: 25, maxSec: 44, durTolSec: 3, targetSec: [30, 40], wps: 3.4 },
 
   // Enrichment (owner 2026-07-12): when OUR article yields fewer than `minFacts` verified facts,
   // pull MORE verified facts about the SAME people/event from related news so the reel can reach

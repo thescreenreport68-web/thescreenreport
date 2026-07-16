@@ -3,7 +3,7 @@
 // violations are named back to the writer at low temperature. Max 2 attempts, then hold.
 import { llm } from "../models.mjs";
 import { IG } from "../config.mjs";
-import { lintScript } from "../lib/lint.mjs";
+import { lintScript, estimateSeconds } from "../lib/lint.mjs";
 import { lintEnding } from "./engage.mjs";
 import { loadWeights } from "../lib/ledger.mjs";
 import { normWords } from "../lib/util.mjs";
@@ -189,9 +189,17 @@ export async function writeScript({ article, facts, segment, engage }) {
     //    held because a 21-word quote line could not be split and was never trimmed). Prefer
     //    dropping the over-cap line; else the last body line. Hook + ending pair stay intact.
     const cap = IG?.script?.maxWords ?? 136;
+    const minW = IG?.script?.minWords ?? 88;
+    const durCeil = (IG?.script?.maxSec ?? 44) + (IG?.script?.durTolSec ?? 3);
+    // the "duration" lint fires on the estimate (words/wps + inter-sentence pauses + endcard tail); the
+    // repair must CONVERGE on it too, or a word-legal-but-slightly-long script would HOLD instead of trim
+    // (review 2026-07-16). Match lint.mjs's estimate exactly.
+    const estOver = (arr) => estimateSeconds(normWords(arr.join(" ")).length) + Math.max(0, arr.length - 1) * (IG?.voice?.tighten?.keepSilence ?? 0.26) + (IG?.endTailSec ?? 1.8) > durCeil;
     const overIdx = (arr) => arr.findIndex((sent, i) => i > 0 && i < arr.length - 2 && normWords(sent).length > SENT_CAP);
     let guard = 0;
-    while ((normWords(s.join(" ")).length > cap || overIdx(s) >= 0) && s.length > 6 && guard++ < 24) {
+    // trim body sentences until word-cap AND sentence-cap AND duration are all satisfied — but NEVER below
+    // minWords (that would just swap an over-length hold for a too-short hold). Hook + ending pair stay intact.
+    while ((normWords(s.join(" ")).length > cap || overIdx(s) >= 0 || estOver(s)) && normWords(s.join(" ")).length > minW && s.length > 6 && guard++ < 24) {
       const oi = overIdx(s);
       s.splice(oi >= 0 ? oi : s.length - 3, 1);
     }

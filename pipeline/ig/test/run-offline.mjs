@@ -616,5 +616,38 @@ await t("platformMeta YouTube SEO: guards catch the two real failing videos, spa
   assert.ok(!tags.map((x) => x.toLowerCase()).includes("#birthdaytribute"), "vague model tag dropped");
 });
 
+await t("writer: over-length script is TRIMMED to fit, never held (duration-aware mechanical repair)", async () => {
+  const { ASK_FAMILIES } = await import("../agents/engage.mjs");
+  // a content-clean but LONG script (over both the word cap and the ~47s render ceiling). The repair must
+  // converge on BOTH words AND duration and SHIP — the review caught that the old loop trimmed only on
+  // words, so a word-trimmed-but-still-long script fell through to a HOLD. (regression lock 2026-07-16)
+  const LONG = [
+    CLEAN_SCRIPT.sentences[0], // valid entity hook
+    "The blockbuster pulled in a staggering two hundred twenty million dollars during its packed opening weekend.",
+    "James Gunn personally confirmed those historic record numbers himself on Friday during an early press briefing.",
+    "He also revealed a hotly anticipated sequel already has a firm release date set for June 2028.",
+    "Warner Brothers proudly calls this their single biggest studio debut since the early months of 2019.",
+    "Critics everywhere are now handing the ambitious picture the franchise best glowing reviews in many years.",
+    "Devoted fans queued up overnight in roughly forty different major cities for the very first showings.",
+    "Even the cautious studio quietly admits nobody internally modeled a massive opening weekend quite like this.",
+    ...CLEAN_SCRIPT.sentences.slice(-2), // valid audience-question + comments-ask ending pair
+  ];
+  setMock(({ kind }) => {
+    if (kind !== "llm") return undefined;
+    return { sentences: LONG, hookStyle: "record-number", ending: "question" };
+  });
+  const r = await writeScript({
+    article: { title: "Superman box office" },
+    facts: { storyOneLine: "Superman broke a box office record", entities: ENTITIES, facts: [{ claim: "c", surprise: 9 }] },
+    segment: "Box Office in 30",
+    engage: { goal: "comments", family: ASK_FAMILIES.comments },
+  });
+  setMock(null);
+  assert.ok(r.script && !r.hold, "over-length script trims + ships (not held)");
+  assert.deepEqual(lintScript(r.script, ENTITIES), [], "trimmed script clears every lint gate incl. duration");
+  const words = normWords(r.script.sentences.join(" ")).length;
+  assert.ok(words >= IG.script.minWords, `trim stayed above minWords (${words} ≥ ${IG.script.minWords})`);
+});
+
 console.log(`\n${passed} passed, ${failed} failed`);
 process.exit(failed ? 1 : 0);
