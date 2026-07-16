@@ -1,107 +1,116 @@
 {
-  "runId": "run-2026-07-16T18-30-38",
-  "builtAt": "2026-07-16T18:32:41.352Z",
+  "runId": "run-2026-07-16T19-30-41",
+  "builtAt": "2026-07-16T19:31:54.600Z",
   "count": 30,
   "topics": [
     {
-      "id": "news-seth-green-wants-to-join-dungeon-crawler-carl-series",
-      "slug": "seth-green-wants-to-join-the-dungeon-crawler-carl-live-action-series",
-      "title": "Seth Green Wants to Join the Dungeon Crawler Carl Live-Action Series",
+      "id": "news-tom-cruise-praises-the-odyssey",
+      "slug": "tom-cruise-praises-christopher-nolan-s-the-odyssey-after-seeing-it-in-",
+      "title": "Tom Cruise Praises Christopher Nolan's 'The Odyssey' After Seeing It in Theaters",
       "contentType": "news",
       "formatTag": "news",
-      "category": "tv",
+      "category": "movies",
       "subcategory": "news",
-      "eventType": "casting",
+      "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "seth-green-wants-to-join-dungeon-crawler-carl-series",
-      "primaryKeyword": "dungeon crawler carl series casting",
-      "primaryEntity": "Dungeon Crawler Carl (TV series)",
+      "eventSlug": "tom-cruise-praises-the-odyssey",
+      "primaryKeyword": "The Odyssey movie",
+      "primaryEntity": "The Odyssey",
       "entities": [
-        "Seth Green"
+        "The Odyssey (film)",
+        "Tom Cruise",
+        "Christopher Nolan"
       ],
-      "angle": "Seth Green expresses interest in joining the live-action 'Dungeon Crawler Carl' series.",
+      "angle": "Tom Cruise offers his enthusiastic endorsement of Christopher Nolan's latest film, highlighting the theatrical experience.",
       "tmdbType": "movie",
-      "source": "rss:Variety",
+      "source": "rss:THR",
       "sources": [
         {
-          "outlet": "Variety",
+          "outlet": "THR",
           "tier": 7,
-          "url": "https://variety.com/2026/tv/news/dungeon-crawler-carl-tv-series-seth-green-mordecai-1236810542/",
-          "ageMin": 13,
-          "headline": "Seth Green Wants to Join the Dungeon Crawler Carl Live-Action Series: I d Make a Really Good Mordecai",
-          "summary": "Family Guy star Seth Green is a big Dungeon Crawler Carl fan who wants it to be known he d love to join the cast of the live-action TV series but doesn t want to use his personal connections to land the part. The show, which was ordered to series at Peacock last month, is being [ ]"
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/tom-cruise-the-odyssey-christopher-nolan-1236650292/",
+          "ageMin": 33,
+          "headline": "Tom Cruise Praises Christopher Nolan s The Odyssey : I Can t Wait to See It Again",
+          "summary": "\"Thank you for an amazing night in a movie theater,\" the actor and champion of the theatrical moviegoing experience wrote on social media Thursday ahead of the film's official release."
+        },
+        {
+          "outlet": "TheWrap",
+          "tier": 7,
+          "url": "https://www.thewrap.com/creative-content/movies/the-odyssey-tom-cruise-message-theatrical-screening/",
+          "ageMin": 39,
+          "headline": "Tom Cruise Gives The Odyssey His Seal of Approval",
+          "summary": "The \"Digger\" star tells his followers that he \"can't wait\" to see Christopher Nolan's Ancient Greek epic again The post Tom Cruise Gives The Odyssey His Seal of Approval appeared first on TheWrap ."
         }
       ],
-      "ageMin": 13,
+      "ageMin": 33,
       "_cand": {
-        "key": "rss:seth-green-wants-to-join-the-dungeon-crawler-carl-live-actio",
+        "key": "rss:tom-cruise-praises-christopher-nolan-s-the-odyssey-i-can-t-w",
         "popularity": 0,
         "kind": "rss-news"
       },
-      "corroborationCount": 1,
+      "corroborationCount": 2,
       "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
+        "tier1Count": 2,
+        "tier1Owners": 2,
+        "outletCount": 2,
         "outlets": [
-          "Variety"
+          "THR",
+          "TheWrap"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
+        "attribution": null,
+        "framing": "plain",
+        "status": "CONFIRMED",
         "publishable": true
       },
-      "priority": 92,
+      "priority": 108,
       "signals": {
-        "recency": 30,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
+        "recency": 24,
+        "corroboration": 18,
+        "status": 25,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
-        "big": 18,
-        "trending": 0,
+        "big": 24,
+        "trending": 8,
         "softTv": 0
       },
       "tierClass": "B"
     },
     {
-      "id": "news-taylor-ortega-tim-meadows-dan-bucatinsky-join-13-going-on-30-reboot",
-      "slug": "taylor-ortega-tim-meadows-dan-bucatinsky-latest-to-join-netflix-s-13-g",
-      "title": "Taylor Ortega, Tim Meadows, Dan Bucatinsky Latest To Join Netflix’s ‘13 Going On 30’ Reboot",
+      "id": "news-scrublands-season-3-casting-news",
+      "slug": "australian-crime-drama-scrublands-renewed-for-season-3-first-look-imag",
+      "title": "Australian Crime Drama 'Scrublands' Renewed for Season 3; First-Look Images and New Cast Revealed",
       "contentType": "news",
       "formatTag": "news",
-      "category": "movies",
+      "category": "tv",
       "subcategory": "news",
-      "eventType": "casting",
+      "eventType": "renewal",
       "sensitivity": "normal",
-      "eventSlug": "taylor-ortega-tim-meadows-dan-bucatinsky-join-13-going-on-30-reboot",
-      "primaryKeyword": "13 going on 30 reboot cast",
-      "primaryEntity": "13 Going on 30",
+      "eventSlug": "scrublands-season-3-casting-news",
+      "primaryKeyword": "Scrublands season 3",
+      "primaryEntity": "Scrublands (TV series)",
       "entities": [
-        "13 Going on 30 (reboot)",
-        "Taylor Ortega",
-        "Tim Meadows",
-        "Dan Bucatinsky"
+        "Luke Arnold",
+        "Bella Heathcote"
       ],
-      "angle": "Taylor Ortega, Tim Meadows, and Dan Bucatinsky have been cast in Netflix's '13 Going on 30' reboot.",
+      "angle": "Australian crime drama 'Scrublands' is renewed for a third season with returning and new cast members.",
       "tmdbType": "movie",
       "source": "rss:Deadline",
       "sources": [
         {
           "outlet": "Deadline",
           "tier": 7,
-          "url": "https://deadline.com/2026/07/13-going-on-30-reboot-cast-adds-three-1236983936/",
+          "url": "https://deadline.com/2026/07/stan-scrublands-trust-season-3-1236983844/",
           "ageMin": 31,
-          "headline": "Taylor Ortega, Tim Meadows Dan Bucatinsky Latest To Join Netflix’s ‘13 Going On 30’ Reboot",
-          "summary": "EXCLUSIVE: Taylor Ortega (Big Mistakes), Tim Meadows (Peacemaker) and Dan Bucatinsky (The Comeback) have come aboard for undisclosed roles in Netflix s 13 Going on 30 reboot. They join the previously announced Emily Bader, Logan Lerman, Adeline Rudolph and Jessica Alba. No word yet on the sequel s plot or character details. Production kicked off in L.A. last [ ]"
+          "headline": "Stan Crime Drama Scrublands Gets Third Season; First-Look Images New Cast Unveiled",
+          "summary": "EXCLUSIVE: Australian crime drama Scrublands is back for a third season, and we ve got first look images and casting news. Luke Arnold (Black Sails) and Bella Heathcote (Pieces of Her) will return to lead Season 3, which is for Aussie streamer Stan and its broadcast sister 9Network. Scrublands: Trust, as it will be known, will [ ]"
         }
       ],
       "ageMin": 31,
       "_cand": {
-        "key": "rss:taylor-ortega-tim-meadows-dan-bucatinsky-latest-to-join-netf",
+        "key": "rss:stan-crime-drama-scrublands-gets-third-season-first-look-ima",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -120,39 +129,39 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 92,
+      "priority": 81,
       "signals": {
         "recency": 24,
         "corroboration": 12,
         "status": 18,
-        "type": 14,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
-        "big": 24,
+        "big": 18,
         "trending": 0,
         "softTv": 0
       },
       "tierClass": "B"
     },
     {
-      "id": "news-jenna-ortega-rose-byrne-star-nasty-movie",
-      "slug": "jenna-ortega-rose-byrne-to-star-in-new-movie-from-if-i-had-legs-direct",
-      "title": "Jenna Ortega, Rose Byrne to Star in New Movie from ‘If I Had Legs’ Director Mary Bronstein",
+      "id": "news-jenna-ortega-rose-byrne-nasty-film",
+      "slug": "jenna-ortega-rose-byrne-to-star-in-new-film-nasty-from-director-mary-b",
+      "title": "Jenna Ortega, Rose Byrne to Star in New Film 'Nasty' from Director Mary Bronstein",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "jenna-ortega-rose-byrne-star-nasty-movie",
-      "primaryKeyword": "nasty movie cast",
+      "eventSlug": "jenna-ortega-rose-byrne-nasty-film",
+      "primaryKeyword": "Jenna Ortega Rose Byrne movie",
       "primaryEntity": "Nasty (film)",
       "entities": [
         "Jenna Ortega",
         "Rose Byrne",
         "Mary Bronstein"
       ],
-      "angle": "Jenna Ortega and Rose Byrne are set to star in the new film 'Nasty' from director Mary Bronstein.",
+      "angle": "Jenna Ortega and Rose Byrne are set to star in a new film from director Mary Bronstein.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
@@ -160,12 +169,12 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/movies/movie-news/jenna-ortega-rose-byrne-mary-bronstein-nasty-1236650204/",
-          "ageMin": 68,
+          "ageMin": 128,
           "headline": "Jenna Ortega, Rose Byrne to Star in New Movie from ‘If I Had Legs’ Director Mary Bronstein",
           "summary": "‘Nasty’, written by Isabella Jarosz, was on the 2024 Black List."
         }
       ],
-      "ageMin": 68,
+      "ageMin": 128,
       "_cand": {
         "key": "rss:jenna-ortega-rose-byrne-to-star-in-new-movie-from-if-i-had-l",
         "popularity": 0,
@@ -201,59 +210,63 @@
       "tierClass": "B"
     },
     {
-      "id": "trailer-the-proud-family-louder-and-prouder-final-season-trailer",
-      "slug": "tv-trailer-the-proud-family-louder-and-prouder-fourth-final-season",
-      "title": "TV Trailer: ‘The Proud Family: Louder and Prouder’ Fourth Final Season",
-      "contentType": "trailer",
-      "formatTag": "trailer",
+      "id": "news-ava-duvernay-returns-to-documentaries-netflix",
+      "slug": "ava-duvernay-returns-to-documentaries-with-new-netflix-project",
+      "title": "Ava DuVernay Returns to Documentaries with New Netflix Project",
+      "contentType": "news",
+      "formatTag": "news",
       "category": "tv",
-      "subcategory": "trailers",
-      "eventType": "trailer",
+      "subcategory": "news",
+      "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "the-proud-family-louder-and-prouder-final-season-trailer",
-      "primaryKeyword": "the proud family louder and prouder trailer",
-      "primaryEntity": "The Proud Family: Louder and Prouder",
-      "entities": [],
-      "angle": "A trailer has been released for the fourth and final season of 'The Proud Family: Louder and Prouder'.",
+      "eventSlug": "ava-duvernay-returns-to-documentaries-netflix",
+      "primaryKeyword": "Ava DuVernay documentaries",
+      "primaryEntity": "Ava DuVernay",
+      "entities": [
+        "Masahiro Takanashi",
+        "Netflix",
+        "14th"
+      ],
+      "angle": "Ava DuVernay is set to direct a new documentary for Netflix, marking her return to the genre.",
       "tmdbType": "movie",
-      "source": "gnews:That Grape Juice.net",
+      "source": "rss:IndieWire",
       "sources": [
         {
-          "outlet": "That Grape Juice.net",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiygJBVV95cUxQSFNCNzZCWkNJV2F2N0dtYVllX3FNQjc0alN0ZXp3V1YwblFUejZZeXVGSW8zekJmbWZ2allmdE1RRGpUZU1HUHZEQjhuWU9mV3IxaWg0TE5wdl9FSThiTGMzdjhqY0d3M0RwZTBGbWd6WXV5ZHN4dHpXQmJwcWNfbEstaDVQeGoyWW5IT1ZYX0xvWTRvUml1aHM0TlpGQkxiTUwtYVUzbzlQcDlDSXN3dVBOa01iQUVyVndpVTFvYlE1enlHZ3ZVaWIwdmtBS3k4ZDhqcUhxcWdpX3ZJTUF6Z1dXbGRGVWxrNFRWd1pLcmF3WVljOTQwREFUSWRvTF9TSmJpSnNmSlRma0MzTFlZWDMxY01tMUFZV29NVnZpVWVWYXVxblZ0c1dpSlA0S0VJV3lDLURnQUpEclNxUnpTZmhZR0FjYThMenfSAbwBQVVfeXFMTVpDOUI5NUVzdThyNEI5MjBQTDhObmxsbmI5amZxOWJ4dU9WYWdCV2xrY2FwMTZZZkFNSlJIWklkOUgzZVNvcVZWc0gzT2NTTDVRd3ZnOFdlQzJnVHRlX29mQ0htQ1V5cGp5cV9qanpDN2NwbVFkNldxZUgtZl9tdVNvQWR3czlabmFpS2dyZG5TY3NCbS1aS1FmNU1hektGM1RHVFhZV3FBaGFPMHlBUE9jNzNPZFVCMDhFV0Q?oc=5",
-          "ageMin": 170,
-          "headline": "TV Trailer: ‘The Proud Family: Louder and Prouder’ Fourth Final Season - That Grape Juice.net",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiygJBVV95cUxQSFNCNzZCWkNJV2F2N0dtYVllX3FNQjc0alN0ZXp3V1YwblFUejZZeXVGSW8zekJmbWZ2allmdE1RRGpUZU1HUHZEQjhuWU9mV3IxaWg0TE5wdl9FSThiTGMzdjhqY0d3M0RwZTBGbWd6WXV5ZHN4dHpXQmJwcWNfbEstaDVQeGoyWW5IT1ZYX0xvWTRvUml1aHM0TlpGQkxiTUwtYVUzbzlQcDlDSXN3dVBOa01iQUVyVnd"
+          "outlet": "IndieWire",
+          "tier": 7,
+          "url": "https://www.indiewire.com/news/general-news/ava-duvernay-14th-netflix-doc-birthright-citizenship-1235205835/",
+          "ageMin": 33,
+          "headline": "Ava DuVernay Returns to Documentaries (and to Netflix) with 14th Amid Trump s Challenge to Birthright Citizenship",
+          "summary": "The film, directed and produced by DuVernay, will air on Netflix later this year."
         }
       ],
-      "ageMin": 170,
+      "ageMin": 33,
       "_cand": {
-        "key": "rss:tv-trailer-the-proud-family-louder-and-prouder-fourth-final-",
+        "key": "rss:ava-duvernay-returns-to-documentaries-and-to-netflix-with-14",
         "popularity": 0,
-        "kind": "gnews"
+        "kind": "rss-news"
       },
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
+        "tier1Count": 1,
+        "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "That Grape Juice.net"
+          "IndieWire"
         ],
-        "maxTier": 5,
+        "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "That Grape Juice.net",
+        "attribution": "IndieWire",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 75,
+      "priority": 81,
       "signals": {
-        "recency": 16,
-        "corroboration": 8,
+        "recency": 24,
+        "corroboration": 12,
         "status": 18,
-        "type": 15,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
         "big": 18,
@@ -263,23 +276,24 @@
       "tierClass": "B"
     },
     {
-      "id": "news-rose-byrne-jenna-ortega-starring-nasty",
-      "slug": "rose-byrne-and-jenna-ortega-starring-in-mary-bronstein-s-nasty-for-war",
-      "title": "Rose Byrne and Jenna Ortega Starring in Mary Bronstein's Nasty for Warner Bros.",
+      "id": "news-rose-byrne-jenna-ortega-star-in-nasty",
+      "slug": "rose-byrne-and-jenna-ortega-to-star-in-warner-bros-indie-sports-drama-",
+      "title": "Rose Byrne and Jenna Ortega to Star in Warner Bros. Indie Sports Drama 'Nasty'",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "rose-byrne-jenna-ortega-starring-nasty",
-      "primaryKeyword": "rose byrne jenna ortega movie",
-      "primaryEntity": "Rose Byrne",
+      "eventSlug": "rose-byrne-jenna-ortega-star-in-nasty",
+      "primaryKeyword": "nasty movie",
+      "primaryEntity": "Nasty (film)",
       "entities": [
+        "Rose Byrne",
         "Jenna Ortega",
         "Mary Bronstein"
       ],
-      "angle": "Rose Byrne and Jenna Ortega are set to star in Mary Bronstein's upcoming sports drama 'Nasty' for Warner Bros.",
+      "angle": "Rose Byrne and Jenna Ortega tapped for Warner Bros. indie sports drama 'Nasty'",
       "tmdbType": "movie",
       "source": "rss:Variety",
       "sources": [
@@ -287,12 +301,12 @@
           "outlet": "Variety",
           "tier": 7,
           "url": "https://variety.com/2026/film/news/rose-byrne-jenna-ortega-mary-bronstein-nasty-warner-bros-clockwork-1236812557/",
-          "ageMin": 105,
+          "ageMin": 165,
           "headline": "Rose Byrne and Jenna Ortega Starring in Mary Bronstein s Nasty for Warner Bros. Clockwork",
           "summary": "Rose Byrne and Jenna Ortega will star in Mary Bronstein s Nasty. The project, which will be released by Warner Bros. new indie label Clockwork, is a sports drama. If follows an athlete who is battling for a spot on the Olympic gymnastics team and who recognizes that her greatest opponent is her coach. The film [ ]"
         }
       ],
-      "ageMin": 105,
+      "ageMin": 165,
       "_cand": {
         "key": "rss:rose-byrne-and-jenna-ortega-starring-in-mary-bronstein-s-nas",
         "popularity": 0,
@@ -328,140 +342,9 @@
       "tierClass": "B"
     },
     {
-      "id": "news-sophie-nelisse-to-star-in-this-summer-will-be-different-adaptation",
-      "slug": "yellowjackets-star-sophie-n-lisse-to-star-in-this-summer-will-be-diffe",
-      "title": "Yellowjackets Star Sophie Nélisse to Star in This Summer Will Be Different Netflix Adaptation",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "sophie-nelisse-to-star-in-this-summer-will-be-different-adaptation",
-      "primaryKeyword": "this summer will be different netflix adaptation cast",
-      "primaryEntity": "This Summer Will Be Different (TV series)",
-      "entities": [
-        "Sophie Nélisse",
-        "Yellowjackets",
-        "Netflix"
-      ],
-      "angle": "'Yellowjackets' star Sophie Nélisse will lead the cast of Netflix's adaptation of 'This Summer Will Be Different'.",
-      "tmdbType": "movie",
-      "source": "rss:TheWrap",
-      "sources": [
-        {
-          "outlet": "TheWrap",
-          "tier": 7,
-          "url": "https://www.thewrap.com/media-platforms/tv/yellowjackets-sophie-nelisse-this-summer-will-be-different-netflix-adaptation/",
-          "ageMin": 78,
-          "headline": "Yellowjackets Star Sophie Nélisse to Star in This Summer Will Be Different Netflix Adaptation",
-          "summary": "The \"Heated Rivalry\" actress will play Lucy, who navigates her 20s and her first real love with her best friend’s brother The post Yellowjackets Star Sophie Nélisse to Star in This Summer Will Be Different Netflix Adaptation appeared first on TheWrap ."
-        }
-      ],
-      "ageMin": 78,
-      "_cand": {
-        "key": "rss:yellowjackets-star-sophie-n-lisse-to-star-in-this-summer-wil",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "TheWrap"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "TheWrap",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 78,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-sophie-nelisse-this-summer-will-be-different-netflix",
-      "slug": "yellowjackets-star-sophie-n-lisse-to-lead-netflix-adaptation-of-romanc",
-      "title": "‘Yellowjackets’ Star Sophie Nélisse to Lead Netflix Adaptation of Romance Novel ‘This Summer Will Be Different’",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "sophie-nelisse-this-summer-will-be-different-netflix",
-      "primaryKeyword": "sophie nelisse netflix",
-      "primaryEntity": "This Summer Will Be Different",
-      "entities": [
-        "Sophie Nélisse",
-        "Netflix"
-      ],
-      "angle": "Yellowjackets star Sophie Nélisse to lead Netflix adaptation.",
-      "tmdbType": "movie",
-      "source": "gnews:The Hollywood Reporter",
-      "sources": [
-        {
-          "outlet": "The Hollywood Reporter",
-          "tier": 7,
-          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPR0FjLUM5VTByRENBSnZxMDhnT0NfWWQyV0YtWW1oUmxucTY1eGhjZEF1NHdyZkhDeHk3WHkycWNBNXc4RVFnRnZPejN4Y0xMSnhTQkw5ZkJLQ2RDdFFnMXl5czlScFY4WDNvQVlUSjhDQUpvRnRZWlN1blg1NDIySXZNaUhsYmJScV9McWx1eDQzb0xDaVlLVjdpTGpfSVZDOGlGNVQ3NFFhZk4wWWc?oc=5",
-          "ageMin": 108,
-          "headline": "‘Yellowjackets’ Star Sophie Nélisse to Lead Netflix Adaptation of Romance Novel ‘This Summer Will Be Different’ - The Hollywood Reporter",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxPR0FjLUM5VTByRENBSnZxMDhnT0NfWWQyV0YtWW1oUmxucTY1eGhjZEF1NHdyZkhDeHk3WHkycWNBNXc4RVFnRnZPejN4Y0xMSnhTQkw5ZkJLQ2RDdFFnMXl5czlScFY4WDNvQVlUSjhDQUpvRnRZWlN1blg1NDIySXZNaUhsYmJScV9McWx1eDQzb0xDaVlLVjdpTGpfSVZDOGlGNVQ3NFFhZk4wWWc?oc=5\" target=\"_"
-        }
-      ],
-      "ageMin": 108,
-      "_cand": {
-        "key": "rss:-yellowjackets-star-sophie-n-lisse-to-lead-netflix-adaptatio",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "The Hollywood Reporter"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "The Hollywood Reporter",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 78,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "music-news-corey-kent-empty-words-single",
-      "slug": "corey-kent-s-empty-words-becomes-his-second-current-single",
-      "title": "Corey Kent's 'Empty Words' Becomes His Second Current Single",
+      "id": "music-news-carly-rae-jepsen-new-song-after-all",
+      "slug": "carly-rae-jepsen-pens-an-ode-to-a-new-chapter-on-latest-song-after-all",
+      "title": "Carly Rae Jepsen Pens an Ode to a New Chapter on Latest Song 'After All'",
       "contentType": "music-news",
       "formatTag": "music-news",
       "category": "music",
@@ -469,28 +352,155 @@
       "eventType": "announcement",
       "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "corey-kent-empty-words-single",
-      "primaryKeyword": "corey kent empty words",
-      "primaryEntity": "Corey Kent",
+      "eventSlug": "carly-rae-jepsen-new-song-after-all",
+      "primaryKeyword": "Carly Rae Jepsen",
+      "primaryEntity": "Carly Rae Jepsen",
       "entities": [
-        "Empty Words"
+        "Day and Night"
       ],
-      "angle": "Country singer Corey Kent's song 'Empty Words' is being pushed as his second current single.",
+      "angle": "Carly Rae Jepsen releases new single 'After All' ahead of her upcoming double album.",
       "tmdbType": "movie",
-      "source": "rss:Billboard",
+      "source": "rss:Rolling Stone",
       "sources": [
         {
-          "outlet": "Billboard",
+          "outlet": "Rolling Stone",
           "tier": 7,
-          "url": "https://www.billboard.com/music/country/corey-kent-empty-words-makin-tracks-1236296048/",
-          "ageMin": 44,
-          "headline": "Corey Kent’s ‘Empty Words’ Got His Full Attention, Becoming His Second Current Single: It Was Like a Twist of the Knife",
-          "summary": "Billboard's Makin' Tracks column looks at the writing and recording behind Corey Kent's \"Empty Words.\""
+          "url": "https://www.rollingstone.com/music/music-news/carly-rae-jepsen-after-all-single-1235594657/",
+          "ageMin": 9,
+          "headline": "Carly Rae Jepsen Pens an Ode to a New Chapter on Latest Song After All",
+          "summary": "It's the second taste of Day and Night, her first double album arriving in September"
         }
       ],
-      "ageMin": 44,
+      "ageMin": 9,
       "_cand": {
-        "key": "rss:corey-kent-s-empty-words-got-his-full-attention-becoming-his",
+        "key": "rss:carly-rae-jepsen-pens-an-ode-to-a-new-chapter-on-latest-song",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "breakoutVelocity": 0,
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Rolling Stone"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Rolling Stone",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 69,
+      "signals": {
+        "recency": 30,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "trailer-the-challenge-season-42-premiere-date-trailer",
+      "slug": "the-challenge-season-42-paramount-unveils-competition-series-premiere-",
+      "title": "The Challenge: Season 42; Paramount+ Unveils Competition Series Premiere Date Trailer",
+      "contentType": "trailer",
+      "formatTag": "trailer",
+      "category": "tv",
+      "subcategory": "trailers",
+      "eventType": "trailer",
+      "sensitivity": "normal",
+      "eventSlug": "the-challenge-season-42-premiere-date-trailer",
+      "primaryKeyword": "The Challenge Season 42 trailer",
+      "primaryEntity": "The Challenge",
+      "entities": [],
+      "angle": "Paramount+ drops trailer and announces premiere date for the new season of The Challenge.",
+      "tmdbType": "movie",
+      "source": "gnews:TV Series Finale",
+      "sources": [
+        {
+          "outlet": "TV Series Finale",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNMlluT3JUSzJjeU9XZjl0WGV5elpXSTdOQTFIUF9jSnZWMGx1OXJvWlp1VV9NVFR5WDFacmlWZXoxMGIzOEZ3cXVWbW5CY3pCalBaSFBvaWFIRmgwMGt5OUprU09zd0dKaW1pYzhQTkxoX3Q4NVZ5aEs2YWRTTnFmcGdfU3RaeDVYUDMyOGR3aGNZcS1OcXNlOTVKVWVIZWczbHNscnFMV0VFYlVhb181X21BY2NGZmZBdlE?oc=5",
+          "ageMin": 346,
+          "headline": "The Challenge: Season 42; Paramount+ Unveils Competition Series Premiere Date Trailer - TV Series Finale",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiugFBVV95cUxNMlluT3JUSzJjeU9XZjl0WGV5elpXSTdOQTFIUF9jSnZWMGx1OXJvWlp1VV9NVFR5WDFacmlWZXoxMGIzOEZ3cXVWbW5CY3pCalBaSFBvaWFIRmgwMGt5OUprU09zd0dKaW1pYzhQTkxoX3Q4NVZ5aEs2YWRTTnFmcGdfU3RaeDVYUDMyOGR3aGNZcS1OcXNlOTVKVWVIZWczbHNscnFMV0VFYlVhb181X21BY2NGZmZBdlE"
+        }
+      ],
+      "ageMin": 346,
+      "_cand": {
+        "key": "rss:the-challenge-season-42-paramount-unveils-competition-series",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "TV Series Finale"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "TV Series Finale",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 68,
+      "signals": {
+        "recency": 9,
+        "corroboration": 8,
+        "status": 18,
+        "type": 15,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-seth-green-dungeon-crawler-carl-tv-series",
+      "slug": "seth-green-wants-role-in-dungeon-crawler-carl-live-action-series",
+      "title": "Seth Green Wants Role in 'Dungeon Crawler Carl' Live-Action Series",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "seth-green-dungeon-crawler-carl-tv-series",
+      "primaryKeyword": "Dungeon Crawler Carl TV series",
+      "primaryEntity": "Dungeon Crawler Carl (TV series)",
+      "entities": [
+        "Seth Green"
+      ],
+      "angle": "Seth Green publicly expresses his desire to join the upcoming 'Dungeon Crawler Carl' live-action series.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/tv/news/dungeon-crawler-carl-tv-series-seth-green-mordecai-1236810542/",
+          "ageMin": 74,
+          "headline": "Seth Green Wants to Join the Dungeon Crawler Carl Live-Action Series: I d Make a Really Good Mordecai",
+          "summary": "Family Guy star Seth Green is a big Dungeon Crawler Carl fan who wants it to be known he d love to join the cast of the live-action TV series but doesn t want to use his personal connections to land the part. The show, which was ordered to series at Peacock last month, is being [ ]"
+        }
+      ],
+      "ageMin": 74,
+      "_cand": {
+        "key": "rss:seth-green-wants-to-join-the-dungeon-crawler-carl-live-actio",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -500,25 +510,102 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Billboard"
+          "Variety"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Billboard",
+        "attribution": "Variety",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 63,
+      "priority": 78,
       "signals": {
-        "recency": 24,
+        "recency": 16,
         "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "music-news-ocean-way-festival-santa-monica-announcement",
+      "slug": "the-killers-olivia-dean-to-headline-inaugural-ocean-way-festival-in-sa",
+      "title": "The Killers, Olivia Dean to Headline Inaugural Ocean Way Festival in Santa Monica",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "ocean-way-festival-santa-monica-announcement",
+      "primaryKeyword": "the killers festival",
+      "primaryEntity": "The Killers",
+      "entities": [
+        "Olivia Dean",
+        "Jack White",
+        "Santa Monica"
+      ],
+      "angle": "The Killers and Olivia Dean are set to headline the inaugural Ocean Way Festival in Santa Monica.",
+      "tmdbType": "movie",
+      "source": "rss:Rolling Stone",
+      "sources": [
+        {
+          "outlet": "Rolling Stone",
+          "tier": 7,
+          "url": "https://www.rollingstone.com/music/music-news/the-killers-olivia-dean-ocean-way-festival-2026-1235594583/",
+          "ageMin": 83,
+          "headline": "The Killers, Olivia Dean, Jack White to Headline New Santa Monica Festival",
+          "summary": "Taking place on the Santa Monica Beach in late September, the two-day Ocean Way will also feature sets from Sublime and Alvvays"
+        },
+        {
+          "outlet": "Billboard",
+          "tier": 7,
+          "url": "https://www.billboard.com/music/concerts/ocean-way-festival-santa-monica-killers-jack-white-olivia-dean-1236296051/",
+          "ageMin": 91,
+          "headline": "The Killers, Olivia Dean to Headline Inaugural Ocean Way Festival in Santa Monica",
+          "summary": "The Sept. 26-27 event will be the first major music festival on the city's iconic beach."
+        }
+      ],
+      "ageMin": 83,
+      "_cand": {
+        "key": "rss:the-killers-olivia-dean-jack-white-to-headline-new-santa-mon",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "breakoutVelocity": 0,
+      "corroborationCount": 2,
+      "verification": {
+        "tier1Count": 2,
+        "tier1Owners": 1,
+        "outletCount": 2,
+        "outlets": [
+          "Rolling Stone",
+          "Billboard"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Rolling Stone",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 69,
+      "signals": {
+        "recency": 16,
+        "corroboration": 18,
         "status": 18,
         "type": 9,
         "pop": 0,
         "breakout": 0,
         "big": 0,
-        "trending": 0,
+        "trending": 8,
         "softTv": 0
       },
       "tierClass": "B"
@@ -534,14 +621,15 @@
       "eventType": "announcement",
       "sensitivity": "normal",
       "eventSlug": "fortnite-odysseus-agamemnon-skins",
-      "primaryKeyword": "Fortnite The Odyssey skins",
+      "primaryKeyword": "fortnite odyssey",
       "primaryEntity": "The Odyssey",
       "entities": [
         "The Odyssey (film)",
         "Fortnite",
-        "Matt Damon"
+        "Matt Damon",
+        "Christopher Nolan"
       ],
-      "angle": "Fortnite adds skins for Matt Damon's Odysseus from Christopher Nolan's 'The Odyssey'.",
+      "angle": "Fortnite introduces skins for Odysseus and Agamemnon, referencing Matt Damon's character from Christopher Nolan's upcoming film.",
       "tmdbType": "movie",
       "source": "rss:Variety",
       "sources": [
@@ -549,12 +637,12 @@
           "outlet": "Variety",
           "tier": 7,
           "url": "https://variety.com/2026/film/news/odyssey-fortnite-skins-odysseus-agamemnon-1236812540/",
-          "ageMin": 77,
+          "ageMin": 137,
           "headline": "Fortnite Adds The Odyssey Skins for Odysseus and Agamemnon",
           "summary": "Fornite players can play as Matt Damon s Odysseus from Christopher Nolan s The Odyssey, Epic Games announced. Earlier this week, the company teased a short clip on its official X account showing Odysseus walking through a massive hallway lined with towering statues, captioned with the line some say each game is an epic journey of its [ ]"
         }
       ],
-      "ageMin": 77,
+      "ageMin": 137,
       "_cand": {
         "key": "rss:fortnite-adds-the-odyssey-skins-for-odysseus-and-agamemnon",
         "popularity": 0,
@@ -600,26 +688,26 @@
       "eventType": "award",
       "sensitivity": "normal",
       "eventSlug": "41st-imagen-awards-nominations",
-      "primaryKeyword": "Imagen Awards nominations",
+      "primaryKeyword": "imagen awards",
       "primaryEntity": "Imagen Awards",
       "entities": [
         "Acapulco (TV series)",
         "Andy Garcia"
       ],
-      "angle": "Apple TV+'s 'Acapulco' leads nominations for the 41st Imagen Awards, honoring Latino talent.",
+      "angle": "Apple TV+'s 'Acapulco' leads nominations for the 41st Imagen Awards, with Andy Garcia set to receive a Lifetime Achievement Award.",
       "tmdbType": "movie",
-      "source": "rss:Variety",
+      "source": "rss:Variety Music",
       "sources": [
         {
-          "outlet": "Variety",
+          "outlet": "Variety Music",
           "tier": 7,
           "url": "https://variety.com/2026/tv/news/imagen-awards-nominations-andy-garcia-lifetime-achievement-1236812172/",
-          "ageMin": 91,
+          "ageMin": 151,
           "headline": "Acapulco Leads 41st Imagen Awards Nominations; Andy Garcia to Receive Lifetime Achievement Award",
           "summary": "Apple TV s Acapulco led all series as the Imagen Foundation announced nominations for the 41st Annual Imagen Awards on Thursday. Acapulco scored 13 nods in the competition, which recognizes Latino talent and creative work across film, television, documentaries, digital media and music. The Imagen Foundation also announced that actor, filmmaker, producer and musician Andy Garcia [ ]"
         }
       ],
-      "ageMin": 91,
+      "ageMin": 151,
       "_cand": {
         "key": "rss:acapulco-leads-41st-imagen-awards-nominations-andy-garcia-to",
         "popularity": 0,
@@ -631,11 +719,11 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Variety"
+          "Variety Music"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Variety",
+        "attribution": "Variety Music",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -655,38 +743,111 @@
       "tierClass": "B"
     },
     {
-      "id": "news-warner-bros-clockwork-nasty-jenna-ortega-rose-byrne",
-      "slug": "jenna-ortega-and-rose-byrne-to-star-in-warner-bros-thriller-nasty",
-      "title": "Jenna Ortega and Rose Byrne to Star in Warner Bros. Thriller 'Nasty'",
+      "id": "news-sullivans-crossing-renewed-for-season-5",
+      "slug": "sullivan-s-crossing-renewed-for-season-5-by-cw",
+      "title": "‘Sullivan’s Crossing’ Renewed For Season 5 By CW",
       "contentType": "news",
       "formatTag": "news",
-      "category": "movies",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "renewal",
+      "sensitivity": "normal",
+      "eventSlug": "sullivans-crossing-renewed-for-season-5",
+      "primaryKeyword": "sullivan's crossing season 5",
+      "primaryEntity": "Sullivan's Crossing",
+      "entities": [
+        "The CW"
+      ],
+      "angle": "The CW has renewed the drama series 'Sullivan's Crossing' for a fifth season.",
+      "tmdbType": "movie",
+      "source": "gnews:IMDb",
+      "sources": [
+        {
+          "outlet": "IMDb",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE13T3hPRjdOYjhpMFo0b1dKWUd1OUpFVEJJUDhPOS1Wekk2TTYzSlNxY1gxOEJvZS1GNGZiYXhxeldZOW90TDJjdlNKWks4alI1c3VYRFZfOWZ0eVlqZHhKbmhxUndXeWc?oc=5",
+          "ageMin": 224,
+          "headline": "‘Sullivan’s Crossing’ Renewed For Season 5 By CW - IMDb",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiZ0FVX3lxTE13T3hPRjdOYjhpMFo0b1dKWUd1OUpFVEJJUDhPOS1Wekk2TTYzSlNxY1gxOEJvZS1GNGZiYXhxeldZOW90TDJjdlNKWks4alI1c3VYRFZfOWZ0eVlqZHhKbmhxUndXeWc?oc=5\" target=\"_blank\" ‘Sullivan’s Crossing’ Renewed For Season 5 By CW /a nbsp; nbsp; font color=\"#6f6f6f\" IMDb"
+        },
+        {
+          "outlet": "Taste of Country",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBFS2FVRHJNRF82Z2N5T0haeDlKSWRxMHp0UTVfNC11dFRZaldDYUp5dHVhV2xJeE5DZDVnWnRhLTcwRGdLT2lNd1NnOEI2REt4TWp1QnRoTmZRYXhoQkh2bEtR?oc=5",
+          "ageMin": 270,
+          "headline": "'Lioness' Season 3 Trailer Reveals Most Dangerous Mission Yet - Taste of Country",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiYkFVX3lxTFBFS2FVRHJNRF82Z2N5T0haeDlKSWRxMHp0UTVfNC11dFRZaldDYUp5dHVhV2xJeE5DZDVnWnRhLTcwRGdLT2lNd1NnOEI2REt4TWp1QnRoTmZRYXhoQkh2bEtR?oc=5\" target=\"_blank\" 'Lioness' Season 3 Trailer Reveals Most Dangerous Mission Yet /a nbsp; nbsp; font color=\"#6f6f6f"
+        }
+      ],
+      "ageMin": 224,
+      "_cand": {
+        "key": "rss:-sullivan-s-crossing-renewed-for-season-5-by-cw-imdb",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 2,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 2,
+        "outlets": [
+          "IMDb",
+          "Taste of Country"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "multiple outlets",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 76,
+      "signals": {
+        "recency": 9,
+        "corroboration": 14,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 8,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "music-news-masego-new-album-fix-your-face",
+      "slug": "masego-hits-the-reset-button-with-soul-baring-new-fix-your-face-album-",
+      "title": "Masego Hits the Reset Button With Soul-Baring New ‘Fix Your Face’ Album: ‘I Was Mad at God for a Little Bit’",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "warner-bros-clockwork-nasty-jenna-ortega-rose-byrne",
-      "primaryKeyword": "Jenna Ortega Rose Byrne new movie",
-      "primaryEntity": "Jenna Ortega",
+      "tier": "popular",
+      "eventSlug": "masego-new-album-fix-your-face",
+      "primaryKeyword": "Masego",
+      "primaryEntity": "Masego",
       "entities": [
-        "Rose Byrne",
-        "Mary Bronstein"
+        "Fix Your Face"
       ],
-      "angle": "Jenna Ortega and Rose Byrne set to star in Warner Bros. new film 'Nasty'",
+      "angle": "Grammy-nominated artist Masego releases his first new album in three years, 'Fix Your Face'.",
       "tmdbType": "movie",
-      "source": "rss:TheWrap",
+      "source": "rss:Billboard",
       "sources": [
         {
-          "outlet": "TheWrap",
+          "outlet": "Billboard",
           "tier": 7,
-          "url": "https://www.thewrap.com/creative-content/movies/nasty-jenna-ortega-rose-byrne-warner-bros-clockwork/",
-          "ageMin": 112,
-          "headline": "Warner Bros. Clockwork Gets ‘Nasty’ With Jenna Ortega and Rose Byrne",
-          "summary": "Mary Bronstein, director of last year’s “If I Had Legs I’d Kick You,” is attached to helm The post Warner Bros. Clockwork Gets ‘Nasty’ With Jenna Ortega and Rose Byrne appeared first on TheWrap ."
+          "url": "https://www.billboard.com/music/features/masego-fix-your-face-album-interview-rb-music-1236295914/",
+          "ageMin": 31,
+          "headline": "Masego Hits the Reset Button With Soul-Baring New ‘Fix Your Face’ Album: ‘I Was Mad at God for a Little Bit’",
+          "summary": "The Grammy-nominated musical multihyphenate is back with his first new album in almost three years."
         }
       ],
-      "ageMin": 112,
+      "ageMin": 31,
       "_cand": {
-        "key": "rss:warner-bros-clockwork-gets-nasty-with-jenna-ortega-and-rose-",
+        "key": "rss:masego-hits-the-reset-button-with-soul-baring-new-fix-your-f",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -696,40 +857,40 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "TheWrap"
+          "Billboard"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "TheWrap",
+        "attribution": "Billboard",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 79,
+      "priority": 63,
       "signals": {
-        "recency": 16,
+        "recency": 24,
         "corroboration": 12,
         "status": 18,
         "type": 9,
         "pop": 0,
         "breakout": 0,
-        "big": 24,
+        "big": 0,
         "trending": 0,
         "softTv": 0
       },
       "tierClass": "B"
     },
     {
-      "id": "news-mickey-mouse-club-reboot-pilot",
-      "slug": "mickey-mouse-club-revival-pilot-ordered-by-disney",
-      "title": "Mickey Mouse Club Revival Pilot Ordered by Disney+",
+      "id": "news-mickey-mouse-club-reboot-disney-plus",
+      "slug": "mickey-mouse-club-returns-disney-orders-pilot-for-reboot-of-iconic-kid",
+      "title": "Mickey Mouse Club Returns: Disney Orders Pilot for Reboot of Iconic Kids Show That Starred Young Britney Spears, Ryan Gosling",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "mickey-mouse-club-reboot-pilot",
+      "eventSlug": "mickey-mouse-club-reboot-disney-plus",
       "primaryKeyword": "mickey mouse club reboot",
       "primaryEntity": "Mickey Mouse Club",
       "entities": [
@@ -738,7 +899,7 @@
         "Britney Spears",
         "Ryan Gosling"
       ],
-      "angle": "Disney+ orders a pilot for a reboot of the iconic kids show that launched the careers of Britney Spears and Ryan Gosling.",
+      "angle": "Disney+ is developing a pilot for a reboot of the iconic 'Mickey Mouse Club', potentially bringing back the beloved kids' show that launched the careers of stars like Britney Spears and Ryan Gosling.",
       "tmdbType": "movie",
       "source": "rss:Variety",
       "sources": [
@@ -746,12 +907,12 @@
           "outlet": "Variety",
           "tier": 7,
           "url": "https://variety.com/2026/tv/news/mickey-mouse-club-reboot-disney-orders-pilot-new-cast-1236812553/",
-          "ageMin": 106,
+          "ageMin": 166,
           "headline": "Mickey Mouse Club Returns: Disney Orders Pilot for Reboot of Iconic Kids Show That Starred Young Britney Spears, Ryan Gosling",
           "summary": "There s a new group of Mouseketeers. The Mickey Mouse Club is eyeing a revival, as Disney+ has ordered a pilot for a reboot of the classic kids program. Originally launched in 1955 before undergoing several iterations, the show is responsible for discovering and launching young talent including Britney Spears, Ryan Gosling, Justin Timberlake and Christina [ ]"
         }
       ],
-      "ageMin": 106,
+      "ageMin": 166,
       "_cand": {
         "key": "rss:mickey-mouse-club-returns-disney-orders-pilot-for-reboot-of-",
         "popularity": 0,
@@ -787,7 +948,139 @@
       "tierClass": "B"
     },
     {
-      "id": "news-green-lantern-hbo-series-tom-king",
+      "id": "news-danny-mcbride-gi-joe-reboot",
+      "slug": "danny-mcbride-to-direct-g-i-joe-movie-reboot",
+      "title": "Danny McBride to direct G.I. Joe movie reboot",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "danny-mcbride-gi-joe-reboot",
+      "primaryKeyword": "Danny McBride G.I. Joe movie",
+      "primaryEntity": "G.I. Joe: Retaliation",
+      "entities": [
+        "G.I. Joe",
+        "Danny McBride"
+      ],
+      "angle": "Danny McBride set to direct the reboot of the G.I. Joe movie franchise.",
+      "tmdbType": "movie",
+      "source": "gnews:AOL.com",
+      "sources": [
+        {
+          "outlet": "AOL.com",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBLaEhaMzdkS0wzdHM2N01aMm5ETTVzQUUtdW85SmFYa1AwTFhNSHpzOWd3TUhVVHdHUkNpZUpRbnJrN3QzcG0tN3MzTEh1b2FkOTdzeUJIOGtqTHdTYVZDbVVUZjQ3TEMxRkxoMjZ6V2FWWWFSbDRn?oc=5",
+          "ageMin": 444,
+          "headline": "Movies and TV shows casting this week in Buffalo - AOL.com",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMid0FVX3lxTFBLaEhaMzdkS0wzdHM2N01aMm5ETTVzQUUtdW85SmFYa1AwTFhNSHpzOWd3TUhVVHdHUkNpZUpRbnJrN3QzcG0tN3MzTEh1b2FkOTdzeUJIOGtqTHdTYVZDbVVUZjQ3TEMxRkxoMjZ6V2FWWWFSbDRn?oc=5\" target=\"_blank\" Movies and TV shows casting this week in Buffalo /a nbsp; nbsp; font"
+        }
+      ],
+      "ageMin": 444,
+      "_cand": {
+        "key": "rss:movies-and-tv-shows-casting-this-week-in-buffalo-aol-com",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "AOL.com"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "AOL.com",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 68,
+      "signals": {
+        "recency": 4,
+        "corroboration": 8,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-heartstopper-forever-finale",
+      "slug": "heartstopper-forever-inside-the-netflix-series-finale-that-changed-bri",
+      "title": "Heartstopper Forever: Inside the Netflix Series Finale That Changed British YA",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "heartstopper-forever-finale",
+      "primaryKeyword": "heartstopper finale",
+      "primaryEntity": "Heartstopper (TV series)",
+      "entities": [
+        "Alice Oseman",
+        "Kit Connor",
+        "Joe Locke",
+        "Netflix"
+      ],
+      "angle": "Creator and stars reflect on the conclusion of the groundbreaking Netflix YA series.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/the-end-of-an-era-inside-heartstopper-forever-and-the-show-that-changed-british-ya-1236646729/",
+          "ageMin": 116,
+          "headline": "The End of an Era: Inside Heartstopper Forever and the Show That Changed British YA",
+          "summary": "With the release of the two-hour finale that concludes the hit Netflix series, creator Alice Oseman along with Kit Connor, Joe Locke and more of the show's stars reflect on a groundbreaking, decade-long journey and what it means to end their queer love story."
+        }
+      ],
+      "ageMin": 116,
+      "_cand": {
+        "key": "rss:the-end-of-an-era-inside-heartstopper-forever-and-the-show-t",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 73,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-tom-king-green-lantern-hbo",
       "slug": "green-lantern-is-cool-again-dc-writer-tom-king-on-making-hbo-s-lantern",
       "title": "Green Lantern Is Cool Again: DC Writer Tom King on Making HBO's Lanterns",
       "contentType": "news",
@@ -796,14 +1089,16 @@
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "green-lantern-hbo-series-tom-king",
-      "primaryKeyword": "green lantern hbo series",
+      "eventSlug": "tom-king-green-lantern-hbo",
+      "primaryKeyword": "green lantern hbo",
       "primaryEntity": "Green Lantern",
       "entities": [
+        "Green Lantern (TV series)",
         "Tom King",
+        "DC Comics",
         "HBO"
       ],
-      "angle": "DC writer Tom King discusses his involvement in HBO's upcoming 'Lanterns' series.",
+      "angle": "DC writer Tom King discusses his involvement with the upcoming HBO Max Green Lantern series.",
       "tmdbType": "movie",
       "source": "rss:Variety",
       "sources": [
@@ -811,12 +1106,12 @@
           "outlet": "Variety",
           "tier": 7,
           "url": "https://variety.com/2026/tv/news/lanterns-hbo-tom-king-cia-green-lantern-1236810243/",
-          "ageMin": 61,
+          "ageMin": 121,
           "headline": "Green Lantern Is Cool Again: DC Writer Tom King on Making HBO s Lanterns After Fighting Terrorists as a CIA Officer",
           "summary": "If comic book author Tom King has a superpower, it’s that everything he writes turns to gold. Marvel and DC have each adapted one of his comics, resulting in 2021’s “WandaVision” and 2026’s Supergirl.” Now, he’s helping forge the rebooted DC Universe with his take on the Green Lanterns — galactic peacekeepers who can create [ ]"
         }
       ],
-      "ageMin": 61,
+      "ageMin": 121,
       "_cand": {
         "key": "rss:green-lantern-is-cool-again-dc-writer-tom-king-on-making-hbo",
         "popularity": 0,
@@ -852,767 +1147,23 @@
       "tierClass": "B"
     },
     {
-      "id": "music-news-steelheart-without-you-music-video",
-      "slug": "steelheart-premiere-official-music-video-for-orchestral-without-you-co",
-      "title": "SteelHeart premiere official music video for orchestral “Without You” cover",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "steelheart-without-you-music-video",
-      "primaryKeyword": "steelheart music video",
-      "primaryEntity": "Steelheart",
-      "entities": [
-        "SteelHeart"
-      ],
-      "angle": "SteelHeart releases official music video for orchestral cover.",
-      "tmdbType": "movie",
-      "source": "gnews:NextMosh",
-      "sources": [
-        {
-          "outlet": "NextMosh",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQN3IzX2pJblVlb2tqODlXenVvS0xOaFhSTXhPNWlscVNZZDkxMl81UEk0c1BhTnZ2WHZoMHBObVAtQTIzamxlb1ZZQzJjc1BWRlBxRjJSRWRiUmJLOWFzcXExcEhadzNNSjRqY0JVdlhzQkh5X19zbHI0bkZoVUQtX3RNajM1eTVGWGhJaVhuME4wWXRVZjd6WG5rSQ?oc=5",
-          "ageMin": 80,
-          "headline": "SteelHeart premiere official music video for orchestral “Without You” cover - NextMosh",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMimwFBVV95cUxQN3IzX2pJblVlb2tqODlXenVvS0xOaFhSTXhPNWlscVNZZDkxMl81UEk0c1BhTnZ2WHZoMHBObVAtQTIzamxlb1ZZQzJjc1BWRlBxRjJSRWRiUmJLOWFzcXExcEhadzNNSjRqY0JVdlhzQkh5X19zbHI0bkZoVUQtX3RNajM1eTVGWGhJaVhuME4wWXRVZjd6WG5rSQ?oc=5\" target=\"_blank\" SteelHeart premier"
-        }
-      ],
-      "ageMin": 80,
-      "_cand": {
-        "key": "rss:steelheart-premiere-official-music-video-for-orchestral-with",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "NextMosh"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "NextMosh",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 51,
-      "signals": {
-        "recency": 16,
-        "corroboration": 8,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-james-gray-paper-tiger-nyff-opening",
-      "slug": "james-gray-s-paper-tiger-to-open-new-york-film-festival",
-      "title": "James Gray's 'Paper Tiger' to Open New York Film Festival",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "james-gray-paper-tiger-nyff-opening",
-      "primaryKeyword": "Paper Tiger movie",
-      "primaryEntity": "Paper Tiger (film)",
-      "entities": [
-        "James Gray",
-        "Adam Driver",
-        "Miles Teller",
-        "Scarlett Johansson"
-      ],
-      "angle": "James Gray's latest film 'Paper Tiger' to open the New York Film Festival after its Cannes premiere.",
-      "tmdbType": "movie",
-      "source": "rss:IndieWire",
-      "sources": [
-        {
-          "outlet": "IndieWire",
-          "tier": 7,
-          "url": "https://www.indiewire.com/news/festivals/2026-new-york-film-festival-james-gray-paper-tiger-1235205510/",
-          "ageMin": 271,
-          "headline": "James Gray s Paper Tiger Will Open This Year’s New York Film Festival",
-          "summary": "The auteur's latest heartbreaker, starring Adam Driver, Miles Teller, and Scarlett Johansson, premiered at Cannes earlier this year to strong reviews."
-        }
-      ],
-      "ageMin": 271,
-      "_cand": {
-        "key": "rss:james-gray-s-paper-tiger-will-open-this-year-s-new-york-film",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "IndieWire"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "IndieWire",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 72,
-      "signals": {
-        "recency": 9,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-sullivans-crossing-renewed-season-5",
-      "slug": "sullivan-s-crossing-renewed-for-season-5-by-cw",
-      "title": "‘Sullivan’s Crossing’ Renewed For Season 5 By CW",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "renewal",
-      "sensitivity": "normal",
-      "eventSlug": "sullivans-crossing-renewed-season-5",
-      "primaryKeyword": "sullivans crossing renewal",
-      "primaryEntity": "Sullivan's Crossing",
-      "entities": [
-        "The CW"
-      ],
-      "angle": "The CW has renewed the drama series 'Sullivan's Crossing' for a fifth season.",
-      "tmdbType": "movie",
-      "source": "gnews:IMDb",
-      "sources": [
-        {
-          "outlet": "IMDb",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE13T3hPRjdOYjhpMFo0b1dKWUd1OUpFVEJJUDhPOS1Wekk2TTYzSlNxY1gxOEJvZS1GNGZiYXhxeldZOW90TDJjdlNKWks4alI1c3VYRFZfOWZ0eVlqZHhKbmhxUndXeWc?oc=5",
-          "ageMin": 164,
-          "headline": "‘Sullivan’s Crossing’ Renewed For Season 5 By CW - IMDb",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiZ0FVX3lxTE13T3hPRjdOYjhpMFo0b1dKWUd1OUpFVEJJUDhPOS1Wekk2TTYzSlNxY1gxOEJvZS1GNGZiYXhxeldZOW90TDJjdlNKWks4alI1c3VYRFZfOWZ0eVlqZHhKbmhxUndXeWc?oc=5\" target=\"_blank\" ‘Sullivan’s Crossing’ Renewed For Season 5 By CW /a nbsp; nbsp; font color=\"#6f6f6f\" IMDb"
-        }
-      ],
-      "ageMin": 164,
-      "_cand": {
-        "key": "rss:-sullivan-s-crossing-renewed-for-season-5-by-cw-imdb",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "IMDb"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "IMDb",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 69,
-      "signals": {
-        "recency": 16,
-        "corroboration": 8,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "music-news-nine-inch-nails-boys-noize-teaser",
-      "slug": "nine-inch-nails-share-new-teaser-video-with-boys-noize",
-      "title": "Nine Inch Nails share new teaser video with Boys Noize",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "nine-inch-nails-boys-noize-teaser",
-      "primaryKeyword": "nine inch nails boys noize",
-      "primaryEntity": "Nine Inch Nails",
-      "entities": [
-        "Boys Noize"
-      ],
-      "angle": "Nine Inch Nails shares a new teaser video featuring Boys Noize.",
-      "tmdbType": "movie",
-      "source": "gnews:98KUPD",
-      "sources": [
-        {
-          "outlet": "98KUPD",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1TdHFHTjhpeEhKdmloYVFZRmpTVlpodUYwSnZOaFFxdEtJYUUtSGNXUmc4ZjlTVkFVb2Y0cHJyMnlpTHpNZ3NwVU1NOUo0RnE2aU1pRlg1R1MyT0toYk5uLXpqaUt3NmR3Zlp1OG43bVp6bHVid3k3QnpaT3V2bEE?oc=5",
-          "ageMin": 151,
-          "headline": "Nine Inch Nails share new teaser video with Boys Noize - 98KUPD",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMif0FVX3lxTE1TdHFHTjhpeEhKdmloYVFZRmpTVlpodUYwSnZOaFFxdEtJYUUtSGNXUmc4ZjlTVkFVb2Y0cHJyMnlpTHpNZ3NwVU1NOUo0RnE2aU1pRlg1R1MyT0toYk5uLXpqaUt3NmR3Zlp1OG43bVp6bHVid3k3QnpaT3V2bEE?oc=5\" target=\"_blank\" Nine Inch Nails share new teaser video with Boys Noize /a"
-        }
-      ],
-      "ageMin": 151,
-      "_cand": {
-        "key": "rss:nine-inch-nails-share-new-teaser-video-with-boys-noize-98kup",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "breakoutVelocity": 0,
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "98KUPD"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "98KUPD",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 51,
-      "signals": {
-        "recency": 16,
-        "corroboration": 8,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-alpha-gang-love-of-your-life-tiff-premieres",
-      "slug": "mahershala-ali-s-alpha-gang-and-rachel-morrison-s-love-of-your-life-to",
-      "title": "Mahershala Ali's 'Alpha Gang' and Rachel Morrison's 'Love of Your Life' to Premiere at TIFF",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "alpha-gang-love-of-your-life-tiff-premieres",
-      "primaryKeyword": "Alpha Gang movie",
-      "primaryEntity": "Alpha Gang (film)",
-      "entities": [
-        "Rachel Morrison",
-        "Mahershala Ali",
-        "Margaret Qualley",
-        "TIFF"
-      ],
-      "angle": "Rachel Morrison's 'Love of Your Life' and the Zellners' 'Alpha Gang' set for world premieres at TIFF.",
-      "tmdbType": "movie",
-      "source": "rss:IndieWire",
-      "sources": [
-        {
-          "outlet": "IndieWire",
-          "tier": 7,
-          "url": "https://www.indiewire.com/news/festivals/2026-tiff-special-presentations-alpha-gang-1235205711/",
-          "ageMin": 271,
-          "headline": "The Zellners Starry Sci-Fi Alpha Gang, Mahershala Ali in Your Mother Your Mother Your Mother Set for TIFF Special Presentations",
-          "summary": "Cinematographer-turned-director Rachel Morrison also brings a new film to Toronto with the world premiere of \"Love of Your Life,\" with Margaret Qualley."
-        }
-      ],
-      "ageMin": 271,
-      "_cand": {
-        "key": "rss:the-zellners-starry-sci-fi-alpha-gang-mahershala-ali-in-your",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "IndieWire"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "IndieWire",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 72,
-      "signals": {
-        "recency": 9,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-tiff-special-presentations-cate-blanchett-margaret-qualley-naomi-watts",
-      "slug": "cate-blanchett-margaret-qualley-naomi-watts-films-set-for-world-premie",
-      "title": "Cate Blanchett, Margaret Qualley, Naomi Watts Films Set for World Premieres at TIFF",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "tiff-special-presentations-cate-blanchett-margaret-qualley-naomi-watts",
-      "primaryKeyword": "TIFF film premieres",
-      "primaryEntity": "TIFF",
-      "entities": [
-        "Cate Blanchett",
-        "Margaret Qualley",
-        "Naomi Watts",
-        "Rachel Morrison"
-      ],
-      "angle": "TIFF announces world premieres for films starring Cate Blanchett, Margaret Qualley, and Naomi Watts.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/tv/tv-features/tom-hiddleston-loki-pompeii-out-of-time-1236648387/",
-          "ageMin": 271,
-          "headline": "Tom Hiddleston Explains How 1998, Loki and Thor Paved the Way for ‘Pompeii: Out of Time’ (Exclusive)",
-          "summary": "The future star visited Pompeii as a teen in 1998, and years later suggested incorporating the destroyed city into his show ‘Loki.’ Now, he’s taking the logical next step with a Nat Geo docudrama."
-        }
-      ],
-      "ageMin": 271,
-      "_cand": {
-        "key": "rss:tom-hiddleston-explains-how-1998-loki-and-thor-paved-the-way",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 72,
-      "signals": {
-        "recency": 9,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-heartstopper-forever-finale",
-      "slug": "inside-heartstopper-forever-and-the-show-that-changed-british-ya",
-      "title": "Inside 'Heartstopper Forever' and the Show That Changed British YA",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "heartstopper-forever-finale",
-      "primaryKeyword": "heartstopper finale",
-      "primaryEntity": "Heartstopper",
-      "entities": [
-        "Alice Oseman",
-        "Kit Connor",
-        "Joe Locke",
-        "Netflix"
-      ],
-      "angle": "The cast and creator reflect on the groundbreaking British YA series 'Heartstopper' as it concludes with its finale.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/the-end-of-an-era-inside-heartstopper-forever-and-the-show-that-changed-british-ya-1236646729/",
-          "ageMin": 56,
-          "headline": "The End of an Era: Inside Heartstopper Forever and the Show That Changed British YA",
-          "summary": "With the release of the two-hour finale that concludes the hit Netflix series, creator Alice Oseman along with Kit Connor, Joe Locke and more of the show's stars reflect on a groundbreaking, decade-long journey and what it means to end their queer love story."
-        }
-      ],
-      "ageMin": 56,
-      "_cand": {
-        "key": "rss:the-end-of-an-era-inside-heartstopper-forever-and-the-show-t",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 65,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 6,
-        "trending": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-danny-mcbride-gi-joe-reboot",
-      "slug": "danny-mcbride-to-direct-g-i-joe-movie-reboot",
-      "title": "Danny McBride to direct G.I. Joe movie reboot",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "danny-mcbride-gi-joe-reboot",
-      "primaryKeyword": "Danny McBride G.I. Joe movie",
-      "primaryEntity": "G.I. Joe: Retaliation",
-      "entities": [
-        "G.I. Joe",
-        "Danny McBride"
-      ],
-      "angle": "Danny McBride set to direct the upcoming reboot of the G.I. Joe franchise.",
-      "tmdbType": "movie",
-      "source": "gnews:Flickering Myth",
-      "sources": [
-        {
-          "outlet": "Flickering Myth",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPcDhDLU1hV2tpVlVPbGhDNFFjRVllSEhxQ2tCaG9vYndsdlhMWllLNUpGZG9nZGVVb2VGWGhmNmJ4ZmI3TDlaNkluMlFPbGo2TTBwdmpQTGlPUThmRy1DLVVHUWdIaERtMlpCR1g5YXJlM25xTzZEakZSUEc3b1ZhTUJ3?oc=5",
-          "ageMin": 423,
-          "headline": "Danny McBride to direct G.I. Joe movie reboot - Flickering Myth",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiggFBVV95cUxPcDhDLU1hV2tpVlVPbGhDNFFjRVllSEhxQ2tCaG9vYndsdlhMWllLNUpGZG9nZGVVb2VGWGhmNmJ4ZmI3TDlaNkluMlFPbGo2TTBwdmpQTGlPUThmRy1DLVVHUWdIaERtMlpCR1g5YXJlM25xTzZEakZSUEc3b1ZhTUJ3?oc=5\" target=\"_blank\" Danny McBride to direct G.I. Joe movie reboot /a nbs"
-        }
-      ],
-      "ageMin": 423,
-      "_cand": {
-        "key": "rss:danny-mcbride-to-direct-g-i-joe-movie-reboot-flickering-myth",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "Flickering Myth"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "Flickering Myth",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 68,
-      "signals": {
-        "recency": 4,
-        "corroboration": 8,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-ocean-way-festival-santa-monica-september",
-      "slug": "the-killers-olivia-dean-jack-white-to-headline-new-santa-monica-festiv",
-      "title": "The Killers, Olivia Dean, Jack White to Headline New Santa Monica Festival",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "ocean-way-festival-santa-monica-september",
-      "primaryKeyword": "Ocean Way Festival",
-      "primaryEntity": "Ocean Way Festival",
-      "entities": [
-        "The Killers",
-        "Olivia Dean",
-        "Jack White",
-        "Khruangbin"
-      ],
-      "angle": "Santa Monica is getting a new music festival headlined by The Killers, Olivia Dean, and Jack White.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/music/news/ocean-way-festival-goldenvoice-olivia-dean-santa-monica-1236812595/",
-          "ageMin": 11,
-          "headline": "Santa Monica s Beach Will Rock With Olivia Dean, the Killers, Jack White and Khruangbin, as Goldenvoice Sets First Ocean Way Festival for September",
-          "summary": "Whatever its other breezy benefits might be, Santa Monica has not been much of a music destination since the Santa Monica Civic Auditorium stopped hosting concerts and especially since the beachside city s famous Twilight Series on the pier came to an end a dozen years ago. But tens of thousands of music enthusiasts from across [ ]"
-        },
-        {
-          "outlet": "Rolling Stone",
-          "tier": 7,
-          "url": "https://www.rollingstone.com/music/music-news/the-killers-olivia-dean-ocean-way-festival-2026-1235594583/",
-          "ageMin": 23,
-          "headline": "The Killers, Olivia Dean, Jack White to Headline New Santa Monica Festival",
-          "summary": "Taking place on the Santa Monica Beach in late September, the two-day Ocean Way will also feature sets from Sublime and Alvvays"
-        },
-        {
-          "outlet": "Billboard",
-          "tier": 7,
-          "url": "https://www.billboard.com/music/concerts/ocean-way-festival-santa-monica-killers-jack-white-olivia-dean-1236296051/",
-          "ageMin": 31,
-          "headline": "The Killers, Olivia Dean to Headline Inaugural Ocean Way Festival in Santa Monica",
-          "summary": "The Sept. 26-27 event will be the first major music festival on the city's iconic beach."
-        }
-      ],
-      "ageMin": 11,
-      "_cand": {
-        "key": "rss:santa-monica-s-beach-will-rock-with-olivia-dean-the-killers-",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 3,
-      "verification": {
-        "tier1Count": 3,
-        "tier1Owners": 1,
-        "outletCount": 3,
-        "outlets": [
-          "Variety",
-          "Rolling Stone",
-          "Billboard"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 96,
-      "signals": {
-        "recency": 30,
-        "corroboration": 24,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 15,
-        "softTv": 0
-      },
-      "tierClass": "A"
-    },
-    {
-      "id": "news-mattel-kpop-demon-hunters-dolls",
-      "slug": "mattel-s-new-k-pop-demon-hunters-dolls-sing-and-wear-iconic-outfits",
-      "title": "Mattel's New K-Pop Demon Hunters Dolls Sing and Wear Iconic Outfits",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "mattel-kpop-demon-hunters-dolls",
-      "primaryKeyword": "kpop demon hunters dolls",
-      "primaryEntity": "KPop Demon Hunters",
-      "entities": [
-        "K-Pop Demon Hunters",
-        "Mattel"
-      ],
-      "angle": "Mattel is releasing new K-Pop Demon Hunters dolls inspired by the film, which sing and wear iconic outfits.",
-      "tmdbType": "movie",
-      "source": "rss:Billboard",
-      "sources": [
-        {
-          "outlet": "Billboard",
-          "tier": 7,
-          "url": "https://www.billboard.com/culture/product-recommendations/mattel-kpop-demon-hunters-dolls-shop-online-1236294177/",
-          "ageMin": 48,
-          "headline": "Mattel s New KPop Demon Hunters Dolls Sing Golden Sport Iconic Outfits From the Film",
-          "summary": "The collection includes a Jinu doll and six HUNTR/X-inspired figures who also sing."
-        }
-      ],
-      "ageMin": 48,
-      "_cand": {
-        "key": "rss:mattel-s-new-kpop-demon-hunters-dolls-sing-golden-sport-icon",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Billboard"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Billboard",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 63,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-mick-jagger-ai-music-olivia-rodrigo",
-      "slug": "mick-jagger-ai-music-must-be-original-comments-on-olivia-rodrigo-s-roc",
-      "title": "Mick Jagger: AI Music Must Be Original, Comments on Olivia Rodrigo's Rock Sound",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "mick-jagger-ai-music-olivia-rodrigo",
-      "primaryKeyword": "Mick Jagger AI music",
-      "primaryEntity": "Mick Jagger",
-      "entities": [
-        "The Rolling Stones",
-        "Olivia Rodrigo"
-      ],
-      "angle": "Mick Jagger shares his thoughts on AI-generated music and comments on Olivia Rodrigo's rock sound.",
-      "tmdbType": "movie",
-      "source": "rss:Rolling Stone",
-      "sources": [
-        {
-          "outlet": "Rolling Stone",
-          "tier": 7,
-          "url": "https://www.rollingstone.com/music/music-news/rolling-stones-artificial-intelligence-olivia-rodrigo-1235594625/",
-          "ageMin": 24,
-          "headline": "Mick Jagger: If Someone Wants to Make Music by AI, Go Ahead, but It Has to Be Original",
-          "summary": "The Rolling Stones also gave their impression of Olivia Rodrigo's rock music in a new interview"
-        }
-      ],
-      "ageMin": 24,
-      "_cand": {
-        "key": "rss:mick-jagger-if-someone-wants-to-make-music-by-ai-go-ahead-bu",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Rolling Stone"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Rolling Stone",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 59,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-willie-nelson-new-book-the-last-leaf",
+      "id": "music-news-willie-nelson-new-book-the-last-leaf",
       "slug": "willie-nelson-reflects-on-marriage-and-late-life-artistry-in-new-book-",
       "title": "Willie Nelson Reflects on Marriage and Late-Life Artistry in New Book The Last Leaf",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
       "subcategory": "news",
-      "eventType": "other",
+      "eventType": "announcement",
       "sensitivity": "normal",
+      "tier": "popular",
       "eventSlug": "willie-nelson-new-book-the-last-leaf",
-      "primaryKeyword": "Willie Nelson new book",
+      "primaryKeyword": "willie nelson book",
       "primaryEntity": "Willie Nelson",
       "entities": [
         "The Last Leaf"
       ],
-      "angle": "Willie Nelson discusses his new book, 'The Last Leaf,' which reflects on his marriage and later-life artistry.",
+      "angle": "Willie Nelson reflects on marriage and his late-life artistry in his new book, 'The Last Leaf'.",
       "tmdbType": "movie",
       "source": "rss:Rolling Stone",
       "sources": [
@@ -1620,12 +1171,12 @@
           "outlet": "Rolling Stone",
           "tier": 7,
           "url": "https://www.rollingstone.com/music/music-country/willie-nelson-marriage-late-life-artistry-new-book-last-leaf-1235594638/",
-          "ageMin": 39,
+          "ageMin": 99,
           "headline": "Willie Nelson Reflects on Marriage and Late-Life Artistry in New Book The Last Leaf",
           "summary": "\"The backbone of this book is a love story,\" country legend says of tome that's a tribute to his wife Annie"
         }
       ],
-      "ageMin": 39,
+      "ageMin": 99,
       "_cand": {
         "key": "rss:willie-nelson-reflects-on-marriage-and-late-life-artistry-in",
         "popularity": 0,
@@ -1646,186 +1197,118 @@
         "status": "DEVELOPING",
         "publishable": true
       },
+      "priority": 55,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-original-star-wars-lightsaber-sells-for-3-million",
+      "slug": "original-star-wars-lightsaber-sells-for-more-than-3-million",
+      "title": "Original Star Wars Lightsaber Sells for More Than $3 Million",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "original-star-wars-lightsaber-sells-for-3-million",
+      "primaryKeyword": "Star Wars lightsaber auction",
+      "primaryEntity": "Star Wars",
+      "entities": [
+        "Luke Skywalker"
+      ],
+      "angle": "An original lightsaber prop from the Star Wars franchise has fetched a record-breaking price at auction.",
+      "tmdbType": "movie",
+      "source": "gnews:news8000.com",
+      "sources": [
+        {
+          "outlet": "news8000.com",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNN2pnaDA0aG9JRWtLRmZwLUh1c3RTejVFWVBTeEtaMmRvMDNKbkdiWHhKcU1RdmEwd2NsWDBYaVZqTEdSZkpNdEp2a0pZLTROZVJXa2t2bndMSVBWQWxDb3hMbVJCWjk1S3FSS3d1WTBFUzY1RVRIc2JPMUE5Ulp2RDBTcWt2bEhnc1pZVmx0amhTQjY5aDgyMlp1d1psVUc0R2FQd3M0bkt1SnVNMVdWM3BtaXoyWVhFY2xNT01kRUJHcXdFLVp2LWppWUJNemwzMm4w?oc=5",
+          "ageMin": 79,
+          "headline": "Original Star Wars lightsaber sells for more than $3 million - news8000.com",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMi0wFBVV95cUxNN2pnaDA0aG9JRWtLRmZwLUh1c3RTejVFWVBTeEtaMmRvMDNKbkdiWHhKcU1RdmEwd2NsWDBYaVZqTEdSZkpNdEp2a0pZLTROZVJXa2t2bndMSVBWQWxDb3hMbVJCWjk1S3FSS3d1WTBFUzY1RVRIc2JPMUE5Ulp2RDBTcWt2bEhnc1pZVmx0amhTQjY5aDgyMlp1d1psVUc0R2FQd3M0bkt1SnVNMVdWM3BtaXoyWVhFY2x"
+        }
+      ],
+      "ageMin": 79,
+      "_cand": {
+        "key": "rss:original-star-wars-lightsaber-sells-for-more-than-3-million-",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "news8000.com"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "news8000.com",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
       "priority": 59,
       "signals": {
-        "recency": 24,
-        "corroboration": 12,
+        "recency": 16,
+        "corroboration": 8,
         "status": 18,
         "type": 5,
         "pop": 0,
         "breakout": 0,
-        "big": 0,
+        "big": 12,
         "trending": 0,
         "softTv": 0
       },
       "tierClass": "C"
     },
     {
-      "id": "news-hollywood-reporter-social-impact-summit-lineup",
-      "slug": "sepideh-moafi-harrison-ford-niecy-nash-betts-laverne-cox-added-to-2026",
-      "title": "Sepideh Moafi, Harrison Ford, Niecy Nash-Betts, Laverne Cox Added to 2026 Social Impact Summit",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
+      "id": "music-news-mick-jagger-ai-music-opinion",
+      "slug": "mick-jagger-if-someone-wants-to-make-music-by-ai-go-ahead-but-it-has-t",
+      "title": "Mick Jagger: If Someone Wants to Make Music by AI, Go Ahead, but It Has to Be Original",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
       "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "hollywood-reporter-social-impact-summit-lineup",
-      "primaryKeyword": "hollywood reporter social impact summit",
-      "primaryEntity": "Sepideh Moafi",
-      "entities": [
-        "Harrison Ford",
-        "Niecy Nash-Betts",
-        "Laverne Cox",
-        "Bill Lawrence"
-      ],
-      "angle": "Hollywood stars join industry leaders at The Hollywood Reporter's Social Impact Summit.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/lifestyle/lifestyle-news/harrison-ford-speakers-2026-social-impact-summit-1236649916/",
-          "ageMin": 95,
-          "headline": "Sepideh Moafi, Harrison Ford, Niecy Nash-Betts, Laverne Cox Added to 2026 Social Impact Summit, Hosted by The Hollywood Reporter and Social Impact Fund",
-          "summary": "Bill Lawrence, W. Kamau Bell, Karamo Brown and Baron Davis also join the lineup for the July 22 event, where Gilead Sciences Inc. will be honored for “Excellence in Corporate Philanthropy.”"
-        }
-      ],
-      "ageMin": 95,
-      "_cand": {
-        "key": "rss:sepideh-moafi-harrison-ford-niecy-nash-betts-laverne-cox-add",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 55,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-hollywood-reporter-a-list-aesthetics-event",
-      "slug": "hollywood-s-top-docs-reveal-their-cosmetic-secrets-at-thr-s-a-list-aes",
-      "title": "Hollywood's Top Docs Reveal Their Cosmetic Secrets at THR's A-List Aesthetics Event",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "hollywood-reporter-a-list-aesthetics-event",
-      "primaryKeyword": "hollywood reporter aesthetics event",
-      "primaryEntity": "Mindy Kaling",
-      "entities": [
-        "Chloe Fineman",
-        "Paula Abdul",
-        "Heather Graham"
-      ],
-      "angle": "Stars like Mindy Kaling and Paula Abdul attended The Hollywood Reporter's A-List Aesthetics event discussing cosmetic secrets.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/lifestyle/style/hollywood-top-docs-cosmetic-secrets-a-list-aesthetics-1236649711/",
-          "ageMin": 101,
-          "headline": "Hollywood s Top Docs Reveal Their Cosmetic Secrets at THR s A-List Aesthetics Event: We Have to Be Scientists, Artists, Technicians and Psychologists",
-          "summary": "Mindy Kaling, Chloe Fineman, Paula Abdul and Heather Graham were among the stars who attended the day of beauty conversations, which accompanied THR's \"The New Face of Hollywood\" issue."
-        }
-      ],
-      "ageMin": 101,
-      "_cand": {
-        "key": "rss:hollywood-s-top-docs-reveal-their-cosmetic-secrets-at-thr-s-",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 55,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-questlove-launches-web-series",
-      "slug": "questlove-brings-his-vip-game-nights-to-the-masses-with-the-next-move",
-      "title": "Questlove Brings His VIP Game Nights to the Masses With ‘The Next Move’",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "announcement",
+      "eventType": "other",
       "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "questlove-launches-web-series",
-      "primaryKeyword": "questlove next move",
-      "primaryEntity": "Questlove",
+      "eventSlug": "mick-jagger-ai-music-opinion",
+      "primaryKeyword": "mick jagger ai music",
+      "primaryEntity": "Mick Jagger",
       "entities": [
-        "The Tonight Show"
+        "The Rolling Stones",
+        "Olivia Rodrigo"
       ],
-      "angle": "The Oscar-winning musician expands his social experiment into a new web series.",
+      "angle": "Mick Jagger shares his views on AI-generated music and the Rolling Stones' take on Olivia Rodrigo's rock sound.",
       "tmdbType": "movie",
       "source": "rss:Rolling Stone",
       "sources": [
         {
           "outlet": "Rolling Stone",
           "tier": 7,
-          "url": "https://www.rollingstone.com/music/music-features/questlove-game-night-series-the-next-move-party-1235593427/",
-          "ageMin": 175,
-          "headline": "Questlove Brings His VIP Game Nights to the Masses With ‘The Next Move’",
-          "summary": "At the launch party for his new web series, the Academy Award-winning musician, filmmaker, and producer built on a long-running social experiment: bringing strangers together over a shared game and seeing what happens next"
+          "url": "https://www.rollingstone.com/music/music-news/rolling-stones-artificial-intelligence-olivia-rodrigo-1235594625/",
+          "ageMin": 84,
+          "headline": "Mick Jagger: If Someone Wants to Make Music by AI, Go Ahead, but It Has to Be Original",
+          "summary": "The Rolling Stones also gave their impression of Olivia Rodrigo's rock music in a new interview"
         }
       ],
-      "ageMin": 175,
+      "ageMin": 84,
       "_cand": {
-        "key": "rss:questlove-brings-his-vip-game-nights-to-the-masses-with-the-",
+        "key": "rss:mick-jagger-if-someone-wants-to-make-music-by-ai-go-ahead-bu",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -1844,12 +1327,12 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 55,
+      "priority": 51,
       "signals": {
         "recency": 16,
         "corroboration": 12,
         "status": 18,
-        "type": 9,
+        "type": 5,
         "pop": 0,
         "breakout": 0,
         "big": 0,
@@ -1859,38 +1342,38 @@
       "tierClass": "C"
     },
     {
-      "id": "news-jon-bernthal-career-spider-man-the-bear",
-      "slug": "jon-bernthal-on-odyssey-battles-counseling-spider-man-and-always-going",
-      "title": "Jon Bernthal on 'Odyssey Battles, Counseling Spider-Man and Always Going Big'",
+      "id": "news-tom-hiddleston-pompeii-out-of-time-docudrama",
+      "slug": "tom-hiddleston-to-explore-pompeii-connection-in-new-nat-geo-docudrama-",
+      "title": "Tom Hiddleston to Explore Pompeii Connection in New Nat Geo Docudrama 'Pompeii: Out of Time'",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
-      "eventType": "other",
+      "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "jon-bernthal-career-spider-man-the-bear",
-      "primaryKeyword": "Jon Bernthal",
-      "primaryEntity": "Jon Bernthal",
+      "eventSlug": "tom-hiddleston-pompeii-out-of-time-docudrama",
+      "primaryKeyword": "Pompeii: Out of Time",
+      "primaryEntity": "Pompeii: Out of Time",
       "entities": [
-        "Spider-Man: Brave New World",
-        "The Bear"
+        "Tom Hiddleston",
+        "Loki (TV series)"
       ],
-      "angle": "Jon Bernthal discusses his approach to acting, his work on 'The Bear,' and upcoming projects.",
+      "angle": "Tom Hiddleston is set to explore his personal connection to Pompeii in a new Nat Geo docudrama, linking it to his 'Loki' series.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
         {
           "outlet": "THR",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/tv/tv-news/claudia-winkleman-show-canceled-exit-quits-traitors-bbc-1236650032/",
-          "ageMin": 323,
-          "headline": "Claudia Winkleman Quits Her Own Talk Show After One Season: I Was Just Too Nervous to Enjoy It",
-          "summary": "'The Claudia Winkleman Show' has been canceled at the BBC: \"Sometimes you have to try something to see how it fits.\""
+          "url": "https://www.hollywoodreporter.com/tv/tv-features/tom-hiddleston-loki-pompeii-out-of-time-1236648387/",
+          "ageMin": 331,
+          "headline": "Tom Hiddleston Explains How 1998, Loki and Thor Paved the Way for ‘Pompeii: Out of Time’ (Exclusive)",
+          "summary": "The future star visited Pompeii as a teen in 1998, and years later suggested incorporating the destroyed city into his show ‘Loki.’ Now, he’s taking the logical next step with a Nat Geo docudrama."
         }
       ],
-      "ageMin": 323,
+      "ageMin": 331,
       "_cand": {
-        "key": "rss:claudia-winkleman-quits-her-own-talk-show-after-one-season-i",
+        "key": "rss:tom-hiddleston-explains-how-1998-loki-and-thor-paved-the-way",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -1909,55 +1392,447 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 60,
+      "priority": 66,
       "signals": {
         "recency": 9,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-anthony-ippolito-signs-with-caa",
+      "slug": "i-play-rocky-star-anthony-ippolito-lands-at-caa",
+      "title": "‘I Play Rocky’ Star Anthony Ippolito Lands At CAA",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "anthony-ippolito-signs-with-caa",
+      "primaryKeyword": "Anthony Ippolito",
+      "primaryEntity": "Anthony Ippolito",
+      "entities": [
+        "I Play Rocky",
+        "CAA"
+      ],
+      "angle": "Actor Anthony Ippolito signs with CAA following the trailer release for his film 'I Play Rocky'.",
+      "tmdbType": "movie",
+      "source": "rss:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/i-play-rocky-anthony-ippolito-signs-caa-1236984407/",
+          "ageMin": 20,
+          "headline": "‘I Play Rocky’ Star Anthony Ippolito Lands At CAA",
+          "summary": "EXCLUSIVE: On the heels of a knockout trailer for I Play Rocky, Anthony Ippolito has signed with CAA. I Play Rocky chronicles the underdog backstory behind the ultimate underdog movie, Rocky. Ippolito plays the young Sylvester Stallone, who was so in need of cash that he sold his dog Butkus while holding out on his Rocky [ ]"
+        }
+      ],
+      "ageMin": 20,
+      "_cand": {
+        "key": "rss:-i-play-rocky-star-anthony-ippolito-lands-at-caa",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 68,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-sam-neill-cause-of-death-revealed",
+      "slug": "sam-neill-s-cause-of-death-revealed",
+      "title": "Sam Neill’s Cause of Death Revealed",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "health",
+      "sensitivity": "high",
+      "eventSlug": "sam-neill-cause-of-death-revealed",
+      "primaryKeyword": "Sam Neill death",
+      "primaryEntity": "Sam Neill",
+      "entities": [],
+      "angle": "The cause of death for veteran actor Sam Neill has been revealed, providing details following his passing.",
+      "tmdbType": "movie",
+      "source": "gnews:The Hollywood Reporter",
+      "sources": [
+        {
+          "outlet": "The Hollywood Reporter",
+          "tier": 7,
+          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNdDhJRWYzTnZpbGtmOGo2VUpaNFZUbWxnazNuVkhEWXp2SlFwem1CZFRIblVsdmRPN3JpaEF0dWR1cHNkYmdOa3hYTV9qWHhJbG5WQzJqR3ljV1lBNm1aQjE2czdSUVpCZ2gwdjVKbC10OVBtRWpkc3RlMzdqS0hZSDRUd05Makx5NjhEN0w4U19Udw?oc=5",
+          "ageMin": 50,
+          "headline": "Sam Neill’s Cause of Death Revealed - The Hollywood Reporter",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMikgFBVV95cUxNdDhJRWYzTnZpbGtmOGo2VUpaNFZUbWxnazNuVkhEWXp2SlFwem1CZFRIblVsdmRPN3JpaEF0dWR1cHNkYmdOa3hYTV9qWHhJbG5WQzJqR3ljV1lBNm1aQjE2czdSUVpCZ2gwdjVKbC10OVBtRWpkc3RlMzdqS0hZSDRUd05Makx5NjhEN0w4U19Udw?oc=5\" target=\"_blank\" Sam Neill’s Cause of Death Rev"
+        }
+      ],
+      "ageMin": 50,
+      "_cand": {
+        "key": "rss:sam-neill-s-cause-of-death-revealed-the-hollywood-reporter",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "The Hollywood Reporter"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": "The Hollywood Reporter",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 66,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 12,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      },
+      "tierClass": "S"
+    },
+    {
+      "id": "news-shaboozey-comic-con-debut",
+      "slug": "shaboozey-to-make-comic-con-debut-for-comic-tied-to-new-album-exclusiv",
+      "title": "Shaboozey to Make Comic-Con Debut for Comic Tied to New Album (Exclusive)",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "shaboozey-comic-con-debut",
+      "primaryKeyword": "Shaboozey",
+      "primaryEntity": "Shaboozey",
+      "entities": [
+        "Comic-Con Episode IV: A Fan's Hope",
+        "Comic-Con"
+      ],
+      "angle": "Grammy winner Shaboozey will make his Comic-Con debut to promote a comic tied to his new album.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/music/music-news/shaboozey-to-make-comic-con-debut-1236650215/",
+          "ageMin": 31,
+          "headline": "Shaboozey to Make Comic-Con Debut for Comic Tied to New Album (Exclusive)",
+          "summary": "The Grammy winner will bring early editions of his comic 'The Outlaw Cherie Lee,' and also participate in a fan signing and take part in a live podcast recording."
+        }
+      ],
+      "ageMin": 31,
+      "_cand": {
+        "key": "rss:shaboozey-to-make-comic-con-debut-for-comic-tied-to-new-albu",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 63,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-rolling-stones-ai-music-interview",
+      "slug": "mick-jagger-and-keith-richards-on-using-ai-in-music",
+      "title": "Mick Jagger and Keith Richards on Using AI in Music",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "rolling-stones-ai-music-interview",
+      "primaryKeyword": "Rolling Stones AI music",
+      "primaryEntity": "The Rolling Stones",
+      "entities": [
+        "Mick Jagger",
+        "Keith Richards",
+        "Billboard"
+      ],
+      "angle": "Mick Jagger and Keith Richards share their thoughts on the use of AI in music production.",
+      "tmdbType": "movie",
+      "source": "rss:Billboard",
+      "sources": [
+        {
+          "outlet": "Billboard",
+          "tier": 7,
+          "url": "https://www.billboard.com/music/rock/rolling-stones-mick-jagger-keith-richards-ai-music-1236296184/",
+          "ageMin": 45,
+          "headline": "Here s What the Rolling Stones Mick Jagger Keith Richards Think About Using AI in Music",
+          "summary": "On the heels of their Foreign Tongues album, Jagger and Richards cover the latest issue of Billboard ."
+        }
+      ],
+      "ageMin": 45,
+      "_cand": {
+        "key": "rss:here-s-what-the-rolling-stones-mick-jagger-keith-richards-th",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Billboard"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Billboard",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 59,
+      "signals": {
+        "recency": 24,
         "corroboration": 12,
         "status": 18,
         "type": 5,
         "pop": 0,
         "breakout": 0,
-        "big": 6,
+        "big": 0,
         "trending": 0,
-        "softTv": 0,
-        "radar": 10
+        "softTv": 0
       },
-      "radarKind": "tv-trending",
-      "tierClass": "A"
+      "tierClass": "C"
     },
     {
-      "id": "news-danny-mcbride-gi-joe-director",
-      "slug": "danny-mcbride-s-g-i-joe-movie-lands-surprise-director-in-major-franchi",
-      "title": "Danny McBride’s G.I. Joe Movie Lands Surprise Director in Major Franchise Update",
+      "id": "news-drake-iceman-merch-amazon",
+      "slug": "drake-drops-iceman-merch-on-his-amazon-warehouse",
+      "title": "Drake Drops 'Iceman' Merch on His Amazon 'Warehouse'",
       "contentType": "news",
       "formatTag": "news",
-      "category": "movies",
+      "category": "celebrity",
       "subcategory": "news",
-      "eventType": "casting",
+      "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "danny-mcbride-gi-joe-director",
-      "primaryKeyword": "Danny McBride G.I. Joe movie",
-      "primaryEntity": "G.I. Joe: Retaliation",
+      "tier": "popular",
+      "eventSlug": "drake-iceman-merch-amazon",
+      "primaryKeyword": "Drake merch",
+      "primaryEntity": "Drake",
       "entities": [
-        "G.I. Joe",
-        "Danny McBride"
+        "Amazon"
       ],
-      "angle": "Danny McBride has been tapped to direct the new G.I. Joe movie.",
+      "angle": "Drake has launched new 'Iceman' merchandise available through his Amazon 'Warehouse' shop.",
       "tmdbType": "movie",
-      "source": "gnews:AOL.com",
+      "source": "rss:Billboard",
       "sources": [
         {
-          "outlet": "AOL.com",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5Vbk5aclJRbFhfeERaWk1MRkFOVHJ3QmZNUmpSSmhmcGJpTlR0V2MyTXpEYUlaeThONW5pYjdYd3diWFo3WTNVd3pLdHlXM3lYdGk3TU5UdUtLSUV6SXpDWk02ODVxQnAtSGxSdkdvdko5UjdWVzFRWg?oc=5",
-          "ageMin": 577,
-          "headline": "Danny McBride’s G.I. Joe Movie Lands Surprise Director in Major Franchise Update - AOL.com",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMieEFVX3lxTE5Vbk5aclJRbFhfeERaWk1MRkFOVHJ3QmZNUmpSSmhmcGJpTlR0V2MyTXpEYUlaeThONW5pYjdYd3diWFo3WTNVd3pLdHlXM3lYdGk3TU5UdUtLSUV6SXpDWk02ODVxQnAtSGxSdkdvdko5UjdWVzFRWg?oc=5\" target=\"_blank\" Danny McBride’s G.I. Joe Movie Lands Surprise Director in Major Fr"
+          "outlet": "Billboard",
+          "tier": 7,
+          "url": "https://www.billboard.com/culture/product-recommendations/drake-warehouse-amazon-merch-shop-online-1236049314/",
+          "ageMin": 47,
+          "headline": "Drake Drops Iceman Merch on His Amazon ‘Warehouse’: Shop the Collection Online Here",
+          "summary": "The Canadian rapper has updated his official Amazon \"Warehouse\" shop with new merch and apparel, including exclusives."
         }
       ],
-      "ageMin": 577,
+      "ageMin": 47,
       "_cand": {
-        "key": "rss:danny-mcbride-s-g-i-joe-movie-lands-surprise-director-in-maj",
+        "key": "rss:drake-drops-iceman-merch-on-his-amazon-warehouse-shop-the-co",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Billboard"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Billboard",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 59,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-ocean-way-festival-announcement",
+      "slug": "the-killers-jack-white-to-headline-santa-monica-s-first-ocean-way-fest",
+      "title": "The Killers, Jack White to Headline Santa Monica's First Ocean Way Festival",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "ocean-way-festival-announcement",
+      "primaryKeyword": "Ocean Way Festival",
+      "primaryEntity": "Ocean Way Festival",
+      "entities": [
+        "Olivia Dean",
+        "The Killers",
+        "Jack White",
+        "Khruangbin"
+      ],
+      "angle": "Santa Monica is set to host its first music festival, Ocean Way Festival, in September featuring artists like The Killers, Jack White, Olivia Dean, and Khruangbin.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/music/news/ocean-way-festival-goldenvoice-olivia-dean-santa-monica-1236812595/",
+          "ageMin": 71,
+          "headline": "Santa Monica s Beach Will Rock With Olivia Dean, the Killers, Jack White and Khruangbin, as Goldenvoice Sets First Ocean Way Festival for September",
+          "summary": "Whatever its other breezy benefits might be, Santa Monica has not been much of a music destination since the Santa Monica Civic Auditorium stopped hosting concerts and especially since the beachside city s famous Twilight Series on the pier came to an end a dozen years ago. But tens of thousands of music enthusiasts from across [ ]"
+        }
+      ],
+      "ageMin": 71,
+      "_cand": {
+        "key": "rss:santa-monica-s-beach-will-rock-with-olivia-dean-the-killers-",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 55,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-nine-inch-nails-boys-noize-teaser",
+      "slug": "nine-inch-nails-share-new-teaser-video-with-boys-noize",
+      "title": "Nine Inch Nails share new teaser video with Boys Noize",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "nine-inch-nails-boys-noize-teaser",
+      "primaryKeyword": "nine inch nails teaser",
+      "primaryEntity": "Trent Reznor",
+      "entities": [
+        "Nine Inch Nails",
+        "Boys Noize"
+      ],
+      "angle": "Nine Inch Nails shares a new teaser video featuring Boys Noize.",
+      "tmdbType": "movie",
+      "source": "gnews:98 Rock Baltimore",
+      "sources": [
+        {
+          "outlet": "98 Rock Baltimore",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNa0w5eGdpY2FjVEFHZF9VVGFOWDkyVnZUZ1FURTBiUGVrTTBoWFVLMWRCMnpwT1BuSW9XRE1NTnp4OTVJd2s3dW5IWC0xX0dIbXgxUVZyVDdmRWgxaXpibnZUMXJqXzd2XzJOZDJ4UF9RWWJIY2Y2bHh6cEl0aDBQR1FzTXk5UQ?oc=5",
+          "ageMin": 160,
+          "headline": "Nine Inch Nails share new teaser video with Boys Noize - 98 Rock Baltimore",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMihgFBVV95cUxNa0w5eGdpY2FjVEFHZF9VVGFOWDkyVnZUZ1FURTBiUGVrTTBoWFVLMWRCMnpwT1BuSW9XRE1NTnp4OTVJd2s3dW5IWC0xX0dIbXgxUVZyVDdmRWgxaXpibnZUMXJqXzd2XzJOZDJ4UF9RWWJIY2Y2bHh6cEl0aDBQR1FzTXk5UQ?oc=5\" target=\"_blank\" Nine Inch Nails share new teaser video with Bo"
+        }
+      ],
+      "ageMin": 160,
+      "_cand": {
+        "key": "rss:nine-inch-nails-share-new-teaser-video-with-boys-noize-98-ro",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -1967,28 +1842,159 @@
         "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "AOL.com"
+          "98 Rock Baltimore"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "AOL.com",
+        "attribution": "98 Rock Baltimore",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 68,
+      "priority": 51,
       "signals": {
-        "recency": 4,
+        "recency": 16,
         "corroboration": 8,
         "status": 18,
-        "type": 14,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
-        "big": 24,
+        "big": 0,
         "trending": 0,
         "softTv": 0
       },
-      "tierClass": "B"
+      "tierClass": "C"
+    },
+    {
+      "id": "news-luke-skywalker-lightsaber-sells-for-3-75-million",
+      "slug": "luke-skywalker-s-3-75-million-lightsaber-sets-new-star-wars-record",
+      "title": "Luke Skywalker’s $3.75 Million Lightsaber Sets New ‘Star Wars’ Record",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "luke-skywalker-lightsaber-sells-for-3-75-million",
+      "primaryKeyword": "Luke Skywalker lightsaber auction",
+      "primaryEntity": "Luke Skywalker",
+      "entities": [
+        "Star Wars"
+      ],
+      "angle": "Luke Skywalker's lightsaber prop from Star Wars has set a new record for a Star Wars item sold at auction.",
+      "tmdbType": "movie",
+      "source": "gnews:Artnet News",
+      "sources": [
+        {
+          "outlet": "Artnet News",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPUkQteGQwNFQya2RxRHlSNldLc1FiTUc3UFVMNktibTJQSGo3RUg2bTF3OVZNcEl3aHJKdTh0Uld4N0dJaXpYblJBSnVlZi1kNm51TU5qQ1psYjBhRktoSTZNckFuNTJVR1RWSlhsUE5raVl3dXFCNnBXUmp0OHRHdUM2WWtsdVJEQk9aWmxzUHV0Qk5m0gGcAUFVX3lxTFBwcnFmTGZvUF9sSjcyZHE5WkFkcmdkZHV0ZE5kYWR1VG1xSlY2RUZYalR4WUk1V1Y1NldsOEhMTXBjeHBEdVRvYVpUY2VuVWtHYU9FSlNFZUd3c05oVXdHeHFVcmMzWWhyV05yZjhabWExRnZTVnlDUkhrdnVXOVRGVHRwVk8xSlBOVWVSaXo1NExob1daNlhlb2I4Qw?oc=5",
+          "ageMin": 90,
+          "headline": "Luke Skywalker’s $3.75 Million Lightsaber Sets New ‘Star Wars’ Record - Artnet News",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMilAFBVV95cUxPUkQteGQwNFQya2RxRHlSNldLc1FiTUc3UFVMNktibTJQSGo3RUg2bTF3OVZNcEl3aHJKdTh0Uld4N0dJaXpYblJBSnVlZi1kNm51TU5qQ1psYjBhRktoSTZNckFuNTJVR1RWSlhsUE5raVl3dXFCNnBXUmp0OHRHdUM2WWtsdVJEQk9aWmxzUHV0Qk5m0gGcAUFVX3lxTFBwcnFmTGZvUF9sSjcyZHE5WkFkcmdkZHV0ZE5"
+        }
+      ],
+      "ageMin": 90,
+      "_cand": {
+        "key": "rss:luke-skywalker-s-3-75-million-lightsaber-sets-new-star-wars-",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "Artnet News"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "Artnet News",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 59,
+      "signals": {
+        "recency": 16,
+        "corroboration": 8,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 12,
+        "trending": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-james-gray-paper-tiger-new-york-film-festival-opener",
+      "slug": "james-gray-s-paper-tiger-to-open-new-york-film-festival",
+      "title": "James Gray's 'Paper Tiger' to Open New York Film Festival",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "james-gray-paper-tiger-new-york-film-festival-opener",
+      "primaryKeyword": "Paper Tiger movie",
+      "primaryEntity": "Paper Tiger (film)",
+      "entities": [
+        "James Gray",
+        "Adam Driver",
+        "Miles Teller",
+        "Scarlett Johansson"
+      ],
+      "angle": "James Gray's latest film, 'Paper Tiger,' starring Adam Driver, Miles Teller, and Scarlett Johansson, will open the New York Film Festival.",
+      "tmdbType": "movie",
+      "source": "rss:IndieWire",
+      "sources": [
+        {
+          "outlet": "IndieWire",
+          "tier": 7,
+          "url": "https://www.indiewire.com/news/festivals/2026-new-york-film-festival-james-gray-paper-tiger-1235205510/",
+          "ageMin": 331,
+          "headline": "James Gray s Paper Tiger Will Open This Year’s New York Film Festival",
+          "summary": "The auteur's latest heartbreaker, starring Adam Driver, Miles Teller, and Scarlett Johansson, premiered at Cannes earlier this year to strong reviews."
+        }
+      ],
+      "ageMin": 331,
+      "_cand": {
+        "key": "rss:james-gray-s-paper-tiger-will-open-this-year-s-new-york-film",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "IndieWire"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "IndieWire",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 56,
+      "signals": {
+        "recency": 9,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 12,
+        "trending": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
     }
   ]
 }
