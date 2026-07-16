@@ -1,0 +1,72 @@
+{
+ "runId": "run-2026-07-16T06-30-43",
+ "mode": "live",
+ "startedAt": "2026-07-16T06:30:43.348Z",
+ "films": 6,
+ "published": [
+  {
+   "tag": "minions-monsters-bo-update×BO-UPDATE",
+   "slug": "minions-monsters-box-office-day-14-domestic-total-climbs-to-116-4-million",
+   "path": "/home/runner/work/thescreenreport/thescreenreport/content/articles/minions-monsters-box-office-day-14-domestic-total-climbs-to-116-4-million.md",
+   "score": 45,
+   "acceptReason": "daily factual update — deterministic numbers + accuracy walls + word floor all pass"
+  }
+ ],
+ "held": [
+  {
+   "tag": "moana-bo-update×BO-UPDATE",
+   "reason": "not material: no new number (current $100M not above last published $100M)"
+  }
+ ],
+ "rejected": [],
+ "skipped": [],
+ "blocked": [],
+ "zeroStreak": 0,
+ "finishedAt": "2026-07-16T06:33:23.770Z",
+ "meter": {
+  "byRole": {
+   "gatherer": {
+    "calls": 3,
+    "errors": 0,
+    "in": 9477,
+    "out": 2105,
+    "usd": 0.00179,
+    "ms": 6347
+   },
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3313,
+    "out": 620,
+    "usd": 0.0002,
+    "ms": 2666
+   },
+   "synthesizer": {
+    "calls": 1,
+    "errors": 0,
+    "in": 743,
+    "out": 252,
+    "usd": 0.00011,
+    "ms": 7554
+   },
+   "writer": {
+    "calls": 1,
+    "errors": 0,
+    "in": 1782,
+    "out": 967,
+    "usd": 0.00226,
+    "ms": 13224
+   },
+   "qa": {
+    "calls": 4,
+    "errors": 0,
+    "in": 11991,
+    "out": 1467,
+    "usd": 0.00726,
+    "ms": 10186
+   }
+  },
+  "totalUsd": 0.01163
+ },
+ "openrouterTotalUsd": 0.0114
+}
