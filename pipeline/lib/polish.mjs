@@ -70,6 +70,19 @@ export function trimIncomplete(body) {
     if (paras[i]) break;          // kept a complete paragraph — done
     paras.splice(i, 1);           // that paragraph was entirely a fragment — drop it and check the previous one
   }
+  // 3) Drop a MID-BODY cut-off clause hiding behind a corporate abbreviation (root-fix 2026-07-17: a live
+  //    paragraph ended "…which also owns rights to music catalogs from Warner Bros." — the relative clause
+  //    was never completed, but "Bros." looks like terminal punctuation to rule 2). If a paragraph's last
+  //    sentence ends on "<connector> <Something> Bros./Inc./Co./Corp./Ltd." with a dangling subordinate
+  //    clause opener earlier in it, trim that sentence.
+  paras = paras.map((p) => {
+    if (/^\s*(#{1,6}\s|[-*]\s|\|)/.test(p)) return p;
+    const sents = p.split(/(?<=[.!?"'”’])\s+/);
+    const last = sents[sents.length - 1] || "";
+    const danglingCorp = /,\s+(which|who|that)\b[^.]*\b(from|with|by|to|of|and)\s+[A-Z][\w&.'’ -]{0,40}\b(Bros|Inc|Co|Corp|Ltd)\.\s*$/.test(last);
+    if (danglingCorp) sents.pop();
+    return sents.join(" ");
+  }).filter(Boolean);
   return paras.filter(Boolean).join("\n\n");
 }
 

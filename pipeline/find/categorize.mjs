@@ -118,6 +118,18 @@ export async function categorize(candidates, monitor, { model = MODELS.classifie
     for (const it of data?.items || []) {
       const c = group[it.i];
       if (!c) continue;
+      // EVENTSLUG SANITY (root-fix 2026-07-17: the LLM hallucinated "ariana-grande-exit-the-voice" for an
+      // AHS story and "tiff-…-2024" for a 2026 lineup — a garbled eventSlug breaks the dedup ledger AND ships
+      // in frontmatter). The slug's significant words must come from the candidate's own title/entities;
+      // otherwise rebuild it deterministically from entity + eventType. Never trust invented event identity.
+      {
+        const hay = ` ${String(`${c.title} ${it.primaryEntity || ""} ${(it.entities || []).join(" ")}`).toLowerCase().normalize("NFKD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9]+/g, " ")} `;
+        const words = String(it.eventSlug || "").toLowerCase().split(/-+/).filter((w) => w.length > 2 && !/^(the|and|for|with)$/.test(w));
+        const misses = words.filter((w) => !hay.includes(` ${w} `));
+        if (words.length && misses.length / words.length > 0.4) {
+          it.eventSlug = `${it.primaryEntity || c.title}-${it.eventType || "news"}`;
+        }
+      }
       // FAIL-CLOSED on FORM: if the LLM marks a non-news form (review/interview/ranking/profile/etc.),
       // DROP the story — do NOT silently relabel it as news. An explicit non-news formatTag is the LLM
       // telling us this is a review/interview/ranking piece, which belongs to a separate automation.

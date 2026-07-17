@@ -46,7 +46,7 @@ if (!topics.length) bail("categorize dropped it (off-scope / non-news form / no 
 const t = topics[0];
 if (t.sensitivity === "high") bail("high-sensitivity → left to the drip's corroboration path");
 
-const recent = recentArticles(72);
+const recent = recentArticles(168); // 7-day fuzzy window (2026-07-17 rehash fix), matching run.mjs
 const dup = findDuplicate(t, recent);
 if (dup) bail(`duplicate of published "${dup.slug}" (${dup.shared.slice(0, 4).join(", ")})`);
 const cap = entityDayCap(t, recent);

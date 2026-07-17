@@ -50,7 +50,13 @@ export async function sourceImage(query) {
     const r = await fetch(api, { headers: { "user-agent": UA, accept: "application/json" }, signal: AbortSignal.timeout(10000) });
     if (!r.ok) return null;
     const j = await r.json();
-    const q = query.toLowerCase().split(/\s+/).filter((w) => w.length > 2);
+    // SIGNIFICANT tokens only (root-fix 2026-07-17): a Fox-schedule story shipped a WESTWORLD cast photo
+    // because the generic word "cast" satisfied the any-token match. Generic media words can never be the
+    // reason a filename "matches" — and with no significant token at all, no Wikimedia pick is made
+    // (the caller falls through to the next image source; no image beats a wrong image).
+    const IMG_GENERIC = new Set(["cast", "casting", "fall", "spring", "summer", "winter", "show", "shows", "series", "season", "movie", "film", "films", "star", "stars", "actor", "actress", "premiere", "trailer", "poster", "photo", "image", "event", "red", "carpet", "awards", "festival", "schedule", "network", "channel", "new", "2024", "2025", "2026", "the", "and"]);
+    const q = query.toLowerCase().split(/\s+/).filter((w) => w.length > 2 && !IMG_GENERIC.has(w));
+    if (!q.length) return null;
     const cands = Object.values(j.query?.pages || {})
       .map((p) => {
         const ii = p.imageinfo?.[0] || {};

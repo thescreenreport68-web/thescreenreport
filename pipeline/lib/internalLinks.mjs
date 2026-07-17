@@ -41,15 +41,24 @@ const GENERIC = new Set([
   "performance", "drama", "comedy", "thriller", "horror", "documentary", "cameo", "spinoff", "spin-off",
 ]);
 
-// An anchor must be a PROPER-NOUN entity: a multi-word phrase, OR a single word that is title-like and
-// not generic. The real safeguard is that we only LINK an occurrence that is Capitalized in the body
-// (a proper noun) — so "production"/"cinema" used as common nouns can never become a link.
-function anchorTerms(title, tags) {
+// OUTLETS + PLATFORMS (root-fix 2026-07-17): a publication or streaming-platform name must NEVER be a link
+// anchor — the live "[Billboard](/music/clave-especial-…)" fake-attribution bug happened because one article
+// carried "billboard" as a TAG, which made the outlet name an anchor that hijacked "According to Billboard"
+// in every later article. Attribution text stays plain text, always.
+const OUTLETS_PLATFORMS = /^(billboard( 200)?|hot 100|variety|deadline|(the )?hollywood reporter|thr|rolling stone|people|tmz|page six|ew|entertainment weekly|collider|indiewire|vulture|screenrant|the wrap|thewrap|aol|just jared|usa today|cnn|bbc|the guardian|(the )?new york times|nyt|los angeles times|ap|reuters|netflix|hulu|max|hbo( max)?|disney\+?|disney plus|peacock|paramount\+?|apple tv\+?|prime video|amazon( prime)?|starz|showtime|youtube|instagram|tiktok|twitter|x|facebook|spotify|the cw|fx|abc|nbc|cbs|fox)$/i;
+// An anchor must be the TARGET article's PRIMARY identity (its first tags / targetKeyword) — never an
+// incidental tag (root-fix 2026-07-17: "[Adam Sandler]" linked to a Taylor Swift wedding article because
+// Sandler was a guest-list tag there). And never an outlet, platform, or "season N".
+export const isBadAnchor = (term) => {
+  const low = String(term).trim().toLowerCase();
+  return low.length < 4 || GENERIC.has(low) || OUTLETS_PLATFORMS.test(low) || /^season \d+$/.test(low) || /^\d+$/.test(low);
+};
+function anchorTerms(title, tags, targetKeyword) {
   const out = new Set();
-  for (const t of tags) {
+  const primary = [targetKeyword, ...tags.slice(0, 2)].filter(Boolean);
+  for (const t of primary) {
     const term = String(t).trim();
-    const low = term.toLowerCase();
-    if (term.length < 4 || GENERIC.has(low)) continue;
+    if (isBadAnchor(term)) continue;
     if (term.includes(" ") || term.length >= 5) out.add(term); // multi-word, or a real single-word name
   }
   return [...out];
@@ -94,7 +103,7 @@ export function buildLinkIndex(excludeSlug) {
       category: data.category,
       tags,
       tone: toneOf(`${data.title} ${tags.join(" ")} ${(content || "").slice(0, 700)}`),
-      anchors: anchorTerms(data.title, tags),
+      anchors: anchorTerms(data.title, tags, data.targetKeyword),
     });
   }
   return idx;
@@ -177,8 +186,12 @@ export function stripPhantomLinkPhrases(body) {
 
 // One-call entry point used by assemble: returns { body, linked: [{anchor, slug}] }.
 export function addInternalLinks({ body, title, tags, category, slug }, { max = 3 } = {}) {
+  // NEVER link inside the "## Sources" section (root-fix 2026-07-17): a plain outlet mention there became
+  // an internal link wearing the outlet's name — fabricated attribution. Links go in the prose only.
+  const cut = String(body || "").search(/\n## Sources\b/);
+  const prose = cut >= 0 ? body.slice(0, cut) : body;
+  const tail = cut >= 0 ? body.slice(cut) : "";
   const index = buildLinkIndex(slug);
-  const picks = pickInternalLinks({ title, tags, category, body }, index, { max });
-  const newBody = injectInternalLinks(body, picks);
-  return { body: newBody, linked: picks.map((p) => ({ anchor: p.anchor, slug: p.slug })) };
+  const picks = pickInternalLinks({ title, tags, category, body: prose }, index, { max });
+  return { body: injectInternalLinks(prose, picks) + tail, linked: picks.map((p) => ({ anchor: p.anchor, slug: p.slug })) };
 }

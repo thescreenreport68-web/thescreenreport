@@ -44,8 +44,12 @@ const escRe = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 function balancedQuotes(s) {
   if (((s.match(/"/g) || []).length) % 2) return false;
   if (((s.match(/“/g) || []).length) !== ((s.match(/”/g) || []).length)) return false;
-  // strip intra-word apostrophes + possessives so ‘…’ / '…' pairing counts only real quote marks
-  const t = s.replace(/(\w)[’'](\w)/g, "$1$2").replace(/(\w)[’']s\b/g, "$1s").replace(/(\w)[’'](?=\s|$)/g, "$1");
+  // Mask apostrophes so only REAL quote marks count. 2026-07-17 root-fix: a word-final quote was ALWAYS
+  // treated as an apostrophe, so a closing quote ("…the Song' Feature") orphaned its opener and the checker
+  // rejected every legitimate 'Quoted Title' candidate — that's how 30-char model titles kept winning.
+  // Rule: intra-word = apostrophe (D'Onofrio); word-final AFTER 's' = plural possessive (actors'); word-final
+  // after any other letter = a CLOSING quote and stays countable.
+  const t = s.replace(/(\w)[’'](?=\w)/g, "$1x").replace(/s[’'](?=\s|$)/g, "sx");
   if (((t.match(/‘/g) || []).length) !== ((t.match(/’/g) || []).length)) return false;
   return ((t.match(/'/g) || []).length) % 2 === 0;
 }
@@ -99,7 +103,12 @@ function cleanCut(s, full, min, max) {
     if (end !== s.length) {
       const next = (s.slice(end + 1).match(/^([\w'’.&-]+)/) || [])[1] || "";
       if (/^(of|du|de|della|vs)$/i.test(next)) continue;                      // mid-phrase ("Man of Tomorrow")
-      if (/^[A-Z]/.test(next) && !CONT_OK.has(next.toLowerCase()) && /[\w]$/.test(s[end - 1]) && /^[A-Z]/.test(lastWord(s.slice(0, end)) || "")) continue; // adjacent Cap pair, no comma between
+      // Split-NAME check, Title-Case-safe (2026-07-17: the old any-adjacent-caps rule rejected nearly every
+      // headline cut — "…Original Series | Commissioned" — so short model titles kept winning). A cut before a
+      // Capitalized word is only a split NAME when the kept text ends in a person-cue ("…with Margot |Robbie")
+      // or a possessive holder ("HBO Max's Jimmy |Olsen").
+      const kept = s.slice(0, end);
+      if (/^[A-Z]/.test(next) && !CONT_OK.has(next.toLowerCase()) && (CUE_RE.test(kept) || /['’]s\s+[A-Z][\w'’.-]*$/.test(kept))) continue;
     }
     const c = s.slice(0, end).replace(/[\s,;:–—-]+$/, "");
     if (c.length >= min && c.length <= max && isCleanTitle(c, full)) return c;
@@ -107,8 +116,28 @@ function cleanCut(s, full, min, max) {
   return null;
 }
 
+// Remove UNPAIRED quote marks (2026-07-17 root-fix): a title like «Netflix's '14th» (writer forgot the closing
+// quote) failed balancedQuotes on EVERY pass, so the finisher fell through to the raw short model metaTitle —
+// the 7 live under-45 metaTitles. A lone quote char carries no meaning; strip it and the candidate is usable.
+function stripUnpaired(s) {
+  // Count on a copy with apostrophes masked (Max's, D'Onofrio, Netflix's) so only REAL quote marks count,
+  // then delete ONE lone quote char from the original. Legit apostrophes are never touched.
+  const masked = s.replace(/(\w)[\u2019'](?=\w)/g, "$1x").replace(/(\w)[\u2019']s\b/g, "$1xs");
+  const n = (re) => (masked.match(re) || []).length;
+  let out = s;
+  if (n(/'/g) % 2) out = out.replace(/(?<!\w)'(?=\w|\s|$)|(?<=\s)'/, "");
+  if (n(/"/g) % 2) out = out.replace(/"/, "");
+  const o1 = n(/\u2018/g), c1 = n(/\u2019/g);
+  if (o1 > c1) out = out.replace(/\u2018/, "");
+  else if (c1 > o1) out = out.replace(/\u2019(?!\w)/, "");
+  const o2 = n(/\u201c/g), c2 = n(/\u201d/g);
+  if (o2 > c2) out = out.replace(/\u201c/, "");
+  else if (c2 > o2) out = out.replace(/\u201d/, "");
+  return out.replace(/\s{2,}/g, " ").trim();
+}
+
 export function finishMetaTitle({ model, title, min = 45, max = 55, cutMax = 60, hardMax = 65 } = {}) {
-  const prep = (s) => stripBrand(s).replace(/\s*\(\d{4}\)\s*$/, "").trim();
+  const prep = (s) => stripUnpaired(stripBrand(s).replace(/\s*\(\d{4}\)\s*$/, "").trim());
   const mt = prep(model), tt = prep(title);
   const cands = [mt, tt].filter(Boolean);
   // pass 1 — candidate already clean in [45,55] once a split name is completed (completion may run to 60)
@@ -125,16 +154,32 @@ export function finishMetaTitle({ model, title, min = 45, max = 55, cutMax = 60,
   for (const c of cands) { const k = cleanCut(c, title, max + 1, cutMax); if (k) return k; }
   // pass 3 — no clean cut exists: ship the writer's/headline's FULL text if ≤65 (verbatim beats a fragment)
   for (const c of cands) if (c.length <= hardMax && isCleanTitle(c, title)) return c;
-  // last resorts — a clean short cut (≥30) beats an in-band fragment; the blind cut survives only as the
-  // final fallback for degenerate inputs (single giant token, all-quote titles).
+  // pass 3b (2026-07-17): a clean HEADLINE cut anywhere in [45,65] still beats anything short — the full
+  // display title is 55-86 chars, so this nearly always lands in-range even when the strict bands failed.
+  { const k = cleanCut(tt, title, min, hardMax); if (k) return k; }
+  // last resorts — a clean short cut (≥30) beats an in-band fragment…
   for (const c of cands) { const k = cleanCut(c, title, 30, min - 1); if (k) return k; }
-  const s = cands[0] || "";
-  const cut = s.slice(0, max), at = cut.lastIndexOf(" ");
-  return (at > max * 0.4 ? cut.slice(0, at) : cut).replace(/[\s,;:–—-]+$/, "");
+  // …and the FINAL fallback can never ship a fragment (2026-07-17 root-fix: the old blind cut returned the
+  // model's "'Heartstopper Forever' Movie Releases on" verbatim): prefer the LONGEST candidate, cut at a word
+  // boundary, then iteratively strip dangling tail words until the ending is clean.
+  const s = [...cands].sort((a, b) => b.length - a.length)[0] || "";
+  const cut0 = s.length <= max ? s : (() => { const c = s.slice(0, max), at = c.lastIndexOf(" "); return at > max * 0.4 ? c.slice(0, at) : c; })();
+  let out = cut0.replace(/[\s,;:–—-]+$/, "");
+  for (let i = 0; i < 6; i++) {
+    const lw = lastWord(out);
+    if (!lw || (!BAD_TAIL.has(lw.toLowerCase()) && !/['’]s$/i.test(lw))) break;
+    out = out.slice(0, out.length - lw.length).replace(/[\s,;:–—-]+$/, "");
+  }
+  return out || cut0;
 }
 
 // ── 4. metaDescription: 140–160 chars of REAL article sentences, complete-sentence ending ───────
-const sentSplit = (s) => String(s || "").replace(/\s+/g, " ").trim().split(/(?<=[.!?…])\s+/).filter(Boolean);
+// Sentence split, abbreviation-aware (2026-07-17 root-fix: "No. 2 on the Billboard 200" was split after "No."
+// and the orphan "2 on the Billboard 200." shipped in a live metaDescription). Never split after a known
+// abbreviation, and only split when a capital/quote actually starts the next sentence.
+const sentSplit = (s) => String(s || "").replace(/\s+/g, " ").trim()
+  .split(/(?<!\b(?:No|Mr|Mrs|Ms|Dr|Jr|Sr|St|Mt|vs|Vol|Inc|Ltd|Co|Corp|Bros|approx|etc|U\.S|U\.K)\.)(?<=[.!?…])\s+(?=[A-Z“"'‘(])/)
+  .filter(Boolean);
 export function finishMetaDescription({ model, dek, bodyText, min = 140, max = 160 } = {}) {
   // Greedy sentence accumulation, tried in several source orders (the model's metaDescription first, but a
   // 143-char dek alone can be in-band when model+anything overshoots) — best in-band result wins, else longest.
@@ -214,7 +259,13 @@ function editDistLe2(a, b) {
   return dp[a.length][b.length] <= 2;
 }
 export function entityFidelity(article, primaryEntity) {
-  const tokens = String(primaryEntity || "").split(/\s+/).filter((t) => t.length >= 6);
+  // Tokens are SANITIZED to bare words (2026-07-17 root-fix): "Power: Origins" used to tokenize to "Power:" —
+  // \b can't sit between ':' and space, so the guard thought the token was absent, matched "Power" as a
+  // "misspelled variant", and rewrote it to "Power:" → the live "Power:: Origins" corruption. Punctuation
+  // is never part of a spelling check.
+  const tokens = String(primaryEntity || "").split(/\s+/)
+    .map((t) => t.replace(/^[^A-Za-z0-9'’-]+|[^A-Za-z0-9'’-]+$/g, ""))
+    .filter((t) => t.length >= 6 && /^[A-Za-z0-9'’-]+$/.test(t));
   if (!tokens.length || !article) return article;
   const allText = JSON.stringify(article);
   let out = article;

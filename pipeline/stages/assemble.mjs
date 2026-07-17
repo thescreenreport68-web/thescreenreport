@@ -6,6 +6,7 @@ const matter = require("gray-matter");
 import { TAXONOMY, AUTHOR_SLUG } from "../config.mjs";
 import { addInternalLinks, isRemovedForm } from "../lib/internalLinks.mjs";
 import { finishMetaTitle, finishMetaDescription, driftGuard, entityFidelity, slugifyTitle } from "../lib/seoFinish.mjs";
+import { anchorGuards, cleanSourcesSection, sanitizeBareUrls } from "../lib/factGuards.mjs";
 
 import { fileURLToPath } from "node:url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url)); // …/site/pipeline/stages
@@ -40,6 +41,20 @@ export function assemble({ article, classification, image, topic, dateISO }) {
   // spelling; if it never appears verbatim but a near-miss variant does, every occurrence (title, body, FAQs,
   // even inside direct quotes) is restored to the source spelling BEFORE anything downstream reads the article.
   article = entityFidelity(article, topic.primaryEntity);
+  // ANTI-FABRICATION ANCHORS (root-fix 2026-07-17, the fabricated-Jagger-quotes / invented-Oct-25-date class):
+  // any quoted passage or explicit calendar date NOT present in the source bundle is CUT (cut-not-hold).
+  // The writer may only restate the source — these guards make that mechanically true.
+  {
+    const bundleText = (topic._bundle?.sources || []).map((s) => s.text || "").join("\n");
+    const g = anchorGuards(article, bundleText);
+    if (g.cuts.length) console.log(`  ✂ anchor guards cut ${g.cuts.length}: ${g.cuts.slice(0, 4).join(" · ")}`);
+    article = g.article;
+  }
+  // Placeholder citation URLs (a bare "https://www.instagram.com/" is not a source) → dropped field-wide.
+  article = sanitizeBareUrls(article);
+  // Belt for the "Power:: Origins" class — a doubled colon is never legitimate in a title or body.
+  for (const k of ["title", "dek", "body", "metaTitle", "metaDescription"])
+    if (typeof article[k] === "string") article[k] = article[k].replace(/::+/g, ":");
   const valid = validPaths();
   // Keep internal links that resolve to a real page; otherwise drop the link, keep the text. A BARE
   // homepage link ("[x](/)") is low-value filler the owner banned — drop it (keep the text) too.
@@ -79,6 +94,9 @@ export function assemble({ article, classification, image, topic, dateISO }) {
   const tagsForLinks = classification.tags?.length ? classification.tags : article.tags || [];
   const linkResult = addInternalLinks({ body, title: article.title, tags: tagsForLinks, category: classification.category, slug }, { max: 3 });
   body = linkResult.body;
+  // SOURCES HYGIENE (root-fix 2026-07-17): the Sources section may cite only real EXTERNAL links —
+  // internal/linkless bullets are fabricated attribution and are dropped (section removed if emptied).
+  body = cleanSourcesSection(body);
   // BASIC SEO — deterministic guarantee (owner 2026-07-14; ROOT-CAUSE REBUILD 2026-07-16): EVERY article ships a
   // search-optimized metaTitle (45–55 target, brand-free, NEVER a mid-phrase fragment — the old clampWords blind
   // last-space cut shipped "…Cast in Netflix's The" / "…Lineup with Margot"), a 140–160 complete-sentence
@@ -97,9 +115,14 @@ export function assemble({ article, classification, image, topic, dateISO }) {
   const drift = driftGuard({ article, topic, tags: seoTags, bodyText: bodyPlain, slug });
   if (drift.drifted) console.log(`  ✎ drift guard: topic keyword "${topic.primaryKeyword}" absent from article → targetKeyword "${drift.targetKeyword}", tags [${drift.tags.join(", ")}], eventSlug "${drift.eventSlug}"`);
   if (drift.tags.length) seoTags = drift.tags;
-  // imageAlt only keeps the imageQuery prefix when the query actually matches this article (same drift class).
+  // imageAlt only keeps the imageQuery prefix when the query matches this article (drift class), is not
+  // redundant with the title ("Mayday in Mayday — …"), and does not claim a PERSON is pictured over TMDB
+  // work-art ("Brian Tyler in Yellowstone" on a Yellowstone still that shows no Brian Tyler).
+  const iq = String(article.imageQuery || "").trim();
+  const iqRedundant = iq && String(article.title || "").toLowerCase().includes(iq.toLowerCase());
+  const iqPersonOnWorkArt = / in /i.test(` ${iq} `) && /image\.tmdb\.org/.test(image?.image || "");
   const imageAlt = (
-    (article.imageQuery && drift.imageQueryOk ? article.imageQuery + " — " : "") + (article.title || "")
+    (iq && drift.imageQueryOk && !iqRedundant && !iqPersonOnWorkArt ? iq + " — " : "") + (article.title || "")
   ).slice(0, 125);
 
   const fm = {
@@ -166,7 +189,7 @@ export function assemble({ article, classification, image, topic, dateISO }) {
   // strip stray markdown emphasis from plain-text structured-field strings
   const stripMd = (v) =>
     typeof v === "string"
-      ? v.replace(/\*+/g, "").replace(/\s+,/g, ",").trim()
+      ? v.replace(/\*+/g, "").replace(/::+/g, ":").replace(/\s+,/g, ",").trim()
       : Array.isArray(v)
         ? v.map(stripMd)
         : v && typeof v === "object"

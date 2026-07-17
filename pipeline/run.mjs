@@ -58,7 +58,7 @@ if (FROM_FIND) {
   // Batman-2028 delay twice in 2h) or re-angled under a different headline slips through. Fuzzy-match each
   // candidate's entities+event words against EVERY article in the shared content/articles dir from the last 72h
   // (read-only — all lanes publish there); ≥3 shared non-generic stems = same story → skip.
-  const _recent = recentArticles(72);
+  const _recent = recentArticles(168); // 7 days (2026-07-17: a 6-day-later rehash of our own Ariana Grande story slipped the old 72h window)
   const _n1 = SOURCE_TOPICS.length;
   SOURCE_TOPICS = SOURCE_TOPICS.filter((t) => {
     const d = findDuplicate(t, _recent);
@@ -487,6 +487,14 @@ async function processTopic(topic, i) {
     rec.scorecard = { score: scored.score, subscores: scored.subscores, strengths: scored.strengths, weaknesses: scored.weaknesses, deterministic: scored.deterministic, hardBlocks: scored.hardBlocks };
     let auditBody = article.body, internalLinks = [];
     if (pass) {
+      // HARD TARGET CAP (2026-07-17): with CONCURRENCY>1, in-flight topics used to complete PAST the target
+      // (allow 2 → published 3, four times in the first 12h) — the write itself is now the atomic gate.
+      if (TARGET && writtenCount >= TARGET) {
+        rec.status = "deferred"; rec.deferReason = "target-reached (in-flight overshoot guard)";
+        console.log(`  ⏸ deferred (target ${TARGET} already written): ${topic.title?.slice(0, 60)}`);
+        return rec;
+      }
+      writtenCount++;
       const out = assemble({ article, classification, image, topic, dateISO });
       auditBody = out.body; internalLinks = out.internalLinks || [];
       if (!DRY) {
@@ -541,7 +549,7 @@ async function processTopic(topic, i) {
 // keeps its own retry/fail-closed safety, so a transient rate-limit on one topic never affects another.
 const CONCURRENCY = Math.max(1, Number(process.env.CONCURRENCY) || (FROM_FIND ? 4 : 1));
 const TARGET = Number((process.argv.find((a) => a.startsWith("--target=")) || "").split("=")[1]) || 0;
-let cursor = 0, publishedCount = 0;
+let cursor = 0, publishedCount = 0, writtenCount = 0;
 const results = [];
 async function worker() {
   while (true) {

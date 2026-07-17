@@ -80,6 +80,24 @@ const LIVE_EVENT = /\bfireworks (spectacular|show|display|celebration)\b|\b(wher
 // (casting, trailers, reactions, deals, awards RESULTS, music, scandals). Deterministic drop so the writer never makes them.
 const BOX_OFFICE = /\bbox[- ]?office\b|\bopening weekend\b|\bweekend (debut|gross|haul|estimate|numbers?)\b|\bgrosse[ds]\b|\b(domestic|worldwide|global|overseas|international)\s+(gross|debut|total|haul)\b|\bhighest[- ]grossing\b|\bbiggest (opening|debut)\b|\b(passes?|crosses?|tops?|surpasses?)\b[^.?!]{0,20}\$\s?\d[\d.,]*\s?(m|b|k|million|billion)\b|\$\s?\d[\d.,]*\s?(m|b|k|million|billion)\b[^.?!]{0,40}\b(opening|weekend|globally|worldwide|domestic|box[- ]?office|debut|theaters|gross)\b/i;
 const RELEASE_PLATFORM = /\b(where|how) to (watch|stream)\b|\bwhere to watch\b|\bnow streaming\b|\brelease date\b|\b(gets?|sets?|lands?|reveals?|announces?|scores?)\s+(a |its |new )?(release|streaming|premiere|digital|theatrical) date\b|\bstreaming (date|release|debut|premiere|guide|window)\b|\bott (release|platform|date)\b|\b(streaming|available|premieres?|premiering|arriv(es?|ing)|land(s|ing)|hit(s|ting)?|drop(s|ping)?|debut(s|ing)?|coming|heading) (on|to)\s+(netflix|hulu|disney\+?|max|hbo( ?max)?|peacock|prime video|amazon( prime)?|apple tv\+?|paramount\+?|starz|showtime|mubi|tubi|hallmark)\b|\bhits? (theaters|cinemas|streaming)\b/i;
+// SCOPE GUARDS ADDED 2026-07-17 (12h-audit root causes — 7 of 35 published articles were out of scope):
+// VIEWERSHIP: streaming-chart/watch-hours numbers as the story = the box-office lane's beat, not ours.
+export const VIEWERSHIP = /\b(most[- ](viewed|watched|streamed)|what we watched|viewership|watch[- ]?hours|million (views|viewers)|nielsen (ratings?|top)|streaming (charts?|rankings?|numbers)|top 10 (movies|shows|films)\b)/i;
+// MERCH: product/apparel/collectible drops are commerce, not entertainment news.
+export const MERCH = /\b(merch(andise)?|apparel|clothing (line|collection|collab)|capsule collection|crossover collection|funko|collectibles?|toy line|action figures?|streetwear|sneakers?|fragrance|makeup (line|collection)|product (line|drop|collection))\b/i;
+// SCHEDULE_GRID: a network timeslot/schedule grid is release-date content (the separate lane's beat).
+export const SCHEDULE_GRID = /\b(fall|spring|summer|midseason) (tv )?(schedule|lineup)\b|\bsets? [^.?!]{0,25}(premiere dates|schedule)\b|\btime ?slots?\b/i;
+// INTERVIEW_PROFILE: interview-as-content ("X discusses/opens up about Y") is an evergreen form the owner
+// removed — it is only NEWS when the title also carries a hard news verb (a revelation, exit, deal…).
+export const INTERVIEW_CHAT = /\b(opens? up (about|on)|discuss(es)?\b|reflects? on|talks? about|sits? down (with|for)|in conversation|gets? candid|weighs? in on)\b/i;
+export const HARD_NEWS_VERB = /\b(joins?|cast(s|ed)?|exits?|quits?|leaves?|dies|dead|sues?|lawsuit|arrested|charged|fired|signs?|confirms?|announces?|reveals? (his|her|their|the|a)|renew(s|ed)?|cancel(s|ed|led)?|sets?|lands?|acquires?|teases? (a|the|new)|drops? (a|the|new))\b/i;
+const interviewOnly = (t) => INTERVIEW_CHAT.test(t) && !HARD_NEWS_VERB.test(t);
+// Platform/viewership patterns hide in the SUMMARY when the headline is coy ("…'Vrach Frankenshteyn' Debuts"
+// + summary "will debut on Hulu on August 14") — test title PLUS the summary's first 200 chars for those two.
+const withSummary = (c) => `${c.title || ""} ${String(c.summary || c.description || "").slice(0, 200)}`;
+// STALE-SOURCE: a feed item older than 72h is not "latest trending" news — it re-enters only as a follow-up.
+const tooOld = (c) => { const t = Date.parse(c.publishedAt || c.pubDate || c.isoDate || c.date || ""); return Number.isFinite(t) && Date.now() - t > 72 * 3600e3; };
+
 const freshCandidates = candidates.filter((c) =>
   !published.titles.has(slugKey(c.title)) &&
   !ROUNDUP_REVIEW.test(c.title || "") &&
@@ -88,7 +106,12 @@ const freshCandidates = candidates.filter((c) =>
   !DULL_INDUSTRY.test(c.title || "") &&
   !LIVE_EVENT.test(c.title || "") &&
   !BOX_OFFICE.test(c.title || "") &&
-  !RELEASE_PLATFORM.test(c.title || "") &&
+  !RELEASE_PLATFORM.test(withSummary(c)) &&
+  !VIEWERSHIP.test(withSummary(c)) &&
+  !MERCH.test(c.title || "") &&
+  !SCHEDULE_GRID.test(c.title || "") &&
+  !interviewOnly(c.title || "") &&
+  !tooOld(c) &&
   !JUNK_OUTLETS.has((c.outlet || "").toLowerCase().trim()));
 if (candBefore - freshCandidates.length > 0) monitor.stage("dedup", `dropped ${candBefore - freshCandidates.length} already-published candidate(s) by title; ${freshCandidates.length} remain`);
 // EXTRACTABILITY-FIRST shortlist (2026-07-04): a clean publisher URL (an RSS main/section feed) extracts to full
@@ -189,7 +212,22 @@ if (queue.length === 0) {
     monitor.stage("select", `WARNING: 0 candidates survived discovery+categorize this run — nothing to salvage (widen discovery)`);
   }
 }
-monitor.stage("select", `selected ${queue.length}/${QUEUE_N} by trend-priority (floor ${SELECT_FLOOR}; never-empty guarantee on; music competes in the single pool)`);
+// MUSIC QUOTA (owner mandate, enforced 2026-07-17 — the 12h audit measured music at 22% of published output
+// vs the ~10% intended share): music keeps only its best ~12% of queue slots; excess is replaced by the next
+// best non-music publishable topics so movies/TV lead the mix the way the mandate says.
+{
+  const cap = Math.max(1, Math.round(queue.length * 0.12));
+  const music = queue.filter((t) => t.category === "music");
+  if (music.length > cap) {
+    const keep = new Set(music.slice(0, cap).map((t) => t.id));
+    const dropped = music.length - cap;
+    queue = queue.filter((t) => t.category !== "music" || keep.has(t.id));
+    const refill = verified.filter((t) => t.category !== "music" && t.verification?.publishable && (t.priority ?? 0) >= SELECT_FLOOR && !queue.some((q) => q.id === t.id)).slice(0, dropped);
+    queue.push(...refill);
+    monitor.stage("select", `music quota: ${dropped} music topic(s) over the ${cap}-slot cap swapped for ${refill.length} non-music`);
+  }
+}
+monitor.stage("select", `selected ${queue.length}/${QUEUE_N} by trend-priority (floor ${SELECT_FLOOR}; never-empty guarantee on; music capped ~12%)`);
 
 // Inside-stories expansion (opt-in): a Tier-S event → many tone-safe angle articles, appended to the queue.
 if (EXPAND) {
