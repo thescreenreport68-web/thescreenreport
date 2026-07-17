@@ -42,11 +42,19 @@ async function bluesky(fetchImpl, { accounts = BLUESKY, limit = 25, nowMs } = {}
   return out;
 }
 
-// ── X via twitterapi.io (cheap; Pop Crave / PopBase are most active here). Needs TWITTERAPI_KEY in .env. ──
+// ── X via twitterapi.io — DORMANT (owner decision 2026-07-17): the key's free credits are exhausted
+// (HTTP 402 "Credits is not enough") and we are NOT paying. Evaluated free alternatives and REJECTED:
+//   • syndication.twitter.com/srv/timeline-profile → 200 but a STALE top-tweets cache (newest ≈ 8 months old,
+//     0 fresh in 100 entries) — fine for embedding a known tweet, useless for live discovery;
+//   • cdn.syndication.twimg.com/timeline/profile → empty body (retired);
+//   • no other gossip desks are active on Bluesky (probed variety/THR/E!/PageSix/TMZ/UsWeekly — dead/absent).
+// The SAME amplifiers (Pop Crave / PopBase / Deuxmoi) post actively on Bluesky, which the BLUESKY list above
+// already covers — so the amplifier lane stays live and free. This path auto-revives if the workflow ever
+// passes a recharged TWITTERAPI_KEY again; without the key it costs zero calls.
 export const X_ACCOUNTS = ["PopCrave", "PopBase", "DeuxmoiOfficial"];
 async function xReader(fetchImpl, { accounts = X_ACCOUNTS, nowMs } = {}) {
   const key = process.env.TWITTERAPI_KEY;
-  if (!key) return []; // no key → skip (owner adds it to .env to enable Pop Crave/PopBase on X)
+  if (!key) return []; // no key → skip, zero cost (see the dormancy note above)
   const now = nowMs ?? Date.now();
   const out = [];
   for (const acct of accounts) {

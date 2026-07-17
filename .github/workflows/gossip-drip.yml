@@ -63,7 +63,10 @@ jobs:
           TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
           OMDB_API_KEY: ${{ secrets.OMDB_API_KEY }}
           LASTFM_API_KEY: ${{ secrets.LASTFM_API_KEY }}
-          TWITTERAPI_KEY: ${{ secrets.TWITTERAPI_KEY }}
+          # TWITTERAPI_KEY intentionally NOT passed: the twitterapi.io key is exhausted (HTTP 402 "Credits is not
+          # enough", verified 2026-07-17) and the owner is not paying. The X amplifiers (PopCrave/PopBase/Deuxmoi)
+          # flow in FREE via their active Bluesky mirrors (discoverSocial BLUESKY list). Re-add this env line only
+          # if the key is ever recharged — the code path auto-revives.
           INTERVAL_MIN: "115"
           GOSSIP_DIAG: "1"
           GOSSIP_REVIEW_DIR: ${{ github.event.inputs.review == 'true' && 'data/gossip/review' || '' }}
