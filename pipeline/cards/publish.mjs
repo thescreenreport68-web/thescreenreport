@@ -112,8 +112,9 @@ export async function publishCard({ imageUrl, captions, whenISO, live = false, b
   // already due, i.e. no whenISO) = publishNow:true; scheduled = status "scheduled" + scheduledFor
   // + timezone (the reels lane's proven shape — NEVER status:"scheduled" without a time, review #2);
   // draft = status "draft" (live-proven) + isDraft (the changelog's post-level flag) — both sent.
-  // firstComment sent BOTH top-level and under platformSpecificData (the verified contract names
-  // the latter; the dual-send mirrors the status+isDraft pattern — review #22).
+  // firstComment lives INSIDE the platform entry as platformSpecificData.firstComment —
+  // root-level placement is silently IGNORED (proven live 2026-07-16: first two posts stored
+  // no comment field at all; docs.zernio.com First Comment example confirms the shape).
   const common = (accountId, platform, content, firstComment) => ({
     content,
     ...(live
@@ -121,9 +122,8 @@ export async function publishCard({ imageUrl, captions, whenISO, live = false, b
         ? { publishNow: true }
         : { status: "scheduled", scheduledFor: whenISO, timezone: CARDS.slots.postTz }
       : { status: "draft", isDraft: true }),
-    platforms: [{ accountId, platform }],
+    platforms: [{ accountId, platform, ...(firstComment ? { platformSpecificData: { firstComment } } : {}) }],
     mediaItems: [{ type: "image", url: imageUrl }],
-    ...(firstComment ? { firstComment, platformSpecificData: { firstComment } } : {}),
   });
   const enabled = CARDS.platforms.filter((p) => !platformPaused(p));
   for (const platform of enabled) {
