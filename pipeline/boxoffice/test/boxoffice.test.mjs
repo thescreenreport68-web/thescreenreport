@@ -9,12 +9,14 @@ import os from "node:os";
 
 import { normMoney, moneyBucket, extractFigures, buildAllowed, numberFidelity, noInvention, platformGuard, canonicalFigures, numberConsistencyGate } from "../moneyGuard.mjs";
 import { scopeOk, FORMS, DATA_DIR } from "../config.bo.mjs";
-import { fidelityLocks, review as qaReview, classifyBlocks, findTemplateHeadings, hedgeCuts, dropSpin, speculationCuts, trendCuts } from "../agents/qa.mjs";
+import { fidelityLocks, review as qaReview, classifyBlocks, findTemplateHeadings, hedgeCuts, dropSpin, speculationCuts, trendCuts, verdictCuts } from "../agents/qa.mjs";
 import { castTrustworthy } from "../boxofficeData.mjs";
-import { buildBoxOfficeMarkdown, writeBoxOfficeArticle, seoFinish } from "../assemble.mjs";
+import { buildBoxOfficeMarkdown, writeBoxOfficeArticle, seoFinish, scaffoldViolations } from "../assemble.mjs";
 import { boRun } from "../borun.mjs";
-import { boKey, alreadyPublished, coveredEventSlugs } from "../store.mjs";
+import { boKey, alreadyPublished, coveredEventSlugs, parkAngle as parkAngleX, parkedTries as parkedTriesX } from "../store.mjs";
 import { run as gatherRun } from "../agents/gatherer.mjs";
+import { run as writerRun } from "../agents/writer.mjs";
+import { readChartCache, writeChartCache } from "../dailyChart.mjs";
 import { isMaterial, updateEventSuffix, recordArticle, currentNumberRaw, priorArticles, linkPriorCoverage, streamingExits, trackKey, isPastOpening } from "../tracker.mjs";
 import { parseNetflixTsv, netflixBlock, fmtHours } from "../netflix.mjs";
 import { findFilms } from "../agents/finder.mjs";
@@ -300,13 +302,13 @@ t("currentNumberRaw uses LABELED fields only — the numbers grab-bag can NEVER 
   assert.equal(currentNumberRaw({}, {}), null);
 });
 t("isMaterial: a milestone crossing is material with a milestone tag", () => {
-  const tracked = { films: { "1": { tmdbId: 1, title: "Wicked", lastNumberRaw: 90e6, lastMilestone: 75e6, articles: [] } } };
+  const tracked = { films: { "1": { tmdbId: 1, title: "Wicked", lastDomesticRaw: 90e6, lastNumberRaw: 90e6, lastMilestone: 75e6, articles: [] } } };
   const mat = isMaterial({ tmdbId: 1, title: "Wicked" }, { cume: "$105 million" }, {}, tracked);
   assert.equal(mat.material, true);
   assert.equal(mat.tag, "100m", mat.reason);
 });
 t("isMaterial: a same-or-LOWER number is NOT material — never re-report Day-15's numbers (owner's #1)", () => {
-  const tracked = { films: { "1": { tmdbId: 1, title: "Wicked", lastNumberRaw: 108e6, lastMilestone: 100e6, articles: [] } } };
+  const tracked = { films: { "1": { tmdbId: 1, title: "Wicked", lastDomesticRaw: 108e6, lastNumberRaw: 108e6, lastMilestone: 100e6, articles: [] } } };
   assert.equal(isMaterial({ tmdbId: 1, title: "Wicked" }, { cume: "$108 million", dropPct: "40%" }, {}, tracked).material, false, "same number re-pulled = not a new story");
   assert.equal(isMaterial({ tmdbId: 1, title: "Wicked" }, { cume: "$104 million" }, {}, tracked).material, false, "a lower number = stale");
   assert.equal(isMaterial({ tmdbId: 1, title: "Wicked" }, { cume: "$130 million" }, {}, tracked).material, true, "a genuinely higher number IS the next day's story");
@@ -366,7 +368,7 @@ fs.rmSync(TT, { recursive: true, force: true });
 console.log("streaming — finder picks + gatherer branch");
 await ta("finder builds NETFLIX-TOP10 + TRENDING-TV picks from Netflix data", async () => {
   const nf = { week: "2026-06-28", films: [{ title: "The Big One", rank: 1, hours: "22 million hours", hoursRaw: 22000000 }], tv: [{ title: "Hit Series", rank: 1, hours: "45 million hours", hoursRaw: 45000000 }] };
-  const found = await findFilms({ limit: 5, discoverImpl: async () => [], netflixImpl: async () => nf, trackedImpl: { films: {} }, providersImpl: async () => null });
+  const found = await findFilms({ dailyChartImpl: async () => ({ films: [] }), limit: 5, discoverImpl: async () => [], netflixImpl: async () => nf, trackedImpl: { films: {} }, providersImpl: async () => null });
   const forms = found.map((e) => e.angle.form);
   assert.ok(forms.includes("NETFLIX-TOP10"), JSON.stringify(forms));
   assert.ok(forms.includes("TRENDING-TV"));
@@ -377,7 +379,7 @@ await ta("finder builds NETFLIX-TOP10 + TRENDING-TV picks from Netflix data", as
 await ta("finder never assigns a streaming form to a theatrical film (LLM clamp)", async () => {
   const films = [{ id: 1, title: "Theatrical", year: "2026", releaseDate: "2026-07-01", popularity: 80, via: "now_playing", overview: "", originalLanguage: "en" }];
   const badJudge = async () => ({ data: { picks: [{ i: 0, form: "NETFLIX-TOP10", workingTitle: "x", queries: ["x"] }] } });
-  const found = await findFilms({ limit: 3, discoverImpl: async () => films, chatImpl: badJudge, netflixImpl: async () => ({ films: [], tv: [] }), trackedImpl: { films: {} }, providersImpl: async () => null });
+  const found = await findFilms({ dailyChartImpl: async () => ({ films: [] }), limit: 3, discoverImpl: async () => films, chatImpl: badJudge, netflixImpl: async () => ({ films: [], tv: [] }), trackedImpl: { films: {} }, providersImpl: async () => null });
   assert.ok(!found.some((e) => e.film.tmdbId === 1 && e.angle.form === "NETFLIX-TOP10"), "a streaming form must not attach to a theatrical film");
 });
 await ta("gatherer streaming branch builds Netflix-grounded gathered + meets the hours floor", async () => {
@@ -549,7 +551,7 @@ await ta("a NON-material BO-UPDATE is HELD (anti-duplicate law), never published
   const cap = [];
   const s = { ...stubs(cap), findImpl: async () => updateFound(), dataImpl: noWorldwideData,
     gatherImpl: async (job) => { job.gathered = { ...gathered, cume: "$107 million", numbers: ["$107 million"], dropPct: "40%" }; job.trigger.sources = gathered.sources; return job; } };
-  const tracked = memTracked({ [String(baseJob().film.tmdbId)]: { tmdbId: baseJob().film.tmdbId, title: "Wicked", lastNumberRaw: 107e6, lastMilestone: 100e6, status: "in-theaters", articles: [] } });
+  const tracked = memTracked({ [String(baseJob().film.tmdbId)]: { tmdbId: baseJob().film.tmdbId, title: "Wicked", lastDomesticRaw: 107e6, lastNumberRaw: 107e6, lastMilestone: 100e6, status: "in-theaters", articles: [] } });
   const r = await boRun({ ...s, storeImpl: memStore(), trackedImpl: tracked, dryRun: true, limit: 1 });
   assert.equal(r.published.length, 0, "a non-material update must not publish");
   assert.ok(r.held.some((h) => /not material/.test(h.reason)));
@@ -559,7 +561,7 @@ await ta("a MATERIAL BO-UPDATE publishes with a DISTINCT (discriminated) eventSl
   const cap = [];
   const s = { ...stubs(cap), findImpl: async () => updateFound(), dataImpl: noWorldwideData,
     gatherImpl: async (job) => { job.gathered = { ...gathered, cume: "$105 million", numbers: ["$105 million"] }; job.trigger.sources = gathered.sources; return job; } };
-  const tracked = memTracked({ [String(baseJob().film.tmdbId)]: { tmdbId: baseJob().film.tmdbId, title: "Wicked", lastNumberRaw: 90e6, lastMilestone: 75e6, status: "in-theaters", articles: [{ slug: "wicked-bo-opening", category: "movies", form: "BO-OPENING" }] } });
+  const tracked = memTracked({ [String(baseJob().film.tmdbId)]: { tmdbId: baseJob().film.tmdbId, title: "Wicked", lastDomesticRaw: 90e6, lastNumberRaw: 90e6, lastMilestone: 75e6, status: "in-theaters", articles: [{ slug: "wicked-bo-opening", category: "movies", form: "BO-OPENING" }] } });
   const r = await boRun({ ...s, storeImpl: memStore(), trackedImpl: tracked, dryRun: true, limit: 1 });
   assert.equal(r.published.length, 1, "a material update must publish");
   assert.equal(cap.length, 1);
@@ -641,7 +643,7 @@ await ta("finder rotates PAST a covered film (by title) to a fresh one — never
     { i: 0, form: "BO-OPENING", workingTitle: "Toy Story 5", star: "", queries: ["x"] },
     { i: 1, form: "BO-OPENING", workingTitle: "Fresh Film", star: "", queries: ["y"] }] } });
   const seen = { slugs: new Set(["toy-story-5-bo-opening"]), titles: new Set(["toy story 5"]) };
-  const found = await findFilms({ limit: 1, discoverImpl: async () => films, chatImpl: judge, netflixImpl: async () => ({ films: [], tv: [] }), trackedImpl: { films: {} }, providersImpl: async () => null, seen });
+  const found = await findFilms({ dailyChartImpl: async () => ({ films: [] }), limit: 1, discoverImpl: async () => films, chatImpl: judge, netflixImpl: async () => ({ films: [], tv: [] }), trackedImpl: { films: {} }, providersImpl: async () => null, seen });
   assert.ok(!found.some((e) => e.film.title === "Toy Story 5"), "a covered film must NOT be re-picked");
   assert.ok(found.some((e) => e.film.title === "Fresh Film"), "rotate to a fresh film");
 });
@@ -649,11 +651,14 @@ await ta("finder rotates to the next UNCOVERED Netflix title (a title staying #1
   const nf = { week: "2026-06-28", films: [
     { title: "Old Number One", rank: 1, hours: "30 million hours", hoursRaw: 30000000 },
     { title: "New Entry", rank: 2, hours: "12 million hours", hoursRaw: 12000000 }], tv: [] };
-  const seen = { slugs: new Set(["old-number-one-netflix-top10"]), titles: new Set(["old number one"]) };
-  const found = await findFilms({ limit: 2, discoverImpl: async () => [], netflixImpl: async () => nf, trackedImpl: { films: {} }, providersImpl: async () => null, seen });
+  // Streaming slugs are WEEK-KEYED: covered THIS week (w2026-06-28) → skipped this week; the same title in a
+  // NEW chart week is a fresh story again (the old week-less slug permanently killed re-coverage).
+  const seen = { slugs: new Set(["old-number-one-netflix-top10-w2026-06-28"]), titles: new Set(["old number one"]) };
+  const found = await findFilms({ dailyChartImpl: async () => ({ films: [] }), limit: 2, discoverImpl: async () => [], netflixImpl: async () => nf, trackedImpl: { films: {} }, providersImpl: async () => null, seen });
   const nfPick = found.find((e) => e.angle.form === "NETFLIX-TOP10");
   assert.ok(nfPick, "a fresh Netflix pick exists");
   assert.equal(nfPick.film.title, "New Entry", "rotated past the covered #1");
+  assert.ok(nfPick.trigger.eventSlug.endsWith("-w2026-06-28"), "streaming eventSlug carries the chart week: " + nfPick.trigger.eventSlug);
 });
 
 // ── 12. ROOT-CAUSE HARDENING — wrong cast, speculation, FAQ/heading completeness, theatrical gate ──
@@ -720,7 +725,7 @@ await ta("finder ADVANCES a covered in-theater film as a BO-UPDATE when the fres
   const tracked = { films: { "1": { tmdbId: 1, title: "Wicked", releaseDate: "2026-06-01", status: "in-theaters", articles: [{ slug: "wicked-bo-opening" }] } } };
   const films = [{ id: 1, title: "Wicked", year: "2026", releaseDate: "2026-06-01", popularity: 90, via: "now_playing", overview: "", originalLanguage: "en" }];
   const judge = async () => ({ data: { picks: [{ i: 0, form: "BO-OPENING", workingTitle: "Wicked", star: "", queries: ["x"] }] } });
-  const found = await findFilms({ limit: 1, discoverImpl: async () => films, chatImpl: judge, netflixImpl: async () => ({ films: [], tv: [] }), trackedImpl: tracked, providersImpl: async () => null, seen });
+  const found = await findFilms({ dailyChartImpl: async () => ({ films: [] }), limit: 1, discoverImpl: async () => films, chatImpl: judge, netflixImpl: async () => ({ films: [], tv: [] }), trackedImpl: tracked, providersImpl: async () => null, seen });
   assert.ok(found.some((e) => e.film.title === "Wicked" && e.angle.form === "BO-UPDATE"), "covered film surfaced as a next-day BO-UPDATE: " + JSON.stringify(found.map((e) => e.angle.form)));
 });
 fs.rmSync(TMP, { recursive: true, force: true });
@@ -810,6 +815,129 @@ t("writeBoxOfficeArticle refuses to write a self-contradicting article to disk",
   assert.equal(out.consistency.ok, false);
   assert.ok(!fs.existsSync(out.path), "no file on disk");
   fs.rmSync(dir, { recursive: true, force: true });
+});
+
+// ── P0/P1 UPGRADE — cost levers + quality walls + per-metric tracker (BOX_OFFICE_UPGRADE_PLAN §2/§4) ──
+console.log("upgrade — judge-skip, numbers-in-prose, scaffold, verdict walls, per-metric tracker, park expiry");
+
+await ta("chart update SKIPS the LLM judge — deterministic walls only (a throwing judge must not matter)", async () => {
+  const job = baseJob();
+  job.film.dailyChart = { cume: "$45.2 million", dailyGross: "$2.1 million", theaters: "3,100", dayInRelease: "Day 5" };
+  job.gathered.numbers = ["$45.2 million", "$2.1 million", "3,100 theaters"];
+  await qaReview(job, { chatImpl: async () => { throw new Error("judge must never be called for a chart update"); } });
+  assert.equal(job.qa.judged, false);
+  assert.equal(job.qa.pass, true, JSON.stringify(job.qa.hardBlocks) + JSON.stringify(job.qa.cutClaims));
+});
+
+await ta("writerChart (cheap model) writes chart updates; features keep the verbose writer", async () => {
+  const models = [];
+  const fake = async ({ model }) => { models.push(model); return { data: { title: "T", body: "A movie profile paragraph that is long enough to keep for the test purposes here.", keyTakeaways: [], faq: [] }, usage: {} }; };
+  const chartJob = { film: { title: "X", dailyChart: { cume: "$10 million" } }, gathered: {}, boxData: {}, angle: { form: "BO-UPDATE" }, brief: { seoKeyword: "x" } };
+  await writerRun(chartJob, { chatImpl: fake });
+  assert.ok(models[0].includes("deepseek"), "chart update uses the cheap chart writer: " + models[0]);
+});
+
+t("numbersSection: the verified figures are APPENDED AT ASSEMBLY — the gross is guaranteed in the prose", () => {
+  const out = buildBoxOfficeMarkdown({
+    article: { title: "ignored", metaTitle: "", dek: "A movie doing business.", metaDescription: "",
+      body: "Xanadu Quest keeps drawing families to theaters on the strength of its cast and its storybook premise.\n\n## What It Is\n\n" + "A fantasy adventure film with a beloved ensemble and a storybook premise that audiences know well from the long-running series of novels it adapts, directed with a light touch and a brisk pace that keeps younger viewers locked in while giving parents plenty to enjoy. ".repeat(2) + "\n\n## The Cast\n\n" + "Star One leads as Hero alongside Star Two as Rival, with a deep supporting bench rounding out the ensemble for the studio, including a scene-stealing turn from a veteran character actor whose casting delighted fans of the original novels when it was announced. ".repeat(2),
+      keyTakeaways: [], faq: [{ q: "Who stars?", a: "Star One leads the ensemble as Hero in this adventure." }], tags: [] },
+    trigger: { eventSlug: "x-bo-update-d5", priority: 90, signals: {}, sources: [] },
+    angle: { form: "BO-UPDATE" },
+    film: { title: "Xanadu Quest", year: "2026", dailyChart: { cume: "$45,200,000", dailyGross: "$2,100,000", theaters: "3,100", dayInRelease: "Day 5" } },
+    gathered: { numbers: ["$45,200,000", "$2,100,000"] }, boxData: { budget: "$100 million", castRoles: [{ name: "Star One", character: "Hero" }], director: "A Director" },
+    image: { image: "https://x/y.jpg", imageWidth: 1600, imageHeight: 900, credit: "Studio", alt: "X" },
+    dateISO: new Date("2026-07-17T00:00:00Z").toISOString(),
+  });
+  assert.ok(/## At the Box Office/.test(out.md), "numbers section present");
+  assert.ok(/\$45,200,000/.test(out.md.split("---")[2] || out.md), "the domestic gross is IN the body prose");
+  assert.ok(out.frontmatter.keyTakeaways.length >= 3, "system takeaways ≥3: " + JSON.stringify(out.frontmatter.keyTakeaways));
+  assert.ok(out.frontmatter.keyTakeaways.some((k) => /\$45,200,000/.test(k)), "headline figure in takeaways");
+  assert.equal(out.consistency.ok, true, JSON.stringify(out.consistency.violations));
+  assert.deepEqual(out.scaffold, [], JSON.stringify(out.scaffold));
+});
+
+t("scaffoldViolations blocks placeholders, empty sections, template labels, flattened markdown, thin bodies", () => {
+  const fm = { keyTakeaways: ["a", "b", "c"], faq: [{ q: "q1", a: "a1" }, { q: "q2", a: "a2" }] };
+  const pad = "word ".repeat(200);
+  assert.ok(scaffoldViolations(`${pad}\n\n[Box office section will be inserted here by the system.]`, fm).some((v) => /placeholder/.test(v)));
+  assert.ok(scaffoldViolations(`${pad}\n\n## Closing Line`, fm).some((v) => /empty section/.test(v)));
+  assert.ok(scaffoldViolations(`The Movie: A Great Story\n\n${pad}`, fm).some((v) => /template label/.test(v)));
+  assert.ok(scaffoldViolations(`${pad} ## The Cast: Stars\n\nmore prose`, fm).some((v) => /mid-paragraph/.test(v)));
+  assert.ok(scaffoldViolations("too short", fm).some((v) => /words/.test(v)));
+  assert.deepEqual(scaffoldViolations(`${pad}\n\n## A Real Section\n\nWith real content under it.`, fm), []);
+});
+
+t("verdictCuts: profit/loss verdicts + unsourced audience verdicts are CUT; attributed reception survives", () => {
+  const body = "The film faces a significant theatrical loss. Franchise fatigue has dampened enthusiasm. According to Variety, audiences gave it an A- CinemaScore. It is on track for profitability. A fine cast performance.";
+  const cuts = verdictCuts(body);
+  assert.ok(cuts.some((c) => /theatrical loss/.test(c)), "loss verdict cut");
+  assert.ok(cuts.some((c) => /Franchise fatigue/.test(c)), "audience verdict cut");
+  assert.ok(cuts.some((c) => /profitability/.test(c)), "profit verdict cut");
+  assert.ok(!cuts.some((c) => /Variety/.test(c)), "attributed reception survives");
+});
+
+t("momentum titles: a milestone crossing leads with Crosses; otherwise the day's real added gross", () => {
+  const base = {
+    article: { title: "spin", metaTitle: "", dek: "", metaDescription: "", body: "word ".repeat(190), keyTakeaways: [], faq: [{ q: "q", a: "a real answer that is long enough" }], tags: [] },
+    trigger: { eventSlug: "x", priority: 90, signals: {}, sources: [] }, angle: { form: "BO-UPDATE" },
+    gathered: { numbers: ["$102,000,000", "$3,400,000"] }, boxData: {},
+    image: { image: "https://x/y.jpg", imageWidth: 1600, imageHeight: 900, credit: "S", alt: "X" }, dateISO: new Date("2026-07-17T00:00:00Z").toISOString(),
+  };
+  const ms = buildBoxOfficeMarkdown({ ...base, film: { title: "Film A", dailyChart: { cume: "$102,000,000", dailyGross: "$3,400,000", dayInRelease: "Day 9" } }, momentum: { tag: "100m" } });
+  assert.ok(/Crosses \$100 Million Domestically/.test(ms.frontmatter.title), ms.frontmatter.title);
+  assert.ok((ms.frontmatter.records || []).some((r) => /crossed \$100 Million/.test(r.claim)), "system milestone record");
+  const dg = buildBoxOfficeMarkdown({ ...base, film: { title: "Film A", dailyChart: { cume: "$102,000,000", dailyGross: "$3,400,000", dayInRelease: "Day 9" } }, momentum: { tag: "d9" } });
+  assert.ok(/Adds \$3\.4 Million/.test(dg.frontmatter.title), dg.frontmatter.title);
+  assert.ok(!/million\b/.test(dg.frontmatter.title), "Million capitalized in titles: " + dg.frontmatter.title);
+});
+
+t("same-metric rule: a metaTitle headlining worldwide over a domestic H1 is a violation", () => {
+  const canon = canonicalFigures({ gathered: { domestic: "$410.6 million", worldwide: "$882 million" }, boxData: {}, film: {} });
+  const r = numberConsistencyGate({
+    title: "Toy Story 5 Box Office Day 26: Domestic Total Hits $410.6 Million",
+    metaTitle: "'Toy Story 5' Crosses $882M at the Worldwide Box Office",
+    dek: "", metaDescription: "", body: "Toy Story 5 has grossed $410.6 million at the domestic box office. Worldwide, it has taken in $882 million.", keyTakeaways: [], faq: [],
+  }, canon, { recordTexts: [] });
+  assert.ok(r.violations.some((v) => /SERP promise/.test(v)), JSON.stringify(r.violations));
+});
+
+t("per-metric tracker: a daily DOMESTIC advance is material even when worldwide is static (the lockout fix)", () => {
+  const tracked = { films: { "9": { tmdbId: 9, title: "Locked Film", lastDomesticRaw: 410e6, lastWorldwideRaw: 882e6, lastMilestone: 400e6, articles: [], lastArticleAt: "2026-07-16T06:00:00Z" } } };
+  const mat = isMaterial({ tmdbId: 9, title: "Locked Film", dailyChart: { cume: "$413.3 million", dayInRelease: "Day 27" } }, { cume: "$413.3 million" }, { worldwide: "$882 million" }, tracked, { now: new Date("2026-07-17T18:00:00Z") });
+  assert.equal(mat.material, true, mat.reason);
+  assert.equal(mat.tag, "d27", "real chart day in the tag: " + mat.tag);
+});
+t("per-metric tracker: a WORLDWIDE drift alone is NOT material (the Obsession double-publish killer)", () => {
+  const tracked = { films: { "9": { tmdbId: 9, title: "F", lastDomesticRaw: 255.4e6, lastWorldwideRaw: 428e6, lastMilestone: 400e6, articles: [], lastArticleAt: "2026-07-16T06:00:00Z" } } };
+  const mat = isMaterial({ tmdbId: 9, title: "F" }, { cume: "$255.4 million" }, { worldwide: "$429 million" }, tracked, { now: new Date("2026-07-17T18:00:00Z") });
+  assert.equal(mat.material, false, "domestic static → not material regardless of worldwide drift: " + mat.reason);
+});
+t("per-metric tracker: ONE update per film per LA day (a second same-day update holds unless a milestone)", () => {
+  const tracked = { films: { "9": { tmdbId: 9, title: "F", lastDomesticRaw: 100e6, lastMilestone: 100e6, articles: [], lastArticleAt: "2026-07-17T14:00:00Z" } } };
+  const mat = isMaterial({ tmdbId: 9, title: "F" }, { cume: "$103 million" }, {}, tracked, { now: new Date("2026-07-17T20:00:00Z") });
+  assert.equal(mat.material, false);
+  assert.ok(/already covered today/.test(mat.reason), mat.reason);
+});
+
+t("park expiry: a dead park is a 72h cooldown, not a death sentence", () => {
+  const dir2 = fs.mkdtempSync(path.join(os.tmpdir(), "bo-park-"));
+  const st = { published: [], parked: [], zeroStreak: 0, daySpend: null, file: path.join(dir2, "store.json") };
+  const t0 = new Date("2026-07-17T00:00:00Z");
+  parkAngleX(st, "ev", "NETFLIX-TOP10", "r1", { now: t0 }); parkAngleX(st, "ev", "NETFLIX-TOP10", "r2", { now: t0 }); parkAngleX(st, "ev", "NETFLIX-TOP10", "r3", { now: t0 });
+  assert.equal(parkedTriesX(st, "ev", "NETFLIX-TOP10", { now: new Date("2026-07-18T00:00:00Z") }), Infinity, "dead within 72h");
+  assert.equal(parkedTriesX(st, "ev", "NETFLIX-TOP10", { now: new Date("2026-07-20T01:00:00Z") }), 0, "expired after 72h → retryable");
+  fs.rmSync(dir2, { recursive: true, force: true });
+});
+
+t("chart cache: same LA day hits the cache; a new day misses (extract once per day)", () => {
+  const dir3 = fs.mkdtempSync(path.join(os.tmpdir(), "bo-cache-"));
+  const file = path.join(dir3, "chartCache.json");
+  const t0 = Date.parse("2026-07-17T18:00:00Z");
+  writeChartCache({ films: [{ title: "A", cume: "$1 million", rank: 1 }], date: "2026-07-16" }, { nowMs: t0, file });
+  assert.ok(readChartCache({ nowMs: t0 + 3600e3, file }), "same LA day → cache hit");
+  assert.equal(readChartCache({ nowMs: t0 + 30 * 3600e3, file }), null, "next LA day → miss");
+  fs.rmSync(dir3, { recursive: true, force: true });
 });
 
 // ── summary ──────────────────────────────────────────────────────────────────────────────────────

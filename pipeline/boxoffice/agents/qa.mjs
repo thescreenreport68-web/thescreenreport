@@ -35,6 +35,22 @@ export function dropSpin(body, dropPct) {
     : null;
 }
 
+// FORBIDDEN PROFIT/LOSS VERDICTS — the pipeline must NEVER compute a profitability conclusion from
+// budget-vs-gross (4/9 live articles shipped "faces a significant theatrical loss" / "on track for
+// profitability" / "clawing close to recouping"). Deterministic → CUT, all forms, no exceptions.
+const PROFIT_RE = /\b(recoup(s|ed|ing)?|profitab(le|ility)|theatrical (loss|profit)|break[- ]?even|on track (for|to) (a )?(profit|loss|profitability)|face(s|d)? (a )?(significant |steep |major |substantial )?(theatrical )?loss(es)?|(indicat|represent|suggest)(es|ing)? a (significant |steep |major |substantial )?loss|significant loss|substantial loss|mitigate losses|financial miss(es)?|less than half (of )?(its|the) (production )?(cost|budget)|box[- ]office (disappointment|bomb|flop|failure|miss)|lose money|losing money|in the (red|black)|write[- ]?(down|off))\b/i;
+// UNSOURCED AUDIENCE/RECEPTION VERDICTS — "franchise fatigue", "audiences are hesitant", "failed to
+// connect" with NO named source is invention (9/9 live articles carried these as fact under
+// storyStatus: CONFIRMED). Attributed reception (a named outlet/score) is journalism and stays.
+const AUDIENCE_VERDICT_RE = /\b(franchise fatigue|audience fatigue|remake fatigue|audiences? (are|were|seem|seems|remain|remains|appear|may)s? (be )?(hesitant|reluctant|divided|cool|lukewarm|skeptical|experiencing)|struggl(es|ed|ing) to (connect|capture|win|resonate|differentiate)|fail(s|ed|ing) to (connect|resonate|win over|capture)|word[- ]of[- ]mouth|dampen(ed|ing)? (enthusiasm|attendance|turnout)|winning over (audiences|moviegoers|critics)|resonat(es|ed|ing) (strongly |deeply )?with (audiences|viewers|moviegoers)|audiences (are )?(flocking|turning out|staying away)|(strong|robust|weak|soft) (audience )?(word[- ]of[- ]mouth|repeat viewings?)|fell (far )?below (studio )?expectations|below (studio )?expectations|weak (start|opening|debut)|rough (financial )?waters|underperform(s|ed|ing)?|reception suggests?|cultural phenomenon)\b/i;
+// Both classes are ATTRIBUTION-RESCUED: "Variety reports the film is underperforming" is journalism and
+// stays; the SAME sentence with no named source is our own invented verdict and is cut. Split per LINE
+// first so a verdict inside a markdown HEADING is cut atomically.
+export function verdictCuts(body) {
+  return String(body || "").split(/\n+/).flatMap((l) => l.split(/(?<=[.!?])\s+/)).map((s) => s.trim())
+    .filter((s) => s && (PROFIT_RE.test(s) || AUDIENCE_VERDICT_RE.test(s)) && !ATTRIBUTED_RE.test(s)).slice(0, 12);
+}
+
 // UNATTRIBUTED SPECULATION / ANALYSIS — a professional attributes analysis to a NAMED source; "analysts
 // say / industry analysis suggests / questions are being raised" with no name is editorializing → CUT.
 const SPECULATION_RE = /\b(industry analysis suggests|analysts? (say|suggest|believe|note|argue|point|caution|warn)|experts? (say|suggest|believe|argue|note)|questions? (are|is) being raised|raising (questions|concerns|red flags|eyebrows|doubts)|it'?s believed|it is believed|widely believed|reports? suggest|sources? (say|suggest|indicate|claim)|many (are )?(wondering|speculating|speculate)|there is speculation|speculation (is|has|about)|critics? argue|pundits?|some (say|argue|believe|wonder)|is believed to|are believed to)\b/i;
@@ -90,14 +106,20 @@ export function fidelityLocks(job) {
   // body/keyTakeaways/faq figures still route to cutClaims below (cutArticle clears those).
   if (article) for (const f of ["dek", "metaDescription"]) {
     if (!article[f]) continue;
-    const cleaned = stripUnsupportedSentences(article[f], allowed);
+    let cleaned = stripUnsupportedSentences(article[f], allowed);
+    // Also purge profit/audience VERDICT sentences from the short derived fields — a dek reading "faces a
+    // steep box office disappointment" is the same invention as in the body, and cutArticle can't reach it.
+    cleaned = String(cleaned || "").split(/(?<=[.!?])\s+/)
+      .filter((s) => !(PROFIT_RE.test(s) || (AUDIENCE_VERDICT_RE.test(s) && !ATTRIBUTED_RE.test(s)))).join(" ").trim();
     if (cleaned !== article[f]) article[f] = cleaned || firstCleanSentence(body, allowed);
   }
   const nf = numberFidelity(article, allowed);
   cutClaims.push(...nf.cutClaims);
 
-  // NO-INVENTION WALL — split / record the source never stated.
-  const ni = noInvention(article, { hasSplitNumber: gathered.hasSplit, hasRecord: (gathered.records || []).length > 0 });
+  // NO-INVENTION WALL — split / record the source never stated. Chart updates: records are SYSTEM-built
+  // only (the milestone claim), so ANY record/ranking language in the profile prose is uncorroborated
+  // ("6 highest grossing movie ever") → cut, regardless of what the gatherer scraped.
+  const ni = noInvention(article, { hasSplitNumber: gathered.hasSplit, hasRecord: !film?.dailyChart && (gathered.records || []).length > 0 });
   cutClaims.push(...ni.cutClaims);
 
   // PLATFORM GUARD — NOW-STREAMING + streaming forms must name only a confirmed platform (Netflix for
@@ -123,6 +145,8 @@ export function fidelityLocks(job) {
   cutClaims.push(...hedgeCuts(body));
   // UNATTRIBUTED SPECULATION / unnamed "analysts say / questions are being raised" → CUT.
   cutClaims.push(...speculationCuts(body));
+  // PROFIT/LOSS verdicts + unsourced audience-reception verdicts → CUT (deterministic, all forms).
+  cutClaims.push(...verdictCuts(body));
   // UNSUPPORTED viewership TREND on a streaming snapshot (we hold one week only) → CUT the invented "drop".
   if ((FORMS[angle.form] || {}).streaming) cutClaims.push(...trendCuts(body));
   // DROP mischaracterization → fixable correction (the writer re-characterizes; the number itself stays).
@@ -180,6 +204,20 @@ export async function review(job, { chatImpl = null } = {}) {
   const hardBlocks = [...det.hardBlocks];
   const cutClaims = [...det.cutClaims];
 
+  // COST LEVER (§4.3, the 62%-of-spend fix): a chart UPDATE is gated by the FREE deterministic walls alone —
+  // its numbers, title, metaTitle, takeaways, FAQs and numbers section are all SYSTEM-BUILT from canonical
+  // figures, and the profile prose is screened by the fidelity/hedge/speculation/verdict cuts above. The LLM
+  // judge adds nothing here but cost; it stays for FEATURE forms where engagement scoring earns its fee.
+  if (job.film?.dailyChart) {
+    const clean = hardBlocks.length === 0 && cutClaims.length === 0;
+    job.qa = {
+      score: clean ? 80 : 50, judged: false,
+      pass: clean,
+      subscores: {}, deterministic: det, hardBlocks, cutClaims, strengths: [], weaknesses: [],
+    };
+    return job;
+  }
+
   let j = { score: 0, subscores: {}, strengths: [], weaknesses: [] };
   // A scope/platform/draft-level failure is fatal — don't spend a judge call.
   const fatal = hardBlocks.some((b) => /^scope|^platform|draft-level failure/.test(b));
@@ -219,23 +257,14 @@ export async function review(job, { chatImpl = null } = {}) {
       }
     } catch { /* judge outage → score 0 → held, never auto-published */ }
     const s = j.subscores || {};
-    // A daily box-office update is a factual tracker report (Box Office Mojo / The Numbers style), not a breaking
-    // story — inherently calm (owner CHOSE to publish these). So it is gated on ACCURACY + READABILITY only, not
-    // the "excitement" subscores. Accuracy guards (fidelity wall, entity trust, no-invention, deterministic
-    // numbers) are fully intact — this relaxes ONLY engagement/humanVoice, which a calm report scores low by nature.
-    const isDaily = !!job.film?.dailyChart;
-    const floors = isDaily ? { readability: 3 } : { readability: 5, engagement: 5, humanVoice: 5 };
-    for (const k of Object.keys(floors)) {
-      if (s[k] != null && s[k] < floors[k]) hardBlocks.push(`soft-floor ${k} ${s[k]} < ${floors[k]}`);
+    for (const k of ["readability", "engagement", "humanVoice"]) {
+      if (s[k] != null && s[k] < 5) hardBlocks.push(`soft-floor ${k} ${s[k]} < 5`);
     }
   }
 
   job.qa = {
     score: j.score || 0,
-    // Daily box-office UPDATES are factual tracker reports (owner: publish them) — the judge scores them calmer
-    // (~45), so they clear a lower OVERALL score bar. Accuracy is unaffected: hardBlocks (the fidelity wall,
-    // entity trust, no-invention) + cutClaims must STILL be empty to publish — this only relaxes the vibe score.
-    pass: (j.score || 0) >= (job.film?.dailyChart ? Math.min(GATE.publishMin, 25) : GATE.publishMin) && hardBlocks.length === 0 && cutClaims.length === 0,
+    pass: (j.score || 0) >= GATE.publishMin && hardBlocks.length === 0 && cutClaims.length === 0,
     subscores: j.subscores || {},
     deterministic: det,
     hardBlocks,

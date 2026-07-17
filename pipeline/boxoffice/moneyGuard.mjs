@@ -91,9 +91,12 @@ export function buildAllowed({ numbers = [], moneyStrings = [], pcts = [], count
   return set;
 }
 
-// Split only on terminal punctuation FOLLOWED BY whitespace — so a decimal ("$45.2 million") is
-// never broken at its own period (the period there is between digits, not before a space).
-const splitSentences = (body) => String(body || "").replace(/\n+/g, " ").split(/(?<=[.!?])\s+/).map((s) => s.trim()).filter(Boolean);
+// Split on NEWLINES first, then terminal punctuation followed by whitespace — a decimal ("$45.2
+// million") is never broken at its own period, and a markdown HEADING becomes its own atomic unit.
+// (The old newline-flattening glued "## Heading With $1 Billion" onto the next sentence, so the cutter
+// could never remove a figure-bearing heading — it survived every cut pass as an unrecoverable phantom.)
+const splitSentences = (body) => String(body || "").split(/\n+/)
+  .flatMap((line) => line.split(/(?<=[.!?])\s+/)).map((s) => s.trim()).filter(Boolean);
 
 // NUMBER-FIDELITY WALL. Returns { ok, unsupported:[{raw,bucket,sentence}], cutClaims:[sentence] }.
 export function numberFidelity(article, allowed) {
@@ -243,6 +246,25 @@ export function numberConsistencyGate(surfaces, canon, { recordTexts = [] } = {}
   scoped("title", surfaces.title);
   (surfaces.keyTakeaways || []).forEach((t, i) => scoped(`keyTakeaways[${i}]`, t));
   (surfaces.faq || []).forEach((f, i) => scoped(`faq[${i}].a`, f?.a));
+
+  // SAME-METRIC RULE: the title and metaTitle must headline the SAME canonical metric — a SERP snippet
+  // promising "$882M Worldwide" over an H1 reporting "$410.6M domestic" is a broken promise (live audit:
+  // 7/9). Each surface's money figures are mapped to canonical slots; the two sets must intersect.
+  const SLOT_KEYS = ["domestic", "worldwide", "openingWeekend", "budget", "dailyGross", "hoursViewed"];
+  const slotsOf = (text) => {
+    const set = new Set();
+    for (const f of extractFigures(String(text || ""))) {
+      if (f.kind !== "money") continue;
+      const v = normMoney(f.raw);
+      if (v == null) continue;
+      const k = SLOT_KEYS.find((key) => canon[key] && Math.abs(v - canon[key].raw) / canon[key].raw <= 0.05);
+      set.add(k || "other");
+    }
+    return set;
+  };
+  const tSlots = slotsOf(surfaces.title), mSlots = slotsOf(surfaces.metaTitle);
+  if (tSlots.size && mSlots.size && ![...mSlots].some((s) => tSlots.has(s)))
+    violations.push(`metaTitle: headlines ${[...mSlots].join("/")} while the title headlines ${[...tSlots].join("/")} — the SERP promise must match the page`);
 
   return { ok: violations.length === 0, violations: [...new Set(violations)] };
 }

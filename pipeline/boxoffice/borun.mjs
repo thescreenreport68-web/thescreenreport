@@ -18,9 +18,9 @@ import * as writer from "./agents/writer.mjs";
 import * as qa from "./agents/qa.mjs";
 import * as imageAgent from "./agents/image.mjs";
 import { writeBoxOfficeArticle } from "./assemble.mjs";
-import { loadStore, alreadyPublished, recordPublished, parkAngle, parkedTries, clearParked, coveredEventSlugs, bumpZeroStreak } from "./store.mjs";
+import { loadStore, alreadyPublished, recordPublished, parkAngle, parkedTries, clearParked, coveredEventSlugs, bumpZeroStreak, bumpDaySpend, daySpendUsd } from "./store.mjs";
 import { loadTracked, isMaterial, updateEventSuffix, recordArticle, linkPriorCoverage, isPastOpening } from "./tracker.mjs";
-import { FORMS, ACCEPT_FLOOR, MAX_ATTEMPTS, GATE, DATA_DIR, REVIEW_DIR, FLOOD_CAP, MAX_ARTICLES_PER_DAY, MAX_RUN_COST_USD, STREAMING_DAILY_CAP } from "./config.bo.mjs";
+import { FORMS, ACCEPT_FLOOR, MAX_ATTEMPTS, GATE, DATA_DIR, REVIEW_DIR, FLOOD_CAP, MAX_ARTICLES_PER_DAY, MAX_RUN_COST_USD, STREAMING_DAILY_CAP, DAILY_SPEND_CAP_USD } from "./config.bo.mjs";
 import { cutArticle } from "../lib/cutter.mjs";
 import { addInternalLinks } from "../lib/internalLinks.mjs";
 import { costReport } from "../lib/openrouter.mjs";
@@ -85,6 +85,13 @@ export async function boRun({
   const baseToday = publishedToday(store, now);
   const streamBaseToday = streamingPublishedToday(store, now);
   if (baseToday >= MAX_ARTICLES_PER_DAY) { report.dailyCapHit = baseToday; return finish(report, dryRun); }
+  // DAILY SPEND CAP (owner cost mandate): once the LA-day's OpenRouter spend crosses the cap, live ticks
+  // exit BEFORE any paid call — visible in the workflow log, never a silent burn.
+  if (!dryRun && !reviewDir && daySpendUsd(store, { now: new Date(now) }) >= DAILY_SPEND_CAP_USD) {
+    report.spendCapHit = daySpendUsd(store, { now: new Date(now) });
+    console.log(`::warning title=boxoffice daily spend cap::$${report.spendCapHit} spent today >= $${DAILY_SPEND_CAP_USD} cap — publishing paused until the LA day rolls`);
+    return finish(report, dryRun);
+  }
   const burst = Math.min(limit, FLOOD_CAP);
 
   // ── FINDER ──
@@ -147,6 +154,7 @@ export async function boRun({
         if (!mat.material) { report.held.push({ tag, reason: `not material: ${mat.reason}` }); console.log(`  ⟳ skip: not material (${mat.reason})`); continue; }
         trigger.eventSlug = trigger.eventSlug + updateEventSuffix(mat);
         if (alreadyPublished(store, trigger.eventSlug, angle.form)) { report.skipped.push({ tag, reason: "already published (this update)" }); continue; }
+        job.momentum = mat; // milestone/day tag → assemble's momentum title + system records
         console.log(`  ✓ material: ${mat.reason}`);
       }
 
@@ -155,17 +163,21 @@ export async function boRun({
       if (job.synthFail || !job.brief) { hold(job.synthFail || "no brief"); continue; }
 
       // ── WRITER ⇄ QA (correction loop) ──
+      // COST: chart updates get ONE attempt (their gates are all deterministic — a corrections redraft has no
+      // judge feedback to act on and would just burn a writer call); features get MAX_ATTEMPTS (draft + one
+      // surgical correction pass).
+      const maxAttempts = job.film?.dailyChart ? 1 : MAX_ATTEMPTS;
       let pass = false, acceptReason = null, corrections = null, prevArticle = null;
-      for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
+      for (let attempt = 1; attempt <= maxAttempts; attempt++) {
         console.log(`  attempt ${attempt}: writing…`);
         await withTimeout(writeArticleImpl(job, { corrections, previousArticle: prevArticle }), AGENTS.writer.watchdogMs, `writer ${tag}`);
         if (!job.article?.body) { corrections = "- Return the COMPLETE JSON article."; continue; }
         prevArticle = job.article;
         await withTimeout(qaReviewImpl(job), AGENTS.qa.watchdogMs, `qa ${tag}`);
-        console.log(`  qa: score ${job.qa.score}, blocks ${job.qa.hardBlocks.length}, cuts ${job.qa.cutClaims.length}${job.qa.hardBlocks.length ? " :: " + job.qa.hardBlocks.slice(0, 4).join(" | ") : ""}`);
+        console.log(`  qa: score ${job.qa.score}${job.qa.judged === false ? " (walls-only)" : ""}, blocks ${job.qa.hardBlocks.length}, cuts ${job.qa.cutClaims.length}${job.qa.hardBlocks.length ? " :: " + job.qa.hardBlocks.slice(0, 4).join(" | ") : ""}`);
         if (job.qa.pass) { pass = true; break; }
         // FAIL-FAST (cost control): an unsalvageable draft (writer invented >4 figures — usually a thin
-        // gather) is not worth 3 expensive retries + QA calls; hold cheaply and move on.
+        // gather) is not worth expensive retries + QA calls; hold cheaply and move on.
         if (job.qa.hardBlocks.some((b) => /draft-level failure/.test(b))) break;
 
         // ITERATIVE CUTS FIRST (deterministic + safe): keep cutting unsupported figures while cuts
@@ -176,17 +188,9 @@ export async function boRun({
           if (job.qa.pass) { pass = true; break; }
         }
         if (pass) break;
-        // DAILY FACTUAL UPDATE fast-accept (owner: publish the factual daily updates): the box-office numbers are
-        // now 100% DETERMINISTIC + verified (assembled by the system, not the writer), so once the iterative cuts
-        // have run and NOTHING hard-blocks (no scope/platform/fidelity-failure, ≥180 words), the piece is accurate
-        // and publishable. A residual judge cutClaim here is a mild prose paraphrase ("audiences are turning out"),
-        // not a number or a fabrication — it must not hold an accurate factual tracker report.
-        if (job.film?.dailyChart && !qa.classifyBlocks(job.qa.hardBlocks).block.length) {
-          pass = true; acceptReason = "daily factual update — deterministic numbers + accuracy walls + word floor all pass"; break;
-        }
 
         let { block, fixable } = qa.classifyBlocks(job.qa.hardBlocks);
-        if (attempt === MAX_ATTEMPTS && block.length === 0 && !engagementFloored(job.qa.hardBlocks) && (job.qa.score || 0) >= ACCEPT_FLOOR) {
+        if (attempt === maxAttempts && block.length === 0 && !engagementFloored(job.qa.hardBlocks) && (job.qa.score || 0) >= ACCEPT_FLOOR) {
           if (job.qa.cutClaims.length) {
             cutArticle(job.article, job.qa.cutClaims);
             await withTimeout(qaReviewImpl(job), AGENTS.qa.watchdogMs, `qa-terminal ${tag}`);
@@ -221,11 +225,17 @@ export async function boRun({
 
       // ── ASSEMBLE + PUBLISH ──
       const dateISO = new Date(now - written * 60000).toISOString();
-      const out = publishImpl({ article: job.article, trigger, angle, film, gathered: job.gathered, boxData: job.boxData, image: job.image, dateISO, dryRun, ...(reviewDir ? { dir: reviewDir } : {}) });
+      const out = publishImpl({ article: job.article, trigger, angle, film, gathered: job.gathered, boxData: job.boxData, image: job.image, dateISO, momentum: job.momentum || null, dryRun, ...(reviewDir ? { dir: reviewDir } : {}) });
       // CONSISTENCY GATE (single source of truth): a self-contradicting figure on ANY final surface
       // (title vs block vs FAQ vs body) blocked the write — hold with the exact violations, never publish.
       if (out.consistency && !out.consistency.ok) {
         hold(`consistency: ${out.consistency.violations.slice(0, 3).join(" | ")}`, { score: job.qa?.score });
+        continue;
+      }
+      // SCAFFOLD GATE: placeholders / empty sections / template labels / flattened markdown / under-floor
+      // body blocked the write — nothing broken can reach a reader.
+      if (out.scaffold && out.scaffold.length) {
+        hold(out.scaffold.slice(0, 3).join(" | "), { score: job.qa?.score });
         continue;
       }
       written++;
@@ -254,6 +264,7 @@ export async function boRun({
     const streak = bumpZeroStreak(store, report.published.length);
     report.zeroStreak = streak;
     if (streak >= 6) console.log(`::warning title=boxoffice zero-publish streak::${streak} consecutive live ticks published nothing — investigate held reasons in data/boxoffice/runs/`);
+    report.daySpend = bumpDaySpend(store, costReport()?.total || 0, { now: new Date() }); // feeds the daily spend cap
   }
   return finish(report, dryRun);
 }

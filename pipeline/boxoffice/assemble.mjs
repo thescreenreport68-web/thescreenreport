@@ -86,7 +86,18 @@ export function buildMetaTitle(rawMeta, { title, film = {}, gathered = {}, boxDa
   // [45,55]; else the longest ≤55; last resort a trimmed base. So the metaTitle lands in the search-friendly band.
   const cands = [];
   const w = clean(rawMeta);
-  if (w && leads(w) && HAS_FIGURE_RE.test(w)) cands.push(w); // keep the writer's own if it's already good
+  // Keep the writer's own metaTitle ONLY if every money figure in it is canonical — a writer metaTitle
+  // carrying an invented "$800M" used to win the candidate race and die at the gate (a wasted hold).
+  const canonRaws = ["openingWeekend", "domestic", "international", "worldwide", "budget", "dailyGross", "hoursViewed"]
+    .map((k) => c?.[k]?.raw).filter((v) => Number.isFinite(v) && v > 0);
+  const figsCanonical = (text) => {
+    for (const m of String(text || "").matchAll(/\$\s?\d[\d,]*(?:\.\d+)?(?:\s*(?:thousand|million|billion|[KMB](?![a-z])))?|\b\d[\d,]*(?:\.\d+)?\s*(?:million|billion)\b/gi)) {
+      const v = normMoney(m[0]);
+      if (v != null && !canonRaws.some((a) => Math.abs(v - a) / a <= 0.05)) return false;
+    }
+    return true;
+  };
+  if (w && leads(w) && HAS_FIGURE_RE.test(w) && figsCanonical(w)) cands.push(w);
   if (form.streaming) {
     const r = gathered.netflixRank ? `#${gathered.netflixRank}` : null;
     const hrs = c.hoursViewed?.text || gathered.hoursViewed || null;
@@ -95,17 +106,24 @@ export function buildMetaTitle(rawMeta, { title, film = {}, gathered = {}, boxDa
     if (hrs) cands.push(`${q} Draws ${hrs} on the Netflix Top 10`);
     cands.push(`${q} Is Blowing Up on Netflix's Top 10 Chart`, `${q} Climbs the Netflix Global Top 10`);
   } else {
-    const useWW = c.worldwide != null && (c.domestic == null || c.worldwide.raw >= c.domestic.raw);
+    // A chart UPDATE's H1 headlines the DOMESTIC total — the metaTitle must headline the SAME metric (the
+    // live audit found SERP titles promising "$882M Worldwide" over pages reporting "$410.6M domestic").
+    const isDaily = !!film?.dailyChart;
+    const useWW = !isDaily && c.worldwide != null && (c.domestic == null || c.worldwide.raw >= c.domestic.raw);
     const fig = useWW ? compactUSD(c.worldwide.text)
       : compactUSD((c.domestic || c.openingWeekend || c.worldwide)?.text);
     const scope = useWW ? "Worldwide" : "Domestic";
-    if (fig) cands.push(
-      `${q} Crosses ${fig} at the ${scope} Box Office`,
-      `${q} Climbs to ${fig} at the ${scope} Box Office`,
-      `${q} Hits ${fig} at the ${scope} Box Office`,
-      `${q} Reaches ${fig} at the Box Office`,
-      `${q} Hits ${fig} at the Box Office`,
-    );
+    if (fig) {
+      cands.push(
+        `${q} Crosses ${fig} at the ${scope} Box Office`,
+        `${q} Climbs to ${fig} at the ${scope} Box Office`,
+        `${q} Hits ${fig} at the ${scope} Box Office`,
+      );
+      // The scope qualifier is LOAD-BEARING for a worldwide figure — it may never be trimmed away (a
+      // "$280M at the Box Office" metaTitle over a $116M-domestic page is a lie). Unqualified shorter
+      // fallbacks exist ONLY for domestic figures, where US trade convention reads them as domestic.
+      if (!useWW) cands.push(`${q} Reaches ${fig} at the Box Office`, `${q} Hits ${fig} at the Box Office`);
+    }
     cands.push(`${q} Box Office: ${fig || "The Latest Numbers Explained"}`, `${q} Box Office Report and Latest Numbers`);
   }
   const fit = cands.map(clean).filter((cnd) => cnd && leads(cnd));
@@ -170,9 +188,25 @@ function buildBoxOffice(canon, gathered = {}) {
 // missing FAQs, carrying a generic template heading, or mislabelling a series as a movie. Non-bypassable.
 
 // ≥2 REAL FAQs with REAL answers — every figure from the CANONICAL set (never two different worldwide
-// totals across two FAQs again). Writer FAQs whose figures survive the consistency gate are kept.
+// totals across two FAQs again). A writer FAQ carrying a NON-canonical figure is DROPPED here (deterministic
+// salvage — the system backfill replaces it) instead of letting it reach the consistency gate and hold the
+// whole article; the gate remains the last wall for anything that slips through.
 function ensureFaq(article, { canon = {}, gathered = {}, boxData = {}, film = {}, form = {} }) {
-  const cand = (article.faq || []).filter((f) => f?.q && f?.a && String(f.a).trim().length > 15).slice(0, 4);
+  const canonVals = ["openingWeekend", "domestic", "international", "worldwide", "budget", "dailyGross", "hoursViewed"]
+    .map((k) => canon?.[k]?.raw).filter((v) => Number.isFinite(v) && v > 0);
+  const faqFigOk = (text) => {
+    for (const m of String(text || "").matchAll(/\$\s?\d[\d,]*(?:\.\d+)?(?:\s*(?:thousand|million|billion))?|\b\d[\d,]*(?:\.\d+)?\s*(?:million|billion)\b/gi)) {
+      const v = normMoney(m[0]);
+      if (v != null && !canonVals.some((a) => Math.abs(v - a) / a <= 0.05)) return false;
+    }
+    return true;
+  };
+  // Chart updates use SYSTEM FAQs ONLY — writer FAQs kept smuggling near-canonical figures into scoped
+  // contradictions ("$429M ... budget"); the canon-built set below is complete and can never disagree.
+  const cand = (film?.dailyChart ? [] : (article.faq || []))
+    .filter((f) => f?.q && f?.a && String(f.a).trim().length > 15)
+    .filter((f) => faqFigOk(f.q) && faqFigOk(f.a))
+    .slice(0, 4);
   const t = film.title || article.title || "the title";
   const add = (q, a) => { a = (a || "").trim(); if (a.length > 15 && cand.length < 4 && !cand.some((f) => f.q === q)) cand.push({ q, a }); };
   if (form.streaming) {
@@ -187,6 +221,7 @@ function ensureFaq(article, { canon = {}, gathered = {}, boxData = {}, film = {}
       `'${t}' has grossed ${total.text}${canon.domestic && canon.worldwide ? ` domestically, with ${canon.worldwide.text} worldwide` : canon.theaters ? ` across ${canon.theaters.text} theaters` : ""}.`);
     if (canon.budget) add(`What is the production budget of '${t}'?`, `'${t}' was produced on a reported budget of ${canon.budget.text} before marketing.`);
     if (canon.theaters) add(`How many theaters is '${t}' playing in?`, `'${t}' is currently playing across ${canon.theaters.text} theaters.`);
+    if (film?.dailyChart && canon.dayInRelease) add(`How long has '${t}' been in theaters?`, `'${t}' is ${canon.dayInRelease} days into its theatrical run${canon.dailyGross ? `, adding ${canon.dailyGross.text} in its most recent day` : ""}.`);
     if (canon.worldwide && canon.domestic) add(`What is '${t}' worldwide box office total?`, `'${t}' has taken in ${canon.worldwide.text} at the worldwide box office.`);
     if (gathered.platform || (boxData.providers?.stream || []).length) add(`Where can I watch '${t}'?`,
       `'${t}' is available on ${gathered.platform || (boxData.providers.stream || []).join(", ")}.`);
@@ -221,6 +256,15 @@ function fixLede(body) {
   return lines.join("\n");
 }
 
+// Bare template-label LINES ("The Movie: …", "Closing Thoughts: …" as a lone non-heading line) are pure
+// prompt scaffold the writer leaked — DROP the line (deterministic salvage). The scaffoldViolations gate
+// stays as the wall for any label that survives in a form this can't safely strip.
+function stripLabelLines(body) {
+  return String(body || "").split("\n")
+    .filter((line) => !/^(The (Movie|Series|Film)|Closing (Line|Thoughts?)|What It Is|The Cast|The Appeal|The Numbers|The Run|Lead)\s*:/.test(line.trim()))
+    .join("\n").replace(/\n{3,}/g, "\n\n");
+}
+
 // A TRENDING-TV subject is a series, not a movie — correct the schema type the writer emits.
 function fixAbout(about, { film, form }) {
   const arr = Array.isArray(about) ? about.filter((e) => e && e.name && e.type) : [];
@@ -229,31 +273,85 @@ function fixAbout(about, { film, form }) {
   return arr.map((e) => (e.type === "Movie" && String(e.name).toLowerCase().trim() === ft ? { ...e, type: "TVSeries" } : e));
 }
 
-// Display-friendly USD for deterministic titles: "$47.6 million", "$1.02 billion", "$519,154".
+// Display-friendly USD for deterministic titles: "$47.6 Million", "$1.02 Billion", "$519,154".
 const fmtUSDWords = (raw) => {
   if (!Number.isFinite(raw) || raw <= 0) return null;
-  if (raw >= 1e9) return `$${(raw / 1e9).toFixed(2).replace(/0$/, "")} billion`;
-  if (raw >= 1e6) return `$${(raw / 1e6).toFixed(1).replace(/\.0$/, "")} million`;
+  if (raw >= 1e9) return `$${(raw / 1e9).toFixed(2).replace(/0$/, "")} Billion`;
+  if (raw >= 1e6) return `$${(raw / 1e6).toFixed(1).replace(/\.0$/, "")} Million`;
   return `$${Math.round(raw).toLocaleString("en-US")}`;
 };
 
-export function buildBoxOfficeMarkdown({ article, trigger, angle, film, gathered = {}, boxData = {}, image, dateISO }) {
+// Deterministic "At the Box Office" numbers section — built from the CANONICAL set and appended at ASSEMBLY
+// (after every wall has run), so no fidelity/no-invention cut can ever strip the article's own verified
+// figures again (the 9/9 numbers-missing live failure). The headline number is GUARANTEED in the prose.
+function numbersSection(canon, filmTitle) {
+  const sentences = [];
+  const clause = [];
+  if (canon.domestic) clause.push(`has grossed ${canon.domestic.text} at the domestic box office`);
+  if (canon.dayInRelease) clause.push(`${canon.dayInRelease} days into its theatrical run`);
+  if (canon.theaters) clause.push(`while playing across ${canon.theaters.text} theaters`);
+  if (clause.length) sentences.push(`${filmTitle} ${clause.join(", ")}.`);
+  if (canon.dailyGross) sentences.push(`The film added ${canon.dailyGross.text} in its most recent day of release.`);
+  if (canon.worldwide) sentences.push(`Worldwide, it has taken in ${canon.worldwide.text}.`);
+  if (canon.budget) sentences.push(`It carries a reported production budget of ${canon.budget.text}.`);
+  return sentences.length ? `\n\n## At the Box Office\n\n${sentences.join(" ")}` : "";
+}
+
+// SCAFFOLD CHECK — a live article shipped a literal "[Box office section will be inserted here by the
+// system.]", another ended on an empty "## Closing Line". No placeholder, empty section, bare template
+// label, flattened heading, or under-floor body can reach a reader. Deterministic, publish-blocking.
+export function scaffoldViolations(body, fm) {
+  const v = [];
+  if (/\[[^\]]{0,80}(system|insert|placeholder|section (will|here)|to be (added|filled))[^\]]{0,80}\]/i.test(body))
+    v.push("scaffold: literal system placeholder in body");
+  const lines = String(body || "").split("\n");
+  for (let i = 0; i < lines.length; i++) {
+    const t = lines[i].trim();
+    if (/^#{1,6}\s/.test(t)) {
+      let j = i + 1;
+      while (j < lines.length && !lines[j].trim()) j++;
+      if (j >= lines.length || /^#{1,6}\s/.test(lines[j].trim())) v.push(`scaffold: empty section "${t.slice(0, 40)}"`);
+    } else if (/^(The (Movie|Series|Film)|Closing (Line|Thoughts?)|What It Is|The Cast|The Appeal|The Numbers|The Run|Lead)\s*:/.test(t)) {
+      v.push(`scaffold: bare template label line "${t.slice(0, 40)}"`);
+    }
+  }
+  if (/[^\n]\s##\s/.test(body)) v.push("scaffold: mid-paragraph ## (markdown flattened)");
+  const words = String(body || "").split(/\s+/).filter(Boolean).length;
+  if (words < 180) v.push(`scaffold: body ${words} words < 180 floor`);
+  if ((fm.keyTakeaways || []).length < 3) v.push("scaffold: fewer than 3 keyTakeaways");
+  if ((fm.faq || []).filter((f) => f?.q && f?.a).length < 2) v.push("scaffold: fewer than 2 FAQs");
+  return v;
+}
+
+export function buildBoxOfficeMarkdown({ article, trigger, angle, film, gathered = {}, boxData = {}, image, dateISO, momentum = null }) {
   const form = FORMS[angle.form];
   // ── SINGLE SOURCE OF TRUTH: ONE reconciled canonical figure set; EVERY surface below draws from it. ──
   const canon = canonicalFigures({ gathered, boxData, film });
-  // Daily factual updates get a DETERMINISTIC title (keyword + the canonical number) — the live test tick
-  // proved the writer titles daily updates with invented spin ("Sinks With Disastrous $43M Opening",
-  // "77% Drop"); a tracker report's headline must be the system's own verified number, not the model's.
+  const isChart = !!film?.dailyChart;
+  // Milestone from the tracker's materiality tag ("100m" = crossed $100M since our last report).
+  const msRaw = momentum?.tag && /^(\d+)m$/.test(momentum.tag) ? parseInt(momentum.tag, 10) * 1e6 : null;
+  const msText = msRaw ? fmtUSDWords(msRaw) : null;
+  // Daily factual updates get a DETERMINISTIC title with an HONEST momentum verb from real data — never the
+  // writer's spin ("Sinks With Disastrous $43M"), never the tautological "Climbs" (a cume always climbs):
+  // a milestone crossing leads with the milestone; otherwise the day's real added gross carries the story.
   let title = cleanTitle(article.title);
-  if (film?.dailyChart && canon.domestic) {
+  if (isChart && canon.domestic) {
     const day = canon.dayInRelease;
     const dom = fmtUSDWords(canon.domestic.raw);
-    title = cleanTitle(`${film.title} Box Office${day ? ` Day ${day}` : " Update"}: Domestic Total Climbs to ${dom}`);
+    const dg = canon.dailyGross ? fmtUSDWords(canon.dailyGross.raw) : null;
+    title = cleanTitle(
+      msText ? `${film.title} Box Office: Crosses ${msText} Domestically${day ? ` on Day ${day}` : ""}`
+      : dg ? `${film.title} Box Office Day ${day || "Update"}: Adds ${dg} as Domestic Total Hits ${dom}`
+      : `${film.title} Box Office${day ? ` Day ${day}` : " Update"}: Domestic Total Hits ${dom}`);
   }
   const slug = slugify(title);
   const boxOffice = buildBoxOffice(canon, gathered);
-  const records = (gathered.records || []).filter(Boolean).map((r) => (typeof r === "string" ? { claim: r } : clean({ claim: r.claim, detail: r.detail })))
-    .filter((r) => r.claim);
+  // Records: a chart UPDATE carries ONLY the system milestone claim (stale opening-phase records were
+  // recycling into day-N updates — "second-best AND third-best" in one article). Features keep gathered records.
+  const records = isChart
+    ? (msText ? [{ claim: `crossed ${msText} at the domestic box office` }] : [])
+    : (gathered.records || []).filter(Boolean).map((r) => (typeof r === "string" ? { claim: r } : clean({ claim: r.claim, detail: r.detail })))
+      .filter((r) => r.claim);
   // whereToWatch: TMDB providers (NOW-STREAMING / a landed title), or — for a Netflix Top 10 / trending
   // streaming piece — the platform the piece is about (Netflix) so the reader still gets a where-to-watch row.
   let whereToWatch = (boxData.whereToWatch || []).filter((w) => w?.title && w?.platform);
@@ -261,6 +359,20 @@ export function buildBoxOfficeMarkdown({ article, trigger, angle, film, gathered
     whereToWatch = [{ title: film.title, platform: gathered.platform, type: "Stream" }];
   }
   whereToWatch = whereToWatch.map((w) => ({ ...w, platform: normPlatform(w.platform) }));
+
+  // Chart updates: takeaways + metaDescription are SYSTEM-BUILT from the canonical set — the headline
+  // figure is guaranteed present (live audit: 7/9 takeaway sets carried zero box-office facts, 2 were empty).
+  const takeaways = isChart
+    ? [
+        canon.domestic ? `'${film.title}' has grossed ${canon.domestic.text} at the domestic box office${canon.dayInRelease ? ` through day ${canon.dayInRelease}` : ""}.` : null,
+        canon.dailyGross ? `It added ${canon.dailyGross.text} in its most recent day${canon.theaters ? `, playing in ${canon.theaters.text} theaters` : ""}.` : null,
+        msText ? `The film has now crossed ${msText} domestically.` : (canon.worldwide ? `The worldwide total stands at ${canon.worldwide.text}.` : (canon.budget ? `It carries a reported ${canon.budget.text} production budget.` : null)),
+        (boxData.castRoles?.length ? `${boxData.castRoles[0].name} leads the cast${boxData.director ? ` for director ${boxData.director}` : ""}.` : (canon.worldwide && msText ? `The worldwide total stands at ${canon.worldwide.text}.` : null)),
+      ].filter(Boolean).slice(0, 4)
+    : (article.keyTakeaways || []);
+  const chartMetaDesc = isChart && canon.domestic
+    ? `${film.title} has grossed ${canon.domestic.text} at the domestic box office${canon.dayInRelease ? ` through day ${canon.dayInRelease}` : ""}${canon.dailyGross ? `, adding ${canon.dailyGross.text} in its latest daily haul` : ""}. ${boxData.overview ? String(boxData.overview).split(/(?<=[.!?])\s+/)[0] : ""}`.trim()
+    : null;
 
   const fm = clean({
     title,
@@ -270,9 +382,9 @@ export function buildBoxOfficeMarkdown({ article, trigger, angle, film, gathered
     author: BOXOFFICE_AUTHOR_SLUG,
     date: dateISO,
     dek: article.dek || "",
-    ...seoFinish({ metaTitle: buildMetaTitle(article.metaTitle, { title, film, gathered, boxData, form, canon }), metaDescription: article.metaDescription || article.dek || "" }),
+    ...seoFinish({ metaTitle: buildMetaTitle(article.metaTitle, { title, film, gathered, boxData, form, canon }), metaDescription: chartMetaDesc || article.metaDescription || article.dek || "" }),
     tags: ensureTags(article, { film, form, gathered }),
-    keyTakeaways: article.keyTakeaways || [],
+    keyTakeaways: takeaways,
     faq: ensureFaq(article, { canon, gathered, boxData, film, form }),
     about: fixAbout(article.about, { film, form }),
     formatTag: form.formatTag,
@@ -305,7 +417,12 @@ export function buildBoxOfficeMarkdown({ article, trigger, angle, film, gathered
     } : {}),
   });
 
-  const body = fixLede(deTemplate(article.body || "")).trim();
+  // Chart updates: the verified numbers section is appended HERE — after every QA wall has already run —
+  // so the article's own figures are structurally uncuttable. The profile prose (walls-screened) carries the
+  // movie; the system carries the money.
+  // Order matters: fixLede FIRST (it may de-head a "## The Movie:" lede into a bare label line), THEN
+  // stripLabelLines removes any bare label — the reverse order recreated labels after the strip.
+  const body = (stripLabelLines(fixLede(deTemplate(article.body || ""))).trim() + (isChart ? numbersSection(canon, film.title) : "")).trim();
   // ── PRE-PUBLISH CONSISTENCY GATE: diff every dollar figure across ALL final surfaces against the
   // canonical set. ANY contradiction (a title claiming $100M when the block says $26.4M, two FAQs with
   // different worldwide totals) blocks the article — a self-contradicting article can never publish again.
@@ -315,15 +432,18 @@ export function buildBoxOfficeMarkdown({ article, trigger, angle, film, gathered
     canon,
     { recordTexts: (fm.records || []).map((r) => r.claim) },
   );
+  // ── SCAFFOLD GATE: no placeholder, empty section, template label, flattened heading, or under-floor
+  // body can reach a reader (replaces the deleted fast-accept path with a REAL floor for every form).
+  const scaffold = scaffoldViolations(body, fm);
   const md = matter.stringify("\n" + body + "\n", fm);
-  return { slug, frontmatter: fm, md, canon, consistency };
+  return { slug, frontmatter: fm, md, canon, consistency, scaffold };
 }
 
-export function writeBoxOfficeArticle({ article, trigger, angle, film, gathered, boxData, image, dateISO, dir = CONTENT_DIR, dryRun = false }) {
-  const out = buildBoxOfficeMarkdown({ article, trigger, angle, film, gathered, boxData, image, dateISO });
-  // The consistency gate is a HARD wall: a self-contradicting article is never written to disk, not even
-  // in review mode — the caller receives the violations and holds.
-  if (!out.consistency.ok) return { ...out, path: path.join(dir, out.slug + ".md"), written: false };
+export function writeBoxOfficeArticle({ article, trigger, angle, film, gathered, boxData, image, dateISO, momentum = null, dir = CONTENT_DIR, dryRun = false }) {
+  const out = buildBoxOfficeMarkdown({ article, trigger, angle, film, gathered, boxData, image, dateISO, momentum });
+  // The consistency + scaffold gates are HARD walls: a self-contradicting or scaffold-broken article is
+  // never written to disk, not even in review mode — the caller receives the violations and holds.
+  if (!out.consistency.ok || out.scaffold.length) return { ...out, path: path.join(dir, out.slug + ".md"), written: false };
   if (!dryRun) {
     fs.mkdirSync(dir, { recursive: true });
     fs.writeFileSync(path.join(dir, out.slug + ".md"), out.md);

@@ -6,9 +6,11 @@
 // day/weekend in release. The finder turns EACH into a BO-UPDATE candidate; the strictly-higher materiality gate
 // (tracker.mjs) guarantees we never reuse yesterday's number. NO paid APIs — the numbers are facts we rewrite in
 // our own voice (owner's rule). This module only READS + EXTRACTS; it invents nothing.
+import fs from "node:fs";
+import path from "node:path";
 import { findContent } from "../lib/contentFinder.mjs";
 import { agentChat } from "./models.mjs";
-import { scopeOk, DAILY_GROSS_FLOOR } from "./config.bo.mjs";
+import { scopeOk, DAILY_GROSS_FLOOR, DATA_DIR } from "./config.bo.mjs";
 import { normMoney } from "./moneyGuard.mjs";
 
 const SYS = `You extract structured data from a DAILY / weekend DOMESTIC box-office chart or report. You are given
@@ -27,7 +29,30 @@ const SCHEMA = `{"films":[{"title":"","dailyGross":"e.g. \\"$3.2 million\\" or n
 // /daily-box-office-chart is always the latest clean per-film chart; Box Office Mojo's /date/<day>/ is the
 // per-film backup. We fetch one, LLM-extract every film's daily gross + running cume + day-in-release.
 // Injected findImpl/chatImpl keep the offline suite network-free.
-export async function fetchDailyChart({ findImpl = findContent, chatImpl = null, nowMs = null, max = 25 } = {}) {
+// COST LEVER (§4.2 "extract once, publish many"): the chart changes ONCE a day, but the lane ticks hourly —
+// re-scraping + re-LLM-extracting 24×/day was pure waste (and tripped the extractor's rate limit). The parsed
+// chart is cached on disk for the LA day; every tick after the first reads the cache for ~$0.000.
+const CHART_CACHE = path.join(DATA_DIR, "chartCache.json");
+const laDay = (ms) => new Intl.DateTimeFormat("en-CA", { timeZone: "America/Los_Angeles" }).format(new Date(ms));
+export function readChartCache({ nowMs = Date.now(), file = CHART_CACHE } = {}) {
+  try {
+    const c = JSON.parse(fs.readFileSync(file, "utf8"));
+    if (c?.laDay === laDay(nowMs) && Array.isArray(c.films) && c.films.length) return c;
+  } catch {}
+  return null;
+}
+export function writeChartCache(chart, { nowMs = Date.now(), file = CHART_CACHE } = {}) {
+  try {
+    fs.mkdirSync(path.dirname(file), { recursive: true });
+    fs.writeFileSync(file, JSON.stringify({ laDay: laDay(nowMs), fetchedAt: new Date(nowMs).toISOString(), ...chart }, null, 1));
+  } catch {}
+}
+
+export async function fetchDailyChart({ findImpl = findContent, chatImpl = null, nowMs = null, max = 25, cache = true } = {}) {
+  if (cache) {
+    const cached = readChartCache({ nowMs: nowMs || Date.now() });
+    if (cached) return { films: cached.films, date: cached.date, fromCache: true };
+  }
   const d = new Date(nowMs || Date.now());
   const ymd = (off) => new Date(d.getTime() - off * 86400000).toISOString().slice(0, 10);
   const seeds = [
@@ -65,5 +90,7 @@ export async function fetchDailyChart({ findImpl = findContent, chatImpl = null,
     if (merged.length >= 8) break; // one good chart is plenty
   }
   merged.sort((a, b) => a.rank - b.rank);
-  return { films: merged.slice(0, max), date: ymd(1) };
+  const chart = { films: merged.slice(0, max), date: ymd(1) };
+  if (cache && chart.films.length >= 5) writeChartCache(chart, { nowMs: nowMs || Date.now() }); // only cache a real chart
+  return chart;
 }
