@@ -5,14 +5,16 @@ const PROBES = [
   ["google-news-rss", "https://news.google.com/rss/search?q=celebrity&hl=en-US&gl=US&ceid=US:en"],
   ["pagesix-rss", "https://pagesix.com/feed/"],
   ["bluesky-api", "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=popbase.bsky.social"],
-  ["tmdb", "https://api.themoviedb.org/3/configuration"],
+  // probe WITH the key when present (the pipeline always passes it — a keyless probe misreports 401)
+  ["tmdb", () => `https://api.themoviedb.org/3/configuration${process.env.TMDB_API_KEY ? `?api_key=${process.env.TMDB_API_KEY}` : ""}`],
   ["jina-reader", "https://r.jina.ai/https://example.com"],
   ["gdelt", "https://api.gdeltproject.org/api/v2/doc/doc?query=celebrity&mode=artlist&maxrecords=1&format=json"],
 ];
 
 export async function runProbes({ fetchImpl = fetch, timeoutMs = 6000, log = console.log } = {}) {
   const results = [];
-  await Promise.all(PROBES.map(async ([name, url]) => {
+  await Promise.all(PROBES.map(async ([name, urlOrFn]) => {
+    const url = typeof urlOrFn === "function" ? urlOrFn() : urlOrFn;
     const ctl = new AbortController();
     const timer = setTimeout(() => ctl.abort(), timeoutMs);
     const t0 = Date.now();
