@@ -1,0 +1,115 @@
+{
+  "ts": "2026-07-17T23:01:37.369Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    "marcello-hern-ndez-cracks-tiger-woods-dui-belichick-age-gap-jokes-at-e"
+  ],
+  "topics": 1,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 0,
+  "costUSD": 0.015261,
+  "costPerPublished": 0.015261,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 6,
+      "in": 19637,
+      "out": 881,
+      "usd": 0.00755522
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 2092,
+      "out": 1449,
+      "usd": 0.000490517
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 5,
+      "in": 19741,
+      "out": 5316,
+      "usd": 0.00645386
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 4,
+      "in": 5716,
+      "out": 474,
+      "usd": 0.0007612
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2049,
+      "out": 213,
+      "usd": 0.0011472,
+      "ms": 1405
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2092,
+      "out": 1449,
+      "usd": 0.0004491,
+      "ms": 14004
+    },
+    "writer": {
+      "calls": 4,
+      "errors": 0,
+      "in": 18794,
+      "out": 4968,
+      "usd": 0.006011740000000001,
+      "ms": 130786
+    },
+    "verify": {
+      "calls": 5,
+      "errors": 0,
+      "in": 17588,
+      "out": 668,
+      "usd": 0.0069464,
+      "ms": 4656
+    },
+    "judge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2928,
+      "out": 241,
+      "usd": 0.00038920000000000003,
+      "ms": 1432
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 947,
+      "out": 348,
+      "usd": 0.00033613,
+      "ms": 8582
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 429,
+      "out": 92,
+      "usd": 0.00007970000000000001,
+      "ms": 772
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 210,
+      "out": 49,
+      "usd": 0.000040600000000000004,
+      "ms": 504
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2149,
+      "out": 92,
+      "usd": 0.0002517,
+      "ms": 1762
+    }
+  }
+}
