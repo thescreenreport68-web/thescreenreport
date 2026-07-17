@@ -11,7 +11,7 @@ dek: >-
   The Adam Driver and Miles Teller-led crime thriller will have its North
   American premiere at Alice Tully Hall on September 25, ahead of a November
   theatrical release from Neon.
-metaTitle: James Gray's 'Paper Tiger' to Open New York Film
+metaTitle: James Gray's 'Paper Tiger' to Open New York Film Festival
 metaDescription: >-
   James Gray's crime thriller 'Paper Tiger' starring Adam Driver and Scarlett
   Johansson will open the 64th New York Film Festival on September 25.
@@ -133,5 +133,3 @@ NYFF Artistic Director Dennis Lim also praised the film, calling it “a movie o
 Following its festival debut, distributor Neon is planning a theatrical release for the film on November 13.
 
 This selection marks Gray’s fourth film to screen at the New York Film Festival, following *The Immigrant* (2013), *The Lost City of Z* (2016), and *Armageddon Time* (2022). It is the first time one of his films will open the event. The 64th New York Film Festival runs from September 25 through October 12.
-
-## Sources

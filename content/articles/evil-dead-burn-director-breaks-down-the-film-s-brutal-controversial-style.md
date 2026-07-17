@@ -44,9 +44,7 @@ faq:
 about:
   - name: Evil Dead Burn
     type: Movie
-imageAlt: >-
-  Evil Dead Burn in Evil Dead Burn — Evil Dead Burn Director Breaks Down the
-  Film's Brutal, Controversial Style
+imageAlt: 'Evil Dead Burn Director Breaks Down the Film''s Brutal, Controversial Style'
 imageCredit: The Movie Database (TMDB)
 image: 'https://image.tmdb.org/t/p/original/A5Tz6ogGt4VV8NESG9oWVct5bo1.jpg'
 imageWidth: 2995

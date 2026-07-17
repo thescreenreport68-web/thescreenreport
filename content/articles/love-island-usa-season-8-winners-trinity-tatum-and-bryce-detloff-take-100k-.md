@@ -128,7 +128,7 @@ Aniya Harvey and Carl Schmidt finished as the runners-up. Melanie Moreno and Sin
 
 The season was not without controversy. Two contestants, Vasana Montgomery and Alannah Keyser, were removed from the villa after past social media posts containing racist language surfaced. Both have since apologized.
 
-Despite the off-screen issues, the show's popularity continues to grow. According to Nielsen data reported by TheWrap, Season 8 drew over 2 billion viewing minutes in its first two weeks on [Peacock](/tv/laura-bailey-pitches-herself-for-dungeon-crawler-carl-tv-series/), a 50% increase from the previous record-breaking season. The series also topped the Nielsen streaming charts for two consecutive weeks in June.
+Despite the off-screen issues, the show's popularity continues to grow. According to Nielsen data reported by TheWrap, Season 8 drew over 2 billion viewing minutes in its first two weeks on Peacock, a 50% increase from the previous record-breaking season. The series also topped the Nielsen streaming charts for two consecutive weeks in June.
 
 Host Ariana Madix, who received an Emmy nomination for her work on the series this week, previously highlighted the casting team's skill in creating compelling dynamics. "These Islanders are never together. They don’t meet. There’s no interaction where they can chemistry test the way you would on a scripted show," Madix told The Hollywood Reporter. "And yet year after year, the casting team does such an incredible job."
 

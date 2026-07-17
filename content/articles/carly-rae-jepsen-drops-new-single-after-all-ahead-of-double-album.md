@@ -8,7 +8,7 @@ date: '2026-07-16T19:29:55.012Z'
 dek: >-
   The track is the second preview of her upcoming double album 'Day and Night,'
   which arrives in September.
-metaTitle: Carly Rae Jepsen Releases New Single
+metaTitle: Carly Rae Jepsen Drops New Single 'After All'
 metaDescription: >-
   The track is the second preview of her upcoming double album 'Day and Night,'
   which arrives in September. The track will appear on the Day side of the
@@ -95,7 +95,7 @@ ticketInfo: {}
 officialPost: {}
 ---
 
-Carly Rae Jepsen has released a new single, “After All.” According to [Rolling Stone](/music/noah-kahan-headlines-rolling-stone-s-first-ever-stateside-festival/), the song is the second preview of her upcoming first double album, *Day and Night*, which is scheduled for release on September 18.
+Carly Rae Jepsen has released a new single, “After All.” According to Rolling Stone, the song is the second preview of her upcoming first double album, *Day and Night*, which is scheduled for release on September 18.
 
 The track will appear on the *Day* side of the record. Jepsen co-wrote “After All” with Kyle Shearer, who also co-produced the song with Nate Cyphert. The accompanying music video, directed by Aerin Moreno, features Jepsen pregnant, a nod to her personal life after welcoming her first child earlier this year. Her husband, Cole M.G.N., also appears in the visual.
 

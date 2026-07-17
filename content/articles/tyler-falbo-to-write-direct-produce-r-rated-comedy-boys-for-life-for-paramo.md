@@ -42,8 +42,8 @@ about:
   - name: Boys for Life
     type: Movie
 imageAlt: >-
-  Boys for Life in Bad Boys for Life — Tyler Falbo to Write, Direct & Produce
-  R-Rated Comedy 'Boys for Life' for Paramount Prim
+  Tyler Falbo to Write, Direct & Produce R-Rated Comedy 'Boys for Life' for
+  Paramount Primal
 imageCredit: The Movie Database (TMDB)
 image: 'https://image.tmdb.org/t/p/original/3N316jUSdhvPyYTW29G4v9ebbcS.jpg'
 imageWidth: 3840

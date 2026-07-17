@@ -11,8 +11,8 @@ dek: >-
 metaTitle: 'Digger Trailer: Tom Cruise in Iñárritu''s New Movie'
 metaDescription: >-
   Warner Bros. has released the first trailer for Alejandro G. Iñárritu's
-  'Digger,' starring a transformed Tom Cruise. The film opens in theaters on
-  October 2, 2026.
+  'Digger,' starring a transformed Tom Cruise. The film boasts a formidable
+  ensemble.
 tags:
   - digger trailer
   - digger
@@ -47,9 +47,7 @@ faq:
 about:
   - name: Digger
     type: Movie
-imageAlt: >-
-  Digger in Digger — ‘Digger’ Trailer: Tom Cruise Transforms for Iñárritu's
-  Apocalyptic Comedy
+imageAlt: '‘Digger’ Trailer: Tom Cruise Transforms for Iñárritu''s Apocalyptic Comedy'
 imageCredit: The Movie Database (TMDB)
 image: 'https://image.tmdb.org/t/p/original/hG1tXuommFDedfdrzaEHfMY1Q3W.jpg'
 imageWidth: 3240
@@ -129,7 +127,7 @@ officialSynopsis: >-
   humanity's savior before the disaster he's unleashed destroys everything.
 ---
 
-[Warner Bros](/movies/josh-gad-to-join-margot-robbie-and-bradley-cooper-s-ocean-s-prequel-ex/). has unveiled the first trailer for Alejandro G. Iñárritu's apocalyptic comedy 'Digger,' starring a profoundly transformed Tom Cruise. The film is set to premiere exclusively in theaters on October 2, 2026.
+Warner Bros. has unveiled the first trailer for Alejandro G. Iñárritu's apocalyptic comedy 'Digger,' starring a profoundly transformed Tom Cruise. The film is set to premiere exclusively in theaters on October 2, 2026.
 
 Iñárritu, the Oscar-winning director behind 'Birdman' and 'The Revenant,' describes the project as a "comedy of catastrophic proportions." The official synopsis states the premise: a frantic mission by the world's most powerful man to prove he is humanity's savior before a disaster he created destroys everything. For Cruise, that man is Digger Rockwell, a crass, potbellied titan of the oil industry sporting a honeyed Southern drawl and extensive prosthetic makeup.
 

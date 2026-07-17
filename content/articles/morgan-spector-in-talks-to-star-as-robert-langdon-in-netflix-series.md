@@ -10,8 +10,8 @@ dek: >-
   Secret of Secrets,' with Rebecca Hall eyed for the female lead.
 metaTitle: Morgan Spector as Robert Langdon in Netflix's Dan Brown Series
 metaDescription: >-
-  Morgan Spector is in talks to play symbologist Robert Langdon in Netflix's
-  upcoming series based on Dan Brown's 'The Secret of Secrets.'
+  The 'Gilded Age' star is in negotiations to headline the series based on 'The
+  Secret of Secrets,' with Rebecca Hall eyed for the female lead.
 tags:
   - morgan spector robert langdon
   - morgan spector
@@ -147,6 +147,6 @@ This casting does not mean a departure from HBO's "The Gilded Age" for Spector. 
 
 ## What is the source material?
 
-"The Secret of Secrets" is the sixth book in Brown's Robert Langdon series, published in 2025. The novels have sold over 250 million copies worldwide and have been translated into 56 languages. Three of the books have been adapted into feature films starring Tom Hanks as Langdon. A separate series based on "The Lost Symbol," starring Ashley Zukerman as a younger Langdon, aired for one season on [Peacock](/tv/laura-bailey-pitches-herself-for-dungeon-crawler-carl-tv-series/) in 2021.
+"The Secret of Secrets" is the sixth book in Brown's Robert Langdon series, published in 2025. The novels have sold over 250 million copies worldwide and have been translated into 56 languages. Three of the books have been adapted into feature films starring Tom Hanks as Langdon. A separate series based on "The Lost Symbol," starring Ashley Zukerman as a younger Langdon, aired for one season on Peacock in 2021.
 
 A representative for Netflix declined to comment on the casting reports.

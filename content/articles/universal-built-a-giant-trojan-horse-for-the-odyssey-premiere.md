@@ -44,9 +44,7 @@ faq:
 about:
   - name: The Odyssey
     type: Movie
-imageAlt: >-
-  The Odyssey in The Odyssey — Universal Built a Giant Trojan Horse for The
-  Odyssey Premiere
+imageAlt: Universal Built a Giant Trojan Horse for The Odyssey Premiere
 imageCredit: The Movie Database (TMDB)
 image: 'https://image.tmdb.org/t/p/original/tYuC9kUwqhpDQ3pv1kLMqyMF1Jw.jpg'
 imageWidth: 3840

@@ -10,8 +10,9 @@ dek: >-
   opposite 'A Quiet Place III.'
 metaTitle: 'The Comebacker: Tom Hanks Baseball Movie Sets 2027 Release Date'
 metaDescription: >-
-  Sony has set a July 30, 2027 release date for Tom Hanks' new baseball movie,
-  'The Comebacker,' directed by Marielle Heller.
+  Sony will debut the Marielle Heller-directed sports drama on July 30, 2027,
+  opposite 'A Quiet Place III.' The film is based on a short story by Dave
+  Eggers.
 tags:
   - tom hanks
   - baseball movie

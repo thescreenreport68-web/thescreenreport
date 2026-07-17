@@ -13,9 +13,8 @@ dek: >-
   mysterious new threat.
 metaTitle: 'Spider-Man: Brand New Day Trailer Preview, Cast & Story Details'
 metaDescription: >-
-  The Spider-Man: Brand New Day trailer teases Tom Holland's lonelier hero, new
-  powers, and a cast including Jon Bernthal's Punisher. The film arrives July
-  31, 2026.
+  The story picks up four years after the spell cast by Doctor Strange in
+  Spider-Man: No Way Home . Everyone has forgotten Peter Parker exists.
 tags:
   - spiderman
   - tom holland
@@ -111,7 +110,7 @@ Director Destin Daniel Cretton, who previously directed *Shang-Chi and the Legen
 
 ## When does it come out?
 
-*Spider-Man: Brand New Day* is scheduled to be released in the United States on **July 31, 2026**. It will be part of Phase Six of the [Marvel](/movies/mcu-movies-in-order/) Cinematic Universe. Filming took place from August to December 2025 in locations including Glasgow, Scotland, and Pinewood Studios in England.
+*Spider-Man: Brand New Day* is scheduled to be released in the United States on **July 31, 2026**. It will be part of Phase Six of the Marvel Cinematic Universe. Filming took place from August to December 2025 in locations including Glasgow, Scotland, and Pinewood Studios in England.
 
 ## Sources
 - [Spider-Man: Brand New Day on Wikipedia](https://en.wikipedia.org/wiki/Spider-Man:_Brand_New_Day)

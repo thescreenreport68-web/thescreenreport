@@ -12,8 +12,9 @@ dek: >-
   horror, will premiere on the streamer this August.
 metaTitle: R-Rated X-Files Movie Cut I Want to Believe on Hulu
 metaDescription: >-
-  A new R-rated director's cut of 'The X-Files: I Want to Believe' is set to
-  debut on Hulu in August 2026, restored by creator Chris Carter.
+  A new R-rated director's cut of 'The X-Files: I Want to Believe' debuts on
+  Hulu on August 14, 2026, restored by Chris Carter to lean into the story's
+  horror.
 tags:
   - x-files movie
   - 'the x-files: i want to believe vrach frankenshteyn'
@@ -52,8 +53,8 @@ about:
   - name: 'The X-Files: I Want to Believe Vrach Frankenshteyn'
     type: Movie
 imageAlt: >-
-  The X-Files: I Want to Believe Vrach Frankenshteyn — Lost R-Rated 'X-Files'
-  Movie Cut 'I Want to Believe Vrach Frankenshteyn'
+  Lost R-Rated 'X-Files' Movie Cut 'I Want to Believe Vrach Frankenshteyn'
+  Debuts on Hulu
 imageCredit: Photo via Valnet
 image: >-
   https://static0.moviewebimages.com/wordpress/wp-content/uploads/2026/04/mulder-and-scully-in-the-x-files-season-10-2016.jpg?w=1600&h=900&fit=crop

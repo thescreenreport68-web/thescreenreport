@@ -10,7 +10,7 @@ date: '2026-07-16T17:32:53.341Z'
 dek: >-
   The untitled half-hour comedy will shoot in Los Angeles later this year.
   Linklater will play Banks' ex-husband in the series.
-metaTitle: 'Hamish Linklater, Michelle Buteau Join Elizabeth Banks Apple'
+metaTitle: 'Hamish Linklater, Michelle Buteau, Simu Liu Join Apple TV+ Comedy'
 metaDescription: >-
   Hamish Linklater, Michelle Buteau, and Simu Liu have been cast in recurring
   roles in Elizabeth Banks' upcoming Apple TV+ comedy series, which will shoot

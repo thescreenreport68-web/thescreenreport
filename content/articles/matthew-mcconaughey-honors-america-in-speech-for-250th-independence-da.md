@@ -13,7 +13,8 @@ dek: >-
 metaTitle: Matthew McConaughey Speech for America's 250th Independence Day
 metaDescription: >-
   Matthew McConaughey shared a patriotic video message for America's 250th
-  Independence Day, arguing the country needs skeptics, not cynics.
+  Independence Day, arguing the country needs skeptics, not cynics. Happy 250th,
+  America.
 tags:
   - matthew mcconaughey speech
   - matthew mcconaughey

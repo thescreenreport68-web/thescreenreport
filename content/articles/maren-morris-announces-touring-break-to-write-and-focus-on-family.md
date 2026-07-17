@@ -10,9 +10,8 @@ dek: >-
   plans to spend time with her son and explore writing for a Broadway musical.
 metaTitle: Maren Morris Taking Break From Touring to Write for Broadway
 metaDescription: >-
-  Maren Morris revealed she is stepping back from touring after her current run
-  ends, aiming to write more music and spend time with her son, with an eye on
-  Broadway.
+  The country-pop star says her current tour is her last for a while as she
+  plans to spend time with her son and explore writing for a Broadway musical.
 tags:
   - maren morris
   - broadway

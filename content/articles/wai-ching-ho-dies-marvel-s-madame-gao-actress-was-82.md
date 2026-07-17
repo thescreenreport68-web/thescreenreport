@@ -11,7 +11,8 @@ dek: >-
 metaTitle: 'Wai Ching Ho Dies: Marvel''s Madame Gao Actress Was 82'
 metaDescription: >-
   Wai Ching Ho, the actress who played Madame Gao in the Marvel Cinematic
-  Universe, has died at 82, according to Deadline.
+  Universe, has died at 82, according to Deadline. "Just lost someone very
+  special to me.
 tags:
   - wai ching ho
   - peter shinkoda

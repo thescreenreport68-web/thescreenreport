@@ -10,7 +10,7 @@ date: '2026-07-13T17:00:06.409Z'
 dek: >-
   The actor-director is filming the new Lord of the Rings movie in New Zealand
   and hopes his animated 'Animal Farm' finds a warmer reception in the U.K.
-metaTitle: 'Andy Serkis on ''Hunt for Gollum,'' ''Animal Farm,'' and Motion Capture Oscars'
+metaTitle: 'Andy Serkis on ''Hunt for Gollum,'' ''Animal Farm,'''
 metaDescription: >-
   Andy Serkis discusses directing 'The Hunt for Gollum,' the U.S. reaction to
   his 'Animal Farm' movie, and the push for Oscars to recognize motion capture.
@@ -113,7 +113,7 @@ keyPoints:
 
 Andy Serkis is in New Zealand filming his new Lord of the Rings movie, according to a report from Variety. The actor-director is at the helm of the high-profile project *The Lord of the Rings: The Hunt for Gollum*, which marks his grand return to the franchise.
 
-He is directing the film for [Warner Bros](/movies/josh-gad-to-join-margot-robbie-and-bradley-cooper-s-ocean-s-prequel-ex/). while also reprising his iconic role as Smeagol. The movie is scheduled for release at the end of 2027.
+He is directing the film for Warner Bros. while also reprising his iconic role as Smeagol. The movie is scheduled for release at the end of 2027.
 
 ## What did Serkis say about AI and motion capture?
 

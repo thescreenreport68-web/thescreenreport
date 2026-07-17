@@ -8,7 +8,7 @@ date: '2026-07-16T20:31:11.509Z'
 dek: >-
   The actor, who stars as a young Sylvester Stallone in the upcoming biopic, has
   joined the major agency.
-metaTitle: Anthony Ippolito Signs With CAA
+metaTitle: Anthony Ippolito Signs With CAA Following 'I Play Rocky'
 metaDescription: >-
   The actor, who stars as a young Sylvester Stallone in the upcoming biopic, has
   joined the major agency. It will begin its festival run at Toronto in
@@ -102,6 +102,6 @@ The Amazon MGM Studios drama tells the story of Stallone's struggle to get *Rock
 
 ## What is Anthony Ippolito known for?
 
-This marks Ippolito's first leading feature role. He is known for playing a young Al Pacino opposite Miles Teller in the Paramount+ series *The Offer*. His other credits include playing George Wright in Netflix's *Grand Army* and a role in the Netflix film *Purple Hearts*. He began his career playing the young version of [Adam Sandler](/celebrity/taylor-swift-and-travis-kelce-s-wedding-details-revealed/)'s character in *Pixels*.
+This marks Ippolito's first leading feature role. He is known for playing a young Al Pacino opposite Miles Teller in the Paramount+ series *The Offer*. His other credits include playing George Wright in Netflix's *Grand Army* and a role in the Netflix film *Purple Hearts*. He began his career playing the young version of Adam Sandler's character in *Pixels*.
 
 Ippolito signed with CAA after meeting with major agencies over the past week. He continues to be represented by Untitled Entertainment, the Lede Company, and Lichter, Grossman, Nichols.

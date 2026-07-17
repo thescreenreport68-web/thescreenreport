@@ -49,9 +49,7 @@ faq:
 about:
   - name: Moana
     type: Movie
-imageAlt: >-
-  Moana in Moana — Catherine Lagaʻaia and Dwayne Johnson Lead 'Moana'
-  Live-Action Cast
+imageAlt: Catherine Lagaʻaia and Dwayne Johnson Lead 'Moana' Live-Action Cast
 imageCredit: The Movie Database (TMDB)
 image: 'https://image.tmdb.org/t/p/original/niOwJfnxk5lgShXOGMSe33k2J81.jpg'
 imageWidth: 3050

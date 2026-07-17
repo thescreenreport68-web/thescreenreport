@@ -11,7 +11,8 @@ dek: >-
 metaTitle: Zooey Deschanel Says New Girl Cast Fought for Lamorne Morris
 metaDescription: >-
   Zooey Deschanel says she and her New Girl co-stars had to lobby studio and
-  network executives to cast Lamorne Morris as Winston Bishop.
+  network executives to cast Lamorne Morris as Winston Bishop. "What about
+  Lamorne?
 tags:
   - new girl lamorne morris
   - zooey deschanel

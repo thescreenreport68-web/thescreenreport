@@ -125,6 +125,5 @@ This incident highlights the ongoing challenge for reality TV producers when pas
 The fallout can affect a contestant's standing with the audience and their prospects within the entertainment industry after the show. For Keyser, the public apology represents an attempt to manage the reputational damage as she navigates life after the villa.
 
 ## Sources
-- Deadline
 - [Hulu](https://www.hulu.com/)
 - [Paramount+](https://www.paramountplus.com/)

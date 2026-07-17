@@ -12,8 +12,8 @@ dek: >-
   returning X-Men characters like Nightcrawler and Beast.
 metaTitle: 'Doctor Doom Concept Art Shows RDJ''s Mask in Avengers: Doomsday'
 metaDescription: >-
-  Concept art for Avengers: Doomsday reveals the first look at Robert Downey Jr.
-  as Doctor Doom and several returning X-Men characters.
+  The first look at Robert Downey Jr. as Doctor Doom has been revealed in
+  concept art for the upcoming film Avengers: Doomsday , according to Variety.
 tags:
   - doctor doom concept art
   - 'avengers: doomsday'
@@ -48,8 +48,8 @@ about:
   - name: 'Avengers: Doomsday'
     type: Movie
 imageAlt: >-
-  Avengers: Doomsday in Avengers: Doomsday — Robert Downey Jr.'s Doctor Doom
-  Mask Revealed in Avengers: Doomsday Concept Art
+  Robert Downey Jr.'s Doctor Doom Mask Revealed in Avengers: Doomsday Concept
+  Art
 imageCredit: The Movie Database (TMDB)
 image: 'https://image.tmdb.org/t/p/original/kgNXJ0GWNX1D9h9cm1JEchGW5vz.jpg'
 imageWidth: 3840
@@ -102,7 +102,7 @@ keyPoints:
   - The film is directed by Joe Russo and releases in theaters December 2026.
 ---
 
-The first look at Robert Downey Jr. as Doctor Doom has been revealed in concept art for the upcoming film *Avengers: Doomsday*, according to Variety. The art was shared online by former [Marvel](/movies/spider-man-brand-new-day-trailer-drops-teasing-a-world-without-recogni/) Studios director of visual development Andy Park.
+The first look at Robert Downey Jr. as Doctor Doom has been revealed in concept art for the upcoming film *Avengers: Doomsday*, according to Variety. The art was shared online by former Marvel Studios director of visual development Andy Park.
 
 Park posted the illustration to X on July 11, calling the project "the final full film I had the honor of leading as Director of Visual Development at Marvel Studios." His post stated the art "reveals the characters & their looks for the first time."
 

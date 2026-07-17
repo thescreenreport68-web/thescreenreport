@@ -11,7 +11,7 @@ dek: >-
 metaTitle: Passion of the Christ Theatrical Return Reportedly Planned
 metaDescription: >-
   A new report suggests Mel Gibson's 'The Passion of the Christ' is being
-  prepped for a theatrical re-release.
+  prepped for a theatrical re-release. It also represents a commercial opportun.
 tags:
   - the passion of the christ
   - mel gibson
@@ -47,9 +47,7 @@ faq:
 about:
   - name: The Passion of the Christ
     type: Movie
-imageAlt: >-
-  Mel Gibson — The Passion of the Christ Theatrical Return Reportedly in the
-  Works
+imageAlt: The Passion of the Christ Theatrical Return Reportedly in the Works
 imageCredit: The Movie Database (TMDB)
 image: 'https://image.tmdb.org/t/p/original/4840rkbpsiuow5ew155oVKcqJwj.jpg'
 imageWidth: 1920
@@ -106,7 +104,3 @@ The film's legacy is complex, hailed by many for its artistic ambition and devot
 The next steps would typically involve an official announcement from the studio or distribution partner, followed by the release of promotional materials and ticketing information. Until such an announcement is made, the re-release remains a reported development rather than a confirmed event.
 
 Moviegoers interested in seeing the film on the big screen again will need to wait for further details to emerge from official channels. The report suggests the wheels are in motion, setting the stage for one of the most talked-about films of the 21st century to make a dramatic return.
-
-## Sources
-
-- The Washington Post

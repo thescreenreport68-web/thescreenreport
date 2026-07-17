@@ -10,8 +10,9 @@ dek: >-
   'Tenet,' or 'Oppenheimer' before getting the call to return for 'The Odyssey.'
 metaTitle: Anne Hathaway on Her Christopher Nolan Reunion
 metaDescription: >-
-  Anne Hathaway reveals she briefly thought she'd upset Christopher Nolan after
-  not being cast in his films following 'Interstellar.'
+  The actor shared her momentary worry after not appearing in 'Dunkirk,'
+  'Tenet,' or 'Oppenheimer' before getting the call to return for 'The
+  Odyssey.'.
 tags:
   - anne hathaway christopher nolan
   - anne hathaway

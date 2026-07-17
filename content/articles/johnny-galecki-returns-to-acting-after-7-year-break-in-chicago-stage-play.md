@@ -10,8 +10,8 @@ dek: >-
   Williams in a Chicago production this Fall.
 metaTitle: Johnny Galecki Returning to Acting in Stage Play 'Kowalski'
 metaDescription: >-
-  Johnny Galecki is returning to acting after a seven-year break, taking on the
-  role of Tennessee Williams in a Chicago stage play.
+  Johnny Galecki is returning to acting after a seven-year break, according to a
+  report by TheWrap. Recurring "TBBT" star Wil Wheaton exclaimed, "Oh wow!
 tags:
   - johnny galecki
   - tennessee williams

@@ -11,7 +11,8 @@ dek: >-
 metaTitle: Zendaya's Unusual Casting News for The Odyssey Revealed
 metaDescription: >-
   Zendaya shares the unique story of how she found out she was up for a major
-  role in Christopher Nolan's upcoming film, The Odyssey.
+  role in Christopher Nolan's upcoming film, The Odyssey. "And I was like, ‘Shut
+  up!
 tags:
   - zendaya the odyssey casting
   - zendaya
@@ -42,9 +43,7 @@ faq:
 about:
   - name: The Odyssey
     type: Movie
-imageAlt: >-
-  The Odyssey in The Odyssey — Zendaya Reveals How Her Husband Told Her About
-  The Odyssey Role
+imageAlt: Zendaya Reveals How Her Husband Told Her About The Odyssey Role
 imageCredit: The Movie Database (TMDB)
 image: 'https://image.tmdb.org/t/p/original/tYuC9kUwqhpDQ3pv1kLMqyMF1Jw.jpg'
 imageWidth: 3840

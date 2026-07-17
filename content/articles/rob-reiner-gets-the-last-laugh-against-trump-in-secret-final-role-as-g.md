@@ -12,8 +12,8 @@ dek: >-
   that takes aim at Donald Trump, according to a new report.
 metaTitle: Rob Reiner George Washington Cameo in Larry David HBO Show
 metaDescription: >-
-  Rob Reiner's final acting role was as George Washington in Larry David's HBO
-  sketch comedy, kept secret until its July 2026 broadcast.
+  The sketch, which Variety describes as allowing Reiner to get the "last laugh"
+  against Donald Trump, features the late filmmaker as the first president.
 tags:
   - rob reiner george washington
   - rob reiner
@@ -54,8 +54,8 @@ about:
   - name: 'Life, Larry and the Pursuit of Unhappiness: An Almost History of America'
     type: TV Series
 imageAlt: >-
-  Life, Larry and the Pursuit of Unhappiness: An almost History of America in
-  Life, Larry and the Pursuit of Unhappiness: An al
+  Rob Reiner Plays George Washington in Secret Final Role for Larry David's HBO
+  Show
 imageCredit: The Movie Database (TMDB)
 image: 'https://image.tmdb.org/t/p/original/6Fbrrf2jaYJ8s3nnnuhhvvDjTZN.jpg'
 imageWidth: 3840

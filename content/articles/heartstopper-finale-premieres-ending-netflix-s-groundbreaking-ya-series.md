@@ -9,7 +9,7 @@ dek: >-
   The two-hour feature concludes the adaptation of Alice Oseman's graphic novel
   after three seasons, with the cast and creator reflecting on a decade-long
   journey.
-metaTitle: '''Heartstopper Forever'' Movie Releases on'
+metaTitle: 'Heartstopper Finale Premieres, Ending Netflix''s Groundbreaking YA'
 metaDescription: >-
   The two-hour feature is the final chapter in the series, which ran for three
   seasons. Creator and executive producer Alice Oseman reflected on the long
@@ -34,9 +34,7 @@ faq: []
 about:
   - name: Heartstopper Forever
     type: Movie
-imageAlt: >-
-  Heartstopper Forever in Heartstopper Forever — Heartstopper Finale Premieres,
-  Ending Netflix's Groundbreaking YA Series
+imageAlt: 'Heartstopper Finale Premieres, Ending Netflix''s Groundbreaking YA Series'
 imageCredit: The Movie Database (TMDB)
 image: 'https://image.tmdb.org/t/p/original/vvE7zc2aie3ozZcy5xYbg5QTFrF.jpg'
 imageWidth: 3518

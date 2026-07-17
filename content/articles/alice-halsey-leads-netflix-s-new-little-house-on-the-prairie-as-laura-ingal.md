@@ -12,8 +12,8 @@ dek: >-
   the iconic role in the adaptation that premiered earlier this month.
 metaTitle: Alice Halsey Stars in Netflix's Little House on the Prairie
 metaDescription: >-
-  Alice Halsey, an 11-year-old actress, is starring as Laura Ingalls in
-  Netflix's new adaptation of Little House on the Prairie.
+  The 11-year-old actress discusses the 'mind-blowing' experience of taking on
+  the iconic role in the adaptation that premiered earlier this month.
 tags:
   - little house on the prairie netflix
   - alice halsey

@@ -10,7 +10,7 @@ date: '2026-07-04T06:39:38.709Z'
 dek: >-
   The Associated Press confirmed the July 3 nuptials at Madison Square Garden,
   where guests reportedly signed NDAs.
-metaTitle: 'Taylor Swift Travis Kelce Wedding: Star-Studded Guest List Revealed'
+metaTitle: 'Taylor Swift Travis Kelce Wedding: Star-Studded Guest'
 metaDescription: >-
   A-list celebrities including Ed Sheeran and Bradley Cooper were photographed
   arriving for Taylor Swift and Travis Kelce's July 3 wedding at Madison Square
@@ -55,8 +55,8 @@ about:
   - name: Taylor Swift
     type: Person
 imageAlt: >-
-  Taylor Swift — Ed Sheeran, Bradley Cooper, Dakota Johnson Among A-Listers
-  Pictured at Taylor Swift and Travis Kelce Wedding
+  Ed Sheeran, Bradley Cooper, Dakota Johnson Among A-Listers Pictured at Taylor
+  Swift and Travis Kelce Wedding
 imageCredit: The Movie Database (TMDB)
 image: 'https://image.tmdb.org/t/p/original/vr4QrJ23Cm8T7Y5sBN3UnnWrZ0q.jpg'
 imageWidth: 1865

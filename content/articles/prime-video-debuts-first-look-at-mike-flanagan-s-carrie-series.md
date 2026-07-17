@@ -119,7 +119,3 @@ Summer H. Howell stars as the titular Carrie White. Samantha Sloyan plays her do
 **Why is this adaptation significant?**
 
 This marks the first time Stephen King’s debut novel has been adapted for a television series. Flanagan, known for *The Haunting of Hill House* and *Midnight Mass*, serves as showrunner, writes the series, and directs four of the eight episodes. King himself is an executive producer. The series aims to deepen the characters and tensions of the original story, framing it as a human story about kindness versus cruelty.
-
-## Sources
-
-- The Hollywood Reporter

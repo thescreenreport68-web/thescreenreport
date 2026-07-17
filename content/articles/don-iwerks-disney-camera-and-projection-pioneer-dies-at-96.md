@@ -10,8 +10,8 @@ dek: >-
   'Mary Poppins' and developed the Circle-Vision camera for Disney parks.
 metaTitle: 'Don Iwerks, Disney Legend and Innovator, Dies at 96'
 metaDescription: >-
-  Don Iwerks, the Disney legend who pioneered camera and projection systems for
-  the company's films and theme parks, has died. He was 96.
+  The son of Mickey Mouse co-creator Ub Iwerks helped perfect the effects for
+  'Mary Poppins' and developed the Circle-Vision camera for Disney parks.
 tags:
   - don iwerks
   - ub iwerks
@@ -121,7 +121,3 @@ Born on July 24, 1929, Iwerks was the son of fellow Disney Legend Ub Iwerks, co-
 Iwerks took on a camera technician role in 1953. He later led the machine shop, camera service, and technical engineering divisions. After 35 years with Disney, he co-founded Iwerks Entertainment Inc. in 1986 with fellow Disney executive Stan Kinsey. The company became a pioneer in giant-screen theaters and immersive experiences.
 
 His technical contributions were recognized with the Gordon E. Sawyer Award from the Academy of Motion Picture Arts and Sciences in 1997. He was named a Disney Legend in 2009.
-
-## Sources
-- The Hollywood Reporter
-- Deadline

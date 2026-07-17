@@ -12,8 +12,8 @@ dek: >-
   learning it was for AI business software, according to Deadline.
 metaTitle: 'Weird Al Yankovic AI Ad Offer Refused: ''Not The Poster Boy'''
 metaDescription: >-
-  Weird Al Yankovic says he refused a significant payday to endorse an
-  artificial intelligence company, declaring he's 'not a fan of AI'.
+  The parody legend revealed he backed out of a lucrative commercial deal after
+  learning it was for AI business software, according to Deadline.
 tags:
   - weird al yankovic
   - artificial intelligence

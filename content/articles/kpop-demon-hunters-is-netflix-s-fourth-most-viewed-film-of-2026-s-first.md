@@ -34,9 +34,7 @@ faq:
 about:
   - name: KPop Demon Hunters
     type: Movie
-imageAlt: >-
-  KPop Demon Hunters in KPop Demon Hunters — KPop Demon Hunters Is Netflix's
-  Fourth Most-Viewed Film of 2026's First Half
+imageAlt: KPop Demon Hunters Is Netflix's Fourth Most-Viewed Film of 2026's First Half
 imageCredit: The Movie Database (TMDB)
 image: 'https://image.tmdb.org/t/p/original/w3Bi0wygeFQctn6AqFTwhGNXRwL.jpg'
 imageWidth: 3840

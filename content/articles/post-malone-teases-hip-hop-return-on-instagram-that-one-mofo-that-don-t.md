@@ -12,8 +12,8 @@ dek: >-
   Eternal Buzz,' following his recent country pivot on 'F-1 Trillion.'
 metaTitle: Post Malone Teases Hip-Hop Return on Instagram
 metaDescription: >-
-  Post Malone shared a new music clip on Instagram that signals a return to his
-  rap roots for his next album, 'The Eternal Buzz.' 2 on the Billboard 200.
+  The new snippet suggests a sonic direction for his upcoming album, 'The
+  Eternal Buzz,' following his recent country pivot on 'F-1 Trillion.'.
 tags:
   - post malone hip hop return
   - post malone
@@ -98,10 +98,9 @@ ticketInfo:
   streamOn: ''
 officialPost:
   platform: instagram
-  url: 'https://www.instagram.com/'
 ---
 
-Post Malone teased new music on Instagram on Thursday (July 16), a move that, according to [Billboard](/music/clave-especial-discuss-american-and-mexican-music-influence-on-their-work/), appears to signal a return to his rap roots after a recent pivot to country music. The clip previews the sonic direction for his upcoming album, *The Eternal Buzz*.
+Post Malone teased new music on Instagram on Thursday (July 16), a move that, according to Billboard, appears to signal a return to his rap roots after a recent pivot to country music. The clip previews the sonic direction for his upcoming album, *The Eternal Buzz*.
 
 In the post, he captioned the video, “That one mofo that don’t know when to leave,” which shows him drinking a Bud Light and smoking a cigarette. The unreleased track features his signature melodic rapping, a style that powered earlier albums like *beerbongs & bentleys* and *Hollywood’s Bleeding*. “All my money clean, not a damn stain on me/ I would pop a bean, 2016 Stoney,” he raps in the snippet.
 
@@ -111,8 +110,7 @@ The tease is the first hint of music from *The Eternal Buzz*, an album Post Malo
 
 ## How have fans and peers reacted?
 
-Fellow artist Tyla Yaweh commented “Ohhhhh this a hit” on the post, offering early approval. Fan reactions in the comments also welcomed the perceived shift back to hip-hop. Post Malone's last full rap album was 2022's *Twelve Carat Toothache*, which debuted at No. 2 on the [Billboard 200](/music/madonna-s-10th-no-1-album-fans-are-losing-it-over-confessions-ii-but-not/). He then released the pop-focused *Austin* in 2023 and the country-leaning *F-1 Trillion* in 2024, which spawned the hit “I Had Some Help” with Morgan Wallen.
+Fellow artist Tyla Yaweh commented “Ohhhhh this a hit” on the post, offering early approval. Fan reactions in the comments also welcomed the perceived shift back to hip-hop. Post Malone's last full rap album was 2022's *Twelve Carat Toothache*, which debuted at No. 2 on the Billboard 200. He then released the pop-focused *Austin* in 2023 and the country-leaning *F-1 Trillion* in 2024, which spawned the hit “I Had Some Help” with Morgan Wallen.
 
 ## Sources
 - [Billboard](https://www.billboard.com/)
-- [Post Malone on Instagram](https://www.instagram.com/)

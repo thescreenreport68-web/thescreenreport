@@ -8,7 +8,7 @@ date: '2026-07-14T23:01:30.379Z'
 dek: >-
   The actor will reprise his role as Jaime Reyes in James Gunn's 2027 film,
   marking the hero's first DC Universe appearance since his 2023 solo movie.
-metaTitle: 'Xolo Maridueña Returns as Blue Beetle in Superman: Man of Tomorrow'
+metaTitle: Xolo Maridueña Returns as Blue Beetle in Superman
 metaDescription: >-
   Xolo Maridueña will return as Blue Beetle in the upcoming Superman sequel, Man
   of Tomorrow, directed by James Gunn and scheduled for release in 2027.

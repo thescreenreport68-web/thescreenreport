@@ -49,8 +49,8 @@ about:
   - name: Scrublands
     type: TV Series
 imageAlt: >-
-  Scrublands in Scrublands — ‘Scrublands’ Season 3 Confirmed as ‘Scrublands:
-  Trust’ with New Cast and First-Look Images
+  ‘Scrublands’ Season 3 Confirmed as ‘Scrublands: Trust’ with New Cast and
+  First-Look Images
 imageCredit: The Movie Database (TMDB)
 image: 'https://image.tmdb.org/t/p/original/66REbPMYhTZNnEqM9btmXJcCOqZ.jpg'
 imageWidth: 3000

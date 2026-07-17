@@ -8,7 +8,7 @@ date: '2026-07-16T20:59:47.054Z'
 dek: >-
   The deal for the composer's catalog, announced July 15, includes scores for
   blockbuster franchises that have collectively grossed over $21 billion.
-metaTitle: 'Brian Tyler Sells Music Rights to Yellowstone, Fast'
+metaTitle: 'Brian Tyler Sells Music Rights to Yellowstone, Fast & Furious'
 metaDescription: >-
   Composer Brian Tyler sells his music rights and royalty streams for major film
   and TV scores, including Yellowstone and Fast & Furious, to Cutting Edge
@@ -46,9 +46,7 @@ about:
     type: TV Show
   - name: Fast and the Furious
     type: Movie Franchise
-imageAlt: >-
-  Brian Tyler in Yellowstone — Brian Tyler Sells Music Rights to Yellowstone,
-  Fast & Furious Scores to CEG
+imageAlt: 'Brian Tyler Sells Music Rights to Yellowstone, Fast & Furious Scores to CEG'
 imageCredit: The Movie Database (TMDB)
 image: 'https://image.tmdb.org/t/p/original/ynSOcgDLZfdLCZfRSYZGiTgYJVo.jpg'
 imageWidth: 3840
@@ -95,8 +93,7 @@ officialPost:
   platform: ''
   url: ''
 ---
-
-Award-winning composer Brian Tyler has sold his music rights and royalty streams to the soundtracks of several major films and TV shows to Cutting Edge Group (CEG), according to a Billboard report. The acquisition, announced in a press release on Wednesday (July 15), includes his work on the *Fast and the Furious* franchise, Taylor Sheridan’s *[Yellowstone](/tv/dutton-ranch-finale-has-fans-in-a-chokehold-but-a-pre-awards-snub-stings-just-a/)* universe, and *The Super Mario Bros. Movie*.
+Award-winning composer Brian Tyler has sold his music rights and royalty streams to the soundtracks of several major films and TV shows to Cutting Edge Group (CEG), according to a Billboard report. The acquisition, announced in a press release on Wednesday (July 15), includes his work on the *Fast and the Furious* franchise, Taylor Sheridan’s *Yellowstone* universe, and *The Super Mario Bros. Movie*.
 
 ## What music is included in the deal?
 
@@ -110,7 +107,4 @@ In a statement, Tyler said, “Music is how we remember the stories that matter 
 
 ## How does this affect CEG's portfolio?
 
-The acquisition strengthens CEG’s position as a leading media music catalog collector. The company, which also owns rights to music catalogs from Warner Bros.
-
-## Sources
-- [Billboard](/music/clave-especial-discuss-american-and-mexican-music-influence-on-their-work/)
+The acquisition strengthens CEG’s position as a leading media music catalog collector.

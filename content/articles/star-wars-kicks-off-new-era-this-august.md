@@ -8,10 +8,10 @@ date: '2026-07-03T12:16:14.188Z'
 dek: >-
   The new limited anime series arrives on Disney+ and Hulu on August 5, 2026,
   following Kara's quest to rebuild the Jedi order.
-metaTitle: 'Star Wars: Visions Presents - The Ninth Jedi Release Date, Trailer'
+metaTitle: 'Star Wars: Visions Presents - The Ninth Jedi Release'
 metaDescription: >-
-  Star Wars: Visions Presents - The Ninth Jedi, a new anime limited series,
-  premieres August 5, 2026 on Disney+ and Hulu. Get the story, cast, and release
+  A new chapter for the galaxy far, far away begins streaming this summer. The
+  plot follows Zhima's daughter, Lah Kara. Get the story, cast, and release
   details.
 tags:
   - star wars
@@ -60,9 +60,7 @@ faq:
 about:
   - name: 'Star Wars: Visions Presents - The Ninth Jedi'
     type: TV Series
-imageAlt: >-
-  Star Wars: Visions Presents - The Ninth Jedi in Star Wars: Visions Presents -
-  The Ninth Jedi — Star Wars Launches New Era Wit
+imageAlt: Star Wars Launches New Era With 'The Ninth Jedi' Anime Series in August
 imageCredit: The Movie Database (TMDB)
 image: 'https://image.tmdb.org/t/p/original/cEM7g30uC4nc0zabJD1omYCSiPZ.jpg'
 imageWidth: 1920

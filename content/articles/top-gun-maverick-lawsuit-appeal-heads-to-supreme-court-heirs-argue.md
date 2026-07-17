@@ -135,6 +135,3 @@ The Second, Third, Fifth, Seventh and D.C. Circuits, however, examine similarity
 The initial lawsuit was filed in June 2022. It stated that the copyright to Yonay's article was legally re-claimed in 2018 through a statutory termination triggered by the passage of time. The suit alleged that *Top Gun: Maverick*, as a direct derivative of his original story, violated that claim, which Paramount ignored.
 
 The 2024 ruling found that the sequel was not materially similar to the 1983 article. The heirs are now asking the Supreme Court to review that decision holistically. A representative for Paramount did not immediately respond to TheWrap’s request for comment.
-
-## Sources
-- TheWrap

@@ -58,8 +58,8 @@ about:
   - name: Basic Instinct
     type: Movie
 imageAlt: >-
-  Basic Instinct in Basic Instinct — Joe Eszterhas Confirms 'Basic Instinct'
-  Reboot Script Is Finished, Catherine Tramell Retur
+  Joe Eszterhas Confirms 'Basic Instinct' Reboot Script Is Finished, Catherine
+  Tramell Returns
 imageCredit: The Movie Database (TMDB)
 image: 'https://image.tmdb.org/t/p/original/7FRraud59N3s10bbf9bfYjvwx3v.jpg'
 imageWidth: 3840

@@ -10,8 +10,8 @@ dek: >-
   miniseries and classic sitcoms, died Thursday in California.
 metaTitle: 'Peter Van Norden Dies: Police Academy 2 Actor Was 75'
 metaDescription: >-
-  Peter Van Norden, the character actor from Police Academy 2 and The Stand, has
-  died at age 75, his son confirmed on Instagram.
+  His son, Robert, confirmed the news on Instagram. In the comedy sequel “Police
+  Academy 2,” he portrayed the slobby police dog officer Vinnie Schtulman.
 tags:
   - charli xcx new songs
   - peter van norden

@@ -97,11 +97,11 @@ officialPost:
   url: ''
 ---
 
-Sienna Spiro has scored her first entry on the [Billboard](/music/clave-especial-discuss-american-and-mexican-music-influence-on-their-work/) album charts with a top 10 debut for her debut full-length studio set, ‘Visitor.’ According to Billboard, the album launched in the top 10 on three separate rankings dated July 18.
+Sienna Spiro has scored her first entry on the Billboard album charts with a top 10 debut for her debut full-length studio set, ‘Visitor.’ According to Billboard, the album launched in the top 10 on three separate rankings dated July 18.
 
 ## What charts did ‘Visitor’ debut on?
 
-The album bows at No. 9 on the all-genre [Billboard 200](/music/madonna-s-10th-no-1-album-fans-are-losing-it-over-confessions-ii-but-not/) chart. It also makes a strong showing on two more specific charts, entering at No. 3 on the Vinyl Albums chart and No. 4 on the Top Album Sales tally. This marks the singer-songwriter’s first appearance on any Billboard album chart.
+The album bows at No. 9 on the all-genre Billboard 200 chart. It also makes a strong showing on two more specific charts, entering at No. 3 on the Vinyl Albums chart and No. 4 on the Top Album Sales tally. This marks the singer-songwriter’s first appearance on any Billboard album chart.
 
 ## Did a new single also chart?
 

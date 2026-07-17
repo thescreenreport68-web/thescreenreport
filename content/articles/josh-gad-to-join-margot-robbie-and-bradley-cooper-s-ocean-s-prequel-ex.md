@@ -96,7 +96,7 @@ keyPoints:
     wrote the screenplay.
   - 'It is scheduled for a June 25, 2027 release from Warner Bros.'
 ---
-Josh Gad has joined the cast of the upcoming ‘Ocean’s 11’ prequel starring Margot Robbie and Bradley Cooper, according to a report from Variety. The actor has booked a significant role in the period heist film, which is currently in pre-production at [Warner Bros](/movies/box-office-supergirl-stumbles-with-38-million-debut-toy-story-5-remain/).
+Josh Gad has joined the cast of the upcoming ‘Ocean’s 11’ prequel starring Margot Robbie and Bradley Cooper, according to a report from Variety. The actor has booked a significant role in the period heist film, which is currently in pre-production at Warner Bros.
 
 Gad joins a starry ensemble led by Robbie and her director-costar Cooper. Casting for the project has been progressing steadily as the film heads toward its production start.
 
@@ -115,7 +115,3 @@ Bradley Cooper wrote the screenplay and is directing the film, which is dated fo
 The ‘Ocean’s’ prequel adds to a busy schedule for Gad. His upcoming projects include Paramount’s “Space Balls: The New One,” sequels to the “Angry Birds” and “Frozen” animated franchises, and a feature adaptation of “Oh, The Places You Will Go” with Ariana Grande. He also recently renewed his overall television deal with 20th Century Television.
 
 The ‘Ocean’s’ film franchise, encompassing the Soderbergh trilogy starring George Clooney, Matt Damon, Brad Pitt, and Julia Roberts, and the ‘Ocean’s Eight’ reboot with Sandra Bullock and Cate Blanchett, has earned more than $1.4 billion at the global box office worldwide.
-
-## Sources
-
-* Variety

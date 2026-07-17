@@ -8,7 +8,7 @@ date: '2026-07-16T19:30:55.012Z'
 dek: >-
   The filmmaker's new project explores the 14th Amendment and will debut on the
   streamer later this year.
-metaTitle: Ava DuVernay's New Documentary
+metaTitle: Ava DuVernay Returns to Documentaries with Netflix's '14th'
 metaDescription: >-
   Ava DuVernay is directing a new documentary titled '14th' for Netflix, marking
   her return to the genre. The film will premiere later this year.
@@ -80,7 +80,7 @@ keyPoints:
 The film marks the Oscar-nominated filmmaker's return to documentary work and her latest collaboration with Netflix.
 
 ## What is the new documentary about?
-Constitution, examining its 150-year history and its urgent relevance to contemporary debates. It aims to bring the ongoing fight over the amendment into the present day, asking fundamental questions about belonging and citizenship in America. DuVernay conducted interviews with over 50 scholars, politicians, and legal experts for the project.
+The documentary explores the 14th Amendment to the U.S. Constitution, examining its 150-year history and its urgent relevance to contemporary debates. It aims to bring the ongoing fight over the amendment into the present day, asking fundamental questions about belonging and citizenship in America. DuVernay conducted interviews with over 50 scholars, politicians, and legal experts for the project.
 
 ## What did Ava DuVernay say about the film?
 The filmmaker provided a clear distinction between this project and her previous work. She described the film as an exploration of current freedoms, not a historical retrospective, stating, "This is not a film about the past tense of freedom. I’m not interested in asking you to look back."

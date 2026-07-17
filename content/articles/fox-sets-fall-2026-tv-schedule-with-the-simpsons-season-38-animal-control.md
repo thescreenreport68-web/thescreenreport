@@ -116,7 +116,7 @@ seriesStatus:
 Fox has announced its Fall 2026 TV premiere dates, scheduling new seasons of long-running hits like *The Simpsons* and *Hell’s Kitchen* to begin in late September. According to a report from Just Jared, the network’s schedule includes several returning series and a notable timeslot change for one comedy.
 
 ## What shows are premiering in Fall 2026?
-The network’s fall slate is led by the 38th season premiere of *The Simpsons* on Sunday, September 27. *Hell’s Kitchen* returns for its 25th season on Thursday, September 24. Other returning shows include *Celebrity Name That Tune* (Season 6), *The Floor* (Season 6), *Celebrity Weakest Link* ([Season 2](/tv/dutton-ranch-finale-has-fans-in-a-chokehold-but-a-pre-awards-snub-stings-just-a/)), *Best Medicine* (Season 2), *Doc* (Season 3), *99 to Beat* (Season 2), and *Special Forces: World’s Toughest Test* (Season 5).
+The network’s fall slate is led by the 38th season premiere of *The Simpsons* on Sunday, September 27. *Hell’s Kitchen* returns for its 25th season on Thursday, September 24. Other returning shows include *Celebrity Name That Tune* (Season 6), *The Floor* (Season 6), *Celebrity Weakest Link* (Season 2), *Best Medicine* (Season 2), *Doc* (Season 3), *99 to Beat* (Season 2), and *Special Forces: World’s Toughest Test* (Season 5).
 
 ## Is anything moving to a new night?
 Yes. It will air at 8:30 PM, following *The Simpsons* and preceding *Universal Basic Guys* and *Grimsburg*, which are both returning for their third seasons. This marks a change from its previous scheduling.

@@ -8,7 +8,7 @@ date: '2026-07-16T23:29:40.655Z'
 dek: >-
   The singer called out the beta tool on Instagram after it shared incorrect
   information about a track from her recent tour.
-metaTitle: Lorde Criticizes Spotify AI Feature
+metaTitle: Lorde Criticizes Spotify's AI 'About the Song' Feature
 metaDescription: >-
   Lorde has publicly criticized Spotify's new AI feature for providing
   inaccurate context about her music and limiting artistic interpretation.

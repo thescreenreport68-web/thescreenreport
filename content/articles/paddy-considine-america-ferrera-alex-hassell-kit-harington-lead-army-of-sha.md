@@ -51,8 +51,8 @@ about:
   - name: Army of Shadows
     type: TV Series
 imageAlt: >-
-  Army of Shadows in Army of Shadows — Paddy Considine, America Ferrera, Alex
-  Hassell, Kit Harington Lead 'Army of Shadows' Ser
+  Paddy Considine, America Ferrera, Alex Hassell, Kit Harington Lead 'Army of
+  Shadows' Series
 imageCredit: The Movie Database (TMDB)
 image: 'https://image.tmdb.org/t/p/original/90tyLBdh9PeYxHCUEHMtFWP3FNI.jpg'
 imageWidth: 3648

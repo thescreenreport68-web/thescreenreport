@@ -11,7 +11,7 @@ dek: >-
 metaTitle: Danny McBride Directs G.I. Joe Movie for Paramount
 metaDescription: >-
   Danny McBride will direct and write the next G.I. Joe movie for Paramount,
-  marking his first time behind the camera for a feature film.
+  marking his first time behind the camera for a feature film. G.I.
 tags:
   - g.i. joe movie
   - danny mcbride
@@ -125,7 +125,7 @@ McBride is best known as the creator and star of HBO’s The Righteous Gemstones
 
 Plot details are being kept under wraps, but McBride has shared some initial thoughts. “You’re following Duke and a group of other Joes,” he said on the Happy Sad Confused podcast. “There’s that town in the comics, Springfield, which is a town that’s secretly all Cobra. That is where our film takes place.” He added that he has some “pretty interesting people lining up to be in it.”
 
-McBride is a self-described massive fan of the property. “It was definitely the cartoons and the comics. G.I. Joe was my thing when I was a kid,” he said. “I liked that more than [Star Wars](/movies/george-lucas-says-ai-is-the-future-and-fans-shouldn-t-control-movies-the/), more than anything.”
+McBride is a self-described massive fan of the property. “It was definitely the cartoons and the comics. G.I. Joe was my thing when I was a kid,” he said. “I liked that more than Star Wars, more than anything.”
 
 ## Why is this a big deal for Paramount?
 

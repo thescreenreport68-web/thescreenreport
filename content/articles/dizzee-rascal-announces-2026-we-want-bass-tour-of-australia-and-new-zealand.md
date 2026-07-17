@@ -145,6 +145,3 @@ The full four-artist bill—featuring Dizzee Rascal, Example, Arrdee, and Swaglo
 Mastercard and Live Nation presales will run from July 8 to July 9, 2026. General ticket sales begin on July 9 at 1 p.m. local time. Tickets will be available through livenation.com.au and livenation.co.nz.
 
 The tour announcement marks a significant return for Dizzee Rascal, born Dylan Mills, whose 2003 debut *Boy in da Corner* won the Mercury Prize. His commercial peak came with 2009’s *Tongue n’ Cheek*, which spawned four consecutive U.K. No. 1 singles.
-
-## Sources
-- Billboard

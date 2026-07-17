@@ -45,8 +45,8 @@ about:
   - name: Rein Me In
     type: Single
 imageAlt: >-
-  Sam Fender and Olivia Dean performing together — Sam Fender and Olivia Dean's
-  'Rein Me In' Is Now the Longest-Running No. 1 S
+  Sam Fender and Olivia Dean's 'Rein Me In' Is Now the Longest-Running No. 1
+  Single of the Decade
 imageCredit: C.Stadler/Bwag (talk / email) / Wikimedia Commons / CC BY-SA 4.0
 image: >-
   https://commons.wikimedia.org/wiki/Special:FilePath/Gratwein-Stra%C3%9Fengel%20-%20Stift%20Rein%2C%20Epitaph%20Lindenlaub.JPG?width=1600

@@ -78,7 +78,7 @@ pullQuote:
 
 [Chloe Cherry](/celebrity/euphoria-star-chloe-cherry-to-release-memoir-detailing-adult-film-past/) will release a memoir titled *Somewhere Dark and Hot*, according to a report from The Hollywood Reporter.
 
-The *[Euphoria](/celebrity/zendaya-movies-and-tv-shows/)* star's book will recount her time working in the adult entertainment industry and her subsequent ascent into the public eye after being cast in Sam Levinson's HBO drama.
+The *Euphoria* star's book will recount her time working in the adult entertainment industry and her subsequent ascent into the public eye after being cast in Sam Levinson's HBO drama.
 
 ## What will the memoir cover?
 

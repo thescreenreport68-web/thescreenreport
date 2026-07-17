@@ -13,7 +13,7 @@ dek: >-
 metaTitle: Christopher Nolan Says 'Oppenheimer' Paved Way for 'The Odyssey'
 metaDescription: >-
   Christopher Nolan reveals the success of 'Oppenheimer' was crucial for
-  greenlighting his upcoming big-budget film 'The Odyssey'.
+  greenlighting his upcoming big-budget film 'The Odyssey'. It's The Odyssey .
 tags:
   - christopher nolan the odyssey
   - christopher nolan
@@ -48,8 +48,8 @@ about:
   - name: The Odyssey
     type: Movie
 imageAlt: >-
-  The Odyssey in The Odyssey — Christopher Nolan Credits 'Oppenheimer' Success
-  for Making 'The Odyssey' Possible
+  Christopher Nolan Credits 'Oppenheimer' Success for Making 'The Odyssey'
+  Possible
 imageCredit: The Movie Database (TMDB)
 image: 'https://image.tmdb.org/t/p/original/tYuC9kUwqhpDQ3pv1kLMqyMF1Jw.jpg'
 imageWidth: 3840

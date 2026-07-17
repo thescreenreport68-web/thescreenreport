@@ -10,8 +10,8 @@ dek: >-
   C. Hall's Dexter in the Paramount+ series' sophomore season.
 metaTitle: 'Gabriel Luna Cast in Dexter: Resurrection Season 2'
 metaDescription: >-
-  Gabriel Luna is joining the cast of Dexter: Resurrection Season 2, playing a
-  serial killer named Ray Ballard, according to reports.
+  The 'Last of Us' actor will play the 'Sleepy-Eyed Stranger' opposite Michael
+  C. Hall's Dexter in the Paramount+ series' sophomore season. Hall.
 tags:
   - dexter resurrection casting
   - gabriel luna
@@ -53,9 +53,7 @@ faq:
 about:
   - name: 'Dexter: Resurrection'
     type: TV Show
-imageAlt: >-
-  Dexter: Resurrection in Dexter: Resurrection — Gabriel Luna Joins 'Dexter:
-  Resurrection' Season 2 Cast as a Serial Killer
+imageAlt: 'Gabriel Luna Joins ''Dexter: Resurrection'' Season 2 Cast as a Serial Killer'
 imageCredit: The Movie Database (TMDB)
 image: 'https://image.tmdb.org/t/p/original/jgfmzwfmMh4DTqITVSdtxBKfFE5.jpg'
 imageWidth: 3840

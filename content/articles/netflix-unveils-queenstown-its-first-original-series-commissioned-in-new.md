@@ -10,7 +10,7 @@ date: '2026-07-17T02:30:36.083Z'
 dek: >-
   The eight-episode drama, set in a luxury ski town, stars Rufus Sewell and
   Frances O'Connor.
-metaTitle: Netflix's First New Zealand Series
+metaTitle: 'Netflix Unveils ''Queenstown'', Its First Original Series'
 metaDescription: >-
   Netflix has begun production on its first New Zealand series, an eight-episode
   drama titled 'Queenstown' starring Rufus Sewell and Frances O'Connor.

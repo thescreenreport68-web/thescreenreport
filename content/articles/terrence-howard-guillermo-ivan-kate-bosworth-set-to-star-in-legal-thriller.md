@@ -53,8 +53,8 @@ about:
   - name: Broken Ones
     type: Movie
 imageAlt: >-
-  Broken Ones in The Broken Ones — Terrence Howard, Guillermo Iván, Kate
-  Bosworth Set to Star in Legal Thriller 'Broken Ones'
+  Terrence Howard, Guillermo Iván, Kate Bosworth Set to Star in Legal Thriller
+  'Broken Ones'
 imageCredit: The Movie Database (TMDB)
 image: 'https://image.tmdb.org/t/p/original/vMcskzNmKoXbzTmQv2RAqIw2LoT.jpg'
 imageWidth: 1920

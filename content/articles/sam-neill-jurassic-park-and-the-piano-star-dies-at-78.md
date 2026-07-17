@@ -8,10 +8,10 @@ date: '2026-07-13T09:01:13.003Z'
 dek: >-
   The New Zealand-born actor, known for his role as Dr. Alan Grant, passed away
   in Sydney, his family confirmed.
-metaTitle: 'Sam Neill, Jurassic Park Actor, Dies at 78'
+metaTitle: 'Sam Neill, Jurassic Park and The Piano Star, Dies at 78'
 metaDescription: >-
-  Actor Sam Neill, best known for Jurassic Park and The Piano, has died at the
-  age of 78, according to a family statement.
+  Sam Neill, the actor best known for playing paleontologist Dr. Alan Grant in
+  the Jurassic Park franchise, has died at the age of 78, according to Variety.
 tags:
   - sam neill
   - jurassic park
@@ -117,7 +117,3 @@ Born in Northern Ireland and raised in New Zealand, Neill was a pioneering figur
 Screen Producers Australia CEO Matthew Deaner said, “Sam Neill was one of the great figures of Australian and New Zealand screen. His extraordinary talent and professionalism enriched countless productions and inspired generations of filmmakers and performers.”
 
 Critic David Thomson, summarizing Neill’s career, wrote of his “basic common sense” and described him as “a wry, watchful actor, [of] considerable intelligence.”
-
-## Sources
-- Variety
-- The Hollywood Reporter

@@ -108,7 +108,7 @@ seriesStatus:
   window: ''
   castAdded: []
 ---
-Laura Bailey has publicly pitched herself for a role in Peacock’s upcoming *Dungeon Crawler Carl* [TV series](/tv/x-men-97-season-2-to-feature-innovative-format-change/). The Critical Role star made the pitch during a live edition of Collider’s *Ladies Night* show, according to a report from the outlet.
+Laura Bailey has publicly pitched herself for a role in Peacock’s upcoming *Dungeon Crawler Carl* TV series. The Critical Role star made the pitch during a live edition of Collider’s *Ladies Night* show, according to a report from the outlet.
 
 Bailey, who is currently reading the book series, immediately thought of the project when asked to cast herself and her co-stars in a show of their choice. She revealed her top choice is the character of Princess Donut, Carl’s sapient feline companion. "I want to be Donut in *Dungeon Crawler Carl* so bad," Bailey said.
 

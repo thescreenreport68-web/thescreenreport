@@ -105,6 +105,3 @@ She views AI as potentially useful for "small helpful things" like pre-visualiza
 The use of AI remains a contentious issue in the entertainment industry. SAG-AFTRA has recently endorsed a federal AI policy framework that calls for legislation protecting intellectual property rights and workforce development. Last month, an executive order was signed establishing a voluntary framework for AI companies to provide the government access to new models before release.
 
 Foster's remarks add a prominent voice to the debate, arguing that AI is not a distant future concern but a present-day reality in major studio filmmaking. Her call for artistic domination over the technology frames the challenge as one of creative control rather than outright rejection.
-
-## Sources
-- Deadline

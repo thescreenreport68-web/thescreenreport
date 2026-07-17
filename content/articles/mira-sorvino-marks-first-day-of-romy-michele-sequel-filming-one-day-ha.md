@@ -10,8 +10,8 @@ dek: >-
   long-awaited follow-up to the 1997 cult classic is officially underway.
 metaTitle: Romy and Michele Sequel Starts Filming With Mira Sorvino
 metaDescription: >-
-  Mira Sorvino confirms filming has started on the Romy and Michele sequel,
-  reuniting her with Lisa Kudrow for the Hulu release.
+  Sorvino shared the update on social media, confirming production on the
+  long-awaited follow-up to the 1997 cult classic is officially underway.
 tags:
   - romy and michele
   - mira sorvino

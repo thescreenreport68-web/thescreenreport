@@ -10,8 +10,8 @@ dek: >-
   on her next book, 'The Novelists.'
 metaTitle: 'Elin Hilderbrand on TV Writing, Book Adaptations, and New Novel'
 metaDescription: >-
-  Elin Hilderbrand reveals she has no desire to write for television, even as
-  her novels find new life in series on Peacock and Netflix.
+  According to Deadline, Hilderbrand made the comments this weekend, as the
+  series adaptation of her novel “The Five-Star Weekend” premiered on Peacock.
 tags:
   - elin hilderbrand tv adaptation
   - elin hilderbrand
@@ -49,9 +49,7 @@ faq:
 about:
   - name: The Five-Star Weekend
     type: TV Series
-imageAlt: >-
-  Elin Hilderbrand in The Five-Star Weekend — Elin Hilderbrand Has No Interest
-  in Writing for TV, Despite Book Adaptations
+imageAlt: 'Elin Hilderbrand Has No Interest in Writing for TV, Despite Book Adaptations'
 imageCredit: The Movie Database (TMDB)
 image: 'https://image.tmdb.org/t/p/original/lq2aJdPlyOo11aBwojmLvGjlJS1.jpg'
 imageWidth: 1920

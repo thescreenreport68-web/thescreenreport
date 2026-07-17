@@ -10,7 +10,7 @@ date: '2026-07-04T07:38:20.300Z'
 dek: >-
   The country star and his wife shared a video ahead of the couple's wedding,
   calling the gift 'transformative' for their Nashville nonprofit.
-metaTitle: 'Brad Paisley, Kimberly Thank Taylor Swift, Travis Kelce for Donation'
+metaTitle: 'Brad Paisley, Kimberly Thank Taylor Swift, Travis Kelce'
 metaDescription: >-
   Brad Paisley and Kimberly Williams-Paisley have thanked Taylor Swift and
   Travis Kelce for a donation to their charity, The Store, ahead of the couple's
@@ -98,6 +98,3 @@ The Store, launched in 2020, aims to provide groceries with dignity and choice t
 The gift to The Store was part of a larger charitable effort. Rolling Stone reports that on Thursday, Swift and Kelce donated $26 million across 20 charities in the United States. The charities are based in cities with personal connections to the couple, including Los Angeles, Nashville, Swift's hometown of Reading, Pennsylvania, and Kelce's hometown of Cleveland.
 
 In January, the nonprofit thanked her for a "generous gift" included in her year-end giving.
-
-## Sources
-* Rolling Stone

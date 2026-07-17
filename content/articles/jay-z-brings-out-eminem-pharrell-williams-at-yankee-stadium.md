@@ -108,7 +108,7 @@ officialPost:
   url: ''
 ---
 
-Jay-Z brought out surprise guests Eminem and Pharrell Williams during the second night of his three-show run at Yankee Stadium, according to a report from [Rolling Stone](/music/noah-kahan-headlines-rolling-stone-s-first-ever-stateside-festival/). The July 2026 concert was dedicated to his landmark 2001 album, *The Blueprint*.
+Jay-Z brought out surprise guests Eminem and Pharrell Williams during the second night of his three-show run at Yankee Stadium, according to a report from Rolling Stone. The July 2026 concert was dedicated to his landmark 2001 album, *The Blueprint*.
 
 Eminem joined Jay-Z to perform their collaborative track “Renegade.” The performance marked their first time playing the song live together since 2010. Eminem also stayed onstage to perform his hit “Lose Yourself” before Jay-Z closed the *Blueprint* portion of the set with “Blueprint (Momma Loves Me).”
 

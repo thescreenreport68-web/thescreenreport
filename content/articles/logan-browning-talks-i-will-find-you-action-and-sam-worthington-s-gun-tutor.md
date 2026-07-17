@@ -10,7 +10,7 @@ date: '2026-07-12T11:07:36.143Z'
 dek: >-
   The actor discusses her role as FBI agent Sarah Greer in the new Netflix
   thriller and the surprising lessons from her co-star.
-metaTitle: Logan Browning on 'I Will Find You' Action Scenes and Sam Worthington
+metaTitle: Logan Browning on 'I Will Find You' Action Scenes
 metaDescription: >-
   Logan Browning reveals details about filming Harlan Coben's Netflix series 'I
   Will Find You,' including Sam Worthington teaching her to reload a gun.
@@ -121,7 +121,7 @@ She plays Sarah Greer, an FBI agent who is partnered with her father, Max Willia
 
 ## What is 'I Will Find You' about?
 
-The series follows David Burroughs, played by Sam Worthington, a man who escapes prison after learning his son, whom he was convicted of murdering, may still be alive. Browning's character and her father are part of the team hunting him, though she ultimately helps clear his name. The show is based on a novel by [Harlan Coben](/tv/colin-woodell-kj-apa-diane-guerrero-to-star-in-netflix-s-myron-bolitar/).
+The series follows David Burroughs, played by Sam Worthington, a man who escapes prison after learning his son, whom he was convicted of murdering, may still be alive. Browning's character and her father are part of the team hunting him, though she ultimately helps clear his name. The show is based on a novel by Harlan Coben.
 
 ## What was it like filming the action scenes?
 

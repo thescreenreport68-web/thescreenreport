@@ -10,13 +10,12 @@ dek: >-
   engage in "politically correct" casting.
 metaTitle: Andy Serkis on 'Hunt for Gollum' Cast Diversity
 metaDescription: >-
-  Andy Serkis addresses fan criticism over the lack of diversity in his upcoming
-  'Lord of the Rings: The Hunt for Gollum' cast.
+  Andy Serkis has directly addressed criticism over the lack of diversity in the
+  cast for his upcoming film The Lord of the Rings: The Hunt for Gollum .
 tags:
   - hunt for gollum casting
   - andy serkis
   - 'the lord of the rings: the hunt for gollum'
-  - bbc
   - anya taylor-joy
   - leo woodall
 targetKeyword: hunt for gollum casting
@@ -52,9 +51,7 @@ faq:
 about:
   - name: 'The Lord of the Rings: The Hunt for Gollum'
     type: Movie
-imageAlt: >-
-  The Lord of the Rings: The Hunt for Gollum in The Lord of the Rings: The Hunt
-  for Gollum — Andy Serkis Defends 'Hunt for Goll
+imageAlt: Andy Serkis Defends 'Hunt for Gollum' Casting Amid Diversity Criticism
 imageCredit: The Movie Database (TMDB)
 image: 'https://image.tmdb.org/t/p/original/aIw4c18EWwQmIWZv0W6s60y47aB.jpg'
 imageWidth: 1920
@@ -131,6 +128,6 @@ According to The Hollywood Reporter, the film boasts a star-studded lineup. It w
 
 ## When Does the Film Come Out and What Is It About?
 
-*The Lord of the Rings: The Hunt for Gollum* is scheduled for a worldwide theatrical release on December 17, 2027, from [Warner Bros](/movies/josh-gad-to-join-margot-robbie-and-bradley-cooper-s-ocean-s-prequel-ex/). Pictures. Serkis described the story as a "deep dive into the psychology and history of Gollum before he became Gollum." He explained that it "sits absolutely between *The Hobbit* and *The Lord of the Rings* trilogies" and follows Gandalf and a character named Strider on a quest to find Gollum and learn about the One Ring.
+*The Lord of the Rings: The Hunt for Gollum* is scheduled for a worldwide theatrical release on December 17, 2027, from Warner Bros. Pictures. Serkis described the story as a "deep dive into the psychology and history of Gollum before he became Gollum." He explained that it "sits absolutely between *The Hobbit* and *The Lord of the Rings* trilogies" and follows Gandalf and a character named Strider on a quest to find Gollum and learn about the One Ring.
 
 In the same BBC interview, Serkis also clarified that he is not directing another planned *Lord of the Rings* film, *Shadow of the Past*, which is being written by Stephen Colbert. "I think that that post has been taken, put it that way," he said.

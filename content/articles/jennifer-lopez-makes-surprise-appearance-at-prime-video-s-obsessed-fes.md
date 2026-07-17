@@ -8,10 +8,10 @@ date: '2026-06-26T23:43:44.952Z'
 dek: >-
   The singer and actress made an unannounced appearance to introduce a panel for
   the upcoming series 'Off Campus'.
-metaTitle: Jennifer Lopez Makes Surprise Appearance at Prime Video Obsessed Fest
+metaTitle: Jennifer Lopez Surprises Fans at Prime Video's Obsessed Fest
 metaDescription: >-
-  Jennifer Lopez surprised attendees at Prime Video's Obsessed Fest event,
-  appearing to introduce the panel for the new series 'Off Campus'.
+  Jennifer Lopez made a surprise appearance at Prime Video's Obsessed Fest on
+  June 7, 2026, to introduce a panel for the upcoming series Off Campus .
 tags:
   - jennifer lopez
   - prime video
@@ -100,4 +100,3 @@ Her filmography has grossed over $1.9 billion worldwide, and she has sold over 8
 ## Sources
 - [Jennifer Lopez - Wikipedia](https://en.wikipedia.org/wiki/Jennifer_Lopez)
 - [Amazon Prime Video](https://www.amazon.com/primevideo)
-- The Hollywood Reporter

@@ -10,9 +10,9 @@ dek: >-
   Rhaenyra's sons bastards in the latest episode.
 metaTitle: Steve Toussaint Teases House of the Dragon Season 3 Fallout
 metaDescription: >-
-  Steve Toussaint explains the explosive moment Corlys Velaryon defied Rhaenyra
-  Targaryen in House of the Dragon Season 3, Episode 3, and what it means for
-  his character.
+  Toussaint, who plays Corlys Velaryon, broke down a pivotal scene from Season
+  3, Episode 3, where Corlys publicly calls Queen Rhaenyra Targaryen's sons
+  bastards.
 tags:
   - house of the dragon
   - steve toussaint
@@ -131,6 +131,3 @@ Toussaint noted the character's history with mortality, recalling a scrapped sce
 ## What is Corlys's motivation now?
 
 With his wife and children gone, the Sea Snake's sole remaining purpose is to secure his family's legacy. Toussaint indicated that Corlys is driven by a need to "set up these two boys"—Addam and Alyn—to continue the Velaryon line. The actor suggested that if Rhaenyra had ordered his execution for the outburst, Corlys would have accepted it, seeing it as a worthy end.
-
-## Sources
-- Variety

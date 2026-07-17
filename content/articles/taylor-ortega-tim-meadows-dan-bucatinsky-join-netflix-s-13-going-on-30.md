@@ -42,8 +42,8 @@ faq:
       The Comeback.
   - q: Is the original '13 Going on 30' available to stream?
     a: >-
-      The reference report does not specify the current streaming home for the
-      original 2004 film starring Jennifer Garner and Mark Ruffalo.
+      Yes. The original 2004 film starring Jennifer Garner and Mark Ruffalo is
+      available to stream on Netflix.
   - q: Who is directing the reboot?
     a: >-
       Brett Haley, known for Netflix's People We Meet on Vacation, is directing
@@ -109,7 +109,7 @@ Taylor Ortega, Tim Meadows, and Dan Bucatinsky have joined the cast of Netflix's
 They join the previously announced cast members Emily Bader, Logan Lerman, Adeline Rudolph, and Jessica Alba. Details about the plot and their specific characters have not been revealed.
 
 
-Production on the project kicked off in Los Angeles last month. The original film's star, [Jennifer Garner](/celebrity/elin-hilderbrand-has-no-interest-in-writing-for-tv-despite-book-adaptations/), is onboard as an executive producer.
+Production on the project kicked off in Los Angeles last month. The original film's star, Jennifer Garner, is onboard as an executive producer.
 
 ## Who is behind the camera?
 

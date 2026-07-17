@@ -10,9 +10,8 @@ dek: >-
   crediting Stiller's intelligence for the film's success.
 metaTitle: Danny McBride Says Tropic Thunder Could Get Made Today
 metaDescription: >-
-  Danny McBride believes the controversial 2008 comedy 'Tropic Thunder' could be
-  made today with the right creative mind, contrasting with Ben Stiller's recent
-  doubts.
+  The 'Righteous Gemstones' star disagrees with director Ben Stiller's doubts,
+  crediting Stiller's intelligence for the film's success.
 tags:
   - tropic thunder
   - danny mcbride
@@ -130,5 +129,3 @@ McBride's position directly contrasts with that of the film's director. In a 202
 ## Where can you watch 'Tropic Thunder'?
 
 As of July 2026, the film is available to stream on several platforms in the US, including Amazon Prime Video, Paramount+, and MGM+. The R-rated comedy, which has an 82% critics score on Rotten Tomatoes, follows a group of actors whose war movie shoot descends into real danger in the jungles of Southeast Asia.
-
-## Sources

@@ -11,11 +11,10 @@ dek: >-
 metaTitle: Clave Especial on American & Mexican Music Influence
 metaDescription: >-
   Clave Especial has opened up about the dual musical forces that shape their
-  corridos sound. Their discography also includes the album 'Rapido Soy'.
+  corridos sound. Their discography also includes the single 'Rápido Soy'.
 tags:
   - clave especial music influence
   - clave especial
-  - billboard
   - mija no te asustes
 targetKeyword: clave especial music influence
 keyTakeaways:
@@ -32,8 +31,10 @@ faq:
       narrative ballads.
   - q: Has Clave Especial had any songs on the Billboard charts?
     a: >-
-      As of July 2026, there is no record of Clave Especial having a song on the
-      Billboard Hot 100 chart.
+      Yes. Their 2026 single 'FERRARI', with Fuerza Regida and Los Gemelos de
+      Sinaloa, reached No. 83 on the Billboard Hot 100, and the group has also
+      notched multiple entries on Billboard's Hot Latin Songs and Regional
+      Mexican Airplay charts.
   - q: Where can I listen to Clave Especial's music?
     a: >-
       Their music is available on major streaming platforms. Popular tracks to
@@ -98,10 +99,10 @@ The conversation highlights the cross-cultural currents that fuel contemporary r
 
 ## What is Clave Especial's latest release?
 
-The group's most recent studio album, 'MIJA NO TE ASUSTES', arrived in 2025. Their discography also includes the album 'Rapido Soy'.
+The group's most recent studio album, 'MIJA NO TE ASUSTES', arrived in 2025. Their discography also includes the single 'Rápido Soy'.
 
 ## How popular is Clave Especial?
 
-While they haven't yet charted on the Billboard Hot 100, the band has built a substantial digital audience. Their most-played tracks include 'COMO CAPO', 'NO SON DORITOS', and 'FERRARI'.
+The band has built a substantial digital audience, and their single 'FERRARI', with Fuerza Regida and Los Gemelos de Sinaloa, reached No. 83 on the Billboard Hot 100 in 2026. Their most-played tracks include 'COMO CAPO', 'NO SON DORITOS', and 'FERRARI'.
 
 Clave Especial's music is firmly rooted in the corridos tradition. The group's willingness to discuss diverse influences underscores the evolving nature of regional Mexican music.

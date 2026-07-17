@@ -10,11 +10,10 @@ date: '2026-07-05T21:01:16.233Z'
 dek: >-
   The 'ER' star says his TV schedule prevented him from taking parts later
   played by Matt Damon and Jeremy Davies.
-metaTitle: 'Noah Wyle Missed Roles in Saving Private Ryan, Good Night, and Good Luck'
+metaTitle: Noah Wyle Missed Roles in Saving Private Ryan
 metaDescription: >-
-  Noah Wyle reveals he was offered roles in 'Saving Private Ryan' and 'Good
-  Night, and Good Luck' but couldn't take them due to filming 'ER,' according to
-  Variety.
+  The 'ER' star says his TV schedule prevented him from taking parts later
+  played by Matt Damon and Jeremy Davies. "Matt Damon was Private Ryan.
 tags:
   - noah wyle roles
   - noah wyle

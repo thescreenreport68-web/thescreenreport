@@ -126,6 +126,3 @@ The format demonstrates the creative freedom the team is exercising following th
 **X-Men '97** Season 2 is set to debut on Disney Plus in July 2026. The long wait between seasons, which spanned over two years, was attributed to production problems by producer Larry Houston in an interview with The Direct. He stated those issues were a "one-off" and assured fans that future seasons would not face similar delays.
 
 The season continues the story from the shocking Season 1 finale, with the X-Men facing the looming threat of Apocalypse across multiple timelines.
-
-## Sources
-- https://www.disneyplus.com

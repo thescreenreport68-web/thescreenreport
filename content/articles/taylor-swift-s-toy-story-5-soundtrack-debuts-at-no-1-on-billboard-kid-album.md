@@ -49,8 +49,8 @@ about:
   - name: Toy Story 5
     type: Movie
 imageAlt: >-
-  Toy Story 5 soundtrack in Toy Story 5 — Taylor Swift's 'Toy Story 5'
-  Soundtrack Debuts at No. 1 on Billboard Kid Albums Chart
+  Taylor Swift's 'Toy Story 5' Soundtrack Debuts at No. 1 on Billboard Kid
+  Albums Chart
 imageCredit: The Movie Database (TMDB)
 image: 'https://image.tmdb.org/t/p/original/qjTqY5coNiz6sVtPng40IzltsoN.jpg'
 imageWidth: 3840

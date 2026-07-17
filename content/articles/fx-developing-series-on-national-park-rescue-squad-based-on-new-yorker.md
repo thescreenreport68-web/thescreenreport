@@ -8,7 +8,7 @@ date: '2026-07-16T22:31:08.790Z'
 dek: >-
   The project, based on Paige Williams' reporting, will be executive produced by
   Nina Jacobson and Brad Simpson via Color Force.
-metaTitle: FX Developing Series on National Park Rescue Squad Based
+metaTitle: FX Developing Series on National Park Rescue Squad
 metaDescription: >-
   FX is developing a TV series based on a New Yorker article about a volunteer
   search and rescue squad in Great Smoky Mountains National Park.

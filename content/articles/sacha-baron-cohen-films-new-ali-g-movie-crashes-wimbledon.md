@@ -10,8 +10,9 @@ dek: >-
   filming for a secret new feature.
 metaTitle: 'Ali G New Movie: Sacha Baron Cohen Films at Wimbledon'
 metaDescription: >-
-  Sacha Baron Cohen's Ali G character was seen at Wimbledon as part of filming
-  for a new movie, the first since 2002's 'Ali G Indahouse'.
+  The comedian's iconic character was spotted at the tennis tournament amid
+  filming for a secret new feature. The film has a 59% critics score on Rotten
+  Tomatoes.
 tags:
   - ali g new movie
   - sacha baron cohen
@@ -42,9 +43,7 @@ faq:
 about:
   - name: Ali G Indahouse
     type: Movie
-imageAlt: >-
-  Ali G Indahouse in Ali G Indahouse — Sacha Baron Cohen Films New Ali G Movie,
-  Crashes Wimbledon
+imageAlt: 'Sacha Baron Cohen Films New Ali G Movie, Crashes Wimbledon'
 imageCredit: The Movie Database (TMDB)
 image: 'https://image.tmdb.org/t/p/original/ll5ktqAG3EOlCS8bpyoC0kYSSe9.jpg'
 imageWidth: 1920

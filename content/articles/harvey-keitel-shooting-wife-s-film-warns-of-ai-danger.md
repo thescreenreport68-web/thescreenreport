@@ -10,9 +10,8 @@ dek: >-
   Michael Caine audiobook as a key concern during a festival appearance.
 metaTitle: 'Harvey Keitel on AI Danger, New Film With Wife Daphna Kastner'
 metaDescription: >-
-  Harvey Keitel is working on a new film written by his wife, Daphna Kastner,
-  and voiced strong concerns about the rise of artificial intelligence in the
-  industry.
+  The veteran actor revealed the independent project and cited an AI-generated
+  Michael Caine audiobook as a key concern during a festival appearance.
 tags:
   - harvey keitel
   - daphna kastner
@@ -115,4 +114,4 @@ The actor suggested this highlights a fundamental limitation. "[It’s] this new
 
 ## Why was Harvey Keitel at the Karlovy Vary festival?
 
-Keitel was at the Czech festival to present a screening of [Martin Scorsese](/celebrity/robert-richardson-wants-to-work-with-paul-thomas-anderson/)’s "Mean Streets." He used the platform to speak broadly about the importance of arts and festivals in the current global climate. "Festivals are more important today than ever before in my lifetime because of the social situation around the world now," he said. The actor also lamented that "plenty of new talents... are out of work" and argued that the arts are needed more than ever.
+Keitel was at the Czech festival to present a screening of Martin Scorsese’s "Mean Streets." He used the platform to speak broadly about the importance of arts and festivals in the current global climate. "Festivals are more important today than ever before in my lifetime because of the social situation around the world now," he said. The actor also lamented that "plenty of new talents... are out of work" and argued that the arts are needed more than ever.

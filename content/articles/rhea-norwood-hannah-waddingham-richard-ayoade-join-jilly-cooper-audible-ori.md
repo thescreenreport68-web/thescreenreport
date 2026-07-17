@@ -10,11 +10,10 @@ date: '2026-07-07T07:01:29.067Z'
 dek: >-
   The audio drama, set for release in July 2026, features a star-studded voice
   cast including Corey Mylchreest, Vivian Oparah, and Bessie Carter.
-metaTitle: Jilly Cooper Audible Original 'A Pressing Engagement' Cast Announced
+metaTitle: Jilly Cooper Audible Original 'A Pressing Engagement'
 metaDescription: >-
-  Jilly Cooper's short story 'A Pressing Engagement' is being adapted into an
-  Audible Original with a voice cast featuring Rhea Norwood, Hannah Waddingham,
-  and Richard Ayoade.
+  The audio drama, set for release in July 2026, features a star-studded voice
+  cast including Corey Mylchreest, Vivian Oparah, and Bessie Carter.
 tags:
   - jilly cooper audible
   - a pressing engagement

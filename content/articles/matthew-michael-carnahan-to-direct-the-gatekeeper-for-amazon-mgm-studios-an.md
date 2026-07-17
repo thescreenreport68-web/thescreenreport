@@ -48,8 +48,8 @@ about:
   - name: The Gatekeeper
     type: Movie
 imageAlt: >-
-  The Gatekeeper in The Gatekeeper — Matthew Michael Carnahan to Direct 'The
-  Gatekeeper' for Amazon MGM Studios and Di Bonavent
+  Matthew Michael Carnahan to Direct 'The Gatekeeper' for Amazon MGM Studios and
+  Di Bonaventura Pictures
 imageCredit: The Movie Database (TMDB)
 image: 'https://image.tmdb.org/t/p/original/tkoBtfV7Z0TXjEcbmbsWkUtjnIh.jpg'
 imageWidth: 3840
@@ -102,7 +102,7 @@ keyPoints:
   - It follows ex-operative Dez Limerick as he uncovers a conspiracy.
 ---
 
-Matthew Michael Carnahan is set to direct *The Gatekeeper* for [Amazon MGM Studios](/movies/joe-eszterhas-confirms-basic-instinct-reboot-script-is-finished-catherine-t/) and Di Bonaventura Pictures, according to Deadline.
+Matthew Michael Carnahan is set to direct *The Gatekeeper* for Amazon MGM Studios and Di Bonaventura Pictures, according to Deadline.
 
 ## What is The Gatekeeper about?
 

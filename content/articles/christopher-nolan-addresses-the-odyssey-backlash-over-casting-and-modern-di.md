@@ -10,7 +10,7 @@ date: '2026-07-12T13:03:07.899Z'
 dek: >-
   The director says pre-release criticism is 'irrelevant' and explains his
   creative choice to make the ancient epic feel fresh for modern audiences.
-metaTitle: 'Christopher Nolan Responds to The Odyssey Backlash, Explains Modern Dialogue'
+metaTitle: Christopher Nolan Responds to The Odyssey Backlash
 metaDescription: >-
   Christopher Nolan addresses online criticism of his upcoming film The Odyssey,
   explaining why he chose to use modern dialogue in the epic adaptation.
@@ -128,4 +128,4 @@ Speaking to Channel 4 News, Nolan explained his creative choice to use contempor
 
 The director drew a parallel to his experience with the *Dark Knight* trilogy, specifically the initial skepticism around Heath Ledger's casting as the Joker. Nolan noted that fans ultimately appreciated the sincerity of the attempt. "In the end, fans of the property — even when we were doing something that was not what they would have done — enjoyed the sincerity of the attempt to put as good a version of it on screen as we could," he added.
 
-Following the film's casting announcement, some commentators, including Matt Walsh and Elon Musk on social media platform X, criticized specific casting decisions. The epic stars [Matt Damon](/celebrity/the-pitt-star-noah-wyle-was-offered-roles-in-saving-private-ryan-and-g/) as Odysseus, Anne Hathaway as Penelope, and Tom Holland as Telemachus. *The Odyssey* arrives in theaters July 17, 2026.
+Following the film's casting announcement, some commentators, including Matt Walsh and Elon Musk on social media platform X, criticized specific casting decisions. The epic stars Matt Damon as Odysseus, Anne Hathaway as Penelope, and Tom Holland as Telemachus. *The Odyssey* arrives in theaters July 17, 2026.

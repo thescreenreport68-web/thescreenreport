@@ -10,8 +10,8 @@ dek: >-
   marking a genre expansion for the studio's adult animation slate.
 metaTitle: Dark Shadows Animated Series Announced by Warner Bros. Animation
 metaDescription: >-
-  Warner Bros. Animation announced a new Dark Shadows animated series at Annecy,
-  reimagining the 1960s cult TV classic for a new medium.
+  The gothic soap opera cult classic is being reimagined as a new animated show,
+  marking a genre expansion for the studio's adult animation slate.
 tags:
   - dark shadows
   - warner bros. animation

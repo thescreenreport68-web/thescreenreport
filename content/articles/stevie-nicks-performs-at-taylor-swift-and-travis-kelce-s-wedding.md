@@ -11,8 +11,8 @@ dek: >-
   America hosts.
 metaTitle: Stevie Nicks Plays at Taylor Swift and Travis Kelce Wedding
 metaDescription: >-
-  Stevie Nicks made a surprise appearance at Taylor Swift and Travis Kelce's
-  wedding reception at Madison Square Garden on Friday night.
+  The Fleetwood Mac singer took the stage following the couple's ceremony.
+  Details of her performance, including which song she played, remain unclear.
 tags:
   - stevie nicks
   - taylor swift

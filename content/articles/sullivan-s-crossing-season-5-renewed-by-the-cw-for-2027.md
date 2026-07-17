@@ -10,8 +10,9 @@ dek: >-
   new head writer taking over the drama.
 metaTitle: Sullivan's Crossing Season 5 Renewed for 2027 on CW
 metaDescription: >-
-  The CW has renewed its romantic drama Sullivan's Crossing for a fifth season,
-  set to premiere in 2027. home since its debut. The show's avail.
+  The CW has renewed the romantic drama Sullivan's Crossing for a 10-episode
+  fifth season, set to begin filming in Nova Scotia this summer and premiere
+  in 2027.
 tags:
   - sullivan's crossing season 5
   - sullivan's crossing
@@ -54,9 +55,7 @@ faq:
 about:
   - name: Sullivan's Crossing
     type: TV Series
-imageAlt: >-
-  Sullivan's Crossing in Sullivan's Crossing — Sullivan's Crossing Season 5
-  Renewed by The CW for 2027
+imageAlt: Sullivan's Crossing Season 5 Renewed by The CW for 2027
 imageCredit: The Movie Database (TMDB)
 image: 'https://image.tmdb.org/t/p/original/zZAqez7FW5bnQwkGcpR3evWGgBp.jpg'
 imageWidth: 2048
@@ -139,8 +138,3 @@ The series, starring Morgan Kohan and Chad Michael Murray, has delivered strong 
 The show's availability on Netflix in the U.S. has provided a substantial boost. Its first three seasons launched on the streaming service last summer, and the recently concluded Season 4 debuted on Netflix on June 30. In its opening week, it ranked #6 on Netflix's global English-language series chart with three million views.
 
 *Sullivan's Crossing* is executive produced by Roma Roth, Christopher E. Perry, and Aren Prupas, in association with Bell Media, The CW, and Fremantle. The series is distributed internationally by Fremantle.
-
-## Sources
-
-- https://www.boxofficemojo.com/
-- https://www.netflix.com/
