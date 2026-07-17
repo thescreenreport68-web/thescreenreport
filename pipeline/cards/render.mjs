@@ -98,9 +98,12 @@ export async function coverCrop(buf, W, H, focus) {
  * job = {
  *   category: key of CARDS.categories, breaking?: boolean,
  *   headline: string (≤12 words), redSpan?: exact substring to accent,
- *   sub: string (detail line), creditLine: "PHOTO: … | VIA …",
- *   photo: Buffer | absolute path,
+ *   sub: string (detail line),
+ *   photo: Buffer | absolute path, focus?: {x,y} fractions from the framing agent,
  * }
+ * NO on-image source/photo credits — owner hard rule 2026-07-17: outlet names on the
+ * image read as reposted content to Instagram's originality ranking. Provenance lives
+ * in the ledger only. The wordmark + category tab are the ONLY marks on a card.
  * Returns { jpeg: Buffer, meta: { w, h, headlineSize, category, somber } }.
  */
 export async function renderCard(job) {
@@ -137,12 +140,6 @@ export async function renderCard(job) {
 
   // ── overlay tree (transparent over the photo zone; band owns the bottom)
   const tree = h("div", { width: "100%", height: "100%", display: "flex", flexDirection: "column", position: "relative", fontFamily: "Karla" }, [
-    // photo credit pill (on-photo, top-right)
-    h("div", {
-      position: "absolute", top: "24px", right: "28px", display: "flex",
-      backgroundColor: "rgba(0,0,0,0.40)", borderRadius: "4px", padding: "8px 14px",
-      color: "rgba(255,255,255,0.85)", fontSize: "19px", letterSpacing: "2.3px", fontWeight: 700,
-    }, String(job.creditLine || "").toUpperCase()),
     // ink band
     h("div", { position: "absolute", top: `${PHOTO_H}px`, left: "0", width: `${W}px`, height: `${BAND_H}px`, display: "flex", backgroundColor: CARDS.ink }),
     // category tab bridging the seam
