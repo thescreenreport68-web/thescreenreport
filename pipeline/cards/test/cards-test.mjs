@@ -194,16 +194,34 @@ await t("coverCrop centers the window on the focal point", async () => {
   assert.ok(blue >= 12, `expected right-side (blue) dominance, got ${blue}/16 blue pixels`);
 });
 await t("visionQC hard-fails a cut face even when the model passes on score", async () => {
-  mock(async () => ({ score: 88, pass: true, faceCut: true, problems: [] }));
+  mock(async () => ({ score: 88, pass: true, faceCut: true, outletMark: false, problems: [] }));
   const out = await visionQC({ jpeg: Buffer.from("x"), card: { headline: "h" }, story: { entities: [] } });
   assert.equal(out.pass, false);
   assert.ok(out.problems[0].includes("face cut"));
 });
 
+// ── no source credits anywhere on the card (owner 2026-07-17) ────────────────
+await t("visionQC hard-fails any visible outlet mark/credit on the image", async () => {
+  mock(async () => ({ score: 90, pass: true, faceCut: false, outletMark: true, problems: [] }));
+  const out = await visionQC({ jpeg: Buffer.from("x"), card: { headline: "h" }, story: { entities: [] } });
+  assert.equal(out.pass, false);
+  assert.ok(out.problems[0].includes("credit"));
+});
+await t("renderer source contains no credit-pill path at all", async () => {
+  const fs = await import("node:fs");
+  const src = fs.readFileSync(new URL("../render.mjs", import.meta.url), "utf8");
+  assert.ok(!/creditLine/.test(src.replace(/\/\/[^\n]*|\/\*[\s\S]*?\*\//g, "").replace(/^\s*\*.*$/gm, "")), "render.mjs must not draw credits");
+});
+await t("headline writer rejects text crediting a source", async () => {
+  mock(async () => ({ headline: "Studio confirms sequel, via Variety", redSpan: "", sub: "s" }));
+  const out = await writeHeadline({ title: "t" }, packOf(), { category: "news", somber: false });
+  assert.equal(out, null); // both attempts credit a source → dropped
+});
+
 // ── renderer ─────────────────────────────────────────────────────────────────
 const fakePhoto = await sharp({ create: { width: 1600, height: 1000, channels: 3, background: { r: 90, g: 110, b: 140 } } }).jpeg().toBuffer();
 await t("renderCard is deterministic (identical bytes on re-render)", async () => {
-  const job = { category: "news", headline: "Determinism test headline here", redSpan: "test", sub: "Stable sub-line.", creditLine: "Photo: Fixture", photo: fakePhoto };
+  const job = { category: "news", headline: "Determinism test headline here", redSpan: "test", sub: "Stable sub-line.", photo: fakePhoto };
   const a = await renderCard(job);
   const b = await renderCard(job);
   assert.ok(a.jpeg.equals(b.jpeg));
@@ -211,7 +229,7 @@ await t("renderCard is deterministic (identical bytes on re-render)", async () =
 await t("news tab region renders brand red; memoriam renders charcoal", async () => {
   const { photoH } = CARDS.canvas[CARDS.aspect];
   const probe = async (category) => {
-    const { jpeg } = await renderCard({ category, headline: "Tab color probe headline", sub: "s", creditLine: "c", photo: fakePhoto });
+    const { jpeg } = await renderCard({ category, headline: "Tab color probe headline", sub: "s", photo: fakePhoto });
     const { data } = await sharp(jpeg).extract({ left: 90, top: photoH - 20, width: 8, height: 8 }).raw().toBuffer({ resolveWithObject: true });
     return [data[0], data[1], data[2]];
   };
@@ -222,10 +240,10 @@ await t("news tab region renders brand red; memoriam renders charcoal", async ()
 });
 await t("renderCard fails closed on an unfittable headline (never clips)", async () => {
   const long = Array(28).fill("EXTRAORDINARILY LONG WORDS").join(" ");
-  await assert.rejects(() => renderCard({ category: "news", headline: long, sub: "s", creditLine: "c", photo: fakePhoto }));
+  await assert.rejects(() => renderCard({ category: "news", headline: long, sub: "s", photo: fakePhoto }));
 });
 await t("breaking flag renders the BREAKING tab regardless of category", async () => {
-  const { meta } = await renderCard({ category: "tv", breaking: true, headline: "Show canceled after one season", sub: "s", creditLine: "c", photo: fakePhoto });
+  const { meta } = await renderCard({ category: "tv", breaking: true, headline: "Show canceled after one season", sub: "s", photo: fakePhoto });
   assert.equal(meta.category, "breaking");
 });
 
