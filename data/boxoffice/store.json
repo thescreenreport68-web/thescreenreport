@@ -562,11 +562,11 @@
    "key": "the-odyssey-ev-weekend-d0|BO-WEEKEND",
    "eventSlug": "the-odyssey-ev-weekend-d0",
    "form": "BO-WEEKEND",
-   "reason": "fidelity: 5 unsupported figures/claims — draft-level failure",
-   "tries": 5,
-   "at": "2026-07-17T20:33:30.261Z",
+   "reason": "words 132 < 180 (owner-set ~200-word minimum)",
+   "tries": 6,
+   "at": "2026-07-17T21:33:07.685Z",
    "dead": true,
-   "expiresAt": "2026-07-20T20:33:30.261Z"
+   "expiresAt": "2026-07-20T21:33:07.685Z"
   },
   {
    "key": "winning-ai-search-ev-streaming-arrival|NOW-STREAMING",
@@ -588,11 +588,11 @@
    "key": "the-odyssey-ev-record-d0|BO-RECORD",
    "eventSlug": "the-odyssey-ev-record-d0",
    "form": "BO-RECORD",
-   "reason": "fidelity: 6 unsupported figures/claims — draft-level failure",
-   "tries": 4,
-   "at": "2026-07-17T20:39:52.711Z",
+   "reason": "words 168 < 180 (owner-set ~200-word minimum)",
+   "tries": 5,
+   "at": "2026-07-17T21:40:31.767Z",
    "dead": true,
-   "expiresAt": "2026-07-20T20:39:52.711Z"
+   "expiresAt": "2026-07-20T21:40:31.767Z"
   },
   {
    "key": "rust-creek-netflix-top10-w2026-07-12|NETFLIX-TOP10",
@@ -653,16 +653,24 @@
    "at": "2026-07-17T21:09:52.104Z",
    "dead": true,
    "expiresAt": "2026-07-20T21:09:52.104Z"
+  },
+  {
+   "key": "odyssey-ev-opening|BO-OPENING",
+   "eventSlug": "odyssey-ev-opening",
+   "form": "BO-OPENING",
+   "reason": "words 141 < 180 (owner-set ~200-word minimum)",
+   "tries": 1,
+   "at": "2026-07-17T21:35:46.136Z"
   }
  ],
- "zeroStreak": 0,
+ "zeroStreak": 1,
  "daySpend": {
   "laDay": "2026-07-17",
-  "usd": 0.68298
+  "usd": 0.74045
  },
  "pace": {
-  "tokens": 3,
-  "lastMs": 1784322043803
+  "tokens": 3.4022757777777777,
+  "lastMs": 1784323854044
  },
  "lastAuditDay": "2026-07-17"
 }
