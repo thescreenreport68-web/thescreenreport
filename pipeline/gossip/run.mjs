@@ -22,6 +22,7 @@ import { writeGossip } from "./writer.mjs";
 import { buildAnchors, substituteAnchors, synthesize } from "./synthesizer.mjs";
 import { refineHeadline } from "./headline.mjs";
 import { semanticSeoPass } from "./seoAudit.mjs";
+import { voicePass } from "./voice.mjs";
 import { legalGate } from "./legalGate.mjs";
 import { qualityCheck } from "./qualityGate.mjs";
 import { verifyQuotes } from "./quoteGuard.mjs";
@@ -109,6 +110,7 @@ export async function runGossip(topic, {
   maxFix = 3, ledeStyle = "scene",
   synth = false, synthImpl = synthesize,
   headline = false, headlineImpl = refineHeadline,
+  voice = false, voiceImpl = voicePass,
 } = {}) {
   // Stage 3 — receipts (fail-closed). CHEAP-FIRST (Phase 1): extract the PRIMARY source only, let the
   // editorial gate reject non-stories, and pay for corroboration ONLY on stories the gate keeps — a
@@ -222,6 +224,21 @@ export async function runGossip(topic, {
   article.keyTakeaways = ensureTakeaways(article);
   article.faq = ensureFaq(article);
 
+  // Stage 6c2 — VOICE PASS (Phase 4, flagged): quote-masked native-register polish; deterministic guards
+  // (token integrity, number multiset, no new names, ±25% length, subheads) auto-revert on any violation,
+  // then the verbatim-quote wall re-checks the polished prose — cosmetic can never cost accuracy.
+  let voiceReport = null;
+  if (voice) {
+    try {
+      const v = await voiceImpl({ body: article.body });
+      if (v.applied) {
+        const qc = verifyQuotes({ ...article, body: v.body }, bundle);
+        if (qc.ok) { article.body = v.body; voiceReport = { applied: true }; }
+        else voiceReport = { applied: false, reason: "quote-wall" };
+      } else voiceReport = { applied: false, reason: v.reason };
+    } catch { voiceReport = { applied: false, reason: "error" }; }
+  }
+
   // Stage 6d — HEADLINE AGENT (Phase 2): best-of-3 rephrase of metaTitle/metaDescription/dek, judged for CTR,
   // hard-gated deterministically (grounded numbers+names, render-contract validators) — improves or no-ops.
   let headlineReport = null;
@@ -254,5 +271,5 @@ export async function runGossip(topic, {
     verifyDegraded, // true ⇒ the claim-verify ran at L1-only this run (L2 errored); surfaced for the monitor/owner
     sources: bundle.sources.map((s) => ({ outlet: s.outlet, url: s.url, tier: s.tier })),
   };
-  return { status: "PUBLISH", article, frame, provenance, route, bundle, auto, editorial: ed, brief: brief ? true : false, headline: headlineReport, seoSemantic };
+  return { status: "PUBLISH", article, frame, provenance, route, bundle, auto, editorial: ed, brief: brief ? true : false, headline: headlineReport, seoSemantic, voice: voiceReport };
 }

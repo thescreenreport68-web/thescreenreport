@@ -33,7 +33,7 @@ Return STRICT JSON: { "safe": true|false, "reason": "one short clause" }`;
 // findRelatedLinks — returns up to `max` safe internal links [{ slug, title, url, score }].
 export async function findRelatedLinks({
   article, topic, index, embedImpl = defaultEmbed, firewallImpl = defaultFirewall,
-  model = null, max = 3, selfSlug = null, minScore = 0.45,
+  model = null, max = 4, selfSlug = null, minScore = 0.45,
 } = {}) {
   const entities = [
     topic?.primaryEntity,

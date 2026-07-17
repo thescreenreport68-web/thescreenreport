@@ -90,6 +90,7 @@ jobs:
           git config user.name  "screenreport-bot"
           git config user.email "bot@thescreenreport.com"
           git add content/articles data/gossip
+          git add public/gossip-cards 2>/dev/null || true
           git commit -m "gossip: ${{ github.event.inputs.review == 'true' && 'review tick (state only)' || format('publish {0}', steps.tick.outputs.slugs) }}" || { echo "nothing to commit"; exit 0; }
           # main is the ONE deploy branch. Other lanes push here too — rebase onto the latest origin/main and retry so
           # a concurrent push never fails ours (a failed state-commit would break dedup and risk a double-post).

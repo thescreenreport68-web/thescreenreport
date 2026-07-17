@@ -14,6 +14,7 @@ import { runGossip } from "./run.mjs";
 import { writeGossipArticle } from "./assemble.mjs";
 import { detectGossipType, LEDE_ORDER } from "./writer.mjs";
 import { loadRecentIndex, isCrossDup } from "./crossDedup.mjs";
+import { brandCardHero } from "./brandCard.mjs";
 import { routeBySubject } from "./config.gossip.mjs";
 import { openStore } from "./vecStore.mjs";
 import { dedupCheck, recordPublished } from "./dedup.mjs";
@@ -146,7 +147,8 @@ export async function gossipRun({
     const ledeStyle = LEDE_ORDER[rotIdx % LEDE_ORDER.length]; // fix #3 — rotate the lede so no two open alike
     let r;
     try {
-      r = await runImpl(t, { verify, judge, ledeStyle, synth: true, headline: true });
+      // voice: ON in review runs (safe evaluation), live only behind GOSSIP_VOICE=1 (owner flag).
+      r = await runImpl(t, { verify, judge, ledeStyle, synth: true, headline: true, voice: REVIEW ? true : process.env.GOSSIP_VOICE === "1" });
     } catch (e) {
       report.blocked.push({ id: t.id, category: cat, status: "ERROR", reason: String(e?.message || e).slice(0, 140) });
       continue;
@@ -155,6 +157,11 @@ export async function gossipRun({
       const auto = r.auto || null; // judge already ran inside runGossip as the backstop gate
       // STEP 6 — pick a powerful, story-specific hero. Off by default offline; the live CLI sets hero:true. Fail-safe → none.
       if (hero) { try { r.article.hero = await heroImpl({ topic: { ...t, gossipType: detectGossipType(t) }, article: r.article, bundle: r.bundle, frame: r.frame }); } catch { r.article.hero = null; } }
+      // Phase 4 — LAST-RESORT hero: never ship imageless (no og:image = no Discover card). A branded
+      // typographic card unique to this article; static brand image if even that fails.
+      if (hero && !r.article.hero && !dryRun) {
+        try { r.article.hero = await brandCardHero({ title: r.article.title, category: r.route?.category || cat, slug: t.slug || t.id, ...(REVIEW ? { dir: path.join(REVIEW, "cards") } : {}) }); } catch { /* keep null */ }
+      }
       // STEP 7 — internal links to REAL related published articles (shared-entity gate + contradiction firewall).
       if (links && linkIndex) { try { r.article.relatedLinks = await findRelatedImpl({ article: r.article, topic: t, index: linkIndex, selfSlug: t.slug }); } catch { r.article.relatedLinks = []; } }
       // Phase 3 — follow-up link-chain: an UPDATE always links its parent FIRST, by exact title (deterministic).
@@ -181,7 +188,7 @@ export async function gossipRun({
         relatedLinks: (r.article.relatedLinks || []).map((l) => l.slug),
         sources: (r.bundle?.sources || []).map((s) => `${s.outlet}/${s.tier}`), written: out.written, path: out.path,
         isUpdate: !!t.isUpdate, parentSlug: t.parentSlug || null,
-        headline: r.headline || null, seoSemantic: r.seoSemantic || null,
+        headline: r.headline || null, seoSemantic: r.seoSemantic || null, voice: r.voice || null,
         seoIssues: (out.seoIssues || []).map((i) => `${i.code}:${i.action}`),
       });
       rotIdx++; // advance the lede rotation ONLY on an actual publish, so consecutive live articles differ
