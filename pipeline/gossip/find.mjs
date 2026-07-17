@@ -66,6 +66,14 @@ export function scoreTopic(t, nowMs = Date.now()) {
   return score;
 }
 
+// PEEK the queue's best demand score WITHOUT claiming anything (the burst lane's trigger check).
+export function peekTopScore({ filePath = QUEUE_PATH, nowMs = Date.now() } = {}) {
+  const q = loadQueue(filePath);
+  let best = null;
+  for (const t of q.topics) { const sc = scoreTopic(t, nowMs); if (!best || sc > best.score) best = { score: sc, id: t.id, entity: t.primaryEntity || "" }; }
+  return best; // null when the queue is empty
+}
+
 // POP the n BEST-scoring topics and remove them from the file — this IS the claim (a popped topic can't be
 // grabbed by an overlapping tick). Score ties keep FIFO (oldest first). Each popped topic carries _score.
 export function dequeue(n, { filePath = QUEUE_PATH, nowMs = Date.now() } = {}) {

@@ -12,7 +12,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { gossipFind, enqueue, loadQueue } from "./find.mjs";
+import { gossipFind, enqueue, loadQueue, peekTopScore } from "./find.mjs";
 import { gossipRun, reviewDir } from "./gossiprun.mjs";
 import { runProbes } from "./probes.mjs";
 
@@ -22,6 +22,13 @@ const PAUSED_PATH = path.resolve(__dirname, "../../data/gossip/PAUSED");
 
 const INTERVAL_MIN = Number(process.env.INTERVAL_MIN ?? 115); // ~2h between posts (24/7) ⇒ ~12/day
 const MIN_BACKLOG = Number(process.env.MIN_BACKLOG ?? 15);
+// Phase 5 — TIER-S BURST LANE: a mega-story (demand score ≥ BURST_SCORE: heat window + viral engagement +
+// hot class) publishes IMMEDIATELY instead of waiting out the ~2h interval. HARD-CAPPED (the news lane's
+// lesson: an unlimited bypass could legally flood): ≤ BURST_MAX_PER_DAY extra posts/day, and never within
+// BURST_MIN_GAP_MIN of the last post. Counters persist in schedule.json (UTC-day rollover).
+const BURST_SCORE = Number(process.env.BURST_SCORE ?? 65);
+const BURST_MAX_PER_DAY = Number(process.env.BURST_MAX_PER_DAY ?? 3);
+const BURST_MIN_GAP_MIN = Number(process.env.BURST_MIN_GAP_MIN ?? 30);
 const PER_TICK = Number((process.argv.find((a) => a.startsWith("--limit=")) || "").split("=")[1]) || 1;
 const FORCE = process.argv.includes("--force") || process.env.FORCE === "1";
 
@@ -54,10 +61,20 @@ export async function tick({ now = new Date(), findImpl = gossipFind, runImpl = 
   if (process.env.GOSSIP_DIAG === "1") { try { await runProbes(); } catch { /* diag never blocks */ } }
   const sched = loadSchedule(schedPath);
   const since = minsSinceLastPost(now, sched);
+  let burst = false;
   if (!force && since < intervalMin) {
-    console.log(`[scheduler] only ${Math.round(since)}min since last post (< ${intervalMin}); no-op.`);
-    setOutput({ published: 0, reason: "too-soon" });
-    return { published: 0, reason: "too-soon" };
+    // BURST CHECK (Phase 5): peek (no claim) — a Tier-S story may bypass the interval, within hard caps.
+    const day = now.toISOString().slice(0, 10);
+    const burstsToday = sched.burstDay === day ? (sched.burstsToday || 0) : 0;
+    const top = since >= BURST_MIN_GAP_MIN && burstsToday < BURST_MAX_PER_DAY ? peekTopScore({ nowMs: now.getTime() }) : null;
+    if (top && top.score >= BURST_SCORE) {
+      burst = true;
+      console.log(`[scheduler] 🔥 BURST: top topic "${top.entity}" scores ${top.score} (≥ ${BURST_SCORE}) — bypassing the interval (${burstsToday + 1}/${BURST_MAX_PER_DAY} today).`);
+    } else {
+      console.log(`[scheduler] only ${Math.round(since)}min since last post (< ${intervalMin}); no-op.`);
+      setOutput({ published: 0, reason: "too-soon" });
+      return { published: 0, reason: "too-soon" };
+    }
   }
   // TOP UP only when the backlog is low (find on demand = lean; no discovery every tick).
   const before = loadQueue().topics.length;
@@ -72,7 +89,11 @@ export async function tick({ now = new Date(), findImpl = gossipFind, runImpl = 
   const report = await runImpl({ fromFind: true, limit: PER_TICK, hero: true, links: true, categoryGuard: true });
   // Stamp the interval clock ONLY when something actually published (a dry slot retries on the next tick).
   // REVIEW runs never stamp the live cadence clock (the preview must not delay the next real post).
-  if (report.published.length > 0 && !reviewDir()) saveSchedule({ ...sched, lastPostAt: now.toISOString(), lastSlugs: report.published.map((p) => p.slug) }, schedPath);
+  if (report.published.length > 0 && !reviewDir()) {
+    const day = now.toISOString().slice(0, 10);
+    const burstsToday = (sched.burstDay === day ? (sched.burstsToday || 0) : 0) + (burst ? 1 : 0);
+    saveSchedule({ ...sched, lastPostAt: now.toISOString(), lastSlugs: report.published.map((p) => p.slug), burstDay: day, burstsToday }, schedPath);
+  }
   const slugs = report.published.map((p) => p.slug);
   console.log(`[scheduler] ${force ? "(forced) " : ""}published ${report.published.length} (processed ${report.topics}; held ${report.held.length}, rejected ${report.rejected.length}, skipped ${report.skipped.length}, blocked ${report.blocked.length}). backlog now ${loadQueue().topics.length}.`);
   setOutput({ published: report.published.length, slugs: slugs.join(",") });
