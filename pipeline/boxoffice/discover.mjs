@@ -36,6 +36,18 @@ const toFilm = (m, via) => ({
   via,
 });
 
+// P5 — TRENDING TV (beyond the weekly Netflix TSV): TMDB's daily trending-TV chart catches "an episode
+// just hit and the show is blowing up" on ANY platform the day it happens. English-language only; the
+// finder resolves the actual platform via TMDB providers downstream (hours are still Netflix/named-source
+// ONLY — the watch-hours guard is untouched; other platforms are rank/trending framing).
+export async function discoverTrendingTv({ fetchImpl = fetch, max = 6 } = {}) {
+  const data = await tmdbGet(`/trending/tv/day`, { fetchImpl });
+  return (data?.results || [])
+    .filter((r) => (r.original_language || "") === "en" && (r.name || "").trim())
+    .slice(0, max)
+    .map((r) => ({ id: r.id, title: r.name, year: (r.first_air_date || "").slice(0, 4), firstAir: r.first_air_date || "", popularity: r.popularity || 0, overview: r.overview || "" }));
+}
+
 // discoverFilms({ region, nowMs }) → scope-filtered candidate films, hottest first, deduped by id.
 // Injected fetchImpl keeps the offline suite network-free.
 export async function discoverFilms({ region = "US", nowMs = null, fetchImpl = fetch, max = 60 } = {}) {

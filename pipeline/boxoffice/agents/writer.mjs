@@ -18,6 +18,16 @@ weeks-in-release cume.`,
   "BO-UPDATE": `This is an UPDATE on a film already in theaters. PART 1 — the movie: what it is, its director +
 cast, how it's being received. PART 2 — the box office: the NEW number and what moved (a milestone, a hold/drop
 %, a fresh cume) and how it compares to before, the worldwide + budget/profit read.`,
+  "BO-WEEKEND": `This is the WEEKEND box-office report for one film. PART 1 — the movie: what it is, director +
+cast, how it's being received. PART 2 — the weekend numbers: the weekend gross (estimates or actuals, exactly as
+reported), how it ranks, the hold/drop if given, the running total and worldwide context. Lead with the weekend
+figure — that is the story.`,
+  "BO-MILESTONE": `The film just CROSSED a round-number milestone. PART 1 — the movie: what it is, director + cast,
+why audiences keep showing up. PART 2 — the milestone: the figure it crossed (exactly as reported), how long it
+took, the worldwide + budget context. The milestone IS the headline — everything builds to it.`,
+  "BO-RECORD": `The film SET or BROKE a box-office record. PART 1 — the movie: what it is, director + cast. PART 2 —
+the record: state the record EXACTLY as the trade reports it (attribute it), the figure behind it, what it
+surpassed, the worldwide + budget context. Never widen or embellish the record beyond the source's exact claim.`,
   "NOW-STREAMING": `The film has left theaters and landed on a streaming platform. PART 1 — the movie: its
 director + cast, its theatrical run. PART 2 — the confirmed PLATFORM it's now on + why it's worth streaming.`,
   "NETFLIX-TOP10": `A Netflix Top 10 movie. PART 1 — the title: its director + cast, what it is, why people are
@@ -148,7 +158,7 @@ SOURCE REPORTING — the trade coverage for THIS film's story + reception, to RE
 ${sourceProse || "(no extended source prose — develop from the TMDB context + the brief + the verified figures below)"}
 
 ${boxDataBlock(job.boxData)}
-${form.streaming ? "\n" + netflixBlock({ title: job.film.title, rank: g.netflixRank, hours: g.hoursViewed, weeksInTop10: g.weeksInTop10 }, { week: g.netflixWeek }) : ""}
+${form.streaming && (g.hoursViewed || g.netflixRank) ? "\n" + netflixBlock({ title: job.film.title, rank: g.netflixRank, hours: g.hoursViewed, weeksInTop10: g.weeksInTop10 }, { week: g.netflixWeek }) : form.streaming && g.platform ? `\nPLATFORM (TMDB-confirmed — the ONLY service you may name): ${g.platform}. No hours/viewership figures exist for this title — do NOT state any.` : ""}
 
 VERIFIED FIGURES (the ONLY numbers that exist — copy exactly, invent nothing):
 ${verifiedFigures || "(no explicit trade figures — use ONLY the TMDB context above; do not state a number not shown there)"}

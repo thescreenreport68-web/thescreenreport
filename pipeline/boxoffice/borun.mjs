@@ -20,6 +20,7 @@ import * as imageAgent from "./agents/image.mjs";
 import { writeBoxOfficeArticle } from "./assemble.mjs";
 import { loadStore, alreadyPublished, recordPublished, parkAngle, parkedTries, parkCooling, clearParked, coveredEventSlugs, bumpZeroStreak, bumpDaySpend, daySpendUsd } from "./store.mjs";
 import { runFind, readQueue } from "./find/findrun.mjs";
+import { dailyAudit } from "./audit.mjs";
 import { allowance, debit } from "./pacing.mjs";
 import { loadTracked, isMaterial, updateEventSuffix, recordArticle, linkPriorCoverage, isPastOpening } from "./tracker.mjs";
 import { FORMS, ACCEPT_FLOOR, MAX_ATTEMPTS, GATE, DATA_DIR, REVIEW_DIR, FLOOD_CAP, MAX_ARTICLES_PER_DAY, MAX_RUN_COST_USD, STREAMING_DAILY_CAP, DAILY_SPEND_CAP_USD } from "./config.bo.mjs";
@@ -55,6 +56,7 @@ const engagementFloored = (blocks = []) => blocks.some((b) => /^soft-floor (enga
 
 export async function boRun({
   findImpl = findFilms,
+  dailyAuditImpl = dailyAudit,
   gatherImpl = gatherer.run,
   dataImpl = dataModule.run,
   synthImpl = synthesizer.run,
@@ -179,7 +181,7 @@ export async function boRun({
       // ── MATERIALITY (BO-UPDATE only) — the anti-duplicate-content law (plan §6): publish an update
       // ONLY when the number is a real NEW story, then give it a DISTINCT eventSlug so real weekend/
       // milestone updates across runs don't dedup-collide (protects dwell time = KPI #1). ──
-      if (angle.form === "BO-UPDATE") {
+      if ((FORMS[angle.form] || {}).tracked) { // BO-UPDATE + the P5 event forms (weekend/milestone/record)
         const mat = isMaterial(film, job.gathered, job.boxData, tracked);
         if (!mat.material) { report.held.push({ tag, reason: `not material: ${mat.reason}` }); console.log(`  ⟳ skip: not material (${mat.reason})`); continue; }
         trigger.eventSlug = trigger.eventSlug + updateEventSuffix(mat);
@@ -295,6 +297,15 @@ export async function boRun({
     report.zeroStreak = streak;
     if (streak >= 6) console.log(`::warning title=boxoffice zero-publish streak::${streak} consecutive live ticks published nothing — investigate held reasons in data/boxoffice/runs/`);
     if (report.published.length && store.pace) store.pace = debit(store.pace, report.published.length); // governor spend
+    // P5 DAILY SELF-AUDIT — once per LA day, grade yesterday's sample (~\$0.003); drift becomes a ::warning::.
+    try {
+      const audit = await dailyAuditImpl({ store, now: new Date() });
+      if (audit) {
+        report.audit = audit;
+        if (audit.issues.length) console.log(`::warning title=boxoffice quality audit::${audit.issues.length} issue(s) in yesterday's ${audit.sampled.length}-article sample — see the run report`);
+        else if (audit.sampled.length) console.log(`  ✔ daily quality audit: ${audit.sampled.length} article(s) sampled, 0 issues`);
+      }
+    } catch { /* best-effort */ }
     report.daySpend = bumpDaySpend(store, costReport()?.total || 0, { now: new Date() }); // feeds the daily spend cap
   }
   return finish(report, dryRun);

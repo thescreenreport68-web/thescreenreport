@@ -17,15 +17,15 @@ export const boKey = (eventSlug, form) => `${eventSlug || "no-event"}|${form}`;
 export function loadStore(file = STORE_PATH) {
   try {
     const s = JSON.parse(fs.readFileSync(file, "utf8"));
-    return { published: s.published || [], parked: s.parked || [], zeroStreak: s.zeroStreak || 0, daySpend: s.daySpend || null, pace: s.pace || null, file };
+    return { published: s.published || [], parked: s.parked || [], zeroStreak: s.zeroStreak || 0, daySpend: s.daySpend || null, pace: s.pace || null, lastAuditDay: s.lastAuditDay || null, file };
   } catch {
-    return { published: [], parked: [], zeroStreak: 0, daySpend: null, pace: null, file };
+    return { published: [], parked: [], zeroStreak: 0, daySpend: null, pace: null, lastAuditDay: null, file };
   }
 }
 
 function save(store) {
   fs.mkdirSync(path.dirname(store.file), { recursive: true });
-  const out = { published: store.published.slice(-CAP), parked: store.parked.slice(-500), zeroStreak: store.zeroStreak || 0, daySpend: store.daySpend || null, pace: store.pace || null };
+  const out = { published: store.published.slice(-CAP), parked: store.parked.slice(-500), zeroStreak: store.zeroStreak || 0, daySpend: store.daySpend || null, pace: store.pace || null, lastAuditDay: store.lastAuditDay || null };
   fs.writeFileSync(store.file, JSON.stringify(out, null, 1));
 }
 
