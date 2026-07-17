@@ -1,0 +1,115 @@
+{
+  "ts": "2026-07-17T21:01:30.313Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    "kathie-lee-gifford-reveals-misconception-about-husband-s-infidelity"
+  ],
+  "topics": 1,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 0,
+  "costUSD": 0.010644,
+  "costPerPublished": 0.010644,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 6,
+      "in": 10390,
+      "out": 1127,
+      "usd": 0.0059345000000000005
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 980,
+      "out": 324,
+      "usd": 0.00022792
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 5,
+      "in": 15573,
+      "out": 5282,
+      "usd": 0.0035536536
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 5,
+      "in": 5704,
+      "out": 895,
+      "usd": 0.0009283999999999999
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2440,
+      "out": 215,
+      "usd": 0.0012695,
+      "ms": 1482
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 980,
+      "out": 324,
+      "usd": 0.00014652,
+      "ms": 21032
+    },
+    "writer": {
+      "calls": 4,
+      "errors": 0,
+      "in": 14808,
+      "out": 4921,
+      "usd": 0.005078979999999999,
+      "ms": 77284
+    },
+    "verify": {
+      "calls": 6,
+      "errors": 1,
+      "in": 9935,
+      "out": 1336,
+      "usd": 0.0050331,
+      "ms": 9584
+    },
+    "judge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1495,
+      "out": 210,
+      "usd": 0.0002335,
+      "ms": 1073
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 765,
+      "out": 361,
+      "usd": 0.00029869000000000006,
+      "ms": 16809
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 428,
+      "out": 94,
+      "usd": 0.0000804,
+      "ms": 591
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 213,
+      "out": 81,
+      "usd": 0.000053700000000000004,
+      "ms": 658
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1583,
+      "out": 86,
+      "usd": 0.00019270000000000002,
+      "ms": 1996
+    }
+  }
+}
