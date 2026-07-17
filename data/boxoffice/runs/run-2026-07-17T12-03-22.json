@@ -1,0 +1,103 @@
+{
+ "runId": "run-2026-07-17T12-03-22",
+ "mode": "live",
+ "startedAt": "2026-07-17T12:03:22.897Z",
+ "films": 6,
+ "published": [],
+ "held": [
+  {
+   "tag": "the-odyssey-ev-opening×BO-OPENING",
+   "reason": "fidelity: 8 unsupported figures/claims — draft-level failure",
+   "score": 0
+  },
+  {
+   "tag": "michael-ev-milestone×BO-UPDATE",
+   "reason": "2 unverified claim(s) cut, unrecovered",
+   "score": 70
+  },
+  {
+   "tag": "the-super-mario-galaxy-movie-ev-weekend×BO-UPDATE",
+   "reason": "words 171 < 180 (owner-set ~200-word minimum)",
+   "score": 50
+  },
+  {
+   "tag": "the-odyssey-ev-record×BO-UPDATE",
+   "reason": "words 163 < 180 (owner-set ~200-word minimum)",
+   "score": 65
+  },
+  {
+   "tag": "moana-bo-update×BO-UPDATE",
+   "reason": "not material: already covered today (one update per film per day)"
+  }
+ ],
+ "rejected": [
+  {
+   "tag": "descendants-wicked-wonderland-ev-streaming-arrival×NOW-STREAMING",
+   "stage": "gatherer",
+   "reason": "under floor: no subscription-streaming platform — rent/buy is not 'now streaming' (try 1)"
+  }
+ ],
+ "skipped": [],
+ "blocked": [],
+ "queueBuilt": 10,
+ "zeroStreak": 1,
+ "daySpend": {
+  "laDay": "2026-07-17",
+  "usd": 0.08491
+ },
+ "finishedAt": "2026-07-17T12:14:31.068Z",
+ "meter": {
+  "byRole": {
+   "categorize": {
+    "calls": 3,
+    "errors": 0,
+    "in": 1078,
+    "out": 505,
+    "usd": 0.00031,
+    "ms": 2813
+   },
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3199,
+    "out": 345,
+    "usd": 0.00016,
+    "ms": 1425
+   },
+   "gatherer": {
+    "calls": 8,
+    "errors": 0,
+    "in": 33893,
+    "out": 3222,
+    "usd": 0.00468,
+    "ms": 14810
+   },
+   "synthesizer": {
+    "calls": 4,
+    "errors": 0,
+    "in": 3502,
+    "out": 2159,
+    "usd": 0.0007,
+    "ms": 60580
+   },
+   "writer": {
+    "calls": 7,
+    "errors": 0,
+    "in": 26391,
+    "out": 7563,
+    "usd": 0.02266,
+    "ms": 118318
+   },
+   "qa": {
+    "calls": 25,
+    "errors": 1,
+    "in": 76505,
+    "out": 9406,
+    "usd": 0.04486,
+    "ms": 81239
+   }
+  },
+  "totalUsd": 0.07337
+ },
+ "openrouterTotalUsd": 0.07714
+}
