@@ -1,8 +1,79 @@
 {
   "id": "trailer-gandahar-4k-restoration-trailer",
-  "slug": "trailer-released-for-ren-laloux-s-final-film-gandahar-in-4k-restoratio",
-  "status": "rejected_editorial",
-  "stages": {},
-  "holdReason": "editorial gate: out of scope: not English-language Hollywood/Western entertainment",
-  "ms": 2147
+  "slug": "new-trailer-ren-laloux-s-final-film-gandahar-arriving-in-4k-restoratio",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": null,
+      "cat": "movies/news",
+      "format": [],
+      "cuts": 3,
+      "broken": []
+    },
+    "attempt2": {
+      "score": null,
+      "cat": "movies/news",
+      "format": [],
+      "cuts": 1,
+      "broken": []
+    }
+  },
+  "editorial": {
+    "status": "unconfirmed",
+    "entity": "Gandahar",
+    "work": {
+      "title": "Gandahar",
+      "year": null,
+      "medium": "movie"
+    },
+    "outlet": "thefilmstage.com"
+  },
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
+    "deterministic": {
+      "words": 292,
+      "h2s": 3,
+      "h2Questions": 3,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 3,
+      "ktCount": 5,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 29,
+      "avgSentence": 16,
+      "flesch": 51,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": []
+    },
+    "hardBlocks": []
+  },
+  "score": null,
+  "category": "movies",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "keyword in title"
+    ]
+  },
+  "ms": 84463,
+  "previousRuns": [
+    {
+      "id": "trailer-gandahar-4k-restoration-trailer",
+      "slug": "trailer-released-for-ren-laloux-s-final-film-gandahar-in-4k-restoratio",
+      "status": "rejected_editorial",
+      "stages": {},
+      "holdReason": "editorial gate: out of scope: not English-language Hollywood/Western entertainment",
+      "ms": 2147
+    }
+  ]
 }
