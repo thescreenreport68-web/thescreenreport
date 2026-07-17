@@ -779,5 +779,55 @@ await t("platformMeta: agent failure falls back to deterministic FB/YT copy — 
   assert.ok(meta.youtube.fallback, "marked as fallback for the ledger");
 });
 
+await t("discovery: story-first rules — unknown+hot qualifies, famous+personal qualifies, famous+routine doesn't", async () => {
+  const { fameFromBaseline, heatFromSpike, eventPrior, storyHeat, qualifies, starPower, scorePool } = await import("../agents/discovery.mjs");
+  // fame calibration on the real validated anchors
+  assert.ok(Math.abs(fameFromBaseline(84) - 18) < 4, `Wai Ching Ho baseline 84/day → ~18 fame (got ${fameFromBaseline(84).toFixed(0)})`);
+  assert.ok(Math.abs(fameFromBaseline(7575) - 80) < 4, `J-Law 7.5k/day → ~80 fame (got ${fameFromBaseline(7575).toFixed(0)})`);
+  // spike calibration: 254× at 21k views = max heat; 1.3× = noise; big ratio on a tiny page = 0
+  assert.equal(Math.round(heatFromSpike(254, 21435, 2000)), 100, "Wai Ching Ho death spike → 100");
+  assert.ok(heatFromSpike(1.3, 9000, 2000) < 15, "quiet week → noise");
+  assert.equal(heatFromSpike(50, 300, 2000), 0, "spike on a tiny page (under raw-view floor) → 0");
+  // the owner's case 1: unknown actress dies in a crash — heat qualifies ALONE
+  const death = eventPrior({ title: "Daredevil actress dead at 82 after car crash" });
+  const h1 = storyHeat({ trendScore: null, spikeHeat: heatFromSpike(254, 21435, 2000), prior: death.prior, inTrends: false });
+  assert.equal(qualifies({ heat: h1, fame: fameFromBaseline(84), surprise: death.surprise }, { qualifyHeat: 60, qualifyFame: 70 }), "heat", "unknown + hot story qualifies on heat");
+  // day-0 death (no wiki data yet): the event prior alone still qualifies it
+  const h1b = storyHeat({ trendScore: null, spikeHeat: 0, prior: death.prior, inTrends: false });
+  assert.equal(qualifies({ heat: h1b, fame: null, surprise: true }, { qualifyHeat: 60, qualifyFame: 70 }), "heat", "day-0 death qualifies on the prior");
+  // the owner's case 2: J-Law dyes her hair — fame + personal-surprise beat, no spike needed
+  const hair = eventPrior({ title: "Jennifer Lawrence debuts shocking new hair transformation" });
+  const h2 = storyHeat({ trendScore: null, spikeHeat: 0, prior: hair.prior, inTrends: false });
+  assert.equal(qualifies({ heat: h2, fame: fameFromBaseline(7575), surprise: hair.surprise }, { qualifyHeat: 70, qualifyFame: 70 }), "fame", "megastar + personal beat qualifies on fame");
+  // famous + routine announcement: no auto-qualification
+  const routine = eventPrior({ title: "Jennifer Lawrence attends charity gala event" });
+  const h3 = storyHeat({ trendScore: null, spikeHeat: 0, prior: routine.prior, inTrends: false });
+  assert.equal(qualifies({ heat: h3, fame: fameFromBaseline(7575), surprise: routine.surprise }, { qualifyHeat: 60, qualifyFame: 70 }), null, "famous + routine does NOT auto-qualify");
+  // ranking: the hot unknown-death story must outrank the routine megastar story
+  assert.ok(starPower({ heat: h1, fame: 18 }) > starPower({ heat: h3, fame: 80 }), "story heat outranks bare fame");
+  // scorePool end-to-end with INJECTED deps (zero network): pre-scored news + spiking gossip + routine
+  const deps = {
+    fetchJson: async (url) => {
+      if (url.includes("search/title")) return { pages: [{ key: "Test_Person" }] };
+      if (url.includes("pageviews")) return { items: Array.from({ length: 16 }, (_, i) => ({ views: i >= 14 ? 25000 : 100 })) };
+      return null;
+    },
+    fetchText: async () => "<rss><title>trends</title></rss>",
+  };
+  const ranked = await scorePool([
+    { slug: "routine-famous", title: "Star attends gala", date: "2026-07-16", formatTag: "gossip", primaryEntity: null },
+    { slug: "hot-unknown-death", title: "Actress dead at 82 in crash", date: "2026-07-15", formatTag: "gossip", primaryEntity: "Test Person" },
+    { slug: "pre-scored-news", title: "Movie smashes record", date: "2026-07-16", formatTag: "news", trendScore: 88, primaryEntity: null },
+  ], deps);
+  assert.equal(ranked[0].slug, "hot-unknown-death", "spiking death story ranks first");
+  assert.ok(ranked.find((c) => c.slug === "pre-scored-news").qualified, "trendScore 88 news qualifies");
+  assert.ok(!ranked.find((c) => c.slug === "routine-famous").qualified, "routine story does not qualify");
+  // fail-open: every API dead → engine still returns a full ranking (priors only), never throws
+  const dead = { fetchJson: async () => null, fetchText: async () => null };
+  const safe = await scorePool([{ slug: "a", title: "Star dies at 90", date: "2026-07-16", primaryEntity: "Someone" }], dead);
+  assert.equal(safe.length, 1, "fail-open keeps the pool intact");
+  assert.ok(safe[0].heat >= 60, "prior still scores with all APIs down");
+});
+
 console.log(`\n${passed} passed, ${failed} failed`);
 process.exit(failed ? 1 : 0);

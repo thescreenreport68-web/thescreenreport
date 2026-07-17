@@ -113,6 +113,24 @@ export const IG = {
   categories: ["movies", "tv", "celebrity"],
   moviesFirstShare: 0.8, // ~80/20 movies-first bias in slate scoring
 
+  // ── POPULARITY ENGINE v2 — STORY-FIRST discovery (owner 2026-07-17). The old picker fed the LLM the
+  // NEWEST 18 of ~250-450 fresh articles (<10% of the pool, recency ≠ interest). Now every candidate
+  // gets a deterministic starPower score from FREE signals (article trendScore, Wikipedia pageview
+  // spike, event-type prior, Google Trends presence, Wikipedia-baseline fame) and the TOP of the pool
+  // goes to the same single LLM call. The owner's rule: story HEAT qualifies alone (an unknown actor
+  // dying in a crash IS the story — Wai Ching Ho spiked 254× at 84 views/day baseline); FAME amplifies
+  // (J-Law + a personal-surprise beat qualifies with no spike). Fail-open everywhere: any signal down →
+  // neutral; engine failure → the old recency order. mode: "live" ranks the real batch; "shadow" only
+  // logs what it would pick; "off" disables. A discovery log is written EVERY run for grading.
+  discovery: {
+    mode: "live",
+    qualifyHeat: 60, // storyHeat ≥ this qualifies alone (fame irrelevant)
+    qualifyFame: 70, // fame ≥ this + a personal-surprise beat qualifies without a spike
+    minSpikeViews: 2000, // a spike must also clear this many raw daily views (noise floor)
+    maxLookupsPerRun: 120, // uncached Wikipedia entity lookups per run (rest neutral; cache fills over runs)
+    blend: { llm: 0.6, star: 0.4 }, // final slate order: LLM viral score vs deterministic starPower
+  },
+
   // ── script bounds (owner 2026-07-10: EVERY video ≥30s, target 30-40s; still NO
   // padding — length comes from verified facts, thin stories are skipped by the scout)
   // Length band 25-40s (owner 2026-07-11): 25s is the HARD floor (never below), 30-40s is the

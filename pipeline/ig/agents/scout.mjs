@@ -8,6 +8,7 @@ import { IG } from "../config.mjs";
 import { llm } from "../models.mjs";
 import { isPosted, isHeld, isBuilt, builtTopics, topicKey, loadWeights } from "../lib/ledger.mjs";
 import { parseFrontmatter, stripMarkdown, normWords, pastDateAsUpcoming } from "../lib/util.mjs";
+import { scorePool, logDiscovery } from "./discovery.mjs";
 
 // The reaction / social-media lane is a SEPARATE automation (owner 2026-07-11): the VIDEO lane
 // builds ONLY from genuine NEWS + GOSSIP stories — never a "how fans are reacting online" piece
@@ -79,6 +80,11 @@ export function listCandidates({ now = new Date(), lane = null } = {}) {
       sourceUrls: Array.isArray(data.sourceUrls) ? data.sourceUrls : [],
       formatTag: String(data.formatTag || "").toLowerCase(),
       body: stripMarkdown(body).slice(0, 1200),
+      // popularity-engine inputs (2026-07-17): news/box-office articles arrive pre-scored by the FIND
+      // pipeline; gossip carries none of these (its heat comes from Wikipedia spikes + event priors)
+      trendScore: data.trendScore != null ? Number(data.trendScore) : null,
+      eventType: data.eventType || null,
+      primaryEntity: data.primaryEntity || null,
     });
   }
   out.sort((a, b) => new Date(b.date) - new Date(a.date));
@@ -103,26 +109,52 @@ Scoring lens (in order): (1) SENDABILITY — would a movie/TV fan DM this to a s
 Return STRICT JSON: {"scores":[{"slug":string,"score":0-100,"sendability":0-10,"breaking":boolean,"hookIdea":string,"segment":string}]}
 segment ∈ ["Box Office in 30","Casting Watch","Trailer Take","Celebrity Wire","TV Signal"]. breaking=true only for a still-developing, hours-old story.`;
 
+// lane split: only two lanes reach here (VIDEO_FORMATS = news + gossip): gossip → gossip lane,
+// everything else (news + untagged legacy) → news lane.
+const laneOf = (c) => (String(c.formatTag || "").toLowerCase() === "gossip" ? "gossip" : "news");
+// LANE BALANCE (owner 2026-07-13): interleave from each lane so gossip's higher volume can never
+// starve news out of the scored batch. `order` decides WITHIN each lane (recency or starPower).
+function interleaveBatch(pool, size = 18) {
+  const news = pool.filter((c) => laneOf(c) === "news");
+  const gossip = pool.filter((c) => laneOf(c) === "gossip");
+  const batch = [];
+  for (let i = 0; batch.length < size && (i < news.length || i < gossip.length); i++) {
+    if (i < news.length) batch.push(news[i]);
+    if (i < gossip.length) batch.push(gossip[i]);
+  }
+  return batch;
+}
+
 export async function scout({ limit = 3, candidates = null, lane = null } = {}) {
   const pool = candidates ?? listCandidates({ lane });
   if (!pool.length) return [];
   const weights = loadWeights();
-  // LANE BALANCE (owner 2026-07-13): the video lane draws from BOTH the news and gossip automations.
-  // The gossip lane out-produces news daily, so a plain newest-18 slice was ~all gossip and the news
-  // lane never reached the scorer. Interleave newest-from-each so both lanes always get scored; the
-  // virality score + movies-first bias still decide the final slate.
-  // only two lanes reach here now (VIDEO_FORMATS = news + gossip): gossip → gossip lane, everything
-  // else (news + untagged legacy) → news lane.
-  const laneOf = (c) => (String(c.formatTag || "").toLowerCase() === "gossip" ? "gossip" : "news");
-  const newsPool = pool.filter((c) => laneOf(c) === "news");
-  const gossipPool = pool.filter((c) => laneOf(c) === "gossip");
-  const batch = [];
-  for (let i = 0; batch.length < 18 && (i < newsPool.length || i < gossipPool.length); i++) {
-    if (i < newsPool.length) batch.push(newsPool[i]);
-    if (i < gossipPool.length) batch.push(gossipPool[i]);
+  // POPULARITY ENGINE v2 (owner 2026-07-17): the old batch was the NEWEST 18 of a ~250-450 pool —
+  // under 10% seen, recency ≠ interest. The engine scores the WHOLE pool deterministically ($0:
+  // trendScore + Wikipedia spike/fame + event priors + Google Trends) and the TOP of each lane fills
+  // the batch instead. FAIL-OPEN: any engine failure → the old recency order, never an empty slate.
+  // A discovery log is written every run (engine picks vs recency picks) for grading.
+  const recencyBatch = interleaveBatch(pool); // the old behavior — fallback + grading baseline
+  let batch = recencyBatch;
+  let engineRanked = null;
+  if ((IG.discovery?.mode || "off") !== "off") {
+    try {
+      engineRanked = await scorePool(pool);
+      const engineBatch = interleaveBatch(engineRanked); // lane balance preserved, ranked within lanes
+      logDiscovery({
+        mode: IG.discovery.mode, poolSize: pool.length,
+        engineTop: engineBatch, recencyTop: recencyBatch,
+        lookupsCached: engineRanked.filter((c) => c.signals?.wikiBaseline != null).length,
+      });
+      if (IG.discovery.mode === "live") batch = engineBatch;
+      console.log(`  discovery: pool ${pool.length} → ${engineBatch.filter((c) => c.qualified).length} qualified (mode=${IG.discovery.mode}${IG.discovery.mode === "live" ? ", engine batch live" : ", shadow log only"})`);
+    } catch (e) {
+      console.warn(`  discovery engine failed (${String(e?.message || e).slice(0, 80)}) — recency batch (fail-open)`);
+    }
   }
   const user = JSON.stringify(
-    batch.map(({ slug, title, dek, category, date }) => ({ slug, title, dek, category, date })),
+    // heat/fame shown to the judge: a 250×-spike story deserves the benefit of the doubt on hook choice
+    batch.map(({ slug, title, dek, category, date, heat, fame }) => ({ slug, title, dek, category, date, ...(heat != null ? { audienceHeat: heat } : {}), ...(fame != null ? { starFame: fame } : {}) })),
   ) + (Object.keys(weights.segments || {}).length
     ? `\n\nLEARNED SEGMENT PERFORMANCE (higher = our audience responds better): ${JSON.stringify(weights.segments)}`
     : "");
@@ -133,8 +165,11 @@ export async function scout({ limit = 3, candidates = null, lane = null } = {}) 
   const scored = batch
     .map((c) => ({ ...c, ...(scores.get(c.slug) || { score: 0, sendability: 0, breaking: false, segment: "Celebrity Wire" }) }))
     .filter((c) => c.score >= 40);
-  // movies-first ~80/20: stable-sort movies (and movie-adjacent tv) ahead when scores are close
-  scored.sort((a, b) => (b.score + (b.category === "movies" ? 8 : 0)) - (a.score + (a.category === "movies" ? 8 : 0)));
+  // final order: LLM viral score blended with deterministic starPower (owner rule: popularity is
+  // first-class), plus the movies-first nudge. Blend weights in config (default 60/40).
+  const bl = IG.discovery?.blend || { llm: 1, star: 0 };
+  const eff = (c) => bl.llm * c.score + bl.star * (c.starPower ?? c.score) + (c.category === "movies" ? 8 : 0);
+  scored.sort((a, b) => eff(b) - eff(a));
   // Category variety cap — SCALES with the run's target so the slate can actually REACH `limit`.
   // ROOT CAUSE of "only 3/7 per day" (owner 2026-07-15): the old FLAT cap of 2, across just 3
   // categories (movies/tv/celebrity), hard-capped EVERY slate at 6 — so a single run could never build
