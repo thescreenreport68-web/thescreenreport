@@ -55,7 +55,9 @@ export default {
     // Regular batch tick FIRST — before the radar fetch + feed sweep, so a CPU-limit kill or a hung feed can
     // never cost the deterministic :00/:30 drip (the clock is the one thing that must never miss).
     if (minute % 30 < 2) {
-      if (await dispatch(env, "news-drip.yml", { limit: "2" })) console.log("sentinel: drip dispatched (limit=2)");
+      // limit 3 (surge, owner 2026-07-17 Odyssey release): 48 ticks × 3 = 144 ceiling — the pacing governor's
+      // bar + bucket meter actual output to the PACE_TARGET; this just widens the pipe for the big day.
+      if (await dispatch(env, "news-drip.yml", { limit: "3" })) console.log("sentinel: drip dispatched (limit=3)");
     }
 
     // Event Radar entities (committed by the pipeline; optional — degrade to keyword-only urgency)

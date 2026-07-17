@@ -48,6 +48,10 @@ jobs:
       - name: Publish breaking story (full gate chain)
         id: brk
         env:
+          # RELEASE-DAY SURGE (owner 2026-07-17): match news-drip's governor settings
+          PACE_TARGET: "90"
+          PACE_DAILY_CAP: "100"
+          ENTITY_DAY_CAP: "8"
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           TMDB_READ_TOKEN: ${{ secrets.TMDB_READ_TOKEN }}
           TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}

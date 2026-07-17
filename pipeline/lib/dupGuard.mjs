@@ -64,7 +64,7 @@ export function findDuplicate(topic, recent) {
 // PER-ENTITY DAY CAP (evidence-based, scale-up 2026-07-16): even Variety caps ONE film at ~3-4 stories/day in the
 // year's biggest release week (measured). A topic whose entity already has `cap` articles in the last 24h is
 // deferred — matching the professional ceiling doubles as reader-fatigue + scaled-content-pattern protection.
-export function entityDayCap(topic, recent, { cap = 4, now = Date.now() } = {}) {
+export function entityDayCap(topic, recent, { cap = Number(process.env.ENTITY_DAY_CAP ?? 4), now = Date.now() } = {}) {
   const ent = sigStems([topic?.primaryEntity, (topic?.entities || []).slice(0, 2).join(" ")].join(" "));
   if (ent.size < 1) return null;
   const dayCut = now - 24 * 3600_000;
