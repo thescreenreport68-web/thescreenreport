@@ -10,6 +10,7 @@ RULES:
 - headline: ≤12 words, punchy, 100% supported by the FACTS below — never invent, never exaggerate, no clickbait withholding ("you won't believe"), no ALL-CAPS words (the renderer uppercases), film/show titles in ‘single quotes’.
 - redSpan: the single most gasp-worthy payload inside the headline, copied EXACTLY (a number, a date, a name — 1-3 words). Empty string if nothing stands out.
 - sub: ONE sentence, ≤120 characters, a DIFFERENT supporting fact from the pack (not a rewording of the headline), plain sentence case.
+- NEVER credit or name a news outlet or photo source on the card ("via Variety", "Photo:", "according to Deadline", "courtesy of") — the card states the news itself. (An outlet may appear ONLY when it IS the story's subject, e.g. a Rotten Tomatoes score.)
 - somber stories (deaths/tragedy): headline is respectful and plain ("[Name], [known-for], dies at [age]"), redSpan MUST be "", sub is a career note — zero sensationalism.`;
 
 export async function writeHeadline(story, pack, cls) {
@@ -39,6 +40,11 @@ export async function writeHeadline(story, pack, cls) {
     const words = headline ? headline.split(/\s+/).length : 0;
     if (!headline || words > cap) {
       feedback = `\n\nREJECTED: your previous headline had ${words || 0} words — the HARD CAP is ${CARDS.headline.maxWords + 2}. Cut names or use a shorter reference (e.g. one lead name + "and more"); keep only the payload.`;
+      continue;
+    }
+    // owner hard rule 2026-07-17: no source credits anywhere on the card
+    if (/\b(via |photo:|photo courtesy|courtesy of|credit:|according to)\b/i.test(`${headline} ${sub}`)) {
+      feedback = `\n\nREJECTED: your previous text credited a source ("via …"/"Photo:"/"according to"). State the news directly — never name the reporting outlet on the card.`;
       continue;
     }
     if (redSpan && !headline.includes(redSpan)) redSpan = ""; // span must be verbatim inside the headline
