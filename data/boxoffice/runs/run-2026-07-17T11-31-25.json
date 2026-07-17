@@ -1,0 +1,71 @@
+{
+ "runId": "run-2026-07-17T11-31-25",
+ "mode": "live",
+ "startedAt": "2026-07-17T11:31:25.666Z",
+ "films": 6,
+ "published": [
+  {
+   "tag": "toy-story-5-bo-update×BO-UPDATE",
+   "slug": "toy-story-5-box-office-day-27-adds-2-7-million-as-domestic-total-hits-413-3",
+   "path": "/home/runner/work/thescreenreport/thescreenreport/content/articles/toy-story-5-box-office-day-27-adds-2-7-million-as-domestic-total-hits-413-3.md",
+   "score": 80
+  }
+ ],
+ "held": [
+  {
+   "tag": "moana-bo-update×BO-UPDATE",
+   "reason": "not material: already covered today (one update per film per day)"
+  },
+  {
+   "tag": "minions-monsters-bo-update×BO-UPDATE",
+   "reason": "not material: already covered today (one update per film per day)"
+  }
+ ],
+ "rejected": [],
+ "skipped": [],
+ "blocked": [],
+ "zeroStreak": 0,
+ "daySpend": {
+  "laDay": "2026-07-17",
+  "usd": 0.00777
+ },
+ "finishedAt": "2026-07-17T11:35:47.373Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3315,
+    "out": 342,
+    "usd": 0.00016,
+    "ms": 1344
+   },
+   "gatherer": {
+    "calls": 3,
+    "errors": 0,
+    "in": 9927,
+    "out": 621,
+    "usd": 0.00124,
+    "ms": 3670
+   },
+   "synthesizer": {
+    "calls": 1,
+    "errors": 0,
+    "in": 783,
+    "out": 1140,
+    "usd": 0.00028,
+    "ms": 30704
+   },
+   "writerChart": {
+    "calls": 1,
+    "errors": 0,
+    "in": 2115,
+    "out": 1058,
+    "usd": 0.00085,
+    "ms": 22848
+   }
+  },
+  "totalUsd": 0.00253
+ },
+ "openrouterTotalUsd": 0.00304
+}
