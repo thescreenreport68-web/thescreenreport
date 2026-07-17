@@ -1,0 +1,71 @@
+{
+  "id": "news-disney-star-wars-nfl-teams-product-line",
+  "slug": "disney-s-next-big-product-line-sees-its-star-characters-collide-with-n",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": null,
+      "cat": "movies/news",
+      "format": [
+        "a 67-word run-on sentence (>55 — split it)"
+      ],
+      "cuts": 0,
+      "broken": []
+    },
+    "attempt2": {
+      "score": null,
+      "cat": "movies/news",
+      "format": [
+        "a 67-word run-on sentence (>55 — split it)"
+      ],
+      "cuts": 0,
+      "broken": []
+    }
+  },
+  "editorial": {
+    "status": "official",
+    "entity": "The Walt Disney Co.",
+    "work": null,
+    "outlet": "hollywoodreporter.com"
+  },
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
+    "deterministic": {
+      "words": 338,
+      "h2s": 2,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 4,
+      "ktCount": 5,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 67,
+      "avgSentence": 20,
+      "flesch": 47,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": [
+        "a 67-word run-on sentence (>55 — split it)"
+      ]
+    },
+    "hardBlocks": []
+  },
+  "score": null,
+  "category": "movies",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 2,
+    "failed": [
+      "keyword in title"
+    ]
+  },
+  "ms": 134112
+}
