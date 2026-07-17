@@ -1,0 +1,115 @@
+{
+  "ts": "2026-07-17T15:01:49.361Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    "kesha-reveals-why-she-collects-teeth-yes-really"
+  ],
+  "topics": 1,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 0,
+  "costUSD": 0.013885,
+  "costPerPublished": 0.013885,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 8,
+      "in": 15773,
+      "out": 703,
+      "usd": 0.006489399999999999
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 2,
+      "in": 3710,
+      "out": 775,
+      "usd": 0.0004876482
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 6,
+      "in": 19736,
+      "out": 5128,
+      "usd": 0.00557170465
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 8,
+      "in": 9661,
+      "out": 926,
+      "usd": 0.0013365
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2441,
+      "out": 181,
+      "usd": 0.0011848,
+      "ms": 1294
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1673,
+      "out": 592,
+      "usd": 0.00025713,
+      "ms": 6450
+    },
+    "writer": {
+      "calls": 5,
+      "errors": 0,
+      "in": 19019,
+      "out": 4812,
+      "usd": 0.0060104500000000005,
+      "ms": 109563
+    },
+    "verify": {
+      "calls": 9,
+      "errors": 2,
+      "in": 18776,
+      "out": 1021,
+      "usd": 0.0060485999999999995,
+      "ms": 46959
+    },
+    "judge": {
+      "calls": 3,
+      "errors": 1,
+      "in": 4111,
+      "out": 393,
+      "usd": 0.00050767,
+      "ms": 29073
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 717,
+      "out": 316,
+      "usd": 0.00027235000000000003,
+      "ms": 7732
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 399,
+      "out": 85,
+      "usd": 0.00007390000000000001,
+      "ms": 750
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 189,
+      "out": 44,
+      "usd": 0.0000365,
+      "ms": 8507
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1555,
+      "out": 88,
+      "usd": 0.0001907,
+      "ms": 7895
+    }
+  }
+}
