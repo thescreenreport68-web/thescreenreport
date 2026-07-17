@@ -8,8 +8,9 @@ import { classify } from "../agents/classify.mjs";
 import { writeHeadline } from "../agents/headline.mjs";
 import { validateCaptions, writeCaptions } from "../agents/captions.mjs";
 import { factGate } from "../agents/factgate.mjs";
-import { huntImage } from "../agents/imagehunt.mjs";
-import { renderCard } from "../render.mjs";
+import { huntImages } from "../agents/imagehunt.mjs";
+import { visionQC } from "../agents/visionqc.mjs";
+import { renderCard, coverCrop } from "../render.mjs";
 import { quotaGate, igPublishes24h, breakingBudget } from "../publish.mjs";
 
 let n = 0, pass = 0;
@@ -81,10 +82,21 @@ await t("model claiming 'breaking' is demoted — the sentinel alone escalates",
 });
 
 // ── headline contract ────────────────────────────────────────────────────────
-await t("headline >12 words is rejected (null)", async () => {
-  mock(async () => ({ headline: "one two three four five six seven eight nine ten eleven twelve thirteen", redSpan: "", sub: "s" }));
+await t("headline persistently over the relaxed cap is rejected (null)", async () => {
+  mock(async () => ({ headline: "one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen", redSpan: "", sub: "s" }));
   const out = await writeHeadline({ title: "t" }, packOf(), { category: "news", somber: false });
   assert.equal(out, null);
+});
+await t("13-word headline passes on the feedback retry (relaxed cap 14)", async () => {
+  let calls = 0;
+  mock(async ({ user }) => {
+    calls++;
+    if (calls === 2) assert.ok(/REJECTED: your previous headline had 13 words/.test(user), "retry must carry feedback");
+    return { headline: "one two three four five six seven eight nine ten eleven twelve thirteen", redSpan: "", sub: "s" };
+  });
+  const out = await writeHeadline({ title: "t" }, packOf(), { category: "news", somber: false });
+  assert.ok(out && out.headline.split(/\s+/).length === 13);
+  assert.equal(calls, 2);
 });
 await t("redSpan not present verbatim in headline is stripped", async () => {
   mock(async () => ({ headline: "Film delayed to February 2028", redSpan: "March 2028", sub: "s" }));
@@ -119,11 +131,17 @@ await t("writeCaptions drops after two rule-breaking attempts", async () => {
   const out = await writeCaptions({ title: "t" }, packOf(), { category: "news", somber: false }, { headline: "h", sub: "s" });
   assert.equal(out, null);
 });
-await t("valid captions pass and carry a first-comment link", async () => {
+await t("valid captions pass and NEVER carry a first comment (owner directive 2026-07-17)", async () => {
   mock(async () => ({ ig: "#Zendaya stuns at the premiere. Full story at the link in bio.", fb: "Zendaya wore angel wings to the premiere. Best look of the year so far?" }));
   const out = await writeCaptions({ title: "t" }, packOf({ ownSlug: "zendaya-athena" }), { category: "celebrity", somber: false }, { headline: "h", sub: "s" });
   assert.ok(out.ig.includes("#Zendaya"));
-  assert.ok(out.firstComment.includes("/zendaya-athena/"));
+  assert.equal(out.firstComment, undefined);
+  assert.deepEqual(Object.keys(out).sort(), ["fb", "ig"]);
+});
+await t("publisher source contains no firstComment path at all", async () => {
+  const fs = await import("node:fs");
+  const src = fs.readFileSync(new URL("../publish.mjs", import.meta.url), "utf8");
+  assert.ok(!/platformSpecificData|firstComment\s*[:?]/.test(src.replace(/\/\/[^\n]*/g, "")), "publish.mjs must not send comments");
 });
 
 // ── fact gate ────────────────────────────────────────────────────────────────
@@ -159,9 +177,27 @@ await t("factgate deterministic quote check covers CAPTIONS too", async () => {
 });
 
 // ── image hunter fail-closed ─────────────────────────────────────────────────
-await t("huntImage returns null when no whitelisted carrier is among sources", async () => {
-  const out = await huntImage({ sourceLinks: ["https://evil-fanblog.example/post"] }, packOf({ sourceUrls: ["https://another-blog.example/x"] }));
-  assert.equal(out, null);
+await t("huntImages returns [] when no whitelisted carrier is among sources", async () => {
+  const out = await huntImages({ sourceLinks: ["https://evil-fanblog.example/post"] }, packOf({ sourceUrls: ["https://another-blog.example/x"] }));
+  assert.deepEqual(out, []);
+});
+
+// ── focal crop + face-cut hard fail (owner 2026-07-17) ───────────────────────
+await t("coverCrop centers the window on the focal point", async () => {
+  // 2000×900 source: left half red, right half blue; focus far right → crop mostly blue
+  const src = await sharp({ create: { width: 1000, height: 900, channels: 3, background: { r: 200, g: 20, b: 20 } } })
+    .extend({ right: 1000, background: { r: 20, g: 20, b: 200 } }).jpeg().toBuffer();
+  const out = await coverCrop(src, 1080, 796, { x: 0.9, y: 0.5 });
+  const { data } = await sharp(out).resize(4, 4, { fit: "fill" }).raw().toBuffer({ resolveWithObject: true });
+  let blue = 0;
+  for (let i = 0; i < data.length; i += 3) if (data[i + 2] > data[i]) blue++;
+  assert.ok(blue >= 12, `expected right-side (blue) dominance, got ${blue}/16 blue pixels`);
+});
+await t("visionQC hard-fails a cut face even when the model passes on score", async () => {
+  mock(async () => ({ score: 88, pass: true, faceCut: true, problems: [] }));
+  const out = await visionQC({ jpeg: Buffer.from("x"), card: { headline: "h" }, story: { entities: [] } });
+  assert.equal(out.pass, false);
+  assert.ok(out.problems[0].includes("face cut"));
 });
 
 // ── renderer ─────────────────────────────────────────────────────────────────
