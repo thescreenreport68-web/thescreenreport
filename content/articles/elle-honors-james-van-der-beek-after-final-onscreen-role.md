@@ -104,5 +104,4 @@ Van Der Beek's final onscreen roles were in the film *The Gates*, which released
 Executive producer Reese Witherspoon shared her condolences on Instagram at the time, writing, “Devastated to hear about James Van Der Beek. What an extraordinary, talented man who also showed great kindness and grace in every action.” The memorial in *Elle* serves as a public capstone to a career that spanned decades, most famously defined by his role as Dawson Leary on *Dawson’s Creek*.
 
 ## Sources
-- The Hollywood Reporter
 - [E! News](https://www.eonline.com)

@@ -118,6 +118,3 @@ The series is nominated for Outstanding Documentary or Nonfiction Series. It als
 The producer and G-Unit boss marked the moment on Instagram. "Everybody had something to say when I announced it… now the Emmys got something to say too," 50 Cent wrote. He added, "3 Emmy nominations for Sean Combs: The Reckoning. You can’t argue with the work." Fellow artist Busta Rhymes was among those congratulating him in the comments.
 
 The docuseries, which premiered in December 2025, details the rise and fall of the Bad Boy mogul. It also examines the history of sexual abuse allegations tied to his federal case. Diddy was sentenced to 50 months in prison in October 2025 for violating federal prostitution laws.
-
-## Sources
-- Billboard

@@ -10,9 +10,8 @@ dek: >-
   premiere in theaters this September before streaming on Disney+ and Hulu.
 metaTitle: Oasis 'Don't Look Back in Anger' Documentary Teaser Released
 metaDescription: >-
-  Oasis shares the first teaser for its documentary 'Don't Look Back in Anger,'
-  chronicling the band's 2025 reunion tour and featuring the first joint
-  interview with the Gallagher brothers in over 15 years.
+  The Steven Knight-produced film about the Gallagher brothers' reunion will
+  premiere in theaters this September before streaming on Disney+ and Hulu.
 tags:
   - oasis don't look back in anger teaser
   - don't look back in anger

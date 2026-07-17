@@ -10,9 +10,8 @@ dek: >-
   violence, real fire, and the franchise's most controversial kill.
 metaTitle: 'Evil Dead Burn Director Explains Brutal Vision, Practical Effects'
 metaDescription: >-
-  Sébastien Vaniček, director of 'Evil Dead Burn,' explains his brutal vision
-  for the film, including practical effects, real fire, and creative freedom
-  from Sam Raimi.
+  In a new interview, the French filmmaker details his carte blanche approach to
+  violence, real fire, and the franchise's most controversial kill.
 tags:
   - evil dead burn director interview
   - sébastien vaniček
@@ -54,9 +53,7 @@ faq:
 about:
   - name: Evil Dead Burn
     type: Movie
-imageAlt: >-
-  Evil Dead Burn in Evil Dead Burn — Evil Dead Burn Director Sébastien Vaniček
-  Breaks Down His Brutal Vision
+imageAlt: Evil Dead Burn Director Sébastien Vaniček Breaks Down His Brutal Vision
 imageCredit: The Movie Database (TMDB)
 image: 'https://image.tmdb.org/t/p/original/A5Tz6ogGt4VV8NESG9oWVct5bo1.jpg'
 imageWidth: 2995

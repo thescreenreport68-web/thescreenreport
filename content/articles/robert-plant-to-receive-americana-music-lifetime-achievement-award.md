@@ -10,9 +10,9 @@ dek: >-
   for his contributions to the roots genre.
 metaTitle: Robert Plant Gets Americana Music Lifetime Achievement Award
 metaDescription: >-
-  Robert Plant will be presented with the Lifetime Achievement Award at the
-  Americana Honors & Awards ceremony in Nashville on September 16. - Rolling
-  Stone.
+  Robert Plant will receive the Lifetime Achievement Award at the Americana
+  Honors & Awards ceremony in Nashville on September 16, the organization
+  announced.
 tags:
   - robert plant award
   - robert plant
@@ -122,7 +122,3 @@ His recent work continues this exploration. He released the album *Saving Grace*
 ## Who Are the Past Recipients?
 
 The Lifetime Achievement Award has a prestigious list of past honorees, including Bonnie Raitt, Elvis Costello, Los Lobos, Don Henley, Patty Griffin, and Buddy Guy. Plant's recognition places him among these foundational artists who have shaped the sound and spirit of Americana music.
-
-## Sources
-
-- Rolling Stone

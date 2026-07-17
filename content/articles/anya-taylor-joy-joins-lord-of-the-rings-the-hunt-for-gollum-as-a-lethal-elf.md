@@ -46,9 +46,7 @@ faq:
 about:
   - name: 'The Lord of the Rings: The Hunt for Gollum'
     type: Movie
-imageAlt: >-
-  The Lord of the Rings: The Hunt for Gollum in The Lord of the Rings: The Hunt
-  for Gollum — Anya Taylor-Joy Joins 'Lord of the
+imageAlt: 'Anya Taylor-Joy Joins ''Lord of the Rings: The Hunt for Gollum'' as a Lethal Elf'
 imageCredit: The Movie Database (TMDB)
 image: 'https://image.tmdb.org/t/p/original/aIw4c18EWwQmIWZv0W6s60y47aB.jpg'
 imageWidth: 1920

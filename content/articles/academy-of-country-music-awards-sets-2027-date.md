@@ -11,7 +11,7 @@ dek: >-
 metaTitle: 'ACM Awards 2027 Date Announced: May 16 in Las Vegas'
 metaDescription: >-
   The Academy of Country Music Awards date for 2027 is Sunday, May 16, at the
-  MGM Grand Garden Arena in Las Vegas.
+  MGM Grand Garden Arena in Las Vegas. The Academy of Country Music Awards.
 tags:
   - acm awards
   - country music
@@ -93,7 +93,6 @@ Amazon Prime Video holds the broadcast rights for the 2027 show. The streaming s
 The Academy of Country Music Awards were first held in 1966. They were the first major organization to create a country music awards program. The signature “hat” trophy was introduced in 1968. Professional member voting began online in 2004, a first for a televised awards show. Fan voting for categories like Entertainer of the Year was discontinued in 2016 after controversies around online ballot stuffing.
 
 ## Sources
-
 - [Academy of Country Music Official Website](https://www.acmcountry.com)
 - [Box Office Mojo](https://www.boxofficemojo.com)
 - [Rotten Tomatoes](https://www.rottentomatoes.com)

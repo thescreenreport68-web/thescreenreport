@@ -12,9 +12,8 @@ dek: >-
   directly opposite Paramount's 'Sonic the Hedgehog 4.'
 metaTitle: The Nightingale Movie Release Date Moved to March 2027
 metaDescription: >-
-  Dakota and Elle Fanning's WWII drama The Nightingale shifts its release to
-  March 19, 2027, positioning it against Sonic the Hedgehog 4 as spring break
-  counter-programming.
+  The move, confirmed by Sony Pictures, pushes the film back by over a month
+  from its original February 12 slot. Elle Fanning was nominated for Lead.
 tags:
   - the nightingale movie
   - the nightingale

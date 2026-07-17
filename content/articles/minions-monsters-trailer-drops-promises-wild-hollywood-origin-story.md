@@ -87,7 +87,7 @@ keyMoments:
   - Plot involves Minions making a monster movie that unleashes real chaos.
 ---
 
-The first trailer for *Minions & Monsters* confirms the little yellow creatures are heading to the birthplace of [cinema](/movies/barbenheimer-explained/) for their wildest adventure yet. Set for release on July 1, 2026, this third prequel film spins a "totally true" story of how the Minions briefly ruled Hollywood.
+The first trailer for *Minions & Monsters* confirms the little yellow creatures are heading to the birthplace of cinema for their wildest adventure yet. Set for release on July 1, 2026, this third prequel film spins a "totally true" story of how the Minions briefly ruled Hollywood.
 
 ## What's the story in Minions & Monsters?
 
@@ -114,7 +114,6 @@ Early reviews from its Annecy festival premiere have been positive, praising its
 Its July 1 release is strategically timed, debuting the same day as the opening of Universal's new Kids Resort, which features a Minions-themed land. For families, it offers a fresh historical playground for the beloved characters. For film buffs, the trailer hints at a deep well of references, from Charlie Chaplin and Buster Keaton gags to a *Casablanca* piano player named Sam.
 
 ## Sources
-
 * [Minions & Monsters - Wikipedia](https://en.wikipedia.org/wiki/Minions_%26_Monsters)
 * [Illumination Official Site](https://www.illumination.com/)
 * [Universal Pictures](https://www.universalpictures.com/)

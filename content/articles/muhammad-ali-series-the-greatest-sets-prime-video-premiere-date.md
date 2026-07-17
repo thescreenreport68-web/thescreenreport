@@ -51,9 +51,7 @@ faq:
 about:
   - name: The Greatest
     type: TV Show
-imageAlt: >-
-  The Greatest in The Greatest — 'The Greatest' Muhammad Ali Series Premieres on
-  Prime Video November 4
+imageAlt: '''The Greatest'' Muhammad Ali Series Premieres on Prime Video November 4'
 imageCredit: The Movie Database (TMDB)
 image: 'https://image.tmdb.org/t/p/original/8vqNu7ub87M109lOKPJcp15Fbru.jpg'
 imageWidth: 1920
@@ -124,6 +122,3 @@ The eight-episode series stars Jaalen Best as the boxing champion, humanitarian,
 'The Greatest' is billed as an intimate exploration of Ali's life. Executive produced by Lonnie Ali, the widow of the late boxing legend, the series is the first authorized scripted project about his life. It will feature defining moments in Ali's life and career, both in and out of the ring.
 
 Alongside Watkins' Blue Monday Productions and Michael B. Jordan's Outlier Society, producers include Authentic Studios, Roc Nation, Polygram Entertainment, and Grace: A Storytelling Company.
-
-## Sources
-- Deadline

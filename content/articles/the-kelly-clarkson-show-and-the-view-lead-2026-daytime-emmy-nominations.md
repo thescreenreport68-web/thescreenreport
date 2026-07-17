@@ -9,13 +9,10 @@ dek: >-
   The nominees for the top daytime talk categories include ‘Live with Kelly and
   Mark,’ ‘The Drew Barrymore Show,’ and two ‘Today’ show offshoots. Winners will
   be revealed on October 30.
-metaTitle: >-
-  2026 Daytime Emmy Nominations: Kelly Clarkson, The View Lead Talk Show
-  Categories
+metaTitle: '2026 Daytime Emmy Nominations: Kelly Clarkson, The View'
 metaDescription: >-
-  The 2026 Daytime Emmy nominations are out, with ‘The Kelly Clarkson Show’ and
-  ‘The View’ scoring nods for best talk series and host. See the full list of
-  nominees.
+  The nominees for the top daytime talk categories include ‘Live with Kelly and
+  Mark,’ ‘The Drew Barrymore Show,’ and two ‘Today’ show offshoots.
 tags:
   - daytime emmy nominations
   - daytime emmy awards

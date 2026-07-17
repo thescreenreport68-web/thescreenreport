@@ -8,7 +8,7 @@ date: '2026-07-12T03:01:22.313Z'
 dek: >-
   At the film's premiere, Dwayne Johnson and key consultants shared how the
   production worked to honor Polynesian traditions, dance, and language.
-metaTitle: Live-Action Moana Creatives on Cultural Authenticity & Representation
+metaTitle: Live-Action Moana Creatives on Cultural Authenticity
 metaDescription: >-
   Dwayne Johnson and the cultural team behind Disney's live-action Moana discuss
   the film's emphasis on authentic Polynesian representation and traditions.
@@ -40,9 +40,7 @@ faq:
 about:
   - name: Moana
     type: Movie
-imageAlt: >-
-  Moana in Moana — Disney's Live-Action 'Moana' Creatives Detail Push for
-  Cultural Authenticity
+imageAlt: Disney's Live-Action 'Moana' Creatives Detail Push for Cultural Authenticity
 imageCredit: The Movie Database (TMDB)
 image: 'https://image.tmdb.org/t/p/original/ogv0eTxwCVcrfKYsl2GKH4hNHJL.jpg'
 imageWidth: 3840

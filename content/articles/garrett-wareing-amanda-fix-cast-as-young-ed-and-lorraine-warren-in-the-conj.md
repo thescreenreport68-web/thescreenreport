@@ -56,8 +56,8 @@ about:
   - name: 'The Conjuring: First Communion'
     type: Movie
 imageAlt: >-
-  The Conjuring: First Communion — Garrett Wareing, Amanda Fix Cast as Young Ed
-  and Lorraine Warren in The Conjuring: First Com
+  Garrett Wareing, Amanda Fix Cast as Young Ed and Lorraine Warren in The
+  Conjuring: First Communion
 imageCredit: Photo via TheWrap
 image: 'https://www.thewrap.com/wp-content/uploads/2026/07/amanda-garrett.jpg'
 imageWidth: 1200
@@ -125,7 +125,7 @@ Garrett Wareing, who will play a young Ed Warren, currently stars in the Netflix
 
 The most recent mainline film, *The Conjuring: Last Rites*, grossed nearly $500 million worldwide. New Line Cinema, the studio behind the series, is keen to continue the franchise's success with this new origin story.
 
-Richard Naing and Ian Goldberg wrote the screenplay for *The Conjuring: First Communion*. [Peter Safran](/movies/behind-the-supergirl-bomb-competing-cuts-and-creative-differences-reve/) is producing, with John Rickard, Natalia Safran, and Romel Adam serving as executive producers.
+Richard Naing and Ian Goldberg wrote the screenplay for *The Conjuring: First Communion*. Peter Safran is producing, with John Rickard, Natalia Safran, and Romel Adam serving as executive producers.
 
 The film is described as a prequel set years before the events of the 2013 original, which was directed by James Wan and took place in 1971. No specific plot details have been revealed yet.
 

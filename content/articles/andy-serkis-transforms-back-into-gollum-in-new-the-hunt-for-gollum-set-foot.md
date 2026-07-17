@@ -12,8 +12,8 @@ dek: >-
   returning to his iconic role, reportedly on the first day of filming.
 metaTitle: Andy Serkis as Gollum in New 'The Hunt for Gollum' Set Footage
 metaDescription: >-
-  New set footage shows Andy Serkis transforming into Gollum for 'The Lord of
-  the Rings: The Hunt for Gollum,' which he is also directing.
+  Warner Bros. released behind-the-scenes video showing the director-actor
+  returning to his iconic role, reportedly on the first day of filming.
 tags:
   - andy serkis gollum
   - 'the lord of the rings: the hunt for gollum'
@@ -46,8 +46,8 @@ about:
   - name: 'The Lord of the Rings: The Hunt for Gollum'
     type: Movie
 imageAlt: >-
-  The Lord of the Rings: The Hunt for Gollum — Andy Serkis Transforms Back Into
-  Gollum in New 'The Hunt for Gollum' Set Footage
+  Andy Serkis Transforms Back Into Gollum in New 'The Hunt for Gollum' Set
+  Footage
 imageCredit: Photo via Deadline
 image: 'https://deadline.com/wp-content/uploads/2024/05/MCDLOOF_EC090.jpg?w=1600'
 imageWidth: 1600

@@ -10,9 +10,8 @@ dek: >-
   Saldaña broke new ground at a ceremony honoring films from 2024.
 metaTitle: '2025 Oscars Winners: Full List of Academy Award Winners'
 metaDescription: >-
-  See the complete list of 2025 Oscars winners, led by Sean Baker's historic
-  sweep for 'Anora' and featuring groundbreaking wins for Zoe Saldaña and 'No
-  Other Land'.
+  Sean Baker made history, Adrien Brody gave the longest speech ever, and Zoe
+  Saldaña broke new ground at a ceremony honoring films from 2024.
 tags:
   - oscars
   - academy awards

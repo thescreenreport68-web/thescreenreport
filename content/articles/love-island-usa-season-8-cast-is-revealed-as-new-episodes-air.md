@@ -11,7 +11,7 @@ dek: >-
 metaTitle: Love Island USA Season 8 Cast Members Revealed on Peacock
 metaDescription: >-
   Peacock has revealed the cast for Love Island USA season 8, which premiered in
-  June with host Ariana Madix returning.
+  June with host Ariana Madix returning. The new season premiered on June 2.
 tags:
   - love island usa season 8 cast
   - love island usa
@@ -126,7 +126,7 @@ Sean Reifel, a 29-year-old former police officer from Pennsylvania, was also an 
 
 ## When do new episodes air?
 
-According to the report, the season premiered on June 2. Following the premiere week, new episodes are scheduled to air Thursdays through Tuesdays. The show became [Peacock](/tv/laura-bailey-pitches-herself-for-dungeon-crawler-carl-tv-series/)'s most-watched original series last year.
+According to the report, the season premiered on June 2. Following the premiere week, new episodes are scheduled to air Thursdays through Tuesdays. The show became Peacock's most-watched original series last year.
 
 Bombshells entering the villa include Gabriel Vasconcelos (26, from Miami), Kayda Reese Bosse (22, from New Hampshire), Corbin Mims (22, from Miami), Caleb McDaniel (21, from North Carolina), Jen Terry (23, a model from Florida), and Sol Mýa (24, from California). Additional Casa Amor bombshells have also joined the cast.
 

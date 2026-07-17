@@ -46,8 +46,8 @@ about:
   - name: Big Brother
     type: TV Series
 imageAlt: >-
-  Big Brother in Big Brother — Big Brother Season 28 Cast Revealed: Drag Queen,
-  Rocket Scientist and MMA Fighter Enter House
+  Big Brother Season 28 Cast Revealed: Drag Queen, Rocket Scientist and MMA
+  Fighter Enter House
 imageCredit: The Movie Database (TMDB)
 image: 'https://image.tmdb.org/t/p/original/5MyjGUa2piiEyNH4UcLp3YV9cwo.jpg'
 imageWidth: 1920

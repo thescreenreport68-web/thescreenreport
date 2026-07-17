@@ -12,8 +12,9 @@ dek: >-
   Corenswet's Superman in the 2027 team-up film.
 metaTitle: 'Blue Beetle Superman Sequel: Xolo Maridueña Joins Man of Tomorrow'
 metaDescription: >-
-  Xolo Maridueña is set to reprise his role as Blue Beetle in James Gunn's
-  Superman sequel, Man of Tomorrow, arriving in theaters in 2027.
+  Xolo Maridueña is set to reprise his role as the superhero Blue Beetle in the
+  upcoming Superman sequel, Man of Tomorrow , according to a report from
+  Variety.
 tags:
   - blue beetle superman sequel
   - xolo maridueña
@@ -112,7 +113,7 @@ keyPoints:
   - 'The movie is scheduled for a theatrical release on July 9, 2027.'
 ---
 
-Xolo Maridueña is set to reprise his role as the superhero Blue Beetle in the upcoming Superman sequel, *Man of Tomorrow*, according to a report from Variety. The film is currently in production under writer-director [James Gunn](/movies/behind-the-supergirl-bomb-competing-cuts-and-creative-differences-reve/).
+Xolo Maridueña is set to reprise his role as the superhero Blue Beetle in the upcoming Superman sequel, *Man of Tomorrow*, according to a report from Variety. The film is currently in production under writer-director James Gunn.
 
 Maridueña first portrayed Jaime Reyes, a recent college graduate bonded with an alien scarab, in the 2023 film *Blue Beetle*. Gunn had previously confirmed on a podcast that Maridueña's character holds a special place in the new cinematic universe. "The first DCU character, for sure, Blue Beetle, and the first full DCU movie is ‘Superman,'" Gunn said.
 

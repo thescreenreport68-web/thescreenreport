@@ -13,9 +13,9 @@ dek: >-
   Studios.
 metaTitle: 'Next James Bond Should Be an Unknown, Says Casting Director'
 metaDescription: >-
-  Former James Bond casting director Debbie McWilliams argues the next 007 actor
-  should be an unknown, calling it 'absolutely essential' for the character's
-  mystique.
+  The former franchise casting director believes an 'enigma' is essential for
+  007 as the search for Daniel Craig's successor continues under Amazon MGM
+  Studios.
 tags:
   - james bond actor
   - james bond
@@ -119,4 +119,4 @@ While McWilliams champions an unknown, the casting rumor mill has swirled with m
 
 ## What's next for the Bond franchise?
 
-The next chapter of the series is set to be directed by Denis Villeneuve and written by [Steven Knight](/movies/oasis-releases-first-teaser-for-don-t-look-back-in-anger-documentary/). As of July 2026, no official casting announcement has been made. The debate between selecting a known star or a fresh face continues, with McWilliams' insider view adding significant weight to the argument for an unknown actor to lead the iconic spy into a new era.
+The next chapter of the series is set to be directed by Denis Villeneuve and written by Steven Knight. As of July 2026, no official casting announcement has been made. The debate between selecting a known star or a fresh face continues, with McWilliams' insider view adding significant weight to the argument for an unknown actor to lead the iconic spy into a new era.

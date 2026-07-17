@@ -10,8 +10,9 @@ dek: >-
   from 'The Good Doctor' creator David Shore.
 metaTitle: William Jackson Harper Joins Hulu Legal Drama
 metaDescription: >-
-  William Jackson Harper has joined the main cast of Hulu's upcoming legal drama
-  'Conviction' as a series regular, according to Deadline.
+  William Jackson Harper has joined the main cast of Hulu's legal drama
+  'Conviction' as a series regular, starring opposite Elisabeth Moss, according
+  to Deadline.
 tags:
   - william jackson harper conviction
   - william jackson harper

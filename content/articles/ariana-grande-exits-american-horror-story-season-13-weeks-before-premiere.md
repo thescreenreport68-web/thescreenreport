@@ -10,8 +10,8 @@ dek: >-
   did not film any scenes for the new season.
 metaTitle: Ariana Grande Exits American Horror Story Season 13 Cast
 metaDescription: >-
-  Ariana Grande has reportedly exited the upcoming season of FX's 'American
-  Horror Story' due to scheduling conflicts, according to AOL.com.
+  Ariana Grande has reportedly exited FX's 'American Horror Story' Season 13
+  due to scheduling conflicts, just weeks before its September 24 premiere.
 tags:
   - ariana grande tv show
   - ariana grande
@@ -125,7 +125,7 @@ Her exit comes just weeks before the show's return. Season 13 of 'American Horro
 
 ## What happened to Ariana Grande's role?
 
-Grande's casting was announced on October 25, 2025. She was slated to join a cast that includes Frances Conroy and Alex Consani, who were recently spotted filming exterior scenes. FX and 20th Television have not yet commented on her reported departure.
+Grande's casting was announced on October 31, 2025. She was slated to join a cast that includes Frances Conroy and Alex Consani, who were recently spotted filming exterior scenes. FX and 20th Television have not yet commented on her reported departure.
 
 ## What else is Ariana Grande working on?
 

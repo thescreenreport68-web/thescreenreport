@@ -11,7 +11,7 @@ dek: >-
 metaTitle: Tyga Launches $TARFACE Persona With 'GAVE U RACKS' Single
 metaDescription: >-
   Tyga has launched a new artist persona called $TARFACE, debuting with the
-  single 'GAVE U RACKS' and its official music video.
+  single 'GAVE U RACKS' and its official music video. Across his career, he.
 tags:
   - tyga
   - $tarface
@@ -110,5 +110,3 @@ The "GAVE U RACKS" music video, shot in Los Angeles, serves as the visual introd
 ## How has Tyga performed on the charts?
 
 Tyga, born Michael Ray Nguyen-Stevenson in Compton, California, has a proven track record on the charts. Across his career, he has logged 41 entries on the Billboard Hot 100, including six top 10 hits. His 2012 single "Rack City" peaked at No. 5, while "Taste" featuring Offset reached No. 7 in 2018 and has since been certified diamond by the RIAA.
-
-## Sources

@@ -11,7 +11,8 @@ dek: >-
 metaTitle: 'Joby Baker, ''Good Morning World'' Star, Dies at 92'
 metaDescription: >-
   Joby Baker, best known for the CBS sitcom 'Good Morning World' and films like
-  'Girl Happy' with Elvis Presley, has died at age 92.
+  'Girl Happy' with Elvis Presley, has died at age 92. And I convinced them not
+  to.
 tags:
   - joby baker
   - sofia silverman

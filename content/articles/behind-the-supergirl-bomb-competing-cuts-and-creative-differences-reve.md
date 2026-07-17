@@ -12,9 +12,8 @@ dek: >-
   DC Studios, leading to a disastrous opening weekend.
 metaTitle: Supergirl Movie Cuts & Creative Differences Explained
 metaDescription: >-
-  A new report reveals competing cuts and creative differences between the
-  director and studio heads contributed to the Supergirl movie's poor box office
-  performance.
+  An exclusive report details competing edits from director Craig Gillespie and
+  DC Studios, leading to a disastrous opening weekend.
 tags:
   - supergirl movie cuts
   - supergirl
@@ -37,8 +36,8 @@ about:
   - name: Supergirl
     type: Movie
 imageAlt: >-
-  Supergirl in Supergirl — Supergirl Movie Cuts Revealed as Behind-the-Scenes
-  Conflict Contributed to Box Office Bomb
+  Supergirl Movie Cuts Revealed as Behind-the-Scenes Conflict Contributed to Box
+  Office Bomb
 imageCredit: The Movie Database (TMDB)
 image: 'https://image.tmdb.org/t/p/original/54KIfdTEzOliHDKx0OkzYGqAICx.jpg'
 imageWidth: 3840
@@ -90,7 +89,7 @@ keyPoints:
 
 DC Studios and director Craig Gillespie were not creatively aligned on the *[Supergirl](/movies/supergirl-cast-meet-the-stars-of-dcu-s-upcoming-film/)* film, leading to competing cuts and a box office disappointment, according to a report from The Hollywood Reporter.
 
-Behind the scenes, a significant conflict unfolded between the filmmaker and DC Studios heads [James Gunn](/movies/superman-2025-reactions-what-fans-are-saying/) and Peter Safran. The studio reportedly took charge of post-production to create its own version of the movie, which was then tested against Gillespie's cut in a March screening event described as a "bakeoff." This internal competition was triggered after early test screenings in late 2025 and early 2026 yielded poor results.
+Behind the scenes, a significant conflict unfolded between the filmmaker and DC Studios heads James Gunn and Peter Safran. The studio reportedly took charge of post-production to create its own version of the movie, which was then tested against Gillespie's cut in a March screening event described as a "bakeoff." This internal competition was triggered after early test screenings in late 2025 and early 2026 yielded poor results.
 
 ## What were the test scores like?
 
@@ -103,6 +102,3 @@ When the two competing versions were tested against each other in March, the sco
 Music was a key friction point, with Gunn famously known for his curated soundtracks. The final set piece originally featured a cover of Cyndi Lauper's "Girls Just Want to Have Fun," a choice from Gunn that was later abandoned. The climactic fight scene was also reconfigured during post-production. Writer Jeremy Slater was brought in to help, contributing to scenes for nine days of additional photography.
 
 Other sources dispute the characterization of extreme conflict, describing it as a normal amount of "healthy friction" between a filmmaker and a studio. They note the studio respects Gillespie's filmmaking chops. The film, starring Milly Alcock and budgeted between $170 million and $180 million, opened to just $37.1 million in June 2026.
-
-## Sources
-- The Hollywood Reporter

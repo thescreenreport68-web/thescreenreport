@@ -8,7 +8,7 @@ date: '2026-07-06T21:01:06.109Z'
 dek: >-
   Lex Wood explains how color, music, and hidden details define Lestat's new
   persona and Louis's emotional state in the AMC+ series' third season.
-metaTitle: 'The Vampire Lestat: Costume Designer Details Rockstar Look & Easter Eggs'
+metaTitle: 'The Vampire Lestat: Costume Designer Details Rockstar'
 metaDescription: >-
   Costume designer Lex Wood details the rockstar-inspired wardrobe for Sam
   Reid's Lestat and hidden Easter eggs in 'The Vampire Lestat' Season 3 on AMC+.
@@ -54,9 +54,7 @@ faq:
 about:
   - name: Interview with the Vampire
     type: TV Show
-imageAlt: >-
-  Interview with the Vampire in Interview with the Vampire — Costume Designer
-  Lex Wood Breaks Down 'The Vampire Lestat' Rocksta
+imageAlt: Costume Designer Lex Wood Breaks Down 'The Vampire Lestat' Rockstar Wardrobe
 imageCredit: The Movie Database (TMDB)
 image: 'https://image.tmdb.org/t/p/original/3fChciF2G1wXHsyTfJD9y7uN6Il.jpg'
 imageWidth: 1920

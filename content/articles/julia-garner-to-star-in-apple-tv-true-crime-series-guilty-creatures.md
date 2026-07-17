@@ -8,10 +8,10 @@ date: '2026-07-07T14:59:15.164Z'
 dek: >-
   The 'Ozark' Emmy winner will executive produce and star in the adaptation of
   Mikita Brottman's book, with Craig Gillespie directing.
-metaTitle: Julia Garner Cast in Apple TV+ True Crime Series 'Guilty Creatures'
+metaTitle: Julia Garner Cast in Apple TV+ True Crime Series
 metaDescription: >-
-  Julia Garner is attached to star in an Apple TV+ true crime series based on
-  the book 'Guilty Creatures: Sex, God, and Murder in Tallahassee, Florida.'
+  The 'Ozark' Emmy winner will executive produce and star in the adaptation of
+  Mikita Brottman's book, with Craig Gillespie directing.
 tags:
   - julia garner guilty creatures
   - julia garner
@@ -45,9 +45,7 @@ faq:
 about:
   - name: Guilty Creatures
     type: TV Series
-imageAlt: >-
-  Guilty Creatures: Sex, God, and Murder in Tallahassee, Florida — Julia Garner
-  to Star in Apple TV+ True Crime Series 'Guilty 
+imageAlt: Julia Garner to Star in Apple TV+ True Crime Series 'Guilty Creatures'
 imageCredit: Photo via Variety
 image: >-
   https://variety.com/wp-content/uploads/2026/07/Julia-Garner-Guilty-Creatures.jpg?w=1600&h=901&crop=1
@@ -127,6 +125,3 @@ Sarah DeLappe, who wrote the film *Bodies Bodies Bodies*, will write and executi
 Garner is best known for her role as Ruth Langmore in the Netflix series *Ozark*, for which she won three Emmy Awards. She also received an Emmy nomination for playing Anna Delvey in the Netflix limited series *Inventing Anna*. Her upcoming projects include a role in the Netflix series *The Altruists*.
 
 Gillespie most recently directed the DC film *Supergirl* and is known for directing features like *I, Tonya* and *Cruella*. In television, he has directed episodes of Apple series *Your Friends and Neighbors* and *Physical*, and the Hulu limited series *Pam & Tommy*.
-
-## Sources
-- Variety

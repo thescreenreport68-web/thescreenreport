@@ -14,7 +14,6 @@ metaDescription: >-
   performing a 75-minute set for a sold-out crowd.
 tags:
   - noah kahan
-  - rolling stone
   - gigi perez
   - sydney rose
 targetKeyword: noah kahan
@@ -110,6 +109,3 @@ The lineup for Stateside featured a range of artists fitting the festival's Amer
 For Rolling Stone, the Stateside festival represents a move to establish more revenue streams beyond its traditional print and digital income. While this is the first festival to carry the magazine's name, the company has already delved into live events, having purchased the Life is Beautiful music festival in Las Vegas back in 2022.
 
 The festival caps a particularly active period for Kahan, who was also the cover star for Rolling Stone's June issue. He released his fourth album, *The Great Divide*, in April and a Netflix documentary, *Noah Kahan: Out of Body*, earlier this year. His single “The Great Divide” is currently on the Billboard Hot 100 chart.
-
-## Sources
-- The Hollywood Reporter

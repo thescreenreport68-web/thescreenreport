@@ -10,9 +10,8 @@ dek: >-
   while voicing deep worries about artificial intelligence's societal impact.
 metaTitle: Luca Guadagnino Gives Hope For AI Film 'Artificial' Release
 metaDescription: >-
-  Director Luca Guadagnino expresses cautious hope for his film 'Artificial' to
-  be released and shares his broader concerns about AI's rapid influence on the
-  world.
+  The 'Challengers' director is optimistic his OpenAI drama will find a home
+  while voicing deep worries about artificial intelligence's societal impact.
 tags:
   - luca guadagnino
   - artificial intelligence

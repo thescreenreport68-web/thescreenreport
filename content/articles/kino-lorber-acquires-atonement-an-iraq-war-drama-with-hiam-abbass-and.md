@@ -53,8 +53,8 @@ about:
   - name: Atonement
     type: Movie
 imageAlt: >-
-  Atonement in Atonement — Kino Lorber Acquires ‘Atonement,’ an Iraq War Drama
-  with Hiam Abbass and Kenneth Branagh
+  Kino Lorber Acquires ‘Atonement,’ an Iraq War Drama with Hiam Abbass and
+  Kenneth Branagh
 imageCredit: The Movie Database (TMDB)
 image: 'https://image.tmdb.org/t/p/original/prH7Lmo7V9GuMbhCaDCSa6kvZvs.jpg'
 imageWidth: 3840

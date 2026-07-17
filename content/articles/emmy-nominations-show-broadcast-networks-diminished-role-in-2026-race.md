@@ -11,9 +11,9 @@ dek: >-
   record.
 metaTitle: '2026 Emmy Nominations: Broadcast Networks'' Role Diminishes'
 metaDescription: >-
-  The 2026 Emmy nominations highlight the fading influence of broadcast TV, with
-  'Abbott Elementary' as the lone major contender and trivia including Martin
-  Short and Bad Bunny.
+  ABC's 'Abbott Elementary' is the sole broadcast show in major categories,
+  while Martin Short scores a trifecta and Bad Bunny's halftime show sets a
+  record.
 tags:
   - emmy nominations
   - emmy awards
@@ -50,9 +50,7 @@ faq:
 about:
   - name: Abbott Elementary
     type: TV Series
-imageAlt: >-
-  Emmy Awards in Abbott Elementary — Emmy Nominations Show Broadcast Networks'
-  Diminished Role in 2026 Race
+imageAlt: Emmy Nominations Show Broadcast Networks' Diminished Role in 2026 Race
 imageCredit: The Movie Database (TMDB)
 image: 'https://image.tmdb.org/t/p/original/asDINJT3b7tEa76uWI1rZ5TWdJF.jpg'
 imageWidth: 3840
@@ -118,5 +116,3 @@ The decline is stark. The list includes "FBI," "The Neighborhood," "The Rookie,"
 Martin Short achieved a rare feat with nominations in three distinct fields: Lead Actor in a Comedy Series for "Only Murders in the Building," Outstanding Game Show Host for "Match Game," and as the subject of the nominated documentary "Marty, Life Is Short." Bad Bunny also made history. His Apple Music Super Bowl LX Halftime Show earned nine nominations, surpassing the previous record set by Lady Gaga in 2017.
 
 Other notable trivia includes David Attenborough becoming the oldest Primetime Emmy nominee ever with two nods for narration. Salli Richardson-Whitfield became the first Black woman to receive two directing nominations in the drama series category. Several canceled shows, such as Apple TV+'s "Palm Royale" with eight nominations and Peacock's "Poker Face," also found recognition.
-
-## Sources

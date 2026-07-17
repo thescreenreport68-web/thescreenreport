@@ -8,7 +8,7 @@ date: '2026-07-06T15:01:11.983Z'
 dek: >-
   The 'Elle' director also reveals plans to use the classic theme song and a
   tone inspired by Agatha Christie for the 2028 adaptation.
-metaTitle: 'Jason Moore Directs ''Murder, She Wrote'' Movie with Jamie Lee Curtis'
+metaTitle: 'Jason Moore Directs ''Murder, She Wrote'' Movie'
 metaDescription: >-
   Director Jason Moore confirms he is helming the upcoming 'Murder, She Wrote'
   movie starring Jamie Lee Curtis, sharing details on the tone and music.

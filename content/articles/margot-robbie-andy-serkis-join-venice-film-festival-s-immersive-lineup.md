@@ -10,8 +10,8 @@ dek: >-
   countries, featuring contributions from high-profile talent.
 metaTitle: Venice Film Festival Immersive Lineup with Margot
 metaDescription: >-
-  The Venice Film Festival's immersive sidebar announces its 2026 lineup,
-  featuring projects with Margot Robbie, Andy Serkis, and Omar Sy.
+  The program will present 68 projects from 26 countries. Thirty of these works
+  will play in competition, with 35 screening out of competition.
 tags:
   - venice film festival
   - venice immersive

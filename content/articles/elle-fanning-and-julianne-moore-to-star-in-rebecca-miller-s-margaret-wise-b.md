@@ -53,8 +53,8 @@ about:
   - name: 'Moonsong: A Life In Seven Verses'
     type: Movie
 imageAlt: >-
-  Moonsong: A Life In Seven Verses — Elle Fanning and Julianne Moore to Star in
-  Rebecca Miller's Margaret Wise Brown Biopic
+  Elle Fanning and Julianne Moore to Star in Rebecca Miller's Margaret Wise
+  Brown Biopic
 imageCredit: Photo via Deadline
 image: >-
   https://deadline.com/wp-content/uploads/2026/07/Elle-Fanning-Julianne-Moore-and-Rebecca-Miller.jpg?w=1600

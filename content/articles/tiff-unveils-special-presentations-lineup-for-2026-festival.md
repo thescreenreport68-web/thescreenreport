@@ -11,8 +11,8 @@ dek: >-
 metaTitle: TIFF Unveils Special Presentations Lineup for 2026 Festival
 metaDescription: >-
   Margaret Qualley, Mahershala Ali, and Cate Blanchett will bring new films to
-  the Toronto festival in September. It is set for a theatrical release in fall
-  2026.
+  the Toronto festival in September. Ali's thriller is set for a fall 2026
+  release.
 tags:
   - tiff film premieres
   - toronto international film festival
@@ -125,7 +125,7 @@ Organizers revealed the first wave of titles for the prestigious section on Thur
 
 ## What films are premiering at TIFF?
 
-Among the world premieres is Rachel Morrison's "Love of Your Life," starring Margaret Qualley as a suddenly single young woman on a journey to find her way forward. The Amazon MGM Studios film is produced by [Ryan Gosling](/movies/project-hail-mary-has-fans-in-a-frenzy-except-for-that-one-genius-white-guy/) and Jessie Henderson and also stars Gabriel Basso and Patrick Schwarzenegger.
+Among the world premieres is Rachel Morrison's "Love of Your Life," starring Margaret Qualley as a suddenly single young woman on a journey to find her way forward. The Amazon MGM Studios film is produced by Ryan Gosling and Jessie Henderson and also stars Gabriel Basso and Patrick Schwarzenegger.
 
 Ben Shirinian's feature debut, "The Housewife," will also have its world premiere. The psychological drama, based on a true story from 1964, stars Naomi Watts as the charming wife of a potential Nazi officer living secretly in Queens. Tye Sheridan plays the journalist whose investigation goes off track after befriending her.
 
@@ -142,7 +142,3 @@ In an official statement, TIFF's chief programming officer Anita Lee said, "Each
 ## When is TIFF 2026?
 
 The 51st edition of the Toronto International Film Festival is scheduled for September 10-20, 2026. The festival previously announced that Siân Heder's "Being Heumann" will serve as the opening night film. Organizers stated that more titles for the Special Presentations program and other sections will be announced starting next week.
-
-## Sources
-- The Hollywood Reporter
-- IndieWire

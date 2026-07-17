@@ -11,7 +11,7 @@ dek: >-
   Jamie Magnus Stone and Micho Rutare are writing screenplays for the startup's
   AI-enabled projects, pairing traditional screenwriting with generative AI
   creators.
-metaTitle: Sharknado & Doctor Who Creatives Write AI Films for
+metaTitle: Sharknado & Doctor Who Creatives Write AI Films
 metaDescription: >-
   Creatives from Doctor Who and Sharknado are now writing AI-generated films for
   the startup Promise AI, pairing traditional screenwriting with AI-native…
@@ -136,7 +136,7 @@ The creatives are part of a small but growing list of credited writers boarding 
 
 ## What is Promise AI's approach?
 
-Company executives believe AI filmmaking benefits from a strong dose of traditional writing. "People who work on AI films have a mastery that very few people have — you need to learn dozens of tools," said Tyler Mitchell, a former Imagine [Entertainment](/movies/moana-remake-could-lose-100-million-audiences-call-it-ai-generated-and-dull/) executive who runs development for Promise. He argues that pairing writers with AI experts provides a strong creative map.
+Company executives believe AI filmmaking benefits from a strong dose of traditional writing. "People who work on AI films have a mastery that very few people have — you need to learn dozens of tools," said Tyler Mitchell, a former Imagine Entertainment executive who runs development for Promise. He argues that pairing writers with AI experts provides a strong creative map.
 
 Funding for the projects currently comes from Promise AI, with financial backing from the Peter Chernin-founded North Road company. The company will seek traditional distribution partners for the finished films, though mainstream interest from streamers and exhibitors remains an open question.
 

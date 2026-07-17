@@ -8,7 +8,7 @@ date: '2026-07-16T16:33:16.252Z'
 dek: >-
   Warner Bros.' Clockwork banner announced the sports drama, based on a Black
   List script, with production set to begin this fall.
-metaTitle: 'Rose Byrne Reunites with Mary Bronstein for ''Nasty,'''
+metaTitle: 'Rose Byrne Reunites with Mary Bronstein for ''Nasty'''
 metaDescription: >-
   Rose Byrne and Jenna Ortega will star in the new film 'Nasty,' directed by
   Mary Bronstein and produced by LuckyChap. Warner Bros. announced the project.
@@ -105,8 +105,4 @@ The studio announced the project on Thursday, July 16, alongside a poster teaser
 
 ## What is Clockwork?
 
-Clockwork is the upstart indie label at [Warner Bros](/movies/the-batman-part-ii-slips-to-2028-fans-joke-about-aging-out-cast-promises-a/). led by a trio of former Neon executives. The banner's first announced new film is Sean Baker's "Ti Amo!" It also acquired Park Chan-wook's next film "Brigands of Rattlecreek" starring Matthew McConaughey, Pedro Pascal, and Austin Butler.
-
-## Sources
-
-- IndieWire
+Clockwork is the upstart indie label at Warner Bros. led by a trio of former Neon executives. The banner's first announced new film is Sean Baker's "Ti Amo!" It also acquired Park Chan-wook's next film "Brigands of Rattlecreek" starring Matthew McConaughey, Pedro Pascal, and Austin Butler.

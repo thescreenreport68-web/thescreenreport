@@ -11,9 +11,9 @@ dek: >-
   Marilyn Monroe.
 metaTitle: Ellen Burstyn Golden Lion Lifetime Achievement Award Venice
 metaDescription: >-
-  Ellen Burstyn will be honored with a Golden Lion for Lifetime Achievement at
-  the Venice Film Festival, celebrated with a new short film directed by Maggie
-  Gyllenhaal.
+  Ellen Burstyn is set to receive a prestigious lifetime achievement honor from
+  the Venice Film Festival. In a statement, Burstyn expressed her joy and
+  gratitude.
 tags:
   - ellen burstyn venice
   - ellen burstyn

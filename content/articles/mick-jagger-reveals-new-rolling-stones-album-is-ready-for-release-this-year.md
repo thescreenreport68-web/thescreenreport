@@ -16,7 +16,6 @@ tags:
   - mick jagger new album
   - mick jagger
   - rolling stones
-  - billboard
   - the rolling stones
 targetKeyword: Mick Jagger new album
 keyTakeaways:
@@ -100,7 +99,7 @@ officialPost:
   url: ''
 ---
 
-Mick Jagger has confirmed The Rolling Stones have a new album ready for release this year. According to [Billboard](/music/clave-especial-discuss-american-and-mexican-music-influence-on-their-work/), the project marks a faster creative pace for the legendary rock band following their 2023 album 'Hackney Diamonds.'
+Mick Jagger has confirmed The Rolling Stones have a new album ready for release this year. According to Billboard, the project marks a faster creative pace for the legendary rock band following their 2023 album 'Hackney Diamonds.'
 
 ## What songs are on the new album?
 

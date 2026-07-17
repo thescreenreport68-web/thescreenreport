@@ -8,10 +8,10 @@ date: '2026-07-06T03:01:05.029Z'
 dek: >-
   The country singer posted photos from the Madison Square Garden ceremony,
   including an embroidered handkerchief given to guests as a keepsake.
-metaTitle: Maren Morris reveals Taylor Swift Travis Kelce wedding gift details
+metaTitle: Maren Morris reveals Taylor Swift Travis Kelce wedding
 metaDescription: >-
-  Maren Morris shared details and photos from Taylor Swift and Travis Kelce's
-  wedding, revealing a custom lace handkerchief given to guests.
+  The country singer posted photos from the Madison Square Garden ceremony,
+  including an embroidered handkerchief given to guests as a keepsake.
 tags:
   - maren morris taylor swift wedding gift
   - taylor swift
@@ -105,6 +105,6 @@ Her photos also showed her in a black dress with fellow country star Kelsea Ball
 
 ## Who else was at the wedding?
 
-Details about the star-studded ceremony continued to emerge. It was confirmed that Stevie Nicks performed during the wedding. Actor-comedian [Adam Sandler](/celebrity/taylor-swift-s-wedding-look-included-a-subtle-eras-tour-nod/) officiated and performed an original song for the couple.
+Details about the star-studded ceremony continued to emerge. It was confirmed that Stevie Nicks performed during the wedding. Actor-comedian Adam Sandler officiated and performed an original song for the couple.
 
 Other celebrities spotted arriving included Jack Antonoff, Mariska Hargitay, [Ed Sheeran](/celebrity/ed-sheeran-bradley-cooper-dakota-johnson-among-stars-arriving-for-tayl/), the Haim sisters, Benson Boone and Camila Cabello. Swift’s brother, Austin Swift, served as her man of honor, while Jason Kelce was his brother’s best man.

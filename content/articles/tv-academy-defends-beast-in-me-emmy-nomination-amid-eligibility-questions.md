@@ -50,9 +50,7 @@ faq:
 about:
   - name: The Beast in Me
     type: TV Show
-imageAlt: >-
-  TV Academy in The Beast in Me — TV Academy Defends 'Beast in Me' Emmy
-  Nomination Amid Eligibility Questions
+imageAlt: TV Academy Defends 'Beast in Me' Emmy Nomination Amid Eligibility Questions
 imageCredit: The Movie Database (TMDB)
 image: 'https://image.tmdb.org/t/p/original/ylW0m5UztyyL4YFu8EC6usUHLF.jpg'
 imageWidth: 3840

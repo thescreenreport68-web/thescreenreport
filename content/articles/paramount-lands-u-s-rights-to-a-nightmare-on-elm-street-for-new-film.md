@@ -8,11 +8,10 @@ date: '2026-07-13T21:01:13.820Z'
 dek: >-
   The studio's new genre label, Paramount Primal, will develop the project based
   on Wes Craven's original screenplay.
-metaTitle: Paramount Acquires 'A Nightmare on Elm Street' Rights for New Movie
+metaTitle: Paramount Acquires 'A Nightmare on Elm Street' Rights
 metaDescription: >-
-  Paramount Pictures has acquired the U.S. rights to adapt Wes Craven's original
-  'A Nightmare on Elm Street' screenplay for a new film through its Paramount
-  Primal label.
+  The deal was secured for the studio's new genre label, Paramount Primal. The
+  project will be overseen by Paramount Primal, a label run by producers J.D.
 tags:
   - a nightmare on elm street rights
   - a nightmare on elm street

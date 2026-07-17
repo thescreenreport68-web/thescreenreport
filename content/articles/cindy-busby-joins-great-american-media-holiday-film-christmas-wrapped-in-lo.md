@@ -55,8 +55,8 @@ about:
   - name: Christmas Wrapped in Love
     type: Movie
 imageAlt: >-
-  Christmas Wrapped in Love in Loving Christmas — Cindy Busby Joins Great
-  American Media Holiday Film 'Christmas Wrapped in Lov
+  Cindy Busby Joins Great American Media Holiday Film 'Christmas Wrapped in
+  Love'
 imageCredit: The Movie Database (TMDB)
 image: 'https://image.tmdb.org/t/p/original/pgSHldnH24OJzCb5i8R6y602q0h.jpg'
 imageWidth: 1920
@@ -112,7 +112,7 @@ keyPoints:
 
 Cindy Busby is set to star in the Great American Media holiday film *Christmas Wrapped in Love*, which has just begun production, according to Deadline.
 
-The film will have its world premiere across Great American Pure Flix, Great American [Family](/movies/the-sheep-detectives-trailer-arrives-promising-farmyard-fun/), and GFAM+ during the network's top-rated Great American Christmas programming event this October.
+The film will have its world premiere across Great American Pure Flix, Great American Family, and GFAM+ during the network's top-rated Great American Christmas programming event this October.
 
 ## What is the plot of Christmas Wrapped in Love?
 

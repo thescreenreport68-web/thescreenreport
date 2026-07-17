@@ -8,7 +8,7 @@ date: '2026-07-04T11:36:46.232Z'
 dek: >-
   Matt Damon leads an all-star cast as Odysseus in Nolan's $250 million
   adaptation of the Greek myth, set for a July 2026 release.
-metaTitle: 'Christopher Nolan''s The Odyssey Trailer: Cast, Release Date, Details'
+metaTitle: 'Christopher Nolan''s The Odyssey Trailer: Cast'
 metaDescription: >-
   A new teaser is out for Christopher Nolan's 'The Odyssey,' starring Matt
   Damon, Tom Holland, and Anne Hathaway. Get the full cast, story, and 2026
@@ -43,9 +43,7 @@ faq:
 about:
   - name: The Odyssey
     type: Movie
-imageAlt: >-
-  The Odyssey in The Odyssey — Christopher Nolan's 'The Odyssey' Drops First
-  Teaser for 2026 Epic
+imageAlt: Christopher Nolan's 'The Odyssey' Drops First Teaser for 2026 Epic
 imageCredit: The Movie Database (TMDB)
 image: 'https://image.tmdb.org/t/p/original/m3Pom6pbD51bBv3syz8NMHda3fz.jpg'
 imageWidth: 3840
@@ -118,7 +116,7 @@ The film follows the legendary King of Ithaca, Odysseus, on his long and perilou
 
 ## Who is in the cast?
 
-Matt Damon leads the ensemble as the cunning hero, Odysseus. He is joined by [Tom Holland](/movies/spider-man-brand-new-day-trailer-drops-teasing-a-world-without-recogni/) as his son, Telemachus, and Anne Hathaway as his faithful wife, Penelope. The supporting cast is packed with A-list talent, including Robert Pattinson as the suitor Antinous, Lupita Nyong'o in a dual role as Helen or Clytemnestra, and Charlize Theron as the nymph Calypso. Zendaya will portray the goddess Athena, with Benny Safdie and Jon Bernthal as the kings Agamemnon and Menelaus, respectively. John Leguizamo rounds out the cast as the loyal swineherd, Eumaeus.
+Matt Damon leads the ensemble as the cunning hero, Odysseus. He is joined by Tom Holland as his son, Telemachus, and Anne Hathaway as his faithful wife, Penelope. The supporting cast is packed with A-list talent, including Robert Pattinson as the suitor Antinous, Lupita Nyong'o in a dual role as Helen or Clytemnestra, and Charlize Theron as the nymph Calypso. Zendaya will portray the goddess Athena, with Benny Safdie and Jon Bernthal as the kings Agamemnon and Menelaus, respectively. John Leguizamo rounds out the cast as the loyal swineherd, Eumaeus.
 
 ## Why is this film so anticipated?
 

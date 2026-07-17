@@ -10,9 +10,8 @@ dek: >-
   in the mysterious Universal event film, slated for a November 2027 release.
 metaTitle: PinkPantheress Acting Debut in Daniels Secret Movie Casting News
 metaDescription: >-
-  Grammy-nominated artist PinkPantheress is set to make her feature film acting
-  debut in the upcoming secret project from 'Everything Everywhere All at Once'
-  directors Daniels.
+  The Grammy-nominated singer-songwriter will appear alongside an ensemble cast
+  in the mysterious Universal event film, slated for a November 2027 release.
 tags:
   - pinkpantheress acting
   - pinkpantheress

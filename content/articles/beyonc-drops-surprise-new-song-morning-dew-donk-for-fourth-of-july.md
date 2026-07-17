@@ -8,7 +8,7 @@ date: '2026-07-04T13:47:12.157Z'
 dek: >-
   The track, her first new music in two years, will be included on the upcoming
   20th Anniversary edition of her 2006 album 'B'Day'.
-metaTitle: Beyoncé New Song 'Morning Dew (Donk)' Released as July 4th Surprise
+metaTitle: Beyoncé New Song 'Morning Dew (Donk)' Released as July
 metaDescription: >-
   Beyoncé surprise-released a new song, 'Morning Dew (Donk)', as a Fourth of
   July gift. The track will appear on the 'B'Day' 20th Anniversary edition.

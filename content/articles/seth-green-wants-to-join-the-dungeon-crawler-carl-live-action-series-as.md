@@ -130,6 +130,6 @@ Despite these connections, Green wants to earn the role through fan support rath
 
 ## What is the status of the series?
 
-The *Dungeon Crawler Carl* television adaptation was ordered to series at [Peacock](/tv/love-island-usa-season-8-cast-is-revealed-as-new-episodes-air/) last month. The show is being written by Chris Yost (*The Mandalorian*) and produced by author Matt Dinniman and Seth MacFarlane's Fuzzy Door. According to the report, no casting has been announced for the project yet.
+The *Dungeon Crawler Carl* television adaptation was ordered to series at Peacock last month. The show is being written by Chris Yost (*The Mandalorian*) and produced by author Matt Dinniman and Seth MacFarlane's Fuzzy Door. According to the report, no casting has been announced for the project yet.
 
 Fans are hoping for more news about the adaptation when Dinniman appears at San Diego Comic-Con later this month.

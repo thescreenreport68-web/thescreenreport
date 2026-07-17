@@ -133,6 +133,3 @@ Rosák explained the initiative aims to “level out the field” for producers 
 The Industry Days will also dedicate time to emerging formats like vertical microdramas. Rosák sees this as a necessary diversification for producers navigating a rapidly transforming landscape. “I see the need for producers to start diversifying a little bit what they do, because they will ultimately have to face moments of survival,” he told THR.
 
 The conversation will extend to practical tools for improving production value, which Rosák said “of course, touches on AI as well.” The focus will be on offering practical applications producers can discuss with studios, rather than simply highlighting the technology's existence. The program will also showcase 11 directors in its KVIFF Central Stage showcase, focusing on experienced filmmakers rather than newcomers, to fill a perceived gap in festival support.
-
-## Sources
-- Karlovy Vary International Film Festival

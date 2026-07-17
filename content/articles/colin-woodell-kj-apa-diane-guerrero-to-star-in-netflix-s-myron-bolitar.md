@@ -8,7 +8,7 @@ date: '2026-07-07T12:59:22.588Z'
 dek: >-
   The adaptation of Harlan Coben's sports agent novels has set its three leads,
   with David E. Kelley and Kyle Long serving as showrunners.
-metaTitle: 'Myron Bolitar Netflix Series Casts Colin Woodell, KJ Apa, Diane Guerrero'
+metaTitle: Myron Bolitar Netflix Series Casts Colin Woodell
 metaDescription: >-
   Netflix's upcoming series Myron Bolitar, based on Harlan Coben's novels, has
   cast Colin Woodell, KJ Apa, and Diane Guerrero in the lead roles.
@@ -135,5 +135,3 @@ KJ Apa will portray Win Lockwood, a character born into “extraordinary privile
 David E. Kelley and Kyle Long ("Suits") will serve as showrunners and executive producers. Greg Yaitanes ("Presumed Innocent," "[House of the Dragon](/tv/house-of-the-dragon-s-steve-toussaint-breaks-down-corlys-s-dangerous-defian/)") will direct multiple episodes and also executive produce alongside Matthew Tinker of David E. Kelley Productions, Harlan Coben via his Final Twist Productions, and Rick Muirragui.
 
 The project marks another chapter in Coben’s extensive partnership with Netflix. Since signing an overall deal with the streamer in 2018, 13 of the best-selling author's novels have been adapted into television series. These series have collectively drawn more than 300 million views worldwide since 2023.
-
-## Sources

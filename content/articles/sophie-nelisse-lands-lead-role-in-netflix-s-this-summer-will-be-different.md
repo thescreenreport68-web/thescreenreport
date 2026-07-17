@@ -136,4 +136,4 @@ Production for the series is scheduled to take place in Prince Edward Island and
 
 *This Summer Will Be Different* joins Netflix’s growing slate of Canadian productions. Fortune’s novel became a New York Times bestseller after its 2024 release and has sold millions of copies worldwide.
 
-Nélisse will soon return for the fourth and final season of Showtime’s *Yellowjackets*, where she plays Young Shauna.
+Nélisse will soon return for the fourth and final season of Showtime’s *Yellowjackets*, where she plays Teen Shauna.

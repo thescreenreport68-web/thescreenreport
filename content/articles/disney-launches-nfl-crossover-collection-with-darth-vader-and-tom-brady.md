@@ -125,7 +125,7 @@ The "Disney | Champion NFL Collection" was unveiled at Fanatics Fest in New York
 
 ## What characters are paired with NFL teams?
 
-The initial launch includes eight specific team-character pairings. Darth Vader is paired with the Las Vegas Raiders. Other combinations include the Buffalo Bills with the Beast from *Beauty and the Beast*, the Dallas Cowboys with Woody from *Toy Story*, the New England Patriots with [Marvel](/movies/spider-man-brand-new-day-has-fans-split-hulk-fears-downey-s-villain-tease-and/)'s Captain America, the New York Giants with Wreck-It Ralph, the New York Jets with Buzz Lightyear from *Toy Story*, the Tampa Bay Buccaneers with Captain Hook, and the Washington Commanders with Hamm from *Toy Story*.
+The initial launch includes eight specific team-character pairings. Darth Vader is paired with the Las Vegas Raiders. Other combinations include the Buffalo Bills with the Beast from *Beauty and the Beast*, the Dallas Cowboys with Woody from *Toy Story*, the New England Patriots with Marvel's Captain America, the New York Giants with Wreck-It Ralph, the New York Jets with Buzz Lightyear from *Toy Story*, the Tampa Bay Buccaneers with Captain Hook, and the Washington Commanders with Hamm from *Toy Story*.
 
 ## When will the full collection be available?
 

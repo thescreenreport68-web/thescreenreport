@@ -10,8 +10,8 @@ dek: >-
   which also stars Anna Popplewell.
 metaTitle: Jodie Whittaker Stars in Dystopian Short Film 'The Country'
 metaDescription: >-
-  Jodie Whittaker is set to star in and executive produce the dystopian short
-  film 'The Country,' from writer-director Ella Grace Kennedy.
+  The 'Doctor Who' alum will lead the Ella Grace Kennedy-directed thriller,
+  which also stars Anna Popplewell. Kennedy explained the film’s origins.
 tags:
   - jodie whittaker the country
   - jodie whittaker

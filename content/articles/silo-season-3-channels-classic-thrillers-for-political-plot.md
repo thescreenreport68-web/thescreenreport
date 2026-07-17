@@ -32,9 +32,7 @@ faq:
 about:
   - name: Silo
     type: TV Show
-imageAlt: >-
-  Michael Dinner in Symon's Dinners Cooking Out — Silo Director Michael Dinner
-  Cites Classic Thrillers as Season 3 Influence
+imageAlt: Silo Director Michael Dinner Cites Classic Thrillers as Season 3 Influence
 imageCredit: The Movie Database (TMDB)
 image: 'https://image.tmdb.org/t/p/original/kU2gRNzI6a3VVw8a8B7IFWTTxSb.jpg'
 imageWidth: 3840

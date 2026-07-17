@@ -47,9 +47,7 @@ faq:
 about:
   - name: 'Mad Max 2: The Road Warrior'
     type: Movie
-imageAlt: >-
-  A still from 'Mad Max 2: The Road Warrior,' the 1982 film in which Kjell
-  Nilsson played the villain Lord Humungus
+imageAlt: 'Kjell Nilsson, Lord Humungus in ''The Road Warrior,'' Dies at 76'
 imageCredit: The Movie Database (TMDB)
 image: 'https://image.tmdb.org/t/p/original/MMSI9WzRmOdqXarevQ3Kqnytrx.jpg'
 imageWidth: 3840

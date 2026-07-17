@@ -12,9 +12,8 @@ dek: >-
   hit U.S. theaters next year.
 metaTitle: A Man of His Time Acquired by 1-2 Special for North America
 metaDescription: >-
-  Boutique distributor 1-2 Special has acquired North American rights to
-  Emmanuel Marre's Cannes competition film A Man of His Time, set for a
-  theatrical release next year.
+  The company will release the film in theaters next year. Inspired by the life
+  of Marre’s own great-grandfather, A Man of His Time is set in September 1940.
 tags:
   - a man of his time
   - 1-2 special
@@ -58,8 +57,8 @@ about:
   - name: A Man of His Time
     type: Movie
 imageAlt: >-
-  A Man of His Time in A Man of His Time — 1-2 Special Acquires North American
-  Rights to Cannes Winner 'A Man of His Time'
+  1-2 Special Acquires North American Rights to Cannes Winner 'A Man of His
+  Time'
 imageCredit: The Movie Database (TMDB)
 image: 'https://image.tmdb.org/t/p/original/yI3b09nIgAA5yteSzZUlngjXExB.jpg'
 imageWidth: 3600

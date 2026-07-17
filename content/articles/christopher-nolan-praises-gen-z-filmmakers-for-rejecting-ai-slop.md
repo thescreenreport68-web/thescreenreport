@@ -9,7 +9,7 @@ dek: >-
   The Oscar-winning director cites the success of 'Obsession' and 'Backrooms' as
   evidence young audiences crave practical, tactile storytelling over artificial
   intelligence.
-metaTitle: 'Christopher Nolan on AI in Filmmaking: ''Hitting at Exactly the Wrong Time'''
+metaTitle: Christopher Nolan Praises Gen Z Filmmakers for Rejecting AI
 metaDescription: >-
   Christopher Nolan says young filmmakers and audiences are rejecting AI in
   filmmaking, praising the practical effects in breakout hits like 'Obsession'
@@ -121,7 +121,7 @@ keyPoints:
     storytelling.
 ---
 
-[Christopher Nolan](/movies/zendaya-reveals-how-her-husband-told-her-about-the-odyssey-role/) has praised a new generation of filmmakers for their wholesale rejection of artificial intelligence in cinema, according to a new interview reported by Deadline and The Hollywood Reporter.
+Christopher Nolan has praised a new generation of filmmakers for their wholesale rejection of artificial intelligence in cinema, according to a new interview reported by Deadline and The Hollywood Reporter.
 
 The Oscar-winning director of *Oppenheimer* spoke with The Telegraph about the current state of filmmaking. He pointed to the massive success of recent horror films *Obsession* and *Backrooms* as evidence that young audiences crave authentic, practical storytelling over AI-generated content.
 
@@ -146,8 +146,3 @@ Both films have achieved historic box office success on minimal budgets, becomin
 The use of generative AI remains a contentious issue in the entertainment industry. Nolan's comments arrive as the industry continues to debate the balance between technological innovation and artistic authenticity.
 
 The director remains optimistic about cinema's future, crediting these new voices. "I think cinema is vital and essential and continues to transform itself – we've got all these great new young voices in movies, making the medium their own and moving it forward," he said.
-
-## Sources
-
-- Deadline
-- The Hollywood Reporter

@@ -10,8 +10,8 @@ dek: >-
   the NYC Department of Education.
 metaTitle: Cynthia Nixon's Wife Lands NYC Public Schools Job
 metaDescription: >-
-  Christine Marinoni, wife of actress Cynthia Nixon, has reportedly been hired
-  for a senior role in New York City's Department of Education.
+  Christine Marinoni, the wife of actress Cynthia Nixon, has reportedly been
+  hired for a senior position within New York City's public school system.
 tags:
   - cynthia nixon wife job
   - christine marinoni

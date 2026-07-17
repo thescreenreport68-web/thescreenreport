@@ -10,8 +10,8 @@ dek: >-
   Man and His Awesome Friends' Season 1, with Nylan Parthipan as Loki.
 metaTitle: Marvel Casts Liam Karlsson as New Thor in Animated Series
 metaDescription: >-
-  Liam Karlsson is the new voice of Thor in Marvel's animated kids show 'Iron
-  Man and His Awesome Friends,' according to a new report.
+  The voice actor debuts as a younger God of Thunder in the second half of 'Iron
+  Man and His Awesome Friends' Season 1, with Nylan Parthipan as Loki.
 tags:
   - next thor
   - liam karlsson
@@ -132,7 +132,7 @@ The series features Mason Blomberg as Tony Stark/Iron Man, Kapri Ladd as Riri Wi
 
 ## Is this Thor different from the MCU version?
 
-Yes. The report describes Karlsson's Thor as a younger, brashly confident version of the character, distinct from Chris Hemsworth's portrayal in the [Marvel](/movies/spider-man-brand-new-day-trailer-drops-teasing-a-world-without-recogni/) Cinematic Universe. The character is depicted as a good friend to the Iron Friends and utilizes both a hi-tech armored form and a civilian appearance with a blond undercut.
+Yes. The report describes Karlsson's Thor as a younger, brashly confident version of the character, distinct from Chris Hemsworth's portrayal in the Marvel Cinematic Universe. The character is depicted as a good friend to the Iron Friends and utilizes both a hi-tech armored form and a civilian appearance with a blond undercut.
 
 Thor and Loki are set to recur throughout the remaining episodes of the season, with future installments titled 'Loki's Movie Mania,' 'Thor and the Frost Giant,' and 'Thor and Loki Hit the Road.'
 
@@ -140,4 +140,4 @@ Thor and Loki are set to recur throughout the remaining episodes of the season, 
 
 Liam Karlsson is confirmed to reprise his role as Thor in the upcoming Disney Jr. series *Avengers: Mightiest Friends*, which is scheduled for release in 2027. The new show will feature kid-friendly versions of Captain America, Hulk, Black Widow, Iron Man, Spider-Man, and Thor. It is likely Nylan Parthipan will return as Loki.
 
-*Iron Man and His Awesome Friends* is an animated series that first aired in August 2025. It is rated TV-Y and is available to stream on [Disney Plus](/tv/x-men-97-season-2-to-feature-innovative-format-change/), fuboTV, YouTube TV, and DisneyNOW as of July 2026.
+*Iron Man and His Awesome Friends* is an animated series that first aired in August 2025. It is rated TV-Y and is available to stream on Disney Plus, fuboTV, YouTube TV, and DisneyNOW as of July 2026.

@@ -10,9 +10,8 @@ dek: >-
   as other celebrities gathered at Madison Square Garden.
 metaTitle: Blake Lively Misses Taylor Swift Wedding Amid Friendship Texts
 metaDescription: >-
-  Blake Lively and Ryan Reynolds were not seen among the guests at Taylor Swift
-  and Travis Kelce's reported wedding celebration, according to The Hollywood
-  Reporter.
+  The actress and her husband were photographed at their daughter's horse show
+  as other celebrities gathered at Madison Square Garden.
 tags:
   - blake lively taylor swift
   - blake lively
@@ -104,7 +103,7 @@ sightings:
   - event: 'Attending their daughter''s horse show in Lake Placid, New York'
     date: Thursday
 ---
-Blake Lively and Ryan Reynolds were not seen among the guests arriving for [Taylor Swift](/celebrity/ed-sheeran-bradley-cooper-dakota-johnson-among-stars-arriving-for-tayl/) and Travis Kelce's reported wedding celebration at Madison Square Garden on Friday, according to The Hollywood Reporter. The actress and her husband were photographed attending their daughter's horse show in Lake Placid, New York, on Thursday.
+Blake Lively and Ryan Reynolds were not seen among the guests arriving for Taylor Swift and Travis Kelce's reported wedding celebration at Madison Square Garden on Friday, according to The Hollywood Reporter. The actress and her husband were photographed attending their daughter's horse show in Lake Placid, New York, on Thursday.
 
 ## Where Were Blake Lively and Ryan Reynolds?
 

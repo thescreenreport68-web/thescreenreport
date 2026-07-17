@@ -10,9 +10,7 @@ date: '2026-06-28T02:43:44.952Z'
 dek: >-
   The official preview for Kyle Balda’s adaptation of the novel ‘Three Bags
   Full’ confirms a May 2026 release and a flock of A-list voice talent.
-metaTitle: >-
-  The Sheep Detectives Trailer: Hugh Jackman, Julia Louis-Dreyfus Star in Family
-  Comedy
+metaTitle: 'The Sheep Detectives Trailer: Hugh Jackman'
 metaDescription: >-
   The trailer for 'The Sheep Detectives' is here, revealing the star-studded
   cast and farmyard mystery plot of the 2026 family comedy. The film opens May
@@ -113,7 +111,6 @@ Reviewers have singled out the voice cast and the film's emotional depth. *Empir
 *The Sheep Detectives* opened in theaters on May 8, 2026, following special preview screenings on May 2. It was released by Amazon MGM Studios in the United States. The film became available for home viewing on Amazon Prime Video starting June 24, 2026.
 
 ## Sources
-
 * [Rotten Tomatoes](https://www.rottentomatoes.com/)
 * [Wikipedia – The Sheep Detectives](https://en.wikipedia.org/wiki/The_Sheep_Detectives)
 * [Amazon MGM Studios](https://www.amazonstudios.com/)

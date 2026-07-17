@@ -10,7 +10,7 @@ date: '2026-07-03T13:14:07.977Z'
 dek: >-
   The pivotal character, revealed in Season 5 Episode 4, will become a series
   regular in the upcoming sequel prequel.
-metaTitle: '''Raising Kanan'' Introduces Jarita, Character Moves to ''Power: Origins'''
+metaTitle: '''Raising Kanan'' Introduces Jarita, Character Moves'
 metaDescription: >-
   Asjha Cooper's Jarita is introduced in 'Power Book III: Raising Kanan' and
   will transition to a regular role in 'Power: Origins,' according to Variety.
@@ -54,8 +54,8 @@ about:
   - name: 'Power: Origins'
     type: TV Series
 imageAlt: >-
-  Power Book III: Raising Kanan in Power Book III: Raising Kanan — Asjha
-  Cooper's Jarita Joins 'Power Book III: Raising Kanan,'
+  Asjha Cooper's Jarita Joins 'Power Book III: Raising Kanan,' Will Move to
+  'Power: Origins'
 imageCredit: The Movie Database (TMDB)
 image: 'https://image.tmdb.org/t/p/original/qiDq1iCK0Ie9uwxJu2gDeVxDvI1.jpg'
 imageWidth: 1920

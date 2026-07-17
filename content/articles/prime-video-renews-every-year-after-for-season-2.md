@@ -10,8 +10,8 @@ dek: >-
   second season less than a month after its debut.
 metaTitle: Every Year After Season 2 Renewal Announced for Prime Video
 metaDescription: >-
-  Prime Video has renewed 'Every Year After' for Season 2. The new season will
-  follow the story from Fortune's sequel novel, 'One Golden Summer.'
+  Amazon's romantic drama, based on Carley Fortune's novels, will return for a
+  second season less than a month after its debut. Showrunner Amy B.
 tags:
   - every year after
   - prime video
@@ -108,7 +108,4 @@ The series premiered at the Tribeca Festival on June 8, 2026, before its global 
 No official release date for *Every Year After* Season 2 has been announced. With the renewal just confirmed, production timelines are likely in early development. Fans can expect the return to Barry’s Bay to follow a standard television production schedule, potentially aiming for a 2027 release.
 
 ## Sources
-- Variety
-- The Hollywood Reporter
-- Deadline
 - [Prime Video](https://www.primevideo.com/)

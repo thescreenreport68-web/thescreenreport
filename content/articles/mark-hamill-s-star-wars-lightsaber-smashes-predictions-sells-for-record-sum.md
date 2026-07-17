@@ -119,7 +119,7 @@ keyPoints:
 
 Mark Hamill's original screen-used Luke Skywalker lightsaber sold for a record sum at auction, according to The Hollywood Reporter.
 
-The prop, from 1980's *[Star Wars](/movies/george-lucas-says-ai-is-the-future-and-fans-shouldn-t-control-movies-the/): Episode V – The Empire Strikes Back*, set a new world auction record for a screen-used Star Wars item. Heritage Auctions confirmed the sale, which far exceeded initial predictions.
+The prop, from 1980's *Star Wars: Episode V – The Empire Strikes Back*, set a new world auction record for a screen-used Star Wars item. Heritage Auctions confirmed the sale, which far exceeded initial predictions.
 
 ## What is the new record price?
 
@@ -133,4 +133,4 @@ The lightsaber was wielded by Hamill during the climactic duel with Darth Vader 
 
 The prop was constructed from a modified Graflex flash unit and was accompanied by the original severed-hand effects rig created by makeup artist Stuart Freeborn.
 
-The sale was part of Heritage's Hollywood & [Entertainment](/movies/moana-remake-could-lose-100-million-audiences-call-it-ai-generated-and-dull/) Signature Auction, which continues through July 17.
+The sale was part of Heritage's Hollywood & Entertainment Signature Auction, which continues through July 17.

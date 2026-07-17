@@ -10,8 +10,9 @@ dek: >-
   but the project hasn't materialized yet.
 metaTitle: Robert Richardson Eyes Collaboration With Paul Thomas Anderson
 metaDescription: >-
-  Cinematographer Robert Richardson expressed his desire to work with Paul
-  Thomas Anderson in a new interview, revealing mutual interest.
+  The Oscar-winning cinematographer says the director has expressed interest,
+  but the project hasn't materialized yet. He has already wrapped work on David
+  O.
 tags:
   - paul thomas anderson
   - robert richardson

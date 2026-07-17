@@ -8,10 +8,10 @@ date: '2026-07-12T05:03:16.629Z'
 dek: >-
   The actor recalls writing letters to studio and network heads to advocate for
   her future co-star, who went on to win an Emmy.
-metaTitle: 'New Girl Cast Fought for Lamorne Morris, Zooey Deschanel Reveals'
+metaTitle: Zooey Deschanel Says 'New Girl' Cast Fought for Lamorne
 metaDescription: >-
-  Zooey Deschanel reveals the New Girl cast had to fight to get Lamorne Morris
-  cast as Winston Bishop on the Fox comedy.
+  The actor recalls writing letters to studio and network heads to advocate for
+  her future co-star, who went on to win an Emmy. “What about Lamorne?
 tags:
   - new girl
   - zooey deschanel

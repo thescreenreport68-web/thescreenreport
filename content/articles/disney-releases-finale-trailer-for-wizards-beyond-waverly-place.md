@@ -42,9 +42,7 @@ faq:
 about:
   - name: Wizards Beyond Waverly Place
     type: TV Series
-imageAlt: >-
-  Wizards Beyond Waverly Place in Wizards Beyond Waverly Place — Disney Releases
-  Finale Trailer for ‘Wizards Beyond Waverly Pla
+imageAlt: Disney Releases Finale Trailer for ‘Wizards Beyond Waverly Place’
 imageCredit: The Movie Database (TMDB)
 image: 'https://image.tmdb.org/t/p/original/ore4E3D1qfTH1Ollf4UDhzW3PtG.jpg'
 imageWidth: 3840
@@ -105,7 +103,7 @@ All four episodes will premiere on August 4 on Disney Channel, with the entire e
 
 ## What is the finale about?
 
-The official synopsis sets the high-stakes mission. It reads: “Billie, still reeling from losing Alex at the end of [Season 2](/tv/dutton-ranch-finale-has-fans-in-a-chokehold-but-a-pre-awards-snub-stings-just-a/), discovers that the only way to rescue her mother is to reunite with her long-lost father. As her family bands together to find Alex, Billie realizes that their combined power is the only way the Russos can defeat the evil plaguing them.”
+The official synopsis sets the high-stakes mission. It reads: “Billie, still reeling from losing Alex at the end of Season 2, discovers that the only way to rescue her mother is to reunite with her long-lost father. As her family bands together to find Alex, Billie realizes that their combined power is the only way the Russos can defeat the evil plaguing them.”
 
 ## Who is in the cast?
 

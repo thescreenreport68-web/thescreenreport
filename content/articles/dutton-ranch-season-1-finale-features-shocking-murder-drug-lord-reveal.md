@@ -12,8 +12,9 @@ dek: >-
   casualties and a cliffhanger.
 metaTitle: 'Dutton Ranch Season 1 Finale Spoilers: Murder, Drug Lord Reveal'
 metaDescription: >-
-  Spoilers for the Dutton Ranch season 1 finale, which features a shocking
-  murder, a fentanyl trafficker reveal, and a cartel kidnapping.
+  The ninth episode, 'El Padrino,' concludes the debut season with major
+  casualties and a cliffhanger. The finale delivered three major plot
+  developments.
 tags:
   - dutton ranch season finale
   - dutton ranch
@@ -52,8 +53,8 @@ about:
   - name: Dutton Ranch
     type: TV Series
 imageAlt: >-
-  Dutton Ranch in Dutton Ranch — 'Dutton Ranch' Season Finale Delivers a Triple
-  Threat of Murder, Trafficking, and Kidnapping
+  'Dutton Ranch' Season Finale Delivers a Triple Threat of Murder, Trafficking,
+  and Kidnapping
 imageCredit: The Movie Database (TMDB)
 image: 'https://image.tmdb.org/t/p/original/ewlmL0nxo2lLqBj69upgp2gjHpV.jpg'
 imageWidth: 3840
@@ -124,8 +125,3 @@ The episode also featured a large-scale shootout and the aftermath of a violent 
 ## Where Can You Watch 'Dutton Ranch'?
 
 As of July 2026, the first season of "Dutton Ranch," including the finale, is available to stream on Paramount+. The series follows Rip and Beth as they attempt to build a new life far from Yellowstone, only to clash with a rival ranch willing to do anything to protect its empire.
-
-## Sources
-
-* Paramount+
-* Variety

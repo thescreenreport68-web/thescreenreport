@@ -9,11 +9,11 @@ dek: >-
   Aung Phyoe's Fruit Gathering took the top prize, while Juliette Binoche and
   Jeffrey Wright received special honors as the star-filled Czech festival
   wrapped.
-metaTitle: 'Karlovy Vary Film Festival 2026 Winners: Fruit Gathering Wins Grand Prix'
+metaTitle: 'Karlovy Vary Film Festival 2026 Winners: Fruit'
 metaDescription: >-
-  The Karlovy Vary International Film Festival has announced its 2026 winners,
-  awarding the Grand Prix to Fruit Gathering and special prizes to Juliette
-  Binoche and Jeffrey Wright.
+  Aung Phyoe's Fruit Gathering took the top prize, while Juliette Binoche and
+  Jeffrey Wright received special honors as the star-filled Czech festival
+  wrapped.
 tags:
   - karlovy vary film festival
   - karlovy vary international film festival
@@ -60,9 +60,7 @@ about:
     type: Movie
   - name: Incinerator
     type: Movie
-imageAlt: >-
-  Karlovy Vary International Film Festival in Fruit Gathering — Karlovy Vary
-  Film Festival Awards Fruit Gathering, Honors Binoc
+imageAlt: 'Karlovy Vary Film Festival Awards Fruit Gathering, Honors Binoche and Wright'
 imageCredit: The Movie Database (TMDB)
 image: 'https://image.tmdb.org/t/p/original/sYyH3D2meo3EypkFFaREsqRYKRt.jpg'
 imageWidth: 1920
@@ -155,7 +153,3 @@ The festival's Proxima competition, focused on bold works by emerging filmmakers
 ## Which actors received special honors?
 
 The closing ceremony also featured major career tributes. Juliette Binoche was honored with the KVIFF Crystal Globe Award for her outstanding contribution to world cinema. Jeffrey Wright received the festival's President's Award.
-
-## Sources
-
-- https://www.hollywoodreporter.com

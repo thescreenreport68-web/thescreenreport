@@ -10,7 +10,7 @@ date: '2026-07-15T23:00:58.987Z'
 dek: >-
   Clancy Brown, Thomas Sadoski, and Jason Schwartzman also join the
   eight-episode Las Vegas casino drama executive produced by Martin Scorsese.
-metaTitle: 'Vincent D''Onofrio, Kate Mara Cast in Netflix''s The'
+metaTitle: 'Vincent D''Onofrio, Kate Mara Join Oscar Isaac'
 metaDescription: >-
   Vincent D'Onofrio and Kate Mara join Oscar Isaac in Netflix's casino drama The
   Roman, with Clancy Brown, Thomas Sadoski, and Jason Schwartzman also cast.
@@ -51,8 +51,8 @@ about:
   - name: The Roman
     type: TV Show
 imageAlt: >-
-  The Roman in The Roman — Vincent D'Onofrio, Kate Mara Join Oscar Isaac in
-  Netflix's Las Vegas Drama 'The Roman'
+  Vincent D'Onofrio, Kate Mara Join Oscar Isaac in Netflix's Las Vegas Drama
+  'The Roman'
 imageCredit: The Movie Database (TMDB)
 image: 'https://image.tmdb.org/t/p/original/fzlY6A5ZYa1TWOIrZSritOzE2xf.jpg'
 imageWidth: 3840
@@ -127,7 +127,3 @@ D’Onofrio will play Dominic Ward, a powerful MMA mogul who uses his influence 
 The new additions join a previously announced ensemble that includes Oscar Isaac as casino president Robert “Bobby Red” Redman, Betty Gilpin, Alec Baldwin, David Costabile, Shalom Brune-Franklin, and Jimmy O. Yang.
 
 *The Roman* is created by Brian Koppelman and David Levien, the team behind *Billions*. They will serve as writers, executive producers, and showrunners. Isaac executive produces alongside Martin Scorsese and Sikelia Productions. Director JC Chandor will helm the first two episodes and also executive produce.
-
-## Sources
-
-- Variety
