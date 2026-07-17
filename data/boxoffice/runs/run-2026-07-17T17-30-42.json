@@ -1,0 +1,109 @@
+{
+ "runId": "run-2026-07-17T17-30-42",
+ "mode": "live",
+ "startedAt": "2026-07-17T17:30:42.628Z",
+ "films": 6,
+ "published": [],
+ "held": [
+  {
+   "tag": "the-odyssey-ev-weekend×BO-WEEKEND",
+   "reason": "reconcile: domestic+international ($110M) does not match worldwide ($200M) — present each figure as separately reported, never imply a sum | words 166 < 180 (owner-set ~200-word minimum)",
+   "score": 50
+  },
+  {
+   "tag": "ride-or-die-ev-weekend×BO-WEEKEND",
+   "reason": "fidelity: 5 unsupported figures/claims — draft-level failure",
+   "score": 0
+  }
+ ],
+ "rejected": [
+  {
+   "tag": "descendants-wicked-wonderland-ev-streaming-arrival×NOW-STREAMING",
+   "stage": "gatherer",
+   "reason": "under floor: no subscription-streaming platform — rent/buy is not 'now streaming' (try 3)"
+  },
+  {
+   "tag": "wild-sing-ev-streaming-arrival×NOW-STREAMING",
+   "stage": "gatherer",
+   "reason": "under floor: no subscription-streaming platform — rent/buy is not 'now streaming' (try 1)"
+  }
+ ],
+ "skipped": [
+  {
+   "tag": "the-odyssey-ev-opening×BO-OPENING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "super-troopers-3-ev-opening×BO-OPENING",
+   "reason": "park cooling (held recently — retry after 2h)"
+  }
+ ],
+ "blocked": [],
+ "paced": {
+  "tokens": 2.48,
+  "behind": true,
+  "expected": 7,
+  "allow": 1
+ },
+ "queueBuilt": 9,
+ "zeroStreak": 1,
+ "daySpend": {
+  "laDay": "2026-07-17",
+  "usd": 0.51725
+ },
+ "finishedAt": "2026-07-17T17:37:47.882Z",
+ "meter": {
+  "byRole": {
+   "categorize": {
+    "calls": 3,
+    "errors": 0,
+    "in": 1027,
+    "out": 572,
+    "usd": 0.00033,
+    "ms": 2600
+   },
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3257,
+    "out": 591,
+    "usd": 0.0002,
+    "ms": 2258
+   },
+   "gatherer": {
+    "calls": 4,
+    "errors": 0,
+    "in": 17205,
+    "out": 1741,
+    "usd": 0.00242,
+    "ms": 7426
+   },
+   "synthesizer": {
+    "calls": 2,
+    "errors": 0,
+    "in": 1493,
+    "out": 1545,
+    "usd": 0.00041,
+    "ms": 30975
+   },
+   "writer": {
+    "calls": 4,
+    "errors": 0,
+    "in": 13902,
+    "out": 4207,
+    "usd": 0.01229,
+    "ms": 47756
+   },
+   "qa": {
+    "calls": 7,
+    "errors": 0,
+    "in": 23408,
+    "out": 3463,
+    "usd": 0.01568,
+    "ms": 22148
+   }
+  },
+  "totalUsd": 0.03133
+ },
+ "openrouterTotalUsd": 0.0301
+}

@@ -467,8 +467,10 @@
    "eventSlug": "descendants-wicked-wonderland-ev-streaming-arrival",
    "form": "NOW-STREAMING",
    "reason": "under floor: no subscription-streaming platform — rent/buy is not 'now streaming'",
-   "tries": 2,
-   "at": "2026-07-17T13:36:26.587Z"
+   "tries": 3,
+   "at": "2026-07-17T17:33:51.748Z",
+   "dead": true,
+   "expiresAt": "2026-07-20T17:33:51.748Z"
   },
   {
    "key": "michael-ev-milestone-d0|BO-UPDATE",
@@ -546,9 +548,9 @@
    "key": "the-odyssey-ev-weekend-d0|BO-WEEKEND",
    "eventSlug": "the-odyssey-ev-weekend-d0",
    "form": "BO-WEEKEND",
-   "reason": "words 150 < 180 (owner-set ~200-word minimum)",
-   "tries": 1,
-   "at": "2026-07-17T16:35:44.143Z"
+   "reason": "reconcile: domestic+international ($110M) does not match worldwide ($200M) — present each figure as separately reported, never imply a sum | words 166 < 180 (owner-set ~200-word minimum)",
+   "tries": 2,
+   "at": "2026-07-17T17:32:34.020Z"
   },
   {
    "key": "winning-ai-search-ev-streaming-arrival|NOW-STREAMING",
@@ -597,16 +599,32 @@
    "reason": "platform: names max not in confirmed providers",
    "tries": 1,
    "at": "2026-07-17T17:16:20.992Z"
+  },
+  {
+   "key": "wild-sing-ev-streaming-arrival|NOW-STREAMING",
+   "eventSlug": "wild-sing-ev-streaming-arrival",
+   "form": "NOW-STREAMING",
+   "reason": "under floor: no subscription-streaming platform — rent/buy is not 'now streaming'",
+   "tries": 1,
+   "at": "2026-07-17T17:35:30.181Z"
+  },
+  {
+   "key": "ride-or-die-ev-weekend-d0|BO-WEEKEND",
+   "eventSlug": "ride-or-die-ev-weekend-d0",
+   "form": "BO-WEEKEND",
+   "reason": "fidelity: 5 unsupported figures/claims — draft-level failure",
+   "tries": 1,
+   "at": "2026-07-17T17:37:47.880Z"
   }
  ],
- "zeroStreak": 0,
+ "zeroStreak": 1,
  "daySpend": {
   "laDay": "2026-07-17",
-  "usd": 0.48715
+  "usd": 0.51725
  },
  "pace": {
-  "tokens": 1.7832145555555559,
-  "lastMs": 1784307648715
+  "tokens": 2.4808473888888893,
+  "lastMs": 1784309442628
  },
  "lastAuditDay": "2026-07-17"
 }
