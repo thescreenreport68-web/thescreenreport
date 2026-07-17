@@ -7,7 +7,7 @@ author: editorial-team
 date: '2026-07-17T06:31:41.296Z'
 dek: >-
   The prequel series, executive produced by Reese Witherspoon, drops all eight
-  Season 1 episodes today, exploring Elle Woods' high school years.
+  Season 1 episodes on July 1, exploring Elle Woods' high school years.
 metaTitle: '‘Elle’ TV Series Debuts on Prime Video, Reclaiming'
 metaDescription: >-
   The 'Legally Blonde' prequel series 'Elle' is now streaming on Prime Video,
@@ -40,8 +40,8 @@ about:
   - name: Elle
     type: TV Series
 imageAlt: >-
-  Lexi Minetree — ‘Elle’ TV Series Debuts on Prime Video, Reclaiming the
-  ‘Legally Blonde’ Legacy
+  ‘Elle’ TV Series Debuts on Prime Video, Reclaiming the ‘Legally Blonde’
+  Legacy
 imageCredit: Basile Morin / Wikimedia Commons / CC BY-SA 4.0
 image: >-
   https://commons.wikimedia.org/wiki/Special:FilePath/Ambigram%20tessellation%20Elle.png?width=1600
@@ -108,7 +108,7 @@ seriesStatus:
   castAdded: []
 ---
 
-The new TV series **“Elle”** premiered on Amazon Prime Video today, July 1, with its entire first season available to stream. According to GLAAD, the show continues the legacy of the “Legally Blonde” franchise, executive produced by the original film's star, [Reese Witherspoon](/tv/elle-showrunners-reveal-how-involved-reese-witherspoon-was-in-writers-/).
+The new TV series **“Elle”** premiered on Amazon Prime Video on July 1, with its entire first season available to stream. According to GLAAD, the show continues the legacy of the “Legally Blonde” franchise, executive produced by the original film's star, [Reese Witherspoon](/tv/elle-showrunners-reveal-how-involved-reese-witherspoon-was-in-writers-/).
 
 The series is a prequel set in 1995, following a teenage Elle Woods as she moves from Los Angeles to Seattle with her parents. It explores the friendships, romances, and fashion choices that shaped the iconic character before her Harvard Law journey. Lexi Minetree stars as the young Elle, with Gabrielle Policano playing her out-and-proud lesbian friend, Liz, and Chandler Kinney as the popular Kimberly.
 

@@ -199,6 +199,17 @@ async function processTopic(topic, i) {
         return rec;
       }
       if (editorial.ran) {
+        // WRONG-WORK REJECTION (root-fix 2026-07-17, the Runner-as-TV-series case): the gate once "corrected"
+        // a Gal Gadot film topic to entity/work "Army of Shadows" medium=tv — a DIFFERENT queue story — and the
+        // wrong medium cascaded into category/about/seriesContext. A correction is only trustworthy when it
+        // shares at least one significant token with the topic's own title/entity; otherwise it is contamination.
+        const _sig = (s) => String(s || "").toLowerCase().normalize("NFKD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9]+/g, " ").split(/\s+/).filter((w) => w.length > 2 && !/^(the|and|for|with|new|from)$/.test(w));
+        const _topicToks = new Set([..._sig(topic.title), ..._sig(topic.primaryEntity)]);
+        const _related = (s) => _sig(s).some((w) => _topicToks.has(w));
+        if (editorial.primaryEntity && !_related(editorial.primaryEntity) && !(editorial.work?.title && _related(editorial.work.title))) {
+          console.log(`  ✋ editorial correction REJECTED as unrelated to the topic: entity "${editorial.primaryEntity}" / work "${editorial.work?.title}" share 0 tokens with "${topic.title?.slice(0, 60)}"`);
+          editorial.primaryEntity = null; editorial.work = null; editorial.coSubjects = null;
+        }
         if (editorial.primaryEntity && editorial.primaryEntity.toLowerCase() !== (topic.primaryEntity || "").toLowerCase()) {
           console.log(`  ✎ editorial: subject corrected "${topic.primaryEntity}" → "${editorial.primaryEntity}"`);
           topic._entityBefore = topic.primaryEntity;

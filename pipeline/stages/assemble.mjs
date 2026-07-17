@@ -6,7 +6,7 @@ const matter = require("gray-matter");
 import { TAXONOMY, AUTHOR_SLUG } from "../config.mjs";
 import { addInternalLinks, isRemovedForm } from "../lib/internalLinks.mjs";
 import { finishMetaTitle, finishMetaDescription, driftGuard, entityFidelity, slugifyTitle } from "../lib/seoFinish.mjs";
-import { anchorGuards, cleanSourcesSection, sanitizeBareUrls } from "../lib/factGuards.mjs";
+import { anchorGuards, cleanSourcesSection, sanitizeBareUrls, normalizeStaleToday } from "../lib/factGuards.mjs";
 
 import { fileURLToPath } from "node:url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url)); // …/site/pipeline/stages
@@ -52,6 +52,8 @@ export function assemble({ article, classification, image, topic, dateISO }) {
   }
   // Placeholder citation URLs (a bare "https://www.instagram.com/" is not a source) → dropped field-wide.
   article = sanitizeBareUrls(article);
+  // Stale relative-time framing ("debuts today, July 1" copied from a two-week-old source) → absolute date.
+  article = normalizeStaleToday(article, dateISO);
   // Belt for the "Power:: Origins" class — a doubled colon is never legitimate in a title or body.
   for (const k of ["title", "dek", "body", "metaTitle", "metaDescription"])
     if (typeof article[k] === "string") article[k] = article[k].replace(/::+/g, ":");
@@ -121,8 +123,12 @@ export function assemble({ article, classification, image, topic, dateISO }) {
   const iq = String(article.imageQuery || "").trim();
   const iqRedundant = iq && String(article.title || "").toLowerCase().includes(iq.toLowerCase());
   const iqPersonOnWorkArt = / in /i.test(` ${iq} `) && /image\.tmdb\.org/.test(image?.image || "");
+  // A Wikimedia pick must actually depict what the prefix names — the query's tokens must appear in the
+  // filename ("Lexi Minetree" on an abstract 'Ambigram tessellation Elle.png' was a live false claim).
+  const wikiImg = /commons\.wikimedia/.test(image?.image || "");
+  const iqInFile = !wikiImg || iq.toLowerCase().split(/\s+/).some((w) => w.length > 3 && decodeURIComponent(image?.image || "").toLowerCase().includes(w));
   const imageAlt = (
-    (iq && drift.imageQueryOk && !iqRedundant && !iqPersonOnWorkArt ? iq + " — " : "") + (article.title || "")
+    (iq && drift.imageQueryOk && !iqRedundant && !iqPersonOnWorkArt && iqInFile ? iq + " — " : "") + (article.title || "")
   ).slice(0, 125);
 
   const fm = {

@@ -88,6 +88,28 @@ export function cleanSourcesSection(body) {
   return bullets ? head + "\n" + kept.join("\n") : head.replace(/\s+$/, "") + "\n";
 }
 
+// ── STALE-"TODAY" NORMALIZER ────────────────────────────────────────────────────────────────────
+// Root-fix 2026-07-17 (the Elle case): the writer faithfully copied "debuts today, July 1" from a
+// July-1 source into a July-17 article. When a relative time word sits next to an explicit date that
+// is >48h before OUR publish date, rewrite it to the absolute form; a bare "today/tonight" in the
+// same field is dropped. Deterministic; never fires on genuinely same-day news.
+const MON = { january: 0, february: 1, march: 2, april: 3, may: 4, june: 5, july: 6, august: 7, september: 8, october: 9, november: 10, december: 11 };
+export function normalizeStaleToday(article, dateISO) {
+  const pub = Date.parse(dateISO || article?.date || "");
+  if (!Number.isFinite(pub)) return article;
+  const REL = /\b(today|tonight|this (?:morning|afternoon|evening))\b[,]?\s+((January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2})\b/gi;
+  const y = new Date(pub).getUTCFullYear();
+  let fired = false;
+  const fix = (s) => typeof s !== "string" ? s : s.replace(REL, (m, rel, date, mon) => {
+    const t = Date.UTC(y, MON[mon.toLowerCase()], Number(date.match(/\d+/)[0]));
+    if (pub - t > 48 * 3600e3) { fired = true; return "on " + date; }
+    return m;
+  });
+  const out = { ...article, body: fix(article.body), dek: fix(article.dek), metaDescription: fix(article.metaDescription) };
+  if (fired) for (const k of ["dek", "metaDescription"]) if (typeof out[k] === "string") out[k] = out[k].replace(/\s*\b(today|tonight)\b/gi, "").replace(/\s{2,}/g, " ").trim();
+  return out;
+}
+
 // ── PLACEHOLDER-URL SANITIZER ───────────────────────────────────────────────────────────────────
 // A cited url that is just a bare homepage ("https://www.instagram.com/") is a placeholder, not a
 // source — drop the field (recursively, any key named url/link/sourceUrl/href).

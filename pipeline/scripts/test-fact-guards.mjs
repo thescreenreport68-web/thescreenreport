@@ -2,7 +2,7 @@
 // ACTUAL live defect that shipped. Suites: 1 fabricated-quote/date anchors · 2 Sources hygiene ·
 // 3 placeholder URLs · 4 the "Power:: Origins" entityFidelity bug · 5 the 7 short/fragment metaTitles ·
 // 6 the "No. 2" metaDescription split · 7 outlet-name anchor hijack · 8 dangling-corp truncation.
-import { quoteAnchored, datesAnchored, anchorGuards, cleanSourcesSection, sanitizeBareUrls } from "../lib/factGuards.mjs";
+import { quoteAnchored, datesAnchored, anchorGuards, cleanSourcesSection, sanitizeBareUrls, normalizeStaleToday } from "../lib/factGuards.mjs";
 import { entityFidelity, finishMetaTitle, finishMetaDescription } from "../lib/seoFinish.mjs";
 import { isBadAnchor } from "../lib/internalLinks.mjs";
 import { trimIncomplete } from "../lib/polish.mjs";
@@ -108,5 +108,14 @@ console.log("=== 8. dangling-corp truncation — the LIVE Brian Tyler cut-off cl
   ok(/Warner Bros\./.test(keep) && /closed Tuesday/.test(keep), "legitimate 'Warner Bros.' mid-paragraph untouched");
 }
 
+console.log("=== 9. stale-'today' normalizer — the LIVE Elle case ===");
+{
+  const a = { dek: "The series drops all eight Season 1 episodes today.", body: "The show premiered on Amazon Prime Video today, July 1, with all episodes.", metaDescription: "Elle premiered today, July 1, on Prime Video with all eight episodes of its first season now available to stream worldwide." };
+  const out = normalizeStaleToday(a, "2026-07-17T06:31:41.000Z");
+  ok(/on July 1,? with/.test(out.body) && !/today, July 1/.test(out.body), `"today, July 1" -> "on July 1": ${out.body.slice(24, 70)}`);
+  ok(!/\btoday\b/i.test(out.dek), `bare dek "today" dropped: "${out.dek}"`);
+  const fresh = normalizeStaleToday({ body: "The film premiered today, July 17, worldwide.", dek: "" }, "2026-07-17T12:00:00.000Z");
+  ok(/today, July 17/.test(fresh.body), "genuinely same-day 'today' untouched");
+}
 console.log(`\n${fail === 0 ? "✅ ALL" : "❌"} ${pass} passed, ${fail} failed`);
 process.exit(fail ? 1 : 0);
