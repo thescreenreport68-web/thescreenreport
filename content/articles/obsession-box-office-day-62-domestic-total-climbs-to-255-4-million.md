@@ -4,71 +4,71 @@ slug: obsession-box-office-day-62-domestic-total-climbs-to-255-4-million
 category: movies
 subcategory: box-office
 author: editorial-team
-date: '2026-07-16T19:31:28.683Z'
-dek: '## What is ''Obsession''?'
-metaTitle: '''Obsession'' Climbs to $428M at the Worldwide Box Office'
-metaDescription: What is 'Obsession'?
+date: '2026-07-17T06:31:24.072Z'
+dek: >-
+  Michael Johnston leads an unstoppable horror hit that’s broken century-long
+  records with its gripping story and stellar cast.
+metaTitle: '''Obsession'' Climbs to $429M at the Worldwide Box Office'
+metaDescription: >-
+  'Obsession' becomes the highest-grossing original horror film of the century
+  with a $255M domestic haul and record-breaking fourth weekend.
 tags:
   - Obsession
-  - Michael Johnston
-  - Curry Barker
   - Horror
   - Thriller
   - Box Office Record
-  - 2026 Movies
-  - Horror Hits
+  - Michael Johnston
+  - Curry Barker
+  - 2026 Films
+  - Original Horror
 keyTakeaways: []
 faq:
   - q: What is the premise of 'Obsession'?
     a: >-
-      The film follows a hopeless romantic who breaks the mysterious 'One Wish
-      Willow' to win his crush's heart, only to discover that some wishes come
-      with dark, sinister consequences.
-  - q: Who stars in 'Obsession'?
+      The film follows Bear, a hopeless romantic who breaks the mysterious 'One
+      Wish Willow' to win his crush’s heart, only to face dark, sinister
+      consequences when his wish comes true.
+  - q: Who directed 'Obsession' and what is its genre?
     a: >-
-      Michael Johnston leads as Bear, joined by Inde Navarrette as Nikki, Cooper
-      Tomlinson as Ian, Megan Lawless as Sarah, Andy Richter as Carter, Haley
-      Fitzgerald as Viola, Darin Toonder as Harry, and Anthony Pavone as Reggie.
-  - q: Why is 'Obsession' so popular?
-    a: >-
-      Its clever mix of horror and thriller elements, tight pacing, and strong
-      word-of-mouth buzz have made it a standout. The film’s emotional depth
-      paired with supernatural suspense keeps audiences engaged.
+      Curry Barker directed 'Obsession,' a horror thriller that runs 108
+      minutes, blending supernatural suspense with emotional storytelling.
   - q: How much has 'Obsession' made at the box office?
     a: >-
-      'Obsession' has grossed $255,437,170 domestically, with $428 million
+      'Obsession' has grossed $255,437,170 domestically, with $429 million
       worldwide.
+  - q: What is the production budget of 'Obsession'?
+    a: >-
+      'Obsession' was produced on a reported budget of $750,000 before
+      marketing.
 about:
+  - name: Obsession
+    type: Movie
   - name: Michael Johnston
     type: Person
   - name: Curry Barker
     type: Person
-  - name: Obsession (2026)
-    type: Movie
 formatTag: box-office
 boxOffice:
   domestic: '$255,437,170'
-  worldwide: $428 million
+  worldwide: $429 million
   budget: '$750,000'
   theaters: '2,069'
 records:
   - claim: highest-grossing original horror movie of the century
-  - claim: one of the year's most profitable films
   - claim: highest-earning horror movie fourth weekend ever
-  - claim: one of the highest multiples in history
 whereToWatch:
   - title: Obsession
     platform: 'Amazon Video, Apple TV Store, Google Play Movies'
     type: Rent / Buy
     year: '2026'
-trendScore: 84
+trendScore: 76
 signals:
   recency: 3
   pop: 2
   breakout: 0
   corroboration: 5
   type: 6
-eventSlug: obsession-bo-update-d0
+eventSlug: obsession-bo-update-c429m
 eventType: boxoffice
 outletCount: 5
 storyStatus: CONFIRMED
@@ -79,11 +79,6 @@ imageWidth: 3840
 imageHeight: 2160
 ---
 
-Directed by Curry Barker, 'Obsession' runs for 108 intense minutes. It follows a hopeless romantic who breaks the mysterious "One Wish Willow" to win the heart of his crush, only to find that his fulfilled desire comes at a sinister price. ## Star-Studded Cast  
-Leading the cast is Michael Johnston as Bear, the romantic at the story's center. Inde Navarrette plays Nikki, while Cooper Tomlinson appears as Ian. Megan Lawless portrays Sarah, with Andy Richter as Carter, Haley Fitzgerald as Viola, Darin Toonder as Harry, and Anthony Pavone as Reggie rounding out the ensemble. ## Why Audiences Are Hooked  
-## The Takeaway  
-Its success highlights the power of inventive storytelling and efficient filmmaking, proving that a tiny budget can yield massive returns when combined with compelling content and passionate audiences.
+The Movie: What’s Driving 'Obsession' to Horror Supremacy? Michael Johnston’s 'Obsession' has captivated audiences with its dark twist on a classic romantic tale. The film’s chilling premise, involving a desperate young man whose wish to win his crush’s heart unleashes sinister consequences, taps into universal fears about desire and fate. This unique blend of horror and thriller elements keeps viewers on edge, making it a must-see event. Directed by Curry Barker, 'Obsession' runs 108 minutes of tightly wound suspense. Barker’s direction crafts an atmosphere thick with dread and unpredictability, elevating the horror genre with a fresh narrative that explores the dangers of tampering with fate. The story centers on the 'One Wish Willow,' a mysterious object whose breaking sets off a chain of terrifying events. The cast features Michael Johnston as Bear, the hopeless romantic at the center of the nightmare. Supporting him are Inde Navarrette as Nikki, Cooper Tomlinson as Ian, Megan Lawless as Sarah, Andy Richter as Carter, Haley Fitzgerald as Viola, Darin Toonder as Harry, and Anthony Pavone as Reggie. Each actor brings depth to their roles, enriching the film’s tension and emotional stakes. What sets 'Obsession' apart is its resonance with audiences right now. Word-of-mouth has fueled its momentum, with viewers drawn to its blend of relatable yearning and supernatural terror. This connection has translated into a powerful hold at the box office, proving that fresh ideas in horror can still dominate the market. In sum, 'Obsession' stands as a testament to inventive storytelling and economical filmmaking, delivering thrills and chills that have made it a landmark title in 2026’s horror slate.
 
 ## At the Box Office
-
-It carries a reported production budget of $750,000.
