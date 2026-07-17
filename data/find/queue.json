@@ -1,106 +1,110 @@
 {
-  "runId": "run-2026-07-17T13-00-42",
-  "builtAt": "2026-07-17T13:02:22.201Z",
-  "count": 20,
+  "runId": "run-2026-07-17T14-00-41",
+  "builtAt": "2026-07-17T14:03:09.160Z",
+  "count": 22,
   "topics": [
     {
-      "id": "trailer-spider-man-brand-new-day-trailer",
-      "slug": "another-spider-man-brand-new-day-trailer-has-been-released-but-you-can",
-      "title": "Another Spider-Man: Brand New Day trailer has been released, but you can only see it in theaters",
-      "contentType": "trailer",
-      "formatTag": "trailer",
-      "category": "movies",
-      "subcategory": "trailers",
-      "eventType": "trailer",
+      "id": "news-nick-antosca-cape-fear-adaptation",
+      "slug": "showrunner-nick-antosca-brings-the-blunt-force-trauma-of-martin-scorse",
+      "title": "Showrunner Nick Antosca Brings the Blunt Force Trauma of Martin Scorsese's Cape Fear Into the 2020s",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "spider-man-brand-new-day-trailer",
-      "primaryKeyword": "Spider-Man Brand New Day trailer",
-      "primaryEntity": "Spider-Man",
+      "eventSlug": "nick-antosca-cape-fear-adaptation",
+      "primaryKeyword": "Cape Fear series",
+      "primaryEntity": "Cape Fear",
       "entities": [
-        "Brand New Day"
+        "Cape Fear (TV series)",
+        "Martin Scorsese",
+        "Apple TV+"
       ],
-      "angle": "A new trailer for 'Spider-Man: Brand New Day' has been released, exclusively for theater audiences.",
+      "angle": "Showrunner Nick Antosca discusses adapting Martin Scorsese's 'Cape Fear' for a 2020s audience on Apple TV+.",
       "tmdbType": "movie",
-      "source": "gnews:Yahoo",
+      "source": "rss:IndieWire",
       "sources": [
         {
-          "outlet": "Yahoo",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNRjc5UTZ6NGpLcktNVmd0eWlPdUtYSGl1Y3JtVWpGSFA1Qnk1cGw4VFlDMlBldEJnNUY0eTNzWEdxMzhSNEhXeUVicUJ4VDJtUjl3UDlWNE5XNTFVdGFaeXJZeFowZXh3RGxpSml0QXpweWlLUDJ0bEoxcERLYzV6OWdWQ19Nb2tWcERtbGFyVm95dXduanBiMXA4Yw?oc=5",
-          "ageMin": 190,
-          "headline": "Another Spider-Man: Brand New Day trailer has been released, but you can only see it in theaters - Yahoo",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMimwFBVV95cUxNRjc5UTZ6NGpLcktNVmd0eWlPdUtYSGl1Y3JtVWpGSFA1Qnk1cGw4VFlDMlBldEJnNUY0eTNzWEdxMzhSNEhXeUVicUJ4VDJtUjl3UDlWNE5XNTFVdGFaeXJZeFowZXh3RGxpSml0QXpweWlLUDJ0bEoxcERLYzV6OWdWQ19Nb2tWcERtbGFyVm95dXduanBiMXA4Yw?oc=5\" target=\"_blank\" Another Spider-Man"
+          "outlet": "IndieWire",
+          "tier": 7,
+          "url": "https://www.indiewire.com/features/interviews/cape-fear-showrunner-nick-antosca-interview-1235205302/",
+          "ageMin": 1,
+          "headline": "Showrunner Nick Antosca Brings the Blunt Force Trauma of Martin Scorsese s Cape Fear Into the 2020s",
+          "summary": "The showrunner behind Apple TV's series adaptation of Scorsese's 1991 film and its 1962 predecessor talks about honoring the original tone without feeling constricted by the preexisting narrative."
         }
       ],
-      "ageMin": 190,
+      "ageMin": 1,
       "_cand": {
-        "key": "rss:another-spider-man-brand-new-day-trailer-has-been-released-b",
+        "key": "rss:showrunner-nick-antosca-brings-the-blunt-force-trauma-of-mar",
         "popularity": 0,
-        "kind": "gnews"
+        "kind": "rss-news"
       },
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
+        "tier1Count": 1,
+        "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Yahoo"
+          "IndieWire"
         ],
-        "maxTier": 5,
+        "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Yahoo",
+        "attribution": "IndieWire",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 86,
+      "priority": 99,
       "signals": {
-        "recency": 9,
-        "corroboration": 8,
+        "recency": 30,
+        "corroboration": 12,
         "status": 18,
-        "type": 15,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
-        "big": 24,
+        "big": 18,
         "trending": 0,
         "softTv": 0,
         "radar": 12
       },
-      "radarKind": "movie-releasing",
+      "radarKind": "tv-episode-today",
       "tierClass": "A"
     },
     {
-      "id": "news-jackie-chan-police-story-sequel",
-      "slug": "jackie-chan-returns-for-sequel-to-44-year-old-classic-action-franchise",
-      "title": "Jackie Chan Returns for Sequel to 44-Year-Old Classic Action Franchise",
+      "id": "news-matt-damon-bourne-movie-taking-shape",
+      "slug": "matt-damon-next-bourne-movie-taking-shape-with-director-edward-berger",
+      "title": "Matt Damon: Next 'Bourne' Movie Taking Shape With Director Edward Berger",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "jackie-chan-police-story-sequel",
-      "primaryKeyword": "jackie chan sequel",
-      "primaryEntity": "Jackie Chan",
+      "eventSlug": "matt-damon-bourne-movie-taking-shape",
+      "primaryKeyword": "matt damon bourne movie",
+      "primaryEntity": "Matt Damon",
       "entities": [
-        "Police Story"
+        "Jack",
+        "Bourne franchise",
+        "Edward Berger"
       ],
-      "angle": "Jackie Chan is returning for a sequel to his 1985 action classic.",
+      "angle": "Matt Damon confirms the next 'Bourne' film is in development with director Edward Berger.",
       "tmdbType": "movie",
-      "source": "gnews:MovieWeb",
+      "source": "gnews:World of Reel",
       "sources": [
         {
-          "outlet": "MovieWeb",
+          "outlet": "World of Reel",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9MeHRmdG5vbEpZMFFzeXFRZWZYTUJqblBib0FVU253VmVSTDJGN1pmeDExUDQ5ZDdyU1FzRWRLcW52MmFHbDJ6WDRPS3ZBbnFiUTZkRF9Qdm5uMWNBeHlqTzBYT1daNl9LUDdjbXF3?oc=5",
-          "ageMin": 59,
-          "headline": "Jackie Chan Returns for Sequel to 44-Year-Old Classic Action Franchise - MovieWeb",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMibkFVX3lxTE9MeHRmdG5vbEpZMFFzeXFRZWZYTUJqblBib0FVU253VmVSTDJGN1pmeDExUDQ5ZDdyU1FzRWRLcW52MmFHbDJ6WDRPS3ZBbnFiUTZkRF9Qdm5uMWNBeHlqTzBYT1daNl9LUDdjbXF3?oc=5\" target=\"_blank\" Jackie Chan Returns for Sequel to 44-Year-Old Classic Action Franchise /a nbsp; "
+          "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE41eWZKdG9MSzVLME1QeXlueDAwUHdibXozQm1MUnMxTUNZTkdRWWVWcmU0UHg2RzBYMkJCUVVhVUJ5YWJrc1RGRTM3OWM3MURKU0YxVjIwSnVLLVVfQXc?oc=5",
+          "ageMin": 12,
+          "headline": "Matt Damon Says the Next ‘Bourne’ Movie Is Finally Taking Shape With Director Edward Berger - World of Reel",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiXkFVX3lxTE41eWZKdG9MSzVLME1QeXlueDAwUHdibXozQm1MUnMxTUNZTkdRWWVWcmU0UHg2RzBYMkJCUVVhVUJ5YWJrc1RGRTM3OWM3MURKU0YxVjIwSnVLLVVfQXc?oc=5\" target=\"_blank\" Matt Damon Says the Next ‘Bourne’ Movie Is Finally Taking Shape With Director Edward Berger /a nbsp; "
         }
       ],
-      "ageMin": 59,
+      "ageMin": 12,
       "_cand": {
-        "key": "rss:jackie-chan-returns-for-sequel-to-44-year-old-classic-action",
+        "key": "rss:matt-damon-says-the-next-bourne-movie-is-finally-taking-shap",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -110,11 +114,150 @@
         "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "MovieWeb"
+          "World of Reel"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "MovieWeb",
+        "attribution": "World of Reel",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 89,
+      "signals": {
+        "recency": 30,
+        "corroboration": 8,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-god-of-war-tv-series-ryan-hurst-recast-injury",
+      "slug": "god-of-war-tv-series-recasts-kratos-actor-ryan-hurst-after-on-set-inju",
+      "title": "‘God of War’ TV Series Recasts Kratos Actor Ryan Hurst After On-Set Injury",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "god-of-war-tv-series-ryan-hurst-recast-injury",
+      "primaryKeyword": "god of war tv series",
+      "primaryEntity": "God of War",
+      "entities": [
+        "God of War (TV series)",
+        "Ryan Hurst"
+      ],
+      "angle": "Ryan Hurst recast as Kratos in Prime Video's 'God of War' series after on-set injury.",
+      "tmdbType": "movie",
+      "source": "rss:TheWrap",
+      "sources": [
+        {
+          "outlet": "TheWrap",
+          "tier": 7,
+          "url": "https://www.thewrap.com/creative-content/tv-shows/god-of-war-halts-production-recasts-ryan-hurst-after-injury/",
+          "ageMin": 596,
+          "headline": "‘God of War’ to Recast Lead Ryan Hurst as Kratos After Set Stunt Injury",
+          "summary": "The \"Sons of Anarchy\" alum reportedly suffered from a torn bicep, which required surgery The post ‘God of War’ to Recast Lead Ryan Hurst as Kratos After Set Stunt Injury appeared first on TheWrap ."
+        },
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/tv/news/god-of-war-recast-kratos-actor-ryan-hurst-injury-1236814409/",
+          "ageMin": 604,
+          "headline": "God of War Shocker: Kratos Actor Ryan Hurst Recast After On-Set Injury",
+          "summary": "Prime Video will recast the lead role on its upcoming adaptation of God of War after star Ryan Hurst was injured on set, Variety has confirmed. Hurst had been set to play Kratos, the titular god of war, and Prime Video even released a first look at Hurst in the role this past February. But [ ]"
+        }
+      ],
+      "ageMin": 596,
+      "_cand": {
+        "key": "rss:-god-of-war-to-recast-lead-ryan-hurst-as-kratos-after-set-st",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 2,
+      "verification": {
+        "tier1Count": 2,
+        "tier1Owners": 2,
+        "outletCount": 2,
+        "outlets": [
+          "TheWrap",
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": null,
+        "framing": "plain",
+        "status": "CONFIRMED",
+        "publishable": true
+      },
+      "priority": 87,
+      "signals": {
+        "recency": 4,
+        "corroboration": 18,
+        "status": 25,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 8,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-jonathan-tropper-lucky-star-wars-starfighter-ronda-rousey-road-house",
+      "slug": "jonathan-tropper-cassie-pappas-discuss-lucky-star-wars-starfighter-and",
+      "title": "Jonathan Tropper & Cassie Pappas Discuss 'Lucky,' 'Star Wars: Starfighter,' and Ronda Rousey's 'Road House'",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "jonathan-tropper-lucky-star-wars-starfighter-ronda-rousey-road-house",
+      "primaryKeyword": "ronda rousey road house",
+      "primaryEntity": "Ronda Rousey",
+      "entities": [
+        "Road House",
+        "Star Wars: Starfighter"
+      ],
+      "angle": "Podcast discusses upcoming film 'Lucky,' the lost 'Star Wars: Starfighter,' and Ronda Rousey's 'Road House'.",
+      "tmdbType": "movie",
+      "source": "gnews:The Playlist",
+      "sources": [
+        {
+          "outlet": "The Playlist",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPZFZVWWFNZjZWWlI5ZmhRa0lXUFNaZGN1OWpBRlVnVDk2b3lhRk9SQnBHY3VYRDh6cVE3OWFiMzl4dmhBbFlrZW1zZWVjNVd4SDB2V2EzbjViUzBfZ0x4LVM4SGxRcmRyczRsOHNGbUNVbDBKaHNPeGM2ZGhBX3ZzMjNna1ZvT00?oc=5",
+          "ageMin": 51,
+          "headline": "Jonathan Tropper Cassie Pappas On ‘Lucky,’ ‘Star Wars: Starfighter’ The Lost Ronda Rousey ‘Road House’ [Bingeworthy Podcast] - The Playlist",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMihwFBVV95cUxPZFZVWWFNZjZWWlI5ZmhRa0lXUFNaZGN1OWpBRlVnVDk2b3lhRk9SQnBHY3VYRDh6cVE3OWFiMzl4dmhBbFlrZW1zZWVjNVd4SDB2V2EzbjViUzBfZ0x4LVM4SGxRcmRyczRsOHNGbUNVbDBKaHNPeGM2ZGhBX3ZzMjNna1ZvT00?oc=5\" target=\"_blank\" Jonathan Tropper Cassie Pappas On ‘Lucky,’ ‘S"
+        }
+      ],
+      "ageMin": 51,
+      "_cand": {
+        "key": "rss:jonathan-tropper-cassie-pappas-on-lucky-star-wars-starfighte",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "The Playlist"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "The Playlist",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -134,194 +277,62 @@
       "tierClass": "B"
     },
     {
-      "id": "news-barry-ward-joins-grown-ups-netflix-series",
-      "slug": "barry-ward-on-everybody-digs-bill-evans-netflix-series-grown-ups",
-      "title": "Barry Ward on 'Everybody Digs Bill Evans,' Netflix Series 'Grown Ups'",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "barry-ward-joins-grown-ups-netflix-series",
-      "primaryKeyword": "barry ward grown ups netflix",
-      "primaryEntity": "Grown Ups",
-      "entities": [
-        "Grown Ups (TV series)",
-        "Barry Ward",
-        "Netflix"
-      ],
-      "angle": "Barry Ward has been cast in the upcoming Netflix series 'Grown Ups'.",
-      "tmdbType": "movie",
-      "source": "gnews:The Hollywood Reporter",
-      "sources": [
-        {
-          "outlet": "The Hollywood Reporter",
-          "tier": 7,
-          "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNenk5ZjRGVzlic3BSemhJVXdsVm4xdG9tRWtIOVlncmxmTEZGUTljNmtwT3BNMDB2RWxNcVFFbC1SMnZkZTZPaTh4VlFDRG9Gd0ctUHZtOFNZUVdyU1RGX3JfQ3phWDRQMXNKTkVhaU0xNEhhRkI0TzNiSEhoNHY0WGd6VU9ySGFvcXJ5M3FjUUZxUFNCOWpaMldIaUFYUUJaRnRqMm9nbW9EOWp4TWhwcFdZelVULURZMUdOOUJzOFc?oc=5",
-          "ageMin": 178,
-          "headline": "Barry Ward on 'Everybody Digs Bill Evans,' Netflix Series 'Grown Ups' - The Hollywood Reporter",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiwAFBVV95cUxNenk5ZjRGVzlic3BSemhJVXdsVm4xdG9tRWtIOVlncmxmTEZGUTljNmtwT3BNMDB2RWxNcVFFbC1SMnZkZTZPaTh4VlFDRG9Gd0ctUHZtOFNZUVdyU1RGX3JfQ3phWDRQMXNKTkVhaU0xNEhhRkI0TzNiSEhoNHY0WGd6VU9ySGFvcXJ5M3FjUUZxUFNCOWpaMldIaUFYUUJaRnRqMm9nbW9EOWp4TWhwcFdZelVULURZMUd"
-        }
-      ],
-      "ageMin": 178,
-      "_cand": {
-        "key": "rss:barry-ward-on-everybody-digs-bill-evans-netflix-series-grown",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "The Hollywood Reporter"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "The Hollywood Reporter",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 78,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-annabel-scholey-joins-netflix-thriller-the-lords-day",
-      "slug": "annabel-scholey-boards-netflix-thriller-series-the-lords-day",
-      "title": "Annabel Scholey Boards Netflix Thriller Series 'The Lords Day'",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "annabel-scholey-joins-netflix-thriller-the-lords-day",
-      "primaryKeyword": "the lords day netflix",
-      "primaryEntity": "The Lords of Flatbush",
-      "entities": [
-        "The Lords Day (TV series)",
-        "Annabel Scholey",
-        "Netflix"
-      ],
-      "angle": "Annabel Scholey, known for 'Rivals', is cast in Netflix's new thriller series 'The Lords Day'.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/tv/global/annabel-scholey-jnetflix-thriller-series-the-lords-day-1236814480/",
-          "ageMin": 268,
-          "headline": "Rivals Star Annabel Scholey Joins Netflix Thriller Series The Lords Day Alongside Damson Idris and Harry Lawtey (EXCLUSIVE)",
-          "summary": "Annabel Scholey, the British actress most recently seen in the Disney+ hit Rivals, has joined the cast of Netflix s upcoming thriller series The Lords Day, now in production in the U.K. Variety understands that Scholey, also known for BBC series The Split, has a key role in the six-part series, based on Michael Dobbs’ 2007 [ ]"
-        }
-      ],
-      "ageMin": 268,
-      "_cand": {
-        "key": "rss:rivals-star-annabel-scholey-joins-netflix-thriller-series-th",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 71,
-      "signals": {
-        "recency": 9,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-jenna-ortega-rose-byrne-new-movie",
-      "slug": "jenna-ortega-rose-byrne-to-star-in-new-movie-from-if-i-had-legs-direct",
-      "title": "Jenna Ortega, Rose Byrne to Star in New Movie from ‘If I Had Legs’ Director Mary Bronstein",
+      "id": "news-paramount-gi-joe-movie-details",
+      "slug": "what-you-need-to-know-about-paramount-s-upcoming-g-i-joe-movie",
+      "title": "What You Need to Know About Paramount’s Upcoming G.I. JOE Movie",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
-      "eventType": "casting",
+      "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "jenna-ortega-rose-byrne-new-movie",
-      "primaryKeyword": "Jenna Ortega Rose Byrne movie",
-      "primaryEntity": "Jenna Ortega",
+      "eventSlug": "paramount-gi-joe-movie-details",
+      "primaryKeyword": "g.i. joe movie",
+      "primaryEntity": "G.I. Joe: Retaliation",
       "entities": [
-        "Rose Byrne",
-        "Mary Bronstein"
+        "G.I. Joe",
+        "Paramount"
       ],
-      "angle": "Jenna Ortega and Rose Byrne are set to star in a new film from director Mary Bronstein.",
+      "angle": "Details emerge about Paramount's upcoming G.I. JOE movie.",
       "tmdbType": "movie",
-      "source": "gnews:The Hollywood Reporter",
+      "source": "gnews:Movieguide",
       "sources": [
         {
-          "outlet": "The Hollywood Reporter",
-          "tier": 7,
-          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNd3hSbkd0VWxYZ3ZSODBaRXF4clFzdUJkY1YyOXJWZk55TmZNeHBmTFd3RFJJb3RUT3pFS0EtRzd3TlluZHdjRDZGRjdoSEw5ZFZwNmVYNUZKRjZfandrcHhSVGp6Mkt0czBEMThneTkxMjJhSHhseDFTUldmekYyU1VkSXR5NUNhV3dVbzFTdDZSQlRRRzJkd2p3SjBlVHhLWXhlVXlTT2NNbkxh?oc=5",
-          "ageMin": 1177,
-          "headline": "Jenna Ortega, Rose Byrne to Star in New Movie from ‘If I Had Legs’ Director Mary Bronstein - The Hollywood Reporter",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxNd3hSbkd0VWxYZ3ZSODBaRXF4clFzdUJkY1YyOXJWZk55TmZNeHBmTFd3RFJJb3RUT3pFS0EtRzd3TlluZHdjRDZGRjdoSEw5ZFZwNmVYNUZKRjZfandrcHhSVGp6Mkt0czBEMThneTkxMjJhSHhseDFTUldmekYyU1VkSXR5NUNhV3dVbzFTdDZSQlRRRzJkd2p3SjBlVHhLWXhlVXlTT2NNbkxh?oc=5\" target=\"_bla"
+          "outlet": "Movieguide",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNZkM3dGVhTG9sRnluZkJZTWFVV1R1NUFsc19QOGx6LWt2Q3dUZkZTR3F3OVl0NWduMFMtb2RoVHE3cU9iYzNpOEZMRW93dzNtaG50YjZWQXZLSTEwSmgtN2hSd2ZsYTVHRUkyZDYyaTdsU2hsWGdWcElDRXE0eUowd2daSmhHQVdtQkZLNEMwaUlBaVNidGVoZDZEU2szYms?oc=5",
+          "ageMin": 57,
+          "headline": "What You Need to Know About Paramount’s Upcoming G.I. JOE Movie - Movieguide",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMinwFBVV95cUxNZkM3dGVhTG9sRnluZkJZTWFVV1R1NUFsc19QOGx6LWt2Q3dUZkZTR3F3OVl0NWduMFMtb2RoVHE3cU9iYzNpOEZMRW93dzNtaG50YjZWQXZLSTEwSmgtN2hSd2ZsYTVHRUkyZDYyaTdsU2hsWGdWcElDRXE0eUowd2daSmhHQVdtQkZLNEMwaUlBaVNidGVoZDZEU2szYms?oc=5\" target=\"_blank\" What You Need"
         }
       ],
-      "ageMin": 1177,
+      "ageMin": 57,
       "_cand": {
-        "key": "rss:jenna-ortega-rose-byrne-to-star-in-new-movie-from-if-i-had-l",
+        "key": "rss:what-you-need-to-know-about-paramount-s-upcoming-g-i-joe-mov",
         "popularity": 0,
         "kind": "gnews"
       },
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
+        "tier1Count": 0,
+        "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "The Hollywood Reporter"
+          "Movieguide"
         ],
-        "maxTier": 7,
+        "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "The Hollywood Reporter",
+        "attribution": "Movieguide",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 69,
+      "priority": 83,
       "signals": {
-        "recency": 1,
-        "corroboration": 12,
+        "recency": 24,
+        "corroboration": 8,
         "status": 18,
-        "type": 14,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
         "big": 24,
@@ -331,9 +342,139 @@
       "tierClass": "B"
     },
     {
+      "id": "news-disney-plus-mickey-mouse-club-pilot",
+      "slug": "disney-orders-pilot-for-new-version-of-the-mickey-mouse-club",
+      "title": "Disney+ Orders Pilot for New Version of 'The Mickey Mouse Club'",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "disney-plus-mickey-mouse-club-pilot",
+      "primaryKeyword": "mickey mouse club disney plus",
+      "primaryEntity": "Mickey's House of Villains",
+      "entities": [
+        "The Mickey Mouse Club",
+        "Disney+"
+      ],
+      "angle": "Disney+ is ordering a pilot for a new version of the classic kids series 'The Mickey Mouse Club'.",
+      "tmdbType": "movie",
+      "source": "gnews:TV Series Finale",
+      "sources": [
+        {
+          "outlet": "TV Series Finale",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPUnZsUFd6Zy1UUDl5V0lucFFNX2JVM3ZpSlB5RGUyUUNnc0psYzliYTVnOTFfaS15NlZ2M2o1QjllRDVNM2tmbm5KV0l4YzI1VjNtY0lmdUcyN2hlLUdWWEV3MXZHdUY3TVpaMjQzdW11elJnb3VYYkpJcF9HaEY3MlBMb2FlTEZLdGpsSl8wcF95R29HVmE5alRpNHUxdVMzcEF5dGt6LXpwRVFa0gGyAUFVX3lxTE9UQlJpUkNQdjFoYjB1VU9pSzE3VFF6b0RpWnpZYVJKM1d2WmFweFc5SmR4NDNrZ2Y0b0xsU3VIcVRTQUdoejNvOEstUWY2alVOQTllanRXVmRRS1B0R3BfV1JoN0REUHlKb0hqZm1SX082NlFxbGk4VjItNXoyQ1JWalBFVmVCbTE0LTBJc0pVYWRuTzZzTDJEaHRqNDdDMThLX1JuTmNJNEpfb09kS2VUc0E?oc=5",
+          "ageMin": 21,
+          "headline": "The Mickey Mouse Club: Disney+ Orders Pilot for New Version of Kids Series - TV Series Finale",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxPUnZsUFd6Zy1UUDl5V0lucFFNX2JVM3ZpSlB5RGUyUUNnc0psYzliYTVnOTFfaS15NlZ2M2o1QjllRDVNM2tmbm5KV0l4YzI1VjNtY0lmdUcyN2hlLUdWWEV3MXZHdUY3TVpaMjQzdW11elJnb3VYYkpJcF9HaEY3MlBMb2FlTEZLdGpsSl8wcF95R29HVmE5alRpNHUxdVMzcEF5dGt6LXpwRVFa0gGyAUFVX3lxTE9UQlJ"
+        }
+      ],
+      "ageMin": 21,
+      "_cand": {
+        "key": "rss:the-mickey-mouse-club-disney-orders-pilot-for-new-version-of",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "TV Series Finale"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "TV Series Finale",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 77,
+      "signals": {
+        "recency": 24,
+        "corroboration": 8,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "music-news-brandon-flowers-new-song-paradise",
+      "slug": "brandon-flowers-sings-one-for-the-croupiers-on-new-song-paradise",
+      "title": "Brandon Flowers Sings One for the Croupiers on New Song Paradise",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "brandon-flowers-new-song-paradise",
+      "primaryKeyword": "Brandon Flowers Paradise",
+      "primaryEntity": "Brandon Flowers",
+      "entities": [
+        "The Killers"
+      ],
+      "angle": "The Killers frontman Brandon Flowers releases a new solo song titled 'Paradise'.",
+      "tmdbType": "movie",
+      "source": "rss:Rolling Stone",
+      "sources": [
+        {
+          "outlet": "Rolling Stone",
+          "tier": 7,
+          "url": "https://www.rollingstone.com/music/music-news/brandon-flowers-paradise-country-1235594687/",
+          "ageMin": 38,
+          "headline": "Brandon Flowers Sings One for the Croupiers on New Song Paradise",
+          "summary": "Song will appear on Killers frontman's upcoming solo album, Thrasher"
+        }
+      ],
+      "ageMin": 38,
+      "_cand": {
+        "key": "rss:brandon-flowers-sings-one-for-the-croupiers-on-new-song-para",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Rolling Stone"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Rolling Stone",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 63,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
       "id": "awards-asghar-farhadi-honorary-heart-of-sarajevo",
-      "slug": "asghar-farhadi-to-receive-honorary-heart-of-sarajevo-award",
-      "title": "Asghar Farhadi to Receive Honorary Heart of Sarajevo Award",
+      "slug": "asghar-farhadi-to-receive-honorary-heart-of-sarajevo",
+      "title": "Asghar Farhadi to Receive Honorary Heart of Sarajevo",
       "contentType": "awards",
       "formatTag": "awards",
       "category": "awards",
@@ -341,13 +482,13 @@
       "eventType": "award",
       "sensitivity": "normal",
       "eventSlug": "asghar-farhadi-honorary-heart-of-sarajevo",
-      "primaryKeyword": "asghar farhadi sarajevo",
+      "primaryKeyword": "asghar farhadi sarajevo film festival award",
       "primaryEntity": "Asghar Farhadi",
       "entities": [
         "Sarajevo Film Festival",
         "Emily Watson"
       ],
-      "angle": "Filmmaker Asghar Farhadi will be honored with the Honorary Heart of Sarajevo award at the Sarajevo Film Festival, with Emily Watson also being recognized.",
+      "angle": "Iranian filmmaker Asghar Farhadi will be honored with the Honorary Heart of Sarajevo award at the Sarajevo Film Festival.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
@@ -355,12 +496,12 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/movies/movie-news/asghar-farhadi-honorary-heart-sarajevo-film-festival-iran-1236650798/",
-          "ageMin": 114,
+          "ageMin": 174,
           "headline": "Asghar Farhadi to Receive Honorary Heart of Sarajevo",
           "summary": "The acclaimed Iranian filmmaker will collect the award in person at the Bosnian film festival, which is also recognizing British actress Emily Watson."
         }
       ],
-      "ageMin": 114,
+      "ageMin": 174,
       "_cand": {
         "key": "rss:asghar-farhadi-to-receive-honorary-heart-of-sarajevo",
         "popularity": 0,
@@ -396,37 +537,35 @@
       "tierClass": "B"
     },
     {
-      "id": "news-powerwash-simulator-2-star-wars-pack-release",
-      "slug": "star-wars-pack-out-now-for-powerwash-simulator-2",
-      "title": "Star Wars Pack Out Now For PowerWash Simulator 2",
-      "contentType": "news",
-      "formatTag": "news",
+      "id": "trailer-celebrity-family-feud-season-12-trailer",
+      "slug": "celebrity-family-feud-season-12-trailer-shows-well-behaved-contestants",
+      "title": "‘Celebrity Family Feud’ Season 12 Trailer Shows ‘Well-Behaved’ Contestants in Action",
+      "contentType": "trailer",
+      "formatTag": "trailer",
       "category": "tv",
-      "subcategory": "news",
-      "eventType": "announcement",
+      "subcategory": "trailers",
+      "eventType": "trailer",
       "sensitivity": "normal",
-      "eventSlug": "powerwash-simulator-2-star-wars-pack-release",
-      "primaryKeyword": "powerwash simulator 2 star wars",
-      "primaryEntity": "PowerWash Simulator 2",
-      "entities": [
-        "Star Wars"
-      ],
-      "angle": "PowerWash Simulator 2 adds a Star Wars-themed content pack.",
+      "eventSlug": "celebrity-family-feud-season-12-trailer",
+      "primaryKeyword": "Celebrity Family Feud trailer",
+      "primaryEntity": "Celebrity Family Feud",
+      "entities": [],
+      "angle": "The trailer for the upcoming season of 'Celebrity Family Feud' has been released.",
       "tmdbType": "movie",
-      "source": "gnews:DLH.net",
+      "source": "gnews:IMDb",
       "sources": [
         {
-          "outlet": "DLH.net",
+          "outlet": "IMDb",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOY1M3b0UwdXVaeENic3V1ZF8wTnA5VjV6RmFzNG4wQ0xodkNkbU1peDRjZmppTXd4ajhuV3k2R1JrYVNJYUR4VWNYQ0FkTUtnTnI4RXZ4WlJ3MXNqR05VN1IxVU5KQkdRRWY4a0FWelpSaTdrbUNmREFYVnhjTHBQMnJ2ZWFBX1NOMVhfalk3Wm5lWERk?oc=5",
-          "ageMin": 172,
-          "headline": "Star Wars ™ Pack Out Now For PowerWash Simulator 2 - DLH.net",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMilAFBVV95cUxOY1M3b0UwdXVaeENic3V1ZF8wTnA5VjV6RmFzNG4wQ0xodkNkbU1peDRjZmppTXd4ajhuV3k2R1JrYVNJYUR4VWNYQ0FkTUtnTnI4RXZ4WlJ3MXNqR05VN1IxVU5KQkdRRWY4a0FWelpSaTdrbUNmREFYVnhjTHBQMnJ2ZWFBX1NOMVhfalk3Wm5lWERk?oc=5\" target=\"_blank\" Star Wars ™ Pack Out Now For"
+          "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5Qb3RMcWJ6ZHcxdnotcnFQdlItRlRnV2V0YjBqTFZSNkZrbmVlc2VOeFBSelg0cEVqRmdBdUN0bGV5dXh1cXM5ZkxKdDg5M0FyeXc?oc=5",
+          "ageMin": 792,
+          "headline": "‘Celebrity Family Feud’ Season 12 Trailer Shows ‘Well-Behaved’ Contestants in Action - IMDb",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTE5Qb3RMcWJ6ZHcxdnotcnFQdlItRlRnV2V0YjBqTFZSNkZrbmVlc2VOeFBSelg0cEVqRmdBdUN0bGV5dXh1cXM5ZkxKdDg5M0FyeXc?oc=5\" target=\"_blank\" ‘Celebrity Family Feud’ Season 12 Trailer Shows ‘Well-Behaved’ Contestants in Action /a nbsp; nbsp; font color=\"#6f6f"
         }
       ],
-      "ageMin": 172,
+      "ageMin": 792,
       "_cand": {
-        "key": "rss:star-wars-pack-out-now-for-powerwash-simulator-2-dlh-net",
+        "key": "rss:-celebrity-family-feud-season-12-trailer-shows-well-behaved-",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -436,21 +575,21 @@
         "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "DLH.net"
+          "IMDb"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "DLH.net",
+        "attribution": "IMDb",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 69,
+      "priority": 60,
       "signals": {
-        "recency": 16,
+        "recency": 1,
         "corroboration": 8,
         "status": 18,
-        "type": 9,
+        "type": 15,
         "pop": 0,
         "breakout": 0,
         "big": 18,
@@ -460,41 +599,105 @@
       "tierClass": "B"
     },
     {
-      "id": "music-news-the-felice-brothers-announcement",
-      "slug": "the-lumineers-bright-eyes-to-feature-on-felice-brothers-tribute-album",
-      "title": "The Lumineers, Bright Eyes to Feature on Felice Brothers Tribute Album",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
+      "id": "news-george-lucas-ai-future-filmmaking",
+      "slug": "george-lucas-ai-is-the-future-of-filmmaking",
+      "title": "George Lucas: 'AI is the Future of Filmmaking'",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "the-felice-brothers-announcement",
-      "primaryKeyword": "the felice brothers tribute album",
-      "primaryEntity": "The Felice Brothers",
+      "eventSlug": "george-lucas-ai-future-filmmaking",
+      "primaryKeyword": "george lucas ai",
+      "primaryEntity": "George Lucas",
       "entities": [
-        "The Lumineers",
-        "Bright Eyes",
-        "Old Crow Medicine Show",
-        "Brandon Flowers"
+        "Ai Kayano",
+        "AI"
       ],
-      "angle": "Star-studded tribute album announced for folk-roots band The Felice Brothers.",
+      "angle": "George Lucas states that AI is the future of filmmaking.",
       "tmdbType": "movie",
-      "source": "rss:Deadline",
+      "source": "gnews:Yahoo Lifestyle Canada",
       "sources": [
         {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/paramount-warner-deal-international-insider-1236983943/",
+          "outlet": "Yahoo Lifestyle Canada",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPM2FJUktpQ3YwTi15Mmt3OG9Dc0o5ZDExN2JodF95VDdXWGg2aWh6UzBQemN5ZGVzUUhsYUVYTzJYUGxRS2JOcHJsUUZlYm1vUEVsOVl3bXJPUHB6a08xbXFoMDNRT21JcV9rNkM1T3FzTmJaekQ5QVlwVm9CWHhtTjJGZkJodw?oc=5",
           "ageMin": 61,
-          "headline": "International Insider: WarnerMount Uncertainty; Danny Boyle @ Venice; BBC Streamer Ask",
-          "summary": "Good afternoon Insiders from a boiling hot London, we ve got your newsletter primed and ready after a busy week. Max Goldbart with the words. Sign up here. Weeks Of Uncertainty For WarnerMount A giant conglomerate beholden to Trump : We ve been keeping you up to date with every twist and turn of the regulatory quagmire that [ ]"
+          "headline": "EXCLUSIVE: 'Star Wars' Mastermind George Lucas Declares 'AI is the Future of Filmmaking' - Yahoo Lifestyle Canada",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMihgFBVV95cUxPM2FJUktpQ3YwTi15Mmt3OG9Dc0o5ZDExN2JodF95VDdXWGg2aWh6UzBQemN5ZGVzUUhsYUVYTzJYUGxRS2JOcHJsUUZlYm1vUEVsOVl3bXJPUHB6a08xbXFoMDNRT21JcV9rNkM1T3FzTmJaekQ5QVlwVm9CWHhtTjJGZkJodw?oc=5\" target=\"_blank\" EXCLUSIVE: 'Star Wars' Mastermind George Lucas"
         }
       ],
       "ageMin": 61,
       "_cand": {
-        "key": "rss:international-insider-warnermount-uncertainty-danny-boyle-ve",
+        "key": "rss:exclusive-star-wars-mastermind-george-lucas-declares-ai-is-t",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "Yahoo Lifestyle Canada"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "Yahoo Lifestyle Canada",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 75,
+      "signals": {
+        "recency": 16,
+        "corroboration": 8,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-annabel-scholey-joins-the-lords-day-netflix",
+      "slug": "rivals-star-annabel-scholey-joins-netflix-thriller-series-the-lords-da",
+      "title": "Rivals Star Annabel Scholey Joins Netflix Thriller Series The Lords Day Alongside Damson Idris and Harry Lawtey",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "annabel-scholey-joins-the-lords-day-netflix",
+      "primaryKeyword": "the lords day netflix casting",
+      "primaryEntity": "The Lords of Flatbush",
+      "entities": [
+        "The Lords Day (TV series)",
+        "Annabel Scholey",
+        "Netflix",
+        "Damson Idris"
+      ],
+      "angle": "Annabel Scholey, known for 'Rivals,' has been cast in Netflix's upcoming thriller series 'The Lords Day.'",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/tv/global/annabel-scholey-jnetflix-thriller-series-the-lords-day-1236814480/",
+          "ageMin": 328,
+          "headline": "Rivals Star Annabel Scholey Joins Netflix Thriller Series The Lords Day Alongside Damson Idris and Harry Lawtey (EXCLUSIVE)",
+          "summary": "Annabel Scholey, the British actress most recently seen in the Disney+ hit Rivals, has joined the cast of Netflix s upcoming thriller series The Lords Day, now in production in the U.K. Variety understands that Scholey, also known for BBC series The Split, has a key role in the six-part series, based on Michael Dobbs’ 2007 [ ]"
+        }
+      ],
+      "ageMin": 328,
+      "_cand": {
+        "key": "rss:rivals-star-annabel-scholey-joins-netflix-thriller-series-th",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -504,11 +707,79 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Deadline"
+          "Variety"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Deadline",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 71,
+      "signals": {
+        "recency": 9,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "music-news-the-felice-brothers-tribute-album",
+      "slug": "the-lumineers-bright-eyes-to-sing-for-the-felice-brothers-on-star-stud",
+      "title": "The Lumineers, Bright Eyes to Sing for the Felice Brothers on Star-Studded Tribute Album",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "the-felice-brothers-tribute-album",
+      "primaryKeyword": "the felice brothers tribute album",
+      "primaryEntity": "The Felice Brothers",
+      "entities": [
+        "The Lumineers",
+        "Bright Eyes",
+        "Old Crow Medicine Show",
+        "Brandon Flowers"
+      ],
+      "angle": "Established folk-roots band The Felice Brothers to be honored with a star-studded tribute album featuring artists like The Lumineers and Bright Eyes.",
+      "tmdbType": "movie",
+      "source": "rss:Rolling Stone",
+      "sources": [
+        {
+          "outlet": "Rolling Stone",
+          "tier": 7,
+          "url": "https://www.rollingstone.com/music/music-country/felice-brothers-tribute-album-lumineers-bright-eyes-1235594554/",
+          "ageMin": 121,
+          "headline": "Lumineers, Bright Eyes to Sing for the Felice Brothers on Star-Studded Tribute Album",
+          "summary": "Old Crow Medicine Show, Brandon Flowers, and more will interpret the catalog of the upstate New York folk-roots band"
+        }
+      ],
+      "ageMin": 121,
+      "_cand": {
+        "key": "rss:lumineers-bright-eyes-to-sing-for-the-felice-brothers-on-sta",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Rolling Stone"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Rolling Stone",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -528,9 +799,74 @@
       "tierClass": "C"
     },
     {
-      "id": "music-news-twenty-one-pilots-imax-watch-party-live-in-mexico-city-album",
-      "slug": "twenty-one-pilots-to-host-live-imax-watch-party-for-new-album",
-      "title": "Twenty One Pilots to Host Live IMAX Watch Party for New Album",
+      "id": "news-jenna-ortega-rose-byrne-new-movie",
+      "slug": "jenna-ortega-and-rose-byrne-to-star-in-new-mary-bronstein-film",
+      "title": "Jenna Ortega and Rose Byrne to Star in New Mary Bronstein Film",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "jenna-ortega-rose-byrne-new-movie",
+      "primaryKeyword": "Jenna Ortega new movie",
+      "primaryEntity": "Jenna Ortega",
+      "entities": [
+        "Rose Byrne",
+        "Mary Bronstein"
+      ],
+      "angle": "Jenna Ortega and Rose Byrne are set to star in a new film from director Mary Bronstein.",
+      "tmdbType": "movie",
+      "source": "gnews:The Hollywood Reporter",
+      "sources": [
+        {
+          "outlet": "The Hollywood Reporter",
+          "tier": 7,
+          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNd3hSbkd0VWxYZ3ZSODBaRXF4clFzdUJkY1YyOXJWZk55TmZNeHBmTFd3RFJJb3RUT3pFS0EtRzd3TlluZHdjRDZGRjdoSEw5ZFZwNmVYNUZKRjZfandrcHhSVGp6Mkt0czBEMThneTkxMjJhSHhseDFTUldmekYyU1VkSXR5NUNhV3dVbzFTdDZSQlRRRzJkd2p3SjBlVHhLWXhlVXlTT2NNbkxh?oc=5",
+          "ageMin": 1237,
+          "headline": "Jenna Ortega, Rose Byrne to Star in New Movie from ‘If I Had Legs’ Director Mary Bronstein - The Hollywood Reporter",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxNd3hSbkd0VWxYZ3ZSODBaRXF4clFzdUJkY1YyOXJWZk55TmZNeHBmTFd3RFJJb3RUT3pFS0EtRzd3TlluZHdjRDZGRjdoSEw5ZFZwNmVYNUZKRjZfandrcHhSVGp6Mkt0czBEMThneTkxMjJhSHhseDFTUldmekYyU1VkSXR5NUNhV3dVbzFTdDZSQlRRRzJkd2p3SjBlVHhLWXhlVXlTT2NNbkxh?oc=5\" target=\"_bla"
+        }
+      ],
+      "ageMin": 1237,
+      "_cand": {
+        "key": "rss:jenna-ortega-rose-byrne-to-star-in-new-movie-from-if-i-had-l",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "The Hollywood Reporter"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "The Hollywood Reporter",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 69,
+      "signals": {
+        "recency": 1,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "music-news-twenty-one-pilots-imax-film-album-watch-party",
+      "slug": "twenty-one-pilots-hosting-live-imax-film-online-watch-party-dropping-m",
+      "title": "Twenty One Pilots Hosting Live IMAX Film Online Watch Party, Dropping More Than We Ever Imagined (Live in Mexico City) Album",
       "contentType": "music-news",
       "formatTag": "music-news",
       "category": "music",
@@ -538,13 +874,13 @@
       "eventType": "announcement",
       "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "twenty-one-pilots-imax-watch-party-live-in-mexico-city-album",
+      "eventSlug": "twenty-one-pilots-imax-film-album-watch-party",
       "primaryKeyword": "twenty one pilots live in mexico city",
       "primaryEntity": "Twenty One Pilots",
       "entities": [
-        "Live in Mexico City (album)"
+        "Clancy World Tour"
       ],
-      "angle": "Twenty One Pilots are hosting an online IMAX watch party for their upcoming album 'Live in Mexico City,' recorded during their largest show ever.",
+      "angle": "Twenty One Pilots to host an online IMAX watch party for their 'Live in Mexico City' film and album, recorded during their recent tour.",
       "tmdbType": "movie",
       "source": "rss:Billboard",
       "sources": [
@@ -552,12 +888,12 @@
           "outlet": "Billboard",
           "tier": 7,
           "url": "https://www.billboard.com/music/rock/twenty-one-pilots-live-film-online-watch-party-live-mexico-lp-1236296630/",
-          "ageMin": 81,
+          "ageMin": 141,
           "headline": "Twenty One Pilots Hosting Live IMAX Film Online Watch Party, Dropping More Than We Ever Imagined (Live in Mexico City) Album",
           "summary": "The film and album were both recorded during the Ohio duo's biggest-show ever in Mexico City on their 2025 Clancy world tour."
         }
       ],
-      "ageMin": 81,
+      "ageMin": 141,
       "_cand": {
         "key": "rss:twenty-one-pilots-hosting-live-imax-film-online-watch-party-",
         "popularity": 0,
@@ -594,475 +930,16 @@
       "tierClass": "C"
     },
     {
-      "id": "news-ghana-creative-economy-initiative-participants",
-      "slug": "s-w-a-t-creator-aaron-rahsaan-thomas-producer-paul-garnes-set-for-inau",
-      "title": "‘S.W.A.T.’ Creator Aaron Rahsaan Thomas, Producer Paul Garnes Set For Inaugural Ghana Creative Economy Initiative",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "ghana-creative-economy-initiative-participants",
-      "primaryKeyword": "Ghana Creative Economy Initiative",
-      "primaryEntity": "S.W.A.T.",
-      "entities": [
-        "Aaron Rahsaan Thomas",
-        "Paul Garnes",
-        "Ava DuVernay"
-      ],
-      "angle": "Creator of 'S.W.A.T.' Aaron Rahsaan Thomas and producer Paul Garnes are set to participate in Ghana's inaugural Creative Economy Initiative.",
-      "tmdbType": "movie",
-      "source": "rss:Deadline",
-      "sources": [
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/ghana-creative-economy-initiative-2026-1236996657/",
-          "ageMin": 219,
-          "headline": "‘S.W.A.T.’ Creator Aaron Rahsaan Thomas ‘Origin’ Producer Paul Garnes Among Names Set For Inaugural Ghana Creative Economy Initiative",
-          "summary": "EXCLUSIVE: Ghana’s capital, Accra, will this month host a selection of interesting industry names such as S.W.A.T. creator Aaron Rahsaan Thomas and Paul Garnes, Ava DuVernay s longtime producer, as part of the inaugural Ghana Creative Economy Initiative. The 2026 Ghana Creative Economy Initiative was developed and curated by Dorina Amina Abubakar, a Ghanaian-British producer, film [ ]"
-        }
-      ],
-      "ageMin": 219,
-      "_cand": {
-        "key": "rss:-s-w-a-t-creator-aaron-rahsaan-thomas-origin-producer-paul-g",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Deadline"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Deadline",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 66,
-      "signals": {
-        "recency": 9,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-star-wars-other",
-      "slug": "even-if-you-ve-never-seen-star-wars-apparently-this-is-a-really-big-de",
-      "title": "Even If You’ve Never Seen Star Wars... Apparently This Is a Really Big Deal",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "star-wars-other",
-      "primaryKeyword": "star wars event",
-      "primaryEntity": "Star Wars",
-      "entities": [],
-      "angle": "A report discusses the significance of a Star Wars event, even for those unfamiliar with the franchise.",
-      "tmdbType": "movie",
-      "source": "gnews:107.5 Kool FM",
-      "sources": [
-        {
-          "outlet": "107.5 Kool FM",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1lRXRNYmY5blhKNU81TGV3MnJ5alVmSXZyYm52T2JNZE4zdDFEb0swbG9BT2NJcUl1SzFkenRhUjg4RlNaWkhTakN5V19yeXE4RjlpTS1OdnpXR2FyYTVBbnprV3F3d1lKdWZJekVn?oc=5",
-          "ageMin": 179,
-          "headline": "Even If You’ve Never Seen Star Wars... Apparently This Is a Really Big Deal - 107.5 Kool FM",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMibkFVX3lxTE1lRXRNYmY5blhKNU81TGV3MnJ5alVmSXZyYm52T2JNZE4zdDFEb0swbG9BT2NJcUl1SzFkenRhUjg4RlNaWkhTakN5V19yeXE4RjlpTS1OdnpXR2FyYTVBbnprV3F3d1lKdWZJekVn?oc=5\" target=\"_blank\" Even If You’ve Never Seen Star Wars... Apparently This Is a Really Big Deal /a n"
-        }
-      ],
-      "ageMin": 179,
-      "_cand": {
-        "key": "rss:even-if-you-ve-never-seen-star-wars-apparently-this-is-a-rea",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "107.5 Kool FM"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "107.5 Kool FM",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 59,
-      "signals": {
-        "recency": 16,
-        "corroboration": 8,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 12,
-        "trending": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "music-news-tiffany-young-debut-album-edge-of-calm-asia-tour",
-      "slug": "tiffany-young-announces-debut-album-edge-of-calm-and-asia-tour",
-      "title": "Tiffany Young Announces Debut Album 'Edge of Calm' and Asia Tour",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "tiffany-young-debut-album-edge-of-calm-asia-tour",
-      "primaryKeyword": "tiffany young debut album",
-      "primaryEntity": "Tiffany Young",
-      "entities": [
-        "Edge of Calm (album)",
-        "Girls Generation"
-      ],
-      "angle": "Girls Generation member Tiffany Young, a Los Angeles-born K-pop star, is set to release her debut solo studio album 'Edge of Calm' and embark on an Asia tour.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/music/news/girls-generation-tiffany-young-debut-album-edge-of-calm-asia-tour-1236812361/",
-          "ageMin": 121,
-          "headline": "Girls Generation Star Tiffany Young Sets Debut Album Edge of Calm, Asia Tour",
-          "summary": "Tiffany Young, the Los Angeles-born K-pop veteran who rose to prominence as a member of Girls Generation, will release her debut solo studio album, Edge of Calm, on Aug. 20 through Pacific Music Group and its flagship label, Pacific Records, alongside an eight-city Asia tour launching Sept. 12 in Hong Kong. The 11-track set draws [ ]"
-        }
-      ],
-      "ageMin": 121,
-      "_cand": {
-        "key": "rss:girls-generation-star-tiffany-young-sets-debut-album-edge-of",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 55,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-god-of-war-kratos-actor-recast",
-      "slug": "god-of-war-shocker-kratos-actor-ryan-hurst-recast-after-on-set-injury",
-      "title": "God of War Shocker: Kratos Actor Ryan Hurst Recast After On-Set Injury",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "god-of-war-kratos-actor-recast",
-      "primaryKeyword": "god of war kratos actor recast",
-      "primaryEntity": "God of War",
-      "entities": [
-        "God of War (TV series)",
-        "Ryan Hurst",
-        "Prime Video"
-      ],
-      "angle": "Prime Video's 'God of War' series recasts the lead role of Kratos due to an on-set injury to actor Ryan Hurst.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/tv/news/god-of-war-recast-kratos-actor-ryan-hurst-injury-1236814409/",
-          "ageMin": 544,
-          "headline": "God of War Shocker: Kratos Actor Ryan Hurst Recast After On-Set Injury",
-          "summary": "Prime Video will recast the lead role on its upcoming adaptation of God of War after star Ryan Hurst was injured on set, Variety has confirmed. Hurst had been set to play Kratos, the titular god of war, and Prime Video even released a first look at Hurst in the role this past February. But [ ]"
-        }
-      ],
-      "ageMin": 544,
-      "_cand": {
-        "key": "rss:god-of-war-shocker-kratos-actor-ryan-hurst-recast-after-on-s",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 66,
-      "signals": {
-        "recency": 4,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-casting-director-nancy-nayor-horror-breakout-stars",
-      "slug": "horror-s-biggest-hits-casting-director-on-discovering-breakout-stars",
-      "title": "Horror's Biggest Hits Casting Director on Discovering Breakout Stars",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "casting-director-nancy-nayor-horror-breakout-stars",
-      "primaryKeyword": "horror casting director",
-      "primaryEntity": "Nancy Nayor",
-      "entities": [
-        "Barbarian",
-        "Barbarian (film)",
-        "Sam Raimi"
-      ],
-      "angle": "A casting director reveals how breakout stars are discovered in the horror genre.",
-      "tmdbType": "movie",
-      "source": "rss:IndieWire",
-      "sources": [
-        {
-          "outlet": "IndieWire",
-          "tier": 7,
-          "url": "https://www.indiewire.com/features/craft/how-horror-movies-are-cast-sam-raimi-movies-psycho-3-1235205289/",
-          "ageMin": 1201,
-          "headline": "The Casting Director Behind Horror s Biggest Hits Reveals How the Genre s Breakout Stars Get Discovered",
-          "summary": "Casting director Nancy Nayor, whose horror credits include everything from Sam Raimi classics to hits like \"Barbarian,\" tells IndieWire about her approach to finding actors for the genre she loves."
-        }
-      ],
-      "ageMin": 1201,
-      "_cand": {
-        "key": "rss:the-casting-director-behind-horror-s-biggest-hits-reveals-ho",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "IndieWire"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "IndieWire",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 48,
-      "signals": {
-        "recency": 1,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 12,
-        "trending": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-heartstopper-other",
-      "slug": "inside-heartstopper-forever-reflecting-on-the-groundbreaking-ya-series",
-      "title": "Inside 'Heartstopper Forever': Reflecting on the Groundbreaking YA Series Finale",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "heartstopper-other",
-      "primaryKeyword": "Heartstopper finale",
-      "primaryEntity": "Heartstopper",
-      "entities": [
-        "Alice Oseman",
-        "Kit Connor",
-        "Joe Locke"
-      ],
-      "angle": "The cast and creator reflect on the impact and conclusion of the hit Netflix YA series 'Heartstopper'.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/the-end-of-an-era-inside-heartstopper-forever-and-the-show-that-changed-british-ya-1236646729/",
-          "ageMin": 1166,
-          "headline": "The End of an Era: Inside Heartstopper Forever and the Show That Changed British YA",
-          "summary": "With the release of the two-hour finale that concludes the hit Netflix series, creator Alice Oseman along with Kit Connor, Joe Locke and more of the show's stars reflect on a groundbreaking, decade-long journey and what it means to end their queer love story."
-        }
-      ],
-      "ageMin": 1166,
-      "_cand": {
-        "key": "rss:the-end-of-an-era-inside-heartstopper-forever-and-the-show-t",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 60,
-      "signals": {
-        "recency": 1,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 6,
-        "trending": 0,
-        "softTv": 0,
-        "radar": 18
-      },
-      "radarKind": "tv-episode-today",
-      "tierClass": "A"
-    },
-    {
-      "id": "news-fx-color-force-develop-series-new-yorker-article-national-park-rescue",
-      "slug": "fx-color-force-to-develop-series-based-on-new-yorker-article-about-nat",
-      "title": "FX, Color Force to Develop Series Based on New Yorker Article About National Park Volunteer Rescue Squad (EXCLUSIVE)",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "fx-color-force-develop-series-new-yorker-article-national-park-rescue",
-      "primaryKeyword": "fx series development",
-      "primaryEntity": "FX's A Christmas Carol",
-      "entities": [
-        "FX",
-        "Color Force"
-      ],
-      "angle": "FX and Color Force are developing a new series based on a New Yorker article about a national park volunteer rescue squad.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/tv/news/fx-series-new-yorker-national-park-volunteer-rescue-squad-1236813417/",
-          "ageMin": 871,
-          "headline": "FX, Color Force to Develop Series Based on New Yorker Article About National Park Volunteer Rescue Squad (EXCLUSIVE)",
-          "summary": "In a competitive situation, FX has secured the rights to develop a series based on the New Yorker article The Call of the Wild by Paige Williams, Variety has learned exclusively from sources. Also published online in January 2026 under the title The Backcountry Rescue Squad at America’s Busiest National Park, the article details the [ ]"
-        }
-      ],
-      "ageMin": 871,
-      "_cand": {
-        "key": "rss:fx-color-force-to-develop-series-based-on-new-yorker-article",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 58,
-      "signals": {
-        "recency": 1,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-eliza-dushku-sci-fi-tv-series-canceled",
-      "slug": "after-buffy-eliza-dushku-starred-in-this-sci-fi-tv-series-that-was-can",
-      "title": "After Buffy, Eliza Dushku Starred In This Sci-Fi TV Series That Was Canceled Way Too Soon",
+      "id": "news-eliza-dushku-sci-fi-series-canceled",
+      "slug": "eliza-dushku-s-sci-fi-series-canceled-too-soon",
+      "title": "Eliza Dushku's Sci-Fi Series Canceled Too Soon",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
       "eventType": "cancellation",
       "sensitivity": "normal",
-      "eventSlug": "eliza-dushku-sci-fi-tv-series-canceled",
+      "eventSlug": "eliza-dushku-sci-fi-series-canceled",
       "primaryKeyword": "Eliza Dushku sci-fi series",
       "primaryEntity": "Eliza Dushku",
       "entities": [
@@ -1076,12 +953,12 @@
           "outlet": "TVLine",
           "tier": 5,
           "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOMEJtaFVIRzA3MnJsNXRLOGNkcUdMdTFwZWFqUTUzbVNjeWxfckdOYW42REhtMEsxT2I0STREa3JQMlctOTVjZGV1OE10RUFpV1RqQW16U2ZBRUNvLWd2MFE0bnc0SEtqazhERi00Y0k3TEVDV3MyWEctQTFVaENmYkI2R0R5X0NGbkctYll2aHZ1cjZPQ2w3Z0lnTGgyUQ?oc=5",
-          "ageMin": 949,
+          "ageMin": 1009,
           "headline": "After Buffy, Eliza Dushku Starred In This Sci-Fi TV Series That Was Canceled Way Too Soon - TVLine",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxOMEJtaFVIRzA3MnJsNXRLOGNkcUdMdTFwZWFqUTUzbVNjeWxfckdOYW42REhtMEsxT2I0STREa3JQMlctOTVjZGV1OE10RUFpV1RqQW16U2ZBRUNvLWd2MFE0bnc0SEtqazhERi00Y0k3TEVDV3MyWEctQTFVaENmYkI2R0R5X0NGbkctYll2aHZ1cjZPQ2w3Z0lnTGgyUQ?oc=5\" target=\"_blank\" After Buffy, E"
         }
       ],
-      "ageMin": 949,
+      "ageMin": 1009,
       "_cand": {
         "key": "rss:after-buffy-eliza-dushku-starred-in-this-sci-fi-tv-series-th",
         "popularity": 0,
@@ -1117,39 +994,39 @@
       "tierClass": "C"
     },
     {
-      "id": "news-ludwig-g-ransson-announcement",
-      "slug": "ludwig-g-ransson-scores-the-odyssey-with-ancient-instruments-and-gongs",
-      "title": "Ludwig Göransson Scores 'The Odyssey' With Ancient Instruments and Gongs",
+      "id": "news-ghana-creative-economy-initiative-aaron-rahsaan-thomas-paul-garnes",
+      "slug": "s-w-a-t-creator-aaron-rahsaan-thomas-producer-paul-garnes-join-inaugur",
+      "title": "'S.W.A.T.' Creator Aaron Rahsaan Thomas, Producer Paul Garnes Join Inaugural Ghana Creative Economy Initiative",
       "contentType": "news",
       "formatTag": "news",
-      "category": "celebrity",
+      "category": "tv",
       "subcategory": "news",
-      "eventType": "announcement",
+      "eventType": "other",
       "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "ludwig-g-ransson-announcement",
-      "primaryKeyword": "ludwig göransson the odyssey",
-      "primaryEntity": "Ludwig Göransson",
+      "eventSlug": "ghana-creative-economy-initiative-aaron-rahsaan-thomas-paul-garnes",
+      "primaryKeyword": "ghana creative economy initiative",
+      "primaryEntity": "Ghana Creative Economy Initiative",
       "entities": [
-        "The Odyssey (film)",
-        "Christopher Nolan"
+        "Aaron Rahsaan Thomas",
+        "Paul Garnes",
+        "S.W.A.T."
       ],
-      "angle": "Composer Ludwig Göransson reunites with Christopher Nolan for 'The Odyssey' score, utilizing unique ancient instruments.",
+      "angle": "Creator of 'S.W.A.T.' and Ava DuVernay's producer are among the notable industry names participating in Ghana's inaugural Creative Economy Initiative.",
       "tmdbType": "movie",
-      "source": "rss:Variety Music",
+      "source": "rss:Deadline",
       "sources": [
         {
-          "outlet": "Variety Music",
+          "outlet": "Deadline",
           "tier": 7,
-          "url": "https://variety.com/2026/artisans/news/the-odyssey-ludwig-goransson-film-score-1236813153/",
-          "ageMin": 529,
-          "headline": "The Sound of The Odyssey : Composer Ludwig Göransson Used Ancient Greek Instruments, Scrap Metals and Gongs",
-          "summary": "Composer Ludwig Göransson has reunited with Christopher Nolan to score The Odyssey, marking their third collaboration after Tenet and Oppenheimer. Earlier this year, Göransson’s work on Star Wars: The Mandalorian and Grogu showcased his use of heavy synths and guitar-based orchestrations. However, for The Odyssey, Göransson ventures into new territory. Nolan instructed Göransson not to use [ ]"
+          "url": "https://deadline.com/2026/07/ghana-creative-economy-initiative-2026-1236996657/",
+          "ageMin": 279,
+          "headline": "‘S.W.A.T.’ Creator Aaron Rahsaan Thomas ‘Origin’ Producer Paul Garnes Among Names Set For Inaugural Ghana Creative Economy Initiative",
+          "summary": "EXCLUSIVE: Ghana’s capital, Accra, will this month host a selection of interesting industry names such as S.W.A.T. creator Aaron Rahsaan Thomas and Paul Garnes, Ava DuVernay s longtime producer, as part of the inaugural Ghana Creative Economy Initiative. The 2026 Ghana Creative Economy Initiative was developed and curated by Dorina Amina Abubakar, a Ghanaian-British producer, film [ ]"
         }
       ],
-      "ageMin": 529,
+      "ageMin": 279,
       "_cand": {
-        "key": "rss:the-sound-of-the-odyssey-composer-ludwig-g-ransson-used-anci",
+        "key": "rss:-s-w-a-t-creator-aaron-rahsaan-thomas-origin-producer-paul-g",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -1159,63 +1036,219 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Variety Music"
+          "Deadline"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Variety Music",
+        "attribution": "Deadline",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 69,
+      "priority": 50,
       "signals": {
-        "recency": 4,
+        "recency": 9,
         "corroboration": 12,
         "status": 18,
-        "type": 9,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 6,
+        "trending": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-casting-director-horror-breakout-stars",
+      "slug": "the-casting-director-behind-horror-s-biggest-hits-reveals-how-the-genr",
+      "title": "The Casting Director Behind Horror s Biggest Hits Reveals How the Genre s Breakout Stars Get Discovered",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "casting-director-horror-breakout-stars",
+      "primaryKeyword": "horror casting director",
+      "primaryEntity": "Nancy Nayor",
+      "entities": [
+        "Sam Raimi",
+        "Barbarian (film)"
+      ],
+      "angle": "A casting director reveals how breakout stars are discovered for major horror films.",
+      "tmdbType": "movie",
+      "source": "rss:IndieWire",
+      "sources": [
+        {
+          "outlet": "IndieWire",
+          "tier": 7,
+          "url": "https://www.indiewire.com/features/craft/how-horror-movies-are-cast-sam-raimi-movies-psycho-3-1235205289/",
+          "ageMin": 1261,
+          "headline": "The Casting Director Behind Horror s Biggest Hits Reveals How the Genre s Breakout Stars Get Discovered",
+          "summary": "Casting director Nancy Nayor, whose horror credits include everything from Sam Raimi classics to hits like \"Barbarian,\" tells IndieWire about her approach to finding actors for the genre she loves."
+        }
+      ],
+      "ageMin": 1261,
+      "_cand": {
+        "key": "rss:the-casting-director-behind-horror-s-biggest-hits-reveals-ho",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "IndieWire"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "IndieWire",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 48,
+      "signals": {
+        "recency": 1,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 12,
+        "trending": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-brenda-fricker-dies",
+      "slug": "brenda-fricker-home-alone-2-favorite-and-oscar-winning-my-left-foot-ac",
+      "title": "Brenda Fricker, Home Alone 2 Favorite and Oscar-Winning My Left Foot Actress, Dies at 81",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "death",
+      "sensitivity": "high",
+      "eventSlug": "brenda-fricker-dies",
+      "primaryKeyword": "Brenda Fricker",
+      "primaryEntity": "Brenda Fricker",
+      "entities": [
+        "Home Alone 2: Lost in New York",
+        "My Left Foot"
+      ],
+      "angle": "Oscar-winning actress Brenda Fricker, known for 'My Left Foot' and 'Home Alone 2,' has died at 81.",
+      "tmdbType": "movie",
+      "source": "rss:TheWrap",
+      "sources": [
+        {
+          "outlet": "TheWrap",
+          "tier": 7,
+          "url": "https://www.thewrap.com/creative-content/movies/brenda-fricker-home-alone-2-actress-dead/",
+          "ageMin": 18,
+          "headline": "Brenda Fricker, Home Alone 2 Favorite and Oscar-Winning My Left Foot Actress, Dies at 81",
+          "summary": "Fricker played the Central Park \"pigeon lady\" in \"Home Alone 2: Lost in New York\" The post Brenda Fricker, Home Alone 2 Favorite and Oscar-Winning My Left Foot Actress, Dies at 81 appeared first on TheWrap ."
+        },
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/brenda-fricker-dead-my-left-foot-1236650849/",
+          "ageMin": 26,
+          "headline": "Brenda Fricker, Oscar-Winning Actress in ‘My Left Foot,’ Dies at 81",
+          "summary": "The history-making Dublin native also appeared in ‘The Field,’ ‘Home Alone 2: Lost in New York’ and ‘So I Married an Axe Murderer.’"
+        },
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/film/news/brenda-fricker-dead-my-left-foot-home-alone-2-1236814615/",
+          "ageMin": 35,
+          "headline": "Brenda Fricker, My Left Foot Oscar Winner, Dies at 81",
+          "summary": "Brenda Fricker, who became the first Irish actress to win an Oscar for her turn opposite Daniel Day-Lewis in 1989 s My Left Foot and captured hearts as the Pigeon Lady in 1992 s Home Alone 2, died on Thursday in Dublin. She was 81. Fricker s agent, Phil Belfield, confirmed her death to the BBC on Friday. [ ]"
+        },
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/brenda-fricker-dead-home-alone-2-pigeon-lady-my-left-foot-1236996721/",
+          "ageMin": 39,
+          "headline": "Brenda Fricker Dies: Oscar-Winning Actor Home Alone 2 s Central Park Pigeon Lady Was 81",
+          "summary": "Brenda Fricker, the Oscar-winning actress who had memorable roles in My Left Foot and Home Alone 2, has died after a period of ill health, according to her agent. She was 81. In a statement, her agent Phil Belfield confirmed Fricker s death and said: We will never see her like again and the world is [ ]"
+        }
+      ],
+      "ageMin": 18,
+      "_cand": {
+        "key": "rss:brenda-fricker-home-alone-2-favorite-and-oscar-winning-my-le",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 4,
+      "verification": {
+        "tier1Count": 4,
+        "tier1Owners": 2,
+        "outletCount": 4,
+        "outlets": [
+          "TheWrap",
+          "THR",
+          "Variety",
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": null,
+        "framing": "plain",
+        "status": "CONFIRMED",
+        "publishable": true
+      },
+      "priority": 103,
+      "signals": {
+        "recency": 24,
+        "corroboration": 25,
+        "status": 25,
+        "type": 14,
         "pop": 0,
         "breakout": 0,
         "big": 0,
-        "trending": 0,
-        "softTv": 0,
-        "radar": 26
+        "trending": 15,
+        "softTv": 0
       },
-      "radarKind": "movie-in-theaters",
-      "tierClass": "A"
+      "tierClass": "S"
     },
     {
-      "id": "news-priyanka-chopra-jonas-nick-jonas-meet-cute",
-      "slug": "priyanka-chopra-jonas-recounts-nick-jonas-s-unique-first-approach",
-      "title": "Priyanka Chopra Jonas Recounts Nick Jonas's Unique First Approach",
+      "id": "news-william-shatner-riot-fest-rider-demands",
+      "slug": "william-shatner-s-wild-riot-fest-rider-demands-include-fire-breathers-",
+      "title": "William Shatner's Wild Riot Fest Rider Demands Include Fire Breathers and a DeLorean",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "priyanka-chopra-jonas-nick-jonas-meet-cute",
-      "primaryKeyword": "priyanka chopra nick jonas",
-      "primaryEntity": "Priyanka Chopra Jonas",
+      "tier": "popular",
+      "eventSlug": "william-shatner-riot-fest-rider-demands",
+      "primaryKeyword": "William Shatner",
+      "primaryEntity": "William Shatner",
       "entities": [
-        "Nick Jonas"
+        "Riot Fest"
       ],
-      "angle": "Priyanka Chopra Jonas shares a humorous anecdote about her first meeting with husband Nick Jonas.",
+      "angle": "William Shatner's specific and eccentric rider demands for his upcoming performance with his metal band at Riot Fest have been revealed.",
       "tmdbType": "movie",
       "source": "rss:Billboard",
       "sources": [
         {
           "outlet": "Billboard",
           "tier": 7,
-          "url": "https://www.billboard.com/music/pop/priyanka-chopra-meet-cute-nick-jonas-dm-time-stamped-photo-1236296636/",
-          "ageMin": 38,
-          "headline": "Priyanka Chopra Jonas Describes Adorable Meet-Cute With Husband Nick Jonas In Which He Asked For a Time-Stamped Photo As Proof Of Life",
-          "summary": "Nick slid into Chopra's DMs after seeing her face on a billboard in L.A."
+          "url": "https://www.billboard.com/music/rock/william-shatner-insane-rider-demands-riot-fest-uckers-list-1236296646/",
+          "ageMin": 47,
+          "headline": "William Shatner s List of Rock God Rider Demands For Riot Fest Debut of *uckers Metal Band: Fire Breathers, a DeLorean, Bowl of Sauerkraut",
+          "summary": "The Shat would also like 8 pallets of Faygo (not to be shared with Insane Clown Posse) and the renaming of a boat in his honor so he can be a captain again."
         }
       ],
-      "ageMin": 38,
+      "ageMin": 47,
       "_cand": {
-        "key": "rss:priyanka-chopra-jonas-describes-adorable-meet-cute-with-husb",
+        "key": "rss:william-shatner-s-list-of-rock-god-rider-demands-for-riot-fe",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -1249,9 +1282,9 @@
       "tierClass": "C"
     },
     {
-      "id": "news-bts-normal-video-release",
-      "slug": "bts-invite-fans-to-look-beyond-the-spotlight-in-new-normal-video",
-      "title": "BTS Invite Fans to Look Beyond the Spotlight in New 'Normal' Video",
+      "id": "news-rolling-stones-considering-2027-residencies",
+      "slug": "the-rolling-stones-eyeing-2027-residencies",
+      "title": "The Rolling Stones Eyeing 2027 Residencies",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
@@ -1259,14 +1292,143 @@
       "eventType": "announcement",
       "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "bts-normal-video-release",
-      "primaryKeyword": "bts normal video",
+      "eventSlug": "rolling-stones-considering-2027-residencies",
+      "primaryKeyword": "The Rolling Stones",
+      "primaryEntity": "The Rolling Stones",
+      "entities": [
+        "Harry Styles"
+      ],
+      "angle": "The legendary rock band is reportedly exploring the possibility of launching residencies in 2027, potentially following in the footsteps of other major artists.",
+      "tmdbType": "movie",
+      "source": "rss:Rolling Stone",
+      "sources": [
+        {
+          "outlet": "Rolling Stone",
+          "tier": 7,
+          "url": "https://www.rollingstone.com/music/music-features/the-rolling-stones-residencies-tour-scenarios-1235594735/",
+          "ageMin": 65,
+          "headline": "The Rolling Stones Are Considering Residencies in 2027. What Could That Mean?",
+          "summary": "Might they pull a Harry Styles and block-book Madison Square Garden? Could they hit three or four big stadiums? What about a single blowout gig to wrap it all up?"
+        }
+      ],
+      "ageMin": 65,
+      "_cand": {
+        "key": "rss:the-rolling-stones-are-considering-residencies-in-2027-what-",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Rolling Stone"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Rolling Stone",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 55,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-priyanka-chopra-nick-jonas-meet-cute",
+      "slug": "priyanka-chopra-jonas-recounts-adorable-meet-cute-with-nick-jonas",
+      "title": "Priyanka Chopra Jonas Recounts Adorable Meet-Cute With Nick Jonas",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "priyanka-chopra-nick-jonas-meet-cute",
+      "primaryKeyword": "Priyanka Chopra Nick Jonas",
+      "primaryEntity": "Priyanka Chopra Jonas",
+      "entities": [
+        "Nick Jonas"
+      ],
+      "angle": "Priyanka Chopra Jonas shares a humorous anecdote about her initial meeting with husband Nick Jonas.",
+      "tmdbType": "movie",
+      "source": "rss:Billboard",
+      "sources": [
+        {
+          "outlet": "Billboard",
+          "tier": 7,
+          "url": "https://www.billboard.com/music/pop/priyanka-chopra-meet-cute-nick-jonas-dm-time-stamped-photo-1236296636/",
+          "ageMin": 98,
+          "headline": "Priyanka Chopra Jonas Describes Adorable Meet-Cute With Husband Nick Jonas In Which He Asked For a Time-Stamped Photo As Proof Of Life",
+          "summary": "Nick slid into Chopra's DMs after seeing her face on a billboard in L.A."
+        }
+      ],
+      "ageMin": 98,
+      "_cand": {
+        "key": "rss:priyanka-chopra-jonas-describes-adorable-meet-cute-with-husb",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Billboard"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Billboard",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 51,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-bts-normal-music-video",
+      "slug": "bts-invite-fans-to-look-beyond-the-spotlight-in-normal-video",
+      "title": "BTS Invite Fans to Look Beyond the Spotlight in Normal Video",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "bts-normal-music-video",
+      "primaryKeyword": "BTS",
       "primaryEntity": "BTS",
       "entities": [
         "Arirang",
         "Arirang (album)"
       ],
-      "angle": "BTS releases a new video for their song 'Normal' from their album 'Arirang', inviting fans to look beyond the spotlight.",
+      "angle": "BTS drops a new music video for 'Normal,' encouraging fans to look beyond the spotlight.",
       "tmdbType": "movie",
       "source": "rss:Rolling Stone",
       "sources": [
@@ -1274,12 +1436,12 @@
           "outlet": "Rolling Stone",
           "tier": 7,
           "url": "https://www.rollingstone.com/music/music-news/bts-normal-music-video-arirang-album-1235594976/",
-          "ageMin": 538,
+          "ageMin": 598,
           "headline": "BTS Invite Fans to Look Beyond the Spotlight in Normal Video",
           "summary": "The song features on the band's massive hit album, Arirang"
         }
       ],
-      "ageMin": 538,
+      "ageMin": 598,
       "_cand": {
         "key": "rss:bts-invite-fans-to-look-beyond-the-spotlight-in-normal-video",
         "popularity": 0,
@@ -1300,12 +1462,12 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 53,
+      "priority": 49,
       "signals": {
         "recency": 4,
         "corroboration": 12,
         "status": 18,
-        "type": 9,
+        "type": 5,
         "pop": 0,
         "breakout": 0,
         "big": 0,
