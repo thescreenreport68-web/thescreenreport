@@ -41,10 +41,9 @@ export async function writeCaptions(story, pack, cls, card) {
     const fb = String(out?.fb || "").trim();
     if (!ig || !fb) continue;
     if (validateCaptions({ ig, fb }, cls.somber)) continue;
-    // first comments: IG gets the story link (links ARE tappable in comments); FB gets the same, pinned by Zernio
-    const link = pack.ownSlug ? `${CARDS.siteBase}/${pack.ownSlug}/` : CARDS.siteBase;
-    const firstComment = cls.somber ? `Full story: ${link}` : `Full story: ${link}`;
-    return { ig, fb, firstComment };
+    // NO first comments — owner directive 2026-07-17: the automation must never comment
+    // links (or anything else) on its own posts. IG traffic rides the bio link only.
+    return { ig, fb };
   }
   return null; // two strikes → orchestrator drops the story (never ship a rule-breaking caption)
 }
