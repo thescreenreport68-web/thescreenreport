@@ -252,6 +252,17 @@
    "film": "Disclosure Day",
    "tmdbId": null,
    "eventType": "boxoffice"
+  },
+  {
+   "key": "young-washington-bo-update-d13|BO-UPDATE",
+   "at": "2026-07-17T21:06:00.255Z",
+   "eventSlug": "young-washington-bo-update-d13",
+   "form": "BO-UPDATE",
+   "slug": "young-washington-box-office-day-13-adds-885-005-as-domestic-total-hits-36-5",
+   "title": "William Franklyn-Miller's Young Washington Rakes in $20M Debut in Angel Studios’ Biggest Live-Action Opening",
+   "film": "Young Washington",
+   "tmdbId": null,
+   "eventType": "boxoffice"
   }
  ],
  "parked": [
@@ -548,16 +559,6 @@
    "at": "2026-07-17T17:11:15.882Z"
   },
   {
-   "key": "young-washington-bo-update-d13|BO-UPDATE",
-   "eventSlug": "young-washington-bo-update-d13",
-   "form": "BO-UPDATE",
-   "reason": "1 unverified claim(s) cut, unrecovered",
-   "tries": 6,
-   "at": "2026-07-17T20:58:43.081Z",
-   "dead": true,
-   "expiresAt": "2026-07-20T20:58:43.081Z"
-  },
-  {
    "key": "the-odyssey-ev-weekend-d0|BO-WEEKEND",
    "eventSlug": "the-odyssey-ev-weekend-d0",
    "form": "BO-WEEKEND",
@@ -647,21 +648,21 @@
    "key": "supergirl-bo-update-d20|BO-UPDATE",
    "eventSlug": "supergirl-bo-update-d20",
    "form": "BO-UPDATE",
-   "reason": "words 129 < 180 (owner-set ~200-word minimum)",
-   "tries": 3,
-   "at": "2026-07-17T20:07:07.306Z",
+   "reason": "words 159 < 180 (owner-set ~200-word minimum)",
+   "tries": 4,
+   "at": "2026-07-17T21:09:52.104Z",
    "dead": true,
-   "expiresAt": "2026-07-20T20:07:07.306Z"
+   "expiresAt": "2026-07-20T21:09:52.104Z"
   }
  ],
- "zeroStreak": 4,
+ "zeroStreak": 0,
  "daySpend": {
   "laDay": "2026-07-17",
-  "usd": 0.677
+  "usd": 0.68298
  },
  "pace": {
-  "tokens": 4,
-  "lastMs": 1784321560000
+  "tokens": 3,
+  "lastMs": 1784322043803
  },
  "lastAuditDay": "2026-07-17"
 }
