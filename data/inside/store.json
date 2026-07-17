@@ -3744,6 +3744,53 @@
      }
     ]
    }
+  },
+  {
+   "key": "the-hawk-2026|audience-reaction",
+   "at": "2026-07-17T16:42:46.286Z",
+   "updatedCount": 0,
+   "parentEventSlug": "the-hawk-2026",
+   "form": "audience-reaction",
+   "slug": "the-hawk-trailer-has-fans-both-hyped-and-heckling-and-the-discourse-isn-t",
+   "title": "The Hawk Trailer Has Fans Both Hyped and Heckling — and the Discourse Isn't Cooling Off",
+   "primaryEntity": "The Hawk",
+   "eventType": "discourse",
+   "harvestQuoteKeys": [
+    "ive never seen a dumber trailer on a movie i plan to watch in my life.",
+    "do you think there is a chance we get a happy gilmore cameo?",
+    "will ferrell and sports comedy movies, name me a better combo",
+    "if they could have had danny mcbride play hawks caddie, that would have been awesome!",
+    "the best golf movie since the last golf movie. 😂",
+    "the inclusion of parnell and luke wilson makes this feel legit",
+    "this cast looks hilarious. love the fact jimmy tatro is involved.",
+    "im going to be disappointed if will ferrell doesnt wear this in the hawk.",
+    "the hawk is goddamned amazing and will ferrell rules"
+   ],
+   "angle": {
+    "form": "audience-reaction",
+    "angle": "audience discourse",
+    "workingTitle": "The Hawk: what people are saying",
+    "focusEntity": "The Hawk",
+    "searchQueries": []
+   },
+   "trigger": {
+    "parentEventSlug": "the-hawk-2026",
+    "parentSlug": null,
+    "parentTitle": "The Hawk",
+    "primaryEntity": "The Hawk",
+    "eventType": "discourse",
+    "tmdbType": "tv",
+    "subjectKind": "title",
+    "priority": 12,
+    "category": "tv",
+    "overview": "On the back nine of his career, golf legend Lonnie \"The Hawk\" Hawkins chases one final major — and drags everyone he loves into the chaos.",
+    "work": {
+     "title": "The Hawk",
+     "type": "tv",
+     "year": "2026"
+    },
+    "sources": []
+   }
   }
  ],
  "parked": [
@@ -4655,6 +4702,30 @@
    "reason": "under floor: audience posts 0 < 3",
    "tries": 1,
    "at": "2026-07-17T12:49:55.483Z"
+  },
+  {
+   "key": "the-r-rated-director-s-cut-of-the-x-files-movie-has-a-title-|breakout-buzz",
+   "parentEventSlug": "the-r-rated-director-s-cut-of-the-x-files-movie-has-a-title-",
+   "form": "breakout-buzz",
+   "reason": "under floor: real anchor posts 1 < 3",
+   "tries": 1,
+   "at": "2026-07-17T16:34:22.001Z"
+  },
+  {
+   "key": "apple-tv-drops-first-trailer-for-the-dynasty-uconn-huskies-9|audience-reaction",
+   "parentEventSlug": "apple-tv-drops-first-trailer-for-the-dynasty-uconn-huskies-9",
+   "form": "audience-reaction",
+   "reason": "under floor: audience posts 1 < 3",
+   "tries": 1,
+   "at": "2026-07-17T16:37:25.371Z"
+  },
+  {
+   "key": "the-odyssey-box-office-journey-begins-with-17-6m-in-previews|audience-reaction",
+   "parentEventSlug": "the-odyssey-box-office-journey-begins-with-17-6m-in-previews",
+   "form": "audience-reaction",
+   "reason": "under floor: audience posts 0 < 3",
+   "tries": 1,
+   "at": "2026-07-17T16:40:18.739Z"
   }
  ]
 }
