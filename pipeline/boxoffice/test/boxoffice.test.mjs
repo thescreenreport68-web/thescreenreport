@@ -22,6 +22,9 @@ import { categorize, cluster } from "../find/events.mjs";
 import { scoreEvent } from "../find/score.mjs";
 import { readQueue, markConsumed } from "../find/findrun.mjs";
 import { PACE, refill, expectedByNow, allowance, debit } from "../pacing.mjs";
+import { KIND_FORM } from "../find/events.mjs";
+import { discoverTrendingTv } from "../discover.mjs";
+import { dailyAudit } from "../audit.mjs";
 import { isMaterial, updateEventSuffix, recordArticle, currentNumberRaw, priorArticles, linkPriorCoverage, streamingExits, trackKey, isPastOpening } from "../tracker.mjs";
 import { parseNetflixTsv, netflixBlock, fmtHours } from "../netflix.mjs";
 import { findFilms } from "../agents/finder.mjs";
@@ -1073,6 +1076,73 @@ await ta("borun: AHEAD of pace with an empty bucket exits CHEAPLY — no finder,
   assert.equal(report.films, 0, "no discovery ran");
   assert.equal(report.blocked.length, 0, "no error path — a clean cheap skip");
   fs.rmSync(dir6, { recursive: true, force: true });
+});
+
+// ── P5 — dedicated event forms, trending TV, cross-namespace dedup, daily self-audit ─────────────
+console.log("P5 — event forms, trending TV, dedup, self-audit");
+
+t("dedicated event forms exist, are tracked (materiality applies), and KIND_FORM maps to them", () => {
+  for (const f of ["BO-WEEKEND", "BO-MILESTONE", "BO-RECORD"]) {
+    assert.ok(FORMS[f], f + " exists");
+    assert.equal(FORMS[f].tracked, true, f + " is materiality-tracked");
+    assert.equal(FORMS[f].streaming, undefined, f + " is a box-office form");
+  }
+  assert.equal(KIND_FORM.weekend, "BO-WEEKEND");
+  assert.equal(KIND_FORM.milestone, "BO-MILESTONE");
+  assert.equal(KIND_FORM.record, "BO-RECORD");
+});
+
+await ta("finder cross-namespace dedup: a milestone event on a COVERED film is dropped; an uncovered one flows as BO-MILESTONE", async () => {
+  const queue = { events: [
+    { slug: "covered-film-ev-milestone", filmTitle: "Covered Film", kind: "milestone", form: "BO-MILESTONE", priority: 60, sources: [] },
+    { slug: "fresh-film-ev-milestone", filmTitle: "Fresh Film", kind: "milestone", form: "BO-MILESTONE", priority: 55, sources: [{ owner: "Variety", tier: 1, url: "https://x/1", title: "Fresh Film crosses $200M" }] },
+  ] };
+  const seen = { slugs: new Set(["covered-film-bo-update-d5"]), titles: new Set(["covered film"]) };
+  const found = await findFilms({ queueImpl: () => queue, dryQueueMark: true, limit: 3, discoverImpl: async () => [], netflixImpl: async () => ({ films: [], tv: [] }), trendingTvImpl: async () => [], trackedImpl: { films: {} }, providersImpl: async () => null, dailyChartImpl: async () => ({ films: [] }), seen });
+  assert.ok(!found.some((e) => e.film.title === "Covered Film"), "covered film's milestone event dropped");
+  const fresh = found.find((e) => e.film.title === "Fresh Film");
+  assert.ok(fresh, "uncovered milestone flows");
+  assert.equal(fresh.angle.form, "BO-MILESTONE");
+});
+
+await ta("discoverTrendingTv: English-only, shaped; finder turns picks into TRENDING-TV (Netflix pick wins a title clash)", async () => {
+  const fetchFix = async () => ({ ok: true, json: async () => ({ results: [
+    { id: 1, name: "Hot Show", original_language: "en", first_air_date: "2026-06-01", popularity: 400, overview: "A hot show." },
+    { id: 2, name: "外国剧", original_language: "zh", first_air_date: "2026-06-01", popularity: 900 },
+  ] }) });
+  const tv = await discoverTrendingTv({ fetchImpl: fetchFix });
+  assert.equal(tv.length, 1); assert.equal(tv[0].title, "Hot Show");
+  const found = await findFilms({ queueImpl: () => null, limit: 3, discoverImpl: async () => [], netflixImpl: async () => ({ films: [], tv: [{ title: "Hot Show", rank: 1, hours: "10 million hours", hoursRaw: 1e7 }] }), trendingTvImpl: async () => tv, trackedImpl: { films: {} }, providersImpl: async () => null, dailyChartImpl: async () => ({ films: [] }), seen: { slugs: new Set(), titles: new Set() } });
+  const hotShows = found.filter((e) => e.film.title === "Hot Show");
+  assert.equal(hotShows.length, 1, "no double-cover: Netflix pick wins");
+  assert.equal(hotShows[0].film.via, "netflix-tv");
+  const found2 = await findFilms({ queueImpl: () => null, limit: 3, discoverImpl: async () => [], netflixImpl: async () => ({ films: [], tv: [] }), trendingTvImpl: async () => tv, trackedImpl: { films: {} }, providersImpl: async () => null, dailyChartImpl: async () => ({ films: [] }), seen: { slugs: new Set(), titles: new Set() } });
+  const solo = found2.find((e) => e.film.title === "Hot Show");
+  assert.ok(solo && solo.film.via === "tmdb-tv-trending" && solo.angle.form === "TRENDING-TV", "TMDB pick flows when Netflix lacks it");
+});
+
+await ta("gatherStreaming: a non-Netflix trending pick resolves its REAL platform from TMDB providers, floors without one", async () => {
+  const job1 = { film: { title: "Hot Show", netflix: null }, trigger: { sources: [] }, angle: { form: "TRENDING-TV" }, boxData: { providers: { stream: ["Disney+"], rent: [], buy: [] } } };
+  await gatherRun(job1, { findImpl: async () => ({ blocked: true }), chatImpl: async () => ({ data: {} }) });
+  assert.equal(job1.gathered.platform, "Disney+");
+  assert.ok(!job1.gatherFail, "platform confirmed → no floor: " + job1.gatherFail);
+  const job2 = { film: { title: "Hot Show", netflix: null }, trigger: { sources: [] }, angle: { form: "TRENDING-TV" }, boxData: { providers: { stream: [], rent: [], buy: [] } } };
+  await gatherRun(job2, { findImpl: async () => ({ blocked: true }), chatImpl: async () => ({ data: {} }) });
+  assert.ok(/no confirmed streaming platform/.test(job2.gatherFail || ""), "no platform → floor");
+});
+
+await ta("dailyAudit: samples yesterday's live articles once per day, maps issues to slugs, never re-runs", async () => {
+  const dir7 = fs.mkdtempSync(path.join(os.tmpdir(), "bo-audit-"));
+  fs.writeFileSync(path.join(dir7, "good-article.md"), "---\ntitle: X\n---\n\nA fine article body with its $10 million figure present.");
+  const now = new Date("2026-07-18T16:00:00Z");
+  const st = { published: [{ key: "k", eventSlug: "e", form: "BO-UPDATE", slug: "good-article", at: "2026-07-17T18:00:00Z" }], lastAuditDay: null };
+  const fake = async () => ({ data: { issues: [{ i: 1, problem: "headline figure missing from body" }] }, usage: {} });
+  const a1 = await dailyAudit({ store: st, now, chatImpl: fake, contentDir: dir7 });
+  assert.equal(a1.sampled.length, 1);
+  assert.equal(a1.issues[0].slug, "good-article");
+  const a2 = await dailyAudit({ store: st, now, chatImpl: fake, contentDir: dir7 });
+  assert.equal(a2, null, "one audit per day");
+  fs.rmSync(dir7, { recursive: true, force: true });
 });
 
 // ── summary ──────────────────────────────────────────────────────────────────────────────────────

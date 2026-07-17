@@ -42,6 +42,29 @@ export const FORMS = {
     category: "movies", subcategory: "box-office", formatTag: "box-office",
     words: [300, 500],
     needsNewNumber: true, // a NEW number that moved + a fresh angle
+    tracked: true,        // materiality (strictly-higher + one/day) applies
+  },
+  // ── P5: DEDICATED EVENT FORMS — headline-driven stories from the FIND queue get tailored shapes
+  // (the discovery LLM still only picks the classic three; the queue assigns these directly). All are
+  // `tracked` — the materiality gate (strictly-higher domestic + one update/film/day) applies, so a
+  // milestone the trades re-report can never publish twice.
+  "BO-WEEKEND": {
+    label: "The weekend box-office report for a film (Friday previews, Sunday estimates, Monday actuals)",
+    category: "movies", subcategory: "box-office", formatTag: "box-office",
+    words: [300, 500],
+    needsNewNumber: true, tracked: true,
+  },
+  "BO-MILESTONE": {
+    label: "A film crosses a round-number box-office milestone ($100M / $500M / $1B)",
+    category: "movies", subcategory: "box-office", formatTag: "box-office",
+    words: [280, 460],
+    needsNewNumber: true, tracked: true,
+  },
+  "BO-RECORD": {
+    label: "A film sets or breaks a box-office record (all-time / franchise / studio / genre)",
+    category: "movies", subcategory: "box-office", formatTag: "box-office",
+    words: [300, 500],
+    needsNewNumber: true, tracked: true,
   },
   "NOW-STREAMING": {
     label: "A tracked film leaves theaters / hits PVOD or a streaming platform",

@@ -14,7 +14,7 @@ export const ownerGroup = (owner) => OWNER_GROUP[String(owner || "").toLowerCase
 export const KINDS = ["opening", "weekend", "milestone", "record", "streaming-arrival", "viewership", "other"];
 // Event kind → the MAKE form that writes it (dedicated forms come in P5; the proven forms carry P2).
 export const KIND_FORM = {
-  "opening": "BO-OPENING", "weekend": "BO-UPDATE", "milestone": "BO-UPDATE", "record": "BO-UPDATE",
+  "opening": "BO-OPENING", "weekend": "BO-WEEKEND", "milestone": "BO-MILESTONE", "record": "BO-RECORD",
   "streaming-arrival": "NOW-STREAMING", "viewership": "TRENDING-TV", "other": "BO-UPDATE",
 };
 

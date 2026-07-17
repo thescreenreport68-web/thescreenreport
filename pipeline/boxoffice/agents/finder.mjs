@@ -2,7 +2,7 @@
 // films worth a money story RIGHT NOW, assign the best FORM, and write plain search queries the
 // gatherer feeds to contentFinder to pull the trade box-office report. Highest call-count role →
 // the cheapest model (nova-micro), because every pick is re-verified downstream (plan §8).
-import { discoverFilms } from "../discover.mjs";
+import { discoverFilms, discoverTrendingTv } from "../discover.mjs";
 import { agentChat } from "../models.mjs";
 import { FORMS, scopeOk, BOX_OFFICE_FORMS } from "../config.bo.mjs";
 import { loadTracked, streamingExits } from "../tracker.mjs";
@@ -34,7 +34,7 @@ box office no matter how popular. Skip films with no genuine money angle right n
 For each pick: a working headline (stars + the number, curiosity without clickbait), the star(s) to lead
 with, and 2 SIMPLE search queries (3-5 plain words, e.g. "Wicked box office weekend"). Output STRICT JSON only.`;
 
-export async function findFilms({ limit = 3, discoverImpl = discoverFilms, chatImpl = null, nowMs = null, trackedImpl = null, providersImpl = null, netflixImpl = null, dailyChartImpl = null, queueImpl = null, dryQueueMark = false, preferStreaming = false, seen = null } = {}) {
+export async function findFilms({ limit = 3, discoverImpl = discoverFilms, chatImpl = null, nowMs = null, trackedImpl = null, providersImpl = null, netflixImpl = null, dailyChartImpl = null, queueImpl = null, dryQueueMark = false, trendingTvImpl = null, preferStreaming = false, seen = null } = {}) {
   const films = await discoverImpl({ nowMs });
   const seenSlugs = seen?.slugs || new Set();
   const seenTitles = seen?.titles || new Set();
@@ -105,6 +105,25 @@ export async function findFilms({ limit = 3, discoverImpl = discoverFilms, chatI
       streamPicks.push(mkStream(r, "TRENDING-TV", "netflix-tv", `${r.title} trending on Netflix`, `${r.title} season reactions`));
   } catch { streamPicks = []; }
 
+  // P5 — TMDB daily trending-TV picks (ANY platform, appended after the Netflix hours-anchored picks):
+  // catches "an episode just hit and the show is blowing up" the day it happens. The platform resolves
+  // from TMDB providers downstream; hours stay Netflix/named-source-only (the watch-hours guard).
+  try {
+    const tv = await (trendingTvImpl || discoverTrendingTv)({});
+    const streamTitles = new Set(streamPicks.map((e) => e.film.title.toLowerCase()));
+    for (const t of (tv || []).slice(0, 4)) {
+      const base = String(t.title || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+      const sl = `${base}-trending-tv`;
+      if (!t.title || seenSlugs.has(sl) || streamTitles.has(t.title.toLowerCase())) continue; // Netflix pick wins (it has hours)
+      const e = mkEntry(
+        { id: t.id, title: t.title, year: t.year, releaseDate: t.firstAir, popularity: Math.min(90, 40 + Math.round((t.popularity || 0) / 20)), overview: t.overview || "", originalLanguage: "en", via: "tmdb-tv-trending" },
+        "TRENDING-TV",
+        { workingTitle: `${t.title} trending`, queries: [`${t.title} series trending`, `${t.title} season reactions`] },
+      );
+      streamPicks.push(e);
+    }
+  } catch { /* additive — Netflix picks carry streaming regardless */ }
+
   // DAILY BOX-OFFICE CHART — the box-office volume engine (owner: cover EVERY film in theaters, day 11 → day 12
   // with its real running cume). Each in-release film becomes a BO-UPDATE carrying its chart cume; the
   // strictly-higher materiality gate downstream publishes it ONCE/day and never reuses yesterday's number.
@@ -142,6 +161,11 @@ export async function findFilms({ limit = 3, discoverImpl = discoverFilms, chatI
       chartHit.trigger.signals.breakout = 4;
       continue;
     }
+    // P5 CROSS-NAMESPACE DEDUP: a milestone/record headline about a film we've ALREADY covered (in any
+    // form) is not a new story unless its number advanced — and that judgement belongs to the chart entry
+    // + materiality gate, not a parallel event entry (the michael-ev-milestone re-cover class: the trades
+    // kept re-writing Michael's $1B days after we covered it). Off-chart + covered → drop the event.
+    if ((ev.kind === "milestone" || ev.kind === "record") && seenTitles.has(ev.filmTitle.toLowerCase())) continue;
     const form = ev.form && FORMS[ev.form] ? ev.form : "BO-UPDATE";
     if (seenSlugs.has(ev.slug)) continue;
     const e = mkEntry(
