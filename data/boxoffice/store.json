@@ -241,6 +241,17 @@
    "film": "Shipwrecked: Nightmare at Sea",
    "tmdbId": null,
    "eventType": "boxoffice"
+  },
+  {
+   "key": "disclosure-day-bo-update-d34|BO-UPDATE",
+   "at": "2026-07-17T19:09:11.765Z",
+   "eventSlug": "disclosure-day-bo-update-d34",
+   "form": "BO-UPDATE",
+   "slug": "disclosure-day-box-office-day-34-adds-452-270-as-domestic-total-hits-112-9",
+   "title": "Disclosure Day: Steven Spielberg's Sci-Fi Whistleblower Thriller",
+   "film": "Disclosure Day",
+   "tmdbId": null,
+   "eventType": "boxoffice"
   }
  ],
  "parked": [
@@ -540,11 +551,11 @@
    "key": "young-washington-bo-update-d13|BO-UPDATE",
    "eventSlug": "young-washington-bo-update-d13",
    "form": "BO-UPDATE",
-   "reason": "words 177 < 180 (owner-set ~200-word minimum)",
-   "tries": 3,
-   "at": "2026-07-17T18:06:06.427Z",
+   "reason": "words 144 < 180 (owner-set ~200-word minimum)",
+   "tries": 4,
+   "at": "2026-07-17T19:05:36.610Z",
    "dead": true,
-   "expiresAt": "2026-07-20T18:06:06.427Z"
+   "expiresAt": "2026-07-20T19:05:36.610Z"
   },
   {
    "key": "the-odyssey-ev-weekend-d0|BO-WEEKEND",
@@ -632,27 +643,19 @@
    "key": "supergirl-bo-update-d20|BO-UPDATE",
    "eventSlug": "supergirl-bo-update-d20",
    "form": "BO-UPDATE",
-   "reason": "fidelity: 16 unsupported figures/claims — draft-level failure",
-   "tries": 1,
-   "at": "2026-07-17T18:09:04.581Z"
-  },
-  {
-   "key": "disclosure-day-bo-update-d34|BO-UPDATE",
-   "eventSlug": "disclosure-day-bo-update-d34",
-   "form": "BO-UPDATE",
-   "reason": "words 153 < 180 (owner-set ~200-word minimum)",
-   "tries": 1,
-   "at": "2026-07-17T18:10:57.618Z"
+   "reason": "words 147 < 180 (owner-set ~200-word minimum)",
+   "tries": 2,
+   "at": "2026-07-17T19:07:40.386Z"
   }
  ],
- "zeroStreak": 4,
+ "zeroStreak": 0,
  "daySpend": {
   "laDay": "2026-07-17",
-  "usd": 0.58739
+  "usd": 0.59422
  },
  "pace": {
-  "tokens": 3.879970444444445,
-  "lastMs": 1784313040373
+  "tokens": 3,
+  "lastMs": 1784314848920
  },
  "lastAuditDay": "2026-07-17"
 }
