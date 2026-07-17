@@ -22,17 +22,29 @@ export async function writeHeadline(story, pack, cls) {
       return { headline: `“${text}”`, redSpan: "", sub: `— ${q.speaker}${pack.storyOneLine ? `, ${pack.storyOneLine.slice(0, 80)}` : ""}`, quote: q };
     }
   }
-  const out = await llm({
-    role: "writer", system: SYS, temperature: 0.4, maxTokens: 400,
-    user: `STORY: ${story.title}\nANGLE: ${story.angle || ""}\nCATEGORY: ${cls.category}${cls.somber ? " (SOMBER)" : ""}\nFACTS:\n${pack.facts.map((f) => `- ${f.claim}`).join("\n")}\nNUMBERS: ${(pack.numbers || []).join(" | ")}`,
-  });
-  let { headline = "", redSpan = "", sub = "" } = out || {};
-  headline = String(headline).replace(/\s+/g, " ").trim();
-  sub = String(sub).replace(/\s+/g, " ").trim();
-  redSpan = String(redSpan).replace(/\s+/g, " ").trim();
-  if (!headline || headline.split(/\s+/).length > CARDS.headline.maxWords) return null; // fail → orchestrator retries once then drops
-  if (redSpan && !headline.includes(redSpan)) redSpan = ""; // span must be verbatim inside the headline
-  if (cls.somber) redSpan = "";
-  if (sub.length > 130) sub = sub.slice(0, 127).replace(/\s+\S*$/, "") + "…";
-  return { headline, redSpan, sub, quote: null };
+  // two attempts with FEEDBACK — a blind retry re-fails identically (live drop 2026-07-16:
+  // multi-name casting stories overflow 12 words twice). Attempt 2 says exactly what was
+  // wrong and relaxes the cap to 14 (renderer auto-shrink handles 14 comfortably).
+  let feedback = "";
+  for (let attempt = 0; attempt < 2; attempt++) {
+    const cap = attempt === 0 ? CARDS.headline.maxWords : CARDS.headline.maxWords + 2;
+    const out = await llm({
+      role: "writer", system: SYS, temperature: 0.4, maxTokens: 400,
+      user: `STORY: ${story.title}\nANGLE: ${story.angle || ""}\nCATEGORY: ${cls.category}${cls.somber ? " (SOMBER)" : ""}\nFACTS:\n${pack.facts.map((f) => `- ${f.claim}`).join("\n")}\nNUMBERS: ${(pack.numbers || []).join(" | ")}${feedback}`,
+    });
+    let { headline = "", redSpan = "", sub = "" } = out || {};
+    headline = String(headline).replace(/\s+/g, " ").trim();
+    sub = String(sub).replace(/\s+/g, " ").trim();
+    redSpan = String(redSpan).replace(/\s+/g, " ").trim();
+    const words = headline ? headline.split(/\s+/).length : 0;
+    if (!headline || words > cap) {
+      feedback = `\n\nREJECTED: your previous headline had ${words || 0} words — the HARD CAP is ${CARDS.headline.maxWords + 2}. Cut names or use a shorter reference (e.g. one lead name + "and more"); keep only the payload.`;
+      continue;
+    }
+    if (redSpan && !headline.includes(redSpan)) redSpan = ""; // span must be verbatim inside the headline
+    if (cls.somber) redSpan = "";
+    if (sub.length > 130) sub = sub.slice(0, 127).replace(/\s+\S*$/, "") + "…";
+    return { headline, redSpan, sub, quote: null };
+  }
+  return null;
 }
