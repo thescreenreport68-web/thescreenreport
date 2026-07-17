@@ -1,0 +1,116 @@
+{
+ "runId": "run-2026-07-17T18-30-40",
+ "mode": "live",
+ "startedAt": "2026-07-17T18:30:40.373Z",
+ "films": 8,
+ "published": [],
+ "held": [
+  {
+   "tag": "the-odyssey-ev-weekend×BO-WEEKEND",
+   "reason": "fidelity: 5 unsupported figures/claims — draft-level failure",
+   "score": 0
+  },
+  {
+   "tag": "ride-or-die-ev-weekend×BO-WEEKEND",
+   "reason": "fidelity: 5 unsupported figures/claims — draft-level failure",
+   "score": 0
+  },
+  {
+   "tag": "spider-man-brand-new-day-ev-other×BO-UPDATE",
+   "reason": "not material: no number"
+  },
+  {
+   "tag": "the-odyssey-ev-record×BO-RECORD",
+   "reason": "fidelity: 5 unsupported figures/claims — draft-level failure",
+   "score": 0
+  },
+  {
+   "tag": "the-super-mario-galaxy-movie-ev-weekend×BO-WEEKEND",
+   "reason": "5 unverified claim(s) cut, unrecovered",
+   "score": 60
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "the-odyssey-ev-opening×BO-OPENING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "descendants-wicked-wonderland-ev-streaming-arrival×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "wild-sing-ev-streaming-arrival×NOW-STREAMING",
+   "reason": "park cooling (held recently — retry after 2h)"
+  }
+ ],
+ "blocked": [],
+ "paced": {
+  "tokens": 3.88,
+  "behind": true,
+  "expected": 8.4,
+  "allow": 2
+ },
+ "queueBuilt": 8,
+ "zeroStreak": 4,
+ "daySpend": {
+  "laDay": "2026-07-17",
+  "usd": 0.58739
+ },
+ "finishedAt": "2026-07-17T18:38:04.128Z",
+ "meter": {
+  "byRole": {
+   "categorize": {
+    "calls": 3,
+    "errors": 0,
+    "in": 1060,
+    "out": 519,
+    "usd": 0.00031,
+    "ms": 2463
+   },
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3490,
+    "out": 353,
+    "usd": 0.00017,
+    "ms": 1671
+   },
+   "gatherer": {
+    "calls": 5,
+    "errors": 0,
+    "in": 22966,
+    "out": 2477,
+    "usd": 0.00329,
+    "ms": 10039
+   },
+   "synthesizer": {
+    "calls": 4,
+    "errors": 0,
+    "in": 3194,
+    "out": 2221,
+    "usd": 0.00069,
+    "ms": 73578
+   },
+   "writer": {
+    "calls": 5,
+    "errors": 0,
+    "in": 17546,
+    "out": 5513,
+    "usd": 0.01584,
+    "ms": 55779
+   },
+   "qa": {
+    "calls": 8,
+    "errors": 0,
+    "in": 24917,
+    "out": 3063,
+    "usd": 0.01513,
+    "ms": 23970
+   }
+  },
+  "totalUsd": 0.03543
+ },
+ "openrouterTotalUsd": 0.03481
+}
