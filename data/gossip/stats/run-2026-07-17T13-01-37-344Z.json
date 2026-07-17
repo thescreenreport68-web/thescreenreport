@@ -1,0 +1,115 @@
+{
+  "ts": "2026-07-17T13:01:37.344Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    "jesy-nelson-s-ex-zion-foster-opens-up-about-twins-rare-condition"
+  ],
+  "topics": 1,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 0,
+  "costUSD": 0.013808,
+  "costPerPublished": 0.013808,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 6,
+      "in": 12254,
+      "out": 1232,
+      "usd": 0.0067561999999999995
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 991,
+      "out": 791,
+      "usd": 0.00036022
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 5,
+      "in": 15604,
+      "out": 5135,
+      "usd": 0.006152945000000001
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 4,
+      "in": 3564,
+      "out": 456,
+      "usd": 0.0005388000000000001
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2375,
+      "out": 201,
+      "usd": 0.001215,
+      "ms": 1622
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 991,
+      "out": 791,
+      "usd": 0.00023156999999999998,
+      "ms": 9743
+    },
+    "writer": {
+      "calls": 4,
+      "errors": 0,
+      "in": 14921,
+      "out": 4783,
+      "usd": 0.005058050000000001,
+      "ms": 156760
+    },
+    "verify": {
+      "calls": 5,
+      "errors": 0,
+      "in": 9879,
+      "out": 1031,
+      "usd": 0.0055412,
+      "ms": 6928
+    },
+    "judge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1431,
+      "out": 201,
+      "usd": 0.0002235,
+      "ms": 1573
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 683,
+      "out": 352,
+      "usd": 0.00027676999999999997,
+      "ms": 11239
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 369,
+      "out": 93,
+      "usd": 0.0000741,
+      "ms": 916
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 192,
+      "out": 60,
+      "usd": 0.0000432,
+      "ms": 834
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1572,
+      "out": 102,
+      "usd": 0.00019800000000000002,
+      "ms": 2620
+    }
+  }
+}
