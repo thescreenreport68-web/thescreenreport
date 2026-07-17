@@ -1,169 +1,247 @@
 {
- "dateKey": "2026-07-16",
+ "dateKey": "2026-07-17",
  "topTopic": {
-  "name": "Christopher Nolan's The Odyssey dominates box-office conversation and awards buzz",
-  "why": "The day's largest shared theme across independent headlines is Christopher Nolan's 'The Odyssey'—multiple bylines about its box-office prospects, cast/crew profiles, format milestones (IMAX 70mm), and retrospective rankings, making it the dominant conversation."
+  "name": "Christopher Nolan's The Odyssey dominates film conversation",
+  "why": "The day's largest shared conversation centers on Nolan's epic, with multiple independent headlines reviewing the film, discussing its box-office performance, debating its legacy, and covering related theater technology and festival news."
  },
  "slots": [
   {
    "story": {
-    "title": "Christopher Nolan movies ranked from worst to best, including The Odyssey",
-    "angle": "HR compiles a definitive ranking of all 13 Nolan films, placing The Odyssey at or near the top",
+    "title": "The Odyssey review roundup: critics praise Nolan's epic",
+    "angle": "Major outlets (NYT, Guardian, Washington Post, We Are Movie Geeks) publish reviews highlighting Nolan's spectacle and ambition",
     "entities": [
      "Christopher Nolan",
-     "The Odyssey"
-    ],
-    "sourceLinks": [
-     "https://www.hollywoodreporter.com/movies/movie-news/christopher-nolan-movies-ranked-odyssey-1235541434/"
-    ],
-    "isTopTopic": true,
-    "viral": 6,
-    "hint": "news"
-   },
-   "slotLA": "06:53",
-   "status": "dropped",
-   "reason": "gather: <2 independent sources and no own article"
-  },
-  {
-   "story": {
-    "title": "The Odyssey aims for record box office launch",
-    "angle": "Industry forecasts suggest The Odyssey could set a new box-office record",
-    "entities": [
      "The Odyssey",
-     "box office",
-     "record"
+     "reviews"
     ],
     "sourceLinks": [
-     "https://www.indianewsnetwork.com/en/christopher-nolan-odyssey-aims-record-box-office-launch-20260716"
+     "https://www.nytimes.com/2026/07/15/movies/the-odyssey-review.html",
+     "https://www.theguardian.com/film/2026/jul/17/will-women-love-christopher-nolan-the-odyssey",
+     "https://www.washingtonpost.com/entertainment/movies/2026/07/17/every-christopher-nolan-movie-ranked-including-odyssey/",
+     "https://www.wearemoviegeeks.com/2026/07/the-odyssey-review/"
     ],
     "isTopTopic": true,
     "viral": 8,
-    "hint": "box-office"
+    "hint": "news"
    },
-   "slotLA": "09:06",
-   "status": "dropped",
-   "reason": "gather: <2 independent sources and no own article"
+   "slotLA": "06:54",
+   "status": "pending"
   },
   {
    "story": {
-    "title": "The Odyssey is the most Christopher Nolan film yet",
-    "angle": "A Book & Film Globe essay argues The Odyssey represents Nolan's most mature, definitive work",
+    "title": "Box office: The Odyssey strong start with IMAX",
+    "angle": "Early estimates show The Odyssey earning $41M+ domestically in its opening weekend, powered by IMAX and 70mm interest",
     "entities": [
      "The Odyssey",
-     "Christopher Nolan"
+     "box office",
+     "IMAX"
     ],
     "sourceLinks": [
-     "https://bookandfilmglobe.com/film/the-odyssey-is-the-most-christopher-nolan-film-yet/"
+     "https://www.ign.com/articles/the-odyssey-estimated-box-office-opening-suggests-a-strong-start-powered-by-imax-hype",
+     "https://fayettevilleflyer.com/2026/07/17/review-the-odyssey-another-epic-hit-for-nolan/",
+     "https://www.screendaily.com/news/uk-ireland-box-office-preview-christopher-nolans-the-odyssey-journeys-into-760-cinemas-for-universal/5218702.article"
+    ],
+    "isTopTopic": true,
+    "viral": 9,
+    "hint": "box-office"
+   },
+   "slotLA": "08:40",
+   "status": "pending"
+  },
+  {
+   "story": {
+    "title": "Brenda Fricker, Oscar-winning actress, dies at 81",
+    "angle": "Two-time Oscar winner Brenda Fricker passes away; known for Home Alone 2 and My Left Foot",
+    "entities": [
+     "Brenda Fricker"
+    ],
+    "sourceLinks": [
+     "https://www.thewrap.com/creative-content/movies/brenda-fricker-home-alone-2-actress-dead/",
+     "https://variety.com/2026/film/news/brenda-fricker-dead-my-left-foot-home-alone-2-1236814615/",
+     "https://deadline.com/2026/07/brenda-fricker-dead-home-alone-2-pigeon-lady-my-left-foot-1236996721/"
     ],
     "isTopTopic": true,
     "viral": 7,
-    "hint": "news"
+    "hint": "memoriam"
    },
-   "slotLA": "11:03",
-   "status": "dropped",
-   "reason": "factgate: The card claims 'The Odyssey' is Nolan's most mature film yet, but the fact pack does not contain information to support this claim."
+   "slotLA": "10:12",
+   "status": "pending"
   },
   {
    "story": {
-    "title": "Knoxville theaters to show The Odyssey in IMAX 70mm",
-    "angle": "Only a handful of US theaters will screen The Odyssey in premium IMAX 70mm format",
+    "title": "Craig Melvin says he's 'safe and sound' after Today studio break-in",
+    "angle": "Today show host addresses incident as studio evacuated and intruder was located",
     "entities": [
-     "The Odyssey",
-     "IMAX 70mm",
-     "Knoxville"
+     "Craig Melvin",
+     "Today show",
+     "intruder"
     ],
     "sourceLinks": [
-     "https://www.knoxnews.com/story/entertainment/movies/2026/07/16/the-odyssey-movie-70mm-imax-tennessee/90941439007/"
+     "https://www.thewrap.com/creative-content/tv-shows/today-craig-melvin-response-studio-intruder/",
+     "https://deadline.com/2026/07/craig-melvin-today-intruder-1236996711/"
+    ],
+    "isTopTopic": true,
+    "viral": 6,
+    "hint": "news"
+   },
+   "slotLA": "11:41",
+   "status": "pending"
+  },
+  {
+   "story": {
+    "title": "Netflix Viewership in 2026: what works and what doesn't",
+    "angle": "The Wrap analyzes streaming performance data showing what's resonating with audiences this year",
+    "entities": [
+     "Netflix",
+     "streaming",
+     "viewership"
+    ],
+    "sourceLinks": [
+     "https://www.thewrap.com/media-platforms/tv/netflix-viewership-report-2026-takeaways/"
     ],
     "isTopTopic": true,
     "viral": 5,
     "hint": "news"
    },
-   "slotLA": "13:04",
-   "status": "dropped",
-   "reason": "gather: <2 independent sources and no own article"
+   "slotLA": "13:30",
+   "status": "pending"
   },
   {
    "story": {
-    "title": "Fortnite adds The Odyssey skins for Odysseus and Agamemnon",
-    "angle": "Fortnite now features The Odyssey-themed skins, linking the game to Nolan's film",
+    "title": "Obsession horror movie lands on Peacock",
+    "angle": [
+     "Low-budget horror film racks up box office records before streaming release"
+    ],
     "entities": [
-     "Fortnite",
-     "The Odyssey",
-     "Odysseus",
-     "Agamemnon"
+     "Obsession",
+     "Peacock",
+     "horror"
     ],
     "sourceLinks": [
-     "https://variety.com/2026/film/news/odyssey-fortnite-skins-odysseus-agamemnon-1236812540/"
-    ],
-    "isTopTopic": false,
-    "viral": 9,
-    "hint": "news"
-   },
-   "slotLA": "11:28",
-   "status": "posted",
-   "key": "fortnite-adds-the-odyssey-skins-for-odysseus-and-agamemnon"
-  },
-  {
-   "story": {
-    "title": "Danny Boyle's Rupert Murdoch drama to open Venice Film Festival",
-    "angle": "Ink will premiere at the 2026 Venice Film Festival, directed by Danny Boyle",
-    "entities": [
-     "Danny Boyle",
-     "Ink",
-     "Venice Film Festival"
-    ],
-    "sourceLinks": [
-     "https://www.reuters.com/business/media-telecom/danny-boyles-rupert-murdoch-drama-open-2026-venice-film-festival-2026-07-16/"
+     "https://www.aol.com/articles/horror-hit-obsession-releases-streaming-090000000.html",
+     "https://novanews.co.za/watch-low-budget-horror-film-obsession-smashes-box-office-records/"
     ],
     "isTopTopic": false,
     "viral": 7,
     "hint": "news"
    },
-   "slotLA": "12:10",
-   "status": "posted",
-   "key": "danny-boyle-s-rupert-murdoch-drama-to-open-venice-film-festival"
+   "slotLA": "15:01",
+   "status": "pending"
   },
   {
    "story": {
-    "title": "Jenna Ortega, Rose Byrne to star in new movie from If I Had Legs director",
-    "angle": "Mary Bronstein's next film casts Jenna Ortega and Rose Byrne",
+    "title": "'God of War' TV series to recast Kratos after on-set injury",
+    "angle": [
+     "Production pauses after stunt performer injury; recasting underway for lead role"
+    ],
     "entities": [
-     "Jenna Ortega",
-     "Rose Byrne",
-     "Mary Bronstein"
+     "God of War",
+     "Kratos",
+     "recasting"
     ],
     "sourceLinks": [
-     "https://www.hollywoodreporter.com/movies/movie-news/jenna-ortega-rose-byrne-mary-bronstein-nasty-1236650204/"
+     "https://screencrush.com/god-of-war-kratos-recasting/"
     ],
     "isTopTopic": false,
     "viral": 6,
     "hint": "news"
    },
-   "slotLA": "19:04",
-   "status": "posted",
-   "key": "jenna-ortega-rose-byrne-to-star-in-new-movie-from-if-i-had-legs-director"
+   "slotLA": "16:34",
+   "status": "pending"
   },
   {
    "story": {
-    "title": "From 'Michael' to 'The Bride': The good, the bad and the Meh of the 2026 box office",
-    "angle": "A mid-year box-office assessment highlighting hits and flops in 2026",
+    "title": "Heartstopper movie: Is Netflix sequel worth watching?",
+    "angle": "Yahoo reviews debate whether the Heartstopper Forever movie meets fan expectations",
     "entities": [
-     "2026 box office",
-     "Michael",
-     "The Bride"
+     "Heartstopper Forever",
+     "Netflix",
+     "sequel"
     ],
     "sourceLinks": [
-     "https://variety.com/2026/film/box-office/box-office-hits-flops-michael-supergirl-1236809979/"
+     "https://www.yahoo.com/entertainment/movies/article/is-heartstopper-forever-worth-watching-what-critics-are-saying-about-netflixs-romance-movie-132154385.html"
     ],
     "isTopTopic": false,
     "viral": 5,
-    "hint": "box-office"
+    "hint": "news"
    },
-   "slotLA": "20:55",
-   "status": "dropped",
-   "reason": "factgate: The category tab states 'BOX-OFFICE' but the fact pack indicates that the $4 billion mark is an expected revenue for the summer season, not necessarily already achieved. The card headline and caption also state that the box office 'hits $4 billion', which implies it has already been achieved. The fact pack states 'Revenues for the four-month summer season are expected to surpass the $4 billion mark', which is a projection, not a confirmed achievement. Additionally, the card states 'Michael' tops $1 billion, but the fact pack only states that 'Michael' surpassed 'Bohemian Rhapsody' ($911 million) and 'Oppenheimer' ($975 million), not that it has reached $1 billion."
+   "slotLA": "18:05",
+   "status": "pending"
+  },
+  {
+   "story": {
+    "title": "Apple TV+ series 'The Pitt' described as intense and harrowing",
+    "angle": [
+     "True-story medical drama set in a hospital hits differently according to early reviews"
+    ],
+    "entities": [
+     "The Pitt",
+     "Apple TV+",
+     "medical drama"
+    ],
+    "sourceLinks": [
+     "https://collider.com/apple-tv-series-five-days-at-memorial-true-story-medical-drama/"
+    ],
+    "isTopTopic": false,
+    "viral": 5,
+    "hint": "news"
+   },
+   "slotLA": "19:52",
+   "status": "pending"
+  },
+  {
+   "story": {
+    "title": "Indigenous Missionary Biopic 'Mussau: The First Song' to shoot in Papua New Guinea",
+    "angle": "First major film production to shoot in Papua New Guinea with local indigenous story",
+    "entities": [
+     "Mussau: The First Song",
+     "Papua New Guinea",
+     "indigenous biopic"
+    ],
+    "sourceLinks": [
+     "https://variety.com/2026/film/news/indigenous-missionary-biopic-mussau-the-first-song-papua-new-guinea-1236814609/"
+    ],
+    "isTopTopic": false,
+    "viral": 4,
+    "hint": "first-look"
+   },
+   "slotLA": "21:24",
+   "status": "pending"
   }
  ],
- "builtAt": 1784223239121
+ "bench": [
+  {
+   "title": "Bender comedy adds Harry Potter star Ruari Spooner",
+   "angle": [
+    "Bill Burr and Chris O'Dowd lead cast in upcoming comedy 'Bender'"
+   ],
+   "entities": [
+    "Ruari Spooner",
+    "Bill Burr",
+    "Bender"
+   ],
+   "sourceLinks": [
+    "https://deadline.com/2026/07/harry-potter-ruari-spooner-joins-bill-burr-bender-1236996681/"
+   ],
+   "isTopTopic": false,
+   "viral": 4,
+   "hint": "news"
+  },
+  {
+   "title": "Sixers film study: Where Dean Wade can impact winning",
+   "angle": "Analysis of Dean Wade's role and limitations within Philadelphia 76ers' strategy",
+   "entities": [
+    "Dean Wade",
+    "Philadelphia 76ers",
+    "film study"
+   ],
+   "sourceLinks": [
+    "https://www.phillyvoice.com/sixers-news-analysis-film-study-dean-wade-highlights-stats-defense-matchups-nba-free-agency-signings/"
+   ],
+   "isTopTopic": false,
+   "viral": 3,
+   "hint": "tv"
+  }
+ ],
+ "builtAt": 1784295977508
 }
