@@ -1,0 +1,77 @@
+{
+  "ts": "2026-07-17T08:33:42.788Z",
+  "mode": "from-find",
+  "review": true,
+  "published": [
+    "eminem-s-ex-wife-kim-scott-tased-after-biting-cop-following-suicide-at"
+  ],
+  "topics": 1,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 0,
+  "costUSD": 0.019988,
+  "costPerPublished": 0.019988,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 8,
+      "in": 15959,
+      "out": 1984,
+      "usd": 0.0097477
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 6,
+      "in": 16987,
+      "out": 9636,
+      "usd": 0.0095521055
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 3,
+      "in": 4983,
+      "out": 474,
+      "usd": 0.0006879
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2401,
+      "out": 190,
+      "usd": 0.0011953,
+      "ms": 1666
+    },
+    "writer": {
+      "calls": 5,
+      "errors": 0,
+      "in": 13900,
+      "out": 6836,
+      "usd": 0.00552124,
+      "ms": 294165
+    },
+    "verify": {
+      "calls": 7,
+      "errors": 0,
+      "in": 13558,
+      "out": 1794,
+      "usd": 0.0085524,
+      "ms": 11275
+    },
+    "judge": {
+      "calls": 2,
+      "errors": 0,
+      "in": 2903,
+      "out": 376,
+      "usd": 0.00044070000000000003,
+      "ms": 1945
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2080,
+      "out": 98,
+      "usd": 0.0002472,
+      "ms": 2651
+    }
+  }
+}
