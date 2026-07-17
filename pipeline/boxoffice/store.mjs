@@ -86,7 +86,10 @@ export function parkedTries(store, eventSlug, form, { now = new Date() } = {}) {
   const p = store.parked.find((x) => x.key === boKey(eventSlug, form));
   if (!p) return 0;
   if (p.dead) {
-    if (p.expiresAt && now.getTime() > Date.parse(p.expiresAt)) { p.dead = false; p.tries = 0; save(store); return 0; }
+    // Legacy dead parks (parked before the expiry code) carry no expiresAt — infer 72h from their park
+    // time, else they stay dead FOREVER (16 keys, mostly streaming, were permanently locked this way).
+    const expMs = p.expiresAt ? Date.parse(p.expiresAt) : (Date.parse(p.at || 0) + 72 * 3600e3);
+    if (Number.isFinite(expMs) && now.getTime() > expMs) { p.dead = false; p.tries = 0; save(store); return 0; }
     return Infinity;
   }
   return p.tries || 0;
