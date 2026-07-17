@@ -1,0 +1,80 @@
+{
+  "id": "news-tiana-character-casting",
+  "slug": "colman-domingo-in-talks-to-co-write-live-action-princess-and-the-frog-",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": null,
+      "cat": "celebrity/news",
+      "format": [
+        "body 182w < 220"
+      ],
+      "cuts": 22,
+      "broken": []
+    },
+    "attempt2": {
+      "score": null,
+      "cat": "celebrity/news",
+      "format": [
+        "FAQ 0 < 2",
+        "H2s 0 < 1",
+        "primary keyword not in title",
+        "body 172w < 220"
+      ],
+      "cuts": 0,
+      "broken": []
+    }
+  },
+  "editorial": {
+    "status": "unconfirmed",
+    "entity": "Tiana (character)",
+    "work": null,
+    "outlet": "variety.com"
+  },
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
+    "deterministic": {
+      "words": 172,
+      "h2s": 0,
+      "h2Questions": 0,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 0,
+      "ktCount": 3,
+      "kwInTitle": false,
+      "kwInFirst100": false,
+      "kwInH2": false,
+      "maxSentence": 23,
+      "avgSentence": 16,
+      "flesch": 74,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": [
+        "FAQ 0 < 2",
+        "H2s 0 < 1",
+        "primary keyword not in title",
+        "body 172w < 220"
+      ]
+    },
+    "hardBlocks": []
+  },
+  "score": null,
+  "category": "celebrity",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "body ≥ 220w",
+      "1+ subheads",
+      "2+ FAQ",
+      "keyword in title"
+    ]
+  },
+  "ms": 41492
+}
