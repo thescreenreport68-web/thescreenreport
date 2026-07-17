@@ -1,12 +1,222 @@
 {
-  "runId": "run-2026-07-17T21-00-39",
-  "builtAt": "2026-07-17T21:01:52.828Z",
-  "count": 14,
+  "runId": "run-2026-07-17T22-00-36",
+  "builtAt": "2026-07-17T22:01:38.377Z",
+  "count": 15,
   "topics": [
     {
+      "id": "news-netflix-acquires-danny-boyle-thriller-ink",
+      "slug": "danny-boyle-thriller-ink-lands-at-netflix-ahead-of-venice-debut",
+      "title": "Danny Boyle Thriller Ink Lands at Netflix Ahead of Venice Debut",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "netflix-acquires-danny-boyle-thriller-ink",
+      "primaryKeyword": "danny boyle ink netflix",
+      "primaryEntity": "Ink (2023 film)",
+      "entities": [
+        "Netflix",
+        "Danny Boyle",
+        "Venice Film Festival",
+        "Jack O'Connell"
+      ],
+      "angle": "Netflix secures distribution rights for Danny Boyle's new thriller ahead of its festival premiere.",
+      "tmdbType": "movie",
+      "source": "rss:Billboard",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/danny-boyle-ink-acquired-netflix-distribution-1236997234/",
+          "ageMin": 31,
+          "headline": "Netflix Snaps Up Rupert Murdoch Thriller Ink From Danny Boyle Ahead Of Venice Premiere",
+          "summary": "Ahead of its September 2nd world premiere as the opening night film for the 83rd Venice Film Festival, Oscar winner Danny Boyle s new thriller Ink has been acquired by Netflix for U.S. and Latin American distribution. Based on the Tony-nominated play by multi-Olivier award-winning playwright and screenwriter James Graham, who adapted the screenplay, Ink is billed as an explosive [ ]"
+        },
+        {
+          "outlet": "Billboard",
+          "tier": 7,
+          "url": "https://www.billboard.com/music/country/grand-ole-opry-charley-pride-opry-100-honors-1236297111/",
+          "ageMin": 6,
+          "headline": "Grand Ole Opry s Opry 100 Honors to Celebrate Charley Pride s Career and Legacy",
+          "summary": "The show will feature appearances from Darius Rucker, Dion Pride and more."
+        }
+      ],
+      "ageMin": 6,
+      "_cand": {
+        "key": "rss:grand-ole-opry-s-opry-100-honors-to-celebrate-charley-pride-",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 2,
+      "verification": {
+        "tier1Count": 2,
+        "tier1Owners": 1,
+        "outletCount": 2,
+        "outlets": [
+          "Deadline",
+          "Billboard"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 107,
+      "signals": {
+        "recency": 30,
+        "corroboration": 18,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 8,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-kane-parsons-curry-barker-multi-million-dollar-bidding-war-gen-z",
+      "slug": "kane-parsons-curry-barker-and-the-multi-million-dollar-battle-for-gen-",
+      "title": "Kane Parsons, Curry Barker and the Multi-Million Dollar Battle for Gen Z Eyeballs",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "kane-parsons-curry-barker-multi-million-dollar-bidding-war-gen-z",
+      "primaryKeyword": "Backrooms viral content bidding war",
+      "primaryEntity": "Backrooms",
+      "entities": [
+        "Kane Parsons",
+        "Curry Barker"
+      ],
+      "angle": "Young filmmakers like Kane Parsons and Curry Barker are at the center of multi-studio bidding wars for viral content.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/kane-parsons-curry-barker-and-the-multi-million-dollar-battle-for-gen-z-eyeballs-1236651171/",
+          "ageMin": 41,
+          "headline": "Kane Parsons, Curry Barker and the Multi-Million Dollar Battle for Gen Z Eyeballs",
+          "summary": "In the months since the successes of ‘Backrooms' and ‘Obsession’, young filmmakers, memes and viral shorts have been the subject of multi-studio bidding wars."
+        }
+      ],
+      "ageMin": 41,
+      "_cand": {
+        "key": "rss:kane-parsons-curry-barker-and-the-multi-million-dollar-battl",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 104,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "softTv": 0,
+        "radar": 17
+      },
+      "radarKind": "movie-in-theaters",
+      "tierClass": "A"
+    },
+    {
+      "id": "news-a24-backs-down-backrooms-copyright-claim-kane-parsons",
+      "slug": "a24-backs-down-from-backrooms-copyright-claim-after-kane-parsons-inter",
+      "title": "A24 Backs Down From Backrooms Copyright Claim After Kane Parsons Intervenes",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "a24-backs-down-backrooms-copyright-claim-kane-parsons",
+      "primaryKeyword": "A24 Backrooms copyright",
+      "primaryEntity": "A24",
+      "entities": [
+        "Kane Parsons",
+        "Backrooms"
+      ],
+      "angle": "A24 resolves a copyright dispute over the 'Backrooms' concept, affirming creators' rights.",
+      "tmdbType": "movie",
+      "source": "rss:TheWrap",
+      "sources": [
+        {
+          "outlet": "TheWrap",
+          "tier": 7,
+          "url": "https://www.thewrap.com/creative-content/movies/a24-backrooms-copyright-claim-kane-parsons/",
+          "ageMin": 22,
+          "headline": "A24 Backs Down From Backrooms Copyright Claim After Kane Parsons Intervenes",
+          "summary": "The studio affirms that online creatives \"have every right to tell their own version of the story\" The post A24 Backs Down From Backrooms Copyright Claim After Kane Parsons Intervenes appeared first on TheWrap ."
+        }
+      ],
+      "ageMin": 22,
+      "_cand": {
+        "key": "rss:a24-backs-down-from-backrooms-copyright-claim-after-kane-par",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "TheWrap"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "TheWrap",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 88,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 12,
+        "trending": 0,
+        "softTv": 0,
+        "radar": 17
+      },
+      "radarKind": "movie-in-theaters",
+      "tierClass": "A"
+    },
+    {
       "id": "trailer-the-runner-trailer-gal-gadot",
-      "slug": "gal-gadot-stars-in-new-trailer-for-prime-video-thriller-the-runner",
-      "title": "Gal Gadot Stars in New Trailer for Prime Video Thriller 'The Runner'",
+      "slug": "gal-gadot-goes-on-a-kill-mission-to-save-son-in-the-runner-trailer",
+      "title": "Gal Gadot Goes on a Kill Mission to Save Son in ‘The Runner’ Trailer",
       "contentType": "trailer",
       "formatTag": "trailer",
       "category": "movies",
@@ -17,10 +227,9 @@
       "primaryKeyword": "the runner trailer gal gadot",
       "primaryEntity": "The Runner",
       "entities": [
-        "Gal Gadot",
-        "Prime Video"
+        "Gal Gadot"
       ],
-      "angle": "Gal Gadot stars in the new trailer for psychological thriller 'The Runner'.",
+      "angle": "Gal Gadot stars in the newly released trailer for 'The Runner', where she plays a mother on a mission.",
       "tmdbType": "movie",
       "source": "gnews:extratv.com",
       "sources": [
@@ -28,357 +237,80 @@
           "outlet": "extratv.com",
           "tier": 5,
           "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNMHNlajMwZGl4czRtOWR4MFFjajhtN21peVJudWVoY0NPd0tTSUIzS1NnaUdyR0dSOWxMcTlQMWZFa2JjSDNlVEpSU01qaFNlTTNNYThkLS01SW5NVk1jT0sxdEdBWUptdEY2M294UldrellWQXpkRUpYRVZJQ2l5X1kzdzhuZ0lXenl3anF4UXE0VkhibC1wYzQ1VlE5S2s?oc=5",
-          "ageMin": 144,
+          "ageMin": 202,
           "headline": "Gal Gadot Goes on a Kill Mission to Save Son in ‘The Runner’ Trailer - extratv.com",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMinwFBVV95cUxNMHNlajMwZGl4czRtOWR4MFFjajhtN21peVJudWVoY0NPd0tTSUIzS1NnaUdyR0dSOWxMcTlQMWZFa2JjSDNlVEpSU01qaFNlTTNNYThkLS01SW5NVk1jT0sxdEdBWUptdEY2M294UldrellWQXpkRUpYRVZJQ2l5X1kzdzhuZ0lXenl3anF4UXE0VkhibC1wYzQ1VlE5S2s?oc=5\" target=\"_blank\" Gal Gadot Goe"
-        },
-        {
-          "outlet": "Just Jared",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQV2hBc0ZJOERWLUJVbGp6VHUyeWNXdFFZQXV5WHYzbFhUOWdwa1FHNlo5alZqTUNPdjliTVpMMldqQmF4elAwU3ozWVAwLUp4QXQ2bjlHTEZvTEkwNTlCRkt5ZzQ4SEJCTlItbkYtaDlQSEpqMlhxSE1RYUF2dmw4dDlIbVZtMXF0OFRFNTNPODFLMng3X2hxWjlwcUprVjQxY0xZWjRVVjRtbFFsdi1GUEdwZHhadlhobzVWRFZqd3ZsT1NsQ3lZT1dQTHA?oc=5",
-          "ageMin": 169,
-          "headline": "'The Runner' Trailer: Gal Gadot Damian Lewis Star In New Prime Video Psychological Thriller - Watch! - Just Jared",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMizAFBVV95cUxQV2hBc0ZJOERWLUJVbGp6VHUyeWNXdFFZQXV5WHYzbFhUOWdwa1FHNlo5alZqTUNPdjliTVpMMldqQmF4elAwU3ozWVAwLUp4QXQ2bjlHTEZvTEkwNTlCRkt5ZzQ4SEJCTlItbkYtaDlQSEpqMlhxSE1RYUF2dmw4dDlIbVZtMXF0OFRFNTNPODFLMng3X2hxWjlwcUprVjQxY0xZWjRVVjRtbFFsdi1GUEdwZHhadlhobzV"
         }
       ],
-      "ageMin": 144,
+      "ageMin": 202,
       "_cand": {
         "key": "rss:gal-gadot-goes-on-a-kill-mission-to-save-son-in-the-runner-t",
         "popularity": 0,
         "kind": "gnews"
       },
-      "corroborationCount": 2,
+      "corroborationCount": 1,
       "verification": {
         "tier1Count": 0,
         "tier1Owners": 0,
-        "outletCount": 2,
+        "outletCount": 1,
         "outlets": [
-          "extratv.com",
-          "Just Jared"
+          "extratv.com"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "multiple outlets",
+        "attribution": "extratv.com",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 95,
+      "priority": 74,
       "signals": {
-        "recency": 16,
-        "corroboration": 14,
+        "recency": 9,
+        "corroboration": 8,
         "status": 18,
         "type": 15,
         "pop": 0,
         "breakout": 0,
         "big": 24,
-        "trending": 8,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-herbert-west-reanimator-first-look-joseph-morgan-katie-cassidy",
-      "slug": "herbert-west-reanimator-first-look-at-joseph-morgan-katie-cassidy-in-f",
-      "title": "Herbert West: Reanimator: First Look At Joseph Morgan, Katie Cassidy In Fantasy Horror Adapted From H.P. Lovecraft Story",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "herbert-west-reanimator-first-look-joseph-morgan-katie-cassidy",
-      "primaryKeyword": "herbert west reanimator",
-      "primaryEntity": "Herbert West: Reanimator",
-      "entities": [
-        "Joseph Morgan",
-        "Katie Cassidy",
-        "H.P. Lovecraft"
-      ],
-      "angle": "First look images released for the H.P. Lovecraft adaptation 'Herbert West: Reanimator' starring Joseph Morgan and Katie Cassidy.",
-      "tmdbType": "movie",
-      "source": "rss:Deadline",
-      "sources": [
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/joseph-morgan-katie-cassidy-herbert-west-reanimator-1236997129/",
-          "ageMin": 22,
-          "headline": "Herbert West: Reanimator : First Look At Joseph Morgan Katie Cassidy In Fantasy Horror Adapted From H.P. Lovecraft Story",
-          "summary": "EXCLUSIVE: Below are your first look images of stars Joseph Morgan (Vampire Diaries) and Katie Cassidy (Arrow) in the contemporary reimagining of H.P. Lovecraft’s short story Herbert West: Reanimator. We first told you about the movie of the same name last year and it has now gone into production in Alton, Illinois. Morgan, also known for The Originals [ ]"
-        }
-      ],
-      "ageMin": 22,
-      "_cand": {
-        "key": "rss:herbert-west-reanimator-first-look-at-joseph-morgan-katie-ca",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Deadline"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Deadline",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 92,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
         "trending": 0,
         "softTv": 0
       },
       "tierClass": "B"
     },
     {
-      "id": "music-news-travis-scott-james-blake-ludwig-goransson-the-odyssey-closer",
-      "slug": "travis-scott-teams-with-james-blake-ludwig-goransson-for-the-odyssey-c",
-      "title": "Travis Scott Teams With James Blake, Ludwig Goransson for The Odyssey Closer",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "travis-scott-james-blake-ludwig-goransson-the-odyssey-closer",
-      "primaryKeyword": "travis scott music",
-      "primaryEntity": "Travis Scott",
-      "entities": [
-        "James Blake",
-        "Ludwig Göransson",
-        "The Odyssey"
-      ],
-      "angle": "Travis Scott teams with James Blake and Ludwig Goransson for a song on 'The Odyssey' soundtrack.",
-      "tmdbType": "movie",
-      "source": "rss:Rolling Stone",
-      "sources": [
-        {
-          "outlet": "Rolling Stone",
-          "tier": 7,
-          "url": "https://www.rollingstone.com/music/music-news/travis-scott-james-blake-ludwig-goransson-the-odyssey-song-1235595206/",
-          "ageMin": 48,
-          "headline": "Travis Scott Teams With James Blake, Ludwig Goransson for The Odyssey Closer When I m Home",
-          "summary": "Rapper, who has a cameo role in Christopher Nolan's epic, previously contributed end credits track to the director's Tenet"
-        }
-      ],
-      "ageMin": 48,
-      "_cand": {
-        "key": "rss:travis-scott-teams-with-james-blake-ludwig-goransson-for-the",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "breakoutVelocity": 0,
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Rolling Stone"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Rolling Stone",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 89,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "softTv": 0,
-        "radar": 26
-      },
-      "radarKind": "movie-in-theaters",
-      "tierClass": "A"
-    },
-    {
-      "id": "news-sony-pictures-lands-renegades-short-story-jonathan-goldstein-john-fran",
-      "slug": "sony-pictures-lands-short-story-renegades-by-will-simmons-jonathan-gol",
-      "title": "Sony Pictures Lands Short Story Renegades By Will Simmons; Jonathan Goldstein John Francis Daley To Helm Feature Adaptation Of Action-Thriller",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "sony-pictures-lands-renegades-short-story-jonathan-goldstein-john-fran",
-      "primaryKeyword": "renegades movie",
-      "primaryEntity": "Renegades",
-      "entities": [
-        "Jonathan Goldstein",
-        "John Francis Daley",
-        "Will Simmons"
-      ],
-      "angle": "Sony Pictures acquires rights to Will Simmons' short story 'Renegades' with Jonathan Goldstein and John Francis Daley set to direct.",
-      "tmdbType": "movie",
-      "source": "rss:Deadline",
-      "sources": [
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/jonathan-goldstein-john-francis-daley-to-direct-renegades-1236997128/",
-          "ageMin": 36,
-          "headline": "Sony Pictures Lands Short Story Renegades By Will Simmons; Jonathan Goldstein John Francis Daley To Helm Feature Adaptation Of Action-Thriller",
-          "summary": "EXCLUSIVE: Sony Pictures has landed Renegades, a short story by Will Simmons, who is attached to adapt for film, with Jonathan Goldstein and John Francis Daley (Mayday) directing. Plot details for the project, described as an action-thriller, are under wraps. Hutch Parker (Venom, X-Men franchises) is set to produce under his deal at the studio. Screenwriter Simmons previously adapted [ ]"
-        }
-      ],
-      "ageMin": 36,
-      "_cand": {
-        "key": "rss:sony-pictures-lands-short-story-renegades-by-will-simmons-jo",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Deadline"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Deadline",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 92,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-ella-beatty-joins-focus-features-the-bell-jar",
-      "slug": "monster-lizzie-borden-star-ella-beatty-in-final-talks-to-join-focus-fe",
-      "title": "Monster: Lizzie Borden Star Ella Beatty In Final Talks To Join Focus Features The Bell Jar",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "high",
-      "eventSlug": "ella-beatty-joins-focus-features-the-bell-jar",
-      "primaryKeyword": "the bell jar movie",
-      "primaryEntity": "The Bell Jar",
-      "entities": [
-        "Ella Beatty",
-        "Billie Eilish",
-        "Carey Mulligan"
-      ],
-      "angle": "Ella Beatty in final talks to join the cast of Focus Features' 'The Bell Jar' alongside Billie Eilish and Carey Mulligan.",
-      "tmdbType": "movie",
-      "source": "rss:Deadline",
-      "sources": [
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/the-bell-jar-ella-beatty-circling-billie-eilish-movie-1236997085/",
-          "ageMin": 59,
-          "headline": "Monster: Lizzie Borden Star Ella Beatty In Final Talks To Join Focus Features The Bell Jar",
-          "summary": "EXCLUSIVE: Ella Beatty, star of Netflix s forthcoming Monster installment on alleged Massachusetts axe murderer Lizzie Borden, is in final talks to join Billie Eilish and Carey Mulligan in The Bell Jar, Focus Features film adaptation of the classic novel by Sylvia Plath, sources tell Deadline. Reps for Focus declined comment. It s not yet clear who Beatty will play. Eilish [ ]"
-        }
-      ],
-      "ageMin": 59,
-      "_cand": {
-        "key": "rss:monster-lizzie-borden-star-ella-beatty-in-final-talks-to-joi",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Deadline"
-        ],
-        "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "Deadline",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 92,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "softTv": 0
-      },
-      "tierClass": "S"
-    },
-    {
-      "id": "news-tessa-blakes-if-i-tell-you-acquired-suncatcher-productions",
-      "slug": "tessa-blake-s-if-i-tell-you-starring-carol-kane-acquired-by-suncatcher",
-      "title": "Tessa Blake’s ‘If I Tell You’ Starring Carol Kane Acquired by Suncatcher Productions for Distribution (EXCLUSIVE)",
+      "id": "news-netflix-buys-danny-boyle-rupert-murdoch-movie-ink",
+      "slug": "netflix-buys-danny-boyle-s-rupert-murdoch-movie-and-venice-opener-ink",
+      "title": "Netflix Buys Danny Boyle s Rupert Murdoch Movie and Venice Opener Ink",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "tessa-blakes-if-i-tell-you-acquired-suncatcher-productions",
-      "primaryKeyword": "if i tell you distribution",
-      "primaryEntity": "If I Tell You",
+      "eventSlug": "netflix-buys-danny-boyle-rupert-murdoch-movie-ink",
+      "primaryKeyword": "Danny Boyle Ink Netflix",
+      "primaryEntity": "Ink (film)",
       "entities": [
-        "Tessa Blake",
-        "Carol Kane",
-        "Suncatcher Productions"
+        "Netflix",
+        "Danny Boyle",
+        "Rupert Murdoch"
       ],
-      "angle": "Suncatcher Productions acquires distribution rights for Tessa Blake's family drama 'If I Tell You'.",
+      "angle": "Netflix acquires U.S. and Latin American rights to Danny Boyle's Rupert Murdoch film 'Ink' ahead of its Venice premiere.",
       "tmdbType": "movie",
       "source": "rss:Variety",
       "sources": [
         {
           "outlet": "Variety",
           "tier": 7,
-          "url": "https://variety.com/2026/film/news/suncatcher-productions-distribution-rights-if-i-tell-you-1236814835/",
-          "ageMin": 55,
-          "headline": "Tessa Blake’s ‘If I Tell You’ Starring Carol Kane Acquired by Suncatcher Productions for Distribution (EXCLUSIVE)",
-          "summary": "Suncatcher Productions has acquired the theatrical distribution rights to the family drama “If I Tell You,” directed by Tessa Blake. Based on Lisa O’Donnell’s novel “Closed Doors,” the film follows a 12-year-old boy attempting to solve a mystery while navigating the impact of the secrets kept by the adults in his life. The film, which [ ]"
+          "url": "https://variety.com/2026/film/global/danny-boyle-rupert-murdoch-movie-ink-bought-us-netflix-1236812563/",
+          "ageMin": 31,
+          "headline": "Netflix Buys Danny Boyle s Rupert Murdoch Movie and Venice Opener Ink",
+          "summary": "Having just been announced as the Venice Film Festival curtain raiser, Danny Boyle s Ink has found a new nome. Netflix has acquired the U.S. and Latin American rights to the film — about the early years of Rupert Murdoch s media empire as he planted a flag in the U.K. and starring Jack O Connell, Guy Pearce and [ ]"
         }
       ],
-      "ageMin": 55,
+      "ageMin": 31,
       "_cand": {
-        "key": "rss:tessa-blake-s-if-i-tell-you-starring-carol-kane-acquired-by-",
+        "key": "rss:netflix-buys-danny-boyle-s-rupert-murdoch-movie-and-venice-o",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -412,7 +344,74 @@
       "tierClass": "B"
     },
     {
-      "id": "news-god-of-war-tv-series-kratos-actor-injury",
+      "id": "trailer-the-runner-trailer-gal-gadot-damian-lewis-prime-video",
+      "slug": "gal-gadot-and-damian-lewis-star-in-new-prime-video-psychological-thril",
+      "title": "Gal Gadot and Damian Lewis Star in New Prime Video Psychological Thriller 'The Runner' - Watch Trailer",
+      "contentType": "trailer",
+      "formatTag": "trailer",
+      "category": "tv",
+      "subcategory": "trailers",
+      "eventType": "trailer",
+      "sensitivity": "normal",
+      "eventSlug": "the-runner-trailer-gal-gadot-damian-lewis-prime-video",
+      "primaryKeyword": "the runner trailer",
+      "primaryEntity": "The Runner",
+      "entities": [
+        "The Runner (TV series)",
+        "Gal Gadot",
+        "Damian Lewis",
+        "Prime Video"
+      ],
+      "angle": "Prime Video drops trailer for Gal Gadot and Damian Lewis psychological thriller 'The Runner'",
+      "tmdbType": "movie",
+      "source": "gnews:Just Jared",
+      "sources": [
+        {
+          "outlet": "Just Jared",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQV2hBc0ZJOERWLUJVbGp6VHUyeWNXdFFZQXV5WHYzbFhUOWdwa1FHNlo5alZqTUNPdjliTVpMMldqQmF4elAwU3ozWVAwLUp4QXQ2bjlHTEZvTEkwNTlCRkt5ZzQ4SEJCTlItbkYtaDlQSEpqMlhxSE1RYUF2dmw4dDlIbVZtMXF0OFRFNTNPODFLMng3X2hxWjlwcUprVjQxY0xZWjRVVjRtbFFsdi1GUEdwZHhadlhobzVWRFZqd3ZsT1NsQ3lZT1dQTHA?oc=5",
+          "ageMin": 229,
+          "headline": "'The Runner' Trailer: Gal Gadot Damian Lewis Star In New Prime Video Psychological Thriller - Watch! - Just Jared",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMizAFBVV95cUxQV2hBc0ZJOERWLUJVbGp6VHUyeWNXdFFZQXV5WHYzbFhUOWdwa1FHNlo5alZqTUNPdjliTVpMMldqQmF4elAwU3ozWVAwLUp4QXQ2bjlHTEZvTEkwNTlCRkt5ZzQ4SEJCTlItbkYtaDlQSEpqMlhxSE1RYUF2dmw4dDlIbVZtMXF0OFRFNTNPODFLMng3X2hxWjlwcUprVjQxY0xZWjRVVjRtbFFsdi1GUEdwZHhadlhobzV"
+        }
+      ],
+      "ageMin": 229,
+      "_cand": {
+        "key": "rss:-the-runner-trailer-gal-gadot-damian-lewis-star-in-new-prime",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "Just Jared"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "Just Jared",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 68,
+      "signals": {
+        "recency": 9,
+        "corroboration": 8,
+        "status": 18,
+        "type": 15,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-god-of-war-tv-series-recasts-kratos-after-injury",
       "slug": "god-of-war-tv-series-recasts-kratos-role-after-actor-injury",
       "title": "God of War TV Series Recasts Kratos Role After Actor Injury",
       "contentType": "news",
@@ -421,14 +420,14 @@
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "god-of-war-tv-series-kratos-actor-injury",
-      "primaryKeyword": "god of war tv series",
+      "eventSlug": "god-of-war-tv-series-recasts-kratos-after-injury",
+      "primaryKeyword": "god of war tv series kratos",
       "primaryEntity": "God of War",
       "entities": [
         "God of War (TV series)",
         "Ryan Hurst"
       ],
-      "angle": "The actor playing Kratos in Prime Video's 'God of War' series has been injured, necessitating a recast.",
+      "angle": "Prime Video's 'God of War' series faces a casting change for Kratos due to an on-set injury to actor Ryan Hurst.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
@@ -436,12 +435,12 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/tv/tv-news/god-of-war-recast-kratos-ryan-hurst-stunt-injury-1236650848/",
-          "ageMin": 404,
+          "ageMin": 464,
           "headline": "God of War to Recast Kratos Role Following Ryan Hurst On-Set Injury",
           "summary": "Prime Video's original God of War tore a bicep muscle while performing a stunt."
         }
       ],
-      "ageMin": 404,
+      "ageMin": 464,
       "_cand": {
         "key": "rss:god-of-war-to-recast-kratos-role-following-ryan-hurst-on-set",
         "popularity": 0,
@@ -477,9 +476,141 @@
       "tierClass": "B"
     },
     {
+      "id": "news-iko-uwais-albert-hughes-jakarta-crime-series",
+      "slug": "iko-uwais-and-albert-hughes-team-for-multi-generational-crime-series-j",
+      "title": "Iko Uwais and Albert Hughes Team for Multi-Generational Crime Series 'Jakarta'",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "iko-uwais-albert-hughes-jakarta-crime-series",
+      "primaryKeyword": "jakarta crime series",
+      "primaryEntity": "Jakarta (TV series)",
+      "entities": [
+        "Iko Uwais",
+        "Albert Hughes",
+        "Alcon Entertainment"
+      ],
+      "angle": "Iko Uwais to star in new crime series 'Jakarta' with Albert Hughes directing",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/tv/news/iko-uwais-albert-hughes-jakarta-series-alcon-entertainment-1236814756/",
+          "ageMin": 361,
+          "headline": "Iko Uwais and Albert Hughes Unite for Multi-Generational Crime Series Jakarta at Blade Runner 2049 Outfit Alcon Entertainment (EXCLUSIVE)",
+          "summary": "Action star Iko Uwais is set to lead Jakarta, a multi-generational family crime series in development at Alcon Entertainment, with Albert Hughes attached to direct the pilot and serve as producing director. The project comes from writers Kirk Ward and Joshua W. Wagner, with Ward also locked in as showrunner. Hughes and Ward previously worked [ ]"
+        }
+      ],
+      "ageMin": 361,
+      "_cand": {
+        "key": "rss:iko-uwais-and-albert-hughes-unite-for-multi-generational-cri",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 61,
+      "signals": {
+        "recency": 4,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "music-news-lil-wayne-launches-podcast",
+      "slug": "lil-wayne-to-launch-podcast-with-radio-host-craig-carton",
+      "title": "Lil Wayne to Launch Podcast With Radio Host Craig Carton",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "lil-wayne-launches-podcast",
+      "primaryKeyword": "lil wayne podcast",
+      "primaryEntity": "Lil Wayne",
+      "entities": [
+        "Craig Carton"
+      ],
+      "angle": "Lil Wayne is launching a new podcast with radio host Craig Carton.",
+      "tmdbType": "movie",
+      "source": "rss:Billboard",
+      "sources": [
+        {
+          "outlet": "Billboard",
+          "tier": 7,
+          "url": "https://www.billboard.com/music/rb-hip-hop/lil-wayne-joint-venture-podcast-craig-carton-1236296998/",
+          "ageMin": 105,
+          "headline": "Lil Wayne to Launch The Joint Venture Podcast With Radio Host Craig Carton",
+          "summary": "A live episode will be recorded this weekend at Fanatics Fest NYC."
+        }
+      ],
+      "ageMin": 105,
+      "_cand": {
+        "key": "rss:lil-wayne-to-launch-the-joint-venture-podcast-with-radio-hos",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "breakoutVelocity": 0,
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Billboard"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Billboard",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 55,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
       "id": "trailer-celebrity-family-feud-season-12-trailer",
       "slug": "celebrity-family-feud-season-12-trailer-shows-well-behaved-contestants",
-      "title": "'Celebrity Family Feud' Season 12 Trailer Shows 'Well-Behaved' Contestants in Action",
+      "title": "‘Celebrity Family Feud’ Season 12 Trailer Shows ‘Well-Behaved’ Contestants",
       "contentType": "trailer",
       "formatTag": "trailer",
       "category": "tv",
@@ -490,7 +621,7 @@
       "primaryKeyword": "Celebrity Family Feud trailer",
       "primaryEntity": "Celebrity Family Feud",
       "entities": [],
-      "angle": "The trailer for the upcoming season of 'Celebrity Family Feud' has been released.",
+      "angle": "The trailer for the 12th season of 'Celebrity Family Feud' has been released.",
       "tmdbType": "movie",
       "source": "gnews:IMDb",
       "sources": [
@@ -498,12 +629,12 @@
           "outlet": "IMDb",
           "tier": 5,
           "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5Qb3RMcWJ6ZHcxdnotcnFQdlItRlRnV2V0YjBqTFZSNkZrbmVlc2VOeFBSelg0cEVqRmdBdUN0bGV5dXh1cXM5ZkxKdDg5M0FyeXc?oc=5",
-          "ageMin": 1212,
+          "ageMin": 1272,
           "headline": "‘Celebrity Family Feud’ Season 12 Trailer Shows ‘Well-Behaved’ Contestants in Action - IMDb",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTE5Qb3RMcWJ6ZHcxdnotcnFQdlItRlRnV2V0YjBqTFZSNkZrbmVlc2VOeFBSelg0cEVqRmdBdUN0bGV5dXh1cXM5ZkxKdDg5M0FyeXc?oc=5\" target=\"_blank\" ‘Celebrity Family Feud’ Season 12 Trailer Shows ‘Well-Behaved’ Contestants in Action /a nbsp; nbsp; font color=\"#6f6f"
         }
       ],
-      "ageMin": 1212,
+      "ageMin": 1272,
       "_cand": {
         "key": "rss:-celebrity-family-feud-season-12-trailer-shows-well-behaved-",
         "popularity": 0,
@@ -539,61 +670,61 @@
       "tierClass": "B"
     },
     {
-      "id": "music-news-benji-heinke-cerulean-single-and-video",
-      "slug": "benji-heinke-introduces-cerulean-single-and-video-ahead-of-new-concept",
-      "title": "Benji Heinke introduces ‘Cerulean’ single and video ahead of new concept album",
+      "id": "music-news-ava-max-announcement",
+      "slug": "ava-max-on-her-new-single-energy-and-the-world-cup",
+      "title": "Ava Max on Her New Single 'Energy' and the World Cup",
       "contentType": "music-news",
       "formatTag": "music-news",
       "category": "music",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "tier": "indie",
-      "eventSlug": "benji-heinke-cerulean-single-and-video",
-      "primaryKeyword": "Benji Heinke Cerulean",
-      "primaryEntity": "Beenie Man",
+      "tier": "popular",
+      "eventSlug": "ava-max-announcement",
+      "primaryKeyword": "Ava Max",
+      "primaryEntity": "Ava Max",
       "entities": [
-        "Benji Heinke",
-        "Cerulean"
+        "Energy (song)"
       ],
-      "angle": "Electronic artist Benji Heinke has released a new single and video titled 'Cerulean' ahead of his upcoming concept album.",
+      "angle": "Pop star Ava Max discusses her new single 'Energy' at the FIFA House opening.",
       "tmdbType": "movie",
-      "source": "gnews:Electronic Groove",
+      "source": "rss:Rolling Stone",
       "sources": [
         {
-          "outlet": "Electronic Groove",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQZW1SLV81SE5rTDBqcGhJVlFsWWhoNTlWTkxBN1duLS1UMld4aW5ZQzlLaVhhZjBaUEFzZ1hVQU16cjF0VUNwWHltdzVXQ1NYUHVWRXZyVnFCeDAtOE1tMlJJQ3VkUkR6UEN1NXExZXF6QjhCX0tTb09iZ05IS3lCSkRKTzRMdEtuODNjbzJXcFlQUEJwRXRHSmxkZ1g3UVZIT3lxLQ?oc=5",
-          "ageMin": 23,
-          "headline": "Benji Heinke introduces ‘Cerulean’ single and video ahead of new concept album - Electronic Groove",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxQZW1SLV81SE5rTDBqcGhJVlFsWWhoNTlWTkxBN1duLS1UMld4aW5ZQzlLaVhhZjBaUEFzZ1hVQU16cjF0VUNwWHltdzVXQ1NYUHVWRXZyVnFCeDAtOE1tMlJJQ3VkUkR6UEN1NXExZXF6QjhCX0tTb09iZ05IS3lCSkRKTzRMdEtuODNjbzJXcFlQUEJwRXRHSmxkZ1g3UVZIT3lxLQ?oc=5\" target=\"_blank\" Benji "
+          "outlet": "Rolling Stone",
+          "tier": 7,
+          "url": "https://www.rollingstone.com/music/music-features/ava-max-energy-fifa-world-cup-interview-1235594478/",
+          "ageMin": 176,
+          "headline": "Ava Max Scores: The Pop Star on the World Cup, Her Favorite ABBA Song, and More",
+          "summary": "The singer talks about her thrilling single “Energy” at the opening night of FIFA House in NYC"
         }
       ],
-      "ageMin": 23,
+      "ageMin": 176,
       "_cand": {
-        "key": "rss:benji-heinke-introduces-cerulean-single-and-video-ahead-of-n",
+        "key": "rss:ava-max-scores-the-pop-star-on-the-world-cup-her-favorite-ab",
         "popularity": 0,
-        "kind": "gnews"
+        "kind": "rss-news"
       },
+      "breakoutVelocity": 0,
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
+        "tier1Count": 1,
+        "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Electronic Groove"
+          "Rolling Stone"
         ],
-        "maxTier": 5,
+        "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Electronic Groove",
+        "attribution": "Rolling Stone",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 59,
+      "priority": 55,
       "signals": {
-        "recency": 24,
-        "corroboration": 8,
+        "recency": 16,
+        "corroboration": 12,
         "status": 18,
         "type": 9,
         "pop": 0,
@@ -605,139 +736,9 @@
       "tierClass": "C"
     },
     {
-      "id": "awards-asghar-farhadi-honorary-heart-of-sarajevo",
-      "slug": "asghar-farhadi-to-receive-honorary-heart-of-sarajevo-award",
-      "title": "Asghar Farhadi to Receive Honorary Heart of Sarajevo Award",
-      "contentType": "awards",
-      "formatTag": "awards",
-      "category": "awards",
-      "subcategory": "winners",
-      "eventType": "award",
-      "sensitivity": "normal",
-      "eventSlug": "asghar-farhadi-honorary-heart-of-sarajevo",
-      "primaryKeyword": "asghar farhadi award",
-      "primaryEntity": "Asghar Farhadi",
-      "entities": [
-        "Sarajevo Film Festival",
-        "Emily Watson"
-      ],
-      "angle": "Acclaimed Iranian filmmaker Asghar Farhadi will receive an honorary award at the Sarajevo Film Festival.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/asghar-farhadi-honorary-heart-sarajevo-film-festival-iran-1236650798/",
-          "ageMin": 593,
-          "headline": "Asghar Farhadi to Receive Honorary Heart of Sarajevo",
-          "summary": "The acclaimed Iranian filmmaker will collect the award in person at the Bosnian film festival, which is also recognizing British actress Emily Watson."
-        }
-      ],
-      "ageMin": 593,
-      "_cand": {
-        "key": "rss:asghar-farhadi-to-receive-honorary-heart-of-sarajevo",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 48,
-      "signals": {
-        "recency": 4,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-lena-heady-hollywood-predatory-men-game-of-thrones",
-      "slug": "lena-headey-rips-hollywood-for-protecting-predatory-men-says-game-of-t",
-      "title": "Lena Headey Rips Hollywood for Protecting Predatory Men, Says Game of Thrones Toxic Fans Got Mad She Didn t Go Nude: I Was Shocked by the Anger",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "lena-heady-hollywood-predatory-men-game-of-thrones",
-      "primaryKeyword": "lena heady game of thrones",
-      "primaryEntity": "Lena Headey",
-      "entities": [
-        "Game of Thrones - Conquest & Rebellion: An Animated History of the Seven Kingdoms",
-        "Game of Thrones"
-      ],
-      "angle": "Lena Headey speaks out about Hollywood protecting predatory men and fan reactions to her 'Game of Thrones' role.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/film/news/lena-headey-game-of-thrones-fans-angry-nudity-1236812337/",
-          "ageMin": 196,
-          "headline": "Lena Headey Rips Hollywood for Protecting Predatory Men, Says Game of Thrones Toxic Fans Got Mad She Didn t Go Nude: I Was Shocked by the Anger",
-          "summary": "Lena Headey gave a wide-ranging interview with The Telegraph and opened up about her experiences in Hollywood with nudity and predatory men. The “Game of Thrones” Emmy nominee accused Harvey Weinstein of sexual harassment in 2017, claiming he made suggestive comments to her at the Venice Film Festival when they were promoting “The Brothers Grimm.” [ ]"
-        }
-      ],
-      "ageMin": 196,
-      "_cand": {
-        "key": "rss:lena-headey-rips-hollywood-for-protecting-predatory-men-says",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 50,
-      "signals": {
-        "recency": 9,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 6,
-        "trending": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
       "id": "news-luke-skywalker-lightsaber-auction-record",
-      "slug": "luke-skywalker-s-lightsaber-set-a-new-star-wars-prop-record-at-an-auct",
-      "title": "Luke Skywalker’s Lightsaber Set a New “Star Wars” Prop Record at an Auction",
+      "slug": "luke-skywalker-s-lightsaber-sets-new-star-wars-prop-record-at-auction",
+      "title": "Luke Skywalker’s Lightsaber Sets New 'Star Wars' Prop Record at Auction",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
@@ -745,12 +746,12 @@
       "eventType": "other",
       "sensitivity": "normal",
       "eventSlug": "luke-skywalker-lightsaber-auction-record",
-      "primaryKeyword": "Luke Skywalker lightsaber auction",
+      "primaryKeyword": "Star Wars lightsaber auction",
       "primaryEntity": "Luke Skywalker's Lightsaber",
       "entities": [
         "Star Wars"
       ],
-      "angle": "A lightsaber prop belonging to Luke Skywalker has set a new record at auction.",
+      "angle": "A 'Star Wars' prop, Luke Skywalker's lightsaber, sets a new record at auction.",
       "tmdbType": "movie",
       "source": "gnews:Hits 96 | WDOD-FM",
       "sources": [
@@ -758,12 +759,12 @@
           "outlet": "Hits 96 | WDOD-FM",
           "tier": 5,
           "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQZVgtRmVkQVlIdnpYbTdiZTNQMWlFck81WDNQYllGS0wwVUZWZ1VmUGhUaHZPWW84Vl83SFpISWY0RklpVEtsdVRPNGgtUFA5Y0lPZHdUMmhXQjZoZzhuTjBDRjBMZHJUdkVsWlEwemVpRktDX0hETTV3SzJfVVJ0SzVEaHZGT1VjVUQ2WkplOXloRXlfRW9CMTc2QUQ?oc=5",
-          "ageMin": 28,
+          "ageMin": 88,
           "headline": "Luke Skywalker’s Lightsaber Set a New “Star Wars” Prop Record at an Auction - Hits 96 | WDOD-FM",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMinAFBVV95cUxQZVgtRmVkQVlIdnpYbTdiZTNQMWlFck81WDNQYllGS0wwVUZWZ1VmUGhUaHZPWW84Vl83SFpISWY0RklpVEtsdVRPNGgtUFA5Y0lPZHdUMmhXQjZoZzhuTjBDRjBMZHJUdkVsWlEwemVpRktDX0hETTV3SzJfVVJ0SzVEaHZGT1VjVUQ2WkplOXloRXlfRW9CMTc2QUQ?oc=5\" target=\"_blank\" Luke Skywalker’s "
         }
       ],
-      "ageMin": 28,
+      "ageMin": 88,
       "_cand": {
         "key": "rss:luke-skywalker-s-lightsaber-set-a-new-star-wars-prop-record-",
         "popularity": 0,
@@ -784,9 +785,9 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 67,
+      "priority": 59,
       "signals": {
-        "recency": 24,
+        "recency": 16,
         "corroboration": 8,
         "status": 18,
         "type": 5,
@@ -796,41 +797,123 @@
         "trending": 0,
         "softTv": 0
       },
-      "tierClass": "B"
+      "tierClass": "C"
     },
     {
-      "id": "news-kneecap-lawsuit",
-      "slug": "kneecap-sues-after-canada-denies-entry",
-      "title": "Kneecap Sues After Canada Denies Entry",
+      "id": "news-netflix-acquires-ben-affleck-ai-startup-interpositive",
+      "slug": "netflix-paid-587-million-for-ben-affleck-s-ai-startup-interpositive",
+      "title": "Netflix Paid $587 Million for Ben Affleck's AI Startup InterPositive",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
-      "eventType": "lawsuit",
+      "eventType": "announcement",
       "sensitivity": "normal",
-      "tier": "indie",
-      "eventSlug": "kneecap-lawsuit",
-      "primaryKeyword": "kneecap lawsuit",
-      "primaryEntity": "Kneecap",
+      "eventSlug": "netflix-acquires-ben-affleck-ai-startup-interpositive",
+      "primaryKeyword": "ben affleck ai startup",
+      "primaryEntity": "Ben Affleck",
       "entities": [
-        "Polaris Music Prize"
+        "Netflix",
+        "InterPositive"
       ],
-      "angle": "Northern Irish hip-hop group Kneecap is suing after being denied entry into Canada, impacting their participation in events like the Polaris Music Prize.",
+      "angle": "Netflix's significant investment in Ben Affleck's AI venture is revealed.",
       "tmdbType": "movie",
-      "source": "rss:Billboard",
+      "source": "rss:Variety",
       "sources": [
         {
-          "outlet": "Billboard",
+          "outlet": "Variety",
           "tier": 7,
-          "url": "https://www.billboard.com/pro/polaris-music-prize-changes-angine-de-poitrine-canada-news/",
-          "ageMin": 33,
-          "headline": "In Canada: Inside the Polaris Music Prize s Big Period of Change, Plus Angine de Poitrine Debuts in Toronto",
-          "summary": "Also up north this week: Kneecap moves to sue after being denied entry to Canada."
+          "url": "https://variety.com/2026/film/news/netflix-paid-587-million-ben-affleck-ai-interpositive-1236815111/",
+          "ageMin": 21,
+          "headline": "Netflix Paid $587 Million for Ben Affleck s AI Startup InterPositive",
+          "summary": "Netflix paid $587 million in cash when it purchased Ben Affleck s AI startup InterPositive, the company disclosed in a federal filing. As part of the company’s Form 10-Q report with the Securities and Exchange Commission, Netflix confirmed that it completed an acquisition in March “for a total purchase price of approximately $587 million. The disclosure [ ]"
+        },
+        {
+          "outlet": "TheWrap",
+          "tier": 7,
+          "url": "https://www.thewrap.com/industry-news/deals-ma/netflix-ben-affleck-interpositive-purchase-price-587-million/",
+          "ageMin": 44,
+          "headline": "Netflix Paid $587 Million in Cash for Ben Affleck s AI Startup InterPositive",
+          "summary": "The figure was disclosed in a regulatory filing by the streamer on Friday The post Netflix Paid $587 Million in Cash for Ben Affleck s AI Startup InterPositive appeared first on TheWrap ."
+        },
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/business/business-news/netflix-price-ben-affleck-ai-company-revealed-1236651217/",
+          "ageMin": 59,
+          "headline": "Netflix Paid $587 Million for Ben Affleck s AI Company",
+          "summary": "The streaming giant disclosed the figure in a footnote in a securities filing Friday."
         }
       ],
-      "ageMin": 33,
+      "ageMin": 21,
       "_cand": {
-        "key": "rss:in-canada-inside-the-polaris-music-prize-s-big-period-of-cha",
+        "key": "rss:netflix-paid-587-million-for-ben-affleck-s-ai-startup-interp",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 3,
+      "verification": {
+        "tier1Count": 3,
+        "tier1Owners": 2,
+        "outletCount": 3,
+        "outlets": [
+          "Variety",
+          "TheWrap",
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": null,
+        "framing": "plain",
+        "status": "CONFIRMED",
+        "publishable": true
+      },
+      "priority": 97,
+      "signals": {
+        "recency": 24,
+        "corroboration": 24,
+        "status": 25,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 15,
+        "softTv": 0
+      },
+      "tierClass": "A"
+    },
+    {
+      "id": "news-shane-gillis-breaks-guinness-world-record-solo-comedy-show",
+      "slug": "shane-gillis-breaks-guinness-world-record-for-most-tickets-sold-for-a-",
+      "title": "Shane Gillis Breaks Guinness World Record for Most Tickets Sold for a Solo Comedy Show (EXCLUSIVE)",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "shane-gillis-breaks-guinness-world-record-solo-comedy-show",
+      "primaryKeyword": "Shane Gillis record",
+      "primaryEntity": "Shane Gillis",
+      "entities": [
+        "Guinness World Records"
+      ],
+      "angle": "Comedian Shane Gillis sets a Guinness World Record for the most tickets sold for a solo comedy show.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/tv/news/shane-gillis-breaks-guinness-world-record-tickets-sold-1236815073/",
+          "ageMin": 31,
+          "headline": "Shane Gillis Breaks Guinness World Record for Most Tickets Sold for a Solo Comedy Show (EXCLUSIVE)",
+          "summary": "Shane Gillis has made comedy history. With 76,212 tickets sold for his July 17 show at Lincoln Financial Field, the stadium home of the Philadelphia Eagles, Gillis has broken the Guinness World Record for most tickets sold for a comedy show by a solo comedian. Guinness World Records adjudicator Andy Glass verified the official ticket [ ]"
+        }
+      ],
+      "ageMin": 31,
+      "_cand": {
+        "key": "rss:shane-gillis-breaks-guinness-world-record-for-most-tickets-s",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -840,31 +923,31 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Billboard"
+          "Variety"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Billboard",
+        "attribution": "Variety",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 66,
+      "priority": 59,
       "signals": {
         "recency": 24,
         "corroboration": 12,
         "status": 18,
-        "type": 12,
+        "type": 5,
         "pop": 0,
         "breakout": 0,
         "big": 0,
         "trending": 0,
         "softTv": 0
       },
-      "tierClass": "S"
+      "tierClass": "C"
     },
     {
-      "id": "news-brenda-fricker-death",
+      "id": "news-brenda-fricker-dies-at-81",
       "slug": "brenda-fricker-oscar-winning-actress-dies-at-81",
       "title": "Brenda Fricker, Oscar-Winning Actress, Dies at 81",
       "contentType": "news",
@@ -873,14 +956,14 @@
       "subcategory": "news",
       "eventType": "death",
       "sensitivity": "high",
-      "eventSlug": "brenda-fricker-death",
+      "eventSlug": "brenda-fricker-dies-at-81",
       "primaryKeyword": "brenda fricker",
       "primaryEntity": "Brenda Fricker",
       "entities": [
         "My Left Foot",
         "Home Alone 2: Lost in New York"
       ],
-      "angle": "Oscar-winning actress Brenda Fricker, known for her role in 'My Left Foot' and 'Home Alone 2,' has passed away at 81.",
+      "angle": "Oscar-winning actress Brenda Fricker, known for her roles in 'My Left Foot' and 'Home Alone 2,' has passed away at 81.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
@@ -888,12 +971,12 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/movies/movie-news/brenda-fricker-dead-my-left-foot-1236650849/",
-          "ageMin": 446,
+          "ageMin": 506,
           "headline": "Brenda Fricker, Oscar-Winning Actress in ‘My Left Foot,’ Dies at 81",
           "summary": "The history-making Dublin native also appeared in ‘The Field,’ ‘Home Alone 2: Lost in New York’ and ‘So I Married an Axe Murderer.’"
         }
       ],
-      "ageMin": 446,
+      "ageMin": 506,
       "_cand": {
         "key": "rss:brenda-fricker-oscar-winning-actress-in-my-left-foot-dies-at",
         "popularity": 0,
