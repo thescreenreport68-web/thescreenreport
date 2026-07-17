@@ -63,6 +63,11 @@ export async function categorizeGossip(candidates, { classifyImpl = defaultClass
         confirmed: !!r.confirmed,
         official: !!r.official,
         denied: !!r.denied,
+        // Phase 1 — demand signals carried through the seam (the ranker scores on these; they were computed
+        // by discovery and previously discarded right here).
+        engagement: c.engagement ?? null,
+        ageMin: c.ageMin ?? null,
+        viaTrending: !!c.viaTrending,
         sources: [{ outlet: c.outlet, url: c.url, tier: c.tier ?? tierOf(c.outlet) }],
       });
     }

@@ -23,6 +23,7 @@ export const OUTLET_TIER = {
   "Just Jared": 5, Collider: 5, IndieWire: 5, Complex: 5, Vulture: 5, "Entertainment Tonight": 5,
   // tier 4 — tabloid / gossip blog
   "Daily Mail": 4, "The Sun": 4, "The Shade Room": 4, "Radar Online": 4, "The Blast": 4,
+  "OK! Magazine": 4, "Life & Style": 4, "Dlisted": 4, "In Touch Weekly": 4,
   // tier 2 — social / anonymous (a DISCOVERY signal only, never proof of a claim)
   "Pop Crave": 2, PopBase: 2, DeuxMoi: 2, Deuxmoi: 2, X: 2, Twitter: 2, Reddit: 2, Instagram: 2, TikTok: 2,
 };

@@ -36,11 +36,19 @@ cleanup();
   check("queuedAt stamped on enqueue", loadQueue(TMP).topics[0].queuedAt === "2026-07-04T10:00:00Z");
 }
 
-// 3) dequeue pops the OLDEST first (FIFO) and removes them (the claim).
+// 3) dequeue pops by DEMAND SCORE (Phase 1 ranker) — equal scores keep FIFO; pop removes (the claim).
 {
+  // x1/x2 were queued 2026-07-04 (stale, penalized); x3 has no queuedAt. Rebuild a clean queue to prove
+  // both behaviors explicitly.
+  saveQueue([
+    { id: "f1", title: "A", queuedAt: null },                                              // baseline
+    { id: "f2", title: "B", queuedAt: null },                                              // baseline (same score as f1)
+    { id: "hot", title: "Star X and Star Y split", engagement: 5000, queuedAt: null },     // hot class + engagement
+  ], TMP);
   const popped = dequeue(2, { filePath: TMP });
-  check("dequeue returns the oldest n (FIFO)", popped.length === 2 && popped[0].id === "x1" && popped[1].id === "x2");
-  check("dequeued topics are removed from the queue", loadQueue(TMP).topics.length === 1 && loadQueue(TMP).topics[0].id === "x3");
+  check("dequeue pops the highest-scoring topic first", popped[0].id === "hot" && popped[0]._score > (popped[1]._score ?? 0), JSON.stringify(popped.map((p) => p.id)));
+  check("equal scores keep FIFO order (f1 before f2)", popped[1].id === "f1");
+  check("dequeued topics are removed from the queue", loadQueue(TMP).topics.length === 1 && loadQueue(TMP).topics[0].id === "f2");
 }
 
 // 4) dequeue never over-pops an empty/short queue.

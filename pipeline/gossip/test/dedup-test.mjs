@@ -8,6 +8,8 @@ import { embed } from "../embed.mjs";
 import { openStore } from "../vecStore.mjs";
 import { dedupCheck, recordPublished, urlHash, eventKey } from "../dedup.mjs";
 import { gossipRun } from "../gossiprun.mjs";
+import { mkdtempSync } from "node:fs"; import { tmpdir } from "node:os"; import { join as _join } from "node:path";
+process.env.GOSSIP_STATS_DIR = mkdtempSync(_join(tmpdir(), "gossip-stats-")); // keep test stats out of data/gossip
 
 let pass = 0, fail = 0;
 const check = (n, c, d = "") => { if (c) { pass++; console.log("  ✅ " + n); } else { fail++; console.log("  ❌ " + n + "  " + d); } };

@@ -9,6 +9,7 @@ import { tick } from "../scheduler.mjs";
 let pass = 0, fail = 0; const fails = [];
 const check = (n, c, d = "") => { if (c) { pass++; console.log("  ✅ " + n); } else { fail++; fails.push(n); console.log("  ❌ " + n + "  " + d); } };
 const tmp = () => fs.mkdtempSync(path.join(os.tmpdir(), "gossip-p0-"));
+process.env.GOSSIP_STATS_DIR = fs.mkdtempSync(path.join(os.tmpdir(), "gossip-stats-")); // keep test stats out of data/gossip
 
 console.log("\n=== PHASE 0: review mode / stats / streak / PAUSED ===\n");
 

@@ -17,6 +17,8 @@ import { gossipRun } from "../gossiprun.mjs";
 import { verifyQuotes } from "../quoteGuard.mjs";
 import { legalGate } from "../legalGate.mjs";
 import { severity } from "../policy.mjs";
+import { mkdtempSync } from "node:fs"; import { tmpdir } from "node:os"; import { join as _join } from "node:path";
+process.env.GOSSIP_STATS_DIR = mkdtempSync(_join(tmpdir(), "gossip-stats-")); // keep test stats out of data/gossip
 
 let pass = 0, fail = 0; const fails = [];
 const check = (name, cond, detail = "") => { if (cond) { pass++; console.log(`  ✅ ${name}`); } else { fail++; fails.push(name); console.log(`  ❌ ${name}  ${detail}`); } };

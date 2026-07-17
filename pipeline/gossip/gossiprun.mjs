@@ -9,7 +9,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { gossipFind, dequeue } from "./find.mjs";
+import { gossipFind, dequeue, enqueue } from "./find.mjs";
 import { runGossip } from "./run.mjs";
 import { writeGossipArticle } from "./assemble.mjs";
 import { detectGossipType, LEDE_ORDER } from "./writer.mjs";
@@ -119,6 +119,13 @@ export async function gossipRun({
     if (dedup && store) {
       dd = await dedupCheck(t, store, { embedImpl, adjudicateImpl, now: new Date(now) });
       if (dd.decision === "DUPLICATE" || dd.decision === "HOLD" || dd.decision === "UPDATE") {
+        // Phase 1 waste-kill: a TRANSIENT dedup error (embed/store outage, fail-closed HOLD) used to lose the
+        // popped topic forever (pop = claim). Re-queue it once so the next tick retries; a real dup stays dropped.
+        if (dd.decision === "HOLD" && /dedup error/i.test(dd.reason || "") && !dryRun && (t.requeueCount || 0) < 1) {
+          enqueue([{ ...t, requeueCount: (t.requeueCount || 0) + 1 }], { nowIso: new Date(now).toISOString() });
+          report.skipped.push({ id: t.id, category: cat, decision: "REQUEUED", reason: dd.reason });
+          continue;
+        }
         report.skipped.push({ id: t.id, category: cat, decision: dd.decision, reason: dd.reason, parentKey: dd.parentKey || null });
         continue;
       }
@@ -157,7 +164,13 @@ export async function gossipRun({
       });
       rotIdx++; // advance the lede rotation ONLY on an actual publish, so consecutive live articles differ
     } else if (r.status === "HELD") {
-      report.held.push({ id: t.id, category: cat, reason: r.reason });
+      // Phase 1 waste-kill: a frame-HOLD (EXTREME class awaiting an established outlet) already paid for
+      // gather + editorial — re-queue it ONCE (waitingForMajor) so it publishes when a major picks it up,
+      // instead of losing the story forever. A second HOLD drops it for real (3-strikes-lite).
+      if (r.stage === "frame" && !dryRun && (t.requeueCount || 0) < 1) {
+        enqueue([{ ...t, requeueCount: (t.requeueCount || 0) + 1, waitingForMajor: true }], { nowIso: new Date(now).toISOString() });
+        report.held.push({ id: t.id, category: cat, reason: r.reason, requeued: true });
+      } else report.held.push({ id: t.id, category: cat, reason: r.reason });
     } else if (r.status === "REJECTED_THIN") {
       // editorial gate: not a real/substantive story (a bare social post / photo / non-story) — never written.
       report.rejected.push({ id: t.id, category: cat, entity: t.primaryEntity, title: t.title, reason: r.reason });
@@ -186,14 +199,15 @@ export async function gossipRun({
     try {
       report.review = !!REVIEW;
       const cr = costReport();
+      const statsDir = process.env.GOSSIP_STATS_DIR ? path.resolve(process.env.GOSSIP_STATS_DIR) : undefined;
       writeRunStats({
         ts: new Date(now).toISOString(), mode: report.mode, review: !!REVIEW,
         published: report.published.map((p) => p.slug), topics: report.topics,
         held: report.held.length, rejected: report.rejected.length, skipped: report.skipped.length, blocked: report.blocked.length,
         costUSD: Number(cr.total.toFixed(6)), costPerPublished: report.published.length ? Number((cr.total / report.published.length).toFixed(6)) : null,
         byModel: cr.byModel, byRole: meterReport(),
-      });
-      if (!REVIEW) updateStreak({ published: report.published.length, processed: report.topics });
+      }, statsDir ? { dir: statsDir } : {});
+      if (!REVIEW) updateStreak({ published: report.published.length, processed: report.topics }, statsDir ? { dir: statsDir } : {});
     } catch (e) { console.error("[stats] failed:", String(e?.message || e).slice(0, 80)); }
   }
   return report;

@@ -57,6 +57,19 @@ export function buildGossipMarkdown({ article, frame, provenance, route, topic, 
     targetKeyword: targetKeywordFor({ primaryEntity: topic.primaryEntity, tags }),
     formatTag: "gossip",
     gossipType,
+    // Phase 1 — homepage heat-contract analogs (site/lib/homepage.ts heat-ranks on these; additive fields).
+    // trendScore is CONSERVATIVE: mapped from the ranker score and capped at 70 so gossip never hijacks the
+    // hero from a real news heat story (homepage BASE_SCORE prior for unscored articles is 30).
+    ...(topic._score != null ? { trendScore: Math.min(70, Math.round(25 + topic._score / 2)) } : {}),
+    eventSlug: topic.id || slug,
+    eventType: gossipType,
+    outletCount: provenance.corroborationCount ?? null,
+    signals: [
+      ...(topic.engagement != null ? [`social:${topic.engagement}`] : []),
+      ...(topic.heat != null ? [`heat:${topic.heat}x`] : []),
+      ...(provenance.corroborationCount ? [`outlets:${provenance.corroborationCount}`] : []),
+      ...(topic.viaTrending ? ["via:trending-search"] : []),
+    ],
     tags,
     keyTakeaways: article.keyTakeaways || [],
     faq: (article.faq || []).filter((f) => f && f.q && f.a).map((f) => ({ q: f.q, a: f.a })),

@@ -63,6 +63,7 @@ jobs:
           TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
           OMDB_API_KEY: ${{ secrets.OMDB_API_KEY }}
           LASTFM_API_KEY: ${{ secrets.LASTFM_API_KEY }}
+          TWITTERAPI_KEY: ${{ secrets.TWITTERAPI_KEY }}
           INTERVAL_MIN: "115"
           GOSSIP_DIAG: "1"
           GOSSIP_REVIEW_DIR: ${{ github.event.inputs.review == 'true' && 'data/gossip/review' || '' }}

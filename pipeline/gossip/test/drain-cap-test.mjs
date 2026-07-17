@@ -2,6 +2,8 @@
 // (b) NEVER runaway-drain the whole backlog: it stops after `maxDrain` processed topics per tick (bounds the cloud
 // tick's wall-clock). Uses an injected dequeue + runImpl (no queue file, no network). Run: node .../drain-cap-test.mjs
 import { gossipRun } from "../gossiprun.mjs";
+import { mkdtempSync } from "node:fs"; import { tmpdir } from "node:os"; import { join as _join } from "node:path";
+process.env.GOSSIP_STATS_DIR = mkdtempSync(_join(tmpdir(), "gossip-stats-")); // keep test stats out of data/gossip
 
 let pass = 0, fail = 0; const fails = [];
 const check = (n, c, d = "") => { if (c) { pass++; console.log("  ✅ " + n); } else { fail++; fails.push(n); console.log("  ❌ " + n + "  " + d); } };

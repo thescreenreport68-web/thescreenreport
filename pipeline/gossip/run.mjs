@@ -15,7 +15,7 @@
 //                                              remained after cutting fabricated quotes / contradicted claims
 //   { status: "BLOCKED_LEGAL", blocks }      — an absolute legal RED LINE (minor sexual allegation / intimate media)
 //   { status: "PUBLISH", article, frame, provenance, auto, bundle, editorial } — ready to assemble + publish
-import { gatherBundle } from "./contentFinder.mjs";
+import { gatherBundle, corroborateBundle } from "./contentFinder.mjs";
 import { editorialReview } from "./editorialGate.mjs";
 import { frameTopic } from "./frame.mjs";
 import { writeGossip } from "./writer.mjs";
@@ -105,9 +105,10 @@ export async function runGossip(topic, {
   editorial = true, editorialImpl = editorialReview,
   maxFix = 3, ledeStyle = "scene",
 } = {}) {
-  // Stage 3 — receipts (fail-closed). Step 4: corroborate pulls in more outlets so the writer rewrites from a
-  // corroborated multi-source bundle, not one thin blurb (fail-safe).
-  const bundle = await gatherBundle(topic, { ...(fetchImpl ? { fetchImpl } : {}), corroborate });
+  // Stage 3 — receipts (fail-closed). CHEAP-FIRST (Phase 1): extract the PRIMARY source only, let the
+  // editorial gate reject non-stories, and pay for corroboration ONLY on stories the gate keeps — a
+  // REJECTED_THIN candidate no longer costs the corroboration search + extra extractions.
+  const bundle = await gatherBundle(topic, { ...(fetchImpl ? { fetchImpl } : {}), corroborate: false });
   if (!bundle.ok) return { status: "BLOCKED", reason: bundle.reason, stage: "content-finder" };
 
   // Stage 3.5 — EDITORIAL GATE (the "read the actual story and decide" step). Grounded in the collected content,
@@ -129,6 +130,10 @@ export async function runGossip(topic, {
       topic.angle = ed.angle || topic.angle || "";
     }
   }
+
+  // Step 4 — corroboration, AFTER the editorial gate kept the story (fail-safe enrichment; the frame below
+  // tiers off the corroborated bundle exactly as before — only the spend order changed).
+  if (corroborate) { try { await corroborateBundle(topic, bundle, { ...(fetchImpl ? { fetchImpl } : {}) }); } catch { /* enrichment only */ } }
 
   // Stage 4 — frame. Pass the CORROBORATED bundle + the editorial verdict so tier/attribution reflect what the
   // CONTENT actually establishes (a wire-reported fact is a fact; the real reporting outlet is the byline), not

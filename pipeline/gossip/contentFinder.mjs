@@ -104,41 +104,62 @@ export async function gatherBundle(topic, { fetchImpl = fetch, extractImpl, corr
   // corroboratingOutlets = EVERY distinct outlet found covering this story (name + domain + tier), even the ones we
   // don't extract a body from. The frame tiers off this: "6 major wires reported it" makes it a FACT, not
   // speculation — a signal that must survive even when a given outlet's article body isn't fetchable.
-  const corroboratingOutlets = [];
-  if (corroborate && topic.primaryEntity) {
-    try {
-      const extra = await findUrlsImpl(topic, { fetchImpl, seedDomain: [...seedDomains][0] || "" });
-      let extracted = 0, attempts = 0;
-      // Cap extraction ATTEMPTS, not just successes: a rate-limited extractor that keeps failing must not make us
-      // try (and time out on) every outlet. Tiering below still uses ALL found outlets — it needs no per-source fetch.
-      const maxAttempts = maxCorroborating + 1;
-      for (const e of extra || []) {
-        if (seedDomains.has(e.domain)) continue;
-        corroboratingOutlets.push({ outlet: e.outlet || e.domain, domain: e.domain, tier: tierOfDomain(e.domain) });
-        if (extracted >= maxCorroborating || attempts >= maxAttempts) continue; // keep collecting outlets for tiering; stop fetching bodies
-        attempts++;
-        const ex = await extractClean(e.url, { fetchImpl, extractImpl });
-        if (ex && ex.text.length >= 400 && mentionsEntity(ex.text)) {
-          // ex.url = Jina's resolved publisher URL (for a Google link); fall back to the original for direct URLs.
-          sources.push({ outlet: e.outlet || e.domain, url: ex.url || e.url, tier: tierOfDomain(e.domain), text: ex.text, quotes: [], corroborating: true });
-          seedDomains.add(e.domain);
-          extracted++;
-        }
-      }
-    } catch { /* corroboration is enrichment only — never fatal */ }
-  }
-  const ok = sources.length > 0;
-  return {
+  const bundle = {
     entity: topic.primaryEntity || null,
     sources,
-    corroboratingOutlets, // tiering/attribution signal (all covering outlets), separate from the extracted bodies
-    coveringOutletCount: new Set([...sources.map((s) => (s.url ? registrableDomain(s.url) : s.outlet)), ...corroboratingOutlets.map((o) => o.domain)]).size,
-    // Quotable corpus = SEED sources only. Corroborating sources carry text for grounding but contribute NO quotes,
-    // so a real quote from a different story can never be handed to the writer as this rumor's evidence.
-    quotes: [...new Set(sources.filter((s) => !s.corroborating).flatMap((s) => s.quotes))].slice(0, 20),
-    outletCount: new Set(sources.map((s) => s.outlet)).size,
-    corroborationCount: new Set(sources.map((s) => (s.url ? registrableDomain(s.url) : s.outlet))).size,
-    ok,
-    reason: ok ? "" : "no extractable source text — BLOCK (never write a gossip story from nothing)",
+    corroboratingOutlets: [], // tiering/attribution signal (all covering outlets), separate from the extracted bodies
+    ok: sources.length > 0,
+    reason: sources.length ? "" : "no extractable source text — BLOCK (never write a gossip story from nothing)",
   };
+  refreshBundleCounts(bundle);
+  // Back-compat: corroborate inline when asked. The CHEAP-FIRST path (run.mjs Phase 1) gathers with
+  // corroborate:false, runs the editorial gate, and pays for corroboration ONLY on stories the gate keeps.
+  if (corroborate && bundle.ok) await corroborateBundle(topic, bundle, { fetchImpl, extractImpl, findUrlsImpl, maxCorroborating });
+  return bundle;
+}
+
+// Recompute the derived counts + the quotable corpus after sources change. Quotable corpus = SEED sources only:
+// corroborating sources carry text for grounding but contribute NO quotes, so a real quote from a different story
+// can never be handed to the writer as this rumor's evidence.
+function refreshBundleCounts(bundle) {
+  const sources = bundle.sources;
+  bundle.coveringOutletCount = new Set([...sources.map((s) => (s.url ? registrableDomain(s.url) : s.outlet)), ...bundle.corroboratingOutlets.map((o) => o.domain)]).size;
+  bundle.quotes = [...new Set(sources.filter((s) => !s.corroborating).flatMap((s) => s.quotes || []))].slice(0, 20);
+  bundle.outletCount = new Set(sources.map((s) => s.outlet)).size;
+  bundle.corroborationCount = new Set(sources.map((s) => (s.url ? registrableDomain(s.url) : s.outlet))).size;
+  return bundle;
+}
+
+// STEP 4 as a standalone stage (Phase 1 cheap-first): find + extract MORE articles about the same rumor, from
+// DISTINCT outlets, and fold them into an EXISTING bundle. Same guards as before: entity-mention gate, extraction
+// attempt cap, corroborating sources contribute grounding text + outlet count but NEVER quotes. Best-effort —
+// a finder/extractor fault never breaks an otherwise-publishable run. Mutates + returns the bundle.
+export async function corroborateBundle(topic, bundle, { fetchImpl = fetch, extractImpl, findUrlsImpl = findCorroboratingUrls, maxCorroborating = 2 } = {}) {
+  if (!topic?.primaryEntity || !bundle?.sources) return bundle;
+  const seedDomains = new Set(bundle.sources.map((s) => (s.url ? registrableDomain(s.url) : null)).filter(Boolean));
+  const ent = (topic.primaryEntity || "").trim();
+  const entLc = ent.toLowerCase();
+  const surnameLc = ent.split(/\s+/).pop()?.toLowerCase() || "";
+  const mentionsEntity = (txt) => { const t = (txt || "").toLowerCase(); return !ent || t.includes(entLc) || (surnameLc.length > 2 && t.includes(surnameLc)); };
+  try {
+    const extra = await findUrlsImpl(topic, { fetchImpl, seedDomain: [...seedDomains][0] || "" });
+    let extracted = 0, attempts = 0;
+    // Cap extraction ATTEMPTS, not just successes: a rate-limited extractor that keeps failing must not make us
+    // try (and time out on) every outlet. Tiering still uses ALL found outlets — it needs no per-source fetch.
+    const maxAttempts = maxCorroborating + 1;
+    for (const e of extra || []) {
+      if (seedDomains.has(e.domain)) continue;
+      bundle.corroboratingOutlets.push({ outlet: e.outlet || e.domain, domain: e.domain, tier: tierOfDomain(e.domain) });
+      if (extracted >= maxCorroborating || attempts >= maxAttempts) continue; // keep collecting outlets for tiering; stop fetching bodies
+      attempts++;
+      const ex = await extractClean(e.url, { fetchImpl, extractImpl });
+      if (ex && ex.text.length >= 400 && mentionsEntity(ex.text)) {
+        // ex.url = Jina's resolved publisher URL (for a Google link); fall back to the original for direct URLs.
+        bundle.sources.push({ outlet: e.outlet || e.domain, url: ex.url || e.url, tier: tierOfDomain(e.domain), text: ex.text, quotes: [], corroborating: true });
+        seedDomains.add(e.domain);
+        extracted++;
+      }
+    }
+  } catch { /* corroboration is enrichment only — never fatal */ }
+  return refreshBundleCounts(bundle);
 }
