@@ -112,25 +112,25 @@ export async function publishCard({ imageUrl, captions, whenISO, live = false, b
   // already due, i.e. no whenISO) = publishNow:true; scheduled = status "scheduled" + scheduledFor
   // + timezone (the reels lane's proven shape — NEVER status:"scheduled" without a time, review #2);
   // draft = status "draft" (live-proven) + isDraft (the changelog's post-level flag) — both sent.
-  // firstComment lives INSIDE the platform entry as platformSpecificData.firstComment —
-  // root-level placement is silently IGNORED (proven live 2026-07-16: first two posts stored
-  // no comment field at all; docs.zernio.com First Comment example confirms the shape).
-  const common = (accountId, platform, content, firstComment) => ({
+  // NO first comments, ever — owner directive 2026-07-17: the automation must never
+  // comment on its own posts. (History: firstComment was researched, built, and briefly
+  // live on 2026-07-16; the owner saw it and vetoed it. Do not re-add.)
+  const common = (accountId, platform, content) => ({
     content,
     ...(live
       ? breaking || !whenISO
         ? { publishNow: true }
         : { status: "scheduled", scheduledFor: whenISO, timezone: CARDS.slots.postTz }
       : { status: "draft", isDraft: true }),
-    platforms: [{ accountId, platform, ...(firstComment ? { platformSpecificData: { firstComment } } : {}) }],
+    platforms: [{ accountId, platform }],
     mediaItems: [{ type: "image", url: imageUrl }],
   });
   const enabled = CARDS.platforms.filter((p) => !platformPaused(p));
   for (const platform of enabled) {
     try {
       const body = platform === "instagram"
-        ? common(CARDS.zernio.igAccountId, "instagram", captions.ig, captions.firstComment)
-        : common(CARDS.zernio.fbAccountId, "facebook", captions.fb, captions.firstComment);
+        ? common(CARDS.zernio.igAccountId, "instagram", captions.ig)
+        : common(CARDS.zernio.fbAccountId, "facebook", captions.fb);
       const data = await zernioCreate(body, `(${platform})`);
       results.push({ platform, id: postId(data), ok: Boolean(postId(data)) });
       await sleep(2000); // courtesy gap between the IG and FB calls of ONE card (burst spacing between CARDS is enforced upstream)
