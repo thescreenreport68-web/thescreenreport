@@ -1,0 +1,77 @@
+{
+  "ts": "2026-07-17T09:01:30.101Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    "caleb-shomo-fleur-shomo-file-for-divorce-after-he-came-out-as-gay"
+  ],
+  "topics": 1,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 0,
+  "costUSD": 0.018848,
+  "costPerPublished": 0.018848,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 8,
+      "in": 14946,
+      "out": 1684,
+      "usd": 0.00816541
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 6,
+      "in": 17083,
+      "out": 9086,
+      "usd": 0.009425553199999999
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 4,
+      "in": 6968,
+      "out": 1401,
+      "usd": 0.0012572
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2388,
+      "out": 203,
+      "usd": 0.0012239,
+      "ms": 1602
+    },
+    "writer": {
+      "calls": 5,
+      "errors": 0,
+      "in": 13896,
+      "out": 6286,
+      "usd": 0.00533332,
+      "ms": 296839
+    },
+    "verify": {
+      "calls": 8,
+      "errors": 1,
+      "in": 14664,
+      "out": 2243,
+      "usd": 0.007985299999999999,
+      "ms": 14903
+    },
+    "judge": {
+      "calls": 2,
+      "errors": 0,
+      "in": 3285,
+      "out": 546,
+      "usd": 0.0005469,
+      "ms": 3479
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1577,
+      "out": 93,
+      "usd": 0.00019490000000000002,
+      "ms": 2533
+    }
+  }
+}
