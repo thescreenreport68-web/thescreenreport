@@ -54,6 +54,22 @@ export function currentNumberRaw(gathered = {}, boxData = {}, dailyChart = null)
 }
 const milestonesCrossed = (prevHigh, cur) =>
   MILESTONES.filter((m) => (prevHigh == null || prevHigh < m) && cur != null && cur >= m);
+
+// PER-METRIC figures for the ledger — domestic and worldwide tracked SEPARATELY. The old single-number
+// baseline mixed them: it ratcheted to the WORLDWIDE figure, which a film's daily DOMESTIC advance could
+// never beat, permanently locking 7 of 8 tracked films out of daily updates (and conversely letting a
+// drifting worldwide republish an identical domestic story — the Obsession double-publish).
+export function currentMetrics(gathered = {}, boxData = {}, dailyChart = null) {
+  const money = (x) => (typeof x === "number" ? x : normMoney(x));
+  const domestic = [dailyChart?.cume, gathered.cume, gathered.domestic, gathered.openingWeekend]
+    .map(money).find((n) => Number.isFinite(n) && n > 0) ?? null;
+  let worldwide = [gathered.worldwide, boxData.worldwide, boxData.worldwideRaw]
+    .map(money).find((n) => Number.isFinite(n) && n > 0) ?? null;
+  // Sanity: a "worldwide" below domestic, or dwarfing it >5×, is a wrong/mis-attributed figure — drop it.
+  if (worldwide != null && domestic != null && (worldwide < domestic || worldwide > domestic * 5)) worldwide = null;
+  return { domestic, worldwide };
+}
+const laDayOf = (d) => new Intl.DateTimeFormat("en-CA", { timeZone: "America/Los_Angeles" }).format(d);
 const dropPctOf = (g) => { const n = parseFloat(String(g?.dropPct ?? "").replace("%", "")); return Number.isFinite(n) ? n : null; };
 const daysSince = (releaseDate, now) => {
   const d = Date.parse(releaseDate || ""); if (!Number.isFinite(d)) return null;
@@ -64,25 +80,36 @@ const daysSince = (releaseDate, now) => {
 // `tag` is the eventSlug discriminator that keeps distinct material updates from dedup-colliding.
 export function isMaterial(film, gathered = {}, boxData = {}, tracked = null, { now = new Date() } = {}) {
   const rec = tracked?.films?.[trackKey(film)] || null;
-  const prev = rec?.lastNumberRaw ?? null;
+  const dc = film?.dailyChart || null;
+  const m = currentMetrics(gathered, boxData, dc);
+  // DOMESTIC is the tracking metric (the daily chart is a domestic chart); worldwide only tracks a film
+  // with no domestic data at all. The two baselines never mix (the lockout/double-publish root cause).
+  const cur = m.domestic ?? m.worldwide;
+  const prev = m.domestic != null ? (rec?.lastDomesticRaw ?? null) : (rec?.lastWorldwideRaw ?? null);
   const prevMilestone = rec?.lastMilestone ?? null;
-  const cur = currentNumberRaw(gathered, boxData, film?.dailyChart || null);
-  const days = rec?.daysInReleaseApprox ?? daysSince(film?.releaseDate, now);
+  // Day-in-release: the chart's own day number is authoritative (the old releaseDate-only fallback stamped
+  // d0 on 7 of 9 live articles); releaseDate math is the fallback.
+  const chartDay = dc?.dayInRelease ? (String(dc.dayInRelease).match(/\d+/) || [null])[0] : null;
+  const days = chartDay != null ? Number(chartDay) : (rec?.daysInReleaseApprox ?? daysSince(film?.releaseDate, now));
 
-  // FIRST time we cover this film — always a story.
-  if (prev == null) return { material: cur != null, reason: cur != null ? "first tracked number" : "no number", tag: `d${days ?? 0}`, currentRaw: cur };
+  // FIRST time we track this metric for this film — always a story.
+  if (rec == null || prev == null) return { material: cur != null, reason: cur != null ? "first tracked number" : "no number", tag: `d${days ?? 0}`, currentRaw: cur };
+
+  const ms = milestonesCrossed(prevMilestone ?? prev, cur);
+  // ONE update per film per LA day (owner's freshness contract) — a second same-day update is only a story
+  // when a milestone crossed since the morning's piece.
+  if (rec.lastArticleAt && laDayOf(new Date(rec.lastArticleAt)) === laDayOf(now) && !ms.length)
+    return { material: false, reason: "already covered today (one update per film per day)", tag: null, currentRaw: cur };
 
   // 🔴 THE OWNER'S #1 RULE: an UPDATE must have a running total STRICTLY HIGHER than the last number we
-  // published for this film. A theatrical gross only goes UP, so a same-or-lower number means we are looking
-  // at the SAME or a STALE report (e.g. re-pulling the Day-15 numbers) — that is NOT a new story and must be
-  // rejected, so we never re-report Day-15's numbers as a "Day-20" update.
+  // published for this film ON THE SAME METRIC. A theatrical gross only goes UP, so a same-or-lower number
+  // means a same/stale report — never re-report Day-15's numbers as a "Day-20" update.
   if (cur == null || cur <= prev)
     return { material: false, reason: `no new number (current ${cur == null ? "unknown" : "$" + Math.round(cur / 1e6) + "M"} not above last published $${Math.round(prev / 1e6)}M)`, tag: null, currentRaw: cur };
 
   // The number genuinely advanced — a new day's story. Build the headline reason + a DISTINCT dedup tag
   // (prefer the milestone, else the day-in-release, else the new cume) so each fresh update is its own event.
   const reasons = ["cume advanced"];
-  const ms = milestonesCrossed(prevMilestone ?? prev, cur);
   let tag = ms.length ? `${Math.round(Math.max(...ms) / 1e6)}m` : (days != null ? `d${days}` : `c${Math.round(cur / 1e6)}m`);
   if (ms.length) reasons.unshift(`crossed $${Math.round(Math.max(...ms) / 1e6)}M`);
   const dp = dropPctOf(gathered);
@@ -130,18 +157,26 @@ export function linkPriorCoverage(body, tracked, film) {
 // Record a REAL publish into the ledger (call only on a non-dry-run publish).
 export function recordArticle(tracked, { film, form, slug, category, gathered = {}, boxData = {}, now = new Date() }) {
   const k = trackKey(film);
-  const cur = currentNumberRaw(gathered, boxData, film?.dailyChart || null);
+  const dc = film?.dailyChart || null;
+  const m = currentMetrics(gathered, boxData, dc);
+  const cur = m.domestic ?? m.worldwide;
   const rec = tracked.films[k] || {
     tmdbId: film?.tmdbId || null, title: film?.title || "", releaseDate: film?.releaseDate || "",
-    firstSeenAt: now.toISOString(), articles: [], status: "in-theaters", lastNumberRaw: null, lastMilestone: null,
+    firstSeenAt: now.toISOString(), articles: [], status: "in-theaters",
+    lastNumberRaw: null, lastDomesticRaw: null, lastWorldwideRaw: null, lastMilestone: null, lastArticleAt: null,
   };
   rec.title = film?.title || rec.title;
   rec.releaseDate = film?.releaseDate || rec.releaseDate;
-  if (cur != null) rec.lastNumberRaw = Math.max(rec.lastNumberRaw || 0, cur);
+  // Per-metric ratchets — domestic and worldwide NEVER mix (the baseline-poisoning root cause).
+  if (m.domestic != null) rec.lastDomesticRaw = Math.max(rec.lastDomesticRaw || 0, m.domestic);
+  if (m.worldwide != null) rec.lastWorldwideRaw = Math.max(rec.lastWorldwideRaw || 0, m.worldwide);
+  if (cur != null) rec.lastNumberRaw = Math.max(rec.lastNumberRaw || 0, cur); // legacy display field only
   const ms = milestonesCrossed(rec.lastMilestone, cur);
   if (ms.length) rec.lastMilestone = Math.max(rec.lastMilestone || 0, ...ms);
   rec.lastForm = form;
-  rec.daysInReleaseApprox = daysSince(rec.releaseDate, now);
+  rec.lastArticleAt = now.toISOString(); // the one-update-per-film-per-day gate reads this
+  const chartDay = dc?.dayInRelease ? (String(dc.dayInRelease).match(/\d+/) || [null])[0] : null;
+  rec.daysInReleaseApprox = chartDay != null ? Number(chartDay) : daysSince(rec.releaseDate, now);
   if (form === "NOW-STREAMING") rec.status = "now-streaming-done";
   rec.articles.push({ slug, form, category: category || null, at: now.toISOString(), headlineNumberRaw: cur });
   if (rec.articles.length > 40) rec.articles = rec.articles.slice(-40);

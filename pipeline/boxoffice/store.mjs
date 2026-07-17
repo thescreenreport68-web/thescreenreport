@@ -17,15 +17,15 @@ export const boKey = (eventSlug, form) => `${eventSlug || "no-event"}|${form}`;
 export function loadStore(file = STORE_PATH) {
   try {
     const s = JSON.parse(fs.readFileSync(file, "utf8"));
-    return { published: s.published || [], parked: s.parked || [], zeroStreak: s.zeroStreak || 0, file };
+    return { published: s.published || [], parked: s.parked || [], zeroStreak: s.zeroStreak || 0, daySpend: s.daySpend || null, file };
   } catch {
-    return { published: [], parked: [], zeroStreak: 0, file };
+    return { published: [], parked: [], zeroStreak: 0, daySpend: null, file };
   }
 }
 
 function save(store) {
   fs.mkdirSync(path.dirname(store.file), { recursive: true });
-  const out = { published: store.published.slice(-CAP), parked: store.parked.slice(-500), zeroStreak: store.zeroStreak || 0 };
+  const out = { published: store.published.slice(-CAP), parked: store.parked.slice(-500), zeroStreak: store.zeroStreak || 0, daySpend: store.daySpend || null };
   fs.writeFileSync(store.file, JSON.stringify(out, null, 1));
 }
 
@@ -74,14 +74,36 @@ export function parkAngle(store, eventSlug, form, reason, { maxTries = 3, now = 
   let cur = store.parked.find((x) => x.key === key);
   if (cur) { cur.tries = (cur.tries || 1) + 1; cur.reason = reason; cur.at = now.toISOString(); }
   else { cur = { key, eventSlug, form, reason, tries: 1, at: now.toISOString() }; store.parked.push(cur); }
-  if (cur.tries >= maxTries) cur.dead = true;
+  // A dead park EXPIRES after 72h — it is a cooldown, not a death sentence. The old permanent park killed
+  // 13 of 24 keys (10 of them streaming) and was a top cause of the dead streaming mix: a title that failed
+  // three times on a thin news day could never be attempted again, even weeks later with fresh material.
+  if (cur.tries >= maxTries) { cur.dead = true; cur.expiresAt = new Date(now.getTime() + 72 * 3600e3).toISOString(); }
   save(store);
   return cur.tries;
 }
 
-export function parkedTries(store, eventSlug, form) {
+export function parkedTries(store, eventSlug, form, { now = new Date() } = {}) {
   const p = store.parked.find((x) => x.key === boKey(eventSlug, form));
-  return p?.dead ? Infinity : p?.tries || 0;
+  if (!p) return 0;
+  if (p.dead) {
+    if (p.expiresAt && now.getTime() > Date.parse(p.expiresAt)) { p.dead = false; p.tries = 0; save(store); return 0; }
+    return Infinity;
+  }
+  return p.tries || 0;
+}
+
+// DAILY SPEND CAP (owner cost mandate): running LA-day spend, persisted in the store. borun refuses to
+// start a paid run once the day's total crosses the cap — the lane can never quietly burn again.
+const laDay = (d) => new Intl.DateTimeFormat("en-CA", { timeZone: "America/Los_Angeles" }).format(d);
+export function bumpDaySpend(store, usd, { now = new Date() } = {}) {
+  const day = laDay(now);
+  if (!store.daySpend || store.daySpend.laDay !== day) store.daySpend = { laDay: day, usd: 0 };
+  store.daySpend.usd = Number((store.daySpend.usd + (Number(usd) || 0)).toFixed(5));
+  save(store);
+  return store.daySpend;
+}
+export function daySpendUsd(store, { now = new Date() } = {}) {
+  return store.daySpend && store.daySpend.laDay === laDay(now) ? store.daySpend.usd : 0;
 }
 
 export function clearParked(store, eventSlug, form) {

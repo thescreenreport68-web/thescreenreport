@@ -22,7 +22,9 @@ export const REVIEW_DIR = path.resolve(DATA_DIR, "review");
 export const ACCEPT_FLOOR = 68;
 // 3 self-heal passes (was 2): detect → correct/cut → re-check, so the automation rectifies its OWN
 // mistakes (fabrication, hedge, drop-spin) and publishes clean without a human, instead of holding.
-export const MAX_ATTEMPTS = Number(process.env.MAX_ATTEMPTS) || 3;
+// COST LEVER (§4.4): one draft + ONE surgical correction pass — the old 3-attempt loop was the single
+// biggest spend line (writer+QA retries = ~80% of a failed tick's cost).
+export const MAX_ATTEMPTS = Number(process.env.MAX_ATTEMPTS) || 2;
 
 // ── THE FORMS (step-1 set) — floors are fail-closed ──────────────────────────────────────────────
 // STEP 1 builds the in-theater box-office forms + the now-streaming exit. NETFLIX-TOP10 / TRENDING-TV
@@ -95,6 +97,10 @@ export const MAX_ARTICLES_PER_DAY = Number(process.env.BOXOFFICE_MAX_PER_DAY) ||
 // total, never a streaming-flooded 20; the mix is the contract, and we NEVER fabricate box-office to pad it).
 export const STREAMING_DAILY_CAP = Number(process.env.BOXOFFICE_STREAMING_CAP) || 5;
 export const MAX_RUN_COST_USD = Number(process.env.BOXOFFICE_MAX_RUN_COST_USD) || 0.5;
+// DAILY spend ceiling (owner cost mandate): live ticks refuse to start a paid run once the LA-day total
+// crosses this — at target economics 20/day costs ~$0.25-0.35, so $1.50 is a generous 4-5× safety margin
+// that still makes a runaway regression LOUD (::warning::) instead of a silent month-end surprise.
+export const DAILY_SPEND_CAP_USD = Number(process.env.BOXOFFICE_DAILY_SPEND_CAP_USD) || 1.5;
 // FLOOD CAP: never dump N near-identical box-office pieces in one tick (plan §6). The orchestrator's
 // per-run `limit` is the burst cap; default 1 for the lean unit.
 export const FLOOD_CAP = Number(process.env.BOXOFFICE_FLOOD_CAP) || 3;

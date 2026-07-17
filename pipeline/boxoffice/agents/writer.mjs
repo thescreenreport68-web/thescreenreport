@@ -9,7 +9,6 @@ import { agentChat } from "../models.mjs";
 import { FORMS, SEO } from "../config.bo.mjs";
 import { boxDataBlock } from "../boxofficeData.mjs";
 import { netflixBlock } from "../netflix.mjs";
-import { canonicalFigures } from "../moneyGuard.mjs";
 
 const FORM_GUIDE = {
   "BO-OPENING": `This is a DEBUT (opening weekend). PART 1 — the movie: what it is, its director + cast, the buzz,
@@ -54,22 +53,10 @@ STYLE: strong hook, short human paragraphs, a clear why-up/why-down, at most ${S
 subheadings and they must be STORY-SPECIFIC (never "What's next?"-type filler), one natural use of the SEO keyword.
 Engagement + readability is the #1 KPI. Return STRICT JSON only.`;
 
-// Deterministic box-office section for a daily UPDATE — built ONLY from the CANONICAL figure set (the
-// same single source of truth the title, metaTitle, boxOffice block, and FAQs draw from), so every number
-// is accurate, invention-free, AND self-consistent across every surface of the article.
-export function dailyBoxOfficeSection(job) {
-  const canon = canonicalFigures({ gathered: job.gathered || {}, boxData: job.boxData || {}, film: job.film || {} });
-  const sentences = [];
-  const clause = [];
-  if (canon.domestic) clause.push(`has grossed ${canon.domestic.text} at the domestic box office`);
-  if (canon.dayInRelease) clause.push(`${canon.dayInRelease} days into its theatrical run`);
-  if (canon.theaters) clause.push(`while playing across ${canon.theaters.text} theaters`);
-  if (clause.length) sentences.push(`${job.film.title} ${clause.join(", ")}.`);
-  if (canon.dailyGross) sentences.push(`The film added ${canon.dailyGross.text} in its most recent day of release.`);
-  if (canon.worldwide) sentences.push(`Worldwide, it has taken in ${canon.worldwide.text}.`);
-  if (canon.budget) sentences.push(`It carries a reported production budget of ${canon.budget.text}.`);
-  return sentences.length ? `\n\n## At the Box Office\n\n${sentences.join(" ")}` : "";
-}
+// NOTE: the deterministic "At the Box Office" numbers section used to be appended HERE (inside the writer,
+// BEFORE QA) — which meant the fidelity/no-invention walls could cut the lane's own verified sentences, and
+// did: 9/9 live articles shipped without their headline number. It now lives in assemble.mjs and is appended
+// AFTER every wall has run, built from the same canonical figure set — structurally uncuttable.
 
 // run(job, {corrections, previousArticle}) → job.article
 export async function run(job, { corrections = null, previousArticle = null, chatImpl = null } = {}) {
@@ -134,12 +121,12 @@ export async function run(job, { corrections = null, previousArticle = null, cha
 6) A closing line on its momentum.`
     : isDailyUpdate
     ? `Write a ~210-word profile of the MOVIE ITSELF. The verified box-office figures are added by the system as a separate section, so you write ONLY about the film — develop each part into a full paragraph:
-1) LEAD: a hook introducing the film and why audiences are turning out for it (its premise, its stars) — NO numbers.
+1) LEAD: a hook introducing the film and its stars — NO numbers, NO performance verdicts.
 2) WHAT IT IS: the premise/story, the genre, the runtime, and the director — developed fully from the TMDB context.
-3) THE CAST: the full cast and the characters they play.
-4) THE APPEAL: why it is resonating with audiences right now (from the reception/context provided).
-5) A closing line on the film.
-⛔ CRITICAL: do NOT write ANY dollar amount, gross, cume, budget, theater count, day-in-release, ranking, percentage, or profit/loss — the system inserts every verified box-office figure itself in a separate section. Writing a number here only gets it cut. Write ONLY about the movie and its appeal.`
+3) THE CAST: the full cast and the characters they play — develop this richly.
+4) RECEPTION — ONLY if the provided material contains reception ATTRIBUTED to a named source (a trade, a score); write it WITH the attribution. If no sourced reception is provided, OMIT this section entirely — a shorter honest profile beats an invented one.
+5) A closing line on the film itself.
+⛔ CRITICAL: do NOT write ANY dollar amount, gross, cume, budget, theater count, day-in-release, ranking, or percentage — the system inserts every verified figure itself. ⛔ NEVER assess financial performance or audience turnout ("disappointment", "loss", "below expectations", "remake fatigue", "audiences are hesitant") unless quoting a NAMED source — automatic guards cut every unattributed verdict. You do not know the numbers; do not characterize them.`
     : `STRUCTURE — develop EACH of these into full paragraph(s) (this is what makes it a real article, not a stub):
 1) LEAD: the hook — the star(s) + the headline number, in one or two punchy sentences.
 2) THE MOVIE: what it is (premise + genre + runtime), the director, and the CAST with the characters they play.
@@ -171,33 +158,43 @@ ${corrections ? `\n⚠⚠ MANDATORY CORRECTIONS — fix ONLY these, change nothi
 
 Return JSON with EXACTLY these fields: ${schema}`;
 
+  // COST LEVER (§4.5): chart-update profile prose runs on the cheap terse model — every number, title,
+  // metaTitle, takeaway, FAQ and the numbers section are SYSTEM-BUILT downstream, so the writer here only
+  // produces a short movie profile. Features keep the verbose writer.
+  const role = isDailyUpdate ? "writerChart" : "writer";
+
   if (previousArticle && corrections) {
-    const { data } = await agentChat("writer", { system: SYS, user, surgical: true }, chatImpl ? { chatImpl } : {});
+    const { data } = await agentChat(role, { system: SYS, user, surgical: true }, chatImpl ? { chatImpl } : {});
     job.article = { ...previousArticle, ...(data || {}) };
     return job;
   }
 
-  // Rich material in hand, generate up to 2 drafts and keep the most fully-developed one. The retry NUDGE
-  // asks the model to develop the material it left on the table (faithful) — it never asks it to pad to a
-  // number (padding = the fabrication this lane exists to avoid). Stop early once a complete draft clears
-  // the grounding-matched budget.
-  const wc = (a) => (a?.body || "").split(/\s+/).filter(Boolean).length;
-  const complete = (d) => !!d?.body && (d?.keyTakeaways || []).length >= 3 && (d?.faq || []).length >= 2;
+  // COST LEVER (§4.4): ONE draft. The old best-of-N loop was a length lottery that tripled writer spend;
+  // length now comes from structure (and the system-built numbers section), not retries. The second attempt
+  // below fires ONLY on a transport/parse failure (no body at all), never to shop for a longer draft.
   let best = null;
-  for (let attempt = 0; attempt < 2; attempt++) {
-    const nudge = attempt ? `\n\n⚠ Your previous draft left real material undeveloped — you have the full cast and the characters they play, the premise, the reception, and what each number means in the material above. Develop those into full paragraphs (same facts, better words). Do NOT invent anything; use only the material given.` : "";
-    const { data } = await agentChat("writer", { system: SYS, user: user + nudge }, chatImpl ? { chatImpl } : {});
-    if (!data?.body) continue;
-    if (!best || (complete(data) && !complete(best)) || (complete(data) === complete(best) && wc(data) > wc(best))) best = data;
-    if (complete(best) && wc(best) >= budgetLo) break;
+  for (let attempt = 0; attempt < 2 && !best?.body; attempt++) {
+    const { data } = await agentChat(role, { system: SYS, user }, chatImpl ? { chatImpl } : {});
+    if (data?.body) best = data;
   }
-  // Daily updates: strip any box-office NUMBER sentence the cheap writer slipped in despite the instruction, so
-  // nothing is left for the fidelity wall to cut, THEN append the deterministic verified figures. This is what
-  // makes daily updates publish reliably — the numbers are 100% system-generated and accurate.
+  // Daily updates: the writer must not write numbers (the system builds them at assemble, AFTER QA, so no
+  // wall can ever cut them). Strip any stray number-bearing SENTENCE the model slipped in — per line, so
+  // paragraph breaks and markdown headings survive intact (the old whole-body rejoin flattened `##` headings
+  // into paragraphs, which then rendered as literal hash marks on the live page).
   if (isDailyUpdate && best?.body) {
-    const prose = best.body.split(/(?<=[.!?])\s+/).filter((s) => !/\$\s?\d|\b\d[\d.,]*\s*(million|billion)\b|#\s?\d/i.test(s)).join(" ").trim();
-    const keepProse = prose.split(/\s+/).filter(Boolean).length >= 120 ? prose : best.body.trim();
-    best.body = keepProse + dailyBoxOfficeSection(job);
+    const NUM_RE = /\$\s?\d|\b\d[\d.,]*\s*(million|billion)\b|#\s?\d/i;
+    const stripped = best.body.split("\n").map((line) => {
+      const t = line.trim();
+      if (!t) return line;
+      // A figure-bearing HEADING is dropped whole ("## A Record-Shattering Run to $1 Billion" — an invented
+      // figure in a heading survived the old sentence-level strip and became an uncuttable phantom).
+      if (/^#{1,6}\s/.test(t)) return NUM_RE.test(t) ? "" : line;
+      // Drop number sentences AND digit-leading fragments (a stripped "#6" left "6 highest grossing movie
+      // ever…" as an orphan fragment — a broken half-sentence must never survive into the profile).
+      return line.split(/(?<=[.!?])\s+/).filter((s) => !NUM_RE.test(s) && !/^\d/.test(s.trim())).join(" ");
+    }).join("\n").replace(/\n{3,}/g, "\n\n").trim();
+    const words = stripped.split(/\s+/).filter(Boolean).length;
+    if (words >= 110) best.body = stripped;
   }
   job.article = best;
   return job;

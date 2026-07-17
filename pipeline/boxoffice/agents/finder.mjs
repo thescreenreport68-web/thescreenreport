@@ -72,10 +72,18 @@ export async function findFilms({ limit = 3, discoverImpl = discoverFilms, chatI
     // writer is starved to ~120 words. With the hint, the current title's cast+characters+premise+genre flow
     // through → a full 200-word streaming brief.
     const nfYear = String(nf?.week || "").slice(0, 4);
-    const mkStream = (row, formKey, kind, wt, q2) => mkEntry(
-      { id: null, title: row.title, year: nfYear, releaseDate: nf?.week || "", popularity: Math.max(40, 100 - (row.rank || 1) * 8), overview: "", originalLanguage: "en", via: kind, netflix: { ...row, week: nf.week } },
-      formKey, { workingTitle: wt, queries: [`${row.title} netflix`, q2] });
-    const slugFor = (title, formKey) => `${String(title || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "")}-${formKey.toLowerCase()}`;
+    // WEEK-KEYED slugs: the Netflix chart is a WEEKLY story — a title holding the Top 10 in a NEW week with
+    // new hours is a new article. The old week-less slug meant a title covered once could never re-post
+    // (a top cause of the dead streaming mix); same-week repeats are still blocked by the same key.
+    const weekTag = String(nf?.week || "").slice(0, 10);
+    const slugFor = (title, formKey) => `${String(title || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "")}-${formKey.toLowerCase()}${weekTag ? `-w${weekTag}` : ""}`;
+    const mkStream = (row, formKey, kind, wt, q2) => {
+      const e = mkEntry(
+        { id: null, title: row.title, year: nfYear, releaseDate: nf?.week || "", popularity: Math.max(40, 100 - (row.rank || 1) * 8), overview: "", originalLanguage: "en", via: kind, netflix: { ...row, week: nf.week } },
+        formKey, { workingTitle: wt, queries: [`${row.title} netflix`, q2] });
+      e.trigger.eventSlug = slugFor(row.title, formKey);
+      return e;
+    };
     // VOLUME FIX: surface EVERY fresh (uncovered) Netflix Top 10 entry — not just the first — so the lane can
     // work the WHOLE chart (10 films + 10 TV per week = ~20 reliable streaming stories) across the day's ticks,
     // rotating to the next uncovered title each tick. Netflix's own hours anchor these, so they publish

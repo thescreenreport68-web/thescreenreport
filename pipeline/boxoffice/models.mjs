@@ -46,6 +46,19 @@ export const AGENTS = {
     watchdogMs: 240e3,
     attemptDeadlineMs: 150e3,
   },
+  // Chart-update PROFILE prose only (~150-220 words). Every number, title, metaTitle, takeaway, FAQ and the
+  // "At the Box Office" section are SYSTEM-BUILT from canonical figures, so the writer here only writes a short
+  // movie profile — the terse ultra-cheap model that failed 300-word features is EXACTLY right for this
+  // (cost lever §4.5: ~4× cheaper than gpt-4.1-mini; features keep the verbose writer below).
+  writerChart: {
+    model: "deepseek/deepseek-v3.2",
+    fallback: "openai/gpt-4.1-mini",
+    temperature: 0.7,
+    surgicalTemperature: 0.2,
+    maxTokens: 3000,
+    watchdogMs: 180e3,
+    attemptDeadlineMs: 120e3,
+  },
   // The judge — fidelity walls run deterministically BEFORE this; the judge scores engagement/readability.
   qa: {
     model: "google/gemini-2.5-flash",
