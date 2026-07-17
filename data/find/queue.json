@@ -1,7 +1,7 @@
 {
-  "runId": "run-2026-07-17T05-30-43",
-  "builtAt": "2026-07-17T05:31:54.045Z",
-  "count": 13,
+  "runId": "run-2026-07-17T06-30-37",
+  "builtAt": "2026-07-17T06:31:40.876Z",
+  "count": 11,
   "topics": [
     {
       "id": "news-the-odyssey-film-announcement",
@@ -13,7 +13,6 @@
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "tier": "popular",
       "eventSlug": "the-odyssey-film-announcement",
       "primaryKeyword": "the odyssey score",
       "primaryEntity": "The Odyssey",
@@ -30,12 +29,12 @@
           "outlet": "Variety",
           "tier": 7,
           "url": "https://variety.com/2026/artisans/news/the-odyssey-ludwig-goransson-film-score-1236813153/",
-          "ageMin": 79,
+          "ageMin": 139,
           "headline": "The Sound of The Odyssey : Composer Ludwig Göransson Used Ancient Greek Instruments, Scrap Metals and Gongs",
           "summary": "Composer Ludwig Göransson has reunited with Christopher Nolan to score The Odyssey, marking their third collaboration after Tenet and Oppenheimer. Earlier this year, Göransson’s work on Star Wars: The Mandalorian and Grogu showcased his use of heavy synths and guitar-based orchestrations. However, for The Odyssey, Göransson ventures into new territory. Nolan instructed Göransson not to use [ ]"
         }
       ],
-      "ageMin": 79,
+      "ageMin": 139,
       "_cand": {
         "key": "rss:the-sound-of-the-odyssey-composer-ludwig-g-ransson-used-anci",
         "popularity": 0,
@@ -73,232 +72,24 @@
       "tierClass": "A"
     },
     {
-      "id": "news-christopher-nolan-the-odyssey-announcement",
-      "slug": "christopher-nolan-s-the-odyssey-is-a-true-big-budget-hollywood-spectac",
-      "title": "Christopher Nolan’s “The Odyssey” Is a True Big-Budget Hollywood Spectacle",
+      "id": "news-christopher-nolan-the-odyssey-casting",
+      "slug": "christopher-nolan-s-the-odyssey-set-for-july-17-release-matt-damon-to-",
+      "title": "Christopher Nolan's 'The Odyssey' Set for July 17 Release, Matt Damon to Star",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
-      "eventType": "announcement",
+      "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "christopher-nolan-the-odyssey-announcement",
+      "eventSlug": "christopher-nolan-the-odyssey-casting",
       "primaryKeyword": "christopher nolan the odyssey",
       "primaryEntity": "The Odyssey",
       "entities": [
         "The Odyssey (film)",
-        "Christopher Nolan"
+        "Christopher Nolan",
+        "Matt Damon"
       ],
-      "angle": "Christopher Nolan's new big-budget Hollywood spectacle 'The Odyssey' is generating buzz.",
-      "tmdbType": "movie",
-      "source": "gnews:twincitiesgeek.com",
-      "sources": [
-        {
-          "outlet": "twincitiesgeek.com",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOUDF3MGd2VG05NE1jNGVaeEJQTC1tWDV0aVQ3am9yWWpXc1BwcHU4MzRUR1ZMZmttTi1McWQ0VWNVU1BaQ2VpeXZKMVBTd3MxSUdSNjFLTUtuZXE3NVV2a0FLNW16MDRsYUlNaVRRbXd6NjZvX0dvOXhzd2Q3QnZTemljbHhqYV9EM29ORTdHM20yZkpRR2NLaFlXUk0yN3I5Q0hNNHZTSG9wdWs?oc=5",
-          "ageMin": 165,
-          "headline": "Christopher Nolan’s “The Odyssey” Is a True Big-Budget Hollywood Spectacle - twincitiesgeek.com",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxOUDF3MGd2VG05NE1jNGVaeEJQTC1tWDV0aVQ3am9yWWpXc1BwcHU4MzRUR1ZMZmttTi1McWQ0VWNVU1BaQ2VpeXZKMVBTd3MxSUdSNjFLTUtuZXE3NVV2a0FLNW16MDRsYUlNaVRRbXd6NjZvX0dvOXhzd2Q3QnZTemljbHhqYV9EM29ORTdHM20yZkpRR2NLaFlXUk0yN3I5Q0hNNHZTSG9wdWs?oc=5\" target=\"_blan"
-        }
-      ],
-      "ageMin": 165,
-      "_cand": {
-        "key": "rss:christopher-nolan-s-the-odyssey-is-a-true-big-budget-hollywo",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "twincitiesgeek.com"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "twincitiesgeek.com",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 101,
-      "signals": {
-        "recency": 16,
-        "corroboration": 8,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "softTv": 0,
-        "radar": 26
-      },
-      "radarKind": "movie-in-theaters",
-      "tierClass": "A"
-    },
-    {
-      "id": "news-god-of-war-kratos-actor-recast-ryan-hurst-injury",
-      "slug": "god-of-war-shocker-kratos-actor-ryan-hurst-recast-after-on-set-injury",
-      "title": "God of War Shocker: Kratos Actor Ryan Hurst Recast After On-Set Injury",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "high",
-      "eventSlug": "god-of-war-kratos-actor-recast-ryan-hurst-injury",
-      "primaryKeyword": "god of war kratos actor recast",
-      "primaryEntity": "God of War",
-      "entities": [
-        "God of War (TV series)",
-        "Ryan Hurst",
-        "Kratos"
-      ],
-      "angle": "Prime Video's 'God of War' series will recast the role of Kratos after actor Ryan Hurst suffered an on-set injury.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/tv/news/god-of-war-recast-kratos-actor-ryan-hurst-injury-1236814409/",
-          "ageMin": 94,
-          "headline": "God of War Shocker: Kratos Actor Ryan Hurst Recast After On-Set Injury",
-          "summary": "Prime Video will recast the lead role on its upcoming adaptation of God of War after star Ryan Hurst was injured on set, Variety has confirmed. Hurst had been set to play Kratos, the titular god of war, and Prime Video even released a first look at Hurst in the role this past February. But [ ]"
-        },
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/god-of-war-recast-kratos-role-ryan-hurst-injured-on-set-1236984409/",
-          "ageMin": 120,
-          "headline": "God Of War To Recast Lead Kratos After Ryan Hurst Suffers Injury On Set Of Prime Video Series",
-          "summary": "EXCLUSIVE: This is a shocker: Prime Video s God Of War will have a new actor playing Kratos as the lead role in the high profile fantasy drama series is being recast, Deadline has learned. The decision, made after a careful consideration by the studios on the show, Sony Pictures Television and Amazon MGM Studios, comes [ ]"
-        }
-      ],
-      "ageMin": 94,
-      "_cand": {
-        "key": "rss:god-of-war-shocker-kratos-actor-ryan-hurst-recast-after-on-s",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 2,
-      "verification": {
-        "tier1Count": 2,
-        "tier1Owners": 1,
-        "outletCount": 2,
-        "outlets": [
-          "Variety",
-          "Deadline"
-        ],
-        "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 92,
-      "signals": {
-        "recency": 16,
-        "corroboration": 18,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 8,
-        "softTv": 0
-      },
-      "tierClass": "S"
-    },
-    {
-      "id": "trailer-gal-gadot-the-runner-trailer",
-      "slug": "gal-gadot-can-t-stop-running-in-new-trailer-for-prime-video-thriller",
-      "title": "Gal Gadot Can't Stop Running In New Trailer For Prime Video Thriller",
-      "contentType": "trailer",
-      "formatTag": "trailer",
-      "category": "movies",
-      "subcategory": "trailers",
-      "eventType": "trailer",
-      "sensitivity": "normal",
-      "eventSlug": "gal-gadot-the-runner-trailer",
-      "primaryKeyword": "gal gadot the runner trailer",
-      "primaryEntity": "The Runner",
-      "entities": [
-        "The Runner (film)",
-        "Gal Gadot",
-        "Prime Video"
-      ],
-      "angle": "Gal Gadot stars in new Prime Video thriller trailer.",
-      "tmdbType": "movie",
-      "source": "gnews:IMDb",
-      "sources": [
-        {
-          "outlet": "IMDb",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1tSmJ5ZDVfeVotUXY2bEZyRGh2blZpck5QZkpyR2VaR2tsdVdJOXluMFhmbWhyNzVrU0h2bVJCUjl3dnlkUHZycXV5bkhrdTdTc3dfUjcxY1A4VWswMzM5bkhwOEU2QQ?oc=5",
-          "ageMin": 186,
-          "headline": "The Runner: Gal Gadot Can't Stop Running In New Trailer For Prime Video Thriller - IMDb",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiZkFVX3lxTE1tSmJ5ZDVfeVotUXY2bEZyRGh2blZpck5QZkpyR2VaR2tsdVdJOXluMFhmbWhyNzVrU0h2bVJCUjl3dnlkUHZycXV5bkhrdTdTc3dfUjcxY1A4VWswMzM5bkhwOEU2QQ?oc=5\" target=\"_blank\" The Runner: Gal Gadot Can't Stop Running In New Trailer For Prime Video Thriller /a nbsp; "
-        }
-      ],
-      "ageMin": 186,
-      "_cand": {
-        "key": "rss:the-runner-gal-gadot-can-t-stop-running-in-new-trailer-for-p",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "IMDb"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "IMDb",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 74,
-      "signals": {
-        "recency": 9,
-        "corroboration": 8,
-        "status": 18,
-        "type": 15,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-jenna-ortega-rose-byrne-nasty-movie",
-      "slug": "jenna-ortega-rose-byrne-to-star-in-new-movie-nasty",
-      "title": "Jenna Ortega, Rose Byrne to Star in New Movie 'Nasty'",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "jenna-ortega-rose-byrne-nasty-movie",
-      "primaryKeyword": "Jenna Ortega Rose Byrne movie",
-      "primaryEntity": "Nasty (film)",
-      "entities": [
-        "Jenna Ortega",
-        "Rose Byrne",
-        "Mary Bronstein"
-      ],
-      "angle": "Jenna Ortega and Rose Byrne are set to star in a new film titled 'Nasty' from director Mary Bronstein.",
+      "angle": "Christopher Nolan's epic adaptation of Homer's 'The Odyssey' is set for a July 17 release, starring Matt Damon.",
       "tmdbType": "movie",
       "source": "rss:Variety",
       "sources": [
@@ -306,12 +97,12 @@
           "outlet": "Variety",
           "tier": 7,
           "url": "https://variety.com/lists/odyssey-cast-characters-christopher-nolan/",
-          "ageMin": 361,
+          "ageMin": 421,
           "headline": "The Odyssey Cast Guide: All the Heroes, Gods and Characters in Christopher Nolan s Greek Epic",
           "summary": "Christopher Nolan s adaptation of Homer s Greek epic The Odyssey is, well, epic. Releasing in theaters July 17, Nolan’s latest film reimagines the famous Greek tale of Odysseus, starring Matt Damon as the king of Ithaca. After teaching the Trojans that maybe you should look a giant, wooden gift horse in the mouth, Odysseus and his [ ]"
         }
       ],
-      "ageMin": 361,
+      "ageMin": 421,
       "_cand": {
         "key": "rss:the-odyssey-cast-guide-all-the-heroes-gods-and-characters-in",
         "popularity": 0,
@@ -332,7 +123,7 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 72,
+      "priority": 98,
       "signals": {
         "recency": 4,
         "corroboration": 12,
@@ -342,143 +133,141 @@
         "breakout": 0,
         "big": 24,
         "trending": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-heartstopper-other",
-      "slug": "inside-heartstopper-forever-cast-and-creator-reflect-on-the-show-s-imp",
-      "title": "Inside 'Heartstopper Forever': Cast and Creator Reflect on the Show's Impact Ahead of Finale",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "heartstopper-other",
-      "primaryKeyword": "Heartstopper finale",
-      "primaryEntity": "Heartstopper",
-      "entities": [
-        "Alice Oseman",
-        "Kit Connor",
-        "Joe Locke"
-      ],
-      "angle": "The cast and creator of the hit Netflix series 'Heartstopper' reflect on the show's groundbreaking impact as it concludes.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/the-end-of-an-era-inside-heartstopper-forever-and-the-show-that-changed-british-ya-1236646729/",
-          "ageMin": 716,
-          "headline": "The End of an Era: Inside Heartstopper Forever and the Show That Changed British YA",
-          "summary": "With the release of the two-hour finale that concludes the hit Netflix series, creator Alice Oseman along with Kit Connor, Joe Locke and more of the show's stars reflect on a groundbreaking, decade-long journey and what it means to end their queer love story."
-        }
-      ],
-      "ageMin": 716,
-      "_cand": {
-        "key": "rss:the-end-of-an-era-inside-heartstopper-forever-and-the-show-t",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 63,
-      "signals": {
-        "recency": 4,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 6,
-        "trending": 0,
         "softTv": 0,
-        "radar": 18
+        "radar": 26
       },
-      "radarKind": "tv-episode-today",
+      "radarKind": "movie-in-theaters",
       "tierClass": "A"
     },
     {
-      "id": "music-news-bts-normal-video-release",
-      "slug": "bts-invite-fans-to-look-beyond-the-spotlight-in-normal-video",
-      "title": "BTS Invite Fans to Look Beyond the Spotlight in Normal Video",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
+      "id": "news-christopher-nolan-the-odyssey-big-budget-spectacle",
+      "slug": "christopher-nolan-s-the-odyssey-hailed-as-big-budget-hollywood-spectac",
+      "title": "Christopher Nolan's 'The Odyssey' Hailed as Big-Budget Hollywood Spectacle",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "bts-normal-video-release",
-      "primaryKeyword": "bts normal",
-      "primaryEntity": "BTS",
+      "eventSlug": "christopher-nolan-the-odyssey-big-budget-spectacle",
+      "primaryKeyword": "christopher nolan the odyssey",
+      "primaryEntity": "The Odyssey",
       "entities": [
-        "Arirang (album)"
+        "Christopher Nolan"
       ],
-      "angle": "BTS releases new video for fans, inviting them to look beyond the spotlight.",
+      "angle": "Christopher Nolan's 'The Odyssey' is being hailed as a major big-budget Hollywood spectacle.",
       "tmdbType": "movie",
-      "source": "rss:Rolling Stone",
+      "source": "gnews:twincitiesgeek.com",
       "sources": [
         {
-          "outlet": "Rolling Stone",
-          "tier": 7,
-          "url": "https://www.rollingstone.com/music/music-news/bts-normal-music-video-arirang-album-1235594976/",
-          "ageMin": 88,
-          "headline": "BTS Invite Fans to Look Beyond the Spotlight in Normal Video",
-          "summary": "The song features on the band's massive hit album, Arirang"
+          "outlet": "twincitiesgeek.com",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOUDF3MGd2VG05NE1jNGVaeEJQTC1tWDV0aVQ3am9yWWpXc1BwcHU4MzRUR1ZMZmttTi1McWQ0VWNVU1BaQ2VpeXZKMVBTd3MxSUdSNjFLTUtuZXE3NVV2a0FLNW16MDRsYUlNaVRRbXd6NjZvX0dvOXhzd2Q3QnZTemljbHhqYV9EM29ORTdHM20yZkpRR2NLaFlXUk0yN3I5Q0hNNHZTSG9wdWs?oc=5",
+          "ageMin": 225,
+          "headline": "Christopher Nolan’s “The Odyssey” Is a True Big-Budget Hollywood Spectacle - twincitiesgeek.com",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxOUDF3MGd2VG05NE1jNGVaeEJQTC1tWDV0aVQ3am9yWWpXc1BwcHU4MzRUR1ZMZmttTi1McWQ0VWNVU1BaQ2VpeXZKMVBTd3MxSUdSNjFLTUtuZXE3NVV2a0FLNW16MDRsYUlNaVRRbXd6NjZvX0dvOXhzd2Q3QnZTemljbHhqYV9EM29ORTdHM20yZkpRR2NLaFlXUk0yN3I5Q0hNNHZTSG9wdWs?oc=5\" target=\"_blan"
         }
       ],
-      "ageMin": 88,
+      "ageMin": 225,
       "_cand": {
-        "key": "rss:bts-invite-fans-to-look-beyond-the-spotlight-in-normal-video",
+        "key": "rss:christopher-nolan-s-the-odyssey-is-a-true-big-budget-hollywo",
         "popularity": 0,
-        "kind": "rss-news"
+        "kind": "gnews"
       },
-      "breakoutVelocity": 0,
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
+        "tier1Count": 0,
+        "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "Rolling Stone"
+          "twincitiesgeek.com"
         ],
-        "maxTier": 7,
+        "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "Rolling Stone",
+        "attribution": "twincitiesgeek.com",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 55,
+      "priority": 94,
       "signals": {
-        "recency": 16,
-        "corroboration": 12,
+        "recency": 9,
+        "corroboration": 8,
         "status": 18,
         "type": 9,
         "pop": 0,
         "breakout": 0,
-        "big": 0,
+        "big": 24,
+        "trending": 0,
+        "softTv": 0,
+        "radar": 26
+      },
+      "radarKind": "movie-in-theaters",
+      "tierClass": "A"
+    },
+    {
+      "id": "news-elle-reclaims-legally-blonde-legacy",
+      "slug": "beyond-the-blonde-how-the-new-series-elle-reclaims-the-legally-blonde-",
+      "title": "Beyond the Blonde: How the New Series “Elle” Reclaims the “Legally Blonde” Legacy for a New Generation",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "elle-reclaims-legally-blonde-legacy",
+      "primaryKeyword": "Elle TV series",
+      "primaryEntity": "Elle (TV series)",
+      "entities": [
+        "Legally Blonde"
+      ],
+      "angle": "New series 'Elle' reclaims the 'Legally Blonde' legacy",
+      "tmdbType": "movie",
+      "source": "gnews:GLAAD",
+      "sources": [
+        {
+          "outlet": "GLAAD",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQSno3eV9TYzdNbzlGMXZDb3dGQ0c3NnNtMkZ0c0RMWmV1V3A5WnBGa1BrMXZjV1hyZHdKbkxOczk1T1dEdVNMVWZyTmgyQ3lwcWxVZUMtbTJWQldyTnN3djgwb0x3NHktaVc1a3ExdF9OZHB0VlpYR0ZzaTU4WVVkUUhxTW5LM2ZFMkRERy1SQTZJdmZDc3hYV1llOE1hOG15UFJfSTdfYktRdUFVVzVKN19aVW1Ldk9fSkExZktUSQ?oc=5",
+          "ageMin": 63,
+          "headline": "WATCH: Beyond the Blonde: How the New Series “Elle” Reclaims the “Legally Blonde” Legacy for a New Generation - GLAAD",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMivwFBVV95cUxQSno3eV9TYzdNbzlGMXZDb3dGQ0c3NnNtMkZ0c0RMWmV1V3A5WnBGa1BrMXZjV1hyZHdKbkxOczk1T1dEdVNMVWZyTmgyQ3lwcWxVZUMtbTJWQldyTnN3djgwb0x3NHktaVc1a3ExdF9OZHB0VlpYR0ZzaTU4WVVkUUhxTW5LM2ZFMkRERy1SQTZJdmZDc3hYV1llOE1hOG15UFJfSTdfYktRdUFVVzVKN19aVW1Ldk9fSkE"
+        }
+      ],
+      "ageMin": 63,
+      "_cand": {
+        "key": "rss:watch-beyond-the-blonde-how-the-new-series-elle-reclaims-the",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "GLAAD"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "GLAAD",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 69,
+      "signals": {
+        "recency": 16,
+        "corroboration": 8,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
         "trending": 0,
         "softTv": 0
       },
-      "tierClass": "C"
+      "tierClass": "B"
     },
     {
       "id": "news-fx-develops-series-new-yorker-article-national-park-rescue",
@@ -491,13 +280,15 @@
       "eventType": "announcement",
       "sensitivity": "normal",
       "eventSlug": "fx-develops-series-new-yorker-article-national-park-rescue",
-      "primaryKeyword": "FX series National Park Rescue",
-      "primaryEntity": "FX's A Christmas Carol",
+      "primaryKeyword": "fx series national park rescue",
+      "primaryEntity": "National Park Volunteer Rescue Squad",
       "entities": [
+        "FX's A Christmas Carol",
         "FX",
+        "Color Force",
         "The New Yorker"
       ],
-      "angle": "FX is developing a new series based on a New Yorker article about a National Park Volunteer Rescue Squad.",
+      "angle": "FX is developing a new series based on a New Yorker article about a National Park volunteer rescue squad.",
       "tmdbType": "movie",
       "source": "rss:Variety",
       "sources": [
@@ -505,12 +296,12 @@
           "outlet": "Variety",
           "tier": 7,
           "url": "https://variety.com/2026/tv/news/fx-series-new-yorker-national-park-volunteer-rescue-squad-1236813417/",
-          "ageMin": 421,
+          "ageMin": 481,
           "headline": "FX, Color Force to Develop Series Based on New Yorker Article About National Park Volunteer Rescue Squad (EXCLUSIVE)",
           "summary": "In a competitive situation, FX has secured the rights to develop a series based on the New Yorker article The Call of the Wild by Paige Williams, Variety has learned exclusively from sources. Also published online in January 2026 under the title The Backcountry Rescue Squad at America’s Busiest National Park, the article details the [ ]"
         }
       ],
-      "ageMin": 421,
+      "ageMin": 481,
       "_cand": {
         "key": "rss:fx-color-force-to-develop-series-based-on-new-yorker-article",
         "popularity": 0,
@@ -546,63 +337,66 @@
       "tierClass": "B"
     },
     {
-      "id": "awards-meghan-markle-pearl-emmy-nomination",
-      "slug": "meghan-markle-s-canceled-netflix-show-earns-emmy-nod-amid-backlash",
-      "title": "Meghan Markle's canceled Netflix show earns Emmy nod amid backlash",
-      "contentType": "awards",
-      "formatTag": "awards",
-      "category": "awards",
-      "subcategory": "winners",
-      "eventType": "award",
+      "id": "music-news-bts-normal-music-video",
+      "slug": "bts-drops-new-music-video-for-normal",
+      "title": "BTS Drops New Music Video for 'NORMAL'",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "meghan-markle-pearl-emmy-nomination",
-      "primaryKeyword": "Meghan Markle Netflix show Emmy",
-      "primaryEntity": "Pearl",
+      "tier": "popular",
+      "eventSlug": "bts-normal-music-video",
+      "primaryKeyword": "bts normal music video",
+      "primaryEntity": "BTS",
       "entities": [
-        "Pearl (TV series)",
-        "Meghan Markle",
-        "Netflix"
+        "Jin",
+        "Suga",
+        "J-Hope",
+        "RM"
       ],
-      "angle": "Meghan Markle's canceled Netflix docuseries 'Pearl' has received an Emmy nomination.",
+      "angle": "BTS has released their new music video for 'NORMAL,' featuring a viral image of the members.",
       "tmdbType": "movie",
-      "source": "gnews:MSN",
+      "source": "rss:Billboard",
       "sources": [
         {
-          "outlet": "MSN",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxQa2F3X2ZUeE1uRnZkelNESEx0cjVRMnhma0txZnV2YjJoajNxc05sX05oX2xHeWlpNEpTM2U0bXhLdDJlTWtIS3I4TEtCSURzZG92TmxBT2pQZE9xWDZIX3dIOWhCelBMTW12VHZKVC1OWGdTN1BNM1VFeWNlZk0xOU9ZaG80LXNlaHhDWmhPSUhkd1NlSjJMNzZ3LU1QOGlJMlpLVHNlVjlOUmNhOUhPQWl4UDJIcmJVYVVvbWdkVGIyMFBBWmxYblpjWkZETk1DMEQyaGU1aC1wM1o2a096TmhWY0xCLVF5NTJvRTZR?oc=5",
-          "ageMin": 352,
-          "headline": "Meghan Markle's canceled Netflix show earns Emmy nod amid backlash - MSN",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMi7gFBVV95cUxQa2F3X2ZUeE1uRnZkelNESEx0cjVRMnhma0txZnV2YjJoajNxc05sX05oX2xHeWlpNEpTM2U0bXhLdDJlTWtIS3I4TEtCSURzZG92TmxBT2pQZE9xWDZIX3dIOWhCelBMTW12VHZKVC1OWGdTN1BNM1VFeWNlZk0xOU9ZaG80LXNlaHhDWmhPSUhkd1NlSjJMNzZ3LU1QOGlJMlpLVHNlVjlOUmNhOUhPQWl4UDJIcmJVYVV"
+          "outlet": "Billboard",
+          "tier": 7,
+          "url": "https://www.billboard.com/music/pop/bts-normal-music-video-watch-1236296582/",
+          "ageMin": 83,
+          "headline": "BTS Let Off Steam After a Big Night In ‘NORMAL’ Music Video: Watch",
+          "summary": "The wintry video gives us the now-viral image of Jin, Suga, J-Hope, RM, Jimin, V, and Jung Kook standing before a row of toilets."
         }
       ],
-      "ageMin": 352,
+      "ageMin": 83,
       "_cand": {
-        "key": "rss:meghan-markle-s-canceled-netflix-show-earns-emmy-nod-amid-ba",
+        "key": "rss:bts-let-off-steam-after-a-big-night-in-normal-music-video-wa",
         "popularity": 0,
-        "kind": "gnews"
+        "kind": "rss-news"
       },
+      "breakoutVelocity": 0,
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
+        "tier1Count": 1,
+        "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "MSN"
+          "Billboard"
         ],
-        "maxTier": 5,
+        "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "MSN",
+        "attribution": "Billboard",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 49,
+      "priority": 55,
       "signals": {
-        "recency": 9,
-        "corroboration": 8,
+        "recency": 16,
+        "corroboration": 12,
         "status": 18,
-        "type": 14,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
         "big": 0,
@@ -612,101 +406,172 @@
       "tierClass": "C"
     },
     {
-      "id": "news-eliza-dushku-cancellation",
-      "slug": "after-buffy-eliza-dushku-starred-in-this-sci-fi-tv-series-that-was-can",
-      "title": "After Buffy, Eliza Dushku Starred In This Sci-Fi TV Series That Was Canceled Way Too Soon",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "cancellation",
-      "sensitivity": "normal",
-      "eventSlug": "eliza-dushku-cancellation",
-      "primaryKeyword": "Eliza Dushku sci-fi series",
-      "primaryEntity": "Eliza Dushku",
-      "entities": [
-        "Buffy the Vampire Slayer"
-      ],
-      "angle": "TVLine discusses a sci-fi TV series starring Eliza Dushku that was canceled prematurely.",
-      "tmdbType": "movie",
-      "source": "gnews:Atlanta News First",
-      "sources": [
-        {
-          "outlet": "Atlanta News First",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxONHVJS3NMQThmY1BlTkVxN1FYaVZxeGFPX3hsOXg4emVyR1pUMlVhS3Jaa1czdW9NSTFpNFNGV0RQVUlPeTR1bGE1YUxZUy14bi1iTmJ1UW9EQkV5RUZGMXVSVnRNcnRHTlh6Nzg5MmRTcDNUVldRTTJidG82eEVESXkwWk1XNElGNk5nNFAtR0xObjBZb0Eta9IBrAFBVV95cUxQNnpYMGVKOEFpZHJjZHpMendoNUZ2Y3VXWDBIdkFuNWE5MUk4Q01vRjB5Rld3TU5zWEdiYVNVS01XZXMtRTNxZUNKSlFsVkZJMkRjMFpLN082NmFENG9ST1EtWF90MjI3a0pzdWQyenVPVGU2YWpBZVI0ZEFUOHgyZlhrMDQwWm1Qc0hvc1psWU9WeWZxSXN3N1kzb296N2hkcHFZem5CZlpjMHNX?oc=5",
-          "ageMin": 484,
-          "headline": "Celebrity Weekend Recap with Bossip’s Dani Canada - Atlanta News First",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxONHVJS3NMQThmY1BlTkVxN1FYaVZxeGFPX3hsOXg4emVyR1pUMlVhS3Jaa1czdW9NSTFpNFNGV0RQVUlPeTR1bGE1YUxZUy14bi1iTmJ1UW9EQkV5RUZGMXVSVnRNcnRHTlh6Nzg5MmRTcDNUVldRTTJidG82eEVESXkwWk1XNElGNk5nNFAtR0xObjBZb0Eta9IBrAFBVV95cUxQNnpYMGVKOEFpZHJjZHpMendoNUZ2Y3V"
-        }
-      ],
-      "ageMin": 484,
-      "_cand": {
-        "key": "rss:celebrity-weekend-recap-with-bossip-s-dani-canada-atlanta-ne",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "Atlanta News First"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "Atlanta News First",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 59,
-      "signals": {
-        "recency": 4,
-        "corroboration": 8,
-        "status": 18,
-        "type": 11,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-the-x-files-release",
-      "slug": "lost-r-rated-x-files-movie-debuts-on-new-streamer-ahead-of-new-reboot",
-      "title": "Lost R-Rated 'X-Files' Movie Debuts on New Streamer Ahead of New Reboot",
+      "id": "news-nasty-movie-jenna-ortega-rose-byrne",
+      "slug": "jenna-ortega-rose-byrne-to-star-in-mary-bronstein-s-new-film-nasty",
+      "title": "Jenna Ortega, Rose Byrne to Star in Mary Bronstein's New Film 'Nasty'",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
-      "eventType": "release",
+      "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "the-x-files-release",
-      "primaryKeyword": "X-Files movie reboot",
-      "primaryEntity": "The X-Files",
+      "eventSlug": "nasty-movie-jenna-ortega-rose-byrne",
+      "primaryKeyword": "jenna ortega rose byrne new movie",
+      "primaryEntity": "Nasty (film)",
       "entities": [
-        "Chris Carter"
+        "Jenna Ortega",
+        "Rose Byrne",
+        "Mary Bronstein"
       ],
-      "angle": "A lost R-rated 'X-Files' movie is debuting on a new streaming service ahead of a potential reboot.",
+      "angle": "Jenna Ortega and Rose Byrne are set to star in 'Nasty,' a new film from director Mary Bronstein.",
       "tmdbType": "movie",
-      "source": "gnews:TVLine",
+      "source": "rss:THR",
       "sources": [
         {
-          "outlet": "TVLine",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOMEJtaFVIRzA3MnJsNXRLOGNkcUdMdTFwZWFqUTUzbVNjeWxfckdOYW42REhtMEsxT2I0STREa3JQMlctOTVjZGV1OE10RUFpV1RqQW16U2ZBRUNvLWd2MFE0bnc0SEtqazhERi00Y0k3TEVDV3MyWEctQTFVaENmYkI2R0R5X0NGbkctYll2aHZ1cjZPQ2w3Z0lnTGgyUQ?oc=5",
-          "ageMin": 499,
-          "headline": "After Buffy, Eliza Dushku Starred In This Sci-Fi TV Series That Was Canceled Way Too Soon - TVLine",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxOMEJtaFVIRzA3MnJsNXRLOGNkcUdMdTFwZWFqUTUzbVNjeWxfckdOYW42REhtMEsxT2I0STREa3JQMlctOTVjZGV1OE10RUFpV1RqQW16U2ZBRUNvLWd2MFE0bnc0SEtqazhERi00Y0k3TEVDV3MyWEctQTFVaENmYkI2R0R5X0NGbkctYll2aHZ1cjZPQ2w3Z0lnTGgyUQ?oc=5\" target=\"_blank\" After Buffy, E"
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/jenna-ortega-rose-byrne-mary-bronstein-nasty-1236650204/",
+          "ageMin": 788,
+          "headline": "Jenna Ortega, Rose Byrne to Star in New Movie from ‘If I Had Legs’ Director Mary Bronstein",
+          "summary": "‘Nasty’, written by Isabella Jarosz, was on the 2024 Black List."
         }
       ],
-      "ageMin": 499,
+      "ageMin": 788,
       "_cand": {
-        "key": "rss:after-buffy-eliza-dushku-starred-in-this-sci-fi-tv-series-th",
+        "key": "rss:jenna-ortega-rose-byrne-to-star-in-new-movie-from-if-i-had-l",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 69,
+      "signals": {
+        "recency": 1,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-heartstopper-tv-series-other",
+      "slug": "inside-heartstopper-forever-and-the-show-that-changed-british-ya",
+      "title": "Inside 'Heartstopper Forever' and the Show That Changed British YA",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "heartstopper-tv-series-other",
+      "primaryKeyword": "Heartstopper finale",
+      "primaryEntity": "Heartstopper (TV series)",
+      "entities": [
+        "Alice Oseman",
+        "Kit Connor",
+        "Joe Locke"
+      ],
+      "angle": "The cast and creator of Netflix's 'Heartstopper' reflect on the series' groundbreaking impact as it concludes with its finale.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/the-end-of-an-era-inside-heartstopper-forever-and-the-show-that-changed-british-ya-1236646729/",
+          "ageMin": 776,
+          "headline": "The End of an Era: Inside Heartstopper Forever and the Show That Changed British YA",
+          "summary": "With the release of the two-hour finale that concludes the hit Netflix series, creator Alice Oseman along with Kit Connor, Joe Locke and more of the show's stars reflect on a groundbreaking, decade-long journey and what it means to end their queer love story."
+        }
+      ],
+      "ageMin": 776,
+      "_cand": {
+        "key": "rss:the-end-of-an-era-inside-heartstopper-forever-and-the-show-t",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 60,
+      "signals": {
+        "recency": 1,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 6,
+        "trending": 0,
+        "softTv": 0,
+        "radar": 18
+      },
+      "radarKind": "tv-episode-today",
+      "tierClass": "A"
+    },
+    {
+      "id": "news-naruto-live-action-movie-casting-call",
+      "slug": "naruto-live-action-movie-casting-call-hints-at-shippuden-timeline",
+      "title": "‘Naruto’ Live-Action Movie Casting Call Hints at ‘Shippuden’ Timeline",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "naruto-live-action-movie-casting-call",
+      "primaryKeyword": "naruto live action movie casting",
+      "primaryEntity": "Naruto Shippuden the Movie: Blood Prison",
+      "entities": [
+        "Naruto (film)",
+        "Naruto: Shippuden"
+      ],
+      "angle": "A casting call for the live-action 'Naruto' movie suggests it will cover the 'Naruto: Shippuden' timeline.",
+      "tmdbType": "movie",
+      "source": "gnews:Knight Edge Media",
+      "sources": [
+        {
+          "outlet": "Knight Edge Media",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNaGtiNnBHWGJ6MDd0aVQteU53OWpYcktJd0R3UUVLc2ttbm5ZQ0IzM0haM3k1dF91blA4UFVnMTd5Sm8wZ2FaS3ZBLWFIcnJQZHpPNUNpWUlhelFXbmFCNml5UWRTSmFaN1ZYclF2akkySERzajZESk5pUUdXTUliTUpiMHhtQ2FpVTVjR2Q1eExsQ0d4UU9rck01SUpSZHp1TkN5NW9Xa3o0V0XSAbABQVVfeXFMTUdJT0QwQ3ZUVFRkYldSYXhWNEV6T2tCLWYzekZfY09CMEtRMlBpTGtRU3JtOGVxd3E4NzdLQ0Q3SzI3Z3JFSXNmSzVidnJHaXYxbmtiTmFmM1dwYWExLXRjRHNydEhkTEZoaTdyS1BQRGlQellZVThKVWY3U2o3OUlPOEVrQmVaTVJURzVIeTVGUTQ3VHJTdF9aaTdtdzBCeTBBQnZybExtWnhoZHpzMjE?oc=5",
+          "ageMin": 1377,
+          "headline": "‘Naruto’ Live-Action Movie Casting Call Teases ‘Naruto: Shippuden’ Timeline - Knight Edge Media",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxNaGtiNnBHWGJ6MDd0aVQteU53OWpYcktJd0R3UUVLc2ttbm5ZQ0IzM0haM3k1dF91blA4UFVnMTd5Sm8wZ2FaS3ZBLWFIcnJQZHpPNUNpWUlhelFXbmFCNml5UWRTSmFaN1ZYclF2akkySERzajZESk5pUUdXTUliTUpiMHhtQ2FpVTVjR2Q1eExsQ0d4UU9rck01SUpSZHp1TkN5NW9Xa3o0V0XSAbABQVVfeXFMTUdJT0Q"
+        }
+      ],
+      "ageMin": 1377,
+      "_cand": {
+        "key": "rss:-naruto-live-action-movie-casting-call-teases-naruto-shippud",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -716,31 +581,96 @@
         "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "TVLine"
+          "Knight Edge Media"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "TVLine",
+        "attribution": "Knight Edge Media",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 48,
+      "priority": 65,
+      "signals": {
+        "recency": 1,
+        "corroboration": 8,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-todd-mcfarlane-spawn-reboot-news",
+      "slug": "everything-we-know-about-todd-mcfarlane-s-r-rated-spawn-reboot",
+      "title": "Everything We Know About Todd McFarlane’s R-Rated ‘Spawn’ Reboot",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "todd-mcfarlane-spawn-reboot-news",
+      "primaryKeyword": "spawn reboot news",
+      "primaryEntity": "Spawn",
+      "entities": [
+        "Spawn (film)",
+        "Todd McFarlane"
+      ],
+      "angle": "Details emerge on Todd McFarlane's R-rated Spawn reboot.",
+      "tmdbType": "movie",
+      "source": "gnews:Esquire",
+      "sources": [
+        {
+          "outlet": "Esquire",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5NSW5zLWJjVkxrbDNCZ1dqQ05wbVhVb0ZGbGtkc0h3V09NbjN3MXkwcjRZUmNjZFBFN3V2dUp1Um5vSk9YVGlwZlFFQjBtWVNCdTlyUVNkcmd5RFZnNm43VU1nUmhwWTJkREhCY3Y2QjBhTVZvazg0?oc=5",
+          "ageMin": 693,
+          "headline": "Everything We Know About Todd McFarlane’s R-Rated ‘Spawn’ Reboot - Esquire",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMid0FVX3lxTE5NSW5zLWJjVkxrbDNCZ1dqQ05wbVhVb0ZGbGtkc0h3V09NbjN3MXkwcjRZUmNjZFBFN3V2dUp1Um5vSk9YVGlwZlFFQjBtWVNCdTlyUVNkcmd5RFZnNm43VU1nUmhwWTJkREhCY3Y2QjBhTVZvazg0?oc=5\" target=\"_blank\" Everything We Know About Todd McFarlane’s R-Rated ‘Spawn’ Reboot /a "
+        }
+      ],
+      "ageMin": 693,
+      "_cand": {
+        "key": "rss:everything-we-know-about-todd-mcfarlane-s-r-rated-spawn-rebo",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "Esquire"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "Esquire",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 63,
       "signals": {
         "recency": 4,
         "corroboration": 8,
         "status": 18,
-        "type": 6,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
-        "big": 12,
+        "big": 24,
         "trending": 0,
         "softTv": 0
       },
-      "tierClass": "C"
+      "tierClass": "B"
     },
     {
-      "id": "news-annie-leibovitz-observer-lawsuit-bieber-photo",
+      "id": "news-annie-leibovitz-sues-observer-bieber-photo",
       "slug": "annie-leibovitz-sues-observer-over-justin-and-hailey-bieber-photo-expl",
       "title": "Annie Leibovitz Sues Observer Over Justin and Hailey Bieber Photo: Exploitation",
       "contentType": "news",
@@ -749,7 +679,7 @@
       "subcategory": "news",
       "eventType": "lawsuit",
       "sensitivity": "high",
-      "eventSlug": "annie-leibovitz-observer-lawsuit-bieber-photo",
+      "eventSlug": "annie-leibovitz-sues-observer-bieber-photo",
       "primaryKeyword": "Annie Leibovitz lawsuit",
       "primaryEntity": "Annie Leibovitz",
       "entities": [
@@ -757,7 +687,7 @@
         "Hailey Bieber",
         "Observer"
       ],
-      "angle": "Famed photographer Annie Leibovitz is suing a media outlet over unauthorized use of a photo of Justin and Hailey Bieber.",
+      "angle": "Famed photographer Annie Leibovitz is suing the Observer for up to $150,000 per unauthorized use of a photo of Justin and Hailey Bieber.",
       "tmdbType": "movie",
       "source": "rss:Rolling Stone",
       "sources": [
@@ -765,12 +695,12 @@
           "outlet": "Rolling Stone",
           "tier": 7,
           "url": "https://www.rollingstone.com/music/music-news/annie-leibovitz-sues-observer-justin-bieber-hailey-photo-1235594944/",
-          "ageMin": 253,
+          "ageMin": 313,
           "headline": "Annie Leibovitz Sues Observer Over Justin and Hailey Bieber Photo: Exploitation",
           "summary": "The famed photographer is suing the media outlet for up to $150,000 per \"unauthorized\" use"
         }
       ],
-      "ageMin": 253,
+      "ageMin": 313,
       "_cand": {
         "key": "rss:annie-leibovitz-sues-observer-over-justin-and-hailey-bieber-",
         "popularity": 0,
@@ -804,71 +734,6 @@
         "softTv": 0
       },
       "tierClass": "S"
-    },
-    {
-      "id": "news-celebrity-backed-indonesia-coffee-ipo",
-      "slug": "celebrity-backed-indonesia-coffee-chain-meets-banks-for-potential-ipo",
-      "title": "Celebrity-Backed Indonesia Coffee Chain Meets Banks for Potential IPO",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "celebrity-backed-indonesia-coffee-ipo",
-      "primaryKeyword": "celebrity backed business",
-      "primaryEntity": "Rare Beauty",
-      "entities": [
-        "Selena Gomez: My Mind & Me",
-        "Selena Gomez"
-      ],
-      "angle": "A celebrity-backed Indonesian coffee chain is reportedly in talks with banks for a potential Initial Public Offering (IPO), highlighting the growing trend of celebrity ventures in the business world.",
-      "tmdbType": "movie",
-      "source": "gnews:WSJ",
-      "sources": [
-        {
-          "outlet": "WSJ",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPSVJsMWN4N3lfSEpxZFMzeEswMFFab1JZeDRlT1l5dFRSRnNFNDdZeVFHdUd5RVR0NWQ1YzhtS3ZDTWdlLU45OENlemMtSUtZZEpqZGVmZHIwbzBYUXU4OFZXS3JVT2YtUlVib0doaDFyczBkN054OE9BMmVGSndRam1JSTc1aC1kS2xSdEpqUUlld3lNVkFlYmNWMG1BUndxeXNla0JYUWRsWlk?oc=5",
-          "ageMin": 119,
-          "headline": "Celebrity-Backed Indonesia Coffee Chain Meets Banks for Potential IPO - WSJ",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxPSVJsMWN4N3lfSEpxZFMzeEswMFFab1JZeDRlT1l5dFRSRnNFNDdZeVFHdUd5RVR0NWQ1YzhtS3ZDTWdlLU45OENlemMtSUtZZEpqZGVmZHIwbzBYUXU4OFZXS3JVT2YtUlVib0doaDFyczBkN054OE9BMmVGSndRam1JSTc1aC1kS2xSdEpqUUlld3lNVkFlYmNWMG1BUndxeXNla0JYUWRsWlk?oc=5\" target=\"_blan"
-        }
-      ],
-      "ageMin": 119,
-      "_cand": {
-        "key": "rss:celebrity-backed-indonesia-coffee-chain-meets-banks-for-pote",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "WSJ"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "WSJ",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 51,
-      "signals": {
-        "recency": 16,
-        "corroboration": 8,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
     }
   ]
 }
