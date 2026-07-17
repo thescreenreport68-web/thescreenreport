@@ -1,0 +1,123 @@
+{
+  "ts": "2026-07-17T10:23:12.187Z",
+  "mode": "from-find",
+  "review": true,
+  "published": [
+    "diddy-sells-miami-mansion-for-55-million-amid-prison-sentence"
+  ],
+  "topics": 1,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 0,
+  "costUSD": 0.022255,
+  "costPerPublished": 0.022255,
+  "byModel": {
+    "deepseek/deepseek-v3.2": {
+      "calls": 7,
+      "in": 23986,
+      "out": 6498,
+      "usd": 0.007315441
+    },
+    "google/gemini-2.5-flash": {
+      "calls": 8,
+      "in": 18570,
+      "out": 2919,
+      "usd": 0.0128685
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 1759,
+      "out": 923,
+      "usd": 0.000348243
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 6,
+      "in": 9006,
+      "out": 2055,
+      "usd": 0.0017226000000000003
+    }
+  },
+  "byRole": {
+    "dedup": {
+      "calls": 1,
+      "errors": 0,
+      "in": 299,
+      "out": 14,
+      "usd": 0.00007353,
+      "ms": 1769
+    },
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2411,
+      "out": 196,
+      "usd": 0.0012133,
+      "ms": 1620
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1759,
+      "out": 923,
+      "usd": 0.00032445,
+      "ms": 12276
+    },
+    "writer": {
+      "calls": 5,
+      "errors": 0,
+      "in": 22958,
+      "out": 6093,
+      "usd": 0.007351959999999999,
+      "ms": 202871
+    },
+    "verify": {
+      "calls": 8,
+      "errors": 1,
+      "in": 18919,
+      "out": 3180,
+      "usd": 0.012114,
+      "ms": 19506
+    },
+    "judge": {
+      "calls": 2,
+      "errors": 0,
+      "in": 4070,
+      "out": 1307,
+      "usd": 0.0009298,
+      "ms": 5089
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 729,
+      "out": 391,
+      "usd": 0.00030061000000000004,
+      "ms": 11474
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 404,
+      "out": 123,
+      "usd": 0.00008960000000000001,
+      "ms": 814
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 204,
+      "out": 48,
+      "usd": 0.00003960000000000001,
+      "ms": 564
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1568,
+      "out": 120,
+      "usd": 0.00020480000000000002,
+      "ms": 2193
+    }
+  }
+}
