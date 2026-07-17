@@ -78,6 +78,21 @@ async function fitSize({ width, maxHeight, sizes, fontFamily, lineHeight, weight
   return null; // even the smallest size overflows → caller must reject (fail closed, never clip)
 }
 
+// Scale-to-cover then crop a window of exactly W×H centered on the focal point
+// (fractions of the source), clamped to the image bounds. Exported for tests.
+export async function coverCrop(buf, W, H, focus) {
+  if (!focus) {
+    return sharp(buf).resize(W, H, { fit: "cover", position: sharp.strategy.attention }).removeAlpha().toBuffer();
+  }
+  const meta = await sharp(buf).metadata();
+  const scale = Math.max(W / meta.width, H / meta.height);
+  const rw = Math.max(W, Math.round(meta.width * scale));
+  const rh = Math.max(H, Math.round(meta.height * scale));
+  const left = Math.max(0, Math.min(rw - W, Math.round(focus.x * rw - W / 2)));
+  const top = Math.max(0, Math.min(rh - H, Math.round(focus.y * rh - H / 2)));
+  return sharp(buf).resize(rw, rh).extract({ left, top, width: W, height: H }).removeAlpha().toBuffer();
+}
+
 /**
  * Render one card.
  * job = {
@@ -97,12 +112,11 @@ export async function renderCard(job) {
   const BAND_H = H - PHOTO_H;
   const M = 60; // side margin (safe-zone research: 60-80px)
 
-  // ── photo: cover-crop into the top zone; attention strategy = saliency/face-aware
+  // ── photo: cover-crop into the top zone, centered on the framing agent's focal point
+  // (a face for people shots, the compositional center for wide scene shots); saliency
+  // fallback only when no focus is provided
   const photoBuf = Buffer.isBuffer(job.photo) ? job.photo : fs.readFileSync(job.photo);
-  const photo = await sharp(photoBuf)
-    .resize(W, PHOTO_H, { fit: "cover", position: sharp.strategy.attention })
-    .removeAlpha()
-    .toBuffer();
+  const photo = await coverCrop(photoBuf, W, PHOTO_H, job.focus);
 
   // ── headline: fit within the band (max 3 lines by construction: sizes floor at 56px)
   const subText = String(job.sub || "").trim();
