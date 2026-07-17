@@ -1,0 +1,110 @@
+{
+ "runId": "run-2026-07-17T22-00-49",
+ "mode": "live",
+ "startedAt": "2026-07-17T22:00:49.395Z",
+ "films": 8,
+ "published": [],
+ "held": [
+  {
+   "tag": "enola-holmes-3-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "words 156 < 180 (owner-set ~200-word minimum) | soft-floor engagement 4 < 5 | soft-floor humanVoice 4 < 5",
+   "score": 45
+  },
+  {
+   "tag": "voicemails-for-isabelle-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "2 unverified claim(s) cut, unrecovered",
+   "score": 60
+  },
+  {
+   "tag": "the-doorman-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "platform: names max not in confirmed providers",
+   "score": 0
+  },
+  {
+   "tag": "little-brother-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "words 174 < 180 (owner-set ~200-word minimum) | soft-floor humanVoice 3 < 5",
+   "score": 45
+  },
+  {
+   "tag": "rust-creek-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "3 unverified claim(s) cut, unrecovered",
+   "score": 75
+  },
+  {
+   "tag": "f9-the-fast-saga-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "6 unverified claim(s) cut, unrecovered",
+   "score": 75
+  },
+  {
+   "tag": "old-henry-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "platform: names max not in confirmed providers",
+   "score": 0
+  },
+  {
+   "tag": "the-boss-baby-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "2 unverified claim(s) cut, unrecovered",
+   "score": 65
+  }
+ ],
+ "rejected": [],
+ "skipped": [],
+ "blocked": [],
+ "paced": {
+  "tokens": 3.8,
+  "behind": true,
+  "expected": 13.4,
+  "allow": 2
+ },
+ "zeroStreak": 2,
+ "daySpend": {
+  "laDay": "2026-07-17",
+  "usd": 0.87046
+ },
+ "finishedAt": "2026-07-17T22:16:30.000Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3427,
+    "out": 702,
+    "usd": 0.00022,
+    "ms": 2544
+   },
+   "gatherer": {
+    "calls": 8,
+    "errors": 0,
+    "in": 15219,
+    "out": 1278,
+    "usd": 0.00203,
+    "ms": 9457
+   },
+   "synthesizer": {
+    "calls": 8,
+    "errors": 0,
+    "in": 5508,
+    "out": 7322,
+    "usd": 0.00181,
+    "ms": 152931
+   },
+   "writer": {
+    "calls": 16,
+    "errors": 0,
+    "in": 49688,
+    "out": 16789,
+    "usd": 0.04674,
+    "ms": 223527
+   },
+   "qa": {
+    "calls": 46,
+    "errors": 0,
+    "in": 122805,
+    "out": 18968,
+    "usd": 0.08426,
+    "ms": 133351
+   }
+  },
+  "totalUsd": 0.13506
+ },
+ "openrouterTotalUsd": 0.13001
+}

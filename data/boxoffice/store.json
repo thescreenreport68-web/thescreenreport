@@ -530,33 +530,41 @@
    "key": "enola-holmes-3-netflix-top10-w2026-07-12|NETFLIX-TOP10",
    "eventSlug": "enola-holmes-3-netflix-top10-w2026-07-12",
    "form": "NETFLIX-TOP10",
-   "reason": "soft-floor engagement 4 < 5 | soft-floor humanVoice 4 < 5",
-   "tries": 2,
-   "at": "2026-07-17T17:02:41.302Z"
+   "reason": "words 156 < 180 (owner-set ~200-word minimum) | soft-floor engagement 4 < 5 | soft-floor humanVoice 4 < 5",
+   "tries": 3,
+   "at": "2026-07-17T22:03:16.695Z",
+   "dead": true,
+   "expiresAt": "2026-07-20T22:03:16.695Z"
   },
   {
    "key": "voicemails-for-isabelle-netflix-top10-w2026-07-12|NETFLIX-TOP10",
    "eventSlug": "voicemails-for-isabelle-netflix-top10-w2026-07-12",
    "form": "NETFLIX-TOP10",
-   "reason": "5 unverified claim(s) cut, unrecovered",
-   "tries": 2,
-   "at": "2026-07-17T17:07:00.982Z"
+   "reason": "2 unverified claim(s) cut, unrecovered",
+   "tries": 3,
+   "at": "2026-07-17T22:05:27.163Z",
+   "dead": true,
+   "expiresAt": "2026-07-20T22:05:27.163Z"
   },
   {
    "key": "the-doorman-netflix-top10-w2026-07-12|NETFLIX-TOP10",
    "eventSlug": "the-doorman-netflix-top10-w2026-07-12",
    "form": "NETFLIX-TOP10",
    "reason": "platform: names max not in confirmed providers",
-   "tries": 2,
-   "at": "2026-07-17T17:08:53.287Z"
+   "tries": 3,
+   "at": "2026-07-17T22:07:09.173Z",
+   "dead": true,
+   "expiresAt": "2026-07-20T22:07:09.173Z"
   },
   {
    "key": "little-brother-netflix-top10-w2026-07-12|NETFLIX-TOP10",
    "eventSlug": "little-brother-netflix-top10-w2026-07-12",
    "form": "NETFLIX-TOP10",
-   "reason": "words 107 < 180 (owner-set ~200-word minimum)",
-   "tries": 2,
-   "at": "2026-07-17T17:11:15.882Z"
+   "reason": "words 174 < 180 (owner-set ~200-word minimum) | soft-floor humanVoice 3 < 5",
+   "tries": 3,
+   "at": "2026-07-17T22:08:49.143Z",
+   "dead": true,
+   "expiresAt": "2026-07-20T22:08:49.143Z"
   },
   {
    "key": "the-odyssey-ev-weekend-d0|BO-WEEKEND",
@@ -599,24 +607,24 @@
    "eventSlug": "rust-creek-netflix-top10-w2026-07-12",
    "form": "NETFLIX-TOP10",
    "reason": "3 unverified claim(s) cut, unrecovered",
-   "tries": 1,
-   "at": "2026-07-17T17:13:01.243Z"
+   "tries": 2,
+   "at": "2026-07-17T22:11:05.963Z"
   },
   {
    "key": "f9-the-fast-saga-netflix-top10-w2026-07-12|NETFLIX-TOP10",
    "eventSlug": "f9-the-fast-saga-netflix-top10-w2026-07-12",
    "form": "NETFLIX-TOP10",
-   "reason": "words 151 < 180 (owner-set ~200-word minimum)",
-   "tries": 1,
-   "at": "2026-07-17T17:14:48.302Z"
+   "reason": "6 unverified claim(s) cut, unrecovered",
+   "tries": 2,
+   "at": "2026-07-17T22:13:12.277Z"
   },
   {
    "key": "old-henry-netflix-top10-w2026-07-12|NETFLIX-TOP10",
    "eventSlug": "old-henry-netflix-top10-w2026-07-12",
    "form": "NETFLIX-TOP10",
    "reason": "platform: names max not in confirmed providers",
-   "tries": 1,
-   "at": "2026-07-17T17:16:20.992Z"
+   "tries": 2,
+   "at": "2026-07-17T22:14:47.726Z"
   },
   {
    "key": "wild-sing-ev-streaming-arrival|NOW-STREAMING",
@@ -661,16 +669,24 @@
    "reason": "words 141 < 180 (owner-set ~200-word minimum)",
    "tries": 1,
    "at": "2026-07-17T21:35:46.136Z"
+  },
+  {
+   "key": "the-boss-baby-netflix-top10-w2026-07-12|NETFLIX-TOP10",
+   "eventSlug": "the-boss-baby-netflix-top10-w2026-07-12",
+   "form": "NETFLIX-TOP10",
+   "reason": "2 unverified claim(s) cut, unrecovered",
+   "tries": 1,
+   "at": "2026-07-17T22:16:29.678Z"
   }
  ],
- "zeroStreak": 1,
+ "zeroStreak": 2,
  "daySpend": {
   "laDay": "2026-07-17",
-  "usd": 0.74045
+  "usd": 0.87046
  },
  "pace": {
-  "tokens": 3.4022757777777777,
-  "lastMs": 1784323854044
+  "tokens": 3.8012426666666665,
+  "lastMs": 1784325649395
  },
  "lastAuditDay": "2026-07-17"
 }
