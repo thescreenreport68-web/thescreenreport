@@ -228,9 +228,16 @@ export async function review(job, { chatImpl = null } = {}) {
 // FAIL-CLOSED: an error is NEVER reported as ok — the orchestrator holds when ran is false
 // (webVerify's own documented contract; the Thor ran:false-then-published regression guard).
 export async function webCheck(job, { webVerifyImpl = webVerifyArticle } = {}) {
+  // SUBJECT-DISAMBIGUATED entity (Beck fix): the live-web search for a bare shared name pulls the
+  // OTHER same-name subject's coverage (the QB during draft week) and reports false contradictions.
+  // An ambiguous card qualifies the entity so the checker grounds on the right subject.
+  const card = job.story.subject;
+  const entity = card?.ambiguous
+    ? `${job.story.primaryEntity} (${card.categoryWord}${card.workTitle ? `, ${card.workTitle}` : ""})`
+    : job.story.primaryEntity;
   return webVerifyImpl({
     article: job.article,
-    topic: { primaryEntity: job.story.primaryEntity, title: job.story.parentTitle, eventType: job.story.eventType },
+    topic: { primaryEntity: entity, title: job.story.parentTitle, eventType: job.story.eventType },
     model: AGENTS.qa.model,
   }).catch((e) => ({ ran: false, ok: false, contradictions: [], error: String(e?.message || e).slice(0, 120) }));
 }

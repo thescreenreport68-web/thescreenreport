@@ -181,7 +181,7 @@ export async function agentRun({
           continue;
         }
         await withTimeout(qaReviewImpl(job), AGENTS.qa.watchdogMs, `qa ${tag}`);
-        console.log(`  qa: score ${job.qa.score}, blocks ${job.qa.hardBlocks.length}, cuts ${job.qa.cutClaims.length}${job.qa.hardBlocks.length ? " :: " + job.qa.hardBlocks.slice(0, 4).join(" | ") : ""}`);
+        console.log(`  qa: score ${job.qa.score}, blocks ${job.qa.hardBlocks.length}, cuts ${job.qa.cutClaims.length}${job.qa.hardBlocks.length ? " :: " + job.qa.hardBlocks.slice(0, 4).join(" | ") : ""}${job.qa.cutClaims.length ? " :: cut→ " + job.qa.cutClaims.slice(0, 3).map((c) => String(c).slice(0, 70)).join(" ⟂ ") : ""}`);
         if (job.qa.pass) { pass = true; break; }
         // ITERATIVE CUTS FIRST (run 11: attempt 1 scored 92 with ONE cuttable claim, but a single
         // cut-recheck escalated to a full surgical rewrite that mangled quotes). Cutting is
@@ -259,6 +259,7 @@ export async function agentRun({
         const wv = await withTimeout(qaWebCheckImpl(job), 360e3, `webcheck ${tag}`).catch((e) => ({ ran: false, ok: false, contradictions: [], error: String(e?.message || e).slice(0, 120) }));
         if (!wv.ran) { hold(`web-check did not run (${wv.error || "no evidence"}) — held unverified`, { park: false, score: job.qa.score }); continue; }
         if (wv.contradictions?.length) {
+          console.log(`  web-check contradictions: ${wv.contradictions.slice(0, 4).map((c) => String(c.claim || "").slice(0, 60)).join(" ⟂ ")}`);
           cutArticle(job.article, wv.contradictions.map((c) => c.claim));
           await withTimeout(qaReviewImpl(job), AGENTS.qa.watchdogMs, `qa-webcut ${tag}`);
           if (job.qa.cutClaims.length) { cutArticle(job.article, job.qa.cutClaims); await withTimeout(qaReviewImpl(job), AGENTS.qa.watchdogMs, `qa-webcut2 ${tag}`); }
