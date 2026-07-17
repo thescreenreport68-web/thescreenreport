@@ -90,7 +90,7 @@ export function buildGossipPrompt(bundle, frame, topic, corrections = null, lede
     : ((bundle.quotes || []).map((q) => `• "${q}"`).join("\n") || "(no verbatim quotes available — paraphrase only, invent nothing)");
   const range = wordRangeFor(bundle, anchors);
 
-  const user = `${topic.angle ? `THE STORY (the content-verified angle — write THIS): ${topic.angle}\n` : ""}DISCOVERY HEADLINE (UNVERIFIED — may be clickbait or overstated; do NOT treat it as fact, verify every specific against the bundle): ${topic.title || ""}
+  const user = `${topic.isUpdate ? `⚠ FOLLOW-UP: we already covered this story's earlier chapter. LEAD with the NEW development${topic.updateFact ? ` (${topic.updateFact})` : ""}; recap the background in ONE sentence mid-piece, never as the opener.\n` : ""}${topic.angle ? `THE STORY (the content-verified angle — write THIS): ${topic.angle}\n` : ""}DISCOVERY HEADLINE (UNVERIFIED — may be clickbait or overstated; do NOT treat it as fact, verify every specific against the bundle): ${topic.title || ""}
 ABOUT: ${topic.primaryEntity || bundle.entity || ""}
 
 THE VERIFIED BUNDLE — the ONLY facts and quotes you may use:

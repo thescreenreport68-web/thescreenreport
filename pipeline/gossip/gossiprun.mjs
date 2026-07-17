@@ -118,7 +118,14 @@ export async function gossipRun({
     let dd = null;
     if (dedup && store) {
       dd = await dedupCheck(t, store, { embedImpl, adjudicateImpl, now: new Date(now) });
-      if (dd.decision === "DUPLICATE" || dd.decision === "HOLD" || dd.decision === "UPDATE") {
+      // Phase 3 — a genuine NEW DEVELOPMENT (adjudicated UPDATE: "dating"→"engaged", "hospitalized"→"released")
+      // publishes as a FOLLOW-UP linked to the parent, instead of being silently skipped (a missed real story).
+      // Same-event re-tellings stay DUPLICATE-blocked — no second URL for the same moment ever ships.
+      if (dd.decision === "UPDATE" && dd.parentKey) {
+        t.parentSlug = dd.parentKey;
+        t.isUpdate = true;
+        t.updateFact = String(dd.reason || "").replace(/^update:\s*/i, "");
+      } else if (dd.decision === "DUPLICATE" || dd.decision === "HOLD" || dd.decision === "UPDATE") {
         // Phase 1 waste-kill: a TRANSIENT dedup error (embed/store outage, fail-closed HOLD) used to lose the
         // popped topic forever (pop = claim). Re-queue it once so the next tick retries; a real dup stays dropped.
         if (dd.decision === "HOLD" && /dedup error/i.test(dd.reason || "") && !dryRun && (t.requeueCount || 0) < 1) {
@@ -131,7 +138,8 @@ export async function gossipRun({
       }
     }
     // Fix #4 — cross-lane 72h fuzzy dup guard (entity+event, not slug equality): never publish the same story twice.
-    if (fromFind) {
+    // (An adjudicated UPDATE follow-up legitimately matches its parent — the smarter verdict wins, skip the guard.)
+    if (fromFind && !t.isUpdate) {
       const xdup = isCrossDup(t, recentIndex, { now });
       if (xdup) { report.skipped.push({ id: t.id, category: cat, decision: "CROSS_DUP", reason: `same story as ${xdup.slug} (published in last 72h)` }); continue; }
     }
@@ -149,7 +157,18 @@ export async function gossipRun({
       if (hero) { try { r.article.hero = await heroImpl({ topic: { ...t, gossipType: detectGossipType(t) }, article: r.article, bundle: r.bundle, frame: r.frame }); } catch { r.article.hero = null; } }
       // STEP 7 — internal links to REAL related published articles (shared-entity gate + contradiction firewall).
       if (links && linkIndex) { try { r.article.relatedLinks = await findRelatedImpl({ article: r.article, topic: t, index: linkIndex, selfSlug: t.slug }); } catch { r.article.relatedLinks = []; } }
-      const out = writeImpl({ article: r.article, frame: r.frame, provenance: r.provenance, route: r.route, topic: t, dateISO, dryRun, ...(REVIEW ? { dir: REVIEW } : {}) });
+      // Phase 3 — follow-up link-chain: an UPDATE always links its parent FIRST, by exact title (deterministic).
+      if (t.parentSlug) {
+        try {
+          const pf = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../../content/articles", `${t.parentSlug}.md`);
+          const raw = fs.readFileSync(pf, "utf8");
+          const pTitle = (raw.match(/^title:\s*(?:>-?\s*\n\s*)?['"]?(.+?)['"]?\s*$/m) || [])[1] || t.parentSlug;
+          const pCat = (raw.match(/^category:\s*(.+)$/m) || [])[1]?.trim() || "celebrity";
+          const chain = { slug: t.parentSlug, title: pTitle, url: `/${pCat}/${t.parentSlug}/` };
+          r.article.relatedLinks = [chain, ...(r.article.relatedLinks || []).filter((l) => l.slug !== t.parentSlug)];
+        } catch { /* parent file unavailable (e.g. review-only) — chain skipped */ }
+      }
+      const out = writeImpl({ article: r.article, frame: r.frame, provenance: r.provenance, route: r.route, topic: t, dateISO, dryRun, bundle: r.bundle, ...(REVIEW ? { dir: REVIEW } : {}) });
       // record it in the dedup store so future runs won't re-publish it. A DRY RUN never mutates the store.
       if (dedup && store && dd && !dryRun) recordPublished(t, store, { urlHash: dd.urlHash, eventKey: dd.eventKey, embedding: dd.embedding, slug: out.slug, parentKey: dd.parentKey, now: new Date(now) });
       report.published.push({
@@ -161,6 +180,9 @@ export async function gossipRun({
         verifyDegraded: !!r.provenance?.verifyDegraded,
         relatedLinks: (r.article.relatedLinks || []).map((l) => l.slug),
         sources: (r.bundle?.sources || []).map((s) => `${s.outlet}/${s.tier}`), written: out.written, path: out.path,
+        isUpdate: !!t.isUpdate, parentSlug: t.parentSlug || null,
+        headline: r.headline || null, seoSemantic: r.seoSemantic || null,
+        seoIssues: (out.seoIssues || []).map((i) => `${i.code}:${i.action}`),
       });
       rotIdx++; // advance the lede rotation ONLY on an actual publish, so consecutive live articles differ
     } else if (r.status === "HELD") {

@@ -11,6 +11,7 @@ import { GOSSIP_AUTHOR_SLUG, AI_DISCLOSURE } from "./config.gossip.mjs";
 import { detectGossipType } from "./writer.mjs";
 import { deriveTags } from "./polish.mjs";
 import { buildMetaTitle, buildMetaDescription, targetKeywordFor } from "./seo.mjs";
+import { auditArticleSeo } from "./seoAudit.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url)); // …/pipeline/gossip
 const CONTENT_DIR = path.resolve(__dirname, "../../content/articles");
@@ -32,7 +33,7 @@ function badgeFor(frame) {
   return base === "CONFIRMED" && frame.monitor ? "DEVELOPING" : base;
 }
 
-export function buildGossipMarkdown({ article, frame, provenance, route, topic, dateISO }) {
+export function buildGossipMarkdown({ article, frame, provenance, route, topic, dateISO, bundle = null }) {
   const slug = topic.slug || slugify(article.title);
   const gossipType = detectGossipType(topic);
   const badge = badgeFor(frame);
@@ -119,16 +120,18 @@ export function buildGossipMarkdown({ article, frame, provenance, route, topic, 
       publishedAt: dateISO,
     },
   };
-  const md = matter.stringify("\n" + (article.body || "").trim() + "\n", fm);
-  return { slug, frontmatter: fm, md };
+  // Phase 3 — SEO AUDITOR (deterministic walls + safe repairs + cross-surface grounding) over the FINAL fm.
+  const audit = auditArticleSeo({ fm, body: article.body || "", topic, bundle });
+  const md = matter.stringify("\n" + (article.body || "").trim() + "\n", audit.fm);
+  return { slug, frontmatter: audit.fm, md, seoIssues: audit.issues };
 }
 
-export function writeGossipArticle({ article, frame, provenance, route, topic, dateISO, dir = CONTENT_DIR, dryRun = false }) {
-  const { slug, md, frontmatter } = buildGossipMarkdown({ article, frame, provenance, route, topic, dateISO });
+export function writeGossipArticle({ article, frame, provenance, route, topic, dateISO, bundle = null, dir = CONTENT_DIR, dryRun = false }) {
+  const { slug, md, frontmatter, seoIssues } = buildGossipMarkdown({ article, frame, provenance, route, topic, dateISO, bundle });
   const fp = path.join(dir, slug + ".md");
   if (!dryRun) {
     fs.mkdirSync(dir, { recursive: true });
     fs.writeFileSync(fp, md);
   }
-  return { slug, path: fp, frontmatter, md, written: !dryRun };
+  return { slug, path: fp, frontmatter, md, written: !dryRun, seoIssues };
 }

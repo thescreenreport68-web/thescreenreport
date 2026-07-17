@@ -21,6 +21,7 @@ import { frameTopic } from "./frame.mjs";
 import { writeGossip } from "./writer.mjs";
 import { buildAnchors, substituteAnchors, synthesize } from "./synthesizer.mjs";
 import { refineHeadline } from "./headline.mjs";
+import { semanticSeoPass } from "./seoAudit.mjs";
 import { legalGate } from "./legalGate.mjs";
 import { qualityCheck } from "./qualityGate.mjs";
 import { verifyQuotes } from "./quoteGuard.mjs";
@@ -225,6 +226,9 @@ export async function runGossip(topic, {
   // hard-gated deterministically (grounded numbers+names, render-contract validators) — improves or no-ops.
   let headlineReport = null;
   if (headline) { try { headlineReport = await headlineImpl({ article, bundle, topic }); } catch { headlineReport = null; } }
+  // Phase 3 — semantic SEO pass (flash-lite, REPORT-ONLY: click-promise honesty / stuffing / labeling).
+  let seoSemantic = null;
+  if (headline) { try { seoSemantic = await semanticSeoPass({ fm: { metaTitle: article.metaTitle, metaDescription: article.metaDescription, title: article.title, rumorStatus: frame.uiLabel }, topic }); } catch { seoSemantic = null; } }
 
   // Stage 7 — assemble: attach the byline, the rumor-UI fields, and the PROVENANCE the monitor needs.
   article.author = GOSSIP_AUTHOR_SLUG;
@@ -250,5 +254,5 @@ export async function runGossip(topic, {
     verifyDegraded, // true ⇒ the claim-verify ran at L1-only this run (L2 errored); surfaced for the monitor/owner
     sources: bundle.sources.map((s) => ({ outlet: s.outlet, url: s.url, tier: s.tier })),
   };
-  return { status: "PUBLISH", article, frame, provenance, route, bundle, auto, editorial: ed, brief: brief ? true : false, headline: headlineReport };
+  return { status: "PUBLISH", article, frame, provenance, route, bundle, auto, editorial: ed, brief: brief ? true : false, headline: headlineReport, seoSemantic };
 }
