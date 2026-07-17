@@ -13,7 +13,8 @@ import { readJson, writeJson, slugify, laParts, sleep } from "./lib/util.mjs";
 import { scout } from "./agents/scout.mjs";
 import { gather } from "./agents/gather.mjs";
 import { classify } from "./agents/classify.mjs";
-import { huntImage } from "./agents/imagehunt.mjs";
+import { huntImages } from "./agents/imagehunt.mjs";
+import { frame } from "./agents/framing.mjs";
 import { writeHeadline } from "./agents/headline.mjs";
 import { writeCaptions } from "./agents/captions.mjs";
 import { factGate } from "./agents/factgate.mjs";
@@ -76,22 +77,32 @@ async function buildCard(story, { breaking = false } = {}) {
   if (!pack) return { drop: "gather: <2 independent sources and no own article" };
   const cls = await classify(story, pack);
   if (breaking) cls.breaking = true;
-  const img = await huntImage(story, pack);
-  if (!img) return { drop: "imagehunt: no Tier-A image on whitelisted carriers" };
+  const candidates = await huntImages(story, pack);
+  if (!candidates.length) return { drop: "imagehunt: no Tier-A image on whitelisted carriers" };
   const card = await writeHeadline(story, pack, cls); // retries internally with feedback
   if (!card) return { drop: "headline: could not write a faithful hook within the word cap" };
   const captions = await writeCaptions(story, pack, cls, card);
   if (!captions) return { drop: "captions: two attempts broke the platform rules" };
   const gate = await factGate({ card, captions, cls, pack });
   if (gate.verdict !== "pass") return { drop: `factgate: ${gate.problems.join("; ")}` };
-  const { jpeg, meta } = await renderCard({
-    category: cls.category, breaking,
-    headline: card.headline, redSpan: card.redSpan, sub: card.sub,
-    creditLine: img.provenance.creditLine, photo: img.buf,
-  });
-  const qc = await visionQC({ jpeg, card, story });
-  if (!qc.pass) return { drop: `visionqc ${qc.score}: ${qc.problems.join("; ")}` };
-  return { jpeg, meta, card, captions, cls, pack, provenance: img.provenance, qc };
+  // image placement loop (owner 2026-07-17): frame each candidate (composites rejected,
+  // faces centered, wide shots untouched), render, then the QC hard-fails any cut face —
+  // a bad photo moves to the NEXT candidate instead of shipping or killing the story
+  const failures = [];
+  for (const img of candidates) {
+    const fr = await frame(img.buf, story);
+    if (fr.type === "composite") { failures.push(`composite rejected (${img.provenance.carrier})`); continue; }
+    const { jpeg, meta } = await renderCard({
+      category: cls.category, breaking,
+      headline: card.headline, redSpan: card.redSpan, sub: card.sub,
+      creditLine: img.provenance.creditLine, photo: img.buf,
+      focus: { x: fr.focusX, y: fr.focusY },
+    });
+    const qc = await visionQC({ jpeg, card, story });
+    if (qc.pass) return { jpeg, meta, card, captions, cls, pack, provenance: { ...img.provenance, framing: fr }, qc };
+    failures.push(`qc ${qc.score}${qc.faceCut ? " FACE-CUT" : ""} (${img.provenance.carrier}): ${qc.problems.join("; ")}`);
+  }
+  return { drop: `image placement: all ${candidates.length} candidates rejected — ${failures.join(" | ")}` };
 }
 
 // last publish across ALL entries — the 10-min feed-spacing floor is global, not per-mode (review #20)
