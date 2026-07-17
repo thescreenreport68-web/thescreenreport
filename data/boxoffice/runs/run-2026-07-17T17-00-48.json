@@ -1,0 +1,112 @@
+{
+ "runId": "run-2026-07-17T17-00-48",
+ "mode": "live",
+ "startedAt": "2026-07-17T17:00:48.715Z",
+ "films": 8,
+ "published": [
+  {
+   "tag": "shipwrecked-nightmare-at-sea-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "slug": "shipwrecked-nightmare-at-sea-debuts-at-2-on-netflix-with-14-million-hours-viewed",
+   "path": "/home/runner/work/thescreenreport/thescreenreport/content/articles/shipwrecked-nightmare-at-sea-debuts-at-2-on-netflix-with-14-million-hours-viewed.md",
+   "score": 85
+  }
+ ],
+ "held": [
+  {
+   "tag": "enola-holmes-3-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "soft-floor engagement 4 < 5 | soft-floor humanVoice 4 < 5",
+   "score": 45
+  },
+  {
+   "tag": "voicemails-for-isabelle-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "5 unverified claim(s) cut, unrecovered",
+   "score": 60
+  },
+  {
+   "tag": "the-doorman-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "platform: names max not in confirmed providers",
+   "score": 0
+  },
+  {
+   "tag": "little-brother-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "words 107 < 180 (owner-set ~200-word minimum)",
+   "score": 55
+  },
+  {
+   "tag": "rust-creek-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "3 unverified claim(s) cut, unrecovered",
+   "score": 65
+  },
+  {
+   "tag": "f9-the-fast-saga-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "words 151 < 180 (owner-set ~200-word minimum)",
+   "score": 65
+  },
+  {
+   "tag": "old-henry-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "platform: names max not in confirmed providers",
+   "score": 0
+  }
+ ],
+ "rejected": [],
+ "skipped": [],
+ "blocked": [],
+ "paced": {
+  "tokens": 2.78,
+  "behind": true,
+  "expected": 7,
+  "allow": 2
+ },
+ "zeroStreak": 0,
+ "daySpend": {
+  "laDay": "2026-07-17",
+  "usd": 0.48715
+ },
+ "finishedAt": "2026-07-17T17:16:20.994Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3257,
+    "out": 653,
+    "usd": 0.00021,
+    "ms": 2791
+   },
+   "gatherer": {
+    "calls": 8,
+    "errors": 0,
+    "in": 15432,
+    "out": 991,
+    "usd": 0.00194,
+    "ms": 10313
+   },
+   "synthesizer": {
+    "calls": 8,
+    "errors": 0,
+    "in": 5532,
+    "out": 5028,
+    "usd": 0.0014,
+    "ms": 109877
+   },
+   "writer": {
+    "calls": 16,
+    "errors": 0,
+    "in": 50256,
+    "out": 16762,
+    "usd": 0.04692,
+    "ms": 179384
+   },
+   "qa": {
+    "calls": 43,
+    "errors": 0,
+    "in": 116331,
+    "out": 17719,
+    "usd": 0.0792,
+    "ms": 152511
+   }
+  },
+  "totalUsd": 0.12967
+ },
+ "openrouterTotalUsd": 0.12635
+}

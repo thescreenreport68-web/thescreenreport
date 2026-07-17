@@ -230,6 +230,17 @@
    "film": "Evil Dead Burn",
    "tmdbId": null,
    "eventType": "boxoffice"
+  },
+  {
+   "key": "shipwrecked-nightmare-at-sea-netflix-top10-w2026-07-12|NETFLIX-TOP10",
+   "at": "2026-07-17T17:04:15.847Z",
+   "eventSlug": "shipwrecked-nightmare-at-sea-netflix-top10-w2026-07-12",
+   "form": "NETFLIX-TOP10",
+   "slug": "shipwrecked-nightmare-at-sea-debuts-at-2-on-netflix-with-14-million-hours-viewed",
+   "title": "Shipwrecked: Nightmare at Sea Debuts at #2 on Netflix with 14 Million Hours Viewed",
+   "film": "Shipwrecked: Nightmare at Sea",
+   "tmdbId": null,
+   "eventType": "boxoffice"
   }
  ],
  "parked": [
@@ -495,41 +506,33 @@
    "key": "enola-holmes-3-netflix-top10-w2026-07-12|NETFLIX-TOP10",
    "eventSlug": "enola-holmes-3-netflix-top10-w2026-07-12",
    "form": "NETFLIX-TOP10",
-   "reason": "words 142 < 180 (owner-set ~200-word minimum) | soft-floor engagement 4 < 5",
-   "tries": 1,
-   "at": "2026-07-17T12:35:26.900Z"
-  },
-  {
-   "key": "shipwrecked-nightmare-at-sea-netflix-top10-w2026-07-12|NETFLIX-TOP10",
-   "eventSlug": "shipwrecked-nightmare-at-sea-netflix-top10-w2026-07-12",
-   "form": "NETFLIX-TOP10",
-   "reason": "2 unverified claim(s) cut, unrecovered",
-   "tries": 1,
-   "at": "2026-07-17T12:37:55.387Z"
+   "reason": "soft-floor engagement 4 < 5 | soft-floor humanVoice 4 < 5",
+   "tries": 2,
+   "at": "2026-07-17T17:02:41.302Z"
   },
   {
    "key": "voicemails-for-isabelle-netflix-top10-w2026-07-12|NETFLIX-TOP10",
    "eventSlug": "voicemails-for-isabelle-netflix-top10-w2026-07-12",
    "form": "NETFLIX-TOP10",
-   "reason": "1 unverified claim(s) cut, unrecovered",
-   "tries": 1,
-   "at": "2026-07-17T12:40:05.551Z"
+   "reason": "5 unverified claim(s) cut, unrecovered",
+   "tries": 2,
+   "at": "2026-07-17T17:07:00.982Z"
   },
   {
    "key": "the-doorman-netflix-top10-w2026-07-12|NETFLIX-TOP10",
    "eventSlug": "the-doorman-netflix-top10-w2026-07-12",
    "form": "NETFLIX-TOP10",
-   "reason": "words 107 < 180 (owner-set ~200-word minimum)",
-   "tries": 1,
-   "at": "2026-07-17T12:41:37.922Z"
+   "reason": "platform: names max not in confirmed providers",
+   "tries": 2,
+   "at": "2026-07-17T17:08:53.287Z"
   },
   {
    "key": "little-brother-netflix-top10-w2026-07-12|NETFLIX-TOP10",
    "eventSlug": "little-brother-netflix-top10-w2026-07-12",
    "form": "NETFLIX-TOP10",
-   "reason": "words 146 < 180 (owner-set ~200-word minimum)",
-   "tries": 1,
-   "at": "2026-07-17T12:44:12.927Z"
+   "reason": "words 107 < 180 (owner-set ~200-word minimum)",
+   "tries": 2,
+   "at": "2026-07-17T17:11:15.882Z"
   },
   {
    "key": "young-washington-bo-update-d13|BO-UPDATE",
@@ -570,16 +573,40 @@
    "reason": "1 unverified claim(s) cut, unrecovered",
    "tries": 1,
    "at": "2026-07-17T16:48:53.831Z"
+  },
+  {
+   "key": "rust-creek-netflix-top10-w2026-07-12|NETFLIX-TOP10",
+   "eventSlug": "rust-creek-netflix-top10-w2026-07-12",
+   "form": "NETFLIX-TOP10",
+   "reason": "3 unverified claim(s) cut, unrecovered",
+   "tries": 1,
+   "at": "2026-07-17T17:13:01.243Z"
+  },
+  {
+   "key": "f9-the-fast-saga-netflix-top10-w2026-07-12|NETFLIX-TOP10",
+   "eventSlug": "f9-the-fast-saga-netflix-top10-w2026-07-12",
+   "form": "NETFLIX-TOP10",
+   "reason": "words 151 < 180 (owner-set ~200-word minimum)",
+   "tries": 1,
+   "at": "2026-07-17T17:14:48.302Z"
+  },
+  {
+   "key": "old-henry-netflix-top10-w2026-07-12|NETFLIX-TOP10",
+   "eventSlug": "old-henry-netflix-top10-w2026-07-12",
+   "form": "NETFLIX-TOP10",
+   "reason": "platform: names max not in confirmed providers",
+   "tries": 1,
+   "at": "2026-07-17T17:16:20.992Z"
   }
  ],
- "zeroStreak": 2,
+ "zeroStreak": 0,
  "daySpend": {
   "laDay": "2026-07-17",
-  "usd": 0.3608
+  "usd": 0.48715
  },
  "pace": {
-  "tokens": 2.082377277777778,
-  "lastMs": 1784305846562
+  "tokens": 1.7832145555555559,
+  "lastMs": 1784307648715
  },
  "lastAuditDay": "2026-07-17"
 }
