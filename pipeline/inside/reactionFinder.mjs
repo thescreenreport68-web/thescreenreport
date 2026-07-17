@@ -352,7 +352,10 @@ export function fallbackQueries(trigger, angle) {
   const who = angle.focusEntity || trigger.primaryEntity;
   // Disambiguate a short/common title with its medium so the finder doesn't match unrelated text.
   const medium = trigger.work ? (trigger.work.type === "tv" ? "TV series" : "movie") : "";
-  const w = trigger.work && who === trigger.work.title ? `${who} ${medium}` : who;
+  // Beck fix: an AMBIGUOUS single-token subject gets its category word in EVERY article query too —
+  // bare "Beck fans react" pulled QB coverage from sports sites (wasted spend the walls then dropped).
+  const disamb = trigger.subject?.ambiguous ? ` ${trigger.subject.categoryWord}` : "";
+  const w = trigger.work && who === trigger.work.title ? `${who} ${medium}` : `${who}${disamb}`;
   const F = {
     // Hunt pages that EMBED real fan posts (roundups carry the X/Instagram/Reddit posts we need in
     // their raw HTML) — the X-search source finds tweets directly; these surface IG/Reddit posts too.
@@ -505,62 +508,10 @@ export async function harvestReactions(trigger, angle, {
   };
   recompute();
 
-  // 3. Remaining queries only while the floor is unmet — a met floor stops the spend immediately;
-  //    the soft deadline stops new queries when time is nearly up.
-  for (let qi = 1; qi < queries.length && !meetsFloor(angle.form, statsOf()).ok; qi++) {
-    if (Date.now() - t0 > softDeadlineMs) break;
-    if (await runQuery(queries[qi], [])) recompute();
-  }
 
-  // (No early bail on empty contentFinder — Bluesky below is an independent anchor source that works
-  // even when the keyless article-extraction tier is throttled.)
-
-  // 3b. TWEETS AS REACTIONS. The outlet coverage carries the reaction posts' URLs; resolve them
-  //     through the keyless syndication cache (deleted/protected drop silently), classify author
-  //     + relevance once, and feed them into the pool: known figures = named voices, ordinary
-  //     users = the fan pool. Quote = the post's own text (verbatim by construction; the ≤45-word
-  //     cut stays substring-safe under norm()'s whitespace collapse).
-  let tweetIds = [];
-  let tweets = [];
-  if (embeds) {
-    try {
-      // THREE tweet sources merged, all resolved through the ONE syndication cache (verbatim +
-      // embeddable): (1) twitterapi.io SEARCH — the real reaction posts about the subject (REV 5,
-      // the fan-post spine once TWITTERAPI_KEY is set); (2) tweet URLs already embedded in the
-      // coverage pages; (3) a raw-HTML page scan (roundups carry the posts extraction strips).
-      const who = angle.focusEntity || trigger.primaryEntity;
-      // FREE MODE: skip the paid twitterapi.io search; keep the free page-scan tweet sources.
-      const searchIds = NO_X ? [] : await xSearchImpl(who, { max: MAX_EMBEDS * 3 }).catch((e) => { diag(`x-search → ERR ${String(e?.message || e).slice(0, 80)}`); return []; });
-      const ids = [...new Set([...searchIds, ...findTweetIds(withText), ...await scanImpl(bundle?.sources || withText)])];
-      ({ tweets = [], ids: tweetIds = [] } = await cacheTweetsImpl(ids.slice(0, MAX_EMBEDS * 3)));
-      diag(`x → search ${searchIds.length}, total-ids ${ids.length}, syndication-resolved ${tweets.length}`);
-    } catch (e) { diag(`tweet-scan → ERR ${String(e?.message || e).slice(0, 80)}`); tweets = []; tweetIds = []; }
-  }
-  if (tweets.length) {
-    const classified = await classifyTweets(tweets, trigger, angle, { model, chatImpl, subject });
-    for (const c of classified) {
-      const t = tweets[c.i];
-      const text = (t.text || "").trim();
-      if (!text || looksLikeSpam(text)) continue;
-      const quote = cleanQuote(text);
-      if (norm(quote).length < 8 || hasHandle(quote)) continue;
-      const id = String(t.id_str || tweetIds[c.i] || "");
-      withText.push({ url: id ? `https://x.com/i/status/${id}` : null, domain: "x.com", owner: "x", tier: "social", title: "public post", text, quotes: [text] });
-      raw.push({
-        speaker: c.speakerType === "fan" ? "" : (t.user?.name || ""),
-        speakerType: c.speakerType || "fan",
-        connection: c.connection || "",
-        platform: "", // FREE MODE: generic attribution ("one user wrote") — never a platform name
-        date: (t.created_at || "").slice(0, 10),
-        quote,
-        stance: c.stance || "neutral",
-        sourceIdx: withText.length - 1,
-        tweetId: id || undefined,
-      });
-    }
-    recompute();
-  }
-
+  // ── FAST SOCIAL SUPPLY FIRST (owner upgrade: YouTube/Bluesky are 2-3 quick calls; the article-
+  //    search path below is SLOW (gnews-decode/jina minutes) — social fills the floor first so the
+  //    paid page loop below often never needs to run at all.) ─────────────────────────────────────
   // 3b2. BLUESKY AS TEXT QUOTES — the keyless, free raw-fan-post source (works from any IP). Used
   //      ONLY for quote TEXT here (never embedded, never named as "Bluesky" to the reader — attributed
   //      generically as "one user"). The same relevance/speaker classify gates every post.
@@ -672,6 +623,65 @@ export async function harvestReactions(trigger, angle, {
         recompute();
       }
     } catch { /* supply-2.0 outage — bsky + page-scan carry the harvest */ }
+  }
+
+  // 3. Remaining queries only while the floor is unmet — a met floor stops the spend immediately;
+  //    the soft deadline stops new queries when time is nearly up.
+  for (let qi = 1; qi < queries.length && !meetsFloor(angle.form, statsOf()).ok; qi++) {
+    if (Date.now() - t0 > softDeadlineMs) break;
+    if (await runQuery(queries[qi], [])) recompute();
+  }
+
+  // (No early bail on empty contentFinder — Bluesky below is an independent anchor source that works
+  // even when the keyless article-extraction tier is throttled.)
+
+  // 3b. TWEETS AS REACTIONS. The outlet coverage carries the reaction posts' URLs; resolve them
+  //     through the keyless syndication cache (deleted/protected drop silently), classify author
+  //     + relevance once, and feed them into the pool: known figures = named voices, ordinary
+  //     users = the fan pool. Quote = the post's own text (verbatim by construction; the ≤45-word
+  //     cut stays substring-safe under norm()'s whitespace collapse).
+  let tweetIds = [];
+  let tweets = [];
+  if (embeds) {
+    try {
+      // THREE tweet sources merged, all resolved through the ONE syndication cache (verbatim +
+      // embeddable): (1) twitterapi.io SEARCH — the real reaction posts about the subject (REV 5,
+      // the fan-post spine once TWITTERAPI_KEY is set); (2) tweet URLs already embedded in the
+      // coverage pages; (3) a raw-HTML page scan (roundups carry the posts extraction strips).
+      const who = angle.focusEntity || trigger.primaryEntity;
+      // FREE MODE: skip the paid twitterapi.io search; keep the free page-scan tweet sources.
+      const searchIds = NO_X ? [] : await xSearchImpl(who, { max: MAX_EMBEDS * 3 }).catch((e) => { diag(`x-search → ERR ${String(e?.message || e).slice(0, 80)}`); return []; });
+      const ids = [...new Set([...searchIds, ...findTweetIds(withText), ...await scanImpl(bundle?.sources || withText)])];
+      ({ tweets = [], ids: tweetIds = [] } = await cacheTweetsImpl(ids.slice(0, MAX_EMBEDS * 3)));
+      diag(`x → search ${searchIds.length}, total-ids ${ids.length}, syndication-resolved ${tweets.length}`);
+    } catch (e) { diag(`tweet-scan → ERR ${String(e?.message || e).slice(0, 80)}`); tweets = []; tweetIds = []; }
+  }
+  if (tweets.length) {
+    const classified = await classifyTweets(tweets, trigger, angle, { model, chatImpl, subject });
+    for (const c of classified) {
+      const t = tweets[c.i];
+      const text = (t.text || "").trim();
+      if (!text || looksLikeSpam(text)) continue;
+      // Beck fix: page-scanned tweets are SEARCH-sourced (the sports pages embedded QB tweets) —
+      // the same deterministic admission + sweep applies before a tweet can become an anchor.
+      if (!subjectAdmission(text, trigger.subject || null) || offSubjectPost(text, trigger.subject || null)) continue;
+      const quote = cleanQuote(text);
+      if (norm(quote).length < 8 || hasHandle(quote)) continue;
+      const id = String(t.id_str || tweetIds[c.i] || "");
+      withText.push({ url: id ? `https://x.com/i/status/${id}` : null, domain: "x.com", owner: "x", tier: "social", title: "public post", text, quotes: [text] });
+      raw.push({
+        speaker: c.speakerType === "fan" ? "" : (t.user?.name || ""),
+        speakerType: c.speakerType || "fan",
+        connection: c.connection || "",
+        platform: "", // FREE MODE: generic attribution ("one user wrote") — never a platform name
+        date: (t.created_at || "").slice(0, 10),
+        quote,
+        stance: c.stance || "neutral",
+        sourceIdx: withText.length - 1,
+        tweetId: id || undefined,
+      });
+    }
+    recompute();
   }
 
   // (Reddit as an anchor source was REMOVED 2026-07-12 — permanently 403-blocked from datacenter
