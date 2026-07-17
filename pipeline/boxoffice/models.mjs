@@ -15,6 +15,15 @@ export const AGENTS = {
     maxTokens: 900,
     watchdogMs: 60e3,
   },
+  // FIND categorize — ONE batched call per FIND run turns raw trade/gnews headlines into typed box-office
+  // events (film + kind + form). Cheapest tier; everything before/after it is deterministic (news-lane pattern).
+  categorize: {
+    model: "google/gemini-2.5-flash-lite",
+    fallback: "amazon/nova-micro-v1",
+    temperature: 0,
+    maxTokens: 1600,
+    watchdogMs: 90e3,
+  },
   // Literal verbatim extraction of every reported number/narrative/cast to strict JSON — zero creativity.
   gatherer: {
     model: "google/gemini-2.5-flash-lite",

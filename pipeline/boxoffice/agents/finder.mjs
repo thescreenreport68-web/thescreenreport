@@ -8,6 +8,7 @@ import { FORMS, scopeOk, BOX_OFFICE_FORMS } from "../config.bo.mjs";
 import { loadTracked, streamingExits } from "../tracker.mjs";
 import { fetchNetflixTop10 } from "../netflix.mjs";
 import { fetchDailyChart } from "../dailyChart.mjs";
+import { readQueue, markConsumed } from "../find/findrun.mjs";
 import { getTitleFacts } from "../../lib/tmdb.mjs";
 
 // Build a {film, trigger, angle} entry in the finder's canonical shape (used for tracker-surfaced
@@ -33,7 +34,7 @@ box office no matter how popular. Skip films with no genuine money angle right n
 For each pick: a working headline (stars + the number, curiosity without clickbait), the star(s) to lead
 with, and 2 SIMPLE search queries (3-5 plain words, e.g. "Wicked box office weekend"). Output STRICT JSON only.`;
 
-export async function findFilms({ limit = 3, discoverImpl = discoverFilms, chatImpl = null, nowMs = null, trackedImpl = null, providersImpl = null, netflixImpl = null, dailyChartImpl = null, preferStreaming = false, seen = null } = {}) {
+export async function findFilms({ limit = 3, discoverImpl = discoverFilms, chatImpl = null, nowMs = null, trackedImpl = null, providersImpl = null, netflixImpl = null, dailyChartImpl = null, queueImpl = null, dryQueueMark = false, preferStreaming = false, seen = null } = {}) {
   const films = await discoverImpl({ nowMs });
   const seenSlugs = seen?.slugs || new Set();
   const seenTitles = seen?.titles || new Set();
@@ -123,13 +124,45 @@ export async function findFilms({ limit = 3, discoverImpl = discoverFilms, chatI
     }
   } catch { chartPicks = []; }
 
-  // Candidate POOL for the tick. DAILY-CHART box-office LEADS (real running numbers for every film in theaters =
-  // the 15/day engine); streaming picks are a REACHABLE fallback so a tick never comes up empty. preferStreaming
-  // (the ~5 stream ticks/day) puts streaming first. borun tries candidates in order until one clears the gates.
+  // P2 EVENT QUEUE — the breaking/event stream (trade RSS + gnews → categorized, clustered, demand-scored
+  // by findrun). A fresh corroborated OPENING/milestone/streaming-arrival outranks inventory walking. An
+  // event matching a chart film BOOSTS that chart entry (the chart carries the real numbers); an event for
+  // a film NOT on the chart (a brand-new opening, a streaming arrival) becomes its own candidate.
+  let queueEvents = [];
+  try {
+    const q = queueImpl ? queueImpl() : readQueue({ nowMs });
+    queueEvents = (q?.events || []).filter((ev) => !ev.consumedAt && ev.filmTitle && scopeOk({ title: ev.filmTitle }));
+  } catch { queueEvents = []; }
+  const eventEntries = [];
+  const chartByTitle = new Map(chartPicks.map((e) => [e.film.title.toLowerCase(), e]));
+  for (const ev of queueEvents.slice(0, 8)) {
+    const chartHit = chartByTitle.get(ev.filmTitle.toLowerCase());
+    if (chartHit) { // demand signal on a tracked chart film → boost its rank in the pool
+      chartHit.trigger.priority = Math.max(chartHit.trigger.priority, Math.min(100, 30 + (ev.priority || 0)));
+      chartHit.trigger.signals.breakout = 4;
+      continue;
+    }
+    const form = ev.form && FORMS[ev.form] ? ev.form : "BO-UPDATE";
+    if (seenSlugs.has(ev.slug)) continue;
+    const e = mkEntry(
+      { id: null, title: ev.filmTitle, year: String(new Date(nowMs || Date.now()).getFullYear()), releaseDate: "", popularity: Math.min(100, 30 + (ev.priority || 0)), overview: "", originalLanguage: "en", via: `event-${ev.kind}` },
+      form,
+      { workingTitle: (ev.sources?.[0]?.title || `${ev.filmTitle} box office`).slice(0, 140), queries: [`${ev.filmTitle} box office`, `${ev.filmTitle} ${ev.kind === "streaming-arrival" ? "streaming" : "weekend gross"}`] },
+    );
+    e.trigger.eventSlug = ev.slug;
+    e.trigger.sources = (ev.sources || []).filter((s) => s.url).map((s) => ({ url: s.url, outlet: s.owner, tier: s.tier }));
+    e.trigger.signals.recency = 5;
+    eventEntries.push(e);
+  }
+  if (eventEntries.length && !dryQueueMark) { try { markConsumed(eventEntries.map((e) => e.trigger.eventSlug)); } catch {} }
+
+  // Candidate POOL for the tick. EVENT entries lead (breaking beats inventory), then the DAILY-CHART
+  // box-office engine (real running numbers for every film in theaters = the 15/day engine); streaming
+  // picks are a REACHABLE fallback so a tick never comes up empty. preferStreaming puts streaming first.
   const poolSize = Math.max(limit, 6);
   const merge = (bo) => (preferStreaming
-    ? [...streamPicks, ...chartPicks, ...exitEntries, ...bo]
-    : [...chartPicks, ...exitEntries, ...bo.slice(0, 2), ...streamPicks, ...bo.slice(2)]).slice(0, poolSize);
+    ? [...eventEntries, ...streamPicks, ...chartPicks, ...exitEntries, ...bo]
+    : [...eventEntries, ...chartPicks, ...exitEntries, ...bo.slice(0, 2), ...streamPicks, ...bo.slice(2)]).slice(0, poolSize);
 
   if (!films.length) return merge([]);
 

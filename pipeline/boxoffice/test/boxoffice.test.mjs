@@ -17,6 +17,10 @@ import { boKey, alreadyPublished, coveredEventSlugs, parkAngle as parkAngleX, pa
 import { run as gatherRun } from "../agents/gatherer.mjs";
 import { run as writerRun } from "../agents/writer.mjs";
 import { readChartCache, writeChartCache } from "../dailyChart.mjs";
+import { parseRss, BO_SCOPE, JUNK_RE } from "../find/sources.mjs";
+import { categorize, cluster } from "../find/events.mjs";
+import { scoreEvent } from "../find/score.mjs";
+import { readQueue, markConsumed } from "../find/findrun.mjs";
 import { isMaterial, updateEventSuffix, recordArticle, currentNumberRaw, priorArticles, linkPriorCoverage, streamingExits, trackKey, isPastOpening } from "../tracker.mjs";
 import { parseNetflixTsv, netflixBlock, fmtHours } from "../netflix.mjs";
 import { findFilms } from "../agents/finder.mjs";
@@ -368,7 +372,7 @@ fs.rmSync(TT, { recursive: true, force: true });
 console.log("streaming — finder picks + gatherer branch");
 await ta("finder builds NETFLIX-TOP10 + TRENDING-TV picks from Netflix data", async () => {
   const nf = { week: "2026-06-28", films: [{ title: "The Big One", rank: 1, hours: "22 million hours", hoursRaw: 22000000 }], tv: [{ title: "Hit Series", rank: 1, hours: "45 million hours", hoursRaw: 45000000 }] };
-  const found = await findFilms({ dailyChartImpl: async () => ({ films: [] }), limit: 5, discoverImpl: async () => [], netflixImpl: async () => nf, trackedImpl: { films: {} }, providersImpl: async () => null });
+  const found = await findFilms({ queueImpl: () => null, dailyChartImpl: async () => ({ films: [] }), limit: 5, discoverImpl: async () => [], netflixImpl: async () => nf, trackedImpl: { films: {} }, providersImpl: async () => null });
   const forms = found.map((e) => e.angle.form);
   assert.ok(forms.includes("NETFLIX-TOP10"), JSON.stringify(forms));
   assert.ok(forms.includes("TRENDING-TV"));
@@ -379,7 +383,7 @@ await ta("finder builds NETFLIX-TOP10 + TRENDING-TV picks from Netflix data", as
 await ta("finder never assigns a streaming form to a theatrical film (LLM clamp)", async () => {
   const films = [{ id: 1, title: "Theatrical", year: "2026", releaseDate: "2026-07-01", popularity: 80, via: "now_playing", overview: "", originalLanguage: "en" }];
   const badJudge = async () => ({ data: { picks: [{ i: 0, form: "NETFLIX-TOP10", workingTitle: "x", queries: ["x"] }] } });
-  const found = await findFilms({ dailyChartImpl: async () => ({ films: [] }), limit: 3, discoverImpl: async () => films, chatImpl: badJudge, netflixImpl: async () => ({ films: [], tv: [] }), trackedImpl: { films: {} }, providersImpl: async () => null });
+  const found = await findFilms({ queueImpl: () => null, dailyChartImpl: async () => ({ films: [] }), limit: 3, discoverImpl: async () => films, chatImpl: badJudge, netflixImpl: async () => ({ films: [], tv: [] }), trackedImpl: { films: {} }, providersImpl: async () => null });
   assert.ok(!found.some((e) => e.film.tmdbId === 1 && e.angle.form === "NETFLIX-TOP10"), "a streaming form must not attach to a theatrical film");
 });
 await ta("gatherer streaming branch builds Netflix-grounded gathered + meets the hours floor", async () => {
@@ -643,7 +647,7 @@ await ta("finder rotates PAST a covered film (by title) to a fresh one — never
     { i: 0, form: "BO-OPENING", workingTitle: "Toy Story 5", star: "", queries: ["x"] },
     { i: 1, form: "BO-OPENING", workingTitle: "Fresh Film", star: "", queries: ["y"] }] } });
   const seen = { slugs: new Set(["toy-story-5-bo-opening"]), titles: new Set(["toy story 5"]) };
-  const found = await findFilms({ dailyChartImpl: async () => ({ films: [] }), limit: 1, discoverImpl: async () => films, chatImpl: judge, netflixImpl: async () => ({ films: [], tv: [] }), trackedImpl: { films: {} }, providersImpl: async () => null, seen });
+  const found = await findFilms({ queueImpl: () => null, dailyChartImpl: async () => ({ films: [] }), limit: 1, discoverImpl: async () => films, chatImpl: judge, netflixImpl: async () => ({ films: [], tv: [] }), trackedImpl: { films: {} }, providersImpl: async () => null, seen });
   assert.ok(!found.some((e) => e.film.title === "Toy Story 5"), "a covered film must NOT be re-picked");
   assert.ok(found.some((e) => e.film.title === "Fresh Film"), "rotate to a fresh film");
 });
@@ -654,7 +658,7 @@ await ta("finder rotates to the next UNCOVERED Netflix title (a title staying #1
   // Streaming slugs are WEEK-KEYED: covered THIS week (w2026-06-28) → skipped this week; the same title in a
   // NEW chart week is a fresh story again (the old week-less slug permanently killed re-coverage).
   const seen = { slugs: new Set(["old-number-one-netflix-top10-w2026-06-28"]), titles: new Set(["old number one"]) };
-  const found = await findFilms({ dailyChartImpl: async () => ({ films: [] }), limit: 2, discoverImpl: async () => [], netflixImpl: async () => nf, trackedImpl: { films: {} }, providersImpl: async () => null, seen });
+  const found = await findFilms({ queueImpl: () => null, dailyChartImpl: async () => ({ films: [] }), limit: 2, discoverImpl: async () => [], netflixImpl: async () => nf, trackedImpl: { films: {} }, providersImpl: async () => null, seen });
   const nfPick = found.find((e) => e.angle.form === "NETFLIX-TOP10");
   assert.ok(nfPick, "a fresh Netflix pick exists");
   assert.equal(nfPick.film.title, "New Entry", "rotated past the covered #1");
@@ -725,7 +729,7 @@ await ta("finder ADVANCES a covered in-theater film as a BO-UPDATE when the fres
   const tracked = { films: { "1": { tmdbId: 1, title: "Wicked", releaseDate: "2026-06-01", status: "in-theaters", articles: [{ slug: "wicked-bo-opening" }] } } };
   const films = [{ id: 1, title: "Wicked", year: "2026", releaseDate: "2026-06-01", popularity: 90, via: "now_playing", overview: "", originalLanguage: "en" }];
   const judge = async () => ({ data: { picks: [{ i: 0, form: "BO-OPENING", workingTitle: "Wicked", star: "", queries: ["x"] }] } });
-  const found = await findFilms({ dailyChartImpl: async () => ({ films: [] }), limit: 1, discoverImpl: async () => films, chatImpl: judge, netflixImpl: async () => ({ films: [], tv: [] }), trackedImpl: tracked, providersImpl: async () => null, seen });
+  const found = await findFilms({ queueImpl: () => null, dailyChartImpl: async () => ({ films: [] }), limit: 1, discoverImpl: async () => films, chatImpl: judge, netflixImpl: async () => ({ films: [], tv: [] }), trackedImpl: tracked, providersImpl: async () => null, seen });
   assert.ok(found.some((e) => e.film.title === "Wicked" && e.angle.form === "BO-UPDATE"), "covered film surfaced as a next-day BO-UPDATE: " + JSON.stringify(found.map((e) => e.angle.form)));
 });
 fs.rmSync(TMP, { recursive: true, force: true });
@@ -938,6 +942,78 @@ t("chart cache: same LA day hits the cache; a new day misses (extract once per d
   assert.ok(readChartCache({ nowMs: t0 + 3600e3, file }), "same LA day → cache hit");
   assert.equal(readChartCache({ nowMs: t0 + 30 * 3600e3, file }), null, "next LA day → miss");
   fs.rmSync(dir3, { recursive: true, force: true });
+});
+
+// ── P2 FIND ENGINE — event sources, categorize, cluster, score, queue, finder integration ─────────
+console.log("P2 find — sources, events, scoring, queue, finder integration");
+
+t("parseRss extracts items; BO_SCOPE + JUNK filter the beat correctly", () => {
+  const xml = `<rss><channel><item><title><![CDATA['Superman' Crosses $500M at the Global Box Office]]></title><link>https://x/1</link><pubDate>Thu, 17 Jul 2026 10:00:00 GMT</pubDate></item><item><title>Movie Review: A Quiet Film</title><link>https://x/2</link><pubDate>Thu, 17 Jul 2026 10:00:00 GMT</pubDate></item></channel></rss>`;
+  const items = parseRss(xml);
+  assert.equal(items.length, 2);
+  assert.ok(BO_SCOPE.test(items[0].title));
+  assert.ok(JUNK_RE.test(items[1].title), "review = junk");
+});
+
+await ta("categorize batches headlines through ONE cheap call and maps typed kinds", async () => {
+  const fake = async ({ user }) => ({ data: { items: user.split("\n").map((_, n) => ({ i: n + 1, relevant: n === 0, filmTitle: n === 0 ? "Superman" : "", kind: n === 0 ? "milestone" : "other" })) }, usage: {} });
+  const out = await categorize([{ title: "Superman Crosses $500M", owner: "Variety", tier: 1, pubMs: 1 }, { title: "junky", owner: "X", tier: 3, pubMs: 1 }], { chatImpl: fake });
+  assert.equal(out[0].relevant, true); assert.equal(out[0].filmTitle, "Superman"); assert.equal(out[0].kind, "milestone");
+  assert.equal(out[1].relevant, false);
+});
+
+t("cluster: Penske mastheads count as ONE owner group; a real second outlet corroborates", () => {
+  const evs = cluster([
+    { relevant: true, filmTitle: "Superman", kind: "milestone", owner: "Variety", tier: 1, url: "https://x/1", title: "t1", pubMs: 5 },
+    { relevant: true, filmTitle: "Superman", kind: "milestone", owner: "Deadline", tier: 1, url: "https://x/2", title: "t2", pubMs: 6 },
+    { relevant: true, filmTitle: "Superman", kind: "milestone", owner: "TheWrap", tier: 2, url: "https://x/3", title: "t3", pubMs: 7 },
+  ]);
+  assert.equal(evs.length, 1);
+  assert.equal(evs[0].ownerGroups, 2, "PMC(Variety+Deadline)=1 + TheWrap=1");
+  assert.equal(evs[0].slug, "superman-ev-milestone");
+});
+
+t("scoreEvent: a fresh corroborated OPENING outranks a day-50 chart footnote (the Moana-over-Obsession fix)", () => {
+  const nowMs = Date.parse("2026-07-17T12:00:00Z");
+  const opening = scoreEvent({ kind: "opening", ownerGroups: 2, newestMs: nowMs - 30 * 60e3, daysInRelease: 2 }, { nowMs });
+  const oldChart = scoreEvent({ kind: "chart", ownerGroups: 1, newestMs: nowMs - 10 * 3600e3, daysInRelease: 50 }, { nowMs });
+  assert.ok(opening > oldChart + 20, `${opening} vs ${oldChart}`);
+});
+
+t("queue: write → fresh read → stale after 45min → markConsumed", () => {
+  const dir4 = fs.mkdtempSync(path.join(os.tmpdir(), "bo-q-"));
+  const file = path.join(dir4, "queue.json");
+  const nowMs = Date.parse("2026-07-17T12:00:00Z");
+  fs.writeFileSync(file, JSON.stringify({ builtAt: new Date(nowMs).toISOString(), events: [{ slug: "s1", filmTitle: "X", kind: "opening", priority: 60, sources: [] }] }));
+  assert.ok(readQueue({ file, nowMs: nowMs + 10 * 60e3 }), "fresh at +10min");
+  assert.equal(readQueue({ file, nowMs: nowMs + 50 * 60e3 }), null, "stale at +50min");
+  markConsumed(["s1"], { file, nowMs });
+  const q = JSON.parse(fs.readFileSync(file, "utf8"));
+  assert.ok(q.events[0].consumedAt, "consumed stamped");
+  fs.rmSync(dir4, { recursive: true, force: true });
+});
+
+await ta("finder: a queue OPENING event for an off-chart film surfaces FIRST; a chart-film event boosts the chart entry", async () => {
+  const queue = { events: [
+    { slug: "brand-new-film-ev-opening", filmTitle: "Brand New Film", kind: "opening", form: "BO-OPENING", priority: 60, sources: [{ owner: "Variety", tier: 1, url: "https://x/1", title: "Brand New Film opens huge" }] },
+    { slug: "charted-film-ev-milestone", filmTitle: "Charted Film", kind: "milestone", form: "BO-UPDATE", priority: 55, sources: [] },
+  ] };
+  const chart = { films: [{ title: "Charted Film", cume: "$100 million", dailyGross: "$2 million", rank: 1, dayInRelease: "Day 10" }] };
+  const found = await findFilms({ limit: 3, discoverImpl: async () => [], netflixImpl: async () => ({ films: [], tv: [] }), trackedImpl: { films: {} }, providersImpl: async () => null, dailyChartImpl: async () => chart, queueImpl: () => queue, dryQueueMark: true });
+  assert.equal(found[0].film.title, "Brand New Film", "event entry leads the pool");
+  assert.equal(found[0].angle.form, "BO-OPENING");
+  assert.ok(found[0].trigger.sources.length, "event sources flow to the gatherer");
+  const charted = found.find((e) => e.film.title === "Charted Film");
+  assert.ok(charted, "chart entry present");
+  assert.ok(charted.trigger.priority >= 85, "chart entry BOOSTED by its event: " + charted.trigger.priority);
+  assert.equal(charted.trigger.signals.breakout, 4);
+});
+
+t("legacy dead park (no expiresAt) expires 72h after its park time — never dead forever", () => {
+  const dir5 = fs.mkdtempSync(path.join(os.tmpdir(), "bo-lp-"));
+  const st = { published: [], parked: [{ key: "old|NETFLIX-TOP10", eventSlug: "old", form: "NETFLIX-TOP10", reason: "r", tries: 3, dead: true, at: "2026-07-13T00:00:00Z" }], zeroStreak: 0, daySpend: null, file: path.join(dir5, "store.json") };
+  assert.equal(parkedTriesX(st, "old", "NETFLIX-TOP10", { now: new Date("2026-07-17T00:00:00Z") }), 0, "legacy dead park expired");
+  fs.rmSync(dir5, { recursive: true, force: true });
 });
 
 // ── summary ──────────────────────────────────────────────────────────────────────────────────────

@@ -19,6 +19,7 @@ import * as qa from "./agents/qa.mjs";
 import * as imageAgent from "./agents/image.mjs";
 import { writeBoxOfficeArticle } from "./assemble.mjs";
 import { loadStore, alreadyPublished, recordPublished, parkAngle, parkedTries, clearParked, coveredEventSlugs, bumpZeroStreak, bumpDaySpend, daySpendUsd } from "./store.mjs";
+import { runFind, readQueue } from "./find/findrun.mjs";
 import { loadTracked, isMaterial, updateEventSuffix, recordArticle, linkPriorCoverage, isPastOpening } from "./tracker.mjs";
 import { FORMS, ACCEPT_FLOOR, MAX_ATTEMPTS, GATE, DATA_DIR, REVIEW_DIR, FLOOD_CAP, MAX_ARTICLES_PER_DAY, MAX_RUN_COST_USD, STREAMING_DAILY_CAP, DAILY_SPEND_CAP_USD } from "./config.bo.mjs";
 import { cutArticle } from "../lib/cutter.mjs";
@@ -61,6 +62,8 @@ export async function boRun({
   imageImpl = imageAgent.run,
   publishImpl = writeBoxOfficeArticle,
   addLinksImpl = addInternalLinks,
+  runFindImpl = runFind,
+  readQueueImpl = readQueue,
   storeImpl = null,
   trackedImpl = null,
   hero = true,
@@ -93,6 +96,16 @@ export async function boRun({
     return finish(report, dryRun);
   }
   const burst = Math.min(limit, FLOOD_CAP);
+
+  // ── P2 EVENT RADAR — refresh the FIND queue when stale (≤1 batched categorize call per 45 min ≈ $0.001).
+  // Fail-soft: a dead feed or model outage never blocks the tick — the inventory engine still runs.
+  try {
+    if (!readQueueImpl({ nowMs: now })) {
+      const q = await withTimeout(runFindImpl({ nowMs: now, trackedFilms: tracked?.films || null }), 90e3, "findrun");
+      report.queueBuilt = (q?.events || []).length;
+      if (report.queueBuilt) console.log(`  ⚡ event queue rebuilt: ${report.queueBuilt} scored event(s)`);
+    }
+  } catch { /* event stream is additive — inventory discovery continues */ }
 
   // ── FINDER ──
   let found = [];
