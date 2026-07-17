@@ -1,0 +1,115 @@
+{
+  "ts": "2026-07-17T11:01:40.732Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    "nick-lachey-vanessa-lachey-shockingly-kick-couple-off-the-ultimatum"
+  ],
+  "topics": 1,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 0,
+  "costUSD": 0.01649,
+  "costPerPublished": 0.01649,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 6,
+      "in": 17516,
+      "out": 962,
+      "usd": 0.0076598
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 2668,
+      "out": 827,
+      "usd": 0.00060508
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 5,
+      "in": 24248,
+      "out": 5793,
+      "usd": 0.00695230425
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 5,
+      "in": 9029,
+      "out": 925,
+      "usd": 0.0012729
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2396,
+      "out": 228,
+      "usd": 0.0012887999999999999,
+      "ms": 1575
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2668,
+      "out": 827,
+      "usd": 0.00038898000000000003,
+      "ms": 25077
+    },
+    "writer": {
+      "calls": 4,
+      "errors": 0,
+      "in": 23384,
+      "out": 5447,
+      "usd": 0.0072303,
+      "ms": 201075
+    },
+    "verify": {
+      "calls": 6,
+      "errors": 1,
+      "in": 18900,
+      "out": 1213,
+      "usd": 0.0069406,
+      "ms": 10358
+    },
+    "judge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 3032,
+      "out": 204,
+      "usd": 0.00038480000000000003,
+      "ms": 1876
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 864,
+      "out": 346,
+      "usd": 0.00031636,
+      "ms": 11630
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 387,
+      "out": 110,
+      "usd": 0.0000827,
+      "ms": 1069
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 202,
+      "out": 36,
+      "usd": 0.0000346,
+      "ms": 575
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1628,
+      "out": 96,
+      "usd": 0.0002012,
+      "ms": 2189
+    }
+  }
+}
