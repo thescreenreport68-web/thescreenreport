@@ -1,43 +1,40 @@
 {
-  "runId": "run-2026-07-17T17-00-40",
-  "builtAt": "2026-07-17T17:02:01.204Z",
-  "count": 19,
+  "runId": "run-2026-07-17T18-00-46",
+  "builtAt": "2026-07-17T18:02:11.680Z",
+  "count": 20,
   "topics": [
     {
-      "id": "news-brett-gelman-kevin-nealon-rob-morgan-mini-war-casting",
-      "slug": "brett-gelman-kevin-nealon-rob-morgan-join-mini-war-comedy",
-      "title": "Brett Gelman, Kevin Nealon Rob Morgan Join ‘Mini War’ Comedy",
+      "id": "news-samantha-morton-the-odyssey-circe-performance",
+      "slug": "samantha-morton-on-her-intense-the-odyssey-performance-as-circe",
+      "title": "Samantha Morton on Her Intense 'The Odyssey' Performance as Circe",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
-      "eventType": "casting",
+      "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "brett-gelman-kevin-nealon-rob-morgan-mini-war-casting",
-      "primaryKeyword": "brett gelman mini war",
-      "primaryEntity": "Mini War",
+      "eventSlug": "samantha-morton-the-odyssey-circe-performance",
+      "primaryKeyword": "samantha morton the odyssey",
+      "primaryEntity": "Samantha Morton",
       "entities": [
-        "Brett Gelman",
-        "Kevin Nealon",
-        "Rob Morgan",
-        "Luke Wilson"
+        "The Odyssey"
       ],
-      "angle": "Brett Gelman, Kevin Nealon, and Rob Morgan join the cast of the upcoming comedy film 'Mini War'.",
+      "angle": "Samantha Morton discusses her intense portrayal of Circe in 'The Odyssey'.",
       "tmdbType": "movie",
-      "source": "rss:Deadline",
+      "source": "rss:THR",
       "sources": [
         {
-          "outlet": "Deadline",
+          "outlet": "THR",
           "tier": 7,
-          "url": "https://deadline.com/2026/07/brett-gelman-kevin-nealon-rob-morgan-mini-war-1236996910/",
-          "ageMin": 14,
-          "headline": "Brett Gelman, Kevin Nealon Rob Morgan Join ‘Mini War’ Comedy",
-          "summary": "EXCLUSIVE: Stranger Things duo Brett Gelman and Rob Morgan and former SNL star Kevin Nealon are rounding out the cast of Mini War, the feature comedy starring Luke Wilson, Vanessa Hudgens and Nick Swardson. The trio have joined the film, which comes from the team behind stoner cult comedy Grandma’s Boy with Swardson and Allen [ ]"
+          "url": "https://www.hollywoodreporter.com/movies/movie-features/samantha-morton-the-odyssey-feature-1236650941/",
+          "ageMin": 6,
+          "headline": "How Samantha Morton Pulled Off Her Wild The Odyssey Performance as Circe: I Wanted to Possess It",
+          "summary": "The two-time Oscar nominee all but stills the massive film in a scene that reflects what she's been doing her whole career: Making her mark with whatever screen time she's got."
         }
       ],
-      "ageMin": 14,
+      "ageMin": 6,
       "_cand": {
-        "key": "rss:brett-gelman-kevin-nealon-rob-morgan-join-mini-war-comedy",
+        "key": "rss:how-samantha-morton-pulled-off-her-wild-the-odyssey-performa",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -47,64 +44,65 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Deadline"
+          "THR"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Deadline",
+        "attribution": "THR",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 98,
+      "priority": 103,
       "signals": {
         "recency": 30,
         "corroboration": 12,
         "status": 18,
-        "type": 14,
+        "type": 5,
         "pop": 0,
         "breakout": 0,
-        "big": 24,
+        "big": 12,
         "trending": 0,
-        "softTv": 0
+        "softTv": 0,
+        "radar": 26
       },
-      "tierClass": "B"
+      "radarKind": "movie-in-theaters",
+      "tierClass": "A"
     },
     {
-      "id": "news-giorgia-whigham-trevor-wallace-alyssa-milano-shea-whigham-how-the-cook",
-      "slug": "giorgia-whigham-trevor-wallace-alyssa-milano-shea-whigham-lead-r-rated",
-      "title": "Giorgia Whigham, Trevor Wallace, Alyssa Milano & Shea Whigham Lead R-Rated Comedy ‘How The Cookie Crumbles’",
+      "id": "news-the-musical-us-rights-sundance",
+      "slug": "us-rights-to-sundance-comedy-the-musical-acquired-by-blue-harbor-and-v",
+      "title": "US Rights to Sundance Comedy 'The Musical' Acquired by Blue Harbor and Variance Films",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
-      "eventType": "casting",
+      "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "giorgia-whigham-trevor-wallace-alyssa-milano-shea-whigham-how-the-cook",
-      "primaryKeyword": "how the cookie crumbles movie casting",
-      "primaryEntity": "How The Cookie Crumbles",
+      "eventSlug": "the-musical-us-rights-sundance",
+      "primaryKeyword": "the musical movie",
+      "primaryEntity": "The Musical",
       "entities": [
-        "Giorgia Whigham",
-        "Trevor Wallace",
-        "Alyssa Milano",
-        "Shea Whigham"
+        "Comedy Central Roast of Rob Lowe",
+        "Rob Lowe",
+        "Gillian Jacobs"
       ],
-      "angle": "Giorgia Whigham, Trevor Wallace, Alyssa Milano, and Shea Whigham are set to star in the R-rated comedy 'How The Cookie Crumbles'.",
+      "angle": "Blue Harbor and Variance Films acquire US rights to Sundance comedy 'The Musical'.",
       "tmdbType": "movie",
       "source": "rss:Deadline",
       "sources": [
         {
           "outlet": "Deadline",
           "tier": 7,
-          "url": "https://deadline.com/2026/07/giorgia-whigham-trevor-wallace-alyssa-milano-cookie-movie-1236996821/",
-          "ageMin": 45,
-          "headline": "Giorgia Whigham, Trevor Wallace, Alyssa Milano Shea Whigham Lead R-Rated Comedy How The Cookie Crumbles",
-          "summary": "EXCLUSIVE: Production has wrapped on under-the-radar indie pic How The Cookie Crumbles, a coming-of-age R-rated comedy starring Giorgia Whigham (Ted), comedian and influencer Trevor Wallace (Busboys), Alyssa Milano (Charmed) and Shea Whigham (Boardwalk Empire). Shot in Vancouver, the project marks the feature debut of filmmakers Edward McDonald and Lucas Fraser. It is also the first [ ]"
+          "url": "https://deadline.com/2026/07/rob-lowe-gillian-jacobs-sundance-the-musical-release-date-1236996895/",
+          "ageMin": 23,
+          "headline": "Blue Harbor Variance Take U.S. To Sundance Pic The Musical Starring Rob Lowe, Will Brill Gillian Jacobs",
+          "summary": "EXCLUSIVE: Blue Harbor Entertainment and Variance Films have picked up U.S. rights to the Sundance comedy The Musical, starring Will Brill, Rob Lowe, and Gillian Jacobs. A nationwide theatrical release has bee set for Sept. 18. Unapologetic Projects Partners is teaming with Blue Harbor and Variance on the release which reps the feature directorial debut [ ]"
         }
       ],
-      "ageMin": 45,
+      "ageMin": 23,
       "_cand": {
-        "key": "rss:giorgia-whigham-trevor-wallace-alyssa-milano-shea-whigham-le",
+        "key": "rss:blue-harbor-variance-take-u-s-to-sundance-pic-the-musical-st",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -123,12 +121,12 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 92,
+      "priority": 87,
       "signals": {
         "recency": 24,
         "corroboration": 12,
         "status": 18,
-        "type": 14,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
         "big": 24,
@@ -138,35 +136,37 @@
       "tierClass": "B"
     },
     {
-      "id": "trailer-gandahar-4k-restoration-trailer",
-      "slug": "new-trailer-ren-laloux-s-final-film-gandahar-arriving-in-4k-restoratio",
-      "title": "New Trailer René Laloux’s Final Film Gandahar, Arriving in 4K Restoration on August 28",
+      "id": "trailer-gal-gadot-the-runner-trailer-protest",
+      "slug": "gal-gadot-shares-trailer-for-the-runner-filming-disrupted-by-protester",
+      "title": "Gal Gadot Shares Trailer for ‘The Runner,’ Filming Disrupted by Protesters",
       "contentType": "trailer",
       "formatTag": "trailer",
       "category": "movies",
       "subcategory": "trailers",
       "eventType": "trailer",
       "sensitivity": "normal",
-      "eventSlug": "gandahar-4k-restoration-trailer",
-      "primaryKeyword": "gandahar trailer",
-      "primaryEntity": "Gandahar",
-      "entities": [],
-      "angle": "A trailer has been released for the 4K restoration of René Laloux's final film, Gandahar.",
+      "eventSlug": "gal-gadot-the-runner-trailer-protest",
+      "primaryKeyword": "gal gadot the runner trailer",
+      "primaryEntity": "The Runner",
+      "entities": [
+        "Gal Gadot"
+      ],
+      "angle": "Gal Gadot shared the trailer for her new movie 'The Runner,' which was disrupted by anti-Israel activists during filming.",
       "tmdbType": "movie",
-      "source": "gnews:The Film Stage",
+      "source": "gnews:Algemeiner.com",
       "sources": [
         {
-          "outlet": "The Film Stage",
+          "outlet": "Algemeiner.com",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQcndvZHIzeG1ZTFJTRkR1VlczN1NDSl9lRGlYYmJVUHBRVlNzS1A3SzZpcnJRUXl3UGdYZFpsb3E1dWF2ZDZEQ0lQOXFoZGVJRElidkR2MnVpb1c1U1BORmlTN1FNTnlyNkdPYTZJc2swRE5HcU42Q1g5bmpmQ2VjVzN4THljcVdfOHZpZzZacjFKaUZpSEZTQlYxWEtBSVNjclBxVnBWUWJOSFRGZ1NN?oc=5",
-          "ageMin": 65,
-          "headline": "New Trailer René Laloux’s Final Film Gandahar , Arriving in 4K Restoration on August 28 - The Film Stage",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxQcndvZHIzeG1ZTFJTRkR1VlczN1NDSl9lRGlYYmJVUHBRVlNzS1A3SzZpcnJRUXl3UGdYZFpsb3E1dWF2ZDZEQ0lQOXFoZGVJRElidkR2MnVpb1c1U1BORmlTN1FNTnlyNkdPYTZJc2swRE5HcU42Q1g5bmpmQ2VjVzN4THljcVdfOHZpZzZacjFKaUZpSEZTQlYxWEtBSVNjclBxVnBWUWJOSFRGZ1NN?oc=5\" target=\""
+          "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQUm1WbVNxS1BVYnZ1cV9CS0xRYmhIcUdHTUdrUElOMXZEZXhRSGNISUpOY2Etc25nanFZUm5WVWozY3p6NVhHamJYUEpDdnhTb0Vld1NsVmQ2MjdkOTY2RmhWR2YzcnlPQ0wtTzRkYlpndEppZnlLZUV2ZjgwQjFHSTlKWVJkMzJlYXR4ZWRJZWJQLWxPQXVtVXU3VTY3OWFjZnZnQ0xHWFlIZ01hX2xTM1pOLW9LXzJPQkdTbjRLejJRcjZ0SFFqTnQ5ZkY3ZGFhd0NTbC10aHlxYUthRFg0SA?oc=5",
+          "ageMin": 172,
+          "headline": "Gal Gadot Shares Trailer for New Movie ‘The Runner,’ Disrupted by Anti-Israel Activists While Filming in London - Algemeiner.com",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMi4AFBVV95cUxQUm1WbVNxS1BVYnZ1cV9CS0xRYmhIcUdHTUdrUElOMXZEZXhRSGNISUpOY2Etc25nanFZUm5WVWozY3p6NVhHamJYUEpDdnhTb0Vld1NsVmQ2MjdkOTY2RmhWR2YzcnlPQ0wtTzRkYlpndEppZnlLZUV2ZjgwQjFHSTlKWVJkMzJlYXR4ZWRJZWJQLWxPQXVtVXU3VTY3OWFjZnZnQ0xHWFlIZ01hX2xTM1pOLW9LXzJPQkd"
         }
       ],
-      "ageMin": 65,
+      "ageMin": 172,
       "_cand": {
-        "key": "rss:new-trailer-ren-laloux-s-final-film-gandahar-arriving-in-4k-",
+        "key": "rss:gal-gadot-shares-trailer-for-new-movie-the-runner-disrupted-",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -176,11 +176,11 @@
         "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "The Film Stage"
+          "Algemeiner.com"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "The Film Stage",
+        "attribution": "Algemeiner.com",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -200,105 +200,38 @@
       "tierClass": "B"
     },
     {
-      "id": "news-kaet-might-die-casting",
-      "slug": "jimmi-simpson-ben-wang-zosia-mamet-board-dark-comedy-kaet-might-die",
-      "title": "Jimmi Simpson, Ben Wang, Zosia Mamet Board Dark Comedy 'Kaet Might Die'",
+      "id": "news-christopher-nolan-oscar-odyssey",
+      "slug": "christopher-nolan-s-oscar-odyssey-can-matt-damon-monsters-and-mytholog",
+      "title": "Christopher Nolan s Oscar Odyssey : Can Matt Damon, Monsters and Mythology Deliver Another Best Picture Statue?",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
-      "eventType": "casting",
+      "eventType": "award",
       "sensitivity": "normal",
-      "eventSlug": "kaet-might-die-casting",
-      "primaryKeyword": "kaet might die casting",
-      "primaryEntity": "Kaet Might Die",
+      "eventSlug": "christopher-nolan-oscar-odyssey",
+      "primaryKeyword": "christopher nolan oscar",
+      "primaryEntity": "Christopher Nolan",
       "entities": [
-        "Jimmi Simpson",
-        "Ben Wang",
-        "Zosia Mamet"
+        "Gladiator",
+        "Matt Damon"
       ],
-      "angle": "Jimmi Simpson, Ben Wang, and Zosia Mamet join the cast of dark comedy 'Kaet Might Die'.",
-      "tmdbType": "movie",
-      "source": "rss:Deadline",
-      "sources": [
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/kaet-might-die-cast-jimmi-simpson-ben-wang-zosia-mamet-1236996860/",
-          "ageMin": 48,
-          "headline": "Jimmi Simpson, Ben Wang Zosia Mamet Among New Additions To Mercedes Bryce Morgan s Dark Comedy Kaet Might Die",
-          "summary": "EXCLUSIVE: Jimmi Simpson (Westworld), Ben Wang (The Hunger Games: Sunrise on the Reaping), and Zosia Mamet (Girls) are among new additions to Kaet Might Die, the adaptation of Kaet McAnneny s cancer memoir Boobs Gone Rogue from director Mercedes Bryce Morgan (Bone Lake), which has wrapped production. Others include J.B. Yowell (The Leader), who also exec produces, along with Lauren [ ]"
-        }
-      ],
-      "ageMin": 48,
-      "_cand": {
-        "key": "rss:jimmi-simpson-ben-wang-zosia-mamet-among-new-additions-to-me",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Deadline"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Deadline",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 92,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-jakarta-crime-series-development",
-      "slug": "iko-uwais-and-albert-hughes-team-for-crime-series-jakarta",
-      "title": "Iko Uwais and Albert Hughes Team for Crime Series 'Jakarta'",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "jakarta-crime-series-development",
-      "primaryKeyword": "jakarta crime series",
-      "primaryEntity": "Jakarta (TV series)",
-      "entities": [
-        "Iko Uwais",
-        "Albert Hughes",
-        "Alcon Entertainment"
-      ],
-      "angle": "Iko Uwais to star in new crime series 'Jakarta' with Albert Hughes directing the pilot.",
+      "angle": "Discussion on Christopher Nolan's potential to win another Best Picture Oscar with his upcoming film.",
       "tmdbType": "movie",
       "source": "rss:Variety",
       "sources": [
         {
           "outlet": "Variety",
           "tier": 7,
-          "url": "https://variety.com/2026/tv/news/iko-uwais-albert-hughes-jakarta-series-alcon-entertainment-1236814756/",
-          "ageMin": 61,
-          "headline": "Iko Uwais and Albert Hughes Unite for Multi-Generational Crime Series Jakarta at Blade Runner 2049 Outfit Alcon Entertainment (EXCLUSIVE)",
-          "summary": "Action star Iko Uwais is set to lead Jakarta, a multi-generational family crime series in development at Alcon Entertainment, with Albert Hughes attached to direct the pilot and serve as producing director. The project comes from writers Kirk Ward and Joshua W. Wagner, with Ward also locked in as showrunner. Hughes and Ward previously worked [ ]"
+          "url": "https://variety.com/2026/film/awards/odyssey-oscars-chances-christopher-nolan-best-picture-1236814404/",
+          "ageMin": 91,
+          "headline": "Christopher Nolan s Oscar Odyssey : Can Matt Damon, Monsters and Mythology Deliver Another Best Picture Statue?",
+          "summary": "The last time the sword-and-sandal epic truly conquered the Oscars, Russell Crowe stood in the Colosseum and asked, Are you not entertained? Ridley Scott s 2001 blockbuster Gladiator” won best picture that season, briefly reminding Hollywood that ancient-world spectacle could still capture the Academy s imagination. Since then, the genre has largely retreated to the multiplex, where [ ]"
         }
       ],
-      "ageMin": 61,
+      "ageMin": 91,
       "_cand": {
-        "key": "rss:iko-uwais-and-albert-hughes-unite-for-multi-generational-cri",
+        "key": "rss:christopher-nolan-s-oscar-odyssey-can-matt-damon-monsters-an",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -317,7 +250,7 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 78,
+      "priority": 84,
       "signals": {
         "recency": 16,
         "corroboration": 12,
@@ -325,23 +258,23 @@
         "type": 14,
         "pop": 0,
         "breakout": 0,
-        "big": 18,
+        "big": 24,
         "trending": 0,
         "softTv": 0
       },
       "tierClass": "B"
     },
     {
-      "id": "news-god-of-war-tv-series-recasting-kratos",
-      "slug": "god-of-war-tv-series-recasts-kratos-after-ryan-hurst-injury",
-      "title": "God of War TV Series Recasts Kratos After Ryan Hurst Injury",
+      "id": "news-god-of-war-tv-series-kratos-recast-ryan-hurst-injury",
+      "slug": "ryan-hurst-injured-on-god-of-war-set-kratos-role-to-be-recast",
+      "title": "Ryan Hurst Injured on 'God of War' Set, Kratos Role to Be Recast",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "god-of-war-tv-series-recasting-kratos",
+      "eventSlug": "god-of-war-tv-series-kratos-recast-ryan-hurst-injury",
       "primaryKeyword": "god of war tv series kratos",
       "primaryEntity": "God of War",
       "entities": [
@@ -349,7 +282,7 @@
         "Ryan Hurst",
         "Prime Video"
       ],
-      "angle": "Prime Video's 'God of War' series is recasting the role of Kratos due to an on-set injury to actor Ryan Hurst.",
+      "angle": "Prime Video's 'God of War' series faces a casting change for Kratos due to an on-set injury to actor Ryan Hurst.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
@@ -357,12 +290,12 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/tv/tv-news/god-of-war-recast-kratos-ryan-hurst-stunt-injury-1236650848/",
-          "ageMin": 164,
+          "ageMin": 225,
           "headline": "God of War to Recast Kratos Role Following Ryan Hurst On-Set Injury",
           "summary": "Prime Video's original God of War tore a bicep muscle while performing a stunt."
         }
       ],
-      "ageMin": 164,
+      "ageMin": 225,
       "_cand": {
         "key": "rss:god-of-war-to-recast-kratos-role-following-ryan-hurst-on-set",
         "popularity": 0,
@@ -383,149 +316,15 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 78,
+      "priority": 71,
       "signals": {
-        "recency": 16,
+        "recency": 9,
         "corroboration": 12,
         "status": 18,
         "type": 14,
         "pop": 0,
         "breakout": 0,
         "big": 18,
-        "trending": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-the-odyssey-film-announcement",
-      "slug": "the-sound-of-the-odyssey-composer-ludwig-g-ransson-used-ancient-greek-",
-      "title": "The Sound of The Odyssey : Composer Ludwig Göransson Used Ancient Greek Instruments, Scrap Metals and Gongs",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "the-odyssey-film-announcement",
-      "primaryKeyword": "The Odyssey score",
-      "primaryEntity": "The Odyssey",
-      "entities": [
-        "The Odyssey (film)",
-        "Ludwig Göransson",
-        "Christopher Nolan"
-      ],
-      "angle": "Composer Ludwig Göransson details his unique approach to scoring Christopher Nolan's upcoming film 'The Odyssey,' using ancient Greek instruments and scrap metals.",
-      "tmdbType": "movie",
-      "source": "rss:Variety Music",
-      "sources": [
-        {
-          "outlet": "Variety Music",
-          "tier": 7,
-          "url": "https://variety.com/2026/artisans/news/the-odyssey-ludwig-goransson-film-score-1236813153/",
-          "ageMin": 769,
-          "headline": "The Sound of The Odyssey : Composer Ludwig Göransson Used Ancient Greek Instruments, Scrap Metals and Gongs",
-          "summary": "Composer Ludwig Göransson has reunited with Christopher Nolan to score The Odyssey, marking their third collaboration after Tenet and Oppenheimer. Earlier this year, Göransson’s work on Star Wars: The Mandalorian and Grogu showcased his use of heavy synths and guitar-based orchestrations. However, for The Odyssey, Göransson ventures into new territory. Nolan instructed Göransson not to use [ ]"
-        }
-      ],
-      "ageMin": 769,
-      "_cand": {
-        "key": "rss:the-sound-of-the-odyssey-composer-ludwig-g-ransson-used-anci",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety Music"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety Music",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 90,
-      "signals": {
-        "recency": 1,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "softTv": 0,
-        "radar": 26
-      },
-      "radarKind": "movie-in-theaters",
-      "tierClass": "A"
-    },
-    {
-      "id": "music-news-lil-wayne-craig-carton-podcast",
-      "slug": "lil-wayne-to-host-weekly-video-podcast-the-joint-venture-show-with-cra",
-      "title": "Lil Wayne To Host Weekly Video Podcast ‘The Joint Venture Show’ With Craig Carton",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "lil-wayne-craig-carton-podcast",
-      "primaryKeyword": "Lil Wayne podcast",
-      "primaryEntity": "Lil Wayne",
-      "entities": [
-        "Craig Carton"
-      ],
-      "angle": "Rapper Lil Wayne is launching a new weekly video podcast with sports radio veteran Craig Carton.",
-      "tmdbType": "movie",
-      "source": "rss:TheWrap",
-      "sources": [
-        {
-          "outlet": "TheWrap",
-          "tier": 7,
-          "url": "https://www.thewrap.com/creative-content/movies/sydney-sweeney-sleepy-hollow-movie-sony/",
-          "ageMin": 0,
-          "headline": "Sydney Sweeney-Led Sleepy Hollow Movie Lands at Sony",
-          "summary": "Lindsey Anderson Beer will write and direct \"Hollow,\" based on her novel of the same name The post Sydney Sweeney-Led Sleepy Hollow Movie Lands at Sony appeared first on TheWrap ."
-        }
-      ],
-      "ageMin": 0,
-      "_cand": {
-        "key": "rss:sydney-sweeney-led-sleepy-hollow-movie-lands-at-sony",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "breakoutVelocity": 0,
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "TheWrap"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "TheWrap",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 69,
-      "signals": {
-        "recency": 30,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
         "trending": 0,
         "softTv": 0
       },
@@ -545,22 +344,22 @@
       "primaryKeyword": "Celebrity Family Feud trailer",
       "primaryEntity": "Celebrity Family Feud",
       "entities": [],
-      "angle": "The trailer for the upcoming 12th season of 'Celebrity Family Feud' has been released.",
+      "angle": "The trailer for the 12th season of 'Celebrity Family Feud' has been released, showcasing the contestants.",
       "tmdbType": "movie",
-      "source": "gnews:IMDb",
+      "source": "gnews:Metal Underground.com",
       "sources": [
         {
-          "outlet": "IMDb",
+          "outlet": "Metal Underground.com",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5Qb3RMcWJ6ZHcxdnotcnFQdlItRlRnV2V0YjBqTFZSNkZrbmVlc2VOeFBSelg0cEVqRmdBdUN0bGV5dXh1cXM5ZkxKdDg5M0FyeXc?oc=5",
-          "ageMin": 972,
-          "headline": "‘Celebrity Family Feud’ Season 12 Trailer Shows ‘Well-Behaved’ Contestants in Action - IMDb",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTE5Qb3RMcWJ6ZHcxdnotcnFQdlItRlRnV2V0YjBqTFZSNkZrbmVlc2VOeFBSelg0cEVqRmdBdUN0bGV5dXh1cXM5ZkxKdDg5M0FyeXc?oc=5\" target=\"_blank\" ‘Celebrity Family Feud’ Season 12 Trailer Shows ‘Well-Behaved’ Contestants in Action /a nbsp; nbsp; font color=\"#6f6f"
+          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5iTEY2UUFPYjJJT3hPelkwMm1JazlXdTlXbmR6WTBVdUFvNTl6WkJzaW5MLTk2ZldyWFFVenZHNDE1bS1pR1hkY2FvOG5Cc0x3VDhCbk9zQk1SU19DSndDX2hybFZkUXgtZXp1cEN1RFY?oc=5",
+          "ageMin": 628,
+          "headline": "AXTY Premiere New Single Music Video \"who I am\" From Upcoming New Album \"The Pain Made Me Who I Am\" - Metal Underground.com",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMicEFVX3lxTE5iTEY2UUFPYjJJT3hPelkwMm1JazlXdTlXbmR6WTBVdUFvNTl6WkJzaW5MLTk2ZldyWFFVenZHNDE1bS1pR1hkY2FvOG5Cc0x3VDhCbk9zQk1SU19DSndDX2hybFZkUXgtZXp1cEN1RFY?oc=5\" target=\"_blank\" AXTY Premiere New Single Music Video \"who I am\" From Upcoming New Album \"The "
         }
       ],
-      "ageMin": 972,
+      "ageMin": 628,
       "_cand": {
-        "key": "rss:-celebrity-family-feud-season-12-trailer-shows-well-behaved-",
+        "key": "rss:axty-premiere-new-single-music-video-who-i-am-from-upcoming-",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -570,18 +369,18 @@
         "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "IMDb"
+          "Metal Underground.com"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "IMDb",
+        "attribution": "Metal Underground.com",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 60,
+      "priority": 63,
       "signals": {
-        "recency": 1,
+        "recency": 4,
         "corroboration": 8,
         "status": 18,
         "type": 15,
@@ -594,89 +393,24 @@
       "tierClass": "B"
     },
     {
-      "id": "music-news-rolling-stones-beatles-uk-albums-chart",
-      "slug": "the-rolling-stones-tie-the-beatles-at-no-2-on-u-k-albums-chart-leaderb",
-      "title": "The Rolling Stones Tie The Beatles at No. 2 on U.K. Albums Chart Leaderboard With 15th No. 1 LP",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "rolling-stones-beatles-uk-albums-chart",
-      "primaryKeyword": "rolling stones albums chart",
-      "primaryEntity": "The Rolling Stones",
-      "entities": [
-        "The Beatles"
-      ],
-      "angle": "The Rolling Stones tie The Beatles for second most No. 1 albums in the U.K.",
-      "tmdbType": "movie",
-      "source": "rss:Billboard",
-      "sources": [
-        {
-          "outlet": "Billboard",
-          "tier": 7,
-          "url": "https://www.billboard.com/music/chart-beat/the-rolling-stones-foreign-tongues-number-1-uk-albums-chart-1236296685/",
-          "ageMin": 1,
-          "headline": "The Rolling Stones Tie The Beatles at No. 2 on U.K. Albums Chart s Leaderboard With 15th No. 1 LP",
-          "summary": "The group earned its first U.K. chart-topping record in 1964."
-        }
-      ],
-      "ageMin": 1,
-      "_cand": {
-        "key": "rss:the-rolling-stones-tie-the-beatles-at-no-2-on-u-k-albums-cha",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "breakoutVelocity": 0,
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Billboard"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Billboard",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 65,
-      "signals": {
-        "recency": 30,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-time-and-tide-international-sales-inwave-films",
+      "id": "news-time-and-tide-sydney-film-festival-winner-distribution",
       "slug": "sydney-film-festival-winner-time-and-tide-lands-at-paris-outfit-inwave",
-      "title": "Sydney Film Festival Winner 'Time and Tide' Lands at Paris Outfit Inwave Films",
+      "title": "Sydney Film Festival Winner Time and Tide Lands at Paris Outfit Inwave Films",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "time-and-tide-international-sales-inwave-films",
-      "primaryKeyword": "time and tide film",
+      "eventSlug": "time-and-tide-sydney-film-festival-winner-distribution",
+      "primaryKeyword": "Time and Tide film",
       "primaryEntity": "Time and Tide",
       "entities": [
         "Time and Tide (film)",
-        "Vee Shi"
+        "Vee Shi",
+        "Inwave Films"
       ],
-      "angle": "Paris outfit Inwave Films has acquired international sales rights for Vee Shi's debut feature 'Time and Tide,' which won at the Sydney Film Festival.",
+      "angle": "Sydney Film Festival winner 'Time and Tide' secures international sales with Paris outfit Inwave Films.",
       "tmdbType": "movie",
       "source": "rss:Variety",
       "sources": [
@@ -684,12 +418,12 @@
           "outlet": "Variety",
           "tier": 7,
           "url": "https://variety.com/2026/film/news/time-and-tide-inwave-films-sydney-winner-1236814788/",
-          "ageMin": 83,
+          "ageMin": 143,
           "headline": "Sydney Film Festival Winner Time and Tide Lands at Paris Outfit Inwave Films (EXCLUSIVE)",
           "summary": "Vee Shi s debut feature Time and Tide has found an international sales home at Inwave Films, the Paris-based outfit revealed. The hybrid nonfiction film, which world premiered in competition in the Burning Lights section at Visions du Réel earlier this year, will be introduced to buyers as the company continues building its documentary slate. Set [ ]"
         }
       ],
-      "ageMin": 83,
+      "ageMin": 143,
       "_cand": {
         "key": "rss:sydney-film-festival-winner-time-and-tide-lands-at-paris-out",
         "popularity": 0,
@@ -725,38 +459,505 @@
       "tierClass": "B"
     },
     {
-      "id": "music-news-sam-fender-olivia-dean-rein-me-in-uk-no-1-single",
-      "slug": "sam-fender-olivia-dean-s-rein-me-in-is-u-k-s-no-1-single-for-17th-week",
-      "title": "Sam Fender Olivia Dean s Rein Me In Is U.K. s No. 1 Single for 17th Week, Now 2nd on All-Time List",
+      "id": "news-five-star-weekend-peacock-record-viewership",
+      "slug": "jennifer-garner-s-the-five-star-weekend-becomes-peacock-s-top-scripted",
+      "title": "Jennifer Garner's 'The Five Star Weekend' Becomes Peacock's Top Scripted Series Ever",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "five-star-weekend-peacock-record-viewership",
+      "primaryKeyword": "five star weekend viewership",
+      "primaryEntity": "The Five Star Weekend",
+      "entities": [
+        "Jennifer Garner",
+        "Peacock"
+      ],
+      "angle": "Peacock's 'The Five Star Weekend' sets a new record for scripted series viewership.",
+      "tmdbType": "movie",
+      "source": "rss:TheWrap",
+      "sources": [
+        {
+          "outlet": "TheWrap",
+          "tier": 7,
+          "url": "https://www.thewrap.com/creative-content/tv-shows/the-five-star-weekend-peacock-ratings-viewership/",
+          "ageMin": 24,
+          "headline": "The Five Star Weekend Is Peacock s Top Scripted Series Ever With 1 Billion Minutes Viewed",
+          "summary": "The Jennifer Garner-led series ranks among the top five original streaming series for the week of July 6, per Nielsen The post The Five Star Weekend Is Peacock s Top Scripted Series Ever With 1 Billion Minutes Viewed appeared first on TheWrap ."
+        }
+      ],
+      "ageMin": 24,
+      "_cand": {
+        "key": "rss:the-five-star-weekend-is-peacock-s-top-scripted-series-ever-",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "TheWrap"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "TheWrap",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 65,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 6,
+        "trending": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "music-news-bmg-acquires-john-lee-hooker-hal-david-arc-music-publishing-catalogs",
+      "slug": "bmg-fully-acquires-john-lee-hooker-hal-david-arc-music-publishing-cata",
+      "title": "BMG Fully Acquires John Lee Hooker, Hal David, ARC Music Publishing Catalogs",
       "contentType": "music-news",
       "formatTag": "music-news",
       "category": "music",
       "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "bmg-acquires-john-lee-hooker-hal-david-arc-music-publishing-catalogs",
+      "primaryKeyword": "music publishing acquisition",
+      "primaryEntity": "John Lee Hooker",
+      "entities": [
+        "Hal David",
+        "BMG"
+      ],
+      "angle": "BMG continues its aggressive expansion by fully acquiring the significant publishing catalogs of blues legend John Lee Hooker and legendary songwriter Hal David.",
+      "tmdbType": "movie",
+      "source": "rss:Variety Music",
+      "sources": [
+        {
+          "outlet": "Variety Music",
+          "tier": 7,
+          "url": "https://variety.com/2026/music/news/bmg-fully-acquires-john-lee-hooker-publishing-catalog-1236814765/",
+          "ageMin": 167,
+          "headline": "Music Industry Moves: BMG Fully Acquires John Lee Hooker, Hal David, ARC Music Publishing Catalogs",
+          "summary": "BMG has announced its acquisition of the remaining interests in the songwriting works of the publishing catalogs of John Lee Hooker, Hal David, and ARC Music — three major archives that it is no understatement to say helped shape American popular music. The deal completes a transaction first announced in 2016, when BMG acquired a [ ]"
+        }
+      ],
+      "ageMin": 167,
+      "_cand": {
+        "key": "rss:music-industry-moves-bmg-fully-acquires-john-lee-hooker-hal-",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "breakoutVelocity": 0,
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety Music"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety Music",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 55,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "music-news-daniel-radcliffe-narrates-kyle-gordon-album",
+      "slug": "daniel-radcliffe-to-narrate-comedian-kyle-gordon-s-third-album",
+      "title": "Daniel Radcliffe to Narrate Comedian Kyle Gordon’s Third Album",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "daniel-radcliffe-narrates-kyle-gordon-album",
+      "primaryKeyword": "Daniel Radcliffe Kyle Gordon album",
+      "primaryEntity": "Kyle Gordon",
+      "entities": [
+        "Daniel Radcliffe"
+      ],
+      "angle": "Daniel Radcliffe is set to narrate comedian Kyle Gordon's upcoming third album, 'Kyle Gordon Is Everywhere.'",
+      "tmdbType": "movie",
+      "source": "rss:Variety Music",
+      "sources": [
+        {
+          "outlet": "Variety Music",
+          "tier": 7,
+          "url": "https://variety.com/2026/music/news/daniel-radcliffe-narrate-kyle-gordon-album-1236812133/",
+          "ageMin": 181,
+          "headline": "Daniel Radcliffe to Narrate Comedian Kyle Gordon’s Third Album (EXCLUSIVE)",
+          "summary": "Comedian and singer Kyle Gordon s third album, “Kyle Gordon Is Everywhere,” will feature narration by Daniel Radcliffe. The album, which is set to be released Oct. 2, will feature Radcliffe performing a David Attenborough-esque narration during the album’s interludes. The album s first single, “Mr. Jambo, is out now. Through the persona of a prototypical cringy [ ]"
+        }
+      ],
+      "ageMin": 181,
+      "_cand": {
+        "key": "rss:daniel-radcliffe-to-narrate-comedian-kyle-gordon-s-third-alb",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety Music"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety Music",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 48,
+      "signals": {
+        "recency": 9,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "music-news-brandon-flowers-new-song-paradise",
+      "slug": "brandon-flowers-releases-new-solo-song-paradise",
+      "title": "Brandon Flowers Releases New Solo Song 'Paradise'",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "brandon-flowers-new-song-paradise",
+      "primaryKeyword": "brandon flowers new song",
+      "primaryEntity": "Brandon Flowers",
+      "entities": [
+        "The Killers"
+      ],
+      "angle": "The Killers frontman Brandon Flowers has released a new solo song titled 'Paradise' from his upcoming album.",
+      "tmdbType": "movie",
+      "source": "rss:Rolling Stone",
+      "sources": [
+        {
+          "outlet": "Rolling Stone",
+          "tier": 7,
+          "url": "https://www.rollingstone.com/music/music-news/brandon-flowers-paradise-country-1235594687/",
+          "ageMin": 278,
+          "headline": "Brandon Flowers Sings One for the Croupiers on New Song ‘Paradise’",
+          "summary": "Song will appear on Killers frontman’s upcoming solo album, Thrasher"
+        }
+      ],
+      "ageMin": 278,
+      "_cand": {
+        "key": "rss:brandon-flowers-sings-one-for-the-croupiers-on-new-song-para",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Rolling Stone"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Rolling Stone",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 48,
+      "signals": {
+        "recency": 9,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-nancy-nayor-horror-casting-breakout-stars",
+      "slug": "the-casting-director-behind-horror-s-biggest-hits-reveals-how-the-genr",
+      "title": "The Casting Director Behind Horror’s Biggest Hits Reveals How the Genre’s Breakout Stars Get Discovered",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "nancy-nayor-horror-casting-breakout-stars",
+      "primaryKeyword": "horror casting director",
+      "primaryEntity": "Nancy Nayor",
+      "entities": [
+        "Barbarian",
+        "Sam Raimi"
+      ],
+      "angle": "A casting director known for horror hits reveals how breakout stars are discovered in the genre.",
+      "tmdbType": "movie",
+      "source": "rss:IndieWire",
+      "sources": [
+        {
+          "outlet": "IndieWire",
+          "tier": 7,
+          "url": "https://www.indiewire.com/features/craft/how-horror-movies-are-cast-sam-raimi-movies-psycho-3-1235205289/",
+          "ageMin": 1501,
+          "headline": "The Casting Director Behind Horror s Biggest Hits Reveals How the Genre s Breakout Stars Get Discovered",
+          "summary": "Casting director Nancy Nayor, whose horror credits include everything from Sam Raimi classics to hits like \"Barbarian,\" tells IndieWire about her approach to finding actors for the genre she loves."
+        }
+      ],
+      "ageMin": 1501,
+      "_cand": {
+        "key": "rss:the-casting-director-behind-horror-s-biggest-hits-reveals-ho",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "IndieWire"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "IndieWire",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 48,
+      "signals": {
+        "recency": 1,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 12,
+        "trending": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-brenda-fricker-death",
+      "slug": "brenda-fricker-oscar-winner-for-my-left-foot-dies-at-81",
+      "title": "Brenda Fricker, Oscar Winner for 'My Left Foot,' Dies at 81",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "death",
+      "sensitivity": "high",
+      "eventSlug": "brenda-fricker-death",
+      "primaryKeyword": "brenda fricker",
+      "primaryEntity": "Brenda Fricker",
+      "entities": [
+        "My Left Foot",
+        "Home Alone 2: Lost in New York"
+      ],
+      "angle": "Oscar-winning actress Brenda Fricker, known for 'My Left Foot' and 'Home Alone 2', has died at 81.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/brenda-fricker-dead-my-left-foot-1236650849/",
+          "ageMin": 266,
+          "headline": "Brenda Fricker, Oscar-Winning Actress in ‘My Left Foot,’ Dies at 81",
+          "summary": "The history-making Dublin native also appeared in ‘The Field,’ ‘Home Alone 2: Lost in New York’ and ‘So I Married an Axe Murderer.’"
+        },
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/film/news/brenda-fricker-dead-my-left-foot-home-alone-2-1236814615/",
+          "ageMin": 275,
+          "headline": "Brenda Fricker, My Left Foot Oscar Winner, Dies at 81",
+          "summary": "Brenda Fricker, who became the first Irish actress to win an Oscar for her turn opposite Daniel Day-Lewis in 1989 s My Left Foot and captured hearts as the Pigeon Lady in 1992 s Home Alone 2, died on Thursday in Dublin. She was 81. Fricker s agent, Phil Belfield, confirmed her death to the BBC on Friday. [ ]"
+        }
+      ],
+      "ageMin": 266,
+      "_cand": {
+        "key": "rss:brenda-fricker-oscar-winning-actress-in-my-left-foot-dies-at",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 2,
+      "verification": {
+        "tier1Count": 2,
+        "tier1Owners": 1,
+        "outletCount": 2,
+        "outlets": [
+          "THR",
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 67,
+      "signals": {
+        "recency": 9,
+        "corroboration": 18,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 8,
+        "softTv": 0
+      },
+      "tierClass": "S"
+    },
+    {
+      "id": "news-ludwig-g-ransson-announcement",
+      "slug": "ludwig-g-ransson-scores-christopher-nolan-s-the-odyssey-with-ancient-i",
+      "title": "Ludwig Göransson Scores Christopher Nolan's 'The Odyssey' With Ancient Instruments",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "ludwig-g-ransson-announcement",
+      "primaryKeyword": "ludwig göransson the odyssey",
+      "primaryEntity": "Ludwig Göransson",
+      "entities": [
+        "The Odyssey (film)",
+        "Christopher Nolan"
+      ],
+      "angle": "Composer Ludwig Göransson reunites with Christopher Nolan for 'The Odyssey' score, utilizing unique ancient instruments.",
+      "tmdbType": "movie",
+      "source": "rss:Variety Music",
+      "sources": [
+        {
+          "outlet": "Variety Music",
+          "tier": 7,
+          "url": "https://variety.com/2026/artisans/news/the-odyssey-ludwig-goransson-film-score-1236813153/",
+          "ageMin": 829,
+          "headline": "The Sound of The Odyssey : Composer Ludwig Göransson Used Ancient Greek Instruments, Scrap Metals and Gongs",
+          "summary": "Composer Ludwig Göransson has reunited with Christopher Nolan to score The Odyssey, marking their third collaboration after Tenet and Oppenheimer. Earlier this year, Göransson’s work on Star Wars: The Mandalorian and Grogu showcased his use of heavy synths and guitar-based orchestrations. However, for The Odyssey, Göransson ventures into new territory. Nolan instructed Göransson not to use [ ]"
+        }
+      ],
+      "ageMin": 829,
+      "_cand": {
+        "key": "rss:the-sound-of-the-odyssey-composer-ludwig-g-ransson-used-anci",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety Music"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety Music",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 66,
+      "signals": {
+        "recency": 1,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0,
+        "radar": 26
+      },
+      "radarKind": "movie-in-theaters",
+      "tierClass": "A"
+    },
+    {
+      "id": "news-ozzy-osbourne-day-birmingham",
+      "slug": "birmingham-to-honor-ozzy-osbourne-with-ozzy-day-celebrations",
+      "title": "Birmingham to Honor Ozzy Osbourne With 'Ozzy Day' Celebrations",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "sam-fender-olivia-dean-rein-me-in-uk-no-1-single",
-      "primaryKeyword": "sam fender olivia dean single",
-      "primaryEntity": "Olivia Dean",
-      "entities": [
-        "Sam Fender"
-      ],
-      "angle": "Sam Fender and Olivia Dean's 'Rein Me In' hits 17 weeks at No. 1 in the U.K., becoming the second-longest-reigning single of all time.",
+      "eventSlug": "ozzy-osbourne-day-birmingham",
+      "primaryKeyword": "ozzy osbourne day",
+      "primaryEntity": "Ozzy Osbourne",
+      "entities": [],
+      "angle": "Birmingham to celebrate Ozzy Osbourne with a dedicated 'Ozzy Day'.",
       "tmdbType": "movie",
       "source": "rss:Billboard",
       "sources": [
         {
           "outlet": "Billboard",
           "tier": 7,
-          "url": "https://www.billboard.com/music/chart-beat/sam-fender-olivia-dean-rein-me-in-number-1-uk-17-weeks-1236296702/",
-          "ageMin": 1,
-          "headline": "Sam Fender Olivia Dean s Rein Me In Is U.K. s No. 1 Single for 17th Week, Now 2nd on All-Time List",
-          "summary": "The song trails just one tune on the all-time rankings."
+          "url": "https://www.billboard.com/music/rock/ozzy-osbourne-honored-ozzy-day-year-after-his-death-1236296845/",
+          "ageMin": 12,
+          "headline": "Mama, I m Coming Home: Birmingham to Honor Ozzy Osbourne With Ozzy Day Celebrations",
+          "summary": "The festivities will come one year after the late rocker's passing."
         }
       ],
-      "ageMin": 1,
+      "ageMin": 12,
       "_cand": {
-        "key": "rss:sam-fender-olivia-dean-s-rein-me-in-is-u-k-s-no-1-single-for",
+        "key": "rss:mama-i-m-coming-home-birmingham-to-honor-ozzy-osbourne-with-",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -790,38 +991,38 @@
       "tierClass": "B"
     },
     {
-      "id": "awards-asghar-farhadi-honorary-heart-of-sarajevo",
-      "slug": "asghar-farhadi-to-receive-honorary-heart-of-sarajevo",
-      "title": "Asghar Farhadi to Receive Honorary Heart of Sarajevo",
-      "contentType": "awards",
-      "formatTag": "awards",
-      "category": "awards",
-      "subcategory": "winners",
-      "eventType": "award",
+      "id": "news-rob-lathan-signs-black-box-management",
+      "slug": "black-box-management-signs-jury-duty-presents-company-retreat-s-rob-la",
+      "title": "Black Box Management Signs Jury Duty Presents: Company Retreat s Rob Lathan",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "asghar-farhadi-honorary-heart-of-sarajevo",
-      "primaryKeyword": "Asghar Farhadi",
-      "primaryEntity": "Asghar Farhadi",
+      "eventSlug": "rob-lathan-signs-black-box-management",
+      "primaryKeyword": "rob lathan",
+      "primaryEntity": "Rob Lathan",
       "entities": [
-        "Heart of Sarajevo",
-        "Emily Watson"
+        "Jury Duty",
+        "Prime Video"
       ],
-      "angle": "Acclaimed Iranian filmmaker Asghar Farhadi will receive an honorary Heart of Sarajevo award at the Bosnian film festival.",
+      "angle": "Actor Rob Lathan, known for 'Jury Duty,' signs with Black Box Management.",
       "tmdbType": "movie",
-      "source": "rss:THR",
+      "source": "rss:Deadline",
       "sources": [
         {
-          "outlet": "THR",
+          "outlet": "Deadline",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/asghar-farhadi-honorary-heart-sarajevo-film-festival-iran-1236650798/",
-          "ageMin": 354,
-          "headline": "Asghar Farhadi to Receive Honorary Heart of Sarajevo",
-          "summary": "The acclaimed Iranian filmmaker will collect the award in person at the Bosnian film festival, which is also recognizing British actress Emily Watson."
+          "url": "https://deadline.com/2026/07/jury-duty-rob-lathan-signs-black-box-management-1236996782/",
+          "ageMin": 91,
+          "headline": "Black Box Management Signs Jury Duty Presents: Company Retreat s Rob Lathan",
+          "summary": "EXCLUSIVE: Black Box Management has signed actor and comedian Rob Lathan on the heels of his turn in Prime Video s Emmy-nominated workplace comedy Jury Duty Presents: Company Retreat. Corporate Retreat is the second season of Jury Duty, the series putting a fresh reality-hoax spin on the talking head mockumentary format, which has broken out as one of the most [ ]"
         }
       ],
-      "ageMin": 354,
+      "ageMin": 91,
       "_cand": {
-        "key": "rss:asghar-farhadi-to-receive-honorary-heart-of-sarajevo",
+        "key": "rss:black-box-management-signs-jury-duty-presents-company-retrea",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -831,18 +1032,18 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "THR"
+          "Deadline"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "THR",
+        "attribution": "Deadline",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 53,
+      "priority": 60,
       "signals": {
-        "recency": 9,
+        "recency": 16,
         "corroboration": 12,
         "status": 18,
         "type": 14,
@@ -852,311 +1053,41 @@
         "trending": 0,
         "softTv": 0
       },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-jack-martin-not-suitable-for-work-mindy-kaling-comedy",
-      "slug": "jack-martin-ready-for-any-role-from-romantic-lead-to-writer-director",
-      "title": "Jack Martin Ready for Any Role, From Romantic Lead to Writer-Director",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "jack-martin-not-suitable-for-work-mindy-kaling-comedy",
-      "primaryKeyword": "jack martin not suitable for work",
-      "primaryEntity": "Not Suitable for Work",
-      "entities": [
-        "Jack Martin",
-        "Mindy Kaling"
-      ],
-      "angle": "Actor Jack Martin discusses his versatility and upcoming roles, including a Mindy Kaling comedy.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/tv/tv-features/jack-martin-not-suitable-for-work-interview-1236637882/",
-          "ageMin": 181,
-          "headline": "Whether It Be Romantic Lead or Writer-Director, Jack Martin’s Ready to Tackle Whatever Role Comes Next",
-          "summary": "The ‘Not Suitable For Work’ star digs into booking the Mindy Kaling comedy, how Gen Z filmmakers Curry Barker and Kane Parsons have inspired him,"
-        }
-      ],
-      "ageMin": 181,
-      "_cand": {
-        "key": "rss:whether-it-be-romantic-lead-or-writer-director-jack-martin-s",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 77,
-      "signals": {
-        "recency": 9,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "softTv": 0
-      },
       "tierClass": "B"
     },
     {
-      "id": "news-eliza-dushku-sci-fi-series-cancellation",
-      "slug": "after-buffy-eliza-dushku-starred-in-this-sci-fi-tv-series-that-was-can",
-      "title": "After Buffy, Eliza Dushku Starred In This Sci-Fi TV Series That Was Canceled Way Too Soon",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "cancellation",
-      "sensitivity": "normal",
-      "eventSlug": "eliza-dushku-sci-fi-series-cancellation",
-      "primaryKeyword": "Eliza Dushku sci-fi series",
-      "primaryEntity": "Eliza Dushku",
-      "entities": [
-        "Buffy the Vampire Slayer"
-      ],
-      "angle": "The article discusses a sci-fi TV series starring Eliza Dushku that was canceled prematurely after her time on 'Buffy.'",
-      "tmdbType": "movie",
-      "source": "gnews:TVLine",
-      "sources": [
-        {
-          "outlet": "TVLine",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOMEJtaFVIRzA3MnJsNXRLOGNkcUdMdTFwZWFqUTUzbVNjeWxfckdOYW42REhtMEsxT2I0STREa3JQMlctOTVjZGV1OE10RUFpV1RqQW16U2ZBRUNvLWd2MFE0bnc0SEtqazhERi00Y0k3TEVDV3MyWEctQTFVaENmYkI2R0R5X0NGbkctYll2aHZ1cjZPQ2w3Z0lnTGgyUQ?oc=5",
-          "ageMin": 1189,
-          "headline": "After Buffy, Eliza Dushku Starred In This Sci-Fi TV Series That Was Canceled Way Too Soon - TVLine",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxOMEJtaFVIRzA3MnJsNXRLOGNkcUdMdTFwZWFqUTUzbVNjeWxfckdOYW42REhtMEsxT2I0STREa3JQMlctOTVjZGV1OE10RUFpV1RqQW16U2ZBRUNvLWd2MFE0bnc0SEtqazhERi00Y0k3TEVDV3MyWEctQTFVaENmYkI2R0R5X0NGbkctYll2aHZ1cjZPQ2w3Z0lnTGgyUQ?oc=5\" target=\"_blank\" After Buffy, E"
-        }
-      ],
-      "ageMin": 1189,
-      "_cand": {
-        "key": "rss:after-buffy-eliza-dushku-starred-in-this-sci-fi-tv-series-th",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "TVLine"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "TVLine",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 56,
-      "signals": {
-        "recency": 1,
-        "corroboration": 8,
-        "status": 18,
-        "type": 11,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-sydney-sweeney-sleepy-hollow-movie-sony",
-      "slug": "sydney-sweeney-led-sleepy-hollow-movie-lands-at-sony",
-      "title": "Sydney Sweeney-Led Sleepy Hollow Movie Lands at Sony",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "sydney-sweeney-sleepy-hollow-movie-sony",
-      "primaryKeyword": "Sydney Sweeney Sleepy Hollow movie",
-      "primaryEntity": "Sleepy Hollow",
-      "entities": [
-        "Sleepy Hollow (film)",
-        "Sydney Sweeney",
-        "Lindsey Anderson Beer",
-        "Sony Pictures"
-      ],
-      "angle": "Sydney Sweeney to star in a new 'Sleepy Hollow' movie acquired by Sony.",
-      "tmdbType": "movie",
-      "source": "rss:IndieWire",
-      "sources": [
-        {
-          "outlet": "IndieWire",
-          "tier": 7,
-          "url": "https://www.indiewire.com/features/craft/how-horror-movies-are-cast-sam-raimi-movies-psycho-3-1235205289/",
-          "ageMin": 1441,
-          "headline": "The Casting Director Behind Horror s Biggest Hits Reveals How the Genre s Breakout Stars Get Discovered",
-          "summary": "Casting director Nancy Nayor, whose horror credits include everything from Sam Raimi classics to hits like \"Barbarian,\" tells IndieWire about her approach to finding actors for the genre she loves."
-        }
-      ],
-      "ageMin": 1441,
-      "_cand": {
-        "key": "rss:the-casting-director-behind-horror-s-biggest-hits-reveals-ho",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "IndieWire"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "IndieWire",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 69,
-      "signals": {
-        "recency": 1,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-brenda-fricker-death",
-      "slug": "brenda-fricker-oscar-winning-actress-dies-at-81",
-      "title": "Brenda Fricker, Oscar-Winning Actress, Dies at 81",
+      "id": "news-lena-headey-other",
+      "slug": "lena-headey-rips-hollywood-for-protecting-predatory-men-discusses-game",
+      "title": "Lena Headey Rips Hollywood for Protecting Predatory Men, Discusses 'Game of Thrones' Fan Anger",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
-      "eventType": "death",
-      "sensitivity": "high",
-      "eventSlug": "brenda-fricker-death",
-      "primaryKeyword": "brenda fricker",
-      "primaryEntity": "Brenda Fricker",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "lena-headey-other",
+      "primaryKeyword": "lena heady game of thrones",
+      "primaryEntity": "Lena Headey",
       "entities": [
-        "Home Alone 2: Lost in New York",
-        "My Left Foot"
+        "Game of Thrones",
+        "Harvey Weinstein"
       ],
-      "angle": "Oscar-winning actress Brenda Fricker, known for her roles in 'My Left Foot' and 'Home Alone 2,' has died at 81.",
-      "tmdbType": "movie",
-      "source": "rss:TheWrap",
-      "sources": [
-        {
-          "outlet": "TheWrap",
-          "tier": 7,
-          "url": "https://www.thewrap.com/creative-content/movies/brenda-fricker-home-alone-2-actress-dead/",
-          "ageMin": 198,
-          "headline": "Brenda Fricker, Home Alone 2 Favorite and Oscar-Winning My Left Foot Actress, Dies at 81",
-          "summary": "Fricker played the Central Park \"pigeon lady\" in \"Home Alone 2: Lost in New York\" The post Brenda Fricker, Home Alone 2 Favorite and Oscar-Winning My Left Foot Actress, Dies at 81 appeared first on TheWrap ."
-        },
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/brenda-fricker-dead-my-left-foot-1236650849/",
-          "ageMin": 206,
-          "headline": "Brenda Fricker, Oscar-Winning Actress in ‘My Left Foot,’ Dies at 81",
-          "summary": "The history-making Dublin native also appeared in ‘The Field,’ ‘Home Alone 2: Lost in New York’ and ‘So I Married an Axe Murderer.’"
-        }
-      ],
-      "ageMin": 198,
-      "_cand": {
-        "key": "rss:brenda-fricker-home-alone-2-favorite-and-oscar-winning-my-le",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 2,
-      "verification": {
-        "tier1Count": 2,
-        "tier1Owners": 2,
-        "outletCount": 2,
-        "outlets": [
-          "TheWrap",
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": null,
-        "framing": "plain",
-        "status": "CONFIRMED",
-        "publishable": true
-      },
-      "priority": 74,
-      "signals": {
-        "recency": 9,
-        "corroboration": 18,
-        "status": 25,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 8,
-        "softTv": 0
-      },
-      "tierClass": "S"
-    },
-    {
-      "id": "news-brenda-fricker-dies-at-81",
-      "slug": "brenda-fricker-my-left-foot-oscar-winner-dies-at-81",
-      "title": "Brenda Fricker, My Left Foot Oscar Winner, Dies at 81",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "death",
-      "sensitivity": "high",
-      "eventSlug": "brenda-fricker-dies-at-81",
-      "primaryKeyword": "Brenda Fricker",
-      "primaryEntity": "Brenda Fricker",
-      "entities": [
-        "My Left Foot",
-        "Home Alone 2"
-      ],
-      "angle": "Oscar-winning actress Brenda Fricker, known for 'My Left Foot' and 'Home Alone 2,' has died at 81.",
+      "angle": "Lena Headey speaks out about Hollywood predators and fan reactions to her 'Game of Thrones' role.",
       "tmdbType": "movie",
       "source": "rss:Variety",
       "sources": [
         {
           "outlet": "Variety",
           "tier": 7,
-          "url": "https://variety.com/2026/film/news/brenda-fricker-dead-my-left-foot-home-alone-2-1236814615/",
-          "ageMin": 215,
-          "headline": "Brenda Fricker, My Left Foot Oscar Winner, Dies at 81",
-          "summary": "Brenda Fricker, who became the first Irish actress to win an Oscar for her turn opposite Daniel Day-Lewis in 1989 s My Left Foot and captured hearts as the Pigeon Lady in 1992 s Home Alone 2, died on Thursday in Dublin. She was 81. Fricker s agent, Phil Belfield, confirmed her death to the BBC on Friday. [ ]"
+          "url": "https://variety.com/2026/film/news/lena-headey-game-of-thrones-fans-angry-nudity-1236812337/",
+          "ageMin": 16,
+          "headline": "Lena Headey Rips Hollywood for Protecting Predatory Men, Says Game of Thrones Toxic Fans Got Mad She Didn t Go Nude: I Was Shocked by the Anger",
+          "summary": "Lena Headey gave a wide-ranging interview with The Telegraph and opened up on her experiences in Hollywood with nudity and predatory men. The Game of Thrones Emmy nominee accused Harvey Weinstein of sexual harassment in 2017, claiming he made suggestive comments to her at the Venice Film Festival when they were promoting The Brothers Grimm. [ ]"
         }
       ],
-      "ageMin": 215,
+      "ageMin": 16,
       "_cand": {
-        "key": "rss:brenda-fricker-my-left-foot-oscar-winner-dies-at-81",
+        "key": "rss:lena-headey-rips-hollywood-for-protecting-predatory-men-says",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -1169,74 +1100,203 @@
           "Variety"
         ],
         "maxTier": 7,
-        "sensitivity": "high",
+        "sensitivity": "normal",
         "attribution": "Variety",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 53,
+      "priority": 59,
       "signals": {
-        "recency": 9,
+        "recency": 24,
         "corroboration": 12,
         "status": 18,
-        "type": 14,
+        "type": 5,
         "pop": 0,
         "breakout": 0,
         "big": 0,
         "trending": 0,
         "softTv": 0
       },
-      "tierClass": "S"
+      "tierClass": "C"
     },
     {
-      "id": "news-bbq-chicken-launches-felix-selected-offering",
-      "slug": "k-pop-star-felix-selects-new-offering-for-bb-q-chicken",
-      "title": "K-pop Star Felix Selects New Offering for bb.q Chicken",
+      "id": "news-benny-blanco-travels-to-see-selena-gomez",
+      "slug": "benny-blanco-s-love-for-selena-gomez-is-as-wide-as-the-atlantic-ocean-",
+      "title": "Benny Blanco's Love For Selena Gomez Is as Wide as the Atlantic Ocean, Which He's Crossing By Boat to See Her Because He's Afraid of Flying",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
-      "eventType": "announcement",
+      "eventType": "other",
       "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "bbq-chicken-launches-felix-selected-offering",
-      "primaryKeyword": "Stray Kids Felix",
-      "primaryEntity": "Felix Mallard",
+      "eventSlug": "benny-blanco-travels-to-see-selena-gomez",
+      "primaryKeyword": "Benny Blanco Selena Gomez",
+      "primaryEntity": "Benny Blanco",
       "entities": [
-        "Felix (Stray Kids)",
-        "bb.q Chicken"
+        "Selena Gomez: My Mind & Me",
+        "Selena Gomez"
       ],
-      "angle": "K-pop star Felix of Stray Kids has selected a new texture-focused offering for bb.q Chicken.",
+      "angle": "Benny Blanco's dedication to seeing Selena Gomez is highlighted by his unusual travel method due to his fear of flying.",
       "tmdbType": "movie",
-      "source": "gnews:The National Provisioner",
+      "source": "rss:Billboard",
       "sources": [
         {
-          "outlet": "The National Provisioner",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQX3R6V1ZqZll6RzgzMUdURkhYUzMtMk84bVJuaF81dElwQmhvaFVUWkJhVlBlN3JrZzhOeDV3bXdYejhXa3RpLVh1UkpYZHhJbDBYdk5WaUNwUU9GX3RNX0lLXzc5UVNaVzI3SXBDQXUwQzRRRTBEZUZWR2MzcUFCWTljLXppbjZEOXV6NnFHTVdzcEgzYV9ERWJWTWVfOERzNkZyMExKX3VWOWhjcDhwYnk4azM0blp5NVNFLXkwWHp3Zw?oc=5",
-          "ageMin": 79,
-          "headline": "bb.q Chicken launches texture-focused offering selected by K-pop star Felix - The National Provisioner",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiwgFBVV95cUxQX3R6V1ZqZll6RzgzMUdURkhYUzMtMk84bVJuaF81dElwQmhvaFVUWkJhVlBlN3JrZzhOeDV3bXdYejhXa3RpLVh1UkpYZHhJbDBYdk5WaUNwUU9GX3RNX0lLXzc5UVNaVzI3SXBDQXUwQzRRRTBEZUZWR2MzcUFCWTljLXppbjZEOXV6NnFHTVdzcEgzYV9ERWJWTWVfOERzNkZyMExKX3VWOWhjcDhwYnk4azM0blp5NVN"
+          "outlet": "Billboard",
+          "tier": 7,
+          "url": "https://www.billboard.com/music/pop/benny-blanco-crossing-atlantic-selena-gomez-fear-of-flying-1236296861/",
+          "ageMin": 34,
+          "headline": "Benny Blanco s Love For Selena Gomez Is as Wide as the Atlantic Ocean, Which He s Crossing By Boat to See Her Because He s Afraid of Flying",
+          "summary": "The things we do for love."
         }
       ],
-      "ageMin": 79,
+      "ageMin": 34,
       "_cand": {
-        "key": "rss:bb-q-chicken-launches-texture-focused-offering-selected-by-k",
+        "key": "rss:benny-blanco-s-love-for-selena-gomez-is-as-wide-as-the-atlan",
         "popularity": 0,
-        "kind": "gnews"
+        "kind": "rss-news"
       },
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
+        "tier1Count": 1,
+        "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "The National Provisioner"
+          "Billboard"
         ],
-        "maxTier": 5,
+        "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "The National Provisioner",
+        "attribution": "Billboard",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 59,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-ariana-grande-eternal-sunshine-tour-ty-dolla-sign",
+      "slug": "ariana-grande-brings-out-ty-dolla-ign-to-perform-their-positions-colla",
+      "title": "Ariana Grande Brings Out Ty Dolla $ign to Perform Their Positions Collaboration Safety Net",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "ariana-grande-eternal-sunshine-tour-ty-dolla-sign",
+      "primaryKeyword": "Ariana Grande tour",
+      "primaryEntity": "Ariana Grande",
+      "entities": [
+        "Ty Dolla $ign",
+        "Eternal Sunshine Tour"
+      ],
+      "angle": "Ariana Grande brought out special guest Ty Dolla $ign during her Eternal Sunshine Tour stop in Brooklyn.",
+      "tmdbType": "movie",
+      "source": "rss:Billboard",
+      "sources": [
+        {
+          "outlet": "Billboard",
+          "tier": 7,
+          "url": "https://www.billboard.com/music/pop/ariana-grande-ty-dolla-sign-safety-net-eternal-sunshine-show-1236296763/",
+          "ageMin": 41,
+          "headline": "Ariana Grande Brings Out Ty Dolla $ign to Perform Their Positions Collaboration Safety Net",
+          "summary": "The Eternal Sunshine Tour is currently in the midst of a five-show run in Brooklyn."
+        }
+      ],
+      "ageMin": 41,
+      "_cand": {
+        "key": "rss:ariana-grande-brings-out-ty-dolla-ign-to-perform-their-posit",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Billboard"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Billboard",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 59,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-rob-lowe-accredited-debt-relief-partnership",
+      "slug": "rob-lowe-strikes-marketing-partnership-with-accredited-debt-relief",
+      "title": "Rob Lowe Strikes Marketing Partnership With Accredited Debt Relief",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "rob-lowe-accredited-debt-relief-partnership",
+      "primaryKeyword": "rob lowe",
+      "primaryEntity": "Rob Lowe",
+      "entities": [
+        "Accredited Debt Relief"
+      ],
+      "angle": "Rob Lowe enters into a marketing partnership with Accredited Debt Relief.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/tv/news/rob-lowe-accredited-debt-relief-commercials-1236814774/",
+          "ageMin": 156,
+          "headline": "Rob Lowe Strikes Marketing Partnership With Accredited Debt Relief",
+          "summary": "Rob Lowe may best be known for roles in the political series The West Wing and more recently, 9-1-1 Lone Star. But his next job may be his most serious of them all. The actor will work with Accredited Debt Relief, debt settlement company that negotiates with creditors to reduce the amount they owe for [ ]"
+        }
+      ],
+      "ageMin": 156,
+      "_cand": {
+        "key": "rss:rob-lowe-strikes-marketing-partnership-with-accredited-debt-",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -1244,9 +1304,9 @@
       "priority": 51,
       "signals": {
         "recency": 16,
-        "corroboration": 8,
+        "corroboration": 12,
         "status": 18,
-        "type": 9,
+        "type": 5,
         "pop": 0,
         "breakout": 0,
         "big": 0,
