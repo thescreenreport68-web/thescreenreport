@@ -66,12 +66,29 @@ export function detectGossipType(topic) {
   return "general";
 }
 
-export function buildGossipPrompt(bundle, frame, topic, corrections = null, ledeStyle = "scene") {
+// Word TARGET = f(bundle depth) — never a fixed floor (a floor past the bundle's material is the fabrication
+// forcing-function; news lane D1). Thin bundle → short + legal beats padded; rich bundle → a fuller piece.
+export function wordRangeFor(bundle, anchors = []) {
+  const seed = (bundle?.sources || []).filter((s) => !s.corroborating);
+  const chars = (bundle?.sources || []).reduce((a, s) => a + (s.text || "").length, 0);
+  const rich = chars >= 5000 || (bundle?.sources || []).length >= 3;
+  const medium = chars >= 1800;
+  const lo = rich ? 350 : medium ? 280 : 220;
+  const hi = rich ? 450 : medium ? 380 : 300;
+  return { lo, hi, label: `${lo}\u2013${hi} words` };
+}
+
+export function buildGossipPrompt(bundle, frame, topic, corrections = null, ledeStyle = "scene", brief = null, anchors = []) {
   const gtype = detectGossipType(topic);
   const sourceBlock = (bundle.sources || [])
     .map((s, i) => `[S${i + 1}] ${s.outlet}${s.url ? ` (${s.url})` : ""} — tier ${s.tier}\n${(s.text || "").slice(0, 2500)}`)
     .join("\n\n");
-  const quoteBlock = (bundle.quotes || []).map((q) => `• "${q}"`).join("\n") || "(no verbatim quotes available — paraphrase only, invent nothing)";
+  // ANCHOR CARDS (Phase 2): when present, quotes are inserted BY TOKEN — the writer never types quote text,
+  // so verbatim-ness is structural. Without anchors, fall back to the old verbatim-quote list.
+  const quoteBlock = anchors.length
+    ? anchors.map((a) => `${a.id} (${a.outlet}): "${a.text}"`).join("\n")
+    : ((bundle.quotes || []).map((q) => `• "${q}"`).join("\n") || "(no verbatim quotes available — paraphrase only, invent nothing)");
+  const range = wordRangeFor(bundle, anchors);
 
   const user = `${topic.angle ? `THE STORY (the content-verified angle — write THIS): ${topic.angle}\n` : ""}DISCOVERY HEADLINE (UNVERIFIED — may be clickbait or overstated; do NOT treat it as fact, verify every specific against the bundle): ${topic.title || ""}
 ABOUT: ${topic.primaryEntity || bundle.entity || ""}
@@ -79,8 +96,16 @@ ABOUT: ${topic.primaryEntity || bundle.entity || ""}
 THE VERIFIED BUNDLE — the ONLY facts and quotes you may use:
 ${sourceBlock || "(no source text)"}
 
-VERBATIM QUOTES you may use (copy exactly; attribute them):
+${anchors.length ? `QUOTE CARDS — to include a quote, write its TOKEN like ⟦Q1⟧ exactly where the quote belongs (the system replaces the token with the exact quote text; NEVER type quote words yourself; attribute the speaker in the surrounding sentence). Use 1–3 of the strongest; skip weak ones:` : `VERBATIM QUOTES you may use (copy exactly; attribute them):`}
 ${quoteBlock}
+${brief ? `
+YOUR RESEARCHER'S BRIEF (grounded in the sources — follow the beats, verify every specific against the bundle):
+HOOK: ${brief.hook || ""}
+MOOD: ${brief.mood || ""}
+BEATS: ${(brief.beats || []).map((b, i) => `${i + 1}. ${b}`).join("  ")}
+MUST INCLUDE: ${(brief.mustInclude || []).join("; ")}
+ANGLE: ${brief.angle || ""}${brief.useAnchors?.length ? `
+FEATURE THESE QUOTE CARDS: ${brief.useAnchors.join(", ")}` : ""}` : ""}
 
 ${TYPES[gtype] || TYPES.general}
 
@@ -92,14 +117,20 @@ ${frame.writerDirective}
 ${frame.needsDisclaimer ? `\nMANDATORY — include this exact sentence, as its own sentence in the body:\n"${frame.disclaimerText}"` : ""}
 ${corrections ? `\n⚠ FIX THESE FROM YOUR LAST DRAFT (keep the voice + the same facts; attribute any flagged claim, e.g. "according to ${frame.attribution || "the outlet"}", or add the required note): ${corrections}` : ""}
 
-LENGTH: write 450–600 words — IMPORTANT, do not stop short. Keep individual SENTENCES tight, but develop the story FULLY and make it interesting: the trigger, the who/what/when/where, the fan reaction, the what-we-know-vs-what's-unconfirmed, the relevant BACKGROUND and context (prior related events, the people involved, the timeline) — using ONLY facts supported by the bundle (add real, verifiable context, never invented filler). More RELEVANT specifics = a stronger, more engaging story. A rich article, never a caption.
-STRUCTURE: the DISPLAY headline (title) = a specific present-tense hook that names the subject (NEVER state an unconfirmed damaging claim as fact). Open the BODY with your assigned LEDE STYLE above — never a recycled "What happens when…?" question. Then: what sparked it (attributed) → what we know vs. what's unconfirmed → quick context / why it matters → the denial / other side if any. Use one or two "## " subheads to break up a longer piece. Pull one punchy line out as the pull-quote.
+LENGTH: write ${range.label} — the target matches how much VERIFIED material the bundle actually holds. Never pad past the material: a thin bundle means a SHORT, punchy, legal piece (padding invents facts — the one unforgivable error). Keep individual SENTENCES tight and develop what the bundle supports: the trigger, the who/what/when/where, the reaction, the what-we-know-vs-unconfirmed, the relevant timeline/context. More RELEVANT specifics = a stronger story.
+STRUCTURE: the DISPLAY headline (title) = a specific present-tense hook that names the subject (NEVER state an unconfirmed damaging claim as fact). Open the BODY with your assigned LEDE STYLE above — never a recycled "What happens when…?" question. Then: what sparked it (attributed) → what we know vs. what's unconfirmed → quick context / why it matters → the denial / other side if any. Use one or two "## " subheads to break up a longer piece (skip subheads under ~450 words). Pull one punchy line out as the pull-quote.
+CRAFT (each of these measurably drives search + reader trust — do them all where the bundle supports it):
+- Sentence 2 of the lede = the sourcing tag + a role appositive ("..., a source close to the 'Euphoria' star told PEOPLE").
+- Include at least ONE concrete NUMBER from the bundle (an age, a date, a dollar figure, a count) and — when a quote card exists — at least ONE attributed quote.
+- Name the outlet IN the text ("told PEOPLE", "per court documents", "TMZ reports") — attribution is the product.
+- TIME-ANCHOR every beat: never "recently"/"a while back" when the bundle gives a date or day.
+- Quote-then-context rhythm; NO conclusion paragraph — the piece stops on the latest fact or the open question.
 
 Return STRICT JSON:
 { "title": "...", "dek": "one-line standfirst with a little wit",
   "metaTitle": "SEARCH title: 45–55 chars, STARTS with the main person's NAME then the hook — a COMPLETE phrase (never cut mid-word / mid-name / mid-quote), no site name. Front-load the name so it wins in Google; may differ from the display title. Every specific must be bundle-supported.",
   "metaDescription": "SEARCH snippet: 140–160 chars, a teaser that earns the click — the hook PLUS one concrete fact from the story (a name / number / what happened). One or two COMPLETE sentences ending in a period. Must be REWORDED, NOT identical to the dek. Only bundle-supported facts.",
-  "body": "markdown article (250–450 words) INCLUDING the mandatory non-confirmation sentence verbatim if required; use one or two '## ' subheads when it helps",
+  "body": "markdown article (${range.label}) INCLUDING the mandatory non-confirmation sentence verbatim if required; use one or two '## ' subheads when it helps",
   "pullQuote": "one short punchy line from the story (a quote or a vivid sentence) for display",
   "keyTakeaways": ["EXACTLY 3 short factual takeaway bullets — REQUIRED, never empty"],
   "faq": [{"q":"a real question a reader would google about THIS story","a":"a SHORT, REAL factual ANSWER from the bundle"}, "... 2 to 5 FAQ — pick the count by how much the story SUPPORTS (a rich, multi-fact story → 4–5; a thin one → 2), never pad to a fixed number. Ask questions the article ANSWERS (the who/what/when/where/why of the CONFIRMED facts) and give each a real answer. Do NOT ask about things nobody knows yet or answer with 'not confirmed'/'unknown' — every FAQ must teach the reader something."],
@@ -151,12 +182,12 @@ Return the FULL corrected article as STRICT JSON, same shape:
   return { system: CORRECTION_SYS, user };
 }
 
-export async function writeGossip({ bundle, frame, topic, model = null, corrections = null, priorArticle = null, issues = null, rewrite = false, ledeStyle = "scene" }) {
+export async function writeGossip({ bundle, frame, topic, model = null, corrections = null, priorArticle = null, issues = null, rewrite = false, ledeStyle = "scene", brief = null, anchors = [] }) {
   // SURGICAL self-correction when we have a prior draft and aren't forcing a rewrite; otherwise a fresh write.
   const useSurgical = priorArticle && !rewrite && (issues || corrections);
   const { system, user } = useSurgical
     ? buildCorrectionPrompt(bundle, frame, topic, priorArticle, issues || corrections)
-    : buildGossipPrompt(bundle, frame, topic, rewrite ? null : corrections, ledeStyle);
+    : buildGossipPrompt(bundle, frame, topic, rewrite ? null : corrections, ledeStyle, brief, anchors);
   // 2800 tokens: a 450-600-word body + dek + pull-quote + 3 takeaways + FAQ + claims + whatWeKnow/Dont must all fit
   // in the JSON, or the output truncates mid-sentence (the cause of an incomplete published article).
   const { data } = await agentChat("writer", { model: model || undefined, system, user, json: true, surgical: !!useSurgical });

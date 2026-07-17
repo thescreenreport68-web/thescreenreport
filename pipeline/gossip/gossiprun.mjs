@@ -138,7 +138,7 @@ export async function gossipRun({
     const ledeStyle = LEDE_ORDER[rotIdx % LEDE_ORDER.length]; // fix #3 — rotate the lede so no two open alike
     let r;
     try {
-      r = await runImpl(t, { verify, judge, ledeStyle });
+      r = await runImpl(t, { verify, judge, ledeStyle, synth: true, headline: true });
     } catch (e) {
       report.blocked.push({ id: t.id, category: cat, status: "ERROR", reason: String(e?.message || e).slice(0, 140) });
       continue;

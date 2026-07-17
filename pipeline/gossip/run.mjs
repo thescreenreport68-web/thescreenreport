@@ -19,6 +19,8 @@ import { gatherBundle, corroborateBundle } from "./contentFinder.mjs";
 import { editorialReview } from "./editorialGate.mjs";
 import { frameTopic } from "./frame.mjs";
 import { writeGossip } from "./writer.mjs";
+import { buildAnchors, substituteAnchors, synthesize } from "./synthesizer.mjs";
+import { refineHeadline } from "./headline.mjs";
 import { legalGate } from "./legalGate.mjs";
 import { qualityCheck } from "./qualityGate.mjs";
 import { verifyQuotes } from "./quoteGuard.mjs";
@@ -104,6 +106,8 @@ export async function runGossip(topic, {
   judge = false, judgeImpl = judgeGossip,
   editorial = true, editorialImpl = editorialReview,
   maxFix = 3, ledeStyle = "scene",
+  synth = false, synthImpl = synthesize,
+  headline = false, headlineImpl = refineHeadline,
 } = {}) {
   // Stage 3 — receipts (fail-closed). CHEAP-FIRST (Phase 1): extract the PRIMARY source only, let the
   // editorial gate reject non-stories, and pay for corroboration ONLY on stories the gate keeps — a
@@ -144,14 +148,19 @@ export async function runGossip(topic, {
   // Stage 5+6 — WRITE, then the SELF-CORRECT loop. The writer fixes ONLY the flagged spots each pass (surgical),
   // keeping the good prose; a full rewrite is the fallback only when a draft is broken top-to-bottom. A hard-stop
   // (minor/intimate-media/HOLD/fabrication-class) is NEVER retried — it stays blocked.
-  let article = await writeImpl({ bundle, frame, topic, model, ledeStyle });
+  // Phase 2 — ANCHOR CARDS (deterministic) + the SYNTHESIZER'S BRIEF (fail-open: null brief = the old path).
+  const anchors = buildAnchors(bundle);
+  const brief = synth ? await synthImpl({ bundle, frame, topic, anchors }) : null;
+  let article = await writeImpl({ bundle, frame, topic, model, ledeStyle, brief, anchors });
+  substituteAnchors(article, anchors); // inject exact quote text for the tokens BEFORE any gate sees the draft
   let verifyResult = verify ? await verifyImpl({ article, bundle, model }) : null;
   let report = inspect(article, frame, topic, bundle, verifyResult);
 
   for (let fix = 1; fix <= maxFix && !report.allPass && !report.redLine; fix++) {
     // The writer fixes ONLY the flagged spots (surgical); full rewrite only when a draft is broadly broken.
     const broadlyBroken = (verifyResult && verifyResult.brokenRatio > 0.6) || report.qualityIssues.some((q) => /no body|empty|truncat/i.test(q));
-    article = await writeImpl({ bundle, frame, topic, model, priorArticle: article, issues: report.issues, rewrite: broadlyBroken, ledeStyle });
+    article = await writeImpl({ bundle, frame, topic, model, priorArticle: article, issues: report.issues, rewrite: broadlyBroken, ledeStyle, brief, anchors });
+    substituteAnchors(article, anchors);
     verifyResult = verify ? await verifyImpl({ article, bundle, model }) : null; // re-verify the CORRECTED draft
     report = inspect(article, frame, topic, bundle, verifyResult);
   }
@@ -196,7 +205,8 @@ export async function runGossip(topic, {
     try { auto = await judgeImpl({ article, bundle, frame }); } catch (e) { auto = { error: String(e?.message || e).slice(0, 80) }; }
     const flag = judgeFlags(auto, { verifyDegraded });
     if (flag.unsafe && flag.issues.length) {
-      const fixed = await writeImpl({ bundle, frame, topic, model, priorArticle: article, issues: flag.issues, rewrite: false });
+      const fixed = await writeImpl({ bundle, frame, topic, model, priorArticle: article, issues: flag.issues, rewrite: false, brief, anchors });
+      substituteAnchors(fixed, anchors);
       const rc = inspect(fixed, frame, topic, bundle, verify ? await verifyImpl({ article: fixed, bundle, model }) : null);
       if (!rc.redLine && (qualityCheck(fixed).words || 0) >= 120) {
         article = fixed; report = rc; await cleanse();
@@ -210,6 +220,11 @@ export async function runGossip(topic, {
   article.body = trimIncomplete(dedupeSentences(article.body));
   article.keyTakeaways = ensureTakeaways(article);
   article.faq = ensureFaq(article);
+
+  // Stage 6d — HEADLINE AGENT (Phase 2): best-of-3 rephrase of metaTitle/metaDescription/dek, judged for CTR,
+  // hard-gated deterministically (grounded numbers+names, render-contract validators) — improves or no-ops.
+  let headlineReport = null;
+  if (headline) { try { headlineReport = await headlineImpl({ article, bundle, topic }); } catch { headlineReport = null; } }
 
   // Stage 7 — assemble: attach the byline, the rumor-UI fields, and the PROVENANCE the monitor needs.
   article.author = GOSSIP_AUTHOR_SLUG;
@@ -235,5 +250,5 @@ export async function runGossip(topic, {
     verifyDegraded, // true ⇒ the claim-verify ran at L1-only this run (L2 errored); surfaced for the monitor/owner
     sources: bundle.sources.map((s) => ({ outlet: s.outlet, url: s.url, tier: s.tier })),
   };
-  return { status: "PUBLISH", article, frame, provenance, route, bundle, auto, editorial: ed };
+  return { status: "PUBLISH", article, frame, provenance, route, bundle, auto, editorial: ed, brief: brief ? true : false, headline: headlineReport };
 }
