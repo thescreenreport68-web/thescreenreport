@@ -18,8 +18,9 @@ import * as writer from "./agents/writer.mjs";
 import * as qa from "./agents/qa.mjs";
 import * as imageAgent from "./agents/image.mjs";
 import { writeBoxOfficeArticle } from "./assemble.mjs";
-import { loadStore, alreadyPublished, recordPublished, parkAngle, parkedTries, clearParked, coveredEventSlugs, bumpZeroStreak, bumpDaySpend, daySpendUsd } from "./store.mjs";
+import { loadStore, alreadyPublished, recordPublished, parkAngle, parkedTries, parkCooling, clearParked, coveredEventSlugs, bumpZeroStreak, bumpDaySpend, daySpendUsd } from "./store.mjs";
 import { runFind, readQueue } from "./find/findrun.mjs";
+import { allowance, debit } from "./pacing.mjs";
 import { loadTracked, isMaterial, updateEventSuffix, recordArticle, linkPriorCoverage, isPastOpening } from "./tracker.mjs";
 import { FORMS, ACCEPT_FLOOR, MAX_ATTEMPTS, GATE, DATA_DIR, REVIEW_DIR, FLOOD_CAP, MAX_ARTICLES_PER_DAY, MAX_RUN_COST_USD, STREAMING_DAILY_CAP, DAILY_SPEND_CAP_USD } from "./config.bo.mjs";
 import { cutArticle } from "../lib/cutter.mjs";
@@ -95,7 +96,22 @@ export async function boRun({
     console.log(`::warning title=boxoffice daily spend cap::$${report.spendCapHit} spent today >= $${DAILY_SPEND_CAP_USD} cap — publishing paused until the LA day rolls`);
     return finish(report, dryRun);
   }
-  const burst = Math.min(limit, FLOOD_CAP);
+  // ── P3 PACING GOVERNOR — spread the day's supply across LA hours; never over- or under-run. Ahead of
+  // pace with an empty bucket → exit CHEAPLY before any model call. Behind pace → always allowed 1 (only
+  // MATERIAL events ever publish downstream — the governor shapes WHEN, never invents WHAT). Review/dry
+  // runs bypass pacing entirely (proofs must always run).
+  let burst = Math.min(limit, FLOOD_CAP);
+  if (!dryRun && !reviewDir) {
+    const paceInfo = allowance(store, baseToday, burst, now);
+    store.pace = { tokens: paceInfo.tokens, lastMs: paceInfo.lastMs };
+    report.paced = { tokens: Number(paceInfo.tokens.toFixed(2)), behind: paceInfo.behind, expected: paceInfo.expected, allow: paceInfo.allow };
+    if (paceInfo.allow < 1) {
+      console.log(`  ⏸ pacing: ahead of pace (published ${baseToday} today, expected ~${paceInfo.expected}) with an empty bucket — cheap skip`);
+      bumpDaySpend(store, 0, { now: new Date(now) }); // persists pace state; costs nothing
+      return finish(report, dryRun);
+    }
+    burst = Math.min(burst, Math.max(1, paceInfo.allow));
+  }
 
   // ── P2 EVENT RADAR — refresh the FIND queue when stale (≤1 batched categorize call per 45 min ≈ $0.001).
   // Fail-soft: a dead feed or model outage never blocks the tick — the inventory engine still runs.
@@ -128,6 +144,7 @@ export async function boRun({
       }
       if (angle.form !== "BO-UPDATE" && alreadyPublished(store, trigger.eventSlug, angle.form)) { report.skipped.push({ tag, reason: "already published" }); continue; }
       if (parkedTries(store, trigger.eventSlug, angle.form) === Infinity) { report.skipped.push({ tag, reason: "parked dead" }); continue; }
+      if (parkCooling(store, trigger.eventSlug, angle.form, { now: new Date(now) })) { report.skipped.push({ tag, reason: "park cooling (held recently — retry after 2h)" }); continue; }
       if (paceMs && (report.published.length + report.rejected.length + report.held.length)) await sleep(paceMs);
       console.log(`\n■ ${tag} (heat ${trigger.priority}, via ${film.via})`);
 
@@ -277,6 +294,7 @@ export async function boRun({
     const streak = bumpZeroStreak(store, report.published.length);
     report.zeroStreak = streak;
     if (streak >= 6) console.log(`::warning title=boxoffice zero-publish streak::${streak} consecutive live ticks published nothing — investigate held reasons in data/boxoffice/runs/`);
+    if (report.published.length && store.pace) store.pace = debit(store.pace, report.published.length); // governor spend
     report.daySpend = bumpDaySpend(store, costReport()?.total || 0, { now: new Date() }); // feeds the daily spend cap
   }
   return finish(report, dryRun);

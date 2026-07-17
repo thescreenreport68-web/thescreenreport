@@ -13,7 +13,7 @@ import { fidelityLocks, review as qaReview, classifyBlocks, findTemplateHeadings
 import { castTrustworthy } from "../boxofficeData.mjs";
 import { buildBoxOfficeMarkdown, writeBoxOfficeArticle, seoFinish, scaffoldViolations } from "../assemble.mjs";
 import { boRun } from "../borun.mjs";
-import { boKey, alreadyPublished, coveredEventSlugs, parkAngle as parkAngleX, parkedTries as parkedTriesX } from "../store.mjs";
+import { boKey, alreadyPublished, coveredEventSlugs, parkAngle as parkAngleX, parkedTries as parkedTriesX, parkCooling } from "../store.mjs";
 import { run as gatherRun } from "../agents/gatherer.mjs";
 import { run as writerRun } from "../agents/writer.mjs";
 import { readChartCache, writeChartCache } from "../dailyChart.mjs";
@@ -21,6 +21,7 @@ import { parseRss, BO_SCOPE, JUNK_RE } from "../find/sources.mjs";
 import { categorize, cluster } from "../find/events.mjs";
 import { scoreEvent } from "../find/score.mjs";
 import { readQueue, markConsumed } from "../find/findrun.mjs";
+import { PACE, refill, expectedByNow, allowance, debit } from "../pacing.mjs";
 import { isMaterial, updateEventSuffix, recordArticle, currentNumberRaw, priorArticles, linkPriorCoverage, streamingExits, trackKey, isPastOpening } from "../tracker.mjs";
 import { parseNetflixTsv, netflixBlock, fmtHours } from "../netflix.mjs";
 import { findFilms } from "../agents/finder.mjs";
@@ -1014,6 +1015,64 @@ t("legacy dead park (no expiresAt) expires 72h after its park time — never dea
   const st = { published: [], parked: [{ key: "old|NETFLIX-TOP10", eventSlug: "old", form: "NETFLIX-TOP10", reason: "r", tries: 3, dead: true, at: "2026-07-13T00:00:00Z" }], zeroStreak: 0, daySpend: null, file: path.join(dir5, "store.json") };
   assert.equal(parkedTriesX(st, "old", "NETFLIX-TOP10", { now: new Date("2026-07-17T00:00:00Z") }), 0, "legacy dead park expired");
   fs.rmSync(dir5, { recursive: true, force: true });
+});
+
+// ── P3 PACING GOVERNOR — token bucket, behind/ahead, park cooldown ───────────────────────────────
+console.log("P3 pacing — refill, expected curve, allowance, cooldown, cheap skip");
+
+t("refill: LA-morning refill rate beats overnight; cap bounds the burst; a stall never windfalls", () => {
+  const laMorning = Date.parse("2026-07-14T17:00:00Z"); // Tue 10:00 PT (morning part, 63%)
+  const laNight = Date.parse("2026-07-14T10:00:00Z");   // Tue 03:00 PT (overnight, 5%)
+  const m = refill({ tokens: 0, lastMs: laMorning - 3600e3 }, laMorning);
+  const n = refill({ tokens: 0, lastMs: laNight - 3600e3 }, laNight);
+  assert.ok(m.tokens > n.tokens * 5, `morning ${m.tokens} vs night ${n.tokens}`);
+  const capped = refill({ tokens: 0, lastMs: laMorning - 40 * 3600e3 }, laMorning);
+  assert.ok(capped.tokens <= PACE.cap + 1e-9, "cap respected after a long stall");
+});
+
+t("expectedByNow: grows through the LA day; Sun/Mon boosted, Wed/Thu trimmed", () => {
+  const tueNoon = Date.parse("2026-07-14T19:00:00Z");  // Tue 12:00 PT
+  const tueNight = Date.parse("2026-07-15T04:00:00Z"); // Tue 21:00 PT
+  assert.ok(expectedByNow(tueNight) > expectedByNow(tueNoon), "monotonic through the day");
+  const monNoon = Date.parse("2026-07-13T19:00:00Z");  // Mon 12:00 PT (×1.3)
+  const wedNoon = Date.parse("2026-07-15T19:00:00Z");  // Wed 12:00 PT (×0.8)
+  assert.ok(expectedByNow(monNoon) > expectedByNow(wedNoon), "day-of-week modulation");
+});
+
+t("allowance: BEHIND pace forces 1 even with an empty bucket; AHEAD with an empty bucket allows 0", () => {
+  const noon = Date.parse("2026-07-14T19:00:00Z"); // Tue 12:00 PT — expected ≈ 9-10 by now
+  const behind = allowance({ pace: { tokens: 0, lastMs: noon } }, 0, 3, noon);
+  assert.equal(behind.behind, true);
+  assert.ok(behind.allow >= 1, "always-post-when-behind");
+  const ahead = allowance({ pace: { tokens: 0, lastMs: noon } }, 15, 3, noon);
+  assert.equal(ahead.behind, false);
+  assert.equal(ahead.allow, 0, "ahead + empty bucket = cheap skip");
+  assert.equal(debit({ tokens: 2.5, lastMs: noon }, 2).tokens, 0.5);
+});
+
+t("parkCooling: a freshly-held entry cools for 2h (the retry-burn fix), then retries", () => {
+  const st = { published: [], parked: [{ key: "ev|BO-UPDATE", eventSlug: "ev", form: "BO-UPDATE", reason: "words", tries: 1, at: "2026-07-17T12:00:00Z" }], file: "/tmp/never-saved.json" };
+  assert.equal(parkCooling(st, "ev", "BO-UPDATE", { now: new Date("2026-07-17T13:00:00Z") }), true, "cooling at +1h");
+  assert.equal(parkCooling(st, "ev", "BO-UPDATE", { now: new Date("2026-07-17T14:30:00Z") }), false, "retryable at +2.5h");
+  assert.equal(parkCooling(st, "other", "BO-UPDATE", { now: new Date("2026-07-17T13:00:00Z") }), false, "no park = no cooling");
+});
+
+await ta("borun: AHEAD of pace with an empty bucket exits CHEAPLY — no finder, no model call", async () => {
+  const dir6 = fs.mkdtempSync(path.join(os.tmpdir(), "bo-pace-"));
+  const nowMs = Date.parse("2026-07-14T17:30:00Z"); // Tue 10:30 PT — expected ≈ 8
+  const todayIso = new Date(nowMs).toISOString();
+  const st = { published: Array.from({ length: 12 }, (_, i) => ({ key: `k${i}`, eventSlug: `k${i}`, form: "BO-UPDATE", at: todayIso })), parked: [], zeroStreak: 0, daySpend: null, pace: { tokens: 0, lastMs: nowMs }, file: path.join(dir6, "store.json") };
+  const report = await boRun({
+    storeImpl: st, trackedImpl: { films: {} }, nowMs,
+    findImpl: async () => { throw new Error("finder must NOT run on a cheap pacing skip"); },
+    runFindImpl: async () => { throw new Error("findrun must NOT run either"); },
+    readQueueImpl: () => ({ events: [] }),
+  });
+  assert.ok(report.paced, "pacing consulted");
+  assert.equal(report.paced.allow, 0);
+  assert.equal(report.films, 0, "no discovery ran");
+  assert.equal(report.blocked.length, 0, "no error path — a clean cheap skip");
+  fs.rmSync(dir6, { recursive: true, force: true });
 });
 
 // ── summary ──────────────────────────────────────────────────────────────────────────────────────
