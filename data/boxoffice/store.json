@@ -551,11 +551,11 @@
    "key": "young-washington-bo-update-d13|BO-UPDATE",
    "eventSlug": "young-washington-bo-update-d13",
    "form": "BO-UPDATE",
-   "reason": "words 144 < 180 (owner-set ~200-word minimum)",
-   "tries": 4,
-   "at": "2026-07-17T19:05:36.610Z",
+   "reason": "words 162 < 180 (owner-set ~200-word minimum)",
+   "tries": 5,
+   "at": "2026-07-17T20:04:59.130Z",
    "dead": true,
-   "expiresAt": "2026-07-20T19:05:36.610Z"
+   "expiresAt": "2026-07-20T20:04:59.130Z"
   },
   {
    "key": "the-odyssey-ev-weekend-d0|BO-WEEKEND",
@@ -647,19 +647,21 @@
    "key": "supergirl-bo-update-d20|BO-UPDATE",
    "eventSlug": "supergirl-bo-update-d20",
    "form": "BO-UPDATE",
-   "reason": "words 147 < 180 (owner-set ~200-word minimum)",
-   "tries": 2,
-   "at": "2026-07-17T19:07:40.386Z"
+   "reason": "words 129 < 180 (owner-set ~200-word minimum)",
+   "tries": 3,
+   "at": "2026-07-17T20:07:07.306Z",
+   "dead": true,
+   "expiresAt": "2026-07-20T20:07:07.306Z"
   }
  ],
- "zeroStreak": 1,
+ "zeroStreak": 2,
  "daySpend": {
   "laDay": "2026-07-17",
-  "usd": 0.65716
+  "usd": 0.66224
  },
  "pace": {
-  "tokens": 3.7003033333333333,
-  "lastMs": 1784316649700
+  "tokens": 4,
+  "lastMs": 1784318442509
  },
  "lastAuditDay": "2026-07-17"
 }
