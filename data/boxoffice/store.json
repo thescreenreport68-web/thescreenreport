@@ -561,11 +561,11 @@
    "key": "the-odyssey-ev-weekend-d0|BO-WEEKEND",
    "eventSlug": "the-odyssey-ev-weekend-d0",
    "form": "BO-WEEKEND",
-   "reason": "2 unverified claim(s) cut, unrecovered",
-   "tries": 4,
-   "at": "2026-07-17T19:34:24.078Z",
+   "reason": "fidelity: 5 unsupported figures/claims — draft-level failure",
+   "tries": 5,
+   "at": "2026-07-17T20:33:30.261Z",
    "dead": true,
-   "expiresAt": "2026-07-20T19:34:24.078Z"
+   "expiresAt": "2026-07-20T20:33:30.261Z"
   },
   {
    "key": "winning-ai-search-ev-streaming-arrival|NOW-STREAMING",
@@ -587,11 +587,11 @@
    "key": "the-odyssey-ev-record-d0|BO-RECORD",
    "eventSlug": "the-odyssey-ev-record-d0",
    "form": "BO-RECORD",
-   "reason": "fidelity: 5 unsupported figures/claims — draft-level failure",
-   "tries": 3,
-   "at": "2026-07-17T19:36:07.319Z",
+   "reason": "fidelity: 6 unsupported figures/claims — draft-level failure",
+   "tries": 4,
+   "at": "2026-07-17T20:39:52.711Z",
    "dead": true,
-   "expiresAt": "2026-07-20T19:36:07.319Z"
+   "expiresAt": "2026-07-20T20:39:52.711Z"
   },
   {
    "key": "rust-creek-netflix-top10-w2026-07-12|NETFLIX-TOP10",
@@ -622,8 +622,8 @@
    "eventSlug": "wild-sing-ev-streaming-arrival",
    "form": "NOW-STREAMING",
    "reason": "under floor: no subscription-streaming platform — rent/buy is not 'now streaming'",
-   "tries": 1,
-   "at": "2026-07-17T17:35:30.181Z"
+   "tries": 2,
+   "at": "2026-07-17T20:38:07.819Z"
   },
   {
    "key": "ride-or-die-ev-weekend-d0|BO-WEEKEND",
@@ -654,14 +654,14 @@
    "expiresAt": "2026-07-20T20:07:07.306Z"
   }
  ],
- "zeroStreak": 2,
+ "zeroStreak": 3,
  "daySpend": {
   "laDay": "2026-07-17",
-  "usd": 0.66224
+  "usd": 0.67363
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1784318442509
+  "lastMs": 1784320321354
  },
  "lastAuditDay": "2026-07-17"
 }
