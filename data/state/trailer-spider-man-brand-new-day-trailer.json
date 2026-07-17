@@ -1,76 +1,148 @@
 {
   "id": "trailer-spider-man-brand-new-day-trailer",
-  "slug": "spider-man-brand-new-day-trailer-drops-teasing-a-world-without-recogni",
+  "slug": "another-spider-man-brand-new-day-trailer-has-been-released-but-you-can",
   "status": "published",
   "stages": {
     "attempt1": {
-      "score": 88,
+      "score": null,
       "cat": "movies/trailers",
-      "img": "/images/articles/spider-man-brand-new-day-trailer-drops-teasing-a-world-without-recogni.jpg",
-      "hardBlocks": []
+      "format": [],
+      "cuts": 2,
+      "broken": []
+    },
+    "attempt2": {
+      "score": null,
+      "cat": "movies/trailers",
+      "format": [],
+      "cuts": 1,
+      "broken": []
     }
   },
-  "scorecard": {
-    "score": 88,
-    "subscores": {
-      "accuracy": 10,
-      "readability": 9,
-      "humanVoice": 9,
-      "phrasing": 9,
-      "curiosity": 9,
-      "structure": 9,
-      "infoGain": 9,
-      "seo": 8,
-      "faqQuality": 9,
-      "completeness": 9
+  "editorial": {
+    "status": "unconfirmed",
+    "entity": "Spider-Man: Brand New Day",
+    "work": {
+      "title": "Spider-Man: Brand New Day",
+      "year": null,
+      "medium": "movie"
     },
-    "strengths": [
-      "Headline is specific and intriguing.",
-      "Dek clearly summarizes the core premise and key elements.",
-      "Key Takeaways are concise and informative.",
-      "Article flows well, explaining the premise, cast, MCU context, and release date logically.",
-      "Subheads are clear and helpful for navigation.",
-      "Human voice is present, especially in discussing the 'proper Spider-Man' concept and tonal shift.",
-      "Phrasing is generally strong and avoids AI clichés.",
-      "FAQ section provides valuable, nuanced information that expands on the article's points.",
-      "Sources are relevant and authoritative.",
-      "The article successfully frames the trailer's implications for the character and franchise."
-    ],
-    "weaknesses": [
-      "While the human voice is present, some sections could benefit from more specific examples or more evocative language to enhance engagement.",
-      "The SEO subscore is slightly lower due to the primary keyword not being explicitly present in the article body or headings, though the topic is clearly covered.",
-      "The FAQ answer regarding Punisher's PG-13 handling feels a bit speculative, though it attempts to address a valid reader question."
-    ],
+    "outlet": "gamesradar.com"
+  },
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
     "deterministic": {
-      "words": 542,
-      "h2s": 5,
-      "h2Questions": 4,
+      "words": 425,
+      "h2s": 3,
+      "h2Questions": 3,
       "internalLinks": 0,
-      "externalLinks": 3,
-      "hasSources": true,
+      "externalLinks": 0,
+      "hasSources": false,
       "faqCount": 4,
       "ktCount": 5,
       "kwInTitle": true,
       "kwInFirst100": true,
       "kwInH2": false,
-      "maxSentence": 36,
-      "avgSentence": 17,
-      "flesch": 53,
+      "maxSentence": 43,
+      "avgSentence": 19,
+      "flesch": 54,
       "bannedTells": 0,
+      "fillerPraise": 0,
       "kwExact": 0,
       "hardBlocks": []
     },
     "hardBlocks": []
   },
-  "score": 88,
+  "score": null,
   "category": "movies",
   "subcategory": "trailers",
   "audit": {
     "ok": false,
-    "internalLinks": 1,
+    "internalLinks": 3,
     "failed": [
+      "body ≥ 400w",
       "keyword in title"
     ]
   },
-  "ms": 66738
+  "ms": 100446,
+  "previousRuns": [
+    {
+      "id": "trailer-spider-man-brand-new-day-trailer",
+      "slug": "spider-man-brand-new-day-trailer-drops-teasing-a-world-without-recogni",
+      "status": "published",
+      "stages": {
+        "attempt1": {
+          "score": 88,
+          "cat": "movies/trailers",
+          "img": "/images/articles/spider-man-brand-new-day-trailer-drops-teasing-a-world-without-recogni.jpg",
+          "hardBlocks": []
+        }
+      },
+      "scorecard": {
+        "score": 88,
+        "subscores": {
+          "accuracy": 10,
+          "readability": 9,
+          "humanVoice": 9,
+          "phrasing": 9,
+          "curiosity": 9,
+          "structure": 9,
+          "infoGain": 9,
+          "seo": 8,
+          "faqQuality": 9,
+          "completeness": 9
+        },
+        "strengths": [
+          "Headline is specific and intriguing.",
+          "Dek clearly summarizes the core premise and key elements.",
+          "Key Takeaways are concise and informative.",
+          "Article flows well, explaining the premise, cast, MCU context, and release date logically.",
+          "Subheads are clear and helpful for navigation.",
+          "Human voice is present, especially in discussing the 'proper Spider-Man' concept and tonal shift.",
+          "Phrasing is generally strong and avoids AI clichés.",
+          "FAQ section provides valuable, nuanced information that expands on the article's points.",
+          "Sources are relevant and authoritative.",
+          "The article successfully frames the trailer's implications for the character and franchise."
+        ],
+        "weaknesses": [
+          "While the human voice is present, some sections could benefit from more specific examples or more evocative language to enhance engagement.",
+          "The SEO subscore is slightly lower due to the primary keyword not being explicitly present in the article body or headings, though the topic is clearly covered.",
+          "The FAQ answer regarding Punisher's PG-13 handling feels a bit speculative, though it attempts to address a valid reader question."
+        ],
+        "deterministic": {
+          "words": 542,
+          "h2s": 5,
+          "h2Questions": 4,
+          "internalLinks": 0,
+          "externalLinks": 3,
+          "hasSources": true,
+          "faqCount": 4,
+          "ktCount": 5,
+          "kwInTitle": true,
+          "kwInFirst100": true,
+          "kwInH2": false,
+          "maxSentence": 36,
+          "avgSentence": 17,
+          "flesch": 53,
+          "bannedTells": 0,
+          "kwExact": 0,
+          "hardBlocks": []
+        },
+        "hardBlocks": []
+      },
+      "score": 88,
+      "category": "movies",
+      "subcategory": "trailers",
+      "audit": {
+        "ok": false,
+        "internalLinks": 1,
+        "failed": [
+          "keyword in title"
+        ]
+      },
+      "ms": 66738
+    }
+  ]
 }
