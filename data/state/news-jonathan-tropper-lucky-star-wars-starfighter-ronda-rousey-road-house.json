@@ -1,0 +1,79 @@
+{
+  "id": "news-jonathan-tropper-lucky-star-wars-starfighter-ronda-rousey-road-house",
+  "slug": "jonathan-tropper-cassie-pappas-discuss-lucky-star-wars-starfighter-and",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": null,
+      "cat": "tv/news",
+      "format": [
+        "H2s 0 < 1",
+        "primary keyword not in title"
+      ],
+      "cuts": 0,
+      "broken": []
+    },
+    "attempt2": {
+      "score": null,
+      "cat": "tv/news",
+      "format": [
+        "H2s 0 < 1",
+        "primary keyword not in title"
+      ],
+      "cuts": 0,
+      "broken": []
+    }
+  },
+  "editorial": {
+    "status": "unconfirmed",
+    "entity": "Lucky",
+    "work": {
+      "title": "Lucky",
+      "year": null,
+      "medium": "tv"
+    },
+    "outlet": "theplaylist.net"
+  },
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
+    "deterministic": {
+      "words": 274,
+      "h2s": 0,
+      "h2Questions": 0,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 3,
+      "ktCount": 4,
+      "kwInTitle": false,
+      "kwInFirst100": false,
+      "kwInH2": false,
+      "maxSentence": 38,
+      "avgSentence": 18,
+      "flesch": 50,
+      "bannedTells": 0,
+      "fillerPraise": 1,
+      "kwExact": 0,
+      "hardBlocks": [
+        "H2s 0 < 1",
+        "primary keyword not in title"
+      ]
+    },
+    "hardBlocks": []
+  },
+  "score": null,
+  "category": "tv",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 1,
+    "failed": [
+      "1+ subheads",
+      "keyword in title"
+    ]
+  },
+  "ms": 148581
+}

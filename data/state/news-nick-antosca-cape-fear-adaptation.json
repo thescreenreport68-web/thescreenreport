@@ -1,23 +1,25 @@
 {
   "id": "news-nick-antosca-cape-fear-adaptation",
   "slug": "showrunner-nick-antosca-brings-the-blunt-force-trauma-of-martin-scorse",
-  "status": "needs_review",
+  "status": "published",
   "stages": {
     "attempt1": {
       "score": null,
       "cat": "tv/news",
-      "format": [],
-      "cuts": 1,
+      "format": [
+        "primary keyword not in title"
+      ],
+      "cuts": 0,
       "broken": []
     },
     "attempt2": {
       "score": null,
       "cat": "tv/news",
-      "format": [],
-      "cuts": 2,
-      "broken": [
-        "garbled non-Latin characters"
-      ]
+      "format": [
+        "primary keyword not in title"
+      ],
+      "cuts": 1,
+      "broken": []
     }
   },
   "editorial": {
@@ -30,46 +32,121 @@
     },
     "outlet": "IndieWire"
   },
-  "holdReason": "broken article: garbled non-Latin characters",
   "scorecard": {
     "score": null,
     "subscores": {},
     "strengths": [],
     "weaknesses": [],
     "deterministic": {
-      "words": 301,
+      "words": 232,
       "h2s": 2,
       "h2Questions": 2,
       "internalLinks": 0,
       "externalLinks": 0,
       "hasSources": false,
-      "faqCount": 3,
-      "ktCount": 5,
-      "kwInTitle": true,
+      "faqCount": 4,
+      "ktCount": 4,
+      "kwInTitle": false,
       "kwInFirst100": true,
       "kwInH2": false,
-      "maxSentence": 38,
-      "avgSentence": 15,
-      "flesch": 60,
+      "maxSentence": 34,
+      "avgSentence": 18,
+      "flesch": 48,
       "bannedTells": 0,
       "fillerPraise": 0,
       "kwExact": 0,
       "hardBlocks": [
-        "garbled non-Latin characters"
+        "primary keyword not in title"
       ]
     },
-    "hardBlocks": [
-      "garbled non-Latin characters"
-    ]
+    "hardBlocks": []
   },
+  "score": null,
+  "category": "tv",
+  "subcategory": "news",
   "audit": {
     "ok": false,
     "internalLinks": 0,
     "failed": [
-      "≥1200px legal image",
-      "credit",
-      "zero hard-blocks"
+      "body ≥ 220w"
     ]
   },
-  "ms": 91825
+  "ms": 94152,
+  "previousRuns": [
+    {
+      "id": "news-nick-antosca-cape-fear-adaptation",
+      "slug": "showrunner-nick-antosca-brings-the-blunt-force-trauma-of-martin-scorse",
+      "status": "needs_review",
+      "stages": {
+        "attempt1": {
+          "score": null,
+          "cat": "tv/news",
+          "format": [],
+          "cuts": 1,
+          "broken": []
+        },
+        "attempt2": {
+          "score": null,
+          "cat": "tv/news",
+          "format": [],
+          "cuts": 2,
+          "broken": [
+            "garbled non-Latin characters"
+          ]
+        }
+      },
+      "editorial": {
+        "status": "official",
+        "entity": "Nick Antosca",
+        "work": {
+          "title": "Cape Fear",
+          "year": null,
+          "medium": "tv"
+        },
+        "outlet": "IndieWire"
+      },
+      "holdReason": "broken article: garbled non-Latin characters",
+      "scorecard": {
+        "score": null,
+        "subscores": {},
+        "strengths": [],
+        "weaknesses": [],
+        "deterministic": {
+          "words": 301,
+          "h2s": 2,
+          "h2Questions": 2,
+          "internalLinks": 0,
+          "externalLinks": 0,
+          "hasSources": false,
+          "faqCount": 3,
+          "ktCount": 5,
+          "kwInTitle": true,
+          "kwInFirst100": true,
+          "kwInH2": false,
+          "maxSentence": 38,
+          "avgSentence": 15,
+          "flesch": 60,
+          "bannedTells": 0,
+          "fillerPraise": 0,
+          "kwExact": 0,
+          "hardBlocks": [
+            "garbled non-Latin characters"
+          ]
+        },
+        "hardBlocks": [
+          "garbled non-Latin characters"
+        ]
+      },
+      "audit": {
+        "ok": false,
+        "internalLinks": 0,
+        "failed": [
+          "≥1200px legal image",
+          "credit",
+          "zero hard-blocks"
+        ]
+      },
+      "ms": 91825
+    }
+  ]
 }
