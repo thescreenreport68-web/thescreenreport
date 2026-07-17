@@ -1,0 +1,116 @@
+{
+ "runId": "run-2026-07-17T23-30-49",
+ "mode": "live",
+ "startedAt": "2026-07-17T23:30:49.866Z",
+ "films": 8,
+ "published": [],
+ "held": [
+  {
+   "tag": "the-odyssey-ev-weekend×BO-WEEKEND",
+   "reason": "7 unverified claim(s) cut, unrecovered",
+   "score": 60
+  },
+  {
+   "tag": "the-odyssey-ev-record×BO-RECORD",
+   "reason": "words 127 < 180 (owner-set ~200-word minimum)",
+   "score": 60
+  },
+  {
+   "tag": "moana-bo-update×BO-UPDATE",
+   "reason": "not material: already covered today (one update per film per day)"
+  }
+ ],
+ "rejected": [
+  {
+   "tag": "wild-sing-ev-streaming-arrival×NOW-STREAMING",
+   "stage": "gatherer",
+   "reason": "under floor: no subscription-streaming platform — rent/buy is not 'now streaming' (try 3)"
+  }
+ ],
+ "skipped": [
+  {
+   "tag": "the-odyssey-ev-opening×BO-OPENING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "descendants-wicked-wonderland-ev-streaming-arrival×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "odyssey-ev-opening×BO-OPENING",
+   "reason": "park cooling (held recently — retry after 2h)"
+  },
+  {
+   "tag": "golden-kamuy-3-the-abarishi-prison-raid-ev-streaming-arrival×NOW-STREAMING",
+   "reason": "park cooling (held recently — retry after 2h)"
+  }
+ ],
+ "blocked": [],
+ "paced": {
+  "tokens": 4,
+  "behind": true,
+  "expected": 14.2,
+  "allow": 2
+ },
+ "queueBuilt": 7,
+ "zeroStreak": 5,
+ "daySpend": {
+  "laDay": "2026-07-17",
+  "usd": 0.95007
+ },
+ "finishedAt": "2026-07-17T23:37:39.237Z",
+ "meter": {
+  "byRole": {
+   "categorize": {
+    "calls": 3,
+    "errors": 0,
+    "in": 1095,
+    "out": 522,
+    "usd": 0.00032,
+    "ms": 2256
+   },
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3483,
+    "out": 689,
+    "usd": 0.00022,
+    "ms": 3992
+   },
+   "gatherer": {
+    "calls": 4,
+    "errors": 0,
+    "in": 17323,
+    "out": 2436,
+    "usd": 0.00271,
+    "ms": 16054
+   },
+   "synthesizer": {
+    "calls": 2,
+    "errors": 0,
+    "in": 1736,
+    "out": 1608,
+    "usd": 0.00045,
+    "ms": 28546
+   },
+   "writer": {
+    "calls": 4,
+    "errors": 0,
+    "in": 16612,
+    "out": 4635,
+    "usd": 0.01406,
+    "ms": 49319
+   },
+   "qa": {
+    "calls": 14,
+    "errors": 0,
+    "in": 50076,
+    "out": 6458,
+    "usd": 0.03117,
+    "ms": 35067
+   }
+  },
+  "totalUsd": 0.04892
+ },
+ "openrouterTotalUsd": 0.0483
+}
