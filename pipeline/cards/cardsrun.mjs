@@ -52,6 +52,9 @@ async function buildSlate() {
   const n = CARDS.slots.perDay;
   const nTop = Math.min(top.length, Math.round(n * CARDS.slots.topTopicShare));
   const picks = [...top.slice(0, nTop), ...rest.slice(0, n - nTop)];
+  // BENCH: unused scout stories become substitutes — a dropped slot swaps one in instead of
+  // dying, so gate-drops never cost the day its volume (owner mandate 2026-07-17)
+  const bench = [...top.slice(nTop), ...rest.slice(n - nTop)].slice(0, 8);
   // slot times: spread across the LA window with jitter (deterministic per date for resume-safety)
   const { dateKey } = laParts();
   const windowMin = (CARDS.slots.windowEndH - CARDS.slots.windowStartH) * 60;
@@ -63,8 +66,8 @@ async function buildSlate() {
     const minute = CARDS.slots.windowStartH * 60 + i * step + jitter;
     return { story, slotLA: `${String(Math.floor(minute / 60)).padStart(2, "0")}:${String(minute % 60).padStart(2, "0")}`, status: "pending" };
   });
-  writeJson(CARDS.slatePath, { dateKey, topTopic: plan.topTopic, slots, builtAt: Date.now() });
-  console.log(`slate ${dateKey}: ${slots.length} slots (${nTop} top-topic "${plan.topTopic?.name || "?"}") — ${slots.map((s) => s.slotLA).join(", ")}`);
+  writeJson(CARDS.slatePath, { dateKey, topTopic: plan.topTopic, slots, bench, builtAt: Date.now() });
+  console.log(`slate ${dateKey}: ${slots.length} slots + ${bench.length} bench (${nTop} top-topic "${plan.topTopic?.name || "?"}") — ${slots.map((s) => s.slotLA).join(", ")}`);
 }
 
 // ── build one card end-to-end (shared by slot + breaking + comp) ────────────────────
@@ -75,9 +78,8 @@ async function buildCard(story, { breaking = false } = {}) {
   if (breaking) cls.breaking = true;
   const img = await huntImage(story, pack);
   if (!img) return { drop: "imagehunt: no Tier-A image on whitelisted carriers" };
-  let card = await writeHeadline(story, pack, cls);
-  if (!card) card = await writeHeadline(story, pack, cls); // one retry — writer occasionally overshoots 12 words
-  if (!card) return { drop: "headline: could not write a ≤12-word faithful hook" };
+  const card = await writeHeadline(story, pack, cls); // retries internally with feedback
+  if (!card) return { drop: "headline: could not write a faithful hook within the word cap" };
   const captions = await writeCaptions(story, pack, cls, card);
   if (!captions) return { drop: "captions: two attempts broke the platform rules" };
   const gate = await factGate({ card, captions, cls, pack });
@@ -115,9 +117,18 @@ async function runSlot() {
   try {
     const built = await buildCard(due.story);
     if (built.drop) {
-      due.status = "dropped"; due.reason = built.drop;
+      // a gate-drop swaps in a bench story instead of killing the slot (max 2 swaps) —
+      // the next tick retries this slot with fresh content; volume self-heals
+      if (slate.bench?.length && (due.swaps || 0) < 2) {
+        const nxt = slate.bench.shift();
+        console.log(`DROP [${due.story.title.slice(0, 60)}]: ${built.drop} → bench swap: "${nxt.title.slice(0, 60)}"`);
+        due.swaps = (due.swaps || 0) + 1;
+        due.story = nxt;
+      } else {
+        due.status = "dropped"; due.reason = built.drop;
+        console.log(`DROP [${due.story.title.slice(0, 60)}]: ${built.drop} (bench empty — slot lost)`);
+      }
       writeJson(CARDS.slatePath, slate);
-      console.log(`DROP [${due.story.title.slice(0, 60)}]: ${built.drop}`);
       return;
     }
     fs.mkdirSync(CARDS.workDir, { recursive: true });
