@@ -1,0 +1,117 @@
+{
+ "runId": "run-2026-07-17T15-30-42",
+ "mode": "live",
+ "startedAt": "2026-07-17T15:30:42.762Z",
+ "films": 6,
+ "published": [
+  {
+   "tag": "evil-dead-burn-bo-update×BO-UPDATE",
+   "slug": "evil-dead-burn-box-office-day-6-adds-1-2-million-as-domestic-total-hits-18-2",
+   "path": "/home/runner/work/thescreenreport/thescreenreport/content/articles/evil-dead-burn-box-office-day-6-adds-1-2-million-as-domestic-total-hits-18-2.md",
+   "score": 80
+  }
+ ],
+ "held": [
+  {
+   "tag": "moana-bo-update×BO-UPDATE",
+   "reason": "not material: already covered today (one update per film per day)"
+  },
+  {
+   "tag": "minions-monsters-bo-update×BO-UPDATE",
+   "reason": "not material: already covered today (one update per film per day)"
+  },
+  {
+   "tag": "toy-story-5-bo-update×BO-UPDATE",
+   "reason": "not material: already covered today (one update per film per day)"
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "the-odyssey-ev-opening×BO-OPENING",
+   "reason": "park cooling (held recently — retry after 2h)"
+  }
+ ],
+ "blocked": [],
+ "paced": {
+  "tokens": 1.68,
+  "behind": false,
+  "expected": 4.2,
+  "allow": 1
+ },
+ "queueBuilt": 1,
+ "zeroStreak": 0,
+ "audit": {
+  "day": "2026-07-16",
+  "sampled": [
+   "young-washington-box-office-day-13-domestic-total-climbs-to-36-5-million",
+   "disclosure-day-box-office-day-34-domestic-total-climbs-to-112-9-million",
+   "obsession-box-office-day-62-domestic-total-climbs-to-255-4-million"
+  ],
+  "issues": [
+   {
+    "slug": "young-washington-box-office-day-13-domestic-total-climbs-to-36-5-million",
+    "problem": "HEADLINE FIGURE IN PROSE"
+   },
+   {
+    "slug": "disclosure-day-box-office-day-34-domestic-total-climbs-to-112-9-million",
+    "problem": "HEADLINE FIGURE IN PROSE"
+   },
+   {
+    "slug": "obsession-box-office-day-62-domestic-total-climbs-to-255-4-million",
+    "problem": "HEADLINE FIGURE IN PROSE"
+   }
+  ]
+ },
+ "daySpend": {
+  "laDay": "2026-07-17",
+  "usd": 0.24372
+ },
+ "finishedAt": "2026-07-17T15:34:54.107Z",
+ "meter": {
+  "byRole": {
+   "categorize": {
+    "calls": 2,
+    "errors": 0,
+    "in": 3768,
+    "out": 227,
+    "usd": 0.00047,
+    "ms": 8338
+   },
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3328,
+    "out": 695,
+    "usd": 0.00021,
+    "ms": 3098
+   },
+   "gatherer": {
+    "calls": 2,
+    "errors": 0,
+    "in": 6291,
+    "out": 292,
+    "usd": 0.00075,
+    "ms": 12689
+   },
+   "synthesizer": {
+    "calls": 1,
+    "errors": 0,
+    "in": 676,
+    "out": 291,
+    "usd": 0.00011,
+    "ms": 18487
+   },
+   "writerChart": {
+    "calls": 1,
+    "errors": 0,
+    "in": 1917,
+    "out": 1129,
+    "usd": 0.00083,
+    "ms": 22818
+   }
+  },
+  "totalUsd": 0.00237
+ },
+ "openrouterTotalUsd": 0.00273
+}
