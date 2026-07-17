@@ -1,0 +1,115 @@
+{
+  "ts": "2026-07-17T19:01:31.989Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    "olivia-wilde-details-unscripted-kiss-with-penelope-cruz-in-the-invite"
+  ],
+  "topics": 1,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 0,
+  "costUSD": 0.011051,
+  "costPerPublished": 0.011051,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 6,
+      "in": 12378,
+      "out": 1757,
+      "usd": 0.00705101
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 1006,
+      "out": 1201,
+      "usd": 0.0003292128
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 5,
+      "in": 12589,
+      "out": 4646,
+      "usd": 0.00312027045
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 4,
+      "in": 3761,
+      "out": 437,
+      "usd": 0.0005509
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2442,
+      "out": 190,
+      "usd": 0.0012075999999999999,
+      "ms": 1736
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1006,
+      "out": 1201,
+      "usd": 0.00030671999999999996,
+      "ms": 10893
+    },
+    "writer": {
+      "calls": 4,
+      "errors": 0,
+      "in": 11762,
+      "out": 4301,
+      "usd": 0.0041676000000000005,
+      "ms": 67893
+    },
+    "verify": {
+      "calls": 5,
+      "errors": 0,
+      "in": 9936,
+      "out": 1567,
+      "usd": 0.0068983,
+      "ms": 9679
+    },
+    "judge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1561,
+      "out": 138,
+      "usd": 0.0002113,
+      "ms": 1003
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 827,
+      "out": 345,
+      "usd": 0.00030751,
+      "ms": 8414
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 419,
+      "out": 137,
+      "usd": 0.00009670000000000002,
+      "ms": 920
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 207,
+      "out": 64,
+      "usd": 0.00004630000000000001,
+      "ms": 558
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1574,
+      "out": 98,
+      "usd": 0.00019660000000000004,
+      "ms": 1922
+    }
+  }
+}
