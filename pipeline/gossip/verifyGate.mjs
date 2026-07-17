@@ -11,7 +11,7 @@
 // Resolution (in run.mjs): a flagged specific is CORRECTED from the source, or — if it can't be — DROPPED. A mere
 // speculative (non-specific) claim is hedged, not dropped. When the LLM can't run, L2 still drops invented
 // specifics and we post the rest (owner: "drop the risky specific and post the rest").
-import { chat } from "../lib/openrouter.mjs";
+import { agentChat } from "./models.mjs";
 
 const norm = (s) =>
   String(s ?? "").toLowerCase().replace(/[‘’]/g, "'").replace(/[“”]/g, '"').replace(/[^a-z0-9 ]/g, " ").replace(/\s+/g, " ").trim();
@@ -193,7 +193,7 @@ Return STRICT JSON:
   let lastErr;
   for (let attempt = 0; attempt < 3; attempt++) {
     try {
-      const { data } = await chat({ model, system: VERIFY_SYS, user, json: true, maxTokens: 900, temperature: 0 });
+      const { data } = await agentChat("verify", { model: model || undefined, system: VERIFY_SYS, user, json: true, retries: 1 });
       const list = Array.isArray(data?.flagged) ? data.flagged.filter((u) => u && u.text) : [];
       return { list, ran: true };
     } catch (e) { lastErr = e; await new Promise((r) => setTimeout(r, 1200 * (attempt + 1))); }
@@ -203,7 +203,7 @@ Return STRICT JSON:
 
 // verifyGate — merges the three layers. Returns { ok, unsupported:[{claim,why,kind,problem,correction,contradicted,
 // isSpecific}], contradicted, severity, brokenRatio, degraded }. `degraded` = the L3 LLM couldn't run.
-export async function verifyGate({ article, bundle, model = "google/gemini-2.5-flash", llmImpl = llmSpecifics } = {}) {
+export async function verifyGate({ article, bundle, model = null, llmImpl = llmSpecifics } = {}) {
   const l1 = checkCitedEvidence(article, bundle);
   const l2 = deterministicSpecifics(article, bundle);
   const l2b = dateAttachmentCheck(article, bundle); // catch a present-but-MISATTACHED historical year

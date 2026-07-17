@@ -11,7 +11,7 @@
 // Wikimedia Commons is intentionally NOT used (owner: weak source, wastes credits).
 // Output: { kind:"image"|"embed", src?, width?, height?, alt, caption, credit, source, embed?, score?, why? } | null.
 import { getPersonImages, getTitleImages } from "../lib/tmdb.mjs";
-import { chat } from "../lib/openrouter.mjs";
+import { agentChat } from "./models.mjs";
 
 const RX = {
   youtube: /(?:youtube\.com\/(?:watch\?v=|embed\/|shorts\/)|youtu\.be\/)([A-Za-z0-9_-]{11})/i,
@@ -102,7 +102,7 @@ export function detectEmbed(urls) {
 // Fail-safe: any error ⇒ null (caller falls back).
 async function rankByVision(candidates, ctx, { model, visionImpl, mode = "identity" } = {}) {
   const impl = visionImpl || (async (imgs, prompt) => {
-    const { data } = await chat({ model: model || "google/gemini-2.5-flash-lite", images: imgs, json: true, maxTokens: 400, temperature: 0,
+    const { data } = await agentChat("image", { model: model || undefined, images: imgs, json: true,
       system: "You are an entertainment photo editor choosing the lead image for a celebrity news/gossip story. Output strict JSON only.",
       user: prompt });
     return data;

@@ -5,7 +5,7 @@
 // Voice/craft sourced from how Page Six / TMZ / Pop Crave / People actually write (RUMOR_GOSSIP_AUTOMATION_PLAN
 // PART 22): punchy + tight + active, curiosity hook, skimmable, a pull-quote, light gossip idiom (never stuffed),
 // attribution on every claim, hedges for shade ("appears to"/"seemingly").
-import { chat } from "../lib/openrouter.mjs";
+import { agentChat } from "./models.mjs";
 
 const SYSTEM = `You are a sharp, fast celebrity-gossip writer for The Screen Report — the wit and energy of Page Six and TMZ, written like a smart friend who has the tea. CRAFT (do all of this):
 - Punchy and irreverent with a knowing wink — but tasteful and credible, never mean, sleazy, or moralizing.
@@ -151,7 +151,7 @@ Return the FULL corrected article as STRICT JSON, same shape:
   return { system: CORRECTION_SYS, user };
 }
 
-export async function writeGossip({ bundle, frame, topic, model = "deepseek/deepseek-v3.2", corrections = null, priorArticle = null, issues = null, rewrite = false, ledeStyle = "scene" }) {
+export async function writeGossip({ bundle, frame, topic, model = null, corrections = null, priorArticle = null, issues = null, rewrite = false, ledeStyle = "scene" }) {
   // SURGICAL self-correction when we have a prior draft and aren't forcing a rewrite; otherwise a fresh write.
   const useSurgical = priorArticle && !rewrite && (issues || corrections);
   const { system, user } = useSurgical
@@ -159,6 +159,6 @@ export async function writeGossip({ bundle, frame, topic, model = "deepseek/deep
     : buildGossipPrompt(bundle, frame, topic, rewrite ? null : corrections, ledeStyle);
   // 2800 tokens: a 450-600-word body + dek + pull-quote + 3 takeaways + FAQ + claims + whatWeKnow/Dont must all fit
   // in the JSON, or the output truncates mid-sentence (the cause of an incomplete published article).
-  const { data } = await chat({ model, system, user, json: true, maxTokens: 2800, temperature: useSurgical ? 0.2 : 0.4 });
+  const { data } = await agentChat("writer", { model: model || undefined, system, user, json: true, surgical: !!useSurgical });
   return data;
 }

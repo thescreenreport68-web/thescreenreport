@@ -13,10 +13,12 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { gossipFind, enqueue, loadQueue } from "./find.mjs";
-import { gossipRun } from "./gossiprun.mjs";
+import { gossipRun, reviewDir } from "./gossiprun.mjs";
+import { runProbes } from "./probes.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const SCHED_PATH = path.resolve(__dirname, "../../data/gossip/schedule.json");
+const PAUSED_PATH = path.resolve(__dirname, "../../data/gossip/PAUSED");
 
 const INTERVAL_MIN = Number(process.env.INTERVAL_MIN ?? 115); // ~2h between posts (24/7) ⇒ ~12/day
 const MIN_BACKLOG = Number(process.env.MIN_BACKLOG ?? 15);
@@ -41,7 +43,15 @@ function setOutput(kv) {
   try { fs.appendFileSync(f, Object.entries(kv).map(([k, v]) => `${k}=${v}`).join("\n") + "\n"); } catch { /* not on CI */ }
 }
 
-export async function tick({ now = new Date(), findImpl = gossipFind, runImpl = gossipRun, force = FORCE, intervalMin = INTERVAL_MIN, schedPath = SCHED_PATH } = {}) {
+export async function tick({ now = new Date(), findImpl = gossipFind, runImpl = gossipRun, force = FORCE, intervalMin = INTERVAL_MIN, schedPath = SCHED_PATH, pausedPath = PAUSED_PATH } = {}) {
+  // KILL SWITCH (Phase 0): `touch data/gossip/PAUSED` (+ commit) stops all publishing until the file is removed.
+  if (fs.existsSync(pausedPath)) {
+    console.log("[scheduler] PAUSED file present (data/gossip/PAUSED) — no-op. Remove the file to resume.");
+    setOutput({ published: 0, reason: "paused" });
+    return { published: 0, reason: "paused" };
+  }
+  // Dependency probes (Phase 0): GOSSIP_DIAG=1 logs one status line per free dependency (dead feed ≠ quiet day).
+  if (process.env.GOSSIP_DIAG === "1") { try { await runProbes(); } catch { /* diag never blocks */ } }
   const sched = loadSchedule(schedPath);
   const since = minsSinceLastPost(now, sched);
   if (!force && since < intervalMin) {
@@ -61,7 +71,8 @@ export async function tick({ now = new Date(), findImpl = gossipFind, runImpl = 
   // PUBLISH one from the backlog.
   const report = await runImpl({ fromFind: true, limit: PER_TICK, hero: true, links: true, categoryGuard: true });
   // Stamp the interval clock ONLY when something actually published (a dry slot retries on the next tick).
-  if (report.published.length > 0) saveSchedule({ ...sched, lastPostAt: now.toISOString(), lastSlugs: report.published.map((p) => p.slug) }, schedPath);
+  // REVIEW runs never stamp the live cadence clock (the preview must not delay the next real post).
+  if (report.published.length > 0 && !reviewDir()) saveSchedule({ ...sched, lastPostAt: now.toISOString(), lastSlugs: report.published.map((p) => p.slug) }, schedPath);
   const slugs = report.published.map((p) => p.slug);
   console.log(`[scheduler] ${force ? "(forced) " : ""}published ${report.published.length} (processed ${report.topics}; held ${report.held.length}, rejected ${report.rejected.length}, skipped ${report.skipped.length}, blocked ${report.blocked.length}). backlog now ${loadQueue().topics.length}.`);
   setOutput({ published: report.published.length, slugs: slugs.join(",") });

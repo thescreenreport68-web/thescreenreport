@@ -2,7 +2,7 @@
 // story (Hollywood celeb / Western musician)? extract the entity, the central CLAIM, the subjectType, the
 // confirmation flags (confirmed/official/denied), and the angle → a gossip topic the orchestrator can run.
 // classifyImpl is injectable so the harness runs offline with a deterministic mock.
-import { chat } from "../lib/openrouter.mjs";
+import { agentChat } from "./models.mjs";
 import { tierOf } from "./policy.mjs";
 
 const SYSTEM = `You triage candidates for The Screen Report's GOSSIP desk. Keep ONLY genuine celebrity GOSSIP about Western/English-language ENTERTAINMENT figures — Hollywood actors/actresses, Western/English-language musicians, AND reality-TV / streaming-show / social-media personalities (e.g. the "Secret Lives of Mormon Wives"/MomTok, Bravo, "Love Island", major influencers) — their PERSONAL lives, RELATIONSHIPS, DRAMA, and the RUMORS/SPECULATION about them.
@@ -31,7 +31,7 @@ Set inScope=false for anything out of scope. REMEMBER: a confirmed announcement,
 
 async function defaultClassify(items) {
   try {
-    const { data } = await chat({ model: "google/gemini-2.5-flash-lite", system: SYSTEM, user: buildPrompt(items), json: true, maxTokens: 4000, temperature: 0.1 });
+    const { data } = await agentChat("scout", { system: SYSTEM, user: buildPrompt(items), json: true });
     return data?.results || [];
   } catch (e) {
     console.error("  ⚠ categorize LLM error (skipping batch):", String(e?.message || e).slice(0, 100));

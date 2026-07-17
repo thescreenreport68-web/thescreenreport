@@ -11,7 +11,7 @@
 //   • eventSummary — a canonical one-line description of the real-world EVENT (a content-grounded dedup key)
 // This REPLACES the scattered metadata heuristics (routeBySubject-only, topOutlet attribution, the over-broad
 // categorizer confirmed rule) with a single decision made from ground truth. reviewImpl injectable for offline tests.
-import { chat } from "../lib/openrouter.mjs";
+import { agentChat } from "./models.mjs";
 
 // Re-route enabled (owner 2026-07-04): the gossip desk may file a genuine film/TV
 // PROJECT story under its true category instead of forcing everything to celebrity —
@@ -73,8 +73,7 @@ Return JSON:
 }
 
 async function defaultReview({ topic, bundle }) {
-  const { data } = await chat({
-    model: "google/gemini-2.5-flash",
+  const { data } = await agentChat("editor", {
     system: SYSTEM,
     user: buildPrompt(topic, bundle),
     json: true, maxTokens: 500, temperature: 0.1,

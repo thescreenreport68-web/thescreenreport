@@ -9,7 +9,7 @@
 // piece under a light-hearted story about the same person unless the firewall clears it.
 import { embed as defaultEmbed, cosine } from "./embed.mjs";
 import { titleNames } from "./linkIndex.mjs";
-import { chat } from "../lib/openrouter.mjs";
+import { agentChat } from "./models.mjs";
 
 const shareEntity = (a, b) => a.some((e) => b.includes(e));
 
@@ -23,7 +23,7 @@ EXISTING article to maybe link:  title: "${candidate.title}"  | claim/summary: "
 Would linking the NEW story to the EXISTING article MISLEAD a reader or create a CONTRADICTORY/false narrative? Examples of UNSAFE: one says a person is alive/together/married NOW while the other implies they died or split; the two describe states that cannot both be currently true; the link would imply a false relationship between facts. SAFE only if they are clearly about the same subject AND consistent/complementary (e.g. background, an earlier chapter of the same ongoing story).
 Return STRICT JSON: { "safe": true|false, "reason": "one short clause" }`;
   try {
-    const { data } = await chat({ model, system: FIREWALL_SYS, user, json: true, maxTokens: 150, temperature: 0 });
+    const { data } = await agentChat("linker", { model: model || undefined, system: FIREWALL_SYS, user, json: true });
     return { safe: data?.safe === true, reason: String(data?.reason || "") };
   } catch {
     return { safe: false, reason: "firewall error — fail closed" };
@@ -33,7 +33,7 @@ Return STRICT JSON: { "safe": true|false, "reason": "one short clause" }`;
 // findRelatedLinks — returns up to `max` safe internal links [{ slug, title, url, score }].
 export async function findRelatedLinks({
   article, topic, index, embedImpl = defaultEmbed, firewallImpl = defaultFirewall,
-  model = "google/gemini-2.5-flash-lite", max = 3, selfSlug = null, minScore = 0.45,
+  model = null, max = 3, selfSlug = null, minScore = 0.45,
 } = {}) {
   const entities = [
     topic?.primaryEntity,

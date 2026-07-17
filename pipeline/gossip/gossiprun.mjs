@@ -18,6 +18,7 @@ import { routeBySubject } from "./config.gossip.mjs";
 import { openStore } from "./vecStore.mjs";
 import { dedupCheck, recordPublished } from "./dedup.mjs";
 import { costReport } from "../lib/openrouter.mjs";
+import { meterReport, meterReset } from "./models.mjs";
 import { pickHero } from "./heroImage.mjs";
 import { buildLinkIndex } from "./linkIndex.mjs";
 import { findRelatedLinks } from "./internalLinks.mjs";
@@ -38,6 +39,34 @@ const ROT_PATH = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../
 function readRot() { try { return Number(JSON.parse(fs.readFileSync(ROT_PATH, "utf8")).ledeIndex) || 0; } catch { return 0; } }
 function saveRot(n) { try { fs.mkdirSync(path.dirname(ROT_PATH), { recursive: true }); fs.writeFileSync(ROT_PATH, JSON.stringify({ ledeIndex: n }, null, 2) + "\n"); } catch { /* best-effort */ } }
 
+// ── Phase 0 infra: stats ledger + zero-publish streak alarm + REVIEW mode (GOSSIP_MULTI_AGENT_UPGRADE_PLAN §8) ──
+const DATA_DIR = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../../data/gossip");
+// REVIEW mode: articles land in an artifact-only dir (gitignored) instead of content/articles; nothing deploys.
+export const reviewDir = () => (process.env.GOSSIP_REVIEW_DIR ? path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..", process.env.GOSSIP_REVIEW_DIR) : null);
+
+// Per-run stats ledger — cost ÷ PUBLISHED (never ÷ processed) + the per-role meter, one JSON per run.
+export function writeRunStats(entry, { dir = path.join(DATA_DIR, "stats") } = {}) {
+  try {
+    fs.mkdirSync(dir, { recursive: true });
+    const fp = path.join(dir, `run-${String(entry.ts || new Date().toISOString()).replace(/[:.]/g, "-")}.json`);
+    fs.writeFileSync(fp, JSON.stringify(entry, null, 2) + "\n");
+    return fp;
+  } catch (e) { console.error("[stats] write failed:", String(e?.message || e).slice(0, 80)); return null; }
+}
+
+// Zero-publish STREAK alarm: N consecutive live ticks that ATTEMPTED (processed > 0) but published 0 is the
+// silent-expensive failure mode (boxoffice once burned 48h of full-cost zero-publish ticks unnoticed).
+export function updateStreak({ published, processed }, { dir = path.join(DATA_DIR, "stats"), threshold = 6 } = {}) {
+  const fp = path.join(dir, "streak.json");
+  let n = 0;
+  try { n = Number(JSON.parse(fs.readFileSync(fp, "utf8")).zeroStreak) || 0; } catch { /* fresh */ }
+  if (published > 0) n = 0;
+  else if (processed > 0) n++;               // a no-op tick (nothing attempted) neither resets nor increments
+  try { fs.mkdirSync(dir, { recursive: true }); fs.writeFileSync(fp, JSON.stringify({ zeroStreak: n, updatedAt: new Date().toISOString() }, null, 2) + "\n"); } catch { /* best-effort */ }
+  if (n >= threshold) console.log(`::warning::gossip zero-publish streak: ${n} consecutive attempted ticks published nothing — check supply/gates (data/gossip/stats/)`);
+  return n;
+}
+
 export async function gossipRun({
   discoverImpl, categorizeImpl, runImpl = runGossip, writeImpl = writeGossipArticle,
   heroImpl = pickHero, linkIndexImpl = buildLinkIndex, findRelatedImpl = findRelatedLinks, categoryGuardImpl,
@@ -46,6 +75,9 @@ export async function gossipRun({
   limit = 0, fromFind = false, dequeueImpl = dequeue, maxDrain = 10, dryRun = false, nowMs,
 } = {}) {
   const now = nowMs ?? Date.now();
+  meterReset(); // per-run per-role meter (models.mjs agentChat)
+  const REVIEW = reviewDir();
+  if (REVIEW) console.log(`[review] GOSSIP_REVIEW_DIR set — articles land in ${REVIEW} (artifact-only, no deploy)`);
   const store = dedup ? (storeImpl || openStore()) : null;
   // STEP 7 — build the internal-link index ONCE over the published corpus (off by default offline; the CLI turns it on).
   let linkIndex = null;
@@ -110,7 +142,7 @@ export async function gossipRun({
       if (hero) { try { r.article.hero = await heroImpl({ topic: { ...t, gossipType: detectGossipType(t) }, article: r.article, bundle: r.bundle, frame: r.frame }); } catch { r.article.hero = null; } }
       // STEP 7 — internal links to REAL related published articles (shared-entity gate + contradiction firewall).
       if (links && linkIndex) { try { r.article.relatedLinks = await findRelatedImpl({ article: r.article, topic: t, index: linkIndex, selfSlug: t.slug }); } catch { r.article.relatedLinks = []; } }
-      const out = writeImpl({ article: r.article, frame: r.frame, provenance: r.provenance, route: r.route, topic: t, dateISO, dryRun });
+      const out = writeImpl({ article: r.article, frame: r.frame, provenance: r.provenance, route: r.route, topic: t, dateISO, dryRun, ...(REVIEW ? { dir: REVIEW } : {}) });
       // record it in the dedup store so future runs won't re-publish it. A DRY RUN never mutates the store.
       if (dedup && store && dd && !dryRun) recordPublished(t, store, { urlHash: dd.urlHash, eventKey: dd.eventKey, embedding: dd.embedding, slug: out.slug, parentKey: dd.parentKey, now: new Date(now) });
       report.published.push({
@@ -148,6 +180,21 @@ export async function gossipRun({
     }
   } catch (e) {
     console.error("[cost] report failed:", String(e?.message || e).slice(0, 100));
+  }
+  // Stats ledger + streak alarm (skip both for dry runs; review runs ARE logged, marked review:true).
+  if (!dryRun) {
+    try {
+      report.review = !!REVIEW;
+      const cr = costReport();
+      writeRunStats({
+        ts: new Date(now).toISOString(), mode: report.mode, review: !!REVIEW,
+        published: report.published.map((p) => p.slug), topics: report.topics,
+        held: report.held.length, rejected: report.rejected.length, skipped: report.skipped.length, blocked: report.blocked.length,
+        costUSD: Number(cr.total.toFixed(6)), costPerPublished: report.published.length ? Number((cr.total / report.published.length).toFixed(6)) : null,
+        byModel: cr.byModel, byRole: meterReport(),
+      });
+      if (!REVIEW) updateStreak({ published: report.published.length, processed: report.topics });
+    } catch (e) { console.error("[stats] failed:", String(e?.message || e).slice(0, 80)); }
   }
   return report;
 }

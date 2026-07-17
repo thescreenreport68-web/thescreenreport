@@ -10,7 +10,7 @@
 import crypto from "node:crypto";
 import { embed as defaultEmbed } from "./embed.mjs";
 import { detectGossipType } from "./writer.mjs";
-import { chat } from "../lib/openrouter.mjs";
+import { agentChat } from "./models.mjs";
 
 const DUP_HARD = 0.9, DUP_SOFT = 0.82, WINDOW_DAYS = 45;
 const slug = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
@@ -31,8 +31,7 @@ const summaryText = (topic) => `${topic.primaryEntity || ""}: ${topic.claim || t
 
 // Cheap adjudicator for the 0.82–0.90 gray band: same event, a genuine update, or distinct?
 async function defaultAdjudicate(aSummary, bSummary) {
-  const { data } = await chat({
-    model: "deepseek/deepseek-v3.2",
+  const { data } = await agentChat("dedup", {
     system: "You compare two short celebrity-gossip story summaries. Output strict JSON only.",
     user: `A (already published): ${aSummary}\nB (new candidate): ${bSummary}\n\nDo A and B describe the SAME underlying real-world EVENT/occasion (same happening, same day/setting), or a genuinely DIFFERENT event?\n- DUPLICATE: same event as A — even if B is reworded, comes from a different outlet, adds a new DETAIL, quote, or ANGLE, or emphasizes a different aspect. A new detail about the same occasion is STILL the same story; publishing it again is a re-post.\n- UPDATE: a genuinely NEW development that HAPPENED after A (the situation materially changed — e.g. A said "dating", B says "engaged"; A said "hospitalized", B says "released"). Not just a new fact about the same moment.\n- DISTINCT: a clearly different event/occasion.\nWhen unsure between DUPLICATE and UPDATE, choose DUPLICATE. Return {"verdict":"DUPLICATE"|"UPDATE"|"DISTINCT","newFact":"the new development if UPDATE, else empty"}.`,
     json: true, maxTokens: 200, temperature: 0,
