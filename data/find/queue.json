@@ -1,42 +1,184 @@
 {
-  "runId": "run-2026-07-17T09-00-39",
-  "builtAt": "2026-07-17T09:01:38.022Z",
-  "count": 15,
+  "runId": "run-2026-07-17T11-30-42",
+  "builtAt": "2026-07-17T11:32:10.192Z",
+  "count": 19,
   "topics": [
     {
-      "id": "news-the-odyssey-film-announcement",
-      "slug": "the-sound-of-the-odyssey-composer-ludwig-g-ransson-used-ancient-greek-",
-      "title": "The Sound of The Odyssey : Composer Ludwig Göransson Used Ancient Greek Instruments, Scrap Metals and Gongs",
+      "id": "news-ruari-spooner-joins-bender-comedy",
+      "slug": "harry-potter-series-star-ruari-spooner-joins-bill-burr-chris-o-dowd-in",
+      "title": "Harry Potter Series Star Ruari Spooner Joins Bill Burr Chris O’Dowd In Comedy ‘Bender’",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "the-odyssey-film-announcement",
-      "primaryKeyword": "the odyssey score",
-      "primaryEntity": "The Odyssey",
+      "eventType": "casting",
+      "sensitivity": "high",
+      "eventSlug": "ruari-spooner-joins-bender-comedy",
+      "primaryKeyword": "ruari spooner",
+      "primaryEntity": "Ruari Spooner",
       "entities": [
-        "The Odyssey (film)",
-        "Ludwig Göransson",
-        "Christopher Nolan"
+        "Bill Burr: Walk Your Way Out",
+        "Bender (film)",
+        "Bill Burr",
+        "Chris O'Dowd"
       ],
-      "angle": "Composer Ludwig Göransson used unique instruments for the score of Christopher Nolan's upcoming film 'The Odyssey'.",
+      "angle": "Harry Potter star Ruari Spooner adds to the cast of the upcoming Irish comedy 'Bender'.",
+      "tmdbType": "movie",
+      "source": "rss:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/harry-potter-ruari-spooner-joins-bill-burr-bender-1236996681/",
+          "ageMin": 11,
+          "headline": "Harry Potter Series Star Ruari Spooner Joins Bill Burr Chris O’Dowd In Comedy ‘Bender’",
+          "summary": "EXCLUSIVE: Ruari Spooner, who plays Percy Weasley in HBO s upcoming Harry Potter series, has joined the cast of Bender, the coming-of-age comedy shooting in Ireland over the summer. Spooner will join a cast that includes Slow Horses actress Ruth Bradley, Bill Burr, and Chris O’Dowd. They will also be joined by newcomer Kitty Graham. Described [ ]"
+        }
+      ],
+      "ageMin": 11,
+      "_cand": {
+        "key": "rss:harry-potter-series-star-ruari-spooner-joins-bill-burr-chris",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 98,
+      "signals": {
+        "recency": 30,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "softTv": 0
+      },
+      "tierClass": "S"
+    },
+    {
+      "id": "trailer-marvels-wolverine-cinematic-trailer-drops",
+      "slug": "lady-deathstrike-faces-logan-in-new-marvel-s-wolverine-cinematic-trail",
+      "title": "Lady Deathstrike Faces Logan In New Marvel’s Wolverine Cinematic Trailer",
+      "contentType": "trailer",
+      "formatTag": "trailer",
+      "category": "movies",
+      "subcategory": "trailers",
+      "eventType": "trailer",
+      "sensitivity": "high",
+      "eventSlug": "marvels-wolverine-cinematic-trailer-drops",
+      "primaryKeyword": "wolverine trailer",
+      "primaryEntity": "Deadpool & Wolverine",
+      "entities": [
+        "Marvel's Wolverine",
+        "Lady Deathstrike",
+        "Logan"
+      ],
+      "angle": "A new cinematic trailer for Marvel's Wolverine has been released, featuring Lady Deathstrike and Logan.",
+      "tmdbType": "movie",
+      "source": "gnews:Game Informer",
+      "sources": [
+        {
+          "outlet": "Game Informer",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPN2MtaG9UN3lnWGt5QjNFTTgyQVZ3NnVfOGo4bEoxcHZObndJc0ZnMzVMaWJCWUh0eXdvNVFGaGJMUkticEFrRktCQzMwQXZ2enk5NGI0Y2RsYkt3aHV4RGFqNWp4SkRVVVgwQ0RlbXJKM1ZTLTZiZlZhYy1qZkZJdnUza2xqdFhhQVV6QmxhNWgyVjRWU3d1MXdvYlN5X1Q5aC1CbHlxejc2NlE?oc=5",
+          "ageMin": 928,
+          "headline": "Lady Deathstrike Faces Logan In New Marvel’s Wolverine Cinematic Trailer - Game Informer",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxPN2MtaG9UN3lnWGt5QjNFTTgyQVZ3NnVfOGo4bEoxcHZObndJc0ZnMzVMaWJCWUh0eXdvNVFGaGJMUkticEFrRktCQzMwQXZ2enk5NGI0Y2RsYkt3aHV4RGFqNWp4SkRVVVgwQ0RlbXJKM1ZTLTZiZlZhYy1qZkZJdnUza2xqdFhhQVV6QmxhNWgyVjRWU3d1MXdvYlN5X1Q5aC1CbHlxejc2NlE?oc=5\" target=\"_blan"
+        },
+        {
+          "outlet": "IGN",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNUFVKRmtyeUh4ZkUtV2N6UFBDanluUlNIME9NNzZRTjhHX05VZ1hxZF91aDB2NlFyTHREcjVtenJ0VmJwV2xVQi1VRU5hcWtVRTZTZDFyRVgtTlE0M29uNFFUQ3luRTRhblVNTHY3Y280d0dTNjg0ZExfcHh3WTdHSUxwczljYmhKUWhIOW1YUGJPZGgwbzhfS2hn?oc=5",
+          "ageMin": 939,
+          "headline": "Marvel's Wolverine Cinematic Trailer Features Cameos from Sabretooth and Lady Deathstrike - IGN",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMimgFBVV95cUxNUFVKRmtyeUh4ZkUtV2N6UFBDanluUlNIME9NNzZRTjhHX05VZ1hxZF91aDB2NlFyTHREcjVtenJ0VmJwV2xVQi1VRU5hcWtVRTZTZDFyRVgtTlE0M29uNFFUQ3luRTRhblVNTHY3Y280d0dTNjg0ZExfcHh3WTdHSUxwczljYmhKUWhIOW1YUGJPZGgwbzhfS2hn?oc=5\" target=\"_blank\" Marvel's Wolverine C"
+        }
+      ],
+      "ageMin": 928,
+      "_cand": {
+        "key": "rss:lady-deathstrike-faces-logan-in-new-marvel-s-wolverine-cinem",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 2,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 2,
+        "outlets": [
+          "Game Informer",
+          "IGN"
+        ],
+        "maxTier": 5,
+        "sensitivity": "high",
+        "attribution": "multiple outlets",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 80,
+      "signals": {
+        "recency": 1,
+        "corroboration": 14,
+        "status": 18,
+        "type": 15,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 8,
+        "softTv": 0
+      },
+      "tierClass": "S"
+    },
+    {
+      "id": "news-sophie-simnett-joins-the-candidate",
+      "slug": "rising-brit-star-sophie-simnett-joins-black-and-white-silent-comedy-th",
+      "title": "Rising Brit Star Sophie Simnett Joins Black-and-White Silent Comedy The Candidate (EXCLUSIVE)",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "sophie-simnett-joins-the-candidate",
+      "primaryKeyword": "sophie simnett",
+      "primaryEntity": "Sophie Simnett",
+      "entities": [
+        "The Candidate",
+        "The Candidate (film)",
+        "Jack Whittle"
+      ],
+      "angle": "Rising British star Sophie Simnett has been cast in the black-and-white silent comedy 'The Candidate'.",
       "tmdbType": "movie",
       "source": "rss:Variety",
       "sources": [
         {
           "outlet": "Variety",
           "tier": 7,
-          "url": "https://variety.com/2026/artisans/news/the-odyssey-ludwig-goransson-film-score-1236813153/",
-          "ageMin": 289,
-          "headline": "The Sound of The Odyssey : Composer Ludwig Göransson Used Ancient Greek Instruments, Scrap Metals and Gongs",
-          "summary": "Composer Ludwig Göransson has reunited with Christopher Nolan to score The Odyssey, marking their third collaboration after Tenet and Oppenheimer. Earlier this year, Göransson’s work on Star Wars: The Mandalorian and Grogu showcased his use of heavy synths and guitar-based orchestrations. However, for The Odyssey, Göransson ventures into new territory. Nolan instructed Göransson not to use [ ]"
+          "url": "https://variety.com/2026/film/global/sophie-simnett-black-and-white-silent-comedy-the-candidate-1236814488/",
+          "ageMin": 120,
+          "headline": "Rising Brit Star Sophie Simnett Joins Black-and-White Silent Comedy The Candidate (EXCLUSIVE)",
+          "summary": "Sophie Simnett, the rising British star best known for Netflix s post-apocalyptic comedy drama Daybreak and Brit crime feature Twist, is set to star alongside writer-actor Jack Whittle ( Tony! ) in The Candidate. The film is a black-and-white silent comedy with a dance interlude, described as being in the style of the Chaplin era of filmmaking. The [ ]"
         }
       ],
-      "ageMin": 289,
+      "ageMin": 120,
       "_cand": {
-        "key": "rss:the-sound-of-the-odyssey-composer-ludwig-g-ransson-used-anci",
+        "key": "rss:rising-brit-star-sophie-simnett-joins-black-and-white-silent",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -55,40 +197,104 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 98,
+      "priority": 84,
       "signals": {
-        "recency": 9,
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-ghana-creative-economy-initiative-attendees",
+      "slug": "s-w-a-t-creator-aaron-rahsaan-thomas-origin-producer-paul-garnes-among",
+      "title": "‘S.W.A.T.’ Creator Aaron Rahsaan Thomas ‘Origin’ Producer Paul Garnes Among Names Set For Inaugural Ghana Creative Economy Initiative",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "ghana-creative-economy-initiative-attendees",
+      "primaryKeyword": "aaron rahsaan thomas",
+      "primaryEntity": "Aaron Rahsaan Thomas",
+      "entities": [
+        "S.W.A.T.",
+        "Paul Garnes",
+        "Ava DuVernay"
+      ],
+      "angle": "'S.W.A.T.' creator Aaron Rahsaan Thomas and producer Paul Garnes join inaugural Ghana Creative Economy Initiative.",
+      "tmdbType": "movie",
+      "source": "rss:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/ghana-creative-economy-initiative-2026-1236996657/",
+          "ageMin": 129,
+          "headline": "‘S.W.A.T.’ Creator Aaron Rahsaan Thomas ‘Origin’ Producer Paul Garnes Among Names Set For Inaugural Ghana Creative Economy Initiative",
+          "summary": "EXCLUSIVE: Ghana’s capital, Accra, will this month host a selection of interesting industry names such as S.W.A.T. creator Aaron Rahsaan Thomas and Paul Garnes, Ava DuVernay s longtime producer, as part of the inaugural Ghana Creative Economy Initiative. The 2026 Ghana Creative Economy Initiative was developed and curated by Dorina Amina Abubakar, a Ghanaian-British producer, film [ ]"
+        }
+      ],
+      "ageMin": 129,
+      "_cand": {
+        "key": "rss:-s-w-a-t-creator-aaron-rahsaan-thomas-origin-producer-paul-g",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 73,
+      "signals": {
+        "recency": 16,
         "corroboration": 12,
         "status": 18,
         "type": 9,
         "pop": 0,
         "breakout": 0,
-        "big": 24,
+        "big": 18,
         "trending": 0,
-        "softTv": 0,
-        "radar": 26
+        "softTv": 0
       },
-      "radarKind": "movie-in-theaters",
-      "tierClass": "A"
+      "tierClass": "B"
     },
     {
-      "id": "trailer-marvels-wolverine-game-trailer-drop",
-      "slug": "marvel-s-wolverine-game-drops-first-official-trailer",
-      "title": "Marvel's Wolverine Game Drops First Official Trailer",
+      "id": "trailer-marvels-wolverine-new-trailer",
+      "slug": "marvel-s-wolverine-gets-new-trailer",
+      "title": "Marvel's Wolverine Gets New Trailer",
       "contentType": "trailer",
       "formatTag": "trailer",
       "category": "movies",
       "subcategory": "trailers",
       "eventType": "trailer",
       "sensitivity": "normal",
-      "eventSlug": "marvels-wolverine-game-trailer-drop",
-      "primaryKeyword": "marvel's wolverine trailer",
+      "eventSlug": "marvels-wolverine-new-trailer",
+      "primaryKeyword": "marvel wolverine trailer",
       "primaryEntity": "Deadpool & Wolverine",
       "entities": [
-        "Marvel's Wolverine (video game)",
+        "Marvel's Wolverine",
         "Marvel"
       ],
-      "angle": "The first official trailer for Insomniac's highly anticipated Marvel's Wolverine game has been released.",
+      "angle": "New trailer released for Marvel's Wolverine ahead of its September release.",
       "tmdbType": "movie",
       "source": "gnews:TheSixthAxis",
       "sources": [
@@ -96,164 +302,209 @@
           "outlet": "TheSixthAxis",
           "tier": 5,
           "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQVmZjZjJGbk5UMkNmSjl3WVU2SlctbjZMY0h0TXRpODNiaWpUTkdiSFlXRWZqemRsSm12ZjhrcTEwYXVvMDhieDFSdWc4NXJoS2d3bG5YRnVfczRDbVZET1VqWEtlRHFXeEtfUGVpUmNtbHZOYnYtT3JrU2RrbV81YmI5UTNPc3hHMW5Cd1FKZjJmdjRVYl9jSElvMmUxa0dteVg4dkYzeXBaNkE?oc=5",
-          "ageMin": 73,
+          "ageMin": 223,
           "headline": "Marvel’s Wolverine has a new trailer ahead of the September release - TheSixthAxis",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxQVmZjZjJGbk5UMkNmSjl3WVU2SlctbjZMY0h0TXRpODNiaWpUTkdiSFlXRWZqemRsSm12ZjhrcTEwYXVvMDhieDFSdWc4NXJoS2d3bG5YRnVfczRDbVZET1VqWEtlRHFXeEtfUGVpUmNtbHZOYnYtT3JrU2RrbV81YmI5UTNPc3hHMW5Cd1FKZjJmdjRVYl9jSElvMmUxa0dteVg4dkYzeXBaNkE?oc=5\" target=\"_blan"
-        },
-        {
-          "outlet": "Dark Horizons",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQNHhZUTRHdHhrT2dmWXlPVGREaHJ6R3EzNVEtYjJZZ0E5ZTlsd2lLd3JfVV9DRlVReDk3QkJHQ3JlX0kwYWQ2cFBlNUdKM3NQWHF3bVp4TnpkZnJjSmU4OUZ4dlVmMDhxRkdRTTA0Xzl3S2RmVlZJRTVsLUZHNm55ag?oc=5",
-          "ageMin": 115,
-          "headline": "New Trailer: Insomniac’s “Marvel’s Wolverine” Game - Dark Horizons",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMigAFBVV95cUxQNHhZUTRHdHhrT2dmWXlPVGREaHJ6R3EzNVEtYjJZZ0E5ZTlsd2lLd3JfVV9DRlVReDk3QkJHQ3JlX0kwYWQ2cFBlNUdKM3NQWHF3bVp4TnpkZnJjSmU4OUZ4dlVmMDhxRkdRTTA0Xzl3S2RmVlZJRTVsLUZHNm55ag?oc=5\" target=\"_blank\" New Trailer: Insomniac’s “Marvel’s Wolverine” Game /a "
         }
       ],
-      "ageMin": 73,
+      "ageMin": 223,
       "_cand": {
         "key": "rss:marvel-s-wolverine-has-a-new-trailer-ahead-of-the-september-",
         "popularity": 0,
         "kind": "gnews"
       },
-      "corroborationCount": 2,
+      "corroborationCount": 1,
       "verification": {
         "tier1Count": 0,
         "tier1Owners": 0,
-        "outletCount": 2,
+        "outletCount": 1,
         "outlets": [
-          "TheSixthAxis",
-          "Dark Horizons"
+          "TheSixthAxis"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "multiple outlets",
+        "attribution": "TheSixthAxis",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 95,
+      "priority": 74,
       "signals": {
-        "recency": 16,
-        "corroboration": 14,
+        "recency": 9,
+        "corroboration": 8,
         "status": 18,
         "type": 15,
         "pop": 0,
         "breakout": 0,
         "big": 24,
-        "trending": 8,
+        "trending": 0,
         "softTv": 0
       },
       "tierClass": "B"
     },
     {
-      "id": "news-god-of-war-ryan-hurst-recast",
-      "slug": "god-of-war-shocker-kratos-actor-ryan-hurst-recast-after-on-set-injury",
-      "title": "God of War Shocker: Kratos Actor Ryan Hurst Recast After On-Set Injury",
+      "id": "news-barry-ward-everybody-digs-bill-evans-grown-ups",
+      "slug": "barry-ward-on-everybody-digs-bill-evans-netflix-series-grown-ups",
+      "title": "Barry Ward on ‘Everybody Digs Bill Evans,’ Netflix Series ‘Grown Ups’",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "high",
-      "eventSlug": "god-of-war-ryan-hurst-recast",
-      "primaryKeyword": "god of war tv series",
-      "primaryEntity": "God of War",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "barry-ward-everybody-digs-bill-evans-grown-ups",
+      "primaryKeyword": "Barry Ward Grown Ups",
+      "primaryEntity": "Barry Ward",
       "entities": [
-        "God of War (TV series)",
-        "Ryan Hurst",
-        "Prime Video"
+        "Everybody Digs Bill Evans",
+        "Grown Ups"
       ],
-      "angle": "The actor playing Kratos in the upcoming 'God of War' series has been recast due to an on-set injury.",
+      "angle": "Actor Barry Ward discusses his roles in 'Everybody Digs Bill Evans' and the Netflix series 'Grown Ups'.",
+      "tmdbType": "movie",
+      "source": "gnews:The Hollywood Reporter",
+      "sources": [
+        {
+          "outlet": "The Hollywood Reporter",
+          "tier": 7,
+          "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNenk5ZjRGVzlic3BSemhJVXdsVm4xdG9tRWtIOVlncmxmTEZGUTljNmtwT3BNMDB2RWxNcVFFbC1SMnZkZTZPaTh4VlFDRG9Gd0ctUHZtOFNZUVdyU1RGX3JfQ3phWDRQMXNKTkVhaU0xNEhhRkI0TzNiSEhoNHY0WGd6VU9ySGFvcXJ5M3FjUUZxUFNCOWpaMldIaUFYUUJaRnRqMm9nbW9EOWp4TWhwcFdZelVULURZMUdOOUJzOFc?oc=5",
+          "ageMin": 98,
+          "headline": "Barry Ward on 'Everybody Digs Bill Evans,' Netflix Series 'Grown Ups' - The Hollywood Reporter",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiwAFBVV95cUxNenk5ZjRGVzlic3BSemhJVXdsVm4xdG9tRWtIOVlncmxmTEZGUTljNmtwT3BNMDB2RWxNcVFFbC1SMnZkZTZPaTh4VlFDRG9Gd0ctUHZtOFNZUVdyU1RGX3JfQ3phWDRQMXNKTkVhaU0xNEhhRkI0TzNiSEhoNHY0WGd6VU9ySGFvcXJ5M3FjUUZxUFNCOWpaMldIaUFYUUJaRnRqMm9nbW9EOWp4TWhwcFdZelVULURZMUd"
+        }
+      ],
+      "ageMin": 98,
+      "_cand": {
+        "key": "rss:barry-ward-on-everybody-digs-bill-evans-netflix-series-grown",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "The Hollywood Reporter"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "The Hollywood Reporter",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 73,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "music-news-tiffany-young-debut-album-edge-of-calm-asia-tour",
+      "slug": "girls-generation-star-tiffany-young-sets-debut-album-edge-of-calm-asia",
+      "title": "Girls Generation Star Tiffany Young Sets Debut Album Edge of Calm, Asia Tour",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "tiffany-young-debut-album-edge-of-calm-asia-tour",
+      "primaryKeyword": "tiffany young",
+      "primaryEntity": "Tiffany Young",
+      "entities": [
+        "Girls Generation",
+        "Edge of Calm"
+      ],
+      "angle": "K-pop veteran Tiffany Young (Girls Generation) announces debut solo album and Asia tour.",
       "tmdbType": "movie",
       "source": "rss:Variety",
       "sources": [
         {
           "outlet": "Variety",
           "tier": 7,
-          "url": "https://variety.com/2026/tv/news/god-of-war-recast-kratos-actor-ryan-hurst-injury-1236814409/",
-          "ageMin": 304,
-          "headline": "God of War Shocker: Kratos Actor Ryan Hurst Recast After On-Set Injury",
-          "summary": "Prime Video will recast the lead role on its upcoming adaptation of God of War after star Ryan Hurst was injured on set, Variety has confirmed. Hurst had been set to play Kratos, the titular god of war, and Prime Video even released a first look at Hurst in the role this past February. But [ ]"
-        },
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/god-of-war-recast-kratos-role-ryan-hurst-injured-on-set-1236984409/",
-          "ageMin": 330,
-          "headline": "God Of War To Recast Lead Kratos After Ryan Hurst Suffers Injury On Set Of Prime Video Series",
-          "summary": "EXCLUSIVE: This is a shocker: Prime Video s God Of War will have a new actor playing Kratos as the lead role in the high profile fantasy drama series is being recast, Deadline has learned. The decision, made after a careful consideration by the studios on the show, Sony Pictures Television and Amazon MGM Studios, comes [ ]"
+          "url": "https://variety.com/2026/music/news/girls-generation-tiffany-young-debut-album-edge-of-calm-asia-tour-1236812361/",
+          "ageMin": 31,
+          "headline": "Girls Generation Star Tiffany Young Sets Debut Album Edge of Calm, Asia Tour",
+          "summary": "Tiffany Young, the Los Angeles-born K-pop veteran who rose to prominence as a member of Girls Generation, will release her debut solo studio album, Edge of Calm, on Aug. 20 through Pacific Music Group and its flagship label, Pacific Records, alongside an eight-city Asia tour launching Sept. 12 in Hong Kong. The 11-track set draws [ ]"
         }
       ],
-      "ageMin": 304,
+      "ageMin": 31,
       "_cand": {
-        "key": "rss:god-of-war-shocker-kratos-actor-ryan-hurst-recast-after-on-s",
+        "key": "rss:girls-generation-star-tiffany-young-sets-debut-album-edge-of",
         "popularity": 0,
         "kind": "rss-news"
       },
-      "corroborationCount": 2,
+      "corroborationCount": 1,
       "verification": {
-        "tier1Count": 2,
+        "tier1Count": 1,
         "tier1Owners": 1,
-        "outletCount": 2,
+        "outletCount": 1,
         "outlets": [
-          "Variety",
-          "Deadline"
+          "Variety"
         ],
         "maxTier": 7,
-        "sensitivity": "high",
+        "sensitivity": "normal",
         "attribution": "Variety",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 85,
+      "priority": 63,
       "signals": {
-        "recency": 9,
-        "corroboration": 18,
+        "recency": 24,
+        "corroboration": 12,
         "status": 18,
-        "type": 14,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
-        "big": 18,
-        "trending": 8,
+        "big": 0,
+        "trending": 0,
         "softTv": 0
       },
-      "tierClass": "S"
+      "tierClass": "B"
     },
     {
-      "id": "trailer-the-runner-prime-video-trailer",
-      "slug": "gal-gadot-stars-in-new-trailer-for-prime-video-thriller-the-runner",
-      "title": "Gal Gadot Stars in New Trailer for Prime Video Thriller 'The Runner'",
+      "id": "trailer-celebrity-family-feud-season-12-trailer",
+      "slug": "celebrity-family-feud-season-12-trailer-shows-well-behaved-contestants",
+      "title": "‘Celebrity Family Feud’ Season 12 Trailer Shows ‘Well-Behaved’ Contestants in Action",
       "contentType": "trailer",
       "formatTag": "trailer",
       "category": "tv",
       "subcategory": "trailers",
       "eventType": "trailer",
       "sensitivity": "normal",
-      "eventSlug": "the-runner-prime-video-trailer",
-      "primaryKeyword": "the runner trailer",
-      "primaryEntity": "The Runner",
+      "eventSlug": "celebrity-family-feud-season-12-trailer",
+      "primaryKeyword": "Celebrity Family Feud trailer",
+      "primaryEntity": "Celebrity Family Feud",
       "entities": [
-        "The Runner (TV series)",
-        "Gal Gadot",
-        "Prime Video"
+        "ABC"
       ],
-      "angle": "Gal Gadot stars in the new trailer for the Prime Video thriller 'The Runner'.",
+      "angle": "The trailer for the upcoming season of 'Celebrity Family Feud' has been released.",
       "tmdbType": "movie",
       "source": "gnews:IMDb",
       "sources": [
         {
           "outlet": "IMDb",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBTRnhUcVdOY3Q0WUVsNkNKM29TN20wUDZQM2RLMWVUVFlDNUllclUwaU8wWDZvbUJXSU9iOWc4WEtXUjBvVjktTnpBUWk0VU9FWUxGQVBRSVdfLWtHckttVjQtQ2g?oc=5",
-          "ageMin": 172,
-          "headline": "The Runner: Gal Gadot Can't Stop Running In New Trailer For Prime Video Thriller - IMDb",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiZEFVX3lxTFBTRnhUcVdOY3Q0WUVsNkNKM29TN20wUDZQM2RLMWVUVFlDNUllclUwaU8wWDZvbUJXSU9iOWc4WEtXUjBvVjktTnpBUWk0VU9FWUxGQVBRSVdfLWtHckttVjQtQ2g?oc=5\" target=\"_blank\" The Runner: Gal Gadot Can't Stop Running In New Trailer For Prime Video Thriller /a nbsp; nbs"
+          "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5Qb3RMcWJ6ZHcxdnotcnFQdlItRlRnV2V0YjBqTFZSNkZrbmVlc2VOeFBSelg0cEVqRmdBdUN0bGV5dXh1cXM5ZkxKdDg5M0FyeXc?oc=5",
+          "ageMin": 642,
+          "headline": "‘Celebrity Family Feud’ Season 12 Trailer Shows ‘Well-Behaved’ Contestants in Action - IMDb",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTE5Qb3RMcWJ6ZHcxdnotcnFQdlItRlRnV2V0YjBqTFZSNkZrbmVlc2VOeFBSelg0cEVqRmdBdUN0bGV5dXh1cXM5ZkxKdDg5M0FyeXc?oc=5\" target=\"_blank\" ‘Celebrity Family Feud’ Season 12 Trailer Shows ‘Well-Behaved’ Contestants in Action /a nbsp; nbsp; font color=\"#6f6f"
         }
       ],
-      "ageMin": 172,
+      "ageMin": 642,
       "_cand": {
-        "key": "rss:the-runner-gal-gadot-can-t-stop-running-in-new-trailer-for-p",
+        "key": "rss:-celebrity-family-feud-season-12-trailer-shows-well-behaved-",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -272,9 +523,9 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 75,
+      "priority": 63,
       "signals": {
-        "recency": 16,
+        "recency": 4,
         "corroboration": 8,
         "status": 18,
         "type": 15,
@@ -287,38 +538,35 @@
       "tierClass": "B"
     },
     {
-      "id": "news-x-men-movie-casting-reveal-imminent",
-      "slug": "marvel-s-new-x-men-movie-cast-reveal-expected-soon",
-      "title": "Marvel's New X-Men Movie Cast Reveal Expected Soon",
-      "contentType": "news",
-      "formatTag": "news",
+      "id": "trailer-the-runner-official-trailer",
+      "slug": "the-runner-official-trailer-released",
+      "title": "The Runner - Official Trailer Released",
+      "contentType": "trailer",
+      "formatTag": "trailer",
       "category": "movies",
-      "subcategory": "news",
-      "eventType": "casting",
+      "subcategory": "trailers",
+      "eventType": "trailer",
       "sensitivity": "normal",
-      "eventSlug": "x-men-movie-casting-reveal-imminent",
-      "primaryKeyword": "x-men movie casting",
-      "primaryEntity": "X-Men",
-      "entities": [
-        "X-Men (film series)",
-        "Marvel"
-      ],
-      "angle": "Speculation is mounting that Marvel will soon reveal the cast for their new X-Men movie.",
+      "eventSlug": "the-runner-official-trailer",
+      "primaryKeyword": "the runner trailer",
+      "primaryEntity": "The Runner",
+      "entities": [],
+      "angle": "Official trailer released for the movie 'The Runner'.",
       "tmdbType": "movie",
-      "source": "gnews:The Direct",
+      "source": "gnews:Gamereactor UK",
       "sources": [
         {
-          "outlet": "The Direct",
+          "outlet": "Gamereactor UK",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE50SFZKNnVFZVlVQkZMdHpqcThFYUtCTVhGMmZ2TjlZSER4WDhnOHdXYUdHcVB4b2laeWtnX1ViaXhPNFhlVEhHOHJTaDhRMjNQZWxCNDNEaE9Ua2VqckZGRDFiQ3ZPYjZkdGUxcFgxMEoyeUJa?oc=5",
-          "ageMin": 123,
-          "headline": "Marvel's New X-Men Movie Cast Reveal Could Be Happening Very Soon - The Direct",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMidEFVX3lxTE50SFZKNnVFZVlVQkZMdHpqcThFYUtCTVhGMmZ2TjlZSER4WDhnOHdXYUdHcVB4b2laeWtnX1ViaXhPNFhlVEhHOHJTaDhRMjNQZWxCNDNEaE9Ua2VqckZGRDFiQ3ZPYjZkdGUxcFgxMEoyeUJa?oc=5\" target=\"_blank\" Marvel's New X-Men Movie Cast Reveal Could Be Happening Very Soon /a nbs"
+          "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE16RUlRRXRtWDhDdTRrNlF2SEE3WVgyWFhwQTNMQjYteTBiczYyUFd0WTM3R1p3VUJmN3NsRFB0Ui1zQ0ZucE1nVGRKVi1YTmtJb1RDWGFPTkZWV2g1TXVyUnlkaVRFYTlRdGViXy1yYkMxWThNVi0wWUFn?oc=5",
+          "ageMin": 240,
+          "headline": "The Runner - Official Trailer - Gamereactor UK",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiekFVX3lxTE16RUlRRXRtWDhDdTRrNlF2SEE3WVgyWFhwQTNMQjYteTBiczYyUFd0WTM3R1p3VUJmN3NsRFB0Ui1zQ0ZucE1nVGRKVi1YTmtJb1RDWGFPTkZWV2g1TXVyUnlkaVRFYTlRdGViXy1yYkMxWThNVi0wWUFn?oc=5\" target=\"_blank\" The Runner - Official Trailer /a nbsp; nbsp; font color=\"#6f6f6f"
         }
       ],
-      "ageMin": 123,
+      "ageMin": 240,
       "_cand": {
-        "key": "rss:marvel-s-new-x-men-movie-cast-reveal-could-be-happening-very",
+        "key": "rss:the-runner-official-trailer-gamereactor-uk",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -328,21 +576,21 @@
         "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "The Direct"
+          "Gamereactor UK"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "The Direct",
+        "attribution": "Gamereactor UK",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 80,
+      "priority": 74,
       "signals": {
-        "recency": 16,
+        "recency": 9,
         "corroboration": 8,
         "status": 18,
-        "type": 14,
+        "type": 15,
         "pop": 0,
         "breakout": 0,
         "big": 24,
@@ -352,203 +600,7 @@
       "tierClass": "B"
     },
     {
-      "id": "news-tom-cruise-praises-the-odyssey",
-      "slug": "tom-cruise-praises-christopher-nolan-s-the-odyssey",
-      "title": "Tom Cruise Praises Christopher Nolan's 'The Odyssey'",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "tom-cruise-praises-the-odyssey",
-      "primaryKeyword": "tom cruise the odyssey",
-      "primaryEntity": "Tom Cruise",
-      "entities": [
-        "Christopher Nolan",
-        "The Odyssey"
-      ],
-      "angle": "Tom Cruise expresses his excitement for Christopher Nolan's upcoming film 'The Odyssey'.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/tom-cruise-the-odyssey-christopher-nolan-1236650292/",
-          "ageMin": 843,
-          "headline": "Tom Cruise Praises Christopher Nolan s The Odyssey : I Can t Wait to See It Again",
-          "summary": "\"Thank you for an amazing night in a movie theater,\" the actor and champion of the theatrical moviegoing experience wrote on social media Thursday ahead of the film's official release."
-        }
-      ],
-      "ageMin": 843,
-      "_cand": {
-        "key": "rss:tom-cruise-praises-christopher-nolan-s-the-odyssey-i-can-t-w",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 74,
-      "signals": {
-        "recency": 1,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 12,
-        "trending": 0,
-        "softTv": 0,
-        "radar": 26
-      },
-      "radarKind": "movie-in-theaters",
-      "tierClass": "A"
-    },
-    {
-      "id": "music-news-bts-normal-music-video-books-world-tour",
-      "slug": "bts-unveil-packed-schedule-with-normal-music-video-new-books-and-world",
-      "title": "BTS Unveil Packed Schedule with 'Normal' Music Video, New Books, and World Tour Milestones",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "bts-normal-music-video-books-world-tour",
-      "primaryKeyword": "BTS new music",
-      "primaryEntity": "BTS",
-      "entities": [
-        "Normal (music video)"
-      ],
-      "angle": "K-pop superstars BTS have unveiled an extensive schedule including a new music video, upcoming books, and milestones for their world tour.",
-      "tmdbType": "movie",
-      "source": "gnews:The Daily Star",
-      "sources": [
-        {
-          "outlet": "The Daily Star",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQbFpyc2s1dGpMVVJTRGhGbzlNN05FMzRJN2tjU2VyUjdkbUlSYl9TZzRmZ01PMzBlSGE5X1l3QldzbjVLWlVqRHBXWGw3dm5aNkNZMmU2bHo3N1hwRVNKc3MtUkkzdk40UXZfMGtNT1U1MzRrYURMZXNfeDRiS0M2bjRKZUtfcUdDZVNKRGFOb3gxc0h5anF1R1cweVFYdnN3YUVNUnJfOGpqSmdIMWgxazhfNmZnR2ZieUxHN0JBVXVGdzI3c2VKMGVOWGVRc002b21B?oc=5",
-          "ageMin": 58,
-          "headline": "BTS unveil packed schedule with ‘Normal’ music video, new books and world tour milestones - The Daily Star",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMi0wFBVV95cUxQbFpyc2s1dGpMVVJTRGhGbzlNN05FMzRJN2tjU2VyUjdkbUlSYl9TZzRmZ01PMzBlSGE5X1l3QldzbjVLWlVqRHBXWGw3dm5aNkNZMmU2bHo3N1hwRVNKc3MtUkkzdk40UXZfMGtNT1U1MzRrYURMZXNfeDRiS0M2bjRKZUtfcUdDZVNKRGFOb3gxc0h5anF1R1cweVFYdnN3YUVNUnJfOGpqSmdIMWgxazhfNmZnR2ZieUx"
-        }
-      ],
-      "ageMin": 58,
-      "_cand": {
-        "key": "rss:bts-unveil-packed-schedule-with-normal-music-video-new-books",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "The Daily Star"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "The Daily Star",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 59,
-      "signals": {
-        "recency": 24,
-        "corroboration": 8,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-elle-series-legally-blonde-legacy",
-      "slug": "new-series-elle-reclaims-legally-blonde-legacy",
-      "title": "New Series 'Elle' Reclaims 'Legally Blonde' Legacy",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "elle-series-legally-blonde-legacy",
-      "primaryKeyword": "Elle series Legally Blonde",
-      "primaryEntity": "Elle (TV series)",
-      "entities": [
-        "Legally Blonde"
-      ],
-      "angle": "New series 'Elle' is discussed for reclaiming the legacy of 'Legally Blonde' for a new generation.",
-      "tmdbType": "movie",
-      "source": "gnews:GLAAD",
-      "sources": [
-        {
-          "outlet": "GLAAD",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQSno3eV9TYzdNbzlGMXZDb3dGQ0c3NnNtMkZ0c0RMWmV1V3A5WnBGa1BrMXZjV1hyZHdKbkxOczk1T1dEdVNMVWZyTmgyQ3lwcWxVZUMtbTJWQldyTnN3djgwb0x3NHktaVc1a3ExdF9OZHB0VlpYR0ZzaTU4WVVkUUhxTW5LM2ZFMkRERy1SQTZJdmZDc3hYV1llOE1hOG15UFJfSTdfYktRdUFVVzVKN19aVW1Ldk9fSkExZktUSQ?oc=5",
-          "ageMin": 213,
-          "headline": "WATCH: Beyond the Blonde: How the New Series “Elle” Reclaims the “Legally Blonde” Legacy for a New Generation - GLAAD",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMivwFBVV95cUxQSno3eV9TYzdNbzlGMXZDb3dGQ0c3NnNtMkZ0c0RMWmV1V3A5WnBGa1BrMXZjV1hyZHdKbkxOczk1T1dEdVNMVWZyTmgyQ3lwcWxVZUMtbTJWQldyTnN3djgwb0x3NHktaVc1a3ExdF9OZHB0VlpYR0ZzaTU4WVVkUUhxTW5LM2ZFMkRERy1SQTZJdmZDc3hYV1llOE1hOG15UFJfSTdfYktRdUFVVzVKN19aVW1Ldk9fSkE"
-        }
-      ],
-      "ageMin": 213,
-      "_cand": {
-        "key": "rss:watch-beyond-the-blonde-how-the-new-series-elle-reclaims-the",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "GLAAD"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "GLAAD",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 62,
-      "signals": {
-        "recency": 9,
-        "corroboration": 8,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-jenna-ortega-rose-byrne-new-movie-nasty",
+      "id": "news-jenna-ortega-rose-byrne-new-movie-mary-bronstein",
       "slug": "jenna-ortega-rose-byrne-to-star-in-new-movie-from-if-i-had-legs-direct",
       "title": "Jenna Ortega, Rose Byrne to Star in New Movie from ‘If I Had Legs’ Director Mary Bronstein",
       "contentType": "news",
@@ -557,32 +609,31 @@
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "jenna-ortega-rose-byrne-new-movie-nasty",
-      "primaryKeyword": "Jenna Ortega new movie",
-      "primaryEntity": "Nasty (film)",
+      "eventSlug": "jenna-ortega-rose-byrne-new-movie-mary-bronstein",
+      "primaryKeyword": "jenna ortega new movie",
+      "primaryEntity": "Jenna Ortega",
       "entities": [
-        "Jenna Ortega",
         "Rose Byrne",
         "Mary Bronstein"
       ],
-      "angle": "Jenna Ortega and Rose Byrne are set to star in a new film titled 'Nasty' from director Mary Bronstein.",
+      "angle": "Jenna Ortega and Rose Byrne have been cast in a new film from director Mary Bronstein.",
       "tmdbType": "movie",
-      "source": "rss:THR",
+      "source": "gnews:The Hollywood Reporter",
       "sources": [
         {
-          "outlet": "THR",
+          "outlet": "The Hollywood Reporter",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/jenna-ortega-rose-byrne-mary-bronstein-nasty-1236650204/",
-          "ageMin": 938,
-          "headline": "Jenna Ortega, Rose Byrne to Star in New Movie from ‘If I Had Legs’ Director Mary Bronstein",
-          "summary": "‘Nasty’, written by Isabella Jarosz, was on the 2024 Black List."
+          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNd3hSbkd0VWxYZ3ZSODBaRXF4clFzdUJkY1YyOXJWZk55TmZNeHBmTFd3RFJJb3RUT3pFS0EtRzd3TlluZHdjRDZGRjdoSEw5ZFZwNmVYNUZKRjZfandrcHhSVGp6Mkt0czBEMThneTkxMjJhSHhseDFTUldmekYyU1VkSXR5NUNhV3dVbzFTdDZSQlRRRzJkd2p3SjBlVHhLWXhlVXlTT2NNbkxh?oc=5",
+          "ageMin": 1087,
+          "headline": "Jenna Ortega, Rose Byrne to Star in New Movie from ‘If I Had Legs’ Director Mary Bronstein - The Hollywood Reporter",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxNd3hSbkd0VWxYZ3ZSODBaRXF4clFzdUJkY1YyOXJWZk55TmZNeHBmTFd3RFJJb3RUT3pFS0EtRzd3TlluZHdjRDZGRjdoSEw5ZFZwNmVYNUZKRjZfandrcHhSVGp6Mkt0czBEMThneTkxMjJhSHhseDFTUldmekYyU1VkSXR5NUNhV3dVbzFTdDZSQlRRRzJkd2p3SjBlVHhLWXhlVXlTT2NNbkxh?oc=5\" target=\"_bla"
         }
       ],
-      "ageMin": 938,
+      "ageMin": 1087,
       "_cand": {
         "key": "rss:jenna-ortega-rose-byrne-to-star-in-new-movie-from-if-i-had-l",
         "popularity": 0,
-        "kind": "rss-news"
+        "kind": "gnews"
       },
       "corroborationCount": 1,
       "verification": {
@@ -590,11 +641,11 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "THR"
+          "The Hollywood Reporter"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "THR",
+        "attribution": "The Hollywood Reporter",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -614,39 +665,39 @@
       "tierClass": "B"
     },
     {
-      "id": "news-fx-develops-series-national-park-rescue-squad",
-      "slug": "fx-color-force-to-develop-series-based-on-new-yorker-article-about-nat",
-      "title": "FX, Color Force to Develop Series Based on New Yorker Article About National Park Volunteer Rescue Squad (EXCLUSIVE)",
+      "id": "news-god-of-war-series-kratos-actor-recast",
+      "slug": "kratos-actor-ryan-hurst-recast-in-god-of-war-series-after-injury",
+      "title": "Kratos Actor Ryan Hurst Recast in 'God of War' Series After Injury",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "fx-develops-series-national-park-rescue-squad",
-      "primaryKeyword": "fx national park series",
-      "primaryEntity": "FX's A Christmas Carol",
+      "eventType": "casting",
+      "sensitivity": "high",
+      "eventSlug": "god-of-war-series-kratos-actor-recast",
+      "primaryKeyword": "god of war series",
+      "primaryEntity": "God of War",
       "entities": [
-        "FX",
-        "Color Force",
-        "The New Yorker"
+        "God of War (TV series)",
+        "Ryan Hurst",
+        "Kratos"
       ],
-      "angle": "FX and Color Force are developing a new series based on a New Yorker article about a National Park Volunteer Rescue Squad.",
+      "angle": "The actor playing Kratos in Prime Video's 'God of War' series has been recast due to an on-set injury.",
       "tmdbType": "movie",
       "source": "rss:Variety",
       "sources": [
         {
           "outlet": "Variety",
           "tier": 7,
-          "url": "https://variety.com/2026/tv/news/fx-series-new-yorker-national-park-volunteer-rescue-squad-1236813417/",
-          "ageMin": 631,
-          "headline": "FX, Color Force to Develop Series Based on New Yorker Article About National Park Volunteer Rescue Squad (EXCLUSIVE)",
-          "summary": "In a competitive situation, FX has secured the rights to develop a series based on the New Yorker article The Call of the Wild by Paige Williams, Variety has learned exclusively from sources. Also published online in January 2026 under the title The Backcountry Rescue Squad at America’s Busiest National Park, the article details the [ ]"
+          "url": "https://variety.com/2026/tv/news/god-of-war-recast-kratos-actor-ryan-hurst-injury-1236814409/",
+          "ageMin": 454,
+          "headline": "God of War Shocker: Kratos Actor Ryan Hurst Recast After On-Set Injury",
+          "summary": "Prime Video will recast the lead role on its upcoming adaptation of God of War after star Ryan Hurst was injured on set, Variety has confirmed. Hurst had been set to play Kratos, the titular god of war, and Prime Video even released a first look at Hurst in the role this past February. But [ ]"
         }
       ],
-      "ageMin": 631,
+      "ageMin": 454,
       "_cand": {
-        "key": "rss:fx-color-force-to-develop-series-based-on-new-yorker-article",
+        "key": "rss:god-of-war-shocker-kratos-actor-ryan-hurst-recast-after-on-s",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -659,60 +710,124 @@
           "Variety"
         ],
         "maxTier": 7,
-        "sensitivity": "normal",
+        "sensitivity": "high",
         "attribution": "Variety",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 61,
+      "priority": 66,
       "signals": {
         "recency": 4,
         "corroboration": 12,
         "status": 18,
-        "type": 9,
+        "type": 14,
         "pop": 0,
         "breakout": 0,
         "big": 18,
         "trending": 0,
         "softTv": 0
       },
+      "tierClass": "S"
+    },
+    {
+      "id": "news-naruto-live-action-movie-casting-call-shippuden",
+      "slug": "naruto-live-action-movie-casting-call-teases-naruto-shippuden-timeline",
+      "title": "‘Naruto’ Live-Action Movie Casting Call Teases ‘Naruto: Shippuden’ Timeline",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "naruto-live-action-movie-casting-call-shippuden",
+      "primaryKeyword": "Naruto live-action movie casting",
+      "primaryEntity": "Naruto Shippuden the Movie: Blood Prison",
+      "entities": [
+        "Naruto",
+        "Naruto: Shippuden"
+      ],
+      "angle": "A casting call for the live-action 'Naruto' movie suggests it will cover the 'Naruto: Shippuden' timeline.",
+      "tmdbType": "movie",
+      "source": "gnews:Knight Edge Media",
+      "sources": [
+        {
+          "outlet": "Knight Edge Media",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNaGtiNnBHWGJ6MDd0aVQteU53OWpYcktJd0R3UUVLc2ttbm5ZQ0IzM0haM3k1dF91blA4UFVnMTd5Sm8wZ2FaS3ZBLWFIcnJQZHpPNUNpWUlhelFXbmFCNml5UWRTSmFaN1ZYclF2akkySERzajZESk5pUUdXTUliTUpiMHhtQ2FpVTVjR2Q1eExsQ0d4UU9rck01SUpSZHp1TkN5NW9Xa3o0V0XSAbABQVVfeXFMTUdJT0QwQ3ZUVFRkYldSYXhWNEV6T2tCLWYzekZfY09CMEtRMlBpTGtRU3JtOGVxd3E4NzdLQ0Q3SzI3Z3JFSXNmSzVidnJHaXYxbmtiTmFmM1dwYWExLXRjRHNydEhkTEZoaTdyS1BQRGlQellZVThKVWY3U2o3OUlPOEVrQmVaTVJURzVIeTVGUTQ3VHJTdF9aaTdtdzBCeTBBQnZybExtWnhoZHpzMjE?oc=5",
+          "ageMin": 1677,
+          "headline": "‘Naruto’ Live-Action Movie Casting Call Teases ‘Naruto: Shippuden’ Timeline - Knight Edge Media",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxNaGtiNnBHWGJ6MDd0aVQteU53OWpYcktJd0R3UUVLc2ttbm5ZQ0IzM0haM3k1dF91blA4UFVnMTd5Sm8wZ2FaS3ZBLWFIcnJQZHpPNUNpWUlhelFXbmFCNml5UWRTSmFaN1ZYclF2akkySERzajZESk5pUUdXTUliTUpiMHhtQ2FpVTVjR2Q1eExsQ0d4UU9rck01SUpSZHp1TkN5NW9Xa3o0V0XSAbABQVVfeXFMTUdJT0Q"
+        }
+      ],
+      "ageMin": 1677,
+      "_cand": {
+        "key": "rss:-naruto-live-action-movie-casting-call-teases-naruto-shippud",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "Knight Edge Media"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "Knight Edge Media",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 65,
+      "signals": {
+        "recency": 1,
+        "corroboration": 8,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "softTv": 0
+      },
       "tierClass": "B"
     },
     {
-      "id": "music-news-rolling-stones-foreign-tongues-australia-chart",
-      "slug": "rolling-stones-foreign-tongues-debuts-at-no-2-in-australia",
-      "title": "Rolling Stones' 'Foreign Tongues' Debuts at No. 2 in Australia",
+      "id": "music-news-lil-baby-dead-fresh-pharrell-williams",
+      "slug": "lil-baby-drops-pharrell-williams-produced-single-dead-fresh",
+      "title": "Lil Baby Drops Pharrell Williams-Produced Single 'Dead Fresh'",
       "contentType": "music-news",
       "formatTag": "music-news",
       "category": "music",
       "subcategory": "news",
-      "eventType": "chart-performance",
-      "sensitivity": "normal",
+      "eventType": "announcement",
+      "sensitivity": "high",
       "tier": "popular",
-      "eventSlug": "rolling-stones-foreign-tongues-australia-chart",
-      "primaryKeyword": "rolling stones australia chart",
-      "primaryEntity": "The Rolling Stones",
+      "eventSlug": "lil-baby-dead-fresh-pharrell-williams",
+      "primaryKeyword": "lil baby new song",
+      "primaryEntity": "Lil Baby",
       "entities": [
-        "Olivia Rodrigo",
-        "Foreign Tongues"
+        "Pharrell Williams"
       ],
-      "angle": "The Rolling Stones' new album 'Foreign Tongues' debuted at No. 2 on Australia's ARIA Chart, just behind Olivia Rodrigo.",
+      "angle": "Rapper Lil Baby released 'Dead Fresh,' a new single produced by Pharrell Williams, which he previously debuted at the Louis Vuitton show.",
       "tmdbType": "movie",
-      "source": "rss:Billboard",
+      "source": "rss:Rolling Stone",
       "sources": [
         {
-          "outlet": "Billboard",
+          "outlet": "Rolling Stone",
           "tier": 7,
-          "url": "https://www.billboard.com/music/chart-beat/olivia-rodrigo-australia-aria-chart-crown-1236296607/",
-          "ageMin": 70,
-          "headline": "Olivia Rodrigo Holds Off Rolling Stones For Australia s Chart Crown",
-          "summary": "The Rolling Stones drop in at No. 2 on the ARIA Chart with Foreign Tongues , their 25 th studio album."
+          "url": "https://www.rollingstone.com/music/music-news/lil-baby-pharrell-williams-dead-fresh-single-1235595020/",
+          "ageMin": 240,
+          "headline": "Lil Baby Drops Pharrell Williams-Produced Single Dead Fresh",
+          "summary": "The rapper debuted the song last month at the Louis Vuitton’s Menswear Spring-Summer 2027 show in Paris"
         }
       ],
-      "ageMin": 70,
+      "ageMin": 240,
       "_cand": {
-        "key": "rss:olivia-rodrigo-holds-off-rolling-stones-for-australia-s-char",
+        "key": "rss:lil-baby-drops-pharrell-williams-produced-single-dead-fresh",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -723,28 +838,28 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Billboard"
+          "Rolling Stone"
         ],
         "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Billboard",
+        "sensitivity": "high",
+        "attribution": "Rolling Stone",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 52,
+      "priority": 48,
       "signals": {
-        "recency": 16,
+        "recency": 9,
         "corroboration": 12,
         "status": 18,
-        "type": 6,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
         "big": 0,
         "trending": 0,
         "softTv": 0
       },
-      "tierClass": "C"
+      "tierClass": "S"
     },
     {
       "id": "news-heartstopper-forever-finale",
@@ -760,12 +875,11 @@
       "primaryKeyword": "heartstopper finale",
       "primaryEntity": "Heartstopper",
       "entities": [
-        "Netflix",
         "Alice Oseman",
         "Kit Connor",
         "Joe Locke"
       ],
-      "angle": "The cast and creator of the hit Netflix series 'Heartstopper' reflect on the show's groundbreaking impact as it concludes with its finale.",
+      "angle": "The cast and creator reflect on the conclusion of the groundbreaking YA series 'Heartstopper'.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
@@ -773,12 +887,12 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/movies/movie-news/the-end-of-an-era-inside-heartstopper-forever-and-the-show-that-changed-british-ya-1236646729/",
-          "ageMin": 926,
+          "ageMin": 1076,
           "headline": "The End of an Era: Inside Heartstopper Forever and the Show That Changed British YA",
           "summary": "With the release of the two-hour finale that concludes the hit Netflix series, creator Alice Oseman along with Kit Connor, Joe Locke and more of the show's stars reflect on a groundbreaking, decade-long journey and what it means to end their queer love story."
         }
       ],
-      "ageMin": 926,
+      "ageMin": 1076,
       "_cand": {
         "key": "rss:the-end-of-an-era-inside-heartstopper-forever-and-the-show-t",
         "popularity": 0,
@@ -816,129 +930,193 @@
       "tierClass": "A"
     },
     {
-      "id": "news-naruto-live-action-movie-casting-call",
-      "slug": "live-action-naruto-movie-casting-call-hints-at-shippuden-timeline",
-      "title": "Live-Action 'Naruto' Movie Casting Call Hints at 'Shippuden' Timeline",
+      "id": "news-fx-color-force-develop-series-new-yorker-article-national-park-rescue",
+      "slug": "fx-color-force-to-develop-series-based-on-new-yorker-article-about-nat",
+      "title": "FX, Color Force to Develop Series Based on New Yorker Article About National Park Volunteer Rescue Squad",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "fx-color-force-develop-series-new-yorker-article-national-park-rescue",
+      "primaryKeyword": "FX series development",
+      "primaryEntity": "National Park Volunteer Rescue Squad Series",
+      "entities": [
+        "FX's A Christmas Carol",
+        "FX",
+        "Color Force",
+        "The New Yorker"
+      ],
+      "angle": "FX and Color Force are developing a new series based on a New Yorker article about a National Park volunteer rescue squad.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/tv/news/fx-series-new-yorker-national-park-volunteer-rescue-squad-1236813417/",
+          "ageMin": 781,
+          "headline": "FX, Color Force to Develop Series Based on New Yorker Article About National Park Volunteer Rescue Squad (EXCLUSIVE)",
+          "summary": "In a competitive situation, FX has secured the rights to develop a series based on the New Yorker article The Call of the Wild by Paige Williams, Variety has learned exclusively from sources. Also published online in January 2026 under the title The Backcountry Rescue Squad at America’s Busiest National Park, the article details the [ ]"
+        }
+      ],
+      "ageMin": 781,
+      "_cand": {
+        "key": "rss:fx-color-force-to-develop-series-based-on-new-yorker-article",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 58,
+      "signals": {
+        "recency": 1,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-aamir-khan-denies-3-idiots-character-sonam-wangchuk",
+      "slug": "aamir-khan-denies-3-idiots-character-was-based-on-activist-sonam-wangc",
+      "title": "Aamir Khan Denies '3 Idiots' Character Was Based on Activist Sonam Wangchuk",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
-      "eventType": "casting",
+      "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "naruto-live-action-movie-casting-call",
-      "primaryKeyword": "Naruto live action movie",
-      "primaryEntity": "Naruto Shippuden the Movie: Blood Prison",
+      "eventSlug": "aamir-khan-denies-3-idiots-character-sonam-wangchuk",
+      "primaryKeyword": "aamir khan 3 idiots",
+      "primaryEntity": "Aamir Khan",
       "entities": [
-        "Naruto (film)",
-        "Naruto: Shippuden"
+        "3 Idiots",
+        "Sonam Wangchuk"
       ],
-      "angle": "Live-action 'Naruto' movie is holding a casting call, potentially hinting at a 'Shippuden' timeline.",
+      "angle": "Bollywood star Aamir Khan has denied that his character in the hit film '3 Idiots' was based on activist Sonam Wangchuk.",
       "tmdbType": "movie",
-      "source": "gnews:Knight Edge Media",
+      "source": "rss:Variety",
       "sources": [
         {
-          "outlet": "Knight Edge Media",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNaGtiNnBHWGJ6MDd0aVQteU53OWpYcktJd0R3UUVLc2ttbm5ZQ0IzM0haM3k1dF91blA4UFVnMTd5Sm8wZ2FaS3ZBLWFIcnJQZHpPNUNpWUlhelFXbmFCNml5UWRTSmFaN1ZYclF2akkySERzajZESk5pUUdXTUliTUpiMHhtQ2FpVTVjR2Q1eExsQ0d4UU9rck01SUpSZHp1TkN5NW9Xa3o0V0XSAbABQVVfeXFMTUdJT0QwQ3ZUVFRkYldSYXhWNEV6T2tCLWYzekZfY09CMEtRMlBpTGtRU3JtOGVxd3E4NzdLQ0Q3SzI3Z3JFSXNmSzVidnJHaXYxbmtiTmFmM1dwYWExLXRjRHNydEhkTEZoaTdyS1BQRGlQellZVThKVWY3U2o3OUlPOEVrQmVaTVJURzVIeTVGUTQ3VHJTdF9aaTdtdzBCeTBBQnZybExtWnhoZHpzMjE?oc=5",
-          "ageMin": 1527,
-          "headline": "‘Naruto’ Live-Action Movie Casting Call Teases ‘Naruto: Shippuden’ Timeline - Knight Edge Media",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxNaGtiNnBHWGJ6MDd0aVQteU53OWpYcktJd0R3UUVLc2ttbm5ZQ0IzM0haM3k1dF91blA4UFVnMTd5Sm8wZ2FaS3ZBLWFIcnJQZHpPNUNpWUlhelFXbmFCNml5UWRTSmFaN1ZYclF2akkySERzajZESk5pUUdXTUliTUpiMHhtQ2FpVTVjR2Q1eExsQ0d4UU9rck01SUpSZHp1TkN5NW9Xa3o0V0XSAbABQVVfeXFMTUdJT0Q"
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/film/news/aamir-khan-denies-3-idiots-character-based-on-sonam-wangchuk-1236814459/",
+          "ageMin": 263,
+          "headline": "Aamir Khan Denies 3 Idiots Character Was Based on Activist Sonam Wangchuk",
+          "summary": "Bollywood superstar Aamir Khan denied that his character in 3 Idiots was based on educator and climate activist Sonam Wangchuk, addressing the long-running rumor during a BFI In Conversation event at BFI Southbank, held as part of the London Indian Film Festival, which separately marked the 25th anniversary of Lagaan. No, that s not true, actually. [ ]"
         }
       ],
-      "ageMin": 1527,
+      "ageMin": 263,
       "_cand": {
-        "key": "rss:-naruto-live-action-movie-casting-call-teases-naruto-shippud",
+        "key": "rss:aamir-khan-denies-3-idiots-character-was-based-on-activist-s",
         "popularity": 0,
-        "kind": "gnews"
+        "kind": "rss-news"
       },
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
+        "tier1Count": 1,
+        "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Knight Edge Media"
+          "Variety"
         ],
-        "maxTier": 5,
+        "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Knight Edge Media",
+        "attribution": "Variety",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 65,
+      "priority": 56,
       "signals": {
-        "recency": 1,
-        "corroboration": 8,
+        "recency": 9,
+        "corroboration": 12,
         "status": 18,
-        "type": 14,
+        "type": 5,
         "pop": 0,
         "breakout": 0,
-        "big": 24,
+        "big": 12,
         "trending": 0,
         "softTv": 0
       },
-      "tierClass": "B"
+      "tierClass": "C"
     },
     {
-      "id": "news-au-ra-debut-album-lord-of-the-rings-minecraft-inspiration",
-      "slug": "au-ra-s-alt-pop-debut-inspired-by-lord-of-the-rings-and-minecraft",
-      "title": "Au/Ra's Alt-Pop Debut Inspired by 'Lord of the Rings' and 'Minecraft'",
+      "id": "news-celebrity-wines-cameron-diaz-snoop-dogg",
+      "slug": "the-best-and-worst-celebrity-wines-including-bottles-from-cameron-diaz",
+      "title": "The best and worst celebrity wines, including bottles from Cameron Diaz and Snoop Dogg",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
-      "eventType": "announcement",
+      "eventType": "other",
       "sensitivity": "normal",
-      "tier": "indie",
-      "eventSlug": "au-ra-debut-album-lord-of-the-rings-minecraft-inspiration",
-      "primaryKeyword": "Au/Ra Lord of the Rings Minecraft",
-      "primaryEntity": "Au/Ra",
+      "eventSlug": "celebrity-wines-cameron-diaz-snoop-dogg",
+      "primaryKeyword": "celebrity wines",
+      "primaryEntity": "Cameron Diaz",
       "entities": [
-        "The Lord of the Rings: The Return of the King",
-        "Lord of the Rings",
-        "Minecraft"
+        "Snoop Dogg"
       ],
-      "angle": "Alt-pop artist Au/Ra reveals inspiration from 'Lord of the Rings' and 'Minecraft' for her debut album.",
+      "angle": "A review ranks celebrity-owned wine brands, featuring bottles from Cameron Diaz and Snoop Dogg.",
       "tmdbType": "movie",
-      "source": "gnews:NME",
+      "source": "gnews:The Washington Post",
       "sources": [
         {
-          "outlet": "NME",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQbDFQUDl2MDd2M3Jya2JJSmdiMjVIRWpkREFWRk9Xa3hQMHBiR1lNZ0h1V2RmWFJlMEM2RU1Zdll4cERxN19MN25SX3dWaVNqakZhSEdpNG91LUlKT0ttOHBnRG1udjZIVDd3b2xMbVN5MlRZbjRWeU5xSkVZRGJhc05iT1pVSE82OWl6aXNONnh5bkRWaDJGLWQ5Y2daRzIycTk1STJWdnZKQkk5UVowMGxqUkVIY25qcEVJ?oc=5",
-          "ageMin": 120,
-          "headline": "'Lord Of The Rings' and 'Minecraft' inspired Au/Ra’s alt-pop debut - NME",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiuwFBVV95cUxQbDFQUDl2MDd2M3Jya2JJSmdiMjVIRWpkREFWRk9Xa3hQMHBiR1lNZ0h1V2RmWFJlMEM2RU1Zdll4cERxN19MN25SX3dWaVNqakZhSEdpNG91LUlKT0ttOHBnRG1udjZIVDd3b2xMbVN5MlRZbjRWeU5xSkVZRGJhc05iT1pVSE82OWl6aXNONnh5bkRWaDJGLWQ5Y2daRzIycTk1STJWdnZKQkk5UVowMGxqUkVIY25qcEV"
+          "outlet": "The Washington Post",
+          "tier": 7,
+          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOOGFnUThkQnRGYUY1cG5GcUR1Vjc4M1hOckU0enM3cV9qSFdkTlR2WU5Gc2FuVTFfRUxBcmdUSXhrZ2U0WWhwYjg1VDk1Nk1kbk11TUdKakxocjhPaDNMWjZMUE5QM3VDcUtRRnByYXlqc01LOVVTZlM0b0RSdjJWazhNb3VqOWViNC1PbFh6NVRmbzZHQXVib0t1NS1HX3dpWl9yYi1velBsYURK?oc=5",
+          "ageMin": 43,
+          "headline": "The best and worst celebrity wines, including bottles from Cameron Diaz and Snoop Dogg - The Washington Post",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxOOGFnUThkQnRGYUY1cG5GcUR1Vjc4M1hOckU0enM3cV9qSFdkTlR2WU5Gc2FuVTFfRUxBcmdUSXhrZ2U0WWhwYjg1VDk1Nk1kbk11TUdKakxocjhPaDNMWjZMUE5QM3VDcUtRRnByYXlqc01LOVVTZlM0b0RSdjJWazhNb3VqOWViNC1PbFh6NVRmbzZHQXVib0t1NS1HX3dpWl9yYi1velBsYURK?oc=5\" target=\"_bla"
         }
       ],
-      "ageMin": 120,
+      "ageMin": 43,
       "_cand": {
-        "key": "rss:-lord-of-the-rings-and-minecraft-inspired-au-ra-s-alt-pop-de",
+        "key": "rss:the-best-and-worst-celebrity-wines-including-bottles-from-ca",
         "popularity": 0,
         "kind": "gnews"
       },
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
+        "tier1Count": 1,
+        "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "NME"
+          "The Washington Post"
         ],
-        "maxTier": 5,
+        "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "NME",
+        "attribution": "The Washington Post",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 51,
+      "priority": 59,
       "signals": {
-        "recency": 16,
-        "corroboration": 8,
+        "recency": 24,
+        "corroboration": 12,
         "status": 18,
-        "type": 9,
+        "type": 5,
         "pop": 0,
         "breakout": 0,
         "big": 0,
@@ -949,13 +1127,13 @@
     },
     {
       "id": "news-bts-normal-music-video",
-      "slug": "bts-let-off-steam-after-a-big-night-in-normal-music-video-watch",
-      "title": "BTS Let Off Steam After a Big Night In ‘NORMAL’ Music Video: Watch",
+      "slug": "bts-drop-normal-music-video-featuring-viral-toilet-image",
+      "title": "BTS Drop 'Normal' Music Video Featuring Viral Toilet Image",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
-      "eventType": "announcement",
+      "eventType": "other",
       "sensitivity": "normal",
       "tier": "popular",
       "eventSlug": "bts-normal-music-video",
@@ -967,7 +1145,7 @@
         "Suga",
         "J-Hope"
       ],
-      "angle": "BTS released a new music video for their song 'Normal', featuring a now-viral image of the members.",
+      "angle": "BTS released a new music video for their song 'Normal', featuring a viral image of the members.",
       "tmdbType": "movie",
       "source": "rss:Billboard",
       "sources": [
@@ -975,12 +1153,12 @@
           "outlet": "Billboard",
           "tier": 7,
           "url": "https://www.billboard.com/music/pop/bts-normal-music-video-watch-1236296582/",
-          "ageMin": 233,
+          "ageMin": 383,
           "headline": "BTS Let Off Steam After a Big Night In ‘NORMAL’ Music Video: Watch",
           "summary": "The wintry video gives us the now-viral image of Jin, Suga, J-Hope, RM, Jimin, V, and Jung Kook standing before a row of toilets."
         }
       ],
-      "ageMin": 233,
+      "ageMin": 383,
       "_cand": {
         "key": "rss:bts-let-off-steam-after-a-big-night-in-normal-music-video-wa",
         "popularity": 0,
@@ -1001,19 +1179,89 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 48,
+      "priority": 49,
       "signals": {
-        "recency": 9,
+        "recency": 4,
         "corroboration": 12,
         "status": 18,
-        "type": 9,
+        "type": 5,
         "pop": 0,
         "breakout": 0,
         "big": 0,
         "trending": 0,
-        "softTv": 0
+        "softTv": 0,
+        "radar": 10
       },
-      "tierClass": "C"
+      "radarKind": "movie-trending",
+      "tierClass": "A"
+    },
+    {
+      "id": "news-bts-normal-music-video-2",
+      "slug": "bts-invite-fans-to-look-beyond-the-spotlight-in-normal-video",
+      "title": "BTS Invite Fans to Look Beyond the Spotlight in 'Normal' Video",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "bts-normal-music-video-2",
+      "primaryKeyword": "bts",
+      "primaryEntity": "BTS",
+      "entities": [
+        "Arirang",
+        "Arirang (album)"
+      ],
+      "angle": "BTS's new video for 'Normal' encourages fans to look beyond the spotlight, featured on their album 'Arirang'.",
+      "tmdbType": "movie",
+      "source": "rss:Rolling Stone",
+      "sources": [
+        {
+          "outlet": "Rolling Stone",
+          "tier": 7,
+          "url": "https://www.rollingstone.com/music/music-news/bts-normal-music-video-arirang-album-1235594976/",
+          "ageMin": 448,
+          "headline": "BTS Invite Fans to Look Beyond the Spotlight in Normal Video",
+          "summary": "The song features on the band's massive hit album, Arirang"
+        }
+      ],
+      "ageMin": 448,
+      "_cand": {
+        "key": "rss:bts-invite-fans-to-look-beyond-the-spotlight-in-normal-video",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Rolling Stone"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Rolling Stone",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 49,
+      "signals": {
+        "recency": 4,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0,
+        "radar": 10
+      },
+      "radarKind": "movie-trending",
+      "tierClass": "A"
     }
   ]
 }
