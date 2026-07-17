@@ -561,11 +561,11 @@
    "key": "the-odyssey-ev-weekend-d0|BO-WEEKEND",
    "eventSlug": "the-odyssey-ev-weekend-d0",
    "form": "BO-WEEKEND",
-   "reason": "fidelity: 5 unsupported figures/claims — draft-level failure",
-   "tries": 3,
-   "at": "2026-07-17T18:31:52.829Z",
+   "reason": "2 unverified claim(s) cut, unrecovered",
+   "tries": 4,
+   "at": "2026-07-17T19:34:24.078Z",
    "dead": true,
-   "expiresAt": "2026-07-20T18:31:52.829Z"
+   "expiresAt": "2026-07-20T19:34:24.078Z"
   },
   {
    "key": "winning-ai-search-ev-streaming-arrival|NOW-STREAMING",
@@ -588,8 +588,10 @@
    "eventSlug": "the-odyssey-ev-record-d0",
    "form": "BO-RECORD",
    "reason": "fidelity: 5 unsupported figures/claims — draft-level failure",
-   "tries": 2,
-   "at": "2026-07-17T18:35:31.785Z"
+   "tries": 3,
+   "at": "2026-07-17T19:36:07.319Z",
+   "dead": true,
+   "expiresAt": "2026-07-20T19:36:07.319Z"
   },
   {
    "key": "rust-creek-netflix-top10-w2026-07-12|NETFLIX-TOP10",
@@ -635,9 +637,11 @@
    "key": "the-super-mario-galaxy-movie-ev-weekend-d0|BO-WEEKEND",
    "eventSlug": "the-super-mario-galaxy-movie-ev-weekend-d0",
    "form": "BO-WEEKEND",
-   "reason": "5 unverified claim(s) cut, unrecovered",
-   "tries": 2,
-   "at": "2026-07-17T18:38:04.126Z"
+   "reason": "4 unverified claim(s) cut, unrecovered",
+   "tries": 3,
+   "at": "2026-07-17T19:38:04.074Z",
+   "dead": true,
+   "expiresAt": "2026-07-20T19:38:04.074Z"
   },
   {
    "key": "supergirl-bo-update-d20|BO-UPDATE",
@@ -648,14 +652,14 @@
    "at": "2026-07-17T19:07:40.386Z"
   }
  ],
- "zeroStreak": 0,
+ "zeroStreak": 1,
  "daySpend": {
   "laDay": "2026-07-17",
-  "usd": 0.59422
+  "usd": 0.65716
  },
  "pace": {
-  "tokens": 3,
-  "lastMs": 1784314848920
+  "tokens": 3.7003033333333333,
+  "lastMs": 1784316649700
  },
  "lastAuditDay": "2026-07-17"
 }
