@@ -1,0 +1,115 @@
+{
+  "ts": "2026-07-17T09:48:43.764Z",
+  "mode": "from-find",
+  "review": true,
+  "published": [
+    "collin-gosselin-making-shock-return-to-reality-tv-ahead-of-tell-all-me"
+  ],
+  "topics": 2,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 1,
+  "blocked": 0,
+  "costUSD": 0.015739,
+  "costPerPublished": 0.015739,
+  "byModel": {
+    "deepseek/deepseek-v3.2": {
+      "calls": 8,
+      "in": 15745,
+      "out": 6196,
+      "usd": 0.005588752400000001
+    },
+    "google/gemini-2.5-flash": {
+      "calls": 8,
+      "in": 16374,
+      "out": 1702,
+      "usd": 0.009167200000000002
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 987,
+      "out": 373,
+      "usd": 0.000151362
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 4,
+      "in": 5725,
+      "out": 648,
+      "usd": 0.0008316999999999999
+    }
+  },
+  "byRole": {
+    "dedup": {
+      "calls": 2,
+      "errors": 0,
+      "in": 636,
+      "out": 23,
+      "usd": 0.00015410000000000003,
+      "ms": 3754
+    },
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2380,
+      "out": 302,
+      "usd": 0.001469,
+      "ms": 1964
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 987,
+      "out": 373,
+      "usd": 0.00015596999999999999,
+      "ms": 8110
+    },
+    "writer": {
+      "calls": 5,
+      "errors": 0,
+      "in": 14246,
+      "out": 5790,
+      "usd": 0.00524518,
+      "ms": 199935
+    },
+    "verify": {
+      "calls": 7,
+      "errors": 0,
+      "in": 13994,
+      "out": 1400,
+      "usd": 0.007698199999999998,
+      "ms": 9625
+    },
+    "judge": {
+      "calls": 2,
+      "errors": 0,
+      "in": 3167,
+      "out": 469,
+      "usd": 0.0005043000000000001,
+      "ms": 2384
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 863,
+      "out": 383,
+      "usd": 0.00032871,
+      "ms": 12837
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 398,
+      "out": 78,
+      "usd": 0.000071,
+      "ms": 546
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2160,
+      "out": 101,
+      "usd": 0.0002564,
+      "ms": 2993
+    }
+  }
+}
