@@ -827,6 +827,15 @@ await t("discovery: story-first rules — unknown+hot qualifies, famous+personal
   const safe = await scorePool([{ slug: "a", title: "Star dies at 90", date: "2026-07-16", primaryEntity: "Someone" }], dead);
   assert.equal(safe.length, 1, "fail-open keeps the pool intact");
   assert.ok(safe[0].heat >= 60, "prior still scores with all APIs down");
+  // entity derivation (live-run finding: most articles carry NO primaryEntity — derive from imageAlt/title)
+  const { entityFromCandidate } = await import("../agents/discovery.mjs");
+  assert.equal(entityFromCandidate({ primaryEntity: "Jennifer Lawrence" }), "Jennifer Lawrence", "explicit wins");
+  assert.equal(entityFromCandidate({ title: "Sam Neill, Beloved 'Jurassic Park' Star, Dies at 78", imageAlt: "Sam Neill" }), "Sam Neill", "imageAlt bare name");
+  assert.equal(entityFromCandidate({ title: "Sam Neill, Beloved 'Jurassic Park' Star, Dies at 78" }), "Sam Neill", "title leading name, stops at comma");
+  assert.equal(entityFromCandidate({ title: "Elle Fanning and Julianne Moore to Star in New Film" }), "Elle Fanning", "title name stops at lowercase");
+  assert.equal(entityFromCandidate({ title: "Danny McBride to Direct New G.I. Joe Movie" }), "Danny McBride", "two-token name");
+  assert.equal(entityFromCandidate({ title: "Lost star quietly divorced husband last year" }), null, "single cap token = a show title, not a name");
+  assert.equal(entityFromCandidate({ title: "", imageAlt: "Pictured: someone at the premiere event yesterday" }), null, "descriptive imageAlt rejected");
 });
 
 console.log(`\n${passed} passed, ${failed} failed`);

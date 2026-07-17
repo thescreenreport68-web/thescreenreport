@@ -85,6 +85,7 @@ export function listCandidates({ now = new Date(), lane = null } = {}) {
       trendScore: data.trendScore != null ? Number(data.trendScore) : null,
       eventType: data.eventType || null,
       primaryEntity: data.primaryEntity || null,
+      imageAlt: data.imageAlt || null, // entity fallback: most articles lack primaryEntity but imageAlt names the subject
     });
   }
   out.sort((a, b) => new Date(b.date) - new Date(a.date));

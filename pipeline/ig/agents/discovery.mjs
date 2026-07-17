@@ -97,6 +97,31 @@ export function starPower({ heat, fame, segRel = 1 }) {
   return Math.max(0, Math.min(100, 0.6 * heat + 0.25 * fameVal + 15 + learned)); // +15 centers the 15% learned band
 }
 
+// ENTITY DERIVATION (2026-07-17, live-run finding): most articles carry NO primaryEntity frontmatter
+// (the Sam Neill obit had none), so without a fallback the fame/spike signals never fire. Chain:
+// frontmatter primaryEntity → imageAlt when it IS a bare name → the title's leading proper-noun phrase.
+// The name test = 2-4 capitalized tokens only (a single token like "Daredevil" or "Lost" is a title,
+// not a person — excluded; wiki search fail-opens on any residual misses).
+const NAMEISH = /^[A-Z][A-Za-z'’.-]*$/;
+function leadingName(text) {
+  const words = String(text || "").trim().split(/\s+/);
+  const out = [];
+  for (const w of words) {
+    const bare = w.replace(/[,:;!?'’"]+$/g, "");
+    if (!NAMEISH.test(bare) || out.length >= 4) break;
+    out.push(bare);
+    if (bare !== w) break; // token carried trailing punctuation ("Neill,") — the phrase ends here
+  }
+  return out.length >= 2 ? out.join(" ") : null;
+}
+export function entityFromCandidate(c) {
+  const explicit = String(c.primaryEntity || "").trim();
+  if (explicit.length > 2) return explicit;
+  const alt = String(c.imageAlt || "").trim();
+  if (alt && /^([A-Z][A-Za-z'’.-]*\s+){1,3}[A-Z][A-Za-z'’.-]*$/.test(alt)) return alt; // a bare 2-4-word name
+  return leadingName(c.title);
+}
+
 // ── free signal fetchers (all fail-open to null) ──────────────────────────────────
 
 async function wikiSignals(name, deps) {
@@ -167,7 +192,7 @@ export async function scorePool(candidates, deps = realDeps) {
 
   const trends = await trendingNames(deps);
   let lookups = 0;
-  const names = [...new Set(candidates.map((c) => String(c.primaryEntity || "").trim()).filter((n) => n.length > 2))];
+  const names = [...new Set(candidates.map((c) => entityFromCandidate(c) || "").filter((n) => n.length > 2))];
   await pool(names, async (name) => {
     const k = name.toLowerCase();
     if (cache[k] !== undefined) return;
@@ -178,7 +203,7 @@ export async function scorePool(candidates, deps = realDeps) {
   try { writeJson(cacheFile(), cache); } catch {}
 
   const scored = candidates.map((c) => {
-    const name = String(c.primaryEntity || "").trim().toLowerCase();
+    const name = (entityFromCandidate(c) || "").toLowerCase();
     const wiki = name ? cache[name] : null;
     const prior = eventPrior(c);
     const spikeHeat = wiki?.ratio != null ? heatFromSpike(wiki.ratio, wiki.latest, cfg.minSpikeViews) : 0;
