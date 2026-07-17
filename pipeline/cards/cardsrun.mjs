@@ -95,7 +95,7 @@ async function buildCard(story, { breaking = false } = {}) {
     const { jpeg, meta } = await renderCard({
       category: cls.category, breaking,
       headline: card.headline, redSpan: card.redSpan, sub: card.sub,
-      creditLine: img.provenance.creditLine, photo: img.buf,
+      photo: img.buf, // NO creditLine — provenance is ledger-only (owner rule 2026-07-17)
       focus: { x: fr.focusX, y: fr.focusY },
     });
     const qc = await visionQC({ jpeg, card, story });
