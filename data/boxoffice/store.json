@@ -540,9 +540,9 @@
    "key": "young-washington-bo-update-d13|BO-UPDATE",
    "eventSlug": "young-washington-bo-update-d13",
    "form": "BO-UPDATE",
-   "reason": "1 unverified claim(s) cut, unrecovered",
-   "tries": 1,
-   "at": "2026-07-17T16:05:36.074Z"
+   "reason": "words 166 < 180 (owner-set ~200-word minimum)",
+   "tries": 2,
+   "at": "2026-07-17T17:45:52.254Z"
   },
   {
    "key": "the-odyssey-ev-weekend-d0|BO-WEEKEND",
@@ -615,16 +615,24 @@
    "reason": "fidelity: 5 unsupported figures/claims — draft-level failure",
    "tries": 1,
    "at": "2026-07-17T17:37:47.880Z"
+  },
+  {
+   "key": "the-super-mario-galaxy-movie-ev-weekend-d0|BO-WEEKEND",
+   "eventSlug": "the-super-mario-galaxy-movie-ev-weekend-d0",
+   "form": "BO-WEEKEND",
+   "reason": "words 149 < 180 (owner-set ~200-word minimum)",
+   "tries": 1,
+   "at": "2026-07-17T17:40:55.374Z"
   }
  ],
- "zeroStreak": 1,
+ "zeroStreak": 2,
  "daySpend": {
   "laDay": "2026-07-17",
-  "usd": 0.51725
+  "usd": 0.54543
  },
  "pace": {
-  "tokens": 2.4808473888888893,
-  "lastMs": 1784309442628
+  "tokens": 2.664430166666667,
+  "lastMs": 1784309914698
  },
  "lastAuditDay": "2026-07-17"
 }
