@@ -1,0 +1,118 @@
+{
+ "runId": "run-2026-07-17T16-30-46",
+ "mode": "live",
+ "startedAt": "2026-07-17T16:30:46.562Z",
+ "films": 8,
+ "published": [],
+ "held": [
+  {
+   "tag": "the-odyssey-ev-opening×BO-OPENING",
+   "reason": "2 unverified claim(s) cut, unrecovered",
+   "score": 75
+  },
+  {
+   "tag": "the-odyssey-ev-weekend×BO-WEEKEND",
+   "reason": "words 150 < 180 (owner-set ~200-word minimum)",
+   "score": 60
+  },
+  {
+   "tag": "super-troopers-3-ev-opening×BO-OPENING",
+   "reason": "consistency: metaDescription: \"$6M\" is not a canonical figure for this film | metaDescription: \"$9M\" is not a canonical figure for this film | keyTakeaways[1]: \"$6M\" is not a canonical figure for this film",
+   "score": 78
+  },
+  {
+   "tag": "the-odyssey-ev-record×BO-RECORD",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "score": 60
+  },
+  {
+   "tag": "moana-bo-update×BO-UPDATE",
+   "reason": "not material: already covered today (one update per film per day)"
+  }
+ ],
+ "rejected": [
+  {
+   "tag": "winning-ai-search-ev-streaming-arrival×NOW-STREAMING",
+   "stage": "gatherer",
+   "reason": "under floor: no subscription-streaming platform — rent/buy is not 'now streaming' (try 1)"
+  }
+ ],
+ "skipped": [],
+ "blocked": [
+  {
+   "tag": "superhero-parody-series-ev-streaming-arrival×NOW-STREAMING",
+   "reason": "watchdog: gatherer superhero-parody-series-ev-streaming-arrival×NOW-STREAMING exceeded 180s"
+  },
+  {
+   "tag": "descendants-wicked-wonderland-ev-streaming-arrival×NOW-STREAMING",
+   "reason": "watchdog: gatherer descendants-wicked-wonderland-ev-streaming-arrival×NOW-STREAMING exceeded 180s"
+  }
+ ],
+ "paced": {
+  "tokens": 2.08,
+  "behind": false,
+  "expected": 5.6,
+  "allow": 2
+ },
+ "queueBuilt": 9,
+ "zeroStreak": 2,
+ "daySpend": {
+  "laDay": "2026-07-17",
+  "usd": 0.3608
+ },
+ "finishedAt": "2026-07-17T16:49:23.152Z",
+ "meter": {
+  "byRole": {
+   "categorize": {
+    "calls": 3,
+    "errors": 0,
+    "in": 1079,
+    "out": 557,
+    "usd": 0.00033,
+    "ms": 12572
+   },
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3311,
+    "out": 550,
+    "usd": 0.00019,
+    "ms": 2185
+   },
+   "gatherer": {
+    "calls": 12,
+    "errors": 0,
+    "in": 44985,
+    "out": 4011,
+    "usd": 0.0061,
+    "ms": 27601
+   },
+   "synthesizer": {
+    "calls": 4,
+    "errors": 0,
+    "in": 3135,
+    "out": 2781,
+    "usd": 0.00078,
+    "ms": 57139
+   },
+   "writer": {
+    "calls": 8,
+    "errors": 0,
+    "in": 28811,
+    "out": 9323,
+    "usd": 0.02644,
+    "ms": 109619
+   },
+   "qa": {
+    "calls": 38,
+    "errors": 4,
+    "in": 114505,
+    "out": 12630,
+    "usd": 0.0596,
+    "ms": 137458
+   }
+  },
+  "totalUsd": 0.09345
+ },
+ "openrouterTotalUsd": 0.11322
+}

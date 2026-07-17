@@ -445,9 +445,11 @@
    "key": "the-odyssey-ev-opening|BO-OPENING",
    "eventSlug": "the-odyssey-ev-opening",
    "form": "BO-OPENING",
-   "reason": "words 177 < 180 (owner-set ~200-word minimum)",
-   "tries": 2,
-   "at": "2026-07-17T13:33:51.523Z"
+   "reason": "2 unverified claim(s) cut, unrecovered",
+   "tries": 3,
+   "at": "2026-07-17T16:33:05.036Z",
+   "dead": true,
+   "expiresAt": "2026-07-20T16:33:05.036Z"
   },
   {
    "key": "descendants-wicked-wonderland-ev-streaming-arrival|NOW-STREAMING",
@@ -536,16 +538,48 @@
    "reason": "1 unverified claim(s) cut, unrecovered",
    "tries": 1,
    "at": "2026-07-17T16:05:36.074Z"
+  },
+  {
+   "key": "the-odyssey-ev-weekend-d0|BO-WEEKEND",
+   "eventSlug": "the-odyssey-ev-weekend-d0",
+   "form": "BO-WEEKEND",
+   "reason": "words 150 < 180 (owner-set ~200-word minimum)",
+   "tries": 1,
+   "at": "2026-07-17T16:35:44.143Z"
+  },
+  {
+   "key": "winning-ai-search-ev-streaming-arrival|NOW-STREAMING",
+   "eventSlug": "winning-ai-search-ev-streaming-arrival",
+   "form": "NOW-STREAMING",
+   "reason": "under floor: no subscription-streaming platform — rent/buy is not 'now streaming'",
+   "tries": 1,
+   "at": "2026-07-17T16:42:50.319Z"
+  },
+  {
+   "key": "super-troopers-3-ev-opening|BO-OPENING",
+   "eventSlug": "super-troopers-3-ev-opening",
+   "form": "BO-OPENING",
+   "reason": "consistency: metaDescription: \"$6M\" is not a canonical figure for this film | metaDescription: \"$9M\" is not a canonical figure for this film | keyTakeaways[1]: \"$6M\" is not a canonical figure for this film",
+   "tries": 1,
+   "at": "2026-07-17T16:47:05.412Z"
+  },
+  {
+   "key": "the-odyssey-ev-record-d0|BO-RECORD",
+   "eventSlug": "the-odyssey-ev-record-d0",
+   "form": "BO-RECORD",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "tries": 1,
+   "at": "2026-07-17T16:48:53.831Z"
   }
  ],
- "zeroStreak": 1,
+ "zeroStreak": 2,
  "daySpend": {
   "laDay": "2026-07-17",
-  "usd": 0.24758
+  "usd": 0.3608
  },
  "pace": {
-  "tokens": 1.3851656111111113,
-  "lastMs": 1784304053732
+  "tokens": 2.082377277777778,
+  "lastMs": 1784305846562
  },
  "lastAuditDay": "2026-07-17"
 }
