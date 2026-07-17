@@ -17,15 +17,15 @@ export const boKey = (eventSlug, form) => `${eventSlug || "no-event"}|${form}`;
 export function loadStore(file = STORE_PATH) {
   try {
     const s = JSON.parse(fs.readFileSync(file, "utf8"));
-    return { published: s.published || [], parked: s.parked || [], zeroStreak: s.zeroStreak || 0, daySpend: s.daySpend || null, file };
+    return { published: s.published || [], parked: s.parked || [], zeroStreak: s.zeroStreak || 0, daySpend: s.daySpend || null, pace: s.pace || null, file };
   } catch {
-    return { published: [], parked: [], zeroStreak: 0, daySpend: null, file };
+    return { published: [], parked: [], zeroStreak: 0, daySpend: null, pace: null, file };
   }
 }
 
 function save(store) {
   fs.mkdirSync(path.dirname(store.file), { recursive: true });
-  const out = { published: store.published.slice(-CAP), parked: store.parked.slice(-500), zeroStreak: store.zeroStreak || 0, daySpend: store.daySpend || null };
+  const out = { published: store.published.slice(-CAP), parked: store.parked.slice(-500), zeroStreak: store.zeroStreak || 0, daySpend: store.daySpend || null, pace: store.pace || null };
   fs.writeFileSync(store.file, JSON.stringify(out, null, 1));
 }
 
@@ -93,6 +93,14 @@ export function parkedTries(store, eventSlug, form, { now = new Date() } = {}) {
     return Infinity;
   }
   return p.tries || 0;
+}
+
+// PARK COOLDOWN (P3 — the retry-burn fix): a freshly-parked entry (held this tick) must not re-attempt on
+// the very next tick — the same thin story re-burned writer+judge every hour until its 3-strike death
+// (~$0.06-0.09/attempt). A parked-but-not-dead entry cools for 2h; the material is usually richer by then.
+export function parkCooling(store, eventSlug, form, { now = new Date(), cooldownMs = 2 * 3600e3 } = {}) {
+  const p = store.parked.find((x) => x.key === boKey(eventSlug, form));
+  return !!(p && !p.dead && (p.tries || 0) >= 1 && p.at && (now.getTime() - Date.parse(p.at)) < cooldownMs);
 }
 
 // DAILY SPEND CAP (owner cost mandate): running LA-day spend, persisted in the store. borun refuses to
