@@ -14,7 +14,7 @@
       "score": null,
       "cat": "movies/reactions",
       "format": [],
-      "cuts": 2,
+      "cuts": 3,
       "broken": []
     }
   },
@@ -35,7 +35,7 @@
     "strengths": [],
     "weaknesses": [],
     "deterministic": {
-      "words": 296,
+      "words": 226,
       "h2s": 2,
       "h2Questions": 2,
       "internalLinks": 0,
@@ -46,11 +46,11 @@
       "kwInTitle": true,
       "kwInFirst100": true,
       "kwInH2": false,
-      "maxSentence": 38,
-      "avgSentence": 17,
-      "flesch": 50,
+      "maxSentence": 26,
+      "avgSentence": 15,
+      "flesch": 57,
       "bannedTells": 0,
-      "fillerPraise": 0,
+      "fillerPraise": 1,
       "kwExact": 0,
       "hardBlocks": []
     },
@@ -61,9 +61,81 @@
     "internalLinks": 0,
     "failed": [
       "tweet grounding",
+      "body ≥ 220w",
       "≥1200px legal image",
       "credit"
     ]
   },
-  "ms": 87934
+  "ms": 95079,
+  "previousRuns": [
+    {
+      "id": "news-tom-cruise-praises-christopher-nolan-the-odyssey",
+      "slug": "tom-cruise-praises-christopher-nolan-s-the-odyssey-i-can-t-wait-to-see",
+      "status": "needs_review",
+      "stages": {
+        "attempt1": {
+          "score": null,
+          "cat": "movies/reactions",
+          "format": [],
+          "cuts": 3,
+          "broken": []
+        },
+        "attempt2": {
+          "score": null,
+          "cat": "movies/reactions",
+          "format": [],
+          "cuts": 2,
+          "broken": []
+        }
+      },
+      "editorial": {
+        "status": "confirmed",
+        "entity": "Tom Cruise",
+        "work": {
+          "title": "The Odyssey",
+          "year": null,
+          "medium": "movie"
+        },
+        "outlet": "hollywoodreporter.com"
+      },
+      "holdReason": "reaction: required embed missing",
+      "scorecard": {
+        "score": null,
+        "subscores": {},
+        "strengths": [],
+        "weaknesses": [],
+        "deterministic": {
+          "words": 296,
+          "h2s": 2,
+          "h2Questions": 2,
+          "internalLinks": 0,
+          "externalLinks": 0,
+          "hasSources": false,
+          "faqCount": 4,
+          "ktCount": 4,
+          "kwInTitle": true,
+          "kwInFirst100": true,
+          "kwInH2": false,
+          "maxSentence": 38,
+          "avgSentence": 17,
+          "flesch": 50,
+          "bannedTells": 0,
+          "fillerPraise": 0,
+          "kwExact": 0,
+          "hardBlocks": []
+        },
+        "hardBlocks": []
+      },
+      "audit": {
+        "ok": false,
+        "internalLinks": 0,
+        "failed": [
+          "tweet grounding",
+          "≥1200px legal image",
+          "credit"
+        ]
+      },
+      "ms": 87934
+    }
+  ]
 }
