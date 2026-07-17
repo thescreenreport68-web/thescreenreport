@@ -1,0 +1,129 @@
+{
+  "ts": "2026-07-17T10:40:15.539Z",
+  "mode": "from-find",
+  "review": true,
+  "published": [
+    "collin-gosselin-candace-cameron-bure-more-joining-special-forces"
+  ],
+  "topics": 1,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 0,
+  "costUSD": 0.015338,
+  "costPerPublished": 0.015338,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 6,
+      "in": 12165,
+      "out": 2292,
+      "usd": 0.0093795
+    },
+    "qwen/qwen3-235b-a22b-2507": {
+      "calls": 1,
+      "in": 1003,
+      "out": 386,
+      "usd": 0.00030257
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 2,
+      "in": 1470,
+      "out": 662,
+      "usd": 0.00028533
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 5,
+      "in": 14394,
+      "out": 5318,
+      "usd": 0.004560417000000001
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 5,
+      "in": 5607,
+      "out": 623,
+      "usd": 0.0008099
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2398,
+      "out": 290,
+      "usd": 0.0014444000000000002,
+      "ms": 2238
+    },
+    "synthesizer": {
+      "calls": 2,
+      "errors": 1,
+      "in": 1003,
+      "out": 386,
+      "usd": 0.00038898000000000003,
+      "ms": 93620
+    },
+    "writer": {
+      "calls": 4,
+      "errors": 0,
+      "in": 13714,
+      "out": 5026,
+      "usd": 0.004863060000000001,
+      "ms": 166056
+    },
+    "verify": {
+      "calls": 6,
+      "errors": 1,
+      "in": 9767,
+      "out": 1303,
+      "usd": 0.0053713,
+      "ms": 13826
+    },
+    "judge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1425,
+      "out": 175,
+      "usd": 0.0002125,
+      "ms": 913
+    },
+    "voice": {
+      "calls": 1,
+      "errors": 0,
+      "in": 453,
+      "out": 296,
+      "usd": 0.00009405,
+      "ms": 9855
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 680,
+      "out": 292,
+      "usd": 0.00025568,
+      "ms": 11755
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 361,
+      "out": 94,
+      "usd": 0.0000737,
+      "ms": 907
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 200,
+      "out": 44,
+      "usd": 0.0000376,
+      "ms": 417
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1650,
+      "out": 109,
+      "usd": 0.0002086,
+      "ms": 3231
+    }
+  }
+}
