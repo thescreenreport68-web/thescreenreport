@@ -1,0 +1,94 @@
+{
+ "runId": "run-2026-07-17T12-31-28",
+ "mode": "live",
+ "startedAt": "2026-07-17T12:31:28.429Z",
+ "films": 6,
+ "published": [],
+ "held": [
+  {
+   "tag": "the-odyssey-ev-other×BO-UPDATE",
+   "reason": "fidelity: 5 unsupported figures/claims — draft-level failure",
+   "score": 0
+  },
+  {
+   "tag": "enola-holmes-3-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "words 142 < 180 (owner-set ~200-word minimum) | soft-floor engagement 4 < 5",
+   "score": 50
+  },
+  {
+   "tag": "shipwrecked-nightmare-at-sea-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "2 unverified claim(s) cut, unrecovered",
+   "score": 60
+  },
+  {
+   "tag": "voicemails-for-isabelle-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "score": 65
+  },
+  {
+   "tag": "the-doorman-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "words 107 < 180 (owner-set ~200-word minimum)",
+   "score": 70
+  },
+  {
+   "tag": "little-brother-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "words 146 < 180 (owner-set ~200-word minimum)",
+   "score": 60
+  }
+ ],
+ "rejected": [],
+ "skipped": [],
+ "blocked": [],
+ "zeroStreak": 2,
+ "daySpend": {
+  "laDay": "2026-07-17",
+  "usd": 0.1759
+ },
+ "finishedAt": "2026-07-17T12:44:12.928Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3260,
+    "out": 576,
+    "usd": 0.00019,
+    "ms": 2910
+   },
+   "gatherer": {
+    "calls": 6,
+    "errors": 0,
+    "in": 14388,
+    "out": 1660,
+    "usd": 0.0021,
+    "ms": 18813
+   },
+   "synthesizer": {
+    "calls": 6,
+    "errors": 0,
+    "in": 4302,
+    "out": 2989,
+    "usd": 0.00093,
+    "ms": 65652
+   },
+   "writer": {
+    "calls": 11,
+    "errors": 0,
+    "in": 36026,
+    "out": 11683,
+    "usd": 0.0331,
+    "ms": 156323
+   },
+   "qa": {
+    "calls": 31,
+    "errors": 0,
+    "in": 86844,
+    "out": 12766,
+    "usd": 0.05797,
+    "ms": 94075
+   }
+  },
+  "totalUsd": 0.09429
+ },
+ "openrouterTotalUsd": 0.09099
+}
