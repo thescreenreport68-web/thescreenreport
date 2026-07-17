@@ -52,39 +52,41 @@ async function validate(url) {
   } catch { return null; }
 }
 
-export async function huntImage(story, pack) {
+// Collect up to 3 validated candidates — the framing/QC stage rejects composites and
+// face-cut crops and moves to the NEXT candidate (owner mandate 2026-07-17: placement
+// must be perfect; one bad source image must never ship a bad card).
+export async function huntImages(story, pack, { max = 3 } = {}) {
+  const found = [];
+  const seen = new Set();
+  const push = (buf, provenance) => { if (!seen.has(provenance.imageUrl)) { seen.add(provenance.imageUrl); found.push({ buf, provenance }); } };
   // our own published article's hero image first — its lane already vetted it (Tier A-own)
   if (pack.ownHeroUrl) {
     const v = await validate(pack.ownHeroUrl);
     if (v) {
-      return {
-        buf: v.buf,
-        provenance: {
-          imageUrl: pack.ownHeroUrl, articleUrl: `https://thescreenreport.com/${pack.ownSlug}/`, carrier: "thescreenreport.com",
-          tier: "A-own", width: v.width, height: v.height, format: v.format,
-          fetchedAt: new Date().toISOString(),
-          creditLine: pack.ownHeroCredit || "Photo: press asset",
-        },
-      };
+      push(v.buf, {
+        imageUrl: pack.ownHeroUrl, articleUrl: `https://thescreenreport.com/${pack.ownSlug}/`, carrier: "thescreenreport.com",
+        tier: "A-own", width: v.width, height: v.height, format: v.format,
+        fetchedAt: new Date().toISOString(),
+        creditLine: pack.ownHeroCredit || "Photo: press asset",
+      });
     }
   }
   const articleUrls = [...new Set([...(pack.sourceUrls || []), ...(story.sourceLinks || [])])].slice(0, 4);
   for (const articleUrl of articleUrls) {
+    if (found.length >= max) break;
     for (const imgUrl of (await candidatesFrom(articleUrl)).slice(0, 3)) {
+      if (found.length >= max) break;
       const v = await validate(imgUrl);
       if (!v) continue;
       const carrier = dom(new URL(articleUrl).hostname);
-      return {
-        buf: v.buf,
-        provenance: {
-          imageUrl: imgUrl, articleUrl, carrier,
-          tier: "A", // whitelisted press-asset carrier (og:image of the covering trade article)
-          width: v.width, height: v.height, format: v.format,
-          fetchedAt: new Date().toISOString(),
-          creditLine: `Photo via ${carrier.replace(/\.(com|net|org)$/, "")}`,
-        },
-      };
+      push(v.buf, {
+        imageUrl: imgUrl, articleUrl, carrier,
+        tier: "A", // whitelisted press-asset carrier (og:image of the covering trade article)
+        width: v.width, height: v.height, format: v.format,
+        fetchedAt: new Date().toISOString(),
+        creditLine: `Photo via ${carrier.replace(/\.(com|net|org)$/, "")}`,
+      });
     }
   }
-  return null; // fail closed — imageless stories don't become cards
+  return found; // [] = fail closed — imageless stories don't become cards
 }
