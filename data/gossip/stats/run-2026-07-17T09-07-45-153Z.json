@@ -1,0 +1,93 @@
+{
+  "ts": "2026-07-17T09:07:45.153Z",
+  "mode": "from-find",
+  "review": true,
+  "published": [
+    "benny-blanco-reveals-selena-gomez-gave-him-an-out-before-they-went-pub"
+  ],
+  "topics": 2,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 1,
+  "costUSD": 0.028778,
+  "costPerPublished": 0.028778,
+  "byModel": {
+    "deepseek/deepseek-v3.2": {
+      "calls": 7,
+      "in": 30045,
+      "out": 7721,
+      "usd": 0.01149964
+    },
+    "google/gemini-2.5-flash": {
+      "calls": 10,
+      "in": 32555,
+      "out": 2588,
+      "usd": 0.0162365
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 4,
+      "in": 8097,
+      "out": 581,
+      "usd": 0.0010421
+    }
+  },
+  "byRole": {
+    "dedup": {
+      "calls": 1,
+      "errors": 0,
+      "in": 322,
+      "out": 14,
+      "usd": 0.00007882000000000001,
+      "ms": 1683
+    },
+    "editor": {
+      "calls": 2,
+      "errors": 0,
+      "in": 4522,
+      "out": 411,
+      "usd": 0.0023841,
+      "ms": 2752
+    },
+    "writer": {
+      "calls": 6,
+      "errors": 0,
+      "in": 29723,
+      "out": 7707,
+      "usd": 0.009456670000000002,
+      "ms": 261336
+    },
+    "verify": {
+      "calls": 8,
+      "errors": 0,
+      "in": 28033,
+      "out": 2177,
+      "usd": 0.013852400000000003,
+      "ms": 14404
+    },
+    "judge": {
+      "calls": 2,
+      "errors": 0,
+      "in": 5721,
+      "out": 438,
+      "usd": 0.0007473,
+      "ms": 2205
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2087,
+      "out": 92,
+      "usd": 0.0002455,
+      "ms": 1299
+    },
+    "linker": {
+      "calls": 1,
+      "errors": 0,
+      "in": 289,
+      "out": 51,
+      "usd": 0.000049300000000000006,
+      "ms": 679
+    }
+  }
+}
