@@ -43,7 +43,7 @@ import { styleEmphasis, buildAss } from "./agents/subs.mjs";
 import { render } from "./agents/render.mjs";
 import { makeCover } from "./agents/cover.mjs";
 import { watchQC } from "./agents/watchqc.mjs";
-import { publish, publishHosted, hostFile, verifyLive } from "./agents/publish.mjs";
+import { publish, publishHosted, hostFile, verifyLive, acquireStoryLock } from "./agents/publish.mjs";
 import { bufferStatus } from "./lib/buffer.mjs";
 import { planSlots, upcomingSlotsToday } from "./agents/slots.mjs";
 import { collect } from "./agents/analytics.mjs";
@@ -427,6 +427,14 @@ async function drainBuiltUnposted({ day, live }) {
     const [assign] = planSlots([{ id: meta.slug }], { filledSlots: filled });
     if (!assign) { console.log(`  drain: no open slot today for ${meta.slug} — will retry next run`); continue; }
     try {
+      // the drain posts too → same atomic lock (a drained reel must be as double-proof as a fresh one)
+      const lock = await acquireStoryLock(meta.slug, { via: "drain", slot: assign.slot, day });
+      if (!lock.acquired) {
+        console.warn(`  🔒 drain skip ${meta.slug}: ${lock.reason}`);
+        meta.drainedAt = new Date().toISOString(); // lock exists = it IS posted somewhere — stop retrying
+        writeJson(metaFile, meta);
+        continue;
+      }
       const pub = await publishHosted({ id: meta.slug, caption: meta.caption, platformMeta: meta.platformMeta, videoUrl, coverUrl: meta.coverUrl || null, whenISO: assign.whenISO, live });
       for (const r of pub.results) {
         recordPosted({
@@ -623,6 +631,13 @@ async function main() {
         continue;
       }
       try {
+        // ATOMIC STORY LOCK (owner incident 2026-07-17): a stale/lost ledger allowed the same story to
+        // post twice with different titles. The remote lock is created atomically BEFORE any platform
+        // sees the video — if any run anywhere ever posted this slug, acquisition fails and we SKIP.
+        if (live) {
+          const lock = await acquireStoryLock(job.id, { slot: slotLabel, day });
+          if (!lock.acquired) { console.warn(`  🔒 SKIP ${job.id}: ${lock.reason}`); continue; }
+        }
         const pub = await publish({ job, mp4: job.render.mp4, cover: job.render.cover, whenISO, live });
         job.publish = { ...pub, slot: slotLabel };
         saveJob(job);

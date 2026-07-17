@@ -66,16 +66,24 @@ jobs:
     # always reaches the publish+ledger-commit steps. Extra minutes are free (idle after the day is full).
     timeout-minutes: 120
     steps:
+      # ref: LIVE branch head, never the trigger-time SHA (owner incident 2026-07-17: a schedule run
+      # pins github.sha at TRIGGER time — a run created at 16:02 checked out a tree missing the
+      # previous run's 16:05 ledger push, could not see Sam Neill was already posted, and DOUBLE-POSTED
+      # it. Checking out the branch ref resolves at RUN time, after the concurrency queue serializes.)
       - uses: actions/checkout@v4
+        with:
+          ref: rebuild-trending-news
+      - name: sync to the true latest ledger (defense-in-depth vs the trigger-SHA race)
+        run: git pull --ff-only origin rebuild-trending-news || true
       # FRESH ARTICLE SUPPLY (owner audit 2026-07-16, root-caused): the news/gossip/inside lanes
-      # publish articles to MAIN (hourly), but this branch's content/articles FROZE on 07-10 — the
-      # reels lane was living off a 6-day-old backlog until the freshness window emptied it ("scout:
-      # no viable candidates today", the 7/day starvation + the stale-date failure class). Overlay
-      # main's articles at run start; the ledger-commit step only adds data/ig, so nothing is pushed back.
+      # publish articles to MAIN (hourly), but this branch's content/articles FROZE on 07-10.
+      # `git restore --worktree` updates ONLY the working tree — the INDEX stays clean, so the
+      # ledger-commit step can never sweep 400+ article files into the state commit (the original
+      # `git checkout origin/main --` variant STAGED them all — index pollution). (fixed 2026-07-17)
       - name: fresh article supply (articles live on main)
         run: |
           git fetch --depth=1 origin main
-          git checkout origin/main -- content/articles
+          git restore --source=origin/main --worktree -- content/articles
           echo "articles from main: $(ls content/articles/*.md | wc -l)"
       - uses: actions/setup-node@v4
         with: { node-version: 20 }
@@ -154,6 +162,9 @@ jobs:
           TSR_GH_TOKEN: ${{ secrets.TSR_GH_TOKEN }}
         run: |
           git config user.name "tsr-ig-bot" && git config user.email "bot@thescreenreport.com"
+          # the articles overlay is WORKTREE-only, but belt-and-braces: never let non-ledger paths
+          # ride along in the state commit (index pollution was one leg of the 07-17 double-post).
+          git reset -q -- . 2>/dev/null || true
           # `git add -A data/ig` stages every non-ignored ledger change and is a no-op for
           # missing files — the old enumerated list aborted atomically (exit 128) whenever
           # any listed path was absent, silently committing NOTHING → double-post. (audit)
@@ -164,7 +175,28 @@ jobs:
           REMOTE="https://x-access-token:${TSR_GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
           for i in 1 2 3 4 5; do
             git rebase --abort 2>/dev/null || true   # clear any halted rebase from a prior conflicting attempt
-            git pull --rebase --autostash "$REMOTE" ${GITHUB_REF_NAME} && git push "$REMOTE" HEAD:${GITHUB_REF_NAME} && exit 0
+            if git pull --rebase --autostash "$REMOTE" ${GITHUB_REF_NAME}; then
+              git push "$REMOTE" HEAD:${GITHUB_REF_NAME} && exit 0
+            else
+              # CONFLICT-PROOF MERGE (owner incident 2026-07-17: a rebase conflict here lost the run's
+              # posted rows → the next run DOUBLE-POSTED the same stories). Ledgers are append-mostly
+              # JSON → resolve every conflict as a UNION (JSON) / ours (binary), then continue.
+              echo "rebase conflict — union-merging ledgers"
+              for f in $(git diff --name-only --diff-filter=U); do
+                case "$f" in
+                  *.json)
+                    # rebase swaps sides: :3 = THIS run's commit being replayed, :2 = the remote base.
+                    # The run's rows must win per-key (they are the rows a failed push would lose).
+                    git show :3:"$f" > /tmp/run.json 2>/dev/null || echo "" > /tmp/run.json
+                    git show :2:"$f" > /tmp/remote.json 2>/dev/null || echo "" > /tmp/remote.json
+                    node pipeline/ig/scripts/merge-ledgers.mjs "$f" /tmp/run.json /tmp/remote.json || git checkout --theirs -- "$f" || true
+                    ;;
+                  *) git checkout --theirs -- "$f" 2>/dev/null || git checkout --ours -- "$f" || true ;;
+                esac
+                git add "$f"
+              done
+              GIT_EDITOR=true git rebase --continue && git push "$REMOTE" HEAD:${GITHUB_REF_NAME} && exit 0
+            fi
             echo "push attempt $i failed — retrying"; sleep $((i * 10))
           done
           echo "::error::ig ledger could not be pushed — manual reconcile required" && exit 1

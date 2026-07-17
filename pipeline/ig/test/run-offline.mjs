@@ -838,5 +838,28 @@ await t("discovery: story-first rules — unknown+hot qualifies, famous+personal
   assert.equal(entityFromCandidate({ title: "", imageAlt: "Pictured: someone at the premiere event yesterday" }), null, "descriptive imageAlt rejected");
 });
 
+await t("ledger merge: rebase conflicts resolve as a UNION — posted rows can never be lost again", async () => {
+  const { execFileSync } = await import("node:child_process");
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), "merge-test-"));
+  const script = path.resolve("pipeline/ig/scripts/merge-ledgers.mjs");
+  // posted.json: the run's rows AND the remote's rows both survive (this exact conflict lost 5 stories on 07-17)
+  fs.writeFileSync(path.join(dir, "run.json"), JSON.stringify({ posts: [{ slug: "sam-neill", platform: "youtube", postId: "B", whenISO: "17:00" }] }));
+  fs.writeFileSync(path.join(dir, "remote.json"), JSON.stringify({ posts: [{ slug: "wai-ching-ho", platform: "youtube", postId: "A", whenISO: "16:00" }] }));
+  execFileSync("node", [script, path.join(dir, "out.json"), path.join(dir, "run.json"), path.join(dir, "remote.json")]);
+  const merged = JSON.parse(fs.readFileSync(path.join(dir, "out.json"), "utf8"));
+  assert.equal(merged.posts.length, 2, "both sides' posted rows kept");
+  // identical rows dedupe; generic ledgers key-merge with the run winning per key
+  fs.writeFileSync(path.join(dir, "run2.json"), JSON.stringify({ "slug-a": { at: "new" }, "slug-b": { at: "x" } }));
+  fs.writeFileSync(path.join(dir, "remote2.json"), JSON.stringify({ "slug-a": { at: "old" }, "slug-c": { at: "y" } }));
+  execFileSync("node", [script, path.join(dir, "out2.json"), path.join(dir, "run2.json"), path.join(dir, "remote2.json")]);
+  const m2 = JSON.parse(fs.readFileSync(path.join(dir, "out2.json"), "utf8"));
+  assert.equal(Object.keys(m2).length, 3, "key union");
+  assert.equal(m2["slug-a"].at, "new", "the run's value wins per key");
+  // corrupt side → the run's data survives
+  fs.writeFileSync(path.join(dir, "bad.json"), "{{{");
+  execFileSync("node", [script, path.join(dir, "out3.json"), path.join(dir, "run.json"), path.join(dir, "bad.json")]);
+  assert.equal(JSON.parse(fs.readFileSync(path.join(dir, "out3.json"), "utf8")).posts.length, 1, "corrupt remote → run rows kept");
+});
+
 console.log(`\n${passed} passed, ${failed} failed`);
 process.exit(failed ? 1 : 0);

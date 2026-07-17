@@ -150,6 +150,37 @@ export async function hostFile(localPath, destName) {
   return publicUrl;
 }
 
+// ── ATOMIC STORY LOCK (owner incident 2026-07-17: two runs double-posted the same stories after a
+// ledger push race + a rebase-conflict save failure — 7 duplicate stories reached YouTube/IG/FB).
+// The local ledger can be stale or lost; this lock CANNOT: it is a per-slug file created on the
+// REMOTE branch via the GitHub contents API, which atomically FAILS (422) when the file already
+// exists. First run to create it owns the story forever; every other run skips. FAIL-CLOSED: if the
+// lock cannot be verified (API down), we do NOT post — a missed slot recovers via the drain tomorrow;
+// a duplicate post to the audience does not recover. ──────────────────────────────────────────────
+export async function acquireStoryLock(slug, meta = {}) {
+  const [owner, repo] = String(process.env.GITHUB_REPOSITORY || "thescreenreport68-web/thescreenreport").split("/");
+  const branch = process.env.GITHUB_REF_NAME || "rebuild-trending-news";
+  const url = `${GH_API}/repos/${owner}/${repo}/contents/data/ig/locks/${slug}.json`;
+  const body = JSON.stringify({
+    message: `ig: post-lock ${slug}`,
+    branch,
+    content: Buffer.from(JSON.stringify({ slug, at: new Date().toISOString(), ...meta })).toString("base64"),
+    // no `sha` → the API only CREATES; an existing file → 422 "sha wasn't supplied" → lock held elsewhere
+  });
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    try {
+      const res = await fetchWithTimeout(url, { method: "PUT", headers: ghHeaders(), body }, 30000);
+      if (res.ok) return { acquired: true };
+      if (res.status === 422 || res.status === 409) return { acquired: false, reason: "already posted (lock exists)" };
+      if (attempt === 3) return { acquired: false, reason: `lock check failed (HTTP ${res.status}) — fail-closed` };
+    } catch (e) {
+      if (attempt === 3) return { acquired: false, reason: `lock check failed (${String(e.message).slice(0, 60)}) — fail-closed` };
+    }
+    await sleep(2000 * attempt);
+  }
+  return { acquired: false, reason: "lock check failed — fail-closed" };
+}
+
 const zHeaders = () => ({ Authorization: `Bearer ${process.env.ZERNIO_API_KEY}`, "Content-Type": "application/json" });
 
 // Create a Zernio post with RETRY — a transient 5xx/429 was dropping a single platform (Bam's IG
