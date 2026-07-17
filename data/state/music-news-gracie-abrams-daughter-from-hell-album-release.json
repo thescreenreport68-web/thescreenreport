@@ -1,0 +1,76 @@
+{
+  "id": "music-news-gracie-abrams-daughter-from-hell-album-release",
+  "slug": "gracie-abrams-daughter-from-hell-has-arrived",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": null,
+      "cat": "music/news",
+      "format": [
+        "body 310w < 350",
+        "a 61-word run-on sentence (>55 — split it)"
+      ],
+      "cuts": 0,
+      "broken": []
+    },
+    "attempt2": {
+      "score": null,
+      "cat": "music/news",
+      "format": [
+        "body 295w < 350"
+      ],
+      "cuts": 0,
+      "broken": []
+    }
+  },
+  "editorial": {
+    "status": "confirmed",
+    "entity": "Gracie Abrams",
+    "work": {
+      "title": "Daughter From Hell",
+      "year": null,
+      "medium": null
+    },
+    "outlet": "rollingstone.com"
+  },
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
+    "deterministic": {
+      "words": 295,
+      "h2s": 3,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": true,
+      "faqCount": 4,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 34,
+      "avgSentence": 18,
+      "flesch": 58,
+      "bannedTells": 1,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": [
+        "body 295w < 350"
+      ]
+    },
+    "hardBlocks": []
+  },
+  "score": null,
+  "category": "music",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 1,
+    "failed": [
+      "body ≥ 350w"
+    ]
+  },
+  "ms": 92997
+}

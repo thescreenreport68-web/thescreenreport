@@ -1,27 +1,320 @@
 {
-  "runId": "run-2026-07-17T03-30-36",
-  "builtAt": "2026-07-17T03:31:39.437Z",
-  "count": 17,
+  "runId": "run-2026-07-17T04-30-39",
+  "builtAt": "2026-07-17T04:31:41.994Z",
+  "count": 13,
   "topics": [
     {
-      "id": "trailer-gal-gadot-the-runner-prime-video-trailer",
-      "slug": "gal-gadot-can-t-stop-running-in-new-trailer-for-prime-video-thriller-t",
-      "title": "Gal Gadot Can't Stop Running In New Trailer For Prime Video Thriller 'The Runner'",
+      "id": "news-god-of-war-series-kratos-recast-ryan-hurst-injury",
+      "slug": "god-of-war-to-recast-ryan-hurst-as-kratos-after-set-stunt-injury",
+      "title": "‘God of War’ to Recast Ryan Hurst as Kratos After Set Stunt Injury",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "high",
+      "eventSlug": "god-of-war-series-kratos-recast-ryan-hurst-injury",
+      "primaryKeyword": "God of War series casting",
+      "primaryEntity": "God of War",
+      "entities": [
+        "God of War (TV series)",
+        "Ryan Hurst",
+        "Kratos"
+      ],
+      "angle": "Prime Video's 'God of War' series is recasting the role of Kratos after actor Ryan Hurst suffered a bicep injury requiring surgery.",
+      "tmdbType": "movie",
+      "source": "rss:TheWrap",
+      "sources": [
+        {
+          "outlet": "TheWrap",
+          "tier": 7,
+          "url": "https://www.thewrap.com/creative-content/tv-shows/god-of-war-halts-production-recasts-ryan-hurst-after-injury/",
+          "ageMin": 26,
+          "headline": "‘God of War’ to Recast Ryan Hurst as Kratos After Set Stunt Injury",
+          "summary": "The \"Sons of Anarchy\" alum reportedly suffered from a torn bicep, which required surgery The post ‘God of War’ to Recast Ryan Hurst as Kratos After Set Stunt Injury appeared first on TheWrap ."
+        },
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/tv/news/god-of-war-recast-kratos-actor-ryan-hurst-injury-1236814409/",
+          "ageMin": 34,
+          "headline": "God of War Shocker: Kratos Actor Ryan Hurst Recast After On-Set Injury",
+          "summary": "Prime Video will recast the lead role on its upcoming adaptation of God of War after star Ryan Hurst was injured on set, Variety has confirmed. Hurst had been set to play Kratos, the titular god of war, and Prime Video even released a first look at Hurst in the role this past February. But [ ]"
+        },
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/god-of-war-recast-kratos-role-ryan-hurst-injured-on-set-1236984409/",
+          "ageMin": 60,
+          "headline": "God Of War To Recast Lead Kratos After Ryan Hurst Suffers Injury On Set Of Prime Video Series",
+          "summary": "EXCLUSIVE: This is a shocker: Prime Video s God Of War will have a new actor playing Kratos as the lead role in the high profile fantasy drama series is being recast, Deadline has learned. The decision, made after a careful consideration by the studios on the show, Sony Pictures Television and Amazon MGM Studios, comes [ ]"
+        }
+      ],
+      "ageMin": 26,
+      "_cand": {
+        "key": "rss:-god-of-war-to-recast-ryan-hurst-as-kratos-after-set-stunt-i",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 3,
+      "verification": {
+        "tier1Count": 3,
+        "tier1Owners": 2,
+        "outletCount": 3,
+        "outlets": [
+          "TheWrap",
+          "Variety",
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": null,
+        "framing": "plain",
+        "status": "CONFIRMED",
+        "publishable": true
+      },
+      "priority": 120,
+      "signals": {
+        "recency": 24,
+        "corroboration": 24,
+        "status": 25,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 15,
+        "softTv": 0
+      },
+      "tierClass": "S"
+    },
+    {
+      "id": "news-the-odyssey-film-announcement",
+      "slug": "ludwig-g-ransson-used-ancient-greek-instruments-scrap-metals-and-gongs",
+      "title": "Ludwig Göransson Used Ancient Greek Instruments, Scrap Metals and Gongs for 'The Odyssey' Score",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "the-odyssey-film-announcement",
+      "primaryKeyword": "The Odyssey score",
+      "primaryEntity": "The Odyssey",
+      "entities": [
+        "The Odyssey (film)",
+        "Ludwig Göransson",
+        "Christopher Nolan"
+      ],
+      "angle": "Composer Ludwig Göransson reunites with Christopher Nolan for 'The Odyssey' score, utilizing unique ancient instruments and materials.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/artisans/news/the-odyssey-ludwig-goransson-film-score-1236813153/",
+          "ageMin": 19,
+          "headline": "The Sound of The Odyssey : Composer Ludwig Göransson Used Ancient Greek Instruments, Scrap Metals and Gongs",
+          "summary": "Composer Ludwig Göransson has reunited with Christopher Nolan to score The Odyssey, marking their third collaboration after Tenet and Oppenheimer. Earlier this year, Göransson’s work on Star Wars: The Mandalorian and Grogu showcased his use of heavy synths and guitar-based orchestrations. However, for The Odyssey, Göransson ventures into new territory. Nolan instructed Göransson not to use [ ]"
+        }
+      ],
+      "ageMin": 19,
+      "_cand": {
+        "key": "rss:the-sound-of-the-odyssey-composer-ludwig-g-ransson-used-anci",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 113,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "softTv": 0,
+        "radar": 26
+      },
+      "radarKind": "movie-in-theaters",
+      "tierClass": "A"
+    },
+    {
+      "id": "news-the-odyssey-cast-guide",
+      "slug": "the-odyssey-cast-guide-all-the-heroes-gods-and-characters-in-christoph",
+      "title": "The Odyssey Cast Guide: All the Heroes, Gods and Characters in Christopher Nolan s Greek Epic",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "the-odyssey-cast-guide",
+      "primaryKeyword": "The Odyssey movie",
+      "primaryEntity": "The Odyssey",
+      "entities": [
+        "The Odyssey (2025 film)",
+        "Christopher Nolan",
+        "Matt Damon"
+      ],
+      "angle": "Guide to the characters in Christopher Nolan's upcoming adaptation of Homer's epic.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/lists/odyssey-cast-characters-christopher-nolan/",
+          "ageMin": 301,
+          "headline": "The Odyssey Cast Guide: All the Heroes, Gods and Characters in Christopher Nolan s Greek Epic",
+          "summary": "Christopher Nolan s adaptation of Homer s Greek epic The Odyssey is, well, epic. Releasing in theaters July 17, Nolan’s latest film reimagines the famous Greek tale of Odysseus, starring Matt Damon as the king of Ithaca. After teaching the Trojans that maybe you should look a giant, wooden gift horse in the mouth, Odysseus and his [ ]"
+        }
+      ],
+      "ageMin": 301,
+      "_cand": {
+        "key": "rss:the-odyssey-cast-guide-all-the-heroes-gods-and-characters-in",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 103,
+      "signals": {
+        "recency": 9,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "softTv": 0,
+        "radar": 26
+      },
+      "radarKind": "movie-in-theaters",
+      "tierClass": "A"
+    },
+    {
+      "id": "music-news-gracie-abrams-daughter-from-hell-album-release",
+      "slug": "gracie-abrams-daughter-from-hell-has-arrived",
+      "title": "Gracie Abrams Daughter From Hell Has Arrived",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "gracie-abrams-daughter-from-hell-album-release",
+      "primaryKeyword": "Gracie Abrams new album",
+      "primaryEntity": "Gracie Abrams",
+      "entities": [
+        "Daughter From Hell"
+      ],
+      "angle": "Singer-songwriter Gracie Abrams has released her third studio album, 'Daughter From Hell'.",
+      "tmdbType": "movie",
+      "source": "rss:Rolling Stone",
+      "sources": [
+        {
+          "outlet": "Rolling Stone",
+          "tier": 7,
+          "url": "https://www.rollingstone.com/music/music-news/gracie-abrams-daughter-from-hell-album-release-1235594838/",
+          "ageMin": 30,
+          "headline": "Gracie Abrams Daughter From Hell Has Arrived",
+          "summary": "The singer-songwriter's third studio album has arrived, featuring hit singles \"Hit the Wall\" and \"Look at My Life\""
+        },
+        {
+          "outlet": "Billboard",
+          "tier": 7,
+          "url": "https://www.billboard.com/music/pop/gracie-abrams-daughter-from-hell-1236295999/",
+          "ageMin": 31,
+          "headline": "Gracie Abrams Daughter From Hell Has Arrived: Stream It Now",
+          "summary": "The \"Hit the Wall\" singer has said her third release is her favorite to date."
+        }
+      ],
+      "ageMin": 30,
+      "_cand": {
+        "key": "rss:gracie-abrams-daughter-from-hell-has-arrived",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 2,
+      "verification": {
+        "tier1Count": 2,
+        "tier1Owners": 1,
+        "outletCount": 2,
+        "outlets": [
+          "Rolling Stone",
+          "Billboard"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Rolling Stone",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 77,
+      "signals": {
+        "recency": 24,
+        "corroboration": 18,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 8,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "trailer-the-runner-gal-gadot-trailer",
+      "slug": "gal-gadot-stars-in-new-trailer-for-prime-video-thriller-the-runner",
+      "title": "Gal Gadot Stars in New Trailer for Prime Video Thriller 'The Runner'",
       "contentType": "trailer",
       "formatTag": "trailer",
       "category": "tv",
       "subcategory": "trailers",
       "eventType": "trailer",
       "sensitivity": "normal",
-      "eventSlug": "gal-gadot-the-runner-prime-video-trailer",
-      "primaryKeyword": "gal gadot the runner trailer",
+      "eventSlug": "the-runner-gal-gadot-trailer",
+      "primaryKeyword": "The Runner trailer",
       "primaryEntity": "The Runner",
       "entities": [
-        "The Runner (TV series)",
         "Gal Gadot",
         "Prime Video"
       ],
-      "angle": "Gal Gadot stars in the new trailer for the upcoming Prime Video thriller 'The Runner'.",
+      "angle": "Prime Video has released a new trailer for the upcoming thriller 'The Runner' starring Gal Gadot.",
       "tmdbType": "movie",
       "source": "gnews:IMDb",
       "sources": [
@@ -29,12 +322,12 @@
           "outlet": "IMDb",
           "tier": 5,
           "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1tSmJ5ZDVfeVotUXY2bEZyRGh2blZpck5QZkpyR2VaR2tsdVdJOXluMFhmbWhyNzVrU0h2bVJCUjl3dnlkUHZycXV5bkhrdTdTc3dfUjcxY1A4VWswMzM5bkhwOEU2QQ?oc=5",
-          "ageMin": 66,
+          "ageMin": 126,
           "headline": "The Runner: Gal Gadot Can't Stop Running In New Trailer For Prime Video Thriller - IMDb",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMiZkFVX3lxTE1tSmJ5ZDVfeVotUXY2bEZyRGh2blZpck5QZkpyR2VaR2tsdVdJOXluMFhmbWhyNzVrU0h2bVJCUjl3dnlkUHZycXV5bkhrdTdTc3dfUjcxY1A4VWswMzM5bkhwOEU2QQ?oc=5\" target=\"_blank\" The Runner: Gal Gadot Can't Stop Running In New Trailer For Prime Video Thriller /a nbsp; "
         }
       ],
-      "ageMin": 66,
+      "ageMin": 126,
       "_cand": {
         "key": "rss:the-runner-gal-gadot-can-t-stop-running-in-new-trailer-for-p",
         "popularity": 0,
@@ -70,7 +363,7 @@
       "tierClass": "B"
     },
     {
-      "id": "news-nasty-film-casting",
+      "id": "news-jenna-ortega-rose-byrne-nasty-movie",
       "slug": "jenna-ortega-rose-byrne-to-star-in-new-movie-from-if-i-had-legs-direct",
       "title": "Jenna Ortega, Rose Byrne to Star in New Movie from ‘If I Had Legs’ Director Mary Bronstein",
       "contentType": "news",
@@ -79,15 +372,15 @@
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "nasty-film-casting",
-      "primaryKeyword": "Nasty film",
+      "eventSlug": "jenna-ortega-rose-byrne-nasty-movie",
+      "primaryKeyword": "Jenna Ortega Rose Byrne movie",
       "primaryEntity": "Nasty (film)",
       "entities": [
         "Jenna Ortega",
         "Rose Byrne",
         "Mary Bronstein"
       ],
-      "angle": "Jenna Ortega and Rose Byrne are set to star in a new film from director Mary Bronstein.",
+      "angle": "Jenna Ortega and Rose Byrne to star in a new film from director Mary Bronstein.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
@@ -95,12 +388,12 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/movies/movie-news/jenna-ortega-rose-byrne-mary-bronstein-nasty-1236650204/",
-          "ageMin": 608,
+          "ageMin": 668,
           "headline": "Jenna Ortega, Rose Byrne to Star in New Movie from ‘If I Had Legs’ Director Mary Bronstein",
           "summary": "‘Nasty’, written by Isabella Jarosz, was on the 2024 Black List."
         }
       ],
-      "ageMin": 608,
+      "ageMin": 668,
       "_cand": {
         "key": "rss:jenna-ortega-rose-byrne-to-star-in-new-movie-from-if-i-had-l",
         "popularity": 0,
@@ -136,168 +429,39 @@
       "tierClass": "B"
     },
     {
-      "id": "music-news-sienna-spiro-visitor-album-top-10-debut",
-      "slug": "sienna-spiro-s-visitor-album-makes-top-10-debut-on-three-charts",
-      "title": "Sienna Spiro’s ‘Visitor’ Album Makes Top 10 Debut on Three Charts",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "sienna-spiro-visitor-album-top-10-debut",
-      "primaryKeyword": "sienna spiro visitor album",
-      "primaryEntity": "SIENNA SPIRO",
-      "entities": [
-        "Sienna Spiro",
-        "Visitor (album)"
-      ],
-      "angle": "Australian country artist Sienna Spiro's debut album 'Visitor' has achieved a Top 10 debut on three charts.",
-      "tmdbType": "movie",
-      "source": "rss:Billboard",
-      "sources": [
-        {
-          "outlet": "Billboard",
-          "tier": 7,
-          "url": "https://www.billboard.com/music/chart-beat/sienna-spiro-visitor-album-top-10-chart-debut-1236296532/",
-          "ageMin": 8,
-          "headline": "Sienna Spiro’s ‘Visitor’ Album Makes Top 10 Debut on Three Charts",
-          "summary": "It’s the singer-songwriter’s first full-length studio set."
-        }
-      ],
-      "ageMin": 8,
-      "_cand": {
-        "key": "rss:sienna-spiro-s-visitor-album-makes-top-10-debut-on-three-cha",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Billboard"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Billboard",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 69,
-      "signals": {
-        "recency": 30,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-top-gun-maverick-lawsuit-appeal-supreme-court",
-      "slug": "top-gun-magazine-article-heirs-appeal-spiked-paramount-lawsuit-to-supr",
-      "title": "Top Gun Magazine Article Heirs Appeal Spiked Paramount Lawsuit to Supreme Court",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "lawsuit",
-      "sensitivity": "high",
-      "eventSlug": "top-gun-maverick-lawsuit-appeal-supreme-court",
-      "primaryKeyword": "Top Gun Maverick lawsuit",
-      "primaryEntity": "Top Gun: Maverick",
-      "entities": [
-        "Top Gun: Maverick (2022 film)",
-        "Paramount Pictures"
-      ],
-      "angle": "Heirs of a magazine article are appealing a ruling that dismissed their lawsuit against Paramount over 'Top Gun: Maverick' to the Supreme Court.",
-      "tmdbType": "movie",
-      "source": "rss:TheWrap",
-      "sources": [
-        {
-          "outlet": "TheWrap",
-          "tier": 7,
-          "url": "https://www.thewrap.com/industry-news/public-policy-legal/top-gun-magazine-article-heirs-appeal-paramount-lawsuit/",
-          "ageMin": 112,
-          "headline": "Top Gun Magazine Article Heirs Appeal Spiked Paramount Lawsuit to Supreme Court",
-          "summary": "A federal judge ruled in 2024 that \"Top Gun: Maverick\" is not materially similar to a 1983 magazine article The post Top Gun Magazine Article Heirs Appeal Spiked Paramount Lawsuit to Supreme Court appeared first on TheWrap ."
-        }
-      ],
-      "ageMin": 112,
-      "_cand": {
-        "key": "rss:top-gun-magazine-article-heirs-appeal-spiked-paramount-lawsu",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "TheWrap"
-        ],
-        "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "TheWrap",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 70,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 12,
-        "pop": 0,
-        "breakout": 0,
-        "big": 12,
-        "trending": 0,
-        "softTv": 0
-      },
-      "tierClass": "S"
-    },
-    {
-      "id": "news-eliza-dushku-sci-fi-tv-series-canceled",
-      "slug": "after-buffy-eliza-dushku-starred-in-this-sci-fi-tv-series-that-was-can",
-      "title": "After Buffy, Eliza Dushku Starred In This Sci-Fi TV Series That Was Canceled Way Too Soon",
+      "id": "news-meghan-markle-pearl-emmy-nomination-backlash",
+      "slug": "meghan-markle-s-canceled-netflix-show-pearl-earns-emmy-nod-amid-backla",
+      "title": "Meghan Markle's Canceled Netflix Show 'Pearl' Earns Emmy Nod Amid Backlash",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
       "eventType": "cancellation",
       "sensitivity": "normal",
-      "eventSlug": "eliza-dushku-sci-fi-tv-series-canceled",
-      "primaryKeyword": "Eliza Dushku",
-      "primaryEntity": "Buffy the Vampire Slayer",
+      "eventSlug": "meghan-markle-pearl-emmy-nomination-backlash",
+      "primaryKeyword": "Meghan Markle Netflix show",
+      "primaryEntity": "Pearl",
       "entities": [
-        "Eliza Dushku"
+        "Pearl (TV series)",
+        "Meghan Markle",
+        "Netflix"
       ],
-      "angle": "Eliza Dushku's sci-fi series after 'Buffy' was canceled prematurely.",
+      "angle": "Meghan Markle's canceled Netflix docuseries 'Pearl' has received an Emmy nomination, sparking debate amid previous backlash.",
       "tmdbType": "movie",
-      "source": "gnews:TVLine",
+      "source": "gnews:MSN",
       "sources": [
         {
-          "outlet": "TVLine",
+          "outlet": "MSN",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOMEJtaFVIRzA3MnJsNXRLOGNkcUdMdTFwZWFqUTUzbVNjeWxfckdOYW42REhtMEsxT2I0STREa3JQMlctOTVjZGV1OE10RUFpV1RqQW16U2ZBRUNvLWd2MFE0bnc0SEtqazhERi00Y0k3TEVDV3MyWEctQTFVaENmYkI2R0R5X0NGbkctYll2aHZ1cjZPQ2w3Z0lnTGgyUQ?oc=5",
-          "ageMin": 379,
-          "headline": "After Buffy, Eliza Dushku Starred In This Sci-Fi TV Series That Was Canceled Way Too Soon - TVLine",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxOMEJtaFVIRzA3MnJsNXRLOGNkcUdMdTFwZWFqUTUzbVNjeWxfckdOYW42REhtMEsxT2I0STREa3JQMlctOTVjZGV1OE10RUFpV1RqQW16U2ZBRUNvLWd2MFE0bnc0SEtqazhERi00Y0k3TEVDV3MyWEctQTFVaENmYkI2R0R5X0NGbkctYll2aHZ1cjZPQ2w3Z0lnTGgyUQ?oc=5\" target=\"_blank\" After Buffy, E"
+          "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxQa2F3X2ZUeE1uRnZkelNESEx0cjVRMnhma0txZnV2YjJoajNxc05sX05oX2xHeWlpNEpTM2U0bXhLdDJlTWtIS3I4TEtCSURzZG92TmxBT2pQZE9xWDZIX3dIOWhCelBMTW12VHZKVC1OWGdTN1BNM1VFeWNlZk0xOU9ZaG80LXNlaHhDWmhPSUhkd1NlSjJMNzZ3LU1QOGlJMlpLVHNlVjlOUmNhOUhPQWl4UDJIcmJVYVVvbWdkVGIyMFBBWmxYblpjWkZETk1DMEQyaGU1aC1wM1o2a096TmhWY0xCLVF5NTJvRTZR?oc=5",
+          "ageMin": 292,
+          "headline": "Meghan Markle's canceled Netflix show earns Emmy nod amid backlash - MSN",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMi7gFBVV95cUxQa2F3X2ZUeE1uRnZkelNESEx0cjVRMnhma0txZnV2YjJoajNxc05sX05oX2xHeWlpNEpTM2U0bXhLdDJlTWtIS3I4TEtCSURzZG92TmxBT2pQZE9xWDZIX3dIOWhCelBMTW12VHZKVC1OWGdTN1BNM1VFeWNlZk0xOU9ZaG80LXNlaHhDWmhPSUhkd1NlSjJMNzZ3LU1QOGlJMlpLVHNlVjlOUmNhOUhPQWl4UDJIcmJVYVV"
         }
       ],
-      "ageMin": 379,
+      "ageMin": 292,
       "_cand": {
-        "key": "rss:after-buffy-eliza-dushku-starred-in-this-sci-fi-tv-series-th",
+        "key": "rss:meghan-markle-s-canceled-netflix-show-earns-emmy-nod-amid-ba",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -307,18 +471,18 @@
         "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "TVLine"
+          "MSN"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "TVLine",
+        "attribution": "MSN",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 59,
+      "priority": 64,
       "signals": {
-        "recency": 4,
+        "recency": 9,
         "corroboration": 8,
         "status": 18,
         "type": 11,
@@ -328,26 +492,91 @@
         "trending": 0,
         "softTv": 0
       },
+      "tierClass": "B"
+    },
+    {
+      "id": "awards-41st-imagen-awards-nominations",
+      "slug": "acapulco-leads-41st-imagen-awards-nominations-andy-garcia-to-receive-l",
+      "title": "Acapulco Leads 41st Imagen Awards Nominations; Andy Garcia to Receive Lifetime Achievement Award",
+      "contentType": "awards",
+      "formatTag": "awards",
+      "category": "awards",
+      "subcategory": "winners",
+      "eventType": "award",
+      "sensitivity": "normal",
+      "eventSlug": "41st-imagen-awards-nominations",
+      "primaryKeyword": "Imagen Awards",
+      "primaryEntity": "Imagen Awards",
+      "entities": [
+        "Acapulco",
+        "Andy Garcia"
+      ],
+      "angle": "The Imagen Awards, celebrating Latino talent in entertainment, have announced their nominations, with 'Acapulco' leading the series nods and Andy Garcia set to receive a Lifetime Achievement Award.",
+      "tmdbType": "movie",
+      "source": "rss:Variety Music",
+      "sources": [
+        {
+          "outlet": "Variety Music",
+          "tier": 7,
+          "url": "https://variety.com/2026/tv/news/imagen-awards-nominations-andy-garcia-lifetime-achievement-1236812172/",
+          "ageMin": 691,
+          "headline": "Acapulco Leads 41st Imagen Awards Nominations; Andy Garcia to Receive Lifetime Achievement Award",
+          "summary": "Apple TV s Acapulco led all series as the Imagen Foundation announced nominations for the 41st Annual Imagen Awards on Thursday. Acapulco scored 13 nods in the competition, which recognizes Latino talent and creative work across film, television, documentaries, digital media and music. The Imagen Foundation also announced that actor, filmmaker, producer and musician Andy Garcia [ ]"
+        }
+      ],
+      "ageMin": 691,
+      "_cand": {
+        "key": "rss:acapulco-leads-41st-imagen-awards-nominations-andy-garcia-to",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety Music"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety Music",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 48,
+      "signals": {
+        "recency": 4,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      },
       "tierClass": "C"
     },
     {
-      "id": "news-naruto-live-action-movie-casting-call",
-      "slug": "naruto-live-action-movie-casting-call-hints-at-shippuden-timeline",
-      "title": "'Naruto' Live-Action Movie Casting Call Hints at 'Shippuden' Timeline",
+      "id": "news-naruto-live-action-movie-casting",
+      "slug": "naruto-live-action-movie-casting-call-teases-naruto-shippuden-timeline",
+      "title": "‘Naruto’ Live-Action Movie Casting Call Teases ‘Naruto: Shippuden’ Timeline",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "naruto-live-action-movie-casting-call",
-      "primaryKeyword": "Naruto live action movie casting",
+      "eventSlug": "naruto-live-action-movie-casting",
+      "primaryKeyword": "naruto live action movie casting",
       "primaryEntity": "Naruto Shippuden the Movie: Blood Prison",
       "entities": [
-        "Naruto (film)",
+        "Naruto (live-action film)",
         "Naruto: Shippuden"
       ],
-      "angle": "Live-action 'Naruto' movie is holding a casting call, potentially hinting at a 'Shippuden' timeline.",
+      "angle": "A casting call for the live-action 'Naruto' movie suggests it will cover the 'Shippuden' timeline.",
       "tmdbType": "movie",
       "source": "gnews:Knight Edge Media",
       "sources": [
@@ -355,12 +584,12 @@
           "outlet": "Knight Edge Media",
           "tier": 5,
           "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNaGtiNnBHWGJ6MDd0aVQteU53OWpYcktJd0R3UUVLc2ttbm5ZQ0IzM0haM3k1dF91blA4UFVnMTd5Sm8wZ2FaS3ZBLWFIcnJQZHpPNUNpWUlhelFXbmFCNml5UWRTSmFaN1ZYclF2akkySERzajZESk5pUUdXTUliTUpiMHhtQ2FpVTVjR2Q1eExsQ0d4UU9rck01SUpSZHp1TkN5NW9Xa3o0V0XSAbABQVVfeXFMTUdJT0QwQ3ZUVFRkYldSYXhWNEV6T2tCLWYzekZfY09CMEtRMlBpTGtRU3JtOGVxd3E4NzdLQ0Q3SzI3Z3JFSXNmSzVidnJHaXYxbmtiTmFmM1dwYWExLXRjRHNydEhkTEZoaTdyS1BQRGlQellZVThKVWY3U2o3OUlPOEVrQmVaTVJURzVIeTVGUTQ3VHJTdF9aaTdtdzBCeTBBQnZybExtWnhoZHpzMjE?oc=5",
-          "ageMin": 1197,
+          "ageMin": 1257,
           "headline": "‘Naruto’ Live-Action Movie Casting Call Teases ‘Naruto: Shippuden’ Timeline - Knight Edge Media",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxNaGtiNnBHWGJ6MDd0aVQteU53OWpYcktJd0R3UUVLc2ttbm5ZQ0IzM0haM3k1dF91blA4UFVnMTd5Sm8wZ2FaS3ZBLWFIcnJQZHpPNUNpWUlhelFXbmFCNml5UWRTSmFaN1ZYclF2akkySERzajZESk5pUUdXTUliTUpiMHhtQ2FpVTVjR2Q1eExsQ0d4UU9rck01SUpSZHp1TkN5NW9Xa3o0V0XSAbABQVVfeXFMTUdJT0Q"
         }
       ],
-      "ageMin": 1197,
+      "ageMin": 1257,
       "_cand": {
         "key": "rss:-naruto-live-action-movie-casting-call-teases-naruto-shippud",
         "popularity": 0,
@@ -396,38 +625,37 @@
       "tierClass": "B"
     },
     {
-      "id": "news-dexter-resurrection-season-2-gabriel-luna-casting",
-      "slug": "gabriel-luna-joins-cast-of-dexter-resurrection-season-2",
-      "title": "Gabriel Luna Joins Cast of 'Dexter: Resurrection' Season 2",
+      "id": "news-eliza-dushku-sci-fi-series-canceled",
+      "slug": "after-buffy-eliza-dushku-starred-in-this-sci-fi-tv-series-that-was-can",
+      "title": "After Buffy, Eliza Dushku Starred In This Sci-Fi TV Series That Was Canceled Way Too Soon",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
-      "eventType": "casting",
+      "eventType": "cancellation",
       "sensitivity": "normal",
-      "eventSlug": "dexter-resurrection-season-2-gabriel-luna-casting",
-      "primaryKeyword": "Dexter: Resurrection season 2",
-      "primaryEntity": "Dexter: Resurrection",
+      "eventSlug": "eliza-dushku-sci-fi-series-canceled",
+      "primaryKeyword": "Eliza Dushku sci-fi series",
+      "primaryEntity": "Eliza Dushku",
       "entities": [
-        "Gabriel Luna",
-        "Paramount+"
+        "Buffy the Vampire Slayer"
       ],
-      "angle": "Gabriel Luna has been cast in the upcoming second season of the Paramount+ series 'Dexter: Resurrection'.",
+      "angle": "A sci-fi TV series starring Eliza Dushku after 'Buffy' was canceled prematurely.",
       "tmdbType": "movie",
-      "source": "gnews:TV Series Finale",
+      "source": "gnews:TVLine",
       "sources": [
         {
-          "outlet": "TV Series Finale",
+          "outlet": "TVLine",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNeWdmamthSHRRME1kbW03SF95U2lETWlkRnVWajcxN2hkaExMbjdTTTRBRHN5RUdpRXNJUXFSNXhXZlA4WENNWmN6MGVhQ29NQThWd3kzdGJBd3pQamNXYzY2VFhVWHlacGtJTUdsam1OaE8taVJ2RnltYldkQ3F0M1NNX0loWkpicHJvX2M1Y0k5N1M3MjFtRERXR3JSMEh4QlQ2V1JEUjdFdm9EUVo00gG0AUFVX3lxTFBrcWlJLTRHNERDTm5uN2xVLTg1aWV2OVFLT1M0bW1jcFNIUWtwckJZMjExM2Z2YzhtRlh6MEZzYWplMnk5RE1JZ2NkeTU5YzJobDVPT09zRXJNckM1akd4VkFoaXdrQy1FMlVXblVnVnBEa1FhdzlEZ01BUEtEdVJJWGV1cE10NDk5cGFYSFVvaDg4dU1OTWJlU2JfeldRSUdrSjFLVmNCOG9BRVBGR1dObTdFbw?oc=5",
-          "ageMin": 795,
-          "headline": "Dexter: Resurrection: Season Two; Gabriel Luna Joins Cast of Paramount+ Series - TV Series Finale",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxNeWdmamthSHRRME1kbW03SF95U2lETWlkRnVWajcxN2hkaExMbjdTTTRBRHN5RUdpRXNJUXFSNXhXZlA4WENNWmN6MGVhQ29NQThWd3kzdGJBd3pQamNXYzY2VFhVWHlacGtJTUdsam1OaE8taVJ2RnltYldkQ3F0M1NNX0loWkpicHJvX2M1Y0k5N1M3MjFtRERXR3JSMEh4QlQ2V1JEUjdFdm9EUVo00gG0AUFVX3lxTFB"
+          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOMEJtaFVIRzA3MnJsNXRLOGNkcUdMdTFwZWFqUTUzbVNjeWxfckdOYW42REhtMEsxT2I0STREa3JQMlctOTVjZGV1OE10RUFpV1RqQW16U2ZBRUNvLWd2MFE0bnc0SEtqazhERi00Y0k3TEVDV3MyWEctQTFVaENmYkI2R0R5X0NGbkctYll2aHZ1cjZPQ2w3Z0lnTGgyUQ?oc=5",
+          "ageMin": 439,
+          "headline": "After Buffy, Eliza Dushku Starred In This Sci-Fi TV Series That Was Canceled Way Too Soon - TVLine",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxOMEJtaFVIRzA3MnJsNXRLOGNkcUdMdTFwZWFqUTUzbVNjeWxfckdOYW42REhtMEsxT2I0STREa3JQMlctOTVjZGV1OE10RUFpV1RqQW16U2ZBRUNvLWd2MFE0bnc0SEtqazhERi00Y0k3TEVDV3MyWEctQTFVaENmYkI2R0R5X0NGbkctYll2aHZ1cjZPQ2w3Z0lnTGgyUQ?oc=5\" target=\"_blank\" After Buffy, E"
         }
       ],
-      "ageMin": 795,
+      "ageMin": 439,
       "_cand": {
-        "key": "rss:dexter-resurrection-season-two-gabriel-luna-joins-cast-of-pa",
+        "key": "rss:after-buffy-eliza-dushku-starred-in-this-sci-fi-tv-series-th",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -437,90 +665,24 @@
         "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "TV Series Finale"
+          "TVLine"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "TV Series Finale",
+        "attribution": "TVLine",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
       "priority": 59,
       "signals": {
-        "recency": 1,
+        "recency": 4,
         "corroboration": 8,
         "status": 18,
-        "type": 14,
+        "type": 11,
         "pop": 0,
         "breakout": 0,
         "big": 18,
-        "trending": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "awards-meghan-markle-netflix-show-emmy-nod",
-      "slug": "meghan-markle-s-canceled-netflix-show-earns-emmy-nod-amid-backlash",
-      "title": "Meghan Markle's canceled Netflix show earns Emmy nod amid backlash",
-      "contentType": "awards",
-      "formatTag": "awards",
-      "category": "awards",
-      "subcategory": "winners",
-      "eventType": "award",
-      "sensitivity": "normal",
-      "eventSlug": "meghan-markle-netflix-show-emmy-nod",
-      "primaryKeyword": "meghan markle netflix emmy",
-      "primaryEntity": "Pearl",
-      "entities": [
-        "Pearl (TV series)",
-        "Meghan Markle",
-        "Netflix"
-      ],
-      "angle": "Meghan Markle's canceled Netflix animated series 'Pearl' has received an Emmy nomination.",
-      "tmdbType": "movie",
-      "source": "gnews:MSN",
-      "sources": [
-        {
-          "outlet": "MSN",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxQa2F3X2ZUeE1uRnZkelNESEx0cjVRMnhma0txZnV2YjJoajNxc05sX05oX2xHeWlpNEpTM2U0bXhLdDJlTWtIS3I4TEtCSURzZG92TmxBT2pQZE9xWDZIX3dIOWhCelBMTW12VHZKVC1OWGdTN1BNM1VFeWNlZk0xOU9ZaG80LXNlaHhDWmhPSUhkd1NlSjJMNzZ3LU1QOGlJMlpLVHNlVjlOUmNhOUhPQWl4UDJIcmJVYVVvbWdkVGIyMFBBWmxYblpjWkZETk1DMEQyaGU1aC1wM1o2a096TmhWY0xCLVF5NTJvRTZR?oc=5",
-          "ageMin": 232,
-          "headline": "Meghan Markle's canceled Netflix show earns Emmy nod amid backlash - MSN",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMi7gFBVV95cUxQa2F3X2ZUeE1uRnZkelNESEx0cjVRMnhma0txZnV2YjJoajNxc05sX05oX2xHeWlpNEpTM2U0bXhLdDJlTWtIS3I4TEtCSURzZG92TmxBT2pQZE9xWDZIX3dIOWhCelBMTW12VHZKVC1OWGdTN1BNM1VFeWNlZk0xOU9ZaG80LXNlaHhDWmhPSUhkd1NlSjJMNzZ3LU1QOGlJMlpLVHNlVjlOUmNhOUhPQWl4UDJIcmJVYVV"
-        }
-      ],
-      "ageMin": 232,
-      "_cand": {
-        "key": "rss:meghan-markle-s-canceled-netflix-show-earns-emmy-nod-amid-ba",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "MSN"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "MSN",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 49,
-      "signals": {
-        "recency": 9,
-        "corroboration": 8,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
         "trending": 0,
         "softTv": 0
       },
@@ -537,10 +699,12 @@
       "eventType": "announcement",
       "sensitivity": "normal",
       "eventSlug": "lost-x-files-movie-new-streamer",
-      "primaryKeyword": "The X-Files",
+      "primaryKeyword": "X-Files movie debut",
       "primaryEntity": "The X-Files",
-      "entities": [],
-      "angle": "A lost R-rated 'X-Files' movie is now available on a new streaming platform.",
+      "entities": [
+        "R-Rated"
+      ],
+      "angle": "A previously unreleased R-rated 'X-Files' movie has premiered on a new streaming platform.",
       "tmdbType": "movie",
       "source": "gnews:MovieWeb",
       "sources": [
@@ -548,12 +712,12 @@
           "outlet": "MovieWeb",
           "tier": 5,
           "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOQ2p6bDNHMlpoYW1VVURzMmRWU0ZCbVY1bUNmeVB3a0w1SmtwYVdWdnZXSVNhb3dUUGI2RlMxcy00QTNpcTVNU3FZYU16Q19jVG9OczRaVTBIQlRfMjE1d0dYTWUxRC1XZFJiOXE0RG93bHVTMWUza09RSEdLOHoyd21vcTRQdGdETnNj?oc=5",
-          "ageMin": 388,
+          "ageMin": 448,
           "headline": "Lost R-Rated 'X-Files' Movie Debuts on New Streamer Ahead of New Reboot - MovieWeb",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMiiwFBVV95cUxOQ2p6bDNHMlpoYW1VVURzMmRWU0ZCbVY1bUNmeVB3a0w1SmtwYVdWdnZXSVNhb3dUUGI2RlMxcy00QTNpcTVNU3FZYU16Q19jVG9OczRaVTBIQlRfMjE1d0dYTWUxRC1XZFJiOXE0RG93bHVTMWUza09RSEdLOHoyd21vcTRQdGdETnNj?oc=5\" target=\"_blank\" Lost R-Rated 'X-Files' Movie Debuts on N"
         }
       ],
-      "ageMin": 388,
+      "ageMin": 448,
       "_cand": {
         "key": "rss:lost-r-rated-x-files-movie-debuts-on-new-streamer-ahead-of-n",
         "popularity": 0,
@@ -589,333 +753,7 @@
       "tierClass": "B"
     },
     {
-      "id": "news-stillwater-season-5-premiere",
-      "slug": "apple-tv-s-beloved-mindfulness-series-stillwater-set-to-premiere-all-n",
-      "title": "Apple TV’s beloved mindfulness series “Stillwater” set to premiere all-new fifth season on Friday, August 21, 2026",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "stillwater-season-5-premiere",
-      "primaryKeyword": "Stillwater",
-      "primaryEntity": "Stillwater",
-      "entities": [
-        "Apple TV+"
-      ],
-      "angle": "Apple TV+'s 'Stillwater' is set to premiere its fifth season on August 21, 2026.",
-      "tmdbType": "movie",
-      "source": "gnews:Apple",
-      "sources": [
-        {
-          "outlet": "Apple",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNZUdhMERYdnU4T2dQbGR5ZzBiUnExVjhMWFYtdnJmaW1Oc21GZ0NTOFUtTmVCOUxrRi05LXItSWd6aXdTOV9hYzkyVjU0SThUNF90Mk1TQmRrc0dGUnFnM0QzMDMxNXprMHViNGFKRGZKcnVZVC05bHJQa05Gbk8zTlV2aHFVdTd2aGVMTFJZUUdRbndFQmUzOWdhdGJPdDN4QXI4dURJRjQ2NG1LS01iMGVtNV9qQ2hQUUlFeE11WXdOeFlNUG1zc3k2N0lnbkdhYUJUc1pnUDloeVZXMmhKQVRDaTVnUQ?oc=5",
-          "ageMin": 458,
-          "headline": "Apple TV’s beloved mindfulness series “Stillwater” set to premiere all-new fifth season on Friday, August 21, 2026 - Apple",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMi5gFBVV95cUxNZUdhMERYdnU4T2dQbGR5ZzBiUnExVjhMWFYtdnJmaW1Oc21GZ0NTOFUtTmVCOUxrRi05LXItSWd6aXdTOV9hYzkyVjU0SThUNF90Mk1TQmRrc0dGUnFnM0QzMDMxNXprMHViNGFKRGZKcnVZVC05bHJQa05Gbk8zTlV2aHFVdTd2aGVMTFJZUUdRbndFQmUzOWdhdGJPdDN4QXI4dURJRjQ2NG1LS01iMGVtNV9qQ2hQUUl"
-        }
-      ],
-      "ageMin": 458,
-      "_cand": {
-        "key": "rss:apple-tv-s-beloved-mindfulness-series-stillwater-set-to-prem",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "Apple"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "Apple",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 57,
-      "signals": {
-        "recency": 4,
-        "corroboration": 8,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "music-news-stand-atlantic-godbreath-lucid-single",
-      "slug": "stand-atlantic-announce-new-album-godbreath-and-release-visceral-new-s",
-      "title": "Stand Atlantic announce new album 'GODBREATH' and release visceral new single \"LUCID\"",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "stand-atlantic-godbreath-lucid-single",
-      "primaryKeyword": "Stand Atlantic new album",
-      "primaryEntity": "Stand Atlantic",
-      "entities": [
-        "GODBREATH",
-        "LUCID"
-      ],
-      "angle": "Australian band Stand Atlantic announces their new album 'GODBREATH' and releases the single 'LUCID'.",
-      "tmdbType": "movie",
-      "source": "gnews:MELODIC Magazine",
-      "sources": [
-        {
-          "outlet": "MELODIC Magazine",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxObk51amtXN3NvaUE5TDFHYVVIM21yeVFoUm1jeG13ZGVENC1Kc3RrUnZITlZvcnRNWWg5UzVVRTlTQVlfSGZoUXFKQmpvOEgzV3JHSlVPQ2xYMHNuaHdWbzhSbXpqNHFHS1BuX3hncXl2NFhMbnJvY2ZfaEZhdE1wWnhicUhfaU5FZzN6SFlZQS1odGVjbUU2cEltdDdyRmVLWjhlU0QtVnZldndBb29HX1FDbW4?oc=5",
-          "ageMin": 174,
-          "headline": "Stand Atlantic announce new album 'GODBREATH' and release visceral new single \"LUCID\" - MELODIC Magazine",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxObk51amtXN3NvaUE5TDFHYVVIM21yeVFoUm1jeG13ZGVENC1Kc3RrUnZITlZvcnRNWWg5UzVVRTlTQVlfSGZoUXFKQmpvOEgzV3JHSlVPQ2xYMHNuaHdWbzhSbXpqNHFHS1BuX3hncXl2NFhMbnJvY2ZfaEZhdE1wWnhicUhfaU5FZzN6SFlZQS1odGVjbUU2cEltdDdyRmVLWjhlU0QtVnZldndBb29HX1FDbW4?oc=5\" t"
-        }
-      ],
-      "ageMin": 174,
-      "_cand": {
-        "key": "rss:stand-atlantic-announce-new-album-godbreath-and-release-visc",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "MELODIC Magazine"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "MELODIC Magazine",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 51,
-      "signals": {
-        "recency": 16,
-        "corroboration": 8,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "awards-41st-imagen-awards-nominations",
-      "slug": "acapulco-leads-41st-imagen-awards-nominations-andy-garcia-to-receive-l",
-      "title": "'Acapulco' Leads 41st Imagen Awards Nominations; Andy Garcia to Receive Lifetime Achievement Award",
-      "contentType": "awards",
-      "formatTag": "awards",
-      "category": "awards",
-      "subcategory": "winners",
-      "eventType": "award",
-      "sensitivity": "normal",
-      "eventSlug": "41st-imagen-awards-nominations",
-      "primaryKeyword": "Imagen Awards",
-      "primaryEntity": "Imagen Awards",
-      "entities": [
-        "Acapulco",
-        "Andy Garcia"
-      ],
-      "angle": "Apple TV+'s 'Acapulco' leads the nominations for the 41st Imagen Awards, with Andy Garcia set to receive the Lifetime Achievement Award.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-reviews/the-lion-at-my-back-review-1236649147/",
-          "ageMin": 602,
-          "headline": "The Lion at My Back Review: Two Women Forge a Cross-Cultural Friendship in a Bleak Cyprus-Set Drama Haunted by Violence",
-          "summary": "Greek Cypriot director Tonia Mishiali’s Karlovy Vary premiere centers on the bond between a recovering addict and sex worker and a teenage Senegalese refugee."
-        }
-      ],
-      "ageMin": 602,
-      "_cand": {
-        "key": "rss:the-lion-at-my-back-review-two-women-forge-a-cross-cultural-",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 48,
-      "signals": {
-        "recency": 4,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-todd-mcfarlane-spawn-reboot-details",
-      "slug": "everything-we-know-about-todd-mcfarlane-s-r-rated-spawn-reboot",
-      "title": "Everything We Know About Todd McFarlane’s R-Rated ‘Spawn’ Reboot",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "todd-mcfarlane-spawn-reboot-details",
-      "primaryKeyword": "Spawn reboot",
-      "primaryEntity": "Spawn",
-      "entities": [
-        "Spawn (film)",
-        "Todd McFarlane"
-      ],
-      "angle": "Details are emerging about Todd McFarlane's upcoming R-rated reboot of the Spawn movie.",
-      "tmdbType": "movie",
-      "source": "gnews:Esquire",
-      "sources": [
-        {
-          "outlet": "Esquire",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5NSW5zLWJjVkxrbDNCZ1dqQ05wbVhVb0ZGbGtkc0h3V09NbjN3MXkwcjRZUmNjZFBFN3V2dUp1Um5vSk9YVGlwZlFFQjBtWVNCdTlyUVNkcmd5RFZnNm43VU1nUmhwWTJkREhCY3Y2QjBhTVZvazg0?oc=5",
-          "ageMin": 513,
-          "headline": "Everything We Know About Todd McFarlane’s R-Rated ‘Spawn’ Reboot - Esquire",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMid0FVX3lxTE5NSW5zLWJjVkxrbDNCZ1dqQ05wbVhVb0ZGbGtkc0h3V09NbjN3MXkwcjRZUmNjZFBFN3V2dUp1Um5vSk9YVGlwZlFFQjBtWVNCdTlyUVNkcmd5RFZnNm43VU1nUmhwWTJkREhCY3Y2QjBhTVZvazg0?oc=5\" target=\"_blank\" Everything We Know About Todd McFarlane’s R-Rated ‘Spawn’ Reboot /a "
-        }
-      ],
-      "ageMin": 513,
-      "_cand": {
-        "key": "rss:everything-we-know-about-todd-mcfarlane-s-r-rated-spawn-rebo",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "Esquire"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "Esquire",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 63,
-      "signals": {
-        "recency": 4,
-        "corroboration": 8,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-fx-color-force-develop-new-yorker-article-series",
-      "slug": "fx-to-develop-series-based-on-new-yorker-article-about-park-rescue-squ",
-      "title": "FX to Develop Series Based on New Yorker Article About Park Rescue Squad",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "development",
-      "sensitivity": "normal",
-      "eventSlug": "fx-color-force-develop-new-yorker-article-series",
-      "primaryKeyword": "FX new series development",
-      "primaryEntity": "FX's A Christmas Carol",
-      "entities": [
-        "FX",
-        "Color Force",
-        "The New Yorker"
-      ],
-      "angle": "FX and Color Force are developing a new TV series based on a New Yorker article about a national park rescue squad.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/tv/news/fx-series-new-yorker-national-park-volunteer-rescue-squad-1236813417/",
-          "ageMin": 301,
-          "headline": "FX, Color Force to Develop Series Based on New Yorker Article About National Park Volunteer Rescue Squad (EXCLUSIVE)",
-          "summary": "In a competitive situation, FX has secured the rights to develop a series based on the New Yorker article The Call of the Wild by Paige Williams, Variety has learned exclusively from sources. Also published online in January 2026 under the title The Backcountry Rescue Squad at America’s Busiest National Park, the article details the [ ]"
-        }
-      ],
-      "ageMin": 301,
-      "_cand": {
-        "key": "rss:fx-color-force-to-develop-series-based-on-new-yorker-article",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 51,
-      "signals": {
-        "recency": 9,
-        "corroboration": 12,
-        "status": 18,
-        "type": 6,
-        "pop": 0,
-        "breakout": 0,
-        "big": 6,
-        "trending": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-casting-director-horror-breakouts",
+      "id": "news-horror-casting-director-interview",
       "slug": "the-casting-director-behind-horror-s-biggest-hits-reveals-how-the-genr",
       "title": "The Casting Director Behind Horror s Biggest Hits Reveals How the Genre s Breakout Stars Get Discovered",
       "contentType": "news",
@@ -924,14 +762,14 @@
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "casting-director-horror-breakouts",
-      "primaryKeyword": "horror casting directors",
+      "eventSlug": "horror-casting-director-interview",
+      "primaryKeyword": "horror casting director",
       "primaryEntity": "Nancy Nayor",
       "entities": [
         "Barbarian",
         "Sam Raimi"
       ],
-      "angle": "A prominent casting director discusses her process for discovering breakout stars in the horror genre.",
+      "angle": "A prominent horror casting director shares insights on discovering breakout stars.",
       "tmdbType": "movie",
       "source": "rss:IndieWire",
       "sources": [
@@ -939,12 +777,12 @@
           "outlet": "IndieWire",
           "tier": 7,
           "url": "https://www.indiewire.com/features/craft/how-horror-movies-are-cast-sam-raimi-movies-psycho-3-1235205289/",
-          "ageMin": 631,
+          "ageMin": 691,
           "headline": "The Casting Director Behind Horror s Biggest Hits Reveals How the Genre s Breakout Stars Get Discovered",
           "summary": "Casting director Nancy Nayor, whose horror credits include everything from Sam Raimi classics to hits like \"Barbarian,\" tells IndieWire about her approach to finding actors for the genre she loves."
         }
       ],
-      "ageMin": 631,
+      "ageMin": 691,
       "_cand": {
         "key": "rss:the-casting-director-behind-horror-s-biggest-hits-reveals-ho",
         "popularity": 0,
@@ -980,23 +818,24 @@
       "tierClass": "C"
     },
     {
-      "id": "news-annie-leibovitz-sues-observer-bieber-photo",
-      "slug": "annie-leibovitz-sues-observer-over-justin-and-hailey-bieber-photo-expl",
-      "title": "Annie Leibovitz Sues Observer Over Justin and Hailey Bieber Photo: Exploitation",
+      "id": "news-annie-leibovitz-sues-observer-justin-bieber-photo",
+      "slug": "annie-leibovitz-sues-observer-over-justin-and-hailey-bieber-photo",
+      "title": "Annie Leibovitz Sues Observer Over Justin and Hailey Bieber Photo",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
       "eventType": "lawsuit",
-      "sensitivity": "high",
-      "eventSlug": "annie-leibovitz-sues-observer-bieber-photo",
+      "sensitivity": "normal",
+      "eventSlug": "annie-leibovitz-sues-observer-justin-bieber-photo",
       "primaryKeyword": "Annie Leibovitz lawsuit",
       "primaryEntity": "Annie Leibovitz",
       "entities": [
         "Justin Bieber",
-        "Hailey Bieber"
+        "Hailey Bieber",
+        "Observer"
       ],
-      "angle": "Famed photographer Annie Leibovitz is suing a media outlet for unauthorized use of a photo of Justin and Hailey Bieber.",
+      "angle": "Famed photographer Annie Leibovitz is suing a media outlet over unauthorized use of a photo featuring Justin and Hailey Bieber.",
       "tmdbType": "movie",
       "source": "rss:Rolling Stone",
       "sources": [
@@ -1004,81 +843,14 @@
           "outlet": "Rolling Stone",
           "tier": 7,
           "url": "https://www.rollingstone.com/music/music-news/annie-leibovitz-sues-observer-justin-bieber-hailey-photo-1235594944/",
-          "ageMin": 133,
+          "ageMin": 193,
           "headline": "Annie Leibovitz Sues Observer Over Justin and Hailey Bieber Photo: Exploitation",
           "summary": "The famed photographer is suing the media outlet for up to $150,000 per \"unauthorized\" use"
         }
       ],
-      "ageMin": 133,
+      "ageMin": 193,
       "_cand": {
         "key": "rss:annie-leibovitz-sues-observer-over-justin-and-hailey-bieber-",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Rolling Stone"
-        ],
-        "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "Rolling Stone",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 58,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 12,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "softTv": 0
-      },
-      "tierClass": "S"
-    },
-    {
-      "id": "news-wildfire-smoke-forces-concert-postponements-black-keys-creed",
-      "slug": "wildfire-smoke-forces-the-black-keys-creed-and-more-to-postpone-concer",
-      "title": "Wildfire Smoke Forces the Black Keys, Creed, and More to Postpone Concerts",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "wildfire-smoke-forces-concert-postponements-black-keys-creed",
-      "primaryKeyword": "The Black Keys concerts",
-      "primaryEntity": "The Black Keys",
-      "entities": [
-        "Creed",
-        "John Mellencamp",
-        "Mavis Staples"
-      ],
-      "angle": "Wildfire smoke is causing widespread postponements of concerts for popular artists including The Black Keys and Creed.",
-      "tmdbType": "movie",
-      "source": "rss:Rolling Stone",
-      "sources": [
-        {
-          "outlet": "Rolling Stone",
-          "tier": 7,
-          "url": "https://www.rollingstone.com/music/music-news/wildfire-concerts-postponed-black-keys-john-mellencamp-1235594945/",
-          "ageMin": 154,
-          "headline": "Wildfire Smoke Forces the Black Keys, Creed, and More to Postpone Concerts",
-          "summary": "War and Treaty, John Mellencamp, and Mavis Staples were also among the growing list of artists either cancelling or postponing shows as the air quality hits dangerous levels"
-        }
-      ],
-      "ageMin": 154,
-      "_cand": {
-        "key": "rss:wildfire-smoke-forces-the-black-keys-creed-and-more-to-postp",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -1099,17 +871,17 @@
       },
       "priority": 51,
       "signals": {
-        "recency": 16,
+        "recency": 9,
         "corroboration": 12,
         "status": 18,
-        "type": 5,
+        "type": 12,
         "pop": 0,
         "breakout": 0,
         "big": 0,
         "trending": 0,
         "softTv": 0
       },
-      "tierClass": "C"
+      "tierClass": "S"
     }
   ]
 }
