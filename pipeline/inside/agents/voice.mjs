@@ -106,15 +106,23 @@ HARD RULES:
   marks. Read the story first; the register follows the story, never the other way.
 Output STRICT JSON only.`;
 
-// run(job) → job.article with voiced title/dek/body (orchestrator verifies + may revert).
-export async function run(job, { chatImpl = null } = {}) {
+// run(job, {bannedHooks}) → job.article with voiced title/dek/body (orchestrator verifies + may revert).
+// bannedHooks (owner audit 2026-07-17): the voice pass was RE-INJECTING overused hooks from its own
+// phrasebook AFTER the title guard ran ("has fans in a chokehold" ×11) — the run's banned list now
+// filters the phrasebook AND is stated in the prompt; the orchestrator re-checks the voiced title.
+export async function run(job, { bannedHooks = [], chatImpl = null } = {}) {
   const a = job.article;
   if (!a?.body) { job.voiceSkipped = "no article"; return job; }
+  const isBanned = (p) => bannedHooks.some((h) => p.toLowerCase().includes(String(h).toLowerCase().replace(/\s+/g, " ")));
+  const book = PHRASEBOOK.filter((p) => !isBanned(p));
   const { masked, spans } = maskQuotes(a.body);
   const user = `SUBJECT: ${job.story.primaryEntity} (${job.angle.form})
 
 PHRASEBOOK (the register — pick a FEW that fit, adapt freely):
-${PHRASEBOOK.map((p) => `- ${p}`).join("\n")}
+${book.map((p) => `- ${p}`).join("\n")}${bannedHooks.length ? `
+
+BANNED PHRASES (overused on the site right now — never use these in the title, dek, or body):
+${bannedHooks.map((h) => `- ${h}`).join("\n")}` : ""}
 
 CURRENT TITLE: ${a.title}
 CURRENT DEK: ${a.dek}

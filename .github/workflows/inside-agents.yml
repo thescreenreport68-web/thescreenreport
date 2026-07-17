@@ -62,6 +62,10 @@ jobs:
           OMDB_API_KEY: ${{ secrets.OMDB_API_KEY }}
           LASTFM_API_KEY: ${{ secrets.LASTFM_API_KEY }}
           JINA_API_KEY: ${{ secrets.JINA_API_KEY }}
+          # SUPPLY 2.0 (owner upgrade 2026-07-17): YouTube Data API v3 — top-liked comments on the
+          # story's own trailer/announcement video are the reaction co-spine (X is permanently dead).
+          # ~12% of the free daily quota at 12 stories/day. Absent = fail-soft (bsky + pages carry).
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
           # Reddit OFFICIAL OAuth (REV 3): keyless reddit is 403 from runner IPs; with these set,
           # discovery + fan-comment anchors go through oauth.reddit.com. Absent = keyless fallback.
           REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}

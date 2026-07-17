@@ -206,6 +206,11 @@ export async function agentRun({
           }
         }
         corrections = [...block, ...fixable, ...(job.qa.weaknesses || [])].slice(0, 6).map((b) => `- ${b}`).join("\n");
+        // Piggyback (owner: 140-155 complete-sentence descriptions): when a rewrite is happening
+        // anyway, a short metaDescription gets fixed in the same pass — never costs its own attempt.
+        if ((job.article.metaDescription || "").length < 120) {
+          corrections += "\n- metaDescription is too short: write 140-155 characters, 1-2 COMPLETE sentences ending with a period, teasing the actual reveal.";
+        }
         // Fabricated/unverbatim quotes get an explicit remediation: the fix is REMOVING quote marks
         // (or swapping in an exact anchor), not paraphrasing the same span into a new fake quote.
         if (/fabricated-quote|unverbatim/.test(corrections)) {
@@ -219,7 +224,7 @@ export async function agentRun({
       //    QA-passed draft. A voice outage ships the un-voiced article; it never holds anything.
       try {
         const preVoice = JSON.parse(JSON.stringify(job.article));
-        await withTimeout(voiceImpl(job), AGENTS.voice.watchdogMs, `voice ${tag}`);
+        await withTimeout(voiceImpl(job, { bannedHooks }), AGENTS.voice.watchdogMs, `voice ${tag}`);
         if (job.voiceSkipped) {
           job.article = preVoice;
           console.log(`  voice: skipped (${job.voiceSkipped})`);
@@ -229,7 +234,17 @@ export async function agentRun({
             job.article = preVoice;
             console.log(`  voice: REVERTED (${post.hardBlocks[0] || "unanchored quote introduced"})`);
           } else {
-            console.log("  voice: applied");
+            // HOOK RECHECK AFTER VOICE (owner audit 2026-07-17: voice re-injected "in a chokehold"
+            // from its own phrasebook AFTER the pre-QA guard). A banned hook in the voiced title
+            // reverts the TITLE to the guard-clean pre-voice one; the voiced body stays.
+            const voicedHook = hookHit(job.article.title, bannedHooks, { allowTokens });
+            if (voicedHook) {
+              job.article.title = preVoice.title;
+              if (hookHit(job.article.metaTitle || "", bannedHooks, { allowTokens })) job.article.metaTitle = preVoice.metaTitle;
+              console.log(`  voice: applied (title reverted — reintroduced hook "${voicedHook}")`);
+            } else {
+              console.log("  voice: applied");
+            }
           }
         }
         delete job.voiceSkipped;

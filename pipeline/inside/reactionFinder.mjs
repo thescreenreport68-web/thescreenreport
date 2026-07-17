@@ -8,6 +8,9 @@ import { findContent } from "../lib/contentFinder.mjs";
 import { cacheTweets } from "../lib/tweets.mjs";
 import { xSearchIds } from "./xsearch.mjs";
 import { bskySearchPosts } from "./bsky.mjs";
+import { ytSearchVideos, ytTopComments } from "./youtube.mjs";
+import { mastoTagPosts, tagCandidates } from "./mastodon.mjs";
+import { hnComments, TECH_RX } from "./hn.mjs";
 import { MODELS, FORMS, MAX_EMBEDS, NO_X, MIN_QUOTE_WORDS } from "./config.inside.mjs";
 
 // Normalization for the verbatim wall: curly→straight quotes, dashes unified, whitespace
@@ -239,6 +242,29 @@ export const reclassifyReport = (r, src) =>
     ? { ...r, speaker: "Report", speakerType: "report" }
     : r;
 
+// ── SUBJECT ADMISSION (owner upgrade 2026-07-17 — the Beck fix, deterministic, no model override) ──
+// A SEARCH-sourced social post becomes an anchor only if it demonstrably concerns THIS story's
+// subject: it must name the subject (or the work), and for an AMBIGUOUS single-token name it must
+// also show ≥1 story-context token. Posts that arrive STRUCTURALLY linked (comments on the story's
+// own video, replies/quote-posts of the story's own announcement post) carry their linkage as proof
+// and skip the text test — but every post still passes the spam/classify/off-subject gates.
+export function subjectAdmission(text, card, { linked = false } = {}) {
+  if (!card) return true;                                   // no card (legacy/injected tests) — open
+  if (linked) return true;                                  // structural linkage IS the subject proof
+  const t = norm(text || "");
+  if (!t) return false;
+  const nameHit = t.includes(norm(card.name));
+  const workHit = card.workTitle && t.includes(norm(card.workTitle));
+  if (!nameHit && !workHit) return false;
+  if (!card.ambiguous || workHit) return true;
+  return (card.contextTokens || []).some((k) => t.includes(k));
+}
+// Wrong-subject sweep for AMBIGUOUS names: sports/politics markers in a post mean the same-name
+// OTHER subject (the quarterback Beck, a senator) — never this desk's story. Deliberately narrower
+// than discovery's NON_ENT_RX: celebrity-legal words (trial/court) are IN-niche for reactions.
+export const POST_OFF_RX = /\b(quarterback|\bqb\b|draft (pick|class|board)|third[- ]round|first[- ]round|touchdown|NFL|NBA|MLB|NHL|Premier League|striker|midfielder|goalkeeper|transfer window|FIFA|UEFA|Champions League|Grand Prix|Formula 1|senator|congress|parliament|prime minister|election|Republican|Democrat)\b/i;
+export const offSubjectPost = (text, card) => !!card?.ambiguous && POST_OFF_RX.test(text || "");
+
 // FREE-MODE MEDIA FILTER (owner review of the Toy Story 5 run, 2026-07-11: "the quotes taken from X and
 // media are the issue — we want PEOPLE, not media"). In free mode the article's spine is ordinary people
 // plus the work's OWN creators (a director/actor/musician who made it). A professional CRITIC / reviewer /
@@ -262,7 +288,12 @@ export function unwrapQuote(text) {
   return best.length < s.length - 4 ? best : s;                   // only unwrap when real framing sits outside
 }
 
-const CLASSIFY_TWEETS_SYS = `You classify public X (Twitter) posts for an audience-reaction desk. For each post decide:
+const CLASSIFY_TWEETS_SYS = `You classify public social posts for an audience-reaction desk. For each post decide:
+- SAME-NAME SUBJECTS (critical): the SUBJECT is a specific entertainment person/work. A post about a
+  DIFFERENT person or thing that merely SHARES THE NAME — an athlete (a quarterback named Beck), a
+  politician or commentator (Glenn Beck), a brand, a place — is NOT about the subject: aboutEvent=false,
+  no matter how popular the post is. Check the post's own context (sport/politics words, team names,
+  draft talk) against the subject's context.
 - aboutEvent: is it a genuine reaction ABOUT THE SUBJECT (not spam/ads/unrelated, not a different work with
   a similar name)? Be strict for short/common titles.
 - isOutlet: is the AUTHOR a NEWS ORGANIZATION, media outlet, or news-AGGREGATOR account that REPORTS
@@ -348,6 +379,10 @@ export async function harvestReactions(trigger, angle, {
   scanImpl = scanPagesForTweets,
   xSearchImpl = xSearchIds,
   bskyImpl = bskySearchPosts,
+  ytVideosImpl = ytSearchVideos,
+  ytCommentsImpl = ytTopComments,
+  mastoImpl = mastoTagPosts,
+  hnImpl = hnComments,
   maxQueries = 3,
   // Soft self-deadline: stop STARTING new queries past this, return gracefully with whatever was
   // harvested (→ under-floor park + retry next cycle) instead of being watchdog-killed (→ blocked,
@@ -441,9 +476,11 @@ export async function harvestReactions(trigger, angle, {
   const dropMedia = process.env.INSIDE_NO_X === "1";
   const split = (list) => ({
     named: list.filter((r) => r.speaker && r.speakerType !== "fan" && !(dropMedia && isMediaVoice(r))),
+    // ENGAGEMENT-FIRST ordering (owner: peak engagement): the most-LIKED substantive posts lead the
+    // pool — the writer builds on what real people actually loved; length breaks ties.
     fans: list.filter((r) => r.speakerType === "fan" && substantive(r))
       .map(({ speaker, ...rest }) => ({ ...rest, speaker: "" }))
-      .sort((a, b) => wc(b.quote) - wc(a.quote)),
+      .sort((a, b) => (b.likes || 0) - (a.likes || 0) || wc(b.quote) - wc(a.quote)),
   });
 
   let passed = [], named = [], fans = [];
@@ -529,15 +566,19 @@ export async function harvestReactions(trigger, angle, {
   //      generically as "one user"). The same relevance/speaker classify gates every post.
   try {
     const who = angle.focusEntity || trigger.primaryEntity;
-    // BOTH SIDES, HONESTLY (owner): run the plain search PLUS skeptic/praise sentiment queries for the
-    // divided forms, so a "divided" framing is anchored by REAL posts from each camp — never padded with
-    // a blog's opinion. Merge + dedupe by text; the relevance/stance classify still gates every post.
-    // Widened for reaction SUPPLY (owner 2026-07-12): more angles + the work title + a higher per-query
-    // limit → more real fan posts clear the floor. Deduped by text below; the relevance classify still gates.
-    const workQ = trigger.work?.title && trigger.work.title !== who ? [trigger.work.title] : [];
+    // BOTH SIDES, HONESTLY (owner): plain search PLUS skeptic/praise queries for divided forms.
+    // SUBJECT LOCK (Beck fix): queries are built from the SUBJECT CARD, never a bare ambiguous name —
+    // a single-token subject always carries a disambiguator (category word / work title / context),
+    // so "Beck" searches as "Beck music" / "Ride Lonesome", never colliding with the QB during draft week.
+    const card = trigger.subject || null;
+    const disamb = card?.ambiguous ? ` ${card.categoryWord}` : "";
+    const base = `${who}${disamb}`;
+    const workQ = [];
+    if (trigger.work?.title && trigger.work.title !== who) workQ.push(trigger.work.title);
+    if (card?.workTitle && card.workTitle !== who && !workQ.includes(card.workTitle)) workQ.push(card.workTitle);
     const bqueries = [...new Set(["audience-reaction", "the-debate"].includes(angle.form)
-      ? [who, `${who} reactions`, `${who} fans`, `${who} disappointed`, `${who} amazing`, ...workQ]
-      : [who, `${who} reactions`, ...workQ])];
+      ? [base, `${base} reactions`, `${who} fans${disamb}`, `${base} disappointed`, `${base} amazing`, ...workQ]
+      : [base, `${base} reactions`, ...workQ])];
     const bResults = await Promise.all(bqueries.map((q) =>
       bskyImpl(q, { nowMs: t0, limit: 30 }).catch((e) => { diag(`bsky q="${q}" → ERR ${String(e?.message || e).slice(0, 60)}`); return []; })));
     const seenB = new Set();
@@ -547,7 +588,11 @@ export async function harvestReactions(trigger, angle, {
     });
     diag(`bsky → found ${found.length} (queries ${bqueries.length})`);
     if (found.length) {
-      const asPosts = found.slice(0, 32).map((p) => ({ text: p.text, user: { name: p.displayName, screen_name: p.handle }, created_at: p.createdAt }));
+      // SUBJECT ADMISSION before any paid classify: a search-sourced post must demonstrably concern
+      // THIS subject (deterministic), and ambiguous names sweep out sports/politics same-name noise.
+      const admitted = found.filter((p) => subjectAdmission(p.text, card) && !offSubjectPost(p.text, card));
+      if (admitted.length < found.length) diag(`bsky subject-gate → ${found.length - admitted.length} dropped (${admitted.length} kept)`);
+      const asPosts = admitted.slice(0, 32).map((p) => ({ text: p.text, likes: p.likes || 0, user: { name: p.displayName, screen_name: p.handle }, created_at: p.createdAt }));
       const classified = await classifyTweets(asPosts, trigger, angle, { model, chatImpl, subject });
       for (const c of classified) {
         const p = asPosts[c.i];
@@ -564,12 +609,70 @@ export async function harvestReactions(trigger, angle, {
           date: (p.created_at || "").slice(0, 10),
           quote,
           stance: c.stance || "neutral",
+          likes: p.likes || 0, // engagement — orders the pool + lets the writer cite "a post with N likes"
           sourceIdx: withText.length - 1,
         });
       }
       recompute();
     }
   } catch { /* bsky outage — other anchors may suffice */ }
+
+  // 3b3. SUPPLY 2.0 (owner upgrade 2026-07-17): YOUTUBE TOP COMMENTS (the co-spine — relevance-ranked,
+  //      like-counted audience reactions on the story's OWN video, structurally subject-linked) +
+  //      MASTODON hashtag posts (the tag is the linkage) + HN comments (tech-adjacent stories only).
+  //      Every post still passes the same spam/classify/off-subject gates; likes ride along so the
+  //      writer builds on what people actually loved. Fail-soft per source.
+  if (Date.now() - t0 <= softDeadlineMs) {
+    try {
+      const who = angle.focusEntity || trigger.primaryEntity;
+      const card = trigger.subject || null;
+      // Disambiguated video query; the found VIDEO must itself pass the subject test before its
+      // comments (linked) are trusted — an ambiguous name can't pull the wrong film's trailer.
+      const ytQ = [who, card?.workTitle || (card?.ambiguous ? card.categoryWord : "")].filter(Boolean).join(" ");
+      const vids = (await ytVideosImpl(ytQ, { nowMs: t0 }).catch(() => [])).filter((v) => subjectAdmission(v.title, card));
+      const ytLists = await Promise.all(vids.slice(0, 2).map((v) => ytCommentsImpl(v.videoId).catch(() => [])));
+      const ytComments = ytLists.flat().sort((a, b) => (b.likes || 0) - (a.likes || 0)).slice(0, 30);
+      diag(`yt → q="${ytQ}" videos ${vids.length}, comments ${ytComments.length}${ytComments[0] ? `, top ${ytComments[0].likes} likes` : ""}`);
+      const tags = tagCandidates(card);
+      const mastoLists = await Promise.all(tags.map((tg) => mastoImpl(tg, { nowMs: t0 }).catch(() => [])));
+      const mastoPosts = mastoLists.flat().slice(0, 16);
+      if (tags.length) diag(`masto → tags [${tags.join(", ")}], posts ${mastoPosts.length}`);
+      const hnPosts = TECH_RX.test(`${trigger.headline || ""} ${trigger.overview || ""}`)
+        ? (await hnImpl(`${who} ${card?.workTitle || ""}`.trim(), { nowMs: t0 }).catch(() => [])).slice(0, 10)
+        : [];
+      if (hnPosts.length) diag(`hn → ${hnPosts.length}`);
+
+      const incoming = [
+        ...ytComments.map((c) => ({ ...c, linked: true })),   // comments on the story's own verified video
+        ...mastoPosts.map((c) => ({ ...c, linked: true })),   // the hashtag is the linkage
+        ...hnPosts.map((c) => ({ ...c, linked: false })),     // search-sourced — text admission applies
+      ].filter((p) => p.text && subjectAdmission(p.text, card, { linked: p.linked }) && !offSubjectPost(p.text, card));
+      if (incoming.length) {
+        const asPosts = incoming.slice(0, 32).map((p) => ({ text: p.text, likes: p.likes || 0, user: { name: p.author || "", screen_name: "" }, created_at: p.createdAt || "" }));
+        const classified = await classifyTweets(asPosts, trigger, angle, { model, chatImpl, subject });
+        for (const c of classified) {
+          const p = asPosts[c.i];
+          const text = (p.text || "").trim();
+          if (!text || looksLikeSpam(text)) continue;
+          const quote = cleanQuote(text);
+          if (norm(quote).length < 8 || hasHandle(quote)) continue;
+          withText.push({ url: null, domain: "social", owner: "social", tier: "social", title: "public post", text, quotes: [text] });
+          raw.push({
+            speaker: c.speakerType === "fan" ? "" : (p.user?.name || ""),
+            speakerType: c.speakerType || "fan",
+            connection: c.connection || "",
+            platform: "", // generic — never "YouTube"/"Mastodon" (owner: no platform names)
+            date: (p.created_at || "").slice(0, 10),
+            quote,
+            stance: c.stance || "neutral",
+            likes: p.likes || 0,
+            sourceIdx: withText.length - 1,
+          });
+        }
+        recompute();
+      }
+    } catch { /* supply-2.0 outage — bsky + page-scan carry the harvest */ }
+  }
 
   // (Reddit as an anchor source was REMOVED 2026-07-12 — permanently 403-blocked from datacenter
   //  runners. Bluesky (3b2) + the X-syndication page-scan + outlet extraction carry the reaction supply.)
@@ -598,7 +701,13 @@ export function factBlockText(factBlock, trigger) {
     L.push(`R${i + 1}. ${r.speaker}${r.connection ? ` (${r.connection})` : ""} — ${r.platform || "on the record"}${r.date ? `, ${r.date}` : ""} [${r.stance}]${r.tweetId ? ` [tweet:${r.tweetId}]` : ""}: "${r.quote}"`));
   if (factBlock.aggregateFans.length) {
     L.push("AUDIENCE POSTS (THE SPINE of the article — real posts by normal people; quote WITHOUT any name and WITHOUT naming a platform: \"one user wrote,\" \"another viewer said,\" \"a fan online posted\" — these are TEXT quotes, not embeds):");
-    factBlock.aggregateFans.forEach((r, i) => L.push(`A${i + 1}. [${r.stance}] ${r.platform || ""}: "${r.quote}"`));
+    factBlock.aggregateFans.forEach((r, i) => {
+      // Likes are shown to the writer as a GROUNDED number it may cite ("a comment with 48,297 likes
+      // put it best…") — engagement proof readers love. EXACT integer, so the shared specificsGuard
+      // number-grounding passes when the writer quotes it (a rounded "48.3k" would fail the trace).
+      const lk = r.likes > 0 ? ` [${r.likes} likes]` : "";
+      L.push(`A${i + 1}. [${r.stance}]${lk}: "${r.quote}"`);
+    });
   }
   const s = factBlock.stats;
   L.push(`SENTIMENT PICTURE (characterize honestly, anchored by the posts above): ${s.divided ? "DIVIDED (both sides present)" : s.hasNegative && !s.hasPositive ? "mostly negative" : s.hasPositive && !s.hasNegative ? "mostly positive" : "mixed / neutral"} — ${s.namedVoices} named quotes, ${s.fanPosts} audience posts.`);

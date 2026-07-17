@@ -22,6 +22,12 @@ Your brief must:
   verbatim from the block; your job is selection and structure).
 - Write summaries in flat editorial register — never in a fan's/viewer's voice, never a sentence that
   reads like a quotable post (the writer must never be tempted to put YOUR words inside quotation marks).
+- SUBJECT INTEGRITY (hard rule): if some anchors are clearly about a DIFFERENT subject that shares the
+  story's name (an athlete, a politician, another same-named person/work — e.g. sports-draft posts on a
+  musician's album story), EXCLUDE those anchors entirely: never reference their ids, and NEVER build a
+  "collision of worlds / name mix-up" narrative out of them. If after excluding them too little genuine
+  on-subject material remains for an honest article, return exactly {"noBrief": "mixed-identity anchors"}
+  instead of a brief.
 Output STRICT JSON only.`;
 
 // run(job) → job.brief
@@ -43,6 +49,10 @@ JSON:
 "suggestedTitle":"honest + curiosity, no clickbait","seoKeyword":"one natural keyword phrase"}`,
   }, chatImpl ? { chatImpl } : {});
 
+  if (data?.noBrief) {
+    job.synthFail = `synthesizer declined: ${String(data.noBrief).slice(0, 80)}`;
+    return job;
+  }
   if (!data || !Array.isArray(data.sides) || !data.sides.length) {
     job.synthFail = "synthesizer returned no usable brief";
     return job;

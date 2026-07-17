@@ -714,7 +714,9 @@ await check("detectCategory routes music and TV stories correctly (not defaulted
     { title: "Severance season 2 series finale renewed episode shocks fans", outlet: "Variety", ageMin: 30, cats: [], url: "https://v.example/s" },
     { title: "Severance season 2 series finale renewed episode premiere date", outlet: "THR", ageMin: 35, cats: [], url: "https://t.example/s2" },
   ];
-  const opts = { ...gateOpts(async () => [{}, {}, {}], async () => ({ popularPosts: 8, maxLikes: 500, sumLikes: 2000, topIds: [] })), discoverNewsImpl: async () => heads };
+  // Posts carry REAL text: the subject screen (Beck fix) only counts context-matched posts for a
+  // single-token entity like "Kelela" — an empty {} post is rightly ignored.
+  const opts = { ...gateOpts(async () => [{ text: "the new Kelela album is stunning", likes: 9 }, { text: "Kelela new album video is gorgeous", likes: 4 }, { text: "album of the year already", likes: 2 }], async () => ({ popularPosts: 8, maxLikes: 500, sumLikes: 2000, topIds: [] })), discoverNewsImpl: async () => heads };
   const stories = await discoverStories(opts);
   const kelela = stories.find((s) => /kelela/i.test(s.storySlug));
   const sev = stories.find((s) => /severance/i.test(s.storySlug));
@@ -915,6 +917,65 @@ await check("seoTitle: 45–55 range — strip brand, prefer an in-range value, 
   const long = metaTitleFor({ metaTitle: "", title: "State AGs Move to Block the Paramount WBD Merger and the Internet Is Deeply Split" });
   assert.ok(long.length <= 65 && endsClean(long), `clean cut: "${long}" (${long.length})`);
 });
+// ── SUBJECT LOCK (owner upgrade 2026-07-17 — the Beck replay fixtures) ────────────────────────────
+await check("BECK REPLAY: subject card + admission gate reject the NFL and Glenn Beck posts, keep the album post", async () => {
+  const { buildSubjectCard, subjectQuickMatch } = await import("../discover.mjs");
+  const { subjectAdmission, offSubjectPost } = await import("../reactionFinder.mjs");
+  const beck = buildSubjectCard({ primaryEntity: "Beck", kind: "headline", category: "music",
+    headline: "Beck Announces First Album in Seven Years, Ride Lonesome, Drops Meditative Video For In the Night Single",
+    overview: "The follow-up to Hyperspace is due out on Sept. 18." });
+  assert.equal(beck.ambiguous, true, "single-token name is the collision class");
+  assert.equal(beck.categoryWord, "music");
+  assert.ok(beck.contextTokens.includes("album") && beck.contextTokens.includes("hyperspace"), "context extracted");
+  // the REAL wrong-subject posts that shipped
+  const nfl = "Why are you wasting a third round pick on a qb with a back up ceiling? Beck? Why??";
+  const glenn = "Apparently hell has frozen over. I'm reposting Glenn Beck now.";
+  const album = "Beck announcing a new album Ride Lonesome after seven years has me emotional, Hyperspace was my life";
+  assert.equal(subjectAdmission(nfl, beck), false, "NFL post rejected (no story context)");
+  assert.equal(offSubjectPost(nfl, beck), true, "NFL post swept by sports/politics markers");
+  assert.equal(subjectAdmission(glenn, beck), false, "Glenn Beck post rejected");
+  assert.equal(subjectAdmission(album, beck), true, "genuine album post admitted");
+  assert.equal(offSubjectPost(album, beck), false);
+  // heat pre-count: wrong-subject noise can no longer crown the story
+  assert.equal(subjectQuickMatch(nfl, beck), false);
+  assert.equal(subjectQuickMatch(album, beck), true);
+  // structural linkage bypasses the text test (a reply/comment on the story's own video)
+  assert.equal(subjectAdmission("this is incredible, crying", beck, { linked: true }), true);
+  // a multi-word name stays open (no false rejections)
+  const mbb = buildSubjectCard({ primaryEntity: "Millie Bobby Brown", kind: "headline", category: "movies", headline: "Millie Bobby Brown responds to Enola Holmes 3 nail criticism", overview: "" });
+  assert.equal(mbb.ambiguous, false);
+  assert.equal(subjectAdmission("Millie Bobby Brown is right about the nails", mbb), true);
+});
+await check("supply 2.0: youtube comment mapping + mastodon tag candidates never emit an ambiguous bare tag", async () => {
+  const { ytTopComments } = await import("../youtube.mjs");
+  const { tagCandidates } = await import("../mastodon.mjs");
+  const fetchImpl = async () => ({ ok: true, json: async () => ({ items: [
+    { snippet: { topLevelComment: { snippet: { textOriginal: "Jessie mirroring Woody's arc from the first film broke me", authorDisplayName: "@fan1", likeCount: 48297, publishedAt: "2026-07-10T00:00:00Z" } } } },
+    { snippet: { topLevelComment: { snippet: { textDisplay: "short", authorDisplayName: "@x", likeCount: 2 } } } },
+  ] }) });
+  const comments = await ytTopComments("vid123", { key: "test-key", fetchImpl });
+  assert.equal(comments.length, 1, "too-short comment filtered");
+  assert.equal(comments[0].likes, 48297);
+  assert.equal(comments[0].author, "fan1", "@ stripped");
+  assert.equal(await (await import("../youtube.mjs")).ytTopComments("vid123", { key: "" }).then((r) => r.length), 0, "no key → fail-soft []");
+  // tags: work title becomes the tag; an ambiguous bare name NEVER does
+  const toy = { name: "Toy Story 5", ambiguous: false, workTitle: null, categoryWord: "movie", contextTokens: [] };
+  assert.deepEqual(tagCandidates(toy), ["ToyStory5"]);
+  const beckCard = { name: "Beck", ambiguous: true, workTitle: null, categoryWord: "music", contextTokens: [] };
+  assert.deepEqual(tagCandidates(beckCard), [], "ambiguous bare name yields NO tag (fail-closed)");
+  const beckWork = { name: "Beck", ambiguous: true, workTitle: "Ride Lonesome", categoryWord: "music", contextTokens: [] };
+  assert.deepEqual(tagCandidates(beckWork), ["RideLonesome"], "the work title is the safe tag");
+});
+await check("voice pass: banned hooks filtered from the phrasebook and stated in the prompt", async () => {
+  const voice = await import("../agents/voice.mjs");
+  let seenUser = "";
+  const chatImpl = async ({ user }) => { seenUser = user; return { data: { title: "Fresh Title", dek: "d", body: "b" }, usage: {} }; };
+  const job = { article: { title: "T", dek: "D", body: "Some body text with no quotes." }, story: { primaryEntity: "X" }, angle: { form: "audience-reaction" } };
+  await voice.run(job, { bannedHooks: ["in a chokehold"], chatImpl });
+  const phrasebookSection = seenUser.split("BANNED PHRASES")[0];
+  assert.ok(!/in a chokehold/i.test(phrasebookSection), "banned hook filtered OUT of the phrasebook offering");
+  assert.ok(/BANNED PHRASES/.test(seenUser) && /- in a chokehold/.test(seenUser), "ban list stated to the editor");
+});
 await check("unwrapQuote snaps a framed outlet quote to the person's own words (kills nested-quote card)", () => {
   // the exact card #2 bug: outlet framing + a nested quotation
   const framed = `The fifth "Toy Story" film "ranks right alongside the first three films, delivering a perfect blend of humor, heart, and that signature Pixar magic."`;
@@ -958,6 +1019,8 @@ await check("a source HEADLINE extracted as a 'fan quote' never becomes an ancho
     cacheTweetsImpl: async () => ({ tweets: [], ids: [] }),
     scanImpl: async () => [],
     xSearchImpl: async () => [],
+    bskyImpl: async () => [],
+    ytVideosImpl: async () => [], ytCommentsImpl: async () => [], mastoImpl: async () => [], hnImpl: async () => [],
     reddit: false, embeds: false,
   });
   assert.equal(res.ok, false, "1 real fan post < floor 3 → refuses");

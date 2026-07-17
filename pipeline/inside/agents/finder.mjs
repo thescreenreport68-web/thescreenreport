@@ -136,13 +136,20 @@ export async function findStories({ limit = 16, discoverImpl = discoverStories, 
         work: s.work || null,
         overview: s.overview || "",
         headline: s.headline || null,
+        subject: s.subject || null, // the SUBJECT CARD — retrieval + admission downstream key off it
       },
       angle: {
         form,
         angle: (p?.angle || "audience discourse").slice(0, 200),
         workingTitle: p?.workingTitle || `${s.primaryEntity}: what people are saying`,
         focusEntity: p?.focusEntity || s.primaryEntity,
-        searchQueries: (Array.isArray(p?.searchQueries) ? p.searchQueries : []).filter(Boolean).slice(0, 3),
+        // Beck fix: the fallback for an LLM-skipped story must never leave an AMBIGUOUS single-token
+        // name with zero queries — seed a disambiguated query from the card so the harvest never
+        // searches a bare shared name.
+        searchQueries: (Array.isArray(p?.searchQueries) && p.searchQueries.filter(Boolean).length
+          ? p.searchQueries.filter(Boolean)
+          : (s.subject?.ambiguous ? [`${s.primaryEntity} ${s.subject.categoryWord}`] : [])
+        ).slice(0, 3),
         key: form,
       },
     });

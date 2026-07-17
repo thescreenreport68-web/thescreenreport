@@ -52,12 +52,14 @@ const gatherJob = async (form, chatImpl) => {
   const job = { story: fakeTrigger(), angle: fakeAngle(form) };
   const harvestImpl = (story, angle, opts) => harvestReactions(story, angle, {
     xSearchImpl: async () => [],
-    ...opts, // keeps the gatherer's chatImpl shim + model routing in play
+    ...opts,
+    bskyImpl: async () => [], // keeps the gatherer's chatImpl shim + model routing in play
     findContentImpl: makeFinder(),
     cacheTweetsImpl: async () => ({ tweets: [], ids: [] }),
     scanImpl: async () => [],
     redditSearchImpl: async () => [],
     redditCommentsImpl: async () => [],
+    ytVideosImpl: async () => [], ytCommentsImpl: async () => [], mastoImpl: async () => [], hnImpl: async () => [],
     reddit: false,
     embeds: false,
   });
@@ -167,9 +169,11 @@ await check("harvest subject label falls back to 'film/TV' when the trigger has 
   const harvestImpl = (s, a, opts) => harvestReactions(s, a, {
     xSearchImpl: async () => [],
     ...opts,
+    bskyImpl: async () => [],
     findContentImpl: makeFinder(),
     cacheTweetsImpl: async () => ({ tweets: [], ids: [] }),
     scanImpl: async () => [], redditSearchImpl: async () => [], redditCommentsImpl: async () => [],
+    ytVideosImpl: async () => [], ytCommentsImpl: async () => [], mastoImpl: async () => [], hnImpl: async () => [],
     reddit: false, embeds: false,
   });
   await gathererRun(job, { harvestImpl, chatImpl });

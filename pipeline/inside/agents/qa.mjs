@@ -152,11 +152,15 @@ readability (short, scannable, clear), engagement (does the HOOK grab and the st
 page), humanVoice (lively human, zero corporate filler), curiosity (honest, promise paid off), structure
 (the form's skeleton), infoGain (does the reader learn what people think / what the debate is), seo (honest
 title, ONE natural keyword, NOT over-optimized — over-optimization is a DEFECT), faqQuality, completeness
-(uses the real posts, no padding), accuracy (characterizations anchored, not overstated). Reward a strong
+(uses the real posts, no padding), accuracy (characterizations anchored, not overstated),
+subjectMatch (CRITICAL: are the quoted posts about THE SAME subject as the story? A same-NAME different
+subject — an athlete/politician/other person or work sharing the name — scores 0-2; posts about the
+story's actual subject score 8-10. Also check: every consensus claim ("fans are calling it X") is
+supported by the real posts shown, and no negative/mocking post is framed as praise). Reward a strong
 hook, real posts as beats, lively voice; punish dull summary ledes, keyword-stuffing, filler, quote-dumps.
 Score only — never rewrite. STRICT JSON: {"score":0,"subscores":{"readability":0,"engagement":0,
 "humanVoice":0,"curiosity":0,"structure":0,"infoGain":0,"seo":0,"faqQuality":0,"completeness":0,
-"accuracy":0},"strengths":[""],"weaknesses":[""]}`;
+"accuracy":0,"subjectMatch":0},"strengths":[""],"weaknesses":[""]}`;
 
 // review(job) → job.qa = { score, pass, hardBlocks, cutClaims, subscores, weaknesses }
 export async function review(job, { chatImpl = null } = {}) {
@@ -199,6 +203,9 @@ export async function review(job, { chatImpl = null } = {}) {
     for (const k of ["readability", "engagement", "humanVoice"]) {
       if (s[k] != null && s[k] < 5) hardBlocks.push(`soft-floor ${k} ${s[k]} < 5`);
     }
+    // SUBJECT-MATCH HARD FLOOR (Beck fix): an article whose quoted posts are about a same-name
+    // DIFFERENT subject is an accuracy failure, not a style problem — it can never publish.
+    if (s.subjectMatch != null && s.subjectMatch < 6) hardBlocks.push(`subject-mismatch: quoted posts not about this story's subject (${s.subjectMatch}/10)`);
   }
 
   cutClaims = [...new Set(cutClaims.filter((c) => (c || "").length > 8))];

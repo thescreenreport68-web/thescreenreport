@@ -53,7 +53,7 @@ export function categoryFor({ work = null, text = "", hint = null } = {}) {
 // NON-ENTERTAINMENT deterministic reject (owner audit: a viral POLITICIAN ranked #1). Clear politics/
 // government/sports/business/crime markers in the headline/overview drop the story before it can lead;
 // the finder LLM is the semantic backstop for name-only cases (e.g. a politician with no keyword).
-const NON_ENT_RX = /\b(elect(ion|ed)|politic(s|al|ian)|parliament|MP|senator|congress|governor|president|prime minister|minister|Brexit|Tory|Labour|Republican|Democrat|campaign|policy|referendum|court|trial|verdict|lawsuit indictment|stock|earnings|IPO|quarterly|NFL|NBA|MLB|Premier League|World Cup|golf tournament|championship match|Wimbledon|Olympics|striker|midfielder|goalkeeper|Ballon d.Or|transfer window|Bundesliga|La Liga|Serie A|UEFA|FIFA|Champions League|quarterback|touchdown|Grand Prix|Formula 1|shot and killed|fatally shot|shooting|stabb(ed|ing)|homicide|manslaughter|carjacking|robbery|kidnap|wildfire|hurricane|earthquake|tornado|\bflooding\b|plane crash|road accident)\b/i;
+export const NON_ENT_RX = /\b(elect(ion|ed)|politic(s|al|ian)|parliament|MP|senator|congress|governor|president|prime minister|minister|Brexit|Tory|Labour|Republican|Democrat|campaign|policy|referendum|court|trial|verdict|lawsuit indictment|stock|earnings|IPO|quarterly|NFL|NBA|MLB|Premier League|World Cup|golf tournament|championship match|Wimbledon|Olympics|striker|midfielder|goalkeeper|Ballon d.Or|transfer window|Bundesliga|La Liga|Serie A|UEFA|FIFA|Champions League|quarterback|touchdown|Grand Prix|Formula 1|shot and killed|fatally shot|shooting|stabb(ed|ing)|homicide|manslaughter|carjacking|robbery|kidnap|wildfire|hurricane|earthquake|tornado|\bflooding\b|plane crash|road accident)\b/i;
 const isEntertainmentTopic = (text) => !NON_ENT_RX.test(text || "");
 
 // Signal→heat boosts. Sized so a real audience-buzz hit outranks any coverage-only story:
@@ -96,6 +96,42 @@ function headlineEntity(headline, fallback = "") {
   return ent.slice(0, 60) || stripped.replace(/\s*[|:,–—].*$/, "").trim().slice(0, 60) || (fallback || h).slice(0, 60);
 }
 const buzzTermOf = (s) => (s.work?.title || headlineEntity(s.headline, s.primaryEntity) || s.primaryEntity || "").split(/[|,]|\s[-]\s/)[0].trim().slice(0, 60);
+
+// ── SUBJECT CARD (owner upgrade 2026-07-17 — the Beck fix) ─────────────────────────────────────────
+// Identity must never collapse to a bare name. Every story carries a card with the disambiguating
+// context the headline/overview already had, so retrieval queries and the admission gate downstream
+// can tell the musician Beck from the quarterback Beck. `ambiguous` marks the danger class: a
+// single-token name (Beck, Silo, Stream) whose bare search WILL collide with other subjects.
+const CTX_STOP = new Set(("the a an and or but of to in on for at with from by as is are was were has have had this that its it his her their new first after amid over says said announces announced reveals confirmed confirms drops sets here why how what when your you all out now just more than years year seven").split(/\s+/));
+const CATEGORY_WORD = { movies: "movie", tv: "TV series", music: "music", celebrity: "celebrity", streaming: "streaming", awards: "awards" };
+export function buildSubjectCard(story) {
+  const name = (story.primaryEntity || "").trim();
+  const src = `${story.headline || ""} ${story.overview || ""}`;
+  const nameToks = new Set(norm(name).split(" ").filter(Boolean));
+  // quoted titles in the headline are the strongest context ("Ride Lonesome", "In the Night")
+  const quoted = [...src.matchAll(/[‘“'"]([^‘’“”'"]{3,50})[’”'"]/g)].map((m) => m[1].trim())
+    .filter((q) => norm(q) !== norm(name));
+  const contextTokens = [...new Set(norm(src).split(" ")
+    .filter((w) => w.length >= 4 && !CTX_STOP.has(w) && !nameToks.has(w)))].slice(0, 14);
+  return {
+    name,
+    kind: story.kind || "headline",
+    categoryWord: CATEGORY_WORD[story.category] || "entertainment",
+    workTitle: story.work?.title && norm(story.work.title) !== norm(name) ? story.work.title : (quoted[0] || null),
+    contextTokens,
+    // single-token names are the collision class; multi-word names (Millie Bobby Brown) are safe
+    ambiguous: nameToks.size <= 1,
+  };
+}
+// Cheap deterministic screen for the Stage-1 buzz pre-count: for an AMBIGUOUS subject, a post only
+// counts toward heat if it shows story context — same-name noise must not crown a story (Beck ranked
+// #1 BECAUSE of NFL-draft posts).
+export function subjectQuickMatch(text, card) {
+  if (!card?.ambiguous) return true;
+  const t = norm(text || "");
+  if (card.workTitle && t.includes(norm(card.workTitle))) return true;
+  return (card.contextTokens || []).some((k) => t.includes(k));
+}
 
 // Default HEADLINE source: trade RSS + Google News, merged (both keyless, both already built for
 // the news lane). Every failure degrades to [] — discovery never dies on one source.
@@ -328,7 +364,10 @@ export async function discoverStories({
     bskyCountImpl(buzzTermOf(st), { limit: 40, sort: "latest", nowMs: now }).catch(() => []),
   ));
   preList.forEach((st, i) => {
-    const posts = bskyCounts[i] || [];
+    // SUBJECT SCREEN (Beck fix): every story gets its card here; for an ambiguous single-token name,
+    // only context-matched posts count toward heat — same-name noise must never crown a story.
+    st.subject = buildSubjectCard(st);
+    const posts = (bskyCounts[i] || []).filter((p) => subjectQuickMatch(p.text, st.subject));
     st.signals.audiencePosts = posts.length;
     st.signals.audienceEngagement = posts.reduce((sum, p) => sum + (p.likes || 0), 0);
     // FREE MODE: with the paid X measure off, Bluesky post-count + likes IS the popularity signal and now
@@ -402,5 +441,7 @@ export async function discoverStories({
     }
     return b.discourseHeat - a.discourseHeat;                                 // then trade heat
   });
-  return deduped.slice(0, max);
+  const out = deduped.slice(0, max);
+  for (const st of out) if (!st.subject) st.subject = buildSubjectCard(st); // every story carries its card
+  return out;
 }
