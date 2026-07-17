@@ -1,0 +1,115 @@
+{
+  "ts": "2026-07-17T17:01:32.825Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    "why-ian-somerhalder-pulled-the-plug-on-acting-after-netflix-s-v-wars"
+  ],
+  "topics": 1,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 0,
+  "costUSD": 0.015518,
+  "costPerPublished": 0.015518,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 8,
+      "in": 17180,
+      "out": 1411,
+      "usd": 0.008681499999999998
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 1055,
+      "out": 878,
+      "usd": 0.00038704
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 6,
+      "in": 15435,
+      "out": 5996,
+      "usd": 0.0055755105
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 5,
+      "in": 5468,
+      "out": 819,
+      "usd": 0.0008744
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2471,
+      "out": 201,
+      "usd": 0.0012438,
+      "ms": 2308
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1055,
+      "out": 878,
+      "usd": 0.00025299000000000003,
+      "ms": 10177
+    },
+    "writer": {
+      "calls": 5,
+      "errors": 0,
+      "in": 14583,
+      "out": 5642,
+      "usd": 0.00527237,
+      "ms": 150421
+    },
+    "verify": {
+      "calls": 7,
+      "errors": 0,
+      "in": 14709,
+      "out": 1210,
+      "usd": 0.0074377,
+      "ms": 8963
+    },
+    "judge": {
+      "calls": 2,
+      "errors": 0,
+      "in": 3264,
+      "out": 563,
+      "usd": 0.0005516,
+      "ms": 3023
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 852,
+      "out": 354,
+      "usd": 0.00031632000000000003,
+      "ms": 8321
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 401,
+      "out": 100,
+      "usd": 0.0000801,
+      "ms": 681
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 199,
+      "out": 49,
+      "usd": 0.0000395,
+      "ms": 478
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1604,
+      "out": 107,
+      "usd": 0.0002032,
+      "ms": 2146
+    }
+  }
+}
