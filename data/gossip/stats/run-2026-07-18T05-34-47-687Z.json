@@ -1,0 +1,155 @@
+{
+  "ts": "2026-07-18T05:34:47.687Z",
+  "mode": "from-find",
+  "review": true,
+  "published": [
+    {
+      "slug": "jelly-roll-and-bunnie-xo-settle-divorce-with-a-non-disparagement-clause",
+      "category": "celebrity",
+      "isUpdate": true,
+      "parentSlug": "jelly-roll-details-overeating-struggles-amid-bunnie-xo-divorce",
+      "seoIssues": [],
+      "headline": [
+        "metaDescription",
+        "dek"
+      ],
+      "voice": {
+        "applied": false,
+        "reason": "numbers-changed"
+      },
+      "guardCuts": 0,
+      "surgicalFixes": 0
+    }
+  ],
+  "topics": 1,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 0,
+  "costUSD": 0.013028,
+  "costPerPublished": 0.013028,
+  "byModel": {
+    "deepseek/deepseek-v3.2": {
+      "calls": 7,
+      "in": 13937,
+      "out": 5271,
+      "usd": 0.00348409365
+    },
+    "google/gemini-2.5-flash": {
+      "calls": 6,
+      "in": 11885,
+      "out": 1596,
+      "usd": 0.007555499999999999
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 3,
+      "in": 2394,
+      "out": 4416,
+      "usd": 0.0012628424999999999
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 7,
+      "in": 4960,
+      "out": 575,
+      "usd": 0.0007260000000000001
+    }
+  },
+  "byRole": {
+    "dedup": {
+      "calls": 2,
+      "errors": 0,
+      "in": 608,
+      "out": 49,
+      "usd": 0.0001565,
+      "ms": 3052
+    },
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2399,
+      "out": 194,
+      "usd": 0.0012046999999999997,
+      "ms": 1363
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 960,
+      "out": 1068,
+      "usd": 0.00027864,
+      "ms": 78301
+    },
+    "writer": {
+      "calls": 4,
+      "errors": 0,
+      "in": 12646,
+      "out": 4925,
+      "usd": 0.004583080000000001,
+      "ms": 97775
+    },
+    "verify": {
+      "calls": 5,
+      "errors": 0,
+      "in": 9486,
+      "out": 1402,
+      "usd": 0.006350799999999999,
+      "ms": 8696
+    },
+    "judge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1436,
+      "out": 171,
+      "usd": 0.000212,
+      "ms": 1057
+    },
+    "voice": {
+      "calls": 1,
+      "errors": 0,
+      "in": 451,
+      "out": 1748,
+      "usd": 0.00035522999999999994,
+      "ms": 18633
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 683,
+      "out": 297,
+      "usd": 0.00025807,
+      "ms": 7792
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 370,
+      "out": 114,
+      "usd": 0.00008259999999999999,
+      "ms": 694
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 197,
+      "out": 34,
+      "usd": 0.0000333,
+      "ms": 411
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2097,
+      "out": 94,
+      "usd": 0.0002473,
+      "ms": 2101
+    },
+    "linker": {
+      "calls": 3,
+      "errors": 0,
+      "in": 860,
+      "out": 162,
+      "usd": 0.0001508,
+      "ms": 1660
+    }
+  }
+}
