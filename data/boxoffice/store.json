@@ -709,27 +709,70 @@
    "key": "ek-din-ev-streaming-arrival|NOW-STREAMING",
    "eventSlug": "ek-din-ev-streaming-arrival",
    "form": "NOW-STREAMING",
+   "reason": "under floor: no trade box-office report (no extractable sources and no inline reporting)",
+   "tries": 2,
+   "at": "2026-07-18T14:43:13.157Z"
+  },
+  {
+   "key": "the-odyssey-ev-weekend|BO-WEEKEND",
+   "eventSlug": "the-odyssey-ev-weekend",
+   "form": "BO-WEEKEND",
+   "reason": "under floor: no trade box-office report (no extractable sources and no inline reporting)",
+   "tries": 1,
+   "at": "2026-07-18T14:35:15.180Z"
+  },
+  {
+   "key": "spider-man-brand-new-day-ev-opening|BO-OPENING",
+   "eventSlug": "spider-man-brand-new-day-ev-opening",
+   "form": "BO-OPENING",
+   "reason": "words 159 < 180 (owner-set ~200-word minimum)",
+   "tries": 1,
+   "at": "2026-07-18T14:39:41.258Z"
+  },
+  {
+   "key": "disclosure-day-ev-streaming-arrival|NOW-STREAMING",
+   "eventSlug": "disclosure-day-ev-streaming-arrival",
+   "form": "NOW-STREAMING",
    "reason": "under floor: no subscription-streaming platform — rent/buy is not 'now streaming'",
    "tries": 1,
-   "at": "2026-07-18T04:39:17.673Z"
+   "at": "2026-07-18T14:40:17.512Z"
+  },
+  {
+   "key": "the-hawk-ev-streaming-arrival|NOW-STREAMING",
+   "eventSlug": "the-hawk-ev-streaming-arrival",
+   "form": "NOW-STREAMING",
+   "reason": "under floor: no subscription-streaming platform — rent/buy is not 'now streaming'",
+   "tries": 1,
+   "at": "2026-07-18T14:45:48.950Z"
+  },
+  {
+   "key": "young-washington-bo-update-d15|BO-UPDATE",
+   "eventSlug": "young-washington-bo-update-d15",
+   "form": "BO-UPDATE",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "tries": 1,
+   "at": "2026-07-18T14:47:28.628Z"
   }
  ],
- "zeroStreak": 8,
+ "zeroStreak": 9,
  "daySpend": {
-  "laDay": "2026-07-17",
-  "usd": 1.20389
+  "laDay": "2026-07-18",
+  "usd": 0.02627
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1784356243091
+  "lastMs": 1784385040769
  },
- "lastAuditDay": "2026-07-17",
+ "lastAuditDay": "2026-07-18",
  "attempts": {
-  "laDay": "2026-07-17",
+  "laDay": "2026-07-18",
   "byFilm": {
-   "the odyssey": 2,
-   "obsession": 1,
-   "winning ai search": 1
+   "the odyssey": 1,
+   "spider-man: brand new day": 1,
+   "disclosure day": 1,
+   "ek din": 1,
+   "the hawk": 1,
+   "young washington": 1
   }
  }
 }

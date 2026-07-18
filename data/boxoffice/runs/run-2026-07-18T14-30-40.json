@@ -1,0 +1,136 @@
+{
+ "runId": "run-2026-07-18T14-30-40",
+ "mode": "live",
+ "startedAt": "2026-07-18T14:30:40.769Z",
+ "films": 8,
+ "published": [],
+ "held": [
+  {
+   "tag": "spider-man-brand-new-day-ev-opening×BO-OPENING",
+   "reason": "words 159 < 180 (owner-set ~200-word minimum)",
+   "score": 65
+  },
+  {
+   "tag": "young-washington-bo-update×BO-UPDATE",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "score": 50
+  }
+ ],
+ "rejected": [
+  {
+   "tag": "the-odyssey-ev-weekend×BO-WEEKEND",
+   "stage": "gatherer",
+   "reason": "under floor: no trade box-office report (no extractable sources and no inline reporting) (try 1)"
+  },
+  {
+   "tag": "disclosure-day-ev-streaming-arrival×NOW-STREAMING",
+   "stage": "gatherer",
+   "reason": "under floor: no subscription-streaming platform — rent/buy is not 'now streaming' (try 1)"
+  },
+  {
+   "tag": "ek-din-ev-streaming-arrival×NOW-STREAMING",
+   "stage": "gatherer",
+   "reason": "under floor: no trade box-office report (no extractable sources and no inline reporting) (try 2)"
+  },
+  {
+   "tag": "the-hawk-ev-streaming-arrival×NOW-STREAMING",
+   "stage": "gatherer",
+   "reason": "under floor: no subscription-streaming platform — rent/buy is not 'now streaming' (try 1)"
+  }
+ ],
+ "skipped": [
+  {
+   "tag": "the-odyssey-ev-opening×BO-OPENING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "descendants-wicked-wonderland-ev-streaming-arrival×NOW-STREAMING",
+   "reason": "parked dead"
+  }
+ ],
+ "blocked": [],
+ "paced": {
+  "tokens": 4,
+  "behind": true,
+  "expected": 2.8,
+  "allow": 2
+ },
+ "queueBuilt": 10,
+ "zeroStreak": 9,
+ "audit": {
+  "day": "2026-07-17",
+  "sampled": [
+   "disclosure-day-box-office-day-34-adds-452-270-as-domestic-total-hits-112-9",
+   "young-washington-box-office-day-13-adds-885-005-as-domestic-total-hits-36-5",
+   "supergirl-box-office-day-20-adds-539-877-as-domestic-total-hits-68-million"
+  ],
+  "issues": []
+ },
+ "daySpend": {
+  "laDay": "2026-07-18",
+  "usd": 0.02627
+ },
+ "finishedAt": "2026-07-18T14:47:29.247Z",
+ "meter": {
+  "byRole": {
+   "categorize": {
+    "calls": 4,
+    "errors": 0,
+    "in": 4636,
+    "out": 539,
+    "usd": 0.00068,
+    "ms": 2866
+   },
+   "gatherer": {
+    "calls": 13,
+    "errors": 2,
+    "in": 18837,
+    "out": 2113,
+    "usd": 0.00273,
+    "ms": 9554
+   },
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3602,
+    "out": 723,
+    "usd": 0.00023,
+    "ms": 2777
+   },
+   "synthesizer": {
+    "calls": 3,
+    "errors": 1,
+    "in": 1428,
+    "out": 3018,
+    "usd": 0.00064,
+    "ms": 46191
+   },
+   "writer": {
+    "calls": 2,
+    "errors": 0,
+    "in": 6238,
+    "out": 2125,
+    "usd": 0.0059,
+    "ms": 31447
+   },
+   "qa": {
+    "calls": 7,
+    "errors": 0,
+    "in": 19754,
+    "out": 2865,
+    "usd": 0.01309,
+    "ms": 20956
+   },
+   "writerChart": {
+    "calls": 1,
+    "errors": 0,
+    "in": 1993,
+    "out": 980,
+    "usd": 0.00079,
+    "ms": 20665
+   }
+  },
+  "totalUsd": 0.02406
+ },
+ "openrouterTotalUsd": 0.02627
+}
