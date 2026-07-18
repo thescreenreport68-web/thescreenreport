@@ -804,9 +804,11 @@
    "key": "scary-movie-bo-update-d43|BO-UPDATE",
    "eventSlug": "scary-movie-bo-update-d43",
    "form": "BO-UPDATE",
-   "reason": "1 unverified claim(s) cut, unrecovered",
-   "tries": 2,
-   "at": "2026-07-18T16:06:36.694Z"
+   "reason": "words 168 < 180 (owner-set ~200-word minimum)",
+   "tries": 3,
+   "at": "2026-07-18T18:03:12.625Z",
+   "dead": true,
+   "expiresAt": "2026-07-21T18:03:12.625Z"
   },
   {
    "key": "the-abandons-ev-streaming-arrival|NOW-STREAMING",
@@ -833,14 +835,14 @@
    "at": "2026-07-18T17:35:07.764Z"
   }
  ],
- "zeroStreak": 4,
+ "zeroStreak": 5,
  "daySpend": {
   "laDay": "2026-07-18",
-  "usd": 0.19351
+  "usd": 0.19707
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1784395932115
+  "lastMs": 1784397643102
  },
  "lastAuditDay": "2026-07-18",
  "attempts": {
@@ -858,12 +860,13 @@
    "obsession": 3,
    "backrooms": 3,
    "jackass: best and last": 2,
-   "scary movie": 2,
+   "scary movie": 3,
    "the abandons": 1,
    "voicemails for isabelle": 1,
    "chained": 2,
    "potential": 1,
-   "the boss baby": 1
+   "the boss baby": 1,
+   "the sheep detectives": 1
   }
  }
 }
