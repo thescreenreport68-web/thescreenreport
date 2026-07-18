@@ -1,0 +1,137 @@
+{
+  "ts": "2026-07-18T11:02:39.349Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "russell-wilson-is-publicly-lobbying-ciara-for-a-fifth-child",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [],
+      "headline": [
+        "metaTitle",
+        "metaDescription",
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 0
+    }
+  ],
+  "topics": 1,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 0,
+  "costUSD": 0.005308,
+  "costPerPublished": 0.005308,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 3,
+      "in": 6300,
+      "out": 304,
+      "usd": 0.0026500000000000004
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 1024,
+      "out": 652,
+      "usd": 0.00032592
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 3,
+      "in": 6793,
+      "out": 2141,
+      "usd": 0.0017373565500000002
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 6,
+      "in": 4138,
+      "out": 452,
+      "usd": 0.0005945999999999999
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2455,
+      "out": 198,
+      "usd": 0.0012315,
+      "ms": 1140
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1024,
+      "out": 652,
+      "usd": 0.00020951999999999999,
+      "ms": 9153
+    },
+    "writer": {
+      "calls": 2,
+      "errors": 0,
+      "in": 6144,
+      "out": 1839,
+      "usd": 0.0020383800000000002,
+      "ms": 29278
+    },
+    "verify": {
+      "calls": 2,
+      "errors": 0,
+      "in": 3845,
+      "out": 106,
+      "usd": 0.0014184999999999998,
+      "ms": 2992
+    },
+    "judge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1418,
+      "out": 163,
+      "usd": 0.000207,
+      "ms": 774
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 649,
+      "out": 302,
+      "usd": 0.00025195,
+      "ms": 7840
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 387,
+      "out": 102,
+      "usd": 0.0000795,
+      "ms": 764
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 194,
+      "out": 44,
+      "usd": 0.000037,
+      "ms": 471
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1570,
+      "out": 90,
+      "usd": 0.000193,
+      "ms": 2190
+    },
+    "linker": {
+      "calls": 2,
+      "errors": 0,
+      "in": 569,
+      "out": 53,
+      "usd": 0.0000781,
+      "ms": 1384
+    }
+  }
+}
