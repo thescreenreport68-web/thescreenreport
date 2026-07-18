@@ -349,9 +349,10 @@
    "eventSlug": "voicemails-for-isabelle-now-streaming",
    "form": "NOW-STREAMING",
    "reason": "soft-floor humanVoice 4 < 5",
-   "tries": 2,
-   "at": "2026-07-18T16:10:17.174Z",
-   "dead": false
+   "tries": 3,
+   "at": "2026-07-18T21:04:17.976Z",
+   "dead": true,
+   "expiresAt": "2026-07-21T21:04:17.976Z"
   },
   {
    "key": "toy-story-5-bo-update-d25|BO-UPDATE",
@@ -843,14 +844,14 @@
    "at": "2026-07-18T19:01:35.253Z"
   }
  ],
- "zeroStreak": 10,
+ "zeroStreak": 11,
  "daySpend": {
   "laDay": "2026-07-18",
-  "usd": 0.23984
+  "usd": 0.25921
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1784406734481
+  "lastMs": 1784408445412
  },
  "lastAuditDay": "2026-07-18",
  "attempts": {
@@ -870,7 +871,7 @@
    "jackass: best and last": 2,
    "scary movie": 3,
    "the abandons": 2,
-   "voicemails for isabelle": 1,
+   "voicemails for isabelle": 2,
    "chained": 3,
    "potential": 2,
    "the boss baby": 1,
