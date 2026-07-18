@@ -1,0 +1,72 @@
+{
+  "id": "news-john-kirby-dies-at-75",
+  "slug": "john-kirby-acting-coach-and-son-of-bruce-kirby-dies-at-75",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": null,
+      "cat": "celebrity/news",
+      "format": [
+        "primary keyword not in title",
+        "a 60-word run-on sentence (>55 — split it)"
+      ],
+      "cuts": 0,
+      "broken": []
+    },
+    "attempt2": {
+      "score": null,
+      "cat": "celebrity/news",
+      "format": [
+        "primary keyword not in title",
+        "a 60-word run-on sentence (>55 — split it)"
+      ],
+      "cuts": 0,
+      "broken": []
+    }
+  },
+  "editorial": {
+    "status": "confirmed",
+    "entity": "John Kirby",
+    "work": null,
+    "outlet": "hollywoodreporter.com"
+  },
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
+    "deterministic": {
+      "words": 371,
+      "h2s": 4,
+      "h2Questions": 4,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 3,
+      "ktCount": 3,
+      "kwInTitle": false,
+      "kwInFirst100": true,
+      "kwInH2": true,
+      "maxSentence": 60,
+      "avgSentence": 18,
+      "flesch": 66,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": [
+        "primary keyword not in title",
+        "a 60-word run-on sentence (>55 — split it)"
+      ]
+    },
+    "hardBlocks": []
+  },
+  "score": null,
+  "category": "celebrity",
+  "subcategory": "news",
+  "audit": {
+    "ok": true,
+    "internalLinks": 0,
+    "failed": []
+  },
+  "ms": 82018
+}
