@@ -1,0 +1,144 @@
+{
+  "ts": "2026-07-18T09:02:32.908Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "jelly-roll-and-bunnie-xo-finalize-divorce-after-nearly-a-decade",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [],
+      "headline": [
+        "metaTitle",
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 0
+    }
+  ],
+  "topics": 1,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 0,
+  "costUSD": 0.014969,
+  "costPerPublished": 0.014969,
+  "byModel": {
+    "deepseek/deepseek-v3.2": {
+      "calls": 7,
+      "in": 17792,
+      "out": 4625,
+      "usd": 0.0041149131
+    },
+    "google/gemini-2.5-flash": {
+      "calls": 6,
+      "in": 12010,
+      "out": 2184,
+      "usd": 0.009063
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 1151,
+      "out": 3177,
+      "usd": 0.00103919
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 7,
+      "in": 4958,
+      "out": 640,
+      "usd": 0.0007518
+    }
+  },
+  "byRole": {
+    "dedup": {
+      "calls": 2,
+      "errors": 0,
+      "in": 619,
+      "out": 28,
+      "usd": 0.00015189,
+      "ms": 2426
+    },
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2437,
+      "out": 213,
+      "usd": 0.0012636,
+      "ms": 1447
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1151,
+      "out": 3177,
+      "usd": 0.0006754500000000001,
+      "ms": 39457
+    },
+    "writer": {
+      "calls": 4,
+      "errors": 0,
+      "in": 16500,
+      "out": 4281,
+      "usd": 0.00525054,
+      "ms": 66029
+    },
+    "verify": {
+      "calls": 5,
+      "errors": 0,
+      "in": 9573,
+      "out": 1971,
+      "usd": 0.0077994,
+      "ms": 10340
+    },
+    "judge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1381,
+      "out": 155,
+      "usd": 0.00020009999999999998,
+      "ms": 2453
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 673,
+      "out": 316,
+      "usd": 0.00026223,
+      "ms": 4802
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 397,
+      "out": 126,
+      "usd": 0.00009010000000000001,
+      "ms": 656
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 203,
+      "out": 82,
+      "usd": 0.00005310000000000001,
+      "ms": 533
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2111,
+      "out": 123,
+      "usd": 0.0002603,
+      "ms": 2125
+    },
+    "linker": {
+      "calls": 3,
+      "errors": 0,
+      "in": 866,
+      "out": 154,
+      "usd": 0.00014819999999999997,
+      "ms": 1671
+    }
+  }
+}
