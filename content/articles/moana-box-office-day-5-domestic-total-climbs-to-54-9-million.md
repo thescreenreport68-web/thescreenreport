@@ -82,9 +82,8 @@ imageWidth: 1920
 imageHeight: 1080
 ---
 
-The Movie: A Star-Studded Voyage That Struggled to Connect
 
-The film invites viewers on a vibrant journey beyond the reef, blending fantasy, adventure, and comedy in a family-friendly package. Despite the star power and beloved source material, the film has faced challenges in winning over moviegoers.
+The film invites viewers on a vibrant journey beyond the reef, blending fantasy, adventure, and comedy in a family-friendly package. 
 
 ## What It Is: An Epic Family Fantasy Adventure
 
@@ -94,10 +93,8 @@ The film invites viewers on a vibrant journey beyond the reef, blending fantasy,
 
 Catherine Lagaʻaia stars as Moana, the determined young navigator, while Dwayne Johnson embodies the larger-than-life Maui. The supporting cast includes John Tui as Chief Tui, Frankie Adams as Sina, Rena Owen as Gramma Tala, and Jemaine Clement as the flamboyant Tamatoa. Additionally, Amaya Masoli and Emma Puahi-Shapazian portray younger versions of Moana, enriching the narrative.
 
-## The Appeal: Why Audiences Are Hesitant
+ 
 
-While the film’s vibrant visuals and adventurous spirit echo the beloved original, many viewers see it as a near-duplicate of the 2016 animated hit, which remains widely available on Disney+. This perception has contributed to franchise fatigue, dampening enthusiasm and attendance despite the film’s high production values and star-studded cast.
+## At the Box Office
 
-## Closing Thoughts
-
-Though 'Moana' offers a visually rich and heartfelt tale, its struggle to differentiate itself from the original has impacted its reception. The film remains a notable entry in the family adventure genre but faces an uphill battle to achieve lasting box office success.
+Moana has grossed $54,898,083 at the domestic box office, 5 days into its theatrical run, while playing across 3,875 theaters. Worldwide, it has taken in $100 million. It carries a reported production budget of $250 million.

@@ -98,13 +98,13 @@ imageWidth: 3840
 imageHeight: 2160
 ---
 
-The Movie: A Musical Journey Through Michael Jackson's Rise
+A Musical Journey Through Michael Jackson's Rise
 
 "Michael" is a 128-minute music drama chronicling the life of Michael Jackson, one of the most influential artists in history. The film explores his discovery as the lead singer of the Jackson Five and his relentless ambition to become the world’s biggest entertainer. Directed by Antoine Fuqua and penned by John Logan, the movie stars Jaafar Jackson as Michael Jackson, with Colman Domingo and Nia Long portraying his parents Joseph and Katherine Jackson. Juliano Krue Valdi appears as young Michael, while Miles Teller plays longtime manager John Branca.
 
 ## Reception: Defying Critics and Captivating Audiences
 
-Despite early skepticism and critical reviews, "Michael" has resonated strongly with audiences worldwide. The film’s portrayal of Jackson’s personal and professional journey has sparked considerable interest, especially among fans eager to see a fresh perspective on the King of Pop’s legacy. Its blend of iconic performances and intimate moments has helped it maintain steady attendance, even as it nears the end of its domestic theatrical run.
+ The film’s portrayal of Jackson’s personal and professional journey has sparked considerable interest, especially among fans eager to see a fresh perspective on the King of Pop’s legacy. Its blend of iconic performances and intimate moments has helped it maintain steady attendance, even as it nears the end of its domestic theatrical run.
 
 ## The Box Office: Breaking Records and Crossing $1 Billion
 

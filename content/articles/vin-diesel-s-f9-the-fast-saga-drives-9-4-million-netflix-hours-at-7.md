@@ -10,7 +10,7 @@ dek: >-
   on Netflix and holding strong at #7 in its fifth week in the Top 10.
 metaTitle: 'F9 Netflix Streaming Hits 9.4M Hours, Ranks #7 This Week'
 metaDescription: >-
-  F9: The Fast Saga clocks 9.4 million hours on Netflix, ranking #7 this week.
+  F9: The Fast Saga clocks 9.4 million hours on Netflix, ranking 7 this week.
   Vin Diesel leads the star-studded cast in this action-packed sequel.
 tags:
   - F9
@@ -91,5 +91,3 @@ Directed by Justin Lin, who has helmed multiple entries in the franchise, *F9* f
 According to Netflix’s Top 10, *F9: The Fast Saga* amassed 9.4 million hours viewed this week, securing the #7 spot.
 
 The film’s journey to audiences was marked by pandemic-related delays, which built anticipation for its eventual release. The introduction of Jakob Toretto as a new family member adds a compelling layer of drama and conflict, refreshing the franchise’s dynamic. Fans appreciate the blend of high-speed action and emotional stakes, keeping *F9* relevant and exciting on Netflix.
-
-## Momentum on Netflix

@@ -10,7 +10,7 @@ dek: >-
   million views and a #2 spot on Netflix's Top 10 in its first week.
 metaTitle: 'Shipwrecked: Nightmare at Sea Netflix Documentary Debut'
 metaDescription: >-
-  Netflix documentary Shipwrecked Nightmare at Sea ranks #2 with 9 million views
+  Netflix documentary Shipwrecked Nightmare at Sea ranks 2 with 9 million views
   in its debut week, revisiting the tragic 2012 Costa Concordia shipwreck.
 tags:
   - Netflix documentary

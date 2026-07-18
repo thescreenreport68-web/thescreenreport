@@ -87,8 +87,12 @@ According to Variety, the indie horror film *Obsession* has cleared the $400 mil
 Focus Features acquired the film for $14 million at the Toronto International Film Festival last year. The film opened in North America in May with $17 million, a strong start for an original title. Its run then defied conventional wisdom, with ticket sales growing for four consecutive weekends after its debut.
 
 ## What Fueled Its Box Office Run?
-Positive word-of-mouth and enthusiastic turnout from Gen Z audiences are credited for the film's sustained success. The story follows a hopeless romantic who makes a Faustian bargain to win his crush's heart, blending horror with twisted romance. Director Curry Barker, a YouTuber, and producer Jason Blum have tapped into a new generation of moviegoers with a taste for left-of-center horror.
+ The story follows a hopeless romantic who makes a Faustian bargain to win his crush's heart, blending horror with twisted romance. Director Curry Barker, a YouTuber, and producer Jason Blum have tapped into a new generation of moviegoers with a taste for left-of-center horror.
 
 ## Sources
 - [Box Office Mojo](https://www.boxofficemojo.com/)
 - [Focus Features](https://www.focusfeatures.com/)
+
+## At the Box Office
+
+Obsession has grossed $245 million at the domestic box office. Worldwide, it has taken in $403 million. It carries a reported production budget of $750,000.

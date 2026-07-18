@@ -68,10 +68,12 @@ imageWidth: 2328
 imageHeight: 1309
 ---
 
-The Movie: Supergirl’s Interstellar Quest for Justice
+Supergirl’s Interstellar Quest for Justice
 
-Audiences were initially drawn to the film’s promise of an epic journey, helmed by a fresh face in the role of Kara Zor-El, known as Supergirl. The combination of a beloved superhero legacy and intriguing new characters sparked early interest. "Supergirl" is a 108-minute action, adventure, and science fiction film directed by Craig Gillespie. The story follows Kara Zor-El as she reluctantly teams up with an unlikely ally to confront a ruthless enemy threatening her home. The narrative traverses interstellar landscapes and explores themes of vengeance and justice, aiming to expand the DC cinematic universe. Despite its strong premise and star power, the film’s reception has been mixed. Early enthusiasm gave way to tepid word-of-mouth, resulting in sharp audience drop-offs. Critics and viewers alike have noted a lack of cohesion and emotional depth, which dampened the film's ongoing appeal. Ultimately, "Supergirl" aims to carve out a new chapter in the DC saga but is struggling to maintain momentum amid fierce competition and high expectations.
+Audiences were initially drawn to the film’s promise of an epic journey, helmed by a fresh face in the role of Kara Zor-El, known as Supergirl. The combination of a beloved superhero legacy and intriguing new characters sparked early interest. "Supergirl" is a 108-minute action, adventure, and science fiction film directed by Craig Gillespie. The story follows Kara Zor-El as she reluctantly teams up with an unlikely ally to confront a ruthless enemy threatening her home. The narrative traverses interstellar landscapes and explores themes of vengeance and justice, aiming to expand the DC cinematic universe. Despite its strong premise and star power, the film’s reception has been mixed.  Critics and viewers alike have noted a lack of cohesion and emotional depth, which dampened the film's ongoing appeal. Ultimately, "Supergirl" aims to carve out a new chapter in the DC saga but is struggling to maintain momentum amid fierce competition and high expectations.
 
 [Box office section will be inserted here by the system.]
 
 ## At the Box Office
+
+Supergirl has grossed $67,501,285 at the domestic box office, 19 days into its theatrical run, while playing across 2,584 theaters. Worldwide, it has taken in $117 million. It carries a reported production budget of $175 million.

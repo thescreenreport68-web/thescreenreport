@@ -15,7 +15,7 @@ dek: >-
 metaTitle: 'Shipwrecked: Nightmare at Sea Streams 14M Hours, Hits'
 metaDescription: >-
   The documentary 'Shipwrecked: Nightmare at Sea' streams 14 million hours in
-  its debut week, ranking #2 on Netflix's Top 10 and drawing audiences with its…
+  its debut week, ranking 2 on Netflix's Top 10 and drawing audiences with its…
 tags:
   - Netflix documentary shipwreck 2026
   - documentary

@@ -13,7 +13,7 @@ dek: >-
 metaTitle: Voicemails for Isabelle Netflix Viewership Hits 61M Hours
 metaDescription: >-
   Voicemails for Isabelle Netflix viewership hits 61 million hours in week two,
-  securing the #1 spot and proving a hit for the rom-com starring Zoey Deutch.
+  securing the 1 spot and proving a hit for the rom-com starring Zoey Deutch.
 tags:
   - Voicemails for Isabelle
   - Zoey Deutch

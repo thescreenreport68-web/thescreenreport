@@ -80,12 +80,12 @@ imageHeight: 630
 
 Minions & Monsters Charges Into Theaters With a Franchise-Low Domestic Debut
 
-Pierre Coffin's latest Minions installment draws audiences back with its signature blend of chaotic fun and familiar faces, though it opened to the lowest domestic figure in the beloved franchise's history. ## What Is Minions & Monsters? This animated adventure comedy runs a brisk 90 minutes and chronicles the rambunctious tale of how the Minions conquered Hollywood, rose to stardom, lost it all, unleashed monsters upon the world, and then united to save the planet from the chaos they created. Directed by Pierre Coffin, known for his deft handling of animation and humor, the film balances slapstick with heartfelt moments. ## A Star-Studded Cast Bringing Characters to Life
+Pierre Coffin's latest Minions installment draws audiences back with its signature blend of chaotic fun and familiar faces, though it opened to the lowest domestic figure in the beloved franchise's history.
 
-Pierre Coffin voices multiple Minions characters including James, Henry, Ed, and Dick, while Trey Parker lends his voice to Goomi. Allison Janney voices Olivia, Christoph Waltz plays Max, Jeff Bridges takes on dual roles as Frank and Elwood, Jesse Eisenberg is Dort, Zoey Deutch portrays Debbie, and Bobby Moynihan voices Phillips. This ensemble adds depth and personality to the film’s quirky world. ## Why Audiences Are Responding Now
+## A Star-Studded Cast Bringing Characters to Life
 
-## The Takeaway
+Pierre Coffin voices multiple Minions characters including James, Henry, Ed, and Dick, while Trey Parker lends his voice to Goomi. Allison Janney voices Olivia, Christoph Waltz plays Max, Jeff Bridges takes on dual roles as Frank and Elwood, Jesse Eisenberg is Dort, Zoey Deutch portrays Debbie, and Bobby Moynihan voices Phillips. This ensemble adds depth and personality to the film’s quirky world.
 
 ## At the Box Office
 
-It carries a reported production budget of $85 million.
+Minions & Monsters has grossed $116,385,385 at the domestic box office, 14 days into its theatrical run, while playing across 4,244 theaters. Worldwide, it has taken in $280 million. It carries a reported production budget of $85 million.

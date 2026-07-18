@@ -77,12 +77,16 @@ imageWidth: 2995
 imageHeight: 1685
 ---
 
-The Movie: A Gripping Horror Thriller That Hooks Audiences
-Souheila Yacoub stars in 'Evil Dead Burn,' a horror thriller that has captivated audiences with its blend of personal drama and chilling supernatural terror. This intense premise, combined with Yacoub's compelling lead performance, has drawn moviegoers eager for a fresh take on horror. ## What It Is: A Tale of Vows Beyond Death
-Running 110 minutes, 'Evil Dead Burn' is directed by Sébastien Vaniček, who crafts a tense and atmospheric narrative. The story explores themes of loyalty and survival as Alice confronts the horrific metamorphosis of her in-laws into monstrous entities. This horror-thriller melds emotional stakes with supernatural dread, delivering a suspenseful cinematic experience. ## The Cast: Strong Ensemble Anchoring the Horror
+A Gripping Horror Thriller That Hooks Audiences
+Souheila Yacoub stars in 'Evil Dead Burn,' a horror thriller that has captivated audiences with its blend of personal drama and chilling supernatural terror. This intense premise, combined with Yacoub's compelling lead performance, has drawn moviegoers eager for a fresh take on horror.
+
+## What It Is: A Tale of Vows Beyond Death
+Running 110 minutes, 'Evil Dead Burn' is directed by Sébastien Vaniček, who crafts a tense and atmospheric narrative. The story explores themes of loyalty and survival as Alice confronts the horrific metamorphosis of her in-laws into monstrous entities. This horror-thriller melds emotional stakes with supernatural dread, delivering a suspenseful cinematic experience.
+
+## The Cast: Strong Ensemble Anchoring the Horror
 The film stars Souheila Yacoub as Alice, alongside Tandi Wright portraying Susan and Hunter Doohan as Joseph. Luciane Buchanan plays Thya, Erroll Shand takes on Edgar, Maude Davey features as Polly, George Pullar is Will, and Victory Ndukwe appears as Leo. This talented cast brings depth and nuance to characters caught in a nightmarish scenario.
-Audiences have responded positively to the film’s compelling blend of horror and emotional drama, with particular praise for Yacoub’s performance and the film’s fresh take on the Deadite mythology. Its strong word-of-mouth and gripping tension have helped sustain steady interest, setting it apart in a crowded genre. 'Evil Dead Burn' stands as a noteworthy entry in horror, combining chilling thrills with heartfelt storytelling that resonates with viewers.
+Audiences have responded positively to the film’s compelling blend of horror and emotional drama, with particular praise for Yacoub’s performance and the film’s fresh take on the Deadite mythology.  
 
 ## At the Box Office
 
-It carries a reported production budget of $20 million.
+Evil Dead Burn has grossed $18,145,062 at the domestic box office, 6 days into its theatrical run, while playing across 3,004 theaters. Worldwide, it has taken in $26 million. It carries a reported production budget of $20 million.

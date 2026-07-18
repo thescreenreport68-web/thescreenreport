@@ -103,3 +103,7 @@ The film, directed by Pierre Coffin, tells the "rambunctious, ridiculous and tot
 
 ## Sources
 - Box Office Mojo
+
+## At the Box Office
+
+Worldwide, it has taken in $63 million. It carries a reported production budget of $85 million.

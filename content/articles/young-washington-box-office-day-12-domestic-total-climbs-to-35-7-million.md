@@ -92,11 +92,17 @@ imageHeight: 2160
 ---
 
 A Historical Epic Capturing Early America’s Defining Moment
-William Franklyn-Miller stars in ‘Young Washington,’ a gripping historical drama that has drawn audiences eager to explore the formative years of one of America’s most iconic figures. ## What ‘Young Washington’ Is About
-Directed by Jon Erwin, this 125-minute history and war drama delves into the early life of George Washington, portraying his transformation from a young soldier into a leader on the cusp of shaping a nation. Set against the backdrop of global conflict and shifting alliances, the film explores the challenges Washington faces as he navigates trust, loyalty, and leadership. ## A Stellar Ensemble Bringing History to Life
-Leading the cast, William Franklyn-Miller embodies George Washington with compelling depth. ## Why Audiences Are Embracing the Film
-‘Young Washington’ resonates for its authentic portrayal of a pivotal era, combining gripping drama with strong performances. Its historical significance, coupled with Jon Erwin’s direction, has attracted viewers seeking both education and entertainment, contributing to its enthusiastic reception. ## Solidifying Its Place Among Summer Hits
+William Franklyn-Miller stars in ‘Young Washington,’ a gripping historical drama that has drawn audiences eager to explore the formative years of one of America’s most iconic figures.
+
+## What ‘Young Washington’ Is About
+Directed by Jon Erwin, this 125-minute history and war drama delves into the early life of George Washington, portraying his transformation from a young soldier into a leader on the cusp of shaping a nation. Set against the backdrop of global conflict and shifting alliances, the film explores the challenges Washington faces as he navigates trust, loyalty, and leadership.
+
+## A Stellar Ensemble Bringing History to Life
+Leading the cast, William Franklyn-Miller embodies George Washington with compelling depth.
+
+## Why Audiences Are Embracing the Film
+‘Young Washington’ resonates for its authentic portrayal of a pivotal era, combining gripping drama with strong performances. Its historical significance, coupled with Jon Erwin’s direction, has attracted viewers seeking both education and entertainment, contributing to its enthusiastic reception.
 
 ## At the Box Office
 
-The film added $1,233,009 in its most recent day of release.
+Young Washington has grossed $35,656,615 at the domestic box office, 12 days into its theatrical run, while playing across 2,771 theaters. It carries a reported production budget of $20 million.

@@ -12,7 +12,7 @@ dek: >-
   viewers riveted.
 metaTitle: Maternal Instinct Netflix Documentary 2026 Hits 14M Hours at
 metaDescription: >-
-  Jessica Dimmock’s 'Maternal Instinct' streams 14M hours this week, ranking #3
+  Jessica Dimmock’s 'Maternal Instinct' streams 14M hours this week, ranking 3
   on Netflix’s Top 10. A gripping true-crime documentary about a twisted 2020
 tags:
   - Maternal Instinct
@@ -91,7 +91,7 @@ Audiences have responded strongly to 'Maternal Instinct,' captivated by its raw 
 
 ## Streaming Metrics and What They Mean
 
-In its third week on Netflix, 'Maternal Instinct' streamed an impressive 14 million hours, securing the #3 spot on Netflix’s Top 10 list. This sustained viewership reflects strong word-of-mouth and ongoing interest in the film’s dark subject matter. The film’s ability to hold steady in the competitive streaming landscape underscores its resonance with true-crime fans and documentary viewers alike.
+In its third week on Netflix, 'Maternal Instinct' streamed an impressive 14 million hours, securing the #3 spot on Netflix’s Top 10 list.  The film’s ability to hold steady in the competitive streaming landscape underscores its resonance with true-crime fans and documentary viewers alike.
 
 ## What 14 Million Hours Means for 'Maternal Instinct'
 

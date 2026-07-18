@@ -86,7 +86,7 @@ imageWidth: 1600
 imageHeight: 1066
 ---
 
-The Movie: Disclosure Day’s Sci-Fi Thriller Draw
+Disclosure Day’s Sci-Fi Thriller Draw
 
 Josh O'Connor headlines Disclosure Day, a high-stakes science fiction thriller that has drawn audiences intrigued by its blend of alien conspiracy and whistleblower drama. Directed by Steven Spielberg, the film’s compelling premise and star-studded cast have generated significant initial interest, making it a must-see event for genre fans and Spielberg enthusiasts alike.
 
@@ -94,10 +94,10 @@ Josh O'Connor headlines Disclosure Day, a high-stakes science fiction thriller t
 
 Disclosure Day follows cybersecurity expert Daniel Kellner, who becomes a whistleblower after uncovering hidden truths about extraterrestrial life. On the run from a powerful corporation, he teams up with meteorologist Margaret Fairchild, who is experiencing strange phenomena, to prove the existence of life beyond Earth. This 146-minute thriller combines suspense and science fiction under Spielberg’s direction, delivering a tense, atmospheric narrative.
 
-## The Cast: A Stellar Ensemble
-
 ## The Appeal: Why Audiences Tuned In
 
 Audiences have been captivated by the film’s topical themes of secrecy and surveillance, combined with Spielberg’s signature storytelling flair. However, despite the initial excitement, the film’s momentum slowed sharply, leading to a quick transition to VOD after just 38 days in theaters.
 
-## Closing Line
+## At the Box Office
+
+Disclosure Day has grossed $112,925,320 at the domestic box office, 34 days into its theatrical run, while playing across 2,204 theaters. Worldwide, it has taken in $230 million. It carries a reported production budget of $115 million.

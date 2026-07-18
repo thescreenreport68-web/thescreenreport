@@ -10,7 +10,7 @@ date: '2026-07-01T07:25:04.040Z'
 dek: >-
   The $20 million action-horror film starring Zazie Beetz and Myha'la grossed
   just $10.9 million domestically, but has become a top 3 film on HBO Max.
-metaTitle: 'They Will Kill You: Why the Zazie Beetz Thriller Flopped at the Box Office'
+metaTitle: 'They Will Kill You: Why the Zazie Beetz Thriller Flopped'
 metaDescription: >-
   Zazie Beetz's thriller They Will Kill You was a box office flop, but has found
   a major audience on HBO Max. Here's why it deserved better.

@@ -96,14 +96,22 @@ imageWidth: 3840
 imageHeight: 2160
 ---
 
-The Movie: A Riveting Historical Epic
+A Riveting Historical Epic
 
-William Franklyn-Miller commands attention as a young George Washington in '[Young Washington](/movies/young-washington-box-office-day-12-domestic-total-climbs-to-35-7-million/),' a film drawing audiences eager to witness the origins of an American icon. This historical war drama explores Washington’s early military struggles amid a crumbling alliance and looming global conflict, blending intense action with character-driven storytelling. ## What It Is: Story, Genre, and Direction
+William Franklyn-Miller commands attention as a young George Washington in '[Young Washington](/movies/young-washington-box-office-day-12-domestic-total-climbs-to-35-7-million/),' a film drawing audiences eager to witness the origins of an American icon. This historical war drama explores Washington’s early military struggles amid a crumbling alliance and looming global conflict, blending intense action with character-driven storytelling.
 
-Set against the backdrop of a world at war, the film chronicles Washington’s journey from an uncertain soldier to a decisive leader. With a runtime of 125 minutes, this history and war drama is helmed by Jon Erwin, known for crafting compelling narratives rooted in American history and values. ## The Cast: Bringing History to Life
+## What It Is: Story, Genre, and Direction
 
-Each actor contributes depth to this period piece, enriching its historical authenticity. ## The Appeal: Why Audiences Are Engaged
+Set against the backdrop of a world at war, the film chronicles Washington’s journey from an uncertain soldier to a decisive leader. With a runtime of 125 minutes, this history and war drama is helmed by Jon Erwin, known for crafting compelling narratives rooted in American history and values.
 
-Audiences are responding to the film’s authentic portrayal of a young Washington caught between duty and destiny. Its compelling mix of history, drama, and war resonates especially in today’s cultural climate, where stories of leadership and resilience carry renewed significance. ## Closing Line
+## The Cast: Bringing History to Life
+
+Each actor contributes depth to this period piece, enriching its historical authenticity.
+
+## The Appeal: Why Audiences Are Engaged
+
+Audiences are responding to the film’s authentic portrayal of a young Washington caught between duty and destiny. Its compelling mix of history, drama, and war resonates especially in today’s cultural climate, where stories of leadership and resilience carry renewed significance.
 
 ## At the Box Office
+
+Young Washington has grossed $36,541,620 at the domestic box office, 13 days into its theatrical run, while playing across 2,771 theaters. It carries a reported production budget of $20 million.

@@ -8,7 +8,7 @@ date: '2026-07-10T15:01:23.095Z'
 dek: >-
   Dwayne Johnson's return as Maui is now tracking for a domestic opening between
   $60 million and $65 million, a step down from earlier projections.
-metaTitle: 'Moana Live-Action Box Office Forecast: Disney Eyes $60M-$65M Opening'
+metaTitle: 'Moana Live-Action Box Office Forecast: Disney Eyes $60M-$65M'
 metaDescription: >-
   Disney's live-action Moana remake, starring Dwayne Johnson and Catherine
   Lagaʻaia, is now projected to open between $60 million and $65 million

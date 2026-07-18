@@ -84,4 +84,4 @@ Tom Hanks returns as Woody in Toy Story 5, a sequel that has captivated audience
 
 ## At the Box Office
 
-It carries a reported production budget of $250 million.
+Toy Story 5 has grossed $410,606,567 at the domestic box office, 26 days into its theatrical run, while playing across 3,575 theaters. Worldwide, it has taken in $882 million. It carries a reported production budget of $250 million.
