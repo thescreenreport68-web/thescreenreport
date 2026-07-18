@@ -833,16 +833,24 @@
    "reason": "under floor: no subscription-streaming platform — rent/buy is not 'now streaming'",
    "tries": 1,
    "at": "2026-07-18T17:35:07.764Z"
+  },
+  {
+   "key": "citizen-vigilante-bo-opening|BO-OPENING",
+   "eventSlug": "citizen-vigilante-bo-opening",
+   "form": "BO-OPENING",
+   "reason": "under floor: streaming original — no theatrical box office (belongs in a streaming form)",
+   "tries": 1,
+   "at": "2026-07-18T19:01:35.253Z"
   }
  ],
- "zeroStreak": 6,
+ "zeroStreak": 7,
  "daySpend": {
   "laDay": "2026-07-18",
-  "usd": 0.19971
+  "usd": 0.20063
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1784399539781
+  "lastMs": 1784401244103
  },
  "lastAuditDay": "2026-07-18",
  "attempts": {
@@ -866,7 +874,8 @@
    "chained": 2,
    "potential": 1,
    "the boss baby": 1,
-   "the sheep detectives": 1
+   "the sheep detectives": 1,
+   "citizen vigilante": 1
   }
  }
 }
