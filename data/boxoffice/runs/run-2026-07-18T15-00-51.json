@@ -1,0 +1,120 @@
+{
+ "runId": "run-2026-07-18T15-00-51",
+ "mode": "live",
+ "startedAt": "2026-07-18T15:00:51.138Z",
+ "films": 8,
+ "published": [
+  {
+   "tag": "the-invite-bo-update×BO-UPDATE",
+   "slug": "the-invite-box-office-day-22-adds-1-1-million-as-domestic-total-hits-12-2",
+   "path": "/home/runner/work/thescreenreport/thescreenreport/content/articles/the-invite-box-office-day-22-adds-1-1-million-as-domestic-total-hits-12-2.md",
+   "score": 80
+  }
+ ],
+ "held": [
+  {
+   "tag": "golden-kamuy-ev-streaming-arrival×NOW-STREAMING",
+   "reason": "words 134 < 180 (owner-set ~200-word minimum)",
+   "score": 65
+  },
+  {
+   "tag": "young-washington-bo-update×BO-UPDATE",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "score": 50
+  },
+  {
+   "tag": "obsession-bo-update×BO-UPDATE",
+   "reason": "words 179 < 180 (owner-set ~200-word minimum)",
+   "score": 50
+  },
+  {
+   "tag": "backrooms-bo-update×BO-UPDATE",
+   "reason": "words 157 < 180 (owner-set ~200-word minimum)",
+   "score": 50
+  },
+  {
+   "tag": "jackass-best-and-last-bo-update×BO-UPDATE",
+   "reason": "words 121 < 180 (owner-set ~200-word minimum)",
+   "score": 50
+  },
+  {
+   "tag": "scary-movie-bo-update×BO-UPDATE",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "score": 50
+  }
+ ],
+ "rejected": [],
+ "skipped": [],
+ "blocked": [
+  {
+   "tag": "love-in-the-moonlight-ev-streaming-arrival×NOW-STREAMING",
+   "reason": "watchdog: gatherer love-in-the-moonlight-ev-streaming-arrival×NOW-STREAMING exceeded 180s"
+  }
+ ],
+ "paced": {
+  "tokens": 4,
+  "behind": true,
+  "expected": 4.2,
+  "allow": 2
+ },
+ "zeroStreak": 0,
+ "daySpend": {
+  "laDay": "2026-07-18",
+  "usd": 0.05486
+ },
+ "finishedAt": "2026-07-18T15:18:31.587Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3547,
+    "out": 648,
+    "usd": 0.00021,
+    "ms": 2104
+   },
+   "gatherer": {
+    "calls": 12,
+    "errors": 0,
+    "in": 40314,
+    "out": 2293,
+    "usd": 0.00495,
+    "ms": 17430
+   },
+   "synthesizer": {
+    "calls": 8,
+    "errors": 1,
+    "in": 5105,
+    "out": 4128,
+    "usd": 0.00117,
+    "ms": 79162
+   },
+   "writer": {
+    "calls": 2,
+    "errors": 0,
+    "in": 6656,
+    "out": 2257,
+    "usd": 0.00627,
+    "ms": 78232
+   },
+   "qa": {
+    "calls": 6,
+    "errors": 0,
+    "in": 16450,
+    "out": 2601,
+    "usd": 0.01144,
+    "ms": 14663
+   },
+   "writerChart": {
+    "calls": 6,
+    "errors": 0,
+    "in": 11925,
+    "out": 6094,
+    "usd": 0.00482,
+    "ms": 127523
+   }
+  },
+  "totalUsd": 0.02886
+ },
+ "openrouterTotalUsd": 0.02859
+}

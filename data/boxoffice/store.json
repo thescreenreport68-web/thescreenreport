@@ -274,6 +274,17 @@
    "film": "Supergirl",
    "tmdbId": null,
    "eventType": "boxoffice"
+  },
+  {
+   "key": "the-invite-bo-update-d22|BO-UPDATE",
+   "at": "2026-07-18T15:13:23.982Z",
+   "eventSlug": "the-invite-bo-update-d22",
+   "form": "BO-UPDATE",
+   "slug": "the-invite-box-office-day-22-adds-1-1-million-as-domestic-total-hits-12-2",
+   "title": "Olivia Wilde's 'The Invite' Hits $12.2M Domestic After One of the Year's Top Per-Screen Openings",
+   "film": "The Invite",
+   "tmdbId": null,
+   "eventType": "boxoffice"
   }
  ],
  "parked": [
@@ -701,9 +712,9 @@
    "key": "golden-kamuy-ev-streaming-arrival|NOW-STREAMING",
    "eventSlug": "golden-kamuy-ev-streaming-arrival",
    "form": "NOW-STREAMING",
-   "reason": "soft-floor engagement 3 < 5 | soft-floor humanVoice 3 < 5",
-   "tries": 1,
-   "at": "2026-07-18T03:37:10.022Z"
+   "reason": "words 134 < 180 (owner-set ~200-word minimum)",
+   "tries": 2,
+   "at": "2026-07-18T15:06:35.875Z"
   },
   {
    "key": "ek-din-ev-streaming-arrival|NOW-STREAMING",
@@ -750,18 +761,50 @@
    "eventSlug": "young-washington-bo-update-d15",
    "form": "BO-UPDATE",
    "reason": "1 unverified claim(s) cut, unrecovered",
+   "tries": 2,
+   "at": "2026-07-18T15:11:42.566Z"
+  },
+  {
+   "key": "obsession-bo-update-d64|BO-UPDATE",
+   "eventSlug": "obsession-bo-update-d64",
+   "form": "BO-UPDATE",
+   "reason": "words 179 < 180 (owner-set ~200-word minimum)",
    "tries": 1,
-   "at": "2026-07-18T14:47:28.628Z"
+   "at": "2026-07-18T15:14:20.025Z"
+  },
+  {
+   "key": "backrooms-bo-update-d50|BO-UPDATE",
+   "eventSlug": "backrooms-bo-update-d50",
+   "form": "BO-UPDATE",
+   "reason": "words 157 < 180 (owner-set ~200-word minimum)",
+   "tries": 1,
+   "at": "2026-07-18T15:15:50.147Z"
+  },
+  {
+   "key": "jackass-best-and-last-bo-update-d22|BO-UPDATE",
+   "eventSlug": "jackass-best-and-last-bo-update-d22",
+   "form": "BO-UPDATE",
+   "reason": "words 121 < 180 (owner-set ~200-word minimum)",
+   "tries": 1,
+   "at": "2026-07-18T15:17:30.930Z"
+  },
+  {
+   "key": "scary-movie-bo-update-d43|BO-UPDATE",
+   "eventSlug": "scary-movie-bo-update-d43",
+   "form": "BO-UPDATE",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "tries": 1,
+   "at": "2026-07-18T15:18:31.585Z"
   }
  ],
- "zeroStreak": 9,
+ "zeroStreak": 0,
  "daySpend": {
   "laDay": "2026-07-18",
-  "usd": 0.02627
+  "usd": 0.05486
  },
  "pace": {
-  "tokens": 4,
-  "lastMs": 1784385040769
+  "tokens": 3,
+  "lastMs": 1784386851138
  },
  "lastAuditDay": "2026-07-18",
  "attempts": {
@@ -772,7 +815,14 @@
    "disclosure day": 1,
    "ek din": 1,
    "the hawk": 1,
-   "young washington": 1
+   "young washington": 2,
+   "golden kamuy": 1,
+   "love in the moonlight": 1,
+   "the invite": 1,
+   "obsession": 1,
+   "backrooms": 1,
+   "jackass: best and last": 1,
+   "scary movie": 1
   }
  }
 }
