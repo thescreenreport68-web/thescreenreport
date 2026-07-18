@@ -1,0 +1,107 @@
+{
+ "runId": "run-2026-07-18T02-00-42",
+ "mode": "live",
+ "startedAt": "2026-07-18T02:00:42.812Z",
+ "films": 8,
+ "published": [],
+ "held": [
+  {
+   "tag": "rust-creek-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "3 unverified claim(s) cut, unrecovered",
+   "score": 75
+  },
+  {
+   "tag": "f9-the-fast-saga-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "words 137 < 180 (owner-set ~200-word minimum)",
+   "score": 70
+  },
+  {
+   "tag": "old-henry-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "platform: names max not in confirmed providers",
+   "score": 0
+  },
+  {
+   "tag": "the-boss-baby-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "words 142 < 180 (owner-set ~200-word minimum) | soft-floor engagement 4 < 5",
+   "score": 40
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "enola-holmes-3-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "voicemails-for-isabelle-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "the-doorman-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "little-brother-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  }
+ ],
+ "blocked": [],
+ "paced": {
+  "tokens": 4,
+  "behind": true,
+  "expected": 16.6,
+  "allow": 2
+ },
+ "zeroStreak": 10,
+ "daySpend": {
+  "laDay": "2026-07-17",
+  "usd": 1.08813
+ },
+ "finishedAt": "2026-07-18T02:06:57.559Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3547,
+    "out": 755,
+    "usd": 0.00023,
+    "ms": 2757
+   },
+   "gatherer": {
+    "calls": 4,
+    "errors": 0,
+    "in": 7334,
+    "out": 482,
+    "usd": 0.00093,
+    "ms": 5152
+   },
+   "synthesizer": {
+    "calls": 4,
+    "errors": 0,
+    "in": 2522,
+    "out": 2923,
+    "usd": 0.00075,
+    "ms": 49293
+   },
+   "writer": {
+    "calls": 8,
+    "errors": 0,
+    "in": 24263,
+    "out": 7923,
+    "usd": 0.02238,
+    "ms": 77984
+   },
+   "qa": {
+    "calls": 22,
+    "errors": 0,
+    "in": 56489,
+    "out": 8840,
+    "usd": 0.03905,
+    "ms": 48498
+   }
+  },
+  "totalUsd": 0.06334
+ },
+ "openrouterTotalUsd": 0.06101
+}

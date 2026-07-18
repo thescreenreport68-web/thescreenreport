@@ -607,24 +607,30 @@
    "eventSlug": "rust-creek-netflix-top10-w2026-07-12",
    "form": "NETFLIX-TOP10",
    "reason": "3 unverified claim(s) cut, unrecovered",
-   "tries": 2,
-   "at": "2026-07-17T22:11:05.963Z"
+   "tries": 3,
+   "at": "2026-07-18T02:02:13.024Z",
+   "dead": true,
+   "expiresAt": "2026-07-21T02:02:13.024Z"
   },
   {
    "key": "f9-the-fast-saga-netflix-top10-w2026-07-12|NETFLIX-TOP10",
    "eventSlug": "f9-the-fast-saga-netflix-top10-w2026-07-12",
    "form": "NETFLIX-TOP10",
-   "reason": "6 unverified claim(s) cut, unrecovered",
-   "tries": 2,
-   "at": "2026-07-17T22:13:12.277Z"
+   "reason": "words 137 < 180 (owner-set ~200-word minimum)",
+   "tries": 3,
+   "at": "2026-07-18T02:03:57.514Z",
+   "dead": true,
+   "expiresAt": "2026-07-21T02:03:57.514Z"
   },
   {
    "key": "old-henry-netflix-top10-w2026-07-12|NETFLIX-TOP10",
    "eventSlug": "old-henry-netflix-top10-w2026-07-12",
    "form": "NETFLIX-TOP10",
    "reason": "platform: names max not in confirmed providers",
-   "tries": 2,
-   "at": "2026-07-17T22:14:47.726Z"
+   "tries": 3,
+   "at": "2026-07-18T02:05:41.353Z",
+   "dead": true,
+   "expiresAt": "2026-07-21T02:05:41.353Z"
   },
   {
    "key": "wild-sing-ev-streaming-arrival|NOW-STREAMING",
@@ -676,9 +682,9 @@
    "key": "the-boss-baby-netflix-top10-w2026-07-12|NETFLIX-TOP10",
    "eventSlug": "the-boss-baby-netflix-top10-w2026-07-12",
    "form": "NETFLIX-TOP10",
-   "reason": "2 unverified claim(s) cut, unrecovered",
-   "tries": 1,
-   "at": "2026-07-17T22:16:29.678Z"
+   "reason": "words 142 < 180 (owner-set ~200-word minimum) | soft-floor engagement 4 < 5",
+   "tries": 2,
+   "at": "2026-07-18T02:06:57.557Z"
   },
   {
    "key": "golden-kamuy-3-the-abarishi-prison-raid-ev-streaming-arrival|NOW-STREAMING",
@@ -689,14 +695,14 @@
    "at": "2026-07-18T01:37:06.190Z"
   }
  ],
- "zeroStreak": 9,
+ "zeroStreak": 10,
  "daySpend": {
   "laDay": "2026-07-17",
-  "usd": 1.02712
+  "usd": 1.08813
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1784338243681
+  "lastMs": 1784340042812
  },
  "lastAuditDay": "2026-07-17"
 }
