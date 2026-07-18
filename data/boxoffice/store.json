@@ -581,11 +581,11 @@
    "key": "the-odyssey-ev-weekend-d0|BO-WEEKEND",
    "eventSlug": "the-odyssey-ev-weekend-d0",
    "form": "BO-WEEKEND",
-   "reason": "fidelity: 5 unsupported figures/claims — draft-level failure",
-   "tries": 9,
-   "at": "2026-07-18T04:35:32.742Z",
+   "reason": "2 unverified claim(s) cut, unrecovered",
+   "tries": 10,
+   "at": "2026-07-18T05:33:05.569Z",
    "dead": true,
-   "expiresAt": "2026-07-21T04:35:32.742Z"
+   "expiresAt": "2026-07-21T05:33:05.569Z"
   },
   {
    "key": "winning-ai-search-ev-streaming-arrival|NOW-STREAMING",
@@ -714,14 +714,20 @@
    "at": "2026-07-18T04:39:17.673Z"
   }
  ],
- "zeroStreak": 5,
+ "zeroStreak": 6,
  "daySpend": {
   "laDay": "2026-07-17",
-  "usd": 1.14891
+  "usd": 1.1708
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1784350843031
+  "lastMs": 1784352644034
  },
- "lastAuditDay": "2026-07-17"
+ "lastAuditDay": "2026-07-17",
+ "attempts": {
+  "laDay": "2026-07-17",
+  "byFilm": {
+   "the odyssey": 1
+  }
+ }
 }
