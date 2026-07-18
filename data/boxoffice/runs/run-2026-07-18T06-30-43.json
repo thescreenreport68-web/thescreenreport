@@ -1,0 +1,114 @@
+{
+ "runId": "run-2026-07-18T06-30-43",
+ "mode": "live",
+ "startedAt": "2026-07-18T06:30:43.091Z",
+ "films": 8,
+ "published": [],
+ "held": [
+  {
+   "tag": "the-odyssey-ev-weekend×BO-WEEKEND",
+   "reason": "words 124 < 180 (owner-set ~200-word minimum)",
+   "score": 65
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "the-odyssey-ev-opening×BO-OPENING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "descendants-wicked-wonderland-ev-streaming-arrival×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "golden-kamuy-3-the-abarishi-prison-raid-ev-streaming-arrival×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "ek-din-ev-streaming-arrival×NOW-STREAMING",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "wild-sing-ev-streaming-arrival×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "moana-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  }
+ ],
+ "blocked": [
+  {
+   "tag": "winning-ai-search-ev-streaming-arrival×NOW-STREAMING",
+   "reason": "watchdog: gatherer winning-ai-search-ev-streaming-arrival×NOW-STREAMING exceeded 180s"
+  }
+ ],
+ "paced": {
+  "tokens": 4,
+  "behind": true,
+  "expected": 19.14,
+  "allow": 2
+ },
+ "queueBuilt": 8,
+ "zeroStreak": 8,
+ "daySpend": {
+  "laDay": "2026-07-17",
+  "usd": 1.20389
+ },
+ "finishedAt": "2026-07-18T06:36:47.252Z",
+ "meter": {
+  "byRole": {
+   "categorize": {
+    "calls": 3,
+    "errors": 0,
+    "in": 1064,
+    "out": 537,
+    "usd": 0.00032,
+    "ms": 2546
+   },
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3433,
+    "out": 709,
+    "usd": 0.00022,
+    "ms": 6501
+   },
+   "gatherer": {
+    "calls": 3,
+    "errors": 0,
+    "in": 13306,
+    "out": 977,
+    "usd": 0.00172,
+    "ms": 4271
+   },
+   "synthesizer": {
+    "calls": 1,
+    "errors": 0,
+    "in": 815,
+    "out": 409,
+    "usd": 0.00015,
+    "ms": 54852
+   },
+   "writer": {
+    "calls": 2,
+    "errors": 0,
+    "in": 7036,
+    "out": 2195,
+    "usd": 0.00633,
+    "ms": 33461
+   },
+   "qa": {
+    "calls": 10,
+    "errors": 1,
+    "in": 31009,
+    "out": 3693,
+    "usd": 0.01697,
+    "ms": 24532
+   }
+  },
+  "totalUsd": 0.02571
+ },
+ "openrouterTotalUsd": 0.03228
+}
