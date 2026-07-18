@@ -795,16 +795,24 @@
    "reason": "1 unverified claim(s) cut, unrecovered",
    "tries": 1,
    "at": "2026-07-18T15:18:31.585Z"
+  },
+  {
+   "key": "the-abandons-ev-streaming-arrival|NOW-STREAMING",
+   "eventSlug": "the-abandons-ev-streaming-arrival",
+   "form": "NOW-STREAMING",
+   "reason": "soft-floor readability 4 < 5 | soft-floor engagement 1 < 5 | soft-floor humanVoice 2 < 5",
+   "tries": 1,
+   "at": "2026-07-18T15:36:46.144Z"
   }
  ],
- "zeroStreak": 0,
+ "zeroStreak": 1,
  "daySpend": {
   "laDay": "2026-07-18",
-  "usd": 0.05486
+  "usd": 0.08028
  },
  "pace": {
-  "tokens": 3,
-  "lastMs": 1784386851138
+  "tokens": 3.7352407222222226,
+  "lastMs": 1784388741757
  },
  "lastAuditDay": "2026-07-18",
  "attempts": {
@@ -822,7 +830,8 @@
    "obsession": 1,
    "backrooms": 1,
    "jackass: best and last": 1,
-   "scary movie": 1
+   "scary movie": 1,
+   "the abandons": 1
   }
  }
 }

@@ -1,0 +1,105 @@
+{
+ "runId": "run-2026-07-18T15-32-21",
+ "mode": "live",
+ "startedAt": "2026-07-18T15:32:21.757Z",
+ "films": 6,
+ "published": [],
+ "held": [
+  {
+   "tag": "the-abandons-ev-streaming-arrival×NOW-STREAMING",
+   "reason": "soft-floor readability 4 < 5 | soft-floor engagement 1 < 5 | soft-floor humanVoice 2 < 5",
+   "score": 30
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "the-odyssey-ev-opening×BO-OPENING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "the-odyssey-ev-weekend×BO-WEEKEND",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "spider-man-brand-new-day-ev-opening×BO-OPENING",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "disclosure-day-ev-streaming-arrival×NOW-STREAMING",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "the-hawk-ev-streaming-arrival×NOW-STREAMING",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  }
+ ],
+ "blocked": [],
+ "paced": {
+  "tokens": 3.74,
+  "behind": true,
+  "expected": 4.2,
+  "allow": 1
+ },
+ "queueBuilt": 10,
+ "zeroStreak": 1,
+ "daySpend": {
+  "laDay": "2026-07-18",
+  "usd": 0.08028
+ },
+ "finishedAt": "2026-07-18T15:36:46.146Z",
+ "meter": {
+  "byRole": {
+   "categorize": {
+    "calls": 3,
+    "errors": 0,
+    "in": 1095,
+    "out": 546,
+    "usd": 0.00033,
+    "ms": 2374
+   },
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3547,
+    "out": 684,
+    "usd": 0.00022,
+    "ms": 2076
+   },
+   "gatherer": {
+    "calls": 3,
+    "errors": 0,
+    "in": 11973,
+    "out": 753,
+    "usd": 0.0015,
+    "ms": 4652
+   },
+   "synthesizer": {
+    "calls": 1,
+    "errors": 0,
+    "in": 682,
+    "out": 729,
+    "usd": 0.00019,
+    "ms": 7896
+   },
+   "writer": {
+    "calls": 2,
+    "errors": 0,
+    "in": 5724,
+    "out": 2245,
+    "usd": 0.00588,
+    "ms": 42584
+   },
+   "qa": {
+    "calls": 8,
+    "errors": 1,
+    "in": 19568,
+    "out": 3614,
+    "usd": 0.01276,
+    "ms": 25061
+   }
+  },
+  "totalUsd": 0.02088
+ },
+ "openrouterTotalUsd": 0.02542
+}
