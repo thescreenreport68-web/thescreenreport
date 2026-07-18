@@ -1,0 +1,116 @@
+{
+ "runId": "run-2026-07-18T16-00-42",
+ "mode": "live",
+ "startedAt": "2026-07-18T16:00:42.764Z",
+ "films": 8,
+ "published": [],
+ "held": [
+  {
+   "tag": "obsession-bo-update×BO-UPDATE",
+   "reason": "words 162 < 180 (owner-set ~200-word minimum)",
+   "score": 50
+  },
+  {
+   "tag": "backrooms-bo-update×BO-UPDATE",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "score": 50
+  },
+  {
+   "tag": "scary-movie-bo-update×BO-UPDATE",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "score": 50
+  },
+  {
+   "tag": "voicemails-for-isabelle-now-streaming×NOW-STREAMING",
+   "reason": "soft-floor humanVoice 4 < 5",
+   "score": 60
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "young-washington-bo-update×BO-UPDATE",
+   "reason": "film attempt budget exhausted today (3 paid tries/film/day)"
+  },
+  {
+   "tag": "the-invite-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "jackass-best-and-last-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  }
+ ],
+ "blocked": [
+  {
+   "tag": "the-odyssey-bo-opening×BO-OPENING",
+   "reason": "watchdog: gatherer the-odyssey-bo-opening×BO-OPENING exceeded 180s"
+  }
+ ],
+ "paced": {
+  "tokens": 2.4,
+  "behind": true,
+  "expected": 5.6,
+  "allow": 2
+ },
+ "zeroStreak": 1,
+ "daySpend": {
+  "laDay": "2026-07-18",
+  "usd": 0.11884
+ },
+ "finishedAt": "2026-07-18T16:13:17.482Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3547,
+    "out": 583,
+    "usd": 0.00021,
+    "ms": 6243
+   },
+   "gatherer": {
+    "calls": 9,
+    "errors": 3,
+    "in": 22207,
+    "out": 1499,
+    "usd": 0.00282,
+    "ms": 10047
+   },
+   "synthesizer": {
+    "calls": 4,
+    "errors": 0,
+    "in": 3030,
+    "out": 2235,
+    "usd": 0.00067,
+    "ms": 89369
+   },
+   "writerChart": {
+    "calls": 3,
+    "errors": 0,
+    "in": 6046,
+    "out": 3157,
+    "usd": 0.00247,
+    "ms": 67567
+   },
+   "writer": {
+    "calls": 2,
+    "errors": 0,
+    "in": 6181,
+    "out": 2225,
+    "usd": 0.00603,
+    "ms": 42542
+   },
+   "qa": {
+    "calls": 8,
+    "errors": 0,
+    "in": 22931,
+    "out": 2828,
+    "usd": 0.01395,
+    "ms": 18932
+   }
+  },
+  "totalUsd": 0.02615
+ },
+ "openrouterTotalUsd": 0.03018
+}

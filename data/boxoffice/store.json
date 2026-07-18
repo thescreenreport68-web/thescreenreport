@@ -348,10 +348,10 @@
    "key": "voicemails-for-isabelle-now-streaming|NOW-STREAMING",
    "eventSlug": "voicemails-for-isabelle-now-streaming",
    "form": "NOW-STREAMING",
-   "reason": "seo-faq: fewer than 2 real FAQs",
-   "tries": 3,
-   "at": "2026-07-13T17:36:27.598Z",
-   "dead": true
+   "reason": "soft-floor humanVoice 4 < 5",
+   "tries": 2,
+   "at": "2026-07-18T16:10:17.174Z",
+   "dead": false
   },
   {
    "key": "toy-story-5-bo-update-d25|BO-UPDATE",
@@ -782,25 +782,29 @@
    "key": "obsession-bo-update-d64|BO-UPDATE",
    "eventSlug": "obsession-bo-update-d64",
    "form": "BO-UPDATE",
-   "reason": "words 124 < 180 (owner-set ~200-word minimum)",
-   "tries": 2,
-   "at": "2026-07-18T15:44:26.550Z"
+   "reason": "words 162 < 180 (owner-set ~200-word minimum)",
+   "tries": 3,
+   "at": "2026-07-18T16:02:47.772Z",
+   "dead": true,
+   "expiresAt": "2026-07-21T16:02:47.772Z"
   },
   {
    "key": "backrooms-bo-update-d50|BO-UPDATE",
    "eventSlug": "backrooms-bo-update-d50",
    "form": "BO-UPDATE",
-   "reason": "words 171 < 180 (owner-set ~200-word minimum)",
-   "tries": 2,
-   "at": "2026-07-18T15:46:24.282Z"
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "tries": 3,
+   "at": "2026-07-18T16:04:50.476Z",
+   "dead": true,
+   "expiresAt": "2026-07-21T16:04:50.476Z"
   },
   {
    "key": "scary-movie-bo-update-d43|BO-UPDATE",
    "eventSlug": "scary-movie-bo-update-d43",
    "form": "BO-UPDATE",
    "reason": "1 unverified claim(s) cut, unrecovered",
-   "tries": 1,
-   "at": "2026-07-18T15:18:31.585Z"
+   "tries": 2,
+   "at": "2026-07-18T16:06:36.694Z"
   },
   {
    "key": "the-abandons-ev-streaming-arrival|NOW-STREAMING",
@@ -811,20 +815,20 @@
    "at": "2026-07-18T15:36:46.144Z"
   }
  ],
- "zeroStreak": 0,
+ "zeroStreak": 1,
  "daySpend": {
   "laDay": "2026-07-18",
-  "usd": 0.08866
+  "usd": 0.11884
  },
  "pace": {
-  "tokens": 1.8542512222222225,
-  "lastMs": 1784389047784
+  "tokens": 2.3967434444444446,
+  "lastMs": 1784390442764
  },
  "lastAuditDay": "2026-07-18",
  "attempts": {
   "laDay": "2026-07-18",
   "byFilm": {
-   "the odyssey": 1,
+   "the odyssey": 2,
    "spider-man: brand new day": 1,
    "disclosure day": 1,
    "ek din": 1,
@@ -833,11 +837,12 @@
    "golden kamuy": 1,
    "love in the moonlight": 2,
    "the invite": 1,
-   "obsession": 2,
-   "backrooms": 2,
+   "obsession": 3,
+   "backrooms": 3,
    "jackass: best and last": 2,
-   "scary movie": 1,
-   "the abandons": 1
+   "scary movie": 2,
+   "the abandons": 1,
+   "voicemails for isabelle": 1
   }
  }
 }
