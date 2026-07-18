@@ -814,17 +814,17 @@
    "key": "the-abandons-ev-streaming-arrival|NOW-STREAMING",
    "eventSlug": "the-abandons-ev-streaming-arrival",
    "form": "NOW-STREAMING",
-   "reason": "soft-floor readability 4 < 5 | soft-floor engagement 1 < 5 | soft-floor humanVoice 2 < 5",
-   "tries": 1,
-   "at": "2026-07-18T15:36:46.144Z"
+   "reason": "8 unverified claim(s) cut, unrecovered",
+   "tries": 2,
+   "at": "2026-07-18T19:36:52.652Z"
   },
   {
    "key": "potential-ev-streaming-arrival|NOW-STREAMING",
    "eventSlug": "potential-ev-streaming-arrival",
    "form": "NOW-STREAMING",
    "reason": "under floor: no subscription-streaming platform — rent/buy is not 'now streaming'",
-   "tries": 1,
-   "at": "2026-07-18T16:37:42.439Z"
+   "tries": 2,
+   "at": "2026-07-18T19:32:56.085Z"
   },
   {
    "key": "chained-ev-streaming-arrival|NOW-STREAMING",
@@ -843,14 +843,14 @@
    "at": "2026-07-18T19:01:35.253Z"
   }
  ],
- "zeroStreak": 7,
+ "zeroStreak": 8,
  "daySpend": {
   "laDay": "2026-07-18",
-  "usd": 0.20063
+  "usd": 0.23696
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1784401244103
+  "lastMs": 1784403043916
  },
  "lastAuditDay": "2026-07-18",
  "attempts": {
@@ -869,10 +869,10 @@
    "backrooms": 3,
    "jackass: best and last": 2,
    "scary movie": 3,
-   "the abandons": 1,
+   "the abandons": 2,
    "voicemails for isabelle": 1,
    "chained": 2,
-   "potential": 1,
+   "potential": 2,
    "the boss baby": 1,
    "the sheep detectives": 1,
    "citizen vigilante": 1

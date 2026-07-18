@@ -1,0 +1,115 @@
+{
+ "runId": "run-2026-07-18T19-30-43",
+ "mode": "live",
+ "startedAt": "2026-07-18T19:30:43.916Z",
+ "films": 8,
+ "published": [],
+ "held": [
+  {
+   "tag": "the-abandons-ev-streaming-arrival×NOW-STREAMING",
+   "reason": "8 unverified claim(s) cut, unrecovered",
+   "score": 55
+  }
+ ],
+ "rejected": [
+  {
+   "tag": "potential-ev-streaming-arrival×NOW-STREAMING",
+   "stage": "gatherer",
+   "reason": "under floor: no subscription-streaming platform — rent/buy is not 'now streaming' (try 2)"
+  }
+ ],
+ "skipped": [
+  {
+   "tag": "the-odyssey-ev-opening×BO-OPENING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "the-odyssey-ev-weekend×BO-WEEKEND",
+   "reason": "film attempt budget exhausted today (3 paid tries/film/day)"
+  },
+  {
+   "tag": "chained-ev-streaming-arrival×NOW-STREAMING",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "young-washington-bo-update×BO-UPDATE",
+   "reason": "film attempt budget exhausted today (3 paid tries/film/day)"
+  },
+  {
+   "tag": "the-invite-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "obsession-bo-update×BO-UPDATE",
+   "reason": "film attempt budget exhausted today (3 paid tries/film/day)"
+  }
+ ],
+ "blocked": [],
+ "paced": {
+  "tokens": 4,
+  "behind": true,
+  "expected": 9.8,
+  "allow": 2
+ },
+ "queueBuilt": 6,
+ "zeroStreak": 8,
+ "daySpend": {
+  "laDay": "2026-07-18",
+  "usd": 0.23696
+ },
+ "finishedAt": "2026-07-18T19:36:52.656Z",
+ "meter": {
+  "byRole": {
+   "categorize": {
+    "calls": 3,
+    "errors": 0,
+    "in": 1147,
+    "out": 517,
+    "usd": 0.00032,
+    "ms": 2499
+   },
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3471,
+    "out": 464,
+    "usd": 0.00019,
+    "ms": 1758
+   },
+   "gatherer": {
+    "calls": 6,
+    "errors": 0,
+    "in": 28596,
+    "out": 1086,
+    "usd": 0.00329,
+    "ms": 7239
+   },
+   "synthesizer": {
+    "calls": 1,
+    "errors": 0,
+    "in": 659,
+    "out": 268,
+    "usd": 0.00011,
+    "ms": 11135
+   },
+   "writer": {
+    "calls": 2,
+    "errors": 0,
+    "in": 5885,
+    "out": 2451,
+    "usd": 0.00628,
+    "ms": 29431
+   },
+   "qa": {
+    "calls": 10,
+    "errors": 2,
+    "in": 23031,
+    "out": 4345,
+    "usd": 0.01443,
+    "ms": 36977
+   }
+  },
+  "totalUsd": 0.02461
+ },
+ "openrouterTotalUsd": 0.03633
+}
