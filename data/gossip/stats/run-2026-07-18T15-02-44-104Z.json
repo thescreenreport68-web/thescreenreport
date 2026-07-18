@@ -1,0 +1,137 @@
+{
+  "ts": "2026-07-18T15:02:44.104Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "kit-connors-dating-status-amid-the-heartstopper-forever-hype",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [
+        "template-fingerprint:logged"
+      ],
+      "headline": [
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 1
+    }
+  ],
+  "topics": 1,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 0,
+  "costUSD": 0.013628,
+  "costPerPublished": 0.013628,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 6,
+      "in": 12657,
+      "out": 1634,
+      "usd": 0.0078821
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 987,
+      "out": 736,
+      "usd": 0.00034426
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 6,
+      "in": 19382,
+      "out": 5385,
+      "usd": 0.00462018065
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 8,
+      "in": 5280,
+      "out": 634,
+      "usd": 0.0007815999999999999
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2682,
+      "out": 174,
+      "usd": 0.0012396,
+      "ms": 1259
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 987,
+      "out": 736,
+      "usd": 0.00022131,
+      "ms": 10378
+    },
+    "writer": {
+      "calls": 5,
+      "errors": 0,
+      "in": 18765,
+      "out": 5035,
+      "usd": 0.00602785,
+      "ms": 104382
+    },
+    "verify": {
+      "calls": 5,
+      "errors": 0,
+      "in": 9975,
+      "out": 1460,
+      "usd": 0.0066425,
+      "ms": 8434
+    },
+    "judge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1460,
+      "out": 286,
+      "usd": 0.0002604,
+      "ms": 1438
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 617,
+      "out": 350,
+      "usd": 0.00026091000000000005,
+      "ms": 7511
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 384,
+      "out": 92,
+      "usd": 0.00007520000000000001,
+      "ms": 618
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 183,
+      "out": 47,
+      "usd": 0.0000371,
+      "ms": 500
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2071,
+      "out": 83,
+      "usd": 0.0002403,
+      "ms": 1512
+    },
+    "linker": {
+      "calls": 4,
+      "errors": 0,
+      "in": 1182,
+      "out": 126,
+      "usd": 0.00016859999999999998,
+      "ms": 1952
+    }
+  }
+}
