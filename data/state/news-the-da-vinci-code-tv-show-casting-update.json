@@ -1,8 +1,81 @@
 {
   "id": "news-the-da-vinci-code-tv-show-casting-update",
   "slug": "netflix-s-the-da-vinci-code-tv-show-casting-update-tom-hanks-replaceme",
-  "status": "rejected_editorial",
-  "stages": {},
-  "holdReason": "editorial gate: stale: not current news — The provided text is only a headline and a link, not actual gathered source reporting. It does not contain enough information to determine if there is a concrete entertainment happening.",
-  "ms": 2318
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": null,
+      "cat": "tv/news",
+      "format": [
+        "body 267w < 300"
+      ],
+      "cuts": 1,
+      "broken": []
+    },
+    "attempt2": {
+      "score": null,
+      "cat": "tv/news",
+      "format": [
+        "body 246w < 300"
+      ],
+      "cuts": 0,
+      "broken": []
+    }
+  },
+  "editorial": {
+    "status": "unconfirmed",
+    "entity": "The Da Vinci Code",
+    "work": null,
+    "outlet": "ScreenRant"
+  },
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
+    "deterministic": {
+      "words": 246,
+      "h2s": 3,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 2,
+      "hasSources": true,
+      "faqCount": 4,
+      "ktCount": 3,
+      "kwInTitle": true,
+      "kwInFirst100": false,
+      "kwInH2": false,
+      "maxSentence": 34,
+      "avgSentence": 19,
+      "flesch": 61,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": [
+        "body 246w < 300"
+      ]
+    },
+    "hardBlocks": []
+  },
+  "score": null,
+  "category": "tv",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 1,
+    "failed": [
+      "body ≥ 300w"
+    ]
+  },
+  "ms": 118459,
+  "previousRuns": [
+    {
+      "id": "news-the-da-vinci-code-tv-show-casting-update",
+      "slug": "netflix-s-the-da-vinci-code-tv-show-casting-update-tom-hanks-replaceme",
+      "status": "rejected_editorial",
+      "stages": {},
+      "holdReason": "editorial gate: stale: not current news — The provided text is only a headline and a link, not actual gathered source reporting. It does not contain enough information to determine if there is a concrete entertainment happening.",
+      "ms": 2318
+    }
+  ]
 }
