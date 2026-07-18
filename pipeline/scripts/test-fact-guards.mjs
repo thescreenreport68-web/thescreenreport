@@ -117,5 +117,13 @@ console.log("=== 9. stale-'today' normalizer — the LIVE Elle case ===");
   const fresh = normalizeStaleToday({ body: "The film premiered today, July 17, worldwide.", dek: "" }, "2026-07-17T12:00:00.000Z");
   ok(/today, July 17/.test(fresh.body), "genuinely same-day 'today' untouched");
 }
+console.log("=== 10. spice layer — quote-news admitted, evergreen chat still out ===");
+{
+  const { isSpicy, spiceBonus, SPICY_QUOTE } = await import("../lib/spice.mjs");
+  for (const t of ["Zendaya Slams 'Lazy' Odyssey Comparisons", "Matt Damon Breaks Silence on Odyssey Stunt Injury", "Tom Holland Admits He Nearly Turned Down Nolan", "Charlize Theron Fires Back at Critics of Her Accent"]) ok(isSpicy(t) && spiceBonus(t) >= 7, `spicy admitted (+${spiceBonus(t)}): "${t.slice(0,44)}"`);
+  for (const t of ["Samantha Morton Discusses Her Process as Circe", "Anne Hathaway Reflects on Two Decades in Film", "Cast Talks About Filming in Sicily"]) ok(!SPICY_QUOTE.test(t), `flat chat NOT spicy: "${t.slice(0,44)}"`);
+  ok(spiceBonus("Fans Are Divided Over the Odyssey Ending as Backlash Sparks Debate") <= 10, "spice bonus capped at 10");
+  ok(spiceBonus("Warner Bros Sets Release Date for New Film") === 0, "plain announcement gets 0 spice");
+}
 console.log(`\n${fail === 0 ? "✅ ALL" : "❌"} ${pass} passed, ${fail} failed`);
 process.exit(fail ? 1 : 0);

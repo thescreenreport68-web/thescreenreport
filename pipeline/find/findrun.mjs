@@ -91,7 +91,10 @@ export const SCHEDULE_GRID = /\b(fall|spring|summer|midseason) (tv )?(schedule|l
 // removed — it is only NEWS when the title also carries a hard news verb (a revelation, exit, deal…).
 export const INTERVIEW_CHAT = /\b(opens? up (about|on)|discuss(es)?\b|reflects? on|talks? about|sits? down (with|for)|in conversation|gets? candid|weighs? in on)\b/i;
 export const HARD_NEWS_VERB = /\b(joins?|cast(s|ed)?|exits?|quits?|leaves?|dies|dead|sues?|lawsuit|arrested|charged|fired|signs?|confirms?|announces?|reveals? (his|her|their|the|a)|renew(s|ed)?|cancel(s|ed|led)?|sets?|lands?|acquires?|teases? (a|the|new)|drops? (a|the|new))\b/i;
-const interviewOnly = (t) => INTERVIEW_CHAT.test(t) && !HARD_NEWS_VERB.test(t);
+// SPICE EXEMPTION (owner 2026-07-18): quote-news with a conflict/revelation verb ("Zendaya slams…",
+// "Damon breaks silence…") IS wanted news — the interview guard drops only flat evergreen chat.
+const { isSpicy } = await import("../lib/spice.mjs");
+const interviewOnly = (t) => INTERVIEW_CHAT.test(t) && !HARD_NEWS_VERB.test(t) && !isSpicy(t);
 // Platform/viewership patterns hide in the SUMMARY when the headline is coy ("…'Vrach Frankenshteyn' Debuts"
 // + summary "will debut on Hulu on August 14") — test title PLUS the summary's first 200 chars for those two.
 const withSummary = (c) => `${c.title || ""} ${String(c.summary || c.description || "").slice(0, 200)}`;

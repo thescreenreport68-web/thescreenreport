@@ -26,7 +26,7 @@ export const CFG = {
   DAILY_CAP: Number(process.env.PACE_DAILY_CAP ?? 60),  // token supply/day (headroom over target)
   CAP: Number(process.env.PACE_BUCKET_CAP ?? 9),        // bucket capacity — one hot hour can spend at most this + refill
   FLOOR: Number(process.env.PACE_FLOOR ?? 48),          // hard newsworthiness floor (matches findrun SELECT_FLOOR)
-  QMIN: 0.70, QMAX: 0.99, GAMMA: 0.5,                   // quantile clamp + feedback damping
+  QMIN: Number(process.env.PACE_QMIN ?? 0.70), QMAX: 0.99, GAMMA: 0.5,                   // quantile clamp + feedback damping
   EWMA_HALF_H: Number(process.env.PACE_EWMA_HALF_H ?? 9),
   N_MIN: Number(process.env.PACE_N_MIN ?? 200),         // cold-start sample floor
   TIER_S_HOUR: 4, TIER_S_DAY: 12,

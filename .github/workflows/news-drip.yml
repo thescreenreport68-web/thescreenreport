@@ -66,6 +66,10 @@ jobs:
           PACE_TARGET: "90"
           PACE_DAILY_CAP: "100"
           ENTITY_DAY_CAP: "8"
+          PACE_QMIN: "0.55"          # behind-pace bar can relax to the 55th pct (hard floor 48 + all fact guards still absolute)
+          FIND_CANDIDATES: "160"
+          FIND_QUEUE: "45"
+          MIN_BACKLOG: "12"
           # 24/7 posting (owner 2026-07-05): NO LA-hours gate — the cron's 2-hour cadence is what controls timing.
           LA_START: "0"
           LA_END: "24"

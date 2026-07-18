@@ -6,11 +6,11 @@ subcategory: news
 author: editorial-team
 date: '2026-07-18T03:31:35.112Z'
 dek: >-
-  Entertainment Weekly reveals her character Mandakini in the globe-trotting
+  Deadline reveals her character Mandakini in the globe-trotting
   action-adventure set for release in 2027.
 metaTitle: Priyanka Chopra Jonas Smolders in First Look at RRR
 metaDescription: >-
-  Entertainment Weekly shares an exclusive first look at Priyanka Chopra Jonas
+  Deadline shares an exclusive first look at Priyanka Chopra Jonas
   in S. S. Rajamouli's epic film Varanasi, set to hit theaters in April 2027.
 tags:
   - priyanka chopra jonas varanasi
@@ -20,7 +20,7 @@ tags:
 targetKeyword: Priyanka Chopra Jonas Varanasi
 keyTakeaways:
   - >-
-    Entertainment Weekly has an exclusive first look at Priyanka Chopra Jonas in
+    Deadline has an exclusive first look at Priyanka Chopra Jonas in
     'Varanasi'.
   - 'The film, directed by S. S. Rajamouli, is a globe-trotting action-adventure.'
   - '''Varanasi'' is scheduled for a theatrical release on April 7, 2027.'
@@ -67,9 +67,9 @@ provenance:
   eventType: announcement
   sensitivity: normal
   status: DEVELOPING
-  attribution: Entertainment Weekly
+  attribution: Deadline
   outlets:
-    - Entertainment Weekly
+    - Deadline
   publishedAt: '2026-07-18T03:31:35.112Z'
 dateModified: '2026-07-18T03:31:35.112Z'
 storyStatus: DEVELOPING
@@ -83,18 +83,15 @@ infoCard:
   genre: 'Adventure, Action, Fantasy'
   whereToWatch: Theaters
 newsType: general
-pullQuote:
-  text: '“strong, vulnerable, and unforgettable in equal measure.”'
-  attribution: Entertainment Weekly describing the character Mandakini
 keyPoints:
   - >-
-    Entertainment Weekly reveals an exclusive first look at Priyanka Chopra
+    Deadline reveals an exclusive first look at Priyanka Chopra
     Jonas in 'Varanasi'.
   - The film is director S. S. Rajamouli's first original project since 'RRR'.
   - 'The epic action-adventure is scheduled for release on April 7, 2027.'
 ---
 
-Priyanka Chopra Jonas stars as Mandakini in director S. S. Rajamouli’s upcoming film *Varanasi*, according to an exclusive first look published by Entertainment Weekly. The film is described as an epic action-adventure.
+Priyanka Chopra Jonas stars as Mandakini in director S. S. Rajamouli’s upcoming film *Varanasi*, according to an exclusive first look published by Deadline. The film is described as an epic action-adventure.
 
 ## What does the first look reveal?
 

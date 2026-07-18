@@ -1,3 +1,4 @@
+import { spiceBonus } from "../lib/spice.mjs";
 // Stages 4 + 6 (v2) — DEMAND + PRIORITY ranking on FREE signals only. v1 sorted by TMDB popularity,
 // which is broken for breaking news (RSS items have popularity 0 and would sort last). v2 ranks by:
 //   recency (the breaking clock) + cross-source corroboration + verification trust + event-type weight.
@@ -80,9 +81,10 @@ export function scoreTopics(topics, monitor) {
     // Odyssey trailer, covered by Variety+THR+Deadline, out-ranks a one-outlet wedding-look item.
     const trendingBonus = Math.min(15, Math.max(0, outletCount(t) - 1) * 8);
     const softTvPenalty = isSoftTv ? 12 : 0;
-    const priority = Math.round(rec + corr + statusW + typeW + popNudge + breakoutPts + bigBonus + trendingBonus - softTvPenalty);
+    const spicePts = spiceBonus(t.title); // ENGAGEMENT LAYER (owner 2026-07-18): verified-conflict/quote/controversy headlines rank up
+    const priority = Math.round(rec + corr + statusW + typeW + popNudge + breakoutPts + bigBonus + trendingBonus + spicePts - softTvPenalty);
     t.priority = priority;
-    t.signals = { recency: rec, corroboration: corr, status: statusW, type: Math.round(typeW), pop: Math.round(popNudge), breakout: Math.round(breakoutPts), big: bigBonus, trending: trendingBonus, softTv: -softTvPenalty };
+    t.signals = { recency: rec, corroboration: corr, status: statusW, type: Math.round(typeW), pop: Math.round(popNudge), breakout: Math.round(breakoutPts), big: bigBonus, trending: trendingBonus, spice: spicePts, softTv: -softTvPenalty };
   }
   topics.sort((a, b) => b.priority - a.priority);
   if (monitor) monitor.stage("score", `ranked ${topics.length} topics by freshness+corroboration+type (top=${topics[0]?.priority ?? "-"})`);
