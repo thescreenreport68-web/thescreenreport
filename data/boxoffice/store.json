@@ -614,11 +614,11 @@
    "key": "the-odyssey-ev-weekend-d0|BO-WEEKEND",
    "eventSlug": "the-odyssey-ev-weekend-d0",
    "form": "BO-WEEKEND",
-   "reason": "words 124 < 180 (owner-set ~200-word minimum)",
-   "tries": 11,
-   "at": "2026-07-18T06:33:46.865Z",
+   "reason": "consistency: keyTakeaways[2]: \"95%\" is not the film's verified change figure | faq[1].a: \"95%\" is not the film's verified change figure | faq[1].a: \"97%\" is not the film's verified change figure",
+   "tries": 12,
+   "at": "2026-07-18T17:40:53.776Z",
    "dead": true,
-   "expiresAt": "2026-07-21T06:33:46.865Z"
+   "expiresAt": "2026-07-21T17:40:53.776Z"
   },
   {
    "key": "winning-ai-search-ev-streaming-arrival|NOW-STREAMING",
@@ -760,9 +760,9 @@
    "key": "spider-man-brand-new-day-ev-opening|BO-OPENING",
    "eventSlug": "spider-man-brand-new-day-ev-opening",
    "form": "BO-OPENING",
-   "reason": "words 159 < 180 (owner-set ~200-word minimum)",
-   "tries": 1,
-   "at": "2026-07-18T14:39:41.258Z"
+   "reason": "words 155 < 180 (owner-set ~200-word minimum)",
+   "tries": 2,
+   "at": "2026-07-18T17:38:09.081Z"
   },
   {
    "key": "disclosure-day-ev-streaming-arrival|NOW-STREAMING",
@@ -823,23 +823,31 @@
    "reason": "under floor: no subscription-streaming platform — rent/buy is not 'now streaming'",
    "tries": 1,
    "at": "2026-07-18T16:37:42.439Z"
+  },
+  {
+   "key": "chained-ev-streaming-arrival|NOW-STREAMING",
+   "eventSlug": "chained-ev-streaming-arrival",
+   "form": "NOW-STREAMING",
+   "reason": "under floor: no subscription-streaming platform — rent/buy is not 'now streaming'",
+   "tries": 1,
+   "at": "2026-07-18T17:35:07.764Z"
   }
  ],
- "zeroStreak": 3,
+ "zeroStreak": 4,
  "daySpend": {
   "laDay": "2026-07-18",
-  "usd": 0.14038
+  "usd": 0.19351
  },
  "pace": {
-  "tokens": 3.7959505,
-  "lastMs": 1784394040725
+  "tokens": 4,
+  "lastMs": 1784395932115
  },
  "lastAuditDay": "2026-07-18",
  "attempts": {
   "laDay": "2026-07-18",
   "byFilm": {
-   "the odyssey": 2,
-   "spider-man: brand new day": 1,
+   "the odyssey": 3,
+   "spider-man: brand new day": 2,
    "disclosure day": 1,
    "ek din": 1,
    "the hawk": 1,
@@ -853,7 +861,7 @@
    "scary movie": 2,
    "the abandons": 1,
    "voicemails for isabelle": 1,
-   "chained": 1,
+   "chained": 2,
    "potential": 1,
    "the boss baby": 1
   }
