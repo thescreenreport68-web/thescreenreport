@@ -570,11 +570,11 @@
    "key": "the-odyssey-ev-weekend-d0|BO-WEEKEND",
    "eventSlug": "the-odyssey-ev-weekend-d0",
    "form": "BO-WEEKEND",
-   "reason": "7 unverified claim(s) cut, unrecovered",
-   "tries": 7,
-   "at": "2026-07-17T23:33:07.105Z",
+   "reason": "fidelity: 5 unsupported figures/claims — draft-level failure",
+   "tries": 8,
+   "at": "2026-07-18T01:32:28.069Z",
    "dead": true,
-   "expiresAt": "2026-07-20T23:33:07.105Z"
+   "expiresAt": "2026-07-21T01:32:28.069Z"
   },
   {
    "key": "winning-ai-search-ev-streaming-arrival|NOW-STREAMING",
@@ -668,9 +668,9 @@
    "key": "odyssey-ev-opening|BO-OPENING",
    "eventSlug": "odyssey-ev-opening",
    "form": "BO-OPENING",
-   "reason": "words 141 < 180 (owner-set ~200-word minimum)",
-   "tries": 1,
-   "at": "2026-07-17T21:35:46.136Z"
+   "reason": "words 167 < 180 (owner-set ~200-word minimum)",
+   "tries": 2,
+   "at": "2026-07-18T01:34:37.826Z"
   },
   {
    "key": "the-boss-baby-netflix-top10-w2026-07-12|NETFLIX-TOP10",
@@ -685,18 +685,18 @@
    "eventSlug": "golden-kamuy-3-the-abarishi-prison-raid-ev-streaming-arrival",
    "form": "NOW-STREAMING",
    "reason": "under floor: no subscription-streaming platform — rent/buy is not 'now streaming'",
-   "tries": 1,
-   "at": "2026-07-17T22:32:45.367Z"
+   "tries": 2,
+   "at": "2026-07-18T01:37:06.190Z"
   }
  ],
- "zeroStreak": 8,
+ "zeroStreak": 9,
  "daySpend": {
   "laDay": "2026-07-17",
-  "usd": 0.99192
+  "usd": 1.02712
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1784336452596
+  "lastMs": 1784338243681
  },
  "lastAuditDay": "2026-07-17"
 }
