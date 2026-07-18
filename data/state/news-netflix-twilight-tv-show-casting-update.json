@@ -1,0 +1,74 @@
+{
+  "id": "news-netflix-twilight-tv-show-casting-update",
+  "slug": "netflix-s-twilight-tv-show-finally-gets-a-major-casting-update-after-2",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": null,
+      "cat": "tv/news",
+      "format": [
+        "body 282w < 300",
+        "a 67-word run-on sentence (>55 — split it)"
+      ],
+      "cuts": 0,
+      "broken": []
+    },
+    "attempt2": {
+      "score": null,
+      "cat": "tv/news",
+      "format": [
+        "body 265w < 300",
+        "a 67-word run-on sentence (>55 — split it)"
+      ],
+      "cuts": 0,
+      "broken": []
+    }
+  },
+  "editorial": {
+    "status": "confirmed",
+    "entity": "Twilight",
+    "work": null,
+    "outlet": "ComingSoon.net"
+  },
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
+    "deterministic": {
+      "words": 265,
+      "h2s": 3,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 2,
+      "hasSources": true,
+      "faqCount": 3,
+      "ktCount": 5,
+      "kwInTitle": true,
+      "kwInFirst100": false,
+      "kwInH2": false,
+      "maxSentence": 67,
+      "avgSentence": 20,
+      "flesch": 45,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": [
+        "body 265w < 300",
+        "a 67-word run-on sentence (>55 — split it)"
+      ]
+    },
+    "hardBlocks": []
+  },
+  "score": null,
+  "category": "tv",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "body ≥ 300w"
+    ]
+  },
+  "ms": 106009
+}
