@@ -202,6 +202,7 @@ export const IG = {
   buffer: {
     base: "https://api.buffer.com",
     youtubeChannel: "6a49d51440483446286f712e", // The Screen Report YouTube channel (verified 2026-07-05)
+    organizationId: "6a49d35807bd7d95012164e6", // for posts-list queries (duplicate guard, 2026-07-18)
   },
   // public hosting for the mp4/cover (bridges fetch by URL) — the tsr-media public repo
   host: { repo: "thescreenreport68-web/tsr-media", dir: "ig", pruneDays: 14 },

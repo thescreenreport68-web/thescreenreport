@@ -17,12 +17,12 @@ const MUT = `mutation Create($input: CreatePostInput!) {
   }
 }`;
 
-async function gql(query, variables) {
-  // RETRY on a THROWN fetch (network/timeout) — a throw means the request never completed, so no
-  // post was created and a retry can't duplicate. A GraphQL error RESPONSE is returned as data and
-  // handled by the caller (permanent errors like Limit/Invalid must not be retried). (owner 2026-07-14)
+async function gql(query, variables, { retryThrown = true } = {}) {
+  // RETRY on a THROWN fetch (network/timeout) for READ queries only. For CREATE mutations the caller
+  // passes retryThrown:false and does verify-before-retry — a timeout does NOT prove the post wasn't
+  // created, and a blind retry there mints a DUPLICATE (owner root-level mandate 2026-07-18).
   let lastErr;
-  for (let attempt = 1; attempt <= 3; attempt++) {
+  for (let attempt = 1; attempt <= (retryThrown ? 3 : 1); attempt++) {
     try {
       const r = await fetch(IG.buffer.base, {
         method: "POST",
@@ -33,11 +33,27 @@ async function gql(query, variables) {
       return r.json().catch(() => ({}));
     } catch (e) {
       lastErr = e;
-      if (attempt === 3) throw e;
+      if (attempt === 3 || !retryThrown) throw e;
       await new Promise((res) => setTimeout(res, attempt * 3000));
     }
   }
   throw lastErr;
+}
+
+// does a post with THIS video already exist on the channel (any status)? — the verify-before-retry
+// primitive for createPost, and a general last-line duplicate guard.
+export async function bufferFindByVideo(videoUrl) {
+  try {
+    const j = await gql(
+      `query($input:PostsInput!,$first:Int){ posts(input:$input,first:$first){ edges{ node{ id status dueAt assets{ ... on VideoAsset { source } } } } } }`,
+      { input: { organizationId: IG.buffer.organizationId }, first: 40 },
+    );
+    const hit = (j?.data?.posts?.edges || []).map((e) => e.node)
+      .find((n) => (n.assets || []).some((a) => a.source === videoUrl) && n.status !== "error");
+    return hit ? { id: hit.id, status: hit.status } : null;
+  } catch {
+    return null;
+  }
 }
 
 // YouTube Short. title/description already platform-shaped (agent platformMeta). categoryId 24 =
@@ -71,11 +87,27 @@ export async function postYouTube({ videoUrl, title, description, whenISO, draft
   if (immediate && !draft) input.mode = "shareNow";
   else { input.mode = "customScheduled"; input.dueAt = whenISO; }
 
-  const j = await gql(MUT, { input });
-  if (j.errors?.length) return { ok: false, error: j.errors.map((e) => e.message).join("; ") };
-  const p = j?.data?.createPost;
-  if (p?.__typename === "PostActionSuccess") return { ok: true, id: p.post?.id };
-  return { ok: false, error: `${p?.__typename || "no-response"}: ${p?.message || JSON.stringify(j).slice(0, 200)}` };
+  // DUPLICATE-PROOF create (owner root-level mandate 2026-07-18): (1) pre-check — if this exact video
+  // already has a non-error post on the channel, DO NOT create another; (2) the create itself never
+  // blind-retries a thrown fetch — on timeout we verify whether the post landed before any retry.
+  const pre = await bufferFindByVideo(videoUrl);
+  if (pre) return { ok: true, id: pre.id, deduped: true };
+  let lastErr = "";
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    try {
+      const j = await gql(MUT, { input }, { retryThrown: false });
+      if (j.errors?.length) return { ok: false, error: j.errors.map((e) => e.message).join("; ") };
+      const p = j?.data?.createPost;
+      if (p?.__typename === "PostActionSuccess") return { ok: true, id: p.post?.id };
+      return { ok: false, error: `${p?.__typename || "no-response"}: ${p?.message || JSON.stringify(j).slice(0, 200)}` };
+    } catch (e) {
+      lastErr = String(e.message).slice(0, 150); // network/timeout — the post MAY have been created
+      const landed = await bufferFindByVideo(videoUrl);
+      if (landed) return { ok: true, id: landed.id, recovered: true };
+      if (attempt < 3) await new Promise((res) => setTimeout(res, 3000 * attempt));
+    }
+  }
+  return { ok: false, error: `createPost failed after verify-retry: ${lastErr}` };
 }
 
 // poll a Buffer post's publish status: draft | scheduled | sent | error | ...

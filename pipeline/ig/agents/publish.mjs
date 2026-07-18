@@ -157,6 +157,22 @@ export async function hostFile(localPath, destName) {
 // exists. First run to create it owns the story forever; every other run skips. FAIL-CLOSED: if the
 // lock cannot be verified (API down), we do NOT post — a missed slot recovers via the drain tomorrow;
 // a duplicate post to the audience does not recover. ──────────────────────────────────────────────
+// All existing story locks (one GET). Used at BUILD time so a stale run never even BUILDS an
+// already-posted story (the post-time lock would stop the duplicate reaching the audience, but only
+// after ~$0.24 was wasted building it). Fail-open to empty — the post-time lock stays authoritative.
+export async function listStoryLocks() {
+  const [owner, repo] = String(process.env.GITHUB_REPOSITORY || "thescreenreport68-web/thescreenreport").split("/");
+  const branch = process.env.GITHUB_REF_NAME || "rebuild-trending-news";
+  try {
+    const res = await fetchWithTimeout(`${GH_API}/repos/${owner}/${repo}/contents/data/ig/locks?ref=${branch}`, { headers: ghHeaders() }, 20000);
+    if (!res.ok) return new Set();
+    const list = await res.json();
+    return new Set((Array.isArray(list) ? list : []).map((f) => String(f.name).replace(/\.json$/, "")));
+  } catch {
+    return new Set();
+  }
+}
+
 export async function acquireStoryLock(slug, meta = {}) {
   const [owner, repo] = String(process.env.GITHUB_REPOSITORY || "thescreenreport68-web/thescreenreport").split("/");
   const branch = process.env.GITHUB_REF_NAME || "rebuild-trending-news";
@@ -183,17 +199,47 @@ export async function acquireStoryLock(slug, meta = {}) {
 
 const zHeaders = () => ({ Authorization: `Bearer ${process.env.ZERNIO_API_KEY}`, "Content-Type": "application/json" });
 
-// Create a Zernio post with RETRY — a transient 5xx/429 was dropping a single platform (Bam's IG
-// failed while FB went through). 4xx fails fast (a real bad request). (owner 2026-07-14)
-async function zernioCreate(body, label = "") {
-  for (let attempt = 1; attempt <= 3; attempt++) {
-    const res = await fetchWithTimeout(`${IG.zernio.base}/posts`, { method: "POST", headers: zHeaders(), body: JSON.stringify(body) }, 60000);
-    const data = await res.json().catch(() => ({}));
-    if (res.ok) return data;
-    if (res.status < 500 && res.status !== 429) throw new Error(`zernio${label} ${res.status}: ${JSON.stringify(data).slice(0, 250)}`);
-    if (attempt === 3) throw new Error(`zernio${label} ${res.status} after 3 tries: ${JSON.stringify(data).slice(0, 200)}`);
-    await sleep(attempt * 3000);
+// Did a create actually LAND despite an error/timeout? A platform can accept the post and still time
+// out the response — a blind retry then creates a DUPLICATE (owner root-level mandate 2026-07-18:
+// duplicates must be impossible). Match on the exact media URL + target account among recent posts.
+async function zernioFindExisting(body) {
+  try {
+    const res = await fetchWithTimeout(`${IG.zernio.base}/posts?limit=25`, { headers: zHeaders() }, 20000);
+    if (!res.ok) return null;
+    const j = await res.json();
+    const url = body.mediaItems?.[0]?.url;
+    const acct = String(body.platforms?.[0]?.accountId || "");
+    const hit = (j.posts || []).find(
+      (p) => (p.mediaItems || []).some((m) => m.url === url) &&
+             (p.platforms || []).some((pl) => String(pl.accountId?._id || pl.accountId || "").includes(acct)),
+    );
+    return hit ? { _id: hit._id } : null;
+  } catch {
+    return null;
   }
+}
+
+// Create a Zernio post with VERIFY-BEFORE-RETRY — a transient 5xx/429/timeout was either dropping a
+// platform (Bam's IG) or, worse, could double-create if the platform had accepted the post before the
+// error. Every retry first checks whether the post already exists. 4xx still fails fast. (2026-07-18)
+async function zernioCreate(body, label = "") {
+  let lastMsg = "";
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    try {
+      const res = await fetchWithTimeout(`${IG.zernio.base}/posts`, { method: "POST", headers: zHeaders(), body: JSON.stringify(body) }, 60000);
+      const data = await res.json().catch(() => ({}));
+      if (res.ok) return data;
+      if (res.status < 500 && res.status !== 429) throw new Error(`zernio${label} ${res.status}: ${JSON.stringify(data).slice(0, 250)}`);
+      lastMsg = `${res.status}: ${JSON.stringify(data).slice(0, 150)}`;
+    } catch (e) {
+      if (/zernio.* [45]\d\d:/.test(String(e.message))) throw e; // the hard-4xx path above
+      lastMsg = String(e.message).slice(0, 150); // network/timeout — the create may have landed
+    }
+    const existing = await zernioFindExisting(body); // NEVER blind-retry a create
+    if (existing) return existing;
+    if (attempt < 3) await sleep(attempt * 3000);
+  }
+  throw new Error(`zernio${label} after 3 tries: ${lastMsg}`);
 }
 
 export async function postToInstagram({ videoUrl, coverUrl, caption, firstComment, whenISO, live = false }) {

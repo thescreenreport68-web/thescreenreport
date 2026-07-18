@@ -43,7 +43,7 @@ import { styleEmphasis, buildAss } from "./agents/subs.mjs";
 import { render } from "./agents/render.mjs";
 import { makeCover } from "./agents/cover.mjs";
 import { watchQC } from "./agents/watchqc.mjs";
-import { publish, publishHosted, hostFile, verifyLive, acquireStoryLock } from "./agents/publish.mjs";
+import { publish, publishHosted, hostFile, verifyLive, acquireStoryLock, listStoryLocks } from "./agents/publish.mjs";
 import { bufferStatus } from "./lib/buffer.mjs";
 import { planSlots, upcomingSlotsToday } from "./agents/slots.mjs";
 import { collect } from "./agents/analytics.mjs";
@@ -572,9 +572,17 @@ async function main() {
     }
   }
 
+  // BUILD-TIME LOCK GATE (owner root-level mandate 2026-07-18): the post-time lock already makes a
+  // duplicate REACHING THE AUDIENCE impossible, but a stale-ledger run would still BUILD the dupe
+  // (~$0.24 wasted) before being blocked. One remote read of the locks dir stops it before a cent is
+  // spent. Fail-open to empty — the post-time lock stays the authoritative wall.
+  const lockedSlugs = live ? await listStoryLocks() : new Set();
+  if (lockedSlugs.size) console.log(`  ${lockedSlugs.size} stories already lock-posted (build-time dedup active)`);
+
   // build every job
   const built = [];
   for (const cand of slate) {
+    if (lockedSlugs.has(cand.slug)) { console.log(`\n━━ ${cand.slug} — 🔒 already posted (remote lock) — never rebuilt`); continue; }
     console.log(`\n━━ ${cand.slug} (${cand.segment}, score ${cand.score})`);
     let job = loadJob(cand.slug) || saveJob(newJob(cand));
     job.scout = { score: cand.score, sendability: cand.sendability, breaking: cand.breaking, segment: cand.segment };
