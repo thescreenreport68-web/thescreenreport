@@ -1,222 +1,220 @@
 {
- "dateKey": "2026-07-17",
+ "dateKey": "2026-07-18",
  "topTopic": {
-  "name": "Christopher Nolan's The Odyssey dominates film conversation",
-  "why": "The day's largest shared conversation centers on Nolan's epic, with multiple independent headlines reviewing the film, discussing its box-office performance, debating its legacy, and covering related theater technology and festival news."
+  "name": "The Odyssey",
+  "why": "The most frequently covered topic with a wide range of angles including box office performance in multiple regions, critical reviews, and comparisons to other films."
  },
  "slots": [
   {
    "story": {
-    "title": "Sixers film study: Where Dean Wade can impact winning",
-    "angle": "Analysis of Dean Wade's role and limitations within Philadelphia 76ers' strategy",
+    "title": "‘The Odyssey’ Can’t Stop Breaking Box Office Records Overseas",
+    "angle": "Christopher Nolan's 'The Odyssey' is achieving record-breaking box office numbers internationally.",
     "entities": [
-     "Dean Wade",
-     "Philadelphia 76ers",
-     "film study"
+     "The Odyssey",
+     "Christopher Nolan"
     ],
     "sourceLinks": [
-     "https://www.phillyvoice.com/sixers-news-analysis-film-study-dean-wade-highlights-stats-defense-matchups-nba-free-agency-signings/"
+     "https://www.imdb.com/news/ni65934088/?ref_=ttnw_art_perm"
     ],
-    "isTopTopic": false,
-    "viral": 3,
-    "hint": "tv"
+    "isTopTopic": true,
+    "viral": 8,
+    "hint": "box-office"
    },
-   "slotLA": "06:54",
-   "status": "dropped",
-   "swaps": 2,
-   "reason": "gather: <2 independent sources and no own article"
+   "slotLA": "06:55",
+   "status": "pending"
   },
   {
    "story": {
-    "title": "Box office: The Odyssey strong start with IMAX",
-    "angle": "Early estimates show The Odyssey earning $41M+ domestically in its opening weekend, powered by IMAX and 70mm interest",
+    "title": "‘The Odyssey’ Just Broke a Major ‘Avengers: Endgame’ Box Office Record",
+    "angle": "The film 'The Odyssey' has surpassed a significant box office record previously held by 'Avengers: Endgame'.",
     "entities": [
      "The Odyssey",
-     "box office",
-     "IMAX"
+     "Avengers: Endgame"
     ],
     "sourceLinks": [
-     "https://www.ign.com/articles/the-odyssey-estimated-box-office-opening-suggests-a-strong-start-powered-by-imax-hype",
-     "https://fayettevilleflyer.com/2026/07/17/review-the-odyssey-another-epic-hit-for-nolan/",
-     "https://www.screendaily.com/news/uk-ireland-box-office-preview-christopher-nolans-the-odyssey-journeys-into-760-cinemas-for-universal/5218702.article"
+     "https://www.imdb.com/news/ni65933996/?ref_=ttnw_art_perm"
     ],
     "isTopTopic": true,
     "viral": 9,
     "hint": "box-office"
    },
-   "slotLA": "08:40",
-   "status": "posted",
-   "key": "box-office-the-odyssey-strong-start-with-imax"
+   "slotLA": "08:38",
+   "status": "pending"
   },
   {
    "story": {
-    "title": "Brenda Fricker, Oscar-winning actress, dies at 81",
-    "angle": "Two-time Oscar winner Brenda Fricker passes away; known for Home Alone 2 and My Left Foot",
+    "title": "The Odyssey India Box Office Collection Day 1: Records 10th Biggest Hollywood Opening In The Post-covid Era",
+    "angle": "Christopher Nolan's 'The Odyssey' had the 10th biggest Hollywood opening in India post-COVID.",
     "entities": [
-     "Brenda Fricker"
+     "The Odyssey",
+     "Christopher Nolan"
     ],
     "sourceLinks": [
-     "https://www.thewrap.com/creative-content/movies/brenda-fricker-home-alone-2-actress-dead/",
-     "https://variety.com/2026/film/news/brenda-fricker-dead-my-left-foot-home-alone-2-1236814615/",
-     "https://deadline.com/2026/07/brenda-fricker-dead-home-alone-2-pigeon-lady-my-left-foot-1236996721/"
+     "https://www.imdb.com/news/ni65934039/?ref_=ttnw_art_perm",
+     "https://www.newsmobile.in/trending-now/the-odyssey-opens-strong-with-rs-20-76-crore-india-box-office-debut/",
+     "https://www.tribuneindia.com/news/entertainment/the-odyssey-box-office-collection-christopher-nolans-movie-earns-rs-20-crore-on-day-1-in-india/",
+     "https://m.economictimes.com/industry/media/entertainment/christopher-nolans-the-odyssey-earns-rs-20-76-crore-at-box-office-in-india/articleshow/132475241.cms"
+    ],
+    "isTopTopic": true,
+    "viral": 8,
+    "hint": "box-office"
+   },
+   "slotLA": "10:09",
+   "status": "pending"
+  },
+  {
+   "story": {
+    "title": "Christopher Nolan's 'The Odyssey' earns Rs 20.76 crore at box office in India",
+    "angle": "Christopher Nolan's 'The Odyssey' grossed Rs 20.76 crore on its opening day in India.",
+    "entities": [
+     "The Odyssey",
+     "Christopher Nolan"
+    ],
+    "sourceLinks": [
+     "https://m.economictimes.com/industry/media/entertainment/christopher-nolans-the-odyssey-earns-rs-20-76-crore-at-box-office-in-india/articleshow/132475241.cms",
+     "https://www.newsmobile.in/trending-now/the-odyssey-opens-strong-with-rs-20-76-crore-india-box-office-debut/"
     ],
     "isTopTopic": true,
     "viral": 7,
-    "hint": "memoriam"
+    "hint": "box-office"
    },
-   "slotLA": "10:12",
-   "status": "dropped",
-   "reason": "captions: two attempts broke the platform rules"
+   "slotLA": "11:44",
+   "status": "pending"
   },
   {
    "story": {
-    "title": "Craig Melvin says he's 'safe and sound' after Today studio break-in",
-    "angle": "Today show host addresses incident as studio evacuated and intruder was located",
+    "title": "The Odyssey North America Box Office: Registers 2026’s Biggest Previews, Outpaces Oppenheimer By A Huge Margin",
+    "angle": "'The Odyssey' achieved the biggest previews of 2026 in North America, significantly outperforming 'Oppenheimer'.",
     "entities": [
-     "Craig Melvin",
-     "Today show",
-     "intruder"
+     "The Odyssey",
+     "Oppenheimer"
     ],
     "sourceLinks": [
-     "https://www.thewrap.com/creative-content/tv-shows/today-craig-melvin-response-studio-intruder/",
-     "https://deadline.com/2026/07/craig-melvin-today-intruder-1236996711/"
+     "https://www.imdb.com/es/news/ni65933964/?ref_=int_nwr_1"
     ],
     "isTopTopic": true,
-    "viral": 6,
-    "hint": "news"
-   },
-   "slotLA": "11:41",
-   "status": "posted",
-   "key": "craig-melvin-says-he-s-safe-and-sound-after-today-studio-break-in"
-  },
-  {
-   "story": {
-    "title": "Netflix Viewership in 2026: what works and what doesn't",
-    "angle": "The Wrap analyzes streaming performance data showing what's resonating with audiences this year",
-    "entities": [
-     "Netflix",
-     "streaming",
-     "viewership"
-    ],
-    "sourceLinks": [
-     "https://www.thewrap.com/media-platforms/tv/netflix-viewership-report-2026-takeaways/"
-    ],
-    "isTopTopic": true,
-    "viral": 5,
-    "hint": "news"
+    "viral": 8,
+    "hint": "box-office"
    },
    "slotLA": "13:30",
-   "status": "dropped",
-   "reason": "factgate: The CARD SUB states \"first half of 2026\" while the VERIFIED FACT PACK states \"first half of the year\" which is not specific enough to confirm the year.; The IG CAPTION states \"early 2026\" while the VERIFIED FACT PACK states \"first half of the year\" which is not specific enough to confirm the year.; The FB CAPTION states \"early 2026\" while the VERIFIED FACT PACK states \"first half of the year\" which is not specific enough to confirm the year."
+   "status": "pending"
   },
   {
    "story": {
-    "title": "Obsession horror movie lands on Peacock",
-    "angle": [
-     "Low-budget horror film racks up box office records before streaming release"
-    ],
+    "title": "‘The Odyssey’ backlash collapses as box office sails past online outrage",
+    "angle": "Audience reaction to 'The Odyssey' has shifted, with its box office success overshadowing initial online criticism.",
     "entities": [
-     "Obsession",
-     "Peacock",
-     "horror"
+     "The Odyssey"
     ],
     "sourceLinks": [
-     "https://www.aol.com/articles/horror-hit-obsession-releases-streaming-090000000.html",
-     "https://novanews.co.za/watch-low-budget-horror-film-obsession-smashes-box-office-records/"
+     "https://tribune.com.pk/story/2618976/the-odyssey-backlash-collapses-as-box-office-sails-past-online-outrage"
+    ],
+    "isTopTopic": true,
+    "viral": 6,
+    "hint": "box-office"
+   },
+   "slotLA": "15:02",
+   "status": "pending"
+  },
+  {
+   "story": {
+    "title": "Indie horror 'Obsession' heads for record-breaking profits after $516m box office haul",
+    "angle": "The independent horror film 'Obsession' is on track for record profits following a $516 million box office performance.",
+    "entities": [
+     "Obsession"
+    ],
+    "sourceLinks": [
+     "https://tribune.com.pk/story/2618955/indie-horror-obsession-heads-for-record-breaking-profits-after-516m-box-office-haul"
+    ],
+    "isTopTopic": false,
+    "viral": 7,
+    "hint": "box-office"
+   },
+   "slotLA": "16:41",
+   "status": "pending"
+  },
+  {
+   "story": {
+    "title": "Marvel's X-Men movie: cast rumors and everything we know so far about the MCU's new mutant-starring comic book film",
+    "angle": "Details and cast rumors are emerging for Marvel's upcoming X-Men film within the MCU.",
+    "entities": [
+     "X-Men",
+     "MCU"
+    ],
+    "sourceLinks": [
+     "https://www.techradar.com/streaming/entertainment/marvels-x-men-movie-hub"
     ],
     "isTopTopic": false,
     "viral": 7,
     "hint": "news"
    },
-   "slotLA": "15:01",
-   "status": "dropped",
-   "reason": "gather: <2 independent sources and no own article"
+   "slotLA": "18:17",
+   "status": "pending"
   },
   {
    "story": {
-    "title": "'God of War' TV series to recast Kratos after on-set injury",
-    "angle": [
-     "Production pauses after stunt performer injury; recasting underway for lead role"
-    ],
+    "title": "Live-Action ‘Moana’ Remake To Lose $100 Million After Disappointing Box-Office Debut",
+    "angle": "The live-action 'Moana' remake is projected to lose $100 million due to a disappointing box office performance.",
     "entities": [
-     "God of War",
-     "Kratos",
-     "recasting"
+     "Moana"
     ],
     "sourceLinks": [
-     "https://screencrush.com/god-of-war-kratos-recasting/"
+     "https://www.imdb.com/news/ni65934085/?ref_=ttnw_art_perm"
+    ],
+    "isTopTopic": false,
+    "viral": 6,
+    "hint": "box-office"
+   },
+   "slotLA": "19:49",
+   "status": "pending"
+  },
+  {
+   "story": {
+    "title": "‘Toy Story 5’ Review – I’m thinking Pixar Might Be Back",
+    "angle": "A review suggests that 'Toy Story 5' marks a potential return to form for Pixar.",
+    "entities": [
+     "Toy Story 5",
+     "Pixar"
+    ],
+    "sourceLinks": [
+     "https://www.themoviebuff.net/2026/07/toy-story-5-review-im-thinking-pixar-might-be-back/?amp=1"
     ],
     "isTopTopic": false,
     "viral": 6,
     "hint": "news"
    },
-   "slotLA": "16:34",
-   "status": "dropped",
-   "reason": "factgate: Ryan Hurst has been recast as Kratos in Prime Video’s upcoming live-action adaptation of God of War. The card states he is out as Kratos, but the fact pack states he has been recast as Kratos."
-  },
-  {
-   "story": {
-    "title": "Heartstopper movie: Is Netflix sequel worth watching?",
-    "angle": "Yahoo reviews debate whether the Heartstopper Forever movie meets fan expectations",
-    "entities": [
-     "Heartstopper Forever",
-     "Netflix",
-     "sequel"
-    ],
-    "sourceLinks": [
-     "https://www.yahoo.com/entertainment/movies/article/is-heartstopper-forever-worth-watching-what-critics-are-saying-about-netflixs-romance-movie-132154385.html"
-    ],
-    "isTopTopic": false,
-    "viral": 5,
-    "hint": "news"
-   },
-   "slotLA": "18:05",
-   "status": "dropped",
-   "reason": "gather: <2 independent sources and no own article"
-  },
-  {
-   "story": {
-    "title": "Apple TV+ series 'The Pitt' described as intense and harrowing",
-    "angle": [
-     "True-story medical drama set in a hospital hits differently according to early reviews"
-    ],
-    "entities": [
-     "The Pitt",
-     "Apple TV+",
-     "medical drama"
-    ],
-    "sourceLinks": [
-     "https://collider.com/apple-tv-series-five-days-at-memorial-true-story-medical-drama/"
-    ],
-    "isTopTopic": false,
-    "viral": 5,
-    "hint": "news"
-   },
-   "slotLA": "19:52",
-   "status": "posted",
-   "key": "apple-tv-series-the-pitt-described-as-intense-and-harrowing"
-  },
-  {
-   "story": {
-    "title": "Indigenous Missionary Biopic 'Mussau: The First Song' to shoot in Papua New Guinea",
-    "angle": "First major film production to shoot in Papua New Guinea with local indigenous story",
-    "entities": [
-     "Mussau: The First Song",
-     "Papua New Guinea",
-     "indigenous biopic"
-    ],
-    "sourceLinks": [
-     "https://variety.com/2026/film/news/indigenous-missionary-biopic-mussau-the-first-song-papua-new-guinea-1236814609/"
-    ],
-    "isTopTopic": false,
-    "viral": 4,
-    "hint": "first-look"
-   },
    "slotLA": "21:24",
-   "status": "posted",
-   "key": "indigenous-missionary-biopic-mussau-the-first-song-to-shoot-in-papua-new-guinea"
+   "status": "pending"
   }
  ],
- "bench": [],
- "builtAt": 1784295977508
+ "bench": [
+  {
+   "title": "The Odyssey Review: Christopher Nolan Delivers a Mythic Epic Masterpiece",
+   "angle": "A positive review hails Christopher Nolan's 'The Odyssey' as a mythic epic masterpiece.",
+   "entities": [
+    "The Odyssey",
+    "Christopher Nolan"
+   ],
+   "sourceLinks": [
+    "https://www.filmfocusonline.com/post/the-odyssey-review"
+   ],
+   "isTopTopic": true,
+   "viral": 7,
+   "hint": "news"
+  },
+  {
+   "title": "‘Chapo Trap House’ Has a Hit Podcast. Now, They Have a Movie",
+   "angle": "The creators of the popular podcast 'Chapo Trap House' are now venturing into filmmaking with a new movie.",
+   "entities": [
+    "Chapo Trap House"
+   ],
+   "sourceLinks": [
+    "https://www.rollingstone.com/tv-movies/tv-movie-features/chapo-trap-house-movie-chunk-1235595460/"
+   ],
+   "isTopTopic": false,
+   "viral": 5,
+   "hint": "news"
+  }
+ ],
+ "builtAt": 1784382349482
 }
