@@ -1,10 +1,79 @@
 {
-  "runId": "run-2026-07-18T19-30-40",
-  "builtAt": "2026-07-18T19:32:07.533Z",
-  "count": 16,
+  "runId": "run-2026-07-18T20-32-19",
+  "builtAt": "2026-07-18T20:33:46.807Z",
+  "count": 13,
   "topics": [
     {
-      "id": "news-the-odyssey-cast-guide-christopher-nolan",
+      "id": "news-the-odyssey-movie-casting",
+      "slug": "the-odyssey-movie-cast-meet-each-star-of-christopher-nolan-s-film",
+      "title": "‘The Odyssey’ Movie Cast: Meet Each Star of Christopher Nolan’s Film",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "the-odyssey-movie-casting",
+      "primaryKeyword": "the odyssey movie cast",
+      "primaryEntity": "The Odyssey",
+      "entities": [
+        "The Odyssey (film)",
+        "Christopher Nolan",
+        "Zendaya"
+      ],
+      "angle": "Details on the cast joining Christopher Nolan's upcoming film 'The Odyssey'.",
+      "tmdbType": "movie",
+      "source": "gnews:Hollywood Life",
+      "sources": [
+        {
+          "outlet": "Hollywood Life",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5MaGVib0x2Z29Wd0N6WWZ6WUllaDcteFNWSThLd3QwU3YxMzEtMm5oaXpiRXY5NDcyaHFmWTFTcEp5bXJQWE9iTnVpckhYRUhlUjktZEpsRTVHYUZBUDN3UHlaY0V6MkxWZ01ac3N0U1hiOUHSAXhBVV95cUxQc1NiZkoxaE9fVVMtUFZTRHR2cElqUlJ0c3dWZFJPYTZxYmxBckVtUWRuNjVtRUlQc1NTdjF2UG5hcU5qZVZaUzN5Nlg4dDFDZXphUnNBSHpIQjR4Qm95eUNHZDVrUWFsUE40NHhaNll1cFJMWGEzR1U?oc=5",
+          "ageMin": 357,
+          "headline": "‘The Odyssey’ Movie Cast: Meet Each Star of Christopher Nolan’s Film - Hollywood Life",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMic0FVX3lxTE5MaGVib0x2Z29Wd0N6WWZ6WUllaDcteFNWSThLd3QwU3YxMzEtMm5oaXpiRXY5NDcyaHFmWTFTcEp5bXJQWE9iTnVpckhYRUhlUjktZEpsRTVHYUZBUDN3UHlaY0V6MkxWZ01ac3N0U1hiOUHSAXhBVV95cUxQc1NiZkoxaE9fVVMtUFZTRHR2cElqUlJ0c3dWZFJPYTZxYmxBckVtUWRuNjVtRUlQc1NTdjF2UG5hcU5qZVZ"
+        }
+      ],
+      "ageMin": 357,
+      "_cand": {
+        "key": "rss:-the-odyssey-movie-cast-meet-each-star-of-christopher-nolan-",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "Hollywood Life"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "Hollywood Life",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 103,
+      "signals": {
+        "recency": 9,
+        "corroboration": 8,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "radar": 30
+      },
+      "radarKind": "movie-in-theaters",
+      "tierClass": "A"
+    },
+    {
+      "id": "news-the-odyssey-cast-guide",
       "slug": "the-odyssey-cast-guide-who-s-playing-who-in-christopher-nolan-s-epic",
       "title": "The Odyssey Cast Guide: Who's Playing Who in Christopher Nolan's Epic",
       "contentType": "news",
@@ -13,14 +82,16 @@
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "the-odyssey-cast-guide-christopher-nolan",
+      "eventSlug": "the-odyssey-cast-guide",
       "primaryKeyword": "The Odyssey cast",
       "primaryEntity": "The Odyssey",
       "entities": [
-        "The Odyssey (2025 film)",
-        "Christopher Nolan"
+        "The Odyssey (film)",
+        "Christopher Nolan",
+        "Matt Damon",
+        "Anne Hathaway"
       ],
-      "angle": "Comprehensive guide to the star-studded cast of Christopher Nolan's upcoming film 'The Odyssey'.",
+      "angle": "A comprehensive guide to the cast and characters in Christopher Nolan's upcoming film 'The Odyssey'.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
@@ -28,12 +99,12 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/lists/the-odyssey-cast-characters-christopher-nolan/",
-          "ageMin": 1090,
+          "ageMin": 1152,
           "headline": "The Odyssey Cast Guide: Who s Playing Who in Christopher Nolan s Epic",
           "summary": "From Oscar, Emmy and Tony winners to frequent collaborators of the director, first-timers and even a rapper, The Hollywood Reporter breaks down all the stars and the characters they play in his adaptation of Homer's ancient Greek poem."
         }
       ],
-      "ageMin": 1090,
+      "ageMin": 1152,
       "_cand": {
         "key": "rss:the-odyssey-cast-guide-who-s-playing-who-in-christopher-nola",
         "popularity": 0,
@@ -72,38 +143,106 @@
       "tierClass": "A"
     },
     {
-      "id": "news-colman-domingo-talks-princess-tiana-movie",
-      "slug": "colman-domingo-in-talks-to-write-live-action-princess-tiana-movie-insp",
-      "title": "Colman Domingo in Talks to Write Live-Action Princess Tiana Movie Inspired by Princess and the Frog",
+      "id": "music-news-robert-smith-fifa-world-cup-halftime-show-slam",
+      "slug": "the-cure-s-robert-smith-slams-fifa-world-cup-final-halftime-show-just-",
+      "title": "The Cure's Robert Smith Slams FIFA World Cup Final Halftime Show: 'Just F Off'",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "robert-smith-fifa-world-cup-halftime-show-slam",
+      "primaryKeyword": "Robert Smith",
+      "primaryEntity": "Robert Smith",
+      "entities": [
+        "The Cure",
+        "FIFA World Cup"
+      ],
+      "angle": "The Cure's Robert Smith publicly criticized the announcement of a halftime show for the FIFA World Cup final.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/music/news/robert-smith-fifa-world-cup-halftime-show-1236815510/",
+          "ageMin": 15,
+          "headline": "The Cure s Robert Smith Slams FIFA s World Cup Final Halftime Show: Just F Off",
+          "summary": "Following the news that the FIFA World Cup final will feature its first halftime show in history, The Cure s Robert Smith took to social media to slam the announcement. AAAAAAAAAAAAAAAAAAGH… #Breadandcircuses #MUGWANK #pleasejustfuckoff, Smith wrote on The Cure s Instagram account. Curated by Coldplay s Chris Martin, performers will include Madonna, Justin Bieber, Shakira and BTS. In [ ]"
+        }
+      ],
+      "ageMin": 15,
+      "_cand": {
+        "key": "rss:the-cure-s-robert-smith-slams-fifa-s-world-cup-final-halftim",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 72,
+      "signals": {
+        "recency": 30,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 7,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-animated-hobbit-christopher-nolan-odyssey-comparison",
+      "slug": "1977-animated-the-hobbit-praised-as-a-timeless-hero-s-journey",
+      "title": "1977 Animated 'The Hobbit' Praised as a Timeless Hero's Journey",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "colman-domingo-talks-princess-tiana-movie",
-      "primaryKeyword": "colman domingo princess tiana",
-      "primaryEntity": "The Princess and the Frog",
+      "eventType": "other",
+      "sensitivity": "high",
+      "eventSlug": "animated-hobbit-christopher-nolan-odyssey-comparison",
+      "primaryKeyword": "The Hobbit animated",
+      "primaryEntity": "The Hobbit",
       "entities": [
-        "Princess Tiana",
-        "Colman Domingo"
+        "The Hobbit (1977 film)",
+        "Christopher Nolan",
+        "The Odyssey"
       ],
-      "angle": "Colman Domingo is in talks to write a live-action movie centered on Princess Tiana, inspired by Disney's 'The Princess and the Frog.'",
+      "angle": "The 1977 animated 'The Hobbit' is highlighted as a classic hero's journey, drawing a parallel with Christopher Nolan's 'The Odyssey'.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
         {
           "outlet": "THR",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/colman-domingo-live-action-tiana-princess-and-the-frog-1236651364/",
-          "ageMin": 1169,
-          "headline": "Colman Domingo in Talks to Write Live-Action Princess Tiana Movie Inspired by Princess and the Frog",
-          "summary": "No deals have been closed for the take on the 2009 Disney film 'Princess and the Frog.'"
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/john-kirby-daead-acting-coach-1236651456/",
+          "ageMin": 990,
+          "headline": "John Kirby, Acting Coach and Son of Actor Bruce Kirby, Dies at 75",
+          "summary": "The brother of Bruno Kirby, he died Wednesday, three years after being diagnosed with ALS."
         }
       ],
-      "ageMin": 1169,
+      "ageMin": 990,
       "_cand": {
-        "key": "rss:colman-domingo-in-talks-to-write-live-action-princess-tiana-",
+        "key": "rss:john-kirby-acting-coach-and-son-of-actor-bruce-kirby-dies-at",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -116,111 +255,47 @@
           "THR"
         ],
         "maxTier": 7,
-        "sensitivity": "normal",
+        "sensitivity": "high",
         "attribution": "THR",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 69,
+      "priority": 78,
       "signals": {
         "recency": 1,
         "corroboration": 12,
         "status": 18,
-        "type": 14,
+        "type": 5,
         "pop": 0,
         "breakout": 0,
-        "big": 24,
+        "big": 12,
         "trending": 0,
         "spice": 0,
-        "softTv": 0
+        "softTv": 0,
+        "radar": 30
       },
-      "tierClass": "B"
-    },
-    {
-      "id": "music-news-jelly-roll-san-quentin-hands-up-video",
-      "slug": "jelly-roll-goes-to-san-quentin-for-new-video-hands-up",
-      "title": "Jelly Roll Goes to San Quentin for New Video 'Hands Up'",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "high",
-      "tier": "popular",
-      "eventSlug": "jelly-roll-san-quentin-hands-up-video",
-      "primaryKeyword": "Jelly Roll",
-      "primaryEntity": "Jelly Roll",
-      "entities": [
-        "Hands Up"
-      ],
-      "angle": "Jelly Roll shoots his new music video 'Hands Up' at San Quentin State Prison.",
-      "tmdbType": "movie",
-      "source": "rss:Rolling Stone",
-      "sources": [
-        {
-          "outlet": "Rolling Stone",
-          "tier": 7,
-          "url": "https://www.rollingstone.com/music/music-news/jelly-roll-san-quentin-new-video-hands-up-1235595617/",
-          "ageMin": 41,
-          "headline": "Jelly Roll Goes to San Quentin for New Video Hands Up",
-          "summary": "\"Truly one of the most special things I’ve ever had the opportunity to do,\" singer says of shooting visual at same California prison that Johnny Cash performed at"
-        }
-      ],
-      "ageMin": 41,
-      "_cand": {
-        "key": "rss:jelly-roll-goes-to-san-quentin-for-new-video-hands-up",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Rolling Stone"
-        ],
-        "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "Rolling Stone",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 63,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
+      "radarKind": "movie-in-theaters",
       "tierClass": "S"
     },
     {
       "id": "news-god-of-war-tv-series-kratos-recast-ryan-hurst-injury",
-      "slug": "god-of-war-tv-series-recasts-kratos-role-after-ryan-hurst-injury",
-      "title": "God of War TV Series Recasts Kratos Role After Ryan Hurst Injury",
+      "slug": "god-of-war-series-to-recast-kratos-after-ryan-hurst-injury",
+      "title": "'God of War' Series to Recast Kratos After Ryan Hurst Injury",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
       "eventType": "casting",
-      "sensitivity": "normal",
+      "sensitivity": "high",
       "eventSlug": "god-of-war-tv-series-kratos-recast-ryan-hurst-injury",
-      "primaryKeyword": "god of war tv series",
+      "primaryKeyword": "God of War TV series Kratos",
       "primaryEntity": "God of War",
       "entities": [
         "God of War (TV series)",
         "Ryan Hurst"
       ],
-      "angle": "Ryan Hurst's injury necessitates a recast for the lead role in Prime Video's 'God of War'.",
+      "angle": "Prime Video's 'God of War' series will recast the role of Kratos following an injury to actor Ryan Hurst.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
@@ -228,12 +303,12 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/tv/tv-news/god-of-war-recast-kratos-ryan-hurst-stunt-injury-1236650848/",
-          "ageMin": 1754,
+          "ageMin": 1816,
           "headline": "God of War to Recast Kratos Role Following Ryan Hurst On-Set Injury",
           "summary": "Prime Video's original God of War tore a bicep muscle while performing a stunt."
         }
       ],
-      "ageMin": 1754,
+      "ageMin": 1816,
       "_cand": {
         "key": "rss:god-of-war-to-recast-kratos-role-following-ryan-hurst-on-set",
         "popularity": 0,
@@ -248,7 +323,7 @@
           "THR"
         ],
         "maxTier": 7,
-        "sensitivity": "normal",
+        "sensitivity": "high",
         "attribution": "THR",
         "framing": "attributed",
         "status": "DEVELOPING",
@@ -267,208 +342,12 @@
         "spice": 0,
         "softTv": 0
       },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-colman-domingo-tiana-movie-co-write",
-      "slug": "colman-domingo-in-talks-to-co-write-live-action-tiana-movie",
-      "title": "Colman Domingo in Talks to Co-Write Live-Action Tiana Movie",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "high",
-      "eventSlug": "colman-domingo-tiana-movie-co-write",
-      "primaryKeyword": "Tiana movie",
-      "primaryEntity": "Tiana (film)",
-      "entities": [
-        "Colman Domingo"
-      ],
-      "angle": "Colman Domingo is in talks to co-write a live-action movie based on Disney's 'The Princess and the Frog'.",
-      "tmdbType": "movie",
-      "source": "gnews:Deadline",
-      "sources": [
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNMUdHcXZ6TVRvZEItdTdXRGdIY183eldLSjZaX2RoZWh4VWNmYUxBMm5NTjVGa2F3b0JKajU3eXF4X0g3cWRudy13ZEhUVzVueExoSTdLTUV3MHJnOWtVSUctRkZEckU4VVZHYkJfbThiaFBFX0U3YVlqWG9qYTRpaTAzN1cwS1pWSm1GVklGaE0yeDg?oc=5",
-          "ageMin": 1215,
-          "headline": "Colman Domingo In Talks To Co-Write Live-Action Tiana Movie - Deadline",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMikwFBVV95cUxNMUdHcXZ6TVRvZEItdTdXRGdIY183eldLSjZaX2RoZWh4VWNmYUxBMm5NTjVGa2F3b0JKajU3eXF4X0g3cWRudy13ZEhUVzVueExoSTdLTUV3MHJnOWtVSUctRkZEckU4VVZHYkJfbThiaFBFX0U3YVlqWG9qYTRpaTAzN1cwS1pWSm1GVklGaE0yeDg?oc=5\" target=\"_blank\" Colman Domingo In Talks To Co"
-        }
-      ],
-      "ageMin": 1215,
-      "_cand": {
-        "key": "rss:colman-domingo-in-talks-to-co-write-live-action-tiana-movie-",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Deadline"
-        ],
-        "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "Deadline",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 69,
-      "signals": {
-        "recency": 1,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
       "tierClass": "S"
     },
     {
-      "id": "news-peacock-confirms-biggest-scripted-launch-8-part-series",
-      "slug": "peacock-confirms-biggest-scripted-launch-ever-with-new-8-part-series",
-      "title": "Peacock Confirms Biggest Scripted Launch Ever with New 8-Part Series",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "peacock-confirms-biggest-scripted-launch-8-part-series",
-      "primaryKeyword": "Peacock biggest scripted launch",
-      "primaryEntity": "Peacock",
-      "entities": [
-        "8-part series"
-      ],
-      "angle": "Peacock confirms its largest-ever scripted series launch with an upcoming 8-part show.",
-      "tmdbType": "movie",
-      "source": "gnews:Collider",
-      "sources": [
-        {
-          "outlet": "Collider",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNQlJvY1paWDg3YUt4b3dYOFpKLXVkNTlqaF9Jb1pjY2F0RGJDUldlS2NtaHE3WXpTSDA5VXlQUUY2anNOSTdhWU1tbVNoeTlHdXY3aV9FSkZEZkxQdDJwXzJwdTdyUGVDZFd4MVIyX0w5dC1tQ2FBQlVTRTNFVVYzUA?oc=5",
-          "ageMin": 256,
-          "headline": "Peacock Officially Confirms Its Biggest Scripted Launch of All Time Is This 8-Part Series - Collider",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMigAFBVV95cUxNQlJvY1paWDg3YUt4b3dYOFpKLXVkNTlqaF9Jb1pjY2F0RGJDUldlS2NtaHE3WXpTSDA5VXlQUUY2anNOSTdhWU1tbVNoeTlHdXY3aV9FSkZEZkxQdDJwXzJwdTdyUGVDZFd4MVIyX0w5dC1tQ2FBQlVTRTNFVVYzUA?oc=5\" target=\"_blank\" Peacock Officially Confirms Its Biggest Scripted Launc"
-        }
-      ],
-      "ageMin": 256,
-      "_cand": {
-        "key": "rss:peacock-officially-confirms-its-biggest-scripted-launch-of-a",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "Collider"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "Collider",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 62,
-      "signals": {
-        "recency": 9,
-        "corroboration": 8,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-brie-larson-samuel-l-jackson-fantasy-movie-netflix",
-      "slug": "brie-larson-s-fantasy-movie-with-samuel-l-jackson-is-a-quirky-good-tim",
-      "title": "Brie Larson's Fantasy Movie With Samuel L. Jackson Is A Quirky Good Time On Netflix",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "review",
-      "sensitivity": "normal",
-      "eventSlug": "brie-larson-samuel-l-jackson-fantasy-movie-netflix",
-      "primaryKeyword": "Brie Larson fantasy movie",
-      "primaryEntity": "Brie Larson",
-      "entities": [
-        "Samuel L. Jackson",
-        "Netflix"
-      ],
-      "angle": "A review highlights a quirky fantasy movie starring Brie Larson and Samuel L. Jackson now available on Netflix.",
-      "tmdbType": "movie",
-      "source": "gnews:SlashFilm",
-      "sources": [
-        {
-          "outlet": "SlashFilm",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNSHI0WVV3bUoxeW1Ed2dNbk5jT21zU3llb1ZjOVNOV0ozamdxdUZkOUllY2ZmYjZ1cDItNXpRaXZPX0FxWVc1UXU2am13d2RRbEpWekZFNGhYRmt3VkhEUzRvMzRvdmJneVVHY2Z0dnZ5SkQyRk1CZExBX3NMYzk1TXNLdkE5LVVvdUdhMkVia3pBbmNuS3hMaGdNblV4M2ow?oc=5",
-          "ageMin": 331,
-          "headline": "Brie Larson's Fantasy Movie With Samuel L. Jackson Is A Quirky Good Time On Netflix - SlashFilm",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMioAFBVV95cUxNSHI0WVV3bUoxeW1Ed2dNbk5jT21zU3llb1ZjOVNOV0ozamdxdUZkOUllY2ZmYjZ1cDItNXpRaXZPX0FxWVc1UXU2am13d2RRbEpWekZFNGhYRmt3VkhEUzRvMzRvdmJneVVHY2Z0dnZ5SkQyRk1CZExBX3NMYzk1TXNLdkE5LVVvdUdhMkVia3pBbmNuS3hMaGdNblV4M2ow?oc=5\" target=\"_blank\" Brie Larson'"
-        }
-      ],
-      "ageMin": 331,
-      "_cand": {
-        "key": "rss:brie-larson-s-fantasy-movie-with-samuel-l-jackson-is-a-quirk",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "SlashFilm"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "SlashFilm",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 68,
-      "signals": {
-        "recency": 9,
-        "corroboration": 8,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
       "id": "news-vampire-lestat-episode-6-twists",
-      "slug": "the-vampire-lestat-creator-and-stars-unpack-shocking-episode-6-twists-",
-      "title": "‘The Vampire Lestat’ Creator and Stars Unpack Shocking Episode 6 Twists Ahead of Finale",
+      "slug": "the-vampire-lestat-creator-and-stars-unpack-those-shocking-episode-6-t",
+      "title": "‘The Vampire Lestat’ Creator and Stars Unpack Those Shocking Episode 6 Twists and Reveals Ahead of the Finale",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
@@ -476,12 +355,12 @@
       "eventType": "other",
       "sensitivity": "normal",
       "eventSlug": "vampire-lestat-episode-6-twists",
-      "primaryKeyword": "vampire lestat finale",
+      "primaryKeyword": "the vampire lestat episode 6",
       "primaryEntity": "The Vampire Lestat",
       "entities": [
         "Jacob Anderson"
       ],
-      "angle": "Creator and stars unpack shocking twists in 'The Vampire Lestat' ahead of the finale.",
+      "angle": "Creator and stars of 'The Vampire Lestat' unpack the shocking twists from episode 6 ahead of the season finale.",
       "tmdbType": "movie",
       "source": "rss:TheWrap",
       "sources": [
@@ -489,12 +368,12 @@
           "outlet": "TheWrap",
           "tier": 7,
           "url": "https://www.thewrap.com/industry-news/business/the-vampire-lestat-episode-6-explained-claudia-seance/",
-          "ageMin": 61,
+          "ageMin": 122,
           "headline": "‘The Vampire Lestat’ Creator and Stars Unpack Those Shocking Episode 6 Twists and Reveals Ahead of the Finale",
           "summary": "\"You're going to be shocked, to say the least, coming out of that experience,\" Jacob Anderson tells TheWrap about Louis' wild night The post ‘The Vampire Lestat’ Creator and Stars Unpack Those Shocking Episode 6 Twists and Reveals Ahead of the Finale appeared first on TheWrap ."
         }
       ],
-      "ageMin": 61,
+      "ageMin": 122,
       "_cand": {
         "key": "rss:-the-vampire-lestat-creator-and-stars-unpack-those-shocking-",
         "popularity": 0,
@@ -531,7 +410,73 @@
       "tierClass": "B"
     },
     {
-      "id": "news-heartstopper-tv-series-other",
+      "id": "news-colman-domingo-tiana-movie-script",
+      "slug": "colman-domingo-in-talks-to-write-live-action-princess-tiana-movie-insp",
+      "title": "Colman Domingo in Talks to Write Live-Action Princess Tiana Movie Inspired by Princess and the Frog",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "colman-domingo-tiana-movie-script",
+      "primaryKeyword": "tiana movie",
+      "primaryEntity": "The Princess and the Frog",
+      "entities": [
+        "Princess Tiana",
+        "Colman Domingo"
+      ],
+      "angle": "Colman Domingo is in talks to write a live-action movie centered on Princess Tiana.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/colman-domingo-live-action-tiana-princess-and-the-frog-1236651364/",
+          "ageMin": 1230,
+          "headline": "Colman Domingo in Talks to Write Live-Action Princess Tiana Movie Inspired by Princess and the Frog",
+          "summary": "No deals have been closed for the take on the 2009 Disney film 'Princess and the Frog.'"
+        }
+      ],
+      "ageMin": 1230,
+      "_cand": {
+        "key": "rss:colman-domingo-in-talks-to-write-live-action-princess-tiana-",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 69,
+      "signals": {
+        "recency": 1,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-heartstopper-forever-finale-discussion",
       "slug": "heartstopper-forever-director-writer-and-stars-joe-locke-and-kit-conno",
       "title": "‘Heartstopper Forever’ Director, Writer and Stars Joe Locke and Kit Connor on the Finale: “It Connects the Whole Heartstopper Gang”",
       "contentType": "news",
@@ -540,15 +485,16 @@
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "heartstopper-tv-series-other",
-      "primaryKeyword": "heartstopper finale",
-      "primaryEntity": "Heartstopper (TV series)",
+      "eventSlug": "heartstopper-forever-finale-discussion",
+      "primaryKeyword": "Heartstopper finale",
+      "primaryEntity": "Heartstopper",
       "entities": [
-        "Alice Oseman",
         "Joe Locke",
-        "Kit Connor"
+        "Kit Connor",
+        "Alice Oseman",
+        "Wash Westmoreland"
       ],
-      "angle": "Stars and creator of 'Heartstopper' discuss the finale's adaptation from book to screen and its emotional impact.",
+      "angle": "Stars Joe Locke and Kit Connor, creator Alice Oseman, and director Wash Westmoreland break down the finale of 'Heartstopper Forever,' discussing changes from the book and character endings.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
@@ -556,12 +502,12 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/movies/movie-features/heartstopper-forever-ending-kit-connor-joe-lock-interview-1236647039/",
-          "ageMin": 181,
+          "ageMin": 242,
           "headline": "‘Heartstopper Forever’ Director, Writer and Stars Joe Locke and Kit Connor on the Finale: “It Connects the Whole Heartstopper Gang”",
           "summary": "Stars Connor and Locke, creator Alice Oseman and director Wash Westmoreland break down the film’s biggest change from book to screen, alongside the intimacy, break-ups, and ambiguous endings from the final chapter."
         }
       ],
-      "ageMin": 181,
+      "ageMin": 242,
       "_cand": {
         "key": "rss:-heartstopper-forever-director-writer-and-stars-joe-locke-an",
         "popularity": 0,
@@ -600,74 +546,74 @@
       "tierClass": "A"
     },
     {
-      "id": "news-backrooms-other",
-      "slug": "kane-parsons-curry-barker-and-the-multi-million-dollar-battle-for-gen-",
-      "title": "Kane Parsons, Curry Barker and the Multi-Million Dollar Battle for Gen Z Eyeballs",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
+      "id": "music-news-tinashe-popstar-album-crash-out-single",
+      "slug": "tinashe-announces-new-album-popstar-and-shares-defiant-single-crash-ou",
+      "title": "Tinashe Announces New Album ‘Popstar’ and Shares Defiant Single ‘Crash Out’",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
       "subcategory": "news",
-      "eventType": "other",
+      "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "backrooms-other",
-      "primaryKeyword": "viral shorts bidding war",
-      "primaryEntity": "Backrooms",
+      "tier": "popular",
+      "eventSlug": "tinashe-popstar-album-crash-out-single",
+      "primaryKeyword": "Tinashe new album",
+      "primaryEntity": "Tinashe",
       "entities": [
-        "Obsession"
+        "Popstar",
+        "Crash Out"
       ],
-      "angle": "Young filmmakers and viral shorts are sparking multi-studio bidding wars following the success of projects like 'Backrooms'.",
+      "angle": "Tinashe announces new album 'Popstar' and releases single 'Crash Out'.",
       "tmdbType": "movie",
-      "source": "rss:THR",
+      "source": "gnews:NME",
       "sources": [
         {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/kane-parsons-curry-barker-and-the-multi-million-dollar-battle-for-gen-z-eyeballs-1236651171/",
-          "ageMin": 1331,
-          "headline": "Kane Parsons, Curry Barker and the Multi-Million Dollar Battle for Gen Z Eyeballs",
-          "summary": "In the months since the successes of ‘Backrooms' and ‘Obsession’, young filmmakers, memes and viral shorts have been the subject of multi-studio bidding wars."
+          "outlet": "NME",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQaEg5aGNTdXg1UDZlMUc4Rjc1M2h3YTByWnhmVjk3X1ZFTVpYcTBBWmozOWFteVN0aVlsclVJdWxfLXRMOGRRdDV6NkVpRFRaQlMzd1ptUEhURXVQM3pzc0ZhbjdCQjd0alVJa0FHcTNJbFBYMlpFQkMzdXJmLXpxS0Q3UzRNanpHUTVVM1Ztem9HZzFjQjBxczVPZmFZOU5PMm9ETGJoQnQzUGtaOW9r?oc=5",
+          "ageMin": 174,
+          "headline": "Tinashe announces new album ‘Popstar’ and shares defiant single ‘Crash Out’ - NME",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxQaEg5aGNTdXg1UDZlMUc4Rjc1M2h3YTByWnhmVjk3X1ZFTVpYcTBBWmozOWFteVN0aVlsclVJdWxfLXRMOGRRdDV6NkVpRFRaQlMzd1ptUEhURXVQM3pzc0ZhbjdCQjd0alVJa0FHcTNJbFBYMlpFQkMzdXJmLXpxS0Q3UzRNanpHUTVVM1Ztem9HZzFjQjBxczVPZmFZOU5PMm9ETGJoQnQzUGtaOW9r?oc=5\" target=\""
         }
       ],
-      "ageMin": 1331,
+      "ageMin": 174,
       "_cand": {
-        "key": "rss:kane-parsons-curry-barker-and-the-multi-million-dollar-battl",
+        "key": "rss:tinashe-announces-new-album-popstar-and-shares-defiant-singl",
         "popularity": 0,
-        "kind": "rss-news"
+        "kind": "gnews"
       },
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
+        "tier1Count": 0,
+        "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "THR"
+          "NME"
         ],
-        "maxTier": 7,
+        "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "THR",
+        "attribution": "NME",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 66,
+      "priority": 51,
       "signals": {
-        "recency": 1,
-        "corroboration": 12,
+        "recency": 16,
+        "corroboration": 8,
         "status": 18,
-        "type": 5,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
-        "big": 12,
+        "big": 0,
         "trending": 0,
         "spice": 0,
-        "softTv": 0,
-        "radar": 18
+        "softTv": 0
       },
-      "radarKind": "movie-in-theaters",
-      "tierClass": "A"
+      "tierClass": "C"
     },
     {
-      "id": "news-danny-boyle-ink-sells-to-netflix",
+      "id": "news-danny-boyle-ink-sale-netflix-venice-premiere",
       "slug": "danny-boyle-s-ink-sells-to-netflix-ahead-of-venice-premiere",
       "title": "Danny Boyle's 'Ink' Sells to Netflix Ahead of Venice Premiere",
       "contentType": "news",
@@ -676,9 +622,9 @@
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "danny-boyle-ink-sells-to-netflix",
+      "eventSlug": "danny-boyle-ink-sale-netflix-venice-premiere",
       "primaryKeyword": "Danny Boyle Ink",
-      "primaryEntity": "Ink (2024 film)",
+      "primaryEntity": "Ink (film)",
       "entities": [
         "Danny Boyle",
         "Netflix",
@@ -692,12 +638,12 @@
           "outlet": "IndieWire",
           "tier": 7,
           "url": "https://www.indiewire.com/news/breaking-news/danny-boyle-ink-netflix-venice-sale-1235206128/",
-          "ageMin": 1250,
+          "ageMin": 1312,
           "headline": "Danny Boyle s Ink Sells to Netflix in First Big Sale (Way) Ahead of Venice Premiere",
           "summary": "The film about Larry Lamb, Rupert Murdoch, and the birth of The Sun tabloid is the opening night film at the Biennale."
         }
       ],
-      "ageMin": 1250,
+      "ageMin": 1312,
       "_cand": {
         "key": "rss:danny-boyle-s-ink-sells-to-netflix-in-first-big-sale-way-ahe",
         "popularity": 0,
@@ -734,170 +680,40 @@
       "tierClass": "B"
     },
     {
-      "id": "news-jim-parsons-big-bang-theory-miserable",
-      "slug": "jim-parsons-was-miserable-during-peak-big-bang-theory-popularity-i-wou",
-      "title": "Jim Parsons Was Miserable During Peak Big Bang Theory Popularity: I Wouldn’t Do That Again and For Any Amount of Money",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "jim-parsons-big-bang-theory-miserable",
-      "primaryKeyword": "jim parsons big bang theory",
-      "primaryEntity": "The Big Bang Theory",
-      "entities": [
-        "Jim Parsons"
-      ],
-      "angle": "Jim Parsons reveals he was miserable during the peak popularity of 'The Big Bang Theory'.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/tv/news/jim-parsons-miserable-during-the-big-bang-theory-fame-1236815461/",
-          "ageMin": 144,
-          "headline": "Jim Parsons was Miserable During Peak Big Bang Theory Popularity: I Wouldn’t Do That Again and For Any Amount of Money",
-          "summary": "Jim Parsons recently told the “All Out with Jon Dean” podcast (via People) that he was “miserable” during the height of his long-running TBS sitcom “The Big Bang Theory.” “I look back now and realize that there were many ways, at some of the best moments of my life, I was miserable,” Parsons said. “I [ ]"
-        }
-      ],
-      "ageMin": 144,
-      "_cand": {
-        "key": "rss:jim-parsons-was-miserable-during-peak-big-bang-theory-popula",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 57,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 6,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-larry-david-other",
-      "slug": "larry-david-jabs-anti-vaccine-activism-of-cheryl-hines-husband-in-late",
-      "title": "Larry David Jabs Anti-Vaccine Activism Of Cheryl Hines Husband In Latest Life, Larry And The Pursuit Of Unhappiness",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "larry-david-other",
-      "primaryKeyword": "larry david cheryl hines",
-      "primaryEntity": "Larry David: Curb Your Enthusiasm",
-      "entities": [
-        "Larry David",
-        "Cheryl Hines",
-        "Curb Your Enthusiasm"
-      ],
-      "angle": "Larry David addresses the public statements of Cheryl Hines' husband in a new episode of his mockumentary series.",
-      "tmdbType": "movie",
-      "source": "rss:Deadline",
-      "sources": [
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/larry-david-robert-kennedy-jr-1236997510/",
-          "ageMin": 180,
-          "headline": "Larry David Jabs Anti-Vaccine Activism Of Cheryl Hines Husband In Latest Life, Larry And The Pursuit Of Unhappiness",
-          "summary": "Larry David squares off after a fashion against the high-profile, if often misinformed, husband of his former Curb Your Enthusiasm costar Cheryl Hines in the latest episode of HBO Max s mock-history comedy series Life, Larry and the Pursuit of Unhappiness. The target of his trademark ire? Robert F. Kennedy Jr. In the latest [ ]"
-        }
-      ],
-      "ageMin": 180,
-      "_cand": {
-        "key": "rss:larry-david-jabs-anti-vaccine-activism-of-cheryl-hines-husba",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Deadline"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Deadline",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 57,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 6,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-harry-potter-drone-show-canceled-unsafe-air-quality",
-      "slug": "harry-potter-drone-show-canceled-last-minute-due-to-unsafe-air-quality",
-      "title": "Harry Potter Drone Show Canceled Last Minute Due to Unsafe Air Quality",
+      "id": "news-hungary-production-incentive-update",
+      "slug": "hungary-location-for-f1-the-movie-dune-the-brutalist-removes-break-on-",
+      "title": "Hungary, Location for ‘F1: The Movie,’ ‘Dune,’ ‘The Brutalist,’ Removes Break on New Registrations for Production Incentive",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
-      "eventType": "cancellation",
+      "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "harry-potter-drone-show-canceled-unsafe-air-quality",
-      "primaryKeyword": "harry potter drone show canceled",
-      "primaryEntity": "Harry Potter and the Philosopher's Stone",
+      "eventSlug": "hungary-production-incentive-update",
+      "primaryKeyword": "film production incentive Hungary",
+      "primaryEntity": "Hungary",
       "entities": [
-        "Harry Potter",
-        "Subaru Park"
+        "F1",
+        "F1: The Movie",
+        "Dune",
+        "The Brutalist"
       ],
-      "angle": "A planned Harry Potter-themed drone show at Subaru Park was canceled due to unsafe air quality.",
+      "angle": "Hungary, a known filming location for major productions, has removed a break on new registrations for its production incentive program.",
       "tmdbType": "movie",
-      "source": "gnews:6abc Philadelphia",
+      "source": "gnews:IMDb",
       "sources": [
         {
-          "outlet": "6abc Philadelphia",
+          "outlet": "IMDb",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOSzBPWkRUTU5ad0tGMDhvaUl1SWh1eWh6bDViT01WM0JVODA3UzkyNTdYYTlncG9tSE12VER3MnRZNkl4ZkRXaHZBOE4ya0V2ODZKRm4tc05LaDVsZTR2eTFCRk5ZV2ZYWUc2V3ktc1E4LXN0QXpFS1Rxd0RPZ2tkNlhfb2dZZXl3cEV3cmFOcTVScTBtbHk5Y1FIR1h4dXI3R2FkM09GOW16NWpudi15TtIBtgFBVV95cUxOaWpGMFdKcWVpY3VrbkM4eTZFWjN6TnlReHh5RVI5SE1KZll0OHUzUEs1dk5kNkE4V1k4T1NEMmdJT3hvcmw3SEpNZWRjQWVDMXBWMThOMndMT0g4eVJtQ3JQTjcwa084WWpzSEx2MHhNYXhaalJDTXhCdl9LdFl4cHgtb0k5dS1QT01WWm16aDhtdl9zcDI3bGppcWZTWXhBSUEybzFySG5Ba0JoeTlGUWJzWEpOUQ?oc=5",
-          "ageMin": 1727,
-          "headline": "Harry Potter drone show at Subaru Park canceled last minute due to unsafe air quality - 6abc Philadelphia",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxOSzBPWkRUTU5ad0tGMDhvaUl1SWh1eWh6bDViT01WM0JVODA3UzkyNTdYYTlncG9tSE12VER3MnRZNkl4ZkRXaHZBOE4ya0V2ODZKRm4tc05LaDVsZTR2eTFCRk5ZV2ZYWUc2V3ktc1E4LXN0QXpFS1Rxd0RPZ2tkNlhfb2dZZXl3cEV3cmFOcTVScTBtbHk5Y1FIR1h4dXI3R2FkM09GOW16NWpudi15TtIBtgFBVV95cUx"
+          "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9iNXZydk9qeXhNaHZLSHNjYTFrSEx0SGZ4aHdHYjFnaGh1VU5CcDRBaXVHV3RnT1hzMDBqWkVFYVV6WVI3Q2twM0lrcDFVdlZxRU1kWHVBWFoyaXVpdWtLdUpZSUI?oc=5",
+          "ageMin": 407,
+          "headline": "Hungary, Location for ‘F1: The Movie,’ ‘Dune,’ ‘The Brutalist,’ Removes Break on New Registrations for Production Incentive - IMDb",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiZEFVX3lxTE9iNXZydk9qeXhNaHZLSHNjYTFrSEx0SGZ4aHdHYjFnaGh1VU5CcDRBaXVHV3RnT1hzMDBqWkVFYVV6WVI3Q2twM0lrcDFVdlZxRU1kWHVBWFoyaXVpdWtLdUpZSUI?oc=5\" target=\"_blank\" Hungary, Location for ‘F1: The Movie,’ ‘Dune,’ ‘The Brutalist,’ Removes Break on New Registra"
         }
       ],
-      "ageMin": 1727,
+      "ageMin": 407,
       "_cand": {
-        "key": "rss:harry-potter-drone-show-at-subaru-park-canceled-last-minute-",
+        "key": "rss:hungary-location-for-f1-the-movie-dune-the-brutalist-removes",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -907,21 +723,21 @@
         "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "6abc Philadelphia"
+          "IMDb"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "6abc Philadelphia",
+        "attribution": "IMDb",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 62,
+      "priority": 63,
       "signals": {
-        "recency": 1,
+        "recency": 4,
         "corroboration": 8,
         "status": 18,
-        "type": 11,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
         "big": 24,
@@ -932,37 +748,37 @@
       "tierClass": "B"
     },
     {
-      "id": "news-eliza-dushku-sci-fi-tv-series-canceled",
-      "slug": "after-buffy-eliza-dushku-starred-in-this-sci-fi-tv-series-that-was-can",
-      "title": "After Buffy, Eliza Dushku Starred In This Sci-Fi TV Series That Was Canceled Way Too Soon",
+      "id": "news-millie-bobby-brown-birth",
+      "slug": "millie-bobby-brown-gushes-over-daughter-in-sweet-clip",
+      "title": "Millie Bobby Brown Gushes Over Daughter in Sweet Clip",
       "contentType": "news",
       "formatTag": "news",
-      "category": "tv",
+      "category": "celebrity",
       "subcategory": "news",
-      "eventType": "cancellation",
+      "eventType": "birth",
       "sensitivity": "normal",
-      "eventSlug": "eliza-dushku-sci-fi-tv-series-canceled",
-      "primaryKeyword": "eliza dushku sci-fi series canceled",
-      "primaryEntity": "Eliza Dushku",
+      "eventSlug": "millie-bobby-brown-birth",
+      "primaryKeyword": "Millie Bobby Brown daughter",
+      "primaryEntity": "Millie Bobby Brown",
       "entities": [
-        "Buffy the Vampire Slayer"
+        "Heavenly Joy Brown"
       ],
-      "angle": "A sci-fi TV series starring Eliza Dushku, following her role in 'Buffy', was canceled prematurely.",
+      "angle": "Millie Bobby Brown shares a sweet moment with her daughter.",
       "tmdbType": "movie",
-      "source": "gnews:TVLine",
+      "source": "gnews:DualShockers",
       "sources": [
         {
-          "outlet": "TVLine",
+          "outlet": "DualShockers",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOMEJtaFVIRzA3MnJsNXRLOGNkcUdMdTFwZWFqUTUzbVNjeWxfckdOYW42REhtMEsxT2I0STREa3JQMlctOTVjZGV1OE10RUFpV1RqQW16U2ZBRUNvLWd2MFE0bnc0SEtqazhERi00Y0k3TEVDV3MyWEctQTFVaENmYkI2R0R5X0NGbkctYll2aHZ1cjZPQ2w3Z0lnTGgyUQ?oc=5",
-          "ageMin": 2779,
-          "headline": "After Buffy, Eliza Dushku Starred In This Sci-Fi TV Series That Was Canceled Way Too Soon - TVLine",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxOMEJtaFVIRzA3MnJsNXRLOGNkcUdMdTFwZWFqUTUzbVNjeWxfckdOYW42REhtMEsxT2I0STREa3JQMlctOTVjZGV1OE10RUFpV1RqQW16U2ZBRUNvLWd2MFE0bnc0SEtqazhERi00Y0k3TEVDV3MyWEctQTFVaENmYkI2R0R5X0NGbkctYll2aHZ1cjZPQ2w3Z0lnTGgyUQ?oc=5\" target=\"_blank\" After Buffy, E"
+          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOanpHcm1vaUg2dDFFakotZktaZmNHZlpBR2xXTUtsOWdKV2FuQTJpRXRpaFpySnJ0NnpxLXFfdVQ1ZExFM0JqTE5fVGJmTjJ5bzhCeVZ1ME50aXlBV2NzRTRIOVlpQmZLdG1IbFZDeFllYlh5Y0JWMTNmS1d0WUx6YVhHX3VtVjdhdmsyaWR6RGlnT0p0TEE?oc=5",
+          "ageMin": 59,
+          "headline": "Call of Duty Movie Director Reveals Modern Warfare Connection - DualShockers",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMilgFBVV95cUxOanpHcm1vaUg2dDFFakotZktaZmNHZlpBR2xXTUtsOWdKV2FuQTJpRXRpaFpySnJ0NnpxLXFfdVQ1ZExFM0JqTE5fVGJmTjJ5bzhCeVZ1ME50aXlBV2NzRTRIOVlpQmZLdG1IbFZDeFllYlh5Y0JWMTNmS1d0WUx6YVhHX3VtVjdhdmsyaWR6RGlnT0p0TEE?oc=5\" target=\"_blank\" Call of Duty Movie Direct"
         }
       ],
-      "ageMin": 2779,
+      "ageMin": 59,
       "_cand": {
-        "key": "rss:after-buffy-eliza-dushku-starred-in-this-sci-fi-tv-series-th",
+        "key": "rss:call-of-duty-movie-director-reveals-modern-warfare-connectio",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -972,24 +788,24 @@
         "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "TVLine"
+          "DualShockers"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "TVLine",
+        "attribution": "DualShockers",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
       "priority": 56,
       "signals": {
-        "recency": 1,
+        "recency": 24,
         "corroboration": 8,
         "status": 18,
-        "type": 11,
+        "type": 6,
         "pop": 0,
         "breakout": 0,
-        "big": 18,
+        "big": 0,
         "trending": 0,
         "spice": 0,
         "softTv": 0
@@ -997,59 +813,60 @@
       "tierClass": "C"
     },
     {
-      "id": "news-jamie-lee-curtis-throwback-photos-janet-leigh",
-      "slug": "throwback-pics-of-jamie-lee-curtis-with-her-old-hollywood-star-mom-jan",
-      "title": "Throwback Pics Of Jamie Lee Curtis With Her Old Hollywood Star Mom Janet Leigh",
+      "id": "news-shania-twain-dive-bar-show-new-album",
+      "slug": "shania-twain-finally-plays-her-dream-gig-a-tiny-dive-bar-in-toronto",
+      "title": "Shania Twain Finally Plays Her Dream Gig: A Tiny Dive Bar in Toronto",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "jamie-lee-curtis-throwback-photos-janet-leigh",
-      "primaryKeyword": "Jamie Lee Curtis",
-      "primaryEntity": "Jamie Lee Curtis",
+      "tier": "popular",
+      "eventSlug": "shania-twain-dive-bar-show-new-album",
+      "primaryKeyword": "shania twain new album",
+      "primaryEntity": "Shania Twain",
       "entities": [
-        "Janet Leigh"
+        "Little Miss Twain (album)"
       ],
-      "angle": "Throwback photos emerge of Jamie Lee Curtis alongside her late mother, Janet Leigh.",
+      "angle": "Shania Twain fulfills a dream by performing at a small Toronto dive bar, coinciding with the release of her new album.",
       "tmdbType": "movie",
-      "source": "gnews:glam.com",
+      "source": "rss:Rolling Stone",
       "sources": [
         {
-          "outlet": "glam.com",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQUWh1V1ppei1SaHVUY1psLXkxaGFibjdVSXd5bXMxVU9RZDBEbDU4QWZvbWFfUnRtNzk1QjJrN2RubVdCd1FtcWEtR3lEVVJOSVpJWGl1WmRmMVhKcFQ1MGt1TjhfS25UVUtOVUtqU0NFN3JScWd4RWFlZTJWQmV0dS1UcWdUc1ZUSmVTU3kxWGE5VThMbURSb1Y5ME8?oc=5",
-          "ageMin": 31,
-          "headline": "Throwback Pics Of Jamie Lee Curtis Her Old Hollywood Star Mom Janet Leigh - glam.com",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMinAFBVV95cUxQUWh1V1ppei1SaHVUY1psLXkxaGFibjdVSXd5bXMxVU9RZDBEbDU4QWZvbWFfUnRtNzk1QjJrN2RubVdCd1FtcWEtR3lEVVJOSVpJWGl1WmRmMVhKcFQ1MGt1TjhfS25UVUtOVUtqU0NFN3JScWd4RWFlZTJWQmV0dS1UcWdUc1ZUSmVTU3kxWGE5VThMbURSb1Y5ME8?oc=5\" target=\"_blank\" Throwback Pics Of"
+          "outlet": "Rolling Stone",
+          "tier": 7,
+          "url": "https://www.rollingstone.com/music/music-country/shania-twain-surprise-concert-horseshoe-tavern-recap-1235595620/",
+          "ageMin": 96,
+          "headline": "Shania Twain Finally Plays Her Dream Gig: A Tiny Dive Bar in Toronto",
+          "summary": "The superstar held court at the Horseshoe Tavern on Friday night, delivering a set that mixed her hits with the autobiographical tracks off new album Little Miss Twain"
         }
       ],
-      "ageMin": 31,
+      "ageMin": 96,
       "_cand": {
-        "key": "rss:throwback-pics-of-jamie-lee-curtis-her-old-hollywood-star-mo",
+        "key": "rss:shania-twain-finally-plays-her-dream-gig-a-tiny-dive-bar-in-",
         "popularity": 0,
-        "kind": "gnews"
+        "kind": "rss-news"
       },
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
+        "tier1Count": 1,
+        "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "glam.com"
+          "Rolling Stone"
         ],
-        "maxTier": 5,
+        "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "glam.com",
+        "attribution": "Rolling Stone",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 55,
+      "priority": 51,
       "signals": {
-        "recency": 24,
-        "corroboration": 8,
+        "recency": 16,
+        "corroboration": 12,
         "status": 18,
         "type": 5,
         "pop": 0,
