@@ -716,9 +716,11 @@
    "key": "the-boss-baby-netflix-top10-w2026-07-12|NETFLIX-TOP10",
    "eventSlug": "the-boss-baby-netflix-top10-w2026-07-12",
    "form": "NETFLIX-TOP10",
-   "reason": "words 142 < 180 (owner-set ~200-word minimum) | soft-floor engagement 4 < 5",
-   "tries": 2,
-   "at": "2026-07-18T02:06:57.557Z"
+   "reason": "words 176 < 180 (owner-set ~200-word minimum)",
+   "tries": 3,
+   "at": "2026-07-18T17:02:48.501Z",
+   "dead": true,
+   "expiresAt": "2026-07-21T17:02:48.501Z"
   },
   {
    "key": "golden-kamuy-3-the-abarishi-prison-raid-ev-streaming-arrival|NOW-STREAMING",
@@ -823,14 +825,14 @@
    "at": "2026-07-18T16:37:42.439Z"
   }
  ],
- "zeroStreak": 2,
+ "zeroStreak": 3,
  "daySpend": {
   "laDay": "2026-07-18",
-  "usd": 0.12166
+  "usd": 0.14038
  },
  "pace": {
-  "tokens": 3.1293082222222224,
-  "lastMs": 1784392326502
+  "tokens": 3.7959505,
+  "lastMs": 1784394040725
  },
  "lastAuditDay": "2026-07-18",
  "attempts": {
@@ -852,7 +854,8 @@
    "the abandons": 1,
    "voicemails for isabelle": 1,
    "chained": 1,
-   "potential": 1
+   "potential": 1,
+   "the boss baby": 1
   }
  }
 }

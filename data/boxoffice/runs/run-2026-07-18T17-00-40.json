@@ -1,0 +1,104 @@
+{
+ "runId": "run-2026-07-18T17-00-40",
+ "mode": "live",
+ "startedAt": "2026-07-18T17:00:40.725Z",
+ "films": 8,
+ "published": [],
+ "held": [
+  {
+   "tag": "the-boss-baby-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "words 176 < 180 (owner-set ~200-word minimum)",
+   "score": 60
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "enola-holmes-3-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "voicemails-for-isabelle-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "the-doorman-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "little-brother-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "rust-creek-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "f9-the-fast-saga-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "old-henry-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  }
+ ],
+ "blocked": [],
+ "paced": {
+  "tokens": 3.8,
+  "behind": true,
+  "expected": 7,
+  "allow": 2
+ },
+ "zeroStreak": 3,
+ "daySpend": {
+  "laDay": "2026-07-18",
+  "usd": 0.14038
+ },
+ "finishedAt": "2026-07-18T17:02:48.504Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3547,
+    "out": 376,
+    "usd": 0.00018,
+    "ms": 16867
+   },
+   "gatherer": {
+    "calls": 1,
+    "errors": 0,
+    "in": 2114,
+    "out": 151,
+    "usd": 0.00027,
+    "ms": 1184
+   },
+   "synthesizer": {
+    "calls": 1,
+    "errors": 0,
+    "in": 549,
+    "out": 648,
+    "usd": 0.00017,
+    "ms": 8255
+   },
+   "writer": {
+    "calls": 2,
+    "errors": 0,
+    "in": 6115,
+    "out": 2101,
+    "usd": 0.00581,
+    "ms": 31766
+   },
+   "qa": {
+    "calls": 7,
+    "errors": 0,
+    "in": 19430,
+    "out": 3242,
+    "usd": 0.01393,
+    "ms": 20238
+   }
+  },
+  "totalUsd": 0.02036
+ },
+ "openrouterTotalUsd": 0.01872
+}
