@@ -813,16 +813,24 @@
    "reason": "soft-floor readability 4 < 5 | soft-floor engagement 1 < 5 | soft-floor humanVoice 2 < 5",
    "tries": 1,
    "at": "2026-07-18T15:36:46.144Z"
+  },
+  {
+   "key": "potential-ev-streaming-arrival|NOW-STREAMING",
+   "eventSlug": "potential-ev-streaming-arrival",
+   "form": "NOW-STREAMING",
+   "reason": "under floor: no subscription-streaming platform — rent/buy is not 'now streaming'",
+   "tries": 1,
+   "at": "2026-07-18T16:37:42.439Z"
   }
  ],
- "zeroStreak": 1,
+ "zeroStreak": 2,
  "daySpend": {
   "laDay": "2026-07-18",
-  "usd": 0.11884
+  "usd": 0.12166
  },
  "pace": {
-  "tokens": 2.3967434444444446,
-  "lastMs": 1784390442764
+  "tokens": 3.1293082222222224,
+  "lastMs": 1784392326502
  },
  "lastAuditDay": "2026-07-18",
  "attempts": {
@@ -842,7 +850,9 @@
    "jackass: best and last": 2,
    "scary movie": 2,
    "the abandons": 1,
-   "voicemails for isabelle": 1
+   "voicemails for isabelle": 1,
+   "chained": 1,
+   "potential": 1
   }
  }
 }
