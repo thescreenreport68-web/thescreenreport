@@ -285,6 +285,28 @@
    "film": "The Invite",
    "tmdbId": null,
    "eventType": "boxoffice"
+  },
+  {
+   "key": "young-washington-bo-update-d15|BO-UPDATE",
+   "at": "2026-07-18T15:42:39.042Z",
+   "eventSlug": "young-washington-bo-update-d15",
+   "form": "BO-UPDATE",
+   "slug": "young-washington-box-office-day-15-adds-1-2-million-as-domestic-total-hits-38-5",
+   "title": "Young Washington Opens to $20.8M, Beating Forecasts and Becoming Angel Studios' Second-Biggest Debut",
+   "film": "Young Washington",
+   "tmdbId": null,
+   "eventType": "boxoffice"
+  },
+  {
+   "key": "jackass-best-and-last-bo-update-d22|BO-UPDATE",
+   "at": "2026-07-18T15:47:15.044Z",
+   "eventSlug": "jackass-best-and-last-bo-update-d22",
+   "form": "BO-UPDATE",
+   "slug": "jackass-best-and-last-box-office-day-22-adds-73-000-as-domestic-total-hits-17-9",
+   "title": "Johnny Knoxville's 'Jackass: Best and Last' Crashes With $165K Third Weekend, 94% Drop",
+   "film": "Jackass: Best and Last",
+   "tmdbId": null,
+   "eventType": "boxoffice"
   }
  ],
  "parked": [
@@ -757,36 +779,20 @@
    "at": "2026-07-18T14:45:48.950Z"
   },
   {
-   "key": "young-washington-bo-update-d15|BO-UPDATE",
-   "eventSlug": "young-washington-bo-update-d15",
-   "form": "BO-UPDATE",
-   "reason": "1 unverified claim(s) cut, unrecovered",
-   "tries": 2,
-   "at": "2026-07-18T15:11:42.566Z"
-  },
-  {
    "key": "obsession-bo-update-d64|BO-UPDATE",
    "eventSlug": "obsession-bo-update-d64",
    "form": "BO-UPDATE",
-   "reason": "words 179 < 180 (owner-set ~200-word minimum)",
-   "tries": 1,
-   "at": "2026-07-18T15:14:20.025Z"
+   "reason": "words 124 < 180 (owner-set ~200-word minimum)",
+   "tries": 2,
+   "at": "2026-07-18T15:44:26.550Z"
   },
   {
    "key": "backrooms-bo-update-d50|BO-UPDATE",
    "eventSlug": "backrooms-bo-update-d50",
    "form": "BO-UPDATE",
-   "reason": "words 157 < 180 (owner-set ~200-word minimum)",
-   "tries": 1,
-   "at": "2026-07-18T15:15:50.147Z"
-  },
-  {
-   "key": "jackass-best-and-last-bo-update-d22|BO-UPDATE",
-   "eventSlug": "jackass-best-and-last-bo-update-d22",
-   "form": "BO-UPDATE",
-   "reason": "words 121 < 180 (owner-set ~200-word minimum)",
-   "tries": 1,
-   "at": "2026-07-18T15:17:30.930Z"
+   "reason": "words 171 < 180 (owner-set ~200-word minimum)",
+   "tries": 2,
+   "at": "2026-07-18T15:46:24.282Z"
   },
   {
    "key": "scary-movie-bo-update-d43|BO-UPDATE",
@@ -805,14 +811,14 @@
    "at": "2026-07-18T15:36:46.144Z"
   }
  ],
- "zeroStreak": 1,
+ "zeroStreak": 0,
  "daySpend": {
   "laDay": "2026-07-18",
-  "usd": 0.08028
+  "usd": 0.08866
  },
  "pace": {
-  "tokens": 3.7352407222222226,
-  "lastMs": 1784388741757
+  "tokens": 1.8542512222222225,
+  "lastMs": 1784389047784
  },
  "lastAuditDay": "2026-07-18",
  "attempts": {
@@ -823,13 +829,13 @@
    "disclosure day": 1,
    "ek din": 1,
    "the hawk": 1,
-   "young washington": 2,
+   "young washington": 3,
    "golden kamuy": 1,
-   "love in the moonlight": 1,
+   "love in the moonlight": 2,
    "the invite": 1,
-   "obsession": 1,
-   "backrooms": 1,
-   "jackass: best and last": 1,
+   "obsession": 2,
+   "backrooms": 2,
+   "jackass: best and last": 2,
    "scary movie": 1,
    "the abandons": 1
   }

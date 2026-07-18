@@ -1,0 +1,99 @@
+{
+ "runId": "run-2026-07-18T15-37-27",
+ "mode": "live",
+ "startedAt": "2026-07-18T15:37:27.784Z",
+ "films": 8,
+ "published": [
+  {
+   "tag": "young-washington-bo-update×BO-UPDATE",
+   "slug": "young-washington-box-office-day-15-adds-1-2-million-as-domestic-total-hits-38-5",
+   "path": "/home/runner/work/thescreenreport/thescreenreport/content/articles/young-washington-box-office-day-15-adds-1-2-million-as-domestic-total-hits-38-5.md",
+   "score": 80
+  },
+  {
+   "tag": "jackass-best-and-last-bo-update×BO-UPDATE",
+   "slug": "jackass-best-and-last-box-office-day-22-adds-73-000-as-domestic-total-hits-17-9",
+   "path": "/home/runner/work/thescreenreport/thescreenreport/content/articles/jackass-best-and-last-box-office-day-22-adds-73-000-as-domestic-total-hits-17-9.md",
+   "score": 80
+  }
+ ],
+ "held": [
+  {
+   "tag": "obsession-bo-update×BO-UPDATE",
+   "reason": "words 124 < 180 (owner-set ~200-word minimum)",
+   "score": 50
+  },
+  {
+   "tag": "backrooms-bo-update×BO-UPDATE",
+   "reason": "words 171 < 180 (owner-set ~200-word minimum)",
+   "score": 50
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "golden-kamuy-3-the-abarishi-prison-raid-ev-streaming-arrival×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "the-invite-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  }
+ ],
+ "blocked": [
+  {
+   "tag": "love-in-the-moonlight-ev-streaming-arrival×NOW-STREAMING",
+   "reason": "watchdog: gatherer love-in-the-moonlight-ev-streaming-arrival×NOW-STREAMING exceeded 180s"
+  }
+ ],
+ "paced": {
+  "tokens": 3.85,
+  "behind": true,
+  "expected": 4.2,
+  "allow": 2
+ },
+ "zeroStreak": 0,
+ "daySpend": {
+  "laDay": "2026-07-18",
+  "usd": 0.08866
+ },
+ "finishedAt": "2026-07-18T15:47:15.046Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3547,
+    "out": 651,
+    "usd": 0.00022,
+    "ms": 2169
+   },
+   "gatherer": {
+    "calls": 7,
+    "errors": 0,
+    "in": 19785,
+    "out": 1483,
+    "usd": 0.00257,
+    "ms": 10993
+   },
+   "synthesizer": {
+    "calls": 5,
+    "errors": 1,
+    "in": 2933,
+    "out": 1374,
+    "usd": 0.00049,
+    "ms": 84574
+   },
+   "writerChart": {
+    "calls": 4,
+    "errors": 0,
+    "in": 7908,
+    "out": 3808,
+    "usd": 0.00312,
+    "ms": 83694
+   }
+  },
+  "totalUsd": 0.00639
+ },
+ "openrouterTotalUsd": 0.00838
+}
