@@ -1,0 +1,67 @@
+{
+  "id": "news-tom-brady-logan-paul-fanatics-fest-slap",
+  "slug": "tom-brady-slaps-logan-paul-at-fanatics-fest-calls-him-a-dork-and-nerd-",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": null,
+      "cat": "celebrity/news",
+      "format": [],
+      "cuts": 3,
+      "broken": []
+    },
+    "attempt2": {
+      "score": null,
+      "cat": "celebrity/news",
+      "format": [
+        "a 69-word run-on sentence (>55 — split it)"
+      ],
+      "cuts": 0,
+      "broken": []
+    }
+  },
+  "editorial": {
+    "status": "confirmed",
+    "entity": "Tom Brady",
+    "work": null,
+    "outlet": "variety.com"
+  },
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
+    "deterministic": {
+      "words": 471,
+      "h2s": 2,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 3,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": true,
+      "maxSentence": 69,
+      "avgSentence": 17,
+      "flesch": 63,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": [
+        "a 69-word run-on sentence (>55 — split it)"
+      ]
+    },
+    "hardBlocks": []
+  },
+  "score": null,
+  "category": "celebrity",
+  "subcategory": "news",
+  "audit": {
+    "ok": true,
+    "internalLinks": 0,
+    "failed": []
+  },
+  "ms": 81578
+}
