@@ -84,10 +84,15 @@ const ANIME_RX = /\b(anime|manga|naruto|one piece|dragon ball|pok[eé]mon|jujuts
 const ROUNDUP_PREFIX = /^\s*(release rundown|box office|stream|trailer|first look|exclusive|interview|watch|review|recap|roundup|what to watch|new on \S+|weekend box office|opinion|analysis|report|breaking|update|listen)\b[:\-—|]*\s*/i;
 // Entertainment headlines are "SUBJECT verbs OBJECT" — cut at the first action verb / preposition so
 // the subject (a name or work) leads, which is what the X search and harvest need.
-const ACTION_STOP = /\b(exits?|dies?|dead|drops?|sets?|launch(es|ed)?|brings?|praises?|responds?|addresses?|reveals?|confirms?|announces?|joins?|lands?|signs?|makes?|shares?|slams?|defends?|teases?|debuts?|returns?|leaves?|quits?|calls?|says?|talks?|opens?|clears?|hits?|earns?|scores?|breaks?|unveils?|premieres?|renewed|cancell?ed|cast|stars?|is|are|was|were|has|have|to|on|in|at|with|amid|after|as|over|for|from)\b/i;
+const ACTION_STOP = /\b(exits?|dies?|dead|drops?|sets?|launch(es|ed)?|brings?|praises?|responds?|addresses?|reveals?|confirms?|announces?|joins?|lands?|signs?|makes?|shares?|slams?|defends?|teases?|debuts?|returns?|leaves?|quits?|calls?|says?|talks?|opens?|clears?|hits?|earns?|scores?|breaks?|unveils?|premieres?|renewed|cancell?ed|cast|stars?|begins?|began|arrives?|tops?|adds?|crosses|nears?|kicks|treks?|paid|pays?|buys?|acquires?|increases?|hikes?|sparks?|ignites?|fuels?|stuns?|splits?|divides?|is|are|was|were|has|have|to|on|in|at|with|amid|after|as|over|for|from)\b/i;
+// Quoted-title matcher — BOUNDARY-ANCHORED (owner audit 2026-07-18): the naive any-quote-char pair
+// read possessive apostrophes as delimiters ("IMAX’s … Nolan’s" → a garbage mid-headline span became
+// the subject and every search query). An opening mark must start the string or follow a boundary;
+// a closing mark must be followed by a boundary — an apostrophe INSIDE a word can never delimit.
+const QUOTED_TITLE_RX = /(?:^|[\s(:—–\-])[‘“'"]([^‘’“”'"]{2,60})[’”'"](?=[\s).,:;!?—–\-]|$)/;
 function headlineEntity(headline, fallback = "") {
   const h = (headline || "").trim();
-  const q = h.match(/[‘’“”'"]([^‘’“”'"]{2,60})[‘’“”'"]/);
+  const q = h.match(QUOTED_TITLE_RX);
   if (q && /[A-Za-z]{3}/.test(q[1])) return q[1].trim();               // a quoted work title wins
   const stripped = (h.replace(ROUNDUP_PREFIX, "").trim() || fallback || h);
   const m = stripped.match(ACTION_STOP);
@@ -108,14 +113,19 @@ export function buildSubjectCard(story) {
   const name = (story.primaryEntity || "").trim();
   const src = `${story.headline || ""} ${story.overview || ""}`;
   const nameToks = new Set(norm(name).split(" ").filter(Boolean));
-  // quoted titles in the headline are the strongest context ("Ride Lonesome", "In the Night")
-  const quoted = [...src.matchAll(/[‘“'"]([^‘’“”'"]{3,50})[’”'"]/g)].map((m) => m[1].trim())
+  // quoted titles in the headline are the strongest context ("Ride Lonesome", "In the Night") —
+  // boundary-anchored so possessive apostrophes ("Nolan’s") can never delimit a fake span.
+  const quoted = [...src.matchAll(/(?:^|[\s(:—–\-])[‘“'"]([^‘’“”'"]{3,50})[’”'"](?=[\s).,:;!?—–\-]|$)/g)]
+    .map((m) => m[1].trim())
     .filter((q) => norm(q) !== norm(name));
   const contextTokens = [...new Set(norm(src).split(" ")
     .filter((w) => w.length >= 4 && !CTX_STOP.has(w) && !nameToks.has(w)))].slice(0, 14);
   return {
     name,
-    kind: story.kind || "headline",
+    // A story ABOUT A WORK is kind "work" regardless of which discovery lane surfaced it — the
+    // admission rules are kind-aware (a work's own title in a post is sufficient subject proof;
+    // only same-name PERSONS need extra context — the Beck class).
+    kind: story.work?.title ? "work" : (story.kind || "headline"),
     categoryWord: CATEGORY_WORD[story.category] || "entertainment",
     workTitle: story.work?.title && norm(story.work.title) !== norm(name) ? story.work.title : (quoted[0] || null),
     contextTokens,
@@ -130,6 +140,9 @@ export function subjectQuickMatch(text, card) {
   if (!card?.ambiguous) return true;
   const t = norm(text || "");
   if (card.workTitle && t.includes(norm(card.workTitle))) return true;
+  // A WORK's own single-token title naming the work IS the subject (a "Supergirl looks amazing" post
+  // counts); only same-name PERSON/headline subjects (the Beck class) demand extra context.
+  if (card.kind === "work" && card.name && t.includes(norm(card.name))) return true;
   return (card.contextTokens || []).some((k) => t.includes(k));
 }
 

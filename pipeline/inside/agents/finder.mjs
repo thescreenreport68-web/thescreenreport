@@ -44,7 +44,7 @@ Output STRICT JSON only.`;
 // "what to watch" guide or a review). Drops obvious NON-REACTION editorial headlines before ranking:
 // reviews (but NOT review-bombing — that IS a reaction), listicles/rankings, explainers, recaps, guides,
 // predictions. A real EVENT people react to (death/casting/trailer/win/wedding/feud) is never matched here.
-const NON_REACTION_RX = /\b(reviewed|ranking|ranked|top \d+|\d+ best|best (new |top |\d+ )?(movies|shows|films|series|tv|comedies|thrillers|horror movies)|what to watch|where to watch|how to watch|streaming guide|ending explained|explainer|recap|predictions?|watch this weekend|things? to know|everything (we know|to know))\b/i;
+const NON_REACTION_RX = /\b(reviewed|ranking|ranked|top \d+|\d+ best|best (new |top |\d+ )?(movies|shows|films|series|tv|comedies|thrillers|horror movies)|what to watch|where to watch|how to watch|streaming guide|ending explained|explainer|recap|predictions?|watch this weekend|things? to know|everything (we know|to know)|acqui(res?|sition)|buys? .{0,30}(startup|stake|company)|paid \$[\d.]+ ?(m|b|million|billion)|subscription price|price (hike|increase)|(raises?|increases?|hikes?) prices?|stock|shares|IPO|earnings|quarterly|valuation|funding round)\b/i;
 export function isNonReactionHeadline(text) {
   const t = text || "";
   if (/\breview\b/i.test(t) && !/review[-\s]?bomb/i.test(t)) return true; // a critic's-verdict review, not review-bombing

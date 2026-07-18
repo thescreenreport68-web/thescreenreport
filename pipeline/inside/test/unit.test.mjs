@@ -946,6 +946,43 @@ await check("BECK REPLAY: subject card + admission gate reject the NFL and Glenn
   assert.equal(mbb.ambiguous, false);
   assert.equal(subjectAdmission("Millie Bobby Brown is right about the nails", mbb), true);
 });
+await check("possessive apostrophes never break subject extraction (the Odyssey/UConn query-garbage cases)", async () => {
+  const { buildSubjectCard } = await import("../discover.mjs");
+  // the REAL production failures of 07-17/18: possessives read as quote delimiters → garbage entity
+  const odyssey = buildSubjectCard({ primaryEntity: "", kind: "headline", category: "movies",
+    headline: "‘The Odyssey’ Box Office Journey Begins With $17.6M In Previews — IMAX’s lone wide release is Christopher Nolan’s epic", overview: "" });
+  assert.equal(odyssey.workTitle, "The Odyssey", "boundary-anchored quotes extract the real title");
+  const uconn = buildSubjectCard({ primaryEntity: "Apple TV's UConn Huskies docuseries trailer", kind: "headline", category: "movies",
+    headline: "Apple TV’s UConn Huskies docuseries trailer sparks fan anticipation", overview: "" });
+  assert.equal(uconn.workTitle, null, "no fake quoted span from the possessive");
+  assert.ok(!uconn.ambiguous, "multi-word entity is not ambiguous");
+});
+await check("kind-aware admission: a WORK's own single-token title admits a plain fan post; the Beck person class stays strict", async () => {
+  const { buildSubjectCard, subjectQuickMatch } = await import("../discover.mjs");
+  const { subjectAdmission } = await import("../reactionFinder.mjs");
+  // the Supergirl case: 'Supergirl looks amazing' was rejected for lacking context tokens → floor fail
+  const sg = buildSubjectCard({ primaryEntity: "Supergirl", kind: "work", category: "movies",
+    work: { title: "Supergirl", type: "movie", year: 2026 }, headline: null, overview: "Kara Zor-El arrives" });
+  assert.equal(sg.kind, "work");
+  assert.equal(sg.ambiguous, true, "single token — but a work");
+  assert.equal(subjectAdmission("Supergirl looks amazing, day one for me", sg), true, "work title alone admits");
+  assert.equal(subjectQuickMatch("Supergirl looks amazing", sg), true, "and counts toward heat");
+  assert.equal(subjectAdmission("my garden silo painting hobby", sg), false, "no name → rejected");
+  // Beck (person/headline kind) unchanged: context still required
+  const beck = buildSubjectCard({ primaryEntity: "Beck", kind: "headline", category: "music",
+    headline: "Beck Announces First Album in Seven Years, Ride Lonesome", overview: "" });
+  assert.equal(beck.kind, "headline");
+  assert.equal(subjectAdmission("Beck? Why?? You have so many other needs and you take that guy", beck), false, "person class stays strict");
+});
+await check("corporate deal/pricing headlines are non-reaction candidates (Netflix-startup / Apple-Music-hike cases)", async () => {
+  const { isNonReactionHeadline } = await import("../agents/finder.mjs");
+  assert.ok(isNonReactionHeadline("Netflix Paid $587 Million in Cash for Ben Affleck's AI Startup Interp"), "acquisition story dropped");
+  assert.ok(isNonReactionHeadline("Apple increases prices for Apple Music, Apple One over rising costs"), "price-hike story dropped");
+  assert.ok(isNonReactionHeadline("Studio stock jumps after quarterly earnings beat"), "finance story dropped");
+  // genuine reaction stories still pass — including box-office DRAMA (fans react to that)
+  assert.ok(!isNonReactionHeadline("Moana's Box Office Trouble Has Fans in a Chokehold"), "box-office discourse stays");
+  assert.ok(!isNonReactionHeadline("Toy Story 5 trailer has fans in tears"), "normal reaction story stays");
+});
 await check("supply 2.0: youtube comment mapping + mastodon tag candidates never emit an ambiguous bare tag", async () => {
   const { ytTopComments } = await import("../youtube.mjs");
   const { tagCandidates } = await import("../mastodon.mjs");

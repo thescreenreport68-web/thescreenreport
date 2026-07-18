@@ -257,6 +257,10 @@ export function subjectAdmission(text, card, { linked = false } = {}) {
   const workHit = card.workTitle && t.includes(norm(card.workTitle));
   if (!nameHit && !workHit) return false;
   if (!card.ambiguous || workHit) return true;
+  // A WORK's own title in the post is sufficient subject proof even when single-token ("Supergirl
+  // looks amazing") — the classify + off-subject sweep + QA subjectMatch still guard the rest.
+  // Only same-name PERSON/headline subjects (the Beck class) keep the strict context requirement.
+  if (card.kind === "work" && nameHit) return true;
   return (card.contextTokens || []).some((k) => t.includes(k));
 }
 // Wrong-subject sweep for AMBIGUOUS names: sports/politics markers in a post mean the same-name
@@ -579,7 +583,10 @@ export async function harvestReactions(trigger, angle, {
       const card = trigger.subject || null;
       // Disambiguated video query; the found VIDEO must itself pass the subject test before its
       // comments (linked) are trusted — an ambiguous name can't pull the wrong film's trailer.
-      const ytQ = [who, card?.workTitle || (card?.ambiguous ? card.categoryWord : "")].filter(Boolean).join(" ");
+      // The entity is CLIPPED to its first clause (belt-and-suspenders: a garbage 60-char headline
+      // fragment as a search query returns nothing — the Odyssey box-office case).
+      const clip = (s) => { s = String(s || "").split(/[|:—–]|\s[-]\s/)[0].trim(); return s.length <= 45 ? s : s.slice(0, 46).replace(/\s+\S*$/, ""); };
+      const ytQ = [clip(who), card?.workTitle || (card?.ambiguous ? card.categoryWord : "")].filter(Boolean).join(" ");
       const vids = (await ytVideosImpl(ytQ, { nowMs: t0 }).catch(() => [])).filter((v) => subjectAdmission(v.title, card));
       const ytLists = await Promise.all(vids.slice(0, 2).map((v) => ytCommentsImpl(v.videoId).catch(() => [])));
       const ytComments = ytLists.flat().sort((a, b) => (b.likes || 0) - (a.likes || 0)).slice(0, 30);
