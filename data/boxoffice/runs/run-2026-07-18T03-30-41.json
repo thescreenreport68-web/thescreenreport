@@ -1,0 +1,114 @@
+{
+ "runId": "run-2026-07-18T03-30-41",
+ "mode": "live",
+ "startedAt": "2026-07-18T03:30:41.756Z",
+ "films": 8,
+ "published": [],
+ "held": [
+  {
+   "tag": "golden-kamuy-ev-streaming-arrival×NOW-STREAMING",
+   "reason": "soft-floor engagement 3 < 5 | soft-floor humanVoice 3 < 5",
+   "score": 35
+  },
+  {
+   "tag": "moana-bo-update×BO-UPDATE",
+   "reason": "not material: already covered today (one update per film per day)"
+  },
+  {
+   "tag": "minions-monsters-bo-update×BO-UPDATE",
+   "reason": "not material: already covered today (one update per film per day)"
+  },
+  {
+   "tag": "toy-story-5-bo-update×BO-UPDATE",
+   "reason": "not material: already covered today (one update per film per day)"
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "the-odyssey-ev-opening×BO-OPENING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "descendants-wicked-wonderland-ev-streaming-arrival×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "wild-sing-ev-streaming-arrival×NOW-STREAMING",
+   "reason": "parked dead"
+  }
+ ],
+ "blocked": [
+  {
+   "tag": "the-odyssey-ev-weekend×BO-WEEKEND",
+   "reason": "watchdog: gatherer the-odyssey-ev-weekend×BO-WEEKEND exceeded 180s"
+  }
+ ],
+ "paced": {
+  "tokens": 3.4,
+  "behind": true,
+  "expected": 17.4,
+  "allow": 2
+ },
+ "queueBuilt": 6,
+ "zeroStreak": 1,
+ "daySpend": {
+  "laDay": "2026-07-17",
+  "usd": 1.13029
+ },
+ "finishedAt": "2026-07-18T03:39:17.517Z",
+ "meter": {
+  "byRole": {
+   "categorize": {
+    "calls": 3,
+    "errors": 0,
+    "in": 1043,
+    "out": 502,
+    "usd": 0.00031,
+    "ms": 2595
+   },
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3488,
+    "out": 608,
+    "usd": 0.00021,
+    "ms": 2117
+   },
+   "gatherer": {
+    "calls": 12,
+    "errors": 6,
+    "in": 22961,
+    "out": 747,
+    "usd": 0.00259,
+    "ms": 6050
+   },
+   "synthesizer": {
+    "calls": 1,
+    "errors": 0,
+    "in": 619,
+    "out": 1336,
+    "usd": 0.0003,
+    "ms": 14787
+   },
+   "writer": {
+    "calls": 2,
+    "errors": 0,
+    "in": 6547,
+    "out": 2125,
+    "usd": 0.00602,
+    "ms": 20849
+   },
+   "qa": {
+    "calls": 7,
+    "errors": 0,
+    "in": 18508,
+    "out": 2571,
+    "usd": 0.01198,
+    "ms": 15009
+   }
+  },
+  "totalUsd": 0.0214
+ },
+ "openrouterTotalUsd": 0.02837
+}

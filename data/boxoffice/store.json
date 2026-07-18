@@ -694,16 +694,24 @@
    "reason": "under floor: no subscription-streaming platform — rent/buy is not 'now streaming'",
    "tries": 2,
    "at": "2026-07-18T01:37:06.190Z"
+  },
+  {
+   "key": "golden-kamuy-ev-streaming-arrival|NOW-STREAMING",
+   "eventSlug": "golden-kamuy-ev-streaming-arrival",
+   "form": "NOW-STREAMING",
+   "reason": "soft-floor engagement 3 < 5 | soft-floor humanVoice 3 < 5",
+   "tries": 1,
+   "at": "2026-07-18T03:37:10.022Z"
   }
  ],
- "zeroStreak": 0,
+ "zeroStreak": 1,
  "daySpend": {
   "laDay": "2026-07-17",
-  "usd": 1.10192
+  "usd": 1.13029
  },
  "pace": {
-  "tokens": 3,
-  "lastMs": 1784343643048
+  "tokens": 3.399712888888889,
+  "lastMs": 1784345441756
  },
  "lastAuditDay": "2026-07-17"
 }
