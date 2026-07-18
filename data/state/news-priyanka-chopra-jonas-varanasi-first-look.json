@@ -1,0 +1,78 @@
+{
+  "id": "news-priyanka-chopra-jonas-varanasi-first-look",
+  "slug": "priyanka-chopra-jonas-smolders-in-first-look-at-rrr-director-s-new-glo",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": null,
+      "cat": "movies/news",
+      "format": [
+        "body 174w < 220",
+        "Flesch 36 < 40 (too dense to read comfortably)"
+      ],
+      "cuts": 1,
+      "broken": []
+    },
+    "attempt2": {
+      "score": null,
+      "cat": "movies/news",
+      "format": [
+        "body 170w < 220",
+        "Flesch 36 < 40 (too dense to read comfortably)"
+      ],
+      "cuts": 0,
+      "broken": []
+    }
+  },
+  "editorial": {
+    "status": "unconfirmed",
+    "entity": "Priyanka Chopra Jonas",
+    "work": {
+      "title": "Varanasi",
+      "year": 2027,
+      "medium": "movie"
+    },
+    "outlet": "Entertainment Weekly"
+  },
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
+    "deterministic": {
+      "words": 170,
+      "h2s": 3,
+      "h2Questions": 3,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 3,
+      "ktCount": 3,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 49,
+      "avgSentence": 15,
+      "flesch": 36,
+      "bannedTells": 0,
+      "fillerPraise": 1,
+      "kwExact": 0,
+      "hardBlocks": [
+        "body 170w < 220",
+        "Flesch 36 < 40 (too dense to read comfortably)"
+      ]
+    },
+    "hardBlocks": []
+  },
+  "score": null,
+  "category": "movies",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "body ≥ 220w"
+    ]
+  },
+  "ms": 207761
+}

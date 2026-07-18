@@ -1,25 +1,93 @@
 {
-  "runId": "run-2026-07-18T02-30-35",
-  "builtAt": "2026-07-18T02:31:31.178Z",
-  "count": 15,
+  "runId": "run-2026-07-18T03-30-36",
+  "builtAt": "2026-07-18T03:31:34.680Z",
+  "count": 18,
   "topics": [
     {
-      "id": "news-samantha-morton-the-odyssey-performance",
-      "slug": "samantha-morton-on-her-wild-the-odyssey-performance-as-circe",
-      "title": "Samantha Morton on Her 'Wild' 'The Odyssey' Performance as Circe",
+      "id": "news-the-odyssey-cast-guide",
+      "slug": "the-odyssey-cast-guide-who-s-playing-who-in-christopher-nolan-s-epic",
+      "title": "‘The Odyssey’ Cast Guide: Who’s Playing Who in Christopher Nolan’s Epic",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "samantha-morton-the-odyssey-performance",
-      "primaryKeyword": "Samantha Morton",
+      "eventSlug": "the-odyssey-cast-guide",
+      "primaryKeyword": "The Odyssey cast",
+      "primaryEntity": "The Odyssey",
+      "entities": [
+        "The Odyssey (film)",
+        "Christopher Nolan"
+      ],
+      "angle": "Guide to the cast of Christopher Nolan's upcoming epic 'The Odyssey'.",
+      "tmdbType": "movie",
+      "source": "gnews:The Hollywood Reporter",
+      "sources": [
+        {
+          "outlet": "The Hollywood Reporter",
+          "tier": 7,
+          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPTWx6Tndwdm5ISHN3bHlHbW9LM2RrSmZFYkhlbDVQRmtEejF4VlBNOXVmdXZ5NlpWNXZETnBOMi1XYlBQX2VlWFM0UFRoZk5zX2ZoOFJpalhMbWFvVzdSc3N5dE1CSHpWcEFFVkJJdjZfdTJtbmxKMGlIclR1M3lwbG45V0w4RVdmRzcxcU0yUQ?oc=5",
+          "ageMin": 130,
+          "headline": "‘The Odyssey’ Cast Guide: Who’s Playing Who in Christopher Nolan’s Epic - The Hollywood Reporter",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMijwFBVV95cUxPTWx6Tndwdm5ISHN3bHlHbW9LM2RrSmZFYkhlbDVQRmtEejF4VlBNOXVmdXZ5NlpWNXZETnBOMi1XYlBQX2VlWFM0UFRoZk5zX2ZoOFJpalhMbWFvVzdSc3N5dE1CSHpWcEFFVkJJdjZfdTJtbmxKMGlIclR1M3lwbG45V0w4RVdmRzcxcU0yUQ?oc=5\" target=\"_blank\" ‘The Odyssey’ Cast Guide: Who’s Pl"
+        }
+      ],
+      "ageMin": 130,
+      "_cand": {
+        "key": "rss:-the-odyssey-cast-guide-who-s-playing-who-in-christopher-nol",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "The Hollywood Reporter"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "The Hollywood Reporter",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 112,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "softTv": 0,
+        "radar": 28
+      },
+      "radarKind": "movie-in-theaters",
+      "tierClass": "A"
+    },
+    {
+      "id": "news-samantha-morton-circe-the-odyssey",
+      "slug": "how-samantha-morton-pulled-off-her-wild-the-odyssey-performance-as-cir",
+      "title": "How Samantha Morton Pulled Off Her Wild The Odyssey Performance as Circe: I Wanted to Possess It",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "samantha-morton-circe-the-odyssey",
+      "primaryKeyword": "samantha morton the odyssey",
       "primaryEntity": "Samantha Morton",
       "entities": [
-        "The Odyssey"
+        "The Odyssey",
+        "Circe"
       ],
-      "angle": "Samantha Morton discusses her powerful performance as Circe in 'The Odyssey'.",
+      "angle": "Actress details her approach to playing the mythological figure Circe in a major film.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
@@ -27,12 +95,12 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/movies/movie-features/samantha-morton-the-odyssey-feature-1236650941/",
-          "ageMin": 516,
+          "ageMin": 576,
           "headline": "How Samantha Morton Pulled Off Her Wild The Odyssey Performance as Circe: I Wanted to Possess It",
           "summary": "The two-time Oscar nominee all but steals the massive film in a scene that reflects what she's been doing her whole career: Making her mark with whatever screen time she's got."
         }
       ],
-      "ageMin": 516,
+      "ageMin": 576,
       "_cand": {
         "key": "rss:how-samantha-morton-pulled-off-her-wild-the-odyssey-performa",
         "popularity": 0,
@@ -70,38 +138,112 @@
       "tierClass": "A"
     },
     {
-      "id": "news-the-odyssey-christopher-nolan-differences-from-book",
-      "slug": "the-odyssey-all-the-ways-christopher-nolan-s-movie-is-different-from-t",
-      "title": "‘The Odyssey’: All the Ways Christopher Nolan’s Movie Is Different From the Book",
+      "id": "news-colman-domingo-tiana-movie-talks",
+      "slug": "colman-domingo-in-talks-to-write-live-action-princess-tiana-movie-insp",
+      "title": "Colman Domingo in Talks to Write Live-Action Princess Tiana Movie Inspired by Princess and the Frog",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
-      "eventType": "announcement",
+      "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "the-odyssey-christopher-nolan-differences-from-book",
-      "primaryKeyword": "The Odyssey Christopher Nolan",
-      "primaryEntity": "The Odyssey",
+      "eventSlug": "colman-domingo-tiana-movie-talks",
+      "primaryKeyword": "colman domingo tiana movie",
+      "primaryEntity": "The Princess and the Frog",
       "entities": [
-        "The Odyssey (film)",
-        "Christopher Nolan"
+        "Princess Tiana",
+        "Colman Domingo"
       ],
-      "angle": "Exploring the differences between Christopher Nolan's upcoming film 'The Odyssey' and its source material.",
+      "angle": "Colman Domingo is in negotiations to co-write a live-action film centered on Princess Tiana.",
       "tmdbType": "movie",
-      "source": "rss:Variety",
+      "source": "rss:THR",
       "sources": [
         {
-          "outlet": "Variety",
+          "outlet": "THR",
           "tier": 7,
-          "url": "https://variety.com/2026/film/news/the-odyssey-changes-christopher-nolan-adapts-homer-1236814443/",
-          "ageMin": 361,
-          "headline": "‘The Odyssey’: All the Ways Christopher Nolan’s Movie Is Different From the Book",
-          "summary": "When the first footage from Christopher Nolan’s “The Odyssey” dropped, some of the worst people on Al Gore’s internet lost their minds (Elon Musk chief among them). They decried its inaccuracies, even though Homer’s epic poem is not only mythological, but also part of an oral tradition where it was expanded upon and reshaped over [ ]"
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/colman-domingo-live-action-tiana-princess-and-the-frog-1236651364/",
+          "ageMin": 208,
+          "headline": "Colman Domingo in Talks to Write Live-Action Princess Tiana Movie Inspired by Princess and the Frog",
+          "summary": "No deals have been closed for the take on the 2009 Disney film 'Princess and the Frog.'"
+        },
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/colman-domingo-princess-and-the-frog-movie-tiana-1236997261/",
+          "ageMin": 255,
+          "headline": "Colman Domingo Robert O Hara In Talks To Write Original Live-Action Pic About Princess And The Frog s Tiana The Dish",
+          "summary": "EXCLUSIVE: Hot off of notching two Emmy noms this year, we hear that Colman Domingo is looking to co-write an original live-action feature about Princess Tiana inspired by Disney s animated 2009 feature The Princess and the Frog. We understand, per sources, that the two-time Oscar nominee will co-pen the feature with 2020 Tony-nominated Slave Play [ ]"
         }
       ],
-      "ageMin": 361,
+      "ageMin": 208,
       "_cand": {
-        "key": "rss:-the-odyssey-all-the-ways-christopher-nolan-s-movie-is-diffe",
+        "key": "rss:colman-domingo-in-talks-to-write-live-action-princess-tiana-",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 2,
+      "verification": {
+        "tier1Count": 2,
+        "tier1Owners": 1,
+        "outletCount": 2,
+        "outlets": [
+          "THR",
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 91,
+      "signals": {
+        "recency": 9,
+        "corroboration": 18,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 8,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-life-larry-and-the-pursuit-of-unhappiness-guest-stars",
+      "slug": "all-of-the-guest-stars-and-cameos-on-hbo-max-s-life-larry-and-the-purs",
+      "title": "All of the Guest Stars and Cameos on HBO Max's Life, Larry and the Pursuit of Unhappiness (So Far)",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "life-larry-and-the-pursuit-of-unhappiness-guest-stars",
+      "primaryKeyword": "life and pursuit of unhappiness guest stars",
+      "primaryEntity": "Life, Larry and the Pursuit of Unhappiness",
+      "entities": [
+        "Barack Obama",
+        "Rob Reiner"
+      ],
+      "angle": "Listing all the notable guest stars and cameos on HBO's 'Life, Larry and the Pursuit of Unhappiness' through episode four.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/tv/tv-news/larry-and-the-pursuit-of-unhappiness-guest-stars-cameos-1236651445/",
+          "ageMin": 5,
+          "headline": "All of the Guest Stars and Cameos on HBO Max s Life, Larry and the Pursuit of Unhappiness (So Far)",
+          "summary": "From Barack Obama's opening cameo to Rob Reiner's poignant final screen role, HBO's sketch-comedy history lesson has stacked a deep bench — here's who's played who through episode four."
+        }
+      ],
+      "ageMin": 5,
+      "_cand": {
+        "key": "rss:all-of-the-guest-stars-and-cameos-on-hbo-max-s-life-larry-an",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -111,33 +253,31 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Variety"
+          "THR"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Variety",
+        "attribution": "THR",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 95,
+      "priority": 71,
       "signals": {
-        "recency": 4,
+        "recency": 30,
         "corroboration": 12,
         "status": 18,
-        "type": 9,
+        "type": 5,
         "pop": 0,
         "breakout": 0,
-        "big": 24,
+        "big": 6,
         "trending": 0,
-        "softTv": 0,
-        "radar": 28
+        "softTv": 0
       },
-      "radarKind": "movie-in-theaters",
-      "tierClass": "A"
+      "tierClass": "B"
     },
     {
-      "id": "news-backrooms-announcement",
+      "id": "news-backrooms-web-series-announcement",
       "slug": "kane-parsons-curry-barker-and-the-multi-million-dollar-battle-for-gen-",
       "title": "Kane Parsons, Curry Barker and the Multi-Million Dollar Battle for Gen Z Eyeballs",
       "contentType": "news",
@@ -146,13 +286,16 @@
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "backrooms-announcement",
-      "primaryKeyword": "gen z filmmakers",
+      "eventSlug": "backrooms-web-series-announcement",
+      "primaryKeyword": "viral shorts bidding war",
       "primaryEntity": "Backrooms",
       "entities": [
-        "Obsession"
+        "Backrooms (web series)",
+        "Kane Parsons",
+        "Curry Barker",
+        "Obsession (web series)"
       ],
-      "angle": "Young filmmakers and viral shorts are sparking multi-studio bidding wars.",
+      "angle": "Young filmmakers behind viral shorts like 'Backrooms' are sparking multi-million dollar bidding wars among studios.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
@@ -160,12 +303,12 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/movies/movie-news/kane-parsons-curry-barker-and-the-multi-million-dollar-battle-for-gen-z-eyeballs-1236651171/",
-          "ageMin": 311,
+          "ageMin": 371,
           "headline": "Kane Parsons, Curry Barker and the Multi-Million Dollar Battle for Gen Z Eyeballs",
           "summary": "In the months since the successes of ‘Backrooms' and ‘Obsession’, young filmmakers, memes and viral shorts have been the subject of multi-studio bidding wars."
         }
       ],
-      "ageMin": 311,
+      "ageMin": 371,
       "_cand": {
         "key": "rss:kane-parsons-curry-barker-and-the-multi-million-dollar-battl",
         "popularity": 0,
@@ -186,9 +329,9 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 90,
+      "priority": 85,
       "signals": {
-        "recency": 9,
+        "recency": 4,
         "corroboration": 12,
         "status": 18,
         "type": 9,
@@ -203,99 +346,35 @@
       "tierClass": "A"
     },
     {
-      "id": "news-sydney-sweeney-hollow-movie-package",
-      "slug": "sydney-sweeney-to-star-in-sony-pictures-hollow",
-      "title": "Sydney Sweeney to Star in Sony Pictures' 'Hollow'",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "sydney-sweeney-hollow-movie-package",
-      "primaryKeyword": "sydney sweeney hollow movie",
-      "primaryEntity": "Hollow (film)",
-      "entities": [
-        "Sydney Sweeney"
-      ],
-      "angle": "Sydney Sweeney set to star in Sony Pictures' new movie package 'Hollow'.",
-      "tmdbType": "movie",
-      "source": "gnews:facebook.com",
-      "sources": [
-        {
-          "outlet": "facebook.com",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNS2YwdDVod3JhOE5qb2R3ZGszb04yQ2tsUktMVDcxdDI0WXRVbWN4MVdWbTdBWmlyQjh3NGE0eXFZMVVlaXRFYlBRaUpJQnZycHdYcWduN29EWlpkQzRLc1FnbVNPU0NqUXhDaUVBRy04YXFoclNVcldtMDNTOVpidjcwVGxJcXlxSjZqbzhPczNTMVM4VmlYZUl4dVFKMHExYS1yQWNJWWxXRmxvaTZWbDlkMmFIUWlhUEI1LVFhalpzd0Z3QjRsVUdYaE8zSno0cEVSUA?oc=5",
-          "ageMin": 37,
-          "headline": "Sony Pictures has landed the movie package 'Hollow' starring Sydney Sweeney. Read more below. - facebook.com",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMi1AFBVV95cUxNS2YwdDVod3JhOE5qb2R3ZGszb04yQ2tsUktMVDcxdDI0WXRVbWN4MVdWbTdBWmlyQjh3NGE0eXFZMVVlaXRFYlBRaUpJQnZycHdYcWduN29EWlpkQzRLc1FnbVNPU0NqUXhDaUVBRy04YXFoclNVcldtMDNTOVpidjcwVGxJcXlxSjZqbzhPczNTMVM4VmlYZUl4dVFKMHExYS1yQWNJWWxXRmxvaTZWbDlkMmFIUWlhUEI"
-        }
-      ],
-      "ageMin": 37,
-      "_cand": {
-        "key": "rss:sony-pictures-has-landed-the-movie-package-hollow-starring-s",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "facebook.com"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "facebook.com",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 88,
-      "signals": {
-        "recency": 24,
-        "corroboration": 8,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-red-white-royal-blue-sequel-possibility",
-      "slug": "will-there-be-a-sequel-to-red-white-royal-blue",
-      "title": "Will There Be a Sequel to 'Red, White & Royal Blue'?",
-      "contentType": "news",
-      "formatTag": "news",
+      "id": "trailer-celebrity-family-feud-season-12-trailer",
+      "slug": "celebrity-family-feud-season-12-trailer-shows-well-behaved-contestants",
+      "title": "‘Celebrity Family Feud’ Season 12 Trailer Shows ‘Well-Behaved’ Contestants in Action",
+      "contentType": "trailer",
+      "formatTag": "trailer",
       "category": "tv",
-      "subcategory": "news",
-      "eventType": "announcement",
+      "subcategory": "trailers",
+      "eventType": "trailer",
       "sensitivity": "normal",
-      "eventSlug": "red-white-royal-blue-sequel-possibility",
-      "primaryKeyword": "Red, White & Royal Blue sequel",
-      "primaryEntity": "Red, White & Royal Blue",
+      "eventSlug": "celebrity-family-feud-season-12-trailer",
+      "primaryKeyword": "celebrity family feud trailer",
+      "primaryEntity": "Celebrity Family Feud",
       "entities": [],
-      "angle": "Discussion about the potential for a sequel to the popular Amazon Prime Video series 'Red, White & Royal Blue'.",
+      "angle": "The trailer for the upcoming season of 'Celebrity Family Feud' has been released.",
       "tmdbType": "movie",
-      "source": "gnews:UnionLeader.com",
+      "source": "gnews:IMDb",
       "sources": [
         {
-          "outlet": "UnionLeader.com",
+          "outlet": "IMDb",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxNc1Jmb2J6RTdhdmlSczhMeGxMVUxhd1kwMDNwYV9Sem9UVklXSTRJdkpxVnRrdWdFM0MtbC1yY2d0VHBLTWpxd0k0NHRfSGk4Q3Z5TDY2TVZRTnktV2Q2V1Yyd2U3ampPX1pzS3hnTW5ydk8xUXNaYkx2WFR0bFQ5akU5clFPeVFUdlB4cjlPenJEXy1CMHR5SGJJbkc2YlNOdDFlTDVPWjBRd0U4R25sREFBTWVRU3oxSGplampIM1VtVU9EZEJPcWtJSE5XeVkwTkRQeXRyZ0lHby1uSWo0THBNT0lxOTBLVFdielJBQWR3ZTRDcVdKbw?oc=5",
-          "ageMin": 121,
-          "headline": "Television Q A: Will there be a regal sequel to 'Red, White Royal Blue'? - UnionLeader.com",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMi-AFBVV95cUxNc1Jmb2J6RTdhdmlSczhMeGxMVUxhd1kwMDNwYV9Sem9UVklXSTRJdkpxVnRrdWdFM0MtbC1yY2d0VHBLTWpxd0k0NHRfSGk4Q3Z5TDY2TVZRTnktV2Q2V1Yyd2U3ampPX1pzS3hnTW5ydk8xUXNaYkx2WFR0bFQ5akU5clFPeVFUdlB4cjlPenJEXy1CMHR5SGJJbkc2YlNOdDFlTDVPWjBRd0U4R25sREFBTWVRU3oxSGp"
+          "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5Qb3RMcWJ6ZHcxdnotcnFQdlItRlRnV2V0YjBqTFZSNkZrbmVlc2VOeFBSelg0cEVqRmdBdUN0bGV5dXh1cXM5ZkxKdDg5M0FyeXc?oc=5",
+          "ageMin": 1602,
+          "headline": "‘Celebrity Family Feud’ Season 12 Trailer Shows ‘Well-Behaved’ Contestants in Action - IMDb",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTE5Qb3RMcWJ6ZHcxdnotcnFQdlItRlRnV2V0YjBqTFZSNkZrbmVlc2VOeFBSelg0cEVqRmdBdUN0bGV5dXh1cXM5ZkxKdDg5M0FyeXc?oc=5\" target=\"_blank\" ‘Celebrity Family Feud’ Season 12 Trailer Shows ‘Well-Behaved’ Contestants in Action /a nbsp; nbsp; font color=\"#6f6f"
         }
       ],
-      "ageMin": 121,
+      "ageMin": 1602,
       "_cand": {
-        "key": "rss:television-q-a-will-there-be-a-regal-sequel-to-red-white-roy",
+        "key": "rss:-celebrity-family-feud-season-12-trailer-shows-well-behaved-",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -305,21 +384,21 @@
         "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "UnionLeader.com"
+          "IMDb"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "UnionLeader.com",
+        "attribution": "IMDb",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 69,
+      "priority": 60,
       "signals": {
-        "recency": 16,
+        "recency": 1,
         "corroboration": 8,
         "status": 18,
-        "type": 9,
+        "type": 15,
         "pop": 0,
         "breakout": 0,
         "big": 18,
@@ -329,90 +408,24 @@
       "tierClass": "B"
     },
     {
-      "id": "news-colman-domingo-princess-tiana-movie",
-      "slug": "colman-domingo-in-talks-to-write-live-action-princess-tiana-movie-insp",
-      "title": "Colman Domingo in Talks to Write Live-Action Princess Tiana Movie Inspired by Princess and the Frog",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "colman-domingo-princess-tiana-movie",
-      "primaryKeyword": "princess tiana movie",
-      "primaryEntity": "The Princess and the Frog",
-      "entities": [
-        "Princess Tiana (film)",
-        "Colman Domingo",
-        "The Princess and the Frog (film)"
-      ],
-      "angle": "Colman Domingo is in talks to write a live-action movie based on Disney's 'The Princess and the Frog'.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/colman-domingo-live-action-tiana-princess-and-the-frog-1236651364/",
-          "ageMin": 148,
-          "headline": "Colman Domingo in Talks to Write Live-Action Princess Tiana Movie Inspired by Princess and the Frog",
-          "summary": "No deals have been closed for the take on the 2009 Disney film 'Princess and the Frog.'"
-        }
-      ],
-      "ageMin": 148,
-      "_cand": {
-        "key": "rss:colman-domingo-in-talks-to-write-live-action-princess-tiana-",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 84,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-god-of-war-tv-series-kratos-recast",
-      "slug": "god-of-war-to-recast-kratos-role-following-ryan-hurst-on-set-injury",
-      "title": "God of War to Recast Kratos Role Following Ryan Hurst On-Set Injury",
+      "id": "news-god-of-war-tv-series-kratos-recast-ryan-hurst-injury",
+      "slug": "ryan-hurst-injured-on-set-of-prime-video-s-god-of-war-kratos-role-to-b",
+      "title": "Ryan Hurst Injured On Set of Prime Video's 'God of War,' Kratos Role to Be Recast",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "god-of-war-tv-series-kratos-recast",
-      "primaryKeyword": "god of war tv series",
+      "eventSlug": "god-of-war-tv-series-kratos-recast-ryan-hurst-injury",
+      "primaryKeyword": "god of war tv series kratos",
       "primaryEntity": "God of War",
       "entities": [
         "God of War (TV series)",
-        "Prime Video",
-        "Ryan Hurst"
+        "Ryan Hurst",
+        "Prime Video"
       ],
-      "angle": "Prime Video's 'God of War' series to recast the role of Kratos following an on-set injury to Ryan Hurst.",
+      "angle": "Prime Video's 'God of War' series faces a casting change for Kratos following an on-set injury to Ryan Hurst.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
@@ -420,12 +433,12 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/tv/tv-news/god-of-war-recast-kratos-ryan-hurst-stunt-injury-1236650848/",
-          "ageMin": 734,
+          "ageMin": 794,
           "headline": "God of War to Recast Kratos Role Following Ryan Hurst On-Set Injury",
           "summary": "Prime Video's original God of War tore a bicep muscle while performing a stunt."
         }
       ],
-      "ageMin": 734,
+      "ageMin": 794,
       "_cand": {
         "key": "rss:god-of-war-to-recast-kratos-role-following-ryan-hurst-on-set",
         "popularity": 0,
@@ -478,7 +491,7 @@
         "Ty Dolla $ign",
         "Eternal Sunshine Tour"
       ],
-      "angle": "Ty Dolla $ign made a surprise guest appearance during Ariana Grande's 'Eternal Sunshine Tour' in Brooklyn.",
+      "angle": "Ty Dolla $ign made a surprise guest appearance during Ariana Grande's tour.",
       "tmdbType": "movie",
       "source": "rss:Rolling Stone",
       "sources": [
@@ -486,12 +499,12 @@
           "outlet": "Rolling Stone",
           "tier": 7,
           "url": "https://www.rollingstone.com/music/music-news/ariana-grande-ty-dolla-sign-eternal-sunshine-tour-1235595509/",
-          "ageMin": 70,
+          "ageMin": 130,
           "headline": "Ariana Grande Surprises Fans as Ty Dolla $ign Joins Eternal Sunshine Tour to Duet Safety Net",
           "summary": "Grande invited Ty to the stage during her Brooklyn residency on Thursday"
         }
       ],
-      "ageMin": 70,
+      "ageMin": 130,
       "_cand": {
         "key": "rss:ariana-grande-surprises-fans-as-ty-dolla-ign-joins-eternal-s",
         "popularity": 0,
@@ -528,61 +541,60 @@
       "tierClass": "C"
     },
     {
-      "id": "news-danny-boyle-ink-acquisition-netflix",
-      "slug": "danny-boyle-s-ink-sells-to-netflix-in-first-big-sale-way-ahead-of-veni",
-      "title": "Danny Boyle's Ink Sells to Netflix in First Big Sale (Way) Ahead of Venice Premiere",
+      "id": "news-priyanka-chopra-jonas-varanasi-first-look",
+      "slug": "priyanka-chopra-jonas-smolders-in-first-look-at-rrr-director-s-new-glo",
+      "title": "Priyanka Chopra Jonas smolders in first look at RRR director’s new globetrotting epic, Varanasi (exclusive)",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "danny-boyle-ink-acquisition-netflix",
-      "primaryKeyword": "danny boyle ink",
-      "primaryEntity": "Ink (film)",
+      "eventSlug": "priyanka-chopra-jonas-varanasi-first-look",
+      "primaryKeyword": "Priyanka Chopra Jonas Varanasi",
+      "primaryEntity": "Varanasi (film)",
       "entities": [
-        "Danny Boyle",
-        "Netflix",
-        "Venice Film Festival"
+        "Priyanka Chopra Jonas",
+        "SS Rajamouli"
       ],
-      "angle": "Danny Boyle's new film 'Ink,' set to premiere at Venice, has been acquired by Netflix.",
+      "angle": "Exclusive first look at Priyanka Chopra Jonas in SS Rajamouli's new film 'Varanasi'.",
       "tmdbType": "movie",
-      "source": "rss:Billboard",
+      "source": "gnews:Entertainment Weekly",
       "sources": [
         {
-          "outlet": "Billboard",
-          "tier": 7,
-          "url": "https://www.billboard.com/culture/product-recommendations/hailey-bieber-gap-jeans-old-navy-dupes-shop-online-1236297051/",
-          "ageMin": 175,
-          "headline": "Hailey Bieber’s Sold-Out Gap Jeans Have Affordable $15 Old Navy Dupes",
-          "summary": "If you missed the sold-out \"Hailey Jean\" drop, these denim dupes recreate the celebrity-loved baggy jean look."
+          "outlet": "Entertainment Weekly",
+          "tier": 6,
+          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOdURVcmRBMmpUZDdFb3lhdmNvbjkxX0dabnVnSU15RXRlTEQxNTNQa0Z4VTlzbk85STVsZTJ4MVFDbF94YzN2UXFUNnczYTJwa2c2bEJlaTdSMTIybjVmZkxQR0R5czU5VWkyYndSd2lxRFhWZTZZNERrT2RMS1lSdzR3Sm1VdWYtSHczNEkwRGowdXlwdzF0T3FqWS1tY0ctLUdjem93dU9MajQ?oc=5",
+          "ageMin": 151,
+          "headline": "Priyanka Chopra Jonas smolders in first look at RRR director’s new globetrotting epic, Varanasi (exclusive) - Entertainment Weekly",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxOdURVcmRBMmpUZDdFb3lhdmNvbjkxX0dabnVnSU15RXRlTEQxNTNQa0Z4VTlzbk85STVsZTJ4MVFDbF94YzN2UXFUNnczYTJwa2c2bEJlaTdSMTIybjVmZkxQR0R5czU5VWkyYndSd2lxRFhWZTZZNERrT2RMS1lSdzR3Sm1VdWYtSHczNEkwRGowdXlwdzF0T3FqWS1tY0ctLUdjem93dU9MajQ?oc=5\" target=\"_blan"
         }
       ],
-      "ageMin": 175,
+      "ageMin": 151,
       "_cand": {
-        "key": "rss:hailey-bieber-s-sold-out-gap-jeans-have-affordable-15-old-na",
+        "key": "rss:priyanka-chopra-jonas-smolders-in-first-look-at-rrr-director",
         "popularity": 0,
-        "kind": "rss-news"
+        "kind": "gnews"
       },
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
+        "tier1Count": 0,
+        "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "Billboard"
+          "Entertainment Weekly"
         ],
-        "maxTier": 7,
+        "maxTier": 6,
         "sensitivity": "normal",
-        "attribution": "Billboard",
+        "attribution": "Entertainment Weekly",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 79,
+      "priority": 77,
       "signals": {
         "recency": 16,
-        "corroboration": 12,
+        "corroboration": 10,
         "status": 18,
         "type": 9,
         "pop": 0,
@@ -594,61 +606,59 @@
       "tierClass": "B"
     },
     {
-      "id": "news-iko-uwais-albert-hughes-jakarta-series",
-      "slug": "iko-uwais-and-albert-hughes-unite-for-multi-generational-crime-series-",
-      "title": "Iko Uwais and Albert Hughes Unite for Multi-Generational Crime Series Jakarta",
+      "id": "news-red-white-royal-blue-sequel-news",
+      "slug": "television-q-a-will-there-be-a-regal-sequel-to-red-white-royal-blue",
+      "title": "Television Q&A: Will there be a regal sequel to 'Red, White Royal Blue'?",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "iko-uwais-albert-hughes-jakarta-series",
-      "primaryKeyword": "iko uwais series",
-      "primaryEntity": "Jakarta (TV series)",
+      "eventSlug": "red-white-royal-blue-sequel-news",
+      "primaryKeyword": "Red, White & Royal Blue sequel",
+      "primaryEntity": "Red, White & Royal Blue",
       "entities": [
-        "Iko Uwais",
-        "Albert Hughes",
-        "Alcon Entertainment"
+        "Red, White & Royal Blue (TV series)"
       ],
-      "angle": "Iko Uwais to star in new crime series 'Jakarta' from Alcon Entertainment with Albert Hughes directing the pilot.",
+      "angle": "Discussion on the possibility of a sequel to the popular series 'Red, White & Royal Blue'.",
       "tmdbType": "movie",
-      "source": "rss:Variety",
+      "source": "gnews:UnionLeader.com",
       "sources": [
         {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/tv/news/iko-uwais-albert-hughes-jakarta-series-alcon-entertainment-1236814756/",
-          "ageMin": 631,
-          "headline": "Iko Uwais and Albert Hughes Unite for Multi-Generational Crime Series Jakarta at Blade Runner 2049 Outfit Alcon Entertainment (EXCLUSIVE)",
-          "summary": "Action star Iko Uwais is set to lead Jakarta, a multi-generational family crime series in development at Alcon Entertainment, with Albert Hughes attached to direct the pilot and serve as producing director. The project comes from writers Kirk Ward and Joshua W. Wagner, with Ward also locked in as showrunner. Hughes and Ward previously worked [ ]"
+          "outlet": "UnionLeader.com",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxNc1Jmb2J6RTdhdmlSczhMeGxMVUxhd1kwMDNwYV9Sem9UVklXSTRJdkpxVnRrdWdFM0MtbC1yY2d0VHBLTWpxd0k0NHRfSGk4Q3Z5TDY2TVZRTnktV2Q2V1Yyd2U3ampPX1pzS3hnTW5ydk8xUXNaYkx2WFR0bFQ5akU5clFPeVFUdlB4cjlPenJEXy1CMHR5SGJJbkc2YlNOdDFlTDVPWjBRd0U4R25sREFBTWVRU3oxSGplampIM1VtVU9EZEJPcWtJSE5XeVkwTkRQeXRyZ0lHby1uSWo0THBNT0lxOTBLVFdielJBQWR3ZTRDcVdKbw?oc=5",
+          "ageMin": 181,
+          "headline": "Television Q A: Will there be a regal sequel to 'Red, White Royal Blue'? - UnionLeader.com",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMi-AFBVV95cUxNc1Jmb2J6RTdhdmlSczhMeGxMVUxhd1kwMDNwYV9Sem9UVklXSTRJdkpxVnRrdWdFM0MtbC1yY2d0VHBLTWpxd0k0NHRfSGk4Q3Z5TDY2TVZRTnktV2Q2V1Yyd2U3ampPX1pzS3hnTW5ydk8xUXNaYkx2WFR0bFQ5akU5clFPeVFUdlB4cjlPenJEXy1CMHR5SGJJbkc2YlNOdDFlTDVPWjBRd0U4R25sREFBTWVRU3oxSGp"
         }
       ],
-      "ageMin": 631,
+      "ageMin": 181,
       "_cand": {
-        "key": "rss:iko-uwais-and-albert-hughes-unite-for-multi-generational-cri",
+        "key": "rss:television-q-a-will-there-be-a-regal-sequel-to-red-white-roy",
         "popularity": 0,
-        "kind": "rss-news"
+        "kind": "gnews"
       },
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
+        "tier1Count": 0,
+        "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "Variety"
+          "UnionLeader.com"
         ],
-        "maxTier": 7,
+        "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "Variety",
+        "attribution": "UnionLeader.com",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 61,
+      "priority": 62,
       "signals": {
-        "recency": 4,
-        "corroboration": 12,
+        "recency": 9,
+        "corroboration": 8,
         "status": 18,
         "type": 9,
         "pop": 0,
@@ -660,84 +670,9 @@
       "tierClass": "B"
     },
     {
-      "id": "news-danny-boyle-thriller-ink-netflix-deal",
-      "slug": "netflix-acquires-danny-boyle-s-venice-opener-ink",
-      "title": "Netflix Acquires Danny Boyle's Venice Opener 'Ink'",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "acquisition",
-      "sensitivity": "normal",
-      "eventSlug": "danny-boyle-thriller-ink-netflix-deal",
-      "primaryKeyword": "danny boyle ink",
-      "primaryEntity": "Ink (film)",
-      "entities": [
-        "Danny Boyle",
-        "Netflix",
-        "Venice Film Festival"
-      ],
-      "angle": "Danny Boyle's Venice-opening thriller 'Ink' has been acquired by Netflix for distribution.",
-      "tmdbType": "movie",
-      "source": "rss:TheWrap",
-      "sources": [
-        {
-          "outlet": "TheWrap",
-          "tier": 7,
-          "url": "https://www.thewrap.com/creative-content/movies/netflix-lands-us-latin-american-rights-to-danny-boyle-thriller-ink/",
-          "ageMin": 282,
-          "headline": "Danny Boyle Thriller Ink Lands at Netflix Ahead of Venice Debut",
-          "summary": "Jack O’Connell, Guy Pearce and Claire Foy star in the biographical newspaper drama, which is set to open the Venice Film Festival The post Danny Boyle Thriller Ink Lands at Netflix Ahead of Venice Debut appeared first on TheWrap ."
-        },
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/film/global/danny-boyle-rupert-murdoch-movie-ink-bought-us-netflix-1236812563/",
-          "ageMin": 301,
-          "headline": "Netflix Buys Danny Boyle s Rupert Murdoch Movie and Venice Opener Ink",
-          "summary": "Having just been announced as the Venice Film Festival curtain raiser, Danny Boyle s Ink has found a new nome. Netflix has acquired the U.S. and Latin American rights to the film — about the early years of Rupert Murdoch s media empire as he planted a flag in the U.K. and starring Jack O Connell, Guy Pearce and [ ]"
-        }
-      ],
-      "ageMin": 282,
-      "_cand": {
-        "key": "rss:danny-boyle-thriller-ink-lands-at-netflix-ahead-of-venice-de",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 2,
-      "verification": {
-        "tier1Count": 2,
-        "tier1Owners": 2,
-        "outletCount": 2,
-        "outlets": [
-          "TheWrap",
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": null,
-        "framing": "plain",
-        "status": "CONFIRMED",
-        "publishable": true
-      },
-      "priority": 78,
-      "signals": {
-        "recency": 9,
-        "corroboration": 18,
-        "status": 25,
-        "type": 6,
-        "pop": 0,
-        "breakout": 0,
-        "big": 12,
-        "trending": 8,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "music-news-grand-ole-opry-honors-charley-pride",
-      "slug": "grand-ole-opry-to-honor-charley-pride-s-legacy",
-      "title": "Grand Ole Opry to Honor Charley Pride's Legacy",
+      "id": "music-news-in-this-moment-witch-album-crawl-video",
+      "slug": "in-this-moment-announce-new-album-witch-release-crawl-music-video",
+      "title": "In This Moment Announce New Album 'Witch', Release 'Crawl' Music Video",
       "contentType": "music-news",
       "formatTag": "music-news",
       "category": "music",
@@ -745,51 +680,50 @@
       "eventType": "announcement",
       "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "grand-ole-opry-honors-charley-pride",
-      "primaryKeyword": "charley pride",
-      "primaryEntity": "Charley Pride",
+      "eventSlug": "in-this-moment-witch-album-crawl-video",
+      "primaryKeyword": "In This Moment new album",
+      "primaryEntity": "In This Moment",
       "entities": [
-        "Grand Ole Opry",
-        "Darius Rucker"
+        "Witch (album)"
       ],
-      "angle": "The Grand Ole Opry will celebrate the legacy of country music legend Charley Pride.",
+      "angle": "The rock band In This Moment has announced their new album 'Witch' and released the music video for their single 'Crawl'.",
       "tmdbType": "movie",
-      "source": "rss:Billboard",
+      "source": "gnews:The Mosh Network",
       "sources": [
         {
-          "outlet": "Billboard",
-          "tier": 7,
-          "url": "https://www.billboard.com/music/country/grand-ole-opry-charley-pride-opry-100-honors-1236297111/",
-          "ageMin": 276,
-          "headline": "Grand Ole Opry s Opry 100 Honors to Celebrate Charley Pride s Career and Legacy",
-          "summary": "The show will feature appearances from Darius Rucker, Dion Pride and more."
+          "outlet": "The Mosh Network",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5lbDFQUjY4M3ZHOEFpV2VSWDc4cGRlUklIdjZRWXEwQUc4WFV2Mk5GRDlUTEV5NXNUQnJWV2lxZ2J5Vm9kN21jZFJ0Q3M0M19aeEdRanFhemUyQWVLclRhcTJxaktERWIxWVZ5ZUE4b0E?oc=5",
+          "ageMin": 77,
+          "headline": "In This Moment Debut \"Crawl\" Video, Announce New Album 'Witch' - The Mosh Network",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMicEFVX3lxTE5lbDFQUjY4M3ZHOEFpV2VSWDc4cGRlUklIdjZRWXEwQUc4WFV2Mk5GRDlUTEV5NXNUQnJWV2lxZ2J5Vm9kN21jZFJ0Q3M0M19aeEdRanFhemUyQWVLclRhcTJxaktERWIxWVZ5ZUE4b0E?oc=5\" target=\"_blank\" In This Moment Debut \"Crawl\" Video, Announce New Album 'Witch' /a nbsp; nbsp;"
         }
       ],
-      "ageMin": 276,
+      "ageMin": 77,
       "_cand": {
-        "key": "rss:grand-ole-opry-s-opry-100-honors-to-celebrate-charley-pride-",
+        "key": "rss:in-this-moment-debut-crawl-video-announce-new-album-witch-th",
         "popularity": 0,
-        "kind": "rss-news"
+        "kind": "gnews"
       },
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
+        "tier1Count": 0,
+        "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "Billboard"
+          "The Mosh Network"
         ],
-        "maxTier": 7,
+        "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "Billboard",
+        "attribution": "The Mosh Network",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 48,
+      "priority": 51,
       "signals": {
-        "recency": 9,
-        "corroboration": 12,
+        "recency": 16,
+        "corroboration": 8,
         "status": 18,
         "type": 9,
         "pop": 0,
@@ -801,60 +735,61 @@
       "tierClass": "C"
     },
     {
-      "id": "news-king-spawn-filming-starts",
-      "slug": "king-spawn-reboot-officially-begins-filming-at-blumhouse",
-      "title": "King Spawn Reboot Officially Begins Filming at Blumhouse",
+      "id": "news-danny-boyle-ink-acquired-by-netflix",
+      "slug": "danny-boyle-s-ink-sells-to-netflix-in-first-big-sale-way-ahead-of-veni",
+      "title": "Danny Boyle's Ink Sells to Netflix in First Big Sale (Way) Ahead of Venice Premiere",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "king-spawn-filming-starts",
-      "primaryKeyword": "King Spawn filming",
-      "primaryEntity": "King Spawn",
+      "eventSlug": "danny-boyle-ink-acquired-by-netflix",
+      "primaryKeyword": "danny boyle ink netflix",
+      "primaryEntity": "Ink (film)",
       "entities": [
-        "Fantasy Island",
-        "Blumhouse"
+        "Danny Boyle",
+        "Netflix",
+        "Venice Film Festival"
       ],
-      "angle": "The Spawn reboot 'King Spawn' has officially begun filming.",
+      "angle": "Netflix has acquired Danny Boyle's new film ahead of its Venice premiere.",
       "tmdbType": "movie",
-      "source": "gnews:Scified",
+      "source": "rss:IndieWire",
       "sources": [
         {
-          "outlet": "Scified",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNQUVaQkJDSXA5Z0hvdm9PbE5ZWHY3d2VfUlhnMEsyVzlhRC1NNGstMm5kN1dWdXpLaE0yVU5CSDlHUG5oTWwtc2ZjYi1MT1BDclF1eTlhMVFMRlJqZ2ZENDVqTUI3Z2JOTW1JUlVEMVpsUXJGVWhNQ1FTMHZoTWlQaWY2T0p2aEN4YU5Kcmw3Yw?oc=5",
-          "ageMin": 83,
-          "headline": "King Spawn: The Spawn reboot at Blumhouse has finally started filming! - Scified",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMijwFBVV95cUxNQUVaQkJDSXA5Z0hvdm9PbE5ZWHY3d2VfUlhnMEsyVzlhRC1NNGstMm5kN1dWdXpLaE0yVU5CSDlHUG5oTWwtc2ZjYi1MT1BDclF1eTlhMVFMRlJqZ2ZENDVqTUI3Z2JOTW1JUlVEMVpsUXJGVWhNQ1FTMHZoTWlQaWY2T0p2aEN4YU5Kcmw3Yw?oc=5\" target=\"_blank\" King Spawn: The Spawn reboot at Bl"
+          "outlet": "IndieWire",
+          "tier": 7,
+          "url": "https://www.indiewire.com/news/breaking-news/danny-boyle-ink-netflix-venice-sale-1235206128/",
+          "ageMin": 290,
+          "headline": "Danny Boyle s Ink Sells to Netflix in First Big Sale (Way) Ahead of Venice Premiere",
+          "summary": "The film about Larry Lamb, Rupert Murdoch, and the birth of The Sun tabloid is the opening night film at the Biennale."
         }
       ],
-      "ageMin": 83,
+      "ageMin": 290,
       "_cand": {
-        "key": "rss:king-spawn-the-spawn-reboot-at-blumhouse-has-finally-started",
+        "key": "rss:danny-boyle-s-ink-sells-to-netflix-in-first-big-sale-way-ahe",
         "popularity": 0,
-        "kind": "gnews"
+        "kind": "rss-news"
       },
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
+        "tier1Count": 1,
+        "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Scified"
+          "IndieWire"
         ],
-        "maxTier": 5,
+        "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Scified",
+        "attribution": "IndieWire",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 75,
+      "priority": 72,
       "signals": {
-        "recency": 16,
-        "corroboration": 8,
+        "recency": 9,
+        "corroboration": 12,
         "status": 18,
         "type": 9,
         "pop": 0,
@@ -864,6 +799,138 @@
         "softTv": 0
       },
       "tierClass": "B"
+    },
+    {
+      "id": "news-the-life-and-deaths-of-wilson-shedd-film",
+      "slug": "amanda-seyfried-and-scoot-mcnairy-go-dark-and-dangerous-in-tim-blake-n",
+      "title": "Amanda Seyfried and Scoot McNairy Go Dark and Dangerous in Tim Blake Nelson’s New Film",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "high",
+      "eventSlug": "the-life-and-deaths-of-wilson-shedd-film",
+      "primaryKeyword": "the life and deaths of wilson shedd",
+      "primaryEntity": "The Life and Deaths of Wilson Shedd",
+      "entities": [
+        "Amanda Seyfried",
+        "Scoot McNairy",
+        "Tim Blake Nelson"
+      ],
+      "angle": "Amanda Seyfried and Scoot McNairy star in Tim Blake Nelson's new dark thriller.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/amanda-seyfried-scoot-mcnairy-tim-blake-nelson-wilson-shedd-1236650655/",
+          "ageMin": 691,
+          "headline": "Amanda Seyfried and Scoot McNairy Go Dark and Dangerous in Tim Blake Nelson’s New Film",
+          "summary": "The two decorated stars are unlike you've ever seen them before in ‘The Life and Deaths of Wilson Shedd.’ The Hollywood Reporter has the first look."
+        }
+      ],
+      "ageMin": 691,
+      "_cand": {
+        "key": "rss:amanda-seyfried-and-scoot-mcnairy-go-dark-and-dangerous-in-t",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 72,
+      "signals": {
+        "recency": 4,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "softTv": 0
+      },
+      "tierClass": "S"
+    },
+    {
+      "id": "news-descendants-wicked-wonderland-sequel-talk",
+      "slug": "will-there-be-a-sequel-to-descendants-wicked-wonderland-cast-weighs-in",
+      "title": "Will There Be a Sequel to Descendants: Wicked Wonderland? Cast Weighs in on the Cliffhanger Ending",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "descendants-wicked-wonderland-sequel-talk",
+      "primaryKeyword": "descendants wicked wonderland sequel",
+      "primaryEntity": "Descendants: Wicked Wonderland",
+      "entities": [
+        "Disney Channel"
+      ],
+      "angle": "Cast members discuss the possibility of a sequel to 'Descendants: Wicked Wonderland' following its cliffhanger ending.",
+      "tmdbType": "movie",
+      "source": "gnews:People.com",
+      "sources": [
+        {
+          "outlet": "People.com",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQclJBMEN5Z1VVbjdOWEU3dWN2WS1XcG90TDZDejlGTkowckF3N1hDdTdRdjFveE8ydGNtQ2hXN2E5aDhkbjdoZUl4Z0RSZlhVaFlVcUgwcmhuQUZFamJLS05WaTV0TXlYTG5nZmRlb1hIUWtLR3lxUVV5RXltYjVGYWp0bXBBeVB6TVBKTUpLTmE4cjVVaVhiZ1pOdW1hR2sxX25Z?oc=5",
+          "ageMin": 574,
+          "headline": "Will There Be a Sequel to Descendants: Wicked Wonderland ? Cast Weighs in on the Cliffhanger Ending (Exclusive) - People.com",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiowFBVV95cUxQclJBMEN5Z1VVbjdOWEU3dWN2WS1XcG90TDZDejlGTkowckF3N1hDdTdRdjFveE8ydGNtQ2hXN2E5aDhkbjdoZUl4Z0RSZlhVaFlVcUgwcmhuQUZFamJLS05WaTV0TXlYTG5nZmRlb1hIUWtLR3lxUVV5RXltYjVGYWp0bXBBeVB6TVBKTUpLTmE4cjVVaVhiZ1pOdW1hR2sxX25Z?oc=5\" target=\"_blank\" Will The"
+        }
+      ],
+      "ageMin": 574,
+      "_cand": {
+        "key": "rss:will-there-be-a-sequel-to-descendants-wicked-wonderland-cast",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "People.com"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "People.com",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 51,
+      "signals": {
+        "recency": 4,
+        "corroboration": 8,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 6,
+        "trending": 0,
+        "softTv": 0,
+        "radar": 10
+      },
+      "radarKind": "movie-trending",
+      "tierClass": "A"
     },
     {
       "id": "news-peter-jackson-tintin-sequel",
@@ -876,13 +943,12 @@
       "eventType": "casting",
       "sensitivity": "normal",
       "eventSlug": "peter-jackson-tintin-sequel",
-      "primaryKeyword": "peter jackson tintin",
-      "primaryEntity": "Tintin and the Blue Oranges",
+      "primaryKeyword": "peter jackson tintin sequel",
+      "primaryEntity": "The Adventures of Tintin",
       "entities": [
-        "Tintin (film series)",
         "Peter Jackson"
       ],
-      "angle": "Peter Jackson is reportedly set to direct his first film in 12 years, a sequel to 'Tintin'.",
+      "angle": "Peter Jackson is reportedly set to direct a sequel to 'The Adventures of Tintin', marking his first film in 12 years.",
       "tmdbType": "movie",
       "source": "gnews:The Mary Sue",
       "sources": [
@@ -890,12 +956,12 @@
           "outlet": "The Mary Sue",
           "tier": 5,
           "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBYenVJMUlucFQwTlBzTko1eDQ2c2JVaklOM1FIdFJYZEtUUHM1UDcxTkxLZlhxdFkxMXhHNXo1OVZTQmc3NEt3NTRoLXdhT0k2YnV0RVdCckRrVzFkNTFXbENaOHFkR3lQMGUxaTdPRndCZ2xGMnNMU2YtOXc?oc=5",
-          "ageMin": 534,
+          "ageMin": 594,
           "headline": "Peter Jackson Looks Set to Direct His First Movie in 12 Years With Tintin Sequel - The Mary Sue",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMifEFVX3lxTFBYenVJMUlucFQwTlBzTko1eDQ2c2JVaklOM1FIdFJYZEtUUHM1UDcxTkxLZlhxdFkxMXhHNXo1OVZTQmc3NEt3NTRoLXdhT0k2YnV0RVdCckRrVzFkNTFXbENaOHFkR3lQMGUxaTdPRndCZ2xGMnNMU2YtOXc?oc=5\" target=\"_blank\" Peter Jackson Looks Set to Direct His First Movie in 12 Years"
         }
       ],
-      "ageMin": 534,
+      "ageMin": 594,
       "_cand": {
         "key": "rss:peter-jackson-looks-set-to-direct-his-first-movie-in-12-year",
         "popularity": 0,
@@ -931,71 +997,138 @@
       "tierClass": "B"
     },
     {
-      "id": "news-netflix-ben-affleck-ai-startup-interpositive-acquisition",
-      "slug": "netflix-paid-587-million-in-cash-for-ben-affleck-s-ai-startup-interpos",
-      "title": "Netflix Paid $587 Million in Cash for Ben Affleck's AI Startup InterPositive",
+      "id": "news-danny-boyle-ink-netflix-acquisition",
+      "slug": "netflix-buys-danny-boyle-s-rupert-murdoch-movie-and-venice-opener-ink",
+      "title": "Netflix Buys Danny Boyle's Rupert Murdoch Movie and Venice Opener Ink",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "danny-boyle-ink-netflix-acquisition",
+      "primaryKeyword": "Danny Boyle Ink",
+      "primaryEntity": "Ink (2024 film)",
+      "entities": [
+        "Danny Boyle",
+        "Netflix",
+        "Venice Film Festival"
+      ],
+      "angle": "Danny Boyle's Venice opener 'Ink' has been acquired by Netflix for U.S. and Latin American rights.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/film/global/danny-boyle-rupert-murdoch-movie-ink-bought-us-netflix-1236812563/",
+          "ageMin": 361,
+          "headline": "Netflix Buys Danny Boyle s Rupert Murdoch Movie and Venice Opener Ink",
+          "summary": "Having just been announced as the Venice Film Festival curtain raiser, Danny Boyle s Ink has found a new nome. Netflix has acquired the U.S. and Latin American rights to the film — about the early years of Rupert Murdoch s media empire as he planted a flag in the U.K. and starring Jack O Connell, Guy Pearce and [ ]"
+        }
+      ],
+      "ageMin": 361,
+      "_cand": {
+        "key": "rss:netflix-buys-danny-boyle-s-rupert-murdoch-movie-and-venice-o",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 67,
+      "signals": {
+        "recency": 4,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-tom-brady-logan-paul-fanatics-fest-slap",
+      "slug": "tom-brady-slaps-logan-paul-at-fanatics-fest-calls-him-a-dork-and-nerd-",
+      "title": "Tom Brady Slaps Logan Paul at Fanatics Fest, Calls Him a ‘Dork’ and ‘Nerd’ on X",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
-      "eventType": "announcement",
+      "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "netflix-ben-affleck-ai-startup-interpositive-acquisition",
-      "primaryKeyword": "ben affleck ai startup",
-      "primaryEntity": "Ben Affleck",
+      "eventSlug": "tom-brady-logan-paul-fanatics-fest-slap",
+      "primaryKeyword": "tom brady logan paul slap",
+      "primaryEntity": "80 for Brady",
       "entities": [
-        "Netflix",
-        "InterPositive"
+        "Tom Brady",
+        "Logan Paul",
+        "Fanatics Fest"
       ],
-      "angle": "Netflix has acquired Ben Affleck's AI startup InterPositive for a significant sum, as disclosed in a regulatory filing.",
+      "angle": "Tom Brady's interaction with Logan Paul at Fanatics Fest, including a 'slap'.",
       "tmdbType": "movie",
-      "source": "rss:IndieWire",
+      "source": "rss:Variety",
       "sources": [
         {
-          "outlet": "IndieWire",
+          "outlet": "Variety",
           "tier": 7,
-          "url": "https://www.indiewire.com/news/breaking-news/danny-boyle-ink-netflix-venice-sale-1235206128/",
-          "ageMin": 230,
-          "headline": "Danny Boyle s Ink Sells to Netflix in First Big Sale (Way) Ahead of Venice Premiere",
-          "summary": "The film about Larry Lamb, Rupert Murdoch, and the birth of The Sun tabloid is the opening night film at the Biennale."
+          "url": "https://variety.com/2026/sports/news/tom-brady-slaps-logan-paul-fanatics-fest-fans-staged-1236815284/",
+          "ageMin": 36,
+          "headline": "Tom Brady Slaps Logan Paul at Fanatics Fest, Calls Him a ‘Dork’ and ‘Nerd’ on X",
+          "summary": "The beef between Tom Brady and Logan Paul continues. On Friday, the future NFL Hall of Famer and YouTuber-turned-WWE superstar shared the stage at Fanatics Fest in New York. But when their panel ended, the sports stars got into a heated exchange that ended with Brady slapping Paul in the face. New York Knicks star [ ]"
         },
         {
-          "outlet": "TheWrap",
+          "outlet": "THR",
           "tier": 7,
-          "url": "https://www.thewrap.com/industry-news/deals-ma/netflix-ben-affleck-interpositive-purchase-price-587-million/",
-          "ageMin": 314,
-          "headline": "Netflix Paid $587 Million in Cash for Ben Affleck s AI Startup InterPositive",
-          "summary": "The figure was disclosed in a regulatory filing by the streamer on Friday The post Netflix Paid $587 Million in Cash for Ben Affleck s AI Startup InterPositive appeared first on TheWrap ."
+          "url": "https://www.hollywoodreporter.com/news/general-news/tom-brady-logan-paul-slap-fanatics-fest-wwe-promo-1236651395/",
+          "ageMin": 86,
+          "headline": "Tom Brady and Logan Paul Get Into Heated Exchange That Ends With a Slap. But Was It Fake?",
+          "summary": "A Fanatics Fest moment went viral just hours after the legendary quarterback teased his desire to play a villain on Logan’s home turf in the WWE."
         }
       ],
-      "ageMin": 230,
+      "ageMin": 36,
       "_cand": {
-        "key": "rss:danny-boyle-s-ink-sells-to-netflix-in-first-big-sale-way-ahe",
+        "key": "rss:tom-brady-slaps-logan-paul-at-fanatics-fest-calls-him-a-dork",
         "popularity": 0,
         "kind": "rss-news"
       },
       "corroborationCount": 2,
       "verification": {
         "tier1Count": 2,
-        "tier1Owners": 2,
+        "tier1Owners": 1,
         "outletCount": 2,
         "outlets": [
-          "IndieWire",
-          "TheWrap"
+          "Variety",
+          "THR"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": null,
-        "framing": "plain",
-        "status": "CONFIRMED",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 69,
+      "priority": 73,
       "signals": {
-        "recency": 9,
+        "recency": 24,
         "corroboration": 18,
-        "status": 25,
-        "type": 9,
+        "status": 18,
+        "type": 5,
         "pop": 0,
         "breakout": 0,
         "big": 0,
@@ -1003,6 +1136,71 @@
         "softTv": 0
       },
       "tierClass": "B"
+    },
+    {
+      "id": "news-john-kirby-dies",
+      "slug": "john-kirby-dies-acting-coach-bruno-kirby-s-brother-bruce-kirby-s-son-w",
+      "title": "John Kirby Dies: Acting Coach, Bruno Kirby's Brother Bruce Kirby's Son Was 75",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "death",
+      "sensitivity": "high",
+      "eventSlug": "john-kirby-dies",
+      "primaryKeyword": "john kirby death",
+      "primaryEntity": "John Kirby",
+      "entities": [
+        "Bruno Kirby",
+        "Bruce Kirby"
+      ],
+      "angle": "The passing of John Kirby, an acting coach and son of actor Bruce Kirby.",
+      "tmdbType": "movie",
+      "source": "rss:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/john-kirby-dead-acting-coach-bruno-kirby-brother-bruce-kirby-son-1236997429/",
+          "ageMin": 26,
+          "headline": "John Kirby Dies: Acting Coach, Bruno Kirby s Brother Bruce Kirby s Son Was 75",
+          "summary": "John Kirby, an acting coach, brother of City Slickers star Bruno Kirby, and the son of Bruce Kirby, has died. He was 75. The actor and acting coach died the morning of Wednesday, July 15, three years after being diagnosed with ALS. I am here to officially, with a broken heart, announce the passing of [ ]"
+        }
+      ],
+      "ageMin": 26,
+      "_cand": {
+        "key": "rss:john-kirby-dies-acting-coach-bruno-kirby-s-brother-bruce-kir",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 68,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "softTv": 0
+      },
+      "tierClass": "S"
     }
   ]
 }
