@@ -1,0 +1,115 @@
+{
+  "ts": "2026-07-18T01:02:10.642Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    "dwts-gleb-savchenko-claims-ex-wife-abducted-kids-moved-to-hong-kong"
+  ],
+  "topics": 2,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 1,
+  "blocked": 0,
+  "costUSD": 0.0154,
+  "costPerPublished": 0.0154,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 8,
+      "in": 15488,
+      "out": 1474,
+      "usd": 0.0083314
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 920,
+      "out": 412,
+      "usd": 0.00030568
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 6,
+      "in": 16162,
+      "out": 5416,
+      "usd": 0.005926194699999999
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 5,
+      "in": 5424,
+      "out": 737,
+      "usd": 0.0008372
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2324,
+      "out": 224,
+      "usd": 0.0012571999999999998,
+      "ms": 1453
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 920,
+      "out": 412,
+      "usd": 0.00015696,
+      "ms": 8723
+    },
+    "writer": {
+      "calls": 5,
+      "errors": 0,
+      "in": 15487,
+      "out": 5121,
+      "usd": 0.0053031499999999995,
+      "ms": 122887
+    },
+    "verify": {
+      "calls": 7,
+      "errors": 0,
+      "in": 13164,
+      "out": 1250,
+      "usd": 0.0070742,
+      "ms": 8752
+    },
+    "judge": {
+      "calls": 2,
+      "errors": 0,
+      "in": 2757,
+      "out": 505,
+      "usd": 0.00047769999999999996,
+      "ms": 2267
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 675,
+      "out": 295,
+      "usd": 0.00025555,
+      "ms": 8094
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 376,
+      "out": 111,
+      "usd": 0.000082,
+      "ms": 771
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 191,
+      "out": 36,
+      "usd": 0.0000335,
+      "ms": 397
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2100,
+      "out": 85,
+      "usd": 0.000244,
+      "ms": 1654
+    }
+  }
+}
