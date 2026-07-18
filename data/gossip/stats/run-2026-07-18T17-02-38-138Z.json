@@ -1,0 +1,138 @@
+{
+  "ts": "2026-07-18T17:02:38.138Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "queen-naija-confronts-clarence-nyc-over-dreamdoll-dorm-visit",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [
+        "lede-entity-missing:logged"
+      ],
+      "headline": [
+        "metaDescription",
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 0
+    }
+  ],
+  "topics": 1,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 0,
+  "costUSD": 0.015736,
+  "costPerPublished": 0.015736,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 6,
+      "in": 14703,
+      "out": 1777,
+      "usd": 0.008853399999999999
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 1601,
+      "out": 1181,
+      "usd": 0.0003895629
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 5,
+      "in": 18614,
+      "out": 4921,
+      "usd": 0.00561414945
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 8,
+      "in": 6247,
+      "out": 635,
+      "usd": 0.0008786999999999999
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2319,
+      "out": 223,
+      "usd": 0.0012531999999999999,
+      "ms": 1771
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1601,
+      "out": 1181,
+      "usd": 0.00035666999999999996,
+      "ms": 11203
+    },
+    "writer": {
+      "calls": 4,
+      "errors": 0,
+      "in": 17911,
+      "out": 4638,
+      "usd": 0.0056964500000000005,
+      "ms": 127873
+    },
+    "verify": {
+      "calls": 5,
+      "errors": 0,
+      "in": 12384,
+      "out": 1554,
+      "usd": 0.0076002,
+      "ms": 8048
+    },
+    "judge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1919,
+      "out": 266,
+      "usd": 0.0002983,
+      "ms": 1223
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 703,
+      "out": 283,
+      "usd": 0.00025791000000000003,
+      "ms": 7295
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 360,
+      "out": 115,
+      "usd": 0.000082,
+      "ms": 863
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 187,
+      "out": 56,
+      "usd": 0.0000411,
+      "ms": 496
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2637,
+      "out": 88,
+      "usd": 0.0002989,
+      "ms": 2196
+    },
+    "linker": {
+      "calls": 4,
+      "errors": 0,
+      "in": 1144,
+      "out": 110,
+      "usd": 0.0001584,
+      "ms": 1737
+    }
+  }
+}
