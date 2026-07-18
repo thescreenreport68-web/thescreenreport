@@ -1,0 +1,79 @@
+{
+ "runId": "run-2026-07-18T21-32-10",
+ "mode": "live",
+ "startedAt": "2026-07-18T21:32:10.354Z",
+ "films": 8,
+ "published": [],
+ "held": [],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "the-odyssey-ev-opening×BO-OPENING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "chained-ev-streaming-arrival×NOW-STREAMING",
+   "reason": "film attempt budget exhausted today (3 paid tries/film/day)"
+  },
+  {
+   "tag": "potential-ev-streaming-arrival×NOW-STREAMING",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "young-washington-bo-update×BO-UPDATE",
+   "reason": "film attempt budget exhausted today (3 paid tries/film/day)"
+  },
+  {
+   "tag": "the-invite-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "obsession-bo-update×BO-UPDATE",
+   "reason": "film attempt budget exhausted today (3 paid tries/film/day)"
+  },
+  {
+   "tag": "backrooms-bo-update×BO-UPDATE",
+   "reason": "film attempt budget exhausted today (3 paid tries/film/day)"
+  },
+  {
+   "tag": "jackass-best-and-last-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  }
+ ],
+ "blocked": [],
+ "paced": {
+  "tokens": 4,
+  "behind": true,
+  "expected": 12.6,
+  "allow": 2
+ },
+ "queueBuilt": 4,
+ "zeroStreak": 12,
+ "daySpend": {
+  "laDay": "2026-07-18",
+  "usd": 0.25976
+ },
+ "finishedAt": "2026-07-18T21:32:17.856Z",
+ "meter": {
+  "byRole": {
+   "categorize": {
+    "calls": 3,
+    "errors": 0,
+    "in": 1146,
+    "out": 558,
+    "usd": 0.00034,
+    "ms": 2319
+   },
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3356,
+    "out": 654,
+    "usd": 0.00021,
+    "ms": 2199
+   }
+  },
+  "totalUsd": 0.00055
+ },
+ "openrouterTotalUsd": 0.00055
+}
