@@ -256,13 +256,23 @@ function fixLede(body) {
   return lines.join("\n");
 }
 
-// Bare template-label LINES ("The Movie: …", "Closing Thoughts: …" as a lone non-heading line) are pure
-// prompt scaffold the writer leaked — DROP the line (deterministic salvage). The scaffoldViolations gate
-// stays as the wall for any label that survives in a form this can't safely strip.
+// Bare template-label LINES are pure prompt scaffold the writer leaked — DROP the line (deterministic
+// salvage). ONE pattern, shared with the scaffoldViolations wall below, so the salvage and the wall can
+// never disagree about what a label is.
+//
+// The label may appear WITH a colon ("The Movie: …") or ALONE on its own line ("The Movie"). The original
+// pattern required the colon, so a bare label was neither stripped NOR blocked and shipped as a stray
+// orphan line above the lede — 3 of 8 live articles on 2026-07-17 ("The Movie", "What It Is"). The
+// `(:|$)` alternation closes that; a real sentence that merely STARTS with the words ("The Movie was a
+// hit") still fails the match and is never touched. Markdown emphasis is tolerated (**The Movie**);
+// markdown HEADINGS ("## The Numbers") never match — they start with '#', which is intentional and kept.
+const LABEL_LINE_RE = /^(The (Movie|Series|Film)|Closing (Line|Thoughts?)|What It Is|The Cast|The Appeal|The Numbers|The Run|Lead)\s*(:|$)/;
+const isLabelLine = (line) => LABEL_LINE_RE.test(String(line).trim().replace(/^[*_]+|[*_]+$/g, "").trim());
+
 function stripLabelLines(body) {
   return String(body || "").split("\n")
-    .filter((line) => !/^(The (Movie|Series|Film)|Closing (Line|Thoughts?)|What It Is|The Cast|The Appeal|The Numbers|The Run|Lead)\s*:/.test(line.trim()))
-    .join("\n").replace(/\n{3,}/g, "\n\n");
+    .filter((line) => !isLabelLine(line))
+    .join("\n").replace(/\n{3,}/g, "\n\n").trim();
 }
 
 // A TRENDING-TV subject is a series, not a movie — correct the schema type the writer emits.
@@ -311,7 +321,7 @@ export function scaffoldViolations(body, fm) {
       let j = i + 1;
       while (j < lines.length && !lines[j].trim()) j++;
       if (j >= lines.length || /^#{1,6}\s/.test(lines[j].trim())) v.push(`scaffold: empty section "${t.slice(0, 40)}"`);
-    } else if (/^(The (Movie|Series|Film)|Closing (Line|Thoughts?)|What It Is|The Cast|The Appeal|The Numbers|The Run|Lead)\s*:/.test(t)) {
+    } else if (isLabelLine(t)) { // same pattern the stripper uses — salvage and wall can never disagree
       v.push(`scaffold: bare template label line "${t.slice(0, 40)}"`);
     }
   }

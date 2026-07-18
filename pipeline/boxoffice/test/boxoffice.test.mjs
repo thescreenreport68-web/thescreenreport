@@ -1145,6 +1145,99 @@ await ta("dailyAudit: samples yesterday's live articles once per day, maps issue
   fs.rmSync(dir7, { recursive: true, force: true });
 });
 
+// Mirror of assemble's internal label pattern, so the regression test asserts the same contract.
+const isLabelLineX = (line) => /^(The (Movie|Series|Film)|Closing (Line|Thoughts?)|What It Is|The Cast|The Appeal|The Numbers|The Run|Lead)\s*(:|$)/.test(String(line).trim().replace(/^[*_]+|[*_]+$/g, "").trim());
+
+// ── REGRESSION: bare label lines (the 2026-07-18 live audit finding) ─────────────────────────────
+console.log("regression — bare template label lines (no colon)");
+
+t("scaffoldViolations BLOCKS a bare label line with no colon (the live 'The Movie' / 'What It Is' leak)", () => {
+  const fm = { keyTakeaways: ["a", "b", "c"], faq: [{ q: "q", a: "a" }, { q: "q2", a: "a2" }] };
+  const filler = "word ".repeat(200);
+  // Exactly the shape that shipped live: blank line, bare label, then the real lede.
+  const bare = `\nThe Movie\nWoody and the gang are back. ${filler}`;
+  assert.ok(scaffoldViolations(bare, fm).some((x) => /bare template label/.test(x)), "bare 'The Movie' must be caught");
+  assert.ok(scaffoldViolations(`\nWhat It Is\nA documentary. ${filler}`, fm).some((x) => /bare template label/.test(x)), "bare 'What It Is' must be caught");
+  // Colon form still caught (the original behavior must not regress).
+  assert.ok(scaffoldViolations(`The Movie: Toy Story 5\n${filler}`, fm).some((x) => /bare template label/.test(x)));
+  // A REAL sentence that merely starts with those words is NOT a violation.
+  assert.ok(!scaffoldViolations(`The Movie was a monster hit this weekend. ${filler}`, fm).some((x) => /bare template label/.test(x)), "real prose must survive");
+  // A markdown HEADING is legitimate structure, never a violation.
+  assert.ok(!scaffoldViolations(`## The Numbers\n\nIt grossed a lot. ${filler}`, fm).some((x) => /bare template label/.test(x)), "headings must survive");
+});
+
+await ta("assembled article never ships a bare label line above the lede", async () => {
+  const dir8 = fs.mkdtempSync(path.join(os.tmpdir(), "bo-label-"));
+  const body = `\nThe Movie\nWoody, Buzz and the gang return for a new adventure that lands with real force. ${"word ".repeat(200)}`;
+  const job = {
+    film: { title: "Toy Story 5", tmdbId: 1, dailyChart: { cume: "$413,321,921", dailyGross: "$2,715,354", theaters: "3,575", dayInRelease: "Day 27" } },
+    angle: { form: "BO-UPDATE" },
+    trigger: { eventSlug: "toy-story-5-bo-update-d27", sources: [] },
+    gathered: { numbers: [], records: [], cast: [], narrative: "", sources: [], outletCount: 3, cume: "$413,321,921" },
+    boxData: {},
+    article: { title: "Toy Story 5 Box Office Day 27", dek: "A dek about the run.", body, keyTakeaways: ["a", "b", "c"], faq: [{ q: "How much?", a: "A lot of money indeed, quite a lot." }, { q: "Where?", a: "In theaters everywhere right now." }], about: [], tags: ["Toy Story 5"] },
+    qa: { score: 80 },
+    image: { url: "https://x/i.jpg", alt: "Toy Story 5", credit: "TMDB", width: 100, height: 100 },
+  };
+  const out = await writeBoxOfficeArticle(job, { dir: dir8 });
+  // The assembled markdown is out.md (frontmatter + body); take the body after the closing '---'.
+  const mdLines = String(out.md || "").split("\n");
+  const fmEnd = mdLines.findIndex((l, i) => i > 0 && l.trim() === "---");
+  const bodyLines = mdLines.slice(fmEnd + 1);
+  const firstProse = bodyLines.map((l) => l.trim()).filter((l) => l && !l.startsWith("#"))[0] || "";
+  assert.ok(!isLabelLineX(firstProse), `body must not open with a bare label, got: "${firstProse}"`);
+  assert.ok(/Woody/.test(firstProse), "the real lede must lead: " + firstProse);
+  assert.ok(!bodyLines.some((l) => isLabelLineX(l)), "no bare label anywhere in the body");
+  fs.rmSync(dir8, { recursive: true, force: true });
+});
+
+await ta("cost pre-gate: an already-covered chart film is skipped BEFORE any paid call (no gatherer, no data)", async () => {
+  const dir9 = fs.mkdtempSync(path.join(os.tmpdir(), "bo-pre-"));
+  const nowMs = Date.parse("2026-07-17T20:00:00Z");
+  const st = { published: [], parked: [], zeroStreak: 0, daySpend: null, pace: { tokens: 4, lastMs: nowMs }, lastAuditDay: null, file: path.join(dir9, "store.json") };
+  // Tracked: Moana covered earlier TODAY at $59.2M; the chart still shows the same cume.
+  const tracked = { films: { moana: { title: "Moana", lastDomesticRaw: 59_200_000, lastArticleAt: "2026-07-17T14:00:00Z", articles: [] } } };
+  let paidCalls = 0;
+  const found = [{
+    film: { title: "Moana", tmdbId: null, via: "daily-chart", dailyChart: { cume: "$59,200,000", dailyGross: "$1,000,000", dayInRelease: "Day 6" } },
+    trigger: { eventSlug: "moana-bo-update", priority: 90, sources: [], signals: {} },
+    angle: { form: "BO-UPDATE" },
+  }];
+  const report = await boRun({
+    storeImpl: st, trackedImpl: tracked, nowMs, limit: 1,
+    findImpl: async () => found,
+    readQueueImpl: () => ({ events: [] }), runFindImpl: async () => ({ events: [] }),
+    dataImpl: async () => { paidCalls++; }, gatherImpl: async () => { paidCalls++; },
+    synthImpl: async () => { paidCalls++; }, writeArticleImpl: async () => { paidCalls++; },
+    qaReviewImpl: async () => { paidCalls++; }, imageImpl: async () => { paidCalls++; },
+  });
+  assert.equal(paidCalls, 0, "NO paid stage may run for an already-covered chart film");
+  assert.ok(report.skipped.some((s) => /pre-gate \(free\).*already covered today/.test(s.reason)), "skipped by the free pre-gate: " + JSON.stringify(report.skipped));
+  fs.rmSync(dir9, { recursive: true, force: true });
+});
+
+await ta("cost pre-gate does NOT block a genuinely material chart update (the number advanced)", async () => {
+  const dir10 = fs.mkdtempSync(path.join(os.tmpdir(), "bo-pre2-"));
+  const nowMs = Date.parse("2026-07-17T20:00:00Z");
+  const st = { published: [], parked: [], zeroStreak: 0, daySpend: null, pace: { tokens: 4, lastMs: nowMs }, lastAuditDay: null, file: path.join(dir10, "store.json") };
+  const tracked = { films: { moana: { title: "Moana", lastDomesticRaw: 54_900_000, lastArticleAt: "2026-07-16T14:00:00Z", articles: [] } } };
+  let reachedData = false;
+  const found = [{
+    film: { title: "Moana", tmdbId: null, via: "daily-chart", dailyChart: { cume: "$59,200,000", dailyGross: "$4,300,000", dayInRelease: "Day 6" } },
+    trigger: { eventSlug: "moana-bo-update", priority: 90, sources: [], signals: {} },
+    angle: { form: "BO-UPDATE" },
+  }];
+  await boRun({
+    storeImpl: st, trackedImpl: tracked, nowMs, limit: 1,
+    findImpl: async () => found,
+    readQueueImpl: () => ({ events: [] }), runFindImpl: async () => ({ events: [] }),
+    dataImpl: async (job) => { reachedData = true; job.boxData = {}; },
+    gatherImpl: async (job) => { job.gatherFail = "under floor: stop here for the test"; },
+  });
+  assert.ok(reachedData, "a material advance ($54.9M → $59.2M, new day) must proceed past the pre-gate");
+  fs.rmSync(dir10, { recursive: true, force: true });
+});
+
 // ── summary ──────────────────────────────────────────────────────────────────────────────────────
 console.log(`\n━━ boxoffice suite: ${pass}/${pass + fail} passed ━━`);
 if (fail) process.exit(1);

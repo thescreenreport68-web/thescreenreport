@@ -147,6 +147,19 @@ export async function boRun({
       if (angle.form !== "BO-UPDATE" && alreadyPublished(store, trigger.eventSlug, angle.form)) { report.skipped.push({ tag, reason: "already published" }); continue; }
       if (parkedTries(store, trigger.eventSlug, angle.form) === Infinity) { report.skipped.push({ tag, reason: "parked dead" }); continue; }
       if (parkCooling(store, trigger.eventSlug, angle.form, { now: new Date(now) })) { report.skipped.push({ tag, reason: "park cooling (held recently — retry after 2h)" }); continue; }
+      // ── CHEAP MATERIALITY PRE-GATE (cost, 2026-07-18 live audit) ──
+      // Materiality used to be evaluated only AFTER the paid gatherer, so every already-covered chart film
+      // paid for TMDB + trade extraction on EVERY tick and was then held: "already covered today" was 43 of
+      // ~50 holds in a 48-tick sample and ~86% of all spend went to stories that never published.
+      // For a chart-driven film this is decidable for FREE: currentMetrics() takes `domestic` from
+      // dailyChart.cume FIRST, and the finder already attached that cume — so with empty gathered/boxData
+      // the domestic figure, the baseline, and the milestone math are IDENTICAL to the post-gatherer call.
+      // We therefore skip only on a NON-material verdict; anything material proceeds down the full path
+      // exactly as before (the trade report can still enrich a story we've decided is worth telling).
+      if ((FORMS[angle.form] || {}).tracked && film?.dailyChart?.cume) {
+        const pre = isMaterial(film, {}, {}, tracked, { now: new Date(now) });
+        if (!pre.material) { report.skipped.push({ tag, reason: `pre-gate (free): ${pre.reason}` }); continue; }
+      }
       if (paceMs && (report.published.length + report.rejected.length + report.held.length)) await sleep(paceMs);
       console.log(`\n■ ${tag} (heat ${trigger.priority}, via ${film.via})`);
 
