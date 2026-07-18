@@ -228,5 +228,15 @@
     "stage": "script",
     "reason": "script failed lint after 3 attempts: sentence-too-long(21 words — split it: \"Gleb says he has had to travel to Hong), too-long(156 words (max 136)), duration(~50s with pauses (max 47)), ending-ask(final sentence must be the sends ask (like \"Send this to a S)",
     "at": "2026-07-18T15:15:23.378Z"
+  },
+  "evil-dead-burn-director-breaks-down-the-film-s-brutal-controversial-style": {
+    "stage": "sensitive",
+    "reason": "Content involves unverified animal harm (dog killed on set) and extreme graphic violence (impalement, hot wax), which falls under the block category for unverified death/abuse involving animals.",
+    "at": "2026-07-18T15:18:02.475Z"
+  },
+  "california-ag-rob-bonta-denies-cnn-spinoff-would-end-paramount-merger-lawsu": {
+    "stage": "script",
+    "reason": "script failed lint after 3 attempts: hook-too-long(17 words (max 16)), ending-ask(final sentence must be the comments ask (like \"Let us know i), ending-question(the sentence before the ask must be the audience question (e)",
+    "at": "2026-07-18T15:18:36.430Z"
   }
 }
