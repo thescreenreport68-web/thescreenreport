@@ -13,7 +13,7 @@ import { fidelityLocks, review as qaReview, classifyBlocks, findTemplateHeadings
 import { castTrustworthy } from "../boxofficeData.mjs";
 import { buildBoxOfficeMarkdown, writeBoxOfficeArticle, seoFinish, scaffoldViolations } from "../assemble.mjs";
 import { boRun } from "../borun.mjs";
-import { boKey, alreadyPublished, coveredEventSlugs, parkAngle as parkAngleX, parkedTries as parkedTriesX, parkCooling } from "../store.mjs";
+import { boKey, alreadyPublished, coveredEventSlugs, parkAngle as parkAngleX, parkedTries as parkedTriesX, parkCooling, filmAttemptBudgetLeft, bumpFilmAttempt } from "../store.mjs";
 import { run as gatherRun } from "../agents/gatherer.mjs";
 import { run as writerRun } from "../agents/writer.mjs";
 import { readChartCache, writeChartCache } from "../dailyChart.mjs";
@@ -1236,6 +1236,38 @@ await ta("cost pre-gate does NOT block a genuinely material chart update (the nu
   });
   assert.ok(reachedData, "a material advance ($54.9M → $59.2M, new day) must proceed past the pre-gate");
   fs.rmSync(dir10, { recursive: true, force: true });
+});
+
+// ── BULLETPROOFING — escalating cooldown, film attempt budget, hardened verdict wall ─────────────
+console.log("bulletproofing — escalating cooldown, film budget, verdict wall");
+
+t("parkCooling ESCALATES: 2h after try 1, 4h after try 2", () => {
+  const mk = (tries) => ({ published: [], parked: [{ key: "e|BO-UPDATE", eventSlug: "e", form: "BO-UPDATE", tries, at: "2026-07-18T12:00:00Z" }], file: "/tmp/x.json" });
+  assert.equal(parkCooling(mk(1), "e", "BO-UPDATE", { now: new Date("2026-07-18T14:30:00Z") }), false, "try1 free after 2.5h");
+  assert.equal(parkCooling(mk(2), "e", "BO-UPDATE", { now: new Date("2026-07-18T14:30:00Z") }), true, "try2 still cooling at 2.5h");
+  assert.equal(parkCooling(mk(2), "e", "BO-UPDATE", { now: new Date("2026-07-18T16:30:00Z") }), false, "try2 free after 4.5h");
+});
+
+t("film attempt budget: 3 paid tries per film per LA day across ALL slugs/forms, resets on day roll", () => {
+  const dirB = fs.mkdtempSync(path.join(os.tmpdir(), "bo-budget-"));
+  const st = { published: [], parked: [], attempts: null, file: path.join(dirB, "store.json") };
+  const now = new Date("2026-07-18T18:00:00Z");
+  assert.equal(filmAttemptBudgetLeft(st, "The Odyssey", { now }), 3);
+  bumpFilmAttempt(st, "The Odyssey", { now });           // ev-opening
+  bumpFilmAttempt(st, "the odyssey", { now });           // ev-weekend (case-insensitive same film)
+  bumpFilmAttempt(st, "The Odyssey", { now });           // ev-record
+  assert.equal(filmAttemptBudgetLeft(st, "The Odyssey", { now }), 0, "4th attempt refused");
+  assert.equal(filmAttemptBudgetLeft(st, "Moana", { now }), 3, "other films unaffected");
+  const nextDay = new Date("2026-07-19T18:00:00Z");
+  assert.equal(filmAttemptBudgetLeft(st, "The Odyssey", { now: nextDay }), 3, "resets at LA day roll");
+  fs.rmSync(dirB, { recursive: true, force: true });
+});
+
+t("hardened verdict wall: the legacy-sweep phrasings are now cut (attribution still rescues)", () => {
+  const cuts = verdictCuts("The film faces an uphill battle to achieve lasting success. Its struggle to differentiate itself has impacted its reception. Many viewers see it as a near-duplicate of the original.");
+  assert.ok(cuts.length >= 2, "unattributed sweep phrasings cut: " + cuts.length);
+  const rescued = verdictCuts("According to Variety, the film faces an uphill battle this weekend.");
+  assert.equal(rescued.length, 0, "attributed verdict stays — that is journalism");
 });
 
 // ── summary ──────────────────────────────────────────────────────────────────────────────────────

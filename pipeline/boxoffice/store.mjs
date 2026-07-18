@@ -17,15 +17,15 @@ export const boKey = (eventSlug, form) => `${eventSlug || "no-event"}|${form}`;
 export function loadStore(file = STORE_PATH) {
   try {
     const s = JSON.parse(fs.readFileSync(file, "utf8"));
-    return { published: s.published || [], parked: s.parked || [], zeroStreak: s.zeroStreak || 0, daySpend: s.daySpend || null, pace: s.pace || null, lastAuditDay: s.lastAuditDay || null, file };
+    return { published: s.published || [], parked: s.parked || [], zeroStreak: s.zeroStreak || 0, daySpend: s.daySpend || null, pace: s.pace || null, lastAuditDay: s.lastAuditDay || null, attempts: s.attempts || null, file };
   } catch {
-    return { published: [], parked: [], zeroStreak: 0, daySpend: null, pace: null, lastAuditDay: null, file };
+    return { published: [], parked: [], zeroStreak: 0, daySpend: null, pace: null, lastAuditDay: null, attempts: null, file };
   }
 }
 
 function save(store) {
   fs.mkdirSync(path.dirname(store.file), { recursive: true });
-  const out = { published: store.published.slice(-CAP), parked: store.parked.slice(-500), zeroStreak: store.zeroStreak || 0, daySpend: store.daySpend || null, pace: store.pace || null, lastAuditDay: store.lastAuditDay || null };
+  const out = { published: store.published.slice(-CAP), parked: store.parked.slice(-500), zeroStreak: store.zeroStreak || 0, daySpend: store.daySpend || null, pace: store.pace || null, lastAuditDay: store.lastAuditDay || null, attempts: store.attempts || null };
   fs.writeFileSync(store.file, JSON.stringify(out, null, 1));
 }
 
@@ -97,10 +97,32 @@ export function parkedTries(store, eventSlug, form, { now = new Date() } = {}) {
 
 // PARK COOLDOWN (P3 — the retry-burn fix): a freshly-parked entry (held this tick) must not re-attempt on
 // the very next tick — the same thin story re-burned writer+judge every hour until its 3-strike death
-// (~$0.06-0.09/attempt). A parked-but-not-dead entry cools for 2h; the material is usually richer by then.
+// (~$0.06-0.09/attempt). ESCALATING: 2h after the first hold, 4h after the second — a story that failed
+// twice needs materially fresher trade coverage, not another hourly poke.
 export function parkCooling(store, eventSlug, form, { now = new Date(), cooldownMs = 2 * 3600e3 } = {}) {
   const p = store.parked.find((x) => x.key === boKey(eventSlug, form));
-  return !!(p && !p.dead && (p.tries || 0) >= 1 && p.at && (now.getTime() - Date.parse(p.at)) < cooldownMs);
+  if (!p || p.dead || !(p.tries >= 1) || !p.at) return false;
+  return (now.getTime() - Date.parse(p.at)) < cooldownMs * Math.max(1, p.tries);
+}
+
+// FILM-LEVEL DAILY ATTEMPT BUDGET (bulletproofing — the Odyssey lesson): the per-slug park budget lets one
+// hot film burn 3 tries × N slugs (ev-opening, ev-weekend, ev-record, chart…) = 20 paid attempts in a day.
+// Cap PAID pipeline attempts per FILM per LA day, across every slug and form. The cap resets at the LA day
+// roll, when fresh trade numbers exist and one clean attempt usually publishes.
+const FILM_ATTEMPTS_PER_DAY = 3;
+const laDayA = (d) => new Intl.DateTimeFormat("en-CA", { timeZone: "America/Los_Angeles" }).format(d);
+export function filmAttemptBudgetLeft(store, filmTitle, { now = new Date() } = {}) {
+  const day = laDayA(now);
+  if (!store.attempts || store.attempts.laDay !== day) return FILM_ATTEMPTS_PER_DAY;
+  return FILM_ATTEMPTS_PER_DAY - (store.attempts.byFilm?.[String(filmTitle).toLowerCase()] || 0);
+}
+export function bumpFilmAttempt(store, filmTitle, { now = new Date() } = {}) {
+  const day = laDayA(now);
+  if (!store.attempts || store.attempts.laDay !== day) store.attempts = { laDay: day, byFilm: {} };
+  const k = String(filmTitle).toLowerCase();
+  store.attempts.byFilm[k] = (store.attempts.byFilm[k] || 0) + 1;
+  save(store);
+  return store.attempts.byFilm[k];
 }
 
 // DAILY SPEND CAP (owner cost mandate): running LA-day spend, persisted in the store. borun refuses to
