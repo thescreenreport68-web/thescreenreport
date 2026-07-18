@@ -1,0 +1,137 @@
+{
+  "ts": "2026-07-18T19:02:04.845Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "tia-mowry-and-cory-hardrict-set-new-rules-for-co-parenting-visits",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [
+        "metaDescription-soft:logged"
+      ],
+      "headline": [
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 0
+    }
+  ],
+  "topics": 1,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 0,
+  "costUSD": 0.009733,
+  "costPerPublished": 0.009733,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 6,
+      "in": 12763,
+      "out": 563,
+      "usd": 0.0052363999999999996
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 976,
+      "out": 917,
+      "usd": 0.00037654
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 5,
+      "in": 12943,
+      "out": 4220,
+      "usd": 0.0033365770000000003
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 8,
+      "in": 5447,
+      "out": 598,
+      "usd": 0.0007839
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2639,
+      "out": 192,
+      "usd": 0.0012716999999999997,
+      "ms": 1379
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 976,
+      "out": 917,
+      "usd": 0.0002529,
+      "ms": 11676
+    },
+    "writer": {
+      "calls": 4,
+      "errors": 0,
+      "in": 12252,
+      "out": 3910,
+      "usd": 0.00414736,
+      "ms": 59289
+    },
+    "verify": {
+      "calls": 5,
+      "errors": 0,
+      "in": 10124,
+      "out": 371,
+      "usd": 0.0039647,
+      "ms": 4156
+    },
+    "judge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1594,
+      "out": 202,
+      "usd": 0.0002402,
+      "ms": 1179
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 691,
+      "out": 310,
+      "usd": 0.00026433000000000007,
+      "ms": 14987
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 390,
+      "out": 137,
+      "usd": 0.00009380000000000002,
+      "ms": 883
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 199,
+      "out": 49,
+      "usd": 0.0000395,
+      "ms": 1045
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2095,
+      "out": 86,
+      "usd": 0.0002439,
+      "ms": 2080
+    },
+    "linker": {
+      "calls": 4,
+      "errors": 0,
+      "in": 1169,
+      "out": 124,
+      "usd": 0.0001665,
+      "ms": 2294
+    }
+  }
+}
