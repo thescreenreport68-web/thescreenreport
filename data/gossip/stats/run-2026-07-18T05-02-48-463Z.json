@@ -1,0 +1,131 @@
+{
+  "ts": "2026-07-18T05:02:48.463Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    "jelly-roll-and-bunnie-xo-finalize-divorce-2-months-after-breakup"
+  ],
+  "topics": 1,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 0,
+  "costUSD": 0.020801,
+  "costPerPublished": 0.020801,
+  "byModel": {
+    "google/gemini-2.5-flash-lite": {
+      "calls": 23,
+      "in": 31263,
+      "out": 10030,
+      "usd": 0.0071383
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 6,
+      "in": 23903,
+      "out": 4790,
+      "usd": 0.0043787997
+    },
+    "google/gemini-2.5-flash": {
+      "calls": 6,
+      "in": 21652,
+      "out": 913,
+      "usd": 0.0087781
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 2688,
+      "out": 1228,
+      "usd": 0.0005056552
+    }
+  },
+  "byRole": {
+    "dedup": {
+      "calls": 1,
+      "errors": 0,
+      "in": 305,
+      "out": 29,
+      "usd": 0.00008001,
+      "ms": 1750
+    },
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2457,
+      "out": 188,
+      "usd": 0.0012071,
+      "ms": 1245
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2688,
+      "out": 1228,
+      "usd": 0.00046296,
+      "ms": 11628
+    },
+    "writer": {
+      "calls": 4,
+      "errors": 0,
+      "in": 22799,
+      "out": 4440,
+      "usd": 0.00675337,
+      "ms": 90446
+    },
+    "verify": {
+      "calls": 5,
+      "errors": 0,
+      "in": 19195,
+      "out": 725,
+      "usd": 0.007571,
+      "ms": 5369
+    },
+    "judge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 3012,
+      "out": 233,
+      "usd": 0.0003944,
+      "ms": 1217
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 799,
+      "out": 321,
+      "usd": 0.00029291,
+      "ms": 7720
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 392,
+      "out": 122,
+      "usd": 0.000088,
+      "ms": 804
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 194,
+      "out": 56,
+      "usd": 0.000041800000000000006,
+      "ms": 727
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1577,
+      "out": 95,
+      "usd": 0.0001957,
+      "ms": 2223
+    },
+    "linker": {
+      "calls": 2,
+      "errors": 0,
+      "in": 567,
+      "out": 90,
+      "usd": 0.0000927,
+      "ms": 1253
+    }
+  }
+}
