@@ -1,0 +1,135 @@
+{
+  "ts": "2026-07-18T13:02:33.224Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "kim-kardashian-posts-final-text-exchange-with-grandma-mj-shannon",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [],
+      "headline": [
+        "metaDescription"
+      ],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 1
+    }
+  ],
+  "topics": 1,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 0,
+  "costUSD": 0.014282,
+  "costPerPublished": 0.014282,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 6,
+      "in": 12419,
+      "out": 737,
+      "usd": 0.0055682
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 1054,
+      "out": 417,
+      "usd": 0.000262432
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 6,
+      "in": 15846,
+      "out": 5696,
+      "usd": 0.00778812
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 8,
+      "in": 4718,
+      "out": 479,
+      "usd": 0.0006634000000000001
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2370,
+      "out": 189,
+      "usd": 0.0011835,
+      "ms": 1190
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1054,
+      "out": 417,
+      "usd": 0.00016992000000000003,
+      "ms": 16381
+    },
+    "writer": {
+      "calls": 5,
+      "errors": 0,
+      "in": 15098,
+      "out": 5403,
+      "usd": 0.00530956,
+      "ms": 123999
+    },
+    "verify": {
+      "calls": 5,
+      "errors": 0,
+      "in": 10049,
+      "out": 548,
+      "usd": 0.0043847,
+      "ms": 4251
+    },
+    "judge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1465,
+      "out": 157,
+      "usd": 0.00020930000000000002,
+      "ms": 909
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 748,
+      "out": 293,
+      "usd": 0.00027166,
+      "ms": 17556
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 367,
+      "out": 78,
+      "usd": 0.00006790000000000001,
+      "ms": 663
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 178,
+      "out": 36,
+      "usd": 0.000032200000000000003,
+      "ms": 417
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1582,
+      "out": 90,
+      "usd": 0.0001942,
+      "ms": 2335
+    },
+    "linker": {
+      "calls": 4,
+      "errors": 0,
+      "in": 1126,
+      "out": 118,
+      "usd": 0.0001598,
+      "ms": 1740
+    }
+  }
+}
