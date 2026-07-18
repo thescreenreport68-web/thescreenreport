@@ -80,6 +80,7 @@ ${cardBlock}
 
 Return STRICT JSON:
 { "hook": "the single most arresting TRUE detail to open on (one sentence, no quotes)",
+  "newsPeg": "WHY this story is in the news RIGHT NOW (a release, a filing, an appearance, a post — with its date). The article must state it.",
   "mood": "playful|neutral|serious — match the story's severity",
   "beats": ["4-6 one-line beats in the strongest telling order: trigger → specifics → context/timeline → reaction → what's unconfirmed/next"],
   "useAnchors": ["ids of the 1-3 STRONGEST quote cards worth featuring, e.g. \\"Q1\\" — [] if none are strong"],

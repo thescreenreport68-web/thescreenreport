@@ -13,7 +13,7 @@ import { detectGossipType } from "./writer.mjs";
 import { agentChat } from "./models.mjs";
 
 const DUP_HARD = 0.9, DUP_SOFT = 0.82, WINDOW_DAYS = 45;
-const slug = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+import { slugify as slug } from "./normalize.mjs"; // folded: Hernández and Hernandez share ONE dedup bucket
 
 export const normHeadline = (s) => (s || "").toLowerCase().replace(/[^a-z0-9 ]+/g, " ").replace(/\s+/g, " ").trim();
 export function canonicalUrl(u) {

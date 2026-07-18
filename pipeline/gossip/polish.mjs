@@ -4,6 +4,7 @@
 // keyTakeaways / faq / tags. All deterministic — no LLM, no new facts invented (derivations only reuse the
 // article's OWN confirmed points), so it can never add a fabrication.
 import { deriveKeywords } from "./seo.mjs";
+import { splitSentences } from "./proseGuards.mjs";
 
 const norm = (s) => String(s ?? "").toLowerCase().replace(/[^a-z0-9 ]/g, " ").replace(/\s+/g, " ").trim();
 const contentTokens = (s) => new Set(norm(s).split(" ").filter((w) => w.length > 3));
@@ -29,7 +30,7 @@ export function dedupeSentences(body, threshold = 0.72) {
   const keptSentences = [];
   let sawNoComment = false;
   const out = paras.map((para) => {
-    const parts = para.split(/(?<=[.!?])\s+/);
+    const parts = splitSentences(para); // abbreviation-safe: never splits after "David H." etc.
     const kept = [];
     for (const s of parts) {
       const t = s.trim();
@@ -39,12 +40,26 @@ export function dedupeSentences(body, threshold = 0.72) {
         sawNoComment = true;
       }
       if (keptSentences.some((prev) => jaccard(t, prev) >= threshold)) continue; // near-duplicate → drop
+      // fragment dedupe: a repeated quote fragment ("It was horrible,") is a SUBSTRING of an already-kept
+      // sentence but slips under the jaccard threshold — a live article shipped every quote twice this way.
+      if (t.length >= 18 && keptSentences.some((prev) => prev.includes(t) || (t.length <= prev.length + 40 && t.includes(prev) && prev.length >= 18))) continue;
       keptSentences.push(t);
       kept.push(s);
     }
     return kept.join(" ");
   });
-  return out.filter((p) => p.trim()).join("\n\n");
+  // final pass: the SAME verbatim quoted span repeated within a paragraph (a live article shipped every
+  // quote twice) — keep the first occurrence, delete exact repeats.
+  const spanDeduped = out.filter((p) => p.trim()).map((para) => {
+    const seen = new Set();
+    return para.replace(/"[^"\n]{15,300}"|“[^”\n]{15,300}”/g, (q) => {
+      const k = q.replace(/[“”]/g, '"');
+      if (seen.has(k)) return "";
+      seen.add(k);
+      return q;
+    }).replace(/\s{2,}/g, " ").trim();
+  });
+  return spanDeduped.filter(Boolean).join("\n\n");
 }
 
 // CUT-AND-PUBLISH (owner rule: the gate never blocks — it corrects, and as a last resort CUTS the offending

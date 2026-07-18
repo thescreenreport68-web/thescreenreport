@@ -148,7 +148,7 @@ export async function gossipRun({
     let r;
     try {
       // voice: ON in review runs (safe evaluation), live only behind GOSSIP_VOICE=1 (owner flag).
-      r = await runImpl(t, { verify, judge, ledeStyle, synth: true, headline: true, voice: REVIEW ? true : process.env.GOSSIP_VOICE === "1" });
+      r = await runImpl(t, { verify, judge, ledeStyle, synth: true, headline: true, craftFix: true, voice: REVIEW ? true : process.env.GOSSIP_VOICE === "1" });
     } catch (e) {
       report.blocked.push({ id: t.id, category: cat, status: "ERROR", reason: String(e?.message || e).slice(0, 140) });
       continue;
@@ -189,6 +189,7 @@ export async function gossipRun({
         sources: (r.bundle?.sources || []).map((s) => `${s.outlet}/${s.tier}`), written: out.written, path: out.path,
         isUpdate: !!t.isUpdate, parentSlug: t.parentSlug || null,
         headline: r.headline || null, seoSemantic: r.seoSemantic || null, voice: r.voice || null,
+        guardCuts: r.guardCuts || [], surgicalFixes: r.surgicalFixes || [],
         seoIssues: (out.seoIssues || []).map((i) => `${i.code}:${i.action}`),
       });
       rotIdx++; // advance the lede rotation ONLY on an actual publish, so consecutive live articles differ
@@ -231,7 +232,11 @@ export async function gossipRun({
       const statsDir = process.env.GOSSIP_STATS_DIR ? path.resolve(process.env.GOSSIP_STATS_DIR) : undefined;
       writeRunStats({
         ts: new Date(now).toISOString(), mode: report.mode, review: !!REVIEW,
-        published: report.published.map((p) => p.slug), topics: report.topics,
+        published: report.published.map((p) => ({
+          slug: p.slug, category: p.category, isUpdate: !!p.isUpdate, parentSlug: p.parentSlug || null,
+          seoIssues: p.seoIssues || [], headline: p.headline?.changed || [], voice: p.voice || null,
+          guardCuts: (p.guardCuts || []).length, surgicalFixes: (p.surgicalFixes || []).length,
+        })), topics: report.topics,
         held: report.held.length, rejected: report.rejected.length, skipped: report.skipped.length, blocked: report.blocked.length,
         costUSD: Number(cr.total.toFixed(6)), costPerPublished: report.published.length ? Number((cr.total / report.published.length).toFixed(6)) : null,
         byModel: cr.byModel, byRole: meterReport(),

@@ -11,7 +11,7 @@ import { embed as defaultEmbed, cosine } from "./embed.mjs";
 import { titleNames } from "./linkIndex.mjs";
 import { agentChat } from "./models.mjs";
 
-const shareEntity = (a, b) => a.some((e) => b.includes(e));
+import { shareEntityFold as shareEntity } from "./normalize.mjs"; // folded: accent variants match
 
 const FIREWALL_SYS = "You are a careful editor deciding whether to place an internal link from a NEW gossip story to an EXISTING published article. Output strict JSON only.";
 
@@ -45,13 +45,24 @@ export async function findRelatedLinks({
   const qtext = [article?.title, article?.dek, entities.join(", ")].filter(Boolean).join(". ");
   const qv = await embedImpl(qtext);
 
-  const ranked = index
-    .filter((r) => r.slug && r.slug !== selfSlug && Array.isArray(r.embedding))
-    .filter((r) => shareEntity(entities, r.entities || []))          // (1) shared-entity gate — hard
+  const pool = index.filter((r) => r.slug && r.slug !== selfSlug && Array.isArray(r.embedding));
+  let ranked = pool
+    .filter((r) => shareEntity(entities, r.entities || []))          // (1) shared-entity gate (folded)
     .map((r) => ({ r, score: cosine(qv, Float32Array.from(r.embedding)) })) // (2) semantic rank
     .filter((x) => x.score >= minScore)
     .sort((a, b) => b.score - a.score)
     .slice(0, Math.max(max * 2, 6));
+  // FALLBACK (2026-07-18 audit fix H): 32 of the last 40 articles shipped ZERO internal links because
+  // the lane rarely covers the same celebrity twice. When the entity gate is empty, admit
+  // high-similarity candidates on semantic score alone — every one still passes the fail-closed
+  // contradiction firewall below, so a misleading link can never ship.
+  if (!ranked.length) {
+    ranked = pool
+      .map((r) => ({ r, score: cosine(qv, Float32Array.from(r.embedding)) }))
+      .filter((x) => x.score >= Math.max(minScore, 0.55))
+      .sort((a, b) => b.score - a.score)
+      .slice(0, Math.max(max, 4));
+  }
 
   const out = [];
   for (const { r, score } of ranked) {

@@ -22,6 +22,8 @@ import { writeGossip } from "./writer.mjs";
 import { buildAnchors, substituteAnchors, synthesize } from "./synthesizer.mjs";
 import { refineHeadline } from "./headline.mjs";
 import { semanticSeoPass } from "./seoAudit.mjs";
+import { cutScaffolding, cutAbsenceClaims, dropAbsenceFaq, relativeTimeUnanchored } from "./proseGuards.mjs";
+import { entityKey } from "./normalize.mjs";
 import { voicePass } from "./voice.mjs";
 import { legalGate } from "./legalGate.mjs";
 import { qualityCheck } from "./qualityGate.mjs";
@@ -111,6 +113,7 @@ export async function runGossip(topic, {
   synth = false, synthImpl = synthesize,
   headline = false, headlineImpl = refineHeadline,
   voice = false, voiceImpl = voicePass,
+  craftFix = false, // deterministic quality triggers → one surgical rewrite (live-on, like synth/headline)
 } = {}) {
   // Stage 3 — receipts (fail-closed). CHEAP-FIRST (Phase 1): extract the PRIMARY source only, let the
   // editorial gate reject non-stories, and pay for corroboration ONLY on stories the gate keeps — a
@@ -221,8 +224,47 @@ export async function runGossip(topic, {
   // Stage 6c — POLISH (deterministic, post-gate): strip any repeated sentence (the doubled no-comment/boilerplate
   // problem) and backfill empty SEO fields from the article's OWN confirmed points (never invents a fact).
   article.body = trimIncomplete(dedupeSentences(article.body));
+  // 2026-07-18 guards (deterministic, repair-never-hold): leaked pipeline scaffolding and unverifiable
+  // absence claims are CUT from prose; absence-asserting FAQ answers dropped (ensureFaq backfills).
+  const scaf = cutScaffolding(article.body);
+  const absc = cutAbsenceClaims(scaf.body);
+  article.body = absc.body;
+  const guardCuts = [...scaf.cut, ...absc.cut];
   article.keyTakeaways = ensureTakeaways(article);
+  article.faq = dropAbsenceFaq(article.faq || []).faq;
   article.faq = ensureFaq(article);
+
+  // Deterministic quality triggers → ONE surgical rewrite when tripped (2026-07-18 audit fixes D + F):
+  //   • headline mirrors the source outlet's headline (SERP cannibalization — a live H1 was verbatim
+  //     Reality Tea's, a slug verbatim TMZ's)
+  //   • relative time ("that evening") with no absolute date anywhere in the body
+  //   • rhetorical-question lede (the template fingerprint the rotation is supposed to prevent)
+  const fixIssues = [];
+  if (craftFix) {
+    const tks = (t) => new Set(entityKey(t).split(" ").filter((w) => w.length > 2));
+    const sim = (a, b) => { const A = tks(a), B = tks(b); if (!A.size || !B.size) return 0; let n = 0; for (const w of A) if (B.has(w)) n++; return n / Math.min(A.size, B.size); };
+    const srcTitles = [topic.title, ...(bundle?.sources || []).map((x) => x.title)].filter(Boolean);
+    if (srcTitles.some((t) => sim(article.title, t) >= 0.75)) fixIssues.push("The headline mirrors the source outlet's headline. Rewrite the title (and dek if needed) with ORIGINAL phrasing — same verified facts, different words and structure.");
+    const rel = relativeTimeUnanchored(article.body);
+    if (rel) fixIssues.push(`The body says "${rel}" but never states an absolute date. Add the actual date of the event from the source material (e.g. "on Wednesday, July 15") — never leave relative time unanchored.`);
+    const firstSentence = (article.body || "").trim().split(/(?<=[.!?])\s/)[0] || "";
+    if (/\?\s*$/.test(firstSentence)) fixIssues.push("The lede opens with a rhetorical question — a banned template. Rewrite the opening to lead with the concrete event (who did what, when).");
+  }
+  if (fixIssues.length) {
+    try {
+      const fixed = await writeImpl({ bundle, frame, topic, model, priorArticle: article, issues: fixIssues, rewrite: false, brief, anchors });
+      substituteAnchors(fixed, anchors);
+      const qc2 = verifyQuotes(fixed, bundle);
+      if (qc2.ok) {
+        fixed.body = trimIncomplete(dedupeSentences(fixed.body));
+        fixed.body = cutAbsenceClaims(cutScaffolding(fixed.body).body).body;
+        fixed.keyTakeaways = ensureTakeaways(fixed);
+        fixed.faq = dropAbsenceFaq(fixed.faq || []).faq;
+        fixed.faq = ensureFaq(fixed);
+        article = fixed;
+      }
+    } catch { /* surgical fix is best-effort; the original (guarded) article stands */ }
+  }
 
   // Stage 6c2 — VOICE PASS (Phase 4, flagged): quote-masked native-register polish; deterministic guards
   // (token integrity, number multiset, no new names, ±25% length, subheads) auto-revert on any violation,
@@ -271,5 +313,5 @@ export async function runGossip(topic, {
     verifyDegraded, // true ⇒ the claim-verify ran at L1-only this run (L2 errored); surfaced for the monitor/owner
     sources: bundle.sources.map((s) => ({ outlet: s.outlet, url: s.url, tier: s.tier })),
   };
-  return { status: "PUBLISH", article, frame, provenance, route, bundle, auto, editorial: ed, brief: brief ? true : false, headline: headlineReport, seoSemantic, voice: voiceReport };
+  return { status: "PUBLISH", article, frame, provenance, route, bundle, auto, editorial: ed, brief: brief ? true : false, headline: headlineReport, seoSemantic, voice: voiceReport, guardCuts, surgicalFixes: fixIssues };
 }

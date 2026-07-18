@@ -10,12 +10,13 @@
 // item is repaired or dropped, never shipped.
 import { seoMetaTitle, buildMetaDescription, validMetaTitle, validMetaDesc, clampDesc, JUNK_TAG } from "./seo.mjs";
 import { numbersGrounded, namesGrounded } from "./headline.mjs";
+import { SCAFFOLD_RE, ABSENCE_RE } from "./proseGuards.mjs";
 import { agentChat } from "./models.mjs";
 
 const MD_RE = /\*\*|__|(?<!\w)[*_](?=\w)|`|^#+\s/m;
 const stripMd = (s) => String(s ?? "").replace(/\*\*|__|`/g, "").replace(/^#+\s*/gm, "").replace(/\s+/g, " ").trim();
 const SUPERLATIVE_RE = /\b(shocking|jaw-dropping|you won'?t believe|mind-blowing|insane|unbelievable|slams|destroys|obliterates)\b/i;
-const TEMPLATE_RE = /what happens when [^.?]{3,60}\?/i;
+const TEMPLATE_RE = /what happens when [^.?]{3,60}\?|^\s*(what|when|how|why|who|is|are|can|does|do|could|would)\b[^.?!]{3,90}\?/i;
 
 const grounded = (s, corpus) => numbersGrounded(s, corpus) && namesGrounded(s, corpus);
 
@@ -100,6 +101,11 @@ export function auditArticleSeo({ fm, body = "", topic = {}, bundle = null }) {
   else if (!fm.imageCredit) log("no-image-credit", "imageCredit", "logged");
   // ── Phase 1 heat contract presence ──
   if (!fm.eventSlug) log("no-eventSlug", "eventSlug", "logged");
+  // ── 2026-07-18 final walls (the cutters run upstream — anything caught HERE means a guard regressed) ──
+  if (SCAFFOLD_RE.test(body)) log("scaffolding-leak", "body", "logged", "verification language reached the final body");
+  if (ABSENCE_RE.test(body)) log("absence-claim", "body", "logged", "unverifiable absence assertion in prose");
+  for (const q of fm.faq || []) if (q?.a && ABSENCE_RE.test(q.a)) log("absence-claim", "faq", "logged", q.q);
+  if (!/^##\s+Sources\b/m.test(body)) log("no-sources-block", "body", "logged", "article ships without cited outbound links");
   return { fm, issues };
 }
 

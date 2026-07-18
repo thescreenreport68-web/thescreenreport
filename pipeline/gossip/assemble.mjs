@@ -16,7 +16,7 @@ import { auditArticleSeo } from "./seoAudit.mjs";
 const __dirname = path.dirname(fileURLToPath(import.meta.url)); // …/pipeline/gossip
 const CONTENT_DIR = path.resolve(__dirname, "../../content/articles");
 
-const slugify = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 75);
+import { slugify } from "./normalize.mjs";
 
 // Map the gossip confidence tier → the site's existing reader-facing storyStatus badge vocabulary so we reuse
 // the on-page badge UI (CONFIRMED / DEVELOPING / RUMOR).
@@ -34,7 +34,10 @@ function badgeFor(frame) {
 }
 
 export function buildGossipMarkdown({ article, frame, provenance, route, topic, dateISO, bundle = null }) {
-  const slug = topic.slug || slugify(article.title);
+  // The URL slug derives from OUR headline (original phrasing), never the discovery title — the
+  // discovery title IS the source outlet's headline, and shipping it as our slug is SERP
+  // cannibalization against the outlet that broke the story (2026-07-18 audit fix F).
+  const slug = slugify(article.title) || topic.slug || slugify(topic.title);
   const gossipType = detectGossipType(topic);
   const badge = badgeFor(frame);
   const tags = deriveTags(topic, article, route.category, gossipType);
@@ -120,6 +123,21 @@ export function buildGossipMarkdown({ article, frame, provenance, route, topic, 
       publishedAt: dateISO,
     },
   };
+  // 2026-07-18 audit fix E — SOURCES BLOCK: every article cites and LINKS its sources (the audit found
+  // 9/9 live articles had zero outbound links). Anchor text = the source article's headline, never the
+  // bare outlet name (the news lane's factGuards rule); outlet named as plain text after the link.
+  let bodyOut = (article.body || "").trim();
+  if (!/^##\s+Sources\b/m.test(bodyOut)) {
+    const seen = new Set();
+    const srcLinks = (bundle?.sources || [])
+      .filter((x) => x && /^https?:\/\//.test(x.url || "") && !/\/\/(?:www\.)?(?:x\.com|twitter\.com|bsky\.app|t\.co)\//.test(x.url))
+      .filter((x) => { const k = String(x.url).replace(/[?#].*$/, ""); if (seen.has(k)) return false; seen.add(k); return true; })
+      .slice(0, 4)
+      .map((x) => `- [${String(x.title || "Report").replace(/[\[\]]/g, "")}](${x.url})${x.outlet ? ` — ${x.outlet}` : ""}`);
+    if (srcLinks.length) bodyOut += `\n\n## Sources\n\n${srcLinks.join("\n")}`;
+  }
+  article = { ...article, body: bodyOut };
+
   // Phase 3 — SEO AUDITOR (deterministic walls + safe repairs + cross-surface grounding) over the FINAL fm.
   const audit = auditArticleSeo({ fm, body: article.body || "", topic, bundle });
   const md = matter.stringify("\n" + (article.body || "").trim() + "\n", audit.fm);

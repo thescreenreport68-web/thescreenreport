@@ -39,7 +39,7 @@ async function defaultClassify(items) {
   }
 }
 
-const slugify = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 70);
+import { slugify } from "./normalize.mjs";
 
 export async function categorizeGossip(candidates, { classifyImpl = defaultClassify, batchSize = 6 } = {}) {
   if (!candidates.length) return [];

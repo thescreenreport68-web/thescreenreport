@@ -10,7 +10,9 @@ export function qualityCheck(article) {
   const words = body.replace(/[#*_>`\[\]()]/g, " ").trim().split(/\s+/).filter(Boolean).length;
 
   if (!article.title || article.title.length < 15) issues.push("title missing or too short (<15 chars)");
-  if (words < 280) issues.push(`body ${words}w too thin — expand to 450+ words with more verified specifics + context`);
+  // Threshold matches the writer's bundle-derived word target (wordRangeFor) — a fixed floor past the
+  // verified material forces fabrication (the news lane's D1 lesson; final fixed-target removed 2026-07-18).
+  if (words < 170) issues.push(`body ${words}w too thin — develop the story using MORE of the bundle's verified specifics (never pad)`);
   if (words > 750) issues.push(`body ${words}w > 750 (gossip should stay tight)`);
   // TRUNCATED write: an unclosed markdown bold (odd ** count, e.g. a cut-off "**What We Know vs.") OR a body that
   // ends without terminal punctuation — a cut-off generation. "truncated" triggers a full regenerate in run.mjs.

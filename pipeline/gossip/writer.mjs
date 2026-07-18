@@ -100,7 +100,8 @@ ${anchors.length ? `QUOTE CARDS — to include a quote, write its TOKEN like ⟦
 ${quoteBlock}
 ${brief ? `
 YOUR RESEARCHER'S BRIEF (grounded in the sources — follow the beats, verify every specific against the bundle):
-HOOK: ${brief.hook || ""}
+HOOK: ${brief.hook || ""}${brief.newsPeg ? `
+NEWS PEG (must appear in the article): ${brief.newsPeg}` : ""}
 MOOD: ${brief.mood || ""}
 BEATS: ${(brief.beats || []).map((b, i) => `${i + 1}. ${b}`).join("  ")}
 MUST INCLUDE: ${(brief.mustInclude || []).join("; ")}
@@ -125,6 +126,14 @@ CRAFT (each of these measurably drives search + reader trust — do them all whe
 - Name the outlet IN the text ("told PEOPLE", "per court documents", "TMZ reports") — attribution is the product.
 - TIME-ANCHOR every beat: never "recently"/"a while back" when the bundle gives a date or day.
 - Quote-then-context rhythm; NO conclusion paragraph — the piece stops on the latest fact or the open question.
+INTEGRITY RULES (each prevents a real published failure — non-negotiable):
+- STANDALONE BODY: the body must read complete WITHOUT the headline or dek. Introduce every person by full name + role at first body mention. Never write "the distinction"/"the claim"/"Instead, X alleges" unless the body itself already established what it refers to.
+- NEVER assert an absence: no "neither has commented", "did not respond", "documents do not specify", "not publicly known". If something is unknown, put it in whatWeDont — never in prose or FAQ.
+- NEVER write verification language as prose: no "was a confirmed event", "covered by outlets including", "every quote was part of the broadcast". Attribution belongs in normal reporting sentences.
+- COMEDY: a joke's factual premise is NOT a fact. Keep premises inside the joke frame ("joked that…") and never restate them in the article's own voice.
+- ARCHIVAL QUOTES: a quote from an earlier interview or statement gets "previously said" / "said at the time of X" framing — never presented as new.
+- LEGAL/DISPUTE STORIES: when the bundle carries both sides, BOTH sides get their strongest statement — never two quotes for one party and half a sentence for the other.
+- ORIGINAL HEADLINE: never reuse or lightly reword the source outlet's headline — same facts, YOUR phrasing.
 
 Return STRICT JSON:
 { "title": "...", "dek": "one-line standfirst with a little wit",

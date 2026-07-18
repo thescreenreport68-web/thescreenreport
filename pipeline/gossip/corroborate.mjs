@@ -10,6 +10,7 @@
 //     homepage domain (so we can tier it) for every covering outlet. Its per-article <link> is a Google redirect,
 //     which our extractor resolves through Jina Reader (verified).
 import { topicQuery } from "../lib/news.mjs";
+import { entityKey } from "./normalize.mjs";
 
 const UA = "The Screen Report/1.0 (+https://thescreenreport.com)";
 export const registrableDomain = (d) => (d || "").toLowerCase().replace(/^https?:\/\//, "").replace(/^www\./, "").split("/")[0].split(":")[0];
@@ -31,8 +32,8 @@ const isAggregator = (domain) => AGGREGATORS.has((domain || "").toLowerCase());
 // Does a headline plausibly name THIS story's subject? (drops "Kenneth Walker" / "June Walker" noise from a
 // "Dick Van Dyke walker" query). Require the full name or the surname.
 function titleNamesEntity(title, entity) {
-  const t = (title || "").toLowerCase();
-  const e = (entity || "").trim().toLowerCase();
+  const t = entityKey(title || "");            // folded: "Hernández" in the outlet matches "Hernandez"
+  const e = entityKey(entity || "");
   if (!e) return true;
   const surname = e.split(/\s+/).pop() || "";
   return t.includes(e) || (surname.length > 2 && t.includes(surname));
