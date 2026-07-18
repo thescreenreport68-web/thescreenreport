@@ -1,0 +1,138 @@
+{
+  "ts": "2026-07-18T07:01:30.624Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "hannah-waddingham-jokes-about-the-physical-toll-of-ride-or-die-stunts",
+      "category": "tv",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [
+        "lede-entity-missing:logged"
+      ],
+      "headline": [
+        "metaTitle",
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 1
+    }
+  ],
+  "topics": 1,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 0,
+  "costUSD": 0.023416,
+  "costPerPublished": 0.023416,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 8,
+      "in": 28427,
+      "out": 2435,
+      "usd": 0.013000460000000002
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 2752,
+      "out": 773,
+      "usd": 0.000421204
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 7,
+      "in": 37445,
+      "out": 6078,
+      "usd": 0.008866261850000001
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 6,
+      "in": 8630,
+      "out": 663,
+      "usd": 0.0011282
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2619,
+      "out": 205,
+      "usd": 0.0012981999999999998,
+      "ms": 1487
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2752,
+      "out": 773,
+      "usd": 0.00038681999999999996,
+      "ms": 9880
+    },
+    "writer": {
+      "calls": 6,
+      "errors": 0,
+      "in": 36822,
+      "out": 5747,
+      "usd": 0.010423040000000001,
+      "ms": 159131
+    },
+    "verify": {
+      "calls": 7,
+      "errors": 0,
+      "in": 25808,
+      "out": 2230,
+      "usd": 0.013317400000000002,
+      "ms": 10963
+    },
+    "judge": {
+      "calls": 2,
+      "errors": 0,
+      "in": 5618,
+      "out": 364,
+      "usd": 0.0007074000000000002,
+      "ms": 1653
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 623,
+      "out": 331,
+      "usd": 0.00025582999999999997,
+      "ms": 7944
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 402,
+      "out": 125,
+      "usd": 0.0000902,
+      "ms": 630
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 202,
+      "out": 50,
+      "usd": 0.0000402,
+      "ms": 500
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2099,
+      "out": 96,
+      "usd": 0.0002483,
+      "ms": 1310
+    },
+    "linker": {
+      "calls": 1,
+      "errors": 0,
+      "in": 309,
+      "out": 28,
+      "usd": 0.0000421,
+      "ms": 439
+    }
+  }
+}
