@@ -1,0 +1,136 @@
+{
+  "ts": "2026-07-18T23:02:40.583Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "tom-holland-brings-real-life-marriage-into-the-odyssey-interview-with-playf",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [
+        "lede-entity-missing:logged",
+        "takeaway-ungrounded:dropped"
+      ],
+      "headline": [],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 1
+    }
+  ],
+  "topics": 1,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 0,
+  "costUSD": 0.017238,
+  "costPerPublished": 0.017238,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 6,
+      "in": 17043,
+      "out": 2459,
+      "usd": 0.0112604
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 1803,
+      "out": 505,
+      "usd": 0.000391007
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 6,
+      "in": 22196,
+      "out": 6320,
+      "usd": 0.0047138696
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 8,
+      "in": 5186,
+      "out": 886,
+      "usd": 0.0008729999999999999
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2765,
+      "out": 209,
+      "usd": 0.001352,
+      "ms": 1469
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1803,
+      "out": 505,
+      "usd": 0.00025316999999999994,
+      "ms": 13803
+    },
+    "writer": {
+      "calls": 5,
+      "errors": 0,
+      "in": 21387,
+      "out": 5961,
+      "usd": 0.0069457500000000005,
+      "ms": 73795
+    },
+    "verify": {
+      "calls": 5,
+      "errors": 0,
+      "in": 14278,
+      "out": 2250,
+      "usd": 0.0099084,
+      "ms": 10781
+    },
+    "judge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2273,
+      "out": 200,
+      "usd": 0.0003073,
+      "ms": 977
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 809,
+      "out": 359,
+      "usd": 0.00030813,
+      "ms": 9063
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 435,
+      "out": 111,
+      "usd": 0.00008790000000000001,
+      "ms": 918
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 200,
+      "out": 59,
+      "usd": 0.0000436,
+      "ms": 566
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1059,
+      "out": 243,
+      "usd": 0.00020310000000000003,
+      "ms": 1882
+    },
+    "linker": {
+      "calls": 4,
+      "errors": 0,
+      "in": 1219,
+      "out": 273,
+      "usd": 0.00023109999999999998,
+      "ms": 2441
+    }
+  }
+}
