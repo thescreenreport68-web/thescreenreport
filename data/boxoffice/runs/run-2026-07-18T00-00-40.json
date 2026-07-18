@@ -1,0 +1,96 @@
+{
+ "runId": "run-2026-07-18T00-00-40",
+ "mode": "live",
+ "startedAt": "2026-07-18T00:00:40.224Z",
+ "films": 8,
+ "published": [],
+ "held": [
+  {
+   "tag": "moana-bo-update×BO-UPDATE",
+   "reason": "not material: already covered today (one update per film per day)"
+  },
+  {
+   "tag": "minions-monsters-bo-update×BO-UPDATE",
+   "reason": "not material: already covered today (one update per film per day)"
+  },
+  {
+   "tag": "toy-story-5-bo-update×BO-UPDATE",
+   "reason": "not material: already covered today (one update per film per day)"
+  },
+  {
+   "tag": "evil-dead-burn-bo-update×BO-UPDATE",
+   "reason": "not material: already covered today (one update per film per day)"
+  },
+  {
+   "tag": "young-washington-bo-update×BO-UPDATE",
+   "reason": "not material: already covered today (one update per film per day)"
+  },
+  {
+   "tag": "supergirl-bo-update×BO-UPDATE",
+   "reason": "words 110 < 180 (owner-set ~200-word minimum)",
+   "score": 50
+  },
+  {
+   "tag": "disclosure-day-bo-update×BO-UPDATE",
+   "reason": "not material: already covered today (one update per film per day)"
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "obsession-bo-update×BO-UPDATE",
+   "reason": "already published (this update)"
+  }
+ ],
+ "blocked": [],
+ "paced": {
+  "tokens": 4,
+  "behind": true,
+  "expected": 15,
+  "allow": 2
+ },
+ "zeroStreak": 6,
+ "daySpend": {
+  "laDay": "2026-07-17",
+  "usd": 0.95448
+ },
+ "finishedAt": "2026-07-18T00:08:27.764Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3481,
+    "out": 644,
+    "usd": 0.00021,
+    "ms": 6748
+   },
+   "gatherer": {
+    "calls": 8,
+    "errors": 0,
+    "in": 24244,
+    "out": 1179,
+    "usd": 0.0029,
+    "ms": 8189
+   },
+   "synthesizer": {
+    "calls": 1,
+    "errors": 0,
+    "in": 701,
+    "out": 738,
+    "usd": 0.0002,
+    "ms": 7580
+   },
+   "writerChart": {
+    "calls": 1,
+    "errors": 0,
+    "in": 1917,
+    "out": 893,
+    "usd": 0.00075,
+    "ms": 35340
+   }
+  },
+  "totalUsd": 0.00405
+ },
+ "openrouterTotalUsd": 0.00441
+}
