@@ -1,0 +1,37 @@
+{
+ "runId": "run-2026-07-18T07-00-47",
+ "mode": "live",
+ "startedAt": "2026-07-18T07:00:47.271Z",
+ "films": 0,
+ "published": [],
+ "held": [],
+ "rejected": [],
+ "skipped": [],
+ "blocked": [
+  {
+   "stage": "finder",
+   "reason": "watchdog: finder exceeded 120s"
+  }
+ ],
+ "paced": {
+  "tokens": 4,
+  "behind": true,
+  "expected": 19.29,
+  "allow": 2
+ },
+ "finishedAt": "2026-07-18T07:02:47.344Z",
+ "meter": {
+  "byRole": {
+   "gatherer": {
+    "calls": 4,
+    "errors": 3,
+    "in": 434,
+    "out": 38,
+    "usd": 0.00006,
+    "ms": 424
+   }
+  },
+  "totalUsd": 0.00006
+ },
+ "openrouterTotalUsd": 0.00485
+}
