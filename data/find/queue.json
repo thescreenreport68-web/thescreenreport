@@ -1,40 +1,116 @@
 {
-  "runId": "run-2026-07-18T15-32-13",
-  "builtAt": "2026-07-18T15:33:25.515Z",
+  "runId": "run-2026-07-18T16-30-38",
+  "builtAt": "2026-07-18T16:32:01.744Z",
   "count": 15,
   "topics": [
     {
-      "id": "news-samantha-morton-circe-performance",
-      "slug": "how-samantha-morton-pulled-off-her-wild-the-odyssey-performance-as-cir",
-      "title": "How Samantha Morton Pulled Off Her Wild The Odyssey Performance as Circe",
+      "id": "news-princess-and-the-frog-live-action-colman-domingo-writing",
+      "slug": "disney-s-the-princess-and-the-frog-colman-domingo-in-early-talks-to-wr",
+      "title": "Disney’s ‘The Princess and the Frog’: Colman Domingo in Early Talks to Write Live-Action Adaptation",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "samantha-morton-circe-performance",
-      "primaryKeyword": "Samantha Morton Circe",
-      "primaryEntity": "Samantha Morton",
+      "eventSlug": "princess-and-the-frog-live-action-colman-domingo-writing",
+      "primaryKeyword": "the princess and the frog live action",
+      "primaryEntity": "The Princess and the Frog",
       "entities": [
-        "The Odyssey"
+        "Colman Domingo"
       ],
-      "angle": "Samantha Morton discusses her powerful performance as Circe in the new film.",
+      "angle": "Colman Domingo is in early talks to write the live-action adaptation of Disney's 'The Princess and the Frog'.",
+      "tmdbType": "movie",
+      "source": "rss:TheWrap",
+      "sources": [
+        {
+          "outlet": "TheWrap",
+          "tier": 7,
+          "url": "https://www.thewrap.com/creative-content/movies/the-princess-and-the-frog-live-action-adaptation-colman-domingo/",
+          "ageMin": 776,
+          "headline": "Disney’s ‘The Princess and the Frog’: Colman Domingo in Early Talks to Write Live-Action Adaptation",
+          "summary": "The new movie, a reimagining of the 2009 hand-drawn animated classic, is in early stages The post Disney’s ‘The Princess and the Frog’: Colman Domingo in Early Talks to Write Live-Action Adaptation appeared first on TheWrap ."
+        },
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/colman-domingo-live-action-tiana-princess-and-the-frog-1236651364/",
+          "ageMin": 988,
+          "headline": "Colman Domingo in Talks to Write Live-Action Princess Tiana Movie Inspired by Princess and the Frog",
+          "summary": "No deals have been closed for the take on the 2009 Disney film 'Princess and the Frog.'"
+        }
+      ],
+      "ageMin": 776,
+      "_cand": {
+        "key": "rss:disney-s-the-princess-and-the-frog-colman-domingo-in-early-t",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 2,
+      "verification": {
+        "tier1Count": 2,
+        "tier1Owners": 2,
+        "outletCount": 2,
+        "outlets": [
+          "TheWrap",
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": null,
+        "framing": "plain",
+        "status": "CONFIRMED",
+        "publishable": true
+      },
+      "priority": 90,
+      "signals": {
+        "recency": 1,
+        "corroboration": 18,
+        "status": 25,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 8,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-heartstopper-forever-finale-discussion",
+      "slug": "heartstopper-forever-director-writer-and-stars-joe-locke-and-kit-conno",
+      "title": "‘Heartstopper Forever’ Director, Writer and Stars Joe Locke and Kit Connor on the Finale: “It Connects the Whole Heartstopper Gang”",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "heartstopper-forever-finale-discussion",
+      "primaryKeyword": "heartstopper finale",
+      "primaryEntity": "Heartstopper",
+      "entities": [
+        "Joe Locke",
+        "Kit Connor",
+        "Alice Oseman"
+      ],
+      "angle": "Director and stars of 'Heartstopper Forever' discuss the finale's connection to the main cast and changes from the book.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
         {
           "outlet": "THR",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-features/samantha-morton-the-odyssey-feature-1236650941/",
-          "ageMin": 1298,
-          "headline": "How Samantha Morton Pulled Off Her Wild The Odyssey Performance as Circe: I Wanted to Possess It",
-          "summary": "The two-time Oscar nominee all but steals the massive film in a scene that reflects what she's been doing her whole career: Making her mark with whatever screen time she's got."
+          "url": "https://www.hollywoodreporter.com/movies/movie-features/heartstopper-forever-ending-kit-connor-joe-lock-interview-1236647039/",
+          "ageMin": 1,
+          "headline": "‘Heartstopper Forever’ Director, Writer and Stars Joe Locke and Kit Connor on the Finale: “It Connects the Whole Heartstopper Gang”",
+          "summary": "Stars Connor and Locke, creator Alice Oseman and director Wash Westmoreland break down the film’s biggest change from book to screen, alongside the intimacy, break-ups, and ambiguous endings from the final chapter."
         }
       ],
-      "ageMin": 1298,
+      "ageMin": 1,
       "_cand": {
-        "key": "rss:how-samantha-morton-pulled-off-her-wild-the-odyssey-performa",
+        "key": "rss:-heartstopper-forever-director-writer-and-stars-joe-locke-an",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -53,247 +129,43 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 99,
+      "priority": 81,
       "signals": {
-        "recency": 1,
+        "recency": 30,
         "corroboration": 12,
         "status": 18,
-        "type": 14,
+        "type": 5,
         "pop": 0,
         "breakout": 0,
-        "big": 24,
+        "big": 6,
         "trending": 0,
         "spice": 0,
         "softTv": 0,
-        "radar": 30
+        "radar": 10
       },
-      "radarKind": "movie-in-theaters",
+      "radarKind": "movie-trending",
       "tierClass": "A"
     },
     {
-      "id": "news-danny-boyle-ink-netflix-sale",
-      "slug": "danny-boyle-s-ink-sells-to-netflix-ahead-of-venice-premiere",
-      "title": "Danny Boyle's 'Ink' Sells to Netflix Ahead of Venice Premiere",
+      "id": "news-backrooms-web-series-announcement",
+      "slug": "multi-million-dollar-bidding-wars-erupt-for-viral-gen-z-shorts-from-yo",
+      "title": "Multi-Million Dollar Bidding Wars Erupt for Viral Gen Z Shorts from Young Filmmakers",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "danny-boyle-ink-netflix-sale",
-      "primaryKeyword": "danny boyle ink",
-      "primaryEntity": "Ink (film)",
-      "entities": [
-        "Danny Boyle",
-        "Netflix",
-        "Venice Film Festival"
-      ],
-      "angle": "Danny Boyle's new film 'Ink,' set to open the Venice Film Festival, has been sold to Netflix before its premiere.",
-      "tmdbType": "movie",
-      "source": "rss:IndieWire",
-      "sources": [
-        {
-          "outlet": "IndieWire",
-          "tier": 7,
-          "url": "https://www.indiewire.com/news/breaking-news/danny-boyle-ink-netflix-venice-sale-1235206128/",
-          "ageMin": 1011,
-          "headline": "Danny Boyle s Ink Sells to Netflix in First Big Sale (Way) Ahead of Venice Premiere",
-          "summary": "The film about Larry Lamb, Rupert Murdoch, and the birth of The Sun tabloid is the opening night film at the Biennale."
-        },
-        {
-          "outlet": "TheWrap",
-          "tier": 7,
-          "url": "https://www.thewrap.com/creative-content/movies/netflix-lands-us-latin-american-rights-to-danny-boyle-thriller-ink/",
-          "ageMin": 1063,
-          "headline": "Danny Boyle Thriller Ink Lands at Netflix Ahead of Venice Debut",
-          "summary": "Jack O’Connell, Guy Pearce and Claire Foy star in the biographical newspaper drama, which is set to open the Venice Film Festival The post Danny Boyle Thriller Ink Lands at Netflix Ahead of Venice Debut appeared first on TheWrap ."
-        }
-      ],
-      "ageMin": 1011,
-      "_cand": {
-        "key": "rss:danny-boyle-s-ink-sells-to-netflix-in-first-big-sale-way-ahe",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 2,
-      "verification": {
-        "tier1Count": 2,
-        "tier1Owners": 2,
-        "outletCount": 2,
-        "outlets": [
-          "IndieWire",
-          "TheWrap"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": null,
-        "framing": "plain",
-        "status": "CONFIRMED",
-        "publishable": true
-      },
-      "priority": 85,
-      "signals": {
-        "recency": 1,
-        "corroboration": 18,
-        "status": 25,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 8,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-star-wars-icons-vader-nonfiction-book-coming-out-october",
-      "slug": "star-wars-icons-vader-nonfiction-book-coming-out-in-october-preview-re",
-      "title": "‘Star Wars Icons: Vader’ Nonfiction Book Coming Out In October, Preview Revealed",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "star-wars-icons-vader-nonfiction-book-coming-out-october",
-      "primaryKeyword": "Star Wars Icons Vader book",
-      "primaryEntity": "Star Wars Icons: Vader",
-      "entities": [
-        "Star Wars"
-      ],
-      "angle": "A new nonfiction book focusing on Darth Vader is announced with a preview.",
-      "tmdbType": "movie",
-      "source": "gnews:Star Wars News Net",
-      "sources": [
-        {
-          "outlet": "Star Wars News Net",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNWnJJZFk1cmF2SDFjdkdBRTdNNWp0cGtVWFl3d1JIWVEwYUJhdGRxNGl4di1FZ3ZLNEVyRVloellDZVk4T3ZGNEVLVjJ3NGZVTmtqMllmYUl5YmJ6Unlidzh2N1ZiLVRPc19TbnI2bkRRWUtwUzkzQkRiRWl6WEU5QklIcWlXWEdPVDlJdWM2dXAwRmZWQW5hRHdRZGdVUlYyQkNhZVRSWWdyVzN2WUpmMTBFLWt2N0pJRFRBaHJB?oc=5",
-          "ageMin": 36,
-          "headline": "‘Star Wars Icons: Vader’ Nonfiction Book Coming Out In October, Preview Revealed - Star Wars News Net",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMivgFBVV95cUxNWnJJZFk1cmF2SDFjdkdBRTdNNWp0cGtVWFl3d1JIWVEwYUJhdGRxNGl4di1FZ3ZLNEVyRVloellDZVk4T3ZGNEVLVjJ3NGZVTmtqMllmYUl5YmJ6Unlidzh2N1ZiLVRPc19TbnI2bkRRWUtwUzkzQkRiRWl6WEU5QklIcWlXWEdPVDlJdWM2dXAwRmZWQW5hRHdRZGdVUlYyQkNhZVRSWWdyVzN2WUpmMTBFLWt2N0pJRFR"
-        }
-      ],
-      "ageMin": 36,
-      "_cand": {
-        "key": "rss:-star-wars-icons-vader-nonfiction-book-coming-out-in-october",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "Star Wars News Net"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "Star Wars News Net",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 83,
-      "signals": {
-        "recency": 24,
-        "corroboration": 8,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "music-news-sheff-g-announces-weight-on-me-the-album-new-single-music-video",
-      "slug": "sheff-g-goes-all-in-announcing-724-weight-on-me-the-album-with-new-sin",
-      "title": "Sheff G Goes All In, Announcing 724 'Weight On Me The Album' With New Single + Music Video",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "sheff-g-announces-weight-on-me-the-album-new-single-music-video",
-      "primaryKeyword": "Sheff G Weight On Me The Album",
-      "primaryEntity": "Sheff G",
-      "entities": [
-        "Weight On Me The Album"
-      ],
-      "angle": "Rapper Sheff G announces his upcoming album and drops a new single and music video.",
-      "tmdbType": "movie",
-      "source": "gnews:The Hype Magazine",
-      "sources": [
-        {
-          "outlet": "The Hype Magazine",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMivAJBVV95cUxPdkU0TXo1MDhmeDhjcGEwTGRTVlJSQ1NJdWlMaGtVclVHZnVBcXRzWUJCOGFqQlRhbzRKUFNVUzJhODVjSGdpVEhvdWo1d0ZMNjJhdmV6V3YtbUYzSmlpOVp0blRXZGoxT3dqYWZiU25kMUhEWlN1WGlqQmxmOUd1Q2gwV01OOXl3OFVIOUhyNDhRa2NudWhIWkMtRkg4MG1YQmdFd2UtMExjOUh5UGpZM3RZNUdVUzZiNEJtVnBuMWNjQzRKb2c4QTZERTV0OXVTV19JN3ptaGo4VmdjWHcwTDFOSjVXd0lsTUZtbkFHalJ0eWtEbmV2YVRhbk1qb2ZOU2daeVNpckVXTEhCVEp1VXNadWJnTUZaSWhjUnpOS2o2SnNPc0lFckVINUpiTUlXcHhrSWwwSVB1eVhD?oc=5",
-          "ageMin": 9,
-          "headline": "Sheff G Goes All In, Announcing 724 'Weight On Me The Album' With New Single + Music Video - The Hype Magazine",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMivAJBVV95cUxPdkU0TXo1MDhmeDhjcGEwTGRTVlJSQ1NJdWlMaGtVclVHZnVBcXRzWUJCOGFqQlRhbzRKUFNVUzJhODVjSGdpVEhvdWo1d0ZMNjJhdmV6V3YtbUYzSmlpOVp0blRXZGoxT3dqYWZiU25kMUhEWlN1WGlqQmxmOUd1Q2gwV01OOXl3OFVIOUhyNDhRa2NudWhIWkMtRkg4MG1YQmdFd2UtMExjOUh5UGpZM3RZNUdVUzZiNEJ"
-        }
-      ],
-      "ageMin": 9,
-      "_cand": {
-        "key": "rss:sheff-g-goes-all-in-announcing-724-weight-on-me-the-album-wi",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "The Hype Magazine"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "The Hype Magazine",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 65,
-      "signals": {
-        "recency": 30,
-        "corroboration": 8,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-backrooms-announcement",
-      "slug": "gen-z-viral-shorts-spark-multi-million-dollar-bidding-wars",
-      "title": "Gen Z Viral Shorts Spark Multi-Million Dollar Bidding Wars",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "backrooms-announcement",
+      "eventSlug": "backrooms-web-series-announcement",
       "primaryKeyword": "gen z viral shorts",
       "primaryEntity": "Backrooms",
       "entities": [
-        "Obsession"
+        "Backrooms (web series)",
+        "Kane Parsons",
+        "Curry Barker",
+        "Obsession (web series)"
       ],
-      "angle": "Multi-studio bidding wars erupt over viral shorts and young filmmakers following the success of 'Backrooms' and 'Obsession'.",
+      "angle": "Young filmmakers and viral shorts like 'Backrooms' and 'Obsession' are sparking multi-studio bidding wars, highlighting a new trend in Gen Z content creation.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
@@ -301,12 +173,12 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/movies/movie-news/kane-parsons-curry-barker-and-the-multi-million-dollar-battle-for-gen-z-eyeballs-1236651171/",
-          "ageMin": 1093,
+          "ageMin": 1151,
           "headline": "Kane Parsons, Curry Barker and the Multi-Million Dollar Battle for Gen Z Eyeballs",
           "summary": "In the months since the successes of ‘Backrooms' and ‘Obsession’, young filmmakers, memes and viral shorts have been the subject of multi-studio bidding wars."
         }
       ],
-      "ageMin": 1093,
+      "ageMin": 1151,
       "_cand": {
         "key": "rss:kane-parsons-curry-barker-and-the-multi-million-dollar-battl",
         "popularity": 0,
@@ -345,23 +217,92 @@
       "tierClass": "A"
     },
     {
-      "id": "news-god-of-war-tv-series-recasting-kratos",
-      "slug": "god-of-war-tv-series-to-recast-kratos-after-actor-injury",
-      "title": "God of War TV Series to Recast Kratos After Actor Injury",
+      "id": "music-news-martin-garrix-u2-collaboration-debut",
+      "slug": "martin-garrix-debuts-new-u2-collaboration-with-the-edge-at-tomorrowlan",
+      "title": "Martin Garrix Debuts New U2 Collaboration With The Edge at Tomorrowland",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "martin-garrix-u2-collaboration-debut",
+      "primaryKeyword": "martin garrix u2 collaboration",
+      "primaryEntity": "Martin Garrix",
+      "entities": [
+        "U2",
+        "The Edge",
+        "Tomorrowland"
+      ],
+      "angle": "Martin Garrix debuted a new collaboration with U2's The Edge at Tomorrowland.",
+      "tmdbType": "movie",
+      "source": "rss:Rolling Stone",
+      "sources": [
+        {
+          "outlet": "Rolling Stone",
+          "tier": 7,
+          "url": "https://www.rollingstone.com/music/music-news/martin-garrix-new-u2-song-fireflies-the-edge-tomorrowland-1235595612/",
+          "ageMin": 38,
+          "headline": "See Martin Garrix Debut New U2 Collaboration Fireflies With the Edge at Tomorrowland",
+          "summary": "After premiering at Belgium EDM fest, DJ and Irish rockers' latest single together is \"out soon\""
+        }
+      ],
+      "ageMin": 38,
+      "_cand": {
+        "key": "rss:see-martin-garrix-debut-new-u2-collaboration-fireflies-with-",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "breakoutVelocity": 0,
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Rolling Stone"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Rolling Stone",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 63,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-god-of-war-kratos-recast-ryan-hurst-injury",
+      "slug": "god-of-war-to-recast-kratos-role-following-ryan-hurst-on-set-injury",
+      "title": "God of War to Recast Kratos Role Following Ryan Hurst On-Set Injury",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "god-of-war-tv-series-recasting-kratos",
-      "primaryKeyword": "God of War TV series",
+      "eventSlug": "god-of-war-kratos-recast-ryan-hurst-injury",
+      "primaryKeyword": "god of war series kratos recast",
       "primaryEntity": "God of War",
       "entities": [
         "God of War (TV series)",
         "Ryan Hurst"
       ],
-      "angle": "The role of Kratos in Prime Video's 'God of War' series will be recast after an on-set injury to actor Ryan Hurst.",
+      "angle": "Injury forces a recast for the lead role in Prime Video's 'God of War'.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
@@ -369,12 +310,12 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/tv/tv-news/god-of-war-recast-kratos-ryan-hurst-stunt-injury-1236650848/",
-          "ageMin": 1516,
+          "ageMin": 1574,
           "headline": "God of War to Recast Kratos Role Following Ryan Hurst On-Set Injury",
           "summary": "Prime Video's original God of War tore a bicep muscle while performing a stunt."
         }
       ],
-      "ageMin": 1516,
+      "ageMin": 1574,
       "_cand": {
         "key": "rss:god-of-war-to-recast-kratos-role-following-ryan-hurst-on-set",
         "popularity": 0,
@@ -411,24 +352,91 @@
       "tierClass": "B"
     },
     {
-      "id": "music-news-bts-normal-spotify-record",
+      "id": "news-danny-boyle-ink-netflix-sale-venice",
+      "slug": "danny-boyle-s-ink-sells-to-netflix-in-first-big-sale-way-ahead-of-veni",
+      "title": "Danny Boyle's Ink Sells to Netflix in First Big Sale (Way) Ahead of Venice Premiere",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "danny-boyle-ink-netflix-sale-venice",
+      "primaryKeyword": "danny boyle ink",
+      "primaryEntity": "Ink (film)",
+      "entities": [
+        "Danny Boyle",
+        "Netflix",
+        "Venice Film Festival"
+      ],
+      "angle": "Danny Boyle's new film 'Ink', set to open the Venice Film Festival, has been acquired by Netflix.",
+      "tmdbType": "movie",
+      "source": "rss:IndieWire",
+      "sources": [
+        {
+          "outlet": "IndieWire",
+          "tier": 7,
+          "url": "https://www.indiewire.com/news/breaking-news/danny-boyle-ink-netflix-venice-sale-1235206128/",
+          "ageMin": 1070,
+          "headline": "Danny Boyle s Ink Sells to Netflix in First Big Sale (Way) Ahead of Venice Premiere",
+          "summary": "The film about Larry Lamb, Rupert Murdoch, and the birth of The Sun tabloid is the opening night film at the Biennale."
+        }
+      ],
+      "ageMin": 1070,
+      "_cand": {
+        "key": "rss:danny-boyle-s-ink-sells-to-netflix-in-first-big-sale-way-ahe",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "IndieWire"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "IndieWire",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 64,
+      "signals": {
+        "recency": 1,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "music-news-bts-breaks-record-spotify-music-video-normal",
       "slug": "bts-breaks-record-with-music-video-release-of-normal-on-spotify",
       "title": "BTS Breaks Record With Music Video Release of “NORMAL” on Spotify",
       "contentType": "music-news",
       "formatTag": "music-news",
       "category": "music",
       "subcategory": "news",
-      "eventType": "announcement",
+      "eventType": "other",
       "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "bts-normal-spotify-record",
+      "eventSlug": "bts-breaks-record-spotify-music-video-normal",
       "primaryKeyword": "BTS Spotify record",
       "primaryEntity": "Bts",
       "entities": [
         "BTS",
         "Spotify"
       ],
-      "angle": "BTS sets a new record on Spotify with their music video release.",
+      "angle": "BTS sets a new record on Spotify with the music video release of their song 'NORMAL'.",
       "tmdbType": "movie",
       "source": "gnews:Spotify",
       "sources": [
@@ -436,12 +444,12 @@
           "outlet": "Spotify",
           "tier": 5,
           "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5VVXd1UjRDb1NCUkJubDl1aElKMzZ5ZnpBaDF0d0dCVEN0RVo3aGtSc2V0d05yZUxWdXpLZzdDeUdJVnE4amVSeE8tTmhaMGdYbVhucHBlVHhZbDJPdk5xbjZQaHl4WWU4VDBQdGRXZFI?oc=5",
-          "ageMin": 79,
+          "ageMin": 137,
           "headline": "BTS Breaks Record With Music Video Release of “NORMAL” on Spotify - Spotify",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMicEFVX3lxTE5VVXd1UjRDb1NCUkJubDl1aElKMzZ5ZnpBaDF0d0dCVEN0RVo3aGtSc2V0d05yZUxWdXpLZzdDeUdJVnE4amVSeE8tTmhaMGdYbVhucHBlVHhZbDJPdk5xbjZQaHl4WWU4VDBQdGRXZFI?oc=5\" target=\"_blank\" BTS Breaks Record With Music Video Release of “NORMAL” on Spotify /a nbsp; nb"
         }
       ],
-      "ageMin": 79,
+      "ageMin": 137,
       "_cand": {
         "key": "rss:bts-breaks-record-with-music-video-release-of-normal-on-spot",
         "popularity": 0,
@@ -462,12 +470,12 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 61,
+      "priority": 57,
       "signals": {
         "recency": 16,
         "corroboration": 8,
         "status": 18,
-        "type": 9,
+        "type": 5,
         "pop": 0,
         "breakout": 0,
         "big": 0,
@@ -480,212 +488,15 @@
       "tierClass": "A"
     },
     {
-      "id": "news-west-duchovny-joins-dennis-quaid-nascar-drama-thunder-road",
-      "slug": "west-duchovny-joins-dennis-quaid-s-nascar-drama-thunder-road",
-      "title": "West Duchovny Joins Dennis Quaid’s NASCAR Drama ‘Thunder Road’",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "west-duchovny-joins-dennis-quaid-nascar-drama-thunder-road",
-      "primaryKeyword": "West Duchovny",
-      "primaryEntity": "West Duchovny",
-      "entities": [
-        "Dennis Quaid",
-        "Thunder Road"
-      ],
-      "angle": "West Duchovny has been cast in Dennis Quaid's upcoming NASCAR drama 'Thunder Road'.",
-      "tmdbType": "movie",
-      "source": "gnews:TV Insider",
-      "sources": [
-        {
-          "outlet": "TV Insider",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPYkRfbzg0RnNtVWF5UnJMTzZQbFRSMlJneGtaUElfdjY0bjBFM0M0TjR0Q1QyTWxPRHEtYW1COGRRS01rdEFoRTBwQ3R4ak1IYUx4eUFsWDluLXVCUVZiSzdHQjNTUGZNRE1MOWFJaEJxalo0bHhBa1NBZkZ5T01Ga3B4OE9vRTQ2SWoyWW50S3k?oc=5",
-          "ageMin": 501,
-          "headline": "West Duchovny Joins Dennis Quaid’s NASCAR Drama ‘Thunder Road’ - TV Insider",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMikAFBVV95cUxPYkRfbzg0RnNtVWF5UnJMTzZQbFRSMlJneGtaUElfdjY0bjBFM0M0TjR0Q1QyTWxPRHEtYW1COGRRS01rdEFoRTBwQ3R4ak1IYUx4eUFsWDluLXVCUVZiSzdHQjNTUGZNRE1MOWFJaEJxalo0bHhBa1NBZkZ5T01Ga3B4OE9vRTQ2SWoyWW50S3k?oc=5\" target=\"_blank\" West Duchovny Joins Dennis Quaid’"
-        }
-      ],
-      "ageMin": 501,
-      "_cand": {
-        "key": "rss:west-duchovny-joins-dennis-quaid-s-nascar-drama-thunder-road",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "TV Insider"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "TV Insider",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 72,
-      "signals": {
-        "recency": 4,
-        "corroboration": 8,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 4,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-red-white-royal-blue-sequel-question",
-      "slug": "television-q-a-will-there-be-a-regal-sequel-to-red-white-royal-blue",
-      "title": "Television Q A: Will there be a regal sequel to 'Red, White Royal Blue'?",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "red-white-royal-blue-sequel-question",
-      "primaryKeyword": "Red, White & Royal Blue",
-      "primaryEntity": "Red, White & Royal Blue",
-      "entities": [],
-      "angle": "A question is raised about the possibility of a sequel to the popular film 'Red, White & Royal Blue'.",
-      "tmdbType": "movie",
-      "source": "gnews:UnionLeader.com",
-      "sources": [
-        {
-          "outlet": "UnionLeader.com",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxNc1Jmb2J6RTdhdmlSczhMeGxMVUxhd1kwMDNwYV9Sem9UVklXSTRJdkpxVnRrdWdFM0MtbC1yY2d0VHBLTWpxd0k0NHRfSGk4Q3Z5TDY2TVZRTnktV2Q2V1Yyd2U3ampPX1pzS3hnTW5ydk8xUXNaYkx2WFR0bFQ5akU5clFPeVFUdlB4cjlPenJEXy1CMHR5SGJJbkc2YlNOdDFlTDVPWjBRd0U4R25sREFBTWVRU3oxSGplampIM1VtVU9EZEJPcWtJSE5XeVkwTkRQeXRyZ0lHby1uSWo0THBNT0lxOTBLVFdielJBQWR3ZTRDcVdKbw?oc=5",
-          "ageMin": 902,
-          "headline": "Television Q A: Will there be a regal sequel to 'Red, White Royal Blue'? - UnionLeader.com",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMi-AFBVV95cUxNc1Jmb2J6RTdhdmlSczhMeGxMVUxhd1kwMDNwYV9Sem9UVklXSTRJdkpxVnRrdWdFM0MtbC1yY2d0VHBLTWpxd0k0NHRfSGk4Q3Z5TDY2TVZRTnktV2Q2V1Yyd2U3ampPX1pzS3hnTW5ydk8xUXNaYkx2WFR0bFQ5akU5clFPeVFUdlB4cjlPenJEXy1CMHR5SGJJbkc2YlNOdDFlTDVPWjBRd0U4R25sREFBTWVRU3oxSGp"
-        }
-      ],
-      "ageMin": 902,
-      "_cand": {
-        "key": "rss:television-q-a-will-there-be-a-regal-sequel-to-red-white-roy",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "UnionLeader.com"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "UnionLeader.com",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 54,
-      "signals": {
-        "recency": 1,
-        "corroboration": 8,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-colman-domingo-tiana-movie",
-      "slug": "colman-domingo-in-talks-to-write-live-action-princess-tiana-movie-insp",
-      "title": "Colman Domingo in Talks to Write Live-Action Princess Tiana Movie Inspired by Princess and the Frog",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "colman-domingo-tiana-movie",
-      "primaryKeyword": "colman domingo tiana movie",
-      "primaryEntity": "The Princess and the Frog",
-      "entities": [
-        "Princess Tiana",
-        "Colman Domingo",
-        "Princess and the Frog"
-      ],
-      "angle": "Colman Domingo in talks to write a live-action Princess Tiana movie.",
-      "tmdbType": "movie",
-      "source": "rss:Deadline",
-      "sources": [
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/lorde-calls-out-spotify-ai-about-the-song-feature-1236997350/",
-          "ageMin": 924,
-          "headline": "Lorde Calls Out Spotify Over AI About The Song Feature: We Don t Want This",
-          "summary": "Lorde is calling out Spotify over a new feature that uses AI to give context to the song playing on the streaming service. The About the Song feature, which is currently in beta, was released earlier this year and gathers information from third-party sources to give details on a particular song. Hey Spotify, I m gonna [ ]"
-        }
-      ],
-      "ageMin": 924,
-      "_cand": {
-        "key": "rss:lorde-calls-out-spotify-over-ai-about-the-song-feature-we-do",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Deadline"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Deadline",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 69,
-      "signals": {
-        "recency": 1,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
       "id": "news-will-ferrell-netflix-show-review",
       "slug": "will-ferrell-s-new-netflix-show-is-incomprehensibly-bad",
       "title": "Will Ferrell's New Netflix Show Is Incomprehensibly Bad",
       "contentType": "news",
       "formatTag": "news",
-      "category": "movies",
+      "category": "tv",
       "subcategory": "news",
       "eventType": "review",
       "sensitivity": "normal",
-      "tier": "popular",
       "eventSlug": "will-ferrell-netflix-show-review",
       "primaryKeyword": "Will Ferrell Netflix show",
       "primaryEntity": "Will Ferrell: You're Welcome America - A Final Night with George W. Bush",
@@ -701,12 +512,12 @@
           "outlet": "Obsessed by Kevin Fallon",
           "tier": 5,
           "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1LNko5WTVwOXRkSnNDY3hGNlBYS3hqVURSMjBvMXVjYzY0TG9lRE5fLVl2ZzA2ZUlkcDRNdWJjTHFFOVNHUWZDd1ktMWc0S2x2R0d1ZmVyaTB2VzN0X2pVU1lMV0V1emViSnN1RjhDTHIxV2xfSEVOTUM5dVpmN2c?oc=5",
-          "ageMin": 181,
+          "ageMin": 239,
           "headline": "Will Ferrell's New Netflix Show Is Incomprehensibly Bad - Obsessed by Kevin Fallon",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMif0FVX3lxTE1LNko5WTVwOXRkSnNDY3hGNlBYS3hqVURSMjBvMXVjYzY0TG9lRE5fLVl2ZzA2ZUlkcDRNdWJjTHFFOVNHUWZDd1ktMWc0S2x2R0d1ZmVyaTB2VzN0X2pVU1lMV0V1emViSnN1RjhDTHIxV2xfSEVOTUM5dVpmN2c?oc=5\" target=\"_blank\" Will Ferrell's New Netflix Show Is Incomprehensibly Bad /"
         }
       ],
-      "ageMin": 181,
+      "ageMin": 239,
       "_cand": {
         "key": "rss:will-ferrell-s-new-netflix-show-is-incomprehensibly-bad-obse",
         "popularity": 0,
@@ -727,7 +538,7 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 68,
+      "priority": 62,
       "signals": {
         "recency": 9,
         "corroboration": 8,
@@ -735,7 +546,7 @@
         "type": 9,
         "pop": 0,
         "breakout": 0,
-        "big": 24,
+        "big": 18,
         "trending": 0,
         "spice": 0,
         "softTv": 0
@@ -743,39 +554,40 @@
       "tierClass": "B"
     },
     {
-      "id": "news-the-princess-and-the-frog-live-action-adaptation",
-      "slug": "colman-domingo-in-early-talks-to-write-live-action-princess-and-the-fr",
-      "title": "Colman Domingo in Early Talks to Write Live-Action 'Princess and the Frog'",
+      "id": "news-danny-boyle-thriller-ink-lands-netflix",
+      "slug": "danny-boyle-thriller-ink-acquired-by-netflix-ahead-of-venice-debut",
+      "title": "Danny Boyle Thriller 'Ink' Acquired by Netflix Ahead of Venice Debut",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "the-princess-and-the-frog-live-action-adaptation",
-      "primaryKeyword": "princess and the frog live action",
-      "primaryEntity": "The Princess and the Frog",
+      "eventSlug": "danny-boyle-thriller-ink-lands-netflix",
+      "primaryKeyword": "danny boyle ink",
+      "primaryEntity": "Ink (2024 film)",
       "entities": [
-        "The Princess and the Frog (2009 film)",
-        "Colman Domingo",
-        "Disney"
+        "Danny Boyle",
+        "Netflix",
+        "Jack O'Connell",
+        "Guy Pearce"
       ],
-      "angle": "Colman Domingo is in early talks to write the script for a live-action adaptation of Disney's animated film 'The Princess and the Frog'.",
+      "angle": "Danny Boyle's new thriller 'Ink', starring Jack O'Connell, Guy Pearce, and Claire Foy, has been acquired by Netflix ahead of its premiere at the Venice Film Festival.",
       "tmdbType": "movie",
       "source": "rss:TheWrap",
       "sources": [
         {
           "outlet": "TheWrap",
           "tier": 7,
-          "url": "https://www.thewrap.com/creative-content/movies/the-princess-and-the-frog-live-action-adaptation-colman-domingo/",
-          "ageMin": 717,
-          "headline": "Disney’s ‘The Princess and the Frog’: Colman Domingo in Early Talks to Write Live-Action Adaptation",
-          "summary": "The new movie, a reimagining of the 2009 hand-drawn animated classic, is in early stages The post Disney’s ‘The Princess and the Frog’: Colman Domingo in Early Talks to Write Live-Action Adaptation appeared first on TheWrap ."
+          "url": "https://www.thewrap.com/creative-content/movies/netflix-lands-us-latin-american-rights-to-danny-boyle-thriller-ink/",
+          "ageMin": 1122,
+          "headline": "Danny Boyle Thriller Ink Lands at Netflix Ahead of Venice Debut",
+          "summary": "Jack O’Connell, Guy Pearce and Claire Foy star in the biographical newspaper drama, which is set to open the Venice Film Festival The post Danny Boyle Thriller Ink Lands at Netflix Ahead of Venice Debut appeared first on TheWrap ."
         }
       ],
-      "ageMin": 717,
+      "ageMin": 1122,
       "_cand": {
-        "key": "rss:disney-s-the-princess-and-the-frog-colman-domingo-in-early-t",
+        "key": "rss:danny-boyle-thriller-ink-lands-at-netflix-ahead-of-venice-de",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -794,9 +606,9 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 67,
+      "priority": 64,
       "signals": {
-        "recency": 4,
+        "recency": 1,
         "corroboration": 12,
         "status": 18,
         "type": 9,
@@ -810,41 +622,41 @@
       "tierClass": "B"
     },
     {
-      "id": "news-priyanka-chopra-varanasi-first-look",
-      "slug": "varanasi-first-look-at-priyanka-chopra-in-rrr-director-s-new-film",
-      "title": "‘Varanasi’: First Look At Priyanka Chopra In ‘RRR’ Director’s New Film",
+      "id": "news-iko-uwais-albert-hughes-jakarta-crime-series",
+      "slug": "iko-uwais-albert-hughes-set-for-multi-generational-crime-series-jakart",
+      "title": "Iko Uwais, Albert Hughes Set for Multi-Generational Crime Series 'Jakarta'",
       "contentType": "news",
       "formatTag": "news",
-      "category": "movies",
+      "category": "tv",
       "subcategory": "news",
       "eventType": "announcement",
-      "sensitivity": "high",
-      "eventSlug": "priyanka-chopra-varanasi-first-look",
-      "primaryKeyword": "Priyanka Chopra",
-      "primaryEntity": "Varanasi",
+      "sensitivity": "normal",
+      "eventSlug": "iko-uwais-albert-hughes-jakarta-crime-series",
+      "primaryKeyword": "jakarta crime series",
+      "primaryEntity": "Jakarta (TV series)",
       "entities": [
-        "Priyanka Chopra Jonas",
-        "Priyanka Chopra",
-        "SS Rajamouli"
+        "Iko Uwais",
+        "Albert Hughes",
+        "Alcon Entertainment"
       ],
-      "angle": "First look images have been released for Priyanka Chopra's role in 'Varanasi', directed by 'RRR' director SS Rajamouli.",
+      "angle": "Action star Iko Uwais and director Albert Hughes team up for a new multi-generational crime series at Alcon Entertainment.",
       "tmdbType": "movie",
-      "source": "gnews:Deadline",
+      "source": "rss:Variety",
       "sources": [
         {
-          "outlet": "Deadline",
+          "outlet": "Variety",
           "tier": 7,
-          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQekdVbXhqRFF5RnhPek5yWlhUQXJOcTdNdEFUVmZWNVNYYUdFekJMbFZ5dVU3T1Bvandja0hyS2N1UV9CM2ZPbkdob2NuZzhoUm5scUEyM0RzVWl5V0VoXy1QS1VuUkZPQjU1MUh4NHV6MllDWlFYTlZTVkZsbDg3c0JvRXNidjlYYjVBdlkzYTV3NHRTV0FqcjBn?oc=5",
-          "ageMin": 693,
-          "headline": "‘Varanasi’: First Look At Priyanka Chopra In ‘RRR’ Director’s New Film - Deadline",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMimgFBVV95cUxQekdVbXhqRFF5RnhPek5yWlhUQXJOcTdNdEFUVmZWNVNYYUdFekJMbFZ5dVU3T1Bvandja0hyS2N1UV9CM2ZPbkdob2NuZzhoUm5scUEyM0RzVWl5V0VoXy1QS1VuUkZPQjU1MUh4NHV6MllDWlFYTlZTVkZsbDg3c0JvRXNidjlYYjVBdlkzYTV3NHRTV0FqcjBn?oc=5\" target=\"_blank\" ‘Varanasi’: First Lo"
+          "url": "https://variety.com/2026/tv/news/iko-uwais-albert-hughes-jakarta-series-alcon-entertainment-1236814756/",
+          "ageMin": 1471,
+          "headline": "Iko Uwais and Albert Hughes Unite for Multi-Generational Crime Series Jakarta at Blade Runner 2049 Outfit Alcon Entertainment (EXCLUSIVE)",
+          "summary": "Action star Iko Uwais is set to lead Jakarta, a multi-generational family crime series in development at Alcon Entertainment, with Albert Hughes attached to direct the pilot and serve as producing director. The project comes from writers Kirk Ward and Joshua W. Wagner, with Ward also locked in as showrunner. Hughes and Ward previously worked [ ]"
         }
       ],
-      "ageMin": 693,
+      "ageMin": 1471,
       "_cand": {
-        "key": "rss:-varanasi-first-look-at-priyanka-chopra-in-rrr-director-s-ne",
+        "key": "rss:iko-uwais-and-albert-hughes-unite-for-multi-generational-cri",
         "popularity": 0,
-        "kind": "gnews"
+        "kind": "rss-news"
       },
       "corroborationCount": 1,
       "verification": {
@@ -852,62 +664,62 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Deadline"
+          "Variety"
         ],
         "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "Deadline",
+        "sensitivity": "normal",
+        "attribution": "Variety",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 67,
+      "priority": 58,
       "signals": {
-        "recency": 4,
+        "recency": 1,
         "corroboration": 12,
         "status": 18,
         "type": 9,
         "pop": 0,
         "breakout": 0,
-        "big": 24,
+        "big": 18,
         "trending": 0,
         "spice": 0,
         "softTv": 0
       },
-      "tierClass": "S"
+      "tierClass": "C"
     },
     {
-      "id": "news-zendaya-the-odyssey-premiere",
-      "slug": "zendaya-grew-angel-wings-at-the-odyssey-premiere",
-      "title": "Zendaya Grew Angel Wings At \"The Odyssey\" Premiere",
+      "id": "news-eliza-dushku-sci-fi-series-canceled",
+      "slug": "eliza-dushku-s-sci-fi-series-canceled-too-soon-after-buffy",
+      "title": "Eliza Dushku's Sci-Fi Series Canceled Too Soon After Buffy",
       "contentType": "news",
       "formatTag": "news",
-      "category": "celebrity",
+      "category": "tv",
       "subcategory": "news",
-      "eventType": "appearance",
+      "eventType": "cancellation",
       "sensitivity": "normal",
-      "eventSlug": "zendaya-the-odyssey-premiere",
-      "primaryKeyword": "Zendaya The Odyssey premiere",
-      "primaryEntity": "Zendaya",
+      "eventSlug": "eliza-dushku-sci-fi-series-canceled",
+      "primaryKeyword": "eliza dushku sci-fi series",
+      "primaryEntity": "Eliza Dushku",
       "entities": [
-        "The Odyssey"
+        "Buffy the Vampire Slayer"
       ],
-      "angle": "Zendaya's fashion moment at 'The Odyssey' premiere.",
+      "angle": "Eliza Dushku's post-Buffy sci-fi series gets a spotlight for its premature cancellation.",
       "tmdbType": "movie",
-      "source": "gnews:Coveteur",
+      "source": "gnews:TVLine",
       "sources": [
         {
-          "outlet": "Coveteur",
+          "outlet": "TVLine",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE12clBVOTZKYnRlUVdoZ0I3SHE0R0g2YnFDYzZXQnl4S0VPUV80MlVScTVwTVlwTTVQNktsaTZYeDdVY1haeVVnLV9lYTRNNXRNMEE5V0tHZnliajBUYVZ5SUVuNA?oc=5",
-          "ageMin": 302,
-          "headline": "Zendaya Grew Angel Wings At \"The Odyssey\" Premiere - Coveteur",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiY0FVX3lxTE12clBVOTZKYnRlUVdoZ0I3SHE0R0g2YnFDYzZXQnl4S0VPUV80MlVScTVwTVlwTTVQNktsaTZYeDdVY1haeVVnLV9lYTRNNXRNMEE5V0tHZnliajBUYVZ5SUVuNA?oc=5\" target=\"_blank\" Zendaya Grew Angel Wings At \"The Odyssey\" Premiere /a nbsp; nbsp; font color=\"#6f6f6f\" Coveteu"
+          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOMEJtaFVIRzA3MnJsNXRLOGNkcUdMdTFwZWFqUTUzbVNjeWxfckdOYW42REhtMEsxT2I0STREa3JQMlctOTVjZGV1OE10RUFpV1RqQW16U2ZBRUNvLWd2MFE0bnc0SEtqazhERi00Y0k3TEVDV3MyWEctQTFVaENmYkI2R0R5X0NGbkctYll2aHZ1cjZPQ2w3Z0lnTGgyUQ?oc=5",
+          "ageMin": 2599,
+          "headline": "After Buffy, Eliza Dushku Starred In This Sci-Fi TV Series That Was Canceled Way Too Soon - TVLine",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxOMEJtaFVIRzA3MnJsNXRLOGNkcUdMdTFwZWFqUTUzbVNjeWxfckdOYW42REhtMEsxT2I0STREa3JQMlctOTVjZGV1OE10RUFpV1RqQW16U2ZBRUNvLWd2MFE0bnc0SEtqazhERi00Y0k3TEVDV3MyWEctQTFVaENmYkI2R0R5X0NGbkctYll2aHZ1cjZPQ2w3Z0lnTGgyUQ?oc=5\" target=\"_blank\" After Buffy, E"
         }
       ],
-      "ageMin": 302,
+      "ageMin": 2599,
       "_cand": {
-        "key": "rss:zendaya-grew-angel-wings-at-the-odyssey-premiere-coveteur",
+        "key": "rss:after-buffy-eliza-dushku-starred-in-this-sci-fi-tv-series-th",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -917,34 +729,231 @@
         "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "Coveteur"
+          "TVLine"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "Coveteur",
+        "attribution": "TVLine",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 71,
+      "priority": 56,
       "signals": {
-        "recency": 9,
+        "recency": 1,
         "corroboration": 8,
         "status": 18,
-        "type": 6,
+        "type": 11,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-josh-fox-new-doc-the-welcome-table-climate-change",
+      "slug": "filmmaker-josh-fox-explores-climate-change-s-human-impact-in-new-docum",
+      "title": "Filmmaker Josh Fox Explores Climate Change's Human Impact in New Documentary 'The Welcome Table'",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "josh-fox-new-doc-the-welcome-table-climate-change",
+      "primaryKeyword": "josh fox climate change",
+      "primaryEntity": "The Welcome Table (2024 film)",
+      "entities": [
+        "Gasland",
+        "Josh Fox",
+        "GasLand (film)",
+        "Awake: A Dream from Standing Rock (film)"
+      ],
+      "angle": "Filmmaker Josh Fox, known for 'GasLand', is tackling climate change from a human perspective in his new documentary 'The Welcome Table', which follows climate migrants globally.",
+      "tmdbType": "movie",
+      "source": "rss:IndieWire",
+      "sources": [
+        {
+          "outlet": "IndieWire",
+          "tier": 7,
+          "url": "https://www.indiewire.com/features/commentary/filmmaker-josh-fox-climate-change-doc-the-welcome-table-1235205521/",
+          "ageMin": 1231,
+          "headline": "Filmmaker Josh Fox Knows All About the Unfolding Disaster of Climate Change — His New Doc Tackles It from the Human Side",
+          "summary": "The \"GasLand\" and \"Awake: A Dream from Standing Rock\" filmmaker shares his life-changing experience crafting “The Welcome Table,” which follows climate migrants around the world."
+        }
+      ],
+      "ageMin": 1231,
+      "_cand": {
+        "key": "rss:filmmaker-josh-fox-knows-all-about-the-unfolding-disaster-of",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "IndieWire"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "IndieWire",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 48,
+      "signals": {
+        "recency": 1,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 12,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-lindsay-hubbard-florastor-partnership",
+      "slug": "lindsay-hubbard-teams-up-with-florastor-for-new-wellness-probiotic",
+      "title": "Lindsay Hubbard Teams Up With Florastor for New Wellness Probiotic",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "lindsay-hubbard-florastor-partnership",
+      "primaryKeyword": "lindsay hubbard",
+      "primaryEntity": "Lindsay Hubbard",
+      "entities": [
+        "Summer House",
+        "Florastor"
+      ],
+      "angle": "Lindsay Hubbard partners with Florastor for a new wellness probiotic.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/tv/tv-features/lindsay-hubbard-summer-house-season-11-filming-florastor-1236651239/",
+          "ageMin": 76,
+          "headline": "Between ‘Summer House’ and ‘In the City,’ Lindsay Hubbard Doesn t Have Time to Slow Down",
+          "summary": "Hubbard is a busy woman, and that’s why she’s teamed up with Florastor in support of their new Digest + Skin Renew Probiotic to prioritize wellness amid the business in her personal and professional life."
+        }
+      ],
+      "ageMin": 76,
+      "_cand": {
+        "key": "rss:between-summer-house-and-in-the-city-lindsay-hubbard-doesn-t",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 55,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
         "big": 0,
         "trending": 0,
         "spice": 0,
-        "softTv": 0,
-        "radar": 30
+        "softTv": 0
       },
-      "radarKind": "movie-in-theaters",
-      "tierClass": "A"
+      "tierClass": "C"
     },
     {
-      "id": "news-jennifer-winget-william-ishmael-wedding",
+      "id": "news-drake-dinner-nyc",
+      "slug": "drake-meets-up-with-friends-for-dinner-in-nyc",
+      "title": "Drake Meets Up with Friends for Dinner in NYC",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "drake-dinner-nyc",
+      "primaryKeyword": "drake nyc",
+      "primaryEntity": "Charles Drake",
+      "entities": [
+        "Drake"
+      ],
+      "angle": "Drake spotted having dinner with friends in New York City.",
+      "tmdbType": "movie",
+      "source": "gnews:Just Jared",
+      "sources": [
+        {
+          "outlet": "Just Jared",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPWXJ1bS0wZHl1anZ5TDA3T1VFaEtEb1VYbDlHODVTTUlXdjczQWtoQ3RUWlBfdkRnQmlwWWxRd2VxbVkxNlhBT1JlRk9QUG5xeXU2YjVYWFotZ2t6ZTBVWHNHdFZrVDdvSFBwRVZQZy0zRjVNV2JUQ3dFZmgtbVY5RlpkQWpsb3MxVkJB?oc=5",
+          "ageMin": 18,
+          "headline": "Drake Meets Up with Friends for Dinner in NYC - Just Jared",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiiwFBVV95cUxPWXJ1bS0wZHl1anZ5TDA3T1VFaEtEb1VYbDlHODVTTUlXdjczQWtoQ3RUWlBfdkRnQmlwWWxRd2VxbVkxNlhBT1JlRk9QUG5xeXU2YjVYWFotZ2t6ZTBVWHNHdFZrVDdvSFBwRVZQZy0zRjVNV2JUQ3dFZmgtbVY5RlpkQWpsb3MxVkJB?oc=5\" target=\"_blank\" Drake Meets Up with Friends for Dinner i"
+        }
+      ],
+      "ageMin": 18,
+      "_cand": {
+        "key": "rss:drake-meets-up-with-friends-for-dinner-in-nyc-just-jared",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "Just Jared"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "Just Jared",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 55,
+      "signals": {
+        "recency": 24,
+        "corroboration": 8,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-jennifer-winget-marries-william-ishmael",
       "slug": "jennifer-winget-marries-william-ishmael-in-private-uk-wedding",
       "title": "Jennifer Winget Marries William Ishmael in Private UK Wedding",
       "contentType": "news",
@@ -953,13 +962,13 @@
       "subcategory": "news",
       "eventType": "marriage",
       "sensitivity": "normal",
-      "eventSlug": "jennifer-winget-william-ishmael-wedding",
+      "eventSlug": "jennifer-winget-marries-william-ishmael",
       "primaryKeyword": "Jennifer Winget wedding",
       "primaryEntity": "Jennifer Winget",
       "entities": [
         "William Ishmael"
       ],
-      "angle": "Actress Jennifer Winget ties the knot in a private UK ceremony.",
+      "angle": "Indian television actress Jennifer Winget has married William Ishmael in a private ceremony in the UK.",
       "tmdbType": "movie",
       "source": "gnews:Pragativadi",
       "sources": [
@@ -967,12 +976,12 @@
           "outlet": "Pragativadi",
           "tier": 5,
           "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQdExrY2tCTkVXMm9uUS1BeG9YNEF3QUdSRnZXLXdMR0lOei1UcFRmZ3RLT2k5SUZjbUktNmtUcy03SmVYYk1xd3lSY095ZlFpa0RhVkdELWNHYWlwbmNvR29vMzRNMkFIeDRzZnhEQ29yUkNUeFJ0UU93ZFI4cndNR2oyQWtFRlpSZFRsN0NNbmhIX25tanIxSGhwQlRwX0M5Qm9NMkZrUkhaUk81QldaMURaeTZtQQ?oc=5",
-          "ageMin": 112,
+          "ageMin": 170,
           "headline": "Jennifer Winget Marries William Ishmael in Private UK Wedding, Shares Stunning First Photos - Pragativadi",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxQdExrY2tCTkVXMm9uUS1BeG9YNEF3QUdSRnZXLXdMR0lOei1UcFRmZ3RLT2k5SUZjbUktNmtUcy03SmVYYk1xd3lSY095ZlFpa0RhVkdELWNHYWlwbmNvR29vMzRNMkFIeDRzZnhEQ29yUkNUeFJ0UU93ZFI4cndNR2oyQWtFRlpSZFRsN0NNbmhIX25tanIxSGhwQlRwX0M5Qm9NMkZrUkhaUk81QldaMURaeTZtQQ?oc=5"
         }
       ],
-      "ageMin": 112,
+      "ageMin": 170,
       "_cand": {
         "key": "rss:jennifer-winget-marries-william-ishmael-in-private-uk-weddin",
         "popularity": 0,
