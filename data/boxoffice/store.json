@@ -582,10 +582,10 @@
    "eventSlug": "the-odyssey-ev-weekend-d0",
    "form": "BO-WEEKEND",
    "reason": "fidelity: 5 unsupported figures/claims — draft-level failure",
-   "tries": 8,
-   "at": "2026-07-18T01:32:28.069Z",
+   "tries": 9,
+   "at": "2026-07-18T04:35:32.742Z",
    "dead": true,
-   "expiresAt": "2026-07-21T01:32:28.069Z"
+   "expiresAt": "2026-07-21T04:35:32.742Z"
   },
   {
    "key": "winning-ai-search-ev-streaming-arrival|NOW-STREAMING",
@@ -692,8 +692,10 @@
    "eventSlug": "golden-kamuy-3-the-abarishi-prison-raid-ev-streaming-arrival",
    "form": "NOW-STREAMING",
    "reason": "under floor: no subscription-streaming platform — rent/buy is not 'now streaming'",
-   "tries": 2,
-   "at": "2026-07-18T01:37:06.190Z"
+   "tries": 3,
+   "at": "2026-07-18T04:37:52.772Z",
+   "dead": true,
+   "expiresAt": "2026-07-21T04:37:52.772Z"
   },
   {
    "key": "golden-kamuy-ev-streaming-arrival|NOW-STREAMING",
@@ -702,16 +704,24 @@
    "reason": "soft-floor engagement 3 < 5 | soft-floor humanVoice 3 < 5",
    "tries": 1,
    "at": "2026-07-18T03:37:10.022Z"
+  },
+  {
+   "key": "ek-din-ev-streaming-arrival|NOW-STREAMING",
+   "eventSlug": "ek-din-ev-streaming-arrival",
+   "form": "NOW-STREAMING",
+   "reason": "under floor: no subscription-streaming platform — rent/buy is not 'now streaming'",
+   "tries": 1,
+   "at": "2026-07-18T04:39:17.673Z"
   }
  ],
- "zeroStreak": 2,
+ "zeroStreak": 3,
  "daySpend": {
   "laDay": "2026-07-17",
-  "usd": 1.13336
+  "usd": 1.14774
  },
  "pace": {
-  "tokens": 3.7995095555555554,
-  "lastMs": 1784347240841
+  "tokens": 4,
+  "lastMs": 1784349040384
  },
  "lastAuditDay": "2026-07-17"
 }
