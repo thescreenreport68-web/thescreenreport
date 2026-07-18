@@ -1,0 +1,79 @@
+{
+ "runId": "run-2026-07-18T23-32-27",
+ "mode": "live",
+ "startedAt": "2026-07-18T23:32:27.375Z",
+ "films": 8,
+ "published": [],
+ "held": [],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "the-odyssey-ev-opening×BO-OPENING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "potential-ev-streaming-arrival×NOW-STREAMING",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "the-odyssey-ev-weekend×BO-WEEKEND",
+   "reason": "film attempt budget exhausted today (3 paid tries/film/day)"
+  },
+  {
+   "tag": "chained-ev-streaming-arrival×NOW-STREAMING",
+   "reason": "film attempt budget exhausted today (3 paid tries/film/day)"
+  },
+  {
+   "tag": "the-abandons-ev-streaming-arrival×NOW-STREAMING",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "the-hawk-ev-streaming-arrival×NOW-STREAMING",
+   "reason": "film attempt budget exhausted today (3 paid tries/film/day)"
+  },
+  {
+   "tag": "young-washington-bo-update×BO-UPDATE",
+   "reason": "film attempt budget exhausted today (3 paid tries/film/day)"
+  },
+  {
+   "tag": "the-invite-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  }
+ ],
+ "blocked": [],
+ "paced": {
+  "tokens": 4,
+  "behind": true,
+  "expected": 14.2,
+  "allow": 2
+ },
+ "queueBuilt": 7,
+ "zeroStreak": 16,
+ "daySpend": {
+  "laDay": "2026-07-18",
+  "usd": 0.29656
+ },
+ "finishedAt": "2026-07-18T23:32:35.480Z",
+ "meter": {
+  "byRole": {
+   "categorize": {
+    "calls": 3,
+    "errors": 0,
+    "in": 1137,
+    "out": 519,
+    "usd": 0.00032,
+    "ms": 2708
+   },
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3416,
+    "out": 654,
+    "usd": 0.00021,
+    "ms": 2057
+   }
+  },
+  "totalUsd": 0.00053
+ },
+ "openrouterTotalUsd": 0.00053
+}
