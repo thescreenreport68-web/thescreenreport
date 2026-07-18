@@ -1,0 +1,123 @@
+{
+  "ts": "2026-07-18T03:01:32.977Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    "marcello-hernandez-walks-espys-2026-red-carpet-with-girlfriend-ana-ame"
+  ],
+  "topics": 2,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 1,
+  "blocked": 0,
+  "costUSD": 0.021326,
+  "costPerPublished": 0.021326,
+  "byModel": {
+    "deepseek/deepseek-v3.2": {
+      "calls": 7,
+      "in": 17074,
+      "out": 5331,
+      "usd": 0.007363763199999999
+    },
+    "google/gemini-2.5-flash": {
+      "calls": 8,
+      "in": 17152,
+      "out": 2902,
+      "usd": 0.012400600000000001
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 1083,
+      "out": 308,
+      "usd": 0.000148302
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 6,
+      "in": 7889,
+      "out": 1561,
+      "usd": 0.0014133
+    }
+  },
+  "byRole": {
+    "dedup": {
+      "calls": 1,
+      "errors": 0,
+      "in": 276,
+      "out": 20,
+      "usd": 0.00007028,
+      "ms": 3764
+    },
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2720,
+      "out": 207,
+      "usd": 0.0013335,
+      "ms": 1215
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1083,
+      "out": 308,
+      "usd": 0.00015291,
+      "ms": 11701
+    },
+    "writer": {
+      "calls": 5,
+      "errors": 0,
+      "in": 16064,
+      "out": 4989,
+      "usd": 0.00539098,
+      "ms": 103222
+    },
+    "verify": {
+      "calls": 8,
+      "errors": 1,
+      "in": 14432,
+      "out": 2687,
+      "usd": 0.008764300000000001,
+      "ms": 17500
+    },
+    "judge": {
+      "calls": 2,
+      "errors": 0,
+      "in": 3132,
+      "out": 414,
+      "usd": 0.00047880000000000004,
+      "ms": 1908
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 734,
+      "out": 322,
+      "usd": 0.0002783,
+      "ms": 7721
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 400,
+      "out": 112,
+      "usd": 0.00008480000000000001,
+      "ms": 882
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 205,
+      "out": 39,
+      "usd": 0.0000361,
+      "ms": 597
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2104,
+      "out": 104,
+      "usd": 0.000252,
+      "ms": 1618
+    }
+  }
+}
