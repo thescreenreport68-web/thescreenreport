@@ -1,9 +1,10 @@
 {
-  "builtAt": "2026-07-18T00:31:44.853Z",
+  "builtAt": "2026-07-18T07:02:06.472Z",
   "hotEntities": [
     "The Odyssey",
     "Toy Story 5",
     "Disclosure Day",
+    "Backrooms",
     "Avatar Aang: The Last Airbender",
     "Neon Genesis Evangelion: The End of Evangelion",
     "Pinocchio: Unstrung",
@@ -12,19 +13,17 @@
     "Motor City",
     "Sheep in the Box",
     "Rosebush Pruning",
-    "Backrooms",
+    "Supergirl",
+    "Minions & Monsters",
     "The Furious",
     "House of the Dragon",
     "Rick and Morty",
-    "Ride or Die",
     "Mushoku Tensei: Jobless Reincarnation",
     "Binnelanders",
     "Watch What Happens Live with Andy Cohen",
     "The Daily Show",
     "EastEnders",
     "Jeopardy!",
-    "Supergirl",
-    "Minions & Monsters",
     "Citizen Vigilante",
     "Evil Dead Burn",
     "The Get Out",
@@ -40,86 +39,87 @@
     "Heartstopper Forever",
     "Normal",
     "The Hawk",
-    "Cape Fear"
+    "Cape Fear",
+    "Ann Droid"
   ],
   "windows": {
+    "the odyssey": {
+      "kind": "movie-in-theaters",
+      "weight": 29.711353,
+      "until": "2026-07-25T07:02:06.472Z",
+      "name": "The Odyssey"
+    },
     "toy story 5": {
       "kind": "movie-in-theaters",
-      "weight": 18.972679,
-      "until": "2026-07-25T00:31:44.853Z",
+      "weight": 18.798093,
+      "until": "2026-07-25T07:02:06.472Z",
       "name": "Toy Story 5"
     },
     "disclosure day": {
       "kind": "movie-in-theaters",
-      "weight": 18.68558,
-      "until": "2026-07-25T00:31:44.853Z",
+      "weight": 18.627295,
+      "until": "2026-07-25T07:02:06.472Z",
       "name": "Disclosure Day"
     },
     "backrooms": {
       "kind": "movie-in-theaters",
-      "weight": 17.853485,
-      "until": "2026-07-25T00:31:44.853Z",
+      "weight": 18.47964,
+      "until": "2026-07-25T07:02:06.472Z",
       "name": "Backrooms"
-    },
-    "the odyssey": {
-      "kind": "movie-in-theaters",
-      "weight": 27.518121,
-      "until": "2026-07-25T00:31:44.853Z",
-      "name": "The Odyssey"
-    },
-    "the furious": {
-      "kind": "movie-in-theaters",
-      "weight": 16.100884999999998,
-      "until": "2026-07-25T00:31:44.853Z",
-      "name": "The Furious"
     },
     "supergirl": {
       "kind": "movie-in-theaters",
-      "weight": 15.857196,
-      "until": "2026-07-25T00:31:44.853Z",
+      "weight": 16.430369,
+      "until": "2026-07-25T07:02:06.472Z",
       "name": "Supergirl"
+    },
+    "the furious": {
+      "kind": "movie-in-theaters",
+      "weight": 16.05047,
+      "until": "2026-07-25T07:02:06.472Z",
+      "name": "The Furious"
     },
     "minions & monsters": {
       "kind": "movie-in-theaters",
-      "weight": 15.749309,
-      "until": "2026-07-25T00:31:44.853Z",
+      "weight": 16.208306,
+      "until": "2026-07-25T07:02:06.472Z",
       "name": "Minions & Monsters"
     },
     "citizen vigilante": {
       "kind": "movie-in-theaters",
-      "weight": 15.568878,
-      "until": "2026-07-25T00:31:44.853Z",
+      "weight": 15.497012,
+      "until": "2026-07-25T07:02:06.472Z",
       "name": "Citizen Vigilante"
-    },
-    "evil dead burn": {
-      "kind": "movie-in-theaters",
-      "weight": 14.979868,
-      "until": "2026-07-25T00:31:44.853Z",
-      "name": "Evil Dead Burn"
     },
     "the get out": {
       "kind": "movie-in-theaters",
-      "weight": 14.908067,
-      "until": "2026-07-25T00:31:44.853Z",
+      "weight": 14.82512,
+      "until": "2026-07-25T07:02:06.472Z",
       "name": "The Get Out"
+    },
+    "evil dead burn": {
+      "kind": "movie-in-theaters",
+      "weight": 14.89234,
+      "until": "2026-07-25T07:02:06.472Z",
+      "name": "Evil Dead Burn"
     },
     "stop! that! train!": {
       "kind": "movie-in-theaters",
-      "weight": 14.756967,
-      "until": "2026-07-25T00:31:44.853Z",
+      "weight": 14.609306,
+      "until": "2026-07-25T07:02:06.472Z",
       "name": "Stop! That! Train!"
-    },
-    "avatar aang: the last airbender": {
-      "kind": "movie-releasing",
-      "weight": 18,
-      "until": "2026-07-31T00:00:00.000Z",
-      "name": "Avatar Aang: The Last Airbender"
     },
     "spider-man: brand new day": {
       "kind": "movie-releasing",
       "weight": 12,
       "until": "2026-08-07T00:00:00.000Z",
       "name": "Spider-Man: Brand New Day"
+    },
+    "avatar aang: the last airbender": {
+      "kind": "movie-releasing",
+      "weight": 18,
+      "until": "2026-07-31T00:00:00.000Z",
+      "name": "Avatar Aang: The Last Airbender"
     },
     "neon genesis evangelion: the end of evangelion": {
       "kind": "movie-releasing",
@@ -178,38 +178,26 @@
     "descendants: wicked wonderland": {
       "kind": "movie-trending",
       "weight": 10,
-      "until": "2026-07-20T00:31:44.853Z",
+      "until": "2026-07-20T07:02:06.472Z",
       "name": "Descendants: Wicked Wonderland"
     },
     "obsession": {
       "kind": "movie-trending",
       "weight": 10,
-      "until": "2026-07-20T00:31:44.853Z",
+      "until": "2026-07-20T07:02:06.472Z",
       "name": "Obsession"
     },
     "heartstopper forever": {
       "kind": "movie-trending",
       "weight": 10,
-      "until": "2026-07-20T00:31:44.853Z",
+      "until": "2026-07-20T07:02:06.472Z",
       "name": "Heartstopper Forever"
     },
     "normal": {
       "kind": "movie-trending",
       "weight": 10,
-      "until": "2026-07-20T00:31:44.853Z",
+      "until": "2026-07-20T07:02:06.472Z",
       "name": "Normal"
-    },
-    "the hawk": {
-      "kind": "tv-trending",
-      "weight": 10,
-      "until": "2026-07-20T00:31:44.853Z",
-      "name": "The Hawk"
-    },
-    "cape fear": {
-      "kind": "tv-trending",
-      "weight": 10,
-      "until": "2026-07-20T00:31:44.853Z",
-      "name": "Cape Fear"
     },
     "house of the dragon": {
       "kind": "tv-episode-soon",
@@ -217,22 +205,34 @@
       "until": "2026-07-21T00:00:00.000Z",
       "name": "House of the Dragon"
     },
+    "the hawk": {
+      "kind": "tv-trending",
+      "weight": 10,
+      "until": "2026-07-20T07:02:06.472Z",
+      "name": "The Hawk"
+    },
+    "cape fear": {
+      "kind": "tv-trending",
+      "weight": 10,
+      "until": "2026-07-20T07:02:06.472Z",
+      "name": "Cape Fear"
+    },
     "rick and morty": {
       "kind": "tv-episode-soon",
       "weight": 16,
       "until": "2026-07-21T00:00:00.000Z",
       "name": "Rick and Morty"
     },
-    "ride or die": {
+    "ann droid": {
       "kind": "tv-trending",
-      "weight": 16,
-      "until": "2026-07-20T00:31:44.853Z",
-      "name": "Ride or Die"
+      "weight": 10,
+      "until": "2026-07-20T07:02:06.472Z",
+      "name": "Ann Droid"
     },
     "x-men '97": {
       "kind": "tv-trending",
       "weight": 10,
-      "until": "2026-07-20T00:31:44.853Z",
+      "until": "2026-07-20T07:02:06.472Z",
       "name": "X-Men '97"
     },
     "mushoku tensei: jobless reincarnation": {
@@ -244,7 +244,7 @@
     "binnelanders": {
       "kind": "tv-episode-soon",
       "weight": 16,
-      "until": "2026-07-19T00:00:00.000Z",
+      "until": "2026-07-22T00:00:00.000Z",
       "name": "Binnelanders"
     },
     "watch what happens live with andy cohen": {
@@ -262,31 +262,31 @@
     "eastenders": {
       "kind": "tv-episode-soon",
       "weight": 16,
-      "until": "2026-07-19T00:00:00.000Z",
+      "until": "2026-07-22T00:00:00.000Z",
       "name": "EastEnders"
     },
     "jeopardy!": {
       "kind": "tv-episode-soon",
       "weight": 16,
-      "until": "2026-07-19T00:00:00.000Z",
+      "until": "2026-07-22T00:00:00.000Z",
       "name": "Jeopardy!"
     },
     "teen titans go!": {
       "kind": "tv-episode-today",
       "weight": 12,
-      "until": "2026-07-20T00:31:44.853Z",
+      "until": "2026-07-20T07:02:06.472Z",
       "name": "Teen Titans Go!"
     },
     "my adventures with superman": {
       "kind": "tv-episode-today",
       "weight": 12,
-      "until": "2026-07-20T00:31:44.853Z",
+      "until": "2026-07-20T07:02:06.472Z",
       "name": "My Adventures with Superman"
     },
     "casualty": {
       "kind": "tv-episode-today",
       "weight": 12,
-      "until": "2026-07-20T00:31:44.853Z",
+      "until": "2026-07-20T07:02:06.472Z",
       "name": "Casualty"
     }
   }
