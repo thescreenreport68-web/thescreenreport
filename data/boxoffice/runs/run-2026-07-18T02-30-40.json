@@ -1,0 +1,89 @@
+{
+ "runId": "run-2026-07-18T02-30-40",
+ "mode": "live",
+ "startedAt": "2026-07-18T02:30:40.597Z",
+ "films": 8,
+ "published": [],
+ "held": [
+  {
+   "tag": "moana-bo-update×BO-UPDATE",
+   "reason": "not material: already covered today (one update per film per day)"
+  },
+  {
+   "tag": "minions-monsters-bo-update×BO-UPDATE",
+   "reason": "not material: already covered today (one update per film per day)"
+  },
+  {
+   "tag": "toy-story-5-bo-update×BO-UPDATE",
+   "reason": "not material: already covered today (one update per film per day)"
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "the-odyssey-ev-opening×BO-OPENING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "descendants-wicked-wonderland-ev-streaming-arrival×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "golden-kamuy-3-the-abarishi-prison-raid-ev-streaming-arrival×NOW-STREAMING",
+   "reason": "park cooling (held recently — retry after 2h)"
+  },
+  {
+   "tag": "wild-sing-ev-streaming-arrival×NOW-STREAMING",
+   "reason": "parked dead"
+  }
+ ],
+ "blocked": [
+  {
+   "tag": "the-odyssey-ev-weekend×BO-WEEKEND",
+   "reason": "watchdog: gatherer the-odyssey-ev-weekend×BO-WEEKEND exceeded 180s"
+  }
+ ],
+ "paced": {
+  "tokens": 4,
+  "behind": true,
+  "expected": 16.6,
+  "allow": 2
+ },
+ "queueBuilt": 7,
+ "zeroStreak": 11,
+ "daySpend": {
+  "laDay": "2026-07-17",
+  "usd": 1.09683
+ },
+ "finishedAt": "2026-07-18T02:38:09.977Z",
+ "meter": {
+  "byRole": {
+   "categorize": {
+    "calls": 3,
+    "errors": 0,
+    "in": 1045,
+    "out": 516,
+    "usd": 0.00031,
+    "ms": 2297
+   },
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3431,
+    "out": 639,
+    "usd": 0.00021,
+    "ms": 2142
+   },
+   "gatherer": {
+    "calls": 8,
+    "errors": 5,
+    "in": 8901,
+    "out": 469,
+    "usd": 0.00108,
+    "ms": 2500
+   }
+  },
+  "totalUsd": 0.0016
+ },
+ "openrouterTotalUsd": 0.0087
+}
