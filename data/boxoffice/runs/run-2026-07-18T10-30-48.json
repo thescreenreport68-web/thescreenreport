@@ -1,0 +1,46 @@
+{
+ "runId": "run-2026-07-18T10-30-48",
+ "mode": "live",
+ "startedAt": "2026-07-18T10:30:48.070Z",
+ "films": 0,
+ "published": [],
+ "held": [],
+ "rejected": [],
+ "skipped": [],
+ "blocked": [
+  {
+   "stage": "finder",
+   "reason": "watchdog: finder exceeded 120s"
+  }
+ ],
+ "paced": {
+  "tokens": 4,
+  "behind": true,
+  "expected": 19.71,
+  "allow": 2
+ },
+ "queueBuilt": 10,
+ "finishedAt": "2026-07-18T10:32:52.604Z",
+ "meter": {
+  "byRole": {
+   "categorize": {
+    "calls": 3,
+    "errors": 0,
+    "in": 1037,
+    "out": 525,
+    "usd": 0.00031,
+    "ms": 2502
+   },
+   "gatherer": {
+    "calls": 4,
+    "errors": 3,
+    "in": 434,
+    "out": 38,
+    "usd": 0.00006,
+    "ms": 463
+   }
+  },
+  "totalUsd": 0.00037
+ },
+ "openrouterTotalUsd": 0.00484
+}
