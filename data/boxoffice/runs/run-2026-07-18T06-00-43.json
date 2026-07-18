@@ -1,0 +1,78 @@
+{
+ "runId": "run-2026-07-18T06-00-43",
+ "mode": "live",
+ "startedAt": "2026-07-18T06:00:43.038Z",
+ "films": 8,
+ "published": [],
+ "held": [],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "moana-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "minions-monsters-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "toy-story-5-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "evil-dead-burn-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "young-washington-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "obsession-bo-update×BO-UPDATE",
+   "reason": "already published (this update)"
+  },
+  {
+   "tag": "supergirl-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "disclosure-day-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  }
+ ],
+ "blocked": [],
+ "paced": {
+  "tokens": 4,
+  "behind": true,
+  "expected": 19.14,
+  "allow": 2
+ },
+ "zeroStreak": 7,
+ "daySpend": {
+  "laDay": "2026-07-17",
+  "usd": 1.17161
+ },
+ "finishedAt": "2026-07-18T06:01:38.890Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3489,
+    "out": 609,
+    "usd": 0.00021,
+    "ms": 14079
+   },
+   "gatherer": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3142,
+    "out": 97,
+    "usd": 0.00035,
+    "ms": 1628
+   }
+  },
+  "totalUsd": 0.00056
+ },
+ "openrouterTotalUsd": 0.00081
+}
