@@ -1,0 +1,72 @@
+{
+  "id": "news-peacock-confirms-biggest-scripted-launch-8-part-series",
+  "slug": "peacock-confirms-biggest-scripted-launch-ever-with-new-8-part-series",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": null,
+      "cat": "tv/news",
+      "format": [
+        "Flesch 37 < 40 (too dense to read comfortably)"
+      ],
+      "cuts": 0,
+      "broken": []
+    },
+    "attempt2": {
+      "score": null,
+      "cat": "tv/news",
+      "format": [
+        "body 219w < 220"
+      ],
+      "cuts": 0,
+      "broken": []
+    }
+  },
+  "editorial": {
+    "status": "official",
+    "entity": "Peacock",
+    "work": null,
+    "outlet": "collider.com"
+  },
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
+    "deterministic": {
+      "words": 219,
+      "h2s": 2,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 3,
+      "ktCount": 5,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 26,
+      "avgSentence": 14,
+      "flesch": 45,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": [
+        "body 219w < 220"
+      ]
+    },
+    "hardBlocks": []
+  },
+  "score": null,
+  "category": "tv",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 1,
+    "failed": [
+      "body ≥ 220w",
+      "keyword in title"
+    ]
+  },
+  "ms": 50716
+}
