@@ -70,7 +70,7 @@ aiDisclosure: >-
   Rumors and speculation are labeled as unconfirmed and updated or removed as
   facts develop.
 sensitivity: normal
-dateModified: '2026-07-18T03:00:32.977Z'
+dateModified: '2026-07-18T10:45:00.000Z'
 provenance:
   primaryEntity: Marcello Hernandez
   claim: >-
@@ -91,14 +91,14 @@ provenance:
 
 For a comedian known for quick wit, Marcello Hernandez took his time with love. The comedian stepped onto one of his biggest career stages with the woman who was once just an 'uncomfortable friend' at a charity event.
 
-The couple posed together at the David H. Koch Theater at Lincoln Center in New York City, where the 'Saturday Night Live' star was set to host the Excellence in Sports Performance Yearly Awards that evening.
+The couple posed together at the David H. Koch Theater at Lincoln Center in New York City, where the 'Saturday Night Live' star hosted the Excellence in Sports Performance Yearly Awards on Wednesday, July 15.
 
-In a statement at the time, he reflected on his journey, saying, "I started doing comedy 10 years ago, in Cleveland, Ohio, and I would take the train 12 hours to New York to sell comedy tickets on the street in Greenwich Village in exchange for stage time," adding, "It is an honor, and frankly feels crazy to be hosting the ESPYS this year in New York. I’m sure the energy is going to be great."
+When his hosting gig was announced in late June, he reflected on his journey, saying, "I started doing comedy 10 years ago, in Cleveland, Ohio, and I would take the train 12 hours to New York to sell comedy tickets on the street in Greenwich Village in exchange for stage time," adding, "It is an honor, and frankly feels crazy to be hosting the ESPYS this year in New York. I’m sure the energy is going to be great."
 
 ## The Slow-Burn Meet-Cute
 
 The red carpet appearance put a spotlight on his relationship with Cabral, whose origin story is a classic comedy bit waiting to happen.
 
-"We met at a charity event in, New York, and a friend of hers wanted me to make a video for her dad because her dad was a fan," Hernandez recalled. "And then she was like — the uncomfortable friend that comes with the friend to do the asking for a video thing." He didn't let the awkwardness stop him. "And then I just saw her and I got her Instagram and a year later, we finally went out,"
+"We met at a charity event in New York, and a friend of hers wanted me to make a video for her dad because her dad was a fan," Hernandez recalled. "And then she was like — the uncomfortable friend that comes with the friend to do the asking for a video thing." He didn't let the awkwardness stop him. "And then I just saw her and I got her Instagram and a year later, we finally went out," he said.
 
 From that hesitant start in New York to the ESPYs red carpet, Hernandez's night was a full-circle moment—blending a personal milestone with a major professional one, all with his girlfriend there to witness it.

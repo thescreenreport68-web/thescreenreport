@@ -89,7 +89,7 @@ aiDisclosure: >-
   Rumors and speculation are labeled as unconfirmed and updated or removed as
   facts develop.
 sensitivity: normal
-dateModified: '2026-07-17T13:01:37.344Z'
+dateModified: '2026-07-18T10:45:00.000Z'
 provenance:
   primaryEntity: Jesy Nelson
   claim: 'Jesy Nelson''s ex, Zion Foster, discussed their twins'' rare condition.'
@@ -106,12 +106,12 @@ provenance:
   publishedAt: '2026-07-17T13:01:37.344Z'
 ---
 
-Zion Foster posted a teaser for a song about fatherhood on July 15, singing lyrics that set tongues wagging.
+Zion Foster — who shares 14-month-old twins with former Little Mix singer Jesy Nelson — posted a teaser for a song about fatherhood on July 15, singing "I’m out of my depth, I’m out of my mind, I’m drowning in pain." The lyrics set tongues wagging.
 
-Foster quickly moved to correct the record. In a July 15 Instagram Story, he wrote that the misinterpretations were "incredibly painful because they simply aren't true.". He explained, "I wasn't saying I was walking away from my children or abandoning my responsibilities as a father. I was talking about the overwhelming reality of suddenly facing a rare and complex medical diagnosis that I knew nothing about." The rare and complex diagnosis is spinal muscular atrophy Type 1, which the twins have.
+Foster quickly moved to correct the record. In a July 15 Instagram Story, he wrote that the misinterpretations were "incredibly painful because they simply aren't true." He explained, "I wasn't saying I was walking away from my children or abandoning my responsibilities as a father. I was talking about the overwhelming reality of suddenly facing a rare and complex medical diagnosis that I knew nothing about." The rare and complex diagnosis is spinal muscular atrophy Type 1, which the twins have.
 
 ## Navigating a Split and Co-Parenting
 
-The couple's relationship ended under the strain of their daughters' health battle. Foster has now stated his side, writing in a second Story post, "The end of a relationship does not mean the end of fatherhood," He added, "Jesy made the decision to end our relationship, and although I respect that, it does not change the fact that I remain committed to my daughters in every way l possibly can."
+The couple's relationship ended under the strain of their daughters' health battle. Foster has now stated his side, writing in a second Story post, "The end of a relationship does not mean the end of fatherhood," he wrote, adding, "Jesy made the decision to end our relationship, and although I respect that, it does not change the fact that I remain committed to my daughters in every way I possibly can."
 
-Foster emphasized his dedication, writing, "I love my girls more than words could ever express. They are my world and always will be." Neither has commented on the twins' ongoing treatment or specific future co-parenting arrangements.
+Foster emphasized his dedication, writing, "I love my girls more than words could ever express. They are my world and always will be." His posts landed just ahead of Nelson's documentary "Life Changing," which premiered July 17 and follows the family through the twins' diagnosis and treatment.

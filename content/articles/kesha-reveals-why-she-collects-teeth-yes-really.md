@@ -7,7 +7,7 @@ subcategory: news
 author: alicia-bernard
 date: '2026-07-17T15:01:49.361Z'
 dek: >-
-  From fan-sourced molars to her pets' wisdom teeth, Kesha's collection gives a
+  From fan-sourced teeth to her pets' baby teeth, Kesha's collection gives a
   strange new purpose to what most people would simply discard.
 metaTitle: Kesha reveals she keeps jars of human and cat teeth at home
 metaDescription: >-
@@ -75,7 +75,7 @@ aiDisclosure: >-
   Rumors and speculation are labeled as unconfirmed and updated or removed as
   facts develop.
 sensitivity: normal
-dateModified: '2026-07-17T15:01:49.361Z'
+dateModified: '2026-07-18T10:45:00.000Z'
 provenance:
   primaryEntity: Kesha
   claim: Kesha revealed the unusual reason she collects teeth.
@@ -97,12 +97,12 @@ Kesha collects human teeth and keeps them in jars around her home. The pop star 
 
 She initially used the donations to make jewelry. Her motivation for continuing the hobby is simple. "Then I just started collecting them because it kind of freaks out straight men."
 
-Now, the singer has received over 1,000 from fans and has moved beyond crafting. "I just started putting them all over my home," she said. "In little jars."
+She has previously said she's received more than 1,000 from fans and has moved beyond crafting. "I just started putting them all over my home," she said. "In little jars."
 
 Kesha argues her collection gives purpose to what most people consider waste. "Do you flush them down the toilet?" she posited. "Where are they going? Give them to me. Can I actually have them? It’s not a drill, not a joke."
 
 ## More Than Just Human Teeth
 
-Her collection also includes more personal mementos. During a May episode of *Call Her Daddy*, she shared that she keeps the extracted teeth from her cats. "I have my cats had to get their little teeth taken out. They're little kitty wisdom teeth. I collect those too," she said. For Kesha, the teeth serve as tangible reminders of the people—and pets—she loves.
+Her collection also includes more personal mementos. During a May episode of *Call Her Daddy*, she shared that she keeps the extracted teeth from her cats. "I have my cats had to get their little teeth taken out. They're little kitty wisdom teeth. I collect those too," she said. Kesha has framed the collection as keepsakes from people—and pets—close to her.
 
 As she put it, "I'm like the tooth fairy."

@@ -77,7 +77,7 @@ aiDisclosure: >-
   Rumors and speculation are labeled as unconfirmed and updated or removed as
   facts develop.
 sensitivity: normal
-dateModified: '2026-07-17T19:01:31.989Z'
+dateModified: '2026-07-18T10:45:00.000Z'
 provenance:
   primaryEntity: Olivia Wilde
   claim: Olivia Wilde described an unscripted kiss with Penelope Cruz.
@@ -96,7 +96,7 @@ provenance:
 
 Olivia Wilde is known for keeping her cool behind the camera, but one co-star managed to completely fluster her. Wilde revealed that Penelope Cruz surprised her with an improvised kiss while filming their new movie, *The Invite*.
 
-The story came out during Wilde's recent appearance on the *Table Manners Podcast*, per E! News. "There is a moment in the film where she improvised a kiss with me," the 42-year-old actor-director shared. The moment was so unexpected that Wilde broke character. "I was so shocked when she did it that I actually turned my head and looked directly into the lens and my camera operator, he was like, ‘Olivia!’" she recalled.
+The story came out during Wilde's recent appearance on Jessie and Lennie Ware's *Table Manners* podcast, per E! News. "There is a moment in the film where she improvised a kiss with me," the 42-year-old actor-director shared. The moment was so unexpected that Wilde broke character. "I was so shocked when she did it that I actually turned my head and looked directly into the lens and my camera operator, he was like, ‘Olivia!’" she recalled.
 
 Her mind went blank in the moment. "I said, ‘Cut, namaste.’ For some reason that was the only thing that came to my mind," Wilde said, according to the outlet. She summed up the feeling simply: "I lost control. I was so madly in love with her."
 
@@ -104,6 +104,6 @@ Despite the on-set surprise, the kiss made it into the final cut of the A24 dram
 
 ## Directing vs. Acting
 
-The kiss wasn't the only thing that gave Wilde jitters. She also reportedly admitted to having "imposter syndrome" about acting in the film, which she directed. "I weirdly had imposter syndrome about acting in it but, for some reason, not about directing it," she said. "At this point, I feel like a much better director than actor." Wilde was convinced by her costars to play Angela, a stay-at-home mother in San Francisco, opposite Seth Rogen's Joe.
+The kiss wasn't the only thing that gave Wilde jitters. She also admitted to having "imposter syndrome" about acting in the film, which she directed. "I weirdly had imposter syndrome about acting in it but, for some reason, not about directing it," she said. "At this point, I feel like a much better director than actor." Wilde was convinced by her costars to play Angela, a stay-at-home mother in San Francisco, opposite Seth Rogen's Joe.
 
-*The Invite* follows a couple (Wilde and Rogen) who host a dinner party for their neighbors (Cruz and Edward Norton) in an attempt to spice up their marriage, leading to an unexpected request. Wilde's candid story about the improvised kiss adds a charmingly human footnote to the film's buzzy premiere.
+*The Invite* follows Angela and Joe (Wilde and Rogen), whose dinner party takes a turn when their neighbors — Cruz's Pina, a sexologist, and Edward Norton's Hawk — arrive with an unexpected proposition for the couple. The A24 film premiered at Sundance in January and has been in wide release since July 10.

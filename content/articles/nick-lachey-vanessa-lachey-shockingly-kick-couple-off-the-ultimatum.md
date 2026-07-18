@@ -87,7 +87,7 @@ aiDisclosure: >-
   Rumors and speculation are labeled as unconfirmed and updated or removed as
   facts develop.
 sensitivity: normal
-dateModified: '2026-07-17T11:01:40.732Z'
+dateModified: '2026-07-18T10:45:00.000Z'
 provenance:
   primaryEntity: Nick Lachey
   claim: Nick and Vanessa Lachey kicked a couple off The Ultimatum.
@@ -110,11 +110,11 @@ Reality TV thrives on drama, but there’s one rule you don’t break on Nick an
 
 That rule was put to the ultimate test in the new season of *The Ultimatum: Marry or Move On*, leading to a shocking first for the Netflix series. Hosts Nick and Vanessa Lachey removed participants Alex Johnsen and Jebin John from the experiment after Jebin attempted to secretly pass Alex a note, E! News reports.
 
-The incident unfolded during episode two of season four, which dropped on Netflix July 15. "I honestly hope to God you guys weren't touching on camera," he wrote, according to E! News. "There is no way we are getting married."
+The incident unfolded during episode two of season four, which dropped on Netflix on July 15, 2026. Jebin, 23, slipped Alex the note out of jealousy over her connection with fellow participant Killian Grondin, per E! News. "I honestly hope to God you guys weren't touching on camera," he wrote. "There is no way we are getting married."
 
 ## The Hosts Lay Down the Law
 
-Confronting the couple in episode three, Nick Lachey made the show's core principle clear. "Communication is paramount in this entire experience, I think you're all aware of that," he told the remaining six couples. "But that communication, frankly, has to happen on camera. That's part of this experience."
+Confronting the couple in episode three, Nick Lachey made the show's core principle clear. "Communication is paramount in this entire experience, I think you're all aware of that," he told the remaining couples. "But that communication, frankly, has to happen on camera. That's part of this experience."
 
 Vanessa Lachey suggested Jebin’s actions proved he wasn’t ready for the experiment’s format. "Jebin, I think I can speak for the room about the clarity you've given us on you not being ready to be involved in this experiment," she said, "and I think that it's going to negatively impact the rest of the group, if I'm being honest."
 
@@ -124,4 +124,4 @@ The result was an unprecedented dismissal. "Unfortunately, we're going to ask yo
 
 The ejection ended Alex and Jebin’s run on the show just as their backstory was being revealed. The couple met while working at a grocery store before their relationship turned romantic six years ago.
 
-Their removal marks a defining, dramatic twist for the season, underscoring that for the Lacheys, transparency isn't just encouraged—it's mandatory.
+Their removal is a first in the franchise's history — no couple had ever been ejected from the experiment before. Five couples remain in the season, which is streaming now on Netflix.

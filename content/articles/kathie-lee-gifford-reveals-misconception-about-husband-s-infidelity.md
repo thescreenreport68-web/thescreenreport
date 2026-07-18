@@ -7,8 +7,8 @@ author: alicia-bernard
 date: '2026-07-17T21:01:30.313Z'
 dek: >-
   Setting the record straight, the former 'Today' host defines the scandal as a
-  single mistake and shares the biblical reasoning behind her choice to stay.
-metaTitle: Kathie Lee Gifford Corrects the Record on Frank Gifford's 1997
+  single mistake and describes how she found her way to immediate forgiveness.
+metaTitle: Kathie Lee Gifford corrects the record on Frank Gifford's affair
 metaDescription: >-
   Kathie Lee Gifford clarified that her late husband Frank's 1997 infidelity was
   a one-night tryst. She forgave him immediately and stayed for their children.
@@ -73,7 +73,7 @@ aiDisclosure: >-
   Rumors and speculation are labeled as unconfirmed and updated or removed as
   facts develop.
 sensitivity: normal
-dateModified: '2026-07-17T21:01:30.313Z'
+dateModified: '2026-07-18T10:45:00.000Z'
 provenance:
   primaryEntity: Kathie Lee Gifford
   claim: Kathie Lee Gifford revealed a misconception about her husband's infidelity.
@@ -90,14 +90,14 @@ provenance:
   publishedAt: '2026-07-17T21:01:30.313Z'
 ---
 
-The former *Today* show host made the distinction during a July 15 appearance on *Hang Out with Sean Hannity*, per E! News.
+Kathie Lee Gifford says "affair" is the wrong word for late husband Frank Gifford's 1997 infidelity. The former *Today* show host made the distinction during a July 15 appearance on *Hang Out with Sean Hannity*, per E! News.
 
-"People call it an affair," Kathie Lee said. "People call it an affair," "No, an affair is not a tryst at a hotel one time. At all." "No, an affair is not a tryst at a hotel one time. At all." The incident involved a one-night stand with flight attendant Suzen Johnson. It became a national scandal after a tabloid published an audio recording, which Kathie Lee described at the time as "another betrayal." "another betrayal."
+"People call it an affair," Kathie Lee said. "No, an affair is not a tryst at a hotel one time. At all." The incident involved a one-night stand with flight attendant Suzen Johnson. It became a national scandal after a tabloid published an audio recording, which Kathie Lee described at the time as "another betrayal."
 
-She addressed the personal fallout head-on. "It was horrible," she admitted. "It was horrible," "He was my hero. It took a long, long time for me to gain trust again." "He was my hero. But you know what I did? The Bible says, ‘Be anxious for nothing,’ right? Now, did I threaten divorce? No." Despite the pain, she said forgiveness was immediate. "I forgave him the minute he said it was true," she recalled. "I forgave him the minute he said it was true," She also denied reports that she temporarily left their home. "That’s not true," she said. "That’s not true." "I never left my home." "I never left my home."
+She addressed the personal fallout head-on. "It was horrible," she admitted. "He was my hero," she said, and it "took a long, long time" for her to gain trust again. On how she coped: "But you know what I did? The Bible says, ‘Be anxious for nothing,’ right? Now, did I threaten divorce? No." Despite the pain, she said forgiveness was immediate. "I forgave him the minute he said it was true," she recalled. She also denied reports that she temporarily left their home. "That’s not true," she said. "I never left my home."
 
 ## The Aftermath
 
-Kathie Lee, now 72, and Frank were married in 1986 and shared two children, Cody, 36, and Cassidy, 32. She told E! Frank Gifford died in 2015.
+Kathie Lee, now 72, married Frank in 1986, and the couple shared two children, Cody, 36, and Cassidy, 32. Frank Gifford died in 2015.
 
-"If I had run when Frank had his temporary insanity... then our children wouldn't have their father," she said, adding, "Too many families break up over something that could be healed."
+She has spoken about the choice to stay before. "If I had run when Frank had his temporary insanity... then our children wouldn't have their father," she said in a past interview, adding that too many families break up "over something that could be healed."
