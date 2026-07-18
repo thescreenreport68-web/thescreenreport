@@ -1,0 +1,104 @@
+{
+ "runId": "run-2026-07-18T23-00-44",
+ "mode": "live",
+ "startedAt": "2026-07-18T23:00:44.188Z",
+ "films": 8,
+ "published": [],
+ "held": [
+  {
+   "tag": "the-sheep-detectives-bo-opening×BO-OPENING",
+   "reason": "words 159 < 180 (owner-set ~200-word minimum) | soft-floor readability 3 < 5 | soft-floor engagement 1 < 5 | soft-floor humanVoice 2 < 5",
+   "score": 20
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "young-washington-bo-update×BO-UPDATE",
+   "reason": "film attempt budget exhausted today (3 paid tries/film/day)"
+  },
+  {
+   "tag": "the-invite-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "obsession-bo-update×BO-UPDATE",
+   "reason": "film attempt budget exhausted today (3 paid tries/film/day)"
+  },
+  {
+   "tag": "backrooms-bo-update×BO-UPDATE",
+   "reason": "film attempt budget exhausted today (3 paid tries/film/day)"
+  },
+  {
+   "tag": "jackass-best-and-last-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "scary-movie-bo-update×BO-UPDATE",
+   "reason": "film attempt budget exhausted today (3 paid tries/film/day)"
+  },
+  {
+   "tag": "voicemails-for-isabelle-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  }
+ ],
+ "blocked": [],
+ "paced": {
+  "tokens": 4,
+  "behind": true,
+  "expected": 14.2,
+  "allow": 2
+ },
+ "zeroStreak": 15,
+ "daySpend": {
+  "laDay": "2026-07-18",
+  "usd": 0.29603
+ },
+ "finishedAt": "2026-07-18T23:04:50.083Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3416,
+    "out": 594,
+    "usd": 0.0002,
+    "ms": 11151
+   },
+   "gatherer": {
+    "calls": 3,
+    "errors": 0,
+    "in": 11958,
+    "out": 656,
+    "usd": 0.00146,
+    "ms": 3456
+   },
+   "synthesizer": {
+    "calls": 1,
+    "errors": 0,
+    "in": 818,
+    "out": 1456,
+    "usd": 0.00034,
+    "ms": 14456
+   },
+   "writer": {
+    "calls": 2,
+    "errors": 0,
+    "in": 6164,
+    "out": 2011,
+    "usd": 0.00568,
+    "ms": 28043
+   },
+   "qa": {
+    "calls": 6,
+    "errors": 0,
+    "in": 16329,
+    "out": 3360,
+    "usd": 0.0133,
+    "ms": 16938
+   }
+  },
+  "totalUsd": 0.02098
+ },
+ "openrouterTotalUsd": 0.02043
+}
