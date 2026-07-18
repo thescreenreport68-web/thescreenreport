@@ -1,0 +1,142 @@
+{
+  "ts": "2026-07-18T21:02:38.413Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "will-smiths-ex-friend-requests-his-testimony-in-jada-pinkett-smith-lawsuit",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [],
+      "headline": [
+        "metaDescription",
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 0
+    }
+  ],
+  "topics": 1,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 0,
+  "costUSD": 0.014649,
+  "costPerPublished": 0.014649,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 6,
+      "in": 19935,
+      "out": 1042,
+      "usd": 0.008585500000000001
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 2316,
+      "out": 459,
+      "usd": 0.000362208
+    },
+    "qwen/qwen3-235b-a22b-2507": {
+      "calls": 1,
+      "in": 2373,
+      "out": 457,
+      "usd": 0.00046492
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 5,
+      "in": 22263,
+      "out": 5241,
+      "usd": 0.004327268400000001
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 8,
+      "in": 6662,
+      "out": 608,
+      "usd": 0.0009094000000000001
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2188,
+      "out": 206,
+      "usd": 0.0011714000000000002,
+      "ms": 1373
+    },
+    "synthesizer": {
+      "calls": 2,
+      "errors": 1,
+      "in": 2373,
+      "out": 457,
+      "usd": 0.00067392,
+      "ms": 99506
+    },
+    "writer": {
+      "calls": 4,
+      "errors": 0,
+      "in": 21473,
+      "out": 4940,
+      "usd": 0.006618390000000001,
+      "ms": 61056
+    },
+    "verify": {
+      "calls": 5,
+      "errors": 0,
+      "in": 17747,
+      "out": 836,
+      "usd": 0.007414099999999998,
+      "ms": 5648
+    },
+    "judge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2783,
+      "out": 176,
+      "usd": 0.0003487,
+      "ms": 1004
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 790,
+      "out": 301,
+      "usd": 0.00028404,
+      "ms": 4970
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 379,
+      "out": 168,
+      "usd": 0.0001051,
+      "ms": 1145
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 205,
+      "out": 52,
+      "usd": 0.000041299999999999994,
+      "ms": 769
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2118,
+      "out": 95,
+      "usd": 0.0002498,
+      "ms": 3448
+    },
+    "linker": {
+      "calls": 4,
+      "errors": 0,
+      "in": 1177,
+      "out": 117,
+      "usd": 0.00016450000000000001,
+      "ms": 2720
+    }
+  }
+}
