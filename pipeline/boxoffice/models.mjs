@@ -89,7 +89,15 @@ export const AGENTS = {
 // ── Metered, fallback-aware chat — the ONLY way agents call a model ─────────────────────────────
 export const METER = [];
 
-export async function agentChat(role, { system, user, images = null, json = true, surgical = false, maxTokens = null, retries = 2 } = {}, { chatImpl = chat } = {}) {
+// retries = 1 by DEFAULT (registry §3.16). `chat()` carries its own ~150s abort + backoff per attempt, so
+// the old retries=2 let a single call run ~300s — far past the attemptDeadlineMs we race it against.
+// Promise.race abandons the result but the request keeps streaming and the tokens are still billed: we were
+// paying for generations we had already given up on. This loop ALREADY retries via the primary->fallback
+// model list, so the inner retries were redundant as well as un-cancellable.
+// ⚠ MUST BE 1, NOT 0. `chat()` loops `for (let a = 0; a < retries; a++)`, so `retries` is an ATTEMPT COUNT,
+// not a retry count — retries=0 makes ZERO requests and every call fails ("all models failed"). Verified
+// live: retries=0 FAILED, retries=2 succeeded. 1 = exactly one bounded attempt. Shared lib untouched.
+export async function agentChat(role, { system, user, images = null, json = true, surgical = false, maxTokens = null, retries = 1 } = {}, { chatImpl = chat } = {}) {
   const cfg = AGENTS[role];
   if (!cfg) throw new Error(`unknown agent role: ${role}`);
   const temperature = surgical && cfg.surgicalTemperature != null ? cfg.surgicalTemperature : cfg.temperature;
