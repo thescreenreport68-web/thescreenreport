@@ -1,0 +1,71 @@
+{
+  "id": "music-news-noah-kahan-queens-concert-canceled-inclement-weather",
+  "slug": "noah-kahan-s-queens-concert-canceled-due-to-inclement-weather",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": null,
+      "cat": "music/news",
+      "format": [
+        "a 65-word run-on sentence (>55 — split it)"
+      ],
+      "cuts": 2,
+      "broken": []
+    },
+    "attempt2": {
+      "score": null,
+      "cat": "music/news",
+      "format": [
+        "a 57-word run-on sentence (>55 — split it)"
+      ],
+      "cuts": 2,
+      "broken": []
+    }
+  },
+  "editorial": {
+    "status": "official",
+    "entity": "Noah Kahan",
+    "work": null,
+    "outlet": "rollingstone.com"
+  },
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
+    "deterministic": {
+      "words": 374,
+      "h2s": 5,
+      "h2Questions": 4,
+      "internalLinks": 0,
+      "externalLinks": 2,
+      "hasSources": true,
+      "faqCount": 4,
+      "ktCount": 5,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 57,
+      "avgSentence": 19,
+      "flesch": 57,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": [
+        "a 57-word run-on sentence (>55 — split it)"
+      ]
+    },
+    "hardBlocks": []
+  },
+  "score": null,
+  "category": "music",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "body ≥ 350w"
+    ]
+  },
+  "ms": 72191
+}
