@@ -10,6 +10,12 @@
 // Disney+ right now", grounded in TMDB's own trending signal, never an invented audience number.
 import { scopeOk } from "./config.bo.mjs";
 
+// Conversion floors, set from the first live run's failures (see discoverByProvider). A title below these
+// has no published coverage to ground an article in, so it dies at the walls after paying for a draft.
+const MIN_POPULARITY = Number(process.env.BOXOFFICE_STREAM_MIN_POP) || 80;
+const MIN_VOTES = Number(process.env.BOXOFFICE_STREAM_MIN_VOTES) || 200;
+const MIN_OVERVIEW_CHARS = 140;
+
 const BASE = "https://api.themoviedb.org/3";
 const H = () => ({ Authorization: "Bearer " + process.env.TMDB_READ_TOKEN, accept: "application/json" });
 
@@ -50,6 +56,14 @@ export async function discoverByProvider(kind = "tv", { fetchImpl = fetch, perPr
     for (const r of (data?.results || []).slice(0, perProvider)) {
       const title = r.name || r.title || "";
       if (!title || !scopeOk({ title, overview: r.overview, originalLanguage: r.original_language })) continue;
+      // SUPPLY MUST BE ABLE TO CONVERT. The first live run of this source attempted 12 obscure titles and
+      // published NONE — Off Campus (pop 60), Ride or Die (pop 30), The Westies (pop 30) each died on
+      // "unverified claims", the word floor or the engagement floor, because nobody has written about them
+      // and there is no honest way to reach 180 engaging words. Quantity that cannot clear the quality bar
+      // is not volume, it is spend. Require a real audience signal AND enough premise to write from.
+      const audience = (r.popularity || 0) >= MIN_POPULARITY || (r.vote_count || 0) >= MIN_VOTES;
+      if (!audience) continue;
+      if (String(r.overview || "").length < MIN_OVERVIEW_CHARS) continue;
       out.push({
         id: r.id,
         title,
