@@ -1364,6 +1364,29 @@ t("qa word floor counts the canonical numbers block the reader actually receives
   assert.ok(words >= 35, `the appended block is substantial (${words} words) — QA measured ~${words} words short before`);
 });
 
+t("a section EMPTIED by the walls is dropped, not held — the heading goes, the article lives", () => {
+  const para = "A full opening paragraph carrying real substance about the film, its cast, its premise and how it "
+    + "performed in theaters over the past week, written at enough length to clear the floor comfortably for any "
+    + "reader who wants to understand what actually happened here and why the studio behind it cares so much about "
+    + "the result it posted. It continues with further detail about the run, the theater count, the trajectory of "
+    + "the release and the way the audience turned up across the opening days of the engagement in question. ";
+  const body = para + para
+    + "\n\n## A Daunting Financial Voyage\n\n## The Real Section\n\nThis section still carries prose and must survive.";
+  const out = buildBoxOfficeMarkdown({
+    article: { title: "Test Film Box Office Day 5", metaTitle: "T", dek: "d", metaDescription: "m", body,
+      keyTakeaways: ["a", "b", "c"], faq: [{ q: "x", a: "y" }, { q: "z", a: "w" }], about: [], tags: ["t"] },
+    trigger: { eventSlug: "t-bo-update", title: "Test Film" }, angle: { form: "BO-UPDATE" },
+    film: { title: "Test Film", dailyChart: { cume: "$100,000,000", dailyGross: "$1,000,000", theaters: "3,000", dayInRelease: "Day 5" } },
+    gathered: { cume: "$100,000,000", numbers: ["$100,000,000"], sources: [] },
+    boxData: { worldwide: "$200 million", budget: "$50 million" },
+    image: null, dateISO: new Date().toISOString(),
+  });
+  assert.ok(!/A Daunting Financial Voyage/.test(out.md), "bare heading left by the cutters is removed");
+  assert.ok(/## The Real Section/.test(out.md), "a section WITH prose is untouched");
+  assert.ok(/## At the Box Office/.test(out.md), "the canonical numbers block still lands");
+  assert.equal(out.scaffold.length, 0, "no scaffold violation => this publishes instead of holding: " + JSON.stringify(out.scaffold));
+});
+
 // ── summary ──────────────────────────────────────────────────────────────────────────────────────
 console.log(`\n━━ boxoffice suite: ${pass}/${pass + fail} passed ━━`);
 if (fail) process.exit(1);
