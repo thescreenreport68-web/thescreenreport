@@ -1,0 +1,136 @@
+{
+  "ts": "2026-07-19T15:14:05.920Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "blake-robertsons-dismissed-assault-case-reportedly-surfaces-as-the-ultimatu",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [],
+      "headline": [
+        "metaTitle",
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 1,
+      "surgicalFixes": 2
+    }
+  ],
+  "topics": 1,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 0,
+  "costUSD": 0.017755,
+  "costPerPublished": 0.017755,
+  "byModel": {
+    "google/gemini-2.5-flash-lite": {
+      "calls": 26,
+      "in": 31076,
+      "out": 10237,
+      "usd": 0.007202399999999999
+    },
+    "google/gemini-2.5-flash": {
+      "calls": 7,
+      "in": 11305,
+      "out": 798,
+      "usd": 0.0053865
+    },
+    "qwen/qwen3-235b-a22b-2507": {
+      "calls": 1,
+      "in": 902,
+      "out": 336,
+      "usd": 0.00047166
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 6,
+      "in": 15002,
+      "out": 4774,
+      "usd": 0.00469435115
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2351,
+      "out": 199,
+      "usd": 0.0012028,
+      "ms": 1276
+    },
+    "synthesizer": {
+      "calls": 2,
+      "errors": 1,
+      "in": 902,
+      "out": 336,
+      "usd": 0.00034379999999999995,
+      "ms": 28411
+    },
+    "writer": {
+      "calls": 5,
+      "errors": 0,
+      "in": 14409,
+      "out": 4476,
+      "usd": 0.00483591,
+      "ms": 127023
+    },
+    "verify": {
+      "calls": 7,
+      "errors": 1,
+      "in": 10725,
+      "out": 1040,
+      "usd": 0.0045372,
+      "ms": 9063
+    },
+    "judge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1323,
+      "out": 161,
+      "usd": 0.0001967,
+      "ms": 917
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 593,
+      "out": 298,
+      "usd": 0.00023771000000000003,
+      "ms": 7185
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 378,
+      "out": 91,
+      "usd": 0.0000742,
+      "ms": 681
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 200,
+      "out": 43,
+      "usd": 0.0000372,
+      "ms": 700
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2094,
+      "out": 100,
+      "usd": 0.0002494,
+      "ms": 2426
+    },
+    "linker": {
+      "calls": 4,
+      "errors": 1,
+      "in": 883,
+      "out": 94,
+      "usd": 0.0001259,
+      "ms": 3574
+    }
+  }
+}
