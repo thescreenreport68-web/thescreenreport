@@ -1,0 +1,88 @@
+{
+ "runId": "run-2026-07-19T07-30-49",
+ "mode": "live",
+ "startedAt": "2026-07-19T07:30:49.534Z",
+ "films": 45,
+ "published": [
+  {
+   "tag": "minions-monsters-bo-update×BO-UPDATE",
+   "slug": "minions-monsters-box-office-day-17-adds-4-4-million-as-domestic-total-hits-127",
+   "path": "/home/runner/work/thescreenreport/thescreenreport/content/articles/minions-monsters-box-office-day-17-adds-4-4-million-as-domestic-total-hits-127.md",
+   "score": 80
+  }
+ ],
+ "held": [
+  {
+   "tag": "moana-bo-update×BO-UPDATE",
+   "reason": "scaffold: body 176 words < 180 floor",
+   "score": 80
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "the-odyssey-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $51M not above last published $51M)"
+  }
+ ],
+ "blocked": [],
+ "paced": {
+  "tokens": 0.47,
+  "behind": true,
+  "expected": 25.07,
+  "allow": 1
+ },
+ "queueBuilt": 5,
+ "zeroStreak": 0,
+ "daySpend": {
+  "laDay": "2026-07-19",
+  "usd": 0.02717
+ },
+ "finishedAt": "2026-07-19T07:33:02.287Z",
+ "meter": {
+  "byRole": {
+   "categorize": {
+    "calls": 3,
+    "errors": 0,
+    "in": 1089,
+    "out": 515,
+    "usd": 0.00031,
+    "ms": 2413
+   },
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3415,
+    "out": 693,
+    "usd": 0.00022,
+    "ms": 2030
+   },
+   "gatherer": {
+    "calls": 2,
+    "errors": 0,
+    "in": 6251,
+    "out": 372,
+    "usd": 0.00077,
+    "ms": 1865
+   },
+   "synthesizer": {
+    "calls": 2,
+    "errors": 0,
+    "in": 1438,
+    "out": 1014,
+    "usd": 0.00031,
+    "ms": 17313
+   },
+   "writerChart": {
+    "calls": 2,
+    "errors": 0,
+    "in": 3882,
+    "out": 2103,
+    "usd": 0.00161,
+    "ms": 44581
+   }
+  },
+  "totalUsd": 0.00323
+ },
+ "openrouterTotalUsd": 0.00383
+}
