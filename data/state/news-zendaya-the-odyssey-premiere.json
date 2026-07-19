@@ -1,25 +1,30 @@
 {
   "id": "news-zendaya-the-odyssey-premiere",
-  "slug": "zendaya-grew-angel-wings-at-the-odyssey-premiere",
-  "status": "needs_review",
+  "slug": "zendaya-dons-angel-wings-at-the-odyssey-premiere",
+  "status": "published",
   "stages": {
     "attempt1": {
       "score": null,
-      "cat": "movies/reactions",
-      "format": [],
+      "cat": "celebrity/news",
+      "format": [
+        "body 146w < 220"
+      ],
       "cuts": 0,
       "broken": []
     },
     "attempt2": {
       "score": null,
-      "cat": "movies/reactions",
-      "format": [],
+      "cat": "celebrity/news",
+      "format": [
+        "H2s 0 < 1",
+        "body 121w < 220"
+      ],
       "cuts": 0,
       "broken": []
     }
   },
   "editorial": {
-    "status": "confirmed",
+    "status": "unconfirmed",
     "entity": "Zendaya",
     "work": {
       "title": "The Odyssey",
@@ -28,123 +33,50 @@
     },
     "outlet": "coveteur.com"
   },
-  "holdReason": "reaction: required embed missing",
   "scorecard": {
     "score": null,
     "subscores": {},
     "strengths": [],
     "weaknesses": [],
     "deterministic": {
-      "words": 245,
-      "h2s": 2,
-      "h2Questions": 2,
+      "words": 121,
+      "h2s": 0,
+      "h2Questions": 0,
       "internalLinks": 0,
       "externalLinks": 0,
       "hasSources": false,
-      "faqCount": 4,
-      "ktCount": 4,
+      "faqCount": 3,
+      "ktCount": 3,
       "kwInTitle": true,
       "kwInFirst100": true,
       "kwInH2": false,
-      "maxSentence": 28,
-      "avgSentence": 17,
-      "flesch": 46,
+      "maxSentence": 27,
+      "avgSentence": 20,
+      "flesch": 55,
       "bannedTells": 0,
-      "fillerPraise": 1,
+      "fillerPraise": 0,
       "kwExact": 0,
-      "hardBlocks": []
+      "hardBlocks": [
+        "H2s 0 < 1",
+        "body 121w < 220"
+      ]
     },
     "hardBlocks": []
   },
+  "score": null,
+  "category": "celebrity",
+  "subcategory": "news",
   "audit": {
     "ok": false,
-    "internalLinks": 0,
+    "internalLinks": 2,
     "failed": [
-      "tweet grounding",
-      "keyword in title",
-      "≥1200px legal image",
-      "credit"
+      "body ≥ 220w",
+      "1+ subheads",
+      "keyword in title"
     ]
   },
-  "ms": 43112,
+  "ms": 45459,
   "previousRuns": [
-    {
-      "id": "news-zendaya-the-odyssey-premiere",
-      "slug": "zendaya-grew-angel-wings-at-the-odyssey-premiere",
-      "status": "needs_review",
-      "stages": {
-        "attempt1": {
-          "score": null,
-          "cat": "movies/reactions",
-          "format": [
-            "body 218w < 220"
-          ],
-          "cuts": 1,
-          "broken": []
-        },
-        "attempt2": {
-          "score": null,
-          "cat": "movies/reactions",
-          "format": [
-            "body 202w < 220"
-          ],
-          "cuts": 0,
-          "broken": []
-        }
-      },
-      "editorial": {
-        "status": "confirmed",
-        "entity": "Zendaya",
-        "work": {
-          "title": "The Odyssey",
-          "year": null,
-          "medium": "movie"
-        },
-        "outlet": "coveteur.com"
-      },
-      "holdReason": "reaction: required embed missing",
-      "scorecard": {
-        "score": null,
-        "subscores": {},
-        "strengths": [],
-        "weaknesses": [],
-        "deterministic": {
-          "words": 202,
-          "h2s": 1,
-          "h2Questions": 1,
-          "internalLinks": 0,
-          "externalLinks": 0,
-          "hasSources": false,
-          "faqCount": 3,
-          "ktCount": 4,
-          "kwInTitle": true,
-          "kwInFirst100": true,
-          "kwInH2": false,
-          "maxSentence": 49,
-          "avgSentence": 22,
-          "flesch": 45,
-          "bannedTells": 0,
-          "fillerPraise": 0,
-          "kwExact": 0,
-          "hardBlocks": [
-            "body 202w < 220"
-          ]
-        },
-        "hardBlocks": []
-      },
-      "audit": {
-        "ok": false,
-        "internalLinks": 0,
-        "failed": [
-          "tweet grounding",
-          "body ≥ 220w",
-          "keyword in title",
-          "≥1200px legal image",
-          "credit"
-        ]
-      },
-      "ms": 48020
-    },
     {
       "id": "news-zendaya-the-odyssey-premiere",
       "slug": "zendaya-grew-angel-wings-at-the-odyssey-premiere",
@@ -436,6 +368,76 @@
         ]
       },
       "ms": 62891
+    },
+    {
+      "id": "news-zendaya-the-odyssey-premiere",
+      "slug": "zendaya-grew-angel-wings-at-the-odyssey-premiere",
+      "status": "needs_review",
+      "stages": {
+        "attempt1": {
+          "score": null,
+          "cat": "movies/reactions",
+          "format": [],
+          "cuts": 0,
+          "broken": []
+        },
+        "attempt2": {
+          "score": null,
+          "cat": "movies/reactions",
+          "format": [],
+          "cuts": 0,
+          "broken": []
+        }
+      },
+      "editorial": {
+        "status": "confirmed",
+        "entity": "Zendaya",
+        "work": {
+          "title": "The Odyssey",
+          "year": null,
+          "medium": "movie"
+        },
+        "outlet": "coveteur.com"
+      },
+      "holdReason": "reaction: required embed missing",
+      "scorecard": {
+        "score": null,
+        "subscores": {},
+        "strengths": [],
+        "weaknesses": [],
+        "deterministic": {
+          "words": 245,
+          "h2s": 2,
+          "h2Questions": 2,
+          "internalLinks": 0,
+          "externalLinks": 0,
+          "hasSources": false,
+          "faqCount": 4,
+          "ktCount": 4,
+          "kwInTitle": true,
+          "kwInFirst100": true,
+          "kwInH2": false,
+          "maxSentence": 28,
+          "avgSentence": 17,
+          "flesch": 46,
+          "bannedTells": 0,
+          "fillerPraise": 1,
+          "kwExact": 0,
+          "hardBlocks": []
+        },
+        "hardBlocks": []
+      },
+      "audit": {
+        "ok": false,
+        "internalLinks": 0,
+        "failed": [
+          "tweet grounding",
+          "keyword in title",
+          "≥1200px legal image",
+          "credit"
+        ]
+      },
+      "ms": 43112
     }
   ]
 }
