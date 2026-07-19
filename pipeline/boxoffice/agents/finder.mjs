@@ -11,6 +11,7 @@ import { fetchDailyChart } from "../dailyChart.mjs";
 import { discoverByProvider } from "../tmdbStreaming.mjs";
 import { readQueue, markConsumed } from "../find/findrun.mjs";
 import { getTitleFacts } from "../../lib/tmdb.mjs";
+import { fault, SEV } from "../health.mjs";
 
 // Build a {film, trigger, angle} entry in the finder's canonical shape (used for tracker-surfaced
 // NOW-STREAMING exits; the LLM-classified in-theater picks build the same shape inline below).
@@ -61,7 +62,7 @@ export async function findFilms({ limit = 3, discoverImpl = discoverFilms, chatI
     exitEntries = exits.filter((f) => scopeOk(f)).map((f) => mkEntry(f, "NOW-STREAMING", {
       workingTitle: `${f.title} now streaming`, queries: [`${f.title} streaming`, `${f.title} where to watch`],
     })).filter((e) => !isRepeat(e.trigger.eventSlug, "NOW-STREAMING", e.film.title));
-  } catch { exitEntries = []; }
+  } catch (e) { fault("finder:exits", `now-streaming exit scan failed: ${e?.message || e}`); exitEntries = []; }
 
   // STREAMING picks (deterministic, from Netflix Top 10 — first-hand hours; plan §4b/§5). Best-effort.
   // NETFLIX-TOP10 = the week's top English film; TRENDING-TV = the week's top English series. Priority
@@ -104,7 +105,7 @@ export async function findFilms({ limit = 3, discoverImpl = discoverFilms, chatI
       streamPicks.push(mkStream(r, "NETFLIX-TOP10", "netflix-top10", `${r.title} on Netflix's Top 10`, `${r.title} netflix cast`));
     for (const r of freshRows(nf?.tv, "TRENDING-TV", 8))
       streamPicks.push(mkStream(r, "TRENDING-TV", "netflix-tv", `${r.title} trending on Netflix`, `${r.title} season reactions`));
-  } catch { streamPicks = []; }
+  } catch (e) { fault("finder:netflix", `Netflix streaming supply failed: ${e?.message || e}`); streamPicks = []; }
 
   // MULTI-PLATFORM STREAMING SUPPLY (the 5/day fix). Netflix's weekly Top 10 yields ~25 distinct titles
   // = 3.6/day at absolute best, so the owner's 5 streaming/day cannot come from Netflix alone. TMDB
@@ -132,7 +133,7 @@ export async function findFilms({ limit = 3, discoverImpl = discoverFilms, chatI
       e.film.platform = t.platform;   // CONFIRMED by the provider filter — the gatherer trusts this, not a guess
       streamPicks.push(e);
     }
-  } catch { /* additive — Netflix picks still carry streaming */ }
+  } catch (e) { fault("finder:tmdb-streaming", `multi-platform streaming supply failed: ${e?.message || e}`); }
 
   // P5 — TMDB daily trending-TV picks (ANY platform, appended after the Netflix hours-anchored picks):
   // catches "an episode just hit and the show is blowing up" the day it happens. The platform resolves
@@ -151,7 +152,7 @@ export async function findFilms({ limit = 3, discoverImpl = discoverFilms, chatI
       );
       streamPicks.push(e);
     }
-  } catch { /* additive — Netflix picks carry streaming regardless */ }
+  } catch (e) { fault("finder:trending-tv", `TMDB trending-TV supply failed: ${e?.message || e}`); }
 
   // DAILY BOX-OFFICE CHART — the box-office volume engine (owner: cover EVERY film in theaters, day 11 → day 12
   // with its real running cume). Each in-release film becomes a BO-UPDATE carrying its chart cume; the
@@ -170,7 +171,12 @@ export async function findFilms({ limit = 3, discoverImpl = discoverFilms, chatI
       e.film.dailyChart = { cume: f.cume || null, dailyGross: f.dailyGross || null, dailyChangePct: f.dailyChangePct || null, theaters: f.theaters || null, dayInRelease: f.dayInRelease || null };
       chartPicks.push(e);
     }
-  } catch { chartPicks = []; }
+  } catch (e) {
+    // TOTAL loss of the box-office supply engine. Silently returning [] here reads downstream as
+    // "no films in theaters today", which is never true — this is the shape of bug #2.
+    fault("finder:chart", `daily chart supply FAILED — box-office candidates will be empty: ${e?.message || e}`, { severity: SEV.CRITICAL });
+    chartPicks = [];
+  }
 
   // P2 EVENT QUEUE — the breaking/event stream (trade RSS + gnews → categorized, clustered, demand-scored
   // by findrun). A fresh corroborated OPENING/milestone/streaming-arrival outranks inventory walking. An
@@ -180,7 +186,7 @@ export async function findFilms({ limit = 3, discoverImpl = discoverFilms, chatI
   try {
     const q = queueImpl ? queueImpl() : readQueue({ nowMs });
     queueEvents = (q?.events || []).filter((ev) => !ev.consumedAt && ev.filmTitle && scopeOk({ title: ev.filmTitle }));
-  } catch { queueEvents = []; }
+  } catch (e) { fault("finder:queue", `event queue unreadable: ${e?.message || e}`); queueEvents = []; }
   const eventEntries = [];
   const chartByTitle = new Map(chartPicks.map((e) => [e.film.title.toLowerCase(), e]));
   // Events are capped at 3: parked-dead event slugs occupied 110 of 308 candidate slots on 07-17
@@ -210,7 +216,7 @@ export async function findFilms({ limit = 3, discoverImpl = discoverFilms, chatI
     e.trigger.signals.recency = 5;
     eventEntries.push(e);
   }
-  if (eventEntries.length && !dryQueueMark) { try { markConsumed(eventEntries.map((e) => e.trigger.eventSlug)); } catch {} }
+  if (eventEntries.length && !dryQueueMark) { try { markConsumed(eventEntries.map((e) => e.trigger.eventSlug)); } catch (e) { fault("finder:queue-mark", `markConsumed failed — events may repeat: ${e?.message || e}`, { severity: SEV.INFO }); } }
 
   // Candidate POOL for the tick. EVENT entries lead (breaking beats inventory), then the DAILY-CHART
   // box-office engine (real running numbers for every film in theaters = the 15/day engine); streaming
@@ -238,7 +244,8 @@ export async function findFilms({ limit = 3, discoverImpl = discoverFilms, chatI
       user: `FILMS:\n${listing}\n\nForms allowed: ${BOX_OFFICE_FORMS.join(", ")}\nJSON: {"picks":[{"i":0,"form":"BO-OPENING","workingTitle":"","star":"","queries":["",""]}]}\nOnly films worth covering now. Order strongest first.`,
     }, chatImpl ? { chatImpl } : {}), 55e3);
     picks = data?.picks || [];
-  } catch {
+  } catch (e) {
+    fault("finder:llm", `finder classification failed — falling back to deterministic picks: ${e?.message || e}`);
     // Finder LLM down → deterministic fallback: freshest films get BO-OPENING, entity queries.
     picks = films.slice(0, limit).map((f, i) => ({
       i, form: "BO-OPENING", workingTitle: `${f.title} box office`, star: "",

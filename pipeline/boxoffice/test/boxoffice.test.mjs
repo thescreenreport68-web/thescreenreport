@@ -1,3 +1,4 @@
+import { fileURLToPath } from "node:url";
 // OFFLINE DETERMINISTIC SUITE for the box-office lane (plan §16). ALL impls injected — no network,
 // no keys. Run from the site/ dir:  node pipeline/boxoffice/test/boxoffice.test.mjs
 // Covers: number-fidelity + no-invention walls, scope guard, platform guard, forms/floors, caps,
@@ -1500,6 +1501,55 @@ await ta("WIRING: a real publish writes a FIGURE + film key to the ledger (the t
   const seen = lastPublishedRawForX(film, store.published);
   assert.ok(seen && seen.raw === 50000000, "lastPublishedRawFor resolves the row it just wrote: " + JSON.stringify(seen));
   fs.rmSync(dirW, { recursive: true, force: true });
+});
+
+t("NO NEW SILENT CATCHES on supply/accuracy paths — the guard that keeps this class dead", () => {
+  // 62 of 64 catch sites in this lane once swallowed their error silently, and that single property
+  // produced the chart bug (6 of 17 rows for days), the duplicate articles (an unreadable ledger reading
+  // as "no films ever covered") and the retries=0 outage (18 calls, 18 errors, $0, indistinguishable
+  // from a quiet news day). This fails the build if a NEW one appears on a supply/accuracy path.
+  // RULE: a catch body must REPORT (fault/console/annotation) or RETHROW. Nothing else counts.
+  // NB: an earlier version of this test only matched empty bodies and missed `catch { return []; }` —
+  // it passed its own negative control. Brace-matching the real body is what makes it honest.
+  // fileURLToPath, NOT .pathname: this project's directory contains a space, so .pathname hands back a
+  // PERCENT-ENCODED path ("/Users/.../Movie%20News%20site/..."). The first version of this guard used
+  // .pathname, every readFileSync threw, the catch skipped every file, and the guard passed while
+  // checking NOTHING — the precise failure mode it exists to prevent, inside itself.
+  const laneDir = path.resolve(fileURLToPath(new URL(".", import.meta.url)), "..");
+  const WATCHED = ["agents/finder.mjs", "netflix.mjs", "discover.mjs", "tmdbStreaming.mjs",
+    "dailyChart.mjs", "find/sources.mjs", "find/events.mjs", "find/findrun.mjs", "tracker.mjs", "store.mjs"];
+  const bodyOfCatch = (src, at) => {              // at = index of the "{" opening the catch body
+    let depth = 0;
+    for (let i = at; i < src.length; i++) {
+      if (src[i] === "{") depth++;
+      else if (src[i] === "}") { depth--; if (depth === 0) return src.slice(at + 1, i); }
+    }
+    return "";
+  };
+  const offenders = [];
+  let scanned = 0;
+  for (const rel of WATCHED) {
+    // FAIL CLOSED: an unreadable watched file means the guard is blind, which must never look like a pass.
+    let src;
+    try { src = fs.readFileSync(path.join(laneDir, rel), "utf8"); }
+    catch (e) { assert.fail(`guard could not read ${rel} (${e?.message || e}) — it would be silently checking nothing`); }
+    scanned++;
+    for (const m of src.matchAll(/catch\s*(?:\([^)]*\))?\s*\{/g)) {
+      const open = m.index + m[0].length - 1;
+      const body = bodyOfCatch(src, open);
+      // A catch may be silent ONLY if it says why, inline, with `silent-ok: <reason>`. That turns every
+      // remaining silent catch from an accident into a decision someone wrote down and can be argued with.
+      if (/\bfault\(|console\.|::warning|::error|\bthrow\b|silent-ok:/.test(body)) continue;
+      const line = src.slice(0, m.index).split("\n").length;
+      const ctx = src.slice(Math.max(0, m.index - 220), m.index);
+      // genuinely benign: local retry loops and cache/existence probes that have an outer reporter
+      if (/await sleep\(|setTimeout\(|readChartCache|writeChartCache|existsSync/.test(ctx + body)) continue;
+      offenders.push(`${rel}:${line}`);
+    }
+  }
+  assert.equal(scanned, WATCHED.length, `guard scanned ${scanned} of ${WATCHED.length} watched files`);
+  assert.equal(offenders.length, 0,
+    "silent catch(es) on a supply/accuracy path — route through health.fault(): " + offenders.join(", "));
 });
 
 // ── summary ──────────────────────────────────────────────────────────────────────────────────────

@@ -42,14 +42,14 @@ export function readChartCache({ nowMs = Date.now(), file = CHART_CACHE } = {}) 
   try {
     const c = JSON.parse(fs.readFileSync(file, "utf8"));
     if (c?.laDay === laDay(nowMs) && c?.parserVersion === PARSER_VERSION && Array.isArray(c.films) && c.films.length) return c;
-  } catch {}
+  } catch { /* silent-ok: a cache miss is the normal first-tick path, not a failure */ }
   return null;
 }
 export function writeChartCache(chart, { nowMs = Date.now(), file = CHART_CACHE } = {}) {
   try {
     fs.mkdirSync(path.dirname(file), { recursive: true });
     fs.writeFileSync(file, JSON.stringify({ laDay: laDay(nowMs), parserVersion: PARSER_VERSION, fetchedAt: new Date(nowMs).toISOString(), ...chart }, null, 1));
-  } catch {}
+  } catch { /* silent-ok: the cache is an optimisation; a failed write only costs one re-parse */ }
 }
 
 // ── DETERMINISTIC CHART PARSER (the volume fix, 2026-07-19) ──────────────────────────────────────
@@ -143,8 +143,10 @@ export async function fetchDailyChart({ findImpl = findContent, chatImpl = null,
     assertCount(`chart:${seed.owner}`, rows.length, meta.reportedRows, { label: "chart rows" });
     let data = rows.length >= 5 ? { films: rows } : null;
     if (!data) {
+      // THIS IS BUG #2's ORIGINAL CATCH. It is now only a fallback (the deterministic parser runs first),
+      // but a silent null here still empties the day's supply — so it reports.
       try { ({ data } = await agentChat("gatherer", { system: SYS, user: `CHART TEXT:\n${text}\n\nJSON: ${SCHEMA}` }, chatImpl ? { chatImpl } : {})); }
-      catch { data = null; }
+      catch (e) { fault("chart:llm-fallback", `LLM chart extraction failed after a short deterministic parse: ${e?.message || e}`, { severity: SEV.CRITICAL }); data = null; }
       if (data?.films?.length) console.log(`  chart: deterministic parse found ${rows.length} rows, LLM fallback returned ${data.films.length}`);
     }
     // Use the page's OWN chart date; seeds carrying a DIFFERENT day are rejected so a union can never

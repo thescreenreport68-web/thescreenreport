@@ -2,6 +2,7 @@
 // cheap categorize call (the only LLM in the whole FIND path), then deterministic clustering by eventSlug
 // with independent-OWNER corroboration (Penske's trades count as ONE owner — the news lane's lesson).
 import { agentChat } from "../models.mjs";
+import { fault } from "../health.mjs";
 
 // Owner-group map: corroboration counts DISTINCT owner groups, not mastheads (Variety+Deadline+THR are
 // all Penske Media — one editorial org, one vote).
@@ -53,7 +54,10 @@ export async function categorize(items, { chatImpl = null, cap = 24 } = {}) {
     const batch = short.slice(i, i + 8);
     const user = batch.map((it, n) => `${n + 1}. ${it.title}`).join("\n");
     let data = null;
-    try { ({ data } = await agentChat("categorize", { system: SYS, user }, chatImpl ? { chatImpl } : {})); } catch { data = null; }
+    // The ONLY LLM in the FIND path. A silent null empties this batch of the event queue — the same
+    // shape as the chart extractor that hid a $51.28M #1 opening for days.
+    try { ({ data } = await agentChat("categorize", { system: SYS, user }, chatImpl ? { chatImpl } : {})); }
+    catch (e) { fault("find:categorize", `event categorization failed — queue batch dropped: ${e?.message || e}`); data = null; }
     const rows = Array.isArray(data?.items) ? data.items : [];
     batch.forEach((it, n) => {
       const r = rows.find((x) => Number(x?.i) === n + 1) || {};

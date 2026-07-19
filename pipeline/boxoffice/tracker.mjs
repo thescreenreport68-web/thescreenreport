@@ -14,7 +14,7 @@ import path from "node:path";
 import { DATA_DIR } from "./config.bo.mjs";
 import { normMoney } from "./moneyGuard.mjs";
 import { injectInternalLinks } from "../lib/internalLinks.mjs";
-import { loadJsonState } from "./health.mjs";
+import { loadJsonState, fault, SEV } from "./health.mjs";
 
 const TRACKED_PATH = path.join(DATA_DIR, "tracked.json");
 const FILM_CAP = 3000;
@@ -209,7 +209,7 @@ export function linkPriorCoverage(body, tracked, film) {
     const pick = { slug: a.slug, category: a.category || "movies", anchor: film.title, title: film.title };
     const newBody = injectInternalLinks(body, [pick]);
     return { body: newBody, linkedPrior: newBody !== body ? a.slug : null };
-  } catch { return { body, linkedPrior: null }; }
+  } catch { /* silent-ok: internal link injection is cosmetic; the article publishes unlinked */ return { body, linkedPrior: null }; }
 }
 
 // Record a REAL publish into the ledger (call only on a non-dry-run publish).
@@ -254,7 +254,7 @@ export async function streamingExits(tracked, nowPlayingIds = [], { providersFor
     if (rec.status !== "in-theaters") continue;
     if (rec.tmdbId && inPlay.has(String(rec.tmdbId))) continue; // still in theaters
     let prov = null;
-    try { prov = await providersFor(rec); } catch { prov = null; }
+    try { prov = await providersFor(rec); } catch (e) { fault("tracker:providers", `provider lookup failed for ${rec?.title} — a now-streaming exit may be missed: ${e?.message || e}`, { severity: SEV.INFO }); prov = null; }
     const has = prov && ((prov.stream && prov.stream.length) || (prov.rent && prov.rent.length) || (prov.buy && prov.buy.length));
     if (!has) continue;
     out.push({

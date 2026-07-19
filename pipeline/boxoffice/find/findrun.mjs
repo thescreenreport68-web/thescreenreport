@@ -9,6 +9,7 @@ import { DATA_DIR } from "../config.bo.mjs";
 import { sweepFeeds, sweepGnews } from "./sources.mjs";
 import { categorize, cluster } from "./events.mjs";
 import { scoreEvent } from "./score.mjs";
+import { fault, SEV } from "../health.mjs";
 
 export const QUEUE_PATH = path.join(DATA_DIR, "find", "queue.json");
 export const QUEUE_FRESH_MIN = 45;
@@ -18,7 +19,7 @@ export function readQueue({ file = QUEUE_PATH, nowMs = Date.now(), freshMin = QU
     const q = JSON.parse(fs.readFileSync(file, "utf8"));
     if (!q?.builtAt || (nowMs - Date.parse(q.builtAt)) / 60000 > freshMin) return null;
     return q;
-  } catch { return null; }
+  } catch { /* silent-ok: no queue yet is the normal cold-start path */ return null; }
 }
 
 export function markConsumed(slugs, { file = QUEUE_PATH, nowMs = Date.now() } = {}) {
@@ -28,7 +29,7 @@ export function markConsumed(slugs, { file = QUEUE_PATH, nowMs = Date.now() } = 
     const set = new Set(slugs);
     for (const ev of q.events || []) if (set.has(ev.slug)) ev.consumedAt = new Date(nowMs).toISOString();
     fs.writeFileSync(file, JSON.stringify(q, null, 1));
-  } catch { /* best-effort */ }
+  } catch (e) { fault("find:queue-mark", `could not mark queue events consumed — they may be re-attempted: ${e?.message || e}`, { severity: SEV.INFO }); }
 }
 
 // runFind() → the queue object (also persisted). Injectable impls keep the suite network-free.
@@ -50,6 +51,6 @@ export async function runFind({ fetchImpl = fetch, chatImpl = null, nowMs = Date
   try {
     fs.mkdirSync(path.dirname(file), { recursive: true });
     fs.writeFileSync(file, JSON.stringify(queue, null, 1));
-  } catch { /* best-effort persist */ }
+  } catch (e) { fault("find:queue-write", `could not persist the event queue — the next tick will refetch: ${e?.message || e}`, { severity: SEV.INFO }); }
   return queue;
 }
