@@ -1,3 +1,4 @@
+import { fault, SEV } from "../health.mjs";
 // P2 FIND — EVENT SOURCES (BOX_OFFICE_UPGRADE_PLAN §L2). The lane's discovery used to be 100%
 // inventory-walking (yesterday's chart, a weekly TSV); these sources make it EVENT-DRIVEN: the trade
 // box-office section feeds + targeted Google News RSS searches surface openings, weekend actuals,
@@ -69,7 +70,7 @@ export async function sweepFeeds({ fetchImpl = fetch, nowMs = Date.now(), maxAge
         seen.add(key);
         items.push({ title: it.title, url: it.link, owner: feed.owner, tier: feed.tier, pubMs: Date.parse(it.pubDate || "") || nowMs, via: "rss" });
       }
-    } catch { /* fail-soft */ }
+    } catch (e) { fault("find:rss", `trade feed failed (${feed.url}): ${e?.message || e}`, { severity: SEV.INFO }); }
   }
   return items;
 }
@@ -93,7 +94,7 @@ export async function sweepGnews({ fetchImpl = fetch, nowMs = Date.now(), maxPer
         seen.add(key);
         items.push({ title, url: it.link, owner: it.sourceName || "Google News", tier: 3, pubMs: Date.parse(it.pubDate || "") || nowMs, via: "gnews" });
       }
-    } catch { /* fail-soft */ }
+    } catch (e) { fault("find:gnews", `news query failed (${q}): ${e?.message || e}`, { severity: SEV.INFO }); }
   }
   return items;
 }

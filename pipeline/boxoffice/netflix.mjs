@@ -4,6 +4,8 @@
 // week — X million hours" article is first-hand, not a rewrite of an outlet. Deterministic; injectable
 // fetch so the offline suite stays network-free. Columns (verified live 2026-07-11): week, category,
 // weekly_rank, show_title, season_title, weekly_hours_viewed, runtime, weekly_views, cumulative_weeks_in_top_10.
+import { fault } from "./health.mjs";
+
 const TSV_URL = "https://www.netflix.com/tudum/top10/data/all-weeks-global.tsv";
 
 const parseNum = (s) => { const n = parseInt(String(s ?? "").replace(/[^0-9]/g, ""), 10); return Number.isFinite(n) ? n : null; };
@@ -49,7 +51,13 @@ export async function fetchNetflixTop10({ fetchImpl = fetch } = {}) {
     const r = await fetchImpl(TSV_URL, { signal: AbortSignal.timeout(12000) });
     if (!r.ok) return { week: null, films: [], tv: [] };
     return parseNetflixTsv(await r.text());
-  } catch { return { week: null, films: [], tv: [] }; }
+  } catch (e) {
+    // Three distinct causes (fetch, TSV parse, empty week) used to collapse into ONE identical empty
+    // shape that downstream reads as "no Netflix titles this week" — a real supply outage looking
+    // exactly like a quiet chart.
+    fault("netflix", `Top 10 fetch/parse failed — streaming supply will be empty: ${e?.message || e}`);
+    return { week: null, films: [], tv: [] };
+  }
 }
 
 // A compact grounding block for the writer/synthesizer — the ONLY hours figures that are real.
