@@ -33,18 +33,21 @@ const SCHEMA = `{"films":[{"title":"","dailyGross":"e.g. \\"$3.2 million\\" or n
 // re-scraping + re-LLM-extracting 24×/day was pure waste (and tripped the extractor's rate limit). The parsed
 // chart is cached on disk for the LA day; every tick after the first reads the cache for ~$0.000.
 const CHART_CACHE = path.join(DATA_DIR, "chartCache.json");
+// Bump when the parser changes shape/completeness. A cache written by an OLDER extractor is ignored, so a
+// lossy chart (the LLM's 6-of-17) can never hold the whole LA day hostage after a parser fix ships.
+const PARSER_VERSION = 2;
 const laDay = (ms) => new Intl.DateTimeFormat("en-CA", { timeZone: "America/Los_Angeles" }).format(new Date(ms));
 export function readChartCache({ nowMs = Date.now(), file = CHART_CACHE } = {}) {
   try {
     const c = JSON.parse(fs.readFileSync(file, "utf8"));
-    if (c?.laDay === laDay(nowMs) && Array.isArray(c.films) && c.films.length) return c;
+    if (c?.laDay === laDay(nowMs) && c?.parserVersion === PARSER_VERSION && Array.isArray(c.films) && c.films.length) return c;
   } catch {}
   return null;
 }
 export function writeChartCache(chart, { nowMs = Date.now(), file = CHART_CACHE } = {}) {
   try {
     fs.mkdirSync(path.dirname(file), { recursive: true });
-    fs.writeFileSync(file, JSON.stringify({ laDay: laDay(nowMs), fetchedAt: new Date(nowMs).toISOString(), ...chart }, null, 1));
+    fs.writeFileSync(file, JSON.stringify({ laDay: laDay(nowMs), parserVersion: PARSER_VERSION, fetchedAt: new Date(nowMs).toISOString(), ...chart }, null, 1));
   } catch {}
 }
 

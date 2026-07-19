@@ -131,9 +131,16 @@ export async function boRun({
   catch (e) { report.blocked.push({ stage: "finder", reason: String(e?.message || e).slice(0, 140) }); return finish(report, dryRun); }
   report.films = found.length;
 
+  // PAID-ATTEMPT CEILING PER TICK. Widening the candidate pool from 8 to 29 also widened the blast radius
+  // of a bad day: one tick attempted 12 candidates, published 0, and spent $0.21. The pool exists so the
+  // day's real stories are VISIBLE, not so a single tick can work through all of them. Cap paid attempts
+  // at burst+2 — enough to skip past a couple of duds and still land the burst, bounded if none convert.
+  const MAX_PAID_ATTEMPTS = burst + 2;
+  let attempted = 0;
   let written = 0, streamWritten = 0;
   for (const { film, trigger, angle } of found) {
     if (written >= burst) break;
+    if (attempted >= MAX_PAID_ATTEMPTS) { report.attemptCapHit = attempted; break; }
     if (baseToday + written >= MAX_ARTICLES_PER_DAY) { report.dailyCapHit = true; break; }
     if ((costReport()?.total || 0) > MAX_RUN_COST_USD) { report.costCapHit = true; break; }
     const tag = `${trigger.eventSlug}×${angle.form}`;
@@ -186,6 +193,7 @@ export async function boRun({
 
       // PAID work starts here — spend one of the film's 3 daily EVENT attempts (live only). Chart updates
       // are exempt (bounded by materiality) and must not consume the budget an event story needs.
+      attempted++; // one of the tick's paid attempts, whatever the form
       if (!reviewDir && !dryRun && !isChartUpdate) bumpFilmAttempt(store, film.title, { now: new Date(now) });
 
       // ── GATHERER (the trade box-office report) ──
