@@ -1,8 +1,144 @@
 {
-  "runId": "run-2026-07-19T17-30-49",
-  "builtAt": "2026-07-19T17:32:01.221Z",
-  "count": 10,
+  "runId": "run-2026-07-19T18-00-46",
+  "builtAt": "2026-07-19T18:02:03.603Z",
+  "count": 12,
   "topics": [
+    {
+      "id": "news-john-leguizamo-the-odyssey-intensity",
+      "slug": "john-leguizamo-has-never-been-as-vulnerable-as-in-the-odyssey-it-was-s",
+      "title": "John Leguizamo Has Never Been as Vulnerable as in The Odyssey: “It Was So Intense for Me”",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "john-leguizamo-the-odyssey-intensity",
+      "primaryKeyword": "john leguizamo the odyssey",
+      "primaryEntity": "John Leguizamo",
+      "entities": [
+        "The Odyssey",
+        "The Odyssey (2024 film)",
+        "Christopher Nolan"
+      ],
+      "angle": "John Leguizamo discusses the intense emotional experience of working on Christopher Nolan's 'The Odyssey.'",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/movies/movie-features/john-leguizamo-the-odyssey-eumaeus-chris-nolan-interview-1236651694/",
+          "ageMin": 23,
+          "headline": "John Leguizamo Has Never Been as Vulnerable as in The Odyssey : “It Was So Intense for Me”",
+          "summary": "\"Working with Chris Nolan...you feel really seen,\" the actor behind Eumaeus tells The Hollywood Reporter in a wide-ranging conversation. \"I was able to tap into these really difficult, painful emotions from the depth of my soul.\""
+        }
+      ],
+      "ageMin": 23,
+      "_cand": {
+        "key": "rss:john-leguizamo-has-never-been-as-vulnerable-as-in-the-odysse",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 101,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 12,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "radar": 30
+      },
+      "radarKind": "movie-in-theaters",
+      "tierClass": "A"
+    },
+    {
+      "id": "news-rick-devens-man-of-tomorrow-cameo-cancellation",
+      "slug": "james-gunn-reveals-rick-devens-man-of-tomorrow-cameo-was-canceled",
+      "title": "James Gunn Reveals Rick Devens’ ‘Man of Tomorrow’ Cameo Was Canceled",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "rick-devens-man-of-tomorrow-cameo-cancellation",
+      "primaryKeyword": "Man of Tomorrow cameo",
+      "primaryEntity": "Man of Tomorrow (film)",
+      "entities": [
+        "James Gunn's PG Porn",
+        "James Gunn",
+        "Rick Devens"
+      ],
+      "angle": "James Gunn reveals a planned cameo for 'Big Brother' star Rick Devens in his upcoming DC film 'Man of Tomorrow' was canceled due to filming conflicts.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/film/news/james-gunn-big-brother-rick-devens-man-of-tomorrow-cameo-1236815991/",
+          "ageMin": 51,
+          "headline": "James Gunn Gave ‘Big Brother 28’ Star Rick Devens a Cameo in ‘Man of Tomorrow’ but He ‘Had to Cancel’",
+          "summary": "Rick Devens was supposed to have a cameo in James Gunn s “Man of Tomorrow,” but the reality star had filming obligations with Big Brother. Gunn revealed the cameo after Devens gave the DC Studios co-head a shoutout during the live broadcast of “Big Brother” Season 28’s Thursday eviction episode. Gunn shared the clip on social [ ]"
+        }
+      ],
+      "ageMin": 51,
+      "_cand": {
+        "key": "rss:james-gunn-gave-big-brother-28-star-rick-devens-a-cameo-in-m",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 92,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
     {
       "id": "trailer-les-miserables-movie-trailer",
       "slug": "teaser-trailer-for-france-s-epic-new-les-mis-rables-movie-promises-a-p",
@@ -14,13 +150,13 @@
       "eventType": "trailer",
       "sensitivity": "normal",
       "eventSlug": "les-miserables-movie-trailer",
-      "primaryKeyword": "les miserables trailer",
+      "primaryKeyword": "les miserables movie trailer",
       "primaryEntity": "Les Misérables",
       "entities": [
         "Les Misérables (film)",
         "Victor Hugo"
       ],
-      "angle": "New trailer released for upcoming French film adaptation of Victor Hugo's classic novel.",
+      "angle": "New trailer released for upcoming French film adaptation of 'Les Misérables'.",
       "tmdbType": "movie",
       "source": "gnews:GeekTyrant",
       "sources": [
@@ -28,12 +164,12 @@
           "outlet": "GeekTyrant",
           "tier": 5,
           "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPWC1hV2o1M09FMmtvemZQZzJEVWtYcEdCRkc2UjNsSExZbkpXUl96dTRtelJDLV94cTRmWUw1VDRSbXFJX2FtcEZObDNkMWFxelFYbzI5eG1oZ0hqb25vZVV3S0NqNkVYTS1EOEZVV1hPR1N4Tl94dDgtSGlTVEJ4cTRZcS01RlNxWHlCUzc4MVpaMnBJUzJFVlQ5OVRvZ3hSeTE1OVJ0T3dJVWlwZnB4cHFPR0wxeEZQWi1Sa2V2NWQ5MmlFaGVwal9lWDZkSGs?oc=5",
-          "ageMin": 82,
+          "ageMin": 112,
           "headline": "Teaser Trailer for France's Epic New LES MISÉRABLES Movie Promises a Powerful Return to Victor Hugo's Classic - GeekTyrant",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMizwFBVV95cUxPWC1hV2o1M09FMmtvemZQZzJEVWtYcEdCRkc2UjNsSExZbkpXUl96dTRtelJDLV94cTRmWUw1VDRSbXFJX2FtcEZObDNkMWFxelFYbzI5eG1oZ0hqb25vZVV3S0NqNkVYTS1EOEZVV1hPR1N4Tl94dDgtSGlTVEJ4cTRZcS01RlNxWHlCUzc4MVpaMnBJUzJFVlQ5OVRvZ3hSeTE1OVJ0T3dJVWlwZnB4cHFPR0wxeEZQWi1"
         }
       ],
-      "ageMin": 82,
+      "ageMin": 112,
       "_cand": {
         "key": "rss:teaser-trailer-for-france-s-epic-new-les-mis-rables-movie-pr",
         "popularity": 0,
@@ -70,239 +206,37 @@
       "tierClass": "B"
     },
     {
-      "id": "news-god-of-war-lead-injury-casting-change",
-      "slug": "god-of-war-prime-video-series-to-cast-new-lead-after-on-set-injury",
-      "title": "God of War: Prime Video Series to Cast New Lead After On Set Injury",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "god-of-war-lead-injury-casting-change",
-      "primaryKeyword": "god of war series casting",
-      "primaryEntity": "God of War",
-      "entities": [
-        "God of War (TV series)",
-        "Prime Video"
-      ],
-      "angle": "The lead actor in Prime Video's 'God of War' series has sustained an on-set injury, necessitating a new casting search.",
-      "tmdbType": "movie",
-      "source": "gnews:TV Series Finale",
-      "sources": [
-        {
-          "outlet": "TV Series Finale",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQaVJubzMwODJjX3M1NTJRZG5kUXQ2WGoyVGpNbk05cnlib0ZOcEhqdmJJYzZMVHNTSm1qOUpodWt0cm01NnhBbmxmYk5KNlpFcHl3MXpnaWRFa1gwUnlzLUdxdVV0OUxKMTlqSHVzR0hyYnJ3WmhjRzYzX2FEelFvaU5jVnN0Y0c4MC04aHBMNXpUeFVyWDNWeWNGNDBuRzh1SFVxLUFIMk51d9IBqgFBVV95cUxQaVJubzMwODJjX3M1NTJRZG5kUXQ2WGoyVGpNbk05cnlib0ZOcEhqdmJJYzZMVHNTSm1qOUpodWt0cm01NnhBbmxmYk5KNlpFcHl3MXpnaWRFa1gwUnlzLUdxdVV0OUxKMTlqSHVzR0hyYnJ3WmhjRzYzX2FEelFvaU5jVnN0Y0c4MC04aHBMNXpUeFVyWDNWeWNGNDBuRzh1SFVxLUFIMk51dw?oc=5",
-          "ageMin": 172,
-          "headline": "God of War: Prime Video Series to Cast New Lead After On Set Injury - TV Series Finale",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxQaVJubzMwODJjX3M1NTJRZG5kUXQ2WGoyVGpNbk05cnlib0ZOcEhqdmJJYzZMVHNTSm1qOUpodWt0cm01NnhBbmxmYk5KNlpFcHl3MXpnaWRFa1gwUnlzLUdxdVV0OUxKMTlqSHVzR0hyYnJ3WmhjRzYzX2FEelFvaU5jVnN0Y0c4MC04aHBMNXpUeFVyWDNWeWNGNDBuRzh1SFVxLUFIMk51d9IBqgFBVV95cUxQaVJubzM"
-        }
-      ],
-      "ageMin": 172,
-      "_cand": {
-        "key": "rss:god-of-war-prime-video-series-to-cast-new-lead-after-on-set-",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "TV Series Finale"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "TV Series Finale",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 74,
-      "signals": {
-        "recency": 16,
-        "corroboration": 8,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-robin-hood-season-two-casting",
-      "slug": "robin-hood-season-two-james-purefoy-colin-o-donoghue-and-luke-roberts-",
-      "title": "Robin Hood: Season Two; James Purefoy, Colin O’Donoghue and Luke Roberts Join MGM+ Series",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "robin-hood-season-two-casting",
-      "primaryKeyword": "robin hood season 2",
-      "primaryEntity": "Robin Hood",
-      "entities": [
-        "James Purefoy",
-        "Colin O’Donoghue",
-        "Luke Roberts",
-        "MGM+"
-      ],
-      "angle": "MGM+ series 'Robin Hood' adds James Purefoy, Colin O’Donoghue, and Luke Roberts for Season Two.",
-      "tmdbType": "movie",
-      "source": "gnews:TV Series Finale",
-      "sources": [
-        {
-          "outlet": "TV Series Finale",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPZThJZlczT2JrRml2aE5fRTBfZEZjMzlNT2lxdlBMYTcyWFFGOVA1MnVmQXloVWZlNnhJSWc4cmF4RWFscms0Sm9oOUxnUkhyelhCSUJvZnhOeTN2b201LTFZNXpPWjhHWkctTFlFWHZyZlQ2YUpsWl9XNldWOC1CNW5QTm1YUjJSckwxdHFQbXVwa181UGdPenh3Zms0cFU1ZV9kRlJYbmdHdzI1SHhSajVac2VCMnZvTzJCaURZUmlId9IBwgFBVV95cUxPZThJZlczT2JrRml2aE5fRTBfZEZjMzlNT2lxdlBMYTcyWFFGOVA1MnVmQXloVWZlNnhJSWc4cmF4RWFscms0Sm9oOUxnUkhyelhCSUJvZnhOeTN2b201LTFZNXpPWjhHWkctTFlFWHZyZlQ2YUpsWl9XNldWOC1CNW5QTm1YUjJSckwxdHFQbXVwa181UGdPenh3Zms0cFU1ZV9kRlJYbmdHdzI1SHhSajVac2VCMnZvTzJCaURZUmlIdw?oc=5",
-          "ageMin": 104,
-          "headline": "Robin Hood: Season Two; James Purefoy, Colin O’Donoghue and Luke Roberts Join MGM+ Series - TV Series Finale",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiwgFBVV95cUxPZThJZlczT2JrRml2aE5fRTBfZEZjMzlNT2lxdlBMYTcyWFFGOVA1MnVmQXloVWZlNnhJSWc4cmF4RWFscms0Sm9oOUxnUkhyelhCSUJvZnhOeTN2b201LTFZNXpPWjhHWkctTFlFWHZyZlQ2YUpsWl9XNldWOC1CNW5QTm1YUjJSckwxdHFQbXVwa181UGdPenh3Zms0cFU1ZV9kRlJYbmdHdzI1SHhSajVac2VCMnZvTzJ"
-        }
-      ],
-      "ageMin": 104,
-      "_cand": {
-        "key": "rss:robin-hood-season-two-james-purefoy-colin-o-donoghue-and-luk",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "TV Series Finale"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "TV Series Finale",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 74,
-      "signals": {
-        "recency": 16,
-        "corroboration": 8,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-danny-boyle-ink-sells-netflix",
-      "slug": "danny-boyle-s-ink-sells-to-netflix-in-first-big-sale-way-ahead-of-veni",
-      "title": "Danny Boyle's Ink Sells to Netflix in First Big Sale (Way) Ahead of Venice Premiere",
+      "id": "news-wilson-bethel-star-wars-1313-game",
+      "slug": "daredevil-born-again-star-wilson-bethel-almost-led-scrapped-star-wars-",
+      "title": "DAREDEVIL: BORN AGAIN Star Wilson Bethel Almost Led Scrapped STAR WARS 1313 Game",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
-      "eventType": "announcement",
+      "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "danny-boyle-ink-sells-netflix",
-      "primaryKeyword": "danny boyle ink",
-      "primaryEntity": "Ink (2024 film)",
+      "eventSlug": "wilson-bethel-star-wars-1313-game",
+      "primaryKeyword": "Wilson Bethel Star Wars 1313",
+      "primaryEntity": "Star Wars 1313",
       "entities": [
-        "Danny Boyle",
-        "Netflix",
-        "Venice Film Festival"
+        "Wilson Bethel"
       ],
-      "angle": "Danny Boyle's Venice-opening film 'Ink' sold to Netflix.",
+      "angle": "Daredevil actor Wilson Bethel was almost cast in a scrapped Star Wars game.",
       "tmdbType": "movie",
-      "source": "rss:IndieWire",
+      "source": "gnews:GeekTyrant",
       "sources": [
         {
-          "outlet": "IndieWire",
-          "tier": 7,
-          "url": "https://www.indiewire.com/news/breaking-news/danny-boyle-ink-netflix-venice-sale-1235206128/",
-          "ageMin": 2570,
-          "headline": "Danny Boyle s Ink Sells to Netflix in First Big Sale (Way) Ahead of Venice Premiere",
-          "summary": "The film about Larry Lamb, Rupert Murdoch, and the birth of The Sun tabloid is the opening night film at the Biennale."
-        }
-      ],
-      "ageMin": 2570,
-      "_cand": {
-        "key": "rss:danny-boyle-s-ink-sells-to-netflix-in-first-big-sale-way-ahe",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "IndieWire"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "IndieWire",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 64,
-      "signals": {
-        "recency": 1,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "reaction-marvel-s-wolverine-video-game-trailer",
-      "slug": "marvel-s-wolverine-s-new-trailer-sees-logan-fight-for-his-past-but-fan",
-      "title": "Marvel's Wolverine's new trailer sees Logan fight for his past but fans are taking away a different message",
-      "contentType": "reaction",
-      "formatTag": "reaction",
-      "category": "tv",
-      "subcategory": "reactions",
-      "eventType": "trailer",
-      "sensitivity": "normal",
-      "eventSlug": "marvel-s-wolverine-video-game-trailer",
-      "primaryKeyword": "marvels wolverine trailer reaction",
-      "primaryEntity": "Deadpool & Wolverine",
-      "entities": [
-        "Marvel's Wolverine (video game)",
-        "Logan"
-      ],
-      "angle": "Fans are reacting to the new trailer for Marvel's Wolverine, focusing on a message different from the intended one.",
-      "tmdbType": "movie",
-      "source": "gnews:GameSpew",
-      "sources": [
-        {
-          "outlet": "GameSpew",
+          "outlet": "GeekTyrant",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE94RUFFY2NoY1JPdk81WW1SX2VtYXduRExiS1F3Zy0xZjgwdTFoU0NlVnRTbWV1cGNxaUdmMEg3WU9mZTBtVGs1RGdudjlDWTJPb3lqbFZFUHBZRkFIRWhGak1RclQ2Ynd1WFE?oc=5",
-          "ageMin": 397,
-          "headline": "Marvel's Wolverine's new trailer sees Logan fight for his past but fans are taking away a different message - GameSpew",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiakFVX3lxTE94RUFFY2NoY1JPdk81WW1SX2VtYXduRExiS1F3Zy0xZjgwdTFoU0NlVnRTbWV1cGNxaUdmMEg3WU9mZTBtVGs1RGdudjlDWTJPb3lqbFZFUHBZRkFIRWhGak1RclQ2Ynd1WFE?oc=5\" target=\"_blank\" Marvel's Wolverine's new trailer sees Logan fight for his past but fans are taking aw"
+          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOVkRpcnBvSndsQ2FZWDBSWFRPb1ZUYnV2Sm9LcDFPSTRORUx6WnA3bkluZ0MzeTRoQmszUHlHV0ctTlVDRWExRlF3VEhXeks4MFdwbUJoNklXUlZHRzcwVGUzaVR4TC1GUHNJZWdPOXlNOGJWUkltSW5RWFd4SGNpYkJkRWdZc0s1VXdleTNKUHhpaWxIeTVDNFBxMS1SeERaVi02aU95NGRFU3M?oc=5",
+          "ageMin": 87,
+          "headline": "DAREDEVIL: BORN AGAIN Star Wilson Bethel Almost Led Scrapped STAR WARS 1313 Game - GeekTyrant",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxOVkRpcnBvSndsQ2FZWDBSWFRPb1ZUYnV2Sm9LcDFPSTRORUx6WnA3bkluZ0MzeTRoQmszUHlHV0ctTlVDRWExRlF3VEhXeks4MFdwbUJoNklXUlZHRzcwVGUzaVR4TC1GUHNJZWdPOXlNOGJWUkltSW5RWFd4SGNpYkJkRWdZc0s1VXdleTNKUHhpaWxIeTVDNFBxMS1SeERaVi02aU95NGRFU3M?oc=5\" target=\"_blan"
         }
       ],
-      "ageMin": 397,
+      "ageMin": 87,
       "_cand": {
-        "key": "rss:marvel-s-wolverine-s-new-trailer-sees-logan-fight-for-his-pa",
+        "key": "rss:daredevil-born-again-star-wilson-bethel-almost-led-scrapped-",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -312,48 +246,49 @@
         "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "GameSpew"
+          "GeekTyrant"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "GameSpew",
+        "attribution": "GeekTyrant",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 63,
+      "priority": 84,
       "signals": {
-        "recency": 4,
+        "recency": 16,
         "corroboration": 8,
         "status": 18,
-        "type": 15,
+        "type": 14,
         "pop": 0,
         "breakout": 0,
-        "big": 18,
+        "big": 24,
         "trending": 0,
-        "spice": 0,
+        "spice": 4,
         "softTv": 0
       },
       "tierClass": "B"
     },
     {
-      "id": "news-god-of-war-kratos-recast-ryan-hurst-injury",
-      "slug": "ryan-hurst-injured-kratos-role-recast-in-prime-video-s-god-of-war-seri",
-      "title": "Ryan Hurst Injured, Kratos Role Recast in Prime Video's 'God of War' Series",
+      "id": "news-god-of-war-kratos-recast",
+      "slug": "god-of-war-to-recast-kratos-role-following-ryan-hurst-on-set-injury",
+      "title": "God of War to Recast Kratos Role Following Ryan Hurst On-Set Injury",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "god-of-war-kratos-recast-ryan-hurst-injury",
-      "primaryKeyword": "god of war series kratos recast",
+      "eventSlug": "god-of-war-kratos-recast",
+      "primaryKeyword": "god of war tv series",
       "primaryEntity": "God of War",
       "entities": [
         "God of War (TV series)",
+        "Prime Video",
         "Ryan Hurst"
       ],
-      "angle": "Ryan Hurst's injury forces a recast for the Kratos role in Prime Video's 'God of War' series.",
+      "angle": "The role of Kratos in Prime Video's 'God of War' series will be recast due to an actor's injury.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
@@ -361,12 +296,12 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/tv/tv-news/god-of-war-recast-kratos-ryan-hurst-stunt-injury-1236650848/",
-          "ageMin": 3075,
+          "ageMin": 3105,
           "headline": "God of War to Recast Kratos Role Following Ryan Hurst On-Set Injury",
           "summary": "Prime Video's original God of War tore a bicep muscle while performing a stunt."
         }
       ],
-      "ageMin": 3075,
+      "ageMin": 3105,
       "_cand": {
         "key": "rss:god-of-war-to-recast-kratos-role-following-ryan-hurst-on-set",
         "popularity": 0,
@@ -403,37 +338,37 @@
       "tierClass": "B"
     },
     {
-      "id": "news-star-wars-celebration-2027-applications-live",
-      "slug": "star-wars-celebration-2027-art-show-fan-prop-and-fan-table-application",
-      "title": "Star Wars Celebration 2027: Art Show, Fan Prop and Fan Table Applications Live",
+      "id": "news-god-of-war-series-new-lead-casting",
+      "slug": "god-of-war-prime-video-series-to-cast-new-lead-after-on-set-injury",
+      "title": "God of War: Prime Video Series to Cast New Lead After On Set Injury",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
-      "eventType": "announcement",
+      "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "star-wars-celebration-2027-applications-live",
-      "primaryKeyword": "Star Wars Celebration 2027",
-      "primaryEntity": "Star Wars Celebration",
+      "eventSlug": "god-of-war-series-new-lead-casting",
+      "primaryKeyword": "god of war series casting",
+      "primaryEntity": "God of War",
       "entities": [
-        "Star Wars"
+        "God of War (TV series)"
       ],
-      "angle": "Applications are now open for Star Wars Celebration 2027's art show, fan prop, and fan table.",
+      "angle": "The Prime Video 'God of War' series will cast a new lead following an on-set injury.",
       "tmdbType": "movie",
-      "source": "gnews:Fantha Tracks",
+      "source": "gnews:TV Series Finale",
       "sources": [
         {
-          "outlet": "Fantha Tracks",
+          "outlet": "TV Series Finale",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOWVFNcWl4UzFoajFMZ0xrRXNJWEdoZ1hZUDBwQVZORG1GbkgxQlRFaUFTSHFqN19udUVraV9yM1g2QVpSZzFfVGZwUXo3ZHRNQnBBODZvQlllel9SblNBT0FKUFFsUHgxUjNlQUh2NTRhOWRUcjAtS3JiRkh1RERHdTVCUnVtRlYzT21tTjVaSGlnU0lDQnJMUGpydlVCRkppRXBxU01kUTlDdDBldGNHSVk5UTMydHpzNXJCVmlaME11NzJ0YzdyQ0hn?oc=5",
-          "ageMin": 1226,
-          "headline": "Star Wars Celebration 2027: Art show, fan prop and fan table applications live - Fantha Tracks",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiygFBVV95cUxOWVFNcWl4UzFoajFMZ0xrRXNJWEdoZ1hZUDBwQVZORG1GbkgxQlRFaUFTSHFqN19udUVraV9yM1g2QVpSZzFfVGZwUXo3ZHRNQnBBODZvQlllel9SblNBT0FKUFFsUHgxUjNlQUh2NTRhOWRUcjAtS3JiRkh1RERHdTVCUnVtRlYzT21tTjVaSGlnU0lDQnJMUGpydlVCRkppRXBxU01kUTlDdDBldGNHSVk5UTMydHpzNXJ"
+          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQaVJubzMwODJjX3M1NTJRZG5kUXQ2WGoyVGpNbk05cnlib0ZOcEhqdmJJYzZMVHNTSm1qOUpodWt0cm01NnhBbmxmYk5KNlpFcHl3MXpnaWRFa1gwUnlzLUdxdVV0OUxKMTlqSHVzR0hyYnJ3WmhjRzYzX2FEelFvaU5jVnN0Y0c4MC04aHBMNXpUeFVyWDNWeWNGNDBuRzh1SFVxLUFIMk51d9IBqgFBVV95cUxQaVJubzMwODJjX3M1NTJRZG5kUXQ2WGoyVGpNbk05cnlib0ZOcEhqdmJJYzZMVHNTSm1qOUpodWt0cm01NnhBbmxmYk5KNlpFcHl3MXpnaWRFa1gwUnlzLUdxdVV0OUxKMTlqSHVzR0hyYnJ3WmhjRzYzX2FEelFvaU5jVnN0Y0c4MC04aHBMNXpUeFVyWDNWeWNGNDBuRzh1SFVxLUFIMk51dw?oc=5",
+          "ageMin": 202,
+          "headline": "God of War: Prime Video Series to Cast New Lead After On Set Injury - TV Series Finale",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxQaVJubzMwODJjX3M1NTJRZG5kUXQ2WGoyVGpNbk05cnlib0ZOcEhqdmJJYzZMVHNTSm1qOUpodWt0cm01NnhBbmxmYk5KNlpFcHl3MXpnaWRFa1gwUnlzLUdxdVV0OUxKMTlqSHVzR0hyYnJ3WmhjRzYzX2FEelFvaU5jVnN0Y0c4MC04aHBMNXpUeFVyWDNWeWNGNDBuRzh1SFVxLUFIMk51d9IBqgFBVV95cUxQaVJubzM"
         }
       ],
-      "ageMin": 1226,
+      "ageMin": 202,
       "_cand": {
-        "key": "rss:star-wars-celebration-2027-art-show-fan-prop-and-fan-table-a",
+        "key": "rss:god-of-war-prime-video-series-to-cast-new-lead-after-on-set-",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -443,21 +378,21 @@
         "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "Fantha Tracks"
+          "TV Series Finale"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "Fantha Tracks",
+        "attribution": "TV Series Finale",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 54,
+      "priority": 67,
       "signals": {
-        "recency": 1,
+        "recency": 9,
         "corroboration": 8,
         "status": 18,
-        "type": 9,
+        "type": 14,
         "pop": 0,
         "breakout": 0,
         "big": 18,
@@ -465,12 +400,146 @@
         "spice": 0,
         "softTv": 0
       },
-      "tierClass": "C"
+      "tierClass": "B"
+    },
+    {
+      "id": "news-hbo-harry-potter-cinematographer-shooting-schedules",
+      "slug": "hbo-s-harry-potter-cinematographer-says-it-s-brutal-working-around-the",
+      "title": "HBO's Harry Potter Cinematographer Says It's Brutal Working Around the Young Stars' Strict Shooting Schedules",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "high",
+      "eventSlug": "hbo-harry-potter-cinematographer-shooting-schedules",
+      "primaryKeyword": "hbo harry potter series",
+      "primaryEntity": "Harry Potter and the Philosopher's Stone",
+      "entities": [
+        "Harry Potter (TV series)",
+        "HBO",
+        "Adriano Goldman"
+      ],
+      "angle": "The cinematographer for HBO's 'Harry Potter' series describes the 'brutal' filming conditions due to the young stars' strict shooting schedules.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/film/news/hbo-harry-potter-brutal-working-stars-strict-schedules-1236816011/",
+          "ageMin": 26,
+          "headline": "HBO s Harry Potter Cinematographer Says It s Brutal Working Around the Young Stars Strict Shooting Schedules: Have to Pre-Shoot All the Scenes While They’re in Class",
+          "summary": "Adriano Goldman, the cinematographer for HBO’s “Harry Potter” series, said in a recent interview with Andre Pilli that the filming conditions for the show have been “brutal” because the camera team must work around the young cast’s strict shooting schedules. You have to shoot really fast, and the faster you go, the more you compromise [ ]"
+        }
+      ],
+      "ageMin": 26,
+      "_cand": {
+        "key": "rss:hbo-s-harry-potter-cinematographer-says-it-s-brutal-working-",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 65,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 6,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "S"
+    },
+    {
+      "id": "news-danny-boyle-ink-sells-netflix-venice",
+      "slug": "danny-boyle-s-ink-sells-to-netflix-in-first-big-sale-ahead-of-venice-p",
+      "title": "Danny Boyle's Ink Sells to Netflix in First Big Sale Ahead of Venice Premiere",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "danny-boyle-ink-sells-netflix-venice",
+      "primaryKeyword": "danny boyle ink",
+      "primaryEntity": "Ink (2024 film)",
+      "entities": [
+        "Danny Boyle",
+        "Netflix",
+        "Venice Film Festival"
+      ],
+      "angle": "Danny Boyle's new film 'Ink,' set to premiere at the Venice Film Festival, has been acquired by Netflix.",
+      "tmdbType": "movie",
+      "source": "rss:IndieWire",
+      "sources": [
+        {
+          "outlet": "IndieWire",
+          "tier": 7,
+          "url": "https://www.indiewire.com/news/breaking-news/danny-boyle-ink-netflix-venice-sale-1235206128/",
+          "ageMin": 2600,
+          "headline": "Danny Boyle s Ink Sells to Netflix in First Big Sale (Way) Ahead of Venice Premiere",
+          "summary": "The film about Larry Lamb, Rupert Murdoch, and the birth of The Sun tabloid is the opening night film at the Biennale."
+        }
+      ],
+      "ageMin": 2600,
+      "_cand": {
+        "key": "rss:danny-boyle-s-ink-sells-to-netflix-in-first-big-sale-way-ahe",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "IndieWire"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "IndieWire",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 64,
+      "signals": {
+        "recency": 1,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
     },
     {
       "id": "news-heartstopper-forever-finale-discussion",
-      "slug": "heartstopper-forever-stars-and-creator-discuss-the-finale",
-      "title": "‘Heartstopper Forever’ Stars and Creator Discuss the Finale",
+      "slug": "heartstopper-forever-team-on-finale-s-changes-and-connections",
+      "title": "'Heartstopper Forever' Team on Finale's Changes and Connections",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
@@ -478,15 +547,14 @@
       "eventType": "other",
       "sensitivity": "normal",
       "eventSlug": "heartstopper-forever-finale-discussion",
-      "primaryKeyword": "Heartstopper finale",
+      "primaryKeyword": "Heartstopper",
       "primaryEntity": "Heartstopper",
       "entities": [
         "Joe Locke",
         "Kit Connor",
-        "Alice Oseman",
-        "Wash Westmoreland"
+        "Alice Oseman"
       ],
-      "angle": "Stars Joe Locke and Kit Connor, creator Alice Oseman, and director Wash Westmoreland discuss the 'Heartstopper Forever' finale and its changes from the book.",
+      "angle": "Director, writer, and stars of 'Heartstopper Forever' discuss the finale's changes from the book and its connections to the main cast.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
@@ -494,12 +562,12 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/movies/movie-features/heartstopper-forever-ending-kit-connor-joe-lock-interview-1236647039/",
-          "ageMin": 1501,
+          "ageMin": 1531,
           "headline": "‘Heartstopper Forever’ Director, Writer and Stars Joe Locke and Kit Connor on the Finale: “It Connects the Whole Heartstopper Gang”",
           "summary": "Stars Connor and Locke, creator Alice Oseman and director Wash Westmoreland break down the film’s biggest change from book to screen, alongside the intimacy, break-ups, and ambiguous endings from the final chapter."
         }
       ],
-      "ageMin": 1501,
+      "ageMin": 1531,
       "_cand": {
         "key": "rss:-heartstopper-forever-director-writer-and-stars-joe-locke-an",
         "popularity": 0,
@@ -538,79 +606,75 @@
       "tierClass": "A"
     },
     {
-      "id": "news-matty-healy-gabbriette-bechtel-marriage",
-      "slug": "the-1975-s-matty-healy-and-gabbriette-bechtel-marry-at-madonna-s-forme",
-      "title": "The 1975's Matty Healy and Gabbriette Bechtel Marry at Madonna's Former L.A. Estate",
+      "id": "news-alan-ritchson-action-movies-era-end",
+      "slug": "alan-ritchson-marks-the-end-of-an-era-for-action-movies",
+      "title": "Alan Ritchson Marks the End of an Era for Action Movies",
       "contentType": "news",
       "formatTag": "news",
-      "category": "celebrity",
+      "category": "movies",
       "subcategory": "news",
-      "eventType": "marriage",
+      "eventType": "other",
       "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "matty-healy-gabbriette-bechtel-marriage",
-      "primaryKeyword": "matty healy marriage",
-      "primaryEntity": "Matty Healy",
+      "eventSlug": "alan-ritchson-action-movies-era-end",
+      "primaryKeyword": "Alan Ritchson action movies",
+      "primaryEntity": "Alan Ritchson",
       "entities": [
-        "The Odyssey",
-        "Gabbriette Bechtel",
-        "The 1975"
+        "Jack Reacher",
+        "Reacher"
       ],
-      "angle": "The 1975 frontman Matty Healy marries model-musician Gabbriette Bechtel.",
+      "angle": "An opinion piece suggests Alan Ritchson's impact signifies a new era for action cinema.",
       "tmdbType": "movie",
-      "source": "rss:Billboard",
+      "source": "gnews:Polygon.com",
       "sources": [
         {
-          "outlet": "Billboard",
-          "tier": 7,
-          "url": "https://www.billboard.com/music/music-news/matty-healy-marries-gabbriette-bechtel-la-estate-madonna-1236297545/",
-          "ageMin": 76,
-          "headline": "The 1975 s Matty Healy Gabbriette Bechtel Marry at Madonna s Former L.A. Estate",
-          "summary": "The 1975 frontman and the model-musician got engaged in summer 2024."
+          "outlet": "Polygon.com",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5iVGd1ZHV2NFp3RllTWkpMMVVUMmx3cFJ5Z1RKTGlnelhUT0dOcktGenlTeXVvNUlRendEeHNGRjRkSFg0R1lrRjF1Q09WbUdDVHpjbFVoMnFXSjRiQjJfeHZvTWtScVNmWVlCU0VBTjJYWkU1?oc=5",
+          "ageMin": 181,
+          "headline": "It's official, Alan Ritchson marks the end of an era for action movies, and the start of something better - Polygon.com",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMidEFVX3lxTE5iVGd1ZHV2NFp3RllTWkpMMVVUMmx3cFJ5Z1RKTGlnelhUT0dOcktGenlTeXVvNUlRendEeHNGRjRkSFg0R1lrRjF1Q09WbUdDVHpjbFVoMnFXSjRiQjJfeHZvTWtScVNmWVlCU0VBTjJYWkU1?oc=5\" target=\"_blank\" It's official, Alan Ritchson marks the end of an era for action movies, "
         }
       ],
-      "ageMin": 76,
+      "ageMin": 181,
       "_cand": {
-        "key": "rss:the-1975-s-matty-healy-gabbriette-bechtel-marry-at-madonna-s",
+        "key": "rss:it-s-official-alan-ritchson-marks-the-end-of-an-era-for-acti",
         "popularity": 0,
-        "kind": "rss-news"
+        "kind": "gnews"
       },
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
+        "tier1Count": 0,
+        "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "Billboard"
+          "Polygon.com"
         ],
-        "maxTier": 7,
+        "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "Billboard",
+        "attribution": "Polygon.com",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 84,
+      "priority": 52,
       "signals": {
-        "recency": 16,
-        "corroboration": 12,
+        "recency": 9,
+        "corroboration": 8,
         "status": 18,
-        "type": 8,
+        "type": 5,
         "pop": 0,
         "breakout": 0,
-        "big": 0,
+        "big": 12,
         "trending": 0,
         "spice": 0,
-        "softTv": 0,
-        "radar": 30
+        "softTv": 0
       },
-      "radarKind": "movie-in-theaters",
-      "tierClass": "A"
+      "tierClass": "C"
     },
     {
       "id": "news-jeana-keough-tongue-cancer-diagnosis",
       "slug": "real-housewives-of-orange-county-star-jeana-keough-diagnosed-with-tong",
-      "title": "Real Housewives Of Orange County Star Jeana Keough Diagnosed With Tongue Cancer At 70",
+      "title": "‘Real Housewives of Orange County’ Star Jeana Keough Diagnosed With Tongue Cancer",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
@@ -618,12 +682,13 @@
       "eventType": "health",
       "sensitivity": "high",
       "eventSlug": "jeana-keough-tongue-cancer-diagnosis",
-      "primaryKeyword": "jeana keough cancer",
+      "primaryKeyword": "Jeana Keough cancer",
       "primaryEntity": "Jeana Keough",
       "entities": [
-        "The Real Housewives of Orange County"
+        "The Real Housewives of Orange County",
+        "Real Housewives of Orange County"
       ],
-      "angle": "Real Housewives star Jeana Keough diagnosed with tongue cancer.",
+      "angle": "The OG star of 'Real Housewives of Orange County' has been diagnosed with tongue cancer.",
       "tmdbType": "movie",
       "source": "rss:Deadline",
       "sources": [
@@ -631,12 +696,12 @@
           "outlet": "Deadline",
           "tier": 7,
           "url": "https://deadline.com/2026/07/real-housewives-of-orange-county-jeana-keough-diagnosed-cancer-1236997750/",
-          "ageMin": 11,
+          "ageMin": 41,
           "headline": "Real Housewives Of Orange County Star Jeana Keough Diagnosed With Tongue Cancer At 70",
           "summary": "Jeana Keough, one of the OG stars of The Real Housewives of Orange County, has been diagnosed with tongue cancer at the age of 70, her daughter confirmed. The former Bravo star was recently diagnosed, and her daughter, Kara Bosworth, shared details on social media as she looks to crowdfund to cover cancer treatment expenses. [ ]"
         }
       ],
-      "ageMin": 11,
+      "ageMin": 41,
       "_cand": {
         "key": "rss:real-housewives-of-orange-county-star-jeana-keough-diagnosed",
         "popularity": 0,
@@ -657,9 +722,74 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 72,
+      "priority": 66,
       "signals": {
-        "recency": 30,
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 12,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "S"
+    },
+    {
+      "id": "news-kevin-oleary-sued-data-center-critics",
+      "slug": "shark-tank-star-kevin-o-leary-sued-over-china-comments",
+      "title": "‘Shark Tank’ Star Kevin O’Leary Sued Over China Comments",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "lawsuit",
+      "sensitivity": "high",
+      "eventSlug": "kevin-oleary-sued-data-center-critics",
+      "primaryKeyword": "Kevin O'Leary lawsuit",
+      "primaryEntity": "Kevin O'Leary",
+      "entities": [
+        "Shark Tank"
+      ],
+      "angle": "'Shark Tank' star Kevin O'Leary is facing a lawsuit over his claims that critics of a data center had connections with China.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/business/business-news/kevin-oleary-sued-claims-data-center-critics-china-ties-1236651648/",
+          "ageMin": 147,
+          "headline": "Shark Tank Star Kevin O’Leary Sued After Claiming Data Center Critics Had Connections With China",
+          "summary": "Fox News is also named in the suit for airing O'Leary's comments."
+        }
+      ],
+      "ageMin": 147,
+      "_cand": {
+        "key": "rss:shark-tank-star-kevin-o-leary-sued-after-claiming-data-cente",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 58,
+      "signals": {
+        "recency": 16,
         "corroboration": 12,
         "status": 18,
         "type": 12,
