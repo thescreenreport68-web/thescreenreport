@@ -1,0 +1,138 @@
+{
+  "ts": "2026-07-19T03:00:57.883Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "paige-desorbo-shuts-down-engagement-rumors-sparked-by-a-laughing-selfie",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [
+        "metaTitle-contract:repaired"
+      ],
+      "headline": [
+        "metaDescription",
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 0
+    }
+  ],
+  "topics": 1,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 0,
+  "costUSD": 0.018808,
+  "costPerPublished": 0.018808,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 8,
+      "in": 16113,
+      "out": 3061,
+      "usd": 0.012486400000000002
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 1065,
+      "out": 557,
+      "usd": 0.00030506
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 6,
+      "in": 15765,
+      "out": 5424,
+      "usd": 0.0044813584
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 10,
+      "in": 8268,
+      "out": 1772,
+      "usd": 0.0015356
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2473,
+      "out": 208,
+      "usd": 0.0012619,
+      "ms": 1855
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1065,
+      "out": 557,
+      "usd": 0.00019611,
+      "ms": 7128
+    },
+    "writer": {
+      "calls": 5,
+      "errors": 0,
+      "in": 15051,
+      "out": 5122,
+      "usd": 0.00520321,
+      "ms": 137684
+    },
+    "verify": {
+      "calls": 7,
+      "errors": 0,
+      "in": 13640,
+      "out": 2853,
+      "usd": 0.0112245,
+      "ms": 15425
+    },
+    "judge": {
+      "calls": 2,
+      "errors": 0,
+      "in": 2908,
+      "out": 539,
+      "usd": 0.0005064000000000001,
+      "ms": 6405
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 714,
+      "out": 302,
+      "usd": 0.0002669,
+      "ms": 5288
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 378,
+      "out": 66,
+      "usd": 0.0000642,
+      "ms": 776
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 195,
+      "out": 50,
+      "usd": 0.0000395,
+      "ms": 511
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2123,
+      "out": 113,
+      "usd": 0.0002575,
+      "ms": 1814
+    },
+    "linker": {
+      "calls": 4,
+      "errors": 0,
+      "in": 1202,
+      "out": 104,
+      "usd": 0.0001618,
+      "ms": 1857
+    }
+  }
+}
