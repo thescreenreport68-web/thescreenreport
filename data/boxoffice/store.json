@@ -1022,9 +1022,9 @@
    "key": "the-sheep-detectives-bo-opening|BO-OPENING",
    "eventSlug": "the-sheep-detectives-bo-opening",
    "form": "BO-OPENING",
-   "reason": "words 159 < 180 (owner-set ~200-word minimum) | soft-floor readability 3 < 5 | soft-floor engagement 1 < 5 | soft-floor humanVoice 2 < 5",
-   "tries": 1,
-   "at": "2026-07-18T23:04:50.081Z"
+   "reason": "synthesizer returned no usable brief",
+   "tries": 2,
+   "at": "2026-07-19T16:35:47.077Z"
   },
   {
    "key": "zola-ev-streaming-arrival|NOW-STREAMING",
@@ -1086,9 +1086,11 @@
    "key": "i-will-find-you-trending-tv-w2026-07-12|TRENDING-TV",
    "eventSlug": "i-will-find-you-trending-tv-w2026-07-12",
    "form": "TRENDING-TV",
-   "reason": "words 151 < 180 (owner-set ~200-word minimum) | soft-floor humanVoice 4 < 5",
-   "tries": 2,
-   "at": "2026-07-19T12:03:43.169Z"
+   "reason": "words 166 < 180 (owner-set ~200-word minimum) | soft-floor engagement 4 < 5 | soft-floor humanVoice 3 < 5",
+   "tries": 3,
+   "at": "2026-07-19T16:37:14.775Z",
+   "dead": true,
+   "expiresAt": "2026-07-22T16:37:14.775Z"
   },
   {
    "key": "worst-neighbor-ever-trending-tv-w2026-07-12|TRENDING-TV",
@@ -1270,21 +1272,21 @@
    "key": "gail-daughtry-and-the-celebrity-sex-pass-bo-update-d8|BO-UPDATE",
    "eventSlug": "gail-daughtry-and-the-celebrity-sex-pass-bo-update-d8",
    "form": "BO-UPDATE",
-   "reason": "consistency: title: \"$1.2\" is not a canonical figure for this film | title: \"$1.2\" contradicts the canonical domestic figure ($1,242,603)",
-   "tries": 15,
-   "at": "2026-07-19T15:51:49.016Z",
+   "reason": "consistency: title: \"$1.2\" is not a canonical figure for this film | metaTitle: \"$1M\" is not a canonical figure for this film | title: \"$1.2\" contradicts the canonical domestic figure ($1,242,603)",
+   "tries": 16,
+   "at": "2026-07-19T16:32:18.432Z",
    "dead": true,
-   "expiresAt": "2026-07-22T15:51:49.016Z"
+   "expiresAt": "2026-07-22T16:32:18.432Z"
   },
   {
    "key": "star-wars-the-mandalorian-and-grogu-bo-update-d57|BO-UPDATE",
    "eventSlug": "star-wars-the-mandalorian-and-grogu-bo-update-d57",
    "form": "BO-UPDATE",
-   "reason": "consistency: title: \"$177.5\" is not a canonical figure for this film | title: \"$177.5\" contradicts the canonical domestic figure ($177,455,904) | metaTitle: headlines domestic while the title headlines dailyGross/other — the SERP promise must match the page",
-   "tries": 15,
-   "at": "2026-07-19T15:54:03.018Z",
+   "reason": "words 116 < 180 (owner-set ~200-word minimum)",
+   "tries": 16,
+   "at": "2026-07-19T16:33:59.911Z",
    "dead": true,
-   "expiresAt": "2026-07-22T15:54:03.018Z"
+   "expiresAt": "2026-07-22T16:33:59.911Z"
   },
   {
    "key": "the-super-mario-galaxy-movie-ev-milestone-d0|BO-MILESTONE",
@@ -1319,14 +1321,14 @@
    "at": "2026-07-19T15:22:02.980Z"
   }
  ],
- "zeroStreak": 5,
+ "zeroStreak": 6,
  "daySpend": {
   "laDay": "2026-07-19",
-  "usd": 0.4031
+  "usd": 0.42727
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1784476126582
+  "lastMs": 1784478655579
  },
  "lastAuditDay": "2026-07-19",
  "attempts": {
@@ -1334,8 +1336,8 @@
   "byFilm": {
    "descendants: wicked wonderland": 3,
    "lee cronin's the mummy": 3,
-   "the sheep detectives": 2,
-   "i will find you": 1,
+   "the sheep detectives": 3,
+   "i will find you": 2,
    "worst neighbor ever": 1,
    "little house on the prairie": 1,
    "avatar: the last airbender": 1,
