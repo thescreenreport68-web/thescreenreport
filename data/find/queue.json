@@ -1,41 +1,43 @@
 {
-  "runId": "run-2026-07-19T04-02-53",
-  "builtAt": "2026-07-19T04:04:21.072Z",
-  "count": 12,
+  "runId": "run-2026-07-19T04-12-07",
+  "builtAt": "2026-07-19T04:13:32.587Z",
+  "count": 9,
   "topics": [
     {
-      "id": "news-the-odyssey-casting",
-      "slug": "samantha-morton-on-her-electrifying-performance-as-circe-in-christophe",
-      "title": "Samantha Morton on Her Electrifying Performance as Circe in Christopher Nolan's The Odyssey: It Felt Like a Rebirth",
+      "id": "news-tom-holland-robert-pattinson-the-odyssey-casting",
+      "slug": "tom-holland-on-the-odyssey-you-re-so-good-at-being-a-dickhead-after-ro",
+      "title": "Tom Holland on The Odyssey: 'You're So Good at Being a Dickhead' After Robert Pattinson Casting",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "casting",
-      "sensitivity": "high",
-      "eventSlug": "the-odyssey-casting",
-      "primaryKeyword": "the odyssey christopher nolan",
+      "sensitivity": "normal",
+      "eventSlug": "tom-holland-robert-pattinson-the-odyssey-casting",
+      "primaryKeyword": "The Odyssey",
       "primaryEntity": "The Odyssey",
       "entities": [
-        "Samantha Morton",
-        "Christopher Nolan"
+        "The Odyssey (film)",
+        "Tom Holland",
+        "Christopher Nolan",
+        "Robert Pattinson"
       ],
-      "angle": "Samantha Morton describes her impactful role as Circe in Christopher Nolan's 'The Odyssey'.",
+      "angle": "Tom Holland reveals his reaction to Robert Pattinson's casting in Christopher Nolan's 'The Odyssey'.",
       "tmdbType": "movie",
-      "source": "rss:Variety",
+      "source": "rss:Deadline",
       "sources": [
         {
-          "outlet": "Variety",
+          "outlet": "Deadline",
           "tier": 7,
-          "url": "https://variety.com/2026/music/obituaries-people-news/freddy-cannon-dead-palisades-park-rocker-1236815495/",
-          "ageMin": 513,
-          "headline": "Freddy Cannon, Rocker Whose Late 50s and Early 60s Hits Included Palisades Park and Tallahassee Lassie, Dies at 89",
-          "summary": "Freddy Cannon, a veteran of the early rock scene whose hits of the late 50s and early 60s included the top 10 hits Palisades Park, Tallahassee Lassie and Way Down Yonder in New Orleans, died Friday at 89. A representative said Cannon, who lived in Oxnard, California, died at a hospice facility after very recently [ ]"
+          "url": "https://deadline.com/2026/07/the-odyssey-tom-holland-robert-pattinson-casting-dickhead-1236997608/",
+          "ageMin": 226,
+          "headline": "The Odyssey s Tom Holland On Why He Could Relax After Robert Pattinson Casting: You re So Good At Being A Dickhead",
+          "summary": "Tom Holland stars in Christopher Nolan s The Odyssey and recently revealed how he felt when Robert Pattinson was cast in the film. In a recent appearance on EW s Around the Table, Holland said he felt he could relax after he learned the Batman actor was set to play Antinous in the epic film. Rob and [ ]"
         }
       ],
-      "ageMin": 513,
+      "ageMin": 226,
       "_cand": {
-        "key": "rss:freddy-cannon-rocker-whose-late-50s-and-early-60s-hits-inclu",
+        "key": "rss:the-odyssey-s-tom-holland-on-why-he-could-relax-after-robert",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -45,11 +47,80 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Variety"
+          "Deadline"
         ],
         "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "Variety",
+        "sensitivity": "normal",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 107,
+      "signals": {
+        "recency": 9,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "radar": 30
+      },
+      "radarKind": "movie-in-theaters",
+      "tierClass": "A"
+    },
+    {
+      "id": "news-the-odyssey-stars-matt-damon-anne-hathaway-christopher-nolan-commandme",
+      "slug": "the-odyssey-stars-matt-damon-and-anne-hathaway-reveal-christopher-nola",
+      "title": "The Odyssey Stars Matt Damon and Anne Hathaway Reveal Christopher Nolan's Commandments on Set",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "the-odyssey-stars-matt-damon-anne-hathaway-christopher-nolan-commandme",
+      "primaryKeyword": "The Odyssey",
+      "primaryEntity": "The Odyssey",
+      "entities": [
+        "Matt Damon",
+        "Anne Hathaway",
+        "Christopher Nolan"
+      ],
+      "angle": "Stars Matt Damon and Anne Hathaway share insights into Christopher Nolan's directorial rules on the set of 'The Odyssey'.",
+      "tmdbType": "movie",
+      "source": "rss:TheWrap",
+      "sources": [
+        {
+          "outlet": "TheWrap",
+          "tier": 7,
+          "url": "https://www.thewrap.com/creative-content/movies/odyssey-stars-matt-damon-anne-hathaway-chris-nolan-set-commandments/",
+          "ageMin": 476,
+          "headline": "The Odyssey Stars Matt Damon and Anne Hathaway Reveal Christopher Nolan s Commandments on Set",
+          "summary": "\"Thou shalt not wear Uggs\" Hathaway shares The post The Odyssey Stars Matt Damon and Anne Hathaway Reveal Christopher Nolan s Commandments on Set appeared first on TheWrap ."
+        }
+      ],
+      "ageMin": 476,
+      "_cand": {
+        "key": "rss:the-odyssey-stars-matt-damon-and-anne-hathaway-reveal-christ",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "TheWrap"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "TheWrap",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -69,162 +140,27 @@
         "radar": 30
       },
       "radarKind": "movie-in-theaters",
-      "tierClass": "S"
-    },
-    {
-      "id": "news-zendaya-the-odyssey-premiere",
-      "slug": "zendaya-wears-angelic-gown-to-the-odyssey-premiere",
-      "title": "Zendaya Wears Angelic Gown to 'The Odyssey' Premiere",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "zendaya-the-odyssey-premiere",
-      "primaryKeyword": "zendaya the odyssey",
-      "primaryEntity": "Zendaya",
-      "entities": [
-        "The Odyssey",
-        "The Odyssey (film)"
-      ],
-      "angle": "Zendaya makes a striking appearance at the premiere of her new film 'The Odyssey'.",
-      "tmdbType": "movie",
-      "source": "gnews:Coveteur",
-      "sources": [
-        {
-          "outlet": "Coveteur",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE12clBVOTZKYnRlUVdoZ0I3SHE0R0g2YnFDYzZXQnl4S0VPUV80MlVScTVwTVlwTTVQNktsaTZYeDdVY1haeVVnLV9lYTRNNXRNMEE5V0tHZnliajBUYVZ5SUVuNA?oc=5",
-          "ageMin": 1053,
-          "headline": "Zendaya Grew Angel Wings At \"The Odyssey\" Premiere - Coveteur",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiY0FVX3lxTE12clBVOTZKYnRlUVdoZ0I3SHE0R0g2YnFDYzZXQnl4S0VPUV80MlVScTVwTVlwTTVQNktsaTZYeDdVY1haeVVnLV9lYTRNNXRNMEE5V0tHZnliajBUYVZ5SUVuNA?oc=5\" target=\"_blank\" Zendaya Grew Angel Wings At \"The Odyssey\" Premiere /a nbsp; nbsp; font color=\"#6f6f6f\" Coveteu"
-        }
-      ],
-      "ageMin": 1053,
-      "_cand": {
-        "key": "rss:zendaya-grew-angel-wings-at-the-odyssey-premiere-coveteur",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "Coveteur"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "Coveteur",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 95,
-      "signals": {
-        "recency": 1,
-        "corroboration": 8,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0,
-        "radar": 30
-      },
-      "radarKind": "movie-in-theaters",
       "tierClass": "A"
     },
     {
-      "id": "news-the-family-stone-sequel-update",
-      "slug": "luke-wilson-on-the-family-stone-sequel-i-can-t-believe-it-s-happening",
-      "title": "Luke Wilson on The Family Stone Sequel: 'I Can't Believe It's Happening'",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "high",
-      "eventSlug": "the-family-stone-sequel-update",
-      "primaryKeyword": "the family stone sequel",
-      "primaryEntity": "The Family Stone",
-      "entities": [
-        "Luke Wilson",
-        "Diane Keaton",
-        "Tom Bezucha"
-      ],
-      "angle": "Luke Wilson confirms a sequel to the 2005 holiday film The Family Stone is in the works.",
-      "tmdbType": "movie",
-      "source": "rss:Deadline",
-      "sources": [
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/luke-wilson-the-family-stone-sequel-1236997627/",
-          "ageMin": 33,
-          "headline": "Luke Wilson On The Family Stone Sequel: I Can t Believe It s Happening",
-          "summary": "Luke Wilson is sharing an update on The Family Stone sequel that Tom Bezucha is writing. Bezucha, who wrote and directed the 2005 holiday film, revealed that he was penning a sequel after Diane Keaton died. Tom Bezucha is a great writer and a great director, and I read the script, and it’s really funny, and it’s [ ]"
-        }
-      ],
-      "ageMin": 33,
-      "_cand": {
-        "key": "rss:luke-wilson-on-the-family-stone-sequel-i-can-t-believe-it-s-",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Deadline"
-        ],
-        "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "Deadline",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 87,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "S"
-    },
-    {
-      "id": "trailer-dwayne-johnson-catherine-lagaaia-moana-trailer",
-      "slug": "disney-drops-first-look-at-live-action-moana-with-dwayne-johnson",
-      "title": "Disney Drops First Look at Live-Action 'Moana' with Dwayne Johnson",
+      "id": "trailer-moana-live-action-trailer",
+      "slug": "disney-releases-new-look-at-dwayne-johnson-catherine-laga-aia-in-live-",
+      "title": "Disney releases new look at Dwayne Johnson, Catherine Lagaʻaia in live action 'Moana' trailer",
       "contentType": "trailer",
       "formatTag": "trailer",
       "category": "movies",
       "subcategory": "trailers",
       "eventType": "trailer",
       "sensitivity": "normal",
-      "eventSlug": "dwayne-johnson-catherine-lagaaia-moana-trailer",
-      "primaryKeyword": "moana trailer",
+      "eventSlug": "moana-live-action-trailer",
+      "primaryKeyword": "moana live action trailer",
       "primaryEntity": "Moana",
       "entities": [
-        "Moana (2026 film)",
+        "Moana (film)",
         "Dwayne Johnson",
         "Catherine Lagaʻaia"
       ],
-      "angle": "Disney drops first trailer for live-action Moana featuring Dwayne Johnson.",
+      "angle": "Disney releases the first trailer for the live-action 'Moana' featuring Dwayne Johnson.",
       "tmdbType": "movie",
       "source": "gnews:ABC7 Bay Area",
       "sources": [
@@ -232,12 +168,12 @@
           "outlet": "ABC7 Bay Area",
           "tier": 5,
           "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPczBhNWs0TUxTTVZjR0dGSDJUQnBnMGxfWTIxRFFmU2xBcnVFTnl2ZjZlUHowczdCVEJCdFRpX3JXYUFHZkFnM2RoUmxNMVFnR1dsWVNYUW5oa3ZiQTMwU01LNXd1d25VUm52UVcxd1JBWnp1RnotZ243dC03eFdoTXZTWE96T21hR2V6RHdjaUJYTHE4SUF5d1YxcUhwZy1ORXlLVDdzZmNZYjA4Nm9fX2tyb2tobTNiZGRV0gHAAUFVX3lxTE5yaHNFTF83SE4tTEtabVRMdXE0Rkt6d2tuRlE1YkxfbjlKeDZ3SVNoZzRGMml4OEJDa00xOWJ1eVVFM25FazRzV1Zac2R3V1FJa3hvWUdtOEtZSFVER25lZzZ6Mm03T1FQX3NaNFVvTlRfS3VIR1M5VF94OUptemtBeHk0aVE5aEttRHZQbE91QUpaYXVmSGxWcE9HUmhmRV9yOG9UM2NqMXplN1phN1FReFA0d0FlWDlBbS1pTkxEWQ?oc=5",
-          "ageMin": 511,
+          "ageMin": 520,
           "headline": "Disney releases new look at Dwayne Johnson, Catherine Lagaʻaia in live action 'Moana' trailer - ABC7 Bay Area",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMiuwFBVV95cUxPczBhNWs0TUxTTVZjR0dGSDJUQnBnMGxfWTIxRFFmU2xBcnVFTnl2ZjZlUHowczdCVEJCdFRpX3JXYUFHZkFnM2RoUmxNMVFnR1dsWVNYUW5oa3ZiQTMwU01LNXd1d25VUm52UVcxd1JBWnp1RnotZ243dC03eFdoTXZTWE96T21hR2V6RHdjaUJYTHE4SUF5d1YxcUhwZy1ORXlLVDdzZmNZYjA4Nm9fX2tyb2tobTNiZGR"
         }
       ],
-      "ageMin": 511,
+      "ageMin": 520,
       "_cand": {
         "key": "rss:disney-releases-new-look-at-dwayne-johnson-catherine-laga-ai",
         "popularity": 0,
@@ -274,39 +210,37 @@
       "tierClass": "B"
     },
     {
-      "id": "news-jack-quaid-my-adventures-with-superman-episode-5-breakdown",
-      "slug": "jack-quaid-breaks-down-that-devastating-fifth-episode-of-my-adventures",
-      "title": "Jack Quaid Breaks Down That Devastating Fifth Episode of My Adventures With Superman: He's Out of His Depth",
+      "id": "news-god-of-war-tv-series-recasting-kratos-ryan-hurst-injury",
+      "slug": "god-of-war-tv-series-to-recast-kratos-after-ryan-hurst-injury",
+      "title": "God of War TV Series to Recast Kratos After Ryan Hurst Injury",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
-      "eventType": "other",
+      "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "jack-quaid-my-adventures-with-superman-episode-5-breakdown",
-      "primaryKeyword": "my adventures with superman",
-      "primaryEntity": "My Adventures with Superman",
+      "eventSlug": "god-of-war-tv-series-recasting-kratos-ryan-hurst-injury",
+      "primaryKeyword": "God of War TV series Kratos recast",
+      "primaryEntity": "God of War (TV series)",
       "entities": [
-        "My Adventures With Superman",
-        "Jack Quaid",
-        "Superman"
+        "Ryan Hurst"
       ],
-      "angle": "Jack Quaid discusses the emotional impact of a key episode in 'My Adventures With Superman'.",
+      "angle": "Prime Video's 'God of War' series will recast the role of Kratos after actor Ryan Hurst sustained an injury during a stunt.",
       "tmdbType": "movie",
-      "source": "rss:TheWrap",
+      "source": "rss:THR",
       "sources": [
         {
-          "outlet": "TheWrap",
+          "outlet": "THR",
           "tier": 7,
-          "url": "https://www.thewrap.com/creative-content/tv-shows/jack-quaid-breaks-down-season-3-episode-5-my-adventures-with-superman-exclusive/",
-          "ageMin": 438,
-          "headline": "Jack Quaid Breaks Down That Devastating Fifth Episode of My Adventures With Superman : He s Out of His Depth",
-          "summary": "The \"Boys\" star talks about the climactic Episode 5 and the one scene he wishes he could be a part of The post Jack Quaid Breaks Down That Devastating Fifth Episode of My Adventures With Superman : He s Out of His Depth appeared first on TheWrap ."
+          "url": "https://www.hollywoodreporter.com/tv/tv-news/god-of-war-recast-kratos-ryan-hurst-stunt-injury-1236650848/",
+          "ageMin": 2276,
+          "headline": "God of War to Recast Kratos Role Following Ryan Hurst On-Set Injury",
+          "summary": "Prime Video's original God of War tore a bicep muscle while performing a stunt."
         }
       ],
-      "ageMin": 438,
+      "ageMin": 2276,
       "_cand": {
-        "key": "rss:jack-quaid-breaks-down-that-devastating-fifth-episode-of-my-",
+        "key": "rss:god-of-war-to-recast-kratos-role-following-ryan-hurst-on-set",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -316,31 +250,29 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "TheWrap"
+          "THR"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "TheWrap",
+        "attribution": "THR",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 57,
+      "priority": 63,
       "signals": {
-        "recency": 4,
+        "recency": 1,
         "corroboration": 12,
         "status": 18,
-        "type": 5,
+        "type": 14,
         "pop": 0,
         "breakout": 0,
-        "big": 6,
+        "big": 18,
         "trending": 0,
         "spice": 0,
-        "softTv": 0,
-        "radar": 12
+        "softTv": 0
       },
-      "radarKind": "tv-episode-today",
-      "tierClass": "A"
+      "tierClass": "B"
     },
     {
       "id": "news-colman-domingo-princess-tiana-movie",
@@ -353,13 +285,13 @@
       "eventType": "casting",
       "sensitivity": "normal",
       "eventSlug": "colman-domingo-princess-tiana-movie",
-      "primaryKeyword": "colman domingo princess tiana",
+      "primaryKeyword": "Colman Domingo Princess Tiana movie",
       "primaryEntity": "The Princess and the Frog",
       "entities": [
-        "Princess Tiana",
+        "Princess Tiana (film)",
         "Colman Domingo"
       ],
-      "angle": "Colman Domingo is in talks to write a live-action movie based on Disney's 'The Princess and the Frog'.",
+      "angle": "Colman Domingo is in talks to write a live-action movie centered on Princess Tiana, inspired by Disney's 'The Princess and the Frog'.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
@@ -367,12 +299,12 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/movies/movie-news/colman-domingo-live-action-tiana-princess-and-the-frog-1236651364/",
-          "ageMin": 1681,
+          "ageMin": 1690,
           "headline": "Colman Domingo in Talks to Write Live-Action Princess Tiana Movie Inspired by Princess and the Frog",
           "summary": "No deals have been closed for the take on the 2009 Disney film 'Princess and the Frog.'"
         }
       ],
-      "ageMin": 1681,
+      "ageMin": 1690,
       "_cand": {
         "key": "rss:colman-domingo-in-talks-to-write-live-action-princess-tiana-",
         "popularity": 0,
@@ -409,75 +341,6 @@
       "tierClass": "B"
     },
     {
-      "id": "news-heartstopper-forever-finale-breakdown",
-      "slug": "heartstopper-forever-director-writer-and-stars-joe-locke-and-kit-conno",
-      "title": "‘Heartstopper Forever’ Director, Writer and Stars Joe Locke and Kit Connor on the Finale: “It Connects the Whole Heartstopper Gang”",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "heartstopper-forever-finale-breakdown",
-      "primaryKeyword": "heartstopper finale",
-      "primaryEntity": "Heartstopper",
-      "entities": [
-        "Joe Locke",
-        "Kit Connor",
-        "Alice Oseman"
-      ],
-      "angle": "Stars and creator break down the finale of the popular streaming series, discussing changes from the book and character arcs.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-features/heartstopper-forever-ending-kit-connor-joe-lock-interview-1236647039/",
-          "ageMin": 693,
-          "headline": "‘Heartstopper Forever’ Director, Writer and Stars Joe Locke and Kit Connor on the Finale: “It Connects the Whole Heartstopper Gang”",
-          "summary": "Stars Connor and Locke, creator Alice Oseman and director Wash Westmoreland break down the film’s biggest change from book to screen, alongside the intimacy, break-ups, and ambiguous endings from the final chapter."
-        }
-      ],
-      "ageMin": 693,
-      "_cand": {
-        "key": "rss:-heartstopper-forever-director-writer-and-stars-joe-locke-an",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 55,
-      "signals": {
-        "recency": 4,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 6,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0,
-        "radar": 10
-      },
-      "radarKind": "movie-trending",
-      "tierClass": "A"
-    },
-    {
       "id": "news-taylor-sheridan-call-of-duty-movie",
       "slug": "taylor-sheridan-tapped-for-call-of-duty-movie",
       "title": "Taylor Sheridan Tapped for Call of Duty Movie",
@@ -488,13 +351,13 @@
       "eventType": "announcement",
       "sensitivity": "normal",
       "eventSlug": "taylor-sheridan-call-of-duty-movie",
-      "primaryKeyword": "Taylor Sheridan",
+      "primaryKeyword": "Taylor Sheridan Call of Duty movie",
       "primaryEntity": "Call of Duty (film)",
       "entities": [
         "Taylor Sheridan",
         "Paramount Pictures"
       ],
-      "angle": "Acclaimed writer Taylor Sheridan is set to pen a new film based on the popular Call of Duty: Modern Warfare video game franchise.",
+      "angle": "Acclaimed filmmaker Taylor Sheridan is set to write a movie based on the popular 'Modern Warfare' video game series.",
       "tmdbType": "movie",
       "source": "rss:Variety",
       "sources": [
@@ -502,12 +365,12 @@
           "outlet": "Variety",
           "tier": 7,
           "url": "https://variety.com/2026/film/news/call-of-duty-movie-modern-warfare-games-1236815430/",
-          "ageMin": 576,
+          "ageMin": 585,
           "headline": "Taylor Sheridan s Call of Duty Movie Will Be Set in Modern Warfare Universe",
           "summary": "Paramount Pictures upcoming Call of Duty movie from writer Taylor Sheridan will be based on the Xbox-owned first-person shooter franchise s Modern Warfare games. Plot details about the movie have been kept under wraps since it was first announced in September 2025. But during a Call of Duty in Culture Panel promoting the October release of [ ]"
         }
       ],
-      "ageMin": 576,
+      "ageMin": 585,
       "_cand": {
         "key": "rss:taylor-sheridan-s-call-of-duty-movie-will-be-set-in-modern-w",
         "popularity": 0,
@@ -544,7 +407,7 @@
       "tierClass": "B"
     },
     {
-      "id": "news-danny-boyle-ink-sells-to-netflix",
+      "id": "news-danny-boyle-ink-sells-netflix-venice",
       "slug": "danny-boyle-s-ink-sells-to-netflix-in-first-big-sale-way-ahead-of-veni",
       "title": "Danny Boyle's Ink Sells to Netflix in First Big Sale (Way) Ahead of Venice Premiere",
       "contentType": "news",
@@ -553,15 +416,15 @@
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "danny-boyle-ink-sells-to-netflix",
-      "primaryKeyword": "danny boyle ink netflix",
+      "eventSlug": "danny-boyle-ink-sells-netflix-venice",
+      "primaryKeyword": "Ink",
       "primaryEntity": "Ink (film)",
       "entities": [
         "Danny Boyle",
         "Netflix",
         "Venice Film Festival"
       ],
-      "angle": "Danny Boyle's film 'Ink', set to open the Venice Film Festival, has been acquired by Netflix.",
+      "angle": "Danny Boyle's new film 'Ink' sold to Netflix ahead of its Venice premiere.",
       "tmdbType": "movie",
       "source": "rss:IndieWire",
       "sources": [
@@ -569,12 +432,12 @@
           "outlet": "IndieWire",
           "tier": 7,
           "url": "https://www.indiewire.com/news/breaking-news/danny-boyle-ink-netflix-venice-sale-1235206128/",
-          "ageMin": 1762,
+          "ageMin": 1771,
           "headline": "Danny Boyle s Ink Sells to Netflix in First Big Sale (Way) Ahead of Venice Premiere",
           "summary": "The film about Larry Lamb, Rupert Murdoch, and the birth of The Sun tabloid is the opening night film at the Biennale."
         }
       ],
-      "ageMin": 1762,
+      "ageMin": 1771,
       "_cand": {
         "key": "rss:danny-boyle-s-ink-sells-to-netflix-in-first-big-sale-way-ahe",
         "popularity": 0,
@@ -611,88 +474,24 @@
       "tierClass": "B"
     },
     {
-      "id": "news-star-wars-icons-vader-nonfiction-book-announced",
-      "slug": "star-wars-icons-vader-nonfiction-book-announced-for-october-release",
-      "title": "‘Star Wars Icons: Vader’ Nonfiction Book Announced for October Release",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "star-wars-icons-vader-nonfiction-book-announced",
-      "primaryKeyword": "star wars icons vader book",
-      "primaryEntity": "Star Wars Icons: Vader (book)",
-      "entities": [
-        "Star Wars"
-      ],
-      "angle": "A new nonfiction book focusing on iconic Star Wars characters is set to be released.",
-      "tmdbType": "movie",
-      "source": "gnews:Star Wars News Net",
-      "sources": [
-        {
-          "outlet": "Star Wars News Net",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNWnJJZFk1cmF2SDFjdkdBRTdNNWp0cGtVWFl3d1JIWVEwYUJhdGRxNGl4di1FZ3ZLNEVyRVloellDZVk4T3ZGNEVLVjJ3NGZVTmtqMllmYUl5YmJ6Unlidzh2N1ZiLVRPc19TbnI2bkRRWUtwUzkzQkRiRWl6WEU5QklIcWlXWEdPVDlJdWM2dXAwRmZWQW5hRHdRZGdVUlYyQkNhZVRSWWdyVzN2WUpmMTBFLWt2N0pJRFRBaHJB?oc=5",
-          "ageMin": 787,
-          "headline": "‘Star Wars Icons: Vader’ Nonfiction Book Coming Out In October, Preview Revealed - Star Wars News Net",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMivgFBVV95cUxNWnJJZFk1cmF2SDFjdkdBRTdNNWp0cGtVWFl3d1JIWVEwYUJhdGRxNGl4di1FZ3ZLNEVyRVloellDZVk4T3ZGNEVLVjJ3NGZVTmtqMllmYUl5YmJ6Unlidzh2N1ZiLVRPc19TbnI2bkRRWUtwUzkzQkRiRWl6WEU5QklIcWlXWEdPVDlJdWM2dXAwRmZWQW5hRHdRZGdVUlYyQkNhZVRSWWdyVzN2WUpmMTBFLWt2N0pJRFR"
-        }
-      ],
-      "ageMin": 787,
-      "_cand": {
-        "key": "rss:-star-wars-icons-vader-nonfiction-book-coming-out-in-october",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "Star Wars News Net"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "Star Wars News Net",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 60,
-      "signals": {
-        "recency": 1,
-        "corroboration": 8,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-celeb-red-carpet-photos-july-2026",
-      "slug": "teyana-taylor-celebrates-world-cup-in-nyc-nicole-kidman-takes-in-wimbl",
-      "title": "Teyana Taylor Celebrates World Cup in NYC, Nicole Kidman Takes in Wimbledon and More Celeb Red Carpet Photos: July 2026",
+      "id": "news-teyana-taylor-world-cup-nicole-kidman-wimbledon",
+      "slug": "teyana-taylor-celebrates-world-cup-nicole-kidman-takes-in-wimbledon-in",
+      "title": "Teyana Taylor Celebrates World Cup, Nicole Kidman Takes in Wimbledon in July Celeb Sightings",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
-      "eventType": "other",
+      "eventType": "appearance",
       "sensitivity": "normal",
-      "eventSlug": "celeb-red-carpet-photos-july-2026",
-      "primaryKeyword": "celebrity red carpet",
+      "eventSlug": "teyana-taylor-world-cup-nicole-kidman-wimbledon",
+      "primaryKeyword": "celebrity red carpet photos",
       "primaryEntity": "Teyana Taylor",
       "entities": [
         "Nicole Kidman",
-        "Taylor Swift"
+        "Wimbledon",
+        "The Odyssey"
       ],
-      "angle": "A roundup of celebrity appearances and red carpet photos from various events in July 2026.",
+      "angle": "A roundup of celebrity appearances including Teyana Taylor at the World Cup and Nicole Kidman at Wimbledon.",
       "tmdbType": "movie",
       "source": "rss:Variety Music",
       "sources": [
@@ -700,33 +499,24 @@
           "outlet": "Variety Music",
           "tier": 7,
           "url": "https://variety.com/gallery/celebrity-pics-red-carpet-photos-july-2026/",
-          "ageMin": 753,
+          "ageMin": 762,
           "headline": "Teyana Taylor Celebrates World Cup in NYC, Nicole Kidman Takes in Wimbledon and More Celeb Red Carpet Photos: July 2026",
           "summary": "July started off strong. Following Taylor Swift s star-studded wedding extravaganza in New York City, the cast of The Odyssey dazzled at the film s premieres in London and Paris. First reactions are only upping the excitement, with audiences movie-goers eagerly awaiting the film to hit theaters. On July 7, Dwayne Johnson launched his live-action adaptation of [ ]"
-        },
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1YX1dNZlRSOTFmMDhfXzBnYXVRb2p4X3hiN3JzWm02MHNKYWp1Z0ZQOGlSQjcxZ0I5X0RmWEotd2dBYnNEZ2NtVVlUWV9oUnVwZmFrblZLUFd4dkhVTGNXbUdUbkpDQ2Y3YzNmQnNwNjE5ZFl6bHVuMVFESQ?oc=5",
-          "ageMin": 753,
-          "headline": "Teyana Taylor, Nicole Kidman and More Celeb Red Carpet Photos: July 2026 - Variety",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMie0FVX3lxTE1YX1dNZlRSOTFmMDhfXzBnYXVRb2p4X3hiN3JzWm02MHNKYWp1Z0ZQOGlSQjcxZ0I5X0RmWEotd2dBYnNEZ2NtVVlUWV9oUnVwZmFrblZLUFd4dkhVTGNXbUdUbkpDQ2Y3YzNmQnNwNjE5ZFl6bHVuMVFESQ?oc=5\" target=\"_blank\" Teyana Taylor, Nicole Kidman and More Celeb Red Carpet Photos:"
         }
       ],
-      "ageMin": 753,
+      "ageMin": 762,
       "_cand": {
         "key": "rss:teyana-taylor-celebrates-world-cup-in-nyc-nicole-kidman-take",
         "popularity": 0,
         "kind": "rss-news"
       },
-      "corroborationCount": 2,
+      "corroborationCount": 1,
       "verification": {
-        "tier1Count": 2,
+        "tier1Count": 1,
         "tier1Owners": 1,
-        "outletCount": 2,
+        "outletCount": 1,
         "outlets": [
-          "Variety Music",
-          "Variety"
+          "Variety Music"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
@@ -735,33 +525,35 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 50,
+      "priority": 67,
       "signals": {
         "recency": 1,
-        "corroboration": 18,
+        "corroboration": 12,
         "status": 18,
-        "type": 5,
+        "type": 6,
         "pop": 0,
         "breakout": 0,
         "big": 0,
-        "trending": 8,
+        "trending": 0,
         "spice": 0,
-        "softTv": 0
+        "softTv": 0,
+        "radar": 30
       },
-      "tierClass": "C"
+      "radarKind": "movie-in-theaters",
+      "tierClass": "A"
     },
     {
       "id": "news-abby-elliott-bill-kennedy-split",
-      "slug": "the-bear-s-abby-elliott-among-stars-reportedly-splitting-in-2026",
-      "title": "The Bear's Abby Elliott Among Stars Reportedly Splitting in 2026",
+      "slug": "celebrity-splits-of-2026-the-bear-s-abby-elliott-bill-kennedy-and-more",
+      "title": "Celebrity Splits of 2026: The Bear’s Abby Elliott, Bill Kennedy and More Stars Who Called It Quits",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
-      "eventType": "divorce",
+      "eventType": "breakup",
       "sensitivity": "normal",
       "eventSlug": "abby-elliott-bill-kennedy-split",
-      "primaryKeyword": "abby elliott",
+      "primaryKeyword": "abby elliott breakup",
       "primaryEntity": "Abby Elliott",
       "entities": [
         "Bill Kennedy"
@@ -774,12 +566,12 @@
           "outlet": "Us Weekly",
           "tier": 5,
           "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPeEg1REU2QkVnLTVmUERlckVvNWVHNjhnUmFjelBnbkdsalR5STVvQ29mM3dkcmVKRUxpQmItREREQ2sycm04REx6SjhrS1ktZHNYRXh0cTIwazVSWmduVzg0a3lhV0FHZVBrTjFXQnFUbkNTV09qUEhxU0pJamE0ZmppTFNsbkV6TmxITDg1Yk1qd25TZmMxTlFzM2FSMXFRUUtfSV9tY1JzSl9RNUZ5Ti1OZ0c?oc=5",
-          "ageMin": 166,
+          "ageMin": 175,
           "headline": "Celebrity Splits of 2026: The Bear’s Abby Elliott, Bill Kennedy and More Stars Who Called It Quits - Us Weekly",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxPeEg1REU2QkVnLTVmUERlckVvNWVHNjhnUmFjelBnbkdsalR5STVvQ29mM3dkcmVKRUxpQmItREREQ2sycm04REx6SjhrS1ktZHNYRXh0cTIwazVSWmduVzg0a3lhV0FHZVBrTjFXQnFUbkNTV09qUEhxU0pJamE0ZmppTFNsbkV6TmxITDg1Yk1qd25TZmMxTlFzM2FSMXFRUUtfSV9tY1JzSl9RNUZ5Ti1OZ0c?oc=5\" t"
         }
       ],
-      "ageMin": 166,
+      "ageMin": 175,
       "_cand": {
         "key": "rss:celebrity-splits-of-2026-the-bear-s-abby-elliott-bill-kenned",
         "popularity": 0,
@@ -813,7 +605,7 @@
         "spice": 0,
         "softTv": 0
       },
-      "tierClass": "S"
+      "tierClass": "C"
     }
   ]
 }
