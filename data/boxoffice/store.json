@@ -1170,9 +1170,9 @@
    "key": "lucky-trending-tv|TRENDING-TV",
    "eventSlug": "lucky-trending-tv",
    "form": "TRENDING-TV",
-   "reason": "words 156 < 180 (owner-set ~200-word minimum) | soft-floor engagement 2 < 5 | soft-floor humanVoice 2 < 5",
-   "tries": 1,
-   "at": "2026-07-19T05:58:13.597Z"
+   "reason": "words 126 < 180 (owner-set ~200-word minimum) | soft-floor engagement 2 < 5 | soft-floor humanVoice 2 < 5",
+   "tries": 2,
+   "at": "2026-07-19T22:03:29.909Z"
   },
   {
    "key": "silo-trending-tv|TRENDING-TV",
@@ -1301,20 +1301,20 @@
    "eventSlug": "gail-daughtry-and-the-celebrity-sex-pass-bo-update-d8",
    "form": "BO-UPDATE",
    "reason": "consistency: title: \"$1.2\" is not a canonical figure for this film | metaTitle: \"$1M\" is not a canonical figure for this film | title: \"$1.2\" contradicts the canonical domestic figure ($1,242,603)",
-   "tries": 27,
-   "at": "2026-07-19T21:34:20.691Z",
+   "tries": 28,
+   "at": "2026-07-19T22:05:18.735Z",
    "dead": true,
-   "expiresAt": "2026-07-22T21:34:20.691Z"
+   "expiresAt": "2026-07-22T22:05:18.735Z"
   },
   {
    "key": "star-wars-the-mandalorian-and-grogu-bo-update-d57|BO-UPDATE",
    "eventSlug": "star-wars-the-mandalorian-and-grogu-bo-update-d57",
    "form": "BO-UPDATE",
-   "reason": "words 165 < 180 (owner-set ~200-word minimum)",
-   "tries": 27,
-   "at": "2026-07-19T21:36:08.720Z",
+   "reason": "consistency: title: \"$177.5\" is not a canonical figure for this film | title: \"$177.5\" contradicts the canonical domestic figure ($177,455,904) | metaTitle: headlines domestic while the title headlines dailyGross/other — the SERP promise must match the page",
+   "tries": 28,
+   "at": "2026-07-19T22:07:24.951Z",
    "dead": true,
-   "expiresAt": "2026-07-22T21:36:08.720Z"
+   "expiresAt": "2026-07-22T22:07:24.951Z"
   },
   {
    "key": "the-super-mario-galaxy-movie-ev-milestone-d0|BO-MILESTONE",
@@ -1383,14 +1383,14 @@
    "at": "2026-07-19T21:38:31.811Z"
   }
  ],
- "zeroStreak": 10,
+ "zeroStreak": 11,
  "daySpend": {
   "laDay": "2026-07-19",
-  "usd": 0.81097
+  "usd": 0.83511
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1784496737828
+  "lastMs": 1784498447346
  },
  "lastAuditDay": "2026-07-19",
  "attempts": {
@@ -1419,7 +1419,8 @@
    "outcome": 3,
    "silo": 1,
    "house of the dragon": 1,
-   "ride or die": 1
+   "ride or die": 1,
+   "lucky": 1
   }
  }
 }
