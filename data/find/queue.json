@@ -1,25 +1,92 @@
 {
-  "runId": "run-2026-07-19T19-00-55",
-  "builtAt": "2026-07-19T19:02:16.349Z",
-  "count": 8,
+  "runId": "run-2026-07-19T19-30-48",
+  "builtAt": "2026-07-19T19:31:30.240Z",
+  "count": 7,
   "topics": [
     {
-      "id": "news-john-leguizamo-the-odyssey-role",
-      "slug": "john-leguizamo-on-the-odyssey-it-was-so-intense-for-me",
-      "title": "John Leguizamo on 'The Odyssey': 'It Was So Intense for Me'",
+      "id": "news-anne-hathaway-princess-diaries-3-script-breakthrough",
+      "slug": "anne-hathaway-says-princess-diaries-3-had-a-story-breakthrough-after-h",
+      "title": "Anne Hathaway Says Princess Diaries 3 Had a Story Breakthrough After Having to Start Over With the Script: We are Moving in the Right Direction",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "anne-hathaway-princess-diaries-3-script-breakthrough",
+      "primaryKeyword": "Princess Diaries 3",
+      "primaryEntity": "Princess Diaries 3",
+      "entities": [
+        "One Day",
+        "Anne Hathaway"
+      ],
+      "angle": "Anne Hathaway shared an update on 'Princess Diaries 3,' stating that the script has had a breakthrough after a previous version was scrapped.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/film/news/anne-hathaway-princess-diaries-3-breakthrough-script-1236816029/",
+          "ageMin": 5,
+          "headline": "Anne Hathaway Says Princess Diaries 3 Had a Story Breakthrough After Having to Start Over With the Script: We are Moving in the Right Direction",
+          "summary": "“Princess Diaries 3” recently had a breakthrough after a scrapped script, Anne Hathaway revealed during an appearance on SiriusXM’s “Radio Andy.” “I’m busy making baby number three, and that has sort of taken the place of knowing when exactly I can make Princess Diaries 3, ” Hathaway said. “I can say I think we had a story [ ]"
+        }
+      ],
+      "ageMin": 5,
+      "_cand": {
+        "key": "rss:anne-hathaway-says-princess-diaries-3-had-a-story-breakthrou",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 93,
+      "signals": {
+        "recency": 30,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-john-leguizamo-the-odyssey-interview",
+      "slug": "john-leguizamo-has-never-been-as-vulnerable-as-in-the-odyssey-it-was-s",
+      "title": "John Leguizamo Has Never Been as Vulnerable as in The Odyssey : “It Was So Intense for Me”",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "john-leguizamo-the-odyssey-role",
-      "primaryKeyword": "john leguizamo the odyssey",
+      "eventSlug": "john-leguizamo-the-odyssey-interview",
+      "primaryKeyword": "John Leguizamo",
       "primaryEntity": "John Leguizamo",
       "entities": [
-        "The Odyssey"
+        "The Odyssey",
+        "Christopher Nolan"
       ],
-      "angle": "John Leguizamo opens up about the emotional intensity of his role in Christopher Nolan's 'The Odyssey'.",
+      "angle": "John Leguizamo discusses the emotional intensity of his role in Christopher Nolan's 'The Odyssey'.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
@@ -27,12 +94,12 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/movies/movie-features/john-leguizamo-the-odyssey-eumaeus-chris-nolan-interview-1236651694/",
-          "ageMin": 83,
+          "ageMin": 113,
           "headline": "John Leguizamo Has Never Been as Vulnerable as in The Odyssey : “It Was So Intense for Me”",
           "summary": "\"Working with Chris Nolan...you feel really seen,\" the actor behind Eumaeus tells The Hollywood Reporter in a wide-ranging conversation. \"I was able to tap into these really difficult, painful emotions from the depth of my soul.\""
         }
       ],
-      "ageMin": 83,
+      "ageMin": 113,
       "_cand": {
         "key": "rss:john-leguizamo-has-never-been-as-vulnerable-as-in-the-odysse",
         "popularity": 0,
@@ -71,24 +138,24 @@
       "tierClass": "A"
     },
     {
-      "id": "news-rick-devens-man-of-tomorrow-cameo-cancellation",
-      "slug": "james-gunn-gave-big-brother-star-rick-devens-a-cameo-in-man-of-tomorro",
-      "title": "James Gunn Gave 'Big Brother' Star Rick Devens a Cameo in 'Man of Tomorrow' but He 'Had to Cancel'",
+      "id": "news-james-gunn-rick-devens-man-of-tomorrow-cameo",
+      "slug": "james-gunn-s-man-of-tomorrow-cameo-for-big-brother-star-rick-devens-ca",
+      "title": "James Gunn's 'Man of Tomorrow' Cameo for 'Big Brother' Star Rick Devens Canceled",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "rick-devens-man-of-tomorrow-cameo-cancellation",
-      "primaryKeyword": "rick devens james gunn cameo",
-      "primaryEntity": "Rick Devens",
+      "eventSlug": "james-gunn-rick-devens-man-of-tomorrow-cameo",
+      "primaryKeyword": "james gunn cameo",
+      "primaryEntity": "James Gunn's PG Porn",
       "entities": [
-        "James Gunn's PG Porn",
         "James Gunn",
+        "Rick Devens",
         "Man of Tomorrow"
       ],
-      "angle": "Reality star Rick Devens' planned cameo in James Gunn's 'Man of Tomorrow' was canceled due to filming conflicts.",
+      "angle": "James Gunn reveals a planned cameo for reality star Rick Devens in 'Man of Tomorrow' that ultimately fell through.",
       "tmdbType": "movie",
       "source": "rss:Variety",
       "sources": [
@@ -96,12 +163,12 @@
           "outlet": "Variety",
           "tier": 7,
           "url": "https://variety.com/2026/film/news/james-gunn-big-brother-rick-devens-man-of-tomorrow-cameo-1236815991/",
-          "ageMin": 111,
+          "ageMin": 141,
           "headline": "James Gunn Gave ‘Big Brother 28’ Star Rick Devens a Cameo in ‘Man of Tomorrow’ but He ‘Had to Cancel’",
           "summary": "Rick Devens was supposed to have a cameo in James Gunn s “Man of Tomorrow,” but the reality star had filming obligations with Big Brother. Gunn revealed the cameo after Devens gave the DC Studios co-head a shoutout during the live broadcast of “Big Brother” Season 28’s Thursday eviction episode. Gunn shared the clip on social [ ]"
         }
       ],
-      "ageMin": 111,
+      "ageMin": 141,
       "_cand": {
         "key": "rss:james-gunn-gave-big-brother-28-star-rick-devens-a-cameo-in-m",
         "popularity": 0,
@@ -138,23 +205,24 @@
       "tierClass": "B"
     },
     {
-      "id": "news-god-of-war-prime-video-recast-kratos-ryan-hurst-injury",
-      "slug": "ryan-hurst-injured-kratos-role-to-be-recast-in-prime-video-s-god-of-wa",
-      "title": "Ryan Hurst Injured, Kratos Role to Be Recast in Prime Video's 'God of War'",
+      "id": "news-god-of-war-kratos-recast-ryan-hurst-injury",
+      "slug": "god-of-war-to-recast-kratos-role-following-ryan-hurst-on-set-injury",
+      "title": "God of War to Recast Kratos Role Following Ryan Hurst On-Set Injury",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "god-of-war-prime-video-recast-kratos-ryan-hurst-injury",
-      "primaryKeyword": "god of war prime video kratos recast",
+      "eventSlug": "god-of-war-kratos-recast-ryan-hurst-injury",
+      "primaryKeyword": "god of war kratos recast",
       "primaryEntity": "God of War",
       "entities": [
         "God of War (TV series)",
-        "Ryan Hurst"
+        "Ryan Hurst",
+        "Prime Video"
       ],
-      "angle": "The role of Kratos in Prime Video's 'God of War' series will be recast due to an on-set injury to Ryan Hurst.",
+      "angle": "The role of Kratos in Prime Video's 'God of War' series will be recast due to an on-set injury to actor Ryan Hurst.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
@@ -162,12 +230,12 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/tv/tv-news/god-of-war-recast-kratos-ryan-hurst-stunt-injury-1236650848/",
-          "ageMin": 3165,
+          "ageMin": 3195,
           "headline": "God of War to Recast Kratos Role Following Ryan Hurst On-Set Injury",
           "summary": "Prime Video's original God of War tore a bicep muscle while performing a stunt."
         }
       ],
-      "ageMin": 3165,
+      "ageMin": 3195,
       "_cand": {
         "key": "rss:god-of-war-to-recast-kratos-role-following-ryan-hurst-on-set",
         "popularity": 0,
@@ -204,75 +272,78 @@
       "tierClass": "B"
     },
     {
-      "id": "news-god-of-war-prime-video-new-lead-after-injury",
-      "slug": "god-of-war-prime-video-series-to-cast-new-lead-after-on-set-injury",
-      "title": "God of War: Prime Video Series to Cast New Lead After On Set Injury",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
+      "id": "music-news-world-cup-halftime-show-livestream",
+      "slug": "how-to-livestream-the-world-cup-halftime-show-with-bts-bieber-madonna-",
+      "title": "How to Livestream the World Cup Halftime Show With BTS, Bieber, Madonna and Shakira",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
       "subcategory": "news",
-      "eventType": "casting",
+      "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "god-of-war-prime-video-new-lead-after-injury",
-      "primaryKeyword": "god of war series casting",
-      "primaryEntity": "God of War",
+      "tier": "popular",
+      "eventSlug": "world-cup-halftime-show-livestream",
+      "primaryKeyword": "World Cup Halftime Show",
+      "primaryEntity": "2026 FIFA World Cup Final",
       "entities": [
-        "God of War (TV series)",
-        "Prime Video"
+        "BTS: THE RETURN",
+        "BTS",
+        "Justin Bieber",
+        "Madonna"
       ],
-      "angle": "The 'God of War' series on Prime Video is reportedly seeking a new lead actor following an on-set injury to the original actor.",
+      "angle": "Details on how to livestream the star-studded halftime show at the 2026 FIFA World Cup Final, featuring BTS, Justin Bieber, and others.",
       "tmdbType": "movie",
-      "source": "gnews:TV Series Finale",
+      "source": "rss:THR",
       "sources": [
         {
-          "outlet": "TV Series Finale",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQaVJubzMwODJjX3M1NTJRZG5kUXQ2WGoyVGpNbk05cnlib0ZOcEhqdmJJYzZMVHNTSm1qOUpodWt0cm01NnhBbmxmYk5KNlpFcHl3MXpnaWRFa1gwUnlzLUdxdVV0OUxKMTlqSHVzR0hyYnJ3WmhjRzYzX2FEelFvaU5jVnN0Y0c4MC04aHBMNXpUeFVyWDNWeWNGNDBuRzh1SFVxLUFIMk51d9IBqgFBVV95cUxQaVJubzMwODJjX3M1NTJRZG5kUXQ2WGoyVGpNbk05cnlib0ZOcEhqdmJJYzZMVHNTSm1qOUpodWt0cm01NnhBbmxmYk5KNlpFcHl3MXpnaWRFa1gwUnlzLUdxdVV0OUxKMTlqSHVzR0hyYnJ3WmhjRzYzX2FEelFvaU5jVnN0Y0c4MC04aHBMNXpUeFVyWDNWeWNGNDBuRzh1SFVxLUFIMk51dw?oc=5",
-          "ageMin": 262,
-          "headline": "God of War: Prime Video Series to Cast New Lead After On Set Injury - TV Series Finale",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxQaVJubzMwODJjX3M1NTJRZG5kUXQ2WGoyVGpNbk05cnlib0ZOcEhqdmJJYzZMVHNTSm1qOUpodWt0cm01NnhBbmxmYk5KNlpFcHl3MXpnaWRFa1gwUnlzLUdxdVV0OUxKMTlqSHVzR0hyYnJ3WmhjRzYzX2FEelFvaU5jVnN0Y0c4MC04aHBMNXpUeFVyWDNWeWNGNDBuRzh1SFVxLUFIMk51d9IBqgFBVV95cUxQaVJubzM"
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/tv/tv-news/watch-world-cup-halftime-show-2026-live-stream-free-online-1236651717/",
+          "ageMin": 25,
+          "headline": "How to Livestream the World Cup Halftime Show With BTS, Bieber, Madonna and Shakira",
+          "summary": "Coldplay, Burna Boy, Gustavo Dudamel and characters from 'Sesame Street' and 'The Muppets' are also set to join the star-studded performance, marking the first halftime show in FIFA history."
         }
       ],
-      "ageMin": 262,
+      "ageMin": 25,
       "_cand": {
-        "key": "rss:god-of-war-prime-video-series-to-cast-new-lead-after-on-set-",
+        "key": "rss:how-to-livestream-the-world-cup-halftime-show-with-bts-biebe",
         "popularity": 0,
-        "kind": "gnews"
+        "kind": "rss-news"
       },
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
+        "tier1Count": 1,
+        "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "TV Series Finale"
+          "THR"
         ],
-        "maxTier": 5,
+        "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "TV Series Finale",
+        "attribution": "THR",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 67,
+      "priority": 59,
       "signals": {
-        "recency": 9,
-        "corroboration": 8,
+        "recency": 24,
+        "corroboration": 12,
         "status": 18,
-        "type": 14,
+        "type": 5,
         "pop": 0,
         "breakout": 0,
-        "big": 18,
+        "big": 0,
         "trending": 0,
         "spice": 0,
         "softTv": 0
       },
-      "tierClass": "B"
+      "tierClass": "C"
     },
     {
       "id": "news-danny-boyle-ink-sells-netflix-venice",
-      "slug": "danny-boyle-s-ink-sells-to-netflix-in-first-big-sale-ahead-of-venice-p",
-      "title": "Danny Boyle's Ink Sells to Netflix in First Big Sale Ahead of Venice Premiere",
+      "slug": "danny-boyle-s-ink-sells-to-netflix-in-first-big-sale-way-ahead-of-veni",
+      "title": "Danny Boyle's Ink Sells to Netflix in First Big Sale (Way) Ahead of Venice Premiere",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
@@ -280,7 +351,7 @@
       "eventType": "announcement",
       "sensitivity": "normal",
       "eventSlug": "danny-boyle-ink-sells-netflix-venice",
-      "primaryKeyword": "danny boyle ink",
+      "primaryKeyword": "Ink movie",
       "primaryEntity": "Ink (2024 film)",
       "entities": [
         "Danny Boyle",
@@ -295,12 +366,12 @@
           "outlet": "IndieWire",
           "tier": 7,
           "url": "https://www.indiewire.com/news/breaking-news/danny-boyle-ink-netflix-venice-sale-1235206128/",
-          "ageMin": 2660,
+          "ageMin": 2690,
           "headline": "Danny Boyle s Ink Sells to Netflix in First Big Sale (Way) Ahead of Venice Premiere",
           "summary": "The film about Larry Lamb, Rupert Murdoch, and the birth of The Sun tabloid is the opening night film at the Biennale."
         }
       ],
-      "ageMin": 2660,
+      "ageMin": 2690,
       "_cand": {
         "key": "rss:danny-boyle-s-ink-sells-to-netflix-in-first-big-sale-way-ahe",
         "popularity": 0,
@@ -337,41 +408,39 @@
       "tierClass": "B"
     },
     {
-      "id": "news-call-of-duty-movie-taylor-sheridan-peter-berg",
-      "slug": "call-of-duty-movie-from-taylor-sheridan-and-peter-berg-will-be-set-in-",
-      "title": "‘Call of Duty’ Movie From Taylor Sheridan and Peter Berg Will Be Set in ‘Modern Warfare’ Universe",
+      "id": "news-tom-cruise-world-cup-final-appearance",
+      "slug": "tom-cruise-makes-appearance-at-world-cup-final-to-celebrate-a-tourname",
+      "title": "Tom Cruise Makes Appearance At World Cup Final To Celebrate A Tournament That Brought The World Together : This Is Unity This Is Greatness",
       "contentType": "news",
       "formatTag": "news",
-      "category": "movies",
+      "category": "celebrity",
       "subcategory": "news",
-      "eventType": "announcement",
+      "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "call-of-duty-movie-taylor-sheridan-peter-berg",
-      "primaryKeyword": "Call of Duty movie",
-      "primaryEntity": "Call of Duty (video game)",
+      "eventSlug": "tom-cruise-world-cup-final-appearance",
+      "primaryKeyword": "Tom Cruise World Cup",
+      "primaryEntity": "Tom Cruise",
       "entities": [
-        "Taylor Sheridan",
-        "Peter Berg",
-        "Modern Warfare"
+        "2026 FIFA World Cup Final"
       ],
-      "angle": "A 'Call of Duty' movie is in the works from Taylor Sheridan and Peter Berg, set in the 'Modern Warfare' universe.",
+      "angle": "Tom Cruise made a guest appearance at the 2026 FIFA World Cup Final, celebrating the tournament's theme of unity.",
       "tmdbType": "movie",
-      "source": "gnews:The Hollywood Reporter",
+      "source": "rss:Deadline",
       "sources": [
         {
-          "outlet": "The Hollywood Reporter",
+          "outlet": "Deadline",
           "tier": 7,
-          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQVmxBMzBza3I4Q0JMTW9PWGVXcURHQWhaSjBzZ0RjLXVSN3NsSVRkNGtLQUlsTDRneGdhZVdpTW53elZxaVhYMGYyNXhibVZ4S1hYSjhtSDBfRzhmY1Z5OFVIR3RBODk0NHZrd1lhdUY1czl1bWdJQUxtWFZHd3lHTjEyT1Zra29ndDdibzRna2t2T2JYck1ST1JUenpjazhuZ2x6cGVibF9qOVlBUXJsZk9MUQ?oc=5",
-          "ageMin": 1387,
-          "headline": "‘Call of Duty’ Movie From Taylor Sheridan and Peter Berg Will Be Set in ‘Modern Warfare’ Universe - The Hollywood Reporter",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiswFBVV95cUxQVmxBMzBza3I4Q0JMTW9PWGVXcURHQWhaSjBzZ0RjLXVSN3NsSVRkNGtLQUlsTDRneGdhZVdpTW53elZxaVhYMGYyNXhibVZ4S1hYSjhtSDBfRzhmY1Z5OFVIR3RBODk0NHZrd1lhdUY1czl1bWdJQUxtWFZHd3lHTjEyT1Zra29ndDdibzRna2t2T2JYck1ST1JUenpjazhuZ2x6cGVibF9qOVlBUXJsZk9MUQ?oc=5\" ta"
+          "url": "https://deadline.com/2026/07/tom-cruise-world-cup-final-celebrate-tournament-football-1236997840/",
+          "ageMin": 9,
+          "headline": "Tom Cruise Makes Appearance At World Cup Final To Celebrate A Tournament That Brought The World Together : This Is Unity This Is Greatness",
+          "summary": "Tom Cruise made a guest appearance during the pre-show for the 2026 FIFA World Cup final. Ahead of the matchup between Spain and Argentina to find out who becomes the soccer champion, the Digger star took the stage to deliver some encouraging words. More than 30 days ago, 48 nations began a journey, Cruise said. [ ]"
         }
       ],
-      "ageMin": 1387,
+      "ageMin": 9,
       "_cand": {
-        "key": "rss:-call-of-duty-movie-from-taylor-sheridan-and-peter-berg-will",
+        "key": "rss:tom-cruise-makes-appearance-at-world-cup-final-to-celebrate-",
         "popularity": 0,
-        "kind": "gnews"
+        "kind": "rss-news"
       },
       "corroborationCount": 1,
       "verification": {
@@ -379,152 +448,19 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "The Hollywood Reporter"
+          "Deadline"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "The Hollywood Reporter",
+        "attribution": "Deadline",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 64,
+      "priority": 65,
       "signals": {
-        "recency": 1,
+        "recency": 30,
         "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-damson-idris-f1-movie-sequel-conversations",
-      "slug": "damson-idris-teases-f1-the-movie-sequel-possibility",
-      "title": "Damson Idris Teases 'F1 The Movie' Sequel Possibility",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "damson-idris-f1-movie-sequel-conversations",
-      "primaryKeyword": "F1 The Movie sequel",
-      "primaryEntity": "F1",
-      "entities": [
-        "F1 The Movie",
-        "Damson Idris"
-      ],
-      "angle": "Damson Idris hints at potential sequel for 'F1 The Movie' after 'exciting conversations'.",
-      "tmdbType": "movie",
-      "source": "gnews:Motorsport.com",
-      "sources": [
-        {
-          "outlet": "Motorsport.com",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNQWNTV1Y3U012dGxkZXZVdWpBOVdRUVBoeVlsT3JvQVVwOE1zNGtyNnc0aFR1dWZTR1ZTQ0R4LTh5cTByN0x1WFpZU1FibWdvcTh1MG9VTWdmNUh1ajF2ckhoV0YyRWtWLVJpaE90NDVLbS1iMVctVVZ5cmZwYjZYYkd6NEtXLTdvUFhWYnRETzdXbXRGOWVXTEZDdmh2ZzZlaVV2WA?oc=5",
-          "ageMin": 1357,
-          "headline": "Damson Idris teases \"exciting conversations\" over \"F1 The Movie\" sequel - Motorsport.com",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxNQWNTV1Y3U012dGxkZXZVdWpBOVdRUVBoeVlsT3JvQVVwOE1zNGtyNnc0aFR1dWZTR1ZTQ0R4LTh5cTByN0x1WFpZU1FibWdvcTh1MG9VTWdmNUh1ajF2ckhoV0YyRWtWLVJpaE90NDVLbS1iMVctVVZ5cmZwYjZYYkd6NEtXLTdvUFhWYnRETzdXbXRGOWVXTEZDdmh2ZzZlaVV2WA?oc=5\" target=\"_blank\" Damson"
-        }
-      ],
-      "ageMin": 1357,
-      "_cand": {
-        "key": "rss:damson-idris-teases-exciting-conversations-over-f1-the-movie",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "Motorsport.com"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "Motorsport.com",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 60,
-      "signals": {
-        "recency": 1,
-        "corroboration": 8,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-celebrities-at-fifa-world-cup-final-2026",
-      "slug": "brad-pitt-tom-cruise-david-beckham-lead-star-studded-celebrity-sightin",
-      "title": "Brad Pitt, Tom Cruise, David Beckham Lead Star-Studded Celebrity Sightings at 2026 FIFA World Cup",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "celebrities-at-fifa-world-cup-final-2026",
-      "primaryKeyword": "celebrities at World Cup",
-      "primaryEntity": "FIFA World Cup Final 2026",
-      "entities": [
-        "Brad Pitt",
-        "Tom Cruise",
-        "David Beckham"
-      ],
-      "angle": "Hollywood A-listers spotted at the global sporting event.",
-      "tmdbType": "movie",
-      "source": "gnews:Fox News",
-      "sources": [
-        {
-          "outlet": "Fox News",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPU0RHMnBGNjl6c25xN3R1SUk4bDFhTjIyanpaS0ZlWkhkYXpKZGlGQ0VkTTl5eEtGTDh5T3RBcUZmckdfYlpKZDdiSEVvM1d0WVdIZGZKTWZGc0ZTLTgySmp4bUJEeXhraHVYN3JkOThfR1dVcE5CaGEtczFybUhhdUwzaVVpb2hTRmJnTEdxT1djQjN4U3kybGhqT2I2akhNVkVpUmJLUVptb1FocUVJUmJuWG5xRGMwS0h5SkpMZ3ZYUHE1Vm14ZHp30gHPAUFVX3lxTE91ZHpwWnlqTldWOF9RcUp1UnFkck5GbnhUQm5ZWFhJOTBCOUpyMmRUUmJJMGhrd2NqZG9nZ0hrQ280R1lGb3htTndnUFlDcEZfXzdtSDh0OEpsYVVjNGZMWGxNRVU4TW9PVTJhU0o3MVdyRVdic1hFNnRtMUJRMXQ4SHJPajhpSWU0SEJmcGQ2OWQzTWh0TlVBd0hJam1zOVkyQXdtWTBicVByZUhvZGNrUzhOTjI2Y3I0dFpsVUIwYVBTOW1mZkE5UC01Nm1fRQ?oc=5",
-          "ageMin": 60,
-          "headline": "Brad Pitt, Tom Cruise, David Beckham lead star-studded celebrity sightings at 2026 FIFA World Cup - Fox News",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiygFBVV95cUxPU0RHMnBGNjl6c25xN3R1SUk4bDFhTjIyanpaS0ZlWkhkYXpKZGlGQ0VkTTl5eEtGTDh5T3RBcUZmckdfYlpKZDdiSEVvM1d0WVdIZGZKTWZGc0ZTLTgySmp4bUJEeXhraHVYN3JkOThfR1dVcE5CaGEtczFybUhhdUwzaVVpb2hTRmJnTEdxT1djQjN4U3kybGhqT2I2akhNVkVpUmJLUVptb1FocUVJUmJuWG5xRGMwS0h"
-        }
-      ],
-      "ageMin": 60,
-      "_cand": {
-        "key": "rss:brad-pitt-tom-cruise-david-beckham-lead-star-studded-celebri",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "Fox News"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "Fox News",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 55,
-      "signals": {
-        "recency": 24,
-        "corroboration": 8,
         "status": 18,
         "type": 5,
         "pop": 0,
@@ -534,7 +470,7 @@
         "spice": 0,
         "softTv": 0
       },
-      "tierClass": "C"
+      "tierClass": "B"
     }
   ]
 }
