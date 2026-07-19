@@ -27,6 +27,20 @@ For EACH numbered headline decide:
 - kind: one of opening | weekend | milestone | record | streaming-arrival | viewership | other.
 Output STRICT JSON only: {"items":[{"i":1,"relevant":true,"filmTitle":"","kind":"weekend"}]}`;
 
+// NOT-A-FILM-TITLE GUARD (2026-07-18 audit): the categorizer lifted DESCRIPTIVE PHRASES out of listicle
+// headlines and passed them off as films — "The Best 4-Part Sci-Fi Book Adaptation of the Last 15 Years",
+// "A Perfect Zombie Movie" — and the pipeline then spent 4 paid attempts trying to report box office for
+// titles that do not exist. Real film titles are short and are not superlative descriptions. Deterministic
+// and free, so no garbage title ever reaches a paid stage.
+const NOT_A_TITLE = /^(the|a|an|this|these|that) (best|worst|greatest|most|perfect|scariest|funniest|coolest|underrated|forgotten|hidden)\b|\b(of (all time|the (last|past) \d+ years?|the decade|the year))\b|\b(you (should|need to|must|can)|to watch|ever made|right now|streaming now|on netflix this)\b|\b(movies?|films?|shows?|series) (like|you|to|that)\b/i;
+export function isPlausibleFilmTitle(t) {
+  const s = String(t || "").trim();
+  if (!s || s.length < 2 || s.length > 70) return false;
+  if (s.split(/\s+/).length > 9) return false;      // real titles are rarely >9 words
+  if (NOT_A_TITLE.test(s)) return false;
+  return true;
+}
+
 const slugify = (s) => String(s || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 60);
 // Deterministic event slug — film + kind (never trust a model-written slug).
 export const eventSlugFor = (filmTitle, kind) => `${slugify(filmTitle) || "roundup"}-ev-${kind}`;
@@ -44,7 +58,8 @@ export async function categorize(items, { chatImpl = null, cap = 24 } = {}) {
     batch.forEach((it, n) => {
       const r = rows.find((x) => Number(x?.i) === n + 1) || {};
       const kind = KINDS.includes(r.kind) ? r.kind : "other";
-      out.push({ ...it, relevant: !!r.relevant && !!String(r.filmTitle || "").trim(), filmTitle: String(r.filmTitle || "").trim(), kind });
+      const filmTitle = String(r.filmTitle || "").trim();
+      out.push({ ...it, relevant: !!r.relevant && !!filmTitle && isPlausibleFilmTitle(filmTitle), filmTitle, kind });
     });
   }
   return out;
