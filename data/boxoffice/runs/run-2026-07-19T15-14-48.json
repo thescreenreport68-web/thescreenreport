@@ -1,0 +1,215 @@
+{
+ "runId": "run-2026-07-19T15-14-48",
+ "mode": "live",
+ "startedAt": "2026-07-19T15:14:48.219Z",
+ "films": 43,
+ "published": [],
+ "held": [
+  {
+   "tag": "gail-daughtry-and-the-celebrity-sex-pass-bo-update×BO-UPDATE",
+   "reason": "consistency: title: \"$1.2\" is not a canonical figure for this film | title: \"$1.2\" contradicts the canonical domestic figure ($1,242,603)",
+   "score": 80
+  },
+  {
+   "tag": "star-wars-the-mandalorian-and-grogu-bo-update×BO-UPDATE",
+   "reason": "fidelity: 10 unsupported figures/claims — draft-level failure | words 162 < 180 (owner-set ~200-word minimum)",
+   "score": 50
+  },
+  {
+   "tag": "jeff-arcuri-nice-to-meet-you-trending-tv-w2026-07-12×TRENDING-TV",
+   "reason": "2 unverified claim(s) cut, unrecovered",
+   "score": 75
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "the-odyssey-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $51M not above last published $51M)"
+  },
+  {
+   "tag": "moana-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "minions-monsters-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "toy-story-5-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "evil-dead-burn-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "young-washington-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $39M not above last published $39M)"
+  },
+  {
+   "tag": "the-invite-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $12M not above last published $12M)"
+  },
+  {
+   "tag": "obsession-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $257M not above last published $257M)"
+  },
+  {
+   "tag": "supergirl-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "disclosure-day-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "backrooms-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $195M not above last published $195M)"
+  },
+  {
+   "tag": "jackass-best-and-last-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $18M not above last published $18M)"
+  },
+  {
+   "tag": "scary-movie-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $108M not above last published $108M)"
+  },
+  {
+   "tag": "voicemails-for-isabelle-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "citizen-vigilante-bo-opening×BO-OPENING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "enola-holmes-3-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "voicemails-for-isabelle-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "the-doorman-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "little-brother-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "rust-creek-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "f9-the-fast-saga-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "old-henry-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "the-boss-baby-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "i-will-find-you-trending-tv-w2026-07-12×TRENDING-TV",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "worst-neighbor-ever-trending-tv-w2026-07-12×TRENDING-TV",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "little-house-on-the-prairie-trending-tv-w2026-07-12×TRENDING-TV",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "avatar-the-last-airbender-trending-tv-w2026-07-12×TRENDING-TV",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "salish-jordan-matter-trending-tv-w2026-07-12×TRENDING-TV",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "raw-trending-tv-w2026-07-12×TRENDING-TV",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "sullivan-s-crossing-trending-tv-w2026-07-12×TRENDING-TV",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  }
+ ],
+ "blocked": [],
+ "paced": {
+  "tokens": 3.43,
+  "behind": false,
+  "expected": 5.46,
+  "allow": 1
+ },
+ "attemptCapHit": 3,
+ "zeroStreak": 1,
+ "daySpend": {
+  "laDay": "2026-07-19",
+  "usd": 0.34629
+ },
+ "finishedAt": "2026-07-19T15:22:02.982Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3414,
+    "out": 645,
+    "usd": 0.00021,
+    "ms": 6626
+   },
+   "gatherer": {
+    "calls": 3,
+    "errors": 0,
+    "in": 8119,
+    "out": 376,
+    "usd": 0.00096,
+    "ms": 4195
+   },
+   "synthesizer": {
+    "calls": 3,
+    "errors": 0,
+    "in": 1876,
+    "out": 1466,
+    "usd": 0.00043,
+    "ms": 94960
+   },
+   "writerChart": {
+    "calls": 2,
+    "errors": 0,
+    "in": 3719,
+    "out": 1912,
+    "usd": 0.00151,
+    "ms": 39367
+   },
+   "writer": {
+    "calls": 2,
+    "errors": 0,
+    "in": 6198,
+    "out": 2120,
+    "usd": 0.00587,
+    "ms": 30322
+   },
+   "qa": {
+    "calls": 9,
+    "errors": 0,
+    "in": 26157,
+    "out": 3248,
+    "usd": 0.01597,
+    "ms": 21691
+   }
+  },
+  "totalUsd": 0.02495
+ },
+ "openrouterTotalUsd": 0.02474
+}
