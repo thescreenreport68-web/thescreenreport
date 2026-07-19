@@ -4,6 +4,7 @@
 // rule ([[automation-hard-constraints]]) — NEVER a premium model at runtime. Prices are the same
 // verified OpenRouter IDs the inside lane uses.
 import { chat } from "../lib/openrouter.mjs";
+import { fault, SEV } from "./health.mjs";
 
 export const AGENTS = {
   // Discovery classify — fires most, matters least per call (re-verified downstream). Picks ONE
@@ -117,6 +118,9 @@ export async function agentChat(role, { system, user, images = null, json = true
       METER.push({ role, model, error: String(e?.message || e).slice(0, 120) });
     }
   }
+  // Every model for this role failed. Bug #8 (retries=0 → zero requests) made this happen on EVERY call
+  // at $0 cost, which read as a quiet news day. It is now a recorded CRITICAL fault before it throws.
+  fault(`model:${role}`, `all models failed (${models.join(", ")}): ${String(lastErr?.message || lastErr).slice(0, 120)}`, { severity: SEV.CRITICAL });
   throw lastErr || new Error(`${role}: all models failed`);
 }
 

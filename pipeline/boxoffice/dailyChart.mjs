@@ -12,6 +12,7 @@ import { findContent } from "../lib/contentFinder.mjs";
 import { agentChat } from "./models.mjs";
 import { scopeOk, DAILY_GROSS_FLOOR, MAX_DAYS_IN_RELEASE, LONG_RUN_DAILY_FLOOR, DATA_DIR } from "./config.bo.mjs";
 import { normMoney } from "./moneyGuard.mjs";
+import { assertCount, fault, SEV } from "./health.mjs";
 
 const SYS = `You extract structured data from a DAILY / weekend DOMESTIC box-office chart or report. You are given
 the text of one or more box-office chart pages (Box Office Mojo / The Numbers / Deadline / Variety class). Return
@@ -136,9 +137,10 @@ export async function fetchDailyChart({ findImpl = findContent, chatImpl = null,
     // shape we don't recognise. A short parse is announced, never silently accepted.
     const meta = chartMetaFromText(text);
     let rows = parseChartText(text);
-    if (meta.reportedRows && rows.length < meta.reportedRows) {
-      console.log(`::warning title=boxoffice chart parse::${seed.owner}: parsed ${rows.length} of ${meta.reportedRows} reported rows`);
-    }
+    // The page states its own row count; a shortfall is the exact shape of the bug that hid a $51.28M #1
+    // opening for days. Recorded as a FAULT (surfaces in report.faults + a workflow annotation), never a
+    // bare log that scrolls past.
+    assertCount(`chart:${seed.owner}`, rows.length, meta.reportedRows, { label: "chart rows" });
     let data = rows.length >= 5 ? { films: rows } : null;
     if (!data) {
       try { ({ data } = await agentChat("gatherer", { system: SYS, user: `CHART TEXT:\n${text}\n\nJSON: ${SCHEMA}` }, chatImpl ? { chatImpl } : {})); }
@@ -181,6 +183,9 @@ export async function fetchDailyChart({ findImpl = findContent, chatImpl = null,
     // regardless of how many films were actually in theaters — the single largest cause of low volume.
   }
   merged.sort((a, b) => a.rank - b.rank);
+  // Zero films is never a real day — there are always films in US theaters. It means every seed failed,
+  // which previously looked identical to "nothing worth covering".
+  if (!merged.length) fault("chart", "chart parse produced ZERO films from all seeds — supply outage, not a quiet day", { severity: SEV.CRITICAL });
   const chart = { films: merged.slice(0, max), date: chartDate || ymd(1) };
   // Write the cache when this parse is at least as complete as what's already cached — a lossy morning
   // fetch must never freeze a thin chart in place for the whole LA day.
