@@ -1292,21 +1292,21 @@
    "key": "gail-daughtry-and-the-celebrity-sex-pass-bo-update-d8|BO-UPDATE",
    "eventSlug": "gail-daughtry-and-the-celebrity-sex-pass-bo-update-d8",
    "form": "BO-UPDATE",
-   "reason": "template-heading: \"## What's Next for Gail Daughtry?\" — rewrite story-specific",
-   "tries": 17,
-   "at": "2026-07-19T17:32:30.773Z",
+   "reason": "synthesizer returned no usable brief",
+   "tries": 18,
+   "at": "2026-07-19T17:50:41.245Z",
    "dead": true,
-   "expiresAt": "2026-07-22T17:32:30.773Z"
+   "expiresAt": "2026-07-22T17:50:41.245Z"
   },
   {
    "key": "star-wars-the-mandalorian-and-grogu-bo-update-d57|BO-UPDATE",
    "eventSlug": "star-wars-the-mandalorian-and-grogu-bo-update-d57",
    "form": "BO-UPDATE",
-   "reason": "fidelity: 9 unsupported figures/claims — draft-level failure | words 165 < 180 (owner-set ~200-word minimum)",
-   "tries": 17,
-   "at": "2026-07-19T17:33:42.030Z",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "tries": 18,
+   "at": "2026-07-19T17:52:23.378Z",
    "dead": true,
-   "expiresAt": "2026-07-22T17:33:42.030Z"
+   "expiresAt": "2026-07-22T17:52:23.378Z"
   },
   {
    "key": "the-super-mario-galaxy-movie-ev-milestone-d0|BO-MILESTONE",
@@ -1339,16 +1339,24 @@
    "reason": "soft-floor humanVoice 4 < 5",
    "tries": 1,
    "at": "2026-07-19T17:11:41.346Z"
+  },
+  {
+   "key": "the-devil-wears-prada-2-bo-update-d82|BO-UPDATE",
+   "eventSlug": "the-devil-wears-prada-2-bo-update-d82",
+   "form": "BO-UPDATE",
+   "reason": "consistency: body: \"$462.8 million\" contradicts the canonical domestic figure ($219.6 million) | faq[1].a: \"$462.8 million\" contradicts the canonical domestic figure ($219.6 million)",
+   "tries": 1,
+   "at": "2026-07-19T17:54:56.312Z"
   }
  ],
- "zeroStreak": 0,
+ "zeroStreak": 1,
  "daySpend": {
   "laDay": "2026-07-19",
-  "usd": 0.50593
+  "usd": 0.52886
  },
  "pace": {
-  "tokens": 3,
-  "lastMs": 1784482257290
+  "tokens": 3.542759388888889,
+  "lastMs": 1784483330880
  },
  "lastAuditDay": "2026-07-19",
  "attempts": {
@@ -1370,7 +1378,8 @@
    "survival of the thickest": 1,
    "off campus": 1,
    "jeff arcuri: nice to meet you": 2,
-   "tom clancy's jack ryan: ghost war": 1
+   "tom clancy's jack ryan: ghost war": 1,
+   "the devil wears prada 2": 1
   }
  }
 }
