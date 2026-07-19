@@ -99,7 +99,9 @@ export function bestTitle(base, names = []) {
   let wholeClean = ""; // the full title when it's already ≤MAX and clean
   for (const v of variants) {
     const ranges = nameRanges(v, names);
-    if (v.length <= MAX && endsClean(v, v.length, ranges) && v.length > wholeClean.length) wholeClean = v;
+    // The renderer ships a stored metaTitle of 30–65 chars VERBATIM, so a 56–65 char headline never needed
+    // cutting — yet inBand (a strictly shorter cut) used to win and shipped a mid-clause fragment.
+    if (v.length <= HARD_MAX && endsClean(v, v.length, ranges) && v.length > wholeClean.length) wholeClean = v;
     const words = v.split(" ");
     let acc = "";
     for (const w of words) {
@@ -111,6 +113,8 @@ export function bestTitle(base, names = []) {
       if (cand.length > inBand.length) inBand = cand;       // longest clean cut in [SOFT_MIN,MAX] wins
     }
   }
+  // Prefer the COMPLETE headline whenever it renders verbatim; only cut when it cannot ship whole.
+  if (wholeClean && wholeClean.length <= HARD_MAX) return wholeClean;
   if (inBand) return inBand;
   if (wholeClean) return wholeClean;
   // no clean cut in [SOFT_MIN,MAX]: take the longest clean prefix ≤HARD_MAX so we NEVER return a dangler;
@@ -197,25 +201,33 @@ export function validMetaDesc(s, dek = "") {
 // ends on a bare number/currency ("$13", "13") that's almost always a cut "$13 million" — but a 4-digit year is fine.
 const endsOnNumber = (c) => { const w = (c.split(" ").pop() || ""); return /^[$€£]?\d[\d,.]*[kmb%]?$/i.test(w) && !/^(?:19|20)\d\d$/.test(w); };
 // Longest CLEAN-ENDING word-prefix of `fact` that fits in `room` chars (no mid-number / mid-name / dangler cut).
-function fitPhrase(fact, room) {
+// The appended fact is given a period, so a PARTIAL clause reads as a finished sentence ("…filed in Los
+// Angeles Superior." shipped on 146/194 live articles). Accept a truncation only when it keeps
+// essentially the whole fact and does not split a proper name; otherwise return nothing and let the
+// caller ship the dek alone.
+function fitPhrase(fact, room, names = []) {
   if (fact.length <= room) return fact;
+  const ranges = nameRanges(fact, names);
   let acc = "", best = "";
   for (const wd of fact.split(" ")) {
     const nx = acc ? `${acc} ${wd}` : wd;
     if (nx.length > room) break;
     acc = nx;
     const c = cleanEnds(acc);
-    if (c.length >= 20 && endsClean(c, acc.length, []) && !endsOnNumber(c)) best = c; // ends on a content word
+    if (c.length >= 20 && endsClean(c, acc.length, ranges) && !endsOnNumber(c)) best = c;
   }
+  if (best && best.length < Math.floor(fact.length * 0.85)) return ""; // mid-clause fragment, not a sentence
   return best;
 }
-export function buildMetaDescription({ writerMetaDesc, dek = "", keyTakeaways = [], whatWeKnow = [] } = {}, max = 158) {
+export function buildMetaDescription({ writerMetaDesc, dek = "", keyTakeaways = [], whatWeKnow = [], names = [] } = {}, max = 158) {
   const w = String(writerMetaDesc || "").trim();
   if (validMetaDesc(w, dek)) return w;                            // already a clean ≤160 teaser — honored verbatim
 
   let d = String(dek || "").trim();
   if (d && !endsSentence(d)) d = d.replace(/[\s,;:—–-]+$/u, "") + ".";
-  if (d.length >= 138) return d.length > 160 ? trimToSentence(d, 158) : d; // dek alone already fills the snippet
+  // A 138–160 char dek used to return here verbatim, shipping metaDescription === dek (which
+  // validMetaDesc explicitly rejects) on 21 live articles. Try one distinct fact first.
+  const dekOnly = d.length > 160 ? trimToSentence(d, 158) : d;
 
   // Append ONE distinct fact, WHOLE if it fits else clean-truncated to a word boundary, so it always ends on a
   // full sentence. Pick whichever fact fills the snippet closest to ~160.
@@ -224,10 +236,11 @@ export function buildMetaDescription({ writerMetaDesc, dek = "", keyTakeaways = 
     .filter((f) => f.length >= 12 && !norm(d).includes(norm(f).slice(0, 22)));
   let best = "";
   for (const f of facts) {
-    const phrase = fitPhrase(f, max - d.length - 2);
+    const phrase = fitPhrase(f, max - d.length - 2, names);
     if (phrase.length > best.length) best = phrase;
   }
-  if (best) d = `${d} ${cap(best)}.`.replace(/\s+/g, " ");
+  if (best) d = `${d} ${cap(best)}${endsSentence(best) ? "" : "."}`.replace(/\s+/g, " ");
+  else if (dekOnly) return dekOnly;      // nothing distinct fits ⇒ the dek alone
   return endsSentence(d) ? d : d.replace(/[\s,;:—–-]+$/u, "") + ".";
 }
 

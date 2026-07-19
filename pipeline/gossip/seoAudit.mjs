@@ -52,8 +52,18 @@ export function auditArticleSeo({ fm, body = "", topic = {}, bundle = null }) {
     let md = stripMd(fm.metaDescription);
     if (md !== fm.metaDescription) log("md-leak", "metaDescription", "repaired");
     if (!md || md.length > 160 || !grounded(md, corpus)) {
-      md = buildMetaDescription({ writerMetaDesc: "", dek: fm.dek, keyTakeaways: fm.keyTakeaways, whatWeKnow: fm.whatWeKnow });
-      log("metaDescription-contract", "metaDescription", "repaired", "rebuilt from dek + a verified fact");
+      // assemble.mjs already built this string from the SAME dek/takeaways with the SAME builder, so a
+      // naive rebuild returns a byte-identical string and the ungrounded specific ships anyway. Rebuild
+      // from GROUNDED inputs only, then re-check; if it still fails, fall back to the dek alone.
+      const okFacts = (arr) => (arr || []).filter((x) => grounded(String(x), corpus));
+      md = buildMetaDescription({ writerMetaDesc: "", dek: fm.dek, keyTakeaways: okFacts(fm.keyTakeaways), whatWeKnow: okFacts(fm.whatWeKnow) });
+      if (!grounded(md, corpus) || md.length > 160) {
+        const dekOnly = String(fm.dek || "").trim();
+        md = dekOnly && grounded(dekOnly, corpus) && dekOnly.length <= 160 ? dekOnly : "";
+        log("metaDescription-contract", "metaDescription", md ? "repaired" : "dropped", "rebuild still ungrounded — fell back to the dek");
+      } else {
+        log("metaDescription-contract", "metaDescription", "repaired", "rebuilt from GROUNDED facts only");
+      }
     } else if (!validMetaDesc(md, fm.dek)) {
       log("metaDescription-soft", "metaDescription", "logged", "outside 140–160 target or equals the dek");
     }
