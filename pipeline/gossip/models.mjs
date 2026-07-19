@@ -89,18 +89,20 @@ export function withTimeout(promise, ms, label = "op") {
  * `surgical: true` selects surgicalTemperature (the writer's low-temp correction passes).
  * `chatImpl` is injectable so the whole lane stays offline-testable.
  */
-export async function agentChat(role, { model: override, system, user, images, json = false, maxTokens, temperature, surgical = false, retries = 0, attemptDeadlineMs } = {}, { chatImpl } = {}) {
+export async function agentChat(role, { model: override, system, user, images, json = false, maxTokens, temperature, surgical = false, retries = 1, attemptDeadlineMs } = {}, { chatImpl } = {}) {
   const cfg = AGENTS[role];
   if (!cfg) throw new Error(`unknown agent role: ${role}`);
   const impl = chatImpl || chat;
   const models = override ? [override] : [cfg.model, cfg.fallback].filter(Boolean);
   const temp = temperature ?? (surgical && cfg.surgicalTemperature != null ? cfg.surgicalTemperature : cfg.temperature);
   const deadline = attemptDeadlineMs ?? cfg.attemptDeadlineMs;
-  // 2026-07-19: `retries` used to default to 2 and was handed to chat(), whose per-attempt AbortSignal is
-  // 150s plus backoff — so one chat() call could run ~300s while the role's attemptDeadlineMs is 60–150s.
-  // withTimeout RACES but cannot cancel, so the losing request kept streaming tokens we had already given
-  // up on (real, uncapped spend) while agentChat moved on to the fallback. chat() is now a SINGLE attempt
-  // per model; retrying is agentChat's job, and each try is bounded by the role's own deadline.
+  // 2026-07-19: `retries` is handed to chat(), whose per-attempt AbortSignal is 150s plus backoff — so the
+  // old default of 2 could run ~300s while the role's attemptDeadlineMs is 60–150s. withTimeout RACES but
+  // cannot cancel, so the losing request kept streaming tokens we had already abandoned (real spend).
+  // ⚠ In lib/openrouter.mjs the loop is `for (a = 0; a < retries; a++)`, so `retries` is TOTAL ATTEMPTS,
+  // NOT extra retries. It must be >= 1. Setting it to 0 makes ZERO http attempts and throws undefined —
+  // that mistake stalled this lane for ~8h on 2026-07-19. ONE bounded attempt per model here; retrying
+  // and model fallback are agentChat's job, each bounded by the role's own deadline.
   let lastErr;
   for (const model of models) {
     const t0 = Date.now();

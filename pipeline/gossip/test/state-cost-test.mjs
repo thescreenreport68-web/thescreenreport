@@ -75,7 +75,11 @@ console.log("\n=== BATCH D: STATE / DEDUP PERSISTENCE / COST ===\n");
   const { agentChat } = await import("../models.mjs");
   let sawRetries = null;
   await agentChat("linker", { system: "s", user: "u" }, { chatImpl: async (a) => { sawRetries = a.retries; return { data: {}, usage: {} }; } });
-  check("chat() gets retries=0 (agentChat owns retrying, per-attempt deadlines hold)", sawRetries === 0, String(sawRetries));
+  // ⚠ lib/openrouter.mjs loops `for (a = 0; a < retries; a++)` — `retries` is TOTAL ATTEMPTS, not extra
+  // retries. Passing 0 makes ZERO http attempts and throws `undefined`; that stalled the whole lane for
+  // ~8h on 2026-07-19 (categorize returned 0 topics, the queue drained, nothing published).
+  check("chat() gets retries >= 1 — 0 means ZERO attempts and kills every LLM call", sawRetries >= 1, String(sawRetries));
+  check("chat() gets exactly ONE attempt (agentChat owns retry + model fallback)", sawRetries === 1, String(sawRetries));
   const roles = Object.entries(AGENTS).filter(([, c]) => c.attemptDeadlineMs);
   check("every role still declares an attempt deadline", roles.length >= 10, String(roles.length));
 }
