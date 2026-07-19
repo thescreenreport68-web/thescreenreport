@@ -154,7 +154,10 @@ export async function findFilms({ limit = 3, discoverImpl = discoverFilms, chatI
   } catch { queueEvents = []; }
   const eventEntries = [];
   const chartByTitle = new Map(chartPicks.map((e) => [e.film.title.toLowerCase(), e]));
-  for (const ev of queueEvents.slice(0, 8)) {
+  // Events are capped at 3: parked-dead event slugs occupied 110 of 308 candidate slots on 07-17
+  // (the-odyssey-ev-opening alone 18 times), and 65 of 166 non-empty pools carried ZERO chart films.
+  // The chart is the reliable supply; events are the bonus, never the occupier.
+  for (const ev of queueEvents.slice(0, 3)) {
     const chartHit = chartByTitle.get(ev.filmTitle.toLowerCase());
     if (chartHit) { // demand signal on a tracked chart film → boost its rank in the pool
       chartHit.trigger.priority = Math.max(chartHit.trigger.priority, Math.min(100, 30 + (ev.priority || 0)));
@@ -183,10 +186,15 @@ export async function findFilms({ limit = 3, discoverImpl = discoverFilms, chatI
   // Candidate POOL for the tick. EVENT entries lead (breaking beats inventory), then the DAILY-CHART
   // box-office engine (real running numbers for every film in theaters = the 15/day engine); streaming
   // picks are a REACHABLE fallback so a tick never comes up empty. preferStreaming puts streaming first.
-  const poolSize = Math.max(limit, 6);
+  // POOL SIZE IS SUPPLY, NOT BURST. `poolSize = Math.max(limit, 6)` truncated the day's real supply to
+  // 6-8 candidates: on LA 07-17 the chart held 11 films and only the first 8 were EVER evaluated across
+  // 47 ticks — Jackass, Gail Daughtry and Scary Movie never entered a pool once. The per-tick WRITE cap
+  // is `written >= burst` in borun; the pool just has to CONTAIN the day's stories.
+  // CHART FIRST: chart updates are the dependable, already-verified, cheapest-to-publish supply.
+  const poolSize = Math.max(limit, chartPicks.length + eventEntries.length + streamPicks.length + exitEntries.length);
   const merge = (bo) => (preferStreaming
-    ? [...eventEntries, ...streamPicks, ...chartPicks, ...exitEntries, ...bo]
-    : [...eventEntries, ...chartPicks, ...exitEntries, ...bo.slice(0, 2), ...streamPicks, ...bo.slice(2)]).slice(0, poolSize);
+    ? [...streamPicks, ...chartPicks, ...eventEntries, ...exitEntries, ...bo]
+    : [...chartPicks, ...eventEntries, ...exitEntries, ...bo.slice(0, 2), ...streamPicks, ...bo.slice(2)]).slice(0, poolSize);
 
   if (!films.length) return merge([]);
 

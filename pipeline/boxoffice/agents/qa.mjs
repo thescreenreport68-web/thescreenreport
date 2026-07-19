@@ -4,9 +4,26 @@
 //      draft saturated with cuts (>4) holds.
 //  (2) THE ENGAGEMENT JUDGE (gemini-2.5-flash, temp 0): readability/engagement/humanVoice — the
 //      owner's KPI — with soft floors + correction flags the writer can act on.
-import { numberFidelity, noInvention, platformGuard, streamingClaimGuard, buildAllowed, stripUnsupportedSentences, firstCleanSentence, normMoney } from "../moneyGuard.mjs";
+import { numberFidelity, noInvention, platformGuard, streamingClaimGuard, buildAllowed, stripUnsupportedSentences, firstCleanSentence, normMoney, canonicalFigures } from "../moneyGuard.mjs";
 import { FORMS, GATE, SCOPE_JUNK, scopeOk } from "../config.bo.mjs";
 import { agentChat } from "../models.mjs";
+
+// The canonical numbers block assemble.mjs will append AFTER these walls. Imported LAZILY (assemble.mjs
+// imports this module, so a top-level import would be circular) and fail-soft: if it cannot be measured,
+// we simply fall back to the stricter pre-block count rather than letting a short article through.
+let _numbersSection = null;
+function numbersSectionWords(job) {
+  try {
+    if (!_numbersSection) return 0;
+    // Build the SAME canonical set assemble.mjs will use (assemble.mjs:343 calls this with exactly these
+    // inputs), so the count reflects the real appended block rather than depending on a field nobody sets.
+    const canon = canonicalFigures({ gathered: job.gathered || {}, boxData: job.boxData || {}, film: job.film || {} });
+    if (!canon) return 0;
+    const txt = _numbersSection(canon, job.film?.title || "");
+    return String(txt || "").split(/\s+/).filter(Boolean).length;
+  } catch { return 0; }
+}
+export function _setNumbersSection(fn) { _numbersSection = fn; }
 
 // Generic meta headings telegraph the template — banned + machine-detected (owner rule shared across lanes).
 const TEMPLATE_H = /^##\s*(why (is )?(this|it) (happening|matter)|how (are|did) .*react|what (does|is) .*mean|who is everyone talking about|what'?s next|what happened)\b/i;
@@ -170,7 +187,14 @@ export function fidelityLocks(job) {
   if (uniqueCuts.length > cutCeiling) hardBlocks.push(`fidelity: ${uniqueCuts.length} unsupported figures/claims — draft-level failure`);
 
   // Floors.
-  if (words < Math.min(form.words[0], 180)) hardBlocks.push(`words ${words} < ${Math.min(form.words[0], 180)} (owner-set ~200-word minimum)`);
+  // MEASURE THE BODY THE READER ACTUALLY GETS. For a chart update, assemble.mjs appends the canonical
+  // "At the Box Office" numbers section AFTER every QA wall (that is deliberate — it must be uncuttable),
+  // so QA was judging a body ~46 words shorter than the published one and holding drafts that would have
+  // cleared the floor comfortably. This does NOT lower the floor: the added words are the lane's own
+  // verified figures, and assemble.mjs re-checks the true final length before anything is written.
+  const canonWords = job.film?.dailyChart ? numbersSectionWords(job) : 0;
+  const effWords = words + canonWords;
+  if (effWords < Math.min(form.words[0], 180)) hardBlocks.push(`words ${effWords} < ${Math.min(form.words[0], 180)} (owner-set ~200-word minimum)`);
   // NOTE: no FAQ hard-block here — assemble.ensureFaq deterministically backfills ≥2 REAL FAQs from the verified
   // facts, so every PUBLISHED article carries them. A pre-assemble writer FAQ check was falsely holding good drafts.
   for (const h of findTemplateHeadings(body)) hardBlocks.push(`template-heading: "${h.slice(0, 50)}" — rewrite story-specific`);

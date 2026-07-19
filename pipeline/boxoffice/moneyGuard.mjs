@@ -297,7 +297,15 @@ export function platformGuard(article, allowedPlatforms = []) {
   const body = String(article?.body || "").toLowerCase();
   const bad = [];
   for (const svc of SERVICES) {
-    if (!body.includes(svc)) continue;
+    // WORD-BOUNDARY, NOT SUBSTRING. A bare `body.includes("max")` matched a CHARACTER named Max — handed
+    // to the writer by our own cast block ("Julian Feder as Max", "Chi McBride as Max Williams") — and
+    // hard-blocked the article for "naming a streaming service". That false positive alone accounted for
+    // 13 of 18 streaming platform holds. "max" now only counts as a service when it reads like one.
+    const hit = svc === "max"
+      ? /\bhbo max\b/.test(body) || /\bmax\b(?=[^.]{0,40}\b(stream|streaming|watch|available|premier)\w*\b)/.test(body)
+        || /\b(stream|streaming|watch|available on|premieres on)\b[^.]{0,40}\bmax\b/.test(body)
+      : new RegExp(`\\b${svc.replace(/[+]/g, "\\+").replace(/\s+/g, "\\s+")}`, "i").test(body);
+    if (!hit) continue;
     const ok = [...allow].some((a) => a.includes(svc) || svc.includes(a));
     if (!ok) bad.push(svc);
   }

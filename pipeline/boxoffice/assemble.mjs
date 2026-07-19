@@ -1,3 +1,4 @@
+import { _setNumbersSection as qaSetNumbersSection } from "./agents/qa.mjs";
 // ASSEMBLE (box-office) — frontmatter per the SITE CONTRACT (site/lib/articles.ts): the structured
 // boxOffice{}/records[]/whereToWatch[] fields the UI renders, plus the homepage-placement signals
 // (category/subcategory/author/trendScore/signals/eventSlug/eventType/outletCount/storyStatus). The
@@ -294,7 +295,7 @@ const fmtUSDWords = (raw) => {
 // Deterministic "At the Box Office" numbers section — built from the CANONICAL set and appended at ASSEMBLY
 // (after every wall has run), so no fidelity/no-invention cut can ever strip the article's own verified
 // figures again (the 9/9 numbers-missing live failure). The headline number is GUARANTEED in the prose.
-function numbersSection(canon, filmTitle) {
+export function numbersSection(canon, filmTitle) {
   const sentences = [];
   const clause = [];
   if (canon.domestic) clause.push(`has grossed ${canon.domestic.text} at the domestic box office`);
@@ -310,6 +311,9 @@ function numbersSection(canon, filmTitle) {
 // SCAFFOLD CHECK — a live article shipped a literal "[Box office section will be inserted here by the
 // system.]", another ended on an empty "## Closing Line". No placeholder, empty section, bare template
 // label, flattened heading, or under-floor body can reach a reader. Deterministic, publish-blocking.
+// Hand QA the same builder so its word floor measures the body the reader actually receives.
+qaSetNumbersSection(numbersSection);
+
 export function scaffoldViolations(body, fm) {
   const v = [];
   if (/\[[^\]]{0,80}(system|insert|placeholder|section (will|here)|to be (added|filled))[^\]]{0,80}\]/i.test(body))

@@ -10,7 +10,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { findContent } from "../lib/contentFinder.mjs";
 import { agentChat } from "./models.mjs";
-import { scopeOk, DAILY_GROSS_FLOOR, DATA_DIR } from "./config.bo.mjs";
+import { scopeOk, DAILY_GROSS_FLOOR, MAX_DAYS_IN_RELEASE, LONG_RUN_DAILY_FLOOR, DATA_DIR } from "./config.bo.mjs";
 import { normMoney } from "./moneyGuard.mjs";
 
 const SYS = `You extract structured data from a DAILY / weekend DOMESTIC box-office chart or report. You are given
@@ -48,6 +48,63 @@ export function writeChartCache(chart, { nowMs = Date.now(), file = CHART_CACHE 
   } catch {}
 }
 
+// ── DETERMINISTIC CHART PARSER (the volume fix, 2026-07-19) ──────────────────────────────────────
+// The LLM extractor silently returned 6 of 17 rows (dropping The Odyssey's $51.28M #1 opening with NO
+// error) — one unlogged completion was the lane's entire box-office supply. These chart pages are
+// PUBLISHED TABLES rendered one field per line, so a deterministic parse is both complete and strictly
+// safer than a model transcription: it cannot hallucinate or mistranscribe a row, and it costs $0.
+//   Rank / Prev / Title / Gross / DailyΔ / WeeklyΔ / Theaters / TheaterAvg / TotalGross / DaysInRelease
+// Fields the page leaves blank simply don't emit a token, so each field is claimed only if its own
+// shape matches (money vs percent vs bare number) — a missing column can never shift the next value
+// into the wrong field.
+const MONEY_TOK = /^\$[\d,]+$/;
+const PCT_TOK = /^[+-][\d.,]+%$/;
+const NUM_TOK = /^[\d,]+$/;
+const PREV_TOK = /^\((new|\d+)\)$/i;
+
+export function parseChartText(text) {
+  const toks = String(text || "").split("\n").map((t) => t.trim()).filter(Boolean);
+  const films = [];
+  for (let i = 0; i < toks.length; i++) {
+    // Row anchor = <rank><prev>. Rank is a number OR "-" for a title that fell off the ranked list but
+    // still reports a gross (Star Wars, Devil Wears Prada 2 …) — those were silently skipped before.
+    const isRank = /^\d{1,3}$/.test(toks[i]) || toks[i] === "-";
+    if (!isRank || !PREV_TOK.test(toks[i + 1] || "")) continue;
+    const rank = toks[i] === "-" ? null : Number(toks[i]);
+    let j = i + 2;
+    const titleParts = [];
+    while (j < toks.length && !MONEY_TOK.test(toks[j]) && titleParts.length < 12) { titleParts.push(toks[j]); j++; }
+    if (!titleParts.length || j >= toks.length) continue;
+    const title = titleParts.join(" ").replace(/\s+/g, " ").trim();
+    const dailyGross = toks[j++];
+    let dailyChangePct = null, weeklyChangePct = null, theaters = null, perTheater = null, cume = null, days = null;
+    if (PCT_TOK.test(toks[j] || "")) dailyChangePct = toks[j++];
+    if (PCT_TOK.test(toks[j] || "")) weeklyChangePct = toks[j++];
+    if (NUM_TOK.test(toks[j] || "") && !MONEY_TOK.test(toks[j] || "")) theaters = toks[j++];
+    if (MONEY_TOK.test(toks[j] || "")) perTheater = toks[j++];
+    if (MONEY_TOK.test(toks[j] || "")) cume = toks[j++];
+    if (/^\d{1,4}$/.test(toks[j] || "")) days = Number(toks[j++]);
+    films.push({
+      rank, title, dailyGross, cume, dailyChangePct, weeklyChangePct, theaters, perTheater,
+      daysInRelease: days, dayInRelease: days ? `Day ${days}` : null,
+    });
+    i = j - 1;
+  }
+  return films;
+}
+
+// The page states its own row count ("Reporting movies: 17") and its own chart date — use BOTH rather
+// than trusting a computed date or an unverified parse. A short parse is now LOUD, never silent.
+export function chartMetaFromText(text) {
+  const rm = String(text || "").match(/Reporting movies:\s*(\d+)/i);
+  const dm = String(text || "").match(/Box Office\s+\w+day,\s+([A-Z][a-z]+ \d{1,2}, \d{4})/);
+  const parsedDate = dm ? new Date(dm[1] + " UTC") : null;
+  return {
+    reportedRows: rm ? Number(rm[1]) : null,
+    date: parsedDate && !isNaN(parsedDate) ? parsedDate.toISOString().slice(0, 10) : null,
+  };
+}
+
 export async function fetchDailyChart({ findImpl = findContent, chatImpl = null, nowMs = null, max = 25, cache = true } = {}) {
   if (cache) {
     const cached = readChartCache({ nowMs: nowMs || Date.now() });
@@ -62,16 +119,35 @@ export async function fetchDailyChart({ findImpl = findContent, chatImpl = null,
   ];
   const seen = new Set();
   const merged = [];
+  let chartDate = null;
   for (const seed of seeds) {
     const res = await findImpl(
       { query: "daily box office chart", title: "box office", primaryEntity: "box office chart", sources: [seed] },
       { corroborate: false, maxSources: 2, maxExtract: 2 },
     ).catch(() => null);
-    const text = (res?.sources || []).map((s) => s.text || "").join("\n").slice(0, 16000);
+    // 64KB: these chart pages run ~3KB, but a 16KB cap silently truncated the lower ranks off a long chart.
+    const text = (res?.sources || []).map((s) => s.text || "").join("\n").slice(0, 64000);
     if (res?.blocked || text.length < 200) continue;
-    let data = null;
-    try { ({ data } = await agentChat("gatherer", { system: SYS, user: `CHART TEXT:\n${text}\n\nJSON: ${SCHEMA}` }, chatImpl ? { chatImpl } : {})); }
-    catch { data = null; }
+
+    // DETERMINISTIC FIRST — a published table parses exactly; the LLM is only a fallback for a page whose
+    // shape we don't recognise. A short parse is announced, never silently accepted.
+    const meta = chartMetaFromText(text);
+    let rows = parseChartText(text);
+    if (meta.reportedRows && rows.length < meta.reportedRows) {
+      console.log(`::warning title=boxoffice chart parse::${seed.owner}: parsed ${rows.length} of ${meta.reportedRows} reported rows`);
+    }
+    let data = rows.length >= 5 ? { films: rows } : null;
+    if (!data) {
+      try { ({ data } = await agentChat("gatherer", { system: SYS, user: `CHART TEXT:\n${text}\n\nJSON: ${SCHEMA}` }, chatImpl ? { chatImpl } : {})); }
+      catch { data = null; }
+      if (data?.films?.length) console.log(`  chart: deterministic parse found ${rows.length} rows, LLM fallback returned ${data.films.length}`);
+    }
+    // Use the page's OWN chart date; seeds carrying a DIFFERENT day are rejected so a union can never
+    // blend two chart days into one article's numbers.
+    if (data?.films?.length) {
+      if (!chartDate) chartDate = meta.date || null;
+      else if (meta.date && meta.date !== chartDate) { console.log(`  chart: skipping ${seed.owner} (date ${meta.date} != ${chartDate})`); continue; }
+    }
     for (const f of data?.films || []) {
       const title = String(f?.title || "").trim();
       if (!title) continue;
@@ -84,13 +160,30 @@ export async function fetchDailyChart({ findImpl = findContent, chatImpl = null,
       // figure is missing we keep it (the chart is rank-ordered by daily gross, so it's still a top title).
       const daily = normMoney(f.dailyGross);
       if (daily != null && daily < DAILY_GROSS_FLOOR) continue;
+      // ACTIVE RELEASE ONLY (owner: never post about a film from months ago) — but "old" alone is the wrong
+      // test: Backrooms at day 50 was still doing $215k/day as a top-11 title, which is a real story, while
+      // Devil Wears Prada 2 at day 78 was doing $12k on 40 screens, which is not. So a long-running film is
+      // dropped only once it is ALSO no longer doing real business.
+      if (Number.isFinite(f.daysInRelease) && f.daysInRelease > MAX_DAYS_IN_RELEASE
+          && (daily == null || daily < LONG_RUN_DAILY_FLOOR)) continue;
       seen.add(key);
-      merged.push({ title, dailyGross: f.dailyGross || null, cume: f.cume || null, dailyChangePct: f.dailyChangePct || null, theaters: f.theaters || null, dayInRelease: f.dayInRelease || null, rank: Number(f.rank) || merged.length + 1 });
+      merged.push({
+        title, dailyGross: f.dailyGross || null, cume: f.cume || null, dailyChangePct: f.dailyChangePct || null,
+        theaters: f.theaters || null, perTheater: f.perTheater || null, dayInRelease: f.dayInRelease || null,
+        daysInRelease: Number.isFinite(f.daysInRelease) ? f.daysInRelease : null,
+        rank: Number(f.rank) || merged.length + 1, source: seed.owner,
+      });
     }
-    if (merged.length >= 8) break; // one good chart is plenty
+    // No early break: the chart IS the day's supply. Stopping at 8 rows capped box-office output at 8/day
+    // regardless of how many films were actually in theaters — the single largest cause of low volume.
   }
   merged.sort((a, b) => a.rank - b.rank);
-  const chart = { films: merged.slice(0, max), date: ymd(1) };
-  if (cache && chart.films.length >= 5) writeChartCache(chart, { nowMs: nowMs || Date.now() }); // only cache a real chart
+  const chart = { films: merged.slice(0, max), date: chartDate || ymd(1) };
+  // Write the cache when this parse is at least as complete as what's already cached — a lossy morning
+  // fetch must never freeze a thin chart in place for the whole LA day.
+  if (cache && chart.films.length >= 5) {
+    const prev = readChartCache({ nowMs: nowMs || Date.now() });
+    if (!prev || chart.films.length >= (prev.films || []).length) writeChartCache(chart, { nowMs: nowMs || Date.now() });
+  }
   return chart;
 }
