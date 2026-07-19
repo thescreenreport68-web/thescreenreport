@@ -1,0 +1,71 @@
+{
+  "id": "news-fall-tv-casting-shakeups",
+  "slug": "fall-tv-casting-shakeups-who-s-returning-who-s-leaving-who-s-new",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": null,
+      "cat": "tv/news",
+      "format": [
+        "body 186w < 220"
+      ],
+      "cuts": 0,
+      "broken": []
+    },
+    "attempt2": {
+      "score": null,
+      "cat": "tv/news",
+      "format": [
+        "body 85w < 220"
+      ],
+      "cuts": 1,
+      "broken": []
+    }
+  },
+  "editorial": {
+    "status": "unconfirmed",
+    "entity": "The Harder They Fall",
+    "work": null,
+    "outlet": "tvinsider.com"
+  },
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
+    "deterministic": {
+      "words": 85,
+      "h2s": 2,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 3,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": false,
+      "kwInH2": false,
+      "maxSentence": 18,
+      "avgSentence": 12,
+      "flesch": 53,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": [
+        "body 85w < 220"
+      ]
+    },
+    "hardBlocks": []
+  },
+  "score": null,
+  "category": "tv",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "body ≥ 220w"
+    ]
+  },
+  "ms": 125880
+}
