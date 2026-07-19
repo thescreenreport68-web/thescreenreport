@@ -1,0 +1,138 @@
+{
+  "ts": "2026-07-19T01:02:48.761Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "ariana-grande-and-ricky-alvarez-are-the-real-deal-source-says",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [
+        "metaDescription-soft:logged",
+        "geo-no-number:logged"
+      ],
+      "headline": [
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 0
+    }
+  ],
+  "topics": 1,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 0,
+  "costUSD": 0.007623,
+  "costPerPublished": 0.007623,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 6,
+      "in": 9752,
+      "out": 386,
+      "usd": 0.0038906
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 733,
+      "out": 539,
+      "usd": 0.0001749426
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 5,
+      "in": 12766,
+      "out": 3505,
+      "usd": 0.0029243028
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 6,
+      "in": 4429,
+      "out": 475,
+      "usd": 0.0006329
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1967,
+      "out": 214,
+      "usd": 0.0011251,
+      "ms": 1796
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 733,
+      "out": 539,
+      "usd": 0.00016299,
+      "ms": 8080
+    },
+    "writer": {
+      "calls": 4,
+      "errors": 0,
+      "in": 12256,
+      "out": 3183,
+      "usd": 0.003901100000000001,
+      "ms": 46329
+    },
+    "verify": {
+      "calls": 5,
+      "errors": 0,
+      "in": 7785,
+      "out": 172,
+      "usd": 0.0027654999999999997,
+      "ms": 3025
+    },
+    "judge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1130,
+      "out": 163,
+      "usd": 0.0001782,
+      "ms": 1006
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 510,
+      "out": 322,
+      "usd": 0.00022678000000000002,
+      "ms": 5555
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 391,
+      "out": 99,
+      "usd": 0.0000787,
+      "ms": 537
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 194,
+      "out": 45,
+      "usd": 0.00003740000000000001,
+      "ms": 534
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2134,
+      "out": 105,
+      "usd": 0.00025540000000000003,
+      "ms": 2203
+    },
+    "linker": {
+      "calls": 2,
+      "errors": 0,
+      "in": 580,
+      "out": 63,
+      "usd": 0.0000832,
+      "ms": 1026
+    }
+  }
+}
