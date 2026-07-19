@@ -37,7 +37,7 @@ import { pickGoal, ASK_FAMILIES } from "./agents/engage.mjs";
 import { buildBeats } from "./agents/scenes.mjs";
 import { synthVoice, kokoroFallback, judgeTake, gapStats, scoreTake, passesFloor } from "./agents/voice.mjs";
 import { align, sentenceWindows as sentenceWindowsSafe, alignDisplayWords as alignDisplayWordsSafe } from "./agents/align.mjs";
-import { buildShots } from "./agents/shots.mjs";
+import { buildShots, sourceImages, imageFeasibility } from "./agents/shots.mjs";
 import { pickMusic } from "./agents/music.mjs";
 import { styleEmphasis, buildAss } from "./agents/subs.mjs";
 import { render } from "./agents/render.mjs";
@@ -205,6 +205,32 @@ async function processJob(article, { skipStages = new Set() } = {}) {
     stageDone(job, "pronounce");
   }
   costGuard(job);
+  // 12.5 IMAGE PREFLIGHT — sources the photos and decides feasibility BEFORE the voice spend.
+  // (owner 2026-07-19 waste fix) Same bars as before, applied earlier: a story that could never
+  // carry a premium reel now dies at ~$0.005 instead of ~$0.13 (voice + render, then killed at
+  // watch-QC). The sourced images are cached on the job so the shots stage reuses them — the
+  // vision gating is still paid exactly ONCE. Sourcing failure is non-fatal: fall through and let
+  // the shots stage source normally, exactly as before.
+  if (need("imageprep")) {
+    const r = await stageRun(job, "imageprep", async () => {
+      let articleBodyRaw = "";
+      try { articleBodyRaw = fs.readFileSync(path.join(IG.articlesDir, `${job.id}.md`), "utf8"); } catch {}
+      const pre = await sourceImages({ job, articleBodyRaw });
+      const feas = imageFeasibility({
+        images: pre.images, rawImages: pre.rawImages, entities: job.facts.entities,
+        hookSentence: job.script?.sentences?.[0] || "",
+      });
+      return { pre, feas };
+    }, 480000);
+    if (r.ok) {
+      job.imagesPre = { images: r.result.pre.images, rawImages: r.result.pre.rawImages, sourcing: r.result.pre.sourcing, provenance: r.result.pre.provenance };
+      if (!r.result.feas.ok) return holdJob(job, "imageprep", r.result.feas.hold);
+      jlog(job, "imageprep", `${r.result.feas.withImages} subjects imaged, ${r.result.feas.distinctPool} distinct photos — feasible`);
+    } else {
+      jlog(job, "imageprep", `sourcing failed (${String(r.error).slice(0, 80)}) — shots will source normally`);
+    }
+    stageDone(job, "imageprep");
+  }
   // 13 VOICE (before shots — timestamps drive the shot plan). v2: bake-off + pause
   // tightening + the listening judge; the take must clear the delivery floor.
   if (need("voice")) {
@@ -288,7 +314,7 @@ async function processJob(article, { skipStages = new Set() } = {}) {
     try {
       articleBodyRaw = fs.readFileSync(path.join(IG.articlesDir, `${job.id}.md`), "utf8");
     } catch {}
-    const r = await stageRun(job, "shots", () => buildShots({ job, words: job.audio.words, duration: durationSec, beats, articleBodyRaw }), 480000);
+    const r = await stageRun(job, "shots", () => buildShots({ job, words: job.audio.words, duration: durationSec, beats, articleBodyRaw, pre: job.imagesPre || null }), 480000);
     if (!r.ok) return holdJob(job, "shots", r.error);
     if (r.result.hold) return holdJob(job, "shots", r.result.hold);
     job.shots = r.result.shots;

@@ -6,10 +6,14 @@ import { readJson, writeJson, ensureDir } from "./lib/util.mjs";
 import { recordHold } from "./lib/ledger.mjs";
 
 export const STAGES = [
-  "scout", "gather", "verify", "sensitive", "engage", "script", "caption", "pronounce",
-  "voice", "align", "shots", "framing", "music", "subs", "render",
+  "scout", "gather", "verify", "sensitive", "engage", "script", "caption", "platformMeta", "pronounce",
+  "imageprep", "voice", "align", "shots", "framing", "music", "subs", "render",
   "synccheck", "cover", "watchqc", "publish",
-]; // engage runs BEFORE script: the writer crafts the ending around the chosen ask
+]; // engage runs BEFORE script: the writer crafts the ending around the chosen ask.
+// imageprep runs BEFORE voice (owner 2026-07-19 waste fix): photos are sourced and judged feasible
+// before the expensive voice stage, so an image-doomed story never reaches it.
+// NOTE: a stage MISSING from this list makes stageDone() set job.stage = STAGES[0] ("scout") —
+// indexOf returns -1 — which rewinds the resume pointer. platformMeta was missing; both are here now.
 
 export function jobPath(slug) {
   return path.join(IG.workDir, slug, "job.json");

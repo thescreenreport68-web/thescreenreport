@@ -861,5 +861,32 @@ await t("ledger merge: rebase conflicts resolve as a UNION — posted rows can n
   assert.equal(JSON.parse(fs.readFileSync(path.join(dir, "out3.json"), "utf8")).posts.length, 1, "corrupt remote → run rows kept");
 });
 
+await t("imageprep: pre-voice gate holds ONLY doomed stories — saves voice+render, never false-holds", async () => {
+  const { imageFeasibility } = await import("../agents/shots.mjs");
+  const P = (n) => ({ name: n, kind: "person" });
+  // (a) nothing imaged at all → would have held at shots anyway
+  assert.equal(imageFeasibility({ images: {}, rawImages: {}, entities: [P("A")], hookSentence: "A does something" }).ok, false);
+  // (b) 2 photos, ONE subject → composites impossible → the timeline could never reach 3 distinct
+  assert.equal(imageFeasibility({ images: { A: ["1.jpg", "2.jpg"] }, rawImages: {}, entities: [P("A")], hookSentence: "A does something" }).ok, false);
+  // (b') 2 photos but TWO subjects → composites CAN add frames → must NOT hold (duo/event reels)
+  assert.equal(imageFeasibility({ images: { A: ["1.jpg"], B: ["2.jpg"] }, rawImages: {}, entities: [P("A"), P("B")], hookSentence: "A and B seen together" }).ok, true, "composite-capable duo is never false-held");
+  // (c) the HOOK's subject has no photo → the reel cannot show who it is about (the watch-QC killer)
+  const c = imageFeasibility({
+    images: { Bystander: ["1.jpg", "2.jpg", "3.jpg", "4.jpg"] }, rawImages: {},
+    entities: [P("Bilaal Salaam"), P("Bystander")],
+    hookSentence: "Bilaal Salaam requested his testimony in the case",
+  });
+  assert.equal(c.ok, false, "hook subject imageless → held BEFORE voice");
+  assert.ok(/Bilaal Salaam/.test(c.hold));
+  // (c') the hook subject IS imaged → ships, even if a SECONDARY subject is imageless
+  assert.equal(imageFeasibility({
+    images: { "Ian Somerhalder": ["1.jpg", "2.jpg", "3.jpg"] }, rawImages: {},
+    entities: [P("Ian Somerhalder"), { name: "Haley on the Go podcast", kind: "event" }],
+    hookSentence: "Ian Somerhalder pulled the plug on acting",
+  }).ok, true, "imageless SECONDARY subject never holds the story");
+  // raw (ungated) photos count toward showability — composites use them
+  assert.equal(imageFeasibility({ images: { A: ["1.jpg", "2.jpg", "3.jpg"] }, rawImages: { A: ["r.jpg"] }, entities: [P("A")], hookSentence: "A returns" }).ok, true);
+});
+
 console.log(`\n${passed} passed, ${failed} failed`);
 process.exit(failed ? 1 : 0);

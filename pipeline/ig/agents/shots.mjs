@@ -412,17 +412,16 @@ export function planTimeline({ words, duration, entities, images, primary }) {
 }
 
 // ── the full stage ────────────────────────────────────────────────────────────────
-export async function buildShots({ job, words, duration, beats, articleBodyRaw = "" }) {
-  const dir = workDirFor(job.id);
-  const entities = job.facts.entities;
-  const story = job.facts.storyOneLine || job.article.title;
-  const images = {};
-  const rawImages = {}; // ungated originals — composite cells only
-  const provenance = [];
-  const sourcing = {}; // the per-entity REPORT — no more silent failures
-  const TARGET_IMAGES = 4; // aim this many DISTINCT photos per subject so the timeline rotates, never loops
-  const MIN_DISTINCT = 3;  // a finished reel using fewer distinct images than this is a loop → hold it
+// COST FIX (owner 2026-07-19): image sourcing is INDEPENDENT of the audio, but it used to run AFTER
+// the voice stage — so a story whose imagery could never carry a premium reel was discovered only
+// once we had already paid for voice + render, and died at watch-QC ("bot-slideshow feel"). That was
+// the single biggest waste bucket. `sourceImages` runs the identical sourcing BEFORE voice; the shots
+// stage then REUSES the result (`pre`), so the vision gating is paid exactly once, as before.
 
+// The per-entity sourcing loop, extracted VERBATIM so it can run either pre-voice (sourceImages)
+// or inside buildShots. Mutates images/rawImages/provenance/sourcing in place. (owner 2026-07-19)
+async function sourceAllEntities({ job, dir, entities, story, articleBodyRaw, images, rawImages, provenance, sourcing }) {
+  const TARGET_IMAGES = 4;
   // shared page/gdelt pools fetched ONCE
   const articlePool = laneArticle(job.article, articleBodyRaw);
   const sourcePool = await laneSources(job.article.sourceUrls);
@@ -555,6 +554,33 @@ export async function buildShots({ job, words, duration, beats, articleBodyRaw =
     locals.forEach((l, i) => provenance.push({ entity: e.name, url: l.url, prov: l.prov }));
   }
 
+}
+
+export async function sourceImages({ job, articleBodyRaw = "" }) {
+  const dir = workDirFor(job.id);
+  const entities = job.facts.entities;
+  const story = job.facts.storyOneLine || job.article.title;
+  const images = {};
+  const rawImages = {};
+  const provenance = [];
+  const sourcing = {};
+  await sourceAllEntities({ job, dir, entities, story, articleBodyRaw, images, rawImages, provenance, sourcing });
+  return { images, rawImages, provenance, sourcing };
+}
+
+export async function buildShots({ job, words, duration, beats, articleBodyRaw = "", pre = null }) {
+  const dir = workDirFor(job.id);
+  const entities = job.facts.entities;
+  const story = job.facts.storyOneLine || job.article.title;
+  const images = pre?.images || {};
+  const rawImages = pre?.rawImages || {}; // ungated originals — composite cells only
+  const provenance = pre?.provenance || [];
+  const sourcing = pre?.sourcing || {}; // the per-entity REPORT — no more silent failures
+  const TARGET_IMAGES = 4; // aim this many DISTINCT photos per subject so the timeline rotates, never loops
+  const MIN_DISTINCT = 3;  // a finished reel using fewer distinct images than this is a loop → hold it
+  // sourcing already ran pre-voice (`pre`) in the normal path — only re-source on a resumed job
+  if (!pre) await sourceAllEntities({ job, dir, entities, story, articleBodyRaw, images, rawImages, provenance, sourcing });
+
   const withImages = Object.keys(images).filter((k) => images[k].length);
   if (!withImages.length) return { shots: null, hold: "no usable imagery for any entity", sourcing };
 
@@ -591,4 +617,40 @@ export async function buildShots({ job, words, duration, beats, articleBodyRaw =
   }
   saveAssetProvenance(job.id, provenance);
   return { shots, primary, distinctImages: distinctImgs, imageCount: Object.values(images).flat().length, sourcing, warnings };
+}
+
+// PRE-VOICE FEASIBILITY (owner 2026-07-19: "get rid of the wastage, no quality compromise").
+// Runs right after the script, BEFORE the expensive voice stage. It does NOT lower any bar — it
+// applies bars the reel would have hit ANYWAY, just before we pay for voice + render instead of
+// after. Every condition below is one the story could not have survived downstream:
+//   (a) zero usable imagery      → buildShots already holds ("no usable imagery for any entity")
+//   (b) pool can't reach MIN_DISTINCT even with composites → buildShots would hold ("visually thin")
+//   (c) the HOOK's own subject has no photo at all → every beat falls back to other people's faces,
+//       which is exactly what watch-QC kept killing as "bot-slideshow feel" (3 reels in one run,
+//       ~$0.13 each, fully voiced + rendered first). A reel that cannot show the person it is about
+//       is not a reel we want to ship — holding it costs ZERO output (it never shipped) and saves
+//       the whole voice+render spend.
+// Composite-aware so it never false-holds a duo/event reel: 2+ entities with photos can compose
+// extra distinct frames, so (b) only fires when composites are impossible.
+export function imageFeasibility({ images, rawImages, entities, hookSentence, minDistinct = 3 }) {
+  const has = (n) => (images[n]?.length || 0) + (rawImages[n]?.length || 0);
+  const withImages = (entities || []).map((e) => e.name).filter((n) => has(n) > 0);
+  if (!withImages.length) return { ok: false, hold: "no usable imagery for any entity (pre-voice)" };
+
+  const distinctPool = new Set(Object.values(images).flat()).size;
+  const compositeCapable = withImages.length >= 2; // planFromBeats can build composite frames
+  if (distinctPool < minDistinct && !compositeCapable)
+    return { ok: false, hold: `visually thin — only ${distinctPool} distinct image(s) available and no composite partner (pre-voice)` };
+
+  // (c) the hook's named PERSON must be showable
+  const hookTokens = normWords(hookSentence || "");
+  const hookPerson = (entities || []).find((e) => {
+    if (!/person|actor|celebrity|director|musician/i.test(e.kind || "")) return false;
+    const t = normWords(e.name).filter((x) => x.length > 2);
+    return t.length && t.some((x) => hookTokens.includes(x));
+  });
+  if (hookPerson && has(hookPerson.name) === 0)
+    return { ok: false, hold: `hook subject "${hookPerson.name}" has no usable photo — the reel cannot show who it is about (pre-voice)` };
+
+  return { ok: true, distinctPool, withImages: withImages.length };
 }
