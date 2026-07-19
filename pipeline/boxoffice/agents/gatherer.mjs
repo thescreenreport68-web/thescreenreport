@@ -133,7 +133,9 @@ async function gatherStreaming(job, { findImpl = findContent, chatImpl = null } 
   const form = FORMS[job.angle.form];
   // Platform: Netflix rows carry their own chart; a TMDB-trending pick resolves its real platform from
   // TMDB providers (dataModule runs before the gatherer). No confirmed flatrate platform = no story.
-  const platform = film.netflix ? "Netflix" : ((job.boxData?.providers?.stream || [])[0] || null);
+  // Platform precedence: Netflix rows carry their own chart; a TMDB /discover pick already HAS its
+  // platform confirmed by the provider filter that surfaced it; otherwise fall back to TMDB providers.
+  const platform = film.netflix ? "Netflix" : (film.platform || (job.boxData?.providers?.stream || [])[0] || null);
   if (!film.netflix && !platform) { job.gathered = { numbers: [], records: [], cast: [], narrative: "", sources: [], outletCount: 0 }; job.gatherFail = "under floor: no confirmed streaming platform for trending TV"; return job; }
   const records = nf.rank ? [`#${nf.rank} on Netflix's Top 10 this week`] : [];
 

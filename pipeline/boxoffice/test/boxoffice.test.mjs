@@ -7,16 +7,16 @@ import fs from "node:fs";
 import path from "node:path";
 import os from "node:os";
 
-import { normMoney, moneyBucket, extractFigures, buildAllowed, numberFidelity, noInvention, platformGuard, canonicalFigures, numberConsistencyGate } from "../moneyGuard.mjs";
+import { normMoney, moneyBucket, extractFigures, buildAllowed, numberFidelity, noInvention, platformGuard, platformGuard as platformGuardX, canonicalFigures, canonicalFigures as canonicalFiguresX, numberConsistencyGate } from "../moneyGuard.mjs";
 import { scopeOk, FORMS, DATA_DIR } from "../config.bo.mjs";
 import { fidelityLocks, review as qaReview, classifyBlocks, findTemplateHeadings, hedgeCuts, dropSpin, speculationCuts, trendCuts, verdictCuts } from "../agents/qa.mjs";
 import { castTrustworthy } from "../boxofficeData.mjs";
-import { buildBoxOfficeMarkdown, writeBoxOfficeArticle, seoFinish, scaffoldViolations } from "../assemble.mjs";
+import { buildBoxOfficeMarkdown, writeBoxOfficeArticle, seoFinish, scaffoldViolations, numbersSection as numbersSectionX } from "../assemble.mjs";
 import { boRun } from "../borun.mjs";
 import { boKey, alreadyPublished, coveredEventSlugs, parkAngle as parkAngleX, parkedTries as parkedTriesX, parkCooling, filmAttemptBudgetLeft, bumpFilmAttempt } from "../store.mjs";
 import { run as gatherRun } from "../agents/gatherer.mjs";
 import { run as writerRun } from "../agents/writer.mjs";
-import { readChartCache, writeChartCache } from "../dailyChart.mjs";
+import { readChartCache, writeChartCache, parseChartText, chartMetaFromText } from "../dailyChart.mjs";
 import { parseRss, BO_SCOPE, JUNK_RE } from "../find/sources.mjs";
 import { categorize, cluster } from "../find/events.mjs";
 import { scoreEvent } from "../find/score.mjs";
@@ -376,7 +376,7 @@ fs.rmSync(TT, { recursive: true, force: true });
 console.log("streaming — finder picks + gatherer branch");
 await ta("finder builds NETFLIX-TOP10 + TRENDING-TV picks from Netflix data", async () => {
   const nf = { week: "2026-06-28", films: [{ title: "The Big One", rank: 1, hours: "22 million hours", hoursRaw: 22000000 }], tv: [{ title: "Hit Series", rank: 1, hours: "45 million hours", hoursRaw: 45000000 }] };
-  const found = await findFilms({ queueImpl: () => null, dailyChartImpl: async () => ({ films: [] }), limit: 5, discoverImpl: async () => [], netflixImpl: async () => nf, trackedImpl: { films: {} }, providersImpl: async () => null });
+  const found = await findFilms({ providerStreamImpl: async () => [], queueImpl: () => null, dailyChartImpl: async () => ({ films: [] }), limit: 5, discoverImpl: async () => [], netflixImpl: async () => nf, trackedImpl: { films: {} }, providersImpl: async () => null });
   const forms = found.map((e) => e.angle.form);
   assert.ok(forms.includes("NETFLIX-TOP10"), JSON.stringify(forms));
   assert.ok(forms.includes("TRENDING-TV"));
@@ -387,7 +387,7 @@ await ta("finder builds NETFLIX-TOP10 + TRENDING-TV picks from Netflix data", as
 await ta("finder never assigns a streaming form to a theatrical film (LLM clamp)", async () => {
   const films = [{ id: 1, title: "Theatrical", year: "2026", releaseDate: "2026-07-01", popularity: 80, via: "now_playing", overview: "", originalLanguage: "en" }];
   const badJudge = async () => ({ data: { picks: [{ i: 0, form: "NETFLIX-TOP10", workingTitle: "x", queries: ["x"] }] } });
-  const found = await findFilms({ queueImpl: () => null, dailyChartImpl: async () => ({ films: [] }), limit: 3, discoverImpl: async () => films, chatImpl: badJudge, netflixImpl: async () => ({ films: [], tv: [] }), trackedImpl: { films: {} }, providersImpl: async () => null });
+  const found = await findFilms({ providerStreamImpl: async () => [], queueImpl: () => null, dailyChartImpl: async () => ({ films: [] }), limit: 3, discoverImpl: async () => films, chatImpl: badJudge, netflixImpl: async () => ({ films: [], tv: [] }), trackedImpl: { films: {} }, providersImpl: async () => null });
   assert.ok(!found.some((e) => e.film.tmdbId === 1 && e.angle.form === "NETFLIX-TOP10"), "a streaming form must not attach to a theatrical film");
 });
 await ta("gatherer streaming branch builds Netflix-grounded gathered + meets the hours floor", async () => {
@@ -651,7 +651,7 @@ await ta("finder rotates PAST a covered film (by title) to a fresh one — never
     { i: 0, form: "BO-OPENING", workingTitle: "Toy Story 5", star: "", queries: ["x"] },
     { i: 1, form: "BO-OPENING", workingTitle: "Fresh Film", star: "", queries: ["y"] }] } });
   const seen = { slugs: new Set(["toy-story-5-bo-opening"]), titles: new Set(["toy story 5"]) };
-  const found = await findFilms({ queueImpl: () => null, dailyChartImpl: async () => ({ films: [] }), limit: 1, discoverImpl: async () => films, chatImpl: judge, netflixImpl: async () => ({ films: [], tv: [] }), trackedImpl: { films: {} }, providersImpl: async () => null, seen });
+  const found = await findFilms({ providerStreamImpl: async () => [], queueImpl: () => null, dailyChartImpl: async () => ({ films: [] }), limit: 1, discoverImpl: async () => films, chatImpl: judge, netflixImpl: async () => ({ films: [], tv: [] }), trackedImpl: { films: {} }, providersImpl: async () => null, seen });
   assert.ok(!found.some((e) => e.film.title === "Toy Story 5"), "a covered film must NOT be re-picked");
   assert.ok(found.some((e) => e.film.title === "Fresh Film"), "rotate to a fresh film");
 });
@@ -662,7 +662,7 @@ await ta("finder rotates to the next UNCOVERED Netflix title (a title staying #1
   // Streaming slugs are WEEK-KEYED: covered THIS week (w2026-06-28) → skipped this week; the same title in a
   // NEW chart week is a fresh story again (the old week-less slug permanently killed re-coverage).
   const seen = { slugs: new Set(["old-number-one-netflix-top10-w2026-06-28"]), titles: new Set(["old number one"]) };
-  const found = await findFilms({ queueImpl: () => null, dailyChartImpl: async () => ({ films: [] }), limit: 2, discoverImpl: async () => [], netflixImpl: async () => nf, trackedImpl: { films: {} }, providersImpl: async () => null, seen });
+  const found = await findFilms({ providerStreamImpl: async () => [], queueImpl: () => null, dailyChartImpl: async () => ({ films: [] }), limit: 2, discoverImpl: async () => [], netflixImpl: async () => nf, trackedImpl: { films: {} }, providersImpl: async () => null, seen });
   const nfPick = found.find((e) => e.angle.form === "NETFLIX-TOP10");
   assert.ok(nfPick, "a fresh Netflix pick exists");
   assert.equal(nfPick.film.title, "New Entry", "rotated past the covered #1");
@@ -733,7 +733,7 @@ await ta("finder ADVANCES a covered in-theater film as a BO-UPDATE when the fres
   const tracked = { films: { "1": { tmdbId: 1, title: "Wicked", releaseDate: "2026-06-01", status: "in-theaters", articles: [{ slug: "wicked-bo-opening" }] } } };
   const films = [{ id: 1, title: "Wicked", year: "2026", releaseDate: "2026-06-01", popularity: 90, via: "now_playing", overview: "", originalLanguage: "en" }];
   const judge = async () => ({ data: { picks: [{ i: 0, form: "BO-OPENING", workingTitle: "Wicked", star: "", queries: ["x"] }] } });
-  const found = await findFilms({ queueImpl: () => null, dailyChartImpl: async () => ({ films: [] }), limit: 1, discoverImpl: async () => films, chatImpl: judge, netflixImpl: async () => ({ films: [], tv: [] }), trackedImpl: tracked, providersImpl: async () => null, seen });
+  const found = await findFilms({ providerStreamImpl: async () => [], queueImpl: () => null, dailyChartImpl: async () => ({ films: [] }), limit: 1, discoverImpl: async () => films, chatImpl: judge, netflixImpl: async () => ({ films: [], tv: [] }), trackedImpl: tracked, providersImpl: async () => null, seen });
   assert.ok(found.some((e) => e.film.title === "Wicked" && e.angle.form === "BO-UPDATE"), "covered film surfaced as a next-day BO-UPDATE: " + JSON.stringify(found.map((e) => e.angle.form)));
 });
 fs.rmSync(TMP, { recursive: true, force: true });
@@ -1003,7 +1003,7 @@ await ta("finder: CHART films lead the pool (reliable supply); an off-chart even
     { slug: "charted-film-ev-milestone", filmTitle: "Charted Film", kind: "milestone", form: "BO-UPDATE", priority: 55, sources: [] },
   ] };
   const chart = { films: [{ title: "Charted Film", cume: "$100 million", dailyGross: "$2 million", rank: 1, dayInRelease: "Day 10" }] };
-  const found = await findFilms({ limit: 3, discoverImpl: async () => [], netflixImpl: async () => ({ films: [], tv: [] }), trackedImpl: { films: {} }, providersImpl: async () => null, dailyChartImpl: async () => chart, queueImpl: () => queue, dryQueueMark: true });
+  const found = await findFilms({ providerStreamImpl: async () => [], limit: 3, discoverImpl: async () => [], netflixImpl: async () => ({ films: [], tv: [] }), trackedImpl: { films: {} }, providersImpl: async () => null, dailyChartImpl: async () => chart, queueImpl: () => queue, dryQueueMark: true });
   // Chart films lead now: they are the dependable, pre-verified, cheapest-to-publish supply. Events
   // used to occupy the whole pool (110 of 308 candidate slots on 07-17 were parked-dead event slugs,
   // and 65 of 166 pools carried ZERO chart films) — that is what starved box-office volume.
@@ -1103,7 +1103,7 @@ await ta("finder cross-namespace dedup: a milestone event on a COVERED film is d
     { slug: "fresh-film-ev-milestone", filmTitle: "Fresh Film", kind: "milestone", form: "BO-MILESTONE", priority: 55, sources: [{ owner: "Variety", tier: 1, url: "https://x/1", title: "Fresh Film crosses $200M" }] },
   ] };
   const seen = { slugs: new Set(["covered-film-bo-update-d5"]), titles: new Set(["covered film"]) };
-  const found = await findFilms({ queueImpl: () => queue, dryQueueMark: true, limit: 3, discoverImpl: async () => [], netflixImpl: async () => ({ films: [], tv: [] }), trendingTvImpl: async () => [], trackedImpl: { films: {} }, providersImpl: async () => null, dailyChartImpl: async () => ({ films: [] }), seen });
+  const found = await findFilms({ providerStreamImpl: async () => [], queueImpl: () => queue, dryQueueMark: true, limit: 3, discoverImpl: async () => [], netflixImpl: async () => ({ films: [], tv: [] }), trendingTvImpl: async () => [], trackedImpl: { films: {} }, providersImpl: async () => null, dailyChartImpl: async () => ({ films: [] }), seen });
   assert.ok(!found.some((e) => e.film.title === "Covered Film"), "covered film's milestone event dropped");
   const fresh = found.find((e) => e.film.title === "Fresh Film");
   assert.ok(fresh, "uncovered milestone flows");
@@ -1117,11 +1117,11 @@ await ta("discoverTrendingTv: English-only, shaped; finder turns picks into TREN
   ] }) });
   const tv = await discoverTrendingTv({ fetchImpl: fetchFix });
   assert.equal(tv.length, 1); assert.equal(tv[0].title, "Hot Show");
-  const found = await findFilms({ queueImpl: () => null, limit: 3, discoverImpl: async () => [], netflixImpl: async () => ({ films: [], tv: [{ title: "Hot Show", rank: 1, hours: "10 million hours", hoursRaw: 1e7 }] }), trendingTvImpl: async () => tv, trackedImpl: { films: {} }, providersImpl: async () => null, dailyChartImpl: async () => ({ films: [] }), seen: { slugs: new Set(), titles: new Set() } });
+  const found = await findFilms({ providerStreamImpl: async () => [], queueImpl: () => null, limit: 3, discoverImpl: async () => [], netflixImpl: async () => ({ films: [], tv: [{ title: "Hot Show", rank: 1, hours: "10 million hours", hoursRaw: 1e7 }] }), trendingTvImpl: async () => tv, trackedImpl: { films: {} }, providersImpl: async () => null, dailyChartImpl: async () => ({ films: [] }), seen: { slugs: new Set(), titles: new Set() } });
   const hotShows = found.filter((e) => e.film.title === "Hot Show");
   assert.equal(hotShows.length, 1, "no double-cover: Netflix pick wins");
   assert.equal(hotShows[0].film.via, "netflix-tv");
-  const found2 = await findFilms({ queueImpl: () => null, limit: 3, discoverImpl: async () => [], netflixImpl: async () => ({ films: [], tv: [] }), trendingTvImpl: async () => tv, trackedImpl: { films: {} }, providersImpl: async () => null, dailyChartImpl: async () => ({ films: [] }), seen: { slugs: new Set(), titles: new Set() } });
+  const found2 = await findFilms({ providerStreamImpl: async () => [], queueImpl: () => null, limit: 3, discoverImpl: async () => [], netflixImpl: async () => ({ films: [], tv: [] }), trendingTvImpl: async () => tv, trackedImpl: { films: {} }, providersImpl: async () => null, dailyChartImpl: async () => ({ films: [] }), seen: { slugs: new Set(), titles: new Set() } });
   const solo = found2.find((e) => e.film.title === "Hot Show");
   assert.ok(solo && solo.film.via === "tmdb-tv-trending" && solo.angle.form === "TRENDING-TV", "TMDB pick flows when Netflix lacks it");
 });
@@ -1318,6 +1318,50 @@ t("categorize marks a listicle-phrase item irrelevant so it never reaches a paid
   // (sync wrapper around the async assertion via the shared helper is unnecessary — validated in ta below)
   assert.equal(isPlausibleFilmTitle(""), false);
   assert.equal(isPlausibleFilmTitle("A".repeat(80)), false, "absurdly long title rejected");
+});
+
+// ── VOLUME ENGINE — chart parser, pool sizing, multi-platform streaming ──────────────────────────
+console.log("volume engine — parser, pool, streaming supply");
+
+t("parseChartText: reads a real chart table row-for-row, including '-' ranks and blank columns", () => {
+  const text = [
+    "Daily Domestic Box Office Friday, July 17, 2026", "Reporting movies: 3",
+    "Rank","Prev","Title","Gross","Daily","Change","Theaters","Total Gross","Days in Release",
+    "1","(new)","The Odyssey","$51,280,000","","","3,919","$13,085","$51,280,000","1",
+    "2","(1)","Moana","$5,500,000","+43%","-70%","4,200","$1,310","$68,581,410","8",
+    "-","(17)","Star Wars: The Mandalorian and Grogu","$41,000","+120%","-9%","90","$456","$177,455,904","57",
+  ].join("\n");
+  const rows = parseChartText(text);
+  assert.equal(rows.length, 3, "all three rows incl. the '-' rank");
+  assert.equal(rows[0].title, "The Odyssey");
+  assert.equal(rows[0].dailyGross, "$51,280,000");      // the #1 opening the LLM extractor silently dropped
+  assert.equal(rows[0].cume, "$51,280,000");
+  assert.equal(rows[0].theaters, "3,919");
+  assert.equal(rows[0].daysInRelease, 1);
+  assert.equal(rows[1].dailyChangePct, "+43%");          // blank columns never shift a field
+  assert.equal(rows[1].cume, "$68,581,410");
+  assert.equal(rows[2].rank, null);
+  assert.equal(rows[2].daysInRelease, 57);
+  const meta = chartMetaFromText(text);
+  assert.equal(meta.reportedRows, 3);
+  assert.equal(meta.date, "2026-07-17", "the page's OWN date, not a computed one");
+});
+
+t("platformGuard: a CHARACTER named Max no longer reads as HBO Max; a real service claim still blocks", () => {
+  const cast = { body: "Julian Feder as Max leads the ensemble, with Chi McBride as Max Williams." };
+  assert.equal(platformGuardX(cast, ["netflix"]).ok, true, "character name is not a platform claim");
+  const claim = { body: "The film is now streaming on Max for subscribers." };
+  assert.equal(platformGuardX(claim, ["netflix"]).ok, false, "an actual streaming claim still blocks");
+  const hbo = { body: "It arrives on HBO Max next week." };
+  assert.equal(platformGuardX(hbo, ["netflix"]).ok, false, "HBO Max still blocks");
+});
+
+t("qa word floor counts the canonical numbers block the reader actually receives", () => {
+  const canon = canonicalFiguresX({ gathered: { cume: "$100,000,000", numbers: ["$100,000,000"] },
+    boxData: { worldwide: "$200 million", budget: "$50 million" },
+    film: { title: "Test Film", dailyChart: { cume: "$100,000,000", dailyGross: "$1,000,000", theaters: "3,000", dayInRelease: "Day 10" } } });
+  const words = numbersSectionX(canon, "Test Film").split(/\s+/).filter(Boolean).length;
+  assert.ok(words >= 35, `the appended block is substantial (${words} words) — QA measured ~${words} words short before`);
 });
 
 // ── summary ──────────────────────────────────────────────────────────────────────────────────────
