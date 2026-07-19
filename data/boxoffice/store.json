@@ -1150,17 +1150,21 @@
    "key": "raw-trending-tv-w2026-07-12|TRENDING-TV",
    "eventSlug": "raw-trending-tv-w2026-07-12",
    "form": "TRENDING-TV",
-   "reason": "3 unverified claim(s) cut, unrecovered",
-   "tries": 2,
-   "at": "2026-07-19T14:36:13.091Z"
+   "reason": "2 unverified claim(s) cut, unrecovered",
+   "tries": 3,
+   "at": "2026-07-19T19:06:07.918Z",
+   "dead": true,
+   "expiresAt": "2026-07-22T19:06:07.918Z"
   },
   {
    "key": "sullivan-s-crossing-trending-tv-w2026-07-12|TRENDING-TV",
    "eventSlug": "sullivan-s-crossing-trending-tv-w2026-07-12",
    "form": "TRENDING-TV",
-   "reason": "words 131 < 180 (owner-set ~200-word minimum)",
-   "tries": 2,
-   "at": "2026-07-19T14:38:16.740Z"
+   "reason": "words 164 < 180 (owner-set ~200-word minimum) | soft-floor engagement 4 < 5 | soft-floor humanVoice 4 < 5",
+   "tries": 3,
+   "at": "2026-07-19T19:08:24.771Z",
+   "dead": true,
+   "expiresAt": "2026-07-22T19:08:24.771Z"
   },
   {
    "key": "lucky-trending-tv|TRENDING-TV",
@@ -1294,21 +1298,21 @@
    "key": "gail-daughtry-and-the-celebrity-sex-pass-bo-update-d8|BO-UPDATE",
    "eventSlug": "gail-daughtry-and-the-celebrity-sex-pass-bo-update-d8",
    "form": "BO-UPDATE",
-   "reason": "consistency: title: \"$1.2\" is not a canonical figure for this film | title: \"$1.2\" contradicts the canonical domestic figure ($1,242,603)",
-   "tries": 21,
-   "at": "2026-07-19T18:34:34.032Z",
+   "reason": "consistency: title: \"$1.2\" is not a canonical figure for this film | metaTitle: \"$1M\" is not a canonical figure for this film | title: \"$1.2\" contradicts the canonical domestic figure ($1,242,603)",
+   "tries": 22,
+   "at": "2026-07-19T19:02:02.777Z",
    "dead": true,
-   "expiresAt": "2026-07-22T18:34:34.032Z"
+   "expiresAt": "2026-07-22T19:02:02.777Z"
   },
   {
    "key": "star-wars-the-mandalorian-and-grogu-bo-update-d57|BO-UPDATE",
    "eventSlug": "star-wars-the-mandalorian-and-grogu-bo-update-d57",
    "form": "BO-UPDATE",
    "reason": "consistency: title: \"$177.5\" is not a canonical figure for this film | title: \"$177.5\" contradicts the canonical domestic figure ($177,455,904) | metaTitle: headlines domestic while the title headlines dailyGross/other — the SERP promise must match the page",
-   "tries": 21,
-   "at": "2026-07-19T18:36:51.784Z",
+   "tries": 22,
+   "at": "2026-07-19T19:03:32.420Z",
    "dead": true,
-   "expiresAt": "2026-07-22T18:36:51.784Z"
+   "expiresAt": "2026-07-22T19:03:32.420Z"
   },
   {
    "key": "the-super-mario-galaxy-movie-ev-milestone-d0|BO-MILESTONE",
@@ -1367,14 +1371,14 @@
    "at": "2026-07-19T18:10:20.876Z"
   }
  ],
- "zeroStreak": 4,
+ "zeroStreak": 5,
  "daySpend": {
   "laDay": "2026-07-19",
-  "usd": 0.60324
+  "usd": 0.64993
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1784485943584
+  "lastMs": 1784487643711
  },
  "lastAuditDay": "2026-07-19",
  "attempts": {
@@ -1391,8 +1395,8 @@
    "the super mario galaxy movie": 1,
    "passenger": 2,
    "salish & jordan matter": 2,
-   "raw": 1,
-   "sullivan's crossing": 1,
+   "raw": 2,
+   "sullivan's crossing": 2,
    "survival of the thickest": 1,
    "off campus": 1,
    "jeff arcuri: nice to meet you": 2,
