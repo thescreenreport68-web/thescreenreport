@@ -1,0 +1,68 @@
+{
+ "runId": "run-2026-07-19T06-33-43",
+ "mode": "live",
+ "startedAt": "2026-07-19T06:33:43.561Z",
+ "films": 44,
+ "published": [
+  {
+   "tag": "the-odyssey-bo-update×BO-UPDATE",
+   "slug": "the-odyssey-box-office-day-1-adds-51-3-million-as-domestic-total-hits-51-3",
+   "path": "/home/runner/work/thescreenreport/thescreenreport/content/articles/the-odyssey-box-office-day-1-adds-51-3-million-as-domestic-total-hits-51-3.md",
+   "score": 80
+  }
+ ],
+ "held": [],
+ "rejected": [],
+ "skipped": [],
+ "blocked": [],
+ "paced": {
+  "tokens": 1.29,
+  "behind": true,
+  "expected": 19.14,
+  "allow": 1
+ },
+ "zeroStreak": 0,
+ "daySpend": {
+  "laDay": "2026-07-18",
+  "usd": 0.78609
+ },
+ "finishedAt": "2026-07-19T06:35:02.388Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3413,
+    "out": 897,
+    "usd": 0.00025,
+    "ms": 4281
+   },
+   "gatherer": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3043,
+    "out": 225,
+    "usd": 0.00039,
+    "ms": 1020
+   },
+   "synthesizer": {
+    "calls": 1,
+    "errors": 0,
+    "in": 794,
+    "out": 912,
+    "usd": 0.00024,
+    "ms": 9986
+   },
+   "writerChart": {
+    "calls": 1,
+    "errors": 0,
+    "in": 2013,
+    "out": 919,
+    "usd": 0.00078,
+    "ms": 13266
+   }
+  },
+  "totalUsd": 0.00165
+ },
+ "openrouterTotalUsd": 0.00182
+}
