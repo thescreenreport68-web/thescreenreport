@@ -1120,70 +1120,40 @@
    "reason": "scaffold: empty section \"## The Box Office: A Soft Franchise Debu\" | scaffold: body 178 words < 180 floor",
    "tries": 1,
    "at": "2026-07-19T06:33:07.927Z"
+  },
+  {
+   "key": "descendants-wicked-wonderland-now-streaming|NOW-STREAMING",
+   "eventSlug": "descendants-wicked-wonderland-now-streaming",
+   "form": "NOW-STREAMING",
+   "reason": "synthesizer returned no usable brief",
+   "tries": 1,
+   "at": "2026-07-19T07:04:01.062Z"
+  },
+  {
+   "key": "lee-cronin-s-the-mummy-now-streaming|NOW-STREAMING",
+   "eventSlug": "lee-cronin-s-the-mummy-now-streaming",
+   "form": "NOW-STREAMING",
+   "reason": "words 153 < 180 (owner-set ~200-word minimum) | soft-floor engagement 3 < 5 | soft-floor humanVoice 4 < 5",
+   "tries": 1,
+   "at": "2026-07-19T07:05:39.889Z"
   }
  ],
- "zeroStreak": 0,
+ "zeroStreak": 1,
  "daySpend": {
-  "laDay": "2026-07-18",
-  "usd": 0.78609
+  "laDay": "2026-07-19",
+  "usd": 0.02334
  },
  "pace": {
-  "tokens": 0.29277182539682567,
-  "lastMs": 1784442823561
+  "tokens": 0.3766464841269844,
+  "lastMs": 1784444449439
  },
- "lastAuditDay": "2026-07-18",
+ "lastAuditDay": "2026-07-19",
  "attempts": {
-  "laDay": "2026-07-18",
+  "laDay": "2026-07-19",
   "byFilm": {
-   "the odyssey": 3,
-   "spider-man: brand new day": 3,
-   "disclosure day": 1,
-   "ek din": 1,
-   "the hawk": 3,
-   "young washington": 3,
-   "golden kamuy": 1,
-   "love in the moonlight": 2,
-   "the invite": 1,
-   "obsession": 3,
-   "backrooms": 3,
-   "jackass: best and last": 2,
-   "scary movie": 3,
-   "the abandons": 3,
-   "voicemails for isabelle": 2,
-   "chained": 3,
-   "potential": 3,
-   "the boss baby": 1,
-   "the sheep detectives": 3,
-   "citizen vigilante": 2,
-   "supergirl": 2,
-   "zola": 1,
-   "the best 4-part sci-fi book adaptation of the last 15 years": 2,
-   "the best sci-fi book adaptation of the last 15 years": 1,
-   "a perfect zombie movie": 1,
-   "untitled spy thriller": 1,
-   "the get out": 1,
-   "i will find you": 1,
-   "worst neighbor ever": 1,
-   "little house on the prairie": 1,
-   "avatar: the last airbender": 1,
-   "salish & jordan matter": 1,
-   "raw": 1,
-   "sullivan's crossing": 1,
-   "survival of the thickest": 1,
-   "lucky": 1,
-   "silo": 1,
-   "off campus": 1,
-   "ride or die": 1,
-   "the westies": 1,
-   "widow's bay": 1,
-   "elle": 1,
-   "margo's got money troubles": 1,
-   "star city": 1,
-   "not suitable for work": 1,
-   "regular show: the lost tapes": 1,
-   "the testaments": 1,
-   "the five star weekend": 1,
-   "rick and morty": 1
+   "descendants: wicked wonderland": 1,
+   "lee cronin's the mummy": 1,
+   "the sheep detectives": 1
   }
  }
 }
