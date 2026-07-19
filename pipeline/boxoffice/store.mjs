@@ -8,19 +8,22 @@
 import fs from "node:fs";
 import path from "node:path";
 import { DATA_DIR } from "./config.bo.mjs";
+import { loadJsonState } from "./health.mjs";
 
 const STORE_PATH = path.join(DATA_DIR, "store.json");
 const CAP = 4000;
 
 export const boKey = (eventSlug, form) => `${eventSlug || "no-event"}|${form}`;
 
+// Same contract as loadTracked: an unreadable store is AMNESIA (we lose dedup + the publish ledger that
+// the materiality backstop reads), not an empty one. `lost` propagates so the tick can fail closed.
 export function loadStore(file = STORE_PATH) {
-  try {
-    const s = JSON.parse(fs.readFileSync(file, "utf8"));
-    return { published: s.published || [], parked: s.parked || [], zeroStreak: s.zeroStreak || 0, daySpend: s.daySpend || null, pace: s.pace || null, lastAuditDay: s.lastAuditDay || null, attempts: s.attempts || null, file };
-  } catch {
-    return { published: [], parked: [], zeroStreak: 0, daySpend: null, pace: null, lastAuditDay: null, attempts: null, file };
-  }
+  const { data: s, lost } = loadJsonState(file, {}, { stage: "store.json" });
+  return {
+    published: s?.published || [], parked: s?.parked || [], zeroStreak: s?.zeroStreak || 0,
+    daySpend: s?.daySpend || null, pace: s?.pace || null, lastAuditDay: s?.lastAuditDay || null,
+    attempts: s?.attempts || null, file, lost,
+  };
 }
 
 function save(store) {

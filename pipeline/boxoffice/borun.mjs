@@ -27,6 +27,7 @@ import { FORMS, ACCEPT_FLOOR, MAX_ATTEMPTS, GATE, DATA_DIR, REVIEW_DIR, FLOOD_CA
 import { cutArticle } from "../lib/cutter.mjs";
 import { addInternalLinks } from "../lib/internalLinks.mjs";
 import { costReport } from "../lib/openrouter.mjs";
+import { resetFaults, faultReport, fault, hasCritical, SEV } from "./health.mjs";
 
 const PAUSED_FILE = path.join(DATA_DIR, "PAUSED");
 const RUNS_DIR = path.join(DATA_DIR, "runs");
@@ -85,6 +86,20 @@ export async function boRun({
   const tracked = trackedImpl || loadTracked();
   const report = { runId, mode: review ? "review" : "live", startedAt: new Date(now).toISOString(), films: 0, published: [], held: [], rejected: [], skipped: [], blocked: [] };
   meterReset();
+  resetFaults();
+
+  // ── STATE-LOSS CIRCUIT BREAKER ────────────────────────────────────────────────────────────────────
+  // If a ledger file EXISTS but could not be parsed, this process has amnesia: every film it has ever
+  // covered now looks brand-new. That is not hypothetical — it is precisely how 3 duplicate articles
+  // with identical figures reached the live site. Publishing while amnesiac is unsafe at any speed, and
+  // a skipped tick costs one article while a duplicate costs credibility on a site pending AdSense
+  // review. So: record it as CRITICAL and refuse to publish. The next tick re-pulls state from git and
+  // recovers on its own. Review/dry runs are exempt (they never write to the live site).
+  if ((store?.lost || tracked?.lost) && !dryRun && !reviewDir) {
+    report.stateLost = { store: !!store?.lost, tracked: !!tracked?.lost };
+    fault("state-loss", "refusing to publish: lane state was unreadable, so every film would look brand-new (duplicate risk)", { severity: SEV.CRITICAL, meta: report.stateLost });
+    return finish(report, dryRun);
+  }
 
   // ── 24/7 guards ──
   if (fs.existsSync(PAUSED_FILE)) { report.paused = true; return finish(report, dryRun); }
@@ -352,6 +367,14 @@ export async function boRun({
 }
 
 function finish(report, dryRun) {
+
+  // Every exit path carries the tick's fault list — a degraded tick can never look clean in the
+
+  // artifact, which is the whole point of health.mjs.
+
+  report.faults = faultReport();
+
+  if (hasCritical()) report.degraded = true;
   report.finishedAt = new Date().toISOString();
   report.meter = meterReport();
   report.openrouterTotalUsd = Number((costReport()?.total || 0).toFixed(5));

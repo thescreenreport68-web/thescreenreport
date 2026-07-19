@@ -22,6 +22,8 @@ import { categorize, cluster } from "../find/events.mjs";
 import { scoreEvent } from "../find/score.mjs";
 import { readQueue, markConsumed } from "../find/findrun.mjs";
 import { PACE, refill, expectedByNow, allowance, debit } from "../pacing.mjs";
+import { fault as faultX, assertCount as assertCountX, faultReport as faultReportX, resetFaults as resetFaultsX, loadJsonState as loadJsonStateX } from "../health.mjs";
+import { loadStore as loadStoreX } from "../store.mjs";
 import { KIND_FORM, isPlausibleFilmTitle } from "../find/events.mjs";
 import { discoverTrendingTv } from "../discover.mjs";
 import { dailyAudit } from "../audit.mjs";
@@ -1400,6 +1402,62 @@ t("materiality FAILS CLOSED when tracked state is lost — the live-duplicate ro
   const fresh = isMaterialX({ title: "Brand New Movie", dailyChart: { cume: "$10,000,000", dayInRelease: "Day 1" } },
     { cume: "$10,000,000" }, {}, { films: {} }, { publishedLedger: ledger });
   assert.equal(fresh.material, true, "a film with no ledger row is still a first sighting");
+});
+
+// ── STRUCTURAL HARDENING — the lane must be able to tell when it is broken ───────────────────────
+console.log("structural — fault recording, count assertions, state-loss breaker");
+
+t("assertCount records a shortfall instead of accepting it silently (the 6-of-17 chart bug)", () => {
+  resetFaultsX();
+  assert.equal(assertCountX("chart", 17, 17), true, "a full parse is silent");
+  assert.equal(faultReportX().count, 0);
+  assert.equal(assertCountX("chart", 6, 17, { label: "chart rows" }), false, "a shortfall is caught");
+  const r = faultReportX();
+  assert.equal(r.count, 1);
+  assert.match(r.faults[0].message, /expected 17 chart rows, got 6/);
+});
+
+t("loadJsonState distinguishes FIRST RUN from LOST MEMORY", () => {
+  resetFaultsX();
+  const dirH = fs.mkdtempSync(path.join(os.tmpdir(), "bo-health-"));
+  const absent = loadJsonStateX(path.join(dirH, "nope.json"), { films: {} }, { stage: "tracked" });
+  assert.equal(absent.lost, false, "an absent file is a first run, not a fault");
+  assert.equal(faultReportX().count, 0, "and it stays silent");
+  const bad = path.join(dirH, "corrupt.json");
+  fs.writeFileSync(bad, "{ not json at all");
+  const lost = loadJsonStateX(bad, { films: {} }, { stage: "tracked" });
+  assert.equal(lost.lost, true, "an unreadable EXISTING file is amnesia");
+  assert.equal(faultReportX().bySeverity.critical, 1, "and it is CRITICAL");
+  fs.rmSync(dirH, { recursive: true, force: true });
+});
+
+await ta("borun REFUSES TO PUBLISH on lost state — the duplicate-article circuit breaker", async () => {
+  const dirB = fs.mkdtempSync(path.join(os.tmpdir(), "bo-breaker-"));
+  fs.writeFileSync(path.join(dirB, "store.json"), "{ corrupted by a rebase conflict");
+  const store = loadStoreX(path.join(dirB, "store.json"));
+  assert.equal(store.lost, true, "precondition: the store reports amnesia");
+  const report = await boRun({
+    storeImpl: store,
+    trackedImpl: { films: {}, lost: false },
+    findImpl: async () => { throw new Error("finder must NOT run behind the breaker"); },
+    runFindImpl: async () => { throw new Error("findrun must NOT run behind the breaker"); },
+    readQueueImpl: () => ({ events: [] }),
+    nowMs: Date.parse("2026-07-19T18:00:00Z"),
+  });
+  assert.ok(report.stateLost, "the tick records WHY it stopped");
+  assert.equal(report.published.length, 0, "an amnesiac tick publishes NOTHING");
+  assert.equal(report.films, 0, "and never even reaches discovery");
+  assert.equal(report.degraded, true, "the run report is marked degraded");
+  fs.rmSync(dirB, { recursive: true, force: true });
+});
+
+t("every run report carries a fault summary, so a degraded tick cannot look clean", () => {
+  resetFaultsX();
+  faultX("test-stage", "something degraded", { severity: "warn" });
+  const r = faultReportX();
+  assert.equal(r.count, 1);
+  assert.equal(r.bySeverity.warn, 1);
+  assert.equal(r.faults[0].stage, "test-stage");
 });
 
 // ── summary ──────────────────────────────────────────────────────────────────────────────────────

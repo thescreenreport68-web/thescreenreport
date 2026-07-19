@@ -14,6 +14,7 @@ import path from "node:path";
 import { DATA_DIR } from "./config.bo.mjs";
 import { normMoney } from "./moneyGuard.mjs";
 import { injectInternalLinks } from "../lib/internalLinks.mjs";
+import { loadJsonState } from "./health.mjs";
 
 const TRACKED_PATH = path.join(DATA_DIR, "tracked.json");
 const FILM_CAP = 3000;
@@ -22,9 +23,13 @@ export const MILESTONES = [50, 75, 100, 150, 200, 250, 300, 400, 500, 750, 1000]
 
 export const trackKey = (film) => String(film?.tmdbId || film?.title || "unknown").toLowerCase();
 
+// A missing ledger and an UNREADABLE ledger are completely different conditions, and collapsing them is
+// what published 3 duplicate articles: an unreadable tracked.json became `{films:{}}`, so every film we
+// had covered looked brand-new. `lost` now says which happened, and borun refuses to publish on a lost
+// tick rather than acting amnesiac.
 export function loadTracked(file = TRACKED_PATH) {
-  try { const j = JSON.parse(fs.readFileSync(file, "utf8")); return { films: j.films || {}, file }; }
-  catch { return { films: {}, file }; }
+  const { data, lost } = loadJsonState(file, { films: {} }, { stage: "tracked.json" });
+  return { films: data?.films || {}, file, lost };
 }
 function save(t) {
   fs.mkdirSync(path.dirname(t.file), { recursive: true });
