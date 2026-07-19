@@ -1,0 +1,137 @@
+{
+  "ts": "2026-07-19T05:02:37.023Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "man-crashes-car-into-beyonce-and-jay-zs-hamptons-security-gate",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [],
+      "headline": [
+        "metaTitle",
+        "metaDescription",
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 1,
+      "surgicalFixes": 0
+    }
+  ],
+  "topics": 1,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 0,
+  "costUSD": 0.011274,
+  "costPerPublished": 0.011274,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 6,
+      "in": 11458,
+      "out": 1383,
+      "usd": 0.0068949
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 897,
+      "out": 458,
+      "usd": 0.00025382
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 5,
+      "in": 13346,
+      "out": 4233,
+      "usd": 0.00343112715
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 7,
+      "in": 4973,
+      "out": 493,
+      "usd": 0.0006945000000000001
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2335,
+      "out": 210,
+      "usd": 0.0012255,
+      "ms": 1387
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 897,
+      "out": 458,
+      "usd": 0.00016317000000000003,
+      "ms": 12484
+    },
+    "writer": {
+      "calls": 4,
+      "errors": 0,
+      "in": 12668,
+      "out": 3933,
+      "usd": 0.00425086,
+      "ms": 55748
+    },
+    "verify": {
+      "calls": 5,
+      "errors": 0,
+      "in": 9123,
+      "out": 1173,
+      "usd": 0.0056694,
+      "ms": 7078
+    },
+    "judge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1401,
+      "out": 158,
+      "usd": 0.0002033,
+      "ms": 817
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 678,
+      "out": 300,
+      "usd": 0.00025794,
+      "ms": 4211
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 382,
+      "out": 96,
+      "usd": 0.0000766,
+      "ms": 673
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 195,
+      "out": 46,
+      "usd": 0.000037900000000000006,
+      "ms": 564
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2090,
+      "out": 99,
+      "usd": 0.00024859999999999997,
+      "ms": 1893
+    },
+    "linker": {
+      "calls": 3,
+      "errors": 0,
+      "in": 905,
+      "out": 94,
+      "usd": 0.00012810000000000002,
+      "ms": 1555
+    }
+  }
+}
