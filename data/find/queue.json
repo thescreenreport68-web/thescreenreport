@@ -1,12 +1,12 @@
 {
-  "runId": "run-2026-07-19T19-30-48",
-  "builtAt": "2026-07-19T19:31:30.240Z",
-  "count": 7,
+  "runId": "run-2026-07-19T20-00-50",
+  "builtAt": "2026-07-19T20:02:03.053Z",
+  "count": 16,
   "topics": [
     {
       "id": "news-anne-hathaway-princess-diaries-3-script-breakthrough",
-      "slug": "anne-hathaway-says-princess-diaries-3-had-a-story-breakthrough-after-h",
-      "title": "Anne Hathaway Says Princess Diaries 3 Had a Story Breakthrough After Having to Start Over With the Script: We are Moving in the Right Direction",
+      "slug": "anne-hathaway-says-princess-diaries-3-had-a-story-breakthrough",
+      "title": "Anne Hathaway Says Princess Diaries 3 Had a Story Breakthrough",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
@@ -14,13 +14,13 @@
       "eventType": "announcement",
       "sensitivity": "normal",
       "eventSlug": "anne-hathaway-princess-diaries-3-script-breakthrough",
-      "primaryKeyword": "Princess Diaries 3",
+      "primaryKeyword": "Princess Diaries 3 update",
       "primaryEntity": "Princess Diaries 3",
       "entities": [
         "One Day",
         "Anne Hathaway"
       ],
-      "angle": "Anne Hathaway shared an update on 'Princess Diaries 3,' stating that the script has had a breakthrough after a previous version was scrapped.",
+      "angle": "Anne Hathaway confirms a script breakthrough for 'Princess Diaries 3' after starting over.",
       "tmdbType": "movie",
       "source": "rss:Variety",
       "sources": [
@@ -28,14 +28,90 @@
           "outlet": "Variety",
           "tier": 7,
           "url": "https://variety.com/2026/film/news/anne-hathaway-princess-diaries-3-breakthrough-script-1236816029/",
-          "ageMin": 5,
+          "ageMin": 35,
           "headline": "Anne Hathaway Says Princess Diaries 3 Had a Story Breakthrough After Having to Start Over With the Script: We are Moving in the Right Direction",
           "summary": "“Princess Diaries 3” recently had a breakthrough after a scrapped script, Anne Hathaway revealed during an appearance on SiriusXM’s “Radio Andy.” “I’m busy making baby number three, and that has sort of taken the place of knowing when exactly I can make Princess Diaries 3, ” Hathaway said. “I can say I think we had a story [ ]"
+        },
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/anne-hathaway-princess-diaries-3-update-1236651735/",
+          "ageMin": 36,
+          "headline": "Anne Hathaway Reveals Princess Diaries 3 Update: We Had a Story Breakthrough",
+          "summary": "The Oscar winner played the beloved Mia Thermopolis in the 2001 and 2004 films."
         }
       ],
-      "ageMin": 5,
+      "ageMin": 35,
       "_cand": {
         "key": "rss:anne-hathaway-says-princess-diaries-3-had-a-story-breakthrou",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 2,
+      "verification": {
+        "tier1Count": 2,
+        "tier1Owners": 1,
+        "outletCount": 2,
+        "outlets": [
+          "Variety",
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 101,
+      "signals": {
+        "recency": 24,
+        "corroboration": 18,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 8,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-the-hobbit-animated-1977-review",
+      "slug": "1977-s-animated-the-hobbit-proves-the-right-hero-s-journey-can-be-take",
+      "title": "1977's Animated 'The Hobbit' Proves the Right Hero's Journey Can Be Taken Again and Again",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "review",
+      "sensitivity": "normal",
+      "eventSlug": "the-hobbit-animated-1977-review",
+      "primaryKeyword": "animated the hobbit",
+      "primaryEntity": "The Hobbit",
+      "entities": [
+        "The Hobbit (1977 film)",
+        "Christopher Nolan",
+        "The Odyssey"
+      ],
+      "angle": "A review highlights the enduring appeal of the 1977 animated 'The Hobbit' and pairs it with Christopher Nolan's 'The Odyssey'.",
+      "tmdbType": "movie",
+      "source": "rss:IndieWire",
+      "sources": [
+        {
+          "outlet": "IndieWire",
+          "tier": 7,
+          "url": "https://www.indiewire.com/features/best-of/the-hobbit-animated-1977-rankin-and-bass-cult-fil-1235206129/",
+          "ageMin": 2402,
+          "headline": "1977 s Animated The Hobbit Proves the Right Hero s Journey Can Be Taken Again and Again",
+          "summary": "You can't go wrong pairing Christopher Nolan's \"The Odyssey\" and this retro Rankin/Bass classic."
+        }
+      ],
+      "ageMin": 2402,
+      "_cand": {
+        "key": "rss:1977-s-animated-the-hobbit-proves-the-right-hero-s-journey-c",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -45,18 +121,18 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Variety"
+          "IndieWire"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Variety",
+        "attribution": "IndieWire",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 93,
+      "priority": 94,
       "signals": {
-        "recency": 30,
+        "recency": 1,
         "corroboration": 12,
         "status": 18,
         "type": 9,
@@ -65,12 +141,14 @@
         "big": 24,
         "trending": 0,
         "spice": 0,
-        "softTv": 0
+        "softTv": 0,
+        "radar": 30
       },
-      "tierClass": "B"
+      "radarKind": "movie-in-theaters",
+      "tierClass": "A"
     },
     {
-      "id": "news-john-leguizamo-the-odyssey-interview",
+      "id": "news-john-leguizamo-the-odyssey-role",
       "slug": "john-leguizamo-has-never-been-as-vulnerable-as-in-the-odyssey-it-was-s",
       "title": "John Leguizamo Has Never Been as Vulnerable as in The Odyssey : “It Was So Intense for Me”",
       "contentType": "news",
@@ -79,14 +157,14 @@
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "john-leguizamo-the-odyssey-interview",
+      "eventSlug": "john-leguizamo-the-odyssey-role",
       "primaryKeyword": "John Leguizamo",
       "primaryEntity": "John Leguizamo",
       "entities": [
         "The Odyssey",
         "Christopher Nolan"
       ],
-      "angle": "John Leguizamo discusses the emotional intensity of his role in Christopher Nolan's 'The Odyssey'.",
+      "angle": "John Leguizamo discusses the intense emotional experience of his role in Christopher Nolan's upcoming film.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
@@ -94,12 +172,12 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/movies/movie-features/john-leguizamo-the-odyssey-eumaeus-chris-nolan-interview-1236651694/",
-          "ageMin": 113,
+          "ageMin": 143,
           "headline": "John Leguizamo Has Never Been as Vulnerable as in The Odyssey : “It Was So Intense for Me”",
           "summary": "\"Working with Chris Nolan...you feel really seen,\" the actor behind Eumaeus tells The Hollywood Reporter in a wide-ranging conversation. \"I was able to tap into these really difficult, painful emotions from the depth of my soul.\""
         }
       ],
-      "ageMin": 113,
+      "ageMin": 143,
       "_cand": {
         "key": "rss:john-leguizamo-has-never-been-as-vulnerable-as-in-the-odysse",
         "popularity": 0,
@@ -138,63 +216,61 @@
       "tierClass": "A"
     },
     {
-      "id": "news-james-gunn-rick-devens-man-of-tomorrow-cameo",
-      "slug": "james-gunn-s-man-of-tomorrow-cameo-for-big-brother-star-rick-devens-ca",
-      "title": "James Gunn's 'Man of Tomorrow' Cameo for 'Big Brother' Star Rick Devens Canceled",
-      "contentType": "news",
-      "formatTag": "news",
+      "id": "trailer-les-miserables-movie-trailer",
+      "slug": "new-les-mis-rables-movie-trailer-promises-powerful-return-to-classic",
+      "title": "New LES MISÉRABLES Movie Trailer Promises Powerful Return to Classic",
+      "contentType": "trailer",
+      "formatTag": "trailer",
       "category": "movies",
-      "subcategory": "news",
-      "eventType": "casting",
+      "subcategory": "trailers",
+      "eventType": "trailer",
       "sensitivity": "normal",
-      "eventSlug": "james-gunn-rick-devens-man-of-tomorrow-cameo",
-      "primaryKeyword": "james gunn cameo",
-      "primaryEntity": "James Gunn's PG Porn",
+      "eventSlug": "les-miserables-movie-trailer",
+      "primaryKeyword": "les miserables movie trailer",
+      "primaryEntity": "Les Misérables",
       "entities": [
-        "James Gunn",
-        "Rick Devens",
-        "Man of Tomorrow"
+        "Victor Hugo"
       ],
-      "angle": "James Gunn reveals a planned cameo for reality star Rick Devens in 'Man of Tomorrow' that ultimately fell through.",
+      "angle": "A teaser trailer has been released for a new French film adaptation of Les Misérables.",
       "tmdbType": "movie",
-      "source": "rss:Variety",
+      "source": "gnews:GeekTyrant",
       "sources": [
         {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/film/news/james-gunn-big-brother-rick-devens-man-of-tomorrow-cameo-1236815991/",
-          "ageMin": 141,
-          "headline": "James Gunn Gave ‘Big Brother 28’ Star Rick Devens a Cameo in ‘Man of Tomorrow’ but He ‘Had to Cancel’",
-          "summary": "Rick Devens was supposed to have a cameo in James Gunn s “Man of Tomorrow,” but the reality star had filming obligations with Big Brother. Gunn revealed the cameo after Devens gave the DC Studios co-head a shoutout during the live broadcast of “Big Brother” Season 28’s Thursday eviction episode. Gunn shared the clip on social [ ]"
+          "outlet": "GeekTyrant",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPWC1hV2o1M09FMmtvemZQZzJEVWtYcEdCRkc2UjNsSExZbkpXUl96dTRtelJDLV94cTRmWUw1VDRSbXFJX2FtcEZObDNkMWFxelFYbzI5eG1oZ0hqb25vZVV3S0NqNkVYTS1EOEZVV1hPR1N4Tl94dDgtSGlTVEJ4cTRZcS01RlNxWHlCUzc4MVpaMnBJUzJFVlQ5OVRvZ3hSeTE1OVJ0T3dJVWlwZnB4cHFPR0wxeEZQWi1Sa2V2NWQ5MmlFaGVwal9lWDZkSGs?oc=5",
+          "ageMin": 232,
+          "headline": "Teaser Trailer for France's Epic New LES MISÉRABLES Movie Promises a Powerful Return to Victor Hugo's Classic - GeekTyrant",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMizwFBVV95cUxPWC1hV2o1M09FMmtvemZQZzJEVWtYcEdCRkc2UjNsSExZbkpXUl96dTRtelJDLV94cTRmWUw1VDRSbXFJX2FtcEZObDNkMWFxelFYbzI5eG1oZ0hqb25vZVV3S0NqNkVYTS1EOEZVV1hPR1N4Tl94dDgtSGlTVEJ4cTRZcS01RlNxWHlCUzc4MVpaMnBJUzJFVlQ5OVRvZ3hSeTE1OVJ0T3dJVWlwZnB4cHFPR0wxeEZQWi1"
         }
       ],
-      "ageMin": 141,
+      "ageMin": 232,
       "_cand": {
-        "key": "rss:james-gunn-gave-big-brother-28-star-rick-devens-a-cameo-in-m",
+        "key": "rss:teaser-trailer-for-france-s-epic-new-les-mis-rables-movie-pr",
         "popularity": 0,
-        "kind": "rss-news"
+        "kind": "gnews"
       },
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
+        "tier1Count": 0,
+        "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "Variety"
+          "GeekTyrant"
         ],
-        "maxTier": 7,
+        "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "Variety",
+        "attribution": "GeekTyrant",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 84,
+      "priority": 74,
       "signals": {
-        "recency": 16,
-        "corroboration": 12,
+        "recency": 9,
+        "corroboration": 8,
         "status": 18,
-        "type": 14,
+        "type": 15,
         "pop": 0,
         "breakout": 0,
         "big": 24,
@@ -205,7 +281,7 @@
       "tierClass": "B"
     },
     {
-      "id": "news-god-of-war-kratos-recast-ryan-hurst-injury",
+      "id": "news-god-of-war-tv-series-casting",
       "slug": "god-of-war-to-recast-kratos-role-following-ryan-hurst-on-set-injury",
       "title": "God of War to Recast Kratos Role Following Ryan Hurst On-Set Injury",
       "contentType": "news",
@@ -213,31 +289,30 @@
       "category": "tv",
       "subcategory": "news",
       "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "god-of-war-kratos-recast-ryan-hurst-injury",
-      "primaryKeyword": "god of war kratos recast",
+      "sensitivity": "high",
+      "eventSlug": "god-of-war-tv-series-casting",
+      "primaryKeyword": "god of war recast kratos",
       "primaryEntity": "God of War",
       "entities": [
         "God of War (TV series)",
-        "Ryan Hurst",
-        "Prime Video"
+        "Ryan Hurst"
       ],
-      "angle": "The role of Kratos in Prime Video's 'God of War' series will be recast due to an on-set injury to actor Ryan Hurst.",
+      "angle": "The role of Kratos in Prime Video's 'God of War' series will be recast due to an injury to actor Ryan Hurst.",
       "tmdbType": "movie",
-      "source": "rss:THR",
+      "source": "rss:IndieWire",
       "sources": [
         {
-          "outlet": "THR",
+          "outlet": "IndieWire",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/tv/tv-news/god-of-war-recast-kratos-ryan-hurst-stunt-injury-1236650848/",
-          "ageMin": 3195,
-          "headline": "God of War to Recast Kratos Role Following Ryan Hurst On-Set Injury",
-          "summary": "Prime Video's original God of War tore a bicep muscle while performing a stunt."
+          "url": "https://www.indiewire.com/criticism/movies/the-kidnapping-of-arabella-review-movie-review-chris-pine-1235206024/",
+          "ageMin": 3121,
+          "headline": "The Kidnapping of Arabella Review: Chris Pine Speaks Fluent Italian in a Quirky Road Movie That Offers Equally Unexpected Surprises at Every Turn",
+          "summary": "A woman abducts the little girl she thinks is her younger self in Carolina Cavalli’s slight and kooky follow-up to \"Amanda.\""
         }
       ],
-      "ageMin": 3195,
+      "ageMin": 3121,
       "_cand": {
-        "key": "rss:god-of-war-to-recast-kratos-role-following-ryan-hurst-on-set",
+        "key": "rss:the-kidnapping-of-arabella-review-chris-pine-speaks-fluent-i",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -247,11 +322,11 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "THR"
+          "IndieWire"
         ],
         "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
+        "sensitivity": "high",
+        "attribution": "IndieWire",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -269,68 +344,199 @@
         "spice": 4,
         "softTv": 0
       },
+      "tierClass": "S"
+    },
+    {
+      "id": "news-god-of-war-prime-video-new-lead-after-injury",
+      "slug": "god-of-war-prime-video-series-to-cast-new-lead-after-on-set-injury",
+      "title": "God of War: Prime Video Series to Cast New Lead After On Set Injury",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "god-of-war-prime-video-new-lead-after-injury",
+      "primaryKeyword": "God of War series casting",
+      "primaryEntity": "God of War",
+      "entities": [
+        "God of War (TV series)",
+        "Prime Video"
+      ],
+      "angle": "The 'God of War' series on Prime Video will cast a new lead actor following an on-set injury.",
+      "tmdbType": "movie",
+      "source": "gnews:TV Series Finale",
+      "sources": [
+        {
+          "outlet": "TV Series Finale",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQaVJubzMwODJjX3M1NTJRZG5kUXQ2WGoyVGpNbk05cnlib0ZOcEhqdmJJYzZMVHNTSm1qOUpodWt0cm01NnhBbmxmYk5KNlpFcHl3MXpnaWRFa1gwUnlzLUdxdVV0OUxKMTlqSHVzR0hyYnJ3WmhjRzYzX2FEelFvaU5jVnN0Y0c4MC04aHBMNXpUeFVyWDNWeWNGNDBuRzh1SFVxLUFIMk51d9IBqgFBVV95cUxQaVJubzMwODJjX3M1NTJRZG5kUXQ2WGoyVGpNbk05cnlib0ZOcEhqdmJJYzZMVHNTSm1qOUpodWt0cm01NnhBbmxmYk5KNlpFcHl3MXpnaWRFa1gwUnlzLUdxdVV0OUxKMTlqSHVzR0hyYnJ3WmhjRzYzX2FEelFvaU5jVnN0Y0c4MC04aHBMNXpUeFVyWDNWeWNGNDBuRzh1SFVxLUFIMk51dw?oc=5",
+          "ageMin": 322,
+          "headline": "God of War: Prime Video Series to Cast New Lead After On Set Injury - TV Series Finale",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxQaVJubzMwODJjX3M1NTJRZG5kUXQ2WGoyVGpNbk05cnlib0ZOcEhqdmJJYzZMVHNTSm1qOUpodWt0cm01NnhBbmxmYk5KNlpFcHl3MXpnaWRFa1gwUnlzLUdxdVV0OUxKMTlqSHVzR0hyYnJ3WmhjRzYzX2FEelFvaU5jVnN0Y0c4MC04aHBMNXpUeFVyWDNWeWNGNDBuRzh1SFVxLUFIMk51d9IBqgFBVV95cUxQaVJubzM"
+        }
+      ],
+      "ageMin": 322,
+      "_cand": {
+        "key": "rss:god-of-war-prime-video-series-to-cast-new-lead-after-on-set-",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "TV Series Finale"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "TV Series Finale",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 67,
+      "signals": {
+        "recency": 9,
+        "corroboration": 8,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
       "tierClass": "B"
     },
     {
-      "id": "music-news-world-cup-halftime-show-livestream",
-      "slug": "how-to-livestream-the-world-cup-halftime-show-with-bts-bieber-madonna-",
-      "title": "How to Livestream the World Cup Halftime Show With BTS, Bieber, Madonna and Shakira",
+      "id": "news-wilson-bethel-star-wars-1313-game",
+      "slug": "daredevil-born-again-star-wilson-bethel-almost-led-scrapped-star-wars-",
+      "title": "DAREDEVIL: BORN AGAIN Star Wilson Bethel Almost Led Scrapped STAR WARS 1313 Game",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "wilson-bethel-star-wars-1313-game",
+      "primaryKeyword": "star wars 1313 game",
+      "primaryEntity": "Star Wars 1313",
+      "entities": [
+        "Wilson Bethel",
+        "Daredevil: Born Again"
+      ],
+      "angle": "Actor Wilson Bethel was almost cast in a scrapped Star Wars game.",
+      "tmdbType": "movie",
+      "source": "gnews:GeekTyrant",
+      "sources": [
+        {
+          "outlet": "GeekTyrant",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOVkRpcnBvSndsQ2FZWDBSWFRPb1ZUYnV2Sm9LcDFPSTRORUx6WnA3bkluZ0MzeTRoQmszUHlHV0ctTlVDRWExRlF3VEhXeks4MFdwbUJoNklXUlZHRzcwVGUzaVR4TC1GUHNJZWdPOXlNOGJWUkltSW5RWFd4SGNpYkJkRWdZc0s1VXdleTNKUHhpaWxIeTVDNFBxMS1SeERaVi02aU95NGRFU3M?oc=5",
+          "ageMin": 207,
+          "headline": "DAREDEVIL: BORN AGAIN Star Wilson Bethel Almost Led Scrapped STAR WARS 1313 Game - GeekTyrant",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxOVkRpcnBvSndsQ2FZWDBSWFRPb1ZUYnV2Sm9LcDFPSTRORUx6WnA3bkluZ0MzeTRoQmszUHlHV0ctTlVDRWExRlF3VEhXeks4MFdwbUJoNklXUlZHRzcwVGUzaVR4TC1GUHNJZWdPOXlNOGJWUkltSW5RWFd4SGNpYkJkRWdZc0s1VXdleTNKUHhpaWxIeTVDNFBxMS1SeERaVi02aU95NGRFU3M?oc=5\" target=\"_blan"
+        }
+      ],
+      "ageMin": 207,
+      "_cand": {
+        "key": "rss:daredevil-born-again-star-wilson-bethel-almost-led-scrapped-",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "GeekTyrant"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "GeekTyrant",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 77,
+      "signals": {
+        "recency": 9,
+        "corroboration": 8,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 4,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "music-news-rolling-stones-songwriting-ai-mount-rushmore",
+      "slug": "the-rolling-stones-sound-off-mick-jagger-keith-richards-on-songwriting",
+      "title": "The Rolling Stones Sound Off: Mick Jagger, Keith Richards on Songwriting, AI, Their Musical Rock Mount Rushmore",
       "contentType": "music-news",
       "formatTag": "music-news",
       "category": "music",
       "subcategory": "news",
-      "eventType": "other",
+      "eventType": "announcement",
       "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "world-cup-halftime-show-livestream",
-      "primaryKeyword": "World Cup Halftime Show",
-      "primaryEntity": "2026 FIFA World Cup Final",
+      "eventSlug": "rolling-stones-songwriting-ai-mount-rushmore",
+      "primaryKeyword": "rolling stones songwriting",
+      "primaryEntity": "The Rolling Stones",
       "entities": [
-        "BTS: THE RETURN",
-        "BTS",
-        "Justin Bieber",
-        "Madonna"
+        "Mick Jagger",
+        "Keith Richards"
       ],
-      "angle": "Details on how to livestream the star-studded halftime show at the 2026 FIFA World Cup Final, featuring BTS, Justin Bieber, and others.",
+      "angle": "The legendary rock band discusses their songwriting process, the impact of AI, and their musical legacy.",
       "tmdbType": "movie",
-      "source": "rss:THR",
+      "source": "gnews:Billboard",
       "sources": [
         {
-          "outlet": "THR",
+          "outlet": "Billboard",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/tv/tv-news/watch-world-cup-halftime-show-2026-live-stream-free-online-1236651717/",
-          "ageMin": 25,
-          "headline": "How to Livestream the World Cup Halftime Show With BTS, Bieber, Madonna and Shakira",
-          "summary": "Coldplay, Burna Boy, Gustavo Dudamel and characters from 'Sesame Street' and 'The Muppets' are also set to join the star-studded performance, marking the first halftime show in FIFA history."
+          "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQRThtay1vWXJWWlo2VUV3Sk5tV3Nldzg3aGVYOGp0THBvVkpnZ2xUQUNWcU9wTkVqY09wUkg3VGdEVFlKSThqejFtcnRhQVpReG41aExiVkE0cUZHbXZMQ2VCXzZzWWtpUF9oX09vV3Noc3VRY1hEZndaaW1ESEplbUpidkVleU1remc?oc=5",
+          "ageMin": 355,
+          "headline": "The Rolling Stones Sound Off: Mick Jagger Keith Richards on Songwriting, AI Their Musical Rock Mount Rushmore - Billboard",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiigFBVV95cUxQRThtay1vWXJWWlo2VUV3Sk5tV3Nldzg3aGVYOGp0THBvVkpnZ2xUQUNWcU9wTkVqY09wUkg3VGdEVFlKSThqejFtcnRhQVpReG41aExiVkE0cUZHbXZMQ2VCXzZzWWtpUF9oX09vV3Noc3VRY1hEZndaaW1ESEplbUpidkVleU1remc?oc=5\" target=\"_blank\" The Rolling Stones Sound Off: Mick Jagger"
         }
       ],
-      "ageMin": 25,
+      "ageMin": 355,
       "_cand": {
-        "key": "rss:how-to-livestream-the-world-cup-halftime-show-with-bts-biebe",
+        "key": "rss:the-rolling-stones-sound-off-mick-jagger-keith-richards-on-s",
         "popularity": 0,
-        "kind": "rss-news"
+        "kind": "gnews"
       },
+      "breakoutVelocity": 0,
       "corroborationCount": 1,
       "verification": {
         "tier1Count": 1,
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "THR"
+          "Billboard"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "THR",
+        "attribution": "Billboard",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 59,
+      "priority": 48,
       "signals": {
-        "recency": 24,
+        "recency": 9,
         "corroboration": 12,
         "status": 18,
-        "type": 5,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
         "big": 0,
@@ -341,17 +547,149 @@
       "tierClass": "C"
     },
     {
-      "id": "news-danny-boyle-ink-sells-netflix-venice",
-      "slug": "danny-boyle-s-ink-sells-to-netflix-in-first-big-sale-way-ahead-of-veni",
-      "title": "Danny Boyle's Ink Sells to Netflix in First Big Sale (Way) Ahead of Venice Premiere",
+      "id": "news-the-doomies-review",
+      "slug": "the-doomies-could-be-the-spiritual-successor-to-gravity-falls-that-ani",
+      "title": "The Doomies Could Be the Spiritual Successor to Gravity Falls That Animation Needs",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "review",
+      "sensitivity": "high",
+      "eventSlug": "the-doomies-review",
+      "primaryKeyword": "the doomies disney+",
+      "primaryEntity": "The Doomies",
+      "entities": [
+        "Disney+",
+        "Evil Dead",
+        "Buffy the Vampire Slayer"
+      ],
+      "angle": "A review praises the Disney+ animated horror-comedy 'The Doomies' as a potential successor to 'Gravity Falls'.",
+      "tmdbType": "movie",
+      "source": "rss:IndieWire",
+      "sources": [
+        {
+          "outlet": "IndieWire",
+          "tier": 7,
+          "url": "https://www.indiewire.com/features/commentary/the-doomies-disney-plus-show-gravity-falls-1235206088/",
+          "ageMin": 2761,
+          "headline": "The Doomies Could Be the Spiritual Successor to Gravity Falls That Animation Needs",
+          "summary": "The hidden gem on Disney+ is a gorgeously made horror comedy that mixes 'Evil Dead' with 'Buffy the Vampire Slayer' for an all-ages fright fest that's still a little spooky."
+        }
+      ],
+      "ageMin": 2761,
+      "_cand": {
+        "key": "rss:the-doomies-could-be-the-spiritual-successor-to-gravity-fall",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "IndieWire"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": "IndieWire",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 58,
+      "signals": {
+        "recency": 1,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "S"
+    },
+    {
+      "id": "news-powerwash-simulator-2-star-wars-pack",
+      "slug": "powerwash-simulator-2-soap-up-with-the-star-wars-pack",
+      "title": "PowerWash Simulator 2: Soap up with the Star Wars pack",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "powerwash-simulator-2-star-wars-pack",
+      "primaryKeyword": "powerwash simulator 2 star wars",
+      "primaryEntity": "PowerWash Simulator 2",
+      "entities": [
+        "Star Wars"
+      ],
+      "angle": "Popular simulator game adds Star Wars-themed content.",
+      "tmdbType": "movie",
+      "source": "gnews:Fantha Tracks",
+      "sources": [
+        {
+          "outlet": "Fantha Tracks",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPeHN3RllvZlhjc3dhSldVSFc2bDY0ZmVZN3JITHhnT091NVZNOGI3REZfaDVab1lWY3l6TXVPOHVGSnM4LWtRR3d0ZllMX2I0blZNVDhndVJ2V1FNbXozTkFiNUg1V216aXVMUG5sZFVWMHJlaVBKV1Rpa0ZiODFBekdKVDBWV2NVZVlndkpfbmdrMHVmNEx1MV9mbw?oc=5",
+          "ageMin": 25,
+          "headline": "PowerWash Simulator 2: Soap up with the Star Wars pack - Fantha Tracks",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMimwFBVV95cUxPeHN3RllvZlhjc3dhSldVSFc2bDY0ZmVZN3JITHhnT091NVZNOGI3REZfaDVab1lWY3l6TXVPOHVGSnM4LWtRR3d0ZllMX2I0blZNVDhndVJ2V1FNbXozTkFiNUg1V216aXVMUG5sZFVWMHJlaVBKV1Rpa0ZiODFBekdKVDBWV2NVZVlndkpfbmdrMHVmNEx1MV9mbw?oc=5\" target=\"_blank\" PowerWash Simulato"
+        }
+      ],
+      "ageMin": 25,
+      "_cand": {
+        "key": "rss:powerwash-simulator-2-soap-up-with-the-star-wars-pack-fantha",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "Fantha Tracks"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "Fantha Tracks",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 67,
+      "signals": {
+        "recency": 24,
+        "corroboration": 8,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 12,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-danny-boyle-ink-sells-netflix",
+      "slug": "danny-boyle-s-ink-sells-to-netflix-ahead-of-venice-premiere",
+      "title": "Danny Boyle's Ink Sells to Netflix Ahead of Venice Premiere",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "danny-boyle-ink-sells-netflix-venice",
-      "primaryKeyword": "Ink movie",
+      "eventSlug": "danny-boyle-ink-sells-netflix",
+      "primaryKeyword": "Danny Boyle Ink Netflix",
       "primaryEntity": "Ink (2024 film)",
       "entities": [
         "Danny Boyle",
@@ -366,12 +704,12 @@
           "outlet": "IndieWire",
           "tier": 7,
           "url": "https://www.indiewire.com/news/breaking-news/danny-boyle-ink-netflix-venice-sale-1235206128/",
-          "ageMin": 2690,
+          "ageMin": 2720,
           "headline": "Danny Boyle s Ink Sells to Netflix in First Big Sale (Way) Ahead of Venice Premiere",
           "summary": "The film about Larry Lamb, Rupert Murdoch, and the birth of The Sun tabloid is the opening night film at the Biennale."
         }
       ],
-      "ageMin": 2690,
+      "ageMin": 2720,
       "_cand": {
         "key": "rss:danny-boyle-s-ink-sells-to-netflix-in-first-big-sale-way-ahe",
         "popularity": 0,
@@ -408,9 +746,240 @@
       "tierClass": "B"
     },
     {
+      "id": "news-heartstopper-forever-finale-breakdown",
+      "slug": "heartstopper-forever-director-writer-and-stars-joe-locke-and-kit-conno",
+      "title": "‘Heartstopper Forever’ Director, Writer and Stars Joe Locke and Kit Connor on the Finale: “It Connects the Whole Heartstopper Gang”",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "heartstopper-forever-finale-breakdown",
+      "primaryKeyword": "heartstopper",
+      "primaryEntity": "Heartstopper",
+      "entities": [
+        "Joe Locke",
+        "Kit Connor",
+        "Alice Oseman"
+      ],
+      "angle": "Stars and creator of 'Heartstopper Forever' discuss the finale's changes from the book and its emotional impact.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/movies/movie-features/heartstopper-forever-ending-kit-connor-joe-lock-interview-1236647039/",
+          "ageMin": 1651,
+          "headline": "‘Heartstopper Forever’ Director, Writer and Stars Joe Locke and Kit Connor on the Finale: “It Connects the Whole Heartstopper Gang”",
+          "summary": "Stars Connor and Locke, creator Alice Oseman and director Wash Westmoreland break down the film’s biggest change from book to screen, alongside the intimacy, break-ups, and ambiguous endings from the final chapter."
+        }
+      ],
+      "ageMin": 1651,
+      "_cand": {
+        "key": "rss:-heartstopper-forever-director-writer-and-stars-joe-locke-an",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 52,
+      "signals": {
+        "recency": 1,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 6,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "radar": 10
+      },
+      "radarKind": "movie-trending",
+      "tierClass": "A"
+    },
+    {
+      "id": "news-celebrities-at-fifa-world-cup-2026-final",
+      "slug": "fifa-world-cup-2026-final-red-carpet-all-the-celebrity-arrivals",
+      "title": "FIFA World Cup 2026 Final Red Carpet: All the Celebrity Arrivals",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "celebrities-at-fifa-world-cup-2026-final",
+      "primaryKeyword": "celebrities world cup final",
+      "primaryEntity": "FIFA World Cup Final",
+      "entities": [
+        "Timothée Chalamet",
+        "Timothee Chalamet",
+        "Tom Cruise"
+      ],
+      "angle": "Hollywood stars flock to the FIFA World Cup 2026 final.",
+      "tmdbType": "movie",
+      "source": "gnews:WWD",
+      "sources": [
+        {
+          "outlet": "WWD",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQMFNDZVNMNUFObzVTME9nMDJhQUxoN1JRX2tXWmhIWktPbWNObE1RWnM4OTRHWmY3MmtvU25VcU91ZnlRbHhobUJwNEVKcnlraWpZZEVMZUxvSmFKQmFfOFRrX0ZxNVNkal9fR0FBYk5NSzdEbjVLZXlNWFM2TVJnVmpTWjBNSUhwY2Y3M1hKdnhrZG5XRFVSbk03ZWozQnVmV21Xamx3XzhEdUY5X2lfZ0FqUldUQQ?oc=5",
+          "ageMin": 76,
+          "headline": "FIFA World Cup 2026 Final Red Carpet: All the Celebrity Arrivals [Photos] - WWD",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxQMFNDZVNMNUFObzVTME9nMDJhQUxoN1JRX2tXWmhIWktPbWNObE1RWnM4OTRHWmY3MmtvU25VcU91ZnlRbHhobUJwNEVKcnlraWpZZEVMZUxvSmFKQmFfOFRrX0ZxNVNkal9fR0FBYk5NSzdEbjVLZXlNWFM2TVJnVmpTWjBNSUhwY2Y3M1hKdnhrZG5XRFVSbk03ZWozQnVmV21Xamx3XzhEdUY5X2lfZ0FqUldUQQ?oc=5"
+        },
+        {
+          "outlet": "Diario AS",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxORDdkS1lKdGgxQ1E2QWlndXc4ZGg2dThtOTF6SWZWcmRGZXA0VUs5SzVlVElqRUlibDlpX3lvRndXNVpKakd5d3dCZzFOYzY5OFJmUEcyQWw0YlpvOTVTQ0ptODE1WXJzbmF3aXplTmRJdDA4MDVYb3lPMUVFVGp5YklKODBqQV9PdmUwY0RvWXN5cTA4eFdiM2FUbXNKMjFlbjk40gG3AUFVX3lxTE9ueG93VzZMMjA2amtncko1LVphd2RxdU5WQTlCN2diTFN3VnJTdEUxM2ozNUhPUWJzSGxBbHRpUmdvazBfRG4xbERyUE5KbEhHWVJ6UnBLRnRQQ280SkdFTmRHZnFIaWpnZWdfamE2VXBLZFdfR3hIRzg5NHVwUHZlNC1hLTUwZ0JjczkyTlB6cEt2UkNHcnAzekFHemhiWWVZWDh2YUUwbmZNMUJObVVleFBMV2U3QQ?oc=5",
+          "ageMin": 81,
+          "headline": "Every single celebrity spotted at the 2026 World Cup final - Diario AS",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiowFBVV95cUxORDdkS1lKdGgxQ1E2QWlndXc4ZGg2dThtOTF6SWZWcmRGZXA0VUs5SzVlVElqRUlibDlpX3lvRndXNVpKakd5d3dCZzFOYzY5OFJmUEcyQWw0YlpvOTVTQ0ptODE1WXJzbmF3aXplTmRJdDA4MDVYb3lPMUVFVGp5YklKODBqQV9PdmUwY0RvWXN5cTA4eFdiM2FUbXNKMjFlbjk40gG3AUFVX3lxTE9ueG93VzZMMjA2amt"
+        },
+        {
+          "outlet": "Yahoo Sports",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxObi1lal9IbmZFa3VLX2hYY0gxd1BKNHg3ekNtM0hBNS0yZGhqMnNLXy1LSURQNTdFYnpDSHhHeGVqakM5NFh3SjVZNG1iNlZEaTZkcnNwNDhZaERGalVMZGJmZXlPYWN4RTNYdWdrQWhLMGJFZ18xNGxZenotV1RQS25KaXdZZHRscVE?oc=5",
+          "ageMin": 87,
+          "headline": "Celebrities at World Cup final today: Live updates on Timothee Chalamet, Tom Cruise, others watching Spain vs. Argentina - Yahoo Sports",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiigFBVV95cUxObi1lal9IbmZFa3VLX2hYY0gxd1BKNHg3ekNtM0hBNS0yZGhqMnNLXy1LSURQNTdFYnpDSHhHeGVqakM5NFh3SjVZNG1iNlZEaTZkcnNwNDhZaERGalVMZGJmZXlPYWN4RTNYdWdrQWhLMGJFZ18xNGxZenotV1RQS25KaXdZZHRscVE?oc=5\" target=\"_blank\" Celebrities at World Cup final today: Liv"
+        },
+        {
+          "outlet": "Harper's BAZAAR",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPQjFabGRlNVhiVmxuTFFJTU5UOUNnTU5MajV1TlNKaGNpQ0l4MEUzUW5zSzRTRGs3ckdXNEtPcnpMMzBKVWRmWDhRcENFUzI1QUwwSUhVOG9lVGJka3ZhcGZTdXNMSDlUTV8yYVV0ckpEU1JtejBzcDJ4bVM4OFRsbl9zUHlaaEpnQnJGS19PTkhrakxrbDhCV2hiWm1FbmNsRnREdmlfMklldw?oc=5",
+          "ageMin": 117,
+          "headline": "All the Stars at the 2026 FIFA World Cup Final - Harper's BAZAAR",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxPQjFabGRlNVhiVmxuTFFJTU5UOUNnTU5MajV1TlNKaGNpQ0l4MEUzUW5zSzRTRGs3ckdXNEtPcnpMMzBKVWRmWDhRcENFUzI1QUwwSUhVOG9lVGJka3ZhcGZTdXNMSDlUTV8yYVV0ckpEU1JtejBzcDJ4bVM4OFRsbl9zUHlaaEpnQnJGS19PTkhrakxrbDhCV2hiWm1FbmNsRnREdmlfMklldw?oc=5\" target=\"_blank"
+        }
+      ],
+      "ageMin": 76,
+      "_cand": {
+        "key": "rss:fifa-world-cup-2026-final-red-carpet-all-the-celebrity-arriv",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 4,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 4,
+        "outlets": [
+          "WWD",
+          "Diario AS",
+          "Yahoo Sports",
+          "Harper's BAZAAR"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "multiple outlets",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 79,
+      "signals": {
+        "recency": 16,
+        "corroboration": 25,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 15,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "A"
+    },
+    {
+      "id": "news-jennifer-hudson-robbie-williams-world-cup-closing-ceremony",
+      "slug": "jennifer-hudson-robbie-williams-to-lead-2026-world-cup-closing-ceremon",
+      "title": "Jennifer Hudson, Robbie Williams to Lead 2026 World Cup Closing Ceremony",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "jennifer-hudson-robbie-williams-world-cup-closing-ceremony",
+      "primaryKeyword": "World Cup Closing Ceremony performers",
+      "primaryEntity": "2026 FIFA World Cup",
+      "entities": [
+        "Jennifer Hudson",
+        "Robbie Williams",
+        "Nicole Scherzinger",
+        "Laura Pausini"
+      ],
+      "angle": "Jennifer Hudson, Robbie Williams, and others set to perform at the 2026 World Cup closing ceremony.",
+      "tmdbType": "movie",
+      "source": "rss:Billboard",
+      "sources": [
+        {
+          "outlet": "Billboard",
+          "tier": 7,
+          "url": "https://www.billboard.com/music/music-news/jennifer-hudson-national-anthem-2026-world-cup-final-1236297611/",
+          "ageMin": 5,
+          "headline": "Jennifer Hudson Sings National Anthem, Robbie Williams More Lead 2026 World Cup Closing Ceremony",
+          "summary": "Williams, Nicole Scherzinger and Laura Pausini teamed up to perform FIFA's official anthem, \"Desire.\""
+        }
+      ],
+      "ageMin": 5,
+      "_cand": {
+        "key": "rss:jennifer-hudson-sings-national-anthem-robbie-williams-more-l",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Billboard"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Billboard",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 65,
+      "signals": {
+        "recency": 30,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
       "id": "news-tom-cruise-world-cup-final-appearance",
       "slug": "tom-cruise-makes-appearance-at-world-cup-final-to-celebrate-a-tourname",
-      "title": "Tom Cruise Makes Appearance At World Cup Final To Celebrate A Tournament That Brought The World Together : This Is Unity This Is Greatness",
+      "title": "Tom Cruise Makes Appearance At World Cup Final To Celebrate A Tournament That Brought The World Together",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
@@ -421,9 +990,9 @@
       "primaryKeyword": "Tom Cruise World Cup",
       "primaryEntity": "Tom Cruise",
       "entities": [
-        "2026 FIFA World Cup Final"
+        "2026 FIFA World Cup"
       ],
-      "angle": "Tom Cruise made a guest appearance at the 2026 FIFA World Cup Final, celebrating the tournament's theme of unity.",
+      "angle": "Tom Cruise made a guest appearance at the 2026 FIFA World Cup final, celebrating the event's unity.",
       "tmdbType": "movie",
       "source": "rss:Deadline",
       "sources": [
@@ -431,12 +1000,12 @@
           "outlet": "Deadline",
           "tier": 7,
           "url": "https://deadline.com/2026/07/tom-cruise-world-cup-final-celebrate-tournament-football-1236997840/",
-          "ageMin": 9,
+          "ageMin": 39,
           "headline": "Tom Cruise Makes Appearance At World Cup Final To Celebrate A Tournament That Brought The World Together : This Is Unity This Is Greatness",
           "summary": "Tom Cruise made a guest appearance during the pre-show for the 2026 FIFA World Cup final. Ahead of the matchup between Spain and Argentina to find out who becomes the soccer champion, the Digger star took the stage to deliver some encouraging words. More than 30 days ago, 48 nations began a journey, Cruise said. [ ]"
         }
       ],
-      "ageMin": 9,
+      "ageMin": 39,
       "_cand": {
         "key": "rss:tom-cruise-makes-appearance-at-world-cup-final-to-celebrate-",
         "popularity": 0,
@@ -457,9 +1026,9 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 65,
+      "priority": 59,
       "signals": {
-        "recency": 30,
+        "recency": 24,
         "corroboration": 12,
         "status": 18,
         "type": 5,
@@ -470,7 +1039,73 @@
         "spice": 0,
         "softTv": 0
       },
-      "tierClass": "B"
+      "tierClass": "C"
+    },
+    {
+      "id": "news-ishowspeed-world-cup-closing-ceremony",
+      "slug": "ishowspeed-kicks-off-world-cup-closing-ceremony-in-blaze-of-colour",
+      "title": "IShowSpeed kicks off World Cup closing ceremony in blaze of colour",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "ishowspeed-world-cup-closing-ceremony",
+      "primaryKeyword": "iShowSpeed World Cup",
+      "primaryEntity": "Darren Watkins Jr.",
+      "entities": [
+        "IShowSpeed",
+        "FIFA World Cup"
+      ],
+      "angle": "Streamer IShowSpeed performs at the World Cup closing ceremony.",
+      "tmdbType": "movie",
+      "source": "gnews:BBC",
+      "sources": [
+        {
+          "outlet": "BBC",
+          "tier": 7,
+          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5ZYnBtUy1WZmgzREtYY1hxWGtFalFMZXo2RlBsekFoZjZpaHpRN1Z5eGZ2VGJBdXZnLTBsTzhUMEN5akdQaG5vdFBvcDZ2Yk40YmRBUl9NR2NxUQ?oc=5",
+          "ageMin": 97,
+          "headline": "IShowSpeed kicks off World Cup closing ceremony in blaze of colour - BBC",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiWkFVX3lxTE5ZYnBtUy1WZmgzREtYY1hxWGtFalFMZXo2RlBsekFoZjZpaHpRN1Z5eGZ2VGJBdXZnLTBsTzhUMEN5akdQaG5vdFBvcDZ2Yk40YmRBUl9NR2NxUQ?oc=5\" target=\"_blank\" IShowSpeed kicks off World Cup closing ceremony in blaze of colour /a nbsp; nbsp; font color=\"#6f6f6f\" BBC"
+        }
+      ],
+      "ageMin": 97,
+      "_cand": {
+        "key": "rss:ishowspeed-kicks-off-world-cup-closing-ceremony-in-blaze-of-",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "BBC"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "BBC",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 51,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
     }
   ]
 }

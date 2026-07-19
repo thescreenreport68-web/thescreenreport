@@ -1,10 +1,64 @@
 {
   "id": "trailer-les-miserables-movie-trailer",
-  "slug": "teaser-trailer-for-france-s-epic-new-les-mis-rables-movie-promises-a-p",
-  "status": "rejected_editorial",
-  "stages": {},
-  "holdReason": "editorial gate: out of scope: not English-language Hollywood/Western entertainment",
-  "ms": 2022,
+  "slug": "new-les-mis-rables-movie-trailer-promises-powerful-return-to-classic",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": null,
+      "cat": "movies/trailers",
+      "format": [],
+      "cuts": 0,
+      "broken": []
+    }
+  },
+  "editorial": {
+    "status": "unconfirmed",
+    "entity": "Les Misérables",
+    "work": {
+      "title": "Les Misérables",
+      "year": 2026,
+      "medium": "movie"
+    },
+    "outlet": "geektyrant.com"
+  },
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
+    "deterministic": {
+      "words": 240,
+      "h2s": 3,
+      "h2Questions": 3,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 4,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 24,
+      "avgSentence": 15,
+      "flesch": 51,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": []
+    },
+    "hardBlocks": []
+  },
+  "score": null,
+  "category": "movies",
+  "subcategory": "trailers",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "keyword in title"
+    ]
+  },
+  "ms": 33954,
   "previousRuns": [
     {
       "id": "trailer-les-miserables-movie-trailer",
@@ -13,6 +67,14 @@
       "stages": {},
       "holdReason": "editorial gate: out of scope: not English-language Hollywood/Western entertainment",
       "ms": 2216
+    },
+    {
+      "id": "trailer-les-miserables-movie-trailer",
+      "slug": "teaser-trailer-for-france-s-epic-new-les-mis-rables-movie-promises-a-p",
+      "status": "rejected_editorial",
+      "stages": {},
+      "holdReason": "editorial gate: out of scope: not English-language Hollywood/Western entertainment",
+      "ms": 2022
     }
   ]
 }
