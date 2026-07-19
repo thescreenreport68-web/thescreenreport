@@ -87,9 +87,29 @@ jobs:
           # NOTE (2026-07-06): the commit message intentionally has NO "[skip ci]" so this push TRIGGERS the
           # deploy-live workflow, which rebuilds the COMPLETE site and deploys it. This lane no longer builds/deploys
           # itself — a single authoritative deploy (deploy-live.yml) fixed the two-lane stale-build clobbering.
+          # CONFLICT-PROOF PUSH (root-fix 2026-07-19): a rebase conflict on a regenerable STATE file used to
+          # abort the whole tick — the articles were written on the ephemeral runner and LOST (a 07-19 tick
+          # lost 2 finished articles this way, retrying 5x against a stuck "unmerged files" state). Now: clear
+          # any half-finished rebase first, and auto-resolve conflicts that are ONLY under data/ by keeping the
+          # version this tick just wrote (during a rebase our commit is "theirs"). A conflict anywhere else
+          # (content/articles) is NOT auto-resolved — we abort and retry cleanly.
           for i in 1 2 3 4 5; do
-            git pull --rebase --autostash origin "${{ github.ref_name }}" \
-              && git push origin "HEAD:${{ github.ref_name }}" && { echo "pushed on attempt $i"; exit 0; }
+            git rebase --abort 2>/dev/null || true
+            if git pull --rebase --autostash origin "${{ github.ref_name }}"; then
+              git push origin "HEAD:${{ github.ref_name }}" && { echo "pushed on attempt $i"; exit 0; }
+            else
+              UNMERGED=$(git diff --name-only --diff-filter=U || true)
+              if [ -n "$UNMERGED" ] && ! echo "$UNMERGED" | grep -qv '^data/'; then
+                echo "state-file conflict on: $UNMERGED — keeping this tick's version"
+                echo "$UNMERGED" | xargs -r git checkout --theirs --
+                echo "$UNMERGED" | xargs -r git add --
+                GIT_EDITOR=true git rebase --continue || git rebase --abort 2>/dev/null || true
+                git push origin "HEAD:${{ github.ref_name }}" && { echo "pushed on attempt $i (state conflict auto-resolved)"; exit 0; }
+              else
+                [ -n "$UNMERGED" ] && echo "non-state conflict on: $UNMERGED — aborting rebase, will retry"
+                git rebase --abort 2>/dev/null || true
+              fi
+            fi
             echo "push attempt $i lost the race; retrying in 5s…"; sleep 5
           done
           echo "::error::could not push state after 5 attempts"; exit 1

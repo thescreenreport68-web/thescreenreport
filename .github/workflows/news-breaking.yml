@@ -70,9 +70,25 @@ jobs:
           git config user.email "bot@thescreenreport.com"
           git add content/articles data/find data/state
           git commit -m "news: breaking — ${{ steps.brk.outputs.slugs }}" || { echo "nothing to commit"; exit 0; }
+          # CONFLICT-PROOF PUSH (root-fix 2026-07-19, same as news-drip): a state-file rebase conflict used to
+          # abort the run and LOSE the finished article. Clear any stuck rebase, auto-resolve data/-only
+          # conflicts in favour of this run's state; never auto-resolve a content/articles conflict.
           for i in 1 2 3 4 5; do
-            git pull --rebase --autostash origin "${{ github.ref_name }}" \
-              && git push origin "HEAD:${{ github.ref_name }}" && { echo "pushed on attempt $i"; exit 0; }
+            git rebase --abort 2>/dev/null || true
+            if git pull --rebase --autostash origin "${{ github.ref_name }}"; then
+              git push origin "HEAD:${{ github.ref_name }}" && { echo "pushed on attempt $i"; exit 0; }
+            else
+              UNMERGED=$(git diff --name-only --diff-filter=U || true)
+              if [ -n "$UNMERGED" ] && ! echo "$UNMERGED" | grep -qv '^data/'; then
+                echo "state-file conflict on: $UNMERGED — keeping this run's version"
+                echo "$UNMERGED" | xargs -r git checkout --theirs --
+                echo "$UNMERGED" | xargs -r git add --
+                GIT_EDITOR=true git rebase --continue || git rebase --abort 2>/dev/null || true
+                git push origin "HEAD:${{ github.ref_name }}" && { echo "pushed on attempt $i (state conflict auto-resolved)"; exit 0; }
+              else
+                git rebase --abort 2>/dev/null || true
+              fi
+            fi
             echo "push attempt $i lost the race; retrying in 5s…"; sleep 5
           done
           echo "::error::could not push after 5 attempts"; exit 1
