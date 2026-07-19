@@ -213,9 +213,12 @@ export async function runGossip(topic, {
     if (flag.unsafe && flag.issues.length) {
       const fixed = await writeImpl({ bundle, frame, topic, model, priorArticle: article, issues: flag.issues, rewrite: false, brief, anchors });
       substituteAnchors(fixed, anchors);
-      const rc = inspect(fixed, frame, topic, bundle, verify ? await verifyImpl({ article: fixed, bundle, model }) : null);
+      const vr2 = verify ? await verifyImpl({ article: fixed, bundle, model }) : null;
+      const rc = inspect(fixed, frame, topic, bundle, vr2);
       if (!rc.redLine && (qualityCheck(fixed).words || 0) >= 120) {
-        article = fixed; report = rc; await cleanse();
+        // Adopt the fresh verify result too — cleanse() reads verifyResult, and using the PREVIOUS
+        // draft's unsupported list let the new draft's invented specifics survive uncorrected.
+        article = fixed; report = rc; if (vr2) verifyResult = vr2; await cleanse();
         try { auto = await judgeImpl({ article, bundle, frame }); } catch (e) { auto = { error: String(e?.message || e).slice(0, 80) }; }
       }
     }
@@ -226,9 +229,14 @@ export async function runGossip(topic, {
   article.body = trimIncomplete(dedupeSentences(article.body));
   // 2026-07-18 guards (deterministic, repair-never-hold): leaked pipeline scaffolding and unverifiable
   // absence claims are CUT from prose; absence-asserting FAQ answers dropped (ensureFaq backfills).
-  const scaf = cutScaffolding(article.body);
-  const absc = cutAbsenceClaims(scaf.body);
+  // The frame's mandated non-confirmation sentence is itself an "absence claim" — protect it, and
+  // re-assert it after the cut in case a rewrite dropped it. legalGate's MISSING_DISCLAIMER check runs
+  // BEFORE this point, so anything that removes the disclaimer here would publish unprotected.
+  const disc = frame.needsDisclaimer && frame.disclaimerText ? [frame.disclaimerText] : [];
+  const scaf = cutScaffolding(article.body, disc);
+  const absc = cutAbsenceClaims(scaf.body, disc);
   article.body = absc.body;
+  if (disc.length && !article.body.includes(disc[0])) article.body = (article.body.trim() + "\n\n" + disc[0]).trim();
   const guardCuts = [...scaf.cut, ...absc.cut];
   article.keyTakeaways = ensureTakeaways(article);
   article.faq = dropAbsenceFaq(article.faq || []).faq;
@@ -262,10 +270,17 @@ export async function runGossip(topic, {
     try {
       const fixed = await writeImpl({ bundle, frame, topic, model, priorArticle: article, issues: fixIssues, rewrite: false, brief, anchors });
       substituteAnchors(fixed, anchors);
+      // A craft rewrite replaces the WHOLE article after every gate has run. Re-inspect it exactly like
+      // the judge-fix branch does — quotes alone are not enough (legal framing, red lines and unsupported
+      // specifics all live in inspect()). Adopt ONLY if the new draft passes on its own merits.
+      const vrFix = verify ? await verifyImpl({ article: fixed, bundle, model }) : null;
+      const rcFix = inspect(fixed, frame, topic, bundle, vrFix);
       const qc2 = verifyQuotes(fixed, bundle);
-      if (qc2.ok) {
+      if (qc2.ok && !rcFix.redLine && rcFix.legalPass !== false && (qualityCheck(fixed).words || 0) >= 120) {
+        if (vrFix) verifyResult = vrFix;
         fixed.body = trimIncomplete(dedupeSentences(fixed.body));
-        fixed.body = cutAbsenceClaims(cutScaffolding(fixed.body).body).body;
+        fixed.body = cutAbsenceClaims(cutScaffolding(fixed.body, disc).body, disc).body;
+        if (disc.length && !fixed.body.includes(disc[0])) fixed.body = (fixed.body.trim() + "\n\n" + disc[0]).trim();
         fixed.keyTakeaways = ensureTakeaways(fixed);
         fixed.faq = dropAbsenceFaq(fixed.faq || []).faq;
         fixed.faq = ensureFaq(fixed);

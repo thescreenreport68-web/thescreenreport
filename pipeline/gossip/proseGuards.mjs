@@ -27,11 +27,17 @@ export function splitSentences(text) {
   return out;
 }
 
-function cutMatching(body, re) {
+// The frame's own legally-mandated non-confirmation sentence LOOKS like an absence claim (it is one —
+// a REQUIRED one). It must never be cut. Callers pass it in `protect`. 2026-07-19: the absence cutter
+// was deleting all three disclaimerFor() variants AFTER legalGate had already approved the article.
+const protectedHit = (sentence, protect) => protect.some((p) => p && (sentence.includes(p) || p.includes(sentence.trim())));
+
+function cutMatching(body, re, protect = []) {
   const cut = [];
   const paras = String(body || "").split(/\n{2,}/).map((para) => {
     if (/^#{1,6}\s/.test(para.trim())) return para; // headings untouched
     const kept = splitSentences(para).filter((s) => {
+      if (protectedHit(s, protect)) return true;                       // legally required — never cut
       if (re.test(s)) { cut.push(s.trim().slice(0, 110)); return false; }
       return true;
     });
@@ -41,10 +47,10 @@ function cutMatching(body, re) {
 }
 
 /** Cut leaked pipeline scaffolding sentences. Returns { body, cut[] }. */
-export function cutScaffolding(body) { return cutMatching(body, SCAFFOLD_RE); }
+export function cutScaffolding(body, protect = []) { return cutMatching(body, SCAFFOLD_RE, protect); }
 
 /** Cut unverifiable absence claims from prose. Returns { body, cut[] }. */
-export function cutAbsenceClaims(body) { return cutMatching(body, ABSENCE_RE); }
+export function cutAbsenceClaims(body, protect = []) { return cutMatching(body, ABSENCE_RE, protect); }
 
 /** FAQ filter: drop any answer that asserts an absence — ensureFaq backfills from real facts. */
 export function dropAbsenceFaq(faq = []) {
@@ -64,13 +70,29 @@ const ABSDATE_RE = /\b(January|February|March|April|May|June|July|August|Septemb
 // article dated July 2026 described a February 2025 confirmation this way — a 17-month error. Any
 // month mentioned without an adjacent year is flagged for the surgical pass.
 const MONTH = "(?:January|February|March|April|May|June|July|August|September|October|November|December)";
-export function bareMonthWithoutYear(body) {
+export function bareMonthWithoutYear(body, { now = new Date() } = {}) {
   const text = String(body || "");
+  // A bare month is only AMBIGUOUS when it is far from the publication month. "July 3" in a July 2026
+  // article unmistakably means 2026 — demanding a year there just triggers pointless rewrites (and cost).
+  // Flag only months >4 back or >1 ahead, where the reader genuinely cannot infer the year.
+  const MONTHS = ["january","february","march","april","may","june","july","august","september","october","november","december"];
+  const cur = now.getMonth();
+  const ambiguous = (name) => {
+    const i = MONTHS.indexOf(String(name).toLowerCase());
+    if (i < 0) return false;
+    let diff = cur - i;                       // months back from now
+    if (diff < 0) diff += 12;                 // wrapped => it is in the past year OR just ahead
+    const ahead = (i - cur + 12) % 12;
+    return !(diff <= 4 || ahead === 1);       // recent past (<=4mo) or next month => unambiguous
+  };
   const re = new RegExp(`\\b${MONTH}\\b[^.,;)]{0,18}`, "g");
   let m;
   while ((m = re.exec(text))) {
     const around = text.slice(Math.max(0, m.index - 30), m.index + m[0].length + 30);
-    if (!/\b(19|20)\d{2}\b/.test(around)) return m[0].trim().split(/\s+/).slice(0, 3).join(" ");
+    if (/\b(19|20)\d{2}\b/.test(around)) continue;
+    const monthName = m[0].trim().split(/\s+/)[0];
+    if (!ambiguous(monthName)) continue;
+    return m[0].trim().split(/\s+/).slice(0, 3).join(" ");
   }
   return null;
 }

@@ -93,7 +93,7 @@ check("no relative time passes", relativeTimeUnanchored("He hosted the awards on
     writeImpl: async ({ priorArticle, issues }) => {
       calls++;
       if (priorArticle) { secondPassIssues = issues; return { ...priorArticle, title: "A Secret 'I Do': Inside Star Alpha's Hidden Malibu Wedding", body: priorArticle.body.replace("that evening", "on July 3") }; }
-      return { title: "Star Alpha and Star Beta Say I Do at Private Malibu Estate", dek: "A wedding to remember for everyone who was there.", body: "Star Alpha wed Star Beta that evening at a Malibu estate with 40 guests, People reports.\n\n" + ("More verified detail sentences follow here for length purposes and even more extra detail. ".repeat(11) + "\n\n").repeat(3), keyTakeaways: ["k"], faq: [{ q: "Q?", a: "They wed at a Malibu estate with 40 guests." }], whatWeKnow: ["Star Alpha wed Star Beta"], whatWeDont: [], claims: [] };
+      return { title: "Star Alpha and Star Beta Say I Do at Private Malibu Estate", dek: "A wedding to remember for everyone who was there.", body: "Star Alpha wed Star Beta that evening at a Malibu estate with 40 guests, People reports.\n\n" + ["The ceremony took place under an olive grove at the edge of the property.","Guests arrived by shuttle from a hotel in Santa Monica earlier that afternoon.","The bride wore a silk gown with a cathedral train and no veil.","Dinner was served family style on long wooden tables lit by hurricane lamps.","A string quartet played during the vows before a soul band took over.","The couple met on a film set in Atlanta and dated privately for years.","Security confiscated phones at the gate to keep images off social media.","Fireworks closed the night just after midnight over the Pacific.","Their families had gathered for a rehearsal lunch the previous day.","Vows were written separately and read without notes to the small crowd.","Catering came from a Venice restaurant the pair had visited on their first date.","The officiant was a college friend who had introduced them years earlier.","Flowers were grown on a farm twenty minutes north of the property.","An after-party ran until sunrise in a converted barn behind the main house.","Only immediate family stayed on site for a brunch the following morning.","Neither had spoken publicly about the engagement before this week.","A representative declined to describe the guest list in any detail.","Photographs will not be released, according to two people familiar with the plans.","The pair are expected to travel abroad later in the summer."].join(" "), keyTakeaways: ["k"], faq: [{ q: "Q?", a: "They wed at a Malibu estate with 40 guests." }], whatWeKnow: ["Star Alpha wed Star Beta"], whatWeDont: [], claims: [] };
     },
     editorialImpl: async () => ({ isStory: true, category: "celebrity", primaryEntity: "Star Alpha", confirmed: true, official: false, denied: false, angle: "wedding" }),
     verify: false, judge: false, corroborate: false, craftFix: true,
@@ -148,9 +148,10 @@ check("no relative time passes", relativeTimeUnanchored("He hosted the awards on
   check("normal reporting still untouched", cutAbsenceClaims("She confirmed the news on July 3. The label released the album.").cut.length === 0);
 
   // bare month without a year (the February 2025 read as February 2026)
-  check("bare month flagged", bareMonthWithoutYear("She confirmed their relationship to the outlet in February.") === "February");
-  check("month WITH year passes", bareMonthWithoutYear("She confirmed it in February 2025 to the outlet.") === null);
-  check("no month passes", bareMonthWithoutYear("She confirmed it last week.") === null);
+  check("bare AMBIGUOUS month flagged", bareMonthWithoutYear("She confirmed their relationship to the outlet in February.", { now: new Date("2026-07-19") }) === "February");
+  check("recent bare month NOT flagged (year is obvious)", bareMonthWithoutYear("They wed on July 3 at the estate.", { now: new Date("2026-07-19") }) === null);
+  check("month WITH year passes", bareMonthWithoutYear("She confirmed it in February 2025 to the outlet.", { now: new Date("2026-07-19") }) === null);
+  check("no month passes", bareMonthWithoutYear("She confirmed it last week.", { now: new Date("2026-07-19") }) === null);
 }
 
 // ── 2026-07-19 round 3: evergreen grounding (the score-27 article) + Neither-X-nor-Y absence ──
