@@ -1,12 +1,82 @@
 {
-  "runId": "run-2026-07-18T23-00-46",
-  "builtAt": "2026-07-18T23:02:05.428Z",
-  "count": 14,
+  "runId": "run-2026-07-19T00-30-42",
+  "builtAt": "2026-07-19T00:31:48.439Z",
+  "count": 12,
   "topics": [
+    {
+      "id": "news-tom-holland-robert-pattinson-the-odyssey-casting",
+      "slug": "tom-holland-on-robert-pattinson-s-the-odyssey-casting-you-re-so-good-a",
+      "title": "Tom Holland on Robert Pattinson's 'The Odyssey' Casting: 'You're So Good at Being a Dickhead'",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "tom-holland-robert-pattinson-the-odyssey-casting",
+      "primaryKeyword": "The Odyssey movie",
+      "primaryEntity": "The Odyssey",
+      "entities": [
+        "The Odyssey (film)",
+        "Tom Holland",
+        "Christopher Nolan",
+        "Robert Pattinson"
+      ],
+      "angle": "Tom Holland reveals his reaction to Robert Pattinson's casting in Christopher Nolan's upcoming film.",
+      "tmdbType": "movie",
+      "source": "rss:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/the-odyssey-tom-holland-robert-pattinson-casting-dickhead-1236997608/",
+          "ageMin": 4,
+          "headline": "The Odyssey s Tom Holland On Why He Could Relax After Robert Pattinson Casting: You re So Good At Being A Dickhead",
+          "summary": "Tom Holland stars in Christopher Nolan s The Odyssey and recently revealed how he felt when Robert Pattinson was cast in the film. In a recent appearance on EW s Around the Table, Holland said he felt he could relax after he learned the Batman actor was set to play Antinous in the epic film. Rob and [ ]"
+        }
+      ],
+      "ageMin": 4,
+      "_cand": {
+        "key": "rss:the-odyssey-s-tom-holland-on-why-he-could-relax-after-robert",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 128,
+      "signals": {
+        "recency": 30,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "radar": 30
+      },
+      "radarKind": "movie-in-theaters",
+      "tierClass": "A"
+    },
     {
       "id": "news-the-odyssey-cast-guide-christopher-nolan",
       "slug": "the-odyssey-cast-guide-who-s-playing-who-in-christopher-nolan-s-epic",
-      "title": "The Odyssey Cast Guide: Who s Playing Who in Christopher Nolan s Epic",
+      "title": "The Odyssey Cast Guide: Who's Playing Who in Christopher Nolan's Epic",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
@@ -14,13 +84,13 @@
       "eventType": "casting",
       "sensitivity": "normal",
       "eventSlug": "the-odyssey-cast-guide-christopher-nolan",
-      "primaryKeyword": "the odyssey cast",
+      "primaryKeyword": "The Odyssey cast",
       "primaryEntity": "The Odyssey",
       "entities": [
-        "The Odyssey (2025 film)",
+        "The Odyssey (film)",
         "Christopher Nolan"
       ],
-      "angle": "Full cast breakdown for Christopher Nolan's upcoming film 'The Odyssey'.",
+      "angle": "A breakdown of the star-studded cast and their characters in Christopher Nolan's upcoming film, The Odyssey.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
@@ -28,12 +98,12 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/lists/the-odyssey-cast-characters-christopher-nolan/",
-          "ageMin": 1300,
+          "ageMin": 1390,
           "headline": "The Odyssey Cast Guide: Who s Playing Who in Christopher Nolan s Epic",
           "summary": "From Oscar, Emmy and Tony winners to frequent collaborators of the director, first-timers and even a rapper, The Hollywood Reporter breaks down all the stars and the characters they play in his adaptation of Homer's ancient Greek poem."
         }
       ],
-      "ageMin": 1300,
+      "ageMin": 1390,
       "_cand": {
         "key": "rss:the-odyssey-cast-guide-who-s-playing-who-in-christopher-nola",
         "popularity": 0,
@@ -72,37 +142,105 @@
       "tierClass": "A"
     },
     {
-      "id": "news-matt-damon-new-jason-bourne-movie",
-      "slug": "matt-damon-eyes-return-to-jason-bourne-franchise-roots-for-new-film",
-      "title": "Matt Damon Eyes Return to Jason Bourne Franchise Roots for New Film",
+      "id": "news-jack-quaid-my-adventures-with-superman-episode-5-breakdown",
+      "slug": "jack-quaid-breaks-down-devastating-fifth-episode-of-my-adventures-with",
+      "title": "Jack Quaid Breaks Down 'Devastating' Fifth Episode of 'My Adventures With Superman'",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "jack-quaid-my-adventures-with-superman-episode-5-breakdown",
+      "primaryKeyword": "My Adventures With Superman episode 5",
+      "primaryEntity": "My Adventures with Superman",
+      "entities": [
+        "Jack Quaid"
+      ],
+      "angle": "Jack Quaid breaks down the 'devastating' fifth episode of 'My Adventures With Superman' and a scene he wished he could have been in.",
+      "tmdbType": "movie",
+      "source": "rss:TheWrap",
+      "sources": [
+        {
+          "outlet": "TheWrap",
+          "tier": 7,
+          "url": "https://www.thewrap.com/creative-content/tv-shows/jack-quaid-breaks-down-season-3-episode-5-my-adventures-with-superman-exclusive/",
+          "ageMin": 226,
+          "headline": "Jack Quaid Breaks Down That Devastating Fifth Episode of My Adventures With Superman : He s Out of His Depth",
+          "summary": "The \"Boys\" star talks about the climactic Episode 5 and the one scene he wishes he could be a part of The post Jack Quaid Breaks Down That Devastating Fifth Episode of My Adventures With Superman : He s Out of His Depth appeared first on TheWrap ."
+        }
+      ],
+      "ageMin": 226,
+      "_cand": {
+        "key": "rss:jack-quaid-breaks-down-that-devastating-fifth-episode-of-my-",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "TheWrap"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "TheWrap",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 62,
+      "signals": {
+        "recency": 9,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 6,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "radar": 12
+      },
+      "radarKind": "tv-episode-today",
+      "tierClass": "A"
+    },
+    {
+      "id": "news-f1-the-movie-sequel-damson-idris-talks",
+      "slug": "damson-idris-advances-talks-on-the-sequel-to-f1-the-movie",
+      "title": "Damson Idris advances talks on the sequel to “F1 The Movie”",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
-      "eventType": "announcement",
+      "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "matt-damon-new-jason-bourne-movie",
-      "primaryKeyword": "jason bourne movie",
-      "primaryEntity": "Jason Bourne",
+      "eventSlug": "f1-the-movie-sequel-damson-idris-talks",
+      "primaryKeyword": "f1 the movie sequel damson idris",
+      "primaryEntity": "F1",
       "entities": [
-        "Matt Damon"
+        "F1: The Movie",
+        "Damson Idris"
       ],
-      "angle": "Matt Damon confirms development on a new Jason Bourne film, aiming to recapture the spirit of the original trilogy.",
+      "angle": "Damson Idris in advanced talks for a sequel to the Formula 1 movie.",
       "tmdbType": "movie",
-      "source": "gnews:IGN",
+      "source": "gnews:FormulaRapida.net",
       "sources": [
         {
-          "outlet": "IGN",
+          "outlet": "FormulaRapida.net",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPckdMQnA4WVo1Z3A4ME1rOUhrVTRkNGhIZDZKcTRBMzE0UUdWQTJxOGI2blBsMWhTZ25mamZwM0JYWHpfMUs1SVVtYnA2aGtTekNtSnAyb2VtVXpvOGVsQmNkWFVuMWhKU3hhcDVaMFNjeV80cDJaWUtWT1VpQ1hHR05vWGZQc0RwR2ZiR1dPTV9fTjAxcFhCLXdGMzVkcVFHLXB2MTdiWk5tUDNyOGczdW1iOEloby1vQTZOanZNeUl3T2RaaTRldGVUTHA?oc=5",
-          "ageMin": 7,
-          "headline": "Matt Damon Wants New Jason Bourne Movie to 'Be Like the First 3' as Work With Conclave Director Continues - IGN",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMizAFBVV95cUxPckdMQnA4WVo1Z3A4ME1rOUhrVTRkNGhIZDZKcTRBMzE0UUdWQTJxOGI2blBsMWhTZ25mamZwM0JYWHpfMUs1SVVtYnA2aGtTekNtSnAyb2VtVXpvOGVsQmNkWFVuMWhKU3hhcDVaMFNjeV80cDJaWUtWT1VpQ1hHR05vWGZQc0RwR2ZiR1dPTV9fTjAxcFhCLXdGMzVkcVFHLXB2MTdiWk5tUDNyOGczdW1iOEloby1vQTZ"
+          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1qcWdYc0ZfTHcxOV9FaHBHY0ZXM01jaldlNjl0UjRNbUg1SEo1djhSS2hVQ0FzYVl1Tng0RkZlRzVqMjY1NDMxcnByZVJzTmZldW0zVHV1SkVuM0ZyZVpMWGZ3dTJ0ak51Z1HSAW9BVV95cUxQNGtuamt0RkdjQUI1NXR2b1N4clZ1VlVNTS1yMHctcHdURFNKVnVqaTdMMlRhY01WYXFwTXhhb19ObWxmY2JEZmJ5NHphQWZWN3h2RkVzbmgwdmJFc2g4bm1TRTdoaThTcHBsRzlJWWs?oc=5",
+          "ageMin": 239,
+          "headline": "Damson Idris advances talks on the sequel to “F1 The Movie” - FormulaRapida.net",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiakFVX3lxTE1qcWdYc0ZfTHcxOV9FaHBHY0ZXM01jaldlNjl0UjRNbUg1SEo1djhSS2hVQ0FzYVl1Tng0RkZlRzVqMjY1NDMxcnByZVJzTmZldW0zVHV1SkVuM0ZyZVpMWGZ3dTJ0ak51Z1HSAW9BVV95cUxQNGtuamt0RkdjQUI1NXR2b1N4clZ1VlVNTS1yMHctcHdURFNKVnVqaTdMMlRhY01WYXFwTXhhb19ObWxmY2JEZmJ5NHphQWZ"
         }
       ],
-      "ageMin": 7,
+      "ageMin": 239,
       "_cand": {
-        "key": "rss:matt-damon-wants-new-jason-bourne-movie-to-be-like-the-first",
+        "key": "rss:damson-idris-advances-talks-on-the-sequel-to-f1-the-movie-fo",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -112,21 +250,21 @@
         "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "IGN"
+          "FormulaRapida.net"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "IGN",
+        "attribution": "FormulaRapida.net",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 89,
+      "priority": 73,
       "signals": {
-        "recency": 30,
+        "recency": 9,
         "corroboration": 8,
         "status": 18,
-        "type": 9,
+        "type": 14,
         "pop": 0,
         "breakout": 0,
         "big": 24,
@@ -137,155 +275,24 @@
       "tierClass": "B"
     },
     {
-      "id": "trailer-impractical-jokers-dont-move-trailer",
-      "slug": "impractical-jokers-new-horror-film-don-t-move-drops-trailer",
-      "title": "Impractical Jokers' New Horror Film 'Don't Move' Drops Trailer",
-      "contentType": "trailer",
-      "formatTag": "trailer",
-      "category": "tv",
-      "subcategory": "trailers",
-      "eventType": "trailer",
-      "sensitivity": "normal",
-      "eventSlug": "impractical-jokers-dont-move-trailer",
-      "primaryKeyword": "impractical jokers trailer",
-      "primaryEntity": "Impractical Jokers: The Movie",
-      "entities": [
-        "Impractical Jokers",
-        "Don't Move"
-      ],
-      "angle": "The comedy troupe 'Impractical Jokers' is venturing into horror with a new trailer for their film 'Don't Move'.",
-      "tmdbType": "movie",
-      "source": "gnews:IMDb",
-      "sources": [
-        {
-          "outlet": "IMDb",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9pYTM0aDdBQ2pBYnhIaUtFQ1JsSVFldG16amdrNnEyOUlmUEphVEMyMjZsWWl0TzVCOVdzdFFFTWxOQ2UwT29tdGRCNTJuZzZKd1hiWmZqZ280cFpmVkdKLQ?oc=5",
-          "ageMin": 181,
-          "headline": "Don't Move Trailer Reveals New Look at Impractical Jokers' New Horror - IMDb",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiYEFVX3lxTE9pYTM0aDdBQ2pBYnhIaUtFQ1JsSVFldG16amdrNnEyOUlmUEphVEMyMjZsWWl0TzVCOVdzdFFFTWxOQ2UwT29tdGRCNTJuZzZKd1hiWmZqZ280cFpmVkdKLQ?oc=5\" target=\"_blank\" Don't Move Trailer Reveals New Look at Impractical Jokers' New Horror /a nbsp; nbsp; font color=\"#"
-        }
-      ],
-      "ageMin": 181,
-      "_cand": {
-        "key": "rss:don-t-move-trailer-reveals-new-look-at-impractical-jokers-ne",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "IMDb"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "IMDb",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 68,
-      "signals": {
-        "recency": 9,
-        "corroboration": 8,
-        "status": 18,
-        "type": 15,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-life-larry-and-the-pursuit-of-unhappiness-guest-stars",
-      "slug": "guest-stars-and-cameos-on-hbo-max-s-life-larry-and-the-pursuit-of-unha",
-      "title": "Guest Stars and Cameos on HBO Max's 'Life, Larry and the Pursuit of Unhappiness' So Far",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "life-larry-and-the-pursuit-of-unhappiness-guest-stars",
-      "primaryKeyword": "life and larry guest stars",
-      "primaryEntity": "Life, Larry and the Pursuit of Unhappiness",
-      "entities": [
-        "Barack Obama",
-        "Rob Reiner"
-      ],
-      "angle": "HBO's sketch-comedy series has featured a notable lineup of guest stars and cameos.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/tv/tv-news/larry-and-the-pursuit-of-unhappiness-guest-stars-cameos-1236651445/",
-          "ageMin": 1175,
-          "headline": "All of the Guest Stars and Cameos on HBO Max s Life, Larry and the Pursuit of Unhappiness (So Far)",
-          "summary": "From Barack Obama's opening cameo to Rob Reiner's poignant final screen role, HBO's sketch-comedy history lesson has stacked a deep bench — here's who's played who through episode four."
-        }
-      ],
-      "ageMin": 1175,
-      "_cand": {
-        "key": "rss:all-of-the-guest-stars-and-cameos-on-hbo-max-s-life-larry-an",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 63,
-      "signals": {
-        "recency": 1,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-call-of-duty-movie-modern-warfare-universe",
-      "slug": "taylor-sheridan-and-peter-berg-s-call-of-duty-movie-set-in-modern-warf",
-      "title": "Taylor Sheridan and Peter Berg's 'Call of Duty' Movie Set in 'Modern Warfare' Universe",
+      "id": "news-call-of-duty-movie-taylor-sheridan-peter-berg-modern-warfare-universe",
+      "slug": "call-of-duty-movie-from-taylor-sheridan-and-peter-berg-will-be-set-in-",
+      "title": "'Call of Duty’ Movie From Taylor Sheridan and Peter Berg Will Be Set in ‘Modern Warfare’ Universe",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "call-of-duty-movie-modern-warfare-universe",
+      "eventSlug": "call-of-duty-movie-taylor-sheridan-peter-berg-modern-warfare-universe",
       "primaryKeyword": "Call of Duty movie",
       "primaryEntity": "Call of Duty (film)",
       "entities": [
         "Taylor Sheridan",
-        "Peter Berg"
+        "Peter Berg",
+        "Modern Warfare"
       ],
-      "angle": "Taylor Sheridan and Peter Berg's 'Call of Duty' movie will be set in the 'Modern Warfare' universe.",
+      "angle": "Taylor Sheridan and Peter Berg are developing a 'Call of Duty' movie set in the 'Modern Warfare' universe.",
       "tmdbType": "movie",
       "source": "gnews:The Hollywood Reporter",
       "sources": [
@@ -293,12 +300,12 @@
           "outlet": "The Hollywood Reporter",
           "tier": 7,
           "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQVmxBMzBza3I4Q0JMTW9PWGVXcURHQWhaSjBzZ0RjLXVSN3NsSVRkNGtLQUlsTDRneGdhZVdpTW53elZxaVhYMGYyNXhibVZ4S1hYSjhtSDBfRzhmY1Z5OFVIR3RBODk0NHZrd1lhdUY1czl1bWdJQUxtWFZHd3lHTjEyT1Zra29ndDdibzRna2t2T2JYck1ST1JUenpjazhuZ2x6cGVibF9qOVlBUXJsZk9MUQ?oc=5",
-          "ageMin": 186,
+          "ageMin": 276,
           "headline": "‘Call of Duty’ Movie From Taylor Sheridan and Peter Berg Will Be Set in ‘Modern Warfare’ Universe - The Hollywood Reporter",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMiswFBVV95cUxQVmxBMzBza3I4Q0JMTW9PWGVXcURHQWhaSjBzZ0RjLXVSN3NsSVRkNGtLQUlsTDRneGdhZVdpTW53elZxaVhYMGYyNXhibVZ4S1hYSjhtSDBfRzhmY1Z5OFVIR3RBODk0NHZrd1lhdUY1czl1bWdJQUxtWFZHd3lHTjEyT1Zra29ndDdibzRna2t2T2JYck1ST1JUenpjazhuZ2x6cGVibF9qOVlBUXJsZk9MUQ?oc=5\" ta"
         }
       ],
-      "ageMin": 186,
+      "ageMin": 276,
       "_cand": {
         "key": "rss:-call-of-duty-movie-from-taylor-sheridan-and-peter-berg-will",
         "popularity": 0,
@@ -335,291 +342,16 @@
       "tierClass": "B"
     },
     {
-      "id": "music-news-robert-smith-fifa-world-cup-halftime-show",
-      "slug": "the-cure-s-robert-smith-slams-fifa-s-world-cup-final-halftime-show-jus",
-      "title": "The Cure s Robert Smith Slams FIFA s World Cup Final Halftime Show: Just F Off",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "robert-smith-fifa-world-cup-halftime-show",
-      "primaryKeyword": "robert smith the cure",
-      "primaryEntity": "Robert Smith",
-      "entities": [
-        "The Cure",
-        "FIFA World Cup"
-      ],
-      "angle": "The Cure's Robert Smith vocally slams the announcement of a halftime show for the FIFA World Cup final.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/music/news/robert-smith-fifa-world-cup-halftime-show-1236815510/",
-          "ageMin": 164,
-          "headline": "The Cure s Robert Smith Slams FIFA s World Cup Final Halftime Show: Just F Off",
-          "summary": "Following the news that the FIFA World Cup final will feature its first halftime show in history, The Cure s Robert Smith took to social media to slam the announcement. AAAAAAAAAAAAAAAAAAGH… #Breadandcircuses #MUGWANK #pleasejustfuckoff, Smith wrote on The Cure s Instagram account. Curated by Coldplay s Chris Martin, performers will include Madonna, Justin Bieber, Shakira and BTS. In [ ]"
-        }
-      ],
-      "ageMin": 164,
-      "_cand": {
-        "key": "rss:the-cure-s-robert-smith-slams-fifa-s-world-cup-final-halftim",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 58,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 7,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-god-of-war-tv-series-recasting-kratos-ryan-hurst-injury",
-      "slug": "god-of-war-tv-series-to-recast-kratos-role-after-ryan-hurst-injury",
-      "title": "God of War TV Series to Recast Kratos Role After Ryan Hurst Injury",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "god-of-war-tv-series-recasting-kratos-ryan-hurst-injury",
-      "primaryKeyword": "God of War TV series Kratos casting",
-      "primaryEntity": "God of War",
-      "entities": [
-        "God of War (TV series)",
-        "Ryan Hurst",
-        "Prime Video"
-      ],
-      "angle": "Prime Video's 'God of War' series will recast the role of Kratos following an on-set injury to actor Ryan Hurst.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/tv/tv-news/god-of-war-recast-kratos-ryan-hurst-stunt-injury-1236650848/",
-          "ageMin": 1965,
-          "headline": "God of War to Recast Kratos Role Following Ryan Hurst On-Set Injury",
-          "summary": "Prime Video's original God of War tore a bicep muscle while performing a stunt."
-        }
-      ],
-      "ageMin": 1965,
-      "_cand": {
-        "key": "rss:god-of-war-to-recast-kratos-role-following-ryan-hurst-on-set",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 63,
-      "signals": {
-        "recency": 1,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-colman-domingo-tiana-movie",
-      "slug": "colman-domingo-in-talks-to-write-live-action-princess-tiana-movie",
-      "title": "Colman Domingo in Talks to Write Live-Action Princess Tiana Movie",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "colman-domingo-tiana-movie",
-      "primaryKeyword": "tiana movie",
-      "primaryEntity": "The Princess and the Frog",
-      "entities": [
-        "Princess Tiana",
-        "Colman Domingo"
-      ],
-      "angle": "Colman Domingo is in talks to write a live-action movie based on Disney's 'The Princess and the Frog'.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/colman-domingo-live-action-tiana-princess-and-the-frog-1236651364/",
-          "ageMin": 1379,
-          "headline": "Colman Domingo in Talks to Write Live-Action Princess Tiana Movie Inspired by Princess and the Frog",
-          "summary": "No deals have been closed for the take on the 2009 Disney film 'Princess and the Frog.'"
-        }
-      ],
-      "ageMin": 1379,
-      "_cand": {
-        "key": "rss:colman-domingo-in-talks-to-write-live-action-princess-tiana-",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 69,
-      "signals": {
-        "recency": 1,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "music-news-serious-black-announce-new-studio-album-keeper-of-the-light",
-      "slug": "serious-black-announce-new-studio-album-keeper-of-the-light-first-sing",
-      "title": "Serious Black Announce New Studio Album 'Keeper Of The Light'; First Single 'Last Man Standing' Out Now",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "serious-black-announce-new-studio-album-keeper-of-the-light",
-      "primaryKeyword": "Serious Black album",
-      "primaryEntity": "Serious Black",
-      "entities": [
-        "Keeper of the Light"
-      ],
-      "angle": "Veteran metal band Serious Black has announced their new studio album, 'Keeper of the Light,' with the first single 'Last Man Standing' also released.",
-      "tmdbType": "movie",
-      "source": "gnews:myglobalmind.com",
-      "sources": [
-        {
-          "outlet": "myglobalmind.com",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOUkpmNU9ZcVBwckNOV0Q4Y24wQTIwMXAyYmQ1TUNVeC1xOXZsZ2VqNm5va0FLWlNDSGhXb1g0bFA1NWV6bkl3aTFVV1h4Q3pTcUhqRVlxUlZ6RXA0UGw1VktPajFtbHBBWUV5UHZZTk9VUGZUNVpLWXpyZXo3R2xaVFcwS3JhSV9vZXRfYmY5VDZTSlU?oc=5",
-          "ageMin": 551,
-          "headline": "Serious Black Announce New Studio Album Keeper Of The Light; First Single Video “Last Man Standing” Out Now - myglobalmind.com",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMikwFBVV95cUxOUkpmNU9ZcVBwckNOV0Q4Y24wQTIwMXAyYmQ1TUNVeC1xOXZsZ2VqNm5va0FLWlNDSGhXb1g0bFA1NWV6bkl3aTFVV1h4Q3pTcUhqRVlxUlZ6RXA0UGw1VktPajFtbHBBWUV5UHZZTk9VUGZUNVpLWXpyZXo3R2xaVFcwS3JhSV9vZXRfYmY5VDZTSlU?oc=5\" target=\"_blank\" Serious Black Announce New St"
-        },
-        {
-          "outlet": "BraveWords",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQMzdqRkZLbFk2RXBKXzBMNkFZaVJEelFmTnVwZkVodzVKVmNEeDQwY3pfNktIbmxPalgzcVdqa0txTnB2dFFhNWZpRkxjb2IzVEF0N2NhdWlJcmxEbmJPOUc3dzJ2dmdiRTFRUUV0UE9maDlsSDRxM1JUTXMyRGIwR191MlprZVJ5OUxrNkpYaW42U1FYamFFT2dWWHJNUXNKSmZ6QURiMVhfaDJSdjJ0Z3FLVExiQUQ3ZGVDY9IBxAFBVV95cUxOMW1WTDdKWmtfQjVQbUVjbDVobmtZQmZMZlVHd0lSSHhFZUh4aWJtUkI2NzdUSUlKYlNqWXlxSGVEckp2YU9wRm5sWUNyd2NibHdacHh6Z2w1TUh0NmpLNzEwZm03c0lPUGRhNnZoVENqb0c5M3RNb0g5Y0lDeXd2VndEaXVuN3BvOGxkT0Z0azNYcExZTTBwYUozZ1B0LTNGN1I4Mm5LVnVGbG4xUmZqaFdEN0RuUmlCMGFjdS03c0FsTjBf?oc=5",
-          "ageMin": 943,
-          "headline": "SERIOUS BLACK To Release New Album In January 2027; “Last Man Standing” Single / Video Available - BraveWords",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMivAFBVV95cUxQMzdqRkZLbFk2RXBKXzBMNkFZaVJEelFmTnVwZkVodzVKVmNEeDQwY3pfNktIbmxPalgzcVdqa0txTnB2dFFhNWZpRkxjb2IzVEF0N2NhdWlJcmxEbmJPOUc3dzJ2dmdiRTFRUUV0UE9maDlsSDRxM1JUTXMyRGIwR191MlprZVJ5OUxrNkpYaW42U1FYamFFT2dWWHJNUXNKSmZ6QURiMVhfaDJSdjJ0Z3FLVExiQUQ3ZGV"
-        }
-      ],
-      "ageMin": 551,
-      "_cand": {
-        "key": "rss:serious-black-announce-new-studio-album-keeper-of-the-light-",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 2,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 2,
-        "outlets": [
-          "myglobalmind.com",
-          "BraveWords"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "multiple outlets",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 53,
-      "signals": {
-        "recency": 4,
-        "corroboration": 14,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 8,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-heartstopper-forever-finale-discussion",
-      "slug": "heartstopper-forever-director-writer-and-stars-joe-locke-and-kit-conno",
-      "title": "‘Heartstopper Forever’ Director, Writer and Stars Joe Locke and Kit Connor on the Finale: “It Connects the Whole Heartstopper Gang”",
+      "id": "news-heartstopper-forever-finale-breakdown",
+      "slug": "heartstopper-forever-stars-and-writer-on-the-finale-s-emotional-climax",
+      "title": "‘Heartstopper Forever’ Stars and Writer on the Finale’s Emotional Climax",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "heartstopper-forever-finale-discussion",
+      "eventSlug": "heartstopper-forever-finale-breakdown",
       "primaryKeyword": "heartstopper finale",
       "primaryEntity": "Heartstopper",
       "entities": [
@@ -627,7 +359,7 @@
         "Kit Connor",
         "Alice Oseman"
       ],
-      "angle": "Director and stars of 'Heartstopper Forever' break down the finale's changes from the book and its emotional beats.",
+      "angle": "Stars and creator break down the emotional finale of the hit streaming series, discussing key changes from the source material and character arcs.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
@@ -635,12 +367,12 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/movies/movie-features/heartstopper-forever-ending-kit-connor-joe-lock-interview-1236647039/",
-          "ageMin": 391,
+          "ageMin": 481,
           "headline": "‘Heartstopper Forever’ Director, Writer and Stars Joe Locke and Kit Connor on the Finale: “It Connects the Whole Heartstopper Gang”",
           "summary": "Stars Connor and Locke, creator Alice Oseman and director Wash Westmoreland break down the film’s biggest change from book to screen, alongside the intimacy, break-ups, and ambiguous endings from the final chapter."
         }
       ],
-      "ageMin": 391,
+      "ageMin": 481,
       "_cand": {
         "key": "rss:-heartstopper-forever-director-writer-and-stars-joe-locke-an",
         "popularity": 0,
@@ -679,66 +411,65 @@
       "tierClass": "A"
     },
     {
-      "id": "news-danny-boyle-ink-sells-to-netflix",
-      "slug": "danny-boyle-s-ink-sells-to-netflix-in-first-big-sale-way-ahead-of-veni",
-      "title": "Danny Boyle s Ink Sells to Netflix in First Big Sale (Way) Ahead of Venice Premiere",
+      "id": "news-george-lucas-apocalypse-now-pitch-rejection",
+      "slug": "george-lucas-only-made-star-wars-because-hollywood-rejected-his-apocal",
+      "title": "George Lucas Only Made Star Wars Because Hollywood Rejected His Apocalypse Now Pitch",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
-      "eventType": "announcement",
+      "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "danny-boyle-ink-sells-to-netflix",
-      "primaryKeyword": "danny boyle ink",
-      "primaryEntity": "Ink (2024 film)",
+      "eventSlug": "george-lucas-apocalypse-now-pitch-rejection",
+      "primaryKeyword": "George Lucas Star Wars",
+      "primaryEntity": "George Lucas",
       "entities": [
-        "Danny Boyle",
-        "Netflix",
-        "Venice Film Festival"
+        "Star Wars",
+        "Apocalypse Now"
       ],
-      "angle": "Danny Boyle's new film 'Ink' secures a Netflix deal ahead of its Venice premiere.",
+      "angle": "George Lucas's early career struggles and how they led to his iconic 'Star Wars' creation.",
       "tmdbType": "movie",
-      "source": "rss:IndieWire",
+      "source": "gnews:IMDb",
       "sources": [
         {
-          "outlet": "IndieWire",
-          "tier": 7,
-          "url": "https://www.indiewire.com/news/breaking-news/danny-boyle-ink-netflix-venice-sale-1235206128/",
-          "ageMin": 1460,
-          "headline": "Danny Boyle s Ink Sells to Netflix in First Big Sale (Way) Ahead of Venice Premiere",
-          "summary": "The film about Larry Lamb, Rupert Murdoch, and the birth of The Sun tabloid is the opening night film at the Biennale."
+          "outlet": "IMDb",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1BVDc2ZzAwWW1LVDVESEx2elVqRFE1WnJlUGpmUVJ2Sk4tYnlpTkJuYUZVQUlQMHIyelVEeFQ5bzd0Ty1uamx6TjNqSjVBM2F3NlVmVTV3bW1UZGhFMEd0aGdFRy1YNnlKMUE?oc=5",
+          "ageMin": 19,
+          "headline": "George Lucas Only Made Star Wars Because Hollywood Rejected His Apocalypse Now Pitch - IMDb",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiakFVX3lxTE1BVDc2ZzAwWW1LVDVESEx2elVqRFE1WnJlUGpmUVJ2Sk4tYnlpTkJuYUZVQUlQMHIyelVEeFQ5bzd0Ty1uamx6TjNqSjVBM2F3NlVmVTV3bW1UZGhFMEd0aGdFRy1YNnlKMUE?oc=5\" target=\"_blank\" George Lucas Only Made Star Wars Because Hollywood Rejected His Apocalypse Now Pitch "
         }
       ],
-      "ageMin": 1460,
+      "ageMin": 19,
       "_cand": {
-        "key": "rss:danny-boyle-s-ink-sells-to-netflix-in-first-big-sale-way-ahe",
+        "key": "rss:george-lucas-only-made-star-wars-because-hollywood-rejected-",
         "popularity": 0,
-        "kind": "rss-news"
+        "kind": "gnews"
       },
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
+        "tier1Count": 0,
+        "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "IndieWire"
+          "IMDb"
         ],
-        "maxTier": 7,
+        "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "IndieWire",
+        "attribution": "IMDb",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 64,
+      "priority": 67,
       "signals": {
-        "recency": 1,
-        "corroboration": 12,
+        "recency": 24,
+        "corroboration": 8,
         "status": 18,
-        "type": 9,
+        "type": 5,
         "pop": 0,
         "breakout": 0,
-        "big": 24,
+        "big": 12,
         "trending": 0,
         "spice": 0,
         "softTv": 0
@@ -747,8 +478,8 @@
     },
     {
       "id": "news-vampire-lestat-episode-6-twists",
-      "slug": "the-vampire-lestat-creator-and-stars-unpack-shocking-episode-6-twists",
-      "title": "‘The Vampire Lestat’ Creator and Stars Unpack Shocking Episode 6 Twists",
+      "slug": "the-vampire-lestat-creator-and-stars-unpack-shocking-episode-6-twists-",
+      "title": "‘The Vampire Lestat’ Creator and Stars Unpack Shocking Episode 6 Twists Ahead of Finale",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
@@ -756,12 +487,12 @@
       "eventType": "other",
       "sensitivity": "normal",
       "eventSlug": "vampire-lestat-episode-6-twists",
-      "primaryKeyword": "The Vampire Lestat",
+      "primaryKeyword": "vampire lestat episode 6",
       "primaryEntity": "The Vampire Lestat",
       "entities": [
         "Jacob Anderson"
       ],
-      "angle": "Creator and stars of 'The Vampire Lestat' discuss shocking twists ahead of the season finale.",
+      "angle": "Stars and creator break down the shocking mid-season twists of 'The Vampire Lestat' before the finale.",
       "tmdbType": "movie",
       "source": "rss:TheWrap",
       "sources": [
@@ -769,12 +500,12 @@
           "outlet": "TheWrap",
           "tier": 7,
           "url": "https://www.thewrap.com/industry-news/business/the-vampire-lestat-episode-6-explained-claudia-seance/",
-          "ageMin": 271,
+          "ageMin": 361,
           "headline": "‘The Vampire Lestat’ Creator and Stars Unpack Those Shocking Episode 6 Twists and Reveals Ahead of the Finale",
           "summary": "\"You're going to be shocked, to say the least, coming out of that experience,\" Jacob Anderson tells TheWrap about Louis' wild night The post ‘The Vampire Lestat’ Creator and Stars Unpack Those Shocking Episode 6 Twists and Reveals Ahead of the Finale appeared first on TheWrap ."
         }
       ],
-      "ageMin": 271,
+      "ageMin": 361,
       "_cand": {
         "key": "rss:-the-vampire-lestat-creator-and-stars-unpack-those-shocking-",
         "popularity": 0,
@@ -795,9 +526,9 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 53,
+      "priority": 48,
       "signals": {
-        "recency": 9,
+        "recency": 4,
         "corroboration": 12,
         "status": 18,
         "type": 5,
@@ -811,59 +542,61 @@
       "tierClass": "C"
     },
     {
-      "id": "news-star-wars-sequels-discussion",
-      "slug": "are-disney-s-star-wars-sequels-better-than-the-original-trilogy-a-disc",
-      "title": "Are Disney's 'Star Wars' Sequels Better Than the Original Trilogy? A Discussion",
+      "id": "news-danny-boyle-ink-netflix-sale-venice",
+      "slug": "danny-boyle-s-ink-sells-to-netflix-in-first-big-sale-way-ahead-of-veni",
+      "title": "Danny Boyle's Ink Sells to Netflix in First Big Sale (Way) Ahead of Venice Premiere",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "star-wars-sequels-discussion",
-      "primaryKeyword": "Star Wars sequels",
-      "primaryEntity": "Star Wars",
+      "eventSlug": "danny-boyle-ink-netflix-sale-venice",
+      "primaryKeyword": "Danny Boyle film",
+      "primaryEntity": "Ink (film)",
       "entities": [
-        "Star Wars sequels"
+        "Danny Boyle",
+        "Netflix",
+        "Venice Film Festival"
       ],
-      "angle": "An opinion piece comparing the Disney Star Wars sequels to the original trilogy.",
+      "angle": "Danny Boyle's new film 'Ink,' set to open the Venice Film Festival, has been acquired by Netflix.",
       "tmdbType": "movie",
-      "source": "gnews:Inside the Magic",
+      "source": "rss:IndieWire",
       "sources": [
         {
-          "outlet": "Inside the Magic",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPY0drOEY4bE4tdmtWQUtMUUZDOEtzVDNlUmZGYXFlWHBPNjdMUTJPVUlpUVgzQmdGTFVFYVdydlZ0dFdMOXo3QXVmdDhPX3VUWGQyNjRsMHI5RjRHdm1HTHVwalV6UEpxZVpmRGpEVXdfSnhyOGJkSEc0WXNCUk85VW94MFRqTkNkRjRtb3JfbW4wQ0V1bzJLclBTMzlndi00eXZwWTJoczIza3FFSnlYcDVKejlVUVJKM1MzUWRBR24xT2poQkp6RU5XejNUejJG?oc=5",
-          "ageMin": 70,
-          "headline": "Comments for Disney’s ‘Star Wars’ Sequels Might Actually Be Better Than the Original Trilogy — Here’s Why - Inside the Magic",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMi0AFBVV95cUxPY0drOEY4bE4tdmtWQUtMUUZDOEtzVDNlUmZGYXFlWHBPNjdMUTJPVUlpUVgzQmdGTFVFYVdydlZ0dFdMOXo3QXVmdDhPX3VUWGQyNjRsMHI5RjRHdm1HTHVwalV6UEpxZVpmRGpEVXdfSnhyOGJkSEc0WXNCUk85VW94MFRqTkNkRjRtb3JfbW4wQ0V1bzJLclBTMzlndi00eXZwWTJoczIza3FFSnlYcDVKejlVUVJKM1M"
+          "outlet": "IndieWire",
+          "tier": 7,
+          "url": "https://www.indiewire.com/news/breaking-news/danny-boyle-ink-netflix-venice-sale-1235206128/",
+          "ageMin": 1550,
+          "headline": "Danny Boyle s Ink Sells to Netflix in First Big Sale (Way) Ahead of Venice Premiere",
+          "summary": "The film about Larry Lamb, Rupert Murdoch, and the birth of The Sun tabloid is the opening night film at the Biennale."
         }
       ],
-      "ageMin": 70,
+      "ageMin": 1550,
       "_cand": {
-        "key": "rss:comments-for-disney-s-star-wars-sequels-might-actually-be-be",
+        "key": "rss:danny-boyle-s-ink-sells-to-netflix-in-first-big-sale-way-ahe",
         "popularity": 0,
-        "kind": "gnews"
+        "kind": "rss-news"
       },
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
+        "tier1Count": 1,
+        "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Inside the Magic"
+          "IndieWire"
         ],
-        "maxTier": 5,
+        "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Inside the Magic",
+        "attribution": "IndieWire",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 59,
+      "priority": 48,
       "signals": {
-        "recency": 16,
-        "corroboration": 8,
+        "recency": 1,
+        "corroboration": 12,
         "status": 18,
         "type": 5,
         "pop": 0,
@@ -876,22 +609,87 @@
       "tierClass": "C"
     },
     {
-      "id": "news-lena-heady-hollywood-protection-predatory-men-game-of-thrones",
-      "slug": "lena-headey-calls-out-hollywood-for-weird-protection-of-predatory-men-",
-      "title": "Lena Headey Calls Out Hollywood For Weird Protection Of Predatory Men The Backlash Over Not Going Nude For Game Of Thrones Scene",
+      "id": "news-andrew-tristan-tate-arrested-miami",
+      "slug": "andrew-tate-and-brother-tristan-arrested-in-miami",
+      "title": "Andrew Tate and Brother Tristan Arrested in Miami",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "arrest",
+      "sensitivity": "high",
+      "eventSlug": "andrew-tristan-tate-arrested-miami",
+      "primaryKeyword": "Andrew Tate arrest",
+      "primaryEntity": "Andrew Tate",
+      "entities": [
+        "Tristan Tate"
+      ],
+      "angle": "Influencers Andrew and Tristan Tate have been arrested by federal officers in Miami.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/digital/news/andrew-tate-tristan-tate-arrested-miami-1236815654/",
+          "ageMin": 32,
+          "headline": "Andrew Tate and Brother Tristan Arrested in Miami",
+          "summary": "Manosphere influencers Andrew and Tristan Tate were arrested by federal officers Saturday afternoon in Miami, according to AP. The charges against the brothers were not immediately made public. This isn’t the first time the Tate brothers have found themselves in cuffs. Back in 2022, the controversial media figures were arrested in Romania by anti-terrorism authorities [ ]"
+        }
+      ],
+      "ageMin": 32,
+      "_cand": {
+        "key": "rss:andrew-tate-and-brother-tristan-arrested-in-miami",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 67,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 13,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "S"
+    },
+    {
+      "id": "news-lena-headey-hollywood-predatory-men-nudity-backlash",
+      "slug": "lena-headey-calls-out-hollywood-for-protecting-predatory-men-amid-game",
+      "title": "Lena Headey Calls Out Hollywood For Protecting Predatory Men Amid 'Game of Thrones' Nudity Backlash",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "lena-heady-hollywood-protection-predatory-men-game-of-thrones",
-      "primaryKeyword": "lena headey game of thrones",
+      "eventSlug": "lena-headey-hollywood-predatory-men-nudity-backlash",
+      "primaryKeyword": "Lena Headey Hollywood",
       "primaryEntity": "Lena Headey",
       "entities": [
         "Game of Thrones"
       ],
-      "angle": "Lena Headey speaks out about Hollywood's protection of predatory men and the reaction to her 'Game of Thrones' nudity.",
+      "angle": "Lena Headey speaks out about Hollywood's protection of predatory men and the backlash she faced regarding nudity in 'Game of Thrones'.",
       "tmdbType": "movie",
       "source": "rss:Deadline",
       "sources": [
@@ -899,12 +697,12 @@
           "outlet": "Deadline",
           "tier": 7,
           "url": "https://deadline.com/2026/07/lena-headey-hollywood-predatory-men-backlash-game-of-thrones-1236997595/",
-          "ageMin": 0,
+          "ageMin": 90,
           "headline": "Lena Headey Calls Out Hollywood For Weird Protection Of Predatory Men The Backlash Over Not Going Nude For Game Of Thrones Scene",
           "summary": "Lena Headey is getting real about the weird protection of predatory men in Hollywood and reveals what shocked her about the reaction to the Game of Thrones nudity scandal. In a new interview, the GoT star who played Cersei Lannister in the HBO fantasy series opened up about the backlash she got for using a [ ]"
         }
       ],
-      "ageMin": 0,
+      "ageMin": 90,
       "_cand": {
         "key": "rss:lena-headey-calls-out-hollywood-for-weird-protection-of-pred",
         "popularity": 0,
@@ -925,9 +723,9 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 75,
+      "priority": 61,
       "signals": {
-        "recency": 30,
+        "recency": 16,
         "corroboration": 12,
         "status": 18,
         "type": 5,
@@ -939,6 +737,72 @@
         "softTv": 0
       },
       "tierClass": "B"
+    },
+    {
+      "id": "news-shania-twain-dive-bar-gig",
+      "slug": "shania-twain-finally-plays-her-dream-gig-a-tiny-dive-bar-in-toronto",
+      "title": "Shania Twain Finally Plays Her Dream Gig: A Tiny Dive Bar in Toronto",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "shania-twain-dive-bar-gig",
+      "primaryKeyword": "shania twain",
+      "primaryEntity": "Shania Twain",
+      "entities": [
+        "Little Miss Twain (album)"
+      ],
+      "angle": "Shania Twain fulfilled a dream by performing an intimate set at a small Toronto dive bar.",
+      "tmdbType": "movie",
+      "source": "rss:Rolling Stone",
+      "sources": [
+        {
+          "outlet": "Rolling Stone",
+          "tier": 7,
+          "url": "https://www.rollingstone.com/music/music-country/shania-twain-surprise-concert-horseshoe-tavern-recap-1235595620/",
+          "ageMin": 334,
+          "headline": "Shania Twain Finally Plays Her Dream Gig: A Tiny Dive Bar in Toronto",
+          "summary": "The superstar held court at the Horseshoe Tavern on Friday night, delivering a set that mixed her hits with the autobiographical tracks off new album Little Miss Twain"
+        }
+      ],
+      "ageMin": 334,
+      "_cand": {
+        "key": "rss:shania-twain-finally-plays-her-dream-gig-a-tiny-dive-bar-in-",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Rolling Stone"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Rolling Stone",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 48,
+      "signals": {
+        "recency": 9,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
     }
   ]
 }

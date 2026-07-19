@@ -1,0 +1,72 @@
+{
+  "id": "news-george-lucas-apocalypse-now-pitch-rejection",
+  "slug": "george-lucas-only-made-star-wars-because-hollywood-rejected-his-apocal",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": null,
+      "cat": "celebrity/news",
+      "format": [
+        "body 193w < 220"
+      ],
+      "cuts": 8,
+      "broken": []
+    },
+    "attempt2": {
+      "score": null,
+      "cat": "celebrity/news",
+      "format": [
+        "body 177w < 220"
+      ],
+      "cuts": 6,
+      "broken": []
+    }
+  },
+  "editorial": {
+    "status": "unconfirmed",
+    "entity": "George Lucas",
+    "work": null,
+    "outlet": "Variety Film + TV"
+  },
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
+    "deterministic": {
+      "words": 177,
+      "h2s": 2,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 3,
+      "ktCount": 3,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 33,
+      "avgSentence": 18,
+      "flesch": 47,
+      "bannedTells": 1,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": [
+        "body 177w < 220"
+      ]
+    },
+    "hardBlocks": []
+  },
+  "score": null,
+  "category": "celebrity",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 2,
+    "failed": [
+      "body ≥ 220w",
+      "2+ FAQ"
+    ]
+  },
+  "ms": 43535
+}
