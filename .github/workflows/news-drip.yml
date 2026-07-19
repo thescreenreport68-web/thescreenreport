@@ -38,6 +38,14 @@ permissions:
 jobs:
   drip:
     runs-on: ubuntu-latest
+    # BOUNDED RUN (2026-07-19, registry §3.16): `lib/openrouter.mjs` defaults to retries=4 with a 150s
+    # abort each, so ONE stalled chat() can burn ~10 min; an article makes 6-7 calls. Combined with
+    # `concurrency: news-publish` + `cancel-in-progress: false`, a single hung run would queue every
+    # later tick behind it — and GitHub's default kill is 360 MINUTES, so the lane could stall for
+    # hours in silence. A normal tick is 1.8-5.6 min (median 2.1), so 20 min is ~4x headroom and still
+    # converts an unbounded stall into a bounded, visible failure. A killed run loses only its own
+    # unpushed work; the dedup ledger never recorded it, so FIND simply re-finds the topic next tick.
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
         with:

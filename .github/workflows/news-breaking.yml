@@ -31,6 +31,10 @@ permissions:
 jobs:
   breaking:
     runs-on: ubuntu-latest
+    # BOUNDED RUN (2026-07-19, registry §3.16): tighter than the drip's 20 min because this lane's whole
+    # purpose is speed — a "breaking" story that takes longer than ~12 min has already missed its window,
+    # and letting it run would also hold the shared `news-publish` concurrency slot against the next tick.
+    timeout-minutes: 12
     steps:
       - uses: actions/checkout@v4
         with:
