@@ -95,7 +95,10 @@ export function lastPublishedRawFor(film, ledger) {
   let best = null;
   for (const r of rows) {
     if (r?.review) continue;
-    const rowKey = r.film || r.title ? trackKey({ title: r.film || r.title }) : null;
+    // Match on the RECORDED key first (written at publish time, identical to trackKey(film)); fall back
+    // to a title-derived key for legacy rows. The old code ONLY built a title key, so a film carrying a
+    // tmdbId — whose trackKey IS the tmdbId — never matched any row and always read as "never published".
+    const rowKey = r.filmKey || (r.tmdbId ? String(r.tmdbId).toLowerCase() : null) || (r.film || r.title ? trackKey({ title: r.film || r.title }) : null);
     if (rowKey !== key) continue;
     let raw = Number.isFinite(r.headlineNumberRaw) ? r.headlineNumberRaw
       : Number.isFinite(r.currentRaw) ? r.currentRaw : null;

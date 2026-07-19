@@ -27,7 +27,7 @@ import { loadStore as loadStoreX } from "../store.mjs";
 import { KIND_FORM, isPlausibleFilmTitle } from "../find/events.mjs";
 import { discoverTrendingTv } from "../discover.mjs";
 import { dailyAudit } from "../audit.mjs";
-import { isMaterial, updateEventSuffix, recordArticle, currentNumberRaw, priorArticles, linkPriorCoverage, streamingExits, trackKey, isPastOpening, isMaterial as isMaterialX } from "../tracker.mjs";
+import { isMaterial, updateEventSuffix, recordArticle, currentNumberRaw, priorArticles, linkPriorCoverage, streamingExits, trackKey, isPastOpening, isMaterial as isMaterialX, lastPublishedRawFor as lastPublishedRawForX } from "../tracker.mjs";
 import { parseNetflixTsv, netflixBlock, fmtHours } from "../netflix.mjs";
 import { findFilms } from "../agents/finder.mjs";
 import { createRequire } from "node:module";
@@ -1458,6 +1458,48 @@ t("every run report carries a fault summary, so a degraded tick cannot look clea
   assert.equal(r.count, 1);
   assert.equal(r.bySeverity.warn, 1);
   assert.equal(r.faults[0].stage, "test-stage");
+});
+
+await ta("WIRING: a real publish writes a FIGURE + film key to the ledger (the test that was missing)", async () => {
+  // My earlier duplicate test fed a HAND-WRITTEN 74-char slug and passed — against data the real ledger
+  // could never produce, because recordPublished wrote no figure at all and slugify truncates at 80
+  // chars. This drives the ACTUAL publish path and asserts what the ledger really contains.
+  const dirW = fs.mkdtempSync(path.join(os.tmpdir(), "bo-wiring-"));
+  const store = { published: [], parked: [], zeroStreak: 0, daySpend: null, pace: null, lastAuditDay: null, attempts: null, lost: false, file: path.join(dirW, "store.json") };
+  const tracked = { films: {}, file: path.join(dirW, "tracked.json"), lost: false };
+  const film = { title: "Wiring Test Film", tmdbId: 999001, dailyChart: { cume: "$50,000,000", dailyGross: "$1,000,000", theaters: "3,000", dayInRelease: "Day 9", date: "2026-07-19" } };
+  const para = "A complete paragraph of real prose about this film and how it performed in theaters over the past week, long enough to clear the floor for any reader. ";
+  await boRun({
+    storeImpl: store, trackedImpl: tracked, nowMs: Date.parse("2026-07-19T18:00:00Z"), hero: false,
+    readQueueImpl: () => ({ events: [] }), runFindImpl: async () => ({ events: [] }),
+    findImpl: async () => [{
+      film, trigger: { eventSlug: "wiring-test-film-bo-update", title: film.title, primaryEntity: film.title, category: "movies", subcategory: "box-office", priority: 90, signals: {}, eventType: "boxoffice", sources: [] },
+      angle: { form: "BO-UPDATE", workingTitle: "wiring", star: "", queries: [] },
+    }],
+    dataImpl: async (j) => { j.boxData = { worldwide: "$90 million", budget: "$40 million" }; return j; },
+    gatherImpl: async (j) => { j.gathered = { cume: "$50,000,000", numbers: ["$50,000,000"], records: [], cast: [], narrative: "", sources: [], outletCount: 1 }; return j; },
+    synthImpl: async (j) => { j.brief = { hook: "h", beats: ["b"] }; return j; },
+    writeArticleImpl: async (j) => {
+      j.article = { title: "Wiring Test Film Box Office Day 9", metaTitle: "Wiring Test Film Hits $50M", dek: "d",
+        metaDescription: "Wiring Test Film has grossed fifty million dollars domestically through day nine of its theatrical run.",
+        body: para + para + para, keyTakeaways: ["a", "b", "c"], faq: [{ q: "q1", a: "a1" }, { q: "q2", a: "a2" }], about: [], tags: ["t"] };
+      return j;
+    },
+    qaReviewImpl: async (j) => { j.qa = { score: 85, pass: true, judged: false, subscores: {}, deterministic: {}, hardBlocks: [], cutClaims: [], strengths: [], weaknesses: [] }; return j; },
+    imageImpl: async (j) => { j.image = null; return j; },
+    addLinksImpl: (b) => b,
+    publishImpl: () => ({ slug: "wiring-test-film-box-office-day-9", ok: true, frontmatter: {}, consistency: { ok: true }, scaffold: [] }),
+    dailyAuditImpl: async () => null,
+  });
+  // NB: borun appends the materiality tag to the eventSlug (…-bo-update-d9), so match on the FILM.
+  const row = (store.published || []).find((r) => r.film === "Wiring Test Film");
+  assert.ok(row, "the publish was recorded at all: " + JSON.stringify(store.published));
+  assert.ok(Number.isFinite(row.headlineNumberRaw), "ledger row carries a REAL FIGURE, not a slug to re-parse: " + JSON.stringify(row));
+  assert.equal(row.headlineNumberRaw, 50000000);
+  assert.equal(row.filmKey, "999001", "keyed identically to trackKey(film) so a tmdbId film actually matches");
+  const seen = lastPublishedRawForX(film, store.published);
+  assert.ok(seen && seen.raw === 50000000, "lastPublishedRawFor resolves the row it just wrote: " + JSON.stringify(seen));
+  fs.rmSync(dirW, { recursive: true, force: true });
 });
 
 // ── summary ──────────────────────────────────────────────────────────────────────────────────────

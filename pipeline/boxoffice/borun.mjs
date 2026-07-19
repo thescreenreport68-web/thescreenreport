@@ -22,7 +22,7 @@ import { loadStore, alreadyPublished, recordPublished, parkAngle, parkedTries, p
 import { runFind, readQueue } from "./find/findrun.mjs";
 import { dailyAudit } from "./audit.mjs";
 import { allowance, debit } from "./pacing.mjs";
-import { loadTracked, isMaterial, updateEventSuffix, recordArticle, linkPriorCoverage, isPastOpening } from "./tracker.mjs";
+import { loadTracked, isMaterial, updateEventSuffix, recordArticle, linkPriorCoverage, isPastOpening, trackKey } from "./tracker.mjs";
 import { FORMS, ACCEPT_FLOOR, MAX_ATTEMPTS, GATE, DATA_DIR, REVIEW_DIR, FLOOD_CAP, MAX_ARTICLES_PER_DAY, MAX_RUN_COST_USD, STREAMING_DAILY_CAP, DAILY_SPEND_CAP_USD } from "./config.bo.mjs";
 import { cutArticle } from "../lib/cutter.mjs";
 import { addInternalLinks } from "../lib/internalLinks.mjs";
@@ -333,10 +333,23 @@ export async function boRun({
           ...(reviewDir ? { review: true } : {}),
           eventSlug: trigger.eventSlug, form: angle.form, slug: out.slug, title: job.article.title,
           film: film.title, tmdbId: film.tmdbId, eventType: "boxoffice",
+          // RECORD THE FACT, DO NOT DERIVE IT LATER. The duplicate backstop used to read a figure that
+          // nothing wrote, then fall back to parsing it out of the slug — which slugify truncates at 80
+          // chars, dropping the "-million" the parser needs on ~half the live rows. And it matched a
+          // tmdbId-derived key against a title-derived row, so any film WITH a tmdbId matched nothing at
+          // all. Persisting the figure + the exact same key the tracker uses makes the backstop real.
+          headlineNumberRaw: Number.isFinite(job.momentum?.currentRaw) ? job.momentum.currentRaw : null,
+          filmKey: trackKey(film),
+          chartDate: film?.dailyChart?.date ?? null,
         });
         // Serialization ledger — LIVE state only (never from a review preview, so a preview can't skew
         // next run's materiality baseline). Powers materiality + the link-chain next time this film runs.
-        if (!reviewDir) { try { recordArticle(tracked, { film, form: angle.form, slug: out.slug, category: trigger.category, gathered: job.gathered, boxData: job.boxData }); } catch {} }
+        // A failure HERE is uniquely dangerous: the article is already published, so losing the ledger
+        // write makes the very next tick treat this film as a first sighting — the duplicate path again.
+        if (!reviewDir) {
+          try { recordArticle(tracked, { film, form: angle.form, slug: out.slug, category: trigger.category, gathered: job.gathered, boxData: job.boxData }); }
+          catch (e) { fault("recordArticle", `published ${out.slug} but FAILED to record it in the tracker — next tick may re-publish: ${e?.message || e}`, { severity: SEV.CRITICAL }); }
+        }
       }
       report.published.push({ tag, slug: out.slug, path: out.path, score: job.qa.score, ...(acceptReason ? { acceptReason } : {}) });
       console.log(`  ✅ ${reviewDir ? "review-written" : "published"}: ${out.slug} (score ${job.qa.score})`);
@@ -402,7 +415,20 @@ if (import.meta.url === new URL(`file://${process.argv[1]}`).href) {
   console.log(`SKIPPED ${report.skipped.length}`); report.skipped.forEach((p) => console.log(line(p)));
   console.log(`BLOCKED ${report.blocked.length}`); report.blocked.forEach((p) => console.log(line(p)));
   console.log(`cost: $${report.openrouterTotalUsd} · per-agent:`, JSON.stringify(report.meter.byRole));
+  // FAULTS last, so a degraded tick is the final thing in the log rather than something you scroll for.
+  const fr0 = report.faults || { count: 0, bySeverity: {}, faults: [] };
+  if (fr0.count) {
+    console.log(`FAULTS ${fr0.count} ${JSON.stringify(fr0.bySeverity)}${report.degraded ? " · DEGRADED" : ""}`);
+    fr0.faults.slice(0, 10).forEach((f) => console.log(`  [${f.severity}] ${f.stage}: ${f.message}`));
+  }
   if (process.env.GITHUB_OUTPUT) {
-    fs.appendFileSync(process.env.GITHUB_OUTPUT, `published=${report.published.length}\nslugs=${report.published.map((p) => p.slug).join(" ")}\n`);
+    // `degraded` is EMITTED here but deliberately does NOT change this process's exit code. Exiting
+    // non-zero would make GitHub skip every downstream step whose `if:` it implicitly ANDs with
+    // success() — the commit and deploy steps — so a written article would die on the ephemeral runner.
+    // The workflow decides: it commits and deploys first, then fails the job on this flag.
+    const fr = report.faults || { count: 0, bySeverity: {} };
+    fs.appendFileSync(process.env.GITHUB_OUTPUT,
+      `published=${report.published.length}\nslugs=${report.published.map((p) => p.slug).join(" ")}\n`
+      + `degraded=${report.degraded ? "true" : "false"}\nfaults=${fr.count}\ncriticals=${fr.bySeverity?.critical || 0}\n`);
   }
 }
