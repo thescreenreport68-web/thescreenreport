@@ -1,0 +1,91 @@
+{
+ "runId": "run-2026-07-19T03-32-11",
+ "mode": "live",
+ "startedAt": "2026-07-19T03:32:11.185Z",
+ "films": 8,
+ "published": [],
+ "held": [
+  {
+   "tag": "supergirl-ev-weekend×BO-WEEKEND",
+   "reason": "not material: no new number (current $37M not above last published $68M)"
+  }
+ ],
+ "rejected": [
+  {
+   "tag": "the-best-sci-fi-book-adaptation-of-the-last-15-years-ev-streaming-arrival×NOW-STREAMING",
+   "stage": "gatherer",
+   "reason": "under floor: no subscription-streaming platform — rent/buy is not 'now streaming' (try 1)"
+  },
+  {
+   "tag": "a-perfect-zombie-movie-ev-streaming-arrival×NOW-STREAMING",
+   "stage": "gatherer",
+   "reason": "under floor: no subscription-streaming platform — rent/buy is not 'now streaming' (try 1)"
+  }
+ ],
+ "skipped": [
+  {
+   "tag": "the-odyssey-ev-opening×BO-OPENING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "the-odyssey-ev-record×BO-RECORD",
+   "reason": "film attempt budget exhausted today (3 paid tries/film/day)"
+  },
+  {
+   "tag": "zola-ev-streaming-arrival×NOW-STREAMING",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "chained-ev-streaming-arrival×NOW-STREAMING",
+   "reason": "film attempt budget exhausted today (3 paid tries/film/day)"
+  },
+  {
+   "tag": "young-washington-bo-update×BO-UPDATE",
+   "reason": "film attempt budget exhausted today (3 paid tries/film/day)"
+  }
+ ],
+ "blocked": [],
+ "paced": {
+  "tokens": 4,
+  "behind": true,
+  "expected": 17.4,
+  "allow": 2
+ },
+ "queueBuilt": 9,
+ "zeroStreak": 24,
+ "daySpend": {
+  "laDay": "2026-07-18",
+  "usd": 0.31486
+ },
+ "finishedAt": "2026-07-19T03:38:42.385Z",
+ "meter": {
+  "byRole": {
+   "categorize": {
+    "calls": 3,
+    "errors": 0,
+    "in": 1096,
+    "out": 524,
+    "usd": 0.00032,
+    "ms": 2226
+   },
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3416,
+    "out": 643,
+    "usd": 0.00021,
+    "ms": 1751
+   },
+   "gatherer": {
+    "calls": 7,
+    "errors": 0,
+    "in": 24446,
+    "out": 1486,
+    "usd": 0.00304,
+    "ms": 15763
+   }
+  },
+  "totalUsd": 0.00357
+ },
+ "openrouterTotalUsd": 0.00267
+}
