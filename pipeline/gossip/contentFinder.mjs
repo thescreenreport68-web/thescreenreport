@@ -26,6 +26,12 @@ export function extractQuotes(text) {
   const out = [];
   for (const m of (text || "").matchAll(/[“"]([^”"]{8,240})[”"]/g)) {
     const s = m[1].trim();
+    // AP style leaves a multi-paragraph quote UNCLOSED at each break, so the naive pair-matching above can
+    // span from one speaker's opening quote to the NEXT speaker's — emitting a composite that reads as one
+    // contiguous verbatim quote but never existed. Reject anything crossing a paragraph break, and anything
+    // that swallows an attribution clause (", she said," / ", the source told") mid-span.
+    if (/\n\s*\n/.test(m[1])) continue;
+    if (/,\s*(?:he|she|they|the (?:source|insider|rep|star))\s+(?:said|told|added|explained)\b/i.test(s)) continue;
     if (/\s/.test(s) && !out.includes(s)) out.push(s);
   }
   return out.slice(0, 12);

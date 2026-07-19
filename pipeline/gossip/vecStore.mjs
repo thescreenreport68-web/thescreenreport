@@ -20,7 +20,12 @@ export function openStore(filePath = DEFAULT_PATH) {
   fs.mkdirSync(path.dirname(filePath), { recursive: true });
   let records = [];
   if (fs.existsSync(filePath)) {
-    try { records = JSON.parse(fs.readFileSync(filePath, "utf8")).records || []; } catch { records = []; }
+    // 2026-07-19: this used to swallow a corrupt store into `records = []`, so a truncated write (a crash
+    // mid-save) would make dedup start from EMPTY history — every story looks new and the lane republishes
+    // its whole recent backlog. A missing file is a legitimate first run; a PRESENT but unreadable one is
+    // data loss and must fail CLOSED (dedupCheck wraps this and returns HOLD, and gossiprun re-queues).
+    try { records = JSON.parse(fs.readFileSync(filePath, "utf8")).records || []; }
+    catch (e) { throw new Error(`dedup store unreadable at ${filePath} (${String(e?.message || e).slice(0, 60)}) — refusing to run with empty dedup history`); }
   }
   const byKey = new Map(), byUrl = new Map(), byEvent = new Map();
   const index = (r) => {

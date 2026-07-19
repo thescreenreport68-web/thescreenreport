@@ -1,6 +1,7 @@
 // GOSSIP — DISCOVERY (Stage 1). Polls gossip/entertainment RSS for fresh candidate stories. fetchImpl + nowMs
 // are injectable so the harness runs offline + deterministically. Output: [{outlet,tier,title,url,summary,ageMin}].
 import { tierOf } from "./policy.mjs";
+import { decodeEntities } from "./normalize.mjs";
 import { decodeGnewsUrl } from "../lib/gnewsDecode.mjs";
 
 const UA = "The Screen Report/1.0 (+https://thescreenreport.com)";
@@ -23,7 +24,7 @@ export const GOSSIP_FEEDS = [
 ];
 
 const strip = (s) =>
-  String(s || "").replace(/<!\[CDATA\[|\]\]>/g, "").replace(/<[^>]+>/g, " ").replace(/&#?\w+;/g, " ").replace(/\s+/g, " ").trim();
+  decodeEntities(String(s || "").replace(/<!\[CDATA\[|\]\]>/g, "").replace(/<[^>]+>/g, " ")).replace(/\s+/g, " ").trim();
 
 function parseItems(xml, outlet) {
   const items = [];

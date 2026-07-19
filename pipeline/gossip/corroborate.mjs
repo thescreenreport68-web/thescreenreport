@@ -10,11 +10,11 @@
 //     homepage domain (so we can tier it) for every covering outlet. Its per-article <link> is a Google redirect,
 //     which our extractor resolves through Jina Reader (verified).
 import { topicQuery } from "../lib/news.mjs";
-import { entityKey } from "./normalize.mjs";
+import { entityKey, decodeEntities } from "./normalize.mjs";
 
 const UA = "The Screen Report/1.0 (+https://thescreenreport.com)";
 export const registrableDomain = (d) => (d || "").toLowerCase().replace(/^https?:\/\//, "").replace(/^www\./, "").split("/")[0].split(":")[0];
-const strip = (s) => String(s || "").replace(/<!\[CDATA\[|\]\]>/g, "").replace(/<[^>]+>/g, " ").replace(/&#?\w+;/g, " ").replace(/\s+/g, " ").trim();
+const strip = (s) => decodeEntities(String(s || "").replace(/<!\[CDATA\[|\]\]>/g, "").replace(/<[^>]+>/g, " ")).replace(/\s+/g, " ").trim();
 
 // Bounded fetch — a finder is enrichment; a slow GDELT/Google-News endpoint must never stall the run.
 const FINDER_TIMEOUT_MS = 8000;

@@ -62,6 +62,30 @@ console.log("\n=== DEEP-DIVE CONFIRMED-BUG FIXES ===\n");
   check("a real news report is KEPT", news.ok === true && news.evergreenDropped === 0 && news.sources.length === 1, JSON.stringify({ ok: news.ok, dropped: news.evergreenDropped, n: news.sources.length }));
 }
 
+
+// ── 4) round 2: fail-closed store, entity decoding everywhere, quote splicing ──
+{
+  const fs2 = await import("node:fs"); const os2 = await import("node:os"); const p2 = await import("node:path");
+  const { openStore } = await import("../vecStore.mjs");
+  const { extractQuotes } = await import("../contentFinder.mjs");
+  const dir = fs2.mkdtempSync(p2.join(os2.tmpdir(), "vs-"));
+
+  // a MISSING store is a legitimate first run
+  let ok1 = true; try { openStore(p2.join(dir, "none.json")); } catch { ok1 = false; }
+  check("missing store still opens (first run)", ok1);
+  // a PRESENT but corrupt store must THROW so dedup fails closed (HOLD) instead of losing all history
+  const bad = p2.join(dir, "corrupt.json"); fs2.writeFileSync(bad, '{"records":[{"key":"a"');
+  let threw = false; try { openStore(bad); } catch { threw = true; }
+  check("corrupt store FAILS CLOSED (throws, so dedup HOLDs)", threw);
+
+  // AP-style multi-paragraph quotes must not splice into one composite
+  const ap = 'She began: "I was completely blindsided by all of it\n\n"and then it got worse," she said. "It was awful."';
+  const qs = extractQuotes(ap);
+  check("no cross-paragraph composite quote emitted", !qs.some((q) => /\n/.test(q)), JSON.stringify(qs));
+  check("an attribution clause is never swallowed into a quote", !qs.some((q) => /,\s*she\s+said/i.test(q)), JSON.stringify(qs));
+  check("a normal quote still extracts", extractQuotes('He said "this is a clean verbatim quote here" today.').length === 1);
+}
+
 console.log(`\n── RESULT: ${pass} passed${fail ? `, ${fail} FAILED` : ""} ──`);
 if (fail) { console.log("FAILED:", fails.join("; ")); process.exit(1); }
 console.log("Deep-dive fixes verified. ✅\n");
