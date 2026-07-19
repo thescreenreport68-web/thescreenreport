@@ -858,16 +858,24 @@
    "reason": "words 159 < 180 (owner-set ~200-word minimum) | soft-floor readability 3 < 5 | soft-floor engagement 1 < 5 | soft-floor humanVoice 2 < 5",
    "tries": 1,
    "at": "2026-07-18T23:04:50.081Z"
+  },
+  {
+   "key": "zola-ev-streaming-arrival|NOW-STREAMING",
+   "eventSlug": "zola-ev-streaming-arrival",
+   "form": "NOW-STREAMING",
+   "reason": "fidelity: 9 unsupported figures/claims — draft-level failure",
+   "tries": 1,
+   "at": "2026-07-19T01:32:51.830Z"
   }
  ],
- "zeroStreak": 19,
+ "zeroStreak": 20,
  "daySpend": {
   "laDay": "2026-07-18",
-  "usd": 0.29952
+  "usd": 0.30578
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1784422948020
+  "lastMs": 1784424655849
  },
  "lastAuditDay": "2026-07-18",
  "attempts": {
@@ -893,7 +901,9 @@
    "the boss baby": 1,
    "the sheep detectives": 2,
    "citizen vigilante": 1,
-   "supergirl": 1
+   "supergirl": 1,
+   "zola": 1,
+   "the best 4-part sci-fi book adaptation of the last 15 years": 1
   }
  }
 }
