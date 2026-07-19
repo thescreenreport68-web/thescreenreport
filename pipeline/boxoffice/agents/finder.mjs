@@ -8,6 +8,7 @@ import { FORMS, scopeOk, BOX_OFFICE_FORMS } from "../config.bo.mjs";
 import { loadTracked, streamingExits } from "../tracker.mjs";
 import { fetchNetflixTop10 } from "../netflix.mjs";
 import { fetchDailyChart } from "../dailyChart.mjs";
+import { discoverByProvider } from "../tmdbStreaming.mjs";
 import { readQueue, markConsumed } from "../find/findrun.mjs";
 import { getTitleFacts } from "../../lib/tmdb.mjs";
 
@@ -34,7 +35,7 @@ box office no matter how popular. Skip films with no genuine money angle right n
 For each pick: a working headline (stars + the number, curiosity without clickbait), the star(s) to lead
 with, and 2 SIMPLE search queries (3-5 plain words, e.g. "Wicked box office weekend"). Output STRICT JSON only.`;
 
-export async function findFilms({ limit = 3, discoverImpl = discoverFilms, chatImpl = null, nowMs = null, trackedImpl = null, providersImpl = null, netflixImpl = null, dailyChartImpl = null, queueImpl = null, dryQueueMark = false, trendingTvImpl = null, preferStreaming = false, seen = null } = {}) {
+export async function findFilms({ limit = 3, discoverImpl = discoverFilms, chatImpl = null, nowMs = null, trackedImpl = null, providersImpl = null, netflixImpl = null, dailyChartImpl = null, queueImpl = null, dryQueueMark = false, trendingTvImpl = null, providerStreamImpl = null, preferStreaming = false, seen = null } = {}) {
   const films = await discoverImpl({ nowMs });
   const seenSlugs = seen?.slugs || new Set();
   const seenTitles = seen?.titles || new Set();
@@ -104,6 +105,34 @@ export async function findFilms({ limit = 3, discoverImpl = discoverFilms, chatI
     for (const r of freshRows(nf?.tv, "TRENDING-TV", 8))
       streamPicks.push(mkStream(r, "TRENDING-TV", "netflix-tv", `${r.title} trending on Netflix`, `${r.title} season reactions`));
   } catch { streamPicks = []; }
+
+  // MULTI-PLATFORM STREAMING SUPPLY (the 5/day fix). Netflix's weekly Top 10 yields ~25 distinct titles
+  // = 3.6/day at absolute best, so the owner's 5 streaming/day cannot come from Netflix alone. TMDB
+  // /discover filtered by watch provider gives what's actually streaming on Prime/Disney+/Max/Hulu/
+  // Apple/Peacock/Paramount+ with the platform CONFIRMED by the query itself. No viewership number is
+  // claimed for these — only Netflix publishes hours, and that guard is untouched.
+  try {
+    const rows = providerStreamImpl
+      ? await providerStreamImpl()
+      : [...(await discoverByProvider("tv", { nowMs })), ...(await discoverByProvider("movie", { nowMs }))];
+    const already = new Set(streamPicks.map((e) => String(e.film.title).toLowerCase()));
+    for (const t of (rows || []).slice(0, 12)) {
+      const formKey = t.kind === "tv" ? "TRENDING-TV" : "NOW-STREAMING";
+      const base = String(t.title).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+      const sl = `${base}-${formKey.toLowerCase()}`;
+      if (already.has(String(t.title).toLowerCase()) || seenSlugs.has(sl) || seenTitles.has(String(t.title).toLowerCase())) continue;
+      const e = mkEntry(
+        { id: t.id, title: t.title, year: String(t.date || "").slice(0, 4), releaseDate: t.date || "",
+          popularity: Math.min(88, 35 + Math.round((t.popularity || 0) / 12)), overview: t.overview || "",
+          originalLanguage: "en", via: `tmdb-${t.platform.toLowerCase().replace(/[^a-z]+/g, "")}` },
+        formKey,
+        { workingTitle: `${t.title} on ${t.platform}`, queries: [`${t.title} ${t.platform}`, `${t.title} review cast`] },
+      );
+      e.trigger.eventSlug = sl;
+      e.film.platform = t.platform;   // CONFIRMED by the provider filter — the gatherer trusts this, not a guess
+      streamPicks.push(e);
+    }
+  } catch { /* additive — Netflix picks still carry streaming */ }
 
   // P5 — TMDB daily trending-TV picks (ANY platform, appended after the Netflix hours-anchored picks):
   // catches "an episode just hit and the show is blowing up" the day it happens. The platform resolves
