@@ -1,14 +1,12 @@
 // GOSSIP — cross-lane 72h fuzzy dedup (fix #4): the same story must not publish twice, matched on ENTITY +
 // EVENT (token overlap), NOT eventSlug string equality. Run: node pipeline/gossip/test/cross-dedup-test.mjs
-import { isCrossDup } from "../crossDedup.mjs";
+import { isCrossDup, tokens, normName } from "../crossDedup.mjs";
 
 let pass = 0, fail = 0; const fails = [];
 const check = (n, c, d = "") => { if (c) { pass++; console.log("  ✅ " + n); } else { fail++; fails.push(n); console.log("  ❌ " + n + "  " + d); } };
 
-// Build an index entry the way loadRecentIndex does (same normalizers).
-const norm = (s) => String(s).toLowerCase().replace(/[^a-z0-9 ]/g, " ").replace(/\s+/g, " ").trim();
-const tokens = (s) => new Set(norm(s).split(" ").filter((w) => w.length > 3));
-const normName = (s) => norm(s).replace(/\b(the|a|an)\b/g, " ").split(/\s+/).filter((w) => w.length > 1).join(" ").trim();
+// Build index entries with the MODULE'S normalizers — never re-implement them. A local copy silently
+// drifted from the real tokenizer when stemming was added, which is exactly how a duplicate escapes.
 const entry = (slug, entity, text) => ({ slug, entity: normName(entity), evt: tokens(text) });
 
 console.log("\n=== CROSS-DEDUP (fix #4) ===\n");

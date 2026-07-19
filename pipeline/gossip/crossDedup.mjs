@@ -26,8 +26,8 @@ export const stem = (w) => {
   x = x.replace(/e$/, (m) => (x.length - 1 >= 4 ? "" : m));
   return x;
 };
-const tokens = (s) => new Set(norm(s).split(" ").filter((w) => w.length > 3).map(stem));
-const normName = (s) => norm(s).replace(/\b(?:the|a|an)\b/g, " ").split(/\s+/).filter((w) => w.length > 1).join(" ").trim();
+export const tokens = (s) => new Set(norm(s).split(" ").filter((w) => w.length > 3).map(stem));
+export const normName = (s) => norm(s).replace(/\b(?:the|a|an)\b/g, " ").split(/\s+/).filter((w) => w.length > 1).join(" ").trim();
 const jaccard = (a, b) => { if (!a.size || !b.size) return 0; let i = 0; for (const t of a) if (b.has(t)) i++; return i / (a.size + b.size - i); };
 
 // Index every published article from the last `windowH` hours: { slug, entity, event-tokens }.
