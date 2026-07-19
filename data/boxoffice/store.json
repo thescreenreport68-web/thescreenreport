@@ -502,6 +502,20 @@
    "tmdbId": null,
    "eventType": "boxoffice",
    "filmKey": "survival of the thickest"
+  },
+  {
+   "key": "jeff-arcuri-nice-to-meet-you-trending-tv-w2026-07-12|TRENDING-TV",
+   "at": "2026-07-19T17:38:18.997Z",
+   "eventSlug": "jeff-arcuri-nice-to-meet-you-trending-tv-w2026-07-12",
+   "form": "TRENDING-TV",
+   "slug": "jeff-arcuri-s-nice-to-meet-you-debuts-at-10-on-netflix-with-1-4-million-hours",
+   "title": "Jeff Arcuri's 'Nice to Meet You' Debuts at #10 on Netflix with 1.4 Million Hours Viewed",
+   "film": "Jeff Arcuri: Nice to Meet You",
+   "tmdbId": null,
+   "eventType": "boxoffice",
+   "headlineNumberRaw": null,
+   "filmKey": "jeff arcuri: nice to meet you",
+   "chartDate": null
   }
  ],
  "parked": [
@@ -1278,21 +1292,21 @@
    "key": "gail-daughtry-and-the-celebrity-sex-pass-bo-update-d8|BO-UPDATE",
    "eventSlug": "gail-daughtry-and-the-celebrity-sex-pass-bo-update-d8",
    "form": "BO-UPDATE",
-   "reason": "consistency: title: \"$1.2\" is not a canonical figure for this film | metaTitle: \"$1M\" is not a canonical figure for this film | title: \"$1.2\" contradicts the canonical domestic figure ($1,242,603)",
-   "tries": 16,
-   "at": "2026-07-19T16:32:18.432Z",
+   "reason": "template-heading: \"## What's Next for Gail Daughtry?\" — rewrite story-specific",
+   "tries": 17,
+   "at": "2026-07-19T17:32:30.773Z",
    "dead": true,
-   "expiresAt": "2026-07-22T16:32:18.432Z"
+   "expiresAt": "2026-07-22T17:32:30.773Z"
   },
   {
    "key": "star-wars-the-mandalorian-and-grogu-bo-update-d57|BO-UPDATE",
    "eventSlug": "star-wars-the-mandalorian-and-grogu-bo-update-d57",
    "form": "BO-UPDATE",
-   "reason": "words 116 < 180 (owner-set ~200-word minimum)",
-   "tries": 16,
-   "at": "2026-07-19T16:33:59.911Z",
+   "reason": "fidelity: 9 unsupported figures/claims — draft-level failure | words 165 < 180 (owner-set ~200-word minimum)",
+   "tries": 17,
+   "at": "2026-07-19T17:33:42.030Z",
    "dead": true,
-   "expiresAt": "2026-07-22T16:33:59.911Z"
+   "expiresAt": "2026-07-22T17:33:42.030Z"
   },
   {
    "key": "the-super-mario-galaxy-movie-ev-milestone-d0|BO-MILESTONE",
@@ -1319,14 +1333,6 @@
    "at": "2026-07-19T14:09:13.831Z"
   },
   {
-   "key": "jeff-arcuri-nice-to-meet-you-trending-tv-w2026-07-12|TRENDING-TV",
-   "eventSlug": "jeff-arcuri-nice-to-meet-you-trending-tv-w2026-07-12",
-   "form": "TRENDING-TV",
-   "reason": "2 unverified claim(s) cut, unrecovered",
-   "tries": 1,
-   "at": "2026-07-19T15:22:02.980Z"
-  },
-  {
    "key": "tom-clancy-s-jack-ryan-ghost-war-now-streaming|NOW-STREAMING",
    "eventSlug": "tom-clancy-s-jack-ryan-ghost-war-now-streaming",
    "form": "NOW-STREAMING",
@@ -1335,14 +1341,14 @@
    "at": "2026-07-19T17:11:41.346Z"
   }
  ],
- "zeroStreak": 7,
+ "zeroStreak": 0,
  "daySpend": {
   "laDay": "2026-07-19",
-  "usd": 0.49511
+  "usd": 0.50593
  },
  "pace": {
-  "tokens": 4,
-  "lastMs": 1784480457283
+  "tokens": 3,
+  "lastMs": 1784482257290
  },
  "lastAuditDay": "2026-07-19",
  "attempts": {
@@ -1355,7 +1361,7 @@
    "worst neighbor ever": 2,
    "little house on the prairie": 2,
    "avatar: the last airbender": 2,
-   "citizen vigilante": 1,
+   "citizen vigilante": 2,
    "the super mario galaxy movie": 1,
    "passenger": 2,
    "salish & jordan matter": 1,
@@ -1363,7 +1369,7 @@
    "sullivan's crossing": 1,
    "survival of the thickest": 1,
    "off campus": 1,
-   "jeff arcuri: nice to meet you": 1,
+   "jeff arcuri: nice to meet you": 2,
    "tom clancy's jack ryan: ghost war": 1
   }
  }
