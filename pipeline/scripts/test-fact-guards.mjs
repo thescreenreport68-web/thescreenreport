@@ -125,5 +125,32 @@ console.log("=== 10. spice layer — quote-news admitted, evergreen chat still o
   ok(spiceBonus("Fans Are Divided Over the Odyssey Ending as Backlash Sparks Debate") <= 10, "spice bonus capped at 10");
   ok(spiceBonus("Warner Bros Sets Release Date for New Film") === 0, "plain announcement gets 0 spice");
 }
+console.log("=== 11. dupGuard v3 — the REAL 2026-07-19 tick that killed 12/12 topics ===");
+{
+  const { findDuplicate } = await import("../lib/dupGuard.mjs");
+  const S = (str) => new Set(String(str).toLowerCase().split(/\s+/).filter(Boolean));
+  const recent = [
+    { slug: "anne-hathaway-jokes-about-nolan", title: "Anne Hathaway Jokes About Her Brief Fear of Offending Christopher Nolan",
+      words: S("anne hathaway jok brief fear offend christopher nolan odyssey"), entityWords: S("anne hathaway"), subject: S("anne hathaway"), lane: "news", eventType: "casting", at: Date.now() },
+    { slug: "moana-box-office-day-5", title: "Moana Box Office Day 5",
+      words: S("moana box offic day domestic total climb dwayne johnson catherine laga aia"), entityWords: S("moana"), subject: S("moana"), lane: "box-office", eventType: null, at: Date.now() },
+    { slug: "chloe-sevigny-red-carpet", title: "Chloe Sevigny Shares Story Behind Son's Red Carpet Debut",
+      words: S("chlo sevigny sweet story behind son vanja debut"), entityWords: S("chlo sevigny"), subject: S("chlo sevigny"), lane: "news", eventType: "other", at: Date.now() },
+    { slug: "gabriel-luna-joins-dexter", title: "Gabriel Luna Joins Dexter Resurrection Season 2",
+      words: S("gabriel luna dexter resurrection serial killer ballard"), entityWords: S("gabriel luna"), subject: S("gabriel luna"), lane: "news", eventType: "casting", at: Date.now() },
+  ];
+  // MUST NOW PASS (were wrongly killed):
+  ok(!findDuplicate({ title: "Tom Holland on Robert Pattinson's 'The Odyssey' Casting: 'You're So Good'", primaryEntity: "Tom Holland", primaryKeyword: "tom holland pattinson odyssey", eventType: "casting", eventSlug: "tom-holland-pattinson-odyssey" }, recent),
+     "different SUBJECT, same film (Holland vs Hathaway on Odyssey) → allowed");
+  ok(!findDuplicate({ title: "Disney Releases New Look at Dwayne Johnson, Catherine Laga'aia in Live-Action Moana", primaryEntity: "Moana", primaryKeyword: "moana live action first look", eventType: "announcement", eventSlug: "moana-first-look" }, recent),
+     "CROSS-LANE (news first-look vs box-office revenue on Moana) → allowed");
+  ok(!findDuplicate({ title: "Teyana Taylor Celebrates World Cup in NYC, Nicole Kidman Takes in Wimbledon", primaryEntity: "Teyana Taylor", primaryKeyword: "teyana taylor world cup", eventType: "other", eventSlug: "teyana-taylor-world-cup" }, recent),
+     "generic {red,carpet,celebrity} no longer proves duplication → allowed");
+  // MUST STILL BLOCK (true duplicates):
+  ok(!!findDuplicate({ title: "Gabriel Luna Cast in 'Dexter: Resurrection' Season 2 as Serial Killer Ray Ballard", primaryEntity: "Gabriel Luna", primaryKeyword: "gabriel luna dexter resurrection", eventType: "casting", eventSlug: "gabriel-luna-dexter" }, recent),
+     "SAME subject + SAME beat re-angle → still blocked");
+  ok(!!findDuplicate({ title: "Anne Hathaway Jokes About Fear of Offending Christopher Nolan on Odyssey Set", primaryEntity: "Anne Hathaway", primaryKeyword: "anne hathaway christopher nolan odyssey", eventType: "casting", eventSlug: "hathaway-nolan" }, recent),
+     "verbatim same story → still blocked");
+}
 console.log(`\n${fail === 0 ? "✅ ALL" : "❌"} ${pass} passed, ${fail} failed`);
 process.exit(fail ? 1 : 0);

@@ -15,7 +15,7 @@ const ART_DIR = path.resolve(__dirname, "../../content/articles");
 
 const deburr = (s) => String(s || "").normalize("NFKD").replace(/[̀-ͯ]/g, "");
 // Words that appear in half of all entertainment headlines — shared occurrences of these prove nothing.
-const GENERIC = new Set(["movie", "movies", "film", "films", "series", "show", "shows", "season", "episode", "cast", "casting", "casts", "star", "stars", "starring", "news", "hollywood", "trailer", "teaser", "release", "premiere", "date", "director", "directs", "directing", "actor", "actress", "deal", "exclusive", "report", "reports", "first", "look", "sequel", "spinoff", "reboot", "remake", "joins", "join", "sets", "set", "adds", "returns", "return", "reveals", "confirms", "announces", "official", "watch", "video", "photos", "interview", "oscar", "winner", "winning", "dies", "dead", "death", "emmy", "grammy", "netflix", "hbo", "max", "paramount", "disney", "warner", "bros", "universal", "sony", "amazon", "apple", "hulu", "peacock", "showtime", "the", "and", "for", "with", "new"]);
+const GENERIC = new Set(["movie", "movies", "film", "films", "series", "show", "shows", "season", "episode", "cast", "casting", "casts", "star", "stars", "starring", "news", "hollywood", "trailer", "teaser", "release", "premiere", "date", "director", "directs", "directing", "actor", "actress", "deal", "exclusive", "report", "reports", "first", "look", "sequel", "spinoff", "reboot", "remake", "joins", "join", "sets", "set", "adds", "returns", "return", "reveals", "confirms", "announces", "official", "watch", "video", "photos", "interview", "oscar", "winner", "winning", "dies", "dead", "death", "emmy", "grammy", "red", "carpet", "celebrity", "guide", "everything", "know", "explained", "breaks", "down", "netflix", "hbo", "max", "paramount", "disney", "warner", "bros", "universal", "sony", "amazon", "apple", "hulu", "peacock", "showtime", "the", "and", "for", "with", "new"]);
 const stem = (w) => (w.length >= 5 ? w.replace(/(ies)$/, "y").replace(/(e?s|ed|ing)$/, "") : w);
 const sigStems = (s) => new Set(
   deburr(s).toLowerCase().replace(/[^a-z0-9]+/g, " ").split(/\s+/)
@@ -36,7 +36,12 @@ export function recentArticles(hours = 72, { artDir = ART_DIR, now = Date.now() 
       const words = sigStems([d.title, (d.tags || []).join(" "), (d.about || []).map((e) => e?.name).join(" "), String(d.eventSlug || "").replace(/-/g, " ")].join(" "));
       // entityWords = the WHO/WHAT only (not event verbs) — powers the per-entity day cap
       const entityWords = sigStems([(d.about || []).map((e) => e?.name).join(" "), (d.tags || []).slice(0, 3).join(" ")].join(" "));
-      out.push({ slug: d.slug || f.replace(/\.md$/, ""), title: d.title || "", words, entityWords, eventType: d.eventType || null, at });
+      // SUBJECT = who/what the story is ABOUT (about[0] or the targetKeyword/first tag) — the dedup key that
+      // matters. LANE = which automation owns it (a box-office revenue piece is a different BEAT from a
+      // news first-look on the same film, so it must not block it).
+      const subject = sigStems([(d.about || [])[0]?.name, d.targetKeyword, (d.tags || [])[0]].filter(Boolean).join(" "));
+      const lane = /box-office|gossip|inside/.test(String(d.formatTag || "")) ? String(d.formatTag) : "news";
+      out.push({ slug: d.slug || f.replace(/\.md$/, ""), title: d.title || "", words, entityWords, subject, lane, eventType: d.eventType || null, at });
     } catch { /* unreadable file → not evidence of anything */ }
   }
   return out;
@@ -50,10 +55,23 @@ export function recentArticles(hours = 72, { artDir = ART_DIR, now = Date.now() 
 export function findDuplicate(topic, recent) {
   const words = sigStems([topic?.title, topic?.primaryEntity, topic?.primaryKeyword, (topic?.entities || []).join(" "), String(topic?.eventSlug || "").replace(/-/g, " ")].join(" "));
   const tType = String(topic?.eventType || "").toLowerCase() || null;
+  // The topic's SUBJECT — who/what this story is about (not the film it happens to mention).
+  const tSubj = sigStems([topic?.primaryEntity, topic?.primaryKeyword].filter(Boolean).join(" "));
   for (const a of recent) {
     const shared = [...words].filter((w) => a.words.has(w));
     if (shared.length < 3) continue;
+    // v3 SUBJECT RULE (root-fix 2026-07-19 — the guard was killing 12/12 topics in a tick): sharing only the
+    // CONTEXT (same film, same franchise) is NOT a duplicate. "Tom Holland on Pattinson's casting" and "Anne
+    // Hathaway jokes about Nolan" share {odyssey, christopher, nolan} but are different stories about different
+    // people. A duplicate must be about the SAME SUBJECT — unless overlap is near-total (≥6 = same story re-angled).
+    const subjOverlap = a.subject && a.subject.size ? [...tSubj].filter((w) => a.subject.has(w)).length : null;
+    if (subjOverlap !== null && subjOverlap === 0 && shared.length < 6) continue;   // different subject → different story
     const aType = String(a.eventType || "").toLowerCase() || null;
+    // CROSS-LANE (root-fix 2026-07-19): the lanes are BEAT-PARTITIONED by design — box-office owns revenue,
+    // gossip owns rumor, inside owns fan-angle, news owns hard news. A Moana box-office revenue piece is not a
+    // duplicate of a Moana first-look. So another lane's article blocks us ONLY on an explicit SAME-BEAT match
+    // (its eventType equals ours); anything else is a different beat, however many cast names they share.
+    if (a.lane && a.lane !== "news" && !(tType && aType && tType === aType)) continue;
     const differentBeat = tType && aType && tType !== aType;
     if (differentBeat && shared.length < 6) continue; // distinct beat of the same event → allowed
     return { slug: a.slug, title: a.title, shared };
