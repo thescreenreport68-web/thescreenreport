@@ -329,6 +329,17 @@
    "film": "Scary Movie",
    "tmdbId": null,
    "eventType": "boxoffice"
+  },
+  {
+   "key": "obsession-bo-update-d64|BO-UPDATE",
+   "at": "2026-07-19T06:01:59.980Z",
+   "eventSlug": "obsession-bo-update-d64",
+   "form": "BO-UPDATE",
+   "slug": "obsession-box-office-day-64-adds-790-000-as-domestic-total-hits-256-8-million",
+   "title": "Obsession 2026 Crosses $256M Domestic, Posts Record Fourth Weekend for Horror",
+   "film": "Obsession",
+   "tmdbId": null,
+   "eventType": "boxoffice"
   }
  ],
  "parked": [
@@ -804,16 +815,6 @@
    "at": "2026-07-18T14:45:48.950Z"
   },
   {
-   "key": "obsession-bo-update-d64|BO-UPDATE",
-   "eventSlug": "obsession-bo-update-d64",
-   "form": "BO-UPDATE",
-   "reason": "1 unverified claim(s) cut, unrecovered",
-   "tries": 8,
-   "at": "2026-07-19T05:36:13.901Z",
-   "dead": true,
-   "expiresAt": "2026-07-22T05:36:13.901Z"
-  },
-  {
    "key": "the-abandons-ev-streaming-arrival|NOW-STREAMING",
    "eventSlug": "the-abandons-ev-streaming-arrival",
    "form": "NOW-STREAMING",
@@ -996,16 +997,112 @@
    "reason": "words 162 < 180 (owner-set ~200-word minimum) | soft-floor engagement 4 < 5 | soft-floor humanVoice 3 < 5",
    "tries": 1,
    "at": "2026-07-19T05:59:19.864Z"
+  },
+  {
+   "key": "off-campus-trending-tv|TRENDING-TV",
+   "eventSlug": "off-campus-trending-tv",
+   "form": "TRENDING-TV",
+   "reason": "5 unverified claim(s) cut, unrecovered",
+   "tries": 1,
+   "at": "2026-07-19T06:03:47.189Z"
+  },
+  {
+   "key": "ride-or-die-trending-tv|TRENDING-TV",
+   "eventSlug": "ride-or-die-trending-tv",
+   "form": "TRENDING-TV",
+   "reason": "words 164 < 180 (owner-set ~200-word minimum) | soft-floor humanVoice 4 < 5",
+   "tries": 1,
+   "at": "2026-07-19T06:05:23.968Z"
+  },
+  {
+   "key": "the-westies-trending-tv|TRENDING-TV",
+   "eventSlug": "the-westies-trending-tv",
+   "form": "TRENDING-TV",
+   "reason": "soft-floor engagement 4 < 5 | soft-floor humanVoice 4 < 5",
+   "tries": 1,
+   "at": "2026-07-19T06:07:17.543Z"
+  },
+  {
+   "key": "widow-s-bay-trending-tv|TRENDING-TV",
+   "eventSlug": "widow-s-bay-trending-tv",
+   "form": "TRENDING-TV",
+   "reason": "words 159 < 180 (owner-set ~200-word minimum) | soft-floor engagement 3 < 5",
+   "tries": 1,
+   "at": "2026-07-19T06:09:36.102Z"
+  },
+  {
+   "key": "elle-trending-tv|TRENDING-TV",
+   "eventSlug": "elle-trending-tv",
+   "form": "TRENDING-TV",
+   "reason": "words 139 < 180 (owner-set ~200-word minimum) | soft-floor engagement 4 < 5 | soft-floor humanVoice 3 < 5",
+   "tries": 1,
+   "at": "2026-07-19T06:11:22.322Z"
+  },
+  {
+   "key": "margo-s-got-money-troubles-trending-tv|TRENDING-TV",
+   "eventSlug": "margo-s-got-money-troubles-trending-tv",
+   "form": "TRENDING-TV",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "tries": 1,
+   "at": "2026-07-19T06:14:28.262Z"
+  },
+  {
+   "key": "star-city-trending-tv|TRENDING-TV",
+   "eventSlug": "star-city-trending-tv",
+   "form": "TRENDING-TV",
+   "reason": "words 173 < 180 (owner-set ~200-word minimum)",
+   "tries": 1,
+   "at": "2026-07-19T06:16:56.064Z"
+  },
+  {
+   "key": "not-suitable-for-work-trending-tv|TRENDING-TV",
+   "eventSlug": "not-suitable-for-work-trending-tv",
+   "form": "TRENDING-TV",
+   "reason": "words 169 < 180 (owner-set ~200-word minimum) | soft-floor engagement 4 < 5 | soft-floor humanVoice 3 < 5",
+   "tries": 1,
+   "at": "2026-07-19T06:19:00.012Z"
+  },
+  {
+   "key": "regular-show-the-lost-tapes-trending-tv|TRENDING-TV",
+   "eventSlug": "regular-show-the-lost-tapes-trending-tv",
+   "form": "TRENDING-TV",
+   "reason": "soft-floor engagement 4 < 5",
+   "tries": 1,
+   "at": "2026-07-19T06:21:28.768Z"
+  },
+  {
+   "key": "the-testaments-trending-tv|TRENDING-TV",
+   "eventSlug": "the-testaments-trending-tv",
+   "form": "TRENDING-TV",
+   "reason": "words 153 < 180 (owner-set ~200-word minimum) | soft-floor engagement 4 < 5 | soft-floor humanVoice 3 < 5",
+   "tries": 1,
+   "at": "2026-07-19T06:23:45.165Z"
+  },
+  {
+   "key": "the-five-star-weekend-trending-tv|TRENDING-TV",
+   "eventSlug": "the-five-star-weekend-trending-tv",
+   "form": "TRENDING-TV",
+   "reason": "5 unverified claim(s) cut, unrecovered",
+   "tries": 1,
+   "at": "2026-07-19T06:26:10.535Z"
+  },
+  {
+   "key": "rick-and-morty-trending-tv|TRENDING-TV",
+   "eventSlug": "rick-and-morty-trending-tv",
+   "form": "TRENDING-TV",
+   "reason": "synthesizer returned no usable brief",
+   "tries": 1,
+   "at": "2026-07-19T06:27:39.423Z"
   }
  ],
- "zeroStreak": 2,
+ "zeroStreak": 0,
  "daySpend": {
   "laDay": "2026-07-18",
-  "usd": 0.56219
+  "usd": 0.77802
  },
  "pace": {
-  "tokens": 2.1510125,
-  "lastMs": 1784439251226
+  "tokens": 1.2125922619047622,
+  "lastMs": 1784440803036
  },
  "lastAuditDay": "2026-07-18",
  "attempts": {
@@ -1047,7 +1144,19 @@
    "sullivan's crossing": 1,
    "survival of the thickest": 1,
    "lucky": 1,
-   "silo": 1
+   "silo": 1,
+   "off campus": 1,
+   "ride or die": 1,
+   "the westies": 1,
+   "widow's bay": 1,
+   "elle": 1,
+   "margo's got money troubles": 1,
+   "star city": 1,
+   "not suitable for work": 1,
+   "regular show: the lost tapes": 1,
+   "the testaments": 1,
+   "the five star weekend": 1,
+   "rick and morty": 1
   }
  }
 }
