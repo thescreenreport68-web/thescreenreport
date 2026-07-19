@@ -259,8 +259,9 @@ export function subjectAdmission(text, card, { linked = false } = {}) {
   if (!card.ambiguous || workHit) return true;
   // A WORK's own title in the post is sufficient subject proof even when single-token ("Supergirl
   // looks amazing") — the classify + off-subject sweep + QA subjectMatch still guard the rest.
-  // Only same-name PERSON/headline subjects (the Beck class) keep the strict context requirement.
-  if (card.kind === "work" && nameHit) return true;
+  // Only same-name PERSON/headline subjects (the Beck class) keep the strict context requirement,
+  // plus generic all-everyday-word titles, where the phrase itself carries no identifying signal.
+  if (card.kind === "work" && nameHit && !card.genericName) return true;
   return (card.contextTokens || []).some((k) => t.includes(k));
 }
 // Wrong-subject sweep for AMBIGUOUS names: sports/politics markers in a post mean the same-name

@@ -39,6 +39,13 @@ const MUSIC_RX = /\b(album|single|mixtape|new song|music video|world tour|concer
 
 // work: {type:"movie"|"tv"} when TMDB-confirmed; text: headline/summary for topic stories; hint: the
 // news-lane's category guess (used ONLY when the text carries no clear subject signal). Falls to celebrity.
+// Music ROLE words. Deliberately NOT tested before the screen signals — that ordering is what the
+// 2026-07-12 fix removed, because a musician's film/TV story routed to music. They are a LAST resort,
+// after every screen signal has failed: without them a music story whose event is not an album or tour
+// has no music signal at all. Freddy Cannon's death ("the upbeat rocker who shaped the Rolling Stones
+// and Led Zeppelin") matched no MUSIC_RX event word and shipped under `movies` (07-19 audit).
+const MUSIC_ROLE_RX = /\b(rocker|singer|songwriter|guitarist|drummer|bassist|rapper|musician|frontman|frontwoman|pop star|rock star|hitmaker|recording artist|\bband\b|discography|chart-topping)\b/i;
+
 export function categoryFor({ work = null, text = "", hint = null } = {}) {
   if (work?.type === "tv") return "tv";
   if (work?.type === "movie") return "movies";
@@ -46,6 +53,7 @@ export function categoryFor({ work = null, text = "", hint = null } = {}) {
   if (TV_RX.test(t)) return "tv";
   if (MOVIE_RX.test(t)) return "movies";
   if (MUSIC_RX.test(t)) return "music";
+  if (MUSIC_ROLE_RX.test(t)) return "music";
   if (hint && CATSET.has(hint)) return hint;
   return "celebrity";
 }
@@ -109,6 +117,13 @@ const buzzTermOf = (s) => (s.work?.title || headlineEntity(s.headline, s.primary
 // single-token name (Beck, Silo, Stream) whose bare search WILL collide with other subjects.
 const CTX_STOP = new Set(("the a an and or but of to in on for at with from by as is are was were has have had this that its it his her their new first after amid over says said announces announced reveals confirmed confirms drops sets here why how what when your you all out now just more than years year seven").split(/\s+/));
 const CATEGORY_WORD = { movies: "movie", tv: "TV series", music: "music", celebrity: "celebrity", streaming: "streaming", awards: "awards" };
+// Everyday words. A title built ENTIRELY from them ("Last Man Standing", "The Get Out") collides with
+// unrelated subjects exactly like a single-token name does, so "multi-word names are safe" was wrong:
+// a metal band's single "Last Man Standing" passed the lock unguarded and the harvest walked off to a
+// Roblox game of the same name, publishing a gaming article under music (07-19 audit). A distinctive
+// proper noun anywhere in the name (Millie/Bobby, Supergirl, Odyssey) still counts as safe.
+const COMMON_NAME_WORDS = new Set(("last man standing men women woman boy girl kid kids get out from passenger lucky obsession hunt one two three good bad big little small new old first next best worst day days night life love war home away back down over under long short hard easy true real dead alive lost found free open high low fast slow hot cold dark light black white red blue green gold king queen world city town house room door road street time year years week night son daughter father mother brother sister friend family house game play run stop start end final begin here there what who why how when where all some every none never always").split(/\s+/));
+
 export function buildSubjectCard(story) {
   const name = (story.primaryEntity || "").trim();
   const src = `${story.headline || ""} ${story.overview || ""}`;
@@ -120,6 +135,7 @@ export function buildSubjectCard(story) {
     .filter((q) => norm(q) !== norm(name));
   const contextTokens = [...new Set(norm(src).split(" ")
     .filter((w) => w.length >= 4 && !CTX_STOP.has(w) && !nameToks.has(w)))].slice(0, 14);
+  const genericName = nameToks.size > 0 && [...nameToks].every((w) => COMMON_NAME_WORDS.has(w));
   return {
     name,
     // A story ABOUT A WORK is kind "work" regardless of which discovery lane surfaced it — the
@@ -129,8 +145,11 @@ export function buildSubjectCard(story) {
     categoryWord: CATEGORY_WORD[story.category] || "entertainment",
     workTitle: story.work?.title && norm(story.work.title) !== norm(name) ? story.work.title : (quoted[0] || null),
     contextTokens,
-    // single-token names are the collision class; multi-word names (Millie Bobby Brown) are safe
-    ambiguous: nameToks.size <= 1,
+    // A name made only of everyday words proves nothing on its own, however many words it has — so it
+    // is barred from the "the work's own title is proof" shortcut that legitimately clears Supergirl.
+    genericName,
+    // single-token names are the collision class; so are all-everyday-word names
+    ambiguous: nameToks.size <= 1 || genericName,
   };
 }
 // Cheap deterministic screen for the Stage-1 buzz pre-count: for an AMBIGUOUS subject, a post only
@@ -140,9 +159,10 @@ export function subjectQuickMatch(text, card) {
   if (!card?.ambiguous) return true;
   const t = norm(text || "");
   if (card.workTitle && t.includes(norm(card.workTitle))) return true;
-  // A WORK's own single-token title naming the work IS the subject (a "Supergirl looks amazing" post
-  // counts); only same-name PERSON/headline subjects (the Beck class) demand extra context.
-  if (card.kind === "work" && card.name && t.includes(norm(card.name))) return true;
+  // A WORK's own distinctive title naming the work IS the subject (a "Supergirl looks amazing" post
+  // counts); only same-name PERSON/headline subjects (the Beck class) demand extra context. A generic
+  // title ("Last Man Standing") is exempt from this shortcut — the phrase alone proves nothing.
+  if (card.kind === "work" && card.name && !card.genericName && t.includes(norm(card.name))) return true;
   return (card.contextTokens || []).some((k) => t.includes(k));
 }
 

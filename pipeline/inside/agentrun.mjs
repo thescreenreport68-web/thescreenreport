@@ -128,27 +128,27 @@ export async function agentRun({
     const job = { story, angle };
     try {
       // dedup + parked-dead (never repost; a ripple that never materialized stops retrying)
-      if (alreadyPublished(store, story.parentEventSlug, angle.form)) { report.skipped.push({ tag, reason: "already published" }); continue; }
+      if (alreadyPublished(store, story.parentEventSlug, angle.form, { now })) { report.skipped.push({ tag, reason: "already published" }); continue; }
       // NEAR-DUPLICATE guard (owner 2026-07-16): a re-report of an event we already covered under a
       // different headline/slug within the last 48h — skip BEFORE any paid work so we never publish
       // "The Batman 2 Delayed" and "The Batman Part II Delayed" twice.
       const dup = recentDuplicate(store, story, { now });
       if (dup) { report.skipped.push({ tag, reason: `near-duplicate of ${dup.slug} (${(dup.at || "").slice(0, 10)})` }); console.log(`  ⃠ skipped near-duplicate of ${dup.slug}`); continue; }
-      if (parkedTries(store, story.parentEventSlug, angle.form) === Infinity) { report.skipped.push({ tag, reason: "parked dead" }); continue; }
+      if (parkedTries(store, story.parentEventSlug, angle.form, { now }) === Infinity) { report.skipped.push({ tag, reason: "parked dead" }); continue; }
       if (paceMs && (report.published.length + report.rejected.length + report.held.length + report.blocked.length)) await sleep(paceMs);
       console.log(`\n■ ${tag} (heat ${story.priority}, ${story.via})`);
       // Deterministic quality holds PARK (3 strikes → dead) so a losing story doesn't re-run the
       // full paid pipeline every tick forever; transient infra holds (web-check outage) do NOT.
       const hold = (reason, { park = true, score = null } = {}) => {
         report.held.push({ tag, reason, ...(score != null ? { score } : {}) });
-        if (park && !dryRun) parkAngle(store, story.parentEventSlug, angle.form, reason);
+        if (park && !dryRun) parkAngle(store, story.parentEventSlug, angle.form, reason, { now });
       };
 
       // ── GATHERER ──
       await withTimeout(gatherImpl(job), AGENTS.gatherer.watchdogMs, `gatherer ${tag}`);
       if (job.gatherFail) {
         const genuineThin = /^under floor/.test(job.gatherFail);
-        const tries = (dryRun || !genuineThin) ? 0 : parkAngle(store, story.parentEventSlug, angle.form, job.gatherFail);
+        const tries = (dryRun || !genuineThin) ? 0 : parkAngle(store, story.parentEventSlug, angle.form, job.gatherFail, { now });
         report.rejected.push({ tag, stage: "gatherer", reason: `${job.gatherFail}${genuineThin ? ` (try ${tries})` : " (transient — not parked)"}` });
         console.log(`  ✗ gatherer: ${job.gatherFail}`);
         continue;

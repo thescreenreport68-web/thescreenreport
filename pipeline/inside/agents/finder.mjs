@@ -52,16 +52,32 @@ export function isNonReactionHeadline(text) {
 }
 
 // OFF-NICHE deterministic drop (owner: Hollywood film/TV/celebrity/Western-music ONLY — not gaming/anime).
-// GAME-specific terms (not bare "video game", so a game-ADAPTATION movie like a Minecraft/Last of Us film
-// stays), plus core anime markers. A Soulframe/TennoCon game trailer leaked through the finder LLM once.
-const OFF_NICHE_RX = /\b(gameplay|game ?trailer|Nintendo Direct|TennoCon|Warframe|Soulframe|The Game Awards|Summer Game Fest|\bE3\b|Elden Ring|Fortnite|Call of Duty|Baldur.?s Gate|Steam Deck|speedrun|patch notes|\bDLC\b|anime|manga|shonen|\bmangaka\b|light novel)\b/i;
-export const isOffNiche = (text) => OFF_NICHE_RX.test(text || "");
+// A game-ADAPTATION movie (a Minecraft/Last of Us/Super Mario film) is IN niche, so a screen-work marker
+// exempts the story rather than the keyword list trying to enumerate every adaptation.
+// 07-19 audit: a Roblox horror-game article ("Fans Are Dissecting Every Custom LMS Icon") published live.
+// It carried no listed keyword in its headline — the giveaways ("Roblox", "the game's lore-obsessed
+// community") were in the SUMMARY, which the gate never read. Hence both the wider terms and the wider
+// text the caller now passes in.
+const GAME_RX = /\b(Roblox|Minecraft|Fortnite|Call of Duty|Elden Ring|Baldur.?s Gate|Warframe|Soulframe|Steam Deck|PlayStation|Xbox|Nintendo (?:Switch|Direct)|gameplay|game ?trailer|video game|horror game|indie game|battle royale|speedrun|patch notes|\bDLC\b|\bMMO\b|gaming community|game mode|The Game Awards|Summer Game Fest|TennoCon|\bE3\b)\b|\bgame(?:'|’)?s?\s+(?:lore|community|developer|update|players|servers?)\b/i;
+const ANIME_RX = /\b(anime|manga|shonen|mangaka|light novel)\b/i;
+// A real screen work — the story is a FILM/TV story even if its source material is a game.
+const SCREEN_WORK_RX = /\b(?:movie|film)\b|\b(?:tv|television|streaming|netflix|hbo|disney\+|hulu|prime video|apple tv)\s+(?:series|show)\b|\bin theaters\b|\bbox office\b|\blive[- ]action\b|\bshowrunner\b|\bdirected by\b/i;
+export const isOffNiche = (text) => {
+  const t = text || "";
+  if (ANIME_RX.test(t)) return true;
+  return GAME_RX.test(t) && !SCREEN_WORK_RX.test(t);
+};
 
 // story (trigger-shaped, engine-compatible) + angle (form pick) per publishable story.
 export async function findStories({ limit = 16, discoverImpl = discoverStories, chatImpl = null, nowMs = null } = {}) {
   const stories = (await discoverImpl({ nowMs })).filter((s) => {
-    const t = `${s.headline || ""} ${s.primaryEntity || ""}`;
-    return !isNonReactionHeadline(t) && !isOffNiche(t);
+    // The two gates read DIFFERENT text on purpose. Content-type is a property of the headline — a
+    // summary that merely mentions "reviews" must not disqualify a real reaction story. Subject matter
+    // is a property of the whole story, and the Roblox piece named neither the game nor the platform
+    // until its summary, so the niche gate reads that too.
+    const headline = `${s.headline || ""} ${s.primaryEntity || ""}`;
+    const full = `${headline} ${s.work?.title || ""} ${s.overview || ""} ${s.summary || ""}`;
+    return !isNonReactionHeadline(headline) && !isOffNiche(full);
   });
   if (!stories.length) return [];
 

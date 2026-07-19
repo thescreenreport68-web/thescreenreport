@@ -42,12 +42,22 @@ const DANGLING_VERBS = new Set(
   ("sparks spark teases says say said reveals slams drops stuns stun sees takes gets get goes go has have had makes make leaves sends send brings bring keeps keep gives give asks ask tells tell seems seem confirms confirm announces announce admits admit denies deny defends defend blasts blast mocks mock praises praise reacts react responds respond weighs weigh divides divide ignites ignite fuels fuel becomes become remains remain earns earn belongs belong proves prove puts pushes push arrives arrive mourns mourn joins join").split(/\s+/));
 // Modifiers that dangle when a cut lands on them ("Delay & New", "…Sparks Fierce").
 const DANGLING_MODS = new Set("new first last final major big huge own next other early late top only every another fierce heated intense divisive sheer utter".split(/\s+/));
+// Modals and degree adverbs ALWAYS take a following verb/phrase, so a title ending on one is provably
+// cut mid-clause. Four of twelve live metaTitles ended this way ("…Creators Are Already", "…Cast Hints
+// Pink May") because neither list covered them — they are nouns to no reading (07-19 audit).
+const DANGLING_TAILS = new Set(
+  ("may might will would shall should must can could already just still yet soon never always almost nearly really quite rather even ever barely hardly simply merely finally actually apparently reportedly allegedly").split(/\s+/));
 
 const lastWordOf = (s) => (String(s).toLowerCase().replace(/[^a-z0-9'’&\s]+/g, " ").trim().split(/\s+/).pop() || "").replace(/[’']s?$/, "");
 export const endsClean = (s) => {
   const w = lastWordOf(s);
   if (!w) return false;
-  return !(FUNCTION_WORDS.has(w) || PRONOUNS.has(w) || DANGLING_VERBS.has(w) || DANGLING_MODS.has(w));
+  // "Sparks a Wave", "That Has Fans" — an article/quantifier two words back leaves a noun phrase whose
+  // complement got cut ("a wave OF anticipation"). The noun itself looks like a clean ending, so the
+  // check has to look behind it.
+  const toks = String(s).toLowerCase().replace(/[^a-z0-9'’&\s]+/g, " ").trim().split(/\s+/);
+  if (toks.length >= 2 && /^(a|an)$/.test(toks[toks.length - 2])) return false;
+  return !(FUNCTION_WORDS.has(w) || PRONOUNS.has(w) || DANGLING_VERBS.has(w) || DANGLING_MODS.has(w) || DANGLING_TAILS.has(w));
 };
 // Quote characters must be paired — a cut must never orphan an opening quote.
 export const quotesBalanced = (s) => {

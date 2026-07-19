@@ -3,22 +3,23 @@
 import assert from "node:assert/strict";
 
 import { AGENTS, FLAGSHIP_WRITER, flagshipOn, agentChat, METER, meterReport, meterReset } from "../models.mjs";
-import { findStories, isNonReactionHeadline } from "../agents/finder.mjs";
+import { findStories, isNonReactionHeadline, isOffNiche } from "../agents/finder.mjs";
 import { run as embedRun, scanPagesForInstagram } from "../agents/embed.mjs";
 import { run as synthRun } from "../agents/synthesizer.mjs";
 import { run as writerRun, repairBodyQuotes } from "../agents/writer.mjs";
 import { maskQuotes, unmaskQuotes, findTemplateHeadings, stripTemplateHeadings, run as voiceRun, PHRASEBOOK } from "../agents/voice.mjs";
 import { factLocks, review as qaReview, webCheck as qaWebCheck, classifyBlocks } from "../agents/qa.mjs";
 import { buildInsideMarkdown, insertInlineEmbeds, seoFinish } from "../assemble.mjs";
+import { endsClean as endsCleanT } from "../seo.mjs";
 import { discoverReddit, redditSearchPosts, redditTopComments } from "../../find/sources/reddit.mjs";
 import { gnewsArticleId, decodeGnewsBase64, decodeGnewsUrl } from "../../lib/gnewsDecode.mjs";
-import { discoverStories, categoryFor } from "../discover.mjs";
+import { discoverStories, categoryFor, buildSubjectCard } from "../discover.mjs";
 import { trendingSearches, wikiSpikes, tmdbMatch } from "../signals.mjs";
 import { xSearchIds } from "../xsearch.mjs";
 import { norm, quoteIsVerbatim, meetsFloor, fallbackQueries, isMediaHandle, looksLikeSpam, cleanQuote, isOutletSpeaker, reliableProvenance, isMediaVoice, unwrapQuote, isSocialSrc, hasHandle, trimScar } from "../reactionFinder.mjs";
 import { cleanTitle } from "../assemble.mjs";
 import { routeForStory, MAX_EMBEDS } from "../config.inside.mjs";
-import { loadStore, alreadyPublished, recordInsidePublished, parkAngle, parkedTries, clearParked, insideKey } from "../store.mjs";
+import { loadStore, alreadyPublished, recordInsidePublished, parkAngle, parkedTries, clearParked, insideKey, recentDuplicate, isWorkScoped, PUBLISH_COOLDOWN_H, PARK_REVIVE_H } from "../store.mjs";
 import {
   NOW, tmp, Q, SRC_A, NAMED, statsFor,
   fakeTrigger, fakeAngle, fakeFactBlock, fakeArticle, fakeImage, fakeJob,
@@ -1460,6 +1461,115 @@ await check("decodeGnewsUrl returns null (and caches it) when the page has no si
   assert.equal(await decodeGnewsUrl("https://news.google.com/rss/articles/AU_testTWO", { fetchImpl }), null);
   const boom = async () => { throw new Error("no network allowed on cache hit"); };
   assert.equal(await decodeGnewsUrl("https://news.google.com/rss/articles/AU_testTWO", { fetchImpl: boom }), null);
+});
+
+// ── 07-19 PRODUCTION AUDIT: the lane published 2 articles across 9 scheduled ticks. Every assertion
+// below is built from the real story/headline that failed in production that day. ────────────────
+const H = (h) => 3600e3 * h;
+const mkStore = () => ({ published: [], parked: [], file: "/dev/null" });
+
+await check("fill: a WORK slug frees after the cooldown, an EVENT slug never does", () => {
+  const st = mkStore(); const t0 = new Date("2026-07-15T00:00:00Z");
+  assert.equal(isWorkScoped("the-odyssey-2026"), true);
+  assert.equal(isWorkScoped("brenda-fricker-dies-at-81"), false);
+  recordInsidePublished(st, { parentEventSlug: "the-odyssey-2026", form: "audience-reaction", slug: "a" }, { now: t0 });
+  recordInsidePublished(st, { parentEventSlug: "brenda-fricker-dies-at-81", form: "audience-reaction", slug: "b" }, { now: t0 });
+  const soon = new Date(+t0 + H(PUBLISH_COOLDOWN_H - 1));
+  const later = new Date(+t0 + H(PUBLISH_COOLDOWN_H + 1));
+  assert.equal(alreadyPublished(st, "the-odyssey-2026", "audience-reaction", { now: soon }), true, "work blocked inside cooldown");
+  assert.equal(alreadyPublished(st, "the-odyssey-2026", "audience-reaction", { now: later }), false, "work must free up — a trending title gets new events");
+  assert.equal(alreadyPublished(st, "brenda-fricker-dies-at-81", "audience-reaction", { now: later }), true, "one event stays one article, forever");
+});
+
+await check("fill: a dead park revives so fixed bugs can reach the story again", () => {
+  const st = mkStore(); const t0 = new Date("2026-07-15T00:00:00Z");
+  for (let i = 0; i < 3; i++) parkAngle(st, "supergirl-2026", "audience-reaction", "under floor: audience posts 1 < 3", { now: t0 });
+  assert.equal(parkedTries(st, "supergirl-2026", "audience-reaction", { now: t0 }), Infinity, "3 strikes parks it dead for now");
+  const revived = new Date(+t0 + H(PARK_REVIVE_H + 1));
+  assert.equal(parkedTries(st, "supergirl-2026", "audience-reaction", { now: revived }), 0, "…but never permanently");
+  assert.equal(parkAngle(st, "supergirl-2026", "audience-reaction", "x", { now: revived }), 1, "revival restarts the retry cycle, not re-kills it");
+});
+
+await check("dedup: generic-word overlap is not a duplicate (BTS/Entheos vs Roblox)", () => {
+  const st = mkStore(); const t0 = new Date("2026-07-18T20:00:00Z");
+  recordInsidePublished(st, {
+    parentEventSlug: "serious-black-last-man-standing", form: "audience-reaction", slug: "lms-article",
+    primaryEntity: "Last Man Standing",
+    title: "Fans Are Dissecting Every Custom LMS Icon — Punctuation, Lore, and One Brutal Heartbreak",
+  }, { now: t0 });
+  const now = new Date(+t0 + H(2));
+  assert.equal(recentDuplicate(st, { primaryEntity: "BTS", parentTitle: "BTS 'Normal' Music Video Sets Spotify Single-Day Streaming Record" }, { now }), null,
+    "a BTS streaming record shares only {video, single} — not a duplicate");
+  assert.equal(recentDuplicate(st, { primaryEntity: "Entheos", parentTitle: "Entheos Announce New Album 'Empty on the Inside' And Share Video" }, { now }), null,
+    "an album announcement shares only generic event words — not a duplicate");
+});
+
+await check("dedup: same subject + same event IS still caught", () => {
+  const st = mkStore(); const t0 = new Date("2026-07-18T08:00:00Z");
+  recordInsidePublished(st, {
+    parentEventSlug: "colman-domingo-tiana", form: "audience-reaction", slug: "tiana-article",
+    primaryEntity: "Colman Domingo",
+    title: "Colman Domingo and Robert O'Hara Join Live-Action Tiana: Fans Waste No Time",
+  }, { now: t0 });
+  const hit = recentDuplicate(st, { primaryEntity: "Colman Domingo", parentTitle: "Disney's 'The Princess and the Frog': Colman Domingo In Early Talks" }, { now: new Date(+t0 + H(6)) });
+  assert.equal(hit?.slug, "tiana-article", "the real re-report must still be blocked");
+});
+
+await check("dedup: a same-subject story is blocked in-window, then freed once it passes", () => {
+  const st = mkStore(); const t0 = new Date("2026-07-17T06:00:00Z");
+  recordInsidePublished(st, {
+    parentEventSlug: "ai-odyssey", form: "audience-reaction", slug: "ai-odyssey-article", primaryEntity: "Odyssey",
+    title: "A Few Thousand Bucks vs. $250 Million: The AI 'Odyssey' That's Splitting the Internet",
+    // the production record carried the source headline too, which is where {nolan} came from
+    trigger: { parentTitle: "AI 'Odyssey' made for thousands takes on Christopher Nolan's $250M epic" },
+  }, { now: t0 });
+  const boxOffice = { primaryEntity: "The Odyssey", parentTitle: "'The Odyssey' Slaying With $120M U.S. Opening, A CinemaScore Best For Christopher Nolan" };
+  // Held inside the window — the never-repost rule wins whenever the two cannot be told apart.
+  assert.equal(recentDuplicate(st, boxOffice, { now: new Date(+t0 + H(10)) })?.slug, "ai-odyssey-article");
+  // …and released after it, so a recurring title is never retired from the lane.
+  assert.equal(recentDuplicate(st, boxOffice, { now: new Date(+t0 + H(49)) }), null);
+});
+
+await check("niche: a Roblox story is off-niche, a game-adaptation FILM is not", () => {
+  assert.equal(isOffNiche("Fans Are Dissecting Every Custom LMS Icon Roblox horror game the game's lore-obsessed community"), true);
+  assert.equal(isOffNiche("The Super Mario Galaxy Movie has fans getting emotional"), false, "a game adaptation film stays in niche");
+  assert.equal(isOffNiche("A Minecraft Movie box office opening weekend"), false);
+  assert.equal(isOffNiche("Brenda Fricker dies at 81, Oscar winner remembered"), false);
+});
+
+await check("niche: the gate reads the SUMMARY, not just the headline", async () => {
+  const stories = [{
+    kind: "headline", storySlug: "lms", primaryEntity: "Last Man Standing", category: "music",
+    headline: "Fans Are Dissecting Every Custom LMS Icon — Punctuation, Lore, and One Brutal Heartbreak",
+    summary: "A compilation video of custom Last Man Standing icons has the game's lore-obsessed Roblox community diving deep.",
+    discourseHeat: 90, signals: {}, sources: [],
+  }];
+  const out = await findStories({ discoverImpl: async () => stories, chatImpl: async () => ({ data: { picks: [] } }) });
+  assert.equal(out.length, 0, "the headline alone looked in-niche; the summary is where Roblox was named");
+});
+
+await check("subject: an all-everyday-word title is ambiguous (Last Man Standing)", () => {
+  const generic = buildSubjectCard({ primaryEntity: "Last Man Standing", headline: "Serious Black Announce New Studio Album; First Single Video 'Last Man Standing'", category: "music" });
+  assert.equal(generic.genericName, true);
+  assert.equal(generic.ambiguous, true, "three everyday words prove nothing — this shipped a Roblox article");
+  const person = buildSubjectCard({ primaryEntity: "Millie Bobby Brown", headline: "Millie Bobby Brown on the finale", category: "celebrity" });
+  assert.equal(person.ambiguous, false, "a distinctive multi-word name stays unambiguous");
+  const work = buildSubjectCard({ primaryEntity: "Supergirl", headline: "Supergirl trailer drops", category: "movies", work: { title: "Supergirl", type: "movie" } });
+  assert.equal(work.genericName, false, "Supergirl is distinctive — its own title still proves subject");
+});
+
+await check("category: a musician's death routes to music, not movies", () => {
+  assert.equal(categoryFor({ text: "Freddy Cannon, Rocker Whose Late 50s and Early 60s Hits Included Palisades Park and Tallahassee Lassie, dies at 89" }), "music");
+  assert.equal(categoryFor({ text: "Brenda Fricker dies at 81, the Oscar-winning film star of My Left Foot" }), "movies", "a screen star's death is still movies");
+  assert.equal(categoryFor({ work: { type: "tv" }, text: "the rocker guest stars" }), "tv", "a TMDB work stays authoritative");
+});
+
+await check("seo: a metaTitle may not end on a modal, adverb, or dangling article", () => {
+  assert.equal(endsCleanT("X-Men '97 Has Fans in a Chokehold — and Creators Are Already"), false);
+  assert.equal(endsCleanT("Descendants: Wicked Wonderland: Cast Hints Pink May"), false);
+  assert.equal(endsCleanT("Apple TV's UConn Huskies Docuseries Trailer Sparks a Wave"), false);
+  assert.equal(endsCleanT("Freddy Cannon: Rocker Who Influenced Stones, Zeppelin Dies at 89"), true, "a complete title still passes");
+  assert.equal(endsCleanT("The Odyssey Sparks Fierce Debate"), true, "noun-ambiguous endings stay legal");
 });
 
 console.log(`\n=== UNIT: ${pass} passed, ${fail} failed ===`);
