@@ -11,6 +11,7 @@ import { maskQuotes, unmaskQuotes, findTemplateHeadings, stripTemplateHeadings, 
 import { factLocks, review as qaReview, webCheck as qaWebCheck, classifyBlocks } from "../agents/qa.mjs";
 import { buildInsideMarkdown, insertInlineEmbeds, seoFinish } from "../assemble.mjs";
 import { endsClean as endsCleanT } from "../seo.mjs";
+import { ytSearchVideos, ytTopComments, ytBudget, ytBudgetReset } from "../youtube.mjs";
 import { discoverReddit, redditSearchPosts, redditTopComments } from "../../find/sources/reddit.mjs";
 import { gnewsArticleId, decodeGnewsBase64, decodeGnewsUrl } from "../../lib/gnewsDecode.mjs";
 import { discoverStories, categoryFor, buildSubjectCard } from "../discover.mjs";
@@ -1570,6 +1571,56 @@ await check("seo: a metaTitle may not end on a modal, adverb, or dangling articl
   assert.equal(endsCleanT("Apple TV's UConn Huskies Docuseries Trailer Sparks a Wave"), false);
   assert.equal(endsCleanT("Freddy Cannon: Rocker Who Influenced Stones, Zeppelin Dies at 89"), true, "a complete title still passes");
   assert.equal(endsCleanT("The Odyssey Sparks Fierce Debate"), true, "noun-ambiguous endings stay legal");
+});
+
+// ── YOUTUBE QUOTA SAFETY (AUTOMATION_REGISTRY §3.25) ─────────────────────────────────────────────
+// This lane is the only consumer of the shared 10,000-unit/day pool and had no guard of any kind:
+// the code path permits 24 candidates x 102 units x 12 ticks = 294% of the pool, and a 403
+// quotaExceeded was swallowed as "no videos found".
+await check("yt: a 403 quotaExceeded stops all further calls this run, fail-soft", async () => {
+  ytBudgetReset();
+  let calls = 0;
+  const fetchImpl = async () => { calls++; return { ok: false, status: 403, text: async () => '{"error":{"errors":[{"reason":"quotaExceeded"}]}}' }; };
+  assert.deepEqual(await ytSearchVideos("odyssey trailer", { key: "k", fetchImpl }), [], "fail-soft: returns [] not a throw");
+  assert.equal(ytBudget().quotaBlocked, true, "the 403 must be RECOGNISED, not swallowed as an empty result");
+  // every later candidate in the same run must short-circuit without another HTTP call
+  await ytSearchVideos("another story", { key: "k", fetchImpl });
+  await ytTopComments("vid123", { key: "k", fetchImpl });
+  assert.equal(calls, 1, "after a quota 403 the run must stop asking");
+});
+
+await check("yt: a non-quota 403 does NOT trip the quota breaker", async () => {
+  ytBudgetReset();
+  const fetchImpl = async () => ({ ok: false, status: 403, text: async () => '{"error":{"errors":[{"reason":"accessNotConfigured"}]}}' });
+  assert.deepEqual(await ytSearchVideos("q", { key: "k", fetchImpl }), []);
+  assert.equal(ytBudget().quotaBlocked, false, "a permission error is not a quota wall");
+});
+
+await check("yt: the per-run unit budget bounds a runaway walk", async () => {
+  ytBudgetReset();
+  let calls = 0;
+  const fetchImpl = async () => { calls++; return { ok: true, json: async () => ({ items: [] }) }; };
+  // budget 1200 / 100 per search = 12 searches, then the 13th must be refused before any HTTP
+  for (let i = 0; i < 20; i++) await ytSearchVideos(`story ${i}`, { key: "k", fetchImpl });
+  assert.equal(calls, 12, `budget must cap the walk at 12 searches, got ${calls}`);
+  assert.equal(ytBudget().spent, 1200);
+});
+
+await check("yt: a healthy tick is nowhere near the budget", async () => {
+  ytBudgetReset();
+  const fetchImpl = async (url) => ({ ok: true, json: async () => (
+    url.includes("/search") ? { items: [{ id: { videoId: "v1" }, snippet: { title: "The Odyssey Trailer", channelTitle: "Universal" } }] }
+                            : { items: [] }) });
+  await ytSearchVideos("the odyssey trailer", { key: "k", fetchImpl });
+  await ytTopComments("v1", { key: "k", fetchImpl });
+  assert.equal(ytBudget().spent, 101, "one candidate = 100 search + 1 comments");
+  assert.ok(ytBudget().spent < ytBudget().budget / 10, "a normal tick uses <10% of the run budget");
+});
+
+await check("yt: no key stays free and never counts against the budget", async () => {
+  ytBudgetReset();
+  assert.deepEqual(await ytSearchVideos("q", { key: "", fetchImpl: async () => { throw new Error("must not fetch"); } }), []);
+  assert.equal(ytBudget().spent, 0);
 });
 
 console.log(`\n=== UNIT: ${pass} passed, ${fail} failed ===`);

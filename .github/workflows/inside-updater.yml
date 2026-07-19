@@ -52,10 +52,26 @@ jobs:
           git config user.email "bot@thescreenreport.com"
           git add content/articles data/inside
           git commit -m "inside: freshness update (top-ups / dead embeds)" || { echo "no updates this pass"; exit 0; }
+          # CONFLICT-PROOF PUSH — same pattern as inside-agents.yml / news-drip.yml (see §3.25).
+          # This pass rewrites LIVE article files, so a stuck rebase would discard real repairs.
           pushed=
           for i in 1 2 3 4 5; do
-            git pull --rebase --autostash origin main \
-              && git push origin "HEAD:main" && pushed=1 && break
+            git rebase --abort 2>/dev/null || true
+            if git pull --rebase --autostash origin main; then
+              git push origin "HEAD:main" && pushed=1 && break
+            else
+              UNMERGED=$(git diff --name-only --diff-filter=U || true)
+              if [ -n "$UNMERGED" ] && ! echo "$UNMERGED" | grep -qv '^data/'; then
+                echo "state-file conflict on: $UNMERGED — keeping this pass's version"
+                echo "$UNMERGED" | xargs -r git checkout --theirs --
+                echo "$UNMERGED" | xargs -r git add --
+                GIT_EDITOR=true git rebase --continue || git rebase --abort 2>/dev/null || true
+                git push origin "HEAD:main" && pushed=1 && break
+              else
+                [ -n "$UNMERGED" ] && echo "non-state conflict on: $UNMERGED — aborting rebase, will retry"
+                git rebase --abort 2>/dev/null || true
+              fi
+            fi
             echo "push attempt $i lost the race; retrying in 5s…"; sleep 5
           done
           [ -n "$pushed" ] || { echo "::error::could not push freshness updates after 5 attempts"; exit 1; }

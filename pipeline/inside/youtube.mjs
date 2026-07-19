@@ -16,10 +16,44 @@ const clean = (s) =>
     .replace(/\s+/g, " ")
     .trim();
 
+// ── QUOTA SAFETY (AUTOMATION_REGISTRY §3.25, 2026-07-19) ────────────────────────────────────────
+// This lane is the ONLY consumer of the shared 10,000-unit/day pool. A healthy tick publishes on its
+// first candidate and spends ~102 units (search 100 + ≤2 comments), i.e. ~12%/day — but the code path
+// permits walking 24 candidates, which is 2,448/tick = 294%/day. Nothing bounded that, and worse, a
+// 403 quotaExceeded was swallowed by the callers' bare `catch { return [] }` — INDISTINGUISHABLE from
+// "no videos found". The lane would silently lose its strongest reaction source with no alarm.
+// Two guards, both fail-soft and both per-process (a run = a process, so this is a per-run budget):
+const COST = { search: 100, commentThreads: 1 };
+const RUN_BUDGET = Number(process.env.INSIDE_YT_RUN_BUDGET) || 1200; // ~12 candidates; a healthy tick uses 102
+let spent = 0;
+let quotaBlocked = false;
+export const ytBudget = () => ({ spent, budget: RUN_BUDGET, quotaBlocked });
+export const ytBudgetReset = () => { spent = 0; quotaBlocked = false; }; // tests only
+
+class YtQuotaError extends Error {}
+
 async function yt(fetchImpl, path, params, key) {
-  const qs = new URLSearchParams({ ...params, key }).toString();
-  const res = await fetchImpl(`${API}/${path}?${qs}`, { signal: AbortSignal.timeout(9000) });
-  if (!res.ok) throw new Error(`yt ${path} HTTP ${res.status}`);
+  // Once the API says we are out, stop asking — every further call is guaranteed to fail and, if
+  // Google charges for rejected calls, actively harmful.
+  if (quotaBlocked) throw new YtQuotaError("yt quota exhausted earlier this run");
+  const cost = COST[path] ?? 1;
+  if (spent + cost > RUN_BUDGET) throw new YtQuotaError(`yt run budget ${RUN_BUDGET} would be exceeded (spent ${spent})`);
+  spent += cost;
+  const res = await fetchImpl(`${API}/${path}?${new URLSearchParams({ ...params, key }).toString()}`, { signal: AbortSignal.timeout(9000) });
+  if (!res.ok) {
+    // 403 is the quota/permission status. Read the body so a genuine permission error is not
+    // mislabelled, and LOG IT — a silent quota wall was the actual defect.
+    if (res.status === 403) {
+      const body = await res.text().catch(() => "");
+      if (/quota|rateLimit/i.test(body)) {
+        quotaBlocked = true;
+        console.log(`  ⚠ YouTube QUOTA EXHAUSTED (403) after ${spent} units this run — harvest continues on Bluesky/pages`);
+        throw new YtQuotaError("quotaExceeded");
+      }
+      console.log(`  ⚠ YouTube 403 (not quota): ${body.slice(0, 140)}`);
+    }
+    throw new Error(`yt ${path} HTTP ${res.status}`);
+  }
   return res.json();
 }
 

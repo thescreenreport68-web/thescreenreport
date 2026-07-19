@@ -28,6 +28,7 @@ import { dedupeSentences, trimIncomplete } from "../lib/polish.mjs";
 import { addInternalLinks } from "../lib/internalLinks.mjs";
 import { norm } from "./reactionFinder.mjs";
 import { costReport } from "../lib/openrouter.mjs";
+import { ytBudget } from "./youtube.mjs";
 
 const PAUSED_FILE = path.join(DATA_DIR, "PAUSED");
 // REVIEW MODE (owner preview-first rule): articles land in a holding dir (uploaded as a workflow
@@ -317,6 +318,9 @@ function finish(report, dryRun) {
   report.finishedAt = new Date().toISOString();
   report.meter = meterReport();
   report.openrouterTotalUsd = Number((costReport()?.total || 0).toFixed(5));
+  // YouTube quota is a SHARED resource (AUTOMATION_REGISTRY §3.25) and this lane is its only
+  // consumer — record what the tick spent so the burn is auditable per run instead of inferred.
+  report.youtube = ytBudget();
   if (!dryRun) {
     fs.mkdirSync(RUNS_DIR, { recursive: true });
     fs.writeFileSync(path.join(RUNS_DIR, `${report.runId}.json`), JSON.stringify(report, null, 1));

@@ -108,9 +108,31 @@ jobs:
             git add content/articles data/inside data/tweets
           fi
           git commit -m "inside: tick — ${{ steps.tick.outputs.slugs || 'lane state (park/dedup)' }}" || { echo "nothing to commit"; exit 0; }
+          # CONFLICT-PROOF PUSH (ported from news-drip 2026-07-19 — AUTOMATION_REGISTRY §3.25/§3.1).
+          # The old loop was a bare pull-rebase-push ×5 with no `rebase --abort`. A conflict on a
+          # regenerable state file left the rebase IN PROGRESS, so every later retry hit "unmerged
+          # files" and failed too — the job exited 1 and this tick's finished articles died with the
+          # ephemeral runner. News lost 2 articles that way before it was fixed here; this lane never
+          # got the fix. Now: clear any half-finished rebase first, and auto-resolve conflicts that are
+          # ONLY under data/ by keeping what this tick just wrote (during a rebase ours is "theirs").
+          # A conflict touching content/articles is NEVER auto-resolved — abort and retry cleanly.
           for i in 1 2 3 4 5; do
-            git pull --rebase --autostash origin main \
-              && git push origin "HEAD:main" && { echo "pushed on attempt $i"; exit 0; }
+            git rebase --abort 2>/dev/null || true
+            if git pull --rebase --autostash origin main; then
+              git push origin "HEAD:main" && { echo "pushed on attempt $i"; exit 0; }
+            else
+              UNMERGED=$(git diff --name-only --diff-filter=U || true)
+              if [ -n "$UNMERGED" ] && ! echo "$UNMERGED" | grep -qv '^data/'; then
+                echo "state-file conflict on: $UNMERGED — keeping this tick's version"
+                echo "$UNMERGED" | xargs -r git checkout --theirs --
+                echo "$UNMERGED" | xargs -r git add --
+                GIT_EDITOR=true git rebase --continue || git rebase --abort 2>/dev/null || true
+                git push origin "HEAD:main" && { echo "pushed on attempt $i (state conflict auto-resolved)"; exit 0; }
+              else
+                [ -n "$UNMERGED" ] && echo "non-state conflict on: $UNMERGED — aborting rebase, will retry"
+                git rebase --abort 2>/dev/null || true
+              fi
+            fi
             echo "push attempt $i lost the race; retrying in 5s…"; sleep 5
           done
           echo "::error::could not push state after 5 attempts"; exit 1
