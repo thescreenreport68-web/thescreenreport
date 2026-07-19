@@ -80,6 +80,30 @@ console.log("\n=== BATCH D: STATE / DEDUP PERSISTENCE / COST ===\n");
   check("every role still declares an attempt deadline", roles.length >= 10, String(roles.length));
 }
 
+
+// ── Batch E (in-lane half): the frontmatter shapes the RENDERER actually reads ──
+{
+  const { buildGossipMarkdown } = await import("../assemble.mjs");
+  const mk = (tier, corr, heat, eng, via) => buildGossipMarkdown({
+    article: { title: "Star A and Star B Finalize Their Divorce", dek: "The pair settled quietly this week in court filings.", metaTitle: "Star A and Star B finalize their divorce quietly", metaDescription: "Star A and Star B finalized their divorce on July 3, People reports, after settling terms privately in court this week.", body: "Star A and Star B finalized their divorce on July 3, People reports. " + "More verified detail here. ".repeat(20), keyTakeaways: ["Star A divorced Star B on July 3"], faq: [], whatWeKnow: ["Star A divorced Star B on July 3"] },
+    frame: { tier, severity: "NORMAL", uiLabel: "Confirmed", monitor: false },
+    provenance: { sensitivity: "normal", attribution: "People", monitor: false, sources: [], corroborationCount: corr, publishedAt: "2026-07-19T00:00:00Z" },
+    route: { category: "celebrity", subcategory: "news" },
+    topic: { primaryEntity: "Star A", id: "t1", engagement: eng, heat, viaTrending: via, _score: 60 },
+    dateISO: "2026-07-19T00:00:00.000Z", bundle: { sources: [] },
+  });
+  // lib/articles.ts types signals as an OBJECT of numbers; lib/homepage.ts computes
+  // (breakout*3 + corroboration*1.5 + type) for the TRENDING badge. An array scored ZERO.
+  const hot = mk("CONFIRMED", 3, 6.5, 20000, true).frontmatter.signals;
+  const mild = mk("SOCIAL_SPECULATION", 1, null, null, false).frontmatter.signals;
+  const vel = (s) => (s?.breakout ?? 0) * 3 + (s?.corroboration ?? 0) * 1.5 + (s?.type ?? 0);
+  check("signals is an OBJECT (the shape lib/articles.ts declares)", hot && !Array.isArray(hot) && typeof hot === "object", JSON.stringify(hot));
+  check("every declared key is numeric", ["recency", "corroboration", "status", "type", "pop", "breakout"].every((k) => typeof hot[k] === "number"));
+  check("supply-side trending velocity is non-zero (was 0 for every gossip article)", vel(hot) > 0, String(vel(hot)));
+  check("a hot story outranks a mild one", vel(hot) > vel(mild), `${vel(hot)} vs ${vel(mild)}`);
+  check("values stay conservative — gossip cannot hijack the news slots", vel(hot) <= 20, String(vel(hot)));
+}
+
 console.log(`\n── RESULT: ${pass} passed${fail ? `, ${fail} FAILED` : ""} ──`);
 if (fail) { console.log("FAILED:", fails.join("; ")); process.exit(1); }
 console.log("Batch D green — state persists, dedup stays searchable, spend is bounded. ✅\n");

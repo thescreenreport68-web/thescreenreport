@@ -87,7 +87,21 @@ export function buildGossipMarkdown({ article, frame, provenance, route, topic, 
     eventSlug: topic.id || slug,
     eventType: gossipType,
     outletCount: provenance.corroborationCount ?? null,
-    signals: [
+    // lib/articles.ts declares signals as an OBJECT OF NUMBERS, and lib/homepage.ts reads
+    // s.breakout / s.corroboration / s.type to compute supply-side TRENDING velocity. This lane emitted
+    // an ARRAY OF STRINGS, so every numeric read returned undefined and gossip articles scored ZERO
+    // velocity — they could never earn a TRENDING badge before analytics data existed. Values stay
+    // CONSERVATIVE (same spirit as the trendScore cap): gossip must not hijack the news slots.
+    signals: {
+      recency: 1,
+      corroboration: Math.min(4, Number(provenance.corroborationCount) || 0),
+      status: frame.tier === "CONFIRMED" || frame.tier === "OFFICIAL_RECORD" ? 2 : frame.tier === "REPORTED_BY_MAJOR" ? 1 : 0,
+      type: topic.viaTrending ? 1 : 0,
+      pop: topic.engagement != null ? Math.min(4, Math.round(Math.log10(1 + Number(topic.engagement)))) : 0,
+      breakout: topic.heat != null ? Math.min(3, Math.max(0, Math.round(Number(topic.heat) - 1))) : 0,
+    },
+    // human-readable trace kept for audits; never consumed by the renderer
+    signalNotes: [
       ...(topic.engagement != null ? [`social:${topic.engagement}`] : []),
       ...(topic.heat != null ? [`heat:${topic.heat}x`] : []),
       ...(provenance.corroborationCount ? [`outlets:${provenance.corroborationCount}`] : []),

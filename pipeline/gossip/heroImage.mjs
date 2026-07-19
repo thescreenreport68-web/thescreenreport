@@ -157,7 +157,18 @@ function buildImageHero(chosen, { entity, headline, embed, score, why, candidate
   const alt = namedSubject ? `${namedSubject}${chosen.titleContext ? ` in ${chosen.titleContext}` : ""}` : (entity || headline || "hero image");
   // Story photos / backdrops / yt thumbs = 16:9 landscape (fill the wide hero, no tight crop); profiles/posters = 2:3.
   const DIMS = { "source-photo": [1200, 675], backdrop: [1280, 720], "video-thumb": [1280, 720], poster: [800, 1200], profile: [800, 1200] };
-  const [width, height] = DIMS[chosen.kind] || [1200, 675];
+  // 2026-07-19: dimensions came ONLY from the per-kind table, even when the candidate carried real
+  // measured w/h — so og:image and the JSON-LD ImageObject advertised a 16:9 frame for portrait assets
+  // (62 live articles). Prefer the measured size, then a size encoded in the URL, then the table.
+  const urlDims = (u) => {
+    const m = String(u || "").match(/[?&](?:w|width)=(\d{2,5})[^?]*?[?&](?:h|height)=(\d{2,5})/i)
+      || String(u || "").match(/(?:crop|resize|fit)=(\d{2,5})[,:x](\d{2,5})/i)
+      || String(u || "").match(/\/(\d{3,5})x(\d{3,5})\//);
+    const w = m && Number(m[1]), h = m && Number(m[2]);
+    return w > 0 && h > 0 ? [w, h] : null;
+  };
+  const measured = Number(chosen.w) > 0 && Number(chosen.h) > 0 ? [Number(chosen.w), Number(chosen.h)] : null;
+  const [width, height] = measured || urlDims(chosen.url) || DIMS[chosen.kind] || [1200, 675];
   return {
     kind: "image", src: chosen.url, width, height, orientation: width >= height ? "landscape" : "portrait",
     alt, caption, credit, source: chosen.kind === "source-photo" ? "source" : chosen.kind === "video-thumb" ? "youtube" : "tmdb",
