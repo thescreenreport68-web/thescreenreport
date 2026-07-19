@@ -84,14 +84,21 @@ jobs:
             data/gossip/stats/
           if-no-files-found: ignore
 
+      # 2026-07-19: this was gated on published != 0. data/gossip/{queue,store,schedule,stats}.json is the
+      # lane's ONLY persistence and the runner filesystem is discarded, so a zero-publish tick threw away
+      # every queue pop it had just made — the same topics were re-popped and re-paid for on the next tick,
+      # and the zero-publish streak alarm could never fire because its counter rolled back too.
+      # State is now committed on EVERY tick that ran; only the deploy dispatch stays gated on a publish.
       - name: Commit new article + state
-        if: steps.tick.outputs.published != '0' && steps.tick.outputs.published != ''
+        if: always() && steps.tick.conclusion == 'success'
         run: |
           git config user.name  "screenreport-bot"
           git config user.email "bot@thescreenreport.com"
           git add content/articles data/gossip
           git add public/gossip-cards 2>/dev/null || true
-          git commit -m "gossip: ${{ github.event.inputs.review == 'true' && 'review tick (state only)' || format('publish {0}', steps.tick.outputs.slugs) }}" || { echo "nothing to commit"; exit 0; }
+          MSG="gossip: ${{ github.event.inputs.review == 'true' && 'review tick (state only)' || format('publish {0}', steps.tick.outputs.slugs) }}"
+          if [ "${{ steps.tick.outputs.published }}" = "0" ] || [ -z "${{ steps.tick.outputs.published }}" ]; then MSG="gossip: tick state (no publish)"; fi
+          git commit -m "$MSG" || { echo "nothing to commit"; exit 0; }
           # main is the ONE deploy branch. Other lanes push here too — rebase onto the latest origin/main and retry so
           # a concurrent push never fails ours (a failed state-commit would break dedup and risk a double-post).
           for i in 1 2 3 4 5; do

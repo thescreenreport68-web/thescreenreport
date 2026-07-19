@@ -165,10 +165,19 @@ export function buildGossipMarkdown({ article, frame, provenance, route, topic, 
 
 export function writeGossipArticle({ article, frame, provenance, route, topic, dateISO, bundle = null, dir = CONTENT_DIR, dryRun = false }) {
   const { slug, md, frontmatter, seoIssues } = buildGossipMarkdown({ article, frame, provenance, route, topic, dateISO, bundle });
-  const fp = path.join(dir, slug + ".md");
+  // COLLISION GUARD (2026-07-19): writeFileSync clobbers silently, and the UPDATE follow-up path
+  // deliberately skips the dedup guard that would otherwise catch a repeat — so a follow-up whose slug
+  // matched its parent overwrote the very article it links to. Never overwrite a DIFFERENT article.
+  let slugOut = slug;
+  if (!dryRun) {
+    try {
+      for (let n = 2; fs.existsSync(path.join(dir, slugOut + ".md")) && n < 12; n++) slugOut = `${slug}-${n}`;
+    } catch { /* fs probe failed — fall through to the plain write */ }
+  }
+  const fp = path.join(dir, slugOut + ".md");
   if (!dryRun) {
     fs.mkdirSync(dir, { recursive: true });
     fs.writeFileSync(fp, md);
   }
-  return { slug, path: fp, frontmatter, md, written: !dryRun, seoIssues };
+  return { slug: slugOut, path: fp, frontmatter, md, written: !dryRun, seoIssues };
 }

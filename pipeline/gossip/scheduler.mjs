@@ -61,7 +61,7 @@ export async function tick({ now = new Date(), findImpl = gossipFind, runImpl = 
   if (process.env.GOSSIP_DIAG === "1") { try { await runProbes(); } catch { /* diag never blocks */ } }
   const sched = loadSchedule(schedPath);
   const since = minsSinceLastPost(now, sched);
-  let burst = false;
+  let burst = false, burstTopicId = null;
   if (!force && since < intervalMin) {
     // BURST CHECK (Phase 5): peek (no claim) — a Tier-S story may bypass the interval, within hard caps.
     const day = now.toISOString().slice(0, 10);
@@ -69,6 +69,7 @@ export async function tick({ now = new Date(), findImpl = gossipFind, runImpl = 
     const top = since >= BURST_MIN_GAP_MIN && burstsToday < BURST_MAX_PER_DAY ? peekTopScore({ nowMs: now.getTime() }) : null;
     if (top && top.score >= BURST_SCORE) {
       burst = true;
+      burstTopicId = top.id || null;
       console.log(`[scheduler] 🔥 BURST: top topic "${top.entity}" scores ${top.score} (≥ ${BURST_SCORE}) — bypassing the interval (${burstsToday + 1}/${BURST_MAX_PER_DAY} today).`);
     } else {
       console.log(`[scheduler] only ${Math.round(since)}min since last post (< ${intervalMin}); no-op.`);
@@ -86,7 +87,10 @@ export async function tick({ now = new Date(), findImpl = gossipFind, runImpl = 
     } catch (e) { console.error(`[scheduler] find top-up failed: ${String(e?.message || e).slice(0, 120)}`); }
   }
   // PUBLISH one from the backlog.
-  const report = await runImpl({ fromFind: true, limit: PER_TICK, hero: true, links: true, categoryGuard: true });
+  // A burst bypasses the ~115-min interval because ONE peeked topic scored Tier-S. The article that
+  // actually shipped was whatever survived the drain, so an ordinary story could ride the Tier-S slot.
+  // When the bypass was granted, require the run to publish THAT topic or nothing.
+  const report = await runImpl({ fromFind: true, limit: PER_TICK, hero: true, links: true, categoryGuard: true, ...(burst && burstTopicId ? { requireTopicId: burstTopicId } : {}) });
   // Stamp the interval clock ONLY when something actually published (a dry slot retries on the next tick).
   // REVIEW runs never stamp the live cadence clock (the preview must not delay the next real post).
   if (report.published.length > 0 && !reviewDir()) {

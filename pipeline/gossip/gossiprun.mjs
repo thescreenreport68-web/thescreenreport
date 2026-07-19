@@ -13,7 +13,7 @@ import { gossipFind, dequeue, enqueue } from "./find.mjs";
 import { runGossip } from "./run.mjs";
 import { writeGossipArticle } from "./assemble.mjs";
 import { detectGossipType, LEDE_ORDER } from "./writer.mjs";
-import { loadRecentIndex, isCrossDup } from "./crossDedup.mjs";
+import { loadRecentIndex, isCrossDup, tokens as xdTokens, normName } from "./crossDedup.mjs";
 import { brandCardHero } from "./brandCard.mjs";
 import { routeBySubject } from "./config.gossip.mjs";
 import { openStore } from "./vecStore.mjs";
@@ -73,7 +73,7 @@ export async function gossipRun({
   heroImpl = pickHero, linkIndexImpl = buildLinkIndex, findRelatedImpl = findRelatedLinks, categoryGuardImpl,
   onePerCategory = false, verify = true, judge = true, hero = false, links = false, categoryGuard = false,
   dedup = true, social = true, storeImpl = null, embedImpl, adjudicateImpl,
-  limit = 0, fromFind = false, dequeueImpl = dequeue, maxDrain = 10, dryRun = false, nowMs,
+  limit = 0, fromFind = false, dequeueImpl = dequeue, maxDrain = 10, dryRun = false, nowMs, requireTopicId = null,
 } = {}) {
   const now = nowMs ?? Date.now();
   meterReset(); // per-run per-role meter (models.mjs agentChat)
@@ -102,6 +102,10 @@ export async function gossipRun({
   // Pre-publish cross-dedup index (ALL lanes' articles from the last 72h) + the lede-rotation counter.
   // The cross-dedup only runs on the live drip (fromFind); inline/offline runs use fixture topics.
   const recentIndex = fromFind ? loadRecentIndex({ now }) : [];
+  // A frame-HOLD topic is re-queued for a LATER tick, but dequeue() pops by score and would immediately
+  // hand it back in THIS one — paying gather + editorial + corroborate a second time for a topic already
+  // known to hold. Track what this invocation has touched.
+  const seenThisTick = new Set();
   let rotIdx = readRot();
 
   // In --from-find mode, cap topics PROCESSED per invocation so one tick can't runaway-drain the whole backlog
@@ -110,6 +114,18 @@ export async function gossipRun({
   while (report.published.length < publishTarget && (!fromFind || report.topics < maxDrain)) {
     const t = nextTopic();
     if (!t) break;
+    // A frame-HOLD topic is re-queued for a LATER tick, but dequeue() pops by score and would hand it
+    // straight back in THIS one — paying gather + editorial + corroborate again for a known hold. Skip it,
+    // but COUNT the skip against the drain budget so this can never spin.
+    if (t.id && seenThisTick.has(t.id)) { report.topics++; if (report.topics >= maxDrain) break; continue; }
+    if (t.id) seenThisTick.add(t.id);
+    // A Tier-S burst bypassed the cadence for a SPECIFIC topic; only that topic may spend the slot.
+    if (requireTopicId && t.id !== requireTopicId) {
+      report.skipped.push({ id: t.id, decision: "NOT_BURST_TOPIC", reason: `burst slot is reserved for ${requireTopicId}` });
+      report.topics++;
+      if (report.topics >= maxDrain) break;
+      continue;
+    }
     report.topics++;
     const dateISO = new Date(now - i * 60000).toISOString();
     i++;
@@ -176,6 +192,14 @@ export async function gossipRun({
         } catch { /* parent file unavailable (e.g. review-only) — chain skipped */ }
       }
       const out = writeImpl({ article: r.article, frame: r.frame, provenance: r.provenance, route: r.route, topic: t, dateISO, dryRun, bundle: r.bundle, ...(REVIEW ? { dir: REVIEW } : {}) });
+      // The 72h cross-lane index was built ONCE before this loop, so on a multi-article tick article #2
+      // was never checked against article #1 — two pops of the same story in one tick both shipped.
+      // Fold each publish straight into the live index.
+      if (fromFind && !dryRun) {
+        try {
+          recentIndex.push({ slug: out.slug, entity: normName(t.primaryEntity || ""), evt: xdTokens(`${r.article.title || ""} ${t.claim || ""} ${r.article.dek || ""}`) });
+        } catch { /* index refresh is best-effort — never break a publish */ }
+      }
       // record it in the dedup store so future runs won't re-publish it. A DRY RUN never mutates the store.
       if (dedup && store && dd && !dryRun) recordPublished(t, store, { urlHash: dd.urlHash, eventKey: dd.eventKey, embedding: dd.embedding, slug: out.slug, parentKey: dd.parentKey, now: new Date(now) });
       report.published.push({

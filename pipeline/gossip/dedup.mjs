@@ -63,10 +63,15 @@ export async function dedupCheck(topic, store, { embedImpl = defaultEmbed, adjud
       .slice()
       .sort((a, b) => Date.parse(b?.createdAt || 0) - Date.parse(a?.createdAt || 0))
       .slice(0, 5); // newest 5 — caps adjudication spend on a busy entity
-    for (const prior of ekHits) {
+    // An UPDATE PUBLISHES, so its record must stay semantically searchable. Returning from this branch used
+      // to leave embedding:null and recordPublished stores that verbatim — the follow-up became permanently
+      // invisible to L3, so the NEXT rewrite of the same story could never be caught semantically.
+      let ekVec = null;
+      const ekEmbed = async () => (ekVec ??= Array.from(await embedImpl(summaryText(topic))));
+      for (const prior of ekHits) {
       const adj = await adjudicateImpl(prior.summary, summaryText(topic));
       if (adj.verdict === "DUPLICATE") return { decision: "DUPLICATE", reason: "same-event dup (eventKey)", parentKey: prior.key, urlHash: uh, eventKey: ek, embedding: null };
-      if (adj.verdict === "UPDATE") return { decision: "UPDATE", reason: (`update: ${adj.newFact || "new development"}`).slice(0, 120), parentKey: prior.key, urlHash: uh, eventKey: ek, embedding: null };
+      if (adj.verdict === "UPDATE") return { decision: "UPDATE", reason: (`update: ${adj.newFact || "new development"}`).slice(0, 120), parentKey: prior.key, urlHash: uh, eventKey: ek, embedding: await ekEmbed() };
       // DISTINCT vs THIS record → keep checking the rest of the bucket before concluding the story is new.
     }
     // L3 — semantic vs same-entity recent records
