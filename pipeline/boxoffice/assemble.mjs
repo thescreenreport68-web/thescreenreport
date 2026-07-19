@@ -446,10 +446,19 @@ export function buildBoxOfficeMarkdown({ article, trigger, angle, film, gathered
     canon,
     { recordTexts: (fm.records || []).map((r) => r.claim) },
   );
+  // DROP-EMPTY-SECTIONS (before the gate). The verdict/fidelity walls cut sentences, and when they empty a
+  // section they leave a bare heading behind — which the scaffold gate then correctly refuses, holding an
+  // otherwise-good article. A heading with no prose is not content; REMOVE it rather than lose the piece.
+  // (Same deterministic rule already validated repairing 16 legacy articles.)
+  const cleanBody = body.split(/\n(?=#{2,6}\s)/).filter((block) => {
+    if (!/^#{2,6}\s/.test(block.trim())) return true;
+    return block.split("\n").slice(1).join(" ").replace(/\s+/g, " ").trim().length > 0;
+  }).join("\n").replace(/\n{3,}/g, "\n\n").trim();
+
   // ── SCAFFOLD GATE: no placeholder, empty section, template label, flattened heading, or under-floor
   // body can reach a reader (replaces the deleted fast-accept path with a REAL floor for every form).
-  const scaffold = scaffoldViolations(body, fm);
-  const md = matter.stringify("\n" + body + "\n", fm);
+  const scaffold = scaffoldViolations(cleanBody, fm);
+  const md = matter.stringify("\n" + cleanBody + "\n", fm);
   return { slug, frontmatter: fm, md, canon, consistency, scaffold };
 }
 
