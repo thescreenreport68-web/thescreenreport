@@ -1012,9 +1012,9 @@
    "key": "avatar-the-last-airbender-trending-tv-w2026-07-12|TRENDING-TV",
    "eventSlug": "avatar-the-last-airbender-trending-tv-w2026-07-12",
    "form": "TRENDING-TV",
-   "reason": "platform: names paramount+ not in confirmed providers",
-   "tries": 1,
-   "at": "2026-07-19T05:48:17.422Z"
+   "reason": "8 unverified claim(s) cut, unrecovered",
+   "tries": 2,
+   "at": "2026-07-19T12:41:31.008Z"
   },
   {
    "key": "salish-jordan-matter-trending-tv-w2026-07-12|TRENDING-TV",
@@ -1180,41 +1180,41 @@
    "key": "supergirl-bo-update-d22|BO-UPDATE",
    "eventSlug": "supergirl-bo-update-d22",
    "form": "BO-UPDATE",
-   "reason": "words 146 < 180 (owner-set ~200-word minimum)",
-   "tries": 5,
-   "at": "2026-07-19T11:32:29.920Z",
+   "reason": "scaffold: body 179 words < 180 floor",
+   "tries": 6,
+   "at": "2026-07-19T12:35:21.473Z",
    "dead": true,
-   "expiresAt": "2026-07-22T11:32:29.920Z"
+   "expiresAt": "2026-07-22T12:35:21.473Z"
   },
   {
    "key": "gail-daughtry-and-the-celebrity-sex-pass-bo-update-d8|BO-UPDATE",
    "eventSlug": "gail-daughtry-and-the-celebrity-sex-pass-bo-update-d8",
    "form": "BO-UPDATE",
    "reason": "consistency: title: \"$1.2\" is not a canonical figure for this film | title: \"$1.2\" contradicts the canonical domestic figure ($1,242,603)",
-   "tries": 4,
-   "at": "2026-07-19T11:34:16.740Z",
+   "tries": 5,
+   "at": "2026-07-19T12:36:39.491Z",
    "dead": true,
-   "expiresAt": "2026-07-22T11:34:16.740Z"
+   "expiresAt": "2026-07-22T12:36:39.491Z"
   },
   {
    "key": "star-wars-the-mandalorian-and-grogu-bo-update-d57|BO-UPDATE",
    "eventSlug": "star-wars-the-mandalorian-and-grogu-bo-update-d57",
    "form": "BO-UPDATE",
    "reason": "consistency: title: \"$177.5\" is not a canonical figure for this film | title: \"$177.5\" contradicts the canonical domestic figure ($177,455,904) | metaTitle: headlines domestic while the title headlines dailyGross/other — the SERP promise must match the page",
-   "tries": 4,
-   "at": "2026-07-19T11:36:15.215Z",
+   "tries": 5,
+   "at": "2026-07-19T12:39:10.210Z",
    "dead": true,
-   "expiresAt": "2026-07-22T11:36:15.215Z"
+   "expiresAt": "2026-07-22T12:39:10.210Z"
   }
  ],
- "zeroStreak": 5,
+ "zeroStreak": 6,
  "daySpend": {
   "laDay": "2026-07-19",
-  "usd": 0.11527
+  "usd": 0.13962
  },
  "pace": {
-  "tokens": 1.3188533944444445,
-  "lastMs": 1784462520899
+  "tokens": 2.25986215,
+  "lastMs": 1784464382235
  },
  "lastAuditDay": "2026-07-19",
  "attempts": {
@@ -1225,7 +1225,8 @@
    "the sheep detectives": 1,
    "i will find you": 1,
    "worst neighbor ever": 1,
-   "little house on the prairie": 1
+   "little house on the prairie": 1,
+   "avatar: the last airbender": 1
   }
  }
 }
