@@ -1,6 +1,6 @@
 {
   "id": "news-zendaya-the-odyssey-premiere",
-  "slug": "zendaya-grew-angel-wings-at-the-odyssey-premiere",
+  "slug": "zendaya-wears-angelic-gown-to-the-odyssey-premiere",
   "status": "needs_review",
   "stages": {
     "attempt1": {
@@ -14,12 +14,12 @@
       "score": null,
       "cat": "movies/reactions",
       "format": [],
-      "cuts": 2,
+      "cuts": 0,
       "broken": []
     }
   },
   "editorial": {
-    "status": "confirmed",
+    "status": "unconfirmed",
     "entity": "Zendaya",
     "work": {
       "title": "The Odyssey",
@@ -35,22 +35,22 @@
     "strengths": [],
     "weaknesses": [],
     "deterministic": {
-      "words": 260,
+      "words": 297,
       "h2s": 2,
       "h2Questions": 2,
       "internalLinks": 0,
       "externalLinks": 0,
       "hasSources": false,
       "faqCount": 4,
-      "ktCount": 4,
+      "ktCount": 5,
       "kwInTitle": true,
       "kwInFirst100": true,
       "kwInH2": false,
-      "maxSentence": 28,
-      "avgSentence": 19,
-      "flesch": 42,
+      "maxSentence": 33,
+      "avgSentence": 20,
+      "flesch": 44,
       "bannedTells": 0,
-      "fillerPraise": 0,
+      "fillerPraise": 1,
       "kwExact": 0,
       "hardBlocks": []
     },
@@ -66,7 +66,7 @@
       "credit"
     ]
   },
-  "ms": 68682,
+  "ms": 62891,
   "previousRuns": [
     {
       "id": "news-zendaya-the-odyssey-premiere",
@@ -296,6 +296,76 @@
         ]
       },
       "ms": 58603
+    },
+    {
+      "id": "news-zendaya-the-odyssey-premiere",
+      "slug": "zendaya-grew-angel-wings-at-the-odyssey-premiere",
+      "status": "needs_review",
+      "stages": {
+        "attempt1": {
+          "score": null,
+          "cat": "movies/reactions",
+          "format": [],
+          "cuts": 0,
+          "broken": []
+        },
+        "attempt2": {
+          "score": null,
+          "cat": "movies/reactions",
+          "format": [],
+          "cuts": 2,
+          "broken": []
+        }
+      },
+      "editorial": {
+        "status": "confirmed",
+        "entity": "Zendaya",
+        "work": {
+          "title": "The Odyssey",
+          "year": null,
+          "medium": "movie"
+        },
+        "outlet": "coveteur.com"
+      },
+      "holdReason": "reaction: required embed missing",
+      "scorecard": {
+        "score": null,
+        "subscores": {},
+        "strengths": [],
+        "weaknesses": [],
+        "deterministic": {
+          "words": 260,
+          "h2s": 2,
+          "h2Questions": 2,
+          "internalLinks": 0,
+          "externalLinks": 0,
+          "hasSources": false,
+          "faqCount": 4,
+          "ktCount": 4,
+          "kwInTitle": true,
+          "kwInFirst100": true,
+          "kwInH2": false,
+          "maxSentence": 28,
+          "avgSentence": 19,
+          "flesch": 42,
+          "bannedTells": 0,
+          "fillerPraise": 0,
+          "kwExact": 0,
+          "hardBlocks": []
+        },
+        "hardBlocks": []
+      },
+      "audit": {
+        "ok": false,
+        "internalLinks": 0,
+        "failed": [
+          "tweet grounding",
+          "keyword in title",
+          "≥1200px legal image",
+          "credit"
+        ]
+      },
+      "ms": 68682
     }
   ]
 }
