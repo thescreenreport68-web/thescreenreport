@@ -1042,16 +1042,16 @@
    "eventSlug": "raw-trending-tv-w2026-07-12",
    "form": "TRENDING-TV",
    "reason": "3 unverified claim(s) cut, unrecovered",
-   "tries": 1,
-   "at": "2026-07-19T05:52:43.168Z"
+   "tries": 2,
+   "at": "2026-07-19T14:36:13.091Z"
   },
   {
    "key": "sullivan-s-crossing-trending-tv-w2026-07-12|TRENDING-TV",
    "eventSlug": "sullivan-s-crossing-trending-tv-w2026-07-12",
    "form": "TRENDING-TV",
-   "reason": "3 unverified claim(s) cut, unrecovered",
-   "tries": 1,
-   "at": "2026-07-19T05:54:34.920Z"
+   "reason": "words 131 < 180 (owner-set ~200-word minimum)",
+   "tries": 2,
+   "at": "2026-07-19T14:38:16.740Z"
   },
   {
    "key": "survival-of-the-thickest-trending-tv-w2026-07-12|TRENDING-TV",
@@ -1194,20 +1194,20 @@
    "eventSlug": "gail-daughtry-and-the-celebrity-sex-pass-bo-update-d8",
    "form": "BO-UPDATE",
    "reason": "consistency: title: \"$1.2\" is not a canonical figure for this film | metaTitle: \"$1M\" is not a canonical figure for this film | title: \"$1.2\" contradicts the canonical domestic figure ($1,242,603)",
-   "tries": 8,
-   "at": "2026-07-19T14:03:34.517Z",
+   "tries": 9,
+   "at": "2026-07-19T14:32:50.900Z",
    "dead": true,
-   "expiresAt": "2026-07-22T14:03:34.517Z"
+   "expiresAt": "2026-07-22T14:32:50.900Z"
   },
   {
    "key": "star-wars-the-mandalorian-and-grogu-bo-update-d57|BO-UPDATE",
    "eventSlug": "star-wars-the-mandalorian-and-grogu-bo-update-d57",
    "form": "BO-UPDATE",
    "reason": "consistency: title: \"$177.5\" is not a canonical figure for this film | title: \"$177.5\" contradicts the canonical domestic figure ($177,455,904) | metaTitle: headlines domestic while the title headlines dailyGross/other — the SERP promise must match the page",
-   "tries": 8,
-   "at": "2026-07-19T14:05:22.847Z",
+   "tries": 9,
+   "at": "2026-07-19T14:34:11.958Z",
    "dead": true,
-   "expiresAt": "2026-07-22T14:05:22.847Z"
+   "expiresAt": "2026-07-22T14:34:11.958Z"
   },
   {
    "key": "the-super-mario-galaxy-movie-ev-milestone-d0|BO-MILESTONE",
@@ -1234,14 +1234,14 @@
    "at": "2026-07-19T14:09:13.831Z"
   }
  ],
- "zeroStreak": 2,
+ "zeroStreak": 3,
  "daySpend": {
   "laDay": "2026-07-19",
-  "usd": 0.23484
+  "usd": 0.28164
  },
  "pace": {
-  "tokens": 3.972706122222223,
-  "lastMs": 1784469748300
+  "tokens": 4,
+  "lastMs": 1784471454479
  },
  "lastAuditDay": "2026-07-19",
  "attempts": {
@@ -1257,7 +1257,9 @@
    "citizen vigilante": 1,
    "the super mario galaxy movie": 1,
    "passenger": 1,
-   "salish & jordan matter": 1
+   "salish & jordan matter": 1,
+   "raw": 1,
+   "sullivan's crossing": 1
   }
  }
 }
