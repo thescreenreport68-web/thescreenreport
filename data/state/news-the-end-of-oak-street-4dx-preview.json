@@ -1,8 +1,23 @@
 {
   "id": "news-the-end-of-oak-street-4dx-preview",
   "slug": "anne-hathaway-and-ewan-mcgregor-try-not-to-get-eaten-alive-by-dinosaur",
-  "status": "error",
-  "stages": {},
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": null,
+      "cat": "movies/news",
+      "format": [],
+      "cuts": 2,
+      "broken": []
+    },
+    "attempt2": {
+      "score": null,
+      "cat": "movies/news",
+      "format": [],
+      "cuts": 0,
+      "broken": []
+    }
+  },
   "editorial": {
     "status": "unconfirmed",
     "entity": "The End of Oak Street",
@@ -13,5 +28,59 @@
     },
     "outlet": "variety.com"
   },
-  "error": "TimeoutError: The operation was aborted due to timeout\n    at new DOMException (node:internal/per_context/domexception:53:5)\n    at Timeout._onTimeout (node:internal/abort_controller:129:9)\n    at listOnTimeout (node:internal/timers:581:17)\n    at process.processTimers (node:internal/timers:519:7)"
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
+    "deterministic": {
+      "words": 367,
+      "h2s": 2,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 3,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 32,
+      "avgSentence": 17,
+      "flesch": 57,
+      "bannedTells": 0,
+      "fillerPraise": 1,
+      "kwExact": 0,
+      "hardBlocks": []
+    },
+    "hardBlocks": []
+  },
+  "score": null,
+  "category": "movies",
+  "subcategory": "news",
+  "audit": {
+    "ok": true,
+    "internalLinks": 1,
+    "failed": []
+  },
+  "ms": 78266,
+  "previousRuns": [
+    {
+      "id": "news-the-end-of-oak-street-4dx-preview",
+      "slug": "anne-hathaway-and-ewan-mcgregor-try-not-to-get-eaten-alive-by-dinosaur",
+      "status": "error",
+      "stages": {},
+      "editorial": {
+        "status": "unconfirmed",
+        "entity": "The End of Oak Street",
+        "work": {
+          "title": "The End of Oak Street",
+          "year": null,
+          "medium": "movie"
+        },
+        "outlet": "variety.com"
+      },
+      "error": "TimeoutError: The operation was aborted due to timeout\n    at new DOMException (node:internal/per_context/domexception:53:5)\n    at Timeout._onTimeout (node:internal/abort_controller:129:9)\n    at listOnTimeout (node:internal/timers:581:17)\n    at process.processTimers (node:internal/timers:519:7)"
+    }
+  ]
 }
