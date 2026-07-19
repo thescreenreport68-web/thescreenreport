@@ -1,0 +1,13 @@
+// Search API worker (see worker.js). Deploy: npx -y wrangler@4 deploy --config workers/search/wrangler.jsonc
+{
+  "name": "tsr-search",
+  "main": "worker.js",
+  "compatibility_date": "2026-07-18",
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "tsr-search",
+      "database_id": "2c153542-20b9-4608-bf9c-da0e2df44f89"
+    }
+  ]
+}
