@@ -43,8 +43,30 @@ jobs:
       - name: Build the complete site
         run: npm run build
 
+      # File-count tripwire (ARCHITECTURE_MIGRATION_PLAN.md): the FREE plan's static-asset
+      # ceiling is 20,000 files (verified empirically 2026-07-19 — a 25k manifest is rejected
+      # by the API naming the limit). At ~3.09 files/article that's ~6,400 articles. Warn loudly
+      # at 15,000 so the owner upgrades to Workers Paid (100k ceiling) BEFORE deploys start failing.
+      - name: File-count tripwire
+        run: |
+          COUNT=$(find out -type f | wc -l)
+          echo "out/ file count: $COUNT (free-plan ceiling: 20000)"
+          if [ "$COUNT" -ge 15000 ]; then
+            echo "::warning title=Approaching the 20k file ceiling::out/ has $COUNT files. Upgrade the Cloudflare account to Workers Paid (100k ceiling) NOW - deploys fail at 20,000."
+          fi
+
       - name: Deploy to Cloudflare Pages (production)
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         run: npx -y wrangler@3 pages deploy out --project-name=thescreenreport --branch=main --commit-dirty=true
+
+      # Phase 0 (ARCHITECTURE_MIGRATION_PLAN.md): dual-deploy the SAME out/ to the Workers
+      # static-assets target (thescreenreport-site). While the zone route points production at
+      # this Worker, Pages above stays deployed in lockstep as the instant rollback target —
+      # deleting the route falls production straight back to Pages with identical content.
+      - name: Deploy to Workers static assets (production serving target)
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: npx -y wrangler@4 deploy --config wrangler.workers.jsonc

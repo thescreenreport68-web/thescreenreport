@@ -1,0 +1,15 @@
+// Workers static-assets deploy target (Phase 0 of ARCHITECTURE_MIGRATION_PLAN.md).
+// Serves the SAME `out/` bundle as the Cloudflare Pages project, but under the Workers
+// platform where the paid file ceiling is 100,000 (Pages tops out at 20,000 via wrangler@3).
+// Deployed with: npx -y wrangler@4 deploy --config wrangler.workers.jsonc
+// (Named wrangler.workers.jsonc — NOT wrangler.jsonc — so the existing
+//  `wrangler@3 pages deploy` in deploy-live.yml never reads it.)
+// `_headers` in out/ is honored natively; 404s serve out/404.html.
+{
+  "name": "thescreenreport-site",
+  "compatibility_date": "2026-07-18",
+  "assets": {
+    "directory": "./out",
+    "not_found_handling": "404-page"
+  }
+}
