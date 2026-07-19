@@ -12,7 +12,7 @@
 
 export const SCAFFOLD_RE = /\b(was a confirmed event|covered by outlets including|part of the publicly (broadcast|televised)|according to (the|our) verification|the claims? (was|were|have been) verified|cross-referenced (with|against)|this (article|story) was produced|verified against the (bundle|sources)|all (facts|quotes) (were|have been) (checked|verified))\b/i;
 
-export const ABSENCE_RE = /\b((neither|none of them|no one|nobody) (has|have) (commented|responded|spoken|confirmed)|has not (publicly )?(commented|responded|addressed|confirmed)|did not (immediately )?respond to (a )?request|not publicly known|not immediately clear|remains unclear (whether|if|what)|do(es)? not specify|no details (have|were|have been) (provided|released|given)|declined to (comment|respond)|(are|is) not known at this time)\b/i;
+export const ABSENCE_RE = /\b((neither|none of them|no one|nobody) (has|have) (commented|responded|spoken|confirmed)|has not (publicly )?(commented|responded|addressed|confirmed|been (publicly )?\w+)|did not (immediately )?respond to (a )?request|not publicly known|not immediately clear|remains unclear (whether|if|what)|do(es)? not specify|no details (have|were|have been) (provided|released|given)|declined to (comment|respond)|(are|is) not known at this time|(the )?(report|source|filing|documents?) (offers?|provides?|gives?|contains?) no (further |additional )?(details?|information|specifics?)|leav(es|ing) [\w\s'’-]{0,70}?\b(unconfirmed|unclear|unknown|a mystery)|(remains?|stays?) (unconfirmed|unverified)|was (completely |entirely )?unaware of|has yet to (comment|respond|address|confirm)|no (further|additional) (details?|information) (is|are|was|were) (available|provided|given)|it (is|remains) unclear)\b/i;
 
 // Abbreviation-safe sentence splitting: never split after a single-capital initial ("David H. Koch")
 // or a common title abbreviation — the naive split truncated a live lede at "the David H."
@@ -60,6 +60,21 @@ export function dropAbsenceFaq(faq = []) {
 // ("that evening" about a two-day-old event). Detection only — the fix is a surgical correction pass.
 const RELTIME_RE = /\b(that (evening|night|morning|day)|last night|tonight|earlier today|this (morning|evening|afternoon))\b/i;
 const ABSDATE_RE = /\b(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2}\b|\b\d{1,2}\/\d{1,2}\b|\b(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday),?\s+(January|February|March|April|May|June|July|August|September|October|November|December)/i;
+// A bare month name with no year ("confirmed ... in February") silently reads as THIS year. A live
+// article dated July 2026 described a February 2025 confirmation this way — a 17-month error. Any
+// month mentioned without an adjacent year is flagged for the surgical pass.
+const MONTH = "(?:January|February|March|April|May|June|July|August|September|October|November|December)";
+export function bareMonthWithoutYear(body) {
+  const text = String(body || "");
+  const re = new RegExp(`\\b${MONTH}\\b[^.,;)]{0,18}`, "g");
+  let m;
+  while ((m = re.exec(text))) {
+    const around = text.slice(Math.max(0, m.index - 30), m.index + m[0].length + 30);
+    if (!/\b(19|20)\d{2}\b/.test(around)) return m[0].trim().split(/\s+/).slice(0, 3).join(" ");
+  }
+  return null;
+}
+
 export function relativeTimeUnanchored(body) {
   const m = String(body || "").match(RELTIME_RE);
   if (!m) return null;

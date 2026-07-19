@@ -6,15 +6,18 @@
 import { tierOf, tierOfDomain } from "./policy.mjs";
 import { extract as extractArticle } from "@extractus/article-extractor";
 import { findCorroboratingUrls, registrableDomain } from "./corroborate.mjs";
+import { decodeEntities } from "./normalize.mjs";
 
 const UA = "The Screen Report/1.0 (+https://thescreenreport.com)";
 
 export const stripHtml = (html) =>
-  (html || "")
-    .replace(/<script[\s\S]*?<\/script>/gi, " ")
-    .replace(/<style[\s\S]*?<\/style>/gi, " ")
-    .replace(/<[^>]+>/g, " ")
-    .replace(/&#?\w+;/g, " ")
+  decodeEntities(
+    (html || "")
+      .replace(/<script[\s\S]*?<\/script>/gi, " ")
+      .replace(/<style[\s\S]*?<\/style>/gi, " ")
+      .replace(/<[^>]+>/g, " ")
+  )
+    .replace(/[\u00A0\u2007\u202F]/g, " ")
     .replace(/\s+/g, " ")
     .trim();
 

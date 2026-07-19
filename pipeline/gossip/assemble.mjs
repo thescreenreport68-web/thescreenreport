@@ -149,7 +149,7 @@ export function buildGossipMarkdown({ article, frame, provenance, route, topic, 
   if (!/^##\s+Sources\b/m.test(bodyOut)) {
     const seen = new Set();
     const srcLinks = (bundle?.sources || [])
-      .filter((x) => x && /^https?:\/\//.test(x.url || "") && !/\/\/(?:www\.)?(?:x\.com|twitter\.com|bsky\.app|t\.co)\//.test(x.url))
+      .filter((x) => x && /^https?:\/\//.test(x.url || "") && !/\/\/(?:www\.)?(?:x\.com|twitter\.com|bsky\.app|t\.co)\//.test(x.url) && !/news\.google\.com\/rss\//.test(x.url))
       .filter((x) => { const k = String(x.url).replace(/[?#].*$/, ""); if (seen.has(k)) return false; seen.add(k); return true; })
       .slice(0, 4)
       .map((x) => `- [${sourceAnchor(x)}](${x.url})${x.outlet ? ` — ${x.outlet}` : ""}`);

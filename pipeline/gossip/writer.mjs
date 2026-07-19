@@ -135,6 +135,7 @@ INTEGRITY RULES (each prevents a real published failure — non-negotiable):
 - LEGAL/DISPUTE STORIES: when the bundle carries both sides, BOTH sides get their strongest statement — never two quotes for one party and half a sentence for the other.
 - ORIGINAL HEADLINE: never reuse or lightly reword the source outlet's headline — same facts, YOUR phrasing.
 - DON'T HEDGE WHAT YOU SOURCED: if the sentence already names where it came from (a podcast, an interview, court documents, a named outlet), state it directly. "She joked on the podcast", NOT "she reportedly joked". Reserve "reportedly"/"allegedly" for genuinely unconfirmed claims — hedging your own sourced material reads as uncertainty about facts you actually have.
+- FULL NAME ON FIRST MENTION: every person gets their FULL name the first time the BODY mentions them (surname-only after). A name that appears only in the headline or inside a quote does not count — a live article introduced its subject as a bare surname and never gave the full name in the body at all.
 - USE EACH QUOTE ONCE: never repeat a quoted phrase you already used earlier in the piece, even in a different paragraph. Say it once, then move the story forward.
 
 Return STRICT JSON:

@@ -3,8 +3,9 @@
 import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
-import { foldText, slugify, entityKey, shareEntityFold } from "../normalize.mjs";
-import { cutScaffolding, cutAbsenceClaims, dropAbsenceFaq, relativeTimeUnanchored, splitSentences } from "../proseGuards.mjs";
+import { foldText, slugify, entityKey, shareEntityFold, decodeEntities } from "../normalize.mjs";
+import { stripHtml } from "../contentFinder.mjs";
+import { cutScaffolding, cutAbsenceClaims, dropAbsenceFaq, relativeTimeUnanchored, bareMonthWithoutYear, splitSentences } from "../proseGuards.mjs";
 import { dedupeSentences } from "../polish.mjs";
 import { buildGossipMarkdown } from "../assemble.mjs";
 import { runGossip } from "../run.mjs";
@@ -123,6 +124,33 @@ check("no relative time passes", relativeTimeUnanchored("He hosted the awards on
   check("no title → humanized URL slug (the source's own headline)", fromUrl === "Paige Desorbo Engagement Rumors", fromUrl);
   check("never bare 'Report'", sourceAnchor({ title: "", url: "https://example.com/" }) === "Full report");
   check("outlet name never becomes the anchor", !/^(People|TMZ|Page Six|E! News)$/.test(sourceAnchor({ title: "", url: "https://people.com/" })));
+}
+
+// ── 2026-07-19 round 2: gaps the live post-guard audit exposed ──
+{
+  // stripHtml destroyed entities: quotes, ampersands and accents were corrupted BEFORE the writer saw them
+  check("entity: ampersand survives", stripHtml("<p>Rated R&amp;B</p>").trim() === "Rated R&B");
+  check("entity: accented name survives", stripHtml("<p>Marcello Hern&aacute;ndez</p>").trim() === "Marcello Hernández");
+  check("entity: curly quotes + apostrophes survive", stripHtml("<p>&ldquo;I&rsquo;m out,&rdquo; he said</p>").trim() === "\u201CI\u2019m out,\u201D he said");
+  check("entity: numeric + hex decode", stripHtml("<p>Don&#39;t caf&#xe9;</p>").trim() === "Don't café");
+  check("entity: tags still stripped, nbsp normalized", stripHtml("<p>a<br>b&nbsp;c</p>").trim() === "a b c");
+  check("decodeEntities leaves unknown entities intact", decodeEntities("&notreal; &amp;") === "&notreal; &");
+
+  // absence phrasings that shipped live
+  const live = [
+    "The report offers no further details on the timeline of their reconciliation.",
+    "That leaves the current status of their romance unconfirmed.",
+    "Will Smith has not been publicly drawn into the legal fray.",
+    "The reality star was completely unaware of the post.",
+    "Her rep has yet to comment on the report.",
+  ];
+  live.forEach((sent, i) => check("absence phrasing " + (i + 1) + " now cut", cutAbsenceClaims("A real fact here. " + sent + " Another real fact.").cut.length === 1, sent.slice(0, 45)));
+  check("normal reporting still untouched", cutAbsenceClaims("She confirmed the news on July 3. The label released the album.").cut.length === 0);
+
+  // bare month without a year (the February 2025 read as February 2026)
+  check("bare month flagged", bareMonthWithoutYear("She confirmed their relationship to the outlet in February.") === "February");
+  check("month WITH year passes", bareMonthWithoutYear("She confirmed it in February 2025 to the outlet.") === null);
+  check("no month passes", bareMonthWithoutYear("She confirmed it last week.") === null);
 }
 
 console.log(`\n── RESULT: ${pass} passed${fail ? `, ${fail} FAILED` : ""} ──`);

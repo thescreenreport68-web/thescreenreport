@@ -22,7 +22,7 @@ import { writeGossip } from "./writer.mjs";
 import { buildAnchors, substituteAnchors, synthesize } from "./synthesizer.mjs";
 import { refineHeadline } from "./headline.mjs";
 import { semanticSeoPass } from "./seoAudit.mjs";
-import { cutScaffolding, cutAbsenceClaims, dropAbsenceFaq, relativeTimeUnanchored } from "./proseGuards.mjs";
+import { cutScaffolding, cutAbsenceClaims, dropAbsenceFaq, relativeTimeUnanchored, bareMonthWithoutYear } from "./proseGuards.mjs";
 import { entityKey } from "./normalize.mjs";
 import { voicePass } from "./voice.mjs";
 import { legalGate } from "./legalGate.mjs";
@@ -241,12 +241,20 @@ export async function runGossip(topic, {
   //   • rhetorical-question lede (the template fingerprint the rotation is supposed to prevent)
   const fixIssues = [];
   if (craftFix) {
+    // Token overlap alone misses synonym swaps ("Seeks Actor's Testimony" -> "Requests His Testimony"),
+    // so also compare the RARE-WORD SPINE: proper nouns and distinctive nouns carry a headline's identity
+    // and survive rewording. Either signal crossing its bar means we are echoing the source's headline.
     const tks = (t) => new Set(entityKey(t).split(" ").filter((w) => w.length > 2));
-    const sim = (a, b) => { const A = tks(a), B = tks(b); if (!A.size || !B.size) return 0; let n = 0; for (const w of A) if (B.has(w)) n++; return n / Math.min(A.size, B.size); };
+    const STOP = new Set("the a an of in on at to for with from by as is are was were and or but his her its their this that has have had will said says say new now amid over after before into out up down".split(" "));
+    const spine = (t) => new Set(entityKey(t).split(" ").filter((w) => w.length > 3 && !STOP.has(w)));
+    const jac = (A, B) => { if (!A.size || !B.size) return 0; let n = 0; for (const w of A) if (B.has(w)) n++; return n / Math.min(A.size, B.size); };
+    const sim = (a, b) => Math.max(jac(tks(a), tks(b)), jac(spine(a), spine(b)) >= 0.7 ? 0.8 : 0);
     const srcTitles = [topic.title, ...(bundle?.sources || []).map((x) => x.title)].filter(Boolean);
     if (srcTitles.some((t) => sim(article.title, t) >= 0.75)) fixIssues.push("The headline mirrors the source outlet's headline. Rewrite the title (and dek if needed) with ORIGINAL phrasing — same verified facts, different words and structure.");
     const rel = relativeTimeUnanchored(article.body);
     if (rel) fixIssues.push(`The body says "${rel}" but never states an absolute date. Add the actual date of the event from the source material (e.g. "on Wednesday, July 15") — never leave relative time unanchored.`);
+    const bareMonth = bareMonthWithoutYear(article.body);
+    if (bareMonth) fixIssues.push(`The body says "${bareMonth}" with no YEAR. A bare month reads as the current year — if the source says it was a previous year, state that year explicitly (e.g. "in February 2025").`);
     const firstSentence = (article.body || "").trim().split(/(?<=[.!?])\s/)[0] || "";
     if (/\?\s*$/.test(firstSentence)) fixIssues.push("The lede opens with a rhetorical question — a banned template. Rewrite the opening to lead with the concrete event (who did what, when).");
   }
