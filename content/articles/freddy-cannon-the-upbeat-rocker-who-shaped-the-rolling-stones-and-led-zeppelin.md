@@ -3,8 +3,8 @@ title: >-
   Freddy Cannon, the Upbeat Rocker Who Shaped the Rolling Stones and Led
   Zeppelin, Dies at 89
 slug: freddy-cannon-the-upbeat-rocker-who-shaped-the-rolling-stones-and-led-zeppelin
-category: movies
-subcategory: reactions
+category: music
+subcategory: news
 author: editorial-team
 date: '2026-07-18T22:32:13.062Z'
 dek: >-
