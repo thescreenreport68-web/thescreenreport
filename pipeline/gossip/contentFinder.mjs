@@ -6,7 +6,7 @@
 import { tierOf, tierOfDomain } from "./policy.mjs";
 import { extract as extractArticle } from "@extractus/article-extractor";
 import { findCorroboratingUrls, registrableDomain } from "./corroborate.mjs";
-import { decodeEntities } from "./normalize.mjs";
+import { decodeEntities, isEvergreenSource } from "./normalize.mjs";
 
 const UA = "The Screen Report/1.0 (+https://thescreenreport.com)";
 

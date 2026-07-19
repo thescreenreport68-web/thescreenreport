@@ -3,7 +3,7 @@
 import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
-import { foldText, slugify, entityKey, shareEntityFold, decodeEntities } from "../normalize.mjs";
+import { foldText, slugify, entityKey, shareEntityFold, decodeEntities, isEvergreenSource } from "../normalize.mjs";
 import { stripHtml } from "../contentFinder.mjs";
 import { cutScaffolding, cutAbsenceClaims, dropAbsenceFaq, relativeTimeUnanchored, bareMonthWithoutYear, splitSentences } from "../proseGuards.mjs";
 import { dedupeSentences } from "../polish.mjs";
@@ -151,6 +151,18 @@ check("no relative time passes", relativeTimeUnanchored("He hosted the awards on
   check("bare month flagged", bareMonthWithoutYear("She confirmed their relationship to the outlet in February.") === "February");
   check("month WITH year passes", bareMonthWithoutYear("She confirmed it in February 2025 to the outlet.") === null);
   check("no month passes", bareMonthWithoutYear("She confirmed it last week.") === null);
+}
+
+// ── 2026-07-19 round 3: evergreen grounding (the score-27 article) + Neither-X-nor-Y absence ──
+{
+  const ev = (u, t = "") => isEvergreenSource({ url: u, title: t });
+  check("evergreen: family-guide page rejected", ev("https://www.usmagazine.com/celebrity-moms/news/jelly-rolls-family-guide-meet-his-two-children-and-wife-bunnie-xo/"));
+  check("evergreen: multi-story roundup rejected", ev("https://www.usmagazine.com/celebrity-news/news/inside-ariana-grandes-rekindled-romance-more-top-stories/"));
+  check("evergreen: 'everything we know' title rejected", ev("https://people.com/x", "Meet the Cast: Everything We Know"));
+  check("evergreen: timeline/net-worth/listicle rejected", ev("https://x.com/a-relationship-timeline/") && ev("https://x.com/celeb-net-worth/") && ev("https://x.com/top-10-moments/"));
+  check("news report NOT flagged", !ev("https://www.justjared.com/2026/07/17/hannah-waddingham-says-she-mangled-herself/") && !ev("https://pagesix.com/2026/07/17/celebrity-news/jelly-roll-and-bunnie-xo-settle-divorce/"));
+  check("'Neither X nor Y has publicly commented' now cut", cutAbsenceClaims("A fact. Neither Jelly Roll nor Bunnie Xo has publicly commented on the divorce. Another fact.").cut.length === 1);
+  check("'Neither the album nor the tour' NOT a false positive", cutAbsenceClaims("Neither the album nor the tour was announced with a date.").cut.length === 0);
 }
 
 console.log(`\n── RESULT: ${pass} passed${fail ? `, ${fail} FAILED` : ""} ──`);

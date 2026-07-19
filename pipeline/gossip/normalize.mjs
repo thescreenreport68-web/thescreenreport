@@ -72,3 +72,21 @@ export function decodeEntities(s) {
     return Object.prototype.hasOwnProperty.call(NAMED, body) ? NAMED[body] : m;
   });
 }
+
+// ── EVERGREEN / ROUNDUP SOURCE DETECTION (2026-07-19) ─────────────────────────────────────────────
+// The worst article of the post-guard window (score 27) was written from a Us Weekly EVERGREEN page —
+// "Jelly Roll's Family Guide: Meet His Two Children and Wife Bunnie Xo" — so a 2016 birth was published
+// as a June 2026 event and the piece asserted "neither has commented" while the subject had discussed
+// the settlement on her own podcast. A second article (68) was grounded on a "…more-top-stories"
+// ROUNDUP page, whose thinness became a false "no further details" claim. Neither page type is a news
+// report about the event; both must be refused as the PRIMARY grounding source for a news story.
+const EVERGREEN_URL = /(family-guide|-guide[-/]|\/guide\/|meet-(his|her|their)-|everything-(you|we)-(need-to-)?know|everything-to-know|who-is-|complete-timeline|a-timeline|-timeline\/|relationship-timeline|dating-history|net-worth|best-\d|top-\d+-|\/list\/|listicle|photos?\/gallery|\/gallery\/|more-top-stories|top-stories|\/roundup|week-in-review|everything-that-happened)/i;
+const EVERGREEN_TITLE = /^(a |the )?(complete |full |ultimate )?(guide|timeline|everything|who is|meet |inside the life|all about|a look back|the best|top \d+)/i;
+
+/** Is this URL/title an evergreen explainer, listicle, gallery or multi-story roundup rather than a news report? */
+export function isEvergreenSource({ url = "", title = "" } = {}) {
+  if (EVERGREEN_URL.test(String(url))) return true;
+  if (EVERGREEN_TITLE.test(String(title).trim())) return true;
+  if (/:\s*(meet|everything|a guide|the guide)\b/i.test(String(title))) return true;
+  return false;
+}
