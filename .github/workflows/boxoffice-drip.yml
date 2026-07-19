@@ -74,7 +74,9 @@ jobs:
         run: node pipeline/boxoffice/borun.mjs --limit=${{ github.event.inputs.limit || '1' }}${{ github.event.inputs.stream == 'true' && ' --stream' || '' }}${{ github.event.inputs.review == 'true' && ' --review' || '' }}
 
       - name: Commit article + lane state (published tick)
-        if: github.event.inputs.review != 'true' && steps.tick.outputs.published != '0' && steps.tick.outputs.published != ''
+        # always() so a NON-ZERO tick can never strand a written article on the runner: GitHub
+        # implicitly ANDs a bare `if:` with success(), which would skip this commit entirely.
+        if: always() && github.event.inputs.review != 'true' && steps.tick.outputs.published != '0' && steps.tick.outputs.published != ''
         run: |
           git config user.name  "screenreport-bot"
           git config user.email "bot@thescreenreport.com"
@@ -106,7 +108,7 @@ jobs:
       # ephemeral runner. A GITHUB_TOKEN push does NOT trigger deploy-live (GitHub's recursion guard), so this
       # never causes a spurious rebuild — it only checkpoints state.
       - name: Commit lane state only (zero-publish tick)
-        if: github.event.inputs.review != 'true' && (steps.tick.outputs.published == '0' || steps.tick.outputs.published == '')
+        if: always() && github.event.inputs.review != 'true' && (steps.tick.outputs.published == '0' || steps.tick.outputs.published == '')
         run: |
           git config user.name  "screenreport-bot"
           git config user.email "bot@thescreenreport.com"
@@ -139,7 +141,9 @@ jobs:
       # PUT THE NEW ARTICLE LIVE — dispatch the authoritative deploy-live workflow (rebuilds the COMPLETE latest
       # main → Cloudflare). A push made by GITHUB_TOKEN does NOT trigger deploy-live's `on: push`, so we dispatch it.
       - name: Deploy live (dispatch deploy-live)
-        if: github.event.inputs.review != 'true' && steps.tick.outputs.published != '0' && steps.tick.outputs.published != ''
+        # always() so a NON-ZERO tick can never strand a written article on the runner: GitHub
+        # implicitly ANDs a bare `if:` with success(), which would skip this commit entirely.
+        if: always() && github.event.inputs.review != 'true' && steps.tick.outputs.published != '0' && steps.tick.outputs.published != ''
         run: |
           curl -sS -X POST \
             -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
@@ -148,3 +152,15 @@ jobs:
             "https://api.github.com/repos/${{ github.repository }}/actions/workflows/deploy-live.yml/dispatches" \
             -d '{"ref":"main"}'
           echo "dispatched deploy-live → the new box-office article goes live with the next complete build"
+
+      # ── FAIL THE JOB ON A DEGRADED TICK — deliberately LAST ───────────────────────────────────────
+      # A tick that recorded a CRITICAL fault (lost state, zero-row chart parse, a role whose models all
+      # failed) must NOT look green: that is exactly how the chart bug ran for days and how 3 duplicate
+      # articles reached the live site. But it must fail AFTER the article is committed and deployed —
+      # every step above is always()-guarded for that reason, and borun itself still exits 0. Ordering is
+      # the whole safety property here: signal loudly, never destroy work.
+      - name: Fail on degraded tick (after commit + deploy)
+        if: always() && steps.tick.outputs.degraded == 'true'
+        run: |
+          echo "::error title=boxoffice degraded tick::${{ steps.tick.outputs.criticals }} critical fault(s), ${{ steps.tick.outputs.faults }} total — see the run report artifact"
+          exit 1
