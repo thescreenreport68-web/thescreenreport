@@ -78,7 +78,35 @@ const daysSince = (releaseDate, now) => {
 
 // MATERIALITY — ONLY meaningful for BO-UPDATE. Returns { material, reason, tag, currentRaw }.
 // `tag` is the eventSlug discriminator that keeps distinct material updates from dedup-colliding.
-export function isMaterial(film, gathered = {}, boxData = {}, tracked = null, { now = new Date() } = {}) {
+
+// Last DOMESTIC figure we actually published for this film, read from the append-only publish ledger
+// (store.published). Used only as a fail-closed backstop when tracked.json has lost the film's record.
+// Prefers an explicit recorded figure; falls back to parsing the deterministic daily-update slug
+// ("…-adds-<x>-as-domestic-total-hits-<N>-<M>-million" / "…-domestic-total-climbs-to-<N>-<M>-million").
+export function lastPublishedRawFor(film, ledger) {
+  const rows = Array.isArray(ledger) ? ledger : (ledger?.published || null);
+  if (!rows) return null;
+  const key = trackKey(film);
+  let best = null;
+  for (const r of rows) {
+    if (r?.review) continue;
+    const rowKey = r.film || r.title ? trackKey({ title: r.film || r.title }) : null;
+    if (rowKey !== key) continue;
+    let raw = Number.isFinite(r.headlineNumberRaw) ? r.headlineNumberRaw
+      : Number.isFinite(r.currentRaw) ? r.currentRaw : null;
+    if (raw == null && r.slug) {
+      const m = String(r.slug).match(/(?:domestic-total-(?:climbs-to|hits)|as-domestic-total-hits)-(\d+)(?:-(\d+))?-million/);
+      if (m) raw = Math.round((parseInt(m[1], 10) + (m[2] ? parseInt(m[2], 10) / 10 : 0)) * 1e6);
+    }
+    if (Number.isFinite(raw)) {
+      const fromSlug = !Number.isFinite(r.headlineNumberRaw) && !Number.isFinite(r.currentRaw);
+      if (best == null || raw > best.raw) best = { raw, fromSlug };
+    }
+  }
+  return best;
+}
+
+export function isMaterial(film, gathered = {}, boxData = {}, tracked = null, { now = new Date(), publishedLedger = null } = {}) {
   const rec = tracked?.films?.[trackKey(film)] || null;
   const dc = film?.dailyChart || null;
   const m = currentMetrics(gathered, boxData, dc);
@@ -92,8 +120,30 @@ export function isMaterial(film, gathered = {}, boxData = {}, tracked = null, { 
   const chartDay = dc?.dayInRelease ? (String(dc.dayInRelease).match(/\d+/) || [null])[0] : null;
   const days = chartDay != null ? Number(chartDay) : (rec?.daysInReleaseApprox ?? daysSince(film?.releaseDate, now));
 
-  // FIRST time we track this metric for this film — always a story.
-  if (rec == null || prev == null) return { material: cur != null, reason: cur != null ? "first tracked number" : "no number", tag: `d${days ?? 0}`, currentRaw: cur };
+  // FIRST time we track this metric for this film — always a story, but FAIL CLOSED.
+  // `tracked.json` is wholesale-rewritten state, and a rebase conflict on the runner can discard it
+  // (registry §3.1). When that happens a film we covered yesterday looks brand-new and republishes the
+  // SAME day with the SAME number: 3 duplicate pairs reached the live site this way — disclosure-day
+  // d34 and young-washington d13 both twice with byte-identical domestic totals. So before believing
+  // "never seen it", cross-check the PUBLISH LEDGER (store.published), which is append-only and survives
+  // a lost ledger. If it already carries an article for this film, that article's number is the baseline.
+  if (rec == null || prev == null) {
+    const prior = lastPublishedRawFor(film, publishedLedger);
+    if (prior != null) {
+      // A slug only encodes 0.1M precision ("…-36-5-million" for $36,541,620), so the SAME figure would
+      // read as "higher" than its own rounded baseline and republish — which is exactly how young-washington
+      // d13 shipped twice with byte-identical totals. Compare at the baseline's real precision.
+      const q = prior.fromSlug ? 1e5 : 1;
+      const curQ = cur == null ? null : Math.floor(cur / q);
+      const priorQ = Math.floor(prior.raw / q);
+      if (!(curQ != null && curQ > priorQ)) {
+        return { material: false, reason: `no new number (ledger: ${cur} not above published ${prior.raw})`, tag: `d${days ?? 0}`, currentRaw: cur };
+      }
+      // Genuinely higher than what we last published → a real update, not a first sighting.
+      return { material: true, reason: "new number vs publish ledger (tracker state was lost)", tag: `d${days ?? 0}`, currentRaw: cur };
+    }
+    return { material: cur != null, reason: cur != null ? "first tracked number" : "no number", tag: `d${days ?? 0}`, currentRaw: cur };
+  }
 
   const ms = milestonesCrossed(prevMilestone ?? prev, cur);
   // ONE update per film per LA day (owner's freshness contract) — a second same-day update is only a story

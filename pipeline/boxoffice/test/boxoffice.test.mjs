@@ -25,7 +25,7 @@ import { PACE, refill, expectedByNow, allowance, debit } from "../pacing.mjs";
 import { KIND_FORM, isPlausibleFilmTitle } from "../find/events.mjs";
 import { discoverTrendingTv } from "../discover.mjs";
 import { dailyAudit } from "../audit.mjs";
-import { isMaterial, updateEventSuffix, recordArticle, currentNumberRaw, priorArticles, linkPriorCoverage, streamingExits, trackKey, isPastOpening } from "../tracker.mjs";
+import { isMaterial, updateEventSuffix, recordArticle, currentNumberRaw, priorArticles, linkPriorCoverage, streamingExits, trackKey, isPastOpening, isMaterial as isMaterialX } from "../tracker.mjs";
 import { parseNetflixTsv, netflixBlock, fmtHours } from "../netflix.mjs";
 import { findFilms } from "../agents/finder.mjs";
 import { createRequire } from "node:module";
@@ -1385,6 +1385,21 @@ t("a section EMPTIED by the walls is dropped, not held — the heading goes, the
   assert.ok(/## The Real Section/.test(out.md), "a section WITH prose is untouched");
   assert.ok(/## At the Box Office/.test(out.md), "the canonical numbers block still lands");
   assert.equal(out.scaffold.length, 0, "no scaffold violation => this publishes instead of holding: " + JSON.stringify(out.scaffold));
+});
+
+t("materiality FAILS CLOSED when tracked state is lost — the live-duplicate root cause", () => {
+  // 3 duplicate pairs reached the live site this way: a rebase conflict discarded tracked.json, the film
+  // looked brand-new, and the SAME day republished with a byte-identical total.
+  const ledger = [{ film: "Young Washington", slug: "young-washington-box-office-day-13-domestic-total-climbs-to-36-5-million" }];
+  const mk = (cume, day) => ({ title: "Young Washington", dailyChart: { cume, dayInRelease: day } });
+  const same = isMaterialX(mk("$36,541,620", "Day 13"), { cume: "$36,541,620" }, {}, { films: {} }, { publishedLedger: ledger });
+  assert.equal(same.material, false, "the already-published figure must NOT republish: " + same.reason);
+  // the slug only encodes 0.1M precision, so the comparison must happen at THAT precision
+  const higher = isMaterialX(mk("$38,505,648", "Day 15"), { cume: "$38,505,648" }, {}, { films: {} }, { publishedLedger: ledger });
+  assert.equal(higher.material, true, "a genuinely higher figure still publishes");
+  const fresh = isMaterialX({ title: "Brand New Movie", dailyChart: { cume: "$10,000,000", dayInRelease: "Day 1" } },
+    { cume: "$10,000,000" }, {}, { films: {} }, { publishedLedger: ledger });
+  assert.equal(fresh.material, true, "a film with no ledger row is still a first sighting");
 });
 
 // ── summary ──────────────────────────────────────────────────────────────────────────────────────

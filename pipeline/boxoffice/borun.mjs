@@ -220,7 +220,9 @@ export async function boRun({
       // ONLY when the number is a real NEW story, then give it a DISTINCT eventSlug so real weekend/
       // milestone updates across runs don't dedup-collide (protects dwell time = KPI #1). ──
       if ((FORMS[angle.form] || {}).tracked) { // BO-UPDATE + the P5 event forms (weekend/milestone/record)
-        const mat = isMaterial(film, job.gathered, job.boxData, tracked);
+        // publishedLedger = the append-only publish record; it is the fail-closed backstop when
+        // tracked.json has been lost to a rebase conflict (registry §3.1 — 3 live duplicates came from this).
+        const mat = isMaterial(film, job.gathered, job.boxData, tracked, { publishedLedger: store.published });
         if (!mat.material) { report.held.push({ tag, reason: `not material: ${mat.reason}` }); console.log(`  ⟳ skip: not material (${mat.reason})`); continue; }
         trigger.eventSlug = trigger.eventSlug + updateEventSuffix(mat);
         if (alreadyPublished(store, trigger.eventSlug, angle.form)) { report.skipped.push({ tag, reason: "already published (this update)" }); continue; }
