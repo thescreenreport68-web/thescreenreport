@@ -1292,21 +1292,21 @@
    "key": "gail-daughtry-and-the-celebrity-sex-pass-bo-update-d8|BO-UPDATE",
    "eventSlug": "gail-daughtry-and-the-celebrity-sex-pass-bo-update-d8",
    "form": "BO-UPDATE",
-   "reason": "consistency: title: \"$1.2\" is not a canonical figure for this film | metaTitle: \"$1M\" is not a canonical figure for this film | title: \"$1.2\" contradicts the canonical domestic figure ($1,242,603)",
-   "tries": 19,
-   "at": "2026-07-19T17:57:50.668Z",
+   "reason": "consistency: title: \"$1.2\" is not a canonical figure for this film | title: \"$1.2\" contradicts the canonical domestic figure ($1,242,603)",
+   "tries": 20,
+   "at": "2026-07-19T18:05:46.016Z",
    "dead": true,
-   "expiresAt": "2026-07-22T17:57:50.668Z"
+   "expiresAt": "2026-07-22T18:05:46.016Z"
   },
   {
    "key": "star-wars-the-mandalorian-and-grogu-bo-update-d57|BO-UPDATE",
    "eventSlug": "star-wars-the-mandalorian-and-grogu-bo-update-d57",
    "form": "BO-UPDATE",
-   "reason": "words 158 < 180 (owner-set ~200-word minimum)",
-   "tries": 19,
-   "at": "2026-07-19T18:00:37.195Z",
+   "reason": "fidelity: 13 unsupported figures/claims — draft-level failure",
+   "tries": 20,
+   "at": "2026-07-19T18:07:43.655Z",
    "dead": true,
-   "expiresAt": "2026-07-22T18:00:37.195Z"
+   "expiresAt": "2026-07-22T18:07:43.655Z"
   },
   {
    "key": "the-super-mario-galaxy-movie-ev-milestone-d0|BO-MILESTONE",
@@ -1355,16 +1355,24 @@
    "reason": "under floor: streaming original — no theatrical box office (belongs in a streaming form)",
    "tries": 1,
    "at": "2026-07-19T18:03:14.151Z"
+  },
+  {
+   "key": "they-will-kill-you-now-streaming|NOW-STREAMING",
+   "eventSlug": "they-will-kill-you-now-streaming",
+   "form": "NOW-STREAMING",
+   "reason": "words 166 < 180 (owner-set ~200-word minimum) | soft-floor engagement 3 < 5 | soft-floor humanVoice 4 < 5",
+   "tries": 1,
+   "at": "2026-07-19T18:10:20.876Z"
   }
  ],
- "zeroStreak": 2,
+ "zeroStreak": 3,
  "daySpend": {
   "laDay": "2026-07-19",
-  "usd": 0.53292
+  "usd": 0.5588
  },
  "pace": {
-  "tokens": 3.748109988888889,
-  "lastMs": 1784483737068
+  "tokens": 4,
+  "lastMs": 1784484239697
  },
  "lastAuditDay": "2026-07-19",
  "attempts": {
@@ -1388,7 +1396,9 @@
    "jeff arcuri: nice to meet you": 2,
    "tom clancy's jack ryan: ghost war": 1,
    "the devil wears prada 2": 1,
-   "heartstopper forever": 1
+   "heartstopper forever": 1,
+   "they will kill you": 1,
+   "outcome": 1
   }
  }
 }
