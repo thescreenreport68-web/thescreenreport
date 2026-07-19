@@ -238,5 +238,50 @@
     "stage": "script",
     "reason": "script failed lint after 3 attempts: hook-too-long(17 words (max 16)), ending-ask(final sentence must be the comments ask (like \"Let us know i), ending-question(the sentence before the ask must be the audience question (e)",
     "at": "2026-07-18T15:18:36.430Z"
+  },
+  "disney-launches-nfl-crossover-collection-with-darth-vader-and-tom-brady": {
+    "stage": "watchqc",
+    "reason": "QC fix: premium-look check failed (bot-slideshow feel) (score 0)",
+    "at": "2026-07-19T07:40:54.984Z"
+  },
+  "evil-dead-burn-director-s-bastien-vani-ek-breaks-down-his-brutal-vision": {
+    "stage": "script",
+    "reason": "script failed lint after 3 attempts: sentence-too-long(23 words — split it: \"By killing the dog with practical effe), ending-ask(final sentence must be the comments ask (like \"Let us know i), ending-question(the sentence before the ask must be the audience question (e)",
+    "at": "2026-07-19T07:41:13.355Z"
+  },
+  "man-crashes-car-into-beyonce-and-jay-zs-hamptons-security-gate": {
+    "stage": "sensitive",
+    "reason": "Unverified crash/accident involving property damage and arrest at a private residence; active criminal proceedings with contested facts (charges of criminal mischief and trespass), which falls under block criteria.",
+    "at": "2026-07-19T07:41:20.150Z"
+  },
+  "andrew-tate-and-brother-tristan-arrested-by-federal-officers-in-miami": {
+    "stage": "sensitive",
+    "reason": "Active federal arrest in Miami with contested legal proceedings; ongoing international criminal charges (human trafficking, rape) and multiple judicial actions against the individuals.",
+    "at": "2026-07-19T07:41:27.380Z"
+  },
+  "joe-caldwell-dies-dark-shadows-writer-who-co-created-barnabas-collins-was": {
+    "stage": "script",
+    "reason": "script failed lint after 3 attempts: too-short(86 words (min 88) — NEVER pad; hold if the story is thin), ending-ask(final sentence must be the comments ask (like \"Let us know i), ending-question(the sentence before the ask must be the audience question (e)",
+    "at": "2026-07-19T07:41:50.793Z"
+  },
+  "1-2-special-acquires-north-american-rights-to-cannes-winner-a-man-of-his-ti": {
+    "stage": "voice",
+    "reason": "speech API unavailable and Kokoro fallback scores 11/30 — below the delivery floor",
+    "at": "2026-07-19T07:52:51.748Z"
+  },
+  "barbara-ling-oscar-winning-production-designer-for-once-upon-a-time-in-holl": {
+    "stage": "script",
+    "reason": "script failed lint after 3 attempts: sentence-too-long(21 words — split it: \"Quentin Tarantino praised her work, sa), ending-ask(final sentence must be the comments ask (like \"Let us know i), ending-question(the sentence before the ask must be the audience question (e)",
+    "at": "2026-07-19T07:53:12.692Z"
+  },
+  "will-smiths-ex-friend-requests-his-testimony-in-jada-pinkett-smith-lawsuit": {
+    "stage": "watchqc",
+    "reason": "QC fix: premium-look check failed (bot-slideshow feel) (score 0)",
+    "at": "2026-07-19T08:02:10.074Z"
+  },
+  "caleb-shomo-fleur-shomo-file-for-divorce-after-he-came-out-as-gay": {
+    "stage": "watchqc",
+    "reason": "QC fix: premium-look check failed (bot-slideshow feel) (score 0)",
+    "at": "2026-07-19T08:14:26.198Z"
   }
 }
