@@ -80,10 +80,23 @@ export function cutFlagged(body, texts) {
     const ns = norm(sentence);
     return targets.some((t) => ns.includes(t.slice(0, 55)) || (ns.length >= 25 && t.includes(ns.slice(0, 45))));
   };
-  const paras = String(body).split(/\n{2,}/).map((para) =>
-    para.split(/(?<=[.!?])\s+/).filter((s) => s.trim() && !hit(s)).join(" ")
-  );
+  const paras = String(body).split(/\n{2,}/).map((para) => cutUnits(para, hit));
   return paras.filter((p) => p.trim()).join("\n\n");
+}
+
+// splitSentences deliberately MERGES across abbreviations ("…Robert Downey Jr. The settlement was $2M."
+// is ONE unit), which is right for DETECTION but wrong for CUTTING — dropping the whole unit deletes the
+// verified fact sitting next to the offender. Detect on the merged unit, then cut at the finer boundary.
+function cutUnits(para, hit) {
+  const kept = [];
+  for (const unit of splitSentences(para)) {
+    if (!unit.trim()) continue;
+    if (!hit(unit)) { kept.push(unit); continue; }
+    const parts = unit.split(/(?<=[.!?]["”']?)\s+/);
+    const survivors = parts.filter((p) => p.trim() && !hit(p));
+    if (survivors.length) kept.push(survivors.join(" "));
+  }
+  return kept.join(" ");
 }
 
 // DROP a SENTENCE that still carries an unverified SPECIFIC (a bare date/number/name/title cutFlagged's 12-char
@@ -97,9 +110,7 @@ export function cutSentencesWith(body, needles) {
   const esc = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
   const rx = terms.map((t) => new RegExp(`(^|[^\\w])${esc(t)}([^\\w]|$)`, "i"));
   const hit = (sentence) => rx.some((r) => r.test(sentence));
-  const paras = String(body).split(/\n{2,}/).map((para) =>
-    para.split(/(?<=[.!?])\s+/).filter((s) => s.trim() && !hit(s)).join(" ")
-  );
+  const paras = String(body).split(/\n{2,}/).map((para) => cutUnits(para, hit));
   return paras.filter((p) => p.trim()).join("\n\n");
 }
 
@@ -129,7 +140,14 @@ export function scrubStructuredFields(article, { corrections = [], drops = [] } 
   const stillBad = (str) => rx.some((r) => r.test(String(str)));
   const fix = (str) => applyCorrections(str, corrections);
   const cleanArr = (arr) => Array.isArray(arr) ? arr.map(fix).filter((x) => x && String(x).trim() && !stillBad(x)) : arr;
-  for (const f of ["dek", "pullQuote", "gossipPull", "metaTitle", "metaDescription"]) if (article[f]) article[f] = fix(article[f]);
+  // Scalars used to get `fix` only, which is a no-op when the verifier had no correction — so an
+  // uncorrectable unverified specific survived in the dek/pull-quote/meta fields while the array
+  // fields were properly dropped. Apply the same drop test the arrays get.
+  for (const f of ["dek", "pullQuote", "gossipPull", "metaTitle", "metaDescription"]) {
+    if (!article[f]) continue;
+    const v = fix(article[f]);
+    article[f] = stillBad(v) ? "" : v;   // empty ⇒ the SEO backfill rebuilds it from grounded facts
+  }
   if ("keyTakeaways" in article) article.keyTakeaways = cleanArr(article.keyTakeaways);
   if ("whatWeKnow" in article) article.whatWeKnow = cleanArr(article.whatWeKnow);
   if ("whatWeDont" in article) article.whatWeDont = cleanArr(article.whatWeDont);

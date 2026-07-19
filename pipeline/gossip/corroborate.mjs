@@ -54,6 +54,13 @@ async function fromGDELT(topic, { fetchImpl, seedDomain = "", max = 6 } = {}) {
     for (const a of arts) {
       const d = registrableDomain(a.domain || a.url);
       if (!a.url || !d) continue;
+      // fromGoogleNews gates every hit with titleNamesEntity; GDELT had NO such check, so an unrelated
+      // wire story counted as corroboration and could flip an unverified rumour to a higher tier.
+      // Only REJECT when we actually have a title that fails to name the entity (or a URL slug that does).
+      // A GDELT hit with no title at all must not be dropped — that would silently kill corroboration.
+      const gTitle = String(a.title || "").trim();
+      const gSlug = (() => { try { return decodeURIComponent(new URL(a.url).pathname).replace(/[-_/]+/g, " "); } catch { return ""; } })();
+      if (gTitle && !titleNamesEntity(gTitle, topic?.primaryEntity) && !titleNamesEntity(gSlug, topic?.primaryEntity)) continue;
       out.push({ url: a.url, domain: d, outlet: d, title: a.title || "" });
       if (out.length >= max) break;
     }
@@ -69,7 +76,9 @@ async function fromGoogleNews(topic, { fetchImpl, max = 6 } = {}) {
   const q = topicQuery(topic);
   if (!q) return [];
   try {
-    const url = `https://news.google.com/rss/search?q=${encodeURIComponent(q)}&hl=en-US&gl=US&ceid=US:en`;
+    // Bound the window like the siblings do (fromGDELT uses timespan=96h, trendingSearch uses when:2d).
+  // Unbounded, a years-old article body entered the writer's grounding as current material.
+  const url = `https://news.google.com/rss/search?q=${encodeURIComponent(q + " when:7d")}&hl=en-US&gl=US&ceid=US:en`;
     const r = await fetchImpl(url, { headers: { "User-Agent": UA } });
     if (!r.ok) return [];
     const xml = await r.text();

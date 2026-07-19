@@ -86,7 +86,14 @@ export function extractDeterministicSpecifics(body) {
   return out;
 }
 function presentInBundle(spec, hayNorm, hayRaw) {
-  if (spec.needle) return hayRaw.replace(/[,\s]/g, "").includes(spec.needle); // numbers: digit run present
+  if (spec.needle) {
+    // A bare substring test let a SMALLER number nested inside a larger one pass ("25" inside "$250
+    // million"), and let two adjacent tokens collide into a number that appears nowhere. Strip commas
+    // but KEEP separators, then require the digit run to be delimited.
+    const hay = hayRaw.replace(/,/g, "");
+    const esc = String(spec.needle).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    return new RegExp(`(^|[^\\d.])${esc}([^\\d]|$)`).test(hay);
+  }
   return hayNorm.includes(norm(spec.text)) || coverage(spec.text, hayNorm) >= 0.8; // dates/titles: phrase present
 }
 function deterministicSpecifics(article, bundle) {

@@ -23,6 +23,18 @@ function quotedPhrases(article) {
     const q = m[1].trim();
     if (/\s/.test(q) && !out.includes(q)) out.push(q);
   }
+  // Nested quotation: the scanner above pairs quote characters strictly left-to-right, so in
+  // `"I told her, 'you cannot be serious', and she laughed."` the INNER span — usually the most
+  // damaging thing on the page — is never extracted and therefore never verified. Pull single-quoted
+  // and typographic-nested spans out too.
+  // A single-quote scan must never pair a POSSESSIVE apostrophe as a delimiter: in a headline like
+  // `A Secret 'I Do': Inside Star Alpha's Wedding` the naive pair produced the phantom quote
+  // ": Inside Star Alpha", which then failed the quote wall and blocked a perfectly good article.
+  // Require the opener to follow a non-letter and the closer to precede a non-letter.
+  for (const m of text.matchAll(/(?<![A-Za-z0-9])['‘]([^'’‘\n]{12,200})['’](?![A-Za-z0-9])/g)) {
+    const q = m[1].trim();
+    if (/\s/.test(q) && !out.includes(q)) out.push(q);
+  }
   return out;
 }
 
@@ -88,9 +100,14 @@ function attributedSpeaker(articleRaw, quoteRaw) {
   const pre = articleRaw.slice(Math.max(0, i - 140), i);
   const post = articleRaw.slice(i + quoteRaw.length, i + quoteRaw.length + 70);
   let name = null;
-  for (const m of pre.matchAll(new RegExp(`\\b(${NAMEP})\\s+(?:once |also |later |then |had |has )?(?:${SAY_VERB})\\b`, "g"))) name = m[1];
+  // writer.mjs MANDATES a role appositive between the name and the verb ("…, a source close to the star,
+  // told PEOPLE"), which the old pattern could never match — so the speaker guard was silent on exactly
+  // the construction the pipeline is instructed to produce. Allow one short appositive.
+  for (const m of pre.matchAll(new RegExp(`\\b(${NAMEP})(?:\\s*,[^,]{0,60},)?\\s+(?:once |also |later |then |had |has )?(?:${SAY_VERB})\\b`, "g"))) name = m[1];
   for (const m of pre.matchAll(new RegExp(`\\b(?:sentiment|words|line|quote|remark|comment|thing)s?\\s+(?:that )?(${NAMEP})\\s+(?:once |had )?(?:${SAY_VERB})`, "g"))) name = m[1];
-  const pm = post.match(new RegExp(`^["'’,)\\s]*(${NAMEP})\\s+(?:${SAY_VERB})\\b`));
+  // Same appositive tolerance AFTER the quote — the dominant form the writer produces is
+  // `"…," Hannah Waddingham, the Emmy winner, said.`
+  const pm = post.match(new RegExp(`^["'’,)\\s]*(${NAMEP})(?:\\s*,[^,]{0,60},)?\\s+(?:once |also |later |then |had |has )?(?:${SAY_VERB})\\b`));
   if (pm) name = pm[1];
   if (!name) return null;
   const first = name.split(/\s+/)[0];
@@ -105,6 +122,21 @@ function sourceSpeakerFulls(sourceRaw, quoteRaw, map) {
   if (toks.length < 3) return null;
   const m = String(sourceRaw).match(new RegExp(toks.map(escRe).join("\\W+"), "i"));
   if (!m) return null;
+  // A ±180 window routinely contains BOTH the real speaker and someone else mentioned nearby, so a wrong
+  // attribution passed simply because the misattributed name also sat in the window. Prefer the
+  // ATTRIBUTIVE name — the one carrying the say-verb immediately before or after the quote — and only
+  // fall back to the wide window when the source gives no attributive name at all.
+  const preW = sourceRaw.slice(Math.max(0, m.index - 120), m.index);
+  const postW = sourceRaw.slice(m.index + quoteRaw.length, m.index + quoteRaw.length + 90);
+  const attributive = new Set();
+  for (const mm of preW.matchAll(new RegExp(`\\b(${NAMEP})(?:\\s*,[^,]{0,60},)?\\s+(?:once |also |later |then |had |has )?(?:${SAY_VERB})\\b`, "g"))) {
+    const full = resolveFull(mm[1], map);
+    if (full) attributive.add(full);
+  }
+  const pm2 = postW.match(new RegExp(`^["'’,)\\s]*(${NAMEP})(?:\\s*,[^,]{0,60},)?\\s+(?:${SAY_VERB})\\b`));
+  if (pm2) { const full = resolveFull(pm2[1], map); if (full) attributive.add(full); }
+  if (attributive.size) return attributive;
+
   const win = sourceRaw.slice(Math.max(0, m.index - 180), m.index + quoteRaw.length + 180);
   const fulls = new Set();
   for (const nm of win.matchAll(new RegExp(NAMEP, "g"))) {

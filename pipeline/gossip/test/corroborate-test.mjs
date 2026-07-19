@@ -13,13 +13,15 @@ console.log("\n=== STEP 4 CORROBORATION TEST ===\n");
 
 // A GDELT artlist payload with TWO articles from the same domain (people.com) + three other outlets. The
 // distinct-domain rule must collapse the two people.com hits to one and exclude the seed (variety.com).
+// 2026-07-19: titles now NAME the subject, because GDELT hits are entity-gated (they previously were
+// not, so an unrelated wire story counted as corroboration and could raise the confidence tier).
 const GDELT = { articles: [
-  { url: "https://variety.com/2026/seed", domain: "variety.com", title: "Variety (the seed — must be excluded)" },
-  { url: "https://people.com/a", domain: "people.com", title: "People first" },
-  { url: "https://people.com/b", domain: "people.com", title: "People SECOND (same domain — must be dropped)" },
-  { url: "https://www.eonline.com/x", domain: "www.eonline.com", title: "E! Online" },
-  { url: "https://pagesix.com/y", domain: "pagesix.com", title: "Page Six" },
-  { url: "https://justjared.com/z", domain: "justjared.com", title: "Just Jared" },
+  { url: "https://variety.com/2026/seed", domain: "variety.com", title: "Selena Gomez seed story (must be excluded as the seed domain)" },
+  { url: "https://people.com/a", domain: "people.com", title: "Selena Gomez spotted on a dinner date" },
+  { url: "https://people.com/b", domain: "people.com", title: "Selena Gomez SECOND people.com hit (same domain — must be dropped)" },
+  { url: "https://www.eonline.com/x", domain: "www.eonline.com", title: "Selena Gomez steps out in New York" },
+  { url: "https://pagesix.com/y", domain: "pagesix.com", title: "Selena Gomez and her date leave the restaurant" },
+  { url: "https://justjared.com/z", domain: "justjared.com", title: "Selena Gomez photographed downtown" },
 ] };
 const okJson = (obj) => ({ ok: true, text: async () => JSON.stringify(obj) });
 
@@ -33,6 +35,17 @@ const TOPIC = { primaryEntity: "Selena Gomez", title: "spotted on a cozy dinner 
   check("seed domain (variety.com) excluded", !out.some((o) => o.domain === "variety.com"));
   check("max cap respected (default 4)", out.length === 4, `got ${out.length}`);
   check("each result carries url+domain+title", out.every((o) => o.url && o.domain && typeof o.title === "string"));
+
+  // GDELT hits that do NOT name the subject must be rejected — fromGoogleNews always gated on this,
+  // fromGDELT did not, so an unrelated wire story inflated corroborationCount and the confidence tier.
+  const OFFTOPIC = { articles: [
+    { url: "https://people.com/a", domain: "people.com", title: "Selena Gomez spotted on a dinner date" },
+    { url: "https://reuters.com/markets/oil-prices-slip-on-supply-data", domain: "reuters.com", title: "Oil prices slip on supply data" },
+    { url: "https://apnews.com/article/senate-budget-vote", domain: "apnews.com", title: "Senate passes the budget bill" },
+  ] };
+  const offFetch = async (u) => (u.includes("gdeltproject.org") ? okJson(OFFTOPIC) : { ok: false });
+  const gated = await findCorroboratingUrls(TOPIC, { fetchImpl: offFetch, seedDomain: "variety.com" });
+  check("unrelated GDELT wire stories are rejected (entity gate)", gated.length === 1 && gated[0].domain === "people.com", JSON.stringify(gated.map((g) => g.domain)));
 }
 
 // fail-safe: GDELT returns plain text (a bad query) → []
