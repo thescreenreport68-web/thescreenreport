@@ -93,8 +93,14 @@ export const INTERVIEW_CHAT = /\b(opens? up (about|on)|discuss(es)?\b|reflects? 
 export const HARD_NEWS_VERB = /\b(joins?|cast(s|ed)?|exits?|quits?|leaves?|dies|dead|sues?|lawsuit|arrested|charged|fired|signs?|confirms?|announces?|reveals? (his|her|their|the|a)|renew(s|ed)?|cancel(s|ed|led)?|sets?|lands?|acquires?|teases? (a|the|new)|drops? (a|the|new))\b/i;
 // SPICE EXEMPTION (owner 2026-07-18): quote-news with a conflict/revelation verb ("Zendaya slams…",
 // "Damon breaks silence…") IS wanted news — the interview guard drops only flat evergreen chat.
-const { isSpicy } = await import("../lib/spice.mjs");
+const { isSpicy, isStatementBeat } = await import("../lib/spice.mjs");
 const interviewOnly = (t) => INTERVIEW_CHAT.test(t) && !HARD_NEWS_VERB.test(t) && !isSpicy(t);
+// BEAT BOUNDARY (owner 2026-07-19): celebrity OPINION/STATEMENT stories — politics, race, social
+// causes, "star speaks out about X" — belong to the separate celebrity-statement automation, not to
+// news. We decline them so two lanes never chase the same story. EXEMPTION: if the story is
+// unmistakably big news on its own signals (a top-tier outlet AND a strong trending score), the
+// owner's "if it's that big of news, then only" rule lets it through.
+const statementBeat = (c) => isStatementBeat(c.title || "") && !(Number(c.tier) === 1 && Number(c.velocity || 0) >= 3);
 // Platform/viewership patterns hide in the SUMMARY when the headline is coy ("…'Vrach Frankenshteyn' Debuts"
 // + summary "will debut on Hulu on August 14") — test title PLUS the summary's first 200 chars for those two.
 const withSummary = (c) => `${c.title || ""} ${String(c.summary || c.description || "").slice(0, 200)}`;
@@ -114,6 +120,7 @@ const freshCandidates = candidates.filter((c) =>
   !MERCH.test(c.title || "") &&
   !SCHEDULE_GRID.test(c.title || "") &&
   !interviewOnly(c.title || "") &&
+  !statementBeat(c) &&
   !tooOld(c) &&
   !JUNK_OUTLETS.has((c.outlet || "").toLowerCase().trim()));
 if (candBefore - freshCandidates.length > 0) monitor.stage("dedup", `dropped ${candBefore - freshCandidates.length} already-published candidate(s) by title; ${freshCandidates.length} remain`);

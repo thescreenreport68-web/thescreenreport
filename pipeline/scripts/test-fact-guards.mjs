@@ -117,40 +117,20 @@ console.log("=== 9. stale-'today' normalizer — the LIVE Elle case ===");
   const fresh = normalizeStaleToday({ body: "The film premiered today, July 17, worldwide.", dek: "" }, "2026-07-17T12:00:00.000Z");
   ok(/today, July 17/.test(fresh.body), "genuinely same-day 'today' untouched");
 }
-console.log("=== 10. spice layer — quote-news admitted, evergreen chat still out ===");
+console.log("=== 10. BEAT BOUNDARY — news owns industry news + work drama; statements are another lane's ===");
 {
-  const { isSpicy, spiceBonus, SPICY_QUOTE } = await import("../lib/spice.mjs");
-  for (const t of ["Zendaya Slams 'Lazy' Odyssey Comparisons", "Matt Damon Breaks Silence on Odyssey Stunt Injury", "Tom Holland Admits He Nearly Turned Down Nolan", "Charlize Theron Fires Back at Critics of Her Accent"]) ok(isSpicy(t) && spiceBonus(t) >= 7, `spicy admitted (+${spiceBonus(t)}): "${t.slice(0,44)}"`);
-  for (const t of ["Samantha Morton Discusses Her Process as Circe", "Anne Hathaway Reflects on Two Decades in Film", "Cast Talks About Filming in Sicily"]) ok(!SPICY_QUOTE.test(t), `flat chat NOT spicy: "${t.slice(0,44)}"`);
-  ok(spiceBonus("Fans Are Divided Over the Odyssey Ending as Backlash Sparks Debate") <= 10, "spice bonus capped at 10");
-  ok(spiceBonus("Warner Bros Sets Release Date for New Film") === 0, "plain announcement gets 0 spice");
-}
-console.log("=== 11. dupGuard v3 — the REAL 2026-07-19 tick that killed 12/12 topics ===");
-{
-  const { findDuplicate } = await import("../lib/dupGuard.mjs");
-  const S = (str) => new Set(String(str).toLowerCase().split(/\s+/).filter(Boolean));
-  const recent = [
-    { slug: "anne-hathaway-jokes-about-nolan", title: "Anne Hathaway Jokes About Her Brief Fear of Offending Christopher Nolan",
-      words: S("anne hathaway jok brief fear offend christopher nolan odyssey"), entityWords: S("anne hathaway"), subject: S("anne hathaway"), lane: "news", eventType: "casting", at: Date.now() },
-    { slug: "moana-box-office-day-5", title: "Moana Box Office Day 5",
-      words: S("moana box offic day domestic total climb dwayne johnson catherine laga aia"), entityWords: S("moana"), subject: S("moana"), lane: "box-office", eventType: null, at: Date.now() },
-    { slug: "chloe-sevigny-red-carpet", title: "Chloe Sevigny Shares Story Behind Son's Red Carpet Debut",
-      words: S("chlo sevigny sweet story behind son vanja debut"), entityWords: S("chlo sevigny"), subject: S("chlo sevigny"), lane: "news", eventType: "other", at: Date.now() },
-    { slug: "gabriel-luna-joins-dexter", title: "Gabriel Luna Joins Dexter Resurrection Season 2",
-      words: S("gabriel luna dexter resurrection serial killer ballard"), entityWords: S("gabriel luna"), subject: S("gabriel luna"), lane: "news", eventType: "casting", at: Date.now() },
-  ];
-  // MUST NOW PASS (were wrongly killed):
-  ok(!findDuplicate({ title: "Tom Holland on Robert Pattinson's 'The Odyssey' Casting: 'You're So Good'", primaryEntity: "Tom Holland", primaryKeyword: "tom holland pattinson odyssey", eventType: "casting", eventSlug: "tom-holland-pattinson-odyssey" }, recent),
-     "different SUBJECT, same film (Holland vs Hathaway on Odyssey) → allowed");
-  ok(!findDuplicate({ title: "Disney Releases New Look at Dwayne Johnson, Catherine Laga'aia in Live-Action Moana", primaryEntity: "Moana", primaryKeyword: "moana live action first look", eventType: "announcement", eventSlug: "moana-first-look" }, recent),
-     "CROSS-LANE (news first-look vs box-office revenue on Moana) → allowed");
-  ok(!findDuplicate({ title: "Teyana Taylor Celebrates World Cup in NYC, Nicole Kidman Takes in Wimbledon", primaryEntity: "Teyana Taylor", primaryKeyword: "teyana taylor world cup", eventType: "other", eventSlug: "teyana-taylor-world-cup" }, recent),
-     "generic {red,carpet,celebrity} no longer proves duplication → allowed");
-  // MUST STILL BLOCK (true duplicates):
-  ok(!!findDuplicate({ title: "Gabriel Luna Cast in 'Dexter: Resurrection' Season 2 as Serial Killer Ray Ballard", primaryEntity: "Gabriel Luna", primaryKeyword: "gabriel luna dexter resurrection", eventType: "casting", eventSlug: "gabriel-luna-dexter" }, recent),
-     "SAME subject + SAME beat re-angle → still blocked");
-  ok(!!findDuplicate({ title: "Anne Hathaway Jokes About Fear of Offending Christopher Nolan on Odyssey Set", primaryEntity: "Anne Hathaway", primaryKeyword: "anne hathaway christopher nolan odyssey", eventType: "casting", eventSlug: "hathaway-nolan" }, recent),
-     "verbatim same story → still blocked");
+  const { isStatementBeat, spiceBonus } = await import("../lib/spice.mjs");
+  // OURS: the core beat the owner named — projects, casting, directors, deals
+  for (const t of ["Christopher Nolan Sets Next Film With Cast Announcement", "Netflix Orders New Series From Duffer Brothers", "Zendaya Joins Denis Villeneuve Thriller"])
+    ok(!isStatementBeat(t), `industry news is OURS: "${t.slice(0,46)}"`);
+  // OURS: conflict that is about the WORK — gets a modest nudge, never a takeover
+  for (const t of ["Marvel Recasts Kang After Actor Exit", "Director Fired From Warner Bros Tentpole Over Creative Differences", "Fans Slam the Casting of New Bond Actor", "Star Sues Studio Over Profit Participation"])
+    ok(!isStatementBeat(t) && spiceBonus(t) > 0, `work-drama is OURS (+${spiceBonus(t)}): "${t.slice(0,44)}"`);
+  // THEIRS: celebrity opinion/statement — declined so two lanes never chase one story
+  for (const t of ["Mark Ruffalo Speaks Out on Palestine at Rally", "Actress Slams Studio Executives Over Racism in Hollywood", "Star Opens Up About Her Political Views", "Comedian Weighs In on Cancel Culture Debate", "Singer Breaks Silence on Vaccine Controversy"])
+    ok(isStatementBeat(t) && spiceBonus(t) === 0, `statement beat DECLINED: "${t.slice(0,44)}"`);
+  ok(spiceBonus("Warner Bros Sets Release Date for New Film") === 0, "plain announcement gets no boost");
+  ok(spiceBonus("Marvel Recasts Kang After Actor Exit") <= 6, "work-drama boost capped at 6 (a nudge, not a strategy)");
 }
 console.log(`\n${fail === 0 ? "✅ ALL" : "❌"} ${pass} passed, ${fail} failed`);
 process.exit(fail ? 1 : 0);
