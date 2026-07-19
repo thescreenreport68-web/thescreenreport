@@ -1,0 +1,228 @@
+{
+ "runId": "run-2026-07-19T15-32-29",
+ "mode": "live",
+ "startedAt": "2026-07-19T15:32:29.876Z",
+ "films": 43,
+ "published": [],
+ "held": [
+  {
+   "tag": "gail-daughtry-and-the-celebrity-sex-pass-bo-update×BO-UPDATE",
+   "reason": "consistency: title: \"$1.2\" is not a canonical figure for this film | title: \"$1.2\" contradicts the canonical domestic figure ($1,242,603)",
+   "score": 80
+  },
+  {
+   "tag": "star-wars-the-mandalorian-and-grogu-bo-update×BO-UPDATE",
+   "reason": "consistency: title: \"$177.5\" is not a canonical figure for this film | title: \"$177.5\" contradicts the canonical domestic figure ($177,455,904) | metaTitle: headlines domestic while the title headlines dailyGross/other — the SERP promise must match the page",
+   "score": 80
+  },
+  {
+   "tag": "lee-cronin-s-the-mummy-now-streaming×NOW-STREAMING",
+   "reason": "words 126 < 180 (owner-set ~200-word minimum) | soft-floor engagement 4 < 5",
+   "score": 50
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "the-odyssey-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $51M not above last published $51M)"
+  },
+  {
+   "tag": "moana-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "minions-monsters-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "toy-story-5-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "evil-dead-burn-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "young-washington-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $39M not above last published $39M)"
+  },
+  {
+   "tag": "the-invite-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $12M not above last published $12M)"
+  },
+  {
+   "tag": "obsession-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $257M not above last published $257M)"
+  },
+  {
+   "tag": "supergirl-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "disclosure-day-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "backrooms-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $195M not above last published $195M)"
+  },
+  {
+   "tag": "jackass-best-and-last-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $18M not above last published $18M)"
+  },
+  {
+   "tag": "scary-movie-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $108M not above last published $108M)"
+  },
+  {
+   "tag": "voicemails-for-isabelle-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "citizen-vigilante-bo-opening×BO-OPENING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "enola-holmes-3-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "voicemails-for-isabelle-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "the-doorman-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "little-brother-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "rust-creek-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "f9-the-fast-saga-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "old-henry-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "the-boss-baby-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "i-will-find-you-trending-tv-w2026-07-12×TRENDING-TV",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "worst-neighbor-ever-trending-tv-w2026-07-12×TRENDING-TV",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "little-house-on-the-prairie-trending-tv-w2026-07-12×TRENDING-TV",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "avatar-the-last-airbender-trending-tv-w2026-07-12×TRENDING-TV",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "salish-jordan-matter-trending-tv-w2026-07-12×TRENDING-TV",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "raw-trending-tv-w2026-07-12×TRENDING-TV",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "sullivan-s-crossing-trending-tv-w2026-07-12×TRENDING-TV",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "jeff-arcuri-nice-to-meet-you-trending-tv-w2026-07-12×TRENDING-TV",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "off-campus-trending-tv×TRENDING-TV",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  }
+ ],
+ "blocked": [
+  {
+   "tag": "descendants-wicked-wonderland-now-streaming×NOW-STREAMING",
+   "reason": "watchdog: gatherer descendants-wicked-wonderland-now-streaming×NOW-STREAMING exceeded 180s"
+  }
+ ],
+ "paced": {
+  "tokens": 3.96,
+  "behind": false,
+  "expected": 5.46,
+  "allow": 2
+ },
+ "attemptCapHit": 4,
+ "zeroStreak": 3,
+ "daySpend": {
+  "laDay": "2026-07-19",
+  "usd": 0.37719
+ },
+ "finishedAt": "2026-07-19T15:39:28.453Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3416,
+    "out": 578,
+    "usd": 0.0002,
+    "ms": 1995
+   },
+   "gatherer": {
+    "calls": 6,
+    "errors": 0,
+    "in": 22172,
+    "out": 1013,
+    "usd": 0.00262,
+    "ms": 7281
+   },
+   "synthesizer": {
+    "calls": 3,
+    "errors": 0,
+    "in": 2025,
+    "out": 2467,
+    "usd": 0.00063,
+    "ms": 29901
+   },
+   "writerChart": {
+    "calls": 2,
+    "errors": 0,
+    "in": 3751,
+    "out": 2067,
+    "usd": 0.00157,
+    "ms": 41500
+   },
+   "writer": {
+    "calls": 2,
+    "errors": 0,
+    "in": 6056,
+    "out": 2176,
+    "usd": 0.0059,
+    "ms": 31671
+   },
+   "qa": {
+    "calls": 8,
+    "errors": 0,
+    "in": 21157,
+    "out": 3820,
+    "usd": 0.0159,
+    "ms": 21569
+   }
+  },
+  "totalUsd": 0.02682
+ },
+ "openrouterTotalUsd": 0.02664
+}
