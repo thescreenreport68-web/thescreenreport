@@ -1,0 +1,137 @@
+{
+  "ts": "2026-07-19T20:00:54.758Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "janel-parrish-and-sasha-farber-step-out-as-a-couple-for-the-first-time",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [
+        "metaDescription-soft:logged"
+      ],
+      "headline": [
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 1
+    }
+  ],
+  "topics": 2,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 1,
+  "blocked": 0,
+  "costUSD": 0.019374,
+  "costPerPublished": 0.019374,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 9,
+      "in": 16349,
+      "out": 1721,
+      "usd": 0.009207199999999999
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 953,
+      "out": 1161,
+      "usd": 0.00043885
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 7,
+      "in": 20991,
+      "out": 6160,
+      "usd": 0.008794898150000001
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 9,
+      "in": 6285,
+      "out": 761,
+      "usd": 0.0009329
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2315,
+      "out": 196,
+      "usd": 0.0011845,
+      "ms": 1400
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 953,
+      "out": 1161,
+      "usd": 0.00029475,
+      "ms": 14878
+    },
+    "writer": {
+      "calls": 6,
+      "errors": 0,
+      "in": 20415,
+      "out": 5833,
+      "usd": 0.006678670000000001,
+      "ms": 102996
+    },
+    "verify": {
+      "calls": 8,
+      "errors": 0,
+      "in": 14034,
+      "out": 1525,
+      "usd": 0.0080227,
+      "ms": 9062
+    },
+    "judge": {
+      "calls": 2,
+      "errors": 0,
+      "in": 2462,
+      "out": 402,
+      "usd": 0.000407,
+      "ms": 2098
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 576,
+      "out": 327,
+      "usd": 0.00024366000000000004,
+      "ms": 57039
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 394,
+      "out": 121,
+      "usd": 0.0000878,
+      "ms": 792
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 163,
+      "out": 41,
+      "usd": 0.0000327,
+      "ms": 528
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2095,
+      "out": 97,
+      "usd": 0.0002483,
+      "ms": 1912
+    },
+    "linker": {
+      "calls": 4,
+      "errors": 0,
+      "in": 1171,
+      "out": 100,
+      "usd": 0.00015710000000000002,
+      "ms": 2165
+    }
+  }
+}
