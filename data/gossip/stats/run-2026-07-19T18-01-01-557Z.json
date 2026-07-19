@@ -1,0 +1,139 @@
+{
+  "ts": "2026-07-19T18:01:01.557Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "abby-elliott-and-husband-bill-kennedy-end-marriage-after-nearly-a-decade",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [
+        "absence-claim:logged"
+      ],
+      "headline": [
+        "metaTitle",
+        "metaDescription",
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 2
+    }
+  ],
+  "topics": 4,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 3,
+  "blocked": 0,
+  "costUSD": 0.020122,
+  "costPerPublished": 0.020122,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 7,
+      "in": 18595,
+      "out": 2882,
+      "usd": 0.0127835
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 1923,
+      "out": 367,
+      "usd": 0.000297584
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 6,
+      "in": 26321,
+      "out": 5716,
+      "usd": 0.0062026572
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 8,
+      "in": 5824,
+      "out": 639,
+      "usd": 0.0008380000000000001
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2362,
+      "out": 194,
+      "usd": 0.0011936,
+      "ms": 1244
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1923,
+      "out": 367,
+      "usd": 0.00023913,
+      "ms": 62237
+    },
+    "writer": {
+      "calls": 5,
+      "errors": 0,
+      "in": 25681,
+      "out": 5431,
+      "usd": 0.007753169999999999,
+      "ms": 81704
+    },
+    "verify": {
+      "calls": 6,
+      "errors": 0,
+      "in": 16233,
+      "out": 2688,
+      "usd": 0.0115899,
+      "ms": 12442
+    },
+    "judge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2068,
+      "out": 180,
+      "usd": 0.0002788,
+      "ms": 1029
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 640,
+      "out": 285,
+      "usd": 0.00024410000000000002,
+      "ms": 6476
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 360,
+      "out": 185,
+      "usd": 0.00011,
+      "ms": 1110
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 185,
+      "out": 44,
+      "usd": 0.0000361,
+      "ms": 573
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2085,
+      "out": 92,
+      "usd": 0.0002453,
+      "ms": 2464
+    },
+    "linker": {
+      "calls": 4,
+      "errors": 0,
+      "in": 1126,
+      "out": 138,
+      "usd": 0.0001678,
+      "ms": 1800
+    }
+  }
+}
