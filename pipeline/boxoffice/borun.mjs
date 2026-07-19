@@ -127,7 +127,7 @@ export async function boRun({
 
   // ── FINDER ──
   let found = [];
-  try { found = await withTimeout(findImpl({ limit: Math.max(burst * 4, 6), nowMs: now, preferStreaming, seen: coveredEventSlugs(store) }), AGENTS.finder.watchdogMs + 60e3, "finder"); }
+  try { found = await withTimeout(findImpl({ limit: Math.max(burst * 4, 25), nowMs: now, preferStreaming, seen: coveredEventSlugs(store) }), AGENTS.finder.watchdogMs + 60e3, "finder"); }
   catch (e) { report.blocked.push({ stage: "finder", reason: String(e?.message || e).slice(0, 140) }); return finish(report, dryRun); }
   report.films = found.length;
 

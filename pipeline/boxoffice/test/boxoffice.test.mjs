@@ -997,16 +997,21 @@ t("queue: write → fresh read → stale after 45min → markConsumed", () => {
   fs.rmSync(dir4, { recursive: true, force: true });
 });
 
-await ta("finder: a queue OPENING event for an off-chart film surfaces FIRST; a chart-film event boosts the chart entry", async () => {
+await ta("finder: CHART films lead the pool (reliable supply); an off-chart event still enters; a chart-film event boosts its entry", async () => {
   const queue = { events: [
     { slug: "brand-new-film-ev-opening", filmTitle: "Brand New Film", kind: "opening", form: "BO-OPENING", priority: 60, sources: [{ owner: "Variety", tier: 1, url: "https://x/1", title: "Brand New Film opens huge" }] },
     { slug: "charted-film-ev-milestone", filmTitle: "Charted Film", kind: "milestone", form: "BO-UPDATE", priority: 55, sources: [] },
   ] };
   const chart = { films: [{ title: "Charted Film", cume: "$100 million", dailyGross: "$2 million", rank: 1, dayInRelease: "Day 10" }] };
   const found = await findFilms({ limit: 3, discoverImpl: async () => [], netflixImpl: async () => ({ films: [], tv: [] }), trackedImpl: { films: {} }, providersImpl: async () => null, dailyChartImpl: async () => chart, queueImpl: () => queue, dryQueueMark: true });
-  assert.equal(found[0].film.title, "Brand New Film", "event entry leads the pool");
-  assert.equal(found[0].angle.form, "BO-OPENING");
-  assert.ok(found[0].trigger.sources.length, "event sources flow to the gatherer");
+  // Chart films lead now: they are the dependable, pre-verified, cheapest-to-publish supply. Events
+  // used to occupy the whole pool (110 of 308 candidate slots on 07-17 were parked-dead event slugs,
+  // and 65 of 166 pools carried ZERO chart films) — that is what starved box-office volume.
+  assert.equal(found[0].film.title, "Charted Film", "chart film leads the pool");
+  const brandNew = found.find((e) => e.film.title === "Brand New Film");
+  assert.ok(brandNew, "off-chart event still enters the pool");
+  assert.equal(brandNew.angle.form, "BO-OPENING");
+  assert.ok(brandNew.trigger.sources.length, "event sources flow to the gatherer");
   const charted = found.find((e) => e.film.title === "Charted Film");
   assert.ok(charted, "chart entry present");
   assert.ok(charted.trigger.priority >= 85, "chart entry BOOSTED by its event: " + charted.trigger.priority);

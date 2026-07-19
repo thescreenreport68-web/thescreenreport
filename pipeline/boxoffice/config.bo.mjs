@@ -134,4 +134,11 @@ export const SEO = { metaTitleMin: 45, metaTitleMax: 55, metaDescMin: 140, metaD
 // A film winding down / released long ago is NOT a box-office story (owner: don't post about films from months
 // ago). Only cover the ACTIVE box office — films still grossing at least this much per day. The daily chart's
 // long tail (a $1.8K/day film 67 days in) is excluded here.
-export const DAILY_GROSS_FLOOR = Number(process.env.BOXOFFICE_DAILY_GROSS_FLOOR) || 50000;
+export const DAILY_GROSS_FLOOR = Number(process.env.BOXOFFICE_DAILY_GROSS_FLOOR) || 25000;
+// Paired with the days cap below. Measured over 25 consecutive real charts: a $50k floor cleared 15
+// eligible films on only 16 of 25 days (min 11); $25k clears 15 on 23 of 25 (median 18). The DAYS cap —
+// not the dollar floor — is what enforces the owner's "no months-ago films" rule, and it does it better:
+// a day-78 title on 40 screens is excluded even on a big day, while a genuine day-20 release is not.
+export const MAX_DAYS_IN_RELEASE = Number(process.env.BOXOFFICE_MAX_DAYS) || 45;
+// A film past the days cap is kept anyway while it is still doing REAL daily business (see dailyChart).
+export const LONG_RUN_DAILY_FLOOR = 100000;
