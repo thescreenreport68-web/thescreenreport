@@ -13,6 +13,25 @@ import { deriveTags } from "./polish.mjs";
 import { buildMetaTitle, buildMetaDescription, targetKeywordFor } from "./seo.mjs";
 import { auditArticleSeo } from "./seoAudit.mjs";
 
+// Sources-link anchor text. Outlet names are BANNED as anchors (news-lane factGuards rule) and a generic
+// "Report" is useless for readers and search alike — 18/18 links shipped as "Report" on 2026-07-18 because
+// the bundle never carried the extracted headline. Order: the source's real headline → the headline its own
+// URL slug encodes (humanized) → a descriptive last resort.
+const TITLE_CASE_SKIP = new Set(["a","an","the","and","or","but","of","in","on","at","to","for","with","from","by","as","is","are","was","were"]);
+export function sourceAnchor(src = {}) {
+  const clean = (t) => String(t || "").replace(/[\[\]]/g, "").replace(/\s*[|–—-]\s*[A-Z][A-Za-z! .]{2,20}$/, "").trim();
+  const real = clean(src.title);
+  if (real.length >= 12) return real.slice(0, 90);
+  try {
+    const seg = decodeURIComponent(new URL(src.url).pathname).split("/").filter(Boolean).pop() || "";
+    const words = seg.replace(/\.\w+$/, "").split(/[-_]+/).filter((w) => w && !/^\d+$/.test(w));
+    if (words.length >= 3) {
+      return words.map((w, i) => (i && TITLE_CASE_SKIP.has(w.toLowerCase()) ? w.toLowerCase() : w.charAt(0).toUpperCase() + w.slice(1))).join(" ").slice(0, 90);
+    }
+  } catch { /* unparseable URL */ }
+  return "Full report";
+}
+
 const __dirname = path.dirname(fileURLToPath(import.meta.url)); // …/pipeline/gossip
 const CONTENT_DIR = path.resolve(__dirname, "../../content/articles");
 
@@ -133,7 +152,7 @@ export function buildGossipMarkdown({ article, frame, provenance, route, topic, 
       .filter((x) => x && /^https?:\/\//.test(x.url || "") && !/\/\/(?:www\.)?(?:x\.com|twitter\.com|bsky\.app|t\.co)\//.test(x.url))
       .filter((x) => { const k = String(x.url).replace(/[?#].*$/, ""); if (seen.has(k)) return false; seen.add(k); return true; })
       .slice(0, 4)
-      .map((x) => `- [${String(x.title || "Report").replace(/[\[\]]/g, "")}](${x.url})${x.outlet ? ` — ${x.outlet}` : ""}`);
+      .map((x) => `- [${sourceAnchor(x)}](${x.url})${x.outlet ? ` — ${x.outlet}` : ""}`);
     if (srcLinks.length) bodyOut += `\n\n## Sources\n\n${srcLinks.join("\n")}`;
   }
   article = { ...article, body: bodyOut };

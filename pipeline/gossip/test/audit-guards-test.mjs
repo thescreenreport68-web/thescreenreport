@@ -82,6 +82,7 @@ check("no relative time passes", relativeTimeUnanchored("He hosted the awards on
   check("Sources block appended w/ outbound link", /## Sources/.test(out.md) && out.md.includes("people.com/star-alpha-wedding-123"));
   check("social/amplifier URLs excluded", !out.md.includes("x.com/pop"));
   check("anchor = source headline, outlet as plain text", out.md.includes("[Star Alpha and Star Beta Are Married](https://people.com/star-alpha-wedding-123) — People"));
+  check("anchor is NEVER the generic 'Report'", !/\[Report\]/.test(out.md));
 }
 // ── G+F. runGossip surgical triggers: source-mirroring title + unanchored time + question lede ──
 {
@@ -111,6 +112,17 @@ check("no relative time passes", relativeTimeUnanchored("He hosted the awards on
   check("scaffolding + absence cut in-pipeline", r.status === "PUBLISH" && !/confirmed event|Neither has commented/.test(r.article.body), r.article.body.slice(0, 160));
   check("absence FAQ dropped in-pipeline", !(r.article.faq || []).some((f) => /do not specify/.test(f.a || "")));
   check("guardCuts telemetry present", (r.guardCuts || []).length >= 2, JSON.stringify(r.guardCuts));
+}
+
+// ── Sources anchor text (2026-07-19: 18/18 live links had shipped as generic "Report") ──
+{
+  const { sourceAnchor } = await import("../assemble.mjs");
+  check("real headline wins", sourceAnchor({ title: "Paige DeSorbo Addresses Engagement Rumors", url: "https://x.com/a" }) === "Paige DeSorbo Addresses Engagement Rumors");
+  check("outlet suffix stripped from headline", sourceAnchor({ title: "Kim Kardashian Shares Final Texts | Page Six", url: "https://p.com/x" }) === "Kim Kardashian Shares Final Texts");
+  const fromUrl = sourceAnchor({ title: "", url: "https://www.usmagazine.com/celebrity-news/news/paige-desorbo-engagement-rumors/" });
+  check("no title → humanized URL slug (the source's own headline)", fromUrl === "Paige Desorbo Engagement Rumors", fromUrl);
+  check("never bare 'Report'", sourceAnchor({ title: "", url: "https://example.com/" }) === "Full report");
+  check("outlet name never becomes the anchor", !/^(People|TMZ|Page Six|E! News)$/.test(sourceAnchor({ title: "", url: "https://people.com/" })));
 }
 
 console.log(`\n── RESULT: ${pass} passed${fail ? `, ${fail} FAILED` : ""} ──`);

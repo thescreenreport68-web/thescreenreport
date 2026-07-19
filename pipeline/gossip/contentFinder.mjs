@@ -87,13 +87,13 @@ export async function gatherBundle(topic, { fetchImpl = fetch, extractImpl, corr
     if (s.text) {
       const text = stripHtml(s.text);
       // Floor the inline path too (was >= 1) so a near-empty "source" can't satisfy the fail-closed Stage-3 gate.
-      if (text.length >= 80) sources.push({ outlet: s.outlet, url: s.url || null, tier, text: text.slice(0, 8000), quotes: extractQuotes(s.text) });
-      else if (s.url) { const ex = await extractClean(s.url, { fetchImpl, extractImpl }); if (ex) { sources.push({ outlet: s.outlet, url: s.url, tier, text: ex.text, quotes: extractQuotes(ex.text) }); seedDomains.add(registrableDomain(s.url)); } }
+      if (text.length >= 80) sources.push({ outlet: s.outlet, url: s.url || null, tier, title: s.title || "", text: text.slice(0, 8000), quotes: extractQuotes(s.text) });
+      else if (s.url) { const ex = await extractClean(s.url, { fetchImpl, extractImpl }); if (ex) { sources.push({ outlet: s.outlet, url: s.url, tier, title: ex.title || s.title || "", text: ex.text, quotes: extractQuotes(ex.text) }); seedDomains.add(registrableDomain(s.url)); } }
       continue;
     }
     if (!s.url) continue;
     const ex = await extractClean(s.url, { fetchImpl, extractImpl });
-    if (ex) { sources.push({ outlet: s.outlet, url: s.url, tier, text: ex.text, quotes: extractQuotes(ex.text) }); seedDomains.add(registrableDomain(s.url)); }
+    if (ex) { sources.push({ outlet: s.outlet, url: s.url, tier, title: ex.title || s.title || "", text: ex.text, quotes: extractQuotes(ex.text) }); seedDomains.add(registrableDomain(s.url)); }
   }
   // STEP 4 — corroboration: find + extract MORE articles about the same rumor, from DISTINCT outlets, so the
   // writer has corroborated real material (not one thin blurb). Best-effort: any issue ⇒ just the original
@@ -155,7 +155,7 @@ export async function corroborateBundle(topic, bundle, { fetchImpl = fetch, extr
       const ex = await extractClean(e.url, { fetchImpl, extractImpl });
       if (ex && ex.text.length >= 400 && mentionsEntity(ex.text)) {
         // ex.url = Jina's resolved publisher URL (for a Google link); fall back to the original for direct URLs.
-        bundle.sources.push({ outlet: e.outlet || e.domain, url: ex.url || e.url, tier: tierOfDomain(e.domain), text: ex.text, quotes: [], corroborating: true });
+        bundle.sources.push({ outlet: e.outlet || e.domain, url: ex.url || e.url, tier: tierOfDomain(e.domain), title: ex.title || e.title || "", text: ex.text, quotes: [], corroborating: true });
         seedDomains.add(e.domain);
         extracted++;
       }
