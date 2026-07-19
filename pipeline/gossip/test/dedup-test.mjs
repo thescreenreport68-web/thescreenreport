@@ -74,7 +74,11 @@ const NOW = new Date("2026-06-30T12:00:00Z");
 
 // deterministic keys are stable
 check("urlHash is stable + deterministic", urlHash(A) === urlHash(A) && urlHash(A) !== urlHash(Bdifferent));
-check("eventKey is deterministic + well-formed (entity|type|month)", eventKey(A, NOW) === eventKey(A, NOW) && eventKey(A, NOW).startsWith("selena-gomez|") && eventKey(A, NOW).endsWith("|2026-06"));
+// 2026-07-19: the calendar bucket was REMOVED — it expired the L2 layer at every month rollover while
+// L3 kept a 45-day horizon, so a slow-arriving duplicate landed in a fresh empty bucket. Recency is
+// now applied when the bucket is read, not baked into the key.
+check("eventKey is deterministic + timeless (entity|type)", eventKey(A) === eventKey(A) && eventKey(A).startsWith("selena-gomez|") && !/\|\d{4}-\d{2}$/.test(eventKey(A)));
+check("eventKey ignores the check date entirely", eventKey(A) === eventKey(A, new Date("2027-01-15")));
 
 console.log(`\n── RESULT: ${pass} passed${fail ? `, ${fail} FAILED` : ""} ──`);
 if (fail) process.exit(1);

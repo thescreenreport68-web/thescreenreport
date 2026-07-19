@@ -13,7 +13,7 @@ import { detectGossipType } from "./writer.mjs";
 import { agentChat } from "./models.mjs";
 
 const DUP_HARD = 0.9, DUP_SOFT = 0.82, WINDOW_DAYS = 45;
-import { slugify as slug } from "./normalize.mjs"; // folded: Hernández and Hernandez share ONE dedup bucket
+import { slugify as slug, entityKey } from "./normalize.mjs"; // folded: Hernández and Hernandez share ONE dedup bucket
 
 export const normHeadline = (s) => (s || "").toLowerCase().replace(/[^a-z0-9 ]+/g, " ").replace(/\s+/g, " ").trim();
 export function canonicalUrl(u) {
@@ -24,8 +24,12 @@ export function urlHash(topic) {
   const u = topic.sources?.[0]?.url || "";
   return crypto.createHash("sha256").update(canonicalUrl(u) + "|" + normHeadline(topic.title)).digest("hex").slice(0, 32);
 }
-export function eventKey(topic, now = new Date()) {
-  return `${slug(topic.primaryEntity)}|${detectGossipType(topic)}|${now.toISOString().slice(0, 7)}`;
+// 2026-07-19: the third component used to be the CHECK month (YYYY-MM), so a story published on the 31st
+// had its L2 bucket expire hours later — while L3's own window is 45 days. A slower outlet's version of
+// the same story, popped from the backlog after the rollover, landed in a fresh empty bucket and L2 was
+// skipped entirely. The bucket is now timeless; recency is applied when the bucket is READ.
+export function eventKey(topic) {
+  return `${slug(topic.primaryEntity)}|${detectGossipType(topic)}`;
 }
 const summaryText = (topic) => `${topic.primaryEntity || ""}: ${topic.claim || topic.title || ""}`;
 
@@ -41,7 +45,7 @@ async function defaultAdjudicate(aSummary, bSummary) {
 
 export async function dedupCheck(topic, store, { embedImpl = defaultEmbed, adjudicateImpl = defaultAdjudicate, now = new Date() } = {}) {
   try {
-    const uh = urlHash(topic), ek = eventKey(topic, now);
+    const uh = urlHash(topic), ek = eventKey(topic);
     // L1 — exact
     if (store.byUrlHash(uh)) return { decision: "DUPLICATE", reason: "exact url+headline match", urlHash: uh, eventKey: ek, embedding: null };
     // L2 — SAME eventKey (entity|gossipType|month): the strongest "same story" signal short of an identical URL —
@@ -53,7 +57,9 @@ export async function dedupCheck(topic, store, { embedImpl = defaultEmbed, adjud
     // The Jelly Roll duplicate shipped because the bucket held three records and [0] was a week-old
     // "inside their world" piece: the adjudicator correctly said DISTINCT against that wrong comparison,
     // and the real prior (4h earlier, same divorce) was never examined at all.
-    const ekHits = ((store.byEventKey ? store.byEventKey(ek) : []) || [])
+    const ekCut = now.getTime() - WINDOW_DAYS * 864e5; // same horizon L3 uses
+      const ekHits = ((store.byEventKey ? store.byEventKey(ek) : []) || [])
+      .filter((r) => !r.createdAt || Date.parse(r.createdAt) >= ekCut)
       .slice()
       .sort((a, b) => Date.parse(b?.createdAt || 0) - Date.parse(a?.createdAt || 0))
       .slice(0, 5); // newest 5 — caps adjudication spend on a busy entity
@@ -65,7 +71,7 @@ export async function dedupCheck(topic, store, { embedImpl = defaultEmbed, adjud
     }
     // L3 — semantic vs same-entity recent records
     const vec = await embedImpl(summaryText(topic));
-    const top = store.search(vec, { k: 3, sinceDays: WINDOW_DAYS, entity: topic.primaryEntity })[0];
+    const top = store.search(vec, { k: 3, sinceDays: WINDOW_DAYS, entity: entityKey(topic.primaryEntity) })[0];
     if (top) {
       if (top.score >= DUP_HARD) return { decision: "DUPLICATE", reason: `semantic dup (${top.score.toFixed(3)})`, parentKey: top.key, urlHash: uh, eventKey: ek, embedding: Array.from(vec) };
       if (top.score >= DUP_SOFT) {
@@ -86,7 +92,7 @@ export function recordPublished(topic, store, { urlHash, eventKey, embedding, sl
     key: articleSlug || topic.slug || urlHash,
     kind: "gossip",
     urlHash, eventKey,
-    entities: [topic.primaryEntity].filter(Boolean),
+    entities: [entityKey(topic.primaryEntity)].filter(Boolean), // canonical: L3 searches this fold
     summary: summaryText(topic),
     embedding,
     meta: { title: topic.title, parentKey },

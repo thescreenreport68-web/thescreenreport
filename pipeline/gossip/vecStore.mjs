@@ -6,6 +6,7 @@
 // Hardened (audit): urlHash/eventKey are Map-indexed (O(1)); createdAt is validated on write; all reads return
 // COPIES so a caller can't corrupt in-memory state.
 import fs from "node:fs";
+import { entityKey } from "./normalize.mjs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { cosine } from "./embed.mjs";
@@ -65,7 +66,10 @@ export function openStore(filePath = DEFAULT_PATH) {
       const cut = sinceDays ? Date.now() - sinceDays * 864e5 : 0;
       const q = Float32Array.from(vec);
       return records
-        .filter((r) => r.embedding && (!entity || r.entities.includes(entity)) && (!cut || Date.parse(r.createdAt) >= cut))
+        // 2026-07-19: this compared raw display spellings, so "Bunnie XO" searched 1 record while 5 exist
+        // and "Beyonce" searched ZERO while 3 exist — and zero candidates falls through to NEW, i.e. the
+        // semantic layer failed OPEN against its own documented fail-closed contract. Fold both sides.
+        .filter((r) => r.embedding && (!entity || (r.entities || []).some((e) => entityKey(e) === entityKey(entity))) && (!cut || Date.parse(r.createdAt) >= cut))
         .map((r) => ({ ...copy(r), score: cosine(q, Float32Array.from(r.embedding)) }))
         .filter((r) => r.score >= minScore)
         .sort((a, b) => b.score - a.score)
