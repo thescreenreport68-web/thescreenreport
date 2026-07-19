@@ -83,7 +83,7 @@ aiDisclosure: >-
   Rumors and speculation are labeled as unconfirmed and updated or removed as
   facts develop.
 sensitivity: normal
-dateModified: '2026-07-19T01:02:48.761Z'
+dateModified: '2026-07-19T05:30:00.000Z'
 provenance:
   primaryEntity: Ariana Grande
   claim: Ariana Grande has rekindled her romance with former dancer Ricky Alvarez.
@@ -102,7 +102,7 @@ provenance:
 
 While fans speculated about her next move, Ariana Grande was quietly circling back to a familiar face. The insider stressed that Alvarez is "the real deal “, a source tells Us. The insider stressed that Alvarez is “far from a rebound,".
 
-Grande and Alvarez previously dated years ago after meeting when he danced on her tours. The Us Weekly source noted that Grande and her ex, Ethan Slater, split long before the public knew, framing the new-old relationship as a considered choice, not a hasty pivot. The report offers no further details on the timeline of their reconciliation, leaving the exact spark and current status of their rekindled romance unconfirmed.
+Grande and Alvarez previously dated years ago after meeting when he danced on her tours. The Us Weekly source noted that Grande and her ex, Ethan Slater, split long before the public knew, framing the new-old relationship as a considered choice, not a hasty pivot. The insider added that the pair are "still newly dating, but because there's a lot of history there, they were able to fall back into a relationship organically."
 
 ## Sources
 

@@ -87,7 +87,7 @@ aiDisclosure: >-
   Rumors and speculation are labeled as unconfirmed and updated or removed as
   facts develop.
 sensitivity: high
-dateModified: '2026-07-18T21:02:38.413Z'
+dateModified: '2026-07-19T05:30:00.000Z'
 provenance:
   primaryEntity: Will Smith
   claim: >-
@@ -114,7 +114,7 @@ In an email sent on July 7, Salaam requested Will Smith's testimony for a deposi
 
 ## The Underlying Allegations
 
-Salaam, also known as Brother Bilaal, alleges that Jada Pinkett Smith physically threatened him in September 2021. He claims the confrontation occurred in the lobby of the Regency Calabasas Common at a private birthday party for Will Smith. Salaam's lawsuit seeks $3 million in damages, alleging the incident caused emotional distress, reputational harm, financial loss, and physical health issues. He also accuses the couple of launching a smear campaign against him.
+Salaam, also known as Brother Bilaal, alleges that Jada Pinkett Smith physically threatened him in September 2021. He claims the confrontation occurred in the lobby of the Regency Calabasas Commons at a private birthday party for Will Smith. Salaam's lawsuit seeks $3 million in damages, alleging the incident caused emotional distress, reputational harm, financial loss, and physical health issues. He also accuses the couple of launching a smear campaign against him.
 
 Jada Pinkett Smith has denied all wrongdoing. She previously filed an anti-SLAPP motion to dismiss parts of the lawsuit and scored a legal win in May. A court order at that time required Salaam to pay nearly $33,000 in attorney fees and legal costs to Jada.
 

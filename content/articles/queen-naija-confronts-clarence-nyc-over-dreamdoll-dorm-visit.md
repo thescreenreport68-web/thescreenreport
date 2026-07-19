@@ -79,7 +79,7 @@ aiDisclosure: >-
   Rumors and speculation are labeled as unconfirmed and updated or removed as
   facts develop.
 sensitivity: normal
-dateModified: '2026-07-18T17:02:38.138Z'
+dateModified: '2026-07-19T05:30:00.000Z'
 provenance:
   primaryEntity: Queen Naija
   claim: >-
@@ -93,7 +93,7 @@ provenance:
   attribution: The Shade Room
   outlets:
     - The Shade Room
-    - Rated R B
+    - Rated R&B
   corroborationCount: 2
   verifyDegraded: false
   publishedAt: '2026-07-18T17:02:38.138Z'
@@ -107,11 +107,11 @@ Clarence and Queen later sat down in their own dorm to hash it out. He argued he
 
 ## Social Media Weighs In
 
-Viewers were quick to share their takes. Some compared the drama to reality TV, with one commenter noting, "And just like that SU looking like Love HipHop". Others defended Queen, with one fan writing, "She gives mean girl. And I don’t think Queen bugging she’s so genuine and nice and everybody don’t deserve that she ain’t have to explain nothing to her.".
+Viewers were quick to share their takes. Some compared the drama to reality TV, with one commenter noting, "And just like that SU looking like Love & HipHop". Others defended Queen, with one fan writing, "She gives mean girl. And I don’t think Queen bugging she’s so genuine and nice and everybody don’t deserve that she ain’t have to explain nothing to her.".
 
 Following the private talk with Clarence, Queen Naija headed to a Bible study session at Streamer University. There, she took the opportunity to clear the air with DreamDoll, effectively ending the brief feud. The entire situation unfolded during Kai Cenat's Streamer University, a five-day creator event.
 
 ## Sources
 
 - [Report](https://theshaderoom.com/queen-naija-dreamdoll-clear-the-air-clarence-dorm-video-social-media-reacts/) — The Shade Room
-- [Report](https://news.google.com/rss/articles/CBMiW0FVX3lxTE8tNVB5S0FaWmI5WHp4bDBsQzNBZHFqQ3hfUFgxcDM2QmZHcFY3RmdqMGwzOHFwN2V5WnRMOWIxdWhJanBTZm5RVy11RVhZLUtwRFRmTWZ0RVRXNGs?oc=5) — Rated R B
+- [Report](https://news.google.com/rss/articles/CBMiW0FVX3lxTE8tNVB5S0FaWmI5WHp4bDBsQzNBZHFqQ3hfUFgxcDM2QmZHcFY3RmdqMGwzOHFwN2V5WnRMOWIxdWhJanBTZm5RVy11RVhZLUtwRFRmTWZ0RVRXNGs?oc=5) — Rated R&B

@@ -75,7 +75,7 @@ aiDisclosure: >-
   Rumors and speculation are labeled as unconfirmed and updated or removed as
   facts develop.
 sensitivity: normal
-dateModified: '2026-07-18T23:02:40.583Z'
+dateModified: '2026-07-19T05:30:00.000Z'
 provenance:
   primaryEntity: Tom Holland
   claim: >-
@@ -102,7 +102,7 @@ Holland's playful quip, reported by Just Jared and Geo.tv, sparked laughter from
 
 ## A Whirlwind Press Tour
 
-On Friday, July 17, 2026—the same day *The Odyssey* opened nationwide—Holland and Zendaya were spotted on separate outings in New York before reuniting for a date night. They attended the Gold House x OpenTable dinner at the Japanese restaurant Wokuni, where Zendaya wore a sleek black wrap dress and Holland opted for a navy sweater and jeans, per Geo.tv.
+On Friday, July 16, 2026—the night before *The Odyssey* opened nationwide—Holland and Zendaya were spotted on separate outings in New York before reuniting for a date night. They attended the Gold House x OpenTable dinner at the Japanese restaurant Wokuni, where Zendaya wore a sleek black wrap dress and Holland opted for a navy sweater and jeans, per Geo.tv.
 
 The Wired interview also featured a more serious question about the film's plot. When asked "Why does Athena choose Odysseus?" Damon carefully avoided spoilers. "This is difficult in the context of our movie without giving things away. Because does Athena choose Odysseus or does Odysseus choose Athena?" he replied, according to the report.
 

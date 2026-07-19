@@ -1,5 +1,5 @@
 ---
-title: Paige DeSorbo Shuts Down Engagement Rumors Sparked by a Laughing Selfie
+title: Paige DeSorbo Shuts Down Engagement Rumors Sparked by a Laughing FaceTime Screenshot
 slug: paige-desorbo-shuts-down-engagement-rumors-sparked-by-a-laughing-selfie
 category: celebrity
 subcategory: news
@@ -83,7 +83,7 @@ aiDisclosure: >-
   Rumors and speculation are labeled as unconfirmed and updated or removed as
   facts develop.
 sensitivity: normal
-dateModified: '2026-07-19T03:00:57.883Z'
+dateModified: '2026-07-19T05:30:00.000Z'
 provenance:
   primaryEntity: Paige DeSorbo
   claim: Paige DeSorbo addresses rumors that she is engaged to Joe D'Amelio.
@@ -100,7 +100,7 @@ provenance:
   publishedAt: '2026-07-19T03:00:57.883Z'
 ---
 
-Paige DeSorbo confirmed she is not engaged, the Bravo alum said on the Friday, July 17, episode of her "Giggly Squad" podcast. The rumor mill started thanks to an innocent screenshot from her co-host.
+Paige DeSorbo confirmed she is not engaged, the Bravo alum said on the Friday, July 17, episode of her "Giggly Squad" podcast. The speculation began with an anonymous tip posted to DeuxMoi claiming she had gotten engaged in Italy; an innocent screenshot from her co-host then poured fuel on it.
 
 ## The Screenshot That Started It All
 Hannah Berner, 34, posted a screenshot of a FaceTime call where DeSorbo, 33, was laughing. "We were FaceTiming, as we do, and I smiled and Paige was dying laughing. It brings me joy to see you laughing so hard at my ugly face. So, I screenshotted it and I posted it so innocently." Social media users quickly interpreted the joyful image as an engagement announcement from DeSorbo. The reality star, however, was completely unaware of the post. "So, you started a rumor about me while I was, like, literally having IBS symptoms," she reportedly joked with Berner, "Did I do something to you? … My mom was getting text messages, she was like, ‘Wait, what?'"

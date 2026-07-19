@@ -75,7 +75,7 @@ aiDisclosure: >-
   Rumors and speculation are labeled as unconfirmed and updated or removed as
   facts develop.
 sensitivity: normal
-dateModified: '2026-07-18T07:01:30.624Z'
+dateModified: '2026-07-19T05:30:00.000Z'
 provenance:
   primaryEntity: Hannah Waddingham
   claim: Hannah Waddingham injured herself while filming stunts for her new show.
@@ -100,12 +100,10 @@ She described spending “a week learning the choreography of a fight sequence, 
 
 ## The Bathroom Brawl
 
-Despite the aches, the *Ted Lasso* star expressed immense pride in one particular scene: a bathroom fight while wearing a gold dress. She recalled going at it all day with such intensity that her stunt double was later asked to match her energy. “I was going at it all day, and when my stunt double went to do the wide shot, the director said, ‘Can we just raise the energy a bit? Hannah was literally biting the guy’s hand,’” Waddingham said.
+Despite the aches, the *Ted Lasso* star expressed immense pride in one particular scene: a bathroom fight while wearing a gold dress. She recalled going at it all day with such intensity that her stunt double, Chanique Greyling, told her she had never been on a job where the fight team had to be asked to tone things down. “I was going at it all day, and the director said, ‘Can we just raise the energy a bit? Hannah was literally biting the guy’s hand,’” Waddingham said.
 
-Waddingham’s candid take proves that for this star, age is just a number—even if that number comes with a few extra bruises.
+*Ride or Die* premieres on Prime Video.
 
 ## Sources
 
 - [Report](https://www.justjared.com/2026/07/17/hannah-waddingham-says-she-mangled-herself-filming-ride-or-die-stunts-at-51/) — Just Jared
-- [Report](https://news.google.com/rss/articles/CBMitgFBVV95cUxNVUtYMXloc2RUTm16TFR4RzFDRm83MnNpWkswS19XYjhsVWpodGh6Z1BNYjBxXzlKRkpyZXdIdlJ3dnRSRmQwdTZHZUJxaTJ6RzNKVS1WN3o2YTlBdDdEbTJiWUtSREhFSm5DNzRESXJKNnB6azVQQkhjZUFiYzRwZ09yVGlmY0YzOWtUYkhkcnN3YjN4dnhZZmVPVkZfVC1TZzVib0xSMzBaN2FBYl9lUDdmYXJ0QQ?oc=5) — People.com
-- [Report](https://news.google.com/rss/articles/CBMiuAFBVV95cUxNLXl5U2d3Q0xNMXhOeVVvdGRVWHJWYzZXcnZPWHNNT2lzQWttSld4NGxZOVdaNlV3MTVFN2hURTVHT3RkRnQyQmlKT2d2bDdlbkd6eGw1ck1HeS1ZdWlQRmw2VUFvR2hzVU1CMXR3UjFhR2FZb0l1YmpETGNvTjFpR2s2aTdyd3ZYM0Z1S2FMUlhFMVhNUUhaSjFXdTF2S0h4dDQwTTFYVVhmSWduUTlycE9uTUtlVUsx?oc=5) — Women's Health

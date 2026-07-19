@@ -35,8 +35,8 @@ keyTakeaways:
     The texts show MJ replying "Amen" and with a praying emoji to Bible verses
     shared by Kris Jenner in a family group chat.
   - >-
-    MJ Shannon, the family matriarch, died at age 91, as announced by Kim
-    Kardashian on Instagram on July 16.
+    MJ Shannon, the family matriarch, died at age 91, as announced by Kris
+    Jenner on Instagram on July 16.
 faq:
   - q: How old was Kim Kardashian's grandmother MJ Shannon when she died?
     a: Mary Jo "MJ" Shannon was 91 years old.
@@ -81,7 +81,7 @@ aiDisclosure: >-
   Rumors and speculation are labeled as unconfirmed and updated or removed as
   facts develop.
 sensitivity: normal
-dateModified: '2026-07-18T13:02:33.224Z'
+dateModified: '2026-07-19T05:30:00.000Z'
 provenance:
   primaryEntity: Kim Kardashian
   claim: >-

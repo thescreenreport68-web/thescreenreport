@@ -32,7 +32,7 @@ tags:
 keyTakeaways:
   - Jelly Roll and Bunnie Xo's divorce was finalized in July 2026.
   - >-
-    Jelly Roll filed for divorce in June 2026, citing irreconcilable
+    Jelly Roll filed for divorce on May 18, 2026, citing irreconcilable
     differences.
 faq:
   - q: When did Jelly Roll and Bunnie Xo get divorced?
@@ -55,7 +55,7 @@ relatedLinks: []
 whatWeKnow:
   - 'The divorce was finalized in July 2026, per Us Weekly.'
   - >-
-    Jelly Roll filed for divorce in June 2026, citing irreconcilable
+    Jelly Roll filed for divorce on May 18, 2026, citing irreconcilable
     differences.
   - Bunnie Xo helped Jelly Roll gain custody of his daughter.
 whatWeDont:
@@ -69,7 +69,7 @@ aiDisclosure: >-
   Rumors and speculation are labeled as unconfirmed and updated or removed as
   facts develop.
 sensitivity: normal
-dateModified: '2026-07-18T09:02:32.908Z'
+dateModified: '2026-07-19T05:30:00.000Z'
 provenance:
   primaryEntity: Jelly Roll
   claim: 'Jelly Roll''s family life, including his children and ex-wife Bunnie Xo.'
@@ -86,15 +86,15 @@ provenance:
   publishedAt: '2026-07-18T09:02:32.908Z'
 ---
 
-For years, Jelly Roll painted a picture of a rock-solid partnership with his wife, Bunnie Xo, crediting her with saving his life and family. That chapter has now closed. The country singer, whose real name is Jason DeFord, and Bunnie Xo finalized their divorce in July 2026, Us Weekly confirmed. The split came just months after Jelly Roll quietly filed for divorce in June 2026, citing "irreconcilable differences" as the reason.
+For years, Jelly Roll painted a picture of a rock-solid partnership with his wife, Bunnie Xo, crediting her with saving his life and family. That chapter has now closed. The country singer, whose real name is Jason DeFord, and Bunnie Xo finalized their divorce in July 2026, Us Weekly confirmed. The filing, which listed a separation date of May 9, 2026, cited irreconcilable differences.
 
-That same month, Jelly Roll also welcomed his son, Noah Buddy, with an ex-partner. Bunnie, who does not share biological children with Jelly Roll, was instrumental in his journey as a father. He previously told Billboard that he "I would have never got custody of my daughter without her. I wouldn’t have had the stability or the money.".
+Jelly Roll shares son Noah, born in 2016, with an ex-partner. Bunnie, who does not share biological children with Jelly Roll, was instrumental in his journey as a father. He previously told Billboard that he "I would have never got custody of my daughter without her. I wouldn’t have had the stability or the money.".
 
 ## A Family Forged
 
 Jelly Roll's path to fatherhood began while he was incarcerated. "A guard knocks on my cell door midafternoon during lockdown. He goes, ‘You had a kid today,’" he recalled. The news was a turning point. "I’ve never had nothing in life that urged me in the moment to know that I had to do something different. I have to figure this out right now." he said.
 
-Neither Jelly Roll nor Bunnie Xo has publicly commented on the finalized divorce proceedings.
+Bunnie Xo has spoken about the settlement publicly, telling listeners of her "Dumb Blonde" podcast in June that the decision was not mutual.
 
 ## Sources
 
