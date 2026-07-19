@@ -1,26 +1,188 @@
 {
-  "runId": "run-2026-07-19T21-02-20",
-  "builtAt": "2026-07-19T21:03:45.000Z",
-  "count": 14,
+  "runId": "run-2026-07-19T22-00-46",
+  "builtAt": "2026-07-19T22:02:10.910Z",
+  "count": 15,
   "topics": [
     {
-      "id": "news-john-leguizamo-discusses-the-odyssey",
-      "slug": "john-leguizamo-has-never-been-as-vulnerable-as-in-the-odyssey-it-was-s",
-      "title": "John Leguizamo Has Never Been as Vulnerable as in The Odyssey : “It Was So Intense for Me”",
+      "id": "news-princess-diaries-3-script-breakthrough",
+      "slug": "anne-hathaway-says-princess-diaries-3-had-a-story-breakthrough-after-h",
+      "title": "Anne Hathaway Says Princess Diaries 3 Had a Story Breakthrough After Having to Start Over With the Script",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "princess-diaries-3-script-breakthrough",
+      "primaryKeyword": "Princess Diaries 3",
+      "primaryEntity": "Princess Diaries 3",
+      "entities": [
+        "One Day",
+        "Anne Hathaway"
+      ],
+      "angle": "Anne Hathaway confirms script breakthrough for 'Princess Diaries 3'.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/film/news/anne-hathaway-princess-diaries-3-breakthrough-script-1236816029/",
+          "ageMin": 155,
+          "headline": "Anne Hathaway Says Princess Diaries 3 Had a Story Breakthrough After Having to Start Over With the Script: We are Moving in the Right Direction",
+          "summary": "“Princess Diaries 3” recently had a breakthrough after a scrapped script, Anne Hathaway revealed during an appearance on SiriusXM’s “Radio Andy.” “I’m busy making baby number three, and that has sort of taken the place of knowing when exactly I can make Princess Diaries 3, ” Hathaway said. “I can say I think we had a story [ ]"
+        },
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/anne-hathaway-princess-diaries-3-update-1236651735/",
+          "ageMin": 156,
+          "headline": "Anne Hathaway Reveals Princess Diaries 3 Update: We Had a Story Breakthrough",
+          "summary": "The Oscar winner played the beloved Mia Thermopolis in the 2001 and 2004 films."
+        }
+      ],
+      "ageMin": 155,
+      "_cand": {
+        "key": "rss:anne-hathaway-says-princess-diaries-3-had-a-story-breakthrou",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 2,
+      "verification": {
+        "tier1Count": 2,
+        "tier1Owners": 1,
+        "outletCount": 2,
+        "outlets": [
+          "Variety",
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 93,
+      "signals": {
+        "recency": 16,
+        "corroboration": 18,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 8,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "music-news-fifa-world-cup-final-halftime-show-performers",
+      "slug": "shakira-madonna-bts-justin-bieber-headline-first-ever-fifa-world-cup-f",
+      "title": "Shakira, Madonna, BTS, Justin Bieber Headline First-Ever FIFA World Cup Final Halftime Show",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "fifa-world-cup-final-halftime-show-performers",
+      "primaryKeyword": "fifa world cup halftime show",
+      "primaryEntity": "FIFA Sound",
+      "entities": [
+        "FIFA World Cup",
+        "Shakira",
+        "Madonna",
+        "BTS"
+      ],
+      "angle": "Global music stars headlined the first-ever FIFA World Cup Final halftime show.",
+      "tmdbType": "movie",
+      "source": "rss:Billboard",
+      "sources": [
+        {
+          "outlet": "Billboard",
+          "tier": 7,
+          "url": "https://www.billboard.com/lists/2026-world-cup-halftime-show-shakira-madonna-bieber-bts/",
+          "ageMin": 53,
+          "headline": "Shakira, Madonna, BTS, Justin Bieber More Take Over FIFA’s First-Ever World Cup Final Halftime Show",
+          "summary": "Burna Boy, Gustavo Dudamel, Chris Martin the PS22 Chorus joined a tightly packed 11-minute spectacle in New Jersey."
+        },
+        {
+          "outlet": "Rolling Stone",
+          "tier": 7,
+          "url": "https://www.rollingstone.com/music/music-news/justin-bieber-bts-shakira-madonna-performance-world-cup-1235594935/",
+          "ageMin": 80,
+          "headline": "Justin Bieber, Shakira, Madonna, BTS Deliver Electric Halftime Set at World Cup Final",
+          "summary": "Final match between Spain and Argentina at New York New Jersey Stadium was preceded by Post Malone performance"
+        },
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/music/music-news/fifa-world-cup-halftime-madonna-justin-bieber-bts-shakira-1236651689/",
+          "ageMin": 86,
+          "headline": "Madonna, Justin Bieber, BTS, Shakira Headline Jam-Packed First-Ever FIFA World Cup Final Halftime Show",
+          "summary": "The show featured an acoustic number from Bieber, an energetic dance performance from Shakira and nods to soccer throughout, with rewritten BTS lyrics and appearances from legendary players and 'Ted Lasso' stars."
+        }
+      ],
+      "ageMin": 53,
+      "_cand": {
+        "key": "rss:shakira-madonna-bts-justin-bieber-more-take-over-fifa-s-firs",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 3,
+      "verification": {
+        "tier1Count": 3,
+        "tier1Owners": 1,
+        "outletCount": 3,
+        "outlets": [
+          "Billboard",
+          "Rolling Stone",
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Billboard",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 90,
+      "signals": {
+        "recency": 24,
+        "corroboration": 24,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 15,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "A"
+    },
+    {
+      "id": "news-john-leguizamo-the-odyssey-intensity",
+      "slug": "john-leguizamo-on-the-odyssey-it-was-so-intense-for-me",
+      "title": "John Leguizamo on 'The Odyssey': 'It Was So Intense for Me'",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "john-leguizamo-discusses-the-odyssey",
+      "eventSlug": "john-leguizamo-the-odyssey-intensity",
       "primaryKeyword": "john leguizamo the odyssey",
       "primaryEntity": "John Leguizamo",
       "entities": [
-        "The Odyssey",
-        "Christopher Nolan"
+        "Christopher Nolan",
+        "The Odyssey"
       ],
-      "angle": "John Leguizamo describes his vulnerable and intense experience filming Christopher Nolan's 'The Odyssey'.",
+      "angle": "John Leguizamo discusses the emotional intensity of his role in Christopher Nolan's 'The Odyssey'.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
@@ -28,12 +190,12 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/movies/movie-features/john-leguizamo-the-odyssey-eumaeus-chris-nolan-interview-1236651694/",
-          "ageMin": 204,
+          "ageMin": 263,
           "headline": "John Leguizamo Has Never Been as Vulnerable as in The Odyssey : “It Was So Intense for Me”",
           "summary": "\"Working with Chris Nolan...you feel really seen,\" the actor behind Eumaeus tells The Hollywood Reporter in a wide-ranging conversation. \"I was able to tap into these really difficult, painful emotions from the depth of my soul.\""
         }
       ],
-      "ageMin": 204,
+      "ageMin": 263,
       "_cand": {
         "key": "rss:john-leguizamo-has-never-been-as-vulnerable-as-in-the-odysse",
         "popularity": 0,
@@ -72,218 +234,7 @@
       "tierClass": "A"
     },
     {
-      "id": "news-princess-diaries-3-script-breakthrough",
-      "slug": "anne-hathaway-says-princess-diaries-3-had-a-story-breakthrough-after-h",
-      "title": "Anne Hathaway Says Princess Diaries 3 Had a Story Breakthrough After Having to Start Over With the Script: We are Moving in the Right Direction",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "princess-diaries-3-script-breakthrough",
-      "primaryKeyword": "Princess Diaries 3",
-      "primaryEntity": "Princess Diaries 3",
-      "entities": [
-        "One Day",
-        "Anne Hathaway"
-      ],
-      "angle": "Anne Hathaway provides an update on 'Princess Diaries 3,' revealing a significant breakthrough in the script development.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/film/news/anne-hathaway-princess-diaries-3-breakthrough-script-1236816029/",
-          "ageMin": 97,
-          "headline": "Anne Hathaway Says Princess Diaries 3 Had a Story Breakthrough After Having to Start Over With the Script: We are Moving in the Right Direction",
-          "summary": "“Princess Diaries 3” recently had a breakthrough after a scrapped script, Anne Hathaway revealed during an appearance on SiriusXM’s “Radio Andy.” “I’m busy making baby number three, and that has sort of taken the place of knowing when exactly I can make Princess Diaries 3, ” Hathaway said. “I can say I think we had a story [ ]"
-        }
-      ],
-      "ageMin": 97,
-      "_cand": {
-        "key": "rss:anne-hathaway-says-princess-diaries-3-had-a-story-breakthrou",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 79,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "music-news-world-cup-final-halftime-show-justin-bieber-shakira-madonna-bts",
-      "slug": "justin-bieber-shakira-madonna-bts-deliver-electric-halftime-set-at-wor",
-      "title": "Justin Bieber, Shakira, Madonna, BTS Deliver Electric Halftime Set at World Cup Final",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "world-cup-final-halftime-show-justin-bieber-shakira-madonna-bts",
-      "primaryKeyword": "World Cup halftime show",
-      "primaryEntity": "World Cup Final",
-      "entities": [
-        "Justin Bieber",
-        "Shakira",
-        "Madonna",
-        "BTS"
-      ],
-      "angle": "Justin Bieber, Shakira, Madonna, and BTS performed at the World Cup Final halftime show.",
-      "tmdbType": "movie",
-      "source": "rss:Rolling Stone",
-      "sources": [
-        {
-          "outlet": "Rolling Stone",
-          "tier": 7,
-          "url": "https://www.rollingstone.com/music/music-news/justin-bieber-bts-shakira-madonna-performance-world-cup-1235594935/",
-          "ageMin": 22,
-          "headline": "Justin Bieber, Shakira, Madonna, BTS Deliver Electric Halftime Set at World Cup Final",
-          "summary": "Final match between Spain and Argentina at New York New Jersey Stadium was preceded by Post Malone performance"
-        },
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/music/music-news/fifa-world-cup-halftime-madonna-justin-bieber-bts-shakira-1236651689/",
-          "ageMin": 27,
-          "headline": "Madonna, Justin Bieber, BTS, Shakira Headline Jam-Packed First-Ever FIFA World Cup Final Halftime Show",
-          "summary": "The show featured an acoustic number from Bieber, an energetic dance performance from Shakira and nods to soccer throughout, with rewritten BTS lyrics and appearances from legendary players and 'Ted Lasso' stars."
-        }
-      ],
-      "ageMin": 22,
-      "_cand": {
-        "key": "rss:justin-bieber-shakira-madonna-bts-deliver-electric-halftime-",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 2,
-      "verification": {
-        "tier1Count": 2,
-        "tier1Owners": 1,
-        "outletCount": 2,
-        "outlets": [
-          "Rolling Stone",
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Rolling Stone",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 73,
-      "signals": {
-        "recency": 24,
-        "corroboration": 18,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 8,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-rick-devens-man-of-tomorrow-cameo-cancelled",
-      "slug": "james-gunn-planned-big-brother-star-rick-devens-cameo-in-man-of-tomorr",
-      "title": "James Gunn Planned 'Big Brother' Star Rick Devens Cameo in 'Man of Tomorrow' Before It Was Canceled",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "rick-devens-man-of-tomorrow-cameo-cancelled",
-      "primaryKeyword": "rick devens cameo",
-      "primaryEntity": "Man of Tomorrow (film)",
-      "entities": [
-        "James Gunn's PG Porn",
-        "James Gunn",
-        "Rick Devens"
-      ],
-      "angle": "James Gunn reveals a planned cameo for 'Big Brother' star Rick Devens in 'Man of Tomorrow' was cancelled due to filming conflicts.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/film/news/james-gunn-big-brother-rick-devens-man-of-tomorrow-cameo-1236815991/",
-          "ageMin": 233,
-          "headline": "James Gunn Gave ‘Big Brother 28’ Star Rick Devens a Cameo in ‘Man of Tomorrow’ but He ‘Had to Cancel’",
-          "summary": "Rick Devens was supposed to have a cameo in James Gunn s “Man of Tomorrow,” but the reality star had filming obligations with Big Brother. Gunn revealed the cameo after Devens gave the DC Studios co-head a shoutout during the live broadcast of “Big Brother” Season 28’s Thursday eviction episode. Gunn shared the clip on social [ ]"
-        }
-      ],
-      "ageMin": 233,
-      "_cand": {
-        "key": "rss:james-gunn-gave-big-brother-28-star-rick-devens-a-cameo-in-m",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 77,
-      "signals": {
-        "recency": 9,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-god-of-war-prime-video-new-lead-casting",
+      "id": "news-god-of-war-prime-video-new-lead-injury",
       "slug": "god-of-war-prime-video-series-to-cast-new-lead-after-on-set-injury",
       "title": "God of War: Prime Video Series to Cast New Lead After On Set Injury",
       "contentType": "news",
@@ -292,14 +243,14 @@
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "god-of-war-prime-video-new-lead-casting",
+      "eventSlug": "god-of-war-prime-video-new-lead-injury",
       "primaryKeyword": "god of war prime video casting",
       "primaryEntity": "God of War",
       "entities": [
         "God of War (TV series)",
         "Prime Video"
       ],
-      "angle": "The Prime Video 'God of War' series will cast a new lead actor following an on-set injury.",
+      "angle": "The 'God of War' series on Prime Video will cast a new lead actor following an on-set injury.",
       "tmdbType": "movie",
       "source": "gnews:TV Series Finale",
       "sources": [
@@ -307,12 +258,12 @@
           "outlet": "TV Series Finale",
           "tier": 5,
           "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQaVJubzMwODJjX3M1NTJRZG5kUXQ2WGoyVGpNbk05cnlib0ZOcEhqdmJJYzZMVHNTSm1qOUpodWt0cm01NnhBbmxmYk5KNlpFcHl3MXpnaWRFa1gwUnlzLUdxdVV0OUxKMTlqSHVzR0hyYnJ3WmhjRzYzX2FEelFvaU5jVnN0Y0c4MC04aHBMNXpUeFVyWDNWeWNGNDBuRzh1SFVxLUFIMk51d9IBqgFBVV95cUxQaVJubzMwODJjX3M1NTJRZG5kUXQ2WGoyVGpNbk05cnlib0ZOcEhqdmJJYzZMVHNTSm1qOUpodWt0cm01NnhBbmxmYk5KNlpFcHl3MXpnaWRFa1gwUnlzLUdxdVV0OUxKMTlqSHVzR0hyYnJ3WmhjRzYzX2FEelFvaU5jVnN0Y0c4MC04aHBMNXpUeFVyWDNWeWNGNDBuRzh1SFVxLUFIMk51dw?oc=5",
-          "ageMin": 383,
+          "ageMin": 442,
           "headline": "God of War: Prime Video Series to Cast New Lead After On Set Injury - TV Series Finale",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxQaVJubzMwODJjX3M1NTJRZG5kUXQ2WGoyVGpNbk05cnlib0ZOcEhqdmJJYzZMVHNTSm1qOUpodWt0cm01NnhBbmxmYk5KNlpFcHl3MXpnaWRFa1gwUnlzLUdxdVV0OUxKMTlqSHVzR0hyYnJ3WmhjRzYzX2FEelFvaU5jVnN0Y0c4MC04aHBMNXpUeFVyWDNWeWNGNDBuRzh1SFVxLUFIMk51d9IBqgFBVV95cUxQaVJubzM"
         }
       ],
-      "ageMin": 383,
+      "ageMin": 442,
       "_cand": {
         "key": "rss:god-of-war-prime-video-series-to-cast-new-lead-after-on-set-",
         "popularity": 0,
@@ -349,43 +300,119 @@
       "tierClass": "B"
     },
     {
-      "id": "music-news-future-12th-no-1-album-billboard-200",
-      "slug": "future-scores-12th-no-1-album-on-billboard-200-with-the-real-me",
-      "title": "Future Scores 12th No. 1 Album on Billboard 200 With ‘The Real Me’",
+      "id": "news-star-wars-1313-game-cancellation-wilson-bethel-casting",
+      "slug": "daredevil-born-again-star-wilson-bethel-almost-led-scrapped-star-wars-",
+      "title": "DAREDEVIL: BORN AGAIN Star Wilson Bethel Almost Led Scrapped STAR WARS 1313 Game",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "star-wars-1313-game-cancellation-wilson-bethel-casting",
+      "primaryKeyword": "star wars 1313 game",
+      "primaryEntity": "Star Wars 1313",
+      "entities": [
+        "Wilson Bethel",
+        "Daredevil: Born Again"
+      ],
+      "angle": "A scrapped Star Wars game is being discussed in relation to a Daredevil actor.",
+      "tmdbType": "movie",
+      "source": "gnews:Yahoo Tech",
+      "sources": [
+        {
+          "outlet": "Yahoo Tech",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFBWNkZkQmg5RkplQ1EtanVnN2JnOVhPNVlTak8yS090QVJJTDZrbVJ4R0QxajhLUG1ONUhZeHhxcERjU0dmRmlKMWxhVGo1LXVyeG1Ba2tDTDNnZzM2VDJLSXhwR1hJS1NVNU5IQkRvMEM1OGYzd1FzSFZR?oc=5",
+          "ageMin": 326,
+          "headline": "Is This James Bond or a Star Wars Game? - Yahoo Tech",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiekFVX3lxTFBWNkZkQmg5RkplQ1EtanVnN2JnOVhPNVlTak8yS090QVJJTDZrbVJ4R0QxajhLUG1ONUhZeHhxcERjU0dmRmlKMWxhVGo1LXVyeG1Ba2tDTDNnZzM2VDJLSXhwR1hJS1NVNU5IQkRvMEM1OGYzd1FzSFZR?oc=5\" target=\"_blank\" Is This James Bond or a Star Wars Game? /a nbsp; nbsp; font colo"
+        },
+        {
+          "outlet": "GeekTyrant",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOVkRpcnBvSndsQ2FZWDBSWFRPb1ZUYnV2Sm9LcDFPSTRORUx6WnA3bkluZ0MzeTRoQmszUHlHV0ctTlVDRWExRlF3VEhXeks4MFdwbUJoNklXUlZHRzcwVGUzaVR4TC1GUHNJZWdPOXlNOGJWUkltSW5RWFd4SGNpYkJkRWdZc0s1VXdleTNKUHhpaWxIeTVDNFBxMS1SeERaVi02aU95NGRFU3M?oc=5",
+          "ageMin": 327,
+          "headline": "DAREDEVIL: BORN AGAIN Star Wilson Bethel Almost Led Scrapped STAR WARS 1313 Game - GeekTyrant",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxOVkRpcnBvSndsQ2FZWDBSWFRPb1ZUYnV2Sm9LcDFPSTRORUx6WnA3bkluZ0MzeTRoQmszUHlHV0ctTlVDRWExRlF3VEhXeks4MFdwbUJoNklXUlZHRzcwVGUzaVR4TC1GUHNJZWdPOXlNOGJWUkltSW5RWFd4SGNpYkJkRWdZc0s1VXdleTNKUHhpaWxIeTVDNFBxMS1SeERaVi02aU95NGRFU3M?oc=5\" target=\"_blan"
+        }
+      ],
+      "ageMin": 326,
+      "_cand": {
+        "key": "rss:is-this-james-bond-or-a-star-wars-game-yahoo-tech",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 2,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 2,
+        "outlets": [
+          "Yahoo Tech",
+          "GeekTyrant"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "multiple outlets",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 70,
+      "signals": {
+        "recency": 9,
+        "corroboration": 14,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 12,
+        "trending": 8,
+        "spice": 4,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "music-news-jim-gilstrap-dies-at-79",
+      "slug": "jim-gilstrap-stevie-wonder-and-good-times-vocalist-dies-at-79",
+      "title": "Jim Gilstrap, Stevie Wonder and ‘Good Times’ Vocalist, Dies at 79",
       "contentType": "music-news",
       "formatTag": "music-news",
       "category": "music",
       "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
+      "eventType": "death",
+      "sensitivity": "high",
       "tier": "popular",
-      "eventSlug": "future-12th-no-1-album-billboard-200",
-      "primaryKeyword": "Future",
-      "primaryEntity": "Future",
+      "eventSlug": "jim-gilstrap-dies-at-79",
+      "primaryKeyword": "jim gilstrap death",
+      "primaryEntity": "Jim Gilstrap",
       "entities": [
-        "Billboard 200",
-        "The Rolling Stones"
+        "Michael Jackson's Thriller",
+        "Michael Jackson",
+        "Aretha Franklin",
+        "Dolly Parton"
       ],
-      "angle": "Rapper Future achieves a significant career milestone with his 12th number-one album on the Billboard 200 chart.",
+      "angle": "Jim Gilstrap, the vocalist behind the 'Good Times' theme and a collaborator with music legends, has died at 79.",
       "tmdbType": "movie",
       "source": "rss:Billboard",
       "sources": [
         {
           "outlet": "Billboard",
           "tier": 7,
-          "url": "https://www.billboard.com/music/chart-beat/future-the-real-me-number-one-billboard-200-albums-chart-1236297618/",
-          "ageMin": 57,
-          "headline": "Future Scores 12th No. 1 Album on Billboard 200 With ‘The Real Me’",
-          "summary": "Plus, The Rolling Stones and the Heated Rivalry soundtrack debut in the top 10."
+          "url": "https://www.billboard.com/music/rb-hip-hop/jim-gilstrap-death-stevie-wonder-good-times-vocalist-dies-1236297595/",
+          "ageMin": 104,
+          "headline": "Jim Gilstrap, Stevie Wonder and ‘Good Times’ Vocalist, Dies at 79",
+          "summary": "Versatile tenor’s credits include Michael Jackson, Aretha Franklin Dolly Parton — plus his own international hit ‘Swing Your Daddy.’"
         }
       ],
-      "ageMin": 57,
+      "ageMin": 104,
       "_cand": {
-        "key": "rss:future-scores-12th-no-1-album-on-billboard-200-with-the-real",
+        "key": "rss:jim-gilstrap-stevie-wonder-and-good-times-vocalist-dies-at-7",
         "popularity": 0,
         "kind": "rss-news"
       },
-      "breakoutVelocity": 0,
       "corroborationCount": 1,
       "verification": {
         "tier1Count": 1,
@@ -395,18 +422,18 @@
           "Billboard"
         ],
         "maxTier": 7,
-        "sensitivity": "normal",
+        "sensitivity": "high",
         "attribution": "Billboard",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 63,
+      "priority": 60,
       "signals": {
-        "recency": 24,
+        "recency": 16,
         "corroboration": 12,
         "status": 18,
-        "type": 9,
+        "type": 14,
         "pop": 0,
         "breakout": 0,
         "big": 0,
@@ -414,42 +441,42 @@
         "spice": 0,
         "softTv": 0
       },
-      "tierClass": "B"
+      "tierClass": "S"
     },
     {
-      "id": "news-james-gunn-rick-devens-man-of-tomorrow-cameo-cancel",
-      "slug": "james-gunn-says-big-brother-28-s-rick-devens-was-set-for-man-of-tomorr",
-      "title": "James Gunn Says Big Brother 28 s Rick Devens Was Set For Man Of Tomorrow Cameo But Had To Cancel Due To CBS Competition",
+      "id": "news-danny-boyle-ink-sells-netflix-venice",
+      "slug": "danny-boyle-s-ink-sells-to-netflix-in-first-big-sale-way-ahead-of-veni",
+      "title": "Danny Boyle's Ink Sells to Netflix in First Big Sale (Way) Ahead of Venice Premiere",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
-      "eventType": "casting",
+      "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "james-gunn-rick-devens-man-of-tomorrow-cameo-cancel",
-      "primaryKeyword": "James Gunn Man of Tomorrow",
-      "primaryEntity": "James Gunn's PG Porn",
+      "eventSlug": "danny-boyle-ink-sells-netflix-venice",
+      "primaryKeyword": "Danny Boyle Ink Netflix",
+      "primaryEntity": "Ink (film)",
       "entities": [
-        "James Gunn",
-        "Man of Tomorrow",
-        "Rick Devens"
+        "Danny Boyle",
+        "Netflix",
+        "Venice Film Festival"
       ],
-      "angle": "Director James Gunn reveals a planned cameo for 'Big Brother' personality Rick Devens in 'Man of Tomorrow' was canceled due to network competition.",
+      "angle": "Danny Boyle's new film 'Ink' sold to Netflix ahead of its Venice premiere.",
       "tmdbType": "movie",
-      "source": "rss:Deadline",
+      "source": "rss:IndieWire",
       "sources": [
         {
-          "outlet": "Deadline",
+          "outlet": "IndieWire",
           "tier": 7,
-          "url": "https://deadline.com/2026/07/james-gunn-big-brother-28-rick-devens-superman-cameo-1236997635/",
-          "ageMin": 1019,
-          "headline": "James Gunn Says Big Brother 28 s Rick Devens Was Set For Man Of Tomorrow Cameo But Had To Cancel Due To CBS Competition",
-          "summary": "James Gunn is a fan of Big Brother, and his friend Rick Devens joined the cast of Season 28 of the CBS competition. On Thursday s eviction episode, Devens gave Gunn a shoutout during the live broadcast after sharing his vote to evict. The DC Studios co-head shared the clip of Devens name-dropping him on live [ ]"
+          "url": "https://www.indiewire.com/news/breaking-news/danny-boyle-ink-netflix-venice-sale-1235206128/",
+          "ageMin": 2840,
+          "headline": "Danny Boyle s Ink Sells to Netflix in First Big Sale (Way) Ahead of Venice Premiere",
+          "summary": "The film about Larry Lamb, Rupert Murdoch, and the birth of The Sun tabloid is the opening night film at the Biennale."
         }
       ],
-      "ageMin": 1019,
+      "ageMin": 2840,
       "_cand": {
-        "key": "rss:james-gunn-says-big-brother-28-s-rick-devens-was-set-for-man",
+        "key": "rss:danny-boyle-s-ink-sells-to-netflix-in-first-big-sale-way-ahe",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -459,21 +486,21 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Deadline"
+          "IndieWire"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Deadline",
+        "attribution": "IndieWire",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 69,
+      "priority": 64,
       "signals": {
         "recency": 1,
         "corroboration": 12,
         "status": 18,
-        "type": 14,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
         "big": 24,
@@ -484,17 +511,17 @@
       "tierClass": "B"
     },
     {
-      "id": "news-heartstopper-forever-finale-breakdown",
-      "slug": "heartstopper-forever-director-writer-and-stars-joe-locke-and-kit-conno",
-      "title": "‘Heartstopper Forever’ Director, Writer and Stars Joe Locke and Kit Connor on the Finale: “It Connects the Whole Heartstopper Gang”",
+      "id": "news-heartstopper-forever-finale-discussion",
+      "slug": "heartstopper-forever-stars-and-creator-on-the-finale",
+      "title": "‘Heartstopper Forever’ Stars and Creator on the Finale",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "heartstopper-forever-finale-breakdown",
-      "primaryKeyword": "heartstopper",
+      "eventSlug": "heartstopper-forever-finale-discussion",
+      "primaryKeyword": "Heartstopper finale",
       "primaryEntity": "Heartstopper",
       "entities": [
         "Joe Locke",
@@ -502,7 +529,7 @@
         "Alice Oseman",
         "Wash Westmoreland"
       ],
-      "angle": "Stars Joe Locke and Kit Connor, writer Alice Oseman, and director Wash Westmoreland discuss the finale of 'Heartstopper Forever,' highlighting its connection to the main cast.",
+      "angle": "Stars and creators of 'Heartstopper' discuss the finale and its changes from the book.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
@@ -510,12 +537,12 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/movies/movie-features/heartstopper-forever-ending-kit-connor-joe-lock-interview-1236647039/",
-          "ageMin": 1712,
+          "ageMin": 1771,
           "headline": "‘Heartstopper Forever’ Director, Writer and Stars Joe Locke and Kit Connor on the Finale: “It Connects the Whole Heartstopper Gang”",
           "summary": "Stars Connor and Locke, creator Alice Oseman and director Wash Westmoreland break down the film’s biggest change from book to screen, alongside the intimacy, break-ups, and ambiguous endings from the final chapter."
         }
       ],
-      "ageMin": 1712,
+      "ageMin": 1771,
       "_cand": {
         "key": "rss:-heartstopper-forever-director-writer-and-stars-joe-locke-an",
         "popularity": 0,
@@ -554,156 +581,23 @@
       "tierClass": "A"
     },
     {
-      "id": "news-damson-idris-f1-the-movie-sequel-conversations",
-      "slug": "damson-idris-teases-exciting-conversations-for-f1-the-movie-sequel",
-      "title": "Damson Idris Teases 'Exciting Conversations' for F1 The Movie Sequel",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "damson-idris-f1-the-movie-sequel-conversations",
-      "primaryKeyword": "F1 The Movie sequel",
-      "primaryEntity": "F1",
-      "entities": [
-        "F1 The Movie",
-        "Damson Idris"
-      ],
-      "angle": "Damson Idris teases potential sequel talks for 'F1 The Movie'.",
-      "tmdbType": "movie",
-      "source": "gnews:Motorsport.com",
-      "sources": [
-        {
-          "outlet": "Motorsport.com",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNQWNTV1Y3U012dGxkZXZVdWpBOVdRUVBoeVlsT3JvQVVwOE1zNGtyNnc0aFR1dWZTR1ZTQ0R4LTh5cTByN0x1WFpZU1FibWdvcTh1MG9VTWdmNUh1ajF2ckhoV0YyRWtWLVJpaE90NDVLbS1iMVctVVZ5cmZwYjZYYkd6NEtXLTdvUFhWYnRETzdXbXRGOWVXTEZDdmh2ZzZlaVV2WA?oc=5",
-          "ageMin": 1479,
-          "headline": "Damson Idris teases \"exciting conversations\" over \"F1 The Movie\" sequel - Motorsport.com",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxNQWNTV1Y3U012dGxkZXZVdWpBOVdRUVBoeVlsT3JvQVVwOE1zNGtyNnc0aFR1dWZTR1ZTQ0R4LTh5cTByN0x1WFpZU1FibWdvcTh1MG9VTWdmNUh1ajF2ckhoV0YyRWtWLVJpaE90NDVLbS1iMVctVVZ5cmZwYjZYYkd6NEtXLTdvUFhWYnRETzdXbXRGOWVXTEZDdmh2ZzZlaVV2WA?oc=5\" target=\"_blank\" Damson"
-        }
-      ],
-      "ageMin": 1479,
-      "_cand": {
-        "key": "rss:damson-idris-teases-exciting-conversations-over-f1-the-movie",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "Motorsport.com"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "Motorsport.com",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 65,
-      "signals": {
-        "recency": 1,
-        "corroboration": 8,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-danny-boyle-ink-sells-netflix-venice",
-      "slug": "danny-boyle-s-ink-sells-to-netflix-in-first-big-sale-way-ahead-of-veni",
-      "title": "Danny Boyle's Ink Sells to Netflix in First Big Sale (Way) Ahead of Venice Premiere",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "danny-boyle-ink-sells-netflix-venice",
-      "primaryKeyword": "Danny Boyle Ink",
-      "primaryEntity": "Ink (film)",
-      "entities": [
-        "Danny Boyle",
-        "Netflix",
-        "Venice Film Festival"
-      ],
-      "angle": "Danny Boyle's new film 'Ink' acquired by Netflix ahead of its Venice premiere.",
-      "tmdbType": "movie",
-      "source": "rss:IndieWire",
-      "sources": [
-        {
-          "outlet": "IndieWire",
-          "tier": 7,
-          "url": "https://www.indiewire.com/news/breaking-news/danny-boyle-ink-netflix-venice-sale-1235206128/",
-          "ageMin": 2782,
-          "headline": "Danny Boyle s Ink Sells to Netflix in First Big Sale (Way) Ahead of Venice Premiere",
-          "summary": "The film about Larry Lamb, Rupert Murdoch, and the birth of The Sun tabloid is the opening night film at the Biennale."
-        }
-      ],
-      "ageMin": 2782,
-      "_cand": {
-        "key": "rss:danny-boyle-s-ink-sells-to-netflix-in-first-big-sale-way-ahe",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "IndieWire"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "IndieWire",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 64,
-      "signals": {
-        "recency": 1,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-aliens-40th-anniversary-cameron-quit-twice",
+      "id": "news-aliens-40th-anniversary-james-cameron-quit-twice",
       "slug": "aliens-at-40-james-cameron-s-sequel-is-a-sci-fi-icon-but-did-you-know-",
-      "title": "'Aliens' at 40: James Cameron's sequel is a sci-fi icon, but did you know he quit the movie twice?",
+      "title": "'Aliens' at 40: James Cameron's Sequel is a Sci-Fi Icon, But Did You Know He Quit Twice?",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "aliens-40th-anniversary-cameron-quit-twice",
-      "primaryKeyword": "Aliens movie trivia",
+      "eventSlug": "aliens-40th-anniversary-james-cameron-quit-twice",
+      "primaryKeyword": "Aliens 40th anniversary",
       "primaryEntity": "Aliens",
       "entities": [
         "Aliens (1986 film)",
         "James Cameron"
       ],
-      "angle": "Interesting behind-the-scenes fact about James Cameron's 'Aliens' on its 40th anniversary.",
+      "angle": "Celebrating the 40th anniversary of 'Aliens,' this piece highlights a lesser-known fact about James Cameron's involvement.",
       "tmdbType": "movie",
       "source": "gnews:Space",
       "sources": [
@@ -711,12 +605,12 @@
           "outlet": "Space",
           "tier": 5,
           "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPOW01a1ZmVGdvLWRkdUt5NDE1aXc4TmhVeEF2U21UUWFibERsZnN2X3dTZUR6emNwYWV0UVA3YXN2Q1J0VzYxLTBWNjNuNkFtWEotSW53NFFkT29OemJVaU1nbV9GUndIY0J2V1UwNTViblNEMjNUdE9lRkNRZ3U3czhlb0NUWnpUb3hqdENWa1ZCNGdhSGdOb1pyaFRxUk9QT2tSTkFMaHh1NUd1VWh1eTNKd2NsQ1lKZ3RSZVd3ZFVpbG5WTlhSOFlrd21UTkRscGpSTDlkSDFRWlJOMWVZbA?oc=5",
-          "ageMin": 242,
+          "ageMin": 301,
           "headline": "'Aliens' at 40: James Cameron's sequel is a sci-fi icon, but did you know he quit the movie twice? - Space",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMi4AFBVV95cUxPOW01a1ZmVGdvLWRkdUt5NDE1aXc4TmhVeEF2U21UUWFibERsZnN2X3dTZUR6emNwYWV0UVA3YXN2Q1J0VzYxLTBWNjNuNkFtWEotSW53NFFkT29OemJVaU1nbV9GUndIY0J2V1UwNTViblNEMjNUdE9lRkNRZ3U3czhlb0NUWnpUb3hqdENWa1ZCNGdhSGdOb1pyaFRxUk9QT2tSTkFMaHh1NUd1VWh1eTNKd2NsQ1lKZ3R"
         }
       ],
-      "ageMin": 242,
+      "ageMin": 301,
       "_cand": {
         "key": "rss:-aliens-at-40-james-cameron-s-sequel-is-a-sci-fi-icon-but-di",
         "popularity": 0,
@@ -753,40 +647,38 @@
       "tierClass": "C"
     },
     {
-      "id": "news-world-cup-final-star-spotting",
-      "slug": "world-cup-final-star-spotting-matt-damon-tom-cruise-jay-z-beyonc-and-t",
-      "title": "World Cup Final Star-Spotting: Matt Damon, Tom Cruise, Jay-Z, Beyoncé and Timothée Chalamet in Attendance",
+      "id": "news-jason-sudeikis-ted-lasso-world-cup-halftime",
+      "slug": "jason-sudeikis-brings-ted-lasso-to-world-cup-halftime-show-to-hype-up-",
+      "title": "Jason Sudeikis Brings Ted Lasso to World Cup Halftime Show to Hype Up Justin Bieber",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "world-cup-final-star-spotting",
-      "primaryKeyword": "World Cup Final celebrities",
-      "primaryEntity": "World Cup Final",
+      "eventSlug": "jason-sudeikis-ted-lasso-world-cup-halftime",
+      "primaryKeyword": "Jason Sudeikis Ted Lasso World Cup",
+      "primaryEntity": "Jason Sudeikis",
       "entities": [
-        "Matt Damon",
-        "Tom Cruise",
-        "Jay-Z",
-        "Beyoncé"
+        "Ted Lasso",
+        "World Cup"
       ],
-      "angle": "Numerous A-list celebrities spotted at the World Cup Final.",
+      "angle": "Jason Sudeikis made a surprise appearance as Ted Lasso during the World Cup halftime show.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
         {
           "outlet": "THR",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/tv/tv-news/world-cup-final-2026-celebrities-in-attendance-1236651733/",
-          "ageMin": 3,
-          "headline": "World Cup Final Star-Spotting: Matt Damon, Tom Cruise, Jay-Z, Beyoncé and Timothée Chalamet in Attendance",
-          "summary": "New York-New Jersey Stadium was packed with celebrities on Sunday as A-listers from film, TV, music and more turned up to see Argentina vs. Spain."
+          "url": "https://www.hollywoodreporter.com/tv/tv-news/jason-sudeikis-ted-lasso-cameo-world-cup-halftime-show-1236651814/",
+          "ageMin": 9,
+          "headline": "Jason Sudeikis Brings Ted Lasso to World Cup Halftime Show to Hype Up Justin Bieber",
+          "summary": "Sudeikis had a surprise cameo during the first-ever World Cup Final halftime show, weeks before 'Ted Lasso' returns with season four in August."
         }
       ],
-      "ageMin": 3,
+      "ageMin": 9,
       "_cand": {
-        "key": "rss:world-cup-final-star-spotting-matt-damon-tom-cruise-jay-z-be",
+        "key": "rss:jason-sudeikis-brings-ted-lasso-to-world-cup-halftime-show-t",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -821,40 +713,40 @@
       "tierClass": "B"
     },
     {
-      "id": "news-madonna-muppets-justin-bieber-world-cup-halftime-show",
-      "slug": "madonna-muppets-justin-bieber-take-world-cup-stage-for-star-studded-ha",
-      "title": "Madonna, Muppets, Justin Bieber Take World Cup Stage for Star-Studded Halftime Show",
+      "id": "news-world-cup-halftime-show-madonna-bts-bieber",
+      "slug": "madonna-bts-and-bieber-to-headline-world-cup-halftime-show",
+      "title": "Madonna, BTS, and Bieber to Headline World Cup Halftime Show",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
-      "eventType": "other",
+      "eventType": "announcement",
       "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "madonna-muppets-justin-bieber-world-cup-halftime-show",
-      "primaryKeyword": "World Cup halftime show",
+      "eventSlug": "world-cup-halftime-show-madonna-bts-bieber",
+      "primaryKeyword": "world cup halftime show",
       "primaryEntity": "World Cup",
       "entities": [
         "Madonna",
-        "The Muppets",
+        "BTS",
         "Justin Bieber"
       ],
-      "angle": "Madonna, The Muppets, and Justin Bieber among stars performing at the World Cup halftime show.",
+      "angle": "Pop culture titans Madonna, BTS, and Justin Bieber are set to headline the World Cup halftime show, bringing massive global star power to the event.",
       "tmdbType": "movie",
-      "source": "gnews:KOCO",
+      "source": "gnews:The Mighty 790 KFGO",
       "sources": [
         {
-          "outlet": "KOCO",
+          "outlet": "The Mighty 790 KFGO",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9sck9TUjhvbHVWRkRIQUF2SHRkcllWY1ZEOGZaX040RWNJcWNVZFA0TEFtaUgtX0Q5M2NTRFFDVzVJbkwtRkt0STlkM0VFZEQtczJRVUplQW95M2dLNXhOLUZtR1p1RFMxQmxkNkRR?oc=5",
-          "ageMin": 27,
-          "headline": "Madonna, the Muppets Justin Bieber and others take World Cup stage for star-studded halftime show - KOCO",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMibkFVX3lxTE9sck9TUjhvbHVWRkRIQUF2SHRkcllWY1ZEOGZaX040RWNJcWNVZFA0TEFtaUgtX0Q5M2NTRFFDVzVJbkwtRkt0STlkM0VFZEQtczJRVUplQW95M2dLNXhOLUZtR1p1RFMxQmxkNkRR?oc=5\" target=\"_blank\" Madonna, the Muppets Justin Bieber and others take World Cup stage for star-stud"
+          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNeldYWU1KeElFdk1wYV8tS09XakxqZ1pNQy1ubXhtbXUxbXROTWtka3FtbHlWRmwwcUZ2eERDbzhsbnM2NEhvU1B0RHJiYS1sTjM3bVpMYzByQnFEa2dIbWFTS3ZGTHNzdmRqQ3hlLVhFRFJqLVJqR2lCUzhjVWtES2RGZkh3U29NRlA5ZWd0RGpuMWVxM1VfcmtpTGVvbmNPNjIzRA?oc=5",
+          "ageMin": 46,
+          "headline": "Soccer-Madonna, BTS and Bieber bring star power to World Cup halftime show - The Mighty 790 KFGO",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxNeldYWU1KeElFdk1wYV8tS09XakxqZ1pNQy1ubXhtbXUxbXROTWtka3FtbHlWRmwwcUZ2eERDbzhsbnM2NEhvU1B0RHJiYS1sTjM3bVpMYzByQnFEa2dIbWFTS3ZGTHNzdmRqQ3hlLVhFRFJqLVJqR2lCUzhjVWtES2RGZkh3U29NRlA5ZWd0RGpuMWVxM1VfcmtpTGVvbmNPNjIzRA?oc=5\" target=\"_blank\" Soccer"
         }
       ],
-      "ageMin": 27,
+      "ageMin": 46,
       "_cand": {
-        "key": "rss:madonna-the-muppets-justin-bieber-and-others-take-world-cup-",
+        "key": "rss:soccer-madonna-bts-and-bieber-bring-star-power-to-world-cup-",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -864,19 +756,220 @@
         "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "KOCO"
+          "The Mighty 790 KFGO"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "KOCO",
+        "attribution": "The Mighty 790 KFGO",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 55,
+      "priority": 59,
       "signals": {
         "recency": 24,
         "corroboration": 8,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-fifa-world-cup-final-celebrity-attendees",
+      "slug": "world-cup-final-star-spotting-matt-damon-tom-cruise-jay-z-beyonc-and-t",
+      "title": "World Cup Final Star-Spotting: Matt Damon, Tom Cruise, Jay-Z, Beyoncé and Timothée Chalamet in Attendance",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "appearance",
+      "sensitivity": "normal",
+      "eventSlug": "fifa-world-cup-final-celebrity-attendees",
+      "primaryKeyword": "world cup final celebrities",
+      "primaryEntity": "FIFA World Cup",
+      "entities": [
+        "Matt Damon",
+        "Tom Cruise",
+        "Jay-Z",
+        "Beyoncé"
+      ],
+      "angle": "Hollywood A-listers gathered to watch the FIFA World Cup Final.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/tv/tv-news/world-cup-final-2026-celebrities-in-attendance-1236651733/",
+          "ageMin": 61,
+          "headline": "World Cup Final Star-Spotting: Matt Damon, Tom Cruise, Jay-Z, Beyoncé and Timothée Chalamet in Attendance",
+          "summary": "New York-New Jersey Stadium was packed with celebrities on Sunday as A-listers from film, TV, music and more turned up to see Argentina vs. Spain."
+        }
+      ],
+      "ageMin": 61,
+      "_cand": {
+        "key": "rss:world-cup-final-star-spotting-matt-damon-tom-cruise-jay-z-be",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 52,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 6,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-tom-cruise-hollywood-fifa-world-cup-final",
+      "slug": "tom-cruise-and-half-of-hollywood-light-up-the-2026-world-cup-final",
+      "title": "Tom Cruise and Half of Hollywood Light Up the 2026 World Cup Final",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "appearance",
+      "sensitivity": "normal",
+      "eventSlug": "tom-cruise-hollywood-fifa-world-cup-final",
+      "primaryKeyword": "tom cruise world cup",
+      "primaryEntity": "FIFA World Cup",
+      "entities": [
+        "Tom Cruise",
+        "Lionel Messi",
+        "Cristiano Ronaldo",
+        "Neymar"
+      ],
+      "angle": "Tom Cruise and a significant portion of Hollywood were in attendance at the record-breaking FIFA World Cup Final.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/sports/news/tom-cruise-2026-world-cup-final-hollywood-jason-sudeikis-justin-bieber-1236816132/",
+          "ageMin": 104,
+          "headline": "Tom Cruise and Half of Hollywood Light Up the 2026 World Cup Final",
+          "summary": "The 2026 FIFA World Cup has smashed ratings records in the U.S. and around the world, owing to its unique mix of star power — Lionel Messi, Cristiano Ronaldo and Neymar performing in perhaps their final World Cup matches, joined by younger stars Kylian Mbappe, Erling Haaland and Lamine Yamal — a North American setting [ ]"
+        }
+      ],
+      "ageMin": 104,
+      "_cand": {
+        "key": "rss:tom-cruise-and-half-of-hollywood-light-up-the-2026-world-cup",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 52,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 6,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-tom-cruise-world-cup-final-appearance",
+      "slug": "tom-cruise-makes-appearance-at-world-cup-final-to-celebrate-a-tourname",
+      "title": "Tom Cruise Makes Appearance At World Cup Final To Celebrate A Tournament That Brought The World Together",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "tom-cruise-world-cup-final-appearance",
+      "primaryKeyword": "Tom Cruise World Cup",
+      "primaryEntity": "Tom Cruise",
+      "entities": [
+        "2026 FIFA World Cup"
+      ],
+      "angle": "Tom Cruise makes surprise appearance at the World Cup Final.",
+      "tmdbType": "movie",
+      "source": "rss:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/tom-cruise-world-cup-final-celebrate-tournament-football-1236997840/",
+          "ageMin": 159,
+          "headline": "Tom Cruise Makes Appearance At World Cup Final To Celebrate A Tournament That Brought The World Together : This Is Unity This Is Greatness",
+          "summary": "Tom Cruise made a guest appearance during the pre-show for the 2026 FIFA World Cup final. Ahead of the matchup between Spain and Argentina to find out who becomes the soccer champion, the Digger star took the stage to deliver some encouraging words. More than 30 days ago, 48 nations began a journey, Cruise said. [ ]"
+        }
+      ],
+      "ageMin": 159,
+      "_cand": {
+        "key": "rss:tom-cruise-makes-appearance-at-world-cup-final-to-celebrate-",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 51,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
         "status": 18,
         "type": 5,
         "pop": 0,
@@ -889,38 +982,39 @@
       "tierClass": "C"
     },
     {
-      "id": "news-shaq-no-invite-taylor-swift-travis-kelce-wedding",
-      "slug": "shaq-says-he-didn-t-get-an-invite-to-taylor-swift-and-travis-kelce-s-w",
-      "title": "Shaq Says He Didn't Get an Invite to Taylor Swift and Travis Kelce's Wedding",
+      "id": "news-melanie-chisholm-chris-dingwall-wedding",
+      "slug": "celeb-weddings-of-2026-melanie-chisholm-and-chris-dingwall-more-stars-",
+      "title": "Celeb Weddings of 2026: Melanie Chisholm and Chris Dingwall, More Stars Who Tied the Knot This Year",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
-      "eventType": "other",
+      "eventType": "marriage",
       "sensitivity": "normal",
-      "eventSlug": "shaq-no-invite-taylor-swift-travis-kelce-wedding",
-      "primaryKeyword": "Shaquille O'Neal",
-      "primaryEntity": "Shaquille O'Neal",
+      "tier": "popular",
+      "eventSlug": "melanie-chisholm-chris-dingwall-wedding",
+      "primaryKeyword": "Melanie Chisholm wedding",
+      "primaryEntity": "Melanie C",
       "entities": [
-        "Taylor Swift",
-        "Travis Kelce"
+        "Melanie Chisholm",
+        "Chris Dingwall"
       ],
-      "angle": "Shaquille O'Neal claims he was not invited to Taylor Swift and Travis Kelce's wedding.",
+      "angle": "Melanie Chisholm (Sporty Spice) tied the knot with Chris Dingwall in 2026.",
       "tmdbType": "movie",
-      "source": "gnews:Complex",
+      "source": "gnews:Us Weekly",
       "sources": [
         {
-          "outlet": "Complex",
+          "outlet": "Us Weekly",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPWHBQT2RhTWxyUkx2eEJZVl90bWxkLS0yOUw2MXZsNndKTDBFNDV2ekx5LXlHQnhTT3M0WGVqYmF6WVBsQ054Q0FHOUFvZUFpcXAwVGgyU21RQXFWN2xOcXI0d3VQcWxiX1VOLXdFWC1qSkxxUVJ5N0ljNUNIbnhCVEhwZkVjWG4zU2Rhdi1EOVcwMmIwYlRuUkw5eWc?oc=5",
-          "ageMin": 46,
-          "headline": "Shaq Says He Didn't Get an Invite to Taylor Swift and Travis Kelce's Wedding - Complex",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMinAFBVV95cUxPWHBQT2RhTWxyUkx2eEJZVl90bWxkLS0yOUw2MXZsNndKTDBFNDV2ekx5LXlHQnhTT3M0WGVqYmF6WVBsQ054Q0FHOUFvZUFpcXAwVGgyU21RQXFWN2xOcXI0d3VQcWxiX1VOLXdFWC1qSkxxUVJ5N0ljNUNIbnhCVEhwZkVjWG4zU2Rhdi1EOVcwMmIwYlRuUkw5eWc?oc=5\" target=\"_blank\" Shaq Says He Didn"
+          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOQlZDQWppQlJaSlRmazNMN1dwejhnMXlIRWpDLTRDT1o1X3E2RHZrampZa2xuTExfVENQVm1sV2JFd1Vac2RSV0ROSGJsb0lLSHlDY0JGN2NhRm5Qc2Z1SG42MEFTY2pYUFE2d3N4SzFQRHM2TU5JMDZZSW5BVGRMaldCU0dURjlZS09nRmNyQy10UlhJbGVZQl82SkJsamNMandEMXIyWDNsRE1jZUlB?oc=5",
+          "ageMin": 108,
+          "headline": "Celeb Weddings of 2026: Melanie Chisholm and Chris Dingwall, More Stars Who Tied the Knot This Year - Us Weekly",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxOQlZDQWppQlJaSlRmazNMN1dwejhnMXlIRWpDLTRDT1o1X3E2RHZrampZa2xuTExfVENQVm1sV2JFd1Vac2RSV0ROSGJsb0lLSHlDY0JGN2NhRm5Qc2Z1SG42MEFTY2pYUFE2d3N4SzFQRHM2TU5JMDZZSW5BVGRMaldCU0dURjlZS09nRmNyQy10UlhJbGVZQl82SkJsamNMandEMXIyWDNsRE1jZUlB?oc=5\" target=\""
         }
       ],
-      "ageMin": 46,
+      "ageMin": 108,
       "_cand": {
-        "key": "rss:shaq-says-he-didn-t-get-an-invite-to-taylor-swift-and-travis",
+        "key": "rss:celeb-weddings-of-2026-melanie-chisholm-and-chris-dingwall-m",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -930,21 +1024,21 @@
         "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "Complex"
+          "Us Weekly"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "Complex",
+        "attribution": "Us Weekly",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 55,
+      "priority": 50,
       "signals": {
-        "recency": 24,
+        "recency": 16,
         "corroboration": 8,
         "status": 18,
-        "type": 5,
+        "type": 8,
         "pop": 0,
         "breakout": 0,
         "big": 0,
