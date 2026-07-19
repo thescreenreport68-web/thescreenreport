@@ -395,6 +395,17 @@
    "film": "Evil Dead Burn",
    "tmdbId": null,
    "eventType": "boxoffice"
+  },
+  {
+   "key": "disclosure-day-bo-update-d36|BO-UPDATE",
+   "at": "2026-07-19T09:34:28.273Z",
+   "eventSlug": "disclosure-day-bo-update-d36",
+   "form": "BO-UPDATE",
+   "slug": "disclosure-day-box-office-day-36-adds-400-000-as-domestic-total-hits-113-7",
+   "title": "Emily Blunt's 'Disclosure Day' Nears $114M Domestic but Falls Short of $280M Break-Even",
+   "film": "Disclosure Day",
+   "tmdbId": null,
+   "eventType": "boxoffice"
   }
  ],
  "parked": [
@@ -1164,16 +1175,24 @@
    "reason": "words 153 < 180 (owner-set ~200-word minimum) | soft-floor engagement 3 < 5 | soft-floor humanVoice 4 < 5",
    "tries": 1,
    "at": "2026-07-19T07:05:39.889Z"
+  },
+  {
+   "key": "supergirl-bo-update-d22|BO-UPDATE",
+   "eventSlug": "supergirl-bo-update-d22",
+   "form": "BO-UPDATE",
+   "reason": "fidelity: 9 unsupported figures/claims — draft-level failure",
+   "tries": 1,
+   "at": "2026-07-19T09:32:17.480Z"
   }
  ],
  "zeroStreak": 0,
  "daySpend": {
   "laDay": "2026-07-19",
-  "usd": 0.0327
+  "usd": 0.03666
  },
  "pace": {
   "tokens": 0,
-  "lastMs": 1784451653415
+  "lastMs": 1784453445586
  },
  "lastAuditDay": "2026-07-19",
  "attempts": {
