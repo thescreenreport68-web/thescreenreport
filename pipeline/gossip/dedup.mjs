@@ -49,13 +49,19 @@ export async function dedupCheck(topic, store, { embedImpl = defaultEmbed, adjud
     // same event with different wording, e.g. two "Kathy Griffin banned from the Tonight Show" pieces). Adjudicate
     // (the cheap LLM decides duplicate / genuine update / distinct). Only fires on an actual collision, so no cost
     // in the common case.
-    const ekHits = (store.byEventKey ? store.byEventKey(ek) : []) || [];
-    if (ekHits.length) {
-      const prior = ekHits[0];
+    // 2026-07-19 FIX: adjudicate against EVERY record in the bucket, NEWEST FIRST — not just ekHits[0].
+    // The Jelly Roll duplicate shipped because the bucket held three records and [0] was a week-old
+    // "inside their world" piece: the adjudicator correctly said DISTINCT against that wrong comparison,
+    // and the real prior (4h earlier, same divorce) was never examined at all.
+    const ekHits = ((store.byEventKey ? store.byEventKey(ek) : []) || [])
+      .slice()
+      .sort((a, b) => Date.parse(b?.createdAt || 0) - Date.parse(a?.createdAt || 0))
+      .slice(0, 5); // newest 5 — caps adjudication spend on a busy entity
+    for (const prior of ekHits) {
       const adj = await adjudicateImpl(prior.summary, summaryText(topic));
       if (adj.verdict === "DUPLICATE") return { decision: "DUPLICATE", reason: "same-event dup (eventKey)", parentKey: prior.key, urlHash: uh, eventKey: ek, embedding: null };
       if (adj.verdict === "UPDATE") return { decision: "UPDATE", reason: (`update: ${adj.newFact || "new development"}`).slice(0, 120), parentKey: prior.key, urlHash: uh, eventKey: ek, embedding: null };
-      // DISTINCT → fall through (rare: same person+type+month but a genuinely different event).
+      // DISTINCT vs THIS record → keep checking the rest of the bucket before concluding the story is new.
     }
     // L3 — semantic vs same-entity recent records
     const vec = await embedImpl(summaryText(topic));

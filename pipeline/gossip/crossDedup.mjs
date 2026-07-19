@@ -14,7 +14,19 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const CONTENT_DIR = path.resolve(__dirname, "../../content/articles");
 
 const norm = (s) => String(s ?? "").toLowerCase().replace(/[^a-z0-9 ]/g, " ").replace(/\s+/g, " ").trim();
-const tokens = (s) => new Set(norm(s).split(" ").filter((w) => w.length > 3));
+// Light stemmer: the 2026-07-19 duplicate ("Settle Divorce" vs "Finalize Divorce") missed by ONE token
+// because "finalize" and "finalized" were treated as different words. Collapse common inflections so a
+// reworded headline about the same event still overlaps.
+export const stem = (w) => {
+  let x = String(w);
+  x = x.replace(/(ization|isation)$/, "iz");
+  x = x.replace(/(ings?|ed|es)$/, (m) => (x.length - m.length >= 4 ? "" : m));
+  x = x.replace(/s$/, (m) => (x.length - 1 >= 4 ? "" : m));
+  x = x.replace(/(iz|is)e?$/, "iz");
+  x = x.replace(/e$/, (m) => (x.length - 1 >= 4 ? "" : m));
+  return x;
+};
+const tokens = (s) => new Set(norm(s).split(" ").filter((w) => w.length > 3).map(stem));
 const normName = (s) => norm(s).replace(/\b(?:the|a|an)\b/g, " ").split(/\s+/).filter((w) => w.length > 1).join(" ").trim();
 const jaccard = (a, b) => { if (!a.size || !b.size) return 0; let i = 0; for (const t of a) if (b.has(t)) i++; return i / (a.size + b.size - i); };
 
@@ -42,6 +54,9 @@ export function loadRecentIndex({ dir = CONTENT_DIR, now = Date.now(), windowH =
 // Is `topic` a fuzzy dup of a recent article? Requires SAME entity AND overlapping EVENT — so "Taylor Swift
 // wedding" and "Taylor Swift new album" (same entity, different event) are NOT flagged, but the same story
 // re-discovered under a different headline IS. Returns the matched article, or null.
+// Event nouns that define a story (stored STEMMED so they match tokens()).
+const STRONG_EVENT = new Set(["divorc", "marri", "wed", "engag", "split", "breakup", "arrest", "charg", "lawsuit", "settl", "custodi", "pregnant", "baby", "birth", "dead", "death", "hospitaliz", "cancel", "reunit", "dating", "romanc", "affair", "expecting"].map(stem));
+
 export function isCrossDup(topic, index, { now = Date.now(), entityThresh = 0.5, eventThresh = 0.45, minShared = 3 } = {}) {
   const te = normName(topic?.primaryEntity || "");
   const evt = tokens(`${topic?.title || ""} ${topic?.angle || ""} ${topic?.claim || ""}`);
@@ -56,7 +71,12 @@ export function isCrossDup(topic, index, { now = Date.now(), entityThresh = 0.5,
     // high overall token overlap. Same entity + same event ⇒ the same story under a different headline.
     const entTok = new Set([...teTokens, ...aTokens]);
     const sharedEvt = [...evt].filter((t) => a.evt.has(t) && !entTok.has(t)).length;
-    if (sharedEvt >= minShared || jaccard(evt, a.evt) >= eventThresh) return { slug: a.slug, entity: a.entity };
+    // A single STRONG event word (divorce, arrest, death, engagement…) plus one other shared token means the
+    // same happening — "Settle Divorce, Keep Baby Plans" vs "Finalize Divorce After Nearly a Decade".
+    const strongShared = [...evt].filter((t) => a.evt.has(t) && !entTok.has(t) && STRONG_EVENT.has(t)).length;
+    if (sharedEvt >= minShared || (strongShared >= 1 && sharedEvt >= 2) || jaccard(evt, a.evt) >= eventThresh) {
+      return { slug: a.slug, entity: a.entity };
+    }
   }
   return null;
 }
