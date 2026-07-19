@@ -160,7 +160,11 @@ check("no relative time passes", relativeTimeUnanchored("He hosted the awards on
   check("evergreen: family-guide page rejected", ev("https://www.usmagazine.com/celebrity-moms/news/jelly-rolls-family-guide-meet-his-two-children-and-wife-bunnie-xo/"));
   check("evergreen: multi-story roundup rejected", ev("https://www.usmagazine.com/celebrity-news/news/inside-ariana-grandes-rekindled-romance-more-top-stories/"));
   check("evergreen: 'everything we know' title rejected", ev("https://people.com/x", "Meet the Cast: Everything We Know"));
-  check("evergreen: timeline/net-worth/listicle rejected", ev("https://x.com/a-relationship-timeline/") && ev("https://x.com/celeb-net-worth/") && ev("https://x.com/top-10-moments/"));
+  // Batch A: bare "timeline"/"net-worth"/"guide" markers were REMOVED — they matched mid-slug in real
+  // breaking news ("tour-guide-hospitalized", "net-worth-plummets-after-ruling") and one false match
+  // blocks the whole story. Only unambiguous evergreen phrases remain.
+  check("evergreen: unambiguous listicle/timeline forms rejected", ev("https://x.com/news/a-and-b-relationship-timeline/") && ev("https://x.com/news/top-10-moments/"));
+  check("evergreen: weak markers no longer block real news", !ev("https://people.com/celebrity/travis-barkers-tour-guide-hospitalized/") && !ev("https://tmz.com/2026/07/18/kanye-net-worth-plummets-after-ruling/"));
   check("news report NOT flagged", !ev("https://www.justjared.com/2026/07/17/hannah-waddingham-says-she-mangled-herself/") && !ev("https://pagesix.com/2026/07/17/celebrity-news/jelly-roll-and-bunnie-xo-settle-divorce/"));
   check("'Neither X nor Y has publicly commented' now cut", cutAbsenceClaims("A fact. Neither Jelly Roll nor Bunnie Xo has publicly commented on the divorce. Another fact.").cut.length === 1);
   check("'Neither the album nor the tour' NOT a false positive", cutAbsenceClaims("Neither the album nor the tour was announced with a date.").cut.length === 0);

@@ -25,8 +25,18 @@ const DISCLAIMERS = [
 DISCLAIMERS.forEach((d, i) => {
   const body = "A verified fact here. " + d + " Another verified fact.";
   check(`disclaimer variant ${i + 1} survives when protected`, cutAbsenceClaims(body, [d]).cut.length === 0 && cutAbsenceClaims(body, [d]).body.includes(d));
-  check(`disclaimer variant ${i + 1} is still cut when NOT protected (proves the test is real)`, cutAbsenceClaims(body).cut.length === 1);
+  // After Batch A every real disclaimer variant names a source ("their representatives", "Page Six
+  // reported", "have denied this"), so the attribution exemption ALONE now protects them — strictly safer
+  // than relying on the allowlist. The allowlist remains defence-in-depth for a future wording that
+  // carries no attribution, and that mechanism is proven separately below.
+  check(`disclaimer variant ${i + 1} survives even WITHOUT the allowlist (attribution exemption)`, cutAbsenceClaims(body).cut.length === 0);
 });
+// the allowlist MECHANISM itself: an unattributed sentence that WOULD be cut survives when protected
+{
+  const bare = "Nobody has commented on the matter.";
+  check("allowlist protects an otherwise-cut sentence", cutAbsenceClaims("A fact. " + bare + " More.", [bare]).cut.length === 0);
+  check("...and without the allowlist that same sentence IS cut", cutAbsenceClaims("A fact. " + bare + " More.").cut.length === 1);
+}
 // a non-disclaimer absence claim is still cut even while a disclaimer is protected
 {
   const d = DISCLAIMERS[0];

@@ -61,10 +61,13 @@ export function isCrossDup(topic, index, { now = Date.now(), entityThresh = 0.5,
   const te = normName(topic?.primaryEntity || "");
   const evt = tokens(`${topic?.title || ""} ${topic?.angle || ""} ${topic?.claim || ""}`);
   if (!te || evt.size < 3) return null;
-  const teTokens = new Set(te.split(" ").filter(Boolean));
+  // The exclusion set must be STEMMED like evt is, otherwise the subject's OWN surname leaks through as
+  // shared EVENT evidence ("Chris" stems to "chri", which evt contains) and a genuinely new story about
+  // the same person is silently suppressed as a duplicate.
+  const teTokens = new Set(te.split(" ").filter(Boolean).flatMap((w) => [w, stem(w)]));
   for (const a of index) {
     if (!a.entity || !a.evt.size) continue;
-    const aTokens = new Set(a.entity.split(" ").filter(Boolean));
+    const aTokens = new Set(a.entity.split(" ").filter(Boolean).flatMap((w) => [w, stem(w)]));
     const sameEntity = a.entity === te || jaccard(teTokens, aTokens) >= entityThresh;
     if (!sameEntity) continue;
     // SAME EVENT signal: ≥minShared shared CONTENT tokens beyond the entity (robust to filler/rewording), OR a

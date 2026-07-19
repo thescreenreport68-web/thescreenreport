@@ -80,13 +80,26 @@ export function decodeEntities(s) {
 // the settlement on her own podcast. A second article (68) was grounded on a "…more-top-stories"
 // ROUNDUP page, whose thinness became a false "no further details" claim. Neither page type is a news
 // report about the event; both must be refused as the PRIMARY grounding source for a news story.
-const EVERGREEN_URL = /(family-guide|-guide[-/]|\/guide\/|meet-(his|her|their)-|everything-(you|we)-(need-to-)?know|everything-to-know|who-is-|complete-timeline|a-timeline|-timeline\/|relationship-timeline|dating-history|net-worth|best-\d|top-\d+-|\/list\/|listicle|photos?\/gallery|\/gallery\/|more-top-stories|top-stories|\/roundup|week-in-review|everything-that-happened)/i;
+// Markers are tested against the LAST path segment only, anchored at slug boundaries. The first version
+// matched unanchored substrings, so real breaking news was blocked: "tour-guide-hospitalized" hit
+// `-guide[-/]`, and a genuine court-ruling story hit `net-worth`. A topic usually carries ONE seed
+// source, so a single false match killed the whole story.
+const EVERGREEN_SLUG = /(?:^|-)(?:family-guide|complete-timeline|relationship-timeline|dating-history|explainer|explained|faq)(?:-|$)|(?:^|-)(?:who-is|meet-(?:his|her|their)|everything-(?:you|we)-(?:need-to-)?know|everything-to-know|all-about|a-look-back)(?:-|$)|(?:^|-)(?:best|top)-\d+(?:-|$)|(?:^|-)more-top-stories(?:-|$)|(?:^|-)(?:roundup|week-in-review)(?:-|$)/i;  // NOTE: bare "guide", "net-worth" and bare "timeline" were REMOVED — they appear mid-slug in real
+// breaking news ("tour-guide-hospitalized", "net-worth-plummets-after-ruling") and a single false
+// match blocks the whole story, since a topic usually carries one seed source.
+const EVERGREEN_PATH = /\/(?:gallery|photos|galleries|lists?)\//i;
 const EVERGREEN_TITLE = /^(a |the )?(complete |full |ultimate )?(guide|timeline|everything|who is|meet |inside the life|all about|a look back|the best|top \d+)/i;
 
 /** Is this URL/title an evergreen explainer, listicle, gallery or multi-story roundup rather than a news report? */
 export function isEvergreenSource({ url = "", title = "" } = {}) {
-  if (EVERGREEN_URL.test(String(url))) return true;
-  if (EVERGREEN_TITLE.test(String(title).trim())) return true;
-  if (/:\s*(meet|everything|a guide|the guide)\b/i.test(String(title))) return true;
+  const u = String(url || "");
+  if (EVERGREEN_PATH.test(u)) return true;
+  try {
+    const seg = decodeURIComponent(new URL(u).pathname).replace(/\/+$/, "").split("/").filter(Boolean).pop() || "";
+    if (EVERGREEN_SLUG.test(seg.replace(/\.\w+$/, ""))) return true;
+  } catch { /* unparseable URL — fall through to the title check */ }
+  const t = String(title || "").trim();
+  if (EVERGREEN_TITLE.test(t)) return true;
+  if (/:\s*(meet|everything|a guide|the guide)\b/i.test(t)) return true;
   return false;
 }

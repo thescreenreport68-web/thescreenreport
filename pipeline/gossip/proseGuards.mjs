@@ -32,15 +32,32 @@ export function splitSentences(text) {
 // was deleting all three disclaimerFor() variants AFTER legalGate had already approved the article.
 const protectedHit = (sentence, protect) => protect.some((p) => p && (sentence.includes(p) || p.includes(sentence.trim())));
 
+// An ATTRIBUTED absence is reporting, not an unverifiable assertion: "her lawyers said he has not been
+// served a subpoena", or a verbatim quote from a filing, must survive. Only bare unsourced claims are cut.
+const ATTRIBUTED = /\b(?:according to|per (?:a |an |the )?(?:source|insider|rep|spokes|attorney|lawyer|filing|document|report)|told |said|says|stated|wrote|clarified|reported|denied|confirmed to|spokespers\w*|representatives?|reps? for|attorneys?|lawyers?)\b|(?<!\bthe )(?<!\ba )(?<!\bthis )\breports\b/i;  // NOTE plural-safe: "representative" without the s-tolerant form silently failed on "representatives"
+const carriesQuote = (t) => /["\u201C][^"\u201D]{10,}["\u201D]/.test(t);
+const isReportedAbsence = (t) => ATTRIBUTED.test(t) || carriesQuote(t);
+
 function cutMatching(body, re, protect = []) {
   const cut = [];
   const paras = String(body || "").split(/\n{2,}/).map((para) => {
     if (/^#{1,6}\s/.test(para.trim())) return para; // headings untouched
-    const kept = splitSentences(para).filter((s) => {
-      if (protectedHit(s, protect)) return true;                       // legally required — never cut
-      if (re.test(s)) { cut.push(s.trim().slice(0, 110)); return false; }
-      return true;
-    });
+    const kept = [];
+    for (const unit of splitSentences(para)) {
+      if (protectedHit(unit, protect)) { kept.push(unit); continue; }  // legally required — never cut
+      if (!re.test(unit)) { kept.push(unit); continue; }
+      // splitSentences deliberately MERGES across abbreviations ("Robert Downey Jr. Neither side…" is one
+      // unit), so cutting the whole unit would delete the verified fact in front of the offending clause.
+      // Re-split on the naive boundary and drop ONLY the sub-sentence that actually matches.
+      const parts = unit.split(/(?<=[.!?]["\u201D']?)\s+/);
+      const survivors = parts.filter((p) => {
+        if (!re.test(p)) return true;
+        if (isReportedAbsence(p)) return true;                          // attributed / quoted ⇒ reporting
+        cut.push(p.trim().slice(0, 110));
+        return false;
+      });
+      if (survivors.length) kept.push(survivors.join(" "));
+    }
     return kept.join(" ").trim();
   }).filter(Boolean);
   return { body: paras.join("\n\n"), cut };

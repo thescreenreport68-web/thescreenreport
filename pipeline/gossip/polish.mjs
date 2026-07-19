@@ -50,14 +50,20 @@ export function dedupeSentences(body, threshold = 0.72) {
   });
   // final pass: the SAME verbatim quoted span repeated within a paragraph (a live article shipped every
   // quote twice) — keep the first occurrence, delete exact repeats.
+  // Drop the whole CARRYING SENTENCE when its quoted span already appeared, instead of blanking the span
+  // and leaving "Later, asked about the wedding, she circled right back:" dangling with nothing after it.
+  const seenSpans = new Set();
   const spanDeduped = out.filter((p) => p.trim()).map((para) => {
-    const seen = new Set();
-    return para.replace(/"[^"\n]{15,300}"|“[^”\n]{15,300}”/g, (q) => {
-      const k = q.replace(/[“”]/g, '"');
-      if (seen.has(k)) return "";
-      seen.add(k);
-      return q;
-    }).replace(/\s{2,}/g, " ").trim();
+    const sentences = para.split(/(?<=[.!?]["”']?)\s+/);
+    const keptS = sentences.filter((sent) => {
+      const spans = sent.match(/"[^"\n]{15,300}"|“[^”\n]{15,300}”/g) || [];
+      if (!spans.length) return true;
+      const norm = spans.map((q) => q.replace(/[“”]/g, '"'));
+      const repeat = norm.every((k) => seenSpans.has(k));
+      norm.forEach((k) => seenSpans.add(k));
+      return !repeat;                      // every quote in it is a repeat ⇒ the sentence adds nothing
+    });
+    return keptS.join(" ").replace(/\s{2,}/g, " ").trim();
   });
   return spanDeduped.filter(Boolean).join("\n\n");
 }
