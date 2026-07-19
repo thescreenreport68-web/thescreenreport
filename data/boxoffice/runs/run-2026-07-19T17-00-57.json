@@ -1,0 +1,165 @@
+{
+ "runId": "run-2026-07-19T17-00-57",
+ "mode": "live",
+ "startedAt": "2026-07-19T17:00:57.283Z",
+ "films": 43,
+ "published": [],
+ "held": [
+  {
+   "tag": "worst-neighbor-ever-trending-tv-w2026-07-12×TRENDING-TV",
+   "reason": "words 124 < 180 (owner-set ~200-word minimum)",
+   "score": 55
+  },
+  {
+   "tag": "little-house-on-the-prairie-trending-tv-w2026-07-12×TRENDING-TV",
+   "reason": "words 176 < 180 (owner-set ~200-word minimum)",
+   "score": 60
+  },
+  {
+   "tag": "avatar-the-last-airbender-trending-tv-w2026-07-12×TRENDING-TV",
+   "reason": "platform: names paramount+ not in confirmed providers",
+   "score": 0
+  },
+  {
+   "tag": "tom-clancy-s-jack-ryan-ghost-war-now-streaming×NOW-STREAMING",
+   "reason": "soft-floor humanVoice 4 < 5",
+   "score": 55
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "enola-holmes-3-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "voicemails-for-isabelle-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "the-doorman-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "little-brother-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "rust-creek-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "f9-the-fast-saga-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "old-henry-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "the-boss-baby-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "i-will-find-you-trending-tv-w2026-07-12×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "salish-jordan-matter-trending-tv-w2026-07-12×TRENDING-TV",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "raw-trending-tv-w2026-07-12×TRENDING-TV",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "sullivan-s-crossing-trending-tv-w2026-07-12×TRENDING-TV",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "jeff-arcuri-nice-to-meet-you-trending-tv-w2026-07-12×TRENDING-TV",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "off-campus-trending-tv×TRENDING-TV",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "descendants-wicked-wonderland-now-streaming×NOW-STREAMING",
+   "reason": "film attempt budget exhausted today (3 paid event tries/film/day)"
+  },
+  {
+   "tag": "lee-cronin-s-the-mummy-now-streaming×NOW-STREAMING",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "the-sheep-detectives-now-streaming×NOW-STREAMING",
+   "reason": "film attempt budget exhausted today (3 paid event tries/film/day)"
+  }
+ ],
+ "blocked": [],
+ "paced": {
+  "tokens": 4,
+  "behind": false,
+  "expected": 9.1,
+  "allow": 2
+ },
+ "attemptCapHit": 4,
+ "zeroStreak": 7,
+ "daySpend": {
+  "laDay": "2026-07-19",
+  "usd": 0.49511
+ },
+ "faults": {
+  "count": 0,
+  "bySeverity": {},
+  "faults": []
+ },
+ "finishedAt": "2026-07-19T17:11:41.348Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3298,
+    "out": 775,
+    "usd": 0.00022,
+    "ms": 2526
+   },
+   "gatherer": {
+    "calls": 6,
+    "errors": 0,
+    "in": 17910,
+    "out": 1038,
+    "usd": 0.00221,
+    "ms": 7562
+   },
+   "synthesizer": {
+    "calls": 5,
+    "errors": 1,
+    "in": 2761,
+    "out": 2181,
+    "usd": 0.00062,
+    "ms": 44893
+   },
+   "writer": {
+    "calls": 8,
+    "errors": 0,
+    "in": 24656,
+    "out": 8315,
+    "usd": 0.02317,
+    "ms": 104861
+   },
+   "qa": {
+    "calls": 23,
+    "errors": 0,
+    "in": 66083,
+    "out": 9982,
+    "usd": 0.04478,
+    "ms": 61693
+   }
+  },
+  "totalUsd": 0.07099
+ },
+ "openrouterTotalUsd": 0.06784
+}

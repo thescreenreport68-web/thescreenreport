@@ -1096,25 +1096,31 @@
    "key": "worst-neighbor-ever-trending-tv-w2026-07-12|TRENDING-TV",
    "eventSlug": "worst-neighbor-ever-trending-tv-w2026-07-12",
    "form": "TRENDING-TV",
-   "reason": "words 135 < 180 (owner-set ~200-word minimum) | soft-floor humanVoice 4 < 5",
-   "tries": 2,
-   "at": "2026-07-19T12:04:51.679Z"
+   "reason": "words 124 < 180 (owner-set ~200-word minimum)",
+   "tries": 3,
+   "at": "2026-07-19T17:02:45.034Z",
+   "dead": true,
+   "expiresAt": "2026-07-22T17:02:45.034Z"
   },
   {
    "key": "little-house-on-the-prairie-trending-tv-w2026-07-12|TRENDING-TV",
    "eventSlug": "little-house-on-the-prairie-trending-tv-w2026-07-12",
    "form": "TRENDING-TV",
-   "reason": "words 106 < 180 (owner-set ~200-word minimum) | soft-floor humanVoice 3 < 5",
-   "tries": 2,
-   "at": "2026-07-19T12:06:53.965Z"
+   "reason": "words 176 < 180 (owner-set ~200-word minimum)",
+   "tries": 3,
+   "at": "2026-07-19T17:06:22.541Z",
+   "dead": true,
+   "expiresAt": "2026-07-22T17:06:22.541Z"
   },
   {
    "key": "avatar-the-last-airbender-trending-tv-w2026-07-12|TRENDING-TV",
    "eventSlug": "avatar-the-last-airbender-trending-tv-w2026-07-12",
    "form": "TRENDING-TV",
-   "reason": "8 unverified claim(s) cut, unrecovered",
-   "tries": 2,
-   "at": "2026-07-19T12:41:31.008Z"
+   "reason": "platform: names paramount+ not in confirmed providers",
+   "tries": 3,
+   "at": "2026-07-19T17:08:24.917Z",
+   "dead": true,
+   "expiresAt": "2026-07-22T17:08:24.917Z"
   },
   {
    "key": "salish-jordan-matter-trending-tv-w2026-07-12|TRENDING-TV",
@@ -1319,16 +1325,24 @@
    "reason": "2 unverified claim(s) cut, unrecovered",
    "tries": 1,
    "at": "2026-07-19T15:22:02.980Z"
+  },
+  {
+   "key": "tom-clancy-s-jack-ryan-ghost-war-now-streaming|NOW-STREAMING",
+   "eventSlug": "tom-clancy-s-jack-ryan-ghost-war-now-streaming",
+   "form": "NOW-STREAMING",
+   "reason": "soft-floor humanVoice 4 < 5",
+   "tries": 1,
+   "at": "2026-07-19T17:11:41.346Z"
   }
  ],
- "zeroStreak": 6,
+ "zeroStreak": 7,
  "daySpend": {
   "laDay": "2026-07-19",
-  "usd": 0.42727
+  "usd": 0.49511
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1784478655579
+  "lastMs": 1784480457283
  },
  "lastAuditDay": "2026-07-19",
  "attempts": {
@@ -1338,9 +1352,9 @@
    "lee cronin's the mummy": 3,
    "the sheep detectives": 3,
    "i will find you": 2,
-   "worst neighbor ever": 1,
-   "little house on the prairie": 1,
-   "avatar: the last airbender": 1,
+   "worst neighbor ever": 2,
+   "little house on the prairie": 2,
+   "avatar: the last airbender": 2,
    "citizen vigilante": 1,
    "the super mario galaxy movie": 1,
    "passenger": 2,
@@ -1349,7 +1363,8 @@
    "sullivan's crossing": 1,
    "survival of the thickest": 1,
    "off campus": 1,
-   "jeff arcuri: nice to meet you": 1
+   "jeff arcuri: nice to meet you": 1,
+   "tom clancy's jack ryan: ghost war": 1
   }
  }
 }
