@@ -808,10 +808,10 @@
    "eventSlug": "obsession-bo-update-d64",
    "form": "BO-UPDATE",
    "reason": "1 unverified claim(s) cut, unrecovered",
-   "tries": 6,
-   "at": "2026-07-19T04:32:44.018Z",
+   "tries": 7,
+   "at": "2026-07-19T05:03:13.082Z",
    "dead": true,
-   "expiresAt": "2026-07-22T04:32:44.018Z"
+   "expiresAt": "2026-07-22T05:03:13.082Z"
   },
   {
    "key": "the-abandons-ev-streaming-arrival|NOW-STREAMING",
@@ -892,16 +892,24 @@
    "reason": "under floor: no subscription-streaming platform — rent/buy is not 'now streaming'",
    "tries": 1,
    "at": "2026-07-19T03:38:42.376Z"
+  },
+  {
+   "key": "the-sheep-detectives-bo-update-d80|BO-UPDATE",
+   "eventSlug": "the-sheep-detectives-bo-update-d80",
+   "form": "BO-UPDATE",
+   "reason": "words 173 < 180 (owner-set ~200-word minimum) | soft-floor engagement 4 < 5 | soft-floor humanVoice 4 < 5",
+   "tries": 1,
+   "at": "2026-07-19T05:04:51.768Z"
   }
  ],
- "zeroStreak": 0,
+ "zeroStreak": 1,
  "daySpend": {
   "laDay": "2026-07-18",
-  "usd": 0.32747
+  "usd": 0.34895
  },
  "pace": {
-  "tokens": 2,
-  "lastMs": 1784435445711
+  "tokens": 2.075539404761905,
+  "lastMs": 1784437349304
  },
  "lastAuditDay": "2026-07-18",
  "attempts": {
@@ -925,7 +933,7 @@
    "chained": 3,
    "potential": 3,
    "the boss baby": 1,
-   "the sheep detectives": 2,
+   "the sheep detectives": 3,
    "citizen vigilante": 1,
    "supergirl": 2,
    "zola": 1,
