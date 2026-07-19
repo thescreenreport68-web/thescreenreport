@@ -1,0 +1,48 @@
+{
+  "ts": "2026-07-19T10:02:34.025Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [],
+  "topics": 10,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 4,
+  "blocked": 3,
+  "costUSD": 0,
+  "costPerPublished": null,
+  "byModel": {},
+  "byRole": {
+    "dedup": {
+      "calls": 8,
+      "errors": 8,
+      "in": 0,
+      "out": 0,
+      "usd": 0,
+      "ms": 0
+    },
+    "editor": {
+      "calls": 6,
+      "errors": 6,
+      "in": 0,
+      "out": 0,
+      "usd": 0,
+      "ms": 0
+    },
+    "synthesizer": {
+      "calls": 6,
+      "errors": 6,
+      "in": 0,
+      "out": 0,
+      "usd": 0,
+      "ms": 1
+    },
+    "writer": {
+      "calls": 6,
+      "errors": 6,
+      "in": 0,
+      "out": 0,
+      "usd": 0,
+      "ms": 0
+    }
+  }
+}
