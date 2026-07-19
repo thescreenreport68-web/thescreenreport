@@ -1,0 +1,78 @@
+{
+  "id": "news-robin-hood-season-two-casting",
+  "slug": "robin-hood-season-two-james-purefoy-colin-o-donoghue-and-luke-roberts-",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": null,
+      "cat": "tv/news",
+      "format": [
+        "body 218w < 220",
+        "a 74-word run-on sentence (>55 — split it)"
+      ],
+      "cuts": 3,
+      "broken": []
+    },
+    "attempt2": {
+      "score": null,
+      "cat": "tv/news",
+      "format": [
+        "body 218w < 220",
+        "a 74-word run-on sentence (>55 — split it)"
+      ],
+      "cuts": 0,
+      "broken": []
+    }
+  },
+  "editorial": {
+    "status": "official",
+    "entity": "Robin Hood",
+    "work": {
+      "title": "Robin Hood",
+      "year": null,
+      "medium": "tv"
+    },
+    "outlet": "tvseriesfinale.com"
+  },
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
+    "deterministic": {
+      "words": 218,
+      "h2s": 2,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 3,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 74,
+      "avgSentence": 24,
+      "flesch": 45,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": [
+        "body 218w < 220",
+        "a 74-word run-on sentence (>55 — split it)"
+      ]
+    },
+    "hardBlocks": []
+  },
+  "score": null,
+  "category": "tv",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "body ≥ 220w"
+    ]
+  },
+  "ms": 44018
+}
