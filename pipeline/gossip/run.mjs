@@ -183,8 +183,13 @@ export async function runGossip(topic, {
     // (uncorrectable). The accuracy spine now covers EVERY reader-facing field — body, keyTakeaways, whatWeKnow,
     // dek, pull-quote, FAQ answers — so a wrong year in a takeaway is fixed/removed just like one in the body.
     const specifics = (verifyResult?.unsupported || []).filter((u) => u.isSpecific || u.contradicted);
-    const corrections = specifics.filter((u) => u.correction).map((u) => ({ bad: u.claim, correction: u.correction }));
-    const drops = specifics.filter((u) => !u.correction).map((u) => u.claim);
+    // A correction is applied by GLOBAL substitution — safe for a distinctive phrase, dangerous for a bare
+    // token: replacing every "2022" also rewrites the CORRECT occurrences into the flagged value, turning
+    // right facts wrong. Bare short tokens are therefore routed to DROP instead (an unverified specific
+    // must never publish; dropping is the fail-safe half of that rule).
+    const bareToken = (t) => !/\s/.test(String(t || "").trim()) && String(t || "").trim().length <= 6;
+    const corrections = specifics.filter((u) => u.correction && !bareToken(u.claim)).map((u) => ({ bad: u.claim, correction: u.correction }));
+    const drops = specifics.filter((u) => !u.correction || bareToken(u.claim)).map((u) => u.claim);
     // 1) CORRECT known-wrong specifics everywhere (a wrong "2024" → "2026"), then cut what's left unresolved.
     article.body = applyCorrections(article.body, corrections);
     article.body = cutFlagged(article.body, report.cutTexts);
@@ -194,6 +199,17 @@ export async function runGossip(topic, {
     // 2) Same treatment for the STRUCTURED fields (the old bypass): correct or drop the offending specific in
     // keyTakeaways / whatWeKnow / whatWeDont / dek / pull-quote / FAQ.
     scrubStructuredFields(article, { corrections, drops });
+    // cutFlagged only ever touched the BODY, so a legally-blocked phrase in the TITLE or DEK survived every
+    // pass and published verbatim. A dek is prose and can lose the offending sentence; a title cannot be cut
+    // without becoming nonsense, so a block that reaches the headline escalates to a red line and is held.
+    for (const bad of report.cutTexts || []) {
+      if (!bad) continue;
+      if (article.dek && article.dek.includes(bad)) article.dek = cutFlagged(article.dek, [bad]).trim();
+      if (article.title && article.title.includes(bad)) {
+        report.redLine = true;
+        report.redLineBlocks = [...(report.redLineBlocks || []), `LEGAL_BLOCK_IN_TITLE: "${String(bad).slice(0, 60)}"`];
+      }
+    }
     if (frame.needsDisclaimer && frame.disclaimerText && !article.body.includes(frame.disclaimerText)) article.body = (article.body.trim() + "\n\n" + frame.disclaimerText).trim();
     verifyResult = verify ? await verifyImpl({ article, bundle, model }) : verifyResult;
     report = inspect(article, frame, topic, bundle, verifyResult);
