@@ -785,31 +785,31 @@
    "key": "obsession-bo-update-d64|BO-UPDATE",
    "eventSlug": "obsession-bo-update-d64",
    "form": "BO-UPDATE",
-   "reason": "1 unverified claim(s) cut, unrecovered",
-   "tries": 4,
-   "at": "2026-07-19T04:04:33.673Z",
+   "reason": "synthesizer returned no usable brief",
+   "tries": 5,
+   "at": "2026-07-19T04:10:52.642Z",
    "dead": true,
-   "expiresAt": "2026-07-22T04:04:33.673Z"
+   "expiresAt": "2026-07-22T04:10:52.642Z"
   },
   {
    "key": "backrooms-bo-update-d50|BO-UPDATE",
    "eventSlug": "backrooms-bo-update-d50",
    "form": "BO-UPDATE",
-   "reason": "words 142 < 180 (owner-set ~200-word minimum)",
-   "tries": 4,
-   "at": "2026-07-19T04:06:14.528Z",
+   "reason": "words 146 < 180 (owner-set ~200-word minimum)",
+   "tries": 5,
+   "at": "2026-07-19T04:11:58.637Z",
    "dead": true,
-   "expiresAt": "2026-07-22T04:06:14.528Z"
+   "expiresAt": "2026-07-22T04:11:58.637Z"
   },
   {
    "key": "scary-movie-bo-update-d43|BO-UPDATE",
    "eventSlug": "scary-movie-bo-update-d43",
    "form": "BO-UPDATE",
-   "reason": "words 169 < 180 (owner-set ~200-word minimum)",
-   "tries": 4,
-   "at": "2026-07-19T04:08:16.644Z",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "tries": 5,
+   "at": "2026-07-19T04:13:46.738Z",
    "dead": true,
-   "expiresAt": "2026-07-22T04:08:16.644Z"
+   "expiresAt": "2026-07-22T04:13:46.738Z"
   },
   {
    "key": "the-abandons-ev-streaming-arrival|NOW-STREAMING",
@@ -892,14 +892,14 @@
    "at": "2026-07-19T03:38:42.376Z"
   }
  ],
- "zeroStreak": 25,
+ "zeroStreak": 26,
  "daySpend": {
   "laDay": "2026-07-18",
-  "usd": 0.32024
+  "usd": 0.32361
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1784433764953
+  "lastMs": 1784434132773
  },
  "lastAuditDay": "2026-07-18",
  "attempts": {
