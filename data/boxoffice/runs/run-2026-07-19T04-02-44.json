@@ -1,0 +1,98 @@
+{
+ "runId": "run-2026-07-19T04-02-44",
+ "mode": "live",
+ "startedAt": "2026-07-19T04:02:44.953Z",
+ "films": 8,
+ "published": [],
+ "held": [
+  {
+   "tag": "obsession-bo-update×BO-UPDATE",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "score": 50
+  },
+  {
+   "tag": "backrooms-bo-update×BO-UPDATE",
+   "reason": "words 142 < 180 (owner-set ~200-word minimum)",
+   "score": 50
+  },
+  {
+   "tag": "scary-movie-bo-update×BO-UPDATE",
+   "reason": "words 169 < 180 (owner-set ~200-word minimum)",
+   "score": 50
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "potential-ev-streaming-arrival×NOW-STREAMING",
+   "reason": "film attempt budget exhausted today (3 paid event tries/film/day)"
+  },
+  {
+   "tag": "young-washington-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "the-invite-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "jackass-best-and-last-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "voicemails-for-isabelle-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  }
+ ],
+ "blocked": [],
+ "paced": {
+  "tokens": 4,
+  "behind": true,
+  "expected": 18.2,
+  "allow": 2
+ },
+ "zeroStreak": 25,
+ "daySpend": {
+  "laDay": "2026-07-18",
+  "usd": 0.32024
+ },
+ "finishedAt": "2026-07-19T04:08:16.646Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3418,
+    "out": 665,
+    "usd": 0.00021,
+    "ms": 8923
+   },
+   "gatherer": {
+    "calls": 3,
+    "errors": 0,
+    "in": 9682,
+    "out": 799,
+    "usd": 0.00129,
+    "ms": 4309
+   },
+   "synthesizer": {
+    "calls": 3,
+    "errors": 0,
+    "in": 2376,
+    "out": 4159,
+    "usd": 0.00096,
+    "ms": 57942
+   },
+   "writerChart": {
+    "calls": 3,
+    "errors": 0,
+    "in": 6150,
+    "out": 3391,
+    "usd": 0.00257,
+    "ms": 71046
+   }
+  },
+  "totalUsd": 0.00503
+ },
+ "openrouterTotalUsd": 0.00538
+}
