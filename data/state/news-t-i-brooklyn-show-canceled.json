@@ -1,0 +1,75 @@
+{
+  "id": "news-t-i-brooklyn-show-canceled",
+  "slug": "t-i-s-brooklyn-show-canceled-hours-ahead-of-show",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": null,
+      "cat": "celebrity/news",
+      "format": [
+        "primary keyword not in title",
+        "body 140w < 220"
+      ],
+      "cuts": 1,
+      "broken": []
+    },
+    "attempt2": {
+      "score": null,
+      "cat": "celebrity/news",
+      "format": [
+        "primary keyword not in title",
+        "body 140w < 220"
+      ],
+      "cuts": 0,
+      "broken": []
+    }
+  },
+  "editorial": {
+    "status": "official",
+    "entity": "T.I.",
+    "work": null,
+    "outlet": "ABC Audio"
+  },
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
+    "deterministic": {
+      "words": 140,
+      "h2s": 1,
+      "h2Questions": 1,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 3,
+      "ktCount": 3,
+      "kwInTitle": false,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 26,
+      "avgSentence": 14,
+      "flesch": 56,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": [
+        "primary keyword not in title",
+        "body 140w < 220"
+      ]
+    },
+    "hardBlocks": []
+  },
+  "score": null,
+  "category": "celebrity",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "body ≥ 220w",
+      "keyword in title"
+    ]
+  },
+  "ms": 75409
+}

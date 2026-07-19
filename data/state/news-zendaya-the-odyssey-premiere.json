@@ -1,6 +1,6 @@
 {
   "id": "news-zendaya-the-odyssey-premiere",
-  "slug": "zendaya-wears-angelic-gown-to-the-odyssey-premiere",
+  "slug": "zendaya-grew-angel-wings-at-the-odyssey-premiere",
   "status": "needs_review",
   "stages": {
     "attempt1": {
@@ -19,7 +19,7 @@
     }
   },
   "editorial": {
-    "status": "unconfirmed",
+    "status": "confirmed",
     "entity": "Zendaya",
     "work": {
       "title": "The Odyssey",
@@ -35,20 +35,20 @@
     "strengths": [],
     "weaknesses": [],
     "deterministic": {
-      "words": 297,
+      "words": 245,
       "h2s": 2,
       "h2Questions": 2,
       "internalLinks": 0,
       "externalLinks": 0,
       "hasSources": false,
       "faqCount": 4,
-      "ktCount": 5,
+      "ktCount": 4,
       "kwInTitle": true,
       "kwInFirst100": true,
       "kwInH2": false,
-      "maxSentence": 33,
-      "avgSentence": 20,
-      "flesch": 44,
+      "maxSentence": 28,
+      "avgSentence": 17,
+      "flesch": 46,
       "bannedTells": 0,
       "fillerPraise": 1,
       "kwExact": 0,
@@ -66,7 +66,7 @@
       "credit"
     ]
   },
-  "ms": 62891,
+  "ms": 43112,
   "previousRuns": [
     {
       "id": "news-zendaya-the-odyssey-premiere",
@@ -366,6 +366,76 @@
         ]
       },
       "ms": 68682
+    },
+    {
+      "id": "news-zendaya-the-odyssey-premiere",
+      "slug": "zendaya-wears-angelic-gown-to-the-odyssey-premiere",
+      "status": "needs_review",
+      "stages": {
+        "attempt1": {
+          "score": null,
+          "cat": "movies/reactions",
+          "format": [],
+          "cuts": 0,
+          "broken": []
+        },
+        "attempt2": {
+          "score": null,
+          "cat": "movies/reactions",
+          "format": [],
+          "cuts": 0,
+          "broken": []
+        }
+      },
+      "editorial": {
+        "status": "unconfirmed",
+        "entity": "Zendaya",
+        "work": {
+          "title": "The Odyssey",
+          "year": null,
+          "medium": "movie"
+        },
+        "outlet": "coveteur.com"
+      },
+      "holdReason": "reaction: required embed missing",
+      "scorecard": {
+        "score": null,
+        "subscores": {},
+        "strengths": [],
+        "weaknesses": [],
+        "deterministic": {
+          "words": 297,
+          "h2s": 2,
+          "h2Questions": 2,
+          "internalLinks": 0,
+          "externalLinks": 0,
+          "hasSources": false,
+          "faqCount": 4,
+          "ktCount": 5,
+          "kwInTitle": true,
+          "kwInFirst100": true,
+          "kwInH2": false,
+          "maxSentence": 33,
+          "avgSentence": 20,
+          "flesch": 44,
+          "bannedTells": 0,
+          "fillerPraise": 1,
+          "kwExact": 0,
+          "hardBlocks": []
+        },
+        "hardBlocks": []
+      },
+      "audit": {
+        "ok": false,
+        "internalLinks": 0,
+        "failed": [
+          "tweet grounding",
+          "keyword in title",
+          "≥1200px legal image",
+          "credit"
+        ]
+      },
+      "ms": 62891
     }
   ]
 }
