@@ -1,0 +1,70 @@
+{
+ "runId": "run-2026-07-19T01-02-28",
+ "mode": "live",
+ "startedAt": "2026-07-19T01:02:28.020Z",
+ "films": 8,
+ "published": [],
+ "held": [],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "young-washington-bo-update×BO-UPDATE",
+   "reason": "film attempt budget exhausted today (3 paid tries/film/day)"
+  },
+  {
+   "tag": "the-invite-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "obsession-bo-update×BO-UPDATE",
+   "reason": "film attempt budget exhausted today (3 paid tries/film/day)"
+  },
+  {
+   "tag": "backrooms-bo-update×BO-UPDATE",
+   "reason": "film attempt budget exhausted today (3 paid tries/film/day)"
+  },
+  {
+   "tag": "jackass-best-and-last-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "scary-movie-bo-update×BO-UPDATE",
+   "reason": "film attempt budget exhausted today (3 paid tries/film/day)"
+  },
+  {
+   "tag": "voicemails-for-isabelle-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "the-odyssey-bo-opening×BO-OPENING",
+   "reason": "film attempt budget exhausted today (3 paid tries/film/day)"
+  }
+ ],
+ "blocked": [],
+ "paced": {
+  "tokens": 4,
+  "behind": true,
+  "expected": 15.8,
+  "allow": 2
+ },
+ "zeroStreak": 19,
+ "daySpend": {
+  "laDay": "2026-07-18",
+  "usd": 0.29952
+ },
+ "finishedAt": "2026-07-19T01:02:35.211Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3419,
+    "out": 666,
+    "usd": 0.00021,
+    "ms": 5761
+   }
+  },
+  "totalUsd": 0.00021
+ },
+ "openrouterTotalUsd": 0.00021
+}
