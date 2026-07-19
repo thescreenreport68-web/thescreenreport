@@ -1,0 +1,219 @@
+{
+ "runId": "run-2026-07-19T05-34-11",
+ "mode": "live",
+ "startedAt": "2026-07-19T05:34:11.226Z",
+ "films": 29,
+ "published": [],
+ "held": [
+  {
+   "tag": "obsession-bo-update×BO-UPDATE",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "score": 50
+  },
+  {
+   "tag": "the-get-out-bo-opening×BO-OPENING",
+   "reason": "words 175 < 180 (owner-set ~200-word minimum) | soft-floor readability 4 < 5 | soft-floor engagement 2 < 5 | soft-floor humanVoice 2 < 5",
+   "score": 30
+  },
+  {
+   "tag": "i-will-find-you-trending-tv-w2026-07-12×TRENDING-TV",
+   "reason": "words 72 < 180 (owner-set ~200-word minimum) | soft-floor humanVoice 0 < 5",
+   "score": 40
+  },
+  {
+   "tag": "worst-neighbor-ever-trending-tv-w2026-07-12×TRENDING-TV",
+   "reason": "words 172 < 180 (owner-set ~200-word minimum)",
+   "score": 65
+  },
+  {
+   "tag": "little-house-on-the-prairie-trending-tv-w2026-07-12×TRENDING-TV",
+   "reason": "scaffold: empty section \"## Netflix Viewership Numbers Reflect Ea\" | scaffold: fewer than 3 keyTakeaways",
+   "score": 70
+  },
+  {
+   "tag": "avatar-the-last-airbender-trending-tv-w2026-07-12×TRENDING-TV",
+   "reason": "platform: names paramount+ not in confirmed providers",
+   "score": 0
+  },
+  {
+   "tag": "salish-jordan-matter-trending-tv-w2026-07-12×TRENDING-TV",
+   "reason": "2 unverified claim(s) cut, unrecovered",
+   "score": 75
+  },
+  {
+   "tag": "raw-trending-tv-w2026-07-12×TRENDING-TV",
+   "reason": "3 unverified claim(s) cut, unrecovered",
+   "score": 60
+  },
+  {
+   "tag": "sullivan-s-crossing-trending-tv-w2026-07-12×TRENDING-TV",
+   "reason": "3 unverified claim(s) cut, unrecovered",
+   "score": 65
+  },
+  {
+   "tag": "survival-of-the-thickest-trending-tv-w2026-07-12×TRENDING-TV",
+   "reason": "words 174 < 180 (owner-set ~200-word minimum)",
+   "score": 55
+  },
+  {
+   "tag": "lucky-trending-tv×TRENDING-TV",
+   "reason": "words 156 < 180 (owner-set ~200-word minimum) | soft-floor engagement 2 < 5 | soft-floor humanVoice 2 < 5",
+   "score": 30
+  },
+  {
+   "tag": "silo-trending-tv×TRENDING-TV",
+   "reason": "words 162 < 180 (owner-set ~200-word minimum) | soft-floor engagement 4 < 5 | soft-floor humanVoice 3 < 5",
+   "score": 45
+  }
+ ],
+ "rejected": [
+  {
+   "tag": "untitled-spy-thriller-ev-streaming-arrival×NOW-STREAMING",
+   "stage": "gatherer",
+   "reason": "under floor: no subscription-streaming platform — rent/buy is not 'now streaming' (try 1)"
+  },
+  {
+   "tag": "citizen-vigilante-bo-opening×BO-OPENING",
+   "stage": "gatherer",
+   "reason": "under floor: streaming original — no theatrical box office (belongs in a streaming form) (try 2)"
+  }
+ ],
+ "skipped": [
+  {
+   "tag": "young-washington-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "the-invite-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "backrooms-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "jackass-best-and-last-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "scary-movie-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "the-odyssey-ev-opening×BO-OPENING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "voicemails-for-isabelle-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "enola-holmes-3-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "voicemails-for-isabelle-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "the-doorman-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "little-brother-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "rust-creek-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "f9-the-fast-saga-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "old-henry-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "the-boss-baby-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  }
+ ],
+ "blocked": [],
+ "paced": {
+  "tokens": 2.15,
+  "behind": true,
+  "expected": 19,
+  "allow": 2
+ },
+ "queueBuilt": 5,
+ "zeroStreak": 2,
+ "daySpend": {
+  "laDay": "2026-07-18",
+  "usd": 0.56219
+ },
+ "finishedAt": "2026-07-19T05:59:19.866Z",
+ "meter": {
+  "byRole": {
+   "categorize": {
+    "calls": 3,
+    "errors": 0,
+    "in": 1101,
+    "out": 507,
+    "usd": 0.00031,
+    "ms": 3429
+   },
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3415,
+    "out": 658,
+    "usd": 0.00021,
+    "ms": 2178
+   },
+   "gatherer": {
+    "calls": 14,
+    "errors": 0,
+    "in": 33326,
+    "out": 2127,
+    "usd": 0.00418,
+    "ms": 13586
+   },
+   "synthesizer": {
+    "calls": 13,
+    "errors": 1,
+    "in": 8103,
+    "out": 5650,
+    "usd": 0.00173,
+    "ms": 103258
+   },
+   "writerChart": {
+    "calls": 1,
+    "errors": 0,
+    "in": 1926,
+    "out": 1020,
+    "usd": 0.00079,
+    "ms": 21487
+   },
+   "writer": {
+    "calls": 22,
+    "errors": 0,
+    "in": 68165,
+    "out": 22237,
+    "usd": 0.06285,
+    "ms": 272916
+   },
+   "qa": {
+    "calls": 76,
+    "errors": 1,
+    "in": 211140,
+    "out": 32949,
+    "usd": 0.14387,
+    "ms": 210811
+   }
+  },
+  "totalUsd": 0.21394
+ },
+ "openrouterTotalUsd": 0.21324
+}

@@ -808,10 +808,10 @@
    "eventSlug": "obsession-bo-update-d64",
    "form": "BO-UPDATE",
    "reason": "1 unverified claim(s) cut, unrecovered",
-   "tries": 7,
-   "at": "2026-07-19T05:03:13.082Z",
+   "tries": 8,
+   "at": "2026-07-19T05:36:13.901Z",
    "dead": true,
-   "expiresAt": "2026-07-22T05:03:13.082Z"
+   "expiresAt": "2026-07-22T05:36:13.901Z"
   },
   {
    "key": "the-abandons-ev-streaming-arrival|NOW-STREAMING",
@@ -842,8 +842,8 @@
    "eventSlug": "citizen-vigilante-bo-opening",
    "form": "BO-OPENING",
    "reason": "under floor: streaming original — no theatrical box office (belongs in a streaming form)",
-   "tries": 1,
-   "at": "2026-07-18T19:01:35.253Z"
+   "tries": 2,
+   "at": "2026-07-19T05:37:54.209Z"
   },
   {
    "key": "supergirl-ev-other-d20|BO-UPDATE",
@@ -900,16 +900,112 @@
    "reason": "words 173 < 180 (owner-set ~200-word minimum) | soft-floor engagement 4 < 5 | soft-floor humanVoice 4 < 5",
    "tries": 1,
    "at": "2026-07-19T05:04:51.768Z"
+  },
+  {
+   "key": "untitled-spy-thriller-ev-streaming-arrival|NOW-STREAMING",
+   "eventSlug": "untitled-spy-thriller-ev-streaming-arrival",
+   "form": "NOW-STREAMING",
+   "reason": "under floor: no subscription-streaming platform — rent/buy is not 'now streaming'",
+   "tries": 1,
+   "at": "2026-07-19T05:37:37.542Z"
+  },
+  {
+   "key": "the-get-out-bo-update-d23|BO-UPDATE",
+   "eventSlug": "the-get-out-bo-update-d23",
+   "form": "BO-UPDATE",
+   "reason": "words 175 < 180 (owner-set ~200-word minimum) | soft-floor readability 4 < 5 | soft-floor engagement 2 < 5 | soft-floor humanVoice 2 < 5",
+   "tries": 1,
+   "at": "2026-07-19T05:41:47.259Z"
+  },
+  {
+   "key": "i-will-find-you-trending-tv-w2026-07-12|TRENDING-TV",
+   "eventSlug": "i-will-find-you-trending-tv-w2026-07-12",
+   "form": "TRENDING-TV",
+   "reason": "words 72 < 180 (owner-set ~200-word minimum) | soft-floor humanVoice 0 < 5",
+   "tries": 1,
+   "at": "2026-07-19T05:43:00.618Z"
+  },
+  {
+   "key": "worst-neighbor-ever-trending-tv-w2026-07-12|TRENDING-TV",
+   "eventSlug": "worst-neighbor-ever-trending-tv-w2026-07-12",
+   "form": "TRENDING-TV",
+   "reason": "words 172 < 180 (owner-set ~200-word minimum)",
+   "tries": 1,
+   "at": "2026-07-19T05:44:57.840Z"
+  },
+  {
+   "key": "little-house-on-the-prairie-trending-tv-w2026-07-12|TRENDING-TV",
+   "eventSlug": "little-house-on-the-prairie-trending-tv-w2026-07-12",
+   "form": "TRENDING-TV",
+   "reason": "scaffold: empty section \"## Netflix Viewership Numbers Reflect Ea\" | scaffold: fewer than 3 keyTakeaways",
+   "tries": 1,
+   "at": "2026-07-19T05:46:22.400Z"
+  },
+  {
+   "key": "avatar-the-last-airbender-trending-tv-w2026-07-12|TRENDING-TV",
+   "eventSlug": "avatar-the-last-airbender-trending-tv-w2026-07-12",
+   "form": "TRENDING-TV",
+   "reason": "platform: names paramount+ not in confirmed providers",
+   "tries": 1,
+   "at": "2026-07-19T05:48:17.422Z"
+  },
+  {
+   "key": "salish-jordan-matter-trending-tv-w2026-07-12|TRENDING-TV",
+   "eventSlug": "salish-jordan-matter-trending-tv-w2026-07-12",
+   "form": "TRENDING-TV",
+   "reason": "2 unverified claim(s) cut, unrecovered",
+   "tries": 1,
+   "at": "2026-07-19T05:50:44.115Z"
+  },
+  {
+   "key": "raw-trending-tv-w2026-07-12|TRENDING-TV",
+   "eventSlug": "raw-trending-tv-w2026-07-12",
+   "form": "TRENDING-TV",
+   "reason": "3 unverified claim(s) cut, unrecovered",
+   "tries": 1,
+   "at": "2026-07-19T05:52:43.168Z"
+  },
+  {
+   "key": "sullivan-s-crossing-trending-tv-w2026-07-12|TRENDING-TV",
+   "eventSlug": "sullivan-s-crossing-trending-tv-w2026-07-12",
+   "form": "TRENDING-TV",
+   "reason": "3 unverified claim(s) cut, unrecovered",
+   "tries": 1,
+   "at": "2026-07-19T05:54:34.920Z"
+  },
+  {
+   "key": "survival-of-the-thickest-trending-tv-w2026-07-12|TRENDING-TV",
+   "eventSlug": "survival-of-the-thickest-trending-tv-w2026-07-12",
+   "form": "TRENDING-TV",
+   "reason": "words 174 < 180 (owner-set ~200-word minimum)",
+   "tries": 1,
+   "at": "2026-07-19T05:55:58.276Z"
+  },
+  {
+   "key": "lucky-trending-tv|TRENDING-TV",
+   "eventSlug": "lucky-trending-tv",
+   "form": "TRENDING-TV",
+   "reason": "words 156 < 180 (owner-set ~200-word minimum) | soft-floor engagement 2 < 5 | soft-floor humanVoice 2 < 5",
+   "tries": 1,
+   "at": "2026-07-19T05:58:13.597Z"
+  },
+  {
+   "key": "silo-trending-tv|TRENDING-TV",
+   "eventSlug": "silo-trending-tv",
+   "form": "TRENDING-TV",
+   "reason": "words 162 < 180 (owner-set ~200-word minimum) | soft-floor engagement 4 < 5 | soft-floor humanVoice 3 < 5",
+   "tries": 1,
+   "at": "2026-07-19T05:59:19.864Z"
   }
  ],
- "zeroStreak": 1,
+ "zeroStreak": 2,
  "daySpend": {
   "laDay": "2026-07-18",
-  "usd": 0.34895
+  "usd": 0.56219
  },
  "pace": {
-  "tokens": 2.075539404761905,
-  "lastMs": 1784437349304
+  "tokens": 2.1510125,
+  "lastMs": 1784439251226
  },
  "lastAuditDay": "2026-07-18",
  "attempts": {
@@ -934,12 +1030,24 @@
    "potential": 3,
    "the boss baby": 1,
    "the sheep detectives": 3,
-   "citizen vigilante": 1,
+   "citizen vigilante": 2,
    "supergirl": 2,
    "zola": 1,
    "the best 4-part sci-fi book adaptation of the last 15 years": 2,
    "the best sci-fi book adaptation of the last 15 years": 1,
-   "a perfect zombie movie": 1
+   "a perfect zombie movie": 1,
+   "untitled spy thriller": 1,
+   "the get out": 1,
+   "i will find you": 1,
+   "worst neighbor ever": 1,
+   "little house on the prairie": 1,
+   "avatar: the last airbender": 1,
+   "salish & jordan matter": 1,
+   "raw": 1,
+   "sullivan's crossing": 1,
+   "survival of the thickest": 1,
+   "lucky": 1,
+   "silo": 1
   }
  }
 }
