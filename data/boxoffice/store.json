@@ -307,6 +307,28 @@
    "film": "Jackass: Best and Last",
    "tmdbId": null,
    "eventType": "boxoffice"
+  },
+  {
+   "key": "backrooms-bo-update-d50|BO-UPDATE",
+   "at": "2026-07-19T04:34:15.943Z",
+   "eventSlug": "backrooms-bo-update-d50",
+   "form": "BO-UPDATE",
+   "slug": "backrooms-box-office-day-50-adds-215-180-as-domestic-total-hits-195-5-million",
+   "title": "Chiwetel Ejiofor's 'Backrooms' Grosses $382 Million Worldwide on $10 Million Budget, Now Streaming",
+   "film": "Backrooms",
+   "tmdbId": null,
+   "eventType": "boxoffice"
+  },
+  {
+   "key": "scary-movie-bo-update-d43|BO-UPDATE",
+   "at": "2026-07-19T04:36:17.395Z",
+   "eventSlug": "scary-movie-bo-update-d43",
+   "form": "BO-UPDATE",
+   "slug": "scary-movie-box-office-day-43-adds-72-000-as-domestic-total-hits-107-8-million",
+   "title": "Scary Movie (2026) Crosses $107.8M Domestic, $228M Worldwide on $30M Budget",
+   "film": "Scary Movie",
+   "tmdbId": null,
+   "eventType": "boxoffice"
   }
  ],
  "parked": [
@@ -785,31 +807,11 @@
    "key": "obsession-bo-update-d64|BO-UPDATE",
    "eventSlug": "obsession-bo-update-d64",
    "form": "BO-UPDATE",
-   "reason": "synthesizer returned no usable brief",
-   "tries": 5,
-   "at": "2026-07-19T04:10:52.642Z",
-   "dead": true,
-   "expiresAt": "2026-07-22T04:10:52.642Z"
-  },
-  {
-   "key": "backrooms-bo-update-d50|BO-UPDATE",
-   "eventSlug": "backrooms-bo-update-d50",
-   "form": "BO-UPDATE",
-   "reason": "words 146 < 180 (owner-set ~200-word minimum)",
-   "tries": 5,
-   "at": "2026-07-19T04:11:58.637Z",
-   "dead": true,
-   "expiresAt": "2026-07-22T04:11:58.637Z"
-  },
-  {
-   "key": "scary-movie-bo-update-d43|BO-UPDATE",
-   "eventSlug": "scary-movie-bo-update-d43",
-   "form": "BO-UPDATE",
    "reason": "1 unverified claim(s) cut, unrecovered",
-   "tries": 5,
-   "at": "2026-07-19T04:13:46.738Z",
+   "tries": 6,
+   "at": "2026-07-19T04:32:44.018Z",
    "dead": true,
-   "expiresAt": "2026-07-22T04:13:46.738Z"
+   "expiresAt": "2026-07-22T04:32:44.018Z"
   },
   {
    "key": "the-abandons-ev-streaming-arrival|NOW-STREAMING",
@@ -892,14 +894,14 @@
    "at": "2026-07-19T03:38:42.376Z"
   }
  ],
- "zeroStreak": 26,
+ "zeroStreak": 0,
  "daySpend": {
   "laDay": "2026-07-18",
-  "usd": 0.32361
+  "usd": 0.32747
  },
  "pace": {
-  "tokens": 4,
-  "lastMs": 1784434132773
+  "tokens": 2,
+  "lastMs": 1784435445711
  },
  "lastAuditDay": "2026-07-18",
  "attempts": {
