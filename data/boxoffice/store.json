@@ -1194,30 +1194,46 @@
    "eventSlug": "gail-daughtry-and-the-celebrity-sex-pass-bo-update-d8",
    "form": "BO-UPDATE",
    "reason": "consistency: title: \"$1.2\" is not a canonical figure for this film | title: \"$1.2\" contradicts the canonical domestic figure ($1,242,603)",
-   "tries": 6,
-   "at": "2026-07-19T13:06:21.411Z",
+   "tries": 7,
+   "at": "2026-07-19T13:32:20.123Z",
    "dead": true,
-   "expiresAt": "2026-07-22T13:06:21.411Z"
+   "expiresAt": "2026-07-22T13:32:20.123Z"
   },
   {
    "key": "star-wars-the-mandalorian-and-grogu-bo-update-d57|BO-UPDATE",
    "eventSlug": "star-wars-the-mandalorian-and-grogu-bo-update-d57",
    "form": "BO-UPDATE",
-   "reason": "1 unverified claim(s) cut, unrecovered",
-   "tries": 6,
-   "at": "2026-07-19T13:08:59.468Z",
+   "reason": "consistency: title: \"$177.5\" is not a canonical figure for this film | title: \"$177.5\" contradicts the canonical domestic figure ($177,455,904) | metaTitle: headlines domestic while the title headlines dailyGross/other — the SERP promise must match the page",
+   "tries": 7,
+   "at": "2026-07-19T13:33:46.759Z",
    "dead": true,
-   "expiresAt": "2026-07-22T13:08:59.468Z"
+   "expiresAt": "2026-07-22T13:33:46.759Z"
+  },
+  {
+   "key": "the-super-mario-galaxy-movie-ev-milestone-d0|BO-MILESTONE",
+   "eventSlug": "the-super-mario-galaxy-movie-ev-milestone-d0",
+   "form": "BO-MILESTONE",
+   "reason": "words 168 < 180 (owner-set ~200-word minimum)",
+   "tries": 1,
+   "at": "2026-07-19T13:36:16.668Z"
+  },
+  {
+   "key": "passenger-bo-update-d61|BO-UPDATE",
+   "eventSlug": "passenger-bo-update-d61",
+   "form": "BO-UPDATE",
+   "reason": "words 115 < 180 (owner-set ~200-word minimum) | soft-floor engagement 3 < 5 | soft-floor humanVoice 4 < 5",
+   "tries": 1,
+   "at": "2026-07-19T13:38:22.743Z"
   }
  ],
- "zeroStreak": 0,
+ "zeroStreak": 1,
  "daySpend": {
   "laDay": "2026-07-19",
-  "usd": 0.14654
+  "usd": 0.18978
  },
  "pace": {
-  "tokens": 2.151181366666667,
-  "lastMs": 1784466145284
+  "tokens": 3.015797644444445,
+  "lastMs": 1784467855514
  },
  "lastAuditDay": "2026-07-19",
  "attempts": {
@@ -1230,7 +1246,9 @@
    "worst neighbor ever": 1,
    "little house on the prairie": 1,
    "avatar: the last airbender": 1,
-   "citizen vigilante": 1
+   "citizen vigilante": 1,
+   "the super mario galaxy movie": 1,
+   "passenger": 1
   }
  }
 }
