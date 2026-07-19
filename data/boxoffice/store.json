@@ -1093,16 +1093,40 @@
    "reason": "synthesizer returned no usable brief",
    "tries": 1,
    "at": "2026-07-19T06:27:39.423Z"
+  },
+  {
+   "key": "the-odyssey-bo-update-d1|BO-UPDATE",
+   "eventSlug": "the-odyssey-bo-update-d1",
+   "form": "BO-UPDATE",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "tries": 1,
+   "at": "2026-07-19T06:30:34.743Z"
+  },
+  {
+   "key": "moana-bo-update-d8|BO-UPDATE",
+   "eventSlug": "moana-bo-update-d8",
+   "form": "BO-UPDATE",
+   "reason": "scaffold: empty section \"## A Daunting Financial Voyage for Disne\"",
+   "tries": 1,
+   "at": "2026-07-19T06:31:56.313Z"
+  },
+  {
+   "key": "minions-monsters-bo-update-d17|BO-UPDATE",
+   "eventSlug": "minions-monsters-bo-update-d17",
+   "form": "BO-UPDATE",
+   "reason": "scaffold: empty section \"## The Box Office: A Soft Franchise Debu\" | scaffold: body 178 words < 180 floor",
+   "tries": 1,
+   "at": "2026-07-19T06:33:07.927Z"
   }
  ],
- "zeroStreak": 0,
+ "zeroStreak": 1,
  "daySpend": {
   "laDay": "2026-07-18",
-  "usd": 0.77802
+  "usd": 0.78427
  },
  "pace": {
-  "tokens": 1.2125922619047622,
-  "lastMs": 1784440803036
+  "tokens": 1.2799094444444448,
+  "lastMs": 1784442499429
  },
  "lastAuditDay": "2026-07-18",
  "attempts": {
