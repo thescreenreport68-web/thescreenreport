@@ -39,6 +39,7 @@ faq:
     a: Their divorce was finalized in July 2026.
   - q: Why did Jelly Roll file for divorce?
     a: Court documents cited irreconcilable differences.
+robots: noindex  # de-duplicated 2026-07-19: same event as jelly-roll-and-bunnie-xo-finalize-divorce-2-months-after-breakup (published 4h earlier). URL kept alive; index signal removed.
 rumorStatus: Confirmed
 gossipPull: '"I would have never got custody of my daughter without her."'
 storyStatus: CONFIRMED
