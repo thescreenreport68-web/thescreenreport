@@ -147,12 +147,6 @@ export async function boRun({
       if (angle.form !== "BO-UPDATE" && alreadyPublished(store, trigger.eventSlug, angle.form)) { report.skipped.push({ tag, reason: "already published" }); continue; }
       if (parkedTries(store, trigger.eventSlug, angle.form) === Infinity) { report.skipped.push({ tag, reason: "parked dead" }); continue; }
       if (parkCooling(store, trigger.eventSlug, angle.form, { now: new Date(now) })) { report.skipped.push({ tag, reason: "park cooling (held recently — escalating retry backoff)" }); continue; }
-      // FILM-LEVEL DAILY ATTEMPT BUDGET (free gate): one film may burn at most 3 PAID attempts per LA day
-      // across ALL slugs/forms — the per-slug budgets let a hot film (The Odyssey) burn 20 in a day.
-      if (!reviewDir && filmAttemptBudgetLeft(store, film.title, { now: new Date(now) }) <= 0) {
-        report.skipped.push({ tag, reason: "film attempt budget exhausted today (3 paid tries/film/day)" });
-        continue;
-      }
       // ── CHEAP MATERIALITY PRE-GATE (cost, 2026-07-18 live audit) ──
       // Materiality used to be evaluated only AFTER the paid gatherer, so every already-covered chart film
       // paid for TMDB + trade extraction on EVERY tick and was then held: "already covered today" was 43 of
@@ -162,9 +156,22 @@ export async function boRun({
       // the domestic figure, the baseline, and the milestone math are IDENTICAL to the post-gatherer call.
       // We therefore skip only on a NON-material verdict; anything material proceeds down the full path
       // exactly as before (the trade report can still enrich a story we've decided is worth telling).
-      if ((FORMS[angle.form] || {}).tracked && film?.dailyChart?.cume) {
+      const isChartUpdate = !!film?.dailyChart?.cume;
+      if ((FORMS[angle.form] || {}).tracked && isChartUpdate) {
         const pre = isMaterial(film, {}, {}, tracked, { now: new Date(now) });
         if (!pre.material) { report.skipped.push({ tag, reason: `pre-gate (free): ${pre.reason}` }); continue; }
+      }
+      // FILM-LEVEL DAILY ATTEMPT BUDGET (free gate): a film may burn at most 3 PAID attempts per LA day
+      // across all EVENT slugs/forms — without it one hot film (The Odyssey) burns ~20 via ev-opening/
+      // ev-weekend/ev-record proliferation.
+      // ⚠️ CHART UPDATES ARE EXEMPT (2026-07-18 audit): the budget is for UNBOUNDED event-slug retries. A
+      // chart update is already hard-bounded — one per film per LA day AND strictly-higher domestic — so it
+      // cannot loop. Counting event failures against it starved 3 REAL publishes in one day (Obsession
+      // $256.8M, Backrooms $195.5M, Scary Movie $107.8M all had material numbers and were locked out; daily
+      // volume fell 8 → 3). The budget must never block a story that just passed the materiality gate.
+      if (!reviewDir && !isChartUpdate && filmAttemptBudgetLeft(store, film.title, { now: new Date(now) }) <= 0) {
+        report.skipped.push({ tag, reason: "film attempt budget exhausted today (3 paid event tries/film/day)" });
+        continue;
       }
       if (paceMs && (report.published.length + report.rejected.length + report.held.length)) await sleep(paceMs);
       console.log(`\n■ ${tag} (heat ${trigger.priority}, via ${film.via})`);
@@ -177,9 +184,9 @@ export async function boRun({
       // ── DATA MODULE (deterministic TMDB) — runs first so the gatherer floor can see worldwide/budget ──
       await withTimeout(dataImpl(job), 60e3, `data ${tag}`).catch(() => { job.boxData = null; });
 
-      // PAID work starts here — spend one of the film's 3 daily attempts (live only; the budget gate above
-      // refuses the 4th, across every slug/form this film appears under today).
-      if (!reviewDir && !dryRun) bumpFilmAttempt(store, film.title, { now: new Date(now) });
+      // PAID work starts here — spend one of the film's 3 daily EVENT attempts (live only). Chart updates
+      // are exempt (bounded by materiality) and must not consume the budget an event story needs.
+      if (!reviewDir && !dryRun && !isChartUpdate) bumpFilmAttempt(store, film.title, { now: new Date(now) });
 
       // ── GATHERER (the trade box-office report) ──
       await withTimeout(gatherImpl(job), AGENTS.gatherer.watchdogMs, `gatherer ${tag}`);

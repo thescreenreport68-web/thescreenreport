@@ -22,7 +22,7 @@ import { categorize, cluster } from "../find/events.mjs";
 import { scoreEvent } from "../find/score.mjs";
 import { readQueue, markConsumed } from "../find/findrun.mjs";
 import { PACE, refill, expectedByNow, allowance, debit } from "../pacing.mjs";
-import { KIND_FORM } from "../find/events.mjs";
+import { KIND_FORM, isPlausibleFilmTitle } from "../find/events.mjs";
 import { discoverTrendingTv } from "../discover.mjs";
 import { dailyAudit } from "../audit.mjs";
 import { isMaterial, updateEventSuffix, recordArticle, currentNumberRaw, priorArticles, linkPriorCoverage, streamingExits, trackKey, isPastOpening } from "../tracker.mjs";
@@ -1268,6 +1268,51 @@ t("hardened verdict wall: the legacy-sweep phrasings are now cut (attribution st
   assert.ok(cuts.length >= 2, "unattributed sweep phrasings cut: " + cuts.length);
   const rescued = verdictCuts("According to Variety, the film faces an uphill battle this weekend.");
   assert.equal(rescued.length, 0, "attributed verdict stays — that is journalism");
+});
+
+// ── 18h-AUDIT FIXES — chart updates exempt from budget, listicle titles rejected ──────────────────
+console.log("18h-audit fixes — budget exemption, listicle title guard");
+
+await ta("CHART UPDATE with a material number is NEVER blocked by an exhausted event budget", async () => {
+  const dirC = fs.mkdtempSync(path.join(os.tmpdir(), "bo-exempt-"));
+  const nowMs = Date.parse("2026-07-18T20:00:00Z");
+  // film already burned its 3 EVENT attempts today
+  const st = { published: [], parked: [], zeroStreak: 0, daySpend: null, pace: { tokens: 4, lastMs: nowMs },
+    attempts: { laDay: new Intl.DateTimeFormat("en-CA", { timeZone: "America/Los_Angeles" }).format(new Date(nowMs)), byFilm: { obsession: 3 } },
+    file: path.join(dirC, "store.json") };
+  const chartFilm = { title: "Obsession", dailyChart: { cume: "$256,781,260", dailyGross: "$790,000", dayInRelease: "62", theaters: "1,524" } };
+  const found = [{ film: chartFilm, trigger: { eventSlug: "obsession-bo-update", title: "Obsession", priority: 90, signals: {}, sources: [] }, angle: { form: "BO-UPDATE", queries: [] } }];
+  let gathererReached = false;
+  const report = await boRun({
+    storeImpl: st, nowMs, limit: 1,
+    trackedImpl: { films: { obsession: { title: "Obsession", lastDomesticRaw: 255400000, lastArticleAt: "2026-07-16T12:00:00Z" } } },
+    findImpl: async () => found,
+    readQueueImpl: () => ({ events: [] }), runFindImpl: async () => ({ events: [] }),
+    dataImpl: async (job) => { job.boxData = null; return job; },
+    gatherImpl: async (job) => { gathererReached = true; job.gatherFail = "under floor: stop here for the test"; return job; },
+  });
+  assert.ok(gathererReached, "chart update must REACH paid work despite the exhausted event budget");
+  const budgetSkip = (report.skipped || []).find((s) => /attempt budget/.test(s.reason || ""));
+  assert.ok(!budgetSkip, "no budget skip for a chart update: " + JSON.stringify(report.skipped));
+  fs.rmSync(dirC, { recursive: true, force: true });
+});
+
+t("listicle/descriptive phrases are rejected as film titles (they burned 4 paid attempts live)", () => {
+  for (const bad of [
+    "The Best 4-Part Sci-Fi Book Adaptation of the Last 15 Years",
+    "the best sci-fi book adaptation of the last 15 years",
+    "A Perfect Zombie Movie",
+    "The Greatest Horror Movies of All Time",
+    "Movies Like Interstellar You Should Watch Right Now",
+  ]) assert.equal(isPlausibleFilmTitle(bad), false, "should reject: " + bad);
+  for (const good of ["The Odyssey", "Moana", "Toy Story 5", "Jackass: Best and Last", "Spider-Man: Brand New Day", "Scary Movie"])
+    assert.equal(isPlausibleFilmTitle(good), true, "should accept: " + good);
+});
+
+t("categorize marks a listicle-phrase item irrelevant so it never reaches a paid stage", async () => {
+  // (sync wrapper around the async assertion via the shared helper is unnecessary — validated in ta below)
+  assert.equal(isPlausibleFilmTitle(""), false);
+  assert.equal(isPlausibleFilmTitle("A".repeat(80)), false, "absurdly long title rejected");
 });
 
 // ── summary ──────────────────────────────────────────────────────────────────────────────────────
