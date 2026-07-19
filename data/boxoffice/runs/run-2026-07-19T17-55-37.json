@@ -1,0 +1,141 @@
+{
+ "runId": "run-2026-07-19T17-55-37",
+ "mode": "live",
+ "startedAt": "2026-07-19T17:55:37.068Z",
+ "films": 42,
+ "published": [],
+ "held": [
+  {
+   "tag": "gail-daughtry-and-the-celebrity-sex-pass-bo-update×BO-UPDATE",
+   "reason": "consistency: title: \"$1.2\" is not a canonical figure for this film | metaTitle: \"$1M\" is not a canonical figure for this film | title: \"$1.2\" contradicts the canonical domestic figure ($1,242,603)",
+   "score": 80
+  },
+  {
+   "tag": "star-wars-the-mandalorian-and-grogu-bo-update×BO-UPDATE",
+   "reason": "words 158 < 180 (owner-set ~200-word minimum)",
+   "score": 50
+  }
+ ],
+ "rejected": [
+  {
+   "tag": "heartstopper-forever-bo-opening×BO-OPENING",
+   "stage": "gatherer",
+   "reason": "under floor: streaming original — no theatrical box office (belongs in a streaming form) (try 1)"
+  }
+ ],
+ "skipped": [
+  {
+   "tag": "the-odyssey-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $51M not above last published $51M)"
+  },
+  {
+   "tag": "moana-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "minions-monsters-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "toy-story-5-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "evil-dead-burn-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "young-washington-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $39M not above last published $39M)"
+  },
+  {
+   "tag": "the-invite-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $12M not above last published $12M)"
+  },
+  {
+   "tag": "obsession-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $257M not above last published $257M)"
+  },
+  {
+   "tag": "supergirl-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "disclosure-day-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "backrooms-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $195M not above last published $195M)"
+  },
+  {
+   "tag": "jackass-best-and-last-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $18M not above last published $18M)"
+  },
+  {
+   "tag": "scary-movie-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $108M not above last published $108M)"
+  },
+  {
+   "tag": "voicemails-for-isabelle-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  }
+ ],
+ "blocked": [],
+ "paced": {
+  "tokens": 3.75,
+  "behind": false,
+  "expected": 9.1,
+  "allow": 1
+ },
+ "attemptCapHit": 3,
+ "zeroStreak": 2,
+ "daySpend": {
+  "laDay": "2026-07-19",
+  "usd": 0.53292
+ },
+ "faults": {
+  "count": 0,
+  "bySeverity": {},
+  "faults": []
+ },
+ "finishedAt": "2026-07-19T18:03:14.153Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3298,
+    "out": 648,
+    "usd": 0.00021,
+    "ms": 2230
+   },
+   "gatherer": {
+    "calls": 5,
+    "errors": 0,
+    "in": 18996,
+    "out": 727,
+    "usd": 0.00219,
+    "ms": 5980
+   },
+   "synthesizer": {
+    "calls": 3,
+    "errors": 1,
+    "in": 1263,
+    "out": 601,
+    "usd": 0.0002,
+    "ms": 24692
+   },
+   "writerChart": {
+    "calls": 2,
+    "errors": 0,
+    "in": 3695,
+    "out": 1938,
+    "usd": 0.00151,
+    "ms": 40147
+   }
+  },
+  "totalUsd": 0.00411
+ },
+ "openrouterTotalUsd": 0.00406
+}
