@@ -33,7 +33,7 @@ keyTakeaways:
     Russell Wilson told E! News he is trying to convince his wife, Ciara, to
     have a fifth child.
   - >-
-    The couple already shares four kids: Sienna (9), Win (5), Amora (2-year-old),
+    The couple already shares four kids: Sienna (9), Win (5), Amora (2),
     and Wilson is stepdad to Future (12).
   - >-
     Wilson made the comments at Fanatics Fest in New York City on July 17,
@@ -45,8 +45,7 @@ faq:
       Ciara to have a fifth."
   - q: How many children do Russell Wilson and Ciara have?
     a: >-
-      They have three children together—Sienna (9), Win (5), and Amora (19
-      months)—and Wilson is stepfather to Ciara's son Future (12).
+      They have three children together—Sienna (9), Win (5), and Amora (2)—and Wilson is stepfather to Ciara's son Future (12).
   - q: When did Russell Wilson make these comments?
     a: >-
       He gave the exclusive interview to E! News at Fanatics Fest in New York
@@ -70,7 +69,7 @@ whatWeKnow:
     Ciara to have a fifth child.
   - Wilson said Ciara also wants five children.
   - >-
-    The couple has four children: Sienna (9), Win (5), Amora (2-year-old), and
+    The couple has four children: Sienna (9), Win (5), Amora (2), and
     Wilson is stepfather to Future (12).
   - The interview took place at Fanatics Fest in New York City on July 17.
   - Wilson and Ciara celebrated their anniversary earlier this month.
@@ -83,7 +82,7 @@ aiDisclosure: >-
   Rumors and speculation are labeled as unconfirmed and updated or removed as
   facts develop.
 sensitivity: normal
-dateModified: '2026-07-19T05:30:00.000Z'
+dateModified: '2026-07-19T06:15:00.000Z'
 provenance:
   primaryEntity: Ciara
   claim: Russell Wilson is ready for a fifth child with his wife Ciara.
@@ -106,7 +105,7 @@ Russell Wilson is campaigning to expand his family with Ciara, the retired NFL q
 
 The playful tension? It seems his lobbying efforts might be unnecessary. "I want to have five, Ciara does too," he continued. "We'll see. Hopefully, I can convince her."
 
-The couple already has four children: daughter Sienna Princess, 9, son Win Harrison, 5, and daughter Amora Princess, 2-year-old. Wilson is also stepdad to Ciara's son Future Zahir, 12, from her previous relationship with rapper Future.
+The couple already has four children: daughter Sienna Princess, 9, son Win Harrison, 5, and daughter Amora Princess, 2. Wilson is also stepdad to Ciara's son Future Zahir, 12, from her previous relationship with rapper Future.
 
 Wilson and Ciara, who celebrated their anniversary earlier this month, have often shared their joy in their blended family. In a 2021 interview with GQ, Wilson spoke about the "blessing" of being a stepfather, saying he aimed to care for Future in a way he always wanted someone to do for him.
 
