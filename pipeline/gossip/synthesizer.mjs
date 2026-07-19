@@ -40,9 +40,9 @@ export function substituteAnchors(article, anchors = []) {
     for (const a of anchors) {
       const tok = `(?:⟦|\\[\\[|\\{\\{|\\[|\\()\\s*${a.id}\\s*(?:⟧|\\]\\]|\\}\\}|\\]|\\))`;
       // 1) token already inside the writer's own quotation marks → inject bare text
-      s = s.replace(new RegExp(`(["“])\\s*${tok}\\s*(["”])`, "g"), `"${a.text}"`);
+      s = s.replace(new RegExp(`(["“])\\s*${tok}\\s*(["”])`, "g"), () => `"${a.text}"`); // replacer FN: $1/$& inside a real quote must not be eaten as a replacement pattern
       // 2) bare token → inject the quote WITH quotation marks
-      s = s.replace(new RegExp(tok, "g"), `"${a.text}"`);
+      s = s.replace(new RegExp(tok, "g"), () => `"${a.text}"`);
     }
     article[f] = s;
   }

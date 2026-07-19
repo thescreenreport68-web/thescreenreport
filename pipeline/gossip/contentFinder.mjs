@@ -107,12 +107,25 @@ export async function gatherBundle(topic, { fetchImpl = fetch, extractImpl, corr
   // corroboratingOutlets = EVERY distinct outlet found covering this story (name + domain + tier), even the ones we
   // don't extract a body from. The frame tiers off this: "6 major wires reported it" makes it a FACT, not
   // speculation — a signal that must survive even when a given outlet's article body isn't fetchable.
+  // EVERGREEN GUARD (2026-07-19): a guide / listicle / gallery / multi-story roundup is NOT a report on
+  // today's event. Grounding a news story on one publishes biography as breaking news — the live
+  // "Family Guide" case turned a 2016 birth into a June 2026 event (that article scored 27/100). Such
+  // pages are dropped; if NOTHING else remains the story BLOCKS rather than being written from biography.
+  // (isEvergreenSource was imported but never invoked until now, so that regression was still live.)
+  const newsSources = sources.filter((x) => !isEvergreenSource({ url: x.url || "", title: x.title || "" }));
+  const evergreenDropped = sources.length - newsSources.length;
+  if (evergreenDropped) console.log(`[bundle] dropped ${evergreenDropped} evergreen/roundup source(s) — not a report on this event`);
   const bundle = {
     entity: topic.primaryEntity || null,
-    sources,
+    sources: newsSources,
+    evergreenDropped,
     corroboratingOutlets: [], // tiering/attribution signal (all covering outlets), separate from the extracted bodies
-    ok: sources.length > 0,
-    reason: sources.length ? "" : "no extractable source text — BLOCK (never write a gossip story from nothing)",
+    ok: newsSources.length > 0,
+    reason: newsSources.length
+      ? ""
+      : (evergreenDropped
+          ? "only evergreen/guide/roundup pages found — BLOCK (a biography page is not a report on this event)"
+          : "no extractable source text — BLOCK (never write a gossip story from nothing)"),
   };
   refreshBundleCounts(bundle);
   // Back-compat: corroborate inline when asked. The CHEAP-FIRST path (run.mjs Phase 1) gathers with

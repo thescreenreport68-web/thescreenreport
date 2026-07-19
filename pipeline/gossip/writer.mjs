@@ -55,16 +55,26 @@ export const LEDE_ORDER = ["scene", "fact", "quote", "contrast", "fact", "scene"
 // Detect the gossip TYPE from the claim/title (most specific first). Drives the template above.
 export function detectGossipType(topic) {
   const t = `${topic.angle || ""} ${topic.title || ""} ${topic.claim || ""}`.toLowerCase();
-  if (/\b(pregnan|expecting|baby bump|having a baby|hospitaliz|health scare|rehab|cancer|illness)\b/.test(t)) return "pregnancy";
-  if (/\b(split|break ?up|broke up|divorc|separat|called it off|calls it quits|ex-|former (couple|flame)|no longer together)\b/.test(t)) return "breakup";
-  if (/\b(feud|shade|subtweet|diss|took a (shot|swipe|dig)|clap ?back|beef|throwing shade|unfollow|slam|fired back)\b/.test(t)) return "feud";
-  if (/\b(backlash|controvers|under fire|called out|apolog|accus|criticism|dragged|canceled)\b/.test(t)) return "controversy";
-  if (/\b(cast|casting|in talks|joins|signs on|lands? (the )?role|reboot|sequel|exit|quits|leaving|replac)\b/.test(t)) return "career";
-  if (/\b(dating|romance|new (man|woman|flame|couple)|fling|smitten|cozy|linked|relationship|getting close|more than friends)\b/.test(t)) return "romance";
-  if (/\b(spotted|seen (together|out)|stepped out|sighting|out and about|grabbed (dinner|lunch|coffee))\b/.test(t)) return "spotted";
-  if (/\b(cryptic|hint|teas\w+|sparked speculation|fans (think|believe|speculate)|wonder\w*|fueled rumors)\b/.test(t)) return "cryptic";
+  // 2026-07-19 FIX: these lists mix WHOLE words with STEMS. The old single regex wrapped every
+  // alternative in \b...\b, so a stem could never match its own word — "divorce" failed \bdivorc\b
+  // because the trailing "e" is a word char, and 7 of 8 real phrasings fell through to "general".
+  // Since eventKey = entity|gossipType|month, that silently split ONE story across TWO dedup buckets
+  // (the Jelly Roll divorce duplicate). Stems now match as prefixes; whole words keep their boundaries.
+  const hit = (stems, words = []) =>
+    (stems.length && new RegExp(`\\b(?:${stems.join("|")})\\w*`).test(t)) ||
+    (words.length && new RegExp(`\\b(?:${words.join("|")})\\b`).test(t));
+
+  if (hit(["pregnan", "expecting", "hospitaliz", "rehab"], ["baby bump", "having a baby", "health scare", "cancer", "illness"])) return "pregnancy";
+  if (hit(["divorc", "separat", "split"], ["break ?up", "broke up", "called it off", "calls it quits", "ex-", "former (?:couple|flame)", "no longer together"])) return "breakup";
+  if (hit(["subtweet", "unfollow"], ["feud", "shade", "diss", "took a (?:shot|swipe|dig)", "clap ?back", "beef", "throwing shade", "slam(?:s|med)?", "fired back"])) return "feud";
+  if (hit(["controvers", "apolog", "accus", "criticiz"], ["backlash", "under fire", "called out", "criticism", "dragged", "cancell?ed"])) return "controversy";
+  if (hit(["replac", "reboot", "sequel"], ["cast", "casting", "in talks", "joins", "signs on", "lands? (?:the )?role", "exit", "quits", "leaving"])) return "career";
+  if (hit(["romanc", "dating"], ["new (?:man|woman|flame|couple)", "fling", "smitten", "cozy", "linked", "relationship", "getting close", "more than friends"])) return "romance";
+  if (hit(["sighting"], ["spotted", "seen (?:together|out)", "stepped out", "out and about", "grabbed (?:dinner|lunch|coffee)"])) return "spotted";
+  if (hit(["teas", "speculat", "wonder"], ["cryptic", "hint", "fans (?:think|believe|speculate)", "fueled rumors"])) return "cryptic";
   return "general";
 }
+
 
 // Word TARGET = f(bundle depth) — never a fixed floor (a floor past the bundle's material is the fabrication
 // forcing-function; news lane D1). Thin bundle → short + legal beats padded; rich bundle → a fuller piece.
