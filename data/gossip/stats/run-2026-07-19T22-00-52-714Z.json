@@ -1,0 +1,147 @@
+{
+  "ts": "2026-07-19T22:00:52.714Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "hannah-waddingham-carried-her-daughters-cardboard-purse-on-the-red-carpet",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [
+        "metaDescription-soft:logged",
+        "lede-entity-missing:logged",
+        "geo-no-attribution:logged"
+      ],
+      "headline": [
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 0
+    }
+  ],
+  "topics": 2,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 1,
+  "costUSD": 0.017492,
+  "costPerPublished": 0.017492,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 8,
+      "in": 17365,
+      "out": 2192,
+      "usd": 0.010689500000000001
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 2,
+      "in": 2238,
+      "out": 1246,
+      "usd": 0.000544474
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 7,
+      "in": 21346,
+      "out": 6011,
+      "usd": 0.005587622800000001
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 6,
+      "in": 4756,
+      "out": 487,
+      "usd": 0.0006703999999999999
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 2,
+      "errors": 0,
+      "in": 5057,
+      "out": 393,
+      "usd": 0.0024996,
+      "ms": 2340
+    },
+    "synthesizer": {
+      "calls": 2,
+      "errors": 0,
+      "in": 2238,
+      "out": 1246,
+      "usd": 0.0004257,
+      "ms": 25856
+    },
+    "writer": {
+      "calls": 5,
+      "errors": 0,
+      "in": 20338,
+      "out": 5669,
+      "usd": 0.0066052,
+      "ms": 84096
+    },
+    "verify": {
+      "calls": 6,
+      "errors": 0,
+      "in": 12308,
+      "out": 1799,
+      "usd": 0.0081899,
+      "ms": 8699
+    },
+    "dedup": {
+      "calls": 1,
+      "errors": 0,
+      "in": 306,
+      "out": 14,
+      "usd": 0.00007514000000000002,
+      "ms": 849
+    },
+    "judge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1490,
+      "out": 166,
+      "usd": 0.0002154,
+      "ms": 912
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 702,
+      "out": 328,
+      "usd": 0.00027298000000000003,
+      "ms": 4850
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 401,
+      "out": 115,
+      "usd": 0.00008609999999999999,
+      "ms": 657
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 171,
+      "out": 40,
+      "usd": 0.0000331,
+      "ms": 406
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2093,
+      "out": 88,
+      "usd": 0.0002445,
+      "ms": 1511
+    },
+    "linker": {
+      "calls": 2,
+      "errors": 0,
+      "in": 601,
+      "out": 78,
+      "usd": 0.0000913,
+      "ms": 1002
+    }
+  }
+}
