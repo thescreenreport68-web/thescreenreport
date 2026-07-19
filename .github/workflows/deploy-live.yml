@@ -79,3 +79,13 @@ jobs:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         run: npx -y wrangler@4 deploy --config wrangler.workers.jsonc
+
+      # Phase 2 (ARCHITECTURE_MIGRATION_PLAN.md): sync the content store — R2 article bodies
+      # + D1 frontmatter index. Incremental (per-slug sha256): a normal deploy syncs only the
+      # articles that changed in this push. Self-verifying (count parity + field spot-checks);
+      # runs LAST so a store hiccup can never block the site going live.
+      - name: Sync content store (R2 + D1)
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: node scripts/sync-content-store.mjs
