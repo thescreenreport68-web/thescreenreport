@@ -5,6 +5,7 @@ import Byline from "@/components/Byline";
 import PlaceholderImage from "@/components/PlaceholderImage";
 import ArticleBody from "@/components/ArticleBody";
 import KeyTakeaways from "@/components/KeyTakeaways";
+import StoryConfidence from "@/components/StoryConfidence";
 import { NicheTop, NicheBottom } from "@/components/NicheModules";
 import { CategoryKicker } from "@/components/CategoryUI";
 import Faq from "@/components/Faq";
@@ -344,6 +345,7 @@ export default function ArticlePage({
           <div className="mx-auto max-w-prose">
             <NicheBottom article={article} />
 
+            <StoryConfidence article={article} />
             <Faq items={article.faq} />
             <AuthorBox author={article.author} />
           </div>

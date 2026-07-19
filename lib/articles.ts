@@ -117,6 +117,12 @@ export type Article = {
     pop?: number;
     breakout?: number;
   };
+  // ---- gossip lane fields (written by pipeline/gossip/assemble.mjs) ----
+  relatedLinks?: { slug: string; title?: string; url?: string }[]; // curated, entity-matched, firewalled
+  rumorStatus?: string;   // Confirmed | Reported | Unconfirmed — the reader-facing confidence label
+  whatWeKnow?: string[];  // verified points
+  whatWeDont?: string[];  // open questions — the transparency contract
+  secondaryCategory?: string; // cross-listing (a celebrity story that is also music, say)
   eventSlug?: string; // event identity — homepage dedup key
   eventType?: string; // death | casting | trailer | ... (TIER_S detection)
   outletCount?: number; // distinct outlets at publish
@@ -256,6 +262,15 @@ export function getAllArticles(): Article[] {
         a: stripMdTokens(f?.a),
       })),
       keyTakeaways: data.keyTakeaways ?? [],
+      // ---- gossip lane fields ----
+      // The Article is built from an explicit whitelist, so any frontmatter key missing here is silently
+      // DROPPED before the renderer ever sees it. That — not a missing component — is why the pipeline's
+      // curated relatedLinks and the whatWeKnow / whatWeDont transparency block never appeared.
+      relatedLinks: data.relatedLinks ?? [],
+      rumorStatus: data.rumorStatus,
+      whatWeKnow: data.whatWeKnow ?? [],
+      whatWeDont: data.whatWeDont ?? [],
+      secondaryCategory: data.secondaryCategory,
       about: data.about ?? [],
       featured: data.featured ?? false,
       readingTime: readingTimeFor(content),
@@ -378,7 +393,11 @@ export function getArticleBySlug(slug: string): Article | undefined {
 }
 
 export function getArticlesByCategory(category: string): Article[] {
-  return getAllArticles().filter((a) => a.category === category);
+  // secondaryCategory is written on 87 articles as a documented cross-listing but was never mapped,
+  // so the cross-listing silently never happened.
+  return getAllArticles().filter(
+    (a) => a.category === category || a.secondaryCategory === category
+  );
 }
 
 export function getArticlesBySubcategory(
@@ -401,7 +420,16 @@ export function getFeatured(): Article | undefined {
 
 export function getRelated(article: Article, limit = 4): Article[] {
   const all = getAllArticles().filter((a) => a.slug !== article.slug);
-  const sameCat = all.filter((a) => a.category === article.category);
-  const rest = all.filter((a) => a.category !== article.category);
-  return [...sameCat, ...rest].slice(0, limit);
+  // The pipeline computes CURATED related links (shared-entity gate + a fail-closed contradiction
+  // firewall) and stores them in frontmatter. Nothing read them, so articles showed arbitrary
+  // same-category filler instead — a Kesha story linking to Zendaya and T.I. Prefer the curated set,
+  // resolved to real articles, then top up with same-category exactly as before.
+  const bySlug = new Map(all.map((a) => [a.slug, a]));
+  const curated = (article.relatedLinks || [])
+    .map((l) => (l && l.slug ? bySlug.get(l.slug) : undefined))
+    .filter((a): a is Article => Boolean(a));
+  const seen = new Set(curated.map((a) => a.slug));
+  const sameCat = all.filter((a) => a.category === article.category && !seen.has(a.slug));
+  const rest = all.filter((a) => a.category !== article.category && !seen.has(a.slug));
+  return [...curated, ...sameCat, ...rest].slice(0, limit);
 }
