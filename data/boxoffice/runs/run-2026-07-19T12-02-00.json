@@ -1,0 +1,119 @@
+{
+ "runId": "run-2026-07-19T12-02-00",
+ "mode": "live",
+ "startedAt": "2026-07-19T12:02:00.899Z",
+ "films": 43,
+ "published": [],
+ "held": [
+  {
+   "tag": "i-will-find-you-trending-tv-w2026-07-12×TRENDING-TV",
+   "reason": "words 151 < 180 (owner-set ~200-word minimum) | soft-floor humanVoice 4 < 5",
+   "score": 55
+  },
+  {
+   "tag": "worst-neighbor-ever-trending-tv-w2026-07-12×TRENDING-TV",
+   "reason": "words 135 < 180 (owner-set ~200-word minimum) | soft-floor humanVoice 4 < 5",
+   "score": 45
+  },
+  {
+   "tag": "little-house-on-the-prairie-trending-tv-w2026-07-12×TRENDING-TV",
+   "reason": "words 106 < 180 (owner-set ~200-word minimum) | soft-floor humanVoice 3 < 5",
+   "score": 40
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "enola-holmes-3-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "voicemails-for-isabelle-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "the-doorman-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "little-brother-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "rust-creek-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "f9-the-fast-saga-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "old-henry-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "the-boss-baby-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  }
+ ],
+ "blocked": [],
+ "paced": {
+  "tokens": 1.32,
+  "behind": false,
+  "expected": 0,
+  "allow": 1
+ },
+ "attemptCapHit": 3,
+ "zeroStreak": 5,
+ "daySpend": {
+  "laDay": "2026-07-19",
+  "usd": 0.11527
+ },
+ "finishedAt": "2026-07-19T12:06:53.967Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3355,
+    "out": 667,
+    "usd": 0.00021,
+    "ms": 6104
+   },
+   "gatherer": {
+    "calls": 3,
+    "errors": 0,
+    "in": 5927,
+    "out": 360,
+    "usd": 0.00074,
+    "ms": 2744
+   },
+   "synthesizer": {
+    "calls": 3,
+    "errors": 0,
+    "in": 1919,
+    "out": 1911,
+    "usd": 0.00052,
+    "ms": 25244
+   },
+   "writer": {
+    "calls": 6,
+    "errors": 0,
+    "in": 18463,
+    "out": 6052,
+    "usd": 0.01707,
+    "ms": 90073
+   },
+   "qa": {
+    "calls": 21,
+    "errors": 0,
+    "in": 58071,
+    "out": 9286,
+    "usd": 0.04064,
+    "ms": 52126
+   }
+  },
+  "totalUsd": 0.05917
+ },
+ "openrouterTotalUsd": 0.05736
+}

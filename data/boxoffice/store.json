@@ -988,25 +988,25 @@
    "key": "i-will-find-you-trending-tv-w2026-07-12|TRENDING-TV",
    "eventSlug": "i-will-find-you-trending-tv-w2026-07-12",
    "form": "TRENDING-TV",
-   "reason": "words 72 < 180 (owner-set ~200-word minimum) | soft-floor humanVoice 0 < 5",
-   "tries": 1,
-   "at": "2026-07-19T05:43:00.618Z"
+   "reason": "words 151 < 180 (owner-set ~200-word minimum) | soft-floor humanVoice 4 < 5",
+   "tries": 2,
+   "at": "2026-07-19T12:03:43.169Z"
   },
   {
    "key": "worst-neighbor-ever-trending-tv-w2026-07-12|TRENDING-TV",
    "eventSlug": "worst-neighbor-ever-trending-tv-w2026-07-12",
    "form": "TRENDING-TV",
-   "reason": "words 172 < 180 (owner-set ~200-word minimum)",
-   "tries": 1,
-   "at": "2026-07-19T05:44:57.840Z"
+   "reason": "words 135 < 180 (owner-set ~200-word minimum) | soft-floor humanVoice 4 < 5",
+   "tries": 2,
+   "at": "2026-07-19T12:04:51.679Z"
   },
   {
    "key": "little-house-on-the-prairie-trending-tv-w2026-07-12|TRENDING-TV",
    "eventSlug": "little-house-on-the-prairie-trending-tv-w2026-07-12",
    "form": "TRENDING-TV",
-   "reason": "scaffold: empty section \"## Netflix Viewership Numbers Reflect Ea\" | scaffold: fewer than 3 keyTakeaways",
-   "tries": 1,
-   "at": "2026-07-19T05:46:22.400Z"
+   "reason": "words 106 < 180 (owner-set ~200-word minimum) | soft-floor humanVoice 3 < 5",
+   "tries": 2,
+   "at": "2026-07-19T12:06:53.965Z"
   },
   {
    "key": "avatar-the-last-airbender-trending-tv-w2026-07-12|TRENDING-TV",
@@ -1207,14 +1207,14 @@
    "expiresAt": "2026-07-22T11:36:15.215Z"
   }
  ],
- "zeroStreak": 4,
+ "zeroStreak": 5,
  "daySpend": {
   "laDay": "2026-07-19",
-  "usd": 0.05791
+  "usd": 0.11527
  },
  "pace": {
-  "tokens": 0.37150244444444447,
-  "lastMs": 1784460647018
+  "tokens": 1.3188533944444445,
+  "lastMs": 1784462520899
  },
  "lastAuditDay": "2026-07-19",
  "attempts": {
@@ -1222,7 +1222,10 @@
   "byFilm": {
    "descendants: wicked wonderland": 1,
    "lee cronin's the mummy": 1,
-   "the sheep detectives": 1
+   "the sheep detectives": 1,
+   "i will find you": 1,
+   "worst neighbor ever": 1,
+   "little house on the prairie": 1
   }
  }
 }
