@@ -1,27 +1,26 @@
 {
-  "runId": "run-2026-07-20T15-01-33",
-  "builtAt": "2026-07-20T15:05:41.013Z",
-  "count": 19,
+  "runId": "run-2026-07-20T16-01-40",
+  "builtAt": "2026-07-20T16:03:24.438Z",
+  "count": 21,
   "topics": [
     {
-      "id": "news-tiff-2026-gala-special-presentations-announced",
+      "id": "news-toronto-international-film-festival-2026-lineup",
       "slug": "tiff-announces-star-studded-gala-and-special-presentations-led-by-rock",
-      "title": "TIFF Announces Star-Studded Gala and Special Presentations, Led by ‘Rocky’ Biopic ‘I Play Rocky’ and Chris Rock’s ‘Misty Green’",
+      "title": "TIFF Announces Star-Studded Gala and Special Presentations, Led by ‘Rocky’ Biopic ‘I Play Rocky’",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "tiff-2026-gala-special-presentations-announced",
-      "primaryKeyword": "TIFF 2026 lineup",
-      "primaryEntity": "Toronto International Film Festival (2026)",
+      "eventSlug": "toronto-international-film-festival-2026-lineup",
+      "primaryKeyword": "tiff 2026 lineup",
+      "primaryEntity": "Toronto International Film Festival (TIFF)",
       "entities": [
         "I Play Rocky",
-        "Misty Green",
         "Chris Rock"
       ],
-      "angle": "The Toronto International Film Festival announces its initial slate of films for the 2026 festival, including world premieres.",
+      "angle": "The Toronto International Film Festival has announced its initial lineup, including premieres for a 'Rocky' biopic and a film starring Chris Rock.",
       "tmdbType": "movie",
       "source": "rss:Variety",
       "sources": [
@@ -29,14 +28,185 @@
           "outlet": "Variety",
           "tier": 7,
           "url": "https://variety.com/2026/film/news/tiff-gala-special-presentations-oscars-rocky-biopic-i-play-rocky-chris-rock-misty-green-1236816561/",
-          "ageMin": 13,
+          "ageMin": 73,
           "headline": "TIFF Announces Star-Studded Gala and Special Presentations, Led by ‘Rocky’ Biopic ‘I Play Rocky’ and Chris Rock’s ‘Misty Green’",
           "summary": "On Monday, the 2026 Toronto International Film Festival announced its hotly anticipated Gala and Special Presentations programs, showcasing feature films from close to 30 countries along with celebrated directors such as Danny Boyle, Pedro Almodóvar, Cristian Mungiu, Chris Rock, Mike Leigh, Ryûsuke Hamaguchi, Hirokazu Kore-eda and many more. Some of the highlights of the Special [ ]"
+        },
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/toronto-2026-peter-farrelly-chris-rock-lauren-miller-rogen-1236652027/",
+          "ageMin": 121,
+          "headline": "Toronto Fest Adds Peter Farrelly, Chris Rock, Lauren Miller Rogen World Premieres",
+          "summary": "TIFF also booked the latest films by Wayne Wang, Danny Boyle, Pedro Almodovar, Mike Leigh and Jesse Eisenberg as it laid out upcoming Gala and Special Presentation titles."
+        },
+        {
+          "outlet": "TheWrap",
+          "tier": 7,
+          "url": "https://www.thewrap.com/creative-content/movies/tiff-2026-lineup-premieres-i-play-rocky-chris-rock/",
+          "ageMin": 122,
+          "headline": "TIFF 2026 Lineup: I Play Rocky, Films by Chris Rock and Rebel Wilson Set Premieres",
+          "summary": "With more than 60 titles, the Toronto International Film Festival slate also includes movies from Courteney Cox, Wayne Wang and Tim Blake Nelson The post TIFF 2026 Lineup: I Play Rocky, Films by Chris Rock and Rebel Wilson Set Premieres appeared first on TheWrap ."
+        },
+        {
+          "outlet": "IndieWire",
+          "tier": 7,
+          "url": "https://www.indiewire.com/news/festivals/tiff-2026-galas-special-presentations-1235206066/",
+          "ageMin": 122,
+          "headline": "TIFF Galas and Special Presentations Include Cannes Hits Like Fjord, Club Kid, Minotaur, La Bola Negra, and More",
+          "summary": "The annual festival's most eye-catching sections have today added a selection of world premieres and already-minted contenders from Sundance to Cannes."
         }
       ],
-      "ageMin": 13,
+      "ageMin": 73,
       "_cand": {
         "key": "rss:tiff-announces-star-studded-gala-and-special-presentations-l",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 4,
+      "verification": {
+        "tier1Count": 4,
+        "tier1Owners": 2,
+        "outletCount": 4,
+        "outlets": [
+          "Variety",
+          "THR",
+          "TheWrap",
+          "IndieWire"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": null,
+        "framing": "plain",
+        "status": "CONFIRMED",
+        "publishable": true
+      },
+      "priority": 114,
+      "signals": {
+        "recency": 16,
+        "corroboration": 25,
+        "status": 25,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 15,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "A"
+    },
+    {
+      "id": "news-lewis-pullman-joins-julia-garner-guilty-creatures",
+      "slug": "lewis-pullman-to-star-opposite-julia-garner-in-apple-tv-thriller-guilt",
+      "title": "Lewis Pullman to Star Opposite Julia Garner in Apple TV+ Thriller 'Guilty Creatures'",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "lewis-pullman-joins-julia-garner-guilty-creatures",
+      "primaryKeyword": "guilty creatures apple tv",
+      "primaryEntity": "Guilty Creatures (TV Series)",
+      "entities": [
+        "Lewis Pullman",
+        "Julia Garner",
+        "Apple TV+"
+      ],
+      "angle": "Lewis Pullman is set to star opposite Julia Garner in the upcoming Apple TV+ thriller series 'Guilty Creatures.'",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/tv/news/lewis-pullman-julia-garner-apple-tv-guilty-creatures-1236816633/",
+          "ageMin": 2,
+          "headline": "Lewis Pullman Joins Julia Garner in Apple TV Thriller Guilty Creatures",
+          "summary": "Lewis Pullman is set to star opposite Julia Garner in the upcoming Apple TV series Guilty Creatures, Variety has learned. The show, with Garner as a lead and executive producer, was announced on July 6. It is an adaptation of the Mikita Brottman true crime book “Guilty Creatures: Sex, God, and Murder in Tallahassee, Florida. [ ]"
+        },
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/lewis-pullman-julia-garner-guilty-creatures-apple-series-1236997333/",
+          "ageMin": 2,
+          "headline": "Lewis Pullman Joins Julia Garner In ‘Guilty Creatures’ Apple TV Series From Tomorrow Studios",
+          "summary": "EXCLUSIVE: Lewis Pullman (Remarkably Bright Creatures, Lessons in Chemistry) is returning to television and to Apple TV with a starring role opposite Julia Garner in Guilty Creatures, a thriller drama from director Craig Gillespie, showrunner Stuart Zicherman and Tomorrow Studios. Adapted for the screen by Sarah DeLappe from Mikita Brottman‘s true-crime book Guilty [ ]"
+        }
+      ],
+      "ageMin": 2,
+      "_cand": {
+        "key": "rss:lewis-pullman-joins-julia-garner-in-apple-tv-thriller-guilty",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 2,
+      "verification": {
+        "tier1Count": 2,
+        "tier1Owners": 1,
+        "outletCount": 2,
+        "outlets": [
+          "Variety",
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 106,
+      "signals": {
+        "recency": 30,
+        "corroboration": 18,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 8,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "reaction-avengers-doomsday-trailer-fan-reactions",
+      "slug": "avengers-doomsday-trailer-fan-reactions-holy-peak-doom-sounds-amazing",
+      "title": "Avengers: Doomsday Trailer Fan Reactions: 'Holy Peak, Doom Sounds Amazing'",
+      "contentType": "reaction",
+      "formatTag": "reaction",
+      "category": "movies",
+      "subcategory": "reactions",
+      "eventType": "reaction",
+      "sensitivity": "normal",
+      "eventSlug": "avengers-doomsday-trailer-fan-reactions",
+      "primaryKeyword": "avengers doomsday trailer",
+      "primaryEntity": "Avengers: Doomsday",
+      "entities": [
+        "Avengers: Doomsday (film)",
+        "Robert Downey Jr.",
+        "Chris Evans",
+        "Chris Hemsworth"
+      ],
+      "angle": "Fans are reacting enthusiastically to the first trailer for 'Avengers: Doomsday,' highlighting Robert Downey Jr.'s appearance as Doctor Doom.",
+      "tmdbType": "movie",
+      "source": "rss:TheWrap",
+      "sources": [
+        {
+          "outlet": "TheWrap",
+          "tier": 7,
+          "url": "https://www.thewrap.com/creative-content/movies/avengers-doomsday-trailer-reactions-marvel/",
+          "ageMin": 54,
+          "headline": "Avengers: Doomsday Trailer Fan Reactions: Holy Peak, Doom Sounds Amazing",
+          "summary": "Robert Downey Jr., Chris Evans, Chris Hemsworth, Anthony Mackie, Florence Pugh and more return this December The post Avengers: Doomsday Trailer Fan Reactions: Holy Peak, Doom Sounds Amazing appeared first on TheWrap ."
+        }
+      ],
+      "ageMin": 54,
+      "_cand": {
+        "key": "rss:avengers-doomsday-trailer-fan-reactions-holy-peak-doom-sound",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -46,21 +216,21 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Variety"
+          "TheWrap"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Variety",
+        "attribution": "TheWrap",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 93,
+      "priority": 89,
       "signals": {
-        "recency": 30,
+        "recency": 24,
         "corroboration": 12,
         "status": 18,
-        "type": 9,
+        "type": 11,
         "pop": 0,
         "breakout": 0,
         "big": 24,
@@ -71,40 +241,39 @@
       "tierClass": "B"
     },
     {
-      "id": "news-the-earliest-show-revival-casting",
-      "slug": "the-earliest-show-revival-greenlit-at-amplify-pictures-stay-tuned-with",
-      "title": "The Earliest Show Revival Greenlit At Amplify Pictures; Stay Tuned With Kevin Carroll, Henry Winkler, Ryan Gaul, Brandon Scott Jones Joining Cast",
+      "id": "news-lewis-pullman-boards-guilty-creatures-apple-tv-series",
+      "slug": "lewis-pullman-boards-guilty-creatures-true-crime-drama-at-apple-tv",
+      "title": "Lewis Pullman Boards Guilty Creatures True Crime Drama at Apple TV",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "the-earliest-show-revival-casting",
-      "primaryKeyword": "The Earliest Show revival",
-      "primaryEntity": "The Earliest Show",
+      "eventSlug": "lewis-pullman-boards-guilty-creatures-apple-tv-series",
+      "primaryKeyword": "lewis pullman guilty creatures",
+      "primaryEntity": "Guilty Creatures",
       "entities": [
-        "Cousin Ben Troop Screening",
-        "Amplify Pictures",
-        "Ben Schwartz",
-        "Kevin Carroll"
+        "Lewis Pullman",
+        "Julia Garner",
+        "Apple TV+"
       ],
-      "angle": "The Earliest Show revival officially greenlit with new cast members joining.",
+      "angle": "Lewis Pullman has been cast in the upcoming Apple TV+ true crime drama 'Guilty Creatures'.",
       "tmdbType": "movie",
-      "source": "rss:Deadline",
+      "source": "rss:THR",
       "sources": [
         {
-          "outlet": "Deadline",
+          "outlet": "THR",
           "tier": 7,
-          "url": "https://deadline.com/2026/07/earliest-show-greenlit-kevin-carroll-henry-more-cast-1236996687/",
+          "url": "https://www.hollywoodreporter.com/tv/tv-news/lewis-pullman-apple-tv-guilty-creatures-series-1236652193/",
           "ageMin": 2,
-          "headline": "The Earliest Show Revival Greenlit At Amplify Pictures Stay Tuned With Kevin Carroll, Henry Winkler, Ryan Gaul Brandon Scott Jones Joining Cast",
-          "summary": "EXCLUSIVE: Amplify Pictures TV series revival of Ben Schwartz s Funny or Die comedy The Earliest Show has been officially greenlit, with the cast now rounded out. Kevin Carroll (Widow’s Bay) and Ryan Gaul (The Last O.G.) are joining Schwartz and Lauren Lapkus as series regulars, Henry Winkler (Barry) and Brandon Scott Jones taking recurring roles. [ ]"
+          "headline": "Lewis Pullman Boards Guilty Creatures True Crime Drama at Apple TV",
+          "summary": "The Emmy nominee will star with Julia Garner in the series."
         }
       ],
       "ageMin": 2,
       "_cand": {
-        "key": "rss:the-earliest-show-revival-greenlit-at-amplify-pictures-stay-",
+        "key": "rss:lewis-pullman-boards-guilty-creatures-true-crime-drama-at-ap",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -114,11 +283,11 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Deadline"
+          "THR"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Deadline",
+        "attribution": "THR",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -139,39 +308,106 @@
       "tierClass": "B"
     },
     {
-      "id": "news-onwards-and-sideways-new-images",
-      "slug": "toronto-bound-onwards-and-sideways-with-laura-linney-and-rhys-ifans-as",
-      "title": "Toronto-Bound Onwards and Sideways, With Laura Linney and Rhys Ifans as People Being Diagnosed With Parkinson s, Gets New Images (Exclusive)",
+      "id": "trailer-ariana-grande-trailer",
+      "slug": "teaser-for-ariana-grande-s-new-video-released",
+      "title": "Teaser for Ariana Grande's New Video Released",
+      "contentType": "trailer",
+      "formatTag": "trailer",
+      "category": "movies",
+      "subcategory": "trailers",
+      "eventType": "trailer",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "ariana-grande-trailer",
+      "primaryKeyword": "ariana grande new video",
+      "primaryEntity": "ariana grande: excuse me, i love you",
+      "entities": [
+        "Ariana Grande"
+      ],
+      "angle": "A teaser for Ariana Grande's new music video has been released.",
+      "tmdbType": "movie",
+      "source": "gnews:The Guardian",
+      "sources": [
+        {
+          "outlet": "The Guardian",
+          "tier": 7,
+          "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9DZE51anduUV9wSXRmd0M4bjZVaWE2MDNtOHVkS291cU5vb0ZKRmI1Y0VoS2g4ZVhhTTZWR3AyRHBSWlplVDJIU0tVSjFfc3J1azBESVFGTGFMRFE1R2hHeUtTRl8xOHU1UzRsc1YwVERickpTWjJNbVVB?oc=5",
+          "ageMin": 98,
+          "headline": "Avengers: Doomsday trailer reveals star-packed Marvel adventure - The Guardian",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiekFVX3lxTE9DZE51anduUV9wSXRmd0M4bjZVaWE2MDNtOHVkS291cU5vb0ZKRmI1Y0VoS2g4ZVhhTTZWR3AyRHBSWlplVDJIU0tVSjFfc3J1azBESVFGTGFMRFE1R2hHeUtTRl8xOHU1UzRsc1YwVERickpTWjJNbVVB?oc=5\" target=\"_blank\" Avengers: Doomsday trailer reveals star-packed Marvel adventure "
+        }
+      ],
+      "ageMin": 98,
+      "_cand": {
+        "key": "rss:avengers-doomsday-trailer-reveals-star-packed-marvel-adventu",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "The Guardian"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "The Guardian",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 85,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 15,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-bong-joon-ho-ally-animated-feature-sale",
+      "slug": "bong-joon-ho-s-animated-feature-ally-with-bradley-cooper-ayo-edebiri-s",
+      "title": "Bong Joon Ho's Animated Feature 'Ally' With Bradley Cooper, Ayo Edebiri Sells Globally",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "onwards-and-sideways-new-images",
-      "primaryKeyword": "Onwards and Sideways film",
-      "primaryEntity": "Onwards and Sideways (film)",
+      "eventSlug": "bong-joon-ho-ally-animated-feature-sale",
+      "primaryKeyword": "bong joon ho animated movie",
+      "primaryEntity": "Ally (film)",
       "entities": [
-        "John Madden",
-        "Laura Linney",
-        "Rhys Ifans"
+        "Bong Joon Ho",
+        "Bradley Cooper",
+        "Ayo Edebiri",
+        "Pathé"
       ],
-      "angle": "New images are released for the Toronto-bound film 'Onwards and Sideways,' starring Laura Linney and Rhys Ifans.",
+      "angle": "Bong Joon Ho's first animated feature, 'Ally,' starring Bradley Cooper and Ayo Edebiri, has been sold globally.",
       "tmdbType": "movie",
-      "source": "rss:THR",
+      "source": "rss:Variety",
       "sources": [
         {
-          "outlet": "THR",
+          "outlet": "Variety",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/onwards-and-sideways-film-images-laura-linney-rhys-ifans-1236651002/",
-          "ageMin": 57,
-          "headline": "Toronto-Bound Onwards and Sideways, With Laura Linney and Rhys Ifans as People Being Diagnosed With Parkinson s, Gets New Images (Exclusive)",
-          "summary": "Directed by John Madden ('Shakespeare in Love') based on a script by Paul Mayhew-Archer, the \"emotional and surprisingly funny\" film also features Monica Dolan and Rory Kinnear."
+          "url": "https://variety.com/2026/film/global/bong-joon-ho-animated-feature-ally-sells-globally-pathe-1236814713/",
+          "ageMin": 47,
+          "headline": "Bong Joon Ho s First Animated Feature Ally, With a Voice Cast Including Bradley Cooper and Ayo Edebiri, Sell Globally for Pathé (EXCLUSIVE)",
+          "summary": "Bong Joon-Ho s first animated feature has proved a hit with international buyers, securing multiple deals for Pathé. Ally, which launched at the Marche du Film, had already been acquired by Neon for the U.S. prior to Cannes, reuniting the Oscar-winning director with the distributor following their hugely successful collaboration on Parasite, which won the Palme [ ]"
         }
       ],
-      "ageMin": 57,
+      "ageMin": 47,
       "_cand": {
-        "key": "rss:toronto-bound-onwards-and-sideways-with-laura-linney-and-rhy",
+        "key": "rss:bong-joon-ho-s-first-animated-feature-ally-with-a-voice-cast",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -181,11 +417,11 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "THR"
+          "Variety"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "THR",
+        "attribution": "Variety",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -206,40 +442,40 @@
       "tierClass": "B"
     },
     {
-      "id": "news-toronto-international-film-festival-2026-announcement",
-      "slug": "toronto-fest-adds-peter-farrelly-chris-rock-lauren-miller-rogen-world-",
-      "title": "Toronto Fest Adds Peter Farrelly, Chris Rock, Lauren Miller Rogen World Premieres",
+      "id": "news-eric-mccormack-guest-star-the-dressing-room",
+      "slug": "eric-mccormack-to-guest-star-in-outtv-s-the-dressing-room-season-2",
+      "title": "Eric McCormack to Guest Star in OUTtv's 'The Dressing Room' Season 2",
       "contentType": "news",
       "formatTag": "news",
-      "category": "movies",
+      "category": "tv",
       "subcategory": "news",
-      "eventType": "announcement",
+      "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "toronto-international-film-festival-2026-announcement",
-      "primaryKeyword": "TIFF 2026 lineup",
-      "primaryEntity": "Toronto International Film Festival (2026)",
+      "eventSlug": "eric-mccormack-guest-star-the-dressing-room",
+      "primaryKeyword": "the dressing room season 2",
+      "primaryEntity": "The Dressing Room (TV Series)",
       "entities": [
-        "Peter Farrelly",
-        "Chris Rock",
-        "Wayne Wang",
-        "Danny Boyle"
+        "Eric McCormack",
+        "OUTtv",
+        "Andrea Bang",
+        "Josh Ramsay"
       ],
-      "angle": "The Toronto Film Festival adds more titles to its 2026 lineup, including world premieres from notable directors.",
+      "angle": "Eric McCormack, Andrea Bang, and Josh Ramsay are set to make guest appearances in the second season of OUTtv's workplace comedy 'The Dressing Room.'",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
         {
           "outlet": "THR",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/toronto-2026-peter-farrelly-chris-rock-lauren-miller-rogen-1236652027/",
-          "ageMin": 61,
-          "headline": "Toronto Fest Adds Peter Farrelly, Chris Rock, Lauren Miller Rogen World Premieres",
-          "summary": "TIFF also booked the latest films by Wayne Wang, Danny Boyle, Pedro Almodovar, Mike Leigh and Jesse Eisenberg as it laid out upcoming Gala and Special Presentation titles."
+          "url": "https://www.hollywoodreporter.com/tv/tv-news/eric-mccormack-dressing-room-season-2-1236652167/",
+          "ageMin": 19,
+          "headline": "Eric McCormack to Guest Star in OUTtv’s The Dressing Room Season 2 (Exclusive)",
+          "summary": "'Kim’s Convenience' star Andrea Bang and rock group Marianas Trench frontman Josh Ramsay also join the workplace comedy set around live theater backstage madness and heart in guest roles."
         }
       ],
-      "ageMin": 61,
+      "ageMin": 19,
       "_cand": {
-        "key": "rss:toronto-fest-adds-peter-farrelly-chris-rock-lauren-miller-ro",
+        "key": "rss:eric-mccormack-to-guest-star-in-outtv-s-the-dressing-room-se",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -258,6 +494,140 @@
         "status": "DEVELOPING",
         "publishable": true
       },
+      "priority": 86,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "music-news-melissa-auf-der-maur-new-music-archive",
+      "slug": "melissa-auf-der-maur-announces-first-new-music-in-over-15-years",
+      "title": "Melissa Auf der Maur Announces First New Music in Over 15 Years",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "melissa-auf-der-maur-new-music-archive",
+      "primaryKeyword": "melissa auf der maur new music",
+      "primaryEntity": "Melissa Auf Der Maur",
+      "entities": [
+        "Melissa Auf der Maur",
+        "Hole",
+        "Smashing Pumpkins"
+      ],
+      "angle": "Melissa Auf der Maur releases first new music in over 15 years, drawing from her archive and new compositions.",
+      "tmdbType": "movie",
+      "source": "rss:Rolling Stone",
+      "sources": [
+        {
+          "outlet": "Rolling Stone",
+          "tier": 7,
+          "url": "https://www.rollingstone.com/music/music-news/melissa-auf-der-maur-new-music-bass-womb-room-1235595950/",
+          "ageMin": 1,
+          "headline": "Melissa Auf der Maur Digs Into Her Archive for First New Music in Over 15 Years",
+          "summary": "Bass Womb Room will find the Hole and Smashing Pumpkins bassist pairing previously unreleased demos with new \"interludes\" composed for an upcoming photo exhibit"
+        }
+      ],
+      "ageMin": 1,
+      "_cand": {
+        "key": "rss:melissa-auf-der-maur-digs-into-her-archive-for-first-new-mus",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Rolling Stone"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Rolling Stone",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 69,
+      "signals": {
+        "recency": 30,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-the-most-serious-fart-ai-animated-movie",
+      "slug": "ai-assisted-animated-movie-the-most-serious-fart-in-the-works",
+      "title": "AI-Assisted Animated Movie ‘The Most Serious Fart’ in the Works",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "the-most-serious-fart-ai-animated-movie",
+      "primaryKeyword": "the most serious fart movie",
+      "primaryEntity": "The Most Serious Fart",
+      "entities": [
+        "Utopai Studios",
+        "Not Another Teen Movie"
+      ],
+      "angle": "AI production company Utopai Studios is developing an animated feature film titled 'The Most Serious Fart' with a writer from 'Not Another Teen Movie'.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/film/news/utopai-studios-ai-animated-movie-most-serious-fart-1236816485/",
+          "ageMin": 62,
+          "headline": "Utopai Studios Producing AI-Assisted Animated Movie ‘The Most Serious Fart’ by ‘Not Another Teen Movie’ Writer (EXCLUSIVE)",
+          "summary": "In an era where AI can help make films about anything and everything, Utopai Studios has landed on farts. The AI production company will produce an animated feature-film adaptation of “The Most Serious Fart,” a 2023 children s book written by “Not Another Teen Movie” screenwriter Mike Bender and illustrated by Chuck Dillon that was inspired by Bender s [ ]"
+        }
+      ],
+      "ageMin": 62,
+      "_cand": {
+        "key": "rss:utopai-studios-producing-ai-assisted-animated-movie-the-most",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
       "priority": 79,
       "signals": {
         "recency": 16,
@@ -274,65 +644,66 @@
       "tierClass": "B"
     },
     {
-      "id": "news-interview-with-the-vampire-finale-discussion",
-      "slug": "inside-the-interview-with-the-vampire-finale-where-the-series-loses-it",
-      "title": "Inside the Interview with the Vampire Finale, Where the Series Loses Its Head and Finds Lestat s Truth",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
+      "id": "music-news-kid-cudi-kanye-west-friendship-rebuilding",
+      "slug": "kid-cudi-reveals-he-and-ye-are-rebuilding-their-friendship-sees-them-c",
+      "title": "Kid Cudi Reveals He and Ye Are Rebuilding Their Friendship Sees Them Collaborating in the Future: One Day Soon For Sure",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
       "subcategory": "news",
-      "eventType": "other",
+      "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "interview-with-the-vampire-finale-discussion",
-      "primaryKeyword": "Interview with the Vampire finale",
-      "primaryEntity": "Interview with the Vampire",
+      "tier": "popular",
+      "eventSlug": "kid-cudi-kanye-west-friendship-rebuilding",
+      "primaryKeyword": "kid cudi kanye west",
+      "primaryEntity": "Kid Cudi",
       "entities": [
-        "Interview with the Vampire (TV series)",
-        "Rolin Jones"
+        "Kanye West"
       ],
-      "angle": "Showrunner discusses the creative decisions behind the season finale of 'Interview with the Vampire'.",
+      "angle": "Kid Cudi reveals he and Kanye West are rebuilding their friendship and anticipates future collaboration.",
       "tmdbType": "movie",
-      "source": "rss:IndieWire",
+      "source": "rss:Billboard",
       "sources": [
         {
-          "outlet": "IndieWire",
+          "outlet": "Billboard",
           "tier": 7,
-          "url": "https://www.indiewire.com/features/interviews/the-vampire-lestat-finale-showrunner-interview-rolin-jones-1235206059/",
-          "ageMin": 12,
-          "headline": "Inside the Interview with the Vampire Finale, Where the Series Loses Its Head and Finds Lestat s Truth",
-          "summary": "Showrunner Rolin Jones tells IndieWire about optimizing the show's visuals for performance after its leads have lost their heads."
+          "url": "https://www.billboard.com/music/rb-hip-hop/kid-cudi-kanye-west-rebuilding-friendship-1236298145/",
+          "ageMin": 32,
+          "headline": "Kid Cudi Reveals He and Ye Are Rebuilding Their Friendship Sees Them Collaborating in the Future: One Day Soon For Sure",
+          "summary": "Cudi appeared to extend an olive branch to West when shouting him out on stage while on tour."
         }
       ],
-      "ageMin": 12,
+      "ageMin": 32,
       "_cand": {
-        "key": "rss:inside-the-interview-with-the-vampire-finale-where-the-serie",
+        "key": "rss:kid-cudi-reveals-he-and-ye-are-rebuilding-their-friendship-s",
         "popularity": 0,
         "kind": "rss-news"
       },
+      "breakoutVelocity": 0,
       "corroborationCount": 1,
       "verification": {
         "tier1Count": 1,
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "IndieWire"
+          "Billboard"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "IndieWire",
+        "attribution": "Billboard",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 71,
+      "priority": 63,
       "signals": {
-        "recency": 30,
+        "recency": 24,
         "corroboration": 12,
         "status": 18,
-        "type": 5,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
-        "big": 6,
+        "big": 0,
         "trending": 0,
         "spice": 0,
         "softTv": 0
@@ -340,40 +711,174 @@
       "tierClass": "B"
     },
     {
-      "id": "news-tiff-2026-first-lineup-revealed",
-      "slug": "tiff-2026-first-lineup-world-premieres-of-i-play-rocky-chris-rock-s-mi",
-      "title": "TIFF 2026 First Lineup: World Premieres Of I Play Rocky , Chris Rock s Misty Green , Anton Corbijn s A Talent For Murder , John Madden s Onwards And Sideways More",
+      "id": "news-king-of-the-hill-return",
+      "slug": "king-of-the-hill-and-the-wall-return",
+      "title": "King Of The Hill And The Wall Return",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "renewal",
+      "sensitivity": "normal",
+      "eventSlug": "king-of-the-hill-return",
+      "primaryKeyword": "King of the Hill",
+      "primaryEntity": "King of the Hill",
+      "entities": [
+        "The Wall"
+      ],
+      "angle": "The animated series 'King of the Hill' is set to return, alongside 'The Wall'.",
+      "tmdbType": "movie",
+      "source": "gnews:shortlist.com",
+      "sources": [
+        {
+          "outlet": "shortlist.com",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNcF92a1JkbVdOLVMxOTYtNU9scndxLXlqelRob1ZDc2RYRTNMdFp6WG1saEFOdmNpcEYzV3JaQzVuOVR6anNnZjBvN1JqRU1abV9UeHJfQzB5UWZOMVpHQUtwUkY5TXVTWTU4Ym9OMlAyaE94eFhxUUFXc2w5bkMzNUxfZFg4TkM1SjVvLXpiWEdRXzJkTjNfZ290dXdITFktdG9saGRfVjBBdFF4?oc=5",
+          "ageMin": 214,
+          "headline": "The next Christopher Nolan movie is several years away, says director - shortlist.com",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxNcF92a1JkbVdOLVMxOTYtNU9scndxLXlqelRob1ZDc2RYRTNMdFp6WG1saEFOdmNpcEYzV3JaQzVuOVR6anNnZjBvN1JqRU1abV9UeHJfQzB5UWZOMVpHQUtwUkY5TXVTWTU4Ym9OMlAyaE94eFhxUUFXc2w5bkMzNUxfZFg4TkM1SjVvLXpiWEdRXzJkTjNfZ290dXdITFktdG9saGRfVjBBdFF4?oc=5\" target=\"_bla"
+        }
+      ],
+      "ageMin": 214,
+      "_cand": {
+        "key": "rss:the-next-christopher-nolan-movie-is-several-years-away-says-",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "shortlist.com"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "shortlist.com",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 74,
+      "signals": {
+        "recency": 9,
+        "corroboration": 8,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "radar": 12
+      },
+      "radarKind": "tv-episode-today",
+      "tierClass": "A"
+    },
+    {
+      "id": "news-hollywood-bowl-wes-anderson-tribute",
+      "slug": "jackson-browne-beck-bill-murray-celebrate-wes-anderson-films-at-hollyw",
+      "title": "Jackson Browne, Beck, Bill Murray Celebrate Wes Anderson Films at Hollywood Bowl",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "tiff-2026-first-lineup-revealed",
-      "primaryKeyword": "TIFF 2026 lineup",
-      "primaryEntity": "Toronto International Film Festival (2026)",
+      "tier": "popular",
+      "eventSlug": "hollywood-bowl-wes-anderson-tribute",
+      "primaryKeyword": "Wes Anderson films",
+      "primaryEntity": "Wes Anderson",
       "entities": [
-        "I Play Rocky",
-        "Misty Green",
-        "Chris Rock",
-        "Anton Corbijn"
+        "BECK",
+        "Jackson Browne",
+        "Beck",
+        "Bill Murray"
       ],
-      "angle": "The Toronto Film Festival reveals its first lineup for 2026, featuring world premieres from established filmmakers.",
+      "angle": "Music and film stars gather to celebrate Wes Anderson's filmography at a special Hollywood Bowl event.",
+      "tmdbType": "movie",
+      "source": "gnews:US Rocker®",
+      "sources": [
+        {
+          "outlet": "US Rocker®",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQaWtxYUJHMVVxRlNJM2t3dFZMdzhoNzhuWlhRcDQ4ZC10MW5RWDF3RTVsOGRfZjZCV2M0T2ZsOFhGRkVpQmxONE95NC1SdDJGV2lfSTVDcXNxbjhYYl9sRjhKSzFTM0xsTHNUQ2ZIS2pCckJOSFNCSlNGZHBVWTBtRUtRZ18wU0pjcjhaTDJRMVU2MER4d0lLUDRKOGt0aGc0TjJoMEItSHh2Z2x2UWt2UENzanBiVGs?oc=5",
+          "ageMin": 248,
+          "headline": "Jackson Browne, Beck, Bill Murray, Celebrate Wes Anderson Films at Hollywood Bowl - US Rocker®",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMitwFBVV95cUxQaWtxYUJHMVVxRlNJM2t3dFZMdzhoNzhuWlhRcDQ4ZC10MW5RWDF3RTVsOGRfZjZCV2M0T2ZsOFhGRkVpQmxONE95NC1SdDJGV2lfSTVDcXNxbjhYYl9sRjhKSzFTM0xsTHNUQ2ZIS2pCckJOSFNCSlNGZHBVWTBtRUtRZ18wU0pjcjhaTDJRMVU2MER4d0lLUDRKOGt0aGc0TjJoMEItSHh2Z2x2UWt2UENzanBiVGs?oc="
+        }
+      ],
+      "ageMin": 248,
+      "_cand": {
+        "key": "rss:jackson-browne-beck-bill-murray-celebrate-wes-anderson-films",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "US Rocker®"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "US Rocker®",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 68,
+      "signals": {
+        "recency": 9,
+        "corroboration": 8,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-kelsey-cook-netflix-special-happy-hour",
+      "slug": "kelsey-cook-sets-netflix-stand-up-special-happy-hour",
+      "title": "Kelsey Cook Sets Netflix Stand-Up Special Happy Hour",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "kelsey-cook-netflix-special-happy-hour",
+      "primaryKeyword": "Kelsey Cook Netflix special",
+      "primaryEntity": "Kelsey Cook",
+      "entities": [
+        "Netflix",
+        "Happy Hour"
+      ],
+      "angle": "Comedian Kelsey Cook is set to release her debut Netflix stand-up special, 'Happy Hour'.",
       "tmdbType": "movie",
       "source": "rss:Deadline",
       "sources": [
         {
           "outlet": "Deadline",
           "tier": 7,
-          "url": "https://deadline.com/2026/07/toronto-film-festival-2026-line-up-1236998190/",
-          "ageMin": 61,
-          "headline": "TIFF 2026 First Lineup: World Premieres Of I Play Rocky , Chris Rock s Misty Green , Anton Corbijn s A Talent For Murder , John Madden s Onwards And Sideways More",
-          "summary": "The 51st Toronto Film Festival on Monday revealed 64 titles across its Gala and Special Presentations sections, which include 32 premieres from such filmmakers as Anton Corbijn (A Talent for Murder), Shakespeare in Love s John Madden (Onwards and Sideways), Chris Rock (Misty Green), as well as the return of two-time Oscar winner Peter Farrelly with [ ]"
+          "url": "https://deadline.com/2026/07/kelsey-cook-netflix-special-happy-hour-premiere-date-1236997042/",
+          "ageMin": 62,
+          "headline": "Kelsey Cook Sets Netflix Stand-Up Special Happy Hour",
+          "summary": "EXCLUSIVE: Comedian Kelsey Cook is set to unveil her debut Netflix special, Happy Hour, on Tuesday, August 18. In the special, following up last year s Mark Your Territory and 2023 s The Hustler, Cook explores hangxiety, relives a plane bathroom nightmare, and breaks down dating a literal Chad. She filmed it at the Fitzgerald Theater in St. Paul, Minnesota with Eric [ ]"
         }
       ],
-      "ageMin": 61,
+      "ageMin": 62,
       "_cand": {
-        "key": "rss:tiff-2026-first-lineup-world-premieres-of-i-play-rocky-chris",
+        "key": "rss:kelsey-cook-sets-netflix-stand-up-special-happy-hour",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -392,7 +897,7 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 79,
+      "priority": 73,
       "signals": {
         "recency": 16,
         "corroboration": 12,
@@ -400,7 +905,7 @@
         "type": 9,
         "pop": 0,
         "breakout": 0,
-        "big": 24,
+        "big": 18,
         "trending": 0,
         "spice": 0,
         "softTv": 0
@@ -408,42 +913,39 @@
       "tierClass": "B"
     },
     {
-      "id": "news-tiff-2026-lineup-announcement",
-      "slug": "tiff-2026-lineup-includes-films-from-chris-rock-rebel-wilson-and-more",
-      "title": "TIFF 2026 Lineup Includes Films from Chris Rock, Rebel Wilson, and More",
+      "id": "news-spider-man-brand-new-day-making-of",
+      "slug": "the-making-of-spider-man-brand-new-day",
+      "title": "The Making of 'Spider-Man: Brand New Day'",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
-      "eventType": "announcement",
+      "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "tiff-2026-lineup-announcement",
-      "primaryKeyword": "TIFF 2026 lineup",
-      "primaryEntity": "Toronto International Film Festival (2026)",
+      "eventSlug": "spider-man-brand-new-day-making-of",
+      "primaryKeyword": "Spider-Man: Brand New Day",
+      "primaryEntity": "Spider-Man: Brand New Day",
       "entities": [
-        "Chris Rock: Bigger & Blacker",
-        "Chris Rock",
-        "Rebel Wilson",
-        "Courteney Cox"
+        "Marvel Comics"
       ],
-      "angle": "The Toronto International Film Festival has announced its 2026 lineup, featuring films from notable directors and actors.",
+      "angle": "A look into the creation and development of the 'Spider-Man: Brand New Day' comic storyline.",
       "tmdbType": "movie",
-      "source": "rss:TheWrap",
+      "source": "gnews:Rolling Stone",
       "sources": [
         {
-          "outlet": "TheWrap",
+          "outlet": "Rolling Stone",
           "tier": 7,
-          "url": "https://www.thewrap.com/creative-content/movies/tiff-2026-lineup-premieres-i-play-rocky-chris-rock/",
-          "ageMin": 62,
-          "headline": "TIFF 2026 Lineup: I Play Rocky, Films by Chris Rock and Rebel Wilson Set Premieres",
-          "summary": "With more than 60 titles, the Toronto International Film Festival slate also includes movies from Courteney Cox, Wayne Wang and Tim Blake Nelson The post TIFF 2026 Lineup: I Play Rocky, Films by Chris Rock and Rebel Wilson Set Premieres appeared first on TheWrap ."
+          "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQeVNKQmpSdnUzb3hHQ0o3Z2ozbndPUDBHbTlfLVgwSHg2RGRkVGc2X0Y1YXFPQzdRSTJmUm4tWlUwbWE2N08yZmpJc3MzcEFRQ2RLQmFEOGNjdHByTS1WRjFIdU1KMDY2RWdEb2Uxb2hnS2JiYmZrSjc1cFJ4amt3M0ZVTGtndzZxdy1jRkdQZFBCdFQzcUNPOVFVQVcxdVQxb3N3M19qZWg5SmRFSW11M01iZ1JYVkxDVHBOQ19wTGVOdw?oc=5",
+          "ageMin": 182,
+          "headline": "‘If People Get Mad, I Can’t Control That’: The Making of ‘Spider-Man: Brand New Day’ - Rolling Stone",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiwgFBVV95cUxQeVNKQmpSdnUzb3hHQ0o3Z2ozbndPUDBHbTlfLVgwSHg2RGRkVGc2X0Y1YXFPQzdRSTJmUm4tWlUwbWE2N08yZmpJc3MzcEFRQ2RLQmFEOGNjdHByTS1WRjFIdU1KMDY2RWdEb2Uxb2hnS2JiYmZrSjc1cFJ4amt3M0ZVTGtndzZxdy1jRkdQZFBCdFQzcUNPOVFVQVcxdVQxb3N3M19qZWg5SmRFSW11M01iZ1JYVkxDVHB"
         }
       ],
-      "ageMin": 62,
+      "ageMin": 182,
       "_cand": {
-        "key": "rss:tiff-2026-lineup-i-play-rocky-films-by-chris-rock-and-rebel-",
+        "key": "rss:-if-people-get-mad-i-can-t-control-that-the-making-of-spider",
         "popularity": 0,
-        "kind": "rss-news"
+        "kind": "gnews"
       },
       "corroborationCount": 1,
       "verification": {
@@ -451,82 +953,7 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "TheWrap"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "TheWrap",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 79,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "music-news-liam-gallagher-world-cup-halftime-show-criticism",
-      "slug": "liam-gallagher-says-world-cup-halftime-show-was-like-a-bad-trip",
-      "title": "Liam Gallagher Says World Cup Halftime Show Was ‘Like a Bad Trip’",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "liam-gallagher-world-cup-halftime-show-criticism",
-      "primaryKeyword": "Liam Gallagher World Cup halftime show",
-      "primaryEntity": "Liam Gallagher",
-      "entities": [
-        "World Cup"
-      ],
-      "angle": "Musician criticizes World Cup halftime show.",
-      "tmdbType": "movie",
-      "source": "rss:Rolling Stone",
-      "sources": [
-        {
-          "outlet": "Rolling Stone",
-          "tier": 7,
-          "url": "https://www.rollingstone.com/music/music-news/liam-gallagher-world-cup-halftime-show-bad-trip-fifa-1235595853/",
-          "ageMin": 414,
-          "headline": "Liam Gallagher Says World Cup Halftime Show Was ‘Like a Bad Trip’",
-          "summary": "Madonna, Justin Bieber, Shakira, and more took the stage midway through the final game between Spain and Argentina"
-        },
-        {
-          "outlet": "Billboard",
-          "tier": 7,
-          "url": "https://www.billboard.com/music/music-news/liam-gallagher-fifa-world-cup-halftime-show-1236297975/",
-          "ageMin": 505,
-          "headline": "Liam Gallagher Says FIFA’s World Cup Halftime Show Was ‘Like a Bad Trip’",
-          "summary": "The star-studded show marked the first halftime performance staged during a FIFA World Cup final."
-        }
-      ],
-      "ageMin": 414,
-      "_cand": {
-        "key": "rss:liam-gallagher-says-world-cup-halftime-show-was-like-a-bad-t",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 2,
-      "verification": {
-        "tier1Count": 2,
-        "tier1Owners": 1,
-        "outletCount": 2,
-        "outlets": [
-          "Rolling Stone",
-          "Billboard"
+          "Rolling Stone"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
@@ -535,159 +962,27 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 53,
+      "priority": 68,
       "signals": {
-        "recency": 4,
-        "corroboration": 18,
+        "recency": 9,
+        "corroboration": 12,
         "status": 18,
         "type": 5,
         "pop": 0,
         "breakout": 0,
-        "big": 0,
-        "trending": 8,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-god-of-war-prime-video-new-lead",
-      "slug": "god-of-war-series-to-recast-lead-after-injury",
-      "title": "God of War Series to Recast Lead After Injury",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "god-of-war-prime-video-new-lead",
-      "primaryKeyword": "God of War Prime Video series",
-      "primaryEntity": "God of War",
-      "entities": [
-        "God of War (TV series)",
-        "Prime Video"
-      ],
-      "angle": "The 'God of War' series on Prime Video is seeking a new lead actor after an on-set injury.",
-      "tmdbType": "movie",
-      "source": "gnews:TV Series Finale",
-      "sources": [
-        {
-          "outlet": "TV Series Finale",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQUWgtVjVkOFhpSEZzY2FEdE1LLXpoSC1QblpvOEFxNkhqMDZ2ZVBCS2ZfR3hKazFHanc1SWdEUWttZkpSWkFaNks4aFZBYWptemh2eVlnS0VRZWlWZ3VvZFAzVVJuVGFrVEF3ZnJfQmRrWlN6M1lDYUd0ZksxdXFZa3paQnBqWk44X1RlU0pjbmFaSGRpcHBneWRNeF9RQktzRU9vddIBqgFBVV95cUxQaVJubzMwODJjX3M1NTJRZG5kUXQ2WGoyVGpNbk05cnlib0ZOcEhqdmJJYzZMVHNTSm1qOUpodWt0cm01NnhBbmxmYk5KNlpFcHl3MXpnaWRFa1gwUnlzLUdxdVV0OUxKMTlqSHVzR0hyYnJ3WmhjRzYzX2FEelFvaU5jVnN0Y0c4MC04aHBMNXpUeFVyWDNWeWNGNDBuRzh1SFVxLUFIMk51dw?oc=5",
-          "ageMin": 1463,
-          "headline": "God of War: Prime Video Series to Cast New Lead After On Set Injury - TV Series Finale",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxQUWgtVjVkOFhpSEZzY2FEdE1LLXpoSC1QblpvOEFxNkhqMDZ2ZVBCS2ZfR3hKazFHanc1SWdEUWttZkpSWkFaNks4aFZBYWptemh2eVlnS0VRZWlWZ3VvZFAzVVJuVGFrVEF3ZnJfQmRrWlN6M1lDYUd0ZksxdXFZa3paQnBqWk44X1RlU0pjbmFaSGRpcHBneWRNeF9RQktzRU9vddIBqgFBVV95cUxQaVJubzMwODJjX3M"
-        }
-      ],
-      "ageMin": 1463,
-      "_cand": {
-        "key": "rss:god-of-war-prime-video-series-to-cast-new-lead-after-on-set-",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "TV Series Finale"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "TV Series Finale",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 63,
-      "signals": {
-        "recency": 1,
-        "corroboration": 8,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "spice": 4,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-tiff-galas-special-presentations-2026",
-      "slug": "tiff-galas-and-special-presentations-feature-cannes-hits-and-world-pre",
-      "title": "TIFF Galas and Special Presentations Feature Cannes Hits and World Premieres",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "tiff-galas-special-presentations-2026",
-      "primaryKeyword": "TIFF Galas and Special Presentations",
-      "primaryEntity": "Toronto International Film Festival (2026)",
-      "entities": [
-        "Fjord",
-        "Club Kid",
-        "Minotaur",
-        "La Bola Negra"
-      ],
-      "angle": "TIFF's prestigious Gala and Special Presentations sections have been revealed, showcasing acclaimed films from Sundance and Cannes.",
-      "tmdbType": "movie",
-      "source": "rss:IndieWire",
-      "sources": [
-        {
-          "outlet": "IndieWire",
-          "tier": 7,
-          "url": "https://www.indiewire.com/news/festivals/tiff-2026-galas-special-presentations-1235206066/",
-          "ageMin": 62,
-          "headline": "TIFF Galas and Special Presentations Include Cannes Hits Like Fjord, Club Kid, Minotaur, La Bola Negra, and More",
-          "summary": "The annual festival's most eye-catching sections have today added a selection of world premieres and already-minted contenders from Sundance to Cannes."
-        }
-      ],
-      "ageMin": 62,
-      "_cand": {
-        "key": "rss:tiff-galas-and-special-presentations-include-cannes-hits-lik",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "IndieWire"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "IndieWire",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 79,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
+        "big": 12,
         "trending": 0,
         "spice": 0,
-        "softTv": 0
+        "softTv": 0,
+        "radar": 12
       },
-      "tierClass": "B"
+      "radarKind": "movie-releasing",
+      "tierClass": "A"
     },
     {
-      "id": "music-news-brandon-flowers-new-single-paradise",
-      "slug": "brandon-flowers-shares-new-single-paradise-from-upcoming-album-thrashe",
-      "title": "Brandon Flowers shares new single 'Paradise' from upcoming album 'THRASHER'",
+      "id": "music-news-hatebreed-fatal-paradox-album-release",
+      "slug": "hatebreed-to-release-new-album-fatal-paradox-in-november",
+      "title": "HATEBREED to release new album 'Fatal Paradox' in November",
       "contentType": "music-news",
       "formatTag": "music-news",
       "category": "music",
@@ -695,28 +990,28 @@
       "eventType": "announcement",
       "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "brandon-flowers-new-single-paradise",
-      "primaryKeyword": "Brandon Flowers new single",
-      "primaryEntity": "Brandon Flowers",
+      "eventSlug": "hatebreed-fatal-paradox-album-release",
+      "primaryKeyword": "Hatebreed new album",
+      "primaryEntity": "Hatebreed",
       "entities": [
-        "THRASHER (album)"
+        "Fatal Paradox"
       ],
-      "angle": "Brandon Flowers has released a new single titled 'Paradise' from his upcoming album 'THRASHER'.",
+      "angle": "Metal band Hatebreed announces their new album 'Fatal Paradox' is set for release in November.",
       "tmdbType": "movie",
-      "source": "gnews:DIY Magazine",
+      "source": "gnews:Disney.com",
       "sources": [
         {
-          "outlet": "DIY Magazine",
+          "outlet": "Disney.com",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOUFJLcXhBU2ZUYlp2LTkwclZWWjBpMHJqUTlrZWUyR1UwT0tGeDJtVV9lT1hISGdJVmpERU1TRnpzRGZydDJmd3VDWmFYNmdad3dZOGF1dElUMzR2cUROdXJ4UU11NFo3MERxMHU2TTFobWpWaml2QjhiTjVyUXFySU8yYmFHd0ZKVXV5azc0cnJoeEd4enBZelQ1Yw?oc=5",
-          "ageMin": 114,
-          "headline": "Brandon Flowers shares new single 'Paradise' from upcoming album 'THRASHER' • News - DIY Magazine",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMimwFBVV95cUxOUFJLcXhBU2ZUYlp2LTkwclZWWjBpMHJqUTlrZWUyR1UwT0tGeDJtVV9lT1hISGdJVmpERU1TRnpzRGZydDJmd3VDWmFYNmdad3dZOGF1dElUMzR2cUROdXJ4UU11NFo3MERxMHU2TTFobWpWaml2QjhiTjVyUXFySU8yYmFHd0ZKVXV5azc0cnJoeEd4enBZelQ1Yw?oc=5\" target=\"_blank\" Brandon Flowers sh"
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOYm1QbHB4Tkk2eVhNaTVfUXc0WFVvbzNfUWRjMk1yOVktVDRneDVzbkZnQkJtNVE4cFB0OHpjcS1ud3hwS1lORWs3T3U4QUpHUUNCWktlZkszV3RjaDBvQ1h5dkYtZUZuNVNpNDFrUGh4VC1SNEtpWUtLN3FlZEVBVnpSZXVpVEdBQ0ZRb1AxaVVTMDVMOXRxOWMya2VEMjhUMlpIVjVsLUJfRUMxYnNDUlIzMlk?oc=5",
+          "ageMin": 172,
+          "headline": "Ignite your career in fire protection at Disney - Disney.com",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxOYm1QbHB4Tkk2eVhNaTVfUXc0WFVvbzNfUWRjMk1yOVktVDRneDVzbkZnQkJtNVE4cFB0OHpjcS1ud3hwS1lORWs3T3U4QUpHUUNCWktlZkszV3RjaDBvQ1h5dkYtZUZuNVNpNDFrUGh4VC1SNEtpWUtLN3FlZEVBVnpSZXVpVEdBQ0ZRb1AxaVVTMDVMOXRxOWMya2VEMjhUMlpIVjVsLUJfRUMxYnNDUlIzMlk?oc=5\" t"
         }
       ],
-      "ageMin": 114,
+      "ageMin": 172,
       "_cand": {
-        "key": "rss:brandon-flowers-shares-new-single-paradise-from-upcoming-alb",
+        "key": "rss:ignite-your-career-in-fire-protection-at-disney-disney-com",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -726,11 +1021,11 @@
         "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "DIY Magazine"
+          "Disney.com"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "DIY Magazine",
+        "attribution": "Disney.com",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -751,288 +1046,23 @@
       "tierClass": "C"
     },
     {
-      "id": "news-brunello-cucinelli-docufilm-international-sales",
-      "slug": "brunello-cucinelli-docufilm-the-gracious-visionary-sees-strong-interna",
-      "title": "Brunello Cucinelli Docufilm 'The Gracious Visionary' Sees Strong International Sales",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "brunello-cucinelli-docufilm-international-sales",
-      "primaryKeyword": "Brunello Cucinelli docufilm",
-      "primaryEntity": "Brunello: The Gracious Visionary",
-      "entities": [
-        "Giuseppe Tornatore",
-        "Brunello Cucinelli"
-      ],
-      "angle": "Giuseppe Tornatore's docufilm about fashion designer Brunello Cucinelli has secured international sales prior to its North American debut.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/film/global/brunello-cucinelli-visionary-sales-american-release-1236816367/",
-          "ageMin": 94,
-          "headline": "Brunello Cucinelli Docufilm ‘The Gracious Visionary’ Sells Internationally Ahead of North American Release (EXCLUSIVE)",
-          "summary": "Oscar-winning director Giuseppe Tornatore‘s docufilm “Brunello: The Gracious Visionary” — about Brunello Cucinelli, the fashion designer known as Italy’s “King of Cashmere” — has been sold to a slew of territories, expanding the film’s global footprint. Sales company Twenty-Nine Palms Entertainment has clinched deals that will now see the docufilm released to audiences across Europe, Asia, and [ ]"
-        }
-      ],
-      "ageMin": 94,
-      "_cand": {
-        "key": "rss:brunello-cucinelli-docufilm-the-gracious-visionary-sells-int",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 79,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-cbs-shows-canceled",
-      "slug": "stephen-colbert-s-show-among-cbs-cancellations",
-      "title": "Stephen Colbert's Show Among CBS Cancellations",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "cancellation",
-      "sensitivity": "normal",
-      "eventSlug": "cbs-shows-canceled",
-      "primaryKeyword": "cbs canceled shows",
-      "primaryEntity": "CBS",
-      "entities": [
-        "The Late Show with Stephen Colbert"
-      ],
-      "angle": "Multiple CBS shows, including Stephen Colbert's late-night program, have been canceled.",
-      "tmdbType": "movie",
-      "source": "gnews:MSN",
-      "sources": [
-        {
-          "outlet": "MSN",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOM3RrVHpiM2ZqWFhvSnA2bVJtTVI3ZlhuU1daWnh4Q0txMlhrUVV2elBCeXA5dFhmdXpjeTdJSTF4QzBUQjFJN0phRHVGVEdoOWtERHJnOUVCV0tFOVdPVWRjdnNVMDNTam1ya1VHUzBnRXBFeXNJRkd5cWhpVXVfZnZjclI0NTdxalN5OWlkWkxiYTlXOTUxRGpMcWU0WWxJaFdpUUpqOXJUVGotbEFUd0t0OA?oc=5",
-          "ageMin": 1179,
-          "headline": "Not just Colbert. See what other shows CBS canceled, dropped - MSN",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiswFBVV95cUxOM3RrVHpiM2ZqWFhvSnA2bVJtTVI3ZlhuU1daWnh4Q0txMlhrUVV2elBCeXA5dFhmdXpjeTdJSTF4QzBUQjFJN0phRHVGVEdoOWtERHJnOUVCV0tFOVdPVWRjdnNVMDNTam1ya1VHUzBnRXBFeXNJRkd5cWhpVXVfZnZjclI0NTdxalN5OWlkWkxiYTlXOTUxRGpMcWU0WWxJaFdpUUpqOXJUVGotbEFUd0t0OA?oc=5\" ta"
-        }
-      ],
-      "ageMin": 1179,
-      "_cand": {
-        "key": "rss:not-just-colbert-see-what-other-shows-cbs-canceled-dropped-m",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "MSN"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "MSN",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 56,
-      "signals": {
-        "recency": 1,
-        "corroboration": 8,
-        "status": 18,
-        "type": 11,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-kevin-feige-blade-reboot-disappointment",
-      "slug": "kevin-feige-on-marvel-s-failed-blade-reboot-i-feel-like-a-gigantic-los",
-      "title": "Kevin Feige on Marvel's Failed Blade Reboot: 'I Feel Like a Gigantic Loser and Failure That We Didn't Get Off the Ground With Mahershala Ali'",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "kevin-feige-blade-reboot-disappointment",
-      "primaryKeyword": "Blade reboot",
-      "primaryEntity": "Blade",
-      "entities": [
-        "Blade (film)",
-        "Kevin Feige",
-        "Mahershala Ali",
-        "Marvel Studios"
-      ],
-      "angle": "Marvel Studios president Kevin Feige expresses significant disappointment over the failed Blade reboot.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/film/news/kevin-feige-blade-reboot-failure-marvel-loser-1236816505/",
-          "ageMin": 8,
-          "headline": "Kevin Feige on Marvel s Failed Blade Reboot: I Feel Like a Gigantic Loser and Failure That We Didn t Get Off the Ground With Mahershala Ali",
-          "summary": "Marvel Studios president Kevin Feige is expressing disappointment over the failed Blade reboot that was supposed to star Mahershala Ali as the legendary vampire slayer. Speaking on the Happy Sad Confused podcast, Feige said bluntly: I am feeling like a gigantic loser and failure that we didn t get off the ground with Mahershala. Although the [ ]"
-        }
-      ],
-      "ageMin": 8,
-      "_cand": {
-        "key": "rss:kevin-feige-on-marvel-s-failed-blade-reboot-i-feel-like-a-gi",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 77,
-      "signals": {
-        "recency": 30,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 12,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-kevin-feige-blade-reboot-failure-feeling-loser",
-      "slug": "kevin-feige-calls-blade-reboot-failure-a-loser-moment",
-      "title": "Kevin Feige Calls 'Blade' Reboot Failure a 'Loser' Moment",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "kevin-feige-blade-reboot-failure-feeling-loser",
-      "primaryKeyword": "blade reboot",
-      "primaryEntity": "Blade",
-      "entities": [
-        "Blade (2025 film)",
-        "Kevin Feige"
-      ],
-      "angle": "Marvel Studios head Kevin Feige reflects on the troubled 'Blade' reboot, admitting it makes him feel like a 'loser'.",
-      "tmdbType": "movie",
-      "source": "gnews:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQNkMzQ3hnS1I2cWNGMVlpbUdyME14VGtJelAxSkx0blY0ZXZNRi1YQk5udTl4VWZzeC1XN2pILTBicHVFRnNlNlJNU3JMNXR4eGNBZTg5TXJlclJJQ3lRQ1pDaWV1aHFWcjJ6NENMWnRqenZpMGNoZ0poU3pqRTNZenZ1cGVmOGd3bUdnNy1MU3BwX3Frakkw?oc=5",
-          "ageMin": 9,
-          "headline": "Kevin Feige Says 'Blade' Reboot Failure Has Him Feeling Like a Loser - Variety",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMilwFBVV95cUxQNkMzQ3hnS1I2cWNGMVlpbUdyME14VGtJelAxSkx0blY0ZXZNRi1YQk5udTl4VWZzeC1XN2pILTBicHVFRnNlNlJNU3JMNXR4eGNBZTg5TXJlclJJQ3lRQ1pDaWV1aHFWcjJ6NENMWnRqenZpMGNoZ0poU3pqRTNZenZ1cGVmOGd3bUdnNy1MU3BwX3Frakkw?oc=5\" target=\"_blank\" Kevin Feige Says 'Blade'"
-        }
-      ],
-      "ageMin": 9,
-      "_cand": {
-        "key": "rss:kevin-feige-says-blade-reboot-failure-has-him-feeling-like-a",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 77,
-      "signals": {
-        "recency": 30,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 12,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-damson-idris-f1-movie-sequel",
-      "slug": "damson-idris-teases-f1-the-movie-sequel",
-      "title": "Damson Idris Teases 'F1 The Movie' Sequel",
+      "id": "news-damson-idris-f1-movie-sequel-conversations",
+      "slug": "damson-idris-teases-f1-the-movie-sequel-talks",
+      "title": "Damson Idris Teases 'F1 The Movie' Sequel Talks",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "damson-idris-f1-movie-sequel",
+      "eventSlug": "damson-idris-f1-movie-sequel-conversations",
       "primaryKeyword": "F1 The Movie sequel",
       "primaryEntity": "F1",
       "entities": [
         "F1 The Movie",
         "Damson Idris"
       ],
-      "angle": "Damson Idris hints at potential sequel discussions for 'F1 The Movie'.",
+      "angle": "Damson Idris hints at potential sequel to 'F1 The Movie' after 'exciting conversations'.",
       "tmdbType": "movie",
       "source": "gnews:Motorsport.com",
       "sources": [
@@ -1040,12 +1070,12 @@
           "outlet": "Motorsport.com",
           "tier": 5,
           "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNQWNTV1Y3U012dGxkZXZVdWpBOVdRUVBoeVlsT3JvQVVwOE1zNGtyNnc0aFR1dWZTR1ZTQ0R4LTh5cTByN0x1WFpZU1FibWdvcTh1MG9VTWdmNUh1ajF2ckhoV0YyRWtWLVJpaE90NDVLbS1iMVctVVZ5cmZwYjZYYkd6NEtXLTdvUFhWYnRETzdXbXRGOWVXTEZDdmh2ZzZlaVV2WA?oc=5",
-          "ageMin": 1350,
+          "ageMin": 1410,
           "headline": "Damson Idris teases \"exciting conversations\" over \"F1 The Movie\" sequel - Motorsport.com",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxNQWNTV1Y3U012dGxkZXZVdWpBOVdRUVBoeVlsT3JvQVVwOE1zNGtyNnc0aFR1dWZTR1ZTQ0R4LTh5cTByN0x1WFpZU1FibWdvcTh1MG9VTWdmNUh1ajF2ckhoV0YyRWtWLVJpaE90NDVLbS1iMVctVVZ5cmZwYjZYYkd6NEtXLTdvUFhWYnRETzdXbXRGOWVXTEZDdmh2ZzZlaVV2WA?oc=5\" target=\"_blank\" Damson"
         }
       ],
-      "ageMin": 1350,
+      "ageMin": 1410,
       "_cand": {
         "key": "rss:damson-idris-teases-exciting-conversations-over-f1-the-movie",
         "popularity": 0,
@@ -1082,106 +1112,39 @@
       "tierClass": "B"
     },
     {
-      "id": "news-aliens-james-cameron-quit-twice",
-      "slug": "james-cameron-nearly-quit-aliens-twice",
-      "title": "James Cameron Nearly Quit 'Aliens' Twice",
+      "id": "news-danny-boyle-ink-sale-netflix-venice",
+      "slug": "danny-boyle-s-ink-sells-to-netflix-ahead-of-venice-premiere",
+      "title": "Danny Boyle's 'Ink' Sells to Netflix Ahead of Venice Premiere",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
-      "eventType": "other",
+      "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "aliens-james-cameron-quit-twice",
-      "primaryKeyword": "Aliens movie",
-      "primaryEntity": "Aliens",
+      "eventSlug": "danny-boyle-ink-sale-netflix-venice",
+      "primaryKeyword": "danny boyle ink netflix",
+      "primaryEntity": "Ink (film)",
       "entities": [
-        "Aliens (1986 film)",
-        "James Cameron"
+        "Danny Boyle",
+        "Netflix",
+        "Venice Film Festival"
       ],
-      "angle": "James Cameron almost quit directing 'Aliens' twice during production.",
+      "angle": "Danny Boyle's new film 'Ink,' set to open the Venice Film Festival, has been acquired by Netflix.",
       "tmdbType": "movie",
-      "source": "gnews:Space",
+      "source": "rss:IndieWire",
       "sources": [
         {
-          "outlet": "Space",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPOW01a1ZmVGdvLWRkdUt5NDE1aXc4TmhVeEF2U21UUWFibERsZnN2X3dTZUR6emNwYWV0UVA3YXN2Q1J0VzYxLTBWNjNuNkFtWEotSW53NFFkT29OemJVaU1nbV9GUndIY0J2V1UwNTViblNEMjNUdE9lRkNRZ3U3czhlb0NUWnpUb3hqdENWa1ZCNGdhSGdOb1pyaFRxUk9QT2tSTkFMaHh1NUd1VWh1eTNKd2NsQ1lKZ3RSZVd3ZFVpbG5WTlhSOFlrd21UTkRscGpSTDlkSDFRWlJOMWVZbA?oc=5",
-          "ageMin": 1322,
-          "headline": "'Aliens' at 40: James Cameron's sequel is a sci-fi icon, but did you know he quit the movie twice? - Space",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMi4AFBVV95cUxPOW01a1ZmVGdvLWRkdUt5NDE1aXc4TmhVeEF2U21UUWFibERsZnN2X3dTZUR6emNwYWV0UVA3YXN2Q1J0VzYxLTBWNjNuNkFtWEotSW53NFFkT29OemJVaU1nbV9GUndIY0J2V1UwNTViblNEMjNUdE9lRkNRZ3U3czhlb0NUWnpUb3hqdENWa1ZCNGdhSGdOb1pyaFRxUk9QT2tSTkFMaHh1NUd1VWh1eTNKd2NsQ1lKZ3R"
-        }
-      ],
-      "ageMin": 1322,
-      "_cand": {
-        "key": "rss:-aliens-at-40-james-cameron-s-sequel-is-a-sci-fi-icon-but-di",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "Space"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "Space",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 50,
-      "signals": {
-        "recency": 1,
-        "corroboration": 8,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 12,
-        "trending": 0,
-        "spice": 6,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-german-tv-cancels-antifascist-performance",
-      "slug": "german-tv-network-cancels-antifascist-performance-amid-controversy",
-      "title": "German TV Network Cancels Antifascist Performance Amid Controversy",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "german-tv-cancels-antifascist-performance",
-      "primaryKeyword": "German TV antifascist performance",
-      "primaryEntity": "Michael Jackson: HIStory World Tour - Live in Munich",
-      "entities": [
-        "ZDF",
-        "Danger Dan",
-        "Igor Levit"
-      ],
-      "angle": "German public broadcaster ZDF has cancelled an antifascist performance, sparking controversy over potential incitement claims.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
+          "outlet": "IndieWire",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/tv/tv-news/german-tv-cancel-danger-dan-igor-levit-antifascist-1236652017/",
-          "ageMin": 70,
-          "headline": "German TV in Crosshairs After Network Cancels Antifascist Performance",
-          "summary": "Public broadcaster ZDF said a new song by musicians Danger Dan and Igor Levit could be considered an incitement to violence against the far right."
+          "url": "https://www.indiewire.com/news/breaking-news/danny-boyle-ink-netflix-venice-sale-1235206128/",
+          "ageMin": 3921,
+          "headline": "Danny Boyle s Ink Sells to Netflix in First Big Sale (Way) Ahead of Venice Premiere",
+          "summary": "The film about Larry Lamb, Rupert Murdoch, and the birth of The Sun tabloid is the opening night film at the Biennale."
         }
       ],
-      "ageMin": 70,
+      "ageMin": 3921,
       "_cand": {
-        "key": "rss:german-tv-in-crosshairs-after-network-cancels-antifascist-pe",
+        "key": "rss:danny-boyle-s-ink-sells-to-netflix-in-first-big-sale-way-ahe",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -1191,63 +1154,62 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "THR"
+          "IndieWire"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "THR",
+        "attribution": "IndieWire",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 51,
+      "priority": 64,
       "signals": {
-        "recency": 16,
+        "recency": 1,
         "corroboration": 12,
         "status": 18,
-        "type": 5,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
-        "big": 0,
+        "big": 24,
         "trending": 0,
         "spice": 0,
         "softTv": 0
       },
-      "tierClass": "C"
+      "tierClass": "B"
     },
     {
-      "id": "news-comic-con-2026-celebrity-attendees",
-      "slug": "hollywood-stars-set-to-attend-comic-con-2026",
-      "title": "Hollywood Stars Set to Attend Comic-Con 2026",
+      "id": "news-cbs-cancellation",
+      "slug": "not-just-colbert-see-what-other-shows-cbs-canceled-dropped",
+      "title": "Not Just Colbert: See What Other Shows CBS Canceled, Dropped",
       "contentType": "news",
       "formatTag": "news",
-      "category": "celebrity",
+      "category": "tv",
       "subcategory": "news",
-      "eventType": "announcement",
+      "eventType": "cancellation",
       "sensitivity": "normal",
-      "eventSlug": "comic-con-2026-celebrity-attendees",
-      "primaryKeyword": "Comic-Con celebrities",
-      "primaryEntity": "Comic-Con Episode IV: A Fan's Hope",
+      "eventSlug": "cbs-cancellation",
+      "primaryKeyword": "cbs shows cancelled",
+      "primaryEntity": "CBS",
       "entities": [
-        "Comic-Con",
-        "San Diego Union-Tribune"
+        "Stephen Colbert"
       ],
-      "angle": "Preview of celebrity guests expected at the upcoming Comic-Con.",
+      "angle": "Following Stephen Colbert's show, CBS has canceled or dropped other programs.",
       "tmdbType": "movie",
-      "source": "gnews:San Diego Union-Tribune",
+      "source": "gnews:MSN",
       "sources": [
         {
-          "outlet": "San Diego Union-Tribune",
+          "outlet": "MSN",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNc3M1UnlSdjlNLU05OHduWjdtX0d4Mi0wTVVFSVlBUXJnX0RjZHlxQlc5SnpjWGtwY3NhUjR2bTdoZXB1c2lQckpLYzIzWFZiMGt1UE8xekc5RHQ1THE0T3hTd2RIZG1VbGczUmNtaHFSYjVvSHloTHJBbGt4WkhKbk5vTko2N2ktV00xbGVjTW0wSksxdHA4ajgwUUYzbHpTQTFsZkRYaEJNRDlzbW93UHdka0lKdXlmZC0yZ0NSQmN2anFMR1NQSGNLU1hvS1l4d3VKUGJn?oc=5",
-          "ageMin": 124,
-          "headline": "Comic-Con 2026: Hollywood’s coming to town. These are the celebrities set to attend this year - San Diego Union-Tribune",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMi1gFBVV95cUxNc3M1UnlSdjlNLU05OHduWjdtX0d4Mi0wTVVFSVlBUXJnX0RjZHlxQlc5SnpjWGtwY3NhUjR2bTdoZXB1c2lQckpLYzIzWFZiMGt1UE8xekc5RHQ1THE0T3hTd2RIZG1VbGczUmNtaHFSYjVvSHloTHJBbGt4WkhKbk5vTko2N2ktV00xbGVjTW0wSksxdHA4ajgwUUYzbHpTQTFsZkRYaEJNRDlzbW93UHdka0lKdXlmZC0"
+          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOM3RrVHpiM2ZqWFhvSnA2bVJtTVI3ZlhuU1daWnh4Q0txMlhrUVV2elBCeXA5dFhmdXpjeTdJSTF4QzBUQjFJN0phRHVGVEdoOWtERHJnOUVCV0tFOVdPVWRjdnNVMDNTam1ya1VHUzBnRXBFeXNJRkd5cWhpVXVfZnZjclI0NTdxalN5OWlkWkxiYTlXOTUxRGpMcWU0WWxJaFdpUUpqOXJUVGotbEFUd0t0OA?oc=5",
+          "ageMin": 1239,
+          "headline": "Not just Colbert. See what other shows CBS canceled, dropped - MSN",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiswFBVV95cUxOM3RrVHpiM2ZqWFhvSnA2bVJtTVI3ZlhuU1daWnh4Q0txMlhrUVV2elBCeXA5dFhmdXpjeTdJSTF4QzBUQjFJN0phRHVGVEdoOWtERHJnOUVCV0tFOVdPVWRjdnNVMDNTam1ya1VHUzBnRXBFeXNJRkd5cWhpVXVfZnZjclI0NTdxalN5OWlkWkxiYTlXOTUxRGpMcWU0WWxJaFdpUUpqOXJUVGotbEFUd0t0OA?oc=5\" ta"
         }
       ],
-      "ageMin": 124,
+      "ageMin": 1239,
       "_cand": {
-        "key": "rss:comic-con-2026-hollywood-s-coming-to-town-these-are-the-cele",
+        "key": "rss:not-just-colbert-see-what-other-shows-cbs-canceled-dropped-m",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -1257,21 +1219,217 @@
         "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "San Diego Union-Tribune"
+          "MSN"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "San Diego Union-Tribune",
+        "attribution": "MSN",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 51,
+      "priority": 56,
+      "signals": {
+        "recency": 1,
+        "corroboration": 8,
+        "status": 18,
+        "type": 11,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-star-wars-tusken-raiders-under-masks",
+      "slug": "what-tusken-raiders-look-like-under-their-masks-in-star-wars",
+      "title": "What Tusken Raiders Look Like Under Their Masks In Star Wars",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "star-wars-tusken-raiders-under-masks",
+      "primaryKeyword": "tusken raiders masks",
+      "primaryEntity": "Star Wars",
+      "entities": [
+        "Tusken Raiders"
+      ],
+      "angle": "A look into the lore of Star Wars revealing what the iconic Tusken Raiders look like beneath their masks.",
+      "tmdbType": "movie",
+      "source": "gnews:AOL.com",
+      "sources": [
+        {
+          "outlet": "AOL.com",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPYk4wMGloMGNwVnFSMjBKUTVaWEFqdzZCcW5lRmIwMnhjZW4yLTdRSVFlb1FSLUdDU0d0dTFtcDBOb2p4TnVGR3AyRUFxck9pbTlISW1CaHpYc2luak13d2FRUEthV3BGQWF1dDk0dEVLeFFMampjd25FWnNwRlZfVQ?oc=5",
+          "ageMin": 64,
+          "headline": "What Tusken Raiders Look Like Under Their Masks In Star Wars - AOL.com",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMigAFBVV95cUxPYk4wMGloMGNwVnFSMjBKUTVaWEFqdzZCcW5lRmIwMnhjZW4yLTdRSVFlb1FSLUdDU0d0dTFtcDBOb2p4TnVGR3AyRUFxck9pbTlISW1CaHpYc2luak13d2FRUEthV3BGQWF1dDk0dEVLeFFMampjd25FWnNwRlZfVQ?oc=5\" target=\"_blank\" What Tusken Raiders Look Like Under Their Masks In Sta"
+        }
+      ],
+      "ageMin": 64,
+      "_cand": {
+        "key": "rss:what-tusken-raiders-look-like-under-their-masks-in-star-wars",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "AOL.com"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "AOL.com",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 59,
       "signals": {
         "recency": 16,
         "corroboration": 8,
         "status": 18,
-        "type": 9,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 12,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-star-wars-book-changes-force-rules",
+      "slug": "new-star-wars-book-drastically-changes-the-rules-of-the-force",
+      "title": "New Star Wars Book Drastically Changes the Rules of the Force",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "star-wars-book-changes-force-rules",
+      "primaryKeyword": "star wars book force rules",
+      "primaryEntity": "Star Wars",
+      "entities": [
+        "The Force"
+      ],
+      "angle": "A new Star Wars book is reportedly altering the established rules and understanding of the Force within the franchise.",
+      "tmdbType": "movie",
+      "source": "gnews:The HoloFiles",
+      "sources": [
+        {
+          "outlet": "The HoloFiles",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOMVFFNnc5cXcxR2FRemlTTzUtR05GRFI3Vms4ZFhfaGVYYlJwR1gzQk1mTl9LeE54RC14YjFGdlFHanlTM3BhcEdMb2ZCYkJCOG85V1Q3RTE2R2FNeVBReVlSQUpNcENOaEpZdjB0UEFGVWVHaHc4SFlIUUU0NmlrdlhiZDNYWFQ2Qm5SYk9Cb1E1bVJKUEIxYjNoMU02WmM?oc=5",
+          "ageMin": 68,
+          "headline": "New Star Wars Book Drastically Changes the Rules of the Force - The HoloFiles",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMinwFBVV95cUxOMVFFNnc5cXcxR2FRemlTTzUtR05GRFI3Vms4ZFhfaGVYYlJwR1gzQk1mTl9LeE54RC14YjFGdlFHanlTM3BhcEdMb2ZCYkJCOG85V1Q3RTE2R2FNeVBReVlSQUpNcENOaEpZdjB0UEFGVWVHaHc4SFlIUUU0NmlrdlhiZDNYWFQ2Qm5SYk9Cb1E1bVJKUEIxYjNoMU02WmM?oc=5\" target=\"_blank\" New Star Wars"
+        }
+      ],
+      "ageMin": 68,
+      "_cand": {
+        "key": "rss:new-star-wars-book-drastically-changes-the-rules-of-the-forc",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "The HoloFiles"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "The HoloFiles",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 59,
+      "signals": {
+        "recency": 16,
+        "corroboration": 8,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 12,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-adam-driver-turning-down-marvel-roles",
+      "slug": "kevin-feige-adam-driver-turning-down-marvel-roles-is-a-tradition",
+      "title": "Kevin Feige: Adam Driver Turning Down Marvel Roles Is a 'Tradition'",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "adam-driver-turning-down-marvel-roles",
+      "primaryKeyword": "adam driver marvel roles",
+      "primaryEntity": "Adam Driver",
+      "entities": [
+        "Marvel Studios",
+        "Star Wars"
+      ],
+      "angle": "Adam Driver's consistent refusal of Marvel roles has become a running joke among Marvel Studios president Kevin Feige.",
+      "tmdbType": "movie",
+      "source": "gnews:IGN",
+      "sources": [
+        {
+          "outlet": "IGN",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQWHN1N2NUbEthdVRLRmNmVlVwbm9MRFB4U2hmeDBOaG5nakExWUxZeUpTQ2VqcW1FN0t5eXZpMlc4VUhhSEtKamFVSkhsaGpfdk5JOXVMbmFyOENWX0gyY2J2OHZoQm9GdlkxeWF4NkE4aUx2TXFwNTVqSmZkRnhaUHNlTlgybzVERll3SDU2U09ZSlJEZG1QN2FFMFhXV0k1M0FNSTR0Y2U0VnJvOVhLdWdhU1BDSWVINEV5MEREdkF6ODV2MGVoZGlyVWJNR01jTmhxQVFDenM2aTB5?oc=5",
+          "ageMin": 56,
+          "headline": "Kevin Feige Says Star Wars Actor Adam Driver Turning Down Marvel Roles Has Become a 'Tradition' - IGN",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMi3AFBVV95cUxQWHN1N2NUbEthdVRLRmNmVlVwbm9MRFB4U2hmeDBOaG5nakExWUxZeUpTQ2VqcW1FN0t5eXZpMlc4VUhhSEtKamFVSkhsaGpfdk5JOXVMbmFyOENWX0gyY2J2OHZoQm9GdlkxeWF4NkE4aUx2TXFwNTVqSmZkRnhaUHNlTlgybzVERll3SDU2U09ZSlJEZG1QN2FFMFhXV0k1M0FNSTR0Y2U0VnJvOVhLdWdhU1BDSWVINEV"
+        }
+      ],
+      "ageMin": 56,
+      "_cand": {
+        "key": "rss:kevin-feige-says-star-wars-actor-adam-driver-turning-down-ma",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "IGN"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "IGN",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 64,
+      "signals": {
+        "recency": 24,
+        "corroboration": 8,
+        "status": 18,
+        "type": 14,
         "pop": 0,
         "breakout": 0,
         "big": 0,
@@ -1279,7 +1437,7 @@
         "spice": 0,
         "softTv": 0
       },
-      "tierClass": "C"
+      "tierClass": "B"
     }
   ]
 }
