@@ -1,0 +1,138 @@
+{
+  "ts": "2026-07-20T22:01:37.347Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "l7-bassist-jennifer-finch-dies-at-59-days-after-brain-cancer-announcement",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [
+        "lede-entity-missing:logged"
+      ],
+      "headline": [
+        "metaDescription",
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 0
+    }
+  ],
+  "topics": 1,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 0,
+  "costUSD": 0.01682,
+  "costPerPublished": 0.01682,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 6,
+      "in": 19108,
+      "out": 2495,
+      "usd": 0.0119699
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 2403,
+      "out": 1054,
+      "usd": 0.0004434313
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 5,
+      "in": 26387,
+      "out": 5087,
+      "usd": 0.00362725935
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 5,
+      "in": 5575,
+      "out": 554,
+      "usd": 0.0007791
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2360,
+      "out": 198,
+      "usd": 0.001203,
+      "ms": 1476
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2403,
+      "out": 1054,
+      "usd": 0.00040599,
+      "ms": 9948
+    },
+    "writer": {
+      "calls": 4,
+      "errors": 0,
+      "in": 25764,
+      "out": 4803,
+      "usd": 0.00755874,
+      "ms": 137965
+    },
+    "verify": {
+      "calls": 5,
+      "errors": 0,
+      "in": 16748,
+      "out": 2297,
+      "usd": 0.0107669,
+      "ms": 11754
+    },
+    "judge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2608,
+      "out": 195,
+      "usd": 0.0003388,
+      "ms": 1041
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 623,
+      "out": 284,
+      "usd": 0.00023985,
+      "ms": 13351
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 372,
+      "out": 133,
+      "usd": 0.0000904,
+      "ms": 853
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 201,
+      "out": 39,
+      "usd": 0.0000357,
+      "ms": 458
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2075,
+      "out": 115,
+      "usd": 0.0002535,
+      "ms": 1858
+    },
+    "linker": {
+      "calls": 1,
+      "errors": 0,
+      "in": 319,
+      "out": 72,
+      "usd": 0.000060700000000000005,
+      "ms": 609
+    }
+  }
+}
