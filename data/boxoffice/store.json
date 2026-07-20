@@ -1282,9 +1282,11 @@
    "key": "lucky-trending-tv|TRENDING-TV",
    "eventSlug": "lucky-trending-tv",
    "form": "TRENDING-TV",
-   "reason": "words 126 < 180 (owner-set ~200-word minimum) | soft-floor engagement 2 < 5 | soft-floor humanVoice 2 < 5",
-   "tries": 2,
-   "at": "2026-07-19T22:03:29.909Z"
+   "reason": "words 58 < 180 (owner-set ~200-word minimum) | soft-floor engagement 3 < 5 | soft-floor humanVoice 3 < 5",
+   "tries": 3,
+   "at": "2026-07-20T12:04:28.645Z",
+   "dead": true,
+   "expiresAt": "2026-07-23T12:04:28.645Z"
   },
   {
    "key": "silo-trending-tv|TRENDING-TV",
@@ -1398,9 +1400,11 @@
    "key": "descendants-wicked-wonderland-now-streaming|NOW-STREAMING",
    "eventSlug": "descendants-wicked-wonderland-now-streaming",
    "form": "NOW-STREAMING",
-   "reason": "platform: names disney+ not in confirmed providers",
-   "tries": 2,
-   "at": "2026-07-20T07:04:39.103Z"
+   "reason": "words 129 < 180 (owner-set ~200-word minimum) | soft-floor engagement 4 < 5",
+   "tries": 3,
+   "at": "2026-07-20T12:09:28.997Z",
+   "dead": true,
+   "expiresAt": "2026-07-23T12:09:28.997Z"
   },
   {
    "key": "lee-cronin-s-the-mummy-now-streaming|NOW-STREAMING",
@@ -1583,23 +1587,24 @@
    "at": "2026-07-20T11:39:30.320Z"
   }
  ],
- "zeroStreak": 1,
+ "zeroStreak": 2,
  "daySpend": {
   "laDay": "2026-07-20",
-  "usd": 0.10671
+  "usd": 0.14186
  },
  "pace": {
-  "tokens": 0.09279719841269843,
-  "lastMs": 1784547091430
+  "tokens": 1.0089922761904764,
+  "lastMs": 1784548903684
  },
  "lastAuditDay": "2026-07-20",
  "attempts": {
   "laDay": "2026-07-20",
   "byFilm": {
-   "descendants: wicked wonderland": 1,
+   "descendants: wicked wonderland": 2,
    "lee cronin's the mummy": 1,
-   "the sheep detectives": 1,
-   "tom clancy's jack ryan: ghost war": 1
+   "the sheep detectives": 2,
+   "tom clancy's jack ryan: ghost war": 1,
+   "lucky": 1
   }
  }
 }

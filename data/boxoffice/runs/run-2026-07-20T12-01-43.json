@@ -1,0 +1,186 @@
+{
+ "runId": "run-2026-07-20T12-01-43",
+ "mode": "live",
+ "startedAt": "2026-07-20T12:01:43.684Z",
+ "films": 43,
+ "published": [],
+ "held": [
+  {
+   "tag": "lucky-trending-tv×TRENDING-TV",
+   "reason": "words 58 < 180 (owner-set ~200-word minimum) | soft-floor engagement 3 < 5 | soft-floor humanVoice 3 < 5",
+   "score": 35
+  },
+  {
+   "tag": "descendants-wicked-wonderland-now-streaming×NOW-STREAMING",
+   "reason": "words 129 < 180 (owner-set ~200-word minimum) | soft-floor engagement 4 < 5",
+   "score": 50
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "enola-holmes-3-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "voicemails-for-isabelle-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "the-doorman-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "little-brother-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "rust-creek-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "f9-the-fast-saga-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "old-henry-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "the-boss-baby-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "i-will-find-you-trending-tv-w2026-07-12×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "worst-neighbor-ever-trending-tv-w2026-07-12×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "little-house-on-the-prairie-trending-tv-w2026-07-12×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "avatar-the-last-airbender-trending-tv-w2026-07-12×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "salish-jordan-matter-trending-tv-w2026-07-12×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "raw-trending-tv-w2026-07-12×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "sullivan-s-crossing-trending-tv-w2026-07-12×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "off-campus-trending-tv×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "lee-cronin-s-the-mummy-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  }
+ ],
+ "blocked": [
+  {
+   "tag": "the-sheep-detectives-now-streaming×NOW-STREAMING",
+   "reason": "watchdog: gatherer the-sheep-detectives-now-streaming×NOW-STREAMING exceeded 180s"
+  }
+ ],
+ "paced": {
+  "tokens": 1.01,
+  "behind": false,
+  "expected": 0,
+  "allow": 1
+ },
+ "queueBuilt": 8,
+ "attemptCapHit": 3,
+ "zeroStreak": 2,
+ "daySpend": {
+  "laDay": "2026-07-20",
+  "usd": 0.14186
+ },
+ "faults": {
+  "count": 2,
+  "bySeverity": {
+   "critical": 1,
+   "warn": 1
+  },
+  "faults": [
+   {
+    "stage": "model:finder",
+    "message": "all models failed (amazon/nova-micro-v1, google/gemini-2.5-flash-lite): Expected ',' or ']' after array element in JSON at position 2626",
+    "severity": "critical",
+    "at": "2026-07-20T12:02:03.625Z"
+   },
+   {
+    "stage": "finder:llm",
+    "message": "finder classification failed — falling back to deterministic picks: Expected ',' or ']' after array element in JSON at position 2626",
+    "severity": "warn",
+    "at": "2026-07-20T12:02:03.625Z"
+   }
+  ]
+ },
+ "degraded": true,
+ "finishedAt": "2026-07-20T12:12:29.270Z",
+ "meter": {
+  "byRole": {
+   "categorize": {
+    "calls": 3,
+    "errors": 0,
+    "in": 1057,
+    "out": 518,
+    "usd": 0.00031,
+    "ms": 3405
+   },
+   "finder": {
+    "calls": 2,
+    "errors": 2,
+    "in": 0,
+    "out": 0,
+    "usd": 0,
+    "ms": 0
+   },
+   "gatherer": {
+    "calls": 6,
+    "errors": 0,
+    "in": 23768,
+    "out": 947,
+    "usd": 0.00276,
+    "ms": 7549
+   },
+   "synthesizer": {
+    "calls": 2,
+    "errors": 0,
+    "in": 1419,
+    "out": 548,
+    "usd": 0.00023,
+    "ms": 10351
+   },
+   "writer": {
+    "calls": 4,
+    "errors": 0,
+    "in": 12254,
+    "out": 4046,
+    "usd": 0.01138,
+    "ms": 53776
+   },
+   "qa": {
+    "calls": 19,
+    "errors": 5,
+    "in": 39613,
+    "out": 6143,
+    "usd": 0.01878,
+    "ms": 141493
+   }
+  },
+  "totalUsd": 0.03345
+ },
+ "openrouterTotalUsd": 0.03515
+}
