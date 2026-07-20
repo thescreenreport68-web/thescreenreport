@@ -9,7 +9,7 @@ dek: >-
   After a rocky few years, the ninth season is being celebrated as a return to
   form. Fans are buzzing about specific jokes, character moments, and a sense of
   fun that had been missing.
-metaTitle: 'Rick and Morty: Season 9 Sparks Fan'
+metaTitle: Rick and Morty Season 9 Wins Back Fans With a Rebound
 metaDescription: >-
   Rick and Morty fans are praising Season 9's dense humor and high energy, with
   many calling it the best season in years.

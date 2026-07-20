@@ -347,9 +347,20 @@ export function seoTitle(article: SeoArticleLike): string {
   const stored = sanitizeInline(
     (article.metaTitle ?? "").replace(BRAND_SUFFIX_RE, "").trim()
   );
+  // Machine-truncation signature (2026-07-20 forensics): a stored metaTitle that is a strict
+  // PREFIX of the display title is a blind clamp, not curation ("Hannah Waddingham Carried
+  // Her Daughter's Cardboard" ← prefix of the full H1). Such fragments can end on a content
+  // word and slip every other gate — reject them so the clean-cut derivation runs instead.
+  // A prefix ending in real terminal punctuation (?!.) is a legitimate complete clause.
+  const isBlindPrefix =
+    stored.length >= 8 &&
+    title.toLowerCase().startsWith(stored.toLowerCase()) &&
+    title.length > stored.length &&
+    !/[?!.…]["'’”]?$/.test(stored);
   if (
     stored &&
     stored !== title &&
+    !isBlindPrefix &&
     stored.length >= HONOR_MIN &&
     stored.length <= HONOR_MAX &&
     quoteBalanced(stored) &&
