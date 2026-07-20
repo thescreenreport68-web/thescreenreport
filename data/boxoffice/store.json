@@ -670,6 +670,20 @@
    "headlineNumberRaw": 107992000,
    "filmKey": "scary movie",
    "chartDate": null
+  },
+  {
+   "key": "michael-bo-update-d87|BO-UPDATE",
+   "at": "2026-07-20T15:08:08.921Z",
+   "eventSlug": "michael-bo-update-d87",
+   "form": "BO-UPDATE",
+   "slug": "michael-box-office-day-87-adds-45-000-as-domestic-total-hits-372-2-million",
+   "title": "Jaafar Jackson's 'Michael' Hits $1B Worldwide, Becomes Highest-Grossing Musical Biopic Ever",
+   "film": "Michael",
+   "tmdbId": null,
+   "eventType": "boxoffice",
+   "headlineNumberRaw": 372205734,
+   "filmKey": "michael",
+   "chartDate": null
   }
  ],
  "parked": [
@@ -1606,39 +1620,41 @@
    "key": "the-odyssey-bo-update-100m|BO-UPDATE",
    "eventSlug": "the-odyssey-bo-update-100m",
    "form": "BO-UPDATE",
-   "reason": "consistency: metaTitle: headlines domestic while the title headlines other — the SERP promise must match the page",
-   "tries": 14,
-   "at": "2026-07-20T14:33:29.241Z",
+   "reason": "words 96 < 180 (owner-set ~200-word minimum)",
+   "tries": 15,
+   "at": "2026-07-20T15:03:24.372Z",
    "dead": true,
-   "expiresAt": "2026-07-23T14:33:29.241Z"
+   "expiresAt": "2026-07-23T15:03:24.372Z"
   },
   {
    "key": "jackass-best-and-last-bo-update-d24|BO-UPDATE",
    "eventSlug": "jackass-best-and-last-bo-update-d24",
    "form": "BO-UPDATE",
-   "reason": "2 unverified claim(s) cut, unrecovered",
-   "tries": 3,
-   "at": "2026-07-20T14:36:48.916Z",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "tries": 4,
+   "at": "2026-07-20T15:04:54.957Z",
    "dead": true,
-   "expiresAt": "2026-07-23T14:36:48.916Z"
+   "expiresAt": "2026-07-23T15:04:54.957Z"
   },
   {
    "key": "gail-daughtry-and-the-celebrity-sex-pass-bo-update-d10|BO-UPDATE",
    "eventSlug": "gail-daughtry-and-the-celebrity-sex-pass-bo-update-d10",
    "form": "BO-UPDATE",
-   "reason": "consistency: metaTitle: \"$1M\" is not a canonical figure for this film | metaTitle: headlines other while the title headlines dailyGross — the SERP promise must match the page",
-   "tries": 2,
-   "at": "2026-07-20T14:40:01.793Z"
+   "reason": "words 148 < 180 (owner-set ~200-word minimum)",
+   "tries": 3,
+   "at": "2026-07-20T15:05:57.353Z",
+   "dead": true,
+   "expiresAt": "2026-07-23T15:05:57.353Z"
   }
  ],
  "zeroStreak": 0,
  "daySpend": {
   "laDay": "2026-07-20",
-  "usd": 0.16714
+  "usd": 0.17342
  },
  "pace": {
-  "tokens": 2.5563370984126994,
-  "lastMs": 1784557898432
+  "tokens": 2.464013059523811,
+  "lastMs": 1784559693835
  },
  "lastAuditDay": "2026-07-20",
  "attempts": {

@@ -1,0 +1,161 @@
+{
+ "runId": "run-2026-07-20T15-01-33",
+ "mode": "live",
+ "startedAt": "2026-07-20T15:01:33.835Z",
+ "films": 43,
+ "published": [
+  {
+   "tag": "michael-bo-update×BO-UPDATE",
+   "slug": "michael-box-office-day-87-adds-45-000-as-domestic-total-hits-372-2-million",
+   "path": "/home/runner/work/thescreenreport/thescreenreport/content/articles/michael-box-office-day-87-adds-45-000-as-domestic-total-hits-372-2-million.md",
+   "score": 80
+  }
+ ],
+ "held": [
+  {
+   "tag": "the-odyssey-bo-update×BO-UPDATE",
+   "reason": "words 96 < 180 (owner-set ~200-word minimum)",
+   "score": 50
+  },
+  {
+   "tag": "jackass-best-and-last-bo-update×BO-UPDATE",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "score": 50
+  },
+  {
+   "tag": "gail-daughtry-and-the-celebrity-sex-pass-bo-update×BO-UPDATE",
+   "reason": "words 148 < 180 (owner-set ~200-word minimum)",
+   "score": 50
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "moana-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "toy-story-5-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "minions-monsters-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "evil-dead-burn-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "the-invite-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "young-washington-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "obsession-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "supergirl-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "disclosure-day-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "backrooms-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "scary-movie-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  }
+ ],
+ "blocked": [],
+ "paced": {
+  "tokens": 3.46,
+  "behind": false,
+  "expected": 5.46,
+  "allow": 2
+ },
+ "queueBuilt": 8,
+ "attemptCapHit": 4,
+ "zeroStreak": 0,
+ "daySpend": {
+  "laDay": "2026-07-20",
+  "usd": 0.17342
+ },
+ "faults": {
+  "count": 2,
+  "bySeverity": {
+   "critical": 1,
+   "warn": 1
+  },
+  "faults": [
+   {
+    "stage": "model:finder",
+    "message": "all models failed (amazon/nova-micro-v1, google/gemini-2.5-flash-lite): Expected ',' or ']' after array element in JSON at position 3591",
+    "severity": "critical",
+    "at": "2026-07-20T15:02:02.028Z"
+   },
+   {
+    "stage": "finder:llm",
+    "message": "finder classification failed — falling back to deterministic picks: Expected ',' or ']' after array element in JSON at position 3591",
+    "severity": "warn",
+    "at": "2026-07-20T15:02:02.028Z"
+   }
+  ]
+ },
+ "degraded": true,
+ "finishedAt": "2026-07-20T15:08:08.923Z",
+ "meter": {
+  "byRole": {
+   "categorize": {
+    "calls": 5,
+    "errors": 2,
+    "in": 1124,
+    "out": 727,
+    "usd": 0.00021,
+    "ms": 2910
+   },
+   "finder": {
+    "calls": 2,
+    "errors": 2,
+    "in": 0,
+    "out": 0,
+    "usd": 0,
+    "ms": 0
+   },
+   "gatherer": {
+    "calls": 4,
+    "errors": 0,
+    "in": 12670,
+    "out": 808,
+    "usd": 0.00159,
+    "ms": 5888
+   },
+   "synthesizer": {
+    "calls": 4,
+    "errors": 0,
+    "in": 2980,
+    "out": 2928,
+    "usd": 0.0008,
+    "ms": 60200
+   },
+   "writerChart": {
+    "calls": 4,
+    "errors": 0,
+    "in": 8121,
+    "out": 3671,
+    "usd": 0.00312,
+    "ms": 73046
+   }
+  },
+  "totalUsd": 0.00571
+ },
+ "openrouterTotalUsd": 0.00628
+}
