@@ -1,0 +1,145 @@
+{
+  "ts": "2026-07-20T10:01:42.435Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "jelly-roll-settles-divorce-from-bunnie-xo-focuses-on-tour-and-health",
+      "category": "celebrity",
+      "isUpdate": true,
+      "parentSlug": "jelly-roll-and-bunnie-xo-finalize-divorce-after-nearly-a-decade",
+      "seoIssues": [],
+      "headline": [
+        "metaTitle",
+        "metaDescription",
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 2
+    }
+  ],
+  "topics": 2,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 1,
+  "blocked": 0,
+  "costUSD": 0.014984,
+  "costPerPublished": 0.014984,
+  "byModel": {
+    "deepseek/deepseek-v3.2": {
+      "calls": 6,
+      "in": 13293,
+      "out": 4351,
+      "usd": 0.004655432
+    },
+    "google/gemini-2.5-flash": {
+      "calls": 9,
+      "in": 13544,
+      "out": 1244,
+      "usd": 0.007173199999999999
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 2,
+      "in": 5135,
+      "out": 2717,
+      "usd": 0.0013514129999999999
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 11,
+      "in": 8620,
+      "out": 2354,
+      "usd": 0.0018036000000000003
+    }
+  },
+  "byRole": {
+    "dedup": {
+      "calls": 1,
+      "errors": 0,
+      "in": 305,
+      "out": 44,
+      "usd": 0.00008511000000000002,
+      "ms": 4195
+    },
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2362,
+      "out": 186,
+      "usd": 0.0011736,
+      "ms": 1124
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 925,
+      "out": 1015,
+      "usd": 0.00026595,
+      "ms": 12763
+    },
+    "writer": {
+      "calls": 6,
+      "errors": 1,
+      "in": 16571,
+      "out": 5723,
+      "usd": 0.00489543,
+      "ms": 418518
+    },
+    "verify": {
+      "calls": 10,
+      "errors": 4,
+      "in": 11182,
+      "out": 1058,
+      "usd": 0.0059996,
+      "ms": 45112
+    },
+    "judge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1359,
+      "out": 203,
+      "usd": 0.00021710000000000002,
+      "ms": 1196
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 627,
+      "out": 286,
+      "usd": 0.00024145000000000001,
+      "ms": 14444
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 1,
+      "in": 0,
+      "out": 0,
+      "usd": 0,
+      "ms": 1843
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 188,
+      "out": 51,
+      "usd": 0.000039200000000000004,
+      "ms": 984
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2092,
+      "out": 97,
+      "usd": 0.000248,
+      "ms": 2830
+    },
+    "linker": {
+      "calls": 5,
+      "errors": 0,
+      "in": 1441,
+      "out": 203,
+      "usd": 0.0002253,
+      "ms": 2892
+    }
+  }
+}
