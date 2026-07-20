@@ -1,0 +1,76 @@
+{
+  "id": "news-hollywood-bowl-wes-anderson-tribute",
+  "slug": "jackson-browne-beck-bill-murray-celebrate-wes-anderson-films-at-hollyw",
+  "status": "needs_review",
+  "stages": {
+    "attempt1": {
+      "score": null,
+      "cat": "movies/reactions",
+      "format": [
+        "primary keyword not in title",
+        "body 311w < 400",
+        "a 58-word run-on sentence (>55 — split it)"
+      ],
+      "cuts": 1,
+      "broken": []
+    },
+    "attempt2": {
+      "score": null,
+      "cat": "movies/reactions",
+      "format": [
+        "primary keyword not in title",
+        "body 302w < 400"
+      ],
+      "cuts": 0,
+      "broken": []
+    }
+  },
+  "editorial": {
+    "status": "confirmed",
+    "entity": "Wes Anderson",
+    "work": null,
+    "outlet": "usrockermusic.com"
+  },
+  "holdReason": "reaction: required embed missing",
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
+    "deterministic": {
+      "words": 302,
+      "h2s": 3,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 1,
+      "hasSources": true,
+      "faqCount": 3,
+      "ktCount": 4,
+      "kwInTitle": false,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 33,
+      "avgSentence": 20,
+      "flesch": 46,
+      "bannedTells": 0,
+      "fillerPraise": 1,
+      "kwExact": 0,
+      "hardBlocks": [
+        "primary keyword not in title",
+        "body 302w < 400"
+      ]
+    },
+    "hardBlocks": []
+  },
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "tweet grounding",
+      "body ≥ 400w",
+      "≥1200px legal image",
+      "credit"
+    ]
+  },
+  "ms": 77279
+}
