@@ -1,0 +1,136 @@
+{
+  "ts": "2026-07-20T20:02:00.557Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "jodie-sweetin-opens-up-about-john-stamoss-role-in-her-sobriety-journey",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [],
+      "headline": [
+        "metaTitle",
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 1
+    }
+  ],
+  "topics": 1,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 0,
+  "costUSD": 0.024527,
+  "costPerPublished": 0.024527,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 9,
+      "in": 29579,
+      "out": 2460,
+      "usd": 0.0150237
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 2518,
+      "out": 1457,
+      "usd": 0.000532336
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 7,
+      "in": 35063,
+      "out": 6741,
+      "usd": 0.0079504736
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 8,
+      "in": 6657,
+      "out": 887,
+      "usd": 0.0010204999999999997
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2432,
+      "out": 199,
+      "usd": 0.0012270999999999998,
+      "ms": 1544
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2518,
+      "out": 1457,
+      "usd": 0.00048888,
+      "ms": 17800
+    },
+    "writer": {
+      "calls": 6,
+      "errors": 0,
+      "in": 34317,
+      "out": 6368,
+      "usd": 0.01005803,
+      "ms": 207257
+    },
+    "verify": {
+      "calls": 8,
+      "errors": 0,
+      "in": 27147,
+      "out": 2261,
+      "usd": 0.0137966,
+      "ms": 13029
+    },
+    "judge": {
+      "calls": 2,
+      "errors": 0,
+      "in": 5225,
+      "out": 689,
+      "usd": 0.0007980999999999999,
+      "ms": 4083
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 746,
+      "out": 373,
+      "usd": 0.00029840000000000004,
+      "ms": 14580
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 384,
+      "out": 78,
+      "usd": 0.00006960000000000001,
+      "ms": 784
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 184,
+      "out": 38,
+      "usd": 0.000033600000000000004,
+      "ms": 528
+    },
+    "image": {
+      "calls": 1,
+      "errors": 1,
+      "in": 0,
+      "out": 0,
+      "usd": 0,
+      "ms": 3434
+    },
+    "linker": {
+      "calls": 3,
+      "errors": 0,
+      "in": 864,
+      "out": 82,
+      "usd": 0.0001192,
+      "ms": 1290
+    }
+  }
+}
