@@ -1,0 +1,129 @@
+{
+  "ts": "2026-07-20T06:02:11.601Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "fessler-reveals-shes-received-no-apology-from-miller-over-west-wilson-claim",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [
+        "geo-no-attribution:logged"
+      ],
+      "headline": [
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 1
+    }
+  ],
+  "topics": 4,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 2,
+  "blocked": 1,
+  "costUSD": 0.014987,
+  "costPerPublished": 0.014987,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 9,
+      "in": 17111,
+      "out": 1258,
+      "usd": 0.008278299999999999
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 983,
+      "out": 1128,
+      "usd": 0.00045346
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 7,
+      "in": 17692,
+      "out": 6196,
+      "usd": 0.0054750886000000006
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 5,
+      "in": 5522,
+      "out": 569,
+      "usd": 0.0007798
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2389,
+      "out": 205,
+      "usd": 0.0012291999999999997,
+      "ms": 1555
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 983,
+      "out": 1128,
+      "usd": 0.00029151,
+      "ms": 12006
+    },
+    "writer": {
+      "calls": 6,
+      "errors": 0,
+      "in": 17006,
+      "out": 5909,
+      "usd": 0.00592044,
+      "ms": 187284
+    },
+    "verify": {
+      "calls": 8,
+      "errors": 0,
+      "in": 14722,
+      "out": 1053,
+      "usd": 0.007049099999999999,
+      "ms": 8054
+    },
+    "judge": {
+      "calls": 2,
+      "errors": 0,
+      "in": 2845,
+      "out": 316,
+      "usd": 0.00041090000000000007,
+      "ms": 1574
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 686,
+      "out": 287,
+      "usd": 0.00025536,
+      "ms": 12315
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 366,
+      "out": 116,
+      "usd": 0.000083,
+      "ms": 686
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 201,
+      "out": 48,
+      "usd": 0.000039300000000000007,
+      "ms": 485
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2110,
+      "out": 89,
+      "usd": 0.0002466,
+      "ms": 1473
+    }
+  }
+}
