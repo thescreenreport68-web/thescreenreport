@@ -572,6 +572,20 @@
    "headlineNumberRaw": 24151000,
    "filmKey": "evil dead burn",
    "chartDate": null
+  },
+  {
+   "key": "the-invite-bo-update-d24|BO-UPDATE",
+   "at": "2026-07-20T08:36:30.116Z",
+   "eventSlug": "the-invite-bo-update-d24",
+   "form": "BO-UPDATE",
+   "slug": "the-invite-box-office-day-24-adds-1-2-million-as-domestic-total-hits-15-million",
+   "title": "Olivia Wilde's 'The Invite' Opens With $3.9 Million — What Drove the Early Buzz?",
+   "film": "The Invite",
+   "tmdbId": null,
+   "eventType": "boxoffice",
+   "headlineNumberRaw": 15017888,
+   "filmKey": "the invite",
+   "chartDate": null
   }
  ],
  "parked": [
@@ -1504,19 +1518,21 @@
    "key": "the-odyssey-bo-update-100m|BO-UPDATE",
    "eventSlug": "the-odyssey-bo-update-100m",
    "form": "BO-UPDATE",
-   "reason": "1 unverified claim(s) cut, unrecovered",
-   "tries": 2,
-   "at": "2026-07-20T08:02:48.259Z"
+   "reason": "consistency: metaTitle: headlines domestic while the title headlines other — the SERP promise must match the page",
+   "tries": 3,
+   "at": "2026-07-20T08:33:20.678Z",
+   "dead": true,
+   "expiresAt": "2026-07-23T08:33:20.678Z"
   }
  ],
  "zeroStreak": 0,
  "daySpend": {
   "laDay": "2026-07-20",
-  "usd": 0.07047
+  "usd": 0.07412
  },
  "pace": {
-  "tokens": 0.0936388452380954,
-  "lastMs": 1784534462173
+  "tokens": 0,
+  "lastMs": 1784536248504
  },
  "lastAuditDay": "2026-07-20",
  "attempts": {
