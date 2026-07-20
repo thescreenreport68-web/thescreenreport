@@ -1640,29 +1640,45 @@
    "key": "the-sheep-detectives-now-streaming|NOW-STREAMING",
    "eventSlug": "the-sheep-detectives-now-streaming",
    "form": "NOW-STREAMING",
-   "reason": "soft-floor readability 4 < 5 | soft-floor engagement 2 < 5 | soft-floor humanVoice 3 < 5",
-   "tries": 1,
-   "at": "2026-07-20T07:10:53.695Z"
+   "reason": "words 138 < 180 (owner-set ~200-word minimum) | soft-floor engagement 3 < 5 | soft-floor humanVoice 4 < 5",
+   "tries": 2,
+   "at": "2026-07-20T16:12:39.769Z"
   },
   {
    "key": "the-odyssey-bo-update-100m|BO-UPDATE",
    "eventSlug": "the-odyssey-bo-update-100m",
    "form": "BO-UPDATE",
-   "reason": "1 unverified claim(s) cut, unrecovered",
-   "tries": 18,
-   "at": "2026-07-20T15:35:31.086Z",
+   "reason": "consistency: metaTitle: headlines domestic/budget while the title headlines other — the SERP promise must match the page",
+   "tries": 19,
+   "at": "2026-07-20T16:03:51.553Z",
    "dead": true,
-   "expiresAt": "2026-07-23T15:35:31.086Z"
+   "expiresAt": "2026-07-23T16:03:51.553Z"
+  },
+  {
+   "key": "star-wars-the-mandalorian-and-grogu-bo-update-d59|BO-UPDATE",
+   "eventSlug": "star-wars-the-mandalorian-and-grogu-bo-update-d59",
+   "form": "BO-UPDATE",
+   "reason": "consistency: title: \"$177.5\" is not a canonical figure for this film | title: \"$177.5\" contradicts the canonical domestic figure ($177,534,904) | metaTitle: headlines domestic while the title headlines dailyGross/other — the SERP promise must match the page",
+   "tries": 1,
+   "at": "2026-07-20T16:05:46.763Z"
+  },
+  {
+   "key": "project-hail-mary-bo-update-d128|BO-UPDATE",
+   "eventSlug": "project-hail-mary-bo-update-d128",
+   "form": "BO-UPDATE",
+   "reason": "consistency: keyTakeaways[0]: \"$80.5M\" is not a canonical figure for this film | keyTakeaways[2]: \"$630M\" is not a canonical figure for this film | body: \"$140.9 million\" contradicts the canonical worldwide figure ($683 million)",
+   "tries": 1,
+   "at": "2026-07-20T16:08:30.285Z"
   }
  ],
- "zeroStreak": 0,
+ "zeroStreak": 1,
  "daySpend": {
   "laDay": "2026-07-20",
-  "usd": 0.18817
+  "usd": 0.23243
  },
  "pace": {
-  "tokens": 1.4269614095238112,
-  "lastMs": 1784561598568
+  "tokens": 2.2833260095238113,
+  "lastMs": 1784563292476
  },
  "lastAuditDay": "2026-07-20",
  "attempts": {
@@ -1670,9 +1686,10 @@
   "byFilm": {
    "descendants: wicked wonderland": 2,
    "lee cronin's the mummy": 1,
-   "the sheep detectives": 2,
+   "the sheep detectives": 3,
    "tom clancy's jack ryan: ghost war": 1,
-   "lucky": 1
+   "lucky": 1,
+   "project hail mary": 1
   }
  }
 }
