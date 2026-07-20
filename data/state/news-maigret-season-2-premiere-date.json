@@ -1,31 +1,25 @@
 {
   "id": "news-maigret-season-2-premiere-date",
   "slug": "masterpiece-series-maigret-sets-season-two-premiere-date-on-pbs",
-  "status": "needs_review",
+  "status": "published",
   "stages": {
     "attempt1": {
       "score": null,
       "cat": "tv/news",
       "format": [
-        "body 184w < 220",
-        "Flesch 35 < 40 (too dense to read comfortably)"
+        "body 219w < 220"
       ],
       "cuts": 4,
-      "broken": [
-        "prompt-leak / meta-refusal phrase reached reader copy (e.g. 'not detailed in the provided facts' / 'the reference facts') — rewrite or omit"
-      ]
+      "broken": []
     },
     "attempt2": {
       "score": null,
       "cat": "tv/news",
       "format": [
-        "body 184w < 220",
-        "Flesch 33 < 40 (too dense to read comfortably)"
+        "body 218w < 220"
       ],
-      "cuts": 2,
-      "broken": [
-        "prompt-leak / meta-refusal phrase reached reader copy (e.g. 'not detailed in the provided facts' / 'the reference facts') — rewrite or omit"
-      ]
+      "cuts": 0,
+      "broken": []
     }
   },
   "editorial": {
@@ -38,16 +32,15 @@
     },
     "outlet": "PBS"
   },
-  "holdReason": "broken article: prompt-leak / meta-refusal phrase reached reader copy (e.g. 'not detailed in the provided facts' / 'the reference facts') — rewrite or omit",
   "scorecard": {
     "score": null,
     "subscores": {},
     "strengths": [],
     "weaknesses": [],
     "deterministic": {
-      "words": 184,
-      "h2s": 1,
-      "h2Questions": 1,
+      "words": 218,
+      "h2s": 2,
+      "h2Questions": 2,
       "internalLinks": 0,
       "externalLinks": 0,
       "hasSources": false,
@@ -56,32 +49,117 @@
       "kwInTitle": true,
       "kwInFirst100": true,
       "kwInH2": false,
-      "maxSentence": 35,
+      "maxSentence": 46,
       "avgSentence": 20,
-      "flesch": 33,
+      "flesch": 43,
       "bannedTells": 0,
       "fillerPraise": 0,
-      "kwExact": 0,
+      "kwExact": 1,
       "hardBlocks": [
-        "body 184w < 220",
-        "Flesch 33 < 40 (too dense to read comfortably)",
-        "prompt-leak / meta-refusal phrase reached reader copy (e.g. 'not detailed in the provided facts' / 'the reference facts') — rewrite or omit"
+        "body 218w < 220"
       ]
     },
-    "hardBlocks": [
-      "prompt-leak / meta-refusal phrase reached reader copy (e.g. 'not detailed in the provided facts' / 'the reference facts') — rewrite or omit"
-    ]
+    "hardBlocks": []
   },
+  "score": null,
+  "category": "tv",
+  "subcategory": "news",
   "audit": {
     "ok": false,
     "internalLinks": 0,
     "failed": [
       "body ≥ 220w",
-      "keyword in title",
-      "≥1200px legal image",
-      "credit",
-      "zero hard-blocks"
+      "keyword in title"
     ]
   },
-  "ms": 104494
+  "ms": 140031,
+  "previousRuns": [
+    {
+      "id": "news-maigret-season-2-premiere-date",
+      "slug": "masterpiece-series-maigret-sets-season-two-premiere-date-on-pbs",
+      "status": "needs_review",
+      "stages": {
+        "attempt1": {
+          "score": null,
+          "cat": "tv/news",
+          "format": [
+            "body 184w < 220",
+            "Flesch 35 < 40 (too dense to read comfortably)"
+          ],
+          "cuts": 4,
+          "broken": [
+            "prompt-leak / meta-refusal phrase reached reader copy (e.g. 'not detailed in the provided facts' / 'the reference facts') — rewrite or omit"
+          ]
+        },
+        "attempt2": {
+          "score": null,
+          "cat": "tv/news",
+          "format": [
+            "body 184w < 220",
+            "Flesch 33 < 40 (too dense to read comfortably)"
+          ],
+          "cuts": 2,
+          "broken": [
+            "prompt-leak / meta-refusal phrase reached reader copy (e.g. 'not detailed in the provided facts' / 'the reference facts') — rewrite or omit"
+          ]
+        }
+      },
+      "editorial": {
+        "status": "official",
+        "entity": "Maigret",
+        "work": {
+          "title": "Maigret",
+          "year": null,
+          "medium": "tv"
+        },
+        "outlet": "PBS"
+      },
+      "holdReason": "broken article: prompt-leak / meta-refusal phrase reached reader copy (e.g. 'not detailed in the provided facts' / 'the reference facts') — rewrite or omit",
+      "scorecard": {
+        "score": null,
+        "subscores": {},
+        "strengths": [],
+        "weaknesses": [],
+        "deterministic": {
+          "words": 184,
+          "h2s": 1,
+          "h2Questions": 1,
+          "internalLinks": 0,
+          "externalLinks": 0,
+          "hasSources": false,
+          "faqCount": 3,
+          "ktCount": 4,
+          "kwInTitle": true,
+          "kwInFirst100": true,
+          "kwInH2": false,
+          "maxSentence": 35,
+          "avgSentence": 20,
+          "flesch": 33,
+          "bannedTells": 0,
+          "fillerPraise": 0,
+          "kwExact": 0,
+          "hardBlocks": [
+            "body 184w < 220",
+            "Flesch 33 < 40 (too dense to read comfortably)",
+            "prompt-leak / meta-refusal phrase reached reader copy (e.g. 'not detailed in the provided facts' / 'the reference facts') — rewrite or omit"
+          ]
+        },
+        "hardBlocks": [
+          "prompt-leak / meta-refusal phrase reached reader copy (e.g. 'not detailed in the provided facts' / 'the reference facts') — rewrite or omit"
+        ]
+      },
+      "audit": {
+        "ok": false,
+        "internalLinks": 0,
+        "failed": [
+          "body ≥ 220w",
+          "keyword in title",
+          "≥1200px legal image",
+          "credit",
+          "zero hard-blocks"
+        ]
+      },
+      "ms": 104494
+    }
+  ]
 }
