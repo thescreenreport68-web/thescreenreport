@@ -1,0 +1,136 @@
+{
+  "ts": "2026-07-20T00:01:08.227Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "shawn-mendes-and-bruna-marquezine-spotted-on-casual-outing-at-rio-market",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [],
+      "headline": [
+        "metaTitle",
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 2
+    }
+  ],
+  "topics": 2,
+  "held": 0,
+  "rejected": 1,
+  "skipped": 0,
+  "blocked": 0,
+  "costUSD": 0.017828,
+  "costPerPublished": 0.017828,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 8,
+      "in": 16207,
+      "out": 1447,
+      "usd": 0.0084796
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 850,
+      "out": 408,
+      "usd": 0.00023324
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 6,
+      "in": 17069,
+      "out": 5334,
+      "usd": 0.008483942899999998
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 6,
+      "in": 4606,
+      "out": 427,
+      "usd": 0.0006314
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 2,
+      "errors": 0,
+      "in": 5051,
+      "out": 377,
+      "usd": 0.0024578000000000004,
+      "ms": 2675
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 850,
+      "out": 408,
+      "usd": 0.00014994,
+      "ms": 28190
+    },
+    "writer": {
+      "calls": 5,
+      "errors": 0,
+      "in": 16384,
+      "out": 5014,
+      "usd": 0.00547308,
+      "ms": 163424
+    },
+    "verify": {
+      "calls": 6,
+      "errors": 0,
+      "in": 11156,
+      "out": 1070,
+      "usd": 0.0060218,
+      "ms": 6954
+    },
+    "judge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1355,
+      "out": 138,
+      "usd": 0.0001907,
+      "ms": 739
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 685,
+      "out": 320,
+      "usd": 0.00026635,
+      "ms": 5534
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 384,
+      "out": 99,
+      "usd": 0.000078,
+      "ms": 700
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 190,
+      "out": 54,
+      "usd": 0.000040600000000000004,
+      "ms": 489
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2094,
+      "out": 84,
+      "usd": 0.000243,
+      "ms": 2340
+    },
+    "linker": {
+      "calls": 2,
+      "errors": 0,
+      "in": 583,
+      "out": 52,
+      "usd": 0.0000791,
+      "ms": 1272
+    }
+  }
+}
