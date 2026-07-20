@@ -1,0 +1,129 @@
+{
+ "runId": "run-2026-07-20T12-31-31",
+ "mode": "live",
+ "startedAt": "2026-07-20T12:31:31.872Z",
+ "films": 43,
+ "published": [
+  {
+   "tag": "disclosure-day-bo-update×BO-UPDATE",
+   "slug": "disclosure-day-box-office-day-38-adds-440-000-as-domestic-total-hits-114-7",
+   "path": "/home/runner/work/thescreenreport/thescreenreport/content/articles/disclosure-day-box-office-day-38-adds-440-000-as-domestic-total-hits-114-7.md",
+   "score": 80
+  }
+ ],
+ "held": [
+  {
+   "tag": "the-odyssey-bo-update×BO-UPDATE",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "score": 50
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "moana-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "toy-story-5-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "minions-monsters-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "evil-dead-burn-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "the-invite-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "young-washington-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "obsession-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "supergirl-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  }
+ ],
+ "blocked": [],
+ "paced": {
+  "tokens": 1.91,
+  "behind": false,
+  "expected": 0,
+  "allow": 1
+ },
+ "zeroStreak": 0,
+ "daySpend": {
+  "laDay": "2026-07-20",
+  "usd": 0.14517
+ },
+ "faults": {
+  "count": 2,
+  "bySeverity": {
+   "critical": 1,
+   "warn": 1
+  },
+  "faults": [
+   {
+    "stage": "model:finder",
+    "message": "all models failed (amazon/nova-micro-v1, google/gemini-2.5-flash-lite): Expected ',' or ']' after array element in JSON at position 455",
+    "severity": "critical",
+    "at": "2026-07-20T12:31:39.227Z"
+   },
+   {
+    "stage": "finder:llm",
+    "message": "finder classification failed — falling back to deterministic picks: Expected ',' or ']' after array element in JSON at position 455",
+    "severity": "warn",
+    "at": "2026-07-20T12:31:39.228Z"
+   }
+  ]
+ },
+ "degraded": true,
+ "finishedAt": "2026-07-20T12:34:12.109Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 2,
+    "errors": 2,
+    "in": 0,
+    "out": 0,
+    "usd": 0,
+    "ms": 0
+   },
+   "gatherer": {
+    "calls": 2,
+    "errors": 0,
+    "in": 6699,
+    "out": 587,
+    "usd": 0.0009,
+    "ms": 2876
+   },
+   "synthesizer": {
+    "calls": 2,
+    "errors": 0,
+    "in": 1543,
+    "out": 1623,
+    "usd": 0.00043,
+    "ms": 18285
+   },
+   "writerChart": {
+    "calls": 2,
+    "errors": 0,
+    "in": 4028,
+    "out": 2098,
+    "usd": 0.00164,
+    "ms": 24786
+   }
+  },
+  "totalUsd": 0.00298
+ },
+ "openrouterTotalUsd": 0.00331
+}
