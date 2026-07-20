@@ -1,0 +1,103 @@
+{
+ "runId": "run-2026-07-20T08-01-02",
+ "mode": "live",
+ "startedAt": "2026-07-20T08:01:02.173Z",
+ "films": 43,
+ "published": [
+  {
+   "tag": "toy-story-5-bo-update×BO-UPDATE",
+   "slug": "toy-story-5-box-office-day-31-adds-4-7-million-as-domestic-total-hits-430-9",
+   "path": "/home/runner/work/thescreenreport/thescreenreport/content/articles/toy-story-5-box-office-day-31-adds-4-7-million-as-domestic-total-hits-430-9.md",
+   "score": 80
+  },
+  {
+   "tag": "evil-dead-burn-bo-update×BO-UPDATE",
+   "slug": "evil-dead-burn-box-office-day-10-adds-1-5-million-as-domestic-total-hits-24-2",
+   "path": "/home/runner/work/thescreenreport/thescreenreport/content/articles/evil-dead-burn-box-office-day-10-adds-1-5-million-as-domestic-total-hits-24-2.md",
+   "score": 80
+  }
+ ],
+ "held": [
+  {
+   "tag": "the-odyssey-bo-update×BO-UPDATE",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "score": 50
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "moana-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "minions-monsters-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  }
+ ],
+ "blocked": [],
+ "paced": {
+  "tokens": 2.09,
+  "behind": true,
+  "expected": 25.26,
+  "allow": 2
+ },
+ "queueBuilt": 8,
+ "zeroStreak": 0,
+ "daySpend": {
+  "laDay": "2026-07-20",
+  "usd": 0.07047
+ },
+ "faults": {
+  "count": 0,
+  "bySeverity": {},
+  "faults": []
+ },
+ "finishedAt": "2026-07-20T08:06:33.732Z",
+ "meter": {
+  "byRole": {
+   "categorize": {
+    "calls": 3,
+    "errors": 0,
+    "in": 1145,
+    "out": 534,
+    "usd": 0.00033,
+    "ms": 2651
+   },
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3453,
+    "out": 606,
+    "usd": 0.00021,
+    "ms": 2150
+   },
+   "gatherer": {
+    "calls": 3,
+    "errors": 0,
+    "in": 10060,
+    "out": 715,
+    "usd": 0.00129,
+    "ms": 4592
+   },
+   "synthesizer": {
+    "calls": 3,
+    "errors": 0,
+    "in": 2227,
+    "out": 3097,
+    "usd": 0.00076,
+    "ms": 37202
+   },
+   "writerChart": {
+    "calls": 3,
+    "errors": 0,
+    "in": 6115,
+    "out": 3130,
+    "usd": 0.00247,
+    "ms": 132426
+   }
+  },
+  "totalUsd": 0.00506
+ },
+ "openrouterTotalUsd": 0.00526
+}
