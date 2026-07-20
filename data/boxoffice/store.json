@@ -1303,20 +1303,20 @@
    "eventSlug": "gail-daughtry-and-the-celebrity-sex-pass-bo-update-d8",
    "form": "BO-UPDATE",
    "reason": "consistency: title: \"$1.2\" is not a canonical figure for this film | title: \"$1.2\" contradicts the canonical domestic figure ($1,242,603)",
-   "tries": 37,
-   "at": "2026-07-20T03:32:31.829Z",
+   "tries": 38,
+   "at": "2026-07-20T04:02:56.794Z",
    "dead": true,
-   "expiresAt": "2026-07-23T03:32:31.829Z"
+   "expiresAt": "2026-07-23T04:02:56.794Z"
   },
   {
    "key": "star-wars-the-mandalorian-and-grogu-bo-update-d57|BO-UPDATE",
    "eventSlug": "star-wars-the-mandalorian-and-grogu-bo-update-d57",
    "form": "BO-UPDATE",
-   "reason": "consistency: title: \"$177.5\" is not a canonical figure for this film | title: \"$177.5\" contradicts the canonical domestic figure ($177,455,904) | metaTitle: headlines domestic while the title headlines dailyGross/other — the SERP promise must match the page",
-   "tries": 37,
-   "at": "2026-07-20T03:34:34.656Z",
+   "reason": "fidelity: 11 unsupported figures/claims — draft-level failure",
+   "tries": 38,
+   "at": "2026-07-20T04:04:31.109Z",
    "dead": true,
-   "expiresAt": "2026-07-23T03:34:34.656Z"
+   "expiresAt": "2026-07-23T04:04:31.109Z"
   },
   {
    "key": "the-super-mario-galaxy-movie-ev-milestone-d0|BO-MILESTONE",
@@ -1414,19 +1414,27 @@
    "key": "project-hail-mary-bo-update-d127|BO-UPDATE",
    "eventSlug": "project-hail-mary-bo-update-d127",
    "form": "BO-UPDATE",
-   "reason": "words 142 < 180 (owner-set ~200-word minimum)",
+   "reason": "words 139 < 180 (owner-set ~200-word minimum)",
+   "tries": 2,
+   "at": "2026-07-20T04:08:34.043Z"
+  },
+  {
+   "key": "kung-fu-soccer-ev-milestone-d0|BO-MILESTONE",
+   "eventSlug": "kung-fu-soccer-ev-milestone-d0",
+   "form": "BO-MILESTONE",
+   "reason": "words 160 < 180 (owner-set ~200-word minimum)",
    "tries": 1,
-   "at": "2026-07-20T03:23:15.284Z"
+   "at": "2026-07-20T04:06:57.562Z"
   }
  ],
- "zeroStreak": 20,
+ "zeroStreak": 21,
  "daySpend": {
   "laDay": "2026-07-19",
-  "usd": 0.99162
+  "usd": 1.04012
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1784518255405
+  "lastMs": 1784520059975
  },
  "lastAuditDay": "2026-07-19",
  "attempts": {
@@ -1460,9 +1468,10 @@
    "the real me": 1,
    "the breadwinner": 1,
    "maddie's secret": 1,
-   "project hail mary": 1,
+   "project hail mary": 2,
    "chicago p.d.": 1,
-   "spider-man: brand new day": 1
+   "spider-man: brand new day": 1,
+   "kung fu soccer": 1
   }
  }
 }

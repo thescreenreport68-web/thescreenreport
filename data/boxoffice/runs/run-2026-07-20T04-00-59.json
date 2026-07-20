@@ -1,0 +1,187 @@
+{
+ "runId": "run-2026-07-20T04-00-59",
+ "mode": "live",
+ "startedAt": "2026-07-20T04:00:59.975Z",
+ "films": 43,
+ "published": [],
+ "held": [
+  {
+   "tag": "gail-daughtry-and-the-celebrity-sex-pass-bo-update×BO-UPDATE",
+   "reason": "consistency: title: \"$1.2\" is not a canonical figure for this film | title: \"$1.2\" contradicts the canonical domestic figure ($1,242,603)",
+   "score": 80
+  },
+  {
+   "tag": "star-wars-the-mandalorian-and-grogu-bo-update×BO-UPDATE",
+   "reason": "fidelity: 11 unsupported figures/claims — draft-level failure",
+   "score": 50
+  },
+  {
+   "tag": "kung-fu-soccer-ev-milestone×BO-MILESTONE",
+   "reason": "words 160 < 180 (owner-set ~200-word minimum)",
+   "score": 75
+  },
+  {
+   "tag": "project-hail-mary-bo-opening×BO-OPENING",
+   "reason": "words 139 < 180 (owner-set ~200-word minimum)",
+   "score": 60
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "the-odyssey-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $51M not above last published $51M)"
+  },
+  {
+   "tag": "moana-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "minions-monsters-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "toy-story-5-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "evil-dead-burn-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "young-washington-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $39M not above last published $39M)"
+  },
+  {
+   "tag": "the-invite-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $12M not above last published $12M)"
+  },
+  {
+   "tag": "obsession-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $257M not above last published $257M)"
+  },
+  {
+   "tag": "supergirl-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "disclosure-day-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "backrooms-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $195M not above last published $195M)"
+  },
+  {
+   "tag": "jackass-best-and-last-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $18M not above last published $18M)"
+  },
+  {
+   "tag": "scary-movie-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $108M not above last published $108M)"
+  },
+  {
+   "tag": "voicemails-for-isabelle-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  }
+ ],
+ "blocked": [],
+ "paced": {
+  "tokens": 4,
+  "behind": true,
+  "expected": 23.66,
+  "allow": 2
+ },
+ "queueBuilt": 7,
+ "attemptCapHit": 4,
+ "zeroStreak": 21,
+ "daySpend": {
+  "laDay": "2026-07-19",
+  "usd": 1.04012
+ },
+ "faults": {
+  "count": 2,
+  "bySeverity": {
+   "critical": 1,
+   "warn": 1
+  },
+  "faults": [
+   {
+    "stage": "model:finder",
+    "message": "all models failed (amazon/nova-micro-v1, google/gemini-2.5-flash-lite): Expected ',' or ']' after array element in JSON at position 2624",
+    "severity": "critical",
+    "at": "2026-07-20T04:01:21.937Z"
+   },
+   {
+    "stage": "finder:llm",
+    "message": "finder classification failed — falling back to deterministic picks: Expected ',' or ']' after array element in JSON at position 2624",
+    "severity": "warn",
+    "at": "2026-07-20T04:01:21.937Z"
+   }
+  ]
+ },
+ "degraded": true,
+ "finishedAt": "2026-07-20T04:08:34.046Z",
+ "meter": {
+  "byRole": {
+   "categorize": {
+    "calls": 3,
+    "errors": 0,
+    "in": 1137,
+    "out": 530,
+    "usd": 0.00033,
+    "ms": 2178
+   },
+   "finder": {
+    "calls": 2,
+    "errors": 2,
+    "in": 0,
+    "out": 0,
+    "usd": 0,
+    "ms": 0
+   },
+   "gatherer": {
+    "calls": 4,
+    "errors": 0,
+    "in": 14367,
+    "out": 1401,
+    "usd": 0.002,
+    "ms": 6368
+   },
+   "synthesizer": {
+    "calls": 4,
+    "errors": 0,
+    "in": 2938,
+    "out": 2532,
+    "usd": 0.00072,
+    "ms": 59153
+   },
+   "writerChart": {
+    "calls": 2,
+    "errors": 0,
+    "in": 3736,
+    "out": 1808,
+    "usd": 0.00148,
+    "ms": 58272
+   },
+   "writer": {
+    "calls": 4,
+    "errors": 0,
+    "in": 14526,
+    "out": 4641,
+    "usd": 0.01324,
+    "ms": 60955
+   },
+   "qa": {
+    "calls": 16,
+    "errors": 1,
+    "in": 48791,
+    "out": 5704,
+    "usd": 0.02737,
+    "ms": 44678
+   }
+  },
+  "totalUsd": 0.04512
+ },
+ "openrouterTotalUsd": 0.0485
+}
