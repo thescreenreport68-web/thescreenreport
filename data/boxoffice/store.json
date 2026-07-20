@@ -1560,21 +1560,37 @@
    "key": "the-odyssey-bo-update-100m|BO-UPDATE",
    "eventSlug": "the-odyssey-bo-update-100m",
    "form": "BO-UPDATE",
-   "reason": "synthesizer returned no usable brief",
-   "tries": 8,
-   "at": "2026-07-20T11:02:43.604Z",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "tries": 9,
+   "at": "2026-07-20T11:35:21.873Z",
    "dead": true,
-   "expiresAt": "2026-07-23T11:02:43.604Z"
+   "expiresAt": "2026-07-23T11:35:21.873Z"
+  },
+  {
+   "key": "disclosure-day-bo-update-d38|BO-UPDATE",
+   "eventSlug": "disclosure-day-bo-update-d38",
+   "form": "BO-UPDATE",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "tries": 1,
+   "at": "2026-07-20T11:36:52.522Z"
+  },
+  {
+   "key": "backrooms-bo-update-d52|BO-UPDATE",
+   "eventSlug": "backrooms-bo-update-d52",
+   "form": "BO-UPDATE",
+   "reason": "words 173 < 180 (owner-set ~200-word minimum)",
+   "tries": 1,
+   "at": "2026-07-20T11:39:30.320Z"
   }
  ],
- "zeroStreak": 0,
+ "zeroStreak": 1,
  "daySpend": {
   "laDay": "2026-07-20",
-  "usd": 0.09927
+  "usd": 0.10671
  },
  "pace": {
-  "tokens": 0,
-  "lastMs": 1784545292592
+  "tokens": 0.09279719841269843,
+  "lastMs": 1784547091430
  },
  "lastAuditDay": "2026-07-20",
  "attempts": {

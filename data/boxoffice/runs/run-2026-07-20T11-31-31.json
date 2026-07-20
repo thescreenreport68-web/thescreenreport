@@ -1,0 +1,133 @@
+{
+ "runId": "run-2026-07-20T11-31-31",
+ "mode": "live",
+ "startedAt": "2026-07-20T11:31:31.430Z",
+ "films": 44,
+ "published": [],
+ "held": [
+  {
+   "tag": "the-odyssey-bo-update×BO-UPDATE",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "score": 50
+  },
+  {
+   "tag": "disclosure-day-bo-update×BO-UPDATE",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "score": 50
+  },
+  {
+   "tag": "backrooms-bo-update×BO-UPDATE",
+   "reason": "words 173 < 180 (owner-set ~200-word minimum)",
+   "score": 50
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "moana-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "toy-story-5-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "minions-monsters-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "evil-dead-burn-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "the-invite-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "young-washington-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "obsession-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "supergirl-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  }
+ ],
+ "blocked": [],
+ "paced": {
+  "tokens": 0.09,
+  "behind": true,
+  "expected": 25.81,
+  "allow": 1
+ },
+ "attemptCapHit": 3,
+ "zeroStreak": 1,
+ "daySpend": {
+  "laDay": "2026-07-20",
+  "usd": 0.10671
+ },
+ "faults": {
+  "count": 2,
+  "bySeverity": {
+   "critical": 1,
+   "warn": 1
+  },
+  "faults": [
+   {
+    "stage": "model:finder",
+    "message": "all models failed (amazon/nova-micro-v1, google/gemini-2.5-flash-lite): Expected ',' or ']' after array element in JSON at position 2601",
+    "severity": "critical",
+    "at": "2026-07-20T11:31:41.072Z"
+   },
+   {
+    "stage": "finder:llm",
+    "message": "finder classification failed — falling back to deterministic picks: Expected ',' or ']' after array element in JSON at position 2601",
+    "severity": "warn",
+    "at": "2026-07-20T11:31:41.073Z"
+   }
+  ]
+ },
+ "degraded": true,
+ "finishedAt": "2026-07-20T11:39:30.322Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 2,
+    "errors": 2,
+    "in": 0,
+    "out": 0,
+    "usd": 0,
+    "ms": 0
+   },
+   "gatherer": {
+    "calls": 3,
+    "errors": 0,
+    "in": 9102,
+    "out": 667,
+    "usd": 0.00118,
+    "ms": 3795
+   },
+   "synthesizer": {
+    "calls": 4,
+    "errors": 1,
+    "in": 2370,
+    "out": 2752,
+    "usd": 0.00069,
+    "ms": 57785
+   },
+   "writerChart": {
+    "calls": 4,
+    "errors": 1,
+    "in": 5974,
+    "out": 2833,
+    "usd": 0.00374,
+    "ms": 89381
+   }
+  },
+  "totalUsd": 0.0056
+ },
+ "openrouterTotalUsd": 0.00744
+}
