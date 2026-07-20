@@ -1,61 +1,52 @@
 {
-  "runId": "run-2026-07-20T21-31-40",
-  "builtAt": "2026-07-20T21:33:26.374Z",
-  "count": 9,
+  "runId": "run-2026-07-20T22-01-31",
+  "builtAt": "2026-07-20T22:02:51.415Z",
+  "count": 14,
   "topics": [
     {
-      "id": "news-discretion-series-josh-lucas-casting",
-      "slug": "josh-lucas-joins-nicole-kidman-elle-fanning-in-paramount-series-discre",
-      "title": "Josh Lucas Joins Nicole Kidman, Elle Fanning in Paramount+ Series 'Discretion'",
+      "id": "news-scrubs-tv-series-casting",
+      "slug": "scrubs-revival-ups-ava-bunn-to-series-regular-x-mayo-and-joel-kim-boos",
+      "title": "Scrubs Revival Ups Ava Bunn to Series Regular, X Mayo and Joel Kim Booster Exit",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "discretion-series-josh-lucas-casting",
-      "primaryKeyword": "Discretion series",
-      "primaryEntity": "Discretion (TV series)",
+      "eventSlug": "scrubs-tv-series-casting",
+      "primaryKeyword": "scrubs revival",
+      "primaryEntity": "Scrubs (TV Series)",
       "entities": [
-        "Nicole Kidman",
-        "Elle Fanning",
-        "Paramount+"
+        "Ava Bunn",
+        "X Mayo",
+        "Joel Kim Booster"
       ],
-      "angle": "Josh Lucas joins Nicole Kidman and Elle Fanning in the upcoming Paramount+ legal drama 'Discretion'.",
+      "angle": "The Scrubs revival is making cast adjustments for its upcoming season.",
       "tmdbType": "movie",
       "source": "rss:Variety",
       "sources": [
         {
           "outlet": "Variety",
           "tier": 7,
-          "url": "https://variety.com/2026/tv/news/nicole-kidman-elle-fanning-paramount-discretion-josh-lucas-1236816877/",
-          "ageMin": 24,
-          "headline": "Nicole Kidman, Elle Fanning Paramount+ Series Discretion Casts Josh Lucas",
-          "summary": "Josh Lucas is set to star opposite Nicole Kidman and Elle Fanning in the legal drama series Discretion, Variety has confirmed. The show was originally announced with a straight-to-series order at Paramount+ in October 2025. It is based on the short story of the same name by Chandler Baker. It has received an eight-episode order [ ]"
-        },
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/josh-lucas-discretion-nicole-kidman-elle-fanning-paramount-1236998810/",
-          "ageMin": 31,
-          "headline": "Josh Lucas Joins Nicole Kidman Elle Fanning In Paramount+ Legal Drama Discretion",
-          "summary": "EXCLUSIVE: Josh Lucas (Yellowstone, Ford v Ferrari) is set to star opposite Nicole Kidman and Elle Fanning in Discretion, Paramount+ s upcoming legal thriller series from A24. Lucas will play Greg, a lawyer and the husband of Kidman’s powerful and formidable corporate law partner at the same firm entangled in a dark web of NDAs. Fanning [ ]"
+          "url": "https://variety.com/2026/tv/news/scrubs-revival-season-11-ava-bun-x-mayo-joel-kim-booster-1236816776/",
+          "ageMin": 122,
+          "headline": "Scrubs Revival Ups Ava Bunn to Series Regular, X Mayo and Joel Kim Booster Exit",
+          "summary": "The Scrubs revival at ABC is undergoing some cast changes ahead of its second season (and the show s 11th season overall). Ava Bunn, who starred as Dr. Sam Tosh in the first revival season, has been upped to series regular status for the second season. Meanwhile, both X Mayo and Joel Kim Booster who [ ]"
         }
       ],
-      "ageMin": 24,
+      "ageMin": 122,
       "_cand": {
-        "key": "rss:nicole-kidman-elle-fanning-paramount-series-discretion-casts",
+        "key": "rss:scrubs-revival-ups-ava-bunn-to-series-regular-x-mayo-and-joe",
         "popularity": 0,
         "kind": "rss-news"
       },
-      "corroborationCount": 2,
+      "corroborationCount": 1,
       "verification": {
-        "tier1Count": 2,
+        "tier1Count": 1,
         "tier1Owners": 1,
-        "outletCount": 2,
+        "outletCount": 1,
         "outlets": [
-          "Variety",
-          "Deadline"
+          "Variety"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
@@ -64,78 +55,81 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 100,
+      "priority": 82,
       "signals": {
-        "recency": 24,
-        "corroboration": 18,
+        "recency": 16,
+        "corroboration": 12,
         "status": 18,
         "type": 14,
         "pop": 0,
         "breakout": 0,
         "big": 18,
-        "trending": 8,
-        "spice": 0,
+        "trending": 0,
+        "spice": 4,
         "softTv": 0
       },
       "tierClass": "B"
     },
     {
-      "id": "news-alan-ritchson-netflix-sequel-war-machines-title",
-      "slug": "alan-ritchson-s-netflix-sequel-officially-titled-war-machines",
-      "title": "Alan Ritchson's Netflix Sequel Officially Titled 'War Machines'",
-      "contentType": "news",
-      "formatTag": "news",
+      "id": "reaction-world-cup-final-halftime-show-controversy",
+      "slug": "was-the-world-cup-final-halftime-show-too-american-global-audience-wei",
+      "title": "Was the World Cup Final Halftime Show Too American? Global Audience Weighs In",
+      "contentType": "reaction",
+      "formatTag": "reaction",
       "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
+      "subcategory": "reactions",
+      "eventType": "reaction",
       "sensitivity": "normal",
-      "eventSlug": "alan-ritchson-netflix-sequel-war-machines-title",
-      "primaryKeyword": "War Machines movie",
-      "primaryEntity": "War Machines",
+      "tier": "popular",
+      "eventSlug": "world-cup-final-halftime-show-controversy",
+      "primaryKeyword": "World Cup Final halftime show",
+      "primaryEntity": "World Cup Final",
       "entities": [
-        "Alan Ritchson",
-        "Netflix"
+        "Madonna",
+        "Justin Bieber",
+        "BTS",
+        "Shakira"
       ],
-      "angle": "Alan Ritchson's upcoming Netflix sequel has been officially titled 'War Machines'.",
+      "angle": "International audience reactions to the World Cup Final halftime show, featuring global music stars, suggest it was perceived as too American.",
       "tmdbType": "movie",
-      "source": "gnews:What's on Netflix",
+      "source": "rss:THR",
       "sources": [
         {
-          "outlet": "What's on Netflix",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPeDdhY1dZSnBLRlhkNDc4TVUyTVJoRFA2MnpxSkc4ak9KN2djRi1CNzhQbTVmVW1VUGxOMFJNTGFBT0hET3RMSXFYU2cwOWd2UXJtWHg3eGE5cnVhdk9mTUU4aGlHLXpnZktDOTVPV0dTZDFsSVB5clpjWUlzUmlCeVJGN2lCTnYteVVxUlhfaw?oc=5",
-          "ageMin": 85,
-          "headline": "Alan Ritchson’s Netflix Sequel Gets an Official Title: Enter ‘War Machines’ - What's on Netflix",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMijwFBVV95cUxPeDdhY1dZSnBLRlhkNDc4TVUyTVJoRFA2MnpxSkc4ak9KN2djRi1CNzhQbTVmVW1VUGxOMFJNTGFBT0hET3RMSXFYU2cwOWd2UXJtWHg3eGE5cnVhdk9mTUU4aGlHLXpnZktDOTVPV0dTZDFsSVB5clpjWUlzUmlCeVJGN2lCTnYteVVxUlhfaw?oc=5\" target=\"_blank\" Alan Ritchson’s Netflix Sequel Get"
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/tv/tv-news/world-cup-final-halftime-show-global-criticism-1236652255/",
+          "ageMin": 227,
+          "headline": "Was the World Cup Final Halftime Show Too American ? Rest of the World Seems to Think So: Glib and Unsubtle",
+          "summary": "The rule-breaking spectacle had Madonna, Justin Bieber, BTS and Shakira performing in front of billions. But did the showmanship just put more people off?"
         }
       ],
-      "ageMin": 85,
+      "ageMin": 227,
       "_cand": {
-        "key": "rss:alan-ritchson-s-netflix-sequel-gets-an-official-title-enter-",
+        "key": "rss:was-the-world-cup-final-halftime-show-too-american-rest-of-t",
         "popularity": 0,
-        "kind": "gnews"
+        "kind": "rss-news"
       },
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
+        "tier1Count": 1,
+        "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "What's on Netflix"
+          "THR"
         ],
-        "maxTier": 5,
+        "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "What's on Netflix",
+        "attribution": "THR",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 75,
+      "priority": 74,
       "signals": {
-        "recency": 16,
-        "corroboration": 8,
+        "recency": 9,
+        "corroboration": 12,
         "status": 18,
-        "type": 9,
+        "type": 11,
         "pop": 0,
         "breakout": 0,
         "big": 24,
@@ -146,23 +140,90 @@
       "tierClass": "B"
     },
     {
-      "id": "news-scrubs-tv-series-casting",
-      "slug": "scrubs-ups-ava-bunn-to-series-regular-as-season-2-sets-cast-returns-an",
-      "title": "'Scrubs' Ups Ava Bunn to Series Regular as Season 2 Sets Cast Returns and Departures",
+      "id": "news-josh-lucas-discretion-casting",
+      "slug": "josh-lucas-joins-nicole-kidman-elle-fanning-in-paramount-legal-drama-d",
+      "title": "Josh Lucas Joins Nicole Kidman, Elle Fanning in Paramount+ Legal Drama 'Discretion'",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "scrubs-tv-series-casting",
-      "primaryKeyword": "Scrubs revival",
+      "eventSlug": "josh-lucas-discretion-casting",
+      "primaryKeyword": "discretion series",
+      "primaryEntity": "Discretion (TV series)",
+      "entities": [
+        "Nicole Kidman",
+        "Elle Fanning",
+        "Paramount+"
+      ],
+      "angle": "Josh Lucas joins Nicole Kidman and Elle Fanning in the upcoming Paramount+ legal drama 'Discretion'.",
+      "tmdbType": "movie",
+      "source": "rss:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/josh-lucas-discretion-nicole-kidman-elle-fanning-paramount-1236998810/",
+          "ageMin": 61,
+          "headline": "Josh Lucas Joins Nicole Kidman Elle Fanning In Paramount+ Legal Drama Discretion",
+          "summary": "EXCLUSIVE: Josh Lucas (Yellowstone, Ford v Ferrari) is set to star opposite Nicole Kidman and Elle Fanning in Discretion, Paramount+ s upcoming legal thriller series from A24. Lucas will play Greg, a lawyer and the husband of Kidman’s powerful and formidable corporate law partner at the same firm entangled in a dark web of NDAs. Fanning [ ]"
+        }
+      ],
+      "ageMin": 61,
+      "_cand": {
+        "key": "rss:josh-lucas-joins-nicole-kidman-elle-fanning-in-paramount-leg",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 78,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-scrubs-season-2-cast-changes",
+      "slug": "scrubs-ups-ava-bunn-to-series-regular-as-season-2-cast-returns-and-two",
+      "title": "Scrubs Ups Ava Bunn to Series Regular as Season 2 Cast Returns and Two Depart",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "scrubs-season-2-cast-changes",
+      "primaryKeyword": "scrubs season 2",
       "primaryEntity": "Scrubs (TV series)",
       "entities": [
         "Neil Flynn",
         "Rachel Bilson"
       ],
-      "angle": "The 'Scrubs' revival adds Ava Bunn as a series regular and confirms cast returns while noting departures.",
+      "angle": "Scrubs' second season adds Ava Bunn as a series regular and confirms cast returns, alongside departures of two main characters.",
       "tmdbType": "movie",
       "source": "rss:Deadline",
       "sources": [
@@ -170,12 +231,12 @@
           "outlet": "Deadline",
           "tier": 7,
           "url": "https://deadline.com/2026/07/scrubs-season-2-cast-ava-bunn-who-is-returning-leaving-1236998486/",
-          "ageMin": 91,
+          "ageMin": 121,
           "headline": "Scrubs Ups Ava Bunn To Series Regular Alongside Lead OG Trio As Season 2 Sets Cast Returns Two Main Characters Departures",
-          "summary": "ABC s Scrubs has locked in the main cast for Season 2, and the revival is shaking up a few things, with more screen time for OG Neil Flynn and new addition Rachel Bilson and two prominent recurring characters, Dr. Park (Joel Kim Booster) and Charge Nurse Raymond (X Mayo), not returning. No changes to the [ ]"
+          "summary": "ABC s Scrubs has locked in the main cast for Season 2, and the revival is shaking up a few things, with OG Neil Flynn and new addition Rachel Bilson getting more screen time and two prominent recurring characters, Dr. Park (Joel Kim Booster) and Charge Nurse Raymond (X Mayo), not returning. There is no change [ ]"
         }
       ],
-      "ageMin": 91,
+      "ageMin": 121,
       "_cand": {
         "key": "rss:scrubs-ups-ava-bunn-to-series-regular-alongside-lead-og-trio",
         "popularity": 0,
@@ -212,38 +273,104 @@
       "tierClass": "B"
     },
     {
-      "id": "news-robert-downey-jr-doctor-doom-avengers-doomsday",
-      "slug": "is-robert-downey-jr-s-doctor-doom-the-hero-or-villain-of-avengers-doom",
-      "title": "Is Robert Downey Jr's Doctor Doom the Hero or Villain of Avengers: Doomsday?",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
+      "id": "music-news-future-charts-17-songs-hot-100",
+      "slug": "future-charts-17-songs-on-hot-100-from-new-album-the-real-me",
+      "title": "Future Charts 17 Songs on Hot 100 From New Album ‘The Real Me’",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "robert-downey-jr-doctor-doom-avengers-doomsday",
-      "primaryKeyword": "Robert Downey Jr Doctor Doom",
-      "primaryEntity": "Robert Downey Jr.",
+      "tier": "popular",
+      "eventSlug": "future-charts-17-songs-hot-100",
+      "primaryKeyword": "Future Hot 100",
+      "primaryEntity": "Future",
       "entities": [
-        "Doctor Doom",
-        "Avengers: Doomsday"
+        "The Real Me (album)"
       ],
-      "angle": "Speculation arises about Robert Downey Jr.'s portrayal of Doctor Doom in 'Avengers: Doomsday'.",
+      "angle": "Future has charted 17 songs on the Billboard Hot 100 from his new album 'The Real Me,' bringing his career total to 245 hits.",
       "tmdbType": "movie",
-      "source": "gnews:IGN",
+      "source": "rss:Billboard",
       "sources": [
         {
-          "outlet": "IGN",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQeHpLLXpLRHo3STA1bnVRQXJiZjN5aXlUV01rX1dXdko0RDEwWnBPQXlsUVVSWFNQRUh3VFlBS2JZX2VuTDJWNkI3Si1RdDUyLW5EMVRRUnNmQ1EwcV9VdWpGY09vODlFZVFPNlVXTG5WX3E4WERJanloLWkxLWRxNHh1RTJMODV1eG80T25UcmJPclhuWXhxY0cyY2tZRWRlRlFORw?oc=5",
-          "ageMin": 204,
-          "headline": "Is Robert Downey Jr's Doctor Doom the Hero or Villain of Avengers: Doomsday? - IGN",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxQeHpLLXpLRHo3STA1bnVRQXJiZjN5aXlUV01rX1dXdko0RDEwWnBPQXlsUVVSWFNQRUh3VFlBS2JZX2VuTDJWNkI3Si1RdDUyLW5EMVRRUnNmQ1EwcV9VdWpGY09vODlFZVFPNlVXTG5WX3E4WERJanloLWkxLWRxNHh1RTJMODV1eG80T25UcmJPclhuWXhxY0cyY2tZRWRlRlFORw?oc=5\" target=\"_blank\" Is Rob"
+          "outlet": "Billboard",
+          "tier": 7,
+          "url": "https://www.billboard.com/music/chart-beat/future-17-songs-hot-100-real-me-album-1236298639/",
+          "ageMin": 45,
+          "headline": "Future Charts 17 Songs on Hot 100 From New Album ‘The Real Me’",
+          "summary": "He’s now logged 245 career Hot 100 hits."
         }
       ],
-      "ageMin": 204,
+      "ageMin": 45,
       "_cand": {
-        "key": "rss:is-robert-downey-jr-s-doctor-doom-the-hero-or-villain-of-ave",
+        "key": "rss:future-charts-17-songs-on-hot-100-from-new-album-the-real-me",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "breakoutVelocity": 0,
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Billboard"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Billboard",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 59,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-new-tv-series-casting",
+      "slug": "casting-australia-s-pettiest-arguments-wanted-for-new-tv-series",
+      "title": "CASTING | Australia’s pettiest arguments wanted for new TV series",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "new-tv-series-casting",
+      "primaryKeyword": "casting call tv series australia",
+      "primaryEntity": "new TV series",
+      "entities": [
+        "Australia"
+      ],
+      "angle": "Casting call issued for a new Australian TV series seeking participants for petty arguments.",
+      "tmdbType": "movie",
+      "source": "gnews:TV Blackbox",
+      "sources": [
+        {
+          "outlet": "TV Blackbox",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOVFBhV2hyTkNySEtIbWZ4d205MFhsdWVkMWtSZ09TYlBxb2JlaDZGODRQc3F4Vi1ybGJVQkFuMExVTlZpUXUyek9WdnluMkhfYl9iZUpTbURXT21DeDlPUTdreXBIdFR1YVhBSnYzS0xQZXM3WE5UTFBiTExRSGJjcmNJeVBCcWFBS0JqUWJMUUpLVGUxVko4aUtjaFBmTXFTZkhKSUlJSUc?oc=5",
+          "ageMin": 153,
+          "headline": "CASTING | Australia’s pettiest arguments wanted for new TV series - TV Blackbox",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiqAFBVV95cUxOVFBhV2hyTkNySEtIbWZ4d205MFhsdWVkMWtSZ09TYlBxb2JlaDZGODRQc3F4Vi1ybGJVQkFuMExVTlZpUXUyek9WdnluMkhfYl9iZUpTbURXT21DeDlPUTdreXBIdFR1YVhBSnYzS0xQZXM3WE5UTFBiTExRSGJjcmNJeVBCcWFBS0JqUWJMUUpLVGUxVko4aUtjaFBmTXFTZkhKSUlJSUc?oc=5\" target=\"_blank\" C"
+        }
+      ],
+      "ageMin": 153,
+      "_cand": {
+        "key": "rss:casting-australia-s-pettiest-arguments-wanted-for-new-tv-ser",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -253,51 +380,49 @@
         "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "IGN"
+          "TV Blackbox"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "IGN",
+        "attribution": "TV Blackbox",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 72,
+      "priority": 74,
       "signals": {
-        "recency": 9,
+        "recency": 16,
         "corroboration": 8,
         "status": 18,
-        "type": 5,
+        "type": 14,
         "pop": 0,
         "breakout": 0,
-        "big": 12,
+        "big": 18,
         "trending": 0,
         "spice": 0,
-        "softTv": 0,
-        "radar": 20
+        "softTv": 0
       },
-      "radarKind": "movie-trending",
-      "tierClass": "A"
+      "tierClass": "B"
     },
     {
-      "id": "news-percy-jackson-and-the-olympians-season-3-update",
-      "slug": "everything-we-know-about-percy-jackson-and-the-olympians-season-3-so-f",
-      "title": "Everything We Know About ‘Percy Jackson And The Olympians’ Season 3 So Far",
+      "id": "news-percy-jackson-and-the-olympians-season-3-renewal",
+      "slug": "percy-jackson-and-the-olympians-gets-early-season-3-renewal",
+      "title": "'Percy Jackson and the Olympians' Gets Early Season 3 Renewal",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
       "eventType": "renewal",
       "sensitivity": "normal",
-      "eventSlug": "percy-jackson-and-the-olympians-season-3-update",
+      "eventSlug": "percy-jackson-and-the-olympians-season-3-renewal",
       "primaryKeyword": "Percy Jackson and the Olympians season 3",
       "primaryEntity": "Percy Jackson & the Olympians: The Lightning Thief",
       "entities": [
         "Percy Jackson and the Olympians (TV series)",
-        "Rick Riordan",
-        "Disney+"
+        "Disney+",
+        "Rick Riordan"
       ],
-      "angle": "Providing the latest information available regarding the upcoming third season of the popular Disney+ series.",
+      "angle": "Disney+'s 'Percy Jackson and the Olympians' has been renewed for a third season.",
       "tmdbType": "movie",
       "source": "rss:Deadline",
       "sources": [
@@ -305,12 +430,12 @@
           "outlet": "Deadline",
           "tier": 7,
           "url": "https://deadline.com/feature/percy-jackson-and-the-olympians-season-3-news-updates-1236495797/",
-          "ageMin": 126,
+          "ageMin": 156,
           "headline": "Everything We Know About ‘Percy Jackson And The Olympians’ Season 3 So Far",
           "summary": "Another season of Disney s television series adaptation of Rick Riordan s Percy Jackson and the Olympians has come and gone, but Season 3 is close at hand. The series received a very early Season 3 renewal in March 2025, and some very key players have been cast for the third installment. Read on for more details [ ]"
         }
       ],
-      "ageMin": 126,
+      "ageMin": 156,
       "_cand": {
         "key": "rss:everything-we-know-about-percy-jackson-and-the-olympians-sea",
         "popularity": 0,
@@ -347,63 +472,62 @@
       "tierClass": "B"
     },
     {
-      "id": "music-news-justin-bieber-everything-hallelujah-streaming-bump-world-cup",
-      "slug": "justin-bieber-s-weird-everything-hallelujah-song-gets-240-streaming-bu",
-      "title": "Justin Bieber s Weird Everything Hallelujah Song Gets 240% Streaming Bump After World Cup",
+      "id": "music-news-jimmy-buffett-posthumous-album",
+      "slug": "posthumous-jimmy-buffett-album-to-include-songs-that-have-never-been-o",
+      "title": "Posthumous Jimmy Buffett Album to Include Songs That Have Never Been Out, Says Coral Reefer Band",
       "contentType": "music-news",
       "formatTag": "music-news",
       "category": "music",
       "subcategory": "news",
-      "eventType": "other",
+      "eventType": "announcement",
       "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "justin-bieber-everything-hallelujah-streaming-bump-world-cup",
-      "primaryKeyword": "justin bieber everything hallelujah",
-      "primaryEntity": "Justin Bieber",
+      "eventSlug": "jimmy-buffett-posthumous-album",
+      "primaryKeyword": "Jimmy Buffett new album",
+      "primaryEntity": "Jimmy Buffett",
       "entities": [
-        "Everything Hallelujah"
+        "Coral Reefer Band"
       ],
-      "angle": "Justin Bieber's song 'Everything Hallelujah' experienced a significant streaming surge following the World Cup.",
+      "angle": "A posthumous album from the late Jimmy Buffett is set to feature unreleased songs.",
       "tmdbType": "movie",
-      "source": "rss:Rolling Stone",
+      "source": "rss:Billboard",
       "sources": [
         {
-          "outlet": "Rolling Stone",
+          "outlet": "Billboard",
           "tier": 7,
-          "url": "https://www.rollingstone.com/music/music-news/justin-bieber-world-cup-everything-hallelujah-streams-spike-1235596096/",
-          "ageMin": 38,
-          "headline": "Justin Bieber s Weird Everything Hallelujah Song Gets 240% Streaming Bump After World Cup",
-          "summary": "Some people thought the track didn't match the vibe of the championship game, but it saw a huge spike in listeners"
+          "url": "https://www.billboard.com/music/rock/posthumous-jimmy-buffett-album-coral-reefer-band-1236298497/",
+          "ageMin": 132,
+          "headline": "Posthumous Jimmy Buffett Album to Include Songs That Have Never Been Out, Says Coral Reefer Band",
+          "summary": "Mac McAnally also talks about the future of Shrimp Boat Sound Studio in Florida."
         }
       ],
-      "ageMin": 38,
+      "ageMin": 132,
       "_cand": {
-        "key": "rss:justin-bieber-s-weird-everything-hallelujah-song-gets-240-st",
+        "key": "rss:posthumous-jimmy-buffett-album-to-include-songs-that-have-ne",
         "popularity": 0,
         "kind": "rss-news"
       },
-      "breakoutVelocity": 0,
       "corroborationCount": 1,
       "verification": {
         "tier1Count": 1,
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Rolling Stone"
+          "Billboard"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Rolling Stone",
+        "attribution": "Billboard",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 59,
+      "priority": 55,
       "signals": {
-        "recency": 24,
+        "recency": 16,
         "corroboration": 12,
         "status": 18,
-        "type": 5,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
         "big": 0,
@@ -414,39 +538,39 @@
       "tierClass": "C"
     },
     {
-      "id": "news-myron-bolitar-series-chloe-fineman-casting",
-      "slug": "chloe-fineman-among-four-cast-in-myron-bolitar-series-at-netflix",
-      "title": "Chloe Fineman Among Four Cast in 'Myron Bolitar' Series at Netflix",
+      "id": "news-liza-colon-zayas-conviction-casting",
+      "slug": "liza-col-n-zayas-joins-hulu-s-david-shore-legal-drama-conviction",
+      "title": "Liza Colón-Zayas Joins Hulu's David Shore Legal Drama 'Conviction'",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "myron-bolitar-series-chloe-fineman-casting",
-      "primaryKeyword": "Myron Bolitar series",
-      "primaryEntity": "Myron Bolitar (TV series)",
+      "eventSlug": "liza-colon-zayas-conviction-casting",
+      "primaryKeyword": "conviction series",
+      "primaryEntity": "Conviction (TV series)",
       "entities": [
-        "Chloe Fineman",
-        "Netflix",
-        "SNL"
+        "Liza Colón-Zayas",
+        "David Shore",
+        "Hulu"
       ],
-      "angle": "Chloe Fineman secures a series regular role in the upcoming Netflix adaptation of Harlan Coben's 'Myron Bolitar' series.",
+      "angle": "Emmy-winner Liza Colón-Zayas joins David Shore's upcoming Hulu legal drama series 'Conviction'.",
       "tmdbType": "movie",
-      "source": "rss:Variety",
+      "source": "rss:Deadline",
       "sources": [
         {
-          "outlet": "Variety",
+          "outlet": "Deadline",
           "tier": 7,
-          "url": "https://variety.com/2026/tv/news/chloe-fineman-myron-bolitar-series-netflix-1236816733/",
-          "ageMin": 224,
-          "headline": "Chloe Fineman Among Four Cast in Myron Bolitar Series at Netflix",
-          "summary": "Chloe Fineman has already found her first post- SNL gig, with a series regular role in the Myron Bolitar series currently in the works at Netflix. Fineman is one of three actors joining the show as a series regular, alongside both Jabari Banks ( Bel Air ) and Jamie McShane ( Task, Wednesday ). In addition, Ben McKenzie ( Everyone is [ ]"
+          "url": "https://deadline.com/2026/07/liza-colon-zayas-hulu-david-shore-series-conviction-1236998671/",
+          "ageMin": 182,
+          "headline": "Liza Colon-Zayas Joins Hulu s David Shore Legal Drama Conviction",
+          "summary": "EXCLUSIVE: Liza Colón-Zayas, who is coming off her Emmy-winning gig on FX s The Bear, has joined the cast of David Shore s upcoming Hulu drama series Conviction. She joins the previously announced Elisabeth Moss, who leads the series and executive produces, as well as Jimmi Simpson, William Jackson Harper, Kevin McKidd, Sebastian De Souza, Adam Godley, [ ]"
         }
       ],
-      "ageMin": 224,
+      "ageMin": 182,
       "_cand": {
-        "key": "rss:chloe-fineman-among-four-cast-in-myron-bolitar-series-at-net",
+        "key": "rss:liza-colon-zayas-joins-hulu-s-david-shore-legal-drama-convic",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -456,11 +580,11 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Variety"
+          "Deadline"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Variety",
+        "attribution": "Deadline",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -481,39 +605,104 @@
       "tierClass": "B"
     },
     {
-      "id": "news-ai-other",
-      "slug": "have-artists-reached-their-breaking-point-with-ai",
-      "title": "Have Artists Reached Their Breaking Point With AI?",
+      "id": "news-harlan-coben-netflix-thriller-success",
+      "slug": "netflix-s-new-8-part-harlan-coben-series-is-officially-one-of-the-bigg",
+      "title": "Netflix's New 8-Part Harlan Coben Series Is Officially One of the Biggest Thrillers on Streaming",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "harlan-coben-netflix-thriller-success",
+      "primaryKeyword": "harlan coben netflix series",
+      "primaryEntity": "Harlan Coben's Shelter",
+      "entities": [
+        "Harlan Coben",
+        "Netflix"
+      ],
+      "angle": "A new 8-part Harlan Coben series on Netflix is performing exceptionally well.",
+      "tmdbType": "movie",
+      "source": "gnews:MovieWeb",
+      "sources": [
+        {
+          "outlet": "MovieWeb",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQUFVrb2NLRXgzVVhMa0d3VVNzVW9SV0dxRmM2VVhGbXJBR2E4WFM5SUFobXJBNTVwcE9GejV4ZVJKZEh2Q3NUWlYwMG5QcVVJaHdBVnpSUzBQWFlCWXJ1MERRQVlUZlZybHFqYU1QM0gxcU9kTHpBenlzZktDS1ZLSHVsYmFHLVVBemc?oc=5",
+          "ageMin": 121,
+          "headline": "Netflix's New 8-Part Harlan Coben Series Is Officially One of the Biggest Thrillers on Streaming - MovieWeb",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiigFBVV95cUxQUFVrb2NLRXgzVVhMa0d3VVNzVW9SV0dxRmM2VVhGbXJBR2E4WFM5SUFobXJBNTVwcE9GejV4ZVJKZEh2Q3NUWlYwMG5QcVVJaHdBVnpSUzBQWFlCWXJ1MERRQVlUZlZybHFqYU1QM0gxcU9kTHpBenlzZktDS1ZLSHVsYmFHLVVBemc?oc=5\" target=\"_blank\" Netflix's New 8-Part Harlan Coben Series "
+        }
+      ],
+      "ageMin": 121,
+      "_cand": {
+        "key": "rss:netflix-s-new-8-part-harlan-coben-series-is-officially-one-o",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "MovieWeb"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "MovieWeb",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 69,
+      "signals": {
+        "recency": 16,
+        "corroboration": 8,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-adam-driver-turns-down-marvel-offers",
+      "slug": "adam-driver-s-marvel-rejection-becomes-studio-tradition",
+      "title": "Adam Driver's Marvel Rejection Becomes Studio Tradition",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
-      "eventType": "other",
+      "eventType": "announcement",
       "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "ai-other",
-      "primaryKeyword": "AI in music industry",
-      "primaryEntity": "Ai Kayano",
+      "eventSlug": "adam-driver-turns-down-marvel-offers",
+      "primaryKeyword": "Adam Driver Marvel",
+      "primaryEntity": "Adam Driver",
       "entities": [
-        "AI",
-        "Rolling Stone"
+        "Marvel Studios",
+        "Kevin Feige"
       ],
-      "angle": "Exploring the growing concerns and pushback from artists regarding the rapid advancement of AI in content creation and training models.",
+      "angle": "Adam Driver has a running tradition of turning down Marvel movie offers, as revealed by Marvel Studios president Kevin Feige.",
       "tmdbType": "movie",
-      "source": "rss:Rolling Stone",
+      "source": "rss:Variety",
       "sources": [
         {
-          "outlet": "Rolling Stone",
+          "outlet": "Variety",
           "tier": 7,
-          "url": "https://www.rollingstone.com/music/music-features/ai-artists-pushback-sza-doja-cat-1235585855/",
-          "ageMin": 106,
-          "headline": "Have Artists Reached Their Breaking Point With AI?",
-          "summary": "With AI content and training models developing at a rapid pace, artists and streaming services are pushing back against the technology"
+          "url": "https://variety.com/2026/film/news/adam-driver-turns-down-marvel-movies-1236816747/",
+          "ageMin": 23,
+          "headline": "Adam Driver Turns Down So Many Marvel Movie Offers That It s Become a Tradition at the Studio to Zoom With Him and Then He Passes",
+          "summary": "Marvel Studios president Kevin Feige revealed on the Happy Sad Confused podcast that Adam Driver has repeatedly turned down offers to join the Marvel Cinematic Universe over the years. “It’s no secret we’d like to [work with Adam],” Feige replied. But it’s a tradition to Zoom with him and then he passes. That’s a long-lived [ ]"
         }
       ],
-      "ageMin": 106,
+      "ageMin": 23,
       "_cand": {
-        "key": "rss:have-artists-reached-their-breaking-point-with-ai-",
+        "key": "rss:adam-driver-turns-down-so-many-marvel-movie-offers-that-it-s",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -523,26 +712,92 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Rolling Stone"
+          "Variety"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Rolling Stone",
+        "attribution": "Variety",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 51,
+      "priority": 63,
       "signals": {
-        "recency": 16,
+        "recency": 24,
         "corroboration": 12,
         "status": 18,
-        "type": 5,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
         "big": 0,
         "trending": 0,
         "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-celebrity-splits-2026",
+      "slug": "celebrity-splits-of-2026-jessie-j-chanan-colman-and-more-stars-who-cal",
+      "title": "Celebrity Splits of 2026: Jessie J, Chanan Colman and More Stars Who Called It Quits",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "breakup",
+      "sensitivity": "normal",
+      "eventSlug": "celebrity-splits-2026",
+      "primaryKeyword": "Jessie J breakup",
+      "primaryEntity": "Jessie J",
+      "entities": [
+        "Chanan Colman",
+        "Us Weekly"
+      ],
+      "angle": "A roundup of celebrity breakups in 2026, including Jessie J and Chanan Colman.",
+      "tmdbType": "movie",
+      "source": "gnews:Us Weekly",
+      "sources": [
+        {
+          "outlet": "Us Weekly",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPeEg1REU2QkVnLTVmUERlckVvNWVHNjhnUmFjelBnbkdsalR5STVvQ29mM3dkcmVKRUxpQmItREREQ2sycm04REx6SjhrS1ktZHNYRXh0cTIwazVSWmduVzg0a3lhV0FHZVBrTjFXQnFUbkNTV09qUEhxU0pJamE0ZmppTFNsbkV6TmxITDg1Yk1qd25TZmMxTlFzM2FSMXFRUUtfSV9tY1JzSl9RNUZ5Ti1OZ0c?oc=5",
+          "ageMin": 150,
+          "headline": "Celebrity Splits of 2026: Jessie J, Chanan Colman and More Stars Who Called It Quits - Us Weekly",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxPeEg1REU2QkVnLTVmUERlckVvNWVHNjhnUmFjelBnbkdsalR5STVvQ29mM3dkcmVKRUxpQmItREREQ2sycm04REx6SjhrS1ktZHNYRXh0cTIwazVSWmduVzg0a3lhV0FHZVBrTjFXQnFUbkNTV09qUEhxU0pJamE0ZmppTFNsbkV6TmxITDg1Yk1qd25TZmMxTlFzM2FSMXFRUUtfSV9tY1JzSl9RNUZ5Ti1OZ0c?oc=5\" t"
+        }
+      ],
+      "ageMin": 150,
+      "_cand": {
+        "key": "rss:celebrity-splits-of-2026-jessie-j-chanan-colman-and-more-sta",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "Us Weekly"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "Us Weekly",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 54,
+      "signals": {
+        "recency": 16,
+        "corroboration": 8,
+        "status": 18,
+        "type": 8,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 4,
         "softTv": 0
       },
       "tierClass": "C"
@@ -563,9 +818,9 @@
       "primaryEntity": "JAŸ-Z",
       "entities": [
         "Jay-Z",
-        "Adam Blackstone"
+        "Yankee Stadium"
       ],
-      "angle": "A look into the intricate musical arrangements and last-minute adjustments behind Jay-Z's recent performances at Yankee Stadium.",
+      "angle": "Details emerge on the intricate musical arrangements and last-minute adjustments for Jay-Z's Yankee Stadium concerts.",
       "tmdbType": "movie",
       "source": "rss:Variety",
       "sources": [
@@ -573,12 +828,12 @@
           "outlet": "Variety",
           "tier": 7,
           "url": "https://variety.com/2026/music/news/jay-z-yankee-stadium-music-adam-blackstone-young-guru-1236816803/",
-          "ageMin": 107,
+          "ageMin": 136,
           "headline": "Jay-Z s Yankee Stadium Shows: How the Music Came Together, From Meticulous Arrangements to Last-Minute Tweaks",
           "summary": "It started with a text: He said, It s time, so that s all I needed to hear, says Adam Blackstone, Jay-Z s bassist and longtime collaborator. He s discussing the first word he received about the string of shows the legendary rapper would be staging throughout the year, starting with a grand return to the stage at Philadelphia s [ ]"
         }
       ],
-      "ageMin": 107,
+      "ageMin": 136,
       "_cand": {
         "key": "rss:jay-z-s-yankee-stadium-shows-how-the-music-came-together-fro",
         "popularity": 0,
@@ -610,6 +865,71 @@
         "big": 0,
         "trending": 0,
         "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-cooper-flagg-celebrity-family-feud",
+      "slug": "cooper-flagg-trades-the-nba-court-for-celebrity-family-feud-on-abc-jul",
+      "title": "Cooper Flagg Trades The NBA Court For Celebrity Family Feud On ABC July 23",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "cooper-flagg-celebrity-family-feud",
+      "primaryKeyword": "Cooper Flagg",
+      "primaryEntity": "Cooper Flagg",
+      "entities": [
+        "Celebrity Family Feud"
+      ],
+      "angle": "Basketball player Cooper Flagg is set to appear on the game show Celebrity Family Feud.",
+      "tmdbType": "movie",
+      "source": "gnews:92.9 The Ticket",
+      "sources": [
+        {
+          "outlet": "92.9 The Ticket",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1NOWM0QUFrVEJta2VGNmxjLXNYc2x5VUQ5anVQMnQtMGVZcDFnakEtU2xLQ2tKdmxBel92T193LS14NVk0blVlei1GS3F1LWVvYkpySGVDb1VLUHVLSkhPZk9uUG9Cd1VyY2cwTw?oc=5",
+          "ageMin": 92,
+          "headline": "Cooper Flagg Trades The NBA Court For Celebrity Family Feud On ABC July 23 - 92.9 The Ticket",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMibEFVX3lxTE1NOWM0QUFrVEJta2VGNmxjLXNYc2x5VUQ5anVQMnQtMGVZcDFnakEtU2xLQ2tKdmxBel92T193LS14NVk0blVlei1GS3F1LWVvYkpySGVDb1VLUHVLSkhPZk9uUG9Cd1VyY2cwTw?oc=5\" target=\"_blank\" Cooper Flagg Trades The NBA Court For Celebrity Family Feud On ABC July 23 /a nbsp"
+        }
+      ],
+      "ageMin": 92,
+      "_cand": {
+        "key": "rss:cooper-flagg-trades-the-nba-court-for-celebrity-family-feud-",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "92.9 The Ticket"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "92.9 The Ticket",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 51,
+      "signals": {
+        "recency": 16,
+        "corroboration": 8,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 4,
         "softTv": 0
       },
       "tierClass": "C"
