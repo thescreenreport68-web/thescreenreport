@@ -1,0 +1,139 @@
+{
+  "ts": "2026-07-20T08:00:57.526Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "blake-lively-reportedly-gets-a-second-chance-ahead-of-swift-kelce-wedding",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [
+        "faq-cleaned:dropped"
+      ],
+      "headline": [
+        "metaTitle",
+        "metaDescription",
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 1,
+      "surgicalFixes": 0
+    }
+  ],
+  "topics": 1,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 0,
+  "costUSD": 0.020548,
+  "costPerPublished": 0.020548,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 9,
+      "in": 15876,
+      "out": 2127,
+      "usd": 0.010080300000000002
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 995,
+      "out": 1546,
+      "usd": 0.0003948042
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 6,
+      "in": 17649,
+      "out": 6200,
+      "usd": 0.0082495915
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 14,
+      "in": 9880,
+      "out": 2089,
+      "usd": 0.0018236000000000005
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2398,
+      "out": 228,
+      "usd": 0.0012894,
+      "ms": 1528
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 995,
+      "out": 1546,
+      "usd": 0.00036783,
+      "ms": 21142
+    },
+    "writer": {
+      "calls": 5,
+      "errors": 0,
+      "in": 16984,
+      "out": 5917,
+      "usd": 0.005918100000000001,
+      "ms": 274399
+    },
+    "verify": {
+      "calls": 9,
+      "errors": 2,
+      "in": 13478,
+      "out": 1899,
+      "usd": 0.0087909,
+      "ms": 23214
+    },
+    "judge": {
+      "calls": 2,
+      "errors": 0,
+      "in": 2849,
+      "out": 531,
+      "usd": 0.0004973,
+      "ms": 2868
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 665,
+      "out": 283,
+      "usd": 0.00024917,
+      "ms": 15822
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 356,
+      "out": 109,
+      "usd": 0.0000792,
+      "ms": 906
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 183,
+      "out": 54,
+      "usd": 0.00003990000000000001,
+      "ms": 449
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2136,
+      "out": 93,
+      "usd": 0.0002508,
+      "ms": 1418
+    },
+    "linker": {
+      "calls": 8,
+      "errors": 0,
+      "in": 2342,
+      "out": 402,
+      "usd": 0.00039500000000000006,
+      "ms": 4335
+    }
+  }
+}
