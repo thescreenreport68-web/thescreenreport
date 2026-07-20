@@ -1000,20 +1000,20 @@
    "key": "the-doorman-netflix-top10-w2026-07-12|NETFLIX-TOP10",
    "eventSlug": "the-doorman-netflix-top10-w2026-07-12",
    "form": "NETFLIX-TOP10",
-   "reason": "platform: names max not in confirmed providers",
-   "tries": 3,
-   "at": "2026-07-17T22:07:09.173Z",
-   "dead": true,
+   "reason": "words 129 < 180 (owner-set ~200-word minimum)",
+   "tries": 2,
+   "at": "2026-07-20T23:07:00.832Z",
+   "dead": false,
    "expiresAt": "2026-07-20T22:07:09.173Z"
   },
   {
    "key": "little-brother-netflix-top10-w2026-07-12|NETFLIX-TOP10",
    "eventSlug": "little-brother-netflix-top10-w2026-07-12",
    "form": "NETFLIX-TOP10",
-   "reason": "words 174 < 180 (owner-set ~200-word minimum) | soft-floor humanVoice 3 < 5",
-   "tries": 3,
-   "at": "2026-07-17T22:08:49.143Z",
-   "dead": true,
+   "reason": "words 95 < 180 (owner-set ~200-word minimum) | soft-floor humanVoice 4 < 5",
+   "tries": 2,
+   "at": "2026-07-20T23:09:08.099Z",
+   "dead": false,
    "expiresAt": "2026-07-20T22:08:49.143Z"
   },
   {
@@ -1652,21 +1652,21 @@
    "key": "the-odyssey-bo-update-100m|BO-UPDATE",
    "eventSlug": "the-odyssey-bo-update-100m",
    "form": "BO-UPDATE",
-   "reason": "3 unverified claim(s) cut, unrecovered",
-   "tries": 32,
-   "at": "2026-07-20T22:33:12.950Z",
+   "reason": "consistency: metaTitle: headlines domestic while the title headlines other — the SERP promise must match the page",
+   "tries": 33,
+   "at": "2026-07-20T23:03:17.858Z",
    "dead": true,
-   "expiresAt": "2026-07-23T22:33:12.950Z"
+   "expiresAt": "2026-07-23T23:03:17.858Z"
   },
   {
    "key": "star-wars-the-mandalorian-and-grogu-bo-update-d59|BO-UPDATE",
    "eventSlug": "star-wars-the-mandalorian-and-grogu-bo-update-d59",
    "form": "BO-UPDATE",
-   "reason": "fidelity: 9 unsupported figures/claims — draft-level failure",
-   "tries": 13,
-   "at": "2026-07-20T22:35:03.109Z",
+   "reason": "consistency: title: \"$177.5\" is not a canonical figure for this film | title: \"$177.5\" contradicts the canonical domestic figure ($177,534,904) | metaTitle: headlines domestic while the title headlines dailyGross/other — the SERP promise must match the page",
+   "tries": 14,
+   "at": "2026-07-20T23:05:08.781Z",
    "dead": true,
-   "expiresAt": "2026-07-23T22:35:03.109Z"
+   "expiresAt": "2026-07-23T23:05:08.781Z"
   },
   {
    "key": "project-hail-mary-bo-update-d128|BO-UPDATE",
@@ -1695,14 +1695,14 @@
    "at": "2026-07-20T20:08:44.753Z"
   }
  ],
- "zeroStreak": 14,
+ "zeroStreak": 15,
  "daySpend": {
   "laDay": "2026-07-20",
-  "usd": 0.47382
+  "usd": 0.51503
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1784586695557
+  "lastMs": 1784588490840
  },
  "lastAuditDay": "2026-07-20",
  "attempts": {
@@ -1721,7 +1721,9 @@
    "wwe unreal": 1,
    "kung fu soccer": 1,
    "enola holmes 3": 1,
-   "voicemails for isabelle": 1
+   "voicemails for isabelle": 1,
+   "the doorman": 1,
+   "little brother": 1
   }
  }
 }
