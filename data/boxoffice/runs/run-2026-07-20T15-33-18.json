@@ -1,0 +1,147 @@
+{
+ "runId": "run-2026-07-20T15-33-18",
+ "mode": "live",
+ "startedAt": "2026-07-20T15:33:18.568Z",
+ "films": 43,
+ "published": [
+  {
+   "tag": "jackass-best-and-last-bo-update×BO-UPDATE",
+   "slug": "jackass-best-and-last-box-office-day-24-adds-70-000-as-domestic-total-hits-18",
+   "path": "/home/runner/work/thescreenreport/thescreenreport/content/articles/jackass-best-and-last-box-office-day-24-adds-70-000-as-domestic-total-hits-18.md",
+   "score": 80
+  },
+  {
+   "tag": "gail-daughtry-and-the-celebrity-sex-pass-bo-update×BO-UPDATE",
+   "slug": "gail-daughtry-and-the-celebrity-sex-pass-box-office-day-10-adds-29-000-as",
+   "path": "/home/runner/work/thescreenreport/thescreenreport/content/articles/gail-daughtry-and-the-celebrity-sex-pass-box-office-day-10-adds-29-000-as.md",
+   "score": 80
+  }
+ ],
+ "held": [
+  {
+   "tag": "the-odyssey-bo-update×BO-UPDATE",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "score": 50
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "moana-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "toy-story-5-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "minions-monsters-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "evil-dead-burn-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "the-invite-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "young-washington-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "obsession-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "supergirl-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "disclosure-day-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "backrooms-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "scary-movie-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  }
+ ],
+ "blocked": [],
+ "paced": {
+  "tokens": 3.43,
+  "behind": false,
+  "expected": 5.46,
+  "allow": 2
+ },
+ "zeroStreak": 0,
+ "daySpend": {
+  "laDay": "2026-07-20",
+  "usd": 0.18817
+ },
+ "faults": {
+  "count": 2,
+  "bySeverity": {
+   "critical": 1,
+   "warn": 1
+  },
+  "faults": [
+   {
+    "stage": "model:finder",
+    "message": "all models failed (amazon/nova-micro-v1, google/gemini-2.5-flash-lite): Expected ',' or ']' after array element in JSON at position 2547",
+    "severity": "critical",
+    "at": "2026-07-20T15:33:35.021Z"
+   },
+   {
+    "stage": "finder:llm",
+    "message": "finder classification failed — falling back to deterministic picks: Expected ',' or ']' after array element in JSON at position 2547",
+    "severity": "warn",
+    "at": "2026-07-20T15:33:35.022Z"
+   }
+  ]
+ },
+ "degraded": true,
+ "finishedAt": "2026-07-20T15:40:29.602Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 2,
+    "errors": 2,
+    "in": 0,
+    "out": 0,
+    "usd": 0,
+    "ms": 0
+   },
+   "gatherer": {
+    "calls": 4,
+    "errors": 1,
+    "in": 9282,
+    "out": 2516,
+    "usd": 0.0018,
+    "ms": 20056
+   },
+   "synthesizer": {
+    "calls": 4,
+    "errors": 1,
+    "in": 2116,
+    "out": 1537,
+    "usd": 0.00044,
+    "ms": 27066
+   },
+   "writerChart": {
+    "calls": 3,
+    "errors": 0,
+    "in": 5792,
+    "out": 3120,
+    "usd": 0.0024,
+    "ms": 45225
+   }
+  },
+  "totalUsd": 0.00464
+ },
+ "openrouterTotalUsd": 0.006
+}
