@@ -1178,9 +1178,11 @@
    "key": "silo-trending-tv|TRENDING-TV",
    "eventSlug": "silo-trending-tv",
    "form": "TRENDING-TV",
-   "reason": "1 unverified claim(s) cut, unrecovered",
-   "tries": 2,
-   "at": "2026-07-19T21:10:14.071Z"
+   "reason": "words 150 < 180 (owner-set ~200-word minimum) | soft-floor engagement 3 < 5",
+   "tries": 3,
+   "at": "2026-07-20T01:40:17.085Z",
+   "dead": true,
+   "expiresAt": "2026-07-23T01:40:17.085Z"
   },
   {
    "key": "off-campus-trending-tv|TRENDING-TV",
@@ -1301,20 +1303,20 @@
    "eventSlug": "gail-daughtry-and-the-celebrity-sex-pass-bo-update-d8",
    "form": "BO-UPDATE",
    "reason": "consistency: title: \"$1.2\" is not a canonical figure for this film | title: \"$1.2\" contradicts the canonical domestic figure ($1,242,603)",
-   "tries": 33,
-   "at": "2026-07-20T00:02:18.036Z",
+   "tries": 34,
+   "at": "2026-07-20T01:32:54.546Z",
    "dead": true,
-   "expiresAt": "2026-07-23T00:02:18.036Z"
+   "expiresAt": "2026-07-23T01:32:54.546Z"
   },
   {
    "key": "star-wars-the-mandalorian-and-grogu-bo-update-d57|BO-UPDATE",
    "eventSlug": "star-wars-the-mandalorian-and-grogu-bo-update-d57",
    "form": "BO-UPDATE",
-   "reason": "fidelity: 12 unsupported figures/claims — draft-level failure | template-heading: \"## What Does the Box Office Trajectory Mean?\" — rewrite story-specific",
-   "tries": 33,
-   "at": "2026-07-20T00:03:22.158Z",
+   "reason": "consistency: title: \"$177.5\" is not a canonical figure for this film | title: \"$177.5\" contradicts the canonical domestic figure ($177,455,904) | metaTitle: headlines domestic while the title headlines dailyGross/other — the SERP promise must match the page",
+   "tries": 34,
+   "at": "2026-07-20T01:35:24.519Z",
    "dead": true,
-   "expiresAt": "2026-07-23T00:03:22.158Z"
+   "expiresAt": "2026-07-23T01:35:24.519Z"
   },
   {
    "key": "the-super-mario-galaxy-movie-ev-milestone-d0|BO-MILESTONE",
@@ -1370,9 +1372,11 @@
    "key": "they-will-kill-you-now-streaming|NOW-STREAMING",
    "eventSlug": "they-will-kill-you-now-streaming",
    "form": "NOW-STREAMING",
-   "reason": "soft-floor engagement 4 < 5",
-   "tries": 2,
-   "at": "2026-07-19T20:43:08.218Z"
+   "reason": "soft-floor engagement 3 < 5 | soft-floor humanVoice 4 < 5",
+   "tries": 3,
+   "at": "2026-07-20T01:37:35.395Z",
+   "dead": true,
+   "expiresAt": "2026-07-23T01:37:35.395Z"
   },
   {
    "key": "house-of-the-dragon-trending-tv|TRENDING-TV",
@@ -1383,14 +1387,14 @@
    "at": "2026-07-20T00:05:16.492Z"
   }
  ],
- "zeroStreak": 16,
+ "zeroStreak": 17,
  "daySpend": {
   "laDay": "2026-07-19",
-  "usd": 0.87562
+  "usd": 0.9242
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1784505655828
+  "lastMs": 1784511055465
  },
  "lastAuditDay": "2026-07-19",
  "attempts": {
@@ -1415,9 +1419,9 @@
    "tom clancy's jack ryan: ghost war": 3,
    "the devil wears prada 2": 2,
    "heartstopper forever": 1,
-   "they will kill you": 2,
+   "they will kill you": 3,
    "outcome": 3,
-   "silo": 1,
+   "silo": 2,
    "house of the dragon": 2,
    "ride or die": 1,
    "lucky": 1
