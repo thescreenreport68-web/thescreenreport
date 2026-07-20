@@ -1593,36 +1593,46 @@
    "eventSlug": "the-odyssey-bo-update-100m",
    "form": "BO-UPDATE",
    "reason": "1 unverified claim(s) cut, unrecovered",
-   "tries": 12,
-   "at": "2026-07-20T13:34:01.176Z",
+   "tries": 13,
+   "at": "2026-07-20T14:02:59.897Z",
    "dead": true,
-   "expiresAt": "2026-07-23T13:34:01.176Z"
+   "expiresAt": "2026-07-23T14:02:59.897Z"
   },
   {
    "key": "scary-movie-bo-update-d45|BO-UPDATE",
    "eventSlug": "scary-movie-bo-update-d45",
    "form": "BO-UPDATE",
-   "reason": "1 unverified claim(s) cut, unrecovered",
-   "tries": 2,
-   "at": "2026-07-20T13:38:10.046Z"
+   "reason": "consistency: dek: \"$100 million\" is not a canonical figure for this film",
+   "tries": 3,
+   "at": "2026-07-20T14:04:27.788Z",
+   "dead": true,
+   "expiresAt": "2026-07-23T14:04:27.788Z"
   },
   {
    "key": "jackass-best-and-last-bo-update-d24|BO-UPDATE",
    "eventSlug": "jackass-best-and-last-bo-update-d24",
    "form": "BO-UPDATE",
    "reason": "1 unverified claim(s) cut, unrecovered",
+   "tries": 2,
+   "at": "2026-07-20T14:05:36.169Z"
+  },
+  {
+   "key": "gail-daughtry-and-the-celebrity-sex-pass-bo-update-d10|BO-UPDATE",
+   "eventSlug": "gail-daughtry-and-the-celebrity-sex-pass-bo-update-d10",
+   "form": "BO-UPDATE",
+   "reason": "words 149 < 180 (owner-set ~200-word minimum)",
    "tries": 1,
-   "at": "2026-07-20T13:40:07.625Z"
+   "at": "2026-07-20T14:07:27.933Z"
   }
  ],
- "zeroStreak": 0,
+ "zeroStreak": 1,
  "daySpend": {
   "laDay": "2026-07-20",
-  "usd": 0.15523
+  "usd": 0.16138
  },
  "pace": {
-  "tokens": 1.7364493317460319,
-  "lastMs": 1784554298654
+  "tokens": 2.643766348412699,
+  "lastMs": 1784556093347
  },
  "lastAuditDay": "2026-07-20",
  "attempts": {
