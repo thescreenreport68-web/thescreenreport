@@ -1,108 +1,38 @@
 {
-  "runId": "run-2026-07-20T03-07-06",
-  "builtAt": "2026-07-20T03:08:24.263Z",
-  "count": 16,
+  "runId": "run-2026-07-20T04-33-45",
+  "builtAt": "2026-07-20T04:35:00.249Z",
+  "count": 21,
   "topics": [
     {
-      "id": "news-john-leguizamo-the-odyssey-intense-role",
-      "slug": "john-leguizamo-on-the-odyssey-it-was-so-intense-for-me",
-      "title": "John Leguizamo on 'The Odyssey': 'It Was So Intense for Me'",
+      "id": "news-scary-movie-streaming-release",
+      "slug": "scary-movie-arrives-on-streaming-this-week",
+      "title": "‘Scary Movie’ Arrives On Streaming This Week",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
-      "eventType": "casting",
+      "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "john-leguizamo-the-odyssey-intense-role",
-      "primaryKeyword": "john leguizamo the odyssey",
-      "primaryEntity": "John Leguizamo",
-      "entities": [
-        "Christopher Nolan",
-        "The Odyssey"
-      ],
-      "angle": "John Leguizamo opens up about the emotional depth required for his role in Christopher Nolan's 'The Odyssey'.",
+      "eventSlug": "scary-movie-streaming-release",
+      "primaryKeyword": "scary movie streaming",
+      "primaryEntity": "Scary Movie",
+      "entities": [],
+      "angle": "'Scary Movie' is now available to stream",
       "tmdbType": "movie",
-      "source": "rss:THR",
+      "source": "gnews:Forbes",
       "sources": [
         {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-features/john-leguizamo-the-odyssey-eumaeus-chris-nolan-interview-1236651694/",
-          "ageMin": 569,
-          "headline": "John Leguizamo Has Never Been as Vulnerable as in The Odyssey : “It Was So Intense for Me”",
-          "summary": "\"Working with Chris Nolan...you feel really seen,\" the actor behind Eumaeus tells The Hollywood Reporter in a wide-ranging conversation. \"I was able to tap into these really difficult, painful emotions from the depth of my soul.\""
-        }
-      ],
-      "ageMin": 569,
-      "_cand": {
-        "key": "rss:john-leguizamo-has-never-been-as-vulnerable-as-in-the-odysse",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 102,
-      "signals": {
-        "recency": 4,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0,
-        "radar": 30
-      },
-      "radarKind": "movie-in-theaters",
-      "tierClass": "A"
-    },
-    {
-      "id": "trailer-a-quiet-place-meets-arachnophobia-survival-thriller-trailer",
-      "slug": "first-trailer-drops-for-new-survival-thriller-blending-a-quiet-place-a",
-      "title": "First Trailer Drops for New Survival Thriller Blending 'A Quiet Place' and 'Arachnophobia'",
-      "contentType": "trailer",
-      "formatTag": "trailer",
-      "category": "movies",
-      "subcategory": "trailers",
-      "eventType": "trailer",
-      "sensitivity": "normal",
-      "eventSlug": "a-quiet-place-meets-arachnophobia-survival-thriller-trailer",
-      "primaryKeyword": "new survival thriller trailer",
-      "primaryEntity": "A Quiet Place",
-      "entities": [
-        "Arachnophobia"
-      ],
-      "angle": "First trailer released for a new survival thriller that blends elements of 'A Quiet Place' and 'Arachnophobia'.",
-      "tmdbType": "movie",
-      "source": "gnews:Collider",
-      "sources": [
-        {
-          "outlet": "Collider",
+          "outlet": "Forbes",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9tQjE3M1Q5aEp0anVuZ3o2M1FpQVd0Ynp4X1MyZXRRVWxHY3lrT1NpeXZuUUQ0OXN2MkdwMXY3N0ZwZmlKQlIzbWtOMmI2S3g3aTZwdzQ3T1IwTzVneC1PeC1CdmJiM0pTYkhpYlI5M3RqaUU?oc=5",
-          "ageMin": 172,
-          "headline": "‘A Quiet Place’ Meets ‘Arachnophobia’ in First Trailer for Terrifying New Survival Thriller - Collider",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMic0FVX3lxTE9tQjE3M1Q5aEp0anVuZ3o2M1FpQVd0Ynp4X1MyZXRRVWxHY3lrT1NpeXZuUUQ0OXN2MkdwMXY3N0ZwZmlKQlIzbWtOMmI2S3g3aTZwdzQ3T1IwTzVneC1PeC1CdmJiM0pTYkhpYlI5M3RqaUU?oc=5\" target=\"_blank\" ‘A Quiet Place’ Meets ‘Arachnophobia’ in First Trailer for Terrifying New"
+          "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPVmw4NkxyMUNnaTV4amR1cTBpV2REUUZGQ1VVUGg4UTdJU2FrRk1UbWJJYURJSExJMGZDNFJyYkFRbkxPUVFlRm45dXgweWJPcDI4TWh5cnN3aWlVbVR5YU5wQUxfQ2NvdXpuMnladTI2akFVSGJmNWgxa1V2TVVhY0daMVhISk40NGRCLXdZbG5ZaUFCNmNYUHdWeTZ2Sk50eUlzVnZfeVktMVNCUF9oMUJOcEktZnp2WDZmdWJ4NWc4YWhmTzVNT1RIVGVVaWItM2c?oc=5",
+          "ageMin": 8,
+          "headline": "‘Scary Movie’ Arrives On Streaming This Week - Forbes",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMi0gFBVV95cUxPVmw4NkxyMUNnaTV4amR1cTBpV2REUUZGQ1VVUGg4UTdJU2FrRk1UbWJJYURJSExJMGZDNFJyYkFRbkxPUVFlRm45dXgweWJPcDI4TWh5cnN3aWlVbVR5YU5wQUxfQ2NvdXpuMnladTI2akFVSGJmNWgxa1V2TVVhY0daMVhISk40NGRCLXdZbG5ZaUFCNmNYUHdWeTZ2Sk50eUlzVnZfeVktMVNCUF9oMUJOcEktZnp2WDZ"
         }
       ],
-      "ageMin": 172,
+      "ageMin": 8,
       "_cand": {
-        "key": "rss:-a-quiet-place-meets-arachnophobia-in-first-trailer-for-terr",
+        "key": "rss:-scary-movie-arrives-on-streaming-this-week-forbes",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -112,24 +42,91 @@
         "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "Collider"
+          "Forbes"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "Collider",
+        "attribution": "Forbes",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 81,
+      "priority": 99,
       "signals": {
-        "recency": 16,
+        "recency": 30,
         "corroboration": 8,
         "status": 18,
-        "type": 15,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
         "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "radar": 10
+      },
+      "radarKind": "movie-trending",
+      "tierClass": "A"
+    },
+    {
+      "id": "news-star-wars-female-luke-skywalker-unveiled",
+      "slug": "star-wars-officially-unveils-its-female-luke-skywalker-photos",
+      "title": "Star Wars Officially Unveils Its Female Luke Skywalker (Photos)",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "star-wars-female-luke-skywalker-unveiled",
+      "primaryKeyword": "star wars female luke skywalker",
+      "primaryEntity": "Star Wars",
+      "entities": [
+        "Luke Skywalker"
+      ],
+      "angle": "Star Wars officially reveals the actress playing a female version of Luke Skywalker",
+      "tmdbType": "movie",
+      "source": "gnews:The Direct",
+      "sources": [
+        {
+          "outlet": "The Direct",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBJdnh1VXZjdHMyUV9GRmVLcXBadGsxYmdJTlI0MFVTd0hkaFA0Ull0U1llVmlmUUtWVTMyUE5xU1pFVEd6SmZsaFhZODB1LXBlS0F2QVU0NTljUnBqRkM0dXFoWm1tMlk4TVN2MzZ3?oc=5",
+          "ageMin": 27,
+          "headline": "Star Wars Officially Unveils Its Female Luke Skywalker (Photos) - The Direct",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMibkFVX3lxTFBJdnh1VXZjdHMyUV9GRmVLcXBadGsxYmdJTlI0MFVTd0hkaFA0Ull0U1llVmlmUUtWVTMyUE5xU1pFVEd6SmZsaFhZODB1LXBlS0F2QVU0NTljUnBqRkM0dXFoWm1tMlk4TVN2MzZ3?oc=5\" target=\"_blank\" Star Wars Officially Unveils Its Female Luke Skywalker (Photos) /a nbsp; nbsp; f"
+        }
+      ],
+      "ageMin": 27,
+      "_cand": {
+        "key": "rss:star-wars-officially-unveils-its-female-luke-skywalker-photo",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "The Direct"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "The Direct",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 82,
+      "signals": {
+        "recency": 24,
+        "corroboration": 8,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
         "trending": 0,
         "spice": 0,
         "softTv": 0
@@ -138,8 +135,8 @@
     },
     {
       "id": "news-princess-diaries-3-script-breakthrough",
-      "slug": "anne-hathaway-says-princess-diaries-3-had-a-story-breakthrough-after-h",
-      "title": "Anne Hathaway Says Princess Diaries 3 Had a Story Breakthrough After Having to Start Over With the Script: We are Moving in the Right Direction",
+      "slug": "anne-hathaway-says-princess-diaries-3-script-had-a-breakthrough",
+      "title": "Anne Hathaway Says Princess Diaries 3 Script Had a Breakthrough",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
@@ -153,7 +150,7 @@
         "One Day",
         "Anne Hathaway"
       ],
-      "angle": "Anne Hathaway confirms a script breakthrough for 'Princess Diaries 3'.",
+      "angle": "Anne Hathaway provides an update on the script development for Princess Diaries 3, indicating progress after a previous script was scrapped.",
       "tmdbType": "movie",
       "source": "rss:Variety",
       "sources": [
@@ -161,7 +158,7 @@
           "outlet": "Variety",
           "tier": 7,
           "url": "https://variety.com/2026/film/news/anne-hathaway-princess-diaries-3-breakthrough-script-1236816029/",
-          "ageMin": 461,
+          "ageMin": 548,
           "headline": "Anne Hathaway Says Princess Diaries 3 Had a Story Breakthrough After Having to Start Over With the Script: We are Moving in the Right Direction",
           "summary": "“Princess Diaries 3” recently had a breakthrough after a scrapped script, Anne Hathaway revealed during an appearance on SiriusXM’s “Radio Andy.” “I’m busy making baby number three, and that has sort of taken the place of knowing when exactly I can make Princess Diaries 3, ” Hathaway said. “I can say I think we had a story [ ]"
         },
@@ -169,12 +166,12 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/movies/movie-news/anne-hathaway-princess-diaries-3-update-1236651735/",
-          "ageMin": 463,
+          "ageMin": 549,
           "headline": "Anne Hathaway Reveals Princess Diaries 3 Update: We Had a Story Breakthrough",
           "summary": "The Oscar winner played the beloved Mia Thermopolis in the 2001 and 2004 films."
         }
       ],
-      "ageMin": 461,
+      "ageMin": 548,
       "_cand": {
         "key": "rss:anne-hathaway-says-princess-diaries-3-had-a-story-breakthrou",
         "popularity": 0,
@@ -212,6 +209,138 @@
       "tierClass": "B"
     },
     {
+      "id": "trailer-new-survival-thriller-trailer-drop",
+      "slug": "a-quiet-place-meets-arachnophobia-in-first-trailer-for-terrifying-new-",
+      "title": "‘A Quiet Place’ Meets ‘Arachnophobia’ in First Trailer for Terrifying New Survival Thriller",
+      "contentType": "trailer",
+      "formatTag": "trailer",
+      "category": "movies",
+      "subcategory": "trailers",
+      "eventType": "trailer",
+      "sensitivity": "normal",
+      "eventSlug": "new-survival-thriller-trailer-drop",
+      "primaryKeyword": "new survival thriller trailer",
+      "primaryEntity": "A Quiet Place",
+      "entities": [
+        "Arachnophobia"
+      ],
+      "angle": "Trailer released for a new survival thriller drawing comparisons to 'A Quiet Place' and 'Arachnophobia'.",
+      "tmdbType": "movie",
+      "source": "gnews:Collider",
+      "sources": [
+        {
+          "outlet": "Collider",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9tQjE3M1Q5aEp0anVuZ3o2M1FpQVd0Ynp4X1MyZXRRVWxHY3lrT1NpeXZuUUQ0OXN2MkdwMXY3N0ZwZmlKQlIzbWtOMmI2S3g3aTZwdzQ3T1IwTzVneC1PeC1CdmJiM0pTYkhpYlI5M3RqaUU?oc=5",
+          "ageMin": 259,
+          "headline": "‘A Quiet Place’ Meets ‘Arachnophobia’ in First Trailer for Terrifying New Survival Thriller - Collider",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMic0FVX3lxTE9tQjE3M1Q5aEp0anVuZ3o2M1FpQVd0Ynp4X1MyZXRRVWxHY3lrT1NpeXZuUUQ0OXN2MkdwMXY3N0ZwZmlKQlIzbWtOMmI2S3g3aTZwdzQ3T1IwTzVneC1PeC1CdmJiM0pTYkhpYlI5M3RqaUU?oc=5\" target=\"_blank\" ‘A Quiet Place’ Meets ‘Arachnophobia’ in First Trailer for Terrifying New"
+        }
+      ],
+      "ageMin": 259,
+      "_cand": {
+        "key": "rss:-a-quiet-place-meets-arachnophobia-in-first-trailer-for-terr",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "Collider"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "Collider",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 74,
+      "signals": {
+        "recency": 9,
+        "corroboration": 8,
+        "status": 18,
+        "type": 15,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-john-leguizamo-the-odyssey-role",
+      "slug": "john-leguizamo-on-the-odyssey-it-was-so-intense-for-me",
+      "title": "John Leguizamo on 'The Odyssey': 'It Was So Intense for Me'",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "john-leguizamo-the-odyssey-role",
+      "primaryKeyword": "john leguizamo the odyssey",
+      "primaryEntity": "John Leguizamo",
+      "entities": [
+        "The Odyssey"
+      ],
+      "angle": "John Leguizamo opens up about the emotional intensity of his role in Christopher Nolan's 'The Odyssey'.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/movies/movie-features/john-leguizamo-the-odyssey-eumaeus-chris-nolan-interview-1236651694/",
+          "ageMin": 656,
+          "headline": "John Leguizamo Has Never Been as Vulnerable as in The Odyssey : “It Was So Intense for Me”",
+          "summary": "\"Working with Chris Nolan...you feel really seen,\" the actor behind Eumaeus tells The Hollywood Reporter in a wide-ranging conversation. \"I was able to tap into these really difficult, painful emotions from the depth of my soul.\""
+        }
+      ],
+      "ageMin": 656,
+      "_cand": {
+        "key": "rss:john-leguizamo-has-never-been-as-vulnerable-as-in-the-odysse",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 81,
+      "signals": {
+        "recency": 4,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 12,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "radar": 30
+      },
+      "radarKind": "movie-in-theaters",
+      "tierClass": "A"
+    },
+    {
       "id": "trailer-the-end-of-oak-street-4dx-footage-preview",
       "slug": "the-end-of-oak-street-preview-anne-hathaway-and-ewan-mcgregor-try-not-",
       "title": "The End of Oak Street Preview: Anne Hathaway and Ewan McGregor Try Not to Get Eaten Alive by Dinosaurs in 14 Minutes of 4DX Footage",
@@ -228,7 +357,7 @@
         "Anne Hathaway",
         "Ewan McGregor"
       ],
-      "angle": "First look at 'The End of Oak Street' with 14 minutes of 4DX footage featuring Anne Hathaway and Ewan McGregor.",
+      "angle": "First look at Anne Hathaway and Ewan McGregor's dinosaur thriller 'The End of Oak Street' with 14 minutes of 4DX footage.",
       "tmdbType": "movie",
       "source": "rss:Variety",
       "sources": [
@@ -236,12 +365,12 @@
           "outlet": "Variety",
           "tier": 7,
           "url": "https://variety.com/2026/film/news/the-end-of-oak-street-new-footage-anne-hathaway-ewan-mcgregor-dinosaurs-4dx-1236815202/",
-          "ageMin": 697,
+          "ageMin": 784,
           "headline": "The End of Oak Street Preview: Anne Hathaway and Ewan McGregor Try Not to Get Eaten Alive by Dinosaurs in 14 Minutes of 4DX Footage",
           "summary": "What s more thrilling than watching dinosaurs try to eat people alive on the big screen? Watching dinosaurs try to eat people alive on the big screen in 4DX, as unveiled in a special preview of The End of Oak Street on Saturday night in Los Angeles. In the sci-fi movie from It Follows director David [ ]"
         }
       ],
-      "ageMin": 697,
+      "ageMin": 784,
       "_cand": {
         "key": "rss:the-end-of-oak-street-preview-anne-hathaway-and-ewan-mcgrego",
         "popularity": 0,
@@ -262,9 +391,9 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 73,
+      "priority": 70,
       "signals": {
-        "recency": 4,
+        "recency": 1,
         "corroboration": 12,
         "status": 18,
         "type": 15,
@@ -278,24 +407,92 @@
       "tierClass": "B"
     },
     {
-      "id": "news-the-mandalorian-cancellation",
-      "slug": "disney-confirms-the-mandalorian-is-ending",
-      "title": "Disney Confirms 'The Mandalorian' Is Ending",
+      "id": "news-1977-animated-hobbit-review",
+      "slug": "1977-s-animated-the-hobbit-proves-the-right-hero-s-journey-can-be-take",
+      "title": "1977 s Animated The Hobbit Proves the Right Hero s Journey Can Be Taken Again and Again",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "1977-animated-hobbit-review",
+      "primaryKeyword": "animated the hobbit",
+      "primaryEntity": "The Hobbit",
+      "entities": [
+        "The Hobbit (1977 film)",
+        "Christopher Nolan",
+        "The Odyssey (film)"
+      ],
+      "angle": "A look back at the enduring appeal of the 1977 animated adaptation of 'The Hobbit'.",
+      "tmdbType": "movie",
+      "source": "rss:IndieWire",
+      "sources": [
+        {
+          "outlet": "IndieWire",
+          "tier": 7,
+          "url": "https://www.indiewire.com/features/best-of/the-hobbit-animated-1977-rankin-and-bass-cult-fil-1235206129/",
+          "ageMin": 2915,
+          "headline": "1977 s Animated The Hobbit Proves the Right Hero s Journey Can Be Taken Again and Again",
+          "summary": "You can't go wrong pairing Christopher Nolan's \"The Odyssey\" and this retro Rankin/Bass classic."
+        }
+      ],
+      "ageMin": 2915,
+      "_cand": {
+        "key": "rss:1977-s-animated-the-hobbit-proves-the-right-hero-s-journey-c",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "IndieWire"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "IndieWire",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 78,
+      "signals": {
+        "recency": 1,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 12,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "radar": 30
+      },
+      "radarKind": "movie-in-theaters",
+      "tierClass": "A"
+    },
+    {
+      "id": "news-disney-confirms-end-of-the-mandalorian",
+      "slug": "disney-officially-confirms-the-end-of-the-mandalorian",
+      "title": "Disney Officially Confirms the End of 'The Mandalorian'",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
       "eventType": "cancellation",
       "sensitivity": "normal",
-      "eventSlug": "the-mandalorian-cancellation",
+      "eventSlug": "disney-confirms-end-of-the-mandalorian",
       "primaryKeyword": "the mandalorian cancelled",
       "primaryEntity": "The Mandalorian and Grogu",
       "entities": [
         "The Mandalorian",
-        "Disney+",
-        "Jon Favreau"
+        "Disney"
       ],
-      "angle": "Disney+ officially confirms the end of the acclaimed Star Wars series.",
+      "angle": "Disney has officially confirmed that the popular Star Wars series will conclude.",
       "tmdbType": "movie",
       "source": "gnews:Collider",
       "sources": [
@@ -303,12 +500,12 @@
           "outlet": "Collider",
           "tier": 5,
           "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFB0QXM1UEwwdXFaUnFVcGJrTElBbjdlSHUyY3hDZ2pzWXN2c19rMm1IbVZ3NGMta3dvVm5nQW9VMUxITzRwMzV1bTUyX1liQVVsVEwxeEF3R0psN0xzWmFONDhpOEhnalhMYWQ3elhwWFdfTlJ0SVo3LVc1OA?oc=5",
-          "ageMin": 187,
+          "ageMin": 274,
           "headline": "Disney Officially Confirms the End of 'The Mandalorian' - Collider",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMie0FVX3lxTFB0QXM1UEwwdXFaUnFVcGJrTElBbjdlSHUyY3hDZ2pzWXN2c19rMm1IbVZ3NGMta3dvVm5nQW9VMUxITzRwMzV1bTUyX1liQVVsVEwxeEF3R0psN0xzWmFONDhpOEhnalhMYWQ3elhwWFdfTlJ0SVo3LVc1OA?oc=5\" target=\"_blank\" Disney Officially Confirms the End of 'The Mandalorian' /a nbs"
         }
       ],
-      "ageMin": 187,
+      "ageMin": 274,
       "_cand": {
         "key": "rss:disney-officially-confirms-the-end-of-the-mandalorian-collid",
         "popularity": 0,
@@ -345,179 +542,35 @@
       "tierClass": "B"
     },
     {
-      "id": "news-hollywood-soundtrack-classics-good-fortune",
-      "slug": "good-fortune-brings-two-australian-classics-to-hollywood-soundtrack",
-      "title": "Good Fortune Brings Two Australian Classics To Hollywood Soundtrack",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "hollywood-soundtrack-classics-good-fortune",
-      "primaryKeyword": "hollywood soundtrack",
-      "primaryEntity": "Good Fortune",
-      "entities": [
-        "Hollywood"
-      ],
-      "angle": "Australian film music gets a Hollywood soundtrack spotlight.",
-      "tmdbType": "movie",
-      "source": "gnews:Noise11.com",
-      "sources": [
-        {
-          "outlet": "Noise11.com",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxONy1uSFBPNkpmYjdCT2dKNWVzRFJUWGFhay1zanZNQXEyU3pUZ3pCb256RkVtdWd5Z0NDX0kzb1dTeUYtbDNTR2V0NncxeGV4Vy1CbWk5bUxDQmdfcTM2N2tkdWVQeG9LTHJhakVTYXdEQzF4bTN6YmlsSWljajZ5SWIzck1abWZSVVhkSkJwUXZ6eDA?oc=5",
-          "ageMin": 87,
-          "headline": "Good Fortune Brings Two Australian Classics To Hollywood Soundtrack - Noise11.com",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMikwFBVV95cUxONy1uSFBPNkpmYjdCT2dKNWVzRFJUWGFhay1zanZNQXEyU3pUZ3pCb256RkVtdWd5Z0NDX0kzb1dTeUYtbDNTR2V0NncxeGV4Vy1CbWk5bUxDQmdfcTM2N2tkdWVQeG9LTHJhakVTYXdEQzF4bTN6YmlsSWljajZ5SWIzck1abWZSVVhkSkJwUXZ6eDA?oc=5\" target=\"_blank\" Good Fortune Brings Two Austr"
-        }
-      ],
-      "ageMin": 87,
-      "_cand": {
-        "key": "rss:good-fortune-brings-two-australian-classics-to-hollywood-sou",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "Noise11.com"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "Noise11.com",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 75,
-      "signals": {
-        "recency": 16,
-        "corroboration": 8,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "music-news-fifa-world-cup-final-halftime-show-performers",
-      "slug": "madonna-bts-justin-bieber-shakira-headline-jam-packed-fifa-world-cup-f",
-      "title": "Madonna, BTS, Justin Bieber, Shakira Headline Jam-Packed FIFA World Cup Final Halftime Show",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "fifa-world-cup-final-halftime-show-performers",
-      "primaryKeyword": "fifa world cup halftime show",
-      "primaryEntity": "FIFA Sound",
-      "entities": [
-        "FIFA World Cup",
-        "Madonna",
-        "BTS",
-        "Justin Bieber"
-      ],
-      "angle": "Pop music titans unite for a star-studded FIFA World Cup Final halftime show.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/music/news/fifa-halftime-madonna-bts-justin-bieber-shakira-1236816110/",
-          "ageMin": 387,
-          "headline": "Madonna, BTS, Justin Bieber and Shakira Join Forces for Blink-and-You ll-Miss- Em Moments in a Cluster-FIFA of a Halftime Show",
-          "summary": "The FIFA World Cup Final Halftime Show provided an answer to the burning question of how you fit Madonna, BTS, Justin Bieber, Shakira, Burna Boy, Gustavo Dudamel, Chris Martin and the Muppets into a single 11-minute segment: as fleetingly as possible. Although there were reports that the halftime extravaganza would be allowed to go over [ ]"
-        },
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/music/music-news/fifa-world-cup-halftime-madonna-justin-bieber-bts-shakira-1236651689/",
-          "ageMin": 392,
-          "headline": "Madonna, Justin Bieber, BTS, Shakira Headline Jam-Packed First-Ever FIFA World Cup Final Halftime Show",
-          "summary": "The show featured an acoustic number from Bieber, an energetic dance performance from Shakira and nods to soccer throughout, with rewritten BTS lyrics and appearances from legendary players and 'Ted Lasso' stars."
-        }
-      ],
-      "ageMin": 387,
-      "_cand": {
-        "key": "rss:madonna-bts-justin-bieber-and-shakira-join-forces-for-blink-",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 2,
-      "verification": {
-        "tier1Count": 2,
-        "tier1Owners": 1,
-        "outletCount": 2,
-        "outlets": [
-          "Variety",
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 57,
-      "signals": {
-        "recency": 4,
-        "corroboration": 18,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 8,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-dutton-ranch-season-2-cast-changes",
-      "slug": "dutton-ranch-season-2-cast-changes-see-who-isn-t-coming-back",
-      "title": "‘Dutton Ranch’ season 2 cast changes: See who isn’t coming back",
+      "id": "news-wanda-season-2-premiere-date-revealed",
+      "slug": "where-s-wanda-season-2-premiere-date-and-first-look-revealed",
+      "title": "Where’s Wanda? Season 2 Premiere Date and First Look Revealed",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
-      "eventType": "casting",
+      "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "dutton-ranch-season-2-cast-changes",
-      "primaryKeyword": "dutton ranch season 2 cast",
-      "primaryEntity": "Dutton Ranch",
+      "eventSlug": "wanda-season-2-premiere-date-revealed",
+      "primaryKeyword": "Wanda Season 2",
+      "primaryEntity": "WandaVision",
       "entities": [],
-      "angle": "Details emerge on cast changes for the upcoming second season of 'Dutton Ranch'.",
+      "angle": "First look and premiere date revealed for the second season of the Disney+ series.",
       "tmdbType": "movie",
-      "source": "gnews:AL.com",
+      "source": "gnews:The Movie Blog",
       "sources": [
         {
-          "outlet": "AL.com",
+          "outlet": "The Movie Blog",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOcmRvUzY3SVpEV0xlM2ZUaUNWZkhSOC0tbkFZb3VhUEdZaERGV2FMU2xzR2dOV05XcFJNQ3BtcUF4VTdjU2Z2TmJvZDBCTVZQc0xRRFF0MVRkREdTLWJIeWc4b1VEaUV2R3p3d0U2MzI1VVRhMUlWdEQ2Q0cyYlM5SEFLSXdJbmtyZzJLQW1vQlpMRlpELVhqUEhCS0fSAbABQVVfeXFMTkJ4ZjJkTlR1RjZSTUlrVTZxYzd3bTVfVEdTanM3clY5eS1NSnRncmJJenZ3NVcxSmZXaDBCY2Nyck5DZ1EtUnFNbWJIUlZCcmlqcUNmUktPYUJqaGc5Zkp2Tk4tZUtqVElZdy1aUktmWGc4Z0NGdmRtbTk1VHA5Y2MxVmhJWVJ3dTdZMTFqZ0ZMRHdsYnlQVjdEMHZ6NDJWUThiS3NJbktnNFNtTlkyLXY?oc=5",
-          "ageMin": 692,
-          "headline": "‘Dutton Ranch’ season 2 cast changes: See who isn’t coming back - AL.com",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMinAFBVV95cUxOcmRvUzY3SVpEV0xlM2ZUaUNWZkhSOC0tbkFZb3VhUEdZaERGV2FMU2xzR2dOV05XcFJNQ3BtcUF4VTdjU2Z2TmJvZDBCTVZQc0xRRFF0MVRkREdTLWJIeWc4b1VEaUV2R3p3d0U2MzI1VVRhMUlWdEQ2Q0cyYlM5SEFLSXdJbmtyZzJLQW1vQlpMRlpELVhqUEhCS0fSAbABQVVfeXFMTkJ4ZjJkTlR1RjZSTUlrVTZxYzd"
+          "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9CNENOTzJlMGVObGozdGZZazNjcFBnUmJCSzhmZlBpWGxGMENfR3dzSm82ekRHM2NpNVJBWm9vWWtDTzZHVkxrNENxd1gtZENfbVQ4ZFVQM1F2MllOMWlNMVNVWmFNTlI5ak14eUY1VmVDZ2I5QzRUVFdLOA?oc=5",
+          "ageMin": 258,
+          "headline": "Where’s Wanda? Season 2 Premiere Date and First Look Revealed - The Movie Blog",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMie0FVX3lxTE9CNENOTzJlMGVObGozdGZZazNjcFBnUmJCSzhmZlBpWGxGMENfR3dzSm82ekRHM2NpNVJBWm9vWWtDTzZHVkxrNENxd1gtZENfbVQ4ZFVQM1F2MllOMWlNMVNVWmFNTlI5ak14eUY1VmVDZ2I5QzRUVFdLOA?oc=5\" target=\"_blank\" Where’s Wanda? Season 2 Premiere Date and First Look Revealed "
         }
       ],
-      "ageMin": 692,
+      "ageMin": 258,
       "_cand": {
-        "key": "rss:-dutton-ranch-season-2-cast-changes-see-who-isn-t-coming-bac",
+        "key": "rss:where-s-wanda-season-2-premiere-date-and-first-look-revealed",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -527,21 +580,21 @@
         "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "AL.com"
+          "The Movie Blog"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "AL.com",
+        "attribution": "The Movie Blog",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
       "priority": 62,
       "signals": {
-        "recency": 4,
+        "recency": 9,
         "corroboration": 8,
         "status": 18,
-        "type": 14,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
         "big": 18,
@@ -552,22 +605,22 @@
       "tierClass": "B"
     },
     {
-      "id": "news-cbs-show-cancellations-after-colbert",
-      "slug": "beyond-colbert-other-cbs-shows-canceled-or-dropped",
-      "title": "Beyond Colbert: Other CBS Shows Canceled or Dropped",
+      "id": "news-cbs-cancellation",
+      "slug": "not-just-colbert-see-what-other-shows-cbs-canceled-dropped",
+      "title": "Not just Colbert. See what other shows CBS canceled, dropped",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
       "eventType": "cancellation",
       "sensitivity": "normal",
-      "eventSlug": "cbs-show-cancellations-after-colbert",
-      "primaryKeyword": "CBS show cancellations",
+      "eventSlug": "cbs-cancellation",
+      "primaryKeyword": "CBS TV shows canceled",
       "primaryEntity": "CBS",
       "entities": [
-        "The Late Show with Stephen Colbert"
+        "Stephen Colbert"
       ],
-      "angle": "Report details other CBS shows that have been canceled or dropped, following news about 'The Late Show with Stephen Colbert'.",
+      "angle": "CBS announces further TV show cancellations following Stephen Colbert's show.",
       "tmdbType": "movie",
       "source": "gnews:MSN",
       "sources": [
@@ -575,12 +628,12 @@
           "outlet": "MSN",
           "tier": 5,
           "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOM3RrVHpiM2ZqWFhvSnA2bVJtTVI3ZlhuU1daWnh4Q0txMlhrUVV2elBCeXA5dFhmdXpjeTdJSTF4QzBUQjFJN0phRHVGVEdoOWtERHJnOUVCV0tFOVdPVWRjdnNVMDNTam1ya1VHUzBnRXBFeXNJRkd5cWhpVXVfZnZjclI0NTdxalN5OWlkWkxiYTlXOTUxRGpMcWU0WWxJaFdpUUpqOXJUVGotbEFUd0t0OA?oc=5",
-          "ageMin": 465,
+          "ageMin": 551,
           "headline": "Not just Colbert. See what other shows CBS canceled, dropped - MSN",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMiswFBVV95cUxOM3RrVHpiM2ZqWFhvSnA2bVJtTVI3ZlhuU1daWnh4Q0txMlhrUVV2elBCeXA5dFhmdXpjeTdJSTF4QzBUQjFJN0phRHVGVEdoOWtERHJnOUVCV0tFOVdPVWRjdnNVMDNTam1ya1VHUzBnRXBFeXNJRkd5cWhpVXVfZnZjclI0NTdxalN5OWlkWkxiYTlXOTUxRGpMcWU0WWxJaFdpUUpqOXJUVGotbEFUd0t0OA?oc=5\" ta"
         }
       ],
-      "ageMin": 465,
+      "ageMin": 551,
       "_cand": {
         "key": "rss:not-just-colbert-see-what-other-shows-cbs-canceled-dropped-m",
         "popularity": 0,
@@ -617,38 +670,104 @@
       "tierClass": "C"
     },
     {
-      "id": "music-news-kate-miller-heidke-new-single-a-certain-panic",
-      "slug": "kate-miller-heidke-shares-new-single-a-certain-panic-ahead-of-new-albu",
-      "title": "Kate Miller-Heidke Shares New Single ‘A Certain Panic’ Ahead Of New Album",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
+      "id": "news-danny-boyle-ink-sells-to-netflix",
+      "slug": "danny-boyle-s-ink-sells-to-netflix-ahead-of-venice-premiere",
+      "title": "Danny Boyle's Ink Sells to Netflix Ahead of Venice Premiere",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "kate-miller-heidke-new-single-a-certain-panic",
-      "primaryKeyword": "Kate Miller-Heidke",
-      "primaryEntity": "Kate Miller-Heidke",
+      "eventSlug": "danny-boyle-ink-sells-to-netflix",
+      "primaryKeyword": "Ink movie",
+      "primaryEntity": "Ink (2024 film)",
       "entities": [
-        "A Certain Panic"
+        "Danny Boyle",
+        "Netflix",
+        "Venice Film Festival"
       ],
-      "angle": "Established Australian artist releases new single ahead of album.",
+      "angle": "Danny Boyle's new film 'Ink,' about Rupert Murdoch and The Sun, sold to Netflix ahead of its Venice premiere.",
       "tmdbType": "movie",
-      "source": "gnews:Noise11.com",
+      "source": "rss:IndieWire",
       "sources": [
         {
-          "outlet": "Noise11.com",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQNnVuYnFzWFJSMUFBM2tDU3UwRlQyMWV6MFlZTFUxZ0hVbUFvdUNZUWFIMF82d1NnOWxwN2NHd0pYdFdpbU5JRGhpVVB0M1ExMjZiN1VWdXR0TjB2b3NOX0FTSmhqSDZ1bkpMdjl4TV9TLTQ2MHpzNWdCQk53cG9SUlFIeC1rUmpOUmF2WVFzSERCYnZxaG5zTGtQanhCaC0tdU43bGZPMHJqQQ?oc=5",
-          "ageMin": 130,
-          "headline": "Kate Miller-Heidke Shares New Single ‘A Certain Panic’ Ahead Of New Album - Noise11.com",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxQNnVuYnFzWFJSMUFBM2tDU3UwRlQyMWV6MFlZTFUxZ0hVbUFvdUNZUWFIMF82d1NnOWxwN2NHd0pYdFdpbU5JRGhpVVB0M1ExMjZiN1VWdXR0TjB2b3NOX0FTSmhqSDZ1bkpMdjl4TV9TLTQ2MHpzNWdCQk53cG9SUlFIeC1rUmpOUmF2WVFzSERCYnZxaG5zTGtQanhCaC0tdU43bGZPMHJqQQ?oc=5\" target=\"_blank"
+          "outlet": "IndieWire",
+          "tier": 7,
+          "url": "https://www.indiewire.com/news/breaking-news/danny-boyle-ink-netflix-venice-sale-1235206128/",
+          "ageMin": 3233,
+          "headline": "Danny Boyle s Ink Sells to Netflix in First Big Sale (Way) Ahead of Venice Premiere",
+          "summary": "The film about Larry Lamb, Rupert Murdoch, and the birth of The Sun tabloid is the opening night film at the Biennale."
         }
       ],
-      "ageMin": 130,
+      "ageMin": 3233,
       "_cand": {
-        "key": "rss:kate-miller-heidke-shares-new-single-a-certain-panic-ahead-o",
+        "key": "rss:danny-boyle-s-ink-sells-to-netflix-in-first-big-sale-way-ahe",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "IndieWire"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "IndieWire",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 64,
+      "signals": {
+        "recency": 1,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-yellowstone-season-2-cast-changes",
+      "slug": "dutton-ranch-season-2-cast-changes-see-who-isn-t-coming-back",
+      "title": "‘Dutton Ranch’ season 2 cast changes: See who isn’t coming back",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "yellowstone-season-2-cast-changes",
+      "primaryKeyword": "yellowstone cast changes",
+      "primaryEntity": "Yellowstone",
+      "entities": [
+        "Taylor Sheridan"
+      ],
+      "angle": "Details emerge on cast changes for the upcoming season of the hit Western drama.",
+      "tmdbType": "movie",
+      "source": "gnews:AL.com",
+      "sources": [
+        {
+          "outlet": "AL.com",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOcmRvUzY3SVpEV0xlM2ZUaUNWZkhSOC0tbkFZb3VhUEdZaERGV2FMU2xzR2dOV05XcFJNQ3BtcUF4VTdjU2Z2TmJvZDBCTVZQc0xRRFF0MVRkREdTLWJIeWc4b1VEaUV2R3p3d0U2MzI1VVRhMUlWdEQ2Q0cyYlM5SEFLSXdJbmtyZzJLQW1vQlpMRlpELVhqUEhCS0fSAbABQVVfeXFMTkJ4ZjJkTlR1RjZSTUlrVTZxYzd3bTVfVEdTanM3clY5eS1NSnRncmJJenZ3NVcxSmZXaDBCY2Nyck5DZ1EtUnFNbWJIUlZCcmlqcUNmUktPYUJqaGc5Zkp2Tk4tZUtqVElZdy1aUktmWGc4Z0NGdmRtbTk1VHA5Y2MxVmhJWVJ3dTdZMTFqZ0ZMRHdsYnlQVjdEMHZ6NDJWUThiS3NJbktnNFNtTlkyLXY?oc=5",
+          "ageMin": 779,
+          "headline": "‘Dutton Ranch’ season 2 cast changes: See who isn’t coming back - AL.com",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMinAFBVV95cUxOcmRvUzY3SVpEV0xlM2ZUaUNWZkhSOC0tbkFZb3VhUEdZaERGV2FMU2xzR2dOV05XcFJNQ3BtcUF4VTdjU2Z2TmJvZDBCTVZQc0xRRFF0MVRkREdTLWJIeWc4b1VEaUV2R3p3d0U2MzI1VVRhMUlWdEQ2Q0cyYlM5SEFLSXdJbmtyZzJLQW1vQlpMRlpELVhqUEhCS0fSAbABQVVfeXFMTkJ4ZjJkTlR1RjZSTUlrVTZxYzd"
+        }
+      ],
+      "ageMin": 779,
+      "_cand": {
+        "key": "rss:-dutton-ranch-season-2-cast-changes-see-who-isn-t-coming-bac",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -658,24 +777,24 @@
         "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "Noise11.com"
+          "AL.com"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "Noise11.com",
+        "attribution": "AL.com",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 51,
+      "priority": 59,
       "signals": {
-        "recency": 16,
+        "recency": 1,
         "corroboration": 8,
         "status": 18,
-        "type": 9,
+        "type": 14,
         "pop": 0,
         "breakout": 0,
-        "big": 0,
+        "big": 18,
         "trending": 0,
         "spice": 0,
         "softTv": 0
@@ -683,7 +802,72 @@
       "tierClass": "C"
     },
     {
-      "id": "news-god-of-war-prime-video-new-lead-actor",
+      "id": "news-dinosaur-thriller-cloverfield-sequel-discussion",
+      "slug": "new-dinosaur-thriller-director-explains-if-it-s-quietly-a-cloverfield-",
+      "title": "New Dinosaur Thriller Director Explains if It's Quietly a 'Cloverfield' Sequel",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "dinosaur-thriller-cloverfield-sequel-discussion",
+      "primaryKeyword": "dinosaur thriller cloverfield sequel",
+      "primaryEntity": "Cloverfield",
+      "entities": [
+        "Dinosaur Thriller"
+      ],
+      "angle": "Director of a new dinosaur thriller addresses speculation about a connection to the 'Cloverfield' franchise.",
+      "tmdbType": "movie",
+      "source": "gnews:IMDb",
+      "sources": [
+        {
+          "outlet": "IMDb",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5jM1J5dEZ2UVNFRjhLN1Yya2JLVHpRNkxWdmRoVXRXQ2QyVkxXa2pTU3F2Ml9MY2ZleXZlNjY3ZEI3QjBpLWVxZXU3RmxvdENCMjNqT2kxVl83eTRHSklpLVQ0bk82eDg?oc=5",
+          "ageMin": 635,
+          "headline": "New Dinosaur Thriller Director Explains if It's Quietly a 'Cloverfield' Sequel - IMDb",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5jM1J5dEZ2UVNFRjhLN1Yya2JLVHpRNkxWdmRoVXRXQ2QyVkxXa2pTU3F2Ml9MY2ZleXZlNjY3ZEI3QjBpLWVxZXU3RmxvdENCMjNqT2kxVl83eTRHSklpLVQ0bk82eDg?oc=5\" target=\"_blank\" New Dinosaur Thriller Director Explains if It's Quietly a 'Cloverfield' Sequel /a nbsp; n"
+        }
+      ],
+      "ageMin": 635,
+      "_cand": {
+        "key": "rss:new-dinosaur-thriller-director-explains-if-it-s-quietly-a-cl",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "IMDb"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "IMDb",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 63,
+      "signals": {
+        "recency": 4,
+        "corroboration": 8,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-god-of-war-prime-video-new-lead-casting",
       "slug": "god-of-war-prime-video-series-to-cast-new-lead-after-on-set-injury",
       "title": "God of War: Prime Video Series to Cast New Lead After On Set Injury",
       "contentType": "news",
@@ -692,14 +876,14 @@
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "god-of-war-prime-video-new-lead-actor",
-      "primaryKeyword": "god of war series",
+      "eventSlug": "god-of-war-prime-video-new-lead-casting",
+      "primaryKeyword": "god of war prime video casting",
       "primaryEntity": "God of War",
       "entities": [
         "God of War (TV series)",
         "Prime Video"
       ],
-      "angle": "The 'God of War' series on Prime Video is recasting its lead role following an on-set injury.",
+      "angle": "The Prime Video 'God of War' series will recast its lead following an on-set injury.",
       "tmdbType": "movie",
       "source": "gnews:TV Series Finale",
       "sources": [
@@ -707,12 +891,12 @@
           "outlet": "TV Series Finale",
           "tier": 5,
           "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQaVJubzMwODJjX3M1NTJRZG5kUXQ2WGoyVGpNbk05cnlib0ZOcEhqdmJJYzZMVHNTSm1qOUpodWt0cm01NnhBbmxmYk5KNlpFcHl3MXpnaWRFa1gwUnlzLUdxdVV0OUxKMTlqSHVzR0hyYnJ3WmhjRzYzX2FEelFvaU5jVnN0Y0c4MC04aHBMNXpUeFVyWDNWeWNGNDBuRzh1SFVxLUFIMk51d9IBqgFBVV95cUxQaVJubzMwODJjX3M1NTJRZG5kUXQ2WGoyVGpNbk05cnlib0ZOcEhqdmJJYzZMVHNTSm1qOUpodWt0cm01NnhBbmxmYk5KNlpFcHl3MXpnaWRFa1gwUnlzLUdxdVV0OUxKMTlqSHVzR0hyYnJ3WmhjRzYzX2FEelFvaU5jVnN0Y0c4MC04aHBMNXpUeFVyWDNWeWNGNDBuRzh1SFVxLUFIMk51dw?oc=5",
-          "ageMin": 748,
+          "ageMin": 835,
           "headline": "God of War: Prime Video Series to Cast New Lead After On Set Injury - TV Series Finale",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxQaVJubzMwODJjX3M1NTJRZG5kUXQ2WGoyVGpNbk05cnlib0ZOcEhqdmJJYzZMVHNTSm1qOUpodWt0cm01NnhBbmxmYk5KNlpFcHl3MXpnaWRFa1gwUnlzLUdxdVV0OUxKMTlqSHVzR0hyYnJ3WmhjRzYzX2FEelFvaU5jVnN0Y0c4MC04aHBMNXpUeFVyWDNWeWNGNDBuRzh1SFVxLUFIMk51d9IBqgFBVV95cUxQaVJubzM"
         }
       ],
-      "ageMin": 748,
+      "ageMin": 835,
       "_cand": {
         "key": "rss:god-of-war-prime-video-series-to-cast-new-lead-after-on-set-",
         "popularity": 0,
@@ -749,74 +933,76 @@
       "tierClass": "C"
     },
     {
-      "id": "news-steven-spielberg-tom-cruise-sci-fi-masterpiece-arnold-schwarzenegger-s",
-      "slug": "spielberg-cruise-sci-fi-masterpiece-almost-became-an-arnold-schwarzene",
-      "title": "Spielberg & Cruise Sci-Fi Masterpiece Almost Became an Arnold Schwarzenegger Sequel",
+      "id": "news-heartstopper-forever-finale-discussion",
+      "slug": "heartstopper-forever-director-writer-and-stars-joe-locke-and-kit-conno",
+      "title": "‘Heartstopper Forever’ Director, Writer and Stars Joe Locke and Kit Connor on the Finale: “It Connects the Whole Heartstopper Gang”",
       "contentType": "news",
       "formatTag": "news",
-      "category": "movies",
+      "category": "tv",
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "steven-spielberg-tom-cruise-sci-fi-masterpiece-arnold-schwarzenegger-s",
-      "primaryKeyword": "Minority Report Arnold Schwarzenegger sequel",
-      "primaryEntity": "Minority Report",
+      "eventSlug": "heartstopper-forever-finale-discussion",
+      "primaryKeyword": "heartstopper finale",
+      "primaryEntity": "Heartstopper",
       "entities": [
-        "Steven Spielberg",
-        "Tom Cruise",
-        "Arnold Schwarzenegger"
+        "Joe Locke",
+        "Kit Connor",
+        "Alice Oseman"
       ],
-      "angle": "Details emerge about how Steven Spielberg and Tom Cruise's sci-fi film was nearly an Arnold Schwarzenegger sequel.",
+      "angle": "Stars and creator break down the emotional finale of the beloved streaming series 'Heartstopper'.",
       "tmdbType": "movie",
-      "source": "gnews:MovieWeb",
+      "source": "rss:THR",
       "sources": [
         {
-          "outlet": "MovieWeb",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPclFXMkRFbHNSMi15V3dyOVcyMVZlaXNIbXJWR2FPc0tpYnZFNWxLNTdEYmtUS3J2dVQ4YnY0QzJtdmV2OWN3UXFqejBLNGJjUWRjbDhGa0JGSWU2NWJiWWRPLUdsanpDOUNMTjloTjJ2TkVLMkpUV3ItT0pGWnp0WGxmMHY4WXpfU283RzZMRHRJeElqckVaMFRn?oc=5",
-          "ageMin": 217,
-          "headline": "Steven Spielberg Tom Cruise's Sci-Fi Masterpiece Was So Close To Being an Arnold Schwarzenegger Sequel - MovieWeb",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMimgFBVV95cUxPclFXMkRFbHNSMi15V3dyOVcyMVZlaXNIbXJWR2FPc0tpYnZFNWxLNTdEYmtUS3J2dVQ4YnY0QzJtdmV2OWN3UXFqejBLNGJjUWRjbDhGa0JGSWU2NWJiWWRPLUdsanpDOUNMTjloTjJ2TkVLMkpUV3ItT0pGWnp0WGxmMHY4WXpfU283RzZMRHRJeElqckVaMFRn?oc=5\" target=\"_blank\" Steven Spielberg Tom"
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/movies/movie-features/heartstopper-forever-ending-kit-connor-joe-lock-interview-1236647039/",
+          "ageMin": 2164,
+          "headline": "‘Heartstopper Forever’ Director, Writer and Stars Joe Locke and Kit Connor on the Finale: “It Connects the Whole Heartstopper Gang”",
+          "summary": "Stars Connor and Locke, creator Alice Oseman and director Wash Westmoreland break down the film’s biggest change from book to screen, alongside the intimacy, break-ups, and ambiguous endings from the final chapter."
         }
       ],
-      "ageMin": 217,
+      "ageMin": 2164,
       "_cand": {
-        "key": "rss:steven-spielberg-tom-cruise-s-sci-fi-masterpiece-was-so-clos",
+        "key": "rss:-heartstopper-forever-director-writer-and-stars-joe-locke-an",
         "popularity": 0,
-        "kind": "gnews"
+        "kind": "rss-news"
       },
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
+        "tier1Count": 1,
+        "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "MovieWeb"
+          "THR"
         ],
-        "maxTier": 5,
+        "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "MovieWeb",
+        "attribution": "THR",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
       "priority": 52,
       "signals": {
-        "recency": 9,
-        "corroboration": 8,
+        "recency": 1,
+        "corroboration": 12,
         "status": 18,
         "type": 5,
         "pop": 0,
         "breakout": 0,
-        "big": 12,
+        "big": 6,
         "trending": 0,
         "spice": 0,
-        "softTv": 0
+        "softTv": 0,
+        "radar": 10
       },
-      "tierClass": "C"
+      "radarKind": "movie-trending",
+      "tierClass": "A"
     },
     {
-      "id": "news-aliens-40th-anniversary-james-cameron",
+      "id": "news-aliens-1986-film-other",
       "slug": "aliens-at-40-james-cameron-s-sequel-is-a-sci-fi-icon-but-did-you-know-",
       "title": "'Aliens' at 40: James Cameron's sequel is a sci-fi icon, but did you know he quit the movie twice?",
       "contentType": "news",
@@ -825,14 +1011,14 @@
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "aliens-40th-anniversary-james-cameron",
-      "primaryKeyword": "aliens 40th anniversary",
+      "eventSlug": "aliens-1986-film-other",
+      "primaryKeyword": "Aliens 40th anniversary trivia",
       "primaryEntity": "Aliens",
       "entities": [
         "Aliens (1986 film)",
         "James Cameron"
       ],
-      "angle": "Celebrating the 40th anniversary of 'Aliens' with a look back at its production.",
+      "angle": "On the 40th anniversary of 'Aliens', a trivia piece reveals director James Cameron's near-departure from the project.",
       "tmdbType": "movie",
       "source": "gnews:Space",
       "sources": [
@@ -840,12 +1026,12 @@
           "outlet": "Space",
           "tier": 5,
           "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPOW01a1ZmVGdvLWRkdUt5NDE1aXc4TmhVeEF2U21UUWFibERsZnN2X3dTZUR6emNwYWV0UVA3YXN2Q1J0VzYxLTBWNjNuNkFtWEotSW53NFFkT29OemJVaU1nbV9GUndIY0J2V1UwNTViblNEMjNUdE9lRkNRZ3U3czhlb0NUWnpUb3hqdENWa1ZCNGdhSGdOb1pyaFRxUk9QT2tSTkFMaHh1NUd1VWh1eTNKd2NsQ1lKZ3RSZVd3ZFVpbG5WTlhSOFlrd21UTkRscGpSTDlkSDFRWlJOMWVZbA?oc=5",
-          "ageMin": 607,
+          "ageMin": 694,
           "headline": "'Aliens' at 40: James Cameron's sequel is a sci-fi icon, but did you know he quit the movie twice? - Space",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMi4AFBVV95cUxPOW01a1ZmVGdvLWRkdUt5NDE1aXc4TmhVeEF2U21UUWFibERsZnN2X3dTZUR6emNwYWV0UVA3YXN2Q1J0VzYxLTBWNjNuNkFtWEotSW53NFFkT29OemJVaU1nbV9GUndIY0J2V1UwNTViblNEMjNUdE9lRkNRZ3U3czhlb0NUWnpUb3hqdENWa1ZCNGdhSGdOb1pyaFRxUk9QT2tSTkFMaHh1NUd1VWh1eTNKd2NsQ1lKZ3R"
         }
       ],
-      "ageMin": 607,
+      "ageMin": 694,
       "_cand": {
         "key": "rss:-aliens-at-40-james-cameron-s-sequel-is-a-sci-fi-icon-but-di",
         "popularity": 0,
@@ -882,39 +1068,38 @@
       "tierClass": "C"
     },
     {
-      "id": "news-danny-boyle-ink-sells-to-netflix",
-      "slug": "danny-boyle-s-ink-sells-to-netflix-ahead-of-venice-premiere",
-      "title": "Danny Boyle's 'Ink' Sells to Netflix Ahead of Venice Premiere",
+      "id": "news-celebrity-red-carpet-july-2026",
+      "slug": "teyana-taylor-celebrates-world-cup-in-nyc-nicole-kidman-takes-in-wimbl",
+      "title": "Teyana Taylor Celebrates World Cup in NYC, Nicole Kidman Takes in Wimbledon and More Celeb Red Carpet Photos: July 2026",
       "contentType": "news",
       "formatTag": "news",
-      "category": "movies",
+      "category": "celebrity",
       "subcategory": "news",
-      "eventType": "deal",
+      "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "danny-boyle-ink-sells-to-netflix",
-      "primaryKeyword": "Danny Boyle Ink",
-      "primaryEntity": "Ink (2024 film)",
+      "eventSlug": "celebrity-red-carpet-july-2026",
+      "primaryKeyword": "celebrity red carpet",
+      "primaryEntity": "Teyana Taylor",
       "entities": [
-        "Danny Boyle",
-        "Netflix",
-        "Venice Film Festival"
+        "Nicole Kidman",
+        "The Odyssey (film)"
       ],
-      "angle": "Netflix makes a major pre-Venice acquisition of Danny Boyle's new film about the birth of The Sun tabloid.",
+      "angle": "A roundup of celebrity appearances at major film premieres and events.",
       "tmdbType": "movie",
-      "source": "rss:IndieWire",
+      "source": "rss:Variety Music",
       "sources": [
         {
-          "outlet": "IndieWire",
+          "outlet": "Variety Music",
           "tier": 7,
-          "url": "https://www.indiewire.com/news/breaking-news/danny-boyle-ink-netflix-venice-sale-1235206128/",
-          "ageMin": 3146,
-          "headline": "Danny Boyle s Ink Sells to Netflix in First Big Sale (Way) Ahead of Venice Premiere",
-          "summary": "The film about Larry Lamb, Rupert Murdoch, and the birth of The Sun tabloid is the opening night film at the Biennale."
+          "url": "https://variety.com/gallery/celebrity-pics-red-carpet-photos-july-2026/",
+          "ageMin": 2224,
+          "headline": "Teyana Taylor Celebrates World Cup in NYC, Nicole Kidman Takes in Wimbledon and More Celeb Red Carpet Photos: July 2026",
+          "summary": "July started off strong. Following Taylor Swift s star-studded wedding extravaganza in New York City, the cast of The Odyssey dazzled at the film s premieres in London and Paris. First reactions are only upping the excitement, with audiences movie-goers eagerly awaiting the film to hit theaters. On July 7, Dwayne Johnson launched his live-action adaptation of [ ]"
         }
       ],
-      "ageMin": 3146,
+      "ageMin": 2224,
       "_cand": {
-        "key": "rss:danny-boyle-s-ink-sells-to-netflix-in-first-big-sale-way-ahe",
+        "key": "rss:teyana-taylor-celebrates-world-cup-in-nyc-nicole-kidman-take",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -924,24 +1109,171 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "IndieWire"
+          "Variety Music"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "IndieWire",
+        "attribution": "Variety Music",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 49,
+      "priority": 66,
       "signals": {
         "recency": 1,
         "corroboration": 12,
         "status": 18,
-        "type": 6,
+        "type": 5,
         "pop": 0,
         "breakout": 0,
-        "big": 12,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "radar": 30
+      },
+      "radarKind": "movie-in-theaters",
+      "tierClass": "A"
+    },
+    {
+      "id": "news-world-cup-final-celebrity-attendees",
+      "slug": "from-tom-brady-to-elmo-who-were-the-celebrities-at-the-world-cup-final",
+      "title": "From Tom Brady to Elmo, who were the celebrities at the World Cup final?",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "world-cup-final-celebrity-attendees",
+      "primaryKeyword": "World Cup final celebrities",
+      "primaryEntity": "World Cup Final",
+      "entities": [
+        "The Roast of Tom Brady",
+        "Tom Brady",
+        "Elmo"
+      ],
+      "angle": "Celebrities including Tom Brady and Elmo were spotted at the World Cup final.",
+      "tmdbType": "movie",
+      "source": "gnews:The New York Times",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/tv/tv-news/world-cup-final-2026-celebrities-in-attendance-1236651733/",
+          "ageMin": 454,
+          "headline": "World Cup Final Star-Spotting: Matt Damon, Tom Cruise, Jay-Z, Beyoncé and Timothée Chalamet in Attendance",
+          "summary": "New York-New Jersey Stadium was packed with celebrities on Sunday as A-listers from film, TV, music and more turned up to see Argentina vs. Spain."
+        },
+        {
+          "outlet": "The New York Times",
+          "tier": 7,
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNcndESExFWmJYWVh1dURGZ3dqOE41YWphZGNacWtVZUpGeFEyMzBwVUNCM29jSWNTVUptUzdoRHN3YzBtV2VVWmtGMzZsaUI5VU0zMTMxQ3YzYUhIbElaNzYtVEdGb2VRdEtyeUV4aFZNUVBvM0VlSWhoX25Sa1VtaXBlU202SjVPWTdNelNXdk9zNlc3a3UyWVNWVQ?oc=5",
+          "ageMin": 221,
+          "headline": "From Tom Brady to Elmo, who were the celebrities at the World Cup final? - The Athletic - The New York Times",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMimwFBVV95cUxNcndESExFWmJYWVh1dURGZ3dqOE41YWphZGNacWtVZUpGeFEyMzBwVUNCM29jSWNTVUptUzdoRHN3YzBtV2VVWmtGMzZsaUI5VU0zMTMxQ3YzYUhIbElaNzYtVEdGb2VRdEtyeUV4aFZNUVBvM0VlSWhoX25Sa1VtaXBlU202SjVPWTdNelNXdk9zNlc3a3UyWVNWVQ?oc=5\" target=\"_blank\" From Tom Brady to "
+        }
+      ],
+      "ageMin": 221,
+      "_cand": {
+        "key": "rss:from-tom-brady-to-elmo-who-were-the-celebrities-at-the-world",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 2,
+      "verification": {
+        "tier1Count": 2,
+        "tier1Owners": 2,
+        "outletCount": 2,
+        "outlets": [
+          "THR",
+          "The New York Times"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": null,
+        "framing": "plain",
+        "status": "CONFIRMED",
+        "publishable": true
+      },
+      "priority": 65,
+      "signals": {
+        "recency": 9,
+        "corroboration": 18,
+        "status": 25,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 8,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-spice-girls-reunite-mel-cs-wedding",
+      "slug": "spice-girls-reunite-for-mel-c-s-wedding-minus-victoria-beckham",
+      "title": "Spice Girls Reunite for Mel C's Wedding, Minus Victoria Beckham",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "marriage",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "spice-girls-reunite-mel-cs-wedding",
+      "primaryKeyword": "spice girls",
+      "primaryEntity": "Melanie C",
+      "entities": [
+        "Spice Girls",
+        "Melanie Chisholm",
+        "Victoria Beckham"
+      ],
+      "angle": "Spice Girls members reunite for Mel C's wedding, though Victoria Beckham is absent.",
+      "tmdbType": "movie",
+      "source": "gnews:Entertainment Weekly",
+      "sources": [
+        {
+          "outlet": "Entertainment Weekly",
+          "tier": 6,
+          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQSWE1SDBEMnRGVDBRNTk4Tkt2N2U3WjBnY2hoUzIyeWtGQzRMSXppRE1CLW5mZTEyRzZwZ19pZEozQlRESnBGTDBPcGlqSHVCZklMcjUzb0xLWURZQkM1b2V0dTJnWWpONW4wdTUxaEgyOFV3SEc2alF1VkxYVVI3TUZPSWlPYU9WVndtNW1B?oc=5",
+          "ageMin": 98,
+          "headline": "Spice Girls reunite — minus Victoria Beckham — at Mel C’s wedding to model Chris Dingwall - Entertainment Weekly",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxQSWE1SDBEMnRGVDBRNTk4Tkt2N2U3WjBnY2hoUzIyeWtGQzRMSXppRE1CLW5mZTEyRzZwZ19pZEozQlRESnBGTDBPcGlqSHVCZklMcjUzb0xLWURZQkM1b2V0dTJnWWpONW4wdTUxaEgyOFV3SEc2alF1VkxYVVI3TUZPSWlPYU9WVndtNW1B?oc=5\" target=\"_blank\" Spice Girls reunite — minus Victoria"
+        }
+      ],
+      "ageMin": 98,
+      "_cand": {
+        "key": "rss:spice-girls-reunite-minus-victoria-beckham-at-mel-c-s-weddin",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "Entertainment Weekly"
+        ],
+        "maxTier": 6,
+        "sensitivity": "normal",
+        "attribution": "Entertainment Weekly",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 52,
+      "signals": {
+        "recency": 16,
+        "corroboration": 10,
+        "status": 18,
+        "type": 8,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
         "trending": 0,
         "spice": 0,
         "softTv": 0
@@ -949,150 +1281,133 @@
       "tierClass": "C"
     },
     {
-      "id": "news-tom-cruise-2026-world-cup-final-appearance",
-      "slug": "tom-cruise-and-half-of-hollywood-light-up-2026-world-cup-final-while-t",
-      "title": "Tom Cruise and Half of Hollywood Light Up 2026 World Cup Final While Trump Is Booed",
+      "id": "news-the-hu-grey-hun-official-video",
+      "slug": "the-hu-share-grey-hun-official-video",
+      "title": "THE HU SHARE “GREY HUN” OFFICIAL VIDEO",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
-      "eventType": "other",
+      "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "tom-cruise-2026-world-cup-final-appearance",
-      "primaryKeyword": "tom cruise world cup",
-      "primaryEntity": "Tom Cruise",
+      "tier": "popular",
+      "eventSlug": "the-hu-grey-hun-official-video",
+      "primaryKeyword": "The Hu Grey Hun video",
+      "primaryEntity": "The Hunger Games: Catching Fire",
       "entities": [
-        "FIFA World Cup"
+        "The Hu",
+        "Grey Hun"
       ],
-      "angle": "Tom Cruise makes a high-profile appearance at the 2026 FIFA World Cup Final.",
+      "angle": "Mongolian rock band The Hu release official video for 'Grey Hun'.",
       "tmdbType": "movie",
-      "source": "rss:Variety",
+      "source": "gnews:rocknloadmag.com",
       "sources": [
         {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/sports/news/tom-cruise-2026-world-cup-final-hollywood-jason-sudeikis-justin-bieber-1236816132/",
-          "ageMin": 410,
-          "headline": "Tom Cruise and Half of Hollywood Light Up 2026 World Cup Final While Trump Is Booed",
-          "summary": "The 2026 FIFA World Cup has smashed ratings records in the U.S. and around the world, owing to its unique mix of star power — Lionel Messi, Cristiano Ronaldo and Neymar performing in perhaps their final World Cup matches, joined by younger stars Kylian Mbappe, Erling Haaland and Lamine Yamal — a North American setting [ ]"
-        },
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/tom-cruise-world-cup-final-celebrate-tournament-football-1236997840/",
-          "ageMin": 465,
-          "headline": "Tom Cruise Makes Appearance At World Cup Final To Celebrate A Tournament That Brought The World Together : This Is Unity This Is Greatness",
-          "summary": "Tom Cruise made a guest appearance during the pre-show for the 2026 FIFA World Cup final. Ahead of the matchup between Spain and Argentina to find out who becomes the soccer champion, the Digger star took the stage to deliver some encouraging words. More than 30 days ago, 48 nations began a journey, Cruise said. [ ]"
+          "outlet": "rocknloadmag.com",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1aZjZCMHUzSjBqZ1E3WURRc0NkdFRCTmFscGVSbWhUeENBU1lkUWVvT3MxVzhhOXNCSm1zRXJyZVdjWm91aWVqekVtRE5ycXJVeDBWLXZ6a2h3UE0xZGdwTElCbmNEM1p3VldXa05jbw?oc=5",
+          "ageMin": 171,
+          "headline": "THE HU SHARE “GREY HUN” OFFICIAL VIDEO - rocknloadmag.com",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMib0FVX3lxTE1aZjZCMHUzSjBqZ1E3WURRc0NkdFRCTmFscGVSbWhUeENBU1lkUWVvT3MxVzhhOXNCSm1zRXJyZVdjWm91aWVqekVtRE5ycXJVeDBWLXZ6a2h3UE0xZGdwTElCbmNEM1p3VldXa05jbw?oc=5\" target=\"_blank\" THE HU SHARE “GREY HUN” OFFICIAL VIDEO /a nbsp; nbsp; font color=\"#6f6f6f\" roc"
         }
       ],
-      "ageMin": 410,
+      "ageMin": 171,
       "_cand": {
-        "key": "rss:tom-cruise-and-half-of-hollywood-light-up-2026-world-cup-fin",
+        "key": "rss:the-hu-share-grey-hun-official-video-rocknloadmag-com",
         "popularity": 0,
-        "kind": "rss-news"
+        "kind": "gnews"
       },
-      "corroborationCount": 2,
+      "corroborationCount": 1,
       "verification": {
-        "tier1Count": 2,
-        "tier1Owners": 1,
-        "outletCount": 2,
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
         "outlets": [
-          "Variety",
-          "Deadline"
+          "rocknloadmag.com"
         ],
-        "maxTier": 7,
+        "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "Variety",
+        "attribution": "rocknloadmag.com",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 53,
+      "priority": 51,
       "signals": {
-        "recency": 4,
-        "corroboration": 18,
+        "recency": 16,
+        "corroboration": 8,
         "status": 18,
-        "type": 5,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
         "big": 0,
-        "trending": 8,
+        "trending": 0,
         "spice": 0,
         "softTv": 0
       },
       "tierClass": "C"
     },
     {
-      "id": "news-celebrity-sightings-fifa-world-cup-final-2026",
-      "slug": "all-the-stars-at-the-2026-fifa-world-cup-final",
-      "title": "All the Stars at the 2026 FIFA World Cup Final",
+      "id": "news-celeb-weddings-2026-melanie-chisholm",
+      "slug": "melanie-chisholm-and-chris-dingwall-among-celeb-weddings-of-2026",
+      "title": "Melanie Chisholm and Chris Dingwall Among Celeb Weddings of 2026",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
-      "eventType": "other",
+      "eventType": "marriage",
       "sensitivity": "normal",
-      "eventSlug": "celebrity-sightings-fifa-world-cup-final-2026",
-      "primaryKeyword": "celebrities world cup final",
-      "primaryEntity": "FIFA World Cup Final",
+      "eventSlug": "celeb-weddings-2026-melanie-chisholm",
+      "primaryKeyword": "Melanie Chisholm wedding",
+      "primaryEntity": "Melanie C",
       "entities": [
-        "Brad Pitt",
-        "Tom Cruise",
-        "David Beckham"
+        "Melanie Chisholm",
+        "Chris Dingwall"
       ],
-      "angle": "Highlighting the presence of major Hollywood stars and athletes at the 2026 FIFA World Cup Final.",
+      "angle": "Melanie Chisholm is among the celebrities who tied the knot in 2026.",
       "tmdbType": "movie",
-      "source": "gnews:Harper's BAZAAR",
+      "source": "gnews:Us Weekly",
       "sources": [
         {
-          "outlet": "Harper's BAZAAR",
+          "outlet": "Us Weekly",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPQjFabGRlNVhiVmxuTFFJTU5UOUNnTU5MajV1TlNKaGNpQ0l4MEUzUW5zSzRTRGs3ckdXNEtPcnpMMzBKVWRmWDhRcENFUzI1QUwwSUhVOG9lVGJka3ZhcGZTdXNMSDlUTV8yYVV0ckpEU1JtejBzcDJ4bVM4OFRsbl9zUHlaaEpnQnJGS19PTkhrakxrbDhCV2hiWm1FbmNsRnREdmlfMklldw?oc=5",
-          "ageMin": 543,
-          "headline": "All the Stars at the 2026 FIFA World Cup Final - Harper's BAZAAR",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxPQjFabGRlNVhiVmxuTFFJTU5UOUNnTU5MajV1TlNKaGNpQ0l4MEUzUW5zSzRTRGs3ckdXNEtPcnpMMzBKVWRmWDhRcENFUzI1QUwwSUhVOG9lVGJka3ZhcGZTdXNMSDlUTV8yYVV0ckpEU1JtejBzcDJ4bVM4OFRsbl9zUHlaaEpnQnJGS19PTkhrakxrbDhCV2hiWm1FbmNsRnREdmlfMklldw?oc=5\" target=\"_blank"
-        },
-        {
-          "outlet": "Fox News",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPU0RHMnBGNjl6c25xN3R1SUk4bDFhTjIyanpaS0ZlWkhkYXpKZGlGQ0VkTTl5eEtGTDh5T3RBcUZmckdfYlpKZDdiSEVvM1d0WVdIZGZKTWZGc0ZTLTgySmp4bUJEeXhraHVYN3JkOThfR1dVcE5CaGEtczFybUhhdUwzaVVpb2hTRmJnTEdxT1djQjN4U3kybGhqT2I2akhNVkVpUmJLUVptb1FocUVJUmJuWG5xRGMwS0h5SkpMZ3ZYUHE1Vm14ZHp30gHPAUFVX3lxTE91ZHpwWnlqTldWOF9RcUp1UnFkck5GbnhUQm5ZWFhJOTBCOUpyMmRUUmJJMGhrd2NqZG9nZ0hrQ280R1lGb3htTndnUFlDcEZfXzdtSDh0OEpsYVVjNGZMWGxNRVU4TW9PVTJhU0o3MVdyRVdic1hFNnRtMUJRMXQ4SHJPajhpSWU0SEJmcGQ2OWQzTWh0TlVBd0hJam1zOVkyQXdtWTBicVByZUhvZGNrUzhOTjI2Y3I0dFpsVUIwYVBTOW1mZkE5UC01Nm1fRQ?oc=5",
-          "ageMin": 546,
-          "headline": "Brad Pitt, Tom Cruise, David Beckham lead star-studded celebrity sightings at 2026 FIFA World Cup - Fox News",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiygFBVV95cUxPU0RHMnBGNjl6c25xN3R1SUk4bDFhTjIyanpaS0ZlWkhkYXpKZGlGQ0VkTTl5eEtGTDh5T3RBcUZmckdfYlpKZDdiSEVvM1d0WVdIZGZKTWZGc0ZTLTgySmp4bUJEeXhraHVYN3JkOThfR1dVcE5CaGEtczFybUhhdUwzaVVpb2hTRmJnTEdxT1djQjN4U3kybGhqT2I2akhNVkVpUmJLUVptb1FocUVJUmJuWG5xRGMwS0h"
+          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOQlZDQWppQlJaSlRmazNMN1dwejhnMXlIRWpDLTRDT1o1X3E2RHZrampZa2xuTExfVENQVm1sV2JFd1Vac2RSV0ROSGJsb0lLSHlDY0JGN2NhRm5Qc2Z1SG42MEFTY2pYUFE2d3N4SzFQRHM2TU5JMDZZSW5BVGRMaldCU0dURjlZS09nRmNyQy10UlhJbGVZQl82SkJsamNMandEMXIyWDNsRE1jZUlB?oc=5",
+          "ageMin": 141,
+          "headline": "Celeb Weddings of 2026: Melanie Chisholm and Chris Dingwall, More Stars Who Tied the Knot This Year - Us Weekly",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxOQlZDQWppQlJaSlRmazNMN1dwejhnMXlIRWpDLTRDT1o1X3E2RHZrampZa2xuTExfVENQVm1sV2JFd1Vac2RSV0ROSGJsb0lLSHlDY0JGN2NhRm5Qc2Z1SG42MEFTY2pYUFE2d3N4SzFQRHM2TU5JMDZZSW5BVGRMaldCU0dURjlZS09nRmNyQy10UlhJbGVZQl82SkJsamNMandEMXIyWDNsRE1jZUlB?oc=5\" target=\""
         }
       ],
-      "ageMin": 543,
+      "ageMin": 141,
       "_cand": {
-        "key": "rss:all-the-stars-at-the-2026-fifa-world-cup-final-harper-s-baza",
+        "key": "rss:celeb-weddings-of-2026-melanie-chisholm-and-chris-dingwall-m",
         "popularity": 0,
         "kind": "gnews"
       },
-      "corroborationCount": 2,
+      "corroborationCount": 1,
       "verification": {
         "tier1Count": 0,
         "tier1Owners": 0,
-        "outletCount": 2,
+        "outletCount": 1,
         "outlets": [
-          "Harper's BAZAAR",
-          "Fox News"
+          "Us Weekly"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "multiple outlets",
+        "attribution": "Us Weekly",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 49,
+      "priority": 50,
       "signals": {
-        "recency": 4,
-        "corroboration": 14,
+        "recency": 16,
+        "corroboration": 8,
         "status": 18,
-        "type": 5,
+        "type": 8,
         "pop": 0,
         "breakout": 0,
         "big": 0,
-        "trending": 8,
+        "trending": 0,
         "spice": 0,
         "softTv": 0
       },
