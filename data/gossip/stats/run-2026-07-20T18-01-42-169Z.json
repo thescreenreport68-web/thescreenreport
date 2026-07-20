@@ -1,0 +1,137 @@
+{
+  "ts": "2026-07-20T18:01:42.169Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "ricky-gervais-on-offended-audiences-be-offended-if-you-want-it-makes-it-fun",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [
+        "metaDescription-soft:logged"
+      ],
+      "headline": [
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 0
+    }
+  ],
+  "topics": 2,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 1,
+  "costUSD": 0.020202,
+  "costPerPublished": 0.020202,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 8,
+      "in": 22075,
+      "out": 1853,
+      "usd": 0.011255000000000001
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 1852,
+      "out": 307,
+      "usd": 0.000276192
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 6,
+      "in": 22328,
+      "out": 6809,
+      "usd": 0.007525911999999999
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 8,
+      "in": 8198,
+      "out": 812,
+      "usd": 0.0011446
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2395,
+      "out": 180,
+      "usd": 0.0011685,
+      "ms": 1572
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1852,
+      "out": 307,
+      "usd": 0.00022194,
+      "ms": 28197
+    },
+    "writer": {
+      "calls": 5,
+      "errors": 0,
+      "in": 21462,
+      "out": 6490,
+      "usd": 0.007142859999999999,
+      "ms": 270315
+    },
+    "verify": {
+      "calls": 7,
+      "errors": 0,
+      "in": 19680,
+      "out": 1673,
+      "usd": 0.0100865,
+      "ms": 11229
+    },
+    "judge": {
+      "calls": 2,
+      "errors": 0,
+      "in": 4512,
+      "out": 434,
+      "usd": 0.0006248,
+      "ms": 2479
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 866,
+      "out": 319,
+      "usd": 0.00030764,
+      "ms": 17699
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 396,
+      "out": 109,
+      "usd": 0.0000832,
+      "ms": 704
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 221,
+      "out": 49,
+      "usd": 0.000041700000000000004,
+      "ms": 496
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2086,
+      "out": 91,
+      "usd": 0.00024500000000000005,
+      "ms": 2645
+    },
+    "linker": {
+      "calls": 3,
+      "errors": 0,
+      "in": 983,
+      "out": 129,
+      "usd": 0.0001499,
+      "ms": 1661
+    }
+  }
+}
