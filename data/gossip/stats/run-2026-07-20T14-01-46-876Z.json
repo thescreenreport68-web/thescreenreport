@@ -1,0 +1,149 @@
+{
+  "ts": "2026-07-20T14:01:46.876Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "desiigner-arrested-on-domestic-violence-charge-in-south-carolina",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [
+        "metaDescription-soft:logged",
+        "lede-entity-missing:logged",
+        "geo-no-number:logged",
+        "absence-claim:logged",
+        "no-sources-block:logged"
+      ],
+      "headline": [
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 1
+    }
+  ],
+  "topics": 2,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 1,
+  "costUSD": 0.008429,
+  "costPerPublished": 0.008429,
+  "byModel": {
+    "deepseek/deepseek-v3.2": {
+      "calls": 7,
+      "in": 16946,
+      "out": 4008,
+      "usd": 0.0034154023500000004
+    },
+    "google/gemini-2.5-flash": {
+      "calls": 7,
+      "in": 10739,
+      "out": 463,
+      "usd": 0.0043792
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 624,
+      "out": 285,
+      "usd": 0.000102852
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 5,
+      "in": 3432,
+      "out": 471,
+      "usd": 0.0005316
+    }
+  },
+  "byRole": {
+    "dedup": {
+      "calls": 1,
+      "errors": 0,
+      "in": 288,
+      "out": 19,
+      "usd": 0.00007270000000000002,
+      "ms": 2687
+    },
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1949,
+      "out": 188,
+      "usd": 0.0010546999999999998,
+      "ms": 1538
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 624,
+      "out": 285,
+      "usd": 0.00010745999999999999,
+      "ms": 5868
+    },
+    "writer": {
+      "calls": 5,
+      "errors": 0,
+      "in": 16188,
+      "out": 3700,
+      "usd": 0.0049812400000000005,
+      "ms": 56703
+    },
+    "verify": {
+      "calls": 6,
+      "errors": 0,
+      "in": 8790,
+      "out": 275,
+      "usd": 0.0033244999999999993,
+      "ms": 29275
+    },
+    "judge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1054,
+      "out": 165,
+      "usd": 0.00017140000000000002,
+      "ms": 1148
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 470,
+      "out": 289,
+      "usd": 0.00020636000000000002,
+      "ms": 10439
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 374,
+      "out": 132,
+      "usd": 0.0000902,
+      "ms": 956
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 159,
+      "out": 51,
+      "usd": 0.0000363,
+      "ms": 596
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1562,
+      "out": 97,
+      "usd": 0.00019500000000000002,
+      "ms": 2134
+    },
+    "linker": {
+      "calls": 1,
+      "errors": 0,
+      "in": 283,
+      "out": 26,
+      "usd": 0.000038700000000000006,
+      "ms": 494
+    }
+  }
+}
