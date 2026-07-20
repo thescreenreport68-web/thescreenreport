@@ -1,0 +1,143 @@
+{
+  "ts": "2026-07-20T12:01:37.746Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "heather-locklear-and-lorenzo-lamas-rekindle-romance-decades-after-first-mee",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [],
+      "headline": [
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 1
+    }
+  ],
+  "topics": 2,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 1,
+  "blocked": 0,
+  "costUSD": 0.016899,
+  "costPerPublished": 0.016899,
+  "byModel": {
+    "deepseek/deepseek-v3.2": {
+      "calls": 12,
+      "in": 20175,
+      "out": 6689,
+      "usd": 0.00686098895
+    },
+    "google/gemini-2.5-flash": {
+      "calls": 9,
+      "in": 16685,
+      "out": 1455,
+      "usd": 0.008643
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 981,
+      "out": 980,
+      "usd": 0.00041174
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 8,
+      "in": 6049,
+      "out": 945,
+      "usd": 0.0009828999999999999
+    }
+  },
+  "byRole": {
+    "dedup": {
+      "calls": 5,
+      "errors": 0,
+      "in": 1521,
+      "out": 66,
+      "usd": 0.00037227000000000007,
+      "ms": 11106
+    },
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2388,
+      "out": 201,
+      "usd": 0.0012189000000000002,
+      "ms": 1357
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 981,
+      "out": 980,
+      "usd": 0.00026469,
+      "ms": 11033
+    },
+    "writer": {
+      "calls": 6,
+      "errors": 0,
+      "in": 18084,
+      "out": 6328,
+      "usd": 0.006310840000000001,
+      "ms": 285927
+    },
+    "verify": {
+      "calls": 8,
+      "errors": 0,
+      "in": 14297,
+      "out": 1254,
+      "usd": 0.0074240999999999994,
+      "ms": 19469
+    },
+    "judge": {
+      "calls": 2,
+      "errors": 0,
+      "in": 2517,
+      "out": 657,
+      "usd": 0.0005145,
+      "ms": 3023
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 570,
+      "out": 295,
+      "usd": 0.00023140000000000001,
+      "ms": 21513
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 378,
+      "out": 60,
+      "usd": 0.0000618,
+      "ms": 657
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 190,
+      "out": 54,
+      "usd": 0.000040600000000000004,
+      "ms": 514
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2094,
+      "out": 94,
+      "usd": 0.000247,
+      "ms": 1428
+    },
+    "linker": {
+      "calls": 3,
+      "errors": 0,
+      "in": 870,
+      "out": 80,
+      "usd": 0.000119,
+      "ms": 1214
+    }
+  }
+}
