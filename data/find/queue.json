@@ -1,40 +1,312 @@
 {
-  "runId": "run-2026-07-20T12-01-38",
-  "builtAt": "2026-07-20T12:03:22.443Z",
-  "count": 15,
+  "runId": "run-2026-07-20T14-01-35",
+  "builtAt": "2026-07-20T14:03:29.327Z",
+  "count": 17,
   "topics": [
     {
-      "id": "trailer-look-back-live-action-movie-teaser-release",
-      "slug": "another-teaser-for-look-back-live-action-movie-offers-a-heartfelt-look",
-      "title": "Another Teaser for LOOK BACK Live-Action Movie Offers a Heartfelt Look at an Unforgettable Friendship",
-      "contentType": "trailer",
-      "formatTag": "trailer",
-      "category": "movies",
-      "subcategory": "trailers",
-      "eventType": "trailer",
+      "id": "news-the-portrait-of-a-lady-casting",
+      "slug": "nell-tiger-free-gemma-arterton-bill-nighy-join-henry-james-novel-adapt",
+      "title": "Nell Tiger Free, Gemma Arterton, Bill Nighy Join Henry James Novel Adaptation",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "look-back-live-action-movie-teaser-release",
-      "primaryKeyword": "LOOK BACK",
-      "primaryEntity": "Look Back",
+      "eventSlug": "the-portrait-of-a-lady-casting",
+      "primaryKeyword": "the portrait of a lady adaptation",
+      "primaryEntity": "The Portrait of a Lady",
       "entities": [
-        "LOOK BACK"
+        "Nell Tiger Free",
+        "Gemma Arterton",
+        "Bill Nighy"
       ],
-      "angle": "New teaser released for the live-action movie adaptation of 'LOOK BACK'.",
+      "angle": "Ensemble cast announced for new PBS Masterpiece, BBC, and Fox adaptation of Henry James' novel.",
       "tmdbType": "movie",
-      "source": "gnews:GeekTyrant",
+      "source": "rss:Deadline",
       "sources": [
         {
-          "outlet": "GeekTyrant",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPQU1JNW1qUHJlMlI1Tk00YzBac3dCNDhBeGhIdzZrV2ZQWmFJOTIyVTBuSUpaLW9QZXNKRmJGZXJndUg1OGRpaVktbHhUbVVFQXhVRU9XX2xTdDVlY21ESW9UNjNzSmtoYnVlOEYtYk85WG83TEl6bHdEb2dTTTBTU29BYjJNT3J5ZWg4Rm5EWjN1bHRzV1h1TzU0WHgxMDJjMEhVakFwZkNNVW01SWJfNnZjajBpbFVlYi1xTW1MLUlvOFk0NU51TQ?oc=5",
-          "ageMin": 60,
-          "headline": "Another Teaser for LOOK BACK Live-Action Movie Offers a Heartfelt Look at an Unforgettable Friendship - GeekTyrant",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiyAFBVV95cUxPQU1JNW1qUHJlMlI1Tk00YzBac3dCNDhBeGhIdzZrV2ZQWmFJOTIyVTBuSUpaLW9QZXNKRmJGZXJndUg1OGRpaVktbHhUbVVFQXhVRU9XX2xTdDVlY21ESW9UNjNzSmtoYnVlOEYtYk85WG83TEl6bHdEb2dTTTBTU29BYjJNT3J5ZWg4Rm5EWjN1bHRzV1h1TzU0WHgxMDJjMEhVakFwZkNNVW01SWJfNnZjajBpbFVlYi1"
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/pbs-bbc-adapting-portrait-of-a-lady-henry-james-bill-nighy-1236998240/",
+          "ageMin": 2,
+          "headline": "The Portrait Of A Lady : PBS Masterpiece, BBC Fox Adapting Henry James Novel With Ensemble Cast Featuring Nell Tiger Free, Gemma Arterton, Bill Nighy, Jim Sturgess Miranda Richardson",
+          "summary": "Nell Tiger Free, Gemma Arterton, Jim Sturgess, Bill Nighy and Miranda Richardson are coming together for a PBS Masterpiece, BBC and Fox TV adaptation of Henry James’ iconic novel The Portrait of a Lady. The high-end series from Rebecca Lenkiewicz (Colette, The Salt Path, She Said) and director Aisling Walsh (Room at the Top, Miss [ ]"
         }
       ],
-      "ageMin": 60,
+      "ageMin": 2,
       "_cand": {
-        "key": "rss:another-teaser-for-look-back-live-action-movie-offers-a-hear",
+        "key": "rss:the-portrait-of-a-lady-pbs-masterpiece-bbc-fox-adapting-henr",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 92,
+      "signals": {
+        "recency": 30,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-roku-casting",
+      "slug": "ayesha-curry-joey-graziadei-to-star-in-roku-holiday-rom-coms",
+      "title": "Ayesha Curry, Joey Graziadei to Star in Roku Holiday Rom-Coms",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "roku-casting",
+      "primaryKeyword": "roku holiday romcoms",
+      "primaryEntity": "Roku",
+      "entities": [
+        "Ayesha Curry",
+        "Matthew Daddario",
+        "Jamie Chung",
+        "Joey Graziadei"
+      ],
+      "angle": "Roku announces holiday rom-coms with a star-studded cast including Ayesha Curry and Joey Graziadei.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/tv/tv-news/roku-holiday-romantic-comedies-ayesha-curry-joey-graziadei-1236649016/",
+          "ageMin": 2,
+          "headline": "Ayesha Curry, Matthew Daddario, Joey Graziadei and Jamie Chung to Star in Roku’s Holiday Rom-Coms",
+          "summary": "Roku confirmed two new original films for its seasonal roster: ‘Second Chance Holiday’ starring Curry and Daddario, and ‘The Holiday Spark’ starring Chung opposite Graziadei in his first feature film role."
+        }
+      ],
+      "ageMin": 2,
+      "_cand": {
+        "key": "rss:ayesha-curry-matthew-daddario-joey-graziadei-and-jamie-chung",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 92,
+      "signals": {
+        "recency": 30,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-the-portrait-of-a-lady-adaptation-casting",
+      "slug": "bill-nighy-gemma-arterton-to-star-in-pbs-bbc-portrait-of-a-lady-adapta",
+      "title": "Bill Nighy, Gemma Arterton to Star in PBS/BBC 'Portrait of a Lady' Adaptation",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "the-portrait-of-a-lady-adaptation-casting",
+      "primaryKeyword": "The Portrait of a Lady adaptation",
+      "primaryEntity": "The Portrait of a Lady",
+      "entities": [
+        "The Portrait of a Lady (TV series)",
+        "Bill Nighy",
+        "Gemma Arterton",
+        "Nell Tiger Free"
+      ],
+      "angle": "Key cast members announced for a new PBS and BBC adaptation of Henry James' novel.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/tv/global/bill-nighy-gemma-arterton-nell-tiger-free-the-portrait-of-a-lady-1236816416/",
+          "ageMin": 2,
+          "headline": "Bill Nighy, Gemma Arterton, Nell Tiger Free Set for PBS, BBC Adaptation of Henry James The Portrait Of A Lady",
+          "summary": "Henry James’ classic novel “The Portrait of a Lady” is set to be adapted for Masterpiece on PBS and the BBC, starring Bill Nighy, Gemma Arterton and Nell Tiger Free. “Game of Thrones” star Free will lead the six-episode limited series as James’ New World ingénue Isabel Archer, who leaves the States for Europe in [ ]"
+        }
+      ],
+      "ageMin": 2,
+      "_cand": {
+        "key": "rss:bill-nighy-gemma-arterton-nell-tiger-free-set-for-pbs-bbc-ad",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 92,
+      "signals": {
+        "recency": 30,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-making-of-spider-man-brand-new-day",
+      "slug": "if-people-get-mad-i-can-t-control-that-the-making-of-spider-man-brand-",
+      "title": "‘If People Get Mad, I Can’t Control That’: The Making of ‘Spider-Man: Brand New Day’",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "making-of-spider-man-brand-new-day",
+      "primaryKeyword": "spider-man brand new day",
+      "primaryEntity": "Spider-Man: Brand New Day",
+      "entities": [
+        "Rolling Stone"
+      ],
+      "angle": "Behind-the-scenes look at the making of 'Spider-Man: Brand New Day'.",
+      "tmdbType": "movie",
+      "source": "gnews:Rolling Stone",
+      "sources": [
+        {
+          "outlet": "Rolling Stone",
+          "tier": 7,
+          "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQeVNKQmpSdnUzb3hHQ0o3Z2ozbndPUDBHbTlfLVgwSHg2RGRkVGc2X0Y1YXFPQzdRSTJmUm4tWlUwbWE2N08yZmpJc3MzcEFRQ2RLQmFEOGNjdHByTS1WRjFIdU1KMDY2RWdEb2Uxb2hnS2JiYmZrSjc1cFJ4amt3M0ZVTGtndzZxdy1jRkdQZFBCdFQzcUNPOVFVQVcxdVQxb3N3M19qZWg5SmRFSW11M01iZ1JYVkxDVHBOQ19wTGVOdw?oc=5",
+          "ageMin": 62,
+          "headline": "‘If People Get Mad, I Can’t Control That’: The Making of ‘Spider-Man: Brand New Day’ - Rolling Stone",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiwgFBVV95cUxQeVNKQmpSdnUzb3hHQ0o3Z2ozbndPUDBHbTlfLVgwSHg2RGRkVGc2X0Y1YXFPQzdRSTJmUm4tWlUwbWE2N08yZmpJc3MzcEFRQ2RLQmFEOGNjdHByTS1WRjFIdU1KMDY2RWdEb2Uxb2hnS2JiYmZrSjc1cFJ4amt3M0ZVTGtndzZxdy1jRkdQZFBCdFQzcUNPOVFVQVcxdVQxb3N3M19qZWg5SmRFSW11M01iZ1JYVkxDVHB"
+        }
+      ],
+      "ageMin": 62,
+      "_cand": {
+        "key": "rss:-if-people-get-mad-i-can-t-control-that-the-making-of-spider",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Rolling Stone"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Rolling Stone",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 75,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 12,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "radar": 12
+      },
+      "radarKind": "movie-releasing",
+      "tierClass": "A"
+    },
+    {
+      "id": "news-maigret-season-2-premiere-date",
+      "slug": "masterpiece-series-maigret-sets-season-two-premiere-date-on-pbs",
+      "title": "Masterpiece Series 'Maigret' Sets Season Two Premiere Date on PBS",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "maigret-season-2-premiere-date",
+      "primaryKeyword": "maigret season 2",
+      "primaryEntity": "Maigret",
+      "entities": [
+        "Maigret (TV series)",
+        "Masterpiece",
+        "PBS"
+      ],
+      "angle": "Masterpiece on PBS sets premiere date for 'Maigret' Season 2",
+      "tmdbType": "movie",
+      "source": "gnews:TV Series Finale",
+      "sources": [
+        {
+          "outlet": "TV Series Finale",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQQlhlS09tZ3BoSEoxdHM3SVFuZWxkcVdlYUJQQTktZl9iN3dndUZsOXlvMUFRSlNzZ3l5Nm94Y3FZR3FVSDhpNlJ6aHZLY0c4aFJvbkpvaWozZ0UtSm9xbHkzZ3hJNUtqanNRQXhDTGpIVVF2ZnM2aVhIUUNjRVJPZi1QLWZ0dDNKT1JNTWl2M3ZqQmdGVHRwd2FOUXdkZWZmTUt3dNIBqgFBVV95cUxOVjdiTmdFYmxPQTBaQWloWTlzNW8yR0FzOEgxNGdmUUtFWGpDZGlKLVBrcUoxNEdxb2NiMWhhal9fZlM3MHkxWUlRdnRVdVRIcWdTSThUcF9UZ19zMUVNRUtBUFVGUWJobXcteEhYcnlLU0JmT051RW5GdlVSR21fRUxSU3JnYkdxX2c0OUtJS0hhZFlGb0IwWjZVUlMycjZYbWItTmZzcTFOQQ?oc=5",
+          "ageMin": 28,
+          "headline": "Maigret: Season Two Premiere Date Set for Masterpiece Series on PBS - TV Series Finale",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxQQlhlS09tZ3BoSEoxdHM3SVFuZWxkcVdlYUJQQTktZl9iN3dndUZsOXlvMUFRSlNzZ3l5Nm94Y3FZR3FVSDhpNlJ6aHZLY0c4aFJvbkpvaWozZ0UtSm9xbHkzZ3hJNUtqanNRQXhDTGpIVVF2ZnM2aVhIUUNjRVJPZi1QLWZ0dDNKT1JNTWl2M3ZqQmdGVHRwd2FOUXdkZWZmTUt3dNIBqgFBVV95cUxOVjdiTmdFYmxPQTB"
+        }
+      ],
+      "ageMin": 28,
+      "_cand": {
+        "key": "rss:maigret-season-two-premiere-date-set-for-masterpiece-series-",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -44,21 +316,88 @@
         "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "GeekTyrant"
+          "TV Series Finale"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "GeekTyrant",
+        "attribution": "TV Series Finale",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 89,
+      "priority": 77,
       "signals": {
         "recency": 24,
         "corroboration": 8,
         "status": 18,
-        "type": 15,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-danny-boyle-ink-netflix-deal",
+      "slug": "netflix-acquires-danny-boyle-s-ink-ahead-of-venice-premiere",
+      "title": "Netflix Acquires Danny Boyle's 'Ink' Ahead of Venice Premiere",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "danny-boyle-ink-netflix-deal",
+      "primaryKeyword": "Danny Boyle film",
+      "primaryEntity": "Ink (film)",
+      "entities": [
+        "Netflix",
+        "Danny Boyle",
+        "Venice Film Festival"
+      ],
+      "angle": "Netflix makes a major pre-premiere acquisition of Danny Boyle's new film.",
+      "tmdbType": "movie",
+      "source": "rss:IndieWire",
+      "sources": [
+        {
+          "outlet": "IndieWire",
+          "tier": 7,
+          "url": "https://www.indiewire.com/news/breaking-news/danny-boyle-ink-netflix-venice-sale-1235206128/",
+          "ageMin": 3801,
+          "headline": "Danny Boyle s Ink Sells to Netflix in First Big Sale (Way) Ahead of Venice Premiere",
+          "summary": "The film about Larry Lamb, Rupert Murdoch, and the birth of The Sun tabloid is the opening night film at the Biennale."
+        }
+      ],
+      "ageMin": 3801,
+      "_cand": {
+        "key": "rss:danny-boyle-s-ink-sells-to-netflix-in-first-big-sale-way-ahe",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "IndieWire"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "IndieWire",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 64,
+      "signals": {
+        "recency": 1,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
         "big": 24,
@@ -69,18 +408,236 @@
       "tierClass": "B"
     },
     {
-      "id": "news-hollywood-bowl-wes-anderson-tribute",
-      "slug": "jackson-browne-beck-bill-murray-celebrate-wes-anderson-films-at-hollyw",
-      "title": "Jackson Browne, Beck, Bill Murray Celebrate Wes Anderson Films at Hollywood Bowl",
+      "id": "music-news-liam-gallagher-world-cup-halftime-show-bad-trip",
+      "slug": "liam-gallagher-says-world-cup-halftime-show-was-like-a-bad-trip",
+      "title": "Liam Gallagher Says World Cup Halftime Show Was Like a Bad Trip",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "liam-gallagher-world-cup-halftime-show-bad-trip",
+      "primaryKeyword": "Liam Gallagher World Cup halftime show",
+      "primaryEntity": "Liam Gallagher",
+      "entities": [
+        "World Cup"
+      ],
+      "angle": "Liam Gallagher describes the FIFA World Cup halftime show as a 'bad trip'.",
+      "tmdbType": "movie",
+      "source": "rss:Rolling Stone",
+      "sources": [
+        {
+          "outlet": "Rolling Stone",
+          "tier": 7,
+          "url": "https://www.rollingstone.com/music/music-news/liam-gallagher-world-cup-halftime-show-bad-trip-fifa-1235595853/",
+          "ageMin": 354,
+          "headline": "Liam Gallagher Says World Cup Halftime Show Was Like a Bad Trip",
+          "summary": "Madonna, Justin Bieber, Shakira, and more took the stage midway through the final game between Spain and Argentina"
+        },
+        {
+          "outlet": "Billboard",
+          "tier": 7,
+          "url": "https://www.billboard.com/music/music-news/liam-gallagher-fifa-world-cup-halftime-show-1236297975/",
+          "ageMin": 445,
+          "headline": "Liam Gallagher Says FIFA’s World Cup Halftime Show Was ‘Like a Bad Trip’",
+          "summary": "The star-studded show marked the first halftime performance staged during a FIFA World Cup final."
+        }
+      ],
+      "ageMin": 354,
+      "_cand": {
+        "key": "rss:liam-gallagher-says-world-cup-halftime-show-was-like-a-bad-t",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 2,
+      "verification": {
+        "tier1Count": 2,
+        "tier1Owners": 1,
+        "outletCount": 2,
+        "outlets": [
+          "Rolling Stone",
+          "Billboard"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Rolling Stone",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 58,
+      "signals": {
+        "recency": 9,
+        "corroboration": 18,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 8,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-princess-diaries-3-story-breakthrough",
+      "slug": "anne-hathaway-reveals-princess-diaries-3-update-story-breakthrough",
+      "title": "Anne Hathaway Reveals Princess Diaries 3 Update: Story Breakthrough",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
+      "eventSlug": "princess-diaries-3-story-breakthrough",
+      "primaryKeyword": "Princess Diaries 3",
+      "primaryEntity": "Princess Diaries 3",
+      "entities": [
+        "One Day",
+        "Anne Hathaway"
+      ],
+      "angle": "Anne Hathaway provides an update on the development of Princess Diaries 3.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/anne-hathaway-princess-diaries-3-update-1236651735/",
+          "ageMin": 1117,
+          "headline": "Anne Hathaway Reveals Princess Diaries 3 Update: We Had a Story Breakthrough",
+          "summary": "The Oscar winner played the beloved Mia Thermopolis in the 2001 and 2004 films."
+        }
+      ],
+      "ageMin": 1117,
+      "_cand": {
+        "key": "rss:anne-hathaway-reveals-princess-diaries-3-update-we-had-a-sto",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 64,
+      "signals": {
+        "recency": 1,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "music-news-world-cup-final-halftime-show",
+      "slug": "bieber-shakira-madonna-bts-light-up-world-cup-final-halftime",
+      "title": "Bieber, Shakira, Madonna, BTS Light Up World Cup Final Halftime",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "performance",
+      "sensitivity": "normal",
       "tier": "popular",
+      "eventSlug": "world-cup-final-halftime-show",
+      "primaryKeyword": "World Cup Final halftime show",
+      "primaryEntity": "World Cup Final",
+      "entities": [
+        "Justin Bieber",
+        "Shakira",
+        "Madonna",
+        "BTS"
+      ],
+      "angle": "Global music superstars headlined the World Cup Final halftime show.",
+      "tmdbType": "movie",
+      "source": "rss:Rolling Stone",
+      "sources": [
+        {
+          "outlet": "Rolling Stone",
+          "tier": 7,
+          "url": "https://www.rollingstone.com/music/music-news/justin-bieber-bts-shakira-madonna-performance-world-cup-1235594935/",
+          "ageMin": 1041,
+          "headline": "Justin Bieber, Shakira, Madonna, BTS Deliver Electric Halftime Set at World Cup Final",
+          "summary": "Final match between Spain and Argentina at New York New Jersey Stadium was preceded by Post Malone performance"
+        },
+        {
+          "outlet": "Variety Music",
+          "tier": 7,
+          "url": "https://variety.com/2026/music/news/fifa-halftime-madonna-bts-justin-bieber-shakira-1236816110/",
+          "ageMin": 1041,
+          "headline": "Madonna, BTS, Justin Bieber and Shakira Join Forces for Blink-and-You ll-Miss- Em Moments in a Cluster-FIFA of a Halftime Show",
+          "summary": "The FIFA World Cup Final Halftime Show provided an answer to the burning question of how you fit Madonna, BTS, Justin Bieber, Shakira, Burna Boy, Gustavo Dudamel, Chris Martin and the Muppets into a single 11-minute segment: as fleetingly as possible. Although there were reports that the halftime extravaganza would be allowed to go over [ ]"
+        }
+      ],
+      "ageMin": 1041,
+      "_cand": {
+        "key": "rss:justin-bieber-shakira-madonna-bts-deliver-electric-halftime-",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 2,
+      "verification": {
+        "tier1Count": 2,
+        "tier1Owners": 1,
+        "outletCount": 2,
+        "outlets": [
+          "Rolling Stone",
+          "Variety Music"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Rolling Stone",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 51,
+      "signals": {
+        "recency": 1,
+        "corroboration": 18,
+        "status": 18,
+        "type": 6,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 8,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-hollywood-bowl-wes-anderson-tribute",
+      "slug": "jackson-browne-beck-bill-murray-celebrate-wes-anderson-films-at-hollyw",
+      "title": "Jackson Browne, Beck, Bill Murray, Celebrate Wes Anderson Films at Hollywood Bowl",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
       "eventSlug": "hollywood-bowl-wes-anderson-tribute",
-      "primaryKeyword": "wes anderson films",
+      "primaryKeyword": "Wes Anderson tribute",
       "primaryEntity": "Wes Anderson",
       "entities": [
         "BECK",
@@ -88,7 +645,7 @@
         "Beck",
         "Bill Murray"
       ],
-      "angle": "Music and film stars gather to celebrate Wes Anderson's filmography at a special Hollywood Bowl event.",
+      "angle": "Musicians and actor Bill Murray celebrate Wes Anderson's films at a Hollywood Bowl event.",
       "tmdbType": "movie",
       "source": "gnews:US Rocker®",
       "sources": [
@@ -96,12 +653,12 @@
           "outlet": "US Rocker®",
           "tier": 5,
           "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQaWtxYUJHMVVxRlNJM2t3dFZMdzhoNzhuWlhRcDQ4ZC10MW5RWDF3RTVsOGRfZjZCV2M0T2ZsOFhGRkVpQmxONE95NC1SdDJGV2lfSTVDcXNxbjhYYl9sRjhKSzFTM0xsTHNUQ2ZIS2pCckJOSFNCSlNGZHBVWTBtRUtRZ18wU0pjcjhaTDJRMVU2MER4d0lLUDRKOGt0aGc0TjJoMEItSHh2Z2x2UWt2UENzanBiVGs?oc=5",
-          "ageMin": 8,
+          "ageMin": 128,
           "headline": "Jackson Browne, Beck, Bill Murray, Celebrate Wes Anderson Films at Hollywood Bowl - US Rocker®",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMitwFBVV95cUxQaWtxYUJHMVVxRlNJM2t3dFZMdzhoNzhuWlhRcDQ4ZC10MW5RWDF3RTVsOGRfZjZCV2M0T2ZsOFhGRkVpQmxONE95NC1SdDJGV2lfSTVDcXNxbjhYYl9sRjhKSzFTM0xsTHNUQ2ZIS2pCckJOSFNCSlNGZHBVWTBtRUtRZ18wU0pjcjhaTDJRMVU2MER4d0lLUDRKOGt0aGc0TjJoMEItSHh2Z2x2UWt2UENzanBiVGs?oc="
         }
       ],
-      "ageMin": 8,
+      "ageMin": 128,
       "_cand": {
         "key": "rss:jackson-browne-beck-bill-murray-celebrate-wes-anderson-films",
         "popularity": 0,
@@ -122,283 +679,10 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 89,
+      "priority": 59,
       "signals": {
-        "recency": 30,
+        "recency": 16,
         "corroboration": 8,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-princess-diaries-3-announcement",
-      "slug": "anne-hathaway-princess-diaries-3-script-had-a-breakthrough",
-      "title": "Anne Hathaway: 'Princess Diaries 3' Script Had a Breakthrough",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "high",
-      "eventSlug": "princess-diaries-3-announcement",
-      "primaryKeyword": "Princess Diaries 3",
-      "primaryEntity": "Princess Diaries 3",
-      "entities": [
-        "One Day",
-        "Anne Hathaway"
-      ],
-      "angle": "Anne Hathaway provides an update on the development of 'Princess Diaries 3', noting a script breakthrough.",
-      "tmdbType": "movie",
-      "source": "rss:TheWrap",
-      "sources": [
-        {
-          "outlet": "TheWrap",
-          "tier": 7,
-          "url": "https://www.thewrap.com/industry-news/public-policy-legal/shark-tank-star-kevin-oleary-sued-utah-data-center-claims/",
-          "ageMin": 972,
-          "headline": "‘Shark Tank’ Star Kevin O’Leary Sued Over Utah Data Center Claims",
-          "summary": "Fox News is also named in the defamation lawsuit The post ‘Shark Tank’ Star Kevin O’Leary Sued Over Utah Data Center Claims appeared first on TheWrap ."
-        },
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/film/news/anne-hathaway-princess-diaries-3-breakthrough-script-1236816029/",
-          "ageMin": 996,
-          "headline": "Anne Hathaway Says Princess Diaries 3 Had a Story Breakthrough After Having to Start Over With the Script: We are Moving in the Right Direction",
-          "summary": "“Princess Diaries 3” recently had a breakthrough after a scrapped script, Anne Hathaway revealed during an appearance on SiriusXM’s “Radio Andy.” “I’m busy making baby number three, and that has sort of taken the place of knowing when exactly I can make Princess Diaries 3, ” Hathaway said. “I can say I think we had a story [ ]"
-        }
-      ],
-      "ageMin": 972,
-      "_cand": {
-        "key": "rss:-shark-tank-star-kevin-o-leary-sued-over-utah-data-center-cl",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 2,
-      "verification": {
-        "tier1Count": 2,
-        "tier1Owners": 2,
-        "outletCount": 2,
-        "outlets": [
-          "TheWrap",
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": null,
-        "framing": "plain",
-        "status": "CONFIRMED",
-        "publishable": true
-      },
-      "priority": 85,
-      "signals": {
-        "recency": 1,
-        "corroboration": 18,
-        "status": 25,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 8,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "S"
-    },
-    {
-      "id": "news-simon-field-dies",
-      "slug": "simon-field-dies-former-rotterdam-film-festival-head-ica-cinema-direct",
-      "title": "Simon Field Dies: Former Rotterdam Film Festival Head ICA Cinema Director Was 80",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "death",
-      "sensitivity": "high",
-      "eventSlug": "simon-field-dies",
-      "primaryKeyword": "Simon Field death",
-      "primaryEntity": "Simon Field",
-      "entities": [
-        "Rotterdam Film Festival",
-        "ICA Cinema",
-        "Christopher Nolan"
-      ],
-      "angle": "Simon Field, former head of Rotterdam Film Festival and ICA Cinema director, has died at 80.",
-      "tmdbType": "movie",
-      "source": "rss:Deadline",
-      "sources": [
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/simon-field-dies-obituary-rotterdam-ica-london-1236998276/",
-          "ageMin": 56,
-          "headline": "Simon Field Dies: Former Rotterdam Film Festival Head ICA Cinema Director Was 80",
-          "summary": "Simon Field, the pioneering film programmer and champion of filmmakers such as Wang Bing, Apichatpong Weerasethakul, and Christopher Nolan, has died. He was 80. Field died on July 16. The news was confirmed by the veteran film critic Geoff Andrew, who posted an obituary of Field on his blog. Andrew was shortly followed by the [ ]"
-        }
-      ],
-      "ageMin": 56,
-      "_cand": {
-        "key": "rss:simon-field-dies-former-rotterdam-film-festival-head-ica-cin",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Deadline"
-        ],
-        "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "Deadline",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 80,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 12,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "S"
-    },
-    {
-      "id": "trailer-a-quiet-place-trailer",
-      "slug": "a-quiet-place-meets-arachnophobia-in-first-trailer-for-terrifying-new-",
-      "title": "‘A Quiet Place’ Meets ‘Arachnophobia’ in First Trailer for Terrifying New Survival Thriller",
-      "contentType": "trailer",
-      "formatTag": "trailer",
-      "category": "tv",
-      "subcategory": "trailers",
-      "eventType": "trailer",
-      "sensitivity": "normal",
-      "eventSlug": "a-quiet-place-trailer",
-      "primaryKeyword": "survival thriller trailer",
-      "primaryEntity": "A Quiet Place",
-      "entities": [
-        "Arachnophobia"
-      ],
-      "angle": "First trailer released for a new survival thriller.",
-      "tmdbType": "movie",
-      "source": "gnews:The Movie Blog",
-      "sources": [
-        {
-          "outlet": "The Movie Blog",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9CNENOTzJlMGVObGozdGZZazNjcFBnUmJCSzhmZlBpWGxGMENfR3dzSm82ekRHM2NpNVJBWm9vWWtDTzZHVkxrNENxd1gtZENfbVQ4ZFVQM1F2MllOMWlNMVNVWmFNTlI5ak14eUY1VmVDZ2I5QzRUVFdLOA?oc=5",
-          "ageMin": 706,
-          "headline": "Where’s Wanda? Season 2 Premiere Date and First Look Revealed - The Movie Blog",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMie0FVX3lxTE9CNENOTzJlMGVObGozdGZZazNjcFBnUmJCSzhmZlBpWGxGMENfR3dzSm82ekRHM2NpNVJBWm9vWWtDTzZHVkxrNENxd1gtZENfbVQ4ZFVQM1F2MllOMWlNMVNVWmFNTlI5ak14eUY1VmVDZ2I5QzRUVFdLOA?oc=5\" target=\"_blank\" Where’s Wanda? Season 2 Premiere Date and First Look Revealed "
-        }
-      ],
-      "ageMin": 706,
-      "_cand": {
-        "key": "rss:where-s-wanda-season-2-premiere-date-and-first-look-revealed",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "The Movie Blog"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "The Movie Blog",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 63,
-      "signals": {
-        "recency": 4,
-        "corroboration": 8,
-        "status": 18,
-        "type": 15,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-john-leguizamo-the-odyssey-intense-role",
-      "slug": "john-leguizamo-on-the-odyssey-it-was-so-intense-for-me",
-      "title": "John Leguizamo on 'The Odyssey': 'It Was So Intense for Me'",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "john-leguizamo-the-odyssey-intense-role",
-      "primaryKeyword": "John Leguizamo The Odyssey",
-      "primaryEntity": "John Leguizamo",
-      "entities": [
-        "Christopher Nolan",
-        "The Odyssey"
-      ],
-      "angle": "John Leguizamo opens up about the emotional intensity of his role in Christopher Nolan's 'The Odyssey'.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-features/john-leguizamo-the-odyssey-eumaeus-chris-nolan-interview-1236651694/",
-          "ageMin": 1104,
-          "headline": "John Leguizamo Has Never Been as Vulnerable as in The Odyssey : “It Was So Intense for Me”",
-          "summary": "\"Working with Chris Nolan...you feel really seen,\" the actor behind Eumaeus tells The Hollywood Reporter in a wide-ranging conversation. \"I was able to tap into these really difficult, painful emotions from the depth of my soul.\""
-        }
-      ],
-      "ageMin": 1104,
-      "_cand": {
-        "key": "rss:john-leguizamo-has-never-been-as-vulnerable-as-in-the-odysse",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 78,
-      "signals": {
-        "recency": 1,
-        "corroboration": 12,
         "status": 18,
         "type": 5,
         "pop": 0,
@@ -406,14 +690,12 @@
         "big": 12,
         "trending": 0,
         "spice": 0,
-        "softTv": 0,
-        "radar": 30
+        "softTv": 0
       },
-      "radarKind": "movie-in-theaters",
-      "tierClass": "A"
+      "tierClass": "C"
     },
     {
-      "id": "news-god-of-war-prime-video-new-lead-casting",
+      "id": "news-god-of-war-prime-video-series-new-lead-injury",
       "slug": "god-of-war-prime-video-series-to-cast-new-lead-after-on-set-injury",
       "title": "God of War: Prime Video Series to Cast New Lead After On Set Injury",
       "contentType": "news",
@@ -422,27 +704,27 @@
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "god-of-war-prime-video-new-lead-casting",
-      "primaryKeyword": "god of war series casting",
+      "eventSlug": "god-of-war-prime-video-series-new-lead-injury",
+      "primaryKeyword": "God of War Prime Video series",
       "primaryEntity": "God of War",
       "entities": [
         "God of War (TV series)",
         "Prime Video"
       ],
-      "angle": "The 'God of War' series on Prime Video is set to cast a new lead actor following an on-set injury to the original performer.",
+      "angle": "The 'God of War' Prime Video series is reportedly seeking a new lead actor after an on-set injury.",
       "tmdbType": "movie",
       "source": "gnews:TV Series Finale",
       "sources": [
         {
           "outlet": "TV Series Finale",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQaVJubzMwODJjX3M1NTJRZG5kUXQ2WGoyVGpNbk05cnlib0ZOcEhqdmJJYzZMVHNTSm1qOUpodWt0cm01NnhBbmxmYk5KNlpFcHl3MXpnaWRFa1gwUnlzLUdxdVV0OUxKMTlqSHVzR0hyYnJ3WmhjRzYzX2FEelFvaU5jVnN0Y0c4MC04aHBMNXpUeFVyWDNWeWNGNDBuRzh1SFVxLUFIMk51d9IBqgFBVV95cUxQaVJubzMwODJjX3M1NTJRZG5kUXQ2WGoyVGpNbk05cnlib0ZOcEhqdmJJYzZMVHNTSm1qOUpodWt0cm01NnhBbmxmYk5KNlpFcHl3MXpnaWRFa1gwUnlzLUdxdVV0OUxKMTlqSHVzR0hyYnJ3WmhjRzYzX2FEelFvaU5jVnN0Y0c4MC04aHBMNXpUeFVyWDNWeWNGNDBuRzh1SFVxLUFIMk51dw?oc=5",
-          "ageMin": 1283,
+          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQUWgtVjVkOFhpSEZzY2FEdE1LLXpoSC1QblpvOEFxNkhqMDZ2ZVBCS2ZfR3hKazFHanc1SWdEUWttZkpSWkFaNks4aFZBYWptemh2eVlnS0VRZWlWZ3VvZFAzVVJuVGFrVEF3ZnJfQmRrWlN6M1lDYUd0ZksxdXFZa3paQnBqWk44X1RlU0pjbmFaSGRpcHBneWRNeF9RQktzRU9vddIBqgFBVV95cUxQaVJubzMwODJjX3M1NTJRZG5kUXQ2WGoyVGpNbk05cnlib0ZOcEhqdmJJYzZMVHNTSm1qOUpodWt0cm01NnhBbmxmYk5KNlpFcHl3MXpnaWRFa1gwUnlzLUdxdVV0OUxKMTlqSHVzR0hyYnJ3WmhjRzYzX2FEelFvaU5jVnN0Y0c4MC04aHBMNXpUeFVyWDNWeWNGNDBuRzh1SFVxLUFIMk51dw?oc=5",
+          "ageMin": 1403,
           "headline": "God of War: Prime Video Series to Cast New Lead After On Set Injury - TV Series Finale",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxQaVJubzMwODJjX3M1NTJRZG5kUXQ2WGoyVGpNbk05cnlib0ZOcEhqdmJJYzZMVHNTSm1qOUpodWt0cm01NnhBbmxmYk5KNlpFcHl3MXpnaWRFa1gwUnlzLUdxdVV0OUxKMTlqSHVzR0hyYnJ3WmhjRzYzX2FEelFvaU5jVnN0Y0c4MC04aHBMNXpUeFVyWDNWeWNGNDBuRzh1SFVxLUFIMk51d9IBqgFBVV95cUxQaVJubzM"
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxQUWgtVjVkOFhpSEZzY2FEdE1LLXpoSC1QblpvOEFxNkhqMDZ2ZVBCS2ZfR3hKazFHanc1SWdEUWttZkpSWkFaNks4aFZBYWptemh2eVlnS0VRZWlWZ3VvZFAzVVJuVGFrVEF3ZnJfQmRrWlN6M1lDYUd0ZksxdXFZa3paQnBqWk44X1RlU0pjbmFaSGRpcHBneWRNeF9RQktzRU9vddIBqgFBVV95cUxQaVJubzMwODJjX3M"
         }
       ],
-      "ageMin": 1283,
+      "ageMin": 1403,
       "_cand": {
         "key": "rss:god-of-war-prime-video-series-to-cast-new-lead-after-on-set-",
         "popularity": 0,
@@ -479,37 +761,38 @@
       "tierClass": "C"
     },
     {
-      "id": "news-cbs-cancellation",
-      "slug": "cbs-cancels-multiple-tv-shows-amid-network-changes",
-      "title": "CBS Cancels Multiple TV Shows Amid Network Changes",
+      "id": "news-disney-confirms-the-mandalorian-ending",
+      "slug": "disney-officially-confirms-the-end-of-the-mandalorian",
+      "title": "Disney Officially Confirms the End of 'The Mandalorian'",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
       "eventType": "cancellation",
       "sensitivity": "normal",
-      "eventSlug": "cbs-cancellation",
-      "primaryKeyword": "cbs tv show cancellations",
-      "primaryEntity": "CBS",
+      "eventSlug": "disney-confirms-the-mandalorian-ending",
+      "primaryKeyword": "The Mandalorian ending",
+      "primaryEntity": "The Mandalorian and Grogu",
       "entities": [
-        "The Late Show with Stephen Colbert"
+        "The Mandalorian",
+        "Disney"
       ],
-      "angle": "CBS is canceling several of its television shows, following the recent announcement about 'The Late Show with Stephen Colbert'.",
+      "angle": "Disney has officially confirmed that 'The Mandalorian' is ending.",
       "tmdbType": "movie",
-      "source": "gnews:MSN",
+      "source": "gnews:Collider",
       "sources": [
         {
-          "outlet": "MSN",
+          "outlet": "Collider",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOM3RrVHpiM2ZqWFhvSnA2bVJtTVI3ZlhuU1daWnh4Q0txMlhrUVV2elBCeXA5dFhmdXpjeTdJSTF4QzBUQjFJN0phRHVGVEdoOWtERHJnOUVCV0tFOVdPVWRjdnNVMDNTam1ya1VHUzBnRXBFeXNJRkd5cWhpVXVfZnZjclI0NTdxalN5OWlkWkxiYTlXOTUxRGpMcWU0WWxJaFdpUUpqOXJUVGotbEFUd0t0OA?oc=5",
-          "ageMin": 999,
-          "headline": "Not just Colbert. See what other shows CBS canceled, dropped - MSN",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiswFBVV95cUxOM3RrVHpiM2ZqWFhvSnA2bVJtTVI3ZlhuU1daWnh4Q0txMlhrUVV2elBCeXA5dFhmdXpjeTdJSTF4QzBUQjFJN0phRHVGVEdoOWtERHJnOUVCV0tFOVdPVWRjdnNVMDNTam1ya1VHUzBnRXBFeXNJRkd5cWhpVXVfZnZjclI0NTdxalN5OWlkWkxiYTlXOTUxRGpMcWU0WWxJaFdpUUpqOXJUVGotbEFUd0t0OA?oc=5\" ta"
+          "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFB0QXM1UEwwdXFaUnFVcGJrTElBbjdlSHUyY3hDZ2pzWXN2c19rMm1IbVZ3NGMta3dvVm5nQW9VMUxITzRwMzV1bTUyX1liQVVsVEwxeEF3R0psN0xzWmFONDhpOEhnalhMYWQ3elhwWFdfTlJ0SVo3LVc1OA?oc=5",
+          "ageMin": 842,
+          "headline": "Disney Officially Confirms the End of 'The Mandalorian' - Collider",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMie0FVX3lxTFB0QXM1UEwwdXFaUnFVcGJrTElBbjdlSHUyY3hDZ2pzWXN2c19rMm1IbVZ3NGMta3dvVm5nQW9VMUxITzRwMzV1bTUyX1liQVVsVEwxeEF3R0psN0xzWmFONDhpOEhnalhMYWQ3elhwWFdfTlJ0SVo3LVc1OA?oc=5\" target=\"_blank\" Disney Officially Confirms the End of 'The Mandalorian' /a nbs"
         }
       ],
-      "ageMin": 999,
+      "ageMin": 842,
       "_cand": {
-        "key": "rss:not-just-colbert-see-what-other-shows-cbs-canceled-dropped-m",
+        "key": "rss:disney-officially-confirms-the-end-of-the-mandalorian-collid",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -519,11 +802,11 @@
         "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "MSN"
+          "Collider"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "MSN",
+        "attribution": "Collider",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -544,39 +827,38 @@
       "tierClass": "C"
     },
     {
-      "id": "news-rick-devens-man-of-tomorrow-cameo-cancel",
-      "slug": "james-gunn-gave-big-brother-28-star-rick-devens-a-cameo-in-man-of-tomo",
-      "title": "James Gunn Gave ‘Big Brother 28’ Star Rick Devens a Cameo in ‘Man of Tomorrow’ but He ‘Had to Cancel’",
+      "id": "news-animated-hobbit-discussion",
+      "slug": "1977-animated-the-hobbit-praised-as-enduring-hero-s-journey-tale",
+      "title": "1977 Animated 'The Hobbit' Praised as Enduring Hero's Journey Tale",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
-      "eventType": "casting",
+      "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "rick-devens-man-of-tomorrow-cameo-cancel",
-      "primaryKeyword": "Man of Tomorrow cameo",
-      "primaryEntity": "Man of Tomorrow",
+      "eventSlug": "animated-hobbit-discussion",
+      "primaryKeyword": "animated hobbit",
+      "primaryEntity": "The Hobbit",
       "entities": [
-        "James Gunn's PG Porn",
-        "James Gunn",
-        "Rick Devens"
+        "The Hobbit (1977 film)",
+        "Rankin/Bass"
       ],
-      "angle": "Rick Devens reveals his planned cameo in James Gunn's 'Man of Tomorrow' was canceled due to 'Big Brother' filming obligations.",
+      "angle": "The 1977 animated adaptation of 'The Hobbit' is highlighted as a timeless example of a successful hero's journey narrative.",
       "tmdbType": "movie",
-      "source": "rss:Variety",
+      "source": "rss:IndieWire",
       "sources": [
         {
-          "outlet": "Variety",
+          "outlet": "IndieWire",
           "tier": 7,
-          "url": "https://variety.com/2026/film/news/james-gunn-big-brother-rick-devens-man-of-tomorrow-cameo-1236815991/",
-          "ageMin": 1132,
-          "headline": "James Gunn Gave ‘Big Brother 28’ Star Rick Devens a Cameo in ‘Man of Tomorrow’ but He ‘Had to Cancel’",
-          "summary": "Rick Devens was supposed to have a cameo in James Gunn s “Man of Tomorrow,” but the reality star had filming obligations with Big Brother. Gunn revealed the cameo after Devens gave the DC Studios co-head a shoutout during the live broadcast of “Big Brother” Season 28’s Thursday eviction episode. Gunn shared the clip on social [ ]"
+          "url": "https://www.indiewire.com/features/best-of/the-hobbit-animated-1977-rankin-and-bass-cult-fil-1235206129/",
+          "ageMin": 3483,
+          "headline": "1977 s Animated The Hobbit Proves the Right Hero s Journey Can Be Taken Again and Again",
+          "summary": "You can't go wrong pairing Christopher Nolan's \"The Odyssey\" and this retro Rankin/Bass classic."
         }
       ],
-      "ageMin": 1132,
+      "ageMin": 3483,
       "_cand": {
-        "key": "rss:james-gunn-gave-big-brother-28-star-rick-devens-a-cameo-in-m",
+        "key": "rss:1977-s-animated-the-hobbit-proves-the-right-hero-s-journey-c",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -586,47 +868,180 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Variety"
+          "IndieWire"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Variety",
+        "attribution": "IndieWire",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 69,
+      "priority": 48,
       "signals": {
         "recency": 1,
         "corroboration": 12,
         "status": 18,
-        "type": 14,
+        "type": 5,
         "pop": 0,
         "breakout": 0,
-        "big": 24,
+        "big": 12,
         "trending": 0,
         "spice": 0,
         "softTv": 0
       },
-      "tierClass": "B"
+      "tierClass": "C"
     },
     {
-      "id": "news-sam-reid-the-vampire-lestat-season-finale-cliffhanger",
-      "slug": "sam-reid-on-the-vampire-lestat-season-finale-cliffhanger",
-      "title": "Sam Reid on 'The Vampire Lestat' Season Finale Cliffhanger",
+      "id": "news-star-wars-kids-padme-ezra-kaz-empire-content",
+      "slug": "padm-ezra-kaz-and-more-sneak-around-the-empire-star-wars-kids",
+      "title": "Padmé, Ezra, Kaz and More Sneak Around The Empire | Star Wars Kids",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "star-wars-kids-padme-ezra-kaz-empire-content",
+      "primaryKeyword": "Star Wars Kids",
+      "primaryEntity": "Star Wars Kids",
+      "entities": [
+        "Padmé",
+        "Ezra",
+        "Kaz"
+      ],
+      "angle": "Star Wars Kids is releasing new content featuring Padmé, Ezra, and Kaz.",
+      "tmdbType": "movie",
+      "source": "gnews:Jedi News",
+      "sources": [
+        {
+          "outlet": "Jedi News",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQYmNWcUprQ05uZmtBZzVZUHVJSnlOZC1pZGYzOVQ5eEJrZDliN2FzaHBTa1YtM1FtbkJFc1l1UWxSVUNGX1NzWTVUNjJLNUxhTGVXUURmeG5GbkJINDJ6U2NpNU9VUnp6SmQ2UElKRWZfV2xlOW1wSVA0dV9sSnVKWDZKU0l5WnZjc3BLdVlsb2RPQk52T0QtaWY5Vmc1SkU3MmVNclE4SlZZYUhrR0ZZaQ?oc=5",
+          "ageMin": 881,
+          "headline": "Padmé, Ezra, Kaz and More Sneak Around The Empire | Star Wars Kids - Jedi News",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxQYmNWcUprQ05uZmtBZzVZUHVJSnlOZC1pZGYzOVQ5eEJrZDliN2FzaHBTa1YtM1FtbkJFc1l1UWxSVUNGX1NzWTVUNjJLNUxhTGVXUURmeG5GbkJINDJ6U2NpNU9VUnp6SmQ2UElKRWZfV2xlOW1wSVA0dV9sSnVKWDZKU0l5WnZjc3BLdVlsb2RPQk52T0QtaWY5Vmc1SkU3MmVNclE4SlZZYUhrR0ZZaQ?oc=5\" target"
+        }
+      ],
+      "ageMin": 881,
+      "_cand": {
+        "key": "rss:padm-ezra-kaz-and-more-sneak-around-the-empire-star-wars-kid",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "Jedi News"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "Jedi News",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 54,
+      "signals": {
+        "recency": 1,
+        "corroboration": 8,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-aliens-james-cameron-quit-twice",
+      "slug": "aliens-at-40-james-cameron-s-sequel-is-a-sci-fi-icon-but-did-you-know-",
+      "title": "'Aliens' at 40: James Cameron's sequel is a sci-fi icon, but did you know he quit the movie twice?",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "aliens-james-cameron-quit-twice",
+      "primaryKeyword": "Aliens movie trivia",
+      "primaryEntity": "Aliens",
+      "entities": [
+        "Aliens (1986 film)",
+        "James Cameron"
+      ],
+      "angle": "A surprising detail about the production of the iconic sci-fi film 'Aliens' is revealed, noting director James Cameron's near-departure.",
+      "tmdbType": "movie",
+      "source": "gnews:Space",
+      "sources": [
+        {
+          "outlet": "Space",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPOW01a1ZmVGdvLWRkdUt5NDE1aXc4TmhVeEF2U21UUWFibERsZnN2X3dTZUR6emNwYWV0UVA3YXN2Q1J0VzYxLTBWNjNuNkFtWEotSW53NFFkT29OemJVaU1nbV9GUndIY0J2V1UwNTViblNEMjNUdE9lRkNRZ3U3czhlb0NUWnpUb3hqdENWa1ZCNGdhSGdOb1pyaFRxUk9QT2tSTkFMaHh1NUd1VWh1eTNKd2NsQ1lKZ3RSZVd3ZFVpbG5WTlhSOFlrd21UTkRscGpSTDlkSDFRWlJOMWVZbA?oc=5",
+          "ageMin": 1262,
+          "headline": "'Aliens' at 40: James Cameron's sequel is a sci-fi icon, but did you know he quit the movie twice? - Space",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMi4AFBVV95cUxPOW01a1ZmVGdvLWRkdUt5NDE1aXc4TmhVeEF2U21UUWFibERsZnN2X3dTZUR6emNwYWV0UVA3YXN2Q1J0VzYxLTBWNjNuNkFtWEotSW53NFFkT29OemJVaU1nbV9GUndIY0J2V1UwNTViblNEMjNUdE9lRkNRZ3U3czhlb0NUWnpUb3hqdENWa1ZCNGdhSGdOb1pyaFRxUk9QT2tSTkFMaHh1NUd1VWh1eTNKd2NsQ1lKZ3R"
+        }
+      ],
+      "ageMin": 1262,
+      "_cand": {
+        "key": "rss:-aliens-at-40-james-cameron-s-sequel-is-a-sci-fi-icon-but-di",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "Space"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "Space",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 48,
+      "signals": {
+        "recency": 1,
+        "corroboration": 8,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 12,
+        "trending": 0,
+        "spice": 4,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-sam-reid-vampire-lestat-finale-cliffhanger",
+      "slug": "the-vampire-lestat-sam-reid-is-ready-to-sing-about-that-cataclysmic-se",
+      "title": "‘The Vampire Lestat’: Sam Reid Is Ready to Sing About That ‘Cataclysmic’ Season Finale Cliffhanger",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "sam-reid-the-vampire-lestat-season-finale-cliffhanger",
-      "primaryKeyword": "sam reid the vampire lestat",
+      "eventSlug": "sam-reid-vampire-lestat-finale-cliffhanger",
+      "primaryKeyword": "sam reid vampire lestat",
       "primaryEntity": "Sam Reid",
       "entities": [
         "The Vampire Lestat"
       ],
-      "angle": "Actor Sam Reid discusses the cataclysmic cliffhanger in 'The Vampire Lestat' season finale.",
+      "angle": "Actor Sam Reid discusses the cliffhanger in 'The Vampire Lestat' season finale.",
       "tmdbType": "movie",
       "source": "gnews:Gold Derby",
       "sources": [
@@ -634,12 +1049,12 @@
           "outlet": "Gold Derby",
           "tier": 5,
           "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOcjhHbnRTN2hqYjJxanBESTh6UFFfUW9sZngyR0lfVDlJaTlUWk1GTnF6TlBDUEpvOGl5RklnczBMYXhPQzVPZW44U3YySUVTRGRVOWhPY1RTV1FHalIyVTdLYXdjRGZKV3JEc0w5ajFFRWNhRjRtQXJhSnl4dk9ubHgtaTFMa3dJaGFWLUltZw?oc=5",
-          "ageMin": 584,
+          "ageMin": 704,
           "headline": "‘The Vampire Lestat’: Sam Reid is ready to sing about that ‘cataclysmic’ season finale cliffhanger - Gold Derby",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMijwFBVV95cUxOcjhHbnRTN2hqYjJxanBESTh6UFFfUW9sZngyR0lfVDlJaTlUWk1GTnF6TlBDUEpvOGl5RklnczBMYXhPQzVPZW44U3YySUVTRGRVOWhPY1RTV1FHalIyVTdLYXdjRGZKV3JEc0w5ajFFRWNhRjRtQXJhSnl4dk9ubHgtaTFMa3dJaGFWLUltZw?oc=5\" target=\"_blank\" ‘The Vampire Lestat’: Sam Reid is "
         }
       ],
-      "ageMin": 584,
+      "ageMin": 704,
       "_cand": {
         "key": "rss:-the-vampire-lestat-sam-reid-is-ready-to-sing-about-that-cat",
         "popularity": 0,
@@ -678,331 +1093,75 @@
       "tierClass": "A"
     },
     {
-      "id": "news-danny-boyle-ink-sells-to-netflix",
-      "slug": "danny-boyle-s-ink-sells-to-netflix-in-first-big-sale-way-ahead-of-veni",
-      "title": "Danny Boyle's Ink Sells to Netflix in First Big Sale (Way) Ahead of Venice Premiere",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "danny-boyle-ink-sells-to-netflix",
-      "primaryKeyword": "Danny Boyle Ink",
-      "primaryEntity": "Ink (film)",
-      "entities": [
-        "Danny Boyle",
-        "Netflix",
-        "Venice Film Festival"
-      ],
-      "angle": "Danny Boyle's new film 'Ink' sold to Netflix ahead of its Venice premiere.",
-      "tmdbType": "movie",
-      "source": "rss:IndieWire",
-      "sources": [
-        {
-          "outlet": "IndieWire",
-          "tier": 7,
-          "url": "https://www.indiewire.com/news/breaking-news/danny-boyle-ink-netflix-venice-sale-1235206128/",
-          "ageMin": 3681,
-          "headline": "Danny Boyle s Ink Sells to Netflix in First Big Sale (Way) Ahead of Venice Premiere",
-          "summary": "The film about Larry Lamb, Rupert Murdoch, and the birth of The Sun tabloid is the opening night film at the Biennale."
-        }
-      ],
-      "ageMin": 3681,
-      "_cand": {
-        "key": "rss:danny-boyle-s-ink-sells-to-netflix-in-first-big-sale-way-ahe",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "IndieWire"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "IndieWire",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 64,
-      "signals": {
-        "recency": 1,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-selton-mello-maria-fernanda-candido-gramado-fest-honor",
-      "slug": "brazil-s-gramado-fest-set-to-honor-i-m-still-here-star-selton-mello-an",
-      "title": "Brazil’s Gramado Fest Set to Honor ‘I’m Still Here’ Star Selton Mello and ‘The Secret Agent’ Standout Maria Fernanda Cândido",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "selton-mello-maria-fernanda-candido-gramado-fest-honor",
-      "primaryKeyword": "Selton Mello Gramado Fest",
-      "primaryEntity": "Selton Mello",
-      "entities": [
-        "Maria Fernanda Cândido",
-        "Gramado Fest"
-      ],
-      "angle": "Brazil's Gramado Fest will honor international stars Selton Mello and Maria Fernanda Cândido.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/film/global/gramado-festival-selton-mello-maria-fernanda-candido-globo-1236815847/",
-          "ageMin": 1366,
-          "headline": "Brazil’s Gramado Fest Set to Honor ‘I’m Still Here’ Star Selton Mello and ‘The Secret Agent’ Standout Maria Fernanda Cândido",
-          "summary": "As Brazil’s explosion on the Oscar and A-Fest scene turns its top actors into international stars, two of its biggest breakouts, “I’m Not Here” co-lead Selton Mello and “The Secret Agent” star María Fernanda Cândido, will be honored at Brazil’s Gramado Film Festival, bringing the aura of burgeoning international renown to one of the country’s [ ]"
-        }
-      ],
-      "ageMin": 1366,
-      "_cand": {
-        "key": "rss:brazil-s-gramado-fest-set-to-honor-i-m-still-here-star-selto",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 48,
-      "signals": {
-        "recency": 1,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 12,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-animated-hobbit-discussion",
-      "slug": "1977-animated-the-hobbit-praised-as-enduring-hero-s-journey",
-      "title": "1977 Animated 'The Hobbit' Praised as Enduring Hero's Journey",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "animated-hobbit-discussion",
-      "primaryKeyword": "The Hobbit (1977 film)",
-      "primaryEntity": "The Hobbit",
-      "entities": [
-        "The Hobbit (1977 film)",
-        "Rankin/Bass"
-      ],
-      "angle": "The 1977 animated adaptation of 'The Hobbit' is highlighted as a timeless example of a successful hero's journey in film.",
-      "tmdbType": "movie",
-      "source": "rss:IndieWire",
-      "sources": [
-        {
-          "outlet": "IndieWire",
-          "tier": 7,
-          "url": "https://www.indiewire.com/features/best-of/the-hobbit-animated-1977-rankin-and-bass-cult-fil-1235206129/",
-          "ageMin": 3363,
-          "headline": "1977 s Animated The Hobbit Proves the Right Hero s Journey Can Be Taken Again and Again",
-          "summary": "You can't go wrong pairing Christopher Nolan's \"The Odyssey\" and this retro Rankin/Bass classic."
-        }
-      ],
-      "ageMin": 3363,
-      "_cand": {
-        "key": "rss:1977-s-animated-the-hobbit-proves-the-right-hero-s-journey-c",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "IndieWire"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "IndieWire",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 48,
-      "signals": {
-        "recency": 1,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 12,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-aliens-40th-anniversary-cameron-quit-twice",
-      "slug": "aliens-at-40-james-cameron-s-sequel-is-a-sci-fi-icon-but-did-you-know-",
-      "title": "'Aliens' at 40: James Cameron's Sequel Is a Sci-Fi Icon, But Did You Know He Quit the Movie Twice?",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "aliens-40th-anniversary-cameron-quit-twice",
-      "primaryKeyword": "aliens movie james cameron",
-      "primaryEntity": "Aliens",
-      "entities": [
-        "Aliens (1986 film)",
-        "James Cameron"
-      ],
-      "angle": "On the 40th anniversary of 'Aliens,' new details emerge about James Cameron's near-departure from directing the sci-fi classic.",
-      "tmdbType": "movie",
-      "source": "gnews:Space",
-      "sources": [
-        {
-          "outlet": "Space",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPOW01a1ZmVGdvLWRkdUt5NDE1aXc4TmhVeEF2U21UUWFibERsZnN2X3dTZUR6emNwYWV0UVA3YXN2Q1J0VzYxLTBWNjNuNkFtWEotSW53NFFkT29OemJVaU1nbV9GUndIY0J2V1UwNTViblNEMjNUdE9lRkNRZ3U3czhlb0NUWnpUb3hqdENWa1ZCNGdhSGdOb1pyaFRxUk9QT2tSTkFMaHh1NUd1VWh1eTNKd2NsQ1lKZ3RSZVd3ZFVpbG5WTlhSOFlrd21UTkRscGpSTDlkSDFRWlJOMWVZbA?oc=5",
-          "ageMin": 1142,
-          "headline": "'Aliens' at 40: James Cameron's sequel is a sci-fi icon, but did you know he quit the movie twice? - Space",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMi4AFBVV95cUxPOW01a1ZmVGdvLWRkdUt5NDE1aXc4TmhVeEF2U21UUWFibERsZnN2X3dTZUR6emNwYWV0UVA3YXN2Q1J0VzYxLTBWNjNuNkFtWEotSW53NFFkT29OemJVaU1nbV9GUndIY0J2V1UwNTViblNEMjNUdE9lRkNRZ3U3czhlb0NUWnpUb3hqdENWa1ZCNGdhSGdOb1pyaFRxUk9QT2tSTkFMaHh1NUd1VWh1eTNKd2NsQ1lKZ3R"
-        }
-      ],
-      "ageMin": 1142,
-      "_cand": {
-        "key": "rss:-aliens-at-40-james-cameron-s-sequel-is-a-sci-fi-icon-but-di",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "Space"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "Space",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 48,
-      "signals": {
-        "recency": 1,
-        "corroboration": 8,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 12,
-        "trending": 0,
-        "spice": 4,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-spice-girls-marriage",
-      "slug": "spice-girls-mostly-reunite-for-melanie-c-s-wedding-to-chris-dingwall",
-      "title": "Spice Girls (Mostly) Reunite For Melanie C's Wedding to Chris Dingwall",
+      "id": "news-spice-girls-reunite-mel-c-wedding",
+      "slug": "spice-girls-mostly-reunite-for-melanie-c-s-wedding",
+      "title": "Spice Girls (Mostly) Reunite For Melanie C’s Wedding",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
       "eventType": "marriage",
       "sensitivity": "normal",
-      "eventSlug": "spice-girls-marriage",
-      "primaryKeyword": "Spice Girls reunion",
+      "eventSlug": "spice-girls-reunite-mel-c-wedding",
+      "primaryKeyword": "Spice Girls wedding",
       "primaryEntity": "Melanie C",
       "entities": [
         "Spice Girls",
         "Victoria Beckham"
       ],
-      "angle": "Most of the Spice Girls reunited for Melanie C's wedding, with Victoria Beckham designing the bride's dress.",
+      "angle": "Spice Girls members reunite for Melanie C's wedding, with Victoria Beckham designing the bride's dress.",
       "tmdbType": "movie",
-      "source": "rss:THR",
+      "source": "rss:Billboard",
       "sources": [
         {
-          "outlet": "THR",
+          "outlet": "Billboard",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/news/politics-news/andy-burnham-uk-prime-minister-labour-party-leader-politics-1236650826/",
-          "ageMin": 3,
-          "headline": "Andy Burnham Is Officially U.K. Prime Minister",
-          "summary": "The left-wing politician and former mayor of Manchester — widely seen as \"a man of the people\" in Britain — takes over from Keir Starmer after being named Labour Party leader last week."
+          "url": "https://www.billboard.com/music/music-news/mel-c-spice-girls-wedding-chris-dingwall-spice-girls-reunite-1236298118/",
+          "ageMin": 133,
+          "headline": "Spice Girls (Mostly) Reunite For Melanie C s Wedding to Chris Dingwall",
+          "summary": "The couple were wed at a British countryside manor on Saturday (July 18), with the bride wearing a dress designed by former bandmate Victoria \"Posh Spice\" Beckham."
+        },
+        {
+          "outlet": "Entertainment Weekly",
+          "tier": 6,
+          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQSWE1SDBEMnRGVDBRNTk4Tkt2N2U3WjBnY2hoUzIyeWtGQzRMSXppRE1CLW5mZTEyRzZwZ19pZEozQlRESnBGTDBPcGlqSHVCZklMcjUzb0xLWURZQkM1b2V0dTJnWWpONW4wdTUxaEgyOFV3SEc2alF1VkxYVVI3TUZPSWlPYU9WVndtNW1B?oc=5",
+          "ageMin": 666,
+          "headline": "Spice Girls reunite — minus Victoria Beckham — at Mel C’s wedding to model Chris Dingwall - Entertainment Weekly",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxQSWE1SDBEMnRGVDBRNTk4Tkt2N2U3WjBnY2hoUzIyeWtGQzRMSXppRE1CLW5mZTEyRzZwZ19pZEozQlRESnBGTDBPcGlqSHVCZklMcjUzb0xLWURZQkM1b2V0dTJnWWpONW4wdTUxaEgyOFV3SEc2alF1VkxYVVI3TUZPSWlPYU9WVndtNW1B?oc=5\" target=\"_blank\" Spice Girls reunite — minus Victoria"
         }
       ],
-      "ageMin": 3,
+      "ageMin": 133,
       "_cand": {
-        "key": "rss:andy-burnham-is-officially-u-k-prime-minister",
+        "key": "rss:spice-girls-mostly-reunite-for-melanie-c-s-wedding-to-chris-",
         "popularity": 0,
         "kind": "rss-news"
       },
-      "corroborationCount": 1,
+      "corroborationCount": 2,
       "verification": {
         "tier1Count": 1,
         "tier1Owners": 1,
-        "outletCount": 1,
+        "outletCount": 2,
         "outlets": [
-          "THR"
+          "Billboard",
+          "Entertainment Weekly"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
+        "attribution": null,
+        "framing": "plain",
+        "status": "CONFIRMED",
         "publishable": true
       },
-      "priority": 68,
+      "priority": 75,
       "signals": {
-        "recency": 30,
-        "corroboration": 12,
-        "status": 18,
+        "recency": 16,
+        "corroboration": 18,
+        "status": 25,
         "type": 8,
         "pop": 0,
         "breakout": 0,
         "big": 0,
-        "trending": 0,
+        "trending": 8,
         "spice": 0,
         "softTv": 0
       },
