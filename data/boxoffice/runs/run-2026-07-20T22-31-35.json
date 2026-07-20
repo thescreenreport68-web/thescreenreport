@@ -1,0 +1,186 @@
+{
+ "runId": "run-2026-07-20T22-31-35",
+ "mode": "live",
+ "startedAt": "2026-07-20T22:31:35.557Z",
+ "films": 44,
+ "published": [],
+ "held": [
+  {
+   "tag": "the-odyssey-bo-update×BO-UPDATE",
+   "reason": "3 unverified claim(s) cut, unrecovered",
+   "score": 50
+  },
+  {
+   "tag": "star-wars-the-mandalorian-and-grogu-bo-update×BO-UPDATE",
+   "reason": "fidelity: 9 unsupported figures/claims — draft-level failure",
+   "score": 50
+  },
+  {
+   "tag": "enola-holmes-3-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "soft-floor engagement 4 < 5 | soft-floor humanVoice 3 < 5",
+   "score": 40
+  },
+  {
+   "tag": "voicemails-for-isabelle-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "words 131 < 180 (owner-set ~200-word minimum) | soft-floor engagement 4 < 5 | soft-floor humanVoice 3 < 5",
+   "score": 50
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "moana-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "toy-story-5-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "minions-monsters-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "evil-dead-burn-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "the-invite-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "young-washington-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "obsession-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "supergirl-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "disclosure-day-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "backrooms-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "scary-movie-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "jackass-best-and-last-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "gail-daughtry-and-the-celebrity-sex-pass-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "michael-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "voicemails-for-isabelle-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "project-hail-mary-bo-opening×BO-OPENING",
+   "reason": "film attempt budget exhausted today (3 paid event tries/film/day)"
+  }
+ ],
+ "blocked": [],
+ "paced": {
+  "tokens": 4,
+  "behind": true,
+  "expected": 17.42,
+  "allow": 2
+ },
+ "attemptCapHit": 4,
+ "zeroStreak": 14,
+ "daySpend": {
+  "laDay": "2026-07-20",
+  "usd": 0.47382
+ },
+ "faults": {
+  "count": 2,
+  "bySeverity": {
+   "critical": 1,
+   "warn": 1
+  },
+  "faults": [
+   {
+    "stage": "model:finder",
+    "message": "all models failed (amazon/nova-micro-v1, google/gemini-2.5-flash-lite): Unexpected non-whitespace character after JSON at position 211",
+    "severity": "critical",
+    "at": "2026-07-20T22:31:46.020Z"
+   },
+   {
+    "stage": "finder:llm",
+    "message": "finder classification failed — falling back to deterministic picks: Unexpected non-whitespace character after JSON at position 211",
+    "severity": "warn",
+    "at": "2026-07-20T22:31:46.020Z"
+   }
+  ]
+ },
+ "degraded": true,
+ "finishedAt": "2026-07-20T22:40:14.411Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 2,
+    "errors": 2,
+    "in": 0,
+    "out": 0,
+    "usd": 0,
+    "ms": 0
+   },
+   "gatherer": {
+    "calls": 4,
+    "errors": 0,
+    "in": 10264,
+    "out": 1428,
+    "usd": 0.0016,
+    "ms": 7099
+   },
+   "synthesizer": {
+    "calls": 4,
+    "errors": 0,
+    "in": 2769,
+    "out": 1678,
+    "usd": 0.00055,
+    "ms": 57011
+   },
+   "writerChart": {
+    "calls": 2,
+    "errors": 0,
+    "in": 3931,
+    "out": 2191,
+    "usd": 0.00165,
+    "ms": 65120
+   },
+   "writer": {
+    "calls": 4,
+    "errors": 0,
+    "in": 13002,
+    "out": 4314,
+    "usd": 0.0121,
+    "ms": 45342
+   },
+   "qa": {
+    "calls": 15,
+    "errors": 0,
+    "in": 42087,
+    "out": 6873,
+    "usd": 0.02981,
+    "ms": 40958
+   }
+  },
+  "totalUsd": 0.04571
+ },
+ "openrouterTotalUsd": 0.04437
+}
