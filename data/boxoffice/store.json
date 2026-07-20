@@ -1303,20 +1303,20 @@
    "eventSlug": "gail-daughtry-and-the-celebrity-sex-pass-bo-update-d8",
    "form": "BO-UPDATE",
    "reason": "consistency: title: \"$1.2\" is not a canonical figure for this film | title: \"$1.2\" contradicts the canonical domestic figure ($1,242,603)",
-   "tries": 35,
-   "at": "2026-07-20T03:09:19.936Z",
+   "tries": 36,
+   "at": "2026-07-20T03:17:37.887Z",
    "dead": true,
-   "expiresAt": "2026-07-23T03:09:19.936Z"
+   "expiresAt": "2026-07-23T03:17:37.887Z"
   },
   {
    "key": "star-wars-the-mandalorian-and-grogu-bo-update-d57|BO-UPDATE",
    "eventSlug": "star-wars-the-mandalorian-and-grogu-bo-update-d57",
    "form": "BO-UPDATE",
-   "reason": "consistency: title: \"$177.5\" is not a canonical figure for this film | title: \"$177.5\" contradicts the canonical domestic figure ($177,455,904) | metaTitle: headlines domestic while the title headlines dailyGross/other — the SERP promise must match the page",
-   "tries": 35,
-   "at": "2026-07-20T03:10:46.922Z",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "tries": 36,
+   "at": "2026-07-20T03:19:11.145Z",
    "dead": true,
-   "expiresAt": "2026-07-23T03:10:46.922Z"
+   "expiresAt": "2026-07-23T03:19:11.145Z"
   },
   {
    "key": "the-super-mario-galaxy-movie-ev-milestone-d0|BO-MILESTONE",
@@ -1401,16 +1401,32 @@
    "reason": "fidelity: 9 unsupported figures/claims — draft-level failure",
    "tries": 1,
    "at": "2026-07-20T03:14:54.706Z"
+  },
+  {
+   "key": "maddie-s-secret-ev-milestone-d0|BO-MILESTONE",
+   "eventSlug": "maddie-s-secret-ev-milestone-d0",
+   "form": "BO-MILESTONE",
+   "reason": "words 90 < 180 (owner-set ~200-word minimum)",
+   "tries": 1,
+   "at": "2026-07-20T03:21:36.930Z"
+  },
+  {
+   "key": "project-hail-mary-bo-update-d127|BO-UPDATE",
+   "eventSlug": "project-hail-mary-bo-update-d127",
+   "form": "BO-UPDATE",
+   "reason": "words 142 < 180 (owner-set ~200-word minimum)",
+   "tries": 1,
+   "at": "2026-07-20T03:23:15.284Z"
   }
  ],
- "zeroStreak": 18,
+ "zeroStreak": 19,
  "daySpend": {
   "laDay": "2026-07-19",
-  "usd": 0.93943
+  "usd": 0.98352
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1784516829217
+  "lastMs": 1784517330957
  },
  "lastAuditDay": "2026-07-19",
  "attempts": {
@@ -1442,7 +1458,9 @@
    "ride or die": 1,
    "lucky": 1,
    "the real me": 1,
-   "the breadwinner": 1
+   "the breadwinner": 1,
+   "maddie's secret": 1,
+   "project hail mary": 1
   }
  }
 }
