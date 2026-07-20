@@ -1,0 +1,137 @@
+{
+  "ts": "2026-07-20T16:01:40.469Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "sean-penn-makes-lifelong-pledge-to-avoid-awards-ceremonies",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [],
+      "headline": [
+        "metaTitle",
+        "metaDescription",
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 1
+    }
+  ],
+  "topics": 1,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 0,
+  "costUSD": 0.011872,
+  "costPerPublished": 0.011872,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 7,
+      "in": 11256,
+      "out": 1178,
+      "usd": 0.0063218
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 925,
+      "out": 346,
+      "usd": 0.00022638
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 6,
+      "in": 16986,
+      "out": 5140,
+      "usd": 0.004333905999999999
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 8,
+      "in": 6485,
+      "out": 853,
+      "usd": 0.0009897
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2277,
+      "out": 198,
+      "usd": 0.0011780999999999999,
+      "ms": 4625
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 925,
+      "out": 346,
+      "usd": 0.00014553,
+      "ms": 7247
+    },
+    "writer": {
+      "calls": 5,
+      "errors": 0,
+      "in": 16322,
+      "out": 4861,
+      "usd": 0.0054068,
+      "ms": 116518
+    },
+    "verify": {
+      "calls": 7,
+      "errors": 1,
+      "in": 10760,
+      "out": 1352,
+      "usd": 0.0054706,
+      "ms": 28683
+    },
+    "judge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1384,
+      "out": 185,
+      "usd": 0.0002124,
+      "ms": 1037
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 664,
+      "out": 279,
+      "usd": 0.00024758,
+      "ms": 8026
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 363,
+      "out": 109,
+      "usd": 0.0000799,
+      "ms": 697
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 1,
+      "in": 0,
+      "out": 0,
+      "usd": 0,
+      "ms": 1992
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2087,
+      "out": 89,
+      "usd": 0.00024430000000000003,
+      "ms": 1563
+    },
+    "linker": {
+      "calls": 3,
+      "errors": 0,
+      "in": 870,
+      "out": 98,
+      "usd": 0.00012620000000000003,
+      "ms": 1547
+    }
+  }
+}
