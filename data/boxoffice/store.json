@@ -1518,21 +1518,37 @@
    "key": "the-odyssey-bo-update-100m|BO-UPDATE",
    "eventSlug": "the-odyssey-bo-update-100m",
    "form": "BO-UPDATE",
-   "reason": "consistency: metaTitle: headlines domestic while the title headlines other — the SERP promise must match the page",
-   "tries": 3,
-   "at": "2026-07-20T08:33:20.678Z",
+   "reason": "2 unverified claim(s) cut, unrecovered",
+   "tries": 4,
+   "at": "2026-07-20T09:04:08.310Z",
    "dead": true,
-   "expiresAt": "2026-07-23T08:33:20.678Z"
+   "expiresAt": "2026-07-23T09:04:08.310Z"
+  },
+  {
+   "key": "young-washington-bo-update-d17|BO-UPDATE",
+   "eventSlug": "young-washington-bo-update-d17",
+   "form": "BO-UPDATE",
+   "reason": "words 125 < 180 (owner-set ~200-word minimum)",
+   "tries": 1,
+   "at": "2026-07-20T09:05:48.525Z"
+  },
+  {
+   "key": "obsession-bo-update-d66|BO-UPDATE",
+   "eventSlug": "obsession-bo-update-d66",
+   "form": "BO-UPDATE",
+   "reason": "synthesizer returned no usable brief",
+   "tries": 1,
+   "at": "2026-07-20T09:07:50.237Z"
   }
  ],
- "zeroStreak": 0,
+ "zeroStreak": 1,
  "daySpend": {
   "laDay": "2026-07-20",
-  "usd": 0.07412
+  "usd": 0.07916
  },
  "pace": {
-  "tokens": 0,
-  "lastMs": 1784536248504
+  "tokens": 0.09512899603174604,
+  "lastMs": 1784538092543
  },
  "lastAuditDay": "2026-07-20",
  "attempts": {
