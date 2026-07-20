@@ -1,0 +1,233 @@
+{
+ "runId": "run-2026-07-20T17-01-35",
+ "mode": "live",
+ "startedAt": "2026-07-20T17:01:35.928Z",
+ "films": 44,
+ "published": [],
+ "held": [
+  {
+   "tag": "rick-and-morty-trending-tv×TRENDING-TV",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "score": 65
+  },
+  {
+   "tag": "king-of-the-hill-trending-tv×TRENDING-TV",
+   "reason": "4 unverified claim(s) cut, unrecovered",
+   "score": 60
+  },
+  {
+   "tag": "the-odyssey-bo-update×BO-UPDATE",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "score": 50
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "enola-holmes-3-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "voicemails-for-isabelle-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "the-doorman-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "little-brother-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "rust-creek-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "f9-the-fast-saga-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "old-henry-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "the-boss-baby-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "i-will-find-you-trending-tv-w2026-07-12×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "worst-neighbor-ever-trending-tv-w2026-07-12×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "little-house-on-the-prairie-trending-tv-w2026-07-12×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "avatar-the-last-airbender-trending-tv-w2026-07-12×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "salish-jordan-matter-trending-tv-w2026-07-12×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "raw-trending-tv-w2026-07-12×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "sullivan-s-crossing-trending-tv-w2026-07-12×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "lucky-trending-tv×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "off-campus-trending-tv×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "descendants-wicked-wonderland-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "lee-cronin-s-the-mummy-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "the-sheep-detectives-now-streaming×NOW-STREAMING",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "tom-clancy-s-jack-ryan-ghost-war-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "they-will-kill-you-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "house-of-the-dragon-trending-tv×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "silo-trending-tv×TRENDING-TV",
+   "reason": "parked dead"
+  }
+ ],
+ "blocked": [
+  {
+   "tag": "outcome-now-streaming×NOW-STREAMING",
+   "reason": "watchdog: gatherer outcome-now-streaming×NOW-STREAMING exceeded 180s"
+  }
+ ],
+ "paced": {
+  "tokens": 4,
+  "behind": false,
+  "expected": 9.1,
+  "allow": 2
+ },
+ "queueBuilt": 9,
+ "attemptCapHit": 4,
+ "zeroStreak": 3,
+ "daySpend": {
+  "laDay": "2026-07-20",
+  "usd": 0.32538
+ },
+ "faults": {
+  "count": 3,
+  "bySeverity": {
+   "critical": 2,
+   "warn": 1
+  },
+  "faults": [
+   {
+    "stage": "model:finder",
+    "message": "all models failed (amazon/nova-micro-v1, google/gemini-2.5-flash-lite): Expected ',' or ']' after array element in JSON at position 417",
+    "severity": "critical",
+    "at": "2026-07-20T17:01:49.857Z"
+   },
+   {
+    "stage": "finder:llm",
+    "message": "finder classification failed — falling back to deterministic picks: Expected ',' or ']' after array element in JSON at position 417",
+    "severity": "warn",
+    "at": "2026-07-20T17:01:49.857Z"
+   },
+   {
+    "stage": "model:gatherer",
+    "message": "all models failed (google/gemini-2.5-flash-lite, openai/gpt-5-nano): empty completion",
+    "severity": "critical",
+    "at": "2026-07-20T17:03:14.414Z"
+   }
+  ]
+ },
+ "degraded": true,
+ "finishedAt": "2026-07-20T17:11:03.094Z",
+ "meter": {
+  "byRole": {
+   "categorize": {
+    "calls": 3,
+    "errors": 0,
+    "in": 1054,
+    "out": 538,
+    "usd": 0.00032,
+    "ms": 2717
+   },
+   "finder": {
+    "calls": 2,
+    "errors": 2,
+    "in": 0,
+    "out": 0,
+    "usd": 0,
+    "ms": 0
+   },
+   "gatherer": {
+    "calls": 7,
+    "errors": 2,
+    "in": 15259,
+    "out": 990,
+    "usd": 0.00192,
+    "ms": 7080
+   },
+   "synthesizer": {
+    "calls": 3,
+    "errors": 0,
+    "in": 2225,
+    "out": 1968,
+    "usd": 0.00055,
+    "ms": 95735
+   },
+   "writer": {
+    "calls": 4,
+    "errors": 0,
+    "in": 12532,
+    "out": 3958,
+    "usd": 0.01135,
+    "ms": 51305
+   },
+   "qa": {
+    "calls": 17,
+    "errors": 0,
+    "in": 47521,
+    "out": 6198,
+    "usd": 0.02975,
+    "ms": 48987
+   },
+   "writerChart": {
+    "calls": 1,
+    "errors": 0,
+    "in": 2048,
+    "out": 1111,
+    "usd": 0.00085,
+    "ms": 35951
+   }
+  },
+  "totalUsd": 0.04474
+ },
+ "openrouterTotalUsd": 0.04397
+}

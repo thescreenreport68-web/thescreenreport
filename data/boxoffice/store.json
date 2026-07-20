@@ -1476,9 +1476,11 @@
    "key": "rick-and-morty-trending-tv|TRENDING-TV",
    "eventSlug": "rick-and-morty-trending-tv",
    "form": "TRENDING-TV",
-   "reason": "8 unverified claim(s) cut, unrecovered",
-   "tries": 2,
-   "at": "2026-07-20T05:09:06.352Z"
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "tries": 3,
+   "at": "2026-07-20T17:07:17.914Z",
+   "dead": true,
+   "expiresAt": "2026-07-23T17:07:17.914Z"
   },
   {
    "key": "descendants-wicked-wonderland-now-streaming|NOW-STREAMING",
@@ -1651,10 +1653,10 @@
    "eventSlug": "the-odyssey-bo-update-100m",
    "form": "BO-UPDATE",
    "reason": "1 unverified claim(s) cut, unrecovered",
-   "tries": 20,
-   "at": "2026-07-20T16:33:53.443Z",
+   "tries": 21,
+   "at": "2026-07-20T17:11:03.091Z",
    "dead": true,
-   "expiresAt": "2026-07-23T16:33:53.443Z"
+   "expiresAt": "2026-07-23T17:11:03.091Z"
   },
   {
    "key": "star-wars-the-mandalorian-and-grogu-bo-update-d59|BO-UPDATE",
@@ -1671,16 +1673,24 @@
    "reason": "words 157 < 180 (owner-set ~200-word minimum)",
    "tries": 2,
    "at": "2026-07-20T16:38:32.419Z"
+  },
+  {
+   "key": "king-of-the-hill-trending-tv|TRENDING-TV",
+   "eventSlug": "king-of-the-hill-trending-tv",
+   "form": "TRENDING-TV",
+   "reason": "4 unverified claim(s) cut, unrecovered",
+   "tries": 1,
+   "at": "2026-07-20T17:09:27.679Z"
   }
  ],
- "zeroStreak": 2,
+ "zeroStreak": 3,
  "daySpend": {
   "laDay": "2026-07-20",
-  "usd": 0.28141
+  "usd": 0.32538
  },
  "pace": {
-  "tokens": 3.195687965079367,
-  "lastMs": 1784565097148
+  "tokens": 4,
+  "lastMs": 1784566895928
  },
  "lastAuditDay": "2026-07-20",
  "attempts": {
@@ -1691,7 +1701,10 @@
    "the sheep detectives": 3,
    "tom clancy's jack ryan: ghost war": 2,
    "lucky": 1,
-   "project hail mary": 2
+   "project hail mary": 2,
+   "outcome": 1,
+   "rick and morty": 1,
+   "king of the hill": 1
   }
  }
 }
