@@ -1,285 +1,77 @@
 {
-  "runId": "run-2026-07-20T17-01-51",
-  "builtAt": "2026-07-20T17:03:37.670Z",
-  "count": 22,
+  "runId": "run-2026-07-20T18-01-36",
+  "builtAt": "2026-07-20T18:03:35.121Z",
+  "count": 13,
   "topics": [
     {
-      "id": "news-lewis-pullman-julian-garner-guilty-creatures-casting",
-      "slug": "lewis-pullman-joins-julia-garner-in-apple-tv-thriller-guilty-creatures",
-      "title": "Lewis Pullman Joins Julia Garner in Apple TV Thriller Guilty Creatures",
+      "id": "news-criminal-minds-evolution-season-20-renewal",
+      "slug": "criminal-minds-evolution-is-returning-for-season-20-everything-we-know",
+      "title": "‘Criminal Minds: Evolution’ Is Returning for Season 20: Everything We Know So Far",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
-      "eventType": "casting",
+      "eventType": "renewal",
       "sensitivity": "normal",
-      "eventSlug": "lewis-pullman-julian-garner-guilty-creatures-casting",
-      "primaryKeyword": "guilty creatures casting",
-      "primaryEntity": "Guilty Creatures (TV series)",
+      "eventSlug": "criminal-minds-evolution-season-20-renewal",
+      "primaryKeyword": "criminal minds evolution season 20",
+      "primaryEntity": "Criminal Minds",
       "entities": [
-        "Lewis Pullman",
-        "Julia Garner",
-        "Apple TV+"
+        "Criminal Minds: Evolution"
       ],
-      "angle": "Lewis Pullman is set to star opposite Julia Garner in Apple TV+'s thriller 'Guilty Creatures'.",
+      "angle": "The popular streaming series has been renewed for another season.",
       "tmdbType": "movie",
-      "source": "rss:Variety",
+      "source": "gnews:TV Insider",
       "sources": [
         {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/tv/news/lewis-pullman-julia-garner-apple-tv-guilty-creatures-1236816633/",
-          "ageMin": 62,
-          "headline": "Lewis Pullman Joins Julia Garner in Apple TV Thriller Guilty Creatures",
-          "summary": "Lewis Pullman is set to star opposite Julia Garner in the upcoming Apple TV series Guilty Creatures, Variety has learned. The show, with Garner as a lead and executive producer, was announced on July 6. It is an adaptation of the Mikita Brottman true crime book “Guilty Creatures: Sex, God, and Murder in Tallahassee, Florida. [ ]"
-        },
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/lewis-pullman-julia-garner-guilty-creatures-apple-series-1236997333/",
-          "ageMin": 62,
-          "headline": "Lewis Pullman Joins Julia Garner In ‘Guilty Creatures’ Apple TV Series From Tomorrow Studios",
-          "summary": "Lewis Pullman (Remarkably Bright Creatures, Lessons in Chemistry) is returning to television and to Apple TV with a starring role opposite Julia Garner in Guilty Creatures, a thriller drama from director Craig Gillespie, showrunner Stuart Zicherman and Tomorrow Studios. Adapted for the screen by Sarah DeLappe from Mikita Brottman‘s true-crime book Guilty Creatures: [ ]"
+          "outlet": "TV Insider",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNdjZTQzFKcXhQbW95cXhNMG5SNExFUlJpU0xZMjRYeVZtMDdjdHh2eUhzTEJQNDhlczhNZ1RxZWYzLXR2YlRuZmVLbG9sWjFDM296ekx2X2IwR1NIX3Bub3g4RXVRb3pDc1N3UkJhaGYtU0thOHpvdjBUUGc2c0hGMFpaZmdOZjZSMHRoVTNCZW5tTndRY2xWUDFCSkdFME56WmlRcXZSUQ?oc=5",
+          "ageMin": 68,
+          "headline": "‘Criminal Minds: Evolution’ Is Returning for Season 20: Everything We Know So Far - TV Insider",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxNdjZTQzFKcXhQbW95cXhNMG5SNExFUlJpU0xZMjRYeVZtMDdjdHh2eUhzTEJQNDhlczhNZ1RxZWYzLXR2YlRuZmVLbG9sWjFDM296ekx2X2IwR1NIX3Bub3g4RXVRb3pDc1N3UkJhaGYtU0thOHpvdjBUUGc2c0hGMFpaZmdOZjZSMHRoVTNCZW5tTndRY2xWUDFCSkdFME56WmlRcXZSUQ?oc=5\" target=\"_blank\" ‘C"
         }
       ],
-      "ageMin": 62,
+      "ageMin": 68,
       "_cand": {
-        "key": "rss:lewis-pullman-joins-julia-garner-in-apple-tv-thriller-guilty",
+        "key": "rss:-criminal-minds-evolution-is-returning-for-season-20-everyth",
         "popularity": 0,
-        "kind": "rss-news"
+        "kind": "gnews"
       },
-      "corroborationCount": 2,
+      "corroborationCount": 1,
       "verification": {
-        "tier1Count": 2,
-        "tier1Owners": 1,
-        "outletCount": 2,
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
         "outlets": [
-          "Variety",
-          "Deadline"
+          "TV Insider"
         ],
-        "maxTier": 7,
+        "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "Variety",
+        "attribution": "TV Insider",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 92,
+      "priority": 85,
       "signals": {
         "recency": 16,
-        "corroboration": 18,
+        "corroboration": 8,
         "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 8,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-theo-leber-dwayne-johnson-lizard-music-casting",
-      "slug": "10-year-old-theo-leber-lands-lead-role-opposite-dwayne-johnson-in-benn",
-      "title": "10-Year-Old Theo Leber Lands Lead Role Opposite Dwayne Johnson In Benny Safdie s Lizard Music For Amazon MGM United Artists",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "theo-leber-dwayne-johnson-lizard-music-casting",
-      "primaryKeyword": "Lizard Music casting",
-      "primaryEntity": "Lizard Music",
-      "entities": [
-        "Dwayne Johnson",
-        "Benny Safdie"
-      ],
-      "angle": "10-year-old Theo Leber has been cast in a lead role opposite Dwayne Johnson in Benny Safdie's upcoming film 'Lizard Music'.",
-      "tmdbType": "movie",
-      "source": "rss:Deadline",
-      "sources": [
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/lizard-music-theo-leber-joins-dwayne-johnson-movie-1236997691/",
-          "ageMin": 32,
-          "headline": "10-Year-Old Theo Leber Lands Lead Role Opposite Dwayne Johnson In Benny Safdie s Lizard Music For Amazon MGM United Artists",
-          "summary": "EXCLUSIVE: Chicago-area 4th grader Theo Leber has landed a starring role opposite Dwayne Johnson in Lizard Music, Benny Safdie s adaptation of the 1976 novel by Daniel Pinkwater for Amazon MGM Studios and United Artists. The 10-year-old comes to the potentially career-making opportunity following a months-long casting process. Lizard Music marks his feature debut. A live-action/CGI hybrid, Safdie "
-        }
-      ],
-      "ageMin": 32,
-      "_cand": {
-        "key": "rss:10-year-old-theo-leber-lands-lead-role-opposite-dwayne-johns",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Deadline"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Deadline",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 92,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-toni-collette-positano-netflix-casting",
-      "slug": "toni-collette-karren-karagulian-among-new-additions-to-netflix-s-itali",
-      "title": "Toni Collette Karren Karagulian Among New Additions To Netflix s Italian-Set Romantic Caper Positano From Daniel Roher",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "toni-collette-positano-netflix-casting",
-      "primaryKeyword": "Positano Netflix casting",
-      "primaryEntity": "Positano",
-      "entities": [
-        "Toni Collette",
-        "Daniel Roher"
-      ],
-      "angle": "Toni Collette and Karren Karagulian are among the new additions to the cast of Netflix's upcoming Italian-set romantic caper 'Positano'.",
-      "tmdbType": "movie",
-      "source": "rss:Deadline",
-      "sources": [
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/positano-movie-casts-toni-collette-karren-karagulian-1236997694/",
-          "ageMin": 32,
-          "headline": "Toni Collette Karren Karagulian Among New Additions To Netflix s Italian-Set Romantic Caper Positano From Daniel Roher",
-          "summary": "EXCLUSIVE: Daniel Roher, the Academy Award-winning director behind recent titles Tuner and The AI Doc, has added five to the cast of his new Netflix movie, Positano: Toni Collette (Hereditary), Karren Karagulian (Anora), Salvatore Esposito (Gomorrah), Michele Savoia (Ferrari) and Lorenzo de Moor (You, Me Tuscany). Starring Matthew McConaughey and Zoe Saldaña, Positano follows a charming jewel thie"
-        }
-      ],
-      "ageMin": 32,
-      "_cand": {
-        "key": "rss:toni-collette-karren-karagulian-among-new-additions-to-netfl",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Deadline"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Deadline",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 92,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-mark-andrews-john-carter-of-mars-animated-series",
-      "slug": "oscar-winner-mark-andrews-boards-john-carter-of-mars-animated-series",
-      "title": "Oscar Winner Mark Andrews Boards ‘John Carter of Mars’ Animated Series",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "mark-andrews-john-carter-of-mars-animated-series",
-      "primaryKeyword": "John Carter of Mars animated series",
-      "primaryEntity": "John Carter",
-      "entities": [
-        "John Carter of Mars (TV series)",
-        "Mark Andrews",
-        "Pixar"
-      ],
-      "angle": "Oscar-winning Pixar vet Mark Andrews is set to lead a new animated series based on Edgar Rice Burroughs' classic character.",
-      "tmdbType": "movie",
-      "source": "rss:TheWrap",
-      "sources": [
-        {
-          "outlet": "TheWrap",
-          "tier": 7,
-          "url": "https://www.thewrap.com/creative-content/tv-shows/john-carter-warlord-of-mars-adds-mark-andrews/",
-          "ageMin": 32,
-          "headline": "Oscar Winner Mark Andrews Boards ‘John Carter of Mars’ Animated Series Exclusive",
-          "summary": "The Pixar vet and his co-showrunner and head writer Michael Kogge will visit San Diego Comic-Con later this week to discuss the new project The post Oscar Winner Mark Andrews Boards ‘John Carter of Mars’ Animated Series | Exclusive appeared first on TheWrap ."
-        }
-      ],
-      "ageMin": 32,
-      "_cand": {
-        "key": "rss:oscar-winner-mark-andrews-boards-john-carter-of-mars-animate",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "TheWrap"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "TheWrap",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 86,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
         "big": 18,
         "trending": 0,
         "spice": 0,
-        "softTv": 0
+        "softTv": 0,
+        "radar": 16
       },
-      "tierClass": "B"
+      "radarKind": "tv-episode-soon",
+      "tierClass": "A"
     },
     {
-      "id": "news-anne-hathaway-princess-diaries-3-moving-forward",
+      "id": "news-princess-diaries-3-moving-forward",
       "slug": "anne-hathaway-says-princess-diaries-3-is-moving-in-the-right-direction",
       "title": "Anne Hathaway Says Princess Diaries 3 Is Moving in the Right Direction",
       "contentType": "news",
@@ -288,14 +80,14 @@
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "anne-hathaway-princess-diaries-3-moving-forward",
+      "eventSlug": "princess-diaries-3-moving-forward",
       "primaryKeyword": "princess diaries 3",
       "primaryEntity": "Princess Diaries 3",
       "entities": [
         "One Day",
         "Anne Hathaway"
       ],
-      "angle": "Anne Hathaway provides an update on the development of 'Princess Diaries 3', confirming a story breakthrough.",
+      "angle": "Anne Hathaway provides an update on the development of Princess Diaries 3, confirming a story breakthrough.",
       "tmdbType": "movie",
       "source": "rss:TheWrap",
       "sources": [
@@ -303,12 +95,12 @@
           "outlet": "TheWrap",
           "tier": 7,
           "url": "https://www.thewrap.com/creative-content/movies/anne-hathaway-princess-diaries-3-update/",
-          "ageMin": 16,
+          "ageMin": 76,
           "headline": "Anne Hathaway Says Princess Diaries 3 Is Moving in the Right Direction",
           "summary": "\"We had a story breakthrough,\" the \"Odyssey\" and \"Devil Wears Prada\" star shares The post Anne Hathaway Says Princess Diaries 3 Is Moving in the Right Direction appeared first on TheWrap ."
         }
       ],
-      "ageMin": 16,
+      "ageMin": 76,
       "_cand": {
         "key": "rss:anne-hathaway-says-princess-diaries-3-is-moving-in-the-right",
         "popularity": 0,
@@ -329,274 +121,6 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 87,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "music-news-tedeschi-trucks-band-newport-cancellation-surgery",
-      "slug": "tedeschi-trucks-band-cancels-newport-appearance-after-susan-tedeschi-n",
-      "title": "Tedeschi Trucks Band Cancels Newport Appearance After Susan Tedeschi Needs Surgery",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
-      "subcategory": "news",
-      "eventType": "health",
-      "sensitivity": "high",
-      "tier": "popular",
-      "eventSlug": "tedeschi-trucks-band-newport-cancellation-surgery",
-      "primaryKeyword": "Tedeschi Trucks Band cancel",
-      "primaryEntity": "Tedeschi Trucks Band",
-      "entities": [
-        "Susan Tedeschi",
-        "Newport Folk Festival"
-      ],
-      "angle": "Tedeschi Trucks Band cancels festival appearances due to Susan Tedeschi requiring surgery.",
-      "tmdbType": "movie",
-      "source": "rss:Rolling Stone",
-      "sources": [
-        {
-          "outlet": "Rolling Stone",
-          "tier": 7,
-          "url": "https://www.rollingstone.com/music/music-country/tedeschi-trucks-band-cancel-newport-susan-tedeschi-surgery-1235596006/",
-          "ageMin": 10,
-          "headline": "Tedeschi Trucks Band Cancel Newport Appearance After Susan Tedeschi Needs Surgery",
-          "summary": "The singer-guitarist says she \"had an appendix scare\" that will also require the group to miss their slot at this weekend's FloydFest in Virginia"
-        }
-      ],
-      "ageMin": 10,
-      "_cand": {
-        "key": "rss:tedeschi-trucks-band-cancel-newport-appearance-after-susan-t",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Rolling Stone"
-        ],
-        "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "Rolling Stone",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 72,
-      "signals": {
-        "recency": 30,
-        "corroboration": 12,
-        "status": 18,
-        "type": 12,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "S"
-    },
-    {
-      "id": "trailer-the-hobbit-1977-trailer",
-      "slug": "1977-s-animated-the-hobbit-still-holds-up-as-a-hero-s-journey",
-      "title": "1977's Animated 'The Hobbit' Still Holds Up as a Hero's Journey",
-      "contentType": "trailer",
-      "formatTag": "trailer",
-      "category": "movies",
-      "subcategory": "trailers",
-      "eventType": "trailer",
-      "sensitivity": "normal",
-      "eventSlug": "the-hobbit-1977-trailer",
-      "primaryKeyword": "the hobbit 1977 trailer",
-      "primaryEntity": "The Hobbit",
-      "entities": [
-        "The Hobbit (1977 film)",
-        "Rankin/Bass"
-      ],
-      "angle": "A look back at the 1977 animated 'The Hobbit' as a potential inspiration or companion piece to modern fantasy.",
-      "tmdbType": "movie",
-      "source": "rss:IndieWire",
-      "sources": [
-        {
-          "outlet": "IndieWire",
-          "tier": 7,
-          "url": "https://www.indiewire.com/features/best-of/the-hobbit-animated-1977-rankin-and-bass-cult-fil-1235206129/",
-          "ageMin": 3663,
-          "headline": "1977 s Animated The Hobbit Proves the Right Hero s Journey Can Be Taken Again and Again",
-          "summary": "You can't go wrong pairing Christopher Nolan's \"The Odyssey\" and this retro Rankin/Bass classic."
-        }
-      ],
-      "ageMin": 3663,
-      "_cand": {
-        "key": "rss:1977-s-animated-the-hobbit-proves-the-right-hero-s-journey-c",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "IndieWire"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "IndieWire",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 70,
-      "signals": {
-        "recency": 1,
-        "corroboration": 12,
-        "status": 18,
-        "type": 15,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "music-news-goose-announcement",
-      "slug": "goose-announces-dates-for-13th-annual-goosemas-holiday-shows",
-      "title": "Goose Announces Dates for 13th Annual Goosemas Holiday Shows",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "goose-announcement",
-      "primaryKeyword": "Goose tour",
-      "primaryEntity": "GOOSE",
-      "entities": [
-        "Goose",
-        "Atlantic City"
-      ],
-      "angle": "The popular band Goose has announced dates for their annual holiday shows.",
-      "tmdbType": "movie",
-      "source": "rss:Billboard",
-      "sources": [
-        {
-          "outlet": "Billboard",
-          "tier": 7,
-          "url": "https://www.billboard.com/music/rock/goose-dates-annual-goosemas-holiday-shows-1236298252/",
-          "ageMin": 5,
-          "headline": "Goose Announces Dates For 13th Annual Goosemas Holiday Shows",
-          "summary": "This year's holiday celebration will take place on Dec. 11-12 at the historic Jim Whelan Boardwalk Hall in Atlantic City, N.J."
-        }
-      ],
-      "ageMin": 5,
-      "_cand": {
-        "key": "rss:goose-announces-dates-for-13th-annual-goosemas-holiday-shows",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Billboard"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Billboard",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 69,
-      "signals": {
-        "recency": 30,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-bong-joon-ho-animated-feature-ally-global-sales",
-      "slug": "bong-joon-ho-s-first-animated-feature-ally-with-a-voice-cast-including",
-      "title": "Bong Joon Ho’s First Animated Feature Ally, With a Voice Cast Including Bradley Cooper and Ayo Edebiri, Sell Globally for Pathé",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "bong-joon-ho-animated-feature-ally-global-sales",
-      "primaryKeyword": "Bong Joon Ho animated feature Ally",
-      "primaryEntity": "Ally (animated film)",
-      "entities": [
-        "Bong Joon Ho",
-        "Bradley Cooper",
-        "Ayo Edebiri",
-        "Pathé"
-      ],
-      "angle": "Bong Joon Ho's first animated feature 'Ally' sells globally",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/film/global/bong-joon-ho-animated-feature-ally-sells-globally-pathe-1236814713/",
-          "ageMin": 107,
-          "headline": "Bong Joon Ho s First Animated Feature Ally, With a Voice Cast Including Bradley Cooper and Ayo Edebiri, Sell Globally for Pathé (EXCLUSIVE)",
-          "summary": "Bong Joon-Ho s first animated feature has proved a hit with international buyers, securing multiple deals for Pathé. Ally, which launched at the Marche du Film, had already been acquired by Neon for the U.S. prior to Cannes, reuniting the Oscar-winning director with the distributor following their hugely successful collaboration on Parasite, which won the Palme [ ]"
-        }
-      ],
-      "ageMin": 107,
-      "_cand": {
-        "key": "rss:bong-joon-ho-s-first-animated-feature-ally-with-a-voice-cast",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
       "priority": 79,
       "signals": {
         "recency": 16,
@@ -613,238 +137,38 @@
       "tierClass": "B"
     },
     {
-      "id": "news-afterlife-with-archie-series-disney-plus",
-      "slug": "afterlife-with-archie-series-from-riverdale-team-greenlit-at-disney",
-      "title": "Afterlife With Archie Series From Riverdale Team Greenlit at Disney+",
+      "id": "news-blade-movie-fate-addressed",
+      "slug": "marvel-studios-addresses-blade-movie-fate",
+      "title": "Marvel Studios Addresses 'Blade' Movie Fate",
       "contentType": "news",
       "formatTag": "news",
-      "category": "tv",
+      "category": "movies",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "afterlife-with-archie-series-disney-plus",
-      "primaryKeyword": "Afterlife with Archie series",
-      "primaryEntity": "Afterlife with Archie (TV series)",
+      "eventSlug": "blade-movie-fate-addressed",
+      "primaryKeyword": "blade movie",
+      "primaryEntity": "Blade",
       "entities": [
-        "Archie: To Riverdale and Back Again",
-        "Disney+",
-        "Riverdale"
+        "Blade (film)",
+        "Marvel Studios"
       ],
-      "angle": "Disney+ has officially greenlit a series adaptation of the 'Afterlife with Archie' comics, from the team behind 'Riverdale'.",
+      "angle": "Marvel Studios officially addresses the status of the long-delayed 'Blade' movie.",
       "tmdbType": "movie",
-      "source": "rss:Rolling Stone",
+      "source": "gnews:MovieWeb",
       "sources": [
         {
-          "outlet": "Rolling Stone",
-          "tier": 7,
-          "url": "https://www.rollingstone.com/music/music-news/melissa-auf-der-maur-new-music-bass-womb-room-1235595950/",
-          "ageMin": 61,
-          "headline": "Melissa Auf der Maur Digs Into Her Archive for First New Music in Over 15 Years",
-          "summary": "Bass Womb Room will find the Hole and Smashing Pumpkins bassist pairing previously unreleased demos with new \"interludes\" composed for an upcoming photo exhibit"
-        }
-      ],
-      "ageMin": 61,
-      "_cand": {
-        "key": "rss:melissa-auf-der-maur-digs-into-her-archive-for-first-new-mus",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Rolling Stone"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Rolling Stone",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 73,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-ayesha-curry-matthew-daddario-holiday-rom-coms-roku",
-      "slug": "ayesha-curry-matthew-daddario-joey-graziadei-and-jamie-chung-to-star-i",
-      "title": "Ayesha Curry, Matthew Daddario, Joey Graziadei and Jamie Chung to Star in Roku’s Holiday Rom-Coms",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "ayesha-curry-matthew-daddario-holiday-rom-coms-roku",
-      "primaryKeyword": "Roku holiday rom-coms",
-      "primaryEntity": "Roku Channel",
-      "entities": [
-        "Ayesha Curry",
-        "Matthew Daddario",
-        "Joey Graziadei",
-        "Jamie Chung"
-      ],
-      "angle": "Ayesha Curry, Matthew Daddario, Joey Graziadei, and Jamie Chung to star in Roku holiday rom-coms",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/tv/tv-news/roku-holiday-romantic-comedies-ayesha-curry-joey-graziadei-1236649016/",
-          "ageMin": 182,
-          "headline": "Ayesha Curry, Matthew Daddario, Joey Graziadei and Jamie Chung to Star in Roku’s Holiday Rom-Coms",
-          "summary": "Roku confirmed two new original films for its seasonal roster: ‘Second Chance Holiday’ starring Curry and Daddario, and ‘The Holiday Spark’ starring Chung opposite Graziadei in his first feature film role."
-        }
-      ],
-      "ageMin": 182,
-      "_cand": {
-        "key": "rss:ayesha-curry-matthew-daddario-joey-graziadei-and-jamie-chung",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 77,
-      "signals": {
-        "recency": 9,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-stranger-things-2025-2026-tv-season-ratings",
-      "slug": "stranger-things-tops-final-2025-2026-tv-season-ratings",
-      "title": "'Stranger Things' Tops Final 2025-2026 TV Season Ratings",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "stranger-things-2025-2026-tv-season-ratings",
-      "primaryKeyword": "Stranger Things ratings",
-      "primaryEntity": "Stranger Things",
-      "entities": [
-        "Nielsen"
-      ],
-      "angle": "Stranger Things tops the final multiplatform ratings for the 2025-2026 TV season.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/tv/news/stranger-things-2025-2026-tv-season-multiplatform-ratings-1236816199/",
-          "ageMin": 2,
-          "headline": "Stranger Things, Marshals Top Final 2025-2026 TV Season Multiplatform Ratings (EXCLUSIVE)",
-          "summary": "The final 35-day multi-platform ratings for the 2025-2026 TV season are finally in, now that we re more than a month beyond the official end of the TV season. According to Nielsen s multiplatform 35-day linear and streaming ratings, Netflix s Stranger Things was still the TV season s most-watched non-sports series, with 32.9 million viewers, followed by the [ ]"
-        }
-      ],
-      "ageMin": 2,
-      "_cand": {
-        "key": "rss:stranger-things-marshals-top-final-2025-2026-tv-season-multi",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 71,
-      "signals": {
-        "recency": 30,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 6,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-damson-idris-f1-movie-sequel",
-      "slug": "damson-idris-teases-f1-the-movie-sequel-conversations",
-      "title": "Damson Idris Teases 'F1 The Movie' Sequel Conversations",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "damson-idris-f1-movie-sequel",
-      "primaryKeyword": "F1 The Movie sequel",
-      "primaryEntity": "F1",
-      "entities": [
-        "F1 The Movie",
-        "Damson Idris"
-      ],
-      "angle": "Damson Idris hints at potential sequel discussions for 'F1 The Movie'.",
-      "tmdbType": "movie",
-      "source": "gnews:Motorsport.com",
-      "sources": [
-        {
-          "outlet": "Motorsport.com",
+          "outlet": "MovieWeb",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNQWNTV1Y3U012dGxkZXZVdWpBOVdRUVBoeVlsT3JvQVVwOE1zNGtyNnc0aFR1dWZTR1ZTQ0R4LTh5cTByN0x1WFpZU1FibWdvcTh1MG9VTWdmNUh1ajF2ckhoV0YyRWtWLVJpaE90NDVLbS1iMVctVVZ5cmZwYjZYYkd6NEtXLTdvUFhWYnRETzdXbXRGOWVXTEZDdmh2ZzZlaVV2WA?oc=5",
-          "ageMin": 1471,
-          "headline": "Damson Idris teases \"exciting conversations\" over \"F1 The Movie\" sequel - Motorsport.com",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxNQWNTV1Y3U012dGxkZXZVdWpBOVdRUVBoeVlsT3JvQVVwOE1zNGtyNnc0aFR1dWZTR1ZTQ0R4LTh5cTByN0x1WFpZU1FibWdvcTh1MG9VTWdmNUh1ajF2ckhoV0YyRWtWLVJpaE90NDVLbS1iMVctVVZ5cmZwYjZYYkd6NEtXLTdvUFhWYnRETzdXbXRGOWVXTEZDdmh2ZzZlaVV2WA?oc=5\" target=\"_blank\" Damson"
+          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFA3TUF1OGZwaDdQUEtEWXY3NFczRkRfekpkYkpFZ0FHYVhRMmpZMGFENFk0UlNjTjVUYjZYdXBCdFJJTEprSm5IT3NIX1VMQkFITDhNbXRydUxXSGFNV2dSWEFJejBlaTNZeVpUYkhaUGR5N2pBcGFN?oc=5",
+          "ageMin": 101,
+          "headline": "Marvel Studios Officially Addresses Fate of Long-Awaited 'Blade' Movie Ahead of 'Doomsday' - MovieWeb",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMid0FVX3lxTFA3TUF1OGZwaDdQUEtEWXY3NFczRkRfekpkYkpFZ0FHYVhRMmpZMGFENFk0UlNjTjVUYjZYdXBCdFJJTEprSm5IT3NIX1VMQkFITDhNbXRydUxXSGFNV2dSWEFJejBlaTNZeVpUYkhaUGR5N2pBcGFN?oc=5\" target=\"_blank\" Marvel Studios Officially Addresses Fate of Long-Awaited 'Blade' Mov"
         }
       ],
-      "ageMin": 1471,
+      "ageMin": 101,
       "_cand": {
-        "key": "rss:damson-idris-teases-exciting-conversations-over-f1-the-movie",
+        "key": "rss:marvel-studios-officially-addresses-fate-of-long-awaited-bla",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -854,152 +178,19 @@
         "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "Motorsport.com"
+          "MovieWeb"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "Motorsport.com",
+        "attribution": "MovieWeb",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 65,
-      "signals": {
-        "recency": 1,
-        "corroboration": 8,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-interview-with-the-vampire-season-3-finale-lore",
-      "slug": "inside-the-interview-with-the-vampire-season-3-finale-where-the-series",
-      "title": "Inside the Interview with the Vampire Season 3 Finale, Where the Series Loses Its Head and Finds Lestat s Truth",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "interview-with-the-vampire-season-3-finale-lore",
-      "primaryKeyword": "interview with the vampire season 3 finale",
-      "primaryEntity": "Interview with the Vampire",
-      "entities": [
-        "Interview with the Vampire (TV series)",
-        "Rolin Jones"
-      ],
-      "angle": "Showrunner discusses the narrative and visual choices made in the 'Interview with the Vampire' Season 3 finale.",
-      "tmdbType": "movie",
-      "source": "rss:IndieWire",
-      "sources": [
-        {
-          "outlet": "IndieWire",
-          "tier": 7,
-          "url": "https://www.indiewire.com/features/interviews/the-vampire-lestat-finale-showrunner-interview-rolin-jones-1235206059/",
-          "ageMin": 133,
-          "headline": "Inside the Interview with the Vampire Season 3 Finale, Where the Series Loses Its Head and Finds Lestat s Truth",
-          "summary": "Showrunner Rolin Jones tells IndieWire about optimizing the show's visuals for performance after its leads have lost their heads."
-        }
-      ],
-      "ageMin": 133,
-      "_cand": {
-        "key": "rss:inside-the-interview-with-the-vampire-season-3-finale-where-",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "IndieWire"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "IndieWire",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 57,
+      "priority": 75,
       "signals": {
         "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 6,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-danny-boyle-ink-netflix-deal",
-      "slug": "netflix-acquires-danny-boyle-s-ink-ahead-of-venice-premiere",
-      "title": "Netflix Acquires Danny Boyle's 'Ink' Ahead of Venice Premiere",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "danny-boyle-ink-netflix-deal",
-      "primaryKeyword": "Danny Boyle Ink",
-      "primaryEntity": "Ink (film)",
-      "entities": [
-        "Danny Boyle",
-        "Netflix",
-        "Venice Film Festival"
-      ],
-      "angle": "Netflix makes a major pre-premiere acquisition of Danny Boyle's new film.",
-      "tmdbType": "movie",
-      "source": "rss:IndieWire",
-      "sources": [
-        {
-          "outlet": "IndieWire",
-          "tier": 7,
-          "url": "https://www.indiewire.com/news/breaking-news/danny-boyle-ink-netflix-venice-sale-1235206128/",
-          "ageMin": 3981,
-          "headline": "Danny Boyle s Ink Sells to Netflix in First Big Sale (Way) Ahead of Venice Premiere",
-          "summary": "The film about Larry Lamb, Rupert Murdoch, and the birth of The Sun tabloid is the opening night film at the Biennale."
-        }
-      ],
-      "ageMin": 3981,
-      "_cand": {
-        "key": "rss:danny-boyle-s-ink-sells-to-netflix-in-first-big-sale-way-ahe",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "IndieWire"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "IndieWire",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 64,
-      "signals": {
-        "recency": 1,
-        "corroboration": 12,
+        "corroboration": 8,
         "status": 18,
         "type": 9,
         "pop": 0,
@@ -1012,306 +203,39 @@
       "tierClass": "B"
     },
     {
-      "id": "news-nicki-minaj-concert-debt-lawsuit",
-      "slug": "nicki-minaj-wants-out-of-lawsuit-over-alleged-275k-concert-debt-fancif",
-      "title": "Nicki Minaj Wants Out of Lawsuit Over Alleged $275K Concert Debt: Fanciful Baseless",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "lawsuit",
-      "sensitivity": "high",
-      "tier": "popular",
-      "eventSlug": "nicki-minaj-concert-debt-lawsuit",
-      "primaryKeyword": "nicki minaj lawsuit",
-      "primaryEntity": "Nicki Minaj",
-      "entities": [
-        "Billboard"
-      ],
-      "angle": "Nicki Minaj is fighting a concert debt lawsuit, calling the claims 'fanciful baseless'.",
-      "tmdbType": "movie",
-      "source": "rss:Billboard",
-      "sources": [
-        {
-          "outlet": "Billboard",
-          "tier": 7,
-          "url": "https://www.billboard.com/pro/nicki-minaj-wants-out-of-lawsuit-alleged-275k-concert-debt/",
-          "ageMin": 48,
-          "headline": "Nicki Minaj Wants Out of Lawsuit Over Alleged $275K Concert Debt: Fanciful Baseless",
-          "summary": "A concert production company says Minaj is refusing to pay back a big bill, but she now says she shouldn't have been named in the case at all."
-        }
-      ],
-      "ageMin": 48,
-      "_cand": {
-        "key": "rss:nicki-minaj-wants-out-of-lawsuit-over-alleged-275k-concert-d",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Billboard"
-        ],
-        "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "Billboard",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 70,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 12,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 4,
-        "softTv": 0
-      },
-      "tierClass": "S"
-    },
-    {
-      "id": "news-lisa-always-lalisa-tiff-premiere",
-      "slug": "documentary-about-blackpink-s-lisa-always-lalisa-to-world-premiere-at-",
-      "title": "Documentary about BLACKPINK s LISA, Always Lalisa, to World Premiere at 2026 Toronto International Film Festival",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
+      "id": "music-news-goose-announces-goosemas-2024",
+      "slug": "goose-announces-dates-for-13th-annual-goosemas-holiday-shows",
+      "title": "Goose Announces Dates For 13th Annual Goosemas Holiday Shows",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "lisa-always-lalisa-tiff-premiere",
-      "primaryKeyword": "blackpink lisa documentary",
-      "primaryEntity": "Lisa Kudrow",
+      "eventSlug": "goose-announces-goosemas-2024",
+      "primaryKeyword": "goosemas dates",
+      "primaryEntity": "GOOSE",
       "entities": [
-        "Lisa (BLACKPINK)",
-        "BLACKPINK",
-        "Toronto International Film Festival",
-        "Always Lalisa"
+        "Goose",
+        "Jim Whelan Boardwalk Hall"
       ],
-      "angle": "A documentary about BLACKPINK's Lisa is set to world premiere at the Toronto International Film Festival.",
+      "angle": "Jam band Goose has announced the dates for their 13th annual holiday shows, Goosemas.",
       "tmdbType": "movie",
       "source": "rss:Billboard",
       "sources": [
         {
           "outlet": "Billboard",
           "tier": 7,
-          "url": "https://www.billboard.com/music/pop/doc-blackpink-lisa-always-lalisa-world-premiere-toronto-fest-1236298190/",
-          "ageMin": 51,
-          "headline": "Documentary about BLACKPINK s LISA, Always Lalisa, to World Premiere at 2026 Toronto International Film Festival",
-          "summary": "The movie looks at the singer's massive breakout year, which included the 2026 FIFA World Cup opening ceremony and 2025 Coachella."
+          "url": "https://www.billboard.com/music/rock/goose-dates-annual-goosemas-holiday-shows-1236298252/",
+          "ageMin": 65,
+          "headline": "Goose Announces Dates For 13th Annual Goosemas Holiday Shows",
+          "summary": "This year's holiday celebration will take place on Dec. 11-12 at the historic Jim Whelan Boardwalk Hall in Atlantic City, N.J."
         }
       ],
-      "ageMin": 51,
+      "ageMin": 65,
       "_cand": {
-        "key": "rss:documentary-about-blackpink-s-lisa-always-lalisa-to-world-pr",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Billboard"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Billboard",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 63,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-madonna-not-in-trump-suite-world-cup-final",
-      "slug": "no-madonna-was-not-in-trump-s-suite-at-the-world-cup-final",
-      "title": "No, Madonna Was Not in Trump s Suite at the World Cup Final",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "madonna-not-in-trump-suite-world-cup-final",
-      "primaryKeyword": "Madonna Trump World Cup",
-      "primaryEntity": "Madonna",
-      "entities": [
-        "Donald Trump"
-      ],
-      "angle": "Madonna's team clarifies she was not in Donald Trump's suite at the World Cup Final after a viral tweet claimed otherwise.",
-      "tmdbType": "movie",
-      "source": "rss:Rolling Stone",
-      "sources": [
-        {
-          "outlet": "Rolling Stone",
-          "tier": 7,
-          "url": "https://www.rollingstone.com/music/music-news/madonna-trump-world-cup-rumor-1235595216/",
-          "ageMin": 30,
-          "headline": "No, Madonna Was Not in Trump s Suite at the World Cup Final",
-          "summary": "A viral tweet claimed the pop icon watched the final from Donald Trump’s suite. The woman in the footage was clearly someone else"
-        }
-      ],
-      "ageMin": 30,
-      "_cand": {
-        "key": "rss:no-madonna-was-not-in-trump-s-suite-at-the-world-cup-final",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Rolling Stone"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Rolling Stone",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 59,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-john-coltrane-other",
-      "slug": "john-coltrane-s-centennial-how-artists-from-ariana-grande-to-beastie-b",
-      "title": "John Coltrane s Centennial: How Artists From Ariana Grande to Beastie Boys Have Been Inspired by the Jazz Pioneer",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "john-coltrane-other",
-      "primaryKeyword": "John Coltrane",
-      "primaryEntity": "John Coltrane",
-      "entities": [
-        "ariana grande: excuse me, i love you",
-        "Ariana Grande",
-        "Beastie Boys"
-      ],
-      "angle": "Artists across genres, including Ariana Grande and the Beastie Boys, are celebrating the enduring legacy of jazz pioneer John Coltrane on his centennial.",
-      "tmdbType": "movie",
-      "source": "rss:Rolling Stone",
-      "sources": [
-        {
-          "outlet": "Rolling Stone",
-          "tier": 7,
-          "url": "https://www.rollingstone.com/music/music-features/songer-british-rapper-new-album-what-if-i-say-no-1235595843/",
-          "ageMin": 45,
-          "headline": "Meet Songer, The British Star Who Rhymes Over Britney Spears and Says He s Not A Rapper",
-          "summary": "Songer is not from London, remains resolutely independent and fills his albums with confessional bars about mental health. It's all working splendidly"
-        }
-      ],
-      "ageMin": 45,
-      "_cand": {
-        "key": "rss:meet-songer-the-british-star-who-rhymes-over-britney-spears-",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Rolling Stone"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Rolling Stone",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 59,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-kid-cudi-kanye-west-rebuilding-friendship",
-      "slug": "kid-cudi-reveals-he-and-ye-are-rebuilding-their-friendship-sees-them-c",
-      "title": "Kid Cudi Reveals He and Ye Are Rebuilding Their Friendship, Sees Them Collaborating in the Future",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "kid-cudi-kanye-west-rebuilding-friendship",
-      "primaryKeyword": "kid cudi kanye west",
-      "primaryEntity": "Kid Cudi",
-      "entities": [
-        "Kanye West"
-      ],
-      "angle": "Kid Cudi hints at future collaboration with Kanye West following reconciliation.",
-      "tmdbType": "movie",
-      "source": "rss:Billboard",
-      "sources": [
-        {
-          "outlet": "Billboard",
-          "tier": 7,
-          "url": "https://www.billboard.com/music/rb-hip-hop/kid-cudi-kanye-west-rebuilding-friendship-1236298145/",
-          "ageMin": 92,
-          "headline": "Kid Cudi Reveals He and Ye Are Rebuilding Their Friendship Sees Them Collaborating in the Future: One Day Soon For Sure",
-          "summary": "Cudi appeared to extend an olive branch to West when shouting him out on stage while on tour."
-        }
-      ],
-      "ageMin": 92,
-      "_cand": {
-        "key": "rss:kid-cudi-reveals-he-and-ye-are-rebuilding-their-friendship-s",
+        "key": "rss:goose-announces-dates-for-13th-annual-goosemas-holiday-shows",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -1346,37 +270,170 @@
       "tierClass": "C"
     },
     {
-      "id": "news-celebrity-splits-2026-jessie-j-chanan-colman",
-      "slug": "celebrity-splits-of-2026-jessie-j-chanan-colman-and-more-stars-who-cal",
-      "title": "Celebrity Splits of 2026: Jessie J, Chanan Colman and More Stars Who Called It Quits",
+      "id": "news-stranger-things-multiplatform-ratings-2025-2026",
+      "slug": "stranger-things-marshals-top-final-2025-2026-tv-season-multiplatform-r",
+      "title": "Stranger Things, Marshals Top Final 2025-2026 TV Season Multiplatform Ratings",
       "contentType": "news",
       "formatTag": "news",
-      "category": "celebrity",
+      "category": "tv",
       "subcategory": "news",
-      "eventType": "breakup",
+      "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "celebrity-splits-2026-jessie-j-chanan-colman",
-      "primaryKeyword": "celebrity splits",
-      "primaryEntity": "Jessie J",
+      "eventSlug": "stranger-things-multiplatform-ratings-2025-2026",
+      "primaryKeyword": "stranger things ratings",
+      "primaryEntity": "Stranger Things",
       "entities": [
-        "Chanan Colman"
+        "Netflix"
       ],
-      "angle": "A roundup of celebrity splits, including Jessie J and Chanan Colman.",
+      "angle": "Stranger Things and other shows top the final multiplatform ratings for the 2025-2026 TV season.",
       "tmdbType": "movie",
-      "source": "gnews:usmagazine.com",
+      "source": "rss:Variety",
       "sources": [
         {
-          "outlet": "usmagazine.com",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPeEg1REU2QkVnLTVmUERlckVvNWVHNjhnUmFjelBnbkdsalR5STVvQ29mM3dkcmVKRUxpQmItREREQ2sycm04REx6SjhrS1ktZHNYRXh0cTIwazVSWmduVzg0a3lhV0FHZVBrTjFXQnFUbkNTV09qUEhxU0pJamE0ZmppTFNsbkV6TmxITDg1Yk1qd25TZmMxTlFzM2FSMXFRUUtfSV9tY1JzSl9RNUZ5Ti1OZ0c?oc=5",
-          "ageMin": 120,
-          "headline": "Celebrity Splits of 2026: Jessie J, Chanan Colman and More Stars Who Called It Quits - usmagazine.com",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxPeEg1REU2QkVnLTVmUERlckVvNWVHNjhnUmFjelBnbkdsalR5STVvQ29mM3dkcmVKRUxpQmItREREQ2sycm04REx6SjhrS1ktZHNYRXh0cTIwazVSWmduVzg0a3lhV0FHZVBrTjFXQnFUbkNTV09qUEhxU0pJamE0ZmppTFNsbkV6TmxITDg1Yk1qd25TZmMxTlFzM2FSMXFRUUtfSV9tY1JzSl9RNUZ5Ti1OZ0c?oc=5\" t"
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/tv/news/stranger-things-2025-2026-tv-season-multiplatform-ratings-1236816199/",
+          "ageMin": 62,
+          "headline": "Stranger Things, Marshals Top Final 2025-2026 TV Season Multiplatform Ratings (EXCLUSIVE)",
+          "summary": "The final 35-day multi-platform ratings for the 2025-2026 TV season are finally in, now that we re more than a month beyond the official end of the TV season. According to Nielsen s multiplatform 35-day linear and streaming ratings, Netflix s Stranger Things was still the TV season s most-watched non-sports series, with 32.9 million viewers, followed by the [ ]"
         }
       ],
-      "ageMin": 120,
+      "ageMin": 62,
       "_cand": {
-        "key": "rss:celebrity-splits-of-2026-jessie-j-chanan-colman-and-more-sta",
+        "key": "rss:stranger-things-marshals-top-final-2025-2026-tv-season-multi",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 57,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 6,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "music-news-songer-announcement",
+      "slug": "meet-songer-the-british-star-who-rhymes-over-britney-spears-and-says-h",
+      "title": "Meet Songer, the British Star Who Rhymes Over Britney Spears and Says He s Not a Rapper",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "songer-announcement",
+      "primaryKeyword": "Songer",
+      "primaryEntity": "Songer",
+      "entities": [
+        "Britney Spears"
+      ],
+      "angle": "British artist Songer is releasing new music, distinct from traditional rap, focusing on confessional themes.",
+      "tmdbType": "movie",
+      "source": "rss:Rolling Stone",
+      "sources": [
+        {
+          "outlet": "Rolling Stone",
+          "tier": 7,
+          "url": "https://www.rollingstone.com/music/music-features/songer-british-rapper-new-album-what-if-i-say-no-1235595843/",
+          "ageMin": 105,
+          "headline": "Meet Songer, the British Star Who Rhymes Over Britney Spears and Says He s Not a Rapper",
+          "summary": "Songer is not from London, remains resolutely independent, and fills his albums with confessional bars about mental health. It's all working splendidly"
+        }
+      ],
+      "ageMin": 105,
+      "_cand": {
+        "key": "rss:meet-songer-the-british-star-who-rhymes-over-britney-spears-",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Rolling Stone"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Rolling Stone",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 55,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-america-s-sweethearts-film-other",
+      "slug": "inside-hollywood-s-america-s-sweethearts-at-25",
+      "title": "Inside Hollywood's 'America's Sweethearts' at 25",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "america-s-sweethearts-film-other",
+      "primaryKeyword": "America's Sweethearts",
+      "primaryEntity": "America's Sweethearts",
+      "entities": [
+        "America's Sweethearts (film)",
+        "Preston Sturges",
+        "Robert Downey Jr."
+      ],
+      "angle": "An exclusive look back at the making of the Hollywood film 'America's Sweethearts' on its 25th anniversary.",
+      "tmdbType": "movie",
+      "source": "gnews:Cleveland.com",
+      "sources": [
+        {
+          "outlet": "Cleveland.com",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNY2F2TVZGcndWSFIwVjdQWks1TlRURmwxZk16cWtfV0hxNGNHWDdleVNRTWw2VFUzdzN1VjU3WUkwMzc5dHZfVWJnM1B4R1kzMnVNbXNKNHB2VUxDVGdzbU41MnlOWG85cXVmWUtVcHFNUzZLSlhoNVhoN1JHOFNRX3VLSlVaNVFfUnU3dFkyaE5Oc1VCaVFHX2l1c2VCZ1g3NW9WUUhmWXdaaE91S3lHTUFYbE9Mb0RKekJ30gHPAUFVX3lxTE9zS3RMdXJjRlNOcF96Q0RUbDR4NVAtV0pLTkJtVUl0TVN0MnpKdEFpemwzVHkyd0lqVkM4OWl3aWdyeWtOSXB6aVdPaDF6UEljVDd6bURZbkFFMm1XRV9odDA2bE5hNjBSdXhLcWctTEI5R1BnblI5Nnk3ZjZKMW11X2M5NjhIQjVUYVZobE0tTkZhSXpQam5HS0lJOEEzdEhkTkZmZFJ6amNJRVhUbzdxbnVTT1BRSGdZaU5VSUVTUENqYVZsUW80NEtkY19sRQ?oc=5",
+          "ageMin": 115,
+          "headline": "Popular rapper and NBA champ escorted out after bottle-throwing altercation - Cleveland.com",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiuwFBVV95cUxNY2F2TVZGcndWSFIwVjdQWks1TlRURmwxZk16cWtfV0hxNGNHWDdleVNRTWw2VFUzdzN1VjU3WUkwMzc5dHZfVWJnM1B4R1kzMnVNbXNKNHB2VUxDVGdzbU41MnlOWG85cXVmWUtVcHFNUzZLSlhoNVhoN1JHOFNRX3VLSlVaNVFfUnU3dFkyaE5Oc1VCaVFHX2l1c2VCZ1g3NW9WUUhmWXdaaE91S3lHTUFYbE9Mb0RKekJ"
+        }
+      ],
+      "ageMin": 115,
+      "_cand": {
+        "key": "rss:popular-rapper-and-nba-champ-escorted-out-after-bottle-throw",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -1386,21 +443,151 @@
         "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "usmagazine.com"
+          "Cleveland.com"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "usmagazine.com",
+        "attribution": "Cleveland.com",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 54,
+      "priority": 59,
       "signals": {
         "recency": 16,
         "corroboration": 8,
         "status": 18,
-        "type": 8,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 12,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-interview-with-the-vampire-season-3-finale-details",
+      "slug": "inside-the-interview-with-the-vampire-season-3-finale-where-the-series",
+      "title": "Inside the Interview with the Vampire Season 3 Finale, Where the Series Loses Its Head and Finds Lestat s Truth",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "interview-with-the-vampire-season-3-finale-details",
+      "primaryKeyword": "Interview with the Vampire Season 3 finale",
+      "primaryEntity": "Interview with the Vampire",
+      "entities": [
+        "Interview with the Vampire (TV series)",
+        "Rolin Jones"
+      ],
+      "angle": "Showrunner discusses the creative choices and visual optimization for the season finale of 'Interview with the Vampire'.",
+      "tmdbType": "movie",
+      "source": "rss:IndieWire",
+      "sources": [
+        {
+          "outlet": "IndieWire",
+          "tier": 7,
+          "url": "https://www.indiewire.com/features/interviews/the-vampire-lestat-finale-showrunner-interview-rolin-jones-1235206059/",
+          "ageMin": 193,
+          "headline": "Inside the Interview with the Vampire Season 3 Finale, Where the Series Loses Its Head and Finds Lestat s Truth",
+          "summary": "Showrunner Rolin Jones tells IndieWire about optimizing the show's visuals for performance after its leads have lost their heads."
+        }
+      ],
+      "ageMin": 193,
+      "_cand": {
+        "key": "rss:inside-the-interview-with-the-vampire-season-3-finale-where-",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "IndieWire"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "IndieWire",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 50,
+      "signals": {
+        "recency": 9,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 6,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-nicki-minaj-concert-debt-lawsuit",
+      "slug": "nicki-minaj-wants-out-of-lawsuit-over-alleged-275k-concert-debt-fancif",
+      "title": "Nicki Minaj Wants Out of Lawsuit Over Alleged $275K Concert Debt: Fanciful Baseless",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "lawsuit",
+      "sensitivity": "high",
+      "tier": "popular",
+      "eventSlug": "nicki-minaj-concert-debt-lawsuit",
+      "primaryKeyword": "nicki minaj",
+      "primaryEntity": "Nicki Minaj",
+      "entities": [],
+      "angle": "Nicki Minaj seeks dismissal from a lawsuit alleging $275,000 in unpaid concert debt, calling the claims baseless.",
+      "tmdbType": "movie",
+      "source": "rss:Billboard",
+      "sources": [
+        {
+          "outlet": "Billboard",
+          "tier": 7,
+          "url": "https://www.billboard.com/pro/nicki-minaj-wants-out-of-lawsuit-alleged-275k-concert-debt/",
+          "ageMin": 107,
+          "headline": "Nicki Minaj Wants Out of Lawsuit Over Alleged $275K Concert Debt: Fanciful Baseless",
+          "summary": "A concert production company says Minaj is refusing to pay back a big bill, but she now says she shouldn't have been named in the case at all."
+        }
+      ],
+      "ageMin": 107,
+      "_cand": {
+        "key": "rss:nicki-minaj-wants-out-of-lawsuit-over-alleged-275k-concert-d",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Billboard"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": "Billboard",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 62,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 12,
         "pop": 0,
         "breakout": 0,
         "big": 0,
@@ -1408,12 +595,80 @@
         "spice": 4,
         "softTv": 0
       },
+      "tierClass": "S"
+    },
+    {
+      "id": "news-blackpink-lisa-documentary-tiff",
+      "slug": "documentary-about-blackpink-s-lisa-always-lalisa-to-world-premiere-at-",
+      "title": "Documentary about BLACKPINK's LISA, Always Lalisa, to World Premiere at 2026 Toronto International Film Festival",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "blackpink-lisa-documentary-tiff",
+      "primaryKeyword": "lisa blackpink",
+      "primaryEntity": "Lisa Kudrow",
+      "entities": [
+        "LISA (BLACKPINK)",
+        "BLACKPINK",
+        "Toronto International Film Festival"
+      ],
+      "angle": "A documentary about BLACKPINK's LISA, titled 'Always Lalisa,' is set to world premiere at the 2026 Toronto International Film Festival.",
+      "tmdbType": "movie",
+      "source": "rss:Billboard",
+      "sources": [
+        {
+          "outlet": "Billboard",
+          "tier": 7,
+          "url": "https://www.billboard.com/music/pop/doc-blackpink-lisa-always-lalisa-world-premiere-toronto-fest-1236298190/",
+          "ageMin": 111,
+          "headline": "Documentary about BLACKPINK s LISA, Always Lalisa, to World Premiere at 2026 Toronto International Film Festival",
+          "summary": "The movie looks at the singer's massive breakout year, which included the 2026 FIFA World Cup opening ceremony and 2025 Coachella."
+        }
+      ],
+      "ageMin": 111,
+      "_cand": {
+        "key": "rss:documentary-about-blackpink-s-lisa-always-lalisa-to-world-pr",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Billboard"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Billboard",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 55,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
       "tierClass": "C"
     },
     {
       "id": "news-jessie-j-split-chanan-colman",
-      "slug": "jessie-j-announces-split-from-partner-chanan-colman",
-      "title": "Jessie J Announces Split From Partner Chanan Colman",
+      "slug": "celebrity-splits-of-2026-jessie-j-chanan-colman-and-more-stars-who-cal",
+      "title": "Celebrity Splits of 2026: Jessie J, Chanan Colman and More Stars Who Called It Quits",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
@@ -1426,7 +681,7 @@
       "entities": [
         "Chanan Colman"
       ],
-      "angle": "Singer Jessie J has announced her split from partner Chanan Colman.",
+      "angle": "Singer Jessie J has reportedly split from her partner Chanan Colman.",
       "tmdbType": "movie",
       "source": "gnews:Capital UK",
       "sources": [
@@ -1434,12 +689,12 @@
           "outlet": "Capital UK",
           "tier": 5,
           "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE80N2RsamJ3S3NDTEFDaUZVUnFlSEVTSlloNUtVTEUzclBqR0RWa3hIWTBic3ItcnF3U0ZSTXc4alJzWl83bnM2TzFYejE2MUh5eU1HMzljZFFJNmkzYXdQRXQ3NTB5MFN6c0RabTJ4MC1FQ1hXRDhycQ?oc=5",
-          "ageMin": 115,
+          "ageMin": 175,
           "headline": "Jessie J announces split from partner Chanan Colman - Capital UK",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMieEFVX3lxTE80N2RsamJ3S3NDTEFDaUZVUnFlSEVTSlloNUtVTEUzclBqR0RWa3hIWTBic3ItcnF3U0ZSTXc4alJzWl83bnM2TzFYejE2MUh5eU1HMzljZFFJNmkzYXdQRXQ3NTB5MFN6c0RabTJ4MC1FQ1hXRDhycQ?oc=5\" target=\"_blank\" Jessie J announces split from partner Chanan Colman /a nbsp; nbsp;"
         }
       ],
-      "ageMin": 115,
+      "ageMin": 175,
       "_cand": {
         "key": "rss:jessie-j-announces-split-from-partner-chanan-colman-capital-",
         "popularity": 0,
@@ -1460,12 +715,143 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 50,
+      "priority": 54,
       "signals": {
         "recency": 16,
         "corroboration": 8,
         "status": 18,
         "type": 8,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 4,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-madonna-not-in-trump-suite-world-cup",
+      "slug": "no-madonna-was-not-in-trump-s-suite-at-the-world-cup-final",
+      "title": "No, Madonna Was Not in Trump s Suite at the World Cup Final",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "madonna-not-in-trump-suite-world-cup",
+      "primaryKeyword": "Madonna Trump World Cup",
+      "primaryEntity": "Madonna",
+      "entities": [
+        "Donald Trump"
+      ],
+      "angle": "Debunks a viral social media claim that Madonna was present in Donald Trump's suite at the World Cup Final.",
+      "tmdbType": "movie",
+      "source": "rss:Rolling Stone",
+      "sources": [
+        {
+          "outlet": "Rolling Stone",
+          "tier": 7,
+          "url": "https://www.rollingstone.com/music/music-news/madonna-trump-world-cup-rumor-1235595216/",
+          "ageMin": 89,
+          "headline": "No, Madonna Was Not in Trump s Suite at the World Cup Final",
+          "summary": "A viral tweet claimed the pop icon watched the final from Donald Trump’s suite. The woman in the footage was clearly someone else"
+        }
+      ],
+      "ageMin": 89,
+      "_cand": {
+        "key": "rss:no-madonna-was-not-in-trump-s-suite-at-the-world-cup-final",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Rolling Stone"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Rolling Stone",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 51,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-justin-bieber-world-cup-after-party",
+      "slug": "justin-bieber-s-world-cup-after-party-celebrity-guest-list-see-which-s",
+      "title": "Justin Bieber’s World Cup After Party Celebrity Guest List: See Which Stars Attended",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "appearance",
+      "sensitivity": "normal",
+      "eventSlug": "justin-bieber-world-cup-after-party",
+      "primaryKeyword": "Justin Bieber party",
+      "primaryEntity": "Justin Bieber",
+      "entities": [
+        "World Cup"
+      ],
+      "angle": "A look at the star-studded guest list at Justin Bieber's World Cup after-party.",
+      "tmdbType": "movie",
+      "source": "gnews:Just Jared",
+      "sources": [
+        {
+          "outlet": "Just Jared",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNeEJjWThON0NON1JWQnY5LXpBaUVyVVJ0RGhKb1dqNGo2NFBSRmJjZzNXYW1YM3NXdXB4M29lSnY5SGNaOU9Fem4ta0lkZGxtQ3kzdEdKQWhaV3JYWDUyeGg1UXhmakpRMTFnNW9DZ2dSR01KRjlEX0hmMG92amFXT2RBZ1FHNklYV01MbjlwUFRQcUNQb24zMXdNX3NaY3lmdlVsbXNiTjZFb2xqY0g1QWoyS3pYcVlJTmpSaA?oc=5",
+          "ageMin": 155,
+          "headline": "Justin Bieber’s World Cup After Party Celebrity Guest List: See Which Stars Attended - Just Jared",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMivAFBVV95cUxNeEJjWThON0NON1JWQnY5LXpBaUVyVVJ0RGhKb1dqNGo2NFBSRmJjZzNXYW1YM3NXdXB4M29lSnY5SGNaOU9Fem4ta0lkZGxtQ3kzdEdKQWhaV3JYWDUyeGg1UXhmakpRMTFnNW9DZ2dSR01KRjlEX0hmMG92amFXT2RBZ1FHNklYV01MbjlwUFRQcUNQb24zMXdNX3NaY3lmdlVsbXNiTjZFb2xqY0g1QWoyS3pYcVlJTmp"
+        }
+      ],
+      "ageMin": 155,
+      "_cand": {
+        "key": "rss:justin-bieber-s-world-cup-after-party-celebrity-guest-list-s",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "Just Jared"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "Just Jared",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 48,
+      "signals": {
+        "recency": 16,
+        "corroboration": 8,
+        "status": 18,
+        "type": 6,
         "pop": 0,
         "breakout": 0,
         "big": 0,
