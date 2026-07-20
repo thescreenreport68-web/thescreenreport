@@ -1,0 +1,146 @@
+{
+ "runId": "run-2026-07-20T13-01-39",
+ "mode": "live",
+ "startedAt": "2026-07-20T13:01:39.156Z",
+ "films": 43,
+ "published": [],
+ "held": [
+  {
+   "tag": "the-odyssey-bo-update×BO-UPDATE",
+   "reason": "consistency: metaTitle: headlines domestic while the title headlines other — the SERP promise must match the page",
+   "score": 80
+  },
+  {
+   "tag": "backrooms-bo-update×BO-UPDATE",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "score": 50
+  },
+  {
+   "tag": "scary-movie-bo-update×BO-UPDATE",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "score": 50
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "moana-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "toy-story-5-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "minions-monsters-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "evil-dead-burn-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "the-invite-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "young-washington-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "obsession-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "supergirl-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "disclosure-day-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  }
+ ],
+ "blocked": [],
+ "paced": {
+  "tokens": 1.83,
+  "behind": false,
+  "expected": 1.82,
+  "allow": 1
+ },
+ "queueBuilt": 6,
+ "attemptCapHit": 3,
+ "zeroStreak": 1,
+ "daySpend": {
+  "laDay": "2026-07-20",
+  "usd": 0.14983
+ },
+ "faults": {
+  "count": 2,
+  "bySeverity": {
+   "critical": 1,
+   "warn": 1
+  },
+  "faults": [
+   {
+    "stage": "model:finder",
+    "message": "all models failed (amazon/nova-micro-v1, google/gemini-2.5-flash-lite): could not parse JSON from model output",
+    "severity": "critical",
+    "at": "2026-07-20T13:02:00.416Z"
+   },
+   {
+    "stage": "finder:llm",
+    "message": "finder classification failed — falling back to deterministic picks: could not parse JSON from model output",
+    "severity": "warn",
+    "at": "2026-07-20T13:02:00.416Z"
+   }
+  ]
+ },
+ "degraded": true,
+ "finishedAt": "2026-07-20T13:07:02.162Z",
+ "meter": {
+  "byRole": {
+   "categorize": {
+    "calls": 4,
+    "errors": 1,
+    "in": 1033,
+    "out": 586,
+    "usd": 0.00025,
+    "ms": 8289
+   },
+   "finder": {
+    "calls": 2,
+    "errors": 2,
+    "in": 0,
+    "out": 0,
+    "usd": 0,
+    "ms": 0
+   },
+   "gatherer": {
+    "calls": 3,
+    "errors": 0,
+    "in": 9831,
+    "out": 809,
+    "usd": 0.00131,
+    "ms": 3846
+   },
+   "synthesizer": {
+    "calls": 3,
+    "errors": 0,
+    "in": 2215,
+    "out": 2796,
+    "usd": 0.0007,
+    "ms": 53150
+   },
+   "writerChart": {
+    "calls": 3,
+    "errors": 0,
+    "in": 6027,
+    "out": 3001,
+    "usd": 0.00241,
+    "ms": 42982
+   }
+  },
+  "totalUsd": 0.00467
+ },
+ "openrouterTotalUsd": 0.00466
+}

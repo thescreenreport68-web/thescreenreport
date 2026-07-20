@@ -1578,29 +1578,37 @@
    "key": "the-odyssey-bo-update-100m|BO-UPDATE",
    "eventSlug": "the-odyssey-bo-update-100m",
    "form": "BO-UPDATE",
-   "reason": "1 unverified claim(s) cut, unrecovered",
-   "tries": 10,
-   "at": "2026-07-20T12:32:38.984Z",
+   "reason": "consistency: metaTitle: headlines domestic while the title headlines other — the SERP promise must match the page",
+   "tries": 11,
+   "at": "2026-07-20T13:03:49.043Z",
    "dead": true,
-   "expiresAt": "2026-07-23T12:32:38.984Z"
+   "expiresAt": "2026-07-23T13:03:49.043Z"
   },
   {
    "key": "backrooms-bo-update-d52|BO-UPDATE",
    "eventSlug": "backrooms-bo-update-d52",
    "form": "BO-UPDATE",
-   "reason": "words 173 < 180 (owner-set ~200-word minimum)",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "tries": 2,
+   "at": "2026-07-20T13:05:09.564Z"
+  },
+  {
+   "key": "scary-movie-bo-update-d45|BO-UPDATE",
+   "eventSlug": "scary-movie-bo-update-d45",
+   "form": "BO-UPDATE",
+   "reason": "1 unverified claim(s) cut, unrecovered",
    "tries": 1,
-   "at": "2026-07-20T11:39:30.320Z"
+   "at": "2026-07-20T13:07:02.160Z"
   }
  ],
- "zeroStreak": 0,
+ "zeroStreak": 1,
  "daySpend": {
   "laDay": "2026-07-20",
-  "usd": 0.14517
+  "usd": 0.14983
  },
  "pace": {
-  "tokens": 0.9130206539682542,
-  "lastMs": 1784550691872
+  "tokens": 1.826703120634921,
+  "lastMs": 1784552499156
  },
  "lastAuditDay": "2026-07-20",
  "attempts": {
