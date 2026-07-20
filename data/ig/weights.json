@@ -1,10 +1,42 @@
 {
-  "updatedAt": "2026-07-19T07:58:40.071Z",
+  "updatedAt": "2026-07-20T11:27:52.631Z",
   "voice": {
     "label": "marin",
     "voice": "marin",
     "model": null,
     "score": 20,
     "at": "2026-07-19T07:58:40.071Z"
-  }
+  },
+  "hookStyles": {
+    "reveal": 0.99,
+    "casting-shock": 1.03,
+    "record-number": 1.05,
+    "return-nostalgia": 1.1
+  },
+  "segments": {
+    "Celebrity Wire": 1.05,
+    "TV Signal": 0.98,
+    "Box Office in 30": 0.75,
+    "Casting Watch": 1
+  },
+  "slots": {
+    "16:00": 1.05,
+    "18:00": 1.05,
+    "12:00": 0.99,
+    "14:00": 0.98,
+    "10:00": 1,
+    "20:00": 1.02,
+    "22:00": 0.98,
+    "breaking": 1.05
+  },
+  "goals": {
+    "comments": 0.99,
+    "sends": 1.03
+  },
+  "accountMedians": {
+    "views": 955,
+    "sendsPerReach": null,
+    "samples": 36
+  },
+  "winners": []
 }
