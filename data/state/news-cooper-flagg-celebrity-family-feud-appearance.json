@@ -1,0 +1,76 @@
+{
+  "id": "news-cooper-flagg-celebrity-family-feud-appearance",
+  "slug": "cooper-flagg-and-family-to-appear-on-celebrity-family-feud",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": null,
+      "cat": "tv/news",
+      "format": [
+        "body 152w < 220"
+      ],
+      "cuts": 2,
+      "broken": []
+    },
+    "attempt2": {
+      "score": null,
+      "cat": "tv/news",
+      "format": [
+        "body 152w < 220"
+      ],
+      "cuts": 2,
+      "broken": []
+    }
+  },
+  "editorial": {
+    "status": "unconfirmed",
+    "entity": "Cooper Flagg",
+    "work": {
+      "title": "Celebrity Family Feud",
+      "year": null,
+      "medium": "tv"
+    },
+    "outlet": "sunjournal.com"
+  },
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
+    "deterministic": {
+      "words": 152,
+      "h2s": 2,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 3,
+      "ktCount": 3,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 31,
+      "avgSentence": 15,
+      "flesch": 60,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": [
+        "body 152w < 220"
+      ]
+    },
+    "hardBlocks": []
+  },
+  "score": null,
+  "category": "tv",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "body ≥ 220w",
+      "2+ FAQ"
+    ]
+  },
+  "ms": 247545
+}
