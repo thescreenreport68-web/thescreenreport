@@ -1,0 +1,196 @@
+{
+ "runId": "run-2026-07-20T07-00-52",
+ "mode": "live",
+ "startedAt": "2026-07-20T07:00:52.606Z",
+ "films": 44,
+ "published": [],
+ "held": [
+  {
+   "tag": "descendants-wicked-wonderland-now-streaming×NOW-STREAMING",
+   "reason": "platform: names disney+ not in confirmed providers",
+   "score": 0
+  },
+  {
+   "tag": "lee-cronin-s-the-mummy-now-streaming×NOW-STREAMING",
+   "reason": "words 140 < 180 (owner-set ~200-word minimum)",
+   "score": 50
+  },
+  {
+   "tag": "the-sheep-detectives-now-streaming×NOW-STREAMING",
+   "reason": "soft-floor readability 4 < 5 | soft-floor engagement 2 < 5 | soft-floor humanVoice 3 < 5",
+   "score": 30
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "enola-holmes-3-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "voicemails-for-isabelle-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "the-doorman-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "little-brother-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "rust-creek-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "f9-the-fast-saga-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "old-henry-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "the-boss-baby-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "i-will-find-you-trending-tv-w2026-07-12×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "worst-neighbor-ever-trending-tv-w2026-07-12×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "little-house-on-the-prairie-trending-tv-w2026-07-12×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "avatar-the-last-airbender-trending-tv-w2026-07-12×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "salish-jordan-matter-trending-tv-w2026-07-12×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "raw-trending-tv-w2026-07-12×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "sullivan-s-crossing-trending-tv-w2026-07-12×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "off-campus-trending-tv×TRENDING-TV",
+   "reason": "parked dead"
+  }
+ ],
+ "blocked": [
+  {
+   "tag": "tom-clancy-s-jack-ryan-ghost-war-now-streaming×NOW-STREAMING",
+   "reason": "watchdog: gatherer tom-clancy-s-jack-ryan-ghost-war-now-streaming×NOW-STREAMING exceeded 180s"
+  }
+ ],
+ "paced": {
+  "tokens": 4,
+  "behind": true,
+  "expected": 25.07,
+  "allow": 2
+ },
+ "queueBuilt": 7,
+ "attemptCapHit": 4,
+ "zeroStreak": 27,
+ "audit": {
+  "day": "2026-07-19",
+  "sampled": [
+   "supergirl-box-office-day-22-adds-435-000-as-domestic-total-hits-68-9-million",
+   "michelle-buteau-s-survival-of-the-thickest-ends-its-run-with-a-9-netflix-debut",
+   "jeff-arcuri-s-nice-to-meet-you-debuts-at-10-on-netflix-with-1-4-million-hours"
+  ],
+  "issues": []
+ },
+ "daySpend": {
+  "laDay": "2026-07-20",
+  "usd": 0.05929
+ },
+ "faults": {
+  "count": 2,
+  "bySeverity": {
+   "critical": 1,
+   "warn": 1
+  },
+  "faults": [
+   {
+    "stage": "model:finder",
+    "message": "all models failed (amazon/nova-micro-v1, google/gemini-2.5-flash-lite): Expected ',' or ']' after array element in JSON at position 1333",
+    "severity": "critical",
+    "at": "2026-07-20T07:01:15.155Z"
+   },
+   {
+    "stage": "finder:llm",
+    "message": "finder classification failed — falling back to deterministic picks: Expected ',' or ']' after array element in JSON at position 1333",
+    "severity": "warn",
+    "at": "2026-07-20T07:01:15.156Z"
+   }
+  ]
+ },
+ "degraded": true,
+ "finishedAt": "2026-07-20T07:13:54.197Z",
+ "meter": {
+  "byRole": {
+   "categorize": {
+    "calls": 4,
+    "errors": 0,
+    "in": 4844,
+    "out": 525,
+    "usd": 0.00069,
+    "ms": 2786
+   },
+   "gatherer": {
+    "calls": 11,
+    "errors": 0,
+    "in": 40853,
+    "out": 5323,
+    "usd": 0.00621,
+    "ms": 30013
+   },
+   "finder": {
+    "calls": 2,
+    "errors": 2,
+    "in": 0,
+    "out": 0,
+    "usd": 0,
+    "ms": 0
+   },
+   "synthesizer": {
+    "calls": 3,
+    "errors": 0,
+    "in": 2274,
+    "out": 2511,
+    "usd": 0.00066,
+    "ms": 34141
+   },
+   "writer": {
+    "calls": 6,
+    "errors": 0,
+    "in": 18592,
+    "out": 6840,
+    "usd": 0.01838,
+    "ms": 152195
+   },
+   "qa": {
+    "calls": 19,
+    "errors": 1,
+    "in": 50908,
+    "out": 7589,
+    "usd": 0.03259,
+    "ms": 51879
+   }
+  },
+  "totalUsd": 0.05853
+ },
+ "openrouterTotalUsd": 0.05929
+}
