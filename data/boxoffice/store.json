@@ -516,6 +516,34 @@
    "headlineNumberRaw": null,
    "filmKey": "jeff arcuri: nice to meet you",
    "chartDate": null
+  },
+  {
+   "key": "moana-bo-update-d10|BO-UPDATE",
+   "at": "2026-07-20T07:34:20.093Z",
+   "eventSlug": "moana-bo-update-d10",
+   "form": "BO-UPDATE",
+   "slug": "moana-box-office-day-10-adds-5-9-million-as-domestic-total-hits-82-1-million",
+   "title": "Moana (2026) Sinks at Box Office: $43M Opening for $250M Disney Epic",
+   "film": "Moana",
+   "tmdbId": null,
+   "eventType": "boxoffice",
+   "headlineNumberRaw": 82081410,
+   "filmKey": "moana",
+   "chartDate": null
+  },
+  {
+   "key": "minions-monsters-bo-update-d19|BO-UPDATE",
+   "at": "2026-07-20T07:38:20.253Z",
+   "eventSlug": "minions-monsters-bo-update-d19",
+   "form": "BO-UPDATE",
+   "slug": "minions-monsters-box-office-day-19-adds-4-6-million-as-domestic-total-hits-137",
+   "title": "Minions & Monsters: The Frenzied Film-Within-a-Film That Unleashed Global Chaos",
+   "film": "Minions & Monsters",
+   "tmdbId": null,
+   "eventType": "boxoffice",
+   "headlineNumberRaw": 137584000,
+   "filmKey": "minions & monsters",
+   "chartDate": null
   }
  ],
  "parked": [
@@ -1443,16 +1471,32 @@
    "reason": "soft-floor readability 4 < 5 | soft-floor engagement 2 < 5 | soft-floor humanVoice 3 < 5",
    "tries": 1,
    "at": "2026-07-20T07:10:53.695Z"
+  },
+  {
+   "key": "the-odyssey-bo-update-100m|BO-UPDATE",
+   "eventSlug": "the-odyssey-bo-update-100m",
+   "form": "BO-UPDATE",
+   "reason": "words 142 < 180 (owner-set ~200-word minimum)",
+   "tries": 1,
+   "at": "2026-07-20T07:32:12.736Z"
+  },
+  {
+   "key": "toy-story-5-bo-update-d31|BO-UPDATE",
+   "eventSlug": "toy-story-5-bo-update-d31",
+   "form": "BO-UPDATE",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "tries": 1,
+   "at": "2026-07-20T07:36:32.693Z"
   }
  ],
- "zeroStreak": 27,
+ "zeroStreak": 0,
  "daySpend": {
   "laDay": "2026-07-20",
-  "usd": 0.05929
+  "usd": 0.06521
  },
  "pace": {
-  "tokens": 4,
-  "lastMs": 1784530852606
+  "tokens": 2,
+  "lastMs": 1784532647020
  },
  "lastAuditDay": "2026-07-20",
  "attempts": {

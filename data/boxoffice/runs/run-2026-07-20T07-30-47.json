@@ -1,0 +1,90 @@
+{
+ "runId": "run-2026-07-20T07-30-47",
+ "mode": "live",
+ "startedAt": "2026-07-20T07:30:47.020Z",
+ "films": 44,
+ "published": [
+  {
+   "tag": "moana-bo-update×BO-UPDATE",
+   "slug": "moana-box-office-day-10-adds-5-9-million-as-domestic-total-hits-82-1-million",
+   "path": "/home/runner/work/thescreenreport/thescreenreport/content/articles/moana-box-office-day-10-adds-5-9-million-as-domestic-total-hits-82-1-million.md",
+   "score": 80
+  },
+  {
+   "tag": "minions-monsters-bo-update×BO-UPDATE",
+   "slug": "minions-monsters-box-office-day-19-adds-4-6-million-as-domestic-total-hits-137",
+   "path": "/home/runner/work/thescreenreport/thescreenreport/content/articles/minions-monsters-box-office-day-19-adds-4-6-million-as-domestic-total-hits-137.md",
+   "score": 80
+  }
+ ],
+ "held": [
+  {
+   "tag": "the-odyssey-bo-update×BO-UPDATE",
+   "reason": "words 142 < 180 (owner-set ~200-word minimum)",
+   "score": 50
+  },
+  {
+   "tag": "toy-story-5-bo-update×BO-UPDATE",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "score": 50
+  }
+ ],
+ "rejected": [],
+ "skipped": [],
+ "blocked": [],
+ "paced": {
+  "tokens": 4,
+  "behind": true,
+  "expected": 25.07,
+  "allow": 2
+ },
+ "zeroStreak": 0,
+ "daySpend": {
+  "laDay": "2026-07-20",
+  "usd": 0.06521
+ },
+ "faults": {
+  "count": 0,
+  "bySeverity": {},
+  "faults": []
+ },
+ "finishedAt": "2026-07-20T07:38:20.256Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3453,
+    "out": 899,
+    "usd": 0.00025,
+    "ms": 2787
+   },
+   "gatherer": {
+    "calls": 4,
+    "errors": 0,
+    "in": 12728,
+    "out": 850,
+    "usd": 0.00161,
+    "ms": 4774
+   },
+   "synthesizer": {
+    "calls": 4,
+    "errors": 0,
+    "in": 2985,
+    "out": 1667,
+    "usd": 0.00057,
+    "ms": 35460
+   },
+   "writerChart": {
+    "calls": 4,
+    "errors": 0,
+    "in": 8001,
+    "out": 3887,
+    "usd": 0.00317,
+    "ms": 145098
+   }
+  },
+  "totalUsd": 0.00559
+ },
+ "openrouterTotalUsd": 0.00592
+}
