@@ -1,41 +1,42 @@
 {
-  "runId": "run-2026-07-20T08-30-53",
-  "builtAt": "2026-07-20T08:32:34.045Z",
-  "count": 18,
+  "runId": "run-2026-07-20T10-01-36",
+  "builtAt": "2026-07-20T10:03:21.381Z",
+  "count": 16,
   "topics": [
     {
-      "id": "news-john-leguizamo-the-odyssey-role",
-      "slug": "john-leguizamo-on-his-intense-role-in-christopher-nolan-s-the-odyssey",
-      "title": "John Leguizamo on His Intense Role in Christopher Nolan's 'The Odyssey'",
+      "id": "news-the-two-week-wait-directorial-debut",
+      "slug": "daniel-ings-jessica-brown-findlay-to-star-in-olivia-grant-s-directoria",
+      "title": "Daniel Ings, Jessica Brown Findlay to Star in Olivia Grant's Directorial Debut 'The Two Week Wait'",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
-      "eventType": "casting",
+      "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "john-leguizamo-the-odyssey-role",
-      "primaryKeyword": "john leguizamo the odyssey",
-      "primaryEntity": "John Leguizamo",
+      "eventSlug": "the-two-week-wait-directorial-debut",
+      "primaryKeyword": "the two week wait film",
+      "primaryEntity": "The Two Week Wait (film)",
       "entities": [
-        "Christopher Nolan",
-        "The Odyssey"
+        "Daniel Ings",
+        "Jessica Brown Findlay",
+        "Olivia Grant"
       ],
-      "angle": "John Leguizamo opens up about the intensity of his role in Christopher Nolan's 'The Odyssey'.",
+      "angle": "Olivia Grant's directorial debut, 'The Two Week Wait,' starring Daniel Ings and Jessica Brown Findlay, will premiere at Indy Shorts.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
         {
           "outlet": "THR",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-features/john-leguizamo-the-odyssey-eumaeus-chris-nolan-interview-1236651694/",
-          "ageMin": 893,
-          "headline": "John Leguizamo Has Never Been as Vulnerable as in The Odyssey : “It Was So Intense for Me”",
-          "summary": "\"Working with Chris Nolan...you feel really seen,\" the actor behind Eumaeus tells The Hollywood Reporter in a wide-ranging conversation. \"I was able to tap into these really difficult, painful emotions from the depth of my soul.\""
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/daniel-ings-jessica-brown-findlay-olivia-grant-short-film-1236652010/",
+          "ageMin": 2,
+          "headline": "Daniel Ings, Jessica Brown Findlay to Star in Olivia Grant s Directorial Debut, The Two Week Wait (Exclusive)",
+          "summary": "The personal project, chronicling a woman's painstaking experience navigating IVF and infertility, will have its world premiere at the Indy Shorts Film Festival."
         }
       ],
-      "ageMin": 893,
+      "ageMin": 2,
       "_cand": {
-        "key": "rss:john-leguizamo-has-never-been-as-vulnerable-as-in-the-odysse",
+        "key": "rss:daniel-ings-jessica-brown-findlay-to-star-in-olivia-grant-s-",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -54,9 +55,77 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 99,
+      "priority": 93,
       "signals": {
-        "recency": 1,
+        "recency": 30,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-the-price-of-peace-film-casting",
+      "slug": "mia-threapleton-danny-huston-join-guy-pearce-jared-harris-in-anthony-m",
+      "title": "Mia Threapleton, Danny Huston Join Guy Pearce, Jared Harris in Anthony McCarten's 'The Price of Peace'",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "the-price-of-peace-film-casting",
+      "primaryKeyword": "the price of peace film",
+      "primaryEntity": "The Price of Peace (film)",
+      "entities": [
+        "Guy Pearce",
+        "Jared Harris",
+        "Merab Ninidze",
+        "Anthony McCarten"
+      ],
+      "angle": "Mia Threapleton and Danny Huston join Guy Pearce and Jared Harris in Anthony McCarten's post-WWII political thriller 'The Price of Peace' as filming begins.",
+      "tmdbType": "movie",
+      "source": "rss:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/threapleton-huston-guy-pearce-price-peace-filming-begins-1236998242/",
+          "ageMin": 29,
+          "headline": "Mia Threapleton, Danny Huston Join Guy Pearce, Jared Harris Merab Ninidze In The Price Of Peace As Filming Begins in London",
+          "summary": "Anthony McCarten’s post-World War Two political thriller The Price of Peace starring Guy Pearce, Jared Harris and Merab Ninidze as Harry S. Truman, Winston Churchill and Joseph Stalin respectively has begun principal photography in London. The trio have been joined by Mia Threapleton (The Phoenician Scheme) as Mary Churchill and acclaimed Danny Huston [ ]"
+        }
+      ],
+      "ageMin": 29,
+      "_cand": {
+        "key": "rss:mia-threapleton-danny-huston-join-guy-pearce-jared-harris-me",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 92,
+      "signals": {
+        "recency": 24,
         "corroboration": 12,
         "status": 18,
         "type": 14,
@@ -65,42 +134,42 @@
         "big": 24,
         "trending": 0,
         "spice": 0,
-        "softTv": 0,
-        "radar": 30
+        "softTv": 0
       },
-      "radarKind": "movie-in-theaters",
-      "tierClass": "A"
+      "tierClass": "B"
     },
     {
-      "id": "trailer-avengers-doomsday-teaser",
-      "slug": "avengers-doomsday-gets-ominous-new-teaser-ahead-of-trailer-release",
-      "title": "Avengers: Doomsday Gets Ominous New Teaser Ahead of Trailer Release",
+      "id": "trailer-a-quiet-place-meets-arachnophobia-survival-thriller-trailer",
+      "slug": "a-quiet-place-meets-arachnophobia-in-first-trailer-for-terrifying-new-",
+      "title": "‘A Quiet Place’ Meets ‘Arachnophobia’ in First Trailer for Terrifying New Survival Thriller",
       "contentType": "trailer",
       "formatTag": "trailer",
       "category": "movies",
       "subcategory": "trailers",
       "eventType": "trailer",
       "sensitivity": "normal",
-      "eventSlug": "avengers-doomsday-teaser",
-      "primaryKeyword": "avengers doomsday trailer",
-      "primaryEntity": "Avengers: Doomsday",
-      "entities": [],
-      "angle": "A new teaser for the upcoming Marvel film 'Avengers: Doomsday' has been released ahead of the full trailer.",
+      "eventSlug": "a-quiet-place-meets-arachnophobia-survival-thriller-trailer",
+      "primaryKeyword": "new survival thriller trailer",
+      "primaryEntity": "A Quiet Place",
+      "entities": [
+        "Arachnophobia"
+      ],
+      "angle": "The first trailer for a new survival thriller that blends elements of 'A Quiet Place' and 'Arachnophobia' has been released.",
       "tmdbType": "movie",
-      "source": "gnews:Digital Spy",
+      "source": "gnews:Collider",
       "sources": [
         {
-          "outlet": "Digital Spy",
+          "outlet": "Collider",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQYlZLc0VFY3FuRDRWTGpRaTZXSWFYU0dBZUdTM3ZfRUtNbHdBWEs3aC1sTE42QXhKSW55T2swLTVnNmljY2dCWm1GMktHWWdqOFdiWU5RODNXZTI0bVhUOVBDZWM5MFlNWnMyclhtUVJ6b2k5MTFQSjRmSkg1Y0MtcnZzSTdlQ2FQUTZEbg?oc=5",
-          "ageMin": 7,
-          "headline": "Avengers: Doomsday gets ominous new teaser ahead of trailer arriving this week - Digital Spy",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMijAFBVV95cUxQYlZLc0VFY3FuRDRWTGpRaTZXSWFYU0dBZUdTM3ZfRUtNbHdBWEs3aC1sTE42QXhKSW55T2swLTVnNmljY2dCWm1GMktHWWdqOFdiWU5RODNXZTI0bVhUOVBDZWM5MFlNWnMyclhtUVJ6b2k5MTFQSjRmSkg1Y0MtcnZzSTdlQ2FQUTZEbg?oc=5\" target=\"_blank\" Avengers: Doomsday gets ominous new te"
+          "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9tQjE3M1Q5aEp0anVuZ3o2M1FpQVd0Ynp4X1MyZXRRVWxHY3lrT1NpeXZuUUQ0OXN2MkdwMXY3N0ZwZmlKQlIzbWtOMmI2S3g3aTZwdzQ3T1IwTzVneC1PeC1CdmJiM0pTYkhpYlI5M3RqaUU?oc=5",
+          "ageMin": 587,
+          "headline": "‘A Quiet Place’ Meets ‘Arachnophobia’ in First Trailer for Terrifying New Survival Thriller - Collider",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMic0FVX3lxTE9tQjE3M1Q5aEp0anVuZ3o2M1FpQVd0Ynp4X1MyZXRRVWxHY3lrT1NpeXZuUUQ0OXN2MkdwMXY3N0ZwZmlKQlIzbWtOMmI2S3g3aTZwdzQ3T1IwTzVneC1PeC1CdmJiM0pTYkhpYlI5M3RqaUU?oc=5\" target=\"_blank\" ‘A Quiet Place’ Meets ‘Arachnophobia’ in First Trailer for Terrifying New"
         }
       ],
-      "ageMin": 7,
+      "ageMin": 587,
       "_cand": {
-        "key": "rss:avengers-doomsday-gets-ominous-new-teaser-ahead-of-trailer-a",
+        "key": "rss:-a-quiet-place-meets-arachnophobia-in-first-trailer-for-terr",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -110,18 +179,18 @@
         "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "Digital Spy"
+          "Collider"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "Digital Spy",
+        "attribution": "Collider",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 95,
+      "priority": 69,
       "signals": {
-        "recency": 30,
+        "recency": 4,
         "corroboration": 8,
         "status": 18,
         "type": 15,
@@ -135,39 +204,37 @@
       "tierClass": "B"
     },
     {
-      "id": "news-san-diego-comic-con-2026-participants",
-      "slug": "marvel-hbo-apple-tv-to-return-to-san-diego-comic-con-2026",
-      "title": "Marvel, HBO, Apple TV+ to Return to San Diego Comic-Con 2026",
+      "id": "news-ransom-canyon-season-2-preview",
+      "slug": "ransom-canyon-season-2-preview-staten-learns-that-quinn-has-returned-t",
+      "title": "Ransom Canyon Season 2 Preview: Staten Learns that Quinn Has Returned to Texas",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "san-diego-comic-con-2026-participants",
-      "primaryKeyword": "San Diego Comic-Con 2026",
-      "primaryEntity": "San Diego Comic-Con",
+      "eventSlug": "ransom-canyon-season-2-preview",
+      "primaryKeyword": "ransom canyon season 2",
+      "primaryEntity": "Ransom Canyon",
       "entities": [
-        "Marvel",
-        "HBO",
-        "Apple TV+"
+        "Netflix"
       ],
-      "angle": "Major studios like Marvel, HBO, and Apple TV+ are confirmed to return to San Diego Comic-Con in 2026.",
+      "angle": "Previewing the return of the Netflix series 'Ransom Canyon' for its second season.",
       "tmdbType": "movie",
-      "source": "gnews:The Business Times",
+      "source": "gnews:Netflix",
       "sources": [
         {
-          "outlet": "The Business Times",
+          "outlet": "Netflix",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQTk5EMmdRbjYxcVI1SWhld3VNbjIzWGZsMzVzbjIzRXZGNFZ3VmUxb3ZKN1Y0Wm1TRDFDZGZDM3Qwd2JwdGxwckN4UXV2bTc5WWRhZmRtei0zRXUyRnVzc0VnTHhQU3JqaFd1NUtqdDNPYW1uTGdmVXZOMjRrRXNUZGpTYVpudC1BaFNZalFMQVd0ZXNPWWY2RW8ycw?oc=5",
-          "ageMin": 73,
-          "headline": "Hollywood’s guaranteed paydays for stars are bad bets now - The Business Times",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMimwFBVV95cUxQTk5EMmdRbjYxcVI1SWhld3VNbjIzWGZsMzVzbjIzRXZGNFZ3VmUxb3ZKN1Y0Wm1TRDFDZGZDM3Qwd2JwdGxwckN4UXV2bTc5WWRhZmRtei0zRXUyRnVzc0VnTHhQU3JqaFd1NUtqdDNPYW1uTGdmVXZOMjRrRXNUZGpTYVpudC1BaFNZalFMQVd0ZXNPWWY2RW8ycw?oc=5\" target=\"_blank\" Hollywood’s guaran"
+          "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPYWNOaEZaWHk3NG1pcGx0c3o4eFk4S0h5ODdYcGR0YUdVbXBJb0VIcGU5UGRIVThYMHNpT1B2MjhzWUFHQmlJYnpKaGc3NEhVSVlJZ01nNVVFQXdaV2FBV21yODRlbFdQaWhGcV9oQzBMMjhxZm5PVDNRSHRRbDAwdQ?oc=5",
+          "ageMin": 179,
+          "headline": "Ransom Canyon Season 2 Preview: Staten Learns that Quinn Has Returned to Texas - Netflix",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMigAFBVV95cUxPYWNOaEZaWHk3NG1pcGx0c3o4eFk4S0h5ODdYcGR0YUdVbXBJb0VIcGU5UGRIVThYMHNpT1B2MjhzWUFHQmlJYnpKaGc3NEhVSVlJZ01nNVVFQXdaV2FBV21yODRlbFdQaWhGcV9oQzBMMjhxZm5PVDNRSHRRbDAwdQ?oc=5\" target=\"_blank\" Ransom Canyon Season 2 Preview: Staten Learns that Qui"
         }
       ],
-      "ageMin": 73,
+      "ageMin": 179,
       "_cand": {
-        "key": "rss:hollywood-s-guaranteed-paydays-for-stars-are-bad-bets-now-th",
+        "key": "rss:ransom-canyon-season-2-preview-staten-learns-that-quinn-has-",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -177,11 +244,11 @@
         "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "The Business Times"
+          "Netflix"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "The Business Times",
+        "attribution": "Netflix",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -202,182 +269,106 @@
       "tierClass": "B"
     },
     {
-      "id": "music-news-world-cup-final-other",
-      "slug": "madonna-the-muppets-justin-bieber-and-others-take-world-cup-stage-for-",
-      "title": "Madonna, the Muppets Justin Bieber and others take World Cup stage for star-studded halftime show",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "world-cup-final-other",
-      "primaryKeyword": "World Cup halftime show",
-      "primaryEntity": "World Cup Final",
-      "entities": [
-        "Madonna",
-        "The Muppets",
-        "Justin Bieber"
-      ],
-      "angle": "Musical acts including Madonna, Justin Bieber, and The Muppets performed during the 2026 World Cup Final halftime show.",
-      "tmdbType": "movie",
-      "source": "gnews:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPNEFiV0hfTUUxdWhRQmliNElUT1NuTmRxZUhnRFZON3paQUk4UjhpVUpzV29LQ2lDNVBuRDAwWk5sVF85RFhPZjBKMVQ4T0xIRTVzTUdkRFdudEU0MXZKSGFDUFlzZ1M1WXBuYU9qSjdpRnVCQ19xekZtMFZvOHdKdE5lZGlPc0ltZUpCVF9hRjcxY3o0QTRDeHZaNTZ6RkVqa1E?oc=5",
-          "ageMin": 667,
-          "headline": "Ben Shapiro Calls 'The Odyssey' a 'Masterpiece' Despite Outrage - Variety",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxPNEFiV0hfTUUxdWhRQmliNElUT1NuTmRxZUhnRFZON3paQUk4UjhpVUpzV29LQ2lDNVBuRDAwWk5sVF85RFhPZjBKMVQ4T0xIRTVzTUdkRFdudEU0MXZKSGFDUFlzZ1M1WXBuYU9qSjdpRnVCQ19xekZtMFZvOHdKdE5lZGlPc0ltZUpCVF9hRjcxY3o0QTRDeHZaNTZ6RkVqa1E?oc=5\" target=\"_blank\" Ben Shapi"
-        },
-        {
-          "outlet": "MARCA",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPMmhCbHowbDlxWEMzdmRKTXY0TklqZnJMV0I0T2FGYnVuSy05cnhVenBacFExcDRJcDM4MkJLVTJRQUhfN0x4SEhTeHVuSzRseU9CczJzV0E0M2xzNnZLOVNPTkZKd0hjUW5kUTRHbFVYWmRvTlk5Q0pSTlV3ZEQzRGZWVU5XTnA1YldhYTU4OUlKUlhIa1o2QWNzLWtzU2c4amo1eW82dzNrd0dTT1pPWDkzVVJqalHSAbcBQVVfeXFMUFpMQU90NU9wUUFNcHVSWXVqQ3E4SGRUSXhDY3RVTFlwWm5SWW9lNkx3c0JjSS0yR0JrVUxGUkJiZHBBMXZCb2RoVUVGdG9rc3JWbnhkMEo5UkFaTEt4dXpsSm4yRHdERmQxODd2Ul9aVFpITkhEZGoyTjh1VmF1MEp5X3VaMnl0bko2NWNUYnpQdkhGUGdTclBJWVA0S3k4MzItcXhySGZoYk1FbnpUTm8wakJqNDd3?oc=5",
-          "ageMin": 679,
-          "headline": "World Cup Golden Glove Winners: Complete list of champions by year - MARCA",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMitwFBVV95cUxPMmhCbHowbDlxWEMzdmRKTXY0TklqZnJMV0I0T2FGYnVuSy05cnhVenBacFExcDRJcDM4MkJLVTJRQUhfN0x4SEhTeHVuSzRseU9CczJzV0E0M2xzNnZLOVNPTkZKd0hjUW5kUTRHbFVYWmRvTlk5Q0pSTlV3ZEQzRGZWVU5XTnA1YldhYTU4OUlKUlhIa1o2QWNzLWtzU2c4amo1eW82dzNrd0dTT1pPWDkzVVJqalHSAbc"
-        }
-      ],
-      "ageMin": 667,
-      "_cand": {
-        "key": "rss:ben-shapiro-calls-the-odyssey-a-masterpiece-despite-outrage-",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 2,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 2,
-        "outlets": [
-          "Variety",
-          "MARCA"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": null,
-        "framing": "plain",
-        "status": "CONFIRMED",
-        "publishable": true
-      },
-      "priority": 60,
-      "signals": {
-        "recency": 4,
-        "corroboration": 18,
-        "status": 25,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 8,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-damson-idris-f1-the-movie-sequel-conversations",
-      "slug": "damson-idris-teases-exciting-conversations-about-f1-the-movie-sequel",
-      "title": "Damson Idris Teases 'Exciting Conversations' About 'F1 The Movie' Sequel",
+      "id": "news-john-leguizamo-the-odyssey-role",
+      "slug": "john-leguizamo-on-the-odyssey-it-was-so-intense-for-me",
+      "title": "John Leguizamo on 'The Odyssey': 'It Was So Intense for Me'",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
-      "eventType": "casting",
+      "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "damson-idris-f1-the-movie-sequel-conversations",
-      "primaryKeyword": "Damson Idris F1 The Movie sequel",
-      "primaryEntity": "F1",
+      "eventSlug": "john-leguizamo-the-odyssey-role",
+      "primaryKeyword": "john leguizamo the odyssey",
+      "primaryEntity": "John Leguizamo",
       "entities": [
-        "F1 The Movie",
-        "Damson Idris"
+        "Christopher Nolan",
+        "The Odyssey"
       ],
-      "angle": "Damson Idris hints at ongoing discussions for a potential sequel to 'F1 The Movie,' suggesting exciting developments for the film.",
+      "angle": "John Leguizamo opens up about the emotional intensity of his role in Christopher Nolan's 'The Odyssey'.",
       "tmdbType": "movie",
-      "source": "gnews:Motorsport.com",
+      "source": "rss:THR",
       "sources": [
         {
-          "outlet": "Motorsport.com",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNQWNTV1Y3U012dGxkZXZVdWpBOVdRUVBoeVlsT3JvQVVwOE1zNGtyNnc0aFR1dWZTR1ZTQ0R4LTh5cTByN0x1WFpZU1FibWdvcTh1MG9VTWdmNUh1ajF2ckhoV0YyRWtWLVJpaE90NDVLbS1iMVctVVZ5cmZwYjZYYkd6NEtXLTdvUFhWYnRETzdXbXRGOWVXTEZDdmh2ZzZlaVV2WA?oc=5",
-          "ageMin": 960,
-          "headline": "Damson Idris teases \"exciting conversations\" over \"F1 The Movie\" sequel - Motorsport.com",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxNQWNTV1Y3U012dGxkZXZVdWpBOVdRUVBoeVlsT3JvQVVwOE1zNGtyNnc0aFR1dWZTR1ZTQ0R4LTh5cTByN0x1WFpZU1FibWdvcTh1MG9VTWdmNUh1ajF2ckhoV0YyRWtWLVJpaE90NDVLbS1iMVctVVZ5cmZwYjZYYkd6NEtXLTdvUFhWYnRETzdXbXRGOWVXTEZDdmh2ZzZlaVV2WA?oc=5\" target=\"_blank\" Damson"
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/movies/movie-features/john-leguizamo-the-odyssey-eumaeus-chris-nolan-interview-1236651694/",
+          "ageMin": 983,
+          "headline": "John Leguizamo Has Never Been as Vulnerable as in The Odyssey : “It Was So Intense for Me”",
+          "summary": "\"Working with Chris Nolan...you feel really seen,\" the actor behind Eumaeus tells The Hollywood Reporter in a wide-ranging conversation. \"I was able to tap into these really difficult, painful emotions from the depth of my soul.\""
         }
       ],
-      "ageMin": 960,
+      "ageMin": 983,
       "_cand": {
-        "key": "rss:damson-idris-teases-exciting-conversations-over-f1-the-movie",
+        "key": "rss:john-leguizamo-has-never-been-as-vulnerable-as-in-the-odysse",
         "popularity": 0,
-        "kind": "gnews"
+        "kind": "rss-news"
       },
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
+        "tier1Count": 1,
+        "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Motorsport.com"
+          "THR"
         ],
-        "maxTier": 5,
+        "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Motorsport.com",
+        "attribution": "THR",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 65,
+      "priority": 78,
       "signals": {
         "recency": 1,
-        "corroboration": 8,
+        "corroboration": 12,
         "status": 18,
-        "type": 14,
+        "type": 5,
         "pop": 0,
         "breakout": 0,
-        "big": 24,
+        "big": 12,
         "trending": 0,
         "spice": 0,
-        "softTv": 0
+        "softTv": 0,
+        "radar": 30
       },
-      "tierClass": "B"
+      "radarKind": "movie-in-theaters",
+      "tierClass": "A"
     },
     {
-      "id": "news-god-of-war-prime-video-new-lead-casting",
-      "slug": "god-of-war-prime-video-series-to-cast-new-lead-after-on-set-injury",
-      "title": "God of War: Prime Video Series to Cast New Lead After On Set Injury",
+      "id": "news-disney-confirms-end-of-the-mandalorian",
+      "slug": "disney-officially-confirms-the-end-of-the-mandalorian",
+      "title": "Disney Officially Confirms the End of 'The Mandalorian'",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
-      "eventType": "casting",
+      "eventType": "cancellation",
       "sensitivity": "normal",
-      "eventSlug": "god-of-war-prime-video-new-lead-casting",
-      "primaryKeyword": "god of war series casting",
-      "primaryEntity": "God of War",
+      "eventSlug": "disney-confirms-end-of-the-mandalorian",
+      "primaryKeyword": "The Mandalorian cancelled",
+      "primaryEntity": "The Mandalorian and Grogu",
       "entities": [
-        "God of War (TV series)",
-        "Prime Video",
-        "PlayStation Productions"
+        "The Mandalorian",
+        "Disney"
       ],
-      "angle": "The Prime Video 'God of War' series is recasting its lead after an on-set injury.",
+      "angle": "Disney has officially confirmed that 'The Mandalorian' will conclude.",
       "tmdbType": "movie",
-      "source": "gnews:TV Series Finale",
+      "source": "gnews:Collider",
       "sources": [
         {
-          "outlet": "TV Series Finale",
+          "outlet": "Collider",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQaVJubzMwODJjX3M1NTJRZG5kUXQ2WGoyVGpNbk05cnlib0ZOcEhqdmJJYzZMVHNTSm1qOUpodWt0cm01NnhBbmxmYk5KNlpFcHl3MXpnaWRFa1gwUnlzLUdxdVV0OUxKMTlqSHVzR0hyYnJ3WmhjRzYzX2FEelFvaU5jVnN0Y0c4MC04aHBMNXpUeFVyWDNWeWNGNDBuRzh1SFVxLUFIMk51d9IBqgFBVV95cUxQaVJubzMwODJjX3M1NTJRZG5kUXQ2WGoyVGpNbk05cnlib0ZOcEhqdmJJYzZMVHNTSm1qOUpodWt0cm01NnhBbmxmYk5KNlpFcHl3MXpnaWRFa1gwUnlzLUdxdVV0OUxKMTlqSHVzR0hyYnJ3WmhjRzYzX2FEelFvaU5jVnN0Y0c4MC04aHBMNXpUeFVyWDNWeWNGNDBuRzh1SFVxLUFIMk51dw?oc=5",
-          "ageMin": 1072,
-          "headline": "God of War: Prime Video Series to Cast New Lead After On Set Injury - TV Series Finale",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxQaVJubzMwODJjX3M1NTJRZG5kUXQ2WGoyVGpNbk05cnlib0ZOcEhqdmJJYzZMVHNTSm1qOUpodWt0cm01NnhBbmxmYk5KNlpFcHl3MXpnaWRFa1gwUnlzLUdxdVV0OUxKMTlqSHVzR0hyYnJ3WmhjRzYzX2FEelFvaU5jVnN0Y0c4MC04aHBMNXpUeFVyWDNWeWNGNDBuRzh1SFVxLUFIMk51d9IBqgFBVV95cUxQaVJubzM"
+          "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFB0QXM1UEwwdXFaUnFVcGJrTElBbjdlSHUyY3hDZ2pzWXN2c19rMm1IbVZ3NGMta3dvVm5nQW9VMUxITzRwMzV1bTUyX1liQVVsVEwxeEF3R0psN0xzWmFONDhpOEhnalhMYWQ3elhwWFdfTlJ0SVo3LVc1OA?oc=5",
+          "ageMin": 602,
+          "headline": "Disney Officially Confirms the End of 'The Mandalorian' - Collider",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMie0FVX3lxTFB0QXM1UEwwdXFaUnFVcGJrTElBbjdlSHUyY3hDZ2pzWXN2c19rMm1IbVZ3NGMta3dvVm5nQW9VMUxITzRwMzV1bTUyX1liQVVsVEwxeEF3R0psN0xzWmFONDhpOEhnalhMYWQ3elhwWFdfTlJ0SVo3LVc1OA?oc=5\" target=\"_blank\" Disney Officially Confirms the End of 'The Mandalorian' /a nbs"
         }
       ],
-      "ageMin": 1072,
+      "ageMin": 602,
       "_cand": {
-        "key": "rss:god-of-war-prime-video-series-to-cast-new-lead-after-on-set-",
+        "key": "rss:disney-officially-confirms-the-end-of-the-mandalorian-collid",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -387,21 +378,21 @@
         "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "TV Series Finale"
+          "Collider"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "TV Series Finale",
+        "attribution": "Collider",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
       "priority": 59,
       "signals": {
-        "recency": 1,
+        "recency": 4,
         "corroboration": 8,
         "status": 18,
-        "type": 14,
+        "type": 11,
         "pop": 0,
         "breakout": 0,
         "big": 18,
@@ -410,6 +401,71 @@
         "softTv": 0
       },
       "tierClass": "C"
+    },
+    {
+      "id": "news-call-of-duty-movie-universe-update",
+      "slug": "call-of-duty-movie-gets-update-director-peter-berg-reveals-what-univer",
+      "title": "‘Call of Duty’ Movie Gets Update, Director Peter Berg Reveals What Universe It Will Be Set In",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "call-of-duty-movie-universe-update",
+      "primaryKeyword": "call of duty movie",
+      "primaryEntity": "Call of Duty (film)",
+      "entities": [
+        "Peter Berg"
+      ],
+      "angle": "Director Peter Berg provides an update on the 'Call of Duty' movie, revealing its intended universe.",
+      "tmdbType": "movie",
+      "source": "gnews:Just Jared",
+      "sources": [
+        {
+          "outlet": "Just Jared",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOM2d3RTZRQjQ0cDB1SXktMmtOVE1ZTVY1dEc0SEtoVy1xY24zLTZQc3JES19obU9lQTBOeTQ0R1lNWk1VbWg1bFI1bThuN0NZc0NfN3ZnZTh4aDIxX2I0aVoyTk9VLUt0RUc3czMwdDcwQjZNbjl6UVAzRTAyZm9BQjlRVWF0RjRSZW92WmFVZ1U2d1p5VHNCRWJDUV8weDZQT29CdE9USHliOU5BMWQxcHZka1VFc3dqYU0zMkVWM3NYZWI5YWNr?oc=5",
+          "ageMin": 280,
+          "headline": "‘Call of Duty’ Movie Gets Update, Director Peter Berg Reveals What Universe It Will Be Set In - Just Jared",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMixwFBVV95cUxOM2d3RTZRQjQ0cDB1SXktMmtOVE1ZTVY1dEc0SEtoVy1xY24zLTZQc3JES19obU9lQTBOeTQ0R1lNWk1VbWg1bFI1bThuN0NZc0NfN3ZnZTh4aDIxX2I0aVoyTk9VLUt0RUc3czMwdDcwQjZNbjl6UVAzRTAyZm9BQjlRVWF0RjRSZW92WmFVZ1U2d1p5VHNCRWJDUV8weDZQT29CdE9USHliOU5BMWQxcHZka1VFc3dqYU0"
+        }
+      ],
+      "ageMin": 280,
+      "_cand": {
+        "key": "rss:-call-of-duty-movie-gets-update-director-peter-berg-reveals-",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "Just Jared"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "Just Jared",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 68,
+      "signals": {
+        "recency": 9,
+        "corroboration": 8,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
     },
     {
       "id": "news-danny-boyle-ink-sells-to-netflix",
@@ -422,14 +478,14 @@
       "eventType": "announcement",
       "sensitivity": "normal",
       "eventSlug": "danny-boyle-ink-sells-to-netflix",
-      "primaryKeyword": "danny boyle ink netflix",
-      "primaryEntity": "Ink (2024 film)",
+      "primaryKeyword": "danny boyle ink",
+      "primaryEntity": "Ink (film)",
       "entities": [
         "Danny Boyle",
         "Netflix",
         "Venice Film Festival"
       ],
-      "angle": "Danny Boyle's new film 'Ink' has been acquired by Netflix ahead of its Venice premiere.",
+      "angle": "Danny Boyle's film 'Ink,' about the birth of The Sun tabloid, has been acquired by Netflix ahead of its Venice premiere.",
       "tmdbType": "movie",
       "source": "rss:IndieWire",
       "sources": [
@@ -437,12 +493,12 @@
           "outlet": "IndieWire",
           "tier": 7,
           "url": "https://www.indiewire.com/news/breaking-news/danny-boyle-ink-netflix-venice-sale-1235206128/",
-          "ageMin": 3470,
+          "ageMin": 3561,
           "headline": "Danny Boyle s Ink Sells to Netflix in First Big Sale (Way) Ahead of Venice Premiere",
           "summary": "The film about Larry Lamb, Rupert Murdoch, and the birth of The Sun tabloid is the opening night film at the Biennale."
         }
       ],
-      "ageMin": 3470,
+      "ageMin": 3561,
       "_cand": {
         "key": "rss:danny-boyle-s-ink-sells-to-netflix-in-first-big-sale-way-ahe",
         "popularity": 0,
@@ -479,23 +535,89 @@
       "tierClass": "B"
     },
     {
-      "id": "news-anne-hathaway-princess-diaries-3-script-breakthrough",
-      "slug": "anne-hathaway-says-princess-diaries-3-had-a-story-breakthrough-after-h",
-      "title": "Anne Hathaway Says Princess Diaries 3 Had a Story Breakthrough After Having to Start Over With the Script: We are Moving in the Right Direction",
+      "id": "news-princess-diaries-3-announcement",
+      "slug": "anne-hathaway-shares-princess-diaries-3-script-breakthrough",
+      "title": "Anne Hathaway Shares Princess Diaries 3 Script Breakthrough",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "anne-hathaway-princess-diaries-3-script-breakthrough",
+      "sensitivity": "high",
+      "eventSlug": "princess-diaries-3-announcement",
       "primaryKeyword": "princess diaries 3",
       "primaryEntity": "Princess Diaries 3",
       "entities": [
         "One Day",
         "Anne Hathaway"
       ],
-      "angle": "Anne Hathaway provides an update on 'Princess Diaries 3,' stating the script has had a breakthrough after starting over.",
+      "angle": "Anne Hathaway provides an update on the Princess Diaries sequel, confirming a script breakthrough.",
+      "tmdbType": "movie",
+      "source": "rss:TheWrap",
+      "sources": [
+        {
+          "outlet": "TheWrap",
+          "tier": 7,
+          "url": "https://www.thewrap.com/industry-news/public-policy-legal/shark-tank-star-kevin-oleary-sued-utah-data-center-claims/",
+          "ageMin": 852,
+          "headline": "‘Shark Tank’ Star Kevin O’Leary Sued Over Utah Data Center Claims",
+          "summary": "Fox News is also named in the defamation lawsuit The post ‘Shark Tank’ Star Kevin O’Leary Sued Over Utah Data Center Claims appeared first on TheWrap ."
+        }
+      ],
+      "ageMin": 852,
+      "_cand": {
+        "key": "rss:-shark-tank-star-kevin-o-leary-sued-over-utah-data-center-cl",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "TheWrap"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": "TheWrap",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 64,
+      "signals": {
+        "recency": 1,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "S"
+    },
+    {
+      "id": "news-princess-diaries-3-script-breakthrough",
+      "slug": "anne-hathaway-reveals-princess-diaries-3-update-we-had-a-story-breakth",
+      "title": "Anne Hathaway Reveals Princess Diaries 3 Update: We Had a Story Breakthrough",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "princess-diaries-3-script-breakthrough",
+      "primaryKeyword": "princess diaries 3",
+      "primaryEntity": "Princess Diaries 3",
+      "entities": [
+        "One Day",
+        "Anne Hathaway"
+      ],
+      "angle": "Anne Hathaway reveals a significant development in the Princess Diaries sequel's script.",
       "tmdbType": "movie",
       "source": "rss:Variety",
       "sources": [
@@ -503,12 +625,12 @@
           "outlet": "Variety",
           "tier": 7,
           "url": "https://variety.com/2026/film/news/anne-hathaway-princess-diaries-3-breakthrough-script-1236816029/",
-          "ageMin": 785,
+          "ageMin": 876,
           "headline": "Anne Hathaway Says Princess Diaries 3 Had a Story Breakthrough After Having to Start Over With the Script: We are Moving in the Right Direction",
           "summary": "“Princess Diaries 3” recently had a breakthrough after a scrapped script, Anne Hathaway revealed during an appearance on SiriusXM’s “Radio Andy.” “I’m busy making baby number three, and that has sort of taken the place of knowing when exactly I can make Princess Diaries 3, ” Hathaway said. “I can say I think we had a story [ ]"
         }
       ],
-      "ageMin": 785,
+      "ageMin": 876,
       "_cand": {
         "key": "rss:anne-hathaway-says-princess-diaries-3-had-a-story-breakthrou",
         "popularity": 0,
@@ -545,105 +667,38 @@
       "tierClass": "B"
     },
     {
-      "id": "news-ransom-canyon-season-2-preview",
-      "slug": "ransom-canyon-season-2-preview-staten-learns-that-quinn-has-returned-t",
-      "title": "Ransom Canyon Season 2 Preview: Staten Learns that Quinn Has Returned to Texas",
+      "id": "news-gramado-fest-honors-selton-mello-maria-fernanda-candido",
+      "slug": "brazil-s-gramado-fest-set-to-honor-i-m-still-here-star-selton-mello-an",
+      "title": "Brazil’s Gramado Fest Set to Honor ‘I’m Still Here’ Star Selton Mello and ‘The Secret Agent’ Standout Maria Fernanda Cândido",
       "contentType": "news",
       "formatTag": "news",
-      "category": "tv",
+      "category": "movies",
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "ransom-canyon-season-2-preview",
-      "primaryKeyword": "ransom canyon season 2",
-      "primaryEntity": "Ransom Canyon",
+      "eventSlug": "gramado-fest-honors-selton-mello-maria-fernanda-candido",
+      "primaryKeyword": "gramado fest selton mello",
+      "primaryEntity": "Selton Mello",
       "entities": [
-        "Ransom Canyon (TV series)",
-        "Netflix"
+        "Maria Fernanda Cândido",
+        "Gramado Fest"
       ],
-      "angle": "Netflix releases a preview for the upcoming second season of 'Ransom Canyon,' hinting at character returns.",
+      "angle": "Brazil's Gramado Fest is set to honor prominent actors Selton Mello and Maria Fernanda Cândido amidst the growing international recognition of Brazilian cinema.",
       "tmdbType": "movie",
-      "source": "gnews:Netflix",
+      "source": "rss:Variety",
       "sources": [
         {
-          "outlet": "Netflix",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPYWNOaEZaWHk3NG1pcGx0c3o4eFk4S0h5ODdYcGR0YUdVbXBJb0VIcGU5UGRIVThYMHNpT1B2MjhzWUFHQmlJYnpKaGc3NEhVSVlJZ01nNVVFQXdaV2FBV21yODRlbFdQaWhGcV9oQzBMMjhxZm5PVDNRSHRRbDAwdQ?oc=5",
-          "ageMin": 88,
-          "headline": "Ransom Canyon Season 2 Preview: Staten Learns that Quinn Has Returned to Texas - Netflix",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMigAFBVV95cUxPYWNOaEZaWHk3NG1pcGx0c3o4eFk4S0h5ODdYcGR0YUdVbXBJb0VIcGU5UGRIVThYMHNpT1B2MjhzWUFHQmlJYnpKaGc3NEhVSVlJZ01nNVVFQXdaV2FBV21yODRlbFdQaWhGcV9oQzBMMjhxZm5PVDNRSHRRbDAwdQ?oc=5\" target=\"_blank\" Ransom Canyon Season 2 Preview: Staten Learns that Qui"
-        }
-      ],
-      "ageMin": 88,
-      "_cand": {
-        "key": "rss:ransom-canyon-season-2-preview-staten-learns-that-quinn-has-",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "Netflix"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "Netflix",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 53,
-      "signals": {
-        "recency": 16,
-        "corroboration": 8,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 6,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-heartstopper-forever-finale-breakdown",
-      "slug": "heartstopper-forever-stars-and-writer-break-down-the-emotional-finale",
-      "title": "‘Heartstopper Forever’ Stars and Writer Break Down the Emotional Finale",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "heartstopper-forever-finale-breakdown",
-      "primaryKeyword": "Heartstopper finale",
-      "primaryEntity": "Heartstopper",
-      "entities": [
-        "Joe Locke",
-        "Kit Connor",
-        "Alice Oseman"
-      ],
-      "angle": "Stars and creator break down the finale of the popular LGBTQ+ series, discussing changes from the book and character relationships.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
+          "outlet": "Variety",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-features/heartstopper-forever-ending-kit-connor-joe-lock-interview-1236647039/",
-          "ageMin": 2401,
-          "headline": "‘Heartstopper Forever’ Director, Writer and Stars Joe Locke and Kit Connor on the Finale: “It Connects the Whole Heartstopper Gang”",
-          "summary": "Stars Connor and Locke, creator Alice Oseman and director Wash Westmoreland break down the film’s biggest change from book to screen, alongside the intimacy, break-ups, and ambiguous endings from the final chapter."
+          "url": "https://variety.com/2026/film/global/gramado-festival-selton-mello-maria-fernanda-candido-globo-1236815847/",
+          "ageMin": 1246,
+          "headline": "Brazil’s Gramado Fest Set to Honor ‘I’m Still Here’ Star Selton Mello and ‘The Secret Agent’ Standout Maria Fernanda Cândido",
+          "summary": "As Brazil’s explosion on the Oscar and A-Fest scene turns its top actors into international stars, two of its biggest breakouts, “I’m Not Here” co-lead Selton Mello and “The Secret Agent” star María Fernanda Cândido, will be honored at Brazil’s Gramado Film Festival, bringing the aura of burgeoning international renown to one of the country’s [ ]"
         }
       ],
-      "ageMin": 2401,
+      "ageMin": 1246,
       "_cand": {
-        "key": "rss:-heartstopper-forever-director-writer-and-stars-joe-locke-an",
+        "key": "rss:brazil-s-gramado-fest-set-to-honor-i-m-still-here-star-selto",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -653,86 +708,19 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "THR"
+          "Variety"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "THR",
+        "attribution": "Variety",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 52,
+      "priority": 48,
       "signals": {
         "recency": 1,
         "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 6,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0,
-        "radar": 10
-      },
-      "radarKind": "movie-trending",
-      "tierClass": "A"
-    },
-    {
-      "id": "news-call-of-duty-movie-universe-update",
-      "slug": "call-of-duty-movie-gets-update-director-peter-berg-reveals-what-univer",
-      "title": "‘Call of Duty’ Movie Gets Update, Director Peter Berg Reveals What Universe It Will Be Set In",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "call-of-duty-movie-universe-update",
-      "primaryKeyword": "call of duty movie",
-      "primaryEntity": "Call of Duty (film)",
-      "entities": [
-        "Peter Berg"
-      ],
-      "angle": "Director Peter Berg provides an update on the 'Call of Duty' movie, revealing details about the universe it will inhabit.",
-      "tmdbType": "movie",
-      "source": "gnews:Just Jared",
-      "sources": [
-        {
-          "outlet": "Just Jared",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOM2d3RTZRQjQ0cDB1SXktMmtOVE1ZTVY1dEc0SEtoVy1xY24zLTZQc3JES19obU9lQTBOeTQ0R1lNWk1VbWg1bFI1bThuN0NZc0NfN3ZnZTh4aDIxX2I0aVoyTk9VLUt0RUc3czMwdDcwQjZNbjl6UVAzRTAyZm9BQjlRVWF0RjRSZW92WmFVZ1U2d1p5VHNCRWJDUV8weDZQT29CdE9USHliOU5BMWQxcHZka1VFc3dqYU0zMkVWM3NYZWI5YWNr?oc=5",
-          "ageMin": 189,
-          "headline": "‘Call of Duty’ Movie Gets Update, Director Peter Berg Reveals What Universe It Will Be Set In - Just Jared",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMixwFBVV95cUxOM2d3RTZRQjQ0cDB1SXktMmtOVE1ZTVY1dEc0SEtoVy1xY24zLTZQc3JES19obU9lQTBOeTQ0R1lNWk1VbWg1bFI1bThuN0NZc0NfN3ZnZTh4aDIxX2I0aVoyTk9VLUt0RUc3czMwdDcwQjZNbjl6UVAzRTAyZm9BQjlRVWF0RjRSZW92WmFVZ1U2d1p5VHNCRWJDUV8weDZQT29CdE9USHliOU5BMWQxcHZka1VFc3dqYU0"
-        }
-      ],
-      "ageMin": 189,
-      "_cand": {
-        "key": "rss:-call-of-duty-movie-gets-update-director-peter-berg-reveals-",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "Just Jared"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "Just Jared",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 52,
-      "signals": {
-        "recency": 9,
-        "corroboration": 8,
         "status": 18,
         "type": 5,
         "pop": 0,
@@ -745,172 +733,40 @@
       "tierClass": "C"
     },
     {
-      "id": "news-sam-reid-other",
-      "slug": "the-vampire-lestat-s-sam-reid-unpacks-the-revelations-in-that-bold-sea",
-      "title": "The Vampire Lestat's Sam Reid Unpacks the Revelations in That Bold Season Finale",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "sam-reid-other",
-      "primaryKeyword": "sam reid the vampire lestat",
-      "primaryEntity": "Sam Reid",
-      "entities": [
-        "The Vampire Lestat"
-      ],
-      "angle": "Actor Sam Reid discusses the significant plot developments and revelations in the season finale of the series 'The Vampire Lestat'.",
-      "tmdbType": "movie",
-      "source": "gnews:Collider",
-      "sources": [
-        {
-          "outlet": "Collider",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPUGJRM1dOdkFqaGltb2RCY2R3bTBiRk4tUUJNR1JjaUJ2QXJ4bzQ1cEczbVoyZ05jWTJySTBHVHNmMTlHTEltUk5tY0hPaXRSeldBMUxXMURqUmhoczlUZ0FSM3hnYWNDUkl1aWx3YWZaZFYxSkF1WjhIdmo5Z2lDdWZTb2ZNQQ?oc=5",
-          "ageMin": 481,
-          "headline": "Netflix's New 8-Part YA Series Is Taking Aim at Prime Video - Collider",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMihgFBVV95cUxPUGJRM1dOdkFqaGltb2RCY2R3bTBiRk4tUUJNR1JjaUJ2QXJ4bzQ1cEczbVoyZ05jWTJySTBHVHNmMTlHTEltUk5tY0hPaXRSeldBMUxXMURqUmhoczlUZ0FSM3hnYWNDUkl1aWx3YWZaZFYxSkF1WjhIdmo5Z2lDdWZTb2ZNQQ?oc=5\" target=\"_blank\" Netflix's New 8-Part YA Series Is Taking Aim a"
-        }
-      ],
-      "ageMin": 481,
-      "_cand": {
-        "key": "rss:netflix-s-new-8-part-ya-series-is-taking-aim-at-prime-video-",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "Collider"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "Collider",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 51,
-      "signals": {
-        "recency": 4,
-        "corroboration": 8,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 6,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0,
-        "radar": 10
-      },
-      "radarKind": "tv-trending",
-      "tierClass": "A"
-    },
-    {
-      "id": "news-aliens-40th-anniversary-james-cameron-quit-twice",
-      "slug": "aliens-at-40-james-cameron-almost-quit-the-sci-fi-classic-twice",
-      "title": "'Aliens' at 40: James Cameron Almost Quit the Sci-Fi Classic Twice",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "aliens-40th-anniversary-james-cameron-quit-twice",
-      "primaryKeyword": "Aliens 40th anniversary James Cameron",
-      "primaryEntity": "Aliens",
-      "entities": [
-        "Aliens (1986 film)",
-        "James Cameron"
-      ],
-      "angle": "Celebrating the 40th anniversary of 'Aliens,' a look back at the iconic sci-fi sequel and behind-the-scenes anecdotes, including James Cameron's near-departure from the project.",
-      "tmdbType": "movie",
-      "source": "gnews:Space",
-      "sources": [
-        {
-          "outlet": "Space",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPOW01a1ZmVGdvLWRkdUt5NDE1aXc4TmhVeEF2U21UUWFibERsZnN2X3dTZUR6emNwYWV0UVA3YXN2Q1J0VzYxLTBWNjNuNkFtWEotSW53NFFkT29OemJVaU1nbV9GUndIY0J2V1UwNTViblNEMjNUdE9lRkNRZ3U3czhlb0NUWnpUb3hqdENWa1ZCNGdhSGdOb1pyaFRxUk9QT2tSTkFMaHh1NUd1VWh1eTNKd2NsQ1lKZ3RSZVd3ZFVpbG5WTlhSOFlrd21UTkRscGpSTDlkSDFRWlJOMWVZbA?oc=5",
-          "ageMin": 931,
-          "headline": "'Aliens' at 40: James Cameron's sequel is a sci-fi icon, but did you know he quit the movie twice? - Space",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMi4AFBVV95cUxPOW01a1ZmVGdvLWRkdUt5NDE1aXc4TmhVeEF2U21UUWFibERsZnN2X3dTZUR6emNwYWV0UVA3YXN2Q1J0VzYxLTBWNjNuNkFtWEotSW53NFFkT29OemJVaU1nbV9GUndIY0J2V1UwNTViblNEMjNUdE9lRkNRZ3U3czhlb0NUWnpUb3hqdENWa1ZCNGdhSGdOb1pyaFRxUk9QT2tSTkFMaHh1NUd1VWh1eTNKd2NsQ1lKZ3R"
-        }
-      ],
-      "ageMin": 931,
-      "_cand": {
-        "key": "rss:-aliens-at-40-james-cameron-s-sequel-is-a-sci-fi-icon-but-di",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "Space"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "Space",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 50,
-      "signals": {
-        "recency": 1,
-        "corroboration": 8,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 12,
-        "trending": 0,
-        "spice": 6,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-teyana-taylor-other",
-      "slug": "teyana-taylor-at-world-cup-nicole-kidman-at-wimbledon-celeb-sightings",
-      "title": "Teyana Taylor at World Cup, Nicole Kidman at Wimbledon: Celeb Sightings",
+      "id": "news-tribute-to-jennifer-finch",
+      "slug": "tom-morello-garbage-violet-grohl-and-more-pay-tribute-to-l7-s-jennifer",
+      "title": "Tom Morello, Garbage, Violet Grohl and More Pay Tribute to L7’s Jennifer Finch",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "teyana-taylor-other",
-      "primaryKeyword": "celebrity red carpet",
-      "primaryEntity": "Teyana Taylor",
+      "tier": "popular",
+      "eventSlug": "tribute-to-jennifer-finch",
+      "primaryKeyword": "jennifer finch tribute",
+      "primaryEntity": "Jennifer Finch",
       "entities": [
-        "Nicole Kidman",
-        "Taylor Swift",
-        "The Odyssey"
+        "Tom Morello",
+        "Garbage",
+        "Violet Grohl"
       ],
-      "angle": "A roundup of celebrity appearances at major events like the World Cup and Wimbledon, alongside film premieres.",
+      "angle": "Musicians including Tom Morello, Garbage, and Violet Grohl pay tribute to L7's Jennifer Finch.",
       "tmdbType": "movie",
-      "source": "rss:Variety Music",
+      "source": "rss:Billboard",
       "sources": [
         {
-          "outlet": "Variety Music",
+          "outlet": "Billboard",
           "tier": 7,
-          "url": "https://variety.com/gallery/celebrity-pics-red-carpet-photos-july-2026/",
-          "ageMin": 2461,
-          "headline": "Teyana Taylor Celebrates World Cup in NYC, Nicole Kidman Takes in Wimbledon and More Celeb Red Carpet Photos: July 2026",
-          "summary": "July started off strong. Following Taylor Swift s star-studded wedding extravaganza in New York City, the cast of The Odyssey dazzled at the film s premieres in London and Paris. First reactions are only upping the excitement, with audiences movie-goers eagerly awaiting the film to hit theaters. On July 7, Dwayne Johnson launched his live-action adaptation of [ ]"
+          "url": "https://www.billboard.com/music/rock/l7-jennifer-finch-tributes-1236297981/",
+          "ageMin": 60,
+          "headline": "Tom Morello, Garbage, Violet Grohl and More Pay Tribute to L7’s Jennifer Finch",
+          "summary": "“A super cool person, a true artist with a kind and welcoming heart,” Morello wrote."
         }
       ],
-      "ageMin": 2461,
+      "ageMin": 60,
       "_cand": {
-        "key": "rss:teyana-taylor-celebrates-world-cup-in-nyc-nicole-kidman-take",
+        "key": "rss:tom-morello-garbage-violet-grohl-and-more-pay-tribute-to-l7-",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -920,79 +776,11 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Variety Music"
+          "Billboard"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Variety Music",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 66,
-      "signals": {
-        "recency": 1,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0,
-        "radar": 30
-      },
-      "radarKind": "movie-in-theaters",
-      "tierClass": "A"
-    },
-    {
-      "id": "news-hollywood-other",
-      "slug": "hollywood-s-guaranteed-star-paydays-are-becoming-bad-bets",
-      "title": "Hollywood's Guaranteed Star Paydays Are Becoming Bad Bets",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "hollywood-other",
-      "primaryKeyword": "Hollywood star paydays",
-      "primaryEntity": "Hollywood",
-      "entities": [
-        "80 for Brady",
-        "Tom Brady"
-      ],
-      "angle": "An analysis of Hollywood's current financial landscape suggests that guaranteed paydays for stars are becoming increasingly risky investments.",
-      "tmdbType": "movie",
-      "source": "gnews:The New York Times",
-      "sources": [
-        {
-          "outlet": "The New York Times",
-          "tier": 7,
-          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNcndESExFWmJYWVh1dURGZ3dqOE41YWphZGNacWtVZUpGeFEyMzBwVUNCM29jSWNTVUptUzdoRHN3YzBtV2VVWmtGMzZsaUI5VU0zMTMxQ3YzYUhIbElaNzYtVEdGb2VRdEtyeUV4aFZNUVBvM0VlSWhoX25Sa1VtaXBlU202SjVPWTdNelNXdk9zNlc3a3UyWVNWVQ?oc=5",
-          "ageMin": 27,
-          "headline": "From Tom Brady to Elmo, who were the celebrities at the World Cup final? - The Athletic - The New York Times",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMimwFBVV95cUxNcndESExFWmJYWVh1dURGZ3dqOE41YWphZGNacWtVZUpGeFEyMzBwVUNCM29jSWNTVUptUzdoRHN3YzBtV2VVWmtGMzZsaUI5VU0zMTMxQ3YzYUhIbElaNzYtVEdGb2VRdEtyeUV4aFZNUVBvM0VlSWhoX25Sa1VtaXBlU202SjVPWTdNelNXdk9zNlc3a3UyWVNWVQ?oc=5\" target=\"_blank\" From Tom Brady to "
-        }
-      ],
-      "ageMin": 27,
-      "_cand": {
-        "key": "rss:from-tom-brady-to-elmo-who-were-the-celebrities-at-the-world",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "The New York Times"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "The New York Times",
+        "attribution": "Billboard",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -1013,39 +801,114 @@
       "tierClass": "C"
     },
     {
-      "id": "news-rolling-stones-songwriting-ai-mount-rushmore",
-      "slug": "the-rolling-stones-sound-off-mick-jagger-keith-richards-on-songwriting",
-      "title": "The Rolling Stones Sound Off: Mick Jagger Keith Richards on Songwriting, AI Their Musical Rock Mount Rushmore",
+      "id": "news-jennifer-finch-death",
+      "slug": "jennifer-finch-l7-bassist-and-tireless-indie-rock-champion-dies-after-",
+      "title": "Jennifer Finch, L7 Bassist and Tireless Indie-Rock Champion, Dies After Battle With Brain Cancer",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "death",
+      "sensitivity": "high",
+      "tier": "indie",
+      "eventSlug": "jennifer-finch-death",
+      "primaryKeyword": "jennifer finch death",
+      "primaryEntity": "Jennifer Finch",
+      "entities": [
+        "L7"
+      ],
+      "angle": "Jennifer Finch, the bassist, singer, and songwriter for the influential indie-rock band L7, has died after a battle with brain cancer.",
+      "tmdbType": "movie",
+      "source": "rss:Variety Music",
+      "sources": [
+        {
+          "outlet": "Variety Music",
+          "tier": 7,
+          "url": "https://variety.com/2026/music/news/jennifer-finch-dead-l7-bassist-brain-cancer-1236815960/",
+          "ageMin": 1118,
+          "headline": "Jennifer Finch, L7 Bassist and Tireless Indie-Rock Champion, Dies After Battle With Brain Cancer",
+          "summary": "Jennifer Finch, bassist, singer and songwriter for the veteran indie-rock band L7, died Saturday after a battle with an aggressive form of brain cancer, according to a statement from the band s rep. She was 59. A popular and well-known presence on the indie-rock scene of the 1990s, earlier in her career Finch played with Courtney [ ]"
+        },
+        {
+          "outlet": "Rolling Stone",
+          "tier": 7,
+          "url": "https://www.rollingstone.com/music/music-news/l7-jennifer-finch-dead-obituary-1235595523/",
+          "ageMin": 1873,
+          "headline": "Jennifer Finch, L7 Bassist, Dead at 59",
+          "summary": "Rocker was diagnosed with an aggressive form of brain cancer"
+        }
+      ],
+      "ageMin": 1118,
+      "_cand": {
+        "key": "rss:jennifer-finch-l7-bassist-and-tireless-indie-rock-champion-d",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 2,
+      "verification": {
+        "tier1Count": 2,
+        "tier1Owners": 1,
+        "outletCount": 2,
+        "outlets": [
+          "Variety Music",
+          "Rolling Stone"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": "Variety Music",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 59,
+      "signals": {
+        "recency": 1,
+        "corroboration": 18,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 8,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "S"
+    },
+    {
+      "id": "news-celebrities-at-world-cup-final",
+      "slug": "from-tom-brady-to-elmo-who-were-the-celebrities-at-the-world-cup-final",
+      "title": "From Tom Brady to Elmo: Who Were the Celebrities at the World Cup Final?",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "rolling-stones-songwriting-ai-mount-rushmore",
-      "primaryKeyword": "rolling stones songwriting",
-      "primaryEntity": "The Rolling Stones",
+      "eventSlug": "celebrities-at-world-cup-final",
+      "primaryKeyword": "celebrities world cup final",
+      "primaryEntity": "World Cup",
       "entities": [
-        "Mick Jagger",
-        "Keith Richards"
+        "80 for Brady",
+        "Tom Brady",
+        "Elmo"
       ],
-      "angle": "Mick Jagger and Keith Richards of The Rolling Stones share insights on their songwriting process, AI, and their 'musical rock Mount Rushmore.'",
+      "angle": "Identifying notable celebrities, including Tom Brady and Elmo, who attended the World Cup final.",
       "tmdbType": "movie",
-      "source": "gnews:Billboard",
+      "source": "gnews:The New York Times",
       "sources": [
         {
-          "outlet": "Billboard",
+          "outlet": "The New York Times",
           "tier": 7,
-          "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQRThtay1vWXJWWlo2VUV3Sk5tV3Nldzg3aGVYOGp0THBvVkpnZ2xUQUNWcU9wTkVqY09wUkg3VGdEVFlKSThqejFtcnRhQVpReG41aExiVkE0cUZHbXZMQ2VCXzZzWWtpUF9oX09vV3Noc3VRY1hEZndaaW1ESEplbUpidkVleU1remc?oc=5",
-          "ageMin": 123,
-          "headline": "The Rolling Stones Sound Off: Mick Jagger Keith Richards on Songwriting, AI Their Musical Rock Mount Rushmore - Billboard",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiigFBVV95cUxQRThtay1vWXJWWlo2VUV3Sk5tV3Nldzg3aGVYOGp0THBvVkpnZ2xUQUNWcU9wTkVqY09wUkg3VGdEVFlKSThqejFtcnRhQVpReG41aExiVkE0cUZHbXZMQ2VCXzZzWWtpUF9oX09vV3Noc3VRY1hEZndaaW1ESEplbUpidkVleU1remc?oc=5\" target=\"_blank\" The Rolling Stones Sound Off: Mick Jagger"
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNcndESExFWmJYWVh1dURGZ3dqOE41YWphZGNacWtVZUpGeFEyMzBwVUNCM29jSWNTVUptUzdoRHN3YzBtV2VVWmtGMzZsaUI5VU0zMTMxQ3YzYUhIbElaNzYtVEdGb2VRdEtyeUV4aFZNUVBvM0VlSWhoX25Sa1VtaXBlU202SjVPWTdNelNXdk9zNlc3a3UyWVNWVQ?oc=5",
+          "ageMin": 174,
+          "headline": "From Tom Brady to Elmo, who were the celebrities at the World Cup final? - The Athletic - The New York Times",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMimwFBVV95cUxNcndESExFWmJYWVh1dURGZ3dqOE41YWphZGNacWtVZUpGeFEyMzBwVUNCM29jSWNTVUptUzdoRHN3YzBtV2VVWmtGMzZsaUI5VU0zMTMxQ3YzYUhIbElaNzYtVEdGb2VRdEtyeUV4aFZNUVBvM0VlSWhoX25Sa1VtaXBlU202SjVPWTdNelNXdk9zNlc3a3UyWVNWVQ?oc=5\" target=\"_blank\" From Tom Brady to "
         }
       ],
-      "ageMin": 123,
+      "ageMin": 174,
       "_cand": {
-        "key": "rss:the-rolling-stones-sound-off-mick-jagger-keith-richards-on-s",
+        "key": "rss:from-tom-brady-to-elmo-who-were-the-celebrities-at-the-world",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -1055,11 +918,11 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Billboard"
+          "The New York Times"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Billboard",
+        "attribution": "The New York Times",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -1080,23 +943,23 @@
       "tierClass": "C"
     },
     {
-      "id": "news-melanie-chisholm-chris-dingwall-wedding",
-      "slug": "celeb-weddings-of-2026-melanie-chisholm-and-chris-dingwall-more-stars-",
-      "title": "Celeb Weddings of 2026: Melanie Chisholm and Chris Dingwall, More Stars Who Tied the Knot This Year",
+      "id": "news-melanie-chisholm-chris-dingwall-wedding-2026",
+      "slug": "melanie-chisholm-and-chris-dingwall-tie-the-knot-in-2026",
+      "title": "Melanie Chisholm and Chris Dingwall Tie the Knot in 2026",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
       "eventType": "marriage",
       "sensitivity": "normal",
-      "eventSlug": "melanie-chisholm-chris-dingwall-wedding",
+      "eventSlug": "melanie-chisholm-chris-dingwall-wedding-2026",
       "primaryKeyword": "melanie chisholm wedding",
       "primaryEntity": "Melanie C",
       "entities": [
         "Melanie Chisholm",
         "Chris Dingwall"
       ],
-      "angle": "Melanie Chisholm, also known as Mel C, has reportedly tied the knot in 2026.",
+      "angle": "Spice Girl Melanie Chisholm marries Chris Dingwall in 2026.",
       "tmdbType": "movie",
       "source": "gnews:Us Weekly",
       "sources": [
@@ -1104,12 +967,12 @@
           "outlet": "Us Weekly",
           "tier": 5,
           "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOQlZDQWppQlJaSlRmazNMN1dwejhnMXlIRWpDLTRDT1o1X3E2RHZrampZa2xuTExfVENQVm1sV2JFd1Vac2RSV0ROSGJsb0lLSHlDY0JGN2NhRm5Qc2Z1SG42MEFTY2pYUFE2d3N4SzFQRHM2TU5JMDZZSW5BVGRMaldCU0dURjlZS09nRmNyQy10UlhJbGVZQl82SkJsamNMandEMXIyWDNsRE1jZUlB?oc=5",
-          "ageMin": 108,
+          "ageMin": 109,
           "headline": "Celeb Weddings of 2026: Melanie Chisholm and Chris Dingwall, More Stars Who Tied the Knot This Year - Us Weekly",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxOQlZDQWppQlJaSlRmazNMN1dwejhnMXlIRWpDLTRDT1o1X3E2RHZrampZa2xuTExfVENQVm1sV2JFd1Vac2RSV0ROSGJsb0lLSHlDY0JGN2NhRm5Qc2Z1SG42MEFTY2pYUFE2d3N4SzFQRHM2TU5JMDZZSW5BVGRMaldCU0dURjlZS09nRmNyQy10UlhJbGVZQl82SkJsamNMandEMXIyWDNsRE1jZUlB?oc=5\" target=\""
         }
       ],
-      "ageMin": 108,
+      "ageMin": 109,
       "_cand": {
         "key": "rss:celeb-weddings-of-2026-melanie-chisholm-and-chris-dingwall-m",
         "popularity": 0,
@@ -1146,39 +1009,38 @@
       "tierClass": "C"
     },
     {
-      "id": "news-fisher-melbourne-cup-carnival-closing-party",
-      "slug": "fisher-to-headline-2026-melbourne-cup-carnival-closing-party",
-      "title": "FISHER to Headline 2026 Melbourne Cup Carnival Closing Party",
+      "id": "news-jennifer-finch-dies-at-59",
+      "slug": "l7-bassist-jennifer-finch-dies-at-59",
+      "title": "L7 Bassist Jennifer Finch Dies at 59",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
+      "eventType": "death",
+      "sensitivity": "high",
       "tier": "popular",
-      "eventSlug": "fisher-melbourne-cup-carnival-closing-party",
-      "primaryKeyword": "fisher melbourne cup carnival",
-      "primaryEntity": "Nell Fisher",
+      "eventSlug": "jennifer-finch-dies-at-59",
+      "primaryKeyword": "jennifer finch",
+      "primaryEntity": "Jennifer Finch",
       "entities": [
-        "FISHER",
-        "Melbourne Cup Carnival"
+        "L7"
       ],
-      "angle": "DJ FISHER is set to headline the closing party of the 2026 Melbourne Cup Carnival.",
+      "angle": "L7 bassist Jennifer Finch has died at 59 after battling brain cancer.",
       "tmdbType": "movie",
-      "source": "rss:Billboard",
+      "source": "rss:Deadline",
       "sources": [
         {
-          "outlet": "Billboard",
+          "outlet": "Deadline",
           "tier": 7,
-          "url": "https://www.billboard.com/music/concerts/fisher-2026-melbourne-cup-carnival-closing-party-1236297940/",
-          "ageMin": 252,
-          "headline": "FISHER to Headline 2026 Melbourne Cup Carnival Closing Party",
-          "summary": "The Gold Coast-born artist has become one of Australia’s most recognizable dance music exports."
+          "url": "https://deadline.com/2026/07/jennifer-finch-dead-l7-bassist-1236998168/",
+          "ageMin": 433,
+          "headline": "Jennifer Finch Dies: L7 Bassist Who Battled Brain Cancer Was 59",
+          "summary": "Jennifer Finch, the powerhouse bassist of L7 during the band s creative peak in the 1990s, has died. That, according to her Instagram account. She was 59. A social media post from the band today noted Finch waged a long courageous fight with brain cancer. Earlier this month, friends and family launched a GoFundMe page to [ ]"
         }
       ],
-      "ageMin": 252,
+      "ageMin": 433,
       "_cand": {
-        "key": "rss:fisher-to-headline-2026-melbourne-cup-carnival-closing-party",
+        "key": "rss:jennifer-finch-dies-l7-bassist-who-battled-brain-cancer-was-",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -1188,21 +1050,21 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Billboard"
+          "Deadline"
         ],
         "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Billboard",
+        "sensitivity": "high",
+        "attribution": "Deadline",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
       "priority": 48,
       "signals": {
-        "recency": 9,
+        "recency": 4,
         "corroboration": 12,
         "status": 18,
-        "type": 9,
+        "type": 14,
         "pop": 0,
         "breakout": 0,
         "big": 0,
@@ -1210,7 +1072,7 @@
         "spice": 0,
         "softTv": 0
       },
-      "tierClass": "C"
+      "tierClass": "S"
     }
   ]
 }
