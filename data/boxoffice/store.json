@@ -1652,27 +1652,31 @@
    "key": "the-odyssey-bo-update-100m|BO-UPDATE",
    "eventSlug": "the-odyssey-bo-update-100m",
    "form": "BO-UPDATE",
-   "reason": "1 unverified claim(s) cut, unrecovered",
-   "tries": 21,
-   "at": "2026-07-20T17:11:03.091Z",
+   "reason": "consistency: metaTitle: headlines domestic while the title headlines other — the SERP promise must match the page",
+   "tries": 22,
+   "at": "2026-07-20T17:34:20.943Z",
    "dead": true,
-   "expiresAt": "2026-07-23T17:11:03.091Z"
+   "expiresAt": "2026-07-23T17:34:20.943Z"
   },
   {
    "key": "star-wars-the-mandalorian-and-grogu-bo-update-d59|BO-UPDATE",
    "eventSlug": "star-wars-the-mandalorian-and-grogu-bo-update-d59",
    "form": "BO-UPDATE",
-   "reason": "consistency: title: \"$177.5\" is not a canonical figure for this film | title: \"$177.5\" contradicts the canonical domestic figure ($177,534,904) | metaTitle: headlines domestic while the title headlines dailyGross/other — the SERP promise must match the page",
-   "tries": 2,
-   "at": "2026-07-20T16:36:12.114Z"
+   "reason": "fidelity: 9 unsupported figures/claims — draft-level failure",
+   "tries": 3,
+   "at": "2026-07-20T17:36:32.707Z",
+   "dead": true,
+   "expiresAt": "2026-07-23T17:36:32.707Z"
   },
   {
    "key": "project-hail-mary-bo-update-d128|BO-UPDATE",
    "eventSlug": "project-hail-mary-bo-update-d128",
    "form": "BO-UPDATE",
-   "reason": "words 157 < 180 (owner-set ~200-word minimum)",
-   "tries": 2,
-   "at": "2026-07-20T16:38:32.419Z"
+   "reason": "reconcile: domestic+international ($317M) does not match worldwide ($141M) — present each figure as separately reported, never imply a sum | words 162 < 180 (owner-set ~200-word minimum)",
+   "tries": 3,
+   "at": "2026-07-20T17:38:52.365Z",
+   "dead": true,
+   "expiresAt": "2026-07-23T17:38:52.365Z"
   },
   {
    "key": "king-of-the-hill-trending-tv|TRENDING-TV",
@@ -1683,14 +1687,14 @@
    "at": "2026-07-20T17:09:27.679Z"
   }
  ],
- "zeroStreak": 3,
+ "zeroStreak": 4,
  "daySpend": {
   "laDay": "2026-07-20",
-  "usd": 0.32538
+  "usd": 0.35063
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1784566895928
+  "lastMs": 1784568698513
  },
  "lastAuditDay": "2026-07-20",
  "attempts": {
@@ -1701,8 +1705,8 @@
    "the sheep detectives": 3,
    "tom clancy's jack ryan: ghost war": 2,
    "lucky": 1,
-   "project hail mary": 2,
-   "outcome": 1,
+   "project hail mary": 3,
+   "outcome": 2,
    "rick and morty": 1,
    "king of the hill": 1
   }
