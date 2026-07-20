@@ -1,62 +1,130 @@
 {
-  "runId": "run-2026-07-20T18-01-36",
-  "builtAt": "2026-07-20T18:03:35.121Z",
-  "count": 13,
+  "runId": "run-2026-07-20T18-31-32",
+  "builtAt": "2026-07-20T18:33:26.366Z",
+  "count": 15,
   "topics": [
     {
-      "id": "news-criminal-minds-evolution-season-20-renewal",
-      "slug": "criminal-minds-evolution-is-returning-for-season-20-everything-we-know",
-      "title": "‘Criminal Minds: Evolution’ Is Returning for Season 20: Everything We Know So Far",
+      "id": "news-kissing-booth-duo-tackling-ya-rom-com-son-of-the-mob",
+      "slug": "the-kissing-booth-duo-tackling-ya-rom-com-son-of-the-mob",
+      "title": "'The Kissing Booth' Duo Tackling YA Rom-Com 'Son Of The Mob'",
       "contentType": "news",
       "formatTag": "news",
-      "category": "tv",
+      "category": "movies",
       "subcategory": "news",
-      "eventType": "renewal",
+      "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "criminal-minds-evolution-season-20-renewal",
-      "primaryKeyword": "criminal minds evolution season 20",
-      "primaryEntity": "Criminal Minds",
+      "eventSlug": "kissing-booth-duo-tackling-ya-rom-com-son-of-the-mob",
+      "primaryKeyword": "son of the mob adaptation",
+      "primaryEntity": "The Kissing Booth",
       "entities": [
-        "Criminal Minds: Evolution"
+        "Red Sage Studios",
+        "Sun Distribution"
       ],
-      "angle": "The popular streaming series has been renewed for another season.",
+      "angle": "The duo behind 'The Kissing Booth' are adapting the YA rom-com 'Son Of The Mob' for Red Sage Studios and Sun Distribution.",
       "tmdbType": "movie",
-      "source": "gnews:TV Insider",
+      "source": "rss:Deadline",
       "sources": [
         {
-          "outlet": "TV Insider",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNdjZTQzFKcXhQbW95cXhNMG5SNExFUlJpU0xZMjRYeVZtMDdjdHh2eUhzTEJQNDhlczhNZ1RxZWYzLXR2YlRuZmVLbG9sWjFDM296ekx2X2IwR1NIX3Bub3g4RXVRb3pDc1N3UkJhaGYtU0thOHpvdjBUUGc2c0hGMFpaZmdOZjZSMHRoVTNCZW5tTndRY2xWUDFCSkdFME56WmlRcXZSUQ?oc=5",
-          "ageMin": 68,
-          "headline": "‘Criminal Minds: Evolution’ Is Returning for Season 20: Everything We Know So Far - TV Insider",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxNdjZTQzFKcXhQbW95cXhNMG5SNExFUlJpU0xZMjRYeVZtMDdjdHh2eUhzTEJQNDhlczhNZ1RxZWYzLXR2YlRuZmVLbG9sWjFDM296ekx2X2IwR1NIX3Bub3g4RXVRb3pDc1N3UkJhaGYtU0thOHpvdjBUUGc2c0hGMFpaZmdOZjZSMHRoVTNCZW5tTndRY2xWUDFCSkdFME56WmlRcXZSUQ?oc=5\" target=\"_blank\" ‘C"
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/the-kissing-booth-filmmakers-son-of-the-mob-rom-com-1236998511/",
+          "ageMin": 32,
+          "headline": "The Kissing Booth Duo Tackling YA Rom-Com Son Of The Mob For Red Sage Studios Sun Distribution",
+          "summary": "EXCLUSIVE: Red Sage Studios, the YA-focused company founded by former Amazon MGM Studios International head James Farrell, and Sun Distribution (Telefilms Group) have added an adaptation of the Gordon Korman novel Son of the Mob to their slate. Son of the Mob is a romantic comedy following Vince, the teenage son of a mob boss who longs for a [ ]"
         }
       ],
-      "ageMin": 68,
+      "ageMin": 32,
       "_cand": {
-        "key": "rss:-criminal-minds-evolution-is-returning-for-season-20-everyth",
+        "key": "rss:the-kissing-booth-duo-tackling-ya-rom-com-son-of-the-mob-for",
         "popularity": 0,
-        "kind": "gnews"
+        "kind": "rss-news"
       },
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
+        "tier1Count": 1,
+        "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "TV Insider"
+          "Deadline"
         ],
-        "maxTier": 5,
+        "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "TV Insider",
+        "attribution": "Deadline",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 85,
+      "priority": 87,
       "signals": {
-        "recency": 16,
-        "corroboration": 8,
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-stuart-fails-to-save-the-universe-limited-edition-dc-comic-book-san-di",
+      "slug": "limited-edition-dc-comic-book-for-hbo-max-series-stuart-fails-to-save-",
+      "title": "Limited Edition DC Comic Book for HBO Max Series 'Stuart Fails to Save the Universe' Planned for Comic-Con",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "stuart-fails-to-save-the-universe-limited-edition-dc-comic-book-san-di",
+      "primaryKeyword": "stuart fails to save the universe comic book",
+      "primaryEntity": "Stuart Fails to Save the Universe",
+      "entities": [
+        "LEGO DC: Shazam! Magic and Monsters",
+        "HBO Max",
+        "DC Comics"
+      ],
+      "angle": "The new HBO Max series 'Stuart Fails to Save the Universe' is getting a limited edition DC comic book tie-in for San Diego Comic-Con.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/tv/news/stuart-fails-to-save-the-universe-comic-book-comic-con-1236816349/",
+          "ageMin": 32,
+          "headline": "Stuart Fails to Save the Universe Limited Edition DC Comic Book, Experiential Space for Fans Planned for San Diego Comic-Con (EXCLUSIVE)",
+          "summary": "Stuart Fails to Save the Universe takes place in a comic book shop, so it s only natural that the new HBO Max series would get its own, actual comic book. As The Big Bang Theory spinoff hits San Diego Comic-Con this week, the comic book — featuring cover art by DC Comics president, publisher and [ ]"
+        }
+      ],
+      "ageMin": 32,
+      "_cand": {
+        "key": "rss:stuart-fails-to-save-the-universe-limited-edition-dc-comic-b",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 81,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
         "status": 18,
         "type": 9,
         "pop": 0,
@@ -64,14 +132,78 @@
         "big": 18,
         "trending": 0,
         "spice": 0,
-        "softTv": 0,
-        "radar": 16
+        "softTv": 0
       },
-      "radarKind": "tv-episode-soon",
-      "tierClass": "A"
+      "tierClass": "B"
     },
     {
-      "id": "news-princess-diaries-3-moving-forward",
+      "id": "news-lizard-music-casting-theo-clark-leber",
+      "slug": "10-year-old-theo-clark-leber-lands-lead-role-opposite-dwayne-johnson-i",
+      "title": "10-Year-Old Theo Clark Leber Lands Lead Role Opposite Dwayne Johnson In Benny Safdie's 'Lizard Music'",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "lizard-music-casting-theo-clark-leber",
+      "primaryKeyword": "dwayne johnson lizard music",
+      "primaryEntity": "Lizard Music (film)",
+      "entities": [
+        "Dwayne Johnson",
+        "Benny Safdie"
+      ],
+      "angle": "Child actor Theo Clark Leber cast opposite Dwayne Johnson in Benny Safdie's 'Lizard Music'.",
+      "tmdbType": "movie",
+      "source": "rss:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/lizard-music-theo-leber-joins-dwayne-johnson-movie-1236997691/",
+          "ageMin": 122,
+          "headline": "10-Year-Old Theo Clark Leber Lands Lead Role Opposite Dwayne Johnson In Benny Safdie s Lizard Music For Amazon MGM United Artists",
+          "summary": "EXCLUSIVE: Chicago-area 4th grader Theo Clark Leber has landed a starring role opposite Dwayne Johnson in Lizard Music, Benny Safdie s adaptation of the 1976 novel by Daniel Pinkwater for Amazon MGM Studios and United Artists. The 10-year-old comes to the potentially career-making opportunity following a months-long casting process. Lizard Music marks his feature debut. A live-action/CGI hybrid, ["
+        }
+      ],
+      "ageMin": 122,
+      "_cand": {
+        "key": "rss:10-year-old-theo-clark-leber-lands-lead-role-opposite-dwayne",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 84,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-anne-hathaway-princess-diaries-3-progress",
       "slug": "anne-hathaway-says-princess-diaries-3-is-moving-in-the-right-direction",
       "title": "Anne Hathaway Says Princess Diaries 3 Is Moving in the Right Direction",
       "contentType": "news",
@@ -80,14 +212,14 @@
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "princess-diaries-3-moving-forward",
+      "eventSlug": "anne-hathaway-princess-diaries-3-progress",
       "primaryKeyword": "princess diaries 3",
       "primaryEntity": "Princess Diaries 3",
       "entities": [
         "One Day",
         "Anne Hathaway"
       ],
-      "angle": "Anne Hathaway provides an update on the development of Princess Diaries 3, confirming a story breakthrough.",
+      "angle": "Anne Hathaway provides an update on the development of 'Princess Diaries 3'.",
       "tmdbType": "movie",
       "source": "rss:TheWrap",
       "sources": [
@@ -95,12 +227,12 @@
           "outlet": "TheWrap",
           "tier": 7,
           "url": "https://www.thewrap.com/creative-content/movies/anne-hathaway-princess-diaries-3-update/",
-          "ageMin": 76,
+          "ageMin": 106,
           "headline": "Anne Hathaway Says Princess Diaries 3 Is Moving in the Right Direction",
           "summary": "\"We had a story breakthrough,\" the \"Odyssey\" and \"Devil Wears Prada\" star shares The post Anne Hathaway Says Princess Diaries 3 Is Moving in the Right Direction appeared first on TheWrap ."
         }
       ],
-      "ageMin": 76,
+      "ageMin": 106,
       "_cand": {
         "key": "rss:anne-hathaway-says-princess-diaries-3-is-moving-in-the-right",
         "popularity": 0,
@@ -137,38 +269,171 @@
       "tierClass": "B"
     },
     {
-      "id": "news-blade-movie-fate-addressed",
-      "slug": "marvel-studios-addresses-blade-movie-fate",
-      "title": "Marvel Studios Addresses 'Blade' Movie Fate",
+      "id": "news-my-life-with-the-walter-boys-season-3-renewal",
+      "slug": "my-life-with-the-walter-boys-renewed-for-season-3-on-netflix",
+      "title": "'My Life With the Walter Boys' Renewed for Season 3 on Netflix",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "renewal",
+      "sensitivity": "normal",
+      "eventSlug": "my-life-with-the-walter-boys-season-3-renewal",
+      "primaryKeyword": "My Life With the Walter Boys Season 3",
+      "primaryEntity": "My Life with the Walter Boys",
+      "entities": [
+        "My Life With the Walter Boys",
+        "Netflix",
+        "Ali Novak"
+      ],
+      "angle": "Netflix renews 'My Life With the Walter Boys' for Season 3 ahead of its sophomore season premiere.",
+      "tmdbType": "movie",
+      "source": "rss:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/feature/my-life-with-the-walter-boys-season-3-news-1236507779/",
+          "ageMin": 81,
+          "headline": "My Life With the Walter Boys Season 3: Everything We Know So Far",
+          "summary": "My Life With the Walter Boys received an early Season 3 renewal ahead of the launch of its sophomore season on Netflix. Based on Ali Novak’s book of the same name, the show follows found family themes as well as a love triangle between Jackie Howard (Nikki Rodriguez) and two brothers. Set in Silver Falls, [ ]"
+        }
+      ],
+      "ageMin": 81,
+      "_cand": {
+        "key": "rss:my-life-with-the-walter-boys-season-3-everything-we-know-so-",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 73,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "music-news-darius-rucker-considering-retiring-from-touring",
+      "slug": "darius-rucker-considering-retiring-from-touring-in-two-years",
+      "title": "Darius Rucker Considering Retiring From Touring in Two Years",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "darius-rucker-considering-retiring-from-touring",
+      "primaryKeyword": "darius rucker tour",
+      "primaryEntity": "Darius Rucker",
+      "entities": [
+        "Billboard"
+      ],
+      "angle": "Country star Darius Rucker hints at a potential retirement from touring within the next two years.",
+      "tmdbType": "movie",
+      "source": "rss:Billboard",
+      "sources": [
+        {
+          "outlet": "Billboard",
+          "tier": 7,
+          "url": "https://www.billboard.com/music/country/darius-rucker-touring-hootie-blowfish-1236298213/",
+          "ageMin": 37,
+          "headline": "Darius Rucker Says He s Considering Retiring From Touring in Two Years",
+          "summary": "During an appearance on The Dan Patrick Show , Rucker noted he has definite ideas for what a final concert would look like."
+        }
+      ],
+      "ageMin": 37,
+      "_cand": {
+        "key": "rss:darius-rucker-says-he-s-considering-retiring-from-touring-in",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Billboard"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Billboard",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 63,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-coda-director-judy-heumann-film",
+      "slug": "coda-director-to-helm-new-film-about-disability-activist-judy-heumann-",
+      "title": "'CODA' Director to Helm New Film About Disability Activist Judy Heumann for Apple TV+",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "blade-movie-fate-addressed",
-      "primaryKeyword": "blade movie",
-      "primaryEntity": "Blade",
+      "eventSlug": "coda-director-judy-heumann-film",
+      "primaryKeyword": "judy heumann film",
+      "primaryEntity": "Judy Heumann",
       "entities": [
-        "Blade (film)",
-        "Marvel Studios"
+        "Apple TV+",
+        "CODA"
       ],
-      "angle": "Marvel Studios officially addresses the status of the long-delayed 'Blade' movie.",
+      "angle": "The director of the Oscar-winning film 'CODA' is returning to Apple TV+ with a new film about disability activist Judy Heumann.",
       "tmdbType": "movie",
-      "source": "gnews:MovieWeb",
+      "source": "gnews:AppleInsider",
       "sources": [
         {
-          "outlet": "MovieWeb",
+          "outlet": "AppleInsider",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFA3TUF1OGZwaDdQUEtEWXY3NFczRkRfekpkYkpFZ0FHYVhRMmpZMGFENFk0UlNjTjVUYjZYdXBCdFJJTEprSm5IT3NIX1VMQkFITDhNbXRydUxXSGFNV2dSWEFJejBlaTNZeVpUYkhaUGR5N2pBcGFN?oc=5",
-          "ageMin": 101,
-          "headline": "Marvel Studios Officially Addresses Fate of Long-Awaited 'Blade' Movie Ahead of 'Doomsday' - MovieWeb",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMid0FVX3lxTFA3TUF1OGZwaDdQUEtEWXY3NFczRkRfekpkYkpFZ0FHYVhRMmpZMGFENFk0UlNjTjVUYjZYdXBCdFJJTEprSm5IT3NIX1VMQkFITDhNbXRydUxXSGFNV2dSWEFJejBlaTNZeVpUYkhaUGR5N2pBcGFN?oc=5\" target=\"_blank\" Marvel Studios Officially Addresses Fate of Long-Awaited 'Blade' Mov"
+          "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQczFFVzBOQm9LTlhRR3dUVktwbWg3SEV6LV9nMUhlRER3ekxWRDQtWTVRM0lQLWd2Q3RPRXZTTmZXOVRSeU9fWnhwUEdWdkpqMFVOTFJuNnJCdklpb2M5bER0NEdsSGJFS2h2ZW5ZWHhmVHJXZXpWS3JJbzMxVFVSLVZyYWVWb1lWUVpTamVCeGpTSWw5MUpkdy1WUnYtLXVjV3RncEVfN1g1VE9sODNGM3E3elFLNWhfUjNsMDJBdFp2ZG1F?oc=5",
+          "ageMin": 135,
+          "headline": "'CODA' director returns to Apple TV with movie about disability activist Judy Heumann - AppleInsider",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMixAFBVV95cUxQczFFVzBOQm9LTlhRR3dUVktwbWg3SEV6LV9nMUhlRER3ekxWRDQtWTVRM0lQLWd2Q3RPRXZTTmZXOVRSeU9fWnhwUEdWdkpqMFVOTFJuNnJCdklpb2M5bER0NEdsSGJFS2h2ZW5ZWHhmVHJXZXpWS3JJbzMxVFVSLVZyYWVWb1lWUVpTamVCeGpTSWw5MUpkdy1WUnYtLXVjV3RncEVfN1g1VE9sODNGM3E3elFLNWhfUjN"
         }
       ],
-      "ageMin": 101,
+      "ageMin": 135,
       "_cand": {
-        "key": "rss:marvel-studios-officially-addresses-fate-of-long-awaited-bla",
+        "key": "rss:-coda-director-returns-to-apple-tv-with-movie-about-disabili",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -178,11 +443,11 @@
         "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "MovieWeb"
+          "AppleInsider"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "MovieWeb",
+        "attribution": "AppleInsider",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -203,42 +468,112 @@
       "tierClass": "B"
     },
     {
-      "id": "music-news-goose-announces-goosemas-2024",
-      "slug": "goose-announces-dates-for-13th-annual-goosemas-holiday-shows",
-      "title": "Goose Announces Dates For 13th Annual Goosemas Holiday Shows",
+      "id": "music-news-ella-langley-choosin-texas-ties-whitney-houston-mariah-carey-billboar",
+      "slug": "ella-langley-ties-whitney-houston-and-mariah-carey-s-billboard-hot-100",
+      "title": "Ella Langley Ties Whitney Houston and Mariah Carey's Billboard Hot 100 Record",
       "contentType": "music-news",
       "formatTag": "music-news",
       "category": "music",
       "subcategory": "news",
-      "eventType": "announcement",
+      "eventType": "other",
       "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "goose-announces-goosemas-2024",
-      "primaryKeyword": "goosemas dates",
-      "primaryEntity": "GOOSE",
+      "eventSlug": "ella-langley-choosin-texas-ties-whitney-houston-mariah-carey-billboard",
+      "primaryKeyword": "ella langley billboard record",
+      "primaryEntity": "Ella Langley",
       "entities": [
-        "Goose",
-        "Jim Whelan Boardwalk Hall"
+        "Whitney Houston",
+        "Mariah Carey",
+        "Billboard Hot 100"
       ],
-      "angle": "Jam band Goose has announced the dates for their 13th annual holiday shows, Goosemas.",
+      "angle": "Ella Langley's 'Choosin' Texas' matches a 14-week Billboard Hot 100 record previously set by Whitney Houston and Mariah Carey.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/music/news/ella-langley-choosin-texas-ties-whitney-houston-mariah-carey-records-1236816760/",
+          "ageMin": 23,
+          "headline": "Ella Langley’s ‘Choosin’ Texas’ Ties Whitney Houston and Mariah Carey’s Records on Billboard Hot 100",
+          "summary": "The year’s biggest hit single, Ella Langley’s “Choosin’ Texas,” has racked up its 14th week at No. 1 on the Billboard Hot 100 — and has tied a record held by Whitney Houston and Mariah Carey. Langley’s song, which first topped the Hot 100 chart in February, ties Mariah Carey’s “We Belong Together” and Whitney [ ]"
+        }
+      ],
+      "ageMin": 23,
+      "_cand": {
+        "key": "rss:ella-langley-s-choosin-texas-ties-whitney-houston-and-mariah",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 59,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "music-news-shakira-burna-boy-dai-dai-rules-global-charts-oasis-wonderwall-hits-t",
+      "slug": "shakira-burna-boy-s-dai-dai-dominates-global-charts",
+      "title": "Shakira & Burna Boy's 'Dai Dai' Dominates Global Charts",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "shakira-burna-boy-dai-dai-rules-global-charts-oasis-wonderwall-hits-to",
+      "primaryKeyword": "shakira burna boy dai dai global charts",
+      "primaryEntity": "Shakira",
+      "entities": [
+        "Burna Boy",
+        "Oasis",
+        "Wonderwall"
+      ],
+      "angle": "Shakira and Burna Boy's 'Dai Dai' is topping global charts, while Oasis' 'Wonderwall' re-enters the top five.",
       "tmdbType": "movie",
       "source": "rss:Billboard",
       "sources": [
         {
           "outlet": "Billboard",
           "tier": 7,
-          "url": "https://www.billboard.com/music/rock/goose-dates-annual-goosemas-holiday-shows-1236298252/",
-          "ageMin": 65,
-          "headline": "Goose Announces Dates For 13th Annual Goosemas Holiday Shows",
-          "summary": "This year's holiday celebration will take place on Dec. 11-12 at the historic Jim Whelan Boardwalk Hall in Atlantic City, N.J."
+          "url": "https://www.billboard.com/music/chart-beat/shakira-burna-boy-oasis-global-charts-world-cup-1236298355/",
+          "ageMin": 25,
+          "headline": "Shakira Burna Boy’s ‘Dai Dai’ Rules Global Charts, Oasis’ ‘Wonderwall’ Hits Top Five",
+          "summary": "The songs benefited in the tracking week from buzz leading up to the World Cup’s close."
         }
       ],
-      "ageMin": 65,
+      "ageMin": 25,
       "_cand": {
-        "key": "rss:goose-announces-dates-for-13th-annual-goosemas-holiday-shows",
+        "key": "rss:shakira-burna-boy-s-dai-dai-rules-global-charts-oasis-wonder",
         "popularity": 0,
         "kind": "rss-news"
       },
+      "breakoutVelocity": 0,
       "corroborationCount": 1,
       "verification": {
         "tier1Count": 1,
@@ -254,12 +589,12 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 55,
+      "priority": 59,
       "signals": {
-        "recency": 16,
+        "recency": 24,
         "corroboration": 12,
         "status": 18,
-        "type": 9,
+        "type": 5,
         "pop": 0,
         "breakout": 0,
         "big": 0,
@@ -270,7 +605,73 @@
       "tierClass": "C"
     },
     {
-      "id": "news-stranger-things-multiplatform-ratings-2025-2026",
+      "id": "news-paramount-warner-bros-discovery-merger-temporary-restraining-order",
+      "slug": "judge-grants-temporary-restraining-order-to-pause-paramount-warner-bro",
+      "title": "Judge Grants Temporary Restraining Order to Pause Paramount-Warner Bros. Discovery Merger for 14 Days",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "legal",
+      "sensitivity": "high",
+      "eventSlug": "paramount-warner-bros-discovery-merger-temporary-restraining-order",
+      "primaryKeyword": "Paramount Warner Bros merger",
+      "primaryEntity": "Paramount",
+      "entities": [
+        "Warner Bros. Discovery",
+        "California"
+      ],
+      "angle": "Federal judge grants a 14-day temporary restraining order to pause the Paramount-Warner Bros. Discovery merger.",
+      "tmdbType": "movie",
+      "source": "rss:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/paramount-warner-bros-lawsuit-restraining-order-1236998321/",
+          "ageMin": 85,
+          "headline": "Judge Grants Temporary Restraining Order To Pause Paramount-Warner Bros. Discovery Merger For 14 Days",
+          "summary": "A federal judge has granted a temporary restraining order that will pause Paramount s merger with Warner Bros. Discovery for 14 days. The order is in response to a lawsuit filed by California Attorney General Rob Bonta and 11 other states, claiming that the proposed merger violates antitrust laws. U.S. District Judge Araceli Martinez-Olguin wrote that [ ]"
+        }
+      ],
+      "ageMin": 85,
+      "_cand": {
+        "key": "rss:judge-grants-temporary-restraining-order-to-pause-paramount-",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 70,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 12,
+        "pop": 0,
+        "breakout": 0,
+        "big": 12,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "S"
+    },
+    {
+      "id": "news-stranger-things-marshals-top-2025-2026-tv-season-ratings",
       "slug": "stranger-things-marshals-top-final-2025-2026-tv-season-multiplatform-r",
       "title": "Stranger Things, Marshals Top Final 2025-2026 TV Season Multiplatform Ratings",
       "contentType": "news",
@@ -279,13 +680,13 @@
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "stranger-things-multiplatform-ratings-2025-2026",
-      "primaryKeyword": "stranger things ratings",
+      "eventSlug": "stranger-things-marshals-top-2025-2026-tv-season-ratings",
+      "primaryKeyword": "Stranger Things ratings",
       "primaryEntity": "Stranger Things",
       "entities": [
-        "Netflix"
+        "Marshals"
       ],
-      "angle": "Stranger Things and other shows top the final multiplatform ratings for the 2025-2026 TV season.",
+      "angle": "Stranger Things and Marshals lead multiplatform ratings for the 2025-2026 TV season.",
       "tmdbType": "movie",
       "source": "rss:Variety",
       "sources": [
@@ -293,12 +694,12 @@
           "outlet": "Variety",
           "tier": 7,
           "url": "https://variety.com/2026/tv/news/stranger-things-2025-2026-tv-season-multiplatform-ratings-1236816199/",
-          "ageMin": 62,
+          "ageMin": 92,
           "headline": "Stranger Things, Marshals Top Final 2025-2026 TV Season Multiplatform Ratings (EXCLUSIVE)",
           "summary": "The final 35-day multi-platform ratings for the 2025-2026 TV season are finally in, now that we re more than a month beyond the official end of the TV season. According to Nielsen s multiplatform 35-day linear and streaming ratings, Netflix s Stranger Things was still the TV season s most-watched non-sports series, with 32.9 million viewers, followed by the [ ]"
         }
       ],
-      "ageMin": 62,
+      "ageMin": 92,
       "_cand": {
         "key": "rss:stranger-things-marshals-top-final-2025-2026-tv-season-multi",
         "popularity": 0,
@@ -335,105 +736,37 @@
       "tierClass": "C"
     },
     {
-      "id": "music-news-songer-announcement",
-      "slug": "meet-songer-the-british-star-who-rhymes-over-britney-spears-and-says-h",
-      "title": "Meet Songer, the British Star Who Rhymes Over Britney Spears and Says He s Not a Rapper",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "songer-announcement",
-      "primaryKeyword": "Songer",
-      "primaryEntity": "Songer",
-      "entities": [
-        "Britney Spears"
-      ],
-      "angle": "British artist Songer is releasing new music, distinct from traditional rap, focusing on confessional themes.",
-      "tmdbType": "movie",
-      "source": "rss:Rolling Stone",
-      "sources": [
-        {
-          "outlet": "Rolling Stone",
-          "tier": 7,
-          "url": "https://www.rollingstone.com/music/music-features/songer-british-rapper-new-album-what-if-i-say-no-1235595843/",
-          "ageMin": 105,
-          "headline": "Meet Songer, the British Star Who Rhymes Over Britney Spears and Says He s Not a Rapper",
-          "summary": "Songer is not from London, remains resolutely independent, and fills his albums with confessional bars about mental health. It's all working splendidly"
-        }
-      ],
-      "ageMin": 105,
-      "_cand": {
-        "key": "rss:meet-songer-the-british-star-who-rhymes-over-britney-spears-",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Rolling Stone"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Rolling Stone",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 55,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-america-s-sweethearts-film-other",
-      "slug": "inside-hollywood-s-america-s-sweethearts-at-25",
-      "title": "Inside Hollywood's 'America's Sweethearts' at 25",
+      "id": "news-cbs-cancellation",
+      "slug": "not-just-colbert-see-what-other-shows-cbs-canceled-dropped",
+      "title": "Not just Colbert. See what other shows CBS canceled, dropped",
       "contentType": "news",
       "formatTag": "news",
-      "category": "movies",
+      "category": "tv",
       "subcategory": "news",
-      "eventType": "other",
+      "eventType": "cancellation",
       "sensitivity": "normal",
-      "eventSlug": "america-s-sweethearts-film-other",
-      "primaryKeyword": "America's Sweethearts",
-      "primaryEntity": "America's Sweethearts",
+      "eventSlug": "cbs-cancellation",
+      "primaryKeyword": "cbs show cancellations",
+      "primaryEntity": "CBS",
       "entities": [
-        "America's Sweethearts (film)",
-        "Preston Sturges",
-        "Robert Downey Jr."
+        "Stephen Colbert"
       ],
-      "angle": "An exclusive look back at the making of the Hollywood film 'America's Sweethearts' on its 25th anniversary.",
+      "angle": "CBS cancels multiple shows, following the trend of Stephen Colbert's show.",
       "tmdbType": "movie",
-      "source": "gnews:Cleveland.com",
+      "source": "gnews:MSN",
       "sources": [
         {
-          "outlet": "Cleveland.com",
+          "outlet": "MSN",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNY2F2TVZGcndWSFIwVjdQWks1TlRURmwxZk16cWtfV0hxNGNHWDdleVNRTWw2VFUzdzN1VjU3WUkwMzc5dHZfVWJnM1B4R1kzMnVNbXNKNHB2VUxDVGdzbU41MnlOWG85cXVmWUtVcHFNUzZLSlhoNVhoN1JHOFNRX3VLSlVaNVFfUnU3dFkyaE5Oc1VCaVFHX2l1c2VCZ1g3NW9WUUhmWXdaaE91S3lHTUFYbE9Mb0RKekJ30gHPAUFVX3lxTE9zS3RMdXJjRlNOcF96Q0RUbDR4NVAtV0pLTkJtVUl0TVN0MnpKdEFpemwzVHkyd0lqVkM4OWl3aWdyeWtOSXB6aVdPaDF6UEljVDd6bURZbkFFMm1XRV9odDA2bE5hNjBSdXhLcWctTEI5R1BnblI5Nnk3ZjZKMW11X2M5NjhIQjVUYVZobE0tTkZhSXpQam5HS0lJOEEzdEhkTkZmZFJ6amNJRVhUbzdxbnVTT1BRSGdZaU5VSUVTUENqYVZsUW80NEtkY19sRQ?oc=5",
-          "ageMin": 115,
-          "headline": "Popular rapper and NBA champ escorted out after bottle-throwing altercation - Cleveland.com",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiuwFBVV95cUxNY2F2TVZGcndWSFIwVjdQWks1TlRURmwxZk16cWtfV0hxNGNHWDdleVNRTWw2VFUzdzN1VjU3WUkwMzc5dHZfVWJnM1B4R1kzMnVNbXNKNHB2VUxDVGdzbU41MnlOWG85cXVmWUtVcHFNUzZLSlhoNVhoN1JHOFNRX3VLSlVaNVFfUnU3dFkyaE5Oc1VCaVFHX2l1c2VCZ1g3NW9WUUhmWXdaaE91S3lHTUFYbE9Mb0RKekJ"
+          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOM3RrVHpiM2ZqWFhvSnA2bVJtTVI3ZlhuU1daWnh4Q0txMlhrUVV2elBCeXA5dFhmdXpjeTdJSTF4QzBUQjFJN0phRHVGVEdoOWtERHJnOUVCV0tFOVdPVWRjdnNVMDNTam1ya1VHUzBnRXBFeXNJRkd5cWhpVXVfZnZjclI0NTdxalN5OWlkWkxiYTlXOTUxRGpMcWU0WWxJaFdpUUpqOXJUVGotbEFUd0t0OA?oc=5",
+          "ageMin": 1389,
+          "headline": "Not just Colbert. See what other shows CBS canceled, dropped - MSN",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiswFBVV95cUxOM3RrVHpiM2ZqWFhvSnA2bVJtTVI3ZlhuU1daWnh4Q0txMlhrUVV2elBCeXA5dFhmdXpjeTdJSTF4QzBUQjFJN0phRHVGVEdoOWtERHJnOUVCV0tFOVdPVWRjdnNVMDNTam1ya1VHUzBnRXBFeXNJRkd5cWhpVXVfZnZjclI0NTdxalN5OWlkWkxiYTlXOTUxRGpMcWU0WWxJaFdpUUpqOXJUVGotbEFUd0t0OA?oc=5\" ta"
         }
       ],
-      "ageMin": 115,
+      "ageMin": 1389,
       "_cand": {
-        "key": "rss:popular-rapper-and-nba-champ-escorted-out-after-bottle-throw",
+        "key": "rss:not-just-colbert-see-what-other-shows-cbs-canceled-dropped-m",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -443,11 +776,77 @@
         "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "Cleveland.com"
+          "MSN"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "Cleveland.com",
+        "attribution": "MSN",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 56,
+      "signals": {
+        "recency": 1,
+        "corroboration": 8,
+        "status": 18,
+        "type": 11,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-america-s-sweethearts-other",
+      "slug": "america-s-sweethearts-at-25-an-exclusive-look-back-at-the-hollywood-mo",
+      "title": "America's Sweethearts at 25: An Exclusive Look Back at the Hollywood Movie",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "america-s-sweethearts-other",
+      "primaryKeyword": "america's sweethearts 25th anniversary",
+      "primaryEntity": "America's Sweethearts",
+      "entities": [
+        "Preston Sturges",
+        "Robert Downey Jr."
+      ],
+      "angle": "An exclusive look back at the making of the Hollywood film 'America's Sweethearts' on its 25th anniversary.",
+      "tmdbType": "movie",
+      "source": "gnews:The Film Maven",
+      "sources": [
+        {
+          "outlet": "The Film Maven",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5aMXdmNVpQU0ZtZG1BNnoxWWVMRkxlZ19tMjBsYVQ2S3g3cVhSZkE2dVRQRU1rbDZEODdKSmNCR0pXNThmNy1YcUhzNHRaMjBfal9oTXRQSVd5YXppdXdiZ2F6RlBzUkZ6Yjk4enlDMENPNlE?oc=5",
+          "ageMin": 146,
+          "headline": "Preston Sturges, RDJ, and the Ultimate Inside Hollywood Movie: America's Sweethearts at 25 [Exclusive] - The Film Maven",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMic0FVX3lxTE5aMXdmNVpQU0ZtZG1BNnoxWWVMRkxlZ19tMjBsYVQ2S3g3cVhSZkE2dVRQRU1rbDZEODdKSmNCR0pXNThmNy1YcUhzNHRaMjBfal9oTXRQSVd5YXppdXdiZ2F6RlBzUkZ6Yjk4enlDMENPNlE?oc=5\" target=\"_blank\" Preston Sturges, RDJ, and the Ultimate Inside Hollywood Movie: America's "
+        }
+      ],
+      "ageMin": 146,
+      "_cand": {
+        "key": "rss:preston-sturges-rdj-and-the-ultimate-inside-hollywood-movie-",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "The Film Maven"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "The Film Maven",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -468,7 +867,7 @@
       "tierClass": "C"
     },
     {
-      "id": "news-interview-with-the-vampire-season-3-finale-details",
+      "id": "news-interview-with-the-vampire-season-3-finale-recap",
       "slug": "inside-the-interview-with-the-vampire-season-3-finale-where-the-series",
       "title": "Inside the Interview with the Vampire Season 3 Finale, Where the Series Loses Its Head and Finds Lestat s Truth",
       "contentType": "news",
@@ -477,14 +876,15 @@
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "interview-with-the-vampire-season-3-finale-details",
+      "eventSlug": "interview-with-the-vampire-season-3-finale-recap",
       "primaryKeyword": "Interview with the Vampire Season 3 finale",
       "primaryEntity": "Interview with the Vampire",
       "entities": [
-        "Interview with the Vampire (TV series)",
-        "Rolin Jones"
+        "Interview with the Vampire (TV Series)",
+        "Rolin Jones",
+        "Lestat"
       ],
-      "angle": "Showrunner discusses the creative choices and visual optimization for the season finale of 'Interview with the Vampire'.",
+      "angle": "Showrunner Rolin Jones discusses the dramatic twists and visual storytelling in the 'Interview with the Vampire' Season 3 finale.",
       "tmdbType": "movie",
       "source": "rss:IndieWire",
       "sources": [
@@ -492,12 +892,12 @@
           "outlet": "IndieWire",
           "tier": 7,
           "url": "https://www.indiewire.com/features/interviews/the-vampire-lestat-finale-showrunner-interview-rolin-jones-1235206059/",
-          "ageMin": 193,
+          "ageMin": 222,
           "headline": "Inside the Interview with the Vampire Season 3 Finale, Where the Series Loses Its Head and Finds Lestat s Truth",
           "summary": "Showrunner Rolin Jones tells IndieWire about optimizing the show's visuals for performance after its leads have lost their heads."
         }
       ],
-      "ageMin": 193,
+      "ageMin": 222,
       "_cand": {
         "key": "rss:inside-the-interview-with-the-vampire-season-3-finale-where-",
         "popularity": 0,
@@ -534,139 +934,7 @@
       "tierClass": "C"
     },
     {
-      "id": "news-nicki-minaj-concert-debt-lawsuit",
-      "slug": "nicki-minaj-wants-out-of-lawsuit-over-alleged-275k-concert-debt-fancif",
-      "title": "Nicki Minaj Wants Out of Lawsuit Over Alleged $275K Concert Debt: Fanciful Baseless",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "lawsuit",
-      "sensitivity": "high",
-      "tier": "popular",
-      "eventSlug": "nicki-minaj-concert-debt-lawsuit",
-      "primaryKeyword": "nicki minaj",
-      "primaryEntity": "Nicki Minaj",
-      "entities": [],
-      "angle": "Nicki Minaj seeks dismissal from a lawsuit alleging $275,000 in unpaid concert debt, calling the claims baseless.",
-      "tmdbType": "movie",
-      "source": "rss:Billboard",
-      "sources": [
-        {
-          "outlet": "Billboard",
-          "tier": 7,
-          "url": "https://www.billboard.com/pro/nicki-minaj-wants-out-of-lawsuit-alleged-275k-concert-debt/",
-          "ageMin": 107,
-          "headline": "Nicki Minaj Wants Out of Lawsuit Over Alleged $275K Concert Debt: Fanciful Baseless",
-          "summary": "A concert production company says Minaj is refusing to pay back a big bill, but she now says she shouldn't have been named in the case at all."
-        }
-      ],
-      "ageMin": 107,
-      "_cand": {
-        "key": "rss:nicki-minaj-wants-out-of-lawsuit-over-alleged-275k-concert-d",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Billboard"
-        ],
-        "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "Billboard",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 62,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 12,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 4,
-        "softTv": 0
-      },
-      "tierClass": "S"
-    },
-    {
-      "id": "news-blackpink-lisa-documentary-tiff",
-      "slug": "documentary-about-blackpink-s-lisa-always-lalisa-to-world-premiere-at-",
-      "title": "Documentary about BLACKPINK's LISA, Always Lalisa, to World Premiere at 2026 Toronto International Film Festival",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "blackpink-lisa-documentary-tiff",
-      "primaryKeyword": "lisa blackpink",
-      "primaryEntity": "Lisa Kudrow",
-      "entities": [
-        "LISA (BLACKPINK)",
-        "BLACKPINK",
-        "Toronto International Film Festival"
-      ],
-      "angle": "A documentary about BLACKPINK's LISA, titled 'Always Lalisa,' is set to world premiere at the 2026 Toronto International Film Festival.",
-      "tmdbType": "movie",
-      "source": "rss:Billboard",
-      "sources": [
-        {
-          "outlet": "Billboard",
-          "tier": 7,
-          "url": "https://www.billboard.com/music/pop/doc-blackpink-lisa-always-lalisa-world-premiere-toronto-fest-1236298190/",
-          "ageMin": 111,
-          "headline": "Documentary about BLACKPINK s LISA, Always Lalisa, to World Premiere at 2026 Toronto International Film Festival",
-          "summary": "The movie looks at the singer's massive breakout year, which included the 2026 FIFA World Cup opening ceremony and 2025 Coachella."
-        }
-      ],
-      "ageMin": 111,
-      "_cand": {
-        "key": "rss:documentary-about-blackpink-s-lisa-always-lalisa-to-world-pr",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Billboard"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Billboard",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 55,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-jessie-j-split-chanan-colman",
+      "id": "news-celebrity-splits-2026-jessie-j-chanan-colman",
       "slug": "celebrity-splits-of-2026-jessie-j-chanan-colman-and-more-stars-who-cal",
       "title": "Celebrity Splits of 2026: Jessie J, Chanan Colman and More Stars Who Called It Quits",
       "contentType": "news",
@@ -675,28 +943,28 @@
       "subcategory": "news",
       "eventType": "breakup",
       "sensitivity": "normal",
-      "eventSlug": "jessie-j-split-chanan-colman",
-      "primaryKeyword": "Jessie J breakup",
+      "eventSlug": "celebrity-splits-2026-jessie-j-chanan-colman",
+      "primaryKeyword": "celebrity splits 2026",
       "primaryEntity": "Jessie J",
       "entities": [
         "Chanan Colman"
       ],
-      "angle": "Singer Jessie J has reportedly split from her partner Chanan Colman.",
+      "angle": "A roundup of celebrity breakups in 2026, including Jessie J and Chanan Colman.",
       "tmdbType": "movie",
-      "source": "gnews:Capital UK",
+      "source": "gnews:Us Weekly",
       "sources": [
         {
-          "outlet": "Capital UK",
+          "outlet": "Us Weekly",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE80N2RsamJ3S3NDTEFDaUZVUnFlSEVTSlloNUtVTEUzclBqR0RWa3hIWTBic3ItcnF3U0ZSTXc4alJzWl83bnM2TzFYejE2MUh5eU1HMzljZFFJNmkzYXdQRXQ3NTB5MFN6c0RabTJ4MC1FQ1hXRDhycQ?oc=5",
-          "ageMin": 175,
-          "headline": "Jessie J announces split from partner Chanan Colman - Capital UK",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMieEFVX3lxTE80N2RsamJ3S3NDTEFDaUZVUnFlSEVTSlloNUtVTEUzclBqR0RWa3hIWTBic3ItcnF3U0ZSTXc4alJzWl83bnM2TzFYejE2MUh5eU1HMzljZFFJNmkzYXdQRXQ3NTB5MFN6c0RabTJ4MC1FQ1hXRDhycQ?oc=5\" target=\"_blank\" Jessie J announces split from partner Chanan Colman /a nbsp; nbsp;"
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPeEg1REU2QkVnLTVmUERlckVvNWVHNjhnUmFjelBnbkdsalR5STVvQ29mM3dkcmVKRUxpQmItREREQ2sycm04REx6SjhrS1ktZHNYRXh0cTIwazVSWmduVzg0a3lhV0FHZVBrTjFXQnFUbkNTV09qUEhxU0pJamE0ZmppTFNsbkV6TmxITDg1Yk1qd25TZmMxTlFzM2FSMXFRUUtfSV9tY1JzSl9RNUZ5Ti1OZ0c?oc=5",
+          "ageMin": 120,
+          "headline": "Celebrity Splits of 2026: Jessie J, Chanan Colman and More Stars Who Called It Quits - Us Weekly",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxPeEg1REU2QkVnLTVmUERlckVvNWVHNjhnUmFjelBnbkdsalR5STVvQ29mM3dkcmVKRUxpQmItREREQ2sycm04REx6SjhrS1ktZHNYRXh0cTIwazVSWmduVzg0a3lhV0FHZVBrTjFXQnFUbkNTV09qUEhxU0pJamE0ZmppTFNsbkV6TmxITDg1Yk1qd25TZmMxTlFzM2FSMXFRUUtfSV9tY1JzSl9RNUZ5Ti1OZ0c?oc=5\" t"
         }
       ],
-      "ageMin": 175,
+      "ageMin": 120,
       "_cand": {
-        "key": "rss:jessie-j-announces-split-from-partner-chanan-colman-capital-",
+        "key": "rss:celebrity-splits-of-2026-jessie-j-chanan-colman-and-more-sta",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -706,11 +974,11 @@
         "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "Capital UK"
+          "Us Weekly"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "Capital UK",
+        "attribution": "Us Weekly",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -726,137 +994,6 @@
         "big": 0,
         "trending": 0,
         "spice": 4,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-madonna-not-in-trump-suite-world-cup",
-      "slug": "no-madonna-was-not-in-trump-s-suite-at-the-world-cup-final",
-      "title": "No, Madonna Was Not in Trump s Suite at the World Cup Final",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "madonna-not-in-trump-suite-world-cup",
-      "primaryKeyword": "Madonna Trump World Cup",
-      "primaryEntity": "Madonna",
-      "entities": [
-        "Donald Trump"
-      ],
-      "angle": "Debunks a viral social media claim that Madonna was present in Donald Trump's suite at the World Cup Final.",
-      "tmdbType": "movie",
-      "source": "rss:Rolling Stone",
-      "sources": [
-        {
-          "outlet": "Rolling Stone",
-          "tier": 7,
-          "url": "https://www.rollingstone.com/music/music-news/madonna-trump-world-cup-rumor-1235595216/",
-          "ageMin": 89,
-          "headline": "No, Madonna Was Not in Trump s Suite at the World Cup Final",
-          "summary": "A viral tweet claimed the pop icon watched the final from Donald Trump’s suite. The woman in the footage was clearly someone else"
-        }
-      ],
-      "ageMin": 89,
-      "_cand": {
-        "key": "rss:no-madonna-was-not-in-trump-s-suite-at-the-world-cup-final",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Rolling Stone"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Rolling Stone",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 51,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-justin-bieber-world-cup-after-party",
-      "slug": "justin-bieber-s-world-cup-after-party-celebrity-guest-list-see-which-s",
-      "title": "Justin Bieber’s World Cup After Party Celebrity Guest List: See Which Stars Attended",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "appearance",
-      "sensitivity": "normal",
-      "eventSlug": "justin-bieber-world-cup-after-party",
-      "primaryKeyword": "Justin Bieber party",
-      "primaryEntity": "Justin Bieber",
-      "entities": [
-        "World Cup"
-      ],
-      "angle": "A look at the star-studded guest list at Justin Bieber's World Cup after-party.",
-      "tmdbType": "movie",
-      "source": "gnews:Just Jared",
-      "sources": [
-        {
-          "outlet": "Just Jared",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNeEJjWThON0NON1JWQnY5LXpBaUVyVVJ0RGhKb1dqNGo2NFBSRmJjZzNXYW1YM3NXdXB4M29lSnY5SGNaOU9Fem4ta0lkZGxtQ3kzdEdKQWhaV3JYWDUyeGg1UXhmakpRMTFnNW9DZ2dSR01KRjlEX0hmMG92amFXT2RBZ1FHNklYV01MbjlwUFRQcUNQb24zMXdNX3NaY3lmdlVsbXNiTjZFb2xqY0g1QWoyS3pYcVlJTmpSaA?oc=5",
-          "ageMin": 155,
-          "headline": "Justin Bieber’s World Cup After Party Celebrity Guest List: See Which Stars Attended - Just Jared",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMivAFBVV95cUxNeEJjWThON0NON1JWQnY5LXpBaUVyVVJ0RGhKb1dqNGo2NFBSRmJjZzNXYW1YM3NXdXB4M29lSnY5SGNaOU9Fem4ta0lkZGxtQ3kzdEdKQWhaV3JYWDUyeGg1UXhmakpRMTFnNW9DZ2dSR01KRjlEX0hmMG92amFXT2RBZ1FHNklYV01MbjlwUFRQcUNQb24zMXdNX3NaY3lmdlVsbXNiTjZFb2xqY0g1QWoyS3pYcVlJTmp"
-        }
-      ],
-      "ageMin": 155,
-      "_cand": {
-        "key": "rss:justin-bieber-s-world-cup-after-party-celebrity-guest-list-s",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "Just Jared"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "Just Jared",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 48,
-      "signals": {
-        "recency": 16,
-        "corroboration": 8,
-        "status": 18,
-        "type": 6,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 0,
         "softTv": 0
       },
       "tierClass": "C"

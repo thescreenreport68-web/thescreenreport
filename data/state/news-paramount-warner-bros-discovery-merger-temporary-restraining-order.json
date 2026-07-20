@@ -1,0 +1,74 @@
+{
+  "id": "news-paramount-warner-bros-discovery-merger-temporary-restraining-order",
+  "slug": "judge-grants-temporary-restraining-order-to-pause-paramount-warner-bro",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": null,
+      "cat": "movies/news",
+      "format": [
+        "a 61-word run-on sentence (>55 — split it)",
+        "Flesch 38 < 40 (too dense to read comfortably)"
+      ],
+      "cuts": 3,
+      "broken": []
+    },
+    "attempt2": {
+      "score": null,
+      "cat": "movies/news",
+      "format": [
+        "a 56-word run-on sentence (>55 — split it)",
+        "Flesch 39 < 40 (too dense to read comfortably)"
+      ],
+      "cuts": 0,
+      "broken": []
+    }
+  },
+  "editorial": {
+    "status": "official",
+    "entity": "Paramount",
+    "work": null,
+    "outlet": "deadline.com"
+  },
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
+    "deterministic": {
+      "words": 410,
+      "h2s": 4,
+      "h2Questions": 4,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 4,
+      "ktCount": 5,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 56,
+      "avgSentence": 21,
+      "flesch": 39,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": [
+        "a 56-word run-on sentence (>55 — split it)",
+        "Flesch 39 < 40 (too dense to read comfortably)"
+      ]
+    },
+    "hardBlocks": []
+  },
+  "score": null,
+  "category": "movies",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 1,
+    "failed": [
+      "keyword in title"
+    ]
+  },
+  "ms": 129035
+}

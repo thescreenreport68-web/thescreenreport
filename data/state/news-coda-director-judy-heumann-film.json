@@ -1,0 +1,75 @@
+{
+  "id": "news-coda-director-judy-heumann-film",
+  "slug": "coda-director-to-helm-new-film-about-disability-activist-judy-heumann-",
+  "status": "needs_review",
+  "stages": {
+    "attempt1": {
+      "score": null,
+      "cat": "movies/news",
+      "format": [],
+      "cuts": 5,
+      "broken": []
+    },
+    "attempt2": {
+      "score": null,
+      "cat": "movies/news",
+      "format": [],
+      "cuts": 2,
+      "broken": [
+        "garbled non-Latin characters"
+      ]
+    }
+  },
+  "editorial": {
+    "status": "unconfirmed",
+    "entity": "Sian Heder",
+    "work": {
+      "title": "Being Heumann",
+      "year": null,
+      "medium": "movie"
+    },
+    "outlet": "appleinsider.com"
+  },
+  "holdReason": "broken article: garbled non-Latin characters",
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
+    "deterministic": {
+      "words": 318,
+      "h2s": 3,
+      "h2Questions": 3,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 3,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 26,
+      "avgSentence": 16,
+      "flesch": 61,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": [
+        "garbled non-Latin characters"
+      ]
+    },
+    "hardBlocks": [
+      "garbled non-Latin characters"
+    ]
+  },
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "≥1200px legal image",
+      "credit",
+      "zero hard-blocks"
+    ]
+  },
+  "ms": 134018
+}
