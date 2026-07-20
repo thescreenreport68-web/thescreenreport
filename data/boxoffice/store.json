@@ -1652,21 +1652,21 @@
    "key": "the-odyssey-bo-update-100m|BO-UPDATE",
    "eventSlug": "the-odyssey-bo-update-100m",
    "form": "BO-UPDATE",
-   "reason": "words 133 < 180 (owner-set ~200-word minimum)",
-   "tries": 29,
-   "at": "2026-07-20T21:03:15.746Z",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "tries": 30,
+   "at": "2026-07-20T21:33:52.954Z",
    "dead": true,
-   "expiresAt": "2026-07-23T21:03:15.746Z"
+   "expiresAt": "2026-07-23T21:33:52.954Z"
   },
   {
    "key": "star-wars-the-mandalorian-and-grogu-bo-update-d59|BO-UPDATE",
    "eventSlug": "star-wars-the-mandalorian-and-grogu-bo-update-d59",
    "form": "BO-UPDATE",
    "reason": "consistency: title: \"$177.5\" is not a canonical figure for this film | title: \"$177.5\" contradicts the canonical domestic figure ($177,534,904) | metaTitle: headlines domestic while the title headlines dailyGross/other — the SERP promise must match the page",
-   "tries": 10,
-   "at": "2026-07-20T21:04:49.358Z",
+   "tries": 11,
+   "at": "2026-07-20T21:36:24.578Z",
    "dead": true,
-   "expiresAt": "2026-07-23T21:04:49.358Z"
+   "expiresAt": "2026-07-23T21:36:24.578Z"
   },
   {
    "key": "project-hail-mary-bo-update-d128|BO-UPDATE",
@@ -1682,9 +1682,9 @@
    "key": "king-of-the-hill-trending-tv|TRENDING-TV",
    "eventSlug": "king-of-the-hill-trending-tv",
    "form": "TRENDING-TV",
-   "reason": "4 unverified claim(s) cut, unrecovered",
-   "tries": 1,
-   "at": "2026-07-20T17:09:27.679Z"
+   "reason": "synthesizer returned no usable brief",
+   "tries": 2,
+   "at": "2026-07-20T21:38:04.387Z"
   },
   {
    "key": "movie-maga-ev-opening|BO-OPENING",
@@ -1695,14 +1695,14 @@
    "at": "2026-07-20T20:08:44.753Z"
   }
  ],
- "zeroStreak": 11,
+ "zeroStreak": 12,
  "daySpend": {
   "laDay": "2026-07-20",
-  "usd": 0.3995
+  "usd": 0.40494
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1784581294104
+  "lastMs": 1784583091977
  },
  "lastAuditDay": "2026-07-20",
  "attempts": {
@@ -1716,7 +1716,7 @@
    "project hail mary": 3,
    "outcome": 3,
    "rick and morty": 1,
-   "king of the hill": 1,
+   "king of the hill": 2,
    "movie maga": 1,
    "wwe unreal": 1
   }
