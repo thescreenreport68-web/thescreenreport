@@ -1278,9 +1278,9 @@
    "key": "rick-and-morty-trending-tv|TRENDING-TV",
    "eventSlug": "rick-and-morty-trending-tv",
    "form": "TRENDING-TV",
-   "reason": "synthesizer returned no usable brief",
-   "tries": 1,
-   "at": "2026-07-19T06:27:39.423Z"
+   "reason": "8 unverified claim(s) cut, unrecovered",
+   "tries": 2,
+   "at": "2026-07-20T05:09:06.352Z"
   },
   {
    "key": "descendants-wicked-wonderland-now-streaming|NOW-STREAMING",
@@ -1302,21 +1302,21 @@
    "key": "gail-daughtry-and-the-celebrity-sex-pass-bo-update-d8|BO-UPDATE",
    "eventSlug": "gail-daughtry-and-the-celebrity-sex-pass-bo-update-d8",
    "form": "BO-UPDATE",
-   "reason": "consistency: title: \"$1.2\" is not a canonical figure for this film | title: \"$1.2\" contradicts the canonical domestic figure ($1,242,603)",
-   "tries": 39,
-   "at": "2026-07-20T04:36:12.005Z",
+   "reason": "consistency: title: \"$1.2\" is not a canonical figure for this film | metaTitle: \"$1M\" is not a canonical figure for this film | title: \"$1.2\" contradicts the canonical domestic figure ($1,242,603)",
+   "tries": 40,
+   "at": "2026-07-20T05:03:21.469Z",
    "dead": true,
-   "expiresAt": "2026-07-23T04:36:12.005Z"
+   "expiresAt": "2026-07-23T05:03:21.469Z"
   },
   {
    "key": "star-wars-the-mandalorian-and-grogu-bo-update-d57|BO-UPDATE",
    "eventSlug": "star-wars-the-mandalorian-and-grogu-bo-update-d57",
    "form": "BO-UPDATE",
-   "reason": "fidelity: 9 unsupported figures/claims — draft-level failure",
-   "tries": 39,
-   "at": "2026-07-20T04:37:32.090Z",
+   "reason": "words 161 < 180 (owner-set ~200-word minimum)",
+   "tries": 40,
+   "at": "2026-07-20T05:04:58.721Z",
    "dead": true,
-   "expiresAt": "2026-07-23T04:37:32.090Z"
+   "expiresAt": "2026-07-23T05:04:58.721Z"
   },
   {
    "key": "the-super-mario-galaxy-movie-ev-milestone-d0|BO-MILESTONE",
@@ -1426,19 +1426,19 @@
    "key": "kung-fu-soccer-ev-milestone-d0|BO-MILESTONE",
    "eventSlug": "kung-fu-soccer-ev-milestone-d0",
    "form": "BO-MILESTONE",
-   "reason": "words 160 < 180 (owner-set ~200-word minimum)",
-   "tries": 1,
-   "at": "2026-07-20T04:06:57.562Z"
+   "reason": "2 unverified claim(s) cut, unrecovered",
+   "tries": 2,
+   "at": "2026-07-20T05:07:04.739Z"
   }
  ],
- "zeroStreak": 22,
+ "zeroStreak": 23,
  "daySpend": {
   "laDay": "2026-07-19",
-  "usd": 1.08953
+  "usd": 1.14141
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1784522031990
+  "lastMs": 1784523647267
  },
  "lastAuditDay": "2026-07-19",
  "attempts": {
@@ -1475,7 +1475,8 @@
    "project hail mary": 3,
    "chicago p.d.": 1,
    "spider-man: brand new day": 1,
-   "kung fu soccer": 1
+   "kung fu soccer": 2,
+   "rick and morty": 1
   }
  }
 }
