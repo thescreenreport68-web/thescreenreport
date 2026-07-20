@@ -1,27 +1,95 @@
 {
-  "runId": "run-2026-07-20T05-33-24",
-  "builtAt": "2026-07-20T05:34:35.612Z",
-  "count": 14,
+  "runId": "run-2026-07-20T07-00-58",
+  "builtAt": "2026-07-20T07:03:10.382Z",
+  "count": 12,
   "topics": [
     {
-      "id": "news-john-leguizamo-the-odyssey-role",
-      "slug": "john-leguizamo-on-the-odyssey-it-was-so-intense-for-me",
-      "title": "John Leguizamo on 'The Odyssey': 'It Was So Intense for Me'",
+      "id": "news-tom-holland-robert-pattinson-the-odyssey-casting",
+      "slug": "tom-holland-on-robert-pattinson-s-the-odyssey-casting-you-re-so-good-a",
+      "title": "Tom Holland on Robert Pattinson's 'The Odyssey' Casting: 'You're So Good At Being A Dickhead'",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "john-leguizamo-the-odyssey-role",
-      "primaryKeyword": "john leguizamo the odyssey",
+      "sensitivity": "high",
+      "eventSlug": "tom-holland-robert-pattinson-the-odyssey-casting",
+      "primaryKeyword": "Tom Holland Robert Pattinson The Odyssey",
       "primaryEntity": "The Odyssey",
       "entities": [
         "The Odyssey (film)",
-        "John Leguizamo",
-        "Christopher Nolan"
+        "Tom Holland",
+        "Robert Pattinson"
       ],
-      "angle": "John Leguizamo opens up about the emotional toll of his role in Christopher Nolan's 'The Odyssey'.",
+      "angle": "Tom Holland reflects on Robert Pattinson's casting in 'The Odyssey' and their dynamic.",
+      "tmdbType": "movie",
+      "source": "gnews:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNYUhySHRyN0paYnVwQjJveEFZUXN1RGpNVlN2Zm9kMFNzOGwwd2xpUnlWU216RUdNTzljVzMwNkdSUTVIbUlnN1FrYlBaVXZ1U19jSWRadXBmS2MtcTY4cjZkaEl0OEhPRzIwUFlkTWhTVmNMdVRfSU1NdngyZC0tdzBpRmVkanBWTkxZNGx5UzFHOExWUHFKVGJuMHhqMjQ?oc=5",
+          "ageMin": 1835,
+          "headline": "'The Odyssey's Tom Holland On Why He \"Could Relax\" After Robert Pattinson Casting: \"You're So Good At Being A Dickhead\" - Deadline",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMinwFBVV95cUxNYUhySHRyN0paYnVwQjJveEFZUXN1RGpNVlN2Zm9kMFNzOGwwd2xpUnlWU216RUdNTzljVzMwNkdSUTVIbUlnN1FrYlBaVXZ1U19jSWRadXBmS2MtcTY4cjZkaEl0OEhPRzIwUFlkTWhTVmNMdVRfSU1NdngyZC0tdzBpRmVkanBWTkxZNGx5UzFHOExWUHFKVGJuMHhqMjQ?oc=5\" target=\"_blank\" 'The Odyssey'"
+        }
+      ],
+      "ageMin": 1835,
+      "_cand": {
+        "key": "rss:-the-odyssey-s-tom-holland-on-why-he-could-relax-after-rober",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 99,
+      "signals": {
+        "recency": 1,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "radar": 30
+      },
+      "radarKind": "movie-in-theaters",
+      "tierClass": "S"
+    },
+    {
+      "id": "news-john-leguizamo-the-odyssey-intense-role",
+      "slug": "john-leguizamo-describes-intense-emotional-experience-in-christopher-n",
+      "title": "John Leguizamo Describes Intense Emotional Experience in Christopher Nolan's 'The Odyssey'",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "john-leguizamo-the-odyssey-intense-role",
+      "primaryKeyword": "John Leguizamo The Odyssey",
+      "primaryEntity": "John Leguizamo",
+      "entities": [
+        "The Odyssey",
+        "The Odyssey (film)"
+      ],
+      "angle": "John Leguizamo describes the intense emotional experience of his role in Christopher Nolan's 'The Odyssey'.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
@@ -29,12 +97,12 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/movies/movie-features/john-leguizamo-the-odyssey-eumaeus-chris-nolan-interview-1236651694/",
-          "ageMin": 715,
+          "ageMin": 803,
           "headline": "John Leguizamo Has Never Been as Vulnerable as in The Odyssey : “It Was So Intense for Me”",
           "summary": "\"Working with Chris Nolan...you feel really seen,\" the actor behind Eumaeus tells The Hollywood Reporter in a wide-ranging conversation. \"I was able to tap into these really difficult, painful emotions from the depth of my soul.\""
         }
       ],
-      "ageMin": 715,
+      "ageMin": 803,
       "_cand": {
         "key": "rss:john-leguizamo-has-never-been-as-vulnerable-as-in-the-odysse",
         "popularity": 0,
@@ -55,15 +123,15 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 102,
+      "priority": 78,
       "signals": {
-        "recency": 4,
+        "recency": 1,
         "corroboration": 12,
         "status": 18,
-        "type": 14,
+        "type": 5,
         "pop": 0,
         "breakout": 0,
-        "big": 24,
+        "big": 12,
         "trending": 0,
         "spice": 0,
         "softTv": 0,
@@ -73,22 +141,22 @@
       "tierClass": "A"
     },
     {
-      "id": "news-call-of-duty-movie-universe-details-peter-berg",
-      "slug": "peter-berg-reveals-call-of-duty-movie-universe-details",
-      "title": "Peter Berg Reveals 'Call of Duty' Movie Universe Details",
+      "id": "news-call-of-duty-movie-universe-update-peter-berg",
+      "slug": "call-of-duty-movie-gets-update-director-peter-berg-reveals-what-univer",
+      "title": "‘Call of Duty’ Movie Gets Update, Director Peter Berg Reveals What Universe It Will Be Set In",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
-      "eventType": "casting",
+      "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "call-of-duty-movie-universe-details-peter-berg",
-      "primaryKeyword": "call of duty movie",
-      "primaryEntity": "Call of Duty (film)",
+      "eventSlug": "call-of-duty-movie-universe-update-peter-berg",
+      "primaryKeyword": "Call of Duty movie universe",
+      "primaryEntity": "Call of Duty (film series)",
       "entities": [
         "Peter Berg"
       ],
-      "angle": "Director Peter Berg reveals the universe setting for the upcoming 'Call of Duty' movie.",
+      "angle": "Director Peter Berg reveals details about the universe for the upcoming 'Call of Duty' movie.",
       "tmdbType": "movie",
       "source": "gnews:Just Jared",
       "sources": [
@@ -96,12 +164,12 @@
           "outlet": "Just Jared",
           "tier": 5,
           "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOM2d3RTZRQjQ0cDB1SXktMmtOVE1ZTVY1dEc0SEtoVy1xY24zLTZQc3JES19obU9lQTBOeTQ0R1lNWk1VbWg1bFI1bThuN0NZc0NfN3ZnZTh4aDIxX2I0aVoyTk9VLUt0RUc3czMwdDcwQjZNbjl6UVAzRTAyZm9BQjlRVWF0RjRSZW92WmFVZ1U2d1p5VHNCRWJDUV8weDZQT29CdE9USHliOU5BMWQxcHZka1VFc3dqYU0zMkVWM3NYZWI5YWNr?oc=5",
-          "ageMin": 11,
+          "ageMin": 99,
           "headline": "‘Call of Duty’ Movie Gets Update, Director Peter Berg Reveals What Universe It Will Be Set In - Just Jared",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMixwFBVV95cUxOM2d3RTZRQjQ0cDB1SXktMmtOVE1ZTVY1dEc0SEtoVy1xY24zLTZQc3JES19obU9lQTBOeTQ0R1lNWk1VbWg1bFI1bThuN0NZc0NfN3ZnZTh4aDIxX2I0aVoyTk9VLUt0RUc3czMwdDcwQjZNbjl6UVAzRTAyZm9BQjlRVWF0RjRSZW92WmFVZ1U2d1p5VHNCRWJDUV8weDZQT29CdE9USHliOU5BMWQxcHZka1VFc3dqYU0"
         }
       ],
-      "ageMin": 11,
+      "ageMin": 99,
       "_cand": {
         "key": "rss:-call-of-duty-movie-gets-update-director-peter-berg-reveals-",
         "popularity": 0,
@@ -122,138 +190,7 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 94,
-      "signals": {
-        "recency": 30,
-        "corroboration": 8,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "trailer-new-survival-thriller-trailer-a-quiet-place-meets-arachnophobia",
-      "slug": "a-quiet-place-meets-arachnophobia-in-first-trailer-for-terrifying-new-",
-      "title": "‘A Quiet Place’ Meets ‘Arachnophobia’ in First Trailer for Terrifying New Survival Thriller",
-      "contentType": "trailer",
-      "formatTag": "trailer",
-      "category": "movies",
-      "subcategory": "trailers",
-      "eventType": "trailer",
-      "sensitivity": "normal",
-      "eventSlug": "new-survival-thriller-trailer-a-quiet-place-meets-arachnophobia",
-      "primaryKeyword": "new survival thriller trailer",
-      "primaryEntity": "A Quiet Place",
-      "entities": [
-        "A Quiet Place (film)",
-        "Arachnophobia (film)"
-      ],
-      "angle": "Trailer release for a new survival thriller that draws comparisons to 'A Quiet Place' and 'Arachnophobia'.",
-      "tmdbType": "movie",
-      "source": "gnews:Collider",
-      "sources": [
-        {
-          "outlet": "Collider",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9tQjE3M1Q5aEp0anVuZ3o2M1FpQVd0Ynp4X1MyZXRRVWxHY3lrT1NpeXZuUUQ0OXN2MkdwMXY3N0ZwZmlKQlIzbWtOMmI2S3g3aTZwdzQ3T1IwTzVneC1PeC1CdmJiM0pTYkhpYlI5M3RqaUU?oc=5",
-          "ageMin": 318,
-          "headline": "‘A Quiet Place’ Meets ‘Arachnophobia’ in First Trailer for Terrifying New Survival Thriller - Collider",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMic0FVX3lxTE9tQjE3M1Q5aEp0anVuZ3o2M1FpQVd0Ynp4X1MyZXRRVWxHY3lrT1NpeXZuUUQ0OXN2MkdwMXY3N0ZwZmlKQlIzbWtOMmI2S3g3aTZwdzQ3T1IwTzVneC1PeC1CdmJiM0pTYkhpYlI5M3RqaUU?oc=5\" target=\"_blank\" ‘A Quiet Place’ Meets ‘Arachnophobia’ in First Trailer for Terrifying New"
-        }
-      ],
-      "ageMin": 318,
-      "_cand": {
-        "key": "rss:-a-quiet-place-meets-arachnophobia-in-first-trailer-for-terr",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "Collider"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "Collider",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 74,
-      "signals": {
-        "recency": 9,
-        "corroboration": 8,
-        "status": 18,
-        "type": 15,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-scary-movie-streaming-release",
-      "slug": "scary-movie-creeps-onto-streaming-this-week-following-successful-reboo",
-      "title": "‘Scary Movie’ Creeps Onto Streaming This Week Following Successful Reboot Of Franchise",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "scary-movie-streaming-release",
-      "primaryKeyword": "scary movie streaming",
-      "primaryEntity": "Scary Movie",
-      "entities": [
-        "Scary Movie (franchise)"
-      ],
-      "angle": "The 'Scary Movie' franchise is now available on streaming following a successful reboot.",
-      "tmdbType": "movie",
-      "source": "gnews:Forbes",
-      "sources": [
-        {
-          "outlet": "Forbes",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPVmw4NkxyMUNnaTV4amR1cTBpV2REUUZGQ1VVUGg4UTdJU2FrRk1UbWJJYURJSExJMGZDNFJyYkFRbkxPUVFlRm45dXgweWJPcDI4TWh5cnN3aWlVbVR5YU5wQUxfQ2NvdXpuMnladTI2akFVSGJmNWgxa1V2TVVhY0daMVhISk40NGRCLXdZbG5ZaUFCNmNYUHdWeTZ2Sk50eUlzVnZfeVktMVNCUF9oMUJOcEktZnp2WDZmdWJ4NWc4YWhmTzVNT1RIVGVVaWItM2c?oc=5",
-          "ageMin": 68,
-          "headline": "‘Scary Movie’ Creeps Onto Streaming This Week Following Successful Reboot Of Franchise - Forbes",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMi0gFBVV95cUxPVmw4NkxyMUNnaTV4amR1cTBpV2REUUZGQ1VVUGg4UTdJU2FrRk1UbWJJYURJSExJMGZDNFJyYkFRbkxPUVFlRm45dXgweWJPcDI4TWh5cnN3aWlVbVR5YU5wQUxfQ2NvdXpuMnladTI2akFVSGJmNWgxa1V2TVVhY0daMVhISk40NGRCLXdZbG5ZaUFCNmNYUHdWeTZ2Sk50eUlzVnZfeVktMVNCUF9oMUJOcEktZnp2WDZ"
-        }
-      ],
-      "ageMin": 68,
-      "_cand": {
-        "key": "rss:-scary-movie-creeps-onto-streaming-this-week-following-succe",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "Forbes"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "Forbes",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 85,
+      "priority": 75,
       "signals": {
         "recency": 16,
         "corroboration": 8,
@@ -264,160 +201,93 @@
         "big": 24,
         "trending": 0,
         "spice": 0,
-        "softTv": 0,
-        "radar": 10
-      },
-      "radarKind": "movie-trending",
-      "tierClass": "A"
-    },
-    {
-      "id": "trailer-wheres-wanda-season-2-premiere-date-revealed",
-      "slug": "wanda-season-2-premiere-date-and-first-look-revealed",
-      "title": "‘Wanda’ Season 2 Premiere Date and First Look Revealed",
-      "contentType": "trailer",
-      "formatTag": "trailer",
-      "category": "tv",
-      "subcategory": "trailers",
-      "eventType": "trailer",
-      "sensitivity": "normal",
-      "eventSlug": "wheres-wanda-season-2-premiere-date-revealed",
-      "primaryKeyword": "WandaVision season 2",
-      "primaryEntity": "WandaVision",
-      "entities": [
-        "WandaVision (TV series)",
-        "Marvel Cinematic Universe"
-      ],
-      "angle": "First look and premiere date for the highly anticipated second season of the Marvel streaming series.",
-      "tmdbType": "movie",
-      "source": "gnews:The Movie Blog",
-      "sources": [
-        {
-          "outlet": "The Movie Blog",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9CNENOTzJlMGVObGozdGZZazNjcFBnUmJCSzhmZlBpWGxGMENfR3dzSm82ekRHM2NpNVJBWm9vWWtDTzZHVkxrNENxd1gtZENfbVQ4ZFVQM1F2MllOMWlNMVNVWmFNTlI5ak14eUY1VmVDZ2I5QzRUVFdLOA?oc=5",
-          "ageMin": 317,
-          "headline": "Where’s Wanda? Season 2 Premiere Date and First Look Revealed - The Movie Blog",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMie0FVX3lxTE9CNENOTzJlMGVObGozdGZZazNjcFBnUmJCSzhmZlBpWGxGMENfR3dzSm82ekRHM2NpNVJBWm9vWWtDTzZHVkxrNENxd1gtZENfbVQ4ZFVQM1F2MllOMWlNMVNVWmFNTlI5ak14eUY1VmVDZ2I5QzRUVFdLOA?oc=5\" target=\"_blank\" Where’s Wanda? Season 2 Premiere Date and First Look Revealed "
-        }
-      ],
-      "ageMin": 317,
-      "_cand": {
-        "key": "rss:where-s-wanda-season-2-premiere-date-and-first-look-revealed",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "The Movie Blog"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "The Movie Blog",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 68,
-      "signals": {
-        "recency": 9,
-        "corroboration": 8,
-        "status": 18,
-        "type": 15,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "spice": 0,
         "softTv": 0
       },
       "tierClass": "B"
     },
     {
-      "id": "news-star-wars-female-luke-skywalker-unveiled",
-      "slug": "star-wars-unveils-its-female-luke-skywalker",
-      "title": "Star Wars Unveils Its Female Luke Skywalker",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
+      "id": "music-news-liam-gallagher-world-cup-halftime-show-review",
+      "slug": "liam-gallagher-says-fifa-s-world-cup-halftime-show-was-like-a-bad-trip",
+      "title": "Liam Gallagher Says FIFA’s World Cup Halftime Show Was ‘Like a Bad Trip’",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
       "subcategory": "news",
-      "eventType": "casting",
+      "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "star-wars-female-luke-skywalker-unveiled",
-      "primaryKeyword": "star wars female luke skywalker",
-      "primaryEntity": "Star Wars",
+      "tier": "popular",
+      "eventSlug": "liam-gallagher-world-cup-halftime-show-review",
+      "primaryKeyword": "Liam Gallagher World Cup",
+      "primaryEntity": "Liam Gallagher",
       "entities": [
-        "Luke Skywalker"
+        "FIFA World Cup"
       ],
-      "angle": "Star Wars officially reveals the actress cast as a female version of Luke Skywalker.",
+      "angle": "Liam Gallagher shares his negative review of the FIFA World Cup halftime show.",
       "tmdbType": "movie",
-      "source": "gnews:The Direct",
+      "source": "rss:Billboard",
       "sources": [
         {
-          "outlet": "The Direct",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBJdnh1VXZjdHMyUV9GRmVLcXBadGsxYmdJTlI0MFVTd0hkaFA0Ull0U1llVmlmUUtWVTMyUE5xU1pFVEd6SmZsaFhZODB1LXBlS0F2QVU0NTljUnBqRkM0dXFoWm1tMlk4TVN2MzZ3?oc=5",
-          "ageMin": 87,
-          "headline": "Star Wars Officially Unveils Its Female Luke Skywalker (Photos) - The Direct",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMibkFVX3lxTFBJdnh1VXZjdHMyUV9GRmVLcXBadGsxYmdJTlI0MFVTd0hkaFA0Ull0U1llVmlmUUtWVTMyUE5xU1pFVEd6SmZsaFhZODB1LXBlS0F2QVU0NTljUnBqRkM0dXFoWm1tMlk4TVN2MzZ3?oc=5\" target=\"_blank\" Star Wars Officially Unveils Its Female Luke Skywalker (Photos) /a nbsp; nbsp; f"
+          "outlet": "Billboard",
+          "tier": 7,
+          "url": "https://www.billboard.com/music/music-news/liam-gallagher-fifa-world-cup-halftime-show-1236297975/",
+          "ageMin": 25,
+          "headline": "Liam Gallagher Says FIFA’s World Cup Halftime Show Was ‘Like a Bad Trip’",
+          "summary": "The star-studded show marked the first halftime performance staged during a FIFA World Cup final."
         }
       ],
-      "ageMin": 87,
+      "ageMin": 25,
       "_cand": {
-        "key": "rss:star-wars-officially-unveils-its-female-luke-skywalker-photo",
+        "key": "rss:liam-gallagher-says-fifa-s-world-cup-halftime-show-was-like-",
         "popularity": 0,
-        "kind": "gnews"
+        "kind": "rss-news"
       },
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
+        "tier1Count": 1,
+        "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "The Direct"
+          "Billboard"
         ],
-        "maxTier": 5,
+        "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "The Direct",
+        "attribution": "Billboard",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 80,
+      "priority": 59,
       "signals": {
-        "recency": 16,
-        "corroboration": 8,
+        "recency": 24,
+        "corroboration": 12,
         "status": 18,
-        "type": 14,
+        "type": 5,
         "pop": 0,
         "breakout": 0,
-        "big": 24,
+        "big": 0,
         "trending": 0,
         "spice": 0,
         "softTv": 0
       },
-      "tierClass": "B"
+      "tierClass": "C"
     },
     {
-      "id": "news-cbs-cancellation",
-      "slug": "beyond-colbert-cbs-axes-several-more-tv-shows",
-      "title": "Beyond Colbert: CBS Axes Several More TV Shows",
+      "id": "news-cbs-show-cancellations",
+      "slug": "not-just-colbert-see-what-other-shows-cbs-canceled-dropped",
+      "title": "Not just Colbert. See what other shows CBS canceled, dropped",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
       "eventType": "cancellation",
       "sensitivity": "normal",
-      "eventSlug": "cbs-cancellation",
-      "primaryKeyword": "cbs tv show cancellations",
+      "eventSlug": "cbs-show-cancellations",
+      "primaryKeyword": "CBS cancellations",
       "primaryEntity": "CBS",
       "entities": [
-        "Stephen Colbert"
+        "The Late Show with Stephen Colbert"
       ],
-      "angle": "CBS is canceling multiple television shows, following the recent news about 'The Late Show with Stephen Colbert'.",
+      "angle": "MSN reports on recent show cancellations by CBS, including 'The Late Show with Stephen Colbert'.",
       "tmdbType": "movie",
       "source": "gnews:MSN",
       "sources": [
@@ -425,12 +295,12 @@
           "outlet": "MSN",
           "tier": 5,
           "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOM3RrVHpiM2ZqWFhvSnA2bVJtTVI3ZlhuU1daWnh4Q0txMlhrUVV2elBCeXA5dFhmdXpjeTdJSTF4QzBUQjFJN0phRHVGVEdoOWtERHJnOUVCV0tFOVdPVWRjdnNVMDNTam1ya1VHUzBnRXBFeXNJRkd5cWhpVXVfZnZjclI0NTdxalN5OWlkWkxiYTlXOTUxRGpMcWU0WWxJaFdpUUpqOXJUVGotbEFUd0t0OA?oc=5",
-          "ageMin": 611,
+          "ageMin": 699,
           "headline": "Not just Colbert. See what other shows CBS canceled, dropped - MSN",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMiswFBVV95cUxOM3RrVHpiM2ZqWFhvSnA2bVJtTVI3ZlhuU1daWnh4Q0txMlhrUVV2elBCeXA5dFhmdXpjeTdJSTF4QzBUQjFJN0phRHVGVEdoOWtERHJnOUVCV0tFOVdPVWRjdnNVMDNTam1ya1VHUzBnRXBFeXNJRkd5cWhpVXVfZnZjclI0NTdxalN5OWlkWkxiYTlXOTUxRGpMcWU0WWxJaFdpUUpqOXJUVGotbEFUd0t0OA?oc=5\" ta"
         }
       ],
-      "ageMin": 611,
+      "ageMin": 699,
       "_cand": {
         "key": "rss:not-just-colbert-see-what-other-shows-cbs-canceled-dropped-m",
         "popularity": 0,
@@ -467,37 +337,38 @@
       "tierClass": "C"
     },
     {
-      "id": "news-dutton-ranch-season-2-cast-changes",
-      "slug": "dutton-ranch-season-2-cast-changes-see-who-isn-t-coming-back",
-      "title": "‘Dutton Ranch’ season 2 cast changes: See who isn’t coming back",
+      "id": "news-god-of-war-tv-series-casting",
+      "slug": "god-of-war-prime-video-series-to-cast-new-lead-after-on-set-injury",
+      "title": "God of War: Prime Video Series to Cast New Lead After On Set Injury",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "dutton-ranch-season-2-cast-changes",
-      "primaryKeyword": "dutton ranch season 2 cast",
-      "primaryEntity": "Yellowstone",
+      "eventSlug": "god-of-war-tv-series-casting",
+      "primaryKeyword": "god of war prime video casting",
+      "primaryEntity": "God of War",
       "entities": [
-        "Taylor Sheridan"
+        "God of War (TV series)",
+        "Prime Video"
       ],
-      "angle": "Details on cast changes for the upcoming season of the hit series.",
+      "angle": "Prime Video's 'God of War' series to recast lead role after on-set injury.",
       "tmdbType": "movie",
-      "source": "gnews:AL.com",
+      "source": "gnews:3DVF",
       "sources": [
         {
-          "outlet": "AL.com",
+          "outlet": "3DVF",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOcmRvUzY3SVpEV0xlM2ZUaUNWZkhSOC0tbkFZb3VhUEdZaERGV2FMU2xzR2dOV05XcFJNQ3BtcUF4VTdjU2Z2TmJvZDBCTVZQc0xRRFF0MVRkREdTLWJIeWc4b1VEaUV2R3p3d0U2MzI1VVRhMUlWdEQ2Q0cyYlM5SEFLSXdJbmtyZzJLQW1vQlpMRlpELVhqUEhCS0fSAbABQVVfeXFMTkJ4ZjJkTlR1RjZSTUlrVTZxYzd3bTVfVEdTanM3clY5eS1NSnRncmJJenZ3NVcxSmZXaDBCY2Nyck5DZ1EtUnFNbWJIUlZCcmlqcUNmUktPYUJqaGc5Zkp2Tk4tZUtqVElZdy1aUktmWGc4Z0NGdmRtbTk1VHA5Y2MxVmhJWVJ3dTdZMTFqZ0ZMRHdsYnlQVjdEMHZ6NDJWUThiS3NJbktnNFNtTlkyLXY?oc=5",
-          "ageMin": 838,
-          "headline": "‘Dutton Ranch’ season 2 cast changes: See who isn’t coming back - AL.com",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMinAFBVV95cUxOcmRvUzY3SVpEV0xlM2ZUaUNWZkhSOC0tbkFZb3VhUEdZaERGV2FMU2xzR2dOV05XcFJNQ3BtcUF4VTdjU2Z2TmJvZDBCTVZQc0xRRFF0MVRkREdTLWJIeWc4b1VEaUV2R3p3d0U2MzI1VVRhMUlWdEQ2Q0cyYlM5SEFLSXdJbmtyZzJLQW1vQlpMRlpELVhqUEhCS0fSAbABQVVfeXFMTkJ4ZjJkTlR1RjZSTUlrVTZxYzd"
+          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPSnM5S3VSYnBvNlZ3WllRNVlzZ0NrTFZSdGZSZTd2bW9wdUUwTmVyWFhwMzV6Yk5QSlp2bjhseXcwSlN5T1ZCbHhhSnFabDZDVzNSQXdzUS04NGgzWnZGeUVyVlYyaXdELUEtS3c1YkF5UVpza1oxVFNRS195UzNtY1d0aG45S1NmQmhOR1J1N0M?oc=5",
+          "ageMin": 972,
+          "headline": "Gunsmoke ran 20 years, and CBS canceled it without telling the cast - 3DVF",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMikAFBVV95cUxPSnM5S3VSYnBvNlZ3WllRNVlzZ0NrTFZSdGZSZTd2bW9wdUUwTmVyWFhwMzV6Yk5QSlp2bjhseXcwSlN5T1ZCbHhhSnFabDZDVzNSQXdzUS04NGgzWnZGeUVyVlYyaXdELUEtS3c1YkF5UVpza1oxVFNRS195UzNtY1d0aG45S1NmQmhOR1J1N0M?oc=5\" target=\"_blank\" Gunsmoke ran 20 years, and CBS ca"
         }
       ],
-      "ageMin": 838,
+      "ageMin": 972,
       "_cand": {
-        "key": "rss:-dutton-ranch-season-2-cast-changes-see-who-isn-t-coming-bac",
+        "key": "rss:gunsmoke-ran-20-years-and-cbs-canceled-it-without-telling-th",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -507,11 +378,11 @@
         "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "AL.com"
+          "3DVF"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "AL.com",
+        "attribution": "3DVF",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -532,105 +403,38 @@
       "tierClass": "C"
     },
     {
-      "id": "music-news-ac-dc-camp-randall-concert",
-      "slug": "ac-dc-rocks-camp-randall-for-first-madison-show-in-25-years",
-      "title": "AC/DC Rocks Camp Randall for First Madison Show in 25 Years",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "ac-dc-camp-randall-concert",
-      "primaryKeyword": "AC/DC concert",
-      "primaryEntity": "AC/DC",
-      "entities": [
-        "Camp Randall"
-      ],
-      "angle": "AC/DC returns to Madison for their first concert in 25 years.",
-      "tmdbType": "movie",
-      "source": "gnews:WMTV 15 NEWS",
-      "sources": [
-        {
-          "outlet": "WMTV 15 NEWS",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOdzVqUGF3dnE4LWJ6U0tUSmxJd0NPOFh3SnhRVFdfTmVHMlU0QnY5d2c1ZWE1d3k0RUhTVG9EVmp4MEV3UXVXZ1lENUxoSkppb0UwTWxyRWFtUG5mZ2dfX2w5TS0tR1JoN2VUMzk4VjhtbUVmZmpxTVd4c1ZoUk9ZSmlhdXlyQlktN2wxbG9yVUZTeWpT0gGoAUFVX3lxTE9JeE9lRFhSTGNBeGJpeHlMLXhqTDJSa3pRcUlwb3RQRVpJRi1ScklGNG9KZno3T2J3SU1JOHlxckN4SlZaRnBGb3hTRWcxWFRWM0txMDVTVlkwN3JLdi10OGVLYmZBSU9nSjdYcUVZWTdDR0U0YXdUSS1lcDMyWWF5c0NUQnM4TnFtWUQ3elFDbnhvNzB3ZjBkVHZEN1pJTjhEVWtGYV9oTA?oc=5",
-          "ageMin": 129,
-          "headline": "AC/DC rocks Camp Randall for first Madison show in 25 years - WMTV 15 NEWS",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMilAFBVV95cUxOdzVqUGF3dnE4LWJ6U0tUSmxJd0NPOFh3SnhRVFdfTmVHMlU0QnY5d2c1ZWE1d3k0RUhTVG9EVmp4MEV3UXVXZ1lENUxoSkppb0UwTWxyRWFtUG5mZ2dfX2w5TS0tR1JoN2VUMzk4VjhtbUVmZmpxTVd4c1ZoUk9ZSmlhdXlyQlktN2wxbG9yVUZTeWpT0gGoAUFVX3lxTE9JeE9lRFhSTGNBeGJpeHlMLXhqTDJSa3pRcUl"
-        }
-      ],
-      "ageMin": 129,
-      "_cand": {
-        "key": "rss:ac-dc-rocks-camp-randall-for-first-madison-show-in-25-years-",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "breakoutVelocity": 0,
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "WMTV 15 NEWS"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "WMTV 15 NEWS",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 51,
-      "signals": {
-        "recency": 16,
-        "corroboration": 8,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-princess-diaries-3-script-breakthrough",
-      "slug": "anne-hathaway-says-princess-diaries-3-had-a-story-breakthrough-after-h",
-      "title": "Anne Hathaway Says Princess Diaries 3 Had a Story Breakthrough After Having to Start Over With the Script: We are Moving in the Right Direction",
+      "id": "news-princess-diaries-3-announcement",
+      "slug": "anne-hathaway-princess-diaries-3-script-breakthrough-achieved",
+      "title": "Anne Hathaway: 'Princess Diaries 3' Script Breakthrough Achieved",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "princess-diaries-3-script-breakthrough",
-      "primaryKeyword": "princess diaries 3",
+      "sensitivity": "high",
+      "eventSlug": "princess-diaries-3-announcement",
+      "primaryKeyword": "Princess Diaries 3",
       "primaryEntity": "Princess Diaries 3",
       "entities": [
         "One Day",
         "Anne Hathaway"
       ],
-      "angle": "Anne Hathaway reveals a significant breakthrough in the script development for 'Princess Diaries 3' after a previous version was scrapped.",
+      "angle": "Anne Hathaway provides an update on the script progress for Princess Diaries 3.",
       "tmdbType": "movie",
-      "source": "rss:Variety",
+      "source": "rss:TheWrap",
       "sources": [
         {
-          "outlet": "Variety",
+          "outlet": "TheWrap",
           "tier": 7,
-          "url": "https://variety.com/2026/film/news/anne-hathaway-princess-diaries-3-breakthrough-script-1236816029/",
-          "ageMin": 608,
-          "headline": "Anne Hathaway Says Princess Diaries 3 Had a Story Breakthrough After Having to Start Over With the Script: We are Moving in the Right Direction",
-          "summary": "“Princess Diaries 3” recently had a breakthrough after a scrapped script, Anne Hathaway revealed during an appearance on SiriusXM’s “Radio Andy.” “I’m busy making baby number three, and that has sort of taken the place of knowing when exactly I can make Princess Diaries 3, ” Hathaway said. “I can say I think we had a story [ ]"
+          "url": "https://www.thewrap.com/industry-news/public-policy-legal/shark-tank-star-kevin-oleary-sued-utah-data-center-claims/",
+          "ageMin": 671,
+          "headline": "‘Shark Tank’ Star Kevin O’Leary Sued Over Utah Data Center Claims",
+          "summary": "Fox News is also named in the defamation lawsuit The post ‘Shark Tank’ Star Kevin O’Leary Sued Over Utah Data Center Claims appeared first on TheWrap ."
         }
       ],
-      "ageMin": 608,
+      "ageMin": 671,
       "_cand": {
-        "key": "rss:anne-hathaway-says-princess-diaries-3-had-a-story-breakthrou",
+        "key": "rss:-shark-tank-star-kevin-o-leary-sued-over-utah-data-center-cl",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -640,11 +444,11 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Variety"
+          "TheWrap"
         ],
         "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety",
+        "sensitivity": "high",
+        "attribution": "TheWrap",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -655,6 +459,150 @@
         "corroboration": 12,
         "status": 18,
         "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "S"
+    },
+    {
+      "id": "music-news-world-cup-final-halftime-show",
+      "slug": "bieber-shakira-madonna-bts-headline-world-cup-final-halftime-show",
+      "title": "Bieber, Shakira, Madonna, BTS Headline World Cup Final Halftime Show",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "world-cup-final-halftime-show",
+      "primaryKeyword": "World Cup Final halftime show",
+      "primaryEntity": "World Cup Final",
+      "entities": [
+        "Justin Bieber",
+        "Shakira",
+        "Madonna",
+        "BTS"
+      ],
+      "angle": "Pop music titans deliver halftime show at the World Cup Final.",
+      "tmdbType": "movie",
+      "source": "rss:Rolling Stone",
+      "sources": [
+        {
+          "outlet": "Rolling Stone",
+          "tier": 7,
+          "url": "https://www.rollingstone.com/music/music-news/justin-bieber-bts-shakira-madonna-performance-world-cup-1235594935/",
+          "ageMin": 620,
+          "headline": "Justin Bieber, Shakira, Madonna, BTS Deliver Electric Halftime Set at World Cup Final",
+          "summary": "Final match between Spain and Argentina at New York New Jersey Stadium was preceded by Post Malone performance"
+        },
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/music/news/fifa-halftime-madonna-bts-justin-bieber-shakira-1236816110/",
+          "ageMin": 621,
+          "headline": "Madonna, BTS, Justin Bieber and Shakira Join Forces for Blink-and-You ll-Miss- Em Moments in a Cluster-FIFA of a Halftime Show",
+          "summary": "The FIFA World Cup Final Halftime Show provided an answer to the burning question of how you fit Madonna, BTS, Justin Bieber, Shakira, Burna Boy, Gustavo Dudamel, Chris Martin and the Muppets into a single 11-minute segment: as fleetingly as possible. Although there were reports that the halftime extravaganza would be allowed to go over [ ]"
+        }
+      ],
+      "ageMin": 620,
+      "_cand": {
+        "key": "rss:justin-bieber-shakira-madonna-bts-deliver-electric-halftime-",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 2,
+      "verification": {
+        "tier1Count": 2,
+        "tier1Owners": 1,
+        "outletCount": 2,
+        "outlets": [
+          "Rolling Stone",
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Rolling Stone",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 53,
+      "signals": {
+        "recency": 4,
+        "corroboration": 18,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 8,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-damson-idris-f1-the-movie-sequel-conversations",
+      "slug": "damson-idris-teases-exciting-conversations-about-f1-the-movie-sequel",
+      "title": "Damson Idris Teases 'Exciting Conversations' About 'F1 The Movie' Sequel",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "damson-idris-f1-the-movie-sequel-conversations",
+      "primaryKeyword": "F1 The Movie sequel",
+      "primaryEntity": "F1",
+      "entities": [
+        "F1 The Movie",
+        "Damson Idris"
+      ],
+      "angle": "Actor Damson Idris has teased ongoing discussions about a potential sequel to 'F1 The Movie'.",
+      "tmdbType": "movie",
+      "source": "gnews:Motorsport.com",
+      "sources": [
+        {
+          "outlet": "Motorsport.com",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNQWNTV1Y3U012dGxkZXZVdWpBOVdRUVBoeVlsT3JvQVVwOE1zNGtyNnc0aFR1dWZTR1ZTQ0R4LTh5cTByN0x1WFpZU1FibWdvcTh1MG9VTWdmNUh1ajF2ckhoV0YyRWtWLVJpaE90NDVLbS1iMVctVVZ5cmZwYjZYYkd6NEtXLTdvUFhWYnRETzdXbXRGOWVXTEZDdmh2ZzZlaVV2WA?oc=5",
+          "ageMin": 870,
+          "headline": "Damson Idris teases \"exciting conversations\" over \"F1 The Movie\" sequel - Motorsport.com",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxNQWNTV1Y3U012dGxkZXZVdWpBOVdRUVBoeVlsT3JvQVVwOE1zNGtyNnc0aFR1dWZTR1ZTQ0R4LTh5cTByN0x1WFpZU1FibWdvcTh1MG9VTWdmNUh1ajF2ckhoV0YyRWtWLVJpaE90NDVLbS1iMVctVVZ5cmZwYjZYYkd6NEtXLTdvUFhWYnRETzdXbXRGOWVXTEZDdmh2ZzZlaVV2WA?oc=5\" target=\"_blank\" Damson"
+        }
+      ],
+      "ageMin": 870,
+      "_cand": {
+        "key": "rss:damson-idris-teases-exciting-conversations-over-f1-the-movie",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "Motorsport.com"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "Motorsport.com",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 65,
+      "signals": {
+        "recency": 1,
+        "corroboration": 8,
+        "status": 18,
+        "type": 14,
         "pop": 0,
         "breakout": 0,
         "big": 24,
@@ -675,14 +623,14 @@
       "eventType": "announcement",
       "sensitivity": "normal",
       "eventSlug": "danny-boyle-ink-sells-to-netflix",
-      "primaryKeyword": "Ink movie",
-      "primaryEntity": "Ink (2024 film)",
+      "primaryKeyword": "Danny Boyle Ink",
+      "primaryEntity": "Ink (film)",
       "entities": [
-        "Netflix",
         "Danny Boyle",
+        "Netflix",
         "Venice Film Festival"
       ],
-      "angle": "Danny Boyle's new film 'Ink' sold to Netflix before its Venice premiere.",
+      "angle": "Danny Boyle's new film 'Ink' sold to Netflix ahead of its Venice premiere.",
       "tmdbType": "movie",
       "source": "rss:IndieWire",
       "sources": [
@@ -690,12 +638,12 @@
           "outlet": "IndieWire",
           "tier": 7,
           "url": "https://www.indiewire.com/news/breaking-news/danny-boyle-ink-netflix-venice-sale-1235206128/",
-          "ageMin": 3293,
+          "ageMin": 3380,
           "headline": "Danny Boyle s Ink Sells to Netflix in First Big Sale (Way) Ahead of Venice Premiere",
           "summary": "The film about Larry Lamb, Rupert Murdoch, and the birth of The Sun tabloid is the opening night film at the Biennale."
         }
       ],
-      "ageMin": 3293,
+      "ageMin": 3380,
       "_cand": {
         "key": "rss:danny-boyle-s-ink-sells-to-netflix-in-first-big-sale-way-ahe",
         "popularity": 0,
@@ -732,75 +680,75 @@
       "tierClass": "B"
     },
     {
-      "id": "news-aliens-40th-anniversary-james-cameron-quit-twice",
-      "slug": "aliens-at-40-james-cameron-s-sequel-is-a-sci-fi-icon-but-did-you-know-",
-      "title": "'Aliens' at 40: James Cameron's Sequel is a Sci-Fi Icon, But Did You Know He Quit the Movie Twice?",
+      "id": "news-holly-willoughby-launches-youtube-series",
+      "slug": "holly-willoughby-launches-youtube-lifestyle-series",
+      "title": "Holly Willoughby Launches YouTube Lifestyle Series",
       "contentType": "news",
       "formatTag": "news",
-      "category": "movies",
+      "category": "celebrity",
       "subcategory": "news",
-      "eventType": "other",
+      "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "aliens-40th-anniversary-james-cameron-quit-twice",
-      "primaryKeyword": "aliens 40th anniversary",
-      "primaryEntity": "Aliens",
+      "eventSlug": "holly-willoughby-launches-youtube-series",
+      "primaryKeyword": "Holly Willoughby YouTube",
+      "primaryEntity": "Holly Willoughby",
       "entities": [
-        "Aliens (1986 film)",
-        "James Cameron"
+        "YouTube",
+        "Stanley Tucci"
       ],
-      "angle": "On the 40th anniversary of 'Aliens', a look back at the iconic sci-fi sequel and director James Cameron's near-departure from the project.",
+      "angle": "British presenter Holly Willoughby launches a new lifestyle series on YouTube.",
       "tmdbType": "movie",
-      "source": "gnews:Space",
+      "source": "rss:Deadline",
       "sources": [
         {
-          "outlet": "Space",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPOW01a1ZmVGdvLWRkdUt5NDE1aXc4TmhVeEF2U21UUWFibERsZnN2X3dTZUR6emNwYWV0UVA3YXN2Q1J0VzYxLTBWNjNuNkFtWEotSW53NFFkT29OemJVaU1nbV9GUndIY0J2V1UwNTViblNEMjNUdE9lRkNRZ3U3czhlb0NUWnpUb3hqdENWa1ZCNGdhSGdOb1pyaFRxUk9QT2tSTkFMaHh1NUd1VWh1eTNKd2NsQ1lKZ3RSZVd3ZFVpbG5WTlhSOFlrd21UTkRscGpSTDlkSDFRWlJOMWVZbA?oc=5",
-          "ageMin": 753,
-          "headline": "'Aliens' at 40: James Cameron's sequel is a sci-fi icon, but did you know he quit the movie twice? - Space",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMi4AFBVV95cUxPOW01a1ZmVGdvLWRkdUt5NDE1aXc4TmhVeEF2U21UUWFibERsZnN2X3dTZUR6emNwYWV0UVA3YXN2Q1J0VzYxLTBWNjNuNkFtWEotSW53NFFkT29OemJVaU1nbV9GUndIY0J2V1UwNTViblNEMjNUdE9lRkNRZ3U3czhlb0NUWnpUb3hqdENWa1ZCNGdhSGdOb1pyaFRxUk9QT2tSTkFMaHh1NUd1VWh1eTNKd2NsQ1lKZ3R"
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/holly-willoughby-lifestyle-youtube-series-together-1236996703/",
+          "ageMin": 1,
+          "headline": "Holly Willoughby Launches YouTube Lifestyle Series",
+          "summary": "EXCLUSIVE: Holly Willoughby is setting up shop on YouTube. The top British presenter is launching Holly Willoughby Together, a lifestyle series for YouTube and social that counts Stanley Tucci, Katherine Ryan, Joanne McNally, Emma Bunton and Nicole Appleton in its first tranche of guests. She will also speak to campaigners like Ellen Froome, who is [ ]"
         }
       ],
-      "ageMin": 753,
+      "ageMin": 1,
       "_cand": {
-        "key": "rss:-aliens-at-40-james-cameron-s-sequel-is-a-sci-fi-icon-but-di",
+        "key": "rss:holly-willoughby-launches-youtube-lifestyle-series",
         "popularity": 0,
-        "kind": "gnews"
+        "kind": "rss-news"
       },
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
+        "tier1Count": 1,
+        "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Space"
+          "Deadline"
         ],
-        "maxTier": 5,
+        "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Space",
+        "attribution": "Deadline",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 48,
+      "priority": 69,
       "signals": {
-        "recency": 1,
-        "corroboration": 8,
+        "recency": 30,
+        "corroboration": 12,
         "status": 18,
-        "type": 5,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
-        "big": 12,
+        "big": 0,
         "trending": 0,
-        "spice": 4,
+        "spice": 0,
         "softTv": 0
       },
-      "tierClass": "C"
+      "tierClass": "B"
     },
     {
       "id": "news-melanie-chisholm-chris-dingwall-wedding",
-      "slug": "spice-girls-reunite-minus-victoria-beckham-at-mel-c-s-wedding-to-model",
-      "title": "Spice Girls Reunite — Minus Victoria Beckham — at Mel C’s Wedding to Model Chris Dingwall",
+      "slug": "celeb-weddings-of-2026-melanie-chisholm-and-chris-dingwall-more-stars-",
+      "title": "Celeb Weddings of 2026: Melanie Chisholm and Chris Dingwall, More Stars Who Tied the Knot This Year",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
@@ -812,25 +760,24 @@
       "primaryEntity": "Melanie C",
       "entities": [
         "Melanie Chisholm",
-        "Chris Dingwall",
-        "Spice Girls"
+        "Chris Dingwall"
       ],
-      "angle": "Spice Girls member Melanie Chisholm marries Chris Dingwall, with some bandmates in attendance.",
+      "angle": "Melanie Chisholm is among the celebrities tying the knot in 2026.",
       "tmdbType": "movie",
-      "source": "gnews:Morning Ag Clips",
+      "source": "gnews:Us Weekly",
       "sources": [
         {
-          "outlet": "Morning Ag Clips",
+          "outlet": "Us Weekly",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNejdYbVI2MDktcDhYVlFKYkY0cWR1R1h6ck1qdzEtemNidUVacWU2elFLVFA1b2EyekRvTkprb3l3U0c5Q3ZJZVdJNXpmMzBzd0JRdXlXeHJqZHlDWmRNOEZRN1pPSDIwZ2dQbUtQRkYxbm9wR3I4czhpMmdYZ0UzWWhuLWxBNndvTXpOSWp2MkQ1el9oUWZreHNmMG5xRkhQd29yWHFvdGo0UQ?oc=5",
-          "ageMin": 140,
-          "headline": "2027 USPOULTRY Family Farm Environmental Excellence Award Nominations Open - Morning Ag Clips",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxNejdYbVI2MDktcDhYVlFKYkY0cWR1R1h6ck1qdzEtemNidUVacWU2elFLVFA1b2EyekRvTkprb3l3U0c5Q3ZJZVdJNXpmMzBzd0JRdXlXeHJqZHlDWmRNOEZRN1pPSDIwZ2dQbUtQRkYxbm9wR3I4czhpMmdYZ0UzWWhuLWxBNndvTXpOSWp2MkQ1el9oUWZreHNmMG5xRkhQd29yWHFvdGo0UQ?oc=5\" target=\"_blank"
+          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOQlZDQWppQlJaSlRmazNMN1dwejhnMXlIRWpDLTRDT1o1X3E2RHZrampZa2xuTExfVENQVm1sV2JFd1Vac2RSV0ROSGJsb0lLSHlDY0JGN2NhRm5Qc2Z1SG42MEFTY2pYUFE2d3N4SzFQRHM2TU5JMDZZSW5BVGRMaldCU0dURjlZS09nRmNyQy10UlhJbGVZQl82SkJsamNMandEMXIyWDNsRE1jZUlB?oc=5",
+          "ageMin": 109,
+          "headline": "Celeb Weddings of 2026: Melanie Chisholm and Chris Dingwall, More Stars Who Tied the Knot This Year - Us Weekly",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxOQlZDQWppQlJaSlRmazNMN1dwejhnMXlIRWpDLTRDT1o1X3E2RHZrampZa2xuTExfVENQVm1sV2JFd1Vac2RSV0ROSGJsb0lLSHlDY0JGN2NhRm5Qc2Z1SG42MEFTY2pYUFE2d3N4SzFQRHM2TU5JMDZZSW5BVGRMaldCU0dURjlZS09nRmNyQy10UlhJbGVZQl82SkJsamNMandEMXIyWDNsRE1jZUlB?oc=5\" target=\""
         }
       ],
-      "ageMin": 140,
+      "ageMin": 109,
       "_cand": {
-        "key": "rss:2027-uspoultry-family-farm-environmental-excellence-award-no",
+        "key": "rss:celeb-weddings-of-2026-melanie-chisholm-and-chris-dingwall-m",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -840,11 +787,11 @@
         "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "Morning Ag Clips"
+          "Us Weekly"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "Morning Ag Clips",
+        "attribution": "Us Weekly",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -855,73 +802,6 @@
         "corroboration": 8,
         "status": 18,
         "type": 8,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-rolling-stones-songwriting-ai-musical-mount-rushmore",
-      "slug": "the-rolling-stones-sound-off-mick-jagger-keith-richards-on-songwriting",
-      "title": "The Rolling Stones Sound Off: Mick Jagger Keith Richards on Songwriting, AI Their Musical Rock Mount Rushmore",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "rolling-stones-songwriting-ai-musical-mount-rushmore",
-      "primaryKeyword": "Rolling Stones songwriting",
-      "primaryEntity": "The Rolling Stones",
-      "entities": [
-        "Mick Jagger",
-        "Keith Richards"
-      ],
-      "angle": "The iconic rock band discusses their songwriting process, the impact of AI, and their legacy.",
-      "tmdbType": "movie",
-      "source": "gnews:Billboard",
-      "sources": [
-        {
-          "outlet": "Billboard",
-          "tier": 7,
-          "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQRThtay1vWXJWWlo2VUV3Sk5tV3Nldzg3aGVYOGp0THBvVkpnZ2xUQUNWcU9wTkVqY09wUkg3VGdEVFlKSThqejFtcnRhQVpReG41aExiVkE0cUZHbXZMQ2VCXzZzWWtpUF9oX09vV3Noc3VRY1hEZndaaW1ESEplbUpidkVleU1remc?oc=5",
-          "ageMin": 297,
-          "headline": "The Rolling Stones Sound Off: Mick Jagger Keith Richards on Songwriting, AI Their Musical Rock Mount Rushmore - Billboard",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiigFBVV95cUxQRThtay1vWXJWWlo2VUV3Sk5tV3Nldzg3aGVYOGp0THBvVkpnZ2xUQUNWcU9wTkVqY09wUkg3VGdEVFlKSThqejFtcnRhQVpReG41aExiVkE0cUZHbXZMQ2VCXzZzWWtpUF9oX09vV3Noc3VRY1hEZndaaW1ESEplbUpidkVleU1remc?oc=5\" target=\"_blank\" The Rolling Stones Sound Off: Mick Jagger"
-        }
-      ],
-      "ageMin": 297,
-      "_cand": {
-        "key": "rss:the-rolling-stones-sound-off-mick-jagger-keith-richards-on-s",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Billboard"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Billboard",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 48,
-      "signals": {
-        "recency": 9,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
         "pop": 0,
         "breakout": 0,
         "big": 0,
