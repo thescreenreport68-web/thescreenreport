@@ -1,0 +1,135 @@
+{
+  "ts": "2026-07-20T03:07:10.346Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "olivia-wilde-used-her-own-heartbreak-to-fuel-her-new-film",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [
+        "metaDescription-soft:logged"
+      ],
+      "headline": [],
+      "voice": null,
+      "guardCuts": 1,
+      "surgicalFixes": 0
+    }
+  ],
+  "topics": 2,
+  "held": 0,
+  "rejected": 1,
+  "skipped": 0,
+  "blocked": 0,
+  "costUSD": 0.017145,
+  "costPerPublished": 0.017145,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 9,
+      "in": 16808,
+      "out": 1866,
+      "usd": 0.009707399999999998
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 870,
+      "out": 939,
+      "usd": 0.000269304
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 6,
+      "in": 17382,
+      "out": 5768,
+      "usd": 0.00628492475
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 7,
+      "in": 5930,
+      "out": 725,
+      "usd": 0.0008830000000000001
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 2,
+      "errors": 0,
+      "in": 4288,
+      "out": 443,
+      "usd": 0.0023939,
+      "ms": 2517
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 870,
+      "out": 939,
+      "usd": 0.00024732,
+      "ms": 10655
+    },
+    "writer": {
+      "calls": 5,
+      "errors": 0,
+      "in": 16781,
+      "out": 5450,
+      "usd": 0.00571263,
+      "ms": 115421
+    },
+    "verify": {
+      "calls": 7,
+      "errors": 0,
+      "in": 12520,
+      "out": 1423,
+      "usd": 0.007313499999999999,
+      "ms": 7703
+    },
+    "judge": {
+      "calls": 2,
+      "errors": 0,
+      "in": 2610,
+      "out": 392,
+      "usd": 0.0004178,
+      "ms": 1846
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 601,
+      "out": 318,
+      "usd": 0.00024635,
+      "ms": 8707
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 382,
+      "out": 86,
+      "usd": 0.00007259999999999999,
+      "ms": 555
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 193,
+      "out": 41,
+      "usd": 0.0000357,
+      "ms": 382
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2145,
+      "out": 109,
+      "usd": 0.00025810000000000004,
+      "ms": 1859
+    },
+    "linker": {
+      "calls": 2,
+      "errors": 0,
+      "in": 600,
+      "out": 97,
+      "usd": 0.00009880000000000002,
+      "ms": 824
+    }
+  }
+}
