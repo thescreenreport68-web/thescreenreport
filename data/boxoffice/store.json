@@ -1652,21 +1652,21 @@
    "key": "the-odyssey-bo-update-100m|BO-UPDATE",
    "eventSlug": "the-odyssey-bo-update-100m",
    "form": "BO-UPDATE",
-   "reason": "1 unverified claim(s) cut, unrecovered",
-   "tries": 47,
-   "at": "2026-07-21T06:03:27.331Z",
+   "reason": "scope: non-Hollywood box-office language in body",
+   "tries": 48,
+   "at": "2026-07-21T06:32:55.821Z",
    "dead": true,
-   "expiresAt": "2026-07-24T06:03:27.331Z"
+   "expiresAt": "2026-07-24T06:32:55.821Z"
   },
   {
    "key": "star-wars-the-mandalorian-and-grogu-bo-update-d59|BO-UPDATE",
    "eventSlug": "star-wars-the-mandalorian-and-grogu-bo-update-d59",
    "form": "BO-UPDATE",
-   "reason": "consistency: title: \"$177.5\" is not a canonical figure for this film | title: \"$177.5\" contradicts the canonical domestic figure ($177,534,904) | metaTitle: headlines domestic while the title headlines dailyGross/other — the SERP promise must match the page",
-   "tries": 28,
-   "at": "2026-07-21T06:05:46.546Z",
+   "reason": "fidelity: 12 unsupported figures/claims — draft-level failure",
+   "tries": 29,
+   "at": "2026-07-21T06:34:09.622Z",
    "dead": true,
-   "expiresAt": "2026-07-24T06:05:46.546Z"
+   "expiresAt": "2026-07-24T06:34:09.622Z"
   },
   {
    "key": "project-hail-mary-bo-update-d128|BO-UPDATE",
@@ -1721,14 +1721,14 @@
    "expiresAt": "2026-07-24T03:07:38.866Z"
   }
  ],
- "zeroStreak": 29,
+ "zeroStreak": 30,
  "daySpend": {
   "laDay": "2026-07-20",
-  "usd": 0.75925
+  "usd": 0.76457
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1784613698330
+  "lastMs": 1784615490421
  },
  "lastAuditDay": "2026-07-20",
  "attempts": {
