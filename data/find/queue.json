@@ -1,8 +1,208 @@
 {
-  "runId": "run-2026-07-21T08-01-34",
-  "builtAt": "2026-07-21T08:03:18.862Z",
+  "runId": "run-2026-07-21T11-01-36",
+  "builtAt": "2026-07-21T11:02:53.528Z",
   "count": 12,
   "topics": [
+    {
+      "id": "news-bad-day-at-the-office-uk-distribution",
+      "slug": "action-xtreme-expands-to-uk-ireland-with-john-hannah-s-bad-day-at-the-",
+      "title": "Action Xtreme Expands to UK/Ireland with John Hannah's 'Bad Day at the Office'",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "bad-day-at-the-office-uk-distribution",
+      "primaryKeyword": "bad day at the office film",
+      "primaryEntity": "Bad Day at the Office (film)",
+      "entities": [
+        "Action Xtreme",
+        "John Hannah",
+        "Edinburgh Film Festival"
+      ],
+      "angle": "Action Xtreme expands into UK and Ireland distribution with the John Hannah-starrer 'Bad Day at the Office,' set for Edinburgh Film Festival.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/action-xtreme-distribution-uk-john-hannah-bad-day-film-news-1236652884/",
+          "ageMin": 2,
+          "headline": "Action Xtreme Expands Into U.K., Ireland Distribution With John Hannah-Starring Bad Day at the Office (Exclusive)",
+          "summary": "Chee Keong Cheung's adrenaline-fueled caper, shot entirely from the first-person perspective using GoPro cameras, is set to open Edinburgh Film Festival's Midnight Madness strand."
+        }
+      ],
+      "ageMin": 2,
+      "_cand": {
+        "key": "rss:action-xtreme-expands-into-u-k-ireland-distribution-with-joh",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 93,
+      "signals": {
+        "recency": 30,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-deadpool-film-announcement",
+      "slug": "ryan-reynolds-confirms-another-deadpool-movie-will-eventually-happen",
+      "title": "Ryan Reynolds Confirms Another Deadpool Movie Will Eventually Happen",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "high",
+      "eventSlug": "deadpool-film-announcement",
+      "primaryKeyword": "deadpool 3",
+      "primaryEntity": "Deadpool",
+      "entities": [
+        "Deadpool (film)",
+        "Ryan Reynolds",
+        "Marvel"
+      ],
+      "angle": "Ryan Reynolds confirms that another Deadpool movie is in development.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/film/news/ryan-reynolds-new-deadpool-movie-eventually-1236817083/",
+          "ageMin": 5,
+          "headline": "Ryan Reynolds Says There Will Eventually Be Another Deadpool Movie: There s a Few Really Deep Cuts That I Think Are Missing",
+          "summary": "Deadpool s story isn t over yet. During a panel at Fanatics Fest over the weekend, Ryan Reynolds confirmed that there will eventually be another movie starring the Marvel antihero — but it may revolve around deep cuts from the character s comics. There s a few really deep cuts that I think are missing from the movies. I [ ]"
+        }
+      ],
+      "ageMin": 5,
+      "_cand": {
+        "key": "rss:ryan-reynolds-says-there-will-eventually-be-another-deadpool",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 93,
+      "signals": {
+        "recency": 30,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "S"
+    },
+    {
+      "id": "news-star-wars-jedi-return-disney-plus",
+      "slug": "star-wars-officially-brings-back-5-key-jedi-for-next-disney-show",
+      "title": "Star Wars Officially Brings Back 5 Key Jedi For Next Disney+ Show",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "star-wars-jedi-return-disney-plus",
+      "primaryKeyword": "star wars jedi disney plus",
+      "primaryEntity": "Star Wars",
+      "entities": [
+        "Disney+",
+        "Jedi"
+      ],
+      "angle": "Disney+ series to feature the return of five key Jedi characters.",
+      "tmdbType": "movie",
+      "source": "gnews:The Direct",
+      "sources": [
+        {
+          "outlet": "The Direct",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9VOEZDeWwtb2ZqZmdnUTVsM3h6Wk5xV1VGTUlLa0phWlRzc1ZyV0wtckFOWmU5WU42clZud3BIUzJGWDN1QjFFblUzbURkQzVPSm41LTRRaW1GYlhHa1pPWkJwODFQN1oyNXAwdW1wS0pvdE5Y?oc=5",
+          "ageMin": 106,
+          "headline": "Star Wars Officially Brings Back 5 Key Jedi For Next Disney+ Show - The Direct",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMidEFVX3lxTE9VOEZDeWwtb2ZqZmdnUTVsM3h6Wk5xV1VGTUlLa0phWlRzc1ZyV0wtckFOWmU5WU42clZud3BIUzJGWDN1QjFFblUzbURkQzVPSm41LTRRaW1GYlhHa1pPWkJwODFQN1oyNXAwdW1wS0pvdE5Y?oc=5\" target=\"_blank\" Star Wars Officially Brings Back 5 Key Jedi For Next Disney+ Show /a nbs"
+        }
+      ],
+      "ageMin": 106,
+      "_cand": {
+        "key": "rss:star-wars-officially-brings-back-5-key-jedi-for-next-disney-",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "The Direct"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "The Direct",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 74,
+      "signals": {
+        "recency": 16,
+        "corroboration": 8,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
     {
       "id": "news-sadie-sink-spider-man-brand-new-day-role-mystery",
       "slug": "sadie-sink-keeps-mystery-of-spider-man-brand-new-day-role-reveals-i-am",
@@ -14,12 +214,12 @@
       "eventType": "casting",
       "sensitivity": "normal",
       "eventSlug": "sadie-sink-spider-man-brand-new-day-role-mystery",
-      "primaryKeyword": "Sadie Sink Spider-Man",
+      "primaryKeyword": "sadie sink spider-man",
       "primaryEntity": "Sadie Sink",
       "entities": [
         "Spider-Man: Brand New Day"
       ],
-      "angle": "Sadie Sink teases her mysterious role in the upcoming Spider-Man film.",
+      "angle": "Sadie Sink teases her mystery role in the upcoming Spider-Man film.",
       "tmdbType": "movie",
       "source": "rss:Deadline",
       "sources": [
@@ -27,12 +227,12 @@
           "outlet": "Deadline",
           "tier": 7,
           "url": "https://deadline.com/2026/07/sadie-sink-mystery-spider-man-brand-new-day-role-1236999030/",
-          "ageMin": 242,
+          "ageMin": 422,
           "headline": "Sadie Sink Keeps Mystery Of Spider-Man: Brand New Day Role Reveals I Am Not Aunt May",
           "summary": "Sadie Sink s role in Spider-Man: Brand New Day remains a mystery ahead of the film s premiere. A new video teased Sink revealing three things about her character in the Sony Pictures production, but left audiences with the same doubts. Since the trailer dropped, I’ve seen so many theories about who I’m playing, Sink said in [ ]"
         }
       ],
-      "ageMin": 242,
+      "ageMin": 422,
       "_cand": {
         "key": "rss:sadie-sink-keeps-mystery-of-spider-man-brand-new-day-role-re",
         "popularity": 0,
@@ -53,9 +253,9 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 89,
+      "priority": 84,
       "signals": {
-        "recency": 9,
+        "recency": 4,
         "corroboration": 12,
         "status": 18,
         "type": 14,
@@ -71,38 +271,37 @@
       "tierClass": "A"
     },
     {
-      "id": "trailer-my-brilliant-career-netflix-trailer",
-      "slug": "netflix-s-my-brilliant-career-trailer-drops-evokes-bridgerton-vibes",
-      "title": "Netflix's 'My Brilliant Career' Trailer Drops, Evokes 'Bridgerton' Vibes",
-      "contentType": "trailer",
-      "formatTag": "trailer",
-      "category": "tv",
-      "subcategory": "trailers",
-      "eventType": "trailer",
+      "id": "news-marvel-actor-declines-mcu-offers",
+      "slug": "marvel-boss-says-one-actor-keeps-turning-down-mcu-offers-it-s-become-t",
+      "title": "Marvel boss says one actor keeps turning down MCU offers: ‘It’s become tradition’",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "my-brilliant-career-netflix-trailer",
-      "primaryKeyword": "my brilliant career trailer",
-      "primaryEntity": "My Brilliant Career",
+      "eventSlug": "marvel-actor-declines-mcu-offers",
+      "primaryKeyword": "marvel actor mcu offers",
+      "primaryEntity": "Marvel Cinematic Universe",
       "entities": [
-        "My Brilliant Career (TV series)",
-        "Netflix"
+        "Marvel"
       ],
-      "angle": "Netflix has released the trailer for its new series 'My Brilliant Career,' drawing comparisons to 'Bridgerton.'",
+      "angle": "Marvel Studios boss reveals an actor has made a tradition of declining MCU offers.",
       "tmdbType": "movie",
-      "source": "gnews:Mashable",
+      "source": "gnews:the-independent.com",
       "sources": [
         {
-          "outlet": "Mashable",
+          "outlet": "the-independent.com",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5xZmJ0UEtWZjgzeGNxNzd4T2diMmtCNkJYS0hzRHA1M245UmVoN2RtZDUwMVlPTF9NTDV5c1NwTktsV1FxcEFXY1dibFRScXgxeHplS24tR3JIZFdxVEUwWWpXY1RNdTV0bGVyc2Z4MHp3VGJXenUxS1JB?oc=5",
-          "ageMin": 26,
-          "headline": "Netflix's 'My Brilliant Career' trailer looks like Eloise Bridgerton in the Australian bush - Mashable",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiekFVX3lxTE5xZmJ0UEtWZjgzeGNxNzd4T2diMmtCNkJYS0hzRHA1M245UmVoN2RtZDUwMVlPTF9NTDV5c1NwTktsV1FxcEFXY1dibFRScXgxeHplS24tR3JIZFdxVEUwWWpXY1RNdTV0bGVyc2Z4MHp3VGJXenUxS1JB?oc=5\" target=\"_blank\" Netflix's 'My Brilliant Career' trailer looks like Eloise Bridge"
+          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPaXNlSVR0NmFGMGlabEprSHM1a3FVamFoSUJMREZ4eF8zMGhibkNjdEdKbEVRRTZ2TnlfWWQ3dEc1cmlUdDJtX3hZV3p5OHlZa2F3OURfeTNZS3lERjdKTUt3cWF6cmxzSlphYUt0NjZrajBvR0tmdDg4Um5LM1cwd20zYU9saDVuWmRJaXZranFaZXJiMjVtOGR2MklJbGw4cEZuR3doSjVVazRwN0lESGZIeWw0Vjg?oc=5",
+          "ageMin": 112,
+          "headline": "Marvel boss says one actor keeps turning down MCU offers: ‘It’s become tradition’ - the-independent.com",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMitwFBVV95cUxPaXNlSVR0NmFGMGlabEprSHM1a3FVamFoSUJMREZ4eF8zMGhibkNjdEdKbEVRRTZ2TnlfWWQ3dEc1cmlUdDJtX3hZV3p5OHlZa2F3OURfeTNZS3lERjdKTUt3cWF6cmxzSlphYUt0NjZrajBvR0tmdDg4Um5LM1cwd20zYU9saDVuWmRJaXZranFaZXJiMjVtOGR2MklJbGw4cEZuR3doSjVVazRwN0lESGZIeWw0Vjg?oc="
         }
       ],
-      "ageMin": 26,
+      "ageMin": 112,
       "_cand": {
-        "key": "rss:netflix-s-my-brilliant-career-trailer-looks-like-eloise-brid",
+        "key": "rss:marvel-boss-says-one-actor-keeps-turning-down-mcu-offers-it-",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -112,221 +311,19 @@
         "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "Mashable"
+          "the-independent.com"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "Mashable",
+        "attribution": "the-independent.com",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 83,
+      "priority": 80,
       "signals": {
-        "recency": 24,
+        "recency": 16,
         "corroboration": 8,
-        "status": 18,
-        "type": 15,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-matt-damon-odyssey-stunt-double",
-      "slug": "matt-damon-reveals-why-he-had-female-stunt-double-for-odyssey-scene-gr",
-      "title": "Matt Damon Reveals Why He Had Female Stunt Double for Odyssey Scene: Greatest Arms I ve Ever Seen",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "matt-damon-odyssey-stunt-double",
-      "primaryKeyword": "Matt Damon Odyssey stunt double",
-      "primaryEntity": "Matt Damon",
-      "entities": [
-        "Christopher Nolan",
-        "The Odyssey"
-      ],
-      "angle": "Matt Damon explains his decision to use a female stunt double for a scene in Christopher Nolan's 'The Odyssey'.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/matt-damon-female-stunt-double-odyssey-scene-bicep-1236652737/",
-          "ageMin": 427,
-          "headline": "Matt Damon Reveals Why He Had Female Stunt Double for Odyssey Scene: Greatest Arms I ve Ever Seen",
-          "summary": "The actor plays Odysseus in Christopher Nolan's epic action fantasy film."
-        }
-      ],
-      "ageMin": 427,
-      "_cand": {
-        "key": "rss:matt-damon-reveals-why-he-had-female-stunt-double-for-odysse",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 81,
-      "signals": {
-        "recency": 4,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 12,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0,
-        "radar": 30
-      },
-      "radarKind": "movie-in-theaters",
-      "tierClass": "A"
-    },
-    {
-      "id": "news-nicole-kidman-elle-fanning-discretion-josh-lucas-cast",
-      "slug": "josh-lucas-cast-in-nicole-kidman-and-elle-fanning-s-paramount-series-d",
-      "title": "Josh Lucas Cast in Nicole Kidman and Elle Fanning's Paramount+ Series 'Discretion'",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "nicole-kidman-elle-fanning-discretion-josh-lucas-cast",
-      "primaryKeyword": "Discretion tv series casting",
-      "primaryEntity": "Discretion (TV series)",
-      "entities": [
-        "Nicole Kidman",
-        "Elle Fanning",
-        "Paramount+"
-      ],
-      "angle": "Josh Lucas joins Nicole Kidman and Elle Fanning in Paramount+ series 'Discretion'.",
-      "tmdbType": "movie",
-      "source": "gnews:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPX0tkbm15NHFTNS1KNE95bTU5X0x0b0lRR3hEN01oN2VZYUU5SEYtaGNOTHl4XzE1cWdNNWVfMGRha2RmODQ5WDk2eF9HV1lNT04tQUxBZ01xVTZ2QjZTTTllWkhZMWlUVlkyaHZjbWZzYlNQQ09sZFJQLWZtYV81TXpHUVRlaXg2TDFoeHZVcHZZa21kMklCSGxJbDhyaENYRFlTSFVn?oc=5",
-          "ageMin": 655,
-          "headline": "Nicole Kidman, Elle Fanning Paramount+ Series ‘Discretion’ Casts Josh Lucas - Variety",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxPX0tkbm15NHFTNS1KNE95bTU5X0x0b0lRR3hEN01oN2VZYUU5SEYtaGNOTHl4XzE1cWdNNWVfMGRha2RmODQ5WDk2eF9HV1lNT04tQUxBZ01xVTZ2QjZTTTllWkhZMWlUVlkyaHZjbWZzYlNQQ09sZFJQLWZtYV81TXpHUVRlaXg2TDFoeHZVcHZZa21kMklCSGxJbDhyaENYRFlTSFVn?oc=5\" target=\"_blank\" Nico"
-        }
-      ],
-      "ageMin": 655,
-      "_cand": {
-        "key": "rss:nicole-kidman-elle-fanning-paramount-series-discretion-casts",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 66,
-      "signals": {
-        "recency": 4,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-adam-driver-passed-on-marvel-roles",
-      "slug": "adam-driver-has-passed-on-so-many-marvel-roles-that-it-s-become-a-trad",
-      "title": "Adam Driver Has Passed on So Many Marvel Roles That It s Become a Tradition, Kevin Feige Says",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "adam-driver-passed-on-marvel-roles",
-      "primaryKeyword": "Adam Driver Marvel roles",
-      "primaryEntity": "Adam Driver",
-      "entities": [
-        "Marvel",
-        "Star Wars"
-      ],
-      "angle": "Marvel Studios head Kevin Feige reveals Adam Driver has a tradition of passing on multiple Marvel roles.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/adam-driver-passing-marvel-roles-tradition-kevin-feige-1236652800/",
-          "ageMin": 327,
-          "headline": "Adam Driver Has Passed on So Many Marvel Roles That It s Become a Tradition, Kevin Feige Says",
-          "summary": "While it's no superhero blockbuster, Driver previously led the 'Star Wars' sequel trilogy, playing Kylo Ren."
-        }
-      ],
-      "ageMin": 327,
-      "_cand": {
-        "key": "rss:adam-driver-has-passed-on-so-many-marvel-roles-that-it-s-bec",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 77,
-      "signals": {
-        "recency": 9,
-        "corroboration": 12,
         "status": 18,
         "type": 14,
         "pop": 0,
@@ -339,66 +336,76 @@
       "tierClass": "B"
     },
     {
-      "id": "news-cooper-flagg-celebrity-family-feud",
-      "slug": "cooper-flagg-family-to-appear-on-celebrity-family-feud-this-week",
-      "title": "Cooper Flagg, family to appear on ‘Celebrity Family Feud’ this week",
+      "id": "news-alan-ritchson-sequel-war-machines-title",
+      "slug": "alan-ritchson-s-blockbuster-netflix-action-sequel-officially-sets-perf",
+      "title": "Alan Ritchson's Blockbuster Netflix Action Sequel Officially Sets Perfect New Title",
       "contentType": "news",
       "formatTag": "news",
-      "category": "tv",
+      "category": "movies",
       "subcategory": "news",
-      "eventType": "casting",
+      "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "cooper-flagg-celebrity-family-feud",
-      "primaryKeyword": "Cooper Flagg Celebrity Family Feud",
-      "primaryEntity": "Celebrity Family Feud",
+      "eventSlug": "alan-ritchson-sequel-war-machines-title",
+      "primaryKeyword": "alan ritchson sequel",
+      "primaryEntity": "War Machines (film)",
       "entities": [
-        "Cooper Flagg"
+        "Alan Ritchson",
+        "Netflix"
       ],
-      "angle": "Basketball player Cooper Flagg and his family are set to appear on an upcoming episode of 'Celebrity Family Feud'.",
+      "angle": "Alan Ritchson's Netflix action sequel officially revealed with a new title.",
       "tmdbType": "movie",
-      "source": "gnews:WABI",
+      "source": "gnews:MovieWeb",
       "sources": [
         {
-          "outlet": "WABI",
+          "outlet": "MovieWeb",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQRWR3MGlZVFVhSHdVQVhZWUhUajl0VDUzMzJRUGU3bGpFZTlxQ1VzVWxxNjZyZnVPbTk2YjNya1Q5YVFNN1l3T3IxTm9uS3hsYlJESzlyUUoyVUc0d202UFRRcTg5cXNUS0gzNnVHYl8wdEpXN2hTcDE1azZ6VjBpMzE4WVlzdXNTQXl0UlVsMU54UTVy0gGoAUFVX3lxTFBPTXdscHpNWE9hdUNuRXAzRUFVU19hNmN6dDNBTElfUWlmSTVka2pIb2MwV1VzdkNxd01DOUdkMHJreVZucHJfNXVWVmtaQS1jeEJsYkJvdHlWRzNScnNla0V1MXhMbmRRRFd2OXBEak80bW9HUWltMTBWXzB6NkN6MllueDQyWngwNHlxRkVLd3VjQVdmamRCMnpUVi1vaHltbUhBT18xZw?oc=5",
-          "ageMin": 604,
-          "headline": "Cooper Flagg, family to appear on ‘Celebrity Family Feud’ this week - WABI",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMilAFBVV95cUxQRWR3MGlZVFVhSHdVQVhZWUhUajl0VDUzMzJRUGU3bGpFZTlxQ1VzVWxxNjZyZnVPbTk2YjNya1Q5YVFNN1l3T3IxTm9uS3hsYlJESzlyUUoyVUc0d202UFRRcTg5cXNUS0gzNnVHYl8wdEpXN2hTcDE1azZ6VjBpMzE4WVlzdXNTQXl0UlVsMU54UTVy0gGoAUFVX3lxTFBPTXdscHpNWE9hdUNuRXAzRUFVU19hNmN6dDN"
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNckREMGd5NmFJTVdacUhWQzVCYzJWRWJKdFhhaldnaUowNXdySkJsZDZSX2dDc25JeElNTG1vU2NlVzNwX0VacWYwT24zR1RrUHpRYXFnSmVQdTdxQklrd2lzWFVFWXBlWEpkZGIxaF9rUTNJTkp5SG4ybV9LY3d5X0tIWlBIVFNuY3VFVjZLU3Fmck1saklzUg?oc=5",
+          "ageMin": 718,
+          "headline": "Alan Ritchson's Blockbuster Netflix Action Sequel Officially Sets Perfect New Title - MovieWeb",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxNckREMGd5NmFJTVdacUhWQzVCYzJWRWJKdFhhaldnaUowNXdySkJsZDZSX2dDc25JeElNTG1vU2NlVzNwX0VacWYwT24zR1RrUHpRYXFnSmVQdTdxQklrd2lzWFVFWXBlWEpkZGIxaF9rUTNJTkp5SG4ybV9LY3d5X0tIWlBIVFNuY3VFVjZLU3Fmck1saklzUg?oc=5\" target=\"_blank\" Alan Ritchson's Blockb"
+        },
+        {
+          "outlet": "What's on Netflix",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPeDdhY1dZSnBLRlhkNDc4TVUyTVJoRFA2MnpxSkc4ak9KN2djRi1CNzhQbTVmVW1VUGxOMFJNTGFBT0hET3RMSXFYU2cwOWd2UXJtWHg3eGE5cnVhdk9mTUU4aGlHLXpnZktDOTVPV0dTZDFsSVB5clpjWUlzUmlCeVJGN2lCTnYteVVxUlhfaw?oc=5",
+          "ageMin": 895,
+          "headline": "Alan Ritchson’s Netflix Sequel Gets an Official Title: Enter ‘War Machines’ - What's on Netflix",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMijwFBVV95cUxPeDdhY1dZSnBLRlhkNDc4TVUyTVJoRFA2MnpxSkc4ak9KN2djRi1CNzhQbTVmVW1VUGxOMFJNTGFBT0hET3RMSXFYU2cwOWd2UXJtWHg3eGE5cnVhdk9mTUU4aGlHLXpnZktDOTVPV0dTZDFsSVB5clpjWUlzUmlCeVJGN2lCTnYteVVxUlhfaw?oc=5\" target=\"_blank\" Alan Ritchson’s Netflix Sequel Get"
         }
       ],
-      "ageMin": 604,
+      "ageMin": 718,
       "_cand": {
-        "key": "rss:cooper-flagg-family-to-appear-on-celebrity-family-feud-this-",
+        "key": "rss:alan-ritchson-s-blockbuster-netflix-action-sequel-officially",
         "popularity": 0,
         "kind": "gnews"
       },
-      "corroborationCount": 1,
+      "corroborationCount": 2,
       "verification": {
         "tier1Count": 0,
         "tier1Owners": 0,
-        "outletCount": 1,
+        "outletCount": 2,
         "outlets": [
-          "WABI"
+          "MovieWeb",
+          "What's on Netflix"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "WABI",
+        "attribution": "multiple outlets",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 66,
+      "priority": 77,
       "signals": {
         "recency": 4,
-        "corroboration": 8,
+        "corroboration": 14,
         "status": 18,
-        "type": 14,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "spice": 4,
+        "big": 24,
+        "trending": 8,
+        "spice": 0,
         "softTv": 0
       },
       "tierClass": "B"
@@ -416,14 +423,12 @@
       "tier": "popular",
       "eventSlug": "a-r-rahman-launches-arr-immersive-app-apple-vision-pro",
       "primaryKeyword": "A.R. Rahman app",
-      "primaryEntity": "A.R.Rahman",
+      "primaryEntity": "A.R. Rahman",
       "entities": [
-        "A.R. Rahman",
         "Apple Vision Pro",
-        "Slumdog Millionaire",
-        "127 Hours"
+        "Slumdog Millionaire"
       ],
-      "angle": "Oscar-winning composer A.R. Rahman launches a new immersive app for Apple Vision Pro, bringing his storytelling work to the platform.",
+      "angle": "Oscar-winning composer A.R. Rahman launches a new immersive app for Apple Vision Pro, showcasing his decade of storytelling work.",
       "tmdbType": "movie",
       "source": "rss:Variety",
       "sources": [
@@ -431,12 +436,12 @@
           "outlet": "Variety",
           "tier": 7,
           "url": "https://variety.com/2026/music/news/ar-rahman-arr-immersive-app-apple-vision-pro-1236816469/",
-          "ageMin": 92,
+          "ageMin": 272,
           "headline": "A.R. Rahman Launches ARR Immersive App for Apple Vision Pro (EXCLUSIVE)",
           "summary": "A.R. Rahman, the two-time Oscar-winning Indian composer behind Slumdog Millionaire and 127 Hours, is launching ARR Immersive, an app bringing his decade of immersive storytelling work to Apple Vision Pro on July 22. The app draws on Rahman s ongoing work in immersive formats, tracing back to Le Musk, a 360-degree virtual reality film that debuted [ ]"
         }
       ],
-      "ageMin": 92,
+      "ageMin": 272,
       "_cand": {
         "key": "rss:a-r-rahman-launches-arr-immersive-app-for-apple-vision-pro-e",
         "popularity": 0,
@@ -457,9 +462,9 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 55,
+      "priority": 48,
       "signals": {
-        "recency": 16,
+        "recency": 9,
         "corroboration": 12,
         "status": 18,
         "type": 9,
@@ -473,7 +478,137 @@
       "tierClass": "C"
     },
     {
-      "id": "news-robert-downey-jr-doctor-doom-avengers-doomsday-hero-villain-speculatio",
+      "id": "news-adam-driver-passed-on-marvel-roles",
+      "slug": "adam-driver-has-passed-on-so-many-marvel-roles-that-it-s-become-a-trad",
+      "title": "Adam Driver Has Passed on So Many Marvel Roles That It s Become a Tradition, Kevin Feige Says",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "adam-driver-passed-on-marvel-roles",
+      "primaryKeyword": "adam driver marvel roles",
+      "primaryEntity": "Adam Driver",
+      "entities": [
+        "Marvel"
+      ],
+      "angle": "Kevin Feige reveals Adam Driver has a tradition of passing on multiple Marvel roles.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/adam-driver-passing-marvel-roles-tradition-kevin-feige-1236652800/",
+          "ageMin": 507,
+          "headline": "Adam Driver Has Passed on So Many Marvel Roles That It s Become a Tradition, Kevin Feige Says",
+          "summary": "While it's no superhero blockbuster, Driver previously led the 'Star Wars' sequel trilogy, playing Kylo Ren."
+        }
+      ],
+      "ageMin": 507,
+      "_cand": {
+        "key": "rss:adam-driver-has-passed-on-so-many-marvel-roles-that-it-s-bec",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 72,
+      "signals": {
+        "recency": 4,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-star-wars-knights-of-the-old-republic-remake-reveal-2024",
+      "slug": "knights-of-the-old-republic-remake-reveal-expected-this-year",
+      "title": "Knights of the Old Republic Remake Reveal Expected This Year",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "star-wars-knights-of-the-old-republic-remake-reveal-2024",
+      "primaryKeyword": "Knights of the Old Republic Remake",
+      "primaryEntity": "Star Wars: Knights of the Old Republic Remake",
+      "entities": [
+        "Star Wars"
+      ],
+      "angle": "Insider report suggests a potential reveal for the Star Wars: Knights of the Old Republic Remake is planned for this year.",
+      "tmdbType": "movie",
+      "source": "gnews:Instant Gaming News",
+      "sources": [
+        {
+          "outlet": "Instant Gaming News",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPWnE4Z3AtcFlGTnBXamk2YzVmUmNGRUJYX2NaUnVfRlJ4SFNtemFlemZGcGpuV1hXVy1uRjM5WEszRXVFV2Z6TEpDZjdfeDg1c0c5d1lRWEl2RjlYUmtOVzdOSHNTclRQN0RVM2FuRTZQU0lVM3JIZDVRYjlvY0U5NjNKNE1KVGVsRVpMZEJVWjFnUmtSdGdiMFlhdXhSRlFGWTNON3RPNmtYcEpGWC1vZ2p4bVZuTHdCRndjWDJ4cXAyaG8?oc=5",
+          "ageMin": 201,
+          "headline": "Star Wars: Knights of the Old Republic Remake could be shown again this year - Instant Gaming News",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiwwFBVV95cUxPWnE4Z3AtcFlGTnBXamk2YzVmUmNGRUJYX2NaUnVfRlJ4SFNtemFlemZGcGpuV1hXVy1uRjM5WEszRXVFV2Z6TEpDZjdfeDg1c0c5d1lRWEl2RjlYUmtOVzdOSHNTclRQN0RVM2FuRTZQU0lVM3JIZDVRYjlvY0U5NjNKNE1KVGVsRVpMZEJVWjFnUmtSdGdiMFlhdXhSRlFGWTNON3RPNmtYcEpGWC1vZ2p4bVZuTHdCRnd"
+        }
+      ],
+      "ageMin": 201,
+      "_cand": {
+        "key": "rss:star-wars-knights-of-the-old-republic-remake-could-be-shown-",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "Instant Gaming News"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "Instant Gaming News",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 68,
+      "signals": {
+        "recency": 9,
+        "corroboration": 8,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-robert-downey-jr-doctor-doom-avengers-doomsday",
       "slug": "is-robert-downey-jr-s-doctor-doom-the-hero-or-villain-of-avengers-doom",
       "title": "Is Robert Downey Jr's Doctor Doom the Hero or Villain of Avengers: Doomsday?",
       "contentType": "news",
@@ -482,14 +617,14 @@
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "robert-downey-jr-doctor-doom-avengers-doomsday-hero-villain-speculatio",
-      "primaryKeyword": "robert downey jr doctor doom",
-      "primaryEntity": "Robert Downey Jr.",
+      "eventSlug": "robert-downey-jr-doctor-doom-avengers-doomsday",
+      "primaryKeyword": "Robert Downey Jr. Doctor Doom",
+      "primaryEntity": "Avengers: Doomsday",
       "entities": [
         "Doctor Doom",
-        "Avengers: Doomsday"
+        "Robert Downey Jr."
       ],
-      "angle": "Analyzing the potential alignment of Robert Downey Jr.'s Doctor Doom in the upcoming Marvel blockbuster.",
+      "angle": "Analyzing the potential role of Robert Downey Jr.'s Doctor Doom in the upcoming Avengers film.",
       "tmdbType": "movie",
       "source": "gnews:IGN",
       "sources": [
@@ -497,12 +632,12 @@
           "outlet": "IGN",
           "tier": 5,
           "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQeHpLLXpLRHo3STA1bnVRQXJiZjN5aXlUV01rX1dXdko0RDEwWnBPQXlsUVVSWFNQRUh3VFlBS2JZX2VuTDJWNkI3Si1RdDUyLW5EMVRRUnNmQ1EwcV9VdWpGY09vODlFZVFPNlVXTG5WX3E4WERJanloLWkxLWRxNHh1RTJMODV1eG80T25UcmJPclhuWXhxY0cyY2tZRWRlRlFORw?oc=5",
-          "ageMin": 353,
+          "ageMin": 533,
           "headline": "Is Robert Downey Jr's Doctor Doom the Hero or Villain of Avengers: Doomsday? - IGN",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxQeHpLLXpLRHo3STA1bnVRQXJiZjN5aXlUV01rX1dXdko0RDEwWnBPQXlsUVVSWFNQRUh3VFlBS2JZX2VuTDJWNkI3Si1RdDUyLW5EMVRRUnNmQ1EwcV9VdWpGY09vODlFZVFPNlVXTG5WX3E4WERJanloLWkxLWRxNHh1RTJMODV1eG80T25UcmJPclhuWXhxY0cyY2tZRWRlRlFORw?oc=5\" target=\"_blank\" Is Rob"
         }
       ],
-      "ageMin": 353,
+      "ageMin": 533,
       "_cand": {
         "key": "rss:is-robert-downey-jr-s-doctor-doom-the-hero-or-villain-of-ave",
         "popularity": 0,
@@ -523,9 +658,9 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 72,
+      "priority": 67,
       "signals": {
-        "recency": 9,
+        "recency": 4,
         "corroboration": 8,
         "status": 18,
         "type": 5,
@@ -541,38 +676,37 @@
       "tierClass": "A"
     },
     {
-      "id": "news-hbo-max-lanterns-stuart-fails-to-save-the-universe-comic-con-offsites",
-      "slug": "hbo-max-s-lanterns-and-stuart-fails-to-save-the-universe-get-offsites-",
-      "title": "HBO Max's 'Lanterns' and 'Stuart Fails to Save the Universe' Get Offsites at San Diego Comic-Con",
+      "id": "news-star-wars-knights-of-the-old-republic-remake-reveal-nears",
+      "slug": "star-wars-knights-of-the-old-republic-remake-reportedly-nears-reveal-a",
+      "title": "Star Wars Knights of the Old Republic Remake Reportedly Nears Reveal After 3 Years of Saber Rebuilding It From Scratch",
       "contentType": "news",
       "formatTag": "news",
-      "category": "tv",
+      "category": "celebrity",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "hbo-max-lanterns-stuart-fails-to-save-the-universe-comic-con-offsites",
-      "primaryKeyword": "HBO Max Lanterns",
-      "primaryEntity": "Lanterns",
+      "eventSlug": "star-wars-knights-of-the-old-republic-remake-reveal-nears",
+      "primaryKeyword": "Knights of the Old Republic Remake",
+      "primaryEntity": "Star Wars: Knights of the Old Republic Remake",
       "entities": [
-        "Stuart Fails to Save the Universe",
-        "San Diego Comic-Con"
+        "Star Wars"
       ],
-      "angle": "HBO Max is hosting offsite events for 'Lanterns' and 'Stuart Fails to Save the Universe' at San Diego Comic-Con.",
+      "angle": "The 'Star Wars: Knights of the Old Republic' remake is reportedly nearing an official reveal.",
       "tmdbType": "movie",
-      "source": "gnews:San Diego Comic-Con Unofficial Blog",
+      "source": "gnews:Wccftech",
       "sources": [
         {
-          "outlet": "San Diego Comic-Con Unofficial Blog",
+          "outlet": "Wccftech",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOREp2RkllMkx0M1pZdFJOb3ZzanY0bVFPMW1DSzc2bDMtWmd5b3pzZ1FoYzBNam9hSWdTbDZGemttYng4WE5uMFBrWWhnS1NOQ2RmbFJnaUVmSHpGMUZIOWZGX1BHaU5KWWdGNzNLWDJFSXNyeWdtc29vMzh4V2t4ZTltaXhPY2ZpUnlRRGVwbUhfVnBVRm1nX1JHcFpleEZXNnd6c0l3NVd1RlluRFJVazF1b25VLXV2dXY1QlhJWlRmUEw2RW1FT0UxQ0hDM2JMMGgtZEJBQU5wVDJBQUhJ?oc=5",
-          "ageMin": 278,
-          "headline": "Step into the World of HBO Max's \"Lanterns\", \"Stuart Fails to Save the Universe\" with Offsites at San Diego Comic-Con 2026 [UPDATE] - San Diego Comic-Con Unofficial Blog",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMi3wFBVV95cUxOREp2RkllMkx0M1pZdFJOb3ZzanY0bVFPMW1DSzc2bDMtWmd5b3pzZ1FoYzBNam9hSWdTbDZGemttYng4WE5uMFBrWWhnS1NOQ2RmbFJnaUVmSHpGMUZIOWZGX1BHaU5KWWdGNzNLWDJFSXNyeWdtc29vMzh4V2t4ZTltaXhPY2ZpUnlRRGVwbUhfVnBVRm1nX1JHcFpleEZXNnd6c0l3NVd1RlluRFJVazF1b25VLXV2dXY"
+          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPUlVudUVMWTFfdUt4NzUySGhGU0l1UXdIdHlMdTllZzBLSWtBY3ktazNRc3dhcGJlNF9JdkFiSWJWd09VUGgtSVJNQVRycjQ1VnRUMHk1MnJRQTBXVFBRQllzT0c1d2ZOZV9oZjJIdmVsdzRRV2F1ZG50dWdkOURCZjN5dGtkMFg3ZHRTMVp30gGTAUFVX3lxTE5ZLXNxcnkzU2JTU3lpQlNVa0lwdjNKeVhEUXBwY3ZhQTlnak9oM0xkcEN1azNsalo4WUh1TjBsal9NZ3l1OWxsTi1BbFV6aFhoLXF2ZkNuN1dlOWUwUS1FbkJmWnFHVzFSZm1pMHEwaGZST1hZVFJ1MzI4dTdYUHFRdjgxZHlQVFpXVlBxWVFvNmxuaw?oc=5",
+          "ageMin": 28,
+          "headline": "Star Wars Knights of the Old Republic Remake Reportedly Nears Reveal After 3 Years of Saber Rebuilding It From Scratch - Wccftech",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxPUlVudUVMWTFfdUt4NzUySGhGU0l1UXdIdHlMdTllZzBLSWtBY3ktazNRc3dhcGJlNF9JdkFiSWJWd09VUGgtSVJNQVRycjQ1VnRUMHk1MnJRQTBXVFBRQllzT0c1d2ZOZV9oZjJIdmVsdzRRV2F1ZG50dWdkOURCZjN5dGtkMFg3ZHRTMVp30gGTAUFVX3lxTE5ZLXNxcnkzU2JTU3lpQlNVa0lwdjNKeVhEUXBwY3ZhQTl"
         }
       ],
-      "ageMin": 278,
+      "ageMin": 28,
       "_cand": {
-        "key": "rss:step-into-the-world-of-hbo-max-s-lanterns-stuart-fails-to-sa",
+        "key": "rss:star-wars-knights-of-the-old-republic-remake-reportedly-near",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -582,63 +716,63 @@
         "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "San Diego Comic-Con Unofficial Blog"
+          "Wccftech"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "San Diego Comic-Con Unofficial Blog",
+        "attribution": "Wccftech",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 62,
+      "priority": 59,
       "signals": {
-        "recency": 9,
+        "recency": 24,
         "corroboration": 8,
         "status": 18,
         "type": 9,
         "pop": 0,
         "breakout": 0,
-        "big": 18,
+        "big": 0,
         "trending": 0,
         "spice": 0,
         "softTv": 0
       },
-      "tierClass": "B"
+      "tierClass": "C"
     },
     {
-      "id": "news-william-h-wisher-jr-terminator-screenwriter-death",
-      "slug": "william-h-wisher-jr-dies-the-terminator-terminator-2-judgment-day-scre",
-      "title": "William H. Wisher Jr. Dies: The Terminator Terminator 2: Judgment Day Screenwriter Was 71",
+      "id": "news-paul-mccartney-surprise-cameo-magical-mystery-tour",
+      "slug": "paul-mccartney-shocks-fans-with-surprise-cameo-on-beatles-magical-myst",
+      "title": "Paul McCartney Shocks Fans With Surprise Cameo on Beatles’ Magical Mystery Tour in Liverpool",
       "contentType": "news",
       "formatTag": "news",
-      "category": "movies",
+      "category": "celebrity",
       "subcategory": "news",
-      "eventType": "death",
-      "sensitivity": "high",
-      "eventSlug": "william-h-wisher-jr-terminator-screenwriter-death",
-      "primaryKeyword": "William H. Wisher Jr. Terminator",
-      "primaryEntity": "William H. Wisher Jr.",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "paul-mccartney-surprise-cameo-magical-mystery-tour",
+      "primaryKeyword": "Paul McCartney",
+      "primaryEntity": "Paul McCartney",
       "entities": [
-        "The Terminator",
-        "Terminator 2: Judgment Day"
+        "Magical Mystery Tour"
       ],
-      "angle": "William H. Wisher Jr., co-writer of 'The Terminator' and 'Terminator 2: Judgment Day,' has passed away at 71.",
+      "angle": "Paul McCartney makes a surprise appearance on an unofficial tour of The Beatles' Magical Mystery Tour in Liverpool.",
       "tmdbType": "movie",
-      "source": "rss:Deadline",
+      "source": "rss:Billboard",
       "sources": [
         {
-          "outlet": "Deadline",
+          "outlet": "Billboard",
           "tier": 7,
-          "url": "https://deadline.com/2026/07/william-h-wisher-jr-dead-the-terminator-screenwriter-1236999019/",
-          "ageMin": 323,
-          "headline": "William H. Wisher Jr. Dies: The Terminator Terminator 2: Judgment Day Screenwriter Was 71",
-          "summary": "William H. Wisher Jr., a producer and screenwriter who co-wrote The Terminator and Terminator 2: Judgment Day, has died. He was 71. The Wisher family confirmed news of the filmmaker s death, saying he passed away peacefully at home. William believed that stories have the power to connect people across generations, the family said in a [ ]"
+          "url": "https://www.billboard.com/music/music-news/the-beatles-paul-mccartney-magical-mystery-tour-cameo-1236299425/",
+          "ageMin": 76,
+          "headline": "Paul McCartney Shocks Fans With Surprise Cameo on Beatles’ Magical Mystery Tour in Liverpool",
+          "summary": "Macca was spotted by guests on the unofficial tour while stuck in traffic."
         }
       ],
-      "ageMin": 323,
+      "ageMin": 76,
       "_cand": {
-        "key": "rss:william-h-wisher-jr-dies-the-terminator-terminator-2-judgmen",
+        "key": "rss:paul-mccartney-shocks-fans-with-surprise-cameo-on-beatles-ma",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -648,156 +782,26 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Deadline"
-        ],
-        "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "Deadline",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 65,
-      "signals": {
-        "recency": 9,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 12,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "S"
-    },
-    {
-      "id": "news-ai-odyssey-film-discussion",
-      "slug": "what-s-really-in-the-ai-odyssey-film",
-      "title": "What’s Really In the AI Odyssey Film",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "ai-odyssey-film-discussion",
-      "primaryKeyword": "AI Odyssey film",
-      "primaryEntity": "AI Odyssey",
-      "entities": [
-        "Christopher Nolan"
-      ],
-      "angle": "Discussion on the content and themes within the film 'AI Odyssey'.",
-      "tmdbType": "movie",
-      "source": "gnews:The Hollywood Reporter",
-      "sources": [
-        {
-          "outlet": "The Hollywood Reporter",
-          "tier": 7,
-          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNajBaWEJMUzNxWF9sd2ZseE0xM3ZIcnpPN3UzNjJ1cDR5LVV5T3VSc0FOUjNpZTNMLUxvdFBBLXZ1ZlNjUDVnQ1Z1UjZBZ09QXzBhLW1VUzdiN1I0ckc1X01rb1lodzVmaXNWN0VBZ1gyX3pMdDd6bW5TdWxaSG44ZUx1ZXY5aVpwSlBWU1BIaHpZZ0szdE90YzZWQ1JDYWRwWHZxSzNR?oc=5",
-          "ageMin": 588,
-          "headline": "What’s Really In the AI Odyssey Film - The Hollywood Reporter",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxNajBaWEJMUzNxWF9sd2ZseE0xM3ZIcnpPN3UzNjJ1cDR5LVV5T3VSc0FOUjNpZTNMLUxvdFBBLXZ1ZlNjUDVnQ1Z1UjZBZ09QXzBhLW1VUzdiN1I0ckc1X01rb1lodzVmaXNWN0VBZ1gyX3pMdDd6bW5TdWxaSG44ZUx1ZXY5aVpwSlBWU1BIaHpZZ0szdE90YzZWQ1JDYWRwWHZxSzNR?oc=5\" target=\"_blank\" What"
-        }
-      ],
-      "ageMin": 588,
-      "_cand": {
-        "key": "rss:what-s-really-in-the-ai-odyssey-film-the-hollywood-reporter",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "The Hollywood Reporter"
+          "Billboard"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "The Hollywood Reporter",
+        "attribution": "Billboard",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
       "priority": 51,
       "signals": {
-        "recency": 4,
+        "recency": 16,
         "corroboration": 12,
         "status": 18,
         "type": 5,
         "pop": 0,
         "breakout": 0,
-        "big": 12,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-celebrity-splits-of-2026-jessie-j-chanan-colman-and-more",
-      "slug": "celebrity-splits-of-2026-jessie-j-chanan-colman-and-more-stars-who-cal",
-      "title": "Celebrity Splits of 2026: Jessie J, Chanan Colman and More Stars Who Called It Quits",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "breakup",
-      "sensitivity": "normal",
-      "eventSlug": "celebrity-splits-of-2026-jessie-j-chanan-colman-and-more",
-      "primaryKeyword": "celebrity breakups 2026",
-      "primaryEntity": "Jessie J",
-      "entities": [
-        "Chanan Colman"
-      ],
-      "angle": "A roundup of celebrity couples who have announced their splits in 2026, including Jessie J and Chanan Colman.",
-      "tmdbType": "movie",
-      "source": "gnews:Us Weekly",
-      "sources": [
-        {
-          "outlet": "Us Weekly",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPeEg1REU2QkVnLTVmUERlckVvNWVHNjhnUmFjelBnbkdsalR5STVvQ29mM3dkcmVKRUxpQmItREREQ2sycm04REx6SjhrS1ktZHNYRXh0cTIwazVSWmduVzg0a3lhV0FHZVBrTjFXQnFUbkNTV09qUEhxU0pJamE0ZmppTFNsbkV6TmxITDg1Yk1qd25TZmMxTlFzM2FSMXFRUUtfSV9tY1JzSl9RNUZ5Ti1OZ0c?oc=5",
-          "ageMin": 120,
-          "headline": "Celebrity Splits of 2026: Jessie J, Chanan Colman and More Stars Who Called It Quits - Us Weekly",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxPeEg1REU2QkVnLTVmUERlckVvNWVHNjhnUmFjelBnbkdsalR5STVvQ29mM3dkcmVKRUxpQmItREREQ2sycm04REx6SjhrS1ktZHNYRXh0cTIwazVSWmduVzg0a3lhV0FHZVBrTjFXQnFUbkNTV09qUEhxU0pJamE0ZmppTFNsbkV6TmxITDg1Yk1qd25TZmMxTlFzM2FSMXFRUUtfSV9tY1JzSl9RNUZ5Ti1OZ0c?oc=5\" t"
-        }
-      ],
-      "ageMin": 120,
-      "_cand": {
-        "key": "rss:celebrity-splits-of-2026-jessie-j-chanan-colman-and-more-sta",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "Us Weekly"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "Us Weekly",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 54,
-      "signals": {
-        "recency": 16,
-        "corroboration": 8,
-        "status": 18,
-        "type": 8,
-        "pop": 0,
-        "breakout": 0,
         "big": 0,
         "trending": 0,
-        "spice": 4,
+        "spice": 0,
         "softTv": 0
       },
       "tierClass": "C"
