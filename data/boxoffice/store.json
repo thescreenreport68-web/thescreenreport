@@ -980,11 +980,11 @@
    "key": "enola-holmes-3-netflix-top10-w2026-07-12|NETFLIX-TOP10",
    "eventSlug": "enola-holmes-3-netflix-top10-w2026-07-12",
    "form": "NETFLIX-TOP10",
-   "reason": "soft-floor engagement 4 < 5 | soft-floor humanVoice 3 < 5",
-   "tries": 2,
-   "at": "2026-07-20T22:37:47.600Z",
-   "dead": false,
-   "expiresAt": "2026-07-20T22:03:16.695Z"
+   "reason": "soft-floor engagement 4 < 5",
+   "tries": 3,
+   "at": "2026-07-21T03:09:06.785Z",
+   "dead": true,
+   "expiresAt": "2026-07-24T03:09:06.785Z"
   },
   {
    "key": "voicemails-for-isabelle-netflix-top10-w2026-07-12|NETFLIX-TOP10",
@@ -1652,21 +1652,21 @@
    "key": "the-odyssey-bo-update-100m|BO-UPDATE",
    "eventSlug": "the-odyssey-bo-update-100m",
    "form": "BO-UPDATE",
-   "reason": "1 unverified claim(s) cut, unrecovered",
-   "tries": 40,
-   "at": "2026-07-21T02:33:40.126Z",
+   "reason": "consistency: metaTitle: headlines domestic while the title headlines other — the SERP promise must match the page",
+   "tries": 41,
+   "at": "2026-07-21T03:03:59.561Z",
    "dead": true,
-   "expiresAt": "2026-07-24T02:33:40.126Z"
+   "expiresAt": "2026-07-24T03:03:59.561Z"
   },
   {
    "key": "star-wars-the-mandalorian-and-grogu-bo-update-d59|BO-UPDATE",
    "eventSlug": "star-wars-the-mandalorian-and-grogu-bo-update-d59",
    "form": "BO-UPDATE",
-   "reason": "1 unverified claim(s) cut, unrecovered",
-   "tries": 21,
-   "at": "2026-07-21T02:36:53.195Z",
+   "reason": "consistency: title: \"$177.5\" is not a canonical figure for this film | title: \"$177.5\" contradicts the canonical domestic figure ($177,534,904) | metaTitle: headlines domestic while the title headlines dailyGross/other — the SERP promise must match the page",
+   "tries": 22,
+   "at": "2026-07-21T03:05:57.941Z",
    "dead": true,
-   "expiresAt": "2026-07-24T02:36:53.195Z"
+   "expiresAt": "2026-07-24T03:05:57.941Z"
   },
   {
    "key": "project-hail-mary-bo-update-d128|BO-UPDATE",
@@ -1714,19 +1714,21 @@
    "key": "the-mandalorian-and-grogu-bo-update-d62|BO-UPDATE",
    "eventSlug": "the-mandalorian-and-grogu-bo-update-d62",
    "form": "BO-UPDATE",
-   "reason": "fidelity: 6 unsupported figures/claims — draft-level failure",
-   "tries": 2,
-   "at": "2026-07-21T02:38:30.552Z"
+   "reason": "synthesizer returned no usable brief",
+   "tries": 3,
+   "at": "2026-07-21T03:07:38.866Z",
+   "dead": true,
+   "expiresAt": "2026-07-24T03:07:38.866Z"
   }
  ],
- "zeroStreak": 22,
+ "zeroStreak": 23,
  "daySpend": {
   "laDay": "2026-07-20",
-  "usd": 0.60983
+  "usd": 0.63797
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1784601100092
+  "lastMs": 1784602899949
  },
  "lastAuditDay": "2026-07-20",
  "attempts": {
@@ -1744,12 +1746,12 @@
    "movie maga": 1,
    "wwe unreal": 1,
    "kung fu soccer": 1,
-   "enola holmes 3": 1,
+   "enola holmes 3": 2,
    "voicemails for isabelle": 1,
    "the doorman": 1,
    "little brother": 1,
    "malcolm in the middle: life's still unfair": 1,
-   "the mandalorian and grogu": 2,
+   "the mandalorian and grogu": 3,
    "rust creek": 1
   }
  }
