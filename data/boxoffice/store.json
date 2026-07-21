@@ -1669,10 +1669,10 @@
    "eventSlug": "the-odyssey-bo-update-100m",
    "form": "BO-UPDATE",
    "reason": "1 unverified claim(s) cut, unrecovered",
-   "tries": 52,
-   "at": "2026-07-21T09:04:33.824Z",
+   "tries": 53,
+   "at": "2026-07-21T09:33:42.675Z",
    "dead": true,
-   "expiresAt": "2026-07-24T09:04:33.824Z"
+   "expiresAt": "2026-07-24T09:33:42.675Z"
   },
   {
    "key": "star-wars-the-mandalorian-and-grogu-bo-update-d59|BO-UPDATE",
@@ -1688,11 +1688,11 @@
    "key": "project-hail-mary-bo-update-d128|BO-UPDATE",
    "eventSlug": "project-hail-mary-bo-update-d128",
    "form": "BO-UPDATE",
-   "reason": "reconcile: domestic+international ($317M) does not match worldwide ($141M) — present each figure as separately reported, never imply a sum | words 167 < 180 (owner-set ~200-word minimum)",
-   "tries": 4,
-   "at": "2026-07-21T08:09:13.173Z",
+   "reason": "reconcile: domestic+international ($317M) does not match worldwide ($141M) — present each figure as separately reported, never imply a sum | words 151 < 180 (owner-set ~200-word minimum)",
+   "tries": 5,
+   "at": "2026-07-21T09:37:18.594Z",
    "dead": true,
-   "expiresAt": "2026-07-24T08:09:13.173Z"
+   "expiresAt": "2026-07-24T09:37:18.594Z"
   },
   {
    "key": "movie-maga-ev-opening|BO-OPENING",
@@ -1714,9 +1714,11 @@
    "key": "malcolm-in-the-middle-life-s-still-unfair-trending-tv|TRENDING-TV",
    "eventSlug": "malcolm-in-the-middle-life-s-still-unfair-trending-tv",
    "form": "TRENDING-TV",
-   "reason": "platform: names disney+ not in confirmed providers",
-   "tries": 2,
-   "at": "2026-07-21T04:37:51.464Z"
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "tries": 3,
+   "at": "2026-07-21T09:38:39.777Z",
+   "dead": true,
+   "expiresAt": "2026-07-24T09:38:39.777Z"
   },
   {
    "key": "the-mandalorian-and-grogu-bo-update-d62|BO-UPDATE",
@@ -1737,14 +1739,14 @@
    "at": "2026-07-21T07:36:52.563Z"
   }
  ],
- "zeroStreak": 4,
+ "zeroStreak": 5,
  "daySpend": {
   "laDay": "2026-07-21",
-  "usd": 0.16469
+  "usd": 0.20259
  },
  "pace": {
-  "tokens": 3.2856223412698413,
-  "lastMs": 1784624494287
+  "tokens": 3.356978492063492,
+  "lastMs": 1784626292462
  },
  "lastAuditDay": "2026-07-21",
  "attempts": {
@@ -1755,10 +1757,11 @@
    "outcome": 3,
    "king of the hill": 1,
    "call me by your name": 1,
-   "project hail mary": 1,
+   "project hail mary": 2,
    "the mandalorian and grogu": 2,
    "f9: the fast saga": 1,
-   "old henry": 1
+   "old henry": 1,
+   "malcolm in the middle: life's still unfair": 1
   }
  }
 }
