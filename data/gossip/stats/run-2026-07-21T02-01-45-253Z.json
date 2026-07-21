@@ -1,0 +1,138 @@
+{
+  "ts": "2026-07-21T02:01:45.253Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "kelly-clarkson-jokes-about-getting-fired-after-nbc-talk-show-exit-during-ve",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [
+        "metaDescription-soft:logged",
+        "geo-no-attribution:logged"
+      ],
+      "headline": [
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 2
+    }
+  ],
+  "topics": 2,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 1,
+  "blocked": 0,
+  "costUSD": 0.013952,
+  "costPerPublished": 0.013952,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 7,
+      "in": 13276,
+      "out": 1654,
+      "usd": 0.0081178
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 1073,
+      "out": 366,
+      "usd": 0.000157842
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 6,
+      "in": 17622,
+      "out": 5053,
+      "usd": 0.004934926
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 8,
+      "in": 5153,
+      "out": 566,
+      "usd": 0.0007417
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2267,
+      "out": 175,
+      "usd": 0.0011175999999999998,
+      "ms": 1658
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1073,
+      "out": 366,
+      "usd": 0.00016245,
+      "ms": 8461
+    },
+    "writer": {
+      "calls": 5,
+      "errors": 0,
+      "in": 17002,
+      "out": 4739,
+      "usd": 0.00552172,
+      "ms": 165021
+    },
+    "verify": {
+      "calls": 6,
+      "errors": 0,
+      "in": 11009,
+      "out": 1479,
+      "usd": 0.007000200000000001,
+      "ms": 8546
+    },
+    "judge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1295,
+      "out": 192,
+      "usd": 0.0002063,
+      "ms": 1217
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 620,
+      "out": 314,
+      "usd": 0.00024936,
+      "ms": 11299
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 396,
+      "out": 78,
+      "usd": 0.00007080000000000001,
+      "ms": 796
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 196,
+      "out": 36,
+      "usd": 0.000034,
+      "ms": 423
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2073,
+      "out": 104,
+      "usd": 0.00024890000000000003,
+      "ms": 2371
+    },
+    "linker": {
+      "calls": 4,
+      "errors": 0,
+      "in": 1193,
+      "out": 156,
+      "usd": 0.00018170000000000003,
+      "ms": 1868
+    }
+  }
+}
