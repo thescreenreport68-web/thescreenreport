@@ -1057,9 +1057,9 @@
    "eventSlug": "rust-creek-netflix-top10-w2026-07-12",
    "form": "NETFLIX-TOP10",
    "reason": "3 unverified claim(s) cut, unrecovered",
-   "tries": 3,
-   "at": "2026-07-18T02:02:13.024Z",
-   "dead": true,
+   "tries": 2,
+   "at": "2026-07-21T02:40:02.652Z",
+   "dead": false,
    "expiresAt": "2026-07-21T02:02:13.024Z"
   },
   {
@@ -1653,20 +1653,20 @@
    "eventSlug": "the-odyssey-bo-update-100m",
    "form": "BO-UPDATE",
    "reason": "1 unverified claim(s) cut, unrecovered",
-   "tries": 39,
-   "at": "2026-07-21T02:03:16.975Z",
+   "tries": 40,
+   "at": "2026-07-21T02:33:40.126Z",
    "dead": true,
-   "expiresAt": "2026-07-24T02:03:16.975Z"
+   "expiresAt": "2026-07-24T02:33:40.126Z"
   },
   {
    "key": "star-wars-the-mandalorian-and-grogu-bo-update-d59|BO-UPDATE",
    "eventSlug": "star-wars-the-mandalorian-and-grogu-bo-update-d59",
    "form": "BO-UPDATE",
-   "reason": "fidelity: 9 unsupported figures/claims — draft-level failure",
-   "tries": 20,
-   "at": "2026-07-21T02:05:09.340Z",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "tries": 21,
+   "at": "2026-07-21T02:36:53.195Z",
    "dead": true,
-   "expiresAt": "2026-07-24T02:05:09.340Z"
+   "expiresAt": "2026-07-24T02:36:53.195Z"
   },
   {
    "key": "project-hail-mary-bo-update-d128|BO-UPDATE",
@@ -1714,19 +1714,19 @@
    "key": "the-mandalorian-and-grogu-bo-update-d62|BO-UPDATE",
    "eventSlug": "the-mandalorian-and-grogu-bo-update-d62",
    "form": "BO-UPDATE",
-   "reason": "4 unverified claim(s) cut, unrecovered",
-   "tries": 1,
-   "at": "2026-07-21T01:36:16.896Z"
+   "reason": "fidelity: 6 unsupported figures/claims — draft-level failure",
+   "tries": 2,
+   "at": "2026-07-21T02:38:30.552Z"
   }
  ],
- "zeroStreak": 21,
+ "zeroStreak": 22,
  "daySpend": {
   "laDay": "2026-07-20",
-  "usd": 0.58284
+  "usd": 0.60983
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1784599298138
+  "lastMs": 1784601100092
  },
  "lastAuditDay": "2026-07-20",
  "attempts": {
@@ -1749,7 +1749,8 @@
    "the doorman": 1,
    "little brother": 1,
    "malcolm in the middle: life's still unfair": 1,
-   "the mandalorian and grogu": 1
+   "the mandalorian and grogu": 2,
+   "rust creek": 1
   }
  }
 }
