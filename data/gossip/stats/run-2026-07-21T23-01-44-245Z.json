@@ -1,0 +1,141 @@
+{
+  "ts": "2026-07-21T23:01:44.245Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "blake-robertsons-arrest-case-dismissed-records-expunged",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [],
+      "headline": [
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 0
+    }
+  ],
+  "topics": 2,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 1,
+  "costUSD": 0.008754,
+  "costPerPublished": 0.008754,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 5,
+      "in": 10082,
+      "out": 723,
+      "usd": 0.004832099999999999
+    },
+    "qwen/qwen3-235b-a22b-2507": {
+      "calls": 1,
+      "in": 987,
+      "out": 387,
+      "usd": 0.0003789825
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 4,
+      "in": 11063,
+      "out": 3195,
+      "usd": 0.0025717528
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 916,
+      "out": 1545,
+      "usd": 0.0003937898
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 5,
+      "in": 3804,
+      "out": 493,
+      "usd": 0.0005775999999999999
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 2,
+      "errors": 0,
+      "in": 4580,
+      "out": 415,
+      "usd": 0.0024114999999999996,
+      "ms": 3507
+    },
+    "synthesizer": {
+      "calls": 3,
+      "errors": 1,
+      "in": 1903,
+      "out": 1932,
+      "usd": 0.00074718,
+      "ms": 38657
+    },
+    "writer": {
+      "calls": 3,
+      "errors": 0,
+      "in": 10387,
+      "out": 2894,
+      "usd": 0.0033729700000000003,
+      "ms": 51560
+    },
+    "verify": {
+      "calls": 3,
+      "errors": 0,
+      "in": 5502,
+      "out": 308,
+      "usd": 0.0024206,
+      "ms": 2625
+    },
+    "judge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1367,
+      "out": 173,
+      "usd": 0.00020590000000000004,
+      "ms": 843
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 676,
+      "out": 301,
+      "usd": 0.0002578200000000001,
+      "ms": 10455
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 378,
+      "out": 141,
+      "usd": 0.00009420000000000001,
+      "ms": 940
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 194,
+      "out": 40,
+      "usd": 0.00003540000000000001,
+      "ms": 397
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1573,
+      "out": 95,
+      "usd": 0.0001953,
+      "ms": 2241
+    },
+    "linker": {
+      "calls": 1,
+      "errors": 0,
+      "in": 292,
+      "out": 44,
+      "usd": 0.000046800000000000006,
+      "ms": 552
+    }
+  }
+}
