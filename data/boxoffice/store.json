@@ -1136,10 +1136,10 @@
    "key": "the-boss-baby-netflix-top10-w2026-07-12|NETFLIX-TOP10",
    "eventSlug": "the-boss-baby-netflix-top10-w2026-07-12",
    "form": "NETFLIX-TOP10",
-   "reason": "words 176 < 180 (owner-set ~200-word minimum)",
-   "tries": 3,
-   "at": "2026-07-18T17:02:48.501Z",
-   "dead": true,
+   "reason": "words 149 < 180 (owner-set ~200-word minimum) | soft-floor humanVoice 4 < 5",
+   "tries": 2,
+   "at": "2026-07-21T17:36:30.365Z",
+   "dead": false,
    "expiresAt": "2026-07-21T17:02:48.501Z"
   },
   {
@@ -1668,11 +1668,11 @@
    "key": "the-odyssey-bo-update-100m|BO-UPDATE",
    "eventSlug": "the-odyssey-bo-update-100m",
    "form": "BO-UPDATE",
-   "reason": "consistency: metaTitle: headlines domestic while the title headlines other — the SERP promise must match the page",
-   "tries": 69,
-   "at": "2026-07-21T17:05:50.892Z",
+   "reason": "synthesizer returned no usable brief",
+   "tries": 70,
+   "at": "2026-07-21T17:33:02.696Z",
    "dead": true,
-   "expiresAt": "2026-07-24T17:05:50.892Z"
+   "expiresAt": "2026-07-24T17:33:02.696Z"
   },
   {
    "key": "star-wars-the-mandalorian-and-grogu-bo-update-d59|BO-UPDATE",
@@ -1787,14 +1787,14 @@
    "at": "2026-07-21T16:20:46.770Z"
   }
  ],
- "zeroStreak": 22,
+ "zeroStreak": 23,
  "daySpend": {
   "laDay": "2026-07-21",
-  "usd": 0.293
+  "usd": 0.31348
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1784653291733
+  "lastMs": 1784655093571
  },
  "lastAuditDay": "2026-07-21",
  "attempts": {
@@ -1815,7 +1815,8 @@
    "star wars: the mandalorian and grogu | a special look": 1,
    "peter dinklage’s biggest fantasy movie with rachel zegler": 1,
    "heartstopper forever": 1,
-   "mortal kombat ii": 1
+   "mortal kombat ii": 1,
+   "the boss baby": 1
   }
  }
 }
