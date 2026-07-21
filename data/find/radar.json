@@ -1,8 +1,7 @@
 {
-  "builtAt": "2026-07-21T13:03:51.818Z",
+  "builtAt": "2026-07-21T20:03:22.291Z",
   "hotEntities": [
     "The Odyssey",
-    "Avengers: Doomsday",
     "Disclosure Day",
     "Backrooms",
     "Avatar Aang: The Last Airbender",
@@ -13,14 +12,16 @@
     "Her Private Hell",
     "Sheep in the Box",
     "Rosebush Pruning",
+    "Avengers: Doomsday",
     "Minions & Monsters",
     "Supergirl",
     "Toy Story 5",
-    "The Prosecutor's Proposal",
     "Binnelanders",
-    "Criminal Minds",
-    "Agent Kim Reactivated",
+    "Jeopardy!",
+    "The Daily Show",
     "Watch What Happens Live with Andy Cohen",
+    "The Prosecutor's Proposal",
+    "Criminal Minds",
     "The Furious",
     "Citizen Vigilante",
     "Kraken",
@@ -30,7 +31,6 @@
     "Spider-Man: Brand New Day",
     "I Want Your Sex",
     "The Gentleman Thief",
-    "The Samurai and the Prisoner",
     "The Young and the Restless",
     "The Bold and the Beautiful",
     "Beyond the Gates",
@@ -40,74 +40,74 @@
     "Tyler Perry's Ruthless",
     "Days of Our Lives",
     "The Undeclared War",
-    "Scary Movie"
+    "The Mandalorian and Grogu"
   ],
   "windows": {
     "the odyssey": {
       "kind": "movie-in-theaters",
       "weight": 30,
-      "until": "2026-07-28T13:03:51.818Z",
+      "until": "2026-07-28T20:03:22.291Z",
       "name": "The Odyssey"
-    },
-    "backrooms": {
-      "kind": "movie-in-theaters",
-      "weight": 18.414932999999998,
-      "until": "2026-07-28T13:03:51.818Z",
-      "name": "Backrooms"
     },
     "disclosure day": {
       "kind": "movie-in-theaters",
       "weight": 18.498,
-      "until": "2026-07-28T13:03:51.818Z",
+      "until": "2026-07-28T20:03:22.291Z",
       "name": "Disclosure Day"
     },
-    "toy story 5": {
+    "backrooms": {
       "kind": "movie-in-theaters",
-      "weight": 17.17664,
-      "until": "2026-07-28T13:03:51.818Z",
-      "name": "Toy Story 5"
+      "weight": 18.414932999999998,
+      "until": "2026-07-28T20:03:22.291Z",
+      "name": "Backrooms"
     },
     "minions & monsters": {
       "kind": "movie-in-theaters",
       "weight": 17.731675,
-      "until": "2026-07-28T13:03:51.818Z",
+      "until": "2026-07-28T20:03:22.291Z",
       "name": "Minions & Monsters"
     },
     "supergirl": {
       "kind": "movie-in-theaters",
       "weight": 17.638004000000002,
-      "until": "2026-07-28T13:03:51.818Z",
+      "until": "2026-07-28T20:03:22.291Z",
       "name": "Supergirl"
+    },
+    "toy story 5": {
+      "kind": "movie-in-theaters",
+      "weight": 17.17664,
+      "until": "2026-07-28T20:03:22.291Z",
+      "name": "Toy Story 5"
     },
     "the furious": {
       "kind": "movie-in-theaters",
       "weight": 15.774357,
-      "until": "2026-07-28T13:03:51.818Z",
+      "until": "2026-07-28T20:03:22.291Z",
       "name": "The Furious"
     },
     "citizen vigilante": {
       "kind": "movie-in-theaters",
       "weight": 15.129742,
-      "until": "2026-07-28T13:03:51.818Z",
+      "until": "2026-07-28T20:03:22.291Z",
       "name": "Citizen Vigilante"
     },
     "kraken": {
       "kind": "movie-in-theaters",
       "weight": 14.982602,
-      "until": "2026-07-28T13:03:51.818Z",
+      "until": "2026-07-28T20:03:22.291Z",
       "name": "Kraken"
-    },
-    "evil dead burn": {
-      "kind": "movie-in-theaters",
-      "weight": 14.665296,
-      "until": "2026-07-28T13:03:51.818Z",
-      "name": "Evil Dead Burn"
     },
     "borderline": {
       "kind": "movie-in-theaters",
       "weight": 14.672325,
-      "until": "2026-07-28T13:03:51.818Z",
+      "until": "2026-07-28T20:03:22.291Z",
       "name": "Borderline"
+    },
+    "evil dead burn": {
+      "kind": "movie-in-theaters",
+      "weight": 14.665296,
+      "until": "2026-07-28T20:03:22.291Z",
+      "name": "Evil Dead Burn"
     },
     "spider-man: brand new day": {
       "kind": "movie-releasing",
@@ -163,12 +163,6 @@
       "until": "2026-08-07T00:00:00.000Z",
       "name": "The Gentleman Thief"
     },
-    "the samurai and the prisoner": {
-      "kind": "movie-releasing",
-      "weight": 12,
-      "until": "2026-08-07T00:00:00.000Z",
-      "name": "The Samurai and the Prisoner"
-    },
     "sheep in the box": {
       "kind": "movie-releasing",
       "weight": 18,
@@ -181,83 +175,113 @@
       "until": "2026-07-31T00:00:00.000Z",
       "name": "Rosebush Pruning"
     },
-    "scary movie": {
-      "kind": "movie-trending",
-      "weight": 10,
-      "until": "2026-07-23T13:03:51.818Z",
-      "name": "Scary Movie"
-    },
     "the mandalorian and grogu": {
       "kind": "movie-trending",
       "weight": 10,
-      "until": "2026-07-23T13:03:51.818Z",
+      "until": "2026-07-23T20:03:22.291Z",
       "name": "The Mandalorian and Grogu"
+    },
+    "scary movie": {
+      "kind": "movie-trending",
+      "weight": 10,
+      "until": "2026-07-23T20:03:22.291Z",
+      "name": "Scary Movie"
     },
     "avengers: doomsday": {
       "kind": "movie-trending",
-      "weight": 20,
-      "until": "2026-07-23T13:03:51.818Z",
+      "weight": 18,
+      "until": "2026-07-23T20:03:22.291Z",
       "name": "Avengers: Doomsday"
     },
     "obsession": {
       "kind": "movie-trending",
       "weight": 10,
-      "until": "2026-07-23T13:03:51.818Z",
+      "until": "2026-07-23T20:03:22.291Z",
       "name": "Obsession"
     },
-    "descendants: wicked wonderland": {
+    "the death of robin hood": {
       "kind": "movie-trending",
       "weight": 10,
-      "until": "2026-07-23T13:03:51.818Z",
-      "name": "Descendants: Wicked Wonderland"
+      "until": "2026-07-23T20:03:22.291Z",
+      "name": "The Death of Robin Hood"
     },
-    "king of the hill": {
-      "kind": "tv-trending",
+    "masters of the universe": {
+      "kind": "movie-trending",
       "weight": 10,
-      "until": "2026-07-23T13:03:51.818Z",
-      "name": "King of the Hill"
+      "until": "2026-07-23T20:03:22.291Z",
+      "name": "Masters of the Universe"
     },
     "house of the dragon": {
       "kind": "tv-trending",
       "weight": 10,
-      "until": "2026-07-23T13:03:51.818Z",
+      "until": "2026-07-23T20:03:22.291Z",
       "name": "House of the Dragon"
+    },
+    "king of the hill": {
+      "kind": "tv-trending",
+      "weight": 10,
+      "until": "2026-07-23T20:03:22.291Z",
+      "name": "King of the Hill"
     },
     "star wars: the mandalorian and grogu | a special look": {
       "kind": "tv-trending",
       "weight": 10,
-      "until": "2026-07-23T13:03:51.818Z",
+      "until": "2026-07-23T20:03:22.291Z",
       "name": "Star Wars: The Mandalorian and Grogu | A Special Look"
     },
     "rick and morty": {
       "kind": "tv-trending",
       "weight": 10,
-      "until": "2026-07-23T13:03:51.818Z",
+      "until": "2026-07-23T20:03:22.291Z",
       "name": "Rick and Morty"
     },
     "ride or die": {
       "kind": "tv-trending",
       "weight": 10,
-      "until": "2026-07-23T13:03:51.818Z",
+      "until": "2026-07-23T20:03:22.291Z",
       "name": "Ride or Die"
     },
-    "the westies": {
+    "ted lasso": {
       "kind": "tv-trending",
       "weight": 10,
-      "until": "2026-07-23T13:03:51.818Z",
-      "name": "The Westies"
+      "until": "2026-07-23T20:03:22.291Z",
+      "name": "Ted Lasso"
     },
-    "the hawk": {
+    "the vampire lestat": {
       "kind": "tv-trending",
       "weight": 10,
-      "until": "2026-07-23T13:03:51.818Z",
-      "name": "The Hawk"
+      "until": "2026-07-23T20:03:22.291Z",
+      "name": "The Vampire Lestat"
     },
-    "the boys": {
+    "stranger things": {
       "kind": "tv-trending",
       "weight": 10,
-      "until": "2026-07-23T13:03:51.818Z",
-      "name": "The Boys"
+      "until": "2026-07-23T20:03:22.291Z",
+      "name": "Stranger Things"
+    },
+    "binnelanders": {
+      "kind": "tv-episode-soon",
+      "weight": 16,
+      "until": "2026-07-23T00:00:00.000Z",
+      "name": "Binnelanders"
+    },
+    "jeopardy!": {
+      "kind": "tv-episode-soon",
+      "weight": 16,
+      "until": "2026-07-23T00:00:00.000Z",
+      "name": "Jeopardy!"
+    },
+    "the daily show": {
+      "kind": "tv-episode-soon",
+      "weight": 16,
+      "until": "2026-07-23T00:00:00.000Z",
+      "name": "The Daily Show"
+    },
+    "watch what happens live with andy cohen": {
+      "kind": "tv-episode-soon",
+      "weight": 16,
+      "until": "2026-07-23T00:00:00.000Z",
+      "name": "Watch What Happens Live with Andy Cohen"
     },
     "mushoku tensei: jobless reincarnation": {
       "kind": "tv-episode-aired",
@@ -271,82 +295,64 @@
       "until": "2026-07-25T00:00:00.000Z",
       "name": "The Prosecutor's Proposal"
     },
-    "binnelanders": {
-      "kind": "tv-episode-soon",
-      "weight": 16,
-      "until": "2026-07-23T00:00:00.000Z",
-      "name": "Binnelanders"
-    },
     "criminal minds": {
       "kind": "tv-episode-soon",
       "weight": 16,
       "until": "2026-07-25T00:00:00.000Z",
       "name": "Criminal Minds"
     },
-    "agent kim reactivated": {
-      "kind": "tv-episode-soon",
-      "weight": 16,
-      "until": "2026-07-26T00:00:00.000Z",
-      "name": "Agent Kim Reactivated"
-    },
-    "watch what happens live with andy cohen": {
-      "kind": "tv-episode-soon",
-      "weight": 16,
-      "until": "2026-07-23T00:00:00.000Z",
-      "name": "Watch What Happens Live with Andy Cohen"
-    },
     "the young and the restless": {
       "kind": "tv-episode-today",
       "weight": 12,
-      "until": "2026-07-23T13:03:51.818Z",
+      "until": "2026-07-23T20:03:22.291Z",
       "name": "The Young and the Restless"
     },
     "the bold and the beautiful": {
       "kind": "tv-episode-today",
       "weight": 12,
-      "until": "2026-07-23T13:03:51.818Z",
+      "until": "2026-07-23T20:03:22.291Z",
       "name": "The Bold and the Beautiful"
     },
     "beyond the gates": {
       "kind": "tv-episode-today",
       "weight": 12,
-      "until": "2026-07-23T13:03:51.818Z",
+      "until": "2026-07-23T20:03:22.291Z",
       "name": "Beyond the Gates"
     },
     "general hospital": {
       "kind": "tv-episode-today",
       "weight": 12,
-      "until": "2026-07-23T13:03:51.818Z",
+      "until": "2026-07-23T20:03:22.291Z",
       "name": "General Hospital"
     },
     "eastenders": {
       "kind": "tv-episode-today",
       "weight": 12,
-      "until": "2026-07-23T13:03:51.818Z",
+      "until": "2026-07-23T20:03:22.291Z",
       "name": "EastEnders"
     },
     "emmerdale": {
       "kind": "tv-episode-today",
       "weight": 12,
-      "until": "2026-07-23T13:03:51.818Z",
+      "until": "2026-07-23T20:03:22.291Z",
       "name": "Emmerdale"
     },
     "tyler perry's ruthless": {
       "kind": "tv-episode-today",
       "weight": 12,
-      "until": "2026-07-23T13:03:51.818Z",
+      "until": "2026-07-23T20:03:22.291Z",
       "name": "Tyler Perry's Ruthless"
     },
     "days of our lives": {
       "kind": "tv-episode-today",
       "weight": 12,
-      "until": "2026-07-23T13:03:51.818Z",
+      "until": "2026-07-23T20:03:22.291Z",
       "name": "Days of Our Lives"
     },
     "the undeclared war": {
       "kind": "tv-episode-today",
       "weight": 12,
-      "until": "2026-07-23T13:03:51.818Z",
+      "until": "2026-07-23T20:03:22.291Z",
       "name": "The Undeclared War"
     }
   }

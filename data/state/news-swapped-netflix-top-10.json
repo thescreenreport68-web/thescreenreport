@@ -1,0 +1,79 @@
+{
+  "id": "news-swapped-netflix-top-10",
+  "slug": "swapped-officially-breaks-into-netflix-s-all-time-top-10-list-director",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": null,
+      "cat": "celebrity/news",
+      "format": [
+        "H2s 0 < 1",
+        "a 73-word run-on sentence (>55 — split it)"
+      ],
+      "cuts": 3,
+      "broken": []
+    },
+    "attempt2": {
+      "score": null,
+      "cat": "celebrity/news",
+      "format": [
+        "H2s 0 < 1",
+        "a 73-word run-on sentence (>55 — split it)"
+      ],
+      "cuts": 0,
+      "broken": []
+    }
+  },
+  "editorial": {
+    "status": "official",
+    "entity": "Swapped",
+    "work": {
+      "title": "Swapped",
+      "year": null,
+      "medium": "movie"
+    },
+    "outlet": "whats-on-netflix.com"
+  },
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
+    "deterministic": {
+      "words": 256,
+      "h2s": 0,
+      "h2Questions": 0,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 3,
+      "ktCount": 3,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 73,
+      "avgSentence": 22,
+      "flesch": 48,
+      "bannedTells": 1,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": [
+        "H2s 0 < 1",
+        "a 73-word run-on sentence (>55 — split it)"
+      ]
+    },
+    "hardBlocks": []
+  },
+  "score": null,
+  "category": "celebrity",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "1+ subheads",
+      "keyword in title"
+    ]
+  },
+  "ms": 54184
+}
