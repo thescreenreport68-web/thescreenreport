@@ -1668,11 +1668,11 @@
    "key": "the-odyssey-bo-update-100m|BO-UPDATE",
    "eventSlug": "the-odyssey-bo-update-100m",
    "form": "BO-UPDATE",
-   "reason": "consistency: metaTitle: headlines domestic while the title headlines other — the SERP promise must match the page",
-   "tries": 60,
-   "at": "2026-07-21T13:03:27.691Z",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "tries": 61,
+   "at": "2026-07-21T13:34:00.403Z",
    "dead": true,
-   "expiresAt": "2026-07-24T13:03:27.691Z"
+   "expiresAt": "2026-07-24T13:34:00.403Z"
   },
   {
    "key": "star-wars-the-mandalorian-and-grogu-bo-update-d59|BO-UPDATE",
@@ -1761,16 +1761,24 @@
    "reason": "under floor: no confirmed streaming platform for trending TV",
    "tries": 1,
    "at": "2026-07-21T12:34:45.704Z"
+  },
+  {
+   "key": "the-mandalorian-and-grogu-bo-update-d63|BO-UPDATE",
+   "eventSlug": "the-mandalorian-and-grogu-bo-update-d63",
+   "form": "BO-UPDATE",
+   "reason": "fidelity: 6 unsupported figures/claims — draft-level failure",
+   "tries": 1,
+   "at": "2026-07-21T13:37:31.577Z"
   }
  ],
- "zeroStreak": 12,
+ "zeroStreak": 13,
  "daySpend": {
   "laDay": "2026-07-21",
-  "usd": 0.24616
+  "usd": 0.2528
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1784638892313
+  "lastMs": 1784640697604
  },
  "lastAuditDay": "2026-07-21",
  "attempts": {
@@ -1782,7 +1790,7 @@
    "king of the hill": 1,
    "call me by your name": 1,
    "project hail mary": 3,
-   "the mandalorian and grogu": 2,
+   "the mandalorian and grogu": 3,
    "f9: the fast saga": 1,
    "old henry": 1,
    "malcolm in the middle: life's still unfair": 1,
