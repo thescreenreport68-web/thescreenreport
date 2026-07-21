@@ -1,43 +1,109 @@
 {
-  "runId": "run-2026-07-21T18-01-37",
-  "builtAt": "2026-07-21T18:04:20.142Z",
-  "count": 23,
+  "runId": "run-2026-07-21T19-01-35",
+  "builtAt": "2026-07-21T19:03:19.308Z",
+  "count": 28,
   "topics": [
     {
-      "id": "news-will-forte-a24-goblin-casting",
-      "slug": "will-arnett-in-talks-for-a24-s-goblin-with-kenneth-branagh-skyler-giso",
-      "title": "Will Arnett in Talks for A24's 'Goblin' with Kenneth Branagh, Skyler Gisondo",
+      "id": "news-corey-stoll-ralph-ineson-nyasha-hatendi-monsterverse-series-casting",
+      "slug": "corey-stoll-ralph-ineson-nyasha-hatendi-join-wyatt-russell-led-monster",
+      "title": "Corey Stoll, Ralph Ineson Nyasha Hatendi Join Wyatt Russell-Led Monsterverse Series",
       "contentType": "news",
       "formatTag": "news",
-      "category": "movies",
+      "category": "tv",
       "subcategory": "news",
       "eventType": "casting",
-      "sensitivity": "high",
-      "eventSlug": "will-forte-a24-goblin-casting",
-      "primaryKeyword": "will forte goblin",
-      "primaryEntity": "Goblin (film)",
+      "sensitivity": "normal",
+      "eventSlug": "corey-stoll-ralph-ineson-nyasha-hatendi-monsterverse-series-casting",
+      "primaryKeyword": "monsterverse series casting",
+      "primaryEntity": "Monsterverse series",
       "entities": [
-        "Will Arnett",
-        "Skyler Gisondo",
-        "Kenneth Branagh",
-        "A24"
+        "Corey Stoll",
+        "Ralph Ineson",
+        "Nyasha Hatendi",
+        "Wyatt Russell"
       ],
-      "angle": "Will Arnett in talks to join A24's upcoming film 'Goblin' alongside Skyler Gisondo and Kenneth Branagh.",
+      "angle": "Corey Stoll, Ralph Ineson, and Nyasha Hatendi have joined the cast of the upcoming Monsterverse series.",
       "tmdbType": "movie",
       "source": "rss:Deadline",
       "sources": [
         {
           "outlet": "Deadline",
           "tier": 7,
-          "url": "https://deadline.com/2026/07/will-arnett-joins-skyler-gisondo-kenneth-branagh-in-goblin-1236999516/",
-          "ageMin": 4,
-          "headline": "Will Arnett Joins Skyler Gisondo Kenneth Branagh In A24 s Goblin",
-          "summary": "EXCLUSIVE: A24 has Will Forte in talks to play dual roles in the David Mikalson-directed film Goblin. Forte joins Skyler Gisondo and Kenneth Branagh, latter of whom will provide the voice the title character in the outrageous comedy. Production is set for the fall as Mikalson closes in on a dream come true. As Deadline [ ]"
+          "url": "https://deadline.com/2026/07/apple-monsterverse-series-cast-corey-stoll-1236999454/",
+          "ageMin": 1,
+          "headline": "Corey Stoll, Ralph Ineson Nyasha Hatendi Join Wyatt Russell-Led Monsterverse Series",
+          "summary": "EXCLUSIVE: Corey Stoll (Imperfect Women, Billions), Ralph Ineson (The Witch, The Fantastic Four: First Steps), and Nyasha Hatendi (Agatha Christie’s The Seven Dials, Casual) have joined the expanding cast of Legendary’s Monsterverse series for Apple TV. Details regarding who the trio will play are under wraps. They join as series regulars, starring alongside lead executive producer Wyatt [ ]"
         }
       ],
-      "ageMin": 4,
+      "ageMin": 1,
       "_cand": {
-        "key": "rss:will-arnett-joins-skyler-gisondo-kenneth-branagh-in-a24-s-go",
+        "key": "rss:corey-stoll-ralph-ineson-nyasha-hatendi-join-wyatt-russell-l",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 92,
+      "signals": {
+        "recency": 30,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-annasophia-robb-will-smith-supermax-casting",
+      "slug": "i-play-rocky-actor-annasophia-robb-to-co-star-opposite-will-smith-in-a",
+      "title": "I Play Rocky Actor AnnaSophia Robb To Co-Star Opposite Will Smith In Action Thriller Supermax",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "high",
+      "eventSlug": "annasophia-robb-will-smith-supermax-casting",
+      "primaryKeyword": "annasophia robb will smith",
+      "primaryEntity": "Supermax (film)",
+      "entities": [
+        "AnnaSophia Robb",
+        "Will Smith"
+      ],
+      "angle": "AnnaSophia Robb is set to co-star with Will Smith in the action thriller 'Supermax'.",
+      "tmdbType": "movie",
+      "source": "rss:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/i-play-rocky-annasophia-robb-will-smith-supermax-1236998794/",
+          "ageMin": 17,
+          "headline": "I Play Rocky Actor AnnaSophia Robb To Co-Star Opposite Will Smith In Action Thriller Supermax",
+          "summary": "EXCLUSIVE: Will Smith looks to have found his first co-star for his next film as sources tell Deadline I Play Rocky star AnnaSophia Robb is set to join Smith in the Amazon MGM Studios and Miramax thriller Supermax. David Gordon Green is directing the pic. Deadline reported in May that Amazon MGM Studios is closing [ ]"
+        }
+      ],
+      "ageMin": 17,
+      "_cand": {
+        "key": "rss:i-play-rocky-actor-annasophia-robb-to-co-star-opposite-will-",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -56,9 +122,9 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 98,
+      "priority": 92,
       "signals": {
-        "recency": 30,
+        "recency": 24,
         "corroboration": 12,
         "status": 18,
         "type": 14,
@@ -72,105 +138,38 @@
       "tierClass": "S"
     },
     {
-      "id": "news-evil-dead-burn-haunted-house-universal-studios-halloween-horror-nights",
-      "slug": "evil-dead-burn-haunted-house-experience-is-headed-to-universal-studios",
-      "title": "Evil Dead Burn Haunted House Experience Is Headed to Universal Studios Halloween Horror Nights",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "high",
-      "eventSlug": "evil-dead-burn-haunted-house-universal-studios-halloween-horror-nights",
-      "primaryKeyword": "Evil Dead",
-      "primaryEntity": "Evil Dead",
-      "entities": [
-        "Universal Studios",
-        "Halloween Horror Nights"
-      ],
-      "angle": "The 'Evil Dead Burn' haunted house experience is coming to Universal Studios' Halloween Horror Nights.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/film/news/evil-dead-burn-universal-studios-halloween-horror-nights-1236817166/",
-          "ageMin": 122,
-          "headline": "Evil Dead Burn Haunted House Experience Is Headed to Universal Studios Halloween Horror Nights",
-          "summary": "Evil Dead Burn is headed to Universal’s Halloween Horror Nights as a haunted house experience. The latest film from New Line Cinema takes shape as the newest Halloween Horror Nights haunted house, beginning Aug. 28 at Universal Orlando Resort and Sept 3 at Universal Studios Hollywood. The haunted houses will take guests on a terrifying [ ]"
-        }
-      ],
-      "ageMin": 122,
-      "_cand": {
-        "key": "rss:evil-dead-burn-haunted-house-experience-is-headed-to-univers",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 94,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0,
-        "radar": 15
-      },
-      "radarKind": "movie-in-theaters",
-      "tierClass": "S"
-    },
-    {
-      "id": "news-carole-radziwill-real-housewives-new-york-return",
-      "slug": "carole-radziwill-returning-full-time-to-real-housewives-of-new-york-ci",
-      "title": "Carole Radziwill Returning Full Time to Real Housewives of New York City",
+      "id": "news-nick-offerman-emmy-nominations-death-by-lightning",
+      "slug": "nick-offerman-on-emmy-noms-and-life-lessons",
+      "title": "Nick Offerman on Emmy Noms and Life Lessons",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "carole-radziwill-real-housewives-new-york-return",
-      "primaryKeyword": "carole radziwill real housewives",
-      "primaryEntity": "Carole Radziwill",
+      "eventType": "award",
+      "sensitivity": "high",
+      "tier": "popular",
+      "eventSlug": "nick-offerman-emmy-nominations-death-by-lightning",
+      "primaryKeyword": "Nick Offerman",
+      "primaryEntity": "Nick Offerman",
       "entities": [
-        "The Real Housewives of New York City"
+        "Death by Lightning"
       ],
-      "angle": "Carole Radziwill is returning to RHONY and facing questions about Jeffrey Epstein.",
+      "angle": "Nick Offerman discusses his Emmy nominations for 'Death by Lightning' and shares personal reflections.",
       "tmdbType": "movie",
-      "source": "rss:THR",
+      "source": "rss:Deadline",
       "sources": [
         {
-          "outlet": "THR",
+          "outlet": "Deadline",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/lists/real-housewives-new-york-city-season-16-trailer-cast/",
-          "ageMin": 2,
-          "headline": "Carole Radziwill Returning Full Time to Real Housewives of New York City",
-          "summary": "The season 16 trailer, which dropped Tuesday, also sees Radziwill questioned about her past ties to Jeffrey Epstein and Ghislaine Maxwell."
+          "url": "https://deadline.com/2026/07/nick-offerman-emmys-parks-rec-margos-lightning-interview-1236999487/",
+          "ageMin": 25,
+          "headline": "Nick Offerman’s ‘Parks And Rec’ Memories, Double Emmy Nominations, The Movie That Makes Him Cry Some Rules To Live By",
+          "summary": "Nick Offerman is sitting in what looks like a large closet. We’re on Zoom to discuss his two Emmy nominations — for his role of Vice President Chester A. Arthur in Netflix limited series Death by Lightning; and for Apple TV’s comedy series Margo’s Got Money Troubles, in which he plays Jinx, a wrestler struggling [ ]"
         }
       ],
-      "ageMin": 2,
+      "ageMin": 25,
       "_cand": {
-        "key": "rss:carole-radziwill-returning-full-time-to-real-housewives-of-n",
+        "key": "rss:nick-offerman-s-parks-and-rec-memories-double-emmy-nominatio",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -180,21 +179,21 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "THR"
+          "Deadline"
         ],
         "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
+        "sensitivity": "high",
+        "attribution": "Deadline",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 87,
+      "priority": 86,
       "signals": {
-        "recency": 30,
+        "recency": 24,
         "corroboration": 12,
         "status": 18,
-        "type": 9,
+        "type": 14,
         "pop": 0,
         "breakout": 0,
         "big": 18,
@@ -202,104 +201,10 @@
         "spice": 0,
         "softTv": 0
       },
-      "tierClass": "B"
+      "tierClass": "S"
     },
     {
-      "id": "music-news-hatebreed-kill-count-increase-music-video",
-      "slug": "hatebreed-release-kill-count-increase-music-video",
-      "title": "Hatebreed release “Kill Count Increase” music video",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "hatebreed-kill-count-increase-music-video",
-      "primaryKeyword": "Hatebreed music video",
-      "primaryEntity": "Hatebreed",
-      "entities": [
-        "Kill Count Increase",
-        "Fatal Paradox"
-      ],
-      "angle": "Hatebreed releases music video for new single and announces new album.",
-      "tmdbType": "movie",
-      "source": "gnews:NextMosh",
-      "sources": [
-        {
-          "outlet": "NextMosh",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5fVEhPSkdlVmRmZWVUYUx1SnYyTFh1cEo0UVgwenhsdF9wdURsMjlOcm50Q2pVYVYtdDlMU2NLTVVHUGdWblFrbGNCVkR5amd2YXRWYmxhcmVsNkswbEhDQXluUzdUUk10T05ZWnJqaXZnV05NQlhkZDdhdw?oc=5",
-          "ageMin": 109,
-          "headline": "Hatebreed release “Kill Count Increase” music video - NextMosh",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMie0FVX3lxTE5fVEhPSkdlVmRmZWVUYUx1SnYyTFh1cEo0UVgwenhsdF9wdURsMjlOcm50Q2pVYVYtdDlMU2NLTVVHUGdWblFrbGNCVkR5amd2YXRWYmxhcmVsNkswbEhDQXluUzdUUk10T05ZWnJqaXZnV05NQlhkZDdhdw?oc=5\" target=\"_blank\" Hatebreed release “Kill Count Increase” music video /a nbsp; n"
-        },
-        {
-          "outlet": "The Mosh Network",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQaldKQk05djRUMXY5enlsQTUtMjVoak5PeEx0VHB3WW5SZ1k5NEJnUHRDZUU0UGtjalphVlhRTzBsVnNxdmRsWlAzN09PZDRYak1ZWnVuN2p0SUh5LXBSS0FIYVF3NXA1RUlBMWVQQkUyMXNPMzlVVDZDOUY5TmRXNHhn?oc=5",
-          "ageMin": 118,
-          "headline": "Hatebreed Release “Kill Count Increase” Video, Officially Announce New Album ‘Fatal Paradox’ - The Mosh Network",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiggFBVV95cUxQaldKQk05djRUMXY5enlsQTUtMjVoak5PeEx0VHB3WW5SZ1k5NEJnUHRDZUU0UGtjalphVlhRTzBsVnNxdmRsWlAzN09PZDRYak1ZWnVuN2p0SUh5LXBSS0FIYVF3NXA1RUlBMWVQQkUyMXNPMzlVVDZDOUY5TmRXNHhn?oc=5\" target=\"_blank\" Hatebreed Release “Kill Count Increase” Video, Offic"
-        },
-        {
-          "outlet": "antiMusic",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQSFctY0lJaldiSnNtTFc2WUhaOUdWX3B4STBMNVUxSGNvbDBhS0lFbGRxUmhqNUxBZlRETGpDa2ZTckNVdGxuQXNqczBZaEEzWTZQQzVjc0xkYU5WOWpHa0dzRTlENDJaTUFWUkU3MkRDQnAxRHZJTlk4cVJMd2tNRHNsX09LT3d4NmZhdU5ueGpScm04WDNsRXZ5RURPSFNrbnk2T24yU2NiLUJiT1NN?oc=5",
-          "ageMin": 126,
-          "headline": "Hatebreed Reveal 'Kill Count Increase' Video And Announce New Album - antiMusic",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxQSFctY0lJaldiSnNtTFc2WUhaOUdWX3B4STBMNVUxSGNvbDBhS0lFbGRxUmhqNUxBZlRETGpDa2ZTckNVdGxuQXNqczBZaEEzWTZQQzVjc0xkYU5WOWpHa0dzRTlENDJaTUFWUkU3MkRDQnAxRHZJTlk4cVJMd2tNRHNsX09LT3d4NmZhdU5ueGpScm04WDNsRXZ5RURPSFNrbnk2T24yU2NiLUJiT1NN?oc=5\" target=\""
-        },
-        {
-          "outlet": "BraveWords",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPM0FHOHFIeXZ5ajlhRTdtRHBjQWsyQm9wR3A5ME5ZZzFHZlZSRXJSOW9oTWp0ektmQS1JZmY2SGhuZ3prUzdfYzFKWm1MYjVaRUk3MTlkaTA3X0E1bWR4SzYxa0h3bkFxcnQ4aVN0aFQyVE9fMUxhLVJhbFl5UV9TSEVCb2lnVDZ1a19oajd2Y0d6RWZfZk4tMlNmcGZhT2tITE1UZVZ4LXdZOFlEZWfSAbYBQVVfeXFMT0JUR0w5RW4xX3lKU2NkVlVYak9IdEhReTZQMERkSUo0WGZEM1k4TXVYeHVxclhjc1FDaXJFaXF3RjFFbmxxMEVaSXJNNDMwOWZ5ZllQeTIwVVZaX0RaYlhUZXhPTzEydGdXLXRIaUExMEYxTGdHbkZWVjFjM3Jva2N3bXFYbFhZeEhLeUwyM2RnREdJSFdXZXNwdVpyM2tGdEFnWldmaTdyRmdYMFdmd3VhZGY5N0E?oc=5",
-          "ageMin": 168,
-          "headline": "HATEBREED Announce Fatal Paradox Album And Share “Kill Count Increase” Music Video - BraveWords",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxPM0FHOHFIeXZ5ajlhRTdtRHBjQWsyQm9wR3A5ME5ZZzFHZlZSRXJSOW9oTWp0ektmQS1JZmY2SGhuZ3prUzdfYzFKWm1MYjVaRUk3MTlkaTA3X0E1bWR4SzYxa0h3bkFxcnQ4aVN0aFQyVE9fMUxhLVJhbFl5UV9TSEVCb2lnVDZ1a19oajd2Y0d6RWZfZk4tMlNmcGZhT2tITE1UZVZ4LXdZOFlEZWfSAbYBQVVfeXFMT0J"
-        }
-      ],
-      "ageMin": 109,
-      "_cand": {
-        "key": "rss:hatebreed-release-kill-count-increase-music-video-nextmosh",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 4,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 4,
-        "outlets": [
-          "NextMosh",
-          "The Mosh Network",
-          "antiMusic",
-          "BraveWords"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "multiple outlets",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 83,
-      "signals": {
-        "recency": 16,
-        "corroboration": 25,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 15,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "A"
-    },
-    {
-      "id": "news-spider-man-brand-new-day-sadie-sink-casting-reveal",
+      "id": "news-spider-man-brand-new-day-sadie-sink-casting",
       "slug": "spider-man-brand-new-day-director-insists-there-s-a-very-real-reason-n",
       "title": "Spider-Man: Brand New Day Director Insists 'There's a Very Real Reason Not to Tell People Who Sadie Sink is Playing'",
       "contentType": "news",
@@ -308,13 +213,13 @@
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "spider-man-brand-new-day-sadie-sink-casting-reveal",
-      "primaryKeyword": "Sadie Sink Spider-Man casting",
+      "eventSlug": "spider-man-brand-new-day-sadie-sink-casting",
+      "primaryKeyword": "sadie sink spider-man",
       "primaryEntity": "Spider-Man: Brand New Day",
       "entities": [
         "Sadie Sink"
       ],
-      "angle": "Director hints at a significant and undisclosed role for Sadie Sink in the upcoming 'Spider-Man: Brand New Day'.",
+      "angle": "Director hints at a significant and undisclosed role for Sadie Sink in the upcoming 'Spider-Man: Brand New Day' film.",
       "tmdbType": "movie",
       "source": "gnews:IGN Pakistan",
       "sources": [
@@ -322,12 +227,12 @@
           "outlet": "IGN Pakistan",
           "tier": 5,
           "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQTWZHTU9IYTVhNTlrV0VoSW1rZWNhOTZZUHAzMEp4RjBZYXZQa01tZ0hyWVN6aFZTRm5MR2x3Snc5aWVMSlkxOGhyZzhHZnFWckNxM0ZhNENfa3VIN2pScDVEQThPLTJIRmtOV2tYWWZUSThkX2EwX0xpVDZneG9pTWhSZzF1ZWVTM2diWTlPRVh4bHZuNkxxMHNVOUVxLTNtaXNRMTEySUtpU1U5TURXU3pXcllkU2VpX0N4elVlZmVjSU1qMXZyRl9ZM0tJRVl3T3JaZGhQcWVKS1o1QV9vcDBuSnlWMWtjS3Nrb0wyMA?oc=5",
-          "ageMin": 237,
+          "ageMin": 297,
           "headline": "Spider-Man: Brand New Day Director Insists 'There's a Very Real Reason Not to Tell People Who Sadie Sink is Playing' - IGN Pakistan",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMi7wFBVV95cUxQTWZHTU9IYTVhNTlrV0VoSW1rZWNhOTZZUHAzMEp4RjBZYXZQa01tZ0hyWVN6aFZTRm5MR2x3Snc5aWVMSlkxOGhyZzhHZnFWckNxM0ZhNENfa3VIN2pScDVEQThPLTJIRmtOV2tYWWZUSThkX2EwX0xpVDZneG9pTWhSZzF1ZWVTM2diWTlPRVh4bHZuNkxxMHNVOUVxLTNtaXNRMTEySUtpU1U5TURXU3pXcllkU2VpX0N"
         }
       ],
-      "ageMin": 237,
+      "ageMin": 297,
       "_cand": {
         "key": "rss:spider-man-brand-new-day-director-insists-there-s-a-very-rea",
         "popularity": 0,
@@ -366,39 +271,40 @@
       "tierClass": "A"
     },
     {
-      "id": "news-ryan-reynolds-confirms-new-deadpool-movie-in-works",
-      "slug": "ryan-reynolds-confirms-new-deadpool-movie-in-works",
-      "title": "Ryan Reynolds Confirms New Deadpool Movie In Works",
+      "id": "news-will-forte-goblin-a24",
+      "slug": "will-forte-joins-skyler-gisondo-kenneth-branagh-in-a24-s-goblin",
+      "title": "Will Forte Joins Skyler Gisondo Kenneth Branagh In A24 s Goblin",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
-      "eventType": "announcement",
+      "eventType": "casting",
       "sensitivity": "high",
-      "eventSlug": "ryan-reynolds-confirms-new-deadpool-movie-in-works",
-      "primaryKeyword": "deadpool movie",
-      "primaryEntity": "Deadpool & Wolverine",
+      "eventSlug": "will-forte-goblin-a24",
+      "primaryKeyword": "Will Forte Goblin",
+      "primaryEntity": "Goblin",
       "entities": [
-        "Deadpool 3",
-        "Ryan Reynolds",
-        "Marvel Studios"
+        "Will Forte",
+        "A24",
+        "Kenneth Branagh",
+        "Skyler Gisondo"
       ],
-      "angle": "Ryan Reynolds officially confirms a new Deadpool movie is in development at Marvel Studios.",
+      "angle": "Will Forte is in talks to join Kenneth Branagh and Skyler Gisondo in A24's upcoming film 'Goblin'.",
       "tmdbType": "movie",
       "source": "rss:Deadline",
       "sources": [
         {
           "outlet": "Deadline",
           "tier": 7,
-          "url": "https://deadline.com/2026/07/ryan-reynolds-new-deadpool-movie-1236999423/",
-          "ageMin": 86,
-          "headline": "Ryan Reynolds Confirms New Deadpool Movie In Works",
-          "summary": "A new Deadpool looks to be in the works at Marvel Studios, with franchise star Ryan Reynolds on board to return. The actor confirmed the news during an appearance over the weekend Fanatics Fest 2026. Sources say the film is currently in early development with no writer or director attached. “There’s a few really deep [ ]"
+          "url": "https://deadline.com/2026/07/will-forte-joins-skyler-gisondo-kenneth-branagh-in-goblin-1236999516/",
+          "ageMin": 64,
+          "headline": "Will Forte Joins Skyler Gisondo Kenneth Branagh In A24 s Goblin",
+          "summary": "EXCLUSIVE: A24 has Will Forte in talks to star in the David Mikalson-directed film Goblin. Forte joins Skyler Gisondo and Kenneth Branagh, the latter of whom will provide the voice of the title character in the outrageous comedy. Production is set for the fall as Mikalson closes in on a dream come true. As Deadline [ ]"
         }
       ],
-      "ageMin": 86,
+      "ageMin": 64,
       "_cand": {
-        "key": "rss:ryan-reynolds-confirms-new-deadpool-movie-in-works",
+        "key": "rss:will-forte-joins-skyler-gisondo-kenneth-branagh-in-a24-s-gob",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -417,12 +323,12 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 79,
+      "priority": 84,
       "signals": {
         "recency": 16,
         "corroboration": 12,
         "status": 18,
-        "type": 9,
+        "type": 14,
         "pop": 0,
         "breakout": 0,
         "big": 24,
@@ -433,38 +339,38 @@
       "tierClass": "S"
     },
     {
-      "id": "news-jacob-elordi-euphoria-coffin-snake",
-      "slug": "jacob-elordi-endured-snake-coffin-for-euphoria-death-scene",
-      "title": "Jacob Elordi Endured Snake Coffin for 'Euphoria' Death Scene",
+      "id": "news-the-daily-show-elon-musk-jeff-bezos-microdrama",
+      "slug": "the-daily-show-to-launch-first-late-night-microdrama-spoofing-elon-mus",
+      "title": "The Daily Show to Launch First Late Night Microdrama Spoofing Elon Musk, Jeff Bezos as Billionaire Bachelors",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "high",
-      "eventSlug": "jacob-elordi-euphoria-coffin-snake",
-      "primaryKeyword": "euphoria nate death",
-      "primaryEntity": "Euphoria (TV Series)",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "the-daily-show-elon-musk-jeff-bezos-microdrama",
+      "primaryKeyword": "the daily show microdrama",
+      "primaryEntity": "The Daily Show",
       "entities": [
-        "Jacob Elordi",
-        "Sam Levinson"
+        "Elon Musk",
+        "Jeff Bezos"
       ],
-      "angle": "Jacob Elordi reveals the extreme lengths he went to for his character Nate's death scene in 'Euphoria,' including being locked in a coffin with a real snake.",
+      "angle": "The Daily Show is launching a microdrama spoofing Elon Musk and Jeff Bezos.",
       "tmdbType": "movie",
-      "source": "rss:Variety",
+      "source": "rss:TheWrap",
       "sources": [
         {
-          "outlet": "Variety",
+          "outlet": "TheWrap",
           "tier": 7,
-          "url": "https://variety.com/2026/tv/news/jacob-elordi-euphoria-death-locked-in-coffin-snake-1236817094/",
-          "ageMin": 48,
-          "headline": "Jacob Elordi Spent Two Days Locked in a Coffin With a Real Snake for Euphoria Death: Sam Levinson Brought Me Back to Torture Me",
-          "summary": "For Jacob Elordi, the final season of Euphoria was a seemingly never-ending death chase. Until, of course, his character Nate finally died — buried alive and then bit by a rattlesnake. While on Jimmy Kimmel Live! with guest host (and fellow Euphoria star) Colman Domingo, Elordi was asked about filming the gruesome scene. When Domingo [ ]"
+          "url": "https://www.thewrap.com/industry-news/business/the-daily-show-microdrama/",
+          "ageMin": 16,
+          "headline": "The Daily Show to Launch First Late Night Microdrama Spoofing Elon Musk, Jeff Bezos as Billionaire Bachelors",
+          "summary": "\"Two Billionaires Fight to Dominate the Country … And My Heart!\" is a love story between the president's daughter and two moguls who have to build an AI president The post The Daily Show to Launch First Late Night Microdrama Spoofing Elon Musk, Jeff Bezos as Billionaire Bachelors appeared first on TheWrap ."
         }
       ],
-      "ageMin": 48,
+      "ageMin": 16,
       "_cand": {
-        "key": "rss:jacob-elordi-spent-two-days-locked-in-a-coffin-with-a-real-s",
+        "key": "rss:the-daily-show-to-launch-first-late-night-microdrama-spoofin",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -474,34 +380,101 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Variety"
+          "TheWrap"
         ],
         "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "Variety",
+        "sensitivity": "normal",
+        "attribution": "TheWrap",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 65,
+      "priority": 81,
       "signals": {
         "recency": 24,
         "corroboration": 12,
         "status": 18,
-        "type": 5,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
-        "big": 6,
+        "big": 18,
         "trending": 0,
         "spice": 0,
         "softTv": 0
       },
-      "tierClass": "S"
+      "tierClass": "B"
     },
     {
-      "id": "music-news-billy-idol-steve-stevens-apple-music-rediscovered",
-      "slug": "billy-idol-steve-stevens-play-hits-for-apple-music-rediscovered",
-      "title": "Billy Idol, Steve Stevens Play Hits for Apple Music 'Rediscovered'",
+      "id": "news-famous-amos-streaming-series-famously-you",
+      "slug": "famous-amos-is-getting-a-streaming-series-famously-you-and-gabrielle-u",
+      "title": "Famous Amos Is Getting a Streaming Series 'Famously You,' and Gabrielle Union, Robert Ri'chard and Naturi Naughton-Lewis Are All Involved",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "famous-amos-streaming-series-famously-you",
+      "primaryKeyword": "Famous Amos series",
+      "primaryEntity": "Famously You",
+      "entities": [
+        "Gabrielle Union",
+        "Robert Ri'chard",
+        "Naturi Naughton-Lewis"
+      ],
+      "angle": "A new streaming series based on the cookie brand Famous Amos is in development, with several notable actors attached.",
+      "tmdbType": "movie",
+      "source": "gnews:Blex Media",
+      "sources": [
+        {
+          "outlet": "Blex Media",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPOEhyaDFMdjJ5NTRqN2dadThhNFdXR1hDb01YQW94dWZMQnpnWGp5d2VFR3NDUmlDWVVMa0JIZUdnVGlDZTVXb1AtamJfc25fV2Jwal9qR21neTNTUUx2N2l6Q196SEp2NFNMZENOWnN3UlNkN0xFWDlMY3FNTnFuRmx1ckNSY1phNDVaemp4SzJ2bXNKaU8w?oc=5",
+          "ageMin": 38,
+          "headline": "Famous Amos Is Getting a Streaming Series 'Famously You,' and Gabrielle Union, Robert Ri'chard and Naturi Naughton-Lewis Are All Involved - Blex Media",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMilwFBVV95cUxPOEhyaDFMdjJ5NTRqN2dadThhNFdXR1hDb01YQW94dWZMQnpnWGp5d2VFR3NDUmlDWVVMa0JIZUdnVGlDZTVXb1AtamJfc25fV2Jwal9qR21neTNTUUx2N2l6Q196SEp2NFNMZENOWnN3UlNkN0xFWDlMY3FNTnFuRmx1ckNSY1phNDVaemp4SzJ2bXNKaU8w?oc=5\" target=\"_blank\" Famous Amos Is Getting a"
+        }
+      ],
+      "ageMin": 38,
+      "_cand": {
+        "key": "rss:famous-amos-is-getting-a-streaming-series-famously-you-and-g",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "Blex Media"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "Blex Media",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 77,
+      "signals": {
+        "recency": 24,
+        "corroboration": 8,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "music-news-jesse-mccartney-skypac-tour",
+      "slug": "pop-star-jesse-mccartney-coming-to-skypac-this-fall",
+      "title": "Pop star Jesse McCartney coming to SKYPAC this fall",
       "contentType": "music-news",
       "formatTag": "music-news",
       "category": "music",
@@ -509,44 +482,42 @@
       "eventType": "announcement",
       "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "billy-idol-steve-stevens-apple-music-rediscovered",
-      "primaryKeyword": "billy idol apple music",
-      "primaryEntity": "Billy Idol",
+      "eventSlug": "jesse-mccartney-skypac-tour",
+      "primaryKeyword": "Jesse McCartney tour",
+      "primaryEntity": "Jesse McCartney",
       "entities": [
-        "Steve Stevens",
-        "Apple Music"
+        "SKYPAC"
       ],
-      "angle": "Billy Idol and Steve Stevens perform hits for Apple Music's 'Rediscovered' series.",
+      "angle": "Pop star Jesse McCartney has announced a tour stop at SKYPAC.",
       "tmdbType": "movie",
-      "source": "gnews:Rock Cellar Magazine",
+      "source": "gnews:WNKY",
       "sources": [
         {
-          "outlet": "Rock Cellar Magazine",
+          "outlet": "WNKY",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQb0NxVG91WDV1TXB3VTd6YVQ4ZDJxcWxzOWZ3aVJPc1BienVSU0ktdTBNMlN6bmZmWXg2XzdTaXAxZXFqUlRkSUtNcjFVRkJwS0lZY2tFODAzaWpZR3FZYXpvZzBoa0hDYlNpNTJPclJFZWdTeGxLT1pnd0o2dUlubGp3NzAzVy1reUN1dW9jWGJSRHc?oc=5",
-          "ageMin": 34,
-          "headline": "Billy Idol, Steve Stevens Play Hits for Apple Music 'Rediscovered' - Rock Cellar Magazine",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMikwFBVV95cUxQb0NxVG91WDV1TXB3VTd6YVQ4ZDJxcWxzOWZ3aVJPc1BienVSU0ktdTBNMlN6bmZmWXg2XzdTaXAxZXFqUlRkSUtNcjFVRkJwS0lZY2tFODAzaWpZR3FZYXpvZzBoa0hDYlNpNTJPclJFZWdTeGxLT1pnd0o2dUlubGp3NzAzVy1reUN1dW9jWGJSRHc?oc=5\" target=\"_blank\" Billy Idol, Steve Stevens Pla"
+          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE10SXR4NGtlWnlNWUpwU2twOVJrVF9hMWFubEhPd0xrNl9WaVlqaV90b2s2UGwxandoMGEySGctRmZ0c3VvZU84RzROU2N0QVdlSlZtQm9zQjdZbUI1RDY5ZWJBY1dzS3R0al9ET05HTEVZZHNpTkRZcExGZnpUZw?oc=5",
+          "ageMin": 59,
+          "headline": "Pop star Jesse McCartney coming to SKYPAC this fall - WNKY",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMifkFVX3lxTE10SXR4NGtlWnlNWUpwU2twOVJrVF9hMWFubEhPd0xrNl9WaVlqaV90b2s2UGwxandoMGEySGctRmZ0c3VvZU84RzROU2N0QVdlSlZtQm9zQjdZbUI1RDY5ZWJBY1dzS3R0al9ET05HTEVZZHNpTkRZcExGZnpUZw?oc=5\" target=\"_blank\" Pop star Jesse McCartney coming to SKYPAC this fall /a nbs"
         }
       ],
-      "ageMin": 34,
+      "ageMin": 59,
       "_cand": {
-        "key": "rss:billy-idol-steve-stevens-play-hits-for-apple-music-rediscove",
+        "key": "rss:pop-star-jesse-mccartney-coming-to-skypac-this-fall-wnky",
         "popularity": 0,
         "kind": "gnews"
       },
-      "breakoutVelocity": 0,
       "corroborationCount": 1,
       "verification": {
         "tier1Count": 0,
         "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "Rock Cellar Magazine"
+          "WNKY"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "Rock Cellar Magazine",
+        "attribution": "WNKY",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -567,93 +538,24 @@
       "tierClass": "C"
     },
     {
-      "id": "news-scary-movie-director-cut-pvod",
-      "slug": "scary-movie-director-discusses-franchise-revival-and-director-s-cut",
-      "title": "'Scary Movie' Director Discusses Franchise Revival and Director's Cut",
+      "id": "news-disney-job-cuts-pixar-national-geographic-affected",
+      "slug": "disney-cuts-hundreds-of-jobs-affecting-pixar-and-national-geographic",
+      "title": "Disney Cuts Hundreds of Jobs, Affecting Pixar and National Geographic",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "scary-movie-director-cut-pvod",
-      "primaryKeyword": "scary movie director's cut",
-      "primaryEntity": "Scary Movie",
-      "entities": [
-        "Michael Tiddes",
-        "Marlon Wayans",
-        "Shawn Wayans"
-      ],
-      "angle": "Director Michael Tiddes discusses the revival of the 'Scary Movie' franchise with an extended director's cut now available on PVOD.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/film/news/scary-movie-directors-cut-michael-tiddes-pvod-daily-variety-1236817286/",
-          "ageMin": 65,
-          "headline": "LISTEN: Scary Movie Gets a Second Wind in PVOD With Extended Director s Cut",
-          "summary": "On today’s episode of Daily Variety podcast, “Scary Movie” director Michael Tiddes explains how he came to be trusted with the revival of Shawn and Marlon Wayans’ beloved horror comedy franchise. And Tiddes details the extras in the extended director s cut of the Paramount and Miramax film that bowed today on PVOD platforms. Tiddes, who s [ ]"
-        }
-      ],
-      "ageMin": 65,
-      "_cand": {
-        "key": "rss:listen-scary-movie-gets-a-second-wind-in-pvod-with-extended-",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 73,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 12,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0,
-        "radar": 10
-      },
-      "radarKind": "movie-trending",
-      "tierClass": "A"
-    },
-    {
-      "id": "news-disney-job-cuts-pixar-national-geographic",
-      "slug": "disney-cutting-several-hundred-jobs-pixar-and-national-geographic-amon",
-      "title": "Disney Cutting Several Hundred Jobs; Pixar And National Geographic Among Most Affected Divisions",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "other",
+      "eventType": "announcement",
       "sensitivity": "high",
-      "eventSlug": "disney-job-cuts-pixar-national-geographic",
-      "primaryKeyword": "Disney layoffs",
+      "eventSlug": "disney-job-cuts-pixar-national-geographic-affected",
+      "primaryKeyword": "disney job cuts",
       "primaryEntity": "Disney",
       "entities": [
         "Pixar Short Films Collection: Volume 1",
         "Pixar",
         "National Geographic"
       ],
-      "angle": "Disney is cutting hundreds of jobs, impacting divisions like Pixar and National Geographic.",
+      "angle": "Disney is implementing significant job cuts across the company, with divisions like Pixar and National Geographic being particularly impacted.",
       "tmdbType": "movie",
       "source": "gnews:Deadline",
       "sources": [
@@ -661,12 +563,12 @@
           "outlet": "Deadline",
           "tier": 7,
           "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOaVpNR3BrYml0MjJDS1lXcU5BUDA5ZE9fc1JvcWRZZTN0NlludW1ib3BaMmQ2MS1aVW1EWFBDVjR4Ry1WbEdHSWxOSE14WkJUTk9LQnd6UWIwOVN0bWZmeklCd3FfSEN4cl93ZXpqSXpJOGhuRlRlU003Z01qVG9uSXBUaWlSTXJP?oc=5",
-          "ageMin": 174,
+          "ageMin": 234,
           "headline": "Disney Cutting Several Hundred Jobs; Pixar And National Geographic Among Most Affected Divisions - Deadline",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMiiAFBVV95cUxOaVpNR3BrYml0MjJDS1lXcU5BUDA5ZE9fc1JvcWRZZTN0NlludW1ib3BaMmQ2MS1aVW1EWFBDVjR4Ry1WbEdHSWxOSE14WkJUTk9LQnd6UWIwOVN0bWZmeklCd3FfSEN4cl93ZXpqSXpJOGhuRlRlU003Z01qVG9uSXBUaWlSTXJP?oc=5\" target=\"_blank\" Disney Cutting Several Hundred Jobs; Pixar A"
         }
       ],
-      "ageMin": 174,
+      "ageMin": 234,
       "_cand": {
         "key": "rss:disney-cutting-several-hundred-jobs-pixar-and-national-geogr",
         "popularity": 0,
@@ -687,82 +589,15 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 57,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 6,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "S"
-    },
-    {
-      "id": "news-richard-m-rawlings-jr-dies-at-82",
-      "slug": "richard-m-rawlings-jr-cinematographer-who-split-a-season-of-charlie-s-",
-      "title": "Richard M. Rawlings Jr., Cinematographer Who Split a Season of ‘Charlie’s Angels’ With His Dad, Dies at 82",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "death",
-      "sensitivity": "high",
-      "eventSlug": "richard-m-rawlings-jr-dies-at-82",
-      "primaryKeyword": "richard m. rawlings jr.",
-      "primaryEntity": "Richard M. Rawlings Jr.",
-      "entities": [
-        "Charlie's Angels",
-        "L.A. Law",
-        "Desperate Housewives"
-      ],
-      "angle": "Veteran cinematographer Richard M. Rawlings Jr., known for his work on 'Charlie's Angels' and numerous TV series, has passed away at 82.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/tv/tv-news/richard-rawlings-jr-dead-charlies-angels-cinematographer-1236652967/",
-          "ageMin": 173,
-          "headline": "Richard M. Rawlings Jr., Cinematographer Who Split a Season of ‘Charlie’s Angels’ With His Dad, Dies at 82",
-          "summary": "The four-time Emmy nominee, who received an ASC career achievement award, also shot episodes of ‘Matt Houston,’ ‘L.A. Law,’ ‘Boston Public’ and ‘Desperate Housewives.’"
-        }
-      ],
-      "ageMin": 173,
-      "_cand": {
-        "key": "rss:richard-m-rawlings-jr-cinematographer-who-split-a-season-of-",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
       "priority": 72,
       "signals": {
-        "recency": 16,
+        "recency": 9,
         "corroboration": 12,
         "status": 18,
-        "type": 14,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
-        "big": 12,
+        "big": 24,
         "trending": 0,
         "spice": 0,
         "softTv": 0
@@ -770,88 +605,24 @@
       "tierClass": "S"
     },
     {
-      "id": "music-news-boy-harsher-new-album-hard-beat-tour",
-      "slug": "boy-harsher-announces-new-album-get-mean-shares-cinematic-hard-beat-vi",
-      "title": "Boy Harsher Announces New Album 'GET MEAN', Shares Cinematic \"Hard Beat\" Video and Fall Tour Dates",
+      "id": "music-news-spotify-video-integration-music-video-charts",
+      "slug": "spotify-furthers-video-integration-with-global-music-video-charts-full",
+      "title": "Spotify Furthers Video Integration With Global Music Video Charts, Full-Length Uploads",
       "contentType": "music-news",
       "formatTag": "music-news",
       "category": "music",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "tier": "indie",
-      "eventSlug": "boy-harsher-new-album-hard-beat-tour",
-      "primaryKeyword": "boy harsher new album",
-      "primaryEntity": "Boy Harsher",
+      "tier": "popular",
+      "eventSlug": "spotify-video-integration-music-video-charts",
+      "primaryKeyword": "Spotify",
+      "primaryEntity": "spotify",
       "entities": [
-        "Steve Stevens"
+        "Spotify",
+        "music videos"
       ],
-      "angle": "Boy Harsher announces new album 'GET MEAN' with a new video and tour dates.",
-      "tmdbType": "movie",
-      "source": "gnews:Live Music Blog",
-      "sources": [
-        {
-          "outlet": "Live Music Blog",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5KWEw0bndlU3U1S0RWanJ2Szctc19sVVdQanFfd0R3UFpManA5WERYMEFvV21fYXFHUkZ0SE1ZcWwzdUVfS0dQbk1wZlNoOXo1ekpIS2ZUQk45a3JpQ2wyNC1IRU93cmZfWmVqTWVzeG1MOHRlSkE?oc=5",
-          "ageMin": 63,
-          "headline": "Boy Harsher Announces New Album 'GET MEAN', Shares Cinematic \"Hard Beat\" Video and Fall Tour Dates - Live Music Blog",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMidkFVX3lxTE5KWEw0bndlU3U1S0RWanJ2Szctc19sVVdQanFfd0R3UFpManA5WERYMEFvV21fYXFHUkZ0SE1ZcWwzdUVfS0dQbk1wZlNoOXo1ekpIS2ZUQk45a3JpQ2wyNC1IRU93cmZfWmVqTWVzeG1MOHRlSkE?oc=5\" target=\"_blank\" Boy Harsher Announces New Album 'GET MEAN', Shares Cinematic \"Hard Be"
-        }
-      ],
-      "ageMin": 63,
-      "_cand": {
-        "key": "rss:boy-harsher-announces-new-album-get-mean-shares-cinematic-ha",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "Live Music Blog"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "Live Music Blog",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 51,
-      "signals": {
-        "recency": 16,
-        "corroboration": 8,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-la-la-land-other",
-      "slug": "la-la-land-poster-fixes-ryan-gosling-s-flat-hand-after-10-years-of-the",
-      "title": "La La Land Poster Fixes Ryan Gosling s Flat Hand After 10 Years of the Actor Being Haunted by It",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "la-la-land-other",
-      "primaryKeyword": "La La Land poster Ryan Gosling hand",
-      "primaryEntity": "La La Land",
-      "entities": [
-        "Ryan Gosling"
-      ],
-      "angle": "The 'La La Land' poster has been corrected after 10 years to fix Ryan Gosling's hand.",
+      "angle": "Spotify expands its video integration by launching global music video charts and enabling full-length video uploads, alongside a new pitching tool for creators.",
       "tmdbType": "movie",
       "source": "rss:Billboard",
       "sources": [
@@ -859,12 +630,12 @@
           "outlet": "Billboard",
           "tier": 7,
           "url": "https://www.billboard.com/pro/spotify-launches-music-video-charts-playlists/",
-          "ageMin": 41,
+          "ageMin": 101,
           "headline": "Spotify Furthers Video Integration With Global Music Video Charts, Full-Length Uploads",
           "summary": "The streaming platform also launches full-length video uploads and a music video pitching tool."
         }
       ],
-      "ageMin": 41,
+      "ageMin": 101,
       "_cand": {
         "key": "rss:spotify-furthers-video-integration-with-global-music-video-c",
         "popularity": 0,
@@ -885,139 +656,74 @@
         "status": "DEVELOPING",
         "publishable": true
       },
+      "priority": 55,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-evil-dead-burn-haunted-house-universal-halloween-horror-nights",
+      "slug": "evil-dead-burn-haunted-house-experience-coming-to-universal-studios-ha",
+      "title": "'Evil Dead Burn' Haunted House Experience Coming to Universal Studios Halloween Horror Nights",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "high",
+      "eventSlug": "evil-dead-burn-haunted-house-universal-halloween-horror-nights",
+      "primaryKeyword": "Evil Dead Burn haunted house",
+      "primaryEntity": "Evil Dead",
+      "entities": [
+        "Universal Studios",
+        "Halloween Horror Nights"
+      ],
+      "angle": "The 'Evil Dead Burn' haunted house experience is coming to Universal Studios' Halloween Horror Nights.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/film/news/evil-dead-burn-universal-studios-halloween-horror-nights-1236817166/",
+          "ageMin": 182,
+          "headline": "Evil Dead Burn Haunted House Experience Is Headed to Universal Studios Halloween Horror Nights",
+          "summary": "Evil Dead Burn is headed to Universal’s Halloween Horror Nights as a haunted house experience. The latest film from New Line Cinema takes shape as the newest Halloween Horror Nights haunted house, beginning Aug. 28 at Universal Orlando Resort and Sept 3 at Universal Studios Hollywood. The haunted houses will take guests on a terrifying [ ]"
+        }
+      ],
+      "ageMin": 182,
+      "_cand": {
+        "key": "rss:evil-dead-burn-haunted-house-experience-is-headed-to-univers",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
       "priority": 71,
       "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 12,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-star-wars-anakin-skywalker-lightsaber-mystery",
-      "slug": "new-star-wars-story-finally-solves-biggest-mystery-about-anakin-skywal",
-      "title": "New ‘Star Wars’ Story Finally Solves Biggest Mystery About Anakin Skywalker’s Legendary Lightsaber",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "star-wars-anakin-skywalker-lightsaber-mystery",
-      "primaryKeyword": "Anakin Skywalker lightsaber mystery",
-      "primaryEntity": "Anakin Skywalker",
-      "entities": [
-        "Star Wars"
-      ],
-      "angle": "New Star Wars story reveals a long-standing mystery about Anakin Skywalker's lightsaber.",
-      "tmdbType": "movie",
-      "source": "gnews:parade.com",
-      "sources": [
-        {
-          "outlet": "parade.com",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOTWpId3A1NUZVbm5fallqZjVCbHB4ZEpfZjVlU3UtVmQwdnNYODNlNnczYTRJT1dWVlNGQU85MmlxNml4Wm1jT3JNTUdoRXBzS05XeWdPbHRxdGdNVTZVQ0pZVEZvS2h0djZQUk45ZEl3eWlucjRLSHUxVDAxbG1rMVFOWEdLdDBWcFJIaDJqVzBBT1hTbHhoZ2gxbHdicVJvdm80cXRncmROVTZNN3FxUTZ5WkwzVjZabGFr?oc=5",
-          "ageMin": 122,
-          "headline": "New ‘Star Wars’ Story Finally Solves Biggest Mystery About Anakin Skywalker’s Legendary Lightsaber - parade.com",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiuwFBVV95cUxOTWpId3A1NUZVbm5fallqZjVCbHB4ZEpfZjVlU3UtVmQwdnNYODNlNnczYTRJT1dWVlNGQU85MmlxNml4Wm1jT3JNTUdoRXBzS05XeWdPbHRxdGdNVTZVQ0pZVEZvS2h0djZQUk45ZEl3eWlucjRLSHUxVDAxbG1rMVFOWEdLdDBWcFJIaDJqVzBBT1hTbHhoZ2gxbHdicVJvdm80cXRncmROVTZNN3FxUTZ5WkwzVjZabGF"
-        }
-      ],
-      "ageMin": 122,
-      "_cand": {
-        "key": "rss:new-star-wars-story-finally-solves-biggest-mystery-about-ana",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "parade.com"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "parade.com",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 59,
-      "signals": {
-        "recency": 16,
-        "corroboration": 8,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 12,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-disney-pixar-layoffs",
-      "slug": "disney-lays-off-hundreds-of-staffers-pixar-hit-hard",
-      "title": "Disney Lays Off Hundreds of Staffers, Pixar Hit Hard",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "disney-pixar-layoffs",
-      "primaryKeyword": "pixar layoffs",
-      "primaryEntity": "Pixar Short Films Collection: Volume 1",
-      "entities": [
-        "Pixar",
-        "Disney"
-      ],
-      "angle": "Disney has initiated significant layoffs affecting hundreds of staff, with Pixar being particularly hard-hit.",
-      "tmdbType": "movie",
-      "source": "rss:TheWrap",
-      "sources": [
-        {
-          "outlet": "TheWrap",
-          "tier": 7,
-          "url": "https://www.thewrap.com/industry-news/business/disney-pixar-layoffs-2026/",
-          "ageMin": 185,
-          "headline": "Disney Lays Off Hundreds of Staffers, Pixar Hit Hard",
-          "summary": "The layoffs are expected to be the largest round at Pixar since 2024 The post Disney Lays Off Hundreds of Staffers, Pixar Hit Hard appeared first on TheWrap ."
-        }
-      ],
-      "ageMin": 185,
-      "_cand": {
-        "key": "rss:disney-lays-off-hundreds-of-staffers-pixar-hit-hard",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "TheWrap"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "TheWrap",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 56,
-      "signals": {
         "recency": 9,
         "corroboration": 12,
         "status": 18,
@@ -1027,357 +733,33 @@
         "big": 12,
         "trending": 0,
         "spice": 0,
-        "softTv": 0
+        "softTv": 0,
+        "radar": 15
       },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-nicolas-winding-refn-drive-making-of",
-      "slug": "nicolas-winding-refn-reveals-the-chaotic-making-of-drive-most-everyone",
-      "title": "Nicolas Winding Refn Reveals the Chaotic Making of ‘Drive’: “Most Everyone Hated It”",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "nicolas-winding-refn-drive-making-of",
-      "primaryKeyword": "Drive movie behind the scenes",
-      "primaryEntity": "Drive",
-      "entities": [
-        "Drive (2011 film)",
-        "Nicolas Winding Refn"
-      ],
-      "angle": "Director Nicolas Winding Refn discusses the challenging production of his cult classic film 'Drive'.",
-      "tmdbType": "movie",
-      "source": "gnews:The Hollywood Reporter",
-      "sources": [
-        {
-          "outlet": "The Hollywood Reporter",
-          "tier": 7,
-          "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPanYxcmhqcHZNcktjVXh6RFpNN3dfUUhmbENrUlFyOXRqZGpkcUtQMmZtMnRib24wVF9NTk80T0FBeTQ4UC1KcjV6eFoyMjZxOC0ydTEzZXF6VHlmQ2hsazBjR3ZQNmlSTG1tZVo4YXJnUEN1dFF2NHJfU1YtZWE2T3k0Yk5QQTNtdlFtQzNWUlhfU05MS24yZ0s1aGhhaG9pSV9lWmZuMXVRVXRKR3F0ektSNjlSNU15M3ZaOXdIcGR4QQ?oc=5",
-          "ageMin": 216,
-          "headline": "Nicolas Winding Refn Reveals the Chaotic Making of ‘Drive’: “Most Everyone Hated It” - The Hollywood Reporter",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiwgFBVV95cUxPanYxcmhqcHZNcktjVXh6RFpNN3dfUUhmbENrUlFyOXRqZGpkcUtQMmZtMnRib24wVF9NTk80T0FBeTQ4UC1KcjV6eFoyMjZxOC0ydTEzZXF6VHlmQ2hsazBjR3ZQNmlSTG1tZVo4YXJnUEN1dFF2NHJfU1YtZWE2T3k0Yk5QQTNtdlFtQzNWUlhfU05MS24yZ0s1aGhhaG9pSV9lWmZuMXVRVXRKR3F0ektSNjlSNU15M3Z"
-        }
-      ],
-      "ageMin": 216,
-      "_cand": {
-        "key": "rss:nicolas-winding-refn-reveals-the-chaotic-making-of-drive-mos",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "The Hollywood Reporter"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "The Hollywood Reporter",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 56,
-      "signals": {
-        "recency": 9,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 12,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-luke-skywalker-hand-lightsaber-auction",
-      "slug": "luke-skywalker-s-severed-hand-and-lightsaber-prop-sold-for-3-75m",
-      "title": "Luke Skywalker's Severed Hand and Lightsaber Prop Sold for $3.75M",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "luke-skywalker-hand-lightsaber-auction",
-      "primaryKeyword": "luke skywalker prop auction",
-      "primaryEntity": "Luke Skywalker",
-      "entities": [
-        "Star Wars"
-      ],
-      "angle": "Iconic props from 'Star Wars', including Luke Skywalker's severed hand and lightsaber, fetched a high price at auction.",
-      "tmdbType": "movie",
-      "source": "gnews:Boing Boing",
-      "sources": [
-        {
-          "outlet": "Boing Boing",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNQTB3ZGZfdUc2S0hESnhxUnJEWHlHd1A5WUZHVDZYV3RXSDRSSWt0XzhMeFhiMmhnc21CMlJpMVZGaHlRUVFxV09TTWlxU1Bicl9ZRDNtcDVMZGJTQzBIQ0pLa0tfdzFwdml2eFE0UkVCLWJVZ0xjdnF2TTliOXJBc215eXdlUXFqcUtxVkNFYUJPYkFmbEZnZTdVZXVTd3JnVWZmN9IBqgFBVV95cUxQLW41ZGNzRnZmdi01UW9xTkVWNEJwRzhKTVBzYmZyUENOUks5QndyeC1OZUFIX21VT2sweHhfSUQ1Z2trXzhIdnNvSmotVFphejdfM3VSLXBxSUI4cW8wWHdRUlpTaDhJTzRRRTFGU2pZNFhSS0hqRzdZTWdEQS1nYlU2cjQyNUFYbjVFaFZGdGtqcXoteFdVcDRKd2R1dHZsMU96cklMUWJpUQ?oc=5",
-          "ageMin": 181,
-          "headline": "Luke Skywalker's severed hand and lightsaber prop sold for $3.75M - Boing Boing",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxNQTB3ZGZfdUc2S0hESnhxUnJEWHlHd1A5WUZHVDZYV3RXSDRSSWt0XzhMeFhiMmhnc21CMlJpMVZGaHlRUVFxV09TTWlxU1Bicl9ZRDNtcDVMZGJTQzBIQ0pLa0tfdzFwdml2eFE0UkVCLWJVZ0xjdnF2TTliOXJBc215eXdlUXFqcUtxVkNFYUJPYkFmbEZnZTdVZXVTd3JnVWZmN9IBqgFBVV95cUxQLW41ZGNzRnZmdi0"
-        }
-      ],
-      "ageMin": 181,
-      "_cand": {
-        "key": "rss:luke-skywalker-s-severed-hand-and-lightsaber-prop-sold-for-3",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "Boing Boing"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "Boing Boing",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 52,
-      "signals": {
-        "recency": 9,
-        "corroboration": 8,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 12,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-luke-skywalker-lightsaber-breaks-star-wars-record-auction",
-      "slug": "luke-skywalker-s-lightsaber-shatters-star-wars-auction-record",
-      "title": "Luke Skywalker's Lightsaber Shatters Star Wars Auction Record",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "luke-skywalker-lightsaber-breaks-star-wars-record-auction",
-      "primaryKeyword": "Star Wars auction record",
-      "primaryEntity": "Star Wars",
-      "entities": [
-        "Luke Skywalker"
-      ],
-      "angle": "A lightsaber belonging to Luke Skywalker has set a new record at auction, highlighting the enduring value of Star Wars memorabilia.",
-      "tmdbType": "movie",
-      "source": "gnews:Euronews.com",
-      "sources": [
-        {
-          "outlet": "Euronews.com",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQTWg1VlUxd3BfOVg0MlcxSjdsc0F5RFdlbFJ0aWwzaUUwRlZYeE9aSUdrbEJZNjJhcjc1S0kyZ0Jhd3NTMWJGbmlBMFF1QTN0Nkwzcm9zRnZIenlVbnFiQnZUaXlxSUU1T1Q4UmtDREkxazV0dUJyVndUSFF5VzE3ZmJsQ21zcXZSRWRmVUQ0QmN5dnNUNHN0X2MwUzRZUWJDUGtlZXhkbHJ2OGMyaW9IelVsdkY0SzJuVDRzOGxfamR2ZEFtb0FPbQ?oc=5",
-          "ageMin": 256,
-          "headline": "Luke Skywalker's lightsaber breaks Star Wars record at auction - Euronews.com",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiyAFBVV95cUxQTWg1VlUxd3BfOVg0MlcxSjdsc0F5RFdlbFJ0aWwzaUUwRlZYeE9aSUdrbEJZNjJhcjc1S0kyZ0Jhd3NTMWJGbmlBMFF1QTN0Nkwzcm9zRnZIenlVbnFiQnZUaXlxSUU1T1Q4UmtDREkxazV0dUJyVndUSFF5VzE3ZmJsQ21zcXZSRWRmVUQ0QmN5dnNUNHN0X2MwUzRZUWJDUGtlZXhkbHJ2OGMyaW9IelVsdkY0SzJuVDR"
-        }
-      ],
-      "ageMin": 256,
-      "_cand": {
-        "key": "rss:luke-skywalker-s-lightsaber-breaks-star-wars-record-at-aucti",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "Euronews.com"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "Euronews.com",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 52,
-      "signals": {
-        "recency": 9,
-        "corroboration": 8,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 12,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-harry-styles-brazil-concert-canceled-illness",
-      "slug": "harry-styles-brazil-concert-canceled-due-to-tour-illness",
-      "title": "Harry Styles' Brazil Concert Canceled Due to 'Tour Illness'",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "health",
-      "sensitivity": "high",
-      "tier": "popular",
-      "eventSlug": "harry-styles-brazil-concert-canceled-illness",
-      "primaryKeyword": "harry styles concert canceled",
-      "primaryEntity": "Harry Styles",
-      "entities": [],
-      "angle": "Harry Styles' concert in Brazil has been canceled due to an unspecified 'tour illness'.",
-      "tmdbType": "movie",
-      "source": "rss:Variety Music",
-      "sources": [
-        {
-          "outlet": "Variety Music",
-          "tier": 7,
-          "url": "https://variety.com/2026/music/news/harry-styles-concert-in-brazil-canceled-illness-1236817219/",
-          "ageMin": 170,
-          "headline": "Harry Styles’ Concert in Brazil Tonight Canceled Due to Unspecified ‘Tour Illness’",
-          "summary": "Harry Styles’ concert scheduled for Tuesday night in Brazil has been canceled due to an unspecified “tour illness,” although Friday’s concert will take place as scheduled, according to the announcement. A rep for the singer had no further comment beyond the statement below, which reads in full:“We deeply regret to share that the Harry Styles [ ]"
-        }
-      ],
-      "ageMin": 170,
-      "_cand": {
-        "key": "rss:harry-styles-concert-in-brazil-tonight-canceled-due-to-unspe",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety Music"
-        ],
-        "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "Variety Music",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 58,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 12,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
+      "radarKind": "movie-in-theaters",
       "tierClass": "S"
     },
     {
-      "id": "news-harry-styles-cancels-brazil-show-health-issue",
-      "slug": "harry-styles-cancels-brazil-show-over-health-issue",
-      "title": "Harry Styles Cancels Brazil Show Over ‘Health Issue’",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "health",
-      "sensitivity": "high",
-      "tier": "popular",
-      "eventSlug": "harry-styles-cancels-brazil-show-health-issue",
-      "primaryKeyword": "Harry Styles",
-      "primaryEntity": "Harry Styles",
-      "entities": [
-        "Live Nation Brazil"
-      ],
-      "angle": "Harry Styles cancels a scheduled Brazil show due to an unspecified health issue.",
-      "tmdbType": "movie",
-      "source": "rss:Rolling Stone",
-      "sources": [
-        {
-          "outlet": "Rolling Stone",
-          "tier": 7,
-          "url": "https://www.rollingstone.com/music/music-news/harry-styles-cancels-brazil-show-health-issue-1235596495/",
-          "ageMin": 90,
-          "headline": "Harry Styles Cancels Brazil Show Over ‘Health Issue’",
-          "summary": "The star was scheduled to perform four nights in the city, and Live Nation Brazil said Friday’s show in São Paulo will proceed as normal"
-        }
-      ],
-      "ageMin": 90,
-      "_cand": {
-        "key": "rss:harry-styles-cancels-brazil-show-over-health-issue-",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Rolling Stone"
-        ],
-        "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "Rolling Stone",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 58,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 12,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "S"
-    },
-    {
-      "id": "news-shaboozey-outlaw-cherie-lee-album",
+      "id": "music-news-shaboozey-outlaw-cherie-lee-album-features",
       "slug": "shaboozey-recruits-gunna-teyana-taylor-and-sam-elliott-for-outlaw-cher",
       "title": "Shaboozey Recruits Gunna, Teyana Taylor, and Sam Elliott for ‘Outlaw Cherie Lee’ Album",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "shaboozey-outlaw-cherie-lee-album",
-      "primaryKeyword": "Shaboozey",
+      "eventSlug": "shaboozey-outlaw-cherie-lee-album-features",
+      "primaryKeyword": "shaboozey outlaw cherie lee",
       "primaryEntity": "Shaboozey",
       "entities": [
         "Gunna",
         "Teyana Taylor",
         "Sam Elliott",
-        "Jamie Foxx"
+        "Kehlani"
       ],
-      "angle": "Shaboozey has announced his upcoming album 'Outlaw Cherie Lee,' featuring a star-studded lineup including Gunna, Teyana Taylor, Sam Elliott, and Jamie Foxx.",
+      "angle": "Shaboozey has announced his upcoming album 'Outlaw Cherie Lee' featuring a star-studded lineup.",
       "tmdbType": "movie",
       "source": "rss:Rolling Stone",
       "sources": [
@@ -1385,12 +767,12 @@
           "outlet": "Rolling Stone",
           "tier": 7,
           "url": "https://www.rollingstone.com/music/music-country/shaboozey-outlaw-cherie-lee-album-features-gunna-kehlani-1235596578/",
-          "ageMin": 72,
+          "ageMin": 132,
           "headline": "Shaboozey Recruits Gunna, Teyana Taylor, and Sam Elliott for ‘Outlaw Cherie Lee’ Album",
           "summary": "The cinematic LP, out July 31, also features Kehlani, Orville Peck, Leon Bridges, and Jamie Foxx"
         }
       ],
-      "ageMin": 72,
+      "ageMin": 132,
       "_cand": {
         "key": "rss:shaboozey-recruits-gunna-teyana-taylor-and-sam-elliott-for-o",
         "popularity": 0,
@@ -1427,38 +809,167 @@
       "tierClass": "C"
     },
     {
-      "id": "news-john-bonham-car-auction",
-      "slug": "john-bonham-s-alleged-car-heads-to-auction",
-      "title": "John Bonham's Alleged Car Heads to Auction",
+      "id": "news-neill-blomkamp-ai-horror-short-nightborne",
+      "slug": "district-9-director-neill-blomkamp-releases-ai-generated-horror-short-",
+      "title": "DISTRICT 9 Director Neill Blomkamp Releases AI Generated Horror Short NIGHTBORNE as a Test for What Could Be His Next Feature",
       "contentType": "news",
       "formatTag": "news",
-      "category": "celebrity",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "neill-blomkamp-ai-horror-short-nightborne",
+      "primaryKeyword": "Neill Blomkamp AI short film",
+      "primaryEntity": "Neill Blomkamp",
+      "entities": [
+        "District 9"
+      ],
+      "angle": "District 9 director Neill Blomkamp releases an AI-generated horror short film as a test for a potential feature.",
+      "tmdbType": "movie",
+      "source": "gnews:GeekTyrant",
+      "sources": [
+        {
+          "outlet": "GeekTyrant",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxNZXJmR0Fiam92YnAyOTUwcm1JWk5kM0NSM0I1cDFxQ0tfeXBoR1ZsbGxOQnRmSTl4N3ZRdDFjUFNuSjRsbHBIbWtFaGpUc0ZoVjloY001ZjNwVlBqYjhoMG84cEJfa0gzYXlsMEZ0TjJHb3NNNWM1clZnWWFMclJZRkFLS3BoM01XRlpFd3FlY3ZNUTFGWXJMWUc5c3pWdTgxQ1dmQk9vcDBYVmJlNlNRSFJSV3hVdnVTOGhURV80c1JoQmYtbDFrQkw0ZS1aQkF4THBqa0U2X2FxOVY3bExaNTFTRzFXaU1h?oc=5",
+          "ageMin": 214,
+          "headline": "DISTRICT 9 Director Neill Blomkamp Releases AI Generated Horror Short NIGHTBORNE as a Test for What Could Be His Next Feature - GeekTyrant",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMi6AFBVV95cUxNZXJmR0Fiam92YnAyOTUwcm1JWk5kM0NSM0I1cDFxQ0tfeXBoR1ZsbGxOQnRmSTl4N3ZRdDFjUFNuSjRsbHBIbWtFaGpUc0ZoVjloY001ZjNwVlBqYjhoMG84cEJfa0gzYXlsMEZ0TjJHb3NNNWM1clZnWWFMclJZRkFLS3BoM01XRlpFd3FlY3ZNUTFGWXJMWUc5c3pWdTgxQ1dmQk9vcDBYVmJlNlNRSFJSV3hVdnVTOGh"
+        }
+      ],
+      "ageMin": 214,
+      "_cand": {
+        "key": "rss:district-9-director-neill-blomkamp-releases-ai-generated-hor",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "GeekTyrant"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "GeekTyrant",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 68,
+      "signals": {
+        "recency": 9,
+        "corroboration": 8,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "music-news-boy-harsher-announcement",
+      "slug": "boy-harsher-announces-new-album-get-mean-shares-cinematic-hard-beat-vi",
+      "title": "Boy Harsher Announces New Album 'GET MEAN', Shares Cinematic \"Hard Beat\" Video and Fall Tour Dates",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "indie",
+      "eventSlug": "boy-harsher-announcement",
+      "primaryKeyword": "boy harsher new album",
+      "primaryEntity": "Boy Harsher",
+      "entities": [],
+      "angle": "Indie electronic duo Boy Harsher announces a new album and accompanying tour.",
+      "tmdbType": "movie",
+      "source": "gnews:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQdWs5Ykc4UTBvVjZkQlBwWVJMX3ktbWZwOHg4X3dKSnNyVDVvY0ctNDZRMUFnMDAtUi03cHhpcldWU3ZnNWNxSHplWGE1QjFFUXNPNXE4RWZwWVdERWZoVHlqWE4yTllyV1Q1dnRhNG5XdV84Y0lTcnZMczUwZG9OY3hzWUlMVVZ4YnhmLVFaM1owUnh3TnBnOHJwUWlhY1F0U3l1OHhReWltdw?oc=5",
+          "ageMin": 126,
+          "headline": "'Scary Movie' Gets Second Wind on PVOD With Extended Director's Cut - Variety",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxQdWs5Ykc4UTBvVjZkQlBwWVJMX3ktbWZwOHg4X3dKSnNyVDVvY0ctNDZRMUFnMDAtUi03cHhpcldWU3ZnNWNxSHplWGE1QjFFUXNPNXE4RWZwWVdERWZoVHlqWE4yTllyV1Q1dnRhNG5XdV84Y0lTcnZMczUwZG9OY3hzWUlMVVZ4YnhmLVFaM1owUnh3TnBnOHJwUWlhY1F0U3l1OHhReWltdw?oc=5\" target=\"_blank"
+        }
+      ],
+      "ageMin": 126,
+      "_cand": {
+        "key": "rss:-scary-movie-gets-second-wind-on-pvod-with-extended-director",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 55,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-jacob-elordi-euphoria-coffin-snake-scene",
+      "slug": "jacob-elordi-spent-two-days-locked-in-a-coffin-with-a-real-snake-for-e",
+      "title": "Jacob Elordi Spent Two Days Locked in a Coffin With a Real Snake for Euphoria Death: Sam Levinson Brought Me Back to Torture Me",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "high",
-      "tier": "popular",
-      "eventSlug": "john-bonham-car-auction",
-      "primaryKeyword": "john bonham car auction",
-      "primaryEntity": "John Bonham",
+      "eventSlug": "jacob-elordi-euphoria-coffin-snake-scene",
+      "primaryKeyword": "Euphoria",
+      "primaryEntity": "Euphoria",
       "entities": [
-        "Led Zeppelin"
+        "Jacob Elordi",
+        "Sam Levinson"
       ],
-      "angle": "A 1972 Jensen Interceptor III, believed to have been driven by Led Zeppelin drummer John Bonham, is set to go up for auction.",
+      "angle": "Jacob Elordi describes the harrowing experience of filming his character Nate's death scene in 'Euphoria,' which involved being locked in a coffin with a real snake.",
       "tmdbType": "movie",
-      "source": "rss:Rolling Stone",
+      "source": "rss:Variety",
       "sources": [
         {
-          "outlet": "Rolling Stone",
+          "outlet": "Variety",
           "tier": 7,
-          "url": "https://www.rollingstone.com/music/music-news/john-bonham-jensen-interceptor-auction-1235596516/",
-          "ageMin": 64,
-          "headline": "A Car John Bonham Probably Drove Into a Ditch Is Headed to Auction",
-          "summary": "The fully-rehabbed 1972 Jensen Interceptor III — which the Led Zeppelin drummer may have crashed in 1977 — will hit the block on July 25"
+          "url": "https://variety.com/2026/tv/news/jacob-elordi-euphoria-death-locked-in-coffin-snake-1236817094/",
+          "ageMin": 108,
+          "headline": "Jacob Elordi Spent Two Days Locked in a Coffin With a Real Snake for Euphoria Death: Sam Levinson Brought Me Back to Torture Me",
+          "summary": "For Jacob Elordi, the final season of Euphoria was a seemingly never-ending death chase. Until, of course, his character Nate finally died — buried alive and then bit by a rattlesnake. While on Jimmy Kimmel Live! with guest host (and fellow Euphoria star) Colman Domingo, Elordi was asked about filming the gruesome scene. When Domingo [ ]"
         }
       ],
-      "ageMin": 64,
+      "ageMin": 108,
       "_cand": {
-        "key": "rss:a-car-john-bonham-probably-drove-into-a-ditch-is-headed-to-a",
+        "key": "rss:jacob-elordi-spent-two-days-locked-in-a-coffin-with-a-real-s",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -1468,21 +979,544 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Rolling Stone"
+          "Variety"
         ],
         "maxTier": 7,
         "sensitivity": "high",
-        "attribution": "Rolling Stone",
+        "attribution": "Variety",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 51,
+      "priority": 57,
       "signals": {
         "recency": 16,
         "corroboration": 12,
         "status": 18,
         "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 6,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "S"
+    },
+    {
+      "id": "news-neill-blomkamp-ai-zombie-movie-criticism",
+      "slug": "district-9-director-neill-blomkamp-criticised-over-ai-zombie-movie",
+      "title": "‘District 9’ director Neill Blomkamp criticised over AI zombie movie",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "neill-blomkamp-ai-zombie-movie-criticism",
+      "primaryKeyword": "Neill Blomkamp AI movie",
+      "primaryEntity": "Neill Blomkamp",
+      "entities": [
+        "District 9"
+      ],
+      "angle": "Director Neill Blomkamp faces criticism over his use of AI in an upcoming zombie movie.",
+      "tmdbType": "movie",
+      "source": "gnews:NME",
+      "sources": [
+        {
+          "outlet": "NME",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPT1V0cFNndzRvdHhwcTE1WnA4ZWZTYlEtQkE0dU91Qlg2Y2Rmb2pCVDNFTldIVEpYX1d1NjVyNll0dllEbDdNNjdHRkx5NURDLUFBUkV2bGp3TUwxa2JtTjNkM0hOcFg5bVY5cDg2QzJYN2lYWmtrQ3IxZGpXSTltU09ZbVFoQ3gwWU92ckVmeWdmZnhWVUw0WjN5TklqSFRDZU03RExBTQ?oc=5",
+          "ageMin": 34,
+          "headline": "‘District 9’ director Neill Blomkamp criticised over AI zombie movie - NME",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxPT1V0cFNndzRvdHhwcTE1WnA4ZWZTYlEtQkE0dU91Qlg2Y2Rmb2pCVDNFTldIVEpYX1d1NjVyNll0dllEbDdNNjdHRkx5NURDLUFBUkV2bGp3TUwxa2JtTjNkM0hOcFg5bVY5cDg2QzJYN2lYWmtrQ3IxZGpXSTltU09ZbVFoQ3gwWU92ckVmeWdmZnhWVUw0WjN5TklqSFRDZU03RExBTQ?oc=5\" target=\"_blank\" ‘D"
+        }
+      ],
+      "ageMin": 34,
+      "_cand": {
+        "key": "rss:-district-9-director-neill-blomkamp-criticised-over-ai-zombi",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "NME"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "NME",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 67,
+      "signals": {
+        "recency": 24,
+        "corroboration": 8,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 12,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-comic-con-other",
+      "slug": "less-marvel-no-problem-experts-say-comic-con-is-not-facing-a-post-mcu-",
+      "title": "Less Marvel? No problem — experts say Comic-Con is not facing a post-MCU ‘Doomsday’",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "comic-con-other",
+      "primaryKeyword": "Comic-Con",
+      "primaryEntity": "Comic-Con Episode IV: A Fan's Hope",
+      "entities": [
+        "Comic-Con",
+        "MCU"
+      ],
+      "angle": "Experts discuss the future of Comic-Con, suggesting it's not facing a 'doomsday' despite a potential shift in Marvel's presence.",
+      "tmdbType": "movie",
+      "source": "gnews:NextMosh",
+      "sources": [
+        {
+          "outlet": "NextMosh",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5fVEhPSkdlVmRmZWVUYUx1SnYyTFh1cEo0UVgwenhsdF9wdURsMjlOcm50Q2pVYVYtdDlMU2NLTVVHUGdWblFrbGNCVkR5amd2YXRWYmxhcmVsNkswbEhDQXluUzdUUk10T05ZWnJqaXZnV05NQlhkZDdhdw?oc=5",
+          "ageMin": 169,
+          "headline": "Hatebreed release “Kill Count Increase” music video - NextMosh",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMie0FVX3lxTE5fVEhPSkdlVmRmZWVUYUx1SnYyTFh1cEo0UVgwenhsdF9wdURsMjlOcm50Q2pVYVYtdDlMU2NLTVVHUGdWblFrbGNCVkR5amd2YXRWYmxhcmVsNkswbEhDQXluUzdUUk10T05ZWnJqaXZnV05NQlhkZDdhdw?oc=5\" target=\"_blank\" Hatebreed release “Kill Count Increase” music video /a nbsp; n"
+        }
+      ],
+      "ageMin": 169,
+      "_cand": {
+        "key": "rss:hatebreed-release-kill-count-increase-music-video-nextmosh",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "NextMosh"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "NextMosh",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 53,
+      "signals": {
+        "recency": 16,
+        "corroboration": 8,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 6,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-la-la-land-poster-ryan-gosling-hand-fix",
+      "slug": "la-la-land-poster-fixes-ryan-gosling-s-flat-hand-after-10-years-of-the",
+      "title": "La La Land Poster Fixes Ryan Gosling's Flat Hand After 10 Years of the Actor Being Haunted by It",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "la-la-land-poster-ryan-gosling-hand-fix",
+      "primaryKeyword": "La La Land",
+      "primaryEntity": "La La Land",
+      "entities": [
+        "Ryan Gosling"
+      ],
+      "angle": "The theatrical poster for 'La La Land' has been updated to fix Ryan Gosling's hand after the actor expressed his long-standing dislike for its original depiction.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/film/news/la-la-land-poster-fixes-ryan-gosling-hand-1236817281/",
+          "ageMin": 104,
+          "headline": "La La Land Poster Fixes Ryan Gosling s Flat Hand After 10 Years of the Actor Being Haunted by It",
+          "summary": "At long last, Ryan Gosling s wish has been granted. After speaking out in multiple interviews over the years about his dislike of his hand placement as featured on the original La La Land theatrical release poster, Lionsgate has unveiled a new design for the movie s 10th anniversary with Gosling s flat hand now sticking out. Back [ ]"
+        }
+      ],
+      "ageMin": 104,
+      "_cand": {
+        "key": "rss:la-la-land-poster-fixes-ryan-gosling-s-flat-hand-after-10-ye",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 63,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 12,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-nicolas-winding-refn-drive-making-of",
+      "slug": "nicolas-winding-refn-reveals-the-chaotic-making-of-drive-most-everyone",
+      "title": "Nicolas Winding Refn Reveals the Chaotic Making of ‘Drive’: “Most Everyone Hated It”",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "nicolas-winding-refn-drive-making-of",
+      "primaryKeyword": "drive movie",
+      "primaryEntity": "Drive",
+      "entities": [
+        "Drive (2011 film)",
+        "Nicolas Winding Refn"
+      ],
+      "angle": "Director Nicolas Winding Refn discusses the difficult and initially poorly received production of his cult classic film 'Drive'.",
+      "tmdbType": "movie",
+      "source": "gnews:The Hollywood Reporter",
+      "sources": [
+        {
+          "outlet": "The Hollywood Reporter",
+          "tier": 7,
+          "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPanYxcmhqcHZNcktjVXh6RFpNN3dfUUhmbENrUlFyOXRqZGpkcUtQMmZtMnRib24wVF9NTk80T0FBeTQ4UC1KcjV6eFoyMjZxOC0ydTEzZXF6VHlmQ2hsazBjR3ZQNmlSTG1tZVo4YXJnUEN1dFF2NHJfU1YtZWE2T3k0Yk5QQTNtdlFtQzNWUlhfU05MS24yZ0s1aGhhaG9pSV9lWmZuMXVRVXRKR3F0ektSNjlSNU15M3ZaOXdIcGR4QQ?oc=5",
+          "ageMin": 276,
+          "headline": "Nicolas Winding Refn Reveals the Chaotic Making of ‘Drive’: “Most Everyone Hated It” - The Hollywood Reporter",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiwgFBVV95cUxPanYxcmhqcHZNcktjVXh6RFpNN3dfUUhmbENrUlFyOXRqZGpkcUtQMmZtMnRib24wVF9NTk80T0FBeTQ4UC1KcjV6eFoyMjZxOC0ydTEzZXF6VHlmQ2hsazBjR3ZQNmlSTG1tZVo4YXJnUEN1dFF2NHJfU1YtZWE2T3k0Yk5QQTNtdlFtQzNWUlhfU05MS24yZ0s1aGhhaG9pSV9lWmZuMXVRVXRKR3F0ektSNjlSNU15M3Z"
+        }
+      ],
+      "ageMin": 276,
+      "_cand": {
+        "key": "rss:nicolas-winding-refn-reveals-the-chaotic-making-of-drive-mos",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "The Hollywood Reporter"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "The Hollywood Reporter",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 56,
+      "signals": {
+        "recency": 9,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 12,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-luke-skywalker-hand-lightsaber-prop-sale",
+      "slug": "luke-skywalker-s-severed-hand-and-lightsaber-prop-sold-for-3-75m",
+      "title": "Luke Skywalker's severed hand and lightsaber prop sold for $3.75M",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "luke-skywalker-hand-lightsaber-prop-sale",
+      "primaryKeyword": "luke skywalker prop sale",
+      "primaryEntity": "Luke Skywalker",
+      "entities": [
+        "Star Wars"
+      ],
+      "angle": "Iconic Luke Skywalker prop sells for millions at auction.",
+      "tmdbType": "movie",
+      "source": "gnews:Boing Boing",
+      "sources": [
+        {
+          "outlet": "Boing Boing",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNQTB3ZGZfdUc2S0hESnhxUnJEWHlHd1A5WUZHVDZYV3RXSDRSSWt0XzhMeFhiMmhnc21CMlJpMVZGaHlRUVFxV09TTWlxU1Bicl9ZRDNtcDVMZGJTQzBIQ0pLa0tfdzFwdml2eFE0UkVCLWJVZ0xjdnF2TTliOXJBc215eXdlUXFqcUtxVkNFYUJPYkFmbEZnZTdVZXVTd3JnVWZmN9IBqgFBVV95cUxQLW41ZGNzRnZmdi01UW9xTkVWNEJwRzhKTVBzYmZyUENOUks5QndyeC1OZUFIX21VT2sweHhfSUQ1Z2trXzhIdnNvSmotVFphejdfM3VSLXBxSUI4cW8wWHdRUlpTaDhJTzRRRTFGU2pZNFhSS0hqRzdZTWdEQS1nYlU2cjQyNUFYbjVFaFZGdGtqcXoteFdVcDRKd2R1dHZsMU96cklMUWJpUQ?oc=5",
+          "ageMin": 241,
+          "headline": "Luke Skywalker's severed hand and lightsaber prop sold for $3.75M - Boing Boing",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxNQTB3ZGZfdUc2S0hESnhxUnJEWHlHd1A5WUZHVDZYV3RXSDRSSWt0XzhMeFhiMmhnc21CMlJpMVZGaHlRUVFxV09TTWlxU1Bicl9ZRDNtcDVMZGJTQzBIQ0pLa0tfdzFwdml2eFE0UkVCLWJVZ0xjdnF2TTliOXJBc215eXdlUXFqcUtxVkNFYUJPYkFmbEZnZTdVZXVTd3JnVWZmN9IBqgFBVV95cUxQLW41ZGNzRnZmdi0"
+        }
+      ],
+      "ageMin": 241,
+      "_cand": {
+        "key": "rss:luke-skywalker-s-severed-hand-and-lightsaber-prop-sold-for-3",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "Boing Boing"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "Boing Boing",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 52,
+      "signals": {
+        "recency": 9,
+        "corroboration": 8,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 12,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-luke-skywalker-lightsaber-breaks-star-wars-record-at-auction",
+      "slug": "luke-skywalker-s-lightsaber-breaks-star-wars-record-at-auction",
+      "title": "Luke Skywalker's Lightsaber Breaks Star Wars Record at Auction",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "luke-skywalker-lightsaber-breaks-star-wars-record-at-auction",
+      "primaryKeyword": "luke skywalker lightsaber auction",
+      "primaryEntity": "Luke Skywalker's lightsaber",
+      "entities": [
+        "Star Wars"
+      ],
+      "angle": "A prop lightsaber belonging to Luke Skywalker has set a new record at auction for a Star Wars item.",
+      "tmdbType": "movie",
+      "source": "gnews:Euronews.com",
+      "sources": [
+        {
+          "outlet": "Euronews.com",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQTWg1VlUxd3BfOVg0MlcxSjdsc0F5RFdlbFJ0aWwzaUUwRlZYeE9aSUdrbEJZNjJhcjc1S0kyZ0Jhd3NTMWJGbmlBMFF1QTN0Nkwzcm9zRnZIenlVbnFiQnZUaXlxSUU1T1Q4UmtDREkxazV0dUJyVndUSFF5VzE3ZmJsQ21zcXZSRWRmVUQ0QmN5dnNUNHN0X2MwUzRZUWJDUGtlZXhkbHJ2OGMyaW9IelVsdkY0SzJuVDRzOGxfamR2ZEFtb0FPbQ?oc=5",
+          "ageMin": 316,
+          "headline": "Luke Skywalker's lightsaber breaks Star Wars record at auction - Euronews.com",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiyAFBVV95cUxQTWg1VlUxd3BfOVg0MlcxSjdsc0F5RFdlbFJ0aWwzaUUwRlZYeE9aSUdrbEJZNjJhcjc1S0kyZ0Jhd3NTMWJGbmlBMFF1QTN0Nkwzcm9zRnZIenlVbnFiQnZUaXlxSUU1T1Q4UmtDREkxazV0dUJyVndUSFF5VzE3ZmJsQ21zcXZSRWRmVUQ0QmN5dnNUNHN0X2MwUzRZUWJDUGtlZXhkbHJ2OGMyaW9IelVsdkY0SzJuVDR"
+        }
+      ],
+      "ageMin": 316,
+      "_cand": {
+        "key": "rss:luke-skywalker-s-lightsaber-breaks-star-wars-record-at-aucti",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "Euronews.com"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "Euronews.com",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 52,
+      "signals": {
+        "recency": 9,
+        "corroboration": 8,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 12,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-madadayo-other",
+      "slug": "kurosawa-s-final-film-madadayo-was-one-of-his-best-so-why-did-it-take-",
+      "title": "Kurosawa s Final Film Madadayo Was One of His Best — So Why Did it Take Five Years to Reach the U.S.?",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "madadayo-other",
+      "primaryKeyword": "Madadayo release",
+      "primaryEntity": "Madadayo",
+      "entities": [
+        "Akira Kurosawa"
+      ],
+      "angle": "Discussion on the delayed US release and critical reception of Akira Kurosawa's final film, Madadayo.",
+      "tmdbType": "movie",
+      "source": "rss:IndieWire",
+      "sources": [
+        {
+          "outlet": "IndieWire",
+          "tier": 7,
+          "url": "https://www.indiewire.com/features/commentary/akira-kurosawa-final-film-madadayo-bluray-1235206150/",
+          "ageMin": 1322,
+          "headline": "Kurosawa s Final Film Madadayo Was One of His Best — So Why Did it Take Five Years to Reach the U.S.?",
+          "summary": "Akira Kurosawa's swan song was criminally underrated and overlooked when he made it in 1993, but now it's available on Blu-ray with behind-the-scenes footage showing the master at work."
+        }
+      ],
+      "ageMin": 1322,
+      "_cand": {
+        "key": "rss:kurosawa-s-final-film-madadayo-was-one-of-his-best-so-why-di",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "IndieWire"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "IndieWire",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 48,
+      "signals": {
+        "recency": 1,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 12,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-cher-legal-bills-sonny-bono-widow",
+      "slug": "cher-spent-1m-in-legal-bills-fighting-sonny-bono-s-widow-a-judge-says-",
+      "title": "Cher Spent $1M in Legal Bills Fighting Sonny Bono s Widow. A Judge Says She Must Pay It Herself",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "legal",
+      "sensitivity": "high",
+      "tier": "popular",
+      "eventSlug": "cher-legal-bills-sonny-bono-widow",
+      "primaryKeyword": "Cher legal battle",
+      "primaryEntity": "Cher",
+      "entities": [
+        "Sonny Bono"
+      ],
+      "angle": "Cher is ordered to pay $1 million in legal fees from her dispute with Sonny Bono's widow over royalties.",
+      "tmdbType": "movie",
+      "source": "rss:Billboard",
+      "sources": [
+        {
+          "outlet": "Billboard",
+          "tier": 7,
+          "url": "https://www.billboard.com/pro/cher-cant-win-1m-legal-bills-sonny-bono-widow-judge/",
+          "ageMin": 12,
+          "headline": "Cher Spent $1M in Legal Bills Fighting Sonny Bono s Widow. A Judge Says She Must Pay It Herself",
+          "summary": "After defeating Mary Bono’s effort to stop paying her royalties, Cher is now stuck with a hefty legal bill it took to win the case."
+        }
+      ],
+      "ageMin": 12,
+      "_cand": {
+        "key": "rss:cher-spent-1m-in-legal-bills-fighting-sonny-bono-s-widow-a-j",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Billboard"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": "Billboard",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 72,
+      "signals": {
+        "recency": 30,
+        "corroboration": 12,
+        "status": 18,
+        "type": 12,
         "pop": 0,
         "breakout": 0,
         "big": 0,
@@ -1493,9 +1527,75 @@
       "tierClass": "S"
     },
     {
-      "id": "news-robbie-williams-explains-white-substance-face-world-cup-final",
-      "slug": "robbie-williams-explains-the-white-substance-on-his-face-that-sparked-",
-      "title": "Robbie Williams Explains the White Substance on His Face That Sparked Concern at World Cup Final",
+      "id": "news-john-legend-bang-olufsen-deal",
+      "slug": "john-legend-inks-two-year-deal-to-join-bang-olufsen-as-global-brand-am",
+      "title": "John Legend Inks Two-Year Deal to Join Bang Olufsen as Global Brand Ambassador",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "john-legend-bang-olufsen-deal",
+      "primaryKeyword": "John Legend brand deal",
+      "primaryEntity": "John Legend",
+      "entities": [
+        "Bang Olufsen"
+      ],
+      "angle": "John Legend inks a two-year deal to become a global brand ambassador for audio company Bang Olufsen.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/lifestyle/lifestyle-news/john-legend-bang-olufsen-global-brand-ambassador-1236653206/",
+          "ageMin": 32,
+          "headline": "John Legend Inks Two-Year Deal to Join Bang Olufsen as Global Brand Ambassador",
+          "summary": "The EGOT winner praised Bang Olufsen as one of his favorite audio brands: “As a longtime owner of their products, I've always been drawn to the way they combine beautiful sound with timeless design.”"
+        }
+      ],
+      "ageMin": 32,
+      "_cand": {
+        "key": "rss:john-legend-inks-two-year-deal-to-join-bang-olufsen-as-globa",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 63,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-cardi-b-hip-hop-britney-spears-comparison",
+      "slug": "cardi-b-calls-herself-hip-hop-s-britney-spears",
+      "title": "Cardi B Calls Herself Hip-Hop's Britney Spears",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
@@ -1503,26 +1603,28 @@
       "eventType": "other",
       "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "robbie-williams-explains-white-substance-face-world-cup-final",
-      "primaryKeyword": "Robbie Williams",
-      "primaryEntity": "Robbie Williams",
-      "entities": [],
-      "angle": "Robbie Williams addresses speculation about a white substance seen on his face during the World Cup Final.",
+      "eventSlug": "cardi-b-hip-hop-britney-spears-comparison",
+      "primaryKeyword": "Cardi B",
+      "primaryEntity": "Cardi B",
+      "entities": [
+        "Britney Spears"
+      ],
+      "angle": "Cardi B draws a parallel between herself and Britney Spears, citing public fascination with their love lives.",
       "tmdbType": "movie",
       "source": "rss:Billboard",
       "sources": [
         {
           "outlet": "Billboard",
           "tier": 7,
-          "url": "https://www.billboard.com/music/music-news/robbie-williams-white-substance-face-world-cup-final-1236299636/",
-          "ageMin": 92,
-          "headline": "Robbie Williams Explains the White Substance on His Face That Sparked Concern at World Cup Final",
-          "summary": "The singer shut down speculation that the flake that fell onto his microphone was drug-related."
+          "url": "https://www.billboard.com/music/rb-hip-hop/cardi-b-hip-hop-britney-spears-1236299655/",
+          "ageMin": 25,
+          "headline": "Here s Why Cardi B Calls Herself Hip-Hop s Britney Spears",
+          "summary": "Cardi's love life continues to be a tabloid favorite."
         }
       ],
-      "ageMin": 92,
+      "ageMin": 25,
       "_cand": {
-        "key": "rss:robbie-williams-explains-the-white-substance-on-his-face-tha",
+        "key": "rss:here-s-why-cardi-b-calls-herself-hip-hop-s-britney-spears",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -1541,9 +1643,9 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 51,
+      "priority": 59,
       "signals": {
-        "recency": 16,
+        "recency": 24,
         "corroboration": 12,
         "status": 18,
         "type": 5,
@@ -1555,6 +1657,201 @@
         "softTv": 0
       },
       "tierClass": "C"
+    },
+    {
+      "id": "news-harry-styles-cancels-sao-paulo-concert-illness",
+      "slug": "harry-styles-cancels-s-o-paulo-concert-due-to-illness",
+      "title": "Harry Styles Cancels São Paulo Concert Due to Illness",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "harry-styles-cancels-sao-paulo-concert-illness",
+      "primaryKeyword": "Harry Styles",
+      "primaryEntity": "Harry Styles",
+      "entities": [
+        "Together, Together Tour"
+      ],
+      "angle": "Harry Styles forced to cancel a São Paulo concert due to illness.",
+      "tmdbType": "movie",
+      "source": "rss:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/harry-styles-cancels-sao-paulo-brazil-concert-tour-illness-1236999528/",
+          "ageMin": 56,
+          "headline": "Harry Styles Cancels São Paulo Concert Due To Tour Illness",
+          "summary": "Harry Styles has been forced to cancel his third performance on his Together, Together tour in São Paulo, due to an unspecified tour illness, Live Nation Brazil said in a statement on social media. We deeply regret to share that the Harry Styles show on Tuesday, July 21, 2026 at MorumBIS has been canceled due [ ]"
+        }
+      ],
+      "ageMin": 56,
+      "_cand": {
+        "key": "rss:harry-styles-cancels-s-o-paulo-concert-due-to-tour-illness",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 59,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-harry-styles-cancels-brazil-show-health-issue",
+      "slug": "harry-styles-cancels-brazil-show-over-health-issue",
+      "title": "Harry Styles Cancels Brazil Show Over ‘Health Issue’",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "health",
+      "sensitivity": "high",
+      "eventSlug": "harry-styles-cancels-brazil-show-health-issue",
+      "primaryKeyword": "harry styles cancels show",
+      "primaryEntity": "Harry Styles",
+      "entities": [
+        "Live Nation Brazil"
+      ],
+      "angle": "Harry Styles has canceled a show in Brazil due to a health issue.",
+      "tmdbType": "movie",
+      "source": "rss:Rolling Stone",
+      "sources": [
+        {
+          "outlet": "Rolling Stone",
+          "tier": 7,
+          "url": "https://www.rollingstone.com/music/music-news/harry-styles-cancels-brazil-show-health-issue-1235596495/",
+          "ageMin": 150,
+          "headline": "Harry Styles Cancels Brazil Show Over ‘Health Issue’",
+          "summary": "The star was scheduled to perform four nights in the city, and Live Nation Brazil said Friday’s show in São Paulo will proceed as normal"
+        }
+      ],
+      "ageMin": 150,
+      "_cand": {
+        "key": "rss:harry-styles-cancels-brazil-show-over-health-issue-",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Rolling Stone"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": "Rolling Stone",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 58,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 12,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "S"
+    },
+    {
+      "id": "news-harry-styles-concert-brazil-canceled-illness",
+      "slug": "harry-styles-concert-in-brazil-tonight-canceled-due-to-unspecified-tou",
+      "title": "Harry Styles’ Concert in Brazil Tonight Canceled Due to Unspecified ‘Tour Illness’",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "health",
+      "sensitivity": "high",
+      "tier": "popular",
+      "eventSlug": "harry-styles-concert-brazil-canceled-illness",
+      "primaryKeyword": "Harry Styles concert canceled",
+      "primaryEntity": "Harry Styles",
+      "entities": [],
+      "angle": "Harry Styles' concert in Brazil has been canceled due to an unspecified 'tour illness'.",
+      "tmdbType": "movie",
+      "source": "rss:Variety Music",
+      "sources": [
+        {
+          "outlet": "Variety Music",
+          "tier": 7,
+          "url": "https://variety.com/2026/music/news/harry-styles-concert-in-brazil-canceled-illness-1236817219/",
+          "ageMin": 230,
+          "headline": "Harry Styles’ Concert in Brazil Tonight Canceled Due to Unspecified ‘Tour Illness’",
+          "summary": "Harry Styles’ concert scheduled for Tuesday night in Brazil has been canceled due to an unspecified “tour illness,” although Friday’s concert will take place as scheduled, according to the announcement. A rep for the singer had no further comment beyond the statement below, which reads in full:“We deeply regret to share that the Harry Styles [ ]"
+        }
+      ],
+      "ageMin": 230,
+      "_cand": {
+        "key": "rss:harry-styles-concert-in-brazil-tonight-canceled-due-to-unspe",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety Music"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": "Variety Music",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 51,
+      "signals": {
+        "recency": 9,
+        "corroboration": 12,
+        "status": 18,
+        "type": 12,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "S"
     }
   ]
 }
