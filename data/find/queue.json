@@ -1,62 +1,349 @@
 {
-  "runId": "run-2026-07-20T23-01-31",
-  "builtAt": "2026-07-20T23:02:50.279Z",
-  "count": 15,
+  "runId": "run-2026-07-21T00-01-39",
+  "builtAt": "2026-07-21T00:03:34.643Z",
+  "count": 12,
   "topics": [
     {
-      "id": "news-cooper-flagg-celebrity-family-feud-appearance",
-      "slug": "cooper-flagg-and-family-to-appear-on-celebrity-family-feud",
-      "title": "Cooper Flagg and Family to Appear on Celebrity Family Feud",
+      "id": "news-ryan-reynolds-confirms-deadpool-4",
+      "slug": "ryan-reynolds-confirms-another-deadpool-movie",
+      "title": "Ryan Reynolds Confirms Another ‘Deadpool’ Movie",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "high",
+      "eventSlug": "ryan-reynolds-confirms-deadpool-4",
+      "primaryKeyword": "deadpool 4",
+      "primaryEntity": "Deadpool 4",
+      "entities": [
+        "Ryan Reynolds"
+      ],
+      "angle": "Ryan Reynolds officially confirms that a fourth Deadpool movie is in the works.",
+      "tmdbType": "movie",
+      "source": "gnews:The Hollywood Reporter",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/ryan-reynolds-confirms-another-deadpool-movie-1236652695/",
+          "ageMin": 57,
+          "headline": "Ryan Reynolds Confirms Another Deadpool Movie",
+          "summary": "The film would follow 2024's 'Deadpool Wolverine,' which became the top-grossing R-rated movie of all time."
+        },
+        {
+          "outlet": "The Hollywood Reporter",
+          "tier": 7,
+          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPQ0d6ZTM0bU9palVtOGRjT1phSDN3cHVvVWpFQjVMWTV3ZWlHcGJYZHdPUnhMZE5RRXEwUXYtVTEzdE1BQ0tQT2pEYWFPVmRiWVB5MFBIUk5TZEpzeWNYVUVXaVRnNEJUQnhNZHFGeVB6ODNlRUkwa2xVdDZ4bDZ3TlU0RjN6VnV4VC1INERyczlVcTd3emVnY3A0M3ZpZlhGMHFxd3Q4eHU3eHc0Z2c?oc=5",
+          "ageMin": 47,
+          "headline": "Ryan Reynolds Confirms Another ‘Deadpool’ Movie - The Hollywood Reporter",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxPQ0d6ZTM0bU9palVtOGRjT1phSDN3cHVvVWpFQjVMWTV3ZWlHcGJYZHdPUnhMZE5RRXEwUXYtVTEzdE1BQ0tQT2pEYWFPVmRiWVB5MFBIUk5TZEpzeWNYVUVXaVRnNEJUQnhNZHFGeVB6ODNlRUkwa2xVdDZ4bDZ3TlU0RjN6VnV4VC1INERyczlVcTd3emVnY3A0M3ZpZlhGMHFxd3Q4eHU3eHc0Z2c?oc=5\" target=\"_"
+        }
+      ],
+      "ageMin": 47,
+      "_cand": {
+        "key": "rss:ryan-reynolds-confirms-another-deadpool-movie-the-hollywood-",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 2,
+      "verification": {
+        "tier1Count": 2,
+        "tier1Owners": 1,
+        "outletCount": 2,
+        "outlets": [
+          "THR",
+          "The Hollywood Reporter"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 101,
+      "signals": {
+        "recency": 24,
+        "corroboration": 18,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 8,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "S"
+    },
+    {
+      "id": "news-the-odyssey-boxoffice",
+      "slug": "listen-christopher-nolan-gets-moviegoers-out-in-force-for-the-trojan-h",
+      "title": "LISTEN: Christopher Nolan Gets Moviegoers Out in Force for the Trojan Horse",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "boxoffice",
+      "sensitivity": "normal",
+      "eventSlug": "the-odyssey-boxoffice",
+      "primaryKeyword": "the odyssey",
+      "primaryEntity": "The Odyssey",
+      "entities": [
+        "Christopher Nolan",
+        "Universal Pictures"
+      ],
+      "angle": "Christopher Nolan's 'The Odyssey' achieves a massive worldwide opening weekend.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/film/news/box-office-odyssey-christopher-nolan-daily-variety-podcast-1236816924/",
+          "ageMin": 94,
+          "headline": "LISTEN: Christopher Nolan Gets Moviegoers Out in Force for the Trojan Horse",
+          "summary": "On today’s episode of Daily Variety podcast, in our Box Office segment, Variety’s Rebecca Rubin breaks down the spectacular $264 million worldwide opening for Universal Pictures’ “The Odyssey.” It couldn’t have come at a better time for Imax, the large-format exhibitor that delivered more than 50% of the opening weekend receipts. Anticipation for Nolan s follow-up [ ]"
+        }
+      ],
+      "ageMin": 94,
+      "_cand": {
+        "key": "rss:listen-christopher-nolan-gets-moviegoers-out-in-force-for-th",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 93,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 12,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "radar": 30
+      },
+      "radarKind": "movie-in-theaters",
+      "tierClass": "A"
+    },
+    {
+      "id": "news-maitreya-ramakrishnan-elle-season-2-tease",
+      "slug": "never-have-i-ever-alum-maitreyi-ramakrishnan-teases-elle-season-2-role",
+      "title": "Never Have I Ever Alum Maitreyi Ramakrishnan Teases Elle Season 2 Role: Not Something I ve Done Before",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "cooper-flagg-celebrity-family-feud-appearance",
-      "primaryKeyword": "Cooper Flagg Celebrity Family Feud",
-      "primaryEntity": "Cooper Flagg",
+      "eventSlug": "maitreya-ramakrishnan-elle-season-2-tease",
+      "primaryKeyword": "Maitreyi Ramakrishnan",
+      "primaryEntity": "Maitreyi Ramakrishnan",
       "entities": [
-        "Celebrity Family Feud"
+        "Emma Elle Paterson",
+        "Elle",
+        "Mindy Kaling",
+        "Reese Witherspoon"
       ],
-      "angle": "Basketball prospect Cooper Flagg and his family are set to appear on the popular game show.",
+      "angle": "Never Have I Ever star Maitreyi Ramakrishnan teases her role in the upcoming season of Elle, and discusses Mindy Kaling and Reese Witherspoon.",
       "tmdbType": "movie",
-      "source": "gnews:Sun Journal",
+      "source": "rss:THR",
       "sources": [
         {
-          "outlet": "Sun Journal",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxON2VGTm5qUThlMGluNWd2Y1QxM2JWOHA4NmtDZlpaUXVybF9KMTZHTnM3UVIwSU50dVZoTVJvYXNxVi03YWgzUzE2d1NQSUJJMkNzSjlVSVRrZWJUNTRta2JjQ3hEX2c0MFgwbk50SFBBR1ZNRUg5QWR5dzFWMm9yaWhuWjFFZkFKZHI2QmtHTQ?oc=5",
-          "ageMin": 174,
-          "headline": "Cooper Flagg and his family will appear on Celebrity Family Feud - Sun Journal",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMijwFBVV95cUxON2VGTm5qUThlMGluNWd2Y1QxM2JWOHA4NmtDZlpaUXVybF9KMTZHTnM3UVIwSU50dVZoTVJvYXNxVi03YWgzUzE2d1NQSUJJMkNzSjlVSVRrZWJUNTRta2JjQ3hEX2c0MFgwbk50SFBBR1ZNRUg5QWR5dzFWMm9yaWhuWjFFZkFKZHI2QmtHTQ?oc=5\" target=\"_blank\" Cooper Flagg and his family will a"
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/tv/tv-news/never-have-i-ever-maitreyi-ramakrishnan-elle-season-2-tease-1236651876/",
+          "ageMin": 47,
+          "headline": "Never Have I Ever Alum Maitreyi Ramakrishnan Teases Elle Season 2 Role: Not Something I ve Done Before",
+          "summary": "The star also shares her thoughts on what actresses-turned-powerhouse-producers Mindy Kaling and Reese Witherspoon have in common."
         }
       ],
-      "ageMin": 174,
+      "ageMin": 47,
       "_cand": {
-        "key": "rss:cooper-flagg-and-his-family-will-appear-on-celebrity-family-",
+        "key": "rss:never-have-i-ever-alum-maitreyi-ramakrishnan-teases-elle-sea",
         "popularity": 0,
-        "kind": "gnews"
+        "kind": "rss-news"
       },
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
+        "tier1Count": 1,
+        "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Sun Journal"
+          "THR"
         ],
-        "maxTier": 5,
+        "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Sun Journal",
+        "attribution": "THR",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 78,
+      "priority": 86,
       "signals": {
-        "recency": 16,
-        "corroboration": 8,
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-chloe-fineman-myron-bolitar-netflix-casting",
+      "slug": "chloe-fineman-among-four-cast-in-myron-bolitar-series-at-netflix",
+      "title": "Chloe Fineman Among Four Cast in 'Myron Bolitar' Series at Netflix",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "high",
+      "eventSlug": "chloe-fineman-myron-bolitar-netflix-casting",
+      "primaryKeyword": "Chloe Fineman Myron Bolitar",
+      "primaryEntity": "Myron Bolitar (TV series)",
+      "entities": [
+        "Chloe Fineman",
+        "Netflix"
+      ],
+      "angle": "Chloe Fineman has landed a series regular role in the upcoming Netflix adaptation of Harlan Coben's 'Myron Bolitar'.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/tv/news/chloe-fineman-myron-bolitar-series-netflix-1236816733/",
+          "ageMin": 374,
+          "headline": "Chloe Fineman Among Four Cast in Myron Bolitar Series at Netflix",
+          "summary": "Chloe Fineman has already found her first post- SNL gig, with a series regular role in the Myron Bolitar series currently in the works at Netflix. Fineman is one of three actors joining the show as a series regular, alongside both Jabari Banks ( Bel Air ) and Jamie McShane ( Task, Wednesday ). In addition, Ben McKenzie ( Everyone is [ ]"
+        },
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOY2tfc2tRcjJPQ0hTWnRqZUFsRG9jZ2FwOHUtQW9ta0VmcEZTRi1JYU84c21MSWt1RnVMLXVlMFRoT3cxRURnS1ZBQUxiSDBLelB6R0oxeHo5Yi1NMk5rWHJTaUF5TFowNFgxNnJJY25uMldId21CTGpQM3Y4eHBsMzdrSF9wMGQzQ3RKZ2JJdW1tZzVQZ3NwdS13?oc=5",
+          "ageMin": 392,
+          "headline": "Chloe Fineman Jabari Banks Cast In Netflix's 'Myron Bolitar' Series - Deadline",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMimgFBVV95cUxOY2tfc2tRcjJPQ0hTWnRqZUFsRG9jZ2FwOHUtQW9ta0VmcEZTRi1JYU84c21MSWt1RnVMLXVlMFRoT3cxRURnS1ZBQUxiSDBLelB6R0oxeHo5Yi1NMk5rWHJTaUF5TFowNFgxNnJJY25uMldId21CTGpQM3Y4eHBsMzdrSF9wMGQzQ3RKZ2JJdW1tZzVQZ3NwdS13?oc=5\" target=\"_blank\" Chloe Fineman Jabari"
+        }
+      ],
+      "ageMin": 374,
+      "_cand": {
+        "key": "rss:chloe-fineman-among-four-cast-in-myron-bolitar-series-at-net",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 2,
+      "verification": {
+        "tier1Count": 2,
+        "tier1Owners": 1,
+        "outletCount": 2,
+        "outlets": [
+          "Variety",
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 80,
+      "signals": {
+        "recency": 4,
+        "corroboration": 18,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 8,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "S"
+    },
+    {
+      "id": "news-scrubs-revival-casting-changes-ava-bunn-x-mayo-joel-kim-booster",
+      "slug": "scrubs-revival-ups-ava-bunn-to-series-regular-x-mayo-and-joel-kim-boos",
+      "title": "Scrubs Revival Ups Ava Bunn to Series Regular, X Mayo and Joel Kim Booster Exit",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "scrubs-revival-casting-changes-ava-bunn-x-mayo-joel-kim-booster",
+      "primaryKeyword": "scrubs revival",
+      "primaryEntity": "Scrubs (TV series)",
+      "entities": [
+        "Ava Bunn",
+        "X Mayo",
+        "Joel Kim Booster"
+      ],
+      "angle": "The 'Scrubs' revival is making cast adjustments with one actor promoted and two others departing ahead of its next season.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/tv/news/scrubs-revival-season-11-ava-bun-x-mayo-joel-kim-booster-1236816776/",
+          "ageMin": 242,
+          "headline": "Scrubs Revival Ups Ava Bunn to Series Regular, X Mayo and Joel Kim Booster Exit",
+          "summary": "The Scrubs revival at ABC is undergoing some cast changes ahead of its second season (and the show s 11th season overall). Ava Bunn, who starred as Dr. Sam Tosh in the first revival season, has been upped to series regular status for the second season. Meanwhile, both X Mayo and Joel Kim Booster who [ ]"
+        }
+      ],
+      "ageMin": 242,
+      "_cand": {
+        "key": "rss:scrubs-revival-ups-ava-bunn-to-series-regular-x-mayo-and-joe",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 75,
+      "signals": {
+        "recency": 9,
+        "corroboration": 12,
         "status": 18,
         "type": 14,
         "pop": 0,
@@ -69,43 +356,43 @@
       "tierClass": "B"
     },
     {
-      "id": "music-news-sony-ai-music-copyright-lawsuit-udio",
-      "slug": "why-sony-just-filed-a-new-ai-music-copyright-lawsuit-against-udio",
-      "title": "Why Sony Just Filed a New AI Music Copyright Lawsuit Against Udio",
+      "id": "music-news-burna-boy-world-cup-halftime-video",
+      "slug": "watch-burna-boy-link-up-with-justin-bieber-shakira-more-in-behind-the-",
+      "title": "Watch Burna Boy Link Up With Justin Bieber, Shakira More in Behind-the-Scenes World Cup Halftime Video Diary",
       "contentType": "music-news",
       "formatTag": "music-news",
       "category": "music",
       "subcategory": "news",
-      "eventType": "lawsuit",
-      "sensitivity": "high",
+      "eventType": "other",
+      "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "sony-ai-music-copyright-lawsuit-udio",
-      "primaryKeyword": "AI music copyright",
-      "primaryEntity": "IDIOTAPE",
+      "eventSlug": "burna-boy-world-cup-halftime-video",
+      "primaryKeyword": "Burna Boy",
+      "primaryEntity": "Burna Boy",
       "entities": [
-        "Udio",
-        "Sony",
-        "AI music"
+        "Justin Bieber",
+        "Shakira"
       ],
-      "angle": "Sony expands its legal battle against AI music platform Udio with a new copyright lawsuit.",
+      "angle": "Grammy-winning artist Burna Boy shares a behind-the-scenes look at his World Cup halftime performance, featuring Justin Bieber and Shakira.",
       "tmdbType": "movie",
       "source": "rss:Billboard",
       "sources": [
         {
           "outlet": "Billboard",
           "tier": 7,
-          "url": "https://www.billboard.com/pro/sony-new-ai-music-copyright-lawsuit-udio-why/",
-          "ageMin": 35,
-          "headline": "Why Sony Just Filed a New AI Music Copyright Lawsuit Against Udio",
-          "summary": "The major music company is expanding the scope of its claims against the AI platform, even after Universal and Warner made licensing peace."
+          "url": "https://www.billboard.com/music/music-news/burna-boy-2026-world-cup-halftime-video-diary-bieber-shakira-1236298724/",
+          "ageMin": 45,
+          "headline": "Watch Burna Boy Link Up With Justin Bieber, Shakira More in Behind-the-Scenes World Cup Halftime Video Diary",
+          "summary": "Billboard 's exclusive \"day in the life\" video follows the Grammy-winning artist as he takes part in one of the biggest performances of his career."
         }
       ],
-      "ageMin": 35,
+      "ageMin": 45,
       "_cand": {
-        "key": "rss:why-sony-just-filed-a-new-ai-music-copyright-lawsuit-against",
+        "key": "rss:watch-burna-boy-link-up-with-justin-bieber-shakira-more-in-b",
         "popularity": 0,
         "kind": "rss-news"
       },
+      "breakoutVelocity": 0,
       "corroborationCount": 1,
       "verification": {
         "tier1Count": 1,
@@ -115,59 +402,127 @@
           "Billboard"
         ],
         "maxTier": 7,
-        "sensitivity": "high",
+        "sensitivity": "normal",
         "attribution": "Billboard",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 70,
+      "priority": 59,
       "signals": {
         "recency": 24,
         "corroboration": 12,
         "status": 18,
-        "type": 12,
+        "type": 5,
         "pop": 0,
         "breakout": 0,
         "big": 0,
         "trending": 0,
-        "spice": 4,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-peter-lassally-dies-at-93",
+      "slug": "peter-lassally-legendary-late-night-producer-for-johnny-carson-david-l",
+      "title": "Peter Lassally, Legendary Late Night Producer for Johnny Carson, David Letterman and Craig Ferguson, Dies at 93",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "death",
+      "sensitivity": "high",
+      "eventSlug": "peter-lassally-dies-at-93",
+      "primaryKeyword": "peter lassally",
+      "primaryEntity": "Peter Lassally",
+      "entities": [
+        "Johnny Carson",
+        "David Letterman",
+        "Craig Ferguson"
+      ],
+      "angle": "Legendary late-night producer who worked with Johnny Carson, David Letterman, and Craig Ferguson has died at 93.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/tv/news/peter-lassally-late-night-producer-carson-letterman-dies-dead-1236816945/",
+          "ageMin": 28,
+          "headline": "Peter Lassally, Legendary Late Night Producer for Johnny Carson, David Letterman and Craig Ferguson, Dies at 93",
+          "summary": "Peter Lassally, the dean of late night producers who worked with Johnny Carson on the Tonight Show, David Letterman on Late Show and Craig Ferguson on The Late Late Show, has died. He was 93. Lassally was long dubbed the host whisperer for helping steer some of the biggest franchises of all time in late [ ]"
+        }
+      ],
+      "ageMin": 28,
+      "_cand": {
+        "key": "rss:peter-lassally-legendary-late-night-producer-for-johnny-cars",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 74,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 6,
+        "trending": 0,
+        "spice": 0,
         "softTv": 0
       },
       "tierClass": "S"
     },
     {
-      "id": "news-megan-fox-supernatural-sequel",
-      "slug": "megan-fox-to-star-in-sequel-to-supernatural-cult-classic",
-      "title": "Megan Fox to Star in Sequel to Supernatural Cult Classic",
+      "id": "news-dark-knights-of-steel-announcement",
+      "slug": "start-stop-finish-riding-into-battle-with-dark-knights-of-steel",
+      "title": "Start, Stop, Finish: Riding into Battle with “Dark Knights of Steel”",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "megan-fox-supernatural-sequel",
-      "primaryKeyword": "megan fox sequel",
-      "primaryEntity": "supernatural cult classic sequel",
+      "eventSlug": "dark-knights-of-steel-announcement",
+      "primaryKeyword": "dark knights of steel",
+      "primaryEntity": "Dark Knights of Steel",
       "entities": [
-        "Megan Fox"
+        "LEGO DC: Shazam! Magic and Monsters",
+        "DC Comics"
       ],
-      "angle": "Megan Fox is set to return for a long-awaited sequel to a supernatural cult classic film.",
+      "angle": "DC Comics announces the upcoming release and themes for 'Dark Knights of Steel'.",
       "tmdbType": "movie",
-      "source": "gnews:MovieWeb",
+      "source": "gnews:KROC-AM",
       "sources": [
         {
-          "outlet": "MovieWeb",
+          "outlet": "KROC-AM",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE0xb0dOTjFCMkktVkozMUlveFc4NUlfYlVLVDFLN20yYTk2UHhhRHBxdkZ4R3I2X0t2djRDNExkUG1iWFJsOU1NT2ZJYTVxOXRVZWxzV182Y0FsU1pwcjV1aXBkVlFkS1p0dHNiVF9RYw?oc=5",
-          "ageMin": 291,
-          "headline": "Megan Fox Returning for Long-Awaited Sequel to Supernatural Cult Classic - MovieWeb",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMib0FVX3lxTE0xb0dOTjFCMkktVkozMUlveFc4NUlfYlVLVDFLN20yYTk2UHhhRHBxdkZ4R3I2X0t2djRDNExkUG1iWFJsOU1NT2ZJYTVxOXRVZWxzV182Y0FsU1pwcjV1aXBkVlFkS1p0dHNiVF9RYw?oc=5\" target=\"_blank\" Megan Fox Returning for Long-Awaited Sequel to Supernatural Cult Classic /a nb"
+          "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE43SjdNV2lwdG5faHRKajBRQjVRYUw4M19LOE10VjhKWFFCbkFIcFUzUHczaFM5UzJEeU9xZW9UYUtBX2FnUnRvSlBZajNpSV9XOTdqMVpXck1ON3dVVmV5eXBzbF9WOXBfQUJB?oc=5",
+          "ageMin": 2685,
+          "headline": "10 TV Shows That Were Canceled Before the First Season Was Finished - KROC-AM",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMia0FVX3lxTE43SjdNV2lwdG5faHRKajBRQjVRYUw4M19LOE10VjhKWFFCbkFIcFUzUHczaFM5UzJEeU9xZW9UYUtBX2FnUnRvSlBZajNpSV9XOTdqMVpXck1ON3dVVmV5eXBzbF9WOXBfQUJB?oc=5\" target=\"_blank\" 10 TV Shows That Were Canceled Before the First Season Was Finished /a nbsp; nbsp; f"
         }
       ],
-      "ageMin": 291,
+      "ageMin": 2685,
       "_cand": {
-        "key": "rss:megan-fox-returning-for-long-awaited-sequel-to-supernatural-",
+        "key": "rss:10-tv-shows-that-were-canceled-before-the-first-season-was-f",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -177,18 +532,18 @@
         "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "MovieWeb"
+          "KROC-AM"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "MovieWeb",
+        "attribution": "KROC-AM",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 68,
+      "priority": 60,
       "signals": {
-        "recency": 9,
+        "recency": 1,
         "corroboration": 8,
         "status": 18,
         "type": 9,
@@ -204,7 +559,7 @@
     {
       "id": "news-scrubs-tv-series-casting",
       "slug": "scrubs-ups-ava-bunn-to-series-regular-as-season-2-cast-returns-and-dep",
-      "title": "Scrubs Ups Ava Bunn To Series Regular As Season 2 Cast Returns and Departures Set",
+      "title": "'Scrubs' Ups Ava Bunn To Series Regular as Season 2 Cast Returns and Departures Set",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
@@ -212,14 +567,14 @@
       "eventType": "casting",
       "sensitivity": "normal",
       "eventSlug": "scrubs-tv-series-casting",
-      "primaryKeyword": "Scrubs season 2",
+      "primaryKeyword": "Scrubs Season 2 casting",
       "primaryEntity": "Scrubs (TV series)",
       "entities": [
         "Ava Bunn",
         "Neil Flynn",
         "Rachel Bilson"
       ],
-      "angle": "Scrubs promotes Ava Bunn to series regular as season 2 cast returns and departures are confirmed.",
+      "angle": "ABC's 'Scrubs' has promoted Ava Bunn to series regular for its upcoming second season, alongside cast return announcements and departures.",
       "tmdbType": "movie",
       "source": "rss:Deadline",
       "sources": [
@@ -227,12 +582,12 @@
           "outlet": "Deadline",
           "tier": 7,
           "url": "https://deadline.com/2026/07/scrubs-season-2-cast-ava-bunn-who-is-returning-leaving-1236998486/",
-          "ageMin": 181,
+          "ageMin": 241,
           "headline": "Scrubs Ups Ava Bunn To Series Regular Alongside Lead OG Trio As Season 2 Sets Cast Returns Two Main Characters Departures",
           "summary": "ABC s Scrubs has locked in the main cast for Season 2, and the revival is shaking up a few things, with OG Neil Flynn and new addition Rachel Bilson getting more screen time and two prominent recurring characters, Dr. Park (Joel Kim Booster) and Charge Nurse Raymond (X Mayo), not returning. There is no change [ ]"
         }
       ],
-      "ageMin": 181,
+      "ageMin": 241,
       "_cand": {
         "key": "rss:scrubs-ups-ava-bunn-to-series-regular-alongside-lead-og-trio",
         "popularity": 0,
@@ -269,288 +624,22 @@
       "tierClass": "B"
     },
     {
-      "id": "trailer-maigret-season-two-premiere-date",
-      "slug": "maigret-season-two-premiere-date-set-for-masterpiece-series-on-pbs",
-      "title": "Maigret: Season Two Premiere Date Set for Masterpiece Series on PBS",
-      "contentType": "trailer",
-      "formatTag": "trailer",
-      "category": "tv",
-      "subcategory": "trailers",
-      "eventType": "trailer",
-      "sensitivity": "normal",
-      "eventSlug": "maigret-season-two-premiere-date",
-      "primaryKeyword": "maigret season two premiere",
-      "primaryEntity": "Maigret",
-      "entities": [
-        "Masterpiece",
-        "PBS"
-      ],
-      "angle": "The second season of the Masterpiece series 'Maigret' has set its premiere date.",
-      "tmdbType": "movie",
-      "source": "gnews:TV Series Finale",
-      "sources": [
-        {
-          "outlet": "TV Series Finale",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQdkxJNUJsN2lRQWlYOWU4Z1JLZ3NoMklJYnNycGpUNHNqTEllRGlLZkpWeGw1LUpSb3RmdTRIbEhnVS1CbWpraEtoTDhHQWR5YU41MjBpcjRXN0tCTDVOdk0wNUN3SDlsZnRzRWxWcmhBajRyYmxROTFOYmdEbG9FTDJRc0FHTFdzODd1U0tXTEZTSV9BUGItODBSOTJmMHhkTVdvR0ltSkpxa2dabldWYUFmWnRWZ1huMTRWZzNtbkYtZ0o2dWtOdnRhbkU2NlV1b2RMV3RB0gHWAUFVX3lxTFB2TEk1Qmw3aVFBaVg5ZThnUktnc2gySUlic3JwalQ0c2pMSWVEaUtmSlZ4bDUtSlJvdGZ1NEhsSGdVLUJtamtoS2hMOEdBZHlhTjUyMGlyNFc3S0JMNU52TTA1Q3dIOWxmdHNFbFZyaEFqNHJibFE5MU5iZ0Rsb0VMMlFzQUdMV3M4N3VTS1dMRlNJX0FQYi04MFI5MmYweGRNV29HSW1KSnFrZ1puV1ZhQWZadFZnWG4xNFZnM21uRi1nSjZ1a052dGFuRTY2VXVvZExXdEE?oc=5",
-          "ageMin": 556,
-          "headline": "Monsters of God: HBO Unveils Premiere Date and Trailer for Documentary About Exotic Animal Smuggling - TV Series Finale",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMi1gFBVV95cUxQdkxJNUJsN2lRQWlYOWU4Z1JLZ3NoMklJYnNycGpUNHNqTEllRGlLZkpWeGw1LUpSb3RmdTRIbEhnVS1CbWpraEtoTDhHQWR5YU41MjBpcjRXN0tCTDVOdk0wNUN3SDlsZnRzRWxWcmhBajRyYmxROTFOYmdEbG9FTDJRc0FHTFdzODd1U0tXTEZTSV9BUGItODBSOTJmMHhkTVdvR0ltSkpxa2dabldWYUFmWnRWZ1huMTR"
-        }
-      ],
-      "ageMin": 556,
-      "_cand": {
-        "key": "rss:monsters-of-god-hbo-unveils-premiere-date-and-trailer-for-do",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "TV Series Finale"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "TV Series Finale",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 63,
-      "signals": {
-        "recency": 4,
-        "corroboration": 8,
-        "status": 18,
-        "type": 15,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-myron-bolitar-series-chloe-fineman-casting",
-      "slug": "chloe-fineman-among-four-cast-in-myron-bolitar-series-at-netflix",
-      "title": "Chloe Fineman Among Four Cast in Myron Bolitar Series at Netflix",
+      "id": "news-new-tv-series-casting-call-australia",
+      "slug": "casting-australia-s-pettiest-arguments-wanted-for-new-tv-series",
+      "title": "CASTING | Australia’s pettiest arguments wanted for new TV series",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "myron-bolitar-series-chloe-fineman-casting",
-      "primaryKeyword": "Myron Bolitar series",
-      "primaryEntity": "Myron Bolitar (TV series)",
-      "entities": [
-        "Chloe Fineman",
-        "Netflix"
-      ],
-      "angle": "Chloe Fineman lands a series regular role in Netflix's Myron Bolitar series.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/tv/news/chloe-fineman-myron-bolitar-series-netflix-1236816733/",
-          "ageMin": 313,
-          "headline": "Chloe Fineman Among Four Cast in Myron Bolitar Series at Netflix",
-          "summary": "Chloe Fineman has already found her first post- SNL gig, with a series regular role in the Myron Bolitar series currently in the works at Netflix. Fineman is one of three actors joining the show as a series regular, alongside both Jabari Banks ( Bel Air ) and Jamie McShane ( Task, Wednesday ). In addition, Ben McKenzie ( Everyone is [ ]"
-        }
-      ],
-      "ageMin": 313,
-      "_cand": {
-        "key": "rss:chloe-fineman-among-four-cast-in-myron-bolitar-series-at-net",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 71,
-      "signals": {
-        "recency": 9,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "music-news-j-cole-bra-thrown-onstage",
-      "slug": "j-cole-shocked-after-bra-is-thrown-onstage-during-work-out-performance",
-      "title": "J. Cole Shocked After Bra Is Thrown Onstage During Work Out Performance",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "j-cole-bra-thrown-onstage",
-      "primaryKeyword": "j cole",
-      "primaryEntity": "J. Cole",
-      "entities": [
-        "Miami"
-      ],
-      "angle": "Rapper J. Cole reacts to a fan throwing a bra on stage during a concert.",
-      "tmdbType": "movie",
-      "source": "rss:Billboard",
-      "sources": [
-        {
-          "outlet": "Billboard",
-          "tier": 7,
-          "url": "https://www.billboard.com/music/rb-hip-hop/j-cole-bra-ontage-fall-off-tour-miami-1236298625/",
-          "ageMin": 34,
-          "headline": "J. Cole Shocked After Bra Is Thrown Onstage During Work Out Performance: Gotta Cherish That Sh",
-          "summary": "The North Carolina rapper laughed and held the bra up to the crowd during a tour stop in Miami."
-        }
-      ],
-      "ageMin": 34,
-      "_cand": {
-        "key": "rss:j-cole-shocked-after-bra-is-thrown-onstage-during-work-out-p",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "breakoutVelocity": 0,
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Billboard"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Billboard",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 59,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-emmys-cut-categories-telecast-outrage",
-      "slug": "the-emmys-f-ed-this-up-streamers-and-networks-are-outraged-as-five-cat",
-      "title": "The Emmys F ed This Up: Streamers and Networks Are Outraged as Five Categories Get Cut From the Telecast",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "emmys-cut-categories-telecast-outrage",
-      "primaryKeyword": "Emmys categories",
-      "primaryEntity": "The Emmys",
-      "entities": [
-        "Television Academy",
-        "Streamers",
-        "Networks"
-      ],
-      "angle": "Streamers and networks are reportedly outraged over the Television Academy's decision to cut five categories from the primetime Emmy Awards telecast.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/tv/awards/emmys-cut-five-categories-telecast-backlash-1236816847/",
-          "ageMin": 47,
-          "headline": "The Emmys F ed This Up : Streamers and Networks Are Outraged as Five Categories Get Cut From the Telecast",
-          "summary": "Bad move, Emmys. Just about everyone hates it. On Friday, Variety exclusively revealed the Television Academy s plan to thin out the categories handed out during its primetime telecast on Sept. 14, after the Board of Governors voted to shift a hodgepodge of five races to the first weekend of ceremonies, once known as the Creative [ ]"
-        }
-      ],
-      "ageMin": 47,
-      "_cand": {
-        "key": "rss:the-emmys-f-ed-this-up-streamers-and-networks-are-outraged-a",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 67,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 6,
-        "trending": 0,
-        "spice": 2,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-new-tv-series-casting-australia",
-      "slug": "new-tv-series-casting-for-australia-s-pettiest-arguments",
-      "title": "New TV Series Casting for 'Australia's Pettiest Arguments'",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "new-tv-series-casting-australia",
+      "eventSlug": "new-tv-series-casting-call-australia",
       "primaryKeyword": "new tv series casting australia",
       "primaryEntity": "new TV series",
       "entities": [
         "Australia"
       ],
-      "angle": "A casting call is underway in Australia for a new TV series seeking participants for 'pettiest arguments'.",
+      "angle": "Casting call for a new TV series seeking participants for petty arguments.",
       "tmdbType": "movie",
       "source": "gnews:TV Blackbox",
       "sources": [
@@ -558,12 +647,12 @@
           "outlet": "TV Blackbox",
           "tier": 5,
           "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOVFBhV2hyTkNySEtIbWZ4d205MFhsdWVkMWtSZ09TYlBxb2JlaDZGODRQc3F4Vi1ybGJVQkFuMExVTlZpUXUyek9WdnluMkhfYl9iZUpTbURXT21DeDlPUTdreXBIdFR1YVhBSnYzS0xQZXM3WE5UTFBiTExRSGJjcmNJeVBCcWFBS0JqUWJMUUpLVGUxVko4aUtjaFBmTXFTZkhKSUlJSUc?oc=5",
-          "ageMin": 213,
+          "ageMin": 273,
           "headline": "CASTING | Australia’s pettiest arguments wanted for new TV series - TV Blackbox",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMiqAFBVV95cUxOVFBhV2hyTkNySEtIbWZ4d205MFhsdWVkMWtSZ09TYlBxb2JlaDZGODRQc3F4Vi1ybGJVQkFuMExVTlZpUXUyek9WdnluMkhfYl9iZUpTbURXT21DeDlPUTdreXBIdFR1YVhBSnYzS0xQZXM3WE5UTFBiTExRSGJjcmNJeVBCcWFBS0JqUWJMUUpLVGUxVko4aUtjaFBmTXFTZkhKSUlJSUc?oc=5\" target=\"_blank\" C"
         }
       ],
-      "ageMin": 213,
+      "ageMin": 273,
       "_cand": {
         "key": "rss:casting-australia-s-pettiest-arguments-wanted-for-new-tv-ser",
         "popularity": 0,
@@ -600,218 +689,22 @@
       "tierClass": "B"
     },
     {
-      "id": "news-percy-jackson-and-the-olympians-season-3-renewal",
-      "slug": "percy-jackson-and-the-olympians-season-3-is-close-at-hand",
-      "title": "Percy Jackson and the Olympians Season 3 is Close at Hand",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "renewal",
-      "sensitivity": "normal",
-      "eventSlug": "percy-jackson-and-the-olympians-season-3-renewal",
-      "primaryKeyword": "percy jackson season 3",
-      "primaryEntity": "Percy Jackson & the Olympians: The Lightning Thief",
-      "entities": [
-        "Percy Jackson and the Olympians (TV series)",
-        "Rick Riordan",
-        "Disney+"
-      ],
-      "angle": "Disney+ series 'Percy Jackson and the Olympians' is confirmed for a third season.",
-      "tmdbType": "movie",
-      "source": "rss:Deadline",
-      "sources": [
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/feature/percy-jackson-and-the-olympians-season-3-news-updates-1236495797/",
-          "ageMin": 216,
-          "headline": "Everything We Know About ‘Percy Jackson And The Olympians’ Season 3 So Far",
-          "summary": "Another season of Disney s television series adaptation of Rick Riordan s Percy Jackson and the Olympians has come and gone, but Season 3 is close at hand. The series received a very early Season 3 renewal in March 2025, and some very key players have been cast for the third installment. Read on for more details [ ]"
-        }
-      ],
-      "ageMin": 216,
-      "_cand": {
-        "key": "rss:everything-we-know-about-percy-jackson-and-the-olympians-sea",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Deadline"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Deadline",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 66,
-      "signals": {
-        "recency": 9,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-sharon-stone-quitting-weed-stroke-medication",
-      "slug": "sharon-stone-on-quitting-weed-and-stopping-a-stroke-medication-despite",
-      "title": "Sharon Stone on Quitting Weed and Stopping a Stroke Medication Despite Doctors Orders: ‘It Was Like Going Off of F ing Heroin’",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "health",
-      "sensitivity": "high",
-      "eventSlug": "sharon-stone-quitting-weed-stroke-medication",
-      "primaryKeyword": "sharon stone health",
-      "primaryEntity": "Sharon Stone",
-      "entities": [],
-      "angle": "Sharon Stone discusses quitting weed and stopping stroke medication.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/film/columns/sharon-stone-quitting-weed-stopping-stroke-medication-like-going-off-of-heroin-1236816916/",
-          "ageMin": 8,
-          "headline": "Sharon Stone on Quitting Weed and Stopping a Stroke Medication Despite Doctors Orders: ‘It Was Like Going Off of F ing Heroin’",
-          "summary": "Sharon Stone is done smoking weed. Her journey to cut ties with cannabis began when she was put on several medications after she suffered a near-fatal stroke in 2001. “I got off one of my medications that I was on for my stroke last September, and they said I couldn t go off of it,” Stone [ ]"
-        }
-      ],
-      "ageMin": 8,
-      "_cand": {
-        "key": "rss:sharon-stone-on-quitting-weed-and-stopping-a-stroke-medicati",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 72,
-      "signals": {
-        "recency": 30,
-        "corroboration": 12,
-        "status": 18,
-        "type": 12,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "S"
-    },
-    {
-      "id": "news-marcello-hernandez-kevin-hart-impression-today-show",
-      "slug": "marcello-hern-ndez-derails-today-interview-with-kevin-hart-impression",
-      "title": "Marcello Hernández Derails Today Interview With Kevin Hart Impression",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "marcello-hernandez-kevin-hart-impression-today-show",
-      "primaryKeyword": "Marcello Hernandez Kevin Hart impression",
-      "primaryEntity": "Marcello Hernández",
-      "entities": [
-        "Kevin Hart",
-        "Today Show"
-      ],
-      "angle": "Marcello Hernández's impression of Kevin Hart hilariously derails a 'Today' show interview.",
-      "tmdbType": "movie",
-      "source": "rss:TheWrap",
-      "sources": [
-        {
-          "outlet": "TheWrap",
-          "tier": 7,
-          "url": "https://www.thewrap.com/creative-content/movies/marcello-hernandez-derails-today-interview-kevin-hart-impression/",
-          "ageMin": 60,
-          "headline": "Marcello Hernández Derails Today Interview With Kevin Hart Impression That Leaves Set in Stitches",
-          "summary": "Hart recognizes the hilarity of his \"72 Hours\" co-star, and even says \"Saturday Night Live\" underutilizes his talent The post Marcello Hernández Derails Today Interview With Kevin Hart Impression That Leaves Set in Stitches appeared first on TheWrap ."
-        }
-      ],
-      "ageMin": 60,
-      "_cand": {
-        "key": "rss:marcello-hern-ndez-derails-today-interview-with-kevin-hart-i",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "TheWrap"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "TheWrap",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 59,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-adam-driver-declines-marvel-offers-tradition",
+      "id": "news-adam-driver-declines-marvel-offers",
       "slug": "adam-driver-turns-down-so-many-marvel-movie-offers-that-it-s-become-a-",
-      "title": "Adam Driver Turns Down So Many Marvel Movie Offers That It's Become a Tradition at the Studio to Zoom With Him and Then He Passes",
+      "title": "Adam Driver Turns Down So Many Marvel Movie Offers That It's Become a Tradition",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
-      "eventType": "other",
+      "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "adam-driver-declines-marvel-offers-tradition",
-      "primaryKeyword": "Adam Driver Marvel offers",
+      "eventSlug": "adam-driver-declines-marvel-offers",
+      "primaryKeyword": "Adam Driver Marvel",
       "primaryEntity": "Adam Driver",
       "entities": [
-        "Marvel Studios"
+        "Marvel Cinematic Universe"
       ],
-      "angle": "Adam Driver has a running joke with Marvel Studios where he repeatedly turns down offers to join the MCU.",
+      "angle": "Adam Driver has a tradition of turning down Marvel movie offers.",
       "tmdbType": "movie",
       "source": "rss:Variety",
       "sources": [
@@ -819,12 +712,12 @@
           "outlet": "Variety",
           "tier": 7,
           "url": "https://variety.com/2026/film/news/adam-driver-turns-down-marvel-movies-1236816747/",
-          "ageMin": 83,
+          "ageMin": 143,
           "headline": "Adam Driver Turns Down So Many Marvel Movie Offers That It s Become a Tradition at the Studio to Zoom With Him and Then He Passes",
           "summary": "Marvel Studios president Kevin Feige revealed on the Happy Sad Confused podcast that Adam Driver has repeatedly turned down offers to join the Marvel Cinematic Universe over the years. “It’s no secret we’d like to [work with Adam],” Feige replied. But it’s a tradition to Zoom with him and then he passes. That’s a long-lived [ ]"
         }
       ],
-      "ageMin": 83,
+      "ageMin": 143,
       "_cand": {
         "key": "rss:adam-driver-turns-down-so-many-marvel-movie-offers-that-it-s",
         "popularity": 0,
@@ -845,6 +738,71 @@
         "status": "DEVELOPING",
         "publishable": true
       },
+      "priority": 60,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-marcello-hernandez-kevin-hart-impression",
+      "slug": "marcello-hern-ndez-derails-today-interview-with-kevin-hart-impression",
+      "title": "Marcello Hernández Derails Today Interview With Kevin Hart Impression",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "marcello-hernandez-kevin-hart-impression",
+      "primaryKeyword": "Marcello Hernandez",
+      "primaryEntity": "Marcello Hernández",
+      "entities": [
+        "Kevin Hart"
+      ],
+      "angle": "Marcello Hernández's impression of Kevin Hart interrupts a 'Today' show interview.",
+      "tmdbType": "movie",
+      "source": "rss:TheWrap",
+      "sources": [
+        {
+          "outlet": "TheWrap",
+          "tier": 7,
+          "url": "https://www.thewrap.com/creative-content/movies/marcello-hernandez-derails-today-interview-kevin-hart-impression/",
+          "ageMin": 120,
+          "headline": "Marcello Hernández Derails Today Interview With Kevin Hart Impression That Leaves Set in Stitches",
+          "summary": "Hart recognizes the hilarity of his \"72 Hours\" co-star, and even says \"Saturday Night Live\" underutilizes his talent The post Marcello Hernández Derails Today Interview With Kevin Hart Impression That Leaves Set in Stitches appeared first on TheWrap ."
+        }
+      ],
+      "ageMin": 120,
+      "_cand": {
+        "key": "rss:marcello-hern-ndez-derails-today-interview-with-kevin-hart-i",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "TheWrap"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "TheWrap",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
       "priority": 51,
       "signals": {
         "recency": 16,
@@ -856,137 +814,6 @@
         "big": 0,
         "trending": 0,
         "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-cooper-flagg-celebrity-family-feud",
-      "slug": "cooper-flagg-to-appear-on-celebrity-family-feud",
-      "title": "Cooper Flagg to Appear on Celebrity Family Feud",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "cooper-flagg-celebrity-family-feud",
-      "primaryKeyword": "Cooper Flagg",
-      "primaryEntity": "Cooper Flagg",
-      "entities": [
-        "Celebrity Family Feud"
-      ],
-      "angle": "Basketball player Cooper Flagg is set to appear on the game show 'Celebrity Family Feud'.",
-      "tmdbType": "movie",
-      "source": "gnews:92.9 The Ticket",
-      "sources": [
-        {
-          "outlet": "92.9 The Ticket",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1NOWM0QUFrVEJta2VGNmxjLXNYc2x5VUQ5anVQMnQtMGVZcDFnakEtU2xLQ2tKdmxBel92T193LS14NVk0blVlei1GS3F1LWVvYkpySGVDb1VLUHVLSkhPZk9uUG9Cd1VyY2cwTw?oc=5",
-          "ageMin": 152,
-          "headline": "Cooper Flagg Trades The NBA Court For Celebrity Family Feud On ABC July 23 - 92.9 The Ticket",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMibEFVX3lxTE1NOWM0QUFrVEJta2VGNmxjLXNYc2x5VUQ5anVQMnQtMGVZcDFnakEtU2xLQ2tKdmxBel92T193LS14NVk0blVlei1GS3F1LWVvYkpySGVDb1VLUHVLSkhPZk9uUG9Cd1VyY2cwTw?oc=5\" target=\"_blank\" Cooper Flagg Trades The NBA Court For Celebrity Family Feud On ABC July 23 /a nbsp"
-        }
-      ],
-      "ageMin": 152,
-      "_cand": {
-        "key": "rss:cooper-flagg-trades-the-nba-court-for-celebrity-family-feud-",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "92.9 The Ticket"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "92.9 The Ticket",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 51,
-      "signals": {
-        "recency": 16,
-        "corroboration": 8,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 4,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-jessie-j-breakup",
-      "slug": "celebrity-splits-of-2026-jessie-j-chanan-colman-and-more-stars-who-cal",
-      "title": "Celebrity Splits of 2026: Jessie J, Chanan Colman and More Stars Who Called It Quits",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "breakup",
-      "sensitivity": "normal",
-      "eventSlug": "jessie-j-breakup",
-      "primaryKeyword": "jessie j break up",
-      "primaryEntity": "Jessie J",
-      "entities": [
-        "Chanan Colman",
-        "Us Weekly"
-      ],
-      "angle": "A roundup of celebrity breakups, including notable musicians and actors.",
-      "tmdbType": "movie",
-      "source": "gnews:The Hollywood Reporter",
-      "sources": [
-        {
-          "outlet": "The Hollywood Reporter",
-          "tier": 7,
-          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQTnNmYmE2ZGRyNE1LbVJSem9xcm0tWEJmNVByRl9TOW81d3hCdEVBY21uNjAzYXNJWWpNYVM4aXpTaUxMdzhSSmsxb082aHdwWWh4U2Zwa2dpUm51WklYN2Y4cUhXZjhncGtXVXZ0cEZoRUl3SERtVlRTVFN2MFJFdkZENmo5emRQUW91bHc3LW1aSE53aTJkOGIzbUFJcXU2TFJ3?oc=5",
-          "ageMin": 209,
-          "headline": "Here’s Just How Top-Heavy Netflix Is Right Now - The Hollywood Reporter",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiowFBVV95cUxQTnNmYmE2ZGRyNE1LbVJSem9xcm0tWEJmNVByRl9TOW81d3hCdEVBY21uNjAzYXNJWWpNYVM4aXpTaUxMdzhSSmsxb082aHdwWWh4U2Zwa2dpUm51WklYN2Y4cUhXZjhncGtXVXZ0cEZoRUl3SERtVlRTVFN2MFJFdkZENmo5emRQUW91bHc3LW1aSE53aTJkOGIzbUFJcXU2TFJ3?oc=5\" target=\"_blank\" Here’s J"
-        }
-      ],
-      "ageMin": 209,
-      "_cand": {
-        "key": "rss:here-s-just-how-top-heavy-netflix-is-right-now-the-hollywood",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "The Hollywood Reporter"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "The Hollywood Reporter",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 51,
-      "signals": {
-        "recency": 9,
-        "corroboration": 12,
-        "status": 18,
-        "type": 8,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 4,
         "softTv": 0
       },
       "tierClass": "C"
