@@ -1682,11 +1682,11 @@
    "key": "the-odyssey-bo-update-100m|BO-UPDATE",
    "eventSlug": "the-odyssey-bo-update-100m",
    "form": "BO-UPDATE",
-   "reason": "consistency: metaTitle: headlines domestic while the title headlines other — the SERP promise must match the page",
-   "tries": 75,
-   "at": "2026-07-21T20:04:57.355Z",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "tries": 76,
+   "at": "2026-07-21T20:32:42.071Z",
    "dead": true,
-   "expiresAt": "2026-07-24T20:04:57.355Z"
+   "expiresAt": "2026-07-24T20:32:42.071Z"
   },
   {
    "key": "star-wars-the-mandalorian-and-grogu-bo-update-d59|BO-UPDATE",
@@ -1839,16 +1839,32 @@
    "reason": "1 unverified claim(s) cut, unrecovered",
    "tries": 1,
    "at": "2026-07-21T20:11:12.273Z"
+  },
+  {
+   "key": "death-on-the-nile-netflix-top10-w2026-07-19|NETFLIX-TOP10",
+   "eventSlug": "death-on-the-nile-netflix-top10-w2026-07-19",
+   "form": "NETFLIX-TOP10",
+   "reason": "words 161 < 180 (owner-set ~200-word minimum)",
+   "tries": 1,
+   "at": "2026-07-21T20:37:06.145Z"
+  },
+  {
+   "key": "the-boss-baby-netflix-top10-w2026-07-19|NETFLIX-TOP10",
+   "eventSlug": "the-boss-baby-netflix-top10-w2026-07-19",
+   "form": "NETFLIX-TOP10",
+   "reason": "2 unverified claim(s) cut, unrecovered",
+   "tries": 1,
+   "at": "2026-07-21T20:39:29.080Z"
   }
  ],
- "zeroStreak": 0,
+ "zeroStreak": 1,
  "daySpend": {
   "laDay": "2026-07-21",
-  "usd": 0.4416
+  "usd": 0.48267
  },
  "pace": {
-  "tokens": 3,
-  "lastMs": 1784664092233
+  "tokens": 3.6998685555555557,
+  "lastMs": 1784665891895
  },
  "lastAuditDay": "2026-07-21",
  "attempts": {
@@ -1870,14 +1886,15 @@
    "peter dinklage’s biggest fantasy movie with rachel zegler": 1,
    "heartstopper forever": 1,
    "mortal kombat ii": 1,
-   "the boss baby": 1,
+   "the boss baby": 2,
    "wwe: unreal": 1,
    "shipwrecked: nightmare at sea": 1,
    "voicemails for isabelle": 1,
    "enola holmes 3": 1,
    "regretting you": 1,
    "meg 2: the trench": 1,
-   "kpop demon hunters": 1
+   "kpop demon hunters": 1,
+   "death on the nile": 1
   }
  }
 }
