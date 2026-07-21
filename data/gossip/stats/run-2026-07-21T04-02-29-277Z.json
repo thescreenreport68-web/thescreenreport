@@ -1,0 +1,136 @@
+{
+  "ts": "2026-07-21T04:02:29.277Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "rhoslc-star-angie-katsanevas-and-husband-shawn-trujillo-end-marriage-after",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [],
+      "headline": [
+        "metaDescription",
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 2,
+      "surgicalFixes": 2
+    }
+  ],
+  "topics": 1,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 0,
+  "costUSD": 0.024608,
+  "costPerPublished": 0.024608,
+  "byModel": {
+    "google/gemini-2.5-flash-lite": {
+      "calls": 25,
+      "in": 30614,
+      "out": 10650,
+      "usd": 0.007321400000000001
+    },
+    "google/gemini-2.5-flash": {
+      "calls": 7,
+      "in": 14305,
+      "out": 2052,
+      "usd": 0.0094215
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 1079,
+      "out": 438,
+      "usd": 0.00021896
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 6,
+      "in": 18332,
+      "out": 6418,
+      "usd": 0.007646600000000001
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2432,
+      "out": 202,
+      "usd": 0.0012346,
+      "ms": 1280
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1079,
+      "out": 438,
+      "usd": 0.00017595,
+      "ms": 50659
+    },
+    "writer": {
+      "calls": 5,
+      "errors": 0,
+      "in": 17571,
+      "out": 6105,
+      "usd": 0.006117030000000001,
+      "ms": 181486
+    },
+    "verify": {
+      "calls": 6,
+      "errors": 0,
+      "in": 11873,
+      "out": 1850,
+      "usd": 0.0081869,
+      "ms": 9611
+    },
+    "judge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1515,
+      "out": 156,
+      "usd": 0.0002139,
+      "ms": 790
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 761,
+      "out": 313,
+      "usd": 0.00028145,
+      "ms": 11063
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 380,
+      "out": 91,
+      "usd": 0.0000744,
+      "ms": 586
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 201,
+      "out": 46,
+      "usd": 0.0000385,
+      "ms": 571
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2097,
+      "out": 109,
+      "usd": 0.00025330000000000003,
+      "ms": 1788
+    },
+    "linker": {
+      "calls": 4,
+      "errors": 0,
+      "in": 1190,
+      "out": 107,
+      "usd": 0.00016180000000000003,
+      "ms": 1648
+    }
+  }
+}
