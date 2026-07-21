@@ -1,180 +1,235 @@
 {
- "dateKey": "2026-07-20",
+ "dateKey": "2026-07-21",
  "topTopic": {
-  "name": "The Odyssey Box Office Domination",
-  "why": "Christopher Nolan's The Odyssey appears in ~20 headlines across trade and mainstream outlets, centering conversation on box office records, streaming performance, and global reception."
+  "name": "The Odyssey storms global box office",
+  "why": "Multiple independent headlines across outlets (Oman Observer, Hotpress, Standard, TheWrap, EUalive, KPI) report The Odyssey dominating box office records and revenue, making it the day's dominant conversation."
  },
  "slots": [
   {
    "story": {
-    "title": "The Odyssey debuts at #1 with $264M global opening",
-    "angle": "Record-breaking opening weekend makes it Nolan's biggest international launch and third-highest global debut of 2026.",
+    "title": "The Odyssey storms North American box office",
+    "angle": "Christopher Nolan's film dominates North American box office, outperforming other releases",
     "entities": [
-     "Christopher Nolan",
      "The Odyssey",
-     "Box Office"
+     "Christopher Nolan"
     ],
     "sourceLinks": [
-     "https://www.hollywoodreporter.com/movies/movie-news/the-odyssey-bfi-imax-record-screening-film-nolan-tickets-1236652045/",
-     "https://www.screendaily.com/news/the-odyssey-fires-up-uk-ireland-summer-box-office-with-huge-126m-weekend/5218732.article",
-     "https://www.heraldbanner.com/ap/nolan-s-the-odyssey-storms-the-box-office-with-a-264-1-million-global-debut/article_f392cae1-3522-5aa5-a1d4-7f234475cf06.html"
+     "https://www.omanobserver.om/article/1193227/features/filmstv/the-odyssey-storms-north-american-box-office"
+    ],
+    "isTopTopic": true,
+    "viral": 8,
+    "hint": "box-office"
+   },
+   "slotLA": "07:05",
+   "status": "pending"
+  },
+  {
+   "story": {
+    "title": "The Odyssey sets new record for Christopher Nolan",
+    "angle": "The film achieves the biggest box office debut of any Christopher Nolan movie to date",
+    "entities": [
+     "The Odyssey",
+     "Christopher Nolan"
+    ],
+    "sourceLinks": [
+     "https://www.standard.co.uk/culture/film/the-odyssey-record-christopher-nolan-box-office-debut-b1290559.html"
     ],
     "isTopTopic": true,
     "viral": 9,
     "hint": "box-office"
    },
-   "slotLA": "07:05",
-   "status": "dropped",
-   "reason": "factgate: The card claims the film had the third-highest global debut of 2026, but the fact pack does not mention the year 2026 or any other films for comparison.; The category tab states 'BOX-OFFICE' but the fact pack details ticket sales and admissions, not box office revenue for an already released film."
+   "slotLA": "08:38",
+   "status": "pending"
   },
   {
    "story": {
-    "title": "The Odyssey beats Star Wars opening records",
-    "angle": "CinemaCon data shows The Odyssey outperforming recent Star Wars openings in comparable markets.",
+    "title": "Ireland tops global box office for The Odyssey opening weekend",
+    "angle": "Ireland reports the strongest per-capita box office response worldwide for The Odyssey",
     "entities": [
      "The Odyssey",
-     "Star Wars",
-     "Box Office"
+     "Ireland"
     ],
     "sourceLinks": [
-     "https://www.hollywoodreporter.com/movies/movie-news/the-odyssey-bfi-imax-record-screening-film-nolan-tickets-1236652045/",
-     "https://www.imdb.com/news/ni65936252/?ref_=ttnw_art_perm"
+     "https://www.hotpress.com/film-tv/ireland-tops-global-box-office-for-opening-weekend-of-the-odyssey-23153162"
+    ],
+    "isTopTopic": true,
+    "viral": 7,
+    "hint": "box-office"
+   },
+   "slotLA": "10:12",
+   "status": "pending"
+  },
+  {
+   "story": {
+    "title": "The Odyssey cements Nolan's box office supremacy",
+    "angle": "Industry analysis: The Odyssey's performance reinforces Nolan's track record of blockbuster success",
+    "entities": [
+     "The Odyssey",
+     "Christopher Nolan"
+    ],
+    "sourceLinks": [
+     "https://www.thewrap.com/creative-content/movies/the-odyssey-box-office-success-explained-christopher-nolan-imax-film/"
     ],
     "isTopTopic": true,
     "viral": 8,
     "hint": "box-office"
    },
-   "slotLA": "09:04",
-   "status": "dropped",
-   "reason": "factgate: The category tab states 'BOX-OFFICE' but the card text and fact pack discuss admissions and ticket sales for an unreleased film, not money already earned.; The IG caption states 'biggest opening weekend ever' which is not supported by the fact pack. The fact pack states 'best-ever opening weekend at the box office' and 'top of the all-time BFI IMAX opening weekend box office rankings'.; The FB caption states 'biggest opening weekend in the history of London's BFI IMAX' which is not supported by the fact pack. The fact pack states 'best-ever opening weekend at the box office' and 'top of the all-time BFI IMAX opening weekend box office rankings'."
+   "slotLA": "11:54",
+   "status": "pending"
   },
   {
    "story": {
-    "title": "The Odyssey tops Netflix charts in key markets",
-    "angle": "After theatrical, Nolan's film streams to No.1 on Netflix in US and UK, boosting subscriber retention.",
+    "title": "The Odyssey resonates across Europe",
+    "angle": "European audiences embrace Nolan's film, driving strong box office returns from Greece and beyond",
     "entities": [
      "The Odyssey",
-     "Netflix",
-     "Streaming"
+     "Greece",
+     "Europe"
     ],
     "sourceLinks": [
-     "https://www.imdb.com/news/ni65934162/?ref_=ttnw_art_perm",
-     "https://www.whats-on-netflix.com/leaving-soon/the-venture-bros-leaving-netflix-august-2026/"
-    ],
-    "isTopTopic": true,
-    "viral": 7,
-    "hint": "streaming"
-   },
-   "slotLA": "11:03",
-   "status": "dropped",
-   "reason": "gather: <2 independent sources and no own article"
-  },
-  {
-   "story": {
-    "title": "The Odyssey sparks debate over historical portrayal",
-    "angle": "Greek critics and historians weigh in on Nolan's creative choices and factual liberties.",
-    "entities": [
-     "The Odyssey",
-     "Christopher Nolan",
-     "Historical Accuracy"
-    ],
-    "sourceLinks": [
-     "https://www.nytimes.com/2026/07/20/movies/the-odyssey-movie-greece.html",
-     "https://www.theguardian.com/film/2026/jul/20/the-odyssey-what-christopher-nolan-changed-invented-left-out"
+     "https://eualive.net/from-backlash-to-box-office-pride-how-greece-embraced-nolans-the-odyssey/"
     ],
     "isTopTopic": true,
     "viral": 6,
-    "hint": "news"
+    "hint": "box-office"
    },
-   "slotLA": "13:03",
-   "status": "dropped",
-   "reason": "factgate: The IG caption states that Zendaya plays Athena, but the verified fact pack states that Zendaya plays Athena, who appears as a vision seen only by Odysseus (Matt Damon) and seems to represent his conscience rather than being a fully realised divine entity. The card implies Zendaya plays Athena as a fully realised divine entity.; The IG caption states that Elliot Page plays Sinon, but the verified fact pack states that Nolan adds the character of Sinon (Elliot Page), who is shown in the film unwittingly tricking the Trojans into accepting the wooden horse. The card implies Elliot Page plays Sinon as a character from Virgil, but the verified fact pack states that Nolan is drawing on Virgil’s account of the fall of Troy in the second book of the Aeneid.; The IG caption states that Mia Goth plays Melantho, but the verified fact pack states that Nolan invents a detail when he shows one of those treacherous women, Melantho (Mia Goth), effectively condemned to death by Odysseus’s wife, Penelope (Anne Hathaway), who shoves her into the carnage while the suitors are being slaughtered. The card implies Mia Goth plays Melantho as a character from Virgil, but the verified fact pack states that Nolan is drawing on Virgil’s account of the fall of Troy in the second book of the Aeneid."
+   "slotLA": "13:20",
+   "status": "pending"
   },
   {
    "story": {
-    "title": "The Odyssey draws comparisons to Nolan's earlier work",
-    "angle": "Reviewers note echoes of Inception and Dunkirk in structure and tone.",
+    "title": "The Odyssey outperforms at global box office",
+    "angle": "The film surpasses competing releases internationally, including strong Hindi cinema numbers",
     "entities": [
      "The Odyssey",
-     "Inception",
-     "Dunkirk",
-     "Christopher Nolan"
+     "Jana Nayagan",
+     "Lenin Box Office"
     ],
     "sourceLinks": [
-     "https://www.rollingstone.com/tv-movies/tv-movie-features/spider-man-brand-new-day-interview-director-tom-holland-1235595446/",
-     "https://www.slashfilm.com/2216747/best-movies-like-christopher-nolan-the-odyssey/"
+     "https://www.imdb.com/news/ni65937724/?ref_=nmnw_art_perm",
+     "https://www.imdb.com/news/ni65937649/?ref_=ttnw_art_perm"
     ],
     "isTopTopic": true,
-    "viral": 5,
-    "hint": "news"
+    "viral": 7,
+    "hint": "box-office"
    },
    "slotLA": "14:57",
-   "status": "dropped",
-   "reason": "factgate: The card mentions 'Inception' and 'Dunkirk' as comparisons, but the fact pack only compares 'The Odyssey' to 'Interstellar', 'Jason and the Argonauts', 'The Lord of the Rings: The Fellowship of the Ring', and 'O Brother, Where Art Thou?'."
+   "status": "pending"
   },
   {
    "story": {
-    "title": "Avengers: Doomsday trailer reveals Doctor Doom casting",
-    "angle": "First look at the MCU return shows Robert Downey Jr. as Doctor Doom alongside X-Men and Avengers assembled.",
+    "title": "Ryan Reynolds confirms another Deadpool film",
+    "angle": "Reynolds announces continued Deadpool franchise development",
     "entities": [
-     "Avengers: Doomsday",
-     "Doctor Doom",
-     "MCU",
-     "Robert Downey Jr."
+     "Ryan Reynolds",
+     "Deadpool"
     ],
     "sourceLinks": [
-     "https://deadline.com/2026/07/avengers-doomsday-trailer-mcu-doctor-doom-1236998304/",
-     "https://variety.com/2026/film/news/avengers-doomsday-trailer-doctor-doom-x-men-fantastic-four-1236580146/"
+     "https://www.imdb.com/es/news/ni65937806/?ref_=int_nwr_2",
+     "https://variety.com/2026/film/news/ryan-reynolds-new-deadpool-movie-eventually-1236817083/"
     ],
     "isTopTopic": false,
     "viral": 8,
     "hint": "news"
    },
-   "slotLA": "16:56",
-   "status": "posted",
-   "key": "avengers-doomsday-trailer-reveals-doctor-doom-casting"
+   "slotLA": "16:39",
+   "status": "pending"
   },
   {
    "story": {
-    "title": "Masters of the Universe heads to Prime Video",
-    "angle": "Netflix original animated series gets a streaming release date, shifting from theatrical to home viewing.",
+    "title": "Avengers: Doomsday production budget revealed",
+    "angle": "Report indicates Avengers: Doomsday became the most expensive Disney movie ever made",
     "entities": [
-     "Masters of the Universe",
-     "Prime Video",
-     "Streaming Release"
+     "Avengers: Doomsday"
     ],
     "sourceLinks": [
-     "https://variety.com/2026/film/news/masters-of-the-universe-prime-video-release-date-streaming-1236798934/"
+     "https://www.imdb.com/news/ni65937781/?ref_=ttnw_art_perm"
     ],
     "isTopTopic": false,
-    "viral": 5,
-    "hint": "streaming"
-   },
-   "slotLA": "18:55",
-   "status": "posted",
-   "key": "masters-of-the-universe-heads-to-prime-video"
-  },
-  {
-   "story": {
-    "title": "Call of Duty movie gets key setting update",
-    "angle": "New details clarify the movie's contemporary setting and tone ahead of production.",
-    "entities": [
-     "Call of Duty",
-     "Movie",
-     "Setting"
-    ],
-    "sourceLinks": [
-     "https://www.gamespot.com/articles/call-of-duty-movie-gets-a-key-update-about-its-setting/"
-    ],
-    "isTopTopic": false,
-    "viral": 4,
+    "viral": 7,
     "hint": "news"
    },
-   "slotLA": "21:05",
-   "status": "dropped",
-   "reason": "gather: <2 independent sources and no own article"
+   "slotLA": "18:15",
+   "status": "pending"
+  },
+  {
+   "story": {
+    "title": "Collider: Toy Story 5 surges toward $1 billion milestone",
+    "angle": "Toy Story 5 approaches historic billion-dollar box office achievement",
+    "entities": [
+     "Toy Story 5"
+    ],
+    "sourceLinks": [
+     "https://collider.com/toy-story-5-box-office-milestone-900-million/"
+    ],
+    "isTopTopic": false,
+    "viral": 7,
+    "hint": "box-office"
+   },
+   "slotLA": "19:51",
+   "status": "pending"
+  },
+  {
+   "story": {
+    "title": "Michael Jackson biopic delivers 102% profit",
+    "angle": "Michael biopic achieves strong box office return, hitting 102% over break-even mark",
+    "entities": [
+     "Michael Jackson"
+    ],
+    "sourceLinks": [
+     "https://www.imdb.com/news/ni65937831/?ref_=ttnw_art_perm"
+    ],
+    "isTopTopic": false,
+    "viral": 6,
+    "hint": "box-office"
+   },
+   "slotLA": "21:26",
+   "status": "pending"
   }
  ],
- "bench": [],
- "builtAt": 1784555197947
+ "bench": [
+  {
+   "title": "The Odyssey: what's next for Christopher Nolan after this success",
+   "angle": "Discussion on Nolan's future projects following The Odyssey's box office dominance",
+   "entities": [
+    "The Odyssey",
+    "Christopher Nolan",
+    "What is Christopher Nolan's Next Movie"
+   ],
+   "sourceLinks": [
+    "https://www.imdb.com/news/ni65937718/?ref_=ttnw_art_perm"
+   ],
+   "isTopTopic": true,
+   "viral": 6,
+   "hint": "news"
+  },
+  {
+   "title": "Spider-Man: Brand New Day global box office preview",
+   "angle": "Marvel's latest faces competition from The Odyssey's record-breaking run",
+   "entities": [
+    "Spider-Man: Brand New Day"
+   ],
+   "sourceLinks": [
+    "https://www.imdb.com/es/news/ni65937892/?ref_=int_nwr_1"
+   ],
+   "isTopTopic": false,
+   "viral": 5,
+   "hint": "box-office"
+  },
+  {
+   "title": "A24's Elden Ring film stalled",
+   "angle": "Production on the Elden Ring movie adaptation faces setbacks",
+   "entities": [
+    "Elden Ring",
+    "A24"
+   ],
+   "sourceLinks": [
+    "https://theonion.com/a24s-elden-ring-film-stalled-after-red-phantom-named-twinkpunisher-invades-set/"
+   ],
+   "isTopTopic": false,
+   "viral": 3,
+   "hint": "news"
+  }
+ ],
+ "builtAt": 1784641603223
 }
