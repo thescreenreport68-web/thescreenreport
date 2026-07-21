@@ -1,0 +1,75 @@
+{
+  "id": "news-carole-radziwill-real-housewives-new-york-return",
+  "slug": "carole-radziwill-returning-full-time-to-real-housewives-of-new-york-ci",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": null,
+      "cat": "tv/news",
+      "format": [
+        "body 217w < 220"
+      ],
+      "cuts": 0,
+      "broken": []
+    },
+    "attempt2": {
+      "score": null,
+      "cat": "tv/news",
+      "format": [
+        "body 198w < 220"
+      ],
+      "cuts": 0,
+      "broken": []
+    }
+  },
+  "editorial": {
+    "status": "unconfirmed",
+    "entity": "Carole Radziwill",
+    "work": {
+      "title": "The Real Housewives of New York City",
+      "year": null,
+      "medium": "tv"
+    },
+    "outlet": "hollywoodreporter.com"
+  },
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
+    "deterministic": {
+      "words": 198,
+      "h2s": 2,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 3,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 30,
+      "avgSentence": 20,
+      "flesch": 47,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": [
+        "body 198w < 220"
+      ]
+    },
+    "hardBlocks": []
+  },
+  "score": null,
+  "category": "tv",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 1,
+    "failed": [
+      "body ≥ 220w"
+    ]
+  },
+  "ms": 57629
+}

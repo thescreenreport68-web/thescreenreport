@@ -1,0 +1,76 @@
+{
+  "id": "news-will-forte-a24-goblin-casting",
+  "slug": "will-arnett-in-talks-for-a24-s-goblin-with-kenneth-branagh-skyler-giso",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": null,
+      "cat": "movies/news",
+      "format": [
+        "body 195w < 220"
+      ],
+      "cuts": 2,
+      "broken": []
+    },
+    "attempt2": {
+      "score": null,
+      "cat": "movies/news",
+      "format": [
+        "body 195w < 220"
+      ],
+      "cuts": 4,
+      "broken": []
+    }
+  },
+  "editorial": {
+    "status": "unconfirmed",
+    "entity": "Will Forte",
+    "work": {
+      "title": "Goblin",
+      "year": null,
+      "medium": "movie"
+    },
+    "outlet": "deadline.com"
+  },
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
+    "deterministic": {
+      "words": 195,
+      "h2s": 2,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 3,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 26,
+      "avgSentence": 16,
+      "flesch": 49,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": [
+        "body 195w < 220"
+      ]
+    },
+    "hardBlocks": []
+  },
+  "score": null,
+  "category": "movies",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "body ≥ 220w",
+      "2+ FAQ"
+    ]
+  },
+  "ms": 85281
+}
