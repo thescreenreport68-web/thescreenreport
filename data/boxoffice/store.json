@@ -1668,11 +1668,11 @@
    "key": "the-odyssey-bo-update-100m|BO-UPDATE",
    "eventSlug": "the-odyssey-bo-update-100m",
    "form": "BO-UPDATE",
-   "reason": "synthesizer returned no usable brief",
-   "tries": 55,
-   "at": "2026-07-21T10:32:44.181Z",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "tries": 56,
+   "at": "2026-07-21T11:03:46.033Z",
    "dead": true,
-   "expiresAt": "2026-07-24T10:32:44.181Z"
+   "expiresAt": "2026-07-24T11:03:46.033Z"
   },
   {
    "key": "star-wars-the-mandalorian-and-grogu-bo-update-d59|BO-UPDATE",
@@ -1737,16 +1737,24 @@
    "reason": "synthesizer returned no usable brief",
    "tries": 1,
    "at": "2026-07-21T07:36:52.563Z"
+  },
+  {
+   "key": "spider-man-brand-new-day-bo-opening|BO-OPENING",
+   "eventSlug": "spider-man-brand-new-day-bo-opening",
+   "form": "BO-OPENING",
+   "reason": "synthesizer returned no usable brief",
+   "tries": 1,
+   "at": "2026-07-21T11:06:25.270Z"
   }
  ],
- "zeroStreak": 7,
+ "zeroStreak": 8,
  "daySpend": {
   "laDay": "2026-07-21",
-  "usd": 0.22993
+  "usd": 0.23337
  },
  "pace": {
-  "tokens": 3.5000066666666667,
-  "lastMs": 1784629896772
+  "tokens": 3.5719030555555555,
+  "lastMs": 1784631708561
  },
  "lastAuditDay": "2026-07-21",
  "attempts": {
@@ -1761,7 +1769,8 @@
    "the mandalorian and grogu": 2,
    "f9: the fast saga": 1,
    "old henry": 1,
-   "malcolm in the middle: life's still unfair": 1
+   "malcolm in the middle: life's still unfair": 1,
+   "spider-man: brand new day": 1
   }
  }
 }
