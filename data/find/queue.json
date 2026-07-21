@@ -1,42 +1,41 @@
 {
-  "runId": "run-2026-07-21T02-31-29",
-  "builtAt": "2026-07-21T02:32:42.059Z",
-  "count": 8,
+  "runId": "run-2026-07-21T03-01-36",
+  "builtAt": "2026-07-21T03:03:02.901Z",
+  "count": 7,
   "topics": [
     {
       "id": "news-matt-damon-odyssey-stunt-double",
       "slug": "matt-damon-reveals-why-he-had-female-stunt-double-for-odyssey-scene-gr",
-      "title": "Matt Damon Reveals Why He Had Female Stunt Double for Odyssey Scene: Greatest Arms I ve Ever Seen",
+      "title": "Matt Damon Reveals Why He Had Female Stunt Double for Odyssey Scene: Greatest Arms I've Ever Seen",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
-      "eventType": "casting",
+      "eventType": "other",
       "sensitivity": "normal",
       "eventSlug": "matt-damon-odyssey-stunt-double",
-      "primaryKeyword": "Matt Damon Odyssey",
-      "primaryEntity": "The Odyssey",
+      "primaryKeyword": "matt damon odyssey",
+      "primaryEntity": "Matt Damon",
       "entities": [
-        "The Odyssey (film)",
-        "Matt Damon",
-        "Christopher Nolan"
+        "Christopher Nolan",
+        "The Odyssey"
       ],
-      "angle": "Matt Damon explains his decision to use a female stunt double for a scene in Christopher Nolan's 'The Odyssey'.",
+      "angle": "Matt Damon explains his use of a female stunt double for a scene in Christopher Nolan's 'The Odyssey,' praising her physique.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
         {
           "outlet": "THR",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/music/music-news/fifa-world-cup-halftime-show-director-talks-first-concert-1236652455/",
-          "ageMin": 63,
-          "headline": "FIFA World Cup Halftime Show Director on Making First-Ever Concert: Challenging Beyond Challenging",
-          "summary": "Hamish Hamilton speaks with The Hollywood Reporter about the star-studded 11-minute concert, production restrictions and facing pressure from skeptical fans who questioned the show in the first place."
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/matt-damon-female-stunt-double-odyssey-scene-bicep-1236652737/",
+          "ageMin": 127,
+          "headline": "Matt Damon Reveals Why He Had Female Stunt Double for Odyssey Scene: Greatest Arms I ve Ever Seen",
+          "summary": "The actor plays Odysseus in Christopher Nolan's epic action fantasy film."
         }
       ],
-      "ageMin": 63,
+      "ageMin": 127,
       "_cand": {
-        "key": "rss:fifa-world-cup-halftime-show-director-on-making-first-ever-c",
+        "key": "rss:matt-damon-reveals-why-he-had-female-stunt-double-for-odysse",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -55,15 +54,15 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 114,
+      "priority": 93,
       "signals": {
         "recency": 16,
         "corroboration": 12,
         "status": 18,
-        "type": 14,
+        "type": 5,
         "pop": 0,
         "breakout": 0,
-        "big": 24,
+        "big": 12,
         "trending": 0,
         "spice": 0,
         "softTv": 0,
@@ -73,23 +72,165 @@
       "tierClass": "A"
     },
     {
-      "id": "news-kevin-feige-adam-driver-marvel-casting-rumors",
-      "slug": "kevin-feige-on-trying-to-cast-adam-driver-in-marvel-role-amid-x-men-re",
-      "title": "Kevin Feige On Trying To Cast Adam Driver In Marvel Role Amid X-Men Reboot Rumors",
+      "id": "news-adam-driver-passed-on-marvel-roles",
+      "slug": "adam-driver-has-passed-on-so-many-marvel-roles-that-it-s-become-a-trad",
+      "title": "Adam Driver Has Passed on So Many Marvel Roles That It's Become a Tradition, Kevin Feige Says",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "kevin-feige-adam-driver-marvel-casting-rumors",
+      "eventSlug": "adam-driver-passed-on-marvel-roles",
+      "primaryKeyword": "Adam Driver Marvel roles",
+      "primaryEntity": "Adam Driver",
+      "entities": [
+        "Marvel",
+        "Star Wars"
+      ],
+      "angle": "Marvel Studios head Kevin Feige reveals Adam Driver has a history of passing on multiple Marvel roles.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/adam-driver-passing-marvel-roles-tradition-kevin-feige-1236652800/",
+          "ageMin": 27,
+          "headline": "Adam Driver Has Passed on So Many Marvel Roles That It s Become a Tradition, Kevin Feige Says",
+          "summary": "While it's no superhero blockbuster, Driver previously led the 'Star Wars' sequel trilogy, playing Kylo Ren."
+        }
+      ],
+      "ageMin": 27,
+      "_cand": {
+        "key": "rss:adam-driver-has-passed-on-so-many-marvel-roles-that-it-s-bec",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 92,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-josh-lucas-discretion-casting",
+      "slug": "josh-lucas-joins-nicole-kidman-elle-fanning-in-paramount-legal-drama-d",
+      "title": "Josh Lucas Joins Nicole Kidman, Elle Fanning in Paramount+ Legal Drama 'Discretion'",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "josh-lucas-discretion-casting",
+      "primaryKeyword": "josh lucas discretion nicole kidman",
+      "primaryEntity": "Discretion (TV series)",
+      "entities": [
+        "Josh Lucas",
+        "Nicole Kidman",
+        "Elle Fanning"
+      ],
+      "angle": "Josh Lucas joins Nicole Kidman and Elle Fanning in the upcoming Paramount+ legal drama 'Discretion'.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/tv/news/nicole-kidman-elle-fanning-paramount-discretion-josh-lucas-1236816877/",
+          "ageMin": 354,
+          "headline": "Nicole Kidman, Elle Fanning Paramount+ Series Discretion Casts Josh Lucas",
+          "summary": "Josh Lucas is set to star opposite Nicole Kidman and Elle Fanning in the legal drama series Discretion, Variety has confirmed. The show was originally announced with a straight-to-series order at Paramount+ in October 2025. It is based on the short story of the same name by Chandler Baker. It has received an eight-episode order [ ]"
+        },
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/josh-lucas-discretion-nicole-kidman-elle-fanning-paramount-1236998810/",
+          "ageMin": 361,
+          "headline": "Josh Lucas Joins Nicole Kidman Elle Fanning In Paramount+ Legal Drama Discretion",
+          "summary": "EXCLUSIVE: Josh Lucas (Yellowstone, Ford v Ferrari) is set to star opposite Nicole Kidman and Elle Fanning in Discretion, Paramount+ s upcoming legal thriller series from A24. Lucas will play Greg, a lawyer and the husband of Kidman’s powerful and formidable corporate law partner at the same prestigious firm entangled in a dark web of NDAs. [ ]"
+        }
+      ],
+      "ageMin": 354,
+      "_cand": {
+        "key": "rss:nicole-kidman-elle-fanning-paramount-series-discretion-casts",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 2,
+      "verification": {
+        "tier1Count": 2,
+        "tier1Owners": 1,
+        "outletCount": 2,
+        "outlets": [
+          "Variety",
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 85,
+      "signals": {
+        "recency": 9,
+        "corroboration": 18,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 8,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-adam-driver-marvel-casting-rumors",
+      "slug": "kevin-feige-admits-he-s-been-trying-to-cast-adam-driver-in-marvel-role",
+      "title": "Kevin Feige Admits He's Been Trying to Cast Adam Driver in Marvel Role",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "adam-driver-marvel-casting-rumors",
       "primaryKeyword": "adam driver marvel casting",
       "primaryEntity": "Adam Driver",
       "entities": [
         "Kevin Feige",
         "Marvel"
       ],
-      "angle": "Marvel's Kevin Feige reveals ongoing attempts to cast Adam Driver in a Marvel role, amid X-Men reboot speculation.",
+      "angle": "Kevin Feige reveals ongoing attempts to cast Adam Driver in a Marvel role amid X-Men reboot rumors.",
       "tmdbType": "movie",
       "source": "rss:Deadline",
       "sources": [
@@ -97,12 +238,12 @@
           "outlet": "Deadline",
           "tier": 7,
           "url": "https://deadline.com/2026/07/kevin-feige-casting-adam-driver-marvel-x-men-reboot-1236998986/",
-          "ageMin": 88,
+          "ageMin": 118,
           "headline": "Kevin Feige On Trying To Cast Adam Driver In Marvel Role Amid X-Men Reboot Rumors: It s A Tradition To Zoom With Him Then He Passes",
           "summary": "Kevin Feige has been trying to work with Adam Driver and cast him in a Marvel film role, but so far it has not become official. Amid rumors that Driver could potentially star in the X-Men reboot, the studio head revealed where he s at in finally working with the Girls actor. It’s no secret we’d [ ]"
         }
       ],
-      "ageMin": 88,
+      "ageMin": 118,
       "_cand": {
         "key": "rss:kevin-feige-on-trying-to-cast-adam-driver-in-marvel-role-ami",
         "popularity": 0,
@@ -139,40 +280,39 @@
       "tierClass": "B"
     },
     {
-      "id": "reaction-world-cup-reaction",
-      "slug": "was-the-world-cup-final-halftime-show-too-american-rest-of-the-world-s",
-      "title": "Was the World Cup Final Halftime Show Too American ? Rest of the World Seems to Think So: Glib and Unsubtle",
-      "contentType": "reaction",
-      "formatTag": "reaction",
-      "category": "movies",
-      "subcategory": "reactions",
-      "eventType": "reaction",
+      "id": "music-news-kacey-musgraves-kane-brown-longhaul-festival-australia",
+      "slug": "kacey-musgraves-and-kane-brown-to-headline-new-australian-country-fest",
+      "title": "Kacey Musgraves and Kane Brown to Headline New Australian Country Festival LONGHAUL",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "world-cup-reaction",
-      "primaryKeyword": "World Cup halftime show",
-      "primaryEntity": "World Cup",
+      "tier": "popular",
+      "eventSlug": "kacey-musgraves-kane-brown-longhaul-festival-australia",
+      "primaryKeyword": "Kacey Musgraves Kane Brown festival",
+      "primaryEntity": "Kacey Musgraves",
       "entities": [
-        "Madonna",
-        "Justin Bieber",
-        "BTS",
-        "Shakira"
+        "Kane Brown",
+        "LONGHAUL Festival"
       ],
-      "angle": "The halftime show at the World Cup Final, featuring major international artists, has sparked debate with a significant portion of the global audience finding it overly American and unsubtle.",
+      "angle": "Kacey Musgraves and Kane Brown to headline Australia's inaugural LONGHAUL country music festival.",
       "tmdbType": "movie",
-      "source": "rss:Rolling Stone",
+      "source": "rss:Billboard",
       "sources": [
         {
-          "outlet": "Rolling Stone",
+          "outlet": "Billboard",
           "tier": 7,
-          "url": "https://www.rollingstone.com/music/music-country/ella-langley-choosin-texas-chart-record-whitney-houston-1235596043/",
-          "ageMin": 473,
-          "headline": "Ella Langley’s ‘Choosin’ Texas’ Just Tied ‘I Will Always Love You’",
-          "summary": "The country singer now joins Whitney Houston and Mariah Carey as one of only three women to have a song spend 14 weeks at Number One"
+          "url": "https://www.billboard.com/music/country/kacey-musgraves-kane-brown-longhaul-festival-1236299018/",
+          "ageMin": 15,
+          "headline": "Kacey Musgraves and Kane Brown Lead New Australian Country Festival LONGHAUL",
+          "summary": "The inaugural festival will stop in three Australian cities across one weekend."
         }
       ],
-      "ageMin": 473,
+      "ageMin": 15,
       "_cand": {
-        "key": "rss:ella-langley-s-choosin-texas-just-tied-i-will-always-love-yo",
+        "key": "rss:kacey-musgraves-and-kane-brown-lead-new-australian-country-f",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -182,155 +322,24 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Rolling Stone"
+          "Billboard"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Rolling Stone",
+        "attribution": "Billboard",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
       "priority": 69,
       "signals": {
-        "recency": 4,
+        "recency": 30,
         "corroboration": 12,
-        "status": 18,
-        "type": 11,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-myron-bolitar-series-chloe-fineman-casting",
-      "slug": "chloe-fineman-among-four-cast-in-myron-bolitar-series-at-netflix",
-      "title": "Chloe Fineman Among Four Cast in Myron Bolitar Series at Netflix",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "myron-bolitar-series-chloe-fineman-casting",
-      "primaryKeyword": "Myron Bolitar series",
-      "primaryEntity": "Myron Bolitar (TV series)",
-      "entities": [
-        "Chloe Fineman",
-        "Netflix"
-      ],
-      "angle": "Chloe Fineman lands a series regular role in Netflix's upcoming 'Myron Bolitar' series.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/tv/news/chloe-fineman-myron-bolitar-series-netflix-1236816733/",
-          "ageMin": 523,
-          "headline": "Chloe Fineman Among Four Cast in Myron Bolitar Series at Netflix",
-          "summary": "Chloe Fineman has already found her first post- SNL gig, with a series regular role in the Myron Bolitar series currently in the works at Netflix. Fineman is one of three actors joining the show as a series regular, alongside both Jabari Banks ( Bel Air ) and Jamie McShane ( Task, Wednesday ). In addition, Ben McKenzie ( Everyone is [ ]"
-        }
-      ],
-      "ageMin": 523,
-      "_cand": {
-        "key": "rss:chloe-fineman-among-four-cast-in-myron-bolitar-series-at-net",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 66,
-      "signals": {
-        "recency": 4,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-district-9-ai-generated-movie-review",
-      "slug": "ai-generated-movie-from-district-9-director-called-awful",
-      "title": "AI-Generated Movie from 'District 9' Director Called 'Awful'",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "review",
-      "sensitivity": "normal",
-      "eventSlug": "district-9-ai-generated-movie-review",
-      "primaryKeyword": "district 9 ai movie",
-      "primaryEntity": "District 9",
-      "entities": [
-        "AI-generated film"
-      ],
-      "angle": "A critic reviews an AI-generated film from the director of 'District 9', deeming it 'awful'.",
-      "tmdbType": "movie",
-      "source": "gnews:Kotaku",
-      "sources": [
-        {
-          "outlet": "Kotaku",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQazZ6WlVaUDFaOVNMUEtzVVNBOHh2a1p6T3VSTU13VWZGOFgyLW8xQ0tsbDJVRDFLSEplaEotWXUydGp6OTd2X0pRSm5FSnRZUWx2SnBJRDNuZjE1WGxfUkItYVJDdm9BbVBTUTBHSnA5WVdzSXBMRExxYXpUQWw1UlZYcmhCdXZyUWZqNw?oc=5",
-          "ageMin": 331,
-          "headline": "I Watched District 9′ s Director’s New, Awful AI-Generated Movie So You Don’t Have To - Kotaku",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMijAFBVV95cUxQazZ6WlVaUDFaOVNMUEtzVVNBOHh2a1p6T3VSTU13VWZGOFgyLW8xQ0tsbDJVRDFLSEplaEotWXUydGp6OTd2X0pRSm5FSnRZUWx2SnBJRDNuZjE1WGxfUkItYVJDdm9BbVBTUTBHSnA5WVdzSXBMRExxYXpUQWw1UlZYcmhCdXZyUWZqNw?oc=5\" target=\"_blank\" I Watched District 9′ s Director’s New"
-        }
-      ],
-      "ageMin": 331,
-      "_cand": {
-        "key": "rss:i-watched-district-9-s-director-s-new-awful-ai-generated-mov",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "Kotaku"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "Kotaku",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 68,
-      "signals": {
-        "recency": 9,
-        "corroboration": 8,
         "status": 18,
         "type": 9,
         "pop": 0,
         "breakout": 0,
-        "big": 24,
+        "big": 0,
         "trending": 0,
         "spice": 0,
         "softTv": 0
@@ -338,104 +347,38 @@
       "tierClass": "B"
     },
     {
-      "id": "news-luke-skywalker-lightsaber-auction-record",
-      "slug": "luke-skywalker-s-lightsaber-with-severed-hand-prop-sets-star-wars-auct",
-      "title": "Luke Skywalker's lightsaber with severed hand prop sets 'Star Wars' auction record at $3.75 million",
+      "id": "news-william-h-wisher-jr-dies",
+      "slug": "william-h-wisher-jr-dies-terminator-and-t2-screenwriter-was-71",
+      "title": "William H. Wisher Jr. Dies: 'Terminator' and 'T2' Screenwriter Was 71",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "luke-skywalker-lightsaber-auction-record",
-      "primaryKeyword": "star wars auction record",
-      "primaryEntity": "Luke Skywalker's lightsaber",
+      "eventType": "death",
+      "sensitivity": "high",
+      "eventSlug": "william-h-wisher-jr-dies",
+      "primaryKeyword": "William H. Wisher Jr. death",
+      "primaryEntity": "William H. Wisher Jr.",
       "entities": [
-        "Star Wars"
+        "The Terminator",
+        "Terminator 2: Judgment Day"
       ],
-      "angle": "A 'Star Wars' auction record was set for Luke Skywalker's lightsaber with severed hand prop.",
-      "tmdbType": "movie",
-      "source": "gnews:WPTZ",
-      "sources": [
-        {
-          "outlet": "WPTZ",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOdzlMc3RXVVJydkZtUmpORWdScVNHSmw2ZE1JTkU1RnZEamFPS0dzeW5YLWtYdjFWSWw1RmtLSzNJNE01N1k2UkFOWjEwNXZPQV96VF9YZnROc3RZUFZsSTBUS2hHMFBZNkx0UXVkTjZiVDZBdjRId3VRZnFNSjV3Sm5GYk5yTmw3MGQ1ME1JU2pUY19JUzM3SXVRQnROLVJQ?oc=5",
-          "ageMin": 162,
-          "headline": "Luke Skywalker's lightsaber with severed hand prop sets 'Star Wars' auction record at $3.75 million - WPTZ",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMioAFBVV95cUxOdzlMc3RXVVJydkZtUmpORWdScVNHSmw2ZE1JTkU1RnZEamFPS0dzeW5YLWtYdjFWSWw1RmtLSzNJNE01N1k2UkFOWjEwNXZPQV96VF9YZnROc3RZUFZsSTBUS2hHMFBZNkx0UXVkTjZiVDZBdjRId3VRZnFNSjV3Sm5GYk5yTmw3MGQ1ME1JU2pUY19JUzM3SXVRQnROLVJQ?oc=5\" target=\"_blank\" Luke Skywalk"
-        }
-      ],
-      "ageMin": 162,
-      "_cand": {
-        "key": "rss:luke-skywalker-s-lightsaber-with-severed-hand-prop-sets-star",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "WPTZ"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "WPTZ",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 59,
-      "signals": {
-        "recency": 16,
-        "corroboration": 8,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 12,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-kevin-feige-blade-reboot-failure",
-      "slug": "marvel-s-kevin-feige-says-he-feels-like-a-gigantic-loser-failure-over-",
-      "title": "Marvel's Kevin Feige Says He Feels Like A Gigantic Loser Failure Over Failed Blade Reboot With Mahershala Ali",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "kevin-feige-blade-reboot-failure",
-      "primaryKeyword": "Blade reboot",
-      "primaryEntity": "Blade",
-      "entities": [
-        "Blade (film)",
-        "Kevin Feige",
-        "Mahershala Ali"
-      ],
-      "angle": "Marvel Studios president Kevin Feige expresses disappointment over the stalled 'Blade' reboot.",
+      "angle": "Screenwriter William H. Wisher Jr., who co-wrote 'The Terminator' and 'Terminator 2: Judgment Day,' has died at 71.",
       "tmdbType": "movie",
       "source": "rss:Deadline",
       "sources": [
         {
           "outlet": "Deadline",
           "tier": 7,
-          "url": "https://deadline.com/2026/07/marvel-kevin-feige-blade-reboot-mahershala-ali-1236998833/",
-          "ageMin": 318,
-          "headline": "Marvel s Kevin Feige Says He Feels Like A Gigantic Loser Failure Over Failed Blade Reboot With Mahershala Ali",
-          "summary": "Kevin Feige has some feelings about the failed Blade reboot starring Mahershala Ali that has yet to materialize. While promoting Spider-Man: Brand New Day, the Marvel Studios president revealed how he feels over the film not being made. I am feeling like a gigantic loser and failure that we didn’t get off the ground with Mahershala, Feige [ ]"
+          "url": "https://deadline.com/2026/07/william-h-wisher-jr-dead-the-terminator-screenwriter-1236999019/",
+          "ageMin": 23,
+          "headline": "William H. Wisher Jr. Dies: The Terminator Terminator 2: Judgment Day Screenwriter Was 71",
+          "summary": "William H. Wisher Jr., a producer and screenwriter who co-wrote The Terminator and Terminator 2: Judgment Day, has died. He was 71. The Wisher family confirmed news of the filmmaker s death, saying he passed away peacefully at home. William believed that stories have the power to connect people across generations, the family said in a [ ]"
         }
       ],
-      "ageMin": 318,
+      "ageMin": 23,
       "_cand": {
-        "key": "rss:marvel-s-kevin-feige-says-he-feels-like-a-gigantic-loser-fai",
+        "key": "rss:william-h-wisher-jr-dies-the-terminator-terminator-2-judgmen",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -448,18 +391,18 @@
           "Deadline"
         ],
         "maxTier": 7,
-        "sensitivity": "normal",
+        "sensitivity": "high",
         "attribution": "Deadline",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 56,
+      "priority": 80,
       "signals": {
-        "recency": 9,
+        "recency": 24,
         "corroboration": 12,
         "status": 18,
-        "type": 5,
+        "type": 14,
         "pop": 0,
         "breakout": 0,
         "big": 12,
@@ -467,40 +410,40 @@
         "spice": 0,
         "softTv": 0
       },
-      "tierClass": "C"
+      "tierClass": "S"
     },
     {
-      "id": "news-adam-driver-declines-marvel-offers",
-      "slug": "adam-driver-turns-down-so-many-marvel-movie-offers-that-it-s-become-a-",
-      "title": "Adam Driver Turns Down So Many Marvel Movie Offers That It's Become a Tradition at the Studio to Zoom With Him and Then He Passes",
+      "id": "news-madadayo-other",
+      "slug": "kurosawa-s-final-film-madadayo-was-one-of-his-best-so-why-did-it-take-",
+      "title": "Kurosawa's Final Film Madadayo Was One of His Best — So Why Did it Take Five Years to Reach the U.S.?",
       "contentType": "news",
       "formatTag": "news",
-      "category": "celebrity",
+      "category": "movies",
       "subcategory": "news",
-      "eventType": "announcement",
+      "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "adam-driver-declines-marvel-offers",
-      "primaryKeyword": "adam driver marvel",
-      "primaryEntity": "Adam Driver",
+      "eventSlug": "madadayo-other",
+      "primaryKeyword": "Madadayo",
+      "primaryEntity": "Madadayo",
       "entities": [
-        "Marvel Cinematic Universe"
+        "Akira Kurosawa"
       ],
-      "angle": "Adam Driver's consistent refusal of Marvel movie roles has become a running joke at the studio.",
+      "angle": "Akira Kurosawa's final film, 'Madadayo', which was critically acclaimed, took five years to receive a U.S. release.",
       "tmdbType": "movie",
-      "source": "rss:Variety",
+      "source": "rss:IndieWire",
       "sources": [
         {
-          "outlet": "Variety",
+          "outlet": "IndieWire",
           "tier": 7,
-          "url": "https://variety.com/2026/film/news/adam-driver-turns-down-marvel-movies-1236816747/",
-          "ageMin": 293,
-          "headline": "Adam Driver Turns Down So Many Marvel Movie Offers That It s Become a Tradition at the Studio to Zoom With Him and Then He Passes",
-          "summary": "Marvel Studios president Kevin Feige revealed on the Happy Sad Confused podcast that Adam Driver has repeatedly turned down offers to join the Marvel Cinematic Universe over the years. “It’s no secret we’d like to [work with Adam],” Feige replied. But it’s a tradition to Zoom with him and then he passes. That’s a long-lived [ ]"
+          "url": "https://www.indiewire.com/features/commentary/akira-kurosawa-final-film-madadayo-bluray-1235206150/",
+          "ageMin": 362,
+          "headline": "Kurosawa s Final Film Madadayo Was One of His Best — So Why Did it Take Five Years to Reach the U.S.?",
+          "summary": "Akira Kurosawa's swan song was criminally underrated and overlooked when he made it in 1993, but now it's available on Blu-ray with behind-the-scenes footage showing the master at work."
         }
       ],
-      "ageMin": 293,
+      "ageMin": 362,
       "_cand": {
-        "key": "rss:adam-driver-turns-down-so-many-marvel-movie-offers-that-it-s",
+        "key": "rss:kurosawa-s-final-film-madadayo-was-one-of-his-best-so-why-di",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -510,24 +453,24 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Variety"
+          "IndieWire"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Variety",
+        "attribution": "IndieWire",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 48,
+      "priority": 51,
       "signals": {
-        "recency": 9,
+        "recency": 4,
         "corroboration": 12,
         "status": 18,
-        "type": 9,
+        "type": 5,
         "pop": 0,
         "breakout": 0,
-        "big": 0,
+        "big": 12,
         "trending": 0,
         "spice": 0,
         "softTv": 0
