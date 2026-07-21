@@ -726,6 +726,20 @@
    "headlineNumberRaw": null,
    "filmKey": "2122",
    "chartDate": null
+  },
+  {
+   "key": "meg-2-the-trench-netflix-top10-w2026-07-19|NETFLIX-TOP10",
+   "at": "2026-07-21T20:08:34.634Z",
+   "eventSlug": "meg-2-the-trench-netflix-top10-w2026-07-19",
+   "form": "NETFLIX-TOP10",
+   "slug": "jason-statham-s-meg-2-the-trench-chomps-into-netflix-top-5-with-7-million-hours",
+   "title": "Jason Statham's 'Meg 2: The Trench' Chomps Into Netflix Top 5 With 7 Million Hours Viewed",
+   "film": "Meg 2: The Trench",
+   "tmdbId": null,
+   "eventType": "boxoffice",
+   "headlineNumberRaw": null,
+   "filmKey": "meg 2: the trench",
+   "chartDate": null
   }
  ],
  "parked": [
@@ -1668,11 +1682,11 @@
    "key": "the-odyssey-bo-update-100m|BO-UPDATE",
    "eventSlug": "the-odyssey-bo-update-100m",
    "form": "BO-UPDATE",
-   "reason": "1 unverified claim(s) cut, unrecovered",
-   "tries": 74,
-   "at": "2026-07-21T19:32:59.762Z",
+   "reason": "consistency: metaTitle: headlines domestic while the title headlines other — the SERP promise must match the page",
+   "tries": 75,
+   "at": "2026-07-21T20:04:57.355Z",
    "dead": true,
-   "expiresAt": "2026-07-24T19:32:59.762Z"
+   "expiresAt": "2026-07-24T20:04:57.355Z"
   },
   {
    "key": "star-wars-the-mandalorian-and-grogu-bo-update-d59|BO-UPDATE",
@@ -1817,16 +1831,24 @@
    "reason": "soft-floor engagement 2 < 5 | soft-floor humanVoice 4 < 5",
    "tries": 1,
    "at": "2026-07-21T19:39:10.019Z"
+  },
+  {
+   "key": "kpop-demon-hunters-netflix-top10-w2026-07-19|NETFLIX-TOP10",
+   "eventSlug": "kpop-demon-hunters-netflix-top10-w2026-07-19",
+   "form": "NETFLIX-TOP10",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "tries": 1,
+   "at": "2026-07-21T20:11:12.273Z"
   }
  ],
- "zeroStreak": 27,
+ "zeroStreak": 0,
  "daySpend": {
   "laDay": "2026-07-21",
-  "usd": 0.4058
+  "usd": 0.4416
  },
  "pace": {
-  "tokens": 4,
-  "lastMs": 1784662293239
+  "tokens": 3,
+  "lastMs": 1784664092233
  },
  "lastAuditDay": "2026-07-21",
  "attempts": {
@@ -1853,7 +1875,9 @@
    "shipwrecked: nightmare at sea": 1,
    "voicemails for isabelle": 1,
    "enola holmes 3": 1,
-   "regretting you": 1
+   "regretting you": 1,
+   "meg 2: the trench": 1,
+   "kpop demon hunters": 1
   }
  }
 }
