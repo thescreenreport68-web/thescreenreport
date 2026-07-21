@@ -1,0 +1,137 @@
+{
+  "ts": "2026-07-21T00:01:41.525Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "rosie-odonnell-alleges-producer-set-up-her-infamous-view-fight-with-hasselb",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [
+        "lede-entity-missing:logged"
+      ],
+      "headline": [
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 1,
+      "surgicalFixes": 1
+    }
+  ],
+  "topics": 1,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 0,
+  "costUSD": 0.028821,
+  "costPerPublished": 0.028821,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 9,
+      "in": 30072,
+      "out": 1970,
+      "usd": 0.01313984
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 2400,
+      "out": 2322,
+      "usd": 0.0006804504
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 7,
+      "in": 30620,
+      "out": 7737,
+      "usd": 0.013733426999999998
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 8,
+      "in": 9287,
+      "out": 847,
+      "usd": 0.0012675
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2488,
+      "out": 231,
+      "usd": 0.0013239,
+      "ms": 1510
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2400,
+      "out": 2322,
+      "usd": 0.00063396,
+      "ms": 28365
+    },
+    "writer": {
+      "calls": 6,
+      "errors": 0,
+      "in": 29791,
+      "out": 7393,
+      "usd": 0.00936555,
+      "ms": 274816
+    },
+    "verify": {
+      "calls": 8,
+      "errors": 0,
+      "in": 27584,
+      "out": 1739,
+      "usd": 0.012622699999999999,
+      "ms": 11775
+    },
+    "judge": {
+      "calls": 2,
+      "errors": 0,
+      "in": 5610,
+      "out": 422,
+      "usd": 0.0007298000000000001,
+      "ms": 3349
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 829,
+      "out": 344,
+      "usd": 0.00030763,
+      "ms": 7613
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 432,
+      "out": 92,
+      "usd": 0.00008,
+      "ms": 857
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 215,
+      "out": 48,
+      "usd": 0.0000407,
+      "ms": 685
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2101,
+      "out": 98,
+      "usd": 0.0002493,
+      "ms": 1709
+    },
+    "linker": {
+      "calls": 3,
+      "errors": 0,
+      "in": 929,
+      "out": 187,
+      "usd": 0.0001677,
+      "ms": 1798
+    }
+  }
+}
