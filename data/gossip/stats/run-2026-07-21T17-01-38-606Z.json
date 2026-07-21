@@ -1,0 +1,137 @@
+{
+  "ts": "2026-07-21T17:01:38.606Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "lauren-tom-shares-daughter-ellies-bone-cancer-diagnosis",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [
+        "takeaway-ungrounded:dropped"
+      ],
+      "headline": [
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 0
+    }
+  ],
+  "topics": 1,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 0,
+  "costUSD": 0.017571,
+  "costPerPublished": 0.017571,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 8,
+      "in": 21936,
+      "out": 1663,
+      "usd": 0.0107383
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 1930,
+      "out": 976,
+      "usd": 0.0003816006
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 6,
+      "in": 22027,
+      "out": 5365,
+      "usd": 0.00540404245
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 9,
+      "in": 7750,
+      "out": 681,
+      "usd": 0.0010474
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2234,
+      "out": 196,
+      "usd": 0.0011602,
+      "ms": 9627
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1930,
+      "out": 976,
+      "usd": 0.00034938,
+      "ms": 11719
+    },
+    "writer": {
+      "calls": 5,
+      "errors": 0,
+      "in": 21193,
+      "out": 5053,
+      "usd": 0.00659241,
+      "ms": 164095
+    },
+    "verify": {
+      "calls": 7,
+      "errors": 0,
+      "in": 19702,
+      "out": 1467,
+      "usd": 0.009578099999999999,
+      "ms": 44053
+    },
+    "judge": {
+      "calls": 2,
+      "errors": 0,
+      "in": 4465,
+      "out": 326,
+      "usd": 0.0005769,
+      "ms": 2437
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 834,
+      "out": 312,
+      "usd": 0.00029790000000000003,
+      "ms": 11592
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 401,
+      "out": 104,
+      "usd": 0.00008170000000000001,
+      "ms": 635
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 183,
+      "out": 41,
+      "usd": 0.0000347,
+      "ms": 444
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1567,
+      "out": 98,
+      "usd": 0.00019590000000000005,
+      "ms": 1928
+    },
+    "linker": {
+      "calls": 4,
+      "errors": 0,
+      "in": 1134,
+      "out": 112,
+      "usd": 0.0001582,
+      "ms": 1972
+    }
+  }
+}
