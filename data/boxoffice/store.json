@@ -1668,11 +1668,11 @@
    "key": "the-odyssey-bo-update-100m|BO-UPDATE",
    "eventSlug": "the-odyssey-bo-update-100m",
    "form": "BO-UPDATE",
-   "reason": "consistency: metaTitle: headlines domestic while the title headlines other — the SERP promise must match the page",
-   "tries": 49,
-   "at": "2026-07-21T07:33:20.028Z",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "tries": 50,
+   "at": "2026-07-21T08:04:55.888Z",
    "dead": true,
-   "expiresAt": "2026-07-24T07:33:20.028Z"
+   "expiresAt": "2026-07-24T08:04:55.888Z"
   },
   {
    "key": "star-wars-the-mandalorian-and-grogu-bo-update-d59|BO-UPDATE",
@@ -1688,11 +1688,11 @@
    "key": "project-hail-mary-bo-update-d128|BO-UPDATE",
    "eventSlug": "project-hail-mary-bo-update-d128",
    "form": "BO-UPDATE",
-   "reason": "reconcile: domestic+international ($317M) does not match worldwide ($141M) — present each figure as separately reported, never imply a sum | words 162 < 180 (owner-set ~200-word minimum)",
-   "tries": 3,
-   "at": "2026-07-20T17:38:52.365Z",
+   "reason": "reconcile: domestic+international ($317M) does not match worldwide ($141M) — present each figure as separately reported, never imply a sum | words 167 < 180 (owner-set ~200-word minimum)",
+   "tries": 4,
+   "at": "2026-07-21T08:09:13.173Z",
    "dead": true,
-   "expiresAt": "2026-07-23T17:38:52.365Z"
+   "expiresAt": "2026-07-24T08:09:13.173Z"
   },
   {
    "key": "movie-maga-ev-opening|BO-OPENING",
@@ -1737,14 +1737,14 @@
    "at": "2026-07-21T07:36:52.563Z"
   }
  ],
- "zeroStreak": 1,
+ "zeroStreak": 2,
  "daySpend": {
   "laDay": "2026-07-21",
-  "usd": 0.04499
+  "usd": 0.07492
  },
  "pace": {
-  "tokens": 3.071299523809524,
-  "lastMs": 1784619093352
+  "tokens": 3.142974880952381,
+  "lastMs": 1784620899571
  },
  "lastAuditDay": "2026-07-21",
  "attempts": {
@@ -1752,9 +1752,10 @@
   "byFilm": {
    "rust creek": 1,
    "the sheep detectives": 1,
-   "outcome": 2,
+   "outcome": 3,
    "king of the hill": 1,
-   "call me by your name": 1
+   "call me by your name": 1,
+   "project hail mary": 1
   }
  }
 }
