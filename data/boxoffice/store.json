@@ -1820,17 +1820,17 @@
    "key": "enola-holmes-3-netflix-top10-w2026-07-19|NETFLIX-TOP10",
    "eventSlug": "enola-holmes-3-netflix-top10-w2026-07-19",
    "form": "NETFLIX-TOP10",
-   "reason": "words 96 < 180 (owner-set ~200-word minimum) | soft-floor humanVoice 4 < 5",
-   "tries": 1,
-   "at": "2026-07-21T19:36:28.019Z"
+   "reason": "words 153 < 180 (owner-set ~200-word minimum) | soft-floor engagement 3 < 5",
+   "tries": 2,
+   "at": "2026-07-21T22:04:07.485Z"
   },
   {
    "key": "regretting-you-netflix-top10-w2026-07-19|NETFLIX-TOP10",
    "eventSlug": "regretting-you-netflix-top10-w2026-07-19",
    "form": "NETFLIX-TOP10",
-   "reason": "soft-floor engagement 2 < 5 | soft-floor humanVoice 4 < 5",
-   "tries": 1,
-   "at": "2026-07-21T19:39:10.019Z"
+   "reason": "words 144 < 180 (owner-set ~200-word minimum) | soft-floor engagement 4 < 5",
+   "tries": 2,
+   "at": "2026-07-21T22:06:44.968Z"
   },
   {
    "key": "kpop-demon-hunters-netflix-top10-w2026-07-19|NETFLIX-TOP10",
@@ -1863,16 +1863,32 @@
    "reason": "2 unverified claim(s) cut, unrecovered",
    "tries": 1,
    "at": "2026-07-21T21:10:52.367Z"
+  },
+  {
+   "key": "little-house-on-the-prairie-trending-tv-w2026-07-19|TRENDING-TV",
+   "eventSlug": "little-house-on-the-prairie-trending-tv-w2026-07-19",
+   "form": "TRENDING-TV",
+   "reason": "4 unverified claim(s) cut, unrecovered",
+   "tries": 1,
+   "at": "2026-07-21T22:09:01.422Z"
+  },
+  {
+   "key": "i-will-find-you-trending-tv-w2026-07-19|TRENDING-TV",
+   "eventSlug": "i-will-find-you-trending-tv-w2026-07-19",
+   "form": "TRENDING-TV",
+   "reason": "soft-floor engagement 4 < 5",
+   "tries": 1,
+   "at": "2026-07-21T22:11:31.461Z"
   }
  ],
- "zeroStreak": 3,
+ "zeroStreak": 4,
  "daySpend": {
   "laDay": "2026-07-21",
-  "usd": 0.55261
+  "usd": 0.63609
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1784669502357
+  "lastMs": 1784671299525
  },
  "lastAuditDay": "2026-07-21",
  "attempts": {
@@ -1898,12 +1914,14 @@
    "wwe: unreal": 1,
    "shipwrecked: nightmare at sea": 2,
    "voicemails for isabelle": 3,
-   "enola holmes 3": 1,
-   "regretting you": 1,
+   "enola holmes 3": 2,
+   "regretting you": 2,
    "meg 2: the trench": 1,
    "kpop demon hunters": 1,
    "death on the nile": 1,
-   "joy ride": 1
+   "joy ride": 1,
+   "little house on the prairie": 1,
+   "i will find you": 1
   }
  }
 }
