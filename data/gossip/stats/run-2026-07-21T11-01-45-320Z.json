@@ -1,0 +1,145 @@
+{
+  "ts": "2026-07-21T11:01:45.320Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "bunnie-xo-gives-a-tour-of-her-new-divorce-compound",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [],
+      "headline": [
+        "metaTitle",
+        "metaDescription",
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 0
+    }
+  ],
+  "topics": 1,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 0,
+  "costUSD": 0.014484,
+  "costPerPublished": 0.014484,
+  "byModel": {
+    "deepseek/deepseek-v3.2": {
+      "calls": 8,
+      "in": 16761,
+      "out": 5689,
+      "usd": 0.005014968000000001
+    },
+    "google/gemini-2.5-flash": {
+      "calls": 6,
+      "in": 12479,
+      "out": 1893,
+      "usd": 0.0084762
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 934,
+      "out": 698,
+      "usd": 0.000215292
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 9,
+      "in": 5097,
+      "out": 670,
+      "usd": 0.0007777000000000001
+    }
+  },
+  "byRole": {
+    "dedup": {
+      "calls": 3,
+      "errors": 0,
+      "in": 905,
+      "out": 37,
+      "usd": 0.00022073000000000004,
+      "ms": 6737
+    },
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2429,
+      "out": 195,
+      "usd": 0.0012161999999999997,
+      "ms": 1648
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 934,
+      "out": 698,
+      "usd": 0.0002097,
+      "ms": 9100
+    },
+    "writer": {
+      "calls": 4,
+      "errors": 0,
+      "in": 15118,
+      "out": 5323,
+      "usd": 0.00528696,
+      "ms": 169120
+    },
+    "verify": {
+      "calls": 5,
+      "errors": 0,
+      "in": 10050,
+      "out": 1698,
+      "usd": 0.007260000000000001,
+      "ms": 10284
+    },
+    "judge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1491,
+      "out": 175,
+      "usd": 0.00021909999999999999,
+      "ms": 1139
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 738,
+      "out": 329,
+      "usd": 0.0002816,
+      "ms": 14146
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 390,
+      "out": 102,
+      "usd": 0.00007980000000000002,
+      "ms": 723
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 191,
+      "out": 36,
+      "usd": 0.0000335,
+      "ms": 542
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1591,
+      "out": 117,
+      "usd": 0.00020590000000000004,
+      "ms": 3768
+    },
+    "linker": {
+      "calls": 5,
+      "errors": 0,
+      "in": 1434,
+      "out": 240,
+      "usd": 0.0002394,
+      "ms": 2900
+    }
+  }
+}
