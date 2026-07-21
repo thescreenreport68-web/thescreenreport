@@ -1668,11 +1668,11 @@
    "key": "the-odyssey-bo-update-100m|BO-UPDATE",
    "eventSlug": "the-odyssey-bo-update-100m",
    "form": "BO-UPDATE",
-   "reason": "synthesizer returned no usable brief",
-   "tries": 70,
-   "at": "2026-07-21T17:33:02.696Z",
+   "reason": "words 164 < 180 (owner-set ~200-word minimum)",
+   "tries": 71,
+   "at": "2026-07-21T18:03:07.814Z",
    "dead": true,
-   "expiresAt": "2026-07-24T17:33:02.696Z"
+   "expiresAt": "2026-07-24T18:03:07.814Z"
   },
   {
    "key": "star-wars-the-mandalorian-and-grogu-bo-update-d59|BO-UPDATE",
@@ -1787,14 +1787,14 @@
    "at": "2026-07-21T16:20:46.770Z"
   }
  ],
- "zeroStreak": 23,
+ "zeroStreak": 24,
  "daySpend": {
   "laDay": "2026-07-21",
-  "usd": 0.31348
+  "usd": 0.31671
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1784655093571
+  "lastMs": 1784656895008
  },
  "lastAuditDay": "2026-07-21",
  "attempts": {
@@ -1816,7 +1816,8 @@
    "peter dinklage’s biggest fantasy movie with rachel zegler": 1,
    "heartstopper forever": 1,
    "mortal kombat ii": 1,
-   "the boss baby": 1
+   "the boss baby": 1,
+   "wwe: unreal": 1
   }
  }
 }
