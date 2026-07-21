@@ -1010,11 +1010,11 @@
    "key": "little-brother-netflix-top10-w2026-07-12|NETFLIX-TOP10",
    "eventSlug": "little-brother-netflix-top10-w2026-07-12",
    "form": "NETFLIX-TOP10",
-   "reason": "words 95 < 180 (owner-set ~200-word minimum) | soft-floor humanVoice 4 < 5",
-   "tries": 2,
-   "at": "2026-07-20T23:09:08.099Z",
-   "dead": false,
-   "expiresAt": "2026-07-20T22:08:49.143Z"
+   "reason": "words 109 < 180 (owner-set ~200-word minimum)",
+   "tries": 3,
+   "at": "2026-07-21T04:09:31.984Z",
+   "dead": true,
+   "expiresAt": "2026-07-24T04:09:31.984Z"
   },
   {
    "key": "the-odyssey-ev-weekend-d0|BO-WEEKEND",
@@ -1066,10 +1066,10 @@
    "key": "f9-the-fast-saga-netflix-top10-w2026-07-12|NETFLIX-TOP10",
    "eventSlug": "f9-the-fast-saga-netflix-top10-w2026-07-12",
    "form": "NETFLIX-TOP10",
-   "reason": "words 137 < 180 (owner-set ~200-word minimum)",
-   "tries": 3,
-   "at": "2026-07-18T02:03:57.514Z",
-   "dead": true,
+   "reason": "7 unverified claim(s) cut, unrecovered",
+   "tries": 2,
+   "at": "2026-07-21T04:13:02.105Z",
+   "dead": false,
    "expiresAt": "2026-07-21T02:03:57.514Z"
   },
   {
@@ -1653,20 +1653,20 @@
    "eventSlug": "the-odyssey-bo-update-100m",
    "form": "BO-UPDATE",
    "reason": "1 unverified claim(s) cut, unrecovered",
-   "tries": 42,
-   "at": "2026-07-21T03:33:42.652Z",
+   "tries": 43,
+   "at": "2026-07-21T04:04:49.479Z",
    "dead": true,
-   "expiresAt": "2026-07-24T03:33:42.652Z"
+   "expiresAt": "2026-07-24T04:04:49.479Z"
   },
   {
    "key": "star-wars-the-mandalorian-and-grogu-bo-update-d59|BO-UPDATE",
    "eventSlug": "star-wars-the-mandalorian-and-grogu-bo-update-d59",
    "form": "BO-UPDATE",
-   "reason": "consistency: title: \"$177.5\" is not a canonical figure for this film | title: \"$177.5\" contradicts the canonical domestic figure ($177,534,904) | metaTitle: headlines domestic while the title headlines dailyGross/other — the SERP promise must match the page",
-   "tries": 23,
-   "at": "2026-07-21T03:35:05.019Z",
+   "reason": "words 165 < 180 (owner-set ~200-word minimum)",
+   "tries": 24,
+   "at": "2026-07-21T04:07:22.763Z",
    "dead": true,
-   "expiresAt": "2026-07-24T03:35:05.019Z"
+   "expiresAt": "2026-07-24T04:07:22.763Z"
   },
   {
    "key": "project-hail-mary-bo-update-d128|BO-UPDATE",
@@ -1721,14 +1721,14 @@
    "expiresAt": "2026-07-24T03:07:38.866Z"
   }
  ],
- "zeroStreak": 24,
+ "zeroStreak": 25,
  "daySpend": {
   "laDay": "2026-07-20",
-  "usd": 0.66163
+  "usd": 0.70667
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1784604692569
+  "lastMs": 1784606491125
  },
  "lastAuditDay": "2026-07-20",
  "attempts": {
@@ -1749,10 +1749,11 @@
    "enola holmes 3": 2,
    "voicemails for isabelle": 2,
    "the doorman": 2,
-   "little brother": 1,
+   "little brother": 2,
    "malcolm in the middle: life's still unfair": 1,
    "the mandalorian and grogu": 3,
-   "rust creek": 1
+   "rust creek": 1,
+   "f9: the fast saga": 1
   }
  }
 }
