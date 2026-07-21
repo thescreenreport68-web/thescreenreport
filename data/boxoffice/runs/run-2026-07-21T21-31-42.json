@@ -1,0 +1,160 @@
+{
+ "runId": "run-2026-07-21T21-31-42",
+ "mode": "live",
+ "startedAt": "2026-07-21T21:31:42.357Z",
+ "films": 43,
+ "published": [],
+ "held": [
+  {
+   "tag": "the-odyssey-bo-update×BO-UPDATE",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "score": 50
+  },
+  {
+   "tag": "shipwrecked-nightmare-at-sea-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "words 122 < 180 (owner-set ~200-word minimum)",
+   "score": 65
+  },
+  {
+   "tag": "voicemails-for-isabelle-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "words 155 < 180 (owner-set ~200-word minimum) | soft-floor humanVoice 3 < 5",
+   "score": 50
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "moana-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $81M not above last published $82M)"
+  },
+  {
+   "tag": "toy-story-5-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $430M not above last published $431M)"
+  },
+  {
+   "tag": "minions-monsters-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $136M not above last published $138M)"
+  },
+  {
+   "tag": "evil-dead-burn-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $24M not above last published $24M)"
+  },
+  {
+   "tag": "the-invite-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $15M not above last published $15M)"
+  },
+  {
+   "tag": "young-washington-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $41M not above last published $41M)"
+  },
+  {
+   "tag": "obsession-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $258M not above last published $258M)"
+  },
+  {
+   "tag": "supergirl-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $70M not above last published $70M)"
+  },
+  {
+   "tag": "disclosure-day-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $115M not above last published $115M)"
+  },
+  {
+   "tag": "backrooms-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $196M not above last published $196M)"
+  },
+  {
+   "tag": "jackass-best-and-last-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $18M not above last published $18M)"
+  },
+  {
+   "tag": "scary-movie-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $108M not above last published $108M)"
+  },
+  {
+   "tag": "gail-daughtry-and-the-celebrity-sex-pass-bo-update×BO-UPDATE",
+   "reason": "already published (this update)"
+  },
+  {
+   "tag": "voicemails-for-isabelle-now-streaming×NOW-STREAMING",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "citizen-vigilante-bo-opening×BO-OPENING",
+   "reason": "parked dead"
+  }
+ ],
+ "blocked": [],
+ "paced": {
+  "tokens": 4,
+  "behind": true,
+  "expected": 12.6,
+  "allow": 2
+ },
+ "attemptCapHit": 4,
+ "zeroStreak": 3,
+ "daySpend": {
+  "laDay": "2026-07-21",
+  "usd": 0.55261
+ },
+ "faults": {
+  "count": 0,
+  "bySeverity": {},
+  "faults": []
+ },
+ "finishedAt": "2026-07-21T21:38:46.456Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3509,
+    "out": 667,
+    "usd": 0.00022,
+    "ms": 3002
+   },
+   "gatherer": {
+    "calls": 4,
+    "errors": 0,
+    "in": 9868,
+    "out": 676,
+    "usd": 0.00126,
+    "ms": 4732
+   },
+   "synthesizer": {
+    "calls": 3,
+    "errors": 0,
+    "in": 2221,
+    "out": 2214,
+    "usd": 0.0006,
+    "ms": 26472
+   },
+   "writerChart": {
+    "calls": 1,
+    "errors": 0,
+    "in": 2023,
+    "out": 993,
+    "usd": 0.0008,
+    "ms": 27422
+   },
+   "writer": {
+    "calls": 4,
+    "errors": 0,
+    "in": 12617,
+    "out": 4434,
+    "usd": 0.01214,
+    "ms": 49651
+   },
+   "qa": {
+    "calls": 16,
+    "errors": 0,
+    "in": 44796,
+    "out": 6372,
+    "usd": 0.02937,
+    "ms": 41743
+   }
+  },
+  "totalUsd": 0.04439
+ },
+ "openrouterTotalUsd": 0.04344
+}

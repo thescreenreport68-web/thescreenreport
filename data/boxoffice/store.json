@@ -1682,11 +1682,11 @@
    "key": "the-odyssey-bo-update-100m|BO-UPDATE",
    "eventSlug": "the-odyssey-bo-update-100m",
    "form": "BO-UPDATE",
-   "reason": "consistency: metaTitle: headlines domestic while the title headlines other — the SERP promise must match the page",
-   "tries": 77,
-   "at": "2026-07-21T21:03:22.442Z",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "tries": 78,
+   "at": "2026-07-21T21:33:05.036Z",
    "dead": true,
-   "expiresAt": "2026-07-24T21:03:22.442Z"
+   "expiresAt": "2026-07-24T21:33:05.036Z"
   },
   {
    "key": "star-wars-the-mandalorian-and-grogu-bo-update-d59|BO-UPDATE",
@@ -1804,17 +1804,17 @@
    "key": "shipwrecked-nightmare-at-sea-netflix-top10-w2026-07-19|NETFLIX-TOP10",
    "eventSlug": "shipwrecked-nightmare-at-sea-netflix-top10-w2026-07-19",
    "form": "NETFLIX-TOP10",
-   "reason": "2 unverified claim(s) cut, unrecovered",
-   "tries": 1,
-   "at": "2026-07-21T19:06:14.685Z"
+   "reason": "words 122 < 180 (owner-set ~200-word minimum)",
+   "tries": 2,
+   "at": "2026-07-21T21:36:25.404Z"
   },
   {
    "key": "voicemails-for-isabelle-netflix-top10-w2026-07-19|NETFLIX-TOP10",
    "eventSlug": "voicemails-for-isabelle-netflix-top10-w2026-07-19",
    "form": "NETFLIX-TOP10",
-   "reason": "3 unverified claim(s) cut, unrecovered",
-   "tries": 1,
-   "at": "2026-07-21T19:08:48.079Z"
+   "reason": "words 155 < 180 (owner-set ~200-word minimum) | soft-floor humanVoice 3 < 5",
+   "tries": 2,
+   "at": "2026-07-21T21:38:46.454Z"
   },
   {
    "key": "enola-holmes-3-netflix-top10-w2026-07-19|NETFLIX-TOP10",
@@ -1865,14 +1865,14 @@
    "at": "2026-07-21T21:10:52.367Z"
   }
  ],
- "zeroStreak": 2,
+ "zeroStreak": 3,
  "daySpend": {
   "laDay": "2026-07-21",
-  "usd": 0.50917
+  "usd": 0.55261
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1784667703095
+  "lastMs": 1784669502357
  },
  "lastAuditDay": "2026-07-21",
  "attempts": {
@@ -1896,8 +1896,8 @@
    "mortal kombat ii": 1,
    "the boss baby": 2,
    "wwe: unreal": 1,
-   "shipwrecked: nightmare at sea": 1,
-   "voicemails for isabelle": 2,
+   "shipwrecked: nightmare at sea": 2,
+   "voicemails for isabelle": 3,
    "enola holmes 3": 1,
    "regretting you": 1,
    "meg 2: the trench": 1,
