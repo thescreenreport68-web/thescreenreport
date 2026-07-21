@@ -781,10 +781,10 @@
    "key": "voicemails-for-isabelle-now-streaming|NOW-STREAMING",
    "eventSlug": "voicemails-for-isabelle-now-streaming",
    "form": "NOW-STREAMING",
-   "reason": "soft-floor humanVoice 4 < 5",
-   "tries": 3,
-   "at": "2026-07-18T21:04:17.976Z",
-   "dead": true,
+   "reason": "fidelity: 5 unsupported figures/claims — draft-level failure",
+   "tries": 2,
+   "at": "2026-07-21T21:08:21.431Z",
+   "dead": false,
    "expiresAt": "2026-07-21T21:04:17.976Z"
   },
   {
@@ -1682,11 +1682,11 @@
    "key": "the-odyssey-bo-update-100m|BO-UPDATE",
    "eventSlug": "the-odyssey-bo-update-100m",
    "form": "BO-UPDATE",
-   "reason": "1 unverified claim(s) cut, unrecovered",
-   "tries": 76,
-   "at": "2026-07-21T20:32:42.071Z",
+   "reason": "consistency: metaTitle: headlines domestic while the title headlines other — the SERP promise must match the page",
+   "tries": 77,
+   "at": "2026-07-21T21:03:22.442Z",
    "dead": true,
-   "expiresAt": "2026-07-24T20:32:42.071Z"
+   "expiresAt": "2026-07-24T21:03:22.442Z"
   },
   {
    "key": "star-wars-the-mandalorian-and-grogu-bo-update-d59|BO-UPDATE",
@@ -1855,16 +1855,24 @@
    "reason": "2 unverified claim(s) cut, unrecovered",
    "tries": 1,
    "at": "2026-07-21T20:39:29.080Z"
+  },
+  {
+   "key": "joy-ride-netflix-top10-w2026-07-19|NETFLIX-TOP10",
+   "eventSlug": "joy-ride-netflix-top10-w2026-07-19",
+   "form": "NETFLIX-TOP10",
+   "reason": "2 unverified claim(s) cut, unrecovered",
+   "tries": 1,
+   "at": "2026-07-21T21:10:52.367Z"
   }
  ],
- "zeroStreak": 1,
+ "zeroStreak": 2,
  "daySpend": {
   "laDay": "2026-07-21",
-  "usd": 0.48267
+  "usd": 0.50917
  },
  "pace": {
-  "tokens": 3.6998685555555557,
-  "lastMs": 1784665891895
+  "tokens": 4,
+  "lastMs": 1784667703095
  },
  "lastAuditDay": "2026-07-21",
  "attempts": {
@@ -1889,12 +1897,13 @@
    "the boss baby": 2,
    "wwe: unreal": 1,
    "shipwrecked: nightmare at sea": 1,
-   "voicemails for isabelle": 1,
+   "voicemails for isabelle": 2,
    "enola holmes 3": 1,
    "regretting you": 1,
    "meg 2: the trench": 1,
    "kpop demon hunters": 1,
-   "death on the nile": 1
+   "death on the nile": 1,
+   "joy ride": 1
   }
  }
 }
