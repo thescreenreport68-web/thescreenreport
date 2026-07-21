@@ -1,0 +1,146 @@
+{
+  "ts": "2026-07-21T13:01:55.070Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "trisha-paytas-celebrates-hemorrhoid-removal-with-louboutin-heels",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [
+        "metaDescription-soft:logged",
+        "geo-no-attribution:logged"
+      ],
+      "headline": [
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 1
+    }
+  ],
+  "topics": 2,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 1,
+  "blocked": 0,
+  "costUSD": 0.013552,
+  "costPerPublished": 0.013552,
+  "byModel": {
+    "deepseek/deepseek-v3.2": {
+      "calls": 7,
+      "in": 16093,
+      "out": 5021,
+      "usd": 0.0049052181
+    },
+    "google/gemini-2.5-flash": {
+      "calls": 8,
+      "in": 14290,
+      "out": 1583,
+      "usd": 0.007716649999999999
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 1016,
+      "out": 932,
+      "usd": 0.000283104
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 8,
+      "in": 4341,
+      "out": 533,
+      "usd": 0.0006473000000000001
+    }
+  },
+  "byRole": {
+    "dedup": {
+      "calls": 1,
+      "errors": 0,
+      "in": 305,
+      "out": 15,
+      "usd": 0.00007525,
+      "ms": 1805
+    },
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2469,
+      "out": 201,
+      "usd": 0.0012431999999999999,
+      "ms": 1696
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1016,
+      "out": 932,
+      "usd": 0.0002592,
+      "ms": 10786
+    },
+    "writer": {
+      "calls": 5,
+      "errors": 0,
+      "in": 14983,
+      "out": 4665,
+      "usd": 0.00503219,
+      "ms": 156722
+    },
+    "verify": {
+      "calls": 8,
+      "errors": 2,
+      "in": 11821,
+      "out": 1382,
+      "usd": 0.007001299999999999,
+      "ms": 19891
+    },
+    "judge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1556,
+      "out": 210,
+      "usd": 0.00023960000000000002,
+      "ms": 1093
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 805,
+      "out": 341,
+      "usd": 0.00030109,
+      "ms": 12900
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 420,
+      "out": 104,
+      "usd": 0.0000836,
+      "ms": 864
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 204,
+      "out": 45,
+      "usd": 0.000038400000000000005,
+      "ms": 578
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1589,
+      "out": 114,
+      "usd": 0.0002045,
+      "ms": 2406
+    },
+    "linker": {
+      "calls": 3,
+      "errors": 1,
+      "in": 572,
+      "out": 60,
+      "usd": 0.0000812,
+      "ms": 3637
+    }
+  }
+}
