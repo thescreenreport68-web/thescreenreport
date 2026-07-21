@@ -1668,11 +1668,11 @@
    "key": "the-odyssey-bo-update-100m|BO-UPDATE",
    "eventSlug": "the-odyssey-bo-update-100m",
    "form": "BO-UPDATE",
-   "reason": "1 unverified claim(s) cut, unrecovered",
-   "tries": 53,
-   "at": "2026-07-21T09:33:42.675Z",
+   "reason": "consistency: metaTitle: headlines domestic while the title headlines other — the SERP promise must match the page",
+   "tries": 54,
+   "at": "2026-07-21T10:04:26.698Z",
    "dead": true,
-   "expiresAt": "2026-07-24T09:33:42.675Z"
+   "expiresAt": "2026-07-24T10:04:26.698Z"
   },
   {
    "key": "star-wars-the-mandalorian-and-grogu-bo-update-d59|BO-UPDATE",
@@ -1688,11 +1688,11 @@
    "key": "project-hail-mary-bo-update-d128|BO-UPDATE",
    "eventSlug": "project-hail-mary-bo-update-d128",
    "form": "BO-UPDATE",
-   "reason": "reconcile: domestic+international ($317M) does not match worldwide ($141M) — present each figure as separately reported, never imply a sum | words 151 < 180 (owner-set ~200-word minimum)",
-   "tries": 5,
-   "at": "2026-07-21T09:37:18.594Z",
+   "reason": "words 177 < 180 (owner-set ~200-word minimum)",
+   "tries": 6,
+   "at": "2026-07-21T10:06:47.121Z",
    "dead": true,
-   "expiresAt": "2026-07-24T09:37:18.594Z"
+   "expiresAt": "2026-07-24T10:06:47.121Z"
   },
   {
    "key": "movie-maga-ev-opening|BO-OPENING",
@@ -1739,14 +1739,14 @@
    "at": "2026-07-21T07:36:52.563Z"
   }
  ],
- "zeroStreak": 5,
+ "zeroStreak": 6,
  "daySpend": {
   "laDay": "2026-07-21",
-  "usd": 0.20259
+  "usd": 0.22873
  },
  "pace": {
-  "tokens": 3.356978492063492,
-  "lastMs": 1784626292462
+  "tokens": 3.429480396825397,
+  "lastMs": 1784628119510
  },
  "lastAuditDay": "2026-07-21",
  "attempts": {
@@ -1757,7 +1757,7 @@
    "outcome": 3,
    "king of the hill": 1,
    "call me by your name": 1,
-   "project hail mary": 2,
+   "project hail mary": 3,
    "the mandalorian and grogu": 2,
    "f9: the fast saga": 1,
    "old henry": 1,
