@@ -1668,11 +1668,11 @@
    "key": "the-odyssey-bo-update-100m|BO-UPDATE",
    "eventSlug": "the-odyssey-bo-update-100m",
    "form": "BO-UPDATE",
-   "reason": "scope: non-Hollywood box-office language in body",
-   "tries": 48,
-   "at": "2026-07-21T06:32:55.821Z",
+   "reason": "consistency: metaTitle: headlines domestic while the title headlines other — the SERP promise must match the page",
+   "tries": 49,
+   "at": "2026-07-21T07:33:20.028Z",
    "dead": true,
-   "expiresAt": "2026-07-24T06:32:55.821Z"
+   "expiresAt": "2026-07-24T07:33:20.028Z"
   },
   {
    "key": "star-wars-the-mandalorian-and-grogu-bo-update-d59|BO-UPDATE",
@@ -1727,16 +1727,24 @@
    "at": "2026-07-21T03:07:38.866Z",
    "dead": true,
    "expiresAt": "2026-07-24T03:07:38.866Z"
+  },
+  {
+   "key": "call-me-by-your-name-bo-opening|BO-OPENING",
+   "eventSlug": "call-me-by-your-name-bo-opening",
+   "form": "BO-OPENING",
+   "reason": "synthesizer returned no usable brief",
+   "tries": 1,
+   "at": "2026-07-21T07:36:52.563Z"
   }
  ],
- "zeroStreak": 0,
+ "zeroStreak": 1,
  "daySpend": {
   "laDay": "2026-07-21",
-  "usd": 0.04056
+  "usd": 0.04499
  },
  "pace": {
-  "tokens": 3,
-  "lastMs": 1784617296604
+  "tokens": 3.071299523809524,
+  "lastMs": 1784619093352
  },
  "lastAuditDay": "2026-07-21",
  "attempts": {
@@ -1744,8 +1752,9 @@
   "byFilm": {
    "rust creek": 1,
    "the sheep detectives": 1,
-   "outcome": 1,
-   "king of the hill": 1
+   "outcome": 2,
+   "king of the hill": 1,
+   "call me by your name": 1
   }
  }
 }
