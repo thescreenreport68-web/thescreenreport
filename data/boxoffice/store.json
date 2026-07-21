@@ -1668,11 +1668,11 @@
    "key": "the-odyssey-bo-update-100m|BO-UPDATE",
    "eventSlug": "the-odyssey-bo-update-100m",
    "form": "BO-UPDATE",
-   "reason": "words 121 < 180 (owner-set ~200-word minimum)",
-   "tries": 73,
-   "at": "2026-07-21T19:03:04.183Z",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "tries": 74,
+   "at": "2026-07-21T19:32:59.762Z",
    "dead": true,
-   "expiresAt": "2026-07-24T19:03:04.183Z"
+   "expiresAt": "2026-07-24T19:32:59.762Z"
   },
   {
    "key": "star-wars-the-mandalorian-and-grogu-bo-update-d59|BO-UPDATE",
@@ -1801,16 +1801,32 @@
    "reason": "3 unverified claim(s) cut, unrecovered",
    "tries": 1,
    "at": "2026-07-21T19:08:48.079Z"
+  },
+  {
+   "key": "enola-holmes-3-netflix-top10-w2026-07-19|NETFLIX-TOP10",
+   "eventSlug": "enola-holmes-3-netflix-top10-w2026-07-19",
+   "form": "NETFLIX-TOP10",
+   "reason": "words 96 < 180 (owner-set ~200-word minimum) | soft-floor humanVoice 4 < 5",
+   "tries": 1,
+   "at": "2026-07-21T19:36:28.019Z"
+  },
+  {
+   "key": "regretting-you-netflix-top10-w2026-07-19|NETFLIX-TOP10",
+   "eventSlug": "regretting-you-netflix-top10-w2026-07-19",
+   "form": "NETFLIX-TOP10",
+   "reason": "soft-floor engagement 2 < 5 | soft-floor humanVoice 4 < 5",
+   "tries": 1,
+   "at": "2026-07-21T19:39:10.019Z"
   }
  ],
- "zeroStreak": 26,
+ "zeroStreak": 27,
  "daySpend": {
   "laDay": "2026-07-21",
-  "usd": 0.36051
+  "usd": 0.4058
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1784660498425
+  "lastMs": 1784662293239
  },
  "lastAuditDay": "2026-07-21",
  "attempts": {
@@ -1835,7 +1851,9 @@
    "the boss baby": 1,
    "wwe: unreal": 1,
    "shipwrecked: nightmare at sea": 1,
-   "voicemails for isabelle": 1
+   "voicemails for isabelle": 1,
+   "enola holmes 3": 1,
+   "regretting you": 1
   }
  }
 }
