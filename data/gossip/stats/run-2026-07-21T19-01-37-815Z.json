@@ -1,0 +1,139 @@
+{
+  "ts": "2026-07-21T19:01:37.815Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "ricki-lake-celebrates-her-facelift-anniversary-with-unfiltered-photos",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [
+        "template-fingerprint:logged",
+        "geo-no-attribution:logged"
+      ],
+      "headline": [
+        "metaDescription",
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 2
+    }
+  ],
+  "topics": 1,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 0,
+  "costUSD": 0.02506,
+  "costPerPublished": 0.02506,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 7,
+      "in": 24219,
+      "out": 2086,
+      "usd": 0.0124807
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 2579,
+      "out": 390,
+      "usd": 0.00047026
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 6,
+      "in": 29622,
+      "out": 5963,
+      "usd": 0.011297254000000001
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 8,
+      "in": 6144,
+      "out": 493,
+      "usd": 0.0008116
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2462,
+      "out": 185,
+      "usd": 0.0012010999999999999,
+      "ms": 1459
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2579,
+      "out": 390,
+      "usd": 0.00030231,
+      "ms": 13238
+    },
+    "writer": {
+      "calls": 5,
+      "errors": 0,
+      "in": 28850,
+      "out": 5676,
+      "usd": 0.008565340000000001,
+      "ms": 148449
+    },
+    "verify": {
+      "calls": 6,
+      "errors": 0,
+      "in": 21757,
+      "out": 1901,
+      "usd": 0.0112796,
+      "ms": 10554
+    },
+    "judge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2859,
+      "out": 156,
+      "usd": 0.00034830000000000006,
+      "ms": 1313
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 772,
+      "out": 287,
+      "usd": 0.00027514,
+      "ms": 8854
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 359,
+      "out": 95,
+      "usd": 0.00007390000000000001,
+      "ms": 641
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 194,
+      "out": 40,
+      "usd": 0.00003540000000000001,
+      "ms": 509
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1558,
+      "out": 85,
+      "usd": 0.0001898,
+      "ms": 2402
+    },
+    "linker": {
+      "calls": 4,
+      "errors": 0,
+      "in": 1174,
+      "out": 117,
+      "usd": 0.0001642,
+      "ms": 2039
+    }
+  }
+}
