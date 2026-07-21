@@ -990,21 +990,21 @@
    "key": "voicemails-for-isabelle-netflix-top10-w2026-07-12|NETFLIX-TOP10",
    "eventSlug": "voicemails-for-isabelle-netflix-top10-w2026-07-12",
    "form": "NETFLIX-TOP10",
-   "reason": "words 131 < 180 (owner-set ~200-word minimum) | soft-floor engagement 4 < 5 | soft-floor humanVoice 3 < 5",
-   "tries": 2,
-   "at": "2026-07-20T22:40:14.408Z",
-   "dead": false,
-   "expiresAt": "2026-07-20T22:05:27.163Z"
+   "reason": "synthesizer returned no usable brief",
+   "tries": 3,
+   "at": "2026-07-21T03:36:50.300Z",
+   "dead": true,
+   "expiresAt": "2026-07-24T03:36:50.300Z"
   },
   {
    "key": "the-doorman-netflix-top10-w2026-07-12|NETFLIX-TOP10",
    "eventSlug": "the-doorman-netflix-top10-w2026-07-12",
    "form": "NETFLIX-TOP10",
-   "reason": "words 129 < 180 (owner-set ~200-word minimum)",
-   "tries": 2,
-   "at": "2026-07-20T23:07:00.832Z",
-   "dead": false,
-   "expiresAt": "2026-07-20T22:07:09.173Z"
+   "reason": "words 176 < 180 (owner-set ~200-word minimum)",
+   "tries": 3,
+   "at": "2026-07-21T03:39:13.201Z",
+   "dead": true,
+   "expiresAt": "2026-07-24T03:39:13.201Z"
   },
   {
    "key": "little-brother-netflix-top10-w2026-07-12|NETFLIX-TOP10",
@@ -1652,21 +1652,21 @@
    "key": "the-odyssey-bo-update-100m|BO-UPDATE",
    "eventSlug": "the-odyssey-bo-update-100m",
    "form": "BO-UPDATE",
-   "reason": "consistency: metaTitle: headlines domestic while the title headlines other — the SERP promise must match the page",
-   "tries": 41,
-   "at": "2026-07-21T03:03:59.561Z",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "tries": 42,
+   "at": "2026-07-21T03:33:42.652Z",
    "dead": true,
-   "expiresAt": "2026-07-24T03:03:59.561Z"
+   "expiresAt": "2026-07-24T03:33:42.652Z"
   },
   {
    "key": "star-wars-the-mandalorian-and-grogu-bo-update-d59|BO-UPDATE",
    "eventSlug": "star-wars-the-mandalorian-and-grogu-bo-update-d59",
    "form": "BO-UPDATE",
    "reason": "consistency: title: \"$177.5\" is not a canonical figure for this film | title: \"$177.5\" contradicts the canonical domestic figure ($177,534,904) | metaTitle: headlines domestic while the title headlines dailyGross/other — the SERP promise must match the page",
-   "tries": 22,
-   "at": "2026-07-21T03:05:57.941Z",
+   "tries": 23,
+   "at": "2026-07-21T03:35:05.019Z",
    "dead": true,
-   "expiresAt": "2026-07-24T03:05:57.941Z"
+   "expiresAt": "2026-07-24T03:35:05.019Z"
   },
   {
    "key": "project-hail-mary-bo-update-d128|BO-UPDATE",
@@ -1721,14 +1721,14 @@
    "expiresAt": "2026-07-24T03:07:38.866Z"
   }
  ],
- "zeroStreak": 23,
+ "zeroStreak": 24,
  "daySpend": {
   "laDay": "2026-07-20",
-  "usd": 0.63797
+  "usd": 0.66163
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1784602899949
+  "lastMs": 1784604692569
  },
  "lastAuditDay": "2026-07-20",
  "attempts": {
@@ -1747,8 +1747,8 @@
    "wwe unreal": 1,
    "kung fu soccer": 1,
    "enola holmes 3": 2,
-   "voicemails for isabelle": 1,
-   "the doorman": 1,
+   "voicemails for isabelle": 2,
+   "the doorman": 2,
    "little brother": 1,
    "malcolm in the middle: life's still unfair": 1,
    "the mandalorian and grogu": 3,
