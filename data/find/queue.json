@@ -1,42 +1,41 @@
 {
-  "runId": "run-2026-07-21T11-01-36",
-  "builtAt": "2026-07-21T11:02:53.528Z",
-  "count": 12,
+  "runId": "run-2026-07-21T13-01-33",
+  "builtAt": "2026-07-21T13:03:57.176Z",
+  "count": 15,
   "topics": [
     {
-      "id": "news-bad-day-at-the-office-uk-distribution",
-      "slug": "action-xtreme-expands-to-uk-ireland-with-john-hannah-s-bad-day-at-the-",
-      "title": "Action Xtreme Expands to UK/Ireland with John Hannah's 'Bad Day at the Office'",
+      "id": "news-christopher-nolan-the-odyssey-sea-peoples",
+      "slug": "christopher-nolan-s-the-odyssey-sparks-interest-in-sea-peoples-history",
+      "title": "Christopher Nolan's 'The Odyssey' Sparks Interest in Sea Peoples History",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "bad-day-at-the-office-uk-distribution",
-      "primaryKeyword": "bad day at the office film",
-      "primaryEntity": "Bad Day at the Office (film)",
+      "eventSlug": "christopher-nolan-the-odyssey-sea-peoples",
+      "primaryKeyword": "christopher nolan the odyssey",
+      "primaryEntity": "The Odyssey",
       "entities": [
-        "Action Xtreme",
-        "John Hannah",
-        "Edinburgh Film Festival"
+        "The Odyssey (film)",
+        "Christopher Nolan"
       ],
-      "angle": "Action Xtreme expands into UK and Ireland distribution with the John Hannah-starrer 'Bad Day at the Office,' set for Edinburgh Film Festival.",
+      "angle": "Christopher Nolan's new film 'The Odyssey' is sparking interest in ancient history.",
       "tmdbType": "movie",
-      "source": "rss:THR",
+      "source": "rss:IndieWire",
       "sources": [
         {
-          "outlet": "THR",
+          "outlet": "IndieWire",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/action-xtreme-distribution-uk-john-hannah-bad-day-film-news-1236652884/",
-          "ageMin": 2,
-          "headline": "Action Xtreme Expands Into U.K., Ireland Distribution With John Hannah-Starring Bad Day at the Office (Exclusive)",
-          "summary": "Chee Keong Cheung's adrenaline-fueled caper, shot entirely from the first-person perspective using GoPro cameras, is set to open Edinburgh Film Festival's Midnight Madness strand."
+          "url": "https://www.indiewire.com/features/general/who-are-the-sea-peoples-christopher-nolan-the-odyssey-1235201014/",
+          "ageMin": 1262,
+          "headline": "The History Behind the Sea Peoples in Christopher Nolan s The Odyssey",
+          "summary": "Greek History TAs will be fielding questions about the Sea Peoples for years, thanks to Christopher Nolan's latest film."
         }
       ],
-      "ageMin": 2,
+      "ageMin": 1262,
       "_cand": {
-        "key": "rss:action-xtreme-expands-into-u-k-ireland-distribution-with-joh",
+        "key": "rss:the-history-behind-the-sea-peoples-in-christopher-nolan-s-th",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -46,11 +45,79 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "THR"
+          "IndieWire"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "THR",
+        "attribution": "IndieWire",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 94,
+      "signals": {
+        "recency": 1,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "radar": 30
+      },
+      "radarKind": "movie-in-theaters",
+      "tierClass": "A"
+    },
+    {
+      "id": "news-sunny-dancer-quiver-acquisition",
+      "slug": "sunny-dancer-starring-bella-ramsey-bought-by-quiver-plans-north-americ",
+      "title": "'Sunny Dancer' Starring Bella Ramsey Bought by Quiver, Plans North American Theatrical Release",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "sunny-dancer-quiver-acquisition",
+      "primaryKeyword": "sunny dancer film",
+      "primaryEntity": "Sunny Dancer",
+      "entities": [
+        "Bella Ramsey",
+        "George Jaque"
+      ],
+      "angle": "British indie film 'Sunny Dancer,' starring Bella Ramsey, has been acquired by Quiver for North American theatrical release.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/film/global/sunny-dancer-starring-bella-ramsey-bought-by-quiver-1236816140/",
+          "ageMin": 2,
+          "headline": "‘Sunny Dancer’ Starring Bella Ramsey Bought by Quiver, Plans North American Theatrical Release (EXCLUSIVE)",
+          "summary": "Sunny Dancer, the British indie feature that charmed audiences in the Berlinale earlier this year, has sold globally, including for North America. The sophomore feature of rising director George Jaques and a coming-of-age comedy about teenage cancer survivors, the films stars Bella Ramsey ( The Last of Us ) who leads an ensemble of established and up-and-coming [ ]"
+        }
+      ],
+      "ageMin": 2,
+      "_cand": {
+        "key": "rss:-sunny-dancer-starring-bella-ramsey-bought-by-quiver-plans-n",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -71,22 +138,152 @@
       "tierClass": "B"
     },
     {
-      "id": "news-deadpool-film-announcement",
-      "slug": "ryan-reynolds-confirms-another-deadpool-movie-will-eventually-happen",
-      "title": "Ryan Reynolds Confirms Another Deadpool Movie Will Eventually Happen",
+      "id": "news-lego-x-files-set-mulder-scully",
+      "slug": "lego-unveils-the-x-files-1-478-piece-set-featuring-mulder-and-scully-m",
+      "title": "Lego Unveils The X-Files 1,478-Piece Set Featuring Mulder and Scully Minifigures",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "lego-x-files-set-mulder-scully",
+      "primaryKeyword": "x-files lego set",
+      "primaryEntity": "The X-Files",
+      "entities": [
+        "Gillian Anderson",
+        "David Duchovny"
+      ],
+      "angle": "Lego unveils a new 1,478-piece X-Files set featuring Mulder and Scully minifigures, developed in partnership with Gillian Anderson.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/tv/news/lego-the-x-files-set-mulder-scully-minifigures-1236816853/",
+          "ageMin": 2,
+          "headline": "Lego Unveils The X-Files 1,478-Piece Set Featuring Mulder and Scully Minifigures (EXCLUSIVE)",
+          "summary": "The brick is out there. Lego has partnered with Gillian Anderson to reveal its new The X-Files set, which features 1,478 pieces and eight minifigures (including Mulder and Scully). The X-Files set is part of the company s fan-favorite Lego Ideas line, in which users submit ideas for products — which are then considered for production [ ]"
+        }
+      ],
+      "ageMin": 2,
+      "_cand": {
+        "key": "rss:lego-unveils-the-x-files-1-478-piece-set-featuring-mulder-an",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 87,
+      "signals": {
+        "recency": 30,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-ryan-coogler-x-files-reboot",
+      "slug": "ryan-coogler-reportedly-developing-the-x-files-reboot",
+      "title": "Ryan Coogler Reportedly Developing 'The X-Files' Reboot",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "ryan-coogler-x-files-reboot",
+      "primaryKeyword": "ryan coogler x-files reboot",
+      "primaryEntity": "The X-Files",
+      "entities": [
+        "Ryan Coogler"
+      ],
+      "angle": "Discussion about a potential reboot of 'The X-Files' by Ryan Coogler, with questions about its format.",
+      "tmdbType": "movie",
+      "source": "gnews:Epicstream",
+      "sources": [
+        {
+          "outlet": "Epicstream",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOenEyVVh5VEZ6ckpKVWVIbnpFSS1COGtSVHZwUjNHRGZLa1ZRYThmVUtTcWg5N3dqdDAxU1VwcFBrcXlzdmx0emJfUUozOWhvVXZZeEo1NnktekVKcFRpbi0zZkRQN1Q1T1JVUFZYTlBQc2Nkc1ZkQjFlUEpyZjZoWVM3cEo0WXZCWWZnOVFZZw?oc=5",
+          "ageMin": 57,
+          "headline": "Ryan Coogler's The X-Files Reboot: TV Series or New Movie? - Epicstream",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMijwFBVV95cUxOenEyVVh5VEZ6ckpKVWVIbnpFSS1COGtSVHZwUjNHRGZLa1ZRYThmVUtTcWg5N3dqdDAxU1VwcFBrcXlzdmx0emJfUUozOWhvVXZZeEo1NnktekVKcFRpbi0zZkRQN1Q1T1JVUFZYTlBQc2Nkc1ZkQjFlUEpyZjZoWVM3cEo0WXZCWWZnOVFZZw?oc=5\" target=\"_blank\" Ryan Coogler's The X-Files Reboot:"
+        }
+      ],
+      "ageMin": 57,
+      "_cand": {
+        "key": "rss:ryan-coogler-s-the-x-files-reboot-tv-series-or-new-movie-epi",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "Epicstream"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "Epicstream",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 77,
+      "signals": {
+        "recency": 24,
+        "corroboration": 8,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-ryan-reynolds-another-deadpool-movie",
+      "slug": "ryan-reynolds-says-there-will-eventually-be-another-deadpool-movie",
+      "title": "Ryan Reynolds Says There Will Eventually Be Another Deadpool Movie",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "high",
-      "eventSlug": "deadpool-film-announcement",
-      "primaryKeyword": "deadpool 3",
+      "eventSlug": "ryan-reynolds-another-deadpool-movie",
+      "primaryKeyword": "Deadpool 3",
       "primaryEntity": "Deadpool",
       "entities": [
-        "Deadpool (film)",
-        "Ryan Reynolds",
-        "Marvel"
+        "Deadpool (film series)",
+        "Ryan Reynolds"
       ],
       "angle": "Ryan Reynolds confirms that another Deadpool movie is in development.",
       "tmdbType": "movie",
@@ -96,12 +293,12 @@
           "outlet": "Variety",
           "tier": 7,
           "url": "https://variety.com/2026/film/news/ryan-reynolds-new-deadpool-movie-eventually-1236817083/",
-          "ageMin": 5,
+          "ageMin": 125,
           "headline": "Ryan Reynolds Says There Will Eventually Be Another Deadpool Movie: There s a Few Really Deep Cuts That I Think Are Missing",
           "summary": "Deadpool s story isn t over yet. During a panel at Fanatics Fest over the weekend, Ryan Reynolds confirmed that there will eventually be another movie starring the Marvel antihero — but it may revolve around deep cuts from the character s comics. There s a few really deep cuts that I think are missing from the movies. I [ ]"
         }
       ],
-      "ageMin": 5,
+      "ageMin": 125,
       "_cand": {
         "key": "rss:ryan-reynolds-says-there-will-eventually-be-another-deadpool",
         "popularity": 0,
@@ -122,9 +319,9 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 93,
+      "priority": 79,
       "signals": {
-        "recency": 30,
+        "recency": 16,
         "corroboration": 12,
         "status": 18,
         "type": 9,
@@ -138,103 +335,38 @@
       "tierClass": "S"
     },
     {
-      "id": "news-star-wars-jedi-return-disney-plus",
-      "slug": "star-wars-officially-brings-back-5-key-jedi-for-next-disney-show",
-      "title": "Star Wars Officially Brings Back 5 Key Jedi For Next Disney+ Show",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "star-wars-jedi-return-disney-plus",
-      "primaryKeyword": "star wars jedi disney plus",
-      "primaryEntity": "Star Wars",
-      "entities": [
-        "Disney+",
-        "Jedi"
-      ],
-      "angle": "Disney+ series to feature the return of five key Jedi characters.",
-      "tmdbType": "movie",
-      "source": "gnews:The Direct",
-      "sources": [
-        {
-          "outlet": "The Direct",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9VOEZDeWwtb2ZqZmdnUTVsM3h6Wk5xV1VGTUlLa0phWlRzc1ZyV0wtckFOWmU5WU42clZud3BIUzJGWDN1QjFFblUzbURkQzVPSm41LTRRaW1GYlhHa1pPWkJwODFQN1oyNXAwdW1wS0pvdE5Y?oc=5",
-          "ageMin": 106,
-          "headline": "Star Wars Officially Brings Back 5 Key Jedi For Next Disney+ Show - The Direct",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMidEFVX3lxTE9VOEZDeWwtb2ZqZmdnUTVsM3h6Wk5xV1VGTUlLa0phWlRzc1ZyV0wtckFOWmU5WU42clZud3BIUzJGWDN1QjFFblUzbURkQzVPSm41LTRRaW1GYlhHa1pPWkJwODFQN1oyNXAwdW1wS0pvdE5Y?oc=5\" target=\"_blank\" Star Wars Officially Brings Back 5 Key Jedi For Next Disney+ Show /a nbs"
-        }
-      ],
-      "ageMin": 106,
-      "_cand": {
-        "key": "rss:star-wars-officially-brings-back-5-key-jedi-for-next-disney-",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "The Direct"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "The Direct",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 74,
-      "signals": {
-        "recency": 16,
-        "corroboration": 8,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-sadie-sink-spider-man-brand-new-day-role-mystery",
-      "slug": "sadie-sink-keeps-mystery-of-spider-man-brand-new-day-role-reveals-i-am",
-      "title": "Sadie Sink Keeps Mystery Of Spider-Man: Brand New Day Role Reveals I Am Not Aunt May",
+      "id": "news-matt-damon-odyssey-stunt-double",
+      "slug": "matt-damon-reveals-why-he-had-female-stunt-double-for-odyssey-scene-gr",
+      "title": "Matt Damon Reveals Why He Had Female Stunt Double for Odyssey Scene: Greatest Arms I’ve Ever Seen",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
-      "eventType": "casting",
+      "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "sadie-sink-spider-man-brand-new-day-role-mystery",
-      "primaryKeyword": "sadie sink spider-man",
-      "primaryEntity": "Sadie Sink",
+      "eventSlug": "matt-damon-odyssey-stunt-double",
+      "primaryKeyword": "matt damon odyssey",
+      "primaryEntity": "Matt Damon",
       "entities": [
-        "Spider-Man: Brand New Day"
+        "Christopher Nolan",
+        "The Odyssey"
       ],
-      "angle": "Sadie Sink teases her mystery role in the upcoming Spider-Man film.",
+      "angle": "Matt Damon explains his choice to use a female stunt double for a scene in Christopher Nolan's 'The Odyssey'.",
       "tmdbType": "movie",
-      "source": "rss:Deadline",
+      "source": "rss:THR",
       "sources": [
         {
-          "outlet": "Deadline",
+          "outlet": "THR",
           "tier": 7,
-          "url": "https://deadline.com/2026/07/sadie-sink-mystery-spider-man-brand-new-day-role-1236999030/",
-          "ageMin": 422,
-          "headline": "Sadie Sink Keeps Mystery Of Spider-Man: Brand New Day Role Reveals I Am Not Aunt May",
-          "summary": "Sadie Sink s role in Spider-Man: Brand New Day remains a mystery ahead of the film s premiere. A new video teased Sink revealing three things about her character in the Sony Pictures production, but left audiences with the same doubts. Since the trailer dropped, I’ve seen so many theories about who I’m playing, Sink said in [ ]"
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/matt-damon-female-stunt-double-odyssey-scene-bicep-1236652737/",
+          "ageMin": 727,
+          "headline": "Matt Damon Reveals Why He Had Female Stunt Double for Odyssey Scene: Greatest Arms I ve Ever Seen",
+          "summary": "The actor plays Odysseus in Christopher Nolan's epic action fantasy film."
         }
       ],
-      "ageMin": 422,
+      "ageMin": 727,
       "_cand": {
-        "key": "rss:sadie-sink-keeps-mystery-of-spider-man-brand-new-day-role-re",
+        "key": "rss:matt-damon-reveals-why-he-had-female-stunt-double-for-odysse",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -244,34 +376,98 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Deadline"
+          "THR"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Deadline",
+        "attribution": "THR",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 84,
+      "priority": 78,
       "signals": {
-        "recency": 4,
+        "recency": 1,
         "corroboration": 12,
         "status": 18,
-        "type": 14,
+        "type": 5,
         "pop": 0,
         "breakout": 0,
-        "big": 24,
+        "big": 12,
         "trending": 0,
         "spice": 0,
         "softTv": 0,
-        "radar": 12
+        "radar": 30
       },
-      "radarKind": "movie-releasing",
+      "radarKind": "movie-in-theaters",
       "tierClass": "A"
     },
     {
-      "id": "news-marvel-actor-declines-mcu-offers",
+      "id": "music-news-hakushi-hasegawa-suffocation-diary-new-song",
+      "slug": "hakushi-hasegawa-shares-new-song-and-video-suffocation-diary-from-upco",
+      "title": "Hakushi Hasegawa Shares New Song and Video 'Suffocation Diary' From Upcoming Album",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "indie",
+      "eventSlug": "hakushi-hasegawa-suffocation-diary-new-song",
+      "primaryKeyword": "Hakushi Hasegawa new song",
+      "primaryEntity": "Hakushi Hasegawa",
+      "entities": [],
+      "angle": "Japanese artist Hakushi Hasegawa has released a new song and video from his upcoming album.",
+      "tmdbType": "movie",
+      "source": "gnews:BroadwayWorld",
+      "sources": [
+        {
+          "outlet": "BroadwayWorld",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQVGpYeUNUY2c4SWFpLVBMSnJzdkRNTUNUT2lmMWdPb0U4UUMzRGRqZDJpT2RVMm1pbGd6ZEg0QnMzcG01dFlTNWJkME9yZGg5b2U0LVdzUUoybVhTb194bHFXUXp4WUhRWG52eHdENWhIQi1scDkwN1kxYVdNRG5XeXNaYjlqWGNLWWFwMy02cDF2RnpTajFkS1lXRWVnN3NBSXJicndnX291YTlQeUxpYnVQVE1uZkt6LTIxUzNPckRSdkZEZGdyLVR3bjBOYi1UZUE?oc=5",
+          "ageMin": 104,
+          "headline": "Hakushi Hasegawa Shares New Song and Video 'Suffocation Diary' From Upcoming Album - BroadwayWorld",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMi0gFBVV95cUxQVGpYeUNUY2c4SWFpLVBMSnJzdkRNTUNUT2lmMWdPb0U4UUMzRGRqZDJpT2RVMm1pbGd6ZEg0QnMzcG01dFlTNWJkME9yZGg5b2U0LVdzUUoybVhTb194bHFXUXp4WUhRWG52eHdENWhIQi1scDkwN1kxYVdNRG5XeXNaYjlqWGNLWWFwMy02cDF2RnpTajFkS1lXRWVnN3NBSXJicndnX291YTlQeUxpYnVQVE1uZkt6LTI"
+        }
+      ],
+      "ageMin": 104,
+      "_cand": {
+        "key": "rss:hakushi-hasegawa-shares-new-song-and-video-suffocation-diary",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "BroadwayWorld"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "BroadwayWorld",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 51,
+      "signals": {
+        "recency": 16,
+        "corroboration": 8,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-marvel-actor-declining-mcu-offers",
       "slug": "marvel-boss-says-one-actor-keeps-turning-down-mcu-offers-it-s-become-t",
       "title": "Marvel boss says one actor keeps turning down MCU offers: ‘It’s become tradition’",
       "contentType": "news",
@@ -280,13 +476,13 @@
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "marvel-actor-declines-mcu-offers",
-      "primaryKeyword": "marvel actor mcu offers",
+      "eventSlug": "marvel-actor-declining-mcu-offers",
+      "primaryKeyword": "marvel mcu actor offers",
       "primaryEntity": "Marvel Cinematic Universe",
       "entities": [
         "Marvel"
       ],
-      "angle": "Marvel Studios boss reveals an actor has made a tradition of declining MCU offers.",
+      "angle": "Marvel boss reveals an actor consistently turns down MCU roles.",
       "tmdbType": "movie",
       "source": "gnews:the-independent.com",
       "sources": [
@@ -294,12 +490,12 @@
           "outlet": "the-independent.com",
           "tier": 5,
           "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPaXNlSVR0NmFGMGlabEprSHM1a3FVamFoSUJMREZ4eF8zMGhibkNjdEdKbEVRRTZ2TnlfWWQ3dEc1cmlUdDJtX3hZV3p5OHlZa2F3OURfeTNZS3lERjdKTUt3cWF6cmxzSlphYUt0NjZrajBvR0tmdDg4Um5LM1cwd20zYU9saDVuWmRJaXZranFaZXJiMjVtOGR2MklJbGw4cEZuR3doSjVVazRwN0lESGZIeWw0Vjg?oc=5",
-          "ageMin": 112,
+          "ageMin": 232,
           "headline": "Marvel boss says one actor keeps turning down MCU offers: ‘It’s become tradition’ - the-independent.com",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMitwFBVV95cUxPaXNlSVR0NmFGMGlabEprSHM1a3FVamFoSUJMREZ4eF8zMGhibkNjdEdKbEVRRTZ2TnlfWWQ3dEc1cmlUdDJtX3hZV3p5OHlZa2F3OURfeTNZS3lERjdKTUt3cWF6cmxzSlphYUt0NjZrajBvR0tmdDg4Um5LM1cwd20zYU9saDVuWmRJaXZranFaZXJiMjVtOGR2MklJbGw4cEZuR3doSjVVazRwN0lESGZIeWw0Vjg?oc="
         }
       ],
-      "ageMin": 112,
+      "ageMin": 232,
       "_cand": {
         "key": "rss:marvel-boss-says-one-actor-keeps-turning-down-mcu-offers-it-",
         "popularity": 0,
@@ -320,9 +516,9 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 80,
+      "priority": 73,
       "signals": {
-        "recency": 16,
+        "recency": 9,
         "corroboration": 8,
         "status": 18,
         "type": 14,
@@ -336,164 +532,99 @@
       "tierClass": "B"
     },
     {
-      "id": "news-alan-ritchson-sequel-war-machines-title",
-      "slug": "alan-ritchson-s-blockbuster-netflix-action-sequel-officially-sets-perf",
-      "title": "Alan Ritchson's Blockbuster Netflix Action Sequel Officially Sets Perfect New Title",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "alan-ritchson-sequel-war-machines-title",
-      "primaryKeyword": "alan ritchson sequel",
-      "primaryEntity": "War Machines (film)",
-      "entities": [
-        "Alan Ritchson",
-        "Netflix"
-      ],
-      "angle": "Alan Ritchson's Netflix action sequel officially revealed with a new title.",
-      "tmdbType": "movie",
-      "source": "gnews:MovieWeb",
-      "sources": [
-        {
-          "outlet": "MovieWeb",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNckREMGd5NmFJTVdacUhWQzVCYzJWRWJKdFhhaldnaUowNXdySkJsZDZSX2dDc25JeElNTG1vU2NlVzNwX0VacWYwT24zR1RrUHpRYXFnSmVQdTdxQklrd2lzWFVFWXBlWEpkZGIxaF9rUTNJTkp5SG4ybV9LY3d5X0tIWlBIVFNuY3VFVjZLU3Fmck1saklzUg?oc=5",
-          "ageMin": 718,
-          "headline": "Alan Ritchson's Blockbuster Netflix Action Sequel Officially Sets Perfect New Title - MovieWeb",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxNckREMGd5NmFJTVdacUhWQzVCYzJWRWJKdFhhaldnaUowNXdySkJsZDZSX2dDc25JeElNTG1vU2NlVzNwX0VacWYwT24zR1RrUHpRYXFnSmVQdTdxQklrd2lzWFVFWXBlWEpkZGIxaF9rUTNJTkp5SG4ybV9LY3d5X0tIWlBIVFNuY3VFVjZLU3Fmck1saklzUg?oc=5\" target=\"_blank\" Alan Ritchson's Blockb"
-        },
-        {
-          "outlet": "What's on Netflix",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPeDdhY1dZSnBLRlhkNDc4TVUyTVJoRFA2MnpxSkc4ak9KN2djRi1CNzhQbTVmVW1VUGxOMFJNTGFBT0hET3RMSXFYU2cwOWd2UXJtWHg3eGE5cnVhdk9mTUU4aGlHLXpnZktDOTVPV0dTZDFsSVB5clpjWUlzUmlCeVJGN2lCTnYteVVxUlhfaw?oc=5",
-          "ageMin": 895,
-          "headline": "Alan Ritchson’s Netflix Sequel Gets an Official Title: Enter ‘War Machines’ - What's on Netflix",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMijwFBVV95cUxPeDdhY1dZSnBLRlhkNDc4TVUyTVJoRFA2MnpxSkc4ak9KN2djRi1CNzhQbTVmVW1VUGxOMFJNTGFBT0hET3RMSXFYU2cwOWd2UXJtWHg3eGE5cnVhdk9mTUU4aGlHLXpnZktDOTVPV0dTZDFsSVB5clpjWUlzUmlCeVJGN2lCTnYteVVxUlhfaw?oc=5\" target=\"_blank\" Alan Ritchson’s Netflix Sequel Get"
-        }
-      ],
-      "ageMin": 718,
-      "_cand": {
-        "key": "rss:alan-ritchson-s-blockbuster-netflix-action-sequel-officially",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 2,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 2,
-        "outlets": [
-          "MovieWeb",
-          "What's on Netflix"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "multiple outlets",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 77,
-      "signals": {
-        "recency": 4,
-        "corroboration": 14,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 8,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "music-news-a-r-rahman-launches-arr-immersive-app-apple-vision-pro",
-      "slug": "a-r-rahman-launches-arr-immersive-app-for-apple-vision-pro",
-      "title": "A.R. Rahman Launches ARR Immersive App for Apple Vision Pro",
+      "id": "music-news-ella-langley-choosin-texas-ties-record",
+      "slug": "ella-langley-s-choosin-texas-just-tied-i-will-always-love-you",
+      "title": "Ella Langley’s ‘Choosin’ Texas’ Just Tied ‘I Will Always Love You’",
       "contentType": "music-news",
       "formatTag": "music-news",
       "category": "music",
       "subcategory": "news",
-      "eventType": "announcement",
+      "eventType": "other",
       "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "a-r-rahman-launches-arr-immersive-app-apple-vision-pro",
-      "primaryKeyword": "A.R. Rahman app",
-      "primaryEntity": "A.R. Rahman",
+      "eventSlug": "ella-langley-choosin-texas-ties-record",
+      "primaryKeyword": "Ella Langley Choosin Texas",
+      "primaryEntity": "Ella Langley",
       "entities": [
-        "Apple Vision Pro",
-        "Slumdog Millionaire"
+        "Whitney Houston",
+        "Mariah Carey"
       ],
-      "angle": "Oscar-winning composer A.R. Rahman launches a new immersive app for Apple Vision Pro, showcasing his decade of storytelling work.",
+      "angle": "Ella Langley's 'Choosin' Texas' ties a 14-week Number One record on the Billboard Hot 100 previously held by Whitney Houston and Mariah Carey.",
       "tmdbType": "movie",
-      "source": "rss:Variety",
+      "source": "rss:Rolling Stone",
       "sources": [
         {
-          "outlet": "Variety",
+          "outlet": "Rolling Stone",
           "tier": 7,
-          "url": "https://variety.com/2026/music/news/ar-rahman-arr-immersive-app-apple-vision-pro-1236816469/",
-          "ageMin": 272,
-          "headline": "A.R. Rahman Launches ARR Immersive App for Apple Vision Pro (EXCLUSIVE)",
-          "summary": "A.R. Rahman, the two-time Oscar-winning Indian composer behind Slumdog Millionaire and 127 Hours, is launching ARR Immersive, an app bringing his decade of immersive storytelling work to Apple Vision Pro on July 22. The app draws on Rahman s ongoing work in immersive formats, tracing back to Le Musk, a 360-degree virtual reality film that debuted [ ]"
+          "url": "https://www.rollingstone.com/music/music-country/ella-langley-choosin-texas-chart-record-whitney-houston-1235596043/",
+          "ageMin": 1103,
+          "headline": "Ella Langley’s ‘Choosin’ Texas’ Just Tied ‘I Will Always Love You’",
+          "summary": "The country singer now joins Whitney Houston and Mariah Carey as one of only three women to have a song spend 14 weeks at Number One"
+        },
+        {
+          "outlet": "Variety Music",
+          "tier": 7,
+          "url": "https://variety.com/2026/music/news/ella-langley-choosin-texas-ties-whitney-houston-mariah-carey-records-1236816760/",
+          "ageMin": 1133,
+          "headline": "Ella Langley’s ‘Choosin’ Texas’ Ties Whitney Houston and Mariah Carey’s Records on Billboard Hot 100",
+          "summary": "The year’s biggest hit single, Ella Langley’s “Choosin’ Texas,” has racked up its 14th week at No. 1 on the Billboard Hot 100 — and has tied a record held by Whitney Houston and Mariah Carey. Langley’s song, which first topped the Hot 100 chart in February, ties Mariah Carey’s “We Belong Together” and Whitney [ ]"
         }
       ],
-      "ageMin": 272,
+      "ageMin": 1103,
       "_cand": {
-        "key": "rss:a-r-rahman-launches-arr-immersive-app-for-apple-vision-pro-e",
+        "key": "rss:ella-langley-s-choosin-texas-just-tied-i-will-always-love-yo",
         "popularity": 0,
         "kind": "rss-news"
       },
-      "corroborationCount": 1,
+      "corroborationCount": 2,
       "verification": {
-        "tier1Count": 1,
+        "tier1Count": 2,
         "tier1Owners": 1,
-        "outletCount": 1,
+        "outletCount": 2,
         "outlets": [
-          "Variety"
+          "Rolling Stone",
+          "Variety Music"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Variety",
+        "attribution": "Rolling Stone",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 48,
+      "priority": 50,
       "signals": {
-        "recency": 9,
-        "corroboration": 12,
+        "recency": 1,
+        "corroboration": 18,
         "status": 18,
-        "type": 9,
+        "type": 5,
         "pop": 0,
         "breakout": 0,
         "big": 0,
-        "trending": 0,
+        "trending": 8,
         "spice": 0,
         "softTv": 0
       },
       "tierClass": "C"
     },
     {
-      "id": "news-adam-driver-passed-on-marvel-roles",
+      "id": "news-adam-driver-passes-on-marvel-roles",
       "slug": "adam-driver-has-passed-on-so-many-marvel-roles-that-it-s-become-a-trad",
-      "title": "Adam Driver Has Passed on So Many Marvel Roles That It s Become a Tradition, Kevin Feige Says",
+      "title": "Adam Driver Has Passed on So Many Marvel Roles That It's Become a Tradition, Kevin Feige Says",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "adam-driver-passed-on-marvel-roles",
+      "eventSlug": "adam-driver-passes-on-marvel-roles",
       "primaryKeyword": "adam driver marvel roles",
       "primaryEntity": "Adam Driver",
       "entities": [
-        "Marvel"
+        "Marvel",
+        "Star Wars"
       ],
-      "angle": "Kevin Feige reveals Adam Driver has a tradition of passing on multiple Marvel roles.",
+      "angle": "Adam Driver has a tradition of turning down Marvel roles, according to Kevin Feige.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
@@ -501,12 +632,12 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/movies/movie-news/adam-driver-passing-marvel-roles-tradition-kevin-feige-1236652800/",
-          "ageMin": 507,
+          "ageMin": 627,
           "headline": "Adam Driver Has Passed on So Many Marvel Roles That It s Become a Tradition, Kevin Feige Says",
           "summary": "While it's no superhero blockbuster, Driver previously led the 'Star Wars' sequel trilogy, playing Kylo Ren."
         }
       ],
-      "ageMin": 507,
+      "ageMin": 627,
       "_cand": {
         "key": "rss:adam-driver-has-passed-on-so-many-marvel-roles-that-it-s-bec",
         "popularity": 0,
@@ -543,37 +674,37 @@
       "tierClass": "B"
     },
     {
-      "id": "news-star-wars-knights-of-the-old-republic-remake-reveal-2024",
-      "slug": "knights-of-the-old-republic-remake-reveal-expected-this-year",
-      "title": "Knights of the Old Republic Remake Reveal Expected This Year",
+      "id": "news-star-wars-hotel-documentary",
+      "slug": "the-mythic-star-wars-hotel-is-at-the-heart-of-yet-another-documentary",
+      "title": "The Mythic ‘Star Wars’ Hotel Is at the Heart of Yet Another Documentary",
       "contentType": "news",
       "formatTag": "news",
-      "category": "movies",
+      "category": "tv",
       "subcategory": "news",
-      "eventType": "announcement",
+      "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "star-wars-knights-of-the-old-republic-remake-reveal-2024",
-      "primaryKeyword": "Knights of the Old Republic Remake",
-      "primaryEntity": "Star Wars: Knights of the Old Republic Remake",
+      "eventSlug": "star-wars-hotel-documentary",
+      "primaryKeyword": "Star Wars hotel documentary",
+      "primaryEntity": "Star Wars: Galactic Starcruiser",
       "entities": [
         "Star Wars"
       ],
-      "angle": "Insider report suggests a potential reveal for the Star Wars: Knights of the Old Republic Remake is planned for this year.",
+      "angle": "A new documentary is set to explore the much-discussed Star Wars hotel.",
       "tmdbType": "movie",
-      "source": "gnews:Instant Gaming News",
+      "source": "gnews:Gizmodo",
       "sources": [
         {
-          "outlet": "Instant Gaming News",
+          "outlet": "Gizmodo",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPWnE4Z3AtcFlGTnBXamk2YzVmUmNGRUJYX2NaUnVfRlJ4SFNtemFlemZGcGpuV1hXVy1uRjM5WEszRXVFV2Z6TEpDZjdfeDg1c0c5d1lRWEl2RjlYUmtOVzdOSHNTclRQN0RVM2FuRTZQU0lVM3JIZDVRYjlvY0U5NjNKNE1KVGVsRVpMZEJVWjFnUmtSdGdiMFlhdXhSRlFGWTNON3RPNmtYcEpGWC1vZ2p4bVZuTHdCRndjWDJ4cXAyaG8?oc=5",
-          "ageMin": 201,
-          "headline": "Star Wars: Knights of the Old Republic Remake could be shown again this year - Instant Gaming News",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiwwFBVV95cUxPWnE4Z3AtcFlGTnBXamk2YzVmUmNGRUJYX2NaUnVfRlJ4SFNtemFlemZGcGpuV1hXVy1uRjM5WEszRXVFV2Z6TEpDZjdfeDg1c0c5d1lRWEl2RjlYUmtOVzdOSHNTclRQN0RVM2FuRTZQU0lVM3JIZDVRYjlvY0U5NjNKNE1KVGVsRVpMZEJVWjFnUmtSdGdiMFlhdXhSRlFGWTNON3RPNmtYcEpGWC1vZ2p4bVZuTHdCRnd"
+          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOcDVQLWk1VHpvZlJtU0Z1NzZBREJGb1dqdjVNRUM4SUdRWDhjUWhqenM5MGdLaEhfVS02WnBrRjZoOEJqNWZFZ0JFWFdSaVRvR0NYaThsb0lrbXlKdHh5N3NHanZKbnh6WWpUUlBNZS1QcENqZ2VnYUdKalpZN0x5cTNwamlFdTNnYllpSEVwWXdpZEpIcEY3UHZOZlVGUjhfVXc?oc=5",
+          "ageMin": 121,
+          "headline": "The Mythic ‘Star Wars’ Hotel Is at the Heart of Yet Another Documentary - Gizmodo",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxOcDVQLWk1VHpvZlJtU0Z1NzZBREJGb1dqdjVNRUM4SUdRWDhjUWhqenM5MGdLaEhfVS02WnBrRjZoOEJqNWZFZ0JFWFdSaVRvR0NYaThsb0lrbXlKdHh5N3NHanZKbnh6WWpUUlBNZS1QcENqZ2VnYUdKalpZN0x5cTNwamlFdTNnYllpSEVwWXdpZEpIcEY3UHZOZlVGUjhfVXc?oc=5\" target=\"_blank\" The Mythi"
         }
       ],
-      "ageMin": 201,
+      "ageMin": 121,
       "_cand": {
-        "key": "rss:star-wars-knights-of-the-old-republic-remake-could-be-shown-",
+        "key": "rss:the-mythic-star-wars-hotel-is-at-the-heart-of-yet-another-do",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -583,11 +714,77 @@
         "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "Instant Gaming News"
+          "Gizmodo"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "Instant Gaming News",
+        "attribution": "Gizmodo",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 53,
+      "signals": {
+        "recency": 16,
+        "corroboration": 8,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 6,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-star-wars-the-experience-largest-licensed-exhibition",
+      "slug": "star-wars-the-experience-will-be-the-largest-officially-licensed-exhib",
+      "title": "'Star Wars: The Experience' Will Be the Largest Officially Licensed Exhibition the Franchise Has Ever Assembled",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "star-wars-the-experience-largest-licensed-exhibition",
+      "primaryKeyword": "Star Wars exhibition",
+      "primaryEntity": "Star Wars: Episode II - Attack of the Clones",
+      "entities": [
+        "Star Wars: The Experience",
+        "Lucasfilm"
+      ],
+      "angle": "Largest officially licensed Star Wars exhibition ever assembled is announced.",
+      "tmdbType": "movie",
+      "source": "gnews:Hypebeast",
+      "sources": [
+        {
+          "outlet": "Hypebeast",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNZS16dmdELWR1UmphTUQyY1ByZmVXOWktSW9SZFJVZnNVRk45N2hCRlp2b2VFN2U0emU5U0dlNUU0V0xMLW1tNTJVanpmTWo4VG1ZcWQzTk5saXhUcnBKenE4d1BxM0VzY2lRbHNFTkRIZERRbFY3YndTdGVKZ3ZxZ1R0dXhaMFRfVlpnOFI4SGh5T2dwVnpoNDJhQ3NfWjd3V296Mkg3djJTRkI0enZVWFdna21uX3JCZmlMbm9pX056YVFhcUxTN0g3dmJrc1dMZTJ3?oc=5",
+          "ageMin": 321,
+          "headline": "‘Star Wars:’ The Experience Will Be the Largest Officially Licensed Exhibition the Franchise Has Ever Assembled - Hypebeast",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMi0wFBVV95cUxNZS16dmdELWR1UmphTUQyY1ByZmVXOWktSW9SZFJVZnNVRk45N2hCRlp2b2VFN2U0emU5U0dlNUU0V0xMLW1tNTJVanpmTWo4VG1ZcWQzTk5saXhUcnBKenE4d1BxM0VzY2lRbHNFTkRIZERRbFY3YndTdGVKZ3ZxZ1R0dXhaMFRfVlpnOFI4SGh5T2dwVnpoNDJhQ3NfWjd3V296Mkg3djJTRkI0enZVWFdna21uX3JCZml"
+        }
+      ],
+      "ageMin": 321,
+      "_cand": {
+        "key": "rss:-star-wars-the-experience-will-be-the-largest-officially-lic",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "Hypebeast"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "Hypebeast",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -608,127 +805,61 @@
       "tierClass": "B"
     },
     {
-      "id": "news-robert-downey-jr-doctor-doom-avengers-doomsday",
-      "slug": "is-robert-downey-jr-s-doctor-doom-the-hero-or-villain-of-avengers-doom",
-      "title": "Is Robert Downey Jr's Doctor Doom the Hero or Villain of Avengers: Doomsday?",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "robert-downey-jr-doctor-doom-avengers-doomsday",
-      "primaryKeyword": "Robert Downey Jr. Doctor Doom",
-      "primaryEntity": "Avengers: Doomsday",
-      "entities": [
-        "Doctor Doom",
-        "Robert Downey Jr."
-      ],
-      "angle": "Analyzing the potential role of Robert Downey Jr.'s Doctor Doom in the upcoming Avengers film.",
-      "tmdbType": "movie",
-      "source": "gnews:IGN",
-      "sources": [
-        {
-          "outlet": "IGN",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQeHpLLXpLRHo3STA1bnVRQXJiZjN5aXlUV01rX1dXdko0RDEwWnBPQXlsUVVSWFNQRUh3VFlBS2JZX2VuTDJWNkI3Si1RdDUyLW5EMVRRUnNmQ1EwcV9VdWpGY09vODlFZVFPNlVXTG5WX3E4WERJanloLWkxLWRxNHh1RTJMODV1eG80T25UcmJPclhuWXhxY0cyY2tZRWRlRlFORw?oc=5",
-          "ageMin": 533,
-          "headline": "Is Robert Downey Jr's Doctor Doom the Hero or Villain of Avengers: Doomsday? - IGN",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxQeHpLLXpLRHo3STA1bnVRQXJiZjN5aXlUV01rX1dXdko0RDEwWnBPQXlsUVVSWFNQRUh3VFlBS2JZX2VuTDJWNkI3Si1RdDUyLW5EMVRRUnNmQ1EwcV9VdWpGY09vODlFZVFPNlVXTG5WX3E4WERJanloLWkxLWRxNHh1RTJMODV1eG80T25UcmJPclhuWXhxY0cyY2tZRWRlRlFORw?oc=5\" target=\"_blank\" Is Rob"
-        }
-      ],
-      "ageMin": 533,
-      "_cand": {
-        "key": "rss:is-robert-downey-jr-s-doctor-doom-the-hero-or-villain-of-ave",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "IGN"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "IGN",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 67,
-      "signals": {
-        "recency": 4,
-        "corroboration": 8,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 12,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0,
-        "radar": 20
-      },
-      "radarKind": "movie-trending",
-      "tierClass": "A"
-    },
-    {
-      "id": "news-star-wars-knights-of-the-old-republic-remake-reveal-nears",
-      "slug": "star-wars-knights-of-the-old-republic-remake-reportedly-nears-reveal-a",
-      "title": "Star Wars Knights of the Old Republic Remake Reportedly Nears Reveal After 3 Years of Saber Rebuilding It From Scratch",
+      "id": "news-trixie-mattel-katya-zamolodchikova-bald-beautiful-podcast-siriusxm",
+      "slug": "siriusxm-signs-trixie-mattel-and-katya-zamolodchikova-s-the-bald-and-t",
+      "title": "SiriusXM Signs Trixie Mattel and Katya Zamolodchikova's 'The Bald and the Beautiful' Podcast",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "star-wars-knights-of-the-old-republic-remake-reveal-nears",
-      "primaryKeyword": "Knights of the Old Republic Remake",
-      "primaryEntity": "Star Wars: Knights of the Old Republic Remake",
+      "tier": "popular",
+      "eventSlug": "trixie-mattel-katya-zamolodchikova-bald-beautiful-podcast-siriusxm",
+      "primaryKeyword": "trixie mattel katya zamolodchikova podcast",
+      "primaryEntity": "Trixie Mattel",
       "entities": [
-        "Star Wars"
+        "Katya Zamolodchikova",
+        "RuPaul's Drag Race"
       ],
-      "angle": "The 'Star Wars: Knights of the Old Republic' remake is reportedly nearing an official reveal.",
+      "angle": "SiriusXM signs popular podcast hosted by RuPaul's Drag Race alums Trixie Mattel and Katya Zamolodchikova.",
       "tmdbType": "movie",
-      "source": "gnews:Wccftech",
+      "source": "rss:THR",
       "sources": [
         {
-          "outlet": "Wccftech",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPUlVudUVMWTFfdUt4NzUySGhGU0l1UXdIdHlMdTllZzBLSWtBY3ktazNRc3dhcGJlNF9JdkFiSWJWd09VUGgtSVJNQVRycjQ1VnRUMHk1MnJRQTBXVFBRQllzT0c1d2ZOZV9oZjJIdmVsdzRRV2F1ZG50dWdkOURCZjN5dGtkMFg3ZHRTMVp30gGTAUFVX3lxTE5ZLXNxcnkzU2JTU3lpQlNVa0lwdjNKeVhEUXBwY3ZhQTlnak9oM0xkcEN1azNsalo4WUh1TjBsal9NZ3l1OWxsTi1BbFV6aFhoLXF2ZkNuN1dlOWUwUS1FbkJmWnFHVzFSZm1pMHEwaGZST1hZVFJ1MzI4dTdYUHFRdjgxZHlQVFpXVlBxWVFvNmxuaw?oc=5",
-          "ageMin": 28,
-          "headline": "Star Wars Knights of the Old Republic Remake Reportedly Nears Reveal After 3 Years of Saber Rebuilding It From Scratch - Wccftech",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxPUlVudUVMWTFfdUt4NzUySGhGU0l1UXdIdHlMdTllZzBLSWtBY3ktazNRc3dhcGJlNF9JdkFiSWJWd09VUGgtSVJNQVRycjQ1VnRUMHk1MnJRQTBXVFBRQllzT0c1d2ZOZV9oZjJIdmVsdzRRV2F1ZG50dWdkOURCZjN5dGtkMFg3ZHRTMVp30gGTAUFVX3lxTE5ZLXNxcnkzU2JTU3lpQlNVa0lwdjNKeVhEUXBwY3ZhQTl"
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/business/digital/siriusxm-trixie-mattel-katya-bald-beautiful-podcast-deal-1236651601/",
+          "ageMin": 2,
+          "headline": "SiriusXM Signs Trixie Mattel and Katya Zamolodchikova s The Bald and the Beautiful Podcast (Exclusive)",
+          "summary": "The company will exclusively distribute the show hosted by the 'RuPaul’s Drag Race' alums through the SiriusXM podcast network."
         }
       ],
-      "ageMin": 28,
+      "ageMin": 2,
       "_cand": {
-        "key": "rss:star-wars-knights-of-the-old-republic-remake-reportedly-near",
+        "key": "rss:siriusxm-signs-trixie-mattel-and-katya-zamolodchikova-s-the-",
         "popularity": 0,
-        "kind": "gnews"
+        "kind": "rss-news"
       },
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
+        "tier1Count": 1,
+        "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Wccftech"
+          "THR"
         ],
-        "maxTier": 5,
+        "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Wccftech",
+        "attribution": "THR",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 59,
+      "priority": 69,
       "signals": {
-        "recency": 24,
-        "corroboration": 8,
+        "recency": 30,
+        "corroboration": 12,
         "status": 18,
         "type": 9,
         "pop": 0,
@@ -738,41 +869,43 @@
         "spice": 0,
         "softTv": 0
       },
-      "tierClass": "C"
+      "tierClass": "B"
     },
     {
-      "id": "news-paul-mccartney-surprise-cameo-magical-mystery-tour",
-      "slug": "paul-mccartney-shocks-fans-with-surprise-cameo-on-beatles-magical-myst",
-      "title": "Paul McCartney Shocks Fans With Surprise Cameo on Beatles’ Magical Mystery Tour in Liverpool",
+      "id": "news-2026-iheartradio-fiesta-latina-lineup-lin-manuel-miranda-award",
+      "slug": "myke-towers-eladio-carri-n-greeicy-more-set-for-2026-iheartradio-fiest",
+      "title": "Myke Towers, Eladio Carrión, Greeicy More Set for 2026 iHeartRadio Fiesta Latina Lineup",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
-      "eventType": "other",
+      "eventType": "announcement",
       "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "paul-mccartney-surprise-cameo-magical-mystery-tour",
-      "primaryKeyword": "Paul McCartney",
-      "primaryEntity": "Paul McCartney",
+      "eventSlug": "2026-iheartradio-fiesta-latina-lineup-lin-manuel-miranda-award",
+      "primaryKeyword": "iheartradio fiesta latina",
+      "primaryEntity": "Myke Towers",
       "entities": [
-        "Magical Mystery Tour"
+        "Eladio Carrión",
+        "Greeicy",
+        "Lin-Manuel Miranda"
       ],
-      "angle": "Paul McCartney makes a surprise appearance on an unofficial tour of The Beatles' Magical Mystery Tour in Liverpool.",
+      "angle": "Myke Towers, Eladio Carrión, and Greeicy are set to perform at the 2026 iHeartRadio Fiesta Latina, where Lin-Manuel Miranda will receive the Corazón Latino Award.",
       "tmdbType": "movie",
       "source": "rss:Billboard",
       "sources": [
         {
           "outlet": "Billboard",
           "tier": 7,
-          "url": "https://www.billboard.com/music/music-news/the-beatles-paul-mccartney-magical-mystery-tour-cameo-1236299425/",
-          "ageMin": 76,
-          "headline": "Paul McCartney Shocks Fans With Surprise Cameo on Beatles’ Magical Mystery Tour in Liverpool",
-          "summary": "Macca was spotted by guests on the unofficial tour while stuck in traffic."
+          "url": "https://www.billboard.com/music/latin/iheartradio-fiesta-latina-2026-lineup-1236298483/",
+          "ageMin": 2,
+          "headline": "Myke Towers, Eladio Carrión, Greeicy More Set for 2026 iHeartRadio Fiesta Latina Lineup",
+          "summary": "Lin-Manuel Miranda will be honored with the 2026 Corazón Latino Award."
         }
       ],
-      "ageMin": 76,
+      "ageMin": 2,
       "_cand": {
-        "key": "rss:paul-mccartney-shocks-fans-with-surprise-cameo-on-beatles-ma",
+        "key": "rss:myke-towers-eladio-carri-n-greeicy-more-set-for-2026-iheartr",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -791,12 +924,77 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 51,
+      "priority": 69,
       "signals": {
-        "recency": 16,
+        "recency": 30,
         "corroboration": 12,
         "status": 18,
-        "type": 5,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-hollywood-dracula-actor-military-service-embellishment-inquiry",
+      "slug": "did-hollywood-s-most-frequent-dracula-embellish-his-military-service",
+      "title": "Did Hollywood’s most frequent ‘Dracula’ embellish his military service?",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "news",
+      "sensitivity": "normal",
+      "eventSlug": "hollywood-dracula-actor-military-service-embellishment-inquiry",
+      "primaryKeyword": "Dracula actor military service",
+      "primaryEntity": "Dracula actor",
+      "entities": [
+        "Dracula"
+      ],
+      "angle": "An investigation is questioning whether a frequent 'Dracula' actor exaggerated their military service.",
+      "tmdbType": "movie",
+      "source": "gnews:Yahoo",
+      "sources": [
+        {
+          "outlet": "Yahoo",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPSnlxZlFxSUlPeVJ2a3lXZ1dwSXlHS0NXTnZBdzNQR2VTOEgtclBqZVFLRzFsZ0lGenJ1MGV6b243cF92ZnZyZkRmVk9qUTE2ZDRQZzdvcXNVblJQZWhXeFQ5NUxwNURuXzE5ZktIZHRJNFlWZzNLUGtYLTZGSXFjbXhYM0pWakNFcWxoc0c2VFljRzJfTG1ha0NaNHFHdjlxY19qQQ?oc=5",
+          "ageMin": 62,
+          "headline": "Did Hollywood’s most frequent ‘Dracula’ embellish his military service? - Yahoo",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxPSnlxZlFxSUlPeVJ2a3lXZ1dwSXlHS0NXTnZBdzNQR2VTOEgtclBqZVFLRzFsZ0lGenJ1MGV6b243cF92ZnZyZkRmVk9qUTE2ZDRQZzdvcXNVblJQZWhXeFQ5NUxwNURuXzE5ZktIZHRJNFlWZzNLUGtYLTZGSXFjbXhYM0pWakNFcWxoc0c2VFljRzJfTG1ha0NaNHFHdjlxY19qQQ?oc=5\" target=\"_blank\" Did Ho"
+        }
+      ],
+      "ageMin": 62,
+      "_cand": {
+        "key": "rss:did-hollywood-s-most-frequent-dracula-embellish-his-military",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "Yahoo"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "Yahoo",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 48,
+      "signals": {
+        "recency": 16,
+        "corroboration": 8,
+        "status": 18,
+        "type": 6,
         "pop": 0,
         "breakout": 0,
         "big": 0,
