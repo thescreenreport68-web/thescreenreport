@@ -1,0 +1,152 @@
+{
+  "ts": "2026-07-21T21:01:46.765Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "shakiras-world-cup-performance-becomes-a-triumphant-spectacle-for-her-ex-in",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [
+        "metaDescription-soft:logged"
+      ],
+      "headline": [
+        "metaTitle",
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 0
+    }
+  ],
+  "topics": 2,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 1,
+  "blocked": 0,
+  "costUSD": 0.016935,
+  "costPerPublished": 0.016935,
+  "byModel": {
+    "deepseek/deepseek-v3.2": {
+      "calls": 6,
+      "in": 16383,
+      "out": 5971,
+      "usd": 0.006666138
+    },
+    "google/gemini-2.5-flash": {
+      "calls": 6,
+      "in": 12828,
+      "out": 1884,
+      "usd": 0.0085584
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 1153,
+      "out": 2006,
+      "usd": 0.00071157
+    },
+    "qwen/qwen3-235b-a22b-2507": {
+      "calls": 1,
+      "in": 1067,
+      "out": 414,
+      "usd": 0.00032373
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 5,
+      "in": 4557,
+      "out": 549,
+      "usd": 0.0006753
+    }
+  },
+  "byRole": {
+    "dedup": {
+      "calls": 1,
+      "errors": 0,
+      "in": 300,
+      "out": 9,
+      "usd": 0.00007206,
+      "ms": 6817
+    },
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2470,
+      "out": 218,
+      "usd": 0.001286,
+      "ms": 1568
+    },
+    "synthesizer": {
+      "calls": 2,
+      "errors": 1,
+      "in": 1067,
+      "out": 414,
+      "usd": 0.00041562,
+      "ms": 95122
+    },
+    "writer": {
+      "calls": 4,
+      "errors": 0,
+      "in": 15307,
+      "out": 5578,
+      "usd": 0.005417130000000001,
+      "ms": 231925
+    },
+    "verify": {
+      "calls": 5,
+      "errors": 0,
+      "in": 10358,
+      "out": 1666,
+      "usd": 0.0072724,
+      "ms": 10265
+    },
+    "judge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1517,
+      "out": 233,
+      "usd": 0.00024490000000000004,
+      "ms": 1737
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 776,
+      "out": 384,
+      "usd": 0.00030904,
+      "ms": 10012
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 400,
+      "out": 116,
+      "usd": 0.0000864,
+      "ms": 768
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 165,
+      "out": 40,
+      "usd": 0.0000325,
+      "ms": 473
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2130,
+      "out": 96,
+      "usd": 0.0002514,
+      "ms": 2450
+    },
+    "linker": {
+      "calls": 1,
+      "errors": 0,
+      "in": 345,
+      "out": 64,
+      "usd": 0.000060100000000000004,
+      "ms": 653
+    }
+  }
+}
