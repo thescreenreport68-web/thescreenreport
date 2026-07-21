@@ -1682,11 +1682,11 @@
    "key": "the-odyssey-bo-update-100m|BO-UPDATE",
    "eventSlug": "the-odyssey-bo-update-100m",
    "form": "BO-UPDATE",
-   "reason": "1 unverified claim(s) cut, unrecovered",
-   "tries": 78,
-   "at": "2026-07-21T21:33:05.036Z",
+   "reason": "consistency: metaTitle: headlines domestic while the title headlines other — the SERP promise must match the page",
+   "tries": 79,
+   "at": "2026-07-21T22:33:53.574Z",
    "dead": true,
-   "expiresAt": "2026-07-24T21:33:05.036Z"
+   "expiresAt": "2026-07-24T22:33:53.574Z"
   },
   {
    "key": "star-wars-the-mandalorian-and-grogu-bo-update-d59|BO-UPDATE",
@@ -1837,8 +1837,8 @@
    "eventSlug": "kpop-demon-hunters-netflix-top10-w2026-07-19",
    "form": "NETFLIX-TOP10",
    "reason": "1 unverified claim(s) cut, unrecovered",
-   "tries": 1,
-   "at": "2026-07-21T20:11:12.273Z"
+   "tries": 2,
+   "at": "2026-07-21T22:37:25.694Z"
   },
   {
    "key": "death-on-the-nile-netflix-top10-w2026-07-19|NETFLIX-TOP10",
@@ -1879,16 +1879,24 @@
    "reason": "soft-floor engagement 4 < 5",
    "tries": 1,
    "at": "2026-07-21T22:11:31.461Z"
+  },
+  {
+   "key": "the-hawk-trending-tv-w2026-07-19|TRENDING-TV",
+   "eventSlug": "the-hawk-trending-tv-w2026-07-19",
+   "form": "TRENDING-TV",
+   "reason": "words 134 < 180 (owner-set ~200-word minimum)",
+   "tries": 1,
+   "at": "2026-07-21T22:39:25.851Z"
   }
  ],
- "zeroStreak": 4,
+ "zeroStreak": 5,
  "daySpend": {
   "laDay": "2026-07-21",
-  "usd": 0.63609
+  "usd": 0.68262
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1784671299525
+  "lastMs": 1784673099437
  },
  "lastAuditDay": "2026-07-21",
  "attempts": {
@@ -1917,11 +1925,12 @@
    "enola holmes 3": 2,
    "regretting you": 2,
    "meg 2: the trench": 1,
-   "kpop demon hunters": 1,
+   "kpop demon hunters": 2,
    "death on the nile": 1,
    "joy ride": 1,
    "little house on the prairie": 1,
-   "i will find you": 1
+   "i will find you": 1,
+   "the hawk": 1
   }
  }
 }
