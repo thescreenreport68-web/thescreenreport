@@ -1,10 +1,10 @@
 {
-  "runId": "run-2026-07-21T06-31-36",
-  "builtAt": "2026-07-21T06:33:24.470Z",
-  "count": 11,
+  "runId": "run-2026-07-21T08-01-34",
+  "builtAt": "2026-07-21T08:03:18.862Z",
+  "count": 12,
   "topics": [
     {
-      "id": "news-sadie-sink-spider-man-brand-new-day-role",
+      "id": "news-sadie-sink-spider-man-brand-new-day-role-mystery",
       "slug": "sadie-sink-keeps-mystery-of-spider-man-brand-new-day-role-reveals-i-am",
       "title": "Sadie Sink Keeps Mystery Of Spider-Man: Brand New Day Role Reveals I Am Not Aunt May",
       "contentType": "news",
@@ -13,28 +13,28 @@
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "sadie-sink-spider-man-brand-new-day-role",
+      "eventSlug": "sadie-sink-spider-man-brand-new-day-role-mystery",
       "primaryKeyword": "Sadie Sink Spider-Man",
       "primaryEntity": "Sadie Sink",
       "entities": [
         "Spider-Man: Brand New Day"
       ],
-      "angle": "Sadie Sink addresses speculation about her role in the upcoming 'Spider-Man: Brand New Day', denying she is Aunt May.",
+      "angle": "Sadie Sink teases her mysterious role in the upcoming Spider-Man film.",
       "tmdbType": "movie",
-      "source": "rss:TheWrap",
+      "source": "rss:Deadline",
       "sources": [
         {
-          "outlet": "TheWrap",
+          "outlet": "Deadline",
           "tier": 7,
-          "url": "https://www.thewrap.com/creative-content/tv-shows/jon-stewart-reacts-trump-crashing-spain-world-cup-celebration/",
-          "ageMin": 136,
-          "headline": "Jon Stewart Erupts Over Trump Crashing Spain’s World Cup Celebration: ‘What the F—k Are You Doing?!’",
-          "summary": "“Why must everything be tainted by the overinflated ego of Cankles Muldoon?” the “Daily Show” host adds The post Jon Stewart Erupts Over Trump Crashing Spain’s World Cup Celebration: ‘What the F—k Are You Doing?!’ appeared first on TheWrap ."
+          "url": "https://deadline.com/2026/07/sadie-sink-mystery-spider-man-brand-new-day-role-1236999030/",
+          "ageMin": 242,
+          "headline": "Sadie Sink Keeps Mystery Of Spider-Man: Brand New Day Role Reveals I Am Not Aunt May",
+          "summary": "Sadie Sink s role in Spider-Man: Brand New Day remains a mystery ahead of the film s premiere. A new video teased Sink revealing three things about her character in the Sony Pictures production, but left audiences with the same doubts. Since the trailer dropped, I’ve seen so many theories about who I’m playing, Sink said in [ ]"
         }
       ],
-      "ageMin": 136,
+      "ageMin": 242,
       "_cand": {
-        "key": "rss:jon-stewart-erupts-over-trump-crashing-spain-s-world-cup-cel",
+        "key": "rss:sadie-sink-keeps-mystery-of-spider-man-brand-new-day-role-re",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -44,18 +44,18 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "TheWrap"
+          "Deadline"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "TheWrap",
+        "attribution": "Deadline",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 96,
+      "priority": 89,
       "signals": {
-        "recency": 16,
+        "recency": 9,
         "corroboration": 12,
         "status": 18,
         "type": 14,
@@ -71,23 +71,90 @@
       "tierClass": "A"
     },
     {
-      "id": "news-matt-damon-female-stunt-double-odyssey",
+      "id": "trailer-my-brilliant-career-netflix-trailer",
+      "slug": "netflix-s-my-brilliant-career-trailer-drops-evokes-bridgerton-vibes",
+      "title": "Netflix's 'My Brilliant Career' Trailer Drops, Evokes 'Bridgerton' Vibes",
+      "contentType": "trailer",
+      "formatTag": "trailer",
+      "category": "tv",
+      "subcategory": "trailers",
+      "eventType": "trailer",
+      "sensitivity": "normal",
+      "eventSlug": "my-brilliant-career-netflix-trailer",
+      "primaryKeyword": "my brilliant career trailer",
+      "primaryEntity": "My Brilliant Career",
+      "entities": [
+        "My Brilliant Career (TV series)",
+        "Netflix"
+      ],
+      "angle": "Netflix has released the trailer for its new series 'My Brilliant Career,' drawing comparisons to 'Bridgerton.'",
+      "tmdbType": "movie",
+      "source": "gnews:Mashable",
+      "sources": [
+        {
+          "outlet": "Mashable",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5xZmJ0UEtWZjgzeGNxNzd4T2diMmtCNkJYS0hzRHA1M245UmVoN2RtZDUwMVlPTF9NTDV5c1NwTktsV1FxcEFXY1dibFRScXgxeHplS24tR3JIZFdxVEUwWWpXY1RNdTV0bGVyc2Z4MHp3VGJXenUxS1JB?oc=5",
+          "ageMin": 26,
+          "headline": "Netflix's 'My Brilliant Career' trailer looks like Eloise Bridgerton in the Australian bush - Mashable",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiekFVX3lxTE5xZmJ0UEtWZjgzeGNxNzd4T2diMmtCNkJYS0hzRHA1M245UmVoN2RtZDUwMVlPTF9NTDV5c1NwTktsV1FxcEFXY1dibFRScXgxeHplS24tR3JIZFdxVEUwWWpXY1RNdTV0bGVyc2Z4MHp3VGJXenUxS1JB?oc=5\" target=\"_blank\" Netflix's 'My Brilliant Career' trailer looks like Eloise Bridge"
+        }
+      ],
+      "ageMin": 26,
+      "_cand": {
+        "key": "rss:netflix-s-my-brilliant-career-trailer-looks-like-eloise-brid",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "Mashable"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "Mashable",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 83,
+      "signals": {
+        "recency": 24,
+        "corroboration": 8,
+        "status": 18,
+        "type": 15,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-matt-damon-odyssey-stunt-double",
       "slug": "matt-damon-reveals-why-he-had-female-stunt-double-for-odyssey-scene-gr",
-      "title": "Matt Damon Reveals Why He Had Female Stunt Double for Odyssey Scene: Greatest Arms I've Ever Seen",
+      "title": "Matt Damon Reveals Why He Had Female Stunt Double for Odyssey Scene: Greatest Arms I ve Ever Seen",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "matt-damon-female-stunt-double-odyssey",
-      "primaryKeyword": "matt damon odyssey",
+      "tier": "popular",
+      "eventSlug": "matt-damon-odyssey-stunt-double",
+      "primaryKeyword": "Matt Damon Odyssey stunt double",
       "primaryEntity": "Matt Damon",
       "entities": [
         "Christopher Nolan",
         "The Odyssey"
       ],
-      "angle": "Matt Damon explains his decision to use a female stunt double for a scene in Christopher Nolan's 'The Odyssey,' praising her physique.",
+      "angle": "Matt Damon explains his decision to use a female stunt double for a scene in Christopher Nolan's 'The Odyssey'.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
@@ -95,12 +162,12 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/movies/movie-news/matt-damon-female-stunt-double-odyssey-scene-bicep-1236652737/",
-          "ageMin": 337,
+          "ageMin": 427,
           "headline": "Matt Damon Reveals Why He Had Female Stunt Double for Odyssey Scene: Greatest Arms I ve Ever Seen",
           "summary": "The actor plays Odysseus in Christopher Nolan's epic action fantasy film."
         }
       ],
-      "ageMin": 337,
+      "ageMin": 427,
       "_cand": {
         "key": "rss:matt-damon-reveals-why-he-had-female-stunt-double-for-odysse",
         "popularity": 0,
@@ -121,9 +188,9 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 86,
+      "priority": 81,
       "signals": {
-        "recency": 9,
+        "recency": 4,
         "corroboration": 12,
         "status": 18,
         "type": 5,
@@ -139,238 +206,41 @@
       "tierClass": "A"
     },
     {
-      "id": "trailer-baby-sitters-club-trailer-release",
-      "slug": "the-new-baby-sitters-club-trailer-is-here",
-      "title": "The new ‘Baby-Sitters Club’ trailer is here!",
-      "contentType": "trailer",
-      "formatTag": "trailer",
-      "category": "tv",
-      "subcategory": "trailers",
-      "eventType": "trailer",
-      "sensitivity": "normal",
-      "eventSlug": "baby-sitters-club-trailer-release",
-      "primaryKeyword": "baby-sitters club trailer",
-      "primaryEntity": "The Baby-Sitters Club",
-      "entities": [],
-      "angle": "A new trailer has been released for the series 'The Baby-Sitters Club'.",
-      "tmdbType": "movie",
-      "source": "gnews:Motherly",
-      "sources": [
-        {
-          "outlet": "Motherly",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE81VUlHbDAyMi01bUlUT1pPMTdJZ05HbF9kZzUxc2lWZHhWWE4wakdhOGhiTFFYRGxuTlJMNkp5MHRCOVh2SWtabFdlLWlza3RsazhKWnFjNk9BTmdOMXRiVGhoUQ?oc=5",
-          "ageMin": 124,
-          "headline": "The new ‘Baby-Sitters Club’ trailer is here! - Motherly",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiY0FVX3lxTE81VUlHbDAyMi01bUlUT1pPMTdJZ05HbF9kZzUxc2lWZHhWWE4wakdhOGhiTFFYRGxuTlJMNkp5MHRCOVh2SWtabFdlLWlza3RsazhKWnFjNk9BTmdOMXRiVGhoUQ?oc=5\" target=\"_blank\" The new ‘Baby-Sitters Club’ trailer is here! /a nbsp; nbsp; font color=\"#6f6f6f\" Motherly /fon"
-        }
-      ],
-      "ageMin": 124,
-      "_cand": {
-        "key": "rss:the-new-baby-sitters-club-trailer-is-here-motherly",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "Motherly"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "Motherly",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 75,
-      "signals": {
-        "recency": 16,
-        "corroboration": 8,
-        "status": 18,
-        "type": 15,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-pbs-criminal-minds-evolution-renewal",
-      "slug": "criminal-minds-evolution-is-returning-for-season-20",
-      "title": "‘Criminal Minds: Evolution’ Is Returning for Season 20",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "renewal",
-      "sensitivity": "normal",
-      "eventSlug": "pbs-criminal-minds-evolution-renewal",
-      "primaryKeyword": "criminal minds evolution season 2",
-      "primaryEntity": "Criminal Minds",
-      "entities": [
-        "Criminal Minds: Evolution",
-        "PBS"
-      ],
-      "angle": "PBS announces renewal for Criminal Minds: Evolution and other show updates.",
-      "tmdbType": "movie",
-      "source": "gnews:Just Jared",
-      "sources": [
-        {
-          "outlet": "Just Jared",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPelNwWkRxQ2dRYzlJazA3WTFpcVM2M2RmRWtmaWhhcFVfd180bXk3QXNyUVlyYnNBSnBuSUF5X09Xb0Ixell4Mmt5TFpCRFFlUnBwWWZDT04wY2VwbVRRVUxvcFdScXhJWHUxQl9McjlYblJtR1d4c3pScjJPRzJsMEY4bkJhNkxQaWhYODRTR2xQcElnLUhKRzNhMmdaMjlialdvWVh5ZDhHeURUVzllUUM0SkUwTTd0anhxUmdLNkJmdm9r?oc=5",
-          "ageMin": 2182,
-          "headline": "PBS Cancels 1 TV Show, Announces 2 Are Ending, Several Are Renewed for New Seasons in 2026 - Just Jared",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMixAFBVV95cUxPelNwWkRxQ2dRYzlJazA3WTFpcVM2M2RmRWtmaWhhcFVfd180bXk3QXNyUVlyYnNBSnBuSUF5X09Xb0Ixell4Mmt5TFpCRFFlUnBwWWZDT04wY2VwbVRRVUxvcFdScXhJWHUxQl9McjlYblJtR1d4c3pScjJPRzJsMEY4bkJhNkxQaWhYODRTR2xQcElnLUhKRzNhMmdaMjlialdvWVh5ZDhHeURUVzllUUM0SkUwTTd0anh"
-        }
-      ],
-      "ageMin": 2182,
-      "_cand": {
-        "key": "rss:pbs-cancels-1-tv-show-announces-2-are-ending-several-are-ren",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "Just Jared"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "Just Jared",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 70,
-      "signals": {
-        "recency": 1,
-        "corroboration": 8,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0,
-        "radar": 16
-      },
-      "radarKind": "tv-episode-soon",
-      "tierClass": "A"
-    },
-    {
-      "id": "news-adam-driver-marvel-casting-rumors",
-      "slug": "kevin-feige-on-trying-to-cast-adam-driver-in-marvel-role-amid-x-men-re",
-      "title": "Kevin Feige On Trying To Cast Adam Driver In Marvel Role Amid X-Men Reboot Rumors",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "adam-driver-marvel-casting-rumors",
-      "primaryKeyword": "adam driver marvel casting",
-      "primaryEntity": "Adam Driver",
-      "entities": [
-        "Kevin Feige",
-        "Marvel"
-      ],
-      "angle": "Marvel chief Kevin Feige reveals ongoing attempts to cast Adam Driver in a Marvel role.",
-      "tmdbType": "movie",
-      "source": "rss:Deadline",
-      "sources": [
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/kevin-feige-casting-adam-driver-marvel-x-men-reboot-1236998986/",
-          "ageMin": 328,
-          "headline": "Kevin Feige On Trying To Cast Adam Driver In Marvel Role Amid X-Men Reboot Rumors: It s A Tradition To Zoom With Him Then He Passes",
-          "summary": "Kevin Feige has been trying to work with Adam Driver and cast him in a Marvel film role, but so far it has not become official. Amid rumors that Driver could potentially star in the X-Men reboot, the studio head revealed where he s at in finally working with the Girls actor. It’s no secret we’d [ ]"
-        }
-      ],
-      "ageMin": 328,
-      "_cand": {
-        "key": "rss:kevin-feige-on-trying-to-cast-adam-driver-in-marvel-role-ami",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Deadline"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Deadline",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 77,
-      "signals": {
-        "recency": 9,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-discretion-paramount-plus-josh-lucas-casting",
-      "slug": "nicole-kidman-elle-fanning-paramount-series-discretion-casts-josh-luca",
-      "title": "Nicole Kidman, Elle Fanning Paramount+ Series Discretion Casts Josh Lucas",
+      "id": "news-nicole-kidman-elle-fanning-discretion-josh-lucas-cast",
+      "slug": "josh-lucas-cast-in-nicole-kidman-and-elle-fanning-s-paramount-series-d",
+      "title": "Josh Lucas Cast in Nicole Kidman and Elle Fanning's Paramount+ Series 'Discretion'",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "discretion-paramount-plus-josh-lucas-casting",
-      "primaryKeyword": "discretion paramount plus josh lucas",
+      "eventSlug": "nicole-kidman-elle-fanning-discretion-josh-lucas-cast",
+      "primaryKeyword": "Discretion tv series casting",
       "primaryEntity": "Discretion (TV series)",
       "entities": [
         "Nicole Kidman",
         "Elle Fanning",
         "Paramount+"
       ],
-      "angle": "Josh Lucas joins Nicole Kidman and Elle Fanning in Paramount+'s legal drama 'Discretion'.",
+      "angle": "Josh Lucas joins Nicole Kidman and Elle Fanning in Paramount+ series 'Discretion'.",
       "tmdbType": "movie",
-      "source": "rss:Variety",
+      "source": "gnews:Variety",
       "sources": [
         {
           "outlet": "Variety",
           "tier": 7,
-          "url": "https://variety.com/2026/tv/news/nicole-kidman-elle-fanning-paramount-discretion-josh-lucas-1236816877/",
-          "ageMin": 564,
-          "headline": "Nicole Kidman, Elle Fanning Paramount+ Series Discretion Casts Josh Lucas",
-          "summary": "Josh Lucas is set to star opposite Nicole Kidman and Elle Fanning in the legal drama series Discretion, Variety has confirmed. The show was originally announced with a straight-to-series order at Paramount+ in October 2025. It is based on the short story of the same name by Chandler Baker. It has received an eight-episode order [ ]"
+          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPX0tkbm15NHFTNS1KNE95bTU5X0x0b0lRR3hEN01oN2VZYUU5SEYtaGNOTHl4XzE1cWdNNWVfMGRha2RmODQ5WDk2eF9HV1lNT04tQUxBZ01xVTZ2QjZTTTllWkhZMWlUVlkyaHZjbWZzYlNQQ09sZFJQLWZtYV81TXpHUVRlaXg2TDFoeHZVcHZZa21kMklCSGxJbDhyaENYRFlTSFVn?oc=5",
+          "ageMin": 655,
+          "headline": "Nicole Kidman, Elle Fanning Paramount+ Series ‘Discretion’ Casts Josh Lucas - Variety",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxPX0tkbm15NHFTNS1KNE95bTU5X0x0b0lRR3hEN01oN2VZYUU5SEYtaGNOTHl4XzE1cWdNNWVfMGRha2RmODQ5WDk2eF9HV1lNT04tQUxBZ01xVTZ2QjZTTTllWkhZMWlUVlkyaHZjbWZzYlNQQ09sZFJQLWZtYV81TXpHUVRlaXg2TDFoeHZVcHZZa21kMklCSGxJbDhyaENYRFlTSFVn?oc=5\" target=\"_blank\" Nico"
         }
       ],
-      "ageMin": 564,
+      "ageMin": 655,
       "_cand": {
         "key": "rss:nicole-kidman-elle-fanning-paramount-series-discretion-casts",
         "popularity": 0,
-        "kind": "rss-news"
+        "kind": "gnews"
       },
       "corroborationCount": 1,
       "verification": {
@@ -405,7 +275,7 @@
     {
       "id": "news-adam-driver-passed-on-marvel-roles",
       "slug": "adam-driver-has-passed-on-so-many-marvel-roles-that-it-s-become-a-trad",
-      "title": "Adam Driver Has Passed on So Many Marvel Roles That It's Become a Tradition, Kevin Feige Says",
+      "title": "Adam Driver Has Passed on So Many Marvel Roles That It s Become a Tradition, Kevin Feige Says",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
@@ -413,14 +283,13 @@
       "eventType": "casting",
       "sensitivity": "normal",
       "eventSlug": "adam-driver-passed-on-marvel-roles",
-      "primaryKeyword": "adam driver marvel",
+      "primaryKeyword": "Adam Driver Marvel roles",
       "primaryEntity": "Adam Driver",
       "entities": [
-        "Marvel Studios: Assembling a Universe",
-        "Marvel Studios",
+        "Marvel",
         "Star Wars"
       ],
-      "angle": "Kevin Feige reveals Adam Driver has a tradition of passing on Marvel roles, despite his lead role in the 'Star Wars' sequel trilogy.",
+      "angle": "Marvel Studios head Kevin Feige reveals Adam Driver has a tradition of passing on multiple Marvel roles.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
@@ -428,12 +297,12 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/movies/movie-news/adam-driver-passing-marvel-roles-tradition-kevin-feige-1236652800/",
-          "ageMin": 237,
+          "ageMin": 327,
           "headline": "Adam Driver Has Passed on So Many Marvel Roles That It s Become a Tradition, Kevin Feige Says",
           "summary": "While it's no superhero blockbuster, Driver previously led the 'Star Wars' sequel trilogy, playing Kylo Ren."
         }
       ],
-      "ageMin": 237,
+      "ageMin": 327,
       "_cand": {
         "key": "rss:adam-driver-has-passed-on-so-many-marvel-roles-that-it-s-bec",
         "popularity": 0,
@@ -470,99 +339,291 @@
       "tierClass": "B"
     },
     {
-      "id": "music-news-ella-langley-choosin-texas-record",
-      "slug": "ella-langley-s-choosin-texas-just-tied-i-will-always-love-you",
-      "title": "Ella Langley’s ‘Choosin’ Texas’ Just Tied ‘I Will Always Love You’",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
+      "id": "news-cooper-flagg-celebrity-family-feud",
+      "slug": "cooper-flagg-family-to-appear-on-celebrity-family-feud-this-week",
+      "title": "Cooper Flagg, family to appear on ‘Celebrity Family Feud’ this week",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
       "subcategory": "news",
-      "eventType": "other",
+      "eventType": "casting",
       "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "ella-langley-choosin-texas-record",
-      "primaryKeyword": "ella langley choosin texas record",
-      "primaryEntity": "Ella Langley",
+      "eventSlug": "cooper-flagg-celebrity-family-feud",
+      "primaryKeyword": "Cooper Flagg Celebrity Family Feud",
+      "primaryEntity": "Celebrity Family Feud",
       "entities": [
-        "Whitney Houston",
-        "Mariah Carey"
+        "Cooper Flagg"
       ],
-      "angle": "Ella Langley's 'Choosin' Texas' ties a 14-week Number One record on the Billboard Hot 100 held by Whitney Houston and Mariah Carey.",
+      "angle": "Basketball player Cooper Flagg and his family are set to appear on an upcoming episode of 'Celebrity Family Feud'.",
       "tmdbType": "movie",
-      "source": "rss:Rolling Stone",
+      "source": "gnews:WABI",
       "sources": [
         {
-          "outlet": "Rolling Stone",
-          "tier": 7,
-          "url": "https://www.rollingstone.com/music/music-country/ella-langley-choosin-texas-chart-record-whitney-houston-1235596043/",
-          "ageMin": 713,
-          "headline": "Ella Langley’s ‘Choosin’ Texas’ Just Tied ‘I Will Always Love You’",
-          "summary": "The country singer now joins Whitney Houston and Mariah Carey as one of only three women to have a song spend 14 weeks at Number One"
-        },
-        {
-          "outlet": "Variety Music",
-          "tier": 7,
-          "url": "https://variety.com/2026/music/news/ella-langley-choosin-texas-ties-whitney-houston-mariah-carey-records-1236816760/",
-          "ageMin": 743,
-          "headline": "Ella Langley’s ‘Choosin’ Texas’ Ties Whitney Houston and Mariah Carey’s Records on Billboard Hot 100",
-          "summary": "The year’s biggest hit single, Ella Langley’s “Choosin’ Texas,” has racked up its 14th week at No. 1 on the Billboard Hot 100 — and has tied a record held by Whitney Houston and Mariah Carey. Langley’s song, which first topped the Hot 100 chart in February, ties Mariah Carey’s “We Belong Together” and Whitney [ ]"
+          "outlet": "WABI",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQRWR3MGlZVFVhSHdVQVhZWUhUajl0VDUzMzJRUGU3bGpFZTlxQ1VzVWxxNjZyZnVPbTk2YjNya1Q5YVFNN1l3T3IxTm9uS3hsYlJESzlyUUoyVUc0d202UFRRcTg5cXNUS0gzNnVHYl8wdEpXN2hTcDE1azZ6VjBpMzE4WVlzdXNTQXl0UlVsMU54UTVy0gGoAUFVX3lxTFBPTXdscHpNWE9hdUNuRXAzRUFVU19hNmN6dDNBTElfUWlmSTVka2pIb2MwV1VzdkNxd01DOUdkMHJreVZucHJfNXVWVmtaQS1jeEJsYkJvdHlWRzNScnNla0V1MXhMbmRRRFd2OXBEak80bW9HUWltMTBWXzB6NkN6MllueDQyWngwNHlxRkVLd3VjQVdmamRCMnpUVi1vaHltbUhBT18xZw?oc=5",
+          "ageMin": 604,
+          "headline": "Cooper Flagg, family to appear on ‘Celebrity Family Feud’ this week - WABI",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMilAFBVV95cUxQRWR3MGlZVFVhSHdVQVhZWUhUajl0VDUzMzJRUGU3bGpFZTlxQ1VzVWxxNjZyZnVPbTk2YjNya1Q5YVFNN1l3T3IxTm9uS3hsYlJESzlyUUoyVUc0d202UFRRcTg5cXNUS0gzNnVHYl8wdEpXN2hTcDE1azZ6VjBpMzE4WVlzdXNTQXl0UlVsMU54UTVy0gGoAUFVX3lxTFBPTXdscHpNWE9hdUNuRXAzRUFVU19hNmN6dDN"
         }
       ],
-      "ageMin": 713,
+      "ageMin": 604,
       "_cand": {
-        "key": "rss:ella-langley-s-choosin-texas-just-tied-i-will-always-love-yo",
+        "key": "rss:cooper-flagg-family-to-appear-on-celebrity-family-feud-this-",
         "popularity": 0,
-        "kind": "rss-news"
+        "kind": "gnews"
       },
-      "corroborationCount": 2,
+      "corroborationCount": 1,
       "verification": {
-        "tier1Count": 2,
-        "tier1Owners": 1,
-        "outletCount": 2,
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
         "outlets": [
-          "Rolling Stone",
-          "Variety Music"
+          "WABI"
         ],
-        "maxTier": 7,
+        "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "Rolling Stone",
+        "attribution": "WABI",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 53,
+      "priority": 66,
       "signals": {
         "recency": 4,
-        "corroboration": 18,
+        "corroboration": 8,
         "status": 18,
-        "type": 5,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 4,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "music-news-a-r-rahman-launches-arr-immersive-app-apple-vision-pro",
+      "slug": "a-r-rahman-launches-arr-immersive-app-for-apple-vision-pro",
+      "title": "A.R. Rahman Launches ARR Immersive App for Apple Vision Pro",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "a-r-rahman-launches-arr-immersive-app-apple-vision-pro",
+      "primaryKeyword": "A.R. Rahman app",
+      "primaryEntity": "A.R.Rahman",
+      "entities": [
+        "A.R. Rahman",
+        "Apple Vision Pro",
+        "Slumdog Millionaire",
+        "127 Hours"
+      ],
+      "angle": "Oscar-winning composer A.R. Rahman launches a new immersive app for Apple Vision Pro, bringing his storytelling work to the platform.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/music/news/ar-rahman-arr-immersive-app-apple-vision-pro-1236816469/",
+          "ageMin": 92,
+          "headline": "A.R. Rahman Launches ARR Immersive App for Apple Vision Pro (EXCLUSIVE)",
+          "summary": "A.R. Rahman, the two-time Oscar-winning Indian composer behind Slumdog Millionaire and 127 Hours, is launching ARR Immersive, an app bringing his decade of immersive storytelling work to Apple Vision Pro on July 22. The app draws on Rahman s ongoing work in immersive formats, tracing back to Le Musk, a 360-degree virtual reality film that debuted [ ]"
+        }
+      ],
+      "ageMin": 92,
+      "_cand": {
+        "key": "rss:a-r-rahman-launches-arr-immersive-app-for-apple-vision-pro-e",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 55,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
         "big": 0,
-        "trending": 8,
+        "trending": 0,
         "spice": 0,
         "softTv": 0
       },
       "tierClass": "C"
     },
     {
-      "id": "news-william-h-wisher-jr-dies",
-      "slug": "william-h-wisher-jr-dies-terminator-screenwriter-was-71",
-      "title": "William H. Wisher Jr. Dies: 'Terminator' Screenwriter Was 71",
+      "id": "news-robert-downey-jr-doctor-doom-avengers-doomsday-hero-villain-speculatio",
+      "slug": "is-robert-downey-jr-s-doctor-doom-the-hero-or-villain-of-avengers-doom",
+      "title": "Is Robert Downey Jr's Doctor Doom the Hero or Villain of Avengers: Doomsday?",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "robert-downey-jr-doctor-doom-avengers-doomsday-hero-villain-speculatio",
+      "primaryKeyword": "robert downey jr doctor doom",
+      "primaryEntity": "Robert Downey Jr.",
+      "entities": [
+        "Doctor Doom",
+        "Avengers: Doomsday"
+      ],
+      "angle": "Analyzing the potential alignment of Robert Downey Jr.'s Doctor Doom in the upcoming Marvel blockbuster.",
+      "tmdbType": "movie",
+      "source": "gnews:IGN",
+      "sources": [
+        {
+          "outlet": "IGN",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQeHpLLXpLRHo3STA1bnVRQXJiZjN5aXlUV01rX1dXdko0RDEwWnBPQXlsUVVSWFNQRUh3VFlBS2JZX2VuTDJWNkI3Si1RdDUyLW5EMVRRUnNmQ1EwcV9VdWpGY09vODlFZVFPNlVXTG5WX3E4WERJanloLWkxLWRxNHh1RTJMODV1eG80T25UcmJPclhuWXhxY0cyY2tZRWRlRlFORw?oc=5",
+          "ageMin": 353,
+          "headline": "Is Robert Downey Jr's Doctor Doom the Hero or Villain of Avengers: Doomsday? - IGN",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxQeHpLLXpLRHo3STA1bnVRQXJiZjN5aXlUV01rX1dXdko0RDEwWnBPQXlsUVVSWFNQRUh3VFlBS2JZX2VuTDJWNkI3Si1RdDUyLW5EMVRRUnNmQ1EwcV9VdWpGY09vODlFZVFPNlVXTG5WX3E4WERJanloLWkxLWRxNHh1RTJMODV1eG80T25UcmJPclhuWXhxY0cyY2tZRWRlRlFORw?oc=5\" target=\"_blank\" Is Rob"
+        }
+      ],
+      "ageMin": 353,
+      "_cand": {
+        "key": "rss:is-robert-downey-jr-s-doctor-doom-the-hero-or-villain-of-ave",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "IGN"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "IGN",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 72,
+      "signals": {
+        "recency": 9,
+        "corroboration": 8,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 12,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "radar": 20
+      },
+      "radarKind": "movie-trending",
+      "tierClass": "A"
+    },
+    {
+      "id": "news-hbo-max-lanterns-stuart-fails-to-save-the-universe-comic-con-offsites",
+      "slug": "hbo-max-s-lanterns-and-stuart-fails-to-save-the-universe-get-offsites-",
+      "title": "HBO Max's 'Lanterns' and 'Stuart Fails to Save the Universe' Get Offsites at San Diego Comic-Con",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "hbo-max-lanterns-stuart-fails-to-save-the-universe-comic-con-offsites",
+      "primaryKeyword": "HBO Max Lanterns",
+      "primaryEntity": "Lanterns",
+      "entities": [
+        "Stuart Fails to Save the Universe",
+        "San Diego Comic-Con"
+      ],
+      "angle": "HBO Max is hosting offsite events for 'Lanterns' and 'Stuart Fails to Save the Universe' at San Diego Comic-Con.",
+      "tmdbType": "movie",
+      "source": "gnews:San Diego Comic-Con Unofficial Blog",
+      "sources": [
+        {
+          "outlet": "San Diego Comic-Con Unofficial Blog",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOREp2RkllMkx0M1pZdFJOb3ZzanY0bVFPMW1DSzc2bDMtWmd5b3pzZ1FoYzBNam9hSWdTbDZGemttYng4WE5uMFBrWWhnS1NOQ2RmbFJnaUVmSHpGMUZIOWZGX1BHaU5KWWdGNzNLWDJFSXNyeWdtc29vMzh4V2t4ZTltaXhPY2ZpUnlRRGVwbUhfVnBVRm1nX1JHcFpleEZXNnd6c0l3NVd1RlluRFJVazF1b25VLXV2dXY1QlhJWlRmUEw2RW1FT0UxQ0hDM2JMMGgtZEJBQU5wVDJBQUhJ?oc=5",
+          "ageMin": 278,
+          "headline": "Step into the World of HBO Max's \"Lanterns\", \"Stuart Fails to Save the Universe\" with Offsites at San Diego Comic-Con 2026 [UPDATE] - San Diego Comic-Con Unofficial Blog",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMi3wFBVV95cUxOREp2RkllMkx0M1pZdFJOb3ZzanY0bVFPMW1DSzc2bDMtWmd5b3pzZ1FoYzBNam9hSWdTbDZGemttYng4WE5uMFBrWWhnS1NOQ2RmbFJnaUVmSHpGMUZIOWZGX1BHaU5KWWdGNzNLWDJFSXNyeWdtc29vMzh4V2t4ZTltaXhPY2ZpUnlRRGVwbUhfVnBVRm1nX1JHcFpleEZXNnd6c0l3NVd1RlluRFJVazF1b25VLXV2dXY"
+        }
+      ],
+      "ageMin": 278,
+      "_cand": {
+        "key": "rss:step-into-the-world-of-hbo-max-s-lanterns-stuart-fails-to-sa",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "San Diego Comic-Con Unofficial Blog"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "San Diego Comic-Con Unofficial Blog",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 62,
+      "signals": {
+        "recency": 9,
+        "corroboration": 8,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-william-h-wisher-jr-terminator-screenwriter-death",
+      "slug": "william-h-wisher-jr-dies-the-terminator-terminator-2-judgment-day-scre",
+      "title": "William H. Wisher Jr. Dies: The Terminator Terminator 2: Judgment Day Screenwriter Was 71",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "death",
       "sensitivity": "high",
-      "eventSlug": "william-h-wisher-jr-dies",
-      "primaryKeyword": "william h wisher jr",
+      "eventSlug": "william-h-wisher-jr-terminator-screenwriter-death",
+      "primaryKeyword": "William H. Wisher Jr. Terminator",
       "primaryEntity": "William H. Wisher Jr.",
       "entities": [
         "The Terminator",
         "Terminator 2: Judgment Day"
       ],
-      "angle": "Screenwriter William H. Wisher Jr., who co-penned 'The Terminator' and 'Terminator 2: Judgment Day,' has died at 71.",
+      "angle": "William H. Wisher Jr., co-writer of 'The Terminator' and 'Terminator 2: Judgment Day,' has passed away at 71.",
       "tmdbType": "movie",
       "source": "rss:Deadline",
       "sources": [
@@ -570,12 +631,12 @@
           "outlet": "Deadline",
           "tier": 7,
           "url": "https://deadline.com/2026/07/william-h-wisher-jr-dead-the-terminator-screenwriter-1236999019/",
-          "ageMin": 233,
+          "ageMin": 323,
           "headline": "William H. Wisher Jr. Dies: The Terminator Terminator 2: Judgment Day Screenwriter Was 71",
           "summary": "William H. Wisher Jr., a producer and screenwriter who co-wrote The Terminator and Terminator 2: Judgment Day, has died. He was 71. The Wisher family confirmed news of the filmmaker s death, saying he passed away peacefully at home. William believed that stories have the power to connect people across generations, the family said in a [ ]"
         }
       ],
-      "ageMin": 233,
+      "ageMin": 323,
       "_cand": {
         "key": "rss:william-h-wisher-jr-dies-the-terminator-terminator-2-judgmen",
         "popularity": 0,
@@ -612,40 +673,39 @@
       "tierClass": "S"
     },
     {
-      "id": "news-ar-rahman-apple-vision-pro-app",
-      "slug": "a-r-rahman-launches-arr-immersive-app-for-apple-vision-pro-exclusive",
-      "title": "A.R. Rahman Launches ARR Immersive App for Apple Vision Pro (EXCLUSIVE)",
+      "id": "news-ai-odyssey-film-discussion",
+      "slug": "what-s-really-in-the-ai-odyssey-film",
+      "title": "What’s Really In the AI Odyssey Film",
       "contentType": "news",
       "formatTag": "news",
-      "category": "celebrity",
+      "category": "movies",
       "subcategory": "news",
-      "eventType": "announcement",
+      "eventType": "other",
       "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "ar-rahman-apple-vision-pro-app",
-      "primaryKeyword": "ar rahman app",
-      "primaryEntity": "A.R. Rahman",
+      "eventSlug": "ai-odyssey-film-discussion",
+      "primaryKeyword": "AI Odyssey film",
+      "primaryEntity": "AI Odyssey",
       "entities": [
-        "Apple Vision Pro"
+        "Christopher Nolan"
       ],
-      "angle": "Oscar-winning composer A.R. Rahman launches an immersive app for Apple Vision Pro.",
+      "angle": "Discussion on the content and themes within the film 'AI Odyssey'.",
       "tmdbType": "movie",
-      "source": "rss:Variety",
+      "source": "gnews:The Hollywood Reporter",
       "sources": [
         {
-          "outlet": "Variety",
+          "outlet": "The Hollywood Reporter",
           "tier": 7,
-          "url": "https://variety.com/2026/music/news/ar-rahman-arr-immersive-app-apple-vision-pro-1236816469/",
-          "ageMin": 2,
-          "headline": "A.R. Rahman Launches ARR Immersive App for Apple Vision Pro (EXCLUSIVE)",
-          "summary": "A.R. Rahman, the two-time Oscar-winning Indian composer behind Slumdog Millionaire and 127 Hours, is launching ARR Immersive, an app bringing his decade of immersive storytelling work to Apple Vision Pro on July 22. The app draws on Rahman s ongoing work in immersive formats, tracing back to Le Musk, a 360-degree virtual reality film that debuted [ ]"
+          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNajBaWEJMUzNxWF9sd2ZseE0xM3ZIcnpPN3UzNjJ1cDR5LVV5T3VSc0FOUjNpZTNMLUxvdFBBLXZ1ZlNjUDVnQ1Z1UjZBZ09QXzBhLW1VUzdiN1I0ckc1X01rb1lodzVmaXNWN0VBZ1gyX3pMdDd6bW5TdWxaSG44ZUx1ZXY5aVpwSlBWU1BIaHpZZ0szdE90YzZWQ1JDYWRwWHZxSzNR?oc=5",
+          "ageMin": 588,
+          "headline": "What’s Really In the AI Odyssey Film - The Hollywood Reporter",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxNajBaWEJMUzNxWF9sd2ZseE0xM3ZIcnpPN3UzNjJ1cDR5LVV5T3VSc0FOUjNpZTNMLUxvdFBBLXZ1ZlNjUDVnQ1Z1UjZBZ09QXzBhLW1VUzdiN1I0ckc1X01rb1lodzVmaXNWN0VBZ1gyX3pMdDd6bW5TdWxaSG44ZUx1ZXY5aVpwSlBWU1BIaHpZZ0szdE90YzZWQ1JDYWRwWHZxSzNR?oc=5\" target=\"_blank\" What"
         }
       ],
-      "ageMin": 2,
+      "ageMin": 588,
       "_cand": {
-        "key": "rss:a-r-rahman-launches-arr-immersive-app-for-apple-vision-pro-e",
+        "key": "rss:what-s-really-in-the-ai-odyssey-film-the-hollywood-reporter",
         "popularity": 0,
-        "kind": "rss-news"
+        "kind": "gnews"
       },
       "corroborationCount": 1,
       "verification": {
@@ -653,47 +713,47 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Variety"
+          "The Hollywood Reporter"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Variety",
+        "attribution": "The Hollywood Reporter",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 69,
+      "priority": 51,
       "signals": {
-        "recency": 30,
+        "recency": 4,
         "corroboration": 12,
         "status": 18,
-        "type": 9,
+        "type": 5,
         "pop": 0,
         "breakout": 0,
-        "big": 0,
+        "big": 12,
         "trending": 0,
         "spice": 0,
         "softTv": 0
       },
-      "tierClass": "B"
+      "tierClass": "C"
     },
     {
-      "id": "news-celebrity-splits-2026-jessie-j-chanan-colman",
-      "slug": "2026-celebrity-splits-jessie-j-chanan-colman-and-more-stars-call-it-qu",
-      "title": "2026 Celebrity Splits: Jessie J, Chanan Colman, and More Stars Call It Quits",
+      "id": "news-celebrity-splits-of-2026-jessie-j-chanan-colman-and-more",
+      "slug": "celebrity-splits-of-2026-jessie-j-chanan-colman-and-more-stars-who-cal",
+      "title": "Celebrity Splits of 2026: Jessie J, Chanan Colman and More Stars Who Called It Quits",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
       "eventType": "breakup",
       "sensitivity": "normal",
-      "eventSlug": "celebrity-splits-2026-jessie-j-chanan-colman",
+      "eventSlug": "celebrity-splits-of-2026-jessie-j-chanan-colman-and-more",
       "primaryKeyword": "celebrity breakups 2026",
       "primaryEntity": "Jessie J",
       "entities": [
         "Chanan Colman"
       ],
-      "angle": "A roundup of celebrity couples who have ended their relationships in 2026.",
+      "angle": "A roundup of celebrity couples who have announced their splits in 2026, including Jessie J and Chanan Colman.",
       "tmdbType": "movie",
       "source": "gnews:Us Weekly",
       "sources": [
