@@ -1669,10 +1669,10 @@
    "eventSlug": "the-odyssey-bo-update-100m",
    "form": "BO-UPDATE",
    "reason": "1 unverified claim(s) cut, unrecovered",
-   "tries": 56,
-   "at": "2026-07-21T11:03:46.033Z",
+   "tries": 57,
+   "at": "2026-07-21T11:33:33.376Z",
    "dead": true,
-   "expiresAt": "2026-07-24T11:03:46.033Z"
+   "expiresAt": "2026-07-24T11:33:33.376Z"
   },
   {
    "key": "star-wars-the-mandalorian-and-grogu-bo-update-d59|BO-UPDATE",
@@ -1745,16 +1745,24 @@
    "reason": "synthesizer returned no usable brief",
    "tries": 1,
    "at": "2026-07-21T11:06:25.270Z"
+  },
+  {
+   "key": "descendants-wicked-wonderland-bo-opening|BO-OPENING",
+   "eventSlug": "descendants-wicked-wonderland-bo-opening",
+   "form": "BO-OPENING",
+   "reason": "under floor: streaming original — no theatrical box office (belongs in a streaming form)",
+   "tries": 1,
+   "at": "2026-07-21T11:35:26.064Z"
   }
  ],
- "zeroStreak": 8,
+ "zeroStreak": 9,
  "daySpend": {
   "laDay": "2026-07-21",
-  "usd": 0.23337
+  "usd": 0.23667
  },
  "pace": {
-  "tokens": 3.5719030555555555,
-  "lastMs": 1784631708561
+  "tokens": 3.642769642857143,
+  "lastMs": 1784633494399
  },
  "lastAuditDay": "2026-07-21",
  "attempts": {
@@ -1770,7 +1778,8 @@
    "f9: the fast saga": 1,
    "old henry": 1,
    "malcolm in the middle: life's still unfair": 1,
-   "spider-man: brand new day": 1
+   "spider-man: brand new day": 1,
+   "descendants: wicked wonderland": 1
   }
  }
 }
