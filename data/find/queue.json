@@ -1,41 +1,133 @@
 {
-  "runId": "run-2026-07-21T16-01-38",
-  "builtAt": "2026-07-21T16:04:34.734Z",
-  "count": 30,
+  "runId": "run-2026-07-21T17-01-31",
+  "builtAt": "2026-07-21T17:03:50.251Z",
+  "count": 19,
   "topics": [
     {
-      "id": "news-matt-damon-the-odyssey-stunt-double",
-      "slug": "matt-damon-used-a-female-stunt-double-on-the-odyssey-and-says-she-had-",
-      "title": "Matt Damon Used a Female Stunt Double on 'The Odyssey' and Says She Had the Greatest Arms I've Ever Seen",
+      "id": "news-kaylee-hottle-dies-at-18",
+      "slug": "godzilla-vs-kong-actress-kaylee-hottle-dies-at-18",
+      "title": "'Godzilla vs. Kong' Actress Kaylee Hottle Dies at 18",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "death",
+      "sensitivity": "high",
+      "eventSlug": "kaylee-hottle-dies-at-18",
+      "primaryKeyword": "Kaylee Hottle",
+      "primaryEntity": "Kaylee Hottle",
+      "entities": [
+        "Godzilla vs. Kong"
+      ],
+      "angle": "Actress Kaylee Hottle, known for her role in 'Godzilla vs. Kong', has passed away at 18.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/kaylee-hottle-dead-godzilla-vs-kong-actress-car-crash-1236653119/",
+          "ageMin": 9,
+          "headline": "Kaylee Hottle, ‘Godzilla Vs. Kong’ Actress, Dies at 18",
+          "summary": "The deaf actress appeared in two franchise movies about the giant lizard and grizzled gorilla in the breakout role of Jia after being spotted in a TV commercial."
+        },
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/kaylee-hottle-dead-1236999383/",
+          "ageMin": 30,
+          "headline": "Kaylee Hottle Dies: Godzilla Vs. Kong Godzilla X Kong: The New Empire Star Was 18",
+          "summary": "Kaylee Hottle, the young actor remembered for her roles in the films Godzilla vs. Kong and Godzilla x Kong: The New Empire, died today, July 21, in a car accident in Frederick, Maryland. She was 18. Her death was announced by her father Joshua Hottle in a Facebook livestream using American Sign Language (he is [ ]"
+        },
+        {
+          "outlet": "TheWrap",
+          "tier": 7,
+          "url": "https://www.thewrap.com/culture-lifestyle/culture/kaylee-hottle-dies-obit/",
+          "ageMin": 66,
+          "headline": "Kaylee Hottle, Godzilla vs. Kong Star, Dies at 19",
+          "summary": "The actress was killed in a car accident, her father shares The post Kaylee Hottle, Godzilla vs. Kong Star, Dies at 19 appeared first on TheWrap ."
+        },
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/film/global/kaylee-hottle-dead-godzilla-vs-kong-1236817223/",
+          "ageMin": 90,
+          "headline": "Godzilla vs. Kong Star Kaylee Hottle Dies at 18",
+          "summary": "Kaylee Hottle, an actress known for her roles in Godzilla vs. Kong and Godzilla x Kong: The New Empire, died on Monday in a car accident, according to The New York Times. She was 18. Her father, Joshua Hottle, announced the news in a Facebook livestream using American Sign Language, saying that she died in [ ]"
+        }
+      ],
+      "ageMin": 9,
+      "_cand": {
+        "key": "rss:kaylee-hottle-godzilla-vs-kong-actress-dies-at-18",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 4,
+      "verification": {
+        "tier1Count": 4,
+        "tier1Owners": 2,
+        "outletCount": 4,
+        "outlets": [
+          "THR",
+          "Deadline",
+          "TheWrap",
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": null,
+        "framing": "plain",
+        "status": "CONFIRMED",
+        "publishable": true
+      },
+      "priority": 121,
+      "signals": {
+        "recency": 30,
+        "corroboration": 25,
+        "status": 25,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 12,
+        "trending": 15,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "S"
+    },
+    {
+      "id": "news-june-squibb-alex-borstein-turn-the-lights-back-on-casting",
+      "slug": "june-squibb-joins-alex-borstein-in-indie-dramedy-turn-the-lights-back-",
+      "title": "June Squibb Joins Alex Borstein In Indie Dramedy Turn The Lights Back On",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "matt-damon-the-odyssey-stunt-double",
-      "primaryKeyword": "matt damon the odyssey",
-      "primaryEntity": "The Odyssey",
+      "eventSlug": "june-squibb-alex-borstein-turn-the-lights-back-on-casting",
+      "primaryKeyword": "june squibb alex borstein movie",
+      "primaryEntity": "Turn the Lights Back On",
       "entities": [
-        "The Odyssey (film)",
-        "Matt Damon"
+        "June Squibb",
+        "Alex Borstein"
       ],
-      "angle": "Matt Damon reveals he used a female stunt double for his role in 'The Odyssey' and praises her physique.",
+      "angle": "June Squibb joins Alex Borstein in indie dramedy 'Turn the Lights Back On'.",
       "tmdbType": "movie",
-      "source": "rss:Variety",
+      "source": "rss:Deadline",
       "sources": [
         {
-          "outlet": "Variety",
+          "outlet": "Deadline",
           "tier": 7,
-          "url": "https://variety.com/2026/film/news/matt-damon-female-stunt-double-the-odyssey-action-scenes-1236816520/",
-          "ageMin": 109,
-          "headline": "Matt Damon Used a Female Stunt Double on The Odyssey and Says She Had the Greatest Arms I ve Ever Seen",
-          "summary": "Matt Damon s biceps in The Odyssey are getting a lot of attention from viewers impressed with the actor s physical transformation into Odysseus, but Damon said on the Happy Sad Confused podcast that his stunt double should also be getting the acclaim. A female stunt double stood in for Damon during the scene where Odysseus men [ ]"
+          "url": "https://deadline.com/2026/07/june-squibb-joins-turn-the-lights-back-on-alex-borstein-1236999457/",
+          "ageMin": 9,
+          "headline": "June Squibb Joins Alex Borstein In Indie Dramedy Turn The Lights Back On",
+          "summary": "EXCLUSIVE: Academy Award nominee June Squibb (Eleanor the Great) is set to star opposite Emmy winner Alex Borstein in Turn the Lights Back On, an indie dramedy that we announced in June. Based on true events and inspired by experiences many families faced during the Covid era, Turn the Lights Back On centers on a family forced to confront [ ]"
         }
       ],
-      "ageMin": 109,
+      "ageMin": 9,
       "_cand": {
-        "key": "rss:matt-damon-used-a-female-stunt-double-on-the-odyssey-and-say",
+        "key": "rss:june-squibb-joins-alex-borstein-in-indie-dramedy-turn-the-li",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -45,18 +137,18 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Variety"
+          "Deadline"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Variety",
+        "attribution": "Deadline",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 114,
+      "priority": 98,
       "signals": {
-        "recency": 16,
+        "recency": 30,
         "corroboration": 12,
         "status": 18,
         "type": 14,
@@ -65,45 +157,44 @@
         "big": 24,
         "trending": 0,
         "spice": 0,
-        "softTv": 0,
-        "radar": 30
+        "softTv": 0
       },
-      "radarKind": "movie-in-theaters",
-      "tierClass": "A"
+      "tierClass": "B"
     },
     {
-      "id": "news-robocop-reboot-series-prime-video",
-      "slug": "robocop-reboot-series-set-at-prime-video",
-      "title": "Robocop Reboot Series Set at Prime Video",
+      "id": "news-sex-criminals-casting-joseph-lee-sunita-mani",
+      "slug": "joseph-lee-sunita-mani-join-prime-video-s-sex-criminals-series",
+      "title": "Joseph Lee, Sunita Mani Join Prime Video's 'Sex Criminals' Series",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
-      "eventType": "announcement",
+      "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "robocop-reboot-series-prime-video",
-      "primaryKeyword": "robocop series",
-      "primaryEntity": "RoboCop",
+      "eventSlug": "sex-criminals-casting-joseph-lee-sunita-mani",
+      "primaryKeyword": "sex criminals series",
+      "primaryEntity": "Sex Criminals (TV series)",
       "entities": [
-        "RoboCop (TV series)",
-        "Prime Video"
+        "Prime Video",
+        "Joseph Lee",
+        "Sunita Mani"
       ],
-      "angle": "Prime Video orders an eight-episode series based on the classic sci-fi franchise.",
+      "angle": "Prime Video's 'Sex Criminals' series adds Joseph Lee and Sunita Mani to its cast.",
       "tmdbType": "movie",
-      "source": "rss:Variety",
+      "source": "rss:Deadline",
       "sources": [
         {
-          "outlet": "Variety",
+          "outlet": "Deadline",
           "tier": 7,
-          "url": "https://variety.com/2026/tv/news/robocop-reboot-series-amazon-prime-video-1236817195/",
+          "url": "https://deadline.com/2026/07/sex-criminals-joseph-lee-sunita-mani-amazon-series-comic-1236999322/",
           "ageMin": 2,
-          "headline": "Robocop Reboot Series Set at Prime Video",
-          "summary": "Amazon Prime Video has officially picked up a series version of Robocop, Variety has learned. Prime Video has given the show an eight-episode order. The project has been in development since Amazon acquired MGM in 2022, with Amazon looking to capitalize on their access to MGM’s deep IP library for both film and television projects. [ ]"
+          "headline": "Sex Criminals : Joseph Lee Sunita Mani Join Prime Video Series Based On Comic",
+          "summary": "EXCLUSIVE: Prime Video has rounded out the cast for its upcoming series Sex Criminals, an adaptation of Image Comics’ title, adding Emmy-nominated Joseph Lee (Beef) and Sunita Mani (His Hers) in significant recurring roles. They join leads Imogen Poots and John Reynolds, and previously cast Pamela Adlon, BD Wong, Ayden Mayeri and Ashleigh Cummings in [ ]"
         }
       ],
       "ageMin": 2,
       "_cand": {
-        "key": "rss:robocop-reboot-series-set-at-prime-video",
+        "key": "rss:sex-criminals-joseph-lee-sunita-mani-join-prime-video-series",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -113,21 +204,21 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Variety"
+          "Deadline"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Variety",
+        "attribution": "Deadline",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 87,
+      "priority": 92,
       "signals": {
         "recency": 30,
         "corroboration": 12,
         "status": 18,
-        "type": 9,
+        "type": 14,
         "pop": 0,
         "breakout": 0,
         "big": 18,
@@ -138,37 +229,105 @@
       "tierClass": "B"
     },
     {
-      "id": "news-sadie-sink-playing-character-in-spider-man-brand-new-day",
-      "slug": "spider-man-brand-new-day-director-insists-there-s-a-very-real-reason-n",
-      "title": "Spider-Man: Brand New Day Director Insists 'There's a Very Real Reason Not to Tell People Who Sadie Sink is Playing'",
+      "id": "news-evil-dead-burn-halloween-horror-nights",
+      "slug": "evil-dead-burn-haunted-house-experience-is-headed-to-universal-studios",
+      "title": "Evil Dead Burn Haunted House Experience Is Headed to Universal Studios Halloween Horror Nights",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "high",
+      "eventSlug": "evil-dead-burn-halloween-horror-nights",
+      "primaryKeyword": "evil dead halloween horror nights",
+      "primaryEntity": "Evil Dead",
+      "entities": [
+        "Universal Studios",
+        "Halloween Horror Nights"
+      ],
+      "angle": "Universal Studios is turning the 'Evil Dead' franchise into a haunted house attraction for Halloween Horror Nights.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/film/news/evil-dead-burn-universal-studios-halloween-horror-nights-1236817166/",
+          "ageMin": 62,
+          "headline": "Evil Dead Burn Haunted House Experience Is Headed to Universal Studios Halloween Horror Nights",
+          "summary": "Evil Dead Burn is headed to Universal’s Halloween Horror Nights as a haunted house experience. The latest film from New Line Cinema takes shape as the newest Halloween Horror Nights haunted house, beginning Aug. 28 at Universal Orlando Resort and Sept 3 at Universal Studios Hollywood. The haunted houses will take guests on a terrifying [ ]"
+        }
+      ],
+      "ageMin": 62,
+      "_cand": {
+        "key": "rss:evil-dead-burn-haunted-house-experience-is-headed-to-univers",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 94,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "radar": 15
+      },
+      "radarKind": "movie-in-theaters",
+      "tierClass": "S"
+    },
+    {
+      "id": "news-sadie-sink-spider-man-brand-new-day-casting-mystery",
+      "slug": "sadie-sink-s-spider-man-brand-new-day-role-kept-secret-for-a-very-real",
+      "title": "Sadie Sink's 'Spider-Man: Brand New Day' Role Kept Secret for a 'Very Real Reason,' Director Says",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "sadie-sink-playing-character-in-spider-man-brand-new-day",
-      "primaryKeyword": "sadie sink spider-man brand new day",
-      "primaryEntity": "Spider-Man: Brand New Day",
+      "eventSlug": "sadie-sink-spider-man-brand-new-day-casting-mystery",
+      "primaryKeyword": "Sadie Sink Spider-Man",
+      "primaryEntity": "Sadie Sink",
       "entities": [
-        "Sadie Sink"
+        "Spider-Man: Brand New Day"
       ],
-      "angle": "Director hints at a significant, undisclosed role for Sadie Sink in the upcoming 'Spider-Man: Brand New Day'.",
+      "angle": "Director teases Sadie Sink's mystery role in 'Spider-Man: Brand New Day,' citing a 'very real reason' for secrecy.",
       "tmdbType": "movie",
-      "source": "gnews:Jedi News",
+      "source": "gnews:IGN Pakistan",
       "sources": [
         {
-          "outlet": "Jedi News",
+          "outlet": "IGN Pakistan",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQTHdnSU44NnJfMFpXRW1mMEppWmxyTk1LaUYyWkRTNlBIc3JnMnJZOXU4Tk10dU8wSV9KT05pbEJKZlFkS0FCVEFXcDVIYXg4V0U4SHFtWW1zYUVwblg0NVlaaTNoSFFQZ3Raa3l6Umt4TGVoaFcxOHFfWjJKcmdzNzhyY2JKckVwQ09Id0F2N2FiZWl4dGtTbnNfSEgxQWlkVkpoSktUT3ZILVVucy1MMTFtVFdJMnMy?oc=5",
-          "ageMin": 116,
-          "headline": "Star Wars: The Mandalorian and Grogu Physical Preorders Available Now - Jedi News",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiuAFBVV95cUxQTHdnSU44NnJfMFpXRW1mMEppWmxyTk1LaUYyWkRTNlBIc3JnMnJZOXU4Tk10dU8wSV9KT05pbEJKZlFkS0FCVEFXcDVIYXg4V0U4SHFtWW1zYUVwblg0NVlaaTNoSFFQZ3Raa3l6Umt4TGVoaFcxOHFfWjJKcmdzNzhyY2JKckVwQ09Id0F2N2FiZWl4dGtTbnNfSEgxQWlkVkpoSktUT3ZILVVucy1MMTFtVFdJMnMy?oc"
+          "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQTWZHTU9IYTVhNTlrV0VoSW1rZWNhOTZZUHAzMEp4RjBZYXZQa01tZ0hyWVN6aFZTRm5MR2x3Snc5aWVMSlkxOGhyZzhHZnFWckNxM0ZhNENfa3VIN2pScDVEQThPLTJIRmtOV2tYWWZUSThkX2EwX0xpVDZneG9pTWhSZzF1ZWVTM2diWTlPRVh4bHZuNkxxMHNVOUVxLTNtaXNRMTEySUtpU1U5TURXU3pXcllkU2VpX0N4elVlZmVjSU1qMXZyRl9ZM0tJRVl3T3JaZGhQcWVKS1o1QV9vcDBuSnlWMWtjS3Nrb0wyMA?oc=5",
+          "ageMin": 177,
+          "headline": "Spider-Man: Brand New Day Director Insists 'There's a Very Real Reason Not to Tell People Who Sadie Sink is Playing' - IGN Pakistan",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMi7wFBVV95cUxQTWZHTU9IYTVhNTlrV0VoSW1rZWNhOTZZUHAzMEp4RjBZYXZQa01tZ0hyWVN6aFZTRm5MR2x3Snc5aWVMSlkxOGhyZzhHZnFWckNxM0ZhNENfa3VIN2pScDVEQThPLTJIRmtOV2tYWWZUSThkX2EwX0xpVDZneG9pTWhSZzF1ZWVTM2diWTlPRVh4bHZuNkxxMHNVOUVxLTNtaXNRMTEySUtpU1U5TURXU3pXcllkU2VpX0N"
         }
       ],
-      "ageMin": 116,
+      "ageMin": 177,
       "_cand": {
-        "key": "rss:star-wars-the-mandalorian-and-grogu-physical-preorders-avail",
+        "key": "rss:spider-man-brand-new-day-director-insists-there-s-a-very-rea",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -178,11 +337,11 @@
         "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "Jedi News"
+          "IGN Pakistan"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "Jedi News",
+        "attribution": "IGN Pakistan",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -205,347 +364,9 @@
       "tierClass": "A"
     },
     {
-      "id": "news-robocop-tv-series-james-wan-prime-video",
-      "slug": "james-wan-developing-robocop-tv-series-for-prime-video",
-      "title": "James Wan Developing ‘RoboCop’ TV Series for Prime Video",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "robocop-tv-series-james-wan-prime-video",
-      "primaryKeyword": "RoboCop TV series",
-      "primaryEntity": "RoboCop",
-      "entities": [
-        "RoboCop (TV series)",
-        "James Wan",
-        "Prime Video",
-        "Ed Neumeier"
-      ],
-      "angle": "A new 'RoboCop' TV series is in development at Prime Video, with James Wan reportedly involved.",
-      "tmdbType": "movie",
-      "source": "rss:TheWrap",
-      "sources": [
-        {
-          "outlet": "TheWrap",
-          "tier": 7,
-          "url": "https://www.thewrap.com/media-platforms/tv/robocop-series-prime-video-james-wan/",
-          "ageMin": 2,
-          "headline": "RoboCop TV Series From James Wan in the Works at Prime Video",
-          "summary": "Ed Neumeier, co-writer of the original 1987 film, will executive produce alongside showrunner Peter Ocko The post RoboCop TV Series From James Wan in the Works at Prime Video appeared first on TheWrap ."
-        }
-      ],
-      "ageMin": 2,
-      "_cand": {
-        "key": "rss:robocop-tv-series-from-james-wan-in-the-works-at-prime-video",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "TheWrap"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "TheWrap",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 87,
-      "signals": {
-        "recency": 30,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-evil-dead-burn-haunted-house-universal-horror-nights",
-      "slug": "evil-dead-burn-haunted-house-coming-to-universal-s-halloween-horror-ni",
-      "title": "‘Evil Dead Burn’ Haunted House Coming to Universal’s Halloween Horror Nights",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "high",
-      "eventSlug": "evil-dead-burn-haunted-house-universal-horror-nights",
-      "primaryKeyword": "Evil Dead Burn",
-      "primaryEntity": "Evil Dead Burn",
-      "entities": [
-        "Universal Studios Halloween Horror Nights",
-        "New Line Cinema"
-      ],
-      "angle": "The 'Evil Dead Burn' film is inspiring a haunted house attraction at Universal Studios' Halloween Horror Nights.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/film/news/evil-dead-burn-universal-studios-halloween-horror-nights-1236817166/",
-          "ageMin": 2,
-          "headline": "Evil Dead Burn Haunted House Experience Is Headed to Universal Studios Halloween Horror Nights",
-          "summary": "Evil Dead Burn is headed to Universal’s Halloween Horror Nights as a haunted house experience. The latest film from New Line Cinema takes shape as the newest Halloween Horror Nights haunted house, beginning Aug. 28 at Universal Orlando Resort and Sept 3 at Universal Studios Hollywood. The haunted houses will take guests on a terrifying [ ]"
-        }
-      ],
-      "ageMin": 2,
-      "_cand": {
-        "key": "rss:evil-dead-burn-haunted-house-experience-is-headed-to-univers",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 92,
-      "signals": {
-        "recency": 30,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 12,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0,
-        "radar": 15
-      },
-      "radarKind": "movie-in-theaters",
-      "tierClass": "S"
-    },
-    {
-      "id": "news-robocop-series-amazon-blumhouse-atomic-monster",
-      "slug": "amazon-greenlights-robocop-series-from-blumhouse-atomic-monster",
-      "title": "Amazon Greenlights ‘RoboCop’ Series from Blumhouse Atomic Monster",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "robocop-series-amazon-blumhouse-atomic-monster",
-      "primaryKeyword": "RoboCop series",
-      "primaryEntity": "RoboCop",
-      "entities": [
-        "RoboCop (TV series)",
-        "Amazon MGM Studios",
-        "Blumhouse Atomic Monster",
-        "Peter Ocko"
-      ],
-      "angle": "Amazon MGM Studios has officially greenlit a 'RoboCop' series from Blumhouse Atomic Monster.",
-      "tmdbType": "movie",
-      "source": "rss:Deadline",
-      "sources": [
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/robocop-series-ordered-amazon-blumhouse-atomic-monster-1236999196/",
-          "ageMin": 2,
-          "headline": "Robocop Series Ordered By Amazon From Blumhouse Atomic Monster",
-          "summary": "After a lengthy development process, Amazon MGM Studios has greenlighted Robocop, a series based on the MGM movie franchise, from showrunner Peter Ocko and Blumhouse Atomic Monster. In Robocop, a giant tech conglomerate convinces the city to place a powerful robot on its police force – a robot implanted with the consciousness of a beloved, [ ]"
-        }
-      ],
-      "ageMin": 2,
-      "_cand": {
-        "key": "rss:robocop-series-ordered-by-amazon-from-blumhouse-atomic-monst",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Deadline"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Deadline",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 87,
-      "signals": {
-        "recency": 30,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-pixar-disney-layoffs",
-      "slug": "pixar-bears-brunt-of-disney-studio-layoffs-as-company-axes-several-hun",
-      "title": "Pixar Bears Brunt of Disney Studio Layoffs as Company Axes Several Hundred Staffers",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "pixar-disney-layoffs",
-      "primaryKeyword": "Disney layoffs",
-      "primaryEntity": "Disney",
-      "entities": [
-        "Pixar Animation Studios",
-        "Toy Story 5"
-      ],
-      "angle": "Pixar Animation Studios is among the divisions heavily impacted by recent layoffs at Disney.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/film/news/pixar-layoffs-disney-studios-several-hundred-employees-1236817241/",
-          "ageMin": 23,
-          "headline": "Pixar Bears Brunt of Disney Studio Layoffs as Company Axes Several Hundred Staffers",
-          "summary": "Pixar Animation Studios, despite riding high on the success of summer blockbuster Toy Story 5, was hit particularly hard in a wave of companywide layoffs Tuesday at Disney. A Disney spokesperson confirmed that the media conglomerate is cutting several hundred jobs across certain corporate functions. Those include job cuts at ESPN, many related to the [ ]"
-        }
-      ],
-      "ageMin": 23,
-      "_cand": {
-        "key": "rss:pixar-bears-brunt-of-disney-studio-layoffs-as-company-axes-s",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 88,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 12,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0,
-        "radar": 17
-      },
-      "radarKind": "movie-in-theaters",
-      "tierClass": "A"
-    },
-    {
-      "id": "news-robocop-tv-series-prime-video",
-      "slug": "robocop-tv-series-from-blumhouse-officially-a-go-for-prime-video",
-      "title": "Robocop TV Series from Blumhouse Officially a Go for Prime Video",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "robocop-tv-series-prime-video",
-      "primaryKeyword": "robocop tv series",
-      "primaryEntity": "RoboCop",
-      "entities": [
-        "Blumhouse",
-        "Prime Video"
-      ],
-      "angle": "Blumhouse is developing a new 'Robocop' series for Prime Video, aiming to recapture the spirit of the original film.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/tv/tv-news/robocop-tv-series-amazon-prime-video-blumhouse-1236652947/",
-          "ageMin": 2,
-          "headline": "Robocop TV Series From Blumhouse Officially a Go for Prime Video",
-          "summary": "The eight-episode series will seek to capture the anti-corporate vibe of the 1987 cult classic."
-        }
-      ],
-      "ageMin": 2,
-      "_cand": {
-        "key": "rss:robocop-tv-series-from-blumhouse-officially-a-go-for-prime-v",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 87,
-      "signals": {
-        "recency": 30,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "music-news-finneas-guild-of-music-supervisors-keynote",
-      "slug": "finneas-to-keynote-guild-of-music-supervisors-2026-state-of-music-in-m",
-      "title": "Finneas to Keynote Guild of Music Supervisors’ 2026 State of Music in Media Conference",
+      "id": "music-news-her0ism-talks-j-pop-global-moment",
+      "slug": "her0ism-talks-j-pop-s-global-moment-from-maj-s-co-writing-camp-to-the-",
+      "title": "her0ism Talks J-Pop's Global Moment, From MAJ's Co-Writing Camp to the Grammys' New Asian Category",
       "contentType": "music-news",
       "formatTag": "music-news",
       "category": "music",
@@ -553,31 +374,30 @@
       "eventType": "announcement",
       "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "finneas-guild-of-music-supervisors-keynote",
-      "primaryKeyword": "Finneas",
-      "primaryEntity": "FINNEAS",
+      "eventSlug": "her0ism-talks-j-pop-global-moment",
+      "primaryKeyword": "J-Pop",
+      "primaryEntity": "Henri Salvador",
       "entities": [
-        "Finneas",
-        "Guild of Music Supervisors",
-        "Nora Felder",
-        "Kris Bowers"
+        "her0ism",
+        "J-Pop",
+        "Grammys"
       ],
-      "angle": "Finneas will keynote the Guild of Music Supervisors' State of Music in Media Conference, with other notable music supervisors also set to appear.",
+      "angle": "J-Pop's growing global influence and new Grammy category discussed by industry insider.",
       "tmdbType": "movie",
       "source": "rss:Billboard",
       "sources": [
         {
           "outlet": "Billboard",
           "tier": 7,
-          "url": "https://www.billboard.com/pro/finneas-oconnell-guild-of-music-supervisors-2026-conference/",
-          "ageMin": 2,
-          "headline": "Finneas to Keynote Guild of Music Supervisors’ 2026 State of Music in Media Conference",
-          "summary": "Panelists set to appear include Nora Felder ( Stranger Things ), Kris Bowers ( Spider-Noir ) and Carlos Rafael Rivera ( Hacks )."
+          "url": "https://www.billboard.com/music/music-news/her0ism-interview-j-pop-global-moment-maj-grammys-1236299672/",
+          "ageMin": 12,
+          "headline": "her0ism Talks J-Pop s Global Moment, From MAJ s Co-Writing Camp to the Grammys New Asian Category",
+          "summary": "Billboard Japan spoke with her0ism, who shared his perspective on the current state and future of the industry."
         }
       ],
-      "ageMin": 2,
+      "ageMin": 12,
       "_cand": {
-        "key": "rss:finneas-to-keynote-guild-of-music-supervisors-2026-state-of-",
+        "key": "rss:her0ism-talks-j-pop-s-global-moment-from-maj-s-co-writing-ca",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -612,39 +432,106 @@
       "tierClass": "B"
     },
     {
-      "id": "news-runaway-action-thriller-wraps",
-      "slug": "josh-duhamel-james-franco-paula-patton-wrap-on-action-thriller-runaway",
-      "title": "Josh Duhamel, James Franco, Paula Patton Wrap On Action-Thriller Runaway",
+      "id": "news-whitney-cummings-mark-twain-prize-joke-cut",
+      "slug": "netflix-did-not-cut-trump-joke-from-whitney-cummings-mark-twain-prize-",
+      "title": "Netflix Did Not Cut Trump Joke From Whitney Cummings' Mark Twain Prize Set",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "whitney-cummings-mark-twain-prize-joke-cut",
+      "primaryKeyword": "Whitney Cummings Mark Twain Prize",
+      "primaryEntity": "Mark Twain Prize for American Humor",
+      "entities": [
+        "Whitney Cummings",
+        "Netflix",
+        "Bill Maher"
+      ],
+      "angle": "Clarification on a joke cut from Whitney Cummings' set at the Mark Twain Prize ceremony, which aired on Netflix.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/tv/tv-news/whitney-cummings-trump-joke-cut-netflix-mark-twain-prize-1236653040/",
+          "ageMin": 10,
+          "headline": "No, Netflix Didn t Cut a Trump Joke From Whitney Cummings Set at Mark Twain Prize Ceremony",
+          "summary": "The special, which honored Bill Maher, streamed on Netflix — but a joke Cummings made about the President was cut by the Kennedy Center."
+        }
+      ],
+      "ageMin": 10,
+      "_cand": {
+        "key": "rss:no-netflix-didn-t-cut-a-trump-joke-from-whitney-cummings-set",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 71,
+      "signals": {
+        "recency": 30,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 6,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-ryan-reynolds-confirms-new-deadpool-movie",
+      "slug": "ryan-reynolds-confirms-new-deadpool-movie-in-the-works",
+      "title": "Ryan Reynolds Confirms New Deadpool Movie In The Works",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "high",
-      "eventSlug": "runaway-action-thriller-wraps",
-      "primaryKeyword": "Runaway movie",
-      "primaryEntity": "Runaway",
+      "eventSlug": "ryan-reynolds-confirms-new-deadpool-movie",
+      "primaryKeyword": "Deadpool",
+      "primaryEntity": "Deadpool & Wolverine",
       "entities": [
-        "Josh Duhamel",
-        "James Franco",
-        "Paula Patton"
+        "Deadpool 3",
+        "Ryan Reynolds",
+        "Marvel Studios"
       ],
-      "angle": "The indie action-thriller 'Runaway,' starring Josh Duhamel, James Franco, and Paula Patton, has completed filming.",
+      "angle": "Ryan Reynolds confirms a new Deadpool movie is in development.",
       "tmdbType": "movie",
       "source": "rss:Deadline",
       "sources": [
         {
           "outlet": "Deadline",
           "tier": 7,
-          "url": "https://deadline.com/2026/07/josh-duhamel-james-franco-paula-patton-join-runaway-1236999173/",
-          "ageMin": 47,
-          "headline": "Josh Duhamel, James Franco, Paula Patton Summer H. Howell Wrap On Action-Thriller Runaway",
-          "summary": "EXCLUSIVE: Josh Duhamel (Ransom Canyon), James Franco (127 Hours), Paula Patton (Precious), and Summer H. Howell (Amazon s upcoming Carrie TV series) have wrapped on Runaway, a new indie action-thriller from director James C. Clayton and IndustryWorks Studios. Runaway follows veteran detective Lou Coleman (Duhamel), who takes a solitary drive into the wilderness after the death of his estranged da"
+          "url": "https://deadline.com/2026/07/ryan-reynolds-new-deadpool-movie-1236999423/",
+          "ageMin": 26,
+          "headline": "Ryan Reynolds Confirms New Deadpool Movie In The Works",
+          "summary": "A new Deadpool looks to be in the works at Marvel Studios with franchise star Ryan Reynolds on board to return. The actor confirmed the news during a recent appearance at Fanatics Fest 2026. Sources say the film is currently in early development with no writer or director attached at this time. “There’s a few [ ]"
         }
       ],
-      "ageMin": 47,
+      "ageMin": 26,
       "_cand": {
-        "key": "rss:josh-duhamel-james-franco-paula-patton-summer-h-howell-wrap-",
+        "key": "rss:ryan-reynolds-confirms-new-deadpool-movie-in-the-works",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -679,63 +566,132 @@
       "tierClass": "S"
     },
     {
-      "id": "music-news-harry-styles-brazil-concert-canceled-illness",
-      "slug": "harry-styles-concert-in-brazil-tonight-canceled-due-to-unspecified-tou",
-      "title": "Harry Styles’ Concert in Brazil Tonight Canceled Due to Unspecified ‘Tour Illness’",
+      "id": "music-news-shaboozey-album-cherie-lee-features",
+      "slug": "shaboozey-recruits-gunna-teyana-taylor-and-sam-elliott-for-outlaw-cher",
+      "title": "Shaboozey Recruits Gunna, Teyana Taylor, and Sam Elliott for Outlaw Cherie Lee Album",
       "contentType": "music-news",
       "formatTag": "music-news",
       "category": "music",
       "subcategory": "news",
-      "eventType": "health",
-      "sensitivity": "high",
+      "eventType": "announcement",
+      "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "harry-styles-brazil-concert-canceled-illness",
-      "primaryKeyword": "harry styles concert",
-      "primaryEntity": "Harry Styles",
+      "eventSlug": "shaboozey-album-cherie-lee-features",
+      "primaryKeyword": "Shaboozey",
+      "primaryEntity": "Shaboozey",
       "entities": [
-        "Brazil"
+        "Gunna",
+        "Teyana Taylor",
+        "Sam Elliott",
+        "Cherie Lee"
       ],
-      "angle": "Harry Styles' concert in Brazil is canceled due to unspecified illness.",
+      "angle": "Shaboozey announces star-studded album 'Cherie Lee' with diverse guest features.",
       "tmdbType": "movie",
-      "source": "rss:Variety",
+      "source": "rss:Rolling Stone",
       "sources": [
         {
-          "outlet": "Variety",
+          "outlet": "Rolling Stone",
           "tier": 7,
-          "url": "https://variety.com/2026/music/news/harry-styles-concert-in-brazil-canceled-illness-1236817219/",
-          "ageMin": 50,
-          "headline": "Harry Styles’ Concert in Brazil Tonight Canceled Due to Unspecified ‘Tour Illness’",
-          "summary": "Harry Styles’ concert scheduled for Tuesday night in Brazil has been canceled due to an unspecified “tour illness,” although Friday’s concert will take place as scheduled, according to the announcement. A rep for the singer had no further comment beyond the statement below, which reads in full:“We deeply regret to share that the Harry Styles [ ]"
+          "url": "https://www.rollingstone.com/music/music-country/shaboozey-outlaw-cherie-lee-album-features-gunna-kehlani-1235596578/",
+          "ageMin": 12,
+          "headline": "Shaboozey Recruits Gunna, Teyana Taylor, and Sam Elliott for Outlaw Cherie Lee Album",
+          "summary": "The cinematic LP, out July 31, also features Kehlani, Orville Peck, Leon Bridges, and Jamie Foxx"
         }
       ],
-      "ageMin": 50,
+      "ageMin": 12,
       "_cand": {
-        "key": "rss:harry-styles-concert-in-brazil-tonight-canceled-due-to-unspe",
+        "key": "rss:shaboozey-recruits-gunna-teyana-taylor-and-sam-elliott-for-o",
         "popularity": 0,
         "kind": "rss-news"
       },
-      "breakoutVelocity": 0,
       "corroborationCount": 1,
       "verification": {
         "tier1Count": 1,
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Variety"
+          "Rolling Stone"
         ],
         "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "Variety",
+        "sensitivity": "normal",
+        "attribution": "Rolling Stone",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 66,
+      "priority": 69,
+      "signals": {
+        "recency": 30,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "music-news-rapper-alley-boy-dead-42-kidney-disease",
+      "slug": "rapper-alley-boy-dead-at-42-after-battle-with-kidney-disease",
+      "title": "Rapper Alley Boy Dead at 42 After Battle With Kidney Disease",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "death",
+      "sensitivity": "high",
+      "tier": "popular",
+      "eventSlug": "rapper-alley-boy-dead-42-kidney-disease",
+      "primaryKeyword": "Alley Boy death",
+      "primaryEntity": "Alley Boy",
+      "entities": [
+        "21 Savage",
+        "Master P"
+      ],
+      "angle": "Rapper Alley Boy has died at the age of 42 after a battle with kidney disease, with tributes pouring in from fellow artists.",
+      "tmdbType": "movie",
+      "source": "rss:Billboard",
+      "sources": [
+        {
+          "outlet": "Billboard",
+          "tier": 7,
+          "url": "https://www.billboard.com/music/rb-hip-hop/alley-boy-death-rapper-dead-1236299513/",
+          "ageMin": 58,
+          "headline": "Rapper Alley Boy Dead at 42 Following Battle With Kidney Disease: 21 Savage, Master P More Pay Tribute",
+          "summary": "The late artist's daughter confirmed his death in a post to social media on July 20."
+        }
+      ],
+      "ageMin": 58,
+      "_cand": {
+        "key": "rss:rapper-alley-boy-dead-at-42-following-battle-with-kidney-dis",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Billboard"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": "Billboard",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 68,
       "signals": {
         "recency": 24,
         "corroboration": 12,
         "status": 18,
-        "type": 12,
+        "type": 14,
         "pop": 0,
         "breakout": 0,
         "big": 0,
@@ -746,41 +702,116 @@
       "tierClass": "S"
     },
     {
-      "id": "news-kill-jackie-sells-to-amc-plus",
-      "slug": "catherine-zeta-jones-thriller-kill-jackie-sells-to-amc",
-      "title": "Catherine Zeta-Jones Thriller Kill Jackie Sells To AMC+",
+      "id": "news-pixar-other",
+      "slug": "disney-lays-off-hundreds-pixar-hit-hardest",
+      "title": "Disney Lays Off Hundreds, Pixar Hit Hardest",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "pixar-other",
+      "primaryKeyword": "pixar layoffs",
+      "primaryEntity": "Pixar Short Films Collection: Volume 1",
+      "entities": [
+        "Pixar",
+        "Disney"
+      ],
+      "angle": "Disney's significant layoffs disproportionately impact its animation division, Pixar.",
+      "tmdbType": "movie",
+      "source": "rss:TheWrap",
+      "sources": [
+        {
+          "outlet": "TheWrap",
+          "tier": 7,
+          "url": "https://www.thewrap.com/industry-news/business/disney-pixar-layoffs-2026/",
+          "ageMin": 125,
+          "headline": "Disney Lays Off Hundreds of Staffers, Pixar Hit Hard",
+          "summary": "The layoffs are expected to be the largest round at Pixar since 2024 The post Disney Lays Off Hundreds of Staffers, Pixar Hit Hard appeared first on TheWrap ."
+        },
+        {
+          "outlet": "HoopsHype",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNS3QxU2NXYnl5QUhaZ2FhRTFFcExScE9xWkNhbC1pYklwUTRPUFdLVW5nWWdkaWxWZUMzaUVKOHJ5U2s0enJqdUljcXQwS0pBYVVUSHR1QWJmRll2S0cxSnlXTmlmaHREcGltbmJfbjZSaXBBSVZTalNmV1dCSFZGYlBNdkE5RDN4NXJCWWRnNlUzekhkSEFlUGJndjc5TVo2NHRCZHdENjZkRlNpUjktam9HQUxod2tOVHlMUk5Pcw?oc=5",
+          "ageMin": 130,
+          "headline": "Pacers Foundation is bringing back the celebrity … - HoopsHype",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMivwFBVV95cUxNS3QxU2NXYnl5QUhaZ2FhRTFFcExScE9xWkNhbC1pYklwUTRPUFdLVW5nWWdkaWxWZUMzaUVKOHJ5U2s0enJqdUljcXQwS0pBYVVUSHR1QWJmRll2S0cxSnlXTmlmaHREcGltbmJfbjZSaXBBSVZTalNmV1dCSFZGYlBNdkE5RDN4NXJCWWRnNlUzekhkSEFlUGJndjc5TVo2NHRCZHdENjZkRlNpUjktam9HQUxod2tOVHl"
+        }
+      ],
+      "ageMin": 125,
+      "_cand": {
+        "key": "rss:disney-lays-off-hundreds-of-staffers-pixar-hit-hard",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 2,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 2,
+        "outlets": [
+          "TheWrap",
+          "HoopsHype"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": null,
+        "framing": "plain",
+        "status": "CONFIRMED",
+        "publishable": true
+      },
+      "priority": 84,
+      "signals": {
+        "recency": 16,
+        "corroboration": 18,
+        "status": 25,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 12,
+        "trending": 8,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-disney-job-cuts-pixar-national-geographic",
+      "slug": "disney-cutting-several-hundred-jobs-pixar-and-national-geographic-amon",
+      "title": "Disney Cutting Several Hundred Jobs; Pixar And National Geographic Among Most Affected Divisions",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "kill-jackie-sells-to-amc-plus",
-      "primaryKeyword": "Kill Jackie",
-      "primaryEntity": "To Kill with Intrigue",
+      "eventType": "other",
+      "sensitivity": "high",
+      "eventSlug": "disney-job-cuts-pixar-national-geographic",
+      "primaryKeyword": "Disney job cuts",
+      "primaryEntity": "Disney",
       "entities": [
-        "Kill Jackie",
-        "Catherine Zeta-Jones",
-        "AMC+"
+        "Pixar Short Films Collection: Volume 1",
+        "Pixar",
+        "National Geographic"
       ],
-      "angle": "AMC+ has acquired the exclusive rights to the Catherine Zeta-Jones thriller 'Kill Jackie'.",
+      "angle": "Disney is implementing significant layoffs, with Pixar and National Geographic divisions being heavily impacted.",
       "tmdbType": "movie",
-      "source": "rss:Deadline",
+      "source": "gnews:Deadline",
       "sources": [
         {
           "outlet": "Deadline",
           "tier": 7,
-          "url": "https://deadline.com/2026/07/amc-plus-kill-jackie-catherine-zeta-jones-thriller-ings-1236999320/",
-          "ageMin": 42,
-          "headline": "Catherine Zeta-Jones Thriller Kill Jackie Sells To AMC+",
-          "summary": "Catherine Zeta-Jones thriller Kill Jackie is heading to AMC+. AMC s streamer has landed exclusive rights to the show, which is an adaptation of Aidan Truhen s gonzo thriller The Price You Pay and stars Zeta-Jones opposite the likes of The Gentlemen star Daniel Ings. Kill Jackie, which is also exec produced by Oscar-winner Zeta-Jones, will launch [ ]"
+          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOaVpNR3BrYml0MjJDS1lXcU5BUDA5ZE9fc1JvcWRZZTN0NlludW1ib3BaMmQ2MS1aVW1EWFBDVjR4Ry1WbEdHSWxOSE14WkJUTk9LQnd6UWIwOVN0bWZmeklCd3FfSEN4cl93ZXpqSXpJOGhuRlRlU003Z01qVG9uSXBUaWlSTXJP?oc=5",
+          "ageMin": 114,
+          "headline": "Disney Cutting Several Hundred Jobs; Pixar And National Geographic Among Most Affected Divisions - Deadline",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiiAFBVV95cUxOaVpNR3BrYml0MjJDS1lXcU5BUDA5ZE9fc1JvcWRZZTN0NlludW1ib3BaMmQ2MS1aVW1EWFBDVjR4Ry1WbEdHSWxOSE14WkJUTk9LQnd6UWIwOVN0bWZmeklCd3FfSEN4cl93ZXpqSXpJOGhuRlRlU003Z01qVG9uSXBUaWlSTXJP?oc=5\" target=\"_blank\" Disney Cutting Several Hundred Jobs; Pixar A"
         }
       ],
-      "ageMin": 42,
+      "ageMin": 114,
       "_cand": {
-        "key": "rss:catherine-zeta-jones-thriller-kill-jackie-sells-to-amc-",
+        "key": "rss:disney-cutting-several-hundred-jobs-pixar-and-national-geogr",
         "popularity": 0,
-        "kind": "rss-news"
+        "kind": "gnews"
       },
       "corroborationCount": 1,
       "verification": {
@@ -791,16 +822,82 @@
           "Deadline"
         ],
         "maxTier": 7,
-        "sensitivity": "normal",
+        "sensitivity": "high",
         "attribution": "Deadline",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 81,
+      "priority": 57,
       "signals": {
-        "recency": 24,
+        "recency": 16,
         "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 6,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "S"
+    },
+    {
+      "id": "news-the-portrait-of-a-lady-masterpiece-new-series",
+      "slug": "pbs-s-masterpiece-reveals-cast-and-details-for-new-series-the-portrait",
+      "title": "PBS's MASTERPIECE Reveals Cast and Details for New Series 'The Portrait of a Lady'",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "the-portrait-of-a-lady-masterpiece-new-series",
+      "primaryKeyword": "The Portrait of a Lady",
+      "primaryEntity": "The Portrait of a Lady",
+      "entities": [
+        "MASTERPIECE",
+        "PBS"
+      ],
+      "angle": "PBS's MASTERPIECE announces cast and details for upcoming series 'The Portrait of a Lady'.",
+      "tmdbType": "movie",
+      "source": "gnews:PBS",
+      "sources": [
+        {
+          "outlet": "PBS",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPaFM2T09GSE00TS1tckhySmtUX0RMT2FZT0NzZDNDV0JFZWZMY1d5eE5aRklYczZLOXBZaVpLd2JMeFo5WGZRNG9lelQtc0FQWk1rbW5LX1RxVkg3MDVudl95aFRlM3NBeml0T2lBUF9iUXk0SE5OZEo4TG1rVlZOdGJ1aEYwMklTclFUYVFuQ1dPNm4xZVVRWjNKSXRaS0ptNWV4Ukt0S1ViNWxMa3FRandKTFNwQQ?oc=5",
+          "ageMin": 1570,
+          "headline": "The Portrait of a Lady on MASTERPIECE: Cast New Series Details - PBS",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxPaFM2T09GSE00TS1tckhySmtUX0RMT2FZT0NzZDNDV0JFZWZMY1d5eE5aRklYczZLOXBZaVpLd2JMeFo5WGZRNG9lelQtc0FQWk1rbW5LX1RxVkg3MDVudl95aFRlM3NBeml0T2lBUF9iUXk0SE5OZEo4TG1rVlZOdGJ1aEYwMklTclFUYVFuQ1dPNm4xZVVRWjNKSXRaS0ptNWV4Ukt0S1ViNWxMa3FRandKTFNwQQ?oc=5"
+        }
+      ],
+      "ageMin": 1570,
+      "_cand": {
+        "key": "rss:the-portrait-of-a-lady-on-masterpiece-cast-new-series-detail",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "PBS"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "PBS",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 54,
+      "signals": {
+        "recency": 1,
+        "corroboration": 8,
         "status": 18,
         "type": 9,
         "pop": 0,
@@ -810,309 +907,42 @@
         "spice": 0,
         "softTv": 0
       },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-neill-blomkamp-ai-short-nightborne",
-      "slug": "neill-blomkamp-releases-ai-generated-horror-short-nightborne",
-      "title": "Neill Blomkamp Releases AI-Generated Horror Short 'Nightborne'",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "neill-blomkamp-ai-short-nightborne",
-      "primaryKeyword": "Neill Blomkamp AI short",
-      "primaryEntity": "Neill Blomkamp",
-      "entities": [
-        "District 9",
-        "Nightborne"
-      ],
-      "angle": "District 9 director Neill Blomkamp has released an AI-generated horror short, 'Nightborne,' as a potential test for a future feature film.",
-      "tmdbType": "movie",
-      "source": "gnews:GeekTyrant",
-      "sources": [
-        {
-          "outlet": "GeekTyrant",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxNZXJmR0Fiam92YnAyOTUwcm1JWk5kM0NSM0I1cDFxQ0tfeXBoR1ZsbGxOQnRmSTl4N3ZRdDFjUFNuSjRsbHBIbWtFaGpUc0ZoVjloY001ZjNwVlBqYjhoMG84cEJfa0gzYXlsMEZ0TjJHb3NNNWM1clZnWWFMclJZRkFLS3BoM01XRlpFd3FlY3ZNUTFGWXJMWUc5c3pWdTgxQ1dmQk9vcDBYVmJlNlNRSFJSV3hVdnVTOGhURV80c1JoQmYtbDFrQkw0ZS1aQkF4THBqa0U2X2FxOVY3bExaNTFTRzFXaU1h?oc=5",
-          "ageMin": 34,
-          "headline": "DISTRICT 9 Director Neill Blomkamp Releases AI Generated Horror Short NIGHTBORNE as a Test for What Could Be His Next Feature - GeekTyrant",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMi6AFBVV95cUxNZXJmR0Fiam92YnAyOTUwcm1JWk5kM0NSM0I1cDFxQ0tfeXBoR1ZsbGxOQnRmSTl4N3ZRdDFjUFNuSjRsbHBIbWtFaGpUc0ZoVjloY001ZjNwVlBqYjhoMG84cEJfa0gzYXlsMEZ0TjJHb3NNNWM1clZnWWFMclJZRkFLS3BoM01XRlpFd3FlY3ZNUTFGWXJMWUc5c3pWdTgxQ1dmQk9vcDBYVmJlNlNRSFJSV3hVdnVTOGh"
-        }
-      ],
-      "ageMin": 34,
-      "_cand": {
-        "key": "rss:district-9-director-neill-blomkamp-releases-ai-generated-hor",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "GeekTyrant"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "GeekTyrant",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 83,
-      "signals": {
-        "recency": 24,
-        "corroboration": 8,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "music-news-hatebreed-new-album-kill-count-increase",
-      "slug": "hatebreed-announce-new-album-kill-count-increase-share-crawl-video",
-      "title": "Hatebreed Announce New Album 'Kill Count Increase,' Share 'Crawl' Video",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "hatebreed-new-album-kill-count-increase",
-      "primaryKeyword": "hatebreed new album",
-      "primaryEntity": "Hatebreed",
-      "entities": [
-        "Kill Count Increase"
-      ],
-      "angle": "Hardcore band Hatebreed announces new album 'Kill Count Increase' and shares a new video.",
-      "tmdbType": "movie",
-      "source": "gnews:antiMusic",
-      "sources": [
-        {
-          "outlet": "antiMusic",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQSFctY0lJaldiSnNtTFc2WUhaOUdWX3B4STBMNVUxSGNvbDBhS0lFbGRxUmhqNUxBZlRETGpDa2ZTckNVdGxuQXNqczBZaEEzWTZQQzVjc0xkYU5WOWpHa0dzRTlENDJaTUFWUkU3MkRDQnAxRHZJTlk4cVJMd2tNRHNsX09LT3d4NmZhdU5ueGpScm04WDNsRXZ5RURPSFNrbnk2T24yU2NiLUJiT1NN?oc=5",
-          "ageMin": 6,
-          "headline": "Hatebreed Reveal 'Kill Count Increase' Video And Announce New Album - antiMusic",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxQSFctY0lJaldiSnNtTFc2WUhaOUdWX3B4STBMNVUxSGNvbDBhS0lFbGRxUmhqNUxBZlRETGpDa2ZTckNVdGxuQXNqczBZaEEzWTZQQzVjc0xkYU5WOWpHa0dzRTlENDJaTUFWUkU3MkRDQnAxRHZJTlk4cVJMd2tNRHNsX09LT3d4NmZhdU5ueGpScm04WDNsRXZ5RURPSFNrbnk2T24yU2NiLUJiT1NN?oc=5\" target=\""
-        }
-      ],
-      "ageMin": 6,
-      "_cand": {
-        "key": "rss:hatebreed-reveal-kill-count-increase-video-and-announce-new-",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "antiMusic"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "antiMusic",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 65,
-      "signals": {
-        "recency": 30,
-        "corroboration": 8,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "music-news-harry-styles-cancels-brazil-tour-date",
-      "slug": "harry-styles-cancels-together-together-tour-date-in-brazil-here-s-why",
-      "title": "Harry Styles Cancels Together, Together Tour Date in Brazil: Here s Why",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "harry-styles-cancels-brazil-tour-date",
-      "primaryKeyword": "Harry Styles",
-      "primaryEntity": "Harry Styles",
-      "entities": [
-        "Together, Together Tour"
-      ],
-      "angle": "Harry Styles has canceled a scheduled date for his 'Together, Together Tour' in Brazil.",
-      "tmdbType": "movie",
-      "source": "rss:Billboard",
-      "sources": [
-        {
-          "outlet": "Billboard",
-          "tier": 7,
-          "url": "https://www.billboard.com/music/music-news/harry-styles-show-canceled-brazil-together-together-tour-1236299613/",
-          "ageMin": 21,
-          "headline": "Harry Styles Cancels Together, Together Tour Date in Brazil: Here s Why",
-          "summary": "The pop star was due to play the third show of a four-night run in São Paulo on July 21."
-        }
-      ],
-      "ageMin": 21,
-      "_cand": {
-        "key": "rss:harry-styles-cancels-together-together-tour-date-in-brazil-h",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "breakoutVelocity": 0,
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Billboard"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Billboard",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 59,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
       "tierClass": "C"
     },
     {
-      "id": "news-disney-layoffs-pixar-national-geographic",
-      "slug": "disney-cuts-hundreds-of-jobs-pixar-and-national-geographic-hit-hardest",
-      "title": "Disney Cuts Hundreds of Jobs, Pixar and National Geographic Hit Hardest",
+      "id": "news-action-xtreme-bad-day-at-the-office-uk-distribution",
+      "slug": "action-xtreme-acquires-uk-rights-for-john-hannah-thriller-bad-day-at-t",
+      "title": "Action Xtreme Acquires UK Rights for John Hannah Thriller 'Bad Day at the Office'",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
-      "eventType": "other",
+      "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "disney-layoffs-pixar-national-geographic",
-      "primaryKeyword": "disney layoffs",
-      "primaryEntity": "Disney",
+      "eventSlug": "action-xtreme-bad-day-at-the-office-uk-distribution",
+      "primaryKeyword": "Bad Day at the Office UK distribution",
+      "primaryEntity": "Bad Day at the Office",
       "entities": [
-        "Pixar Short Films Collection: Volume 1",
-        "Pixar",
-        "National Geographic"
+        "John Hannah",
+        "Chee Keong Cheung",
+        "Edinburgh Film Festival"
       ],
-      "angle": "Disney cuts hundreds of jobs, impacting divisions like Pixar and National Geographic.",
-      "tmdbType": "movie",
-      "source": "rss:Deadline",
-      "sources": [
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/disney-layoffs-pixar-national-geographic-1236999275/",
-          "ageMin": 53,
-          "headline": "Disney Cutting Several Hundred Jobs; Pixar And National Geographic Among Most Affected Divisions",
-          "summary": "Disney is cutting several hundred positions, with Pixar and National Geographic among the divisions most affected by the move. Tuesday s layoffs come as ESPN also has let go of staffers as a result of a deal with the NFL. Staffers at Disney Entertainment Television and Studios, among other units, have been notified, a person familiar [ ]"
-        }
-      ],
-      "ageMin": 53,
-      "_cand": {
-        "key": "rss:disney-cutting-several-hundred-jobs-pixar-and-national-geogr",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Deadline"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Deadline",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 71,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 12,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-disney-other",
-      "slug": "disney-cutting-hundreds-more-jobs-in-new-round-of-corporate-streamlini",
-      "title": "Disney Cutting Hundreds More Jobs in New Round of Corporate Streamlining",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "disney-other",
-      "primaryKeyword": "disney layoffs",
-      "primaryEntity": "Disney",
-      "entities": [
-        "Pixar Short Films Collection: Volume 1",
-        "Pixar",
-        "National Geographic",
-        "ESPN"
-      ],
-      "angle": "Disney continues corporate streamlining with another round of layoffs affecting Pixar, Nat Geo, and ESPN.",
+      "angle": "Action Xtreme secures UK and Ireland distribution for the first-person perspective action film 'Bad Day at the Office,' set to open the Edinburgh Film Festival's Midnight Madness strand.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
         {
           "outlet": "THR",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/business/business-news/new-disney-layoffs-pixar-streamlining-1236652502/",
-          "ageMin": 76,
-          "headline": "Disney Cutting Hundreds More Jobs In New Round of Corporate Streamlining",
-          "summary": "Pixar and Nat Geo are said to be hit particularly hard in the latest round of cuts, with some high-profile talent also being let go at ESPN."
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/action-xtreme-distribution-uk-john-hannah-bad-day-film-news-1236652884/",
+          "ageMin": 362,
+          "headline": "Action Xtreme Expands Into U.K., Ireland Distribution With John Hannah-Starring Bad Day at the Office (Exclusive)",
+          "summary": "Chee Keong Cheung's adrenaline-fueled caper, shot entirely from the first-person perspective using GoPro cameras, is set to open Edinburgh Film Festival's Midnight Madness strand."
         }
       ],
-      "ageMin": 76,
+      "ageMin": 362,
       "_cand": {
-        "key": "rss:disney-cutting-hundreds-more-jobs-in-new-round-of-corporate-",
+        "key": "rss:action-xtreme-expands-into-u-k-ireland-distribution-with-joh",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -1131,10 +961,75 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 57,
+      "priority": 67,
+      "signals": {
+        "recency": 4,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-harlan-coben-tv-shows-to-stream",
+      "slug": "loved-i-will-find-you-here-are-the-harlan-coben-tv-shows-to-stream-nex",
+      "title": "Loved 'I Will Find You'? Here are the Harlan Coben TV shows to stream next",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "harlan-coben-tv-shows-to-stream",
+      "primaryKeyword": "Harlan Coben",
+      "primaryEntity": "Harlan Coben's Shelter",
+      "entities": [
+        "Harlan Coben"
+      ],
+      "angle": "Recommendation of Harlan Coben TV shows for fans of 'I Will Find You'.",
+      "tmdbType": "movie",
+      "source": "gnews:Huron Daily Tribune",
+      "sources": [
+        {
+          "outlet": "Huron Daily Tribune",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNbXNZQy1hN0l1UHV2YkdjU016bTJzLWczSDVsMEZDZFcxTmVXcVJEM2FlQ2lTVmVGQmZjQktCQTlPNFFKTEl0ZkRMaWtDSld3WmhFbng1eEM1MHNWNUtBZ2dFTWZlcnQwOHpSeURfanpaanVENkRFS3NHNmFzRUR4NUV2T1FPeE1kZ3Rn?oc=5",
+          "ageMin": 86,
+          "headline": "Loved 'I Will Find You'? Here are the Harlan Coben TV shows to stream next - Huron Daily Tribune",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiiwFBVV95cUxNbXNZQy1hN0l1UHV2YkdjU016bTJzLWczSDVsMEZDZFcxTmVXcVJEM2FlQ2lTVmVGQmZjQktCQTlPNFFKTEl0ZkRMaWtDSld3WmhFbng1eEM1MHNWNUtBZ2dFTWZlcnQwOHpSeURfanpaanVENkRFS3NHNmFzRUR4NUV2T1FPeE1kZ3Rn?oc=5\" target=\"_blank\" Loved 'I Will Find You'? Here are the Ha"
+        }
+      ],
+      "ageMin": 86,
+      "_cand": {
+        "key": "rss:loved-i-will-find-you-here-are-the-harlan-coben-tv-shows-to-",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "Huron Daily Tribune"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "Huron Daily Tribune",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 53,
       "signals": {
         "recency": 16,
-        "corroboration": 12,
+        "corroboration": 8,
         "status": 18,
         "type": 5,
         "pop": 0,
@@ -1148,8 +1043,8 @@
     },
     {
       "id": "news-nicolas-winding-refn-drive-making-of",
-      "slug": "nicolas-winding-refn-reveals-chaotic-making-of-drive-most-everyone-hat",
-      "title": "Nicolas Winding Refn Reveals Chaotic Making of 'Drive': 'Most Everyone Hated It'",
+      "slug": "nicolas-winding-refn-reveals-the-chaotic-making-of-drive-most-everyone",
+      "title": "Nicolas Winding Refn Reveals the Chaotic Making of 'Drive': Most Everyone Hated It",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
@@ -1160,10 +1055,10 @@
       "primaryKeyword": "nicolas winding refn drive",
       "primaryEntity": "Drive",
       "entities": [
-        "Drive (film)",
+        "Drive (2011 film)",
         "Nicolas Winding Refn"
       ],
-      "angle": "Director Nicolas Winding Refn reflects on the challenging and initially poorly received production of his cult classic 'Drive'.",
+      "angle": "Director Nicolas Winding Refn reveals the challenging production of his cult neo-noir film 'Drive,' noting initial widespread dislike for the project.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
@@ -1171,12 +1066,12 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/movies/movie-features/nicolas-winding-refn-drive-her-private-hell-ryan-gosling-1236652395/",
-          "ageMin": 97,
+          "ageMin": 156,
           "headline": "Nicolas Winding Refn Reveals the Chaotic Making of Drive : Most Everyone Hated It",
           "summary": "As his latest film, 'Her Private Hell,' arrives in theaters, the filmmaker reflects on the making of the 2011 neo-noir classic."
         }
       ],
-      "ageMin": 97,
+      "ageMin": 156,
       "_cand": {
         "key": "rss:nicolas-winding-refn-reveals-the-chaotic-making-of-drive-mos",
         "popularity": 0,
@@ -1213,38 +1108,37 @@
       "tierClass": "B"
     },
     {
-      "id": "news-star-wars-the-experience-largest-licensed-exhibition",
-      "slug": "star-wars-the-experience-will-be-the-largest-officially-licensed-exhib",
-      "title": "'Star Wars:’ The Experience Will Be the Largest Officially Licensed Exhibition the Franchise Has Ever Assembled",
+      "id": "news-star-wars-hotel-documentary",
+      "slug": "the-mythic-star-wars-hotel-is-at-the-heart-of-yet-another-documentary",
+      "title": "The Mythic ‘Star Wars’ Hotel Is at the Heart of Yet Another Documentary",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "star-wars-the-experience-largest-licensed-exhibition",
-      "primaryKeyword": "Star Wars exhibition",
-      "primaryEntity": "Star Wars: Episode II - Attack of the Clones",
+      "eventSlug": "star-wars-hotel-documentary",
+      "primaryKeyword": "star wars hotel documentary",
+      "primaryEntity": "Star Wars: Galactic Starcruiser",
       "entities": [
-        "Star Wars: The Experience",
         "Star Wars"
       ],
-      "angle": "Largest officially licensed Star Wars exhibition ever announced.",
+      "angle": "New documentary to explore the rise and fall of the ambitious Star Wars hotel.",
       "tmdbType": "movie",
-      "source": "gnews:Hypebeast",
+      "source": "gnews:Gizmodo",
       "sources": [
         {
-          "outlet": "Hypebeast",
+          "outlet": "Gizmodo",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNZS16dmdELWR1UmphTUQyY1ByZmVXOWktSW9SZFJVZnNVRk45N2hCRlp2b2VFN2U0emU5U0dlNUU0V0xMLW1tNTJVanpmTWo4VG1ZcWQzTk5saXhUcnBKenE4d1BxM0VzY2lRbHNFTkRIZERRbFY3YndTdGVKZ3ZxZ1R0dXhaMFRfVlpnOFI4SGh5T2dwVnpoNDJhQ3NfWjd3V296Mkg3djJTRkI0enZVWFdna21uX3JCZmlMbm9pX056YVFhcUxTN0g3dmJrc1dMZTJ3?oc=5",
-          "ageMin": 501,
-          "headline": "‘Star Wars:’ The Experience Will Be the Largest Officially Licensed Exhibition the Franchise Has Ever Assembled - Hypebeast",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMi0wFBVV95cUxNZS16dmdELWR1UmphTUQyY1ByZmVXOWktSW9SZFJVZnNVRk45N2hCRlp2b2VFN2U0emU5U0dlNUU0V0xMLW1tNTJVanpmTWo4VG1ZcWQzTk5saXhUcnBKenE4d1BxM0VzY2lRbHNFTkRIZERRbFY3YndTdGVKZ3ZxZ1R0dXhaMFRfVlpnOFI4SGh5T2dwVnpoNDJhQ3NfWjd3V296Mkg3djJTRkI0enZVWFdna21uX3JCZml"
+          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOcDVQLWk1VHpvZlJtU0Z1NzZBREJGb1dqdjVNRUM4SUdRWDhjUWhqenM5MGdLaEhfVS02WnBrRjZoOEJqNWZFZ0JFWFdSaVRvR0NYaThsb0lrbXlKdHh5N3NHanZKbnh6WWpUUlBNZS1QcENqZ2VnYUdKalpZN0x5cTNwamlFdTNnYllpSEVwWXdpZEpIcEY3UHZOZlVGUjhfVXc?oc=5",
+          "ageMin": 361,
+          "headline": "The Mythic ‘Star Wars’ Hotel Is at the Heart of Yet Another Documentary - Gizmodo",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxOcDVQLWk1VHpvZlJtU0Z1NzZBREJGb1dqdjVNRUM4SUdRWDhjUWhqenM5MGdLaEhfVS02WnBrRjZoOEJqNWZFZ0JFWFdSaVRvR0NYaThsb0lrbXlKdHh5N3NHanZKbnh6WWpUUlBNZS1QcENqZ2VnYUdKalpZN0x5cTNwamlFdTNnYllpSEVwWXdpZEpIcEY3UHZOZlVGUjhfVXc?oc=5\" target=\"_blank\" The Mythi"
         }
       ],
-      "ageMin": 501,
+      "ageMin": 361,
       "_cand": {
-        "key": "rss:-star-wars-the-experience-will-be-the-largest-officially-lic",
+        "key": "rss:the-mythic-star-wars-hotel-is-at-the-heart-of-yet-another-do",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -1254,11 +1148,11 @@
         "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "Hypebeast"
+          "Gizmodo"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "Hypebeast",
+        "attribution": "Gizmodo",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -1279,373 +1173,38 @@
       "tierClass": "B"
     },
     {
-      "id": "news-luke-skywalker-lightsaber-prop-auction-sale",
-      "slug": "luke-skywalker-s-lightsaber-prop-fetches-3-75-million-at-auction",
-      "title": "Luke Skywalker's Lightsaber Prop Fetches $3.75 Million at Auction",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "luke-skywalker-lightsaber-prop-auction-sale",
-      "primaryKeyword": "luke skywalker lightsaber auction",
-      "primaryEntity": "Luke Skywalker",
-      "entities": [
-        "Star Wars"
-      ],
-      "angle": "A severed hand and lightsaber prop belonging to Luke Skywalker from 'Star Wars' sold for $3.75 million at auction.",
-      "tmdbType": "movie",
-      "source": "gnews:Boing Boing",
-      "sources": [
-        {
-          "outlet": "Boing Boing",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNQTB3ZGZfdUc2S0hESnhxUnJEWHlHd1A5WUZHVDZYV3RXSDRSSWt0XzhMeFhiMmhnc21CMlJpMVZGaHlRUVFxV09TTWlxU1Bicl9ZRDNtcDVMZGJTQzBIQ0pLa0tfdzFwdml2eFE0UkVCLWJVZ0xjdnF2TTliOXJBc215eXdlUXFqcUtxVkNFYUJPYkFmbEZnZTdVZXVTd3JnVWZmN9IBqgFBVV95cUxQLW41ZGNzRnZmdi01UW9xTkVWNEJwRzhKTVBzYmZyUENOUks5QndyeC1OZUFIX21VT2sweHhfSUQ1Z2trXzhIdnNvSmotVFphejdfM3VSLXBxSUI4cW8wWHdRUlpTaDhJTzRRRTFGU2pZNFhSS0hqRzdZTWdEQS1nYlU2cjQyNUFYbjVFaFZGdGtqcXoteFdVcDRKd2R1dHZsMU96cklMUWJpUQ?oc=5",
-          "ageMin": 61,
-          "headline": "Luke Skywalker's severed hand and lightsaber prop sold for $3.75M - Boing Boing",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxNQTB3ZGZfdUc2S0hESnhxUnJEWHlHd1A5WUZHVDZYV3RXSDRSSWt0XzhMeFhiMmhnc21CMlJpMVZGaHlRUVFxV09TTWlxU1Bicl9ZRDNtcDVMZGJTQzBIQ0pLa0tfdzFwdml2eFE0UkVCLWJVZ0xjdnF2TTliOXJBc215eXdlUXFqcUtxVkNFYUJPYkFmbEZnZTdVZXVTd3JnVWZmN9IBqgFBVV95cUxQLW41ZGNzRnZmdi0"
-        }
-      ],
-      "ageMin": 61,
-      "_cand": {
-        "key": "rss:luke-skywalker-s-severed-hand-and-lightsaber-prop-sold-for-3",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "Boing Boing"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "Boing Boing",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 59,
-      "signals": {
-        "recency": 16,
-        "corroboration": 8,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 12,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-luke-skywalker-lightsaber-breaks-star-wars-record-at-auction",
-      "slug": "luke-skywalker-s-lightsaber-breaks-star-wars-record-at-auction",
-      "title": "Luke Skywalker's Lightsaber Breaks Star Wars Record at Auction",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "luke-skywalker-lightsaber-breaks-star-wars-record-at-auction",
-      "primaryKeyword": "luke skywalker lightsaber auction",
-      "primaryEntity": "Luke Skywalker's lightsaber",
-      "entities": [
-        "Star Wars"
-      ],
-      "angle": "A prop lightsaber belonging to Luke Skywalker has set a new record at auction.",
-      "tmdbType": "movie",
-      "source": "gnews:Euronews.com",
-      "sources": [
-        {
-          "outlet": "Euronews.com",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQTWg1VlUxd3BfOVg0MlcxSjdsc0F5RFdlbFJ0aWwzaUUwRlZYeE9aSUdrbEJZNjJhcjc1S0kyZ0Jhd3NTMWJGbmlBMFF1QTN0Nkwzcm9zRnZIenlVbnFiQnZUaXlxSUU1T1Q4UmtDREkxazV0dUJyVndUSFF5VzE3ZmJsQ21zcXZSRWRmVUQ0QmN5dnNUNHN0X2MwUzRZUWJDUGtlZXhkbHJ2OGMyaW9IelVsdkY0SzJuVDRzOGxfamR2ZEFtb0FPbQ?oc=5",
-          "ageMin": 136,
-          "headline": "Luke Skywalker's lightsaber breaks Star Wars record at auction - Euronews.com",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiyAFBVV95cUxQTWg1VlUxd3BfOVg0MlcxSjdsc0F5RFdlbFJ0aWwzaUUwRlZYeE9aSUdrbEJZNjJhcjc1S0kyZ0Jhd3NTMWJGbmlBMFF1QTN0Nkwzcm9zRnZIenlVbnFiQnZUaXlxSUU1T1Q4UmtDREkxazV0dUJyVndUSFF5VzE3ZmJsQ21zcXZSRWRmVUQ0QmN5dnNUNHN0X2MwUzRZUWJDUGtlZXhkbHJ2OGMyaW9IelVsdkY0SzJuVDR"
-        }
-      ],
-      "ageMin": 136,
-      "_cand": {
-        "key": "rss:luke-skywalker-s-lightsaber-breaks-star-wars-record-at-aucti",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "Euronews.com"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "Euronews.com",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 59,
-      "signals": {
-        "recency": 16,
-        "corroboration": 8,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 12,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-steve-sansweet-on-star-wars-global-cultural-force",
-      "slug": "steve-sansweet-on-how-star-wars-grew-into-a-global-cultural-force",
-      "title": "Steve Sansweet on How Star Wars Grew Into a Global Cultural Force",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "steve-sansweet-on-star-wars-global-cultural-force",
-      "primaryKeyword": "star wars cultural impact",
-      "primaryEntity": "Star Wars",
-      "entities": [
-        "Steve Sansweet"
-      ],
-      "angle": "Steve Sansweet discusses how Star Wars evolved into a significant global cultural phenomenon.",
-      "tmdbType": "movie",
-      "source": "gnews:Fantha Tracks",
-      "sources": [
-        {
-          "outlet": "Fantha Tracks",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOSUNTQjdwdDc3ZnFmeDJNWFphLXdqN0pqN2p0VHROMmlqSmh0dTItY3Q0YVFqX3o3YVhXdWNpVS1kOXFDaTN1RUhVY0tMQ1F1X2xISTFFLWZSbWFSd1g4ZGRqc0ZhcDBOVWZndUJHN1QxdTJLdlAxTWVGMXF0bzEwdW4yNU9jellfSXhpNkp5VHhVNDF1aEdKbEtDNEY3S0t3ZmNBazJZVy1XQQ?oc=5",
-          "ageMin": 155,
-          "headline": "Steve Sansweet on how Star Wars grew into a global cultural force - Fantha Tracks",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxOSUNTQjdwdDc3ZnFmeDJNWFphLXdqN0pqN2p0VHROMmlqSmh0dTItY3Q0YVFqX3o3YVhXdWNpVS1kOXFDaTN1RUhVY0tMQ1F1X2xISTFFLWZSbWFSd1g4ZGRqc0ZhcDBOVWZndUJHN1QxdTJLdlAxTWVGMXF0bzEwdW4yNU9jellfSXhpNkp5VHhVNDF1aEdKbEtDNEY3S0t3ZmNBazJZVy1XQQ?oc=5\" target=\"_blank"
-        }
-      ],
-      "ageMin": 155,
-      "_cand": {
-        "key": "rss:steve-sansweet-on-how-star-wars-grew-into-a-global-cultural-",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "Fantha Tracks"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "Fantha Tracks",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 59,
-      "signals": {
-        "recency": 16,
-        "corroboration": 8,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 12,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-matt-damon-odyssey-stunt-double",
-      "slug": "matt-damon-reveals-why-he-had-female-stunt-double-for-odyssey-scene-gr",
-      "title": "Matt Damon Reveals Why He Had Female Stunt Double for Odyssey Scene: Greatest Arms I’ve Ever Seen",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "matt-damon-odyssey-stunt-double",
-      "primaryKeyword": "matt damon odyssey",
-      "primaryEntity": "Matt Damon",
-      "entities": [
-        "Christopher Nolan",
-        "Odysseus"
-      ],
-      "angle": "Matt Damon explains his choice to use a female stunt double for a scene in Christopher Nolan's 'The Odyssey'.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/matt-damon-female-stunt-double-odyssey-scene-bicep-1236652737/",
-          "ageMin": 907,
-          "headline": "Matt Damon Reveals Why He Had Female Stunt Double for Odyssey Scene: Greatest Arms I ve Ever Seen",
-          "summary": "The actor plays Odysseus in Christopher Nolan's epic action fantasy film."
-        }
-      ],
-      "ageMin": 907,
-      "_cand": {
-        "key": "rss:matt-damon-reveals-why-he-had-female-stunt-double-for-odysse",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 48,
-      "signals": {
-        "recency": 1,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 12,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-kaylee-hottle-dies-at-19",
-      "slug": "kaylee-hottle-godzilla-vs-kong-star-dies-at-19",
-      "title": "Kaylee Hottle, Godzilla vs. Kong Star, Dies at 19",
+      "id": "news-harry-styles-cancels-brazil-show-health-issue",
+      "slug": "harry-styles-cancels-brazil-show-over-health-issue",
+      "title": "Harry Styles Cancels Brazil Show Over ‘Health Issue’",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
-      "eventType": "death",
+      "eventType": "health",
       "sensitivity": "high",
-      "eventSlug": "kaylee-hottle-dies-at-19",
-      "primaryKeyword": "Kaylee Hottle",
-      "primaryEntity": "Kaylee Hottle",
+      "tier": "popular",
+      "eventSlug": "harry-styles-cancels-brazil-show-health-issue",
+      "primaryKeyword": "Harry Styles",
+      "primaryEntity": "Harry Styles",
       "entities": [
-        "Godzilla vs. Kong"
+        "São Paulo"
       ],
-      "angle": "Actress Kaylee Hottle, known for her role in 'Godzilla vs. Kong,' has passed away at the age of 19.",
+      "angle": "Harry Styles cancels a Brazil show due to a health issue.",
       "tmdbType": "movie",
-      "source": "rss:TheWrap",
+      "source": "rss:Rolling Stone",
       "sources": [
         {
-          "outlet": "TheWrap",
+          "outlet": "Rolling Stone",
           "tier": 7,
-          "url": "https://www.thewrap.com/culture-lifestyle/culture/kaylee-hottle-dies-obit/",
-          "ageMin": 6,
-          "headline": "Kaylee Hottle, Godzilla vs. Kong Star, Dies at 19",
-          "summary": "The actress was killed in a car accident, her father shares The post Kaylee Hottle, Godzilla vs. Kong Star, Dies at 19 appeared first on TheWrap ."
-        },
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/film/global/kaylee-hottle-dead-godzilla-vs-kong-1236817223/",
+          "url": "https://www.rollingstone.com/music/music-news/harry-styles-cancels-brazil-show-health-issue-1235596495/",
           "ageMin": 30,
-          "headline": "Godzilla vs. Kong Star Kaylee Hottle Dies at 18",
-          "summary": "Kaylee Hottle, the actress known for her roles in Godzilla vs. Kong and Godzilla x Kong: The New Empire, died on Tuesday in a car accident. She was 18. Her father, Joshua Hottle, announced the news in a Facebook livestream using American Sign Language and confirmed her death to TMZ, saying that she died in [ ]"
+          "headline": "Harry Styles Cancels Brazil Show Over ‘Health Issue’",
+          "summary": "The star was scheduled to perform four nights in the city, and Live Nation Brazil said Friday’s show in São Paulo will proceed as normal"
         }
       ],
-      "ageMin": 6,
+      "ageMin": 30,
       "_cand": {
-        "key": "rss:kaylee-hottle-godzilla-vs-kong-star-dies-at-19",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 2,
-      "verification": {
-        "tier1Count": 2,
-        "tier1Owners": 2,
-        "outletCount": 2,
-        "outlets": [
-          "TheWrap",
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": null,
-        "framing": "plain",
-        "status": "CONFIRMED",
-        "publishable": true
-      },
-      "priority": 95,
-      "signals": {
-        "recency": 30,
-        "corroboration": 18,
-        "status": 25,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 8,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "S"
-    },
-    {
-      "id": "news-bad-bunny-reggaeton-ruling-lawsuit",
-      "slug": "bad-bunny-faces-legal-battle-over-reggaeton-ruling",
-      "title": "Bad Bunny Faces Legal Battle Over Reggaeton Ruling",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "lawsuit",
-      "sensitivity": "high",
-      "eventSlug": "bad-bunny-reggaeton-ruling-lawsuit",
-      "primaryKeyword": "Bad Bunny lawsuit",
-      "primaryEntity": "Bad Bunny",
-      "entities": [
-        "Billboard",
-        "X Music Settlement"
-      ],
-      "angle": "Bad Bunny is involved in a legal battle over a reggaeton ruling, as highlighted in Billboard's weekly legal roundup.",
-      "tmdbType": "movie",
-      "source": "rss:Billboard",
-      "sources": [
-        {
-          "outlet": "Billboard",
-          "tier": 7,
-          "url": "https://www.billboard.com/pro/legal-beat-top-lawyers-list-x-music-settlement-bad-bunny/",
-          "ageMin": 0,
-          "headline": "Top Lawyers List, X Music Settlement, Bad Bunny Lawsuit More Legal News Stories",
-          "summary": "In this week's Legal Beat newsletter, Billboard names music's top attorneys, X settles with publishers, Bad Bunny fights a reggaeton ruling, and much more."
-        }
-      ],
-      "ageMin": 0,
-      "_cand": {
-        "key": "rss:top-lawyers-list-x-music-settlement-bad-bunny-lawsuit-more-l",
+        "key": "rss:harry-styles-cancels-brazil-show-over-health-issue-",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -1655,18 +1214,18 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Billboard"
+          "Rolling Stone"
         ],
         "maxTier": 7,
         "sensitivity": "high",
-        "attribution": "Billboard",
+        "attribution": "Rolling Stone",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 76,
+      "priority": 66,
       "signals": {
-        "recency": 30,
+        "recency": 24,
         "corroboration": 12,
         "status": 18,
         "type": 12,
@@ -1674,111 +1233,44 @@
         "breakout": 0,
         "big": 0,
         "trending": 0,
-        "spice": 4,
-        "softTv": 0
-      },
-      "tierClass": "S"
-    },
-    {
-      "id": "news-richard-m-rawlings-jr-dies",
-      "slug": "richard-m-rawlings-jr-cinematographer-on-charlie-s-angels-dies-at-82",
-      "title": "Richard M. Rawlings Jr., Cinematographer on 'Charlie's Angels,' Dies at 82",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "death",
-      "sensitivity": "high",
-      "eventSlug": "richard-m-rawlings-jr-dies",
-      "primaryKeyword": "Richard M. Rawlings Jr.",
-      "primaryEntity": "Richard M. Rawlings Jr.",
-      "entities": [
-        "Charlie's Angels",
-        "L.A. Law",
-        "Boston Public",
-        "Desperate Housewives"
-      ],
-      "angle": "Cinematographer Richard M. Rawlings Jr., who worked on 'Charlie's Angels' and multiple TV series, has died at 82.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/tv/tv-news/richard-rawlings-jr-dead-charlies-angels-cinematographer-1236652967/",
-          "ageMin": 53,
-          "headline": "Richard M. Rawlings Jr., Cinematographer Who Split a Season of ‘Charlie’s Angels’ With His Dad, Dies at 82",
-          "summary": "The four-time Emmy nominee, who received an ASC career achievement award, also shot episodes of ‘Matt Houston,’ ‘L.A. Law,’ ‘Boston Public’ and ‘Desperate Housewives.’"
-        }
-      ],
-      "ageMin": 53,
-      "_cand": {
-        "key": "rss:richard-m-rawlings-jr-cinematographer-who-split-a-season-of-",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 68,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
         "spice": 0,
         "softTv": 0
       },
       "tierClass": "S"
     },
     {
-      "id": "news-whitney-cummings-trump-joke-cut-from-mark-twain-ceremony",
-      "slug": "whitney-cummings-donald-trump-sex-trafficking-joke-was-cut-from-mark-t",
-      "title": "Whitney Cummings Donald Trump Sex Trafficking Joke Was Cut From Mark Twain Ceremony on Netflix; Streamer Says Kennedy Center Axed It",
+      "id": "news-john-bonham-car-auction",
+      "slug": "john-bonham-s-car-headed-to-auction",
+      "title": "John Bonham's Car Headed to Auction",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "whitney-cummings-trump-joke-cut-from-mark-twain-ceremony",
-      "primaryKeyword": "Whitney Cummings",
-      "primaryEntity": "Whitney Cummings",
+      "tier": "popular",
+      "eventSlug": "john-bonham-car-auction",
+      "primaryKeyword": "John Bonham car",
+      "primaryEntity": "John Bonham",
       "entities": [
-        "Mark Twain Prize for American Humor"
+        "Led Zeppelin"
       ],
-      "angle": "Comedian Whitney Cummings claims a joke about Donald Trump was cut from her set at the Mark Twain Prize ceremony, with the streamer pointing to the Kennedy Center as the source of the censorship.",
+      "angle": "A vintage car potentially driven by Led Zeppelin drummer John Bonham is up for auction.",
       "tmdbType": "movie",
-      "source": "rss:Variety",
+      "source": "rss:Rolling Stone",
       "sources": [
         {
-          "outlet": "Variety",
+          "outlet": "Rolling Stone",
           "tier": 7,
-          "url": "https://variety.com/2026/tv/news/whitney-cummings-donald-trump-sex-trafficking-joke-cut-netflix-1236817183/",
-          "ageMin": 39,
-          "headline": "Whitney Cummings Donald Trump Sex Trafficking Joke Was Cut From Mark Twain Ceremony on Netflix; Streamer Says Kennedy Center Axed It",
-          "summary": "Whitney Cummings performed a comedy set at Bill Maher s Mark Twain Prize ceremony, which took place on June 28 at the Kennedy Center. But according to the comic, her closing joke won t be seen in the Netflix broadcast of the event, which streams on July 21. Cummings said earlier in July that one of her [ ]"
+          "url": "https://www.rollingstone.com/music/music-news/john-bonham-jensen-interceptor-auction-1235596516/",
+          "ageMin": 4,
+          "headline": "A Car John Bonham Probably Drove Into a Ditch Is Headed to Auction",
+          "summary": "The fully-rehabbed 1972 Jensen Interceptor III — which the Led Zeppelin drummer may have crashed in 1977 — will hit the block on July 25"
         }
       ],
-      "ageMin": 39,
+      "ageMin": 4,
       "_cand": {
-        "key": "rss:whitney-cummings-donald-trump-sex-trafficking-joke-was-cut-f",
+        "key": "rss:a-car-john-bonham-probably-drove-into-a-ditch-is-headed-to-a",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -1788,18 +1280,18 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Variety"
+          "Rolling Stone"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Variety",
+        "attribution": "Rolling Stone",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
       "priority": 65,
       "signals": {
-        "recency": 24,
+        "recency": 30,
         "corroboration": 12,
         "status": 18,
         "type": 5,
@@ -1807,208 +1299,10 @@
         "breakout": 0,
         "big": 0,
         "trending": 0,
-        "spice": 6,
+        "spice": 0,
         "softTv": 0
       },
       "tierClass": "B"
-    },
-    {
-      "id": "news-jelly-roll-bunnie-xo-relationship-timeline",
-      "slug": "a-timeline-of-jelly-roll-bunnie-xo-s-relationship",
-      "title": "A Timeline of Jelly Roll Bunnie Xo's Relationship",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "jelly-roll-bunnie-xo-relationship-timeline",
-      "primaryKeyword": "Jelly Roll",
-      "primaryEntity": "Jelly Roll",
-      "entities": [
-        "Bunnie Xo"
-      ],
-      "angle": "A timeline of the relationship between country star Jelly Roll and podcaster Bunnie Xo, following news of his divorce filing.",
-      "tmdbType": "movie",
-      "source": "rss:Billboard",
-      "sources": [
-        {
-          "outlet": "Billboard",
-          "tier": 7,
-          "url": "https://www.billboard.com/lists/jelly-roll-bunnie-xo-relationship-timeline/",
-          "ageMin": 39,
-          "headline": "A Timeline of Jelly Roll Bunnie Xo s Relationship",
-          "summary": "The country star filed for divorce after nearly 10 years of marriage to the podcaster."
-        }
-      ],
-      "ageMin": 39,
-      "_cand": {
-        "key": "rss:a-timeline-of-jelly-roll-bunnie-xo-s-relationship",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Billboard"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Billboard",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 59,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-liam-gallagher-world-cup-halftime-show-announcement",
-      "slug": "liam-gallagher-for-world-cup-halftime-show-neill-blomkamp-announces-ai",
-      "title": "Liam Gallagher for World Cup Halftime Show; Neill Blomkamp Announces AI Movie",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "liam-gallagher-world-cup-halftime-show-announcement",
-      "primaryKeyword": "Liam Gallagher World Cup",
-      "primaryEntity": "Liam Gallagher",
-      "entities": [
-        "World Cup"
-      ],
-      "angle": "Liam Gallagher tapped for World Cup halftime show, while director Neill Blomkamp announces an AI movie.",
-      "tmdbType": "movie",
-      "source": "gnews:98 Rock Baltimore",
-      "sources": [
-        {
-          "outlet": "98 Rock Baltimore",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiuwJBVV95cUxQTngweEVRTFlDNVplQVVSY01TT0ppY0RJV0lpQUF2RElwdHJ6WDh1RnI4Y0tZeWQ1dldWeTZoa0hWWjR0clNYb0YxejVpUUZMRXR4U3o0Z3dpOERHSEd5VGE5WVlCSENNZXRfQVlhNVdHalpoZThXdXQza0d3VHoxdlJUMEE3ZlA3N2Zod19PSGs1Uk10QmV4dFoxRVVKZW9maGpPd2I4VGpNT0RlbGdqdC1zSHZ3LTNUd09qWUFSZzM2ZXhfWGN5UVY0amY2Y2Nxd1pHVG5DZzFfdFg4QV9QNlU0VXA2RG1nUHVFVngwckNMN0Z1cTNxXzRFMGw1NlFnTnFXZm5hLUw5SHYxbTVlYk14eUdqWjhYRXQ4Q1BuY2l6c0U5TmpvYjEySldqYVhYRFAzTVpFNzFtVGs?oc=5",
-          "ageMin": 166,
-          "headline": "Amelia's Bits Bytes 7/21: Liam Gallagher On The World Cup Halftime Show, Melissa Auf Der Maur Is staying Busy, Stay Classy Morgan Wallen Fans, Beatles Pull Up Beside Tourists, Director Neill BlomKamp Will Make An AI Movie, Shane Gillis Breaks Guinn - 98 Rock Baltimore",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiuwJBVV95cUxQTngweEVRTFlDNVplQVVSY01TT0ppY0RJV0lpQUF2RElwdHJ6WDh1RnI4Y0tZeWQ1dldWeTZoa0hWWjR0clNYb0YxejVpUUZMRXR4U3o0Z3dpOERHSEd5VGE5WVlCSENNZXRfQVlhNVdHalpoZThXdXQza0d3VHoxdlJUMEE3ZlA3N2Zod19PSGs1Uk10QmV4dFoxRVVKZW9maGpPd2I4VGpNT0RlbGdqdC1zSHZ3LTNUd09"
-        }
-      ],
-      "ageMin": 166,
-      "_cand": {
-        "key": "rss:amelia-s-bits-bytes-7-21-liam-gallagher-on-the-world-cup-hal",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "98 Rock Baltimore"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "98 Rock Baltimore",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 51,
-      "signals": {
-        "recency": 16,
-        "corroboration": 8,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-siriusxm-trixie-mattel-katya-zamolodchikova-podcast-deal",
-      "slug": "siriusxm-signs-trixie-mattel-and-katya-zamolodchikova-s-podcast",
-      "title": "SiriusXM Signs Trixie Mattel and Katya Zamolodchikova's Podcast",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "siriusxm-trixie-mattel-katya-zamolodchikova-podcast-deal",
-      "primaryKeyword": "Trixie Mattel Katya podcast",
-      "primaryEntity": "Trixie Mattel",
-      "entities": [
-        "Katya Zamolodchikova",
-        "SiriusXM"
-      ],
-      "angle": "SiriusXM signs Trixie Mattel and Katya Zamolodchikova's popular podcast 'The Bald and the Beautiful'.",
-      "tmdbType": "movie",
-      "source": "gnews:The Hollywood Reporter",
-      "sources": [
-        {
-          "outlet": "The Hollywood Reporter",
-          "tier": 7,
-          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOLWZqWTZ2dDNobHFrbUdPdHotQWNyTGVLODZsN1JXdGJuZ0wwc09FdHppVE5DYnZQRHhmdldpQ01LdDZScldEeXdCcHdFMVdfNmpLMVlmSnk3ZmtPbl9rSDJTVHJWRm8tbUk4TXgxdkFLZHotWHptaGRTVlBPa0xyY2J2dFAxMXAyc2JOcnEyZUVuUmhjdnMtakJZTlVhZTdWN21felMxUTZXaUZ5aU8xMF9zYU9YMENSOC1V?oc=5",
-          "ageMin": 181,
-          "headline": "SiriusXM Signs Trixie Mattel and Katya Zamolodchikova’s ‘The Bald and the Beautiful’ Podcast (Exclusive) - The Hollywood Reporter",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiuwFBVV95cUxOLWZqWTZ2dDNobHFrbUdPdHotQWNyTGVLODZsN1JXdGJuZ0wwc09FdHppVE5DYnZQRHhmdldpQ01LdDZScldEeXdCcHdFMVdfNmpLMVlmSnk3ZmtPbl9rSDJTVHJWRm8tbUk4TXgxdkFLZHotWHptaGRTVlBPa0xyY2J2dFAxMXAyc2JOcnEyZUVuUmhjdnMtakJZTlVhZTdWN21felMxUTZXaUZ5aU8xMF9zYU9YMENSOC1"
-        }
-      ],
-      "ageMin": 181,
-      "_cand": {
-        "key": "rss:siriusxm-signs-trixie-mattel-and-katya-zamolodchikova-s-the-",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "The Hollywood Reporter"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "The Hollywood Reporter",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 48,
-      "signals": {
-        "recency": 9,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
     }
   ]
 }
