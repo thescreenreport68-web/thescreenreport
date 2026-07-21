@@ -712,6 +712,20 @@
    "headlineNumberRaw": 1314000,
    "filmKey": "gail daughtry and the celebrity sex pass",
    "chartDate": null
+  },
+  {
+   "key": "king-of-the-hill-trending-tv|TRENDING-TV",
+   "at": "2026-07-21T07:12:19.700Z",
+   "eventSlug": "king-of-the-hill-trending-tv",
+   "form": "TRENDING-TV",
+   "slug": "mike-judge-s-king-of-the-hill-returns-for-15th-season-on-hulu-after-1-revival",
+   "title": "Mike Judge's King of the Hill Returns for 15th Season on Hulu After #1 Revival Debut",
+   "film": "King of the Hill",
+   "tmdbId": 2122,
+   "eventType": "boxoffice",
+   "headlineNumberRaw": null,
+   "filmKey": "2122",
+   "chartDate": null
   }
  ],
  "parked": [
@@ -1057,10 +1071,10 @@
    "eventSlug": "rust-creek-netflix-top10-w2026-07-12",
    "form": "NETFLIX-TOP10",
    "reason": "3 unverified claim(s) cut, unrecovered",
-   "tries": 2,
-   "at": "2026-07-21T02:40:02.652Z",
-   "dead": false,
-   "expiresAt": "2026-07-21T02:02:13.024Z"
+   "tries": 3,
+   "at": "2026-07-21T07:04:46.567Z",
+   "dead": true,
+   "expiresAt": "2026-07-24T07:04:46.567Z"
   },
   {
    "key": "f9-the-fast-saga-netflix-top10-w2026-07-12|NETFLIX-TOP10",
@@ -1644,9 +1658,11 @@
    "key": "the-sheep-detectives-now-streaming|NOW-STREAMING",
    "eventSlug": "the-sheep-detectives-now-streaming",
    "form": "NOW-STREAMING",
-   "reason": "words 138 < 180 (owner-set ~200-word minimum) | soft-floor engagement 3 < 5 | soft-floor humanVoice 4 < 5",
-   "tries": 2,
-   "at": "2026-07-20T16:12:39.769Z"
+   "reason": "synthesizer returned no usable brief",
+   "tries": 3,
+   "at": "2026-07-21T07:07:22.224Z",
+   "dead": true,
+   "expiresAt": "2026-07-24T07:07:22.224Z"
   },
   {
    "key": "the-odyssey-bo-update-100m|BO-UPDATE",
@@ -1677,14 +1693,6 @@
    "at": "2026-07-20T17:38:52.365Z",
    "dead": true,
    "expiresAt": "2026-07-23T17:38:52.365Z"
-  },
-  {
-   "key": "king-of-the-hill-trending-tv|TRENDING-TV",
-   "eventSlug": "king-of-the-hill-trending-tv",
-   "form": "TRENDING-TV",
-   "reason": "synthesizer returned no usable brief",
-   "tries": 2,
-   "at": "2026-07-20T21:38:04.387Z"
   },
   {
    "key": "movie-maga-ev-opening|BO-OPENING",
@@ -1721,41 +1729,23 @@
    "expiresAt": "2026-07-24T03:07:38.866Z"
   }
  ],
- "zeroStreak": 30,
+ "zeroStreak": 0,
  "daySpend": {
-  "laDay": "2026-07-20",
-  "usd": 0.76457
+  "laDay": "2026-07-21",
+  "usd": 0.04056
  },
  "pace": {
-  "tokens": 4,
-  "lastMs": 1784615490421
+  "tokens": 3,
+  "lastMs": 1784617296604
  },
- "lastAuditDay": "2026-07-20",
+ "lastAuditDay": "2026-07-21",
  "attempts": {
-  "laDay": "2026-07-20",
+  "laDay": "2026-07-21",
   "byFilm": {
-   "descendants: wicked wonderland": 2,
-   "lee cronin's the mummy": 1,
-   "the sheep detectives": 3,
-   "tom clancy's jack ryan: ghost war": 2,
-   "lucky": 1,
-   "project hail mary": 3,
-   "outcome": 3,
-   "rick and morty": 1,
-   "king of the hill": 3,
-   "movie maga": 1,
-   "wwe unreal": 1,
-   "kung fu soccer": 1,
-   "enola holmes 3": 2,
-   "voicemails for isabelle": 2,
-   "the doorman": 2,
-   "little brother": 2,
-   "malcolm in the middle: life's still unfair": 2,
-   "the mandalorian and grogu": 3,
    "rust creek": 1,
-   "f9: the fast saga": 1,
-   "old henry": 1,
-   "kanin this be my souper love": 1
+   "the sheep detectives": 1,
+   "outcome": 1,
+   "king of the hill": 1
   }
  }
 }

@@ -1,0 +1,239 @@
+{
+ "runId": "run-2026-07-21T07-01-36",
+ "mode": "live",
+ "startedAt": "2026-07-21T07:01:36.604Z",
+ "films": 43,
+ "published": [
+  {
+   "tag": "king-of-the-hill-trending-tv×TRENDING-TV",
+   "slug": "mike-judge-s-king-of-the-hill-returns-for-15th-season-on-hulu-after-1-revival",
+   "path": "/home/runner/work/thescreenreport/thescreenreport/content/articles/mike-judge-s-king-of-the-hill-returns-for-15th-season-on-hulu-after-1-revival.md",
+   "score": 90
+  }
+ ],
+ "held": [
+  {
+   "tag": "rust-creek-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "3 unverified claim(s) cut, unrecovered",
+   "score": 60
+  },
+  {
+   "tag": "the-sheep-detectives-now-streaming×NOW-STREAMING",
+   "reason": "synthesizer returned no usable brief"
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "enola-holmes-3-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "voicemails-for-isabelle-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "the-doorman-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "little-brother-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "f9-the-fast-saga-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "old-henry-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "the-boss-baby-netflix-top10-w2026-07-12×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "i-will-find-you-trending-tv-w2026-07-12×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "worst-neighbor-ever-trending-tv-w2026-07-12×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "little-house-on-the-prairie-trending-tv-w2026-07-12×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "avatar-the-last-airbender-trending-tv-w2026-07-12×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "salish-jordan-matter-trending-tv-w2026-07-12×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "raw-trending-tv-w2026-07-12×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "sullivan-s-crossing-trending-tv-w2026-07-12×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "lucky-trending-tv×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "off-campus-trending-tv×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "malcolm-in-the-middle-life-s-still-unfair-trending-tv×TRENDING-TV",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "descendants-wicked-wonderland-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "lee-cronin-s-the-mummy-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "tom-clancy-s-jack-ryan-ghost-war-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "they-will-kill-you-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "house-of-the-dragon-trending-tv×TRENDING-TV",
+   "reason": "parked dead"
+  }
+ ],
+ "blocked": [
+  {
+   "tag": "outcome-now-streaming×NOW-STREAMING",
+   "reason": "watchdog: gatherer outcome-now-streaming×NOW-STREAMING exceeded 180s"
+  }
+ ],
+ "paced": {
+  "tokens": 4,
+  "behind": true,
+  "expected": 19.29,
+  "allow": 2
+ },
+ "queueBuilt": 10,
+ "attemptCapHit": 4,
+ "zeroStreak": 0,
+ "audit": {
+  "day": "2026-07-20",
+  "sampled": [
+   "michael-box-office-day-87-adds-45-000-as-domestic-total-hits-372-2-million",
+   "jackass-best-and-last-box-office-day-24-adds-70-000-as-domestic-total-hits-18",
+   "gail-daughtry-and-the-celebrity-sex-pass-box-office-day-10-adds-29-000-as"
+  ],
+  "issues": []
+ },
+ "daySpend": {
+  "laDay": "2026-07-21",
+  "usd": 0.04056
+ },
+ "faults": {
+  "count": 5,
+  "bySeverity": {
+   "critical": 4,
+   "warn": 1
+  },
+  "faults": [
+   {
+    "stage": "model:gatherer",
+    "message": "all models failed (google/gemini-2.5-flash-lite, openai/gpt-5-nano): empty completion",
+    "severity": "critical",
+    "at": "2026-07-21T07:02:41.965Z"
+   },
+   {
+    "stage": "chart:llm-fallback",
+    "message": "LLM chart extraction failed after a short deterministic parse: empty completion",
+    "severity": "critical",
+    "at": "2026-07-21T07:02:41.965Z"
+   },
+   {
+    "stage": "model:finder",
+    "message": "all models failed (amazon/nova-micro-v1, google/gemini-2.5-flash-lite): Expected ',' or ']' after array element in JSON at position 3702",
+    "severity": "critical",
+    "at": "2026-07-21T07:02:51.390Z"
+   },
+   {
+    "stage": "finder:llm",
+    "message": "finder classification failed — falling back to deterministic picks: Expected ',' or ']' after array element in JSON at position 3702",
+    "severity": "warn",
+    "at": "2026-07-21T07:02:51.390Z"
+   },
+   {
+    "stage": "model:gatherer",
+    "message": "all models failed (google/gemini-2.5-flash-lite, openai/gpt-5-nano): empty completion",
+    "severity": "critical",
+    "at": "2026-07-21T07:10:07.159Z"
+   }
+  ]
+ },
+ "degraded": true,
+ "finishedAt": "2026-07-21T07:12:20.038Z",
+ "meter": {
+  "byRole": {
+   "categorize": {
+    "calls": 4,
+    "errors": 0,
+    "in": 4763,
+    "out": 539,
+    "usd": 0.00069,
+    "ms": 3254
+   },
+   "gatherer": {
+    "calls": 12,
+    "errors": 4,
+    "in": 24729,
+    "out": 1506,
+    "usd": 0.00308,
+    "ms": 9866
+   },
+   "finder": {
+    "calls": 2,
+    "errors": 2,
+    "in": 0,
+    "out": 0,
+    "usd": 0,
+    "ms": 0
+   },
+   "synthesizer": {
+    "calls": 3,
+    "errors": 0,
+    "in": 2087,
+    "out": 1454,
+    "usd": 0.00045,
+    "ms": 50987
+   },
+   "writer": {
+    "calls": 4,
+    "errors": 0,
+    "in": 12248,
+    "out": 4056,
+    "usd": 0.01139,
+    "ms": 62744
+   },
+   "qa": {
+    "calls": 14,
+    "errors": 0,
+    "in": 39124,
+    "out": 5132,
+    "usd": 0.02457,
+    "ms": 38306
+   }
+  },
+  "totalUsd": 0.04017
+ },
+ "openrouterTotalUsd": 0.04056
+}
