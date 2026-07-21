@@ -1080,11 +1080,11 @@
    "key": "f9-the-fast-saga-netflix-top10-w2026-07-12|NETFLIX-TOP10",
    "eventSlug": "f9-the-fast-saga-netflix-top10-w2026-07-12",
    "form": "NETFLIX-TOP10",
-   "reason": "7 unverified claim(s) cut, unrecovered",
-   "tries": 2,
-   "at": "2026-07-21T04:13:02.105Z",
-   "dead": false,
-   "expiresAt": "2026-07-21T02:03:57.514Z"
+   "reason": "2 unverified claim(s) cut, unrecovered",
+   "tries": 3,
+   "at": "2026-07-21T08:38:14.415Z",
+   "dead": true,
+   "expiresAt": "2026-07-24T08:38:14.415Z"
   },
   {
    "key": "old-henry-netflix-top10-w2026-07-12|NETFLIX-TOP10",
@@ -1669,10 +1669,10 @@
    "eventSlug": "the-odyssey-bo-update-100m",
    "form": "BO-UPDATE",
    "reason": "1 unverified claim(s) cut, unrecovered",
-   "tries": 50,
-   "at": "2026-07-21T08:04:55.888Z",
+   "tries": 51,
+   "at": "2026-07-21T08:33:13.132Z",
    "dead": true,
-   "expiresAt": "2026-07-24T08:04:55.888Z"
+   "expiresAt": "2026-07-24T08:33:13.132Z"
   },
   {
    "key": "star-wars-the-mandalorian-and-grogu-bo-update-d59|BO-UPDATE",
@@ -1722,11 +1722,11 @@
    "key": "the-mandalorian-and-grogu-bo-update-d62|BO-UPDATE",
    "eventSlug": "the-mandalorian-and-grogu-bo-update-d62",
    "form": "BO-UPDATE",
-   "reason": "synthesizer returned no usable brief",
-   "tries": 3,
-   "at": "2026-07-21T03:07:38.866Z",
+   "reason": "2 unverified claim(s) cut, unrecovered",
+   "tries": 4,
+   "at": "2026-07-21T08:36:05.592Z",
    "dead": true,
-   "expiresAt": "2026-07-24T03:07:38.866Z"
+   "expiresAt": "2026-07-24T08:36:05.592Z"
   },
   {
    "key": "call-me-by-your-name-bo-opening|BO-OPENING",
@@ -1737,14 +1737,14 @@
    "at": "2026-07-21T07:36:52.563Z"
   }
  ],
- "zeroStreak": 2,
+ "zeroStreak": 3,
  "daySpend": {
   "laDay": "2026-07-21",
-  "usd": 0.07492
+  "usd": 0.11812
  },
  "pace": {
-  "tokens": 3.142974880952381,
-  "lastMs": 1784620899571
+  "tokens": 3.2142387301587303,
+  "lastMs": 1784622695420
  },
  "lastAuditDay": "2026-07-21",
  "attempts": {
@@ -1755,7 +1755,9 @@
    "outcome": 3,
    "king of the hill": 1,
    "call me by your name": 1,
-   "project hail mary": 1
+   "project hail mary": 1,
+   "the mandalorian and grogu": 1,
+   "f9: the fast saga": 1
   }
  }
 }
