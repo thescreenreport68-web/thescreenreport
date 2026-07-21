@@ -1,0 +1,144 @@
+{
+  "ts": "2026-07-21T07:01:44.986Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "jason-bateman-recalls-drunk-and-disorderly-arrest-in-a-leopard-outfit",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [
+        "geo-no-attribution:logged",
+        "takeaway-ungrounded:dropped"
+      ],
+      "headline": [],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 2
+    }
+  ],
+  "topics": 2,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 1,
+  "blocked": 0,
+  "costUSD": 0.023054,
+  "costPerPublished": 0.023054,
+  "byModel": {
+    "deepseek/deepseek-v3.2": {
+      "calls": 12,
+      "in": 24987,
+      "out": 5923,
+      "usd": 0.0066950627499999995
+    },
+    "google/gemini-2.5-flash": {
+      "calls": 9,
+      "in": 22900,
+      "out": 3099,
+      "usd": 0.014617499999999999
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 1673,
+      "out": 297,
+      "usd": 0.00031738
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 10,
+      "in": 9481,
+      "out": 1191,
+      "usd": 0.0014245
+    }
+  },
+  "byRole": {
+    "dedup": {
+      "calls": 5,
+      "errors": 0,
+      "in": 1515,
+      "out": 75,
+      "usd": 0.00037395000000000006,
+      "ms": 10128
+    },
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2422,
+      "out": 187,
+      "usd": 0.0011940999999999998,
+      "ms": 1437
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1673,
+      "out": 297,
+      "usd": 0.00020403,
+      "ms": 40004
+    },
+    "writer": {
+      "calls": 6,
+      "errors": 0,
+      "in": 22893,
+      "out": 5518,
+      "usd": 0.00714151,
+      "ms": 180622
+    },
+    "verify": {
+      "calls": 9,
+      "errors": 1,
+      "in": 20478,
+      "out": 2424,
+      "usd": 0.010866199999999998,
+      "ms": 21160
+    },
+    "judge": {
+      "calls": 2,
+      "errors": 0,
+      "in": 3832,
+      "out": 419,
+      "usd": 0.0005508,
+      "ms": 2391
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 579,
+      "out": 330,
+      "usd": 0.00024537,
+      "ms": 12886
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 395,
+      "out": 96,
+      "usd": 0.00007790000000000001,
+      "ms": 651
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 186,
+      "out": 45,
+      "usd": 0.0000366,
+      "ms": 539
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1558,
+      "out": 101,
+      "usd": 0.00019620000000000003,
+      "ms": 2202
+    },
+    "linker": {
+      "calls": 4,
+      "errors": 0,
+      "in": 1150,
+      "out": 118,
+      "usd": 0.00016219999999999999,
+      "ms": 2898
+    }
+  }
+}
