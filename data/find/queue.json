@@ -1,10 +1,10 @@
 {
-  "runId": "run-2026-07-22T02-01-44",
-  "builtAt": "2026-07-22T02:03:20.496Z",
-  "count": 14,
+  "runId": "run-2026-07-22T03-31-35",
+  "builtAt": "2026-07-22T03:33:05.211Z",
+  "count": 11,
   "topics": [
     {
-      "id": "news-snoop-dogg-biopic-universal-release",
+      "id": "news-snoop-dogg-biopic-summer-2027-release",
       "slug": "snoop-dogg-biopic-lands-summer-2027-release-from-universal",
       "title": "Snoop Dogg Biopic Lands Summer 2027 Release From Universal",
       "contentType": "news",
@@ -13,32 +13,33 @@
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "snoop-dogg-biopic-universal-release",
-      "primaryKeyword": "snoop Dogg biopic",
-      "primaryEntity": "Snoop Dogg's Hood of Horror",
+      "eventSlug": "snoop-dogg-biopic-summer-2027-release",
+      "primaryKeyword": "snoop dogg biopic release date",
+      "primaryEntity": "Snoop Dogg Biopic",
       "entities": [
+        "Snoop Dogg's Hood of Horror",
         "Snoop Dogg",
-        "Universal Pictures"
+        "Universal",
+        "Jonathan Daviss"
       ],
-      "angle": "Universal Pictures has slated a Snoop Dogg biopic for a Summer 2027 release.",
+      "angle": "Universal has set a Summer 2027 release date for the Snoop Dogg biopic starring Jonathan Daviss and directed by Craig Brewer.",
       "tmdbType": "movie",
-      "source": "gnews:The Hollywood Reporter",
+      "source": "rss:THR",
       "sources": [
         {
-          "outlet": "The Hollywood Reporter",
+          "outlet": "THR",
           "tier": 7,
-          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQZXdJMnVEU1I1ZExzWTQtQ0IyUXBZYlBvTGZSaDJ5aFZzOW9pcm95bEVwamM2U0Z5dHdfdUhYOWx6WEZLQ2k0VGxHbnZIVzhsclJBaTNYUVJNLVhxNV9odXpZOUdKVUVnN3lzWXdXVHhwRVl0SEVRLVhjdlF4NTczMmZ4Smw2M1B1UWpocE9waGUtVTFFQWFaM0tKTUVHZzlNYms5RWJRWmZRSjQ?oc=5",
-          "ageMin": 271,
-          "headline": "Snoop Dogg Biopic Lands Summer 2027 Release From Universal - The Hollywood Reporter",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxQZXdJMnVEU1I1ZExzWTQtQ0IyUXBZYlBvTGZSaDJ5aFZzOW9pcm95bEVwamM2U0Z5dHdfdUhYOWx6WEZLQ2k0VGxHbnZIVzhsclJBaTNYUVJNLVhxNV9odXpZOUdKVUVnN3lzWXdXVHhwRVl0SEVRLVhjdlF4NTczMmZ4Smw2M1B1UWpocE9waGUtVTFFQWFaM0tKTUVHZzlNYms5RWJRWmZRSjQ?oc=5\" target=\"_blan"
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/snoop-dogg-biopic-lands-summer-2027-release-1236653520/",
+          "ageMin": 362,
+          "headline": "Snoop Dogg Biopic Lands Summer 2027 Release From Universal",
+          "summary": "Jonathan Daviss stars in Craig Brewer's feature that examines the life of the iconic rapper."
         }
       ],
-      "ageMin": 271,
+      "ageMin": 362,
       "_cand": {
-        "key": "rss:snoop-dogg-biopic-lands-summer-2027-release-from-universal-t",
+        "key": "rss:snoop-dogg-biopic-lands-summer-2027-release-from-universal",
         "popularity": 0,
-        "kind": "gnews"
+        "kind": "rss-news"
       },
       "corroborationCount": 1,
       "verification": {
@@ -46,18 +47,18 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "The Hollywood Reporter"
+          "THR"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "The Hollywood Reporter",
+        "attribution": "THR",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 72,
+      "priority": 67,
       "signals": {
-        "recency": 9,
+        "recency": 4,
         "corroboration": 12,
         "status": 18,
         "type": 9,
@@ -71,83 +72,17 @@
       "tierClass": "B"
     },
     {
-      "id": "music-awards-kierra-sheard-bmi-impact-award-trailblazers-gospel-music-awards",
-      "slug": "kierra-sheard-honored-with-bmi-impact-award",
-      "title": "Kierra Sheard Honored with BMI Impact Award",
-      "contentType": "music-awards",
-      "formatTag": "music-awards",
-      "category": "music",
-      "subcategory": "awards",
-      "eventType": "award",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "kierra-sheard-bmi-impact-award-trailblazers-gospel-music-awards",
-      "primaryKeyword": "kierra sheard bmi award",
-      "primaryEntity": "Kierra Sheard",
-      "entities": [
-        "BMI Trailblazers of Gospel Music Awards"
-      ],
-      "angle": "Kierra Sheard receives the BMI Impact Award at the BMI Trailblazers of Gospel Music Awards.",
-      "tmdbType": "movie",
-      "source": "rss:Billboard",
-      "sources": [
-        {
-          "outlet": "Billboard",
-          "tier": 7,
-          "url": "https://www.billboard.com/pro/kierra-sheard-2026-bmi-trailblazers-gospel-music-awards/",
-          "ageMin": 55,
-          "headline": "Kierra Sheard Receives BMI Impact Award at 2026 BMI Trailblazers of Gospel Music Awards",
-          "summary": "“Lead Me On” was named BMI’s gospel song of the year, while Capitol CMG Publishing received publisher of the year."
-        }
-      ],
-      "ageMin": 55,
-      "_cand": {
-        "key": "rss:kierra-sheard-receives-bmi-impact-award-at-2026-bmi-trailbla",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Billboard"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Billboard",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 68,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-monarch-legacy-of-monsters-spinoff-casting",
-      "slug": "wyatt-russell-s-monsterverse-series-casts-corey-stoll-ralph-ineson",
-      "title": "Wyatt Russell's Monsterverse Series Casts Corey Stoll, Ralph Ineson",
+      "id": "news-monarch-legacy-of-monsters-casting",
+      "slug": "wyatt-russell-s-monsterverse-series-monarch-casts-corey-stoll-ralph-in",
+      "title": "Wyatt Russell's Monsterverse Series 'Monarch' Casts Corey Stoll, Ralph Ineson",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "monarch-legacy-of-monsters-spinoff-casting",
-      "primaryKeyword": "Monarch Legacy of Monsters spinoff casting",
+      "eventSlug": "monarch-legacy-of-monsters-casting",
+      "primaryKeyword": "Monarch Legacy of Monsters casting",
       "primaryEntity": "Monarch: Legacy of Monsters",
       "entities": [
         "Wyatt Russell",
@@ -155,7 +90,7 @@
         "Ralph Ineson",
         "Apple TV+"
       ],
-      "angle": "Corey Stoll and Ralph Ineson join Wyatt Russell's 'Monarch: Legacy of Monsters' spinoff.",
+      "angle": "Corey Stoll and Ralph Ineson join Wyatt Russell in Apple TV+'s Monsterverse series.",
       "tmdbType": "movie",
       "source": "rss:Variety",
       "sources": [
@@ -163,12 +98,12 @@
           "outlet": "Variety",
           "tier": 7,
           "url": "https://variety.com/2026/tv/news/wyatt-russell-monsterverse-series-corey-stoll-ralph-ineson-1236817481/",
-          "ageMin": 404,
+          "ageMin": 493,
           "headline": "Wyatt Russell s Monsterverse Series Casts Corey Stoll, Ralph Ineson, Nyasha Hatendi",
           "summary": "The upcoming Monarch: Legacy of Monsters spinoff at Apple TV has added three new cast members. Variety has confirmed that Corey Stoll ( Imperfect Women,” “Appropriate,” “Billions ), Ralph Inneson ( The Witch, The Fantastic Four: First Steps ), and Nyasha Hatendi (“Agatha Christie’s The Seven Dials,” “Casual”) will all appear in the new series, which was originally announced [ ]"
         }
       ],
-      "ageMin": 404,
+      "ageMin": 493,
       "_cand": {
         "key": "rss:wyatt-russell-s-monsterverse-series-casts-corey-stoll-ralph-",
         "popularity": 0,
@@ -205,40 +140,40 @@
       "tierClass": "B"
     },
     {
-      "id": "news-timothy-olyphant-david-fincher-takes",
-      "slug": "timothy-olyphant-thought-adventures-of-cliff-booth-director-david-finc",
-      "title": "Timothy Olyphant Thought ‘Adventures of Cliff Booth’ Director David Fincher’s Many Takes Were ‘Unnecessary’ Power Move",
+      "id": "news-snoop-dogg-biopic-universal-release-date",
+      "slug": "snoop-dogg-biopic-lands-summer-2027-release-from-universal",
+      "title": "Snoop Dogg Biopic Lands Summer 2027 Release From Universal",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
-      "eventType": "other",
+      "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "timothy-olyphant-david-fincher-takes",
-      "primaryKeyword": "david fincher",
-      "primaryEntity": "David Fincher",
+      "eventSlug": "snoop-dogg-biopic-universal-release-date",
+      "primaryKeyword": "Snoop Dogg biopic",
+      "primaryEntity": "Snoop Dogg's Hood of Horror",
       "entities": [
-        "Timothy Olyphant",
-        "Once Upon a Time in Hollywood"
+        "Snoop Dogg",
+        "Universal"
       ],
-      "angle": "Timothy Olyphant comments on David Fincher's directorial style and the prospect of a 'Once Upon a Time in Hollywood' sequel.",
+      "angle": "Universal has set a Summer 2027 release date for the upcoming Snoop Dogg biopic.",
       "tmdbType": "movie",
-      "source": "rss:TheWrap",
+      "source": "gnews:The Hollywood Reporter",
       "sources": [
         {
-          "outlet": "TheWrap",
+          "outlet": "The Hollywood Reporter",
           "tier": 7,
-          "url": "https://www.thewrap.com/creative-content/movies/timothy-olyphant-david-finchers-many-takes-power-move/",
-          "ageMin": 100,
-          "headline": "Timothy Olyphant Thought ‘Adventures of Cliff Booth’ Director David Fincher’s Many Takes Were ‘Unnecessary’ Power Move",
-          "summary": "The actor adds he \"couldn't wait\" to start working on the \"Once Upon a Time in Hollywood\" sequel The post Timothy Olyphant Thought ‘Adventures of Cliff Booth’ Director David Fincher’s Many Takes Were ‘Unnecessary’ Power Move appeared first on TheWrap ."
+          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQZXdJMnVEU1I1ZExzWTQtQ0IyUXBZYlBvTGZSaDJ5aFZzOW9pcm95bEVwamM2U0Z5dHdfdUhYOWx6WEZLQ2k0VGxHbnZIVzhsclJBaTNYUVJNLVhxNV9odXpZOUdKVUVnN3lzWXdXVHhwRVl0SEVRLVhjdlF4NTczMmZ4Smw2M1B1UWpocE9waGUtVTFFQWFaM0tKTUVHZzlNYms5RWJRWmZRSjQ?oc=5",
+          "ageMin": 361,
+          "headline": "Snoop Dogg Biopic Lands Summer 2027 Release From Universal - The Hollywood Reporter",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxQZXdJMnVEU1I1ZExzWTQtQ0IyUXBZYlBvTGZSaDJ5aFZzOW9pcm95bEVwamM2U0Z5dHdfdUhYOWx6WEZLQ2k0VGxHbnZIVzhsclJBaTNYUVJNLVhxNV9odXpZOUdKVUVnN3lzWXdXVHhwRVl0SEVRLVhjdlF4NTczMmZ4Smw2M1B1UWpocE9waGUtVTFFQWFaM0tKTUVHZzlNYms5RWJRWmZRSjQ?oc=5\" target=\"_blan"
         }
       ],
-      "ageMin": 100,
+      "ageMin": 361,
       "_cand": {
-        "key": "rss:timothy-olyphant-thought-adventures-of-cliff-booth-director-",
+        "key": "rss:snoop-dogg-biopic-lands-summer-2027-release-from-universal-t",
         "popularity": 0,
-        "kind": "rss-news"
+        "kind": "gnews"
       },
       "corroborationCount": 1,
       "verification": {
@@ -246,90 +181,24 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "TheWrap"
+          "The Hollywood Reporter"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "TheWrap",
+        "attribution": "The Hollywood Reporter",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 63,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 12,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-love-it-or-list-it-casting-cochrane",
-      "slug": "love-it-or-list-it-casting-cochrane-homeowners-for-new-tv-series",
-      "title": "Love It or List It Casting Cochrane Homeowners for New TV Series",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "love-it-or-list-it-casting-cochrane",
-      "primaryKeyword": "love it or list it casting cochrane",
-      "primaryEntity": "Love It or List It",
-      "entities": [
-        "Rory Cochrane",
-        "Cochrane"
-      ],
-      "angle": "Homeowners in Cochrane are being sought for casting in a new season of the TV series 'Love It or List It'.",
-      "tmdbType": "movie",
-      "source": "gnews:CochraneNow",
-      "sources": [
-        {
-          "outlet": "CochraneNow",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNUVJxa2xmbGhidkhCSmtacG9EczEzei1zUnFqc3NKSUl2MGREb1BhTko4bnhZRlFQYXZXdmdHZm1zV0lackZQbFNvdzBBVk9XRzF2ZG1sT3MxNzJwTGZWaWNiUzJfT0xGcjc5OV9OU0l0YjlTcUZUUlZ3SnN1RWozZmlFWnpsMWkySUtockZVUndreEcxUWVMcFZxV3lIQQ?oc=5",
-          "ageMin": 520,
-          "headline": "Love It or List It casting Cochrane homeowners for new TV series - CochraneNow",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxNUVJxa2xmbGhidkhCSmtacG9EczEzei1zUnFqc3NKSUl2MGREb1BhTko4bnhZRlFQYXZXdmdHZm1zV0lackZQbFNvdzBBVk9XRzF2ZG1sT3MxNzJwTGZWaWNiUzJfT0xGcjc5OV9OU0l0YjlTcUZUUlZ3SnN1RWozZmlFWnpsMWkySUtockZVUndreEcxUWVMcFZxV3lIQQ?oc=5\" target=\"_blank\" Love It or Lis"
-        }
-      ],
-      "ageMin": 520,
-      "_cand": {
-        "key": "rss:love-it-or-list-it-casting-cochrane-homeowners-for-new-tv-se",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "CochraneNow"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "CochraneNow",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 62,
+      "priority": 67,
       "signals": {
         "recency": 4,
-        "corroboration": 8,
+        "corroboration": 12,
         "status": 18,
-        "type": 14,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
-        "big": 18,
+        "big": 24,
         "trending": 0,
         "spice": 0,
         "softTv": 0
@@ -347,12 +216,12 @@
       "eventType": "other",
       "sensitivity": "high",
       "eventSlug": "jacob-elordi-euphoria-death-scene-final-season",
-      "primaryKeyword": "jacob elordi euphoria",
+      "primaryKeyword": "Jacob Elordi Euphoria",
       "primaryEntity": "Euphoria",
       "entities": [
         "Jacob Elordi"
       ],
-      "angle": "Jacob Elordi shares insights into filming his character's death scene in the final season of 'Euphoria'.",
+      "angle": "Jacob Elordi shares details about filming his character's death scene in the final season of 'Euphoria' and his return to the show.",
       "tmdbType": "movie",
       "source": "rss:Deadline",
       "sources": [
@@ -360,12 +229,12 @@
           "outlet": "Deadline",
           "tier": 7,
           "url": "https://deadline.com/2026/07/jacob-elordi-filming-euphoria-death-scene-final-season-1236999828/",
-          "ageMin": 82,
+          "ageMin": 171,
           "headline": "Jacob Elordi On Filming Euphoria Death Scene Returning For Final Season: I Think Sam Brought Me Back To Torture Me",
           "summary": "Jacob Elordi had a gruesome death on the final season of Euphoria and is giving insight into how that scene was shot. While making an appearance on ABC s Jimmy Kimmel Live!, Elordi had a mini Euphoria reunion with co-star Colman Domingo, who is guest-hosting the late-night talk show in Kimmel s absence. Domingo brought up his [ ]"
         }
       ],
-      "ageMin": 82,
+      "ageMin": 171,
       "_cand": {
         "key": "rss:jacob-elordi-on-filming-euphoria-death-scene-returning-for-f",
         "popularity": 0,
@@ -402,23 +271,155 @@
       "tierClass": "S"
     },
     {
-      "id": "news-disney-layoffs-pixar-animation-studio",
-      "slug": "new-disney-layoffs-hit-pixar-s-bay-area-animation-studio",
-      "title": "New Disney Layoffs Hit Pixar's Bay Area Animation Studio",
+      "id": "music-news-jungle-australian-tour-sports-addition",
+      "slug": "sports-added-to-jungle-s-australian-tour",
+      "title": "Sports Added to Jungle's Australian Tour",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "jungle-australian-tour-sports-addition",
+      "primaryKeyword": "jungle australian tour",
+      "primaryEntity": "Jungle",
+      "entities": [
+        "Sports"
+      ],
+      "angle": "Indie-pop band Sports has been added to Jungle's Australian tour.",
+      "tmdbType": "movie",
+      "source": "gnews:Sheldon Ang Media",
+      "sources": [
+        {
+          "outlet": "Sheldon Ang Media",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPaW1HLUhmS2RMWXEyZHVpbW1zT2kyV2hQcEpuOEk2RTAxTllnT0MyUFNteElDdHZ2QWtWVXlmMlhpeXdfRWltNFVOV24tZUJ4Rk9IeUlpQ3g1Z1gxNF9fdXBCaTRfQ2hNMUlFRFRWNGpQR09DVkJLOFBwQy1SSm00TGI5d2NiR3dMUmlRR2FEb1F2eE1PeVp1Q1NGdno1dHVKOUdMNFdR?oc=5",
+          "ageMin": 83,
+          "headline": "Jungle Add US Indie‑Pop Band Sports to Their Australian Tour - Sheldon Ang Media",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxPaW1HLUhmS2RMWXEyZHVpbW1zT2kyV2hQcEpuOEk2RTAxTllnT0MyUFNteElDdHZ2QWtWVXlmMlhpeXdfRWltNFVOV24tZUJ4Rk9IeUlpQ3g1Z1gxNF9fdXBCaTRfQ2hNMUlFRFRWNGpQR09DVkJLOFBwQy1SSm00TGI5d2NiR3dMUmlRR2FEb1F2eE1PeVp1Q1NGdno1dHVKOUdMNFdR?oc=5\" target=\"_blank\" Jung"
+        }
+      ],
+      "ageMin": 83,
+      "_cand": {
+        "key": "rss:jungle-add-us-indie-pop-band-sports-to-their-australian-tour",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "Sheldon Ang Media"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "Sheldon Ang Media",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 51,
+      "signals": {
+        "recency": 16,
+        "corroboration": 8,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-timothy-olyphant-david-fincher-takes-once-upon-a-time-in-hollywood-seq",
+      "slug": "timothy-olyphant-on-fincher-s-takes-for-cliff-booth-sequel",
+      "title": "Timothy Olyphant on Fincher's Takes for 'Cliff Booth' Sequel",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "disney-layoffs-pixar-animation-studio",
-      "primaryKeyword": "Pixar",
+      "eventSlug": "timothy-olyphant-david-fincher-takes-once-upon-a-time-in-hollywood-seq",
+      "primaryKeyword": "Timothy Olyphant David Fincher",
+      "primaryEntity": "David Fincher",
+      "entities": [
+        "Timothy Olyphant",
+        "Once Upon a Time in Hollywood"
+      ],
+      "angle": "Timothy Olyphant found director David Fincher's numerous takes on a potential 'Once Upon a Time in Hollywood' sequel to be 'unnecessary power moves'.",
+      "tmdbType": "movie",
+      "source": "rss:TheWrap",
+      "sources": [
+        {
+          "outlet": "TheWrap",
+          "tier": 7,
+          "url": "https://www.thewrap.com/creative-content/movies/timothy-olyphant-david-finchers-many-takes-power-move/",
+          "ageMin": 190,
+          "headline": "Timothy Olyphant Thought ‘Adventures of Cliff Booth’ Director David Fincher’s Many Takes Were ‘Unnecessary’ Power Move",
+          "summary": "The actor adds he \"couldn't wait\" to start working on the \"Once Upon a Time in Hollywood\" sequel The post Timothy Olyphant Thought ‘Adventures of Cliff Booth’ Director David Fincher’s Many Takes Were ‘Unnecessary’ Power Move appeared first on TheWrap ."
+        }
+      ],
+      "ageMin": 190,
+      "_cand": {
+        "key": "rss:timothy-olyphant-thought-adventures-of-cliff-booth-director-",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "TheWrap"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "TheWrap",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 56,
+      "signals": {
+        "recency": 9,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 12,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-disney-layoffs-pixar-studio",
+      "slug": "new-disney-layoffs-hit-pixar-s-bay-area-animation-studio",
+      "title": "New Disney Layoffs Hit Pixar’s Bay Area Animation Studio",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "disney-layoffs-pixar-studio",
+      "primaryKeyword": "Disney Pixar layoffs",
       "primaryEntity": "Pixar Short Films Collection: Volume 1",
       "entities": [
         "Pixar",
         "Disney"
       ],
-      "angle": "Disney has implemented new layoffs affecting its Pixar animation studio in the Bay Area.",
+      "angle": "Disney has implemented new layoffs impacting Pixar's animation studio in the Bay Area.",
       "tmdbType": "movie",
       "source": "gnews:San Francisco Chronicle",
       "sources": [
@@ -426,12 +427,12 @@
           "outlet": "San Francisco Chronicle",
           "tier": 5,
           "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOMWlHNm9ENTZ5aHUyQUs1YVdLTkthcUNTTndkUXNYZ2lfUEZIX25INTZCVlIyM3JnRWhSQ0xnb0RBX25sQmtSMkE4MmtqTlFhX2FvamNSbnJEbXZsM3NWbE9rX3RjcHlrQTk1bjFyRlpLUkI5UVBJcU9VSzd3dEFpVjdPenhwZHhoUVVlRVZFem45cVNrQzk3MFo4SkZXY3hC?oc=5",
-          "ageMin": 244,
+          "ageMin": 334,
           "headline": "New Disney layoffs hit Pixar’s Bay Area animation studio - San Francisco Chronicle",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMioAFBVV95cUxOMWlHNm9ENTZ5aHUyQUs1YVdLTkthcUNTTndkUXNYZ2lfUEZIX25INTZCVlIyM3JnRWhSQ0xnb0RBX25sQmtSMkE4MmtqTlFhX2FvamNSbnJEbXZsM3NWbE9rX3RjcHlrQTk1bjFyRlpLUkI5UVBJcU9VSzd3dEFpVjdPenhwZHhoUVVlRVZFem45cVNrQzk3MFo4SkZXY3hC?oc=5\" target=\"_blank\" New Disney l"
         }
       ],
-      "ageMin": 244,
+      "ageMin": 334,
       "_cand": {
         "key": "rss:new-disney-layoffs-hit-pixar-s-bay-area-animation-studio-san",
         "popularity": 0,
@@ -468,38 +469,41 @@
       "tierClass": "C"
     },
     {
-      "id": "news-summer-house-reunion-lindsay-whitney-clash",
-      "slug": "lindsay-and-whitney-clash-at-summer-house-reunion",
-      "title": "Lindsay and Whitney Clash at 'Summer House' Reunion",
+      "id": "news-plas-johnson-dies-pink-panther-theme",
+      "slug": "plas-johnson-saxophonist-behind-iconic-the-pink-panther-theme-song-die",
+      "title": "Plas Johnson, Saxophonist Behind Iconic ‘The Pink Panther’ Theme Song, Dies at 94",
       "contentType": "news",
       "formatTag": "news",
-      "category": "tv",
+      "category": "celebrity",
       "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "summer-house-reunion-lindsay-whitney-clash",
-      "primaryKeyword": "summer house reunion",
-      "primaryEntity": "Summer House",
+      "eventType": "death",
+      "sensitivity": "high",
+      "tier": "popular",
+      "eventSlug": "plas-johnson-dies-pink-panther-theme",
+      "primaryKeyword": "Plas Johnson",
+      "primaryEntity": "Plas Johnson",
       "entities": [
-        "Lindsay Hubbard",
-        "Whitney Fransway"
+        "The Pink Panther Theme Song",
+        "The Monkees",
+        "Mannix",
+        "The Odd Couple"
       ],
-      "angle": "The 'Summer House' spinoff reunion features a clash between Lindsay and Whitney.",
+      "angle": "Saxophonist Plas Johnson, known for the iconic 'Pink Panther' theme song, has died at 94.",
       "tmdbType": "movie",
-      "source": "rss:THR",
+      "source": "rss:TheWrap",
       "sources": [
         {
-          "outlet": "THR",
+          "outlet": "TheWrap",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/tv/tv-news/in-the-city-reunion-part-one-explained-lindsay-amanda-1236653501/",
-          "ageMin": 26,
-          "headline": "In the City Reunion Recap: Lindsay and Whitney Clash, Amanda and West Haven t Said I Love You",
-          "summary": "\"You're gonna need about 15 more apologies to any mom in the entire world,\" Lindsay Hubbard said to Whitney Fransway in the 'Summer House' spinoff's first-ever reunion — part one."
+          "url": "https://www.thewrap.com/creative-content/music/plas-johnson-dies-the-pink-panther-theme-song-saxophonist/",
+          "ageMin": 17,
+          "headline": "Plas Johnson, Saxophonist Behind Iconic ‘The Pink Panther’ Theme Song, Dies at 94",
+          "summary": "His other recording credits include the theme songs for “The Monkees,” “Mannix” and “The Odd Couple” The post Plas Johnson, Saxophonist Behind Iconic ‘The Pink Panther’ Theme Song, Dies at 94 appeared first on TheWrap ."
         }
       ],
-      "ageMin": 26,
+      "ageMin": 17,
       "_cand": {
-        "key": "rss:in-the-city-reunion-recap-lindsay-and-whitney-clash-amanda-a",
+        "key": "rss:plas-johnson-saxophonist-behind-iconic-the-pink-panther-them",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -509,73 +513,81 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "THR"
+          "TheWrap"
         ],
         "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
+        "sensitivity": "high",
+        "attribution": "TheWrap",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 51,
+      "priority": 68,
       "signals": {
         "recency": 24,
         "corroboration": 12,
         "status": 18,
-        "type": 5,
+        "type": 14,
         "pop": 0,
         "breakout": 0,
         "big": 0,
         "trending": 0,
-        "spice": 4,
-        "softTv": -12
+        "spice": 0,
+        "softTv": 0
       },
-      "tierClass": "C"
+      "tierClass": "S"
     },
     {
-      "id": "news-jacob-elordi-euphoria-nate-demise",
-      "slug": "jacob-elordi-dishes-on-nate-s-demise-on-euphoria-and-breaking-both-his",
-      "title": "Jacob Elordi Dishes on Nate s Demise on Euphoria and Breaking Both His Heels: It s Like Fight Club",
+      "id": "news-ron-perlman-signs-with-independent-artist-group",
+      "slug": "hellboy-actor-ron-perlman-signs-with-independent-artist-group",
+      "title": "‘Hellboy’ Actor Ron Perlman Signs With Independent Artist Group",
       "contentType": "news",
       "formatTag": "news",
-      "category": "tv",
+      "category": "celebrity",
       "subcategory": "news",
-      "eventType": "other",
+      "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "jacob-elordi-euphoria-nate-demise",
-      "primaryKeyword": "jacob elordi euphoria",
-      "primaryEntity": "Euphoria",
+      "eventSlug": "ron-perlman-signs-with-independent-artist-group",
+      "primaryKeyword": "ron perlman",
+      "primaryEntity": "Ron Perlman",
       "entities": [
-        "Jacob Elordi",
-        "Sam Levinson"
+        "Independent Artist Group"
       ],
-      "angle": "Jacob Elordi discusses the intense filming of Nate's demise in 'Euphoria' and his character's brutal scenes.",
+      "angle": "Veteran actor Ron Perlman signs with a new agency.",
       "tmdbType": "movie",
-      "source": "rss:THR",
+      "source": "gnews:The Hollywood Reporter",
       "sources": [
         {
           "outlet": "THR",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/tv/tv-news/jacob-elordi-euphoria-nate-death-broken-heels-cannes-1236653467/",
-          "ageMin": 286,
-          "headline": "Jacob Elordi Dishes on Nate s Demise on Euphoria and Breaking Both His Heels: It s Like Fight Club",
-          "summary": "The 29-year-old also opened up on his brutal scenes and getting pummeled for weeks straight on the Sam Levinson-created drama: “I think Sam brought me back to torture me.\""
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/ron-perlman-signs-independent-artist-group-1236652667/",
+          "ageMin": 207,
+          "headline": "Hellboy Actor Ron Perlman Signs With Independent Artist Group (Exclusive)",
+          "summary": "The star is known for his frequent collaborations with Guillermo Del Toro and his work on 'Sons of Anarchy,' among many roles."
+        },
+        {
+          "outlet": "The Hollywood Reporter",
+          "tier": 7,
+          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQM0xTSlZESy1VdFpjVjFzbDhWU2VqUDQyRzlkYXhpUUtkNF9BRTlQZkUzU2hNbjdpTGIzYTk5VDdBcWRaaVNobWxUa0NpMnZYWWdhRzJBN0xabkkxS1hEc2t6UW9rMzViTTFwQTJ2RDFSSlBoQnE1bDR3amRWcG1welBPLWpHUEJST0ItQV9RYVVtYzFtc2RHZnEyU19OUktETk9DNVNCYm5PZw?oc=5",
+          "ageMin": 206,
+          "headline": "‘Hellboy’ Actor Ron Perlman Signs With Independent Artist Group (Exclusive) - The Hollywood Reporter",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxQM0xTSlZESy1VdFpjVjFzbDhWU2VqUDQyRzlkYXhpUUtkNF9BRTlQZkUzU2hNbjdpTGIzYTk5VDdBcWRaaVNobWxUa0NpMnZYWWdhRzJBN0xabkkxS1hEc2t6UW9rMzViTTFwQTJ2RDFSSlBoQnE1bDR3amRWcG1welBPLWpHUEJST0ItQV9RYVVtYzFtc2RHZnEyU19OUktETk9DNVNCYm5PZw?oc=5\" target=\"_blank"
         }
       ],
-      "ageMin": 286,
+      "ageMin": 206,
       "_cand": {
-        "key": "rss:jacob-elordi-dishes-on-nate-s-demise-on-euphoria-and-breakin",
+        "key": "rss:-hellboy-actor-ron-perlman-signs-with-independent-artist-gro",
         "popularity": 0,
-        "kind": "rss-news"
+        "kind": "gnews"
       },
-      "corroborationCount": 1,
+      "corroborationCount": 2,
       "verification": {
-        "tier1Count": 1,
+        "tier1Count": 2,
         "tier1Owners": 1,
-        "outletCount": 1,
+        "outletCount": 2,
         "outlets": [
-          "THR"
+          "THR",
+          "The Hollywood Reporter"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
@@ -584,25 +596,25 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 50,
+      "priority": 67,
       "signals": {
         "recency": 9,
-        "corroboration": 12,
+        "corroboration": 18,
         "status": 18,
-        "type": 5,
+        "type": 14,
         "pop": 0,
         "breakout": 0,
-        "big": 6,
-        "trending": 0,
+        "big": 0,
+        "trending": 8,
         "spice": 0,
         "softTv": 0
       },
-      "tierClass": "C"
+      "tierClass": "B"
     },
     {
-      "id": "news-sony-music-sues-udio-ai-music-generator-copyright-infringement",
-      "slug": "sony-music-sues-udio-again-over-ai-training-data",
-      "title": "Sony Music Sues Udio Again Over AI Training Data",
+      "id": "news-sony-music-sues-udio-ai-music-copyright",
+      "slug": "sony-music-sues-ai-music-generator-udio-again",
+      "title": "Sony Music Sues AI Music Generator Udio Again",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
@@ -610,16 +622,16 @@
       "eventType": "lawsuit",
       "sensitivity": "high",
       "tier": "popular",
-      "eventSlug": "sony-music-sues-udio-ai-music-generator-copyright-infringement",
-      "primaryKeyword": "sony music udio lawsuit",
-      "primaryEntity": "Sony Music",
+      "eventSlug": "sony-music-sues-udio-ai-music-copyright",
+      "primaryKeyword": "Sony Music Udio lawsuit",
+      "primaryEntity": "Sony Music Entertainment",
       "entities": [
         "BEYONCÉ",
         "Udio",
         "Beyoncé",
         "Harry Styles"
       ],
-      "angle": "Sony Music files a new lawsuit against AI music generator Udio, alleging copyright infringement of thousands of songs.",
+      "angle": "Sony Music Entertainment has filed another lawsuit against AI music generator Udio, alleging copyright infringement for training models on 30,000 songs.",
       "tmdbType": "movie",
       "source": "rss:Variety",
       "sources": [
@@ -627,12 +639,12 @@
           "outlet": "Variety",
           "tier": 7,
           "url": "https://variety.com/2026/music/news/sony-music-new-lawsuit-udio-ai-music-generator-1236817746/",
-          "ageMin": 64,
+          "ageMin": 154,
           "headline": "Sony Music Files Another Lawsuit Against Udio, Alleges AI Music Generator Copied 30,000 Songs to Train Models",
           "summary": "Sony Music Entertainment has once again sued the AI music generator Udio, alleging the startup illegally copied more than 30,000 songs from the likes of Beyoncé, Harry Styles and Elvis Presley to train its models. Sony first brought lawsuits against Udio and its competitor Suno in June 2024 alongside labels Universal Music Group and Warner [ ]"
         }
       ],
-      "ageMin": 64,
+      "ageMin": 154,
       "_cand": {
         "key": "rss:sony-music-files-another-lawsuit-against-udio-alleges-ai-mus",
         "popularity": 0,
@@ -669,74 +681,9 @@
       "tierClass": "S"
     },
     {
-      "id": "news-ron-perlman-signs-independent-artist-group",
-      "slug": "hellboy-actor-ron-perlman-signs-with-independent-artist-group-exclusiv",
-      "title": "‘Hellboy’ Actor Ron Perlman Signs With Independent Artist Group (Exclusive)",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "ron-perlman-signs-independent-artist-group",
-      "primaryKeyword": "ron perlman",
-      "primaryEntity": "Ron Perlman",
-      "entities": [
-        "Independent Artist Group"
-      ],
-      "angle": "Veteran actor Ron Perlman has signed with a new agency.",
-      "tmdbType": "movie",
-      "source": "gnews:The Hollywood Reporter",
-      "sources": [
-        {
-          "outlet": "The Hollywood Reporter",
-          "tier": 7,
-          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQM0xTSlZESy1VdFpjVjFzbDhWU2VqUDQyRzlkYXhpUUtkNF9BRTlQZkUzU2hNbjdpTGIzYTk5VDdBcWRaaVNobWxUa0NpMnZYWWdhRzJBN0xabkkxS1hEc2t6UW9rMzViTTFwQTJ2RDFSSlBoQnE1bDR3amRWcG1welBPLWpHUEJST0ItQV9RYVVtYzFtc2RHZnEyU19OUktETk9DNVNCYm5PZw?oc=5",
-          "ageMin": 116,
-          "headline": "‘Hellboy’ Actor Ron Perlman Signs With Independent Artist Group (Exclusive) - The Hollywood Reporter",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxQM0xTSlZESy1VdFpjVjFzbDhWU2VqUDQyRzlkYXhpUUtkNF9BRTlQZkUzU2hNbjdpTGIzYTk5VDdBcWRaaVNobWxUa0NpMnZYWWdhRzJBN0xabkkxS1hEc2t6UW9rMzViTTFwQTJ2RDFSSlBoQnE1bDR3amRWcG1welBPLWpHUEJST0ItQV9RYVVtYzFtc2RHZnEyU19OUktETk9DNVNCYm5PZw?oc=5\" target=\"_blank"
-        }
-      ],
-      "ageMin": 116,
-      "_cand": {
-        "key": "rss:-hellboy-actor-ron-perlman-signs-with-independent-artist-gro",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "The Hollywood Reporter"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "The Hollywood Reporter",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 60,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
       "id": "news-cher-legal-fees-royalties-battle",
-      "slug": "cher-must-pay-1-million-in-legal-fees-over-royalties-dispute",
-      "title": "Cher Must Pay $1 Million in Legal Fees Over Royalties Dispute",
+      "slug": "cher-must-pay-1-million-in-legal-fees-for-sonny-bono-royalties-battle",
+      "title": "Cher Must Pay $1 Million in Legal Fees for Sonny Bono Royalties Battle",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
@@ -750,7 +697,7 @@
         "Mary Bono",
         "Sonny Bono"
       ],
-      "angle": "Cher ordered to pay $1 million in legal fees despite winning royalties battle.",
+      "angle": "Cher ordered to pay her own legal fees despite winning royalty dispute.",
       "tmdbType": "movie",
       "source": "rss:Rolling Stone",
       "sources": [
@@ -758,12 +705,12 @@
           "outlet": "Rolling Stone",
           "tier": 7,
           "url": "https://www.rollingstone.com/music/music-news/cher-1-million-legal-fees-sonny-bono-widow-mary-royalties-1235596860/",
-          "ageMin": 154,
+          "ageMin": 244,
           "headline": "Cher Must Pay Own $1 Million Legal Tab Over Royalties Battle With Sonny Bono s Widow",
           "summary": "Despite her victory in a legal feud over royalties with Mary Bono last year, Cher must pay the eye-watering legal fees she racked up"
         }
       ],
-      "ageMin": 154,
+      "ageMin": 244,
       "_cand": {
         "key": "rss:cher-must-pay-own-1-million-legal-tab-over-royalties-battle-",
         "popularity": 0,
@@ -784,9 +731,9 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 58,
+      "priority": 51,
       "signals": {
-        "recency": 16,
+        "recency": 9,
         "corroboration": 12,
         "status": 18,
         "type": 12,
@@ -798,140 +745,6 @@
         "softTv": 0
       },
       "tierClass": "S"
-    },
-    {
-      "id": "news-ron-perlman-independent-artist-group-signing",
-      "slug": "hellboy-actor-ron-perlman-signs-with-independent-artist-group-exclusiv",
-      "title": "Hellboy Actor Ron Perlman Signs With Independent Artist Group (Exclusive)",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "ron-perlman-independent-artist-group-signing",
-      "primaryKeyword": "ron perlman",
-      "primaryEntity": "Ron Perlman",
-      "entities": [
-        "Guillermo Del Toro",
-        "Sons of Anarchy"
-      ],
-      "angle": "Veteran actor Ron Perlman has signed with a new talent agency.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/ron-perlman-signs-independent-artist-group-1236652667/",
-          "ageMin": 117,
-          "headline": "Hellboy Actor Ron Perlman Signs With Independent Artist Group (Exclusive)",
-          "summary": "The star is known for his frequent collaborations with Guillermo Del Toro and his work on 'Sons of Anarchy,' among many roles."
-        }
-      ],
-      "ageMin": 117,
-      "_cand": {
-        "key": "rss:hellboy-actor-ron-perlman-signs-with-independent-artist-grou",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 55,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-snoop-dogg-biopic-universal-release-date",
-      "slug": "snoop-dogg-biopic-lands-summer-2027-release-from-universal",
-      "title": "Snoop Dogg Biopic Lands Summer 2027 Release From Universal",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "snoop-dogg-biopic-universal-release-date",
-      "primaryKeyword": "snoop dogg biopic",
-      "primaryEntity": "Snoop Dogg",
-      "entities": [
-        "Universal Pictures",
-        "Jonathan Daviss",
-        "Craig Brewer"
-      ],
-      "angle": "Universal Pictures has set a Summer 2027 release date for the Snoop Dogg biopic starring Jonathan Daviss and directed by Craig Brewer.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/snoop-dogg-biopic-lands-summer-2027-release-1236653520/",
-          "ageMin": 272,
-          "headline": "Snoop Dogg Biopic Lands Summer 2027 Release From Universal",
-          "summary": "Jonathan Daviss stars in Craig Brewer's feature that examines the life of the iconic rapper."
-        }
-      ],
-      "ageMin": 272,
-      "_cand": {
-        "key": "rss:snoop-dogg-biopic-lands-summer-2027-release-from-universal",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 48,
-      "signals": {
-        "recency": 9,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
     }
   ]
 }
