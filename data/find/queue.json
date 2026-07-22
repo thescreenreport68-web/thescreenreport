@@ -1,65 +1,63 @@
 {
-  "runId": "run-2026-07-22T16-01-16",
-  "builtAt": "2026-07-22T16:04:54.689Z",
-  "count": 11,
+  "runId": "run-2026-07-22T16-31-12",
+  "builtAt": "2026-07-22T16:33:24.705Z",
+  "count": 20,
   "topics": [
     {
-      "id": "news-casey-affleck-company-casting",
-      "slug": "casey-affleck-s-gothic-mystery-company-to-star-nick-nolte-adelaide-cle",
-      "title": "Casey Affleck’s Gothic Mystery ‘Company’ to Star Nick Nolte, Adelaide Clemens, Ben Mendelsohn and Scoot McNairy (EXCLUSIVE)",
+      "id": "news-spider-man-brand-new-day-punisher-influence",
+      "slug": "spider-man-brand-new-day-director-teases-a-darker-mcu-story-thanks-to-",
+      "title": "‘Spider-Man: Brand New Day’ Director Teases a Darker MCU Story Thanks to The Punisher",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "casey-affleck-company-casting",
-      "primaryKeyword": "casey affleck company",
-      "primaryEntity": "Company",
+      "eventSlug": "spider-man-brand-new-day-punisher-influence",
+      "primaryKeyword": "Spider-Man Brand New Day",
+      "primaryEntity": "Spider-Man: Brand New Day",
       "entities": [
-        "Casey Affleck",
-        "Nick Nolte",
-        "Adelaide Clemens",
-        "Ben Mendelsohn"
+        "MCU",
+        "The Punisher"
       ],
-      "angle": "Casey Affleck's new gothic mystery 'Company' rounds out its cast with Nick Nolte, Adelaide Clemens, Ben Mendelsohn, and Scoot McNairy.",
+      "angle": "Director of 'Spider-Man: Brand New Day' teases a darker MCU story influenced by The Punisher.",
       "tmdbType": "movie",
-      "source": "rss:Variety",
+      "source": "gnews:Collider",
       "sources": [
         {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/film/global/casey-affleck-company-cast-nick-nolte-scoot-mcnairy-1236817877/",
-          "ageMin": 1,
-          "headline": "Casey Affleck’s Gothic Mystery ‘Company’ to Star Nick Nolte, Adelaide Clemens, Ben Mendelsohn and Scoot McNairy (EXCLUSIVE)",
-          "summary": "Casey Affleck has directed his third feature and first since 2019 s Light of My Life.” Company, which wrapped earlier this year in Whistler, Canada, is a gothic mystery starring Nick Nolte ( Cape Fear, Die My Love ), Adelaide Clemens ( The Great Gatsby ), Ben Mendelsohn ( The Dark Knight Rises, The King ), Scoot McNairy ( A Complete Unknown, Speak [ ]"
+          "outlet": "Collider",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOYUVGXzBNWlNrQURzS1EtdWJyN1J3OTJ5OWRCaHdDSHVyVk5VVzJqY01Qa04tc3pBdkcxVVZFQWo1aVFKb1QxUjIzejRnakpXcHFtcS1XY1FqaTJxUFlsYlY2b01SM1J5LUVnV0ZDWlBYdlFOaUg5LTZ1MUZXZkRDN3BZM2pseUd2dmIyakhGTHI?oc=5",
+          "ageMin": 40,
+          "headline": "‘Spider-Man: Brand New Day’ Director Teases a Darker MCU Story Thanks to The Punisher - Collider",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMikAFBVV95cUxOYUVGXzBNWlNrQURzS1EtdWJyN1J3OTJ5OWRCaHdDSHVyVk5VVzJqY01Qa04tc3pBdkcxVVZFQWo1aVFKb1QxUjIzejRnakpXcHFtcS1XY1FqaTJxUFlsYlY2b01SM1J5LUVnV0ZDWlBYdlFOaUg5LTZ1MUZXZkRDN3BZM2pseUd2dmIyakhGTHI?oc=5\" target=\"_blank\" ‘Spider-Man: Brand New Day’ Direc"
         }
       ],
-      "ageMin": 1,
+      "ageMin": 40,
       "_cand": {
-        "key": "rss:casey-affleck-s-gothic-mystery-company-to-star-nick-nolte-ad",
+        "key": "rss:-spider-man-brand-new-day-director-teases-a-darker-mcu-story",
         "popularity": 0,
-        "kind": "rss-news"
+        "kind": "gnews"
       },
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
+        "tier1Count": 0,
+        "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "Variety"
+          "Collider"
         ],
-        "maxTier": 7,
+        "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "Variety",
+        "attribution": "Collider",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 98,
+      "priority": 106,
       "signals": {
-        "recency": 30,
-        "corroboration": 12,
+        "recency": 24,
+        "corroboration": 8,
         "status": 18,
         "type": 14,
         "pop": 0,
@@ -67,43 +65,44 @@
         "big": 24,
         "trending": 0,
         "spice": 0,
-        "softTv": 0
+        "softTv": 0,
+        "radar": 18
       },
-      "tierClass": "B"
+      "radarKind": "movie-releasing",
+      "tierClass": "A"
     },
     {
-      "id": "news-indie-street-film-festival-lineup-2024",
-      "slug": "marc-maron-starrer-to-open-11th-annual-indie-street-film-festival-full",
-      "title": "Marc Maron Starrer to Open 11th Annual Indie Street Film Festival; Full Lineup Revealed",
+      "id": "news-johnny-knoxville-mt-mystic-comedy-series",
+      "slug": "johnny-knoxville-boards-comedy-series-mt-mystic",
+      "title": "Johnny Knoxville Boards Comedy Series 'Mt. Mystic'",
       "contentType": "news",
       "formatTag": "news",
-      "category": "movies",
+      "category": "tv",
       "subcategory": "news",
-      "eventType": "announcement",
+      "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "indie-street-film-festival-lineup-2024",
-      "primaryKeyword": "indie street film festival",
-      "primaryEntity": "Indie Street Film Festival",
+      "eventSlug": "johnny-knoxville-mt-mystic-comedy-series",
+      "primaryKeyword": "mt mystic series",
+      "primaryEntity": "Mt. Mystic (TV series)",
       "entities": [
-        "Marc Maron: End Times Fun",
-        "Marc Maron"
+        "Johnny Knoxville"
       ],
-      "angle": "The 11th annual Indie Street Film Festival has revealed its full lineup, including a Marc Maron starrer.",
+      "angle": "Johnny Knoxville joins cast of comedy series 'Mt. Mystic'",
       "tmdbType": "movie",
-      "source": "rss:THR",
+      "source": "rss:Deadline",
       "sources": [
         {
-          "outlet": "THR",
+          "outlet": "Deadline",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/2026-indie-street-film-festival-lineup-red-bank-nj-1236653985/",
-          "ageMin": 1,
-          "headline": "Marc Maron Starrer In Memoriam to Kick Off 11th Annual Indie Street Film Festival; Full Lineup Revealed (Exclusive)",
-          "summary": "The Red Bank, New Jersey-based event will feature Garden State premieres of Adam Meeks' Will Poulter-starring 'Union County,' set for closing night, Charlotte Glynn's 'The Gymnast,' Danny Madden's 'Downbeat' and Walter Thompson-Hernández's 'If I Go Will They Miss Me.'"
+          "url": "https://deadline.com/2026/07/johnny-knoxville-mt-mystic-comedy-series-1236999513/",
+          "ageMin": 15,
+          "headline": "Johnny Knoxville Joins ‘Mt. Mystic’ Comedy Series",
+          "summary": "EXCLUSIVE: Mt. Mystic, the comedy series based on a YouTube pilot, has added Johnny Knoxville to its cast. It comes as Knoxville’s Jackass: Best and Last, the final movie in the franchise’s film franchise, was released last month. Knoxville, who also hosts Fox’s Fear Factor: House of Fear, which is heading into its second season, [ ]"
         }
       ],
-      "ageMin": 1,
+      "ageMin": 15,
       "_cand": {
-        "key": "rss:marc-maron-starrer-in-memoriam-to-kick-off-11th-annual-indie",
+        "key": "rss:johnny-knoxville-joins-mt-mystic-comedy-series",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -113,24 +112,24 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "THR"
+          "Deadline"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "THR",
+        "attribution": "Deadline",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 93,
+      "priority": 92,
       "signals": {
         "recency": 30,
         "corroboration": 12,
         "status": 18,
-        "type": 9,
+        "type": 14,
         "pop": 0,
         "breakout": 0,
-        "big": 24,
+        "big": 18,
         "trending": 0,
         "spice": 0,
         "softTv": 0
@@ -138,110 +137,39 @@
       "tierClass": "B"
     },
     {
-      "id": "news-audience-demand-for-hard-made-movies",
-      "slug": "the-odyssey-proves-it-audiences-want-movies-made-the-hard-way",
-      "title": "'The Odyssey' Proves It: Audiences Want Movies Made the Hard Way",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "audience-demand-for-hard-made-movies",
-      "primaryKeyword": "audience movie preferences",
-      "primaryEntity": "Project Hail Mary",
-      "entities": [
-        "Project Hail Mary (film)",
-        "Obsession (film)",
-        "Supergirl (film)",
-        "Moana (film)"
-      ],
-      "angle": "Analysis of audience preference for traditionally made films over CGI-heavy blockbusters.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/odyssey-box-office-2026-practical-effects-1236652219/",
-          "ageMin": 176,
-          "headline": "The Odyssey Proves It: Audiences Want Movies Made the Hard Way",
-          "summary": "This year's breakouts like 'Project Hail Mary' and 'Obsession' have were made by filmmakers who sweated. While CG-stuffed franchise disappointments such as 'Supergirl,' 'Moana,' and 'The Mandalorian and Grogu' looked lazy."
-        }
-      ],
-      "ageMin": 176,
-      "_cand": {
-        "key": "rss:the-odyssey-proves-it-audiences-want-movies-made-the-hard-wa",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 93,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 12,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0,
-        "radar": 30
-      },
-      "radarKind": "movie-in-theaters",
-      "tierClass": "A"
-    },
-    {
-      "id": "news-a-great-depression-casting",
-      "slug": "paul-sparks-kate-burton-xander-berkeley-rhys-coiro-star-in-indie-movie",
-      "title": "Paul Sparks, Kate Burton, Xander Berkeley Rhys Coiro Star In Indie Movie ‘A Great Depression’; Filming Wraps In New Jersey",
+      "id": "news-glen-powell-richard-linklater-lou-gehrig-film",
+      "slug": "glen-powell-and-richard-linklater-reunite-for-lou-gehrig-film-at-unive",
+      "title": "Glen Powell And Richard Linklater Reunite For Lou Gehrig Film At Universal",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "a-great-depression-casting",
-      "primaryKeyword": "a great depression movie",
-      "primaryEntity": "A Great Depression",
+      "eventSlug": "glen-powell-richard-linklater-lou-gehrig-film",
+      "primaryKeyword": "Glen Powell Richard Linklater movie",
+      "primaryEntity": "Lou Gehrig Film",
       "entities": [
-        "Paul Sparks",
-        "Kate Burton",
-        "Xander Berkeley",
-        "Rhys Coiro"
+        "Glen Powell",
+        "Richard Linklater",
+        "Lorne Michaels"
       ],
-      "angle": "Filming wraps on indie movie 'A Great Depression' starring Paul Sparks, Kate Burton, Xander Berkeley, and Rhys Coiro.",
+      "angle": "Glen Powell and Richard Linklater reunite for a Lou Gehrig biopic produced by Lorne Michaels.",
       "tmdbType": "movie",
-      "source": "rss:Variety",
+      "source": "rss:Deadline",
       "sources": [
         {
-          "outlet": "Variety",
+          "outlet": "Deadline",
           "tier": 7,
-          "url": "https://variety.com/2026/tv/news/whitmer-thomas-hbo-special-trailer-1236817774/",
-          "ageMin": 55,
-          "headline": "Whitmer Thomas Sings, Skates and Does Stand-Up in Trailer for HBO Comedy Special Terminal Crew of Dudes (EXCLUSIVE)",
-          "summary": "When I was a little kid, I wanted to get bit by a radioactive hillbilly so that I d become Forrest Gump one day, says Whitmer Thomas in the trailer for his upcoming HBO comedy special Terminal Crew of Dudes, an hour filled with original songs, home videos and heartfelt memories. Joined by his bandmates Jeremy [ ]"
+          "url": "https://deadline.com/2026/07/glen-powell-lou-gehrig-movie-richard-linklater-1236999778/",
+          "ageMin": 16,
+          "headline": "Glen Powell And Richard Linklater Reunite For Lou Gehrig Film At Universal; Lorne Michaels To Produce",
+          "summary": "EXCLUSIVE: After hitting a home run with their 2016 college baseball pic Everybody Wants Some!, Glen Powell and Richard Linklater are ready to take the mound again for an untitled Lou Gehrig film at Universal. Powell will play the iconic New York Yankee, with Linklater attached to direct and Simon Rich writing. Lifelong Yankee fan [ ]"
         }
       ],
-      "ageMin": 55,
+      "ageMin": 16,
       "_cand": {
-        "key": "rss:whitmer-thomas-sings-skates-and-does-stand-up-in-trailer-for",
+        "key": "rss:glen-powell-and-richard-linklater-reunite-for-lou-gehrig-fil",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -251,11 +179,11 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Variety"
+          "Deadline"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Variety",
+        "attribution": "Deadline",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -276,39 +204,40 @@
       "tierClass": "B"
     },
     {
-      "id": "news-chris-rock-misty-green-trailer-tiff",
-      "slug": "chris-rock-s-misty-green-trailer-drops-ahead-of-tiff-premiere",
-      "title": "Chris Rock's 'Misty Green' Trailer Drops Ahead of TIFF Premiere",
+      "id": "news-the-lair-jez-butterworth-paramount-plus-series",
+      "slug": "kenneth-branagh-to-star-in-jez-butterworth-s-new-paramount-series-the-",
+      "title": "Kenneth Branagh to Star in Jez Butterworth's New Paramount+ Series 'The Lair'",
       "contentType": "news",
       "formatTag": "news",
-      "category": "movies",
+      "category": "tv",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "chris-rock-misty-green-trailer-tiff",
-      "primaryKeyword": "chris rock movie",
-      "primaryEntity": "Chris Rock: Bigger & Blacker",
+      "eventSlug": "the-lair-jez-butterworth-paramount-plus-series",
+      "primaryKeyword": "the lair series",
+      "primaryEntity": "The Lair",
       "entities": [
-        "Chris Rock",
-        "A24",
-        "TIFF"
+        "The Lair (TV series)",
+        "Kenneth Branagh",
+        "Jez Butterworth",
+        "Paramount+"
       ],
-      "angle": "Chris Rock's new A24 industry drama 'Misty Green' set for TIFF premiere.",
+      "angle": "Paramount+ orders new Jez Butterworth series starring Kenneth Branagh",
       "tmdbType": "movie",
-      "source": "rss:IndieWire",
+      "source": "rss:Deadline",
       "sources": [
         {
-          "outlet": "IndieWire",
+          "outlet": "Deadline",
           "tier": 7,
-          "url": "https://www.indiewire.com/news/trailers/chris-rock-misty-green-trailer-hollywood-drama-a24-1235206552/",
-          "ageMin": 180,
-          "headline": "Chris Rock s Misty Green Trailer: Rosalind Eleazar Is an Actress Hustling for Her Next Act in A24 Industry Drama",
-          "summary": "The comic's latest feature behind the camera world-premieres at TIFF before hitting theaters later this year."
+          "url": "https://deadline.com/2026/07/kenneth-branagh-drama-laird-paramount-plus-jez-butterworth-1236998943/",
+          "ageMin": 1,
+          "headline": "Kenneth Branagh Stars In Scottish Highland Drama Laird Ordered By Paramount+ From Jez Butterworth 101 Studios",
+          "summary": "Paramount+ has greenlighted a third series from Jez Butterworth and 101 Studios, the team behind the streamer s MobLand and The Agency. Titled The Lair, it stars Kenneth Branagh (Mayday, Oppenheimer) who also executive produces. The Laird was created by Jez Butterworth and his brother, fellow writer John-Henry Butterworth, who co-created together The Agency, as well [ ]"
         }
       ],
-      "ageMin": 180,
+      "ageMin": 1,
       "_cand": {
-        "key": "rss:chris-rock-s-misty-green-trailer-rosalind-eleazar-is-an-actr",
+        "key": "rss:kenneth-branagh-stars-in-scottish-highland-drama-laird-order",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -318,24 +247,24 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "IndieWire"
+          "Deadline"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "IndieWire",
+        "attribution": "Deadline",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 79,
+      "priority": 87,
       "signals": {
-        "recency": 16,
+        "recency": 30,
         "corroboration": 12,
         "status": 18,
         "type": 9,
         "pop": 0,
         "breakout": 0,
-        "big": 24,
+        "big": 18,
         "trending": 0,
         "spice": 0,
         "softTv": 0
@@ -343,7 +272,140 @@
       "tierClass": "B"
     },
     {
-      "id": "news-war-machine-sequel-title-alan-ritchson",
+      "id": "news-paramount-plus-laird-series-kenneth-branagh",
+      "slug": "paramount-orders-scottish-highland-saga-laird-starring-kenneth-branagh",
+      "title": "Paramount+ Orders Scottish Highland Saga 'Laird' Starring Kenneth Branagh",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "paramount-plus-laird-series-kenneth-branagh",
+      "primaryKeyword": "paramount plus series",
+      "primaryEntity": "Laird",
+      "entities": [
+        "Paramount+",
+        "Kenneth Branagh"
+      ],
+      "angle": "Paramount+ has greenlit a new Scottish Highland family saga titled 'Laird,' set to star and be executive produced by Kenneth Branagh.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/tv/tv-news/paramount-scottish-highland-saga-laird-kenneth-branagh-1236653912/",
+          "ageMin": 1,
+          "headline": "Paramount+ Orders Scottish Highland Family Saga ‘Laird’ With Kenneth Branagh",
+          "summary": "The story follows a landowner, the Laird of Castle Drummoch, who challenges an American billionaire with ambitions to buy up the glens."
+        }
+      ],
+      "ageMin": 1,
+      "_cand": {
+        "key": "rss:paramount-orders-scottish-highland-family-saga-laird-with-ke",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 87,
+      "signals": {
+        "recency": 30,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "music-news-dhani-harrison-nigel-godrich-dragonflies-album-preview",
+      "slug": "dhani-harrison-nigel-godrich-preview-new-band-dragonflies-album",
+      "title": "Dhani Harrison, Nigel Godrich Preview New Band Dragonflies’ Album",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "indie",
+      "eventSlug": "dhani-harrison-nigel-godrich-dragonflies-album-preview",
+      "primaryKeyword": "Dhani Harrison new album",
+      "primaryEntity": "Dhani Harrison",
+      "entities": [
+        "Nigel Godrich",
+        "Dragonflies"
+      ],
+      "angle": "George Harrison's son and Radiohead producer preview new band's debut album.",
+      "tmdbType": "movie",
+      "source": "rss:Rolling Stone",
+      "sources": [
+        {
+          "outlet": "Rolling Stone",
+          "tier": 7,
+          "url": "https://www.rollingstone.com/music/music-news/dhani-harrison-nigel-godrich-new-band-dragonflies-slower-1235597083/",
+          "ageMin": 15,
+          "headline": "Dhani Harrison, Nigel Godrich Preview New Band Dragonflies’ Album With ‘Slower’",
+          "summary": "Duo’s eponymous album arrives on Sept. 18"
+        }
+      ],
+      "ageMin": 15,
+      "_cand": {
+        "key": "rss:dhani-harrison-nigel-godrich-preview-new-band-dragonflies-al",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Rolling Stone"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Rolling Stone",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 69,
+      "signals": {
+        "recency": 30,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-war-machine-sequel-alan-ritchson-title",
       "slug": "the-sequel-to-netflix-s-war-machine-with-alan-ritchson-gets-an-officia",
       "title": "The sequel to Netflix’s War Machine with Alan Ritchson gets an official title",
       "contentType": "news",
@@ -352,15 +414,14 @@
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "war-machine-sequel-title-alan-ritchson",
+      "eventSlug": "war-machine-sequel-alan-ritchson-title",
       "primaryKeyword": "war machine sequel title",
       "primaryEntity": "War Machine",
       "entities": [
-        "War Machine (film)",
-        "Alan Ritchson",
-        "Netflix"
+        "Netflix",
+        "Alan Ritchson"
       ],
-      "angle": "Netflix announces the official title for the sequel to its film 'War Machine' starring Alan Ritchson.",
+      "angle": "The sequel to Netflix's 'War Machine' starring Alan Ritchson has officially been given its title.",
       "tmdbType": "movie",
       "source": "gnews:JoBlo",
       "sources": [
@@ -368,12 +429,12 @@
           "outlet": "JoBlo",
           "tier": 5,
           "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1YWTJHM2FsY3dIWVQxZWpKVDlpRUhQeEphdzFhTHRYX1RJSGYtdnFuUHlyMmdFWHp4b0RkMkQ5OTZ3bDAtb3ZXel83ay1CRU5sU0xoRVJBWlFkV0NpalRXaDBhY1lrS2vSAWxBVV95cUxObzc1LVdqRWtpSlZnd0NIazlpekNQQTRuV09QUlNYTzVJUjM3SFBlSS05RFdZaXdmUjFZVjVSaFFjUFZYcERRTGtHVm8wcWZ1bFF2M1loai1mLWtNbGYwSjVuTEhTVjFwNUtJNVM?oc=5",
-          "ageMin": 121,
+          "ageMin": 151,
           "headline": "The sequel to Netflix’s War Machine with Alan Ritchson gets an official title - JoBlo",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1YWTJHM2FsY3dIWVQxZWpKVDlpRUhQeEphdzFhTHRYX1RJSGYtdnFuUHlyMmdFWHp4b0RkMkQ5OTZ3bDAtb3ZXel83ay1CRU5sU0xoRVJBWlFkV0NpalRXaDBhY1lrS2vSAWxBVV95cUxObzc1LVdqRWtpSlZnd0NIazlpekNQQTRuV09QUlNYTzVJUjM3SFBlSS05RFdZaXdmUjFZVjVSaFFjUFZYcERRTGtHVm8wcWZ1bFF"
         }
       ],
-      "ageMin": 121,
+      "ageMin": 151,
       "_cand": {
         "key": "rss:the-sequel-to-netflix-s-war-machine-with-alan-ritchson-gets-",
         "popularity": 0,
@@ -410,37 +471,37 @@
       "tierClass": "B"
     },
     {
-      "id": "news-paul-walker-casting",
-      "slug": "paul-walker-nearly-landed-major-star-wars-role",
-      "title": "Paul Walker Nearly Landed Major Star Wars Role",
+      "id": "news-star-wars-first-blockbuster-debate",
+      "slug": "hear-me-out-the-first-blockbuster-is-star-wars-not-jaws",
+      "title": "Hear Me Out: The First Blockbuster Is 'Star Wars,' Not 'Jaws'",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
-      "eventType": "casting",
+      "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "paul-walker-casting",
-      "primaryKeyword": "paul walker star wars",
-      "primaryEntity": "Paul Walker",
+      "eventSlug": "star-wars-first-blockbuster-debate",
+      "primaryKeyword": "Star Wars Jaws blockbuster",
+      "primaryEntity": "Star Wars",
       "entities": [
-        "Star Wars"
+        "Jaws"
       ],
-      "angle": "Paul Walker was reportedly close to securing a major role in the Star Wars franchise before his death.",
+      "angle": "An opinion piece argues that 'Star Wars' should be considered the first blockbuster, not 'Jaws'.",
       "tmdbType": "movie",
-      "source": "gnews:3DVF",
+      "source": "gnews:Inverse",
       "sources": [
         {
-          "outlet": "3DVF",
+          "outlet": "Inverse",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQMll4WUtlaVk4X0ROdHJJV2t4WlFNWldyLXdvNU00Zk82S1BjM0FQWEtZZ3BsSHhCRW42WEV1SW9jZHR4bVFFTW50NFFnWWtvdl9SMDBabkVTUlYySDZaV1ZPeE1WcGtmbXNUTWM3RUtST2hXWWJaTk53XzlkOXZmNzRPQ0VQcmpkZGU1a18yYzhHWjJoY2pqeHpWY19fZw?oc=5",
-          "ageMin": 203,
-          "headline": "Beyond Fast Furious, Paul Walker nearly landed one of Star Wars’ biggest roles - 3DVF",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxQMll4WUtlaVk4X0ROdHJJV2t4WlFNWldyLXdvNU00Zk82S1BjM0FQWEtZZ3BsSHhCRW42WEV1SW9jZHR4bVFFTW50NFFnWWtvdl9SMDBabkVTUlYySDZaV1ZPeE1WcGtmbXNUTWM3RUtST2hXWWJaTk53XzlkOXZmNzRPQ0VQcmpkZGU1a18yYzhHWjJoY2pqeHpWY19fZw?oc=5\" target=\"_blank\" Beyond Fast Fu"
+          "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQcVNZTGhtMHcyU1FiQVBvRmU3X20yNkNMZTZ5UFdqem1UOEk4SEhMSkZxakVBaG1PZW1JcG1vdlgzZkxZRk5oZ2tfRUtaNlNfdU5qNUNqWTRZZWNvQlByZzlvSW1qanV2S05ndGx3dGF1LVJpVVplV2MtTTdtZU1lWHVfVVFMNFlDZWc?oc=5",
+          "ageMin": 31,
+          "headline": "Hear Me Out: The First Blockbuster Is 'Star Wars,' Not 'Jaws' - Inverse",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiigFBVV95cUxQcVNZTGhtMHcyU1FiQVBvRmU3X20yNkNMZTZ5UFdqem1UOEk4SEhMSkZxakVBaG1PZW1JcG1vdlgzZkxZRk5oZ2tfRUtaNlNfdU5qNUNqWTRZZWNvQlByZzlvSW1qanV2S05ndGx3dGF1LVJpVVplV2MtTTdtZU1lWHVfVVFMNFlDZWc?oc=5\" target=\"_blank\" Hear Me Out: The First Blockbuster Is 'St"
         }
       ],
-      "ageMin": 203,
+      "ageMin": 31,
       "_cand": {
-        "key": "rss:beyond-fast-furious-paul-walker-nearly-landed-one-of-star-wa",
+        "key": "rss:hear-me-out-the-first-blockbuster-is-star-wars-not-jaws-inve",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -450,84 +511,19 @@
         "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "3DVF"
+          "Inverse"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "3DVF",
+        "attribution": "Inverse",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 73,
+      "priority": 67,
       "signals": {
-        "recency": 9,
+        "recency": 24,
         "corroboration": 8,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-spider-man-brand-new-day-director-punisher-tease",
-      "slug": "spider-man-brand-new-day-director-teases-a-darker-mcu-story-thanks-to-",
-      "title": "'Spider-Man: Brand New Day' Director Teases a Darker MCU Story Thanks to The Punisher",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "high",
-      "eventSlug": "spider-man-brand-new-day-director-punisher-tease",
-      "primaryKeyword": "spider-man brand new day director",
-      "primaryEntity": "Spider-Man: Brand New Day",
-      "entities": [
-        "The Punisher"
-      ],
-      "angle": "The director of 'Spider-Man: Brand New Day' hints at a darker MCU storyline influenced by The Punisher.",
-      "tmdbType": "movie",
-      "source": "gnews:Deadline",
-      "sources": [
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9KZjdpUmp6RnhSRE5uMmNpLWNDNVM3QWVtZ1A0S0M3RG9xQkwtNEVqT2oyV21FeFRuZmp6WkZ1Y29KalV6bjhRUGhBbWE1NzJoWFZCN3kteVZmeWtkdy1sT1lqMGFJZWpTVVJNQUZ1NTc?oc=5",
-          "ageMin": 1681,
-          "headline": "2026 Premiere Dates For New Returning Series On Broadcast, Streaming Cable - Deadline",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMicEFVX3lxTE9KZjdpUmp6RnhSRE5uMmNpLWNDNVM3QWVtZ1A0S0M3RG9xQkwtNEVqT2oyV21FeFRuZmp6WkZ1Y29KalV6bjhRUGhBbWE1NzJoWFZCN3kteVZmeWtkdy1sT1lqMGFJZWpTVVJNQUZ1NTc?oc=5\" target=\"_blank\" 2026 Premiere Dates For New Returning Series On Broadcast, Streaming Cable /a"
-        }
-      ],
-      "ageMin": 1681,
-      "_cand": {
-        "key": "rss:2026-premiere-dates-for-new-returning-series-on-broadcast-st",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Deadline"
-        ],
-        "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "Deadline",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 66,
-      "signals": {
-        "recency": 1,
-        "corroboration": 12,
         "status": 18,
         "type": 5,
         "pop": 0,
@@ -535,16 +531,147 @@
         "big": 12,
         "trending": 0,
         "spice": 0,
-        "softTv": 0,
-        "radar": 18
+        "softTv": 0
       },
-      "radarKind": "movie-releasing",
-      "tierClass": "S"
+      "tierClass": "B"
     },
     {
-      "id": "news-snoop-dogg-announcement",
-      "slug": "snoop-dogg-biopic-set-for-summer-2027-release",
-      "title": "Snoop Dogg Biopic Set for Summer 2027 Release",
+      "id": "music-news-syd-internet-new-album-almost-done",
+      "slug": "syd-reveals-the-internet-s-new-album-is-almost-finished",
+      "title": "Syd Reveals The Internet's New Album Is Almost Finished",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "syd-internet-new-album-almost-done",
+      "primaryKeyword": "The Internet new album",
+      "primaryEntity": "The Internet",
+      "entities": [
+        "Syd",
+        "Steve Lacy"
+      ],
+      "angle": "Syd announces that The Internet's new album is nearing completion.",
+      "tmdbType": "movie",
+      "source": "rss:Rolling Stone",
+      "sources": [
+        {
+          "outlet": "Rolling Stone",
+          "tier": 7,
+          "url": "https://www.rollingstone.com/music/music-features/syd-the-internet-new-album-1235596826/",
+          "ageMin": 85,
+          "headline": "Syd Says the Internet s New Album Is Almost Done — and It s Super Fire",
+          "summary": "After she and Steve Lacy released solo albums on the same day, they're getting back to work on the band's new project, with an adjusted lineup"
+        }
+      ],
+      "ageMin": 85,
+      "_cand": {
+        "key": "rss:syd-says-the-internet-s-new-album-is-almost-done-and-it-s-su",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Rolling Stone"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Rolling Stone",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 55,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-star-wars-jedi-sequel-release-2024",
+      "slug": "star-wars-jedi-gets-official-sequel-release-this-year",
+      "title": "‘Star Wars Jedi’ Gets Official Sequel Release This Year",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "star-wars-jedi-sequel-release-2024",
+      "primaryKeyword": "star wars jedi sequel",
+      "primaryEntity": "Star Wars: The Last Jedi",
+      "entities": [
+        "Star Wars Jedi (video game series)",
+        "Star Wars"
+      ],
+      "angle": "Official sequel for the Star Wars Jedi game series announced for release this year.",
+      "tmdbType": "movie",
+      "source": "gnews:Collider",
+      "sources": [
+        {
+          "outlet": "Collider",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNWVdiM29kbTZLTHdZZEVQRDBYbmtGVjNDSHkwZ2hRd1JQZ1R3OWdlRFMySFZpeGdZM0FRczlLeFVBLUNvMTd6U3lLSmFqS3c1VGthUUJiSEVkbzF5dHJMaFZzX1Z6M05fN1h6ZnFEYUppM215Y284YlRCM1JEbFJyLXlDbW5WQ1VkWnpaRHNIQ3c2UXRDb0RDTWlzNXhuUnphZmc?oc=5",
+          "ageMin": 241,
+          "headline": "‘Star Wars Jedi’ Gets Official Sequel Release This Year - Collider",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxNWVdiM29kbTZLTHdZZEVQRDBYbmtGVjNDSHkwZ2hRd1JQZ1R3OWdlRFMySFZpeGdZM0FRczlLeFVBLUNvMTd6U3lLSmFqS3c1VGthUUJiSEVkbzF5dHJMaFZzX1Z6M05fN1h6ZnFEYUppM215Y284YlRCM1JEbFJyLXlDbW5WQ1VkWnpaRHNIQ3c2UXRDb0RDTWlzNXhuUnphZmc?oc=5\" target=\"_blank\" ‘Star War"
+        }
+      ],
+      "ageMin": 241,
+      "_cand": {
+        "key": "rss:-star-wars-jedi-gets-official-sequel-release-this-year-colli",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "Collider"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "Collider",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 62,
+      "signals": {
+        "recency": 9,
+        "corroboration": 8,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-snoop-dogg-biopic-universal-release",
+      "slug": "snoop-dogg-biopic-lands-summer-2027-release-from-universal",
+      "title": "Snoop Dogg Biopic Lands Summer 2027 Release From Universal",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
@@ -552,16 +679,16 @@
       "eventType": "announcement",
       "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "snoop-dogg-announcement",
+      "eventSlug": "snoop-dogg-biopic-universal-release",
       "primaryKeyword": "Snoop Dogg biopic",
-      "primaryEntity": "Snoop Dogg's Hood of Horror",
+      "primaryEntity": "Snoop Dogg Biopic",
       "entities": [
+        "Snoop Dogg's Hood of Horror",
         "Snoop Dogg",
-        "Jonathan Daviss",
-        "Craig Brewer",
-        "Universal Pictures"
+        "Universal Pictures",
+        "Jonathan Daviss"
       ],
-      "angle": "Universal Pictures has set a Summer 2027 release date for the Snoop Dogg biopic, starring Jonathan Daviss and directed by Craig Brewer.",
+      "angle": "Universal Pictures has set a Summer 2027 release date for the Snoop Dogg biopic starring Jonathan Daviss and directed by Craig Brewer.",
       "tmdbType": "movie",
       "source": "rss:IndieWire",
       "sources": [
@@ -569,12 +696,12 @@
           "outlet": "IndieWire",
           "tier": 7,
           "url": "https://www.indiewire.com/awards/industry/will-2026-emmys-bring-back-cut-categories-1235206508/",
-          "ageMin": 1111,
+          "ageMin": 1141,
           "headline": "Will the Emmys Bring Back Cut Categories? History Provides Hope",
           "summary": "Though the Television Academy announced plans to cut five categories from the 2026 Primetime Emmys, the decision is likely not set in stone."
         }
       ],
-      "ageMin": 1111,
+      "ageMin": 1141,
       "_cand": {
         "key": "rss:will-the-emmys-bring-back-cut-categories-history-provides-ho",
         "popularity": 0,
@@ -611,6 +738,138 @@
       "tierClass": "B"
     },
     {
+      "id": "music-news-chase-wright-new-album-music-fatherhood",
+      "slug": "chase-wright-on-new-album-fatherhood-and-his-journey",
+      "title": "Chase Wright on New Album, Fatherhood, and His Journey",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "indie",
+      "eventSlug": "chase-wright-new-album-music-fatherhood",
+      "primaryKeyword": "Chase Wright new album",
+      "primaryEntity": "CHASE WRIGHT",
+      "entities": [
+        "Chase Wright"
+      ],
+      "angle": "Country artist Chase Wright discusses his new album, fatherhood, and his journey from track star.",
+      "tmdbType": "movie",
+      "source": "gnews:KHOU",
+      "sources": [
+        {
+          "outlet": "KHOU",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMipAJBVV95cUxOSnp4dk1lZ3ltZk9QQUlRc2lTN0UxVUNBdW5fQlBLdnV6ZXVIcFBQc05LMTFJRHJwdjhwZlJCdkkyX2hZOG5KNlJDOUJRTkdLb2hGOG4ySThqV1FFYzM1aE4tTlRncU16VG5QYTRwMF8tQ0todkl4c1haS0otQlBhNFprbTV1SW41UWVZWUVIdjNRcXltRHFrZzFlaldxWjk0Q01TQkIzR2puME9aWU9zeVRZRllJQ2RSR2IwcEVfOW9XaEtfWnJFN2lteHlsX0t4NU1mcDFmTkFka05OS3g1d08tN0I4ZjcySVJUWjlzeDNmUHVxWFRWcko1V0RlRV82N1dwZ3YtNUVwdV9UbFFxMXlWRjZoZ0UzUTZOMHdOUFJPR2Jn?oc=5",
+          "ageMin": 95,
+          "headline": "From Track Star to Country Star: Chase Wright on Music, Fatherhood His New Album - KHOU",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMipAJBVV95cUxOSnp4dk1lZ3ltZk9QQUlRc2lTN0UxVUNBdW5fQlBLdnV6ZXVIcFBQc05LMTFJRHJwdjhwZlJCdkkyX2hZOG5KNlJDOUJRTkdLb2hGOG4ySThqV1FFYzM1aE4tTlRncU16VG5QYTRwMF8tQ0todkl4c1haS0otQlBhNFprbTV1SW41UWVZWUVIdjNRcXltRHFrZzFlaldxWjk0Q01TQkIzR2puME9aWU9zeVRZRllJQ2RSR2I"
+        }
+      ],
+      "ageMin": 95,
+      "_cand": {
+        "key": "rss:from-track-star-to-country-star-chase-wright-on-music-father",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "KHOU"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "KHOU",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 51,
+      "signals": {
+        "recency": 16,
+        "corroboration": 8,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-chris-rock-misty-green-hollywood-actress-second-act",
+      "slug": "chris-rock-to-star-in-misty-green-about-actress-s-second-act",
+      "title": "Chris Rock to Star in 'Misty Green' About Actress's Second Act",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "chris-rock-misty-green-hollywood-actress-second-act",
+      "primaryKeyword": "Chris Rock movie",
+      "primaryEntity": "Chris Rock: Bigger & Blacker",
+      "entities": [
+        "Chris Rock",
+        "Misty Green"
+      ],
+      "angle": "Chris Rock is set to star in 'Misty Green,' a film about a Hollywood actress navigating her career's second act.",
+      "tmdbType": "movie",
+      "source": "gnews:The Hollywood Reporter",
+      "sources": [
+        {
+          "outlet": "The Hollywood Reporter",
+          "tier": 7,
+          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOTzdFdldYY0FzenZoaUNGelpCSmxHalNyWHdTRlpxd3JNS0c2UkFTeXVYNm16czRQVU10emFYOHVQaDRrbDFrZXNhUThoUDBiaFIxVl9lSy1oZktsZ2I0cXhXaUtjZXZhakhXSDR6aWVlU1d2RjN4a283VGZhS2xkSjkxSi1FYWpONEp2T3BkeWg0bk5zTi00X0lnNjgxcXBiWjZIUlhaeHVNSllYekJRaFFB?oc=5",
+          "ageMin": 92,
+          "headline": "‘Misty Green’: Chris Rock Follows a Hollywood Actress Fighting for Her Second Act - The Hollywood Reporter",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxOTzdFdldYY0FzenZoaUNGelpCSmxHalNyWHdTRlpxd3JNS0c2UkFTeXVYNm16czRQVU10emFYOHVQaDRrbDFrZXNhUThoUDBiaFIxVl9lSy1oZktsZ2I0cXhXaUtjZXZhakhXSDR6aWVlU1d2RjN4a283VGZhS2xkSjkxSi1FYWpONEp2T3BkeWg0bk5zTi00X0lnNjgxcXBiWjZIUlhaeHVNSllYekJRaFFB?oc=5\" targ"
+        }
+      ],
+      "ageMin": 92,
+      "_cand": {
+        "key": "rss:-misty-green-chris-rock-follows-a-hollywood-actress-fighting",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "The Hollywood Reporter"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "The Hollywood Reporter",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 63,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 12,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
       "id": "news-star-wars-lightsaber-prop-record-sale",
       "slug": "star-wars-lightsaber-prop-with-severed-hand-sells-for-record-3-75m",
       "title": "Star Wars Lightsaber Prop With Severed Hand Sells For Record $3.75M",
@@ -626,7 +885,7 @@
       "entities": [
         "Lightsaber"
       ],
-      "angle": "A Star Wars lightsaber prop, complete with a severed hand, sold for a record-breaking $3.75 million at auction.",
+      "angle": "A Star Wars lightsaber prop, complete with a severed hand, has sold for a record-breaking $3.75 million at auction.",
       "tmdbType": "movie",
       "source": "gnews:HotHardware",
       "sources": [
@@ -634,12 +893,12 @@
           "outlet": "HotHardware",
           "tier": 5,
           "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPNTV6RUFOQUwwLWluWW01bXVYS0tveWl1ako4eXF5QWN2cmZlenhISUZkSFI0cVJNeUtfZ3pjcVJfOWlXamU2MmVtd2JJUmRkQi0ybEwzOFFTUVpOMmVQdVZVMEZUaDhZSHVaSFVWb1p5NkZBMG5ZTWU0M2VVMWNXNHUxWS1zeWdKVmppYzhBYw?oc=5",
-          "ageMin": 161,
+          "ageMin": 191,
           "headline": "Star Wars Lightsaber Prop With Severed Hand Sells For Record $3.75M - HotHardware",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMijwFBVV95cUxPNTV6RUFOQUwwLWluWW01bXVYS0tveWl1ako4eXF5QWN2cmZlenhISUZkSFI0cVJNeUtfZ3pjcVJfOWlXamU2MmVtd2JJUmRkQi0ybEwzOFFTUVpOMmVQdVZVMEZUaDhZSHVaSFVWb1p5NkZBMG5ZTWU0M2VVMWNXNHUxWS1zeWdKVmppYzhBYw?oc=5\" target=\"_blank\" Star Wars Lightsaber Prop With Sev"
         }
       ],
-      "ageMin": 161,
+      "ageMin": 191,
       "_cand": {
         "key": "rss:star-wars-lightsaber-prop-with-severed-hand-sells-for-record",
         "popularity": 0,
@@ -660,9 +919,9 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 59,
+      "priority": 52,
       "signals": {
-        "recency": 16,
+        "recency": 9,
         "corroboration": 8,
         "status": 18,
         "type": 5,
@@ -676,36 +935,298 @@
       "tierClass": "C"
     },
     {
-      "id": "news-travis-scott-acting-paramount-deal-grammy-comments",
-      "slug": "travis-scott-on-acting-for-christopher-nolan-new-paramount-deal-and-gr",
-      "title": "Travis Scott on Acting for Christopher Nolan, New Paramount Deal, and Grammy Snub",
+      "id": "news-joey-iwanaga-signs-artists-first",
+      "slug": "the-furious-star-joey-iwanaga-inks-with-artists-first",
+      "title": "The Furious Star Joey Iwanaga Inks With Artists First",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "travis-scott-acting-paramount-deal-grammy-comments",
-      "primaryKeyword": "Travis Scott",
+      "eventSlug": "joey-iwanaga-signs-artists-first",
+      "primaryKeyword": "joey iwanaga",
+      "primaryEntity": "Joey Iwanaga",
+      "entities": [
+        "Artists First"
+      ],
+      "angle": "Action film actor Joey Iwanaga has signed with management company Artists First.",
+      "tmdbType": "movie",
+      "source": "rss:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/the-furious-star-joey-iwanaga-signs-artists-first-1236997675/",
+          "ageMin": 1,
+          "headline": "The Furious Star Joey Iwanaga Inks With Artists First",
+          "summary": "EXCLUSIVE: Artists First has signed Joey Iwanaga, a second-generation Japanese-American actor recognized for his work in action films, for management. Most notably, Iwanaga played the lead villain opposite Xie Miao and Joe Taslim in The Furious, the adrenaline-filled martial arts movie directed by stunt coordinator-turned-filmmaker Kenji Tanigaki, which released in theaters last month, after world"
+        }
+      ],
+      "ageMin": 1,
+      "_cand": {
+        "key": "rss:the-furious-star-joey-iwanaga-inks-with-artists-first",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 65,
+      "signals": {
+        "recency": 30,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-olivia-rodrigo-reproductive-rights-discussion",
+      "slug": "olivia-rodrigo-links-anti-abortionists-to-pro-control-stance",
+      "title": "Olivia Rodrigo Links Anti-Abortionists to Pro-Control Stance",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "olivia-rodrigo-reproductive-rights-discussion",
+      "primaryKeyword": "olivia rodrigo",
+      "primaryEntity": "Olivia Rodrigo",
+      "entities": [
+        "Center for Reproductive Rights"
+      ],
+      "angle": "Singer Olivia Rodrigo has spoken out on reproductive rights, linking anti-abortion stances to control.",
+      "tmdbType": "movie",
+      "source": "rss:Billboard",
+      "sources": [
+        {
+          "outlet": "Billboard",
+          "tier": 7,
+          "url": "https://www.billboard.com/music/music-news/olivia-rodrigo-anti-abortionists-are-pro-control-1236300648/",
+          "ageMin": 3,
+          "headline": "Olivia Rodrigo Says Anti-Abortionists Are Actually Just Pro-Control in Reproductive Rights Discussion",
+          "summary": "The singer sat down with the Center for Reproductive Rights to talk about the most pressing issues in the U.S. right now."
+        }
+      ],
+      "ageMin": 3,
+      "_cand": {
+        "key": "rss:olivia-rodrigo-says-anti-abortionists-are-actually-just-pro-",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Billboard"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Billboard",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 65,
+      "signals": {
+        "recency": 30,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-katie-holmes-other",
+      "slug": "katie-holmes-steps-out-with-new-beau-plus-other-celebrity-sightings",
+      "title": "Katie Holmes Steps Out With New Beau, Plus Other Celebrity Sightings",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "katie-holmes-other",
+      "primaryKeyword": "Katie Holmes",
+      "primaryEntity": "Katie Holmes",
+      "entities": [
+        "Erling Haaland",
+        "Rosie O’Donnell"
+      ],
+      "angle": "Katie Holmes was seen out with a new romantic partner, alongside other celebrity sightings.",
+      "tmdbType": "movie",
+      "source": "gnews:VIA Metropolitan Transit",
+      "sources": [
+        {
+          "outlet": "VIA Metropolitan Transit",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOSGZGSFdpd1RvM0RQYnNZTUZGZ0s2STVLUHM0SkRPeFFUcmRwYmFqY194UHJfcm9ETG9DY2RYdHo2WDBrWWNjVXZyZm9KaUNnMW5UTWU2bjQ3ODhkRm5tWEZmZDBrZ21CNWhhTkRRaTFac1lxVl9tdTY5QmJRbENDSDdhbHpFMUNhTFNB?oc=5",
+          "ageMin": 15,
+          "headline": "VIA to offer Park Ride service to AC/DC concert - VIA Metropolitan Transit",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiiwFBVV95cUxOSGZGSFdpd1RvM0RQYnNZTUZGZ0s2STVLUHM0SkRPeFFUcmRwYmFqY194UHJfcm9ETG9DY2RYdHo2WDBrWWNjVXZyZm9KaUNnMW5UTWU2bjQ3ODhkRm5tWEZmZDBrZ21CNWhhTkRRaTFac1lxVl9tdTY5QmJRbENDSDdhbHpFMUNhTFNB?oc=5\" target=\"_blank\" VIA to offer Park Ride service to AC/DC "
+        }
+      ],
+      "ageMin": 15,
+      "_cand": {
+        "key": "rss:via-to-offer-park-ride-service-to-ac-dc-concert-via-metropol",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "VIA Metropolitan Transit"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "VIA Metropolitan Transit",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 61,
+      "signals": {
+        "recency": 30,
+        "corroboration": 8,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-mia-goth-hollywood-star",
+      "slug": "mia-goth-is-my-latest-obsession-and-hollywood-s-most-unconventional-mo",
+      "title": "Mia Goth is my latest obsession and Hollywood’s most unconventional movie star",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "mia-goth-hollywood-star",
+      "primaryKeyword": "Mia Goth",
+      "primaryEntity": "Mia Goth",
+      "entities": [],
+      "angle": "Fashion magazine highlights Mia Goth as an unconventional Hollywood star.",
+      "tmdbType": "movie",
+      "source": "gnews:vogueadria.com",
+      "sources": [
+        {
+          "outlet": "vogueadria.com",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFB2Y1BIMGRZWE42TEpEUlpNRTZLS3BOT2QxNWNJVS1JMjlwMFdQdzBnSkJ2U1BtcjBKaTdSV19uZnlXaHpObmVMckE1MDc1c2l5NEMzbzF3YW5HSVJZUFR2Wjd2SzhEdw?oc=5",
+          "ageMin": 151,
+          "headline": "Mia Goth is my latest obsession and Hollywood’s most unconventional movie star - vogueadria.com",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiZkFVX3lxTFB2Y1BIMGRZWE42TEpEUlpNRTZLS3BOT2QxNWNJVS1JMjlwMFdQdzBnSkJ2U1BtcjBKaTdSV19uZnlXaHpObmVMckE1MDc1c2l5NEMzbzF3YW5HSVJZUFR2Wjd2SzhEdw?oc=5\" target=\"_blank\" Mia Goth is my latest obsession and Hollywood’s most unconventional movie star /a nbsp; nb"
+        }
+      ],
+      "ageMin": 151,
+      "_cand": {
+        "key": "rss:mia-goth-is-my-latest-obsession-and-hollywood-s-most-unconve",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "vogueadria.com"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "vogueadria.com",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 57,
+      "signals": {
+        "recency": 16,
+        "corroboration": 8,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "radar": 10
+      },
+      "radarKind": "movie-trending",
+      "tierClass": "A"
+    },
+    {
+      "id": "news-travis-scott-acting-christopher-nolan-paramount-deal",
+      "slug": "travis-scott-on-acting-for-christopher-nolan-new-paramount-deal-and-ne",
+      "title": "Travis Scott on Acting for Christopher Nolan, New Paramount Deal, and Never Winning a Grammy",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "travis-scott-acting-christopher-nolan-paramount-deal",
+      "primaryKeyword": "Travis Scott acting",
       "primaryEntity": "Travis Scott",
       "entities": [
         "Christopher Nolan",
         "Paramount"
       ],
-      "angle": "Travis Scott discusses his acting role for Christopher Nolan, a new Paramount deal, and his feelings about not winning a Grammy.",
+      "angle": "Travis Scott discusses his experience acting for Christopher Nolan, a new Paramount deal, and his Grammy status.",
       "tmdbType": "movie",
-      "source": "rss:Variety",
+      "source": "rss:Variety Music",
       "sources": [
         {
-          "outlet": "Variety",
+          "outlet": "Variety Music",
           "tier": 7,
           "url": "https://variety.com/2026/film/features/travis-scott-interview-the-odyssey-paramount-deal-1236817092/",
-          "ageMin": 61,
+          "ageMin": 91,
           "headline": "Travis Scott s Hollywood Odyssey: The Rapper on Acting for Christopher Nolan, His New Paramount Deal and Never Winning a Grammy",
           "summary": "I was nervous as fuck, Travis Scott says. That’s shocking coming from someone who just wrapped up the highest-grossing solo rap tour of all time, with raging crowds in the tens of thousands. But when Scott climbed atop a wooden table in an ancient castle on a remote Italian island to deliver some of the [ ]"
         }
       ],
-      "ageMin": 61,
+      "ageMin": 91,
       "_cand": {
         "key": "rss:travis-scott-s-hollywood-odyssey-the-rapper-on-acting-for-ch",
         "popularity": 0,
@@ -717,11 +1238,75 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Variety"
+          "Variety Music"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Variety",
+        "attribution": "Variety Music",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 51,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-shania-twain-other",
+      "slug": "shania-twain-on-inclusivity-and-her-most-personal-album-yet",
+      "title": "Shania Twain on Inclusivity and Her Most Personal Album Yet",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "shania-twain-other",
+      "primaryKeyword": "Shania Twain",
+      "primaryEntity": "Shania Twain",
+      "entities": [],
+      "angle": "Shania Twain reflects on her journey to superstardom, her connection with the LGBTQ+ community, and her upcoming autobiographical album.",
+      "tmdbType": "movie",
+      "source": "rss:Rolling Stone",
+      "sources": [
+        {
+          "outlet": "Rolling Stone",
+          "tier": 7,
+          "url": "https://www.rollingstone.com/music/music-features/shania-twain-interview-new-album-personal-life-1235595902/",
+          "ageMin": 144,
+          "headline": "Shania Twain: ‘People Know I’m Inclusive’",
+          "summary": "The superstar opens up about life before superstardom, her sizable LGBTQ fan base, and writing her most autobiographical album yet"
+        }
+      ],
+      "ageMin": 144,
+      "_cand": {
+        "key": "rss:shania-twain-people-know-i-m-inclusive-",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Rolling Stone"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Rolling Stone",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
