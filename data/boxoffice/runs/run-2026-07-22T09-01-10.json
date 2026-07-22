@@ -1,0 +1,97 @@
+{
+ "runId": "run-2026-07-22T09-01-10",
+ "mode": "live",
+ "startedAt": "2026-07-22T09:01:10.603Z",
+ "films": 40,
+ "published": [
+  {
+   "tag": "toy-story-5-bo-update×BO-UPDATE",
+   "slug": "toy-story-5-box-office-day-32-adds-1-7-million-as-domestic-total-hits-431-6",
+   "path": "/home/runner/work/thescreenreport/thescreenreport/content/articles/toy-story-5-box-office-day-32-adds-1-7-million-as-domestic-total-hits-431-6.md",
+   "score": 80
+  }
+ ],
+ "held": [
+  {
+   "tag": "the-odyssey-bo-update×BO-UPDATE",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "score": 50
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "moana-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "minions-monsters-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  }
+ ],
+ "blocked": [],
+ "paced": {
+  "tokens": 0.43,
+  "behind": true,
+  "expected": 15.66,
+  "allow": 1
+ },
+ "queueBuilt": 12,
+ "zeroStreak": 0,
+ "daySpend": {
+  "laDay": "2026-07-22",
+  "usd": 0.0817
+ },
+ "faults": {
+  "count": 0,
+  "bySeverity": {},
+  "faults": []
+ },
+ "finishedAt": "2026-07-22T09:04:41.681Z",
+ "meter": {
+  "byRole": {
+   "categorize": {
+    "calls": 3,
+    "errors": 0,
+    "in": 1026,
+    "out": 527,
+    "usd": 0.00031,
+    "ms": 2237
+   },
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3675,
+    "out": 339,
+    "usd": 0.00018,
+    "ms": 10425
+   },
+   "gatherer": {
+    "calls": 2,
+    "errors": 0,
+    "in": 6053,
+    "out": 444,
+    "usd": 0.00078,
+    "ms": 2049
+   },
+   "synthesizer": {
+    "calls": 2,
+    "errors": 0,
+    "in": 1471,
+    "out": 1577,
+    "usd": 0.00042,
+    "ms": 37253
+   },
+   "writerChart": {
+    "calls": 2,
+    "errors": 0,
+    "in": 4003,
+    "out": 2172,
+    "usd": 0.00166,
+    "ms": 58297
+   }
+  },
+  "totalUsd": 0.00335
+ },
+ "openrouterTotalUsd": 0.00551
+}
