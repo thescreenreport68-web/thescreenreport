@@ -1,0 +1,93 @@
+{
+ "runId": "run-2026-07-22T08-31-08",
+ "mode": "live",
+ "startedAt": "2026-07-22T08:31:08.052Z",
+ "films": 40,
+ "published": [
+  {
+   "tag": "evil-dead-burn-bo-update×BO-UPDATE",
+   "slug": "evil-dead-burn-box-office-day-11-adds-636-149-as-domestic-total-hits-24-5",
+   "path": "/home/runner/work/thescreenreport/thescreenreport/content/articles/evil-dead-burn-box-office-day-11-adds-636-149-as-domestic-total-hits-24-5.md",
+   "score": 80
+  }
+ ],
+ "held": [
+  {
+   "tag": "the-odyssey-bo-update×BO-UPDATE",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "score": 50
+  },
+  {
+   "tag": "toy-story-5-bo-update×BO-UPDATE",
+   "reason": "consistency: metaTitle: headlines worldwide while the title headlines dailyGross/domestic — the SERP promise must match the page",
+   "score": 80
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "moana-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "minions-monsters-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  }
+ ],
+ "blocked": [],
+ "paced": {
+  "tokens": 1.37,
+  "behind": true,
+  "expected": 15.54,
+  "allow": 1
+ },
+ "zeroStreak": 0,
+ "daySpend": {
+  "laDay": "2026-07-22",
+  "usd": 0.07619
+ },
+ "faults": {
+  "count": 0,
+  "bySeverity": {},
+  "faults": []
+ },
+ "finishedAt": "2026-07-22T08:37:10.832Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3675,
+    "out": 331,
+    "usd": 0.00017,
+    "ms": 1291
+   },
+   "gatherer": {
+    "calls": 3,
+    "errors": 0,
+    "in": 9061,
+    "out": 579,
+    "usd": 0.00114,
+    "ms": 3517
+   },
+   "synthesizer": {
+    "calls": 4,
+    "errors": 1,
+    "in": 2200,
+    "out": 1001,
+    "usd": 0.00036,
+    "ms": 24596
+   },
+   "writerChart": {
+    "calls": 3,
+    "errors": 0,
+    "in": 5946,
+    "out": 3222,
+    "usd": 0.00247,
+    "ms": 106041
+   }
+  },
+  "totalUsd": 0.00413
+ },
+ "openrouterTotalUsd": 0.00515
+}

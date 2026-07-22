@@ -796,6 +796,20 @@
    "headlineNumberRaw": 138208155,
    "filmKey": "minions & monsters",
    "chartDate": null
+  },
+  {
+   "key": "evil-dead-burn-bo-update-d11|BO-UPDATE",
+   "at": "2026-07-22T08:37:10.828Z",
+   "eventSlug": "evil-dead-burn-bo-update-d11",
+   "form": "BO-UPDATE",
+   "slug": "evil-dead-burn-box-office-day-11-adds-636-149-as-domestic-total-hits-24-5",
+   "title": "Evil Dead Burn Bombs at Box Office With $13.7M Opening",
+   "film": "Evil Dead Burn",
+   "tmdbId": null,
+   "eventType": "boxoffice",
+   "headlineNumberRaw": 24520594,
+   "filmKey": "evil dead burn",
+   "chartDate": null
   }
  ],
  "parked": [
@@ -1739,10 +1753,10 @@
    "eventSlug": "the-odyssey-bo-update-100m",
    "form": "BO-UPDATE",
    "reason": "1 unverified claim(s) cut, unrecovered",
-   "tries": 98,
-   "at": "2026-07-22T08:03:00.075Z",
+   "tries": 99,
+   "at": "2026-07-22T08:32:38.735Z",
    "dead": true,
-   "expiresAt": "2026-07-25T08:03:00.075Z"
+   "expiresAt": "2026-07-25T08:32:38.735Z"
   },
   {
    "key": "star-wars-the-mandalorian-and-grogu-bo-update-d59|BO-UPDATE",
@@ -2032,27 +2046,21 @@
    "key": "toy-story-5-bo-update-d32|BO-UPDATE",
    "eventSlug": "toy-story-5-bo-update-d32",
    "form": "BO-UPDATE",
-   "reason": "1 unverified claim(s) cut, unrecovered",
-   "tries": 2,
-   "at": "2026-07-22T08:06:40.930Z"
-  },
-  {
-   "key": "evil-dead-burn-bo-update-d11|BO-UPDATE",
-   "eventSlug": "evil-dead-burn-bo-update-d11",
-   "form": "BO-UPDATE",
-   "reason": "1 unverified claim(s) cut, unrecovered",
-   "tries": 1,
-   "at": "2026-07-22T08:08:36.194Z"
+   "reason": "consistency: metaTitle: headlines worldwide while the title headlines dailyGross/domestic — the SERP promise must match the page",
+   "tries": 3,
+   "at": "2026-07-22T08:34:45.142Z",
+   "dead": true,
+   "expiresAt": "2026-07-25T08:34:45.142Z"
   }
  ],
  "zeroStreak": 0,
  "daySpend": {
   "laDay": "2026-07-22",
-  "usd": 0.07104
+  "usd": 0.07619
  },
  "pace": {
-  "tokens": 1.3131536111111108,
-  "lastMs": 1784707271966
+  "tokens": 0.370172214285714,
+  "lastMs": 1784709068052
  },
  "lastAuditDay": "2026-07-22",
  "attempts": {
