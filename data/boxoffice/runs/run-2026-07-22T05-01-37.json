@@ -1,0 +1,197 @@
+{
+ "runId": "run-2026-07-22T05-01-37",
+ "mode": "live",
+ "startedAt": "2026-07-22T05:01:37.443Z",
+ "films": 42,
+ "published": [],
+ "held": [
+  {
+   "tag": "the-odyssey-bo-update×BO-UPDATE",
+   "reason": "words 131 < 180 (owner-set ~200-word minimum)",
+   "score": 50
+  },
+  {
+   "tag": "little-house-on-the-prairie-trending-tv-w2026-07-19×TRENDING-TV",
+   "reason": "soft-floor engagement 4 < 5",
+   "score": 50
+  },
+  {
+   "tag": "i-will-find-you-trending-tv-w2026-07-19×TRENDING-TV",
+   "reason": "words 62 < 180 (owner-set ~200-word minimum) | soft-floor engagement 3 < 5 | soft-floor humanVoice 4 < 5",
+   "score": 35
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "moana-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $81M not above last published $82M)"
+  },
+  {
+   "tag": "toy-story-5-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $430M not above last published $431M)"
+  },
+  {
+   "tag": "minions-monsters-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $136M not above last published $138M)"
+  },
+  {
+   "tag": "evil-dead-burn-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $24M not above last published $24M)"
+  },
+  {
+   "tag": "the-invite-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $15M not above last published $15M)"
+  },
+  {
+   "tag": "young-washington-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $41M not above last published $41M)"
+  },
+  {
+   "tag": "obsession-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $258M not above last published $258M)"
+  },
+  {
+   "tag": "supergirl-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $70M not above last published $70M)"
+  },
+  {
+   "tag": "disclosure-day-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $115M not above last published $115M)"
+  },
+  {
+   "tag": "backrooms-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $196M not above last published $196M)"
+  },
+  {
+   "tag": "jackass-best-and-last-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $18M not above last published $18M)"
+  },
+  {
+   "tag": "scary-movie-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $108M not above last published $108M)"
+  },
+  {
+   "tag": "gail-daughtry-and-the-celebrity-sex-pass-bo-update×BO-UPDATE",
+   "reason": "already published (this update)"
+  },
+  {
+   "tag": "voicemails-for-isabelle-now-streaming×NOW-STREAMING",
+   "reason": "film attempt budget exhausted today (3 paid event tries/film/day)"
+  },
+  {
+   "tag": "voicemails-for-isabelle-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "film attempt budget exhausted today (3 paid event tries/film/day)"
+  },
+  {
+   "tag": "enola-holmes-3-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "regretting-you-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "kpop-demon-hunters-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "death-on-the-nile-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "the-boss-baby-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "film attempt budget exhausted today (3 paid event tries/film/day)"
+  },
+  {
+   "tag": "joy-ride-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "sniper-no-nation-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  }
+ ],
+ "blocked": [],
+ "paced": {
+  "tokens": 4,
+  "behind": true,
+  "expected": 19,
+  "allow": 2
+ },
+ "queueBuilt": 10,
+ "attemptCapHit": 4,
+ "zeroStreak": 6,
+ "daySpend": {
+  "laDay": "2026-07-21",
+  "usd": 1.22382
+ },
+ "faults": {
+  "count": 0,
+  "bySeverity": {},
+  "faults": []
+ },
+ "finishedAt": "2026-07-22T05:08:57.867Z",
+ "meter": {
+  "byRole": {
+   "categorize": {
+    "calls": 3,
+    "errors": 0,
+    "in": 1042,
+    "out": 510,
+    "usd": 0.00031,
+    "ms": 2480
+   },
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3385,
+    "out": 626,
+    "usd": 0.00021,
+    "ms": 1857
+   },
+   "gatherer": {
+    "calls": 4,
+    "errors": 0,
+    "in": 10337,
+    "out": 986,
+    "usd": 0.00143,
+    "ms": 4647
+   },
+   "synthesizer": {
+    "calls": 3,
+    "errors": 0,
+    "in": 2183,
+    "out": 2472,
+    "usd": 0.00064,
+    "ms": 49615
+   },
+   "writerChart": {
+    "calls": 1,
+    "errors": 0,
+    "in": 2125,
+    "out": 980,
+    "usd": 0.00082,
+    "ms": 33010
+   },
+   "writer": {
+    "calls": 4,
+    "errors": 0,
+    "in": 12784,
+    "out": 3959,
+    "usd": 0.01145,
+    "ms": 58986
+   },
+   "qa": {
+    "calls": 15,
+    "errors": 1,
+    "in": 39230,
+    "out": 6069,
+    "usd": 0.02532,
+    "ms": 57440
+   }
+  },
+  "totalUsd": 0.04017
+ },
+ "openrouterTotalUsd": 0.03938
+}

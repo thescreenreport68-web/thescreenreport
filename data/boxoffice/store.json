@@ -1696,11 +1696,11 @@
    "key": "the-odyssey-bo-update-100m|BO-UPDATE",
    "eventSlug": "the-odyssey-bo-update-100m",
    "form": "BO-UPDATE",
-   "reason": "template-heading: \"## What's Next for 'The Odyssey'?\" — rewrite story-specific",
-   "tries": 91,
-   "at": "2026-07-22T04:33:46.524Z",
+   "reason": "words 131 < 180 (owner-set ~200-word minimum)",
+   "tries": 92,
+   "at": "2026-07-22T05:03:17.458Z",
    "dead": true,
-   "expiresAt": "2026-07-25T04:33:46.524Z"
+   "expiresAt": "2026-07-25T05:03:17.458Z"
   },
   {
    "key": "star-wars-the-mandalorian-and-grogu-bo-update-d59|BO-UPDATE",
@@ -1884,17 +1884,21 @@
    "key": "little-house-on-the-prairie-trending-tv-w2026-07-19|TRENDING-TV",
    "eventSlug": "little-house-on-the-prairie-trending-tv-w2026-07-19",
    "form": "TRENDING-TV",
-   "reason": "3 unverified claim(s) cut, unrecovered",
-   "tries": 2,
-   "at": "2026-07-22T00:35:41.516Z"
+   "reason": "soft-floor engagement 4 < 5",
+   "tries": 3,
+   "at": "2026-07-22T05:06:20.513Z",
+   "dead": true,
+   "expiresAt": "2026-07-25T05:06:20.513Z"
   },
   {
    "key": "i-will-find-you-trending-tv-w2026-07-19|TRENDING-TV",
    "eventSlug": "i-will-find-you-trending-tv-w2026-07-19",
    "form": "TRENDING-TV",
-   "reason": "2 unverified claim(s) cut, unrecovered",
-   "tries": 2,
-   "at": "2026-07-22T00:38:38.474Z"
+   "reason": "words 62 < 180 (owner-set ~200-word minimum) | soft-floor engagement 3 < 5 | soft-floor humanVoice 4 < 5",
+   "tries": 3,
+   "at": "2026-07-22T05:08:57.864Z",
+   "dead": true,
+   "expiresAt": "2026-07-25T05:08:57.864Z"
   },
   {
    "key": "the-hawk-trending-tv-w2026-07-19|TRENDING-TV",
@@ -1969,14 +1973,14 @@
    "at": "2026-07-22T03:39:47.465Z"
   }
  ],
- "zeroStreak": 5,
+ "zeroStreak": 6,
  "daySpend": {
   "laDay": "2026-07-21",
-  "usd": 1.18444
+  "usd": 1.22382
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1784694692054
+  "lastMs": 1784696497443
  },
  "lastAuditDay": "2026-07-21",
  "attempts": {
@@ -2008,8 +2012,8 @@
    "kpop demon hunters": 3,
    "death on the nile": 3,
    "joy ride": 3,
-   "little house on the prairie": 2,
-   "i will find you": 2,
+   "little house on the prairie": 3,
+   "i will find you": 3,
    "the hawk": 2,
    "the get out": 1,
    "stop! that! train!": 1,
