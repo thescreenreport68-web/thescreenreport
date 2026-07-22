@@ -1,0 +1,137 @@
+{
+  "ts": "2026-07-22T05:01:41.869Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "jason-lewis-survived-on-stolen-baguettes-and-mustard-sandwiches-in-paris",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [],
+      "headline": [
+        "metaTitle",
+        "metaDescription",
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 0
+    }
+  ],
+  "topics": 1,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 0,
+  "costUSD": 0.014452,
+  "costPerPublished": 0.014452,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 8,
+      "in": 15832,
+      "out": 1164,
+      "usd": 0.0076596
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 993,
+      "out": 698,
+      "usd": 0.0002240882
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 6,
+      "in": 15485,
+      "out": 5427,
+      "usd": 0.005634852
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 8,
+      "in": 6331,
+      "out": 751,
+      "usd": 0.0009335000000000001
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2467,
+      "out": 179,
+      "usd": 0.0011875999999999998,
+      "ms": 1743
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 993,
+      "out": 698,
+      "usd": 0.00021501,
+      "ms": 9258
+    },
+    "writer": {
+      "calls": 5,
+      "errors": 0,
+      "in": 14846,
+      "out": 5151,
+      "usd": 0.00516592,
+      "ms": 169861
+    },
+    "verify": {
+      "calls": 7,
+      "errors": 0,
+      "in": 13365,
+      "out": 985,
+      "usd": 0.0064719999999999995,
+      "ms": 8995
+    },
+    "judge": {
+      "calls": 2,
+      "errors": 0,
+      "in": 2807,
+      "out": 364,
+      "usd": 0.0004263,
+      "ms": 1892
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 639,
+      "out": 276,
+      "usd": 0.00024081,
+      "ms": 11472
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 358,
+      "out": 116,
+      "usd": 0.00008220000000000002,
+      "ms": 807
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 184,
+      "out": 47,
+      "usd": 0.0000372,
+      "ms": 530
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2088,
+      "out": 137,
+      "usd": 0.0002636,
+      "ms": 2131
+    },
+    "linker": {
+      "calls": 3,
+      "errors": 0,
+      "in": 894,
+      "out": 87,
+      "usd": 0.0001242,
+      "ms": 1548
+    }
+  }
+}
