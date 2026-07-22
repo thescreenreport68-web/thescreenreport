@@ -308,5 +308,20 @@
     "stage": "script",
     "reason": "script failed lint after 3 attempts: too-short(78 words (min 88) — NEVER pad; hold if the story is thin), ending-ask(final sentence must be the sends ask (like \"Send this to a S)",
     "at": "2026-07-21T07:44:40.899Z"
+  },
+  "l7-bassist-jennifer-finch-dies-at-59-days-after-brain-cancer-announcement": {
+    "stage": "watchqc",
+    "reason": "QC fix: judge defects (majority of 3): padding sentence (score 75)",
+    "at": "2026-07-22T07:56:36.675Z"
+  },
+  "lego-unveils-the-x-files-1-478-piece-set-with-mulder-and-scully-minifigures": {
+    "stage": "watchqc",
+    "reason": "QC fix: over max length (score 0)",
+    "at": "2026-07-22T08:09:33.223Z"
+  },
+  "james-wan-developing-robocop-tv-series-for-prime-video": {
+    "stage": "watchqc",
+    "reason": "QC fix: judge defects (majority of 3): hook names no entity (score 85)",
+    "at": "2026-07-22T08:21:25.997Z"
   }
 }
