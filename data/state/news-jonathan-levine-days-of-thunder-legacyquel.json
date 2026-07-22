@@ -1,0 +1,75 @@
+{
+  "id": "news-jonathan-levine-days-of-thunder-legacyquel",
+  "slug": "jonathan-levine-in-talks-to-direct-days-of-thunder-legacyquel",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": null,
+      "cat": "movies/news",
+      "format": [
+        "body 296w < 300"
+      ],
+      "cuts": 0,
+      "broken": []
+    },
+    "attempt2": {
+      "score": null,
+      "cat": "movies/news",
+      "format": [
+        "body 296w < 300"
+      ],
+      "cuts": 2,
+      "broken": []
+    }
+  },
+  "editorial": {
+    "status": "unconfirmed",
+    "entity": "Jonathan Levine",
+    "work": {
+      "title": "Days of Thunder",
+      "year": 1990,
+      "medium": "movie"
+    },
+    "outlet": "The Hollywood Reporter"
+  },
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
+    "deterministic": {
+      "words": 296,
+      "h2s": 3,
+      "h2Questions": 3,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 4,
+      "ktCount": 5,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 21,
+      "avgSentence": 15,
+      "flesch": 54,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": [
+        "body 296w < 300"
+      ]
+    },
+    "hardBlocks": []
+  },
+  "score": null,
+  "category": "movies",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "body ≥ 300w"
+    ]
+  },
+  "ms": 79959
+}
