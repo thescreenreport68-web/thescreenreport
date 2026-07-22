@@ -1,0 +1,209 @@
+{
+ "runId": "run-2026-07-22T00-31-32",
+ "mode": "live",
+ "startedAt": "2026-07-22T00:31:32.168Z",
+ "films": 43,
+ "published": [],
+ "held": [
+  {
+   "tag": "the-odyssey-bo-update×BO-UPDATE",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "score": 50
+  },
+  {
+   "tag": "little-house-on-the-prairie-trending-tv-w2026-07-19×TRENDING-TV",
+   "reason": "3 unverified claim(s) cut, unrecovered",
+   "score": 65
+  },
+  {
+   "tag": "i-will-find-you-trending-tv-w2026-07-19×TRENDING-TV",
+   "reason": "2 unverified claim(s) cut, unrecovered",
+   "score": 50
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "moana-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $81M not above last published $82M)"
+  },
+  {
+   "tag": "toy-story-5-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $430M not above last published $431M)"
+  },
+  {
+   "tag": "minions-monsters-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $136M not above last published $138M)"
+  },
+  {
+   "tag": "evil-dead-burn-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $24M not above last published $24M)"
+  },
+  {
+   "tag": "the-invite-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $15M not above last published $15M)"
+  },
+  {
+   "tag": "young-washington-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $41M not above last published $41M)"
+  },
+  {
+   "tag": "obsession-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $258M not above last published $258M)"
+  },
+  {
+   "tag": "supergirl-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $70M not above last published $70M)"
+  },
+  {
+   "tag": "disclosure-day-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $115M not above last published $115M)"
+  },
+  {
+   "tag": "backrooms-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $196M not above last published $196M)"
+  },
+  {
+   "tag": "jackass-best-and-last-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $18M not above last published $18M)"
+  },
+  {
+   "tag": "scary-movie-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $108M not above last published $108M)"
+  },
+  {
+   "tag": "gail-daughtry-and-the-celebrity-sex-pass-bo-update×BO-UPDATE",
+   "reason": "already published (this update)"
+  },
+  {
+   "tag": "voicemails-for-isabelle-now-streaming×NOW-STREAMING",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "project-hail-mary-bo-opening×BO-OPENING",
+   "reason": "film attempt budget exhausted today (3 paid event tries/film/day)"
+  },
+  {
+   "tag": "shipwrecked-nightmare-at-sea-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "voicemails-for-isabelle-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "enola-holmes-3-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "regretting-you-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "kpop-demon-hunters-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "death-on-the-nile-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "the-boss-baby-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "joy-ride-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  }
+ ],
+ "blocked": [],
+ "paced": {
+  "tokens": 4,
+  "behind": true,
+  "expected": 15,
+  "allow": 2
+ },
+ "attemptCapHit": 4,
+ "zeroStreak": 9,
+ "daySpend": {
+  "laDay": "2026-07-21",
+  "usd": 0.85959
+ },
+ "faults": {
+  "count": 2,
+  "bySeverity": {
+   "critical": 1,
+   "warn": 1
+  },
+  "faults": [
+   {
+    "stage": "model:finder",
+    "message": "all models failed (amazon/nova-micro-v1, google/gemini-2.5-flash-lite): Expected ',' or ']' after array element in JSON at position 3586",
+    "severity": "critical",
+    "at": "2026-07-22T00:31:42.771Z"
+   },
+   {
+    "stage": "finder:llm",
+    "message": "finder classification failed — falling back to deterministic picks: Expected ',' or ']' after array element in JSON at position 3586",
+    "severity": "warn",
+    "at": "2026-07-22T00:31:42.771Z"
+   }
+  ]
+ },
+ "degraded": true,
+ "finishedAt": "2026-07-22T00:38:38.477Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 2,
+    "errors": 2,
+    "in": 0,
+    "out": 0,
+    "usd": 0,
+    "ms": 0
+   },
+   "gatherer": {
+    "calls": 4,
+    "errors": 0,
+    "in": 10149,
+    "out": 737,
+    "usd": 0.00131,
+    "ms": 3823
+   },
+   "synthesizer": {
+    "calls": 4,
+    "errors": 1,
+    "in": 2122,
+    "out": 1931,
+    "usd": 0.00051,
+    "ms": 23518
+   },
+   "writerChart": {
+    "calls": 1,
+    "errors": 0,
+    "in": 2031,
+    "out": 891,
+    "usd": 0.00077,
+    "ms": 31390
+   },
+   "writer": {
+    "calls": 4,
+    "errors": 0,
+    "in": 12702,
+    "out": 3944,
+    "usd": 0.01139,
+    "ms": 47455
+   },
+   "qa": {
+    "calls": 16,
+    "errors": 0,
+    "in": 45211,
+    "out": 6391,
+    "usd": 0.02954,
+    "ms": 42525
+   }
+  },
+  "totalUsd": 0.04353
+ },
+ "openrouterTotalUsd": 0.04453
+}
