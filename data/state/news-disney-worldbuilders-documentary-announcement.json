@@ -1,0 +1,79 @@
+{
+  "id": "news-disney-worldbuilders-documentary-announcement",
+  "slug": "new-disney-documentary-worldbuilders-goes-behind-the-scenes-with-iconi",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": null,
+      "cat": "celebrity/news",
+      "format": [
+        "body 284w < 300",
+        "a 69-word run-on sentence (>55 — split it)"
+      ],
+      "cuts": 1,
+      "broken": []
+    },
+    "attempt2": {
+      "score": null,
+      "cat": "celebrity/news",
+      "format": [
+        "body 284w < 300",
+        "a 69-word run-on sentence (>55 — split it)"
+      ],
+      "cuts": 0,
+      "broken": []
+    }
+  },
+  "editorial": {
+    "status": "official",
+    "entity": "Disney Worldbuilders",
+    "work": {
+      "title": "Disney Worldbuilders",
+      "year": null,
+      "medium": "tv"
+    },
+    "outlet": "abc7ny.com"
+  },
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
+    "deterministic": {
+      "words": 284,
+      "h2s": 5,
+      "h2Questions": 4,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": true,
+      "faqCount": 3,
+      "ktCount": 3,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 69,
+      "avgSentence": 17,
+      "flesch": 41,
+      "bannedTells": 0,
+      "fillerPraise": 1,
+      "kwExact": 0,
+      "hardBlocks": [
+        "body 284w < 300",
+        "a 69-word run-on sentence (>55 — split it)"
+      ]
+    },
+    "hardBlocks": []
+  },
+  "score": null,
+  "category": "celebrity",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 1,
+    "failed": [
+      "body ≥ 300w",
+      "keyword in title"
+    ]
+  },
+  "ms": 118631
+}

@@ -1,44 +1,43 @@
 {
-  "runId": "run-2026-07-22T12-31-02",
-  "builtAt": "2026-07-22T12:33:11.529Z",
-  "count": 14,
+  "runId": "run-2026-07-22T13-31-02",
+  "builtAt": "2026-07-22T13:33:39.317Z",
+  "count": 10,
   "topics": [
     {
-      "id": "news-elon-musk-ai-odyssey-movie",
-      "slug": "elon-musk-says-grok-will-make-feature-length-ai-generated-the-odyssey-",
-      "title": "Elon Musk Says Grok Will Make Feature-Length, AI-Generated 'The Odyssey' Movie",
+      "id": "news-elon-musk-grok-ai-the-odyssey-movie",
+      "slug": "elon-musk-says-grok-will-make-ai-generated-the-odyssey-movie",
+      "title": "Elon Musk Says Grok Will Make AI-Generated 'The Odyssey' Movie",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "elon-musk-ai-odyssey-movie",
-      "primaryKeyword": "Elon Musk AI movie",
+      "eventSlug": "elon-musk-grok-ai-the-odyssey-movie",
+      "primaryKeyword": "The Odyssey movie",
       "primaryEntity": "The Odyssey",
       "entities": [
         "Elon Musk",
-        "Lupita Nyong'o",
-        "Elliot Page"
+        "Grok"
       ],
-      "angle": "Elon Musk claims his AI, Grok, will create a feature-length, historically accurate AI-generated movie of 'The Odyssey' by year's end.",
+      "angle": "Elon Musk announced that his AI, Grok, will generate an AI-generated movie based on Homer's 'The Odyssey'.",
       "tmdbType": "movie",
-      "source": "rss:THR",
+      "source": "gnews:The Hollywood Reporter",
       "sources": [
         {
-          "outlet": "THR",
+          "outlet": "The Hollywood Reporter",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/elon-musk-grok-odyssey-movie-ai-homer-x-post-feature-nolan-1236653824/",
-          "ageMin": 156,
-          "headline": "Elon Musk Says Grok Will Make Feature-Length, AI-Generated and Historically Accurate The Odyssey Movie Before the Year Ends",
-          "summary": "But for all of the outrage Musk has drummed up around 'The Odyssey' — particularly over the casting of Lupita Nyong'o and Elliot Page — the film has not notably suffered at the box office at all."
+          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQY2NuVkVPRFAxbGNUS09Qd1Q2R0xRaGZRZzJ4ckVENGVGMzZNa1VlUFdBWlFHRjhIb00wSTBVb1JfVkVGTkZEV2lQdnQ5QUQwODFZb2hJcFBLdU9ma1YzaDFtT0Z0b19oQ1FKeDFIclRwSUZXZmpMcEE1a3ItV3ZtdHpRWHhZRWZVNTc2MWtSb1lvT1RSSHhhczJHUGxHZDdzQXhYUEROa0dwV1cxRUQzdjEzZGROSXRNMURWLW9Mbw?oc=5",
+          "ageMin": 216,
+          "headline": "Elon Musk Says Grok Will Make AI-Generated 'The Odyssey' Movie - The Hollywood Reporter",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMivwFBVV95cUxQY2NuVkVPRFAxbGNUS09Qd1Q2R0xRaGZRZzJ4ckVENGVGMzZNa1VlUFdBWlFHRjhIb00wSTBVb1JfVkVGTkZEV2lQdnQ5QUQwODFZb2hJcFBLdU9ma1YzaDFtT0Z0b19oQ1FKeDFIclRwSUZXZmpMcEE1a3ItV3ZtdHpRWHhZRWZVNTc2MWtSb1lvT1RSSHhhczJHUGxHZDdzQXhYUEROa0dwV1cxRUQzdjEzZGROSXRNMUR"
         }
       ],
-      "ageMin": 156,
+      "ageMin": 216,
       "_cand": {
-        "key": "rss:elon-musk-says-grok-will-make-feature-length-ai-generated-an",
+        "key": "rss:elon-musk-says-grok-will-make-ai-generated-the-odyssey-movie",
         "popularity": 0,
-        "kind": "rss-news"
+        "kind": "gnews"
       },
       "corroborationCount": 1,
       "verification": {
@@ -46,81 +45,11 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "THR"
+          "The Hollywood Reporter"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 109,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0,
-        "radar": 30
-      },
-      "radarKind": "movie-in-theaters",
-      "tierClass": "A"
-    },
-    {
-      "id": "news-elon-musk-grok-ai-odyssey-film",
-      "slug": "elon-musk-says-grok-will-make-an-ai-odyssey-film-that-is-historically-",
-      "title": "Elon Musk Says Grok Will Make an AI ‘Odyssey’ Film That Is ‘Historically Accurate’ by the End of the Year",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "elon-musk-grok-ai-odyssey-film",
-      "primaryKeyword": "elon musk grok ai film",
-      "primaryEntity": "The Odyssey",
-      "entities": [
-        "The Odyssey (film)",
-        "Elon Musk",
-        "Grok AI"
-      ],
-      "angle": "Elon Musk reveals plans for Grok AI to create a historically accurate film titled 'The Odyssey' by year-end.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/film/global/elon-musk-grok-ai-odyssey-film-historically-accurate-1236817856/",
-          "ageMin": 204,
-          "headline": "Elon Musk Says Grok Will Make an AI ‘Odyssey’ Film That Is ‘Historically Accurate’ by the End of the Year",
-          "summary": "Elon Musk has — finally — broken his silence on The Odyssey (well, at least since Christopher Nolan s epic was released and started breaking various box office records). The tech mogul and recently-crowned trillionaire — who spent some time before the film s launch rallying against various casting decisions — wrote on his social media platform X that his AI [ ]"
-        }
-      ],
-      "ageMin": 204,
-      "_cand": {
-        "key": "rss:elon-musk-says-grok-will-make-an-ai-odyssey-film-that-is-his",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety",
+        "attribution": "The Hollywood Reporter",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -143,47 +72,59 @@
       "tierClass": "A"
     },
     {
-      "id": "news-vanessa-marano-ring-leader-horror-comedy",
-      "slug": "vanessa-marano-to-produce-and-star-in-fronti-res-horror-comedy-ring-le",
-      "title": "Vanessa Marano to Produce and Star in Frontières Horror Comedy ‘Ring Leader’",
+      "id": "news-audible-dracula-jonathan-bailey-ella-purnell-aimee-lou-wood",
+      "slug": "jonathan-bailey-ella-purnell-aimee-lou-wood-set-for-audible-s-dracula",
+      "title": "Jonathan Bailey, Ella Purnell, Aimee Lou Wood Set for Audible's 'Dracula'",
       "contentType": "news",
       "formatTag": "news",
-      "category": "movies",
+      "category": "tv",
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "vanessa-marano-ring-leader-horror-comedy",
-      "primaryKeyword": "vanessa marano ring leader",
-      "primaryEntity": "Ring Leader",
+      "eventSlug": "audible-dracula-jonathan-bailey-ella-purnell-aimee-lou-wood",
+      "primaryKeyword": "Dracula",
+      "primaryEntity": "Dracula",
       "entities": [
-        "Vanessa Marano"
+        "Jonathan Bailey",
+        "Ella Purnell",
+        "Aimee Lou Wood",
+        "Audible"
       ],
-      "angle": "Vanessa Marano to star in and produce a new horror-comedy.",
+      "angle": "Audible is releasing multiple language adaptations of Dracula with notable voice cast members.",
       "tmdbType": "movie",
       "source": "rss:Variety",
       "sources": [
         {
           "outlet": "Variety",
           "tier": 7,
-          "url": "https://variety.com/2026/film/global/vanessa-marano-horror-comedy-ring-leader-frontieres-1236817810/",
-          "ageMin": 46,
-          "headline": "Vanessa Marano to Produce and Star in Frontières Horror Comedy ‘Ring Leader’: It’s ‘Bridesmaids’ Meets ‘Self Help’ (EXCLUSIVE)",
-          "summary": "Vanessa Marano, a prolific actor known for leading roles and guest turns in numerous notable TV series throughout the 2000s, will both produce and star in the bridal-party horror comedy “Ring Leader. Marano is producing the feature through her U.S. production company Calabrian Rhode, behind 2022 Netflix Original romantic comedy “The Royal Treatment,” which hit [ ]"
+          "url": "https://variety.com/2026/digital/news/audible-dracula-jonathan-bailey-ella-purnell-aimee-lou-wood-1236816846/",
+          "ageMin": 31,
+          "headline": "Audible Dracula Adaptation Stars Jonathan Bailey, Ella Purnell, Aimee Lou Wood",
+          "summary": "Bram Stoker s classic spine-tingler Dracula is getting all-new adaptations from Audible in seven different languages, each with its own full-cast audio recording. Audible is adapting the Gothic horror novel for English, Castilian Spanish, French, German, Italian, Latin American Spanish and Brazilian Portuguese. Each production features a full ensemble cast. The English-language production of Audib"
+        },
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/bailey-purnell-gyllenhaal-dracula-audible-1237000068/",
+          "ageMin": 31,
+          "headline": "Jonathan Bailey, Ella Purnell, Aimee Lou Wood Maggie Gyllenhaal Set For Audible’s ‘Dracula’; Omar Sy, Deva Cassel Riccardo Scamarcio Unveiled For International Versions",
+          "summary": "In one of its biggest rollouts to date, Audible has unveiled a roster of stars for its English-language and international adaptations of Bram Stoker’s 1897 gothic horror classic Dracula ahead of a worldwide launch this fall. Bridgerton and Wicked: For Good star Jonathan Bailey leads the English-language production as Count Dracula, alongside Ella Purnell (Fallout) [ ]"
         }
       ],
-      "ageMin": 46,
+      "ageMin": 31,
       "_cand": {
-        "key": "rss:vanessa-marano-to-produce-and-star-in-fronti-res-horror-come",
+        "key": "rss:audible-dracula-adaptation-stars-jonathan-bailey-ella-purnel",
         "popularity": 0,
         "kind": "rss-news"
       },
-      "corroborationCount": 1,
+      "corroborationCount": 2,
       "verification": {
-        "tier1Count": 1,
+        "tier1Count": 2,
         "tier1Owners": 1,
-        "outletCount": 1,
+        "outletCount": 2,
         "outlets": [
-          "Variety"
+          "Variety",
+          "Deadline"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
@@ -192,53 +133,54 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 92,
+      "priority": 100,
       "signals": {
         "recency": 24,
-        "corroboration": 12,
+        "corroboration": 18,
         "status": 18,
         "type": 14,
         "pop": 0,
         "breakout": 0,
-        "big": 24,
-        "trending": 0,
+        "big": 18,
+        "trending": 8,
         "spice": 0,
         "softTv": 0
       },
       "tierClass": "B"
     },
     {
-      "id": "news-zoe-saldana-short-film-it-is-complicated",
-      "slug": "zoe-salda-a-boards-short-film-on-palestinian-womanhood-it-s-complicate",
-      "title": "Zoe Saldaña Boards Short Film on Palestinian Womanhood, It s Complicated, as Executive Producer",
+      "id": "news-vince-gilligan-location-managers-guild-honor",
+      "slug": "vince-gilligan-to-receive-top-honor-from-location-managers-guild",
+      "title": "Vince Gilligan to Receive Top Honor from Location Managers Guild",
       "contentType": "news",
       "formatTag": "news",
-      "category": "movies",
+      "category": "tv",
       "subcategory": "news",
-      "eventType": "casting",
+      "eventType": "award",
       "sensitivity": "normal",
-      "eventSlug": "zoe-saldana-short-film-it-is-complicated",
-      "primaryKeyword": "zoe saldana short film",
-      "primaryEntity": "It's Complicated",
+      "eventSlug": "vince-gilligan-location-managers-guild-honor",
+      "primaryKeyword": "vince gilligan",
+      "primaryEntity": "Vince Gilligan",
       "entities": [
-        "Zoe Saldaña"
+        "Breaking Bad",
+        "Better Call Saul"
       ],
-      "angle": "Zoe Saldaña joins a short film about Palestinian womanhood as an executive producer.",
+      "angle": "Location Managers Guild International honors 'Breaking Bad' creator Vince Gilligan with its highest award.",
       "tmdbType": "movie",
-      "source": "rss:THR",
+      "source": "rss:Deadline",
       "sources": [
         {
-          "outlet": "THR",
+          "outlet": "Deadline",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/zoe-saldana-short-film-palestine-its-complicated-producer-1236653860/",
-          "ageMin": 22,
-          "headline": "Zoe Saldaña Boards Short Film on Palestinian Womanhood, It s Complicated, as Executive Producer (Exclusive)",
-          "summary": "The Oscar-winning actress says she was \"moved\" by Iman Karram's film about the blossoming friendship between a Palestinian-American screenwriter and an Arabic teacher in Gaza."
+          "url": "https://deadline.com/2026/07/vince-gilligan-career-honor-location-managers-guild-awards-1236999785/",
+          "ageMin": 31,
+          "headline": "Need A Career Honoree For Location Managers Guild Awards? Better Call Vince Gilligan",
+          "summary": "Location Managers Guild International is giving a TV kingpin its highest honor this year. The group is set to fete Breaking Bad, Pluribus and Better Call Saul creator Vince Gilligan with its 2026 Eva Monley Award. He ll received the career prize during the 13th annual LMGI Awards on August 22 at the Eli and Edythe [ ]"
         }
       ],
-      "ageMin": 22,
+      "ageMin": 31,
       "_cand": {
-        "key": "rss:zoe-salda-a-boards-short-film-on-palestinian-womanhood-it-s-",
+        "key": "rss:need-a-career-honoree-for-location-managers-guild-awards-bet",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -248,16 +190,16 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "THR"
+          "Deadline"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "THR",
+        "attribution": "Deadline",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 92,
+      "priority": 86,
       "signals": {
         "recency": 24,
         "corroboration": 12,
@@ -265,7 +207,7 @@
         "type": 14,
         "pop": 0,
         "breakout": 0,
-        "big": 24,
+        "big": 18,
         "trending": 0,
         "spice": 0,
         "softTv": 0
@@ -273,38 +215,38 @@
       "tierClass": "B"
     },
     {
-      "id": "news-the-odyssey-box-office-second-weekend",
-      "slug": "the-odyssey-eyeing-strong-second-weekend-box-office",
-      "title": "'The Odyssey' Eyeing Strong Second Weekend Box Office",
+      "id": "news-disney-worldbuilders-documentary-announcement",
+      "slug": "new-disney-documentary-worldbuilders-goes-behind-the-scenes-with-iconi",
+      "title": "New Disney Documentary 'Worldbuilders' Goes Behind the Scenes with Iconic Storytellers",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
-      "eventType": "boxoffice",
+      "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "the-odyssey-box-office-second-weekend",
-      "primaryKeyword": "the odyssey box office",
-      "primaryEntity": "The Odyssey",
+      "eventSlug": "disney-worldbuilders-documentary-announcement",
+      "primaryKeyword": "disney worldbuilders documentary",
+      "primaryEntity": "Disney Worldbuilders (documentary)",
       "entities": [
-        "Christopher Nolan",
-        "The Dark Knight"
+        "Walt Disney",
+        "Disney"
       ],
-      "angle": "Christopher Nolan's 'The Odyssey' is projected to have a strong second weekend at the box office, potentially surpassing the second weekend gross of 'The Dark Knight' films.",
+      "angle": "New documentary 'Disney Worldbuilders' offers behind-the-scenes look at iconic storytellers.",
       "tmdbType": "movie",
-      "source": "gnews:facebook.com",
+      "source": "gnews:ABC7 New York",
       "sources": [
         {
-          "outlet": "facebook.com",
+          "outlet": "ABC7 New York",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQY0duQy14U0x3N1hQV0l0a2hKd191WXhlbHE2NXZtMW1WWVZrczA4WFJqZ2xwMEUzY0I2RndTT1YySkRnLTljVjNyNWRSRnM2WGRPaDVGeDZxZzUwWk1KUTVmZHV4STZuUXJsZUJLakZqMTU3c3Z6cHFXdktzQ3puZnFUVEVzQ3luZU5LR01zS0dlMFNNY1lNZ3BtZVNJd0dDeURfUmVfNFZHeGpyVzVnYzlfajlkOEtjNVVUUFlsTWg2MVNDVkc3VmUzWW82ajVpbjI4SA?oc=5",
-          "ageMin": 159,
-          "headline": "The Odyssey' is looking at powerful Tuesday of $20M. The Christopher Nolan movie's second weekend is eyeing $61M-$74M possibly besting the second weekends of 'Dark Knight' films. Read more below. - facebook.com",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMi1AFBVV95cUxQY0duQy14U0x3N1hQV0l0a2hKd191WXhlbHE2NXZtMW1WWVZrczA4WFJqZ2xwMEUzY0I2RndTT1YySkRnLTljVjNyNWRSRnM2WGRPaDVGeDZxZzUwWk1KUTVmZHV4STZuUXJsZUJLakZqMTU3c3Z6cHFXdktzQ3puZnFUVEVzQ3luZU5LR01zS0dlMFNNY1lNZ3BtZVNJd0dDeURfUmVfNFZHeGpyVzVnYzlfajlkOEtjNVV"
+          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOaWJNQnA2MlFVY2FLQVNLR0N3Z0ZUTndBSjIwS1pBY01rNERVbjNnVkVPbEh5VkU5N2VSRzNjUnJjRnRRSk9UQkcwdW5iaGxLejgxeG5GTFlDQTZWQlRfcWNaQnV5cVdiSFhwcmpRZ2xVS3RyM0tvdHdlckdCVmxSN1NrSE54UmhKTXhsY3BYcTMtVXl6aU16aHJHN1VUcHhHYXljLW4yRXZQcknSAbABQVVfeXFMT2ViLWxPWEl5V0lqN0FWYWpvMHQ4a0stLVZrZ1dZRmFrSVdDSWhkbWFHOTlvLXc0dHNHQ1JjMm41MDVfdlJ2RXIxem9wUXRLWG5kLThpTXZRVnFkTXRoVTBFQmxyZG5hLUplMkpVQVI3cHBBWFlkc3hKekQ3bklKWjFlR0l5MWRyN2ttc054OXNaSnVZdENkd2NaUFNSWDBZSGhNTVVtTnRDbVNFM05FTXU?oc=5",
+          "ageMin": 24,
+          "headline": "Go behind-the-scenes with iconic storytellers in the new documentary, 'Disney Worldbuilders' - ABC7 New York",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxOaWJNQnA2MlFVY2FLQVNLR0N3Z0ZUTndBSjIwS1pBY01rNERVbjNnVkVPbEh5VkU5N2VSRzNjUnJjRnRRSk9UQkcwdW5iaGxLejgxeG5GTFlDQTZWQlRfcWNaQnV5cVdiSFhwcmpRZ2xVS3RyM0tvdHdlckdCVmxSN1NrSE54UmhKTXhsY3BYcTMtVXl6aU16aHJHN1VUcHhHYXljLW4yRXZQcknSAbABQVVfeXFMT2ViLWx"
         }
       ],
-      "ageMin": 159,
+      "ageMin": 24,
       "_cand": {
-        "key": "rss:the-odyssey-is-looking-at-powerful-tuesday-of-20m-the-christ",
+        "key": "rss:go-behind-the-scenes-with-iconic-storytellers-in-the-new-doc",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -314,50 +256,114 @@
         "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "facebook.com"
+          "ABC7 New York"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "facebook.com",
+        "attribution": "ABC7 New York",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 89,
+      "priority": 83,
+      "signals": {
+        "recency": 24,
+        "corroboration": 8,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-jason-statham-new-film-john-wick-director-action-star",
+      "slug": "jason-statham-s-new-film-from-john-wick-director-recruits-fellow-actio",
+      "title": "Jason Statham's New Film From 'John Wick' Director Recruits Fellow Action Star",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "jason-statham-new-film-john-wick-director-action-star",
+      "primaryKeyword": "jason statham new movie",
+      "primaryEntity": "Jason Statham",
+      "entities": [
+        "Chad Stahelski"
+      ],
+      "angle": "Jason Statham's next film from John Wick director adds another action star.",
+      "tmdbType": "movie",
+      "source": "gnews:MovieWeb",
+      "sources": [
+        {
+          "outlet": "MovieWeb",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5zZGw1UkZlM3hHYWRlRXE0cFhZMzlpRmxlOE5PanBkdzExa181Zy0tSmRKVEVYc05CaWNGR2ZjVk15al9odXFhQXBDTUcxZ24yazJTWUxDanAtVzNBMGs4QjlDc2NIdEc4TldiaTRCWno5Znc?oc=5",
+          "ageMin": 89,
+          "headline": "Jason Statham's New Film From 'John Wick' Director Recruits Fellow Action Star - MovieWeb",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMic0FVX3lxTE5zZGw1UkZlM3hHYWRlRXE0cFhZMzlpRmxlOE5PanBkdzExa181Zy0tSmRKVEVYc05CaWNGR2ZjVk15al9odXFhQXBDTUcxZ24yazJTWUxDanAtVzNBMGs4QjlDc2NIdEc4TldiaTRCWno5Znc?oc=5\" target=\"_blank\" Jason Statham's New Film From 'John Wick' Director Recruits Fellow Action"
+        }
+      ],
+      "ageMin": 89,
+      "_cand": {
+        "key": "rss:jason-statham-s-new-film-from-john-wick-director-recruits-fe",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "MovieWeb"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "MovieWeb",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 80,
       "signals": {
         "recency": 16,
         "corroboration": 8,
         "status": 18,
-        "type": 5,
+        "type": 14,
         "pop": 0,
         "breakout": 0,
-        "big": 12,
+        "big": 24,
         "trending": 0,
         "spice": 0,
-        "softTv": 0,
-        "radar": 30
+        "softTv": 0
       },
-      "radarKind": "movie-in-theaters",
-      "tierClass": "A"
+      "tierClass": "B"
     },
     {
-      "id": "news-kill-jackie-acquired-by-amc",
+      "id": "news-kill-jackie-us-rights-acquired",
       "slug": "catherine-zeta-jones-revenge-thriller-kill-jackie-acquired-by-amc-in-t",
-      "title": "Catherine Zeta-Jones Revenge Thriller 'Kill Jackie' Acquired by AMC in the U.S.",
+      "title": "Catherine Zeta-Jones Revenge Thriller Kill Jackie Acquired by AMC in the U.S.",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
-      "eventType": "other",
+      "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "kill-jackie-acquired-by-amc",
-      "primaryKeyword": "Kill Jackie series",
+      "eventSlug": "kill-jackie-us-rights-acquired",
+      "primaryKeyword": "kill jackie",
       "primaryEntity": "To Kill with Intrigue",
       "entities": [
         "Kill Jackie",
-        "Catherine Zeta-Jones"
+        "Catherine Zeta-Jones",
+        "AMC"
       ],
-      "angle": "AMC has acquired U.S. rights to Catherine Zeta-Jones's revenge thriller series 'Kill Jackie.'",
+      "angle": "AMC has secured U.S. distribution rights for Catherine Zeta-Jones' upcoming revenge thriller series.",
       "tmdbType": "movie",
       "source": "rss:Variety",
       "sources": [
@@ -365,12 +371,12 @@
           "outlet": "Variety",
           "tier": 7,
           "url": "https://variety.com/2026/tv/global/catherine-zeta-jones-kill-jackie-acquired-amc-us-1236817910/",
-          "ageMin": 117,
+          "ageMin": 178,
           "headline": "Catherine Zeta-Jones Revenge Thriller Kill Jackie Acquired by AMC in the U.S.",
           "summary": "AMC Global Media has acquired the U.S. rights to Catherine Zeta-Jones upcoming revenge thriller series Kill Jackie. Starring and executive produced by Zeta-Jones and co-produced by Steel Springs Pictures and Fremantle, Kill Jackie is set to premiere this fall on AMC+ in the U.S. Based on Nick Harkaway s bestselling novel The Price You Pay (which [ ]"
         }
       ],
-      "ageMin": 117,
+      "ageMin": 178,
       "_cand": {
         "key": "rss:catherine-zeta-jones-revenge-thriller-kill-jackie-acquired-b",
         "popularity": 0,
@@ -391,54 +397,56 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 57,
+      "priority": 73,
       "signals": {
         "recency": 16,
         "corroboration": 12,
         "status": 18,
-        "type": 5,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
-        "big": 6,
+        "big": 18,
         "trending": 0,
         "spice": 0,
         "softTv": 0
       },
-      "tierClass": "C"
+      "tierClass": "B"
     },
     {
-      "id": "news-tak-sakaguchi-iko-uwais-pendekar-warrior",
-      "slug": "tak-sakaguchi-joins-iko-uwais-in-pendekar-warrior-as-nemesis",
-      "title": "Tak Sakaguchi Joins Iko Uwais in Pendekar: Warrior as Nemesis",
+      "id": "news-snoop-dogg-biopic-summer-2027-release",
+      "slug": "snoop-dogg-biopic-lands-summer-2027-release-from-universal",
+      "title": "Snoop Dogg Biopic Lands Summer 2027 Release From Universal",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
-      "eventType": "casting",
+      "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "tak-sakaguchi-iko-uwais-pendekar-warrior",
-      "primaryKeyword": "tak sakaguchi iko uwais",
-      "primaryEntity": "Pendekar: Warrior",
+      "eventSlug": "snoop-dogg-biopic-summer-2027-release",
+      "primaryKeyword": "Snoop Dogg biopic",
+      "primaryEntity": "Snoop Dogg Biopic",
       "entities": [
-        "Tak Sakaguchi",
-        "Iko Uwais"
+        "Snoop Dogg's Hood of Horror",
+        "Snoop Dogg",
+        "Jonathan Daviss",
+        "Craig Brewer"
       ],
-      "angle": "Cult action star Tak Sakaguchi joins Iko Uwais in martial arts film 'Pendekar: Warrior'.",
+      "angle": "Universal has set a Summer 2027 release date for the Snoop Dogg biopic starring Jonathan Daviss.",
       "tmdbType": "movie",
-      "source": "rss:Variety",
+      "source": "rss:THR",
       "sources": [
         {
-          "outlet": "Variety",
+          "outlet": "THR",
           "tier": 7,
-          "url": "https://variety.com/2026/film/news/tak-sakaguchi-iko-uwais-pendekar-warrior-1236817923/",
-          "ageMin": 93,
-          "headline": "Tak Sakaguchi Joins Iko Uwais in Pendekar: Warrior as Nemesis (EXCLUSIVE)",
-          "summary": "Japanese cult action star Tak Sakaguchi has signed on to play the nemesis of Iko Uwais in Pendekar: Warrior, an upcoming martial-arts feature marking Sakaguchi s first major screen role outside his home country. Principal photography is scheduled to begin in the fourth quarter of 2026. Sakaguchi, known to action devotees for his cult roles in [ ]"
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/snoop-dogg-biopic-lands-summer-2027-release-1236653520/",
+          "ageMin": 961,
+          "headline": "Snoop Dogg Biopic Lands Summer 2027 Release From Universal",
+          "summary": "Jonathan Daviss stars in Craig Brewer's feature that examines the life of the iconic rapper."
         }
       ],
-      "ageMin": 93,
+      "ageMin": 961,
       "_cand": {
-        "key": "rss:tak-sakaguchi-joins-iko-uwais-in-pendekar-warrior-as-nemesis",
+        "key": "rss:snoop-dogg-biopic-lands-summer-2027-release-from-universal",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -448,21 +456,21 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Variety"
+          "THR"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Variety",
+        "attribution": "THR",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 84,
+      "priority": 64,
       "signals": {
-        "recency": 16,
+        "recency": 1,
         "corroboration": 12,
         "status": 18,
-        "type": 14,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
         "big": 24,
@@ -473,66 +481,65 @@
       "tierClass": "B"
     },
     {
-      "id": "music-news-shakira-barclays-center-concert",
-      "slug": "shakira-turns-barclays-center-into-a-time-machine-with-wyclef-jean",
-      "title": "Shakira Turns Barclays Center Into a Time Machine With Wyclef Jean",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
+      "id": "news-luke-skywalker-lightsaber-auction-3-75m",
+      "slug": "luke-s-empire-strikes-back-lightsaber-with-severed-hand-sells-for-3-75",
+      "title": "Luke’s ‘Empire Strikes Back’ Lightsaber (With Severed Hand) Sells for $3.75 Million",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "shakira-barclays-center-concert",
-      "primaryKeyword": "Shakira concert",
-      "primaryEntity": "Shakira",
+      "eventSlug": "luke-skywalker-lightsaber-auction-3-75m",
+      "primaryKeyword": "luke skywalker lightsaber auction",
+      "primaryEntity": "Luke Skywalker's lightsaber",
       "entities": [
-        "Wyclef Jean"
+        "The Empire Strikes Back",
+        "Star Wars: Episode V - The Empire Strikes Back"
       ],
-      "angle": "Shakira's concert at Barclays Center featured a nostalgic setlist and a surprise appearance by Wyclef Jean.",
+      "angle": "An iconic prop from 'Star Wars: The Empire Strikes Back', Luke Skywalker's lightsaber with a severed hand, sold for $3.75 million at auction.",
       "tmdbType": "movie",
-      "source": "rss:Billboard",
+      "source": "gnews:Gizmodo",
       "sources": [
         {
-          "outlet": "Billboard",
-          "tier": 7,
-          "url": "https://www.billboard.com/music/latin/shakira-barclays-center-wyclef-jean-rock-night-two-recap-1236300525/",
-          "ageMin": 61,
-          "headline": "Shakira Turns Barclays Center Into a Time Machine on Night 2 With Wyclef Jean, Rock-Era Gems Arena-Sized Sing-Alongs",
-          "summary": "Her second Brooklyn show leaned hard into nostalgia, spotlighting the Latin-rock roots."
+          "outlet": "Gizmodo",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPalhWd0VQQ3k1YWlmTkhsMnVZdnVSMU0tSlVHMDBmVnBjVndDc1EwVmtDWkFiVEl3OXBNc2VDaTVMSkhsWW14Y2d6SUxTMm1INDJKcjdJNHFnaUk5T05KWTlkazBMVE94cUV0akVZc00tRXlDRzlpZFhTY1luOURYZlBEUTJnS2xzcVBZc0pZa1BmWTNkM2hDbW1rTklFblA2dHItWndpLWRYV0pw?oc=5",
+          "ageMin": 150,
+          "headline": "Luke’s ‘Empire Strikes Back’ Lightsaber (With Severed Hand) Sells for $3.75 Million - Gizmodo",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxPalhWd0VQQ3k1YWlmTkhsMnVZdnVSMU0tSlVHMDBmVnBjVndDc1EwVmtDWkFiVEl3OXBNc2VDaTVMSkhsWW14Y2d6SUxTMm1INDJKcjdJNHFnaUk5T05KWTlkazBMVE94cUV0akVZc00tRXlDRzlpZFhTY1luOURYZlBEUTJnS2xzcVBZc0pZa1BmWTNkM2hDbW1rTklFblA2dHItWndpLWRYV0pw?oc=5\" target=\"_bla"
         }
       ],
-      "ageMin": 61,
+      "ageMin": 150,
       "_cand": {
-        "key": "rss:shakira-turns-barclays-center-into-a-time-machine-on-night-2",
+        "key": "rss:luke-s-empire-strikes-back-lightsaber-with-severed-hand-sell",
         "popularity": 0,
-        "kind": "rss-news"
+        "kind": "gnews"
       },
-      "breakoutVelocity": 0,
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
+        "tier1Count": 0,
+        "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "Billboard"
+          "Gizmodo"
         ],
-        "maxTier": 7,
+        "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "Billboard",
+        "attribution": "Gizmodo",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 51,
+      "priority": 59,
       "signals": {
         "recency": 16,
-        "corroboration": 12,
+        "corroboration": 8,
         "status": 18,
         "type": 5,
         "pop": 0,
         "breakout": 0,
-        "big": 0,
+        "big": 12,
         "trending": 0,
         "spice": 0,
         "softTv": 0
@@ -540,22 +547,22 @@
       "tierClass": "C"
     },
     {
-      "id": "news-clever-whodunnit-series-binge-watch",
-      "slug": "lesley-manville-and-claire-rushbrook-s-clever-whodunnit-series-recomme",
-      "title": "Lesley Manville and Claire Rushbrook's 'Clever Whodunnit Series' Recommended for Binge-Watching",
+      "id": "news-whodunnit-series-recommendation",
+      "slug": "lesley-manville-and-claire-rushbrook-s-best-show-the-clever-whodunnit-",
+      "title": "Lesley Manville and Claire Rushbrook's best show: The clever whodunnit series to binge-watch free tonight",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "clever-whodunnit-series-binge-watch",
+      "eventSlug": "whodunnit-series-recommendation",
       "primaryKeyword": "whodunnit series",
       "primaryEntity": "Lesley Manville",
       "entities": [
         "Claire Rushbrook"
       ],
-      "angle": "Highlighting a critically acclaimed whodunnit series featuring Lesley Manville and Claire Rushbrook that is available to stream for free.",
+      "angle": "Cosmopolitan recommends a clever whodunnit series starring Lesley Manville and Claire Rushbrook available to stream for free.",
       "tmdbType": "movie",
       "source": "gnews:Cosmopolitan",
       "sources": [
@@ -563,12 +570,12 @@
           "outlet": "Cosmopolitan",
           "tier": 5,
           "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQTm13RU1kNkhob2swZmlHNERTT1hQTVEteFc3T25LVmVSZUt5bEtnLWRUQlYxYkxvQl9uRVBhYkF6NU5lamlYYVAtdWdtMVhQOEstN3FSMHdtS08zOTVoQXZkV0Rsa0ZkQVlSal9wX08zek9Ub1UwRWxsOEk1Y0g3WWVfcjhXS2ZhdkNCa3RFZk5ISXRNLXc?oc=5",
-          "ageMin": 111,
+          "ageMin": 171,
           "headline": "\"Lesley Manville and Claire Rushbrook's best show\": The clever whodunnit series to binge-watch free tonight - Cosmopolitan",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMilgFBVV95cUxQTm13RU1kNkhob2swZmlHNERTT1hQTVEteFc3T25LVmVSZUt5bEtnLWRUQlYxYkxvQl9uRVBhYkF6NU5lamlYYVAtdWdtMVhQOEstN3FSMHdtS08zOTVoQXZkV0Rsa0ZkQVlSal9wX08zek9Ub1UwRWxsOEk1Y0g3WWVfcjhXS2ZhdkNCa3RFZk5ISXRNLXc?oc=5\" target=\"_blank\" \"Lesley Manville and Clai"
         }
       ],
-      "ageMin": 111,
+      "ageMin": 171,
       "_cand": {
         "key": "rss:-lesley-manville-and-claire-rushbrook-s-best-show-the-clever",
         "popularity": 0,
@@ -605,39 +612,37 @@
       "tierClass": "C"
     },
     {
-      "id": "music-news-musicians-guerrilla-concert-after-song-yanked",
-      "slug": "after-german-broadcaster-yanks-antifascist-song-musicians-give-guerril",
-      "title": "After German Broadcaster Yanks Antifascist Song, Musicians Give Guerrilla YouTube Concert",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
+      "id": "news-jason-alexander-apology-courtney-stodden",
+      "slug": "jason-alexander-apologizes-to-courtney-stodden-for-past-sketch",
+      "title": "Jason Alexander Apologizes to Courtney Stodden for Past Sketch",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "tier": "indie",
-      "eventSlug": "musicians-guerrilla-concert-after-song-yanked",
-      "primaryKeyword": "danger dan igor levit concert",
-      "primaryEntity": "Danger Dan",
+      "eventSlug": "jason-alexander-apology-courtney-stodden",
+      "primaryKeyword": "Jason Alexander",
+      "primaryEntity": "Jason Alexander",
       "entities": [
-        "Igor Levit",
-        "ZDF"
+        "Courtney Stodden"
       ],
-      "angle": "Musicians held a guerrilla YouTube concert in response to a German broadcaster pulling an antifascist song.",
+      "angle": "Seinfeld star Jason Alexander apologizes to Courtney Stodden for an inappropriate sketch filmed when she was a minor.",
       "tmdbType": "movie",
-      "source": "rss:THR",
+      "source": "rss:Variety",
       "sources": [
         {
-          "outlet": "THR",
+          "outlet": "Variety",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/tv/tv-news/danger-dan-igor-levit-antifascist-song-livestream-zdf-ban-1236653823/",
-          "ageMin": 179,
-          "headline": "After German Broadcaster Yanks Antifascist Song, Musicians Give Guerrilla YouTube Concert",
-          "summary": "ZDF's decision to pull Danger Dan and Igor Levit from prime time backfired spectacularly, with critics calling the move \"cowardly\" and warning of a chilling effect on free expression."
+          "url": "https://variety.com/2026/tv/news/jason-alexander-courtney-stodden-inappropriate-behavior-minor-1236817958/",
+          "ageMin": 18,
+          "headline": "Seinfeld Star Jason Alexander Apologizes to Courtney Stodden for Filming Inappropriate Sketch When She Was a Minor: I Truly Regret It",
+          "summary": "Seinfeld alum Jason Alexander issued an apology to reality star Courtney Stodden after she called him out on Instagram for filming an inappropriate comedy sketch her when she was a minor. Stodden was 17 years old when she filmed a Funny or Die sketch with Alexander that parodied Dr. Phil and other daytime talk shows. [ ]"
         }
       ],
-      "ageMin": 179,
+      "ageMin": 18,
       "_cand": {
-        "key": "rss:after-german-broadcaster-yanks-antifascist-song-musicians-gi",
+        "key": "rss:seinfeld-star-jason-alexander-apologizes-to-courtney-stodden",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -647,18 +652,18 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "THR"
+          "Variety"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "THR",
+        "attribution": "Variety",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 51,
+      "priority": 59,
       "signals": {
-        "recency": 16,
+        "recency": 24,
         "corroboration": 12,
         "status": 18,
         "type": 5,
@@ -670,282 +675,6 @@
         "softTv": 0
       },
       "tierClass": "C"
-    },
-    {
-      "id": "news-timothy-olyphant-david-fincher-takes",
-      "slug": "timothy-olyphant-found-david-fincher-s-many-takes-unnecessary-power-mo",
-      "title": "Timothy Olyphant Found David Fincher's Many Takes 'Unnecessary Power Move'",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "timothy-olyphant-david-fincher-takes",
-      "primaryKeyword": "Timothy Olyphant David Fincher",
-      "primaryEntity": "Timothy Olyphant",
-      "entities": [
-        "David Fincher",
-        "Once Upon a Time in Hollywood"
-      ],
-      "angle": "Timothy Olyphant found director David Fincher's numerous takes on a project to be an 'unnecessary' power move, but is eager to work on a sequel.",
-      "tmdbType": "movie",
-      "source": "rss:TheWrap",
-      "sources": [
-        {
-          "outlet": "TheWrap",
-          "tier": 7,
-          "url": "https://www.thewrap.com/creative-content/movies/timothy-olyphant-david-finchers-many-takes-power-move/",
-          "ageMin": 730,
-          "headline": "Timothy Olyphant Thought ‘Adventures of Cliff Booth’ Director David Fincher’s Many Takes Were ‘Unnecessary’ Power Move",
-          "summary": "The actor adds he \"couldn't wait\" to start working on the \"Once Upon a Time in Hollywood\" sequel The post Timothy Olyphant Thought ‘Adventures of Cliff Booth’ Director David Fincher’s Many Takes Were ‘Unnecessary’ Power Move appeared first on TheWrap ."
-        }
-      ],
-      "ageMin": 730,
-      "_cand": {
-        "key": "rss:timothy-olyphant-thought-adventures-of-cliff-booth-director-",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "TheWrap"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "TheWrap",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 69,
-      "signals": {
-        "recency": 1,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-star-wars-attack-of-the-clones-obi-wan-kamino-clip",
-      "slug": "obi-wan-discovers-the-clone-army-on-kamino-star-wars-attack-of-the-clo",
-      "title": "Obi-Wan Discovers The Clone Army on Kamino | Star Wars: Attack of the Clones | Official Clip",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "star-wars-attack-of-the-clones-obi-wan-kamino-clip",
-      "primaryKeyword": "Star Wars Attack of the Clones clip",
-      "primaryEntity": "Star Wars: Episode II - Attack of the Clones",
-      "entities": [
-        "Star Wars: Episode II – Attack of the Clones (2002 film)",
-        "Obi-Wan Kenobi"
-      ],
-      "angle": "Official clip released from 'Star Wars: Attack of the Clones' showing Obi-Wan discovering the clone army.",
-      "tmdbType": "movie",
-      "source": "gnews:Jedi News",
-      "sources": [
-        {
-          "outlet": "Jedi News",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPeUllV3FscHVMcmpEdEdmbGJFWGtmd3RfV2VOUkhHYVBka211ZlRsTVQ0R1gzOXhJU2gzeVBndGQzaGRQTThSNmowNmZfX1JRaU1JaUdsMHpNWWxadzBoOGFmSU54YzRobkdKSHBBSGxXRDViX0xfZDdfNzhaZHJYeEJPVF9PdWlhOWRzXy1lTnMxRG1zdENLTF9Xakx4VXFVOFVVamJUMzhuSjRLSTRnd2xFWEY5UlcyZjVPWDcwV1lzMUtpYS1YT0ZiX05jYldUeWc?oc=5",
-          "ageMin": 317,
-          "headline": "Obi-Wan Discovers The Clone Army on Kamino | Star Wars: Attack of the Clones | Official Clip - Jedi News",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMi0gFBVV95cUxPeUllV3FscHVMcmpEdEdmbGJFWGtmd3RfV2VOUkhHYVBka211ZlRsTVQ0R1gzOXhJU2gzeVBndGQzaGRQTThSNmowNmZfX1JRaU1JaUdsMHpNWWxadzBoOGFmSU54YzRobkdKSHBBSGxXRDViX0xfZDdfNzhaZHJYeEJPVF9PdWlhOWRzXy1lTnMxRG1zdENLTF9Xakx4VXFVOFVVamJUMzhuSjRLSTRnd2xFWEY5UlcyZjV"
-        }
-      ],
-      "ageMin": 317,
-      "_cand": {
-        "key": "rss:obi-wan-discovers-the-clone-army-on-kamino-star-wars-attack-",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "Jedi News"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "Jedi News",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 52,
-      "signals": {
-        "recency": 9,
-        "corroboration": 8,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 12,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-rebel-wilson-legal",
-      "slug": "rebel-wilson-cleared-in-the-deb-defamation-case",
-      "title": "Rebel Wilson Cleared in The Deb Defamation Case",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "legal",
-      "sensitivity": "high",
-      "tier": "popular",
-      "eventSlug": "rebel-wilson-legal",
-      "primaryKeyword": "rebel wilson defamation case",
-      "primaryEntity": "Rebel Wilson",
-      "entities": [
-        "The Deb (film)"
-      ],
-      "angle": "Rebel Wilson has been cleared in a defamation case brought by her co-star over statements made on Instagram.",
-      "tmdbType": "movie",
-      "source": "rss:Deadline",
-      "sources": [
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/bbc-lock-iplayer-viewers-refuse-to-pay-licence-fee-1236999987/",
-          "ageMin": 234,
-          "headline": "BBC Considers Locking Down iPlayer For Viewers Who Refuse To Pay Licence Fee",
-          "summary": "EXCLUSIVE: The BBC has said it is open-minded about closing off iPlayer to British viewers who decline to pay the licence fee. In an all-staff call on Monday, the BBC s chief customer officer Kerris Bright said locking down iPlayer could be an opportunity in the future as the corporation looks to stem the tide of [ ]"
-        },
-        {
-          "outlet": "The Hollywood Reporter",
-          "tier": 7,
-          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQRnZmcEpPZGdZa09MemJESW5RMXNid292SVBsZlg0ejJYNzhqN0YzSmNiY3lZMXExanZ6b21mUl95a3ZNV3hqVjVOZnFxRERvOTZ6V3NfNS1BSUdLQnNyNU1SM1lwdS1helJMUjZzRERmblViODY3bnNXX0dfa283U2hSYlk1MFluejh5aTMwRzNRUUhiaGhpc0pfLXlTSHljUk1CUFVwSmtrUjEzV0I5T1hGUjB3NnFnbzMw?oc=5",
-          "ageMin": 241,
-          "headline": "Rebel Wilson Cleared in ‘The Deb’ Defamation Case - The Hollywood Reporter",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiuwFBVV95cUxQRnZmcEpPZGdZa09MemJESW5RMXNid292SVBsZlg0ejJYNzhqN0YzSmNiY3lZMXExanZ6b21mUl95a3ZNV3hqVjVOZnFxRERvOTZ6V3NfNS1BSUdLQnNyNU1SM1lwdS1helJMUjZzRERmblViODY3bnNXX0dfa283U2hSYlk1MFluejh5aTMwRzNRUUhiaGhpc0pfLXlTSHljUk1CUFVwSmtrUjEzV0I5T1hGUjB3NnFnbzM"
-        }
-      ],
-      "ageMin": 234,
-      "_cand": {
-        "key": "rss:bbc-considers-locking-down-iplayer-for-viewers-who-refuse-to",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 2,
-      "verification": {
-        "tier1Count": 2,
-        "tier1Owners": 1,
-        "outletCount": 2,
-        "outlets": [
-          "Deadline",
-          "The Hollywood Reporter"
-        ],
-        "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "Deadline",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 65,
-      "signals": {
-        "recency": 9,
-        "corroboration": 18,
-        "status": 18,
-        "type": 12,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 8,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "S"
-    },
-    {
-      "id": "news-sony-music-sues-udio-ai-copyright",
-      "slug": "sony-music-files-second-lawsuit-against-ai-music-generator-udio",
-      "title": "Sony Music Files Second Lawsuit Against AI Music Generator Udio",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "lawsuit",
-      "sensitivity": "high",
-      "tier": "popular",
-      "eventSlug": "sony-music-sues-udio-ai-copyright",
-      "primaryKeyword": "Udio lawsuit",
-      "primaryEntity": "Udio",
-      "entities": [
-        "BEYONCÉ",
-        "Sony Music Entertainment",
-        "Beyoncé",
-        "Harry Styles"
-      ],
-      "angle": "Sony Music Entertainment has filed another lawsuit against AI music generator Udio, alleging the platform illegally copied over 30,000 songs for training its models.",
-      "tmdbType": "movie",
-      "source": "rss:Variety Music",
-      "sources": [
-        {
-          "outlet": "Variety Music",
-          "tier": 7,
-          "url": "https://variety.com/2026/music/news/sony-music-new-lawsuit-udio-ai-music-generator-1236817746/",
-          "ageMin": 694,
-          "headline": "Sony Music Files Another Lawsuit Against Udio, Alleges AI Music Generator Copied 30,000 Songs to Train Models",
-          "summary": "Sony Music Entertainment has once again sued the AI music generator Udio, alleging the startup illegally copied more than 30,000 songs from the likes of Beyoncé, Harry Styles and Elvis Presley to train its models. Sony first brought lawsuits against Udio and its competitor Suno in June 2024 alongside labels Universal Music Group and Warner [ ]"
-        }
-      ],
-      "ageMin": 694,
-      "_cand": {
-        "key": "rss:sony-music-files-another-lawsuit-against-udio-alleges-ai-mus",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety Music"
-        ],
-        "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "Variety Music",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 50,
-      "signals": {
-        "recency": 4,
-        "corroboration": 12,
-        "status": 18,
-        "type": 12,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 4,
-        "softTv": 0
-      },
-      "tierClass": "S"
     }
   ]
 }
