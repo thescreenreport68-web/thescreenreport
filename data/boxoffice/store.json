@@ -1865,10 +1865,10 @@
    "eventSlug": "the-odyssey-bo-update-100m",
    "form": "BO-UPDATE",
    "reason": "consistency: metaTitle: headlines domestic while the title headlines other — the SERP promise must match the page",
-   "tries": 114,
-   "at": "2026-07-22T16:03:51.674Z",
+   "tries": 115,
+   "at": "2026-07-22T16:33:39.860Z",
    "dead": true,
-   "expiresAt": "2026-07-25T16:03:51.674Z"
+   "expiresAt": "2026-07-25T16:33:39.860Z"
   },
   {
    "key": "star-wars-the-mandalorian-and-grogu-bo-update-d59|BO-UPDATE",
@@ -1955,8 +1955,10 @@
    "eventSlug": "star-wars-the-mandalorian-and-grogu-a-special-look-trending-tv",
    "form": "TRENDING-TV",
    "reason": "under floor: no confirmed streaming platform for trending TV",
-   "tries": 2,
-   "at": "2026-07-22T02:06:49.032Z"
+   "tries": 3,
+   "at": "2026-07-22T16:33:39.917Z",
+   "dead": true,
+   "expiresAt": "2026-07-25T16:33:39.917Z"
   },
   {
    "key": "the-mandalorian-and-grogu-bo-update-d63|BO-UPDATE",
@@ -2179,14 +2181,14 @@
    "at": "2026-07-22T16:08:52.843Z"
   }
  ],
- "zeroStreak": 3,
+ "zeroStreak": 4,
  "daySpend": {
   "laDay": "2026-07-22",
-  "usd": 0.31075
+  "usd": 0.31324
  },
  "pace": {
-  "tokens": 3.044603511111111,
-  "lastMs": 1784736079672
+  "tokens": 3.600735155555556,
+  "lastMs": 1784737867238
  },
  "lastAuditDay": "2026-07-22",
  "attempts": {
@@ -2204,7 +2206,8 @@
    "sullivan's crossing": 1,
    "kingdom": 1,
    "project hail mary": 1,
-   "wwe: unreal": 1
+   "wwe: unreal": 1,
+   "star wars: the mandalorian and grogu | a special look": 1
   }
  }
 }
