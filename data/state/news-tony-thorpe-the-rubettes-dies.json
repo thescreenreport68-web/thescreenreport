@@ -1,0 +1,74 @@
+{
+  "id": "news-tony-thorpe-the-rubettes-dies",
+  "slug": "tony-thorpe-guitarist-for-glam-rockers-the-rubettes-dies-at-80",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": null,
+      "cat": "celebrity/news",
+      "format": [
+        "primary keyword not in title",
+        "body 195w < 220"
+      ],
+      "cuts": 1,
+      "broken": []
+    },
+    "attempt2": {
+      "score": null,
+      "cat": "celebrity/news",
+      "format": [
+        "primary keyword not in title",
+        "body 185w < 220"
+      ],
+      "cuts": 0,
+      "broken": []
+    }
+  },
+  "editorial": {
+    "status": "official",
+    "entity": "Tony Thorpe",
+    "work": null,
+    "outlet": "billboard.com"
+  },
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
+    "deterministic": {
+      "words": 185,
+      "h2s": 2,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 3,
+      "ktCount": 3,
+      "kwInTitle": false,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 47,
+      "avgSentence": 23,
+      "flesch": 56,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": [
+        "primary keyword not in title",
+        "body 185w < 220"
+      ]
+    },
+    "hardBlocks": []
+  },
+  "score": null,
+  "category": "celebrity",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "body ≥ 220w"
+    ]
+  },
+  "ms": 81253
+}
