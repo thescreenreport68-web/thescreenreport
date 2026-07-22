@@ -1,203 +1,242 @@
 {
- "dateKey": "2026-07-21",
+ "dateKey": "2026-07-22",
  "topTopic": {
-  "name": "The Odyssey storms global box office",
-  "why": "Multiple independent headlines across outlets (Oman Observer, Hotpress, Standard, TheWrap, EUalive, KPI) report The Odyssey dominating box office records and revenue, making it the day's dominant conversation."
+  "name": "Christopher Nolan's The Odyssey Box Office Triumph & Backlash",
+  "why": "Dominant conversation across multiple outlets: box-office records, vocal online backlash, Musk/Grok AI controversy, and strong legs in India and international markets."
  },
  "slots": [
   {
    "story": {
-    "title": "Spider-Man: Brand New Day global box office preview",
-    "angle": "Marvel's latest faces competition from The Odyssey's record-breaking run",
+    "title": "The Odyssey box office backlash: trolls vs. record-breaking performance",
+    "angle": "The film is beating online trolls and expectations, becoming a $500M+ global box office hit.",
     "entities": [
-     "Spider-Man: Brand New Day"
+     "Christopher Nolan",
+     "The Odyssey",
+     "box office",
+     "trolls"
     ],
     "sourceLinks": [
-     "https://www.imdb.com/es/news/ni65937892/?ref_=int_nwr_1"
+     "https://www.thewrap.com/creative-content/movies/the-odyssey-box-office-backlash/",
+     "https://www.theguardian.com/film/2026/jul/22/elon-musk-grok-imagine-historically-accurate-ai-homers-odyssey-christopher-nolan",
+     "https://www.independent.co.uk/bulletin/culture/the-odyssey-2026-reviews-elon-musk-backlash-b3019522.html",
+     "https://www.imdb.com/it/news/ni65939168/?ref_=int_nwr_3"
     ],
-    "isTopTopic": false,
-    "viral": 5,
-    "hint": "box-office"
+    "isTopTopic": true,
+    "viral": 9,
+    "hint": "news"
    },
-   "slotLA": "07:05",
-   "status": "dropped",
-   "swaps": 2,
-   "reason": "gather: <2 independent sources and no own article"
+   "slotLA": "07:06",
+   "status": "pending"
   },
   {
    "story": {
-    "title": "A24's Elden Ring film stalled",
-    "angle": "Production on the Elden Ring movie adaptation faces setbacks",
+    "title": "The Odyssey crosses $600M worldwide, tops $300M domestic",
+    "angle": "Box office milestone: domestic and international tallies show sustained strength.",
     "entities": [
-     "Elden Ring",
-     "A24"
+     "The Odyssey",
+     "box office",
+     "global gross"
     ],
     "sourceLinks": [
-     "https://theonion.com/a24s-elden-ring-film-stalled-after-red-phantom-named-twinkpunisher-invades-set/"
+     "https://www.imdb.com/it/news/ni65939168/?ref_=int_nwr_3",
+     "https://www.ndtvprofit.com/business/the-odyssey-box-office-collection-day-6-christopher-nolan-epic-continues-steady-performance-in-india-11805487",
+     "https://www.macombdaily.com/2026/07/22/movie-review-the-odyssey-is-a-quality-movie-worth-the-price-of-admission/"
+    ],
+    "isTopTopic": true,
+    "viral": 8,
+    "hint": "box-office"
+   },
+   "slotLA": "08:35",
+   "status": "pending"
+  },
+  {
+   "story": {
+    "title": "Elon Musk's Grok Imagine will make 'historically accurate' AI Odyssey film",
+    "angle": "Musk pledges an AI-generated film version of Homer's Odyssey, backed by $100M from Mel Gibson.",
+    "entities": [
+     "Elon Musk",
+     "Grok Imagine",
+     "The Odyssey",
+     "AI film"
+    ],
+    "sourceLinks": [
+     "https://www.theguardian.com/film/2026/jul/22/elon-musk-grok-imagine-historically-accurate-ai-homers-odyssey-christopher-nolan",
+     "https://tribune.com.pk/story/2619645/elon-musk-pledges-historically-accurate-ai-generated-odyssey-film-backs-100m-mel-gibson-version"
+    ],
+    "isTopTopic": true,
+    "viral": 8,
+    "hint": "news"
+   },
+   "slotLA": "10:09",
+   "status": "pending"
+  },
+  {
+   "story": {
+    "title": "The Odyssey proves audiences want practical effects, real stunts",
+    "angle": "Hollywood Reporter says Nolan's approach shows audiences prefer tangible filmmaking.",
+    "entities": [
+     "The Odyssey",
+     "practical effects",
+     "Hollywood Reporter"
+    ],
+    "sourceLinks": [
+     "https://www.hollywoodreporter.com/movies/movie-news/odyssey-box-office-2026-practical-effects-1236652219/",
+     "https://www.hollywoodreporter.com/movies/movie-news/odyssey-box-office-2026-practical-effects-1236652219/"
+    ],
+    "isTopTopic": true,
+    "viral": 7,
+    "hint": "news"
+   },
+   "slotLA": "11:43",
+   "status": "pending"
+  },
+  {
+   "story": {
+    "title": "Misty Green trailer: Chris Rock's A24 drama with Rosalind Eleazar and Adam Driver",
+    "angle": "First trailer for Chris Rock's directorial A24 drama Misty Green arrives.",
+    "entities": [
+     "Misty Green",
+     "Chris Rock",
+     "A24",
+     "Rosalind Eleazar",
+     "Adam Driver"
+    ],
+    "sourceLinks": [
+     "https://variety.com/2026/film/news/misty-green-trailer-chris-rock-adam-driver-anna-kendrick-1236817801/",
+     "https://deadline.com/2026/07/misty-green-trailer-chris-rock-a24-adam-driver-1237000060/"
+    ],
+    "isTopTopic": false,
+    "viral": 6,
+    "hint": "first-look"
+   },
+   "slotLA": "13:19",
+   "status": "pending"
+  },
+  {
+   "story": {
+    "title": "Docuseries on serial killer Aileen Wuornos uses AI to recreate her story",
+    "angle": "ID's new docuseries leverages AI to tell the Aileen Wuornos case.",
+    "entities": [
+     "Aileen Wuornos",
+     "AI",
+     "docuseries"
+    ],
+    "sourceLinks": [
+     "https://deadline.com/2026/07/serial-killer-aileen-wuornos-ai-true-crime-docuseries-id-1236998740/"
+    ],
+    "isTopTopic": false,
+    "viral": 5,
+    "hint": "news"
+   },
+   "slotLA": "14:58",
+   "status": "pending"
+  },
+  {
+   "story": {
+    "title": "Rory Scovel sets new Netflix comedy special 'Show Must Go On'",
+    "angle": "Rory Scovel's upcoming Netflix special focuses on life and comedy.",
+    "entities": [
+     "Rory Scovel",
+     "Netflix",
+     "special"
+    ],
+    "sourceLinks": [
+     "https://deadline.com/2026/07/rory-scovel-netflix-special-show-must-go-on-premiere-date-1236997707/"
+    ],
+    "isTopTopic": false,
+    "viral": 4,
+    "hint": "news"
+   },
+   "slotLA": "16:32",
+   "status": "pending"
+  },
+  {
+   "story": {
+    "title": "Lily Allen documentary lands at Prime Video",
+    "angle": "Prime Video acquires Lily Allen documentary.",
+    "entities": [
+     "Lily Allen",
+     "documentary",
+     "Prime Video"
+    ],
+    "sourceLinks": [
+     "https://variety.com/2026/music/global/lily-allen-documentary-prime-video-1236817975/",
+     "https://deadline.com/2026/07/prime-video-lily-allen-documentary-west-end-girl-1237000031/"
+    ],
+    "isTopTopic": false,
+    "viral": 4,
+    "hint": "news"
+   },
+   "slotLA": "18:13",
+   "status": "pending"
+  },
+  {
+   "story": {
+    "title": "Paramount-Warner Bros. merger faces ticking fee deadline",
+    "angle": "Theaters brace as a key M&A time bomb ticks toward expiration.",
+    "entities": [
+     "Paramount",
+     "Warner Bros.",
+     "merger"
+    ],
+    "sourceLinks": [
+     "https://www.thewrap.com/industry-news/deals-ma/paramount-warner-bros-merger-ticking-fee-explained/"
+    ],
+    "isTopTopic": false,
+    "viral": 4,
+    "hint": "news"
+   },
+   "slotLA": "19:49",
+   "status": "pending"
+  },
+  {
+   "story": {
+    "title": "Sundance 2026 to recruit volunteers",
+    "angle": "The festival is opening volunteer applications for the 2026 edition.",
+    "entities": [
+     "Sundance",
+     "volunteers"
+    ],
+    "sourceLinks": [
+     "https://bizwest.com/2026/07/22/sundance-film-festival-to-recruit-volunteers/"
     ],
     "isTopTopic": false,
     "viral": 3,
     "hint": "news"
    },
-   "slotLA": "08:38",
-   "status": "dropped",
-   "swaps": 1,
-   "reason": "gather: <2 independent sources and no own article"
-  },
-  {
-   "story": {
-    "title": "Ireland tops global box office for The Odyssey opening weekend",
-    "angle": "Ireland reports the strongest per-capita box office response worldwide for The Odyssey",
-    "entities": [
-     "The Odyssey",
-     "Ireland"
-    ],
-    "sourceLinks": [
-     "https://www.hotpress.com/film-tv/ireland-tops-global-box-office-for-opening-weekend-of-the-odyssey-23153162"
-    ],
-    "isTopTopic": true,
-    "viral": 7,
-    "hint": "box-office"
-   },
-   "slotLA": "10:12",
-   "status": "dropped",
-   "reason": "gather: <2 independent sources and no own article"
-  },
-  {
-   "story": {
-    "title": "The Odyssey cements Nolan's box office supremacy",
-    "angle": "Industry analysis: The Odyssey's performance reinforces Nolan's track record of blockbuster success",
-    "entities": [
-     "The Odyssey",
-     "Christopher Nolan"
-    ],
-    "sourceLinks": [
-     "https://www.thewrap.com/creative-content/movies/the-odyssey-box-office-success-explained-christopher-nolan-imax-film/"
-    ],
-    "isTopTopic": true,
-    "viral": 8,
-    "hint": "box-office"
-   },
-   "slotLA": "11:54",
-   "status": "posted",
-   "key": "the-odyssey-cements-nolan-s-box-office-supremacy"
-  },
-  {
-   "story": {
-    "title": "The Odyssey resonates across Europe",
-    "angle": "European audiences embrace Nolan's film, driving strong box office returns from Greece and beyond",
-    "entities": [
-     "The Odyssey",
-     "Greece",
-     "Europe"
-    ],
-    "sourceLinks": [
-     "https://eualive.net/from-backlash-to-box-office-pride-how-greece-embraced-nolans-the-odyssey/"
-    ],
-    "isTopTopic": true,
-    "viral": 6,
-    "hint": "box-office"
-   },
-   "slotLA": "13:20",
-   "status": "dropped",
-   "reason": "gather: <2 independent sources and no own article"
-  },
-  {
-   "story": {
-    "title": "The Odyssey outperforms at global box office",
-    "angle": "The film surpasses competing releases internationally, including strong Hindi cinema numbers",
-    "entities": [
-     "The Odyssey",
-     "Jana Nayagan",
-     "Lenin Box Office"
-    ],
-    "sourceLinks": [
-     "https://www.imdb.com/news/ni65937724/?ref_=nmnw_art_perm",
-     "https://www.imdb.com/news/ni65937649/?ref_=ttnw_art_perm"
-    ],
-    "isTopTopic": true,
-    "viral": 7,
-    "hint": "box-office"
-   },
-   "slotLA": "14:57",
-   "status": "dropped",
-   "reason": "gather: <2 independent sources and no own article"
-  },
-  {
-   "story": {
-    "title": "Ryan Reynolds confirms another Deadpool film",
-    "angle": "Reynolds announces continued Deadpool franchise development",
-    "entities": [
-     "Ryan Reynolds",
-     "Deadpool"
-    ],
-    "sourceLinks": [
-     "https://www.imdb.com/es/news/ni65937806/?ref_=int_nwr_2",
-     "https://variety.com/2026/film/news/ryan-reynolds-new-deadpool-movie-eventually-1236817083/"
-    ],
-    "isTopTopic": false,
-    "viral": 8,
-    "hint": "news"
-   },
-   "slotLA": "16:39",
-   "status": "posted",
-   "key": "ryan-reynolds-confirms-another-deadpool-film"
-  },
-  {
-   "story": {
-    "title": "Avengers: Doomsday production budget revealed",
-    "angle": "Report indicates Avengers: Doomsday became the most expensive Disney movie ever made",
-    "entities": [
-     "Avengers: Doomsday"
-    ],
-    "sourceLinks": [
-     "https://www.imdb.com/news/ni65937781/?ref_=ttnw_art_perm"
-    ],
-    "isTopTopic": false,
-    "viral": 7,
-    "hint": "news"
-   },
-   "slotLA": "18:15",
-   "status": "dropped",
-   "reason": "gather: <2 independent sources and no own article"
-  },
-  {
-   "story": {
-    "title": "Collider: Toy Story 5 surges toward $1 billion milestone",
-    "angle": "Toy Story 5 approaches historic billion-dollar box office achievement",
-    "entities": [
-     "Toy Story 5"
-    ],
-    "sourceLinks": [
-     "https://collider.com/toy-story-5-box-office-milestone-900-million/"
-    ],
-    "isTopTopic": false,
-    "viral": 7,
-    "hint": "box-office"
-   },
-   "slotLA": "19:51",
-   "status": "dropped",
-   "reason": "factgate: The category tab states 'BOX-OFFICE' but the verified fact pack does not mention any box office earnings for 'Toy Story 5'. The facts provided relate to worldwide gross and domestic weekend earnings, implying the film has been released and is earning money, which contradicts the 'RELEASED: null' fact. The card headline and captions also refer to box office performance, which is not supported by the provided facts as the film's release status is null."
-  },
-  {
-   "story": {
-    "title": "Michael Jackson biopic delivers 102% profit",
-    "angle": "Michael biopic achieves strong box office return, hitting 102% over break-even mark",
-    "entities": [
-     "Michael Jackson"
-    ],
-    "sourceLinks": [
-     "https://www.imdb.com/news/ni65937831/?ref_=ttnw_art_perm"
-    ],
-    "isTopTopic": false,
-    "viral": 6,
-    "hint": "box-office"
-   },
-   "slotLA": "21:26",
-   "status": "dropped",
-   "reason": "gather: <2 independent sources and no own article"
+   "slotLA": "21:25",
+   "status": "pending"
   }
  ],
- "bench": [],
- "builtAt": 1784641603223
+ "bench": [
+  {
+   "title": "Jason Alexander apologizes to Courtney Stodden for 2014 sketch",
+   "angle": "Seinfeld star addresses past behavior in controversy.",
+   "entities": [
+    "Jason Alexander",
+    "Courtney Stodden"
+   ],
+   "sourceLinks": [
+    "https://variety.com/2026/tv/news/jason-alexander-courtney-stodden-inappropriate-behavior-minor-1236817958/"
+   ],
+   "isTopTopic": false,
+   "viral": 3,
+   "hint": "news"
+  },
+  {
+   "title": "Dead Souls review: Alex Cox's final film ends his career in style",
+   "angle": "Roger Ebert gives Alex Cox's Dead Souls a glowing send-off.",
+   "entities": [
+    "Dead Souls",
+    "Alex Cox"
+   ],
+   "sourceLinks": [
+    "https://www.rogerebert.com/reviews/dead-souls-film-review-2026"
+   ],
+   "isTopTopic": false,
+   "viral": 2,
+   "hint": "news"
+  }
+ ],
+ "builtAt": 1784728001785
 }
