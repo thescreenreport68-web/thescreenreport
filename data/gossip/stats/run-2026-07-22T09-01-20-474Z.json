@@ -1,0 +1,138 @@
+{
+  "ts": "2026-07-22T09:01:20.474Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "robbie-williams-minty-microphone-moment-sparks-cocaine-frenzy",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [
+        "geo-no-number:logged"
+      ],
+      "headline": [
+        "metaDescription",
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 0
+    }
+  ],
+  "topics": 1,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 0,
+  "costUSD": 0.011304,
+  "costPerPublished": 0.011304,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 6,
+      "in": 11452,
+      "out": 1292,
+      "usd": 0.006665600000000001
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 897,
+      "out": 665,
+      "usd": 0.00031178
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 5,
+      "in": 12793,
+      "out": 3730,
+      "usd": 0.00368390725
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 7,
+      "in": 4815,
+      "out": 402,
+      "usd": 0.0006422999999999999
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2357,
+      "out": 182,
+      "usd": 0.0011621,
+      "ms": 1694
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 897,
+      "out": 665,
+      "usd": 0.00020043,
+      "ms": 8291
+    },
+    "writer": {
+      "calls": 4,
+      "errors": 0,
+      "in": 12117,
+      "out": 3445,
+      "usd": 0.00395821,
+      "ms": 119711
+    },
+    "verify": {
+      "calls": 5,
+      "errors": 0,
+      "in": 9095,
+      "out": 1110,
+      "usd": 0.0055035,
+      "ms": 8041
+    },
+    "judge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1344,
+      "out": 129,
+      "usd": 0.000186,
+      "ms": 1797
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 676,
+      "out": 285,
+      "usd": 0.00025238,
+      "ms": 10807
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 360,
+      "out": 64,
+      "usd": 0.0000616,
+      "ms": 595
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 188,
+      "out": 42,
+      "usd": 0.000035600000000000005,
+      "ms": 660
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2070,
+      "out": 88,
+      "usd": 0.00024219999999999998,
+      "ms": 2368
+    },
+    "linker": {
+      "calls": 3,
+      "errors": 0,
+      "in": 853,
+      "out": 79,
+      "usd": 0.00011690000000000001,
+      "ms": 1301
+    }
+  }
+}
