@@ -1,0 +1,166 @@
+{
+ "runId": "run-2026-07-22T13-31-07",
+ "mode": "live",
+ "startedAt": "2026-07-22T13:31:07.649Z",
+ "films": 40,
+ "published": [],
+ "held": [
+  {
+   "tag": "the-odyssey-bo-update×BO-UPDATE",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "score": 50
+  },
+  {
+   "tag": "voicemails-for-isabelle-now-streaming×NOW-STREAMING",
+   "reason": "consistency: dek: \"30 million\" is not a canonical figure for this film | keyTakeaways[2]: \"30 million\" is not a canonical figure for this film",
+   "score": 86
+  },
+  {
+   "tag": "the-mandalorian-and-grogu-bo-opening×BO-OPENING",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "score": 55
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "moana-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "minions-monsters-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "toy-story-5-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "evil-dead-burn-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "young-washington-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "obsession-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "supergirl-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "disclosure-day-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "jackass-best-and-last-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "scary-movie-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  }
+ ],
+ "blocked": [],
+ "paced": {
+  "tokens": 1.24,
+  "behind": false,
+  "expected": 1.12,
+  "allow": 1
+ },
+ "queueBuilt": 10,
+ "attemptCapHit": 3,
+ "zeroStreak": 1,
+ "daySpend": {
+  "laDay": "2026-07-22",
+  "usd": 0.13974
+ },
+ "faults": {
+  "count": 2,
+  "bySeverity": {
+   "critical": 1,
+   "warn": 1
+  },
+  "faults": [
+   {
+    "stage": "model:finder",
+    "message": "all models failed (amazon/nova-micro-v1, google/gemini-2.5-flash-lite): Unexpected non-whitespace character after JSON at position 234",
+    "severity": "critical",
+    "at": "2026-07-22T13:31:24.942Z"
+   },
+   {
+    "stage": "finder:llm",
+    "message": "finder classification failed — falling back to deterministic picks: Unexpected non-whitespace character after JSON at position 234",
+    "severity": "warn",
+    "at": "2026-07-22T13:31:24.942Z"
+   }
+  ]
+ },
+ "degraded": true,
+ "finishedAt": "2026-07-22T13:38:47.456Z",
+ "meter": {
+  "byRole": {
+   "categorize": {
+    "calls": 4,
+    "errors": 1,
+    "in": 1010,
+    "out": 626,
+    "usd": 0.00026,
+    "ms": 2707
+   },
+   "finder": {
+    "calls": 2,
+    "errors": 2,
+    "in": 0,
+    "out": 0,
+    "usd": 0,
+    "ms": 0
+   },
+   "gatherer": {
+    "calls": 3,
+    "errors": 0,
+    "in": 11804,
+    "out": 752,
+    "usd": 0.00148,
+    "ms": 6520
+   },
+   "synthesizer": {
+    "calls": 3,
+    "errors": 0,
+    "in": 2244,
+    "out": 1489,
+    "usd": 0.00047,
+    "ms": 50188
+   },
+   "writerChart": {
+    "calls": 1,
+    "errors": 0,
+    "in": 1973,
+    "out": 909,
+    "usd": 0.00076,
+    "ms": 38630
+   },
+   "writer": {
+    "calls": 4,
+    "errors": 0,
+    "in": 12918,
+    "out": 4305,
+    "usd": 0.01206,
+    "ms": 104033
+   },
+   "qa": {
+    "calls": 14,
+    "errors": 2,
+    "in": 34653,
+    "out": 4617,
+    "usd": 0.01859,
+    "ms": 90093
+   }
+  },
+  "totalUsd": 0.03361
+ },
+ "openrouterTotalUsd": 0.03325
+}

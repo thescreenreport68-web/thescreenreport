@@ -949,11 +949,11 @@
    "key": "voicemails-for-isabelle-now-streaming|NOW-STREAMING",
    "eventSlug": "voicemails-for-isabelle-now-streaming",
    "form": "NOW-STREAMING",
-   "reason": "fidelity: 5 unsupported figures/claims — draft-level failure",
-   "tries": 2,
-   "at": "2026-07-21T21:08:21.431Z",
-   "dead": false,
-   "expiresAt": "2026-07-21T21:04:17.976Z"
+   "reason": "consistency: dek: \"30 million\" is not a canonical figure for this film | keyTakeaways[2]: \"30 million\" is not a canonical figure for this film",
+   "tries": 3,
+   "at": "2026-07-22T13:35:08.989Z",
+   "dead": true,
+   "expiresAt": "2026-07-25T13:35:08.989Z"
   },
   {
    "key": "toy-story-5-bo-update-d25|BO-UPDATE",
@@ -1851,10 +1851,10 @@
    "eventSlug": "the-odyssey-bo-update-100m",
    "form": "BO-UPDATE",
    "reason": "1 unverified claim(s) cut, unrecovered",
-   "tries": 106,
-   "at": "2026-07-22T12:32:48.888Z",
+   "tries": 107,
+   "at": "2026-07-22T13:32:53.513Z",
    "dead": true,
-   "expiresAt": "2026-07-25T12:32:48.888Z"
+   "expiresAt": "2026-07-25T13:32:53.513Z"
   },
   {
    "key": "star-wars-the-mandalorian-and-grogu-bo-update-d59|BO-UPDATE",
@@ -2139,24 +2139,33 @@
    "reason": "words 161 < 180 (owner-set ~200-word minimum)",
    "tries": 1,
    "at": "2026-07-22T07:12:20.114Z"
+  },
+  {
+   "key": "the-mandalorian-and-grogu-bo-update-d64|BO-UPDATE",
+   "eventSlug": "the-mandalorian-and-grogu-bo-update-d64",
+   "form": "BO-UPDATE",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "tries": 1,
+   "at": "2026-07-22T13:38:47.453Z"
   }
  ],
- "zeroStreak": 0,
+ "zeroStreak": 1,
  "daySpend": {
   "laDay": "2026-07-22",
-  "usd": 0.10649
+  "usd": 0.13974
  },
  "pace": {
-  "tokens": 0.6811532888888892,
-  "lastMs": 1784725268582
+  "tokens": 1.2408630222222226,
+  "lastMs": 1784727067649
  },
  "lastAuditDay": "2026-07-22",
  "attempts": {
   "laDay": "2026-07-22",
   "byFilm": {
-   "voicemails for isabelle": 1,
+   "voicemails for isabelle": 2,
    "the boss baby": 1,
-   "outcome": 1
+   "outcome": 1,
+   "the mandalorian and grogu": 1
   }
  }
 }
