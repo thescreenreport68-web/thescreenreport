@@ -1,110 +1,120 @@
 {
-  "runId": "run-2026-07-22T07-31-02",
-  "builtAt": "2026-07-22T07:32:34.245Z",
-  "count": 13,
+  "runId": "run-2026-07-22T09-31-08",
+  "builtAt": "2026-07-22T09:32:41.711Z",
+  "count": 6,
   "topics": [
     {
-      "id": "news-rosebush-pruning-review",
-      "slug": "rosebush-pruning-review-this-ravishing-yet-perverse-family-affair-does",
-      "title": "Rosebush Pruning Review: This Ravishing Yet Perverse Family Affair Doesn t Know What It Wants to Be",
+      "id": "news-elon-musk-grok-ai-odyssey-film",
+      "slug": "elon-musk-claims-grok-ai-will-create-odyssey-film",
+      "title": "Elon Musk Claims Grok AI Will Create 'Odyssey' Film",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
-      "eventType": "review",
+      "eventType": "announcement",
       "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "rosebush-pruning-review",
-      "primaryKeyword": "rosebush pruning review",
-      "primaryEntity": "Rosebush Pruning",
+      "eventSlug": "elon-musk-grok-ai-odyssey-film",
+      "primaryKeyword": "The Odyssey AI film",
+      "primaryEntity": "The Odyssey",
       "entities": [
-        "Elle Fanning",
-        "Jamie Bell",
-        "Karim Aïnouz"
+        "The Odyssey (film)",
+        "Elon Musk",
+        "Grok AI"
       ],
-      "angle": "Review of Karim Aïnouz's 'Rosebush Pruning' starring Elle Fanning, noting its strengths and weaknesses.",
+      "angle": "Elon Musk's Grok AI aims to create a historically accurate AI version of 'The Odyssey'.",
       "tmdbType": "movie",
-      "source": "rss:Rolling Stone",
+      "source": "rss:Variety",
       "sources": [
         {
-          "outlet": "Rolling Stone",
+          "outlet": "Variety",
           "tier": 7,
-          "url": "https://www.rollingstone.com/music/music-news/charli-xcx-vincent-cassel-camera-music-video-1235596723/",
-          "ageMin": 718,
-          "headline": "Charli XCX Keeps the ‘Camera’ Rolling on Vincent Cassel in New Video",
-          "summary": "The great French actor endures a brutal day on set in the latest visual for Charli’s Music, Fashion, Film"
+          "url": "https://variety.com/2026/film/global/elon-musk-grok-ai-odyssey-film-historically-accurate-1236817856/",
+          "ageMin": 24,
+          "headline": "Elon Musk Says Grok Will Make an AI ‘Odyssey’ Film That Is ‘Historically Accurate’ by the End of the Year",
+          "summary": "Elon Munk has — finally — broken his silence on The Odyssey (well, at least since Christopher Nolan s epic was released and started breaking various box office records). The tech mogul and recently-crowned trillionaire — who spent some time before the film s launch rallying against various casting decisions — wrote on his social media platform X that his AI [ ]"
+        },
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/elon-musk-odyssey-grok-imagine-ai-film-1236999981/",
+          "ageMin": 70,
+          "headline": "Elon Musk Claims Grok Imagine Will Create Historically Accurate AI Version Of The Odyssey",
+          "summary": "Elon Musk s campaign against Christopher Nolan epic The Odyssey just deepened. The tech mogul wrote on his social media service X that his AI tool Grok Imagine would create a full-length feature version of Homer s Greek myth. Before this year ends, Grok Imagine will make a full-length movie of The Odyssey that is historically accurate [ ]"
         }
       ],
-      "ageMin": 718,
+      "ageMin": 24,
       "_cand": {
-        "key": "rss:charli-xcx-keeps-the-camera-rolling-on-vincent-cassel-in-new",
+        "key": "rss:elon-musk-says-grok-will-make-an-ai-odyssey-film-that-is-his",
         "popularity": 0,
         "kind": "rss-news"
       },
-      "corroborationCount": 1,
+      "corroborationCount": 2,
       "verification": {
-        "tier1Count": 1,
+        "tier1Count": 2,
         "tier1Owners": 1,
-        "outletCount": 1,
+        "outletCount": 2,
         "outlets": [
-          "Rolling Stone"
+          "Variety",
+          "Deadline"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Rolling Stone",
+        "attribution": "Variety",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 85,
+      "priority": 131,
       "signals": {
-        "recency": 4,
-        "corroboration": 12,
+        "recency": 24,
+        "corroboration": 18,
         "status": 18,
         "type": 9,
         "pop": 0,
         "breakout": 0,
         "big": 24,
-        "trending": 0,
+        "trending": 8,
         "spice": 0,
         "softTv": 0,
-        "radar": 18
+        "radar": 30
       },
-      "radarKind": "movie-releasing",
+      "radarKind": "movie-in-theaters",
       "tierClass": "A"
     },
     {
-      "id": "trailer-spider-man-trailer-drop",
-      "slug": "brand-new-day-brand-new-spider-man-trailer",
-      "title": "Brand new day, brand new ‘Spider-Man’ trailer",
+      "id": "trailer-star-wars-attack-of-the-clones-kamino-clip",
+      "slug": "obi-wan-discovers-the-clone-army-on-kamino-star-wars-attack-of-the-clo",
+      "title": "Obi-Wan Discovers The Clone Army on Kamino | Star Wars: Attack of the Clones | Official Clip",
       "contentType": "trailer",
       "formatTag": "trailer",
       "category": "movies",
       "subcategory": "trailers",
       "eventType": "trailer",
       "sensitivity": "normal",
-      "eventSlug": "spider-man-trailer-drop",
-      "primaryKeyword": "spider-man trailer",
-      "primaryEntity": "Spider-Man",
+      "eventSlug": "star-wars-attack-of-the-clones-kamino-clip",
+      "primaryKeyword": "Star Wars Attack of the Clones clip",
+      "primaryEntity": "Star Wars: Episode II - Attack of the Clones",
       "entities": [
-        "Spider-Man (film)"
+        "Star Wars: Episode II – Attack of the Clones",
+        "Obi-Wan Kenobi",
+        "Kamino"
       ],
-      "angle": "A new trailer has been released for an upcoming Spider-Man movie.",
+      "angle": "An official clip from 'Star Wars: Attack of the Clones' has been released, showing Obi-Wan Kenobi discovering the clone army.",
       "tmdbType": "movie",
-      "source": "gnews:Vanyaland",
+      "source": "gnews:Jedi News",
       "sources": [
         {
-          "outlet": "Vanyaland",
+          "outlet": "Jedi News",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNNXZETnlWbGpYNmMtS0c5TV8zLV92UXJIUE0wa0NKWjNFT0RiNlpQUFJFZGNxbWowR1VqSW4tMFJJZkluME9uc29UWlRGUF93QjhIeUVvUnNJRnJQc3FMaW81Wm93TWtPV3ppODJWaTdfdjlZc0E2ZE9NX1c4d1J0VlV3?oc=5",
-          "ageMin": 300,
-          "headline": "Brand new day, brand new ‘Spider-Man’ trailer - Vanyaland",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiggFBVV95cUxNNXZETnlWbGpYNmMtS0c5TV8zLV92UXJIUE0wa0NKWjNFT0RiNlpQUFJFZGNxbWowR1VqSW4tMFJJZkluME9uc29UWlRGUF93QjhIeUVvUnNJRnJQc3FMaW81Wm93TWtPV3ppODJWaTdfdjlZc0E2ZE9NX1c4d1J0VlV3?oc=5\" target=\"_blank\" Brand new day, brand new ‘Spider-Man’ trailer /a nbs"
+          "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPeUllV3FscHVMcmpEdEdmbGJFWGtmd3RfV2VOUkhHYVBka211ZlRsTVQ0R1gzOXhJU2gzeVBndGQzaGRQTThSNmowNmZfX1JRaU1JaUdsMHpNWWxadzBoOGFmSU54YzRobkdKSHBBSGxXRDViX0xfZDdfNzhaZHJYeEJPVF9PdWlhOWRzXy1lTnMxRG1zdENLTF9Xakx4VXFVOFVVamJUMzhuSjRLSTRnd2xFWEY5UlcyZjVPWDcwV1lzMUtpYS1YT0ZiX05jYldUeWc?oc=5",
+          "ageMin": 138,
+          "headline": "Obi-Wan Discovers The Clone Army on Kamino | Star Wars: Attack of the Clones | Official Clip - Jedi News",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMi0gFBVV95cUxPeUllV3FscHVMcmpEdEdmbGJFWGtmd3RfV2VOUkhHYVBka211ZlRsTVQ0R1gzOXhJU2gzeVBndGQzaGRQTThSNmowNmZfX1JRaU1JaUdsMHpNWWxadzBoOGFmSU54YzRobkdKSHBBSGxXRDViX0xfZDdfNzhaZHJYeEJPVF9PdWlhOWRzXy1lTnMxRG1zdENLTF9Xakx4VXFVOFVVamJUMzhuSjRLSTRnd2xFWEY5UlcyZjV"
         }
       ],
-      "ageMin": 300,
+      "ageMin": 138,
       "_cand": {
-        "key": "rss:brand-new-day-brand-new-spider-man-trailer-vanyaland",
+        "key": "rss:obi-wan-discovers-the-clone-army-on-kamino-star-wars-attack-",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -114,18 +124,18 @@
         "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "Vanyaland"
+          "Jedi News"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "Vanyaland",
+        "attribution": "Jedi News",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 74,
+      "priority": 81,
       "signals": {
-        "recency": 9,
+        "recency": 16,
         "corroboration": 8,
         "status": 18,
         "type": 15,
@@ -139,138 +149,63 @@
       "tierClass": "B"
     },
     {
-      "id": "music-news-chelsea-wolfe-announces-new-album-the-dark-releases-single-cold",
-      "slug": "chelsea-wolfe-announces-new-album-the-dark-drops-new-single-cold",
-      "title": "Chelsea Wolfe Announces New Album 'The Dark,' Drops New Single 'Cold'",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
+      "id": "news-jennifer-garner-13-going-on-30-netflix-movie-set-photos",
+      "slug": "jennifer-garner-returns-for-13-going-on-30-netflix-movie-new-cast-reve",
+      "title": "Jennifer Garner Returns for '13 Going on 30' Netflix Movie, New Cast Revealed",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "chelsea-wolfe-announces-new-album-the-dark-releases-single-cold",
-      "primaryKeyword": "chelsea wolfe new album",
-      "primaryEntity": "chelsea wolfe",
+      "eventSlug": "jennifer-garner-13-going-on-30-netflix-movie-set-photos",
+      "primaryKeyword": "13 Going on 30 Netflix movie",
+      "primaryEntity": "13 Going on 30",
       "entities": [
-        "Chelsea Wolfe",
-        "The Dark"
+        "13 Going on 30 (film)",
+        "Jennifer Garner",
+        "Netflix"
       ],
-      "angle": "Gothic singer-songwriter Chelsea Wolfe has announced her upcoming album 'The Dark' and released the lead single 'Cold' with an official music video.",
+      "angle": "First look at Jennifer Garner and new cast members on the set of the upcoming Netflix adaptation of '13 Going on 30'.",
       "tmdbType": "movie",
-      "source": "gnews:Chaoszine",
+      "source": "gnews:What's on Netflix",
       "sources": [
         {
-          "outlet": "Chaoszine",
+          "outlet": "What's on Netflix",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOZUNnQW5uMGIwZzFFOWpBWGRMRnpVTmd5a1NBMU0wTXpqSFk5aUYwWWM2SUs3WVduN1dJY1h1TjEzVUxBb2oxVmtQM3pVUGRMaFNUSXI5bXN5ME9VdjZRWG9sMWhycjBhVUlsdm5VU2FDTFpBRXd6NHdGb2JRcUpoZHJBZDExZXU5NF8zMGtnb0ZFX3A2dEZFeXlJbWgxVG14eTlkR1B5bE0taDJvX2c?oc=5",
-          "ageMin": 44,
-          "headline": "Chelsea Wolfe announces new album \"The Dark\" - reveals new single with official video \"Cold\" - Chaoszine",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxOZUNnQW5uMGIwZzFFOWpBWGRMRnpVTmd5a1NBMU0wTXpqSFk5aUYwWWM2SUs3WVduN1dJY1h1TjEzVUxBb2oxVmtQM3pVUGRMaFNUSXI5bXN5ME9VdjZRWG9sMWhycjBhVUlsdm5VU2FDTFpBRXd6NHdGb2JRcUpoZHJBZDExZXU5NF8zMGtnb0ZFX3A2dEZFeXlJbWgxVG14eTlkR1B5bE0taDJvX2c?oc=5\" target=\"_"
-        },
-        {
-          "outlet": "Theprp.com",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPNW5MTmVqMlRhUXpmQUJnSW5Gd2dMUGxIdWtkT0RwSlRBM3N6TU0wbVhfWHZhUTVhTlcwRmY5b0lEdFFxS3BoZ2ltYkFNMGhHWmw5bVZSOFJ6OHhfZ1BTcUQwb3VUWHRfRndBSE1aR1NlQlNOTDdvam8tazlBZWlVbHI1ZWdObEI3NjVWUUpTdmJNdjZZQjVRUk9kalFzYk1TV3NXdVh3TzYzb2VPb1NoQm5QOWdNYm9U?oc=5",
-          "ageMin": 706,
-          "headline": "Chelsea Wolfe's New Album \"The Dark\" To Arrive In August, \"Cold\" Music Video Debuts - Theprp.com",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiuAFBVV95cUxPNW5MTmVqMlRhUXpmQUJnSW5Gd2dMUGxIdWtkT0RwSlRBM3N6TU0wbVhfWHZhUTVhTlcwRmY5b0lEdFFxS3BoZ2ltYkFNMGhHWmw5bVZSOFJ6OHhfZ1BTcUQwb3VUWHRfRndBSE1aR1NlQlNOTDdvam8tazlBZWlVbHI1ZWdObEI3NjVWUUpTdmJNdjZZQjVRUk9kalFzYk1TV3NXdVh3TzYzb2VPb1NoQm5QOWdNYm9U?oc"
+          "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQdFNkWFJzNEEwLTFnbkVpbzR1dE5KbXpaRTRQd0RFS3NpanBwYmtNcHRRbE5yWl81d2x6N3dWQXJTY2ZtcmRQVXRKQzZRUnNIS09zNTZmWXVUWUcxaTlSbWVhbHBOQ0JPUlhETVBlamZEX3A0REFKellLY3ZvTGJOYkRwV0tDUWFLVVBwRU5hVGlkSmVBdllONmstRXVDbmxYVnE4SDRMLTVEZkpoWG1laWFkX3gyVkJJZy1YUUdWaFpmNXlYTFRUQQ?oc=5",
+          "ageMin": 54,
+          "headline": "'13 Going on 30' Netflix Movie Set Photos Reveal Jennifer Garner and Surprise Cast Additions - What's on Netflix",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiyAFBVV95cUxQdFNkWFJzNEEwLTFnbkVpbzR1dE5KbXpaRTRQd0RFS3NpanBwYmtNcHRRbE5yWl81d2x6N3dWQXJTY2ZtcmRQVXRKQzZRUnNIS09zNTZmWXVUWUcxaTlSbWVhbHBOQ0JPUlhETVBlamZEX3A0REFKellLY3ZvTGJOYkRwV0tDUWFLVVBwRU5hVGlkSmVBdllONmstRXVDbmxYVnE4SDRMLTVEZkpoWG1laWFkX3gyVkJJZy1"
         }
       ],
-      "ageMin": 44,
+      "ageMin": 54,
       "_cand": {
-        "key": "rss:chelsea-wolfe-announces-new-album-the-dark-reveals-new-singl",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 2,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 2,
-        "outlets": [
-          "Chaoszine",
-          "Theprp.com"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "multiple outlets",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 73,
-      "signals": {
-        "recency": 24,
-        "corroboration": 14,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 8,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "trailer-other-mommy-film-trailer",
-      "slug": "trailer-for-jessica-chastain-s-new-film-other-mommy-leaves-odyssey-mov",
-      "title": "Trailer for Jessica Chastain's new film 'Other Mommy' leaves 'Odyssey' moviegoers terrified",
-      "contentType": "trailer",
-      "formatTag": "trailer",
-      "category": "movies",
-      "subcategory": "trailers",
-      "eventType": "trailer",
-      "sensitivity": "normal",
-      "eventSlug": "other-mommy-film-trailer",
-      "primaryKeyword": "Other Mommy trailer",
-      "primaryEntity": "Other Mommy",
-      "entities": [
-        "Other Mommy (film)",
-        "Jessica Chastain"
-      ],
-      "angle": "The trailer for Jessica Chastain's new horror film 'Other Mommy' has been released and is generating buzz.",
-      "tmdbType": "movie",
-      "source": "gnews:Billboard",
-      "sources": [
-        {
-          "outlet": "Billboard",
-          "tier": 7,
-          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOX3RMUXVRcmFrRW9ybHlxWkRrcmI2THJBbHdCVEVGZFpaWm4wSDB6X3c5Nk1LRGZWSnFUa2ZGRHpuVTYwbVVvV0czNUhRU21jdTlhUFJlbHJFcHBXZC1qbnBsS2J6SF9pUVk3ZW1FaFFuR3VTVGhDM0duazVEMWEtd2FWZTBmVFNoaGRkNVNIdmRnUUVFRWoyMzNB?oc=5",
-          "ageMin": 473,
-          "headline": "Doja Cat Latto Team Up for Sexy 2000s-Themed ‘Okayyy’ Video, Atlanta Rapper to Join Doja’s Ma Vie World Tour - Billboard",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMimgFBVV95cUxOX3RMUXVRcmFrRW9ybHlxWkRrcmI2THJBbHdCVEVGZFpaWm4wSDB6X3c5Nk1LRGZWSnFUa2ZGRHpuVTYwbVVvV0czNUhRU21jdTlhUFJlbHJFcHBXZC1qbnBsS2J6SF9pUVk3ZW1FaFFuR3VTVGhDM0duazVEMWEtd2FWZTBmVFNoaGRkNVNIdmRnUUVFRWoyMzNB?oc=5\" target=\"_blank\" Doja Cat Latto Team "
-        }
-      ],
-      "ageMin": 473,
-      "_cand": {
-        "key": "rss:doja-cat-latto-team-up-for-sexy-2000s-themed-okayyy-video-at",
+        "key": "rss:-13-going-on-30-netflix-movie-set-photos-reveal-jennifer-gar",
         "popularity": 0,
         "kind": "gnews"
       },
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
+        "tier1Count": 0,
+        "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "Billboard"
+          "What's on Netflix"
         ],
-        "maxTier": 7,
+        "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "Billboard",
+        "attribution": "What's on Netflix",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 73,
+      "priority": 83,
       "signals": {
-        "recency": 4,
-        "corroboration": 12,
+        "recency": 24,
+        "corroboration": 8,
         "status": 18,
-        "type": 15,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
         "big": 24,
@@ -281,24 +216,25 @@
       "tierClass": "B"
     },
     {
-      "id": "news-monarch-legacy-of-monsters-casting",
-      "slug": "corey-stoll-ralph-ineson-join-wyatt-russell-s-monsterverse-series",
-      "title": "Corey Stoll, Ralph Ineson Join Wyatt Russell's Monsterverse Series",
+      "id": "news-monarch-legacy-of-monsters-casting-corey-stoll-ralph-ineson",
+      "slug": "wyatt-russell-s-monsterverse-series-casts-corey-stoll-ralph-ineson",
+      "title": "Wyatt Russell's Monsterverse Series Casts Corey Stoll, Ralph Ineson",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "monarch-legacy-of-monsters-casting",
-      "primaryKeyword": "Monarch Legacy of Monsters casting",
+      "eventSlug": "monarch-legacy-of-monsters-casting-corey-stoll-ralph-ineson",
+      "primaryKeyword": "monarch legacy of monsters casting",
       "primaryEntity": "Monarch: Legacy of Monsters",
       "entities": [
         "Wyatt Russell",
         "Corey Stoll",
-        "Ralph Ineson"
+        "Ralph Ineson",
+        "Apple TV+"
       ],
-      "angle": "Corey Stoll, Ralph Ineson, and Nyasha Hatendi have joined the cast of the upcoming 'Monarch: Legacy of Monsters' spinoff series.",
+      "angle": "Corey Stoll and Ralph Ineson join the cast of Apple TV+'s 'Monarch: Legacy of Monsters' spinoff.",
       "tmdbType": "movie",
       "source": "rss:Variety",
       "sources": [
@@ -306,12 +242,12 @@
           "outlet": "Variety",
           "tier": 7,
           "url": "https://variety.com/2026/tv/news/wyatt-russell-monsterverse-series-corey-stoll-ralph-ineson-1236817481/",
-          "ageMin": 733,
+          "ageMin": 853,
           "headline": "Wyatt Russell s Monsterverse Series Casts Corey Stoll, Ralph Ineson, Nyasha Hatendi",
           "summary": "The upcoming Monarch: Legacy of Monsters spinoff at Apple TV has added three new cast members. Variety has confirmed that Corey Stoll ( Imperfect Women,” “Appropriate,” “Billions ), Ralph Inneson ( The Witch, The Fantastic Four: First Steps ), and Nyasha Hatendi (“Agatha Christie’s The Seven Dials,” “Casual”) will all appear in the new series, which was originally announced [ ]"
         }
       ],
-      "ageMin": 733,
+      "ageMin": 853,
       "_cand": {
         "key": "rss:wyatt-russell-s-monsterverse-series-casts-corey-stoll-ralph-",
         "popularity": 0,
@@ -348,240 +284,38 @@
       "tierClass": "B"
     },
     {
-      "id": "news-snoop-dogg-biopic-summer-2027-release",
-      "slug": "snoop-dogg-biopic-lands-summer-2027-release-from-universal",
-      "title": "Snoop Dogg Biopic Lands Summer 2027 Release From Universal",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "snoop-dogg-biopic-summer-2027-release",
-      "primaryKeyword": "snoop dogg biopic",
-      "primaryEntity": "Snoop Dogg's Hood of Horror",
-      "entities": [
-        "Snoop Dogg",
-        "Jonathan Daviss",
-        "Craig Brewer",
-        "Universal"
-      ],
-      "angle": "Universal sets summer 2027 release for Snoop Dogg biopic starring Jonathan Daviss.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/snoop-dogg-biopic-lands-summer-2027-release-1236653520/",
-          "ageMin": 601,
-          "headline": "Snoop Dogg Biopic Lands Summer 2027 Release From Universal",
-          "summary": "Jonathan Daviss stars in Craig Brewer's feature that examines the life of the iconic rapper."
-        }
-      ],
-      "ageMin": 601,
-      "_cand": {
-        "key": "rss:snoop-dogg-biopic-lands-summer-2027-release-from-universal",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 67,
-      "signals": {
-        "recency": 4,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "trailer-other-mommy-trailer-jessica-chastain",
-      "slug": "jessica-chastain-returns-to-horror-in-other-mommy-trailer",
-      "title": "Jessica Chastain Returns to Horror in 'Other Mommy' Trailer",
-      "contentType": "trailer",
-      "formatTag": "trailer",
-      "category": "movies",
-      "subcategory": "trailers",
-      "eventType": "trailer",
-      "sensitivity": "normal",
-      "eventSlug": "other-mommy-trailer-jessica-chastain",
-      "primaryKeyword": "Other Mommy trailer",
-      "primaryEntity": "Other Mommy",
-      "entities": [
-        "Jessica Chastain",
-        "Universal Pictures",
-        "Blumhouse"
-      ],
-      "angle": "Jessica Chastain stars in the new horror film 'Other Mommy', with its trailer revealing a body-twisting doppelganger.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/other-mommy-trailer-jessica-chastain-horror-1236653044/",
-          "ageMin": 751,
-          "headline": "Other Mommy Trailer: Jessica Chastain Returns to Horror as a Body-Twisting Doppelganger",
-          "summary": "From Universal Pictures and Blumhouse Atomic Monster, the film is set to release in theaters Oct. 9."
-        }
-      ],
-      "ageMin": 751,
-      "_cand": {
-        "key": "rss:other-mommy-trailer-jessica-chastain-returns-to-horror-as-a-",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 70,
-      "signals": {
-        "recency": 1,
-        "corroboration": 12,
-        "status": 18,
-        "type": 15,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-selena-director-honored-san-antonio",
-      "slug": "selena-director-to-be-honored-in-san-antonio",
-      "title": "'Selena' Director to Be Honored in San Antonio",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "award",
-      "sensitivity": "normal",
-      "eventSlug": "selena-director-honored-san-antonio",
-      "primaryKeyword": "Selena director honor",
-      "primaryEntity": "Selena",
-      "entities": [
-        "Selena (film)",
-        "San Antonio"
-      ],
-      "angle": "The director of the film 'Selena' will receive an honor in San Antonio.",
-      "tmdbType": "movie",
-      "source": "gnews:San Antonio Express-News",
-      "sources": [
-        {
-          "outlet": "San Antonio Express-News",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPNmI0eEZfTy1jdWlVVWxEN0JtbVJYUHE1SmJjb1ZTSDlQZklNd0VJVzlmaUE4TGF1V2VKaGphcHlqOW4xMVo2UHFXV3c4RVZydnNEdHhxUDAtQzFhSDZYbkhBS3VuME5xV3VMVG5OMFVRLXdtNmpOcTFtWEN2Ym9Xcno2clhLWGkwMi1ZaUVkMnFaNzRiakh5NWtuOThMNnpiakxDb1laRnNtT3M?oc=5",
-          "ageMin": 723,
-          "headline": "'Selena' director to be honored in San Antonio - San Antonio Express-News",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxPNmI0eEZfTy1jdWlVVWxEN0JtbVJYUHE1SmJjb1ZTSDlQZklNd0VJVzlmaUE4TGF1V2VKaGphcHlqOW4xMVo2UHFXV3c4RVZydnNEdHhxUDAtQzFhSDZYbkhBS3VuME5xV3VMVG5OMFVRLXdtNmpOcTFtWEN2Ym9Xcno2clhLWGkwMi1ZaUVkMnFaNzRiakh5NWtuOThMNnpiakxDb1laRnNtT3M?oc=5\" target=\"_blan"
-        }
-      ],
-      "ageMin": 723,
-      "_cand": {
-        "key": "rss:-selena-director-to-be-honored-in-san-antonio-san-antonio-ex",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "San Antonio Express-News"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "San Antonio Express-News",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 65,
-      "signals": {
-        "recency": 1,
-        "corroboration": 8,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
       "id": "news-timothy-olyphant-david-fincher-takes",
-      "slug": "timothy-olyphant-thought-director-david-fincher-s-many-takes-were-unne",
-      "title": "Timothy Olyphant Thought Director David Fincher’s Many Takes Were ‘Unnecessary’ Power Move",
+      "slug": "timothy-olyphant-thought-adventures-of-cliff-booth-director-david-finc",
+      "title": "Timothy Olyphant Thought ‘Adventures of Cliff Booth’ Director David Fincher’s Many Takes Were ‘Unnecessary’ Power Move",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "other",
-      "sensitivity": "high",
+      "sensitivity": "normal",
       "eventSlug": "timothy-olyphant-david-fincher-takes",
-      "primaryKeyword": "David Fincher takes",
-      "primaryEntity": "David Fincher",
+      "primaryKeyword": "Timothy Olyphant David Fincher",
+      "primaryEntity": "Timothy Olyphant",
       "entities": [
-        "Timothy Olyphant",
+        "David Fincher",
         "Once Upon a Time in Hollywood"
       ],
-      "angle": "Timothy Olyphant shares his experience with David Fincher's numerous takes on the 'Adventures of Cliff Booth' project, calling them 'unnecessary power moves.'",
+      "angle": "Timothy Olyphant shares his perspective on director David Fincher's meticulous approach to filming.",
       "tmdbType": "movie",
-      "source": "rss:Deadline",
+      "source": "rss:TheWrap",
       "sources": [
         {
-          "outlet": "Deadline",
+          "outlet": "TheWrap",
           "tier": 7,
-          "url": "https://deadline.com/2026/07/jacob-elordi-filming-euphoria-death-scene-final-season-1236999828/",
-          "ageMin": 411,
-          "headline": "Jacob Elordi On Filming Euphoria Death Scene Returning For Final Season: I Think Sam Brought Me Back To Torture Me",
-          "summary": "Jacob Elordi had a gruesome death on the final season of Euphoria and is giving insight into how that scene was shot. While making an appearance on ABC s Jimmy Kimmel Live!, Elordi had a mini Euphoria reunion with co-star Colman Domingo, who is guest-hosting the late-night talk show in Kimmel s absence. Domingo brought up his [ ]"
+          "url": "https://www.thewrap.com/creative-content/movies/timothy-olyphant-david-finchers-many-takes-power-move/",
+          "ageMin": 550,
+          "headline": "Timothy Olyphant Thought ‘Adventures of Cliff Booth’ Director David Fincher’s Many Takes Were ‘Unnecessary’ Power Move",
+          "summary": "The actor adds he \"couldn't wait\" to start working on the \"Once Upon a Time in Hollywood\" sequel The post Timothy Olyphant Thought ‘Adventures of Cliff Booth’ Director David Fincher’s Many Takes Were ‘Unnecessary’ Power Move appeared first on TheWrap ."
         }
       ],
-      "ageMin": 411,
+      "ageMin": 550,
       "_cand": {
-        "key": "rss:jacob-elordi-on-filming-euphoria-death-scene-returning-for-f",
+        "key": "rss:timothy-olyphant-thought-adventures-of-cliff-booth-director-",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -591,11 +325,11 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Deadline"
+          "TheWrap"
         ],
         "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "Deadline",
+        "sensitivity": "normal",
+        "attribution": "TheWrap",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -613,44 +347,44 @@
         "spice": 0,
         "softTv": 0
       },
-      "tierClass": "S"
+      "tierClass": "C"
     },
     {
-      "id": "news-disney-layoffs-pixar-national-geographic",
-      "slug": "pixar-and-national-geographic-hit-in-latest-round-of-disney-layoffs",
-      "title": "Pixar and National Geographic Hit in Latest Round of Disney Layoffs",
+      "id": "news-cruz-beckham-career-advice-parents",
+      "slug": "cruz-beckham-gets-career-advice-from-famous-parents",
+      "title": "Cruz Beckham Gets Career Advice from Famous Parents",
       "contentType": "news",
       "formatTag": "news",
-      "category": "movies",
+      "category": "celebrity",
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "disney-layoffs-pixar-national-geographic",
-      "primaryKeyword": "Disney layoffs Pixar",
-      "primaryEntity": "Disney",
+      "tier": "popular",
+      "eventSlug": "cruz-beckham-career-advice-parents",
+      "primaryKeyword": "Cruz Beckham career advice",
+      "primaryEntity": "Cruz Beckham",
       "entities": [
-        "Pixar Short Films Collection: Volume 1",
-        "Pixar",
-        "National Geographic"
+        "Victoria Beckham",
+        "David Beckham"
       ],
-      "angle": "Disney's latest round of layoffs affects its animation studio Pixar and documentary arm National Geographic.",
+      "angle": "Cruz Beckham shared insights into his music career and the advice he receives from his famous parents.",
       "tmdbType": "movie",
-      "source": "gnews:Los Angeles Times",
+      "source": "rss:Billboard",
       "sources": [
         {
-          "outlet": "Los Angeles Times",
+          "outlet": "Billboard",
           "tier": 7,
-          "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNOGh4MzdMX240QXc0ckpFSnFhc3pUeFBmaUdnUnc0UE80Q3VnbEtvVGl0YXNZRk82VW5LckRDcXFCN3ZiNmFNNTlaSXhDdVhJQ0tLUklKRWNJYzdKRjdaeU1scEdhTHhhbUxWc25xYWdoZjdpdU1PUlR1THhYbU9MdGM5VUEwZF9WRTdFOHhTN3RPTTR0dDVXR3NUZ0RXQXAtN3g1NVUwR1I2ZVhQYi1DQUU5NThmbXZwTUR3QXlrUVNWNFBMTnRNa09vRFo?oc=5",
-          "ageMin": 740,
-          "headline": "Pixar and National Geographic hit in latest round of Disney layoffs - Los Angeles Times",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMizAFBVV95cUxNOGh4MzdMX240QXc0ckpFSnFhc3pUeFBmaUdnUnc0UE80Q3VnbEtvVGl0YXNZRk82VW5LckRDcXFCN3ZiNmFNNTlaSXhDdVhJQ0tLUklKRWNJYzdKRjdaeU1scEdhTHhhbUxWc25xYWdoZjdpdU1PUlR1THhYbU9MdGM5VUEwZF9WRTdFOHhTN3RPTTR0dDVXR3NUZ0RXQXAtN3g1NVUwR1I2ZVhQYi1DQUU5NThmbXZwTUR"
+          "url": "https://www.billboard.com/music/pop/cruz-beckham-parents-solid-career-advice-1236300503/",
+          "ageMin": 62,
+          "headline": "Cruz Beckham’s Famous Parents Give Him Solid Career Advice",
+          "summary": "In a new interview, Cruz Beckham shared some insights into his new music, and revealed who gives the advice out of his mom and dad, Victoria and David Beckham."
         }
       ],
-      "ageMin": 740,
+      "ageMin": 62,
       "_cand": {
-        "key": "rss:pixar-and-national-geographic-hit-in-latest-round-of-disney-",
+        "key": "rss:cruz-beckham-s-famous-parents-give-him-solid-career-advice",
         "popularity": 0,
-        "kind": "gnews"
+        "kind": "rss-news"
       },
       "corroborationCount": 1,
       "verification": {
@@ -658,233 +392,29 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Los Angeles Times"
+          "Billboard"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Los Angeles Times",
+        "attribution": "Billboard",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 48,
+      "priority": 51,
       "signals": {
-        "recency": 1,
+        "recency": 16,
         "corroboration": 12,
         "status": 18,
         "type": 5,
         "pop": 0,
         "breakout": 0,
-        "big": 12,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-trixie-mattel-katya-zamolodchikova-podcast-deal",
-      "slug": "siriusxm-signs-trixie-mattel-and-katya-zamolodchikova-s-the-bald-and-t",
-      "title": "SiriusXM Signs Trixie Mattel and Katya Zamolodchikova’s ‘The Bald and the Beautiful’ Podcast",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "trixie-mattel-katya-zamolodchikova-podcast-deal",
-      "primaryKeyword": "trixie mattel katya podcast",
-      "primaryEntity": "Trixie Mattel",
-      "entities": [
-        "Katya Zamolodchikova",
-        "SiriusXM"
-      ],
-      "angle": "SiriusXM has signed the popular podcast 'The Bald and the Beautiful' hosted by drag queens Trixie Mattel and Katya Zamolodchikova.",
-      "tmdbType": "movie",
-      "source": "gnews:The Hollywood Reporter",
-      "sources": [
-        {
-          "outlet": "The Hollywood Reporter",
-          "tier": 7,
-          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOLWZqWTZ2dDNobHFrbUdPdHotQWNyTGVLODZsN1JXdGJuZ0wwc09FdHppVE5DYnZQRHhmdldpQ01LdDZScldEeXdCcHdFMVdfNmpLMVlmSnk3ZmtPbl9rSDJTVHJWRm8tbUk4TXgxdkFLZHotWHptaGRTVlBPa0xyY2J2dFAxMXAyc2JOcnEyZUVuUmhjdnMtakJZTlVhZTdWN21felMxUTZXaUZ5aU8xMF9zYU9YMENSOC1V?oc=5",
-          "ageMin": 159,
-          "headline": "SiriusXM Signs Trixie Mattel and Katya Zamolodchikova’s ‘The Bald and the Beautiful’ Podcast (Exclusive) - The Hollywood Reporter",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiuwFBVV95cUxOLWZqWTZ2dDNobHFrbUdPdHotQWNyTGVLODZsN1JXdGJuZ0wwc09FdHppVE5DYnZQRHhmdldpQ01LdDZScldEeXdCcHdFMVdfNmpLMVlmSnk3ZmtPbl9rSDJTVHJWRm8tbUk4TXgxdkFLZHotWHptaGRTVlBPa0xyY2J2dFAxMXAyc2JOcnEyZUVuUmhjdnMtakJZTlVhZTdWN21felMxUTZXaUZ5aU8xMF9zYU9YMENSOC1"
-        }
-      ],
-      "ageMin": 159,
-      "_cand": {
-        "key": "rss:siriusxm-signs-trixie-mattel-and-katya-zamolodchikova-s-the-",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "The Hollywood Reporter"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "The Hollywood Reporter",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 55,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
         "big": 0,
         "trending": 0,
         "spice": 0,
         "softTv": 0
       },
       "tierClass": "C"
-    },
-    {
-      "id": "news-dixon-dern-death",
-      "slug": "dixon-dern-dies-attorney-for-caa-cbs-tv-academy-desilu-was-97",
-      "title": "Dixon Dern Dies: Attorney For CAA, CBS, TV Academy Desilu, Was 97",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "death",
-      "sensitivity": "high",
-      "eventSlug": "dixon-dern-death",
-      "primaryKeyword": "dixon dern death",
-      "primaryEntity": "Dixon Dern",
-      "entities": [
-        "Wheels on Meals",
-        "CAA",
-        "CBS",
-        "Television Academy"
-      ],
-      "angle": "Veteran entertainment attorney Dixon Dern, who represented major studios and industry figures, has passed away at 97.",
-      "tmdbType": "movie",
-      "source": "rss:Deadline",
-      "sources": [
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/dixon-dern-dead-entertainment-attorney-1236999762/",
-          "ageMin": 309,
-          "headline": "Dixon Dern Dies: Attorney For CAA, CBS, TV Academy Desilu, Was 97",
-          "summary": "Dixon Q. Dern, the longtime entertainment attorney who worked at CBS, Desilu and United Artists TV; who represented clients such as Desi Arnaz and the Television Academy; who often served as an arbitrator for labor disputes; who helped incorporate CAA and who was a pioneer in syndicated sales and pre-financing for TV, died on July [ ]"
-        }
-      ],
-      "ageMin": 309,
-      "_cand": {
-        "key": "rss:dixon-dern-dies-attorney-for-caa-cbs-tv-academy-desilu-was-9",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Deadline"
-        ],
-        "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "Deadline",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 53,
-      "signals": {
-        "recency": 9,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "S"
-    },
-    {
-      "id": "news-sony-music-lawsuit-against-udio-ai-music-generator",
-      "slug": "sony-music-files-another-lawsuit-against-ai-music-generator-udio-alleg",
-      "title": "Sony Music Files Another Lawsuit Against AI Music Generator Udio, Alleges Copied 30,000 Songs",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "lawsuit",
-      "sensitivity": "high",
-      "tier": "popular",
-      "eventSlug": "sony-music-lawsuit-against-udio-ai-music-generator",
-      "primaryKeyword": "Udio lawsuit",
-      "primaryEntity": "Sony Music Entertainment",
-      "entities": [
-        "BEYONCÉ",
-        "Udio",
-        "Beyoncé",
-        "Harry Styles"
-      ],
-      "angle": "Sony Music sues AI music generator Udio for allegedly training models on 30,000 songs without permission.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/music/news/sony-music-new-lawsuit-udio-ai-music-generator-1236817746/",
-          "ageMin": 394,
-          "headline": "Sony Music Files Another Lawsuit Against Udio, Alleges AI Music Generator Copied 30,000 Songs to Train Models",
-          "summary": "Sony Music Entertainment has once again sued the AI music generator Udio, alleging the startup illegally copied more than 30,000 songs from the likes of Beyoncé, Harry Styles and Elvis Presley to train its models. Sony first brought lawsuits against Udio and its competitor Suno in June 2024 alongside labels Universal Music Group and Warner [ ]"
-        }
-      ],
-      "ageMin": 394,
-      "_cand": {
-        "key": "rss:sony-music-files-another-lawsuit-against-udio-alleges-ai-mus",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 50,
-      "signals": {
-        "recency": 4,
-        "corroboration": 12,
-        "status": 18,
-        "type": 12,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 4,
-        "softTv": 0
-      },
-      "tierClass": "S"
     }
   ]
 }
