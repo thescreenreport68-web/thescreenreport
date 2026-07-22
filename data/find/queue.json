@@ -1,41 +1,118 @@
 {
-  "runId": "run-2026-07-22T21-01-16",
-  "builtAt": "2026-07-22T21:02:33.960Z",
-  "count": 26,
+  "runId": "run-2026-07-22T22-01-11",
+  "builtAt": "2026-07-22T22:02:39.375Z",
+  "count": 18,
   "topics": [
     {
-      "id": "news-love-actually-in-concert-2026-tour",
-      "slug": "love-actually-in-concert-announces-2026-tour-with-over-30-city-dates",
-      "title": "'Love Actually in Concert' Announces 2026 Tour with Over 30 City Dates",
+      "id": "news-days-of-thunder-2-jonathan-levine-tom-cruise",
+      "slug": "days-of-thunder-2-jonathan-levine-in-talks-to-direct-tom-cruise-in-par",
+      "title": "‘Days of Thunder 2’: Jonathan Levine in Talks to Direct Tom Cruise in Paramount’s Racing Sequel (Exclusive)",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
-      "eventType": "announcement",
+      "eventType": "casting",
       "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "love-actually-in-concert-2026-tour",
-      "primaryKeyword": "Love Actually in Concert tour",
-      "primaryEntity": "Love Actually",
+      "eventSlug": "days-of-thunder-2-jonathan-levine-tom-cruise",
+      "primaryKeyword": "days of thunder 2",
+      "primaryEntity": "Days of Thunder 2",
       "entities": [
-        "Love Actually in Concert"
+        "Jonathan Levine",
+        "Tom Cruise",
+        "Paramount"
       ],
-      "angle": "The beloved rom-com 'Love Actually' is expanding its 'in Concert' tour to over 30 cities in 2026, bringing a live orchestra to accompany screenings.",
+      "angle": "Jonathan Levine is in talks to direct Tom Cruise in the sequel to the 1990 racing film.",
       "tmdbType": "movie",
-      "source": "rss:Billboard",
+      "source": "gnews:The Hollywood Reporter",
       "sources": [
         {
-          "outlet": "Billboard",
+          "outlet": "THR",
           "tier": 7,
-          "url": "https://www.billboard.com/music/music-news/love-actually-in-concert-tour-2026-full-schedule-1236300953/",
-          "ageMin": 24,
-          "headline": "Love Actually in Concert’ 2026 Tour to Visit More Than 30 Cities: Full Schedule",
-          "summary": "It's the romcom you know and (probably) love, this time accompanied by a live orchestra."
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/jonathan-levine-direct-days-of-thunder-2-tom-cruise-1236653926/",
+          "ageMin": 326,
+          "headline": "Days of Thunder 2 : Jonathan Levine in Talks to Direct Tom Cruise in Paramount s Racing Sequel (Exclusive)",
+          "summary": "Vroom vroom."
+        },
+        {
+          "outlet": "The Hollywood Reporter",
+          "tier": 7,
+          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPRnFDMG1vdXIwNnJCX3p0WUJCM1A0NFNXRnRUY3EtWWN0Yi1mZDJ2djl2YndleDZTZ19hM2dKamJHVENRdzhxUVotUVRUU1JJUGxENzZNT0VONVZQYnNvS2R3TmhmcmJHaVlyRjZhRV9oVTZtNngyeUZOamNSZi14Y3pjMlZrMExRVVIta2w4UllsRy1jeXJtQnk5SGV5WklqNExyOHJDLWRGSFJjM3ZWbjUwWFNUUQ?oc=5",
+          "ageMin": 325,
+          "headline": "‘Days of Thunder 2’: Jonathan Levine in Talks to Direct Tom Cruise in Paramount’s Racing Sequel (Exclusive) - The Hollywood Reporter",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxPRnFDMG1vdXIwNnJCX3p0WUJCM1A0NFNXRnRUY3EtWWN0Yi1mZDJ2djl2YndleDZTZ19hM2dKamJHVENRdzhxUVotUVRUU1JJUGxENzZNT0VONVZQYnNvS2R3TmhmcmJHaVlyRjZhRV9oVTZtNngyeUZOamNSZi14Y3pjMlZrMExRVVIta2w4UllsRy1jeXJtQnk5SGV5WklqNExyOHJDLWRGSFJjM3ZWbjUwWFNUUQ?oc=5"
         }
       ],
-      "ageMin": 24,
+      "ageMin": 325,
       "_cand": {
-        "key": "rss:love-actually-in-concert-2026-tour-to-visit-more-than-30-cit",
+        "key": "rss:-days-of-thunder-2-jonathan-levine-in-talks-to-direct-tom-cr",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 2,
+      "verification": {
+        "tier1Count": 2,
+        "tier1Owners": 1,
+        "outletCount": 2,
+        "outlets": [
+          "THR",
+          "The Hollywood Reporter"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 91,
+      "signals": {
+        "recency": 9,
+        "corroboration": 18,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 8,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-hello-sunshine-10-years-reese-witherspoon-big-little-lies-season-3-ell",
+      "slug": "hello-sunshine-s-head-of-tv-and-film-on-10-years-of-reese-witherspoon-",
+      "title": "Hello Sunshine's Head of TV and Film on 10 Years of Reese Witherspoon's Production Company, 'Big Little Lies' Season 3, and Apple's 'Elle'",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "hello-sunshine-10-years-reese-witherspoon-big-little-lies-season-3-ell",
+      "primaryKeyword": "hello sunshine",
+      "primaryEntity": "Hello Sunshine",
+      "entities": [
+        "Reese Witherspoon",
+        "Big Little Lies Season 3",
+        "Elle"
+      ],
+      "angle": "Hello Sunshine's Head of TV and Film discusses the company's 10-year anniversary, 'Big Little Lies' Season 3, and the upcoming series 'Elle'.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/tv/news/big-little-lies-season-3-lucky-elle-hello-sunshine-1236818329/",
+          "ageMin": 12,
+          "headline": "Hello Sunshine s Head of TV and Film on 10 Years of Reese Witherspoon s Production Company, Big Little Lies Season 3, Apple s Lucky and More Elle",
+          "summary": "Lauren Neustadter and Reese Witherspoon are having a big summer, with back-to-back high-profile releases: July s debuts of Legally Blonde prequel series Elle on Amazon s Prime Video and the Anya Taylor-Joy-led action miniseries Lucky at Apple TV. Premiering just two weeks apart, both shows are produced by Witherspoon s media company, Hello Sunshine, which is coming up [ ]"
+        }
+      ],
+      "ageMin": 12,
+      "_cand": {
+        "key": "rss:hello-sunshine-s-head-of-tv-and-film-on-10-years-of-reese-wi",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -45,84 +122,7 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Billboard"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Billboard",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 87,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-benicio-del-toro-ben-stiller-protective-custody-casting",
-      "slug": "benicio-del-toro-joins-ben-stiller-in-apple-tv-comedy-protective-custo",
-      "title": "Benicio Del Toro Joins Ben Stiller in Apple TV Comedy Protective Custody",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "benicio-del-toro-ben-stiller-protective-custody-casting",
-      "primaryKeyword": "protective custody apple tv",
-      "primaryEntity": "Protective Custody (TV series)",
-      "entities": [
-        "Benicio del Toro",
-        "Benicio Del Toro",
-        "Ben Stiller",
-        "Apple TV+"
-      ],
-      "angle": "Benicio Del Toro joins Ben Stiller in Apple TV+ comedy series 'Protective Custody'.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/tv/news/benicio-del-toro-ben-stiller-apple-protective-custody-1236818184/",
-          "ageMin": 241,
-          "headline": "Benicio Del Toro Joins Ben Stiller in Apple TV Comedy Protective Custody",
-          "summary": "Benicio Del Toro is set for a lead role opposite Ben Stiller in the upcoming Apple TV comedy series Protective Custody, Variety has learned. The show was originally announced in May with Stiller attached to star and executive produce. It marks the first lead series comedy role of Del Toro s career as well as a [ ]"
-        },
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/tv/tv-news/benicio-del-toro-first-comedy-series-starring-role-apple-tv-1236653968/",
-          "ageMin": 241,
-          "headline": "Benicio Del Toro to Star in Ben Stiller-Mike Judge Comedy Series Protective Custody at Apple TV",
-          "summary": "Stiller will star in and executive produce the show, which also hails from Steve Hely and Dave King."
-        }
-      ],
-      "ageMin": 241,
-      "_cand": {
-        "key": "rss:benicio-del-toro-joins-ben-stiller-in-apple-tv-comedy-protec",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 2,
-      "verification": {
-        "tier1Count": 2,
-        "tier1Owners": 1,
-        "outletCount": 2,
-        "outlets": [
-          "Variety",
-          "THR"
+          "Variety"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
@@ -131,16 +131,16 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 85,
+      "priority": 87,
       "signals": {
-        "recency": 9,
-        "corroboration": 18,
+        "recency": 30,
+        "corroboration": 12,
         "status": 18,
-        "type": 14,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
         "big": 18,
-        "trending": 8,
+        "trending": 0,
         "spice": 0,
         "softTv": 0
       },
@@ -148,8 +148,8 @@
     },
     {
       "id": "news-ridley-scott-hugh-jackman-treasure-island-sony",
-      "slug": "ridley-scott-hugh-jackman-s-treasure-island-package-sailing-to-sony",
-      "title": "Ridley Scott, Hugh Jackman's 'Treasure Island' Package Sailing to Sony",
+      "slug": "ridley-scott-hugh-jackman-s-treasure-island-setting-sail-to-sony",
+      "title": "Ridley Scott, Hugh Jackman's Treasure Island Setting Sail to Sony",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
@@ -160,11 +160,12 @@
       "primaryKeyword": "Treasure Island",
       "primaryEntity": "Treasure Island",
       "entities": [
+        "Treasure Island (film)",
         "Ridley Scott",
         "Hugh Jackman",
         "Sony Pictures"
       ],
-      "angle": "Sony Pictures in talks to acquire a new 'Treasure Island' project from Ridley Scott and Hugh Jackman.",
+      "angle": "Ridley Scott and Hugh Jackman are attached to a new 'Treasure Island' film package being acquired by Sony.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
@@ -172,12 +173,12 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/movies/movie-news/ridley-scott-hugh-jackman-treasure-island-sony-1236654295/",
-          "ageMin": 76,
+          "ageMin": 135,
           "headline": "Ridley Scott, Hugh Jackman s Treasure Island Setting Sail to Sony",
           "summary": "The studio is in talks to acquire the package."
         }
       ],
-      "ageMin": 76,
+      "ageMin": 135,
       "_cand": {
         "key": "rss:ridley-scott-hugh-jackman-s-treasure-island-setting-sail-to-",
         "popularity": 0,
@@ -214,38 +215,38 @@
       "tierClass": "B"
     },
     {
-      "id": "news-pompeii-out-of-time-tom-hiddleston-doc",
-      "slug": "pompeii-out-of-time-with-tom-hiddleston-a-rare-doc-that-could-attract-",
-      "title": "'Pompeii: Out of Time' with Tom Hiddleston: A Rare Doc That Could Attract a Young Audience",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
+      "id": "music-news-reba-mcentire-50-years-music-happy-s-place",
+      "slug": "listen-reba-mcentire-revels-in-50-years-of-making-music-and-season-3-o",
+      "title": "LISTEN: Reba McEntire Revels in 50 Years of Making Music and Season 3 of NBC’s Happy’s Place",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
       "subcategory": "news",
-      "eventType": "announcement",
+      "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "pompeii-out-of-time-tom-hiddleston-doc",
-      "primaryKeyword": "Pompeii Out of Time Tom Hiddleston",
-      "primaryEntity": "Pompeii: Out of Time",
+      "tier": "popular",
+      "eventSlug": "reba-mcentire-50-years-music-happy-s-place",
+      "primaryKeyword": "reba mcentire",
+      "primaryEntity": "Reba McEntire",
       "entities": [
-        "Tom Hiddleston",
-        "Kevin R. Wright"
+        "Happy's Place"
       ],
-      "angle": "Tom Hiddleston stars in and executive produced 'Pompeii: Out of Time,' a documentary aiming to attract a younger audience.",
+      "angle": "Country music icon Reba McEntire reflects on her 50-year career and her new NBC show 'Happy's Place'.",
       "tmdbType": "movie",
       "source": "rss:Variety",
       "sources": [
         {
           "outlet": "Variety",
           "tier": 7,
-          "url": "https://variety.com/2026/tv/news/pompeii-out-of-time-tom-hiddleston-disney-plus-1236818449/",
-          "ageMin": 52,
-          "headline": "Pompeii: Out of Time with Tom Hiddleston : A Rare Doc That Could Actually Attract a Young Audience",
-          "summary": "In 2024, Loki star Tom Hiddleston reunited with the film s executive producer Kevin R. Wright to create a documentary that wasn t about a salacious murder, a cult or Hiddleston’s acting career. Instead, the duo set out to make a doc about Pompeii and the attempts of three real Romans to survive the ancient city’s final [ ]"
+          "url": "https://variety.com/2026/music/news/reba-mcentire-50-years-music-happys-place-daily-variety-1236818516/",
+          "ageMin": 53,
+          "headline": "LISTEN: Reba McEntire Revels in 50 Years of Making Music and Season 3 of NBC s Happy’s Place",
+          "summary": "On today s episode of Daily Variety podcast, country music superstar Reba McEntire discusses celebrating her golden anniversary in music this year with a series of EP releases that pair a newly recorded song with several vintage tunes. McEntire also weighs in on how she’s navigated a turbulent TV marketplace to get her NBC comedy “Happy’s [ ]"
         }
       ],
-      "ageMin": 52,
+      "ageMin": 53,
       "_cand": {
-        "key": "rss:pompeii-out-of-time-with-tom-hiddleston-a-rare-doc-that-coul",
+        "key": "rss:listen-reba-mcentire-revels-in-50-years-of-making-music-and-",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -260,474 +261,6 @@
         "maxTier": 7,
         "sensitivity": "normal",
         "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 81,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-naruto-movie-director-promises-fidelity",
-      "slug": "naruto-movie-director-promises-to-stay-very-close-to-original",
-      "title": "Naruto Movie Director Promises to Stay 'Very Close' to Original",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "naruto-movie-director-promises-fidelity",
-      "primaryKeyword": "naruto movie",
-      "primaryEntity": "Naruto the Movie: Ninja Clash in the Land of Snow",
-      "entities": [
-        "Naruto",
-        "Destin Daniel Cretton"
-      ],
-      "angle": "Director Destin Daniel Cretton assures that the upcoming 'Naruto' movie will remain faithful to the original source material.",
-      "tmdbType": "movie",
-      "source": "gnews:Inverse",
-      "sources": [
-        {
-          "outlet": "Inverse",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPRmhpNWFPZng5TDBQdEFKcURkdzkzVTJWOU0zUENVXzc3RGlJR1l4eTJ5ZG9SU2dTd1hHcklqcUNONTFVSkJualdxNzlaRm9sTlpSY3ptSV9OcGV5blhXM2ZWdndRT0dUc0U3cEpxV1lpdDNBd2RmbHI0TklETE5rWkpiSzRmUWhWRnc?oc=5",
-          "ageMin": 31,
-          "headline": "The Naruto Movie Will Stay \"Very Close\" To The Original, Director Destin Daniel Cretton Promises - Inverse",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiigFBVV95cUxPRmhpNWFPZng5TDBQdEFKcURkdzkzVTJWOU0zUENVXzc3RGlJR1l4eTJ5ZG9SU2dTd1hHcklqcUNONTFVSkJualdxNzlaRm9sTlpSY3ptSV9OcGV5blhXM2ZWdndRT0dUc0U3cEpxV1lpdDNBd2RmbHI0TklETE5rWkpiSzRmUWhWRnc?oc=5\" target=\"_blank\" The Naruto Movie Will Stay \"Very Close\" T"
-        }
-      ],
-      "ageMin": 31,
-      "_cand": {
-        "key": "rss:the-naruto-movie-will-stay-very-close-to-the-original-direct",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "Inverse"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "Inverse",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 83,
-      "signals": {
-        "recency": 24,
-        "corroboration": 8,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-team-usa-hockey-celebrity-family-feud",
-      "slug": "team-usa-hockey-players-to-appear-on-celebrity-family-feud",
-      "title": "Team USA Hockey Players to Appear on 'Celebrity Family Feud'",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "team-usa-hockey-celebrity-family-feud",
-      "primaryKeyword": "celebrity family feud",
-      "primaryEntity": "Celebrity Family Feud",
-      "entities": [
-        "Team USA hockey"
-      ],
-      "angle": "Gold medal-winning Team USA hockey players will appear on an upcoming episode of 'Celebrity Family Feud'.",
-      "tmdbType": "movie",
-      "source": "gnews:Fox News",
-      "sources": [
-        {
-          "outlet": "Fox News",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQYTk4LVkweVpmcFRjd0lKVkItMUNxZmlmbmZZdTJtTk94TWU1SURXYkpNQTNkZ0VDSUl5anBDeGc2dVAyVEpPMHA5OERyeFJnaERGRjJXbXZDSmNUdmpjQ0tFcmVUX2t2WjAtcGNtczVscUw4NXdtdEZqaVJyTkNkRC1ZOW5BQ21KaUV0dEpZR2t6c2hDQW1CdHgwT2hqYnlJbU4zZUVWSWhaZUhZampFRVUwcy0?oc=5",
-          "ageMin": 47,
-          "headline": "Gold medal-winning Team USA hockey players will be making an appearance on 'Celebrity Family Feud' - Fox News",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxQYTk4LVkweVpmcFRjd0lKVkItMUNxZmlmbmZZdTJtTk94TWU1SURXYkpNQTNkZ0VDSUl5anBDeGc2dVAyVEpPMHA5OERyeFJnaERGRjJXbXZDSmNUdmpjQ0tFcmVUX2t2WjAtcGNtczVscUw4NXdtdEZqaVJyTkNkRC1ZOW5BQ21KaUV0dEpZR2t6c2hDQW1CdHgwT2hqYnlJbU4zZUVWSWhaZUhZampFRVUwcy0?oc=5\" t"
-        }
-      ],
-      "ageMin": 47,
-      "_cand": {
-        "key": "rss:gold-medal-winning-team-usa-hockey-players-will-be-making-an",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "Fox News"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "Fox News",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 81,
-      "signals": {
-        "recency": 24,
-        "corroboration": 8,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "spice": 4,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "music-news-aaron-dessner-gracie-abrams-death-wish-not-about-taylor-swift",
-      "slug": "aaron-dessner-sets-the-record-straight-on-gracie-abrams-death-wish-it-",
-      "title": "Aaron Dessner Sets the Record Straight on Gracie Abrams Death Wish : It s Definitely Not About Taylor Swift",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "high",
-      "tier": "popular",
-      "eventSlug": "aaron-dessner-gracie-abrams-death-wish-not-about-taylor-swift",
-      "primaryKeyword": "gracie abrams death wish",
-      "primaryEntity": "Gracie Abrams",
-      "entities": [
-        "Aaron Dessner",
-        "Noah Kahan",
-        "Taylor Swift"
-      ],
-      "angle": "Producer Aaron Dessner clarifies that Gracie Abrams' song 'Death Wish' is not about Taylor Swift.",
-      "tmdbType": "movie",
-      "source": "rss:Billboard",
-      "sources": [
-        {
-          "outlet": "Billboard",
-          "tier": 7,
-          "url": "https://www.billboard.com/music/music-news/aaron-dessner-gracie-abrams-death-wish-noah-kahan-interview-1236299956/",
-          "ageMin": 6,
-          "headline": "Aaron Dessner Sets the Record Straight on Gracie Abrams Death Wish : It s Definitely Not About Taylor Swift",
-          "summary": "The producer also shared how he ended up performing with Noah Kahan over the weekend."
-        }
-      ],
-      "ageMin": 6,
-      "_cand": {
-        "key": "rss:aaron-dessner-sets-the-record-straight-on-gracie-abrams-deat",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Billboard"
-        ],
-        "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "Billboard",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 65,
-      "signals": {
-        "recency": 30,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "S"
-    },
-    {
-      "id": "news-glen-powell-lou-gehrig-richard-linklater-baseball-movie",
-      "slug": "glen-powell-to-play-lou-gehrig-in-another-baseball-movie-from-director",
-      "title": "Glen Powell to Play Lou Gehrig in Another Baseball Movie from Director Richard Linklater",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "glen-powell-lou-gehrig-richard-linklater-baseball-movie",
-      "primaryKeyword": "glen powell lou gehrig",
-      "primaryEntity": "Lou Gehrig",
-      "entities": [
-        "Glen Powell",
-        "Richard Linklater"
-      ],
-      "angle": "Glen Powell to play Lou Gehrig in Richard Linklater's new baseball film.",
-      "tmdbType": "movie",
-      "source": "gnews:Just Jared",
-      "sources": [
-        {
-          "outlet": "Just Jared",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOcUZCTU9SalNwOERPZmN1VjNaT3pSUHFhUWFKSlpfMHdCb1BZOG40YTdkR3lMeG5VTVNxLWV5OUhyUVNlNnI3dnd5TU1JWEg2c3F6dDVjSHk2Mm5HYUw1UENkWGtoSm5vckQyMW1BSGlocUVxSDdueGkyT3ppdGp5c0hVMFhkSnVpQXFKaUZXa2lVb3ZSc0IwRTd2VnhUUEY1d0pSLXdTcERoYU94bUc0aVFhYnlrcEtQMzRKdGJjc3Nlb1ph?oc=5",
-          "ageMin": 65,
-          "headline": "Glen Powell to Play Lou Gehrig in Another Baseball Movie from Director Richard Linklater - Just Jared",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMixAFBVV95cUxOcUZCTU9SalNwOERPZmN1VjNaT3pSUHFhUWFKSlpfMHdCb1BZOG40YTdkR3lMeG5VTVNxLWV5OUhyUVNlNnI3dnd5TU1JWEg2c3F6dDVjSHk2Mm5HYUw1UENkWGtoSm5vckQyMW1BSGlocUVxSDdueGkyT3ppdGp5c0hVMFhkSnVpQXFKaUZXa2lVb3ZSc0IwRTd2VnhUUEY1d0pSLXdTcERoYU94bUc0aVFhYnlrcEtQMzR"
-        }
-      ],
-      "ageMin": 65,
-      "_cand": {
-        "key": "rss:glen-powell-to-play-lou-gehrig-in-another-baseball-movie-fro",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "Just Jared"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "Just Jared",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 80,
-      "signals": {
-        "recency": 16,
-        "corroboration": 8,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-loki-producer-tom-hiddleston-avengers",
-      "slug": "loki-ep-kevin-r-wright-talks-pompeii-out-of-time-and-new-company-with-",
-      "title": "Loki EP Kevin R. Wright Talks Pompeii: Out of Time and New Company with Tom Hiddleston",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "loki-producer-tom-hiddleston-avengers",
-      "primaryKeyword": "Loki producer Tom Hiddleston",
-      "primaryEntity": "Loki (TV series)",
-      "entities": [
-        "Tom Hiddleston",
-        "Kevin R. Wright",
-        "Avengers: Doomsday"
-      ],
-      "angle": "Loki EP Kevin R. Wright discusses a new project with Tom Hiddleston and Hiddleston's thoughts on joining 'Avengers: Doomsday'.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/tv/tv-features/loki-ep-kevin-r-wright-talks-pompeii-out-of-time-1236654094/",
-          "ageMin": 135,
-          "headline": "Loki EP Kevin R. Wright Talks Pompeii: Out of Time and New Company with Tom Hiddleston",
-          "summary": "Hiddleston also explains why he felt comfortable joining 'Avengers: Doomsday' despite 'Loki' seemingly completing the character's arc."
-        }
-      ],
-      "ageMin": 135,
-      "_cand": {
-        "key": "rss:loki-ep-kevin-r-wright-talks-pompeii-out-of-time-and-new-com",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 77,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 6,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0,
-        "radar": 20
-      },
-      "radarKind": "movie-trending",
-      "tierClass": "A"
-    },
-    {
-      "id": "news-days-of-thunder-2-jonathan-levine-tom-cruise",
-      "slug": "days-of-thunder-2-jonathan-levine-in-talks-to-direct-tom-cruise-in-par",
-      "title": "Days of Thunder 2 : Jonathan Levine in Talks to Direct Tom Cruise in Paramount Sequel",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "days-of-thunder-2-jonathan-levine-tom-cruise",
-      "primaryKeyword": "days of thunder 2",
-      "primaryEntity": "Days of Thunder 2 (film)",
-      "entities": [
-        "Jonathan Levine",
-        "Tom Cruise",
-        "Paramount Pictures"
-      ],
-      "angle": "Jonathan Levine in talks to direct Tom Cruise in Paramount's 'Days of Thunder' sequel.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/film/news/days-of-thunder-2-jonathan-levine-tom-cruise-paramount-sequel-1236818265/",
-          "ageMin": 242,
-          "headline": "Days of Thunder 2 : Jonathan Levine in Talks to Direct Tom Cruise in Paramount Sequel",
-          "summary": "Paramount s Days of Thunder sequel is shaping up with Jonathan Levine ( 50/50, Warm Bodies ) in negotiations to direct returning star Tom Cruise. Cruise will also produce the film alongside Jerry Bruckheimer, who produced the original 1990 racing drama. Will Staples wrote the script for the sequel. Days of Thunder was directed by the late Tony [ ]"
-        }
-      ],
-      "ageMin": 242,
-      "_cand": {
-        "key": "rss:days-of-thunder-2-jonathan-levine-in-talks-to-direct-tom-cru",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 77,
-      "signals": {
-        "recency": 9,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "music-news-shakira-burna-boy-dai-dai-streaming-heights",
-      "slug": "shakira-burna-boy-s-dai-dai-reaches-new-streaming-heights-after-world-",
-      "title": "Shakira & Burna Boy's 'Dai Dai' Reaches New Streaming Heights After World Cup Halftime Show",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "shakira-burna-boy-dai-dai-streaming-heights",
-      "primaryKeyword": "Shakira Burna Boy Dai Dai",
-      "primaryEntity": "Shakira",
-      "entities": [
-        "Burna Boy"
-      ],
-      "angle": "Shakira and Burna Boy's track 'Dai Dai' is experiencing a surge in streaming numbers following its inclusion in World Cup-related events.",
-      "tmdbType": "movie",
-      "source": "rss:Billboard",
-      "sources": [
-        {
-          "outlet": "Billboard",
-          "tier": 7,
-          "url": "https://www.billboard.com/music/chart-beat/shakira-burna-boy-dai-dai-streaming-high-trending-up-1236300929/",
-          "ageMin": 38,
-          "headline": "Shakira Burna Boy s Dai Dai Reaches New Streaming Heights Following World Cup Halftime Show",
-          "summary": "This week's Trending Up looks for one final time at World Cup-related gains for 2026, as well as at a couple new hit singles that went viral pre-release."
-        }
-      ],
-      "ageMin": 38,
-      "_cand": {
-        "key": "rss:shakira-burna-boy-s-dai-dai-reaches-new-streaming-heights-fo",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "breakoutVelocity": 0,
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Billboard"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Billboard",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -748,535 +281,6 @@
       "tierClass": "C"
     },
     {
-      "id": "news-gone-britbox-series-launch",
-      "slug": "engrossing-british-crime-drama-gone-takes-the-ol-stiff-upper-lip-to-ne",
-      "title": "Engrossing British Crime Drama Gone Takes the Ol Stiff Upper Lip to New Heights",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "gone-britbox-series-launch",
-      "primaryKeyword": "gone britbox series",
-      "primaryEntity": "Gone",
-      "entities": [
-        "Gone (TV series)",
-        "BritBox"
-      ],
-      "angle": "New British crime drama 'Gone' launches on BritBox, exploring themes of control and trauma.",
-      "tmdbType": "movie",
-      "source": "rss:IndieWire",
-      "sources": [
-        {
-          "outlet": "IndieWire",
-          "tier": 7,
-          "url": "https://www.indiewire.com/features/commentary/british-crime-drama-gone-britbox-1235205494/",
-          "ageMin": 121,
-          "headline": "Engrossing British Crime Drama Gone Takes the Ol Stiff Upper Lip to New Heights",
-          "summary": "The new BritBox series spends six episodes continually shifting the finger of suspicion, patiently and methodically exploring themes of control, trauma, and grief. And if a character doesn't sob through it all? Even better."
-        }
-      ],
-      "ageMin": 121,
-      "_cand": {
-        "key": "rss:engrossing-british-crime-drama-gone-takes-the-ol-stiff-upper",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "IndieWire"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "IndieWire",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 73,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-days-of-thunder-2-jonathan-levine-directs-tom-cruise",
-      "slug": "jonathan-levine-in-talks-to-direct-tom-cruise-in-paramount-s-days-of-t",
-      "title": "Jonathan Levine in Talks to Direct Tom Cruise in Paramount’s ‘Days of Thunder 2’",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "days-of-thunder-2-jonathan-levine-directs-tom-cruise",
-      "primaryKeyword": "days of thunder 2",
-      "primaryEntity": "Days of Thunder 2",
-      "entities": [
-        "Jonathan Levine",
-        "Tom Cruise",
-        "Paramount Pictures"
-      ],
-      "angle": "Jonathan Levine is in talks to direct Tom Cruise in the long-awaited sequel 'Days of Thunder 2' for Paramount.",
-      "tmdbType": "movie",
-      "source": "gnews:The Hollywood Reporter",
-      "sources": [
-        {
-          "outlet": "The Hollywood Reporter",
-          "tier": 7,
-          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPRnFDMG1vdXIwNnJCX3p0WUJCM1A0NFNXRnRUY3EtWWN0Yi1mZDJ2djl2YndleDZTZ19hM2dKamJHVENRdzhxUVotUVRUU1JJUGxENzZNT0VONVZQYnNvS2R3TmhmcmJHaVlyRjZhRV9oVTZtNngyeUZOamNSZi14Y3pjMlZrMExRVVIta2w4UllsRy1jeXJtQnk5SGV5WklqNExyOHJDLWRGSFJjM3ZWbjUwWFNUUQ?oc=5",
-          "ageMin": 266,
-          "headline": "‘Days of Thunder 2’: Jonathan Levine in Talks to Direct Tom Cruise in Paramount’s Racing Sequel (Exclusive) - The Hollywood Reporter",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxPRnFDMG1vdXIwNnJCX3p0WUJCM1A0NFNXRnRUY3EtWWN0Yi1mZDJ2djl2YndleDZTZ19hM2dKamJHVENRdzhxUVotUVRUU1JJUGxENzZNT0VONVZQYnNvS2R3TmhmcmJHaVlyRjZhRV9oVTZtNngyeUZOamNSZi14Y3pjMlZrMExRVVIta2w4UllsRy1jeXJtQnk5SGV5WklqNExyOHJDLWRGSFJjM3ZWbjUwWFNUUQ?oc=5"
-        }
-      ],
-      "ageMin": 266,
-      "_cand": {
-        "key": "rss:-days-of-thunder-2-jonathan-levine-in-talks-to-direct-tom-cr",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "The Hollywood Reporter"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "The Hollywood Reporter",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 77,
-      "signals": {
-        "recency": 9,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "music-news-tinashe-announces-album-popstar-releases-single-crash-out",
-      "slug": "tinashe-announces-upcoming-album-popstar-releases-new-single-crash-out",
-      "title": "Tinashe Announces Upcoming Album “Popstar” + Releases New Single “Crash Out”",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "tinashe-announces-album-popstar-releases-single-crash-out",
-      "primaryKeyword": "tinashe new album",
-      "primaryEntity": "Tinashe",
-      "entities": [
-        "Popstar",
-        "Popstar (album)",
-        "Crash Out (single)"
-      ],
-      "angle": "Tinashe has announced her upcoming album 'Popstar' and released a new single 'Crash Out'.",
-      "tmdbType": "movie",
-      "source": "gnews:YouKnowIGotSoul.com",
-      "sources": [
-        {
-          "outlet": "YouKnowIGotSoul.com",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNbnlxcXJENW1wYWxaMVhXcFFWbUYzVFNZS05wY2xYRVNOVGtDRU5PMEk4ZUlCRURtbUw2LVU2WDdEWllWUGJXZkhYUlRaRFdfcm9heXNDU0FOaGZFV3pfbGdIejN5dDVKRHUyekNtaUhQMS1UZHVJNjZDZGZpUEdnSEFpOG02VEZXZW9kd1JuaFlYTE14Z3VmTFp6cjhQa1U?oc=5",
-          "ageMin": 111,
-          "headline": "Tinashe Announces Upcoming Album “Popstar” + Releases New Single “Crash Out” - YouKnowIGotSoul.com",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMinwFBVV95cUxNbnlxcXJENW1wYWxaMVhXcFFWbUYzVFNZS05wY2xYRVNOVGtDRU5PMEk4ZUlCRURtbUw2LVU2WDdEWllWUGJXZkhYUlRaRFdfcm9heXNDU0FOaGZFV3pfbGdIejN5dDVKRHUyekNtaUhQMS1UZHVJNjZDZGZpUEdnSEFpOG02VEZXZW9kd1JuaFlYTE14Z3VmTFp6cjhQa1U?oc=5\" target=\"_blank\" Tinashe Annou"
-        }
-      ],
-      "ageMin": 111,
-      "_cand": {
-        "key": "rss:tinashe-announces-upcoming-album-popstar-releases-new-single",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "YouKnowIGotSoul.com"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "YouKnowIGotSoul.com",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 51,
-      "signals": {
-        "recency": 16,
-        "corroboration": 8,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-ali-g-who-iz-i-film-announcement",
-      "slug": "sacha-baron-cohen-s-ali-g-who-iz-i-sets-october-release-from-amazon-mg",
-      "title": "Sacha Baron Cohen's Ali G: Who Iz I? Sets October Release From Amazon MGM",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "ali-g-who-iz-i-film-announcement",
-      "primaryKeyword": "ali g movie",
-      "primaryEntity": "Ali G: Who Iz I? (film)",
-      "entities": [
-        "Sacha Baron Cohen",
-        "Amazon MGM Studios"
-      ],
-      "angle": "Sacha Baron Cohen is reviving his iconic Ali G character for a new feature film.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/film/news/sacha-baron-cohen-ali-g-movie-release-date-1236818332/",
-          "ageMin": 205,
-          "headline": "Sacha Baron Cohen s Ali G: Who Iz I? Sets October Release From Amazon MGM",
-          "summary": "Sacha Baron Cohen s secret Ali G movie, titled Ali G: Who Iz I? , has been officially unveiled by the comedian and Amazon MGM Studios. It will release in theaters Oct. 23. Cohen directed the movie, marking his feature directorial debut. Cohen posted a video in on his Instagram, fully in character as Ali G, announcing [ ]"
-        }
-      ],
-      "ageMin": 205,
-      "_cand": {
-        "key": "rss:sacha-baron-cohen-s-ali-g-who-iz-i-sets-october-release-from",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 72,
-      "signals": {
-        "recency": 9,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-chuck-lorre-paramount-warner-bros-merger-joke",
-      "slug": "chuck-lorre-jokes-about-paramount-warner-bros-merger-at-stuart-fails-t",
-      "title": "Chuck Lorre Jokes About Paramount-Warner Bros. Merger at 'Stuart Fails to Save the Universe' Premiere",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "chuck-lorre-paramount-warner-bros-merger-joke",
-      "primaryKeyword": "chuck lorre",
-      "primaryEntity": "Chuck Lorre",
-      "entities": [
-        "Stuart Fails to Save the Universe"
-      ],
-      "angle": "Veteran sitcom creator Chuck Lorre humorously references the Paramount-Warner Bros. merger during a premiere event for his new show.",
-      "tmdbType": "movie",
-      "source": "rss:TheWrap",
-      "sources": [
-        {
-          "outlet": "TheWrap",
-          "tier": 7,
-          "url": "https://www.thewrap.com/creative-content/tv-shows/chuck-lorre-the-big-bang-theory-spinoff-stuart-premiere/",
-          "ageMin": 51,
-          "headline": "Chuck Lorre Pokes Fun at Paramount-Warner Bros. Merger at Big Bang Spinoff Premiere",
-          "summary": "\"We are so grateful that we got to stay in Los Angeles and make the show here,\" the legendary sitcom creator adds of \"Stuart Fails to Save the Universe\" The post Chuck Lorre Pokes Fun at Paramount-Warner Bros. Merger at Big Bang Spinoff Premiere appeared first on TheWrap ."
-        }
-      ],
-      "ageMin": 51,
-      "_cand": {
-        "key": "rss:chuck-lorre-pokes-fun-at-paramount-warner-bros-merger-at-big",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "TheWrap"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "TheWrap",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 65,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 6,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-glen-powell-richard-linklater-lou-gehrig-biopic",
-      "slug": "glen-powell-richard-linklater-teaming-up-for-lou-gehrig-biopic-lorne-m",
-      "title": "Glen Powell, Richard Linklater Teaming Up for Lou Gehrig Biopic, Lorne Michaels Producing",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "glen-powell-richard-linklater-lou-gehrig-biopic",
-      "primaryKeyword": "lou gehrig biopic",
-      "primaryEntity": "Lou Gehrig",
-      "entities": [
-        "Glen Powell",
-        "Richard Linklater",
-        "Lorne Michaels"
-      ],
-      "angle": "Glen Powell and Richard Linklater are teaming up to make a Lou Gehrig biopic.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/film/news/glen-powell-richard-linklater-lou-gehrig-biopic-lorne-michaels-1236818235/",
-          "ageMin": 258,
-          "headline": "Glen Powell, Richard Linklater Teaming Up for Lou Gehrig Biopic, Lorne Michaels Producing",
-          "summary": "Richard Linklater and Glen Powell are re-teaming to take on the Pride of the Yankees. The pair, who previously collaborated on Hit Man and Everybody Wants Some, will join forces on an untitled Lou Gehrig film for Universal Pictures. Gehrig is a Hall of Famer whose durability and endurance on the field (he played for a then-record 2,130 consecutive [ ]"
-        }
-      ],
-      "ageMin": 258,
-      "_cand": {
-        "key": "rss:glen-powell-richard-linklater-teaming-up-for-lou-gehrig-biop",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 72,
-      "signals": {
-        "recency": 9,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-the-chosen-bear-grylls-crossover",
-      "slug": "watch-jesus-rappel-down-a-cliff-in-the-tv-crossover-event-of-the-summe",
-      "title": "Watch Jesus Rappel Down a Cliff in the TV Crossover Event of the Summer: The Chosen x Bear Grylls",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "the-chosen-bear-grylls-crossover",
-      "primaryKeyword": "The Chosen Bear Grylls crossover",
-      "primaryEntity": "The Chosen",
-      "entities": [
-        "Bear Grylls"
-      ],
-      "angle": "A crossover event between 'The Chosen' and 'Running Wild with Bear Grylls' is set to air.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/tv/tv-news/the-chosen-in-the-wild-with-bear-grylls-trailer-jesus-rappels-1236654136/",
-          "ageMin": 147,
-          "headline": "Watch Jesus Rappel Down a Cliff in the TV Crossover Event of the Summer: The Chosen x Bear Grylls",
-          "summary": "No word yet on how he traverses the Colorado River."
-        }
-      ],
-      "ageMin": 147,
-      "_cand": {
-        "key": "rss:watch-jesus-rappel-down-a-cliff-in-the-tv-crossover-event-of",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 57,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 6,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-george-lucas-museum-opening",
-      "slug": "star-wars-creator-s-new-l-a-museum-draws-long-lines-for-tickets",
-      "title": "Star Wars Creator's New L.A. Museum Draws Long Lines for Tickets",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "george-lucas-museum-opening",
-      "primaryKeyword": "George Lucas Museum",
-      "primaryEntity": "George Lucas Museum",
-      "entities": [
-        "George Lucas"
-      ],
-      "angle": "New museum dedicated to Star Wars creator George Lucas experiences high demand for tickets.",
-      "tmdbType": "movie",
-      "source": "gnews:KTLA",
-      "sources": [
-        {
-          "outlet": "KTLA",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOdVdZWjVIX1ZIMk10eGQ1dmZtX3R2cFo4Q2lrTUtkZWFvcEVMRmQyaUxLT21YOWcyN1F3cXktdDQxUlQ4anlYbVBhVkFLVk1fVnJKQkxnaDM1ZWZ0V2xiS2ZXQnRKVGdPaUFDc2c3SDE3MGVYbENDWkpMZHlvemhJaGo1T2R0VlFaOW5GYmxjcHFjRzhjR3ZTdUF5NExid9IBowFBVV95cUxOekk2bW53SlZTMGx0VEVkaXM0bkZ1YW83Mi1LMkF2Mm13SG5VS21uYWpnLUlIamUyZmd3OWEtbGYtTDRHX3BDak8xX0tMNW5HdXRDTHFWZGIybHMzeV84alRHYWVBVWxJTzRlVWlTc3NYUnFXdHMwVHdQZFBxTTByb2RMb0hWM2hRRjFUemZkejByWHlqYXFxOENwRkFNbWdlZlFZ?oc=5",
-          "ageMin": 279,
-          "headline": "Star Wars creator’s new L.A. museum sparks hourslong ticket waits - KTLA",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxOdVdZWjVIX1ZIMk10eGQ1dmZtX3R2cFo4Q2lrTUtkZWFvcEVMRmQyaUxLT21YOWcyN1F3cXktdDQxUlQ4anlYbVBhVkFLVk1fVnJKQkxnaDM1ZWZ0V2xiS2ZXQnRKVGdPaUFDc2c3SDE3MGVYbENDWkpMZHlvemhJaGo1T2R0VlFaOW5GYmxjcHFjRzhjR3ZTdUF5NExid9IBowFBVV95cUxOekk2bW53SlZTMGx0VEVkaXM"
-        }
-      ],
-      "ageMin": 279,
-      "_cand": {
-        "key": "rss:star-wars-creator-s-new-l-a-museum-sparks-hourslong-ticket-w",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "KTLA"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "KTLA",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 68,
-      "signals": {
-        "recency": 9,
-        "corroboration": 8,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
       "id": "news-snoop-dogg-biopic-summer-2027-release",
       "slug": "snoop-dogg-biopic-lands-summer-2027-release-from-universal",
       "title": "Snoop Dogg Biopic Lands Summer 2027 Release From Universal",
@@ -1284,19 +288,17 @@
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
-      "eventType": "announcement",
+      "eventType": "casting",
       "sensitivity": "normal",
-      "tier": "popular",
       "eventSlug": "snoop-dogg-biopic-summer-2027-release",
-      "primaryKeyword": "snoop dogg biopic",
-      "primaryEntity": "Snoop Dogg's Hood of Horror",
+      "primaryKeyword": "Snoop Dogg biopic",
+      "primaryEntity": "Snoop Dogg Biopic",
       "entities": [
-        "Snoop Dogg",
         "Jonathan Daviss",
         "Craig Brewer",
         "Universal"
       ],
-      "angle": "Universal sets summer 2027 release for Snoop Dogg biopic starring Jonathan Daviss.",
+      "angle": "Universal sets a Summer 2027 release for the Snoop Dogg biopic starring Jonathan Daviss.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
@@ -1304,12 +306,12 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/movies/movie-news/snoop-dogg-biopic-lands-summer-2027-release-1236653520/",
-          "ageMin": 1411,
+          "ageMin": 1471,
           "headline": "Snoop Dogg Biopic Lands Summer 2027 Release From Universal",
           "summary": "Jonathan Daviss stars in Craig Brewer's feature that examines the life of the iconic rapper."
         }
       ],
-      "ageMin": 1411,
+      "ageMin": 1471,
       "_cand": {
         "key": "rss:snoop-dogg-biopic-lands-summer-2027-release-from-universal",
         "popularity": 0,
@@ -1330,9 +332,346 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 64,
+      "priority": 69,
       "signals": {
         "recency": 1,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-chuck-lorre-paramount-warner-bros-merger-joke",
+      "slug": "chuck-lorre-pokes-fun-at-paramount-warner-bros-merger-at-big-bang-spin",
+      "title": "Chuck Lorre Pokes Fun at Paramount-Warner Bros. Merger at Big Bang Spinoff Premiere",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "chuck-lorre-paramount-warner-bros-merger-joke",
+      "primaryKeyword": "chuck lorre paramount warner bros merger",
+      "primaryEntity": "Chuck Lorre",
+      "entities": [
+        "Paramount",
+        "Warner Bros.",
+        "Stuart Fails to Save the Universe"
+      ],
+      "angle": "Veteran sitcom creator Chuck Lorre made a joke about the Paramount-Warner Bros. merger at the premiere of his new show.",
+      "tmdbType": "movie",
+      "source": "rss:TheWrap",
+      "sources": [
+        {
+          "outlet": "TheWrap",
+          "tier": 7,
+          "url": "https://www.thewrap.com/creative-content/tv-shows/chuck-lorre-the-big-bang-theory-spinoff-stuart-premiere/",
+          "ageMin": 111,
+          "headline": "Chuck Lorre Pokes Fun at Paramount-Warner Bros. Merger at Big Bang Spinoff Premiere",
+          "summary": "\"We are so grateful that we got to stay in Los Angeles and make the show here,\" the legendary sitcom creator adds of \"Stuart Fails to Save the Universe\" The post Chuck Lorre Pokes Fun at Paramount-Warner Bros. Merger at Big Bang Spinoff Premiere appeared first on TheWrap ."
+        }
+      ],
+      "ageMin": 111,
+      "_cand": {
+        "key": "rss:chuck-lorre-pokes-fun-at-paramount-warner-bros-merger-at-big",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "TheWrap"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "TheWrap",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 57,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 6,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-sacha-baron-cohen-ali-g-movie",
+      "slug": "sacha-baron-cohen-secret-movie-unveiled-ali-g-who-iz-i-hitting-theater",
+      "title": "Sacha Baron Cohen Secret Movie Unveiled: ‘Ali G: Who Iz I?’ Hitting Theaters In October From Amazon MGM Studios",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "sacha-baron-cohen-ali-g-movie",
+      "primaryKeyword": "ali g movie",
+      "primaryEntity": "Ali G Indahouse",
+      "entities": [
+        "Ali G",
+        "Sacha Baron Cohen",
+        "Amazon MGM Studios"
+      ],
+      "angle": "Amazon MGM Studios announces a new Ali G movie set for theatrical release.",
+      "tmdbType": "movie",
+      "source": "gnews:ABC7 New York",
+      "sources": [
+        {
+          "outlet": "ABC7 New York",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxON0l6M0liOHB1NUEtWEdKQmY4am11VTRPd1dPNm9JTTNOdzk2anJHZ3FrNVJxVnV4V010cVFjeHQ5MFM5RFlzNHQ3eGxwLWwweHpEcW5TeUNEMGhvb2NqYy0xMURnV3phTHRHdTB0NDJsNjhHSTFYTUFtRmlhb1NKV0NCT3BJVGtHdjlDOVFBQVFZakwxVTVLUFBQVWZuOXpIanBQbHhJMk41WGZ0cDJaUlJLcVRqR3FiRENsN9IBwgFBVV95cUxQZ1hTdC1pTFRvVC0wN1RqdkVpRHo5d3hOSFREd1BuYVh1bHNOV1VscVd2d0RWZ3U0UURiZkE3cmVHRHJ4cFZ1NjUtWGVJN1ZKVUJIeXlTbHBSbG1DNHQ2TVdlVDZjb1pab3BqR1pXeTBfV0ZwUHhtbkxCVTJKbzZ5enppUWdTX3liSmdkNGJxYmNBZHNzeWE3Um5wc3otRklVNUxfV3RSREExbDJKalRmWlc4eG1WakZGZ1JPRmp4N2tmZw?oc=5",
+          "ageMin": 266,
+          "headline": "D4vd murder case: Prosecutor focuses on who knew about singer's relationship with Celeste Rivas Hernandez before her killing - ABC7 New York",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMivAFBVV95cUxON0l6M0liOHB1NUEtWEdKQmY4am11VTRPd1dPNm9JTTNOdzk2anJHZ3FrNVJxVnV4V010cVFjeHQ5MFM5RFlzNHQ3eGxwLWwweHpEcW5TeUNEMGhvb2NqYy0xMURnV3phTHRHdTB0NDJsNjhHSTFYTUFtRmlhb1NKV0NCT3BJVGtHdjlDOVFBQVFZakwxVTVLUFBQVWZuOXpIanBQbHhJMk41WGZ0cDJaUlJLcVRqR3FiREN"
+        }
+      ],
+      "ageMin": 266,
+      "_cand": {
+        "key": "rss:d4vd-murder-case-prosecutor-focuses-on-who-knew-about-singer",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "ABC7 New York"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "ABC7 New York",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 68,
+      "signals": {
+        "recency": 9,
+        "corroboration": 8,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-star-wars-jedi-sequel-release-2024",
+      "slug": "star-wars-jedi-sequel-announced-for-release-this-year",
+      "title": "Star Wars Jedi Sequel Announced for Release This Year",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "star-wars-jedi-sequel-release-2024",
+      "primaryKeyword": "star wars jedi sequel",
+      "primaryEntity": "Star Wars: The Last Jedi",
+      "entities": [
+        "Star Wars Jedi",
+        "Star Wars"
+      ],
+      "angle": "The official sequel to the popular video game 'Star Wars Jedi' is set to release this year.",
+      "tmdbType": "movie",
+      "source": "gnews:Collider",
+      "sources": [
+        {
+          "outlet": "Collider",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNWVdiM29kbTZLTHdZZEVQRDBYbmtGVjNDSHkwZ2hRd1JQZ1R3OWdlRFMySFZpeGdZM0FRczlLeFVBLUNvMTd6U3lLSmFqS3c1VGthUUJiSEVkbzF5dHJMaFZzX1Z6M05fN1h6ZnFEYUppM215Y284YlRCM1JEbFJyLXlDbW5WQ1VkWnpaRHNIQ3c2UXRDb0RDTWlzNXhuUnphZmc?oc=5",
+          "ageMin": 571,
+          "headline": "‘Star Wars Jedi’ Gets Official Sequel Release This Year - Collider",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxNWVdiM29kbTZLTHdZZEVQRDBYbmtGVjNDSHkwZ2hRd1JQZ1R3OWdlRFMySFZpeGdZM0FRczlLeFVBLUNvMTd6U3lLSmFqS3c1VGthUUJiSEVkbzF5dHJMaFZzX1Z6M05fN1h6ZnFEYUppM215Y284YlRCM1JEbFJyLXlDbW5WQ1VkWnpaRHNIQ3c2UXRDb0RDTWlzNXhuUnphZmc?oc=5\" target=\"_blank\" ‘Star War"
+        }
+      ],
+      "ageMin": 571,
+      "_cand": {
+        "key": "rss:-star-wars-jedi-gets-official-sequel-release-this-year-colli",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "Collider"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "Collider",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 57,
+      "signals": {
+        "recency": 4,
+        "corroboration": 8,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "music-news-aaron-dessner-gracie-abrams-death-wish-not-about-taylor-swift",
+      "slug": "aaron-dessner-sets-the-record-straight-on-gracie-abrams-death-wish-it-",
+      "title": "Aaron Dessner Sets the Record Straight on Gracie Abrams’ Death Wish: It’s Definitely Not About Taylor Swift",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "high",
+      "tier": "popular",
+      "eventSlug": "aaron-dessner-gracie-abrams-death-wish-not-about-taylor-swift",
+      "primaryKeyword": "aaron dessner gracie abrams",
+      "primaryEntity": "Aaron Dessner",
+      "entities": [
+        "TAYLOR SWIFT | THE ERAS TOUR",
+        "Gracie Abrams",
+        "Taylor Swift",
+        "Noah Kahan"
+      ],
+      "angle": "Producer Aaron Dessner debunks speculation that Gracie Abrams' song 'Death Wish' is about Taylor Swift.",
+      "tmdbType": "movie",
+      "source": "rss:Billboard",
+      "sources": [
+        {
+          "outlet": "Billboard",
+          "tier": 7,
+          "url": "https://www.billboard.com/music/music-news/aaron-dessner-gracie-abrams-death-wish-noah-kahan-interview-1236299956/",
+          "ageMin": 66,
+          "headline": "Aaron Dessner Sets the Record Straight on Gracie Abrams Death Wish : It s Definitely Not About Taylor Swift",
+          "summary": "The producer also shared how he ended up performing with Noah Kahan over the weekend."
+        }
+      ],
+      "ageMin": 66,
+      "_cand": {
+        "key": "rss:aaron-dessner-sets-the-record-straight-on-gracie-abrams-deat",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Billboard"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": "Billboard",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 51,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "S"
+    },
+    {
+      "id": "news-the-girl-in-the-river-release-trailer",
+      "slug": "tiffany-haddish-devon-sawa-thriller-the-girl-in-the-river-gets-late-su",
+      "title": "Tiffany Haddish, Devon Sawa Thriller 'The Girl in the River' Gets Late Summer Release and Trailer",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "the-girl-in-the-river-release-trailer",
+      "primaryKeyword": "the girl in the river",
+      "primaryEntity": "The Girl in the River",
+      "entities": [
+        "Tiffany Haddish",
+        "Devon Sawa",
+        "Maggie Grace",
+        "Ralph Macchio"
+      ],
+      "angle": "Thriller 'The Girl in the River' starring Tiffany Haddish and Devon Sawa gets a late summer release and trailer.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/the-girl-in-the-river-tiffany-haddish-devon-sawa-release-1236653795/",
+          "ageMin": 391,
+          "headline": "Tiffany Haddish, Devon Sawa s Thriller The Girl in the River Gets Late Summer Release and Trailer (Exclusive)",
+          "summary": "Maggie Grace and Ralph Macchio star in Brando Benetton's movie that has been acquired by Samuel Goldwyn Films and centers on twin girls who go missing."
+        }
+      ],
+      "ageMin": 391,
+      "_cand": {
+        "key": "rss:tiffany-haddish-devon-sawa-s-thriller-the-girl-in-the-river-",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 67,
+      "signals": {
+        "recency": 4,
         "corroboration": 12,
         "status": 18,
         "type": 9,
@@ -1346,38 +685,103 @@
       "tierClass": "B"
     },
     {
-      "id": "news-late-show-sign-west-hollywood",
-      "slug": "the-late-show-sign-pops-up-in-west-hollywood",
-      "title": "‘The Late Show’ Sign Pops Up in West Hollywood",
+      "id": "news-gone-british-crime-drama",
+      "slug": "engrossing-british-crime-drama-gone-takes-the-ol-stiff-upper-lip-to-ne",
+      "title": "Engrossing British Crime Drama Gone Takes the Ol Stiff Upper Lip to New Heights",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "late-show-sign-west-hollywood",
-      "primaryKeyword": "the late show sign",
-      "primaryEntity": "The Late Show with Stephen Colbert",
+      "eventSlug": "gone-british-crime-drama",
+      "primaryKeyword": "Gone BritBox series",
+      "primaryEntity": "Gone",
       "entities": [
-        "Stephen Colbert",
-        "West Hollywood"
+        "Gone (TV series)",
+        "BritBox"
       ],
-      "angle": "A piece of iconic television memorabilia from 'The Late Show' has found a new home.",
+      "angle": "The new BritBox crime drama 'Gone' is praised for its suspenseful storytelling and exploration of complex themes.",
+      "tmdbType": "movie",
+      "source": "rss:IndieWire",
+      "sources": [
+        {
+          "outlet": "IndieWire",
+          "tier": 7,
+          "url": "https://www.indiewire.com/features/commentary/british-crime-drama-gone-britbox-1235205494/",
+          "ageMin": 181,
+          "headline": "Engrossing British Crime Drama Gone Takes the Ol Stiff Upper Lip to New Heights",
+          "summary": "The new BritBox series spends six episodes continually shifting the finger of suspicion, patiently and methodically exploring themes of control, trauma, and grief. And if a character doesn't sob through it all? Even better."
+        }
+      ],
+      "ageMin": 181,
+      "_cand": {
+        "key": "rss:engrossing-british-crime-drama-gone-takes-the-ol-stiff-upper",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "IndieWire"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "IndieWire",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 50,
+      "signals": {
+        "recency": 9,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 6,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-the-chosen-bear-grylls-crossover",
+      "slug": "watch-jesus-rappel-down-a-cliff-in-the-tv-crossover-event-of-the-summe",
+      "title": "Watch Jesus Rappel Down a Cliff in the TV Crossover Event of the Summer: The Chosen x Bear Grylls",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "the-chosen-bear-grylls-crossover",
+      "primaryKeyword": "The Chosen Bear Grylls crossover",
+      "primaryEntity": "The Chosen",
+      "entities": [
+        "Bear Grylls"
+      ],
+      "angle": "A surprising crossover event is announced between the faith-based drama 'The Chosen' and survivalist Bear Grylls.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
         {
           "outlet": "THR",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/tv/tv-news/the-late-show-sign-auction-west-hollywood-1236653689/",
-          "ageMin": 241,
-          "headline": "‘The Late Show’ Sign Pops Up in West Hollywood",
-          "summary": "The famous 12-foot illuminated marquee was auctioned off after Stephen Colbert’s talk show was yanked off the air. Now it's landed at a bistro on La Cienega."
+          "url": "https://www.hollywoodreporter.com/tv/tv-news/the-chosen-in-the-wild-with-bear-grylls-trailer-jesus-rappels-1236654136/",
+          "ageMin": 207,
+          "headline": "Watch Jesus Rappel Down a Cliff in the TV Crossover Event of the Summer: The Chosen x Bear Grylls",
+          "summary": "No word yet on how he traverses the Colorado River."
         }
       ],
-      "ageMin": 241,
+      "ageMin": 207,
       "_cand": {
-        "key": "rss:-the-late-show-sign-pops-up-in-west-hollywood",
+        "key": "rss:watch-jesus-rappel-down-a-cliff-in-the-tv-crossover-event-of",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -1412,75 +816,9 @@
       "tierClass": "C"
     },
     {
-      "id": "news-war-machine-sequel-title-announced",
-      "slug": "netflix-s-war-machine-sequel-gets-official-title",
-      "title": "Netflix's 'War Machine' Sequel Gets Official Title",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "war-machine-sequel-title-announced",
-      "primaryKeyword": "war machine sequel",
-      "primaryEntity": "War Machine 2",
-      "entities": [
-        "Alan Ritchson",
-        "Netflix"
-      ],
-      "angle": "Netflix's 'War Machine' sequel gets official title.",
-      "tmdbType": "movie",
-      "source": "gnews:JoBlo",
-      "sources": [
-        {
-          "outlet": "JoBlo",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1YWTJHM2FsY3dIWVQxZWpKVDlpRUhQeEphdzFhTHRYX1RJSGYtdnFuUHlyMmdFWHp4b0RkMkQ5OTZ3bDAtb3ZXel83ay1CRU5sU0xoRVJBWlFkV0NpalRXaDBhY1lrS2vSAWxBVV95cUxObzc1LVdqRWtpSlZnd0NIazlpekNQQTRuV09QUlNYTzVJUjM3SFBlSS05RFdZaXdmUjFZVjVSaFFjUFZYcERRTGtHVm8wcWZ1bFF2M1loai1mLWtNbGYwSjVuTEhTVjFwNUtJNVM?oc=5",
-          "ageMin": 421,
-          "headline": "The sequel to Netflix’s War Machine with Alan Ritchson gets an official title - JoBlo",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1YWTJHM2FsY3dIWVQxZWpKVDlpRUhQeEphdzFhTHRYX1RJSGYtdnFuUHlyMmdFWHp4b0RkMkQ5OTZ3bDAtb3ZXel83ay1CRU5sU0xoRVJBWlFkV0NpalRXaDBhY1lrS2vSAWxBVV95cUxObzc1LVdqRWtpSlZnd0NIazlpekNQQTRuV09QUlNYTzVJUjM3SFBlSS05RFdZaXdmUjFZVjVSaFFjUFZYcERRTGtHVm8wcWZ1bFF"
-        }
-      ],
-      "ageMin": 421,
-      "_cand": {
-        "key": "rss:the-sequel-to-netflix-s-war-machine-with-alan-ritchson-gets-",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "JoBlo"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "JoBlo",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 63,
-      "signals": {
-        "recency": 4,
-        "corroboration": 8,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
       "id": "news-luke-skywalker-lightsaber-auction",
       "slug": "luke-skywalker-s-iconic-star-wars-lightsaber-sells-for-3-75-million",
-      "title": "Luke Skywalker's Iconic 'Star Wars' Lightsaber Sells for $3.75 Million",
+      "title": "Luke Skywalker's iconic 'Star Wars' lightsaber sells for $3.75 million",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
@@ -1493,7 +831,7 @@
       "entities": [
         "Star Wars"
       ],
-      "angle": "A significant piece of Star Wars memorabilia, Luke Skywalker's lightsaber, has fetched a high price at auction.",
+      "angle": "Luke Skywalker's iconic lightsaber from 'Star Wars' has sold for a significant sum at auction.",
       "tmdbType": "movie",
       "source": "gnews:Central Oregon Daily",
       "sources": [
@@ -1501,12 +839,12 @@
           "outlet": "Central Oregon Daily",
           "tier": 5,
           "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxNSnRyRVFuSE9uYm9acWZGcjlBVjEzVGpjaFUybnZXdjFvUHB2UHVCUFpvS2hCUFBTNlZ2X1Y5UHZDSF9jbkZfM3Q3WFRNWXNOb2VXbEVmYUg1d3Y2WV95aVE1eDNPRGN6dmVGb25HR2h1MTlmSTVkTWwtbVluSVB2UHpZTlhjUXFjX0ZvRHY1N3NUOFh0cjNOV2xnbFRpV1hQSGk3NGVWWTRGZGI2Z240REt5QW9nXy1vV3RhZ0NwZXJiaGczX3p3NUZIMC1LaWFSMFp6SkRrb3FCd3RrZDZQOURNRDVmeVNzR2lCTFl5bjBDcThVZER1bHoxNA?oc=5",
-          "ageMin": 198,
+          "ageMin": 258,
           "headline": "Luke Skywalker's iconic 'Star Wars' lightsaber sells for $3.75 million - Central Oregon Daily",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMi-wFBVV95cUxNSnRyRVFuSE9uYm9acWZGcjlBVjEzVGpjaFUybnZXdjFvUHB2UHVCUFpvS2hCUFBTNlZ2X1Y5UHZDSF9jbkZfM3Q3WFRNWXNOb2VXbEVmYUg1d3Y2WV95aVE1eDNPRGN6dmVGb25HR2h1MTlmSTVkTWwtbVluSVB2UHpZTlhjUXFjX0ZvRHY1N3NUOFh0cjNOV2xnbFRpV1hQSGk3NGVWWTRGZGI2Z240REt5QW9nXy1vV3R"
         }
       ],
-      "ageMin": 198,
+      "ageMin": 258,
       "_cand": {
         "key": "rss:luke-skywalker-s-iconic-star-wars-lightsaber-sells-for-3-75-",
         "popularity": 0,
@@ -1543,83 +881,75 @@
       "tierClass": "C"
     },
     {
-      "id": "news-jason-alexander-apologizes-courtney-stodden-sketch",
-      "slug": "jason-alexander-apologizes-to-courtney-stodden-for-filming-inappropria",
-      "title": "Jason Alexander Apologizes to Courtney Stodden for Filming Inappropriate Sketch When She Was Underage",
+      "id": "news-lightsaber-luke-skywalker-hand-auction",
+      "slug": "lightsaber-luke-skywalker-s-hand-fetch-3-7m-at-auction",
+      "title": "Lightsaber, Luke Skywalker’s hand fetch $3.7M at auction",
       "contentType": "news",
       "formatTag": "news",
-      "category": "celebrity",
+      "category": "movies",
       "subcategory": "news",
-      "eventType": "legal",
-      "sensitivity": "high",
-      "eventSlug": "jason-alexander-apologizes-courtney-stodden-sketch",
-      "primaryKeyword": "Jason Alexander Courtney Stodden",
-      "primaryEntity": "Jason Alexander",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "lightsaber-luke-skywalker-hand-auction",
+      "primaryKeyword": "luke skywalker lightsaber auction",
+      "primaryEntity": "Luke Skywalker's lightsaber",
       "entities": [
-        "Courtney Stodden"
+        "Star Wars",
+        "Mark Hamill"
       ],
-      "angle": "Jason Alexander issues an apology to Courtney Stodden for filming an inappropriate sketch with her when she was underage.",
+      "angle": "Iconic props from Star Wars, including Luke Skywalker's lightsaber and hand, sold for millions at auction.",
       "tmdbType": "movie",
-      "source": "rss:Deadline",
+      "source": "gnews:WGAU Radio",
       "sources": [
         {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/seinfeld-jason-alexander-apologizes-courtney-stodden-sketch-1237000726/",
-          "ageMin": 36,
-          "headline": "Seinfeld Alum Jason Alexander Apologizes To Courtney Stodden For Filming Inappropriate Sketch When She Was Underage: I Truly Regret It",
-          "summary": "Jason Alexander is apologizing for filming a comedy sketch with then-17-year-old Courtney Stodden. Stodden recalled the 2012 Funny or Die sketch and questioned why so many adults look at a minor and decide this was acceptable. Looking back at the comedy sketch in which Ms. Stodden and I participated in 2012, I completely agree that [ ]"
-        },
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/tv/tv-news/jason-alexander-courtney-stodden-underage-sketch-apology-1236654228/",
-          "ageMin": 90,
-          "headline": "Seinfeld Actor Jason Alexander Apologizes to Courtney Stodden for Inappropriate Sketch Filmed When She Was Underage",
-          "summary": "In a follow-up statement shared with THR after Alexander's apology was reported, Stodden said, \"I appreciate Jason Alexander’s public apology. People keep asking if he’s apologized privately, and he hasn’t. A private apology would be meaningful, but meaningful action would be even more powerful.\""
+          "outlet": "WGAU Radio",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOVnNXRHpzN294X2psTFM0NVBfNXFVNlR5NTBPU1NmY09IemxyYlRCTFB3Z0xWTDNKODYwa2FxckxzTkZXWmEwOURNbkhfSUpwMWQ1cnVLX1pxRmN2OFc1cnpWenhuc3cwMk1lWExNNklxX0RyaktVaFdlYzJObXd3VEFBTmhyTWNyQTdJdmFHUV9TYzZYVnZHOGM3ZzFhWkdTQ1Y4UnhvYzJOX2YtNGFtTXk3a05IdllS0gHMAUFVX3lxTFBnb09TSGZXV3NacW9valdNWUhlbFdrYjVkN2NEbnphOWpWMmRGY0JnX1VoeUloMXdWNzVmaXg2OTFPQjZ5cjd1cmJNeU02N0gxWXNTQXlYLUU0R2pmdnNWVGkzbUM5YXhjNUpaeks0dXNkV2dhOXZpRHdMZmp1WjhwTEtkWHpYRmFDSzBiLXpfRm04YVVwOGNWak5qZmNXVFhOT2gwa3FJbFJhQ3BTd1FpZnB2Zmg2NWxFTGY1Szh4OEZDbV9vYXQ5d3RDRA?oc=5",
+          "ageMin": 347,
+          "headline": "Lightsaber, Luke Skywalker’s hand fetch $3.7M at auction - WGAU Radio",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiuAFBVV95cUxOVnNXRHpzN294X2psTFM0NVBfNXFVNlR5NTBPU1NmY09IemxyYlRCTFB3Z0xWTDNKODYwa2FxckxzTkZXWmEwOURNbkhfSUpwMWQ1cnVLX1pxRmN2OFc1cnpWenhuc3cwMk1lWExNNklxX0RyaktVaFdlYzJObXd3VEFBTmhyTWNyQTdJdmFHUV9TYzZYVnZHOGM3ZzFhWkdTQ1Y4UnhvYzJOX2YtNGFtTXk3a05IdllS0gH"
         }
       ],
-      "ageMin": 36,
+      "ageMin": 347,
       "_cand": {
-        "key": "rss:seinfeld-alum-jason-alexander-apologizes-to-courtney-stodden",
+        "key": "rss:lightsaber-luke-skywalker-s-hand-fetch-3-7m-at-auction-wgau-",
         "popularity": 0,
-        "kind": "rss-news"
+        "kind": "gnews"
       },
-      "corroborationCount": 2,
+      "corroborationCount": 1,
       "verification": {
-        "tier1Count": 2,
-        "tier1Owners": 1,
-        "outletCount": 2,
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
         "outlets": [
-          "Deadline",
-          "THR"
+          "WGAU Radio"
         ],
-        "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "Deadline",
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "WGAU Radio",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 80,
+      "priority": 52,
       "signals": {
-        "recency": 24,
-        "corroboration": 18,
+        "recency": 9,
+        "corroboration": 8,
         "status": 18,
-        "type": 12,
+        "type": 5,
         "pop": 0,
         "breakout": 0,
-        "big": 0,
-        "trending": 8,
+        "big": 12,
+        "trending": 0,
         "spice": 0,
         "softTv": 0
       },
-      "tierClass": "S"
+      "tierClass": "C"
     },
     {
-      "id": "news-ozzy-osbourne-legacy-sharon-osbourne",
-      "slug": "sharon-osbourne-reflects-on-ozzy-osbourne-s-legacy-one-year-after-his-",
-      "title": "Sharon Osbourne Reflects on Ozzy Osbourne's Legacy One Year After His Death",
+      "id": "news-ozzy-osbourne-death-anniversary-sharon-osbourne-reflects",
+      "slug": "sharon-osbourne-reflects-on-ozzy-s-legacy-one-year-after-his-death",
+      "title": "Sharon Osbourne Reflects on Ozzy's Legacy One Year After His Death",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
@@ -1627,13 +957,13 @@
       "eventType": "death",
       "sensitivity": "high",
       "tier": "popular",
-      "eventSlug": "ozzy-osbourne-legacy-sharon-osbourne",
-      "primaryKeyword": "ozzy osbourne legacy",
+      "eventSlug": "ozzy-osbourne-death-anniversary-sharon-osbourne-reflects",
+      "primaryKeyword": "Ozzy Osbourne death anniversary",
       "primaryEntity": "Ozzy Osbourne",
       "entities": [
         "Sharon Osbourne"
       ],
-      "angle": "Sharon Osbourne reflects on Ozzy Osbourne's legacy one year after his death.",
+      "angle": "Sharon Osbourne opens up about her late husband Ozzy Osbourne's legacy one year after his passing.",
       "tmdbType": "movie",
       "source": "rss:Billboard",
       "sources": [
@@ -1641,12 +971,12 @@
           "outlet": "Billboard",
           "tier": 7,
           "url": "https://www.billboard.com/music/rock/sharon-osbourne-ozzy-one-year-death-1236300924/",
-          "ageMin": 56,
+          "ageMin": 116,
           "headline": "Sharon Osbourne Ruminates On Ozzy One Year After His Death: Turn the Music Up",
           "summary": "The metal icon's widow reflects on his legacy."
         }
       ],
-      "ageMin": 56,
+      "ageMin": 116,
       "_cand": {
         "key": "rss:sharon-osbourne-ruminates-on-ozzy-one-year-after-his-death-t",
         "popularity": 0,
@@ -1667,9 +997,9 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 68,
+      "priority": 60,
       "signals": {
-        "recency": 24,
+        "recency": 16,
         "corroboration": 12,
         "status": 18,
         "type": 14,
@@ -1683,38 +1013,37 @@
       "tierClass": "S"
     },
     {
-      "id": "news-michael-j-fox-health",
-      "slug": "michael-j-fox-returning-to-acting-prolonged-my-life",
-      "title": "Michael J. Fox: Returning to Acting Prolonged My Life",
+      "id": "news-michael-j-fox-acting-prolonged-life-parkinsons-fight",
+      "slug": "michael-j-fox-getting-back-to-acting-really-prolonged-my-life",
+      "title": "Michael J. Fox: Getting Back to Acting Really Prolonged My Life",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
       "eventType": "health",
       "sensitivity": "high",
-      "eventSlug": "michael-j-fox-health",
-      "primaryKeyword": "michael j fox acting",
+      "eventSlug": "michael-j-fox-acting-prolonged-life-parkinsons-fight",
+      "primaryKeyword": "Michael J. Fox acting Parkinson's",
       "primaryEntity": "Michael J. Fox",
       "entities": [
-        "Parkinson's disease",
         "Shrinking"
       ],
-      "angle": "Michael J. Fox states that returning to acting has significantly prolonged his life while continuing his fight against Parkinson's.",
+      "angle": "Michael J. Fox shares how returning to acting has positively impacted his life and his continued efforts to find a cure for Parkinson's.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
         {
           "outlet": "THR",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/lifestyle/lifestyle-news/john-mayer-music-philanthropy-ptsd-advocacy-1236653127/",
-          "ageMin": 61,
-          "headline": "John Mayer on Why He Keeps Quietly Funding Brain Research Studies",
-          "summary": "After visiting a military base where he was moved talking to wounded warriors, the rock star has spent 15 years and millions out of his own pocket backing research on PTSD and veterans health — but still finds time to make a little music."
+          "url": "https://www.hollywoodreporter.com/lifestyle/lifestyle-news/michael-j-fox-acting-return-parkinsons-foundation-1236653128/",
+          "ageMin": 121,
+          "headline": "Michael J. Fox: Getting Back to Acting Really Prolonged My Life",
+          "summary": "Thirty-five years after his diagnosis, the Hollywood icon and his foundation are fighting harder than ever to find a cure for Parkinson’s. But with a return to 'Shrinking' confirmed, he’s not giving up his day job anytime soon."
         }
       ],
-      "ageMin": 61,
+      "ageMin": 121,
       "_cand": {
-        "key": "rss:john-mayer-on-why-he-keeps-quietly-funding-brain-research-st",
+        "key": "rss:michael-j-fox-getting-back-to-acting-really-prolonged-my-lif",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -1747,6 +1076,135 @@
         "softTv": 0
       },
       "tierClass": "S"
+    },
+    {
+      "id": "news-john-mayer-funding-brain-research",
+      "slug": "john-mayer-on-why-he-keeps-quietly-funding-brain-research-studies",
+      "title": "John Mayer on Why He Keeps Quietly Funding Brain Research Studies",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "john-mayer-funding-brain-research",
+      "primaryKeyword": "John Mayer brain research funding",
+      "primaryEntity": "John Mayer",
+      "entities": [],
+      "angle": "John Mayer discusses his long-term, personal funding of brain research studies, particularly for veterans.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/lifestyle/lifestyle-news/john-mayer-music-philanthropy-ptsd-advocacy-1236653127/",
+          "ageMin": 121,
+          "headline": "John Mayer on Why He Keeps Quietly Funding Brain Research Studies",
+          "summary": "After visiting a military base where he was moved talking to wounded warriors, the rock star has spent 15 years and millions out of his own pocket backing research on PTSD and veterans health — but still finds time to make a little music."
+        }
+      ],
+      "ageMin": 121,
+      "_cand": {
+        "key": "rss:john-mayer-on-why-he-keeps-quietly-funding-brain-research-st",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 51,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-sophie-thatcher-yellowjackets-career",
+      "slug": "sophie-thatcher-is-ready-to-move-beyond-yellowjackets-and-step-out-of-",
+      "title": "Sophie Thatcher Is Ready to Move Beyond ‘Yellowjackets’ and Step Out of the Darkness",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "sophie-thatcher-yellowjackets-career",
+      "primaryKeyword": "sophie thatcher",
+      "primaryEntity": "Sophie Thatcher",
+      "entities": [
+        "Yellowjackets"
+      ],
+      "angle": "Actress discusses moving beyond her breakout role.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/film/features/sophie-thatcher-yellowjackets-ending-trump-gaza-her-private-hell-inde-navarrette-1236817823/",
+          "ageMin": 211,
+          "headline": "Sophie Thatcher Is Ready to Move Beyond ‘Yellowjackets’ and Step Out of the Darkness",
+          "summary": "Sophie Thatcher knows what you think about her. She’s seen the headlines and social media posts. She’s dark. Maybe it’s the acting choices, like Natalie, her tortured teen on “Yellowjackets,” or an abducted missionary in “Heretic,” or the enslaved robot girlfriend in “Companion.” Perhaps it’s her Mormon upbringing, which she believes has fostered “a feeling [ ]"
+        }
+      ],
+      "ageMin": 211,
+      "_cand": {
+        "key": "rss:sophie-thatcher-is-ready-to-move-beyond-yellowjackets-and-st",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 48,
+      "signals": {
+        "recency": 9,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
     }
   ]
 }
