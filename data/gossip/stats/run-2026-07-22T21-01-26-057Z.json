@@ -1,0 +1,143 @@
+{
+  "ts": "2026-07-22T21:01:26.057Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "jennifer-aniston-steps-into-the-interviewers-chair-for-boyfriend-jim-curtis",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [
+        "metaDescription-soft:logged"
+      ],
+      "headline": [
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 1
+    }
+  ],
+  "topics": 1,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 0,
+  "costUSD": 0.016646,
+  "costPerPublished": 0.016646,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 7,
+      "in": 14257,
+      "out": 2004,
+      "usd": 0.009287100000000001
+    },
+    "qwen/qwen3-235b-a22b-2507": {
+      "calls": 1,
+      "in": 893,
+      "out": 396,
+      "usd": 0.0003703115
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 955,
+      "out": 2737,
+      "usd": 0.00089051
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 6,
+      "in": 16902,
+      "out": 5251,
+      "usd": 0.005469989400000001
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 5,
+      "in": 4489,
+      "out": 448,
+      "usd": 0.0006280999999999999
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2525,
+      "out": 219,
+      "usd": 0.001305,
+      "ms": 1616
+    },
+    "synthesizer": {
+      "calls": 2,
+      "errors": 1,
+      "in": 893,
+      "out": 396,
+      "usd": 0.00037458,
+      "ms": 85464
+    },
+    "writer": {
+      "calls": 5,
+      "errors": 0,
+      "in": 16275,
+      "out": 4923,
+      "usd": 0.00541707,
+      "ms": 135364
+    },
+    "verify": {
+      "calls": 6,
+      "errors": 0,
+      "in": 11732,
+      "out": 1785,
+      "usd": 0.007982099999999999,
+      "ms": 11894
+    },
+    "judge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1502,
+      "out": 150,
+      "usd": 0.00021020000000000001,
+      "ms": 787
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 627,
+      "out": 328,
+      "usd": 0.00025573,
+      "ms": 9602
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 417,
+      "out": 107,
+      "usd": 0.0000845,
+      "ms": 735
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 197,
+      "out": 49,
+      "usd": 0.000039300000000000007,
+      "ms": 576
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2087,
+      "out": 89,
+      "usd": 0.00024430000000000003,
+      "ms": 1769
+    },
+    "linker": {
+      "calls": 1,
+      "errors": 0,
+      "in": 286,
+      "out": 53,
+      "usd": 0.000049800000000000004,
+      "ms": 495
+    }
+  }
+}
