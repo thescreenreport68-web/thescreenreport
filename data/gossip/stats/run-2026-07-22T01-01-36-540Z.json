@@ -1,0 +1,137 @@
+{
+  "ts": "2026-07-22T01:01:36.540Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "jennifer-lopez-celebrates-birthdays-with-sister-in-europe-shares-candid-bat",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [
+        "metaDescription-soft:logged"
+      ],
+      "headline": [
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 1
+    }
+  ],
+  "topics": 1,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 0,
+  "costUSD": 0.012385,
+  "costPerPublished": 0.012385,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 7,
+      "in": 13601,
+      "out": 1202,
+      "usd": 0.007085299999999999
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 878,
+      "out": 899,
+      "usd": 0.0002472624
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 6,
+      "in": 14977,
+      "out": 5384,
+      "usd": 0.0044191851
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 7,
+      "in": 4322,
+      "out": 502,
+      "usd": 0.0006329999999999999
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2496,
+      "out": 189,
+      "usd": 0.0012213,
+      "ms": 1133
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 878,
+      "out": 899,
+      "usd": 0.00024083999999999998,
+      "ms": 13572
+    },
+    "writer": {
+      "calls": 5,
+      "errors": 0,
+      "in": 14366,
+      "out": 5083,
+      "usd": 0.0050324,
+      "ms": 201405
+    },
+    "verify": {
+      "calls": 6,
+      "errors": 0,
+      "in": 11105,
+      "out": 1013,
+      "usd": 0.005863999999999999,
+      "ms": 11637
+    },
+    "judge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1328,
+      "out": 155,
+      "usd": 0.00019480000000000002,
+      "ms": 824
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 611,
+      "out": 301,
+      "usd": 0.00024287,
+      "ms": 10720
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 376,
+      "out": 92,
+      "usd": 0.0000744,
+      "ms": 674
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 195,
+      "out": 43,
+      "usd": 0.000036700000000000004,
+      "ms": 466
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1573,
+      "out": 86,
+      "usd": 0.00019170000000000002,
+      "ms": 1910
+    },
+    "linker": {
+      "calls": 3,
+      "errors": 0,
+      "in": 850,
+      "out": 126,
+      "usd": 0.0001354,
+      "ms": 1830
+    }
+  }
+}
