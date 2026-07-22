@@ -1850,11 +1850,11 @@
    "key": "the-odyssey-bo-update-100m|BO-UPDATE",
    "eventSlug": "the-odyssey-bo-update-100m",
    "form": "BO-UPDATE",
-   "reason": "words 162 < 180 (owner-set ~200-word minimum)",
-   "tries": 108,
-   "at": "2026-07-22T13:50:52.371Z",
+   "reason": "words 173 < 180 (owner-set ~200-word minimum)",
+   "tries": 109,
+   "at": "2026-07-22T13:58:12.852Z",
    "dead": true,
-   "expiresAt": "2026-07-25T13:50:52.371Z"
+   "expiresAt": "2026-07-25T13:58:12.852Z"
   },
   {
    "key": "star-wars-the-mandalorian-and-grogu-bo-update-d59|BO-UPDATE",
@@ -2088,9 +2088,11 @@
    "key": "avatar-the-last-airbender-trending-tv-w2026-07-19|TRENDING-TV",
    "eventSlug": "avatar-the-last-airbender-trending-tv-w2026-07-19",
    "form": "TRENDING-TV",
-   "reason": "words 97 < 180 (owner-set ~200-word minimum) | soft-floor humanVoice 4 < 5",
-   "tries": 2,
-   "at": "2026-07-22T04:08:46.520Z"
+   "reason": "words 154 < 180 (owner-set ~200-word minimum)",
+   "tries": 3,
+   "at": "2026-07-22T14:03:58.585Z",
+   "dead": true,
+   "expiresAt": "2026-07-25T14:03:58.585Z"
   },
   {
    "key": "worst-neighbor-ever-trending-tv-w2026-07-19|TRENDING-TV",
@@ -2151,14 +2153,14 @@
    "at": "2026-07-22T13:53:50.151Z"
   }
  ],
- "zeroStreak": 2,
+ "zeroStreak": 3,
  "daySpend": {
   "laDay": "2026-07-22",
-  "usd": 0.16591
+  "usd": 0.18501
  },
  "pace": {
-  "tokens": 1.540693866666667,
-  "lastMs": 1784728031391
+  "tokens": 1.720703066666667,
+  "lastMs": 1784728609992
  },
  "lastAuditDay": "2026-07-22",
  "attempts": {
@@ -2167,8 +2169,9 @@
    "voicemails for isabelle": 2,
    "the boss baby": 1,
    "outcome": 1,
-   "the mandalorian and grogu": 2,
-   "sniper: no nation": 1
+   "the mandalorian and grogu": 3,
+   "sniper: no nation": 1,
+   "avatar: the last airbender": 1
   }
  }
 }

@@ -1,0 +1,217 @@
+{
+ "runId": "run-2026-07-22T13-56-49",
+ "mode": "live",
+ "startedAt": "2026-07-22T13:56:49.992Z",
+ "films": 40,
+ "published": [],
+ "held": [
+  {
+   "tag": "the-odyssey-bo-update×BO-UPDATE",
+   "reason": "words 173 < 180 (owner-set ~200-word minimum)",
+   "score": 50
+  },
+  {
+   "tag": "avatar-the-last-airbender-trending-tv-w2026-07-19×TRENDING-TV",
+   "reason": "words 154 < 180 (owner-set ~200-word minimum)",
+   "score": 42
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "moana-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "minions-monsters-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "toy-story-5-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "evil-dead-burn-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "young-washington-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "obsession-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "supergirl-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "disclosure-day-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "jackass-best-and-last-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "scary-movie-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "voicemails-for-isabelle-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "voicemails-for-isabelle-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "enola-holmes-3-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "regretting-you-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "kpop-demon-hunters-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "death-on-the-nile-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "the-boss-baby-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "joy-ride-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "sniper-no-nation-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "little-house-on-the-prairie-trending-tv-w2026-07-19×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "i-will-find-you-trending-tv-w2026-07-19×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "the-hawk-trending-tv-w2026-07-19×TRENDING-TV",
+   "reason": "parked dead"
+  }
+ ],
+ "blocked": [
+  {
+   "tag": "the-mandalorian-and-grogu-bo-opening×BO-OPENING",
+   "reason": "watchdog: gatherer the-mandalorian-and-grogu-bo-opening×BO-OPENING exceeded 180s"
+  }
+ ],
+ "paced": {
+  "tokens": 1.72,
+  "behind": false,
+  "expected": 1.12,
+  "allow": 1
+ },
+ "attemptCapHit": 3,
+ "zeroStreak": 3,
+ "daySpend": {
+  "laDay": "2026-07-22",
+  "usd": 0.18501
+ },
+ "faults": {
+  "count": 4,
+  "bySeverity": {
+   "critical": 3,
+   "warn": 1
+  },
+  "faults": [
+   {
+    "stage": "model:finder",
+    "message": "all models failed (amazon/nova-micro-v1, google/gemini-2.5-flash-lite): Unexpected non-whitespace character after JSON at position 206",
+    "severity": "critical",
+    "at": "2026-07-22T13:56:59.453Z"
+   },
+   {
+    "stage": "finder:llm",
+    "message": "finder classification failed — falling back to deterministic picks: Unexpected non-whitespace character after JSON at position 206",
+    "severity": "warn",
+    "at": "2026-07-22T13:56:59.453Z"
+   },
+   {
+    "stage": "model:gatherer",
+    "message": "all models failed (google/gemini-2.5-flash-lite, openai/gpt-5-nano): empty completion",
+    "severity": "critical",
+    "at": "2026-07-22T13:59:43.842Z"
+   },
+   {
+    "stage": "model:gatherer",
+    "message": "all models failed (google/gemini-2.5-flash-lite, openai/gpt-5-nano): empty completion",
+    "severity": "critical",
+    "at": "2026-07-22T14:01:12.486Z"
+   }
+  ]
+ },
+ "degraded": true,
+ "finishedAt": "2026-07-22T14:03:58.588Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 2,
+    "errors": 2,
+    "in": 0,
+    "out": 0,
+    "usd": 0,
+    "ms": 0
+   },
+   "gatherer": {
+    "calls": 7,
+    "errors": 4,
+    "in": 9287,
+    "out": 1057,
+    "usd": 0.00135,
+    "ms": 5733
+   },
+   "synthesizer": {
+    "calls": 2,
+    "errors": 0,
+    "in": 1442,
+    "out": 1736,
+    "usd": 0.00044,
+    "ms": 22748
+   },
+   "writerChart": {
+    "calls": 1,
+    "errors": 0,
+    "in": 2065,
+    "out": 893,
+    "usd": 0.00078,
+    "ms": 28825
+   },
+   "writer": {
+    "calls": 2,
+    "errors": 0,
+    "in": 6027,
+    "out": 2048,
+    "usd": 0.00569,
+    "ms": 27468
+   },
+   "qa": {
+    "calls": 8,
+    "errors": 2,
+    "in": 15845,
+    "out": 3060,
+    "usd": 0.00926,
+    "ms": 63095
+   }
+  },
+  "totalUsd": 0.01752
+ },
+ "openrouterTotalUsd": 0.0191
+}
