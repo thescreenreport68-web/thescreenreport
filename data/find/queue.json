@@ -1,27 +1,93 @@
 {
-  "runId": "run-2026-07-22T05-31-35",
-  "builtAt": "2026-07-22T05:33:00.100Z",
-  "count": 6,
+  "runId": "run-2026-07-22T06-01-05",
+  "builtAt": "2026-07-22T06:02:25.820Z",
+  "count": 9,
   "topics": [
     {
-      "id": "news-monarch-legacy-of-monsters-casting",
-      "slug": "wyatt-russell-s-monsterverse-series-casts-corey-stoll-ralph-ineson",
-      "title": "Wyatt Russell's Monsterverse Series Casts Corey Stoll, Ralph Ineson",
+      "id": "news-elon-musk-ai-odyssey-film",
+      "slug": "elon-musk-vows-to-make-historically-accurate-ai-created-odyssey-film-b",
+      "title": "Elon Musk Vows to Make ‘Historically Accurate,’ AI-Created ‘Odyssey’ Film by Year’s End",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "elon-musk-ai-odyssey-film",
+      "primaryKeyword": "odyssey film",
+      "primaryEntity": "Odyssey",
+      "entities": [
+        "Elon Musk"
+      ],
+      "angle": "Elon Musk announces plans to create an AI-generated film adaptation of 'The Odyssey'.",
+      "tmdbType": "movie",
+      "source": "rss:TheWrap",
+      "sources": [
+        {
+          "outlet": "TheWrap",
+          "tier": 7,
+          "url": "https://www.thewrap.com/creative-content/movies/elon-musk-to-remake-the-odyssey-with-artificial-intelligence/",
+          "ageMin": 74,
+          "headline": "Elon Musk Vows to Make ‘Historically Accurate,’ AI-Created ‘Odyssey’ Film by Year’s End",
+          "summary": "The tech mogul also claims the new adaptation will be \"true to the art of Homer\" The post Elon Musk Vows to Make ‘Historically Accurate,’ AI-Created ‘Odyssey’ Film by Year’s End appeared first on TheWrap ."
+        }
+      ],
+      "ageMin": 74,
+      "_cand": {
+        "key": "rss:elon-musk-vows-to-make-historically-accurate-ai-created-odys",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "TheWrap"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "TheWrap",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 79,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-monarch-legacy-of-monsters-casting-corey-stoll-ralph-ineson",
+      "slug": "wyatt-russell-s-monsterverse-series-casts-corey-stoll-ralph-ineson-nya",
+      "title": "Wyatt Russell s Monsterverse Series Casts Corey Stoll, Ralph Ineson, Nyasha Hatendi",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "monarch-legacy-of-monsters-casting",
+      "eventSlug": "monarch-legacy-of-monsters-casting-corey-stoll-ralph-ineson",
       "primaryKeyword": "Monarch Legacy of Monsters casting",
       "primaryEntity": "Monarch: Legacy of Monsters",
       "entities": [
         "Wyatt Russell",
         "Corey Stoll",
-        "Ralph Ineson"
+        "Ralph Ineson",
+        "Apple TV+"
       ],
-      "angle": "Apple TV+'s Monsterverse series 'Monarch: Legacy of Monsters' adds new cast members.",
+      "angle": "Corey Stoll, Ralph Ineson, and Nyasha Hatendi join the cast of Apple TV+'s 'Monarch: Legacy of Monsters' spinoff.",
       "tmdbType": "movie",
       "source": "rss:Variety",
       "sources": [
@@ -29,12 +95,12 @@
           "outlet": "Variety",
           "tier": 7,
           "url": "https://variety.com/2026/tv/news/wyatt-russell-monsterverse-series-corey-stoll-ralph-ineson-1236817481/",
-          "ageMin": 613,
+          "ageMin": 643,
           "headline": "Wyatt Russell s Monsterverse Series Casts Corey Stoll, Ralph Ineson, Nyasha Hatendi",
           "summary": "The upcoming Monarch: Legacy of Monsters spinoff at Apple TV has added three new cast members. Variety has confirmed that Corey Stoll ( Imperfect Women,” “Appropriate,” “Billions ), Ralph Inneson ( The Witch, The Fantastic Four: First Steps ), and Nyasha Hatendi (“Agatha Christie’s The Seven Dials,” “Casual”) will all appear in the new series, which was originally announced [ ]"
         }
       ],
-      "ageMin": 613,
+      "ageMin": 643,
       "_cand": {
         "key": "rss:wyatt-russell-s-monsterverse-series-casts-corey-stoll-ralph-",
         "popularity": 0,
@@ -71,66 +137,67 @@
       "tierClass": "B"
     },
     {
-      "id": "music-news-kylie-minogue-snow-patrol-these-alarms-concert-video",
-      "slug": "kylie-minogue-teams-up-with-snow-patrol-for-these-alarms-concert-video",
-      "title": "Kylie Minogue Teams Up With Snow Patrol For ‘These Alarms’ Concert Video: Watch",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
+      "id": "news-snoop-dogg-biopic-release-date",
+      "slug": "snoop-dogg-biopic-lands-summer-2027-release-from-universal",
+      "title": "Snoop Dogg Biopic Lands Summer 2027 Release From Universal",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "kylie-minogue-snow-patrol-these-alarms-concert-video",
-      "primaryKeyword": "kylie minogue snow patrol",
-      "primaryEntity": "Kylie Minogue",
+      "eventSlug": "snoop-dogg-biopic-release-date",
+      "primaryKeyword": "Snoop Dogg biopic",
+      "primaryEntity": "Snoop Dogg Biopic",
       "entities": [
-        "Snow Patrol"
+        "Snoop Dogg's Hood of Horror",
+        "Snoop Dogg",
+        "Universal Pictures",
+        "Jonathan Daviss"
       ],
-      "angle": "Kylie Minogue and Snow Patrol debut new song 'These Alarms' in concert video.",
+      "angle": "Universal Pictures sets a summer 2027 release date for the Snoop Dogg biopic.",
       "tmdbType": "movie",
-      "source": "rss:Billboard",
+      "source": "rss:THR",
       "sources": [
         {
-          "outlet": "Billboard",
+          "outlet": "THR",
           "tier": 7,
-          "url": "https://www.billboard.com/music/pop/kylie-minogue-snow-patrol-these-alarms-music-video-watch-1236300486/",
-          "ageMin": 21,
-          "headline": "Kylie Minogue Teams Up With Snow Patrol For ‘These Alarms’ Concert Video: Watch",
-          "summary": "Kylie joined forces with Snow Patrol on stage at Crystal Palace Park, for the debut performance of “These Alarms.\""
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/snoop-dogg-biopic-lands-summer-2027-release-1236653520/",
+          "ageMin": 511,
+          "headline": "Snoop Dogg Biopic Lands Summer 2027 Release From Universal",
+          "summary": "Jonathan Daviss stars in Craig Brewer's feature that examines the life of the iconic rapper."
         }
       ],
-      "ageMin": 21,
+      "ageMin": 511,
       "_cand": {
-        "key": "rss:kylie-minogue-teams-up-with-snow-patrol-for-these-alarms-con",
+        "key": "rss:snoop-dogg-biopic-lands-summer-2027-release-from-universal",
         "popularity": 0,
         "kind": "rss-news"
       },
-      "breakoutVelocity": 0,
       "corroborationCount": 1,
       "verification": {
         "tier1Count": 1,
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Billboard"
+          "THR"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Billboard",
+        "attribution": "THR",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 63,
+      "priority": 67,
       "signals": {
-        "recency": 24,
+        "recency": 4,
         "corroboration": 12,
         "status": 18,
         "type": 9,
         "pop": 0,
         "breakout": 0,
-        "big": 0,
+        "big": 24,
         "trending": 0,
         "spice": 0,
         "softTv": 0
@@ -138,24 +205,23 @@
       "tierClass": "B"
     },
     {
-      "id": "news-timothy-olyphant-david-fincher-takes-once-upon-a-time-in-hollywood-seq",
-      "slug": "timothy-olyphant-thought-adventures-of-cliff-booth-director-david-finc",
-      "title": "Timothy Olyphant Thought ‘Adventures of Cliff Booth’ Director David Fincher’s Many Takes Were ‘Unnecessary’ Power Move",
+      "id": "news-timothy-olyphant-david-fincher-takes",
+      "slug": "timothy-olyphant-on-david-fincher-s-many-takes-unnecessary-power-move",
+      "title": "Timothy Olyphant on David Fincher's Many Takes: 'Unnecessary Power Move'",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "timothy-olyphant-david-fincher-takes-once-upon-a-time-in-hollywood-seq",
-      "primaryKeyword": "David Fincher filming methods",
-      "primaryEntity": "Once Upon a Time... in Hollywood",
+      "eventSlug": "timothy-olyphant-david-fincher-takes",
+      "primaryKeyword": "David Fincher takes",
+      "primaryEntity": "David Fincher",
       "entities": [
-        "Once Upon a Time in Hollywood",
         "Timothy Olyphant",
-        "David Fincher"
+        "Once Upon a Time in Hollywood"
       ],
-      "angle": "Timothy Olyphant shares his perspective on David Fincher's numerous takes during the filming of a potential 'Once Upon a Time in Hollywood' sequel.",
+      "angle": "Timothy Olyphant reflects on director David Fincher's numerous takes during a project, initially viewing them as an 'unnecessary power move.'",
       "tmdbType": "movie",
       "source": "rss:TheWrap",
       "sources": [
@@ -163,12 +229,12 @@
           "outlet": "TheWrap",
           "tier": 7,
           "url": "https://www.thewrap.com/creative-content/movies/timothy-olyphant-david-finchers-many-takes-power-move/",
-          "ageMin": 310,
+          "ageMin": 340,
           "headline": "Timothy Olyphant Thought ‘Adventures of Cliff Booth’ Director David Fincher’s Many Takes Were ‘Unnecessary’ Power Move",
           "summary": "The actor adds he \"couldn't wait\" to start working on the \"Once Upon a Time in Hollywood\" sequel The post Timothy Olyphant Thought ‘Adventures of Cliff Booth’ Director David Fincher’s Many Takes Were ‘Unnecessary’ Power Move appeared first on TheWrap ."
         }
       ],
-      "ageMin": 310,
+      "ageMin": 340,
       "_cand": {
         "key": "rss:timothy-olyphant-thought-adventures-of-cliff-booth-director-",
         "popularity": 0,
@@ -205,76 +271,9 @@
       "tierClass": "C"
     },
     {
-      "id": "news-disney-layoffs-pixar-national-geographic",
-      "slug": "pixar-and-national-geographic-hit-in-latest-round-of-disney-layoffs",
-      "title": "Pixar and National Geographic Hit in Latest Round of Disney Layoffs",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "disney-layoffs-pixar-national-geographic",
-      "primaryKeyword": "disney layoffs",
-      "primaryEntity": "Disney",
-      "entities": [
-        "Pixar Short Films Collection: Volume 1",
-        "Pixar",
-        "National Geographic"
-      ],
-      "angle": "Layoffs hit major animation and documentary divisions at Disney.",
-      "tmdbType": "movie",
-      "source": "gnews:Los Angeles Times",
-      "sources": [
-        {
-          "outlet": "Los Angeles Times",
-          "tier": 7,
-          "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNOGh4MzdMX240QXc0ckpFSnFhc3pUeFBmaUdnUnc0UE80Q3VnbEtvVGl0YXNZRk82VW5LckRDcXFCN3ZiNmFNNTlaSXhDdVhJQ0tLUklKRWNJYzdKRjdaeU1scEdhTHhhbUxWc25xYWdoZjdpdU1PUlR1THhYbU9MdGM5VUEwZF9WRTdFOHhTN3RPTTR0dDVXR3NUZ0RXQXAtN3g1NVUwR1I2ZVhQYi1DQUU5NThmbXZwTUR3QXlrUVNWNFBMTnRNa09vRFo?oc=5",
-          "ageMin": 621,
-          "headline": "Pixar and National Geographic hit in latest round of Disney layoffs - Los Angeles Times",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMizAFBVV95cUxNOGh4MzdMX240QXc0ckpFSnFhc3pUeFBmaUdnUnc0UE80Q3VnbEtvVGl0YXNZRk82VW5LckRDcXFCN3ZiNmFNNTlaSXhDdVhJQ0tLUklKRWNJYzdKRjdaeU1scEdhTHhhbUxWc25xYWdoZjdpdU1PUlR1THhYbU9MdGM5VUEwZF9WRTdFOHhTN3RPTTR0dDVXR3NUZ0RXQXAtN3g1NVUwR1I2ZVhQYi1DQUU5NThmbXZwTUR"
-        }
-      ],
-      "ageMin": 621,
-      "_cand": {
-        "key": "rss:pixar-and-national-geographic-hit-in-latest-round-of-disney-",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Los Angeles Times"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Los Angeles Times",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 51,
-      "signals": {
-        "recency": 4,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 12,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
       "id": "news-jacob-elordi-euphoria-death-scene-final-season",
-      "slug": "jacob-elordi-on-filming-euphoria-death-scene-returning-for-final-seaso",
-      "title": "Jacob Elordi On Filming Euphoria Death Scene & Returning For Final Season: 'I Think Sam Brought Me Back To Torture Me'",
+      "slug": "jacob-elordi-on-filming-euphoria-death-scene-and-returning-for-final-s",
+      "title": "Jacob Elordi on Filming 'Euphoria' Death Scene and Returning for Final Season",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
@@ -282,13 +281,13 @@
       "eventType": "other",
       "sensitivity": "high",
       "eventSlug": "jacob-elordi-euphoria-death-scene-final-season",
-      "primaryKeyword": "Euphoria final season",
+      "primaryKeyword": "Euphoria death scene",
       "primaryEntity": "Euphoria",
       "entities": [
         "Jacob Elordi",
         "Sam Levinson"
       ],
-      "angle": "Jacob Elordi provides insight into filming his character's death scene in the final season of 'Euphoria' and his return to the show.",
+      "angle": "Jacob Elordi provides insight into filming his character's death scene in the final season of 'Euphoria' and his return for the last episodes.",
       "tmdbType": "movie",
       "source": "rss:Deadline",
       "sources": [
@@ -296,12 +295,12 @@
           "outlet": "Deadline",
           "tier": 7,
           "url": "https://deadline.com/2026/07/jacob-elordi-filming-euphoria-death-scene-final-season-1236999828/",
-          "ageMin": 291,
+          "ageMin": 321,
           "headline": "Jacob Elordi On Filming Euphoria Death Scene Returning For Final Season: I Think Sam Brought Me Back To Torture Me",
           "summary": "Jacob Elordi had a gruesome death on the final season of Euphoria and is giving insight into how that scene was shot. While making an appearance on ABC s Jimmy Kimmel Live!, Elordi had a mini Euphoria reunion with co-star Colman Domingo, who is guest-hosting the late-night talk show in Kimmel s absence. Domingo brought up his [ ]"
         }
       ],
-      "ageMin": 291,
+      "ageMin": 321,
       "_cand": {
         "key": "rss:jacob-elordi-on-filming-euphoria-death-scene-returning-for-f",
         "popularity": 0,
@@ -338,9 +337,141 @@
       "tierClass": "S"
     },
     {
-      "id": "news-sony-music-lawsuit-udio-ai-music-training",
-      "slug": "sony-music-files-another-lawsuit-against-ai-music-generator-udio",
-      "title": "Sony Music Files Another Lawsuit Against AI Music Generator Udio",
+      "id": "news-disney-layoffs-pixar-national-geographic",
+      "slug": "pixar-and-national-geographic-hit-in-latest-round-of-disney-layoffs",
+      "title": "Pixar and National Geographic Hit in Latest Round of Disney Layoffs",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "disney-layoffs-pixar-national-geographic",
+      "primaryKeyword": "disney layoffs",
+      "primaryEntity": "Disney",
+      "entities": [
+        "Pixar Short Films Collection: Volume 1",
+        "Pixar",
+        "National Geographic"
+      ],
+      "angle": "Disney's latest round of layoffs includes staff at Pixar and National Geographic.",
+      "tmdbType": "movie",
+      "source": "gnews:Los Angeles Times",
+      "sources": [
+        {
+          "outlet": "Los Angeles Times",
+          "tier": 7,
+          "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNOGh4MzdMX240QXc0ckpFSnFhc3pUeFBmaUdnUnc0UE80Q3VnbEtvVGl0YXNZRk82VW5LckRDcXFCN3ZiNmFNNTlaSXhDdVhJQ0tLUklKRWNJYzdKRjdaeU1scEdhTHhhbUxWc25xYWdoZjdpdU1PUlR1THhYbU9MdGM5VUEwZF9WRTdFOHhTN3RPTTR0dDVXR3NUZ0RXQXAtN3g1NVUwR1I2ZVhQYi1DQUU5NThmbXZwTUR3QXlrUVNWNFBMTnRNa09vRFo?oc=5",
+          "ageMin": 650,
+          "headline": "Pixar and National Geographic hit in latest round of Disney layoffs - Los Angeles Times",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMizAFBVV95cUxNOGh4MzdMX240QXc0ckpFSnFhc3pUeFBmaUdnUnc0UE80Q3VnbEtvVGl0YXNZRk82VW5LckRDcXFCN3ZiNmFNNTlaSXhDdVhJQ0tLUklKRWNJYzdKRjdaeU1scEdhTHhhbUxWc25xYWdoZjdpdU1PUlR1THhYbU9MdGM5VUEwZF9WRTdFOHhTN3RPTTR0dDVXR3NUZ0RXQXAtN3g1NVUwR1I2ZVhQYi1DQUU5NThmbXZwTUR"
+        }
+      ],
+      "ageMin": 650,
+      "_cand": {
+        "key": "rss:pixar-and-national-geographic-hit-in-latest-round-of-disney-",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Los Angeles Times"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Los Angeles Times",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 51,
+      "signals": {
+        "recency": 4,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 12,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-rebel-wilson-lawsuit",
+      "slug": "rebel-wilson-triumphs-in-explosive-court-battle-with-the-deb-co-star-c",
+      "title": "Rebel Wilson Triumphs In Explosive Court Battle With ‘The Deb Co-Star Charlotte MacInnes",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "lawsuit",
+      "sensitivity": "high",
+      "eventSlug": "rebel-wilson-lawsuit",
+      "primaryKeyword": "rebel wilson lawsuit",
+      "primaryEntity": "Rebel Wilson",
+      "entities": [
+        "The Deb"
+      ],
+      "angle": "Rebel Wilson wins defamation lawsuit against co-star.",
+      "tmdbType": "movie",
+      "source": "rss:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/rebel-wilson-wins-legal-battle-the-deb-charlotte-macinnes-1236999959/",
+          "ageMin": 16,
+          "headline": "Rebel Wilson Triumphs In Explosive Court Battle With ‘The Deb Co-Star Charlotte MacInnes",
+          "summary": "Rebel Wilson did not defame Charlotte MacInnes, the Australian actress who stars in her directorial debut The Deb, a Sydney court has ruled. After an explosive and often bitter court battle earlier this year, Wilson has emerged victorious, saying she was thankful that the dispute had concluded for now. There are numerous other legal fronts [ ]"
+        }
+      ],
+      "ageMin": 16,
+      "_cand": {
+        "key": "rss:rebel-wilson-triumphs-in-explosive-court-battle-with-the-deb",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 66,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 12,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "S"
+    },
+    {
+      "id": "news-sony-music-lawsuit-udio-ai-music-generator",
+      "slug": "sony-music-sues-ai-music-generator-udio-over-alleged-copyright-infring",
+      "title": "Sony Music Sues AI Music Generator Udio Over Alleged Copyright Infringement",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
@@ -348,8 +479,8 @@
       "eventType": "lawsuit",
       "sensitivity": "high",
       "tier": "popular",
-      "eventSlug": "sony-music-lawsuit-udio-ai-music-training",
-      "primaryKeyword": "Udio AI music lawsuit",
+      "eventSlug": "sony-music-lawsuit-udio-ai-music-generator",
+      "primaryKeyword": "Udio lawsuit",
       "primaryEntity": "Sony Music Entertainment",
       "entities": [
         "BEYONCÉ",
@@ -357,7 +488,7 @@
         "Beyoncé",
         "Harry Styles"
       ],
-      "angle": "Sony Music sues AI music generator Udio for allegedly training models on 30,000 copyrighted songs.",
+      "angle": "Sony Music Entertainment is suing AI music generator Udio for allegedly using 30,000 songs to train its models.",
       "tmdbType": "movie",
       "source": "rss:Variety",
       "sources": [
@@ -365,12 +496,12 @@
           "outlet": "Variety",
           "tier": 7,
           "url": "https://variety.com/2026/music/news/sony-music-new-lawsuit-udio-ai-music-generator-1236817746/",
-          "ageMin": 274,
+          "ageMin": 304,
           "headline": "Sony Music Files Another Lawsuit Against Udio, Alleges AI Music Generator Copied 30,000 Songs to Train Models",
           "summary": "Sony Music Entertainment has once again sued the AI music generator Udio, alleging the startup illegally copied more than 30,000 songs from the likes of Beyoncé, Harry Styles and Elvis Presley to train its models. Sony first brought lawsuits against Udio and its competitor Suno in June 2024 alongside labels Universal Music Group and Warner [ ]"
         }
       ],
-      "ageMin": 274,
+      "ageMin": 304,
       "_cand": {
         "key": "rss:sony-music-files-another-lawsuit-against-udio-alleges-ai-mus",
         "popularity": 0,
@@ -405,6 +536,74 @@
         "softTv": 0
       },
       "tierClass": "S"
+    },
+    {
+      "id": "news-paul-mccartney-ringo-starr-cameo-liverpool-tour",
+      "slug": "paul-mccartney-facetiming-ringo-starr-during-beatles-magical-mystery-t",
+      "title": "Paul McCartney Facetiming Ringo Starr During Beatles’ Magical Mystery Tour Is the Cameo of the Year",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "paul-mccartney-ringo-starr-cameo-liverpool-tour",
+      "primaryKeyword": "paul mccartney ringo starr",
+      "primaryEntity": "Paul McCartney",
+      "entities": [
+        "Ringo Starr",
+        "The Beatles",
+        "Magical Mystery Tour"
+      ],
+      "angle": "Paul McCartney facetimes Ringo Starr during a Liverpool tour stop.",
+      "tmdbType": "movie",
+      "source": "rss:Rolling Stone",
+      "sources": [
+        {
+          "outlet": "Rolling Stone",
+          "tier": 7,
+          "url": "https://www.rollingstone.com/music/music-news/paul-mccartney-facetimes-ringo-beatles-magical-mystery-tour-1235596950/",
+          "ageMin": 111,
+          "headline": "Paul McCartney Facetiming Ringo Starr During Beatles’ Magical Mystery Tour Is the Cameo of the Year",
+          "summary": "Lucky fans on the acclaimed Liverpool tour got the ultimate surprise from the icon this week"
+        }
+      ],
+      "ageMin": 111,
+      "_cand": {
+        "key": "rss:paul-mccartney-facetiming-ringo-starr-during-beatles-magical",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Rolling Stone"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Rolling Stone",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 51,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
     }
   ]
 }
