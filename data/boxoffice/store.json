@@ -1683,10 +1683,10 @@
    "eventSlug": "the-odyssey-bo-update-100m",
    "form": "BO-UPDATE",
    "reason": "consistency: metaTitle: headlines domestic while the title headlines other — the SERP promise must match the page",
-   "tries": 84,
-   "at": "2026-07-22T01:03:51.776Z",
+   "tries": 85,
+   "at": "2026-07-22T01:33:24.292Z",
    "dead": true,
-   "expiresAt": "2026-07-25T01:03:51.776Z"
+   "expiresAt": "2026-07-25T01:33:24.292Z"
   },
   {
    "key": "star-wars-the-mandalorian-and-grogu-bo-update-d59|BO-UPDATE",
@@ -1919,16 +1919,32 @@
    "reason": "words 74 < 180 (owner-set ~200-word minimum) | soft-floor humanVoice 4 < 5",
    "tries": 1,
    "at": "2026-07-22T01:08:33.772Z"
+  },
+  {
+   "key": "raw-trending-tv-w2026-07-19|TRENDING-TV",
+   "eventSlug": "raw-trending-tv-w2026-07-19",
+   "form": "TRENDING-TV",
+   "reason": "words 125 < 180 (owner-set ~200-word minimum)",
+   "tries": 1,
+   "at": "2026-07-22T01:36:58.641Z"
+  },
+  {
+   "key": "salish-jordan-matter-trending-tv-w2026-07-19|TRENDING-TV",
+   "eventSlug": "salish-jordan-matter-trending-tv-w2026-07-19",
+   "form": "TRENDING-TV",
+   "reason": "8 unverified claim(s) cut, unrecovered",
+   "tries": 1,
+   "at": "2026-07-22T01:38:07.697Z"
   }
  ],
- "zeroStreak": 10,
+ "zeroStreak": 11,
  "daySpend": {
   "laDay": "2026-07-21",
-  "usd": 0.90527
+  "usd": 0.94941
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1784682088155
+  "lastMs": 1784683891427
  },
  "lastAuditDay": "2026-07-21",
  "attempts": {
@@ -1966,7 +1982,9 @@
    "the get out": 1,
    "stop! that! train!": 1,
    "avatar: the last airbender": 1,
-   "worst neighbor ever": 1
+   "worst neighbor ever": 1,
+   "raw": 1,
+   "salish & jordan matter": 1
   }
  }
 }
