@@ -1697,10 +1697,10 @@
    "eventSlug": "the-odyssey-bo-update-100m",
    "form": "BO-UPDATE",
    "reason": "consistency: metaTitle: headlines domestic while the title headlines other — the SERP promise must match the page",
-   "tries": 89,
-   "at": "2026-07-22T03:34:34.716Z",
+   "tries": 90,
+   "at": "2026-07-22T04:03:37.083Z",
    "dead": true,
-   "expiresAt": "2026-07-25T03:34:34.716Z"
+   "expiresAt": "2026-07-25T04:03:37.083Z"
   },
   {
    "key": "star-wars-the-mandalorian-and-grogu-bo-update-d59|BO-UPDATE",
@@ -1874,9 +1874,11 @@
    "key": "joy-ride-netflix-top10-w2026-07-19|NETFLIX-TOP10",
    "eventSlug": "joy-ride-netflix-top10-w2026-07-19",
    "form": "NETFLIX-TOP10",
-   "reason": "words 151 < 180 (owner-set ~200-word minimum)",
-   "tries": 2,
-   "at": "2026-07-21T23:39:36.999Z"
+   "reason": "words 161 < 180 (owner-set ~200-word minimum)",
+   "tries": 3,
+   "at": "2026-07-22T04:06:16.687Z",
+   "dead": true,
+   "expiresAt": "2026-07-25T04:06:16.687Z"
   },
   {
    "key": "little-house-on-the-prairie-trending-tv-w2026-07-19|TRENDING-TV",
@@ -1922,9 +1924,9 @@
    "key": "avatar-the-last-airbender-trending-tv-w2026-07-19|TRENDING-TV",
    "eventSlug": "avatar-the-last-airbender-trending-tv-w2026-07-19",
    "form": "TRENDING-TV",
-   "reason": "words 98 < 180 (owner-set ~200-word minimum) | soft-floor engagement 4 < 5 | soft-floor humanVoice 3 < 5",
-   "tries": 1,
-   "at": "2026-07-22T00:11:06.644Z"
+   "reason": "words 97 < 180 (owner-set ~200-word minimum) | soft-floor humanVoice 4 < 5",
+   "tries": 2,
+   "at": "2026-07-22T04:08:46.520Z"
   },
   {
    "key": "worst-neighbor-ever-trending-tv-w2026-07-19|TRENDING-TV",
@@ -1967,14 +1969,14 @@
    "at": "2026-07-22T03:39:47.465Z"
   }
  ],
- "zeroStreak": 3,
+ "zeroStreak": 4,
  "daySpend": {
   "laDay": "2026-07-21",
-  "usd": 1.10055
+  "usd": 1.14091
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1784691090398
+  "lastMs": 1784692894229
  },
  "lastAuditDay": "2026-07-21",
  "attempts": {
@@ -2005,13 +2007,13 @@
    "meg 2: the trench": 1,
    "kpop demon hunters": 3,
    "death on the nile": 3,
-   "joy ride": 2,
+   "joy ride": 3,
    "little house on the prairie": 2,
    "i will find you": 2,
    "the hawk": 2,
    "the get out": 1,
    "stop! that! train!": 1,
-   "avatar: the last airbender": 1,
+   "avatar: the last airbender": 2,
    "worst neighbor ever": 1,
    "raw": 1,
    "salish & jordan matter": 1,
