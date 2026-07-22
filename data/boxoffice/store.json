@@ -768,6 +768,20 @@
    "headlineNumberRaw": null,
    "filmKey": "salish & jordan matter",
    "chartDate": null
+  },
+  {
+   "key": "moana-bo-update-d11|BO-UPDATE",
+   "at": "2026-07-22T07:35:06.097Z",
+   "eventSlug": "moana-bo-update-d11",
+   "form": "BO-UPDATE",
+   "slug": "moana-box-office-day-11-adds-2-2-million-as-domestic-total-hits-83-2-million",
+   "title": "Moana and Dwayne Johnson's Maui Launch with $83M — But Can a $250M Disney Remake Recover?",
+   "film": "Moana",
+   "tmdbId": null,
+   "eventType": "boxoffice",
+   "headlineNumberRaw": 83239043,
+   "filmKey": "moana",
+   "chartDate": null
   }
  ],
  "parked": [
@@ -1711,10 +1725,10 @@
    "eventSlug": "the-odyssey-bo-update-100m",
    "form": "BO-UPDATE",
    "reason": "1 unverified claim(s) cut, unrecovered",
-   "tries": 96,
-   "at": "2026-07-22T07:13:51.915Z",
+   "tries": 97,
+   "at": "2026-07-22T07:32:39.560Z",
    "dead": true,
-   "expiresAt": "2026-07-25T07:13:51.915Z"
+   "expiresAt": "2026-07-25T07:32:39.560Z"
   },
   {
    "key": "star-wars-the-mandalorian-and-grogu-bo-update-d59|BO-UPDATE",
@@ -1999,16 +2013,32 @@
    "reason": "words 161 < 180 (owner-set ~200-word minimum)",
    "tries": 1,
    "at": "2026-07-22T07:12:20.114Z"
+  },
+  {
+   "key": "minions-monsters-bo-update-d20|BO-UPDATE",
+   "eventSlug": "minions-monsters-bo-update-d20",
+   "form": "BO-UPDATE",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "tries": 1,
+   "at": "2026-07-22T07:37:33.875Z"
+  },
+  {
+   "key": "toy-story-5-bo-update-d32|BO-UPDATE",
+   "eventSlug": "toy-story-5-bo-update-d32",
+   "form": "BO-UPDATE",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "tries": 1,
+   "at": "2026-07-22T07:38:50.614Z"
   }
  ],
- "zeroStreak": 3,
+ "zeroStreak": 0,
  "daySpend": {
   "laDay": "2026-07-22",
-  "usd": 0.05886
+  "usd": 0.06499
  },
  "pace": {
-  "tokens": 3.19863976984127,
-  "lastMs": 1784703664780
+  "tokens": 2.2559225317460316,
+  "lastMs": 1784705469187
  },
  "lastAuditDay": "2026-07-22",
  "attempts": {

@@ -1,0 +1,100 @@
+{
+ "runId": "run-2026-07-22T07-31-09",
+ "mode": "live",
+ "startedAt": "2026-07-22T07:31:09.187Z",
+ "films": 39,
+ "published": [
+  {
+   "tag": "moana-bo-update×BO-UPDATE",
+   "slug": "moana-box-office-day-11-adds-2-2-million-as-domestic-total-hits-83-2-million",
+   "path": "/home/runner/work/thescreenreport/thescreenreport/content/articles/moana-box-office-day-11-adds-2-2-million-as-domestic-total-hits-83-2-million.md",
+   "score": 80
+  }
+ ],
+ "held": [
+  {
+   "tag": "the-odyssey-bo-update×BO-UPDATE",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "score": 50
+  },
+  {
+   "tag": "minions-monsters-bo-update×BO-UPDATE",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "score": 50
+  },
+  {
+   "tag": "toy-story-5-bo-update×BO-UPDATE",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "score": 50
+  }
+ ],
+ "rejected": [],
+ "skipped": [],
+ "blocked": [],
+ "paced": {
+  "tokens": 3.26,
+  "behind": true,
+  "expected": 15.43,
+  "allow": 2
+ },
+ "attemptCapHit": 4,
+ "zeroStreak": 0,
+ "daySpend": {
+  "laDay": "2026-07-22",
+  "usd": 0.06499
+ },
+ "faults": {
+  "count": 1,
+  "bySeverity": {
+   "critical": 1
+  },
+  "faults": [
+   {
+    "stage": "model:gatherer",
+    "message": "all models failed (google/gemini-2.5-flash-lite, openai/gpt-5-nano): empty completion",
+    "severity": "critical",
+    "at": "2026-07-22T07:36:57.035Z"
+   }
+  ]
+ },
+ "degraded": true,
+ "finishedAt": "2026-07-22T07:38:50.617Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3663,
+    "out": 628,
+    "usd": 0.00022,
+    "ms": 2543
+   },
+   "gatherer": {
+    "calls": 5,
+    "errors": 2,
+    "in": 10248,
+    "out": 612,
+    "usd": 0.00127,
+    "ms": 3641
+   },
+   "synthesizer": {
+    "calls": 5,
+    "errors": 1,
+    "in": 2890,
+    "out": 2255,
+    "usd": 0.00064,
+    "ms": 35741
+   },
+   "writerChart": {
+    "calls": 4,
+    "errors": 0,
+    "in": 7982,
+    "out": 3928,
+    "usd": 0.00318,
+    "ms": 124548
+   }
+  },
+  "totalUsd": 0.0053
+ },
+ "openrouterTotalUsd": 0.00613
+}
