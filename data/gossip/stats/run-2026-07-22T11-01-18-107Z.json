@@ -1,0 +1,145 @@
+{
+  "ts": "2026-07-22T11:01:18.107Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "kelly-clarkson-jokes-about-a-bridesmaids-level-bathroom-emergency-in-vegas",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [
+        "metaDescription-soft:logged"
+      ],
+      "headline": [
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 1
+    }
+  ],
+  "topics": 1,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 0,
+  "costUSD": 0.017988,
+  "costPerPublished": 0.017988,
+  "byModel": {
+    "deepseek/deepseek-v3.2": {
+      "calls": 7,
+      "in": 18223,
+      "out": 5224,
+      "usd": 0.00819525725
+    },
+    "google/gemini-2.5-flash": {
+      "calls": 7,
+      "in": 14653,
+      "out": 1814,
+      "usd": 0.0089309
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 1079,
+      "out": 397,
+      "usd": 0.00026222
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 5,
+      "in": 3733,
+      "out": 566,
+      "usd": 0.0005997
+    }
+  },
+  "byRole": {
+    "dedup": {
+      "calls": 1,
+      "errors": 0,
+      "in": 279,
+      "out": 19,
+      "usd": 0.00007062999999999999,
+      "ms": 378
+    },
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2453,
+      "out": 182,
+      "usd": 0.0011909000000000002,
+      "ms": 2651
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1079,
+      "out": 397,
+      "usd": 0.00016857,
+      "ms": 4734
+    },
+    "writer": {
+      "calls": 5,
+      "errors": 0,
+      "in": 17154,
+      "out": 4895,
+      "usd": 0.00560972,
+      "ms": 138640
+    },
+    "verify": {
+      "calls": 6,
+      "errors": 0,
+      "in": 12200,
+      "out": 1632,
+      "usd": 0.00774,
+      "ms": 10698
+    },
+    "judge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1590,
+      "out": 284,
+      "usd": 0.0002726,
+      "ms": 1463
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 790,
+      "out": 310,
+      "usd": 0.00028710000000000004,
+      "ms": 32459
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 391,
+      "out": 140,
+      "usd": 0.0000951,
+      "ms": 711
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 195,
+      "out": 58,
+      "usd": 0.0000427,
+      "ms": 657
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1557,
+      "out": 84,
+      "usd": 0.00018930000000000002,
+      "ms": 2583
+    },
+    "linker": {
+      "calls": 1,
+      "errors": 1,
+      "in": 0,
+      "out": 0,
+      "usd": 0,
+      "ms": 1962
+    }
+  }
+}
