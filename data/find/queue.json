@@ -1,325 +1,78 @@
 {
-  "runId": "run-2026-07-22T18-31-06",
-  "builtAt": "2026-07-22T18:33:07.773Z",
-  "count": 34,
+  "runId": "run-2026-07-22T19-31-06",
+  "builtAt": "2026-07-22T19:32:39.884Z",
+  "count": 29,
   "topics": [
     {
-      "id": "news-glen-powell-richard-linklater-lou-gehrig-biopic",
-      "slug": "glen-powell-and-richard-linklater-reteam-for-lou-gehrig-biopic-at-univ",
-      "title": "Glen Powell and Richard Linklater Reteam for Lou Gehrig Biopic at Universal",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "glen-powell-richard-linklater-lou-gehrig-biopic",
-      "primaryKeyword": "lou gehrig biopic",
-      "primaryEntity": "Lou Gehrig Biopic (film)",
-      "entities": [
-        "Glen Powell",
-        "Richard Linklater",
-        "Simon Rich",
-        "Lorne Michaels"
-      ],
-      "angle": "Glen Powell and director Richard Linklater are reteaming for a Lou Gehrig biopic at Universal.",
-      "tmdbType": "movie",
-      "source": "rss:TheWrap",
-      "sources": [
-        {
-          "outlet": "TheWrap",
-          "tier": 7,
-          "url": "https://www.thewrap.com/creative-content/movies/glen-powell-richard-linklater-lou-gehrig-biopic-universal/",
-          "ageMin": 57,
-          "headline": "Glen Powell and Richard Linklater Reteam for Lou Gehrig Biopic at Universal",
-          "summary": "Simon Rich will write the project and Lorne Michaels will produce The post Glen Powell and Richard Linklater Reteam for Lou Gehrig Biopic at Universal appeared first on TheWrap ."
-        },
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/film/news/glen-powell-richard-linklater-lou-gehrig-biopic-lorne-michaels-1236818235/",
-          "ageMin": 108,
-          "headline": "Glen Powell, Richard Linklater Teaming Up for Lou Gehrig Biopic, Lorne Michaels Producing",
-          "summary": "Richard Linklater and Glen Powell are re-teaming to take on the Pride of the Yankees. The pair, who previously collaborated on Hit Man and Everybody Wants Some, will join forces on an untitled Lou Gehrig film for Universal Pictures. Gehrig is a Hall of Famer whose durability and endurance on the field (he played for a then-record 2,130 consecutive [ ]"
-        }
-      ],
-      "ageMin": 57,
-      "_cand": {
-        "key": "rss:glen-powell-and-richard-linklater-reteam-for-lou-gehrig-biop",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 2,
-      "verification": {
-        "tier1Count": 2,
-        "tier1Owners": 2,
-        "outletCount": 2,
-        "outlets": [
-          "TheWrap",
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": null,
-        "framing": "plain",
-        "status": "CONFIRMED",
-        "publishable": true
-      },
-      "priority": 113,
-      "signals": {
-        "recency": 24,
-        "corroboration": 18,
-        "status": 25,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 8,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-benicio-del-toro-ben-stiller-protective-custody-casting",
-      "slug": "benicio-del-toro-joins-ben-stiller-in-apple-tv-comedy-series-protectiv",
-      "title": "Benicio Del Toro Joins Ben Stiller in Apple TV Comedy Series Protective Custody",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "benicio-del-toro-ben-stiller-protective-custody-casting",
-      "primaryKeyword": "protective custody apple tv",
-      "primaryEntity": "Protective Custody (TV series)",
-      "entities": [
-        "Benicio del Toro",
-        "Benicio Del Toro",
-        "Ben Stiller",
-        "Apple TV+"
-      ],
-      "angle": "Benicio Del Toro joins Ben Stiller in Apple TV+ comedy series 'Protective Custody'.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/tv/news/benicio-del-toro-ben-stiller-apple-protective-custody-1236818184/",
-          "ageMin": 91,
-          "headline": "Benicio Del Toro Joins Ben Stiller in Apple TV Comedy Protective Custody",
-          "summary": "Benicio Del Toro is set for a lead role opposite Ben Stiller in the upcoming Apple TV comedy series Protective Custody, Variety has learned. The show was originally announced in May with Stiller attached to star and executive produce. It marks the first lead series comedy role of Del Toro s career as well as a [ ]"
-        },
-        {
-          "outlet": "TheWrap",
-          "tier": 7,
-          "url": "https://www.thewrap.com/media-platforms/tv/benicio-del-toro-apple-tv-protective-custody/",
-          "ageMin": 91,
-          "headline": "Benicio del Toro Joins Ben Stiller in Apple Comedy Series Protective Custody",
-          "summary": "The comedy series comes from Mike Judge, Steve Hely and Dave King The post Benicio del Toro Joins Ben Stiller in Apple Comedy Series Protective Custody appeared first on TheWrap ."
-        },
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/tv/tv-news/benicio-del-toro-first-comedy-series-starring-role-apple-tv-1236653968/",
-          "ageMin": 91,
-          "headline": "Benicio Del Toro to Star in Ben Stiller-Mike Judge Comedy Series Protective Custody at Apple TV",
-          "summary": "Stiller will star in and executive produce the show, which also hails from Steve Hely and Dave King."
-        }
-      ],
-      "ageMin": 91,
-      "_cand": {
-        "key": "rss:benicio-del-toro-joins-ben-stiller-in-apple-tv-comedy-protec",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 3,
-      "verification": {
-        "tier1Count": 3,
-        "tier1Owners": 2,
-        "outletCount": 3,
-        "outlets": [
-          "Variety",
-          "TheWrap",
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": null,
-        "framing": "plain",
-        "status": "CONFIRMED",
-        "publishable": true
-      },
-      "priority": 112,
-      "signals": {
-        "recency": 16,
-        "corroboration": 24,
-        "status": 25,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 15,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "A"
-    },
-    {
-      "id": "news-sacha-baron-cohen-ali-g-movie-who-iz-i-announced",
-      "slug": "sacha-baron-cohen-s-secret-ali-g-movie-who-iz-i-sets-fall-release",
-      "title": "Sacha Baron Cohen's Secret Ali G Movie 'Who Iz I?' Sets Fall Release",
+      "id": "news-sony-pictures-circling-ridley-scott-hugh-jackman-treasure-island",
+      "slug": "sony-pictures-circling-ridley-scott-s-treasure-island-package-starring",
+      "title": "Sony Pictures Circling Ridley Scott’s Treasure Island Package Starring Hugh Jackman",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "sacha-baron-cohen-ali-g-movie-who-iz-i-announced",
-      "primaryKeyword": "ali g movie",
-      "primaryEntity": "Ali G: Who Iz I? (film)",
+      "sensitivity": "high",
+      "eventSlug": "sony-pictures-circling-ridley-scott-hugh-jackman-treasure-island",
+      "primaryKeyword": "ridley scott treasure island",
+      "primaryEntity": "Treasure Island",
       "entities": [
-        "Sacha Baron Cohen",
-        "Amazon MGM Studios"
+        "Treasure Island (film)",
+        "Ridley Scott",
+        "Hugh Jackman",
+        "Sony Pictures"
       ],
-      "angle": "Sacha Baron Cohen is reviving his iconic Ali G character for a new movie titled 'Who Iz I?', set for an October release.",
+      "angle": "Sony Pictures is in talks to acquire Ridley Scott's Treasure Island package starring Hugh Jackman.",
       "tmdbType": "movie",
-      "source": "rss:THR",
+      "source": "rss:Deadline",
       "sources": [
         {
-          "outlet": "THR",
+          "outlet": "Deadline",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/sacha-baron-cohen-ali-g-movie-release-amazon-mgm-1236654144/",
-          "ageMin": 51,
-          "headline": "Sacha Baron Cohen s Secret Ali G Movie Sets Fall Release",
-          "summary": "The star revives the satirical character for Amazon MGM Studios' feature 'Who Iz I?'"
-        },
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/film/news/sacha-baron-cohen-ali-g-movie-release-date-1236818332/",
-          "ageMin": 55,
-          "headline": "Sacha Baron Cohen s Ali G: Who Iz I? Sets October Release From Amazon MGM",
-          "summary": "Sacha Baron Cohen s secret Ali G movie, titled Ali G: Who Iz I? , has been officially unveiled by the comedian and Amazon MGM Studios. It will release in theaters Oct. 23. Cohen directed the movie, marking his feature directorial debut. Cohen posted a video in on his Instagram, fully in character as Ali G, announcing [ ]"
+          "url": "https://deadline.com/2026/07/sony-ridley-scott-treasure-island-hugh-jackman-1237000487/",
+          "ageMin": 1,
+          "headline": "Sony Pictures Circling Ridley Scott s Treasure Island Package Starring Hugh Jackman",
+          "summary": "EXCLUSIVE: After setting sell with their hot Treasure Island package last month, Ridley Scott and Hugh Jackman look to have found the film a place to call home as sources tell Deadline Sony Pictures is in negotiations to land the project with Scott directing and Jackman on board to play the pirate Blackbeard. Jack Thorne [ ]"
         }
       ],
-      "ageMin": 51,
+      "ageMin": 1,
       "_cand": {
-        "key": "rss:sacha-baron-cohen-s-secret-ali-g-movie-sets-fall-release",
+        "key": "rss:sony-pictures-circling-ridley-scott-s-treasure-island-packag",
         "popularity": 0,
         "kind": "rss-news"
       },
-      "corroborationCount": 2,
+      "corroborationCount": 1,
       "verification": {
-        "tier1Count": 2,
+        "tier1Count": 1,
         "tier1Owners": 1,
-        "outletCount": 2,
+        "outletCount": 1,
         "outlets": [
-          "THR",
-          "Variety"
+          "Deadline"
         ],
         "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
+        "sensitivity": "high",
+        "attribution": "Deadline",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 101,
+      "priority": 93,
       "signals": {
-        "recency": 24,
-        "corroboration": 18,
+        "recency": 30,
+        "corroboration": 12,
         "status": 18,
         "type": 9,
         "pop": 0,
         "breakout": 0,
         "big": 24,
-        "trending": 8,
+        "trending": 0,
         "spice": 0,
         "softTv": 0
       },
-      "tierClass": "B"
+      "tierClass": "S"
     },
     {
-      "id": "news-family-guy-stewie-spinoff-adds-cast",
-      "slug": "family-guy-spinoff-stewie-adds-six-to-cast-including-kenan-thompson-an",
-      "title": "Family Guy Spinoff Stewie Adds Six to Cast, Including Kenan Thompson and Vanessa Bayer",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "family-guy-stewie-spinoff-adds-cast",
-      "primaryKeyword": "family guy spinoff",
-      "primaryEntity": "Family Guy Presents: Blue Harvest",
-      "entities": [
-        "Family Guy",
-        "Stewie",
-        "Kenan Thompson",
-        "Vanessa Bayer"
-      ],
-      "angle": "Kenan Thompson and Vanessa Bayer join the voice cast of the upcoming Family Guy spinoff focused on Stewie.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/tv/news/family-guy-spinoff-stewie-cast-kenan-thompson-vanessa-bayer-1236818364/",
-          "ageMin": 26,
-          "headline": "Family Guy Spinoff Stewie Adds Six to Cast, Including Kenan Thompson and Vanessa Bayer",
-          "summary": "The upcoming Family Guy spinoff focused on Stewie Griffin is building out its voice cast. Variety has confirmed that, in addition to Seth MacFarlane as Stewie, Family Guy mainstay Mike Henry will also lend his voice to the show, as will Kenan Thompson, Vanessa Bayer, Melissa O’Neil, Aaron Lee, and Jessica Lowe. Stewie was originally [ ]"
-        },
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/family-guy-spinoff-stewie-voice-cast-kenan-thompson-1236999895/",
-          "ageMin": 31,
-          "headline": "Stewie Voice Cast Set: Kenan Thompson, Vanessa Bayer, Melissa O’Neil, Mike Henry More Join Seth MacFarlane In Family Guy Spinoff",
-          "summary": "EXCLUSIVE: Fox, Hulu and 20th Television Animation have assembled the voice cast of the upcoming Family Guy spinoff Stewie, which includes titular star Seth MacFarlane pulling a double voiceover duty and Mike Henry voicing someone related to one of his signature Family Guy characters. SNL-ers Kenan Thompson and Vanessa Bayer, The Rookie star Melissa O’Neil, [ ]"
-        }
-      ],
-      "ageMin": 26,
-      "_cand": {
-        "key": "rss:family-guy-spinoff-stewie-adds-six-to-cast-including-kenan-t",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 2,
-      "verification": {
-        "tier1Count": 2,
-        "tier1Owners": 1,
-        "outletCount": 2,
-        "outlets": [
-          "Variety",
-          "Deadline"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 100,
-      "signals": {
-        "recency": 24,
-        "corroboration": 18,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 8,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-jonathan-levine-days-of-thunder-2-director",
+      "id": "news-days-of-thunder-2-film-casting",
       "slug": "days-of-thunder-2-jonathan-levine-in-talks-to-direct-tom-cruise-in-par",
       "title": "Days of Thunder 2 : Jonathan Levine in Talks to Direct Tom Cruise in Paramount Sequel",
       "contentType": "news",
@@ -328,15 +81,15 @@
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "jonathan-levine-days-of-thunder-2-director",
-      "primaryKeyword": "days of thunder 2",
-      "primaryEntity": "Days of Thunder 2",
+      "eventSlug": "days-of-thunder-2-film-casting",
+      "primaryKeyword": "Days of Thunder 2",
+      "primaryEntity": "Days of Thunder 2 (film)",
       "entities": [
         "Jonathan Levine",
         "Tom Cruise",
         "Paramount"
       ],
-      "angle": "Jonathan Levine in talks to direct Tom Cruise in Paramount's 'Days of Thunder' sequel.",
+      "angle": "Jonathan Levine is in talks to direct Tom Cruise in Paramount's sequel to Days of Thunder.",
       "tmdbType": "movie",
       "source": "rss:Variety",
       "sources": [
@@ -344,438 +97,28 @@
           "outlet": "Variety",
           "tier": 7,
           "url": "https://variety.com/2026/film/news/days-of-thunder-2-jonathan-levine-tom-cruise-paramount-sequel-1236818265/",
-          "ageMin": 92,
+          "ageMin": 152,
           "headline": "Days of Thunder 2 : Jonathan Levine in Talks to Direct Tom Cruise in Paramount Sequel",
           "summary": "Paramount s Days of Thunder sequel is shaping up with Jonathan Levine ( 50/50, Warm Bodies ) in negotiations to direct returning star Tom Cruise. Cruise will also produce the film alongside Jerry Bruckheimer, who produced the original 1990 racing drama. Will Staples wrote the script for the sequel. Days of Thunder was directed by the late Tony [ ]"
-        },
-        {
-          "outlet": "The Hollywood Reporter",
-          "tier": 7,
-          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPRnFDMG1vdXIwNnJCX3p0WUJCM1A0NFNXRnRUY3EtWWN0Yi1mZDJ2djl2YndleDZTZ19hM2dKamJHVENRdzhxUVotUVRUU1JJUGxENzZNT0VONVZQYnNvS2R3TmhmcmJHaVlyRjZhRV9oVTZtNngyeUZOamNSZi14Y3pjMlZrMExRVVIta2w4UllsRy1jeXJtQnk5SGV5WklqNExyOHJDLWRGSFJjM3ZWbjUwWFNUUQ?oc=5",
-          "ageMin": 115,
-          "headline": "‘Days of Thunder 2’: Jonathan Levine in Talks to Direct Tom Cruise in Paramount’s Racing Sequel (Exclusive) - The Hollywood Reporter",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxPRnFDMG1vdXIwNnJCX3p0WUJCM1A0NFNXRnRUY3EtWWN0Yi1mZDJ2djl2YndleDZTZ19hM2dKamJHVENRdzhxUVotUVRUU1JJUGxENzZNT0VONVZQYnNvS2R3TmhmcmJHaVlyRjZhRV9oVTZtNngyeUZOamNSZi14Y3pjMlZrMExRVVIta2w4UllsRy1jeXJtQnk5SGV5WklqNExyOHJDLWRGSFJjM3ZWbjUwWFNUUQ?oc=5"
         }
       ],
-      "ageMin": 92,
+      "ageMin": 152,
       "_cand": {
         "key": "rss:days-of-thunder-2-jonathan-levine-in-talks-to-direct-tom-cru",
         "popularity": 0,
         "kind": "rss-news"
       },
-      "corroborationCount": 2,
+      "corroborationCount": 1,
       "verification": {
-        "tier1Count": 2,
+        "tier1Count": 1,
         "tier1Owners": 1,
-        "outletCount": 2,
+        "outletCount": 1,
         "outlets": [
-          "Variety",
-          "The Hollywood Reporter"
+          "Variety"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
         "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 98,
-      "signals": {
-        "recency": 16,
-        "corroboration": 18,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 8,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-reed-birney-blue-film-role",
-      "slug": "reed-birney-was-in-all-your-favorite-tv-shows-then-came-the-year-s-mos",
-      "title": "Reed Birney Was in All Your Favorite TV Shows. Then Came the Year’s Most Shocking Role",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "reed-birney-blue-film-role",
-      "primaryKeyword": "Reed Birney Blue Film",
-      "primaryEntity": "Reed Birney",
-      "entities": [
-        "Blue Film"
-      ],
-      "angle": "Actor Reed Birney discusses his challenging role in the drama 'Blue Film'.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-features/reed-birney-blue-film-feature-1236653955/",
-          "ageMin": 32,
-          "headline": "Reed Birney Was in All Your Favorite TV Shows. Then Came the Year’s Most Shocking Role",
-          "summary": "The Tony winner and Gotham nominee, known for recurring on ‘House of Cards’ and ‘Gossip Girl,’ took a massive risk with the pedophile-centered drama ’Blue Film.’ He’s still processing the reactions."
-        }
-      ],
-      "ageMin": 32,
-      "_cand": {
-        "key": "rss:reed-birney-was-in-all-your-favorite-tv-shows-then-came-the-",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 92,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-king-of-the-hill-hope-for-america",
-      "slug": "in-king-of-the-hill-mike-judge-finds-hope-for-america",
-      "title": "In King of the Hill, Mike Judge Finds Hope for America",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "king-of-the-hill-hope-for-america",
-      "primaryKeyword": "king of the hill",
-      "primaryEntity": "King of the Hill",
-      "entities": [
-        "Mike Judge"
-      ],
-      "angle": "Mike Judge discusses how 'King of the Hill' finds hope for America outside of culture wars.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/tv/tv-features/king-of-the-hill-mike-judge-season-15-hulu-animation-1236652919/",
-          "ageMin": 12,
-          "headline": "In King of the Hill, Mike Judge Finds Hope for America",
-          "summary": "The animated lives of Hank, Penny and Bobby Hill depict a United States that exists in a world outside the culture wars: \"It would be hard to outdo, to out-extreme, to out-satirize political life these days.\""
-        }
-      ],
-      "ageMin": 12,
-      "_cand": {
-        "key": "rss:in-king-of-the-hill-mike-judge-finds-hope-for-america",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 81,
-      "signals": {
-        "recency": 30,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 6,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0,
-        "radar": 10
-      },
-      "radarKind": "tv-trending",
-      "tierClass": "A"
-    },
-    {
-      "id": "news-ali-g-who-iz-i-movie-announced",
-      "slug": "sacha-baron-cohen-s-secret-ali-g-movie-titled-ali-g-who-iz-i-set-for-o",
-      "title": "Sacha Baron Cohen's Secret Ali G Movie Titled 'Ali G: Who Iz I?', Set for October Release",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "ali-g-who-iz-i-movie-announced",
-      "primaryKeyword": "ali g movie",
-      "primaryEntity": "Ali G: Who Iz I?",
-      "entities": [
-        "Sacha Baron Cohen",
-        "Amazon MGM Studios"
-      ],
-      "angle": "Sacha Baron Cohen's secret Ali G movie gets a title and release date.",
-      "tmdbType": "movie",
-      "source": "rss:Deadline",
-      "sources": [
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/ali-g-secret-movie-title-release-date-sacha-baron-cohen-1237000447/",
-          "ageMin": 60,
-          "headline": "Sacha Baron Cohen Secret Movie Unveiled: Ali G: Who Iz I? Hitting Theaters In October From Amazon MGM Studios",
-          "summary": "The secret Sacha Baron Cohen Ali G movie has been titled, now known as Ali G: Who Iz I?, and it s being released in theaters by Amazon MGM Studios on October 23. The pic reps Cohen s feature directorial debut. Watch the announcement video below. Good news for cinemas: It s another wide theatrical release this fall [ ]"
-        }
-      ],
-      "ageMin": 60,
-      "_cand": {
-        "key": "rss:sacha-baron-cohen-secret-movie-unveiled-ali-g-who-iz-i-hitti",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Deadline"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Deadline",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 87,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "music-news-cameron-whitcomb-kingdom-of-fear-tour",
-      "slug": "country-up-and-comer-of-the-month-cameron-whitcomb-talks-new-hit-kingd",
-      "title": "Country Up-And-Comer of the Month Cameron Whitcomb Talks New Hit ‘Kingdom of Fear Journey From American Idol to Winning CCMA Awards",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "cameron-whitcomb-kingdom-of-fear-tour",
-      "primaryKeyword": "cameron whitcomb tour",
-      "primaryEntity": "Cameron Whitcomb",
-      "entities": [
-        "Kingdom of Fear Tour",
-        "American Idol",
-        "CCMA Awards"
-      ],
-      "angle": "Country artist Cameron Whitcomb announces his 'Kingdom of Fear' tour following his first Billboard Hot 100 entry.",
-      "tmdbType": "movie",
-      "source": "rss:Billboard",
-      "sources": [
-        {
-          "outlet": "Billboard",
-          "tier": 7,
-          "url": "https://www.billboard.com/music/country/up-and-coming-country-artist-cameron-whitcomb-july-2026-1236300763/",
-          "ageMin": 17,
-          "headline": "Country Up-And-Comer of the Month Cameron Whitcomb Talks New Hit ‘Kingdom of Fear Journey From American Idol to Winning CCMA Awards",
-          "summary": "After scoring his first Billboard Hot 100 entry, Whitcomb will soon embark on his Kingdom of Fear Tour."
-        }
-      ],
-      "ageMin": 17,
-      "_cand": {
-        "key": "rss:country-up-and-comer-of-the-month-cameron-whitcomb-talks-new",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Billboard"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Billboard",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 63,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-rei-ami-ken-jeong-shark-week",
-      "slug": "rei-ami-and-ken-jeong-dive-into-shark-week",
-      "title": "Rei Ami and Ken Jeong Dive Into 'Shark Week'",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "rei-ami-ken-jeong-shark-week",
-      "primaryKeyword": "Rei Ami Shark Week",
-      "primaryEntity": "Shark Week",
-      "entities": [
-        "Arthur the King",
-        "Rei Ami",
-        "Ken Jeong"
-      ],
-      "angle": "Musician Rei Ami and actor Ken Jeong are set to appear on Discovery's 'Shark Week'.",
-      "tmdbType": "movie",
-      "source": "gnews:AP News",
-      "sources": [
-        {
-          "outlet": "AP News",
-          "tier": 8,
-          "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPWHdvTFFNTW4xNE5XckNPQ1FUVjUzeDFuODF6NFp0VnVyMGdJa2drOVJxXzZOQ2gzYlB0WC1OZ2IwTEFoZTFscmZfbktyY0hMc1ZuV3pHOFkwMnFnNWJoVEVmUnhIS1FpU21zeVpKcXFMNVl3b0lwajFaRW84NjNzcg?oc=5",
-          "ageMin": 92,
-          "headline": "Rei Ami from 'KPop Demon Hunters' and comedian Ken Jeong take a bite out of 'Shark Week' - AP News",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMigAFBVV95cUxPWHdvTFFNTW4xNE5XckNPQ1FUVjUzeDFuODF6NFp0VnVyMGdJa2drOVJxXzZOQ2gzYlB0WC1OZ2IwTEFoZTFscmZfbktyY0hMc1ZuV3pHOFkwMnFnNWJoVEVmUnhIS1FpU21zeVpKcXFMNVl3b0lwajFaRW84NjNzcg?oc=5\" target=\"_blank\" Rei Ami from 'KPop Demon Hunters' and comedian Ken Jeo"
-        }
-      ],
-      "ageMin": 92,
-      "_cand": {
-        "key": "rss:rei-ami-from-kpop-demon-hunters-and-comedian-ken-jeong-take-",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "AP News"
-        ],
-        "maxTier": 8,
-        "sensitivity": "normal",
-        "attribution": "AP News",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 80,
-      "signals": {
-        "recency": 16,
-        "corroboration": 14,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-glen-powell-lou-gehrig-movie",
-      "slug": "glen-powell-to-star-in-richard-linklater-s-lou-gehrig-movie-from-produ",
-      "title": "Glen Powell to Star in Richard Linklater s Lou Gehrig Movie From Producer Lorne Michaels",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "glen-powell-lou-gehrig-movie",
-      "primaryKeyword": "glen powell lou gehrig",
-      "primaryEntity": "Lou Gehrig",
-      "entities": [
-        "Glen Powell",
-        "Richard Linklater",
-        "Simon Rich",
-        "Lorne Michaels"
-      ],
-      "angle": "Glen Powell will star as Lou Gehrig in a new biopic directed by Richard Linklater.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/glen-powell-lou-gehrig-richard-linklater-lorne-michaels-1236654085/",
-          "ageMin": 74,
-          "headline": "Glen Powell to Star in Richard Linklater s Lou Gehrig Movie From Producer Lorne Michaels",
-          "summary": "Simon Rich is penning the script for the Universal feature that will focus on the late Yankees legend."
-        }
-      ],
-      "ageMin": 74,
-      "_cand": {
-        "key": "rss:glen-powell-to-star-in-richard-linklater-s-lou-gehrig-movie-",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -796,7 +139,210 @@
       "tierClass": "B"
     },
     {
-      "id": "news-kenneth-branagh-laird-paramount-plus-series",
+      "id": "news-stewie-family-guy-spinoff-voice-cast",
+      "slug": "kenan-thompson-vanessa-bayer-among-voice-cast-for-family-guy-spinoff-s",
+      "title": "Kenan Thompson, Vanessa Bayer Among Voice Cast for 'Family Guy' Spinoff 'Stewie'",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "stewie-family-guy-spinoff-voice-cast",
+      "primaryKeyword": "stewie family guy spinoff cast",
+      "primaryEntity": "Stewie Griffin: The Untold Story",
+      "entities": [
+        "Stewie",
+        "Seth MacFarlane",
+        "Kenan Thompson",
+        "Vanessa Bayer"
+      ],
+      "angle": "The voice cast for the 'Family Guy' spinoff 'Stewie' has been announced, featuring Kenan Thompson and Vanessa Bayer.",
+      "tmdbType": "movie",
+      "source": "rss:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/family-guy-spinoff-stewie-voice-cast-kenan-thompson-1236999895/",
+          "ageMin": 91,
+          "headline": "Stewie Voice Cast Set: Kenan Thompson, Vanessa Bayer, Melissa O’Neil, Mike Henry More Join Seth MacFarlane In Family Guy Spinoff",
+          "summary": "EXCLUSIVE: Fox, Hulu and 20th Television Animation have assembled the voice cast of the upcoming Family Guy spinoff Stewie, which includes titular star Seth MacFarlane pulling a double voiceover duty and Mike Henry voicing someone related to one of his signature Family Guy characters. SNL-ers Kenan Thompson and Vanessa Bayer, The Rookie star Melissa O’Neil [ ]"
+        }
+      ],
+      "ageMin": 91,
+      "_cand": {
+        "key": "rss:stewie-voice-cast-set-kenan-thompson-vanessa-bayer-melissa-o",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 78,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-glen-powell-richard-linklater-lou-gehrig-biopic",
+      "slug": "glen-powell-and-richard-linklater-reteam-for-lou-gehrig-biopic-at-univ",
+      "title": "Glen Powell and Richard Linklater Reteam for Lou Gehrig Biopic at Universal",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "glen-powell-richard-linklater-lou-gehrig-biopic",
+      "primaryKeyword": "glen powell richard linklater movie",
+      "primaryEntity": "Lou Gehrig Biopic",
+      "entities": [
+        "Glen Powell",
+        "Richard Linklater",
+        "Universal"
+      ],
+      "angle": "Glen Powell and Richard Linklater are reuniting for a Lou Gehrig biopic at Universal.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/film/news/sacha-baron-cohen-ali-g-movie-release-date-1236818332/",
+          "ageMin": 115,
+          "headline": "Sacha Baron Cohen s Ali G: Who Iz I? Sets October Release From Amazon MGM",
+          "summary": "Sacha Baron Cohen s secret Ali G movie, titled Ali G: Who Iz I? , has been officially unveiled by the comedian and Amazon MGM Studios. It will release in theaters Oct. 23. Cohen directed the movie, marking his feature directorial debut. Cohen posted a video in on his Instagram, fully in character as Ali G, announcing [ ]"
+        }
+      ],
+      "ageMin": 115,
+      "_cand": {
+        "key": "rss:sacha-baron-cohen-s-ali-g-who-iz-i-sets-october-release-from",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 84,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-benicio-del-toro-protective-custody-casting",
+      "slug": "benicio-del-toro-joins-ben-stiller-in-apple-tv-comedy-protective-custo",
+      "title": "Benicio Del Toro Joins Ben Stiller in Apple TV Comedy Protective Custody",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "benicio-del-toro-protective-custody-casting",
+      "primaryKeyword": "Benicio Del Toro Ben Stiller Apple TV",
+      "primaryEntity": "Protective Custody (TV series)",
+      "entities": [
+        "Benicio del Toro",
+        "Benicio Del Toro",
+        "Ben Stiller",
+        "Apple TV+"
+      ],
+      "angle": "Benicio Del Toro is set to star opposite Ben Stiller in the upcoming Apple TV+ comedy series Protective Custody.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/tv/news/benicio-del-toro-ben-stiller-apple-protective-custody-1236818184/",
+          "ageMin": 151,
+          "headline": "Benicio Del Toro Joins Ben Stiller in Apple TV Comedy Protective Custody",
+          "summary": "Benicio Del Toro is set for a lead role opposite Ben Stiller in the upcoming Apple TV comedy series Protective Custody, Variety has learned. The show was originally announced in May with Stiller attached to star and executive produce. It marks the first lead series comedy role of Del Toro s career as well as a [ ]"
+        }
+      ],
+      "ageMin": 151,
+      "_cand": {
+        "key": "rss:benicio-del-toro-joins-ben-stiller-in-apple-tv-comedy-protec",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 78,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-kenneth-branagh-laird-paramount-plus",
       "slug": "kenneth-branagh-to-star-in-paramount-drama-laird-set-in-scottish-highl",
       "title": "Kenneth Branagh to Star in Paramount+ Drama Laird Set in Scottish Highlands",
       "contentType": "news",
@@ -805,16 +351,15 @@
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "kenneth-branagh-laird-paramount-plus-series",
-      "primaryKeyword": "laird paramount plus",
+      "eventSlug": "kenneth-branagh-laird-paramount-plus",
+      "primaryKeyword": "Kenneth Branagh Laird Paramount+",
       "primaryEntity": "Laird (TV series)",
       "entities": [
         "Kenneth Branagh",
         "Paramount+",
-        "Jez Butterworth",
-        "John-Henry Butterworth"
+        "Jez Butterworth"
       ],
-      "angle": "Kenneth Branagh to lead Paramount+ drama series 'Laird' set in the Scottish Highlands.",
+      "angle": "Kenneth Branagh is attached to star in the lead role of the upcoming Paramount+ drama series Laird.",
       "tmdbType": "movie",
       "source": "rss:Variety",
       "sources": [
@@ -822,12 +367,12 @@
           "outlet": "Variety",
           "tier": 7,
           "url": "https://variety.com/2026/tv/news/kenneth-branagh-paramount-series-laird-scottish-highlands-1236818249/",
-          "ageMin": 107,
+          "ageMin": 167,
           "headline": "Kenneth Branagh to Star in Paramount+ Drama Laird Set in Scottish Highlands",
           "summary": "Paramount+ has picked up the drama series Laird with Kenneth Branagh attached in the lead role. The series hails from Jez Butterworth and John-Henry Butterworth, the co-creators of fellow Paramount+ series The Agency. Jez is also the co-creator and showrunner of Paramount+ s Mobland. Georgia Lee is also a co-creator on the show. The logline for [ ]"
         }
       ],
-      "ageMin": 107,
+      "ageMin": 167,
       "_cand": {
         "key": "rss:kenneth-branagh-to-star-in-paramount-drama-laird-set-in-scot",
         "popularity": 0,
@@ -864,106 +409,39 @@
       "tierClass": "B"
     },
     {
-      "id": "music-news-dhani-harrison-nigel-godrich-dragonflies-album-slower",
-      "slug": "dhani-harrison-and-nigel-godrich-preview-new-band-dragonflies-album",
-      "title": "Dhani Harrison and Nigel Godrich Preview New Band Dragonflies' Album",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "tier": "indie",
-      "eventSlug": "dhani-harrison-nigel-godrich-dragonflies-album-slower",
-      "primaryKeyword": "dhani harrison nigel godrich new band",
-      "primaryEntity": "Dhani Harrison",
-      "entities": [
-        "Nigel Godrich",
-        "Dragonflies"
-      ],
-      "angle": "Dhani Harrison and Nigel Godrich are previewing their new band Dragonflies' album with the single 'Slower.'",
-      "tmdbType": "movie",
-      "source": "rss:Rolling Stone",
-      "sources": [
-        {
-          "outlet": "Rolling Stone",
-          "tier": 7,
-          "url": "https://www.rollingstone.com/music/music-news/dhani-harrison-nigel-godrich-new-band-dragonflies-slower-1235597083/",
-          "ageMin": 134,
-          "headline": "Dhani Harrison, Nigel Godrich Preview New Band Dragonflies’ Album With ‘Slower’",
-          "summary": "Duo’s eponymous album arrives on Sept. 18"
-        }
-      ],
-      "ageMin": 134,
-      "_cand": {
-        "key": "rss:dhani-harrison-nigel-godrich-preview-new-band-dragonflies-al",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Rolling Stone"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Rolling Stone",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 55,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-days-of-thunder-2-in-talks",
-      "slug": "jonathan-levine-in-talks-to-board-days-of-thunder-legacy-sequel-with-t",
-      "title": "Jonathan Levine in Talks to Board 'Days of Thunder' Legacy Sequel with Tom Cruise",
+      "id": "news-ali-g-who-iz-i-movie-release-date",
+      "slug": "sacha-baron-cohen-s-new-ali-g-movie-gets-october-release-from-amazon-m",
+      "title": "Sacha Baron Cohen’s New ‘Ali G’ Movie Gets October Release From Amazon MGM Studios",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "days-of-thunder-2-in-talks",
-      "primaryKeyword": "Days of Thunder 2",
-      "primaryEntity": "Days of Thunder 2",
+      "eventSlug": "ali-g-who-iz-i-movie-release-date",
+      "primaryKeyword": "Ali G movie",
+      "primaryEntity": "Ali G Indahouse",
       "entities": [
-        "Tom Cruise",
-        "Jonathan Levine",
-        "Paramount"
+        "Ali G",
+        "Sacha Baron Cohen",
+        "Amazon MGM Studios"
       ],
-      "angle": "Paramount is in talks to develop a legacy sequel to the Tom Cruise racing film 'Days of Thunder'.",
+      "angle": "Sacha Baron Cohen's new 'Ali G' movie has an October release date.",
       "tmdbType": "movie",
       "source": "rss:TheWrap",
       "sources": [
         {
           "outlet": "TheWrap",
           "tier": 7,
-          "url": "https://www.thewrap.com/creative-content/movies/days-of-thunder-2-jonathan-levine-talks-direct/",
-          "ageMin": 80,
-          "headline": "Days of Thunder 2 : Jonathan Levine in Talks to Board Paramount Legacyquel",
-          "summary": "Tom Cruise is set to return to star in and produce the follow-up to his 1990 racing film The post Days of Thunder 2 : Jonathan Levine in Talks to Board Paramount Legacyquel appeared first on TheWrap ."
+          "url": "https://www.thewrap.com/creative-content/movies/sacha-baron-cohen-new-ali-g-movie-release-date-amazon-mgm-studios/",
+          "ageMin": 65,
+          "headline": "Sacha Baron Cohen’s New ‘Ali G’ Movie Gets October Release From Amazon MGM Studios",
+          "summary": "Are you ready for “Ali G: Who Iz I?” The post Sacha Baron Cohen’s New ‘Ali G’ Movie Gets October Release From Amazon MGM Studios appeared first on TheWrap ."
         }
       ],
-      "ageMin": 80,
+      "ageMin": 65,
       "_cand": {
-        "key": "rss:days-of-thunder-2-jonathan-levine-in-talks-to-board-paramoun",
+        "key": "rss:sacha-baron-cohen-s-new-ali-g-movie-gets-october-release-fro",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -998,40 +476,40 @@
       "tierClass": "B"
     },
     {
-      "id": "news-indie-street-film-festival-11th-annual-lineup-marc-maron-in-memoriam",
-      "slug": "marc-maron-starrer-in-memoriam-to-kick-off-11th-annual-indie-street-fi",
-      "title": "Marc Maron Starrer In Memoriam to Kick Off 11th Annual Indie Street Film Festival; Full Lineup Revealed (Exclusive)",
+      "id": "news-benicio-del-toro-comedy-series",
+      "slug": "benicio-del-toro-to-star-in-mike-judge-and-ben-stiller-comedy-series-f",
+      "title": "Benicio Del Toro to Star in Mike Judge and Ben Stiller Comedy Series for Apple TV+",
       "contentType": "news",
       "formatTag": "news",
-      "category": "movies",
+      "category": "tv",
       "subcategory": "news",
-      "eventType": "announcement",
+      "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "indie-street-film-festival-11th-annual-lineup-marc-maron-in-memoriam",
-      "primaryKeyword": "Indie Street Film Festival lineup",
-      "primaryEntity": "In Memoriam",
+      "eventSlug": "benicio-del-toro-comedy-series",
+      "primaryKeyword": "benicio del toro tv series",
+      "primaryEntity": "Protective Custody",
       "entities": [
-        "Marc Maron: End Times Fun",
-        "Marc Maron",
-        "Indie Street Film Festival",
-        "Will Poulter"
+        "Benicio del Toro",
+        "Benicio Del Toro",
+        "Mike Judge",
+        "Ben Stiller"
       ],
-      "angle": "The lineup for the 11th Annual Indie Street Film Festival has been announced, with Marc Maron's 'In Memoriam' set to open the event.",
+      "angle": "Benicio Del Toro to star in first comedy series from Mike Judge and Ben Stiller.",
       "tmdbType": "movie",
-      "source": "rss:THR",
+      "source": "rss:IndieWire",
       "sources": [
         {
-          "outlet": "THR",
+          "outlet": "IndieWire",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/2026-indie-street-film-festival-lineup-red-bank-nj-1236653985/",
+          "url": "https://www.indiewire.com/news/general-news/benicio-del-toro-first-comedy-series-apple-tv-1235206593/",
           "ageMin": 151,
-          "headline": "Marc Maron Starrer In Memoriam to Kick Off 11th Annual Indie Street Film Festival; Full Lineup Revealed (Exclusive)",
-          "summary": "The Red Bank, New Jersey-based event will feature Garden State premieres of Adam Meeks' Will Poulter-starring 'Union County,' set for closing night, Charlotte Glynn's 'The Gymnast,' Danny Madden's 'Downbeat' and Walter Thompson-Hernández's 'If I Go Will They Miss Me.'"
+          "headline": "Benicio Del Toro Is Following Up His Meme-Worthy One Battle After Another Role with His First Comedy Series",
+          "summary": "The Oscar winner will star in the Apple TV series \"Protective Custody\" from creator Mike Judge and EP Ben Stiller in an \"Escape at Dannemora\" reunion."
         }
       ],
       "ageMin": 151,
       "_cand": {
-        "key": "rss:marc-maron-starrer-in-memoriam-to-kick-off-11th-annual-indie",
+        "key": "rss:benicio-del-toro-is-following-up-his-meme-worthy-one-battle-",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -1041,11 +519,79 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "THR"
+          "IndieWire"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "THR",
+        "attribution": "IndieWire",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 78,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-ojai-playhouse-announcement",
+      "slug": "ojai-playhouse-launches-left-turn-a-free-indie-film-showcase",
+      "title": "Ojai Playhouse Launches 'Left Turn,' a Free Indie Film Showcase",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "ojai-playhouse-announcement",
+      "primaryKeyword": "Ojai Playhouse film showcase",
+      "primaryEntity": "Ojai Playhouse",
+      "entities": [
+        "Balthazar Getty",
+        "Our Hero, Balthazar",
+        "Balthazar",
+        "Crumb Catcher"
+      ],
+      "angle": "Ojai Playhouse launches 'Left Turn,' a new free indie film showcase featuring several independent movies.",
+      "tmdbType": "movie",
+      "source": "rss:IndieWire",
+      "sources": [
+        {
+          "outlet": "IndieWire",
+          "tier": 7,
+          "url": "https://www.indiewire.com/criticism/movies/hadestown-the-musical-movie-review-1235206370/",
+          "ageMin": 91,
+          "headline": "Hadestown: The Musical Review: The Broadway Hit Remains a Bittersweet Delight in Movie Theaters",
+          "summary": "Anaïs Mitchell's retelling of the Orpheus and Eurydice myth gets a handsome staged recording featuring the original Broadway stars reprising their roles."
+        }
+      ],
+      "ageMin": 91,
+      "_cand": {
+        "key": "rss:hadestown-the-musical-review-the-broadway-hit-remains-a-bitt",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "IndieWire"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "IndieWire",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -1066,75 +612,9 @@
       "tierClass": "B"
     },
     {
-      "id": "news-the-magnificent-seven-mgm-series-casting",
-      "slug": "the-magnificent-seven-series-adds-new-cast-members",
-      "title": "‘The Magnificent Seven’ Series Adds New Cast Members",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "the-magnificent-seven-mgm-series-casting",
-      "primaryKeyword": "the magnificent seven series casting",
-      "primaryEntity": "The Magnificent Seven",
-      "entities": [
-        "The Magnificent Seven (TV series)",
-        "MGM+"
-      ],
-      "angle": "Additional cast members have been announced for the MGM+ series adaptation of 'The Magnificent Seven'.",
-      "tmdbType": "movie",
-      "source": "gnews:TV Series Finale",
-      "sources": [
-        {
-          "outlet": "TV Series Finale",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNLUhha0wxcmdITGZnUWdBRy1qbERRNmFYNEpiOV9ZV2Z6UVFfOEZka2pKMTU0MHU2RVBtZGFFTnAwS0NBdmhjYXI3TGJ0ejYyRDRnQUxSc19PTjlwQUh1UHl5WjVQN0dGNVAyT2l0Zmd3NTJwNm1XZ3JzcHB6TnozX0dmMkQxSTlPUUVUUDJ6NlVsS2tIeGdWdGUzN2RjWVdFbjZNbTVVYXlHVWp6U0NQaU9sZlBGQlhtMFdDZWZyLV9qZ9IBxwFBVV95cUxOelFoZjVlbGdwLWctMTFTSXY0SHVCcFhaRUhkaXNvS0JWR3J6T0JCQ3otb1ZwSWM5VXpCVGRRSm9RRU1ral8wZ2ViUmtmazExbUJ1QUt5bzh3S2hpMWI3Yks4MG1taXdWVmdxS3pva2g5UDNiMnJnOVdTd3BLNXdXUFlvNkc3R3RxRnY5XzRNdFVpZ285eWMxN295ZFhpWkdjdmZhQTd0ZXNaWW9fSWJSeXNVRTlnQi1BdjhvVVRtZi1UY2Z2UjU0?oc=5",
-          "ageMin": 269,
-          "headline": "The Magnificent Seven: Additional Casting Set for MGM+ Series Based on Iconic Western Film - TV Series Finale",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiwgFBVV95cUxNLUhha0wxcmdITGZnUWdBRy1qbERRNmFYNEpiOV9ZV2Z6UVFfOEZka2pKMTU0MHU2RVBtZGFFTnAwS0NBdmhjYXI3TGJ0ejYyRDRnQUxSc19PTjlwQUh1UHl5WjVQN0dGNVAyT2l0Zmd3NTJwNm1XZ3JzcHB6TnozX0dmMkQxSTlPUUVUUDJ6NlVsS2tIeGdWdGUzN2RjWVdFbjZNbTVVYXlHVWp6U0NQaU9sZlBGQlhtMFd"
-        }
-      ],
-      "ageMin": 269,
-      "_cand": {
-        "key": "rss:the-magnificent-seven-additional-casting-set-for-mgm-series-",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "TV Series Finale"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "TV Series Finale",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 67,
-      "signals": {
-        "recency": 9,
-        "corroboration": 8,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "music-news-the-internet-new-album-update",
-      "slug": "the-internet-s-new-album-is-almost-done-syd-says",
-      "title": "The Internet's New Album Is 'Almost Done,' Syd Says",
+      "id": "music-news-cameron-whitcomb-kingdom-of-fear-tour",
+      "slug": "country-up-and-comer-cameron-whitcomb-announces-kingdom-of-fear-tour",
+      "title": "Country Up-And-Comer Cameron Whitcomb Announces 'Kingdom of Fear' Tour",
       "contentType": "music-news",
       "formatTag": "music-news",
       "category": "music",
@@ -1142,29 +622,29 @@
       "eventType": "announcement",
       "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "the-internet-new-album-update",
-      "primaryKeyword": "the internet new album",
-      "primaryEntity": "The Internet",
+      "eventSlug": "cameron-whitcomb-kingdom-of-fear-tour",
+      "primaryKeyword": "Cameron Whitcomb tour",
+      "primaryEntity": "Cameron Whitcomb",
       "entities": [
-        "Syd",
-        "Steve Lacy"
+        "American Idol",
+        "CCMA Awards"
       ],
-      "angle": "The R&B group The Internet is reportedly close to finishing their next album, according to lead singer Syd.",
+      "angle": "Country artist Cameron Whitcomb announces his 'Kingdom of Fear' tour following his first Billboard Hot 100 entry.",
       "tmdbType": "movie",
-      "source": "rss:Rolling Stone",
+      "source": "rss:Billboard",
       "sources": [
         {
-          "outlet": "Rolling Stone",
+          "outlet": "Billboard",
           "tier": 7,
-          "url": "https://www.rollingstone.com/music/music-features/syd-the-internet-new-album-1235596826/",
-          "ageMin": 205,
-          "headline": "Syd Says the Internet s New Album Is Almost Done — and It s Super Fire",
-          "summary": "After she and Steve Lacy released solo albums on the same day, they're getting back to work on the band's new project, with an adjusted lineup"
+          "url": "https://www.billboard.com/music/country/up-and-coming-country-artist-cameron-whitcomb-july-2026-1236300763/",
+          "ageMin": 77,
+          "headline": "Country Up-And-Comer of the Month Cameron Whitcomb Talks New Hit ‘Kingdom of Fear Journey From American Idol to Winning CCMA Awards",
+          "summary": "After scoring his first Billboard Hot 100 entry, Whitcomb will soon embark on his Kingdom of Fear Tour."
         }
       ],
-      "ageMin": 205,
+      "ageMin": 77,
       "_cand": {
-        "key": "rss:syd-says-the-internet-s-new-album-is-almost-done-and-it-s-su",
+        "key": "rss:country-up-and-comer-of-the-month-cameron-whitcomb-talks-new",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -1174,18 +654,18 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Rolling Stone"
+          "Billboard"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Rolling Stone",
+        "attribution": "Billboard",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 48,
+      "priority": 55,
       "signals": {
-        "recency": 9,
+        "recency": 16,
         "corroboration": 12,
         "status": 18,
         "type": 9,
@@ -1199,9 +679,273 @@
       "tierClass": "C"
     },
     {
+      "id": "news-harry-wild-season-5-finale",
+      "slug": "harry-wild-season-5-finale-airing-on-acorn-tv",
+      "title": "'Harry Wild' Season 5 Finale Airing on Acorn TV",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "harry-wild-season-5-finale",
+      "primaryKeyword": "Harry Wild",
+      "primaryEntity": "Harry Wild",
+      "entities": [
+        "Acorn TV",
+        "Jane Seymour"
+      ],
+      "angle": "The fifth season finale of Jane Seymour's series 'Harry Wild' is set to air on Acorn TV.",
+      "tmdbType": "movie",
+      "source": "gnews:BroadwayWorld",
+      "sources": [
+        {
+          "outlet": "BroadwayWorld",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOcUVYZGVEdWN5d2xRREVQVXF5QmZFeVBYT05BTFEyRUEyMy1JQk9mVGE2YXgzSVZvY0MtdnFOQ0NaTXVDczQwS19iempvdmxsRlEwSGdadGJ5TWY5QUdfdmcxaUtIT2NqVzRXRjBhZEVFeFU4QzUwRTRRVXh3czVBMEFENnVxMFJKYXp1Nnp4SmIydUZNZER4MUh0RF9PS2FuZ1Z5YlFTTGV4SjUwb2ZfdExpTnpZcmc?oc=5",
+          "ageMin": 44,
+          "headline": "HARRY WILD Season 5 Finale to Air on Acorn TV with Jane Seymour - BroadwayWorld",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMitwFBVV95cUxOcUVYZGVEdWN5d2xRREVQVXF5QmZFeVBYT05BTFEyRUEyMy1JQk9mVGE2YXgzSVZvY0MtdnFOQ0NaTXVDczQwS19iempvdmxsRlEwSGdadGJ5TWY5QUdfdmcxaUtIT2NqVzRXRjBhZEVFeFU4QzUwRTRRVXh3czVBMEFENnVxMFJKYXp1Nnp4SmIydUZNZER4MUh0RF9PS2FuZ1Z5YlFTTGV4SjUwb2ZfdExpTnpZcmc?oc="
+        }
+      ],
+      "ageMin": 44,
+      "_cand": {
+        "key": "rss:harry-wild-season-5-finale-to-air-on-acorn-tv-with-jane-seym",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "BroadwayWorld"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "BroadwayWorld",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 77,
+      "signals": {
+        "recency": 24,
+        "corroboration": 8,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "music-news-pain-of-truth-new-album-unforgiven-music-video",
+      "slug": "pain-of-truth-announce-new-self-titled-album-drop-music-video-for-unfo",
+      "title": "Pain of Truth Announce New Self-Titled Album, Drop Music Video for \"Unforgiven\"",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "pain-of-truth-new-album-unforgiven-music-video",
+      "primaryKeyword": "Pain of Truth new album",
+      "primaryEntity": "Pain of Truth",
+      "entities": [
+        "Unforgiven"
+      ],
+      "angle": "Hardcore band Pain of Truth has announced their new self-titled album and released a music video for the lead single \"Unforgiven.\"",
+      "tmdbType": "movie",
+      "source": "gnews:Lambgoat",
+      "sources": [
+        {
+          "outlet": "Lambgoat",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNNEpRLVlVQzB2SkRaemRaeV84VlJpN1A5UDFWSWFmX0JXYm1QaHdrZ25pQ3ZHU293eFoxVUpsWm50V1JXVDlPZ2o2U2U5MEpnaWNMVlZjMHdFQm9sd1I5Z0JLbjRraU9FR09PT0lhUHBuVGotWTRtQ3pkRmwtTDR3ZG5DbjRFVVBnME8zak1kd0NOQ19UTktHSEdoM1FwOFhodjRNWEFyU3ZRRDFFU0E4dEs3d3M1cGdHX2RJa21B?oc=5",
+          "ageMin": 92,
+          "headline": "PAIN OF TRUTH announce new self-titled album, drop music video for lead single \"Unforgiven\" - Lambgoat",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMivgFBVV95cUxNNEpRLVlVQzB2SkRaemRaeV84VlJpN1A5UDFWSWFmX0JXYm1QaHdrZ25pQ3ZHU293eFoxVUpsWm50V1JXVDlPZ2o2U2U5MEpnaWNMVlZjMHdFQm9sd1I5Z0JLbjRraU9FR09PT0lhUHBuVGotWTRtQ3pkRmwtTDR3ZG5DbjRFVVBnME8zak1kd0NOQ19UTktHSEdoM1FwOFhodjRNWEFyU3ZRRDFFU0E4dEs3d3M1cGdHX2R"
+        }
+      ],
+      "ageMin": 92,
+      "_cand": {
+        "key": "rss:pain-of-truth-announce-new-self-titled-album-drop-music-vide",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "Lambgoat"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "Lambgoat",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 51,
+      "signals": {
+        "recency": 16,
+        "corroboration": 8,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "music-news-amon-amarth-the-allfather-awakens-album-release",
+      "slug": "amon-amarth-announces-new-album-the-allfather-awakens-with-gjallarhorn",
+      "title": "Amon Amarth Announces New Album 'The Allfather Awakens' With 'Gjallarhorn' Single",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "amon-amarth-the-allfather-awakens-album-release",
+      "primaryKeyword": "Amon Amarth album",
+      "primaryEntity": "Amon Amarth",
+      "entities": [
+        "The Allfather Awakens"
+      ],
+      "angle": "Swedish melodic death metal band Amon Amarth announces new album 'The Allfather Awakens' with single 'Gjallarhorn'.",
+      "tmdbType": "movie",
+      "source": "gnews:BraveWords",
+      "sources": [
+        {
+          "outlet": "BraveWords",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQX2JicFc0NDFsaF9nVGNycTk4LWZUdXJwMnpOcGlnX0lwVHBERll3M3UtTjdQZ3NydFB1eEtuRmFCeXlvcy0yMkhPOUNkSmkwWVhzOFRUSmxNU19Pa2s2dDVXWWRXSkM0NVVwRnA1Q3pUNTFtUWZ5enN2NFJQVEVsNHRPd29GM1FFdi1nMmlzZ3V1bmFBeEhzdTRmTEp2Tmt0U2dfNUM1V0o5VWxUWlN0TVAyNnk0a2JyTFpzcVg0ZlHSAcgBQVVfeXFMTzA1SGF6Rm9JaVUzS0F4MWNGUFdlc0NPTHFFOFRZMFI5b2lsbnRpLV9DYTBXYXBPZzRDV2ZMa1ZPNkVVdFFzcHR0N01xLWV6eU9Qb2VSdE9raVlwWmFNQTRXSmtkTWw2QmFWM0ZEcGI1TzkyaXc0NnQzT0syWFBqT3hIMGowVUJIeUtNd0xsZ1V5R0VseHVDbUpzdlFrMDJERTBHTFREaGZJSVlEVDVTcjRtRmtKbEpwbWVLekt4YnVXMlJmY3JIVXA?oc=5",
+          "ageMin": 173,
+          "headline": "AMON AMARTH To Release The Allfather Awakens Album In October; “Gjallarhorn” Single / Video Out Now - BraveWords",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiwAFBVV95cUxQX2JicFc0NDFsaF9nVGNycTk4LWZUdXJwMnpOcGlnX0lwVHBERll3M3UtTjdQZ3NydFB1eEtuRmFCeXlvcy0yMkhPOUNkSmkwWVhzOFRUSmxNU19Pa2s2dDVXWWRXSkM0NVVwRnA1Q3pUNTFtUWZ5enN2NFJQVEVsNHRPd29GM1FFdi1nMmlzZ3V1bmFBeEhzdTRmTEp2Tmt0U2dfNUM1V0o5VWxUWlN0TVAyNnk0a2JyTFp"
+        }
+      ],
+      "ageMin": 173,
+      "_cand": {
+        "key": "rss:amon-amarth-to-release-the-allfather-awakens-album-in-octobe",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "BraveWords"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "BraveWords",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 51,
+      "signals": {
+        "recency": 16,
+        "corroboration": 8,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-brad-bird-incredibles-3-aging-characters",
+      "slug": "incredibles-3-producer-brad-bird-admits-aging-up-the-characters-would-",
+      "title": "'Incredibles 3' Producer Brad Bird Admits Aging Up The Characters... Would Not Make Them 'Hipper Or Cooler Or More Like Them'",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "brad-bird-incredibles-3-aging-characters",
+      "primaryKeyword": "Incredibles 3",
+      "primaryEntity": "Incredibles 3",
+      "entities": [
+        "Brad Bird",
+        "Pixar"
+      ],
+      "angle": "Producer Brad Bird discusses the challenges of aging characters in the upcoming 'Incredibles 3'.",
+      "tmdbType": "movie",
+      "source": "gnews:The Direct",
+      "sources": [
+        {
+          "outlet": "The Direct",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPYnNYLXFtSDJMM29RN3FELXRvUnRIV1RtcWkwV25SelFUdzhsR3FBR29WdzVjbzA3Xzg1WVl0MHdhLTdWOXg0MkJTQmI3MmwzUmh0UFpIbFJSaGR2M0lFVHc4Q0hCWm1QOW0xZkFZcng5Y3pZVXlOYmEtLTh6UXlMRDhRa2k4R2U0eW9VbnNMcXVLcFc4SEVpMA?oc=5",
+          "ageMin": 228,
+          "headline": "'Incredibles 3' Producer Brad Bird Admits Aging Up The Characters With A Time Jump In Pixar's Upcoming Sequel Movie Would Not Make Them 'Hipper Or Cooler Or More Like Them' (Exclusive) - The Direct",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxPYnNYLXFtSDJMM29RN3FELXRvUnRIV1RtcWkwV25SelFUdzhsR3FBR29WdzVjbzA3Xzg1WVl0MHdhLTdWOXg0MkJTQmI3MmwzUmh0UFpIbFJSaGR2M0lFVHc4Q0hCWm1QOW0xZkFZcng5Y3pZVXlOYmEtLTh6UXlMRDhRa2k4R2U0eW9VbnNMcXVLcFc4SEVpMA?oc=5\" target=\"_blank\" 'Incredibles 3' Produc"
+        }
+      ],
+      "ageMin": 228,
+      "_cand": {
+        "key": "rss:-incredibles-3-producer-brad-bird-admits-aging-up-the-charac",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "The Direct"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "The Direct",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 68,
+      "signals": {
+        "recency": 9,
+        "corroboration": 8,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
       "id": "news-jack-whitehall-hosts-fox-celebrity-game-show",
-      "slug": "jack-whitehall-is-the-host-of-fox-s-new-celebrity-game-show",
-      "title": "Jack Whitehall is the host of Fox's new celebrity game show",
+      "slug": "jack-whitehall-to-host-new-fox-celebrity-game-show",
+      "title": "Jack Whitehall to Host New Fox Celebrity Game Show",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
@@ -1209,13 +953,13 @@
       "eventType": "casting",
       "sensitivity": "normal",
       "eventSlug": "jack-whitehall-hosts-fox-celebrity-game-show",
-      "primaryKeyword": "jack whitehall game show",
+      "primaryKeyword": "Jack Whitehall",
       "primaryEntity": "Jack Whitehall: At Large",
       "entities": [
         "Jack Whitehall",
-        "FOX"
+        "Fox"
       ],
-      "angle": "Jack Whitehall has been announced as the host for a new celebrity game show on Fox.",
+      "angle": "Jack Whitehall is set to host a new celebrity game show on Fox.",
       "tmdbType": "movie",
       "source": "gnews:FOX 5 Atlanta",
       "sources": [
@@ -1223,12 +967,12 @@
           "outlet": "FOX 5 Atlanta",
           "tier": 5,
           "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1PLUNUOFVGbUxPQnpKcEtOZS1ocGZoV2FEUDBpZVdNV0hJMF8yUEdTNnpmYzIxWU01QnNiTzRrWHowODZUcVJEWUNpakNuWGNaSmJlV3FZMlc0bVo4LVJmMVU1QmXSAWpBVV95cUxNbzhTWVRXamtUT2daUGE0OGQyRTNaQUZVZHlNMUFPVzIyb05pUUdjNVpmOGZ3OXFPb3NISFVRT29IdExVdUdmWVVIalBfOXpUNVg5QzRTMEs0cUJ5X29qcW8tZTVTVWdBRFBR?oc=5",
-          "ageMin": 194,
+          "ageMin": 254,
           "headline": "Jack Whitehall is the host of Fox's new celebrity game show - FOX 5 Atlanta",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMiZEFVX3lxTE1PLUNUOFVGbUxPQnpKcEtOZS1ocGZoV2FEUDBpZVdNV0hJMF8yUEdTNnpmYzIxWU01QnNiTzRrWHowODZUcVJEWUNpakNuWGNaSmJlV3FZMlc0bVo4LVJmMVU1QmXSAWpBVV95cUxNbzhTWVRXamtUT2daUGE0OGQyRTNaQUZVZHlNMUFPVzIyb05pUUdjNVpmOGZ3OXFPb3NISFVRT29IdExVdUdmWVVIalBfOXpUNVg5QzR"
         }
       ],
-      "ageMin": 194,
+      "ageMin": 254,
       "_cand": {
         "key": "rss:jack-whitehall-is-the-host-of-fox-s-new-celebrity-game-show-",
         "popularity": 0,
@@ -1265,170 +1009,38 @@
       "tierClass": "B"
     },
     {
-      "id": "news-jodie-comer-harry-melling-musical-tiff",
-      "slug": "jodie-comer-harry-melling-lead-taxidermy-musical-at-tiff",
-      "title": "Jodie Comer, Harry Melling Lead Taxidermy Musical at TIFF",
+      "id": "news-war-machine-sequel-title-alan-ritchson",
+      "slug": "sequel-to-netflix-s-war-machine-starring-alan-ritchson-gets-official-t",
+      "title": "Sequel to Netflix's 'War Machine' Starring Alan Ritchson Gets Official Title",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "jodie-comer-harry-melling-musical-tiff",
-      "primaryKeyword": "Jodie Comer musical",
-      "primaryEntity": "Jodie Comer",
+      "eventSlug": "war-machine-sequel-title-alan-ritchson",
+      "primaryKeyword": "war machine sequel alan ritchson",
+      "primaryEntity": "War Machine",
       "entities": [
-        "Harry Melling",
-        "Toronto International Film Festival"
+        "Netflix",
+        "Alan Ritchson"
       ],
-      "angle": "Jodie Comer and Harry Melling are set to lead a taxidermy musical premiering at the Toronto Film Festival's Discovery lineup.",
+      "angle": "The sequel to Netflix's 'War Machine', starring Alan Ritchson, has been given an official title.",
       "tmdbType": "movie",
-      "source": "rss:IndieWire",
+      "source": "gnews:JoBlo",
       "sources": [
         {
-          "outlet": "IndieWire",
-          "tier": 7,
-          "url": "https://www.indiewire.com/news/festivals/tiff-discovery-lineup-jodie-comer-taxidermy-musical-stuffed-1235206555/",
-          "ageMin": 269,
-          "headline": "Jodie Comer and Harry Melling Taxidermy Musical Stuffed Leads TIFF Discovery Lineup of Rising Filmmakers",
-          "summary": "See the 24 features playing Toronto's platform for up-and-coming filmmakers, including another musical from former NFL player Deantè Gray."
-        }
-      ],
-      "ageMin": 269,
-      "_cand": {
-        "key": "rss:jodie-comer-and-harry-melling-taxidermy-musical-stuffed-lead",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "IndieWire"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "IndieWire",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 72,
-      "signals": {
-        "recency": 9,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-chris-rock-misty-green-hollywood-actress",
-      "slug": "misty-green-chris-rock-follows-a-hollywood-actress-fighting-for-her-se",
-      "title": "‘Misty Green’: Chris Rock Follows a Hollywood Actress Fighting for Her Second Act",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "chris-rock-misty-green-hollywood-actress",
-      "primaryKeyword": "chris rock new movie",
-      "primaryEntity": "Chris Rock: Bigger & Blacker",
-      "entities": [
-        "Chris Rock",
-        "Misty Green"
-      ],
-      "angle": "Chris Rock is attached to a new film titled 'Misty Green' about a Hollywood actress seeking a career comeback.",
-      "tmdbType": "movie",
-      "source": "gnews:The Hollywood Reporter",
-      "sources": [
-        {
-          "outlet": "The Hollywood Reporter",
-          "tier": 7,
-          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOTzdFdldYY0FzenZoaUNGelpCSmxHalNyWHdTRlpxd3JNS0c2UkFTeXVYNm16czRQVU10emFYOHVQaDRrbDFrZXNhUThoUDBiaFIxVl9lSy1oZktsZ2I0cXhXaUtjZXZhakhXSDR6aWVlU1d2RjN4a283VGZhS2xkSjkxSi1FYWpONEp2T3BkeWg0bk5zTi00X0lnNjgxcXBiWjZIUlhaeHVNSllYekJRaFFB?oc=5",
-          "ageMin": 211,
-          "headline": "‘Misty Green’: Chris Rock Follows a Hollywood Actress Fighting for Her Second Act - The Hollywood Reporter",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxOTzdFdldYY0FzenZoaUNGelpCSmxHalNyWHdTRlpxd3JNS0c2UkFTeXVYNm16czRQVU10emFYOHVQaDRrbDFrZXNhUThoUDBiaFIxVl9lSy1oZktsZ2I0cXhXaUtjZXZhakhXSDR6aWVlU1d2RjN4a283VGZhS2xkSjkxSi1FYWpONEp2T3BkeWg0bk5zTi00X0lnNjgxcXBiWjZIUlhaeHVNSllYekJRaFFB?oc=5\" targ"
-        }
-      ],
-      "ageMin": 211,
-      "_cand": {
-        "key": "rss:-misty-green-chris-rock-follows-a-hollywood-actress-fighting",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "The Hollywood Reporter"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "The Hollywood Reporter",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 72,
-      "signals": {
-        "recency": 9,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-star-wars-jedi-sequel-release",
-      "slug": "star-wars-jedi-sequel-announced-for-release-this-year",
-      "title": "‘Star Wars Jedi’ Sequel Announced for Release This Year",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "star-wars-jedi-sequel-release",
-      "primaryKeyword": "star wars jedi sequel",
-      "primaryEntity": "Star Wars: The Last Jedi",
-      "entities": [
-        "Star Wars Jedi (video game series)",
-        "Lucasfilm Games"
-      ],
-      "angle": "A sequel to the 'Star Wars Jedi' video game series is officially set for release this year.",
-      "tmdbType": "movie",
-      "source": "gnews:Collider",
-      "sources": [
-        {
-          "outlet": "Collider",
+          "outlet": "JoBlo",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNWVdiM29kbTZLTHdZZEVQRDBYbmtGVjNDSHkwZ2hRd1JQZ1R3OWdlRFMySFZpeGdZM0FRczlLeFVBLUNvMTd6U3lLSmFqS3c1VGthUUJiSEVkbzF5dHJMaFZzX1Z6M05fN1h6ZnFEYUppM215Y284YlRCM1JEbFJyLXlDbW5WQ1VkWnpaRHNIQ3c2UXRDb0RDTWlzNXhuUnphZmc?oc=5",
-          "ageMin": 361,
-          "headline": "‘Star Wars Jedi’ Gets Official Sequel Release This Year - Collider",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxNWVdiM29kbTZLTHdZZEVQRDBYbmtGVjNDSHkwZ2hRd1JQZ1R3OWdlRFMySFZpeGdZM0FRczlLeFVBLUNvMTd6U3lLSmFqS3c1VGthUUJiSEVkbzF5dHJMaFZzX1Z6M05fN1h6ZnFEYUppM215Y284YlRCM1JEbFJyLXlDbW5WQ1VkWnpaRHNIQ3c2UXRDb0RDTWlzNXhuUnphZmc?oc=5\" target=\"_blank\" ‘Star War"
+          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1YWTJHM2FsY3dIWVQxZWpKVDlpRUhQeEphdzFhTHRYX1RJSGYtdnFuUHlyMmdFWHp4b0RkMkQ5OTZ3bDAtb3ZXel83ay1CRU5sU0xoRVJBWlFkV0NpalRXaDBhY1lrS2vSAWxBVV95cUxObzc1LVdqRWtpSlZnd0NIazlpekNQQTRuV09QUlNYTzVJUjM3SFBlSS05RFdZaXdmUjFZVjVSaFFjUFZYcERRTGtHVm8wcWZ1bFF2M1loai1mLWtNbGYwSjVuTEhTVjFwNUtJNVM?oc=5",
+          "ageMin": 331,
+          "headline": "The sequel to Netflix’s War Machine with Alan Ritchson gets an official title - JoBlo",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1YWTJHM2FsY3dIWVQxZWpKVDlpRUhQeEphdzFhTHRYX1RJSGYtdnFuUHlyMmdFWHp4b0RkMkQ5OTZ3bDAtb3ZXel83ay1CRU5sU0xoRVJBWlFkV0NpalRXaDBhY1lrS2vSAWxBVV95cUxObzc1LVdqRWtpSlZnd0NIazlpekNQQTRuV09QUlNYTzVJUjM3SFBlSS05RFdZaXdmUjFZVjVSaFFjUFZYcERRTGtHVm8wcWZ1bFF"
         }
       ],
-      "ageMin": 361,
+      "ageMin": 331,
       "_cand": {
-        "key": "rss:-star-wars-jedi-gets-official-sequel-release-this-year-colli",
+        "key": "rss:the-sequel-to-netflix-s-war-machine-with-alan-ritchson-gets-",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -1438,76 +1050,11 @@
         "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "Collider"
+          "JoBlo"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "Collider",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 57,
-      "signals": {
-        "recency": 4,
-        "corroboration": 8,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-kevin-feige-marvel-movies-planned-2042",
-      "slug": "marvel-movies-planned-all-the-way-up-to-2042-kevin-feige-says",
-      "title": "Marvel Movies Planned 'All the Way Up to 2042,' Kevin Feige Says",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "kevin-feige-marvel-movies-planned-2042",
-      "primaryKeyword": "marvel movies future",
-      "primaryEntity": "Marvel Cinematic Universe",
-      "entities": [
-        "Kevin Feige"
-      ],
-      "angle": "Marvel Studios head Kevin Feige revealed plans for the franchise's movie slate extending to 2042.",
-      "tmdbType": "movie",
-      "source": "gnews:IGN",
-      "sources": [
-        {
-          "outlet": "IGN",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOVlNJX1BnQU1Cc0NJb21XN0dfRHVGbWVsUXZDdENoaXdMRzhEVmcwYzdQQlBDa1Jza3Q2OXR4Y0RWOVZWbDg1eHE0TlRSb0JPaW41RGF0VU15QXRacGlFaFZNYVFaNFh1X2t3Ykl4angwUU9McXRhWkdtN0U2RmN3ajdva1NwWUFsT1FveGNsWEtBTUVvN2JNZzZPbW4wLVdBM3FkSHliZzVrWVE0YzRxdFlmbllNT3VwcGxOamdrbHdFTkJGYUpKYXBLUFoyYWlfV1ZWNUgxc2VvWkwxWm5YdjNUTGNZM3k0?oc=5",
-          "ageMin": 189,
-          "headline": "Marvel Movies Planned 'All the Way Up to 2042,' Kevin Feige Says - IGN",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMi6AFBVV95cUxOVlNJX1BnQU1Cc0NJb21XN0dfRHVGbWVsUXZDdENoaXdMRzhEVmcwYzdQQlBDa1Jza3Q2OXR4Y0RWOVZWbDg1eHE0TlRSb0JPaW41RGF0VU15QXRacGlFaFZNYVFaNFh1X2t3Ykl4angwUU9McXRhWkdtN0U2RmN3ajdva1NwWUFsT1FveGNsWEtBTUVvN2JNZzZPbW4wLVdBM3FkSHliZzVrWVE0YzRxdFlmbllNT3VwcGx"
-        }
-      ],
-      "ageMin": 189,
-      "_cand": {
-        "key": "rss:marvel-movies-planned-all-the-way-up-to-2042-kevin-feige-say",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "IGN"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "IGN",
+        "attribution": "JoBlo",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -1528,64 +1075,65 @@
       "tierClass": "B"
     },
     {
-      "id": "news-luke-skywalker-lightsaber-auction-record",
-      "slug": "luke-skywalker-s-iconic-star-wars-lightsaber-sells-for-3-75-million",
-      "title": "Luke Skywalker's iconic 'Star Wars' lightsaber sells for $3.75 million",
+      "id": "news-paramount-plus-orders-laird-with-kenneth-branagh",
+      "slug": "paramount-orders-scottish-highland-family-saga-laird-with-kenneth-bran",
+      "title": "Paramount+ Orders Scottish Highland Family Saga ‘Laird’ With Kenneth Branagh",
       "contentType": "news",
       "formatTag": "news",
-      "category": "movies",
+      "category": "tv",
       "subcategory": "news",
-      "eventType": "other",
+      "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "luke-skywalker-lightsaber-auction-record",
-      "primaryKeyword": "Star Wars lightsaber auction",
-      "primaryEntity": "Luke Skywalker's Lightsaber",
+      "eventSlug": "paramount-plus-orders-laird-with-kenneth-branagh",
+      "primaryKeyword": "Laird series",
+      "primaryEntity": "Laird (TV series)",
       "entities": [
-        "Star Wars"
+        "Paramount+",
+        "Kenneth Branagh"
       ],
-      "angle": "Luke Skywalker's iconic lightsaber from Star Wars sold for $3.75 million at auction.",
+      "angle": "Paramount+ orders new Scottish family saga series starring Kenneth Branagh.",
       "tmdbType": "movie",
-      "source": "gnews:Central Oregon Daily",
+      "source": "rss:THR",
       "sources": [
         {
-          "outlet": "Central Oregon Daily",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxNSnRyRVFuSE9uYm9acWZGcjlBVjEzVGpjaFUybnZXdjFvUHB2UHVCUFpvS2hCUFBTNlZ2X1Y5UHZDSF9jbkZfM3Q3WFRNWXNOb2VXbEVmYUg1d3Y2WV95aVE1eDNPRGN6dmVGb25HR2h1MTlmSTVkTWwtbVluSVB2UHpZTlhjUXFjX0ZvRHY1N3NUOFh0cjNOV2xnbFRpV1hQSGk3NGVWWTRGZGI2Z240REt5QW9nXy1vV3RhZ0NwZXJiaGczX3p3NUZIMC1LaWFSMFp6SkRrb3FCd3RrZDZQOURNRDVmeVNzR2lCTFl5bjBDcThVZER1bHoxNA?oc=5",
-          "ageMin": 48,
-          "headline": "Luke Skywalker's iconic 'Star Wars' lightsaber sells for $3.75 million - Central Oregon Daily",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMi-wFBVV95cUxNSnRyRVFuSE9uYm9acWZGcjlBVjEzVGpjaFUybnZXdjFvUHB2UHVCUFpvS2hCUFBTNlZ2X1Y5UHZDSF9jbkZfM3Q3WFRNWXNOb2VXbEVmYUg1d3Y2WV95aVE1eDNPRGN6dmVGb25HR2h1MTlmSTVkTWwtbVluSVB2UHpZTlhjUXFjX0ZvRHY1N3NUOFh0cjNOV2xnbFRpV1hQSGk3NGVWWTRGZGI2Z240REt5QW9nXy1vV3R"
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/tv/tv-news/paramount-scottish-highland-saga-laird-kenneth-branagh-1236653912/",
+          "ageMin": 181,
+          "headline": "Paramount+ Orders Scottish Highland Family Saga ‘Laird’ With Kenneth Branagh",
+          "summary": "The story follows a landowner, the Laird of Castle Drummoch, who challenges an American billionaire with ambitions to buy up the glens."
         }
       ],
-      "ageMin": 48,
+      "ageMin": 181,
       "_cand": {
-        "key": "rss:luke-skywalker-s-iconic-star-wars-lightsaber-sells-for-3-75-",
+        "key": "rss:paramount-orders-scottish-highland-family-saga-laird-with-ke",
         "popularity": 0,
-        "kind": "gnews"
+        "kind": "rss-news"
       },
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
+        "tier1Count": 1,
+        "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Central Oregon Daily"
+          "THR"
         ],
-        "maxTier": 5,
+        "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Central Oregon Daily",
+        "attribution": "THR",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 67,
+      "priority": 66,
       "signals": {
-        "recency": 24,
-        "corroboration": 8,
+        "recency": 9,
+        "corroboration": 12,
         "status": 18,
-        "type": 5,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
-        "big": 12,
+        "big": 18,
         "trending": 0,
         "spice": 0,
         "softTv": 0
@@ -1593,7 +1141,140 @@
       "tierClass": "B"
     },
     {
-      "id": "news-snoop-dogg-biopic-universal-release-date",
+      "id": "music-news-dhani-harrison-nigel-godrich-preview-dragonflies-album",
+      "slug": "dhani-harrison-nigel-godrich-preview-new-band-dragonflies-album-with-s",
+      "title": "Dhani Harrison, Nigel Godrich Preview New Band Dragonflies’ Album With ‘Slower’",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "dhani-harrison-nigel-godrich-preview-dragonflies-album",
+      "primaryKeyword": "Dragonflies album",
+      "primaryEntity": "Dhani Harrison",
+      "entities": [
+        "Nigel Godrich",
+        "Dragonflies"
+      ],
+      "angle": "Dhani Harrison and Nigel Godrich preview their new band Dragonflies' upcoming album.",
+      "tmdbType": "movie",
+      "source": "rss:Rolling Stone",
+      "sources": [
+        {
+          "outlet": "Rolling Stone",
+          "tier": 7,
+          "url": "https://www.rollingstone.com/music/music-news/dhani-harrison-nigel-godrich-new-band-dragonflies-slower-1235597083/",
+          "ageMin": 194,
+          "headline": "Dhani Harrison, Nigel Godrich Preview New Band Dragonflies’ Album With ‘Slower’",
+          "summary": "Duo’s eponymous album arrives on Sept. 18"
+        }
+      ],
+      "ageMin": 194,
+      "_cand": {
+        "key": "rss:dhani-harrison-nigel-godrich-preview-new-band-dragonflies-al",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Rolling Stone"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Rolling Stone",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 48,
+      "signals": {
+        "recency": 9,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-loki-producer-kevin-r-wright-talks-pompeii-tom-hiddleston",
+      "slug": "loki-ep-kevin-r-wright-talks-pompeii-out-of-time-and-new-company-with-",
+      "title": "Loki EP Kevin R. Wright Talks Pompeii: Out of Time and New Company with Tom Hiddleston",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "loki-producer-kevin-r-wright-talks-pompeii-tom-hiddleston",
+      "primaryKeyword": "loki producer",
+      "primaryEntity": "Loki (TV series)",
+      "entities": [
+        "Kevin R. Wright",
+        "Tom Hiddleston"
+      ],
+      "angle": "Loki EP Kevin R. Wright discusses 'Pompeii: Out of Time' and Tom Hiddleston's involvement.",
+      "tmdbType": "movie",
+      "source": "rss:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/paramount-warner-bros-eu-approval-1236999973/",
+          "ageMin": 44,
+          "headline": "Paramount s Takeover Of Warner Bros. Discovery Gets EU Greenlight",
+          "summary": "Paramount s $111 billion deal to acquire Warner Bros. Discovery (WBD) has taken a major step forward after securing approval from the European Union s antitrust authority. The European Commission has greenlit the media mega-merger, in what will be welcome news for David Ellison as he contends with legal challenges in the U.S. and regulatory uncertainty in [ ]"
+        }
+      ],
+      "ageMin": 44,
+      "_cand": {
+        "key": "rss:paramount-s-takeover-of-warner-bros-discovery-gets-eu-greenl",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 65,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 6,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-snoop-dogg-biopic-summer-2027-release",
       "slug": "snoop-dogg-biopic-lands-summer-2027-release-from-universal",
       "title": "Snoop Dogg Biopic Lands Summer 2027 Release From Universal",
       "contentType": "news",
@@ -1602,7 +1283,8 @@
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "snoop-dogg-biopic-universal-release-date",
+      "tier": "popular",
+      "eventSlug": "snoop-dogg-biopic-summer-2027-release",
       "primaryKeyword": "Snoop Dogg biopic",
       "primaryEntity": "Snoop Dogg Biopic",
       "entities": [
@@ -1611,7 +1293,7 @@
         "Jonathan Daviss",
         "Craig Brewer"
       ],
-      "angle": "Universal sets a Summer 2027 release date for the Snoop Dogg biopic starring Jonathan Daviss.",
+      "angle": "Universal sets a Summer 2027 release date for the Snoop Dogg biopic.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
@@ -1619,12 +1301,12 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/movies/movie-news/snoop-dogg-biopic-lands-summer-2027-release-1236653520/",
-          "ageMin": 1261,
+          "ageMin": 1321,
           "headline": "Snoop Dogg Biopic Lands Summer 2027 Release From Universal",
           "summary": "Jonathan Daviss stars in Craig Brewer's feature that examines the life of the iconic rapper."
         }
       ],
-      "ageMin": 1261,
+      "ageMin": 1321,
       "_cand": {
         "key": "rss:snoop-dogg-biopic-lands-summer-2027-release-from-universal",
         "popularity": 0,
@@ -1661,37 +1343,102 @@
       "tierClass": "B"
     },
     {
-      "id": "news-lightsaber-luke-skywalker-hand-auction",
-      "slug": "lightsaber-luke-skywalker-s-hand-fetch-3-7m-at-auction",
-      "title": "Lightsaber, Luke Skywalker’s hand fetch $3.7M at auction",
+      "id": "news-the-chosen-bear-grylls-crossover",
+      "slug": "watch-jesus-rappel-down-a-cliff-in-the-tv-crossover-event-of-the-summe",
+      "title": "Watch Jesus Rappel Down a Cliff in the TV Crossover Event of the Summer: The Chosen x Bear Grylls",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "the-chosen-bear-grylls-crossover",
+      "primaryKeyword": "The Chosen Bear Grylls crossover",
+      "primaryEntity": "The Chosen",
+      "entities": [
+        "Bear Grylls"
+      ],
+      "angle": "The popular faith-based series 'The Chosen' is crossing over with survivalist Bear Grylls.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/tv/tv-news/the-chosen-in-the-wild-with-bear-grylls-trailer-jesus-rappels-1236654136/",
+          "ageMin": 57,
+          "headline": "Watch Jesus Rappel Down a Cliff in the TV Crossover Event of the Summer: The Chosen x Bear Grylls",
+          "summary": "No word yet on how he traverses the Colorado River."
+        }
+      ],
+      "ageMin": 57,
+      "_cand": {
+        "key": "rss:watch-jesus-rappel-down-a-cliff-in-the-tv-crossover-event-of",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 65,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 6,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-luke-skywalker-lightsaber-auction",
+      "slug": "luke-skywalker-s-iconic-star-wars-lightsaber-sells-for-3-75-million",
+      "title": "Luke Skywalker's Iconic 'Star Wars' Lightsaber Sells for $3.75 Million",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "lightsaber-luke-skywalker-hand-auction",
+      "eventSlug": "luke-skywalker-lightsaber-auction",
       "primaryKeyword": "luke skywalker lightsaber auction",
       "primaryEntity": "Luke Skywalker",
       "entities": [
         "Star Wars"
       ],
-      "angle": "Iconic 'Star Wars' memorabilia, including a lightsaber and Luke Skywalker's hand prop, sold for millions at auction.",
+      "angle": "Luke Skywalker's iconic lightsaber from Star Wars sold for a significant sum at auction.",
       "tmdbType": "movie",
-      "source": "gnews:Boston 25 News",
+      "source": "gnews:Central Oregon Daily",
       "sources": [
         {
-          "outlet": "Boston 25 News",
+          "outlet": "Central Oregon Daily",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPRFpIVUxqd0tqSDdPbncwNUNaMmFQaFQtc1hmVEdFWXFsRE1Xcjc3OFd3bnpSVFJLeXZYazByMFpQZlBxTEVFdV9tWDRwVFc0VDRCbzFpZkhBdm8ta0tMTFJmYVZ0Ykw3VnRZV3loY0o5SWZEMFprRFYzU2NwT181VUUya01NWld4TllvcVlRd3VaQXZBUHNXNVA4LS16WUFJS01fLXZ0bDZpUEU0Tk12ZkpOTmpwNkdqTlFOVkdPVXk2aGx4ZDBwTWhJdWxWcF9p0gHQAUFVX3lxTE9EWkhVTGp3S2pIN09udzA1Q1oyYVBoVC1zWGZUR0VZcWxETVdyNzc4V3duelJUUkt5dlhrMHIwWlBmUHFMRUV1X21YNHBUVzRUNEJvMWlmSEF2by1rS0xMUmZhVnRiTDdWdFlXeWhjSjlJZkQwWmtEVjNTY3BPXzVVRTJrTU1aV3hOWW9xWVF3dVpBdkFQc1c1UDgtLXpZQUlLTV8tdnRsNmlQRTROTXZmSk5OanA2R2pOUU5WR09VeTZobHhkMHBNaEl1bFZwX2k?oc=5",
-          "ageMin": 137,
-          "headline": "Lightsaber, Luke Skywalker’s hand fetch $3.7M at auction - Boston 25 News",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMi0AFBVV95cUxPRFpIVUxqd0tqSDdPbncwNUNaMmFQaFQtc1hmVEdFWXFsRE1Xcjc3OFd3bnpSVFJLeXZYazByMFpQZlBxTEVFdV9tWDRwVFc0VDRCbzFpZkhBdm8ta0tMTFJmYVZ0Ykw3VnRZV3loY0o5SWZEMFprRFYzU2NwT181VUUya01NWld4TllvcVlRd3VaQXZBUHNXNVA4LS16WUFJS01fLXZ0bDZpUEU0Tk12ZkpOTmpwNkdqTlF"
+          "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxNSnRyRVFuSE9uYm9acWZGcjlBVjEzVGpjaFUybnZXdjFvUHB2UHVCUFpvS2hCUFBTNlZ2X1Y5UHZDSF9jbkZfM3Q3WFRNWXNOb2VXbEVmYUg1d3Y2WV95aVE1eDNPRGN6dmVGb25HR2h1MTlmSTVkTWwtbVluSVB2UHpZTlhjUXFjX0ZvRHY1N3NUOFh0cjNOV2xnbFRpV1hQSGk3NGVWWTRGZGI2Z240REt5QW9nXy1vV3RhZ0NwZXJiaGczX3p3NUZIMC1LaWFSMFp6SkRrb3FCd3RrZDZQOURNRDVmeVNzR2lCTFl5bjBDcThVZER1bHoxNA?oc=5",
+          "ageMin": 108,
+          "headline": "Luke Skywalker's iconic 'Star Wars' lightsaber sells for $3.75 million - Central Oregon Daily",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMi-wFBVV95cUxNSnRyRVFuSE9uYm9acWZGcjlBVjEzVGpjaFUybnZXdjFvUHB2UHVCUFpvS2hCUFBTNlZ2X1Y5UHZDSF9jbkZfM3Q3WFRNWXNOb2VXbEVmYUg1d3Y2WV95aVE1eDNPRGN6dmVGb25HR2h1MTlmSTVkTWwtbVluSVB2UHpZTlhjUXFjX0ZvRHY1N3NUOFh0cjNOV2xnbFRpV1hQSGk3NGVWWTRGZGI2Z240REt5QW9nXy1vV3R"
         }
       ],
-      "ageMin": 137,
+      "ageMin": 108,
       "_cand": {
-        "key": "rss:lightsaber-luke-skywalker-s-hand-fetch-3-7m-at-auction-bosto",
+        "key": "rss:luke-skywalker-s-iconic-star-wars-lightsaber-sells-for-3-75-",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -1701,11 +1448,11 @@
         "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "Boston 25 News"
+          "Central Oregon Daily"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "Boston 25 News",
+        "attribution": "Central Oregon Daily",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -1726,38 +1473,38 @@
       "tierClass": "C"
     },
     {
-      "id": "news-incredibles-3-producer-brad-bird-aging-characters",
-      "slug": "incredibles-3-producer-brad-bird-on-aging-up-characters",
-      "title": "'Incredibles 3' Producer Brad Bird on Aging Up Characters",
+      "id": "news-star-wars-rogue-one-changes-a-new-hope",
+      "slug": "10-ways-star-wars-rogue-one-changes-a-new-hope",
+      "title": "10 Ways 'Star Wars: Rogue One' Changes 'A New Hope'",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "incredibles-3-producer-brad-bird-aging-characters",
-      "primaryKeyword": "Incredibles 3 producer comments",
-      "primaryEntity": "Incredibles 3",
+      "eventSlug": "star-wars-rogue-one-changes-a-new-hope",
+      "primaryKeyword": "Star Wars Rogue One",
+      "primaryEntity": "Rogue One: A Star Wars Story",
       "entities": [
-        "Brad Bird",
-        "Pixar"
+        "Star Wars: Rogue One",
+        "Star Wars: A New Hope"
       ],
-      "angle": "Producer Brad Bird discusses the challenges of aging up characters in Pixar's upcoming 'Incredibles 3' sequel.",
+      "angle": "An analysis piece explores ten ways the film 'Star Wars: Rogue One' alters the context and understanding of 'Star Wars: A New Hope'.",
       "tmdbType": "movie",
-      "source": "gnews:The Direct",
+      "source": "gnews:Yahoo",
       "sources": [
         {
-          "outlet": "The Direct",
+          "outlet": "Yahoo",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPYnNYLXFtSDJMM29RN3FELXRvUnRIV1RtcWkwV25SelFUdzhsR3FBR29WdzVjbzA3Xzg1WVl0MHdhLTdWOXg0MkJTQmI3MmwzUmh0UFpIbFJSaGR2M0lFVHc4Q0hCWm1QOW0xZkFZcng5Y3pZVXlOYmEtLTh6UXlMRDhRa2k4R2U0eW9VbnNMcXVLcFc4SEVpMA?oc=5",
-          "ageMin": 168,
-          "headline": "'Incredibles 3' Producer Brad Bird Admits Aging Up The Characters With A Time Jump In Pixar's Upcoming Sequel Movie Would Not Make Them 'Hipper Or Cooler Or More Like Them' (Exclusive) - The Direct",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxPYnNYLXFtSDJMM29RN3FELXRvUnRIV1RtcWkwV25SelFUdzhsR3FBR29WdzVjbzA3Xzg1WVl0MHdhLTdWOXg0MkJTQmI3MmwzUmh0UFpIbFJSaGR2M0lFVHc4Q0hCWm1QOW0xZkFZcng5Y3pZVXlOYmEtLTh6UXlMRDhRa2k4R2U0eW9VbnNMcXVLcFc4SEVpMA?oc=5\" target=\"_blank\" 'Incredibles 3' Produc"
+          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNVU4zZWJyM0VwNUwwWFZYZ2ticENNdTRyWW0zdGEzaDdObTB1M0pfblVDUmdUWVhkaHhXeFdkWWlGMU12MTBXYVpZR3B5d2puaFh2d0dwX1o4YTNLS2N1RUdvbkk2X1lyWjhVdFpSYnIxV1VLcnNtdVk2cjBqTFVxaWt1WkZfaVk?oc=5",
+          "ageMin": 91,
+          "headline": "Star Wars: Rogue One - 10 Ways It Changes A New Hope - Yahoo",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMihwFBVV95cUxNVU4zZWJyM0VwNUwwWFZYZ2ticENNdTRyWW0zdGEzaDdObTB1M0pfblVDUmdUWVhkaHhXeFdkWWlGMU12MTBXYVpZR3B5d2puaFh2d0dwX1o4YTNLS2N1RUdvbkk2X1lyWjhVdFpSYnIxV1VLcnNtdVk2cjBqTFVxaWt1WkZfaVk?oc=5\" target=\"_blank\" Star Wars: Rogue One - 10 Ways It Changes A N"
         }
       ],
-      "ageMin": 168,
+      "ageMin": 91,
       "_cand": {
-        "key": "rss:-incredibles-3-producer-brad-bird-admits-aging-up-the-charac",
+        "key": "rss:star-wars-rogue-one-10-ways-it-changes-a-new-hope-yahoo",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -1767,11 +1514,11 @@
         "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "The Direct"
+          "Yahoo"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "The Direct",
+        "attribution": "Yahoo",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -1792,37 +1539,37 @@
       "tierClass": "C"
     },
     {
-      "id": "news-star-wars-lightsaber-prop-auction-record",
-      "slug": "star-wars-lightsaber-prop-sells-for-record-3-75m",
-      "title": "Star Wars Lightsaber Prop Sells for Record $3.75M",
+      "id": "news-star-wars-jedi-announcement",
+      "slug": "star-wars-jedi-gets-official-sequel-release-this-year",
+      "title": "‘Star Wars Jedi’ Gets Official Sequel Release This Year",
       "contentType": "news",
       "formatTag": "news",
-      "category": "movies",
+      "category": "tv",
       "subcategory": "news",
-      "eventType": "other",
+      "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "star-wars-lightsaber-prop-auction-record",
-      "primaryKeyword": "star wars lightsaber prop auction",
-      "primaryEntity": "Star Wars",
+      "eventSlug": "star-wars-jedi-announcement",
+      "primaryKeyword": "star wars jedi sequel",
+      "primaryEntity": "Star Wars: The Last Jedi",
       "entities": [
-        "Lightsaber Prop"
+        "Star Wars Jedi"
       ],
-      "angle": "A Star Wars lightsaber prop, complete with a severed hand, has sold at auction for a record-breaking $3.75 million.",
+      "angle": "The 'Star Wars Jedi' video game franchise is set to release its official sequel this year.",
       "tmdbType": "movie",
-      "source": "gnews:HotHardware",
+      "source": "gnews:Samsung Global Newsroom",
       "sources": [
         {
-          "outlet": "HotHardware",
+          "outlet": "Samsung Global Newsroom",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPNTV6RUFOQUwwLWluWW01bXVYS0tveWl1ako4eXF5QWN2cmZlenhISUZkSFI0cVJNeUtfZ3pjcVJfOWlXamU2MmVtd2JJUmRkQi0ybEwzOFFTUVpOMmVQdVZVMEZUaDhZSHVaSFVWb1p5NkZBMG5ZTWU0M2VVMWNXNHUxWS1zeWdKVmppYzhBYw?oc=5",
-          "ageMin": 311,
-          "headline": "Star Wars Lightsaber Prop With Severed Hand Sells For Record $3.75M - HotHardware",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMijwFBVV95cUxPNTV6RUFOQUwwLWluWW01bXVYS0tveWl1ako4eXF5QWN2cmZlenhISUZkSFI0cVJNeUtfZ3pjcVJfOWlXamU2MmVtd2JJUmRkQi0ybEwzOFFTUVpOMmVQdVZVMEZUaDhZSHVaSFVWb1p5NkZBMG5ZTWU0M2VVMWNXNHUxWS1zeWdKVmppYzhBYw?oc=5\" target=\"_blank\" Star Wars Lightsaber Prop With Sev"
+          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNaHhmSTd1S05LcVJzX3VNZFVTY212aVJreXN3ZmNfQnV0UXI1OEhpM0JoTzROY2lDRmxjS2hqYjVHSlZXRGNOcVdBSHR3dmdxVkdRMVE5SEVJM21XdF9Rc0tNLTdNeWVVdG9QWWVBMHBveHpoUHN4N0p5dHhobEVoc1VwYzhiem9UdHFNLTE0dElVQnNBZF94OS1ucFRodU1VTGFIaXRhbUdVYkg1RmlkUA?oc=5",
+          "ageMin": 389,
+          "headline": "[Galaxy Unpacked July 2026] A First Look at Galaxy Watch Ultra2 and Galaxy Watch9 - Samsung Global Newsroom",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxNaHhmSTd1S05LcVJzX3VNZFVTY212aVJreXN3ZmNfQnV0UXI1OEhpM0JoTzROY2lDRmxjS2hqYjVHSlZXRGNOcVdBSHR3dmdxVkdRMVE5SEVJM21XdF9Rc0tNLTdNeWVVdG9QWWVBMHBveHpoUHN4N0p5dHhobEVoc1VwYzhiem9UdHFNLTE0dElVQnNBZF94OS1ucFRodU1VTGFIaXRhbUdVYkg1RmlkUA?oc=5\" target"
         }
       ],
-      "ageMin": 311,
+      "ageMin": 389,
       "_cand": {
-        "key": "rss:star-wars-lightsaber-prop-with-severed-hand-sells-for-record",
+        "key": "rss:-galaxy-unpacked-july-2026-a-first-look-at-galaxy-watch-ultr",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -1832,16 +1579,82 @@
         "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "HotHardware"
+          "Samsung Global Newsroom"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "HotHardware",
+        "attribution": "Samsung Global Newsroom",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 52,
+      "priority": 57,
+      "signals": {
+        "recency": 4,
+        "corroboration": 8,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-clayface-director-reveals-removed-scenes-from-mike-flanagan-dcu-script",
+      "slug": "director-reveals-what-was-cut-from-mike-flanagan-s-clayface-dcu-script",
+      "title": "Director Reveals What Was Cut From Mike Flanagan's 'Clayface' DCU Script",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "clayface-director-reveals-removed-scenes-from-mike-flanagan-dcu-script",
+      "primaryKeyword": "Clayface",
+      "primaryEntity": "Clayface",
+      "entities": [
+        "Mike Flanagan",
+        "DCU"
+      ],
+      "angle": "The director of the 'Clayface' project has shared details about elements that were cut from Mike Flanagan's original DCU script.",
+      "tmdbType": "movie",
+      "source": "gnews:GeekTyrant",
+      "sources": [
+        {
+          "outlet": "GeekTyrant",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPcTBwU1pYY0w2clNybXVlNk5LLWFhN3paT1JReXRtM2hpVHdVakUxWVQ2VHViZkFweUU0TC1NVFI3WjFhVUZkc2MtSDAwMnNzTGYzNXB4bGhTMGpkS2xlelIzMWs3RmxQTTgtamtycGpnWGNwMnd2OWx2SjY3cTdDSjVkVjhvLWV1Y093VXhZWHhSUDNBcGpsQl9mTWNCMnBveUtVN01ZQjk0SVBjdEdrT3d0SGN6SEp5TXlPSmhWRzNzNlFHOU54b19JeDRqWUVo?oc=5",
+          "ageMin": 272,
+          "headline": "CLAYFACE Director Reveals What Was Removed From Mike Flanagan’s DCU Script, and It Sounds Like the Best Stuff - GeekTyrant",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMi0AFBVV95cUxPcTBwU1pYY0w2clNybXVlNk5LLWFhN3paT1JReXRtM2hpVHdVakUxWVQ2VHViZkFweUU0TC1NVFI3WjFhVUZkc2MtSDAwMnNzTGYzNXB4bGhTMGpkS2xlelIzMWs3RmxQTTgtamtycGpnWGNwMnd2OWx2SjY3cTdDSjVkVjhvLWV1Y093VXhZWHhSUDNBcGpsQl9mTWNCMnBveUtVN01ZQjk0SVBjdEdrT3d0SGN6SEp5TXl"
+        }
+      ],
+      "ageMin": 272,
+      "_cand": {
+        "key": "rss:clayface-director-reveals-what-was-removed-from-mike-flanaga",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "GeekTyrant"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "GeekTyrant",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 54,
       "signals": {
         "recency": 9,
         "corroboration": 8,
@@ -1851,29 +1664,95 @@
         "breakout": 0,
         "big": 12,
         "trending": 0,
+        "spice": 2,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-minka-kelly-friday-night-lights-cancellation-anecdote",
+      "slug": "minka-kelly-says-friday-night-lights-was-on-the-brink-of-being-cancele",
+      "title": "Minka Kelly Says ‘Friday Night Lights’ Was ‘on the Brink of Being Canceled’ Every Season",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "minka-kelly-friday-night-lights-cancellation-anecdote",
+      "primaryKeyword": "friday night lights cancellation",
+      "primaryEntity": "Friday Night Lights",
+      "entities": [
+        "Friday Night Lights (TV series)",
+        "Minka Kelly"
+      ],
+      "angle": "Minka Kelly reveals 'Friday Night Lights' was constantly on the verge of cancellation.",
+      "tmdbType": "movie",
+      "source": "gnews:People.com",
+      "sources": [
+        {
+          "outlet": "People.com",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxObGN0c0tUM3FNQTFqTnp1UU9ZU0dTazlsbHRtOEZmeVlnTThtYlIzc1NSVnBfZW1qWVp2Z2dieFBLaDQweGstTGk1TXh1ZVluTUxlTXhZbEdrRHFmS3p1WnBScHIwRl9OMlo2cUgxVkVTQVJzeExMTE13SXFTNkNaZlFFcHJXeU9xeHgwMC1BWFR2Qkh5TjhsNzJmN0prRnRZSzEzR2Y1TzBIZkl4Tm83MGZCWQ?oc=5",
+          "ageMin": 117,
+          "headline": "Minka Kelly Says ‘Friday Night Lights’ Was ‘on the Brink of Being Canceled’ Every Season - People.com",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiswFBVV95cUxObGN0c0tUM3FNQTFqTnp1UU9ZU0dTazlsbHRtOEZmeVlnTThtYlIzc1NSVnBfZW1qWVp2Z2dieFBLaDQweGstTGk1TXh1ZVluTUxlTXhZbEdrRHFmS3p1WnBScHIwRl9OMlo2cUgxVkVTQVJzeExMTE13SXFTNkNaZlFFcHJXeU9xeHgwMC1BWFR2Qkh5TjhsNzJmN0prRnRZSzEzR2Y1TzBIZkl4Tm83MGZCWQ?oc=5\" ta"
+        }
+      ],
+      "ageMin": 117,
+      "_cand": {
+        "key": "rss:minka-kelly-says-friday-night-lights-was-on-the-brink-of-bei",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "People.com"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "People.com",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 53,
+      "signals": {
+        "recency": 16,
+        "corroboration": 8,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 6,
+        "trending": 0,
         "spice": 0,
         "softTv": 0
       },
       "tierClass": "C"
     },
     {
-      "id": "news-disney-layoffs-animation-division",
-      "slug": "bloodbath-at-disney-as-mass-layoffs-hit-with-animation-movie-giant-bei",
-      "title": "Bloodbath at Disney as mass layoffs hit — with animation movie giant being gutted",
+      "id": "news-disney-mass-layoffs-animation-division",
+      "slug": "disney-faces-mass-layoffs-animation-division-heavily-affected",
+      "title": "Disney Faces Mass Layoffs, Animation Division Heavily Affected",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "disney-layoffs-animation-division",
-      "primaryKeyword": "disney layoffs",
-      "primaryEntity": "Frozen Fever",
+      "eventSlug": "disney-mass-layoffs-animation-division",
+      "primaryKeyword": "Disney layoffs animation",
+      "primaryEntity": "Disney",
       "entities": [
-        "Walt Disney Studios",
-        "Disney Animation"
+        "Walt Disney Animation Studios Short Films Collection",
+        "Walt Disney Animation Studios"
       ],
-      "angle": "Disney is undergoing significant layoffs, heavily impacting its animation division.",
+      "angle": "Significant layoffs are occurring at Disney, with a particular impact on its animation division.",
       "tmdbType": "movie",
       "source": "gnews:New York Post",
       "sources": [
@@ -1881,12 +1760,12 @@
           "outlet": "New York Post",
           "tier": 5,
           "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPelBVVGNKVW5POUhrNnBESVhiRXIxTFlyODRBcXN3b1JwVXNQR05mYjAyRjVZQUlwQnpVei1iMi0yYnZab2pLOG1pdHpfcGhmQ3pLUUFLTXBrN0UtT3dOQ0NrdzQxZDRIX3k4ME93Y3hQLTJHeDJjTVF4a25LbDZNOWZuZ21NM0EyRHZQcUYyS3lHd3hLMzJ1SjRoRlduSEE3LXJkdWpJUQ?oc=5",
-          "ageMin": 192,
+          "ageMin": 252,
           "headline": "Bloodbath at Disney as mass layoffs hit — with animation movie giant being gutted - New York Post",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxPelBVVGNKVW5POUhrNnBESVhiRXIxTFlyODRBcXN3b1JwVXNQR05mYjAyRjVZQUlwQnpVei1iMi0yYnZab2pLOG1pdHpfcGhmQ3pLUUFLTXBrN0UtT3dOQ0NrdzQxZDRIX3k4ME93Y3hQLTJHeDJjTVF4a25LbDZNOWZuZ21NM0EyRHZQcUYyS3lHd3hLMzJ1SjRoRlduSEE3LXJkdWpJUQ?oc=5\" target=\"_blank\" Bl"
         }
       ],
-      "ageMin": 192,
+      "ageMin": 252,
       "_cand": {
         "key": "rss:bloodbath-at-disney-as-mass-layoffs-hit-with-animation-movie",
         "popularity": 0,
@@ -1923,140 +1802,9 @@
       "tierClass": "C"
     },
     {
-      "id": "news-clayface-director-mike-flanagan-dcu-script-details",
-      "slug": "clayface-director-reveals-what-was-removed-from-mike-flanagan-s-dcu-sc",
-      "title": "CLAYFACE Director Reveals What Was Removed From Mike Flanagan’s DCU Script, and It Sounds Like the Best Stuff",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "clayface-director-mike-flanagan-dcu-script-details",
-      "primaryKeyword": "clayface dcu script",
-      "primaryEntity": "Clayface",
-      "entities": [
-        "Mike Flanagan",
-        "DCU"
-      ],
-      "angle": "The director of the unmade 'Clayface' film reveals details about what was cut from Mike Flanagan's DCU script.",
-      "tmdbType": "movie",
-      "source": "gnews:GeekTyrant",
-      "sources": [
-        {
-          "outlet": "GeekTyrant",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPcTBwU1pYY0w2clNybXVlNk5LLWFhN3paT1JReXRtM2hpVHdVakUxWVQ2VHViZkFweUU0TC1NVFI3WjFhVUZkc2MtSDAwMnNzTGYzNXB4bGhTMGpkS2xlelIzMWs3RmxQTTgtamtycGpnWGNwMnd2OWx2SjY3cTdDSjVkVjhvLWV1Y093VXhZWHhSUDNBcGpsQl9mTWNCMnBveUtVN01ZQjk0SVBjdEdrT3d0SGN6SEp5TXlPSmhWRzNzNlFHOU54b19JeDRqWUVo?oc=5",
-          "ageMin": 212,
-          "headline": "CLAYFACE Director Reveals What Was Removed From Mike Flanagan’s DCU Script, and It Sounds Like the Best Stuff - GeekTyrant",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMi0AFBVV95cUxPcTBwU1pYY0w2clNybXVlNk5LLWFhN3paT1JReXRtM2hpVHdVakUxWVQ2VHViZkFweUU0TC1NVFI3WjFhVUZkc2MtSDAwMnNzTGYzNXB4bGhTMGpkS2xlelIzMWs3RmxQTTgtamtycGpnWGNwMnd2OWx2SjY3cTdDSjVkVjhvLWV1Y093VXhZWHhSUDNBcGpsQl9mTWNCMnBveUtVN01ZQjk0SVBjdEdrT3d0SGN6SEp5TXl"
-        }
-      ],
-      "ageMin": 212,
-      "_cand": {
-        "key": "rss:clayface-director-reveals-what-was-removed-from-mike-flanaga",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "GeekTyrant"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "GeekTyrant",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 52,
-      "signals": {
-        "recency": 9,
-        "corroboration": 8,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 12,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-sophie-thatcher-yellowjackets-future",
-      "slug": "sophie-thatcher-is-ready-to-move-beyond-yellowjackets-and-step-out-of-",
-      "title": "Sophie Thatcher Is Ready to Move Beyond ‘Yellowjackets’ and Step Out of the Darkness",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "sophie-thatcher-yellowjackets-future",
-      "primaryKeyword": "sophie thatcher yellowjackets",
-      "primaryEntity": "Sophie Thatcher",
-      "entities": [
-        "Yellowjackets"
-      ],
-      "angle": "Sophie Thatcher discusses her career trajectory beyond her role in 'Yellowjackets'.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/film/features/sophie-thatcher-yellowjackets-ending-trump-gaza-her-private-hell-inde-navarrette-1236817823/",
-          "ageMin": 1,
-          "headline": "Sophie Thatcher Is Ready to Move Beyond ‘Yellowjackets’ and Step Out of the Darkness",
-          "summary": "Sophie Thatcher knows what you think about her. She’s seen the headlines and social media posts. She’s dark. Maybe it’s the acting choices, like Natalie, her tortured teen on “Yellowjackets,” or an abducted missionary in “Heretic,” or the enslaved robot girlfriend in “Companion.” Perhaps it’s her Mormon upbringing, which she believes has fostered “a feeling [ ]"
-        }
-      ],
-      "ageMin": 1,
-      "_cand": {
-        "key": "rss:sophie-thatcher-is-ready-to-move-beyond-yellowjackets-and-st",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 65,
-      "signals": {
-        "recency": 30,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-kacey-musgraves-mexico-honey-video",
-      "slug": "kacey-musgraves-heads-south-of-the-border-for-mexico-honey-video",
-      "title": "Kacey Musgraves Heads South of the Border for Mexico Honey Video",
+      "id": "news-dominic-fike-billboard-philippines-cover",
+      "slug": "dominic-fike-talks-rocket-mixtape-fatherhood-babydoll-resurgence",
+      "title": "Dominic Fike Talks Rocket Mixtape, Fatherhood Babydoll Resurgence",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
@@ -2064,29 +1812,28 @@
       "eventType": "other",
       "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "kacey-musgraves-mexico-honey-video",
-      "primaryKeyword": "kacey musgraves mexico honey",
-      "primaryEntity": "Kacey Musgraves",
+      "eventSlug": "dominic-fike-billboard-philippines-cover",
+      "primaryKeyword": "Dominic Fike",
+      "primaryEntity": "Dominic Fike",
       "entities": [
-        "Middle of Nowhere",
-        "Middle of Nowhere (album)"
+        "Billboard Philippines"
       ],
-      "angle": "Kacey Musgraves has released a new music video for her track 'Mexico Honey' from her latest album.",
+      "angle": "Dominic Fike discusses his music and fatherhood on the cover of Billboard Philippines.",
       "tmdbType": "movie",
-      "source": "rss:Rolling Stone",
+      "source": "rss:Billboard",
       "sources": [
         {
-          "outlet": "Rolling Stone",
+          "outlet": "Billboard",
           "tier": 7,
-          "url": "https://www.rollingstone.com/music/music-news/kacey-musgraves-mexico-honey-music-video-2-1235596984/",
-          "ageMin": 58,
-          "headline": "Kacey Musgraves Heads South of the Border for Mexico Honey Video",
-          "summary": "The anthemic track comes off the country singer's most recent album, Middle of Nowhere"
+          "url": "https://www.billboard.com/music/rb-hip-hop/dominic-fike-rocket-billboard-philippines-1236300206/",
+          "ageMin": 59,
+          "headline": "Dominic Fike Talks Rocket Mixtape, Fatherhood Babydoll Resurgence",
+          "summary": "The singer-songwriter covers Billboard Philippines."
         }
       ],
-      "ageMin": 58,
+      "ageMin": 59,
       "_cand": {
-        "key": "rss:kacey-musgraves-heads-south-of-the-border-for-mexico-honey-v",
+        "key": "rss:dominic-fike-talks-rocket-mixtape-fatherhood-babydoll-resurg",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -2096,11 +1843,11 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Rolling Stone"
+          "Billboard"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Rolling Stone",
+        "attribution": "Billboard",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -2121,102 +1868,39 @@
       "tierClass": "C"
     },
     {
-      "id": "news-tom-holland-zendaya-married-blockbuster-honeymoon",
-      "slug": "tom-holland-and-zendaya-s-blockbuster-honeymoon",
-      "title": "Tom Holland and Zendaya's Blockbuster Honeymoon",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "marriage",
-      "sensitivity": "normal",
-      "eventSlug": "tom-holland-zendaya-married-blockbuster-honeymoon",
-      "primaryKeyword": "tom holland zendaya married",
-      "primaryEntity": "Zendaya",
-      "entities": [
-        "Tom Holland"
-      ],
-      "angle": "Newlywed actors Tom Holland and Zendaya are co-starring in back-to-back summer blockbusters.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/tom-holland-zendaya-blockbuster-honeymoon-1236653698/",
-          "ageMin": 91,
-          "headline": "Married With Tentpoles: Tom and Zendaya’s Blockbuster Honeymoon",
-          "summary": "The newlywed actors are co-starring together in back-to-back summer features — a Hollywood first."
-        }
-      ],
-      "ageMin": 91,
-      "_cand": {
-        "key": "rss:married-with-tentpoles-tom-and-zendaya-s-blockbuster-honeymo",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 54,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 8,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-selena-gomez-birthday-message",
-      "slug": "selena-gomez-celebrates-birthday-with-heartfelt-message-my-heart-is-so",
-      "title": "Selena Gomez Celebrates Birthday with Heartfelt Message: 'My Heart Is So Full Today'",
+      "id": "news-kacey-musgraves-mexico-honey-video",
+      "slug": "kacey-musgraves-heads-south-of-the-border-for-mexico-honey-video",
+      "title": "Kacey Musgraves Heads South of the Border for Mexico Honey Video",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "selena-gomez-birthday-message",
-      "primaryKeyword": "Selena Gomez",
-      "primaryEntity": "Selena Gomez",
+      "tier": "popular",
+      "eventSlug": "kacey-musgraves-mexico-honey-video",
+      "primaryKeyword": "kacey musgraves music video",
+      "primaryEntity": "Kacey Musgraves",
       "entities": [
-        "Billboard"
+        "Mexico Honey",
+        "Middle of Nowhere"
       ],
-      "angle": "Selena Gomez shares a heartfelt message on her birthday.",
+      "angle": "Kacey Musgraves drops a new music video for 'Mexico Honey' from her latest album.",
       "tmdbType": "movie",
-      "source": "rss:Billboard",
+      "source": "rss:TheWrap",
       "sources": [
         {
-          "outlet": "Billboard",
+          "outlet": "TheWrap",
           "tier": 7,
-          "url": "https://www.billboard.com/music/music-news/selena-gomez-celebrates-birthday-happiest-girlie-1236300766/",
-          "ageMin": 69,
-          "headline": "Selena Gomez Is the Happiest Girlie in the World on Her 34th Birthday: My Heart Is So Full Today",
-          "summary": "\"Every single day I get to create because of all of you,\" the singer-actress wrote."
+          "url": "https://www.thewrap.com/creative-content/movies/glen-powell-richard-linklater-lou-gehrig-biopic-universal/",
+          "ageMin": 117,
+          "headline": "Glen Powell and Richard Linklater Reteam for Lou Gehrig Biopic at Universal",
+          "summary": "Simon Rich will write the project and Lorne Michaels will produce The post Glen Powell and Richard Linklater Reteam for Lou Gehrig Biopic at Universal appeared first on TheWrap ."
         }
       ],
-      "ageMin": 69,
+      "ageMin": 117,
       "_cand": {
-        "key": "rss:selena-gomez-is-the-happiest-girlie-in-the-world-on-her-34th",
+        "key": "rss:glen-powell-and-richard-linklater-reteam-for-lou-gehrig-biop",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -2226,11 +1910,11 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Billboard"
+          "TheWrap"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Billboard",
+        "attribution": "TheWrap",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -2241,70 +1925,6 @@
         "corroboration": 12,
         "status": 18,
         "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-shania-twain-announcement",
-      "slug": "shania-twain-on-inclusivity-and-her-most-autobiographical-album-yet",
-      "title": "Shania Twain on Inclusivity and Her Most Autobiographical Album Yet",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "shania-twain-announcement",
-      "primaryKeyword": "Shania Twain new album",
-      "primaryEntity": "Shania Twain",
-      "entities": [],
-      "angle": "Shania Twain opens up about her LGBTQ+ fanbase and her upcoming, highly personal album.",
-      "tmdbType": "movie",
-      "source": "rss:Rolling Stone",
-      "sources": [
-        {
-          "outlet": "Rolling Stone",
-          "tier": 7,
-          "url": "https://www.rollingstone.com/music/music-features/shania-twain-interview-new-album-personal-life-1235595902/",
-          "ageMin": 264,
-          "headline": "Shania Twain: ‘People Know I’m Inclusive’",
-          "summary": "The superstar opens up about life before superstardom, her sizable LGBTQ+ fanbase, and writing her most autobiographical album yet"
-        }
-      ],
-      "ageMin": 264,
-      "_cand": {
-        "key": "rss:shania-twain-people-know-i-m-inclusive-",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Rolling Stone"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Rolling Stone",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 48,
-      "signals": {
-        "recency": 9,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
         "pop": 0,
         "breakout": 0,
         "big": 0,
