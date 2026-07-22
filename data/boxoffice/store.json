@@ -1683,10 +1683,10 @@
    "eventSlug": "the-odyssey-bo-update-100m",
    "form": "BO-UPDATE",
    "reason": "1 unverified claim(s) cut, unrecovered",
-   "tries": 81,
-   "at": "2026-07-21T23:33:40.514Z",
+   "tries": 82,
+   "at": "2026-07-22T00:03:29.718Z",
    "dead": true,
-   "expiresAt": "2026-07-24T23:33:40.514Z"
+   "expiresAt": "2026-07-25T00:03:29.718Z"
   },
   {
    "key": "star-wars-the-mandalorian-and-grogu-bo-update-d59|BO-UPDATE",
@@ -1895,16 +1895,32 @@
    "reason": "words 97 < 180 (owner-set ~200-word minimum) | soft-floor readability 1 < 5 | soft-floor engagement 1 < 5 | soft-floor humanVoice 1 < 5",
    "tries": 1,
    "at": "2026-07-21T23:06:23.990Z"
+  },
+  {
+   "key": "stop-that-train-bo-opening|BO-OPENING",
+   "eventSlug": "stop-that-train-bo-opening",
+   "form": "BO-OPENING",
+   "reason": "soft-floor engagement 2 < 5 | soft-floor humanVoice 3 < 5",
+   "tries": 1,
+   "at": "2026-07-22T00:08:31.145Z"
+  },
+  {
+   "key": "avatar-the-last-airbender-trending-tv-w2026-07-19|TRENDING-TV",
+   "eventSlug": "avatar-the-last-airbender-trending-tv-w2026-07-19",
+   "form": "TRENDING-TV",
+   "reason": "words 98 < 180 (owner-set ~200-word minimum) | soft-floor engagement 4 < 5 | soft-floor humanVoice 3 < 5",
+   "tries": 1,
+   "at": "2026-07-22T00:11:06.644Z"
   }
  ],
- "zeroStreak": 7,
+ "zeroStreak": 8,
  "daySpend": {
   "laDay": "2026-07-21",
-  "usd": 0.77033
+  "usd": 0.81506
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1784676699545
+  "lastMs": 1784678493854
  },
  "lastAuditDay": "2026-07-21",
  "attempts": {
@@ -1939,7 +1955,9 @@
    "little house on the prairie": 1,
    "i will find you": 1,
    "the hawk": 1,
-   "the get out": 1
+   "the get out": 1,
+   "stop! that! train!": 1,
+   "avatar: the last airbender": 1
   }
  }
 }
