@@ -1696,11 +1696,11 @@
    "key": "the-odyssey-bo-update-100m|BO-UPDATE",
    "eventSlug": "the-odyssey-bo-update-100m",
    "form": "BO-UPDATE",
-   "reason": "1 unverified claim(s) cut, unrecovered",
-   "tries": 88,
-   "at": "2026-07-22T03:04:37.835Z",
+   "reason": "consistency: metaTitle: headlines domestic while the title headlines other — the SERP promise must match the page",
+   "tries": 89,
+   "at": "2026-07-22T03:34:34.716Z",
    "dead": true,
-   "expiresAt": "2026-07-25T03:04:37.835Z"
+   "expiresAt": "2026-07-25T03:34:34.716Z"
   },
   {
    "key": "star-wars-the-mandalorian-and-grogu-bo-update-d59|BO-UPDATE",
@@ -1856,9 +1856,11 @@
    "key": "death-on-the-nile-netflix-top10-w2026-07-19|NETFLIX-TOP10",
    "eventSlug": "death-on-the-nile-netflix-top10-w2026-07-19",
    "form": "NETFLIX-TOP10",
-   "reason": "1 unverified claim(s) cut, unrecovered",
-   "tries": 2,
-   "at": "2026-07-21T23:07:37.115Z"
+   "reason": "words 150 < 180 (owner-set ~200-word minimum)",
+   "tries": 3,
+   "at": "2026-07-22T03:38:04.597Z",
+   "dead": true,
+   "expiresAt": "2026-07-25T03:38:04.597Z"
   },
   {
    "key": "the-boss-baby-netflix-top10-w2026-07-19|NETFLIX-TOP10",
@@ -1955,16 +1957,24 @@
    "reason": "3 unverified claim(s) cut, unrecovered",
    "tries": 1,
    "at": "2026-07-22T02:06:48.886Z"
+  },
+  {
+   "key": "sniper-no-nation-netflix-top10-w2026-07-19|NETFLIX-TOP10",
+   "eventSlug": "sniper-no-nation-netflix-top10-w2026-07-19",
+   "form": "NETFLIX-TOP10",
+   "reason": "words 177 < 180 (owner-set ~200-word minimum)",
+   "tries": 1,
+   "at": "2026-07-22T03:39:47.465Z"
   }
  ],
- "zeroStreak": 2,
+ "zeroStreak": 3,
  "daySpend": {
   "laDay": "2026-07-21",
-  "usd": 1.05327
+  "usd": 1.10055
  },
  "pace": {
-  "tokens": 3.801196888888889,
-  "lastMs": 1784689297924
+  "tokens": 4,
+  "lastMs": 1784691090398
  },
  "lastAuditDay": "2026-07-21",
  "attempts": {
@@ -1994,7 +2004,7 @@
    "regretting you": 3,
    "meg 2: the trench": 1,
    "kpop demon hunters": 3,
-   "death on the nile": 2,
+   "death on the nile": 3,
    "joy ride": 2,
    "little house on the prairie": 2,
    "i will find you": 2,
@@ -2006,7 +2016,8 @@
    "raw": 1,
    "salish & jordan matter": 1,
    "the ultimatum: marry or move on": 1,
-   "borderline": 1
+   "borderline": 1,
+   "sniper: no nation": 1
   }
  }
 }
