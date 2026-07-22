@@ -1864,11 +1864,11 @@
    "key": "the-odyssey-bo-update-100m|BO-UPDATE",
    "eventSlug": "the-odyssey-bo-update-100m",
    "form": "BO-UPDATE",
-   "reason": "1 unverified claim(s) cut, unrecovered",
-   "tries": 112,
-   "at": "2026-07-22T15:02:53.873Z",
+   "reason": "2 unverified claim(s) cut, unrecovered",
+   "tries": 113,
+   "at": "2026-07-22T15:33:52.998Z",
    "dead": true,
-   "expiresAt": "2026-07-25T15:02:53.873Z"
+   "expiresAt": "2026-07-25T15:33:52.998Z"
   },
   {
    "key": "star-wars-the-mandalorian-and-grogu-bo-update-d59|BO-UPDATE",
@@ -2161,16 +2161,24 @@
    "reason": "fidelity: 5 unsupported figures/claims — draft-level failure",
    "tries": 2,
    "at": "2026-07-22T13:53:50.151Z"
+  },
+  {
+   "key": "kingdom-ev-opening|BO-OPENING",
+   "eventSlug": "kingdom-ev-opening",
+   "form": "BO-OPENING",
+   "reason": "words 53 < 180 (owner-set ~200-word minimum)",
+   "tries": 1,
+   "at": "2026-07-22T15:36:10.423Z"
   }
  ],
- "zeroStreak": 1,
+ "zeroStreak": 2,
  "daySpend": {
   "laDay": "2026-07-22",
-  "usd": 0.26874
+  "usd": 0.28972
  },
  "pace": {
-  "tokens": 1.9221143111111116,
-  "lastMs": 1784732471671
+  "tokens": 2.4802834222222225,
+  "lastMs": 1784734265786
  },
  "lastAuditDay": "2026-07-22",
  "attempts": {
@@ -2185,7 +2193,9 @@
    "worst neighbor ever": 1,
    "raw": 1,
    "the ultimatum: marry or move on": 1,
-   "sullivan's crossing": 1
+   "sullivan's crossing": 1,
+   "kingdom": 1,
+   "project hail mary": 1
   }
  }
 }
