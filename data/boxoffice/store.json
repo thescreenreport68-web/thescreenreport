@@ -1710,11 +1710,11 @@
    "key": "the-odyssey-bo-update-100m|BO-UPDATE",
    "eventSlug": "the-odyssey-bo-update-100m",
    "form": "BO-UPDATE",
-   "reason": "1 unverified claim(s) cut, unrecovered",
-   "tries": 93,
-   "at": "2026-07-22T05:33:51.230Z",
+   "reason": "consistency: metaTitle: headlines domestic while the title headlines other — the SERP promise must match the page",
+   "tries": 94,
+   "at": "2026-07-22T06:04:10.933Z",
    "dead": true,
-   "expiresAt": "2026-07-25T05:33:51.230Z"
+   "expiresAt": "2026-07-25T06:04:10.933Z"
   },
   {
    "key": "star-wars-the-mandalorian-and-grogu-bo-update-d59|BO-UPDATE",
@@ -1968,27 +1968,27 @@
    "key": "the-ultimatum-marry-or-move-on-trending-tv-w2026-07-19|TRENDING-TV",
    "eventSlug": "the-ultimatum-marry-or-move-on-trending-tv-w2026-07-19",
    "form": "TRENDING-TV",
-   "reason": "3 unverified claim(s) cut, unrecovered",
-   "tries": 1,
-   "at": "2026-07-22T02:06:48.886Z"
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "tries": 2,
+   "at": "2026-07-22T06:08:50.943Z"
   },
   {
    "key": "sniper-no-nation-netflix-top10-w2026-07-19|NETFLIX-TOP10",
    "eventSlug": "sniper-no-nation-netflix-top10-w2026-07-19",
    "form": "NETFLIX-TOP10",
-   "reason": "words 177 < 180 (owner-set ~200-word minimum)",
-   "tries": 1,
-   "at": "2026-07-22T03:39:47.465Z"
+   "reason": "words 107 < 180 (owner-set ~200-word minimum)",
+   "tries": 2,
+   "at": "2026-07-22T06:07:02.217Z"
   }
  ],
- "zeroStreak": 0,
+ "zeroStreak": 1,
  "daySpend": {
   "laDay": "2026-07-21",
-  "usd": 1.26635
+  "usd": 1.31215
  },
  "pace": {
-  "tokens": 3,
-  "lastMs": 1784698298815
+  "tokens": 3.0700797222222223,
+  "lastMs": 1784700064824
  },
  "lastAuditDay": "2026-07-21",
  "attempts": {
@@ -2029,9 +2029,9 @@
    "worst neighbor ever": 2,
    "raw": 2,
    "salish & jordan matter": 2,
-   "the ultimatum: marry or move on": 1,
+   "the ultimatum: marry or move on": 2,
    "borderline": 1,
-   "sniper: no nation": 1
+   "sniper: no nation": 2
   }
  }
 }
