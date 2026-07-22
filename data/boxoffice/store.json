@@ -1696,11 +1696,11 @@
    "key": "the-odyssey-bo-update-100m|BO-UPDATE",
    "eventSlug": "the-odyssey-bo-update-100m",
    "form": "BO-UPDATE",
-   "reason": "words 153 < 180 (owner-set ~200-word minimum)",
-   "tries": 87,
-   "at": "2026-07-22T02:33:18.350Z",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "tries": 88,
+   "at": "2026-07-22T03:04:37.835Z",
    "dead": true,
-   "expiresAt": "2026-07-25T02:33:18.350Z"
+   "expiresAt": "2026-07-25T03:04:37.835Z"
   },
   {
    "key": "star-wars-the-mandalorian-and-grogu-bo-update-d59|BO-UPDATE",
@@ -1836,17 +1836,21 @@
    "key": "regretting-you-netflix-top10-w2026-07-19|NETFLIX-TOP10",
    "eventSlug": "regretting-you-netflix-top10-w2026-07-19",
    "form": "NETFLIX-TOP10",
-   "reason": "words 144 < 180 (owner-set ~200-word minimum) | soft-floor engagement 4 < 5",
-   "tries": 2,
-   "at": "2026-07-21T22:06:44.968Z"
+   "reason": "words 179 < 180 (owner-set ~200-word minimum)",
+   "tries": 3,
+   "at": "2026-07-22T03:07:32.078Z",
+   "dead": true,
+   "expiresAt": "2026-07-25T03:07:32.078Z"
   },
   {
    "key": "kpop-demon-hunters-netflix-top10-w2026-07-19|NETFLIX-TOP10",
    "eventSlug": "kpop-demon-hunters-netflix-top10-w2026-07-19",
    "form": "NETFLIX-TOP10",
-   "reason": "1 unverified claim(s) cut, unrecovered",
-   "tries": 2,
-   "at": "2026-07-21T22:37:25.694Z"
+   "reason": "words 136 < 180 (owner-set ~200-word minimum)",
+   "tries": 3,
+   "at": "2026-07-22T03:09:48.291Z",
+   "dead": true,
+   "expiresAt": "2026-07-25T03:09:48.291Z"
   },
   {
    "key": "death-on-the-nile-netflix-top10-w2026-07-19|NETFLIX-TOP10",
@@ -1953,14 +1957,14 @@
    "at": "2026-07-22T02:06:48.886Z"
   }
  ],
- "zeroStreak": 1,
+ "zeroStreak": 2,
  "daySpend": {
   "laDay": "2026-07-21",
-  "usd": 1.01338
+  "usd": 1.05327
  },
  "pace": {
-  "tokens": 3.400155777777778,
-  "lastMs": 1784687493239
+  "tokens": 3.801196888888889,
+  "lastMs": 1784689297924
  },
  "lastAuditDay": "2026-07-21",
  "attempts": {
@@ -1987,9 +1991,9 @@
    "shipwrecked: nightmare at sea": 3,
    "voicemails for isabelle": 3,
    "enola holmes 3": 3,
-   "regretting you": 2,
+   "regretting you": 3,
    "meg 2: the trench": 1,
-   "kpop demon hunters": 2,
+   "kpop demon hunters": 3,
    "death on the nile": 2,
    "joy ride": 2,
    "little house on the prairie": 2,

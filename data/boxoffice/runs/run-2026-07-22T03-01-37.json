@@ -1,0 +1,177 @@
+{
+ "runId": "run-2026-07-22T03-01-37",
+ "mode": "live",
+ "startedAt": "2026-07-22T03:01:37.924Z",
+ "films": 43,
+ "published": [],
+ "held": [
+  {
+   "tag": "the-odyssey-bo-update×BO-UPDATE",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "score": 50
+  },
+  {
+   "tag": "regretting-you-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "words 179 < 180 (owner-set ~200-word minimum)",
+   "score": 45
+  },
+  {
+   "tag": "kpop-demon-hunters-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "words 136 < 180 (owner-set ~200-word minimum)",
+   "score": 70
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "moana-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $81M not above last published $82M)"
+  },
+  {
+   "tag": "toy-story-5-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $430M not above last published $431M)"
+  },
+  {
+   "tag": "minions-monsters-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $136M not above last published $138M)"
+  },
+  {
+   "tag": "evil-dead-burn-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $24M not above last published $24M)"
+  },
+  {
+   "tag": "the-invite-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $15M not above last published $15M)"
+  },
+  {
+   "tag": "young-washington-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $41M not above last published $41M)"
+  },
+  {
+   "tag": "obsession-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $258M not above last published $258M)"
+  },
+  {
+   "tag": "supergirl-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $70M not above last published $70M)"
+  },
+  {
+   "tag": "disclosure-day-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $115M not above last published $115M)"
+  },
+  {
+   "tag": "backrooms-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $196M not above last published $196M)"
+  },
+  {
+   "tag": "jackass-best-and-last-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $18M not above last published $18M)"
+  },
+  {
+   "tag": "scary-movie-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): no new number (current $108M not above last published $108M)"
+  },
+  {
+   "tag": "gail-daughtry-and-the-celebrity-sex-pass-bo-update×BO-UPDATE",
+   "reason": "already published (this update)"
+  },
+  {
+   "tag": "voicemails-for-isabelle-now-streaming×NOW-STREAMING",
+   "reason": "film attempt budget exhausted today (3 paid event tries/film/day)"
+  },
+  {
+   "tag": "the-mandalorian-and-grogu-bo-opening×BO-OPENING",
+   "reason": "film attempt budget exhausted today (3 paid event tries/film/day)"
+  },
+  {
+   "tag": "voicemails-for-isabelle-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "film attempt budget exhausted today (3 paid event tries/film/day)"
+  },
+  {
+   "tag": "enola-holmes-3-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "parked dead"
+  }
+ ],
+ "blocked": [],
+ "paced": {
+  "tokens": 3.8,
+  "behind": true,
+  "expected": 17.4,
+  "allow": 2
+ },
+ "queueBuilt": 9,
+ "attemptCapHit": 4,
+ "zeroStreak": 2,
+ "daySpend": {
+  "laDay": "2026-07-21",
+  "usd": 1.05327
+ },
+ "faults": {
+  "count": 0,
+  "bySeverity": {},
+  "faults": []
+ },
+ "finishedAt": "2026-07-22T03:09:48.293Z",
+ "meter": {
+  "byRole": {
+   "categorize": {
+    "calls": 3,
+    "errors": 0,
+    "in": 1005,
+    "out": 520,
+    "usd": 0.00031,
+    "ms": 2518
+   },
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3384,
+    "out": 642,
+    "usd": 0.00021,
+    "ms": 2233
+   },
+   "gatherer": {
+    "calls": 4,
+    "errors": 0,
+    "in": 9782,
+    "out": 755,
+    "usd": 0.00128,
+    "ms": 5924
+   },
+   "synthesizer": {
+    "calls": 4,
+    "errors": 1,
+    "in": 2304,
+    "out": 1695,
+    "usd": 0.00048,
+    "ms": 27037
+   },
+   "writerChart": {
+    "calls": 1,
+    "errors": 0,
+    "in": 2013,
+    "out": 1026,
+    "usd": 0.00081,
+    "ms": 37619
+   },
+   "writer": {
+    "calls": 4,
+    "errors": 0,
+    "in": 12744,
+    "out": 4165,
+    "usd": 0.01176,
+    "ms": 56987
+   },
+   "qa": {
+    "calls": 13,
+    "errors": 0,
+    "in": 35450,
+    "out": 6120,
+    "usd": 0.02593,
+    "ms": 39262
+   }
+  },
+  "totalUsd": 0.04079
+ },
+ "openrouterTotalUsd": 0.03989
+}
