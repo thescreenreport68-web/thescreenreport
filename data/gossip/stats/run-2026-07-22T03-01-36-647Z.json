@@ -1,0 +1,138 @@
+{
+  "ts": "2026-07-22T03:01:36.647Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "armando-rubio-says-daughter-hannah-is-out-of-hospital-after-brain-bleed",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [
+        "geo-no-attribution:logged"
+      ],
+      "headline": [
+        "metaDescription",
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 0
+    }
+  ],
+  "topics": 1,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 0,
+  "costUSD": 0.02124,
+  "costPerPublished": 0.02124,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 8,
+      "in": 16041,
+      "out": 1320,
+      "usd": 0.008112300000000001
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 1058,
+      "out": 962,
+      "usd": 0.000410554
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 6,
+      "in": 16243,
+      "out": 5837,
+      "usd": 0.01183044015
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 6,
+      "in": 5845,
+      "out": 755,
+      "usd": 0.0008864999999999999
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2414,
+      "out": 209,
+      "usd": 0.0012467,
+      "ms": 1433
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1058,
+      "out": 962,
+      "usd": 0.00026838,
+      "ms": 15039
+    },
+    "writer": {
+      "calls": 5,
+      "errors": 0,
+      "in": 15545,
+      "out": 5550,
+      "usd": 0.00546235,
+      "ms": 89003
+    },
+    "verify": {
+      "calls": 7,
+      "errors": 0,
+      "in": 13627,
+      "out": 1111,
+      "usd": 0.0068656,
+      "ms": 7611
+    },
+    "judge": {
+      "calls": 2,
+      "errors": 0,
+      "in": 2878,
+      "out": 412,
+      "usd": 0.00045260000000000005,
+      "ms": 1898
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 698,
+      "out": 287,
+      "usd": 0.00025812000000000003,
+      "ms": 11940
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 366,
+      "out": 185,
+      "usd": 0.00011059999999999999,
+      "ms": 995
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 187,
+      "out": 38,
+      "usd": 0.0000339,
+      "ms": 635
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2110,
+      "out": 89,
+      "usd": 0.0002466,
+      "ms": 1870
+    },
+    "linker": {
+      "calls": 1,
+      "errors": 0,
+      "in": 304,
+      "out": 31,
+      "usd": 0.000042800000000000004,
+      "ms": 533
+    }
+  }
+}
