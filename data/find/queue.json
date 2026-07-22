@@ -1,43 +1,45 @@
 {
-  "runId": "run-2026-07-22T14-31-04",
-  "builtAt": "2026-07-22T14:34:36.850Z",
-  "count": 10,
+  "runId": "run-2026-07-22T15-01-19",
+  "builtAt": "2026-07-22T15:04:28.964Z",
+  "count": 23,
   "topics": [
     {
-      "id": "news-elon-musk-grok-ai-generates-the-odyssey-movie",
-      "slug": "elon-musk-says-grok-will-make-ai-generated-the-odyssey-movie",
-      "title": "Elon Musk Says Grok Will Make AI-Generated 'The Odyssey' Movie",
+      "id": "news-travis-scott-the-odyssey-acting-debut",
+      "slug": "travis-scott-was-actually-nervous-filming-his-scenes-for-christopher-n",
+      "title": "Travis Scott Was 'Actually Nervous' Filming His Scenes For Christopher Nolan's 'The Odyssey'",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
-      "eventType": "announcement",
+      "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "elon-musk-grok-ai-generates-the-odyssey-movie",
-      "primaryKeyword": "AI movie generation",
+      "tier": "popular",
+      "eventSlug": "travis-scott-the-odyssey-acting-debut",
+      "primaryKeyword": "Travis Scott The Odyssey",
       "primaryEntity": "The Odyssey",
       "entities": [
-        "Elon Musk",
-        "Grok AI"
+        "The Odyssey (film)",
+        "Travis Scott",
+        "Christopher Nolan"
       ],
-      "angle": "Elon Musk's AI, Grok, is reportedly being used to generate a movie based on Homer's 'The Odyssey'.",
+      "angle": "Travis Scott discusses his nerves and experience filming his role in Christopher Nolan's 'The Odyssey'.",
       "tmdbType": "movie",
-      "source": "gnews:The Hollywood Reporter",
+      "source": "rss:Billboard",
       "sources": [
         {
-          "outlet": "The Hollywood Reporter",
+          "outlet": "Billboard",
           "tier": 7,
-          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQY2NuVkVPRFAxbGNUS09Qd1Q2R0xRaGZRZzJ4ckVENGVGMzZNa1VlUFdBWlFHRjhIb00wSTBVb1JfVkVGTkZEV2lQdnQ5QUQwODFZb2hJcFBLdU9ma1YzaDFtT0Z0b19oQ1FKeDFIclRwSUZXZmpMcEE1a3ItV3ZtdHpRWHhZRWZVNTc2MWtSb1lvT1RSSHhhczJHUGxHZDdzQXhYUEROa0dwV1cxRUQzdjEzZGROSXRNMURWLW9Mbw?oc=5",
-          "ageMin": 276,
-          "headline": "Elon Musk Says Grok Will Make AI-Generated 'The Odyssey' Movie - The Hollywood Reporter",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMivwFBVV95cUxQY2NuVkVPRFAxbGNUS09Qd1Q2R0xRaGZRZzJ4ckVENGVGMzZNa1VlUFdBWlFHRjhIb00wSTBVb1JfVkVGTkZEV2lQdnQ5QUQwODFZb2hJcFBLdU9ma1YzaDFtT0Z0b19oQ1FKeDFIclRwSUZXZmpMcEE1a3ItV3ZtdHpRWHhZRWZVNTc2MWtSb1lvT1RSSHhhczJHUGxHZDdzQXhYUEROa0dwV1cxRUQzdjEzZGROSXRNMUR"
+          "url": "https://www.billboard.com/music/rb-hip-hop/travis-scott-actually-nervous-shooting-the-odyssey-1236300520/",
+          "ageMin": 324,
+          "headline": "Travis Scott Was ‘Actually Nervous’ When He Shot His Scenes For ‘The Odyssey’",
+          "summary": "Scott was out of his comfort zone, as every star in Chris Nolan's star-heavy project watched on as he delivered his lines."
         }
       ],
-      "ageMin": 276,
+      "ageMin": 324,
       "_cand": {
-        "key": "rss:elon-musk-says-grok-will-make-ai-generated-the-odyssey-movie",
+        "key": "rss:travis-scott-was-actually-nervous-when-he-shot-his-scenes-fo",
         "popularity": 0,
-        "kind": "gnews"
+        "kind": "rss-news"
       },
       "corroborationCount": 1,
       "verification": {
@@ -45,11 +47,80 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "The Hollywood Reporter"
+          "Billboard"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "The Hollywood Reporter",
+        "attribution": "Billboard",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 107,
+      "signals": {
+        "recency": 9,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "radar": 30
+      },
+      "radarKind": "movie-in-theaters",
+      "tierClass": "A"
+    },
+    {
+      "id": "news-elon-musk-ai-odyssey-movie",
+      "slug": "elon-musk-says-grok-will-make-feature-length-ai-generated-and-historic",
+      "title": "Elon Musk Says Grok Will Make Feature-Length, AI-Generated and Historically Accurate The Odyssey Movie Before the Year Ends",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "elon-musk-ai-odyssey-movie",
+      "primaryKeyword": "Elon Musk AI Odyssey movie",
+      "primaryEntity": "The Odyssey",
+      "entities": [
+        "Elon Musk",
+        "Lupita Nyong'o",
+        "Elliot Page"
+      ],
+      "angle": "Elon Musk announced that his AI, Grok, will create a feature-length, historically accurate AI-generated film of 'The Odyssey' by year's end.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/elon-musk-grok-odyssey-movie-ai-homer-x-post-feature-nolan-1236653824/",
+          "ageMin": 306,
+          "headline": "Elon Musk Says Grok Will Make Feature-Length, AI-Generated and Historically Accurate The Odyssey Movie Before the Year Ends",
+          "summary": "But for all of the outrage Musk has drummed up around 'The Odyssey' — particularly over the casting of Lupita Nyong'o and Elliot Page — the film has not notably suffered at the box office at all."
+        }
+      ],
+      "ageMin": 306,
+      "_cand": {
+        "key": "rss:elon-musk-says-grok-will-make-feature-length-ai-generated-an",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -72,24 +143,91 @@
       "tierClass": "A"
     },
     {
-      "id": "news-tiff-discovery-lineup-stuffed-jodie-comer-harry-melling",
-      "slug": "jodie-comer-and-harry-melling-taxidermy-musical-stuffed-leads-tiff-dis",
-      "title": "Jodie Comer and Harry Melling Taxidermy Musical Stuffed Leads TIFF Discovery Lineup of Rising Filmmakers",
+      "id": "news-louis-cancelmi-chicks-pilot",
+      "slug": "louis-cancelmi-joins-ellen-pompeo-jodie-whittaker-in-hulu-dramedy-pilo",
+      "title": "Louis Cancelmi Joins Ellen Pompeo Jodie Whittaker In Hulu Dramedy Pilot Chicks",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "louis-cancelmi-chicks-pilot",
+      "primaryKeyword": "louis cancelmi",
+      "primaryEntity": "Louis Cancelmi",
+      "entities": [
+        "Ellen Pompeo",
+        "Jodie Whittaker",
+        "Chicks (TV Pilot)"
+      ],
+      "angle": "Louis Cancelmi joins Ellen Pompeo and Jodie Whittaker in Hulu dramedy pilot 'Chicks'.",
+      "tmdbType": "movie",
+      "source": "rss:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/louis-cancelmi-ellen-pompeo-hulu-dramedy-pilot-chicks-1236999801/",
+          "ageMin": 1,
+          "headline": "Louis Cancelmi Joins Ellen Pompeo Jodie Whittaker In Hulu Dramedy Pilot Chicks",
+          "summary": "EXCLUSIVE: Louis Cancelmi (Sorry, Baby) is set as a series regular opposite Ellen Pompeo and Jodie Whittaker in the Hulu pilot Chicks, from Good American Family‘s Katie Robbins that we first told you about in June. Hailing from 20th Television, with Robbins as writer and executive producer, Chicks is a family dramedy set in the rapidly gentrifying neighborhoods of old Boston. It [ ]"
+        }
+      ],
+      "ageMin": 1,
+      "_cand": {
+        "key": "rss:louis-cancelmi-joins-ellen-pompeo-jodie-whittaker-in-hulu-dr",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 92,
+      "signals": {
+        "recency": 30,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-tiff-discovery-lineup-stuffed-lead",
+      "slug": "jodie-comer-musical-stuffed-to-open-tiff-discovery-program",
+      "title": "Jodie Comer Musical 'Stuffed' to Open TIFF Discovery Program",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "tiff-discovery-lineup-stuffed-jodie-comer-harry-melling",
+      "eventSlug": "tiff-discovery-lineup-stuffed-lead",
       "primaryKeyword": "tiff discovery lineup",
-      "primaryEntity": "Stuffed",
+      "primaryEntity": "TIFF Discovery Program",
       "entities": [
         "Jodie Comer",
         "Harry Melling",
-        "Toronto International Film Festival"
+        "Stuffed"
       ],
-      "angle": "Jodie Comer and Harry Melling star in 'Stuffed,' part of the TIFF Discovery lineup for emerging filmmakers.",
+      "angle": "Jodie Comer's musical 'Stuffed' to open TIFF's Discovery section highlighting emerging filmmakers.",
       "tmdbType": "movie",
       "source": "rss:IndieWire",
       "sources": [
@@ -97,20 +235,20 @@
           "outlet": "IndieWire",
           "tier": 7,
           "url": "https://www.indiewire.com/news/festivals/tiff-discovery-lineup-jodie-comer-taxidermy-musical-stuffed-1235206555/",
-          "ageMin": 29,
+          "ageMin": 59,
           "headline": "Jodie Comer and Harry Melling Taxidermy Musical Stuffed Leads TIFF Discovery Lineup of Rising Filmmakers",
           "summary": "See the 24 features playing Toronto's platform for up-and-coming filmmakers, including another musical from former NFL player Deantè Gray."
         },
         {
-          "outlet": "Deadline",
+          "outlet": "THR",
           "tier": 7,
-          "url": "https://deadline.com/2026/07/tiff-2026-discovery-stuffed-jodie-comer-harry-melling-1236999990/",
-          "ageMin": 31,
-          "headline": "TIFF 2026: ‘Stuffed’ Starring Jodie Comer Harry Melling Among Discovery Titles",
-          "summary": "British director Theo Rhys’s debut feature Stuffed, starring Jodie Comer and Harry Melling, is among the titles set to screen as part of the Discovery lineup at this year’s Toronto Film Festival. TIFF released the Discovery lineup this morning. Stuffed has been described as a “gloriously twisted musical” and has been expanded by Rhys from [ ]"
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/toronto-jodie-comers-stuffed-discovery-program-1236653546/",
+          "ageMin": 61,
+          "headline": "Toronto: Jodie Comer’s ‘Stuffed’ to Open Discovery Program",
+          "summary": "TIFF also booked the latest films by Stephanie Ahn, David Turpin, Alexandra Pechman, Anna Foglietta and Lars Vega for its 51st edition in September."
         }
       ],
-      "ageMin": 29,
+      "ageMin": 59,
       "_cand": {
         "key": "rss:jodie-comer-and-harry-melling-taxidermy-musical-stuffed-lead",
         "popularity": 0,
@@ -123,7 +261,7 @@
         "outletCount": 2,
         "outlets": [
           "IndieWire",
-          "Deadline"
+          "THR"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
@@ -148,61 +286,130 @@
       "tierClass": "B"
     },
     {
-      "id": "trailer-the-end-of-oak-street-trailer",
-      "slug": "the-end-of-oak-street-trailer-and-posters-released",
-      "title": "‘The End of Oak Street’ Trailer and Posters Released",
-      "contentType": "trailer",
-      "formatTag": "trailer",
-      "category": "movies",
-      "subcategory": "trailers",
-      "eventType": "trailer",
+      "id": "news-prime-video-stillwater-series-order",
+      "slug": "prime-video-orders-stillwater-series-from-greg-berlanti-carly-wray-bas",
+      "title": "Prime Video Orders Stillwater Series From Greg Berlanti Carly Wray Based On Skybound Comic",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "the-end-of-oak-street-trailer",
-      "primaryKeyword": "The End of Oak Street trailer",
-      "primaryEntity": "The End of Oak Street",
+      "tier": "popular",
+      "eventSlug": "prime-video-stillwater-series-order",
+      "primaryKeyword": "Stillwater series Prime Video",
+      "primaryEntity": "Stillwater",
       "entities": [
-        "Jurassic Park"
+        "Prime Video",
+        "Greg Berlanti",
+        "Carly Wray"
       ],
-      "angle": "New trailer released for 'The End of Oak Street,' a film drawing comparisons to 'Jurassic Park' in a suburban setting.",
+      "angle": "Prime Video orders a new horror drama series titled 'Stillwater' from Greg Berlanti and Carly Wray.",
       "tmdbType": "movie",
-      "source": "gnews:Bloody Disgusting",
+      "source": "rss:Deadline",
       "sources": [
         {
-          "outlet": "Bloody Disgusting",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOVWRDTnZta3RVbVpwaFhiTmJwOV9ydGU3eDY0UlNfRXBvbDVvUFUxLXdwZldqd0QyUVZMN09TenExNEdOay1BV09rUEdNMWRqQTh1ei1EUlpGdUVKSDdpeTZyUTlRZnlZUDAxcVl6dkp6OGhiX3JOZFJWMWFQUmFiVEdPUzFTcGdheHlpMERKNGN5MFJ1WWNObXRVdEUzb0phZzRhbG5OakJhWC0xTjFYMVl3RVk0dGxjYW5ERDZwOC1tNVhQ?oc=5",
-          "ageMin": 28,
-          "headline": "‘The End of Oak Street’ – New Trailer and Posters Bring the ‘Jurassic Park’ to Suburbia - Bloody Disgusting",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMixAFBVV95cUxOVWRDTnZta3RVbVpwaFhiTmJwOV9ydGU3eDY0UlNfRXBvbDVvUFUxLXdwZldqd0QyUVZMN09TenExNEdOay1BV09rUEdNMWRqQTh1ei1EUlpGdUVKSDdpeTZyUTlRZnlZUDAxcVl6dkp6OGhiX3JOZFJWMWFQUmFiVEdPUzFTcGdheHlpMERKNGN5MFJ1WWNObXRVdEUzb0phZzRhbG5OakJhWC0xTjFYMVl3RVk0dGxjYW5"
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/stillwater-prime-video-greg-berlanti-carly-wray-skybound-1236999820/",
+          "ageMin": 1,
+          "headline": "Prime Video Orders Stillwater Series From Greg Berlanti Carly Wray Based On Skybound Comic",
+          "summary": "EXCLUSIVE: Ahead of Comic-Con, Amazon MGM Studios has given a formal series greenlight to Stillwater, a horror drama from Greg Berlanti (You, The Flight Attendant) and Carly Wray (Watchmen, Westworld) based on the Skybound graphic novel by Chip Zdarsky and Ramón K Pérez. The project, which has received an eight-episode order, comes from Warner Bros. [ ]"
         }
       ],
-      "ageMin": 28,
+      "ageMin": 1,
       "_cand": {
-        "key": "rss:-the-end-of-oak-street-new-trailer-and-posters-bring-the-jur",
+        "key": "rss:prime-video-orders-stillwater-series-from-greg-berlanti-carl",
         "popularity": 0,
-        "kind": "gnews"
+        "kind": "rss-news"
       },
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
+        "tier1Count": 1,
+        "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Bloody Disgusting"
+          "Deadline"
         ],
-        "maxTier": 5,
+        "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Bloody Disgusting",
+        "attribution": "Deadline",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 89,
+      "priority": 92,
       "signals": {
-        "recency": 24,
-        "corroboration": 8,
+        "recency": 30,
+        "corroboration": 12,
         "status": 18,
-        "type": 15,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-chris-rock-announcement",
+      "slug": "chris-rock-s-new-film-misty-green-to-premiere-at-toronto-film-festival",
+      "title": "Chris Rock's New Film 'Misty Green' to Premiere at Toronto Film Festival",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "chris-rock-announcement",
+      "primaryKeyword": "chris rock movie",
+      "primaryEntity": "Chris Rock: Bigger & Blacker",
+      "entities": [
+        "Chris Rock",
+        "Misty Green"
+      ],
+      "angle": "Chris Rock's latest directorial effort, 'Misty Green,' is set for its world premiere at the Toronto Film Festival.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/misty-green-trailer-chris-rock-hollywood-actress-1236653942/",
+          "ageMin": 2,
+          "headline": "Misty Green : Chris Rock Follows a Hollywood Actress Fighting for Her Second Act",
+          "summary": "The comedian's latest feature as a writer-director will have its world premiere at the Toronto Film Festival."
+        }
+      ],
+      "ageMin": 2,
+      "_cand": {
+        "key": "rss:misty-green-chris-rock-follows-a-hollywood-actress-fighting-",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 93,
+      "signals": {
+        "recency": 30,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
         "big": 24,
@@ -213,39 +420,103 @@
       "tierClass": "B"
     },
     {
-      "id": "news-javier-bardem-amy-adams-cape-fear-screening",
-      "slug": "cape-fear-stars-javier-bardem-amy-adams-attend-finale-screening",
-      "title": "'Cape Fear' stars Javier Bardem, Amy Adams attend finale screening",
+      "id": "news-vertv-platform-launch",
+      "slug": "hollywood-vets-launch-verttv-vertical-micro-series-platform-studio-dev",
+      "title": "Hollywood Vets Launch VertTV, Vertical Micro-Series Platform Studio; Development Slate Includes Fuller House Cast Reunion",
       "contentType": "news",
       "formatTag": "news",
-      "category": "movies",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "vertv-platform-launch",
+      "primaryKeyword": "vertv",
+      "primaryEntity": "VertTV",
+      "entities": [
+        "Fuller House"
+      ],
+      "angle": "Hollywood veterans launch new vertical micro-series platform VertTV.",
+      "tmdbType": "movie",
+      "source": "rss:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/verttv-vertical-micro-series-platform-fuller-house-reunion-1236984292/",
+          "ageMin": 1,
+          "headline": "Hollywood Vets Launch VertTV, Vertical Micro-Series Platform Studio; Development Slate Includes Fuller House Cast Reunion",
+          "summary": "EXCLUSIVE: The explosion of vertical content has just gotten a bit bigger. Hollywood veterans Jeffrey Schenck, Barry Barnholtz and Peter Sullivan have teamed up to launch vertTV, described as a premium filmmaker-led studio delivering high-stakes, cinematic genre television for mobile audiences. Optimized for on-the-go viewing, according to the co-founders, the subscription platform features snacka"
+        }
+      ],
+      "ageMin": 1,
+      "_cand": {
+        "key": "rss:hollywood-vets-launch-verttv-vertical-micro-series-platform-",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 87,
+      "signals": {
+        "recency": 30,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-magnificent-seven-mgm-plus-series-casting",
+      "slug": "the-magnificent-seven-additional-casting-set-for-mgm-series-based-on-i",
+      "title": "The Magnificent Seven: Additional Casting Set for MGM+ Series Based on Iconic Western Film",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "javier-bardem-amy-adams-cape-fear-screening",
-      "primaryKeyword": "Cape Fear screening",
-      "primaryEntity": "Cape Fear",
+      "eventSlug": "magnificent-seven-mgm-plus-series-casting",
+      "primaryKeyword": "The Magnificent Seven series casting",
+      "primaryEntity": "The Magnificent Seven",
       "entities": [
-        "Cape Fear (film)",
-        "Javier Bardem",
-        "Amy Adams"
+        "The Magnificent Seven (TV series)",
+        "MGM+"
       ],
-      "angle": "Stars attend a screening for the upcoming film.",
+      "angle": "MGM+ expands its Western slate with new casting for 'The Magnificent Seven' series.",
       "tmdbType": "movie",
-      "source": "gnews:upi.com",
+      "source": "gnews:TV Series Finale",
       "sources": [
         {
-          "outlet": "upi.com",
+          "outlet": "TV Series Finale",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQdHRVcWtLY0g1YUZ5SUdPUll0cTE4MV81ZjR0QXd2bkZ4LTlWdnhNZ2drb1R1cUZPT2JpcXJaZmJ4bkNRdW9mdzdNSk84V3JxYm1mT3V2LWo3WkVCZ3JPbVNRR2VpZWM4RDhNRUY0dUM1Wjg4dTFjeWQxdzhrcEp3RXMtMG1ieWk2dng1NWUwU3BQNTdkaFp0NmR30gGfAUFVX3lxTE84QjRqS25FRGJKSlhLYmVWZ0l5YzRPakVybjdxd29oTElYYUdHSDQtV1Z1aTJHdEVVZjFTZzhMLWpDc3plZl94dEZ0Q3lsWEhERUVXdmZVVWo4OE80dHgyeFE2ZDFYa3ZodWpUMnNpR21QeXhTQWZ1LTZZcjIxbjVIbl9VRHhORXFtaE5kZllsSnZVeUJ3eXhMTVF4enZXcw?oc=5",
-          "ageMin": 37,
-          "headline": "'Cape Fear' stars Javier Bardem, Amy Adams attend finale screening - upi.com",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMimgFBVV95cUxQdHRVcWtLY0g1YUZ5SUdPUll0cTE4MV81ZjR0QXd2bkZ4LTlWdnhNZ2drb1R1cUZPT2JpcXJaZmJ4bkNRdW9mdzdNSk84V3JxYm1mT3V2LWo3WkVCZ3JPbVNRR2VpZWM4RDhNRUY0dUM1Wjg4dTFjeWQxdzhrcEp3RXMtMG1ieWk2dng1NWUwU3BQNTdkaFp0NmR30gGfAUFVX3lxTE84QjRqS25FRGJKSlhLYmVWZ0l5YzR"
+          "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNLUhha0wxcmdITGZnUWdBRy1qbERRNmFYNEpiOV9ZV2Z6UVFfOEZka2pKMTU0MHU2RVBtZGFFTnAwS0NBdmhjYXI3TGJ0ejYyRDRnQUxSc19PTjlwQUh1UHl5WjVQN0dGNVAyT2l0Zmd3NTJwNm1XZ3JzcHB6TnozX0dmMkQxSTlPUUVUUDJ6NlVsS2tIeGdWdGUzN2RjWVdFbjZNbTVVYXlHVWp6U0NQaU9sZlBGQlhtMFdDZWZyLV9qZ9IBxwFBVV95cUxOelFoZjVlbGdwLWctMTFTSXY0SHVCcFhaRUhkaXNvS0JWR3J6T0JCQ3otb1ZwSWM5VXpCVGRRSm9RRU1ral8wZ2ViUmtmazExbUJ1QUt5bzh3S2hpMWI3Yks4MG1taXdWVmdxS3pva2g5UDNiMnJnOVdTd3BLNXdXUFlvNkc3R3RxRnY5XzRNdFVpZ285eWMxN295ZFhpWkdjdmZhQTd0ZXNaWW9fSWJSeXNVRTlnQi1BdjhvVVRtZi1UY2Z2UjU0?oc=5",
+          "ageMin": 59,
+          "headline": "The Magnificent Seven: Additional Casting Set for MGM+ Series Based on Iconic Western Film - TV Series Finale",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiwgFBVV95cUxNLUhha0wxcmdITGZnUWdBRy1qbERRNmFYNEpiOV9ZV2Z6UVFfOEZka2pKMTU0MHU2RVBtZGFFTnAwS0NBdmhjYXI3TGJ0ejYyRDRnQUxSc19PTjlwQUh1UHl5WjVQN0dGNVAyT2l0Zmd3NTJwNm1XZ3JzcHB6TnozX0dmMkQxSTlPUUVUUDJ6NlVsS2tIeGdWdGUzN2RjWVdFbjZNbTVVYXlHVWp6U0NQaU9sZlBGQlhtMFd"
         }
       ],
-      "ageMin": 37,
+      "ageMin": 59,
       "_cand": {
-        "key": "rss:-cape-fear-stars-javier-bardem-amy-adams-attend-finale-scree",
+        "key": "rss:the-magnificent-seven-additional-casting-set-for-mgm-series-",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -255,16 +526,16 @@
         "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "upi.com"
+          "TV Series Finale"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "upi.com",
+        "attribution": "TV Series Finale",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 88,
+      "priority": 82,
       "signals": {
         "recency": 24,
         "corroboration": 8,
@@ -272,7 +543,7 @@
         "type": 14,
         "pop": 0,
         "breakout": 0,
-        "big": 24,
+        "big": 18,
         "trending": 0,
         "spice": 0,
         "softTv": 0
@@ -280,77 +551,9 @@
       "tierClass": "B"
     },
     {
-      "id": "news-the-odyssey-box-office-second-weekend",
-      "slug": "the-odyssey-eyes-61m-74m-second-weekend-could-outperform-dark-knight-f",
-      "title": "'The Odyssey' Eyes $61M-$74M Second Weekend, Could Outperform 'Dark Knight' Films",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "boxoffice",
-      "sensitivity": "normal",
-      "eventSlug": "the-odyssey-box-office-second-weekend",
-      "primaryKeyword": "the odyssey box office",
-      "primaryEntity": "The Odyssey",
-      "entities": [
-        "The Odyssey (2024 film)",
-        "Christopher Nolan"
-      ],
-      "angle": "Christopher Nolan's 'The Odyssey' is projected for a strong second weekend, potentially surpassing the performance of 'The Dark Knight' films.",
-      "tmdbType": "movie",
-      "source": "gnews:facebook.com",
-      "sources": [
-        {
-          "outlet": "facebook.com",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQY0duQy14U0x3N1hQV0l0a2hKd191WXhlbHE2NXZtMW1WWVZrczA4WFJqZ2xwMEUzY0I2RndTT1YySkRnLTljVjNyNWRSRnM2WGRPaDVGeDZxZzUwWk1KUTVmZHV4STZuUXJsZUJLakZqMTU3c3Z6cHFXdktzQ3puZnFUVEVzQ3luZU5LR01zS0dlMFNNY1lNZ3BtZVNJd0dDeURfUmVfNFZHeGpyVzVnYzlfajlkOEtjNVVUUFlsTWg2MVNDVkc3VmUzWW82ajVpbjI4SA?oc=5",
-          "ageMin": 279,
-          "headline": "The Odyssey' is looking at powerful Tuesday of $20M. The Christopher Nolan movie's second weekend is eyeing $61M-$74M possibly besting the second weekends of 'Dark Knight' films. Read more below. - facebook.com",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMi1AFBVV95cUxQY0duQy14U0x3N1hQV0l0a2hKd191WXhlbHE2NXZtMW1WWVZrczA4WFJqZ2xwMEUzY0I2RndTT1YySkRnLTljVjNyNWRSRnM2WGRPaDVGeDZxZzUwWk1KUTVmZHV4STZuUXJsZUJLakZqMTU3c3Z6cHFXdktzQ3puZnFUVEVzQ3luZU5LR01zS0dlMFNNY1lNZ3BtZVNJd0dDeURfUmVfNFZHeGpyVzVnYzlfajlkOEtjNVV"
-        }
-      ],
-      "ageMin": 279,
-      "_cand": {
-        "key": "rss:the-odyssey-is-looking-at-powerful-tuesday-of-20m-the-christ",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "facebook.com"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "facebook.com",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 82,
-      "signals": {
-        "recency": 9,
-        "corroboration": 8,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 12,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0,
-        "radar": 30
-      },
-      "radarKind": "movie-in-theaters",
-      "tierClass": "A"
-    },
-    {
-      "id": "music-news-protomartyr-hotel-usona-album-announcement",
-      "slug": "protomartyr-announce-new-album-hotel-usona-out-september-25",
-      "title": "Protomartyr Announce New Album 'Hotel Usona' Out September 25",
+      "id": "music-news-ne-yo-reba-mcentire-country-album",
+      "slug": "ne-yo-credits-reba-mcentire-for-inspiring-new-country-album",
+      "title": "Ne-Yo Credits Reba McEntire for Inspiring New Country Album",
       "contentType": "music-news",
       "formatTag": "music-news",
       "category": "music",
@@ -358,42 +561,43 @@
       "eventType": "announcement",
       "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "protomartyr-hotel-usona-album-announcement",
-      "primaryKeyword": "Protomartyr new album",
-      "primaryEntity": "Protomartyr",
+      "eventSlug": "ne-yo-reba-mcentire-country-album",
+      "primaryKeyword": "Ne-Yo country album",
+      "primaryEntity": "Ne-Yo",
       "entities": [
-        "Hotel Usona"
+        "Reba McEntire"
       ],
-      "angle": "Indie rock band Protomartyr announces new album and release date.",
+      "angle": "Ne-Yo discusses how Reba McEntire inspired his new country music album.",
       "tmdbType": "movie",
-      "source": "gnews:PC Gamer",
+      "source": "gnews:TODAY.com",
       "sources": [
         {
-          "outlet": "PC Gamer",
+          "outlet": "TODAY.com",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxNcURyNWRKSmNLcWJDVU9IdDlOamotalk5NEhBU09SX05MWk9LcEMzc2Z0Wk9CcjRGTVlIVHMwa3RZektLVlFDM282ZW11UWc4MlVuNjBXdlhuQUc0U0xvUWVIWDBjVFpiRndyMWZXUkRhZWRpOWFhQnpLOEd6Z0Q1UkV2RTlJSGtLUGhOS2ZhZEJKZExCQjdpWGhMQWlHTWdWYVpzT0NENjFEOHFXblBpamk0UE5YSjh3aW5Fa2EyS3pKc2JfVHQyanlnZ2x4c00xZnhVSVV3Y1JSNldIS0JjWUV3dzV2VFVEQzFYTw?oc=5",
-          "ageMin": 18,
-          "headline": "Star Wars Zero Company is going all in on Clone customisation, but my favourite armour is restricted to the Deluxe Edition - PC Gamer",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMi7AFBVV95cUxNcURyNWRKSmNLcWJDVU9IdDlOamotalk5NEhBU09SX05MWk9LcEMzc2Z0Wk9CcjRGTVlIVHMwa3RZektLVlFDM282ZW11UWc4MlVuNjBXdlhuQUc0U0xvUWVIWDBjVFpiRndyMWZXUkRhZWRpOWFhQnpLOEd6Z0Q1UkV2RTlJSGtLUGhOS2ZhZEJKZExCQjdpWGhMQWlHTWdWYVpzT0NENjFEOHFXblBpamk0UE5YSjh3aW5"
+          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOMWpJdHFlQW8yaUNabEI4ZUVXcl9DUHBHQXM4SHVfM2NmMlBCTW5GdW5DRlRBei1lV2x1WVYtcXdxWUMzTWJabEY0OEQ1ZWRmcHpMOXN4UWpHNHVKS1pOQ0NUd2VBYnNFbHVQWXVSdE1aZ1NIeWJqUHczX2ZsMi1kT0h6N05IN2QtaFhTYTRuM09XNTYwb3ZzRE1BQ1Rhakk1?oc=5",
+          "ageMin": 38,
+          "headline": "Ne-Yo on How Reba McEntire Inspired His New Country Album - TODAY.com",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMioAFBVV95cUxOMWpJdHFlQW8yaUNabEI4ZUVXcl9DUHBHQXM4SHVfM2NmMlBCTW5GdW5DRlRBei1lV2x1WVYtcXdxWUMzTWJabEY0OEQ1ZWRmcHpMOXN4UWpHNHVKS1pOQ0NUd2VBYnNFbHVQWXVSdE1aZ1NIeWJqUHczX2ZsMi1kT0h6N05IN2QtaFhTYTRuM09XNTYwb3ZzRE1BQ1Rhakk1?oc=5\" target=\"_blank\" Ne-Yo on How"
         }
       ],
-      "ageMin": 18,
+      "ageMin": 38,
       "_cand": {
-        "key": "rss:star-wars-zero-company-is-going-all-in-on-clone-customisatio",
+        "key": "rss:ne-yo-on-how-reba-mcentire-inspired-his-new-country-album-to",
         "popularity": 0,
         "kind": "gnews"
       },
+      "breakoutVelocity": 0,
       "corroborationCount": 1,
       "verification": {
         "tier1Count": 0,
         "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "PC Gamer"
+          "TODAY.com"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "PC Gamer",
+        "attribution": "TODAY.com",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -414,25 +618,487 @@
       "tierClass": "C"
     },
     {
-      "id": "news-snoop-dogg-biopic-summer-2027-release",
-      "slug": "snoop-dogg-biopic-lands-summer-2027-release-from-universal",
-      "title": "Snoop Dogg Biopic Lands Summer 2027 Release From Universal",
+      "id": "news-paul-walker-almost-star-wars-role",
+      "slug": "paul-walker-nearly-landed-a-major-star-wars-role",
+      "title": "Paul Walker Nearly Landed a Major Star Wars Role",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "paul-walker-almost-star-wars-role",
+      "primaryKeyword": "paul walker star wars",
+      "primaryEntity": "Paul Walker",
+      "entities": [
+        "Star Wars"
+      ],
+      "angle": "Paul Walker was reportedly close to securing a major role in the Star Wars franchise.",
+      "tmdbType": "movie",
+      "source": "gnews:3DVF",
+      "sources": [
+        {
+          "outlet": "3DVF",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQMll4WUtlaVk4X0ROdHJJV2t4WlFNWldyLXdvNU00Zk82S1BjM0FQWEtZZ3BsSHhCRW42WEV1SW9jZHR4bVFFTW50NFFnWWtvdl9SMDBabkVTUlYySDZaV1ZPeE1WcGtmbXNUTWM3RUtST2hXWWJaTk53XzlkOXZmNzRPQ0VQcmpkZGU1a18yYzhHWjJoY2pqeHpWY19fZw?oc=5",
+          "ageMin": 143,
+          "headline": "Beyond Fast Furious, Paul Walker nearly landed one of Star Wars’ biggest roles - 3DVF",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxQMll4WUtlaVk4X0ROdHJJV2t4WlFNWldyLXdvNU00Zk82S1BjM0FQWEtZZ3BsSHhCRW42WEV1SW9jZHR4bVFFTW50NFFnWWtvdl9SMDBabkVTUlYySDZaV1ZPeE1WcGtmbXNUTWM3RUtST2hXWWJaTk53XzlkOXZmNzRPQ0VQcmpkZGU1a18yYzhHWjJoY2pqeHpWY19fZw?oc=5\" target=\"_blank\" Beyond Fast Fu"
+        }
+      ],
+      "ageMin": 143,
+      "_cand": {
+        "key": "rss:beyond-fast-furious-paul-walker-nearly-landed-one-of-star-wa",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "3DVF"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "3DVF",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 80,
+      "signals": {
+        "recency": 16,
+        "corroboration": 8,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "music-news-protomartyr-hotel-usona-album-announcement",
+      "slug": "protomartyr-announces-new-album-hotel-usona",
+      "title": "Protomartyr Announces New Album 'Hotel Usona'",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "indie",
+      "eventSlug": "protomartyr-hotel-usona-album-announcement",
+      "primaryKeyword": "Protomartyr new album",
+      "primaryEntity": "Protomartyr",
+      "entities": [
+        "Hotel Usona"
+      ],
+      "angle": "Indie band Protomartyr announces their new album 'Hotel Usona'.",
+      "tmdbType": "movie",
+      "source": "gnews:Domino Recording Company",
+      "sources": [
+        {
+          "outlet": "Domino Recording Company",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPLWh4aE5LZzRhaU1DOW5ZUmsxSURzNXZMaHJEMXFkSU1rU1VORXJ5eFpocVlJRnZwLXI0MDFOWXRzYV91V29hSGszbHpqOTY2UkdfRFI2eXhYMXoxV3BWU2pzLThIekxrVkdybDUtRE9GV2RNdDVoN3loRlZjNFpUTWtJb05hcnR6TklXWVZHZE9ZRlNJUWF2eTJjZw?oc=5",
+          "ageMin": 57,
+          "headline": "Protomartyr announce new album 'Hotel Usona' out September 25 - Domino Recording Company",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMimwFBVV95cUxPLWh4aE5LZzRhaU1DOW5ZUmsxSURzNXZMaHJEMXFkSU1rU1VORXJ5eFpocVlJRnZwLXI0MDFOWXRzYV91V29hSGszbHpqOTY2UkdfRFI2eXhYMXoxV3BWU2pzLThIekxrVkdybDUtRE9GV2RNdDVoN3loRlZjNFpUTWtJb05hcnR6TklXWVZHZE9ZRlNJUWF2eTJjZw?oc=5\" target=\"_blank\" Protomartyr announ"
+        }
+      ],
+      "ageMin": 57,
+      "_cand": {
+        "key": "rss:protomartyr-announce-new-album-hotel-usona-out-september-25-",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "Domino Recording Company"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "Domino Recording Company",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 59,
+      "signals": {
+        "recency": 24,
+        "corroboration": 8,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-kill-jackie-acquisition-amc",
+      "slug": "catherine-zeta-jones-revenge-thriller-kill-jackie-acquired-by-amc-in-t",
+      "title": "Catherine Zeta-Jones Revenge Thriller Kill Jackie Acquired by AMC in the U.S.",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "kill-jackie-acquisition-amc",
+      "primaryKeyword": "Kill Jackie AMC acquisition",
+      "primaryEntity": "To Kill with Intrigue",
+      "entities": [
+        "Kill Jackie",
+        "Catherine Zeta-Jones",
+        "AMC Global Media"
+      ],
+      "angle": "AMC has acquired U.S. rights to Catherine Zeta-Jones's revenge thriller series 'Kill Jackie.'",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/tv/global/catherine-zeta-jones-kill-jackie-acquired-amc-us-1236817910/",
+          "ageMin": 268,
+          "headline": "Catherine Zeta-Jones Revenge Thriller Kill Jackie Acquired by AMC in the U.S.",
+          "summary": "AMC Global Media has acquired the U.S. rights to Catherine Zeta-Jones upcoming revenge thriller series Kill Jackie. Starring and executive produced by Zeta-Jones and co-produced by Steel Springs Pictures and Fremantle, Kill Jackie is set to premiere this fall on AMC+ in the U.S. Based on Nick Harkaway s bestselling novel The Price You Pay (which [ ]"
+        }
+      ],
+      "ageMin": 268,
+      "_cand": {
+        "key": "rss:catherine-zeta-jones-revenge-thriller-kill-jackie-acquired-b",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 71,
+      "signals": {
+        "recency": 9,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "music-news-pain-of-truth-self-titled-album-unforgiven-video",
+      "slug": "pain-of-truth-announces-sophomore-album-shares-unforgiven-music-video",
+      "title": "Pain of Truth Announces Sophomore Album, Shares 'Unforgiven' Music Video",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "indie",
+      "eventSlug": "pain-of-truth-self-titled-album-unforgiven-video",
+      "primaryKeyword": "Pain of Truth new album",
+      "primaryEntity": "Pain of Truth",
+      "entities": [
+        "Unforgiven"
+      ],
+      "angle": "Hardcore band Pain of Truth announces their sophomore album and shares a music video.",
+      "tmdbType": "movie",
+      "source": "gnews:No Echo",
+      "sources": [
+        {
+          "outlet": "No Echo",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE82ejkzZmlUODRrd08yQl9OVkFwQkhrOG1MdzZVNWdkV0kwXzEyX0Z4YW85OHNFbVpXTFNVUEExS3JSVm5hZkpuMElkUzZDbzRfMFlUXzlRb2xuZ0NiUV81YVJXM1NTeFZldHE2ZG9PdDVVd1FLdFZHVzVDdw?oc=5",
+          "ageMin": 60,
+          "headline": "Pain of Truth Announces Self-Titled Sophomore Album, Shares “Unforgiven” Music Video - No Echo",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMie0FVX3lxTE82ejkzZmlUODRrd08yQl9OVkFwQkhrOG1MdzZVNWdkV0kwXzEyX0Z4YW85OHNFbVpXTFNVUEExS3JSVm5hZkpuMElkUzZDbzRfMFlUXzlRb2xuZ0NiUV81YVJXM1NTeFZldHE2ZG9PdDVVd1FLdFZHVzVDdw?oc=5\" target=\"_blank\" Pain of Truth Announces Self-Titled Sophomore Album, Shares “U"
+        }
+      ],
+      "ageMin": 60,
+      "_cand": {
+        "key": "rss:pain-of-truth-announces-self-titled-sophomore-album-shares-u",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "No Echo"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "No Echo",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 59,
+      "signals": {
+        "recency": 24,
+        "corroboration": 8,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-venice-days-2026-lineup",
+      "slug": "mia-wasikowska-catherine-deneuve-rupert-friend-in-2026-venice-days",
+      "title": "Mia Wasikowska, Catherine Deneuve, Rupert Friend in 2026 Venice Days",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "snoop-dogg-biopic-summer-2027-release",
-      "primaryKeyword": "Snoop Dogg biopic",
+      "eventSlug": "venice-days-2026-lineup",
+      "primaryKeyword": "Venice Days 2026 lineup",
+      "primaryEntity": "Venice Days",
+      "entities": [
+        "Mia Wasikowska",
+        "Catherine Deneuve",
+        "Rupert Friend"
+      ],
+      "angle": "The Venice Days independent film sidebar has announced its 2026 lineup, featuring Mia Wasikowska, Catherine Deneuve, and Rupert Friend.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/venice-days-mia-wasikowska-catherine-deneuve-rupert-friend-1236653013/",
+          "ageMin": 301,
+          "headline": "Mia Wasikowska, Catherine Deneuve, Rupert Friend in 2026 Venice Days",
+          "summary": "The Venice independent sidebar unveiled its 2026 lineup on Wednesday."
+        }
+      ],
+      "ageMin": 301,
+      "_cand": {
+        "key": "rss:mia-wasikowska-catherine-deneuve-rupert-friend-in-2026-venic",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 72,
+      "signals": {
+        "recency": 9,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-misty-green-chris-rock-casting",
+      "slug": "misty-green-chris-rock-follows-a-hollywood-actress-fighting-for-her-se",
+      "title": "'Misty Green': Chris Rock Follows a Hollywood Actress Fighting for Her Second Act",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "high",
+      "eventSlug": "misty-green-chris-rock-casting",
+      "primaryKeyword": "misty green chris rock",
+      "primaryEntity": "Misty Green",
+      "entities": [
+        "Chris Rock: Bigger & Blacker",
+        "Chris Rock"
+      ],
+      "angle": "Chris Rock is cast in 'Misty Green,' a film about a Hollywood actress seeking her second act.",
+      "tmdbType": "movie",
+      "source": "gnews:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9KZjdpUmp6RnhSRE5uMmNpLWNDNVM3QWVtZ1A0S0M3RG9xQkwtNEVqT2oyV21FeFRuZmp6WkZ1Y29KalV6bjhRUGhBbWE1NzJoWFZCN3kteVZmeWtkdy1sT1lqMGFJZWpTVVJNQUZ1NTc?oc=5",
+          "ageMin": 1621,
+          "headline": "2026 Premiere Dates For New Returning Series On Broadcast, Streaming Cable - Deadline",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMicEFVX3lxTE9KZjdpUmp6RnhSRE5uMmNpLWNDNVM3QWVtZ1A0S0M3RG9xQkwtNEVqT2oyV21FeFRuZmp6WkZ1Y29KalV6bjhRUGhBbWE1NzJoWFZCN3kteVZmeWtkdy1sT1lqMGFJZWpTVVJNQUZ1NTc?oc=5\" target=\"_blank\" 2026 Premiere Dates For New Returning Series On Broadcast, Streaming Cable /a"
+        }
+      ],
+      "ageMin": 1621,
+      "_cand": {
+        "key": "rss:2026-premiere-dates-for-new-returning-series-on-broadcast-st",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 69,
+      "signals": {
+        "recency": 1,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "S"
+    },
+    {
+      "id": "news-ted-lasso-other",
+      "slug": "ted-lasso-was-finished-then-jason-sudeikis-had-an-epiphany",
+      "title": "Ted Lasso Was Finished. Then Jason Sudeikis Had An Epiphany",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "ted-lasso-other",
+      "primaryKeyword": "Ted Lasso season 4",
+      "primaryEntity": "Ted Lasso",
+      "entities": [
+        "Jason Sudeikis"
+      ],
+      "angle": "Jason Sudeikis's epiphany led to the unexpected fourth season of the hit Apple TV+ series.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/tv/tv-features/ted-lasso-returns-jason-sudeikis-interview-season-four-1236653124/",
+          "ageMin": 121,
+          "headline": "Ted Lasso Was Finished. Then Jason Sudeikis Had An Epiphany",
+          "summary": "As Apple TV’s game-changing hit returns for a never-supposed-to-happen fourth season, THR goes deep with the cast and creators on the off-field drama — and on-brand hope — that made it possible."
+        }
+      ],
+      "ageMin": 121,
+      "_cand": {
+        "key": "rss:ted-lasso-was-finished-then-jason-sudeikis-had-an-epiphany",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 57,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 6,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-snoop-dogg-biopic-summer-2027",
+      "slug": "snoop-dogg-biopic-set-for-summer-2027-release",
+      "title": "Snoop Dogg Biopic Set for Summer 2027 Release",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "snoop-dogg-biopic-summer-2027",
+      "primaryKeyword": "snoop dogg biopic",
       "primaryEntity": "Snoop Dogg Biopic",
       "entities": [
         "Snoop Dogg's Hood of Horror",
         "Snoop Dogg",
-        "Universal Pictures",
-        "Jonathan Daviss"
+        "Jonathan Daviss",
+        "Craig Brewer"
       ],
-      "angle": "Universal Pictures has set a Summer 2027 release date for the Snoop Dogg biopic, starring Jonathan Daviss and directed by Craig Brewer.",
+      "angle": "Universal has set a Summer 2027 release date for the Snoop Dogg biopic, starring Jonathan Daviss and directed by Craig Brewer.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
@@ -440,12 +1106,12 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/movies/movie-news/snoop-dogg-biopic-lands-summer-2027-release-1236653520/",
-          "ageMin": 1021,
+          "ageMin": 1051,
           "headline": "Snoop Dogg Biopic Lands Summer 2027 Release From Universal",
           "summary": "Jonathan Daviss stars in Craig Brewer's feature that examines the life of the iconic rapper."
         }
       ],
-      "ageMin": 1021,
+      "ageMin": 1051,
       "_cand": {
         "key": "rss:snoop-dogg-biopic-lands-summer-2027-release-from-universal",
         "popularity": 0,
@@ -482,23 +1148,88 @@
       "tierClass": "B"
     },
     {
-      "id": "news-charles-gaines-dies-pumping-iron-author-84",
+      "id": "news-luke-skywalker-lightsaber-auction-3-75m",
+      "slug": "luke-s-empire-strikes-back-lightsaber-with-severed-hand-sells-for-3-75",
+      "title": "Luke’s ‘Empire Strikes Back’ Lightsaber (With Severed Hand) Sells for $3.75 Million",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "luke-skywalker-lightsaber-auction-3-75m",
+      "primaryKeyword": "luke skywalker lightsaber auction",
+      "primaryEntity": "Luke Skywalker's lightsaber",
+      "entities": [
+        "The Empire Strikes Back"
+      ],
+      "angle": "A prop lightsaber used by Luke Skywalker in 'The Empire Strikes Back', complete with a severed hand, sold for $3.75 million at auction.",
+      "tmdbType": "movie",
+      "source": "gnews:Gizmodo",
+      "sources": [
+        {
+          "outlet": "Gizmodo",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPalhWd0VQQ3k1YWlmTkhsMnVZdnVSMU0tSlVHMDBmVnBjVndDc1EwVmtDWkFiVEl3OXBNc2VDaTVMSkhsWW14Y2d6SUxTMm1INDJKcjdJNHFnaUk5T05KWTlkazBMVE94cUV0akVZc00tRXlDRzlpZFhTY1luOURYZlBEUTJnS2xzcVBZc0pZa1BmWTNkM2hDbW1rTklFblA2dHItWndpLWRYV0pw?oc=5",
+          "ageMin": 241,
+          "headline": "Luke’s ‘Empire Strikes Back’ Lightsaber (With Severed Hand) Sells for $3.75 Million - Gizmodo",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxPalhWd0VQQ3k1YWlmTkhsMnVZdnVSMU0tSlVHMDBmVnBjVndDc1EwVmtDWkFiVEl3OXBNc2VDaTVMSkhsWW14Y2d6SUxTMm1INDJKcjdJNHFnaUk5T05KWTlkazBMVE94cUV0akVZc00tRXlDRzlpZFhTY1luOURYZlBEUTJnS2xzcVBZc0pZa1BmWTNkM2hDbW1rTklFblA2dHItWndpLWRYV0pw?oc=5\" target=\"_bla"
+        }
+      ],
+      "ageMin": 241,
+      "_cand": {
+        "key": "rss:luke-s-empire-strikes-back-lightsaber-with-severed-hand-sell",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "Gizmodo"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "Gizmodo",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 52,
+      "signals": {
+        "recency": 9,
+        "corroboration": 8,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 12,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-charles-gaines-dies-pumping-iron-author",
       "slug": "pumping-iron-author-charles-gaines-dies-at-84",
-      "title": "‘Pumping Iron’ Author Charles Gaines Dies at 84",
+      "title": "'Pumping Iron' Author Charles Gaines Dies at 84",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
       "eventType": "death",
       "sensitivity": "high",
-      "eventSlug": "charles-gaines-dies-pumping-iron-author-84",
+      "eventSlug": "charles-gaines-dies-pumping-iron-author",
       "primaryKeyword": "charles gaines",
       "primaryEntity": "Charles Gaines",
       "entities": [
         "Arnold Schwarzenegger",
         "Pumping Iron"
       ],
-      "angle": "The author whose book and documentary helped launch Arnold Schwarzenegger's career has died at 84.",
+      "angle": "Charles Gaines, the author of 'Pumping Iron' which helped launch Arnold Schwarzenegger's career, has passed away at 84.",
       "tmdbType": "movie",
       "source": "rss:Deadline",
       "sources": [
@@ -506,12 +1237,12 @@
           "outlet": "Deadline",
           "tier": 7,
           "url": "https://deadline.com/2026/07/charles-gaines-dead-pumping-iron-schwarzenegger-paintball-1237000002/",
-          "ageMin": 14,
+          "ageMin": 44,
           "headline": "Charles Gaines Dies: ‘Pumping Iron’ Author Who Helped Launch Arnold Schwarzenegger Was 84",
           "summary": "Charles Gaines, whose 1970s book and documentary Pumping Iron helped launch Arnold Schwarzenegger’s career, died July 21. He was 84. Schwarzenegger announced the news on his social media channels with a heartfelt tribute to the writer and lover of outdoor pursuits whom he described as “a lifelong friend.” Born in Jacksonville, Florida on January 6, [ ]"
         }
       ],
-      "ageMin": 14,
+      "ageMin": 44,
       "_cand": {
         "key": "rss:charles-gaines-dies-pumping-iron-author-who-helped-launch-ar",
         "popularity": 0,
@@ -532,9 +1263,9 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 74,
+      "priority": 68,
       "signals": {
-        "recency": 30,
+        "recency": 24,
         "corroboration": 12,
         "status": 18,
         "type": 14,
@@ -548,9 +1279,9 @@
       "tierClass": "S"
     },
     {
-      "id": "news-shania-twain-inclusive-lgbtq-fans",
-      "slug": "shania-twain-people-know-i-m-inclusive",
-      "title": "Shania Twain: ‘People Know I’m Inclusive’",
+      "id": "news-jody-gerson-universal-music-publishing-interview",
+      "slug": "jody-gerson-universal-music-publishing-ceo-on-leadership-mentorship-si",
+      "title": "Jody Gerson, Universal Music Publishing CEO, on Leadership, Mentorship, Signing Kendrick Lamar, and Publishing's Rise to a Frontline Business",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
@@ -558,11 +1289,145 @@
       "eventType": "other",
       "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "shania-twain-inclusive-lgbtq-fans",
+      "eventSlug": "jody-gerson-universal-music-publishing-interview",
+      "primaryKeyword": "Jody Gerson Universal Music Publishing",
+      "primaryEntity": "Jody Gerson",
+      "entities": [
+        "Universal Music Publishing",
+        "Kendrick Lamar"
+      ],
+      "angle": "Universal Music Publishing CEO Jody Gerson discusses leadership, mentorship, and signing Kendrick Lamar.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/music/news/jody-gerson-universal-music-publishing-leadership-kendrick-lamar-1236817361/",
+          "ageMin": 0,
+          "headline": "Jody Gerson, Universal Music Publishing CEO, on Leadership, Mentorship, Signing Kendrick Lamar, and Publishing s Rise to a Frontline Business",
+          "summary": "As the highest-ranking female executive in the music industry, the first female chairman of a global music company and the first woman to be named CEO of a major music publisher, Universal Music Publishing Group’s Jody Gerson enjoys an unimpeachable pedigree. A music publisher for the entirety of her professional career, she presides over one [ ]"
+        }
+      ],
+      "ageMin": 0,
+      "_cand": {
+        "key": "rss:jody-gerson-universal-music-publishing-ceo-on-leadership-men",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 65,
+      "signals": {
+        "recency": 30,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-travis-scott-acting-christopher-nolan-paramount-deal",
+      "slug": "travis-scott-s-hollywood-odyssey-the-rapper-on-acting-for-christopher-",
+      "title": "Travis Scott's Hollywood Odyssey: The Rapper on Acting for Christopher Nolan, His New Paramount Deal and Never Winning a Grammy",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "travis-scott-acting-christopher-nolan-paramount-deal",
+      "primaryKeyword": "Travis Scott acting",
+      "primaryEntity": "Travis Scott",
+      "entities": [
+        "Christopher Nolan",
+        "Paramount"
+      ],
+      "angle": "Travis Scott opens up about acting for Christopher Nolan, a new Paramount deal, and his Grammy history.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/film/features/travis-scott-interview-the-odyssey-paramount-deal-1236817092/",
+          "ageMin": 1,
+          "headline": "Travis Scott s Hollywood Odyssey: The Rapper on Acting for Christopher Nolan, His New Paramount Deal and Never Winning a Grammy",
+          "summary": "I was nervous as fuck, Travis Scott says. That’s shocking coming from someone who just wrapped up the highest-grossing solo rap tour of all time, with raging crowds in the tens of thousands. But when Scott climbed atop a wooden table in an ancient castle on a remote Italian island to deliver some of the [ ]"
+        }
+      ],
+      "ageMin": 1,
+      "_cand": {
+        "key": "rss:travis-scott-s-hollywood-odyssey-the-rapper-on-acting-for-ch",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 65,
+      "signals": {
+        "recency": 30,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-shania-twain-other",
+      "slug": "shania-twain-discusses-inclusivity-lgbtq-fans-and-new-autobiographical",
+      "title": "Shania Twain Discusses Inclusivity, LGBTQ+ Fans, and New Autobiographical Album",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "shania-twain-other",
       "primaryKeyword": "shania twain",
       "primaryEntity": "Shania Twain",
       "entities": [],
-      "angle": "Shania Twain discusses her inclusive fanbase and her most autobiographical album yet.",
+      "angle": "Shania Twain opens up about her inclusive nature, her LGBTQ+ fanbase, and her new autobiographical album.",
       "tmdbType": "movie",
       "source": "rss:Rolling Stone",
       "sources": [
@@ -570,12 +1435,12 @@
           "outlet": "Rolling Stone",
           "tier": 7,
           "url": "https://www.rollingstone.com/music/music-features/shania-twain-interview-new-album-personal-life-1235595902/",
-          "ageMin": 24,
+          "ageMin": 54,
           "headline": "Shania Twain: ‘People Know I’m Inclusive’",
           "summary": "The superstar opens up about life before superstardom, her sizable LGBTQ fan base, and writing her most autobiographical album yet"
         }
       ],
-      "ageMin": 24,
+      "ageMin": 54,
       "_cand": {
         "key": "rss:shania-twain-people-know-i-m-inclusive-",
         "popularity": 0,
@@ -614,7 +1479,7 @@
     {
       "id": "news-jason-alexander-apologizes-courtney-stodden",
       "slug": "seinfeld-star-jason-alexander-apologizes-to-courtney-stodden-for-filmi",
-      "title": "Seinfeld Star Jason Alexander Apologizes to Courtney Stodden for Filming Inappropriate Sketch When She Was a Minor",
+      "title": "Seinfeld Star Jason Alexander Apologizes to Courtney Stodden for Filming Inappropriate Sketch When She Was a Minor: I Truly Regret It",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
@@ -622,12 +1487,12 @@
       "eventType": "other",
       "sensitivity": "normal",
       "eventSlug": "jason-alexander-apologizes-courtney-stodden",
-      "primaryKeyword": "jason alexander apology",
+      "primaryKeyword": "Jason Alexander apology",
       "primaryEntity": "Jason Alexander",
       "entities": [
         "Courtney Stodden"
       ],
-      "angle": "Seinfeld star apologizes for past inappropriate sketch.",
+      "angle": "Seinfeld star Jason Alexander apologizes to Courtney Stodden for filming an inappropriate sketch when she was a minor.",
       "tmdbType": "movie",
       "source": "rss:Variety",
       "sources": [
@@ -635,12 +1500,12 @@
           "outlet": "Variety",
           "tier": 7,
           "url": "https://variety.com/2026/tv/news/jason-alexander-courtney-stodden-inappropriate-behavior-minor-1236817958/",
-          "ageMin": 78,
+          "ageMin": 108,
           "headline": "Seinfeld Star Jason Alexander Apologizes to Courtney Stodden for Filming Inappropriate Sketch When She Was a Minor: I Truly Regret It",
           "summary": "“Seinfeld” alum Jason Alexander issued an apology to reality star Courtney Stodden after she called him out on Instagram for filming an inappropriate comedy sketch with her when she was a minor. Stodden was 17 years old when she filmed a Funny or Die sketch with Alexander that parodied “Dr. Phil” and other daytime talk [ ]"
         }
       ],
-      "ageMin": 78,
+      "ageMin": 108,
       "_cand": {
         "key": "rss:seinfeld-star-jason-alexander-apologizes-to-courtney-stodden",
         "popularity": 0,
